@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelestis — Campaign Handouts</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold:        #c9993a;
+    --gold-light:  #e8c87a;
+    --gold-dim:    #9a7428;
+    --ink:         #0e0a06;
+    --parchment:   #f5edd8;
+    --parchment-dark: #ddd0b0;
+    --space:       #06040e;
+    --purple-mist: #1a0f2e;
+    --rule:        #c9993a40;
+    --text-light:  #e8dcc8;
+    --text-dim:    #9a8c78;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--space);
+    font-family: 'Crimson Pro', Georgia, serif;
+    color: var(--text-light);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── STAR FIELD ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 10% 15%, #ffffff88 0%, transparent 100%),
+      radial-gradient(1px 1px at 25% 40%, #ffffff55 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 40% 8%,  #ffffffaa 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 60%, #ffffff44 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 25%, #ffffff77 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 80% 75%, #ffffffbb 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 45%, #ffffff55 0%, transparent 100%),
+      radial-gradient(1px 1px at 15% 80%, #ffffff66 0%, transparent 100%),
+      radial-gradient(1px 1px at 60% 90%, #ffffff44 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 35% 65%, #ffffff88 0%, transparent 100%),
+      radial-gradient(1px 1px at 48% 30%, #ffffff55 0%, transparent 100%),
+      radial-gradient(1px 1px at 92% 12%, #ffffff77 0%, transparent 100%),
+      radial-gradient(1px 1px at 5%  55%, #ffffff44 0%, transparent 100%),
+      radial-gradient(1px 1px at 75% 88%, #ffffff66 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 4rem;
+    overflow: hidden;
+  }
+
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    background: url('Caelestis__Exterior_.png') center center / cover no-repeat;
+    z-index: 0;
+  }
+
+  /* multi-layer gradient: preserves tower, darkens edges */
+  .hero-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to bottom,
+        #06040ecc 0%,
+        transparent 18%,
+        transparent 50%,
+        #06040e88 75%,
+        #06040ef5 100%
+      ),
+      linear-gradient(to right,
+        #06040ecc 0%,
+        transparent 20%,
+        transparent 80%,
+        #06040ecc 100%
+      );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 1.5rem;
+    animation: fadeUp 1.2s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+    opacity: 0.9;
+  }
+
+  .hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    color: var(--parchment);
+    text-shadow:
+      0 0 60px #c9993a55,
+      0 2px 4px #00000088;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title span {
+    color: var(--gold-light);
+  }
+
+  .hero-tagline {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-style: italic;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+    margin-bottom: 2rem;
+  }
+
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    color: var(--gold-dim);
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 2.5rem;
+  }
+  .hero-divider::before,
+  .hero-divider::after {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-dim));
+  }
+  .hero-divider::after {
+    transform: scaleX(-1);
+  }
+
+  .scroll-cue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    animation: pulse 2.5s ease-in-out infinite;
+    cursor: default;
+  }
+  .scroll-cue svg { width: 16px; opacity: 0.6; }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.5; transform: translateY(0); }
+    50%       { opacity: 1;   transform: translateY(4px); }
+  }
+
+  /* ── HANDOUTS SECTION ── */
+  .handouts {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 5rem 2rem 6rem;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeUp 0.8s ease 0.2s both;
+  }
+  .section-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--parchment);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── CARD GRID ── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.4rem;
+  }
+
+  .card {
+    background: linear-gradient(135deg, #1a120488, #0e0a06cc);
+    border: 1px solid var(--rule);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    animation: fadeUp 0.8s ease both;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold-dim);
+    box-shadow: 0 8px 40px #c9993a22, 0 2px 12px #00000066;
+  }
+
+  /* gold corner accent */
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, var(--gold-dim) 0%, transparent 60%);
+    opacity: 0.4;
+    transition: opacity 0.25s;
+  }
+  .card:hover::before { opacity: 0.8; }
+  .card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 40px; height: 40px;
+    background: linear-gradient(315deg, var(--gold-dim) 0%, transparent 60%);
+    opacity: 0.2;
+    transition: opacity 0.25s;
+  }
+  .card:hover::after { opacity: 0.5; }
+
+  .card-inner { padding: 1.6rem 1.8rem; }
+
+  .card-tag {
+    font-family: 'Cinzel', serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+    opacity: 0.8;
+  }
+
+  .card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--parchment);
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+  }
+
+  .card-desc {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--text-dim);
+    margin-bottom: 1.2rem;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    transition: color 0.2s, gap 0.2s;
+  }
+  .card:hover .card-footer {
+    color: var(--gold-light);
+    gap: 0.65rem;
+  }
+  .card-footer svg {
+    width: 12px;
+    transition: transform 0.2s;
+  }
+  .card:hover .card-footer svg { transform: translateX(3px); }
+
+  /* coming soon card variant */
+  .card.coming-soon {
+    opacity: 0.45;
+    pointer-events: none;
+    cursor: default;
+  }
+  .card.coming-soon .card-tag::after {
+    content: ' · Coming Soon';
+    color: var(--text-dim);
+  }
+
+  /* stagger animations */
+  .card:nth-child(1) { animation-delay: 0.1s; }
+  .card:nth-child(2) { animation-delay: 0.2s; }
+  .card:nth-child(3) { animation-delay: 0.3s; }
+  .card:nth-child(4) { animation-delay: 0.4s; }
+  .card:nth-child(5) { animation-delay: 0.5s; }
+  .card:nth-child(6) { animation-delay: 0.6s; }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem 1.5rem 3rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.82rem;
+    font-style: italic;
+    color: var(--text-dim);
+  }
+  .site-footer span {
+    color: var(--gold-dim);
+    font-style: normal;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+
+  @media (max-width: 600px) {
+    .hero-title { letter-spacing: 0.02em; }
+    .handouts { padding: 3rem 1.2rem 4rem; }
+    .card-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-image"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">A Spelljammer Campaign</div>
+      <h1 class="hero-title">Cael<span>estis</span></h1>
+      <p class="hero-tagline">Player Handouts &amp; Campaign Reference</p>
+      <div class="hero-divider">✦</div>
+      <div class="scroll-cue">
+        <svg viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M8 4v16M3 15l5 5 5-5"/>
+        </svg>
+        Handouts
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HANDOUTS ── -->
+  <section class="handouts">
+    <div class="section-header">
+      <div class="section-eyebrow">Reference Documents</div>
+      <div class="section-title">Player Handouts</div>
+    </div>
+
+    <div class="card-grid">
+
+      <!-- Ship Mechanics -->
+      <a class="card" href="caelestis_ship_mechanics.html">
+        <div class="card-inner">
+          <div class="card-tag">Combat Reference</div>
+          <div class="card-title">Ship Mechanics</div>
+          <div class="card-desc">Everything you need to know about flying, fighting, and surviving in Wildspace. Ship stats, Bulwark Points, combat flow, targeting, boarding, and hazards.</div>
+          <div class="card-footer">
+            Open Handout
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Crew Roles -->
+      <a class="card" href="caelestis_crew_roles_player.html">
+        <div class="card-inner">
+          <div class="card-tag">Combat Reference</div>
+          <div class="card-title">Bridge Crew Roles</div>
+          <div class="card-desc">Your bridge crew role, rank abilities, and what unlocks as you advance from Cadet to Sailor to Officer to Bridge. Spelljammer, Captain, Boatswain, Gunner, Navigator, Medical Officer.</div>
+          <div class="card-footer">
+            Open Handout
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Placeholder: World Primer -->
+      <div class="card coming-soon">
+        <div class="card-inner">
+          <div class="card-tag">World Reference</div>
+          <div class="card-title">Wildspace Primer</div>
+          <div class="card-desc">The structure of the spheres, travel between systems, and what makes Caelestis's cosmology different from the standard charts.</div>
+          <div class="card-footer">
+            Open Handout
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder: Factions -->
+      <div class="card coming-soon">
+        <div class="card-inner">
+          <div class="card-tag">World Reference</div>
+          <div class="card-title">Factions &amp; Powers</div>
+          <div class="card-desc">Known factions, fleet allegiances, and the powers at play across the spheres — as understood by cadets at Spelljammer Academy.</div>
+          <div class="card-footer">
+            Open Handout
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder: Caelestis Map -->
+      <div class="card coming-soon">
+        <div class="card-inner">
+          <div class="card-tag">Location Reference</div>
+          <div class="card-title">Spelljammer Academy</div>
+          <div class="card-desc">A guide to the academy's levels, security zones, key locations, and the personnel who run them. Know where you are allowed to go — and who's watching.</div>
+          <div class="card-footer">
+            Open Handout
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder: House Rules -->
+      <div class="card coming-soon">
+        <div class="card-inner">
+          <div class="card-tag">Rules Reference</div>
+          <div class="card-title">House Rules</div>
+          <div class="card-desc">Campaign-specific rules, homebrew tweaks, and anything that differs from the rulebook — all in one place so nobody has to ask twice.</div>
+          <div class="card-footer">
+            Open Handout
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <span>Caelestis</span> — A Spelljammer Campaign &nbsp;·&nbsp; Handouts for player reference only
+  </footer>
+
+</body>
+</html>
