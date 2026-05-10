@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caelestis — Sol</title>
-<link rel="stylesheet" href="../../styles/caelestis.css">
+<link rel="stylesheet" href="../styles/caelestis.css">
 <style>
   .entry-header {
     display: grid; grid-template-columns: 160px 1fr;
@@ -38,7 +38,14 @@
     letter-spacing: 0.15em; text-transform: uppercase;
     padding: 0.22rem 0.65rem; border: 1px solid; margin-bottom: 0.5rem;
   }
+  .class-ally    { color: #5a8ab8; border-color: rgba(30,74,122,0.45); }
+  .class-neutral { color: var(--gold-dim); border-color: var(--gold-rule); }
+  .class-threat  { color: #c05050; border-color: rgba(139,32,32,0.45); }
+  .class-unknown { color: var(--text-muted); border-color: var(--gold-rule); }
   .class-cadet   { color: #c05050; border-color: rgba(139,32,32,0.35); }
+  .class-item    { color: var(--gold-dim); border-color: var(--gold-rule); }
+  .class-sphere  { color: #5a8ab8; border-color: rgba(30,74,122,0.45); }
+  .class-system  { color: #9a6ad0; border-color: rgba(90,45,130,0.45); }
   .entry-info { display: flex; flex-direction: column; gap: 0.35rem; }
   .entry-name {
     font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700;
@@ -56,17 +63,27 @@
   .log-item::before { content: '›'; position: absolute; left: 0; color: var(--gold-dim); }
   .log-item b { font-weight: 600; }
   .log-item em { color: var(--text-dim); font-style: italic; }
-  @media(max-width:560px){ .entry-header { grid-template-columns: 1fr; } }
+  .status-row {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold-dim); border: 1px solid var(--gold-rule);
+    padding: 0.25rem 0.7rem; margin-top: 0.3rem;
+  }
+  .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-dim); }
+  @media(max-width:560px){
+    .entry-header { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
 <nav class="site-nav page-content">
-  <a href="../../index.html" class="nav-home">
+  <a href="../index.html" class="nav-home">
     <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7l6-5 6 5M3 6v6h3v-3h2v3h3V6"/></svg>
     Caelestis
   </a>
   <span class="nav-sep">›</span>
-  <span class="nav-section"><a href="../index.html" style="color:var(--text-dim);text-decoration:none;">Crew Manifest</a></span>
+  <span class="nav-section"><a href="index.html" style="color:var(--text-dim);text-decoration:none;">Crew Manifest</a></span>
   <span class="nav-sep">›</span>
   <span class="nav-current">Sol</span>
 </nav>
@@ -104,6 +121,6 @@
     </div>
   </div>
 </div>
-<footer class="page-footer page-content"><a href="../index.html">← Crew Manifest</a></footer>
+<footer class="page-footer page-content"><a href="index.html">← Crew Manifest</a></footer>
 </body>
 </html>

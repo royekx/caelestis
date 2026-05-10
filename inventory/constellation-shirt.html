@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caelestis — Constellation Shirt</title>
-<link rel="stylesheet" href="../../styles/caelestis.css">
+<link rel="stylesheet" href="../styles/caelestis.css">
 <style>
   .entry-header {
     display: grid; grid-template-columns: 160px 1fr;
@@ -38,7 +38,14 @@
     letter-spacing: 0.15em; text-transform: uppercase;
     padding: 0.22rem 0.65rem; border: 1px solid; margin-bottom: 0.5rem;
   }
-  .class-item { color: var(--gold-dim); border-color: var(--gold-rule); }
+  .class-ally    { color: #5a8ab8; border-color: rgba(30,74,122,0.45); }
+  .class-neutral { color: var(--gold-dim); border-color: var(--gold-rule); }
+  .class-threat  { color: #c05050; border-color: rgba(139,32,32,0.45); }
+  .class-unknown { color: var(--text-muted); border-color: var(--gold-rule); }
+  .class-cadet   { color: #c05050; border-color: rgba(139,32,32,0.35); }
+  .class-item    { color: var(--gold-dim); border-color: var(--gold-rule); }
+  .class-sphere  { color: #5a8ab8; border-color: rgba(30,74,122,0.45); }
+  .class-system  { color: #9a6ad0; border-color: rgba(90,45,130,0.45); }
   .entry-info { display: flex; flex-direction: column; gap: 0.35rem; }
   .entry-name {
     font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700;
@@ -56,17 +63,19 @@
   .log-item::before { content: '›'; position: absolute; left: 0; color: var(--gold-dim); }
   .log-item b { font-weight: 600; }
   .log-item em { color: var(--text-dim); font-style: italic; }
-  @media(max-width:560px){ .entry-header { grid-template-columns: 1fr; } }
+  @media(max-width:560px){
+    .entry-header { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
 <nav class="site-nav page-content">
-  <a href="../../index.html" class="nav-home">
+  <a href="../index.html" class="nav-home">
     <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7l6-5 6 5M3 6v6h3v-3h2v3h3V6"/></svg>
     Caelestis
   </a>
   <span class="nav-sep">›</span>
-  <span class="nav-section"><a href="../index.html" style="color:var(--text-dim);text-decoration:none;">Inventory</a></span>
+  <span class="nav-section"><a href="index.html" style="color:var(--text-dim);text-decoration:none;">Inventory</a></span>
   <span class="nav-sep">›</span>
   <span class="nav-current">Constellation Shirt</span>
 </nav>
@@ -80,8 +89,8 @@
       <div>
         <div class="portrait-frame"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M10 20 Q10 14 24 14 Q38 14 38 20 L36 42 Q36 44 24 44 Q12 44 12 42 Z"/><path d="M18 14 Q18 8 24 8 Q30 8 30 14"/><line x1="10" y1="28" x2="38" y2="28"/></svg></div>
         <div class="portrait-label">Portrait Pending</div>
-        <div class="stat-list"><div class="stat-row"><span class="stat-key">Type</span><span class="stat-val">Marked Clothing</span></div>
-<div class="stat-row"><span class="stat-key">Origin</span><span class="stat-val">Mirt's Wardrobe</span></div>
+        <div class="stat-list"><div class="stat-row"><span class="stat-key">Type</span><span class="stat-val">Clothing · Personal Reference</span></div>
+<div class="stat-row"><span class="stat-key">Origin</span><span class="stat-val">Casey's own handiwork</span></div>
 <div class="stat-row"><span class="stat-key">Holder</span><span class="stat-val">Tumak (via Casey)</span></div>
 <div class="stat-row"><span class="stat-key">Logged</span><span class="stat-val">No — Unregistered</span></div></div>
       </div>
@@ -89,20 +98,20 @@
         <div class="classification class-item">Item — Unregistered</div>
         <div class="entry-name">Constellation Shirt</div>
         <div class="entry-sub">Clothing · Unregistered</div>
-        <div class="entry-body" style="margin-top:0.8rem;"><p>An ordinary-looking shirt, except for the markings — a star pattern stitched or burned into the fabric that does not correspond to any constellation in Realmspace's night sky. The pattern was recognised by one crew member as matching what they saw when they entered Mirt's wardrobe.</p>
+        <div class="entry-body" style="margin-top:0.8rem;"><p>A plain shirt with a star pattern scratched onto the fabric by hand. Nothing remarkable about the object itself — the significance is entirely in what the drawing depicts. Casey made it on the spot after entering Mirt's wardrobe, using the shirt as an improvised sketchpad to capture the constellation arrangement he saw before he forgot it. A rough reference, the kind you scratch out when you have no paper.</p>
 <p>Casey took it from inside the wardrobe. He passed it to Tumak without explanation shortly after. Tumak hid it behind the curtains of his bunk. Neither action was observed by Mirt or academy staff.</p></div>
       </div>
     </div>
     <div class="divider">✦ ✦ ✦</div>
     <div class="section-block">
       <div class="section-label">Voyage 001</div>
-      <div class="log-list"><div class="log-item">Recovered from Mirt's wardrobe by Casey during the Voyage 001 crate delivery incident.</div>
-<div class="log-item">Star pattern does not correspond to any Realmspace constellation. Believed to map to the <b>Viren system</b>.</div>
-<div class="log-item">Transferred to Tumak's possession. Currently hidden in his bunk.</div>
-<div class="log-item"><em>Provenance and purpose unknown. May be a navigation reference, a personal effect, or something else entirely.</em></div></div>
+      <div class="log-list"><div class="log-item">Casey took a plain shirt on his way out of Mirt's wardrobe during Voyage 001 and scratched the star pattern he had seen onto the fabric as an on-the-spot reference sketch.</div>
+<div class="log-item">The drawing depicts a star arrangement that does not correspond to any known Realmspace constellation. Casey believes it maps to the <b>Viren system</b>.</div>
+<div class="log-item">Transferred to Tumak's keeping without explanation. Currently hidden in his bunk.</div>
+<div class="log-item"><em>The shirt itself is unremarkable. What matters is what Casey drew on it — and whether his memory of what he saw was accurate.</em></div></div>
     </div>
   </div>
 </div>
-<footer class="page-footer page-content"><a href="../index.html">← Inventory</a></footer>
+<footer class="page-footer page-content"><a href="index.html">← Inventory</a></footer>
 </body>
 </html>

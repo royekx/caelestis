@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caelestis — Casey</title>
-<link rel="stylesheet" href="../../styles/caelestis.css">
+<link rel="stylesheet" href="../styles/caelestis.css">
 <style>
   .entry-header {
     display: grid; grid-template-columns: 160px 1fr;
@@ -63,6 +63,14 @@
   .log-item::before { content: '›'; position: absolute; left: 0; color: var(--gold-dim); }
   .log-item b { font-weight: 600; }
   .log-item em { color: var(--text-dim); font-style: italic; }
+  .status-row {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold-dim); border: 1px solid var(--gold-rule);
+    padding: 0.25rem 0.7rem; margin-top: 0.3rem;
+  }
+  .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-dim); }
   @media(max-width:560px){
     .entry-header { grid-template-columns: 1fr; }
   }
@@ -70,12 +78,12 @@
 </head>
 <body>
 <nav class="site-nav page-content">
-  <a href="../../index.html" class="nav-home">
+  <a href="../index.html" class="nav-home">
     <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7l6-5 6 5M3 6v6h3v-3h2v3h3V6"/></svg>
     Caelestis
   </a>
   <span class="nav-sep">›</span>
-  <span class="nav-section"><a href="../index.html" style="color:var(--text-dim);text-decoration:none;">Crew Manifest</a></span>
+  <span class="nav-section"><a href="index.html" style="color:var(--text-dim);text-decoration:none;">Crew Manifest</a></span>
   <span class="nav-sep">›</span>
   <span class="nav-current">Casey</span>
 </nav>
@@ -107,12 +115,12 @@
       <div class="section-label">Voyage 001</div>
       <div class="log-list"><div class="log-item"><b>Simulation Deck:</b> Fought with speed and spellwork. Wrapped himself in cold, star-bright magic under pressure.</div>
 <div class="log-item"><b>Spelljammer Nexus:</b> Struggled until he stopped forcing it. Found his posture. Excelled.</div>
-<div class="log-item"><b>Mirt's Quarters:</b> Slipped inside the wardrobe privately. Saw unfamiliar constellations. Heard a voice say <em>"Go there."</em> Stole a shirt marked with what he saw.</div>
+<div class="log-item"><b>Mirt's Quarters:</b> Slipped inside the wardrobe privately. Saw unfamiliar constellations. Heard a voice say <em>"Go there."</em> On his way out, grabbed a plain shirt and scratched the star pattern he'd seen onto it as a quick reference.</div>
 <div class="log-item"><b>Private:</b> Mirt told him the wardrobe is a replica of a place beyond H'Catha in the Viren star system, gifted by a spellcaster named Zerathis.</div>
-<div class="log-item"><b>Later:</b> Passed the stolen shirt to Tumak without explanation. Tumak hid it without question.</div></div>
+<div class="log-item"><b>Later:</b> Passed the shirt — his own sketch of the stars — to Tumak without explanation. Tumak hid it without question.</div></div>
     </div>
   </div>
 </div>
-<footer class="page-footer page-content"><a href="../index.html">← Crew Manifest</a></footer>
+<footer class="page-footer page-content"><a href="index.html">← Crew Manifest</a></footer>
 </body>
 </html>

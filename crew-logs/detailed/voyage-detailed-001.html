@@ -6,91 +6,42 @@
 <title>Caelestis — Voyage 001 Detailed</title>
 <link rel="stylesheet" href="../../styles/caelestis.css">
 <style>
-  /* ── VIDEO ── */
   .video-block { margin-bottom: 2.5rem; }
   .video-container {
     position: relative; width: 100%; padding-bottom: 56.25%;
     background: #0a0814; border: 1px solid var(--gold-rule); overflow: hidden;
   }
   .video-container iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
-  .video-placeholder {
-    position: absolute; inset: 0;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center; gap: 0.8rem;
-  }
-  .video-placeholder svg { width: 48px; color: var(--gold-dim); opacity: 0.4; }
-  .video-placeholder p {
-    font-family: 'Cinzel', serif; font-size: 0.65rem;
-    letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted);
-  }
   .video-link { margin-top: 0.5rem; font-size: 0.82rem; font-style: italic; color: var(--text-muted); }
   .video-link a { color: var(--gold-dim); text-decoration: none; }
   .video-link a:hover { color: var(--gold); }
-
-  /* ── LOG META ── */
-  .log-meta {
-    display: flex; align-items: center; gap: 1rem;
-    margin-bottom: 2.5rem; flex-wrap: wrap;
-  }
+  .log-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
   .log-badge {
-    font-family: 'Cinzel', serif; font-size: 0.6rem;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    background: var(--gold-faint);
-    border: 1px solid var(--gold-rule);
-    color: var(--gold-dim); padding: 0.25rem 0.6rem;
+    font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase;
+    background: var(--gold-faint); border: 1px solid var(--gold-rule); color: var(--gold-dim); padding: 0.25rem 0.6rem;
   }
   .log-type-badge {
-    font-family: 'Cinzel', serif; font-size: 0.58rem;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--text-muted); border: 1px solid var(--gold-rule);
-    padding: 0.25rem 0.6rem;
+    font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); border: 1px solid var(--gold-rule); padding: 0.25rem 0.6rem;
   }
-  .alt-format {
-    margin-left: auto; font-size: 0.82rem;
-    font-style: italic; color: var(--text-muted);
-  }
+  .alt-format { margin-left: auto; font-size: 0.82rem; font-style: italic; color: var(--text-muted); }
   .alt-format a { color: var(--gold-dim); text-decoration: none; }
   .alt-format a:hover { color: var(--gold); }
-
-  /* ── NARRATIVE PROSE ── */
   .narrative { max-width: 720px; }
-
-  .narrative p {
-    font-size: 1.05rem;
-    line-height: 1.85;
-    color: var(--text);
-    margin-bottom: 1.4rem;
-    letter-spacing: 0.01em;
-  }
-
+  .narrative p { font-size: 1.05rem; line-height: 1.85; color: var(--text); margin-bottom: 1.4rem; letter-spacing: 0.01em; }
   .narrative p:first-child::first-letter {
-    font-family: 'Cinzel', serif;
-    font-size: 3.2rem;
-    font-weight: 700;
-    float: left;
-    line-height: 0.75;
-    margin-right: 0.08em;
-    margin-top: 0.12em;
-    color: var(--gold);
+    font-family: 'Cinzel', serif; font-size: 3.2rem; font-weight: 700;
+    float: left; line-height: 0.75; margin-right: 0.08em; margin-top: 0.12em; color: var(--gold);
   }
-
-  /* chapter breaks */
-  .chapter-break {
-    display: flex; align-items: center; gap: 1rem;
-    margin: 2.2rem 0 1.8rem;
-  }
-  .chapter-break::before, .chapter-break::after {
-    content: ''; flex: 1; height: 1px; background: var(--gold-rule);
-  }
+  .chapter-break { display: flex; align-items: center; gap: 1rem; margin: 2.2rem 0 1.8rem; }
+  .chapter-break::before, .chapter-break::after { content: ''; flex: 1; height: 1px; background: var(--gold-rule); }
   .chapter-break-text {
-    font-family: 'Cinzel', serif; font-size: 0.6rem;
-    letter-spacing: 0.2em; text-transform: uppercase;
+    font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--gold-dim); white-space: nowrap; flex-shrink: 0;
   }
 </style>
 </head>
 <body>
-
 <nav class="site-nav page-content">
   <a href="../../index.html" class="nav-home">
     <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7l6-5 6 5M3 6v6h3v-3h2v3h3V6"/></svg>
@@ -103,23 +54,17 @@
   <span class="nav-sep">›</span>
   <span class="nav-current">Voyage 001</span>
 </nav>
-
 <div class="page-content">
   <div class="page-header">
     <div class="page-eyebrow">Detailed Log · Voyage 001</div>
     <div class="page-title">The Shape of a Crew</div>
   </div>
-
   <div class="content">
-
-    <!-- LOG META -->
     <div class="log-meta">
       <span class="log-badge">Voyage 001</span>
       <span class="log-type-badge">Detailed</span>
       <span class="alt-format">Quick recap → <a href="../brief/voyage-brief-001.html">Brief Log</a></span>
     </div>
-
-    <!-- VIDEO -->
     <div class="video-block">
       <div class="section-label">Voyage Recording</div>
       <div class="video-container">
@@ -127,58 +72,32 @@
       </div>
       <div class="video-link">Watch on YouTube: <a href="https://youtu.be/hIO4ws9UJ_I?si=mkkSAnXCyMicKOy-" target="_blank">youtu.be/hIO4ws9UJ_I</a></div>
     </div>
-
-    <!-- NARRATIVE -->
     <div class="narrative">
-
       <p>The first lesson of Caelestis began in fire.</p>
-
       <p>The cadets opened their eyes not in a classroom, but on the deck of the <em>Moonraider</em> in the middle of a losing battle. Explosions tore through rigging and mast, wildspace yawned beyond the rails, and Captain Sardax, bleeding across the planks, seized one last breath to order them to hold the top deck and give the enemy no quarter. Astral reavers swarmed over the side before any of them had time to think, and instinct became the only language that mattered.</p>
-
       <p>Gregory moved first, uncertain but quick enough to hide and survive. Tumak answered the chaos with a crossbow shot, then took a brutal blast to the shoulder that nearly dropped him where he stood. Sol planted himself at a ballista and drove a massive bolt straight through one of the attackers, turning panic into something focused and lethal. Casey fought like a blade given motion, meeting steel with speed and then wrapping himself in cold, star-bright magic when pressure closed in. Gregory, cornered and under threat, snapped back with clever spellwork that spoiled a deadly strike. Boogie's first instinct was not glory but care, hurrying toward Tumak to help even as the deck was coming apart around them. Then, just as the fight seemed ready to swallow them whole, the world froze. The wreckage hung still, the reavers stopped in place, and the illusion of wildspace peeled away. They woke in the simulation deck of Caelestis, where Boatswain Tarto revealed that they had been thrown into the memory of Captain Sardax's doomed final battle as a test. It had never been meant to be won. The lesson was simple and merciless: courage mattered, but so did knowing when to retreat.</p>
-
       <p>When the pods opened and the illusion drained from them, the five cadets stepped into view as themselves for the first time. Casey emerged barefoot and composed beneath a pale green cloak stitched with constellations. Gregory climbed out bronze and hesitant, an autognome with glasses, a mustache, and the look of someone still measuring the room before stepping fully into it. Sol rose tall and pale, dark-haired and white-eyed, steady even after simulated death. Tumak stumbled out muttering reassurances to himself, slight of build and swallowed by his oversized coat. Boogie bounced free in his semi-transparent blue form, shield in hand, with a small glittering stone visible somewhere inside him. Boatswain marked what each of them had done well — Casey's effective spellwork, Gregory's quick thinking, Sol's command of the battlefield, Tumak's toughness, and Boogie's willingness to take the heat for someone else. Even there, before the day had properly begun, the outline of the group had started to show. Boogie's strange inner rhythm returned as he stepped out, pulling his body into a little dance only he could hear.</p>
-
       <div class="chapter-break"><span class="chapter-break-text">Orientation</span></div>
-
       <p>The morning's real work began with orientation, though Caelestis never made anything feel simple. Boatswain handed them their assignments, warned them to stay together, and made it clear the tower had already grown tense from recent thefts. Their first stop was administration, where Sorcur, a thri-kreen receptionist, greeted them with a voice that entered their minds instead of their ears. She issued packets, vouchers, and temporary access stars, and with those small permissions the cadets began their first movement through the academy's layered order of halls, ranks, and thresholds. Caelestis revealed itself not as a school alone, but as a machine of access and hierarchy, one that noticed exactly where you were allowed to go.</p>
-
       <p>The cadet quarters gave them their first chance to act like something other than survivors. The room was crowded and mixed, full of strangers trying to claim space of their own, and almost immediately that space became contested. Boogie was assigned a rare corner bunk with a clear view into the astral dark, only for another cadet, Vena, to try to take it from him before he had even settled in. Boogie held his ground with surprising calm, and Sol moved close enough behind him to make it clear he would not be standing alone. Vena backed off, and Boogie kept the bunk. It was a small thing, but it mattered. No one had told Sol to step in. No one had told Boogie to trust that someone would. The rest of the room unfolded in its own awkward negotiations. Tumak traded for a darker bunk more to his liking. Sol maneuvered himself toward a better position of his own. Casey drifted through the room in his peculiar orbit, half in the conversation and half outside it. Gregory mostly watched, absorbing the shape of all of it. By the time they left, they were still strangers — but now they were strangers who had begun, however clumsily, to take each other's side.</p>
-
       <p>The sky dock opened the scale of Caelestis all at once. Spelljamming ships of every shape rested there beneath the void, and Kip and Pik, two gnomes who spoke almost like a shared thought, guided the cadets through the anatomy of one vessel and the meaning of the spelljamming helm. A ship, they learned, was not merely steered. Through the helm, ship and spellcaster became one motion. While the lesson continued, Boogie noticed a suspicious exchange between a dock officer and a merchant. He did not yet know what it meant, but he noticed. Gregory, dutiful as ever, recalled from the code of conduct that gifts and unofficial payments were forbidden. Sol sought out a respected sailor named Joffrey and asked what this life truly offered. The answer was not riches, but duty, vigilance, and survival.</p>
-
       <p>The quartermaster's stores gave them weapons, supplies, and a better sense of one another. Gregory was immediately unsettled by Mr. Blip, an autognome who looked enough like him to feel wrong in a way Gregory could not fully explain. Gregory asked after navigation and found no easy answers there. Tumak bought a healing potion without fuss. Casey weighed armor and options in his hands like neither entirely belonged to him. Sol talked his way into heavier armament. Boogie charmed a light hammer from Mr. Blip and, in doing so, showed something quietly important about himself: he was thinking less about command than about repair. When he later asked who the great spelljammers of Caelestis were, Mr. Blip named Boatswain in years past and Joffrey in the present, with older absences still hanging over those stories. The academy, for all its discipline, already felt haunted by its own legends.</p>
-
       <div class="chapter-break"><span class="chapter-break-text">The Spelljammer Nexus</span></div>
-
       <p>At the Spelljammer Nexus, the cadets felt the next layer of truth. They arrived under the tension of an ectoplasmic breach elsewhere in the tower and were brought inside by Saerth Abyzine, who put them through their first true helm exercise. There, in a room overlooking the Astral Sea, they guided miniature spelljamming ships over a floating field and learned what it meant to extend mind and magic into a vessel. Boogie took to it instantly, as though motion at a distance was no stranger to a body already made of shifting form. Casey struggled until he stopped forcing the process and found a posture that felt like his own. Gregory's difficulty lay in thinking too far ahead — destination before method — until Saerth named the problem and Gregory adjusted. Sol navigated exactly as he seemed to live: by anticipating danger before it arrived. Tumak managed, though Saerth noticed the divided quality in him, as if part of his mind were always elsewhere. Afterward, Boogie finally said aloud what the lesson had clarified in him: he did not want the helm. He wanted to keep the ship alive, to make sure it carried others onward beneath the stars. The inner rhythm answered that truth at once.</p>
-
       <div class="chapter-break"><span class="chapter-break-text">The Gymnasium</span></div>
-
       <p>The gymnasium reduced everything to effort. Its assault course was all false explosions, electrified water, swinging blades, and a final climb to a bell overhead. There, more clearly than anywhere else, the crew began to take shape. Gregory, who had seemed the most hesitant in the first battle, was the one who saw through the first illusion and called the truth to Sol. Sol and Tumak both paid in pain for missteps but refused to stay down. Casey crossed sections of the course with the ease of someone born to leap and climb. Boogie endured, improvised, and later used magic to help Gregory on the final ascent. Sol even fell hard enough to be dragged aside by academy automatons, then forced himself back up to finish after Boogie shouted him onward. By the time they returned to Boatswain, scraped and exhausted, she saw what mattered most: they had started adjusting to one another. The lag between them, she said, was good. It meant they were beginning to move as a crew rather than as five separate people sharing the same danger.</p>
-
       <div class="chapter-break"><span class="chapter-break-text">The Mirt Errand</span></div>
-
       <p>They should have been dismissed after that, but Boatswain gave them one more task. Mirt the Merciless, head of the academy, had a shipment waiting at the sky dock, and the cadets were to deliver it to his quarters before making their way to the Weeping Goddess for lunch. The errand itself became another lesson in who they were becoming. Tumak asked Casey what it was like to be hadozee and got a strange, sideways answer that was awkward in precisely the way Casey was awkward. Then Tumak asked Boogie what it was like to be a plasmoid and received something much sadder in return. Boogie described a life of drifting, borrowed identities, odd jobs, and loneliness — no family, no lasting home, just motion and imitation. When Tumak admitted he was searching for his own family, Boogie answered simply that now they had a crew, and the crew would help him find them. Meanwhile, Sol and Casey took the heavy crate between them and carried it upward through the better-kept halls of the bridge quarters. It was a small image, but a telling one: some of them talking, some of them carrying, all of them moving in the same direction.</p>
-
       <p>Mirt's room was a cluttered monument to status and excess. The academy's head was half-buried in a hangover, his chambers scattered with clothes, curiosities, and a fishbowl containing two octopi, Flotsam and Jetsam. Boogie's response to Mirt's miserable state was immediate and instinctive: help first, react later. While Mirt was occupied with sickness, the rest of the room revealed stranger things. Sol noticed a wardrobe whose interior opened not onto ordinary space but into a bounded stretch of astral night, a floor you could stand on without seeing, and stars where there should have been walls. Then the crate began to skitter. When the lid gave way, worm-like centipede creatures burst into the room and turned the errand into another fight. Tumak struck quickly, Casey answered with star-cold violence, Gregory added frightened but effective magic, and Boogie worked just as hard at restoring order to the room as he did at fighting. Sol made the sharpest choice of them all: rather than simply kill the final creature, he subdued it and forced it back into the crate alive, correctly sensing it might matter as evidence. Mirt praised that instinct once he had himself back on his feet.</p>
-
-      <p>But the deeper discovery lay in the wardrobe. Casey slipped inside it in secret and saw unfamiliar constellations beyond, along with a flickering point that drew his attention. A familiar voice told him only, <em>“Go there.”</em> When he tried, he discovered the endlessness was bounded after all. Tumak followed him in and found something more tangible: a crimson bag of holding and valuables that he quickly claimed for himself. Casey quietly stole a marked shirt tied to what he had seen among the stars. Neither theft was noticed in the moment. Later, when Mirt rewarded the cadets with real gold, he let one more vital truth slip to Casey in private: the impossible wardrobe was a magical replica of a place beyond Hakatha in the Viren star system, gifted to him by a spellcaster named Zerathis. That turned Casey's strange vision into a direction. Then Mr. Blip arrived with officers and confirmed the wider shape of the day's danger: the attack on Mirt had likely been part of a larger diversion, and more burglaries had taken place across the academy at the same time. The cadets had not only stumbled into danger. They had passed through the center of something already spreading through Caelestis.</p>
-
+      <p>But the deeper discovery lay in the wardrobe. Casey slipped inside it in secret and saw unfamiliar constellations beyond, along with a flickering point that drew his attention. A familiar voice told him only, <em>“Go there.”</em> When he tried, he discovered the endlessness was bounded after all. Tumak followed him in and found something more tangible: a crimson bag of holding and valuables that he quickly claimed for himself. Casey, on his way out, grabbed a plain shirt and scratched the star pattern he had seen onto the fabric — a quick reference, the kind of thing you make when you have no paper and cannot afford to forget. Neither action was noticed in the moment. Later, when Mirt rewarded the cadets with real gold, he let one more vital truth slip to Casey in private: the impossible wardrobe was a magical replica of a place beyond Hakatha in the Viren star system, gifted to him by a spellcaster named Zerathis. That turned Casey's strange vision into a direction. Then Mr. Blip arrived with officers and confirmed the wider shape of the day's danger: the attack on Mirt had likely been part of a larger diversion, and more burglaries had taken place across the academy at the same time. The cadets had not only stumbled into danger. They had passed through the center of something already spreading through Caelestis.</p>
       <div class="chapter-break"><span class="chapter-break-text">End of Day</span></div>
-
-      <p>Back in the cadet quarters, the noise of the day softened without truly ending. Tumak hung curtains around his bunk and carved out a small refuge of privacy. Boogie sought Sol out and asked what had brought him here, and Sol answered simply that his life had always turned in unlucky directions and he wanted to spend it exploring anyway. Gregory, farther from home and his master than ever before, felt a new tug in his core drawing him somewhere unknown. Casey passed the stolen shirt into Tumak's hidden corner without explanation, and Tumak hid it without question. Boogie, resting among people who seemed willing to accept him, reached into his own chest and pulled free a tiny model spelljamming ship, the same kind he had guided in training — except half of it was missing. He had no explanation for how it had formed inside him or why it was incomplete.</p>
-
+      <p>Back in the cadet quarters, the noise of the day softened without truly ending. Tumak hung curtains around his bunk and carved out a small refuge of privacy. Boogie sought Sol out and asked what had brought him here, and Sol answered simply that his life had always turned in unlucky directions and he wanted to spend it exploring anyway. Gregory, farther from home and his master than ever before, felt a new tug in his core drawing him somewhere unknown. Casey passed the shirt — his own rough sketch of the stars — into Tumak's hidden corner without explanation, and Tumak hid it without question. Boogie, resting among people who seemed willing to accept him, reached into his own chest and pulled free a tiny model spelljamming ship, the same kind he had guided in training — except half of it was missing. He had no explanation for how it had formed inside him or why it was incomplete.</p>
       <p>By then, the outline of the group had begun to show itself — not as something finished, but as something forming in motion. Shared danger had made them look at one another. Small loyalties had begun to take root. Quiet promises had been made. Around them, mysteries were already gathering: a living clue trapped in a crate, a hidden path toward Viren, a pull in Gregory's core, stolen secrets tucked behind curtains, and something unfinished taking shape inside Boogie. The day on Caelestis was still unfolding, and so was the crew.</p>
-
-    </div><!-- /narrative -->
-
-  </div><!-- /content -->
-</div><!-- /page-content -->
-
+    </div>
+  </div>
+</div>
 <footer class="page-footer page-content">
   <a href="index.html">← All Detailed Logs</a> &nbsp;·&nbsp; <a href="../brief/voyage-brief-001.html">Read Brief Version</a> &nbsp;·&nbsp; <a href="../../index.html">Caelestis</a>
 </footer>
-
 </body>
 </html>
