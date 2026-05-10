@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelestis — Corps Protocols</title>
+<link rel="stylesheet" href="../styles/caelestis.css">
+<style>
+  .protocol-list { display: flex; flex-direction: column; gap: 0.9rem; margin-top: 0.5rem; }
+
+  .protocol-card {
+    background: var(--bg-card);
+    border: 1px solid var(--gold-rule);
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.1rem 1.4rem;
+    position: relative; overflow: hidden;
+    transition: border-color 0.22s, background 0.22s, transform 0.22s;
+    animation: fadeUp 0.6s ease both;
+  }
+  .protocol-card::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+    background: var(--gold-dim); opacity: 0.5; transition: opacity 0.22s;
+  }
+  .protocol-card:hover {
+    border-color: rgba(201,153,58,0.4);
+    background: rgba(201,153,58,0.04);
+    transform: translateX(3px);
+  }
+  .protocol-card:hover::before { opacity: 1; }
+
+  .protocol-icon { width: 28px; height: 28px; color: var(--gold-dim); flex-shrink: 0; }
+  .protocol-icon svg { width: 100%; height: 100%; }
+
+  .protocol-info { display: flex; flex-direction: column; gap: 0.2rem; }
+  .protocol-title {
+    font-family: 'Cinzel', serif; font-size: 0.95rem;
+    font-weight: 700; color: var(--text); letter-spacing: 0.02em;
+  }
+  .protocol-desc { font-size: 0.85rem; color: var(--text-dim); line-height: 1.4; }
+
+  .protocol-arrow {
+    color: var(--text-muted); font-size: 0.9rem;
+    transition: color 0.2s, transform 0.2s; flex-shrink: 0;
+  }
+  .protocol-card:hover .protocol-arrow { color: var(--gold-dim); transform: translateX(3px); }
+
+  .protocol-card:nth-child(1){ animation-delay: 0.05s; }
+  .protocol-card:nth-child(2){ animation-delay: 0.12s; }
+  .protocol-card:nth-child(3){ animation-delay: 0.19s; }
+
+  .intro-note {
+    background: var(--gold-faint);
+    border-left: 3px solid var(--gold-dim);
+    padding: 0.7rem 1rem;
+    font-size: 0.88rem; line-height: 1.55;
+    color: var(--text-dim); margin-bottom: 2rem;
+  }
+
+  @keyframes fadeUp {
+    from { opacity:0; transform:translateY(16px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav page-content">
+  <a href="../index.html" class="nav-home">
+    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7l6-5 6 5M3 6v6h3v-3h2v3h3V6"/></svg>
+    Caelestis
+  </a>
+  <span class="nav-sep">›</span>
+  <span class="nav-current">Corps Protocols</span>
+</nav>
+
+<div class="page-content">
+  <div class="page-header">
+    <div class="page-eyebrow">Station Directory</div>
+    <div class="page-title">Corps Protocols</div>
+    <div class="page-subtitle">Standard procedures, operational guides, and crew references.</div>
+  </div>
+
+  <div class="content">
+
+    <div class="intro-note">
+      All active crew are expected to be familiar with the protocols relevant to their station. Consult the appropriate document before your first posting aboard a vessel.
+    </div>
+
+    <div class="section-label">All Entries</div>
+
+    <div class="protocol-list">
+
+      <a class="protocol-card" href="ship-mechanics.html">
+        <div class="protocol-icon">
+          <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="14" cy="16" rx="10" ry="5"/>
+            <path d="M4 16 Q4 10 14 9 Q24 10 24 16"/>
+            <line x1="14" y1="9" x2="14" y2="4"/>
+            <path d="M14 4 L19 7 L14 9"/>
+            <path d="M14 4 L9 7 L14 9"/>
+          </svg>
+        </div>
+        <div class="protocol-info">
+          <div class="protocol-title">Ship Mechanics</div>
+          <div class="protocol-desc">Ship stats, Bulwark Points, combat flow, targeting, boarding, and hazard procedures.</div>
+        </div>
+        <div class="protocol-arrow">›</div>
+      </a>
+
+      <a class="protocol-card" href="crew-roles.html">
+        <div class="protocol-icon">
+          <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 3 L22 7 L22 16 Q22 22 14 26 Q6 22 6 16 L6 7 Z"/>
+            <path d="M14 6 L20 9 L20 16 Q20 21 14 24 Q8 21 8 16 L8 9 Z"/>
+            <line x1="14" y1="11" x2="14" y2="20"/>
+            <line x1="10" y1="15" x2="18" y2="15"/>
+          </svg>
+        </div>
+        <div class="protocol-info">
+          <div class="protocol-title">Bridge Crew Roles</div>
+          <div class="protocol-desc">Spelljammer, Captain, Boatswain, Gunner, Navigator, and Medical Officer — abilities by rank.</div>
+        </div>
+        <div class="protocol-arrow">›</div>
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+<footer class="page-footer page-content">
+  <a href="../index.html">← Station Directory</a>
+</footer>
+
+</body>
+</html>
