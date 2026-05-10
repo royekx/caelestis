@@ -1,0 +1,240 @@
+/* ═══════════════════════════════════════════════
+   CAELESTIS — Shared Design System
+   All pages import this file.
+   Page-specific styles live in each HTML file.
+   ═══════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+/* ── TOKENS ── */
+:root {
+  /* Backgrounds */
+  --bg:          #06040e;
+  --bg-panel:    rgba(14, 10, 6, 0.82);
+  --bg-card:     rgba(20, 15, 8, 0.75);
+  --bg-raised:   rgba(30, 22, 10, 0.70);
+
+  /* Gold palette */
+  --gold:        #c9993a;
+  --gold-light:  #e8c87a;
+  --gold-dim:    #9a7428;
+  --gold-faint:  rgba(201, 153, 58, 0.12);
+  --gold-rule:   rgba(201, 153, 58, 0.25);
+
+  /* Text */
+  --text:        #e8dcc8;
+  --text-dim:    #9a8c78;
+  --text-muted:  #5a4e3c;
+
+  /* Rank colours */
+  --cadet:       #8b2020;
+  --sailor:      #1e4a7a;
+  --officer:     #5a2d82;
+  --bridge:      #a07820;
+
+  /* Misc */
+  --radius:      2px;
+}
+
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+/* ── BASE ── */
+body {
+  background-color: var(--bg);
+  font-family: 'Crimson Pro', Georgia, serif;
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── STAR FIELD (fixed behind everything) ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(1px   1px   at 8%  12%, #ffffff99 0%, transparent 100%),
+    radial-gradient(1px   1px   at 22% 38%, #ffffff55 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 38%  7%, #ffffffbb 0%, transparent 100%),
+    radial-gradient(1px   1px   at 53% 58%, #ffffff44 0%, transparent 100%),
+    radial-gradient(1px   1px   at 68% 23%, #ffffff77 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 79% 74%, #ffffffcc 0%, transparent 100%),
+    radial-gradient(1px   1px   at 91% 44%, #ffffff55 0%, transparent 100%),
+    radial-gradient(1px   1px   at 14% 79%, #ffffff66 0%, transparent 100%),
+    radial-gradient(1px   1px   at 58% 91%, #ffffff44 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 33% 63%, #ffffff88 0%, transparent 100%),
+    radial-gradient(1px   1px   at 47% 28%, #ffffff55 0%, transparent 100%),
+    radial-gradient(1px   1px   at 93% 11%, #ffffff77 0%, transparent 100%),
+    radial-gradient(1px   1px   at  4% 53%, #ffffff44 0%, transparent 100%),
+    radial-gradient(1px   1px   at 76% 87%, #ffffff66 0%, transparent 100%),
+    radial-gradient(1px   1px   at 18% 47%, #ffffff33 0%, transparent 100%),
+    radial-gradient(1px   1px   at 62% 18%, #ffffff55 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 85% 35%, #ffffff88 0%, transparent 100%),
+    radial-gradient(1px   1px   at 42% 82%, #ffffff44 0%, transparent 100%);
+}
+
+/* ── PAGE WRAPPER ── */
+.page-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── SITE NAV (sub-pages) ── */
+.site-nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.2rem 2.5rem;
+  border-bottom: 1px solid var(--gold-rule);
+  background: linear-gradient(to bottom, rgba(6,4,14,0.95) 0%, transparent 100%);
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.site-nav a.nav-home {
+  color: var(--gold);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s;
+}
+.site-nav a.nav-home:hover { color: var(--gold-light); }
+.site-nav a.nav-home svg { width: 14px; opacity: 0.7; }
+
+.nav-sep { color: var(--text-muted); font-size: 0.7rem; }
+.nav-section { color: var(--text-dim); }
+.nav-current { color: var(--text); }
+
+/* ── PAGE HEADER ── */
+.page-header {
+  text-align: center;
+  padding: 3.5rem 2rem 2.5rem;
+  position: relative;
+}
+.page-header::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: var(--gold);
+  margin: 1.2rem auto 0;
+}
+.page-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.page-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  line-height: 1.1;
+}
+.page-subtitle {
+  margin-top: 0.6rem;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-dim);
+}
+
+/* ── CONTENT AREA ── */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2.5rem 6rem;
+}
+
+/* ── SECTION LABEL ── */
+.section-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold-rule);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+
+/* ── SECTION BLOCK ── */
+.section-block { margin-bottom: 2.5rem; }
+
+/* ── CALLOUT ── */
+.callout {
+  background: var(--gold-faint);
+  border: 1px solid var(--gold-rule);
+  border-left: 3px solid var(--gold);
+  padding: 0.85rem 1.1rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin-top: 0.9rem;
+}
+.callout-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+/* ── ENTRY LIST ── */
+.entry-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.entry {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--gold-rule);
+  color: var(--text);
+}
+.entry b { font-weight: 600; color: var(--text); }
+.entry em { color: var(--text-dim); }
+
+/* ── DIVIDER ── */
+.divider {
+  text-align: center;
+  color: var(--gold-dim);
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  margin: 0.3rem 0 2rem;
+}
+
+/* ── PAGE FOOTER ── */
+.page-footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 1.5rem 2rem 2.5rem;
+  border-top: 1px solid var(--gold-rule);
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+.page-footer a {
+  color: var(--gold-dim);
+  text-decoration: none;
+}
+.page-footer a:hover { color: var(--gold); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .site-nav { padding: 1rem 1.2rem; }
+  .content { padding: 0 1.2rem 4rem; }
+  .page-header { padding: 2.5rem 1.2rem 2rem; }
+}
