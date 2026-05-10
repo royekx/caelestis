@@ -4,494 +4,270 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caelestis — Ship Mechanics</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/caelestis.css">
 <style>
-  :root {
-    --gold:           #c9993a;
-    --gold-light:     #e8c87a;
-    --gold-dim:       #9a7428;
-    --ink:            #1a1410;
-    --parchment:      #f5edd8;
-    --parchment-dark: #ddd0b0;
-    --space:          #06040e;
-    --rule:           #c9993a55;
-    --muted:          #5a4a36;
-    --accent-bg:      #e8d8b844;
-    --callout-border: #c9993a88;
-    --text-light:     #e8dcc8;
-    --text-dim:       #9a8c78;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: #2a1f0e;
-    font-family: 'Crimson Pro', Georgia, serif;
-    color: var(--ink);
-    min-height: 100vh;
-    padding: 2rem 1rem;
-  }
-
-  .page {
-    max-width: 860px;
-    margin: 0 auto;
-    background: var(--parchment);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    box-shadow: 0 0 80px #00000088, inset 0 0 120px #c9993a18;
-    padding: 3.5rem 4rem;
-  }
-
-  /* ── HEADER ── */
-  .header {
-    text-align: center;
-    margin-bottom: 2.2rem;
-    padding-bottom: 1.4rem;
-    border-bottom: 2px solid var(--gold);
-    position: relative;
-  }
-  .header::before {
-    content: '✦';
-    position: absolute;
-    bottom: -0.6rem; left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.8rem; color: var(--gold);
-    background: var(--parchment); padding: 0 0.4rem;
-  }
-  .eyebrow {
-    font-family: 'Cinzel', serif;
-    font-size: 0.68rem;
-    letter-spacing: 0.3em;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-bottom: 0.4rem;
-  }
-  .header h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 2.2rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    line-height: 1.1;
-  }
-  .header-sub {
-    margin-top: 0.6rem;
-    font-size: 0.96rem;
-    font-style: italic;
-    color: var(--muted);
-  }
-
-  /* ── SECTION ── */
-  .section {
-    margin-bottom: 2.2rem;
-  }
-  .section-title {
-    font-family: 'Cinzel', serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--gold);
-    border-bottom: 1px solid var(--rule);
-    padding-bottom: 0.3rem;
-    margin-bottom: 1rem;
-  }
-
-  /* ── STAT GRID (Your Ship) ── */
+  /* ── STAT GRID ── */
   .stat-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.7rem;
   }
   .stat-block {
-    background: var(--accent-bg);
-    border-left: 3px solid var(--gold);
-    padding: 0.55rem 0.8rem;
+    background: var(--gold-faint);
+    border: 1px solid var(--gold-rule);
+    border-left: 3px solid var(--gold-dim);
+    padding: 0.65rem 0.9rem;
   }
   .stat-name {
-    font-family: 'Cinzel', serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 0.2rem;
+    font-family: 'Cinzel', serif; font-size: 0.62rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.2rem;
   }
-  .stat-desc {
-    font-size: 0.88rem;
-    line-height: 1.4;
-    color: var(--ink);
-  }
+  .stat-desc { font-size: 0.87rem; line-height: 1.45; color: var(--text); }
 
-  /* ── CALLOUT (BP highlight) ── */
-  .callout {
-    background: var(--accent-bg);
-    border: 1px solid var(--callout-border);
-    padding: 0.8rem 1.1rem;
-    margin-top: 0.8rem;
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-  .callout strong {
-    font-family: 'Cinzel', serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--gold);
-    display: block;
-    margin-bottom: 0.25rem;
-  }
-
-  /* ── TWO-COL LAYOUT ── */
-  .two-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .two-col-wide {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 1.2rem;
-  }
-
-  /* ── ENTRY LIST ── */
-  .entry-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.55rem;
-  }
-  .entry {
-    font-size: 0.9rem;
-    line-height: 1.45;
-    padding-left: 0.85rem;
-    border-left: 2px solid var(--rule);
-  }
-  .entry-name {
-    font-weight: 600;
-    color: var(--ink);
-  }
-  .entry-note {
-    font-style: italic;
-    color: var(--muted);
-    font-size: 0.84rem;
-  }
-
-  /* ── TARGET GRID ── */
-  .target-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.7rem;
-  }
-  .target-card {
-    border: 1px solid var(--rule);
-    padding: 0.6rem 0.8rem;
-  }
-  .target-card-name {
-    font-family: 'Cinzel', serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 0.25rem;
-  }
-  .target-card p {
-    font-size: 0.87rem;
-    line-height: 1.4;
-  }
+  /* ── TWO-COL ── */
+  .two-col   { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .col-wide  { display: grid; grid-template-columns: 3fr 2fr; gap: 1.2rem; }
 
   /* ── COMBAT FLOW ── */
   .flow-row {
-    display: flex;
-    align-items: stretch;
-    gap: 0;
-    margin-bottom: 0.5rem;
+    display: flex; align-items: stretch; margin-bottom: 0.5rem;
   }
   .flow-badge {
-    font-family: 'Cinzel', serif;
-    font-size: 0.6rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    background: var(--gold);
-    color: #fff;
+    font-family: 'Cinzel', serif; font-size: 0.58rem;
+    letter-spacing: 0.07em; text-transform: uppercase;
+    background: var(--gold-dim); color: var(--bg);
     padding: 0.3rem 0.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 90px;
-    text-align: center;
-    flex-shrink: 0;
-    line-height: 1.3;
+    display: flex; align-items: center; justify-content: center;
+    min-width: 88px; text-align: center; flex-shrink: 0; line-height: 1.3;
   }
-  .flow-badge.dim {
-    background: #b8a070;
-  }
-  .flow-content {
-    background: var(--accent-bg);
-    padding: 0.35rem 0.75rem;
-    font-size: 0.88rem;
-    line-height: 1.4;
-    flex: 1;
-    display: flex;
-    align-items: center;
+  .flow-badge.dim { background: rgba(154, 116, 40, 0.4); color: var(--text-dim); }
+  .flow-body {
+    background: var(--gold-faint);
+    border: 1px solid var(--gold-rule);
+    border-left: none;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.88rem; line-height: 1.45;
+    flex: 1; display: flex; align-items: center;
+    color: var(--text);
   }
 
-  /* ── WEAPON ATTACK BOX ── */
+  /* ── TARGET GRID ── */
+  .target-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .target-card {
+    border: 1px solid var(--gold-rule);
+    background: rgba(201,153,58,0.05);
+    padding: 0.6rem 0.8rem;
+  }
+  .target-name {
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.2rem;
+  }
+  .target-card p { font-size: 0.86rem; line-height: 1.4; color: var(--text); }
+
+  /* ── FORMULA ── */
+  .formula-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .formula-box {
-    background: var(--accent-bg);
-    border: 1px solid var(--callout-border);
-    padding: 0.9rem 1.2rem;
-    text-align: center;
+    background: var(--gold-faint);
+    border: 1px solid var(--gold-rule);
+    padding: 1rem 1.2rem; text-align: center;
   }
   .formula {
-    font-family: 'Cinzel', serif;
-    font-size: 1.05rem;
-    color: var(--ink);
-    letter-spacing: 0.04em;
+    font-family: 'Cinzel', serif; font-size: 1rem;
+    letter-spacing: 0.03em; color: var(--text);
     margin-bottom: 0.35rem;
   }
-  .formula-note {
-    font-size: 0.82rem;
-    color: var(--muted);
-    font-style: italic;
-  }
+  .formula-note { font-size: 0.82rem; font-style: italic; color: var(--text-dim); }
 
-  /* ── HAZARD SKILLS ── */
+  /* ── SKILL PILLS ── */
   .skill-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.4rem;
-    margin-top: 0.6rem;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem; margin-top: 0.7rem;
   }
   .skill-pill {
-    background: var(--accent-bg);
-    border: 1px solid var(--rule);
-    padding: 0.3rem 0.5rem;
-    font-size: 0.78rem;
-    text-align: center;
-    line-height: 1.3;
-    color: var(--muted);
+    background: var(--gold-faint);
+    border: 1px solid var(--gold-rule);
+    padding: 0.35rem 0.5rem;
+    font-size: 0.78rem; text-align: center; line-height: 1.35;
+    color: var(--text-dim);
   }
+  .skill-pill span { font-size: 0.7rem; display: block; color: var(--text-muted); }
 
-  /* ── DIVIDER ── */
-  .divider {
-    text-align: center;
-    color: var(--gold);
-    font-size: 0.7rem;
-    letter-spacing: 0.4em;
-    margin: 0.4rem 0 1.8rem;
-  }
-
-  /* ── FOOTER ── */
-  .footer {
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--rule);
-    font-size: 0.82rem;
-    font-style: italic;
-    color: var(--muted);
-    text-align: center;
-  }
-
-  /* ── BACK NAV ── */
-  .back-nav {
-    max-width: 860px;
-    margin: 0 auto 1.2rem;
-    padding: 0 0.5rem;
-  }
-  .back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-family: 'Cinzel', serif;
-    font-size: 0.62rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--gold-dim);
-    text-decoration: none;
-    opacity: 0.75;
-    transition: opacity 0.2s, color 0.2s;
-  }
-  .back-link:hover {
-    opacity: 1;
-    color: var(--gold);
-  }
-  .back-link svg { width: 12px; flex-shrink: 0; }
-
-  @media (max-width: 640px) {
-    .page { padding: 2rem 1.5rem; }
-    .stat-grid, .two-col, .two-col-wide, .target-grid, .skill-grid { grid-template-columns: 1fr; }
+  @media(max-width:640px){
+    .stat-grid, .two-col, .col-wide, .target-grid, .formula-grid, .skill-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
 </head>
 <body>
-  <nav class="back-nav">
-    <a class="back-link" href="../index.html">
-      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M13 8H3M7 4l-4 4 4 4"/>
-      </svg>
-      Main Page
-    </a>
-  </nav>
-<div class="page">
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="eyebrow">Caelestis Campaign — Player Reference</div>
-    <h1>Ship Mechanics</h1>
-    <p class="header-sub">Everything you need to know about flying, fighting, and surviving in Wildspace.</p>
+<nav class="site-nav page-content">
+  <a href="../index.html" class="nav-home">
+    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7l6-5 6 5M3 6v6h3v-3h2v3h3V6"/></svg>
+    Caelestis
+  </a>
+  <span class="nav-sep">›</span>
+  <span class="nav-section">Reference</span>
+  <span class="nav-sep">›</span>
+  <span class="nav-current">Ship Mechanics</span>
+</nav>
+
+<div class="page-content">
+  <div class="page-header">
+    <div class="page-eyebrow">Player Reference</div>
+    <div class="page-title">Ship Mechanics</div>
+    <div class="page-subtitle">Flying, fighting, and surviving in Wildspace.</div>
   </div>
 
+  <div class="content">
 
-  <!-- ══════════════════════════════════════════ -->
-  <!-- 1. YOUR SHIP                               -->
-  <!-- ══════════════════════════════════════════ -->
-  <div class="section">
-    <div class="section-title">Your Ship</div>
-    <div class="stat-grid">
-      <div class="stat-block">
-        <div class="stat-name">Armor Class</div>
-        <div class="stat-desc">What attackers need to hit the ship. Same as creature AC.</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-name">Hull Points</div>
-        <div class="stat-desc">The ship's health. Reaches 0 and the ship stops functioning. Hard to repair mid-combat.</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-name">Bulwark Points</div>
-        <div class="stat-desc">A damage buffer in front of Hull Points. Damage hits BP first. Easier to recover than HP.</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-name">Speed</div>
-        <div class="stat-desc">How far the ship moves per turn in combat (in feet).</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-name">Agility</div>
-        <div class="stat-desc">How far the ship can turn per turn, in degrees. Higher = more maneuverable.</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-name">Crew</div>
-        <div class="stat-desc">How many sailors are aboard. They man the weapons — fewer crew means fewer attacks.</div>
-      </div>
-    </div>
-
-    <div class="callout">
-      <strong>How Bulwark Works</strong>
-      All incoming damage depletes Bulwark Points first. Hull only takes damage once BP reaches 0. Your Boatswain passively restores BP each turn — but a <em>Fire</em> critical effect stops that recovery until they put it out.
-    </div>
-  </div>
-
-  <div class="divider">✦ ✦ ✦</div>
-
-
-  <!-- ══════════════════════════════════════════ -->
-  <!-- 2. COMBAT                                  -->
-  <!-- ══════════════════════════════════════════ -->
-  <div class="section">
-    <div class="section-title">Combat</div>
-    <div class="two-col-wide">
-
-      <div>
-        <div class="entry-list" style="margin-bottom:0.9rem;">
-          <div class="entry"><span class="entry-name">Your initiative.</span> You roll and act normally, same as any combat. Your character's actions and abilities all still work.</div>
-          <div class="entry"><span class="entry-name">Your role.</span> Your bridge crew role gives you additional special actions on top of your normal ones — not instead of them. See the Crew Roles reference.</div>
-          <div class="entry"><span class="entry-name">The ship's turn.</span> The ship acts at the Spelljammer's initiative. They direct movement, turning, and weapon fire without spending their own actions.</div>
-          <div class="entry"><span class="entry-name">Switching roles.</span> You can switch to a vacant role as a bonus action. Single-occupant roles (Spelljammer, Captain) require the current occupant to agree.</div>
+    <!-- YOUR SHIP -->
+    <div class="section-block">
+      <div class="section-label">Your Ship</div>
+      <div class="stat-grid">
+        <div class="stat-block">
+          <div class="stat-name">Armor Class</div>
+          <div class="stat-desc">What attackers need to hit the ship. Same as creature AC.</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-name">Hull Points</div>
+          <div class="stat-desc">The ship's health. Reaches 0 and the ship stops functioning. Hard to repair mid-combat.</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-name">Bulwark Points</div>
+          <div class="stat-desc">A damage buffer in front of Hull Points. Damage hits BP first. Easier to recover than HP.</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-name">Speed</div>
+          <div class="stat-desc">How far the ship moves per turn in combat (in feet).</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-name">Agility</div>
+          <div class="stat-desc">How far the ship can turn per turn, in degrees. Higher = more maneuverable.</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-name">Crew</div>
+          <div class="stat-desc">Sailors manning the ship. Fewer crew means fewer weapon attacks.</div>
         </div>
       </div>
+      <div class="callout">
+        <span class="callout-label">How Bulwark Works</span>
+        All incoming damage depletes Bulwark Points first. Hull only takes damage once BP reaches 0. Your Boatswain passively restores BP each turn — but a <em>Fire</em> critical stops that recovery until they spend an action to extinguish it.
+      </div>
+    </div>
 
-      <!-- What you can target -->
-      <div>
-        <div style="font-family:'Cinzel',serif; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem;">What You Can Target</div>
-        <div class="target-grid">
-          <div class="target-card">
-            <div class="target-card-name">The Ship</div>
-            <p>Deals damage to BP then Hull. The direct approach.</p>
+    <div class="divider">✦ ✦ ✦</div>
+
+    <!-- COMBAT -->
+    <div class="section-block">
+      <div class="section-label">Combat</div>
+      <div class="col-wide">
+        <div>
+          <div class="flow-row">
+            <div class="flow-badge">Your Turn</div>
+            <div class="flow-body">You roll and act normally. All your character's actions and abilities still work.</div>
           </div>
-          <div class="target-card">
-            <div class="target-card-name">Weapons</div>
-            <p>Destroy a weapon to silence it. Each has its own HP.</p>
+          <div class="flow-row">
+            <div class="flow-badge">Your Role</div>
+            <div class="flow-body">Your bridge crew role gives you <em>additional</em> special actions — not instead of your normal ones.</div>
           </div>
-          <div class="target-card">
-            <div class="target-card-name">Crew</div>
-            <p>Fewer crew = fewer weapon attacks the ship can make.</p>
+          <div class="flow-row">
+            <div class="flow-badge">Ship's Turn</div>
+            <div class="flow-body">The ship acts at the Spelljammer's initiative. They direct movement, turning, and weapon fire without spending their own actions.</div>
           </div>
-          <div class="target-card">
-            <div class="target-card-name">Officers</div>
-            <p>Individually tracked enemies. Taking them out has big impact.</p>
+          <div class="flow-row">
+            <div class="flow-badge dim">Switch Role</div>
+            <div class="flow-body">Switching to a vacant role costs a bonus action. Single-occupant roles require the current occupant to agree.</div>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Cinzel',serif; font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem;">What You Can Target</div>
+          <div class="target-grid">
+            <div class="target-card">
+              <div class="target-name">The Ship</div>
+              <p>Deals damage to BP then Hull. The direct approach.</p>
+            </div>
+            <div class="target-card">
+              <div class="target-name">Weapons</div>
+              <p>Destroy a weapon to silence it. Each has its own HP.</p>
+            </div>
+            <div class="target-card">
+              <div class="target-name">Crew</div>
+              <p>Fewer crew = fewer weapon attacks the ship can make.</p>
+            </div>
+            <div class="target-card">
+              <div class="target-name">Officers</div>
+              <p>Individually tracked enemies. Taking them out has big impact.</p>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
-  </div>
 
-  <div class="divider">✦ ✦ ✦</div>
+    <div class="divider">✦ ✦ ✦</div>
 
-
-  <!-- ══════════════════════════════════════════ -->
-  <!-- 3. SHIP WEAPON ATTACKS                     -->
-  <!-- ══════════════════════════════════════════ -->
-  <div class="section">
-    <div class="section-title">Ship Weapon Attacks</div>
-    <div class="two-col">
-      <div class="formula-box">
-        <div class="formula">d20 + Proficiency + Str or Dex</div>
-        <div class="formula-note">Your choice of Strength or Dexterity modifier on the attack roll.</div>
+    <!-- WEAPON ATTACKS -->
+    <div class="section-block">
+      <div class="section-label">Ship Weapon Attacks</div>
+      <div class="formula-grid">
+        <div class="formula-box">
+          <div class="formula">d20 + Proficiency + Str or Dex</div>
+          <div class="formula-note">Your choice of modifier on the attack roll.</div>
+        </div>
+        <div class="formula-box">
+          <div class="formula">Damage — no modifier added</div>
+          <div class="formula-note">Roll the weapon's damage dice only. Ability modifier is <em>not</em> added to damage.</div>
+        </div>
       </div>
-      <div class="formula-box">
-        <div class="formula">Damage — no modifier</div>
-        <div class="formula-note">Roll the weapon's damage dice only. Your ability modifier is <em>not</em> added to damage.</div>
+      <div class="entry-list" style="margin-top:0.9rem;">
+        <div class="entry"><b>Crew requirement.</b> Each weapon needs a minimum number of crew to fire. No crew available = can't fire. Gunners at Officer rank reduce this by 1.</div>
+        <div class="entry"><b>One fire per turn.</b> A weapon can only be fired once per turn. A crew member can only man one weapon per turn.</div>
+        <div class="entry"><b>Class features.</b> Features like Extra Attack or Divine Smite can apply to ship weapons — but only once you reach Officer rank as a Gunner. Check with your DM for specifics.</div>
       </div>
     </div>
-    <div style="margin-top:0.8rem;" class="entry-list">
-      <div class="entry"><span class="entry-name">Crew requirement.</span> Each weapon needs a minimum number of crew to fire. No crew available = can't fire. Gunners at Officer rank reduce this by 1.</div>
-      <div class="entry"><span class="entry-name">One fire per turn.</span> A weapon can only be fired once per turn. A crew member can only man one weapon per turn.</div>
-      <div class="entry"><span class="entry-name">Class features.</span> Features that apply to weapon attacks (Extra Attack, Divine Smite, etc.) can apply to ship weapons — but only once you reach Officer rank as a Gunner. Check with your DM for specifics.</div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <!-- BOARDING -->
+    <div class="section-block">
+      <div class="section-label">Boarding</div>
+      <div class="entry-list">
+        <div class="entry"><b>Within 5 ft.</b> Just move across. No action required — treat it like stepping through a doorway.</div>
+        <div class="entry"><b>Grappling hook or plank.</b> Either requires an action to set up, then you can cross.</div>
+        <div class="entry"><b>Jump, fly, teleport.</b> Any movement available to your character works normally. Use the Ready action if waiting for the Spelljammer to close distance.</div>
+        <div class="entry"><b>Captain's Boarding Party.</b> At Officer rank, the Captain can call a coordinated boarding — everyone who joins swings across simultaneously at the start of the next round.</div>
+      </div>
     </div>
-  </div>
 
-  <div class="divider">✦ ✦ ✦</div>
+    <div class="divider">✦ ✦ ✦</div>
 
-
-  <!-- ══════════════════════════════════════════ -->
-  <!-- 4. BOARDING                                -->
-  <!-- ══════════════════════════════════════════ -->
-  <div class="section">
-    <div class="section-title">Boarding</div>
-    <div class="entry-list">
-      <div class="entry"><span class="entry-name">Within 5 ft.</span> Just move across. No action required — treat it like stepping through a doorway.</div>
-      <div class="entry"><span class="entry-name">Grappling hook or plank.</span> Either requires an action to set up, then you can cross.</div>
-      <div class="entry"><span class="entry-name">Jump, fly, teleport.</span> Any movement option available to your character works normally. Use the Ready action if you're waiting for the Spelljammer to close distance.</div>
-      <div class="entry"><span class="entry-name">Captain's Boarding Party.</span> At Officer rank, the Captain can call a coordinated boarding action — everyone who joins swings across simultaneously at the start of the next round.</div>
+    <!-- HAZARDS -->
+    <div class="section-block">
+      <div class="section-label">Hazards</div>
+      <div class="entry-list" style="margin-bottom:0.9rem;">
+        <div class="entry"><b>What they are.</b> Non-combat challenges — asteroid clusters, interstellar fog, fire on board, electrical fields. Each is a group skill check.</div>
+        <div class="entry"><b>How they work.</b> Each character contributes one check. Your bridge crew role shapes which options are available. The crew makes a single roll too. Majority success or failure determines the outcome across four tiers.</div>
+        <div class="entry"><b>Be creative.</b> The listed checks are suggestions. If you have a better idea for how your character would help, pitch it to the DM.</div>
+      </div>
+      <div style="font-family:'Cinzel',serif; font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:0.4rem;">Common Checks</div>
+      <div class="skill-grid">
+        <div class="skill-pill">Str (Athletics)<span>Man the ship</span></div>
+        <div class="skill-pill">Dex (Acrobatics)<span>React to hazard</span></div>
+        <div class="skill-pill">Int (Arcana)<span>Control the helm</span></div>
+        <div class="skill-pill">Wis (Perception)<span>Spot obstacles</span></div>
+        <div class="skill-pill">Wis (Survival)<span>Plot a safe course</span></div>
+        <div class="skill-pill">Cha (Persuasion)<span>Rally the crew</span></div>
+      </div>
     </div>
-  </div>
 
-  <div class="divider">✦ ✦ ✦</div>
+  </div><!-- /content -->
+</div><!-- /page-content -->
 
+<footer class="page-footer page-content">
+  See <a href="caelestis_crew_roles.html">Bridge Crew Roles</a> for your role abilities and rank progression. &nbsp;·&nbsp; <a href="../index.html">← Back to Caelestis</a>
+</footer>
 
-  <!-- ══════════════════════════════════════════ -->
-  <!-- 5. HAZARDS                                 -->
-  <!-- ══════════════════════════════════════════ -->
-  <div class="section">
-    <div class="section-title">Hazards</div>
-    <div class="entry-list" style="margin-bottom:0.8rem;">
-      <div class="entry"><span class="entry-name">What they are.</span> Non-combat challenges the ship faces — asteroid clusters, interstellar fog, fire on board, crew conflicts, electrical fields. Each is a group skill check.</div>
-      <div class="entry"><span class="entry-name">How they work.</span> Each character contributes one check. Your bridge crew role shapes which options are available to you. The crew also makes a single roll. Majority success or failure determines the outcome — four tiers from Total Success to Total Failure.</div>
-      <div class="entry"><span class="entry-name">Be creative.</span> The listed checks are suggestions. If you have a better idea for how your character would help, pitch it — the DM will call for an appropriate roll.</div>
-    </div>
-    <div style="font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:0.35rem;">Common Checks</div>
-    <div class="skill-grid">
-      <div class="skill-pill">Str (Athletics)<br><span style="font-size:0.72rem;">Man the ship</span></div>
-      <div class="skill-pill">Dex (Acrobatics)<br><span style="font-size:0.72rem;">React to hazard</span></div>
-      <div class="skill-pill">Int (Arcana)<br><span style="font-size:0.72rem;">Control the helm</span></div>
-      <div class="skill-pill">Wis (Perception)<br><span style="font-size:0.72rem;">Spot obstacles</span></div>
-      <div class="skill-pill">Wis (Survival)<br><span style="font-size:0.72rem;">Plot a safe course</span></div>
-      <div class="skill-pill">Cha (Persuasion)<br><span style="font-size:0.72rem;">Rally the crew</span></div>
-    </div>
-  </div>
-
-
-  <!-- FOOTER -->
-  <div class="footer">
-    See the <em>Crew Roles</em> reference for your bridge crew role, rank abilities, and what changes as you advance from Cadet to Sailor to Officer to Bridge.
-  </div>
-
-</div>
 </body>
 </html>
