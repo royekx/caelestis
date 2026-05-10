@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelestis — Viren System</title>
+<link rel="stylesheet" href="../../styles/caelestis.css">
+<style>
+  .entry-header {
+    display: grid; grid-template-columns: 160px 1fr;
+    gap: 2rem; margin-bottom: 2.5rem; align-items: start;
+  }
+  .portrait-frame {
+    width: 100%; aspect-ratio: 1;
+    border: 1px solid var(--gold-rule); background: var(--bg-card);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-muted);
+  }
+  .portrait-frame svg { width: 44px; opacity: 0.2; }
+  .portrait-label {
+    font-family: 'Cinzel', serif; font-size: 0.55rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--text-muted); text-align: center; margin-top: 0.5rem;
+  }
+  .stat-list { display: flex; flex-direction: column; gap: 0; margin-top: 0.8rem; }
+  .stat-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 0.28rem 0; border-bottom: 1px solid var(--gold-rule); font-size: 0.82rem;
+  }
+  .stat-row:last-child { border-bottom: none; }
+  .stat-key {
+    font-family: 'Cinzel', serif; font-size: 0.54rem;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
+  }
+  .stat-val { color: var(--text); text-align: right; font-style: italic; }
+  .classification {
+    display: inline-block; font-family: 'Cinzel', serif; font-size: 0.55rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 0.22rem 0.65rem; border: 1px solid; margin-bottom: 0.5rem;
+  }
+  .class-system { color: #9a6ad0; border-color: rgba(90,45,130,0.45); }
+  .entry-info { display: flex; flex-direction: column; gap: 0.35rem; }
+  .entry-name {
+    font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700;
+    color: var(--text); letter-spacing: 0.03em; line-height: 1.1;
+  }
+  .entry-sub { font-size: 0.9rem; font-style: italic; color: var(--text-dim); }
+  .entry-body { font-size: 0.93rem; line-height: 1.78; color: var(--text); }
+  .entry-body p { margin-bottom: 0.85rem; }
+  .entry-body p:last-child { margin-bottom: 0; }
+  .log-list { display: flex; flex-direction: column; gap: 0.4rem; }
+  .log-item {
+    font-size: 0.9rem; line-height: 1.5; padding-left: 1rem;
+    position: relative; color: var(--text);
+  }
+  .log-item::before { content: '›'; position: absolute; left: 0; color: var(--gold-dim); }
+  .log-item b { font-weight: 600; }
+  .log-item em { color: var(--text-dim); font-style: italic; }
+  @media(max-width:560px){ .entry-header { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav class="site-nav page-content">
+  <a href="../../index.html" class="nav-home">
+    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7l6-5 6 5M3 6v6h3v-3h2v3h3V6"/></svg>
+    Caelestis
+  </a>
+  <span class="nav-sep">›</span>
+  <span class="nav-section"><a href="../index.html" style="color:var(--text-dim);text-decoration:none;">Navigation Records</a></span>
+  <span class="nav-sep">›</span>
+  <span class="nav-current">Viren System</span>
+</nav>
+<div class="page-content">
+  <div class="page-header">
+    <div class="page-eyebrow">Navigation Records</div>
+    <div class="page-title">Viren System</div>
+  </div>
+  <div class="content">
+    <div class="entry-header">
+      <div>
+        <div class="portrait-frame"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="6" y="6" width="36" height="36" rx="2"/><path d="M6 16 Q24 13 42 16"/><path d="M6 26 Q24 23 42 26"/><path d="M6 36 Q24 33 42 36"/><path d="M16 6 Q13 24 16 42"/><path d="M26 6 Q23 24 26 42"/></svg></div>
+        <div class="portrait-label">Portrait Pending</div>
+        <div class="stat-list"><div class="stat-row"><span class="stat-key">Type</span><span class="stat-val">Star System</span></div>
+<div class="stat-row"><span class="stat-key">Position</span><span class="stat-val">Beyond H'Catha — route unconfirmed</span></div>
+<div class="stat-row"><span class="stat-key">Known Contact</span><span class="stat-val">Zerathis</span></div>
+<div class="stat-row"><span class="stat-key">Status</span><span class="stat-val">Uncharted — Intelligence Only</span></div></div>
+      </div>
+      <div class="entry-info">
+        <div class="classification class-system">Uncharted</div>
+        <div class="entry-name">Viren System</div>
+        <div class="entry-sub">Uncharted — Beyond Realmspace</div>
+        <div class="entry-body" style="margin-top:0.8rem;"><p>Viren is known by name and by implication. No official navigation record exists for it in the academy's accessible charts. What is known comes from a single source: Mirt the Merciless, who owns a magical wardrobe that opens onto an extradimensional space tied to a location within the Viren system. The wardrobe was gifted to him by a spellcaster named Zerathis.</p>
+<p>One member of the crew has heard a voice from inside that wardrobe. The voice said only: <em>go there.</em></p></div>
+      </div>
+    </div>
+    <div class="divider">✦ ✦ ✦</div>
+    <div class="section-block">
+      <div class="section-label">Voyage 001</div>
+      <div class="log-list"><div class="log-item">Referenced by Mirt in a private conversation with a crew member. Not public academy knowledge.</div>
+<div class="log-item">Mirt's wardrobe space is a magical replica of a location within this system — the connection was made by <b>Zerathis</b>.</div>
+<div class="log-item">Position is described as beyond H'Catha. No verified route exists in current records.</div>
+<div class="log-item"><em>Further intelligence required before navigation planning is possible.</em></div></div>
+    </div>
+  </div>
+</div>
+<footer class="page-footer page-content"><a href="../index.html">← Navigation Records</a></footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelestis — Casey</title>
+<link rel="stylesheet" href="../../styles/caelestis.css">
+<style>
+  .entry-header {
+    display: grid; grid-template-columns: 160px 1fr;
+    gap: 2rem; margin-bottom: 2.5rem; align-items: start;
+  }
+  .portrait-frame {
+    width: 100%; aspect-ratio: 1;
+    border: 1px solid var(--gold-rule); background: var(--bg-card);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-muted);
+  }
+  .portrait-frame svg { width: 44px; opacity: 0.2; }
+  .portrait-label {
+    font-family: 'Cinzel', serif; font-size: 0.55rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--text-muted); text-align: center; margin-top: 0.5rem;
+  }
+  .stat-list { display: flex; flex-direction: column; gap: 0; margin-top: 0.8rem; }
+  .stat-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 0.28rem 0; border-bottom: 1px solid var(--gold-rule); font-size: 0.82rem;
+  }
+  .stat-row:last-child { border-bottom: none; }
+  .stat-key {
+    font-family: 'Cinzel', serif; font-size: 0.54rem;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
+  }
+  .stat-val { color: var(--text); text-align: right; font-style: italic; }
+  .classification {
+    display: inline-block; font-family: 'Cinzel', serif; font-size: 0.55rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 0.22rem 0.65rem; border: 1px solid; margin-bottom: 0.5rem;
+  }
+  .class-ally    { color: #5a8ab8; border-color: rgba(30,74,122,0.45); }
+  .class-neutral { color: var(--gold-dim); border-color: var(--gold-rule); }
+  .class-threat  { color: #c05050; border-color: rgba(139,32,32,0.45); }
+  .class-unknown { color: var(--text-muted); border-color: var(--gold-rule); }
+  .class-cadet   { color: #c05050; border-color: rgba(139,32,32,0.35); }
+  .class-item    { color: var(--gold-dim); border-color: var(--gold-rule); }
+  .class-sphere  { color: #5a8ab8; border-color: rgba(30,74,122,0.45); }
+  .class-system  { color: #9a6ad0; border-color: rgba(90,45,130,0.45); }
+  .entry-info { display: flex; flex-direction: column; gap: 0.35rem; }
+  .entry-name {
+    font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700;
+    color: var(--text); letter-spacing: 0.03em; line-height: 1.1;
+  }
+  .entry-sub { font-size: 0.9rem; font-style: italic; color: var(--text-dim); }
+  .entry-body { font-size: 0.93rem; line-height: 1.78; color: var(--text); }
+  .entry-body p { margin-bottom: 0.85rem; }
+  .entry-body p:last-child { margin-bottom: 0; }
+  .log-list { display: flex; flex-direction: column; gap: 0.4rem; }
+  .log-item {
+    font-size: 0.9rem; line-height: 1.5; padding-left: 1rem;
+    position: relative; color: var(--text);
+  }
+  .log-item::before { content: '›'; position: absolute; left: 0; color: var(--gold-dim); }
+  .log-item b { font-weight: 600; }
+  .log-item em { color: var(--text-dim); font-style: italic; }
+  @media(max-width:560px){
+    .entry-header { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<nav class="site-nav page-content">
+  <a href="../../index.html" class="nav-home">
+    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7l6-5 6 5M3 6v6h3v-3h2v3h3V6"/></svg>
+    Caelestis
+  </a>
+  <span class="nav-sep">›</span>
+  <span class="nav-section"><a href="../index.html" style="color:var(--text-dim);text-decoration:none;">Crew Manifest</a></span>
+  <span class="nav-sep">›</span>
+  <span class="nav-current">Casey</span>
+</nav>
+<div class="page-content">
+  <div class="page-header">
+    <div class="page-eyebrow">Crew Manifest</div>
+    <div class="page-title">Casey</div>
+  </div>
+  <div class="content">
+    <div class="entry-header">
+      <div>
+        <div class="portrait-frame"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="16" r="9"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
+        <div class="portrait-label">Portrait Pending</div>
+        <div class="stat-list"><div class="stat-row"><span class="stat-key">Species</span><span class="stat-val">Hadozee</span></div>
+<div class="stat-row"><span class="stat-key">Role</span><span class="stat-val">Spelljammer</span></div>
+<div class="stat-row"><span class="stat-key">Rank</span><span class="stat-val">Cadet</span></div>
+<div class="stat-row"><span class="stat-key">Status</span><span class="stat-val">Active</span></div></div>
+      </div>
+      <div class="entry-info">
+        <div class="classification class-cadet">Active Cadet</div>
+        <div class="entry-name">Casey</div>
+        <div class="entry-sub">Hadozee · Cadet</div>
+        <div class="entry-body" style="margin-top:0.8rem;"><p>Casey moves through rooms the way light moves through water — present but hard to pin down. Barefoot. A pale green cloak stitched with constellations that don't belong to any charted sky. He answers direct questions sideways, and sideways questions not at all.</p>
+<p>In the Spelljammer Nexus he struggled until he stopped trying to force the helm and found a posture that felt like his own. Whatever that posture is, it is entirely his. He has a direction now — a place he heard a voice tell him to go. He has not told anyone what it is.</p></div>
+      </div>
+    </div>
+    <div class="divider">✦ ✦ ✦</div>
+    <div class="section-block">
+      <div class="section-label">Voyage 001</div>
+      <div class="log-list"><div class="log-item"><b>Simulation Deck:</b> Fought with speed and spellwork. Wrapped himself in cold, star-bright magic under pressure.</div>
+<div class="log-item"><b>Spelljammer Nexus:</b> Struggled until he stopped forcing it. Found his posture. Excelled.</div>
+<div class="log-item"><b>Mirt's Quarters:</b> Slipped inside the wardrobe privately. Saw unfamiliar constellations. Heard a voice say <em>"Go there."</em> Stole a shirt marked with what he saw.</div>
+<div class="log-item"><b>Private:</b> Mirt told him the wardrobe is a replica of a place beyond H'Catha in the Viren star system, gifted by a spellcaster named Zerathis.</div>
+<div class="log-item"><b>Later:</b> Passed the stolen shirt to Tumak without explanation. Tumak hid it without question.</div></div>
+    </div>
+  </div>
+</div>
+<footer class="page-footer page-content"><a href="../index.html">← Crew Manifest</a></footer>
+</body>
+</html>

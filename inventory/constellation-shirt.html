@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelestis — Constellation Shirt</title>
+<link rel="stylesheet" href="../../styles/caelestis.css">
+<style>
+  .entry-header {
+    display: grid; grid-template-columns: 160px 1fr;
+    gap: 2rem; margin-bottom: 2.5rem; align-items: start;
+  }
+  .portrait-frame {
+    width: 100%; aspect-ratio: 1;
+    border: 1px solid var(--gold-rule); background: var(--bg-card);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-muted);
+  }
+  .portrait-frame svg { width: 44px; opacity: 0.2; }
+  .portrait-label {
+    font-family: 'Cinzel', serif; font-size: 0.55rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--text-muted); text-align: center; margin-top: 0.5rem;
+  }
+  .stat-list { display: flex; flex-direction: column; gap: 0; margin-top: 0.8rem; }
+  .stat-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 0.28rem 0; border-bottom: 1px solid var(--gold-rule); font-size: 0.82rem;
+  }
+  .stat-row:last-child { border-bottom: none; }
+  .stat-key {
+    font-family: 'Cinzel', serif; font-size: 0.54rem;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
+  }
+  .stat-val { color: var(--text); text-align: right; font-style: italic; }
+  .classification {
+    display: inline-block; font-family: 'Cinzel', serif; font-size: 0.55rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 0.22rem 0.65rem; border: 1px solid; margin-bottom: 0.5rem;
+  }
+  .class-item { color: var(--gold-dim); border-color: var(--gold-rule); }
+  .entry-info { display: flex; flex-direction: column; gap: 0.35rem; }
+  .entry-name {
+    font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700;
+    color: var(--text); letter-spacing: 0.03em; line-height: 1.1;
+  }
+  .entry-sub { font-size: 0.9rem; font-style: italic; color: var(--text-dim); }
+  .entry-body { font-size: 0.93rem; line-height: 1.78; color: var(--text); }
+  .entry-body p { margin-bottom: 0.85rem; }
+  .entry-body p:last-child { margin-bottom: 0; }
+  .log-list { display: flex; flex-direction: column; gap: 0.4rem; }
+  .log-item {
+    font-size: 0.9rem; line-height: 1.5; padding-left: 1rem;
+    position: relative; color: var(--text);
+  }
+  .log-item::before { content: '›'; position: absolute; left: 0; color: var(--gold-dim); }
+  .log-item b { font-weight: 600; }
+  .log-item em { color: var(--text-dim); font-style: italic; }
+  @media(max-width:560px){ .entry-header { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav class="site-nav page-content">
+  <a href="../../index.html" class="nav-home">
+    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7l6-5 6 5M3 6v6h3v-3h2v3h3V6"/></svg>
+    Caelestis
+  </a>
+  <span class="nav-sep">›</span>
+  <span class="nav-section"><a href="../index.html" style="color:var(--text-dim);text-decoration:none;">Inventory</a></span>
+  <span class="nav-sep">›</span>
+  <span class="nav-current">Constellation Shirt</span>
+</nav>
+<div class="page-content">
+  <div class="page-header">
+    <div class="page-eyebrow">Inventory</div>
+    <div class="page-title">Constellation Shirt</div>
+  </div>
+  <div class="content">
+    <div class="entry-header">
+      <div>
+        <div class="portrait-frame"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M10 20 Q10 14 24 14 Q38 14 38 20 L36 42 Q36 44 24 44 Q12 44 12 42 Z"/><path d="M18 14 Q18 8 24 8 Q30 8 30 14"/><line x1="10" y1="28" x2="38" y2="28"/></svg></div>
+        <div class="portrait-label">Portrait Pending</div>
+        <div class="stat-list"><div class="stat-row"><span class="stat-key">Type</span><span class="stat-val">Marked Clothing</span></div>
+<div class="stat-row"><span class="stat-key">Origin</span><span class="stat-val">Mirt's Wardrobe</span></div>
+<div class="stat-row"><span class="stat-key">Holder</span><span class="stat-val">Tumak (via Casey)</span></div>
+<div class="stat-row"><span class="stat-key">Logged</span><span class="stat-val">No — Unregistered</span></div></div>
+      </div>
+      <div class="entry-info">
+        <div class="classification class-item">Item — Unregistered</div>
+        <div class="entry-name">Constellation Shirt</div>
+        <div class="entry-sub">Clothing · Unregistered</div>
+        <div class="entry-body" style="margin-top:0.8rem;"><p>An ordinary-looking shirt, except for the markings — a star pattern stitched or burned into the fabric that does not correspond to any constellation in Realmspace's night sky. The pattern was recognised by one crew member as matching what they saw when they entered Mirt's wardrobe.</p>
+<p>Casey took it from inside the wardrobe. He passed it to Tumak without explanation shortly after. Tumak hid it behind the curtains of his bunk. Neither action was observed by Mirt or academy staff.</p></div>
+      </div>
+    </div>
+    <div class="divider">✦ ✦ ✦</div>
+    <div class="section-block">
+      <div class="section-label">Voyage 001</div>
+      <div class="log-list"><div class="log-item">Recovered from Mirt's wardrobe by Casey during the Voyage 001 crate delivery incident.</div>
+<div class="log-item">Star pattern does not correspond to any Realmspace constellation. Believed to map to the <b>Viren system</b>.</div>
+<div class="log-item">Transferred to Tumak's possession. Currently hidden in his bunk.</div>
+<div class="log-item"><em>Provenance and purpose unknown. May be a navigation reference, a personal effect, or something else entirely.</em></div></div>
+    </div>
+  </div>
+</div>
+<footer class="page-footer page-content"><a href="../index.html">← Inventory</a></footer>
+</body>
+</html>
