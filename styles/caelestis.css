@@ -115,6 +115,16 @@ body::before {
 .nav-section { color: var(--text-dim); }
 .nav-current { color: var(--text); }
 
+
+/* ── PAGE EMBLEM (replaces eyebrow on landing pages) ── */
+.page-emblem {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: var(--gold-dim);
+}
+.page-emblem svg { width: 120px; }
+
 /* ── PAGE HEADER ── */
 .page-header {
   text-align: center;
