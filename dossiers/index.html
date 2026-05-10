@@ -14,6 +14,7 @@
     color: var(--text-dim); margin-bottom: 2rem;
   }
 
+  /* Category filter */
   .filter-row {
     display: flex; gap: 0.5rem; flex-wrap: wrap;
     margin-bottom: 1.2rem;
@@ -27,6 +28,7 @@
   }
   .filter-tag.active { border-color: var(--gold-dim); color: var(--gold-dim); }
 
+  /* Dossier list */
   .dossier-list { display: flex; flex-direction: column; gap: 0.7rem; }
 
   .dossier-card {
@@ -123,18 +125,21 @@
 
     <div class="section-label">Filed Profiles</div>
 
-    <div class="empty-state">
-      <div class="empty-icon">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="24" cy="18" r="8"/>
-          <path d="M10 42c0-7.7 6.3-14 14-14s14 6.3 14 14"/>
-          <line x1="32" y1="12" x2="38" y2="6"/>
-          <line x1="38" y1="6" x2="42" y2="10"/>
-          <line x1="36" y1="8" x2="40" y2="12"/>
-        </svg>
-      </div>
-      <div class="empty-title">No Profiles Filed</div>
-      <div class="empty-body">Intelligence is still being gathered. No dossiers on record yet.</div>
+    <div class="dossier-list">
+      <a class="dossier-card neutral" href="mirt.html">
+        <div class="dossier-info">
+          <div class="dossier-name">Mirt the Merciless</div>
+          <div class="dossier-sub">Human · Academy Head &amp; Founder</div>
+        </div>
+        <div class="dossier-status status-neutral">Neutral</div>
+      </a>
+      <a class="dossier-card ally" href="boatswain-tarto.html">
+        <div class="dossier-info">
+          <div class="dossier-name">Boatswain Tarto</div>
+          <div class="dossier-sub">Hadozee · Spelljammer Corps Training Officer</div>
+        </div>
+        <div class="dossier-status status-ally">Ally</div>
+      </a>
     </div>
 
   </div>
