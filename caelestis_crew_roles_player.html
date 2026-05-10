@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelestis — Crew Roles</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1410;
+    --parchment: #f5edd8;
+    --gold: #c9993a;
+    --rule: #c9993a55;
+    --muted: #5a4a36;
+    --accent-bg: #e8d8b844;
+
+    --cadet:   #8b2020;
+    --sailor:  #1e4a7a;
+    --officer: #5a2d82;
+    --bridge:  #a07820;
+
+    --cadet-bg:   #8b202010;
+    --sailor-bg:  #1e4a7a10;
+    --officer-bg: #5a2d8210;
+    --bridge-bg:  #a0782010;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #2a1f0e;
+    font-family: 'Crimson Pro', Georgia, serif;
+    color: var(--ink);
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--parchment);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    box-shadow: 0 0 80px #00000088, inset 0 0 120px #c9993a18;
+    padding: 3.5rem 4rem;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    text-align: center;
+    margin-bottom: 2.2rem;
+    padding-bottom: 1.4rem;
+    border-bottom: 2px solid var(--gold);
+    position: relative;
+  }
+  .header::before {
+    content: '✦';
+    position: absolute;
+    bottom: -0.6rem; left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem; color: var(--gold);
+    background: var(--parchment); padding: 0 0.4rem;
+  }
+  .eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 0.68rem; letter-spacing: 0.3em;
+    color: var(--gold); text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+  .header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem; font-weight: 700;
+    letter-spacing: 0.02em; line-height: 1.1;
+  }
+  .header-sub {
+    margin-top: 0.6rem; font-size: 0.96rem;
+    font-style: italic; color: var(--muted);
+  }
+
+  /* ── RANK LEGEND ── */
+  .rank-legend {
+    display: flex;
+    justify-content: center;
+    gap: 1.4rem;
+    margin-bottom: 2.2rem;
+    flex-wrap: wrap;
+  }
+  .rank-pip {
+    display: flex; align-items: center; gap: 0.4rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .dot { width: 11px; height: 11px; border-radius: 50%; border: 1.5px solid #00000022; flex-shrink: 0; }
+  .dot-cadet   { background: var(--cadet); }
+  .dot-sailor  { background: var(--sailor); }
+  .dot-officer { background: var(--officer); }
+  .dot-bridge  { background: var(--bridge); }
+  .arrow { color: var(--gold); font-size: 0.75rem; }
+
+  /* ── GENERAL NOTE ── */
+  .general-note {
+    background: var(--accent-bg);
+    border-left: 3px solid var(--gold);
+    padding: 0.6rem 1rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  .general-note strong { font-weight: 600; }
+
+  /* ── ROLE CARD ── */
+  .role { margin-bottom: 2.6rem; }
+
+  .role-header {
+    display: flex; align-items: baseline;
+    gap: 0.8rem; margin-bottom: 0.3rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .role-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem; font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .role-tag {
+    font-size: 0.8rem; font-style: italic;
+    color: var(--muted);
+  }
+
+  /* passive */
+  .passive {
+    background: var(--accent-bg);
+    border-left: 3px solid var(--gold);
+    padding: 0.5rem 0.85rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.9rem; line-height: 1.5;
+  }
+  .passive-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.62rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--gold);
+    display: block; margin-bottom: 0.2rem;
+  }
+
+  /* ranks grid */
+  .ranks { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+
+  .rank {
+    padding: 0.65rem 0.85rem;
+    position: relative; overflow: hidden;
+  }
+  .rank::before {
+    content: ''; position: absolute;
+    left: 0; top: 0; bottom: 0; width: 4px;
+  }
+  .rank-cadet   { background: var(--cadet-bg); }
+  .rank-cadet::before   { background: var(--cadet); }
+  .rank-sailor  { background: var(--sailor-bg); }
+  .rank-sailor::before  { background: var(--sailor); }
+  .rank-officer { background: var(--officer-bg); }
+  .rank-officer::before { background: var(--officer); }
+  .rank-bridge  { background: var(--bridge-bg); }
+  .rank-bridge::before  { background: var(--bridge); }
+
+  .rank-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.4rem;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .rank-cadet   .rank-label { color: var(--cadet); }
+  .rank-sailor  .rank-label { color: var(--sailor); }
+  .rank-officer .rank-label { color: var(--officer); }
+  .rank-bridge  .rank-label { color: var(--bridge); }
+
+  .rank-label .when {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic; font-size: 0.62rem;
+    letter-spacing: 0; text-transform: none;
+    opacity: 0.65;
+  }
+
+  .ability { margin-bottom: 0.4rem; font-size: 0.88rem; line-height: 1.45; }
+  .ability:last-child { margin-bottom: 0; }
+  .ability b { font-weight: 600; }
+
+  /* ── DIVIDER ── */
+  .divider {
+    text-align: center; color: var(--gold);
+    font-size: 0.7rem; letter-spacing: 0.4em;
+    margin: 0.2rem 0 1.8rem;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: 2rem; padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.82rem; font-style: italic;
+    color: var(--muted); text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .page { padding: 2rem 1.5rem; }
+    .ranks { grid-template-columns: 1fr; }
+    .header h1 { font-size: 1.75rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="eyebrow">Caelestis Campaign — Player Reference</div>
+    <h1>Bridge Crew Roles</h1>
+    <p class="header-sub">Your role shapes what you can do aboard a spelljamming vessel — in combat and beyond.</p>
+  </div>
+
+  <!-- RANK TRACK -->
+  <div class="rank-legend">
+    <div class="rank-pip"><div class="dot dot-cadet"></div>Cadet</div>
+    <div class="arrow">→</div>
+    <div class="rank-pip"><div class="dot dot-sailor"></div>Sailor</div>
+    <div class="arrow">→</div>
+    <div class="rank-pip"><div class="dot dot-officer"></div>Officer</div>
+    <div class="arrow">→</div>
+    <div class="rank-pip"><div class="dot dot-bridge"></div>Bridge</div>
+  </div>
+
+  <!-- GENERAL NOTE -->
+  <div class="general-note">
+    <strong>Your role adds to your normal actions — it doesn't replace them.</strong> You can still attack, cast spells, and use all your character abilities. Role abilities are additional options available on your turn. You earn new abilities at each rank milestone. Rank-ups happen at story milestones, not level gates — the Academy graduation advances everyone to Sailor.
+  </div>
+
+
+  <!-- ════════════════════════════════════ -->
+  <!-- SPELLJAMMER                          -->
+  <!-- ════════════════════════════════════ -->
+  <div class="role">
+    <div class="role-header">
+      <span class="role-name">Spelljammer</span>
+      <span class="role-tag">Pilot · Spellcaster required · One occupant only</span>
+    </div>
+    <div class="passive">
+      <span class="passive-label">Passive — Helm Bond</span>
+      The ship shares your initiative. You direct all ship actions on your turn — movement, turning, and weapon fire — without spending your own actions. You can sense everything on and around the vessel; you can target creatures you can sense but not see.
+    </div>
+    <div class="ranks">
+      <div class="rank rank-cadet">
+        <div class="rank-label">Cadet <span class="when">(Starting Rank)</span></div>
+        <div class="ability"><b>Move & Turn.</b> Direct the ship to move up to its speed and turn up to its agility. No action required.</div>
+        <div class="ability"><b>Onboard Defense.</b> <em>Action.</em> Lash out at a creature aboard the ship. They make a Wisdom save or take 1d6 psychic damage and have disadvantage on their next attack roll or saving throw.</div>
+      </div>
+      <div class="rank rank-sailor">
+        <div class="rank-label">Sailor <span class="when">(Academy Graduation)</span></div>
+        <div class="ability"><b>Expend Spell Slot.</b> <em>Action.</em> Choose: <em>Shields Up</em> — ship gains +3 AC (+1 per slot level above 1st) until your next turn. Or <em>Thrusters</em> — ship gains +30 ft. speed (+15 per slot level above 1st) until your next turn.</div>
+        <div class="ability"><b>Match Speed.</b> <em>Action.</em> Mirror a target ship's movements until the start of your next turn, maintaining your current distance. Ends if they move in a way your ship can't follow.</div>
+      </div>
+      <div class="rank rank-officer">
+        <div class="rank-label">Officer <span class="when">(Field Proven)</span></div>
+        <div class="ability"><b>Cast Through the Helm.</b> Cast spells that require you to see a target but not line-of-sight. Casting time must be 1 action or less. Starting a new concentration spell ends concentration on the helm.</div>
+        <div class="ability"><b>Jamming Charge.</b> <em>Bonus Action.</em> Begin charging the helm toward jamming speed. Takes 1 minute total. Pauses each turn you share space with another vessel or mega creature.</div>
+      </div>
+      <div class="rank rank-bridge">
+        <div class="rank-label">Bridge <span class="when">(Senior Command)</span></div>
+        <div class="ability"><b>Helm Surge.</b> <em>Action, 1/long rest.</em> Pour yourself into the helm. The ship's speed doubles and it may turn twice this turn. You gain one level of exhaustion.</div>
+        <div class="ability"><b>Extended Senses.</b> Your helm awareness extends 1 mile. You cannot be surprised while attuned, and have advantage on initiative rolls when entering combat at the helm.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+
+  <!-- ════════════════════════════════════ -->
+  <!-- CAPTAIN                              -->
+  <!-- ════════════════════════════════════ -->
+  <div class="role">
+    <div class="role-header">
+      <span class="role-name">Captain</span>
+      <span class="role-tag">Command · One occupant only</span>
+    </div>
+    <div class="passive">
+      <span class="passive-label">Passive — Command Presence</span>
+      Any bridge crew member may choose to delay their turn and act at your initiative instead of their own. You decide the order of those who do. Bridge crew who don't opt in act on their own initiative as normal.
+    </div>
+    <div class="ranks">
+      <div class="rank rank-cadet">
+        <div class="rank-label">Cadet <span class="when">(Starting Rank)</span></div>
+        <div class="ability"><b>Fire at Will.</b> <em>Action.</em> Call out an order to fire. One Gunner of your choice may use their reaction to make one ship weapon attack.</div>
+        <div class="ability"><b>Rally.</b> <em>Action.</em> Bolster a crew member or officer within 30 ft. They gain advantage on their next ability check, attack roll, or saving throw before the start of your next turn.</div>
+      </div>
+      <div class="rank rank-sailor">
+        <div class="rank-label">Sailor <span class="when">(Academy Graduation)</span></div>
+        <div class="ability"><b>Ship Grapple.</b> <em>Action.</em> Ready the crew to throw grappling hooks. The next time your ship enters the same space as a target, make a Charisma (Water Vehicles) check contested by their Captain (DC 10 if no Captain). On a success, both ships are grappled.</div>
+        <div class="ability"><b>Full Speed Ahead.</b> <em>Action.</em> Order the Spelljammer to push it. They may use their reaction to immediately move the ship up to half its speed without turning.</div>
+      </div>
+      <div class="rank rank-officer">
+        <div class="rank-label">Officer <span class="when">(Field Proven)</span></div>
+        <div class="ability"><b>Boarding Party.</b> <em>Action (while ship-grappled).</em> Call for a boarding action. Any willing bridge crew and eligible crew who haven't acted this turn can join. At the start of the next round, all board simultaneously.</div>
+        <div class="ability"><b>Barrage.</b> <em>1/short rest.</em> When you use Fire at Will, choose a second Gunner to also use their reaction to attack.</div>
+      </div>
+      <div class="rank rank-bridge">
+        <div class="rank-label">Bridge <span class="when">(Senior Command)</span></div>
+        <div class="ability"><b>Master Captain.</b> You have advantage on initiative rolls when entering combat. On the first round, any bridge crew acting at your initiative may do so without penalty.</div>
+        <div class="ability"><b>By My Command.</b> <em>1/long rest.</em> Give the entire bridge crew an additional reaction this round, usable only for bridge crew role actions.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+
+  <!-- ════════════════════════════════════ -->
+  <!-- BOATSWAIN                            -->
+  <!-- ════════════════════════════════════ -->
+  <div class="role">
+    <div class="role-header">
+      <span class="role-name">Boatswain</span>
+      <span class="role-tag">Ship Operations · Also called Bosun</span>
+    </div>
+    <div class="passive">
+      <span class="passive-label">Passive — Constant Upkeep</span>
+      At the start of your turn, the ship regains Bulwark Points equal to half its maximum (rounded up). This recovery is suppressed until you spend an action to extinguish it if the ship is on fire.
+    </div>
+    <div class="ranks">
+      <div class="rank rank-cadet">
+        <div class="rank-label">Cadet <span class="when">(Starting Rank)</span></div>
+        <div class="ability"><b>Brace for Impact.</b> <em>Action.</em> Brace one 90° side of your ship. Until the start of your next turn, that side has resistance to non-magical physical damage.</div>
+        <div class="ability"><b>Emergency Repairs.</b> <em>Action.</em> Jury-rig fast repairs from available materials. The ship gains 2d10 temporary hit points.</div>
+      </div>
+      <div class="rank rank-sailor">
+        <div class="rank-label">Sailor <span class="when">(Academy Graduation)</span></div>
+        <div class="ability"><b>Work the Sails.</b> <em>Action.</em> Adjust to one of three positions: <em>Furled</em> (−500 ft. speed, +45° maneuverability, max 180°), <em>Course-sail</em> (standard), <em>Full-sail</em> (+500 ft. speed, −45° maneuverability, min 0°).</div>
+        <div class="ability"><b>Fix It Up.</b> <em>Action.</em> Attempt to repair a disabled weapon, module, or sail. DC 15 Intelligence (Carpenter's, Smith's, or Tinker's Tools). On a success, restored to 1 hull point and functioning again.</div>
+      </div>
+      <div class="rank rank-officer">
+        <div class="rank-label">Officer <span class="when">(Field Proven)</span></div>
+        <div class="ability"><b>Hurry It Up!</b> <em>Action, 1/minute.</em> Push the crew hard. Ship's Bulwark Points are restored to full, and one Gunner of your choice may make one additional attack before the start of your next turn.</div>
+        <div class="ability"><b>Hard Turn.</b> <em>Action, 1/short rest.</em> Command a dangerous maneuver. The first time the ship turns this turn, its maneuverability increases by 90°, up to a maximum of 360°.</div>
+      </div>
+      <div class="rank rank-bridge">
+        <div class="rank-label">Bridge <span class="when">(Senior Command)</span></div>
+        <div class="ability"><b>Expert Boatswain.</b> When you use Brace for Impact, you may protect a 180° side instead of 90°.</div>
+        <div class="ability"><b>Master Boatswain.</b> The ship gains additional Bulwark Points equal to your proficiency bonus as a permanent bonus to its Bulwark maximum while you hold this role.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+
+  <!-- ════════════════════════════════════ -->
+  <!-- GUNNER                               -->
+  <!-- ════════════════════════════════════ -->
+  <div class="role">
+    <div class="role-header">
+      <span class="role-name">Gunner</span>
+      <span class="role-tag">Artillery · Multiple occupants permitted</span>
+    </div>
+    <div class="passive">
+      <span class="passive-label">Passive — Weapons Familiarity</span>
+      You are assigned to one ship weapon at the start of combat. As a bonus action, you may switch to another weapon not currently operated by another Gunner. You may do this between attacks when using Open Fire.
+    </div>
+    <div class="ranks">
+      <div class="rank rank-cadet">
+        <div class="rank-label">Cadet <span class="when">(Starting Rank)</span></div>
+        <div class="ability"><b>Open Fire.</b> <em>Action.</em> Make a Ship Weapon Attack: d20 + proficiency + Str or Dex vs. AC. On a hit, roll the weapon's damage without adding your modifier.</div>
+        <div class="ability"><b>Raw Instinct.</b> The backfire score of any ship weapon you operate is reduced by 1.</div>
+      </div>
+      <div class="rank rank-sailor">
+        <div class="rank-label">Sailor <span class="when">(Academy Graduation)</span></div>
+        <div class="ability"><b>Readied Attack.</b> <em>Action.</em> Ready the Open Fire action. When your trigger is met, use your reaction to fire. The weapon's backfire score is reduced by an additional 1.</div>
+        <div class="ability"><b>Brace Shot.</b> Once per turn when you hit with a ship weapon attack, you may reduce the damage roll by your proficiency bonus to force the target ship to move 5 ft. in a direction of your choice (if possible).</div>
+      </div>
+      <div class="rank rank-officer">
+        <div class="rank-label">Officer <span class="when">(Field Proven)</span></div>
+        <div class="ability"><b>Trained Gunner.</b> You may use class features that apply to weapon attacks (such as Extra Attack or Divine Smite) while using Open Fire. Check with your DM for anything that doesn't translate cleanly.</div>
+        <div class="ability"><b>Precise Shot.</b> Once per turn when you hit with a ship weapon attack, add your ability score modifier to the damage roll.</div>
+      </div>
+      <div class="rank rank-bridge">
+        <div class="rank-label">Bridge <span class="when">(Senior Command)</span></div>
+        <div class="ability"><b>Distracting Shot.</b> <em>1/short rest.</em> When you hit, add your proficiency bonus to the damage. The next attack against that target before the start of your next turn has advantage.</div>
+        <div class="ability"><b>Master Gunner.</b> Precise Shot applies to all your ship weapon attacks, not just once per turn. Crew requirement of weapons you operate is reduced by 1 (minimum 1). On a hit you may choose to disable a specific component once its hull points reach 0.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+
+  <!-- ════════════════════════════════════ -->
+  <!-- NAVIGATOR                            -->
+  <!-- ════════════════════════════════════ -->
+  <div class="role">
+    <div class="role-header">
+      <span class="role-name">Navigator</span>
+      <span class="role-tag">Coordination &amp; Hazards · Multiple occupants permitted</span>
+    </div>
+    <div class="passive">
+      <span class="passive-label">Passive — Situational Awareness</span>
+      You add +2 to all hazard group checks you personally contribute to. Once per combat at the start of your first turn, you may call out a tactical read — enemy heading, weapon count, nearest cover — granting one ally advantage on their first action this combat.
+    </div>
+    <div class="ranks">
+      <div class="rank rank-cadet">
+        <div class="rank-label">Cadet <span class="when">(Starting Rank)</span></div>
+        <div class="ability"><b>Coordinate Movement.</b> <em>Action.</em> A friendly creature within 60 ft. immediately moves up to half its speed. This doesn't provoke opportunity attacks.</div>
+        <div class="ability"><b>Take Aim.</b> <em>Action.</em> Direct a weapon crew within 10 ft. That weapon gains advantage on its next attack roll made within normal range before the end of your next turn.</div>
+      </div>
+      <div class="rank rank-sailor">
+        <div class="rank-label">Sailor <span class="when">(Academy Graduation)</span></div>
+        <div class="ability"><b>Covering Maneuver.</b> <em>Action.</em> Call a defensive adjustment for a friendly creature within 60 ft. Until the start of your next turn, the next attack roll made against that creature has disadvantage.</div>
+        <div class="ability"><b>Plot the Course.</b> Once per hazard encounter, call for one failed hazard check to be rerolled. The second result stands.</div>
+      </div>
+      <div class="rank rank-officer">
+        <div class="rank-label">Officer <span class="when">(Field Proven)</span></div>
+        <div class="ability"><b>Coordinate Attacks.</b> <em>Action.</em> A friendly creature within 60 ft. immediately makes one melee attack, one ranged attack, or casts a spell with a casting time of 1 action or bonus action.</div>
+        <div class="ability"><b>Take the Initiative.</b> <em>Action.</em> Swap initiative positions with a willing creature within 60 ft. If they haven't acted this round, they take their turn immediately after yours. You don't take another turn until the next round.</div>
+      </div>
+      <div class="rank rank-bridge">
+        <div class="rank-label">Bridge <span class="when">(Senior Command)</span></div>
+        <div class="ability"><b>Anticipate Hazard.</b> When entering a hazard encounter, you and all allies who can hear you have advantage on the first check they make.</div>
+        <div class="ability"><b>Tactical Mastery.</b> You may use Coordinate Movement as a bonus action instead of an action. You may use both Coordinate Movement and Coordinate Attacks in the same turn.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+
+  <!-- ════════════════════════════════════ -->
+  <!-- MEDICAL OFFICER                      -->
+  <!-- ════════════════════════════════════ -->
+  <div class="role">
+    <div class="role-header">
+      <span class="role-name">Medical Officer</span>
+      <span class="role-tag">Triage &amp; Recovery · Multiple occupants permitted</span>
+    </div>
+    <div class="passive">
+      <span class="passive-label">Passive — Constant Vigilance</span>
+      Any creature that makes a death saving throw while within 30 ft. of you adds 1d4 to the roll.
+    </div>
+    <div class="ranks">
+      <div class="rank rank-cadet">
+        <div class="rank-label">Cadet <span class="when">(Starting Rank)</span></div>
+        <div class="ability"><b>Tend to Officer Injuries.</b> <em>Action.</em> Rapidly treat a creature within 5 ft. If at 0 HP, they become stable. Otherwise, they gain temporary HP equal to 1d6 + your Wisdom modifier.</div>
+        <div class="ability"><b>Neutralize Poison.</b> <em>Action.</em> End the poisoned condition on one creature within 5 ft.</div>
+      </div>
+      <div class="rank rank-sailor">
+        <div class="rank-label">Sailor <span class="when">(Academy Graduation)</span></div>
+        <div class="ability"><b>Tend to Crew Injuries.</b> <em>Action.</em> Triage the crew's most critical wounds. Roll a d4; that many crew members at 0 HP regain consciousness with 4 HP.</div>
+        <div class="ability"><b>Field Triage.</b> <em>Action.</em> Treat a creature within 5 ft. suffering from exhaustion. They lose one level of exhaustion.</div>
+      </div>
+      <div class="rank rank-officer">
+        <div class="rank-label">Officer <span class="when">(Field Proven)</span></div>
+        <div class="ability"><b>Steady the Crew.</b> <em>Action.</em> Issue rapid calming orders. All crew and officers who can hear you and are frightened or charmed may immediately end that condition.</div>
+        <div class="ability"><b>Improved Treatment.</b> Your Tend to Officer Injuries now restores 2d8 + Wisdom modifier temporary HP instead of 1d6, and can also end one condition: poisoned, frightened, or blinded.</div>
+      </div>
+      <div class="rank rank-bridge">
+        <div class="rank-label">Bridge <span class="when">(Senior Command)</span></div>
+        <div class="ability"><b>Crisis Response.</b> <em>Reaction, 1/long rest.</em> When an officer within 60 ft. drops to 0 HP, immediately move up to your speed toward them and either stabilize them or restore them to 1 HP.</div>
+        <div class="ability"><b>Combat Ready.</b> At the start of combat, grant temporary HP equal to your Wisdom modifier to each officer within 30 ft. of you as a free action.</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Roles reference the <em>Ship Mechanics</em> handout for combat flow, targeting, boarding, and hazard rules. Generic Officer fallback: any PC without a named role may use <b>Take Aim</b> as an action during ship combat.
+  </div>
+
+</div>
+</body>
+</html>
