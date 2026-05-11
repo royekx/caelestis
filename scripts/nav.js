@@ -12,7 +12,7 @@
 (function () {
   'use strict';
 
-  // ── Path resolution ──────────────────────────────────────────────────────────────────────
+  // ── Path resolution ───────────────────────────────────────────────────────
   // Derives a relative base path from the current page's URL depth.
   // Works for GitHub Pages at royekx.github.io/caelestis/
   //
@@ -24,13 +24,13 @@
   var depth    = Math.max(0, slashes - 2);
   var base     = depth > 0 ? new Array(depth + 1).join('../') : './';
 
-  // ── Icons ────────────────────────────────────────────────────────────────────────────
+  // ── Icons ─────────────────────────────────────────────────────────────────
 
   var EXT_ICON = '<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2H2a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1V6M6 1h3v3M9 1L4.5 5.5"/></svg>';
 
   var MENU_ICON = '<svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/></svg>';
 
-  // ── Sections ───────────────────────────────────────────────────────────────────────────
+  // ── Sections ──────────────────────────────────────────────────────────────
   // To add, remove, or rename a section: edit this array only.
 
   var sections = [
@@ -50,7 +50,7 @@
     { label: 'Scheduler',       href: 'https://rallly.co/invite/B8uUYlcm4oKB'    },
   ];
 
-  // ── Build HTML ──────────────────────────────────────────────────────────────────────────
+  // ── Build HTML ────────────────────────────────────────────────────────────
 
   var sectionLinks = sections.map(function (s) {
     return '<a class="side-nav-link" href="' + base + s.path + '" data-section="' + s.key + '">' + s.label + '</a>';
@@ -63,6 +63,7 @@
   var html = [
     '<button class="side-nav-toggle" id="js-nav-toggle" aria-label="Toggle navigation">',
     MENU_ICON,
+    '<span class="side-nav-toggle-label">Caelestis</span>',
     '</button>',
     '<nav class="side-nav" id="js-side-nav">',
     '  <div class="side-nav-head">',
@@ -76,12 +77,12 @@
     '</nav>',
   ].join('');
 
-  // ── Inject ───────────────────────────────────────────────────────────────────────────────
+  // ── Inject ────────────────────────────────────────────────────────────────
 
   document.body.insertAdjacentHTML('afterbegin', html);
   document.body.classList.add('with-sidebar');
 
-  // ── Active state ───────────────────────────────────────────────────────────────────────
+  // ── Active state ──────────────────────────────────────────────────────────
 
   document.querySelectorAll('.side-nav-link[data-section]').forEach(function (link) {
     if (pathname.indexOf('/' + link.dataset.section + '/') !== -1) {
@@ -89,7 +90,7 @@
     }
   });
 
-  // ── Mobile toggle ────────────────────────────────────────────────────────────────────
+  // ── Mobile toggle ─────────────────────────────────────────────────────────
 
   var toggle = document.getElementById('js-nav-toggle');
   var nav    = document.getElementById('js-side-nav');
