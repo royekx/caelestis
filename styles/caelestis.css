@@ -96,12 +96,7 @@ body::before {
   margin-bottom: 1rem;
   color: var(--gold-dim);
 }
-.page-emblem svg { width: 120px; }
-
-
-  .main-nav-logo { font-size: 0.78rem; margin-right: 0.8rem; }
-  .main-nav-link { font-size: 0.52rem; padding: 0 0.55rem; }
-}
+.page-emblem svg { width: 120px; }}
 
 /* ── SIDE NAV ── */
 .side-nav {
@@ -118,15 +113,15 @@ body::before {
   flex-shrink: 0;
 }
 .side-nav-logo {
-  font-family: 'Cinzel', serif; font-size: 1rem;
+  font-family: 'Cinzel', serif; font-size: 1.1rem;
   font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--gold); text-decoration: none; display: block;
 }
 .side-nav-logo:hover { color: var(--gold-light); }
 .side-nav-body { padding: 1.2rem 0; flex: 1; }
 .side-nav-link {
-  font-family: 'Cinzel', serif; font-size: 0.63rem;
-  letter-spacing: 0.08em; text-transform: uppercase;
+  font-family: 'Cinzel', serif; font-size: 0.78rem;
+  letter-spacing: 0.05em; text-transform: uppercase;
   color: var(--text-dim); text-decoration: none;
   padding: 0.6rem 1.4rem;
   display: block; border-left: 2px solid transparent;
@@ -134,7 +129,7 @@ body::before {
 }
 .side-nav-link:hover {
   color: var(--text); border-left-color: var(--gold-dim);
-  background: rgba(201,153,58,0.04); padding-left: 1.7rem;
+  background: rgba(201,153,58,0.04); padding-left: 1.8rem;
 }
 .side-nav-link.active {
   color: var(--gold); border-left-color: var(--gold);
@@ -145,7 +140,7 @@ body::before {
   margin: 1rem 1.4rem;
 }
 .side-nav-ext-link {
-  font-family: 'Cinzel', serif; font-size: 0.55rem;
+  font-family: 'Cinzel', serif; font-size: 0.7rem;
   letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--text-muted); text-decoration: none;
   padding: 0.5rem 1.4rem;
@@ -158,11 +153,11 @@ body::before {
 /* Offset content when sidebar present */
 body.with-sidebar { padding-left: 220px; }
 
-/* Content layout within sidebar — left-align, fill available width up to readable max */
+/* Content layout within sidebar — centered within available space */
 body.with-sidebar .page-content {
-  margin-left: 0;
-  margin-right: 0;
-  max-width: min(calc(100vw - 220px), 960px);
+  margin: 0 auto;
+  max-width: min(calc(100vw - 220px), 900px);
+  padding: 0 2.5rem;
 }
 
 /* Mobile: hamburger toggle */
@@ -178,7 +173,7 @@ body.with-sidebar .page-content {
 }
 .side-nav-toggle svg { width: 16px; }
 .side-nav-toggle-label {
-  font-family: 'Cinzel', serif; font-size: 0.7rem;
+  font-family: 'Cinzel', serif; font-size: 0.8rem;
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--gold);
 }
