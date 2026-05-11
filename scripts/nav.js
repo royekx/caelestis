@@ -53,20 +53,17 @@
   // ── Inject critical positioning CSS (self-contained — doesn't depend on caelestis.css load order) ──
 
   var criticalCSS = [
-    /* Sidebar positioning */
+    /* Sidebar positioning — only what's needed to prevent flash of unstyled nav */
     '.side-nav{position:fixed!important;left:0;top:0;bottom:0;width:220px;z-index:200;',
     'display:flex;flex-direction:column;overflow-y:auto;',
     'background:rgba(6,4,14,0.99);border-right:1px solid rgba(201,153,58,0.15);}',
     /* Toggle hidden by default */
     '.side-nav-toggle{display:none!important;position:fixed!important;z-index:201;}',
-    /* Content offset — left-align within sidebar space, no auto-centering */
+    /* Body offset */
     'body.with-sidebar{padding-left:220px;}',
-    'body.with-sidebar .page-content{margin:0;max-width:100%;padding:0 3rem;}',
-    'body.with-sidebar .page-content{box-sizing:border-box;}',
     /* Mobile */
     '@media(max-width:768px){',
     'body.with-sidebar{padding-left:0!important;padding-top:52px!important;}',
-    'body.with-sidebar .page-content{max-width:100%;}',
     '.side-nav{transform:translateX(-100%);transition:transform .28s ease;}',
     '.side-nav.open{transform:translateX(0);}',
     '.side-nav-toggle{display:flex!important;top:0;left:0;right:0;height:44px;}',
