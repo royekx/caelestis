@@ -50,6 +50,24 @@
     { label: 'Scheduler',       href: 'https://rallly.co/invite/B8uUYlcm4oKB'    },
   ];
 
+  // ── Inject critical positioning CSS (self-contained — doesn't depend on caelestis.css load order) ──
+
+  var criticalCSS = [
+    '.side-nav{position:fixed!important;left:0;top:0;bottom:0;width:220px;z-index:200;display:flex;flex-direction:column;overflow-y:auto;}',
+    '.side-nav-toggle{display:none!important;position:fixed!important;z-index:201;}',
+    'body.with-sidebar{padding-left:220px;}',
+    '@media(max-width:768px){',
+    'body.with-sidebar{padding-left:0!important;padding-top:52px!important;}',
+    '.side-nav{transform:translateX(-100%);transition:transform .28s ease;}',
+    '.side-nav.open{transform:translateX(0);}',
+    '.side-nav-toggle{display:flex!important;top:0;left:0;right:0;height:44px;}',
+    '}'
+  ].join('');
+
+  var styleEl = document.createElement('style');
+  styleEl.textContent = criticalCSS;
+  document.head.appendChild(styleEl);
+
   // ── Build HTML ────────────────────────────────────────────────────────────
 
   var sectionLinks = sections.map(function (s) {
