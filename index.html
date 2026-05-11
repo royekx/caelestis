@@ -182,12 +182,13 @@
   .action-card:hover .action-cta { border-color: var(--gold-dim); color: var(--gold-dim); }
   @media(max-width: 600px){ .action-row { grid-template-columns: 1fr; } }
 
-  .s-icon { width: 34px; height: 34px; color: var(--gold-dim); flex-shrink: 0; }
+  .s-icon { width: 34px; height: 34px; color: var(--gold-dim); flex-shrink: 0; margin: 0 auto 0.2rem; }
   .s-icon svg { width: 100%; height: 100%; }
 
   .s-title {
     font-family: 'Cinzel', serif; font-size: 1rem;
     font-weight: 700; color: var(--text); letter-spacing: 0.03em; line-height: 1.2;
+    text-align: center;
   }
   .s-desc { font-size: 0.88rem; line-height: 1.55; color: var(--text-dim); flex: 1; }
 
@@ -358,7 +359,10 @@
       <div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="4" width="20" height="28" rx="2"/><path d="M8 8H6a2 2 0 00-2 2v18a2 2 0 002 2h2"/><line x1="13" y1="13" x2="23" y2="13"/><line x1="13" y1="18" x2="23" y2="18"/><line x1="13" y1="23" x2="19" y2="23"/></svg></div>
       <div class="s-title">Crew Logs</div>
       <div class="s-desc">Every voyage on record — the brief account for quick recall, the full account for those who were there.</div>
-      <div class="s-links">
+      <div class="s-links" id="crew-logs-links">
+        <!-- Populated by data/voyages.js — shows latest voyage -->
+        <a class="s-link" href="crew-logs/brief/voyage-brief-001.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>V001 &middot; Brief</a>
+        <a class="s-link" href="crew-logs/detailed/voyage-detailed-001.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>V001 &middot; Detailed</a>
         <a class="s-link s-link-all" href="crew-logs/index.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>All Voyages</a>
       </div>
     </div>
@@ -370,7 +374,7 @@
       <div class="s-title">Crew Manifest</div>
       <div class="s-desc">Active personnel files — assignments, known capabilities, and the details that matter when it counts.</div>
       <div class="s-links">
-        <a class="s-link s-link-all" href="crew-manifest/index.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>View All Personnel</a>
+        <a class="s-link" href="crew-manifest/index.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>View All Personnel</a>
       </div>
     </div>
 
@@ -433,5 +437,21 @@
   <b>Caelestis</b> &nbsp;·&nbsp; A Spelljammer Campaign
 </footer>
 
+
+<script src="data/voyages.js"></script>
+<script>
+(function () {
+  if (!window.CAELESTIS_VOYAGES || !CAELESTIS_VOYAGES.length) return;
+  var latest  = CAELESTIS_VOYAGES[CAELESTIS_VOYAGES.length - 1];
+  var el      = document.getElementById('crew-logs-links');
+  if (!el) return;
+  var arr = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>';
+  var vNum = 'V' + latest.num;
+  el.innerHTML =
+    '<a class="s-link" href="' + latest.brief + '">' + arr + vNum + ' &middot; Brief</a>' +
+    '<a class="s-link" href="' + latest.full  + '">' + arr + vNum + ' &middot; Detailed</a>' +
+    '<a class="s-link s-link-all" href="crew-logs/index.html">' + arr + 'All Voyages</a>';
+})();
+</script>
 </body>
 </html>
