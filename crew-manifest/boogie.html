@@ -17,6 +17,7 @@
     color: var(--text-muted);
   }
   .portrait-frame svg { width: 44px; opacity: 0.2; }
+  .portrait-frame img { width:100%; height:100%; object-fit:cover; display:block; }
   .portrait-label {
     font-family: 'Cinzel', serif; font-size: 0.55rem;
     letter-spacing: 0.15em; text-transform: uppercase;
@@ -78,37 +79,36 @@
   <script src="../scripts/nav.js" defer></script>
 </head>
 <body>
-
-
-<nav class="site-nav page-content">
-  <a href="../index.html" class="nav-home">
-    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7l6-5 6 5M3 6v6h3v-3h2v3h3V6"/></svg>
-    Caelestis
-  </a>
-  <span class="nav-sep">›</span>
-  <span class="nav-section"><a href="../index.html" style="color:var(--text-dim);text-decoration:none;">Crew Manifest</a></span>
-  <span class="nav-sep">›</span>
-  <span class="nav-current">Boogie</span>
-</nav>
 <div class="page-content">
   <div class="page-header">
-    <div class="page-eyebrow">Crew Manifest</div>
+    <div class="page-emblem">
+      <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="0" y1="20" x2="42" y2="20" stroke-width="0.6" opacity="0.4"/>
+        <polyline points="38,15 43,20 38,25" opacity="0.5"/>
+        <polyline points="33,16 38,20 33,24" opacity="0.3"/>
+        <g transform="translate(60,20)">
+          <line x1="0" y1="-11" x2="0" y2="-6"/><line x1="0" y1="6" x2="0" y2="11"/>
+          <line x1="-11" y1="0" x2="-6" y2="0"/><line x1="6" y1="0" x2="11" y2="0"/>
+          <line x1="-7.5" y1="-7.5" x2="-4.5" y2="-4.5"/><line x1="4.5" y1="-4.5" x2="7.5" y2="-7.5"/>
+          <line x1="-7.5" y1="7.5" x2="-4.5" y2="4.5"/><line x1="4.5" y1="4.5" x2="7.5" y2="7.5"/>
+          <circle cx="0" cy="0" r="4"/><circle cx="0" cy="0" r="1.2" fill="currentColor" stroke="none"/>
+        </g>
+        <polyline points="82,15 77,20 82,25" opacity="0.3"/>
+        <polyline points="87,16 82,20 87,24" opacity="0.5"/>
+        <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
+      </svg>
+    </div>
     <div class="page-title">Boogie</div>
   </div>
   <div class="content">
     <div class="entry-header">
       <div>
         <div class="portrait-frame"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="16" r="9"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
-        <div class="portrait-label">Portrait Pending</div>
-        <div class="stat-list"><div class="stat-row"><span class="stat-key">Species</span><span class="stat-val">Plasmoid</span></div>
-<div class="stat-row"><span class="stat-key">Role</span><span class="stat-val">TBD</span></div>
-<div class="stat-row"><span class="stat-key">Rank</span><span class="stat-val">Cadet</span></div>
-<div class="stat-row"><span class="stat-key">Status</span><span class="stat-val">Active</span></div></div>
+        <div class="stat-list"><div class="stat-row"><span class="stat-key">Species</span><span class="stat-val">Plasmoid</span></div><div class="stat-row"><span class="stat-key">Affiliation</span><span class="stat-val">Spelljammer Academy</span></div><div class="stat-row"><span class="stat-key">First Voyage</span><span class="stat-val">V01 — Caelestis</span></div><div class="stat-row"><span class="stat-key">Status</span><span class="stat-val">Active</span></div></div>
       </div>
       <div class="entry-info">
-        <div class="classification class-cadet">Active Cadet</div>
         <div class="entry-name">Boogie</div>
-        <div class="entry-sub">Plasmoid · Cadet</div>
+        <div class="entry-sub">Plasmoid · Spelljammer Academy</div>
         <div class="entry-body" style="margin-top:0.8rem;"><p>Boogie arrived at Caelestis the way he has arrived everywhere — in motion. Semi-transparent and deep blue, he carries a small glittering stone somewhere inside himself and a shield that rarely leaves his arm. His past is one of borrowed identities and odd jobs, drifting between spaces that were never quite his own. He has no family he can name. He has had no lasting home.</p>
 <p>What Caelestis offered him, and what no place before it had, was a reason to stay. During spelljamming training he found something he hadn't expected: a purpose that fit the shape of him. He doesn't want the helm. He wants to keep the ship alive — to make sure it carries others safely through whatever comes. When he said it aloud, something inside him answered back.</p></div>
       </div>
@@ -125,6 +125,6 @@
     </div>
   </div>
 </div>
-<footer class="page-footer page-content"><a href="../index.html">← Crew Manifest</a></footer>
+
 </body>
 </html>
