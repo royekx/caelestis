@@ -6,6 +6,7 @@
 <title>Caelestis — Voyage 001 Brief</title>
 <link rel="stylesheet" href="../../styles/caelestis.css">
 <style>
+  /* ── VIDEO ── */
   .video-block { margin-bottom: 2.5rem; }
   .video-container {
     position: relative; width: 100%; padding-bottom: 56.25%;
@@ -15,55 +16,183 @@
   .video-link { margin-top: 0.5rem; font-size: 0.82rem; font-style: italic; color: var(--text-muted); }
   .video-link a { color: var(--gold-dim); text-decoration: none; }
   .video-link a:hover { color: var(--gold); }
-  .log-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+
+  /* ── LOG META ── */
+  .log-meta {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 1.8rem; flex-wrap: wrap;
+  }
   .log-badge {
-    font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase;
-    background: rgba(30,74,122,0.25); border: 1px solid rgba(30,74,122,0.5); color: #5a8ab8; padding: 0.25rem 0.6rem;
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    background: rgba(30,74,122,0.25); border: 1px solid rgba(30,74,122,0.5);
+    color: #5a8ab8; padding: 0.25rem 0.6rem;
   }
   .log-type-badge {
-    font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--text-muted); border: 1px solid var(--gold-rule); padding: 0.25rem 0.6rem;
+    font-family: 'Cinzel', serif; font-size: 0.58rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); border: 1px solid var(--gold-rule);
+    padding: 0.25rem 0.6rem;
   }
   .alt-format { margin-left: auto; font-size: 0.82rem; font-style: italic; color: var(--text-muted); }
   .alt-format a { color: var(--gold-dim); text-decoration: none; }
   .alt-format a:hover { color: var(--gold); }
+
+  /* ── AT A GLANCE ── */
+  .voyage-glance {
+    background: var(--bg-card);
+    border: 1px solid var(--gold-rule);
+    border-left: 3px solid var(--gold-dim);
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 2.2rem;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .glance-synopsis {
+    font-size: 0.95rem; line-height: 1.72; color: var(--text);
+    font-style: italic;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gold-rule);
+  }
+  .glance-row {
+    display: grid; grid-template-columns: 90px 1fr;
+    gap: 0.8rem; align-items: flex-start;
+  }
+  .glance-label {
+    font-family: 'Cinzel', serif; font-size: 0.57rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold-dim); padding-top: 0.25rem;
+  }
+  .glance-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .chip {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.82rem; padding: 0.15rem 0.6rem;
+    border: 1px solid var(--gold-rule);
+    color: var(--text); background: rgba(201,153,58,0.05);
+    text-decoration: none; white-space: nowrap;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .chip:hover { border-color: var(--gold-dim); color: var(--gold-light); }
+  .chip-npc {
+    border-color: rgba(30,74,122,0.35); color: var(--text-dim);
+    background: rgba(30,74,122,0.05);
+  }
+  .chip-npc:hover { border-color: rgba(30,74,122,0.7); color: #7aaad0; }
+  .chip-place {
+    border-color: rgba(90,45,130,0.3); color: var(--text-dim);
+    background: rgba(90,45,130,0.04);
+  }
+
+  /* ── BRIEF SECTIONS ── */
   .brief-section { margin-bottom: 1.8rem; }
   .brief-heading {
-    font-family: 'Cinzel', serif; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.6rem;
+    font-family: 'Cinzel', serif; font-size: 0.68rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.7rem;
+    display: flex; align-items: center; gap: 0.6rem;
   }
   .brief-heading::after { content: ''; flex: 1; height: 1px; background: var(--gold-rule); }
   .brief-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.45rem; }
-  .brief-list li { font-size: 0.92rem; line-height: 1.55; color: var(--text); padding-left: 1.1rem; position: relative; }
-  .brief-list li::before { content: '›'; position: absolute; left: 0; color: var(--gold-dim); font-size: 0.85rem; }
-  .brief-list li b { font-weight: 600; color: var(--text); }
+  .brief-list li {
+    font-size: 0.92rem; line-height: 1.55; color: var(--text);
+    padding-left: 1.1rem; position: relative;
+  }
+  .brief-list li::before { content: '›'; position: absolute; left: 0; color: var(--gold-dim); }
+  .brief-list li b { font-weight: 600; }
   .brief-list li em { color: var(--text-dim); font-style: italic; }
+
+  @media(max-width:560px){
+    .glance-row { grid-template-columns: 1fr; gap: 0.3rem; }
+    .glance-label { padding-top: 0; }
+  }
 </style>
 </head>
 <body>
+
 <nav class="site-nav page-content">
   <a href="../../index.html" class="nav-home">
     <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7l6-5 6 5M3 6v6h3v-3h2v3h3V6"/></svg>
     Caelestis
   </a>
   <span class="nav-sep">›</span>
-  <span class="nav-section"><a href="../index.html" style="color:var(--text-dim);text-decoration:none;">Crew Logs</a></span>
+  <span class="nav-section"><a href="../index.html" style="color:var(--text-dim);text-decoration:none;">Voyage Logs</a></span>
   <span class="nav-sep">›</span>
   <span class="nav-section"><a href="index.html" style="color:var(--text-dim);text-decoration:none;">Brief</a></span>
   <span class="nav-sep">›</span>
   <span class="nav-current">Voyage 001</span>
 </nav>
+
 <div class="page-content">
   <div class="page-header">
+    <div class="page-emblem">
+      <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="0" y1="20" x2="42" y2="20" stroke-width="0.6" opacity="0.4"/>
+        <polyline points="38,15 43,20 38,25" opacity="0.5"/>
+        <polyline points="33,16 38,20 33,24" opacity="0.3"/>
+        <g transform="translate(60,20)">
+          <line x1="0" y1="-11" x2="0" y2="-6"/><line x1="0" y1="6" x2="0" y2="11"/>
+          <line x1="-11" y1="0" x2="-6" y2="0"/><line x1="6" y1="0" x2="11" y2="0"/>
+          <line x1="-7.5" y1="-7.5" x2="-4.5" y2="-4.5"/><line x1="4.5" y1="-4.5" x2="7.5" y2="-7.5"/>
+          <line x1="-7.5" y1="7.5" x2="-4.5" y2="4.5"/><line x1="4.5" y1="4.5" x2="7.5" y2="7.5"/>
+          <circle cx="0" cy="0" r="4"/><circle cx="0" cy="0" r="1.2" fill="currentColor" stroke="none"/>
+        </g>
+        <polyline points="82,15 77,20 82,25" opacity="0.3"/>
+        <polyline points="87,16 82,20 87,24" opacity="0.5"/>
+        <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
+      </svg>
+    </div>
     <div class="page-eyebrow">Brief Log · Voyage 001</div>
     <div class="page-title">The Shape of a Crew</div>
   </div>
+
   <div class="content">
+
+    <!-- LOG META -->
     <div class="log-meta">
       <span class="log-badge">Voyage 001</span>
       <span class="log-type-badge">Brief</span>
-      <span class="alt-format">Read the full account → <a href="../detailed/voyage-detailed-001.html">Detailed Log</a></span>
+      <span class="alt-format">→ <a href="../detailed/voyage-detailed-001.html">Detailed Log</a></span>
     </div>
+
+    <!-- AT A GLANCE -->
+    <div class="voyage-glance">
+      <div class="glance-synopsis">First day of orientation at Spelljammer Academy — simulation exercise, cadet quarters assignment, sky dock tour, spelljammer helm training, gymnasium assault course. The day ends with a delivery errand to Mirt's quarters that turns into a creature attack: a coordinated diversion run while thieves hit multiple locations across the academy at the same time.</div>
+      <div class="glance-row">
+        <span class="glance-label">The Crew</span>
+        <div class="glance-chips">
+          <a class="chip" href="../../crew-manifest/boogie.html">Boogie</a>
+          <a class="chip" href="../../crew-manifest/sol.html">Sol</a>
+          <a class="chip" href="../../crew-manifest/casey.html">Casey</a>
+          <a class="chip" href="../../crew-manifest/gregory.html">Gregory</a>
+          <a class="chip" href="../../crew-manifest/tumak.html">Tumak</a>
+        </div>
+      </div>
+      <div class="glance-row">
+        <span class="glance-label">Key NPCs</span>
+        <div class="glance-chips">
+          <a class="chip chip-npc" href="../../dossiers/boatswain-tarto.html">Boatswain Tarto</a>
+          <span class="chip chip-npc">Sorcur</span>
+          <span class="chip chip-npc">Kip &amp; Pik</span>
+          <span class="chip chip-npc">Mr. Blip</span>
+          <span class="chip chip-npc">Saerth Abyzine</span>
+          <a class="chip chip-npc" href="../../dossiers/mirt.html">Mirt the Merciless</a>
+        </div>
+      </div>
+      <div class="glance-row">
+        <span class="glance-label">Locations</span>
+        <div class="glance-chips">
+          <span class="chip chip-place">Simulation Deck</span>
+          <span class="chip chip-place">Administration</span>
+          <span class="chip chip-place">Cadet Quarters</span>
+          <span class="chip chip-place">Sky Dock</span>
+          <span class="chip chip-place">Quartermaster</span>
+          <span class="chip chip-place">Spelljammer Nexus</span>
+          <span class="chip chip-place">Gymnasium</span>
+          <span class="chip chip-place">Mirt's Quarters</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEO -->
     <div class="video-block">
       <div class="section-label">Voyage Recording</div>
       <div class="video-container">
@@ -71,6 +200,8 @@
       </div>
       <div class="video-link">Watch on YouTube: <a href="https://youtu.be/hIO4ws9UJ_I?si=mkkSAnXCyMicKOy-" target="_blank">youtu.be/hIO4ws9UJ_I</a></div>
     </div>
+
+    <!-- WHAT HAPPENED -->
     <div class="brief-section">
       <div class="brief-heading">The Simulation</div>
       <ul class="brief-list">
@@ -80,65 +211,65 @@
         <li>Tarto called out each cadet's best moment — Casey's spellwork, Gregory's quick thinking, Sol's battlefield control, Tumak's toughness, Boogie's instinct to help over glory</li>
       </ul>
     </div>
+
     <div class="brief-section">
       <div class="brief-heading">Orientation</div>
       <ul class="brief-list">
         <li><b>Administration:</b> Met Sorcur (thri-kreen, telepathic). Received packets, vouchers, temporary access stars. <em>Caelestis is a machine of access and hierarchy.</em></li>
-        <li><b>Cadet Quarters:</b> Another cadet, <b>Vena</b>, tried to take Boogie's corner bunk (clear view into the Astral). Boogie held his ground; Sol moved close to back him. Vena backed off. First moment of the crew taking each other's side.</li>
-        <li><b>Sky Dock:</b> Tour with <b>Kip and Pik</b> (gnomes who speak like one mind). Learned helm basics: ship and spellcaster become one motion. Boogie spotted a suspicious exchange between a dock officer and a merchant.</li>
-        <li><b>Quartermaster (Mr. Blip):</b> Weapons and gear issued. Gregory visibly unsettled by Mr. Blip — an autognome who looks too much like him. Sol talked his way into heavier arms. Boogie charmed a light hammer out of Mr. Blip. <em>Thinking about repair, not command.</em></li>
+        <li><b>Cadet Quarters:</b> Another cadet, <b>Vena</b>, tried to take Boogie's corner bunk. Boogie held his ground; Sol moved close to back him. Vena backed off. First moment of the crew taking each other's side.</li>
+        <li><b>Sky Dock:</b> Tour with <b>Kip and Pik</b>. Learned helm basics: ship and spellcaster become one motion. Boogie spotted a suspicious exchange between a dock officer and a merchant.</li>
+        <li><b>Quartermaster (Mr. Blip):</b> Weapons and gear issued. Gregory visibly unsettled by Mr. Blip — an autognome who looks too much like him. Sol talked his way into heavier arms. Boogie charmed a light hammer. <em>Thinking about repair, not command.</em></li>
       </ul>
     </div>
+
     <div class="brief-section">
       <div class="brief-heading">Spelljammer Nexus</div>
       <ul class="brief-list">
-        <li>Arrived during an ectoplasmic breach elsewhere in the tower (tension noted)</li>
+        <li>Arrived during an ectoplasmic breach elsewhere in the tower</li>
         <li><b>Saerth Abyzine</b> ran the helm exercise: guide a miniature ship over a floating field using mind and magic</li>
-        <li><b>Boogie</b> took to it immediately — motion at a distance is natural to a body made of shifting form</li>
-        <li><b>Casey</b> struggled until he stopped forcing it and found his own posture</li>
-        <li><b>Gregory</b> kept thinking to the destination before the method — Saerth named it, Gregory adjusted</li>
-        <li><b>Sol</b> navigated by anticipating danger before it arrived</li>
-        <li><b>Tumak</b> managed — Saerth noted a divided quality, as if part of his mind was always elsewhere</li>
+        <li><b>Boogie</b> took to it immediately. <b>Casey</b> struggled until he stopped forcing it. <b>Gregory</b> overcame thinking to the destination before the method. <b>Sol</b> navigated by anticipating danger. <b>Tumak</b> managed — Saerth noted a divided quality in him.</li>
         <li>Afterward, Boogie said it aloud: <em>he doesn't want the helm. He wants to keep the ship alive.</em></li>
       </ul>
     </div>
+
     <div class="brief-section">
       <div class="brief-heading">Gymnasium</div>
       <ul class="brief-list">
         <li>Assault course: false explosions, electrified water, swinging blades, final bell climb</li>
-        <li><b>Gregory</b> — most hesitant in the first battle — was the one who saw through the first illusion and called it to Sol</li>
-        <li><b>Sol and Tumak</b> both paid in pain for missteps but refused to stay down</li>
-        <li><b>Casey</b> crossed sections with ease — born to leap and climb</li>
-        <li><b>Sol</b> fell hard enough to be dragged aside by automatons; forced himself back up after <b>Boogie</b> shouted him onward. Boogie then used magic to help Gregory on the final ascent.</li>
-        <li>Boatswain's assessment: <em>"The lag between you is good. You're starting to move as a crew, not five people sharing the same danger."</em></li>
+        <li><b>Gregory</b> saw through the first illusion and called it to Sol. <b>Sol and Tumak</b> paid in pain but refused to stay down. <b>Casey</b> crossed with ease.</li>
+        <li><b>Sol</b> fell hard enough to be dragged aside; forced himself back after <b>Boogie</b> shouted him onward. Boogie used magic to help Gregory on the final ascent.</li>
+        <li>Boatswain's assessment: <em>"The lag between you is good. You're starting to move as a crew."</em></li>
       </ul>
     </div>
+
     <div class="brief-section">
       <div class="brief-heading">The Mirt Errand</div>
       <ul class="brief-list">
-        <li>Tasked to deliver a crate to <b>Mirt the Merciless</b> (academy head) in bridge quarters before lunch</li>
-        <li>En route: Tumak asked about origins. <b>Boogie's answer was sad</b> — drifting, borrowed identities, no family, loneliness. Told Tumak: <em>"Now we have a crew. The crew will help you find them."</em></li>
-        <li>Sol and Casey carried the crate. Some talking, some carrying, all moving the same direction.</li>
-        <li><b>Mirt's room:</b> Hungover, cluttered, a fishbowl with two octopi (<b>Flotsam and Jetsam</b>). Wardrobe door opening onto Astral night — a floor you could stand on, stars where walls should be.</li>
-        <li>The crate released worm-like centipede creatures. Fight. <b>Sol subdued the last one alive</b> rather than kill it — correctly read it might matter as evidence. Mirt praised the call.</li>
-        <li>Mirt rewarded them with gold. Told Casey privately: <em>the wardrobe is a magical replica of a place beyond Hakatha in the <b>Viren star system</b>, gifted by a spellcaster named <b>Zerathis</b>.</em></li>
-        <li><b>Mr. Blip</b> arrived with officers: the attack on Mirt was a diversion. Multiple burglaries across the academy happened simultaneously.</li>
+        <li>Tasked to deliver a crate to <b>Mirt the Merciless</b> in bridge quarters</li>
+        <li>En route: Boogie described a life of drifting, loneliness, no family. Told Tumak (who is searching for his own): <em>"Now we have a crew. The crew will help you find them."</em></li>
+        <li><b>Mirt's room:</b> Hungover, cluttered, wardrobe opening onto Astral night. Crate released worm-like centipede creatures — fight broke out.</li>
+        <li><b>Sol</b> subdued the last creature alive rather than kill it. Mirt praised the call. Rewarded the group with gold.</li>
+        <li>Mirt told Casey privately: the wardrobe is a replica of a place beyond Hakatha in the <b>Viren star system</b>, gifted by a spellcaster named <b>Zerathis</b>.</li>
+        <li><b>Mr. Blip</b> arrived with officers: the attack on Mirt was a diversion. Multiple burglaries across the academy — the cadets passed through the centre of it.</li>
       </ul>
     </div>
+
     <div class="brief-section">
       <div class="brief-heading">End of Day</div>
       <ul class="brief-list">
-        <li><b>Tumak</b> hung curtains around his bunk — carved out privacy. Hid the shirt Casey passed him without explanation.</li>
-        <li><b>Casey</b> slipped into the wardrobe, saw unfamiliar constellations, heard a voice say <em>"Go there."</em> Grabbed a plain shirt on his way out and scratched the star pattern he'd seen onto it — a quick reference, like sketching on paper. Later passed it to Tumak.</li>
+        <li><b>Casey</b> slipped into the wardrobe, saw unfamiliar constellations, heard a voice say <em>"Go there."</em> Grabbed a plain shirt and scratched the star pattern onto it as a quick reference. Passed it to Tumak, who hid it without question.</li>
         <li><b>Gregory</b> felt a new pull in his core — directional, toward somewhere unknown.</li>
-        <li><b>Sol</b> when asked why he came here: <em>"My life always turned unlucky. I wanted to spend it exploring anyway."</em></li>
-        <li><b>Boogie</b> reached into his own chest and pulled out a tiny model spelljamming ship — the same kind from training. Half of it was missing. No explanation for how it got there.</li>
+        <li><b>Sol:</b> <em>"My life always turned unlucky. I wanted to spend it exploring anyway."</em></li>
+        <li><b>Boogie</b> reached into his chest and pulled out a tiny model spelljamming ship — same kind from training. Half of it was missing.</li>
       </ul>
     </div>
-  </div>
-</div>
+
+  </div><!-- /content -->
+</div><!-- /page-content -->
+
 <footer class="page-footer page-content">
-  <a href="index.html">← All Brief Logs</a> &nbsp;·&nbsp; <a href="../detailed/voyage-detailed-001.html">Read Full Narrative</a> &nbsp;·&nbsp; <a href="../../index.html">Caelestis</a>
+  <a href="index.html">← All Brief Logs</a> &nbsp;·&nbsp; <a href="../detailed/voyage-detailed-001.html">Read Detailed Log</a> &nbsp;·&nbsp; <a href="../../index.html">Caelestis</a>
 </footer>
+
 </body>
 </html>
