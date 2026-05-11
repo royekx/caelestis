@@ -159,6 +159,10 @@ body.with-sidebar .page-content {
   max-width: 100%;
   padding: 0 3rem;
 }
+body.with-sidebar .content {
+  max-width: 100%;
+  margin: 0;
+}
 
 /* Mobile: hamburger toggle */
 .side-nav-toggle {
