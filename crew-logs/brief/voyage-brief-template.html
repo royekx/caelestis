@@ -112,8 +112,11 @@
     .glance-label { padding-top: 0; }
   }
 </style>
+  <script src="../../scripts/nav.js" defer></script>
 </head>
 <body>
+
+
 
 <nav class="site-nav page-content">
   <a href="../../index.html" class="nav-home">
@@ -196,6 +199,13 @@
       </div>
     </div>
 
+    <!-- PREV / NEXT ─ Update once adjacent voyages exist.
+         Replace <span> with <a href="voyage-brief-[###].html"> for active links. -->
+    <div class="voyage-nav-bar">
+      <span class="voyage-nav-link disabled"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Previous Voyage</span>
+      <span class="voyage-nav-link disabled">Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></span>
+    </div>
+
     <!-- VIDEO -->
     <div class="video-block">
       <div class="section-label">Voyage Recording</div>
@@ -232,6 +242,11 @@
     </div>
 
     <!-- Add more .brief-section divs as needed -->
+
+    <div class="voyage-nav-bottom">
+      <span class="voyage-nav-link disabled"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Previous Voyage</span>
+      <span class="voyage-nav-link disabled">Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></span>
+    </div>
 
   </div><!-- /content -->
 </div><!-- /page-content -->

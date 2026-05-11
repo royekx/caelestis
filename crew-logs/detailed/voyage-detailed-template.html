@@ -72,8 +72,11 @@
     color: var(--gold-dim); white-space: nowrap; flex-shrink: 0;
   }
 </style>
+  <script src="../../scripts/nav.js" defer></script>
 </head>
 <body>
+
+
 
 <nav class="site-nav page-content">
   <a href="../../index.html" class="nav-home">
@@ -99,6 +102,13 @@
       <span class="log-badge">Voyage [###]</span><!-- UPDATE -->
       <span class="log-type-badge">Detailed</span>
       <span class="alt-format">Quick recap → <a href="../brief/voyage-brief-[###].html">Brief Log</a></span><!-- UPDATE filename -->
+    </div>
+
+    <!-- PREV / NEXT ─ Update once adjacent voyages exist.
+         Replace <span> with <a href="voyage-brief-[###].html"> for active links. -->
+    <div class="voyage-nav-bar">
+      <span class="voyage-nav-link disabled"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Previous Voyage</span>
+      <span class="voyage-nav-link disabled">Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></span>
     </div>
 
     <!-- VIDEO — Option A: Recording available. Replace VIDEO_ID with the YouTube video ID (the part after youtu.be/) -->

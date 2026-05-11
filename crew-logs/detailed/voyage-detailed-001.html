@@ -35,7 +35,8 @@
   .log-badge {
     font-family: 'Cinzel', serif; font-size: 0.6rem;
     letter-spacing: 0.15em; text-transform: uppercase;
-    background: var(--gold-faint); border: 1px solid var(--gold-rule);
+    background: var(--gold-faint);
+    border: 1px solid var(--gold-rule);
     color: var(--gold-dim); padding: 0.25rem 0.6rem;
   }
   .log-type-badge {
@@ -44,7 +45,10 @@
     color: var(--text-muted); border: 1px solid var(--gold-rule);
     padding: 0.25rem 0.6rem;
   }
-  .alt-format { margin-left: auto; font-size: 0.82rem; font-style: italic; color: var(--text-muted); }
+  .alt-format {
+    margin-left: auto; font-size: 0.82rem;
+    font-style: italic; color: var(--text-muted);
+  }
   .alt-format a { color: var(--gold-dim); text-decoration: none; }
   .alt-format a:hover { color: var(--gold); }
 
@@ -84,8 +88,11 @@
     color: var(--gold-dim); white-space: nowrap; flex-shrink: 0;
   }
 </style>
+  <script src="../../scripts/nav.js" defer></script>
 </head>
 <body>
+
+
 
 <nav class="site-nav page-content">
   <a href="../../index.html" class="nav-home">
@@ -94,6 +101,8 @@
   </a>
   <span class="nav-sep">›</span>
   <span class="nav-section"><a href="../index.html" style="color:var(--text-dim);text-decoration:none;">Crew Logs</a></span>
+  <span class="nav-sep">›</span>
+  <span class="nav-section"><a href="index.html" style="color:var(--text-dim);text-decoration:none;">Detailed</a></span>
   <span class="nav-sep">›</span>
   <span class="nav-current">Voyage 001</span>
 </nav>
@@ -111,6 +120,12 @@
       <span class="log-badge">Voyage 001</span>
       <span class="log-type-badge">Detailed</span>
       <span class="alt-format">Quick recap → <a href="../brief/voyage-brief-001.html">Brief Log</a></span>
+    </div>
+
+    <!-- PREV / NEXT — update hrefs and titles when adjacent voyages exist -->
+    <div class="voyage-nav-bar">
+      <span class="voyage-nav-link disabled"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> No Previous Voyage</span>
+      <span class="voyage-nav-link disabled">No Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></span>
     </div>
 
     <!-- VIDEO -->
@@ -166,6 +181,11 @@
       <p>By then, the outline of the group had begun to show itself — not as something finished, but as something forming in motion. Shared danger had made them look at one another. Small loyalties had begun to take root. Quiet promises had been made. Around them, mysteries were already gathering: a living clue trapped in a crate, a hidden path toward Viren, a pull in Gregory's core, stolen secrets tucked behind curtains, and something unfinished taking shape inside Boogie. The day on Caelestis was still unfolding, and so was the crew.</p>
 
     </div><!-- /narrative -->
+
+    <div class="voyage-nav-bottom">
+      <span class="voyage-nav-link disabled"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> No Previous Voyage</span>
+      <span class="voyage-nav-link disabled">No Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></span>
+    </div>
 
   </div><!-- /content -->
 </div><!-- /page-content -->
