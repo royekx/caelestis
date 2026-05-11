@@ -36,14 +36,24 @@
     border: 1px solid var(--gold-rule);
     text-decoration: none;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 56px 1fr auto;
     align-items: center;
     gap: 1rem;
-    padding: 0.9rem 1.2rem;
+    padding: 0.75rem 1.2rem 0.75rem 0.75rem;
     position: relative; overflow: hidden;
     transition: border-color 0.22s, background 0.22s, transform 0.22s;
     animation: fadeUp 0.6s ease both;
   }
+
+  .dossier-thumb {
+    width: 56px; height: 56px;
+    border: 1px solid var(--gold-rule);
+    background: var(--bg-card);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-muted); overflow: hidden; flex-shrink: 0;
+  }
+  .dossier-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .dossier-thumb svg { width: 26px; opacity: 0.2; }
   .dossier-card::before {
     content: '';
     position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
@@ -101,18 +111,6 @@
   <script src="../scripts/nav.js" defer></script>
 </head>
 <body>
-
-
-
-<nav class="site-nav page-content">
-  <a href="../index.html" class="nav-home">
-    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7l6-5 6 5M3 6v6h3v-3h2v3h3V6"/></svg>
-    Caelestis
-  </a>
-  <span class="nav-sep">›</span>
-  <span class="nav-current">Dossiers</span>
-</nav>
-
 <div class="page-content">
   <div class="page-header">
     <div class="page-emblem">
@@ -149,39 +147,33 @@
 
     <div class="section-label">Filed Profiles</div>
 
-
-
-
     <div class="dossier-list">
-      <a class="dossier-card neutral" href="mirt.html">
-        <div class="dossier-info">
-          <div class="dossier-name">Mirt the Merciless</div>
-          <div class="dossier-sub">Human · Academy Head &amp; Founder</div>
-        </div>
-        <div class="dossier-status status-neutral">Neutral</div>
-      </a>
       <a class="dossier-card ally" href="boatswain-tarto.html">
+        <div class="dossier-thumb"><img src="https://lh3.googleusercontent.com/d/13-w6epUMG5kO54FqZpJpelexFufDzu2W" alt="Boatswain Tarto"></div>
         <div class="dossier-info">
           <div class="dossier-name">Boatswain Tarto</div>
           <div class="dossier-sub">Hadozee · Spelljammer Corps Training Officer</div>
         </div>
         <div class="dossier-status status-ally">Ally</div>
       </a>
-      <a class="dossier-card ally" href="sor-kur.html">
-        <div class="dossier-info">
-          <div class="dossier-name">Sor'kur</div>
-          <div class="dossier-sub">Thri-kreen · Administration Receptionist</div>
-        </div>
-        <div class="dossier-status status-ally">Ally</div>
-      </a>
       <a class="dossier-card ally" href="kip-and-pik.html">
+        <div class="dossier-thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="16" r="9"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
         <div class="dossier-info">
           <div class="dossier-name">Kip &amp; Pik</div>
           <div class="dossier-sub">Gnomes · Sky Dock Instructors</div>
         </div>
         <div class="dossier-status status-ally">Ally</div>
       </a>
+      <a class="dossier-card neutral" href="mirt.html">
+        <div class="dossier-thumb"><img src="https://lh3.googleusercontent.com/d/1D9Hh3pn8e_QbMAF69ABg4bld6kMHj4qr" alt="Mirt the Merciless"></div>
+        <div class="dossier-info">
+          <div class="dossier-name">Mirt the Merciless</div>
+          <div class="dossier-sub">Human · Academy Head &amp; Founder</div>
+        </div>
+        <div class="dossier-status status-neutral">Neutral</div>
+      </a>
       <a class="dossier-card neutral" href="mr-blip.html">
+        <div class="dossier-thumb"><img src="https://lh3.googleusercontent.com/d/1gcMlDsoM10pyQ62SC6MG1UcLgWnepLcX" alt="Mr. Blip"></div>
         <div class="dossier-info">
           <div class="dossier-name">Mr. Blip</div>
           <div class="dossier-sub">Autognome · Quartermaster</div>
@@ -189,20 +181,27 @@
         <div class="dossier-status status-neutral">Neutral</div>
       </a>
       <a class="dossier-card neutral" href="saerth-abyzine.html">
+        <div class="dossier-thumb"><img src="https://lh3.googleusercontent.com/d/1d7cDR1TYwEkaSuDVJC8bEOOJnoPT5S_D" alt="Saerth Abyzine"></div>
         <div class="dossier-info">
           <div class="dossier-name">Saerth Abyzine</div>
           <div class="dossier-sub">Unknown · Spelljammer Nexus Instructor</div>
         </div>
         <div class="dossier-status status-neutral">Neutral</div>
       </a>
+      <a class="dossier-card ally" href="sor-kur.html">
+        <div class="dossier-thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="16" r="9"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
+        <div class="dossier-info">
+          <div class="dossier-name">Sor'kur</div>
+          <div class="dossier-sub">Thri-kreen · Administration Receptionist</div>
+        </div>
+        <div class="dossier-status status-ally">Ally</div>
+      </a>
     </div>
 
   </div>
 </div>
 
-<footer class="page-footer page-content">
-  <a href="../index.html">← Station Directory</a>
-</footer>
+
 
 </body>
 </html>
