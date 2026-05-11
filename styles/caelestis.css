@@ -85,35 +85,8 @@ body::before {
 }
 
 /* ── SITE NAV (sub-pages) ── */
-.site-nav {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 1.2rem 2.5rem;
-  border-bottom: 1px solid var(--gold-rule);
-  background: linear-gradient(to bottom, rgba(6,4,14,0.95) 0%, transparent 100%);
-  font-family: 'Cinzel', serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
 
-.site-nav a.nav-home {
-  color: var(--gold);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: color 0.2s;
-}
-.site-nav a.nav-home:hover { color: var(--gold-light); }
-.site-nav a.nav-home svg { width: 14px; opacity: 0.7; }
-
-.nav-sep { color: var(--text-muted); font-size: 0.7rem; }
-.nav-section { color: var(--text-dim); }
-.nav-current { color: var(--text); }
+.site-nav a.site-nav a.site-nav a
 
 
 /* ── PAGE EMBLEM (replaces eyebrow on landing pages) ── */
@@ -125,6 +98,10 @@ body::before {
 }
 .page-emblem svg { width: 120px; }
 
+
+  .main-nav-logo { font-size: 0.78rem; margin-right: 0.8rem; }
+  .main-nav-link { font-size: 0.52rem; padding: 0 0.55rem; }
+}
 
 /* ── SIDE NAV ── */
 .side-nav {
@@ -339,25 +316,9 @@ body.with-sidebar { padding-left: 220px; }
 }
 
 /* ── PAGE FOOTER ── */
-.page-footer {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 1.5rem 2rem 2.5rem;
-  border-top: 1px solid var(--gold-rule);
-  font-size: 0.82rem;
-  font-style: italic;
-  color: var(--text-muted);
-}
-.page-footer a {
-  color: var(--gold-dim);
-  text-decoration: none;
-}
-.page-footer a:hover { color: var(--gold); }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 640px) {
-  .site-nav { padding: 1rem 1.2rem; }
-  .content { padding: 0 1.2rem 4rem; }
+    .content { padding: 0 1.2rem 4rem; }
   .page-header { padding: 2.5rem 1.2rem 2rem; }
 }

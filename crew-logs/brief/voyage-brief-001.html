@@ -108,20 +108,6 @@
   <script src="../../scripts/nav.js" defer></script>
 </head>
 <body>
-
-
-
-<nav class="site-nav page-content">
-  <a href="../../index.html" class="nav-home">
-    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7l6-5 6 5M3 6v6h3v-3h2v3h3V6"/></svg>
-    Caelestis
-  </a>
-  <span class="nav-sep">›</span>
-  <span class="nav-section"><a href="../index.html" style="color:var(--text-dim);text-decoration:none;">Crew Logs</a></span>
-  <span class="nav-sep">›</span>
-  <span class="nav-current">Voyage 001</span>
-</nav>
-
 <div class="page-content">
   <div class="page-header">
     <div class="page-emblem">
@@ -151,13 +137,12 @@
     <div class="log-meta">
       <span class="log-badge">Voyage 001</span>
       <span class="log-type-badge">Brief</span>
-      <span class="alt-format">→ <a href="../detailed/voyage-detailed-001.html">Detailed Log</a></span>
     </div>
 
-    <!-- PREV / NEXT — update hrefs and titles when adjacent voyages exist -->
     <div class="voyage-nav-bar">
-      <span class="voyage-nav-link disabled"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> No Previous Voyage</span>
-      <span class="voyage-nav-link disabled">No Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></span>
+      <span class="voyage-nav-link disabled"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Previous Voyage</span>
+      <a class="voyage-nav-center" href="../detailed/voyage-detailed-001.html">Detailed Log</a>
+      <span class="voyage-nav-link disabled">Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></span>
     </div>
 
     <!-- AT A GLANCE -->
@@ -272,16 +257,15 @@
     </div>
 
     <div class="voyage-nav-bottom">
-      <span class="voyage-nav-link disabled"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> No Previous Voyage</span>
-      <span class="voyage-nav-link disabled">No Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></span>
+      <span class="voyage-nav-link disabled"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Previous Voyage</span>
+      <a class="voyage-nav-center" href="../detailed/voyage-detailed-001.html">Detailed Log</a>
+      <span class="voyage-nav-link disabled">Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></span>
     </div>
 
   </div><!-- /content -->
 </div><!-- /page-content -->
 
-<footer class="page-footer page-content">
-  <a href="../index.html">← Crew Logs</a> &nbsp;·&nbsp; <a href="../detailed/voyage-detailed-001.html">Read Detailed Log</a> &nbsp;·&nbsp; <a href="../../index.html">Caelestis</a>
-</footer>
+
 
 </body>
 </html>
