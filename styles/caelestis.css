@@ -125,6 +125,110 @@ body::before {
 }
 .page-emblem svg { width: 120px; }
 
+
+  .main-nav-logo { font-size: 0.78rem; margin-right: 0.8rem; }
+  .main-nav-link { font-size: 0.52rem; padding: 0 0.55rem; }
+}
+
+/* ── SIDE NAV ── */
+.side-nav {
+  position: fixed; left: 0; top: 0; bottom: 0;
+  width: 220px;
+  background: rgba(6,4,14,0.99);
+  border-right: 1px solid var(--gold-rule);
+  display: flex; flex-direction: column;
+  z-index: 200; overflow-y: auto;
+}
+.side-nav-head {
+  padding: 1.8rem 1.4rem 1.4rem;
+  border-bottom: 1px solid var(--gold-rule);
+  flex-shrink: 0;
+}
+.side-nav-logo {
+  font-family: 'Cinzel', serif; font-size: 1rem;
+  font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold); text-decoration: none; display: block;
+}
+.side-nav-logo:hover { color: var(--gold-light); }
+.side-nav-body { padding: 1.2rem 0; flex: 1; }
+.side-nav-link {
+  font-family: 'Cinzel', serif; font-size: 0.63rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-dim); text-decoration: none;
+  padding: 0.6rem 1.4rem;
+  display: block; border-left: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s, background 0.2s, padding-left 0.2s;
+}
+.side-nav-link:hover {
+  color: var(--text); border-left-color: var(--gold-dim);
+  background: rgba(201,153,58,0.04); padding-left: 1.7rem;
+}
+.side-nav-link.active {
+  color: var(--gold); border-left-color: var(--gold);
+  background: rgba(201,153,58,0.06);
+}
+.side-nav-divider {
+  height: 1px; background: var(--gold-rule);
+  margin: 1rem 1.4rem;
+}
+.side-nav-ext-link {
+  font-family: 'Cinzel', serif; font-size: 0.55rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-muted); text-decoration: none;
+  padding: 0.5rem 1.4rem;
+  display: flex; align-items: center; gap: 0.4rem;
+  transition: color 0.2s;
+}
+.side-nav-ext-link:hover { color: var(--gold-dim); }
+.side-nav-ext-link svg { width: 9px; opacity: 0.6; flex-shrink: 0; }
+
+/* Offset content when sidebar present */
+body.with-sidebar { padding-left: 220px; }
+
+/* Mobile: hamburger toggle */
+.side-nav-toggle {
+  display: none;
+  position: fixed; top: 0.8rem; left: 0.8rem; z-index: 201;
+  background: var(--bg-card); border: 1px solid var(--gold-rule);
+  color: var(--gold-dim); cursor: pointer;
+  width: 36px; height: 36px;
+  align-items: center; justify-content: center;
+}
+.side-nav-toggle svg { width: 16px; }
+
+@media(max-width: 768px) {
+  body.with-sidebar { padding-left: 0; }
+  .side-nav { transform: translateX(-100%); transition: transform 0.28s ease; box-shadow: none; }
+  .side-nav.open { transform: translateX(0); box-shadow: 4px 0 24px rgba(0,0,0,0.6); }
+  .side-nav-toggle { display: flex; }
+}
+
+/* ── VOYAGE PREV / NEXT ── */
+.voyage-nav-bar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--gold-rule);
+  border-bottom: 1px solid var(--gold-rule);
+  margin-bottom: 2rem;
+}
+.voyage-nav-bar + .log-meta { margin-top: 0; }
+.voyage-nav-link {
+  font-family: 'Cinzel', serif; font-size: 0.6rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold-dim); text-decoration: none;
+  display: flex; align-items: center; gap: 0.4rem;
+  transition: color 0.2s, gap 0.2s;
+}
+.voyage-nav-link:hover { color: var(--gold-light); }
+.voyage-nav-link.disabled { color: var(--text-muted); pointer-events: none; opacity: 0.4; }
+.voyage-nav-link svg { width: 12px; }
+.voyage-nav-bottom {
+  display: flex; justify-content: space-between;
+  padding: 1.2rem 0 0;
+  border-top: 1px solid var(--gold-rule);
+  margin-top: 2rem;
+}
+
 /* ── PAGE HEADER ── */
 .page-header {
   text-align: center;
