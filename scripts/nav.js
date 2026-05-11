@@ -1,334 +1,145 @@
-/* ═══════════════════════════════════════════════
-   CAELESTIS — Shared Design System
-   All pages import this file.
-   Page-specific styles live in each HTML file.
-   ═══════════════════════════════════════════════ */
+/**
+ * Caelestis — Shared Navigation
+ * ─────────────────────────────
+ * Injects the sidebar nav into any page that includes this script.
+ * To update the nav for ALL pages, edit only this file.
+ *
+ * Usage (in <head> with defer):
+ *   Depth 1:  <script src="../scripts/nav.js" defer></script>
+ *   Depth 2:  <script src="../../scripts/nav.js" defer></script>
+ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+(function () {
+  'use strict';
 
-/* ── TOKENS ── */
-:root {
-  /* Backgrounds */
-  --bg:          #06040e;
-  --bg-panel:    rgba(14, 10, 6, 0.82);
-  --bg-card:     rgba(20, 15, 8, 0.75);
-  --bg-raised:   rgba(30, 22, 10, 0.70);
+  // ── Path resolution ───────────────────────────────────────────────────────
+  // Derives a relative base path from the current page's URL depth.
+  // Works for GitHub Pages at royekx.github.io/caelestis/
+  //
+  //   /caelestis/dossiers/mirt.html         → 3 slashes → depth 1 → ../
+  //   /caelestis/crew-logs/brief/v-001.html → 4 slashes → depth 2 → ../../
 
-  /* Gold palette */
-  --gold:        #c9993a;
-  --gold-light:  #e8c87a;
-  --gold-dim:    #9a7428;
-  --gold-faint:  rgba(201, 153, 58, 0.12);
-  --gold-rule:   rgba(201, 153, 58, 0.25);
+  var pathname = window.location.pathname;
+  var slashes  = (pathname.match(/\//g) || []).length;
+  var depth    = Math.max(0, slashes - 2);
+  var base     = depth > 0 ? new Array(depth + 1).join('../') : './';
 
-  /* Text */
-  --text:        #e8dcc8;
-  --text-dim:    #9a8c78;
-  --text-muted:  #5a4e3c;
+  // ── Icons ─────────────────────────────────────────────────────────────────
 
-  /* Rank colours */
-  --cadet:       #8b2020;
-  --sailor:      #1e4a7a;
-  --officer:     #5a2d82;
-  --bridge:      #a07820;
+  var EXT_ICON = '<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2H2a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1V6M6 1h3v3M9 1L4.5 5.5"/></svg>';
 
-  /* Misc */
-  --radius:      2px;
-}
+  var MENU_ICON = '<svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/></svg>';
 
-/* ── RESET ── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 107.5%; }
+  // ── Sections ──────────────────────────────────────────────────────────────
+  // To add, remove, or rename a section: edit this array only.
 
-/* ── BASE ── */
-body {
-  background-color: var(--bg);
-  font-family: 'Crimson Pro', Georgia, serif;
-  color: var(--text);
-  min-height: 100vh;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
+  var sections = [
+    { key: 'crew-logs',          label: 'Crew Logs',          path: 'crew-logs/index.html'          },
+    { key: 'crew-manifest',      label: 'Crew Manifest',      path: 'crew-manifest/index.html'      },
+    { key: 'dossiers',           label: 'Dossiers',           path: 'dossiers/index.html'           },
+    { key: 'navigation-records', label: 'Navigation Records', path: 'navigation-records/index.html' },
+    { key: 'inventory',          label: 'Inventory',          path: 'inventory/index.html'          },
+    { key: 'handouts',           label: 'Corps Protocols',    path: 'handouts/index.html'           },
+  ];
 
-/* ── STAR FIELD (fixed behind everything) ── */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-image:
-    radial-gradient(1px   1px   at 8%  12%, #ffffff99 0%, transparent 100%),
-    radial-gradient(1px   1px   at 22% 38%, #ffffff55 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 38%  7%, #ffffffbb 0%, transparent 100%),
-    radial-gradient(1px   1px   at 53% 58%, #ffffff44 0%, transparent 100%),
-    radial-gradient(1px   1px   at 68% 23%, #ffffff77 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 79% 74%, #ffffffcc 0%, transparent 100%),
-    radial-gradient(1px   1px   at 91% 44%, #ffffff55 0%, transparent 100%),
-    radial-gradient(1px   1px   at 14% 79%, #ffffff66 0%, transparent 100%),
-    radial-gradient(1px   1px   at 58% 91%, #ffffff44 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 33% 63%, #ffffff88 0%, transparent 100%),
-    radial-gradient(1px   1px   at 47% 28%, #ffffff55 0%, transparent 100%),
-    radial-gradient(1px   1px   at 93% 11%, #ffffff77 0%, transparent 100%),
-    radial-gradient(1px   1px   at  4% 53%, #ffffff44 0%, transparent 100%),
-    radial-gradient(1px   1px   at 76% 87%, #ffffff66 0%, transparent 100%),
-    radial-gradient(1px   1px   at 18% 47%, #ffffff33 0%, transparent 100%),
-    radial-gradient(1px   1px   at 62% 18%, #ffffff55 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 85% 35%, #ffffff88 0%, transparent 100%),
-    radial-gradient(1px   1px   at 42% 82%, #ffffff44 0%, transparent 100%);
-}
+  // External links shown at the bottom of the sidebar.
+  // To add a link: { label: 'Name', href: 'https://...' }
 
-/* ── PAGE WRAPPER ── */
-.page-content {
-  position: relative;
-  z-index: 1;
-}
+  var extLinks = [
+    { label: 'Take the Helm',   href: 'https://royek.foundryserver.com/game'      },
+    { label: 'Scheduler',       href: 'https://rallly.co/invite/B8uUYlcm4oKB'    },
+  ];
 
-/* ── SITE NAV (sub-pages) ── */
+  // ── Inject critical positioning CSS (self-contained — doesn't depend on caelestis.css load order) ──
 
-.site-nav a.site-nav a.site-nav a
+  var criticalCSS = [
+    /* Sidebar positioning */
+    '.side-nav{position:fixed!important;left:0;top:0;bottom:0;width:220px;z-index:200;',
+    'display:flex;flex-direction:column;overflow-y:auto;',
+    'background:rgba(6,4,14,0.99);border-right:1px solid rgba(201,153,58,0.15);}',
+    /* Toggle hidden by default */
+    '.side-nav-toggle{display:none!important;position:fixed!important;z-index:201;}',
+    /* Content offset — left-align within sidebar space, no auto-centering */
+    'body.with-sidebar{padding-left:220px;}',
+    'body.with-sidebar .page-content{margin:0 auto;max-width:min(calc(100vw - 220px),900px);padding:0 2.5rem;}',
+    /* Mobile */
+    '@media(max-width:768px){',
+    'body.with-sidebar{padding-left:0!important;padding-top:52px!important;}',
+    'body.with-sidebar .page-content{max-width:100%;}',
+    '.side-nav{transform:translateX(-100%);transition:transform .28s ease;}',
+    '.side-nav.open{transform:translateX(0);}',
+    '.side-nav-toggle{display:flex!important;top:0;left:0;right:0;height:44px;}',
+    '}'
+  ].join('');
 
+  var styleEl = document.createElement('style');
+  styleEl.textContent = criticalCSS;
+  document.head.appendChild(styleEl);
 
-/* ── PAGE EMBLEM (replaces eyebrow on landing pages) ── */
-.page-emblem {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
-  color: var(--gold-dim);
-}
-.page-emblem svg { width: 120px; }}
+  // ── Build HTML ────────────────────────────────────────────────────────────
 
-/* ── SIDE NAV ── */
-.side-nav {
-  position: fixed; left: 0; top: 0; bottom: 0;
-  width: 220px;
-  background: rgba(6,4,14,0.99);
-  border-right: 1px solid var(--gold-rule);
-  display: flex; flex-direction: column;
-  z-index: 200; overflow-y: auto;
-}
-.side-nav-head {
-  padding: 1.8rem 1.4rem 1.4rem;
-  border-bottom: 1px solid var(--gold-rule);
-  flex-shrink: 0;
-}
-.side-nav-logo {
-  font-family: 'Cinzel', serif; font-size: 1.1rem;
-  font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--gold); text-decoration: none; display: block;
-}
-.side-nav-logo:hover { color: var(--gold-light); }
-.side-nav-body { padding: 1.2rem 0; flex: 1; }
-.side-nav-link {
-  font-family: 'Cinzel', serif; font-size: 0.78rem;
-  letter-spacing: 0.05em; text-transform: uppercase;
-  color: var(--text-dim); text-decoration: none;
-  padding: 0.6rem 1.4rem;
-  display: block; border-left: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s, background 0.2s, padding-left 0.2s;
-}
-.side-nav-link:hover {
-  color: var(--text); border-left-color: var(--gold-dim);
-  background: rgba(201,153,58,0.04); padding-left: 1.8rem;
-}
-.side-nav-link.active {
-  color: var(--gold); border-left-color: var(--gold);
-  background: rgba(201,153,58,0.06);
-}
-.side-nav-divider {
-  height: 1px; background: var(--gold-rule);
-  margin: 1rem 1.4rem;
-}
-.side-nav-ext-link {
-  font-family: 'Cinzel', serif; font-size: 0.7rem;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--text-muted); text-decoration: none;
-  padding: 0.5rem 1.4rem;
-  display: flex; align-items: center; gap: 0.4rem;
-  transition: color 0.2s;
-}
-.side-nav-ext-link:hover { color: var(--gold-dim); }
-.side-nav-ext-link svg { width: 9px; opacity: 0.6; flex-shrink: 0; }
+  var sectionLinks = sections.map(function (s) {
+    return '<a class="side-nav-link" href="' + base + s.path + '" data-section="' + s.key + '">' + s.label + '</a>';
+  }).join('');
 
-/* Offset content when sidebar present */
-body.with-sidebar { padding-left: 220px; }
+  var externalLinks = extLinks.map(function (l) {
+    return '<a class="side-nav-ext-link" href="' + l.href + '" target="_blank" rel="noopener">' + l.label + ' ' + EXT_ICON + '</a>';
+  }).join('');
 
-/* Content layout within sidebar — centered within available space */
-body.with-sidebar .page-content {
-  margin: 0 auto;
-  max-width: min(calc(100vw - 220px), 900px);
-  padding: 0 2.5rem;
-}
+  var html = [
+    '<button class="side-nav-toggle" id="js-nav-toggle" aria-label="Toggle navigation">',
+    MENU_ICON,
+    '<span class="side-nav-toggle-label">Caelestis</span>',
+    '</button>',
+    '<nav class="side-nav" id="js-side-nav">',
+    '  <div class="side-nav-head">',
+    '    <a class="side-nav-logo" href="' + base + 'index.html">Caelestis</a>',
+    '  </div>',
+    '  <div class="side-nav-body">',
+    sectionLinks,
+    '    <div class="side-nav-divider"></div>',
+    externalLinks,
+    '  </div>',
+    '</nav>',
+  ].join('');
 
-/* Mobile: hamburger toggle */
-.side-nav-toggle {
-  display: none;
-  position: fixed; top: 0; left: 0; right: 0; z-index: 201;
-  background: rgba(6,4,14,0.97);
-  border-bottom: 1px solid var(--gold-rule);
-  color: var(--gold-dim); cursor: pointer;
-  height: 44px;
-  align-items: center; justify-content: flex-start;
-  padding: 0 1.2rem; gap: 0.8rem;
-}
-.side-nav-toggle svg { width: 16px; }
-.side-nav-toggle-label {
-  font-family: 'Cinzel', serif; font-size: 0.8rem;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--gold);
-}
+  // ── Inject ────────────────────────────────────────────────────────────────
 
-@media(max-width: 768px) {
-  body.with-sidebar { padding-left: 0; padding-top: 52px; }
-  body.with-sidebar .page-content { max-width: 100%; }
-  .side-nav { transform: translateX(-100%); transition: transform 0.28s ease; box-shadow: none; background: rgba(6,4,14,0.99); }
-  .side-nav.open { transform: translateX(0); box-shadow: 4px 0 32px rgba(0,0,0,0.8); }
-  .side-nav-toggle { display: flex; }
-}
+  document.body.insertAdjacentHTML('afterbegin', html);
+  document.body.classList.add('with-sidebar');
 
-/* ── VOYAGE PREV / NEXT ── */
-.voyage-nav-bar {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 0.7rem 0;
-  border-top: 1px solid var(--gold-rule);
-  border-bottom: 1px solid var(--gold-rule);
-  margin-bottom: 2rem;
-  gap: 0.8rem;
-}
-.voyage-nav-bar + .log-meta { margin-top: 0; }
-.voyage-nav-link {
-  font-family: 'Cinzel', serif; font-size: 0.6rem;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--gold-dim); text-decoration: none;
-  display: flex; align-items: center; gap: 0.4rem;
-  transition: color 0.2s; white-space: nowrap; flex-shrink: 0;
-}
-.voyage-nav-link:hover { color: var(--gold-light); }
-.voyage-nav-link.disabled { color: var(--text-muted); pointer-events: none; opacity: 0.4; }
-.voyage-nav-link svg { width: 12px; }
-.voyage-nav-center {
-  font-family: 'Cinzel', serif; font-size: 0.58rem;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--gold-dim); text-decoration: none;
-  border: 1px solid var(--gold-rule);
-  padding: 0.28rem 0.9rem; white-space: nowrap;
-  transition: border-color 0.2s, color 0.2s, background 0.2s;
-}
-.voyage-nav-center:hover {
-  border-color: var(--gold-dim); color: var(--gold-light);
-  background: rgba(201,153,58,0.05);
-}
-.voyage-nav-bottom {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 1.2rem 0 0;
-  border-top: 1px solid var(--gold-rule);
-  margin-top: 2rem; gap: 0.8rem;
-}
+  // ── Active state ──────────────────────────────────────────────────────────
 
-/* ── PAGE HEADER ── */
-.page-header {
-  text-align: center;
-  padding: 3.5rem 2rem 2.5rem;
-  position: relative;
-}
-.page-header::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 1px;
-  background: var(--gold);
-  margin: 1.2rem auto 0;
-}
-.page-eyebrow {
-  font-family: 'Cinzel', serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.5rem;
-}
-.page-title {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--text);
-  line-height: 1.1;
-}
-.page-subtitle {
-  margin-top: 0.6rem;
-  font-size: 1rem;
-  font-style: italic;
-  color: var(--text-dim);
-}
+  document.querySelectorAll('.side-nav-link[data-section]').forEach(function (link) {
+    if (pathname.indexOf('/' + link.dataset.section + '/') !== -1) {
+      link.classList.add('active');
+    }
+  });
 
-/* ── CONTENT AREA ── */
-.content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 2.5rem 6rem;
-}
+  // ── Mobile toggle ─────────────────────────────────────────────────────────
 
-/* ── SECTION LABEL ── */
-.section-label {
-  font-family: 'Cinzel', serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--gold);
-  border-bottom: 1px solid var(--gold-rule);
-  padding-bottom: 0.4rem;
-  margin-bottom: 1.1rem;
-}
+  var toggle = document.getElementById('js-nav-toggle');
+  var nav    = document.getElementById('js-side-nav');
 
-/* ── SECTION BLOCK ── */
-.section-block { margin-bottom: 2.5rem; }
+  if (toggle && nav) {
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      nav.classList.toggle('open');
+    });
 
-/* ── CALLOUT ── */
-.callout {
-  background: var(--gold-faint);
-  border: 1px solid var(--gold-rule);
-  border-left: 3px solid var(--gold);
-  padding: 0.85rem 1.1rem;
-  font-size: 0.9rem;
-  line-height: 1.55;
-  margin-top: 0.9rem;
-}
-.callout-label {
-  font-family: 'Cinzel', serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold);
-  display: block;
-  margin-bottom: 0.3rem;
-}
+    // Close when clicking outside the nav on mobile
+    document.addEventListener('click', function (e) {
+      if (nav.classList.contains('open') && !nav.contains(e.target)) {
+        nav.classList.remove('open');
+      }
+    });
 
-/* ── ENTRY LIST ── */
-.entry-list { display: flex; flex-direction: column; gap: 0.6rem; }
-.entry {
-  font-size: 0.92rem;
-  line-height: 1.5;
-  padding-left: 0.9rem;
-  border-left: 2px solid var(--gold-rule);
-  color: var(--text);
-}
-.entry b { font-weight: 600; color: var(--text); }
-.entry em { color: var(--text-dim); }
+    // Close when a nav link is clicked (navigating away)
+    nav.querySelectorAll('.side-nav-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('open');
+      });
+    });
+  }
 
-/* ── DIVIDER ── */
-.divider {
-  text-align: center;
-  color: var(--gold-dim);
-  font-size: 0.7rem;
-  letter-spacing: 0.4em;
-  margin: 0.3rem 0 2rem;
-}
-
-/* ── PAGE FOOTER ── */
-
-/* ── RESPONSIVE ── */
-@media (max-width: 640px) {
-    .content { padding: 0 1.2rem 4rem; }
-  .page-header { padding: 2.5rem 1.2rem 2rem; }
-}
+})();
