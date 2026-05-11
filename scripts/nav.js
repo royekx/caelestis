@@ -61,7 +61,8 @@
     '.side-nav-toggle{display:none!important;position:fixed!important;z-index:201;}',
     /* Content offset — left-align within sidebar space, no auto-centering */
     'body.with-sidebar{padding-left:220px;}',
-    'body.with-sidebar .page-content{margin:0 auto;max-width:min(calc(100vw - 220px),900px);padding:0 2.5rem;}',
+    'body.with-sidebar .page-content{margin:0;max-width:100%;padding:0 3rem;}',
+    'body.with-sidebar .page-content{box-sizing:border-box;}',
     /* Mobile */
     '@media(max-width:768px){',
     'body.with-sidebar{padding-left:0!important;padding-top:52px!important;}',
