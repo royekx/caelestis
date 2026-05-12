@@ -3,224 +3,237 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fleet Intelligence Archive — Spelljammer Academy</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<title>Fleet Intelligence Archive</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; }
 body {
   background: #030208;
   font-family: 'Crimson Pro', Georgia, serif;
+  color: #c9a96e;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  padding: 3rem 2rem 5rem;
 }
-
-/* Star field */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(1px 1px at 15% 25%, rgba(255,255,255,0.5) 0%, transparent 100%),
-    radial-gradient(1px 1px at 72% 8%,  rgba(255,255,255,0.4) 0%, transparent 100%),
-    radial-gradient(1px 1px at 88% 60%, rgba(255,255,255,0.35) 0%, transparent 100%),
-    radial-gradient(1px 1px at 40% 80%, rgba(255,255,255,0.3) 0%, transparent 100%),
-    radial-gradient(1px 1px at 6%  55%, rgba(255,255,255,0.4) 0%, transparent 100%),
-    radial-gradient(1px 1px at 92% 35%, rgba(255,255,255,0.3) 0%, transparent 100%),
-    radial-gradient(2px 2px at 55% 45%, rgba(255,255,255,0.15) 0%, transparent 100%);
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 12%, rgba(255,255,255,0.35) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 65%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 45% 85%, rgba(255,255,255,0.25) 0%, transparent 100%),
+    radial-gradient(2px 2px at 8% 50%, rgba(255,255,255,0.12) 0%, transparent 100%);
   pointer-events: none;
   z-index: 0;
 }
+.page { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
 
-.gate-wrap {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 460px;
+/* Header */
+.archive-header {
   text-align: center;
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(201,153,58,0.15);
 }
-
-/* Outer ornamental border */
-.gate-border {
-  border: 1px solid rgba(201,153,58,0.2);
-  padding: 3rem 2.5rem 2.5rem;
-  position: relative;
-  background: rgba(6,4,14,0.95);
-}
-.gate-border::before, .gate-border::after,
-.gate-border .corner-br, .gate-border .corner-tl-inner {
-  content: '';
-  position: absolute;
-  width: 20px; height: 20px;
-  border: 1px solid rgba(201,153,58,0.5);
-}
-.gate-border::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
-.gate-border::after  { bottom: -1px; right: -1px; border-left: none; border-top: none; }
-.corner-tr { position:absolute; top:-1px; right:-1px; width:20px; height:20px; border:1px solid rgba(201,153,58,0.5); border-left:none; border-bottom:none; }
-.corner-bl { position:absolute; bottom:-1px; left:-1px; width:20px; height:20px; border:1px solid rgba(201,153,58,0.5); border-right:none; border-top:none; }
-
-/* Academy seal */
-.gate-seal {
-  width: 56px; height: 56px;
-  margin: 0 auto 1.4rem;
-  color: rgba(201,153,58,0.5);
-}
-
-.gate-institution {
+.archive-institution {
   font-family: 'Cinzel', serif;
-  font-size: 0.5rem;
-  letter-spacing: 0.35em;
+  font-size: 0.52rem;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(201,153,58,0.4);
   margin-bottom: 0.25rem;
 }
-.gate-division {
+.archive-title {
   font-family: 'Cinzel', serif;
-  font-size: 0.5rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: rgba(201,153,58,0.3);
-  margin-bottom: 1.4rem;
-}
-
-.gate-rule {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(to right, transparent, rgba(201,153,58,0.3), transparent);
-  margin-bottom: 1.4rem;
-}
-
-.gate-title {
-  font-family: 'Cinzel', serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: #c9a96e;
   letter-spacing: 0.06em;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
-.gate-sub {
-  font-size: 0.85rem;
+.archive-sub {
+  font-size: 0.82rem;
   color: rgba(201,153,58,0.4);
   font-style: italic;
-  margin-bottom: 2rem;
-  line-height: 1.5;
 }
 
-/* Clearance form */
-.clearance-label {
+.class-banner {
   font-family: 'Cinzel', serif;
-  font-size: 0.5rem;
+  font-size: 0.52rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(201,153,58,0.4);
-  margin-bottom: 0.5rem;
-  display: block;
-}
-.clearance-input {
-  width: 100%;
-  background: rgba(201,153,58,0.04);
-  border: none;
-  border-bottom: 1px solid rgba(201,153,58,0.25);
-  color: #c9a96e;
-  font-family: 'Crimson Pro', Georgia, serif;
-  font-size: 1.1rem;
-  padding: 0.6rem 0.5rem;
+  color: rgba(180,40,40,0.7);
+  border: 1px solid rgba(140,30,30,0.3);
+  padding: 0.4rem 1rem;
   text-align: center;
-  letter-spacing: 0.25em;
-  outline: none;
-  margin-bottom: 1.2rem;
-  transition: border-color 0.2s;
-  background: transparent;
-}
-.clearance-input:focus { border-color: rgba(201,153,58,0.6); }
-.clearance-input::placeholder { color: rgba(201,153,58,0.15); letter-spacing: 0.1em; font-size: 0.88rem; }
-.clearance-btn {
-  width: 100%;
-  background: transparent;
-  border: 1px solid rgba(201,153,58,0.25);
-  color: rgba(201,153,58,0.7);
-  font-family: 'Cinzel', serif;
-  font-size: 0.58rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  padding: 0.8rem;
-  cursor: pointer;
-  transition: all 0.25s;
-}
-.clearance-btn:hover {
-  border-color: rgba(201,153,58,0.6);
-  color: #c9a96e;
-  background: rgba(201,153,58,0.04);
+  margin-bottom: 2.5rem;
+  background: rgba(140,30,30,0.04);
 }
 
-.gate-warning {
-  margin-top: 1.5rem;
-  font-size: 0.72rem;
-  color: rgba(180,40,40,0.5);
-  font-style: italic;
-  line-height: 1.6;
+/* File rows */
+.file-list { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.file-row {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  align-items: stretch;
+  gap: 0;
+  text-decoration: none;
+  border: 1px solid rgba(201,153,58,0.12);
+  background: rgba(201,153,58,0.015);
+  transition: border-color 0.25s, background 0.25s;
+  overflow: hidden;
 }
-.gate-warning strong { color: rgba(180,40,40,0.7); font-style: normal; }
+.file-row:hover { border-color: rgba(201,153,58,0.35); background: rgba(201,153,58,0.04); }
+
+.file-tab {
+  background: rgba(201,153,58,0.04);
+  border-right: 1px solid rgba(201,153,58,0.12);
+  padding: 1.1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background 0.25s;
+}
+.file-row:hover .file-tab { background: rgba(201,153,58,0.07); }
+
+.file-case-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.42rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(201,153,58,0.4);
+  margin-bottom: 0.2rem;
+}
+.file-case-num {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  color: #c9a96e;
+}
+
+.file-body { padding: 1.1rem 1.3rem; }
+.file-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  color: #c9a96e;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+.file-meta {
+  font-size: 0.75rem;
+  color: rgba(201,153,58,0.4);
+  font-style: italic;
+}
+
+.file-class {
+  padding: 1.1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.class-badge {
+  font-family: 'Cinzel', serif;
+  font-size: 0.42rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid rgba(180,40,40,0.35);
+  color: rgba(180,40,40,0.7);
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+.class-badge.above { border-color: rgba(180,40,40,0.6); color: rgba(200,50,50,0.9); }
+
+.archive-note {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(201,153,58,0.25);
+  font-style: italic;
+  line-height: 1.7;
+}
+  .file-group-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.48rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(201,153,58,0.4);
+    padding: 1.2rem 0 0.4rem;
+    border-bottom: 1px solid rgba(201,153,58,0.1);
+    margin-bottom: 0.3rem;
+  }
 </style>
 </head>
 <body>
-<div class="gate-wrap">
-  <div class="gate-border">
-    <div class="corner-tr"></div>
-    <div class="corner-bl"></div>
+<div class="page">
 
-    <div class="gate-seal">
-      <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1">
-        <circle cx="28" cy="28" r="26"/>
-        <circle cx="28" cy="28" r="20" stroke-dasharray="2 3"/>
-        <polygon points="28,8 31.5,19 43,19 34,26.5 37.5,38 28,31 18.5,38 22,26.5 13,19 24.5,19" stroke-width="0.8"/>
-        <circle cx="28" cy="28" r="5" fill="none"/>
-        <circle cx="28" cy="28" r="1.5" fill="currentColor" stroke="none"/>
-      </svg>
-    </div>
+  <div class="archive-header">
+    <div class="archive-institution">Spelljammer Academy — Fleet Intelligence Division</div>
+    <div class="archive-title">Classified Archive</div>
+    <div class="archive-sub">Gold clearance verified · Bridge access confirmed</div>
+  </div>
 
-    <div class="gate-institution">Spelljammer Academy</div>
-    <div class="gate-division">Fleet Intelligence Division</div>
-    <div class="gate-rule"></div>
+  <div class="class-banner">Classification: Gold — Bridge Access Only · Handle with Discretion · Do Not Reproduce</div>
 
-    <div class="gate-title">Classified Archive</div>
-    <div class="gate-sub">Gold-level clearance required.<br>Authorised bridge personnel only.</div>
-
-    <label class="clearance-label" for="code-input">Clearance Code</label>
-    <input type="password" class="clearance-input" id="code-input" placeholder="— — — — —" autocomplete="off" spellcheck="false">
-    <button class="clearance-btn" onclick="checkCode()">Submit for Clearance</button>
-
-    <p class="gate-warning">
-      Unauthorised access attempts are logged and transmitted to bridge command.<br>
-      <strong>Failure to present valid clearance will result in disintegration.</strong>
+  <div style="border:1px solid rgba(180,40,40,0.3); border-left:3px solid rgba(180,40,40,0.6); background:rgba(30,4,4,0.4); padding:0.9rem 1.1rem; margin-bottom:1.8rem;">
+    <div style="font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(180,40,40,0.7);margin-bottom:0.4rem;">Handling Warning</div>
+    <p style="font-size:0.82rem;color:rgba(201,153,58,0.55);font-style:italic;line-height:1.7;">
+      These files document an active operation by a hostile external network. The network has
+      demonstrated surveillance capability against Fleet intelligence infrastructure.
+      <strong style="color:rgba(201,153,58,0.8);font-style:normal;">Do not access from shared or unsecured terminals.</strong>
+      Do not discuss contents through standard Fleet channels. Several individuals involved
+      in compiling these materials are no longer in contact. Proceed with that in mind.
     </p>
   </div>
+
+  <div class="file-list">
+
+    <div class="file-group-label">Block I — Cairn Station Operation</div>
+    <a class="file-row" href="file-001.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4471</div></div><div class="file-body"><div class="file-title">Intelligence Summary — Coordinated Asset Acquisition Pattern</div><div class="file-meta">Chart theft pattern · Multi-installation · Wax disc recovered</div></div><div class="file-class"><div class="class-badge gold">Gold</div></div></a>
+    <a class="file-row" href="file-002.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4472</div></div><div class="file-body"><div class="file-title">Field Report — Operative Contact and Recovered Materials</div><div class="file-meta">Operative LORN · Symbol · Recognition protocol</div></div><div class="file-class"><div class="class-badge gold">Gold</div></div></a>
+    <a class="file-row" href="file-003.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4473</div></div><div class="file-body"><div class="file-title">Threat Assessment — Cache Location and Organisational Profile</div><div class="file-meta">Location analysis · Analyst missing · External coordination</div></div><div class="file-class"><div class="class-badge gold">Gold</div></div></a>
+    <a class="file-row" href="file-004.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4474</div></div><div class="file-body"><div class="file-title">Operational File — Station Identification and Navigation Reference</div><div class="file-meta">Cairn Station · Map attachment · Above Bridge</div></div><div class="file-class"><div class="class-badge above">Above Bridge</div></div></a>
+    <a class="file-row" href="file-005.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4475</div></div><div class="file-body"><div class="file-title">Threshold Intelligence — Cross-Sphere Zenith Assessment</div><div class="file-meta">Network document · Secondary recovery · Operative LORN case</div></div><div class="file-class"><div class="class-badge above">Above Bridge</div></div></a>
+
+    <div class="file-group-label">Block II — Material Evidence</div>
+    <a class="file-row" href="file-006.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4476</div></div><div class="file-body"><div class="file-title">Evidence Assessment — Caelestis Nexus Inventory Reconstruction</div><div class="file-meta">Chart room · Missing correspondence · Adjacent archives</div></div><div class="file-class"><div class="class-badge gold">Gold</div></div></a>
+    <a class="file-row" href="file-007.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4477</div></div><div class="file-body"><div class="file-title">Stolen Materials — Cross-Installation Registry (Partial)</div><div class="file-meta">Multi-site · Meteorite catalogue · Resonance archive</div></div><div class="file-class"><div class="class-badge gold">Gold</div></div></a>
+    <a class="file-row" href="file-008.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4478</div></div><div class="file-body"><div class="file-title">Missing Persons — Personnel Proximate to Acquisition Sites</div><div class="file-meta">Seven individuals · Three unlocated · Pattern confirmed</div></div><div class="file-class"><div class="class-badge gold">Gold</div></div></a>
+    <a class="file-row" href="file-009.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4479</div></div><div class="file-body"><div class="file-title">Evidence Assessment — H'Catha Meteorite (Adamantine Sample)</div><div class="file-meta">Threshold resonance · Zenith-adjacent · Network interest</div></div><div class="file-class"><div class="class-badge gold">Gold</div></div></a>
+    <a class="file-row" href="file-010.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4480</div></div><div class="file-body"><div class="file-title">Evidence Assessment — Fonains Monolith Fragment (Recovered)</div><div class="file-meta">Obsidian fragment · Destroyed monolith · Unprecedented</div></div><div class="file-class"><div class="class-badge above">Above Bridge</div></div></a>
+
+    <div class="file-group-label">Block III — Network Intelligence</div>
+    <a class="file-row" href="file-011.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4481</div></div><div class="file-body"><div class="file-title">Organizational Profile — Eye-Wheel Network (Partial)</div><div class="file-meta">Multi-sphere · Pre-Fleet origin · Intentionally incomplete</div></div><div class="file-class"><div class="class-badge gold">Gold</div></div></a>
+    <a class="file-row" href="file-012.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4482</div></div><div class="file-body"><div class="file-title">Logistics Chain — Clockwork Horror Provenance and Vocath Supply Route</div><div class="file-meta">Vocath · Resonance-attuned components · Network link</div></div><div class="file-class"><div class="class-badge gold">Gold</div></div></a>
+
+    <div class="file-group-label">Block IV — World Registry</div>
+    <a class="file-row" href="file-013.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4483</div></div><div class="file-body"><div class="file-title">World Monitoring Registry — Active Zenith Assessment</div><div class="file-meta">Six worlds · Aethris · Fonains · Vetharra · Kaldris · Toril</div></div><div class="file-class"><div class="class-badge above">Above Bridge</div></div></a>
+    <a class="file-row" href="file-014.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4484</div></div><div class="file-body"><div class="file-title">World Dossier — Aethris (W-01) · The Prism Ascendant</div><div class="file-meta">Manufactured Zenith · Iridescent monolith · One survivor escaped</div></div><div class="file-class"><div class="class-badge above">Above Bridge</div></div></a>
+    <a class="file-row" href="file-015.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4485</div></div><div class="file-body"><div class="file-title">World Dossier — Fonains (W-02) · Destroyed Monolith</div><div class="file-meta">Black obsidian monolith · Destruction unprecedented · Archive interrupted</div></div><div class="file-class"><div class="class-badge above">Above Bridge</div></div></a>
+    <a class="file-row" href="file-016.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4486</div></div><div class="file-body"><div class="file-title">World Dossier — Vetharra (W-04) · Monolith Only Remains</div><div class="file-meta">Dead world · Monolith standing · Population zero</div></div><div class="file-class"><div class="class-badge above">Above Bridge</div></div></a>
+    <a class="file-row" href="file-017.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4487</div></div><div class="file-body"><div class="file-title">World Dossier — Kaldris (W-05) · Collapse Variant</div><div class="file-meta">Vitrified surface · Collapse Zenith · Network control case</div></div><div class="file-class"><div class="class-badge above">Above Bridge</div></div></a>
+    <a class="file-row" href="file-018.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4488</div></div><div class="file-body"><div class="file-title">Zenith Frequency Analysis — Acceleration Pattern</div><div class="file-meta">340% increase · Pattern not random · Acceleration confirmed</div></div><div class="file-class"><div class="class-badge above">Above Bridge</div></div></a>
+
+    <div class="file-group-label">Block V — Assessment and Directive</div>
+    <a class="file-row" href="file-019.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4489</div></div><div class="file-body"><div class="file-title">Stolen Objects — Consolidated Assessment and Purpose Analysis</div><div class="file-meta">All items · Purpose · Analyst's final note</div></div><div class="file-class"><div class="class-badge above">Above Bridge</div></div></a>
+    <a class="file-row" href="file-020.html"><div class="file-tab"><div class="file-case-label">Case</div><div class="file-case-num">SA-4490</div></div><div class="file-body"><div class="file-title">Directive — Above Bridge · Not for Distribution</div><div class="file-meta">Not Fleet Intelligence · One copy · PROCEED</div></div><div class="file-class"><div class="class-badge above">Above Bridge</div></div></a>
+
+  </div>
+
+  <p class="archive-note">
+    These materials are the exclusive property of Spelljammer Academy Fleet Intelligence.<br>
+    Reproduction, transmission, or discussion outside of bridge command is prohibited.<br>
+    Access to this archive has been logged.
+  </p>
+
 </div>
-
 <script>
-// ─────────────────────────────────────────────────────────────────
-// CLEARANCE CODE — Mirt's octopi are named Flotsam and Jetsam.
-// Players who asked about the fishbowl in his quarters have the key.
-// ─────────────────────────────────────────────────────────────────
-var CODE = 'flotsam&jetsam';
-var SESSION_KEY = 'caelestis_restricted_v1';
-
-function checkCode() {
-  var val = document.getElementById('code-input').value.trim().toLowerCase();
-  if (val === CODE.toLowerCase()) {
-    sessionStorage.setItem(SESSION_KEY, '1');
-    window.location.href = 'files.html';
-  } else {
-    window.location.href = 'disintegration.html';
-  }
-}
-document.getElementById('code-input').addEventListener('keydown', function(e){
-  if (e.key === 'Enter') checkCode();
-});
+if (sessionStorage.getItem('caelestis_restricted_v1') !== '1') window.location.href = 'index.html';
 </script>
 </body>
 </html>
