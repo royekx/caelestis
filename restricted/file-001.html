@@ -282,6 +282,46 @@ body::before {
   font-style: italic;
 }
 .handling-note strong { color: #8a0000; font-style: normal; font-weight: 600; }
+
+.chart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.8rem 0;
+  font-size: 0.82rem;
+}
+.chart-table th {
+  font-family: 'Cinzel', serif;
+  font-size: 0.48rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(26,18,8,0.5);
+  text-align: left;
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1.5px solid rgba(26,18,8,0.2);
+  border-top: 1px solid rgba(26,18,8,0.12);
+}
+.chart-table td {
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid rgba(26,18,8,0.07);
+  color: #1a1208;
+  vertical-align: top;
+}
+.chart-table tr:last-child td { border-bottom: none; }
+.chart-table .stolen {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8a0000;
+}
+.chart-table .unverified {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(26,18,8,0.4);
+}
+
 </style>
 </head>
 <body>
@@ -341,25 +381,18 @@ body::before {
       </div>
     </div>
 
-    <div class="handling-note">
-      <strong>Handling Notice:</strong> This file is restricted Gold not as a routine classification
-      but as an active security measure. The lead analyst on this case was removed from their post
-      in Cycle 1492 under circumstances that have not been fully accounted for. Their successor
-      flagged a concern before this file was sealed: the acquisition pattern suggests the operative
-      network has some degree of access to Fleet internal communications. <strong>Limit exposure
-      to essential personnel only. Do not transmit via standard Fleet channels.</strong>
-    </div>
+
 
     <div class="doc-section">
       <div class="doc-section-label">Summary</div>
       <p>Following the theft of navigational charts from the Spelljammer Nexus during Cycle 1492,
       Fleet Intelligence conducted a cross-institutional review of similar incidents over the prior
-      eighteen months. The review identified a pattern of coordinated theft across four Fleet
-      installations, including Caelestis.</p>
-      <p>The incidents are not isolated acts of opportunism. They constitute a <strong>systematic
-      acquisition campaign</strong> conducted by one or more external parties with precise knowledge
-      of Fleet scheduling, security rotations, and internal layout. This level of operational
-      detail implies either significant prior surveillance or an internal source.</p>
+      eighteen months. The review identified
+      <span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span> additional incidents
+      at other Fleet installations sharing overlapping characteristics.</p>
+      <p>Whether these incidents are connected or coincidental has not been determined.
+      This file documents the incidents and the materials involved. No conclusions
+      about the parties responsible are drawn at this stage.</p>
     </div>
 
     <div class="doc-section">
@@ -390,25 +423,97 @@ body::before {
     </div>
 
     <div class="doc-section">
-      <div class="doc-section-label">Operational Signature</div>
-      <p>No operative has been apprehended. Two incidents produced physical
-      evidence pointing to a shared logistics chain: a small pressed wax disc
-      bearing an unidentified symbol was recovered at the
+      <div class="doc-section-label">Physical Evidence</div>
+      <p>No individual has been apprehended in connection with the Caelestis incident
+      or the three other installations reviewed. One physical item was recovered:
+      a small pressed wax disc bearing an unidentified mark, found at the
       <span class="rx rx-lg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-      installation and again at Caelestis during processing of the Mirt incident.
-      Symbol analysis is pending. The mark has not been matched to any known
-      registered organisation.</p>
+      installation. A matching disc was recovered at Caelestis during processing
+      of the Mirt incident. The mark has been submitted for cross-reference.
+      No match has been returned. See Case <strong>#SA-4481</strong>.</p>
     </div>
 
     <div class="doc-section">
-      <div class="doc-section-label">Assessment</div>
-      <p>The acquisition campaign is <strong>ongoing.</strong> The directing party
-      still requires charts from
-      <span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span> additional sources
-      before a complete navigation picture can be assembled.
-      <strong>The window to act remains open — but it is closing.</strong></p>
-      <p>See Case <strong>#SA-4472</strong> for the operative contact report.
-      Be advised: that file carries an additional caution notice.</p>
+      <div class="doc-section-label">Status</div>
+      <p>The Caelestis theft is unresolved. Parties responsible have not been identified.
+      Investigation is ongoing. See Case <strong>#SA-4472</strong> for a related
+      field intercept. See Case <strong>#SA-4476</strong> for a full inventory
+      of Caelestis materials confirmed missing.</p>
+    </div>
+
+    <div class="doc-section">
+      <div class="doc-section-label">Appendix — Chart Recovery Assessment</div>
+      <p>The following is a reconstruction compiled after the fact from archive logs,
+      witness accounts, and partial inventory records. The charts themselves are
+      not recoverable. This list represents Fleet Intelligence's best assessment
+      of what was taken and what coverage it provided.</p>
+      <p>An analyst note filed with this appendix reads: <em>"Taken together, the
+      confirmed stolen charts provide continuous navigational coverage from
+      Caelestis's current operational zone to a point
+      <span class="rx rx-xl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      beyond the sphere boundary. This is not a random selection.
+      Someone was building a route."</em></p>
+
+      <table class="chart-table">
+        <thead>
+          <tr>
+            <th>Chart Ref.</th>
+            <th>Region / Coverage</th>
+            <th>Scale</th>
+            <th>Recovery Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>RM-047</strong></td>
+            <td>Outer Realmspace — sector <span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span>, bearing range <span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+            <td>1 : 10,000,000</td>
+            <td><span class="stolen">Confirmed Stolen</span></td>
+          </tr>
+          <tr>
+            <td><strong>RM-052</strong></td>
+            <td>Outer Realmspace — <span class="rx rx-lg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> approach vectors, transit corridor <span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+            <td>1 : 5,000,000</td>
+            <td><span class="stolen">Confirmed Stolen</span></td>
+          </tr>
+          <tr>
+            <td><strong>RM-089</strong></td>
+            <td><span class="rx rx-xl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> sphere boundary — interior approach</td>
+            <td>1 : 2,000,000</td>
+            <td><span class="stolen">Confirmed Stolen</span></td>
+          </tr>
+          <tr>
+            <td><strong>RM-091</strong></td>
+            <td>Outer Realmspace — sector <span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span>, <span class="rx rx-lg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> waypoint coverage</td>
+            <td><span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+            <td><span class="stolen">Confirmed Stolen</span></td>
+          </tr>
+          <tr>
+            <td><strong>RM-103</strong></td>
+            <td><span class="rx rx-xl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+            <td><span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+            <td><span class="unverified">Presumed Stolen — Unverified</span></td>
+          </tr>
+          <tr>
+            <td><strong>RM-117</strong></td>
+            <td>Transit corridor <span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span> to <span class="rx rx-xl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+            <td>1 : 20,000,000</td>
+            <td><span class="stolen">Confirmed Stolen</span></td>
+          </tr>
+          <tr>
+            <td><strong>RM-<span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span></strong></td>
+            <td><span class="rx rx-xl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+            <td><span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+            <td><span class="unverified">Unknown — Record Incomplete</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Charts RM-047 through RM-117, taken in sequence, trace a navigational
+      path from the inner operational zone of Realmspace to
+      <span class="rx rx-xl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>.
+      Cross-referencing with standard Realmspace route maps is pending
+      <span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span> authorisation.</p>
     </div>
 
     <div class="doc-footer">
