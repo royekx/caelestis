@@ -115,7 +115,7 @@
     background: linear-gradient(to right, var(--gold-dim), transparent);
     opacity: 0.4; transition: opacity 0.25s;
   }
-  .s-card.live { cursor: default; }
+  .s-card.live { cursor: pointer; }
   .s-card.live:hover { border-color: rgba(201,153,58,0.4); box-shadow: 0 6px 40px rgba(201,153,58,0.1); }
   .s-card.live:hover::before { opacity: 0.9; }
   .s-card.soon { opacity: 0.35; pointer-events: none; }
@@ -225,15 +225,16 @@
     display: flex; flex-direction: column; gap: 0.3rem;
     margin-top: 0.2rem; padding-top: 0.7rem;
     border-top: 1px solid var(--gold-rule);
+    align-items: center;
   }
   .s-link {
-    display: flex; align-items: center; gap: 0.4rem;
+    display: flex; align-items: center; justify-content: center; gap: 0.4rem;
     font-family: 'Cinzel', serif; font-size: 0.59rem;
     letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--gold-dim); text-decoration: none;
-    transition: color 0.2s, padding-left 0.2s;
+    transition: color 0.2s, padding-right 0.2s;
   }
-  .s-link:hover { color: var(--gold-light); padding-left: 3px; }
+  .s-link:hover { color: var(--gold-light); padding-right: 3px; }
   .s-link svg { width: 10px; flex-shrink: 0; }
   .s-link-all {
     margin-top: 0.2rem; padding-top: 0.5rem;
@@ -278,15 +279,19 @@
     .card-grid { grid-template-columns: 1fr; }
   }
 
-  /* Card overlay — makes whole card clickable while keeping sub-links above */
+  /* Card overlay — makes whole card fully clickable */
   .s-card { position: relative; }
   .s-card-overlay {
-    position: absolute; inset: 0; z-index: 0;
+    position: absolute; inset: 0; z-index: 1;
     text-decoration: none;
   }
-  .s-icon, .s-title, .s-desc, .s-badge, .s-links, .s-link {
-    position: relative; z-index: 1;
+  /* Non-interactive content passes clicks through to the overlay */
+  .s-icon, .s-title, .s-desc, .s-badge {
+    position: relative; z-index: 2; pointer-events: none;
   }
+  /* Sub-links sit above the overlay and stay independently clickable */
+  .s-links { position: relative; z-index: 3; }
+  .s-link  { position: relative; z-index: 3; pointer-events: auto; }
 </style>
 </head>
 <body>
@@ -390,9 +395,15 @@
       <div class="s-desc">Every voyage on record — the brief account for quick recall, the full account for those who were there.</div>
       <div class="s-links" id="crew-logs-links">
         <!-- Populated by data/voyages.js — shows latest voyage -->
-        <a class="s-link" href="crew-logs/brief/voyage-brief-001.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>V001 &middot; Brief</a>
-        <a class="s-link" href="crew-logs/detailed/voyage-detailed-001.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>V001 &middot; Detailed</a>
-        <a class="s-link s-link-all" href="crew-logs/index.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>All Voyages</a>
+        <a class="s-link" href="crew-logs/brief/voyage-brief-001.html">
+          V001 &middot; Brief <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+        </a>
+        <a class="s-link" href="crew-logs/detailed/voyage-detailed-001.html">
+          V001 &middot; Detailed <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+        </a>
+        <a class="s-link s-link-all" href="crew-logs/index.html">
+          All Voyages <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+        </a>
       </div>
     </div>
 
@@ -403,7 +414,9 @@
       <div class="s-title">Crew Manifest</div>
       <div class="s-desc">Active personnel files — assignments, known capabilities, and the details that matter when it counts.</div>
       <div class="s-links">
-        <a class="s-link" href="crew-manifest/index.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>View All Personnel</a>
+        <a class="s-link" href="crew-manifest/index.html">
+          View All Personnel <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+        </a>
       </div>
     </div>
 
@@ -414,9 +427,15 @@
       <div class="s-title">Dossiers</div>
       <div class="s-desc">Filed profiles on known contacts, threats, and figures of significance. Updated as intelligence becomes available.</div>
       <div class="s-links">
-        <a class="s-link" href="dossiers/mirt.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>Mirt the Merciless</a>
-        <a class="s-link" href="dossiers/boatswain-tarto.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>Boatswain Tarto</a>
-        <a class="s-link s-link-all" href="dossiers/index.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>View All Dossiers</a>
+        <a class="s-link" href="dossiers/mirt.html">
+          Mirt the Merciless <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+        </a>
+        <a class="s-link" href="dossiers/boatswain-tarto.html">
+          Boatswain Tarto <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+        </a>
+        <a class="s-link s-link-all" href="dossiers/index.html">
+          View All Dossiers <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+        </a>
       </div>
     </div>
 
@@ -427,9 +446,15 @@
       <div class="s-title">Navigation Records</div>
       <div class="s-desc">Charted systems, known routes, and points of interest across the spheres. Consult before any departure.</div>
       <div class="s-links">
-        <a class="s-link" href="navigation-records/realmspace.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>Realmspace</a>
-        <a class="s-link" href="navigation-records/viren.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>Viren System</a>
-        <a class="s-link s-link-all" href="navigation-records/index.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>View All Records</a>
+        <a class="s-link" href="navigation-records/realmspace.html">
+          Realmspace <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+        </a>
+        <a class="s-link" href="navigation-records/viren.html">
+          Viren System <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+        </a>
+        <a class="s-link s-link-all" href="navigation-records/index.html">
+          View All Records <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+        </a>
       </div>
     </div>
 
@@ -440,9 +465,15 @@
       <div class="s-title">Inventory</div>
       <div class="s-desc">Items, artifacts, and materials acquired during operations. Logged upon recovery.</div>
       <div class="s-links">
-        <a class="s-link" href="inventory/crimson-bag-of-holding.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>Crimson Bag of Holding</a>
-        <a class="s-link" href="inventory/constellation-shirt.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>Constellation Shirt</a>
-        <a class="s-link s-link-all" href="inventory/index.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>Browse Inventory</a>
+        <a class="s-link" href="inventory/crimson-bag-of-holding.html">
+          Crimson Bag of Holding <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+        </a>
+        <a class="s-link" href="inventory/constellation-shirt.html">
+          Constellation Shirt <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+        </a>
+        <a class="s-link s-link-all" href="inventory/index.html">
+          Browse Inventory <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+        </a>
       </div>
     </div>
 
@@ -453,9 +484,15 @@
       <div class="s-title">Corps Protocols</div>
       <div class="s-desc">Standard procedures for active crew — ship systems, combat stations, and everything that keeps the vessel flying.</div>
       <div class="s-links">
-        <a class="s-link" href="handouts/ship-mechanics.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>Ship Mechanics</a>
-        <a class="s-link" href="handouts/crew-roles.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>Bridge Crew Roles</a>
-        <a class="s-link s-link-all" href="handouts/index.html"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>View All Protocols</a>
+        <a class="s-link" href="handouts/ship-mechanics.html">
+          Ship Mechanics <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+        </a>
+        <a class="s-link" href="handouts/crew-roles.html">
+          Bridge Crew Roles <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+        </a>
+        <a class="s-link s-link-all" href="handouts/index.html">
+          View All Protocols <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+        </a>
       </div>
     </div>
 
@@ -475,8 +512,7 @@
       <div class="s-desc">Lore archive — cosmology, factions, navigation intelligence, and field records.</div>
       <div class="s-links">
         <a class="s-link" href="spelljammer-nexus/index.html">
-          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          Open Nexus
+          Open Nexus <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
         </a>
       </div>
     </div>
@@ -499,29 +535,10 @@
   var arr = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>';
   var vNum = 'V' + latest.num;
   el.innerHTML =
-    '<a class="s-link" href="' + latest.brief + '">' + arr + vNum + ' &middot; Brief</a>' +
-    '<a class="s-link" href="' + latest.full  + '">' + arr + vNum + ' &middot; Detailed</a>' +
-    '<a class="s-link s-link-all" href="crew-logs/index.html">' + arr + 'All Voyages</a>';
+    '<a class="s-link" href="' + latest.brief + '">' + vNum + ' &middot; Brief ' + arr + '</a>' +
+    '<a class="s-link" href="' + latest.full  + '">' + vNum + ' &middot; Detailed ' + arr + '</a>' +
+    '<a class="s-link s-link-all" href="crew-logs/index.html">All Voyages ' + arr + '</a>';
 })();
 </script>
-      <div class="s-icon">
-        <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="7" y="16" width="22" height="15" rx="2"/>
-          <path d="M12 16v-4a6 6 0 0112 0v4"/>
-          <circle cx="18" cy="23" r="2" fill="currentColor" stroke="none"/>
-          <line x1="18" y1="25" x2="18" y2="28"/>
-        </svg>
-      </div>
-      <div class="s-title">Restricted Files</div>
-      <div class="s-desc">Classified intelligence. Gold-level clearance required. Bridge personnel only.</div>
-      <div class="s-links">
-        <a class="s-link" href="restricted/index.html" onclick="event.stopPropagation()">
-          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          Access Files
-        </a>
-      </div>
-    </div>
-  </div>
-
 </body>
 </html>
