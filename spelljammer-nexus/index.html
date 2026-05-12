@@ -9,15 +9,12 @@
 <link rel="stylesheet" href="../styles/caelestis.css">
 <script src="../scripts/nav.js" defer></script>
 <style>
-.nexus-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem 3rem;
-  margin-top: 2rem;
-}
-@media(max-width:700px){ .nexus-grid { grid-template-columns: 1fr; } }
 
-.nexus-section-head {
+/* ── SECTION LAYOUT ──────────────────────────────── */
+.nexus-block {
+  margin-bottom: 3rem;
+}
+.nexus-block-head {
   font-family: 'Cinzel', serif;
   font-size: 0.58rem;
   font-weight: 600;
@@ -26,91 +23,144 @@
   color: var(--gold-dim);
   border-bottom: 1px solid rgba(201,153,58,0.2);
   padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+}
+.nexus-block-desc {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  font-style: italic;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
 }
 
-.nexus-entries { display: flex; flex-direction: column; gap: 0; }
+/* ── ENTRY ROWS ──────────────────────────────────── */
+.nexus-entries { display: flex; flex-direction: column; }
 .nexus-entry {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  padding: 0.65rem 0;
+  padding: 0.7rem 0;
   border-bottom: 1px solid rgba(201,153,58,0.08);
   text-decoration: none;
-  transition: padding-left 0.2s;
+  transition: padding-left 0.18s;
+  gap: 1rem;
 }
 .nexus-entry:last-child { border-bottom: none; }
-.nexus-entry:hover { padding-left: 0.3rem; }
-.nexus-entry-text { }
+.nexus-entry.live:hover { padding-left: 0.3rem; }
 .nexus-entry-title {
   font-family: 'Cinzel', serif;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--gold);
-  margin-bottom: 0.15rem;
-  transition: color 0.2s;
+  margin-bottom: 0.18rem;
+  transition: color 0.18s;
 }
-.nexus-entry:hover .nexus-entry-title { color: #e8c87a; }
-.nexus-entry-sub { font-size: 0.75rem; color: var(--gold-dim); font-style: italic; }
-.nexus-entry-badge {
+.nexus-entry.live:hover .nexus-entry-title { color: #e8c87a; }
+.nexus-entry-sub { font-size: 0.75rem; color: var(--text-dim); font-style: italic; line-height: 1.4; }
+.nexus-badge {
   font-family: 'Cinzel', serif;
   font-size: 0.42rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  padding: 0.15rem 0.45rem;
-  border: 1px solid rgba(201,153,58,0.25);
-  color: var(--gold-dim);
-  margin-left: 0.8rem;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid rgba(201,153,58,0.2);
+  color: var(--text-dim);
   white-space: nowrap;
+  flex-shrink: 0;
 }
-.nexus-entry-badge.soon {
-  border-color: rgba(201,153,58,0.12);
-  color: rgba(201,153,58,0.3);
+.nexus-badge.active {
+  border-color: rgba(201,153,58,0.4);
+  color: var(--gold-dim);
+}
+.nexus-badge.soon {
+  border-color: rgba(201,153,58,0.1);
+  color: rgba(201,153,58,0.25);
 }
 
-/* Restricted archive section */
+/* ── TWO-COL GRID ────────────────────────────────── */
+.nexus-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem 3rem;
+}
+@media(max-width:680px){ .nexus-two-col { grid-template-columns: 1fr; } }
+
+/* ── SECURITY LEVEL TABLE ────────────────────────── */
+.security-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+.security-table th {
+  font-family: 'Cinzel', serif;
+  font-size: 0.48rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  text-align: left;
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid rgba(201,153,58,0.15);
+}
+.security-table td {
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid rgba(201,153,58,0.06);
+  color: var(--gold);
+  vertical-align: top;
+}
+.security-table tr:last-child td { border-bottom: none; }
+.security-table td:first-child {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.security-table td:last-child { font-size: 0.8rem; color: var(--text-dim); }
+.sec-green  { color: #4a9a4a !important; }
+.sec-red    { color: #c04040 !important; }
+.sec-blue   { color: #4060c0 !important; }
+.sec-purple { color: #8040a0 !important; }
+.sec-gold   { color: #c9a93a !important; }
+
+/* ── RESTRICTED ARCHIVE ──────────────────────────── */
 .restricted-archive {
   margin-top: 3rem;
   border: 1px solid rgba(140,30,30,0.3);
   background: rgba(140,30,30,0.03);
-  padding: 1.5rem 1.8rem;
+  padding: 1.6rem 1.8rem;
   position: relative;
   overflow: hidden;
 }
 .restricted-archive::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(to right, transparent, rgba(180,40,40,0.6), transparent);
+  top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(to right, transparent, rgba(180,40,40,0.5), transparent);
 }
-.restricted-head {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  margin-bottom: 0.6rem;
+.ra-head {
+  display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;
 }
-.restricted-icon { color: rgba(180,40,40,0.7); flex-shrink: 0; }
-.restricted-label {
+.ra-icon { color: rgba(180,40,40,0.6); flex-shrink: 0; }
+.ra-label {
   font-family: 'Cinzel', serif;
-  font-size: 0.6rem;
+  font-size: 0.55rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(180,40,40,0.8);
+  color: rgba(180,40,40,0.7);
 }
-.restricted-title {
+.ra-title {
   font-family: 'Cinzel', serif;
   font-size: 1rem;
   color: var(--gold);
   margin-bottom: 0.4rem;
 }
-.restricted-desc {
+.ra-desc {
   font-size: 0.88rem;
-  color: var(--gold-dim);
+  color: var(--text-dim);
   font-style: italic;
   line-height: 1.6;
   margin-bottom: 1rem;
 }
-.restricted-link {
+.ra-link {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -118,17 +168,17 @@
   font-size: 0.58rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(180,40,40,0.7);
+  color: rgba(180,40,40,0.65);
   text-decoration: none;
   border: 1px solid rgba(140,30,30,0.4);
   padding: 0.45rem 0.9rem;
-  transition: color 0.2s, border-color 0.2s;
+  transition: all 0.2s;
 }
-.restricted-link:hover { color: #c04040; border-color: rgba(180,40,40,0.7); }
-.restricted-warning {
-  margin-top: 0.7rem;
-  font-size: 0.7rem;
-  color: rgba(140,30,30,0.5);
+.ra-link:hover { color: #c04040; border-color: rgba(180,40,40,0.7); }
+.ra-warning {
+  margin-top: 0.6rem;
+  font-size: 0.68rem;
+  color: rgba(140,30,30,0.45);
   font-style: italic;
 }
 </style>
@@ -153,177 +203,190 @@
     </div>
     <div class="page-eyebrow">Caelestis · Knowledge Archive</div>
     <h1 class="page-title">Spelljammer Nexus</h1>
-    <p class="page-subtitle">Navigational lore, factions, and field intelligence. Updated as the Caelestis crew ventures further into Wildspace.</p>
+    <p class="page-subtitle">What the crew of Caelestis knows — updated voyage by voyage.</p>
   </div>
 
   <div class="content">
 
-    <div class="nexus-grid">
-
-      <!-- COSMOLOGY -->
-      <div>
-        <div class="nexus-section-head">Cosmology</div>
-        <div class="nexus-entries">
-          <a class="nexus-entry" href="#">
-            <div class="nexus-entry-text">
-              <div class="nexus-entry-title">The Prime Continuum</div>
-              <div class="nexus-entry-sub">The full field of reality — what the multiverse truly is</div>
-            </div>
-            <span class="nexus-entry-badge soon">Coming</span>
-          </a>
-          <a class="nexus-entry" href="#">
-            <div class="nexus-entry-text">
-              <div class="nexus-entry-title">Wildspace &amp; Crystal Spheres</div>
-              <div class="nexus-entry-sub">The sea of night between worlds, and the shells that bound them</div>
-            </div>
-            <span class="nexus-entry-badge soon">Coming</span>
-          </a>
-          <a class="nexus-entry" href="#">
-            <div class="nexus-entry-text">
-              <div class="nexus-entry-title">The Phlogiston</div>
-              <div class="nexus-entry-sub">The chaos between spheres — no gods reach here</div>
-            </div>
-            <span class="nexus-entry-badge soon">Coming</span>
-          </a>
-          <a class="nexus-entry" href="#">
-            <div class="nexus-entry-text">
-              <div class="nexus-entry-title">Zeniths &amp; Monoliths</div>
-              <div class="nexus-entry-sub">Thresholds of civilisation — and what appears when they are crossed</div>
-            </div>
-            <span class="nexus-entry-badge soon">Coming</span>
-          </a>
-          <a class="nexus-entry" href="#">
-            <div class="nexus-entry-text">
-              <div class="nexus-entry-title">Realmspace</div>
-              <div class="nexus-entry-sub">The crystal sphere of Toril — where the Academy operates</div>
-            </div>
-            <span class="nexus-entry-badge soon">Coming</span>
-          </a>
-        </div>
+    <!-- ── THE ACADEMY ──────────────────────────────────────────────── -->
+    <div class="nexus-block">
+      <div class="nexus-block-head">Spelljammer Academy</div>
+      <div class="nexus-block-desc">
+        Everything the crew learned during orientation. The structure, the rules, and the people who run it.
       </div>
 
-      <!-- FACTIONS -->
-      <div>
-        <div class="nexus-section-head">Factions</div>
-        <div class="nexus-entries">
-          <a class="nexus-entry" href="#">
-            <div class="nexus-entry-text">
-              <div class="nexus-entry-title">Spelljammer Fleet</div>
-              <div class="nexus-entry-sub">The Academy and its place within the wider Fleet command</div>
-            </div>
-            <span class="nexus-entry-badge soon">Coming</span>
-          </a>
-          <a class="nexus-entry" href="#">
-            <div class="nexus-entry-text">
-              <div class="nexus-entry-title">The Order of the All-Father</div>
-              <div class="nexus-entry-sub">Preservers of the Continuum — and their limits</div>
-            </div>
-            <span class="nexus-entry-badge soon">Coming</span>
-          </a>
-          <a class="nexus-entry" href="#">
-            <div class="nexus-entry-text">
-              <div class="nexus-entry-title">The Watchers</div>
-              <div class="nexus-entry-sub">Hidden field wardens — not publicly known</div>
-            </div>
-            <span class="nexus-entry-badge soon">Coming</span>
-          </a>
-          <a class="nexus-entry" href="#">
-            <div class="nexus-entry-text">
-              <div class="nexus-entry-title">The Unregistered</div>
-              <div class="nexus-entry-sub">Those who operate outside Fleet registry — and why</div>
-            </div>
-            <span class="nexus-entry-badge soon">Coming</span>
-          </a>
-          <a class="nexus-entry" href="#">
-            <div class="nexus-entry-text">
-              <div class="nexus-entry-title">Githyanki Raider Clans</div>
-              <div class="nexus-entry-sub">Wildspace military presence — Treaty of Coexistence, fraying</div>
-            </div>
-            <span class="nexus-entry-badge soon">Coming</span>
-          </a>
-        </div>
-      </div>
+      <div class="nexus-two-col">
 
-      <!-- EVENTS -->
-      <div>
-        <div class="nexus-section-head">Notable Events</div>
-        <div class="nexus-entries">
-          <a class="nexus-entry" href="#">
-            <div class="nexus-entry-text">
-              <div class="nexus-entry-title">The Academy Thefts</div>
-              <div class="nexus-entry-sub">Coordinated. Ongoing. Cadet-level access withheld.</div>
-            </div>
-            <span class="nexus-entry-badge">Active</span>
-          </a>
-          <a class="nexus-entry" href="#">
-            <div class="nexus-entry-text">
-              <div class="nexus-entry-title">The Mirt Incident — Voyage 001</div>
-              <div class="nexus-entry-sub">Creature attack, diversion, preserved specimen</div>
-            </div>
-            <span class="nexus-entry-badge soon">Coming</span>
-          </a>
-          <a class="nexus-entry" href="#">
-            <div class="nexus-entry-text">
-              <div class="nexus-entry-title">Ectoplasmic Breach — Nexus Level</div>
-              <div class="nexus-entry-sub">Classified. Cause unknown. Incident report pending.</div>
-            </div>
-            <span class="nexus-entry-badge soon">Coming</span>
-          </a>
+        <!-- Security levels -->
+        <div>
+          <div class="section-label" style="margin-bottom:0.7rem;">Security Levels</div>
+          <table class="security-table">
+            <thead>
+              <tr><th>Level</th><th>Rank</th><th>Access</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="sec-green">1 — Green</td><td>Visitor</td><td>Administration, Sea Dock, Sim Deck</td></tr>
+              <tr><td class="sec-red">2 — Red</td><td>Cadet</td><td>Quarters, Gymnasium, Nexus, Stores</td></tr>
+              <tr><td class="sec-blue">3 — Blue</td><td>Sailor</td><td>Sky Dock cargo area</td></tr>
+              <tr><td class="sec-purple">4 — Purple</td><td>Officer</td><td>Admin record room, Officers' Mess</td></tr>
+              <tr><td class="sec-gold">5 — Gold</td><td>Bridge</td><td>Bridge Quarters — command only</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.72rem;color:var(--text-dim);font-style:italic;margin-top:0.6rem;">
+            Security swords carried by checkpoint guards bear a green-glowing blade.
+            Any creature reduced to 0 hit points by one is instantly turned to dust.
+            Failure to stop when challenged will result in disintegration.
+          </p>
         </div>
-      </div>
 
-      <!-- NAVIGATION INTELLIGENCE -->
-      <div>
-        <div class="nexus-section-head">Navigation Intelligence</div>
-        <div class="nexus-entries">
-          <a class="nexus-entry" href="#">
-            <div class="nexus-entry-text">
-              <div class="nexus-entry-title">Viren System</div>
-              <div class="nexus-entry-sub">Beyond H'Catha. No Fleet registry. Something is there.</div>
+        <!-- Academy locations -->
+        <div>
+          <div class="section-label" style="margin-bottom:0.7rem;">Known Locations</div>
+          <div class="nexus-entries">
+            <div class="nexus-entry" style="cursor:default;">
+              <div><div class="nexus-entry-title">Simulation Deck</div><div class="nexus-entry-sub">Combat training and cadet assessment. Where it all began.</div></div>
+              <span class="nexus-badge active">Visited</span>
             </div>
-            <span class="nexus-entry-badge soon">Coming</span>
-          </a>
-          <a class="nexus-entry" href="#">
-            <div class="nexus-entry-text">
-              <div class="nexus-entry-title">H'Catha — The Beholder Sphere</div>
-              <div class="nexus-entry-sub">Caelestis crew's first mission target</div>
+            <div class="nexus-entry" style="cursor:default;">
+              <div><div class="nexus-entry-title">Administration</div><div class="nexus-entry-sub">Welcome packs, vouchers, security passes. Sor'kur runs intake.</div></div>
+              <span class="nexus-badge active">Visited</span>
             </div>
-            <span class="nexus-entry-badge soon">Coming</span>
-          </a>
-          <a class="nexus-entry" href="#">
-            <div class="nexus-entry-text">
-              <div class="nexus-entry-title">Outer Realmspace Perimeter</div>
-              <div class="nexus-entry-sub">Survey anomalies. Unregistered signals. Refer to Fleet Intelligence.</div>
+            <div class="nexus-entry" style="cursor:default;">
+              <div><div class="nexus-entry-title">Cadet Quarters</div><div class="nexus-entry-sub">Bunks, lockers, Veena across the way. Not much privacy.</div></div>
+              <span class="nexus-badge active">Visited</span>
             </div>
-            <span class="nexus-entry-badge soon">Coming</span>
-          </a>
+            <div class="nexus-entry" style="cursor:default;">
+              <div><div class="nexus-entry-title">Sky Dock</div><div class="nexus-entry-sub">Where spelljamming ships dock. Blue clearance for cargo.</div></div>
+              <span class="nexus-badge active">Visited</span>
+            </div>
+            <div class="nexus-entry" style="cursor:default;">
+              <div><div class="nexus-entry-title">Stores</div><div class="nexus-entry-sub">Quartermaster. Mr. Blip. Weaponry, gear, and supply ledgers.</div></div>
+              <span class="nexus-badge active">Visited</span>
+            </div>
+            <div class="nexus-entry" style="cursor:default;">
+              <div><div class="nexus-entry-title">Spelljammer Nexus</div><div class="nexus-entry-sub">Training area, library, chart room, and the nexus itself.</div></div>
+              <span class="nexus-badge active">Visited</span>
+            </div>
+            <div class="nexus-entry" style="cursor:default;">
+              <div><div class="nexus-entry-title">Gymnasium</div><div class="nexus-entry-sub">Obstacle course. The pole is slippery. The maces are not forgiving.</div></div>
+              <span class="nexus-badge active">Visited</span>
+            </div>
+            <div class="nexus-entry" style="cursor:default;">
+              <div><div class="nexus-entry-title">The Weeping Goddess</div><div class="nexus-entry-sub">Cadet tavern. Lunch. Gossip. Where the crew meets properly.</div></div>
+              <span class="nexus-badge active">Visited</span>
+            </div>
+          </div>
         </div>
-      </div>
 
-    </div><!-- /nexus-grid -->
+      </div>
+    </div>
 
     <div class="divider"></div>
 
-    <!-- RESTRICTED ARCHIVE — ARG ENTRY POINT -->
-    <div class="restricted-archive">
-      <div class="restricted-head">
-        <svg class="restricted-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
-          <circle cx="12" cy="16" r="1.5" fill="currentColor" stroke="none"/><line x1="12" y1="17.5" x2="12" y2="20"/>
-        </svg>
-        <div class="restricted-label">Classified — Bridge Access Only</div>
+    <!-- ── WILDSPACE FUNDAMENTALS ───────────────────────────────────── -->
+    <div class="nexus-block">
+      <div class="nexus-block-head">Wildspace Fundamentals</div>
+      <div class="nexus-block-desc">
+        What every Spelljammer cadet learns in the first week. The shape of the universe, how ships move through it, and what lives out there.
       </div>
-      <div class="restricted-title">Fleet Intelligence Archive</div>
-      <div class="restricted-desc">
+      <div class="nexus-two-col">
+        <div class="nexus-entries">
+          <div class="nexus-entry" style="cursor:default;">
+            <div><div class="nexus-entry-title">Wildspace</div><div class="nexus-entry-sub">The void between celestial bodies — planets, moons, asteroids, and stranger things. Ships sail it. Most things die in it. Cadets learn to love it anyway.</div></div>
+          </div>
+          <div class="nexus-entry" style="cursor:default;">
+            <div><div class="nexus-entry-title">Crystal Spheres</div><div class="nexus-entry-sub">Each world's solar system is enclosed within a vast crystalline shell. Realmspace is the sphere the crew currently operates in.</div></div>
+          </div>
+          <div class="nexus-entry" style="cursor:default;">
+            <div><div class="nexus-entry-title">The Phlogiston</div><div class="nexus-entry-sub">The chaotic, flammable flow between crystal spheres. Gods can't reach you here. That's either comforting or not, depending on the day.</div></div>
+          </div>
+        </div>
+        <div class="nexus-entries">
+          <div class="nexus-entry" style="cursor:default;">
+            <div><div class="nexus-entry-title">Spelljammer Helms</div><div class="nexus-entry-sub">A magical seat that lets a spellcaster pilot a ship through Wildspace. Speed, manoeuvrability, and endurance depend on the caster. The ship handles the rest.</div></div>
+          </div>
+          <div class="nexus-entry" style="cursor:default;">
+            <div><div class="nexus-entry-title">Air Envelopes</div><div class="nexus-entry-sub">Ships carry their own bubble of breathable air. Merging envelopes during boarding is how pirates get aboard. The simulation made that very clear.</div></div>
+          </div>
+          <div class="nexus-entry" style="cursor:default;">
+            <div><div class="nexus-entry-title">Astral Reavers</div><div class="nexus-entry-sub">The crew's first simulated enemy. Hostile humanoids encountered mid-void, fast and savage. The simulation called it training. It didn't feel like it.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ── ACTIVE THREADS ───────────────────────────────────────────── -->
+    <div class="nexus-block">
+      <div class="nexus-block-head">Active Threads</div>
+      <div class="nexus-block-desc">
+        Things the crew has encountered that don't have answers yet. Updated as voyages happen.
+      </div>
+      <div class="nexus-entries">
+
+        <div class="nexus-entry" style="cursor:default;">
+          <div>
+            <div class="nexus-entry-title">The Academy Thefts</div>
+            <div class="nexus-entry-sub">
+              Ongoing. Security tightened across Caelestis. Navigational charts stolen from the Spelljammer Nexus.
+              The crate incident in Mirt's quarters was likely a diversion. The officers know more than they're saying.
+            </div>
+          </div>
+          <span class="nexus-badge active">Active</span>
+        </div>
+
+        <div class="nexus-entry" style="cursor:default;">
+          <div>
+            <div class="nexus-entry-title">The Mirt Incident — Voyage 001</div>
+            <div class="nexus-entry-sub">
+              Creatures hidden in a crate delivered to Mirt's quarters. Attack was stopped. One creature was
+              preserved alive. Mirt connected the incident to the wider string of burglaries. The creature and what
+              it tells the officers is still an open question.
+            </div>
+          </div>
+          <span class="nexus-badge active">Voyage 001</span>
+        </div>
+
+        <div class="nexus-entry" style="cursor:default;">
+          <div>
+            <div class="nexus-entry-title">The Viren System</div>
+            <div class="nexus-entry-sub">
+              A star pattern scratched onto a shirt. A voice in a wardrobe. An extradimensional space inside
+              Mirt's chambers that shouldn't exist — and a constellation that doesn't appear on any Fleet chart.
+              Nobody has said the name out loud. Someone should.
+            </div>
+          </div>
+          <span class="nexus-badge active">Voyage 001</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ── RESTRICTED ARCHIVE — ARG ENTRY POINT ─────────────────────── -->
+    <div class="restricted-archive">
+      <div class="ra-head">
+        <svg class="ra-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2"/>
+          <path d="M7 11V7a5 5 0 0110 0v4"/>
+          <circle cx="12" cy="16" r="1.5" fill="currentColor" stroke="none"/>
+          <line x1="12" y1="17.5" x2="12" y2="20"/>
+        </svg>
+        <div class="ra-label">Classified — Gold Clearance Only</div>
+      </div>
+      <div class="ra-title">Fleet Intelligence Archive</div>
+      <div class="ra-desc">
         Certain materials held within the Nexus library are restricted to Gold-level clearance and above.
         Bridge personnel may access the classified archive using their issued clearance code.
-        Cadets attempting to access restricted materials will be processed by academy security.
+        Cadets found attempting to access restricted materials will be processed by academy security.
       </div>
-      <a class="restricted-link" href="../restricted/index.html">
+      <a class="ra-link" href="../restricted/index.html">
         <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
         Present Clearance
       </a>
-      <p class="restricted-warning">Failure to stop when challenged will result in disintegration.</p>
+      <p class="ra-warning">Failure to stop when challenged will result in disintegration.</p>
     </div>
 
   </div><!-- /content -->
