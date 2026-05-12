@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Factions of Wildspace · Nexus</title>
+<link rel="stylesheet" href="../styles/caelestis.css">
+<script src="../scripts/nav.js" defer></script>
+<style>
+  .doc-source {
+    font-family: 'Cinzel', serif; font-size: 0.5rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--text-muted); border: 1px solid var(--gold-rule);
+    padding: 0.5rem 0.8rem; margin-bottom: 1.6rem;
+    display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+  }
+  .doc-source-title { color: var(--gold-dim); }
+  .faction-entry { padding: 0.8rem 0; border-bottom: 1px solid rgba(201,153,58,0.07); }
+  .faction-entry:last-child { border-bottom: none; }
+  .faction-header { display: flex; align-items: baseline; gap: 0.7rem; margin-bottom: 0.35rem; }
+  .faction-name { font-family: 'Cinzel', serif; font-size: 0.88rem; font-weight: 600; color: var(--gold); }
+  .faction-disposition {
+    font-family: 'Cinzel', serif; font-size: 0.44rem;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-muted); border: 1px solid var(--gold-rule);
+    padding: 0.12rem 0.35rem;
+  }
+  .faction-disposition.hostile { color: rgba(180,40,40,0.7); border-color: rgba(139,32,32,0.3); }
+  .faction-disposition.neutral { color: rgba(201,153,58,0.5); }
+  .faction-disposition.variable { color: rgba(180,120,40,0.7); border-color: rgba(150,100,30,0.3); }
+</style>
+</head>
+<body class="with-sidebar">
+<div class="page-content">
+  <div class="page-header">
+    <div class="page-emblem">
+      <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+        <circle cx="20" cy="20" r="10"/>
+        <circle cx="40" cy="40" r="10"/>
+        <circle cx="42" cy="18" r="7"/>
+        <line x1="28" y1="22" x2="33" y2="20"/>
+        <line x1="22" y1="28" x2="34" y2="33"/>
+      </svg>
+    </div>
+    <div class="page-eyebrow">Spelljammer Nexus · Intelligence</div>
+    <h1 class="page-title">Factions of Wildspace</h1>
+  </div>
+
+  <div class="content">
+    <div class="entry-header">
+      <div class="nav-bar">
+        <a class="nav-prev" href="spelljamming.html">← Spelljamming</a>
+        <a class="nav-center" href="index.html">Spelljammer Nexus</a>
+        <a class="nav-next disabled">Next →</a>
+      </div>
+    </div>
+
+    <div class="doc-source">
+      <span class="doc-source-title">Faction Intelligence Overview — Known Wildspace Powers, Realmspace Distribution</span>
+      <span>Fleet Intelligence · Cadet Distribution · Updated periodically</span>
+    </div>
+
+    <p style="font-size:0.88rem;color:var(--text-dim);font-style:italic;margin-bottom:1.2rem;">This brief covers the organisations and peoples most likely to be encountered during standard Fleet operations in and around Realmspace. It is not exhaustive. Disposition ratings reflect general Fleet posture and should not be substituted for current operational intelligence in specific contact situations.</p>
+
+    <div class="divider"></div>
+
+    <div class="faction-entry">
+      <div class="faction-header">
+        <span class="faction-name">Elven Imperial Navy</span>
+        <span class="faction-disposition neutral">Cooperative — Conditions Apply</span>
+      </div>
+      <p>The largest organised military force in the known spheres. The EIN operates from a mobile base called Lionheart — a joined formation of Armada vessels capable of sphere transit — and maintains a persistent presence across dozens of spheres. Their stated mandate is the protection of elven civilisations and the maintenance of stability in regions they consider their concern. In practice, the Navy acts as a self-authorised policing force in those regions, with or without invitation from other powers.</p>
+      <p>Relations with the Fleet are functionally cooperative and can be relied upon in most operational contexts. The EIN does not operate under Fleet authority, and their officers are aware of this distinction at all times. Engage respectfully. Do not assume subordination in either direction.</p>
+    </div>
+
+    <div class="faction-entry">
+      <div class="faction-header">
+        <span class="faction-name">The Mercane</span>
+        <span class="faction-disposition neutral">Neutral — Commercial</span>
+      </div>
+      <p>Blue-skinned giants who serve as the void's primary commercial intermediaries. Mercane operate under a strict commercial neutrality — they deal with most parties, take no sides in conflicts they are not party to, and protect their interests with considerable resources when those interests are threatened. They are the dominant source of spelljammer helms on the open market and are believed to control or influence the supply of several critical void-travel components.</p>
+      <p>Their word, when formally given in a commercial context, is considered reliable. Their prices are rarely open to negotiation. Their motives are entirely their own and not shared with customers.</p>
+    </div>
+
+    <div class="faction-entry">
+      <div class="faction-header">
+        <span class="faction-name">The Giff</span>
+        <span class="faction-disposition neutral">Neutral — Mercenary</span>
+      </div>
+      <p>Hippo-headed humanoids organised around a culture of professional soldiering and a deep institutional affection for gunpowder. The Giff operate as mercenaries throughout the known spheres. They maintain elaborate codes of military conduct taken entirely seriously within their own culture. Their homeworld is a matter of ongoing and apparently genuine internal debate — no current consensus exists within Giff society, and the subject arises regularly and with feeling.</p>
+      <p>As hired crew or contracted forces, Giff are reliable, skilled, and largely indifferent to their employers' politics provided payment arrives correctly and operational parameters are established clearly upfront.</p>
+    </div>
+
+    <div class="faction-entry">
+      <div class="faction-header">
+        <span class="faction-name">Githyanki</span>
+        <span class="faction-disposition hostile">Hostile — Default</span>
+      </div>
+      <p>Planar humanoids based in the Astral Sea. Githyanki maintain an active spelljamming presence as raiders, operating against vessels that pass through regions they claim as territory. They are disciplined, well-trained, and capable helmspersons. Their relationship with material plane inhabitants is one of contempt and practical predation. Fleet doctrine treats Githyanki contact as hostile unless specific intelligence indicates otherwise.</p>
+      <p>Githyanki in the employ of non-Githyanki parties are encountered occasionally. This reflects their mercenary availability, not a change in their general posture toward others.</p>
+    </div>
+
+    <div class="faction-entry">
+      <div class="faction-header">
+        <span class="faction-name">Pirates and Independent Raiders</span>
+        <span class="faction-disposition variable">Variable — Assess on Contact</span>
+      </div>
+      <p>Piracy in Wildspace is endemic and not confined to any single species or organisation. Opportunists operate from asteroid fields, derelict installations, and outer-sphere shadow zones, targeting cargo vessels and under-armed transits. Most piracy in Realmspace is opportunistic and small-scale. Fleet doctrine for suspected pirate contact: maintain distance, assess numerical and armament balance, do not close to boarding range without tactical clarity.</p>
+    </div>
+
+    <div class="faction-entry">
+      <div class="faction-header">
+        <span class="faction-name">The Neogi</span>
+        <span class="faction-disposition hostile">Hostile — No Exceptions</span>
+      </div>
+      <p>Arachnid-eel hybrids with a culture organised entirely around domination and the acquisition of slaves. The Neogi regard most other sentient species as property or tools and have no interest in any relationship with the Fleet or its vessels other than as a source of either. Their umber hulk thralls complicate any engagement significantly.</p>
+      <p>Fleet doctrine: treat Neogi contact as hostile without qualification. There is no recorded instance of productive diplomatic exchange with Neogi captains. There is no expected future instance.</p>
+    </div>
+
+    <div class="entry-header" style="margin-top:2rem;">
+      <div class="nav-bar">
+        <a class="nav-prev" href="spelljamming.html">← Spelljamming</a>
+        <a class="nav-center" href="index.html">Spelljammer Nexus</a>
+        <a class="nav-next disabled">Next →</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
