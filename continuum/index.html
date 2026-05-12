@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelestis — Continuum</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Georgia', serif;
+  background: #06040e;
+  color: #c9a96e;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── GATE ── */
+#gate {
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 360px;
+  width: 100%;
+}
+#gate h1 {
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+  color: #c9a96e;
+  margin-bottom: 0.4rem;
+}
+#gate p {
+  font-size: 0.82rem;
+  color: #6a5a3a;
+  margin-bottom: 1.8rem;
+  font-style: italic;
+}
+#gate input {
+  width: 100%;
+  background: rgba(201,169,110,0.06);
+  border: 1px solid rgba(201,169,110,0.25);
+  color: #c9a96e;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  text-align: center;
+  letter-spacing: 0.2em;
+  outline: none;
+  margin-bottom: 1rem;
+}
+#gate input::placeholder { color: rgba(201,169,110,0.3); letter-spacing: 0.1em; }
+#gate input:focus { border-color: rgba(201,169,110,0.6); }
+#gate button {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(201,169,110,0.4);
+  color: #c9a96e;
+  font-family: 'Georgia', serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+#gate button:hover { border-color: #c9a96e; background: rgba(201,169,110,0.08); }
+#gate-error {
+  font-size: 0.78rem;
+  color: #8a3030;
+  margin-top: 0.8rem;
+  display: none;
+}
+
+/* ── CONTENT ── */
+#content { display: none; max-width: 680px; width: 100%; padding: 3rem 2rem; }
+#content header { text-align: center; margin-bottom: 2.5rem; border-bottom: 1px solid rgba(201,169,110,0.2); padding-bottom: 1.5rem; }
+#content header h1 { font-size: 1.3rem; font-weight: normal; letter-spacing: 0.08em; color: #c9a96e; margin-bottom: 0.3rem; }
+#content header p { font-size: 0.82rem; color: #6a5a3a; font-style: italic; }
+
+.voyage-section { margin-bottom: 2rem; }
+.voyage-section h2 {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.6rem;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #6a5a3a;
+  margin-bottom: 0.8rem;
+}
+.voyage-row {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(201,169,110,0.12);
+  margin-bottom: 0.4rem;
+  background: rgba(201,169,110,0.03);
+}
+.voyage-num {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6a5a3a;
+}
+.voyage-num strong { display: block; font-size: 1.1rem; color: #c9a96e; letter-spacing: 0; }
+.voyage-title { font-size: 0.9rem; color: #c9a96e; }
+.voyage-links { display: flex; gap: 0.5rem; }
+.voyage-links a {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6a5a3a;
+  text-decoration: none;
+  border: 1px solid rgba(201,169,110,0.2);
+  padding: 0.2rem 0.6rem;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+}
+.voyage-links a:hover { color: #c9a96e; border-color: rgba(201,169,110,0.5); }
+
+.sign-out {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(201,169,110,0.1);
+}
+.sign-out button {
+  background: transparent; border: none;
+  color: #4a3a22; font-size: 0.75rem; font-style: italic;
+  cursor: pointer; letter-spacing: 0.05em;
+}
+.sign-out button:hover { color: #6a5a3a; }
+</style>
+</head>
+<body>
+
+<!-- GATE -->
+<div id="gate">
+  <h1>Caelestis · Continuum</h1>
+  <p>Command access only.</p>
+  <input type="password" id="pw-input" placeholder="passphrase" autocomplete="off">
+  <button onclick="checkPassword()">Enter</button>
+  <div id="gate-error">Access denied.</div>
+</div>
+
+<!-- CONTENT (shown after correct password) -->
+<div id="content">
+  <header>
+    <h1>Caelestis — DM Reference</h1>
+    <p>Session notes. Not for players.</p>
+  </header>
+
+  <div class="voyage-section">
+    <h2>Voyage Notes</h2>
+    <!-- Add new voyage rows below as you create them.
+         File naming convention: voyage-dm-[###].html
+         To add Voyage 003: copy the row below and update the number, title, and filename. -->
+
+    <div class="voyage-row">
+      <div class="voyage-num">Voyage <strong>002</strong></div>
+      <div class="voyage-title">The Day After</div>
+      <div class="voyage-links">
+        <a href="voyage-dm-002.html" target="_blank">Open</a>
+      </div>
+    </div>
+
+    <!-- VOYAGE 003 (add when ready)
+    <div class="voyage-row">
+      <div class="voyage-num">Voyage <strong>003</strong></div>
+      <div class="voyage-title">[Title]</div>
+      <div class="voyage-links">
+        <a href="voyage-dm-003.html" target="_blank">Open</a>
+      </div>
+    </div>
+    -->
+
+  </div>
+
+  <div class="sign-out">
+    <button onclick="signOut()">Sign out</button>
+  </div>
+</div>
+
+<script>
+// ─────────────────────────────────────────────────────────────────
+// CHANGE THIS to your own passphrase. Keep it simple — it's only
+// client-side security, adequate for accidental-discovery prevention.
+// For stronger security, use Netlify Basic Auth (see README below).
+// ─────────────────────────────────────────────────────────────────
+var DM_PASSWORD = 'spelljammer';
+
+var SESSION_KEY = 'caelestis_continuum_auth';
+
+function checkPassword() {
+  var input = document.getElementById('pw-input').value.trim().toLowerCase();
+  if (input === DM_PASSWORD.toLowerCase()) {
+    sessionStorage.setItem(SESSION_KEY, '1');
+    showContent();
+  } else {
+    document.getElementById('gate-error').style.display = 'block';
+    document.getElementById('pw-input').value = '';
+    document.getElementById('pw-input').focus();
+  }
+}
+
+function showContent() {
+  document.getElementById('gate').style.display = 'none';
+  document.getElementById('content').style.display = 'block';
+}
+
+function signOut() {
+  sessionStorage.removeItem(SESSION_KEY);
+  location.reload();
+}
+
+// Auto-unlock if already authenticated this session
+if (sessionStorage.getItem(SESSION_KEY) === '1') {
+  showContent();
+}
+
+// Allow Enter key on password input
+document.getElementById('pw-input').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') checkPassword();
+});
+</script>
+
+<!--
+═══════════════════════════════════════════════════════════════════
+SECURITY NOTES
+═══════════════════════════════════════════════════════════════════
+
+CURRENT (JS gate — free, adequate):
+  This password is CLIENT-SIDE. A determined player who views page
+  source can find and bypass it. For a D&D campaign this is fine —
+  it stops accidental discovery cold. Change DM_PASSWORD above to
+  something you'll remember.
+
+STRONGER (Netlify Basic Auth — free tier, server-side):
+  1. Move site deployment from GitHub Pages to Netlify (free)
+  2. Add a netlify.toml to the repo root:
+
+     [[headers]]
+       for = "/dm/*"
+       [headers.values]
+         X-Robots-Tag = "noindex"
+
+     Note: Netlify password protection for specific paths requires
+     Netlify Team plan (~$19/month). On the free tier, use this JS
+     gate or consider option 3 below.
+
+STRONGEST (private repo — free, no public exposure):
+  Keep DM notes in a separate private GitHub repo (royekx/caelestis-dm).
+  Never publish to GitHub Pages. Access files directly via GitHub's
+  web interface or a local clone. Players literally cannot find them.
+═══════════════════════════════════════════════════════════════════
+-->
+
+</body>
+</html>

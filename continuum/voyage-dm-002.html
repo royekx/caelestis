@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Voyage 002 — The Day After · Caelestis DM</title>
+<style>
+@page { size: 8.5in 11in; margin: 0.6in 0.7in; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Georgia', serif; font-size: 9.5pt; color: #1a1a1a; line-height: 1.55; background: #fff; }
+.page { max-width: 7.1in; margin: 0 auto; padding: 0.25in 0 0; }
+.print-btn { display: block; margin: 0 auto 0.3in; padding: 8px 28px; background: #1e3d6e; color: white; border: none; border-radius: 4px; font-size: 11pt; font-family: sans-serif; cursor: pointer; }
+@media print { .print-btn { display: none; } }
+.campaign-name { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7.5pt; font-weight: bold; letter-spacing: 3px; color: #1e3d6e; text-transform: uppercase; margin-bottom: 3pt; }
+.session-title { font-family: 'Georgia', serif; font-size: 20pt; font-weight: normal; color: #1a1a1a; margin-bottom: 5pt; }
+.section-label { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 2.5px; text-transform: uppercase; color: #1e3d6e; margin-bottom: 4pt; }
+p { margin-bottom: 5pt; } strong { font-weight: bold; } em { font-style: italic; }
+.session-header { text-align: center; margin-bottom: 0.1in; }
+.meta-row { display: flex; justify-content: center; gap: 8pt; flex-wrap: wrap; }
+.meta-pill { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 1.5px; color: #1e3d6e; border: 0.75pt solid #1e3d6e; padding: 1.5pt 7pt; border-radius: 2pt; text-transform: uppercase; }
+.orn { text-align: center; color: #1e3d6e; font-size: 11pt; letter-spacing: 5px; margin: 2pt 0; }
+.rule-thick { border: none; border-top: 1.5pt solid #1e3d6e; margin: 2pt 0; }
+.rule-thin { border: none; border-top: 0.5pt solid #aaa; margin: 7pt 0; }
+.main-plot { border-left: 2.5pt solid #1e3d6e; padding: 5pt 8pt; margin: 7pt 0; }
+.main-plot .section-label { margin-bottom: 3pt; }
+.beats-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5pt; margin: 5pt 0; }
+.beat-col { border: 0.5pt solid #ccc; border-radius: 3pt; padding: 5pt 6pt; }
+.beat-col-header { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; color: #1e3d6e; border-bottom: 0.75pt solid #ccc; padding-bottom: 3pt; margin-bottom: 4pt; }
+.beat-item { font-size: 8.5pt; padding: 2pt 0; border-bottom: 0.5pt solid #eee; line-height: 1.4; }
+.beat-item:last-child { border-bottom: none; }
+.read-aloud { border: 0.75pt solid #999; border-left: 2.5pt solid #1D9E75; background: #f9f9f9; padding: 5pt 8pt; margin: 5pt 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.read-aloud-label { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; color: #0F6E56; margin-bottom: 3pt; }
+.read-aloud p { font-style: italic; font-size: 9pt; line-height: 1.6; margin-bottom: 0; }
+.dm-note { border-left: 2.5pt solid #185FA5; padding: 4pt 0 4pt 8pt; margin: 5pt 0; }
+.dm-note-label { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; color: #185FA5; margin-bottom: 2pt; }
+.dm-note p, .dm-note ul { font-size: 8.5pt; line-height: 1.5; }
+.dm-note ul { padding-left: 12pt; }
+.dm-note li { margin-bottom: 2pt; }
+.flag { border-left: 2.5pt solid #A32D2D; padding: 4pt 0 4pt 8pt; margin: 5pt 0; }
+.flag-label { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; color: #A32D2D; margin-bottom: 2pt; }
+.flag p { font-size: 8.5pt; }
+.scene-card { border: 0.5pt solid #bbb; border-radius: 3pt; margin: 6pt 0; page-break-inside: avoid; break-inside: avoid; }
+.scene-header { display: flex; align-items: center; gap: 6pt; padding: 4pt 7pt; border-bottom: 1.5pt solid #1e3d6e; }
+.scene-num { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; color: #1e3d6e; border: 0.75pt solid #1e3d6e; padding: 1.5pt 5pt; border-radius: 2pt; white-space: nowrap; }
+.scene-title { font-size: 10.5pt; font-weight: bold; flex: 1; }
+.scene-tag { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 1px; color: #666; text-transform: uppercase; white-space: nowrap; }
+.scene-body { padding: 6pt 8pt; }
+.scene-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 8pt; margin-bottom: 5pt; }
+.meta-label { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 1.5px; text-transform: uppercase; color: #666; margin-bottom: 1pt; }
+.meta-value { font-size: 8.5pt; line-height: 1.4; }
+.outcome-label { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; color: #666; margin: 4pt 0 2pt; }
+.outcome-item { font-size: 8.5pt; padding-left: 10pt; position: relative; margin-bottom: 2pt; line-height: 1.4; }
+.outcome-item::before { content: "→"; position: absolute; left: 0; color: #1e3d6e; font-size: 8pt; }
+.reward-badge { display: inline-block; font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7.5pt; font-weight: bold; color: #27500A; border: 0.75pt solid #639922; padding: 1.5pt 6pt; border-radius: 2pt; margin-top: 4pt; }
+.clues-list { margin: 4pt 0; }
+.clue-item { display: flex; gap: 6pt; margin-bottom: 4pt; align-items: flex-start; }
+.clue-diamond { width: 7pt; height: 7pt; border: 1pt solid #534AB7; transform: rotate(45deg); flex-shrink: 0; margin-top: 3pt; }
+.clue-text { font-size: 9pt; line-height: 1.5; }
+.loc-card { border: 0.5pt solid #ccc; border-radius: 3pt; padding: 5pt 6pt; margin-bottom: 5pt; page-break-inside: avoid; break-inside: avoid; }
+.loc-name { font-size: 9.5pt; font-weight: bold; border-bottom: 0.5pt solid #ddd; padding-bottom: 3pt; margin-bottom: 3pt; }
+.loc-body { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6pt; }
+.loc-col-label { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 1.5px; text-transform: uppercase; color: #666; margin-bottom: 1pt; }
+.loc-col-text { font-size: 8.5pt; line-height: 1.4; }
+.npc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5pt; margin: 5pt 0; }
+.npc-card { border: 0.5pt solid #ccc; border-radius: 3pt; overflow: hidden; page-break-inside: avoid; break-inside: avoid; }
+.npc-header { padding: 3pt 6pt; border-bottom: 1.5pt solid #1e3d6e; display: flex; align-items: baseline; gap: 5pt; flex-wrap: wrap; }
+.npc-name { font-size: 9pt; font-weight: bold; }
+.npc-tag { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 6.5pt; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; color: #1e3d6e; border: 0.5pt solid #1e3d6e; padding: 1pt 4pt; border-radius: 2pt; }
+.npc-body { padding: 4pt 6pt; }
+.npc-row { display: grid; grid-template-columns: 44pt 1fr; gap: 3pt; margin-bottom: 2pt; }
+.npc-label { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 6.5pt; font-weight: bold; letter-spacing: 1.5px; text-transform: uppercase; color: #666; padding-top: 1pt; }
+.npc-value { font-size: 8pt; line-height: 1.4; }
+.rewards-row { display: flex; flex-wrap: wrap; gap: 5pt; margin: 5pt 0; }
+.reward-card { border: 0.5pt solid #ccc; border-radius: 3pt; padding: 4pt 7pt; min-width: 1.8in; page-break-inside: avoid; break-inside: avoid; }
+.reward-title { font-size: 8.5pt; font-weight: bold; margin-bottom: 2pt; }
+.reward-desc { font-size: 8pt; color: #444; line-height: 1.4; }
+.misc-list { margin: 4pt 0; }
+.misc-item { font-size: 9pt; padding: 2pt 0 2pt 10pt; position: relative; border-bottom: 0.5pt solid #eee; line-height: 1.5; }
+.misc-item:last-child { border-bottom: none; }
+.misc-item::before { content: "•"; position: absolute; left: 0; color: #1e3d6e; }
+.break-before { page-break-before: always; break-before: page; }
+.live-log-section { page-break-before: always; break-before: page; page-break-after: avoid; break-after: avoid; display: flex; flex-direction: column; height: 9.4in; }
+.log-header { display: flex; align-items: flex-end; justify-content: space-between; padding-bottom: 5pt; margin-bottom: 6pt; border-bottom: 1.5pt solid #1e3d6e; flex-shrink: 0; }
+.log-header-title { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 8pt; font-weight: bold; letter-spacing: 2.5px; text-transform: uppercase; color: #1e3d6e; }
+.log-header-session { font-family: 'Georgia', serif; font-size: 14pt; color: #1a1a1a; }
+.log-date-line { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7.5pt; color: #666; display: flex; align-items: center; gap: 6pt; }
+.log-date-blank { display: inline-block; border-bottom: 0.75pt solid #888; width: 1.4in; }
+.log-grid { display: grid; grid-template-columns: 1fr 1fr 1.5fr; grid-template-rows: 1fr 1fr; gap: 6pt; flex: 1; min-height: 0; }
+.log-bottom { margin-top: 6pt; height: 1.1in; flex-shrink: 0; }
+.log-box { border: 0.75pt solid #bbb; border-radius: 3pt; display: flex; flex-direction: column; overflow: hidden; }
+.log-box-label { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; color: #1e3d6e; padding: 3pt 7pt; border-bottom: 1pt solid #1e3d6e; flex-shrink: 0; }
+.log-ruled { flex: 1; padding: 2pt 6pt; background-image: repeating-linear-gradient(to bottom, transparent, transparent 20pt, #ddd 20pt, #ddd 20.75pt); background-position: 0 10pt; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.log-bottom-box { border: 0.75pt solid #bbb; border-radius: 3pt; display: flex; flex-direction: column; overflow: hidden; height: 100%; }
+.log-bottom-label { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; color: #A32D2D; padding: 3pt 7pt; border-bottom: 1pt solid #A32D2D; flex-shrink: 0; }
+</style>
+</head>
+<body>
+<div class="page">
+<button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+
+<!-- HEADER -->
+<div class="session-header">
+  <div class="campaign-name">Caelestis · Spelljammer Academy · DM Only</div>
+  <div class="session-title">Voyage 002 — The Day After</div>
+  <div class="meta-row">
+    <span class="meta-pill">Cadet Level</span>
+    <span class="meta-pill">Caelestis · Academy</span>
+    <span class="meta-pill">Orientation Arc</span>
+  </div>
+</div>
+<div class="orn">✦ ✦ ✦</div><hr class="rule-thick"><div class="orn">✦ ✦ ✦</div>
+
+<!-- PREVIOUS SESSION -->
+<div style="margin: 8pt 0 4pt">
+  <div class="section-label">Previous Session</div>
+  <p>Orientation threw five strangers into a simulation they couldn't win, then put them through a full day of academy life — bunks, Sky Dock, the Spelljammer Nexus, the Gymnasium. A simple delivery errand to <strong>Mirt the Merciless</strong> ended in a creature attack in his quarters: a coordinated diversion while the academy was being robbed. <strong>Sol</strong> chose to preserve the last creature alive rather than kill it. <strong>Casey</strong> slipped alone into Mirt's wardrobe and heard a voice say <em>Go there.</em> <strong>Gregory</strong> felt something directional pulling at his core. <strong>Tumak</strong> is hiding the constellation shirt Casey passed him. <strong>Boogie</strong> pulled a half-missing model ship from inside his own chest.</p>
+  <p><em>Voyage 002 opens the morning after. For the first time since arriving, the day briefly opens before the academy calls them back in.</em></p>
+</div>
+
+<!-- MAIN PLOT -->
+<div class="main-plot">
+  <div class="section-label">Main Plot This Session</div>
+  <p><strong>Morning —</strong> Bartholomew is assigned to this crew by Tarto and pointed to the Weeping Goddess. He arrives before the party, meets Miken at the only open table. The crew filters in; the only open seats are there. <strong>Afternoon —</strong> Free roam. Let them choose: Nexus, Sky Dock, Stores, Quarters. The academy runs visibly strained at the edges. <strong>End of Day —</strong> Tarto recalls the crew to recount the Mirt incident. The preserved creature matters; Sol's choice is validated; the theft plot sharpens. <strong>Montage —</strong> A few days pass. Show the academy feeling lived-in before the next mission. End on the debrief, the evening close, the montage, or the opening beat of Trial by Fire.</p>
+</div>
+
+<hr class="rule-thin">
+
+<!-- CHARACTER BEATS GRID -->
+<div class="section-label">Character Beats</div>
+<div class="beats-grid">
+  <div class="beat-col">
+    <div class="beat-col-header">Group</div>
+    <div class="beat-item">Let them feel like a real crew during downtime — not just under fire</div>
+    <div class="beat-item">Bartholomew's entrance is a crew assignment, not a disruption</div>
+    <div class="beat-item">Academy = busy, structured, not defined by constant bizarre incidents</div>
+  </div>
+  <div class="beat-col">
+    <div class="beat-col-header">PCs</div>
+    <div class="beat-item"><strong>Sol</strong> — minor misfortune moments; preservation praised and made consequential</div>
+    <div class="beat-item"><strong>Gregory</strong> — chart/navigation curiosity pays off; anomaly sense can justify an early useful find</div>
+    <div class="beat-item"><strong>Casey</strong> — subtle astral or chart curiosity if he looks; no heavy exposition</div>
+    <div class="beat-item"><strong>Boogie</strong> — ship-maintenance or social warmth beat if he seeks it</div>
+    <div class="beat-item"><strong>Tumak</strong> — secrecy and "pulled somewhere" energy stays in the background</div>
+  </div>
+  <div class="beat-col">
+    <div class="beat-col-header">NPCs</div>
+    <div class="beat-item"><strong>Tarto</strong> — practical authority; she recalls them when free time ends; runs the debrief clean</div>
+    <div class="beat-item"><strong>Saerthe</strong> — optional quiet unease; useful for fragments, not explanations</div>
+    <div class="beat-item"><strong>Miken</strong> — Bartholomew's first ordinary cadet contact; eager, slightly awkward</div>
+    <div class="beat-item"><strong>Mr. Blip</strong> — reward/logistics vector; knows more than he should about supply weirdness</div>
+    <div class="beat-item"><strong>Kip &amp; Pik</strong> — ship texture; mission-type breadcrumb if visited</div>
+  </div>
+</div>
+
+<hr class="rule-thin">
+
+<!-- STRONG START -->
+<div class="section-label">Strong Start — Bartholomew &amp; Tarto</div>
+<div class="read-aloud">
+  <div class="read-aloud-label">Read Aloud — Open on Bartholomew</div>
+  <p>The Boatswain's post is quieter than the rest of the academy. She doesn't greet you when you enter — she finishes the line she's writing, sets the ledger aside, and looks at you with the kind of attention that measures without announcing itself. "You're a wilder." Not a question. "That changes nothing once you're aboard a crew. There's one you'll be training with." She names the Weeping Goddess and the lunch hour without looking up again. "Find them. Eat. Keep up." The conversation is over before you realize it started.</p>
+</div>
+
+<hr class="rule-thin">
+
+<!-- SCENES -->
+<div class="section-label">Scenes</div>
+
+<div class="scene-card">
+  <div class="scene-header">
+    <span class="scene-num">Scene 0</span>
+    <span class="scene-title">Tarto Assigns Bartholomew</span>
+    <span class="scene-tag">Academy Corridor · Opening Frame</span>
+  </div>
+  <div class="scene-body">
+    <div class="scene-meta">
+      <div><div class="meta-label">Location</div><div class="meta-value">Tarto's post, corridor, or officer station</div></div>
+      <div><div class="meta-label">What's Happening</div><div class="meta-value">Tarto gives Bartholomew a brisk handoff. Being a wilder changes nothing once he's crew. She points him to the Weeping Goddess and dismisses him.</div></div>
+    </div>
+    <div class="outcome-label">Outcomes / Transitions</div>
+    <div class="outcome-item">Bartholomew gets his footing. Tarto establishes tone without drama.</div>
+    <div class="outcome-item">Scene cuts before any larger incident unfolds. Authority feels practical, not theatrical.</div>
+  </div>
+</div>
+
+<div class="scene-card">
+  <div class="scene-header">
+    <span class="scene-num">Scene 1</span>
+    <span class="scene-title">Bartholomew Meets Miken</span>
+    <span class="scene-tag">Weeping Goddess · Pre-Party</span>
+  </div>
+  <div class="scene-body">
+    <div class="scene-meta">
+      <div><div class="meta-label">Location</div><div class="meta-value">Weeping Goddess — full lunch crowd</div></div>
+      <div><div class="meta-label">What's Happening</div><div class="meta-value">Bartholomew arrives before the party. Room is packed — tabaxi, loxodon, tortles, hadozee, thri-kreen, autognomes, stranger faces still. The only open seat is Miken's table. Miken doesn't know him or the party yet. Exchange is ordinary, slightly awkward, grounded.</div></div>
+    </div>
+    <div class="dm-note">
+      <div class="dm-note-label">Atmosphere Note</div>
+      <p>Let the Weeping Goddess feel genuinely interworld — the academy isn't just human. Fill the background with varied peoples. This is the breadth of Wildspace.</p>
+    </div>
+    <div class="outcome-label">Outcomes / Transitions</div>
+    <div class="outcome-item">Miken and Bartholomew get a humanizing exchange. Room fills around them.</div>
+    <div class="outcome-item">Light rumor in the background — tightened security, unusual supply movement.</div>
+  </div>
+</div>
+
+<div class="scene-card">
+  <div class="scene-header">
+    <span class="scene-num">Scene 2</span>
+    <span class="scene-title">The Party Arrives for Lunch</span>
+    <span class="scene-tag">Weeping Goddess · Introductions</span>
+  </div>
+  <div class="scene-body">
+    <div class="scene-meta">
+      <div><div class="meta-label">Location</div><div class="meta-value">Weeping Goddess</div></div>
+      <div><div class="meta-label">What's Happening</div><div class="meta-value">Party arrives; the only open table has Bartholomew and Miken. The academy does the work — they sit because there's room. Introductions follow naturally. Miken's first full scene.</div></div>
+    </div>
+    <div class="outcome-label">Outcomes / Transitions</div>
+    <div class="outcome-item">Early crew chemistry. Academy rumors. Sol misfortune beat — inconvenient, awkward, useful.</div>
+    <div class="outcome-item">Transition into free-roam after lunch ends.</div>
+    <span class="reward-badge">Possible: rumor, cadet contact, meal token</span>
+  </div>
+</div>
+
+<div class="scene-card">
+  <div class="scene-header">
+    <span class="scene-num">Scene 3</span>
+    <span class="scene-title">Free Roam Around Caelestis</span>
+    <span class="scene-tag">Various · Player-Driven</span>
+  </div>
+  <div class="scene-body">
+    <div class="scene-meta">
+      <div><div class="meta-label">Location</div><div class="meta-value">Player choice — Nexus / Chart Room, Sky Dock, Stores, Cadet Quarters</div></div>
+      <div><div class="meta-label">What's Happening</div><div class="meta-value">Crew splits or stays together, follows personal interests. Academy runs visibly strained at the edges. Staff is busier than it should be for an ordinary afternoon.</div></div>
+    </div>
+    <div class="outcome-label">Outcomes by PC</div>
+    <div class="outcome-item"><strong>Gregory</strong> — route notation or anomaly find at the Chart Room; an odd destination, a restricted ledger entry</div>
+    <div class="outcome-item"><strong>Casey</strong> — Nexus visit yields subtle astral beat; nothing explained, just felt</div>
+    <div class="outcome-item"><strong>Boogie</strong> — Sky Dock: ship texture, maintenance talk, dock crew warmth</div>
+    <div class="outcome-item"><strong>Sol</strong> — misfortune reveals something useful; timing goes wrong in a way that matters</div>
+    <div class="outcome-item"><strong>Tumak</strong> — secrecy energy; stays close, watches; pulled but not named</div>
+    <div class="outcome-item">Kip &amp; Pik or dock staff mention: some Fleet missions move people, not freight</div>
+    <span class="reward-badge">Common utility item / consumable / requisition chit / favor</span>
+  </div>
+</div>
+
+<div class="scene-card">
+  <div class="scene-header">
+    <span class="scene-num">Scene 4</span>
+    <span class="scene-title">Recount / Debrief</span>
+    <span class="scene-tag">Officer Corridor · Debrief Room</span>
+  </div>
+  <div class="scene-body">
+    <div class="scene-meta">
+      <div><div class="meta-label">Location</div><div class="meta-value">Officer hallway, debrief room, or examination area near Mirt's quarters</div></div>
+      <div><div class="meta-label">What's Happening</div><div class="meta-value">Tarto recalls the crew. They recount the incident. The preserved creature is examined. Officers confirm it connects to broader, coordinated thefts. The crew is dismissed for the evening with more questions than answers.</div></div>
+    </div>
+    <div class="dm-note">
+      <div class="dm-note-label">DM Note — Sol's Moment</div>
+      <p>Make Sol's choice explicit and consequential. The officers learned something concrete because of him. Name it. Don't let it pass as routine.</p>
+    </div>
+    <div class="outcome-label">Outcomes / Transitions</div>
+    <div class="outcome-item">Sol explicitly validated. Attack confirmed as coordinated. One useful answer, one larger question.</div>
+    <div class="outcome-item">If they linger or pry: overheard fragment — <em>Watcher, Zenith, Monolith</em> — only in passing. Not explained.</div>
+    <span class="reward-badge">Possible: requisition favor / official goodwill / restricted access later</span>
+  </div>
+</div>
+
+<div class="scene-card">
+  <div class="scene-header">
+    <span class="scene-num">Scene 5</span>
+    <span class="scene-title">A Few Days Pass</span>
+    <span class="scene-tag">Montage · Academy Life</span>
+  </div>
+  <div class="scene-body">
+    <div class="scene-meta">
+      <div><div class="meta-label">Location</div><div class="meta-value">Drills, meals, bunks, docks, Nexus — the ordinary rhythm of Caelestis</div></div>
+      <div><div class="meta-label">What's Happening</div><div class="meta-value">After the debrief, cadets retire. A few days pass in brief montage. Snippets of training, shared meals, passing NPCs, ship prep, routine academy life. The setting feels broader than crisis response.</div></div>
+    </div>
+    <div class="outcome-label">Outcomes / Transitions</div>
+    <div class="outcome-item">Stronger sense of place. Cadets feel like they've actually spent time here.</div>
+    <div class="outcome-item">Clean jump forward into the next mission — Trial by Fire.</div>
+    <span class="reward-badge">Routine NPC rapport / small requisition / subtle reminder academy keeps moving</span>
+  </div>
+</div>
+
+<div class="scene-card">
+  <div class="scene-header">
+    <span class="scene-num">Optional</span>
+    <span class="scene-title">Trial by Fire — Opening Beat</span>
+    <span class="scene-tag">Briefing Room · If Time Allows</span>
+  </div>
+  <div class="scene-body">
+    <div class="scene-meta">
+      <div><div class="meta-label">Location</div><div class="meta-value">Briefing room, drill deck, dock, or mission assembly</div></div>
+      <div><div class="meta-label">What's Happening</div><div class="meta-value">A few days have passed. The cadets are called into their next practical mission. Routines are forming; the sense of place is real now. Run this only if the session moves quickly.</div></div>
+    </div>
+    <div class="outcome-label">Outcomes</div>
+    <div class="outcome-item">Role discussion. Anticipation. Launch into Trial by Fire — or a clean stop just as the mission begins.</div>
+    <span class="reward-badge">Light issue gear / signed pass / mission expectation</span>
+  </div>
+</div>
+
+<hr class="rule-thin">
+
+<!-- SECRETS AND CLUES -->
+<div class="section-label">Secrets &amp; Clues</div>
+<div class="clues-list">
+  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text">The academy thefts are <strong>targeted and coordinated</strong>, not opportunistic. Someone knew which rooms to hit and when to create a diversion.</div></div>
+  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text"><strong>Sol preserving the creature</strong> is the only reason the officers can learn anything concrete. If he'd killed it, the investigation would have nothing.</div></div>
+  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text">Fleet sometimes moves <strong>specialized personnel to field assignments</strong>, not just cargo. Do not reveal Ezra specifically — only imply this.</div></div>
+  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text">A deeper layer of academy secrecy exists above cadet clearance. Words like <strong>Watcher, Zenith, Monolith</strong> may surface only in fragments — overheard, never explained.</div></div>
+  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text">Something about <strong>Sol subtly distorts timing and probability</strong> — inconveniently, awkwardly, but usefully. The misfortune has a shape.</div></div>
+</div>
+
+<hr class="rule-thin">
+
+<!-- FANTASTIC LOCATIONS -->
+<div class="section-label">Fantastic Locations</div>
+
+<div class="loc-card">
+  <div class="loc-name">Weeping Goddess</div>
+  <div class="loc-body">
+    <div><div class="loc-col-label">Purpose</div><div class="loc-col-text">Social opening, crew formation, academy texture</div></div>
+    <div><div class="loc-col-label">What's Here</div><div class="loc-col-text">Lunch crowd spanning all of Wildspace — diverse species, low-stakes rivalries, gossip, Bartholomew and Miken before the party arrives</div></div>
+    <div><div class="loc-col-label">Possible Clue / Scene</div><div class="loc-col-text">Rumor about tightened security, missing supplies, or odd mission assignments</div></div>
+  </div>
+</div>
+
+<div class="loc-card">
+  <div class="loc-name">Spelljammer Nexus / Chart Room</div>
+  <div class="loc-body">
+    <div><div class="loc-col-label">Purpose</div><div class="loc-col-text">Gregory / Casey curiosity; restricted research; Saerthe presence</div></div>
+    <div><div class="loc-col-label">What's Here</div><div class="loc-col-text">Charts, route ledgers, staff running busier than usual; Saerthe may be present if useful</div></div>
+    <div><div class="loc-col-label">Possible Clue / Scene</div><div class="loc-col-text">Odd route notation, a restricted destination, "not for cadets" exchange overheard</div></div>
+  </div>
+</div>
+
+<div class="loc-card">
+  <div class="loc-name">Sky Dock / Kip and Pik</div>
+  <div class="loc-body">
+    <div><div class="loc-col-label">Purpose</div><div class="loc-col-text">Ship texture, logistics, Fleet breadcrumb for Boogie</div></div>
+    <div><div class="loc-col-label">What's Here</div><div class="loc-col-text">Ships, loaders, instructors, transit chatter; Kip and Pik running drills</div></div>
+    <div><div class="loc-col-label">Possible Clue / Scene</div><div class="loc-col-text">"Some crews move people, not freight." Ship-role conversation if Boogie engages.</div></div>
+  </div>
+</div>
+
+<div class="loc-card">
+  <div class="loc-name">Stores / Mr. Blip</div>
+  <div class="loc-body">
+    <div><div class="loc-col-label">Purpose</div><div class="loc-col-text">Reward vector, logistics gossip, supply anomalies</div></div>
+    <div><div class="loc-col-label">What's Here</div><div class="loc-col-text">Blip, approved gear, supply ledgers; he knows more about inventory weirdness than he should</div></div>
+    <div><div class="loc-col-label">Possible Clue / Scene</div><div class="loc-col-text">Transfer-marked supplies, consumable reward, requisition angle; Gregory-Blip dynamic if they meet</div></div>
+  </div>
+</div>
+
+<div class="loc-card">
+  <div class="loc-name">Debrief Hall / Officer Corridor</div>
+  <div class="loc-body">
+    <div><div class="loc-col-label">Purpose</div><div class="loc-col-text">Tighten the theft plot; reveal pressure existing above cadet clearance</div></div>
+    <div><div class="loc-col-label">What's Here</div><div class="loc-col-text">Tarto, security staff, the preserved specimen under examination; Saerthe possibly present</div></div>
+    <div><div class="loc-col-label">Possible Clue / Scene</div><div class="loc-col-text">Watcher / Zenith / Monolith — fragments only if they linger or pry; never offered directly</div></div>
+  </div>
+</div>
+
+<hr class="rule-thin">
+
+<!-- NPCs -->
+<div class="section-label">Important NPCs</div>
+<div class="npc-grid">
+
+  <div class="npc-card">
+    <div class="npc-header"><span class="npc-name">Boatswain Tarto</span><span class="npc-tag">Recall · Debrief</span></div>
+    <div class="npc-body">
+      <div class="npc-row"><div class="npc-label">Role</div><div class="npc-value">Assigns Bartholomew; recalls the crew when free time ends; runs the debrief practical and clean</div></div>
+      <div class="npc-row"><div class="npc-label">Vibe</div><div class="npc-value">Clipped, direct, unsentimental. Quietly approving when earned. Does not perform authority.</div></div>
+      <div class="npc-row"><div class="npc-label">Snippets</div><div class="npc-value">"Wilder or not, you're no different than any other crew member once you're aboard." / "Find them. Eat. Keep up." / "Your testimony. From the top."</div></div>
+      <div class="npc-row"><div class="npc-label">Wants</div><div class="npc-value">Clear testimony and crew discipline. Knows the incident is bigger than a cadet errand.</div></div>
+    </div>
+  </div>
+
+  <div class="npc-card">
+    <div class="npc-header"><span class="npc-name">Saerthe Abyzine</span><span class="npc-tag">Optional · Quiet Pressure</span></div>
+    <div class="npc-body">
+      <div class="npc-row"><div class="npc-label">Role</div><div class="npc-value">Optional quiet pressure; overheard source; insight fragment if the party visits the Nexus</div></div>
+      <div class="npc-row"><div class="npc-value">Eerie, measured, sees too much. Rarely overexplains. Lets fragments slip — never full pictures.</div></div>
+      <div class="npc-row"><div class="npc-label">Wants</div><div class="npc-value">Competence and discretion. Knows more than cadets should and will not volunteer it.</div></div>
+    </div>
+  </div>
+
+  <div class="npc-card">
+    <div class="npc-header"><span class="npc-name">Miken</span><span class="npc-tag">Lunch · Social Texture</span></div>
+    <div class="npc-body">
+      <div class="npc-row"><div class="npc-label">Role</div><div class="npc-value">Bartholomew's first ordinary cadet contact. Academy texture; social foothold.</div></div>
+      <div class="npc-row"><div class="npc-label">Vibe</div><div class="npc-value">Eager, slightly awkward, easy to like. Wants social footing; may try to attach to a more capable crew.</div></div>
+      <div class="npc-row"><div class="npc-label">Snippets</div><div class="npc-value">"Seat's open, if you need it." / "You got sent here too?" / "Then I guess we're both waiting on someone."</div></div>
+      <div class="npc-row"><div class="npc-label">Knows</div><div class="npc-value">Only surface gossip. Does not know anything about the thefts.</div></div>
+    </div>
+  </div>
+
+  <div class="npc-card">
+    <div class="npc-header"><span class="npc-name">Mr. Blip</span><span class="npc-tag">Stores · Reward Vector</span></div>
+    <div class="npc-body">
+      <div class="npc-row"><div class="npc-label">Role</div><div class="npc-value">Reward and logistics vector. Use Blip, supply ledgers, or subtle academy salvage as loot vectors.</div></div>
+      <div class="npc-row"><div class="npc-label">Vibe</div><div class="npc-value">Helpful, odd, pragmatic, a bit too informed about supply weirdness. Does not volunteer what he knows.</div></div>
+      <div class="npc-row"><div class="npc-label">Wants</div><div class="npc-value">Things to stay moving. Dislikes disruption to ledger order.</div></div>
+      <div class="npc-row"><div class="npc-label">Note</div><div class="npc-value">Gregory–Blip dynamic remains live. Do not resolve it — let the similarity sit.</div></div>
+    </div>
+  </div>
+
+  <div class="npc-card">
+    <div class="npc-header"><span class="npc-name">Kip &amp; Pik</span><span class="npc-tag">Sky Dock · Optional</span></div>
+    <div class="npc-body">
+      <div class="npc-row"><div class="npc-label">Role</div><div class="npc-value">Ship texture and mission-type breadcrumb if the party visits the dock</div></div>
+      <div class="npc-row"><div class="npc-label">Vibe</div><div class="npc-value">Efficient, mirrored, practical, faintly frazzled. Speak almost as one mind.</div></div>
+      <div class="npc-row"><div class="npc-label">Knows</div><div class="npc-value">Fleet missions vary more than cadets realize. Some crews move people, not freight. Drop this casually.</div></div>
+    </div>
+  </div>
+
+</div>
+
+<hr class="rule-thin">
+
+<!-- REWARDS -->
+<div class="section-label">Rewards &amp; Treasure</div>
+<p style="font-size:8pt; color:#444; margin-bottom:5pt;">Light session tone — 0–1 permanent item, 1 consumable, 1 favor/access reward. Do not over-reward a downtime session.</p>
+<div class="rewards-row">
+  <div class="reward-card"><div class="reward-title">Potion of Healing</div><div class="reward-desc">From Stores / Mr. Blip, or salvaged via Gregory's anomaly sense</div></div>
+  <div class="reward-card"><div class="reward-title">Common Utility Item</div><div class="reward-desc">Something practical from the supply ledgers — a tool, consumable, or minor equipment piece</div></div>
+  <div class="reward-card"><div class="reward-title">Requisition Chit / Favor</div><div class="reward-desc">Official goodwill from the debrief; redeemable for restricted access or a future favor</div></div>
+</div>
+
+<hr class="rule-thin">
+
+<!-- MISC DM NOTES -->
+<div class="section-label">Miscellaneous DM Notes</div>
+<div class="misc-list">
+  <div class="misc-item">Tarto already gave them the rest of the day after Voyage 001. Let that close naturally before the time skip forward.</div>
+  <div class="misc-item">Sol's minor misfortune must be inconvenient, awkward, and useful — not flashy. It reveals something. It does not embarrass him.</div>
+  <div class="misc-item">Do not reveal Ezra specifically. Only imply that Fleet sometimes transports specialized personnel.</div>
+  <div class="misc-item">Let the academy feel busy and inhabited: drills, meals, passing cadets, dock work, and only occasional tension at the edges.</div>
+  <div class="misc-item">Bartholomew's entrance is a natural crew assignment. Tarto's tone signals this is routine academy procedure, not special treatment.</div>
+  <div class="misc-item">End strong on the debrief, the evening close, the few-days-passed montage, or the opening beat of Trial by Fire. Do not push past a clean ending.</div>
+</div>
+
+<div class="flag" style="margin-top:6pt">
+  <div class="flag-label">Carry Forward to Voyage 003</div>
+  <p>Bartholomew is part of the crew. The academy theft investigation has more shape — coordinated, targeted, above cadet clearance. Sol's choice to preserve the creature has been formally acknowledged. Casey is carrying a voice and a star map he hasn't told anyone about except Tumak, who is carrying the shirt without asking why. Gregory felt something directional. Boogie has half a ship inside his chest. The montage closes with the academy feeling lived-in — and Trial by Fire is next.</p>
+</div>
+
+<!-- LIVE LOG -->
+<div class="live-log-section">
+  <div class="log-header">
+    <div>
+      <div class="log-header-title">Live Log &nbsp;·&nbsp; Session Notes</div>
+      <div class="log-header-session">Voyage 002 — The Day After</div>
+    </div>
+    <div class="log-date-line">Date &nbsp;<span class="log-date-blank"></span></div>
+  </div>
+  <div class="log-grid">
+    <div class="log-box"><div class="log-box-label">NPCs</div><div class="log-ruled"></div></div>
+    <div class="log-box"><div class="log-box-label">Plot Hooks / Threads</div><div class="log-ruled"></div></div>
+    <div class="log-box"><div class="log-box-label">PCs / Character Beats</div><div class="log-ruled"></div></div>
+    <div class="log-box"><div class="log-box-label">Lore / World</div><div class="log-ruled"></div></div>
+    <div class="log-box"><div class="log-box-label">Rewards / Magic Items</div><div class="log-ruled"></div></div>
+    <div class="log-box"><div class="log-box-label">Other / Loose Ends</div><div class="log-ruled"></div></div>
+  </div>
+  <div class="log-bottom">
+    <div class="log-bottom-box">
+      <div class="log-bottom-label">Next Session Must Respect</div>
+      <div class="log-ruled"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
