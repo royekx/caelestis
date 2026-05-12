@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Access Denied — Spelljammer Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #06040e;
+  font-family: 'Crimson Pro', Georgia, serif;
+  color: #c9a96e;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  transition: background 0.3s;
+}
+
+.dis-wrap { max-width: 520px; width: 100%; text-align: center; }
+
+/* Alert box */
+.alert-box {
+  border: 1px solid rgba(180,40,40,0.4);
+  padding: 2.2rem 2rem 1.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  background: rgba(30,4,4,0.6);
+}
+.alert-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(to right, transparent, rgba(200,40,40,0.8), transparent);
+}
+
+.alert-icon {
+  width: 44px; height: 44px;
+  margin: 0 auto 1.2rem;
+  color: rgba(200,60,60,0.8);
+  animation: iconPulse 1.8s ease-in-out infinite;
+}
+@keyframes iconPulse {
+  0%,100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+.alert-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.52rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(180,40,40,0.7);
+  margin-bottom: 0.5rem;
+}
+.alert-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #c04040;
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+  animation: flicker 0.14s linear infinite;
+}
+@keyframes flicker { 0%,100%{ opacity:1; } 50%{ opacity:0.93; } }
+
+.alert-body {
+  font-size: 0.9rem;
+  color: rgba(201,153,58,0.55);
+  font-style: italic;
+  line-height: 1.65;
+  margin-bottom: 1.4rem;
+}
+
+/* Countdown */
+.countdown-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.52rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(180,40,40,0.5);
+  margin-bottom: 0.4rem;
+}
+.countdown {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #c04040;
+  min-height: 3.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Reprieve */
+#reprieve {
+  display: none;
+  animation: fadeIn 0.8s ease;
+}
+@keyframes fadeIn { from{ opacity:0; transform:translateY(8px); } to{ opacity:1; transform:translateY(0); } }
+
+.reprieve-box {
+  border: 1px solid rgba(201,153,58,0.18);
+  padding: 1.4rem 1.6rem;
+  margin-top: 1.5rem;
+  text-align: left;
+  background: rgba(201,153,58,0.02);
+}
+.reprieve-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 0.52rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(201,153,58,0.35);
+  margin-bottom: 0.6rem;
+}
+.reprieve-text {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: rgba(201,153,58,0.7);
+}
+.reprieve-text em { color: rgba(201,153,58,0.45); font-style: italic; }
+.reprieve-text strong { color: #c9a96e; font-weight: 600; font-style: normal; }
+
+.back-btn {
+  display: inline-block;
+  margin-top: 1.6rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(201,153,58,0.4);
+  text-decoration: none;
+  border: 1px solid rgba(201,153,58,0.15);
+  padding: 0.6rem 1.4rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+.back-btn:hover { color: #c9a96e; border-color: rgba(201,153,58,0.4); }
+</style>
+</head>
+<body>
+<div class="dis-wrap">
+
+  <div class="alert-box">
+
+    <div class="alert-icon">
+      <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Shield -->
+        <path d="M22 4 L36 10 L36 24 Q36 36 22 42 Q8 36 8 24 L8 10 Z"/>
+        <!-- X inside -->
+        <line x1="16" y1="16" x2="28" y2="28"/>
+        <line x1="28" y1="16" x2="16" y2="28"/>
+      </svg>
+    </div>
+
+    <div class="alert-label">Fleet Intelligence Division — Archive Security</div>
+    <div class="alert-title" id="alert-title">UNAUTHORISED ACCESS DETECTED</div>
+    <p class="alert-body">
+      This access attempt has been logged and transmitted to bridge command.<br>
+      Invalid clearance codes trigger automatic disintegration of the accessing party.
+    </p>
+
+    <div class="countdown-label">Disintegration initiating in</div>
+    <div class="countdown" id="countdown">3</div>
+
+  </div>
+
+  <!-- Reprieve — shown after countdown -->
+  <div id="reprieve">
+    <div class="reprieve-box">
+      <div class="reprieve-heading">Academy Administration — Automated Notice</div>
+      <p class="reprieve-text">
+        Disintegration protocol <strong>suspended.</strong><br><br>
+        Academy regulation <em>17.2(b)</em> prohibits automated disintegration of enrolled
+        personnel without a completed <em>Form 44-C (Authorisation for Disintegration of
+        Enrolled Personnel)</em>, countersigned by two senior officers and notarised by
+        the Academy Registrar.<br><br>
+        Form 44-C has not been filed. You remain, for the time being, <strong>intact.</strong><br><br>
+        This attempt has been logged. You are advised to present yourself to
+        <strong>Boatswain Tarto</strong> at your earliest convenience.<br><br>
+        <em>She will know what to do with you.</em>
+      </p>
+    </div>
+    <a class="back-btn" href="../index.html">← Return to Academy</a>
+  </div>
+
+</div>
+
+<script>
+function playZap() {
+  try {
+    var ctx = new (window.AudioContext || window.webkitAudioContext)();
+    var buf = ctx.createBuffer(1, ctx.sampleRate * 0.5, ctx.sampleRate);
+    var d = buf.getChannelData(0);
+    for (var i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+    var noise = ctx.createBufferSource(); noise.buffer = buf;
+    var filter = ctx.createBiquadFilter();
+    filter.type = 'bandpass'; filter.frequency.value = 2000;
+    filter.frequency.exponentialRampToValueAtTime(100, ctx.currentTime + 0.5);
+    var gain = ctx.createGain(); gain.gain.value = 0.35;
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
+    noise.connect(filter); filter.connect(gain); gain.connect(ctx.destination);
+    noise.start(); noise.stop(ctx.currentTime + 0.5);
+    var osc = ctx.createOscillator(); osc.type = 'sawtooth';
+    osc.frequency.value = 800;
+    osc.frequency.exponentialRampToValueAtTime(30, ctx.currentTime + 0.7);
+    var og = ctx.createGain(); og.gain.value = 0.18;
+    og.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.7);
+    osc.connect(og); og.connect(ctx.destination);
+    osc.start(); osc.stop(ctx.currentTime + 0.7);
+  } catch(e) {}
+}
+
+var n = 3;
+var el = document.getElementById('countdown');
+var titleEl = document.getElementById('alert-title');
+playZap();
+
+var interval = setInterval(function() {
+  n--;
+  if (n > 0) {
+    el.textContent = n;
+    playZap();
+    document.body.style.background = n % 2 === 0 ? '#150404' : '#06040e';
+  } else {
+    clearInterval(interval);
+    document.body.style.background = '#06040e';
+    titleEl.textContent = 'DISINTEGRATION PROTOCOL INITIATED';
+    el.textContent = '✦';
+    el.style.color = 'rgba(201,153,58,0.5)';
+    el.style.fontSize = '2rem';
+    setTimeout(function() {
+      titleEl.textContent = 'PROTOCOL SUSPENDED';
+      document.getElementById('reprieve').style.display = 'block';
+    }, 900);
+  }
+}, 1100);
+</script>
+</body>
+</html>
