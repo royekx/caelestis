@@ -6,8 +6,9 @@
 <title>Caelestis — Spelljammer Nexus</title>
 <link rel="stylesheet" href="../styles/caelestis.css">
 <script src="../scripts/nav.js" defer></script>
+<script src="../data/nexus.js"></script>
 <style>
-  .nexus-list { display:flex; flex-direction:column; }
+  .nexus-list { display: flex; flex-direction: column; }
 
   .nexus-entry {
     display: grid;
@@ -18,17 +19,14 @@
     border-bottom: 1px solid var(--gold-rule);
     text-decoration: none;
     transition: padding-left 0.18s;
-    position: relative;
   }
   .nexus-entry:first-child { border-top: 1px solid var(--gold-rule); }
   .nexus-entry:hover { padding-left: 0.4rem; }
 
   .nexus-entry-name {
     font-family: 'Cinzel', serif;
-    font-size: 0.92rem;
-    font-weight: 600;
-    color: var(--gold);
-    margin-bottom: 0.2rem;
+    font-size: 0.92rem; font-weight: 600;
+    color: var(--gold); margin-bottom: 0.2rem;
     transition: color 0.18s;
   }
   .nexus-entry:hover .nexus-entry-name { color: #e8c87a; }
@@ -36,22 +34,19 @@
 
   .nexus-badge {
     font-family: 'Cinzel', serif;
-    font-size: 0.46rem; letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-size: 0.46rem; letter-spacing: 0.16em; text-transform: uppercase;
     padding: 0.2rem 0.5rem;
     border: 1px solid var(--gold-rule);
     color: var(--text-muted);
     white-space: nowrap; flex-shrink: 0;
   }
-  .nexus-badge.b-restricted {
+  .nexus-entry.restricted .nexus-entry-name  { color: rgba(201,153,58,0.6); }
+  .nexus-entry.restricted:hover .nexus-entry-name { color: rgba(201,153,58,0.85); }
+  .nexus-entry.restricted { border-top: 1px solid rgba(139,32,32,0.2) !important; }
+  .nexus-badge.restricted {
     border-color: rgba(139,32,32,0.4);
     color: rgba(180,60,60,0.8);
   }
-
-  /* Restricted entry has a subtle red feel */
-  .nexus-entry.restricted .nexus-entry-name { color: rgba(201,153,58,0.6); }
-  .nexus-entry.restricted:hover .nexus-entry-name { color: rgba(201,153,58,0.85); }
-  .nexus-entry.restricted { border-top: 1px solid rgba(139,32,32,0.2) !important; }
 </style>
 </head>
 <body class="with-sidebar">
@@ -72,57 +67,43 @@
         <line x1="30" y1="30" x2="38" y2="22"/>
       </svg>
     </div>
-    <div class="page-eyebrow">Caelestis · Knowledge Archive</div>
+    <div class="page-eyebrow">Caelestis · Spelljammer Academy</div>
     <h1 class="page-title">Spelljammer Nexus</h1>
-    <p class="page-subtitle">What the crew of Caelestis knows — updated voyage by voyage.</p>
+    <p class="page-subtitle">Reference library. Academy and Wildspace fundamentals.</p>
   </div>
 
   <div class="content">
-    <div class="nexus-list">
-
-      <a class="nexus-entry" href="spelljammer-academy.html">
-        <div>
-          <div class="nexus-entry-name">Spelljammer Academy</div>
-          <div class="nexus-entry-sub">The institution, its structure, its people, and what it expects of its cadets</div>
-        </div>
-        <span class="nexus-badge">Academy</span>
-      </a>
-
-      <a class="nexus-entry" href="wildspace.html">
-        <div>
-          <div class="nexus-entry-name">Wildspace</div>
-          <div class="nexus-entry-sub">The void between worlds — how it works, how ships move through it, and what's out there</div>
-        </div>
-        <span class="nexus-badge">Setting</span>
-      </a>
-
-      <a class="nexus-entry" href="academy-thefts.html">
-        <div>
-          <div class="nexus-entry-name">The Academy Thefts</div>
-          <div class="nexus-entry-sub">Coordinated. Ongoing. Officially under investigation.</div>
-        </div>
-        <span class="nexus-badge">Active</span>
-      </a>
-
-      <a class="nexus-entry" href="viren-system.html">
-        <div>
-          <div class="nexus-entry-name">The Viren System</div>
-          <div class="nexus-entry-sub">A star pattern in a wardrobe. A voice. No Fleet record.</div>
-        </div>
-        <span class="nexus-badge">Voyage 001</span>
-      </a>
-
-      <a class="nexus-entry restricted" href="../restricted/index.html">
-        <div>
-          <div class="nexus-entry-name">Fleet Intelligence Archive</div>
-          <div class="nexus-entry-sub">Classified materials held within the Nexus library. Gold-level clearance required.</div>
-        </div>
-        <span class="nexus-badge b-restricted">Gold — Bridge</span>
-      </a>
-
+    <div class="nexus-list" id="nexus-list">
+      <!-- populated by nexus.js -->
     </div>
   </div>
 
 </div>
+
+<script>
+(function () {
+  var list = document.getElementById('nexus-list');
+  if (!list || typeof CAELESTIS_NEXUS === 'undefined') return;
+
+  CAELESTIS_NEXUS.forEach(function (entry) {
+    var isRestricted = !!entry.restricted;
+    var a = document.createElement('a');
+    a.className = 'nexus-entry' + (isRestricted ? ' restricted' : '');
+    a.href = entry.href;
+
+    var badgeClass = 'nexus-badge' + (isRestricted ? ' restricted' : '');
+
+    a.innerHTML =
+      '<div>' +
+        '<div class="nexus-entry-name">' + entry.title + '</div>' +
+        '<div class="nexus-entry-sub">' + entry.sub + '</div>' +
+      '</div>' +
+      '<span class="' + badgeClass + '">' + entry.badge + '</span>';
+
+    list.appendChild(a);
+  });
+})();
+</script>
+
 </body>
 </html>
