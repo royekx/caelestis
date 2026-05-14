@@ -177,14 +177,6 @@
     font-family: 'Crimson Pro', Georgia, serif;
     color: var(--gold-light); letter-spacing: 0.05em;
   }
-  .sign-mirror {
-    margin-top: 0.5rem; font-style: italic;
-    color: var(--gold-dim); font-size: 0.82rem;
-  }
-  .sign-unique {
-    margin-top: 0.5rem; font-style: italic;
-    color: var(--gold); font-size: 0.82rem;
-  }
 
   /* Keeper's chart — password gate */
   .pw-gate {
@@ -291,6 +283,11 @@
   <div class="content">
 
     <div class="chart-wrap">
+
+      <a class="voyage-nav-link" href="../crew-manifest/casey.html" style="display:inline-flex; margin-bottom:1.2rem;">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg>
+        Casey's page
+      </a>
 
       <div class="chart-tabs">
         <button class="chart-tab active" onclick="switchTab('read')">Read the Sky</button>
@@ -599,16 +596,6 @@ function selectSign(sign){
   document.getElementById('sbtn-' + sign.name).classList.add('active');
   document.getElementById('sign-detail').style.display = 'block';
   drawGrid(document.getElementById('preview-grid'), new Set(sign.reveal), sign.edges, false);
-  const pairs = PAIRS[sign.name];
-  let pairLine;
-  if (!pairs) {
-    pairLine = `<p class="sign-unique">A singular constellation — known at first sight.</p>`;
-  } else {
-    const lines = pairs.map(p =>
-      `<div>Mirrors <strong style="color:var(--text)">${p.name}</strong> through ${p.sharesFirst} stars — distinguishes at ${p.resolvesAt}.</div>`
-    ).join('');
-    pairLine = `<div class="sign-mirror">${lines}</div>`;
-  }
   document.getElementById('sign-info').innerHTML = `
     <div class="sign-card">
       <div class="sign-card-head">
@@ -619,7 +606,6 @@ function selectSign(sign){
       <div class="sign-meta">
         <span class="sign-meta-label">Stars in order of brightness</span>
         <code>${sign.reveal.join(' · ')}</code>
-        ${pairLine}
       </div>
     </div>
   `;
