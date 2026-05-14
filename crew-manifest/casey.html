@@ -72,6 +72,58 @@
     padding: 0.25rem 0.7rem; margin-top: 0.3rem;
   }
   .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-dim); }
+
+  /* ── Stellar Reading section ── */
+  .feat-intro {
+    font-size: 0.93rem; line-height: 1.78; color: var(--text);
+    margin-bottom: 1.1rem;
+  }
+  .feat-card {
+    background: var(--gold-faint);
+    border: 1px solid var(--gold-rule);
+    border-left: 3px solid var(--gold);
+    padding: 1.1rem 1.3rem;
+  }
+  .feat-flavor {
+    font-style: italic; color: var(--text-dim);
+    font-size: 0.92rem; margin-bottom: 0.7rem;
+  }
+  .feat-rules {
+    font-size: 0.92rem; line-height: 1.65; color: var(--text);
+    margin-bottom: 0.7rem;
+  }
+  .feat-outcomes { list-style: none; padding: 0; margin: 0; }
+  .feat-outcomes li {
+    padding: 0.3rem 0; font-size: 0.92rem; line-height: 1.55;
+    color: var(--text);
+  }
+  .feat-outcomes b {
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); margin-right: 0.4rem;
+  }
+  .feat-coda {
+    font-style: italic; color: var(--text-dim);
+    font-size: 0.85rem; margin-top: 0.7rem;
+    padding-top: 0.7rem; border-top: 1px solid var(--gold-rule);
+  }
+  .chart-cta {
+    text-align: center; margin-top: 1.5rem;
+  }
+  .chart-cta-link {
+    font-family: 'Cinzel', serif; font-size: 0.62rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold-dim); text-decoration: none;
+    border: 1px solid var(--gold-rule);
+    padding: 0.5rem 1.2rem;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+    display: inline-block;
+  }
+  .chart-cta-link:hover {
+    border-color: var(--gold-dim); color: var(--gold-light);
+    background: rgba(201,153,58,0.05);
+  }
+
   @media(max-width:560px){
     .entry-header { grid-template-columns: 1fr; }
   }
@@ -120,7 +172,28 @@
 <p>In the Spelljammer Nexus he struggled until he stopped trying to force the helm and found a posture that felt like his own. Whatever that posture is, it is entirely his. He has a direction now — a place he heard a voice tell him to go. He has not told anyone what it is.</p></div>
       </div>
     </div>
+
     <div class="divider">✦ ✦ ✦</div>
+
+    <div class="section-block">
+      <div class="section-label">Stellar Reading</div>
+      <p class="feat-intro">Casey's stars do more than decorate his cloak. Before he speaks to a stranger, they gather above the target in a partial constellation only he can see. He has learned to read them. He has not learned to read them well.</p>
+      <div class="feat-card">
+        <p class="feat-flavor">You can read a stranger's nature in the stars that gather above them.</p>
+        <p class="feat-rules">Choose a creature you can see that you have not yet engaged in conversation. As a bonus action, you can expend 1 of your stars to invoke a stellar reading. Your stars appear as a partial constellation in the sky above the target, visible only to you. Consulting your chart, you may attempt to name the constellation it forms.</p>
+        <ul class="feat-outcomes">
+          <li><b>Correct.</b> You have advantage on Charisma checks made against the target for 1 minute.</li>
+          <li><b>Incorrect.</b> You have disadvantage on Charisma checks made against the target for 1 minute.</li>
+        </ul>
+        <p class="feat-coda">Once the encounter begins, the window closes.</p>
+      </div>
+      <div class="chart-cta">
+        <a class="chart-cta-link" href="../stellar-chart/index.html">Consult the chart →</a>
+      </div>
+    </div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
     <div class="section-block">
       <div class="section-label">Voyage 001</div>
       <div class="log-list"><div class="log-item"><b>Simulation Deck:</b> Fought with speed and spellwork. Wrapped himself in cold, star-bright magic under pressure.</div>
