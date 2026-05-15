@@ -38,6 +38,12 @@ p { margin-bottom: 5pt; } strong { font-weight: bold; } em { font-style: italic;
 .flag { border-left: 2.5pt solid #A32D2D; padding: 4pt 0 4pt 8pt; margin: 5pt 0; }
 .flag-label { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; color: #A32D2D; margin-bottom: 2pt; }
 .flag p { font-size: 8.5pt; }
+.lookahead { border: 0.5pt dashed #888; border-left: 2.5pt dashed #6a6a6a; padding: 6pt 10pt; margin: 7pt 0; background: #fafafa; }
+.lookahead-label { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; color: #555; margin-bottom: 3pt; }
+.lookahead h4 { font-size: 9.5pt; font-weight: bold; margin: 5pt 0 2pt; }
+.lookahead p, .lookahead ul { font-size: 8.5pt; line-height: 1.5; }
+.lookahead ul { padding-left: 14pt; }
+.lookahead li { margin-bottom: 2pt; }
 .scene-card { border: 0.5pt solid #bbb; border-radius: 3pt; margin: 6pt 0; page-break-inside: avoid; break-inside: avoid; }
 .scene-header { display: flex; align-items: center; gap: 6pt; padding: 4pt 7pt; border-bottom: 1.5pt solid #1e3d6e; }
 .scene-num { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; color: #1e3d6e; border: 0.75pt solid #1e3d6e; padding: 1.5pt 5pt; border-radius: 2pt; white-space: nowrap; }
@@ -102,7 +108,7 @@ p { margin-bottom: 5pt; } strong { font-weight: bold; } em { font-style: italic;
   <div class="campaign-name">Caelestis · Spelljammer Academy · DM Only</div>
   <div class="session-title">Voyage 002 — The Day After</div>
   <div class="meta-row">
-    <span class="meta-pill">Cadet Level</span>
+    <span class="meta-pill">Level 2</span>
     <span class="meta-pill">Caelestis · Academy</span>
     <span class="meta-pill">Orientation Arc</span>
   </div>
@@ -112,14 +118,14 @@ p { margin-bottom: 5pt; } strong { font-weight: bold; } em { font-style: italic;
 <!-- PREVIOUS SESSION -->
 <div style="margin: 8pt 0 4pt">
   <div class="section-label">Previous Session</div>
-  <p>Orientation threw five strangers into a simulation they couldn't win, then put them through a full day of academy life — bunks, Sky Dock, the Spelljammer Nexus, the Gymnasium. A simple delivery errand to <strong>Mirt the Merciless</strong> ended in a creature attack in his quarters: a coordinated diversion while the academy was being robbed. <strong>Sol</strong> chose to preserve the last creature alive rather than kill it. <strong>Casey</strong> slipped alone into Mirt's wardrobe and heard a voice say <em>Go there.</em> <strong>Gregory</strong> felt something directional pulling at his core. <strong>Tumak</strong> is hiding the constellation shirt Casey passed him. <strong>Boogie</strong> pulled a half-missing model ship from inside his own chest.</p>
-  <p><em>Voyage 002 opens the morning after. For the first time since arriving, the day briefly opens before the academy calls them back in.</em></p>
+  <p>Orientation threw five strangers into a simulation they couldn't win, then put them through a full day of academy life — bunks, Sky Dock, the Spelljammer Nexus, the Gymnasium. A simple delivery errand to <strong>Mirt the Merciless</strong> ended in a creature attack in his quarters: a coordinated diversion while the academy was being robbed. <strong>Sol</strong> chose to preserve the last creature alive rather than kill it. <strong>Casey</strong> slipped alone into Mirt's wardrobe, saw an unfamiliar constellation, and heard a voice say <em>Go there.</em> <strong>Gregory</strong> felt something directional pulling at his core. <strong>Tumak</strong> is hiding the constellation shirt Casey scratched, along with Mirt's stolen Bag of Holding. <strong>Boogie</strong> pulled a half-missing model ship from inside his own chest.</p>
+  <p><em>Voyage 002 opens the morning after. For the first time since arriving, the day briefly opens before the academy calls them back in. A new cadet — Bartholomew — is being folded into the crew today.</em></p>
 </div>
 
 <!-- MAIN PLOT -->
 <div class="main-plot">
   <div class="section-label">Main Plot This Session</div>
-  <p><strong>Morning —</strong> Bartholomew is assigned to this crew by Tarto and pointed to the Weeping Goddess. He arrives before the party, meets Miken at the only open table. The crew filters in; the only open seats are there. <strong>Afternoon —</strong> Free roam. Let them choose: Nexus, Sky Dock, Stores, Quarters. The academy runs visibly strained at the edges. <strong>End of Day —</strong> Tarto recalls the crew to recount the Mirt incident. The preserved creature matters; Sol's choice is validated; the theft plot sharpens. <strong>Montage —</strong> A few days pass. Show the academy feeling lived-in before the next mission. End on the debrief, the evening close, the montage, or the opening beat of Trial by Fire.</p>
+  <p><strong>Morning —</strong> Bartholomew is assigned to this crew by Tarto and pointed to the Weeping Goddess. He arrives before the party and meets Miken at the only open table. <strong>Lunch —</strong> The crew filters in; the only seats open are at that table. Ryeback brings food himself and prompts Casey for a Stellar Reading. Miken's confidence wavers — the party can lift his spirits and earn his crew's goodwill for what comes later. <strong>Afternoon —</strong> Free roam. The cadets follow their own threads across Caelestis. <strong>Evening —</strong> Players choose how to close the day. <strong>Forward —</strong> A few days pass in brief montage. Routine academy life takes hold. Then a runner brings a summons to the Simulations Deck — <strong>Trial by Fire</strong> begins. The session expects to enter the simulation; it does not need to finish it.</p>
 </div>
 
 <hr class="rule-thin">
@@ -130,24 +136,27 @@ p { margin-bottom: 5pt; } strong { font-weight: bold; } em { font-style: italic;
   <div class="beat-col">
     <div class="beat-col-header">Group</div>
     <div class="beat-item">Let them feel like a real crew during downtime — not just under fire</div>
-    <div class="beat-item">Bartholomew's entrance is a crew assignment, not a disruption</div>
-    <div class="beat-item">Academy = busy, structured, not defined by constant bizarre incidents</div>
+    <div class="beat-item">Bartholomew's entrance is a routine crew assignment, not a disruption</div>
+    <div class="beat-item">Academy feels lived-in: busy, structured, not constant crisis</div>
+    <div class="beat-item">Get the crew into Trial by Fire — they want to hit things, give them that</div>
   </div>
   <div class="beat-col">
     <div class="beat-col-header">PCs</div>
-    <div class="beat-item"><strong>Sol</strong> — minor misfortune moments; preservation praised and made consequential</div>
-    <div class="beat-item"><strong>Gregory</strong> — chart/navigation curiosity pays off; anomaly sense can justify an early useful find</div>
-    <div class="beat-item"><strong>Casey</strong> — subtle astral or chart curiosity if he looks; no heavy exposition</div>
-    <div class="beat-item"><strong>Boogie</strong> — ship-maintenance or social warmth beat if he seeks it</div>
-    <div class="beat-item"><strong>Tumak</strong> — secrecy and "pulled somewhere" energy stays in the background</div>
+    <div class="beat-item"><strong>Sol</strong> — minor misfortune moments; possible first scry (Wis save) if alone tonight; institutional recognition is queued for later</div>
+    <div class="beat-item"><strong>Gregory</strong> — first Calibration available at the docks; Bearing reveals "lower docks, near cargo"; Rindle is the social obstacle</div>
+    <div class="beat-item"><strong>Casey</strong> — Stellar Reading on Ryeback at lunch (Sagittarius / Feast of the Moon); subtle astral fragment at Nexus if he looks</div>
+    <div class="beat-item"><strong>Boogie</strong> — ship texture if he seeks it; let the half-ship breathe — do not push escalation</div>
+    <div class="beat-item"><strong>Tumak</strong> — secrecy and "pulled somewhere" energy stays background; sensory home anchors if appropriate</div>
+    <div class="beat-item"><strong>Bartholomew</strong> — Almost-Shift breadcrumb is optional, low-key; integration is the priority</div>
   </div>
   <div class="beat-col">
     <div class="beat-col-header">NPCs</div>
-    <div class="beat-item"><strong>Tarto</strong> — practical authority; she recalls them when free time ends; runs the debrief clean</div>
-    <div class="beat-item"><strong>Saerthe</strong> — optional quiet unease; useful for fragments, not explanations</div>
-    <div class="beat-item"><strong>Miken</strong> — Bartholomew's first ordinary cadet contact; eager, slightly awkward</div>
-    <div class="beat-item"><strong>Mr. Blip</strong> — reward/logistics vector; knows more than he should about supply weirdness</div>
-    <div class="beat-item"><strong>Kip &amp; Pik</strong> — ship texture; mission-type breadcrumb if visited</div>
+    <div class="beat-item"><strong>Tarto</strong> — assigns Bartholomew; runs the briefing for Trial by Fire after the montage</div>
+    <div class="beat-item"><strong>Saerthe</strong> — optional Nexus presence; brief, fragmentary; co-runs the Trial by Fire briefing</div>
+    <div class="beat-item"><strong>Miken</strong> — Bartholomew's first cadet contact; eager, awkward; confidence beat at lunch</div>
+    <div class="beat-item"><strong>Ryeback</strong> — brings food himself; prompts Casey's reading; mouths off about his stolen pistol if asked</div>
+    <div class="beat-item"><strong>Mr. Blip</strong> — reward/logistics vector; knows more than he should</div>
+    <div class="beat-item"><strong>Rindle Gearloft</strong> — Sea Dock; guarded; hiding the Latchling</div>
   </div>
 </div>
 
@@ -157,7 +166,7 @@ p { margin-bottom: 5pt; } strong { font-weight: bold; } em { font-style: italic;
 <div class="section-label">Strong Start — Bartholomew &amp; Tarto</div>
 <div class="read-aloud">
   <div class="read-aloud-label">Read Aloud — Open on Bartholomew</div>
-  <p>The Boatswain's post is quieter than the rest of the academy. She doesn't greet you when you enter — she finishes the line she's writing, sets the ledger aside, and looks at you with the kind of attention that measures without announcing itself. "You're a wilder." Not a question. "That changes nothing once you're aboard a crew. There's one you'll be training with." She names the Weeping Goddess and the lunch hour without looking up again. "Find them. Eat. Keep up." The conversation is over before you realize it started.</p>
+  <p>The Boatswain's post is quieter than the rest of the academy. She doesn't greet you when you enter — she finishes the line she's writing, sets the ledger aside, and looks at you with the kind of attention that measures without announcing itself. <em>"You're a wilder."</em> Not a question. <em>"That changes nothing once you're aboard a crew. There's one you'll be training with."</em> She names the Weeping Goddess and the lunch hour without looking up again. <em>"Find them. Eat. Keep up."</em> The conversation is over before you realize it started.</p>
 </div>
 
 <hr class="rule-thin">
@@ -165,15 +174,16 @@ p { margin-bottom: 5pt; } strong { font-weight: bold; } em { font-style: italic;
 <!-- SCENES -->
 <div class="section-label">Scenes</div>
 
+<!-- SCENE 0 -->
 <div class="scene-card">
   <div class="scene-header">
     <span class="scene-num">Scene 0</span>
     <span class="scene-title">Tarto Assigns Bartholomew</span>
-    <span class="scene-tag">Academy Corridor · Opening Frame</span>
+    <span class="scene-tag">Boatswain's Post · Opening Frame</span>
   </div>
   <div class="scene-body">
     <div class="scene-meta">
-      <div><div class="meta-label">Location</div><div class="meta-value">Tarto's post, corridor, or officer station</div></div>
+      <div><div class="meta-label">Location</div><div class="meta-value">Tarto's post or officer station</div></div>
       <div><div class="meta-label">What's Happening</div><div class="meta-value">Tarto gives Bartholomew a brisk handoff. Being a wilder changes nothing once he's crew. She points him to the Weeping Goddess and dismisses him.</div></div>
     </div>
     <div class="outcome-label">Outcomes / Transitions</div>
@@ -182,6 +192,7 @@ p { margin-bottom: 5pt; } strong { font-weight: bold; } em { font-style: italic;
   </div>
 </div>
 
+<!-- SCENE 1 -->
 <div class="scene-card">
   <div class="scene-header">
     <span class="scene-num">Scene 1</span>
@@ -191,112 +202,190 @@ p { margin-bottom: 5pt; } strong { font-weight: bold; } em { font-style: italic;
   <div class="scene-body">
     <div class="scene-meta">
       <div><div class="meta-label">Location</div><div class="meta-value">Weeping Goddess — full lunch crowd</div></div>
-      <div><div class="meta-label">What's Happening</div><div class="meta-value">Bartholomew arrives before the party. Room is packed — tabaxi, loxodon, tortles, hadozee, thri-kreen, autognomes, stranger faces still. The only open seat is Miken's table. Miken doesn't know him or the party yet. Exchange is ordinary, slightly awkward, grounded.</div></div>
+      <div><div class="meta-label">What's Happening</div><div class="meta-value">Bartholomew arrives before the party. The room is packed — tabaxi, loxodon, tortles, hadozee, thri-kreen, autognomes, stranger faces still. The only open seat is Miken's table. Miken doesn't know him or the party yet. Two anxious cadets feel each other out.</div></div>
     </div>
     <div class="dm-note">
       <div class="dm-note-label">Atmosphere Note</div>
-      <p>Let the Weeping Goddess feel genuinely interworld — the academy isn't just human. Fill the background with varied peoples. This is the breadth of Wildspace.</p>
+      <p>Let the Weeping Goddess feel genuinely interworld — the academy isn't just human. Fill the background with varied peoples. This is the breadth of Wildspace, made small around one shared meal.</p>
     </div>
     <div class="outcome-label">Outcomes / Transitions</div>
-    <div class="outcome-item">Miken and Bartholomew get a humanizing exchange. Room fills around them.</div>
-    <div class="outcome-item">Light rumor in the background — tightened security, unusual supply movement.</div>
+    <div class="outcome-item">Miken and Bartholomew get a humanizing exchange. Let the player drive it.</div>
+    <div class="outcome-item">Cut away before the party arrives. The table is set for them — literally.</div>
+    <div class="outcome-item">Light background rumor — tightened security, supply weirdness, missing inventory.</div>
   </div>
 </div>
 
+<!-- SCENE 2 -->
 <div class="scene-card">
   <div class="scene-header">
     <span class="scene-num">Scene 2</span>
     <span class="scene-title">The Party Arrives for Lunch</span>
-    <span class="scene-tag">Weeping Goddess · Introductions</span>
+    <span class="scene-tag">Weeping Goddess · Crew Forms</span>
   </div>
   <div class="scene-body">
     <div class="scene-meta">
       <div><div class="meta-label">Location</div><div class="meta-value">Weeping Goddess</div></div>
-      <div><div class="meta-label">What's Happening</div><div class="meta-value">Party arrives; the only open table has Bartholomew and Miken. The academy does the work — they sit because there's room. Introductions follow naturally. Miken's first full scene.</div></div>
+      <div><div class="meta-label">What's Happening</div><div class="meta-value">Party arrives. The only open table has Bartholomew and Miken. The academy does the work — they sit because there's room. Introductions follow. Miken's first full scene. Ryeback brings food himself and prompts Casey's Stellar Reading.</div></div>
     </div>
+
+    <div class="dm-note">
+      <div class="dm-note-label">Beat 1 — Ryeback &amp; Casey's Reading</div>
+      <p>Ryeback brings food himself, a tray balanced on one forearm. Drops bowls of gunpowder chowder with affectionate brusqueness — <em>"Eat. All of you. Especially you — stiff breeze'd put you in the infirmary."</em> Glances at Casey: <em>"You. The hadozee. Barret was at the counter last night running his mouth about you. Said you read his birthday off the stars. Said you got it right."</em> Hip against the table. <em>"Do mine."</em></p>
+      <ul>
+        <li>Casey activates Stellar Reading. Three points light over Ryeback: <strong>{5, 7, 8}</strong> — uniquely Sagittarius. Holiday sign: <strong>Feast of the Moon — "Walks unseen; between worlds."</strong></li>
+        <li>When Casey delivers the reading, Ryeback goes still. Grin doesn't move. <em>"Huh."</em> Raps a knuckle on the table on his way back to the counter: <em>"Bowl's on the house, hadozee. The rest of you owe me."</em></li>
+        <li><strong>Reward:</strong> Casey has advantage on his next social roll with Ryeback.</li>
+        <li>If anyone brings up the thefts in his earshot during lunch, he'll grumble loudly about his stolen custom pistol — a casual nudge that the thefts hit instructors and staff, not just officers.</li>
+      </ul>
+    </div>
+
+    <div class="dm-note">
+      <div class="dm-note-label">Beat 2 — Miken's Confidence</div>
+      <p>Miken is jittery about the next training exercise. He's already convinced himself he doesn't have what it takes. The party can lift his spirits — and earn his crew's goodwill — through any of the following (DC 12). One success is enough.</p>
+      <ul>
+        <li><strong>Words of Encouragement</strong> — DC 12 Cha (Persuasion). Direct reassurance.</li>
+        <li><strong>Problem Solving</strong> — DC 12 Int (Arcana). Talk shop with him about spelljamming; redirect his mind.</li>
+        <li><strong>Feel the Vibe</strong> — DC 12 Cha (Persuasion). Speak to his crewmates; get them to call him over and pull him back in.</li>
+        <li>If any check succeeds, Miken's spirits lift. Apply a small situational bonus when the crews next meet during Trial by Fire — at your discretion (advantage on the first hazard check, or a friendly rivalry instead of an antagonistic one).</li>
+      </ul>
+    </div>
+
     <div class="outcome-label">Outcomes / Transitions</div>
-    <div class="outcome-item">Early crew chemistry. Academy rumors. Sol misfortune beat — inconvenient, awkward, useful.</div>
-    <div class="outcome-item">Transition into free-roam after lunch ends.</div>
-    <span class="reward-badge">Possible: rumor, cadet contact, meal token</span>
+    <div class="outcome-item">Crew chemistry forms naturally around Miken's nerves and Bartholomew's outsider energy.</div>
+    <div class="outcome-item">Casey's Stellar Reading lands its first canonical hit on a rare sign. Ryeback becomes a future contact.</div>
+    <div class="outcome-item">A light Sol misfortune beat can occur here — inconvenient and useful, not flashy.</div>
+    <div class="outcome-item">Lunch ends. The afternoon opens up.</div>
+    <span class="reward-badge">Ryeback advantage · Miken goodwill · cadet rumor</span>
   </div>
 </div>
 
+<!-- SCENE 3 -->
 <div class="scene-card">
   <div class="scene-header">
     <span class="scene-num">Scene 3</span>
-    <span class="scene-title">Free Roam Around Caelestis</span>
-    <span class="scene-tag">Various · Player-Driven</span>
+    <span class="scene-title">Free Roam — The Academy Opens</span>
+    <span class="scene-tag">Various · Player-Driven · Afternoon</span>
   </div>
   <div class="scene-body">
     <div class="scene-meta">
-      <div><div class="meta-label">Location</div><div class="meta-value">Player choice — Nexus / Chart Room, Sky Dock, Stores, Cadet Quarters</div></div>
-      <div><div class="meta-label">What's Happening</div><div class="meta-value">Crew splits or stays together, follows personal interests. Academy runs visibly strained at the edges. Staff is busier than it should be for an ordinary afternoon.</div></div>
+      <div><div class="meta-label">Location</div><div class="meta-value">Player choice — Nexus / Chart Room, Sky Dock, Sea Dock, Stores, Cadet Quarters</div></div>
+      <div><div class="meta-label">What's Happening</div><div class="meta-value">Crew splits or stays together. Personal threads. The academy runs busier than it should for an ordinary afternoon — staff moving, doors closing, more uniforms in corridors than usual. Tension at the edges, never centered.</div></div>
     </div>
+
+    <div class="dm-note">
+      <div class="dm-note-label">Gregory — First Calibration</div>
+      <p>If Gregory visits the docks (Sky Dock or Sea Dock) or any lower level of the academy, the pull in his core sharpens. He can attempt his first Calibration. On the first success (<strong>Bearing</strong>), describe the pull resolving into a direction: <em>"Below. Near cargo."</em> Do not explain more. The destination is the Sea Dock cargo holds; what's there is a Latchling that Rindle Gearloft has found and hidden. Read Rindle as guarded and over-specific if approached.</p>
+    </div>
+
     <div class="outcome-label">Outcomes by PC</div>
-    <div class="outcome-item"><strong>Gregory</strong> — route notation or anomaly find at the Chart Room; an odd destination, a restricted ledger entry</div>
-    <div class="outcome-item"><strong>Casey</strong> — Nexus visit yields subtle astral beat; nothing explained, just felt</div>
-    <div class="outcome-item"><strong>Boogie</strong> — Sky Dock: ship texture, maintenance talk, dock crew warmth</div>
-    <div class="outcome-item"><strong>Sol</strong> — misfortune reveals something useful; timing goes wrong in a way that matters</div>
-    <div class="outcome-item"><strong>Tumak</strong> — secrecy energy; stays close, watches; pulled but not named</div>
-    <div class="outcome-item">Kip &amp; Pik or dock staff mention: some Fleet missions move people, not freight</div>
-    <span class="reward-badge">Common utility item / consumable / requisition chit / favor</span>
+    <div class="outcome-item"><strong>Gregory</strong> — first Calibration available; Bearing reveals lower docks / cargo; Rindle Gearloft is the social obstacle</div>
+    <div class="outcome-item"><strong>Casey</strong> — Nexus visit yields a subtle astral fragment if he looks: a chart room with one ledger entry redacted, or a wall map that doesn't quite match what he saw in the wardrobe</div>
+    <div class="outcome-item"><strong>Boogie</strong> — Sky Dock: ship texture, maintenance talk, dock crew warmth; let the half-ship in his chest remain private unless he raises it</div>
+    <div class="outcome-item"><strong>Sol</strong> — misfortune reveals something useful; timing goes wrong in a way that matters; a dropped tray, a missed door, an overheard half-sentence</div>
+    <div class="outcome-item"><strong>Tumak</strong> — pulled but stays close; secrecy energy in the background; do not force a twin beat</div>
+    <div class="outcome-item"><strong>Bartholomew</strong> — optional Almost-Shift breadcrumb if he engages an unusual environment (alien plant in the Nexus garden, a caged specimen in Stores)</div>
+    <div class="outcome-item">Kip &amp; Pik or dock staff drop: <em>"Some crews move people, not freight."</em> Casually, in passing.</div>
+    <span class="reward-badge">Common utility item · consumable · requisition chit · subtle clue</span>
   </div>
 </div>
 
+<!-- SCENE 4 -->
 <div class="scene-card">
   <div class="scene-header">
     <span class="scene-num">Scene 4</span>
-    <span class="scene-title">Recount / Debrief</span>
-    <span class="scene-tag">Officer Corridor · Debrief Room</span>
+    <span class="scene-title">End of Day — Player Choice</span>
+    <span class="scene-tag">Player-Driven Close</span>
   </div>
   <div class="scene-body">
     <div class="scene-meta">
-      <div><div class="meta-label">Location</div><div class="meta-value">Officer hallway, debrief room, or examination area near Mirt's quarters</div></div>
-      <div><div class="meta-label">What's Happening</div><div class="meta-value">Tarto recalls the crew. They recount the incident. The preserved creature is examined. Officers confirm it connects to broader, coordinated thefts. The crew is dismissed for the evening with more questions than answers.</div></div>
+      <div><div class="meta-label">Location</div><div class="meta-value">Bunks, Weeping Goddess (drinks), training hall, or wherever players choose</div></div>
+      <div><div class="meta-label">What's Happening</div><div class="meta-value">The day ends on the players' terms. Let them choose how to close — a drink at the Goddess, quiet bunks, late training, a private conversation. Light touch. Brief — they're hungry for the action ahead.</div></div>
     </div>
+
     <div class="dm-note">
-      <div class="dm-note-label">DM Note — Sol's Moment</div>
-      <p>Make Sol's choice explicit and consequential. The officers learned something concrete because of him. Name it. Don't let it pass as routine.</p>
+      <div class="dm-note-label">Optional Private Beats</div>
+      <ul>
+        <li><strong>Sol — first scry save.</strong> If Sol is alone or in a quiet moment, ask for a Wisdom save. No DC announced. Don't explain. On a failure, describe an unsettling pressure he cannot name — like being watched from very far away. On a success, the pressure passes through him unfelt. The Crystalline Retrieval Construct is looking. Sol does not know.</li>
+        <li><strong>Boogie — the half-ship.</strong> If Boogie is alone, he can hold the half-ship from V01 again. Let the player decide what to do with it. No DM prompt needed. Note what he does for V003.</li>
+        <li><strong>Tumak — twin moment.</strong> Optional, only if curtains and privacy allow. A small sensory beat — the smell of something half-remembered drifting through the bunks. Do not force.</li>
+      </ul>
     </div>
+
     <div class="outcome-label">Outcomes / Transitions</div>
-    <div class="outcome-item">Sol explicitly validated. Attack confirmed as coordinated. One useful answer, one larger question.</div>
-    <div class="outcome-item">If they linger or pry: overheard fragment — <em>Watcher, Zenith, Monolith</em> — only in passing. Not explained.</div>
-    <span class="reward-badge">Possible: requisition favor / official goodwill / restricted access later</span>
+    <div class="outcome-item">Day closes naturally. Transition to the montage.</div>
   </div>
 </div>
 
+<!-- SCENE 5 -->
 <div class="scene-card">
   <div class="scene-header">
     <span class="scene-num">Scene 5</span>
-    <span class="scene-title">A Few Days Pass</span>
-    <span class="scene-tag">Montage · Academy Life</span>
+    <span class="scene-title">Montage — A Few Days Pass</span>
+    <span class="scene-tag">Read-Aloud · Time Skip</span>
   </div>
   <div class="scene-body">
     <div class="scene-meta">
-      <div><div class="meta-label">Location</div><div class="meta-value">Drills, meals, bunks, docks, Nexus — the ordinary rhythm of Caelestis</div></div>
-      <div><div class="meta-label">What's Happening</div><div class="meta-value">After the debrief, cadets retire. A few days pass in brief montage. Snippets of training, shared meals, passing NPCs, ship prep, routine academy life. The setting feels broader than crisis response.</div></div>
+      <div><div class="meta-label">Location</div><div class="meta-value">Caelestis — classes, drills, meals, bunks, dock work</div></div>
+      <div><div class="meta-label">What's Happening</div><div class="meta-value">A few days pass. The academy settles back into rhythm. The crew is no longer "new." Time keeps moving so the players feel they have lived here, not just survived three crises in a week.</div></div>
     </div>
+
+    <div class="read-aloud">
+      <div class="read-aloud-label">Read Aloud — The Days That Followed</div>
+      <p>The days that followed felt unlike the first. The chaos that had introduced you to Caelestis gave way to something steadier — lectures in the Nexus, drills on the simulation deck, meals taken without incident, hands learning the shape of new tools. Bartholomew became a face you nodded to in the corridor. Miken passed you in line at the Goddess and smiled. Ryeback shouted you down for not eating enough. The thefts went quieter, though the corridors stayed full of officers. Above cadet clearance, things were happening. Below it, you were learning. Then, one morning, a runner found your crew at breakfast with a folded note in her hand. Boatswain Tarto requests your presence at the Simulations Deck.</p>
+    </div>
+
     <div class="outcome-label">Outcomes / Transitions</div>
-    <div class="outcome-item">Stronger sense of place. Cadets feel like they've actually spent time here.</div>
-    <div class="outcome-item">Clean jump forward into the next mission — Trial by Fire.</div>
-    <span class="reward-badge">Routine NPC rapport / small requisition / subtle reminder academy keeps moving</span>
+    <div class="outcome-item">Time has passed. The crew feels settled. Caelestis feels lived-in.</div>
+    <div class="outcome-item">Cut directly to the Simulations Deck. Trial by Fire begins.</div>
   </div>
 </div>
 
+<!-- SCENE 6 -->
 <div class="scene-card">
   <div class="scene-header">
-    <span class="scene-num">Optional</span>
-    <span class="scene-title">Trial by Fire — Opening Beat</span>
-    <span class="scene-tag">Briefing Room · If Time Allows</span>
+    <span class="scene-num">Scene 6</span>
+    <span class="scene-title">Trial by Fire — Major Beats</span>
+    <span class="scene-tag">Expected Play · Likely Will Not Complete</span>
   </div>
   <div class="scene-body">
     <div class="scene-meta">
-      <div><div class="meta-label">Location</div><div class="meta-value">Briefing room, drill deck, dock, or mission assembly</div></div>
-      <div><div class="meta-label">What's Happening</div><div class="meta-value">A few days have passed. The cadets are called into their next practical mission. Routines are forming; the sense of place is real now. Run this only if the session moves quickly.</div></div>
+      <div><div class="meta-label">Location</div><div class="meta-value">Simulations Deck — main hall; then simulation chamber</div></div>
+      <div><div class="meta-label">What's Happening</div><div class="meta-value">Expect to enter the simulation. Do not expect to finish it. Hard-stop at any clean beat. Sabotage saves for V003 regardless.</div></div>
     </div>
-    <div class="outcome-label">Outcomes</div>
-    <div class="outcome-item">Role discussion. Anticipation. Launch into Trial by Fire — or a clean stop just as the mission begins.</div>
-    <span class="reward-badge">Light issue gear / signed pass / mission expectation</span>
+
+    <div class="dm-note">
+      <div class="dm-note-label">Briefing — Saerthe &amp; Tarto</div>
+      <p>The crew arrives at the same time as another team of cadets, including Miken. Saerthe and Tarto run the briefing. Friendly competition between teams; both squads earn points scored by the officers. The exercise: crew a simulated hammerhead, plot a course, survive Wildspace, and locate a ship lost in an asteroid cluster.</p>
+      <p style="margin-top:4pt;"><strong>Saerthe's aside.</strong> As Saerthe explains the simulation, he mentions — almost in passing — that <em>"one of my own ships has gone missing this week. I believe it's part of the thefts."</em> He says this without alarm, the way someone names a fact already settled in his own mind, but it lands hard if the players are listening. The thefts have escalated from items to vessels — and an instructor is openly connecting his loss to the larger pattern. If pressed, he won't say more in front of the other crew — only: <em>"We'll discuss it when the time is right."</em></p>
+    </div>
+
+    <div class="dm-note">
+      <div class="dm-note-label">Role Assignment — Use Caelestis Crew Roles</div>
+      <p>Use the homebrew Bridge Crew Roles document. Cadet rank for everyone. <strong>Spelljammer is mandatory and one occupant only — must be a spellcaster.</strong> Captain is one occupant only. Boatswain, Gunner, Navigator, and Medical Officer can be multi-occupant. Cap discussion at 10 minutes. Encourage players to pick the role that fits their character, not the optimal pick.</p>
+      <p style="margin-top:4pt;"><strong>Tarto's pass — for Sol.</strong> While the cadets sort roles, Tarto walks past Sol. Doesn't stop. Doesn't slow down. Just says, low and casual, <em>"You're the one who kept the neogi alive."</em> Beat. <em>"Noted."</em> Keeps walking. Not a reward. Not a speech. Just acknowledgment — she sees him. The convening proper is still queued, but Sol's player knows his choice landed somewhere.</p>
+    </div>
+
+    <div class="dm-note">
+      <div class="dm-note-label">Test of Mettle — Journey Beats</div>
+      <ul>
+        <li><strong>Takeoff.</strong> Spelljammer makes a DC 13 spellcasting ability check. First-try success = score boost. Second try auto-succeeds.</li>
+        <li><strong>Challenge 1 — Plot a Course.</strong> Each character makes a DC 12 check (Captain: Wis/Cha, Shipmate/Gunner: Str/Dex, Spelljammer: Int/Wis). Half success = pass.</li>
+        <li><strong>Challenge 2 — Electrical Storm.</strong> Giant space eels swarm the ship. Wildjammer ship combat using bulwark mechanics. BP first, then Hull. Boatswain restores BP at start of turn.</li>
+        <li><strong>Challenge 3 — Asteroid Cluster.</strong> Navigation hazard. Group checks.</li>
+        <li><strong>Challenge 4 — Ship-to-Ship.</strong> Simulated hostile vessel. Wildjammer combat — Spelljammer initiative shared with ship.</li>
+        <li><strong>Help! — Miken's Team Adrift.</strong> Other team's ship is severely damaged after the battle. Miken waves for help. If the crew rescues them, score boost; if Miken's confidence was lifted at lunch, the rescue is easier and the relationship reads as friendly.</li>
+      </ul>
+    </div>
+
+    <div class="flag">
+      <div class="flag-label">Hard Stops</div>
+      <p>Natural session-end points: after Role Assignment, after any single Challenge, mid-ship-combat (cliffhanger), or after the Help! rescue. <strong>Do not run Sabotage.</strong> Save that for Voyage 003 regardless of how far the session gets.</p>
+    </div>
+
+    <div class="outcome-label">Outcomes / Transitions</div>
+    <div class="outcome-item">Crew earns or loses score points based on performance. Score determines downstream rewards.</div>
+    <div class="outcome-item">Miken either earns the crew's friendship or remains an awkward acquaintance.</div>
+    <div class="outcome-item">Wherever play stops, V003 picks up. Sabotage is the cold open there.</div>
   </div>
 </div>
 
@@ -306,10 +395,15 @@ p { margin-bottom: 5pt; } strong { font-weight: bold; } em { font-style: italic;
 <div class="section-label">Secrets &amp; Clues</div>
 <div class="clues-list">
   <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text">The academy thefts are <strong>targeted and coordinated</strong>, not opportunistic. Someone knew which rooms to hit and when to create a diversion.</div></div>
-  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text"><strong>Sol preserving the creature</strong> is the only reason the officers can learn anything concrete. If he'd killed it, the investigation would have nothing.</div></div>
-  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text">Fleet sometimes moves <strong>specialized personnel to field assignments</strong>, not just cargo. Do not reveal Ezra specifically — only imply this.</div></div>
-  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text">A deeper layer of academy secrecy exists above cadet clearance. Words like <strong>Watcher, Zenith, Monolith</strong> may surface only in fragments — overheard, never explained.</div></div>
-  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text">Something about <strong>Sol subtly distorts timing and probability</strong> — inconveniently, awkwardly, but usefully. The misfortune has a shape.</div></div>
+  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text">The thefts have <strong>escalated to vessels.</strong> One of Saerthe's own ships has gone missing this week. The academy has not yet announced it publicly.</div></div>
+  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text"><strong>Sol's preservation</strong> of the creature is the only reason the investigation has anything concrete to work with. Officers know this — they have not yet thanked him for it.</div></div>
+  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text">The neogi were <strong>not acting on their own.</strong> They were bound — astrally collared by an outside hand. They carry phlogiston scent: they were transported in, not native to Caelestis. Whoever did this can compel a slaver species. (DM lore — surfaces in the deferred convening.)</div></div>
+  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text">A deeper layer of academy secrecy exists above cadet clearance. <strong>Watcher · Zenith · Monolith</strong> — surface only as fragments, only if the players pry. Never explained.</div></div>
+  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text">Fleet sometimes moves <strong>specialized personnel</strong> to field assignments, not just cargo. Do not reveal Ezra specifically — only imply.</div></div>
+  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text">Sol's misfortune has <strong>shape</strong> — inconvenient, awkward, but always useful. It reveals what should be hidden. Something is wrong with timing around him.</div></div>
+  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text"><strong>Sol may be scried tonight</strong> by the Crystalline Retrieval Construct. Wisdom save, no DC announced. Sol does not know he is being looked for.</div></div>
+  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text">Gregory's anomaly is at the <strong>Sea Dock, near cargo</strong>. Rindle Gearloft has found it. He is hiding it. The pull is directional, not random.</div></div>
+  <div class="clue-item"><div class="clue-diamond"></div><div class="clue-text"><strong>Mirt knows more than he is saying.</strong> The wardrobe is his. The Viren reference is his. He is not yet ready to discuss it. (Surfaces in the deferred convening.)</div></div>
 </div>
 
 <hr class="rule-thin">
@@ -320,27 +414,36 @@ p { margin-bottom: 5pt; } strong { font-weight: bold; } em { font-style: italic;
 <div class="loc-card">
   <div class="loc-name">Weeping Goddess</div>
   <div class="loc-body">
-    <div><div class="loc-col-label">Purpose</div><div class="loc-col-text">Social opening, crew formation, academy texture</div></div>
-    <div><div class="loc-col-label">What's Here</div><div class="loc-col-text">Lunch crowd spanning all of Wildspace — diverse species, low-stakes rivalries, gossip, Bartholomew and Miken before the party arrives</div></div>
-    <div><div class="loc-col-label">Possible Clue / Scene</div><div class="loc-col-text">Rumor about tightened security, missing supplies, or odd mission assignments</div></div>
+    <div><div class="loc-col-label">Purpose</div><div class="loc-col-text">Social opening, crew formation, academy texture, Casey's first Stellar Reading hit</div></div>
+    <div><div class="loc-col-label">What's Here</div><div class="loc-col-text">Lunch crowd from across Wildspace; Ryeback at the counter and on the floor; Miken at the only open table; rumor and gossip running quiet</div></div>
+    <div><div class="loc-col-label">Possible Clue / Scene</div><div class="loc-col-text">Ryeback's stolen pistol thread if anyone raises the thefts in earshot</div></div>
   </div>
 </div>
 
 <div class="loc-card">
   <div class="loc-name">Spelljammer Nexus / Chart Room</div>
   <div class="loc-body">
-    <div><div class="loc-col-label">Purpose</div><div class="loc-col-text">Gregory / Casey curiosity; restricted research; Saerthe presence</div></div>
-    <div><div class="loc-col-label">What's Here</div><div class="loc-col-text">Charts, route ledgers, staff running busier than usual; Saerthe may be present if useful</div></div>
-    <div><div class="loc-col-label">Possible Clue / Scene</div><div class="loc-col-text">Odd route notation, a restricted destination, "not for cadets" exchange overheard</div></div>
+    <div><div class="loc-col-label">Purpose</div><div class="loc-col-text">Gregory / Casey curiosity; restricted research; Saerthe presence (optional)</div></div>
+    <div><div class="loc-col-label">What's Here</div><div class="loc-col-text">Charts, route ledgers, staff running busier than usual; one ledger entry is redacted; a wall map's edge does not quite match what Casey saw</div></div>
+    <div><div class="loc-col-label">Possible Clue / Scene</div><div class="loc-col-text">Odd route notation; restricted destination; "not for cadets" exchange overheard</div></div>
   </div>
 </div>
 
 <div class="loc-card">
-  <div class="loc-name">Sky Dock / Kip and Pik</div>
+  <div class="loc-name">Sky Dock — Kip &amp; Pik</div>
   <div class="loc-body">
     <div><div class="loc-col-label">Purpose</div><div class="loc-col-text">Ship texture, logistics, Fleet breadcrumb for Boogie</div></div>
     <div><div class="loc-col-label">What's Here</div><div class="loc-col-text">Ships, loaders, instructors, transit chatter; Kip and Pik running drills</div></div>
-    <div><div class="loc-col-label">Possible Clue / Scene</div><div class="loc-col-text">"Some crews move people, not freight." Ship-role conversation if Boogie engages.</div></div>
+    <div><div class="loc-col-label">Possible Clue / Scene</div><div class="loc-col-text">"Some crews move people, not freight." Casual, in passing.</div></div>
+  </div>
+</div>
+
+<div class="loc-card">
+  <div class="loc-name">Sea Dock — Lower Cargo</div>
+  <div class="loc-body">
+    <div><div class="loc-col-label">Purpose</div><div class="loc-col-text">Gregory's anomaly target; first Calibration payoff destination</div></div>
+    <div><div class="loc-col-label">What's Here</div><div class="loc-col-text">Rindle Gearloft; crates moving; the Latchling, hidden; the pull in Gregory's core resolves into a clear direction here</div></div>
+    <div><div class="loc-col-label">Possible Clue / Scene</div><div class="loc-col-text">Rindle reads guarded and over-specific; he knows; he will not say</div></div>
   </div>
 </div>
 
@@ -348,17 +451,17 @@ p { margin-bottom: 5pt; } strong { font-weight: bold; } em { font-style: italic;
   <div class="loc-name">Stores / Mr. Blip</div>
   <div class="loc-body">
     <div><div class="loc-col-label">Purpose</div><div class="loc-col-text">Reward vector, logistics gossip, supply anomalies</div></div>
-    <div><div class="loc-col-label">What's Here</div><div class="loc-col-text">Blip, approved gear, supply ledgers; he knows more about inventory weirdness than he should</div></div>
-    <div><div class="loc-col-label">Possible Clue / Scene</div><div class="loc-col-text">Transfer-marked supplies, consumable reward, requisition angle; Gregory-Blip dynamic if they meet</div></div>
+    <div><div class="loc-col-label">What's Here</div><div class="loc-col-text">Blip, approved gear, supply ledgers; he knows more than he should about inventory weirdness</div></div>
+    <div><div class="loc-col-label">Possible Clue / Scene</div><div class="loc-col-text">Transfer-marked supplies; consumable reward; Gregory-Blip dynamic if they meet</div></div>
   </div>
 </div>
 
 <div class="loc-card">
-  <div class="loc-name">Debrief Hall / Officer Corridor</div>
+  <div class="loc-name">Simulations Deck</div>
   <div class="loc-body">
-    <div><div class="loc-col-label">Purpose</div><div class="loc-col-text">Tighten the theft plot; reveal pressure existing above cadet clearance</div></div>
-    <div><div class="loc-col-label">What's Here</div><div class="loc-col-text">Tarto, security staff, the preserved specimen under examination; Saerthe possibly present</div></div>
-    <div><div class="loc-col-label">Possible Clue / Scene</div><div class="loc-col-text">Watcher / Zenith / Monolith — fragments only if they linger or pry; never offered directly</div></div>
+    <div><div class="loc-col-label">Purpose</div><div class="loc-col-text">Trial by Fire briefing and simulation chamber</div></div>
+    <div><div class="loc-col-label">What's Here</div><div class="loc-col-text">Main hall; Saerthe and Tarto running the briefing; the other team and Miken; three simulation chambers behind rune-scribed walls</div></div>
+    <div><div class="loc-col-label">Possible Clue / Scene</div><div class="loc-col-text">Hammerhead-class ship inside the chamber; Wildjammer ruleset live; bulwark mechanics in play</div></div>
   </div>
 </div>
 
@@ -369,38 +472,59 @@ p { margin-bottom: 5pt; } strong { font-weight: bold; } em { font-style: italic;
 <div class="npc-grid">
 
   <div class="npc-card">
-    <div class="npc-header"><span class="npc-name">Boatswain Tarto</span><span class="npc-tag">Recall · Debrief</span></div>
+    <div class="npc-header"><span class="npc-name">Boatswain Tarto</span><span class="npc-tag">Assignment · Briefing</span></div>
     <div class="npc-body">
-      <div class="npc-row"><div class="npc-label">Role</div><div class="npc-value">Assigns Bartholomew; recalls the crew when free time ends; runs the debrief practical and clean</div></div>
+      <div class="npc-row"><div class="npc-label">Role</div><div class="npc-value">Assigns Bartholomew at the open; co-runs the Trial by Fire briefing after the montage</div></div>
       <div class="npc-row"><div class="npc-label">Vibe</div><div class="npc-value">Clipped, direct, unsentimental. Quietly approving when earned. Does not perform authority.</div></div>
-      <div class="npc-row"><div class="npc-label">Snippets</div><div class="npc-value">"Wilder or not, you're no different than any other crew member once you're aboard." / "Find them. Eat. Keep up." / "Your testimony. From the top."</div></div>
-      <div class="npc-row"><div class="npc-label">Wants</div><div class="npc-value">Clear testimony and crew discipline. Knows the incident is bigger than a cadet errand.</div></div>
+      <div class="npc-row"><div class="npc-label">Snippets</div><div class="npc-value">"Wilder or not, you're no different than any other crew member once you're aboard." / "Find them. Eat. Keep up." / "Listen to what I tell you; it might just save your life."</div></div>
+      <div class="npc-row"><div class="npc-label">Wants</div><div class="npc-value">Crew discipline and competence. Knows the academy's larger problems are above cadet clearance.</div></div>
     </div>
   </div>
 
   <div class="npc-card">
-    <div class="npc-header"><span class="npc-name">Saerthe Abyzine</span><span class="npc-tag">Optional · Quiet Pressure</span></div>
+    <div class="npc-header"><span class="npc-name">Saerthe Abyzine</span><span class="npc-tag">Briefing · Missing Ship</span></div>
     <div class="npc-body">
-      <div class="npc-row"><div class="npc-label">Role</div><div class="npc-value">Optional quiet pressure; overheard source; insight fragment if the party visits the Nexus</div></div>
-      <div class="npc-row"><div class="npc-value">Eerie, measured, sees too much. Rarely overexplains. Lets fragments slip — never full pictures.</div></div>
-      <div class="npc-row"><div class="npc-label">Wants</div><div class="npc-value">Competence and discretion. Knows more than cadets should and will not volunteer it.</div></div>
+      <div class="npc-row"><div class="npc-label">Role</div><div class="npc-value">Optional Nexus presence during free roam; co-runs the Trial by Fire briefing; drops the missing-ship line in passing</div></div>
+      <div class="npc-row"><div class="npc-label">Vibe</div><div class="npc-value">Silver-eyed, measured, sees too much. Stern gaze that shifts to a wide grin. Lets fragments slip — never full pictures.</div></div>
+      <div class="npc-row"><div class="npc-label">Snippets</div><div class="npc-value">"Well, this is going to be fun." / "One of my own ships has gone missing this week." / "We'll discuss it when the time is right."</div></div>
+      <div class="npc-row"><div class="npc-label">Knows</div><div class="npc-value">More than he says. His own vessel is gone — recent. The theft is no longer just academy property or staff items. Ships now.</div></div>
     </div>
   </div>
 
   <div class="npc-card">
-    <div class="npc-header"><span class="npc-name">Miken</span><span class="npc-tag">Lunch · Social Texture</span></div>
+    <div class="npc-header"><span class="npc-name">Petty Officer Ryeback</span><span class="npc-tag">Lunch · Galley Cook</span></div>
     <div class="npc-body">
-      <div class="npc-row"><div class="npc-label">Role</div><div class="npc-value">Bartholomew's first ordinary cadet contact. Academy texture; social foothold.</div></div>
-      <div class="npc-row"><div class="npc-label">Vibe</div><div class="npc-value">Eager, slightly awkward, easy to like. Wants social footing; may try to attach to a more capable crew.</div></div>
-      <div class="npc-row"><div class="npc-label">Snippets</div><div class="npc-value">"Seat's open, if you need it." / "You got sent here too?" / "Then I guess we're both waiting on someone."</div></div>
+      <div class="npc-row"><div class="npc-label">Role</div><div class="npc-value">Brings food himself. Prompts Casey's Stellar Reading. Stolen pistol thread surfaces if the thefts are raised.</div></div>
+      <div class="npc-row"><div class="npc-label">Vibe</div><div class="npc-value">Brash, raucous, affectionate giff. Bear-hug energy. Hears everything. Belongs to no crew.</div></div>
+      <div class="npc-row"><div class="npc-label">Snippets</div><div class="npc-value">"Eat. All of you. Stiff breeze'd put you in the infirmary." / "Barret was at the counter last night running his mouth about you. Do mine." / "Huh."</div></div>
+      <div class="npc-row"><div class="npc-label">Sign</div><div class="npc-value">Feast of the Moon (Sagittarius, holiday). Stars {5, 7, 8}. "Walks unseen; between worlds."</div></div>
+    </div>
+  </div>
+
+  <div class="npc-card">
+    <div class="npc-header"><span class="npc-name">Miken Haverstance</span><span class="npc-tag">Lunch · Social Texture</span></div>
+    <div class="npc-body">
+      <div class="npc-row"><div class="npc-label">Role</div><div class="npc-value">Bartholomew's first ordinary cadet contact. DC 12 confidence beat affects Trial by Fire downstream.</div></div>
+      <div class="npc-row"><div class="npc-label">Vibe</div><div class="npc-value">Eager, slightly awkward, easy to like. Wants social footing; afraid of letting his crew down.</div></div>
+      <div class="npc-row"><div class="npc-label">Snippets</div><div class="npc-value">"Seat's open, if you need it." / "I'd like to be a great spelljammer, but I don't know if I've got it in me."</div></div>
       <div class="npc-row"><div class="npc-label">Knows</div><div class="npc-value">Only surface gossip. Does not know anything about the thefts.</div></div>
+    </div>
+  </div>
+
+  <div class="npc-card">
+    <div class="npc-header"><span class="npc-name">Rindle Gearloft</span><span class="npc-tag">Sea Dock · Gregory's Obstacle</span></div>
+    <div class="npc-body">
+      <div class="npc-row"><div class="npc-label">Role</div><div class="npc-value">Found the Latchling. Hiding it. Protective, not malicious. Will deflect questions about dock inventory.</div></div>
+      <div class="npc-row"><div class="npc-label">Vibe</div><div class="npc-value">Guarded and over-specific when probed. Reads as a worker with something he should not have.</div></div>
+      <div class="npc-row"><div class="npc-label">Wants</div><div class="npc-value">To keep the thing safe. To avoid the academy taking it.</div></div>
+      <div class="npc-row"><div class="npc-label">Notes</div><div class="npc-value">Do not let Gregory reach the Latchling this session. The arc is the journey, not the destination.</div></div>
     </div>
   </div>
 
   <div class="npc-card">
     <div class="npc-header"><span class="npc-name">Mr. Blip</span><span class="npc-tag">Stores · Reward Vector</span></div>
     <div class="npc-body">
-      <div class="npc-row"><div class="npc-label">Role</div><div class="npc-value">Reward and logistics vector. Use Blip, supply ledgers, or subtle academy salvage as loot vectors.</div></div>
+      <div class="npc-row"><div class="npc-label">Role</div><div class="npc-value">Reward and logistics vector. Use him, ledgers, or salvage as the natural loot vector.</div></div>
       <div class="npc-row"><div class="npc-label">Vibe</div><div class="npc-value">Helpful, odd, pragmatic, a bit too informed about supply weirdness. Does not volunteer what he knows.</div></div>
       <div class="npc-row"><div class="npc-label">Wants</div><div class="npc-value">Things to stay moving. Dislikes disruption to ledger order.</div></div>
       <div class="npc-row"><div class="npc-label">Note</div><div class="npc-value">Gregory–Blip dynamic remains live. Do not resolve it — let the similarity sit.</div></div>
@@ -422,11 +546,12 @@ p { margin-bottom: 5pt; } strong { font-weight: bold; } em { font-style: italic;
 
 <!-- REWARDS -->
 <div class="section-label">Rewards &amp; Treasure</div>
-<p style="font-size:8pt; color:#444; margin-bottom:5pt;">Light session tone — 0–1 permanent item, 1 consumable, 1 favor/access reward. Do not over-reward a downtime session.</p>
+<p style="font-size:8pt; color:#444; margin-bottom:5pt;">Light session tone. Sol's institutional recognition is deferred to the convening (see Look Ahead). Action-oriented rewards live here.</p>
 <div class="rewards-row">
-  <div class="reward-card"><div class="reward-title">Potion of Healing</div><div class="reward-desc">From Stores / Mr. Blip, or salvaged via Gregory's anomaly sense</div></div>
-  <div class="reward-card"><div class="reward-title">Common Utility Item</div><div class="reward-desc">Something practical from the supply ledgers — a tool, consumable, or minor equipment piece</div></div>
-  <div class="reward-card"><div class="reward-title">Requisition Chit / Favor</div><div class="reward-desc">Official goodwill from the debrief; redeemable for restricted access or a future favor</div></div>
+  <div class="reward-card"><div class="reward-title">Ryeback Advantage</div><div class="reward-desc">Casey gains advantage on his next social roll with Ryeback after the Stellar Reading hit.</div></div>
+  <div class="reward-card"><div class="reward-title">Miken Goodwill</div><div class="reward-desc">If the party lifts his spirits, the rival crew reads as friendly — bonus on the first hazard check in Trial by Fire.</div></div>
+  <div class="reward-card"><div class="reward-title">Free Roam Loot</div><div class="reward-desc">Potion of healing, common utility item, requisition chit, or salvaged minor object via Gregory's anomaly sense.</div></div>
+  <div class="reward-card"><div class="reward-title">Trial by Fire Score</div><div class="reward-desc">Performance in the simulation banks score points. Higher score = better rewards when the trial concludes in V003.</div></div>
 </div>
 
 <hr class="rule-thin">
@@ -434,17 +559,47 @@ p { margin-bottom: 5pt; } strong { font-weight: bold; } em { font-style: italic;
 <!-- MISC DM NOTES -->
 <div class="section-label">Miscellaneous DM Notes</div>
 <div class="misc-list">
-  <div class="misc-item">Tarto already gave them the rest of the day after Voyage 001. Let that close naturally before the time skip forward.</div>
+  <div class="misc-item">Tarto already gave them the rest of the day after Voyage 001. Let the day close naturally before the time skip.</div>
   <div class="misc-item">Sol's minor misfortune must be inconvenient, awkward, and useful — not flashy. It reveals something. It does not embarrass him.</div>
   <div class="misc-item">Do not reveal Ezra specifically. Only imply that Fleet sometimes transports specialized personnel.</div>
-  <div class="misc-item">Let the academy feel busy and inhabited: drills, meals, passing cadets, dock work, and only occasional tension at the edges.</div>
-  <div class="misc-item">Bartholomew's entrance is a natural crew assignment. Tarto's tone signals this is routine academy procedure, not special treatment.</div>
-  <div class="misc-item">End strong on the debrief, the evening close, the few-days-passed montage, or the opening beat of Trial by Fire. Do not push past a clean ending.</div>
+  <div class="misc-item">The montage is meant to slow the perceived pace of events. The crew should feel they have lived at Caelestis, not just survived three crises in a week.</div>
+  <div class="misc-item">Trial by Fire is expected play, not fallback. The party wants action. Give it to them. Hard stop before Sabotage no matter how far you get.</div>
+  <div class="misc-item">If Gregory pushes hard at the Sea Dock, give him Rindle as the obstacle — do not give him the Latchling. The arc is the journey.</div>
+  <div class="misc-item">Sol's scry save is optional and private. Don't announce it. Don't explain it. The pressure passes on a success and remembers him on a failure.</div>
+  <div class="misc-item">Sol's institutional recognition for preserving the creature is queued for the convening (deferred). Do not have officers acknowledge it casually in passing this session — let the formal moment land later.</div>
+</div>
+
+<hr class="rule-thin">
+
+<!-- LOOK AHEAD -->
+<div class="section-label">Look Ahead — Deferred Scenes</div>
+<div class="lookahead">
+  <div class="lookahead-label">Deferred · Likely V003 Post-Sabotage</div>
+  <h4>The Convening — Tarto, Mirt &amp; Saerthe</h4>
+  <p>Originally planned for V002, deferred to keep this session moving toward action. Best run after Sabotage in V003 — once the academy has visible reason to take the cadets seriously as witnesses and the theft pattern is undeniable. Mirt's personal attendance signals stakes. Saerthe watches. Tarto runs the room.</p>
+
+  <p style="margin-top:6pt;"><strong>Structure when ready:</strong></p>
+  <ul>
+    <li><strong>Recount</strong> — The crew walks through what happened in Mirt's quarters. Mirt asks pointed questions about the wardrobe, the timing, what the creatures did first. Does not volunteer information.</li>
+    <li><strong>Sol's Recognition</strong> — When the story reaches the preservation choice, Mirt stops. <em>"You kept it alive. That's the only reason we have anything to work with. Your name will be in the report."</em> Reward: formal commendation on file; restricted-access pass to the lower decks signed by Tarto.</li>
+    <li><strong>Investigate the Creature</strong> — Players examine the preserved specimen. One check each, unlock one piece of information per success:
+      <ul style="margin-top:2pt;">
+        <li>Arcana (DC 13) — astrally collared; the neogi was compelled, not acting on its own will</li>
+        <li>Investigation (DC 13) — sigils etched into the chitin beneath the limb joints; a brand a neogi would not bear willingly — there is a higher power above it</li>
+        <li>Nature (DC 13) — anomalies in its physiology suggest it has been altered; whoever bound it has changed something fundamental</li>
+        <li>Medicine (DC 13) — venom in the mandibles is paralytic, calibrated; meant to hold Mirt, not kill him</li>
+        <li>Survival (DC 12) — phlogiston scent on the legs; transported in from outside Caelestis</li>
+      </ul>
+    </li>
+    <li><strong>The Larger Picture (if they pry)</strong> — Mirt: <em>"This is not the first time something like this has tried to reach me."</em> Saerthe, almost to herself: <em>"A Watcher would have caught the neogi before it crossed our threshold."</em> Tarto closes: <em>"You'll be told what you need to know when you need to know it. Dismissed."</em></li>
+  </ul>
+
+  <p style="margin-top:6pt;"><strong>When to run it:</strong> After Sabotage. The crew has now been targeted in a simulation chamber — that is the second incident. Mirt convenes them not just as witnesses but as a pattern. The Watcher / Zenith / Monolith fragments land harder when the player can already see the shape forming.</p>
 </div>
 
 <div class="flag" style="margin-top:6pt">
   <div class="flag-label">Carry Forward to Voyage 003</div>
-  <p>Bartholomew is part of the crew. The academy theft investigation has more shape — coordinated, targeted, above cadet clearance. Sol's choice to preserve the creature has been formally acknowledged. Casey is carrying a voice and a star map he hasn't told anyone about except Tumak, who is carrying the shirt without asking why. Gregory felt something directional. Boogie has half a ship inside his chest. The montage closes with the academy feeling lived-in — and Trial by Fire is next.</p>
+  <p>Bartholomew is part of the crew. Casey has Ryeback as a future contact. Gregory has a Bearing on his first anomaly: the Sea Dock, near cargo; Rindle is the obstacle. Boogie still carries half a ship inside his chest. Tumak still carries the shirt and the bag. Sol may have been scried; he does not know. <strong>Tarto has quietly acknowledged Sol's preservation choice</strong> — public recognition is still queued. <strong>One of Saerthe's ships is missing</strong> — the thefts have escalated to vessels and have not been publicly announced. Trial by Fire is in motion — wherever play stopped, pick up there. Sabotage is the V003 cold open. The convening with Mirt and Saerthe is queued for after Sabotage lands.</p>
 </div>
 
 <!-- LIVE LOG -->
