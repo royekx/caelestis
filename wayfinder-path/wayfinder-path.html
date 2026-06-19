@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wayfinder's Path — Tumak Swan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-deep:       #1a130c;
+    --bg-darker:     #14100a;
+    --parchment:     #2a2017;
+    --parchment-lit: #3a2c1f;
+    --bronze:        #c9a961;
+    --bronze-dim:    #8b6f47;
+    --bronze-glow:   #e8c878;
+    --ink:           #d9c9a8;
+    --ink-faded:     #8a7960;
+    --ink-deep:      #c4b08a;
+    --ember:         #d97757;
+    /* Starlight — a soft cool-blue accent, echoing the rune luminescence
+       without competing with the gold/bronze base palette. */
+    --starlight:     #8ea7c5;
+    --starlight-dim: #5d7593;
+    --starlight-glow:#a8c0db;
+    --rule:          rgba(201, 169, 97, 0.18);
+    --rule-strong:   rgba(201, 169, 97, 0.45);
+    /* The body silhouette uses a cool aged-iron tone so the warm gold runes
+       feel like they're being held by a cooler structural frame. */
+    --stick:         rgba(142, 167, 197, 0.55);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--bg-deep);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  body {
+    background:
+      radial-gradient(ellipse 80% 40% at 50% 0%, rgba(142,167,197,0.10) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 30% at 15% 35%, rgba(168,192,219,0.06) 0%, transparent 65%),
+      radial-gradient(ellipse 60% 35% at 85% 70%, rgba(94,117,147,0.07) 0%, transparent 65%),
+      radial-gradient(ellipse 70% 40% at 50% 100%, rgba(201,169,97,0.04) 0%, transparent 60%),
+      var(--bg-deep);
+    padding: 2.5rem 1.5rem 4rem;
+    position: relative;
+  }
+
+  /* Starfield — drifting points of light scattered across the void.
+     Pure CSS, fixed to viewport so it doesn't scroll with content. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+      /* Cool starlight points */
+      radial-gradient(2.5px 2.5px at  4% 12%, rgba(168,192,219,0.65), transparent 60%),
+      radial-gradient(2px 2px at 11% 38%, rgba(168,192,219,0.50), transparent 60%),
+      radial-gradient(3.5px 3.5px at 17% 67%, rgba(168,192,219,0.65), transparent 60%),
+      radial-gradient(2px 2px at 22% 88%, rgba(168,192,219,0.45), transparent 60%),
+      radial-gradient(2.5px 2.5px at 28% 22%, rgba(168,192,219,0.55), transparent 60%),
+      radial-gradient(2.8px 2.8px at 33% 54%, rgba(168,192,219,0.50), transparent 60%),
+      radial-gradient(2.5px 2.5px at 39% 14%, rgba(168,192,219,0.60), transparent 60%),
+      radial-gradient(4px 4px at 44% 41%, rgba(168,192,219,0.40), transparent 60%),
+      radial-gradient(2px 2px at 49% 73%, rgba(168,192,219,0.55), transparent 60%),
+      radial-gradient(2.8px 2.8px at 54% 19%, rgba(168,192,219,0.50), transparent 60%),
+      radial-gradient(2px 2px at 58% 92%, rgba(168,192,219,0.45), transparent 60%),
+      radial-gradient(3.5px 3.5px at 63% 47%, rgba(168,192,219,0.55), transparent 60%),
+      radial-gradient(2.5px 2.5px at 67% 8%,  rgba(168,192,219,0.60), transparent 60%),
+      radial-gradient(2px 2px at 71% 35%, rgba(168,192,219,0.50), transparent 60%),
+      radial-gradient(2.8px 2.8px at 76% 68%, rgba(168,192,219,0.55), transparent 60%),
+      radial-gradient(2px 2px at 81% 24%, rgba(168,192,219,0.45), transparent 60%),
+      radial-gradient(3.5px 3.5px at 85% 79%, rgba(168,192,219,0.60), transparent 60%),
+      radial-gradient(2.5px 2.5px at 89% 51%, rgba(168,192,219,0.50), transparent 60%),
+      radial-gradient(2px 2px at 93% 16%, rgba(168,192,219,0.55), transparent 60%),
+      radial-gradient(2.8px 2.8px at 97% 85%, rgba(168,192,219,0.50), transparent 60%),
+      /* Mid-band cool */
+      radial-gradient(2px 2px at  8% 76%, rgba(168,192,219,0.45), transparent 60%),
+      radial-gradient(2px 2px at 15% 4%,  rgba(168,192,219,0.50), transparent 60%),
+      radial-gradient(2px 2px at 26% 60%, rgba(168,192,219,0.40), transparent 60%),
+      radial-gradient(3.5px 3.5px at 37% 84%, rgba(168,192,219,0.55), transparent 60%),
+      radial-gradient(2.5px 2.5px at 46% 5%, rgba(168,192,219,0.50), transparent 60%),
+      radial-gradient(2px 2px at 52% 33%, rgba(168,192,219,0.45), transparent 60%),
+      radial-gradient(2.8px 2.8px at 60% 62%, rgba(168,192,219,0.50), transparent 60%),
+      radial-gradient(2px 2px at 69% 89%, rgba(168,192,219,0.45), transparent 60%),
+      radial-gradient(3.5px 3.5px at 78% 13%, rgba(168,192,219,0.60), transparent 60%),
+      radial-gradient(2px 2px at 87% 40%, rgba(168,192,219,0.45), transparent 60%),
+      radial-gradient(2.5px 2.5px at 95% 64%, rgba(168,192,219,0.50), transparent 60%),
+      /* A few warm "wayfinder" gold stars sprinkled in */
+      radial-gradient(2.8px 2.8px at 13% 51%, rgba(232,200,120,0.65), transparent 60%),
+      radial-gradient(3.5px 3.5px at 41% 27%, rgba(232,200,120,0.60), transparent 60%),
+      radial-gradient(2.5px 2.5px at 65% 76%, rgba(232,200,120,0.55), transparent 60%),
+      radial-gradient(4px 4px at 82% 6%,  rgba(232,200,120,0.65), transparent 60%),
+      radial-gradient(2.5px 2.5px at 25% 47%, rgba(232,200,120,0.50), transparent 60%),
+      radial-gradient(2.8px 2.8px at 56% 56%, rgba(232,200,120,0.55), transparent 60%),
+      radial-gradient(2.5px 2.5px at 74% 27%, rgba(232,200,120,0.50), transparent 60%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    pointer-events: none;
+    z-index: 0;
+    animation: starlight-drift 90s ease-in-out infinite;
+  }
+
+  /* Very slow, almost imperceptible drift to give the stars a sense of life. */
+  @keyframes starlight-drift {
+    0%, 100% { opacity: 0.85; }
+    50%      { opacity: 1; }
+  }
+
+  .wrap { max-width: 1000px; margin: 0 auto; position: relative; z-index: 1; }
+
+  header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: none;
+    position: relative;
+  }
+  /* The hairline below the header is now a gradient that fades from
+     transparent → starlight → transparent, like a horizon. */
+  header::before {
+    content: "";
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(142,167,197,0.4) 30%,
+      rgba(232,200,120,0.5) 50%,
+      rgba(142,167,197,0.4) 70%,
+      transparent 100%);
+  }
+  header::after {
+    content: "✦";
+    position: absolute;
+    left: 50%; bottom: -8px; transform: translateX(-50%);
+    color: var(--starlight);
+    font-size: 0.9rem;
+    background: var(--bg-deep);
+    padding: 0 0.6em;
+    text-shadow: 0 0 10px rgba(168,192,219,0.7);
+    filter: none;
+    width: auto; height: auto;
+    border-radius: 0;
+    opacity: 1;
+  }
+
+  .eyebrow {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--starlight);
+    margin-bottom: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85em;
+    text-shadow: 0 0 8px rgba(168,192,219,0.35);
+  }
+  .eyebrow::before,
+  .eyebrow::after {
+    content: "✦";
+    font-size: 0.7em;
+    color: var(--starlight-dim);
+    opacity: 0.9;
+    text-shadow: 0 0 6px rgba(168,192,219,0.55);
+  }
+  h1 {
+    font-family: 'IM Fell English SC', serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    color: var(--bronze-glow);
+    letter-spacing: 0.04em;
+    font-weight: normal;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    text-shadow:
+      0 0 14px rgba(232,200,120,0.30),
+      0 0 28px rgba(142,167,197,0.22);
+  }
+  .subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--starlight-dim);
+    max-width: 540px;
+    margin: 0 auto;
+    text-shadow: 0 0 6px rgba(168,192,219,0.18);
+  }
+
+  /* ============ STATUS BAR ============ */
+  .status {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    padding: 1.25rem;
+    background:
+      radial-gradient(ellipse at top, rgba(168,192,219,0.06) 0%, transparent 70%),
+      var(--parchment);
+    border: 1px solid rgba(142,167,197,0.22);
+    border-radius: 2px;
+    position: relative;
+  }
+  /* Small star markers at the top corners of the status block */
+  .status::before,
+  .status::after {
+    content: "✦";
+    position: absolute;
+    top: -0.55rem;
+    font-size: 0.7rem;
+    color: var(--starlight);
+    background: var(--bg-deep);
+    padding: 0 0.4em;
+    text-shadow: 0 0 6px rgba(168,192,219,0.6);
+  }
+  .status::before { left: 1rem; }
+  .status::after  { right: 1rem; }
+  .status-cell {
+    text-align: center;
+    padding: 0 0.5rem;
+    border-right: 1px solid rgba(142,167,197,0.2);
+  }
+  .status-cell:last-child { border-right: none; }
+  .status-label {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--starlight-dim);
+    margin-bottom: 0.4rem;
+  }
+  .status-value {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1.6rem;
+    color: var(--bronze);
+    letter-spacing: 0.03em;
+  }
+  .status-value.locked { color: var(--ink-faded); opacity: 0.55; }
+  .status-value.ready { color: var(--bronze-glow); }
+  .status-detail {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.8rem;
+    color: var(--starlight-dim);
+    margin-top: 0.15rem;
+  }
+
+  /* ============ FIGURE WRAP ============ */
+  .diagram-wrap {
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 35%, rgba(142,167,197,0.10) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 30% at 50% 75%, rgba(168,192,219,0.06) 0%, transparent 70%),
+      var(--parchment);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 1.25rem 1rem 1.75rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  /* A diffused starlight glow that hovers behind the silhouette. */
+  .diagram-wrap::before {
+    content: "";
+    position: absolute;
+    top: 25%; left: 50%; transform: translateX(-50%);
+    width: 320px; height: 360px;
+    background: radial-gradient(ellipse at center,
+      rgba(168,192,219,0.10) 0%,
+      rgba(142,167,197,0.05) 40%,
+      transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .diagram-wrap > * { position: relative; z-index: 1; }
+  .diagram-corner {
+    position: absolute;
+    width: 22px; height: 22px;
+    border: 1px solid var(--starlight-dim);
+    opacity: 0.55;
+  }
+  .corner-tl { top: 8px; left: 8px; border-right: none; border-bottom: none; }
+  .corner-tr { top: 8px; right: 8px; border-left: none; border-bottom: none; }
+  .corner-bl { bottom: 8px; left: 8px; border-right: none; border-top: none; }
+  .corner-br { bottom: 8px; right: 8px; border-left: none; border-top: none; }
+
+  /* ============ FRONT/BACK TOGGLE ============ */
+  .toggle {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 0.75rem;
+  }
+  .toggle.view-toggle { margin-bottom: 0.4rem; }
+  .toggle button {
+    appearance: none;
+    background: transparent;
+    color: var(--starlight-dim);
+    border: 1px solid rgba(142,167,197,0.28);
+    padding: 0.55rem 1.5rem;
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .toggle button:not(:first-child) { border-left: none; }
+  .toggle button:first-child { border-radius: 2px 0 0 2px; }
+  .toggle button:last-child { border-radius: 0 2px 2px 0; }
+  .toggle.view-toggle button { padding: 0.45rem 1.25rem; font-size: 0.78rem; }
+  .toggle.side-toggle button { padding: 0.4rem 1rem; font-size: 0.72rem; letter-spacing: 0.2em; }
+  .toggle button:hover {
+    color: var(--starlight-glow);
+    background: rgba(142,167,197,0.08);
+  }
+  .toggle button.active {
+    color: var(--bronze-glow);
+    background: rgba(201,169,97,0.1);
+    border-color: var(--bronze-dim);
+  }
+
+  .figure-caption {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--starlight-dim);
+    font-size: 0.88rem;
+    margin: 0.4rem 0 1rem;
+    min-height: 1.2em;
+  }
+
+  .figure-frame {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .body-svg {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    display: none;
+  }
+  .body-svg.active { display: block; }
+
+  .side-marker {
+    position: absolute;
+    top: 22px;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1.5rem;
+    color: var(--starlight);
+    letter-spacing: 0.1em;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.75;
+  }
+  .side-marker-left  { left: 4px; }
+  .side-marker-right { right: 4px; }
+
+  /* Stick figure */
+  .stick-line {
+    fill: none;
+    stroke: var(--stick);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .stick-head {
+    fill: none;
+    stroke: var(--stick);
+    stroke-width: 2.5;
+  }
+  .stick-joint {
+    fill: var(--stick);
+    stroke: none;
+  }
+  .stick-end {
+    fill: none;
+    stroke: var(--stick);
+    stroke-width: 2.5;
+  }
+
+  /* ============ RUNE MARKERS ON FIGURE ============ */
+  .rune-mark {
+    cursor: pointer;
+  }
+  .rune-mark > * { pointer-events: none; }
+  .rune-mark .hitbox {
+    pointer-events: all;
+    fill: transparent;
+    cursor: pointer;
+  }
+
+  .rune-frame {
+    fill: var(--bg-deep);
+    stroke: var(--bronze-dim);
+    stroke-width: 1;
+    stroke-dasharray: 2,2;
+    opacity: 0.5;
+    transition: stroke 0.25s ease, opacity 0.25s ease, stroke-width 0.25s ease;
+  }
+  .rune-mark.half .rune-frame,
+  .rune-mark.matched .rune-frame {
+    stroke-dasharray: none;
+    opacity: 1;
+    stroke: var(--bronze);
+  }
+  .rune-mark.matched .rune-frame {
+    filter:
+      drop-shadow(0 0 5px rgba(201,169,97,0.55))
+      drop-shadow(0 0 12px rgba(168,192,219,0.50));
+  }
+  .rune-mark:hover .rune-frame,
+  .rune-mark.hover .rune-frame {
+    stroke: var(--starlight-glow);
+    stroke-width: 1.5;
+    opacity: 1;
+    filter: drop-shadow(0 0 10px rgba(168,192,219,0.75));
+  }
+
+  /* Empty half overlay — covers the missing twin's half with the page
+     background so it reads as 'empty / not matched yet' in single-twin views. */
+  .rune-half-empty {
+    fill: var(--bg-deep);
+    pointer-events: none;
+  }
+
+  .rune-num {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 8px;
+    fill: var(--starlight-dim);
+    text-anchor: middle;
+    dominant-baseline: central;
+    transition: fill 0.2s ease;
+  }
+  .rune-mark.matched .rune-num,
+  .rune-mark.half .rune-num { fill: var(--bronze-glow); }
+
+  .rune-hint {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 6.5px;
+    fill: var(--starlight-dim);
+    text-anchor: middle;
+    opacity: 0.85;
+  }
+
+  /* ============ INSCRIPTION TABLE ============ */
+  .scribe-block {
+    background:
+      radial-gradient(ellipse at top right, rgba(142,167,197,0.05) 0%, transparent 60%),
+      var(--parchment);
+    border: 1px solid rgba(142,167,197,0.18);
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+  .scribe-block.complete {
+    border-color: var(--bronze);
+    box-shadow: 0 0 20px rgba(168,192,219,0.08) inset;
+  }
+
+  /* ============ TABLE SUMMARY BLOCK ============ */
+  .summary-block {
+    background:
+      radial-gradient(ellipse at top, rgba(168,192,219,0.06) 0%, transparent 60%),
+      var(--parchment);
+    border: 1px solid rgba(142,167,197,0.22);
+    border-radius: 2px;
+    margin-top: 2rem;
+    padding: 1rem 1.25rem;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .summary-title {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1.1rem;
+    color: var(--bronze-glow);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.6rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    position: relative;
+    text-shadow: 0 0 8px rgba(232,200,120,0.25);
+  }
+  .summary-title::after {
+    content: "";
+    position: absolute;
+    left: 20%; right: 20%; bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(142,167,197,0.4) 35%,
+      rgba(232,200,120,0.45) 50%,
+      rgba(142,167,197,0.4) 65%,
+      transparent);
+  }
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.35rem 0;
+    border-bottom: 1px dotted rgba(142,167,197,0.18);
+  }
+  .summary-row:last-child { border-bottom: none; }
+  .summary-label {
+    font-style: italic;
+    color: var(--starlight-dim);
+    letter-spacing: 0.06em;
+  }
+  .summary-value {
+    color: var(--ink);
+    font-size: 1.02rem;
+  }
+  .summary-value .progress {
+    color: var(--bronze-glow);
+    font-family: 'IM Fell English SC', serif;
+    letter-spacing: 0.1em;
+  }
+  .summary-value .state {
+    font-family: 'IM Fell English SC', serif;
+    letter-spacing: 0.1em;
+    font-size: 0.92rem;
+  }
+  .summary-value .state.sleeping { color: var(--starlight-dim); opacity: 0.85; }
+  .summary-value .state.open { color: var(--bronze-glow); }
+  .summary-value .state.subsumed { color: var(--bronze-dim); font-style: italic; }
+  .summary-value .detail { color: var(--starlight-dim); font-style: italic; font-size: 0.88rem; }
+
+  .scribe-header {
+    padding: 1rem 1.25rem 0.6rem;
+    border-bottom: none;
+    position: relative;
+  }
+  .scribe-header::after {
+    content: "";
+    position: absolute;
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(142,167,197,0.35) 15%,
+      rgba(232,200,120,0.4) 50%,
+      rgba(142,167,197,0.35) 85%,
+      transparent 100%);
+  }
+  .scribe-title-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  .scribe-name {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1.35rem;
+    color: var(--bronze);
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 10px rgba(232,200,120,0.22);
+  }
+  .scribe-meta {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--starlight-dim);
+  }
+  .scribe-meta .progress {
+    color: var(--bronze);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .scribe-flavor {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--starlight-dim);
+    font-size: 0.92rem;
+    margin-bottom: 0.55rem;
+  }
+  .scribe-dormant {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--starlight-dim);
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  .scribe-dormant .label {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    color: var(--starlight-dim);
+    opacity: 0.95;
+    display: block;
+  }
+  .scribe-chosen { display: none; padding-top: 0.4rem; }
+  .scribe-block.complete .scribe-dormant { display: none; }
+  .scribe-block.complete .scribe-chosen { display: block; }
+  .scribe-chosen .label {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--starlight-dim);
+    margin-bottom: 0.2rem;
+  }
+  .scribe-chosen .spell-name {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1.1rem;
+    color: var(--bronze-glow);
+    letter-spacing: 0.03em;
+  }
+  .scribe-chosen .spell-name.empty {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--starlight-dim);
+    font-size: 0.95rem;
+  }
+
+  /* ============ UNKNOWN / HIDDEN STATE ============ */
+  .unknown {
+    font-family: 'IM Fell English SC', serif;
+    color: var(--starlight-dim);
+    opacity: 0.55;
+    letter-spacing: 0.15em;
+    font-style: normal;
+  }
+  td.col-locus .unknown,
+  td.col-boon .unknown {
+    font-size: 0.95rem;
+  }
+  .rune-half .unknown {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: var(--starlight-dim);
+    opacity: 0.55;
+  }
+
+  .rune-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .rune-table thead th {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--starlight-dim);
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid rgba(142,167,197,0.25);
+    font-weight: normal;
+    background: rgba(0,0,0,0.15);
+  }
+  .rune-table thead th.col-num { width: 3rem; text-align: center; }
+  .rune-table thead th.col-half { width: 6rem; text-align: center; }
+  .rune-table thead th.col-boon { width: 12rem; text-align: right; }
+
+  /* Direction subscript under Wan/Tu — small, cool blue accent */
+  .dir-label {
+    display: inline-block;
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    text-transform: none;
+    color: var(--starlight-dim);
+    margin-top: 0.15rem;
+    opacity: 0.85;
+  }
+
+  .rune-table tbody tr {
+    border-bottom: 1px solid var(--rule);
+    transition: background 0.15s ease;
+  }
+  .rune-table tbody tr:last-child { border-bottom: none; }
+  .rune-table tbody tr.hover,
+  .rune-table tbody tr:hover {
+    background: rgba(142,167,197,0.07);
+  }
+  .rune-table tbody tr.matched { background: rgba(201,169,97,0.06); }
+  .rune-table td { padding: 0.55rem 0.75rem; vertical-align: middle; }
+
+  .col-num { text-align: center; width: 3rem; }
+  .col-num .num {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1rem;
+    color: var(--bronze-dim);
+  }
+  tr.matched .col-num .num,
+  tr.half .col-num .num { color: var(--bronze); }
+
+  .col-locus { font-size: 1rem; color: var(--ink-deep); }
+  .col-half { text-align: center; width: 6rem; }
+
+  /* Wan and Tu cells push their boxes inward so the two halves touch */
+  .col-half-wan { padding-right: 0 !important; text-align: right; }
+  .col-half-tu  { padding-left: 0 !important;  text-align: left; }
+
+  .rune-half {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px; height: 140px;
+    border: 1px dashed var(--bronze-dim);
+    border-radius: 2px;
+    opacity: 0.35;
+    background: rgba(255, 235, 180, 0.02);
+    transition: opacity 0.25s ease, border-color 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    /* Pin the inline-flex baseline so empty (has ? text) and lit (no text)
+       cells align at the same vertical position. */
+    vertical-align: middle;
+    line-height: 0;
+    box-sizing: border-box;
+  }
+  .rune-half.lit {
+    border-style: solid;
+    border-color: var(--bronze);
+    opacity: 1;
+    box-shadow:
+      0 0 6px rgba(201,169,97,0.22),
+      0 0 12px rgba(142,167,197,0.28);
+  }
+  .rune-half img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    display: none;
+  }
+
+  /* Auto-split: when a full rune URL is set, CSS shows the left half in Wan's
+     column and the right half in Tu's column. background-size:cover scales the
+     image to fill the box height, then background-position picks which side
+     of the (overflowing) width is visible. */
+  .rune-half.lit-full {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .col-half-wan .rune-half.lit-full { background-position: left center; }
+  .col-half-tu  .rune-half.lit-full { background-position: right center; }
+  .rune-half.lit img { display: block; }
+  .rune-half .placeholder {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 0.65rem;
+    color: var(--bronze-dim);
+    text-align: center;
+    line-height: 1.2;
+  }
+  .rune-half.lit .placeholder { display: none; }
+
+  /* Wan and Tu halves drop their touching borders so a completed rune reads as one frame */
+  .col-half-wan .rune-half {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .col-half-tu .rune-half {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .col-boon {
+    font-style: italic;
+    color: var(--ink-faded);
+    text-align: right;
+    font-size: 0.9rem;
+    width: 12rem;
+  }
+  tr.matched .col-boon {
+    color: var(--bronze-glow);
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  /* ============ CAPSTONE ============ */
+  .capstone {
+    padding: 1.75rem;
+    background:
+      radial-gradient(ellipse at top, rgba(168,192,219,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at bottom, rgba(201,169,97,0.06) 0%, transparent 60%),
+      var(--parchment);
+    border: 1px solid rgba(142,167,197,0.3);
+    border-radius: 2px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 30px rgba(142,167,197,0.06) inset;
+  }
+  .capstone::before, .capstone::after {
+    content: ""; position: absolute;
+    width: 28px; height: 28px;
+    border: 1px solid var(--starlight);
+    opacity: 0.7;
+    box-shadow: 0 0 8px rgba(168,192,219,0.4);
+  }
+  .capstone::before { top: 8px; left: 8px; border-right: none; border-bottom: none; }
+  .capstone::after { bottom: 8px; right: 8px; border-left: none; border-top: none; }
+
+  .capstone-eyebrow {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--starlight);
+    margin-bottom: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    text-shadow: 0 0 6px rgba(168,192,219,0.35);
+  }
+  .capstone-eyebrow::before,
+  .capstone-eyebrow::after {
+    content: "✧";
+    font-size: 0.85em;
+    color: var(--starlight-dim);
+  }
+  .capstone-name {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1.85rem;
+    color: var(--bronze-glow);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.85rem;
+    text-shadow:
+      0 0 12px rgba(232,200,120,0.28),
+      0 0 22px rgba(142,167,197,0.20);
+  }
+  .capstone-body {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--starlight-dim);
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .capstone.locked .capstone-name { color: var(--ink-faded); opacity: 0.6; text-shadow: none; }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-faded);
+    font-size: 0.9rem;
+  }
+  footer .seal {
+    display: inline-block;
+    margin-bottom: 0.85rem;
+    color: var(--bronze);
+    font-size: 1.3rem;
+    letter-spacing: 0.4em;
+  }
+
+  @media (max-width: 720px) {
+    body { padding: 1.5rem 1rem 3rem; font-size: 16px; }
+    .status { grid-template-columns: repeat(2, 1fr); padding: 0.85rem; }
+    .status-cell:nth-child(2) { border-right: none; }
+    .status-cell:nth-child(1), .status-cell:nth-child(2) {
+      padding-bottom: 0.75rem; border-bottom: 1px solid var(--rule);
+    }
+    .rune-table thead th.col-boon { width: auto; }
+    .rune-table td.col-boon { font-size: 0.82rem; }
+    .rune-half { width: 56px; height: 112px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>A Wayfinder's Path</h1>
+    <div class="eyebrow">To Becoming the Runekeeper</div>
+  </header>
+
+  <section class="diagram-wrap" aria-label="The Wayfinder's Path">
+    <div class="diagram-corner corner-tl"></div>
+    <div class="diagram-corner corner-tr"></div>
+    <div class="diagram-corner corner-bl"></div>
+    <div class="diagram-corner corner-br"></div>
+
+    <div class="toggle view-toggle" role="tablist" aria-label="Body view">
+      <button id="view-tumak" class="active" role="tab" aria-selected="true">Tumak</button>
+      <button id="view-wan" role="tab" aria-selected="false">Wan</button>
+      <button id="view-tu" role="tab" aria-selected="false">Tu</button>
+    </div>
+
+    <div class="toggle side-toggle" role="tablist" aria-label="View side">
+      <button id="toggle-front" class="active" role="tab" aria-selected="true">Front</button>
+      <button id="toggle-back" role="tab" aria-selected="false">Back</button>
+    </div>
+
+    <div class="figure-caption" id="figure-caption">Combined writing — both halves shown</div>
+
+    <div class="figure-frame">
+      <div class="side-marker side-marker-left" id="side-marker-left">R</div>
+      <div class="side-marker side-marker-right" id="side-marker-right">L</div>
+      <svg class="body-svg active" viewBox="0 0 280 720" xmlns="http://www.w3.org/2000/svg" id="body-front">
+        <g>
+          <!-- Head -->
+          <circle class="stick-head" cx="140" cy="50" r="30"/>
+          <!-- Neck -->
+          <line class="stick-line" x1="140" y1="80" x2="140" y2="100"/>
+          <!-- Shoulders -->
+          <line class="stick-line" x1="80" y1="106" x2="200" y2="106"/>
+          <!-- Spine -->
+          <line class="stick-line" x1="140" y1="106" x2="140" y2="360"/>
+          <!-- Hips -->
+          <line class="stick-line" x1="98" y1="360" x2="182" y2="360"/>
+          <!-- Left arm -->
+          <line class="stick-line" x1="200" y1="106" x2="228" y2="350"/>
+          <!-- Right arm -->
+          <line class="stick-line" x1="80" y1="106" x2="52" y2="350"/>
+          <!-- Hands -->
+          <circle class="stick-end" cx="52" cy="365" r="14"/>
+          <circle class="stick-end" cx="228" cy="365" r="14"/>
+          <!-- Left leg -->
+          <line class="stick-line" x1="172" y1="360" x2="172" y2="660"/>
+          <!-- Right leg -->
+          <line class="stick-line" x1="108" y1="360" x2="108" y2="660"/>
+          <!-- Feet -->
+          <circle class="stick-end" cx="108" cy="675" r="14"/>
+          <circle class="stick-end" cx="172" cy="675" r="14"/>
+          <!-- Joints -->
+          <circle class="stick-joint" cx="80" cy="106" r="4"/>
+          <circle class="stick-joint" cx="200" cy="106" r="4"/>
+          <circle class="stick-joint" cx="98" cy="360" r="4"/>
+          <circle class="stick-joint" cx="182" cy="360" r="4"/>
+        </g>
+        <g id="markers-front"></g>
+      </svg>
+
+      <svg class="body-svg" viewBox="0 0 280 720" xmlns="http://www.w3.org/2000/svg" id="body-back">
+        <g>
+          <circle class="stick-head" cx="140" cy="50" r="30"/>
+          <line class="stick-line" x1="140" y1="80" x2="140" y2="100"/>
+          <line class="stick-line" x1="80" y1="106" x2="200" y2="106"/>
+          <line class="stick-line" x1="140" y1="106" x2="140" y2="360"/>
+          <line class="stick-line" x1="98" y1="360" x2="182" y2="360"/>
+          <line class="stick-line" x1="200" y1="106" x2="228" y2="350"/>
+          <line class="stick-line" x1="80" y1="106" x2="52" y2="350"/>
+          <circle class="stick-end" cx="52" cy="365" r="14"/>
+          <circle class="stick-end" cx="228" cy="365" r="14"/>
+          <line class="stick-line" x1="172" y1="360" x2="172" y2="660"/>
+          <line class="stick-line" x1="108" y1="360" x2="108" y2="660"/>
+          <circle class="stick-end" cx="108" cy="675" r="14"/>
+          <circle class="stick-end" cx="172" cy="675" r="14"/>
+          <circle class="stick-joint" cx="80" cy="106" r="4"/>
+          <circle class="stick-joint" cx="200" cy="106" r="4"/>
+          <circle class="stick-joint" cx="98" cy="360" r="4"/>
+          <circle class="stick-joint" cx="182" cy="360" r="4"/>
+        </g>
+        <g id="markers-back"></g>
+      </svg>
+    </div>
+  </section>
+
+  <section id="inscription-table" aria-label="The Writing Table"></section>
+
+  <footer>
+    <div class="seal">✦ ☾ ✦</div>
+    <div>Lunarfoot · Wayfinder · the world knows its own</div>
+  </footer>
+
+</div>
+
+<script>
+/* ============================================================
+   ░░░░░░░░░░░░░░░░░░  DM CONTROL  ░░░░░░░░░░░░░░░░░░
+   ============================================================
+   To activate a half-rune, add an entry to ACTIVE_HALVES below.
+
+   Each entry: { num, bearer, url }
+     num    : 1–20 (the rune's roll-number)
+     bearer : 1 = Wan's half (left side of frame)
+              2 = Tu's half  (right side of frame)
+     url    : Google Drive direct-image URL, format:
+              'https://lh3.googleusercontent.com/d/FILE_ID'
+              (or omit for now — placeholder text will show)
+
+   Both halves of a rune (same num, bearers 1 + 2) = matched.
+   The page re-renders entirely from this list — nothing else
+   needs to change when activating a new half.
+   ============================================================ */
+
+const ACTIVE_HALVES = [
+  // Heart (#20) — pre-matched, intrinsic. Tumak doesn't know he carries it.
+  // Currently completely hidden from figure and table.
+  { num: 20, bearer: 1 },  // Wan's Heart half
+  { num: 20, bearer: 2 },  // Tu's Heart half
+
+  // V003 emergence
+  { num: 8,  bearer: 1 },  // Wan's Left sole
+  { num: 16, bearer: 2 },  // Tu's Right shoulder
+
+  // Add new entries below as runes activate. Format: { num: N, bearer: 1|2 }.
+  // Image is pulled automatically from RUNE_FULL_URLS[num] below.
+  // If you ever want to override with a per-half image, add `url: '...'` to the entry.
+];
+
+/* Full-rune image URLs (one per rune number).
+   Upload rune_N.png (the COMPLETE rune, with both halves drawn) to Drive,
+   paste the lh3 URL here, and the code will automatically split it:
+   Wan sees the left half, Tu sees the right half. No need to pre-split files.
+   A per-half `url:` in ACTIVE_HALVES will override this for that specific half. */
+const RUNE_FULL_URLS = {
+   1: 'https://lh3.googleusercontent.com/d/1TUrLaS8jRb6zdmbx1PUXAe3zuK2yEXHv',  // rune_1.png  — Top of left hand
+   2: 'https://lh3.googleusercontent.com/d/10Zch-znmxqoLJRmBqBuh0azF22FZeeQS',  // rune_2.png  — Top of right hand
+   3: 'https://lh3.googleusercontent.com/d/1HHBUgMJxiq27fBniHJAkAJkrtzm9wCZB',  // rune_3.png  — Left palm
+   4: 'https://lh3.googleusercontent.com/d/1_T5Wl3PaA8zXb4cqB53yO-E9mn2hA8-T',  // rune_4.png  — Right palm
+   5: 'https://lh3.googleusercontent.com/d/1LN_SkXMiieKQSwRNIPgSpHUzafF7H0Si',  // rune_5.png  — Top of left foot
+   6: 'https://lh3.googleusercontent.com/d/1ioYPzbfKyEdVyCDe38mhM8l0n2gRl4QW',  // rune_6.png  — Top of right foot
+   7: 'https://lh3.googleusercontent.com/d/1hnrEgfIAml1GnhVJ3evEJ4VII0kCSfvW',  // rune_7.png  — Right sole
+   8: 'https://lh3.googleusercontent.com/d/1k61KjzbsfxhFWIG74kJ-FtZ2N5ZwUU6S',  // rune_8.png  — Left sole
+   9: 'https://lh3.googleusercontent.com/d/1TU3QJ9s0lakQ8_1avoXH7ARUuZsyFVuI',  // rune_9.png  — Forehead
+  10: 'https://lh3.googleusercontent.com/d/1mBS2WSaM5XXua2eMZqwzbezKvUN91X_A',  // rune_10.png — Tongue
+  11: 'https://lh3.googleusercontent.com/d/1SLIj28OUMayOsL8OtuyoU0TwFEtzX-Qs',  // rune_11.png — Left shoulder
+  12: 'https://lh3.googleusercontent.com/d/1uEp_E8R-THyg65IeOLZ97lmTXI9z82w_',  // rune_12.png — Lower back
+  13: 'https://lh3.googleusercontent.com/d/1UVCV51hTzL5EMnN9JIJbf_-3AWuPlYs0',  // rune_13.png — Stomach
+  14: 'https://lh3.googleusercontent.com/d/1rMk5X0faRW1yFquSYGaiVo9Uiq7z6e2I',  // rune_14.png — Left thigh
+  15: 'https://lh3.googleusercontent.com/d/1xAaBpdO_B0AMFsVg7d__U3NCqVRow2uv',  // rune_15.png — Right thigh
+  16: 'https://lh3.googleusercontent.com/d/1TeljN7VdbyTP4enCIFgo9D42wnRvyvjV',  // rune_16.png — Right shoulder
+  17: 'https://lh3.googleusercontent.com/d/1jTXU9Q5jer8X8aFwGX3QJ29RG9wegEiJ',  // rune_17.png — Floating (DM-bestowed)
+  18: 'https://lh3.googleusercontent.com/d/1yY1b16PPriHZH3j4HmhpRya3S7k5E-Lv',  // rune_18.png — Floating (DM-bestowed)
+  19: 'https://lh3.googleusercontent.com/d/1bpHSWSTeBaot5xhxg_eGBsScRufYQXji',  // rune_19.png — Floating (DM-bestowed)
+  20: 'https://lh3.googleusercontent.com/d/1AJBYcWCZKUOMGY2o3RHkaBKL61yZsr70',  // rune_20.png — Heart (hidden)
+};
+
+/* ============================================================
+   STATE
+   ============================================================ */
+
+const WAYSCRIBES = {
+  heart: {
+    name: "Soul Runes",
+    level: "2nd level",
+    flavor: "The world perceives through you.",
+    menu: [
+      { spell: "Detect Thoughts", lvl: "2" },
+      { spell: "See Invisibility", lvl: "2" },
+      { spell: "Mind Spike", lvl: "2" },
+      { spell: "Locate Object", lvl: "2" },
+      { spell: "Borrowed Knowledge", lvl: "2" }
+    ],
+    chosen: null
+  },
+  hand: {
+    name: "Maker Runes",
+    level: "3rd level",
+    flavor: "The world grasps through you.",
+    menu: [
+      { spell: "Maximilian's Earthen Grasp", lvl: "2 → 3" },
+      { spell: "Pulse Wave", lvl: "3" },
+      { spell: "Catapult", lvl: "1 → 3" },
+      { spell: "Hold Person", lvl: "2 → 3" },
+      { spell: "Erupting Earth", lvl: "3" }
+    ],
+    chosen: null
+  },
+  foot: {
+    name: "Walker Runes",
+    level: "3rd level",
+    flavor: "The world steps through you.",
+    menu: [
+      { spell: "Thunder Step", lvl: "3" },
+      { spell: "Fly", lvl: "3" },
+      { spell: "Water Walk", lvl: "3" },
+      { spell: "Blink", lvl: "3" },
+      { spell: "Misty Step", lvl: "2 → 3" }
+    ],
+    chosen: null
+  },
+  core: {
+    name: "Vessel Runes",
+    level: "5th level",
+    flavor: "The world acts wholly through you.",
+    menu: [
+      { spell: "Telekinesis", lvl: "5" },
+      { spell: "Wall of Stone", lvl: "5" },
+      { spell: "Animate Objects", lvl: "5" },
+      { spell: "Tree Stride", lvl: "5" },
+      { spell: "Transmute Rock", lvl: "5" }
+    ],
+    chosen: null
+  }
+};
+
+/* Body parts. Coordinates positioned on 280x720 figure viewBox.
+   Each rune-mark on the figure is a 44x44 box (containing two
+   22x44 halves side by side).
+
+   17 positions total: 16 rollable (1-16) + Heart (#20, hidden from table,
+   pre-matched, shown as a chest glow on the figure).
+
+   Floating runes (17, 18, 19) are bestowed by the DM at story moments
+   and will be added to this array when assigned a body position.
+
+   Anchors: #8 (Left sole) and #16 (Right shoulder) are V003 canon. */
+const INSCRIPTION = [
+  { num: 1,  locus: "Top of left hand",  ws: "hand",  side: "front", x: 228, y: 365, hint: "top" },
+  { num: 2,  locus: "Top of right hand", ws: "hand",  side: "front", x: 52,  y: 365, hint: "top" },
+  { num: 3,  locus: "Left palm",         ws: "hand",  side: "back",  x: 52,  y: 405, hint: "palm" },
+  { num: 4,  locus: "Right palm",        ws: "hand",  side: "back",  x: 228, y: 405, hint: "palm" },
+  { num: 5,  locus: "Top of left foot",  ws: "foot",  side: "front", x: 172, y: 675, hint: "top" },
+  { num: 6,  locus: "Top of right foot", ws: "foot",  side: "front", x: 108, y: 675, hint: "top" },
+  { num: 7,  locus: "Right sole",        ws: "foot",  side: "back",  x: 172, y: 675, hint: "sole" },
+  { num: 8,  locus: "Left sole",         ws: "foot",  side: "back",  x: 108, y: 675, hint: "sole" },
+  { num: 9,  locus: "Forehead",          ws: "heart", side: "front", x: 140, y: 35  },
+  { num: 10, locus: "Tongue",            ws: "heart", side: "front", x: 140, y: 82  },
+  { num: 11, locus: "Left shoulder",     ws: "core",  side: "front", x: 220, y: 130 },
+  { num: 12, locus: "Lower back",        ws: "core",  side: "back",  x: 140, y: 290 },
+  { num: 13, locus: "Stomach",           ws: "core",  side: "front", x: 140, y: 250 },
+  { num: 14, locus: "Left thigh",        ws: "core",  side: "front", x: 172, y: 470 },
+  { num: 15, locus: "Right thigh",       ws: "core",  side: "front", x: 108, y: 470 },
+  { num: 16, locus: "Right shoulder",    ws: "core",  side: "front", x: 60,  y: 130 },
+  // Heart — intrinsic, pre-matched from session 1, hidden everywhere until DM reveals.
+  // Tumak doesn't know he carries it. To reveal: remove `hidden: true` below.
+  // Once revealed, Heart will appear on the figure as a chest glow.
+  { num: 20, locus: "Heart",             ws: "heart", side: "front", x: 140, y: 200, hidden: true }
+];
+
+INSCRIPTION.forEach(r => { r.bearer1 = false; r.bearer2 = false; });
+
+/* ---- Apply DM CONTROL: ACTIVE_HALVES → bearer flags + URL lookup ---- */
+const _halfUrls = {};
+for (const h of ACTIVE_HALVES) {
+  _halfUrls[`${h.num}_${h.bearer}`] = h.url || '';
+  const rune = INSCRIPTION.find(r => r.num === h.num);
+  if (rune) {
+    if (h.bearer === 1) rune.bearer1 = true;
+    else if (h.bearer === 2) rune.bearer2 = true;
+  }
+}
+
+/* ============================================================
+   HELPERS
+   ============================================================ */
+
+function isMatched(r) { return r.bearer1 && r.bearer2; }
+function isHalf(r)    { return (r.bearer1 || r.bearer2) && !isMatched(r); }
+function svgNS(tag)   { return document.createElementNS("http://www.w3.org/2000/svg", tag); }
+function pad(n)       { return String(n).padStart(2, '0'); }
+function runeImg(num, bearer) {
+  const halfUrl = _halfUrls[`${num}_${bearer}`];
+  if (halfUrl) return { url: halfUrl, kind: 'half' };
+  const fullUrl = RUNE_FULL_URLS[num];
+  if (fullUrl) return { url: fullUrl, kind: 'full' };
+  return { url: '', kind: 'none' };
+}
+
+const RUNE_W = 50;    // full rune box width on figure
+const RUNE_H = 50;    // height
+const HALF_W = RUNE_W / 2;
+
+/* ============================================================
+   VIEW STATE
+   ============================================================ */
+
+let currentView = 'tumak';  // 'tumak' | 'wan' | 'tu'
+
+const VIEW_CAPTIONS = {
+  tumak: 'Combined writing — both halves shown',
+  wan:   'Wan\'s body — only his halves',
+  tu:    'Tu\'s body — only his halves'
+};
+
+/* ============================================================
+   FIGURE MARKERS — rune images at body positions
+   ============================================================ */
+
+function renderMarkers() {
+  const frontGroup = document.getElementById('markers-front');
+  const backGroup  = document.getElementById('markers-back');
+  frontGroup.innerHTML = '';
+  backGroup.innerHTML  = '';
+
+  for (const rune of INSCRIPTION) {
+    // Skip hidden runes (Heart) entirely — not visible on figure until DM reveals
+    if (rune.hidden) continue;
+
+    // Determine what to show based on currentView
+    let showBearer1 = false;
+    let showBearer2 = false;
+    let stateClass = '';
+
+    if (currentView === 'tumak') {
+      showBearer1 = rune.bearer1;
+      showBearer2 = rune.bearer2;
+      if (rune.bearer1 && rune.bearer2) stateClass = ' matched';
+      else if (rune.bearer1 || rune.bearer2) stateClass = ' half';
+    } else if (currentView === 'wan') {
+      showBearer1 = rune.bearer1;
+      if (rune.bearer1) stateClass = ' half';   // styled as marked, no glow
+    } else if (currentView === 'tu') {
+      showBearer2 = rune.bearer2;
+      if (rune.bearer2) stateClass = ' half';
+    }
+
+    // Skip dormant — player only sees runes they've discovered
+    if (!stateClass) continue;
+
+    const group = svgNS('g');
+    group.setAttribute('class', 'rune-mark' + stateClass);
+    group.setAttribute('transform', `translate(${rune.x}, ${rune.y})`);
+    group.setAttribute('data-num', rune.num);
+
+    const showBoth = showBearer1 && showBearer2;
+    const fullUrl = RUNE_FULL_URLS[rune.num];
+
+    // Frame — always full width, centered on body part.
+    const frame = svgNS('rect');
+    frame.setAttribute('class', 'rune-frame');
+    frame.setAttribute('x', -RUNE_W/2);
+    frame.setAttribute('y', -RUNE_H/2);
+    frame.setAttribute('width', RUNE_W);
+    frame.setAttribute('height', RUNE_H);
+    frame.setAttribute('rx', 2);
+    group.appendChild(frame);
+
+    if (fullUrl && (showBearer1 || showBearer2)) {
+      // Render the full rune image once, centered on the body part. The art
+      // content within the source is centered, so the visible art lands on the
+      // body part regardless of view.
+      const img = svgNS('image');
+      img.setAttribute('x', -RUNE_W/2);
+      img.setAttribute('y', -RUNE_H/2);
+      img.setAttribute('width', RUNE_W);
+      img.setAttribute('height', RUNE_H);
+      img.setAttribute('href', fullUrl);
+      img.setAttribute('preserveAspectRatio', 'xMidYMid slice');
+      group.appendChild(img);
+
+      // In single-twin views, mask the missing half with the page background
+      // so it reads as empty/incomplete.
+      if (!showBoth) {
+        const mask = svgNS('rect');
+        mask.setAttribute('class', 'rune-half-empty');
+        mask.setAttribute('y', -RUNE_H/2);
+        mask.setAttribute('width', HALF_W);
+        mask.setAttribute('height', RUNE_H);
+        // showBearer1 alone → Tu's right half is empty (mask right side)
+        // showBearer2 alone → Wan's left half is empty (mask left side)
+        mask.setAttribute('x', showBearer1 ? 0 : -HALF_W);
+        group.appendChild(mask);
+      }
+    } else {
+      // Fallback for runes that only have per-bearer URLs (no full URL)
+      if (showBearer1) {
+        const img1 = svgNS('image');
+        const ref1 = runeImg(rune.num, 1);
+        img1.setAttribute('y', -RUNE_H/2);
+        img1.setAttribute('height', RUNE_H);
+        img1.setAttribute('width', HALF_W);
+        img1.setAttribute('href', ref1.url);
+        img1.setAttribute('x', showBoth ? -HALF_W : -HALF_W/2);
+        img1.setAttribute('preserveAspectRatio', 'xMidYMid slice');
+        group.appendChild(img1);
+      }
+      if (showBearer2) {
+        const img2 = svgNS('image');
+        const ref2 = runeImg(rune.num, 2);
+        img2.setAttribute('y', -RUNE_H/2);
+        img2.setAttribute('height', RUNE_H);
+        img2.setAttribute('width', HALF_W);
+        img2.setAttribute('href', ref2.url);
+        img2.setAttribute('x', showBoth ? 0 : -HALF_W/2);
+        img2.setAttribute('preserveAspectRatio', 'xMidYMid slice');
+        group.appendChild(img2);
+      }
+    }
+
+    // Number label — shown when this view has nothing to display for this rune
+    if (!showBearer1 && !showBearer2) {
+      const text = svgNS('text');
+      text.setAttribute('class', 'rune-num');
+      text.setAttribute('x', 0);
+      text.setAttribute('y', 0);
+      text.textContent = rune.num;
+      group.appendChild(text);
+    }
+
+    // Hint label
+    if (rune.hint) {
+      const hintText = svgNS('text');
+      hintText.setAttribute('class', 'rune-hint');
+      hintText.setAttribute('x', 0);
+      hintText.setAttribute('y', RUNE_H/2 + 9);
+      hintText.textContent = rune.hint;
+      group.appendChild(hintText);
+    }
+
+    // Hitbox
+    const hitbox = svgNS('rect');
+    hitbox.setAttribute('class', 'hitbox');
+    hitbox.setAttribute('x', -RUNE_W/2 - 3);
+    hitbox.setAttribute('y', -RUNE_H/2 - 3);
+    hitbox.setAttribute('width', RUNE_W + 6);
+    hitbox.setAttribute('height', RUNE_H + 6);
+    group.appendChild(hitbox);
+
+    group.addEventListener('mouseenter', () => highlightRune(rune.num, true));
+    group.addEventListener('mouseleave', () => highlightRune(rune.num, false));
+    group.addEventListener('click', () => scrollToRune(rune.num));
+
+    if (rune.side === 'front') frontGroup.appendChild(group);
+    else                       backGroup.appendChild(group);
+  }
+}
+
+/* ============================================================
+   INSCRIPTION TABLE
+   ============================================================ */
+
+function renderTable() {
+  const container = document.getElementById('inscription-table');
+  container.innerHTML = '';
+
+  // Exclude hidden runes (Heart) from the table — they live on the figure only
+  const runes = INSCRIPTION.filter(r => !r.hidden).sort((a, b) => a.num - b.num);
+
+  const block = document.createElement('section');
+  block.className = 'scribe-block';
+  block.innerHTML = `
+    <table class="rune-table">
+      <thead>
+        <tr>
+          <th class="col-num">#</th>
+          <th>Place</th>
+          <th class="col-half">Wan<br><span class="dir-label">left</span></th>
+          <th class="col-half">Tu<br><span class="dir-label">right</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        ${runes.map(r => renderRow(r)).join('')}
+      </tbody>
+    </table>`;
+  container.appendChild(block);
+
+  renderSummary(container);
+
+  for (const tr of container.querySelectorAll('tr[data-num]')) {
+    const num = parseInt(tr.dataset.num, 10);
+    tr.addEventListener('mouseenter', () => highlightMarker(num, true));
+    tr.addEventListener('mouseleave', () => highlightMarker(num, false));
+  }
+}
+
+function renderRow(r) {
+  const matched = isMatched(r);
+  const half    = isHalf(r);
+  const known   = matched || half;   // body part is revealed when at least half-marked
+  let cls = '';
+  if (matched) cls = 'matched';
+  else if (half) cls = 'half';
+
+  const place = known ? r.locus : `<span class="unknown">?</span>`;
+
+  return `
+    <tr class="${cls}" data-num="${r.num}">
+      <td class="col-num"><span class="num">${pad(r.num)}</span></td>
+      <td class="col-locus">${place}</td>
+      <td class="col-half col-half-wan">${renderHalf(r, 1)}</td>
+      <td class="col-half col-half-tu">${renderHalf(r, 2)}</td>
+    </tr>`;
+}
+
+function renderHalf(rune, bearer) {
+  const lit = (bearer === 1 ? rune.bearer1 : rune.bearer2);
+  if (!lit) {
+    return `<div class="rune-half"><span class="unknown">?</span></div>`;
+  }
+  const twin = bearer === 1 ? 'Wan' : 'Tu';
+  const ref = runeImg(rune.num, bearer);
+
+  if (ref.kind === 'full') {
+    // CSS handles the left/right split via .col-half-wan / .col-half-tu rules.
+    return `<div class="rune-half lit lit-full" style="background-image:url('${ref.url}')" title="${twin}'s half"></div>`;
+  }
+  // Pre-split half (or no image yet — fall back to placeholder text)
+  return `
+    <div class="rune-half lit" title="${twin}'s half">
+      <img src="${ref.url}" alt="" onerror="this.style.display='none'"/>
+      <span class="placeholder">${twin}<br>half</span>
+    </div>`;
+}
+
+/* ============================================================
+   HIGHLIGHT LINKING
+   ============================================================ */
+
+function highlightRune(num, on) {
+  const tr = document.querySelector(`tr[data-num="${num}"]`);
+  if (tr) tr.classList.toggle('hover', on);
+}
+function highlightMarker(num, on) {
+  const markers = document.querySelectorAll(`.rune-mark[data-num="${num}"]`);
+  markers.forEach(m => m.classList.toggle('hover', on));
+}
+function scrollToRune(num) {
+  const tr = document.querySelector(`tr[data-num="${num}"]`);
+  if (tr) tr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+/* ============================================================
+   TOGGLES — view (Tumak/Wan/Tu) and side (Front/Back)
+   ============================================================ */
+
+function setupToggles() {
+  // View toggle
+  const views = {
+    tumak: document.getElementById('view-tumak'),
+    wan:   document.getElementById('view-wan'),
+    tu:    document.getElementById('view-tu')
+  };
+  const caption = document.getElementById('figure-caption');
+
+  function setView(name) {
+    currentView = name;
+    for (const k in views) {
+      const isActive = (k === name);
+      views[k].classList.toggle('active', isActive);
+      views[k].setAttribute('aria-selected', isActive ? 'true' : 'false');
+    }
+    caption.textContent = VIEW_CAPTIONS[name];
+    renderMarkers();
+  }
+
+  views.tumak.addEventListener('click', () => setView('tumak'));
+  views.wan.addEventListener('click', () => setView('wan'));
+  views.tu.addEventListener('click', () => setView('tu'));
+
+  // Side toggle
+  const front = document.getElementById('toggle-front');
+  const back  = document.getElementById('toggle-back');
+  const svgFront = document.getElementById('body-front');
+  const svgBack  = document.getElementById('body-back');
+  const markerL = document.getElementById('side-marker-left');
+  const markerR = document.getElementById('side-marker-right');
+
+  function setSide(side) {
+    if (side === 'front') {
+      front.classList.add('active');
+      front.setAttribute('aria-selected', 'true');
+      back.classList.remove('active');
+      back.setAttribute('aria-selected', 'false');
+      svgFront.classList.add('active');
+      svgBack.classList.remove('active');
+      // Front view (body faces viewer): body's R on viewer's left, body's L on viewer's right
+      markerL.textContent = 'R';
+      markerR.textContent = 'L';
+    } else {
+      back.classList.add('active');
+      back.setAttribute('aria-selected', 'true');
+      front.classList.remove('active');
+      front.setAttribute('aria-selected', 'false');
+      svgBack.classList.add('active');
+      svgFront.classList.remove('active');
+      // Back view (body turned around): body's L on viewer's left, body's R on viewer's right
+      markerL.textContent = 'L';
+      markerR.textContent = 'R';
+    }
+  }
+
+  front.addEventListener('click', () => setSide('front'));
+  back.addEventListener('click', () => setSide('back'));
+}
+
+/* ============================================================
+   TABLE SUMMARY — totals, Reach for Home, The Gate
+   (replaces the old top status bar; info now lives in the table)
+   ============================================================ */
+
+function renderSummary(container) {
+  // Count matched runes — exclude hidden (Heart) from visible totals
+  const visibleRunes = INSCRIPTION.filter(r => !r.hidden);
+  const matched = visibleRunes.filter(isMatched).length;
+  const totalVisible = visibleRunes.length; // 16
+
+  // Awakened total INCLUDES Heart for creature capacity calculation
+  const heartMatched = INSCRIPTION.some(r => r.hidden && isMatched(r));
+  const awakenedTotal = matched + (heartMatched ? 1 : 0);
+  const creatureCapacity = Math.min(8, Math.floor(awakenedTotal / 2));
+
+  // Per-set counts (visible only — Heart belongs to Soul but doesn't count here)
+  const setKeys = ['heart', 'hand', 'foot', 'core'];
+  const setNames = {
+    heart: 'Soul Runes',
+    hand:  'Maker Runes',
+    foot:  'Walker Runes',
+    core:  'Vessel Runes'
+  };
+  const setRows = setKeys.map(key => {
+    const setRunes = visibleRunes.filter(r => r.ws === key);
+    const setMatched = setRunes.filter(isMatched).length;
+    const setTotal = setRunes.length;
+    const complete = setMatched === setTotal && setTotal > 0;
+    const hasAny = setMatched > 0;
+    const label = hasAny
+      ? setNames[key]
+      : `<span class="state sleeping">this path sleeps</span>`;
+    const value = !hasAny
+      ? `<span class="unknown">?</span>`
+      : (complete
+        ? `<span class="state open">network full</span>`
+        : `<span class="progress">${setMatched} of ${setTotal}</span>`);
+    return `
+      <div class="summary-row">
+        <span class="summary-label">${label}</span>
+        <span class="summary-value">${value}</span>
+      </div>`;
+  }).join('');
+
+  // Wayfind: available immediately upon first match; transforms at 16
+  let wayfindLabel, wayfindLine, homeboundLabel, homeboundLine;
+  if (matched >= totalVisible) {
+    wayfindLabel  = 'Wayfind';
+    wayfindLine   = `<span class="state subsumed">the world parts safely</span>`;
+    homeboundLabel = 'Homebound';
+    homeboundLine  = `<span class="state open">Heart awakens — home returns</span>`;
+  } else if (matched >= 1) {
+    wayfindLabel  = 'Wayfind';
+    wayfindLine   = `<span class="state open">open</span> <span class="detail">— carries ${creatureCapacity}</span>`;
+    homeboundLabel = `<span class="state sleeping">this path sleeps</span>`;
+    homeboundLine  = `<span class="progress">${matched} of ${totalVisible}</span>`;
+  } else {
+    // No full matches yet — both paths are unknown to the player
+    wayfindLabel  = `<span class="state sleeping">this path sleeps</span>`;
+    wayfindLine   = `<span class="unknown">?</span>`;
+    homeboundLabel = `<span class="state sleeping">this path sleeps</span>`;
+    homeboundLine  = `<span class="unknown">?</span>`;
+  }
+
+  // Awakened Runes total — hide the count until at least one full match
+  const awakenedLine = matched > 0
+    ? `<span class="progress">${matched} of ${totalVisible}</span>`
+    : `<span class="unknown">?</span>`;
+
+  const block = document.createElement('section');
+  block.className = 'summary-block';
+  block.innerHTML = `
+    <div class="summary-title">The Tally</div>
+    <div class="summary-row">
+      <span class="summary-label">Awakened Runes</span>
+      <span class="summary-value">${awakenedLine}</span>
+    </div>
+    ${setRows}
+    <div class="summary-row">
+      <span class="summary-label">${wayfindLabel}</span>
+      <span class="summary-value">${wayfindLine}</span>
+    </div>
+    <div class="summary-row">
+      <span class="summary-label">${homeboundLabel}</span>
+      <span class="summary-value">${homeboundLine}</span>
+    </div>`;
+  container.appendChild(block);
+}
+
+function renderStatus() { /* stats now in table; no-op */ }
+
+/* ============================================================
+   INIT
+   ============================================================ */
+
+function render() {
+  renderStatus();
+  renderMarkers();
+  renderTable();
+  setupToggles();
+}
+
+document.addEventListener('DOMContentLoaded', render);
+</script>
+</body>
+</html>
