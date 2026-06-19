@@ -1530,7 +1530,7 @@ function renderSummary(container) {
     const hasAny = setMatched > 0;
     const label = hasAny
       ? setNames[key]
-      : `<span class="state sleeping">this path sleeps</span>`;
+      : `<span class="state sleeping">the path is uncharted</span>`;
     const value = !hasAny
       ? `<span class="unknown">?</span>`
       : (complete
@@ -1553,13 +1553,13 @@ function renderSummary(container) {
   } else if (matched >= 1) {
     wayfindLabel  = 'Wayfind';
     wayfindLine   = `<span class="state open">open</span> <span class="detail">— carries ${creatureCapacity}</span>`;
-    homeboundLabel = `<span class="state sleeping">this path sleeps</span>`;
+    homeboundLabel = `<span class="state sleeping">the path is uncharted</span>`;
     homeboundLine  = `<span class="progress">${matched} of ${totalVisible}</span>`;
   } else {
     // No full matches yet — both paths are unknown to the player
-    wayfindLabel  = `<span class="state sleeping">this path sleeps</span>`;
+    wayfindLabel  = `<span class="state sleeping">the path is uncharted</span>`;
     wayfindLine   = `<span class="unknown">?</span>`;
-    homeboundLabel = `<span class="state sleeping">this path sleeps</span>`;
+    homeboundLabel = `<span class="state sleeping">the path is uncharted</span>`;
     homeboundLine  = `<span class="unknown">?</span>`;
   }
 
