@@ -6,9 +6,8 @@
    content typography, collapsibles, cards,
    callouts, tags, tiles, pull-quote, print.
 
-   Used by: /prime/index.html, /prime/physics.html,
-            /prime/campaign.html, /prime/world.html,
-            /prime/voyages/*.html
+   Used by: /prime/index.html, /prime/hub.html, /prime/continuum.html,
+            /prime/campaign.html, /prime/world.html, /prime/voyages/*.html
    ═══════════════════════════════════════════════ */
 
 /* ── DM-ONLY TOKEN EXTENSIONS ── */
@@ -193,6 +192,32 @@
   flex-wrap: wrap;
 }
 
+/* Subordinate footer paragraphs inside a card.
+   Used in the Act Map for "PC arcs in this Act" / "Faction moves in this Act"
+   rows that contextualize the main beats above them. */
+.dm-card-footnote {
+  font-size: 0.85rem;
+  color: var(--dm-text-dim, var(--ivory-dim, #9a8f7a));
+  border-top: 1px dashed var(--dm-border-dim, rgba(180, 150, 90, 0.18));
+  padding-top: 0.6rem;
+  margin-top: 0.85rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.55;
+}
+
+.dm-card-footnote + .dm-card-footnote {
+  border-top: none;
+  padding-top: 0;
+  margin-top: -0.2rem;
+}
+
+.dm-card-footnote em {
+  color: var(--gold-dim, var(--gold));
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
 /* ── CALLOUTS ── */
 /* Smaller inline emphasis blocks. Used for "DM note:", "Player-facing:", etc. */
 .dm-callout {
@@ -283,7 +308,7 @@
 .dm-content tbody tr:hover td { background: var(--dm-elev-2); }
 
 /* ── CROSS-REFERENCE PILLS ── */
-/* Inline references between wiki pages: "see Physics → Monoliths". */
+/* Inline references between wiki pages: "see Continuum → Monoliths". */
 .dm-xref {
   display: inline-block;
   font-family: 'Cinzel', serif;
