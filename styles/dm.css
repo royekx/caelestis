@@ -218,6 +218,60 @@
   letter-spacing: 0.02em;
 }
 
+/* Subtitle / date line immediately under a card title.
+   Used in the voyages list for the voyage subtitle. */
+.dm-card-eyebrow {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--gold-dim, var(--gold));
+  letter-spacing: 0.04em;
+  margin: -0.2rem 0 0.7rem;
+  opacity: 0.85;
+}
+
+/* Action row inside a card — for buttons like "Open DM notes". */
+.dm-card-actions {
+  margin-top: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.dm-card-actions + .dm-card-actions {
+  margin-top: 0.4rem;
+}
+
+/* DM-styled button. Used in card actions. */
+.dm-button {
+  display: inline-block;
+  padding: 0.45rem 0.95rem;
+  background: var(--dm-elev-2);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.dm-button:hover,
+.dm-button:focus {
+  background: var(--gold);
+  color: var(--dm-elev-1, #0a0a14);
+  outline: none;
+}
+
+/* is-stub card variant — for upcoming/projected entries.
+   Slightly dimmer than canon, distinct from is-open. */
+.dm-card.is-stub {
+  border-left-color: var(--dm-border-dim, rgba(180, 150, 90, 0.35));
+  opacity: 0.88;
+}
+
+.dm-card.is-stub .dm-card-title {
+  color: var(--gold-dim, var(--gold));
+}
+
 /* ── CALLOUTS ── */
 /* Smaller inline emphasis blocks. Used for "DM note:", "Player-facing:", etc. */
 .dm-callout {
