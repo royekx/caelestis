@@ -57,7 +57,9 @@
   ];
 
   // External links shown at the bottom of the sidebar.
-  // Sheets, Drive docs, and the player site.
+  // Sheets, Drive docs, and a link back to the player site.
+  // Sign Out is appended programmatically below — it clears the auth
+  // sessionStorage and returns to the gate.
 
   var extLinks = [
     { label: 'Campaign Tracker',     href: 'https://docs.google.com/spreadsheets/d/1m4V9t2Z6hq0rjeUVZyTooNI8LMGOrd9gHezWY9o5-nY/edit' },
@@ -100,6 +102,10 @@
     return '<a class="side-nav-ext-link" href="' + l.href + '" target="_blank" rel="noopener">' + l.label + ' ' + EXT_ICON + '</a>';
   }).join('');
 
+  // Sign Out is a button (no href) styled like an external link but visually
+  // distinct. It clears the auth flag and sends the user back to the gate.
+  var signOutLink = '<a class="side-nav-ext-link side-nav-signout" href="#" id="js-dm-signout">Sign out</a>';
+
   var html = [
     '<button class="side-nav-toggle" id="js-nav-toggle" aria-label="Toggle navigation">',
     MENU_ICON,
@@ -107,12 +113,14 @@
     '</button>',
     '<nav class="side-nav" id="js-side-nav">',
     '  <div class="side-nav-head">',
-    '    <a class="side-nav-logo" href="' + base + 'index.html">Caelestis · DM</a>',
+    '    <a class="side-nav-logo" href="' + base + 'hub.html">Caelestis · DM</a>',
     '  </div>',
     '  <div class="side-nav-body">',
     sectionLinks,
     '    <div class="side-nav-divider"></div>',
     externalLinks,
+    '    <div class="side-nav-divider"></div>',
+    signOutLink,
     '  </div>',
     '</nav>',
   ].join('');
@@ -159,6 +167,19 @@
       link.addEventListener('click', function () {
         nav.classList.remove('open');
       });
+    });
+  }
+
+  // ── Sign Out ──────────────────────────────────────────────────────────────
+  // Clears the auth sessionStorage flag (same key the gate uses) and sends
+  // the user back to the gate at /prime/index.html.
+
+  var signOut = document.getElementById('js-dm-signout');
+  if (signOut) {
+    signOut.addEventListener('click', function (e) {
+      e.preventDefault();
+      try { sessionStorage.removeItem('caelestis_continuum_auth'); } catch (err) { /* ignore */ }
+      window.location.replace(base + 'index.html');
     });
   }
 
