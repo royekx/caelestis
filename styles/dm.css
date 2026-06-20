@@ -1,0 +1,563 @@
+/* =========================================================================
+   Caelestis · DM Space · Shared Stylesheet
+   --------------------------------------------------------------------------
+   Used by: index.html, wiki/physics.html, wiki/campaign.html, wiki/world.html,
+            voyages/*.html
+   Aesthetic: same Caelestis family as the player site & voyage docs, but
+              tinted for the DM space (deeper background, more reference-tool
+              than narrative). Cinzel for display, Crimson Pro for body.
+   ========================================================================= */
+
+/* -- Fonts -- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* -- Palette -- */
+:root {
+  /* DM-space tint: darker, more "axiom" feeling than the player site */
+  --bg:              #0e0d11;        /* near-black, slightly violet */
+  --bg-elev-1:      #16151a;         /* card background */
+  --bg-elev-2:      #1d1c22;         /* nested / hover */
+  --bg-elev-3:      #25232c;         /* highest elevation */
+  --bg-sidebar:    #0a090d;          /* deeper than bg */
+
+  --ink:             #e8e1cf;        /* primary text — warm parchment */
+  --ink-muted:      #a89e87;         /* secondary text */
+  --ink-dim:         #6e6857;        /* tertiary / metadata */
+
+  --gold:            #c9a85a;        /* primary accent — Caelestis gold */
+  --gold-bright:    #e3c884;         /* hovers / highlights */
+  --gold-dim:       #8c7740;         /* dimmed gold */
+  --gold-line:      rgba(201, 168, 90, 0.32);  /* dividers */
+  --gold-line-dim: rgba(201, 168, 90, 0.14);
+
+  --violet:          #7a5ea8;        /* secondary accent — paracausal */
+  --violet-dim:     #3d3056;
+  --crimson:        #a8553c;         /* warning / locked / unresolved */
+  --teal:            #5ea89e;        /* info / cross-reference */
+
+  /* Layout */
+  --max-content: 880px;
+  --sidebar-width: 280px;
+  --gutter: 1.5rem;
+  --gutter-lg: 2.5rem;
+
+  /* Radii / borders */
+  --radius-sm: 4px;
+  --radius:    6px;
+  --radius-lg: 10px;
+  --border-thin: 1px solid var(--gold-line-dim);
+  --border:      1px solid var(--gold-line);
+
+  /* Typography */
+  --display: 'Cinzel', serif;
+  --body:    'Crimson Pro', Georgia, serif;
+  --mono:    'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* -- Reset / base -- */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle starfield texture across the background — DM space feels deeper */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, rgba(201, 168, 90, 0.18), transparent 50%),
+    radial-gradient(1px 1px at 70% 80%, rgba(201, 168, 90, 0.12), transparent 50%),
+    radial-gradient(1px 1px at 40% 60%, rgba(122, 94, 168, 0.12), transparent 50%),
+    radial-gradient(1px 1px at 85% 20%, rgba(201, 168, 90, 0.10), transparent 50%);
+  background-size: 800px 800px;
+}
+body > * { position: relative; z-index: 1; }
+
+/* -- Layout: sidebar + content -- */
+.dm-layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  min-height: 100vh;
+}
+
+.dm-sidebar {
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--gold-line-dim);
+  padding: 1.75rem 1.25rem;
+  position: sticky; top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  font-size: 0.92rem;
+}
+
+.dm-content {
+  padding: 2.5rem clamp(1rem, 4vw, 3.5rem);
+  max-width: calc(var(--max-content) + 4rem);
+}
+
+/* Sidebar mobile drawer */
+.dm-sidebar-toggle {
+  display: none;
+  position: fixed; top: 1rem; right: 1rem;
+  z-index: 100;
+  background: var(--bg-elev-2);
+  border: var(--border);
+  color: var(--gold);
+  font-family: var(--display);
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+@media (max-width: 880px) {
+  .dm-layout { grid-template-columns: 1fr; }
+  .dm-sidebar {
+    position: fixed; left: 0; top: 0;
+    width: 85vw; max-width: 320px;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    z-index: 90;
+  }
+  .dm-sidebar.is-open { transform: translateX(0); }
+  .dm-sidebar-toggle { display: block; }
+  .dm-content { padding-top: 4rem; }
+}
+
+/* -- Sidebar nav -- */
+.dm-sidebar h1 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  margin: 0 0 0.15rem;
+  text-transform: uppercase;
+}
+.dm-sidebar .dm-sidebar-sub {
+  font-family: var(--display);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: var(--ink-dim);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+.dm-sidebar nav { display: block; }
+.dm-sidebar nav h2 {
+  font-family: var(--display);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  margin: 1.4rem 0 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--gold-line-dim);
+}
+.dm-sidebar nav a {
+  display: block;
+  color: var(--ink-muted);
+  text-decoration: none;
+  padding: 0.32rem 0;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  border-left: 2px solid transparent;
+  padding-left: 0.6rem;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.dm-sidebar nav a:hover,
+.dm-sidebar nav a.is-active {
+  color: var(--gold-bright);
+  border-left-color: var(--gold);
+  background: linear-gradient(to right, rgba(201, 168, 90, 0.06), transparent);
+}
+.dm-sidebar nav a.dm-nav-external::after {
+  content: ' ↗';
+  color: var(--ink-dim);
+  font-size: 0.8em;
+}
+
+/* Sidebar footer link back / sign out */
+.dm-sidebar-footer {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--gold-line-dim);
+  font-family: var(--display);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.dm-sidebar-footer a {
+  color: var(--ink-dim);
+  text-decoration: none;
+}
+.dm-sidebar-footer a:hover { color: var(--gold); }
+
+/* -- Content: typography -- */
+.dm-content h1, .dm-content h2, .dm-content h3, .dm-content h4 {
+  font-family: var(--display);
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.25;
+}
+.dm-content h1 {
+  font-size: 2.4rem;
+  margin: 0 0 0.4rem;
+  letter-spacing: 0.08em;
+}
+.dm-content h2 {
+  font-size: 1.55rem;
+  margin: 3rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--gold-line);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.dm-content h3 {
+  font-size: 1.2rem;
+  margin: 2rem 0 0.75rem;
+  color: var(--gold-bright);
+  letter-spacing: 0.08em;
+}
+.dm-content h4 {
+  font-size: 1rem;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--ink);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.dm-content p { margin: 0.75rem 0; }
+.dm-content strong { color: var(--gold-bright); font-weight: 600; }
+.dm-content em { color: var(--ink); font-style: italic; }
+
+.dm-content a {
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--gold-line);
+  transition: color 0.15s, border-color 0.15s;
+}
+.dm-content a:hover {
+  color: var(--gold-bright);
+  border-bottom-color: var(--gold-bright);
+}
+.dm-content a.dm-link-external::after {
+  content: ' ↗';
+  font-size: 0.8em;
+  color: var(--ink-dim);
+}
+
+.dm-content ul, .dm-content ol { padding-left: 1.4rem; }
+.dm-content li { margin: 0.3rem 0; }
+.dm-content li::marker { color: var(--gold-dim); }
+
+.dm-content blockquote {
+  border-left: 3px solid var(--gold-line);
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  margin: 1.25rem 0;
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
+.dm-content hr {
+  border: none;
+  text-align: center;
+  margin: 2.5rem 0;
+}
+.dm-content hr::before {
+  content: '✦ ✦ ✦';
+  color: var(--gold-dim);
+  letter-spacing: 1rem;
+  font-size: 0.7rem;
+}
+
+/* -- Page header (top of each wiki page) -- */
+.dm-page-header {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gold-line);
+}
+.dm-page-eyebrow {
+  font-family: var(--display);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.dm-page-eyebrow .sep { margin: 0 0.5rem; color: var(--gold-dim); }
+.dm-page-lede {
+  font-size: 1.1rem;
+  color: var(--ink-muted);
+  font-style: italic;
+  margin-top: 0.5rem;
+  max-width: 65ch;
+}
+
+/* -- Cards: the visual unit of the wiki -- */
+.dm-card {
+  background: var(--bg-elev-1);
+  border: var(--border-thin);
+  border-left: 3px solid var(--gold-line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin: 1.25rem 0;
+}
+.dm-card.is-locked { border-left-color: var(--gold); }
+.dm-card.is-open   { border-left-color: var(--crimson); }
+.dm-card.is-cosmic { border-left-color: var(--violet); }
+.dm-card.is-info   { border-left-color: var(--teal); }
+
+.dm-card-title {
+  font-family: var(--display);
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 0.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+.dm-card-status {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--gold-line);
+  border-radius: var(--radius-sm);
+  color: var(--gold-dim);
+  font-family: var(--display);
+}
+.dm-card-status.is-locked { color: var(--gold); border-color: var(--gold-dim); }
+.dm-card-status.is-open   { color: var(--crimson); border-color: var(--crimson); }
+.dm-card-status.is-stub   { color: var(--ink-dim); border-color: var(--ink-dim); }
+
+/* -- Callouts: smaller inline emphasis blocks -- */
+.dm-callout {
+  background: var(--bg-elev-2);
+  border-left: 3px solid var(--gold);
+  padding: 0.85rem 1.1rem;
+  margin: 1rem 0;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.96rem;
+}
+.dm-callout.is-warn { border-left-color: var(--crimson); }
+.dm-callout.is-cosmic { border-left-color: var(--violet); }
+.dm-callout-label {
+  font-family: var(--display);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.dm-callout.is-warn   .dm-callout-label { color: var(--crimson); }
+.dm-callout.is-cosmic .dm-callout-label { color: var(--violet); }
+
+/* -- Collapsible sections (the wiki's main interaction) -- */
+.dm-collapse {
+  border-top: 1px solid var(--gold-line-dim);
+  margin: 0;
+}
+.dm-collapse > summary {
+  cursor: pointer;
+  padding: 1rem 0;
+  font-family: var(--display);
+  font-size: 1.1rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  user-select: none;
+}
+.dm-collapse > summary::-webkit-details-marker { display: none; }
+.dm-collapse > summary::before {
+  content: '▸';
+  color: var(--gold-dim);
+  font-size: 0.9em;
+  transition: transform 0.15s;
+  display: inline-block;
+  width: 0.8em;
+}
+.dm-collapse[open] > summary::before { transform: rotate(90deg); }
+.dm-collapse > summary:hover { color: var(--gold-bright); }
+.dm-collapse > *:not(summary) {
+  padding-bottom: 1.25rem;
+}
+
+/* -- Tables -- */
+.dm-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.95rem;
+  background: var(--bg-elev-1);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.dm-content th {
+  background: var(--bg-elev-2);
+  color: var(--gold);
+  font-family: var(--display);
+  font-weight: 500;
+  text-align: left;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--gold-line);
+}
+.dm-content td {
+  padding: 0.65rem 0.85rem;
+  border-bottom: 1px solid var(--gold-line-dim);
+  vertical-align: top;
+}
+.dm-content tbody tr:last-child td { border-bottom: none; }
+.dm-content tbody tr:hover td { background: var(--bg-elev-2); }
+
+/* -- Cross-reference / definition / status pill helpers -- */
+.dm-xref {
+  display: inline-block;
+  font-family: var(--display);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.12rem 0.45rem;
+  border: 1px solid var(--gold-line);
+  border-radius: var(--radius-sm);
+  color: var(--gold-dim);
+  background: var(--bg-elev-1);
+  margin-right: 0.3rem;
+  vertical-align: middle;
+}
+.dm-xref a { color: inherit; border: none; }
+.dm-xref a:hover { color: var(--gold-bright); }
+
+.dm-tag {
+  display: inline-block;
+  font-family: var(--display);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.1rem 0.4rem;
+  border-radius: 2px;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+.dm-tag.is-locked  { background: rgba(201, 168, 90, 0.15); color: var(--gold-bright); }
+.dm-tag.is-open    { background: rgba(168, 85, 60, 0.18);  color: var(--crimson); }
+.dm-tag.is-stub    { background: rgba(110, 104, 87, 0.18); color: var(--ink-muted); }
+.dm-tag.is-canon   { background: rgba(94, 168, 158, 0.15); color: var(--teal); }
+.dm-tag.is-cosmic  { background: rgba(122, 94, 168, 0.18); color: var(--violet); }
+
+/* -- Definition lists -- */
+.dm-content dl { margin: 1rem 0; }
+.dm-content dt {
+  font-family: var(--display);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 0.85rem;
+}
+.dm-content dd { margin: 0.2rem 0 0 1.25rem; color: var(--ink); }
+
+/* -- Pull-quotes for the in-fiction taglines (player-facing echoes) -- */
+.dm-pullquote {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  color: var(--gold-bright);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin: 2rem 0;
+  border-top: 1px solid var(--gold-line);
+  border-bottom: 1px solid var(--gold-line);
+  font-style: italic;
+}
+
+/* -- Index / hub-page tile grid -- */
+.dm-tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+.dm-tile {
+  display: block;
+  background: var(--bg-elev-1);
+  border: var(--border-thin);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  text-decoration: none !important;
+  color: var(--ink) !important;
+  border-bottom: var(--border-thin) !important;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+}
+.dm-tile:hover {
+  background: var(--bg-elev-2);
+  border-color: var(--gold-line);
+  transform: translateY(-1px);
+}
+.dm-tile-eyebrow {
+  font-family: var(--display);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+.dm-tile-title {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  margin: 0 0 0.4rem;
+}
+.dm-tile-desc {
+  font-size: 0.93rem;
+  color: var(--ink-muted);
+  line-height: 1.45;
+}
+.dm-tile.dm-tile-external .dm-tile-title::after {
+  content: ' ↗';
+  color: var(--ink-dim);
+  font-size: 0.8em;
+}
+
+/* -- Footer line on each page -- */
+.dm-footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gold-line-dim);
+  font-family: var(--display);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* -- Print -- */
+@media print {
+  .dm-sidebar, .dm-sidebar-toggle { display: none; }
+  .dm-layout { grid-template-columns: 1fr; }
+  body { background: white; color: black; font-size: 11pt; }
+  body::before { display: none; }
+  .dm-content h1, .dm-content h2, .dm-content h3, .dm-content h4 { color: black; }
+  .dm-card { background: #f8f6ef; border-color: #b89a3a; }
+  .dm-collapse[open] { break-inside: avoid; }
+  .dm-collapse:not([open]) > *:not(summary) { display: block; }
+}
