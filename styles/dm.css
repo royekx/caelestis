@@ -387,6 +387,17 @@
   font-size: 0.8em;
 }
 
+/* ── SIDEBAR SIGN OUT ── */
+/* Distinct from the external links above it — no arrow, dimmer, with hover. */
+.side-nav-signout {
+  color: var(--text-muted) !important;
+  font-style: italic;
+  cursor: pointer;
+}
+.side-nav-signout svg { display: none; }
+.side-nav-signout:hover { color: var(--dm-crimson) !important; }
+
+
 /* ── PAGE FOOTER ── */
 .dm-footer {
   margin-top: 4rem;
