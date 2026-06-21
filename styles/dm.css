@@ -54,7 +54,7 @@
 }
 .dm-content h1 {
   font-family: 'Cinzel', serif;
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-size: clamp(2.25rem, 5vw, 3.125rem);
   font-weight: 700;
   letter-spacing: 0.08em;
   color: var(--gold);
@@ -62,7 +62,7 @@
   line-height: 1.15;
 }
 .dm-page-lede {
-  font-size: 1.05rem;
+  font-size: 1.31rem;
   color: var(--text-dim);
   font-style: italic;
   margin-top: 0.5rem;
@@ -73,7 +73,7 @@
 /* ── HEADINGS ── */
 .dm-content h2 {
   font-family: 'Cinzel', serif;
-  font-size: 1.5rem;
+  font-size: 1.875rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   color: var(--gold);
@@ -85,7 +85,7 @@
 }
 .dm-content h3 {
   font-family: 'Cinzel', serif;
-  font-size: 1.15rem;
+  font-size: 1.44rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--gold-light);
@@ -94,7 +94,7 @@
 }
 .dm-content h4 {
   font-family: 'Cinzel', serif;
-  font-size: 0.95rem;
+  font-size: 1.19rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   color: var(--text);
@@ -103,7 +103,7 @@
 }
 
 /* ── BODY TEXT ── */
-.dm-content { font-size: 1rem; line-height: 1.65; color: var(--text); }
+.dm-content { font-size: 1.25rem; line-height: 1.65; color: var(--text); }
 .dm-content p { margin: 0.75rem 0; }
 .dm-content strong { color: var(--gold-light); font-weight: 600; }
 .dm-content em { color: var(--text); font-style: italic; }
@@ -153,7 +153,7 @@
 /* For the north-star tagline. Used sparingly. */
 .dm-pullquote {
   font-family: 'Cinzel', serif;
-  font-size: 1.15rem;
+  font-size: 1.44rem;
   letter-spacing: 0.06em;
   color: var(--gold-light);
   text-align: center;
@@ -308,7 +308,7 @@
   cursor: pointer;
   padding: 1rem 0;
   font-family: 'Cinzel', serif;
-  font-size: 1.05rem;
+  font-size: 1.31rem;
   color: var(--gold);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -336,7 +336,7 @@
   width: 100%;
   border-collapse: collapse;
   margin: 1.25rem 0;
-  font-size: 0.95rem;
+  font-size: 1.19rem;
   background: var(--dm-elev-1);
   border-radius: 2px;
   overflow: hidden;
@@ -449,7 +449,7 @@
 }
 .dm-tile-title {
   font-family: 'Cinzel', serif;
-  font-size: 1.15rem;
+  font-size: 1.44rem;
   font-weight: 600;
   color: var(--gold);
   letter-spacing: 0.06em;
