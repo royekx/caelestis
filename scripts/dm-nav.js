@@ -37,18 +37,16 @@
   // Internal links — pages inside /prime/.
   // To add, remove, or rename a section: edit this array only.
   //
-  // Order: reference pillars (Continuum / Campaign / Seeds / World / Factions),
+  // Order: Campaign (+ Remaking, Voyages nested) / Cosmology / Realms / Factions & Characters.
   // a divider, then the trackable throughlines (The Remaking / Voyages).
 
   var sections = [
-    { key: 'continuum', label: 'Continuum',    path: 'continuum.html'     },
-    { key: 'campaign',  label: 'Campaign',     path: 'campaign.html'      },
-    { key: 'seeds',     label: 'Seeds',        path: 'seeds.html',     indent: true },
-    { key: 'world',     label: 'World',        path: 'world.html'         },
-    { key: 'factions',  label: 'Factions',     path: 'factions.html',  indent: true },
-    { key: '__divider' },
-    { key: 'remaking',  label: 'The Remaking', path: 'remaking.html'      },
-    { key: 'voyages',   label: 'Voyages',      path: 'voyages/index.html' },
+    { key: 'campaign',  label: 'Campaign',     path: 'campaign/'   },
+    { key: 'remaking',  label: 'The Remaking', path: 'remaking/',  indent: true },
+    { key: 'voyages',   label: 'Voyages',      path: 'voyages/',   indent: true },
+    { key: 'cosmology', label: 'Cosmology',    path: 'cosmology/'  },
+    { key: 'realms',    label: 'Realms',       path: 'realms/'     },
+    { key: 'factions',  label: 'Factions &amp; Characters', path: 'factions/' },
   ];
 
   var extLinks = [
