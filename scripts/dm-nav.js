@@ -42,8 +42,8 @@
 
   var sections = [
     { key: 'campaign',  label: 'Campaign',     path: 'campaign/'   },
-    { key: 'remaking',  label: 'The Remaking', path: 'remaking/',  indent: true },
-    { key: 'voyages',   label: 'Voyages',      path: 'voyages/',   indent: true },
+    { key: 'remaking',  label: 'The Remaking', path: 'campaign/remaking/', indent: true },
+    { key: 'voyages',   label: 'Voyages',      path: 'campaign/voyages/',  indent: true },
     { key: 'cosmology', label: 'Cosmology',    path: 'cosmology/'  },
     { key: 'realms',    label: 'Realms',       path: 'realms/'     },
     { key: 'factions',  label: 'Factions &amp; Characters', path: 'factions/' },
@@ -83,7 +83,7 @@
       return '<div class="side-nav-divider"></div>';
     }
     var cls = 'side-nav-link' + (s.indent ? ' side-nav-link-indent' : '');
-    return '<a class="' + cls + '" href="' + base + s.path + '" data-section="' + s.key + '">' + s.label + '</a>';
+    return '<a class="' + cls + '" href="' + base + s.path + '" data-section="' + s.key + '" data-path="' + s.path + '">' + s.label + '</a>';
   }).join('');
 
   var externalLinks = extLinks.map(function (l) {
@@ -116,13 +116,27 @@
   document.body.classList.add('with-sidebar');
 
   // ── Active state ──────────────────────────────────────────────────────────
-  document.querySelectorAll('.side-nav-link[data-section]').forEach(function (link) {
-    var key = link.dataset.section;
-    if (pathname.indexOf('/' + key + '.html') !== -1 ||
-        pathname.indexOf('/' + key + '/')      !== -1) {
-      link.classList.add('active');
-    }
-  });
+  // Active-state: match each section's full path against the current URL and
+  // pick the MOST SPECIFIC (longest) match, so /campaign/remaking/ highlights
+  // The Remaking, not its parent Campaign.
+  (function () {
+    var links = Array.prototype.slice.call(
+      document.querySelectorAll('.side-nav-link[data-section]')
+    );
+    var best = null, bestLen = -1;
+    links.forEach(function (link) {
+      var p = link.dataset.path;          // e.g. "campaign/remaking/"
+      if (!p) return;
+      // Normalize: strip trailing index.html if present in the URL.
+      var here = pathname;
+      // The section is current if the URL contains "/<path>" (path already ends in /).
+      var needle = '/' + p;
+      if (here.indexOf(needle) !== -1 && p.length > bestLen) {
+        best = link; bestLen = p.length;
+      }
+    });
+    if (best) best.classList.add('active');
+  })();
 
   // ── Mobile toggle ─────────────────────────────────────────────────────────
   var toggle = document.getElementById('js-nav-toggle');
