@@ -1,169 +1,608 @@
+/* ═══════════════════════════════════════════════
+   CAELESTIS — DM Space Stylesheet
+   Loaded AFTER caelestis.css. Inherits the
+   palette, fonts, sidebar, starfield, and base
+   reset. Only adds DM-wiki-specific layers:
+   content typography, collapsibles, cards,
+   callouts, tags, tiles, pull-quote, print.
+
+   Used by: /prime/index.html, /prime/hub.html, /prime/continuum.html,
+            /prime/campaign.html, /prime/world.html, /prime/voyages/*.html
+   ═══════════════════════════════════════════════ */
+
+/* ── DM-ONLY TOKEN EXTENSIONS ── */
+/* Caelestis palette stays as-is. Adding only accent colours the wiki needs. */
+:root {
+  --dm-violet:      #7a5ea8;
+  --dm-violet-dim:  #3d3056;
+  --dm-crimson:     #a8553c;
+  --dm-teal:        #5ea89e;
+
+  /* Slight elevation tints over the deep bg, for cards/callouts/tables */
+  --dm-elev-1:      rgba(20, 15, 8, 0.55);
+  --dm-elev-2:      rgba(30, 22, 10, 0.65);
+}
+
+/* ── DM CONTENT WRAPPER ── */
+/* All wiki-page content lives inside <main class="dm-content">. Sized to sit
+   beside the inherited 220px sidebar with comfortable reading width. */
+.dm-content {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2.5rem clamp(1.2rem, 4vw, 3rem) 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── PAGE HEADER ── */
+.dm-page-header {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gold-rule);
+}
+.dm-page-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.dm-page-eyebrow .sep {
+  margin: 0 0.5rem;
+  color: var(--gold-dim);
+}
+.dm-content h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin: 0 0 0.4rem;
+  line-height: 1.15;
+}
+.dm-page-lede {
+  font-size: 1.05rem;
+  color: var(--text-dim);
+  font-style: italic;
+  margin-top: 0.5rem;
+  max-width: 65ch;
+  line-height: 1.55;
+}
+
+/* ── HEADINGS ── */
+.dm-content h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin: 3rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--gold-rule);
+  line-height: 1.25;
+}
+.dm-content h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--gold-light);
+  margin: 2rem 0 0.75rem;
+  line-height: 1.3;
+}
+.dm-content h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text);
+  text-transform: uppercase;
+  margin: 1.5rem 0 0.5rem;
+}
+
+/* ── BODY TEXT ── */
+.dm-content { font-size: 1rem; line-height: 1.65; color: var(--text); }
+.dm-content p { margin: 0.75rem 0; }
+.dm-content strong { color: var(--gold-light); font-weight: 600; }
+.dm-content em { color: var(--text); font-style: italic; }
+
+.dm-content a {
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--gold-rule);
+  transition: color 0.15s, border-color 0.15s;
+}
+.dm-content a:hover {
+  color: var(--gold-light);
+  border-bottom-color: var(--gold-light);
+}
+.dm-content a.dm-link-external::after {
+  content: ' ↗';
+  font-size: 0.8em;
+  color: var(--text-muted);
+}
+
+.dm-content ul, .dm-content ol { padding-left: 1.4rem; margin: 0.75rem 0; }
+.dm-content li { margin: 0.3rem 0; }
+.dm-content li::marker { color: var(--gold-dim); }
+
+.dm-content blockquote {
+  border-left: 3px solid var(--gold-rule);
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  margin: 1.25rem 0;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* Decorative divider — matches the ✦ ✦ ✦ style from the voyage doc */
+.dm-content hr {
+  border: none;
+  text-align: center;
+  margin: 2.5rem 0;
+}
+.dm-content hr::before {
+  content: '✦ ✦ ✦';
+  color: var(--gold-dim);
+  letter-spacing: 1rem;
+  font-size: 0.7rem;
+}
+
+/* ── PULL-QUOTE ── */
+/* For the north-star tagline. Used sparingly. */
+.dm-pullquote {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  color: var(--gold-light);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin: 2rem 0;
+  border-top: 1px solid var(--gold-rule);
+  border-bottom: 1px solid var(--gold-rule);
+  font-style: italic;
+}
+
+/* ── CARDS ── */
+/* Visual unit for grouped reference content. Status colour on left border. */
+.dm-card {
+  background: var(--dm-elev-1);
+  border: 1px solid var(--gold-rule);
+  border-left: 3px solid var(--gold-rule);
+  border-radius: 2px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.25rem 0;
+}
+.dm-card.is-locked  { border-left-color: var(--gold); }
+.dm-card.is-open    { border-left-color: var(--dm-crimson); }
+.dm-card.is-cosmic  { border-left-color: var(--dm-violet); }
+.dm-card.is-info    { border-left-color: var(--dm-teal); }
+
+.dm-card-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 0.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Subordinate footer paragraphs inside a card.
+   Used in the Act Map for "PC arcs in this Act" / "Faction moves in this Act"
+   rows that contextualize the main beats above them. */
+.dm-card-footnote {
+  font-size: 0.85rem;
+  color: var(--dm-text-dim, var(--ivory-dim, #9a8f7a));
+  border-top: 1px dashed var(--dm-border-dim, rgba(180, 150, 90, 0.18));
+  padding-top: 0.6rem;
+  margin-top: 0.85rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.55;
+}
+
+.dm-card-footnote + .dm-card-footnote {
+  border-top: none;
+  padding-top: 0;
+  margin-top: -0.2rem;
+}
+
+.dm-card-footnote em {
+  color: var(--gold-dim, var(--gold));
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Subtitle / date line immediately under a card title.
+   Used in the voyages list for the voyage subtitle. */
+.dm-card-eyebrow {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--gold-dim, var(--gold));
+  letter-spacing: 0.04em;
+  margin: -0.2rem 0 0.7rem;
+  opacity: 0.85;
+}
+
+/* Action row inside a card — for buttons like "Open DM notes". */
+.dm-card-actions {
+  margin-top: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.dm-card-actions + .dm-card-actions {
+  margin-top: 0.4rem;
+}
+
+/* DM-styled button. Used in card actions. */
+.dm-button {
+  display: inline-block;
+  padding: 0.45rem 0.95rem;
+  background: var(--dm-elev-2);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.dm-button:hover,
+.dm-button:focus {
+  background: var(--gold);
+  color: var(--dm-elev-1, #0a0a14);
+  outline: none;
+}
+
+/* is-stub card variant — for upcoming/projected entries.
+   Slightly dimmer than canon, distinct from is-open. */
+.dm-card.is-stub {
+  border-left-color: var(--dm-border-dim, rgba(180, 150, 90, 0.35));
+  opacity: 0.88;
+}
+
+.dm-card.is-stub .dm-card-title {
+  color: var(--gold-dim, var(--gold));
+}
+
+/* ── CALLOUTS ── */
+/* Smaller inline emphasis blocks. Used for "DM note:", "Player-facing:", etc. */
+.dm-callout {
+  background: var(--dm-elev-2);
+  border-left: 3px solid var(--gold);
+  padding: 0.85rem 1.1rem;
+  margin: 1rem 0;
+  border-radius: 0 2px 2px 0;
+  font-size: 0.96rem;
+}
+.dm-callout.is-warn    { border-left-color: var(--dm-crimson); }
+.dm-callout.is-cosmic  { border-left-color: var(--dm-violet); }
+.dm-callout.is-info    { border-left-color: var(--dm-teal); }
+.dm-callout-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.dm-callout.is-warn    .dm-callout-label { color: var(--dm-crimson); }
+.dm-callout.is-cosmic  .dm-callout-label { color: var(--dm-violet); }
+.dm-callout.is-info    .dm-callout-label { color: var(--dm-teal); }
+
+/* ── COLLAPSIBLE SECTIONS ── */
+/* Wiki pages are long. Default-open, click to collapse. */
+.dm-collapse {
+  border-top: 1px solid rgba(201, 153, 58, 0.14);
+  margin: 0;
+}
+.dm-collapse > summary {
+  cursor: pointer;
+  padding: 1rem 0;
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  user-select: none;
+}
+.dm-collapse > summary::-webkit-details-marker { display: none; }
+.dm-collapse > summary::before {
+  content: '▸';
+  color: var(--gold-dim);
+  font-size: 0.9em;
+  transition: transform 0.15s;
+  display: inline-block;
+  width: 0.8em;
+}
+.dm-collapse[open] > summary::before { transform: rotate(90deg); }
+.dm-collapse > summary:hover { color: var(--gold-light); }
+.dm-collapse > *:not(summary) { padding-bottom: 1.25rem; }
+
+/* ── TABLES ── */
+.dm-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.95rem;
+  background: var(--dm-elev-1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.dm-content th {
+  background: var(--dm-elev-2);
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--gold-rule);
+}
+.dm-content td {
+  padding: 0.65rem 0.85rem;
+  border-bottom: 1px solid rgba(201, 153, 58, 0.14);
+  vertical-align: top;
+}
+.dm-content tbody tr:last-child td { border-bottom: none; }
+.dm-content tbody tr:hover td { background: var(--dm-elev-2); }
+
+/* ── CROSS-REFERENCE PILLS ── */
+/* Inline references between wiki pages: "see Continuum → Monoliths". */
+.dm-xref {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.12rem 0.45rem;
+  border: 1px solid var(--gold-rule);
+  border-radius: 2px;
+  color: var(--gold-dim);
+  background: var(--dm-elev-1);
+  margin-right: 0.3rem;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.dm-xref:hover {
+  color: var(--gold-light);
+  border-color: var(--gold-dim);
+}
+
+/* ── STATUS TAGS ── */
+/* Scan-at-a-glance markers for the wiki's information-state vocabulary. */
+.dm-tag {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.1rem 0.4rem;
+  border-radius: 2px;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+  font-weight: 600;
+}
+.dm-tag.is-locked   { background: rgba(201, 153, 58, 0.18); color: var(--gold-light); }
+.dm-tag.is-open     { background: rgba(168,  85, 60, 0.20); color: var(--dm-crimson); }
+.dm-tag.is-stub     { background: rgba(110, 104, 87, 0.20); color: var(--text-dim); }
+.dm-tag.is-canon    { background: rgba( 94, 168, 158, 0.18); color: var(--dm-teal); }
+.dm-tag.is-cosmic   { background: rgba(122,  94, 168, 0.20); color: var(--dm-violet); }
+
+/* ── DEFINITION LISTS ── */
+.dm-content dl { margin: 1rem 0; }
+.dm-content dt {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 0.85rem;
+}
+.dm-content dd { margin: 0.2rem 0 0 1.25rem; color: var(--text); }
+
+/* ── TILE GRID ── */
+/* For the index / hub page — links into wiki, out to trackers / archive. */
+.dm-tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+.dm-tile {
+  display: block;
+  background: var(--dm-elev-1);
+  border: 1px solid var(--gold-rule);
+  border-radius: 2px;
+  padding: 1.25rem;
+  text-decoration: none !important;
+  color: var(--text) !important;
+  border-bottom: 1px solid var(--gold-rule) !important;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+}
+.dm-tile:hover {
+  background: var(--dm-elev-2);
+  border-color: var(--gold-dim);
+  transform: translateY(-1px);
+}
+.dm-tile-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+.dm-tile-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  margin: 0 0 0.4rem;
+}
+.dm-tile-desc {
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  line-height: 1.45;
+}
+.dm-tile.dm-tile-external .dm-tile-title::after {
+  content: ' ↗';
+  color: var(--text-muted);
+  font-size: 0.8em;
+}
+
+/* ── SIDEBAR SIGN OUT ── */
+/* Distinct from the external links above it — no arrow, dimmer, with hover. */
+.side-nav-signout {
+  color: var(--text-muted) !important;
+  font-style: italic;
+  cursor: pointer;
+}
+.side-nav-signout svg { display: none; }
+.side-nav-signout:hover { color: var(--dm-crimson) !important; }
+
+
+/* ── PAGE FOOTER ── */
+.dm-footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(201, 153, 58, 0.14);
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  text-align: center;
+}
+
 /* ════════════════════════════════════════════════════════════════
-   dm-toc.js — auto-generated right-rail Table of Contents
-   ----------------------------------------------------------------
-   Opt-in: only runs on pages where <main class="dm-content"> also
-   carries the class "has-toc". Walks the page's <h2> and <h3>
-   headings, builds a sticky right-rail nav, and highlights the
-   section currently in view (scroll-spy).
-
-   No build step, no dependencies. Drop-in alongside dm-nav.js:
-     <script src="../scripts/dm-toc.js" defer></script>   (depth 0, /prime/*)
-     <script src="../../scripts/dm-toc.js" defer></script> (depth 1, /prime/voyages/*)
-
-   Headings with class "dm-toc-skip" are excluded.
+   RIGHT-RAIL TABLE OF CONTENTS
+   Opt-in per page: add class "has-toc" to <main class="dm-content">.
+   The dm-toc.js script injects the <nav class="dm-toc"> and the
+   scroll-spy. Pages without has-toc are completely unaffected.
    ════════════════════════════════════════════════════════════════ */
-(function () {
-  'use strict';
 
-  function ready(fn) {
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', fn);
-    } else {
-      fn();
-    }
+/* On TOC pages, the content column gives up its auto-centering and
+   instead reserves space on the right for the rail. We widen the
+   effective canvas and lay content + rail side by side. */
+.dm-content.has-toc {
+  max-width: 1180px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  column-gap: 2.5rem;
+  align-items: start;
+}
+
+/* The header and all direct content children live in the first column. */
+.dm-content.has-toc > *:not(.dm-toc) {
+  grid-column: 1;
+  min-width: 0;
+}
+
+/* The rail itself, second column, sticky. */
+.dm-toc {
+  grid-column: 2;
+  grid-row: 1 / 9999;
+  position: sticky;
+  top: 2.5rem;
+  align-self: start;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  padding-left: 1rem;
+  border-left: 1px solid var(--gold-rule);
+}
+
+.dm-toc-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 0.75rem;
+}
+
+.dm-toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dm-toc li {
+  margin: 0;
+}
+
+.dm-toc a {
+  display: block;
+  padding: 0.28rem 0.6rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  margin-left: -1rem;
+  padding-left: calc(0.6rem + 1rem - 2px);
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+/* h3-level entries indent under their h2. */
+.dm-toc a.dm-toc-sub {
+  padding-left: calc(1.5rem + 1rem - 2px);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  opacity: 0.78;
+}
+
+.dm-toc a:hover {
+  color: var(--gold-light);
+  background: var(--dm-elev-2);
+}
+
+/* Scroll-spy active state — set by dm-toc.js. */
+.dm-toc a.is-active {
+  color: var(--gold-light);
+  border-left-color: var(--gold);
+  background: var(--dm-elev-2);
+}
+
+/* Below 1100px, drop the rail entirely and restore centered content.
+   The sidebar still navigates between pages; in-page nav is desktop-only. */
+@media (max-width: 1100px) {
+  .dm-content.has-toc {
+    display: block;
+    max-width: 920px;
+    margin: 0 auto;
   }
-
-  function slugify(text) {
-    return text
-      .toLowerCase()
-      .replace(/[^\w\s-]/g, '')
-      .trim()
-      .replace(/\s+/g, '-')
-      .slice(0, 60);
+  .dm-toc {
+    display: none;
   }
+}
 
-  ready(function () {
-    var main = document.querySelector('main.dm-content.has-toc');
-    if (!main) return;
-
-    // Collect h2 + h3 in document order, skipping opted-out headings.
-    var headings = Array.prototype.slice
-      .call(main.querySelectorAll('h2, h3'))
-      .filter(function (h) {
-        return !h.classList.contains('dm-toc-skip');
-      });
-
-    if (headings.length < 2) return; // not worth a rail
-
-    // Ensure every heading has a stable id to anchor to.
-    var seen = {};
-    headings.forEach(function (h) {
-      if (!h.id) {
-        var base = slugify(h.textContent) || 'section';
-        var id = base;
-        var n = 2;
-        while (document.getElementById(id) || seen[id]) {
-          id = base + '-' + n++;
-        }
-        h.id = id;
-      }
-      seen[h.id] = true;
-    });
-
-    // Build the rail.
-    var nav = document.createElement('nav');
-    nav.className = 'dm-toc';
-    nav.setAttribute('aria-label', 'On this page');
-
-    var title = document.createElement('div');
-    title.className = 'dm-toc-title';
-    title.textContent = 'On this page';
-    nav.appendChild(title);
-
-    var ul = document.createElement('ul');
-    var linkFor = {};
-
-    headings.forEach(function (h) {
-      var li = document.createElement('li');
-      var a = document.createElement('a');
-      a.href = '#' + h.id;
-      a.textContent = h.textContent.replace(/\s+/g, ' ').trim();
-      if (h.tagName.toLowerCase() === 'h3') {
-        a.className = 'dm-toc-sub';
-      }
-      // Smooth-scroll without leaving a janky jump.
-      a.addEventListener('click', function (e) {
-        var target = document.getElementById(h.id);
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          history.replaceState(null, '', '#' + h.id);
-        }
-      });
-      li.appendChild(a);
-      ul.appendChild(li);
-      linkFor[h.id] = a;
-    });
-
-    nav.appendChild(ul);
-    main.appendChild(nav);
-
-    // ── Scroll-spy ──
-    // Highlight the heading nearest the top of the viewport. We track
-    // intersection ratios and pick the topmost currently-visible heading;
-    // when none are visible (mid-section), keep the last one above the fold.
-    var visible = {};
-    var lastActive = null;
-
-    function setActive(id) {
-      if (id === lastActive) return;
-      if (lastActive && linkFor[lastActive]) {
-        linkFor[lastActive].classList.remove('is-active');
-      }
-      if (id && linkFor[id]) {
-        linkFor[id].classList.add('is-active');
-      }
-      lastActive = id;
-    }
-
-    function recompute() {
-      // Among visible headings, choose the one highest on the page.
-      var best = null;
-      var bestTop = Infinity;
-      headings.forEach(function (h) {
-        if (visible[h.id]) {
-          var top = h.getBoundingClientRect().top;
-          if (top < bestTop) {
-            bestTop = top;
-            best = h.id;
-          }
-        }
-      });
-
-      if (best) {
-        setActive(best);
-        return;
-      }
-
-      // Nothing intersecting — find the last heading above the viewport top.
-      var above = null;
-      headings.forEach(function (h) {
-        if (h.getBoundingClientRect().top < 120) {
-          above = h.id;
-        }
-      });
-      if (above) setActive(above);
-    }
-
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          visible[entry.target.id] = entry.isIntersecting;
-        });
-        recompute();
-      },
-      {
-        // Top band of the viewport is the "active zone".
-        rootMargin: '-10% 0px -75% 0px',
-        threshold: 0,
-      }
-    );
-
-    headings.forEach(function (h) {
-      observer.observe(h);
-    });
-
-    // Initial state.
-    recompute();
-  });
-})();
+/* ── PRINT ── */
+@media print {
+  .side-nav, .side-nav-toggle, .dm-toc { display: none !important; }
+  body.with-sidebar { padding-left: 0 !important; }
+  .dm-content.has-toc { display: block; max-width: none; }
+  body { background: white; color: black; font-size: 11pt; }
+  body::before { display: none; }
+  .dm-content h1, .dm-content h2, .dm-content h3, .dm-content h4 { color: black; }
+  .dm-card { background: #f8f6ef; border-color: #b89a3a; }
+  .dm-callout { background: #f8f6ef; }
+  /* Force collapsibles open when printing so nothing's hidden */
+  .dm-collapse[open] { break-inside: avoid; }
+  .dm-collapse:not([open]) > *:not(summary) { display: block !important; }
+}
