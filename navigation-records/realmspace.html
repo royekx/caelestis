@@ -71,8 +71,32 @@
     padding: 0.25rem 0.7rem; margin-top: 0.3rem;
   }
   .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-dim); }
+
+  /* Orbital table for charted worlds */
+  .orbit-table { margin: 1.5rem 0 0.5rem; }
+  .orbit-group-label {
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold-dim); margin: 1.2rem 0 0.5rem;
+    padding-bottom: 0.3rem; border-bottom: 1px solid var(--gold-rule);
+  }
+  .orbit-row {
+    display: grid; grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 1rem; align-items: baseline;
+    padding: 0.4rem 0; border-bottom: 1px solid var(--gold-rule);
+    font-size: 0.86rem;
+  }
+  .orbit-row:last-child { border-bottom: none; }
+  .orbit-world {
+    font-family: 'Cinzel', serif; font-weight: 600;
+    color: var(--text); letter-spacing: 0.02em;
+  }
+  .orbit-dist { color: var(--text-dim); font-style: italic; }
+  .orbit-travel { color: var(--text-muted); text-align: right; }
   @media(max-width:560px){
     .entry-header { grid-template-columns: 1fr; }
+    .orbit-row { grid-template-columns: 1fr; gap: 0.15rem; }
+    .orbit-travel { text-align: left; }
   }
 </style>
   <script src="../scripts/nav.js" defer></script>
@@ -97,7 +121,8 @@
         <div class="portrait-label">Portrait Pending</div>
         <div class="stat-list"><div class="stat-row"><span class="stat-key">Type</span><span class="stat-val">Crystal Sphere</span></div>
 <div class="stat-row"><span class="stat-key">Primary Body</span><span class="stat-val">Toril</span></div>
-<div class="stat-row"><span class="stat-key">Notable Worlds</span><span class="stat-val">Toril, H'Catha, Coliar</span></div>
+<div class="stat-row"><span class="stat-key">Charted Worlds</span><span class="stat-val">Eight</span></div>
+<div class="stat-row"><span class="stat-key">Outermost World</span><span class="stat-val">H'Catha</span></div>
 <div class="stat-row"><span class="stat-key">Status</span><span class="stat-val">Charted — Home Sphere</span></div></div>
       </div>
       <div class="entry-info">
@@ -105,10 +130,35 @@
         <div class="entry-name">Realmspace</div>
         <div class="entry-sub">Crystal Sphere</div>
         <div class="entry-body" style="margin-top:0.8rem;"><p>Realmspace is the crystal sphere that contains Toril and its sister worlds — the origin point for most of the crew and the sphere where Caelestis Academy operates. It is one of the most thoroughly charted spheres accessible from the academy's position, and for most cadets it represents the boundary between the known and everything else.</p>
-<p>The sphere's Flow access points are well-documented. Its worlds range from the densely populated and politically complex to the strange and barely habitable. H'Catha, the outermost world, sits at the edge of the sphere — the last landmark before the Flow carries vessels into deeper wildspace and eventually to other spheres entirely.</p></div>
+<p>The sphere is organized around a central sun, with its worlds divided into the close-orbiting Inner Worlds and the distant Outer Worlds. Travel times are measured in days from the sun, a standard the academy uses for routing and provisioning. Anadia, nearest the sun, is barely half a day out; H'Catha, the outermost charted world, sits sixteen days from the center at the edge of the sphere — the last landmark before the Flow carries vessels into the Deep Astral and, eventually, toward other spheres entirely.</p></div>
       </div>
     </div>
+
     <div class="divider">✦ ✦ ✦</div>
+
+    <div class="section-block">
+      <div class="section-label">Charted Worlds</div>
+
+      <div class="orbit-table">
+        <div class="orbit-group-label">Inner Worlds</div>
+        <div class="orbit-row"><span class="orbit-world">Anadia</span><span class="orbit-dist">50 million miles</span><span class="orbit-travel">12 hours from Sun</span></div>
+        <div class="orbit-row"><span class="orbit-world">Coliar</span><span class="orbit-dist">100 million miles</span><span class="orbit-travel">1 day from Sun</span></div>
+        <div class="orbit-row"><span class="orbit-world">Toril</span><span class="orbit-dist">200 million miles</span><span class="orbit-travel">2 days from Sun</span></div>
+        <div class="orbit-row"><span class="orbit-world">Karpri</span><span class="orbit-dist">300 million miles</span><span class="orbit-travel">3 days from Sun</span></div>
+        <div class="orbit-row"><span class="orbit-world">Chandos</span><span class="orbit-dist">400 million miles</span><span class="orbit-travel">4 days from Sun</span></div>
+
+        <div class="orbit-group-label">Outer Worlds</div>
+        <div class="orbit-row"><span class="orbit-world">Glyth</span><span class="orbit-dist">1,000 million miles</span><span class="orbit-travel">10 days from Sun</span></div>
+        <div class="orbit-row"><span class="orbit-world">Garden</span><span class="orbit-dist">1,200 million miles</span><span class="orbit-travel">12 days from Sun</span></div>
+        <div class="orbit-row"><span class="orbit-world">H'Catha</span><span class="orbit-dist">1,600 million miles</span><span class="orbit-travel">16 days from Sun</span></div>
+
+        <div class="orbit-group-label">Beyond the Sphere</div>
+        <div class="orbit-row"><span class="orbit-world">Deep Astral</span><span class="orbit-dist">3,200 million miles</span><span class="orbit-travel">32 days from Sun</span></div>
+      </div>
+    </div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
     <div class="section-block">
       <div class="section-label">Voyage 001</div>
       <div class="log-list"><div class="log-item">Current location of Caelestis Academy and home sphere of most active crew.</div>
