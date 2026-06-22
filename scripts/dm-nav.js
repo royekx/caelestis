@@ -21,6 +21,37 @@
 (function () {
   'use strict';
 
+  // ── Early guard: the DM nav must NEVER render on a player-facing page,
+  // and it must NEVER render before the gate has authenticated the session.
+  // Two checks, both must pass before any DOM injection happens.
+  var SESSION_KEY = 'caelestis_continuum_auth';
+
+  // 1. Must be inside /prime/. If somehow this script is loaded by a page
+  //    outside /prime/ (player root, etc.), do nothing.
+  if (window.location.pathname.indexOf('/prime/') === -1) {
+    return;
+  }
+
+  // 2. Must be authenticated. The gate page (/prime/index.html) handles auth
+  //    itself and does NOT include this script — so we only get here on a
+  //    protected page. But if a non-authenticated visitor somehow lands here
+  //    directly (deep link, stale tab, etc.), redirect to the gate without
+  //    rendering anything.
+  try {
+    if (sessionStorage.getItem(SESSION_KEY) !== '1') {
+      // Compute the gate URL from current depth and redirect.
+      var pn = window.location.pathname;
+      var pIdx = pn.indexOf('/prime/');
+      var depth = (pn.slice(pIdx + 7).match(/\//g) || []).length;
+      var gateBase = depth > 0 ? new Array(depth + 1).join('../') : './';
+      window.location.replace(gateBase + 'index.html');
+      return;
+    }
+  } catch (err) {
+    // sessionStorage unavailable (private mode quirks, etc.) — fail closed.
+    return;
+  }
+
   // ── Path resolution ───────────────────────────────────────────────────────
   var pathname = window.location.pathname;
   var primeIdx = pathname.indexOf('/prime/');
