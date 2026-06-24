@@ -45,11 +45,23 @@
 
     if (headings.length < 2) return; // not worth a rail
 
+    // Read heading text without the noise of inline <span> tag chips.
+    // Headings like:  <h3 id="caelestis">Caelestis <span class="dm-tag is-canon">Home base</span></h3>
+    // should appear in the TOC as "Caelestis", not "Caelestis Home base".
+    function headingText(h) {
+      var clone = h.cloneNode(true);
+      var spans = clone.querySelectorAll('span');
+      for (var i = 0; i < spans.length; i++) {
+        spans[i].parentNode.removeChild(spans[i]);
+      }
+      return (clone.textContent || '').replace(/\s+/g, ' ').trim();
+    }
+
     // Ensure every heading has a stable id to anchor to.
     var seen = {};
     headings.forEach(function (h) {
       if (!h.id) {
-        var base = slugify(h.textContent) || 'section';
+        var base = slugify(headingText(h)) || 'section';
         var id = base;
         var n = 2;
         while (document.getElementById(id) || seen[id]) {
@@ -77,7 +89,7 @@
       var li = document.createElement('li');
       var a = document.createElement('a');
       a.href = '#' + h.id;
-      a.textContent = h.textContent.replace(/\s+/g, ' ').trim();
+      a.textContent = headingText(h);
       if (h.tagName.toLowerCase() === 'h3') {
         a.className = 'dm-toc-sub';
       }

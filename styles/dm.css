@@ -613,3 +613,300 @@
   .dm-collapse[open] { break-inside: avoid; }
   .dm-collapse:not([open]) > *:not(summary) { display: block !important; }
 }
+
+
+/* ════════════════════════════════════════════════════════════════
+   DOSSIER TABLES
+   Tabular character/entity rosters with portraits, populated via
+   /scripts/portraits.js. Each .dossier table is followed by collapsible
+   <details class="dm-collapse"> for the expandable prose.
+   ════════════════════════════════════════════════════════════════ */
+
+.dossier {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.92rem;
+  background: rgba(255,255,255,0.01);
+  border: 1px solid var(--gold-rule);
+}
+
+.dossier thead th {
+  text-align: left;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  border-bottom: 1px solid var(--gold-rule);
+  padding: 0.6rem 0.8rem;
+  font-weight: 600;
+  background: rgba(201,153,58,0.04);
+}
+
+.dossier tbody td {
+  vertical-align: middle;
+  padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid rgba(201,153,58,0.12);
+  color: var(--text);
+}
+
+.dossier tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.dossier tbody tr:hover {
+  background: rgba(201,153,58,0.03);
+}
+
+.dossier .dossier-name {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+}
+
+.dossier .dossier-role {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.dossier .dossier-detail {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  line-height: 1.45;
+}
+
+.dossier-portrait {
+  width: 64px;
+  min-width: 64px;
+  padding: 0.5rem !important;
+}
+
+.dossier-portrait img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border: 1px solid var(--gold-rule);
+  display: block;
+}
+
+.dossier-monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--gold-rule);
+  background: rgba(201,153,58,0.06);
+  color: var(--gold-dim);
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* On narrow screens collapse to 2-column with portrait inline */
+@media (max-width: 720px) {
+  .dossier thead { display: none; }
+  .dossier, .dossier tbody, .dossier tr, .dossier td { display: block; width: 100%; }
+  .dossier tr {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 0.5rem 0.9rem;
+    padding: 0.6rem 0.4rem;
+    border-bottom: 1px solid rgba(201,153,58,0.12);
+  }
+  .dossier td { border: none; padding: 0; }
+  .dossier-portrait { grid-row: span 3; }
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   ARTIFACT DOSSIER — wider portrait slot for objects
+   ════════════════════════════════════════════════════════════════ */
+
+.dossier.dossier-artifacts .dossier-portrait {
+  width: 80px;
+  min-width: 80px;
+}
+
+.dossier.dossier-artifacts .dossier-portrait img,
+.dossier.dossier-artifacts .dossier-portrait .dossier-monogram {
+  width: 72px;
+  height: 72px;
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   COLLAPSIBLE DETAIL SECTIONS (under dossiers)
+   <details class="dm-collapse"> with a chevron summary.
+   ════════════════════════════════════════════════════════════════ */
+
+.dm-collapse {
+  margin: 0.6rem 0 0.4rem;
+  border-left: 2px solid var(--gold-rule);
+  padding-left: 1rem;
+}
+
+.dm-collapse > summary {
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  font-size: 0.84rem;
+  letter-spacing: 0.05em;
+  color: var(--gold-dim);
+  padding: 0.4rem 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+}
+
+.dm-collapse > summary::-webkit-details-marker { display: none; }
+
+.dm-collapse > summary::before {
+  content: '▸';
+  display: inline-block;
+  font-size: 0.7rem;
+  color: var(--gold-dim);
+  transition: transform 0.18s;
+}
+
+.dm-collapse[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.dm-collapse > summary:hover {
+  color: var(--gold);
+}
+
+.dm-collapse[open] > summary {
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.dm-collapse > *:not(summary) {
+  font-size: 0.93rem;
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   OPERATIONAL LINKS BAR (top of Spine)
+   ════════════════════════════════════════════════════════════════ */
+
+.dm-ops-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 2rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--gold-rule);
+  background: rgba(201,153,58,0.03);
+}
+
+.dm-ops-links a {
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  text-decoration: none;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--gold-rule);
+  background: rgba(0,0,0,0.15);
+  transition: color 0.18s, border-color 0.18s, background 0.18s;
+}
+
+.dm-ops-links a:hover {
+  color: var(--gold);
+  border-color: var(--gold-dim);
+  background: rgba(201,153,58,0.08);
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   VOYAGE GRID — briefing | voyage | delta layout per entry
+   ════════════════════════════════════════════════════════════════ */
+
+.voyage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.voyage-grid .voyage-col {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--gold-rule);
+  background: rgba(255,255,255,0.01);
+}
+
+.voyage-grid .voyage-col-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--gold-rule);
+}
+
+.voyage-grid .voyage-col-body {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-dim);
+}
+
+.voyage-grid .voyage-col-body p { margin: 0 0 0.6rem; }
+.voyage-grid .voyage-col-body p:last-child { margin-bottom: 0; }
+
+.voyage-grid .voyage-col-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+  color: var(--gold-dim);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-rule);
+  padding-bottom: 0.1rem;
+}
+
+.voyage-grid .voyage-col-link:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold-dim);
+}
+
+.voyage-delta {
+  margin: 0.6rem 0 2rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--gold-rule);
+  border-left: 3px solid var(--dm-teal, var(--gold-dim));
+  background: rgba(0,0,0,0.18);
+}
+
+.voyage-delta-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 0.5rem;
+}
+
+.voyage-delta-body {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.voyage-delta-body em {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 720px) {
+  .voyage-grid { grid-template-columns: 1fr; }
+}
