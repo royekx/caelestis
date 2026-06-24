@@ -73,11 +73,14 @@
 
   var sections = [
     { key: 'campaign',  label: 'Campaign',     path: 'campaign/'   },
-    { key: 'remaking',  label: 'The Remaking', path: 'campaign/remaking/', indent: true },
-    { key: 'voyages',   label: 'Voyages',      path: 'campaign/voyages/',  indent: true },
+    { key: 'remaking',  label: 'The Remaking', path: 'campaign/remaking/',     indent: true },
+    { key: 'plot-hooks',label: 'Plot Hooks',   path: 'campaign/plot-hooks.html', indent: true },
+    { key: 'what-if',   label: 'What If',      path: 'campaign/what-if.html',    indent: true },
+    { key: 'voyages',   label: 'Voyages',      path: 'campaign/voyages/',     indent: true },
     { key: 'cosmology', label: 'Cosmology',    path: 'cosmology/'  },
     { key: 'realms',    label: 'Realms',       path: 'realms/'     },
     { key: 'factions',  label: 'Factions &amp; Characters', path: 'factions/' },
+    { key: 'artifacts', label: 'Artifacts',    path: 'artifacts/'  },
   ];
 
   var extLinks = [
