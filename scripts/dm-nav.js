@@ -73,10 +73,11 @@
 
   var sections = [
     { key: 'campaign',  label: 'Campaign',     path: 'campaign/'   },
-    { key: 'remaking',  label: 'The Remaking', path: 'campaign/remaking/',     indent: true },
+    { key: 'voyages',   label: 'Voyages',      path: 'campaign/voyages/',        indent: true },
+    { key: 'spine',     label: 'The Spine',    path: 'campaign/spine.html',      indent: true },
+    { key: 'remaking',  label: 'The Remaking', path: 'campaign/remaking/',       indent: true },
     { key: 'plot-hooks',label: 'Plot Hooks',   path: 'campaign/plot-hooks.html', indent: true },
     { key: 'what-if',   label: 'What If',      path: 'campaign/what-if.html',    indent: true },
-    { key: 'voyages',   label: 'Voyages',      path: 'campaign/voyages/',     indent: true },
     { key: 'cosmology', label: 'Cosmology',    path: 'cosmology/'  },
     { key: 'realms',    label: 'Realms',       path: 'realms/'     },
     { key: 'factions',  label: 'Factions &amp; Characters', path: 'factions/' },
@@ -84,12 +85,6 @@
   ];
 
   var extLinks = [
-    { label: 'Campaign Tracker',     href: 'https://docs.google.com/spreadsheets/d/1m4V9t2Z6hq0rjeUVZyTooNI8LMGOrd9gHezWY9o5-nY/edit' },
-    { label: 'Character Tracker',    href: 'https://docs.google.com/spreadsheets/d/1UbXgV-SDR_gMit1qTJl9tqrBxZVr__Ef7W1MHQ1dYew/edit' },
-    { label: 'Wildspace Tracker',    href: 'https://docs.google.com/spreadsheets/d/1Bwu1iG0Xd3SgFzoiP8Kuqo7DVGBR0H-qPo_G77dOg8E/edit' },
-    { label: 'Wildspace Lore Bible', href: 'https://docs.google.com/document/d/1XjOAGPAWvDivwI2ThihwCG84ACk2eF_HKtzbxgbVTMQ/edit' },
-    { label: 'Crew Logs',            href: 'https://docs.google.com/document/d/1BHK5I0sLMoEUCDQ89Qic1tqkup7KPMQbZ01Ko6vnnLU/edit' },
-    { label: 'Drive Root',           href: 'https://drive.google.com/drive/folders/1suJFIN_LYDmRrkzjk3PkVv2pOmbJxE8r' },
     { label: 'Player Site',          href: siteBase + 'index.html' },
   ];
 
