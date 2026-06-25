@@ -55,15 +55,82 @@ specific PC on a setting page, you've crossed the boundary. Move it.
 
 ### Setting pages are encyclopedic
 
-Setting pages describe **what is true in the world.** They do not carry
-DM-craft guidance, "Running the X" preambles, prep notes, or operational
-content. That stuff belongs on the Campaign index (the DM how-to) or in
-this guide.
+Setting pages describe **what is true in the world, currently.** They
+do not carry DM-craft guidance, "Running the X" preambles, prep notes,
+operational content, or authorial framing. That stuff belongs on the
+Campaign index (the DM how-to) or in this guide.
 
 A setting page's job is: *if you go to look for the World Surveyor, you
 get information about the World Surveyor.* Anything operational —
 *how to use this during prep, when to surface what* — lives in the
 Campaign cluster.
+
+#### Content discipline — what stays on Setting and what doesn't
+
+**Setting describes what each entity is.** Not what it isn't. Not what
+it isn't typical of. Not comparatively. Not what's rare. The reader
+builds the picture by reading across entries.
+
+The clearest examples of how this works:
+
+- *Gregory's entry* says he is an autognome wizard who casts spells.
+  It does not say "the only known casting autognome." That comparison
+  is for the reader to make by also reading the Autognome entry.
+- *H'Catha's entry* describes H'Catha — torus geometry, beholder
+  rulership, the Spire. It does not describe how the crew is about to
+  visit it or what arc they're approaching it under.
+- *Sol's entry* says he's a paladin of Beshaba who survived Aethris's
+  failed Zenith ritual and is pursued by the Crystalline Retrieval
+  Construct. It does not say "Sol's arc explores the question of
+  personhood vs. function" — that's authorial framing.
+
+#### What comes off Setting
+
+- **Authorial planning.** "Forthcoming fetch quest," "to be revealed when,"
+  "specifics pending until the table reaches it," "Arc III lever," "held
+  for late-late-game," "DM menu," "deferred until each enters play."
+- **Authorial framing.** "Arc centers on," "thematic question," "his
+  thematic role is," "we author toward," "we are authoring toward."
+- **Forward planning.** "The crew will approach via," "the Arc 1 finale
+  will take them," "this is where the first encounter lands."
+- **Player-facing meta.** "If players wonder X — no," "plants the
+  question in the player's own head," "answers their concern about Y."
+- **Comparative absolutes.** "The only known X," "no other X can do
+  this," "few are X." Describe the entity. Let the reader infer.
+
+#### What stays on Setting
+
+- **Current state, including state that implicates PCs.** Tumak is a
+  Wayfinder. Sol is pursued by the CRC. Boogie carries the Fonains
+  shard. Gregory casts. All currently true; all setting.
+- **Permanent historical events,** even ones a campaign generated. If
+  the campaign ever produces something that becomes a permanent fact
+  about the world (a destroyed city, a discovered artifact, a Zenith),
+  it goes in Setting as history.
+- **Current operations,** stated as fact. Vocath has a long-standing
+  commercial conflict with Mirt. Saerthe maintains the station's
+  Forbiddance. The Foundling is currently assigned to the senior
+  cadet cohort. These are world-facts that any observer could state.
+- **Working assumptions and partial knowledge** about cosmological
+  questions. The Reach's name is not known. The Restorers' awareness of
+  the Hollow is not known. These are gaps in record, not DM
+  plan-deferrals; phrase them as such.
+
+#### Setting ↔ Campaign — the seam
+
+The seam is the shape of the test. Two phrasings of nearly the same
+sentence sit on opposite sides:
+
+| Campaign (planning, framing) | Setting (current state) |
+|---|---|
+| The crew will approach H'Catha disguised as a tyrant ship. | H'Catha is patrolled by beholders; non-beholder traffic is rare and dangerous. |
+| Vocath's grudge-op is the cover for a Brig recon. | Vocath is in active commercial conflict with Mirt. |
+| Sol's arc centers on existence through endurance. | Sol bears Beshaba's mark openly and manifests her Oath of Misfortune. |
+| The Latchling is the first anomaly Gregory's resonance locates. | The Latchling is a paracausal entity currently hidden at the Sea Dock by Rindle Gearloft. |
+
+When in doubt: *would a one-shot DM running a different campaign in
+this world need to delete the sentence?* If yes → Campaign. If no →
+Setting.
 
 ### How sub-areas relate
 
@@ -423,6 +490,43 @@ summary. Row expanded = full detail. One representation per entity.
 The Artifacts page once described the World Surveyor with named-party
 reads (crew/network/Vecna). Setting got named campaign parties; **fix**
 is generic depths on Setting, named parties on Remaking.
+
+### Don't write Setting in campaign voice
+
+The Realms page once described H'Catha as "where the crew's Arc I
+finale will take them via the disguised tyrant ship — the Foundling
+can't survive the approach." That's authorial planning, not world
+description. **Fix:** describe what H'Catha is (torus, beholder-ruled,
+the Spire); the crew's approach lives on Spine and the Voyages
+briefing.
+
+The rule: a one-shot DM running this universe should be able to read
+the Setting entry and use it. If they'd have to delete sentences,
+those sentences are mis-located.
+
+### Don't list PCs as illustrations of cosmological principles
+
+The Paracausality section once read as a list of "Gregory is paracausal
+because X, Mr. Blip is the control case because Y, Wizpop surfaces it,
+the Latchling is a different shape." That's a campaign roster pretending
+to be a principle. **Fix:** describe paracausality generically — how it
+manifests, what shapes change can take, what resonance is. PCs appear
+in their own entries with their own current-state facts.
+
+### Don't use comparative absolutes
+
+"The only known X." "No other Y can do this." "Few are Z." Describe
+what the entity is; let the reader build the comparison by reading
+other entries. Gregory's entry says he casts. The Autognome entry, if
+written, would say casting isn't typical of them.
+
+### Don't enumerate authorial options on Setting
+
+The World Surveyor's heart once had a "DM menu" with four ranked
+candidates and a "lead candidate" tag. **Fix:** commit to the one
+that's true in the world; drop the menu. If you change your mind, you
+change the entry. The wiki states facts, not the author's working
+options.
 
 ### Don't put "Running the X" sections on setting pages
 
