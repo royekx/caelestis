@@ -66,6 +66,33 @@
     // ── Artifacts (treated as portrait-like for dossier consistency) ──
     'world-surveyor': { name: 'The World Surveyor', fileId: '' },
 
+    // ── Places ──
+    'caelestis':     { name: 'Caelestis',           fileId: '' },
+    'brig':          { name: 'The Brig',            fileId: '' },
+    'sea-dock':      { name: 'Sea Dock',            fileId: '' },
+    'sky-dock':      { name: 'Sky Dock',            fileId: '' },
+    'weeping-goddess': { name: 'Weeping Goddess',   fileId: '' },
+    'toril':         { name: 'Toril',               fileId: '' },
+    'hcatha':        { name: 'H\'Catha',            fileId: '' },
+    'hakatha':       { name: 'Hakatha',             fileId: '' },
+    'virenspace':    { name: 'Virenspace',          fileId: '' },
+    'aethris':       { name: 'Aethris',             fileId: '' },
+    'hollow':        { name: 'The Hollow',          fileId: '' },
+    'tumak-homeworld': { name: 'Lunarfoot',         fileId: '' },
+    'cairn-station': { name: 'Cairn Station',       fileId: '' },
+
+    // ── Ships & vehicles ──
+    'foundling':     { name: 'The Foundling',       fileId: '' },
+    'moonraider':    { name: 'The Moonraider',      fileId: '' },
+    'tyrant-ship':   { name: 'Tyrant ship',         fileId: '' },
+
+    // ── Threads, hooks, named objects (sketches/icons) ──
+    'hcatha-meteor': { name: 'H\'Catha Meteor',     fileId: '' },
+    'sabotage-sigil':{ name: 'Sabotage sigil',      fileId: '' },
+    'latchling':     { name: 'The Latchling',       fileId: '' },
+    'fonains-shard': { name: 'Fonains shard',       fileId: '' },
+    'wardrobe':      { name: 'Mirt\'s wardrobe',    fileId: '' },
+
   };
 
   // ── Rendering helpers ─────────────────────────────────────────────────────
