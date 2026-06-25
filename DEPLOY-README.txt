@@ -2,43 +2,44 @@ CAELESTIS DM WIKI — DEPLOY BUNDLE
 ==================================
 Generated for royekx.github.io/caelestis/
 
-This bundle is CUMULATIVE — every change since the prior structural pass.
-Deploy this bundle, delete the stale files listed below, hard-refresh.
+Cumulative bundle. Every change since the prior structural pass. Deploy
+this bundle, delete the stale files listed below, hard-refresh.
 
 
 WHAT'S IN THIS BUNDLE
 ---------------------
-Mirrors your live site layout. Unzip and copy the contents so they land
-at your repository root (the /caelestis/ level):
+Mirrors the live site layout. Unzip and copy contents so they land at
+your repository root (the /caelestis/ level):
 
   /caelestis/
   ├── styles/
   │   └── dm.css                              (deploy — overwrite)
-  │       NOTE: caelestis.css is NOT in this bundle. Keep your existing one.
   ├── scripts/
   │   ├── dm-nav.js                            (deploy — overwrite)
-  │   ├── dm-toc.js                            (deploy — overwrite; tag-strip)
-  │   └── portraits.js                         (deploy — overwrite; expanded image map)
+  │   ├── dm-toc.js                            (deploy — overwrite)
+  │   └── portraits.js                         (deploy — overwrite; Hakatha key removed)
   └── prime/
-      ├── index.html                           (gate — overwrite)
-      ├── hub.html                             (rebuilt — canonical-order tiles)
+      ├── index.html                           (gate)
+      ├── hub.html                             (Realms tile description updated)
       ├── cosmology/
-      │   └── index.html                       (universal collapsibles)
+      │   └── index.html                       (Setting cleanup — see below)
       ├── realms/
-      │   └── index.html                       (universal collapsibles)
+      │   └── index.html                       (rebuilt from scratch — Setting voice)
       ├── factions/
-      │   └── index.html                       (rebuilt — unified dossier rows)
+      │   └── index.html                       (rebuilt from scratch — PCs added; Setting voice)
       ├── artifacts/
-      │   └── index.html                       (rebuilt — unified dossier rows)
+      │   └── index.html                       (Setting cleanup; heart's-nature committed)
       └── campaign/
-          ├── index.html                       (DM how-to + universal collapsibles)
-          ├── spine.html                       (rebuilt — Central Question / Cosmological Pressures / Crew / Arcs)
+          ├── index.html                       (cross-references updated)
+          ├── spine.html                       (cross-references updated; Almosts content inlined)
           ├── voyages/
-          │   └── index.html                   (briefing/voyage/delta + custom default-opens)
-          ├── plot-hooks.html                  (rebuilt — Active + Inactive, no duplicate table)
-          ├── what-if.html                     (universal collapsibles)
+          │   └── index.html
+          ├── plot-hooks.html                  (cross-references updated)
+          ├── what-if.html
           └── remaking/
-              └── index.html                   (universal collapsibles + Failure state rename)
+              └── index.html
+
+NOTE: caelestis.css is NOT in this bundle. Keep your existing one.
 
 
 DELETE THESE STALE FILES/DIRS FROM THE LIVE REPO
@@ -63,149 +64,118 @@ Anything under /prime/ NOT listed above is stale. In particular:
     - /prime/cosmology/world.html
     - /prime/cosmology/remaking.html
 
-ADD without DELETE and stale links coexist with new ones.
-
 
 KEY CHANGES SINCE LAST DEPLOY
 -----------------------------
-1. UNIVERSAL COLLAPSIBLE PATTERN
-   Every h2 and h3 section across the wiki is now collapsible. Pages
-   read as outlines of summaries; click any section to expand. Default
-   behavior:
-     - Spine: Central Question open; Arcs open with Arc 1 expanded
-     - Voyages: Next session open; Record open; V003 (most recent
-       recorded) open; V002/V001 collapsed
-     - Plot Hooks: Active open; Inactive collapsed
-     - All other pages: collapsed by default
+1. SETTING CONTENT AUDIT
+   Setting pages now read as encyclopedia entries: each entity is
+   described by what it currently is. Authorial planning, arc framing,
+   forward-looking "the crew will" language, comparative absolutes
+   ("the only known"), and DM-menu enumerations are stripped.
 
-2. UNIFIED DOSSIER ROWS
-   Factions, Artifacts, Plot Hooks, and the Spine's Crew all use one
-   collapsible row per entity. No more "table here, full notes
-   collapsibles below" duplication. Click any row to expand it inline.
+   - Realms rebuilt from scratch. Each place describes itself.
+     H'Catha is a torus world ruled by beholders with a central Spire,
+     not "where the crew's Arc I finale will take them." Caelestis is
+     a Fleet station with two wings, not "the campaign's broader
+     headquarters." Aethris describes the Misfortuned and Fortuned as
+     categories of person on Aethris; Sol's name does not appear in
+     the entry. Tumak's homeworld renamed "Lunarfoot" (working name).
 
-3. RENAMES (FUNCTIONAL TITLES)
-   - "The North" → "Central Question"
-   - "The Weather of Reality" → "Cosmological Pressures"
-   - "Acts" / "The Acts" → "Arcs"
-   - "D — The End" → "Failure state"
-   - "The Spine" → "Spine" (nav, hub tile, page heading)
-   - Stylistic "The" stripped from non-canonical section titles in
-     Remaking (Network / Inscription / Fork / Mechanism / Node ladder /
-     Planning method / Artifact / World-hearts chase / Dual attack)
-   - World-object names retain their "The" (The Reach, The Core, The
-     Gods, The Hollow, The Remaking, The Prime Continuum, The Axioms,
-     The Bridge — these are names, not stylistic flourishes)
+   - Factions & Characters rebuilt from scratch. PCs added as Setting
+     entries under a new "The Crew" subsection of Academy & Fleet,
+     each described by current state. Vessels subsection added with
+     the Foundling. Vocath's commercial conflict with Mirt stated as
+     fact; the cover operation lives on Remaking. The "Unaffiliated /
+     Almosts" subsection removed entirely — that was campaign-specific
+     authorial framing of Bartholomew's arc.
 
-4. PLOT HOOKS CONSOLIDATED
-   Active section is now the scannable view (rows with type-tags and
-   status pills); no separate status-table at the bottom. Inactive
-   section uses the same row pattern for planted-but-not-active threads.
+   - Cosmology surgically cleaned. The "Paracausal entities in play"
+     PC-roster subsection rewritten as a generic description of how
+     paracausal change manifests. "Forward hook" / "Held for late-late
+     game" / "Arc III lever" framings stripped. The Remaking H2 (a
+     forward-link to campaign content) removed. Counter-spore plant
+     player-facing callout reframed as encyclopedic.
 
-5. EXPANDED IMAGE MAP
-   `scripts/portraits.js` now carries keys for places (Caelestis, the
-   Brig, Sea Dock, Sky Dock, Weeping Goddess, Toril, H'Catha, Hakatha,
-   Virenspace, Aethris, the Hollow, Lunarfoot, Cairn Station), ships
-   (Foundling, Moonraider, tyrant ship), and thread/object icons
-   (H'Catha meteor, sabotage sigil, Latchling, Fonains shard, wardrobe).
-   All `fileId` slots empty and ready to populate.
+   - Artifacts cleaned. "Heart's nature DM menu" replaced with a
+     committed Setting description of the central fragment. The
+     "Other Reach artifacts" entry stripped of authorial planning
+     ("they do not need to know the set exists until the moment that
+     matters" → simply describes the set's distribution).
 
-6. CAMPAIGN-CLUSTER NAV ORDER LOCKED
-   Voyages → Spine → Remaking → Plot Hooks → What If
-   (Tracker external links removed from nav; they live in Spine's
-   operational-links bar and on the hub's Trackers tile section.)
+2. HAKATHA CONSOLIDATED INTO H'CATHA
+   A stale Hakatha stub existed as a separate place. It's the same
+   world. Removed entirely; all references redirected to H'Catha.
+   Portraits.js Hakatha image key removed.
 
-7. SETTING PAGES ARE ENCYCLOPEDIC
-   No "Running the X" preambles. Setting pages start with a brief lede
-   and go straight to content. DM craft lives on the Campaign index.
+3. CROSS-REFERENCE FIXES
+   - The Brig anchor (#brig) restored on the new Caelestis page
+   - Cosmology/#remaking references (now gone) redirected to
+     campaign/remaking/ on Campaign-index, Spine, and Factions
+   - Factions/#almosts (now gone) reference on Spine inlined as prose
+   - All anchor cross-references verified clean by integrity check
 
-8. ANCHOR UPDATES
-   `#act-2` / `#act-3` / `#end` references in Remaking and Realms
-   updated to `#arc-2` / `#arc-3` / `#failure-state`. Integrity check
-   passes cleanly except for the four briefing-file forward references.
+4. NEW CONTENT-DISCIPLINE RULE
+   The WIKI-PAGE-GUIDE now documents the actual content rule, with
+   examples and anti-patterns. The structural rules (universal
+   collapsibles, unified dossier rows, canonical campaign order) were
+   already documented. What's added: the Setting/Campaign content
+   seam, the table of "Campaign voice vs. Setting voice" sentence
+   pairs, and the "one-shot DM test" — if a different DM running this
+   universe would have to delete the sentence, it's mis-located.
 
 
 VERIFICATION AFTER DEPLOY
 -------------------------
 Hard-refresh (Cmd/Ctrl-Shift-R) and check:
 
-  1. /prime/ loads with NO sidebar before sign-in. If you see the nav
-     before login, the gate file is stale — re-deploy /prime/index.html.
+  1. /prime/ loads with NO sidebar before sign-in.
 
-  2. After sign-in, hub shows three sections: Campaign (six tiles in
-     canonical order), Setting (four pillars), Trackers.
+  2. After sign-in, click into Realms → H'Catha. The entry describes
+     the world (torus geometry, beholder rulership, the Spire). No
+     reference to "the crew," "Arc I," "the Foundling," or "the
+     tyrant ship approach."
 
-  3. Sidebar shows Campaign cluster in canonical order: Voyages, Spine,
-     The Remaking, Plot Hooks, What If. Tracker links are GONE from the
-     nav.
+  3. Click into Factions & Characters → Academy & Fleet → The Crew.
+     All six PCs (Bartholomew, Boogie, Casey, Gregory, Sol, Tumak)
+     appear as dossier rows. Each row describes who they are, not
+     what their arc is.
 
-  4. Click into Cosmology — every h2 section is a closed collapsible
-     showing a chevron at the leading edge. Click any section to expand.
+  4. Same section, scroll to Vessels — the Foundling appears as a
+     dossier row.
 
-  5. Click into Factions & Characters — every faction is a closed
-     collapsible. Expand Order of the All-Father → the Watchers section
-     contains one dossier row (Ezra). Click Ezra's row — body unfolds
-     directly underneath. No "Ezra — full notes" elsewhere.
+  5. Click into Factions → Unaffiliated. The "Unbloomed bud / Almosts"
+     section is gone (that was campaign-specific framing of
+     Bartholomew's arc; it lives on Spine now).
 
-  6. Click into Artifacts — World Surveyor is one collapsible row.
-     Expand it. Inside are nested collapsibles (Function, Cosmological
-     depths of reading, Status, Heart's nature, Ethics).
+  6. Click into Cosmology → The Axioms → Paracausality → "How
+     paracausal change manifests." The subsection describes the
+     phenomenon generically. No PC roster.
 
-  7. Click into Plot Hooks — Active section is open by default with six
-     rows visible (H'Catha Meteor, Sabotage sigil, Latchling, Boogie/
-     Fonains shard, Sol/Aethris, World Surveyor at graduation). Each
-     row shows status pill + type tags. NO duplicate scannable table
-     at the bottom. Inactive section is collapsed.
+  7. Click into Cosmology and scroll to the bottom. The Remaking H2
+     section is gone (Setting doesn't forward-link to campaign
+     content).
 
-  8. Click into Spine — operational links bar visible at top. Central
-     Question is open. Cosmological Pressures is closed. Crew is closed.
-     Arcs is open with Arc 1 expanded.
+  8. Click into Artifacts → World Surveyor → "The heart's nature."
+     The fragment is described as a piece of the Reach's own
+     Boundary-signature. No "DM menu," no candidate list.
 
-  9. Click into Voyages — Next session is open with V004 expanded.
-     Record is open. V003 expanded inside Record. V002 and V001
-     collapsed.
-
- 10. Click into Remaking — Failure state subsection exists (not
-     "D — The End"). Section titles read functionally: Network,
-     Inscription, Fork, Mechanism, etc.
-
- 11. Tags inside headings no longer appear in the right-rail TOC.
-
- 12. Visit a player page (e.g. /caelestis/crew-manifest/) — NO DM
-     sidebar visible.
+  9. Anchor sanity-check: from Plot Hooks, click any "→ realms/" or
+     "→ factions/" cross-reference. Each should resolve to a real
+     section on the target page. The integrity check passes with only
+     the four briefing-file forward-references as expected residuals.
 
 
-STILL PENDING (manual — not in this bundle)
--------------------------------------------
-The Voyages page forward-references in-site briefing files:
-  /prime/campaign/voyages/voyage-briefing-001.html
-  /prime/campaign/voyages/voyage-briefing-002.html
-  /prime/campaign/voyages/voyage-briefing-003.html
-  /prime/campaign/voyages/voyage-briefing-004.html
-
-These don't exist yet. The "Open briefing →" links 404 until you create
-each file. Create them as you write each briefing.
-
-The Voyages page also references player-site detailed files:
-  /caelestis/crew-logs/detailed/voyage-detailed-001.html
-  /caelestis/crew-logs/detailed/voyage-detailed-002.html
-  /caelestis/crew-logs/detailed/voyage-detailed-003.html
-
-These live on the player site (outside /prime/). Integrity check treats
-them as external; they need to exist on the player side.
-
-To populate character/place/artifact images: open scripts/portraits.js,
-find each entry, paste the Drive file ID into the empty `fileId: ''`
-slot. Dossier rows pick them up automatically. No per-page edits needed.
-
-
-FIA BREADCRUMBS
----------------
-FIA-BREADCRUMBS.md is NOT part of the DM wiki deploy. Drafts of subtle
-entries to paste into your player-facing Fleet Intelligence Archive site.
+STILL PENDING
+-------------
+- /prime/campaign/voyages/voyage-briefing-NNN.html files (create as
+  you write each briefing)
+- Image fileIds in scripts/portraits.js (paste Drive IDs into the
+  empty fileId slots to render images wiki-wide)
 
 
 PAGE-BUILDING GUIDE
 -------------------
-WIKI-PAGE-GUIDE.md at the root is the reference for building new wiki
-entries — hierarchy, conventions, anti-patterns. Read it before
-creating new pages.
+WIKI-PAGE-GUIDE.md at the bundle root documents the content rule
+under "Setting pages are encyclopedic," with examples, a Campaign-vs-
+Setting sentence table, and anti-patterns. Read it before creating
+new Setting entries.

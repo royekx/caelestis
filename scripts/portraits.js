@@ -74,7 +74,6 @@
     'weeping-goddess': { name: 'Weeping Goddess',   fileId: '' },
     'toril':         { name: 'Toril',               fileId: '' },
     'hcatha':        { name: 'H\'Catha',            fileId: '' },
-    'hakatha':       { name: 'Hakatha',             fileId: '' },
     'virenspace':    { name: 'Virenspace',          fileId: '' },
     'aethris':       { name: 'Aethris',             fileId: '' },
     'hollow':        { name: 'The Hollow',          fileId: '' },
