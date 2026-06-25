@@ -27,25 +27,25 @@
   var PORTRAITS = {
 
     // ── PCs (The Crew) ──
-    'bartholomew':   { name: 'Bartholomew Grayson', fileId: '' },
-    'boogie':        { name: 'Boogie',              fileId: '' },
-    'casey':         { name: 'Casey Geim',          fileId: '' },
-    'gregory':       { name: 'Gregory',             fileId: '' },
-    'sol':           { name: 'Sol Fortuna',         fileId: '' },
-    'tumak':         { name: 'Tumak Swan',          fileId: '' },
+    'bartholomew':   { name: 'Bartholomew Grayson', fileId: '1ThgrZS-SGvWVIgGkvuwEm08oMyWActWF' },
+    'boogie':        { name: 'Boogie',              fileId: '1_ZhT9rX4PrCKjegHu3Fc8gPnubg27Dqu' },
+    'casey':         { name: 'Casey Geim',          fileId: '1XLFP2beF16GU12VCcwInFzpfTv3mjhaO' },
+    'gregory':       { name: 'Gregory',             fileId: '1fzRY-WITl425-WA_HCThclBYYsRH4tun' },
+    'sol':           { name: 'Sol Fortuna',         fileId: '1PT-7qxrvN3XUFPm3xAkUZ8IbToM5qsDo' },
+    'tumak':         { name: 'Tumak Swan',          fileId: '1Qk-udGpqGpv2oZL9hahqjXgMRRCDrWnr' },
 
     // ── Academy & Fleet ──
-    'mirt':          { name: 'Mirt',                fileId: '' },
-    'tarto':         { name: 'Boatswain Tarto',     fileId: '' },
-    'saerthe':       { name: 'Saerthe Abyzine',     fileId: '' },
-    'blip':          { name: 'Mr. Blip',            fileId: '' },
-    'ryeback':       { name: 'Petty Officer Winston Ryeback', fileId: '' },
+    'mirt':          { name: 'Mirt',                fileId: '1D9Hh3pn8e_QbMAF69ABg4bld6kMHj4qr' },
+    'tarto':         { name: 'Boatswain Tarto',     fileId: '13-w6epUMG5kO54FqZpJpelexFufDzu2W' },
+    'saerthe':       { name: 'Saerthe Abyzine',     fileId: '1d7cDR1TYwEkaSuDVJC8bEOOJnoPT5S_D' },
+    'blip':          { name: 'Mr. Blip',            fileId: '1gcMlDsoM10pyQ62SC6MG1UcLgWnepLcX' },
+    'ryeback':       { name: 'Petty Officer Winston Ryeback', fileId: '1H3TaoPPU1F_Ocit_CLn1RCbdR2f-FnJl' },
     'sorcur':        { name: 'Sorcur',              fileId: '' },
     'kip-pik':       { name: 'Kip & Pik',           fileId: '' },
     'rindle':        { name: 'Rindle Gearloft',     fileId: '' },
 
     // ── Cadets ──
-    'miken':         { name: 'Miken Haverstance',   fileId: '' },
+    'miken':         { name: 'Miken Haverstance',   fileId: '1naBafRe55ibGcJ7vcQ1vxHCpg0rhaKpk' },
     'wizpop':        { name: 'Wizpop',              fileId: '' },
 
     // ── Order / Watchers ──
@@ -64,10 +64,13 @@
     'zerathis':      { name: 'Zerathis',            fileId: '' },
 
     // ── Artifacts (treated as portrait-like for dossier consistency) ──
-    'world-surveyor': { name: 'The World Surveyor', fileId: '' },
+    'world-surveyor': { name: 'The World Surveyor', fileId: '1PszrX48t8qd24acEGVLa87ir5AXlLJeR' },
 
     // ── Places ──
-    'caelestis':     { name: 'Caelestis',           fileId: '' },
+    'realmspace':    { name: 'Realmspace',          fileId: '1kI7fIgdRRyDrNaoauZBw_QsKadJmgHf8' },
+    'caelestis':     { name: 'Caelestis',           fileId: '12jMujp5d1d3RehxqPDrtQiW33_iKM6_Q' },
+    'caelestis-interior': { name: 'Caelestis (interior)', fileId: '1whKOZlbCNZru1zzQN715dif4OXJfL9bC' },
+    'caelestis-sim-deck': { name: 'Caelestis (Simulation Deck)', fileId: '1fEQepmzGqnT7MN-qOD-dDjyOVdbd6Ds6' },
     'brig':          { name: 'The Brig',            fileId: '' },
     'sea-dock':      { name: 'Sea Dock',            fileId: '' },
     'sky-dock':      { name: 'Sky Dock',            fileId: '' },
@@ -91,6 +94,14 @@
     'latchling':     { name: 'The Latchling',       fileId: '' },
     'fonains-shard': { name: 'Fonains shard',       fileId: '' },
     'wardrobe':      { name: 'Mirt\'s wardrobe',    fileId: '' },
+
+    // ── Security stars & badges (available for in-prose use) ──
+    'security-star-visitor': { name: 'Visitor clearance star', fileId: '1aRgq_BbRCWtQACZoHUQM_IUvxVpIoF1D' },
+    'security-star-sailor':  { name: 'Sailor clearance star',  fileId: '1KCRQ4OJ-7G5RmKUg-NACrRM3DKmVVpEA' },
+    'security-star-officer': { name: 'Officer clearance star', fileId: '1cnruOaO9A-2TVB0s8Dx_RKUTRJS-2AKz' },
+    'security-star-cadet':   { name: 'Cadet clearance star',   fileId: '1BntfZECdJWqMpkWfd-S6MMarJb6UrZxr' },
+    'security-star-bridge':  { name: 'Bridge clearance star',  fileId: '1QfPTPyN7UA0IdkDmDrX4Vcu4xDBa9sCE' },
+    'cadet-badge':           { name: 'Cadet badge',            fileId: '1vOloKg0dEMeRobUJzL8i5dQXG2WxQzQj' },
 
   };
 
