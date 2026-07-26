@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelestis — Voyage 002 Brief</title>
+<link rel="stylesheet" href="../../styles/caelestis.css">
+<style>
+  /* ── VIDEO ── */
+  .video-block { margin-bottom: 2.5rem; }
+  .video-container {
+    position: relative; width: 100%; padding-bottom: 56.25%;
+    background: #0a0814; border: 1px solid var(--gold-rule); overflow: hidden;
+  }
+  .video-container iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+  .video-placeholder {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 0.8rem;
+  }
+  .video-placeholder svg { width: 48px; color: var(--gold-dim); opacity: 0.4; }
+  .video-placeholder p {
+    font-family: 'Cinzel', serif; font-size: 0.65rem;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted);
+  }
+  .video-link { margin-top: 0.5rem; font-size: 0.82rem; font-style: italic; color: var(--text-muted); }
+  .video-link a { color: var(--gold-dim); text-decoration: none; }
+  .video-link a:hover { color: var(--gold); }
+
+  /* ── LOG META ── */
+  .log-meta {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 1.8rem; flex-wrap: wrap;
+  }
+  .log-badge {
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    background: rgba(30,74,122,0.25); border: 1px solid rgba(30,74,122,0.5);
+    color: #5a8ab8; padding: 0.25rem 0.6rem;
+  }
+  .log-type-badge {
+    font-family: 'Cinzel', serif; font-size: 0.58rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); border: 1px solid var(--gold-rule); padding: 0.25rem 0.6rem;
+  }
+  .alt-format { margin-left: auto; font-size: 0.82rem; font-style: italic; color: var(--text-muted); }
+  .alt-format a { color: var(--gold-dim); text-decoration: none; }
+  .alt-format a:hover { color: var(--gold); }
+
+  /* ── AT A GLANCE ── */
+  .voyage-glance {
+    background: var(--bg-card);
+    border: 1px solid var(--gold-rule);
+    border-left: 3px solid var(--gold-dim);
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 2.2rem;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .glance-synopsis {
+    font-size: 0.95rem; line-height: 1.72; color: var(--text); font-style: italic;
+    padding-bottom: 1rem; border-bottom: 1px solid var(--gold-rule);
+  }
+  .glance-row {
+    display: grid; grid-template-columns: 90px 1fr;
+    gap: 0.8rem; align-items: flex-start;
+  }
+  .glance-label {
+    font-family: 'Cinzel', serif; font-size: 0.57rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold-dim); padding-top: 0.25rem;
+  }
+  .glance-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .chip {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.82rem; padding: 0.15rem 0.6rem;
+    border: 1px solid var(--gold-rule);
+    color: var(--text); background: rgba(201,153,58,0.05);
+    text-decoration: none; white-space: nowrap;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .chip:hover { border-color: var(--gold-dim); color: var(--gold-light); }
+  .chip-npc {
+    border-color: rgba(30,74,122,0.35); color: var(--text-dim);
+    background: rgba(30,74,122,0.05);
+  }
+  .chip-npc:hover { border-color: rgba(30,74,122,0.7); color: #7aaad0; }
+  .chip-place {
+    border-color: rgba(90,45,130,0.3); color: var(--text-dim);
+    background: rgba(90,45,130,0.04);
+  }
+
+  /* ── BRIEF SECTIONS ── */
+  .brief-section { margin-bottom: 1.8rem; }
+  .brief-heading {
+    font-family: 'Cinzel', serif; font-size: 0.68rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.7rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .brief-heading::after { content: ''; flex: 1; height: 1px; background: var(--gold-rule); }
+  .brief-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.45rem; }
+  .brief-list li {
+    font-size: 0.92rem; line-height: 1.55; color: var(--text);
+    padding-left: 1.1rem; position: relative;
+  }
+  .brief-list li::before { content: '›'; position: absolute; left: 0; color: var(--gold-dim); }
+  .brief-list li b { font-weight: 600; }
+  .brief-list li em { color: var(--text-dim); font-style: italic; }
+
+  @media(max-width:560px){
+    .glance-row { grid-template-columns: 1fr; gap: 0.3rem; }
+    .glance-label { padding-top: 0; }
+  }
+</style>
+  <script src="../../scripts/nav.js" defer></script>
+</head>
+<body>
+<div class="page-content">
+  <div class="page-header">
+    <div class="page-emblem">
+      <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="0" y1="20" x2="42" y2="20" stroke-width="0.6" opacity="0.4"/>
+        <polyline points="38,15 43,20 38,25" opacity="0.5"/>
+        <polyline points="33,16 38,20 33,24" opacity="0.3"/>
+        <g transform="translate(60,20)">
+          <line x1="0" y1="-11" x2="0" y2="-6"/><line x1="0" y1="6" x2="0" y2="11"/>
+          <line x1="-11" y1="0" x2="-6" y2="0"/><line x1="6" y1="0" x2="11" y2="0"/>
+          <line x1="-7.5" y1="-7.5" x2="-4.5" y2="-4.5"/><line x1="4.5" y1="-4.5" x2="7.5" y2="-7.5"/>
+          <line x1="-7.5" y1="7.5" x2="-4.5" y2="4.5"/><line x1="4.5" y1="4.5" x2="7.5" y2="7.5"/>
+          <circle cx="0" cy="0" r="4"/><circle cx="0" cy="0" r="1.2" fill="currentColor" stroke="none"/>
+        </g>
+        <polyline points="82,15 77,20 82,25" opacity="0.3"/>
+        <polyline points="87,16 82,20 87,24" opacity="0.5"/>
+        <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="page-eyebrow">Brief Log · Voyage 002</div>
+    <div class="page-title">What the Crew Offers</div>
+  </div>
+
+  <div class="content">
+
+    <!-- LOG META -->
+    <div class="log-meta">
+      <span class="log-badge">Voyage 002</span>
+      <span class="log-type-badge">Brief</span>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         AT A GLANCE
+         Synopsis: 2-3 sentences. Who, what happened, why it matters.
+         The Crew: link to crew-manifest pages where they exist.
+         Key NPCs: NPCs introduced this voyage. Link to dossiers if filed.
+                    Use <span class="chip chip-npc"> for unfiled NPCs.
+         Locations: in order visited. Use <span class="chip chip-place">.
+         ═══════════════════════════════════════════════════════ -->
+    <div class="voyage-glance">
+      <div class="glance-synopsis">Bartholomew joins the crew over lunch at the Weeping Goddess. The six begin to knit together — Casey draws out Ryeback, Boogie shows the crew the half-ship from his chest, and the table sorts out who sits where on a real vessel. Casey works a Sea Dock job for Rindle Gearloft and feels the familiar presence at the Sky Dock rail. The next morning: a salvage simulation against Miken's crew. The hammerhead wins the race, recovers the logbook, fends off a githyanki ambush — and Sol, feeling misfortune reach for Boogie mid-jump, takes it onto himself and hears Beshaba laugh for the first time.</div>
+      <div class="glance-row">
+        <span class="glance-label">The Crew</span>
+        <div class="glance-chips">
+          <a class="chip" href="../../crew-manifest/boogie.html">Boogie</a>
+          <a class="chip" href="../../crew-manifest/sol.html">Sol</a>
+          <a class="chip" href="../../crew-manifest/casey.html">Casey</a>
+          <a class="chip" href="../../crew-manifest/gregory.html">Gregory</a>
+          <a class="chip" href="../../crew-manifest/tumak.html">Tumak</a>
+          <a class="chip" href="../../crew-manifest/bartholomew.html">Bartholomew</a>
+        </div>
+      </div>
+      <div class="glance-row">
+        <span class="glance-label">Key NPCs</span>
+        <div class="glance-chips">
+          <a class="chip chip-npc" href="../../dossiers/boatswain-tarto.html">Boatswain Tarto</a>
+          <a class="chip chip-npc" href="../../dossiers/saerth-abyzine.html">Saerth Abyzine</a>
+          <span class="chip chip-npc">Ryeback</span>
+          <span class="chip chip-npc">Miken</span>
+          <span class="chip chip-npc">Rindle Gearloft</span>
+        </div>
+      </div>
+      <div class="glance-row">
+        <span class="glance-label">Locations</span>
+        <div class="glance-chips">
+          <span class="chip chip-place">Weeping Goddess</span>
+          <span class="chip chip-place">Spelljammer Nexus</span>
+          <span class="chip chip-place">Sea Dock</span>
+          <span class="chip chip-place">Sky Dock</span>
+          <span class="chip chip-place">Simulation Deck</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="voyage-nav-bar">
+      <a class="voyage-nav-link" href="voyage-brief-001.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Previous Voyage</a>
+      <a class="voyage-nav-center" href="../detailed/voyage-detailed-002.html">Detailed Log</a>
+      <a class="voyage-nav-link" href="voyage-brief-003.html">Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="video-block">
+      <div class="section-label">Voyage Recording</div>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/V1we5pWk8aI" allowfullscreen></iframe>
+      </div>
+      <div class="video-link">Watch on YouTube: <a href="https://youtu.be/V1we5pWk8aI" target="_blank">youtu.be/V1we5pWk8aI</a></div>
+    </div>
+
+    <div class="brief-section">
+      <div class="brief-heading">A New Cadet</div>
+      <ul class="brief-list">
+        <li><b>Boatswain Tarto</b> receives <b>Bartholomew</b> — a wilder, newly arrived, orientation already behind him. She tells him what he is changes nothing aboard a crew, points him to the <em>Weeping Goddess</em> and the dragon scale pizza, and sends him to find his crew.</li>
+      </ul>
+    </div>
+
+    <div class="brief-section">
+      <div class="brief-heading">The Weeping Goddess</div>
+      <ul class="brief-list">
+        <li>Bartholomew finds a seat with <b>Miken</b>, a nervous cadet who talks about the simulation as if they'd both been through it. An empty chair at the table goes unnamed.</li>
+        <li>The crew filters in — Gregory first, the others orbiting his pace. Boogie and Sol take the open seats. Recognition of the sixth crew member stays soft and unspoken; no one had been told what he'd look like.</li>
+        <li><b>Tumak</b> studies the notice board for anything from home and finds nothing. <b>Casey</b> pulls a Sea Dock cargo notice without explaining why.</li>
+        <li><b>Ryeback</b> serves the table with affectionate brusqueness — soup for Sol (<em>knock-your-mama's-socks-off soup</em>), a silver moonlight starfruit for Boogie, spare utensils offered kindly to Gregory.</li>
+        <li>Casey draws <b>Ryeback</b> out: hot baths, knitting. <em>Both make things whole, one piece at a time.</em> Ryeback pauses, then gives him an extra portion.</li>
+        <li>Boogie tells <b>Miken</b> the crew has things to discuss; Miken leaves graciously. Then Boogie sets the half-missing model ship from his chest on the table. <b>Tumak</b> notes things have been going missing across the academy. Nobody picks up what Boogie set down.</li>
+        <li>The crew sorts roles: Tumak captain, Gregory navigator, Boogie medical, Casey guns. The spelljammer's seat stays open — Boogie quietly insists it should be Gregory.</li>
+        <li>Casey follows Tumak to the bathroom, hears rummaging behind the stalls, sees Tumak's jacket askew. Both say nothing. When Ryeback brings the second of Tumak's <em>two</em> meatloafs, only Casey notices.</li>
+      </ul>
+    </div>
+
+    <div class="brief-section">
+      <div class="brief-heading">The Missing Ship</div>
+      <ul class="brief-list">
+        <li>Boogie, Gregory, and Bartholomew ask to practice the helm. Tarto takes them to the Nexus and sends for <b>Saerth Abyzine</b>.</li>
+        <li>Saerth's composure cracks — his personal miniature ship has been stolen. He catches himself, apologizes, moves on.</li>
+        <li>Boogie realizes the stolen ship is the same model that came out of his chest. He says nothing and does the exercise. <b>Bartholomew</b> takes to the helm as if born to it — the spelljammer's seat answers itself.</li>
+      </ul>
+    </div>
+
+    <div class="brief-section">
+      <div class="brief-heading">The Sea Dock</div>
+      <ul class="brief-list">
+        <li>Casey walks the cargo notice to the Sea Dock looking for Joffrey, to ask about reading more than three stars. He finds <b>Rindle Gearloft</b> instead — brusque, distracted — and works cargo for an hour before Rindle realizes a cadet filled the job and pays him.</li>
+        <li>Casey climbs to the <em>Sky Dock</em> rail afterward, thinks of his brother, and feels the familiar presence settle beside him without sound — the same one from Mirt's wardrobe. He doesn't look. By the time he rises, it's gone.</li>
+      </ul>
+    </div>
+
+    <div class="brief-section">
+      <div class="brief-heading">Night in the Quarters</div>
+      <ul class="brief-list">
+        <li><b>Tumak</b> snores with a strange doubled rhythm — two breaths never quite sharing one beat. <b>Miken</b>, two bunks over, casts a bubble of silence with a spell above a cadet's year. The night passes.</li>
+      </ul>
+    </div>
+
+    <div class="brief-section">
+      <div class="brief-heading">The Salvage Race</div>
+      <ul class="brief-list">
+        <li>Morning briefing on the Simulation Deck: two crews, one derelict, one logbook. First ship back with the prize wins. The rival crew is <b>Miken</b>, Vena, Barret and their squad.</li>
+        <li><b>Bartholomew</b> takes the hammerhead's helm; the crew takes the lead off the launch. Gregory plots a line through an electrical storm of silver eels; they push through rather than around and hold the lead.</li>
+        <li>Boarding the wreck across drifting asteroids, <b>Boogie</b> misjudges a jump as mist swallows the next rock. <b>Sol</b> feels misfortune reach for a crewmate and takes it onto himself — strength drops out of him in a measured wave, and beneath his hearing a woman laughs. By the third laugh he knows: <b>Beshaba</b>.</li>
+        <li>Boogie lands clean, not knowing why he thought he wouldn't. Gregory and Bartholomew see a hair-thin arc of black lightning snap out of Sol and back into him. He winces.</li>
+        <li>The logbook lies behind a long-dead curled creature in the captain's quarters. <b>Boogie</b> collects it and slips it into his own chest.</li>
+      </ul>
+    </div>
+
+    <div class="brief-section">
+      <div class="brief-heading">The Githyanki Ambush</div>
+      <ul class="brief-list">
+        <li><b>Gregory</b> spots a githyanki ship slipping through the field — not the cadet rivals. He shouts the crew up from below.</li>
+        <li><b>Casey</b> has Boogie bring the logbook back out and conjures a duplicate; Gregory follows with another. Three identical logbooks lie on the deck. <b>Bartholomew</b> drops a fog cloud over the hull.</li>
+        <li>The crew pulls away under fire. <b>Boogie</b> leaps onto the enemy deck alone, realizes it's more than he can finish, and turns back. Bartholomew slows the ship to give him a target; Tumak's rope-line misses by half a body; Gregory puts covering fire through the enemy hull. None of it strictly needed — all of it offered. Boogie makes the leap home.</li>
+        <li>Nearing the dock, Miken's crew drifts damaged and signals for help. <b>Tumak</b> asks Gregory, straight-faced, whether the manual requires stopping for stranded vessels. Gregory considers it seriously and concludes that no such provision appears to exist.</li>
+      </ul>
+    </div>
+
+    <div class="voyage-nav-bottom">
+      <a class="voyage-nav-link" href="voyage-brief-001.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Previous Voyage</a>
+      <a class="voyage-nav-center" href="../detailed/voyage-detailed-002.html">Detailed Log</a>
+      <a class="voyage-nav-link" href="voyage-brief-003.html">Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /page-content -->
+
+
+
+</body>
+</html>
