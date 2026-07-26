@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collection Manifest — Recovered Slate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --stone-deep:#232A26;
+    --slate:#C3C8BC;
+    --slate-lo:#B4BAAD;
+    --etch:#262D2A;
+    --etch-soft:#5A645C;
+    --etch-faint:#7C857B;
+    --hand:#463359;
+    --bloom:#6B8A46;
+    --rule:#8D958A;
+  }
+  *{box-sizing:border-box;}
+  html{overflow-x:hidden;}
+  td,th{overflow-wrap:break-word;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--stone-deep);
+    background-image:
+      radial-gradient(ellipse at 20% 0%, rgba(107,138,70,.10), transparent 55%),
+      radial-gradient(ellipse at 90% 100%, rgba(107,138,70,.14), transparent 50%);
+    font-family:'IBM Plex Mono',monospace;
+    padding:32px 16px 64px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .slate{
+    max-width:940px;margin:0 auto;
+    background:var(--slate);
+    background-image:
+      linear-gradient(160deg, rgba(255,255,255,.14), transparent 35%),
+      radial-gradient(circle at 88% 92%, rgba(107,138,70,.30), transparent 42%),
+      radial-gradient(circle at 96% 78%, rgba(107,138,70,.18), transparent 30%);
+    padding:44px 46px 52px;
+    position:relative;
+    box-shadow:0 2px 0 rgba(255,255,255,.10) inset, 0 24px 60px rgba(0,0,0,.5);
+  }
+  /* chipped corner */
+  .slate::after{
+    content:"";position:absolute;right:0;bottom:0;
+    border-width:0 0 34px 34px;border-style:solid;
+    border-color:transparent transparent var(--stone-deep) transparent;
+  }
+
+  .plate{border-bottom:2px solid var(--etch);padding-bottom:16px;margin-bottom:6px;}
+  .desig{
+    font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;
+    font-size:clamp(20px,3.4vw,31px);letter-spacing:.20em;text-transform:uppercase;
+    color:var(--etch);line-height:1.15;
+  }
+  .subdesig{
+    font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:400;
+    font-size:12px;letter-spacing:.30em;text-transform:uppercase;
+    color:var(--etch-soft);margin-top:9px;
+  }
+  .meta{
+    display:flex;flex-wrap:wrap;gap:26px;
+    font-size:10.5px;letter-spacing:.06em;color:var(--etch-soft);
+    margin:14px 0 30px;
+  }
+  .meta b{color:var(--etch);font-weight:600;}
+
+  table{width:100%;border-collapse:collapse;}
+  thead th{
+    font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:600;
+    font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--etch-soft);text-align:left;
+    padding:0 10px 7px 0;border-bottom:1px solid var(--etch);
+    overflow-wrap:break-word;
+  }
+  thead th:last-child{padding-right:0;}
+  tbody td{
+    padding:11px 10px 11px 0;
+    border-bottom:1px solid var(--rule);
+    font-size:12.5px;color:var(--etch);vertical-align:top;line-height:1.45;
+  }
+  .num{color:var(--etch-faint);font-size:11px;width:42px;white-space:nowrap;}
+  .spec{font-weight:500;width:31%;}
+  .orig{color:var(--etch-soft);width:24%;font-size:11.5px;}
+  .disp{
+    font-family:'IBM Plex Sans Condensed',sans-serif;
+    font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--etch-soft);
+  }
+
+  /* clerical appended notes — still the machine */
+  .clerk{
+    display:block;margin-top:6px;
+    font-size:10.5px;color:var(--etch-soft);letter-spacing:.02em;
+  }
+  .clerk::before{content:"▸ ";color:var(--etch-faint);}
+
+  /* THE SIGNATURE: the owner's own hand, breaking the grid */
+  .hand{
+    display:block;margin-top:9px;margin-left:-14px;
+    font-family:'EB Garamond',serif;font-style:italic;font-weight:500;
+    font-size:16.5px;line-height:1.3;color:var(--hand);
+    transform:rotate(-.5deg);
+  }
+  .hand::before{
+    content:"";display:inline-block;width:16px;height:1px;
+    background:var(--hand);vertical-align:middle;margin-right:8px;opacity:.6;
+  }
+
+  .lost{color:var(--etch-faint);font-style:normal;letter-spacing:.08em;}
+  tr.stained td{background:linear-gradient(90deg, rgba(107,138,70,.16), rgba(107,138,70,.05) 60%, transparent);}
+  tr.severed .spec{color:var(--etch-faint);}
+
+  .foot{
+    margin-top:34px;padding-top:16px;border-top:2px solid var(--etch);
+    display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+    font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    font-family:'IBM Plex Sans Condensed',sans-serif;color:var(--etch-soft);
+  }
+  .foot .hand{margin:0;transform:none;font-size:15px;letter-spacing:0;text-transform:none;}
+
+  @media (max-width:760px){
+    body{padding:16px 10px 44px;}
+    .slate{padding:26px 18px 34px;}
+    .meta{gap:6px 22px;}
+    /* stack rows as cards — a 4-col data table doesn't fit a phone */
+    thead{display:none;}
+    table,tbody{display:block;width:100%;}
+    tbody tr{
+      display:flex;flex-wrap:wrap;align-items:baseline;column-gap:12px;
+      padding:15px 0;border-bottom:1px solid var(--rule);
+    }
+    tbody td{display:block;border:none;padding:0;width:auto;}
+    .num{order:1;flex:0 0 auto;font-size:11px;}
+    .orig{order:2;flex:0 1 auto;width:auto;font-size:10.5px;}
+    .disp{order:3;flex:0 0 auto;margin-left:auto;text-align:right;white-space:normal;}
+    .spec{order:4;width:100%;flex:1 1 100%;margin-top:9px;font-size:14.5px;}
+    .hand{margin-left:0;font-size:15px;transform:none;}
+    .foot{flex-direction:column;gap:12px;}
+    .foot .hand{font-size:14px;}
+  }
+  @media print{
+    body{background:#fff;padding:0;}
+    .slate{box-shadow:none;max-width:none;background:#fff;}
+    .slate::after{display:none;}
+    tr.stained td{background:none;}
+  }
+</style>
+</head>
+<body>
+<div class="slate">
+
+  <div class="plate">
+    <div class="desig">Collection Manifest</div>
+    <div class="subdesig">Voyage Record · Standing Inventory</div>
+  </div>
+  <div class="meta">
+    <span><b>Vessel</b> — private, unregistered</span>
+    <span><b>Clerical unit</b> — OSTEKK-6</span>
+    <span><b>Authority</b> — the Owner. No other.</span>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th class="num">Ent.</th><th>Specimen</th><th>Origin</th><th>Disposition</th></tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td class="num">041</td>
+        <td class="spec">Fernwort, glass-lung</td>
+        <td class="orig">Cinderhalt Drift</td>
+        <td class="disp">Garden · Tier 2</td>
+      </tr>
+
+      <tr>
+        <td class="num">042</td>
+        <td class="spec">Ashvine, dwarf (paired)</td>
+        <td class="orig">Ossuary Verge</td>
+        <td class="disp">Garden · Tier 3</td>
+      </tr>
+
+      <tr>
+        <td class="num">043</td>
+        <td class="spec">Ambush predator, imitative (juvenile)
+          <span class="clerk">Assumes the form of adjacent structures. Restraint unnecessary — it prefers containment.</span>
+          <span class="clerk">Inventory count: not located.</span>
+          <span class="clerk">Recount ordered. Recount complete. Not located.</span>
+        </td>
+        <td class="orig">Hespera, third moon</td>
+        <td class="disp">Holding · Arc 2</td>
+      </tr>
+
+      <tr>
+        <td class="num">044</td>
+        <td class="spec">Sporelamp, banded</td>
+        <td class="orig">Cinderhalt Drift</td>
+        <td class="disp">Garden · Tier 1</td>
+      </tr>
+
+      <tr class="severed">
+        <td class="num">045</td>
+        <td class="spec">Kellis moth-orchid <span class="lost">— expired in transit</span></td>
+        <td class="orig">Kellis Belt, outer</td>
+        <td class="disp">Discarded</td>
+      </tr>
+
+      <tr>
+        <td class="num">046</td>
+        <td class="spec">Bell-nettle, silvered</td>
+        <td class="orig">the Weeping Shoal</td>
+        <td class="disp">Garden · Tier 2</td>
+      </tr>
+
+      <tr>
+        <td class="num">047</td>
+        <td class="spec">Doom bloom
+          <span class="hand">Mine. No handling. Not by the units, not by anything.</span>
+        </td>
+        <td class="orig">unrecorded</td>
+        <td class="disp">Sanctum</td>
+      </tr>
+
+      <tr class="severed">
+        <td class="num">048</td>
+        <td class="spec"><span class="lost">[etched through — illegible]</span></td>
+        <td class="orig"><span class="lost">[illegible]</span></td>
+        <td class="disp">—</td>
+      </tr>
+
+      <tr>
+        <td class="num">049</td>
+        <td class="spec">Thornlace, weeping</td>
+        <td class="orig">Ossuary Verge</td>
+        <td class="disp">Garden · Tier 3</td>
+      </tr>
+
+      <tr>
+        <td class="num">049<span style="opacity:.5">a</span></td>
+        <td class="spec">Cutting implement, enchanted <span class="lost">— equipment, not specimen</span>
+          <span class="clerk">Retained for propagation. Cuttings hold seven days beyond natural.</span>
+          <span class="hand">A farmer's tool. It works. I will not be embarrassed by it.</span>
+        </td>
+        <td class="orig">acquired, unrecorded</td>
+        <td class="disp">Intake · tools</td>
+      </tr>
+
+      <tr class="stained">
+        <td class="num">050</td>
+        <td class="spec">Lotus, wisp-lantern
+          <span class="clerk">Ornamental. Attracts will-o'-wisps. Common to origin.</span>
+          <span class="hand">Responds to the Flourishing. Note the rate. Note it again tomorrow.</span>
+        </td>
+        <td class="orig">the Weeping Shoal</td>
+        <td class="disp">Garden · Tier 1</td>
+      </tr>
+
+      <tr class="stained">
+        <td class="num">051</td>
+        <td class="spec">Faelight spore
+          <span class="clerk">Knuckled colourless fungus, studded with tight pustules. Discharge clears suspended particulate and retains a cold luminescence for some minutes after settling.</span>
+          <span class="clerk">Advisory: do not process in enclosed volume.</span>
+          <span class="clerk">Assessment deferred. Awaiting the Owner.</span>
+        </td>
+        <td class="orig">Kellis Belt, outer</td>
+        <td class="disp">Intake · unprocessed</td>
+      </tr>
+
+      <tr class="stained">
+        <td class="num">052</td>
+        <td class="spec"><span class="lost">[designation withheld]</span> — equipment, not specimen
+          <span class="clerk">Apparatus. Pattern designation and origin held by this unit, available for entry.</span>
+          <span class="clerk">Query repeated. Entry remains incomplete.</span>
+          <span class="hand">It is not to be logged. Not its name, not where it came from. Cease asking.</span>
+          <span class="clerk">Withheld per instruction. Dimensions recorded: no correspondence to any catalogued specimen or tool.</span>
+        </td>
+        <td class="orig"><span class="lost">[withheld]</span></td>
+        <td class="disp">Study</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <div class="foot">
+    <span>Standing inventory — 11 held · 1 discarded · 1 unlocated · 1 tool</span>
+    <span class="hand">Course amended. We are going to Toril.</span>
+  </div>
+
+</div>
+</body>
+</html>
