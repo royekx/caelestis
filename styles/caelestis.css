@@ -680,3 +680,41 @@ body.with-sidebar .page-header {
   font-style: normal;
   color: var(--gold-light);
 }
+
+/* ══════════════════════════════════════════════════════════════
+   STAT LISTS — key/value rows in the portrait column
+   The column is narrow, so a two-word value used to break across
+   lines and collide with its label. Keys and values are now
+   unbreakable units: when a value can't sit beside its label it
+   drops to its own line instead of splitting down the middle.
+   Higher specificity than the per-page rules it corrects.
+   ══════════════════════════════════════════════════════════════ */
+.stat-list .stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.15rem 0.9rem;
+}
+.stat-list .stat-key {
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+.stat-list .stat-val {
+  white-space: nowrap;
+  flex: 1 1 auto;
+  text-align: right;
+  min-width: 0;
+}
+/* A handful of values are longer than the column at any width. These wrap
+   normally — on their own line, so they still never collide with a label. */
+.stat-list .stat-val.stat-val-long {
+  white-space: normal;
+  overflow-wrap: break-word;
+  flex: 1 1 100%;
+}
+
+/* A little more room for the portrait column, which also helps the images */
+@media (min-width: 561px) {
+  .content .entry-header { grid-template-columns: 196px 1fr; }
+}

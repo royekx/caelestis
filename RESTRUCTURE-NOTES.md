@@ -355,6 +355,28 @@ Nothing goes on the page.
 
 ---
 
+## 15. STAT ROW WRAPPING
+
+Two-word values were breaking across lines and colliding with their labels —
+*AFFILIATION Spelljammer / Academy* with no gap between the two.
+
+Root cause was the portrait column at 160px, too narrow to hold a label and a
+two-word value side by side. Fixed in `styles/caelestis.css`, at higher
+specificity than the per-page rules:
+
+- Column widened to **196px** above 560px, which also gives the portraits more
+  room. Below that the header is already single-column.
+- Keys and values are now unbreakable units. When a value can't sit beside its
+  label it drops to its own line, right-aligned, rather than splitting.
+- Rows carry a gap, so a wrapped value can never touch its label.
+
+Four values on the site are longer than the column at any width — *"Beyond
+H'Catha — route unconfirmed"* and three others. Those carry `stat-val-long`
+and wrap normally on their own full-width line. Checked every stat row on the
+site; nothing else overflows.
+
+---
+
 ## FILES CHANGED
 
 ```
