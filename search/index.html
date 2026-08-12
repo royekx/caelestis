@@ -68,6 +68,15 @@ const SCOPE_LABELS = {
 };
 
 // Human-readable section label from a result URL, for the right-hand path tag.
+// Common words that shouldn't draw a highlight even when matched as part of a
+// phrase. Unwrap their <mark> tags so the excerpt highlights only meaningful terms.
+const STOPWORDS = new Set(['a','an','the','of','to','in','on','at','by','for','and','or','but','is','was','it','as','with','from','that','this','his','her','their','they','them','he','she']);
+function cleanExcerpt(html) {
+  return html.replace(/<mark>(.*?)<\/mark>/g, (m, word) =>
+    STOPWORDS.has(word.trim().toLowerCase()) ? word : m
+  );
+}
+
 function sectionFromUrl(url) {
   const map = {
     'crew-logs': 'Crew Logs', 'crew-manifest': 'Crew Manifest', 'dossiers': 'Dossiers',
@@ -145,14 +154,40 @@ async function run() {
     return;
   }
 
+  // Load the first batch of result data
+  const rawData = await Promise.all(search.results.slice(0, 30).map(r => r.data()));
+
+  // Drop results whose ONLY match is a stopword. A page that matched just "of"
+  // (from a query like "bag of holding") shouldn't surface. Keep a result only
+  // if at least one highlighted term in its excerpt is a meaningful word.
+  const queryTerms = term.toLowerCase().split(/\s+/).filter(Boolean);
+  const meaningfulQuery = queryTerms.filter(w => !STOPWORDS.has(w));
+  const data = rawData.filter(d => {
+    // If the query itself is only stopwords, keep everything (nothing to filter on).
+    if (!meaningfulQuery.length) return true;
+    const marks = (d.excerpt.match(/<mark>(.*?)<\/mark>/g) || [])
+      .map(m => m.replace(/<\/?mark>/g, '').trim().toLowerCase());
+    // Keep if any highlighted term is meaningful...
+    if (marks.some(w => !STOPWORDS.has(w))) return true;
+    // ...or if a meaningful query word appears anywhere in the excerpt text
+    // (guards against Pagefind centering the excerpt on a stopword hit).
+    const plain = d.excerpt.replace(/<\/?mark>/g, '').toLowerCase();
+    return meaningfulQuery.some(w => plain.includes(w));
+  });
+
+  if (!data.length) {
+    resultsEl.innerHTML = '';
+    metaEl.style.display = 'none';
+    setState('No records found for "' + term + '"' + (scope ? ' in ' + SCOPE_LABELS[scope] : '') + '.');
+    return;
+  }
+
   clearState();
   metaEl.style.display = 'flex';
-  countEl.textContent = search.results.length + (search.results.length === 1 ? ' record' : ' records');
+  countEl.textContent = data.length + (data.length === 1 ? ' record' : ' records');
   termEcho.textContent = '"' + term + '"';
   scopeEcho.textContent = scope ? 'in ' + SCOPE_LABELS[scope] : 'across all records';
 
-  // Load the first batch of result data
-  const data = await Promise.all(search.results.slice(0, 20).map(r => r.data()));
   resultsEl.innerHTML = data.map(d => {
     const section = sectionFromUrl(d.url);
     const title = (d.meta && d.meta.title) ? d.meta.title : d.url;
@@ -161,7 +196,7 @@ async function run() {
         <div class="result-title">${title}</div>
         <div class="result-path">${section}</div>
       </div>
-      <div class="result-snippet">${d.excerpt}</div>
+      <div class="result-snippet">${cleanExcerpt(d.excerpt)}</div>
     </a>`;
   }).join('');
 }
