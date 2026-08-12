@@ -1,0 +1,82 @@
+name: Build search indexes & deploy to Pages
+
+# Runs on every push to main. Builds three separate Pagefind indexes
+# (player / DM / FIA) using the Pagefind binary directly, then publishes
+# the whole site to GitHub Pages.
+#
+# ONE-TIME SETUP (do this once, in the repo on github.com):
+#   Settings -> Pages -> Build and deployment -> Source -> "GitHub Actions"
+# After that, every push to main runs this workflow automatically.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:      # allows manual re-run from the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # -- Player index -> /pagefind/ --
+      # Indexes only the player-facing directories via an explicit glob.
+      # prime/, restricted/, wayfinder-path/, stellar-chart/, scripts/,
+      # data/, styles/ and *-template.html are simply never matched.
+      - name: Build player index
+        run: |
+          npx -y pagefind \
+            --site . \
+            --glob "{index.html,crew-logs/**/*.html,crew-manifest/**/*.html,dossiers/**/*.html,spelljammer-nexus/**/*.html,inventory/**/*.html,handouts/**/*.html,navigation-records/**/*.html}" \
+            --exclude-selectors "[data-pagefind-ignore], nav, .site-nav, footer" \
+            --verbose
+
+      # -- DM index -> /prime/pagefind/ --
+      # Scoped by root: only prime/ is the site for this pass.
+      - name: Build DM index
+        run: |
+          npx -y pagefind \
+            --site prime \
+            --glob "**/*.html" \
+            --exclude-selectors "[data-pagefind-ignore], nav, .dm-nav, footer" \
+            --verbose
+
+      # -- FIA index -> /restricted/pagefind/ --
+      - name: Build FIA index
+        run: |
+          npx -y pagefind \
+            --site restricted \
+            --glob "**/*.html" \
+            --exclude-selectors "[data-pagefind-ignore], nav, footer" \
+            --verbose
+
+      # -- Publish the whole site (with all three index bundles) --
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
