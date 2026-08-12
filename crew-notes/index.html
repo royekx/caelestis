@@ -38,7 +38,6 @@
     background: var(--gold-faint);
   }
   .note-tab.shared { margin-right: 0.6rem; }
-  .note-tab.shared.active { border-color: var(--gold-light); }
 
   /* ── Frame ── */
   .note-frame-wrap {
@@ -56,22 +55,38 @@
     border: 0;
   }
 
+  /* ── Meta row ── */
   .note-meta {
     display: flex; justify-content: space-between; align-items: center;
     flex-wrap: wrap; gap: 0.6rem;
-    margin-top: 0.7rem;
+    margin-top: 0.8rem;
     font-size: 0.72rem; color: var(--text-muted);
   }
-  .note-meta a { color: var(--gold-dim); text-decoration: none; }
-  .note-meta a:hover { color: var(--gold-light); }
+  .meta-actions { display: flex; gap: 0.5rem; align-items: center; }
+
+  .btn {
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    border: 1px solid var(--gold-rule);
+    color: var(--text-dim);
+    background: transparent;
+    padding: 0.42rem 0.85rem;
+    text-decoration: none; cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+  }
+  .btn:hover { border-color: var(--gold-dim); color: var(--gold-light); }
+  .btn-primary {
+    border-color: var(--gold-dim);
+    color: var(--gold-light);
+    background: var(--gold-faint);
+  }
+  .btn-primary:hover { background: rgba(201,153,58,0.2); border-color: var(--gold); }
 
   .placeholder {
     padding: 3rem 1.5rem; text-align: center;
     color: var(--text-muted); font-size: 0.9rem; line-height: 1.7;
   }
-  .placeholder code {
-    color: var(--gold-dim); font-size: 0.82rem;
-  }
+  .placeholder code { color: var(--gold-dim); font-size: 0.82rem; }
 
   @media (max-width: 820px) {
     .note-frame { height: 70vh; min-height: 460px; }
@@ -105,36 +120,42 @@
   <div class="content">
 
     <div class="intro-note" data-pagefind-ignore>
-      Notes save as you type and are shared live. No sign-in required — open a tab and write.
-      The <strong>Crew Log</strong> is visible to everyone; personal pages are yours to keep as you like.
+      Read any log here. <strong>Open to edit</strong> launches the document in a new tab, where it
+      saves as you type. Hit <strong>Refresh</strong> to pull in changes someone just made.
+      The <strong>Crew Log</strong> is shared; personal pages are yours to keep as you like.
     </div>
 
     <!-- ── Tabs ──────────────────────────────────────────────────────────
-         To wire this up: create each note in HackMD, set its permission to
-         "Freely" (the only level that allows guest write), then paste the
-         note ID — the string after hackmd.io/ — into data-note below.
+         Setup per document:
+           1. Create the Doc in Google Drive.
+           2. Share -> General access -> "Anyone with the link", role "Editor".
+           3. Copy the doc ID (the long string between /d/ and /edit) into
+              data-doc below. Pasting the whole URL works too.
     ─────────────────────────────────────────────────────────────────── -->
     <div class="note-tabs" data-pagefind-ignore>
-      <button class="note-tab shared active" data-note="@WatchTower/H11Sc_tIGe">Crew Log</button>
-      <button class="note-tab" data-note="PASTE_BARTHOLOMEW_ID">Bartholomew</button>
-      <button class="note-tab" data-note="PASTE_BOOGIE_ID">Boogie</button>
-      <button class="note-tab" data-note="PASTE_CASEY_ID">Casey</button>
-      <button class="note-tab" data-note="PASTE_GREGORY_ID">Gregory</button>
-      <button class="note-tab" data-note="PASTE_SOL_ID">Sol</button>
-      <button class="note-tab" data-note="PASTE_TUMAK_ID">Tumak</button>
+      <button class="note-tab shared active" data-doc="1Uescsv7qK6h6baFNTpqcsCrjeSM_YwrLMdJKzocMirk">Crew Log</button>
+      <button class="note-tab" data-doc="PASTE_BARTHOLOMEW_ID">Bartholomew</button>
+      <button class="note-tab" data-doc="PASTE_BOOGIE_ID">Boogie</button>
+      <button class="note-tab" data-doc="PASTE_CASEY_ID">Casey</button>
+      <button class="note-tab" data-doc="PASTE_GREGORY_ID">Gregory</button>
+      <button class="note-tab" data-doc="PASTE_SOL_ID">Sol</button>
+      <button class="note-tab" data-doc="PASTE_TUMAK_ID">Tumak</button>
     </div>
 
     <div class="note-frame-wrap" data-pagefind-ignore>
       <div class="placeholder" id="notePlaceholder">
-        Note not yet linked.<br>
-        Replace <code>PASTE_SHARED_ID</code> in this page with the note ID from its HackMD URL.
+        Document not yet linked.<br>
+        Replace <code>PASTE_SHARED_ID</code> in this page with the Google Doc ID.
       </div>
       <iframe class="note-frame" id="noteFrame" title="Crew notes" style="display:none"></iframe>
     </div>
 
     <div class="note-meta" data-pagefind-ignore>
       <span id="noteLabel">Crew Log — shared</span>
-      <a id="noteOpen" href="#" target="_blank" rel="noopener">Open full screen &rarr;</a>
+      <span class="meta-actions">
+        <button class="btn" id="noteRefresh" type="button">Refresh</button>
+        <a class="btn btn-primary" id="noteOpen" href="#" target="_blank" rel="noopener">Open to edit &rarr;</a>
+      </span>
     </div>
 
   </div>
@@ -149,88 +170,67 @@
   var placeholder = document.getElementById('notePlaceholder');
   var label       = document.getElementById('noteLabel');
   var openLink    = document.getElementById('noteOpen');
+  var refreshBtn  = document.getElementById('noteRefresh');
 
-  // 'both' = split editor + preview. Use 'edit' for editor only, 'view' for read-only.
-  var VIEW_MODE = 'both';
+  var BASE = 'https://docs.google.com/document/d/';
+  var current = null;
 
-  var frameTimer = null;
-
-  // Accepts any of these and returns the bare note ID:
-  //   H11Sc_tIGe
-  //   @WatchTower/H11Sc_tIGe
-  //   https://hackmd.io/@WatchTower/H11Sc_tIGe/edit
-  function noteId(raw) {
+  // Accepts a bare doc ID or any full Google Docs URL, returns the ID.
+  function docId(raw) {
     var s = String(raw || '').trim();
-    s = s.replace(/^https?:\/\/[^/]+\//i, '');   // drop protocol + host
-    s = s.split('?')[0].split('#')[0];           // drop query / hash
-    s = s.replace(/\/(edit|view|both)\/?$/i, ''); // drop mode suffix
-    s = s.replace(/^@[^/]+\//, '');              // drop @handle/ prefix
-    return s.replace(/\/+$/, '');
-  }
-
-  function showFallback(url) {
-    frame.style.display = 'none';
-    placeholder.style.display = 'block';
-    placeholder.innerHTML =
-      'This note could not be displayed inline.<br>' +
-      '<a href="' + url + '" target="_blank" rel="noopener" ' +
-      'style="color:var(--gold-light)">Open it in a new tab &rarr;</a>';
+    var m = s.match(/\/d\/([a-zA-Z0-9_-]+)/);
+    if (m) { return m[1]; }
+    return s.replace(/^https?:\/\/[^/]+\//i, '').split('/')[0].split('?')[0];
   }
 
   function load(tab) {
-    var raw  = tab.getAttribute('data-note');
+    var raw  = tab.getAttribute('data-doc');
     var name = tab.textContent.trim();
     var isShared = tab.classList.contains('shared');
 
     tabs.forEach(function (t) { t.classList.remove('active'); });
     tab.classList.add('active');
-
     label.textContent = name + (isShared ? ' — shared' : ' — personal');
-
-    if (frameTimer) { clearTimeout(frameTimer); frameTimer = null; }
 
     // Not yet wired up
     if (!raw || raw.indexOf('PASTE_') === 0) {
+      current = null;
       frame.style.display = 'none';
       frame.removeAttribute('src');
       placeholder.style.display = 'block';
       placeholder.innerHTML =
-        'Note not yet linked.<br>Replace <code>' + raw + '</code> in this page ' +
-        'with the note ID from its HackMD URL.';
+        'Document not yet linked.<br>Replace <code>' + raw +
+        '</code> in this page with the Google Doc ID.';
       openLink.style.visibility = 'hidden';
+      refreshBtn.style.visibility = 'hidden';
       return;
     }
 
-    var id  = noteId(raw);
-    var url = 'https://hackmd.io/' + id;
-
+    current = docId(raw);
     placeholder.style.display = 'none';
     frame.style.display = 'block';
-    frame.src = url + '?' + VIEW_MODE;
-    openLink.href = url;
+    // Cache-buster so Refresh actually re-fetches rather than reusing the frame.
+    frame.src = BASE + current + '/preview?t=' + Date.now();
+    openLink.href = BASE + current + '/edit';
     openLink.style.visibility = 'visible';
-
-    // If the frame is refused (or never paints), offer the direct link instead
-    // of leaving a blank panel.
-    frameTimer = setTimeout(function () { showFallback(url); }, 6000);
-    frame.onload = function () {
-      if (frameTimer) { clearTimeout(frameTimer); frameTimer = null; }
-    };
+    refreshBtn.style.visibility = 'visible';
   }
 
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () { load(tab); });
+  refreshBtn.addEventListener('click', function () {
+    if (!current) { return; }
+    frame.src = BASE + current + '/preview?t=' + Date.now();
   });
-
-  // Remember the last tab opened, per browser.
-  var last = null;
-  try { last = window.localStorage.getItem('caelestis-note-tab'); } catch (e) {}
 
   tabs.forEach(function (tab) {
     tab.addEventListener('click', function () {
+      load(tab);
       try { window.localStorage.setItem('caelestis-note-tab', tab.textContent.trim()); } catch (e) {}
     });
   });
+
+  // Reopen on whichever tab this browser used last.
+  var last = null;
+  try { last = window.localStorage.getItem('caelestis-note-tab'); } catch (e) {}
 
   var start = tabs[0];
   if (last) {
