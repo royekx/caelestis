@@ -15,6 +15,13 @@
 (function () {
   'use strict';
 
+  var STOPWORDS = {a:1,an:1,the:1,of:1,to:1,in:1,on:1,at:1,by:1,'for':1,and:1,or:1,but:1,is:1,was:1,it:1,as:1,'with':1,from:1,that:1,'this':1,his:1,her:1,their:1,they:1,them:1,he:1,she:1};
+  function cleanExcerpt(html) {
+    return html.replace(/<mark>(.*?)<\/mark>/g, function (m, w) {
+      return STOPWORDS[w.trim().toLowerCase()] ? w : m;
+    });
+  }
+
   // Map top-level directory → display label. Determines scope.
   var SECTIONS = {
     'crew-logs': 'Crew Logs',
@@ -102,7 +109,7 @@
       return '<a class="result" href="' + d.url + '">' +
         '<div class="result-head"><div class="result-title">' + title + '</div>' +
         '<div class="result-path">' + sectionSubLabel(d.url) + '</div></div>' +
-        '<div class="result-snippet">' + d.excerpt + '</div></a>';
+        '<div class="result-snippet">' + cleanExcerpt(d.excerpt) + '</div></a>';
     }).join('');
     // Footer link to the full terminal, scoped + pre-filled.
     html += '<a class="result" href="' + ROOT + 'search/index.html?scope=' + section +
@@ -132,8 +139,22 @@
               render(resultsEl, [], term);
               return;
             }
-            Promise.all(search.results.slice(0, 8).map(function (r) { return r.data(); }))
-              .then(function (data) { render(resultsEl, data, term); });
+            Promise.all(search.results.slice(0, 12).map(function (r) { return r.data(); }))
+              .then(function (allData) {
+                // Drop results whose only match is a stopword.
+                var qTerms = term.toLowerCase().split(/\s+/).filter(Boolean);
+                var meaningful = qTerms.filter(function (w) { return !STOPWORDS[w]; });
+                var data = allData.filter(function (d) {
+                  if (!meaningful.length) return true;
+                  var marks = (d.excerpt.match(/<mark>(.*?)<\/mark>/g) || [])
+                    .map(function (m) { return m.replace(/<\/?mark>/g, '').trim().toLowerCase(); });
+                  if (marks.some(function (w) { return !STOPWORDS[w]; })) return true;
+                  var plain = d.excerpt.replace(/<\/?mark>/g, '').toLowerCase();
+                  return meaningful.some(function (w) { return plain.indexOf(w) !== -1; });
+                });
+                if (!data.length) { render(resultsEl, [], term); return; }
+                render(resultsEl, data.slice(0, 8), term);
+              });
           });
         });
       }, 180);

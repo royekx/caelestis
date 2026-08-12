@@ -46,6 +46,8 @@ if (sessionStorage.getItem('caelestis_continuum_auth') !== '1') {
 </div>
 
 <script type="module">
+const STOPWORDS=new Set(['a','an','the','of','to','in','on','at','by','for','and','or','but','is','was','it','as','with','from','that','this','his','her','their','they','them','he','she']);
+function cleanExcerpt(h){return h.replace(/<mark>(.*?)<\/mark>/g,(m,w)=>STOPWORDS.has(w.trim().toLowerCase())?w:m);}
 let pagefind = null;
 async function loadPagefind() {
   if (pagefind) return pagefind;
@@ -75,11 +77,21 @@ async function run() {
   stateEl.style.display='none'; metaEl.style.display='flex';
   countEl.textContent = search.results.length + (search.results.length===1?' record':' records');
   termEcho.textContent = '"'+term+'"';
-  const data = await Promise.all(search.results.slice(0,25).map(r=>r.data()));
+  const rawData = await Promise.all(search.results.slice(0,30).map(r=>r.data()));
+  const qT = term.toLowerCase().split(/\s+/).filter(Boolean);
+  const mQ = qT.filter(w=>!STOPWORDS.has(w));
+  const data = rawData.filter(d=>{
+    if(!mQ.length) return true;
+    const marks=(d.excerpt.match(/<mark>(.*?)<\/mark>/g)||[]).map(m=>m.replace(/<\/?mark>/g,'').trim().toLowerCase());
+    if(marks.some(w=>!STOPWORDS.has(w))) return true;
+    const plain=d.excerpt.replace(/<\/?mark>/g,'').toLowerCase();
+    return mQ.some(w=>plain.includes(w));
+  });
+  if(!data.length){resultsEl.innerHTML='';metaEl.style.display='none';stateEl.style.display='block';stateEl.textContent='No records for "'+term+'".';return;}
   resultsEl.innerHTML = data.map(d=>{
     const title = (d.meta&&d.meta.title)?d.meta.title:d.url;
     const path = d.url.replace(/^\//,'').replace(/\/index\.html$/,'').replace(/\.html$/,'') || 'hub';
-    return `<a class="result" href="${d.url}"><div class="result-head"><div class="result-title">${title}</div><div class="result-path">${path}</div></div><div class="result-snippet">${d.excerpt}</div></a>`;
+    return `<a class="result" href="${d.url}"><div class="result-head"><div class="result-title">${title}</div><div class="result-path">${path}</div></div><div class="result-snippet">${cleanExcerpt(d.excerpt)}</div></a>`;
   }).join('');
 }
 qEl.addEventListener('input', ()=>{clearTimeout(debounce);debounce=setTimeout(run,180);});
