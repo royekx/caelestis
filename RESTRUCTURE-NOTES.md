@@ -240,6 +240,29 @@ pages now link through to the profiles.
 
 ---
 
+## 11. PORTRAIT LIGHTBOX
+
+Portraits on crew and dossier pages now expand the way the Realmspace navigation
+chart does — click, tap, or Enter on a focused frame; close with the backdrop,
+the Close button, or Escape.
+
+Wired in `scripts/nav.js`, which every page already loads, so it applies to any
+`.portrait-frame` holding an image with no per-page markup. Three exclusions
+handle themselves:
+
+- Frames with a placeholder SVG and no image are skipped — nothing to expand
+- The Realmspace chart carries its own handler and is left alone
+- New portraits pick the behaviour up the day you drop an image in
+
+The expanded view requests `=w1600` from Google's image host rather than blowing
+up the thumbnail, so it opens at real resolution. A quiet "Tap to Expand" caption
+is inserted under each expandable frame, matching the chart's affordance.
+
+Verified in a real DOM across crew pages, dossiers with and without portraits,
+Realmspace, and inventory entries.
+
+---
+
 ## FILES CHANGED
 
 ```
