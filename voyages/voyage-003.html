@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelestis — Voyage 003</title>
+<link rel="stylesheet" href="../styles/caelestis.css">
+<style>
+  /* ── VIDEO ── */
+  .video-block { margin-bottom: 2.4rem; }
+  .video-container {
+    position: relative; width: 100%; padding-bottom: 56.25%;
+    background: #0a0814; border: 1px solid var(--gold-rule); overflow: hidden;
+  }
+  .video-container iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+  .video-placeholder {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 0.8rem;
+  }
+  .video-placeholder svg { width: 48px; color: var(--gold-dim); opacity: 0.4; }
+  .video-placeholder p {
+    font-family: 'Cinzel', serif; font-size: 0.65rem;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted);
+  }
+  .video-link { margin-top: 0.5rem; font-size: 0.82rem; font-style: italic; color: var(--text-muted); }
+  .video-link a { color: var(--gold-dim); text-decoration: none; }
+  .video-link a:hover { color: var(--gold); }
+
+  /* ── LOG META ── */
+  .log-meta {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 1.6rem; flex-wrap: wrap;
+  }
+  .log-badge {
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    background: var(--gold-faint); border: 1px solid var(--gold-rule);
+    color: var(--gold-dim); padding: 0.25rem 0.6rem;
+  }
+  .log-type-badge {
+    font-family: 'Cinzel', serif; font-size: 0.58rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); border: 1px solid var(--gold-rule);
+    padding: 0.25rem 0.6rem;
+  }
+
+  /* ── AT A GLANCE ── */
+  .voyage-glance {
+    background: var(--bg-card);
+    border: 1px solid var(--gold-rule);
+    border-left: 3px solid var(--gold-dim);
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 2.2rem;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .glance-synopsis {
+    font-size: 0.95rem; line-height: 1.72; color: var(--text);
+    font-style: italic; padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gold-rule);
+  }
+  .glance-row { display: grid; grid-template-columns: 90px 1fr; gap: 0.8rem; align-items: flex-start; }
+  .glance-label {
+    font-family: 'Cinzel', serif; font-size: 0.57rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold-dim); padding-top: 0.25rem;
+  }
+  .glance-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .chip {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.82rem; padding: 0.15rem 0.6rem;
+    border: 1px solid var(--gold-rule);
+    color: var(--text); background: rgba(201,153,58,0.05);
+    text-decoration: none; white-space: nowrap;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .chip:hover { border-color: var(--gold-dim); color: var(--gold-light); }
+  .chip-npc { border-color: rgba(30,74,122,0.35); color: var(--text-dim); background: rgba(30,74,122,0.05); }
+  .chip-npc:hover { border-color: rgba(30,74,122,0.7); color: #7aaad0; }
+  .chip-place { border-color: rgba(90,45,130,0.3); color: var(--text-dim); background: rgba(90,45,130,0.04); }
+  .chip-item { border-color: rgba(160,120,32,0.4); color: var(--text-dim); background: rgba(160,120,32,0.05); }
+  .chip-item:hover { border-color: var(--gold); color: var(--gold-light); }
+
+  /* ── ACCOUNT ACCORDIONS ── */
+  .account {
+    border: 1px solid var(--gold-rule);
+    background: var(--bg-card);
+    margin-bottom: 1.2rem;
+  }
+  .account > summary {
+    list-style: none; cursor: pointer;
+    padding: 1rem 1.3rem;
+    display: flex; align-items: center; gap: 0.9rem;
+    transition: background 0.2s;
+  }
+  .account > summary::-webkit-details-marker { display: none; }
+  .account > summary:hover { background: rgba(201,153,58,0.05); }
+  .account-caret {
+    width: 11px; flex-shrink: 0; color: var(--gold-dim);
+    transition: transform 0.22s ease;
+  }
+  .account[open] > summary .account-caret { transform: rotate(90deg); }
+  .account-name {
+    font-family: 'Cinzel', serif; font-size: 0.72rem;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold);
+  }
+  .account-note {
+    font-size: 0.85rem; font-style: italic; color: var(--text-muted);
+    margin-left: auto; text-align: right;
+  }
+  .account-body { padding: 0.4rem 1.5rem 1.8rem; border-top: 1px solid var(--gold-rule); }
+  .account-body > *:first-child { margin-top: 1.4rem; }
+
+  /* ── BRIEF SECTIONS ── */
+  .brief-section { margin-bottom: 1.8rem; }
+  .brief-section:last-child { margin-bottom: 0; }
+  .brief-heading {
+    font-family: 'Cinzel', serif; font-size: 0.68rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.7rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .brief-heading::after { content: ''; flex: 1; height: 1px; background: var(--gold-rule); }
+  .brief-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.45rem; }
+  .brief-list li {
+    font-size: 0.92rem; line-height: 1.55; color: var(--text);
+    padding-left: 1.1rem; position: relative;
+  }
+  .brief-list li::before { content: '\203A'; position: absolute; left: 0; color: var(--gold-dim); }
+  .brief-list li b { font-weight: 600; }
+  .brief-list li em { color: var(--text-dim); font-style: italic; }
+
+  /* ── NARRATIVE PROSE ── */
+  .narrative { max-width: 720px; }
+  .narrative p {
+    font-size: 1.05rem; line-height: 1.85; color: var(--text);
+    margin-bottom: 1.4rem; letter-spacing: 0.01em;
+  }
+  .narrative p:first-child::first-letter {
+    font-family: 'Cinzel', serif; font-size: 3.2rem; font-weight: 700;
+    float: left; line-height: 0.75; margin-right: 0.08em; margin-top: 0.12em;
+    color: var(--gold);
+  }
+  .chapter-break { display: flex; align-items: center; gap: 1rem; margin: 2.2rem 0 1.8rem; }
+  .chapter-break::before, .chapter-break::after { content: ''; flex: 1; height: 1px; background: var(--gold-rule); }
+  .chapter-break-text {
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold-dim); white-space: nowrap; flex-shrink: 0;
+  }
+
+  @media(max-width:560px){
+    .glance-row { grid-template-columns: 1fr; gap: 0.3rem; }
+    .glance-label { padding-top: 0; }
+    .account-note { display: none; }
+    .account-body { padding: 0.4rem 1.1rem 1.5rem; }
+  }
+</style>
+  <script src="../scripts/nav.js" defer></script>
+</head>
+<body data-pagefind-filter="section:voyages">
+<div class="page-content">
+  <div class="page-header">
+    <div class="page-emblem">
+      <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="0" y1="20" x2="42" y2="20" stroke-width="0.6" opacity="0.4"/>
+        <polyline points="38,15 43,20 38,25" opacity="0.5"/>
+        <polyline points="33,16 38,20 33,24" opacity="0.3"/>
+        <g transform="translate(60,20)">
+          <line x1="0" y1="-11" x2="0" y2="-6"/><line x1="0" y1="6" x2="0" y2="11"/>
+          <line x1="-11" y1="0" x2="-6" y2="0"/><line x1="6" y1="0" x2="11" y2="0"/>
+          <line x1="-7.5" y1="-7.5" x2="-4.5" y2="-4.5"/><line x1="4.5" y1="-4.5" x2="7.5" y2="-7.5"/>
+          <line x1="-7.5" y1="7.5" x2="-4.5" y2="4.5"/><line x1="4.5" y1="4.5" x2="7.5" y2="7.5"/>
+          <circle cx="0" cy="0" r="4"/><circle cx="0" cy="0" r="1.2" fill="currentColor" stroke="none"/>
+        </g>
+        <polyline points="82,15 77,20 82,25" opacity="0.3"/>
+        <polyline points="87,16 82,20 87,24" opacity="0.5"/>
+        <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="page-eyebrow">Voyage 003</div>
+    <div class="page-title" data-pagefind-meta="title">The Weight of What's Real</div>
+  </div>
+
+  <div class="content">
+
+    <div class="log-meta">
+      <span class="log-badge">Voyage 003</span>
+      <span class="log-type-badge">Crew Log</span>
+    </div>
+
+    <div class="voyage-nav-bar">
+      <a class="voyage-nav-link" href="voyage-002.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Previous Voyage</a>
+      <a class="voyage-nav-center" href="index.html">All Voyages</a>
+      <a class="voyage-nav-link" href="voyage-004.html">Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a>
+    </div>
+
+    <!-- AT A GLANCE -->
+    <div class="voyage-glance">
+      <div class="glance-synopsis">The salvage simulation ends in a real explosion — an arcane charge planted in the chamber. Gregory recovers the device, marked <em>Vocath</em>. The crew investigates: Mirt confirms Vocath's old grudge against him, grants them sailor-level clearance, and points them toward Joffrey and the phrase <em>fleet intelligence archive.</em> That night each of them is touched by something larger — Sol by Beshaba, Boogie by a dream of countless other Boogies converging. Then Tarto wakes them at four in the morning: an adamantine meteor has struck the spire on H'Catha. They board a beholder-carved tyrant ship to reach it — and in its cargo hold find clockwork horrors feeding on a broken autognome that wears Gregory's face.</div>
+      <div class="glance-row">
+        <span class="glance-label">The Crew</span>
+        <div class="glance-chips">
+          <a class="chip" href="../crew-manifest/boogie.html">Boogie</a>
+          <a class="chip" href="../crew-manifest/sol.html">Sol</a>
+          <a class="chip" href="../crew-manifest/casey.html">Casey</a>
+          <a class="chip" href="../crew-manifest/gregory.html">Gregory</a>
+          <a class="chip" href="../crew-manifest/tumak.html">Tumak</a>
+          <a class="chip" href="../crew-manifest/bartholomew.html">Bartholomew</a>
+        </div>
+      </div>
+      <div class="glance-row">
+        <span class="glance-label">Key NPCs</span>
+        <div class="glance-chips">
+          <a class="chip chip-npc" href="../dossiers/mirt.html">Mirt the Merciless</a>
+          <a class="chip chip-npc" href="../dossiers/boatswain-tarto.html">Boatswain Tarto</a>
+          <a class="chip chip-npc" href="../dossiers/saerth-abyzine.html">Saerth Abyzine</a>
+          <span class="chip chip-npc">Ryeback</span>
+          <span class="chip chip-npc">Miken</span>
+        </div>
+      </div>
+      <div class="glance-row">
+        <span class="glance-label">Locations</span>
+        <div class="glance-chips">
+          <span class="chip chip-place">Simulation Deck</span>
+          <span class="chip chip-place">Spelljammer Nexus</span>
+          <span class="chip chip-place">Sky Dock</span>
+          <span class="chip chip-place">Bridge Quarters</span>
+          <span class="chip chip-place">Infirmary</span>
+          <span class="chip chip-place">Tyrant Ship</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECORDING -->
+    <div class="video-block">
+      <div class="section-label">Voyage Recording</div>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/Vk9TANGljWM" allowfullscreen></iframe>
+      </div>
+      <div class="video-link">Watch on YouTube: <a href="https://youtu.be/Vk9TANGljWM" target="_blank">youtu.be/Vk9TANGljWM</a></div>
+    </div>
+
+    <!-- BRIEF ACCOUNT -->
+    <details class="account" open>
+      <summary>
+        <svg class="account-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2l4 4-4 4"/></svg>
+        <span class="account-name">Brief Account</span>
+        <span class="account-note">What happened, beat by beat</span>
+      </summary>
+      <div class="account-body">
+        <div class="brief-section">
+        <div class="brief-heading">After the Blast</div>
+        <ul class="brief-list">
+          <li>The salvage simulation ends in a real explosion. The pods smoke; rival cadets are down. Casey and Bartholomew pull the injured clear; <b>Miken</b> works to revive a fallen crewmate.</li>
+          <li><b>Gregory</b> finds a metal rod jammed in the wall — arcane dynamite, built to feed on ambient magic and discharge. Boogie recognizes what it is; Gregory confirms it's spent but dangerous near strong magic.</li>
+          <li>Handed to Tarto and Saerth. Boogie glimpses one word on the device before Saerth draws it back: <em>Vocath.</em> Saerth asks them to report anyone moving through the academy out of place.</li>
+        </ul>
+      </div>
+
+        <div class="brief-section">
+        <div class="brief-heading">Splitting the Investigation</div>
+        <ul class="brief-list">
+          <li><b>Gregory and Tumak</b> to the Nexus. Gregory searches the terminals — a category on arcane artillery is locked behind <em>fleet intelligence archive</em> clearance and turns his cadet star away. On Saerth's desk, a note about Bartholomew: does shifting form bear on spelljamming?</li>
+          <li>In the bathroom, <b>Tumak</b> checks his foot: a half-rune glows there — curved, flowerlike, half a star above it — and a second, different half-mark on his shoulder. Two halves of two separate wholes.</li>
+          <li><b>Boogie and Sol</b> to the Sky Dock. They find the marked crate behind others — sealed, not hollow, nothing living inside. Sol learns from a cargo worker that shipments route through <b>Mr. Blip</b>, with Toril and H'Catha as common destinations.</li>
+        </ul>
+      </div>
+
+        <div class="brief-section">
+        <div class="brief-heading">The Meeting with Mirt</div>
+        <ul class="brief-list">
+          <li>All six summoned to the bridge. Mirt thanks them, asks what they saw. Tumak raises Joffrey's suspicious dock exchange. The crew shares pieces of their own histories — Boogie's childhood sacrifice and the sense of being watched, Tumak's search for family, Gregory's dead creator.</li>
+          <li>Saerth names the device's mark: <em>Vocath.</em> Mirt goes still — Vocath has held a grudge against him for years. Anyone near Mirt is a target. He tells them to keep it quiet, check the teaching rooms, and look into Joffrey and a man named Jeffrey.</li>
+          <li><b>Tumak</b> clocks three words on Mirt's notepad: <em>fleet intelligence archive</em> — the same phrase from the locked terminal. He and Gregory argue for expanded access; Mirt grants sailor-level clearance and tells them not to abuse it.</li>
+        </ul>
+      </div>
+
+        <div class="brief-section">
+        <div class="brief-heading">The Infirmary</div>
+        <ul class="brief-list">
+          <li>Vena and Derek lie bandaged but stable. <b>Miken</b> is unhurt but shadowed — a wince he can't quite hide. When the doctor moves the crew out, Miken asks to stay beside his crewmates. <em>This is his crew.</em></li>
+        </ul>
+      </div>
+
+        <div class="brief-section">
+        <div class="brief-heading">Night</div>
+        <ul class="brief-list">
+          <li><b>Gregory</b> rereads his master's journal — mending a brass aligner from the inside, reaching a thing before the break does. He thinks about arriving before the damage.</li>
+          <li><b>Sol</b> is visited again by the unhurried voice. It asks whether he's truly escaped where he came from; he says he's accepted what lies ahead. <em>Fate can still be wielded,</em> it tells him, and it looks forward to watching.</li>
+          <li><b>Boogie</b> dreams of infinite other Boogies — every version he almost was — multiplying into a network, and something pressing down through all of them toward him. He wakes half-dissolved, hums himself back together. The half-ship and logbook are still in his chest.</li>
+        </ul>
+      </div>
+
+        <div class="brief-section">
+        <div class="brief-heading">The Call to H'Catha</div>
+        <ul class="brief-list">
+          <li>Days pass quietly. Then <b>Tarto</b> wakes them at four in the morning: an adamantine meteor has struck the spire on <b>H'Catha</b>, a world of beholders, and they're to recover it.</li>
+          <li>Their vessel is a <b>tyrant ship</b> — stone-carved in a beholder's shape — meant to pass through H'Catha's patrols unchallenged. The plan: crew it, install the helm on the command deck, fly it themselves. <b>Ryeback</b> comes along to cook and command the deckhands, Crick Lit and Fred.</li>
+          <li>The <b>Flighty Foundling</b> drops them in the tyrant ship's cargo deck and departs. The stone closes around them.</li>
+        </ul>
+      </div>
+
+        <div class="brief-section">
+        <div class="brief-heading">Something in the Hold</div>
+        <ul class="brief-list">
+          <li>The ship is meant to be abandoned. Almost at once they hear skittering — metallic, ahead. Casey rounds the corner first, wrapped in ice, and goes still.</li>
+          <li>Bronze mantis-like machines crouch over wreckage. In the center: an autognome, lower half gone, voice box destroyed — eyes and mouth still moving, trying to speak, waiting a long time for anyone to come.</li>
+          <li><b>Gregory</b> looks at its face and sees his own. He casts before he's fully decided to — the spell still arcing through the dark as the night ends.</li>
+        </ul>
+      </div>
+      </div>
+    </details>
+
+    <!-- FULL ACCOUNT -->
+    <details class="account">
+      <summary>
+        <svg class="account-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2l4 4-4 4"/></svg>
+        <span class="account-name">Full Account</span>
+        <span class="account-note">The whole story, as written</span>
+      </summary>
+      <div class="account-body">
+        <div class="narrative">
+  
+        <p>The simulation pods were still smoking when the cadets climbed out of them.</p>
+  
+        <p>The air in the chamber tasted of burnt metal and scorched insulation, and the sound of it — the last crackling pops of arcane discharge, the hiss of something cooling too fast — was the sound of a room that had nearly killed everyone inside it. Saerth Abyzine and Boatswain Tarto moved through the wreckage with purpose, ushering the injured toward the exits, calling for help. Casey and Bartholomew were already at it, pulling members of the rival crew upright, getting shoulders under arms. Around the corner, Miken knelt over one of his fallen crewmates, both hands pressed down, working to bring them back. Two others lay stretched across the deck, breathing but still.</p>
+  
+        <p>Gregory was the one who saw the rod. He had been scanning the chamber — not for a way out, but for what had caused it — and there, jammed into the wall at an angle that suggested force rather than accident, was a length of metal that did not match any part of the pods. He crossed to it, worked it free with both hands, and felt a brief arc of energy snap off the end as it came loose. He stepped clear of it before it could find him. The rod was small, engraved with sigils that still held a faint residual glow, and when he brought it back to the group and they gathered around it, Boogie turned it over in his hands and understood what it was before anyone else did. It had been built to feed on ambient magical energy — the kind that filled a room full of active spelljamming pods — and to hold that charge until it could no longer contain itself. Arcane dynamite, Gregory said, and the description was accurate. His own assessment, arrived at with considerably more precision, confirmed that the device had spent itself and was unlikely to detonate again, though proximity to another strong source of magic would change that calculation.</p>
+  
+        <p>Gregory brought it to Boatswain Tarto, thrust it into her hands, and retreated at speed. She looked at it, looked at the empty space where he had been standing, and turned to the rest of the crew with the question of where he had found it. When Gregory reappeared briefly in the doorway to point, she absorbed the information and beckoned Saerth over. The two of them spoke in low voices, and when Boogie pressed his way into the conversation, Saerth pulled the rod back before Boogie could get a proper look at it. He was not withholding out of suspicion, he said — he simply did not yet know what it was, and he did not want it handled further until he did. What Boogie had managed to catch, in the moment before Saerth drew it back, was a single word inscribed on the device: Vocath. A name neither of them recognized. Saerth told them to collect themselves, see the medics, and consider themselves dismissed for the day. Then he added, quietly, that if they happened to know of anyone who had been moving through the academy in ways that seemed out of place, that information would be welcome. Boogie said they were on it. He was not entirely sure what that meant yet, but he meant it.</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">Splitting the Investigation</span></div>
+  
+        <p>The group split for the afternoon. Tumak and Gregory went to the Spelljammer Nexus, where the library terminals sat between the mock helms and Saerth's empty desk. Boogie and Sol went to the Sky Dock to trace the crate.</p>
+  
+        <p>At the Nexus, Gregory settled at a terminal and searched — arcane artillery, magic rods, runes, sigils — while Tumak wandered toward Saerth's desk in the corner. The desk was both chaotic and precise, covered in notes that were nearly illegible, the handwriting of a man trying to put thought onto paper faster than thought moved. Gregory sorted through it carefully, hands straightening what they touched, eyes reading what they could. He found a single note about Bartholomew — observations about the wilder's helm affinity, a question about whether the ability to shift form had any bearing on spelljamming capability. He tucked it back into the stack and returned to his terminal. There, his searches turned up general entries on arcane explosives and inscribed devices used as artillery, but one category required fleet-level clearance to open, and when he presented his cadet star, the terminal flashed red and locked him out. The information was there. He simply was not yet allowed to have it.</p>
+  
+        <p>Tumak, meanwhile, slipped away to the bathroom. He took off his boot and his sock, and looked at the sole of his left foot. A half-rune glowed there — dim blue, faintly pulsing — a shape of curved calligraphy that suggested flowers, with half a star sitting above it. He twisted to check his right shoulder and caught a brief flash of light from behind him, a second mark, different from the first, neither one completing the other. Two separate halves to two separate wholes. He pulled his sock back on, returned to Gregory, and mentioned he wanted to search the terminals for symbols. He did not find anything. The shapes he had seen were too partial to describe, and the searches returned nothing useful.</p>
+  
+        <p>At the Sky Dock, Boogie talked their way past a security guard in a sailor's cap and fire-resistant outerwear, invoking Mirt's name and the morning's incident with enough conviction that the guard stepped aside and told them to make it quick. Inside, the dock moved with its usual freight traffic — cargo haulers, arcane cranes, manifests being checked against stacks of identical crates. Boogie and Sol played it inconspicuous, moving through the bustle while watching for anything that matched the crate from Mirt's chambers. Eventually Boogie found it: a container tucked behind others, marked with a symbol he recognized from when Saerth and Tarto had been examining the rod. He pressed his ear to it and knocked. Nothing living inside, but not hollow either. Sol suggested they track it rather than move it, and they stayed long enough to watch — but no one came for the crate, and the dock's foot traffic made it impossible to determine how it had arrived or who had placed it.</p>
+  
+        <p>Sol tried a different approach. He fell into conversation with an elven woman working a cargo manifest, asking about shipping routes, trade contracts, what came through and where it went. She was professionally reserved but not unfriendly, and by the end of it Sol had learned that the crate's contents, whatever they were, would have been processed through Mr. Blip — that the quartermaster handled incoming shipments as well as outgoing stock. The woman named Toril as the closest destination on most routes, and H'Catha as a secondary stop for certain materials. Sol filed it away.</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">The Meeting with Mirt</span></div>
+  
+        <p>They were still considering their next move when the intercom sounded across the station, calling all six cadets to the bridge for a meeting with Headmaster Mirt. Boatswain Tarto met them at the entrance to the bridge quarters and walked them through without incident. Mirt was seated beside his fishbowl, Flotsam and Jetsam moving their slow circles in the water behind him. He looked less wrecked than the last time they had seen him, but the solemn quality that settled onto his face as the conversation deepened was something different from a hangover. He thanked them again for the incident in his chambers, acknowledged that strange things were occurring in the academy, and asked if they had noticed anything suspicious when they collected the crate.</p>
+  
+        <p>Tumak mentioned Joffrey — the sailor he and the others had seen at the Sky Dock on their first day, exchanging what had seemed like an unofficial payment with a merchant. Mirt took note of it without reacting visibly. He asked if there was anything else. There was some table-clearing among the cadets, a brief accounting of their various histories and whether anyone might have reason to follow them. Boogie described, in bare terms, the tribal sacrifice he had survived as a child and the sense he had carried since that something was watching him — whether that watching was protective or threatening he had never been able to say. Tumak noted his own search, the family he was trying to find, the destination he could not yet name. Gregory mentioned his master and creator, Gregory Prime, now dead and buried. The accounting was incomplete and a little awkward, as these things tend to be, but it was honest.</p>
+  
+        <p>Mirt listened. Then Saerth, who had been standing to the side, produced an illusion of the rod — the device Gregory had pulled from the wall — and named the marking on it. Vocath. The name landed differently on Mirt than it had on the cadets. His face went still in a way that had nothing to do with confusion. Vocath, he said, had harbored a grudge against him for a long time. Anyone connected to Mirt was a potential target. He told them to keep it to themselves, to check the teaching rooms for similar devices, and to look into Joffrey and a man named Jeffrey as well — cautiously, he emphasized, given Joffrey's standing at the academy. Then he rewarded them for winning the salvage simulation, pressing a heavy pouch of coin into their hands, and added a further sum as a courtesy for their discretion.</p>
+  
+        <p>Tumak, on his way out, let his eye drift to the notepad sitting beside the fishbowl. Three words, written in Mirt's hand: fleet intelligence archive. The same phrase that had appeared on the locked terminal in the Nexus, the one that had turned Gregory's cadet star away. Flotsam and Jetsam circled beneath it, indifferent. Tumak also made a case, with Gregory's backing, for expanded access across the station. The argument was straightforward: they had been attacked twice in three days, they were being asked to help investigate, and temporary cadet passes were insufficient for the work being requested of them. Mirt considered it, expressed some doubt, and granted it anyway. Sailor-level clearance, for the time being. He told them not to abuse it, made clear he did not entirely trust that they would not, and dismissed them.</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">The Infirmary</span></div>
+  
+        <p>The cadets went to the infirmary before returning to their quarters. The room was quiet in the way infirmaries always are — a hush that is not quite peace. Vena and a cadet named Derek lay side by side, bandaged and unconscious but breathing steadily. Miken sat off to the side, unhurt but not untouched, and raised a hand when the crew came in. They told him they were glad he was all right. They told the room that once everyone healed up, they expected to see them back out there. Miken smiled at that — a real smile, though there was something underneath it, a wince that came and went before he could stop it. Tumak caught it and gave his shoulder a firm pat. When the doctor ushered them out, Miken asked if he could stay beside his crewmates. The doctor said yes. Miken called back that this was his crew, and the door closed between them.</p>
+  
+        <p>The Weeping Goddess was quieter than usual that evening. The whole academy had gone subdued, the way places do after something real has happened inside them. Ryeback served without his usual bellow, and the cadets ate without their usual noise, and eventually they made their way back to the quarters and to sleep.</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">The Night</span></div>
+  
+        <p>Tumak fell asleep first, snoring with the same doubled rhythm as before — two breaths sharing one body, never quite landing on the same beat. Without Miken there to cast a bubble of silence over the bunk, the rest of the room endured it.</p>
+  
+        <p>Gregory, before he closed his eyes, read from the journal his master had left him. He had read the passage before, but tonight it carried differently. The entry described mending a brass aligner — bracing the seam from the inside before it could crack again, Gregory holding the casing steady while the work was done. The line that stayed with him was the one about getting underneath things first, reaching them before the break did. He set the journal down and thought about the simulation chamber, the smoking pods, the people on stretchers. He thought about what it would mean to arrive before the damage.</p>
+  
+        <p>Sol lay still in the dark and felt the tension of everything that might go wrong settle around him — not as dread, but as presence, like weight that had learned to be comfortable. A voice came to him, unhurried and curious, asking why he embraced such chaos rather than fled it. He answered honestly: he had carried it long enough that it no longer felt like a burden. The voice said it had had his curiosity before, but now it had his attention. It asked if he was certain he had escaped the place he came from. Sol said he had accepted what lay ahead of him. The voice said fate could still be wielded, and that it looked forward to watching him do so, wisely or not. Then the presence lifted, and Sol slept.</p>
+  
+        <p>Boogie's sleep was less peaceful. His body loosened into its resting state — form softening, edges blurring — and the dream that came was vast and disorienting. He stood in a darkness that felt infinite, his nucleus warm at his chest, and out of the dark came other versions of himself: slightly different hues, slightly different rhythms, nuclei shaped just differently enough to notice. Then more of them, and more, multiplying outward until the space was crowded with every possible Boogie that had ever almost been. He felt connected to all of them, a current running through the network. And then something pressed down through all those versions toward him — a presence, an entity, converging. He woke with his form half-dissolved and his chest heavier than it had been when he closed his eyes. He hummed the notes that had always been his, the beat that had always been his, and pulled himself back together. When he reached into his chest to check, he found the half-ship where he had left it, and beside it, the logbook from the derelict — still there, still his to carry.</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">The Call to H'Catha</span></div>
+  
+        <p>Some days passed after that. The academy settled back toward its ordinary rhythms, no new explosions, no announced thefts. The cadets trained, ate, moved through the station with their new clearance and the quiet awareness that the station was not as safe as it had looked on arrival. Then Boatswain Tarto came for them at four in the morning, banging something metal and loud, and the next chapter began before any of them were ready for it.</p>
+  
+        <p>She told them, over a hasty breakfast, that an adamantine meteor had struck the spire on H'Catha — a world populated entirely by beholders and their kin — and that they were going to recover it. The transport that carried them out, a ship called the Flighty Foundling, docked alongside their actual vessel: a tyrant ship, stone-carved in the shape of a beholder, drifting in orbit above Toril. The plan was to crew the tyrant ship themselves, install the spelljamming helm on the command deck, and use the vessel's appearance to move through H'Catha's space without drawing fire from the beholder patrols that watched it. Petty Officer Ryeback came up beside Tarto and gave a salute — he would be coming along, feeding them, commanding the deckhands: a thri-kreen named Crick Lit, and a plasmoid named Fred who wore a kerchief knotted at the throat like a necktie.</p>
+  
+        <p>The Flighty Foundling dropped them unceremoniously into the tyrant ship's cargo deck and departed. The stone walls of the beholder vessel closed around them, and the silence that followed the Foundling's exit was complete. The ship was believed to be abandoned. They needed to get to the command deck, install the helm, and get moving. They began to make their way through the interior corridors — stone floors, dim light, the faint smell of something old — and almost immediately heard it: a skittering somewhere ahead, around a corner, the metallic clicking of things moving against each other.</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">Something in the Hold</span></div>
+  
+        <p>Casey went first, wrapped in a shell of cold arcane ice, and did not move quietly. The skittering stopped. He rounded the corner and went still. The rest of them came around after him and saw what he had seen. Metal creatures crouched over a pile of wreckage — bronze-plated, angular, like praying mantises cast in gold — and in the center of the wreckage lay an autognome. Its lower half was gone, legs scattered in pieces across the floor. Its voice box was destroyed. Its head was cocked at an angle that suggested damage, not intention. But its eyes moved. Its mouth moved. It was trying to speak and could not, and it looked up at the crew with the particular desperation of something that has been waiting a long time for anyone to come.</p>
+  
+        <p>Gregory looked at the autognome's face and saw his own. He cast before he had fully decided to — magic erupting from his hands toward the creatures that were still feeding on the figure in the wreckage — and that was where the night ended, the spell still arcing through the dark, the answer to what lay ahead still waiting for them somewhere deeper in the stone.</p>
+  
+        <p>The crew had come a long way from the simulation deck. The things that could hurt them were no longer simulations. Somewhere in the wreckage ahead, something that looked like Gregory was asking to be saved, and the question of whether they could reach it in time was not yet answered.</p>
+  
+      </div>
+      </div>
+    </details>
+
+    <div class="voyage-nav-bottom">
+      <a class="voyage-nav-link" href="voyage-002.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Previous Voyage</a>
+      <a class="voyage-nav-center" href="index.html">All Voyages</a>
+      <a class="voyage-nav-link" href="voyage-004.html">Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /page-content -->
+</body>
+</html>

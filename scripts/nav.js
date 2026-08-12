@@ -17,7 +17,7 @@
   // Works for GitHub Pages at royekx.github.io/caelestis/
   //
   //   /caelestis/dossiers/mirt.html         → 3 slashes → depth 1 → ../
-  //   /caelestis/crew-logs/brief/v-001.html → 4 slashes → depth 2 → ../../
+  //   /caelestis/voyages/voyage-001.html     → 3 slashes → depth 1 → ../
 
   var pathname = window.location.pathname;
   var slashes  = (pathname.match(/\//g) || []).length;
@@ -34,23 +34,34 @@
   // ── Sections ──────────────────────────────────────────────────────────────
   // To add, remove, or rename a section: edit this array only.
 
-  var sections = [
-    { key: 'crew-logs',          label: 'Crew Logs',          path: 'crew-logs/index.html'          },
-    { key: 'crew-manifest',      label: 'Crew Manifest',      path: 'crew-manifest/index.html'      },
-    { key: 'dossiers',           label: 'Dossiers',           path: 'dossiers/index.html'           },
-    { key: 'navigation-records', label: 'Navigation Records', path: 'navigation-records/index.html' },
-    { key: 'inventory',          label: 'Inventory',          path: 'inventory/index.html'          },
-    { key: 'handouts',           label: 'Corps Protocols',    path: 'handouts/index.html'           },
-    { key: 'spelljammer-nexus', label: 'Spelljammer Nexus', path: 'spelljammer-nexus/index.html'  },
-    { key: 'search',            label: 'S.E.A.R.C.H.',       path: 'search/index.html'            },
+  var groups = [
+    {
+      label: 'Crew Intel',
+      items: [
+        { key: 'voyages',       label: 'Voyages',       path: 'voyages/index.html'       },
+        { key: 'logs',          label: 'Logs',          path: 'logs/index.html'          },
+        { key: 'crew-manifest', label: 'Manifest',      path: 'crew-manifest/index.html' },
+        { key: 'inventory',     label: 'Inventory',     path: 'inventory/index.html'     }
+      ]
+    },
+    {
+      label: 'Fleet Records',
+      items: [
+        { key: 'search',             label: 'S.E.A.R.C.H.',       path: 'search/index.html'             },
+        { key: 'dossiers',           label: 'Dossiers',           path: 'dossiers/index.html'           },
+        { key: 'navigation-records', label: 'Navigation Records', path: 'navigation-records/index.html' },
+        { key: 'spelljammer-nexus',  label: 'Spelljammer Nexus',  path: 'spelljammer-nexus/index.html'  },
+        { key: 'handouts',           label: 'Corps Protocols',    path: 'handouts/index.html'           }
+      ]
+    }
   ];
 
-  // External links shown at the bottom of the sidebar.
+  // External links shown at the bottom of the sidebar under "Crew Operations".
   // To add a link: { label: 'Name', href: 'https://...' }
 
   var extLinks = [
-    { label: 'Take the Helm',   href: 'https://royek.foundryserver.com/game'      },
     { label: 'Scheduler',       href: 'https://rallly.co/invite/B8uUYlcm4oKB'    },
+    { label: 'Take the Helm',   href: 'https://royek.foundryserver.com/game'      },
   ];
 
   // ── Inject critical positioning CSS (self-contained — doesn't depend on caelestis.css load order) ──
@@ -79,8 +90,11 @@
 
   // ── Build HTML ────────────────────────────────────────────────────────────
 
-  var sectionLinks = sections.map(function (s) {
-    return '<a class="side-nav-link" href="' + base + s.path + '" data-section="' + s.key + '">' + s.label + '</a>';
+  var sectionLinks = groups.map(function (g) {
+    var links = g.items.map(function (s) {
+      return '<a class="side-nav-link" href="' + base + s.path + '" data-section="' + s.key + '">' + s.label + '</a>';
+    }).join('');
+    return '<div class="side-nav-group-label">' + g.label + '</div>' + links;
   }).join('');
 
   var externalLinks = extLinks.map(function (l) {
@@ -102,12 +116,14 @@
     '</button>',
     '<nav class="side-nav" id="js-side-nav">',
     '  <div class="side-nav-head">',
-    '    <a class="side-nav-logo" href="' + base + 'index.html">Caelestis</a>',
+    '    <a class="side-nav-logo" href="' + base + 'hub.html">Caelestis</a>',
+    '    <a class="side-nav-hub" href="' + base + 'hub.html">Terminal Hub</a>',
     '  </div>',
     '  <div class="side-nav-body">',
     searchField,
     sectionLinks,
     '    <div class="side-nav-divider"></div>',
+    '    <div class="side-nav-group-label">Crew Operations</div>',
     externalLinks,
     '  </div>',
     '</nav>',

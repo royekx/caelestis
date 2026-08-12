@@ -44,7 +44,7 @@ You never run anything. Push HTML like always; search rebuilds itself.
 - `/prime/pagefind/` — DM wiki
 - `/restricted/pagefind/` — FIA archive
 
-**What's in the player index:** root, crew-logs, crew-manifest, dossiers,
+**What's in the player index:** root, voyages, logs, crew-manifest, dossiers,
 spelljammer-nexus, inventory, handouts, navigation-records.
 
 **What's excluded from it:** prime/, restricted/ (own indexes),
@@ -91,7 +91,7 @@ spelling still lands on the right page.
 **Currently seeded:**
 - `navigation-records/viren.html` — Veren, Viran, Virin, Vyren, Verin, Zerathis variants
 - `navigation-records/realmspace.html` — H'Catha variants (Hakatha, Hcatha, …)
-- `crew-logs/detailed/voyage-detailed-004.html` — Ostekk-6 variants (Ostek, Aztec, …)
+- `voyages/voyage-004.html` — Ostekk-6 variants (Ostek, Aztec, …)
 - `dossiers/mirt.html` — Vocath variants (Volkath, Volcath, …)
 
 Rule of thumb: when you write a new voyage log, ask "what will they mishear

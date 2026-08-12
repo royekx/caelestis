@@ -24,12 +24,13 @@
 
   // Map top-level directory → display label. Determines scope.
   var SECTIONS = {
-    'crew-logs': 'Crew Logs',
+    'voyages': 'Crew Voyages',
+    'logs': 'Crew Logs',
     'crew-manifest': 'Crew Manifest',
     'dossiers': 'Dossiers',
     'navigation-records': 'Navigation Records',
     'spelljammer-nexus': 'Spelljammer Nexus',
-    'inventory': 'Inventory',
+    'inventory': 'Crew Inventory',
     'handouts': 'Corps Protocols'
   };
 
