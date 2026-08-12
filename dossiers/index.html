@@ -156,12 +156,14 @@
   }
 </style>
   <script src="../scripts/nav.js" defer></script>
+  <script src="../data/vocabulary.js" defer></script>
+  <script src="../scripts/spelling.js" defer></script>
   <script src="../scripts/search.js" defer></script>
 </head>
 <body data-pagefind-filter="section:dossiers">
 <div class="page-content">
   <div class="page-header">
-    <div class="page-emblem">
+    <div class="page-emblem" data-pagefind-ignore>
     <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
       <line x1="0" y1="20" x2="42" y2="20" stroke-width="0.6" opacity="0.4"/>
       <polyline points="38,15 43,20 38,25" opacity="0.5"/>
@@ -198,7 +200,7 @@
         <span class="group-title">Caelestis — Command & Staff</span>
         <span class="group-note">The academy itself. Everyone the crew answers to, learns from, or eats beside.</span>
       </div>
-      <div class="dossier-list">
+      <div class="dossier-list" data-pagefind-ignore>
       <a class="dossier-card neutral" href="mirt.html">
         <div class="dossier-thumb"><img src="https://lh3.googleusercontent.com/d/1D9Hh3pn8e_QbMAF69ABg4bld6kMHj4qr" alt="Mirt the Merciless"></div>
         <div class="dossier-info">
@@ -278,7 +280,7 @@
         <span class="group-title">Cadet Corps</span>
         <span class="group-note">Cadets outside the crew. Rivals in the morning, the same uniform by evening.</span>
       </div>
-      <div class="dossier-list">
+      <div class="dossier-list" data-pagefind-ignore>
       <a class="dossier-card ally" href="miken.html">
         <div class="dossier-thumb"><img src="https://lh3.googleusercontent.com/d/1naBafRe55ibGcJ7vcQ1vxHCpg0rhaKpk" alt="Miken"></div>
         <div class="dossier-info">
@@ -302,12 +304,20 @@
         <span class="group-title">The Tyrant Ship</span>
         <span class="group-note">Aboard the stone vessel bound for H'Catha.</span>
       </div>
-      <div class="dossier-list">
+      <div class="dossier-list" data-pagefind-ignore>
       <a class="dossier-card ally" href="ostekk-6.html">
-        <div class="dossier-thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="16" r="9"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
+        <div class="dossier-thumb"><img src="https://lh3.googleusercontent.com/d/1kRxGB6tcRWliypOvuE0TlfeKixlE9CUw" alt="Ostekk-6"></div>
         <div class="dossier-info">
           <div class="dossier-name">Ostekk-6</div>
           <div class="dossier-sub">Autognome · Clerical Unit</div>
+        </div>
+        <div class="dossier-status status-ally">Ally</div>
+      </a>
+      <a class="dossier-card ally" href="pffred.html">
+        <div class="dossier-thumb"><img src="https://lh3.googleusercontent.com/d/1BlgQkqqZYL5E5M6X7DJMFOJKbr23hda6" alt="Pffred"></div>
+        <div class="dossier-info">
+          <div class="dossier-name">Pffred</div>
+          <div class="dossier-sub">Plasmoid · Deckhand</div>
         </div>
         <div class="dossier-status status-ally">Ally</div>
       </a>
@@ -318,7 +328,7 @@
         <span class="group-title">Beyond the Academy</span>
         <span class="group-note">Names the crew has been given, attached to no face and no location.</span>
       </div>
-      <div class="dossier-list">
+      <div class="dossier-list" data-pagefind-ignore>
       <a class="dossier-card threat" href="vocath.html">
         <div class="dossier-thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="16" r="9"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
         <div class="dossier-info">
@@ -358,10 +368,6 @@
         <div class="unfiled-row">
           <span class="unfiled-name">Crick Lit</span>
           <span class="unfiled-note">Thri-kreen deckhand under Ryeback, aboard the tyrant ship.</span>
-        </div>
-        <div class="unfiled-row">
-          <span class="unfiled-name">Fred</span>
-          <span class="unfiled-note">Plasmoid deckhand under Ryeback. Wears a kerchief knotted at the throat like a necktie.</span>
         </div>
       </div>
     </div>

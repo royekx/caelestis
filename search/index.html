@@ -6,6 +6,8 @@
 <title>Caelestis — S.E.A.R.C.H.</title>
 <link rel="stylesheet" href="../styles/caelestis.css">
 <script src="../scripts/nav.js" defer></script>
+<script src="../data/vocabulary.js"></script>
+<script src="../scripts/spelling.js"></script>
 </head>
 <body>
 
@@ -147,7 +149,22 @@ async function run() {
 
   // Filter by section using the section filter tagged at index time.
   const opts = scope ? { filters: { section: scope } } : {};
-  const search = await pf.search(term, opts);
+  let search = await pf.search(term, opts);
+
+  // Nothing as typed? Try a repaired spelling before giving up. Names heard
+  // across a table rarely survive contact with a keyboard intact.
+  let searched = term, correctedFrom = null;
+  if (!search.results.length && window.CaelestisSpelling) {
+    const fix = window.CaelestisSpelling.correct(term);
+    if (fix.changed) {
+      const retry = await pf.search(fix.term, opts);
+      if (retry.results.length) {
+        search = retry;
+        searched = fix.term;
+        correctedFrom = term;
+      }
+    }
+  }
 
   if (!search.results.length) {
     resultsEl.innerHTML = '';
@@ -162,7 +179,7 @@ async function run() {
   // Drop results whose ONLY match is a stopword. A page that matched just "of"
   // (from a query like "bag of holding") shouldn't surface. Keep a result only
   // if at least one highlighted term in its excerpt is a meaningful word.
-  const queryTerms = term.toLowerCase().split(/\s+/).filter(Boolean);
+  const queryTerms = searched.toLowerCase().split(/\s+/).filter(Boolean);
   const meaningfulQuery = queryTerms.filter(w => !STOPWORDS.has(w));
   const data = rawData.filter(d => {
     // If the query itself is only stopwords, keep everything (nothing to filter on).
@@ -187,7 +204,17 @@ async function run() {
   clearState();
   metaEl.style.display = 'flex';
   countEl.textContent = data.length + (data.length === 1 ? ' record' : ' records');
-  termEcho.textContent = '"' + term + '"';
+  termEcho.textContent = '"' + searched + '"';
+  const priorNote = document.getElementById('correction-note');
+  if (priorNote) priorNote.remove();
+  if (correctedFrom) {
+    const n = document.createElement('div');
+    n.id = 'correction-note';
+    n.className = 'search-correction';
+    n.innerHTML = 'Showing results for <b>' + searched +
+      '</b> \u2014 nothing is filed under \u201c' + correctedFrom + '\u201d.';
+    resultsEl.parentNode.insertBefore(n, resultsEl);
+  }
   scopeEcho.textContent = scope ? 'in ' + SCOPE_LABELS[scope] : 'across all records';
 
   resultsEl.innerHTML = data.map(d => {

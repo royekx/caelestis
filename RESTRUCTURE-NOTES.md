@@ -228,7 +228,7 @@ Sor'kur, plus **Winston Ryeback**, **Rindle Gearloft**, and **Joffrey**.
 **The Tyrant Ship** — **Ostekk-6**.
 **Beyond the Academy** — **Vocath**, **Zerathis**.
 
-**Named, Unfiled** closes the index: Jeffrey, Barret, Derek, Crick Lit, Fred.
+**Named, Unfiled** closes the index: Jeffrey, Barret, Derek, Crick Lit, Pffred.
 One line each, no page. They exist on record without being profiles — which is
 itself information, and better than a page of padding.
 
@@ -260,6 +260,98 @@ is inserted under each expandable frame, matching the chart's affordance.
 
 Verified in a real DOM across crew pages, dossiers with and without portraits,
 Realmspace, and inventory entries.
+
+---
+
+## 12. MANIFEST FIELDS, PORTRAITS, PFRED
+
+**Crew manifest now reads species · class · role**, on both the index rows and
+each personnel file, with Class added as its own stat row:
+
+| | Species | Class | Station |
+|---|---|---|---|
+| Bartholomew | Human | Druid | Spelljammer |
+| Boogie | Plasmoid | Sorcerer | Medic |
+| Casey | Hadozee | Warlock | Bosun |
+| Gregory | Autognome | Wizard | Navigator |
+| Sol | Astral Elf | Paladin | Gunner |
+| Tumak | Human | Rogue | Captain |
+
+Casey moved from Gunner to Bosun, so Sol holds the guns alone. Bartholomew keeps
+**Wilder** as a separate Specialisation row — it's his academy track, not his class.
+
+**Portraits added** for Ostekk-6 and Pffred, pulled from the campaign image folder.
+Both appear on the profile and in the index listing, and both expand.
+
+**Fred is Pffred** across every page — dossiers, voyage records, chips, and the
+Ryeback profile.
+
+**Pffred was promoted out of Named, Unfiled** into The Tyrant Ship group with a
+full profile. A portrait is a signal that someone matters; leaving him as a
+one-line footnote with a face would have read as an oversight. Crick Lit stays
+unfiled — no portrait, no beats beyond his name.
+
+---
+
+## 13. SEARCH INDEX BLEED
+
+Searching **Ostekk-6** was returning **Vena**, and vice versa. The cause was
+navigation chrome: the prev/next chain on each dossier prints the neighbouring
+names as page text, so Pagefind indexed Vena's page as containing "Ostekk-6".
+Every profile was polluted with its two neighbours.
+
+Fixed by marking chrome `data-pagefind-ignore` across 48 pages:
+
+- `.voyage-nav-bar` and `.voyage-nav-bottom` — the source of the bleed
+- `.portrait-label` — "Tap to Expand" was indexed content
+- `.page-emblem`, `.filter-row`, `.log-toggle`, `.overview-foot`
+
+And listing containers whose text only duplicates the pages they link to —
+`.crew-list`, `.dossier-list`, `.item-grid`, and the voyage index's
+`.log-overview` panels. Those index pages were competing with the detail pages
+for their own content. The Named, Unfiled block stays indexed: Jeffrey, Barret,
+Derek and Crick Lit exist nowhere else.
+
+Also fixed: stat rows ran together in excerpts as *"SpeciesAutognome"* because
+the spans had no whitespace between them. Now *"Species Autognome"*.
+
+Verified by building the index locally. Ostekk-6 and Vena no longer appear in
+each other's indexed text, and every remaining cross-reference is a real mention.
+Listing pages dropped to a few hundred characters each — enough to find them by
+name, not enough to outrank the profiles.
+
+---
+
+## 14. SPELL-CORRECTED SEARCH
+
+Three pages carried hidden keyword spans — offscreen text listing misspellings so
+Pagefind would match them. Mirt's read *Vocath Volkath Volcath Vokath Mert Murt*.
+It worked, but the hidden text was indexed as page content and surfaced in result
+excerpts, and every new name meant hand-maintaining another list.
+
+Removed from all three pages and replaced with real correction:
+
+- **`data/vocabulary.js`** — 73 proper nouns harvested from page titles, entry
+  names, and chips, plus a hand-added set of spoken-only names. Editable by hand.
+- **`scripts/spelling.js`** — Damerau-Levenshtein matching, so a transposition
+  costs one edit rather than two. Edit tolerance scales with word length.
+
+**Correction is a fallback, never a filter.** Both surfaces run the query exactly
+as typed; only when that returns nothing do they retry with a repaired spelling,
+and then say so: *Showing results for Sor'kur — nothing is filed under "Sorker."*
+A correct word is never silently rewritten.
+
+Covers everything the hidden spans did and considerably more:
+
+```
+Sorker → Sor'kur      Ostkek  → Ostekk-6     Vokath   → Vocath
+Hakatha → H'Catha     Saerthe → Saerth       Zerathes → Zerathis
+Grigory → Gregory     Jofrey  → Joffrey      Ryback   → Ryeback
+Bartholemew → Bartholomew     Beshabba → Beshaba
+```
+
+When you add a name, drop it in `data/vocabulary.js` and its misspellings work.
+Nothing goes on the page.
 
 ---
 
