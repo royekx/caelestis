@@ -31,6 +31,53 @@
   /* Dossier list */
   .dossier-list { display: flex; flex-direction: column; gap: 0.7rem; }
 
+  .dossier-group { margin-bottom: 2.6rem; }
+  .group-head {
+    display: flex; align-items: baseline; gap: 0.9rem;
+    border-bottom: 1px solid var(--gold-rule);
+    padding-bottom: 0.55rem; margin-bottom: 1rem;
+  }
+  .group-title {
+    font-family: 'Cinzel', serif; font-size: 0.86rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); white-space: nowrap;
+  }
+  .group-note {
+    font-size: 0.92rem; font-style: italic; color: var(--text-muted);
+    text-align: right; margin-left: auto;
+  }
+  .group-count {
+    font-family: 'Cinzel', serif; font-size: 0.68rem;
+    letter-spacing: 0.12em; color: var(--text-muted);
+  }
+  @media(max-width:640px){ .group-note { display: none; } }
+
+  .dossier-card.unknown::before { background: var(--text-muted); }
+  .dossier-card.unknown:hover { border-color: rgba(154,140,120,0.4); }
+  .status-unknown { color: var(--text-muted); border-color: var(--gold-rule); }
+
+  .unfiled {
+    border: 1px solid var(--gold-rule);
+    border-left: 3px solid var(--text-muted);
+    background: var(--bg-card);
+    padding: 1.1rem 1.3rem;
+  }
+  .unfiled-row {
+    display: grid; grid-template-columns: 130px 1fr;
+    gap: 1rem; padding: 0.45rem 0;
+    border-bottom: 1px solid var(--gold-rule);
+    font-size: 0.92rem; line-height: 1.5;
+  }
+  .unfiled-row:last-child { border-bottom: none; }
+  .unfiled-name {
+    font-family: 'Cinzel', serif; font-size: 0.78rem;
+    letter-spacing: 0.06em; color: var(--text-dim);
+  }
+  .unfiled-note { color: var(--text-muted); font-style: italic; }
+  @media(max-width:560px){
+    .unfiled-row { grid-template-columns: 1fr; gap: 0.15rem; }
+  }
+
   .dossier-card {
     background: var(--bg-card);
     border: 1px solid var(--gold-rule);
@@ -146,9 +193,20 @@
       Intelligence is updated as encounters occur and information becomes available. Treat all classifications as provisional — status can change. Approach unknown figures with appropriate caution.
     </div>
 
-    <div class="section-label">Filed Profiles</div>
-
-    <div class="dossier-list">
+    <div class="dossier-group">
+      <div class="group-head">
+        <span class="group-title">Caelestis — Command & Staff</span>
+        <span class="group-note">The academy itself. Everyone the crew answers to, learns from, or eats beside.</span>
+      </div>
+      <div class="dossier-list">
+      <a class="dossier-card neutral" href="mirt.html">
+        <div class="dossier-thumb"><img src="https://lh3.googleusercontent.com/d/1D9Hh3pn8e_QbMAF69ABg4bld6kMHj4qr" alt="Mirt the Merciless"></div>
+        <div class="dossier-info">
+          <div class="dossier-name">Mirt the Merciless</div>
+          <div class="dossier-sub">Human · Academy Head &amp; Founder</div>
+        </div>
+        <div class="dossier-status status-neutral">Neutral</div>
+      </a>
       <a class="dossier-card ally" href="boatswain-tarto.html">
         <div class="dossier-thumb"><img src="https://lh3.googleusercontent.com/d/13-w6epUMG5kO54FqZpJpelexFufDzu2W" alt="Boatswain Tarto"></div>
         <div class="dossier-info">
@@ -156,6 +214,14 @@
           <div class="dossier-sub">Hadozee · Spelljammer Corps Training Officer</div>
         </div>
         <div class="dossier-status status-ally">Ally</div>
+      </a>
+      <a class="dossier-card neutral" href="saerth-abyzine.html">
+        <div class="dossier-thumb"><img src="https://lh3.googleusercontent.com/d/1d7cDR1TYwEkaSuDVJC8bEOOJnoPT5S_D" alt="Saerth Abyzine"></div>
+        <div class="dossier-info">
+          <div class="dossier-name">Saerth Abyzine</div>
+          <div class="dossier-sub">Human · Spelljammer Nexus Instructor</div>
+        </div>
+        <div class="dossier-status status-neutral">Neutral</div>
       </a>
       <a class="dossier-card ally" href="kip-and-pik.html">
         <div class="dossier-thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="16" r="9"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
@@ -165,27 +231,11 @@
         </div>
         <div class="dossier-status status-ally">Ally</div>
       </a>
-      <a class="dossier-card neutral" href="mirt.html">
-        <div class="dossier-thumb"><img src="https://lh3.googleusercontent.com/d/1D9Hh3pn8e_QbMAF69ABg4bld6kMHj4qr" alt="Mirt the Merciless"></div>
-        <div class="dossier-info">
-          <div class="dossier-name">Mirt the Merciless</div>
-          <div class="dossier-sub">Human · Academy Head &amp; Founder</div>
-        </div>
-        <div class="dossier-status status-neutral">Neutral</div>
-      </a>
       <a class="dossier-card neutral" href="mr-blip.html">
         <div class="dossier-thumb"><img src="https://lh3.googleusercontent.com/d/1gcMlDsoM10pyQ62SC6MG1UcLgWnepLcX" alt="Mr. Blip"></div>
         <div class="dossier-info">
           <div class="dossier-name">Mr. Blip</div>
           <div class="dossier-sub">Autognome · Quartermaster</div>
-        </div>
-        <div class="dossier-status status-neutral">Neutral</div>
-      </a>
-      <a class="dossier-card neutral" href="saerth-abyzine.html">
-        <div class="dossier-thumb"><img src="https://lh3.googleusercontent.com/d/1d7cDR1TYwEkaSuDVJC8bEOOJnoPT5S_D" alt="Saerth Abyzine"></div>
-        <div class="dossier-info">
-          <div class="dossier-name">Saerth Abyzine</div>
-          <div class="dossier-sub">Human · Spelljammer Nexus Instructor</div>
         </div>
         <div class="dossier-status status-neutral">Neutral</div>
       </a>
@@ -197,6 +247,123 @@
         </div>
         <div class="dossier-status status-ally">Ally</div>
       </a>
+      <a class="dossier-card ally" href="winston-ryeback.html">
+        <div class="dossier-thumb"><img src="https://lh3.googleusercontent.com/d/1H3TaoPPU1F_Ocit_CLn1RCbdR2f-FnJl" alt="Winston Ryeback"></div>
+        <div class="dossier-info">
+          <div class="dossier-name">Petty Officer Winston Ryeback</div>
+          <div class="dossier-sub">Giff · Refectory · Galley Command</div>
+        </div>
+        <div class="dossier-status status-ally">Ally</div>
+      </a>
+      <a class="dossier-card neutral" href="rindle-gearloft.html">
+        <div class="dossier-thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="16" r="9"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
+        <div class="dossier-info">
+          <div class="dossier-name">Rindle Gearloft</div>
+          <div class="dossier-sub">Sea Dock · Cargo Foreman</div>
+        </div>
+        <div class="dossier-status status-neutral">Neutral</div>
+      </a>
+      <a class="dossier-card unknown" href="joffrey.html">
+        <div class="dossier-thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="16" r="9"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
+        <div class="dossier-info">
+          <div class="dossier-name">Joffrey</div>
+          <div class="dossier-sub">Sailor · Sky Dock</div>
+        </div>
+        <div class="dossier-status status-unknown">Under Review</div>
+      </a>
+      </div>
+    </div>
+    <div class="dossier-group">
+      <div class="group-head">
+        <span class="group-title">Cadet Corps</span>
+        <span class="group-note">Cadets outside the crew. Rivals in the morning, the same uniform by evening.</span>
+      </div>
+      <div class="dossier-list">
+      <a class="dossier-card ally" href="miken.html">
+        <div class="dossier-thumb"><img src="https://lh3.googleusercontent.com/d/1naBafRe55ibGcJ7vcQ1vxHCpg0rhaKpk" alt="Miken"></div>
+        <div class="dossier-info">
+          <div class="dossier-name">Miken</div>
+          <div class="dossier-sub">Cadet · Rival Crew</div>
+        </div>
+        <div class="dossier-status status-ally">Ally</div>
+      </a>
+      <a class="dossier-card neutral" href="vena.html">
+        <div class="dossier-thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="16" r="9"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
+        <div class="dossier-info">
+          <div class="dossier-name">Vena</div>
+          <div class="dossier-sub">Cadet · Rival Crew</div>
+        </div>
+        <div class="dossier-status status-neutral">Recovering</div>
+      </a>
+      </div>
+    </div>
+    <div class="dossier-group">
+      <div class="group-head">
+        <span class="group-title">The Tyrant Ship</span>
+        <span class="group-note">Aboard the stone vessel bound for H'Catha.</span>
+      </div>
+      <div class="dossier-list">
+      <a class="dossier-card ally" href="ostekk-6.html">
+        <div class="dossier-thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="16" r="9"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
+        <div class="dossier-info">
+          <div class="dossier-name">Ostekk-6</div>
+          <div class="dossier-sub">Autognome · Clerical Unit</div>
+        </div>
+        <div class="dossier-status status-ally">Ally</div>
+      </a>
+      </div>
+    </div>
+    <div class="dossier-group">
+      <div class="group-head">
+        <span class="group-title">Beyond the Academy</span>
+        <span class="group-note">Names the crew has been given, attached to no face and no location.</span>
+      </div>
+      <div class="dossier-list">
+      <a class="dossier-card threat" href="vocath.html">
+        <div class="dossier-thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="16" r="9"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
+        <div class="dossier-info">
+          <div class="dossier-name">Vocath</div>
+          <div class="dossier-sub">Unknown · Named on the Device</div>
+        </div>
+        <div class="dossier-status status-threat">Threat</div>
+      </a>
+      <a class="dossier-card unknown" href="zerathis.html">
+        <div class="dossier-thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="16" r="9"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
+        <div class="dossier-info">
+          <div class="dossier-name">Zerathis</div>
+          <div class="dossier-sub">Spellcaster · Unlocated</div>
+        </div>
+        <div class="dossier-status status-unknown">Unknown</div>
+      </a>
+      </div>
+    </div>
+    <div class="dossier-group">
+      <div class="group-head">
+        <span class="group-title">Named, Unfiled</span>
+        <span class="group-note">On record by name only. Not enough for a profile.</span>
+      </div>
+      <div class="unfiled">
+        <div class="unfiled-row">
+          <span class="unfiled-name">Jeffrey</span>
+          <span class="unfiled-note">Named by Mirt alongside Joffrey. Nothing else on record.</span>
+        </div>
+        <div class="unfiled-row">
+          <span class="unfiled-name">Barret</span>
+          <span class="unfiled-note">Cadet, Miken's squad. Ran his mouth at the counter about a hadozee who could read birthdays.</span>
+        </div>
+        <div class="unfiled-row">
+          <span class="unfiled-name">Derek</span>
+          <span class="unfiled-note">Cadet. Injured in the blast that ended the salvage simulation. Stable.</span>
+        </div>
+        <div class="unfiled-row">
+          <span class="unfiled-name">Crick Lit</span>
+          <span class="unfiled-note">Thri-kreen deckhand under Ryeback, aboard the tyrant ship.</span>
+        </div>
+        <div class="unfiled-row">
+          <span class="unfiled-name">Fred</span>
+          <span class="unfiled-note">Plasmoid deckhand under Ryeback. Wears a kerchief knotted at the throat like a necktie.</span>
+        </div>
+      </div>
     </div>
 
   </div>

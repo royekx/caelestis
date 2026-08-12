@@ -178,6 +178,68 @@ earlier session→voyage find-and-replace.
 
 ---
 
+## 9. CREW MANIFEST RECONCILED
+
+Every crew page ran through Voyage 001 only (Bartholomew through 003). All six now
+run through **Voyage 004**, drawn from the voyage records:
+
+- **Boogie** — the half ship on the table, the logbook into his chest, the leap
+  home, Vocath glimpsed on the device, the network dream
+- **Casey** — Ryeback, the Sea Dock job, the presence at the Sky Dock rail, the
+  duplicated logbooks, Arms of Hadar through his constellation
+- **Gregory** — the arcane dynamite, the locked terminal, the note about
+  Bartholomew, his own face on a broken autognome, Vortex Warp
+- **Sol** — Beshaba named, the unhurried voice, the front line, Misfortune's Favor
+- **Tumak** — the two half-marks, the archive clearance, the telepathic link,
+  fire bolt, the soul knife and the Rune Keeper
+- **Bartholomew** — the starry form he recognised from a childhood fall, the match
+  down the shaft
+
+Header prose updated for all six so the portrait matches the log. Sol's and
+Tumak's changed most — Sol has a name for the laughter now, and Tumak has a
+tether.
+
+**Bridge stations added** as a stat row: Tumak captain, Gregory navigator,
+Boogie medical, Casey and Sol both gunners, Bartholomew the spelljammer's seat.
+Stations are current assignment, not a fixed record — expect them to move.
+
+**Clearance** is a stat row on all six, reading Sailor. Mirt granted it to the
+whole party; Gregory's and Tumak's V003 entries say so explicitly, and the other
+four now carry the beat.
+
+**Tumak is human.** Species Human, role Rogue, on every surface. Checked the
+player-facing site for leaks — there are none.
+
+**Index fixed.** Tumak's row read "Human · Wilder" — Bartholomew's role on the
+wrong cadet. All six rows now carry species and station.
+
+Where the crew pages name the half ship, the derelict logbook, or the duplicates,
+they link to the inventory entries.
+
+---
+
+## 10. DOSSIERS
+
+Eight new profiles, and the index is grouped by where the crew met them.
+
+**Caelestis — Command & Staff** — Mirt, Tarto, Saerth, Kip & Pik, Mr. Blip,
+Sor'kur, plus **Winston Ryeback**, **Rindle Gearloft**, and **Joffrey**.
+**Cadet Corps** — **Miken**, **Vena**.
+**The Tyrant Ship** — **Ostekk-6**.
+**Beyond the Academy** — **Vocath**, **Zerathis**.
+
+**Named, Unfiled** closes the index: Jeffrey, Barret, Derek, Crick Lit, Fred.
+One line each, no page. They exist on record without being profiles — which is
+itself information, and better than a page of padding.
+
+Joffrey carries a new status, **Under Review**, with its own muted styling. He is
+neither ally nor threat; he is a man Mirt told the crew to look into carefully.
+
+Prev/next chains run the whole roster in index order. NPC chips on the voyage
+pages now link through to the profiles.
+
+---
+
 ## FILES CHANGED
 
 ```
