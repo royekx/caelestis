@@ -119,6 +119,27 @@ body::before {
 }
 .side-nav-logo:hover { color: var(--gold-light); }
 .side-nav-body { padding: 1.2rem 0; flex: 1; }
+/* Global search field at the top of the sidebar */
+.side-nav-search {
+  position: relative; display: flex; align-items: center;
+  margin: 0 1.4rem 1rem; padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gold-rule);
+}
+.side-nav-search svg {
+  position: absolute; left: 0.6rem; width: 14px; height: 14px;
+  stroke: var(--gold-dim); pointer-events: none;
+}
+.side-nav-search input {
+  width: 100%; background: var(--bg); border: 1px solid var(--gold-rule);
+  border-radius: var(--radius); color: var(--text);
+  font-family: 'Crimson Pro', serif; font-size: 0.9rem;
+  padding: 0.45rem 0.6rem 0.45rem 1.9rem; outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.side-nav-search input::placeholder { color: var(--text-muted); font-style: italic; }
+.side-nav-search input:focus {
+  border-color: var(--gold-dim); box-shadow: 0 0 0 1px var(--gold-faint);
+}
 .side-nav-link {
   font-family: 'Cinzel', serif; font-size: 0.78rem;
   letter-spacing: 0.05em; text-transform: uppercase;
