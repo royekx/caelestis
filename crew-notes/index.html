@@ -51,9 +51,25 @@
     opacity: 0.5; z-index: 2;
   }
   .note-frame {
-    display: block; width: 100%; height: 78vh; min-height: 560px;
+    display: block; width: 100%; height: 82vh; min-height: 560px;
     border: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
   }
+  .note-frame.ready { opacity: 1; }
+
+  /* Dark plate behind the frame: what you see during load instead of white. */
+  .note-frame-wrap { background: var(--bg); }
+  .frame-loading {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--text-muted);
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .frame-loading.hidden { opacity: 0; }
 
   /* ── Meta row ── */
   .note-meta {
@@ -81,6 +97,7 @@
     background: var(--gold-faint);
   }
   .btn-primary:hover { background: rgba(201,153,58,0.2); border-color: var(--gold); }
+  .btn.on { border-color: var(--gold-dim); color: var(--gold-light); background: var(--gold-faint); }
 
   .placeholder {
     padding: 3rem 1.5rem; text-align: center;
@@ -148,11 +165,13 @@
         Replace <code>PASTE_SHARED_ID</code> in this page with the Google Doc ID.
       </div>
       <iframe class="note-frame" id="noteFrame" title="Crew notes" style="display:none"></iframe>
+      <div class="frame-loading hidden" id="frameLoading">Loading</div>
     </div>
 
     <div class="note-meta" data-pagefind-ignore>
       <span id="noteLabel">Crew Log — shared</span>
       <span class="meta-actions">
+        <button class="btn" id="noteAuto" type="button" title="Re-check the document every 60 seconds">Auto</button>
         <button class="btn" id="noteRefresh" type="button">Refresh</button>
         <a class="btn btn-primary" id="noteOpen" href="#" target="_blank" rel="noopener">Open to edit &rarr;</a>
       </span>
@@ -167,13 +186,23 @@
 
   var tabs        = document.querySelectorAll('.note-tab');
   var frame       = document.getElementById('noteFrame');
+  var loading     = document.getElementById('frameLoading');
   var placeholder = document.getElementById('notePlaceholder');
   var label       = document.getElementById('noteLabel');
   var openLink    = document.getElementById('noteOpen');
   var refreshBtn  = document.getElementById('noteRefresh');
+  var autoBtn     = document.getElementById('noteAuto');
 
-  var BASE = 'https://docs.google.com/document/d/';
-  var current = null;
+  var BASE     = 'https://docs.google.com/document/d/';
+  var AUTO_MS  = 60000;   // poll interval when Auto is on
+  var STALE_MS = 20000;   // refresh on return to tab if away longer than this
+
+  var current  = null;
+  var lastLoad = 0;
+  var timer    = null;
+  var autoOn   = false;
+
+  try { autoOn = window.localStorage.getItem('caelestis-note-auto') === '1'; } catch (e) {}
 
   // Accepts a bare doc ID or any full Google Docs URL, returns the ID.
   function docId(raw) {
@@ -183,6 +212,35 @@
     return s.replace(/^https?:\/\/[^/]+\//i, '').split('/')[0].split('?')[0];
   }
 
+  function paint(id) {
+    frame.classList.remove('ready');
+    loading.classList.remove('hidden');
+    // Cache-buster: without it the browser reuses the stale copy.
+    frame.src = BASE + id + '/preview?t=' + Date.now();
+    lastLoad = Date.now();
+  }
+
+  frame.addEventListener('load', function () {
+    frame.classList.add('ready');
+    loading.classList.add('hidden');
+  });
+
+  function schedule() {
+    if (timer) { clearInterval(timer); timer = null; }
+    if (!autoOn) { return; }
+    timer = setInterval(function () {
+      if (current && !document.hidden) { paint(current); }
+    }, AUTO_MS);
+  }
+
+  function setAuto(on) {
+    autoOn = on;
+    autoBtn.classList.toggle('on', on);
+    autoBtn.textContent = on ? 'Auto · on' : 'Auto';
+    try { window.localStorage.setItem('caelestis-note-auto', on ? '1' : '0'); } catch (e) {}
+    schedule();
+  }
+
   function load(tab) {
     var raw  = tab.getAttribute('data-doc');
     var name = tab.textContent.trim();
@@ -190,35 +248,47 @@
 
     tabs.forEach(function (t) { t.classList.remove('active'); });
     tab.classList.add('active');
-    label.textContent = name + (isShared ? ' — shared' : ' — personal');
+    label.textContent = name + (isShared ? ' \u2014 shared' : ' \u2014 personal');
 
-    // Not yet wired up
     if (!raw || raw.indexOf('PASTE_') === 0) {
       current = null;
+      schedule();
       frame.style.display = 'none';
+      frame.classList.remove('ready');
       frame.removeAttribute('src');
+      loading.classList.add('hidden');
       placeholder.style.display = 'block';
       placeholder.innerHTML =
         'Document not yet linked.<br>Replace <code>' + raw +
         '</code> in this page with the Google Doc ID.';
       openLink.style.visibility = 'hidden';
       refreshBtn.style.visibility = 'hidden';
+      autoBtn.style.visibility = 'hidden';
       return;
     }
 
     current = docId(raw);
     placeholder.style.display = 'none';
     frame.style.display = 'block';
-    // Cache-buster so Refresh actually re-fetches rather than reusing the frame.
-    frame.src = BASE + current + '/preview?t=' + Date.now();
     openLink.href = BASE + current + '/edit';
     openLink.style.visibility = 'visible';
     refreshBtn.style.visibility = 'visible';
+    autoBtn.style.visibility = 'visible';
+    paint(current);
+    schedule();
   }
 
   refreshBtn.addEventListener('click', function () {
-    if (!current) { return; }
-    frame.src = BASE + current + '/preview?t=' + Date.now();
+    if (current) { paint(current); }
+  });
+
+  autoBtn.addEventListener('click', function () { setAuto(!autoOn); });
+
+  // Coming back to this tab is the moment you most want fresh content —
+  // and the moment nobody is mid-read, so nothing gets yanked.
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden || !current) { return; }
+    if (Date.now() - lastLoad > STALE_MS) { paint(current); }
   });
 
   tabs.forEach(function (tab) {
@@ -228,7 +298,6 @@
     });
   });
 
-  // Reopen on whichever tab this browser used last.
   var last = null;
   try { last = window.localStorage.getItem('caelestis-note-tab'); } catch (e) {}
 
@@ -238,6 +307,8 @@
       if (tab.textContent.trim() === last) { start = tab; }
     });
   }
+
+  setAuto(autoOn);
   load(start);
 })();
 </script>
