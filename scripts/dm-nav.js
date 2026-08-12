@@ -63,6 +63,7 @@
   // ── Icons ─────────────────────────────────────────────────────────────────
   var EXT_ICON = '<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2H2a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1V6M6 1h3v3M9 1L4.5 5.5"/></svg>';
   var MENU_ICON = '<svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/></svg>';
+  var SEARCH_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>';
 
   // ── Sections ──────────────────────────────────────────────────────────────
   // Internal links — pages inside /prime/.
@@ -121,6 +122,12 @@
 
   var signOutLink = '<a class="side-nav-ext-link side-nav-signout" href="#" id="js-dm-signout">Sign out</a>';
 
+  var searchField =
+    '<form class="side-nav-search" id="js-nav-search" role="search" autocomplete="off">' +
+    SEARCH_ICON +
+    '<input type="text" id="js-nav-search-input" placeholder="Search DM archive\u2026" aria-label="Search DM archive">' +
+    '</form>';
+
   var html = [
     '<button class="side-nav-toggle" id="js-nav-toggle" aria-label="Toggle navigation">',
     MENU_ICON,
@@ -131,6 +138,7 @@
     '    <a class="side-nav-logo" href="' + base + 'hub.html">Caelestis · DM</a>',
     '  </div>',
     '  <div class="side-nav-body">',
+    searchField,
     sectionLinks,
     '    <div class="side-nav-divider"></div>',
     externalLinks,
@@ -193,6 +201,17 @@
       e.preventDefault();
       try { sessionStorage.removeItem('caelestis_continuum_auth'); } catch (err) { /* ignore */ }
       window.location.replace(base + 'index.html');
+    });
+  }
+
+  // ── Global DM search field ────────────────────────────────────────────────
+  var searchForm  = document.getElementById('js-nav-search');
+  var searchInput = document.getElementById('js-nav-search-input');
+  if (searchForm && searchInput) {
+    searchForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var term = searchInput.value.trim();
+      window.location.href = base + 'search.html' + (term ? '?q=' + encodeURIComponent(term) : '');
     });
   }
 

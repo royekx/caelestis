@@ -51,7 +51,10 @@ async function loadPagefind() {
   if (pagefind) return pagefind;
   try {
     pagefind = await import('./pagefind/pagefind.js');
-    await pagefind.options({ excerptLength: 30 });
+    // DM index is scoped to /prime/. Result URLs are relative to the prime
+    // site root, which is this page's own directory.
+    const siteRoot = location.pathname.replace(/search\.html$/, '');
+    await pagefind.options({ excerptLength: 30, baseUrl: siteRoot });
     await pagefind.init();
   } catch (e) {
     document.getElementById('state').textContent = 'DM search index not yet available. It builds on deploy.';
@@ -80,7 +83,8 @@ async function run() {
   }).join('');
 }
 qEl.addEventListener('input', ()=>{clearTimeout(debounce);debounce=setTimeout(run,180);});
-</script>
+const dmParams = new URLSearchParams(location.search);
+if (dmParams.get('q')) { qEl.value = dmParams.get('q'); run(); }</script>
 
 </body>
 </html>

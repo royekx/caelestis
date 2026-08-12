@@ -29,6 +29,7 @@
   var EXT_ICON = '<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2H2a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1V6M6 1h3v3M9 1L4.5 5.5"/></svg>';
 
   var MENU_ICON = '<svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/></svg>';
+  var SEARCH_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>';
 
   // ── Sections ──────────────────────────────────────────────────────────────
   // To add, remove, or rename a section: edit this array only.
@@ -85,6 +86,14 @@
     return '<a class="side-nav-ext-link" href="' + l.href + '" target="_blank" rel="noopener">' + l.label + ' ' + EXT_ICON + '</a>';
   }).join('');
 
+  // Global S.E.A.R.C.H. field — submitting jumps to the full terminal with
+  // the query pre-run. Also acts as the nav's entry point to search.
+  var searchField =
+    '<form class="side-nav-search" id="js-nav-search" role="search" autocomplete="off">' +
+    SEARCH_ICON +
+    '<input type="text" id="js-nav-search-input" placeholder="Search records\u2026" aria-label="Search all records">' +
+    '</form>';
+
   var html = [
     '<button class="side-nav-toggle" id="js-nav-toggle" aria-label="Toggle navigation">',
     MENU_ICON,
@@ -95,6 +104,7 @@
     '    <a class="side-nav-logo" href="' + base + 'index.html">Caelestis</a>',
     '  </div>',
     '  <div class="side-nav-body">',
+    searchField,
     sectionLinks,
     '    <div class="side-nav-divider"></div>',
     externalLinks,
@@ -138,6 +148,23 @@
       link.addEventListener('click', function () {
         nav.classList.remove('open');
       });
+    });
+  }
+
+  // ── Global search field ───────────────────────────────────────────────────
+  // Submitting jumps to the full S.E.A.R.C.H. terminal with the query pre-run.
+
+  var searchForm  = document.getElementById('js-nav-search');
+  var searchInput = document.getElementById('js-nav-search-input');
+  if (searchForm && searchInput) {
+    searchForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var term = searchInput.value.trim();
+      if (term) {
+        window.location.href = base + 'search/index.html?q=' + encodeURIComponent(term);
+      } else {
+        window.location.href = base + 'search/index.html';
+      }
     });
   }
 
