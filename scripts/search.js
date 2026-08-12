@@ -99,12 +99,16 @@
     return m ? label + ' \u00b7 Voyage ' + m[1] : label;
   }
 
-  function render(resultsEl, data, term) {
+  function render(resultsEl, data, term, correctedFrom) {
     if (!data.length) {
       resultsEl.innerHTML = '<div class="search-state">No records in ' + label + ' for \u201c' + term + '\u201d.</div>';
       return;
     }
-    var html = data.map(function (d) {
+    var note = correctedFrom
+      ? '<div class="search-correction">Showing results for <b>' + term +
+        '</b> \u2014 nothing filed under \u201c' + correctedFrom + '\u201d.</div>'
+      : '';
+    var html = note + data.map(function (d) {
       var title = (d.meta && d.meta.title) ? d.meta.title : d.url;
       // d.url already carries the site root via Pagefind's baseUrl option.
       return '<a class="result" href="' + d.url + '">' +
@@ -134,7 +138,22 @@
       debounce = setTimeout(function () {
         loadPagefind().then(function (pf) {
           if (!pf) return;
-          pf.search(term, { filters: { section: section } }).then(function (search) {
+
+          // Run it as typed. Only if that finds nothing do we try a repaired
+          // spelling — a real word is never rewritten out from under someone.
+          function run(q, corrected) {
+            return pf.search(q, { filters: { section: section } }).then(function (search) {
+              if (!search.results.length && !corrected && window.CaelestisSpelling) {
+                var fix = window.CaelestisSpelling.correct(term);
+                if (fix.changed) return run(fix.term, fix.term);
+              }
+              return { search: search, corrected: corrected };
+            });
+          }
+
+          run(term, null).then(function (res) {
+            var search = res.search;
+            var shown = res.corrected || term;
             open();
             if (!search.results.length) {
               render(resultsEl, [], term);
@@ -143,7 +162,7 @@
             Promise.all(search.results.slice(0, 12).map(function (r) { return r.data(); }))
               .then(function (allData) {
                 // Drop results whose only match is a stopword.
-                var qTerms = term.toLowerCase().split(/\s+/).filter(Boolean);
+                var qTerms = shown.toLowerCase().split(/\s+/).filter(Boolean);
                 var meaningful = qTerms.filter(function (w) { return !STOPWORDS[w]; });
                 var data = allData.filter(function (d) {
                   if (!meaningful.length) return true;
@@ -154,7 +173,7 @@
                   return meaningful.some(function (w) { return plain.indexOf(w) !== -1; });
                 });
                 if (!data.length) { render(resultsEl, [], term); return; }
-                render(resultsEl, data.slice(0, 8), term);
+                render(resultsEl, data.slice(0, 8), shown, res.corrected ? term : null);
               });
           });
         });

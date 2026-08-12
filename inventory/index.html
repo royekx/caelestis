@@ -99,12 +99,14 @@
   @media(max-width:520px){ .item-grid{ grid-template-columns: 1fr; } }
 </style>
   <script src="../scripts/nav.js" defer></script>
+  <script src="../data/vocabulary.js" defer></script>
+  <script src="../scripts/spelling.js" defer></script>
   <script src="../scripts/search.js" defer></script>
 </head>
 <body data-pagefind-filter="section:inventory">
 <div class="page-content">
   <div class="page-header">
-    <div class="page-emblem">
+    <div class="page-emblem" data-pagefind-ignore>
     <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
       <line x1="0" y1="20" x2="42" y2="20" stroke-width="0.6" opacity="0.4"/>
       <polyline points="38,15 43,20 38,25" opacity="0.5"/>
@@ -138,14 +140,14 @@
 
     <div class="section-label">Logged Items</div>
 
-    <div class="filter-row">
+    <div class="filter-row" data-pagefind-ignore>
       <div class="filter-tag active">All</div>
       <div class="filter-tag">Magical</div>
       <div class="filter-tag">Clothing</div>
       <div class="filter-tag">Document</div>
       <div class="filter-tag">Anomalous</div>
     </div>
-    <div class="item-grid">
+    <div class="item-grid" data-pagefind-ignore>
       <a class="item-card" href="entries/crimson-bag-of-holding.html">
         <div class="item-type">Magical · Bag of Holding</div>
         <div class="item-name">Crimson Bag of Holding</div>
