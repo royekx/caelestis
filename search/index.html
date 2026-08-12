@@ -12,7 +12,7 @@
 <div class="terminal-wrap">
 
   <div class="terminal-head">
-    <div class="terminal-eyebrow">Caelestis · Standard Enquiry of Assets, Records &amp; Communiqués Hub</div>
+    <div class="terminal-eyebrow">Caelestis · Standard Enquiry of Assets, Records &amp; Communications Hub</div>
     <h1 class="terminal-title">S.E.A.R.C.H.</h1>
     <p class="terminal-sub">Every record the Fleet keeps, searchable. Names, places, voyages — if it's been logged, it can be found.</p>
   </div>
@@ -69,14 +69,15 @@ const SCOPE_LABELS = {
 
 // Human-readable section label from a result URL, for the right-hand path tag.
 function sectionFromUrl(url) {
-  const p = url.replace(/^\//, '').split('/');
   const map = {
     'crew-logs': 'Crew Logs', 'crew-manifest': 'Crew Manifest', 'dossiers': 'Dossiers',
     'navigation-records': 'Navigation Records', 'spelljammer-nexus': 'Spelljammer Nexus',
     'inventory': 'Inventory', 'handouts': 'Corps Protocols'
   };
-  let label = map[p[0]] || 'Records';
-  // Voyage sub-label
+  // Find whichever path segment is a known section — robust to any subpath prefix.
+  const segs = url.replace(/^\//, '').split('/');
+  let label = 'Records';
+  for (const s of segs) { if (map[s]) { label = map[s]; break; } }
   const m = url.match(/voyage-\w+-(\d+)/);
   if (m) label += ' · Voyage ' + m[1];
   return label;
@@ -86,8 +87,11 @@ let pagefind = null;
 async function loadPagefind() {
   if (pagefind) return pagefind;
   try {
-    pagefind = await import('/pagefind/pagefind.js');
-    await pagefind.options({ excerptLength: 30 });
+    pagefind = await import('../pagefind/pagefind.js');
+    // Site root is one level up from /search/. Derive it so result URLs
+    // carry the correct GitHub Pages subpath (e.g. /caelestis/).
+    const siteRoot = location.pathname.replace(/search\/(index\.html)?$/, '');
+    await pagefind.options({ excerptLength: 30, baseUrl: siteRoot });
     await pagefind.init();
   } catch (e) {
     document.getElementById('state').textContent =

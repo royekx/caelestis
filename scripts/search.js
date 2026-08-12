@@ -67,13 +67,19 @@
     }
   }
 
+  // Site root path for the current deployment (e.g. /caelestis/). Derived
+  // from this page's location so it works on any GitHub Pages subpath.
+  // Section index pages sit at <root>/<section>/index.html, so stripping the
+  // last path segment twice would overshoot — instead strip the section dir.
+  var SITE_ROOT = location.pathname.replace(new RegExp(section + '/(index\\.html)?$'), '');
+
   var pagefind = null;
   function loadPagefind() {
     if (pagefind) return Promise.resolve(pagefind);
     return import(ROOT + 'pagefind/pagefind.js')
       .then(function (pf) {
         pagefind = pf;
-        return pf.options({ excerptLength: 25 }).then(function () {
+        return pf.options({ excerptLength: 25, baseUrl: SITE_ROOT }).then(function () {
           return pf.init().then(function () { return pf; });
         });
       })
@@ -92,7 +98,8 @@
     }
     var html = data.map(function (d) {
       var title = (d.meta && d.meta.title) ? d.meta.title : d.url;
-      return '<a class="result" href="' + ROOT.replace(/\/$/, '') + d.url + '">' +
+      // d.url already carries the site root via Pagefind's baseUrl option.
+      return '<a class="result" href="' + d.url + '">' +
         '<div class="result-head"><div class="result-title">' + title + '</div>' +
         '<div class="result-path">' + sectionSubLabel(d.url) + '</div></div>' +
         '<div class="result-snippet">' + d.excerpt + '</div></a>';
