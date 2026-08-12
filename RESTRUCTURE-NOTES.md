@@ -107,6 +107,77 @@ and only `002` exists.
 
 ---
 
+## 6. LEGIBILITY PASS
+
+- Root size `107.5% → 112%`
+- Every declared `rem` font-size under `0.75rem` lifted ~20%, `0.75–0.95rem`
+  lifted ~10%; body copy and `clamp()` headings left alone. 65 files touched.
+- Sidebar widened `220px → 244px` so the larger nav labels don't wrap
+- Nav group labels: bigger, gold instead of gold-dim, less transparent
+- `--text-dim` and `--text-muted` both lightened — the size gain was being
+  cancelled out by low contrast on near-black. This is the change you'll feel
+  most on subtext.
+
+If any of it overshoots, `html { font-size }` in `styles/caelestis.css` is the
+one dial that moves everything at once.
+
+---
+
+## 7. PORTRAIT TREATMENT
+
+Added to `styles/caelestis.css`, scoped as `.portrait-frame:has(img)` — a gold
+top rule, a vignette that sinks the edges into the page, an inset gold hairline,
+and a slow scale on hover.
+
+The `:has(img)` scope does the work: detail pages use `.portrait-frame`, listing
+pages use `.crew-thumb` and `.dossier-thumb`, so index pages are untouched.
+Frames still showing "Portrait Pending" keep their plain look and pick the
+treatment up automatically the day you drop an image in. No per-page edits, now
+or later.
+
+---
+
+## 8. INVENTORY RESTRUCTURE
+
+```
+inventory/
+  index.html                       the ledger
+  entries/                         one record per item — the majority
+    crimson-bag-of-holding.html
+    constellation-shirt.html
+    half-ship.html                 NEW
+    derelict-logbook.html          NEW
+    collection-manifest.html       NEW — entry for the slate
+    entry-template.html            copy this for new items
+  items/                           the object itself, where one exists
+    collection-manifest.html       was inventory/tyrant-ship-manifest.html
+```
+
+**Entry vs item.** An entry is the ledger record — what it is, who holds it, what
+has happened to it. An item is the object the players can actually read. Most
+entries will never have one. Where they do, the entry carries an *"The Object
+Itself"* block linking through, the ledger card gets a **Readable** badge, and
+the artifact carries a quiet return link back to its entry.
+
+The tyrant ship manifest was only ever the artifact — it had no ledger record at
+all, so it was invisible to anyone browsing Inventory. It now has both.
+
+**Three entries added** from the voyage records: Half Ship (V001), Derelict
+Logbook (V002), Collection Manifest (V004). Drafted from the voyage text only —
+check them.
+
+**Items rows** on voyages 001–003 now list these, both on the voyage pages and in
+the index overview panels, so the ledger and the records agree.
+
+Links into the moved files were retargeted across `hub.html`, `voyages/index.html`,
+`voyage-001` and `voyage-004`. The Pagefind glob already reads `inventory/**`, so
+the subdirectories index without changes.
+
+Also fixed: the ledger subtitle read "the crew's posvoyage" — collateral from an
+earlier session→voyage find-and-replace.
+
+---
+
 ## FILES CHANGED
 
 ```

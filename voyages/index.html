@@ -48,7 +48,7 @@
     align-items: center; gap: 0.15rem;
   }
   .log-num-label {
-    font-size: 0.52rem; letter-spacing: 0.15em;
+    font-size: 0.62rem; letter-spacing: 0.15em;
     text-transform: uppercase; color: var(--gold-dim);
   }
   .log-num-val {
@@ -59,11 +59,11 @@
   .log-row-link:hover .log-num-val { color: var(--gold-light); }
 
   .log-title {
-    font-family: 'Cinzel', serif; font-size: 0.9rem;
+    font-family: 'Cinzel', serif; font-size: 0.99rem;
     font-weight: 700; color: var(--text); letter-spacing: 0.02em;
   }
   .log-open {
-    font-family: 'Cinzel', serif; font-size: 0.55rem;
+    font-family: 'Cinzel', serif; font-size: 0.66rem;
     letter-spacing: 0.14em; text-transform: uppercase;
     color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem;
     white-space: nowrap; transition: color 0.2s;
@@ -75,7 +75,7 @@
     flex-shrink: 0;
     background: none; border: none; border-left: 1px solid var(--gold-rule);
     padding: 0 1.1rem; cursor: pointer;
-    font-family: 'Cinzel', serif; font-size: 0.55rem;
+    font-family: 'Cinzel', serif; font-size: 0.66rem;
     letter-spacing: 0.14em; text-transform: uppercase;
     color: var(--gold-dim);
     display: flex; align-items: center; gap: 0.5rem;
@@ -95,20 +95,20 @@
   .log-overview[hidden] { display: none; }
 
   .glance-synopsis {
-    font-size: 0.92rem; line-height: 1.7; color: var(--text);
+    font-size: 1.01rem; line-height: 1.7; color: var(--text);
     font-style: italic; padding-bottom: 0.9rem;
     border-bottom: 1px solid var(--gold-rule);
   }
   .glance-row { display: grid; grid-template-columns: 90px 1fr; gap: 0.8rem; align-items: flex-start; }
   .glance-label {
-    font-family: 'Cinzel', serif; font-size: 0.57rem;
+    font-family: 'Cinzel', serif; font-size: 0.68rem;
     letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--gold-dim); padding-top: 0.25rem;
   }
   .glance-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
   .chip {
     font-family: 'Crimson Pro', serif;
-    font-size: 0.82rem; padding: 0.15rem 0.6rem;
+    font-size: 0.90rem; padding: 0.15rem 0.6rem;
     border: 1px solid var(--gold-rule);
     color: var(--text); background: rgba(201,153,58,0.05);
     text-decoration: none; white-space: nowrap;
@@ -126,7 +126,7 @@
     padding-top: 0.4rem; border-top: 1px solid var(--gold-rule);
   }
   .overview-link {
-    font-family: 'Cinzel', serif; font-size: 0.57rem;
+    font-family: 'Cinzel', serif; font-size: 0.68rem;
     letter-spacing: 0.13em; text-transform: uppercase;
     color: var(--gold-dim); text-decoration: none;
     border: 1px solid var(--gold-rule); padding: 0.32rem 0.9rem;
@@ -138,7 +138,7 @@
 
   .intro-note {
     background: var(--gold-faint); border-left: 3px solid var(--gold-dim);
-    padding: 0.7rem 1rem; font-size: 0.88rem; line-height: 1.55;
+    padding: 0.7rem 1rem; font-size: 0.97rem; line-height: 1.55;
     color: var(--text-dim); margin-bottom: 2rem; font-style: italic;
   }
 
@@ -248,8 +248,9 @@
         <div class="glance-row">
           <span class="glance-label">Items</span>
           <div class="glance-chips">
-            <a class="chip chip-item" href="../inventory/crimson-bag-of-holding.html">Crimson Bag of Holding</a>
-            <a class="chip chip-item" href="../inventory/constellation-shirt.html">Constellation Shirt</a>
+            <a class="chip chip-item" href="../inventory/entries/crimson-bag-of-holding.html">Crimson Bag of Holding</a>
+            <a class="chip chip-item" href="../inventory/entries/constellation-shirt.html">Constellation Shirt</a>
+            <a class="chip chip-item" href="../inventory/entries/half-ship.html">Half Ship</a>
           </div>
         </div>
           <div class="overview-foot">
@@ -302,6 +303,13 @@
             <span class="chip chip-place">Sea Dock</span>
             <span class="chip chip-place">Sky Dock</span>
             <span class="chip chip-place">Simulation Deck</span>
+          </div>
+        </div>
+                  <div class="glance-row">
+          <span class="glance-label">Items</span>
+          <div class="glance-chips">
+            <a class="chip chip-item" href="../inventory/entries/derelict-logbook.html">Derelict Logbook</a>
+            <a class="chip chip-item" href="../inventory/entries/half-ship.html">Half Ship</a>
           </div>
         </div>
           <div class="overview-foot">
@@ -357,6 +365,13 @@
             <span class="chip chip-place">Tyrant Ship</span>
           </div>
         </div>
+                  <div class="glance-row">
+          <span class="glance-label">Items</span>
+          <div class="glance-chips">
+            <a class="chip chip-item" href="../inventory/entries/half-ship.html">Half Ship</a>
+            <a class="chip chip-item" href="../inventory/entries/derelict-logbook.html">Derelict Logbook</a>
+          </div>
+        </div>
           <div class="overview-foot">
             <a class="overview-link" href="voyage-003.html">Open Full Record <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg></a>
           </div>
@@ -409,7 +424,7 @@
         <div class="glance-row">
           <span class="glance-label">Items</span>
           <div class="glance-chips">
-            <a class="chip chip-item" href="../inventory/tyrant-ship-manifest.html">Tyrant Ship Manifest</a>
+            <a class="chip chip-item" href="../inventory/entries/collection-manifest.html">Collection Manifest</a>
           </div>
         </div>
           <div class="overview-foot">

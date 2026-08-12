@@ -148,6 +148,19 @@
     .slate::after{display:none;}
     tr.stained td{background:none;}
   }
+
+  .return-strip{
+    max-width:var(--slate-max,880px); margin:1.5rem auto 3rem;
+    display:flex; justify-content:center;
+  }
+  .return-strip a{
+    font-family:'IBM Plex Sans Condensed',sans-serif;
+    font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase;
+    color:#8d9a8f; text-decoration:none;
+    border:1px solid rgba(141,154,143,0.35); padding:0.5rem 1.2rem;
+    transition:color .2s,border-color .2s;
+  }
+  .return-strip a:hover{ color:#cbd6cb; border-color:rgba(203,214,203,0.5); }
 </style>
 </head>
 <body data-pagefind-filter="section:inventory">
@@ -289,6 +302,10 @@
     <span class="hand">Course amended. We are going to Toril.</span>
   </div>
 
+</div>
+
+<div class="return-strip">
+  <a href="../entries/collection-manifest.html">&larr; Inventory Entry</a>
 </div>
 </body>
 </html>

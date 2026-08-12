@@ -20,10 +20,10 @@
   }
   .video-placeholder svg { width: 48px; color: var(--gold-dim); opacity: 0.4; }
   .video-placeholder p {
-    font-family: 'Cinzel', serif; font-size: 0.65rem;
+    font-family: 'Cinzel', serif; font-size: 0.78rem;
     letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted);
   }
-  .video-link { margin-top: 0.5rem; font-size: 0.82rem; font-style: italic; color: var(--text-muted); }
+  .video-link { margin-top: 0.5rem; font-size: 0.90rem; font-style: italic; color: var(--text-muted); }
   .video-link a { color: var(--gold-dim); text-decoration: none; }
   .video-link a:hover { color: var(--gold); }
 
@@ -33,13 +33,13 @@
     margin-bottom: 1.6rem; flex-wrap: wrap;
   }
   .log-badge {
-    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    font-family: 'Cinzel', serif; font-size: 0.72rem;
     letter-spacing: 0.15em; text-transform: uppercase;
     background: var(--gold-faint); border: 1px solid var(--gold-rule);
     color: var(--gold-dim); padding: 0.25rem 0.6rem;
   }
   .log-type-badge {
-    font-family: 'Cinzel', serif; font-size: 0.58rem;
+    font-family: 'Cinzel', serif; font-size: 0.70rem;
     letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--text-muted); border: 1px solid var(--gold-rule);
     padding: 0.25rem 0.6rem;
@@ -55,20 +55,20 @@
     display: flex; flex-direction: column; gap: 1rem;
   }
   .glance-synopsis {
-    font-size: 0.95rem; line-height: 1.72; color: var(--text);
+    font-size: 1.04rem; line-height: 1.72; color: var(--text);
     font-style: italic; padding-bottom: 1rem;
     border-bottom: 1px solid var(--gold-rule);
   }
   .glance-row { display: grid; grid-template-columns: 90px 1fr; gap: 0.8rem; align-items: flex-start; }
   .glance-label {
-    font-family: 'Cinzel', serif; font-size: 0.57rem;
+    font-family: 'Cinzel', serif; font-size: 0.68rem;
     letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--gold-dim); padding-top: 0.25rem;
   }
   .glance-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
   .chip {
     font-family: 'Crimson Pro', serif;
-    font-size: 0.82rem; padding: 0.15rem 0.6rem;
+    font-size: 0.90rem; padding: 0.15rem 0.6rem;
     border: 1px solid var(--gold-rule);
     color: var(--text); background: rgba(201,153,58,0.05);
     text-decoration: none; white-space: nowrap;
@@ -101,11 +101,11 @@
   }
   .account[open] > summary .account-caret { transform: rotate(90deg); }
   .account-name {
-    font-family: 'Cinzel', serif; font-size: 0.72rem;
+    font-family: 'Cinzel', serif; font-size: 0.86rem;
     letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold);
   }
   .account-note {
-    font-size: 0.85rem; font-style: italic; color: var(--text-muted);
+    font-size: 0.94rem; font-style: italic; color: var(--text-muted);
     margin-left: auto; text-align: right;
   }
   .account-body { padding: 0.4rem 1.5rem 1.8rem; border-top: 1px solid var(--gold-rule); }
@@ -115,7 +115,7 @@
   .brief-section { margin-bottom: 1.8rem; }
   .brief-section:last-child { margin-bottom: 0; }
   .brief-heading {
-    font-family: 'Cinzel', serif; font-size: 0.68rem;
+    font-family: 'Cinzel', serif; font-size: 0.82rem;
     letter-spacing: 0.18em; text-transform: uppercase;
     color: var(--gold); margin-bottom: 0.7rem;
     display: flex; align-items: center; gap: 0.6rem;
@@ -123,7 +123,7 @@
   .brief-heading::after { content: ''; flex: 1; height: 1px; background: var(--gold-rule); }
   .brief-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.45rem; }
   .brief-list li {
-    font-size: 0.92rem; line-height: 1.55; color: var(--text);
+    font-size: 1.01rem; line-height: 1.55; color: var(--text);
     padding-left: 1.1rem; position: relative;
   }
   .brief-list li::before { content: '\203A'; position: absolute; left: 0; color: var(--gold-dim); }
@@ -144,7 +144,7 @@
   .chapter-break { display: flex; align-items: center; gap: 1rem; margin: 2.2rem 0 1.8rem; }
   .chapter-break::before, .chapter-break::after { content: ''; flex: 1; height: 1px; background: var(--gold-rule); }
   .chapter-break-text {
-    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    font-family: 'Cinzel', serif; font-size: 0.72rem;
     letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--gold-dim); white-space: nowrap; flex-shrink: 0;
   }
@@ -229,7 +229,15 @@
           <span class="chip chip-place">Simulation Deck</span>
         </div>
       </div>
-    </div>
+    
+      <div class="glance-row">
+        <span class="glance-label">Items</span>
+        <div class="glance-chips">
+        <a class="chip chip-item" href="../inventory/entries/derelict-logbook.html">Derelict Logbook</a>
+        <a class="chip chip-item" href="../inventory/entries/half-ship.html">Half Ship</a>
+        </div>
+      </div>
+      </div>
 
     <!-- RECORDING -->
     <div class="video-block">

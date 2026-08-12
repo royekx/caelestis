@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelestis — Entry Template</title>
+<link rel="stylesheet" href="../../styles/caelestis.css">
+<style>
+  .entry-header {
+    display: grid; grid-template-columns: 160px 1fr;
+    gap: 2rem; margin-bottom: 2.5rem; align-items: start;
+  }
+  .portrait-frame {
+    width: 100%; aspect-ratio: 1;
+    border: 1px solid var(--gold-rule); background: var(--bg-card);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-muted);
+  }
+  .portrait-frame svg { width: 44px; opacity: 0.2; }
+  .portrait-label {
+    font-family: 'Cinzel', serif; font-size: 0.66rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--text-muted); text-align: center; margin-top: 0.5rem;
+  }
+  .stat-list { display: flex; flex-direction: column; gap: 0; margin-top: 0.8rem; }
+  .stat-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 0.28rem 0; border-bottom: 1px solid var(--gold-rule); font-size: 0.90rem;
+  }
+  .stat-row:last-child { border-bottom: none; }
+  .stat-key {
+    font-family: 'Cinzel', serif; font-size: 0.65rem;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
+  }
+  .stat-val { color: var(--text); text-align: right; font-style: italic; }
+  .classification {
+    display: inline-block; font-family: 'Cinzel', serif; font-size: 0.66rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 0.22rem 0.65rem; border: 1px solid; margin-bottom: 0.5rem;
+  }
+  .class-ally    { color: #5a8ab8; border-color: rgba(30,74,122,0.45); }
+  .class-neutral { color: var(--gold-dim); border-color: var(--gold-rule); }
+  .class-threat  { color: #c05050; border-color: rgba(139,32,32,0.45); }
+  .class-unknown { color: var(--text-muted); border-color: var(--gold-rule); }
+  .class-cadet   { color: #c05050; border-color: rgba(139,32,32,0.35); }
+  .class-item    { color: var(--gold-dim); border-color: var(--gold-rule); }
+  .class-sphere  { color: #5a8ab8; border-color: rgba(30,74,122,0.45); }
+  .class-system  { color: #9a6ad0; border-color: rgba(90,45,130,0.45); }
+  .entry-info { display: flex; flex-direction: column; gap: 0.35rem; }
+  .entry-name {
+    font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700;
+    color: var(--text); letter-spacing: 0.03em; line-height: 1.1;
+  }
+  .entry-sub { font-size: 0.99rem; font-style: italic; color: var(--text-dim); }
+  .entry-body { font-size: 1.02rem; line-height: 1.78; color: var(--text); }
+  .entry-body p { margin-bottom: 0.85rem; }
+  .entry-body p:last-child { margin-bottom: 0; }
+  .log-list { display: flex; flex-direction: column; gap: 0.4rem; }
+  .log-item {
+    font-size: 0.99rem; line-height: 1.5; padding-left: 1rem;
+    position: relative; color: var(--text);
+  }
+  .log-item::before { content: '›'; position: absolute; left: 0; color: var(--gold-dim); }
+  .log-item b { font-weight: 600; }
+  .log-item em { color: var(--text-dim); font-style: italic; }
+  .status-row {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: 'Cinzel', serif; font-size: 0.72rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold-dim); border: 1px solid var(--gold-rule);
+    padding: 0.25rem 0.7rem; margin-top: 0.3rem;
+  }
+  .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-dim); }
+  @media(max-width:560px){
+    .entry-header { grid-template-columns: 1fr; }
+  }
+
+  .artifact-link {
+    border: 1px solid var(--gold-rule);
+    border-left: 3px solid var(--gold);
+    background: var(--bg-card);
+    padding: 1.2rem 1.4rem;
+    margin: 2rem 0 0.5rem;
+  }
+  .artifact-label {
+    font-family: 'Cinzel', serif; font-size: 0.7rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.6rem;
+  }
+  .artifact-link p { font-size: 0.99rem; line-height: 1.7; color: var(--text-dim); margin-bottom: 1rem; }
+  .artifact-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: 'Cinzel', serif; font-size: 0.68rem;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold-light); text-decoration: none;
+    border: 1px solid var(--gold-dim); background: var(--gold-faint);
+    padding: 0.45rem 1.1rem;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .artifact-btn:hover { background: rgba(201,153,58,0.2); border-color: var(--gold); }
+  .artifact-btn svg { width: 11px; }
+</style>
+  <script src="../../scripts/nav.js" defer></script>
+</head>
+<body data-pagefind-filter="section:inventory" data-pagefind-ignore>
+<div class="page-content">
+  <div class="page-header">
+    <div class="page-eyebrow">Inventory</div>
+    <div class="page-title" data-pagefind-meta="title">Half Ship</div>
+  </div>
+  <div class="content">
+
+    <!-- ═══════════════════════════════════════════════════════
+         INVENTORY ENTRY TEMPLATE
+         Copy to entries/<slug>.html and fill in.
+
+         An ENTRY is the ledger record: what it is, who holds it,
+         when it was picked up, what has happened to it since.
+
+         An ITEM is the object itself — a readable handout, a
+         document, an artifact the players can look at directly.
+         Items live in items/<slug>.html and are OPTIONAL. Most
+         entries never get one.
+
+         When an entry has an item, add the .artifact-link block
+         below and give the ledger card in ../index.html the
+         <span class="item-artifact">Readable</span> badge.
+
+         Classifications: class-item (default), class-ally,
+         class-neutral, class-threat, class-unknown.
+         ═══════════════════════════════════════════════════════ -->
+
+    <div class="voyage-nav-bar">
+      <a class="voyage-nav-link" href="PREVIOUS-SLUG.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Previous Entry</a>
+      <a class="voyage-nav-center" href="../index.html">Inventory</a>
+      <span class="voyage-nav-link disabled">Next <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></span>
+    </div>
+
+    <div class="entry-header">
+      <div>
+        <div class="portrait-frame"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="10" y="10" width="28" height="28" rx="2"/></svg></div>
+        <div class="portrait-label">Portrait Pending</div>
+        <div class="stat-list">
+          <div class="stat-row"><span class="stat-key">Type</span><span class="stat-val">—</span></div>
+          <div class="stat-row"><span class="stat-key">Origin</span><span class="stat-val">—</span></div>
+          <div class="stat-row"><span class="stat-key">Holder</span><span class="stat-val">—</span></div>
+          <div class="stat-row"><span class="stat-key">Logged</span><span class="stat-val">—</span></div>
+        </div>
+      </div>
+      <div class="entry-info">
+        <div class="classification class-item">Category — Status</div>
+        <div class="entry-name">Item Name</div>
+        <div class="entry-sub">Type · Status</div>
+        <div class="entry-body" style="margin-top:0.8rem;">
+          <p>What it is, physically. What someone holding it would notice.</p>
+          <p>Where it came from and how the crew ended up with it.</p>
+          <p>What remains unresolved about it.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPTIONAL — only when the object itself can be read or examined
+    <div class="artifact-link">
+      <div class="artifact-label">The Object Itself</div>
+      <p>One line on what reading it gets you.</p>
+      <a class="artifact-btn" href="../items/SLUG.html">Read It <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a>
+    </div>
+    -->
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <div class="section-block">
+      <div class="section-label">Voyage 00N</div>
+      <div class="log-list">
+        <div class="log-item">What happened to it this voyage.</div>
+        <div class="log-item">Use <b>bold</b> for names.</div>
+        <div class="log-item"><em>Italics for the note underneath the note.</em></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

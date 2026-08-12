@@ -23,8 +23,8 @@
 
   /* Text */
   --text:        #e8dcc8;
-  --text-dim:    #9a8c78;
-  --text-muted:  #5a4e3c;
+  --text-dim:    #ab9d87;
+  --text-muted:  #7a6b53;
 
   /* Rank colours */
   --cadet:       #8b2020;
@@ -38,7 +38,7 @@
 
 /* ── RESET ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 107.5%; }
+html { scroll-behavior: smooth; font-size: 112%; }
 
 /* ── BASE ── */
 body {
@@ -101,7 +101,7 @@ body::before {
 /* ── SIDE NAV ── */
 .side-nav {
   position: fixed; left: 0; top: 0; bottom: 0;
-  width: 220px;
+  width: 244px;
   background: rgba(6,4,14,0.99);
   border-right: 1px solid var(--gold-rule);
   display: flex; flex-direction: column;
@@ -132,7 +132,7 @@ body::before {
 .side-nav-search input {
   width: 100%; background: var(--bg); border: 1px solid var(--gold-rule);
   border-radius: var(--radius); color: var(--text);
-  font-family: 'Crimson Pro', serif; font-size: 0.9rem;
+  font-family: 'Crimson Pro', serif; font-size: 0.99rem;
   padding: 0.45rem 0.6rem 0.45rem 1.9rem; outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
@@ -141,7 +141,7 @@ body::before {
   border-color: var(--gold-dim); box-shadow: 0 0 0 1px var(--gold-faint);
 }
 .side-nav-link {
-  font-family: 'Cinzel', serif; font-size: 0.78rem;
+  font-family: 'Cinzel', serif; font-size: 0.86rem;
   letter-spacing: 0.05em; text-transform: uppercase;
   color: var(--text-dim); text-decoration: none;
   padding: 0.6rem 1.4rem;
@@ -161,7 +161,7 @@ body::before {
   margin: 1rem 1.4rem;
 }
 .side-nav-ext-link {
-  font-family: 'Cinzel', serif; font-size: 0.7rem;
+  font-family: 'Cinzel', serif; font-size: 0.84rem;
   letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--text-muted); text-decoration: none;
   padding: 0.5rem 1.4rem;
@@ -172,7 +172,7 @@ body::before {
 .side-nav-ext-link svg { width: 9px; opacity: 0.6; flex-shrink: 0; }
 
 /* Offset content when sidebar present */
-body.with-sidebar { padding-left: 220px; }
+body.with-sidebar { padding-left: 244px; }
 
 /* Content fills available space — sidebar is the left boundary, padding provides breathing room */
 body.with-sidebar .page-content {
@@ -204,7 +204,7 @@ body.with-sidebar .page-header {
 }
 .side-nav-toggle svg { width: 16px; }
 .side-nav-toggle-label {
-  font-family: 'Cinzel', serif; font-size: 0.8rem;
+  font-family: 'Cinzel', serif; font-size: 0.88rem;
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--gold);
 }
@@ -227,7 +227,7 @@ body.with-sidebar .page-header {
   gap: 0.8rem;
 }
 .nav-prev, .nav-next {
-  font-family: 'Cinzel', serif; font-size: 0.6rem;
+  font-family: 'Cinzel', serif; font-size: 0.72rem;
   letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--gold-dim); text-decoration: none;
   transition: color 0.2s; white-space: nowrap; flex-shrink: 0;
@@ -237,7 +237,7 @@ body.with-sidebar .page-header {
   color: var(--text-muted); pointer-events: none; opacity: 0.4;
 }
 .nav-center {
-  font-family: 'Cinzel', serif; font-size: 0.58rem;
+  font-family: 'Cinzel', serif; font-size: 0.70rem;
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--gold-dim); text-decoration: none;
   border: 1px solid var(--gold-rule);
@@ -260,7 +260,7 @@ body.with-sidebar .page-header {
 }
 .voyage-nav-bar + .log-meta { margin-top: 0; }
 .voyage-nav-link {
-  font-family: 'Cinzel', serif; font-size: 0.6rem;
+  font-family: 'Cinzel', serif; font-size: 0.72rem;
   letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--gold-dim); text-decoration: none;
   display: flex; align-items: center; gap: 0.4rem;
@@ -270,7 +270,7 @@ body.with-sidebar .page-header {
 .voyage-nav-link.disabled { color: var(--text-muted); pointer-events: none; opacity: 0.4; }
 .voyage-nav-link svg { width: 12px; }
 .voyage-nav-center {
-  font-family: 'Cinzel', serif; font-size: 0.58rem;
+  font-family: 'Cinzel', serif; font-size: 0.70rem;
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--gold-dim); text-decoration: none;
   border: 1px solid var(--gold-rule);
@@ -304,7 +304,7 @@ body.with-sidebar .page-header {
 }
 .page-eyebrow {
   font-family: 'Cinzel', serif;
-  font-size: 0.65rem;
+  font-size: 0.78rem;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--gold);
@@ -335,7 +335,7 @@ body.with-sidebar .page-header {
 /* ── SECTION LABEL ── */
 .section-label {
   font-family: 'Cinzel', serif;
-  font-size: 0.65rem;
+  font-size: 0.78rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--gold);
@@ -353,13 +353,13 @@ body.with-sidebar .page-header {
   border: 1px solid var(--gold-rule);
   border-left: 3px solid var(--gold);
   padding: 0.85rem 1.1rem;
-  font-size: 0.9rem;
+  font-size: 0.99rem;
   line-height: 1.55;
   margin-top: 0.9rem;
 }
 .callout-label {
   font-family: 'Cinzel', serif;
-  font-size: 0.6rem;
+  font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold);
@@ -370,7 +370,7 @@ body.with-sidebar .page-header {
 /* ── ENTRY LIST ── */
 .entry-list { display: flex; flex-direction: column; gap: 0.6rem; }
 .entry {
-  font-size: 0.92rem;
+  font-size: 1.01rem;
   line-height: 1.5;
   padding-left: 0.9rem;
   border-left: 2px solid var(--gold-rule);
@@ -383,7 +383,7 @@ body.with-sidebar .page-header {
 .divider {
   text-align: center;
   color: var(--gold-dim);
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   letter-spacing: 0.4em;
   margin: 0.3rem 0 2rem;
 }
@@ -406,7 +406,7 @@ body.with-sidebar .page-header {
 .terminal-wrap { max-width: 780px; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
 .terminal-head { text-align: center; margin-bottom: 2.5rem; }
 .terminal-eyebrow {
-  font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.35em;
+  font-family: 'Cinzel', serif; font-size: 0.74rem; letter-spacing: 0.35em;
   text-transform: uppercase; color: var(--gold-dim); margin-bottom: 1rem;
 }
 .terminal-title {
@@ -429,7 +429,7 @@ body.with-sidebar .page-header {
   border-radius: var(--radius); pointer-events: none;
 }
 .search-console-label {
-  font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.28em;
+  font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.28em;
   text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem;
 }
 .search-row { display: flex; gap: 0.6rem; align-items: stretch; }
@@ -451,15 +451,15 @@ body.with-sidebar .page-header {
 .scope-select select {
   appearance: none; -webkit-appearance: none; background: var(--bg-raised);
   border: 1px solid var(--gold-rule); border-radius: var(--radius); color: var(--gold-light);
-  font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.06em;
+  font-family: 'Cinzel', serif; font-size: 0.86rem; letter-spacing: 0.06em;
   padding: 0.7rem 2rem 0.7rem 0.9rem; cursor: pointer; outline: none; height: 100%;
 }
 .scope-select select:focus { border-color: var(--gold-dim); }
 .scope-select::after {
   content: '▾'; position: absolute; right: 0.8rem; top: 50%; transform: translateY(-50%);
-  color: var(--gold-dim); pointer-events: none; font-size: 0.7rem;
+  color: var(--gold-dim); pointer-events: none; font-size: 0.84rem;
 }
-.scope-hint { margin-top: 0.75rem; font-size: 0.8rem; color: var(--text-muted); font-style: italic; }
+.scope-hint { margin-top: 0.75rem; font-size: 0.88rem; color: var(--text-muted); font-style: italic; }
 .scope-hint b { color: var(--gold-dim); font-style: normal; font-weight: 600; }
 
 /* ── Results ── */
@@ -468,11 +468,11 @@ body.with-sidebar .page-header {
   display: flex; justify-content: space-between; align-items: baseline;
 }
 .results-count {
-  font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.12em;
+  font-family: 'Cinzel', serif; font-size: 0.86rem; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--gold-dim);
 }
 .results-term { color: var(--gold-light); }
-.results-scope { font-size: 0.78rem; color: var(--text-muted); font-style: italic; }
+.results-scope { font-size: 0.86rem; color: var(--text-muted); font-style: italic; }
 
 .result {
   display: block; text-decoration: none; padding: 1.1rem 1.2rem; margin-bottom: 0.7rem;
@@ -491,18 +491,18 @@ body.with-sidebar .page-header {
 }
 .result:hover .result-title { color: var(--gold-light); }
 .result-path {
-  font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.14em;
+  font-family: 'Cinzel', serif; font-size: 0.70rem; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--text-muted); white-space: nowrap;
 }
-.result-snippet { font-size: 0.92rem; color: var(--text-dim); line-height: 1.55; }
+.result-snippet { font-size: 1.01rem; color: var(--text-dim); line-height: 1.55; }
 .result-snippet mark { background: var(--gold-faint); color: var(--gold-light); padding: 0 2px; border-radius: 1px; }
 
 .search-state {
   text-align: center; padding: 2.5rem 1rem; color: var(--text-muted);
-  font-style: italic; font-size: 0.95rem;
+  font-style: italic; font-size: 1.04rem;
 }
 .search-footnote {
-  margin-top: 2.5rem; text-align: center; font-size: 0.78rem;
+  margin-top: 2.5rem; text-align: center; font-size: 0.86rem;
   color: var(--text-muted); font-style: italic; line-height: 1.7;
 }
 
@@ -546,19 +546,19 @@ body.with-sidebar .page-header {
 /* ── SIDE NAV: GROUP LABELS + HUB LINK ── */
 .side-nav-group-label {
   font-family: 'Cinzel', serif;
-  font-size: 0.52rem;
+  font-size: 0.74rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold-dim);
-  opacity: 0.75;
-  padding: 1.1rem 1.4rem 0.4rem;
+  color: var(--gold);
+  opacity: 0.9;
+  padding: 1.2rem 1.4rem 0.45rem;
 }
 .side-nav-body > .side-nav-group-label:first-of-type { padding-top: 0.6rem; }
 
 .side-nav-hub {
   display: block;
   font-family: 'Cinzel', serif;
-  font-size: 0.52rem;
+  font-size: 0.68rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -567,3 +567,54 @@ body.with-sidebar .page-header {
   transition: color 0.2s;
 }
 .side-nav-hub:hover { color: var(--gold-dim); }
+
+
+/* ══════════════════════════════════════════════════════════════
+   PORTRAIT TREATMENT — detail pages only
+   Applies to .portrait-frame when it actually contains an image,
+   so "Portrait Pending" placeholders keep their plain frame and
+   listing-page thumbnails (.crew-thumb, .dossier-thumb) are
+   untouched. Set here rather than per-page so every entry picks
+   it up automatically.
+   ══════════════════════════════════════════════════════════════ */
+.portrait-frame:has(img) {
+  position: relative;
+  overflow: hidden;
+  border-color: var(--gold-dim);
+  background: #08060f;
+  box-shadow:
+    0 8px 34px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(201, 153, 58, 0.10);
+}
+
+/* Gold rule across the top, matching the card treatment */
+.portrait-frame:has(img)::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  opacity: 0.7; z-index: 2; pointer-events: none;
+}
+
+/* Vignette — sinks the edges into the page instead of cutting a hard square */
+.portrait-frame:has(img)::after {
+  content: '';
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    linear-gradient(to bottom, rgba(6,4,14,0.30) 0%, transparent 22%, transparent 62%, rgba(6,4,14,0.62) 100%),
+    radial-gradient(115% 85% at 50% 38%, transparent 42%, rgba(6,4,14,0.55) 100%);
+}
+
+.portrait-frame:has(img) img {
+  filter: saturate(0.94) contrast(1.05);
+  transform: scale(1.005);
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+.portrait-frame:has(img):hover img {
+  transform: scale(1.04);
+  filter: saturate(1) contrast(1.07);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portrait-frame:has(img) img,
+  .portrait-frame:has(img):hover img { transition: none; transform: none; }
+}

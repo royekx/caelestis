@@ -10,7 +10,7 @@
     background: var(--gold-faint);
     border-left: 3px solid var(--gold-dim);
     padding: 0.7rem 1rem;
-    font-size: 0.88rem; line-height: 1.55;
+    font-size: 0.97rem; line-height: 1.55;
     color: var(--text-dim); margin-bottom: 2rem;
   }
 
@@ -20,7 +20,7 @@
     margin-bottom: 1.5rem;
   }
   .filter-tag {
-    font-family: 'Cinzel', serif; font-size: 0.57rem;
+    font-family: 'Cinzel', serif; font-size: 0.68rem;
     letter-spacing: 0.12em; text-transform: uppercase;
     border: 1px solid var(--gold-rule);
     color: var(--text-muted); padding: 0.25rem 0.6rem;
@@ -57,16 +57,26 @@
   .item-card:hover::before { opacity: 1; }
 
   .item-type {
-    font-family: 'Cinzel', serif; font-size: 0.55rem;
+    font-family: 'Cinzel', serif; font-size: 0.66rem;
     letter-spacing: 0.15em; text-transform: uppercase;
     color: var(--text-muted);
   }
   .item-name {
-    font-family: 'Cinzel', serif; font-size: 0.9rem;
+    font-family: 'Cinzel', serif; font-size: 0.99rem;
     font-weight: 700; color: var(--text); letter-spacing: 0.02em;
   }
+  .item-artifact {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    align-self: flex-start; margin-top: 0.35rem;
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold-light); border: 1px solid var(--gold-dim);
+    background: var(--gold-faint); padding: 0.18rem 0.55rem;
+  }
+  .item-artifact svg { width: 10px; }
+
   .item-holder {
-    font-size: 0.8rem; color: var(--text-dim);
+    font-size: 0.88rem; color: var(--text-dim);
     font-style: italic;
   }
 
@@ -80,11 +90,11 @@
   .empty-icon { color: var(--text-muted); margin-bottom: 1rem; opacity: 0.4; }
   .empty-icon svg { width: 48px; }
   .empty-title {
-    font-family: 'Cinzel', serif; font-size: 0.75rem;
+    font-family: 'Cinzel', serif; font-size: 0.83rem;
     letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--text-muted); margin-bottom: 0.5rem;
   }
-  .empty-body { font-size: 0.88rem; color: var(--text-muted); font-style: italic; }
+  .empty-body { font-size: 0.97rem; color: var(--text-muted); font-style: italic; }
 
   @media(max-width:520px){ .item-grid{ grid-template-columns: 1fr; } }
 </style>
@@ -117,7 +127,7 @@
     </svg>
   </div>
     <div class="page-title" data-pagefind-meta="title">Crew Inventory</div>
-    <div class="page-subtitle">Items, artifacts, and materials in the crew's posvoyage. Logged upon recovery.</div>
+    <div class="page-subtitle">Items, artifacts, and materials in the crew's possession. Logged upon recovery.</div>
   </div>
 
   <div class="content">
@@ -132,17 +142,35 @@
       <div class="filter-tag active">All</div>
       <div class="filter-tag">Magical</div>
       <div class="filter-tag">Clothing</div>
+      <div class="filter-tag">Document</div>
+      <div class="filter-tag">Anomalous</div>
     </div>
     <div class="item-grid">
-      <a class="item-card" href="crimson-bag-of-holding.html">
+      <a class="item-card" href="entries/crimson-bag-of-holding.html">
         <div class="item-type">Magical · Bag of Holding</div>
         <div class="item-name">Crimson Bag of Holding</div>
         <div class="item-holder">Held by: Tumak · Unregistered</div>
       </a>
-      <a class="item-card" href="constellation-shirt.html">
+      <a class="item-card" href="entries/constellation-shirt.html">
         <div class="item-type">Clothing · Personal Reference</div>
         <div class="item-name">Constellation Shirt</div>
         <div class="item-holder">Held by: Tumak (via Casey) · Unregistered</div>
+      </a>
+      <a class="item-card" href="entries/half-ship.html">
+        <div class="item-type">Anomalous · Model Spelljammer</div>
+        <div class="item-name">Half Ship</div>
+        <div class="item-holder">Held by: Boogie · Undeclared</div>
+      </a>
+      <a class="item-card" href="entries/derelict-logbook.html">
+        <div class="item-type">Document · Ship's Log</div>
+        <div class="item-name">Derelict Logbook</div>
+        <div class="item-holder">Held by: Boogie · Retained</div>
+      </a>
+      <a class="item-card" href="entries/collection-manifest.html">
+        <div class="item-type">Document · Etched Slate</div>
+        <div class="item-name">Collection Manifest</div>
+        <div class="item-holder">Held by: The Crew · In Transit</div>
+        <span class="item-artifact">Readable <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span>
       </a>
     </div>
 
