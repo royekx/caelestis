@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelestis — Voyage 004</title>
+<link rel="stylesheet" href="../styles/caelestis.css">
+<style>
+  /* ── VIDEO ── */
+  .video-block { margin-bottom: 2.4rem; }
+  .video-container {
+    position: relative; width: 100%; padding-bottom: 56.25%;
+    background: #0a0814; border: 1px solid var(--gold-rule); overflow: hidden;
+  }
+  .video-container iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+  .video-placeholder {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 0.8rem;
+  }
+  .video-placeholder svg { width: 48px; color: var(--gold-dim); opacity: 0.4; }
+  .video-placeholder p {
+    font-family: 'Cinzel', serif; font-size: 0.65rem;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted);
+  }
+  .video-link { margin-top: 0.5rem; font-size: 0.82rem; font-style: italic; color: var(--text-muted); }
+  .video-link a { color: var(--gold-dim); text-decoration: none; }
+  .video-link a:hover { color: var(--gold); }
+
+  /* ── LOG META ── */
+  .log-meta {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 1.6rem; flex-wrap: wrap;
+  }
+  .log-badge {
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    background: var(--gold-faint); border: 1px solid var(--gold-rule);
+    color: var(--gold-dim); padding: 0.25rem 0.6rem;
+  }
+  .log-type-badge {
+    font-family: 'Cinzel', serif; font-size: 0.58rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); border: 1px solid var(--gold-rule);
+    padding: 0.25rem 0.6rem;
+  }
+
+  /* ── AT A GLANCE ── */
+  .voyage-glance {
+    background: var(--bg-card);
+    border: 1px solid var(--gold-rule);
+    border-left: 3px solid var(--gold-dim);
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 2.2rem;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .glance-synopsis {
+    font-size: 0.95rem; line-height: 1.72; color: var(--text);
+    font-style: italic; padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gold-rule);
+  }
+  .glance-row { display: grid; grid-template-columns: 90px 1fr; gap: 0.8rem; align-items: flex-start; }
+  .glance-label {
+    font-family: 'Cinzel', serif; font-size: 0.57rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold-dim); padding-top: 0.25rem;
+  }
+  .glance-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .chip {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.82rem; padding: 0.15rem 0.6rem;
+    border: 1px solid var(--gold-rule);
+    color: var(--text); background: rgba(201,153,58,0.05);
+    text-decoration: none; white-space: nowrap;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .chip:hover { border-color: var(--gold-dim); color: var(--gold-light); }
+  .chip-npc { border-color: rgba(30,74,122,0.35); color: var(--text-dim); background: rgba(30,74,122,0.05); }
+  .chip-npc:hover { border-color: rgba(30,74,122,0.7); color: #7aaad0; }
+  .chip-place { border-color: rgba(90,45,130,0.3); color: var(--text-dim); background: rgba(90,45,130,0.04); }
+  .chip-item { border-color: rgba(160,120,32,0.4); color: var(--text-dim); background: rgba(160,120,32,0.05); }
+  .chip-item:hover { border-color: var(--gold); color: var(--gold-light); }
+
+  /* ── ACCOUNT ACCORDIONS ── */
+  .account {
+    border: 1px solid var(--gold-rule);
+    background: var(--bg-card);
+    margin-bottom: 1.2rem;
+  }
+  .account > summary {
+    list-style: none; cursor: pointer;
+    padding: 1rem 1.3rem;
+    display: flex; align-items: center; gap: 0.9rem;
+    transition: background 0.2s;
+  }
+  .account > summary::-webkit-details-marker { display: none; }
+  .account > summary:hover { background: rgba(201,153,58,0.05); }
+  .account-caret {
+    width: 11px; flex-shrink: 0; color: var(--gold-dim);
+    transition: transform 0.22s ease;
+  }
+  .account[open] > summary .account-caret { transform: rotate(90deg); }
+  .account-name {
+    font-family: 'Cinzel', serif; font-size: 0.72rem;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold);
+  }
+  .account-note {
+    font-size: 0.85rem; font-style: italic; color: var(--text-muted);
+    margin-left: auto; text-align: right;
+  }
+  .account-body { padding: 0.4rem 1.5rem 1.8rem; border-top: 1px solid var(--gold-rule); }
+  .account-body > *:first-child { margin-top: 1.4rem; }
+
+  /* ── BRIEF SECTIONS ── */
+  .brief-section { margin-bottom: 1.8rem; }
+  .brief-section:last-child { margin-bottom: 0; }
+  .brief-heading {
+    font-family: 'Cinzel', serif; font-size: 0.68rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.7rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .brief-heading::after { content: ''; flex: 1; height: 1px; background: var(--gold-rule); }
+  .brief-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.45rem; }
+  .brief-list li {
+    font-size: 0.92rem; line-height: 1.55; color: var(--text);
+    padding-left: 1.1rem; position: relative;
+  }
+  .brief-list li::before { content: '\203A'; position: absolute; left: 0; color: var(--gold-dim); }
+  .brief-list li b { font-weight: 600; }
+  .brief-list li em { color: var(--text-dim); font-style: italic; }
+
+  /* ── NARRATIVE PROSE ── */
+  .narrative { max-width: 720px; }
+  .narrative p {
+    font-size: 1.05rem; line-height: 1.85; color: var(--text);
+    margin-bottom: 1.4rem; letter-spacing: 0.01em;
+  }
+  .narrative p:first-child::first-letter {
+    font-family: 'Cinzel', serif; font-size: 3.2rem; font-weight: 700;
+    float: left; line-height: 0.75; margin-right: 0.08em; margin-top: 0.12em;
+    color: var(--gold);
+  }
+  .chapter-break { display: flex; align-items: center; gap: 1rem; margin: 2.2rem 0 1.8rem; }
+  .chapter-break::before, .chapter-break::after { content: ''; flex: 1; height: 1px; background: var(--gold-rule); }
+  .chapter-break-text {
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold-dim); white-space: nowrap; flex-shrink: 0;
+  }
+
+  @media(max-width:560px){
+    .glance-row { grid-template-columns: 1fr; gap: 0.3rem; }
+    .glance-label { padding-top: 0; }
+    .account-note { display: none; }
+    .account-body { padding: 0.4rem 1.1rem 1.5rem; }
+  }
+</style>
+  <script src="../scripts/nav.js" defer></script>
+</head>
+<body data-pagefind-filter="section:voyages">
+<div class="page-content">
+  <div class="page-header">
+    <div class="page-emblem">
+      <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="0" y1="20" x2="42" y2="20" stroke-width="0.6" opacity="0.4"/>
+        <polyline points="38,15 43,20 38,25" opacity="0.5"/>
+        <polyline points="33,16 38,20 33,24" opacity="0.3"/>
+        <g transform="translate(60,20)">
+          <line x1="0" y1="-11" x2="0" y2="-6"/><line x1="0" y1="6" x2="0" y2="11"/>
+          <line x1="-11" y1="0" x2="-6" y2="0"/><line x1="6" y1="0" x2="11" y2="0"/>
+          <line x1="-7.5" y1="-7.5" x2="-4.5" y2="-4.5"/><line x1="4.5" y1="-4.5" x2="7.5" y2="-7.5"/>
+          <line x1="-7.5" y1="7.5" x2="-4.5" y2="4.5"/><line x1="4.5" y1="4.5" x2="7.5" y2="7.5"/>
+          <circle cx="0" cy="0" r="4"/><circle cx="0" cy="0" r="1.2" fill="currentColor" stroke="none"/>
+        </g>
+        <polyline points="82,15 77,20 82,25" opacity="0.3"/>
+        <polyline points="87,16 82,20 87,24" opacity="0.5"/>
+        <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="page-eyebrow">Voyage 004</div>
+    <div class="page-title" data-pagefind-meta="title">All Things Find Their Way Home</div>
+  </div>
+
+  <div class="content">
+
+    <div class="log-meta">
+      <span class="log-badge">Voyage 004</span>
+      <span class="log-type-badge">Crew Log</span>
+    </div>
+
+    <div class="voyage-nav-bar">
+      <a class="voyage-nav-link" href="voyage-003.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Previous Voyage</a>
+      <a class="voyage-nav-center" href="index.html">All Voyages</a>
+      <span class="voyage-nav-link disabled">Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></span>
+    </div>
+
+    <!-- AT A GLANCE -->
+    <div class="voyage-glance">
+      <div class="glance-synopsis">The crew clears the clockwork horrors in the tyrant ship's cargo hold and finds the broken autognome — <b>Ostekk-6</b> — whose name comes off the manifest. Its wounds are mechanical, past what magic can mend. Tumak manifests a telepathic link to speak with it, and Ostekk-6 warns of a mimic aboard and a bloom spreading through the ship. Given a floating dolly to move the spelljamming helm toward the command deck, the crew routes into the access shafts and finds the garden choked with lantern-wisp flowers. They clear the flower in a hard fight — Sol and Casey both casting Arms of Hadar, Tumak throwing his first fire bolt — but the wisps remain and bite harder than expected. Tumak ends it by summoning his soul knife for the first time, feeling a tether to home as the Rune Keeper's voice curves the blade true. Bloodied, the crew decides to rest before descending.</div>
+      <div class="glance-row">
+        <span class="glance-label">The Crew</span>
+        <div class="glance-chips">
+          <a class="chip" href="../crew-manifest/boogie.html">Boogie</a>
+          <a class="chip" href="../crew-manifest/sol.html">Sol</a>
+          <a class="chip" href="../crew-manifest/casey.html">Casey</a>
+          <a class="chip" href="../crew-manifest/gregory.html">Gregory</a>
+          <a class="chip" href="../crew-manifest/tumak.html">Tumak</a>
+          <a class="chip" href="../crew-manifest/bartholomew.html">Bartholomew</a>
+        </div>
+      </div>
+      <div class="glance-row">
+        <span class="glance-label">Key NPCs</span>
+        <div class="glance-chips">
+          <span class="chip chip-npc">Ostekk-6</span>
+          <span class="chip chip-npc">Miken</span>
+          <span class="chip chip-npc">Ryeback</span>
+          <span class="chip chip-npc">Fred</span>
+        </div>
+      </div>
+      <div class="glance-row">
+        <span class="glance-label">Locations</span>
+        <div class="glance-chips">
+          <span class="chip chip-place">Tyrant Ship — Cargo Hold</span>
+          <span class="chip chip-place">Access Shafts</span>
+          <span class="chip chip-place">Garden Shaft</span>
+        </div>
+      </div>
+      <div class="glance-row">
+        <span class="glance-label">Items</span>
+        <div class="glance-chips">
+          <a class="chip chip-item" href="../inventory/tyrant-ship-manifest.html">Tyrant Ship Manifest</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECORDING -->
+    <div class="video-block">
+      <div class="section-label">Voyage Recording</div>
+      <div class="video-container">
+        <div class="video-placeholder">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="24" r="20"/><polygon points="20,16 36,24 20,32" fill="currentColor" stroke="none" opacity="0.4"/></svg>
+          <p>Recording Unavailable</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BRIEF ACCOUNT -->
+    <details class="account" open>
+      <summary>
+        <svg class="account-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2l4 4-4 4"/></svg>
+        <span class="account-name">Brief Account</span>
+        <span class="account-note">What happened, beat by beat</span>
+      </summary>
+      <div class="account-body">
+        <div class="brief-section">
+        <div class="brief-heading">The Clockwork Horrors</div>
+        <ul class="brief-list">
+          <li>Combat opens the moment the crew rounds the corner — three clockwork horrors crouched over the wreckage. <b>Sol</b> and <b>Casey</b> hold the front line; Casey works his steady aim from the flank.</li>
+          <li><b>Gregory</b> opens with magic missile, then uses Vortex Warp to teleport <b>Ostekk-6</b> — the broken autognome — out of danger and behind him, pulling the helpless figure clear before pressing the attack.</li>
+          <li>The crew dispatches the horrors without serious injury.</li>
+        </ul>
+      </div>
+
+        <div class="brief-section">
+        <div class="brief-heading">Ostekk-6</div>
+        <ul class="brief-list">
+          <li>The cargo manifest gives the autognome its name: <b>Ostekk-6</b>. The crew tries to heal it and learns the damage is mechanical, not arcane — its core is sound, but its body needs physical restoration they can't provide here.</li>
+          <li>Frustrated at not being able to speak with it, <b>Tumak</b> manifests a telepathic link for the first time — connecting himself, Gregory, and Ostekk-6 without understanding how he did it.</li>
+          <li>Through the link, Ostekk-6 warns them: a specimen aboard can take the shape of other objects — a mimic. The bloom has spread through much of the ship. The clockwork horrors are aboard as well.</li>
+        </ul>
+      </div>
+
+        <div class="brief-section">
+        <div class="brief-heading">Moving the Helm</div>
+        <ul class="brief-list">
+          <li>The goal comes back into focus: get the spelljamming helm up to the command deck and install it to commandeer the ship. The crew is given a magical dolly — a floating disc that lifts the helm — but they still have to route it through the ship's access shafts.</li>
+          <li>The crew settles the area and takes stock. <b>Miken</b>, <b>Ryeback</b>, and <b>Fred</b> are among them.</li>
+          <li><b>Bartholomew</b> shifts into a starry form — a constellation surfacing from within him, one Casey had glimpsed earlier. It holds two stars. Bartholomew recognizes it: the shape he remembered from a fall he took as a child.</li>
+        </ul>
+      </div>
+
+        <div class="brief-section">
+        <div class="brief-heading">The Shafts</div>
+        <ul class="brief-list">
+          <li><b>Bartholomew</b> drops a lit match down the quarters shaft to gauge its depth. It falls a long way before the light vanishes entirely. Wisps rise and perch around the opening in answer.</li>
+          <li>Investigating the garden shaft, the crew finds it choked with an infestation of lantern-wisp flowers. Ostekk-6 confirms they'll need to pass through the access shafts to reach the command deck — which means clearing a path.</li>
+        </ul>
+      </div>
+
+        <div class="brief-section">
+        <div class="brief-heading">The Flower and the Wisps</div>
+        <ul class="brief-list">
+          <li><b>Sol</b> opens with a Divine Sense, then strikes the flower with a Sacred Flame. The flower answers by releasing a swarm of wisps.</li>
+          <li>Sol takes the front, absorbing hits, and casts <b>Arms of Hadar</b> — dark celestial tentacles that catch the wisps, which fail almost every save. <b>Casey</b> answers with his own constellation-tinged version of the same, spreading the reach further.</li>
+          <li>Sol uses his <b>Misfortune's Favor</b> to take a burden onto himself and succeeds through it. <b>Gregory</b> adds magic missiles; <b>Tumak</b> casts fire bolt for the first time, manifesting magic he doesn't understand and finding it works.</li>
+          <li>The crew kills the flower — and learns the wisps remain. Ostekk-6 explains the flower produces them but isn't the only thing keeping them here. The wisps are tankier than expected, and when they strike they hit hard: <b>Bartholomew</b> takes 10 damage from a single shock.</li>
+        </ul>
+      </div>
+
+        <div class="brief-section">
+        <div class="brief-heading">All Things Find Their Way Home</div>
+        <ul class="brief-list">
+          <li>To finish the fight, <b>Tumak</b> summons his soul knife for the first time — a spectral blade thrown from a small portal, his two runes flaring as it leaves. For the first time he feels a tether to home: not its location, but a connection to it.</li>
+          <li>As the knife looks set to miss, a voice — the Rune Keeper — says, <em>all things find their way home,</em> and the blade curves to strike the last wisp true.</li>
+          <li>The fight ends. Bloodied and freshly out of one hard encounter into another, the crew begins to understand these things are lethal — and that they should rest before pushing on toward the deck below.</li>
+        </ul>
+      </div>
+      </div>
+    </details>
+
+    <!-- FULL ACCOUNT -->
+    <details class="account">
+      <summary>
+        <svg class="account-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2l4 4-4 4"/></svg>
+        <span class="account-name">Full Account</span>
+        <span class="account-note">The whole story, as written</span>
+      </summary>
+      <div class="account-body">
+        <div class="narrative">
+  
+        <p>The spell Gregory had begun in the dark landed, and the fight was on.</p>
+  
+        <p>Three clockwork horrors crouched over the wreckage in the cargo hold — bronze and angular, mantis-shaped, the same machines that had been feeding on the broken figure when the crew rounded the corner. They came apart from their meal and turned on the intruders. Sol moved to the front and stayed there, taking the weight of the encounter onto himself the way he had learned to do, and Casey held the line beside him, working his steady aim from an angle where the horrors could not easily reach him. The crew had walked into this one already swinging, and they did not let up.</p>
+  
+        <p>Gregory opened with a volley of magic missiles, unerring darts of force splitting across the machines. Then he did the thing that would be remembered out of the fight — not the damage, but the mercy inside it. The broken autognome lay in the middle of the wreckage, helpless, its lower half gone, directly in the path of everything. Gregory reached for it with a Vortex Warp and pulled it out of the danger entirely, folding space to set it down safe behind him before he turned back to the fight. It was the kind of instinct that says something about a character, and everyone at the table felt it.</p>
+  
+        <p>The horrors did not last much longer after that. The crew dispatched them without taking any serious hurt, and the hold went quiet again, and they were free to look at what they had actually walked into.</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">Ostekk-6</span></div>
+  
+        <p>The cargo manifest gave the autognome a name. Ostekk-6. The crew gathered what they could of it and tried to help. Boogie and Gregory both understood, once they looked closely, that this was not a wound magic could close. The autognome's core was arcane and intact, but its body — the frame, the joints, the ruined voice box — was a mechanical problem. It needed to be physically repaired, and nothing they could do in the hold would put it back together. Its eyes moved. Its mouth moved. It had no way to make a sound.</p>
+  
+        <p>Tumak grew frustrated with the silence. He wanted, simply, to talk to it — to close the gap between the thing that was clearly trying to speak and the crew standing helpless around it. And out of that frustration something surfaced that he did not know he had. A telepathic link opened between himself, Gregory, and Ostekk-6, manifesting without his understanding how or why, the same way his magic had been surfacing all along — reached for in a moment of need and simply there.</p>
+  
+        <p>Through the link, Ostekk-6 told them what it knew. There was a specimen aboard that could take the shape of other things — an object that was not an object, a mimic waiting somewhere in the ship's contents. The bloom, some spreading growth, had taken over much of the vessel. And the clockwork horrors — the machines they had just put down — were not the only ones aboard. The warning did more than move the plot forward; it let the crew receive hard information from a source they had chosen to save, which is a different thing than finding it on a wall.</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">The Helm and the Dolly</span></div>
+  
+        <p>The goal had not changed, and the crew reminded themselves of it through the NPCs more than once, the way crews do when a ship is large and dark and full of reasons to get distracted. They needed to move the spelljamming helm up to the command deck and install it there, so they could take control of the tyrant ship and fly it themselves. The helm was heavy. To make that possible, they had a magical dolly — a floating disc, something like a levitating hand truck, that could take the weight of the helm and carry it along at a hover. It solved the lifting. It did not solve the shafts. The helm still had to be routed up through the ship's internal access shafts to reach the deck, and that was going to be the work.</p>
+  
+        <p>The crew settled the area and took stock of themselves. Miken was among them, and Ryeback, and Fred the plasmoid in his knotted kerchief. And Bartholomew, somewhere in the lull, shifted into a starry form — a constellation rising to the surface of him, made of light. It was a shape Casey had glimpsed earlier when he'd looked closely at the druid and rolled well enough to see something real there. The constellation held two stars. Bartholomew looked at it and recognized it: it was the shape he remembered from a fall he'd taken as a child, the stars he'd seen when he went down. He said it almost offhandedly, inventing it in the moment, but it landed as the kind of detail that wants to be kept — two stars, a fall, a thing carried since childhood and only now surfacing where anyone could see it.</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">The Shafts</span></div>
+  
+        <p>They explored a little further, testing the ship's vertical passages. Bartholomew went to one of the shafts — the quarters shaft — and dropped a lit match into it to see how far down it went. The small light fell, and fell, and kept falling, until the crew could no longer see it at all. The shaft was deep. And the falling light stirred something: wisps began to rise out of the dark, drifting up to perch around the mouth of the shaft, gathering at the edge of the crew's lantern light.</p>
+  
+        <p>They turned to the garden shaft next, and found it choked. An infestation of lantern-wisp flowers had taken it over, the growth Ostekk-6 had warned them about made visible. After some back and forth, the autognome confirmed what the crew was starting to suspect: the way to the command deck ran through these access shafts, and the shafts were not passable while the bloom held them. They would have to clear a path. And so they went to the flowers.</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">The Flower and the Wisps</span></div>
+  
+        <p>Sol went first. He cast a Divine Sense across the growth — and something registered, a catalyst beginning to stir in answer — and then he struck the nearest flower with a Sacred Flame. The flower answered the way the crew would come to expect: it released wisps, a swarm of them peeling off the bloom and into the air.</p>
+  
+        <p>Sol moved to the forefront and stayed there, taking the hits so the others didn't have to. He cast Arms of Hadar, and dark tentacles shot out from him — celestial, shadow-tinged, reaching through the swarm. The wisps could not answer it; they failed nearly every save against it, weak-limbed things with no strength to break the grip. The spell caught Casey too, in the spread of it, but that turned out fine, because Casey came right back with his own version of the same working — Arms of Hadar rendered through his constellation, tentacles of starlight spreading up and out to catch what Sol's had missed. Two castings of the same dark reach, one shadowed and one lit, filling the shaft.</p>
+  
+        <p>The fight asked something of Sol, and he answered it with the mark he carries. He used his Misfortune's Favor to take a burden onto himself — pulling ill luck out of the moment and onto his own shoulders — and succeeded through it, coming out the far side of the roll with the weight taken and the save made. The rest of the crew filled in around him. Gregory sent magic missiles into the swarm. And Tumak cast a fire bolt — the first he had ever thrown, magic he does not understand and did not know he had, reached for on instinct and simply working, a bolt of fire leaving his hand as if it had always been going to.</p>
+  
+        <p>They killed the flower. And then they saw the problem: the wisps were still there. Cutting down the bloom had not cleared them. Ostekk-6 explained it through the link — the flower produces the wisps, but killing the flower does not unmake the ones already loose; something else keeps them here. The crew filed that away as a thing they would need to understand. And they learned, the hard way, that the wisps were not the fragile things they'd first appeared to be. They were tankier than expected, and when they connected they hit hard. Bartholomew caught a shock full-on and took ten damage from it — a real bite, especially coming straight out of the clockwork fight with no rest between. The wisps had teeth after all.</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">All Things Find Their Way Home</span></div>
+  
+        <p>To finish it, Tumak summoned his soul knife for the first time. He described it as a spectral blade, drawn out of a small portal that opened at his call, and as it left him his two runes flared — the marks he had found glowing on his foot and shoulder, lighting up now as the knife came free. And for the first time, he felt the tether. Not where home was, not a direction on any map, but a connection to it, a line running from him to somewhere he had been trying to find. The little portal the knife came through was a piece of that somewhere.</p>
+  
+        <p>The throw looked like it would miss. And in the moment it was going wide, Tumak heard a voice — the Rune Keeper, the presence behind the marks — say quietly that all things find their way home. The blade curved in the air, bending around true, and struck the last wisp clean. It was the creature's final point of health, and the moment earned its leeway; the knife found its mark because the scene wanted it to, and the table let it. The fight ended there.</p>
+  
+        <p>The crew stood bloodied in the cleared shaft, two hard encounters deep with nothing between them, and took the lesson the wisps had delivered. These things could kill them. The next stretch went down — into the deck below, reachable by rope, with Casey's climbing to see them down — and it could wait until they had rested. For the first time since boarding, the crew decided not to push forward. They would hold here, and recover, and go down when they were ready. Something was waiting below for them to try.</p>
+  
+      </div>
+      </div>
+    </details>
+
+    <div class="voyage-nav-bottom">
+      <a class="voyage-nav-link" href="voyage-003.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Previous Voyage</a>
+      <a class="voyage-nav-center" href="index.html">All Voyages</a>
+      <span class="voyage-nav-link disabled">Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></span>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /page-content -->
+</body>
+</html>

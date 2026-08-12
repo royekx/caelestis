@@ -541,3 +541,29 @@ body.with-sidebar .page-header {
   .scope-select select { width: 100%; }
   .terminal-title { font-size: 1.6rem; }
 }
+
+
+/* ── SIDE NAV: GROUP LABELS + HUB LINK ── */
+.side-nav-group-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.52rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  opacity: 0.75;
+  padding: 1.1rem 1.4rem 0.4rem;
+}
+.side-nav-body > .side-nav-group-label:first-of-type { padding-top: 0.6rem; }
+
+.side-nav-hub {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.52rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-top: 0.35rem;
+  transition: color 0.2s;
+}
+.side-nav-hub:hover { color: var(--gold-dim); }

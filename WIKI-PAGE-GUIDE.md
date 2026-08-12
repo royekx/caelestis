@@ -384,7 +384,7 @@ Pattern) use plain `dm-tag is-canon` styling.
       <div class="voyage-col">
         <div class="voyage-col-eyebrow">Voyage — Actual</div>
         <div class="voyage-col-body"><p>Summary…</p></div>
-        <a class="voyage-col-link" href="../../../../crew-logs/detailed/voyage-detailed-NNN.html">Open in Crew Logs →</a>
+        <a class="voyage-col-link" href="../../../voyages/voyage-NNN.html">Open in Crew Voyages →</a>
       </div>
     </div>
     <div class="voyage-delta">
@@ -458,7 +458,7 @@ for src,(html,_) in pages.items():
         r=resolve(src,href)
         if not r: continue
         t,a=r
-        if t.startswith('../') or '/crew-logs/' in t: continue
+        if t.startswith('../') or '/voyages/' in t: continue
         if t not in pages:
             if t.endswith('.html'): problems.append(f'{src}: broken page -> {href}')
             continue

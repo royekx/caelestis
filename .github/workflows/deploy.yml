@@ -45,7 +45,7 @@ jobs:
         run: |
           npx -y pagefind \
             --site . \
-            --glob "{index.html,crew-logs/**/*.html,crew-manifest/**/*.html,dossiers/**/*.html,spelljammer-nexus/**/*.html,inventory/**/*.html,handouts/**/*.html,navigation-records/**/*.html}" \
+            --glob "{index.html,hub.html,voyages/*.html,logs/*.html,crew-manifest/**/*.html,dossiers/**/*.html,spelljammer-nexus/**/*.html,inventory/**/*.html,handouts/**/*.html,navigation-records/**/*.html}" \
             --exclude-selectors "[data-pagefind-ignore], nav, .site-nav, footer" \
             --verbose
 
