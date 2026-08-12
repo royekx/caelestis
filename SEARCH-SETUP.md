@@ -4,7 +4,7 @@ Client-side search for the Caelestis site, powered by Pagefind. Three separate
 indexes keep the player / DM / FIA boundaries intact.
 
 The player-facing terminal is branded **S.E.A.R.C.H.** — *Standard Enquiry of
-Assets, Records & Communiqués Hub*. Lives at `/search/`.
+Assets, Records & Communications Hub*. Lives at `/search/`.
 
 ---
 
