@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelestis — S.E.A.R.C.H.</title>
+<link rel="stylesheet" href="../styles/caelestis.css">
+<script src="../scripts/nav.js" defer></script>
+</head>
+<body>
+
+<div class="terminal-wrap">
+
+  <div class="terminal-head">
+    <div class="terminal-eyebrow">Caelestis · Standard Enquiry of Assets, Records &amp; Communiqués Hub</div>
+    <h1 class="terminal-title">S.E.A.R.C.H.</h1>
+    <p class="terminal-sub">Every record the Fleet keeps, searchable. Names, places, voyages — if it's been logged, it can be found.</p>
+  </div>
+
+  <div class="search-console">
+    <div class="search-console-label">Query</div>
+    <div class="search-row">
+      <div class="search-field">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+        <input class="search-input" id="q" type="text" placeholder="Search the records…" autocomplete="off" autofocus>
+      </div>
+      <div class="scope-select">
+        <select id="scope">
+          <option value="">All Records</option>
+          <option value="crew-logs">Crew Logs</option>
+          <option value="crew-manifest">Crew Manifest</option>
+          <option value="dossiers">Dossiers</option>
+          <option value="navigation-records">Navigation Records</option>
+          <option value="spelljammer-nexus">Spelljammer Nexus</option>
+          <option value="inventory">Inventory</option>
+          <option value="handouts">Corps Protocols</option>
+        </select>
+      </div>
+    </div>
+    <div class="scope-hint" id="scopeHint">Searching <b>all records</b>. Narrow the field with the selector — choose a section to search only within it.</div>
+  </div>
+
+  <div id="resultsMeta" class="results-meta" style="display:none;">
+    <div class="results-count"><span id="count">0</span> · <span class="results-term" id="termEcho"></span></div>
+    <div class="results-scope" id="scopeEcho">across all records</div>
+  </div>
+
+  <div id="results"></div>
+
+  <div id="state" class="search-state">Enter a name, place, or event to begin.</div>
+
+</div>
+
+<script type="module">
+// S.E.A.R.C.H. — player-facing global search.
+// Uses the Pagefind JS API (generated into /pagefind/ by the deploy Action)
+// so the terminal styling is fully ours rather than Pagefind's default UI.
+
+const SCOPE_LABELS = {
+  '': 'all records',
+  'crew-logs': 'Crew Logs',
+  'crew-manifest': 'Crew Manifest',
+  'dossiers': 'Dossiers',
+  'navigation-records': 'Navigation Records',
+  'spelljammer-nexus': 'Spelljammer Nexus',
+  'inventory': 'Inventory',
+  'handouts': 'Corps Protocols'
+};
+
+// Human-readable section label from a result URL, for the right-hand path tag.
+function sectionFromUrl(url) {
+  const p = url.replace(/^\//, '').split('/');
+  const map = {
+    'crew-logs': 'Crew Logs', 'crew-manifest': 'Crew Manifest', 'dossiers': 'Dossiers',
+    'navigation-records': 'Navigation Records', 'spelljammer-nexus': 'Spelljammer Nexus',
+    'inventory': 'Inventory', 'handouts': 'Corps Protocols'
+  };
+  let label = map[p[0]] || 'Records';
+  // Voyage sub-label
+  const m = url.match(/voyage-\w+-(\d+)/);
+  if (m) label += ' · Voyage ' + m[1];
+  return label;
+}
+
+let pagefind = null;
+async function loadPagefind() {
+  if (pagefind) return pagefind;
+  try {
+    pagefind = await import('/pagefind/pagefind.js');
+    await pagefind.options({ excerptLength: 30 });
+    await pagefind.init();
+  } catch (e) {
+    document.getElementById('state').textContent =
+      'Search index not yet available. It builds automatically on deploy.';
+    console.error('Pagefind load failed:', e);
+  }
+  return pagefind;
+}
+
+const qEl = document.getElementById('q');
+const scopeEl = document.getElementById('scope');
+const resultsEl = document.getElementById('results');
+const stateEl = document.getElementById('state');
+const metaEl = document.getElementById('resultsMeta');
+const countEl = document.getElementById('count');
+const termEcho = document.getElementById('termEcho');
+const scopeEcho = document.getElementById('scopeEcho');
+const scopeHint = document.getElementById('scopeHint');
+
+function setState(msg) { stateEl.style.display = 'block'; stateEl.textContent = msg; }
+function clearState() { stateEl.style.display = 'none'; }
+
+let debounce;
+async function run() {
+  const term = qEl.value.trim();
+  const scope = scopeEl.value;
+
+  // Update the hint line
+  scopeHint.innerHTML = scope
+    ? 'Searching <b>' + SCOPE_LABELS[scope] + '</b> only. Switch to <b>All Records</b> to search everything.'
+    : 'Searching <b>all records</b>. Narrow the field with the selector — choose a section to search only within it.';
+
+  if (!term) {
+    resultsEl.innerHTML = '';
+    metaEl.style.display = 'none';
+    setState('Enter a name, place, or event to begin.');
+    return;
+  }
+
+  const pf = await loadPagefind();
+  if (!pf) return;
+
+  // Filter by section using the section filter tagged at index time.
+  const opts = scope ? { filters: { section: scope } } : {};
+  const search = await pf.search(term, opts);
+
+  if (!search.results.length) {
+    resultsEl.innerHTML = '';
+    metaEl.style.display = 'none';
+    setState('No records found for "' + term + '"' + (scope ? ' in ' + SCOPE_LABELS[scope] : '') + '.');
+    return;
+  }
+
+  clearState();
+  metaEl.style.display = 'flex';
+  countEl.textContent = search.results.length + (search.results.length === 1 ? ' record' : ' records');
+  termEcho.textContent = '"' + term + '"';
+  scopeEcho.textContent = scope ? 'in ' + SCOPE_LABELS[scope] : 'across all records';
+
+  // Load the first batch of result data
+  const data = await Promise.all(search.results.slice(0, 20).map(r => r.data()));
+  resultsEl.innerHTML = data.map(d => {
+    const section = sectionFromUrl(d.url);
+    const title = (d.meta && d.meta.title) ? d.meta.title : d.url;
+    return `<a class="result" href="${d.url}">
+      <div class="result-head">
+        <div class="result-title">${title}</div>
+        <div class="result-path">${section}</div>
+      </div>
+      <div class="result-snippet">${d.excerpt}</div>
+    </a>`;
+  }).join('');
+}
+
+qEl.addEventListener('input', () => { clearTimeout(debounce); debounce = setTimeout(run, 180); });
+scopeEl.addEventListener('change', run);
+
+// Support ?q= and ?scope= deep links (e.g. from per-section boxes)
+const params = new URLSearchParams(location.search);
+if (params.get('scope')) scopeEl.value = params.get('scope');
+if (params.get('q')) { qEl.value = params.get('q'); run(); }
+</script>
+
+</body>
+</html>

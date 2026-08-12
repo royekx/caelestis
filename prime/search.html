@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Caelestis · DM Search</title>
+<link rel="stylesheet" href="../styles/caelestis.css">
+<link rel="stylesheet" href="../styles/dm.css">
+<script>
+// Gate guard — must be authenticated this session, else bounce to the gate.
+if (sessionStorage.getItem('caelestis_continuum_auth') !== '1') {
+  window.location.href = 'index.html';
+}
+</script>
+<script src="../scripts/dm-nav.js" defer></script>
+</head>
+<body>
+
+<div class="terminal-wrap">
+
+  <div class="terminal-head">
+    <div class="terminal-eyebrow">Beyond Caelestis · Axiom Access · Not for Players</div>
+    <h1 class="terminal-title">DM Archive Search</h1>
+    <p class="terminal-sub">Full-text search across the DM space — cosmology, factions, realms, campaign, voyages.</p>
+  </div>
+
+  <div class="search-console">
+    <div class="search-console-label">Query</div>
+    <div class="search-row">
+      <div class="search-field">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+        <input class="search-input" id="q" type="text" placeholder="Search the DM archive…" autocomplete="off" autofocus>
+      </div>
+    </div>
+    <div class="scope-hint">Searching the full DM space. Player-facing records are indexed separately.</div>
+  </div>
+
+  <div id="resultsMeta" class="results-meta" style="display:none;">
+    <div class="results-count"><span id="count">0</span> · <span class="results-term" id="termEcho"></span></div>
+  </div>
+
+  <div id="results"></div>
+  <div id="state" class="search-state">Enter a term to search the DM archive.</div>
+
+</div>
+
+<script type="module">
+let pagefind = null;
+async function loadPagefind() {
+  if (pagefind) return pagefind;
+  try {
+    pagefind = await import('./pagefind/pagefind.js');
+    await pagefind.options({ excerptLength: 30 });
+    await pagefind.init();
+  } catch (e) {
+    document.getElementById('state').textContent = 'DM search index not yet available. It builds on deploy.';
+    console.error(e);
+  }
+  return pagefind;
+}
+const qEl = document.getElementById('q'), resultsEl = document.getElementById('results'),
+      stateEl = document.getElementById('state'), metaEl = document.getElementById('resultsMeta'),
+      countEl = document.getElementById('count'), termEcho = document.getElementById('termEcho');
+let debounce;
+async function run() {
+  const term = qEl.value.trim();
+  if (!term) { resultsEl.innerHTML=''; metaEl.style.display='none'; stateEl.style.display='block'; stateEl.textContent='Enter a term to search the DM archive.'; return; }
+  const pf = await loadPagefind(); if (!pf) return;
+  const search = await pf.search(term);
+  if (!search.results.length) { resultsEl.innerHTML=''; metaEl.style.display='none'; stateEl.style.display='block'; stateEl.textContent='No records for "'+term+'".'; return; }
+  stateEl.style.display='none'; metaEl.style.display='flex';
+  countEl.textContent = search.results.length + (search.results.length===1?' record':' records');
+  termEcho.textContent = '"'+term+'"';
+  const data = await Promise.all(search.results.slice(0,25).map(r=>r.data()));
+  resultsEl.innerHTML = data.map(d=>{
+    const title = (d.meta&&d.meta.title)?d.meta.title:d.url;
+    const path = d.url.replace(/^\//,'').replace(/\/index\.html$/,'').replace(/\.html$/,'') || 'hub';
+    return `<a class="result" href="${d.url}"><div class="result-head"><div class="result-title">${title}</div><div class="result-path">${path}</div></div><div class="result-snippet">${d.excerpt}</div></a>`;
+  }).join('');
+}
+qEl.addEventListener('input', ()=>{clearTimeout(debounce);debounce=setTimeout(run,180);});
+</script>
+
+</body>
+</html>

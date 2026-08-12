@@ -374,3 +374,149 @@ body.with-sidebar .page-header {
     .content { padding: 0 1.2rem 4rem; }
   .page-header { padding: 2.5rem 1.2rem 2rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   ARCHIVE RETRIEVAL — search terminal
+   Shared styling for the global search page, per-section
+   search boxes, and the gated DM / FIA search surfaces.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Terminal page shell ── */
+.terminal-wrap { max-width: 780px; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+.terminal-head { text-align: center; margin-bottom: 2.5rem; }
+.terminal-eyebrow {
+  font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.35em;
+  text-transform: uppercase; color: var(--gold-dim); margin-bottom: 1rem;
+}
+.terminal-title {
+  font-family: 'Cinzel', serif; font-size: 2rem; font-weight: 700; color: var(--gold);
+  letter-spacing: 0.04em; margin: 0 0 0.6rem; text-shadow: 0 0 24px rgba(201,153,58,0.18);
+}
+.terminal-sub {
+  font-size: 0.98rem; color: var(--text-dim); font-style: italic;
+  max-width: 30rem; margin: 0 auto;
+}
+
+/* ── Search console ── */
+.search-console {
+  background: var(--bg-panel); border: 1px solid var(--gold-rule); border-radius: var(--radius);
+  padding: 1.6rem 1.5rem 1.5rem; box-shadow: 0 0 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(201,153,58,0.06);
+  position: relative;
+}
+.search-console::before {
+  content: ''; position: absolute; inset: 4px; border: 1px solid rgba(201,153,58,0.08);
+  border-radius: var(--radius); pointer-events: none;
+}
+.search-console-label {
+  font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.28em;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem;
+}
+.search-row { display: flex; gap: 0.6rem; align-items: stretch; }
+.search-field { flex: 1; position: relative; display: flex; align-items: center; }
+.search-field > svg {
+  position: absolute; left: 0.85rem; width: 16px; height: 16px;
+  stroke: var(--gold-dim); pointer-events: none;
+}
+.search-input {
+  width: 100%; background: var(--bg); border: 1px solid var(--gold-rule); border-radius: var(--radius);
+  color: var(--text); font-family: 'Crimson Pro', serif; font-size: 1.05rem;
+  padding: 0.7rem 0.9rem 0.7rem 2.5rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+}
+.search-input::placeholder { color: var(--text-muted); font-style: italic; }
+.search-input:focus {
+  border-color: var(--gold-dim); box-shadow: 0 0 0 1px var(--gold-faint), 0 0 18px rgba(201,153,58,0.1);
+}
+.scope-select { position: relative; }
+.scope-select select {
+  appearance: none; -webkit-appearance: none; background: var(--bg-raised);
+  border: 1px solid var(--gold-rule); border-radius: var(--radius); color: var(--gold-light);
+  font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.06em;
+  padding: 0.7rem 2rem 0.7rem 0.9rem; cursor: pointer; outline: none; height: 100%;
+}
+.scope-select select:focus { border-color: var(--gold-dim); }
+.scope-select::after {
+  content: '▾'; position: absolute; right: 0.8rem; top: 50%; transform: translateY(-50%);
+  color: var(--gold-dim); pointer-events: none; font-size: 0.7rem;
+}
+.scope-hint { margin-top: 0.75rem; font-size: 0.8rem; color: var(--text-muted); font-style: italic; }
+.scope-hint b { color: var(--gold-dim); font-style: normal; font-weight: 600; }
+
+/* ── Results ── */
+.results-meta {
+  margin: 2rem 0 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--gold-rule);
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.results-count {
+  font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold-dim);
+}
+.results-term { color: var(--gold-light); }
+.results-scope { font-size: 0.78rem; color: var(--text-muted); font-style: italic; }
+
+.result {
+  display: block; text-decoration: none; padding: 1.1rem 1.2rem; margin-bottom: 0.7rem;
+  background: var(--bg-card); border: 1px solid transparent; border-left: 2px solid var(--gold-rule);
+  border-radius: var(--radius); transition: border-color 0.18s, background 0.18s, transform 0.18s;
+}
+.result:hover {
+  background: var(--bg-raised); border-left-color: var(--gold); border-color: var(--gold-rule);
+  transform: translateX(2px);
+}
+.result-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 0.35rem;
+}
+.result-title {
+  font-family: 'Cinzel', serif; font-size: 1.02rem; color: var(--gold); letter-spacing: 0.02em;
+}
+.result:hover .result-title { color: var(--gold-light); }
+.result-path {
+  font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--text-muted); white-space: nowrap;
+}
+.result-snippet { font-size: 0.92rem; color: var(--text-dim); line-height: 1.55; }
+.result-snippet mark { background: var(--gold-faint); color: var(--gold-light); padding: 0 2px; border-radius: 1px; }
+
+.search-state {
+  text-align: center; padding: 2.5rem 1rem; color: var(--text-muted);
+  font-style: italic; font-size: 0.95rem;
+}
+.search-footnote {
+  margin-top: 2.5rem; text-align: center; font-size: 0.78rem;
+  color: var(--text-muted); font-style: italic; line-height: 1.7;
+}
+
+/* ── Per-section inline search box (compact) ── */
+.section-search {
+  max-width: 620px; margin: 0 auto 2rem; position: relative; display: flex; align-items: center;
+}
+.section-search > svg {
+  position: absolute; left: 0.85rem; width: 15px; height: 15px; stroke: var(--gold-dim); pointer-events: none;
+}
+.section-search input {
+  width: 100%; background: var(--bg); border: 1px solid var(--gold-rule); border-radius: var(--radius);
+  color: var(--text); font-family: 'Crimson Pro', serif; font-size: 0.98rem;
+  padding: 0.6rem 0.9rem 0.6rem 2.4rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+}
+.section-search input::placeholder { color: var(--text-muted); font-style: italic; }
+.section-search input:focus {
+  border-color: var(--gold-dim); box-shadow: 0 0 0 1px var(--gold-faint);
+}
+/* Inline results dropdown for the per-section box */
+.section-search-results {
+  position: absolute; top: calc(100% + 4px); left: 0; right: 0; z-index: 40;
+  background: var(--bg-panel); border: 1px solid var(--gold-rule); border-radius: var(--radius);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6); max-height: 60vh; overflow-y: auto; display: none;
+}
+.section-search-results.open { display: block; }
+.section-search-results .result { margin: 0; border-left: none; border-radius: 0; border-bottom: 1px solid var(--gold-rule); }
+.section-search-results .result:last-child { border-bottom: none; }
+.section-search-results .search-state { padding: 1.4rem 1rem; }
+
+/* ── Search entry card on the landing grid ── */
+.s-card.search-card .s-icon { color: var(--gold); }
+
+@media (max-width: 640px) {
+  .search-row { flex-direction: column; }
+  .scope-select select { width: 100%; }
+  .terminal-title { font-size: 1.6rem; }
+}
