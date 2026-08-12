@@ -68,13 +68,13 @@
 
   var criticalCSS = [
     /* Sidebar positioning — only what's needed to prevent flash of unstyled nav */
-    '.side-nav{position:fixed!important;left:0;top:0;bottom:0;width:220px;z-index:200;',
+    '.side-nav{position:fixed!important;left:0;top:0;bottom:0;width:244px;z-index:200;',
     'display:flex;flex-direction:column;overflow-y:auto;',
     'background:rgba(6,4,14,0.99);border-right:1px solid rgba(201,153,58,0.15);}',
     /* Toggle hidden by default */
     '.side-nav-toggle{display:none!important;position:fixed!important;z-index:201;}',
     /* Body offset */
-    'body.with-sidebar{padding-left:220px;}',
+    'body.with-sidebar{padding-left:244px;}',
     /* Mobile */
     '@media(max-width:768px){',
     'body.with-sidebar{padding-left:0!important;padding-top:52px!important;}',

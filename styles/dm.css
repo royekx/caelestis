@@ -42,7 +42,7 @@
 }
 .dm-page-eyebrow {
   font-family: 'Cinzel', serif;
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   letter-spacing: 0.25em;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -146,7 +146,7 @@
   content: '✦ ✦ ✦';
   color: var(--gold-dim);
   letter-spacing: 1rem;
-  font-size: 0.7rem;
+  font-size: 0.84rem;
 }
 
 /* ── PULL-QUOTE ── */
@@ -181,7 +181,7 @@
 
 .dm-card-title {
   font-family: 'Cinzel', serif;
-  font-size: 0.9rem;
+  font-size: 0.99rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold);
@@ -196,7 +196,7 @@
    Used in the Act Map for "PC arcs in this Act" / "Faction moves in this Act"
    rows that contextualize the main beats above them. */
 .dm-card-footnote {
-  font-size: 0.85rem;
+  font-size: 0.94rem;
   color: var(--dm-text-dim, var(--ivory-dim, #9a8f7a));
   border-top: 1px dashed var(--dm-border-dim, rgba(180, 150, 90, 0.18));
   padding-top: 0.6rem;
@@ -221,7 +221,7 @@
 /* Subtitle / date line immediately under a card title.
    Used in the voyages list for the voyage subtitle. */
 .dm-card-eyebrow {
-  font-size: 0.85rem;
+  font-size: 0.94rem;
   font-style: italic;
   color: var(--gold-dim, var(--gold));
   letter-spacing: 0.04em;
@@ -247,7 +247,7 @@
   border: 1px solid var(--gold);
   color: var(--gold);
   font-family: 'Cinzel', serif;
-  font-size: 0.78rem;
+  font-size: 0.86rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   text-decoration: none;
@@ -287,7 +287,7 @@
 .dm-callout.is-info    { border-left-color: var(--dm-teal); }
 .dm-callout-label {
   font-family: 'Cinzel', serif;
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
@@ -348,7 +348,7 @@
   font-weight: 600;
   text-align: left;
   padding: 0.65rem 0.85rem;
-  font-size: 0.75rem;
+  font-size: 0.83rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   border-bottom: 1px solid var(--gold-rule);
@@ -366,7 +366,7 @@
 .dm-xref {
   display: inline-block;
   font-family: 'Cinzel', serif;
-  font-size: 0.65rem;
+  font-size: 0.78rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   padding: 0.12rem 0.45rem;
@@ -388,7 +388,7 @@
 .dm-tag {
   display: inline-block;
   font-family: 'Cinzel', serif;
-  font-size: 0.6rem;
+  font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   padding: 0.1rem 0.4rem;
@@ -407,7 +407,7 @@
 .dm-content dl { margin: 1rem 0; }
 .dm-content dt {
   font-family: 'Cinzel', serif;
-  font-size: 0.8rem;
+  font-size: 0.88rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gold);
@@ -441,7 +441,7 @@
 }
 .dm-tile-eyebrow {
   font-family: 'Cinzel', serif;
-  font-size: 0.65rem;
+  font-size: 0.78rem;
   letter-spacing: 0.22em;
   color: var(--gold-dim);
   text-transform: uppercase;
@@ -456,7 +456,7 @@
   margin: 0 0 0.4rem;
 }
 .dm-tile-desc {
-  font-size: 0.92rem;
+  font-size: 1.01rem;
   color: var(--text-dim);
   line-height: 1.45;
 }
@@ -483,7 +483,7 @@
   padding-top: 1.5rem;
   border-top: 1px solid rgba(201, 153, 58, 0.14);
   font-family: 'Cinzel', serif;
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   letter-spacing: 0.18em;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -523,7 +523,7 @@
   align-self: start;
   max-height: calc(100vh - 4rem);
   overflow-y: auto;
-  font-size: 0.82rem;
+  font-size: 0.90rem;
   line-height: 1.4;
   padding-left: 1rem;
   border-left: 1px solid var(--gold-rule);
@@ -531,7 +531,7 @@
 
 .dm-toc-title {
   font-family: 'Cinzel', serif;
-  font-size: 0.66rem;
+  font-size: 0.79rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -562,7 +562,7 @@
 /* h3-level entries indent under their h2. */
 .dm-toc a.dm-toc-sub {
   padding-left: calc(1.5rem + 1rem - 2px);
-  font-size: 0.78rem;
+  font-size: 0.86rem;
   color: var(--text-muted);
   opacity: 0.78;
 }
@@ -626,7 +626,7 @@
   width: 100%;
   border-collapse: collapse;
   margin: 1rem 0 1.5rem;
-  font-size: 0.92rem;
+  font-size: 1.01rem;
   background: rgba(255,255,255,0.01);
   border: 1px solid var(--gold-rule);
 }
@@ -634,7 +634,7 @@
 .dossier thead th {
   text-align: left;
   font-family: 'Cinzel', serif;
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-dim);
@@ -663,18 +663,18 @@
   font-family: 'Cinzel', serif;
   font-weight: 600;
   color: var(--text);
-  font-size: 0.92rem;
+  font-size: 1.01rem;
   letter-spacing: 0.01em;
 }
 
 .dossier .dossier-role {
-  font-size: 0.82rem;
+  font-size: 0.90rem;
   color: var(--text-dim);
   font-style: italic;
 }
 
 .dossier .dossier-detail {
-  font-size: 0.88rem;
+  font-size: 0.97rem;
   color: var(--text-dim);
   line-height: 1.45;
 }
@@ -754,7 +754,7 @@
 .dm-collapse > summary {
   cursor: pointer;
   font-family: 'Cinzel', serif;
-  font-size: 0.84rem;
+  font-size: 0.92rem;
   letter-spacing: 0.05em;
   color: var(--gold-dim);
   padding: 0.4rem 0;
@@ -770,7 +770,7 @@
 .dm-collapse > summary::before {
   content: '▸';
   display: inline-block;
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   color: var(--gold-dim);
   transition: transform 0.18s;
 }
@@ -789,7 +789,7 @@
 }
 
 .dm-collapse > *:not(summary) {
-  font-size: 0.93rem;
+  font-size: 1.02rem;
 }
 
 
@@ -809,7 +809,7 @@
 
 .dm-ops-links a {
   font-family: 'Cinzel', serif;
-  font-size: 0.78rem;
+  font-size: 0.86rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--gold-dim);
@@ -846,7 +846,7 @@
 
 .voyage-grid .voyage-col-eyebrow {
   font-family: 'Cinzel', serif;
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-dim);
@@ -856,7 +856,7 @@
 }
 
 .voyage-grid .voyage-col-body {
-  font-size: 0.9rem;
+  font-size: 0.99rem;
   line-height: 1.55;
   color: var(--text-dim);
 }
@@ -867,7 +867,7 @@
 .voyage-grid .voyage-col-link {
   display: inline-block;
   margin-top: 0.6rem;
-  font-size: 0.78rem;
+  font-size: 0.86rem;
   color: var(--gold-dim);
   text-decoration: none;
   border-bottom: 1px solid var(--gold-rule);
@@ -889,7 +889,7 @@
 
 .voyage-delta-eyebrow {
   font-family: 'Cinzel', serif;
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-dim);
@@ -897,14 +897,14 @@
 }
 
 .voyage-delta-body {
-  font-size: 0.92rem;
+  font-size: 1.01rem;
   line-height: 1.6;
   color: var(--text);
 }
 
 .voyage-delta-body em {
   color: var(--text-muted);
-  font-size: 0.88rem;
+  font-size: 0.97rem;
 }
 
 @media (max-width: 720px) {
@@ -943,7 +943,7 @@
 .dm-collapse-section > summary::before {
   content: '▸';
   display: inline-block;
-  font-size: 0.85rem;
+  font-size: 0.94rem;
   color: var(--gold-dim);
   transition: transform 0.2s;
   flex-shrink: 0;
@@ -1029,7 +1029,7 @@
 .dossier-row > summary::after {
   content: '▸';
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.83rem;
   color: var(--gold-dim);
   transition: transform 0.18s;
   text-align: center;
@@ -1081,13 +1081,13 @@
   font-family: 'Cinzel', serif;
   font-weight: 600;
   color: var(--text);
-  font-size: 0.95rem;
+  font-size: 1.04rem;
   letter-spacing: 0.01em;
   line-height: 1.25;
 }
 
 .dossier-row .dossier-role {
-  font-size: 0.8rem;
+  font-size: 0.88rem;
   color: var(--text-dim);
   font-style: italic;
   margin-top: 0.15rem;
@@ -1095,7 +1095,7 @@
 
 .dossier-row .dossier-detail {
   grid-column: 3;
-  font-size: 0.88rem;
+  font-size: 0.97rem;
   color: var(--text-dim);
   line-height: 1.45;
   min-width: 0;
@@ -1104,7 +1104,7 @@
 /* Expanded body — sits underneath, indented past portrait column */
 .dossier-row-body {
   padding: 0.4rem 1rem 1.1rem calc(64px + 1rem + 0.9rem);
-  font-size: 0.92rem;
+  font-size: 1.01rem;
   line-height: 1.6;
   color: var(--text);
   background: rgba(0,0,0,0.12);
@@ -1117,7 +1117,7 @@
 .dossier-row-body dl { margin: 0.4rem 0; }
 .dossier-row-body dt {
   font-family: 'Cinzel', serif;
-  font-size: 0.78rem;
+  font-size: 0.86rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--gold-dim);
@@ -1132,7 +1132,7 @@
 .dossier-status {
   display: inline-block;
   font-family: 'Cinzel', serif;
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0.15rem 0.5rem;
@@ -1148,7 +1148,7 @@
 
 /* Inline tag-pills used inside dossier rows (e.g. plot-hook type tags) */
 .dossier-row .dm-tag {
-  font-size: 0.62rem;
+  font-size: 0.74rem;
   padding: 0.1rem 0.4rem;
   margin-left: 0.3rem;
   vertical-align: middle;
@@ -1182,7 +1182,7 @@
   .dossier-row .dossier-detail {
     grid-column: 2;
     grid-row: 2;
-    font-size: 0.82rem;
+    font-size: 0.90rem;
   }
   .dossier-row > summary::after { grid-column: 3; grid-row: 1; }
   .dossier-row-body { padding-left: 1rem; }
