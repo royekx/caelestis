@@ -1,16 +1,8 @@
-name: Build site & deploy to Pages
+name: Build search indexes & deploy to Pages
 
-# Runs on every push to main.
-#
-#   1. Transforms the raw tracker exports in data/raw/ into site-ready JSON.
-#   2. Scaffolds any missing entity pages and injects current data into
-#      existing ones.
-#   3. Commits anything that changed, so the repo always reflects the tracker.
-#   4. Builds three separate Pagefind indexes (player / DM / FIA).
-#   5. Publishes the whole site to GitHub Pages.
-#
-# The raw exports are committed by n8n Workflow C via a pull request. Merging
-# that PR is what kicks all of this off.
+# Runs on every push to main. Builds three separate Pagefind indexes
+# (player / DM / FIA) using the Pagefind binary directly, then publishes
+# the whole site to GitHub Pages.
 #
 # ONE-TIME SETUP (do this once, in the repo on github.com):
 #   Settings -> Pages -> Build and deployment -> Source -> "GitHub Actions"
@@ -22,7 +14,7 @@ on:
   workflow_dispatch:      # allows manual re-run from the Actions tab
 
 permissions:
-  contents: write         # needed to commit regenerated data and pages
+  contents: read
   pages: write
   id-token: write
 
@@ -45,36 +37,6 @@ jobs:
         with:
           node-version: 24
 
-      # ── Data ────────────────────────────────────────────────────────────
-      # Reads data/raw/*.json, drops DM-only rows and columns, groups the
-      # session-tagged bullets by voyage, resolves links in both directions,
-      # and writes data/*.json plus data/coverage.md.
-      - name: Build site data from tracker exports
-        run: node scripts/build-data.js
-
-      # ── Pages ───────────────────────────────────────────────────────────
-      # Scaffolds a page for any entity that does not have one yet, then
-      # injects current data into every page carrying a data-entity binding.
-      # Content outside [data-field] markers is never touched.
-      - name: Build entity pages
-        run: node scripts/build-pages.js
-
-      # ── Commit ──────────────────────────────────────────────────────────
-      # [skip ci] keeps this commit from triggering the workflow again.
-      - name: Commit regenerated files
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A data crew-manifest dossiers factions locations inventory quests
-          if git diff --staged --quiet; then
-            echo "Nothing changed."
-          else
-            git commit -m "Rebuild site data and pages [skip ci]"
-            git push
-          fi
-
-      # ── Search indexes ──────────────────────────────────────────────────
-
       # -- Player index -> /pagefind/ --
       # Indexes only the player-facing directories via an explicit glob.
       # prime/, restricted/, wayfinder-path/, stellar-chart/, scripts/,
@@ -83,7 +45,7 @@ jobs:
         run: |
           npx -y pagefind \
             --site . \
-            --glob "{index.html,hub.html,voyages/*.html,logs/*.html,crew-manifest/**/*.html,dossiers/**/*.html,factions/**/*.html,locations/**/*.html,quests/**/*.html,spelljammer-nexus/**/*.html,inventory/**/*.html,handouts/**/*.html,navigation-records/**/*.html}" \
+            --glob "{index.html,hub.html,voyages/*.html,logs/*.html,crew-manifest/**/*.html,dossiers/**/*.html,spelljammer-nexus/**/*.html,inventory/**/*.html,handouts/**/*.html,navigation-records/**/*.html}" \
             --exclude-selectors "[data-pagefind-ignore], nav, .site-nav, footer" \
             --verbose
 
@@ -106,7 +68,7 @@ jobs:
             --exclude-selectors "[data-pagefind-ignore], nav, footer" \
             --verbose
 
-      # ── Publish (with all three index bundles) ──────────────────────────
+      # -- Publish the whole site (with all three index bundles) --
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
