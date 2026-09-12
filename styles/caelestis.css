@@ -57,7 +57,7 @@
   --bridge:      #c08652;
 
   /* ── Misc ── */
-  --radius:      10px;
+  --radius:      0;
 }
 
 /* ── RESET ── */
@@ -115,6 +115,111 @@ body::after {
   position: relative;
   z-index: 1;
 }
+
+
+/* ── CONTENT SCRIM ──
+   The nebula runs bright in places, and pages whose content sits directly
+   on it — prose, lists, anything without its own card — become hard to
+   read. This puts a soft translucent field behind every content column.
+
+   It behaves as a shadow rather than a panel: the box-shadow spreads the
+   same colour outward at a wide blur, so the edges dissolve instead of
+   drawing a rectangle. Pages that already have cards gain a little depth
+   and nothing else. */
+.content { position: relative; z-index: 0; }
+.content::before {
+  content: '';
+  position: absolute;
+  inset: -1.5rem -1.75rem;
+  z-index: -1;
+  border-radius: 0;
+  background: rgba(7, 10, 18, 0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 70px 55px rgba(7, 10, 18, 0.62);
+  pointer-events: none;
+}
+@media (max-width: 620px) {
+  .content::before { inset: -0.75rem -0.9rem; }
+}
+
+
+/* ── SURFACES ──
+   The backdrop does the work. Blocks that used to carry their own fill now
+   sit on the scrim behind the content column, so a page reads as one field
+   of text over the nebula rather than a stack of panels. What separates
+   sections is a rule and space, not a box.
+
+   A fill is reserved for things that are genuinely interactive or set
+   apart — rows you can open, inputs, the active tab — where the surface
+   is saying "this responds" rather than "this is text". */
+.voyage-glance,
+.log-overview,
+.account-body,
+.dossier-row-body,
+.entry-body,
+.section-block {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.section-block { margin-bottom: 2.4rem; }
+
+/* Section labels get a hairline instead of a card edge. */
+.section-label {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 0.9rem;
+}
+
+/* Kept: rows that open, and the sheet a document sits on. */
+.log-entry { background: var(--bg-card); }
+.log-entry:hover { background: var(--bg-raised); }
+
+
+/* ── ENTRY PAGES: a panel, not a scrim ──
+   List pages read well flat — the rows carry their own surface. Detail
+   pages do not: a stat block, prose, and voyage sections sitting loose on
+   the backdrop look unfinished next to an index full of filled rows.
+
+   So any page with an entry header gets a real panel behind its content:
+   the blue fill, a rule, a hard edge. :has() picks them up without a class
+   on the markup; .content.is-panel forces it where the header is absent. */
+body:has(.entry-header) .content::before,
+body:has(.doc-paper) .content::before,
+.content.is-panel::before {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  box-shadow: 0 18px 50px rgba(3, 5, 10, 0.45);
+  inset: -1.75rem -2rem;
+}
+@media (max-width: 620px) {
+  body:has(.entry-header) .content::before,
+  .content.is-panel::before { inset: -0.9rem -1rem; }
+}
+
+
+/* ── ROUNDED: PILLS AND TABS ONLY ──
+   With the softer palette, square containers hold an edge better than
+   rounded ones. Radius is now reserved for the two things that read as
+   controls rather than surfaces: pills, and tabs.
+
+   Tabs round only their top corners and the panel rounds only the three
+   corners the active tab does not meet, so the pair still reads as one
+   continuous surface. */
+.chip, .filter-tag, .q-kind, .prior > summary,
+.log-badge, .log-type-badge, .stub-chip,
+.voyage-nav-bar, .voyage-nav-bottom, .clear-btn,
+.obj-progress, .board-count {
+  border-radius: 999px;
+}
+
+.account-tab, .board-tab { border-radius: 12px 12px 0 0; }
+.account-panel, .board-panel { border-radius: 0 12px 12px 12px; }
 
 /* ── SITE NAV (sub-pages) ── */
 
