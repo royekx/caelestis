@@ -1,0 +1,14 @@
+{
+  "generated": "2026-09-12T21:22:17.382Z",
+  "latestSession": "S04",
+  "latestSessionNumber": 4,
+  "counts": {
+    "sessions": 4,
+    "playerCharacters": 6,
+    "npcs": 20,
+    "factions": 1,
+    "locations": 11,
+    "items": 11,
+    "quests": 11
+  }
+}

@@ -1,0 +1,503 @@
+[
+  {
+    "id": "PC-647haWGJ",
+    "type": "pc",
+    "slug": "boogie",
+    "name": "Boogie",
+    "url": "/crew-manifest/boogie.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Rushed to help wounded Tumak during the Moonraider simulation rather than seek glory",
+          "Held a contested corner bunk calmly when Veena tried to take it, with Sol backing him",
+          "Charmed a light hammer from Mr. Blip, thinking about repair over command",
+          "Took instantly to the Nexus helm exercise and declared he wants to keep the ship alive, not take the helm",
+          "Endured the gym assault course and used magic to help Gregory up the final climb",
+          "Shared his lonely drifting past with Tumak and promised the crew would help find Tumak's family",
+          "Helped Mirt in his hangover before reacting to the room",
+          "Pulled a tiny, half-missing model spelljamming ship from his own chest"
+        ]
+      },
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Ordered only fruit and was given a silvery starfruit at the Weeping Goddess",
+          "Set his half-missing model ship on the table for the crew to see, though no one took up the meaning",
+          "Spoke for the medical role and quietly insisted Gregory take the helm",
+          "Heard Saerthe describe his own stolen miniature ship — the same model as the one within Boogie — and said nothing",
+          "Tended the bulwark through the storm and collected the salvage logbook into his own chest",
+          "Leapt onto the githyanki ship, realized he was overmatched, and threw himself back to the hammerhead"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Helped pull members of the rival crew upright in the wreckage of the simulation chamber",
+          "Understood the recovered rod for what it was — a device built to feed on ambient magic and detonate — before catching the word 'Vocath' spoken between Saerthe and Tarto",
+          "Told Mirt of the tribal sacrifice he survived as a child and the sense of being watched ever since",
+          "Dreamed of countless other versions of himself in an infinite dark, a presence converging on him, and woke with his form half-dissolved before humming himself back together",
+          "Checked his chest and found the half-ship and the derelict logbook both still there"
+        ]
+      },
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "Understood, alongside Gregory, that Ostekk-6's damage was mechanical and beyond anything magic could mend"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "ITM-2pQ7vHm9",
+        "name": "Incomplete Model Spelljamming Ship",
+        "type": "item",
+        "slug": "half-ship",
+        "url": "/inventory/entries/half-ship.html"
+      },
+      {
+        "id": "QST-8vT4kR2m",
+        "name": "The Unfinished Ship Within Boogie",
+        "type": "quest",
+        "slug": "the-unfinished-ship-within-boogie",
+        "url": "/quests/the-unfinished-ship-within-boogie.html"
+      }
+    ],
+    "fields": {
+      "Character": "Boogie",
+      "Player Concept (as known)": "Plasmoid Sorcerer; excels at spelljamming; carries part of a ship within himself",
+      "Affiliation(s)": null,
+      "Personal Thread": "A drifting plasmoid with no family or lasting home, now carrying an incomplete model spelljamming ship that formed inside him for reasons he cannot explain.",
+      "Current State": "Aboard an abandoned tyrant ship as the crew's medic, unsettled by a dream of converging selves and a presence reaching for him.",
+      "What They Last Learned": "That the recovered rod fed on ambient magic to detonate, and that a mimic and a persistent wisp bloom lurk aboard the tyrant ship.",
+      "Notable Items": "Light hammer, shield, incomplete model spelljamming ship",
+      "Overview (Player)": "Boogie is a plasmoid cadet at Caelestis in a semi-transparent blue form with a glittering stone inside him and an inner rhythm that pulls him into dance. He instinctively helps and repairs rather than commands, and has taken the crew's medical role rather than the helm. The incomplete model ship that formed inside him matches one stolen from an instructor, and his sleep has begun to fill with visions of other versions of himself and a presence converging on him.",
+      "Linked": null,
+      "Status": "Active"
+    },
+    "items": [
+      {
+        "id": "ITM-2pQ7vHm9",
+        "name": "Incomplete Model Spelljamming Ship",
+        "type": "item",
+        "slug": "half-ship",
+        "url": "/inventory/entries/half-ship.html"
+      },
+      {
+        "id": "ITM-Dk4nW7pv",
+        "name": "Derelict Logbook",
+        "type": "item",
+        "slug": "derelict-logbook",
+        "url": "/inventory/entries/derelict-logbook.html"
+      }
+    ]
+  },
+  {
+    "id": "PC-t0jvvcOZ",
+    "type": "pc",
+    "slug": "casey-geim",
+    "name": "Casey Geim",
+    "url": "/crew-manifest/casey-geim.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Fought with speed and cold, star-bright magic aboard the Moonraider simulation",
+          "Crossed the gym assault course with natural ease",
+          "Slipped secretly into Mirt's wardrobe and saw unfamiliar constellations and a flickering point",
+          "Heard a familiar voice tell him 'Go there'",
+          "Stole a shirt from the wardrobe and etched the constellation pattern he saw",
+          "Passed the stolen shirt to Tumak's hidden bunk corner without explanation"
+        ]
+      },
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Pulled a Sea Dock cargo notice from the refectory board without explaining why",
+          "Drew Ryeback's private life out of him with warmth and earned an extra portion",
+          "Followed Tumak to the bathroom unseen and noticed his jacket askew, saying nothing",
+          "Took the bosun's role for the crew",
+          "Worked a cargo shift at Rindle Gearloft's dock by mistake and was paid for the time",
+          "Sat at the Sky Dock thinking of his brother, and felt the familiar presence settle beside him again",
+          "Duplicated the salvage logbook to confound the githyanki and fired across the gap in the fight"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Pulled members of the rival crew upright in the wreckage of the simulation chamber",
+          "Went first into the tyrant ship wrapped in a shell of cold arcane ice, and did not move quietly",
+          "Glimpsed a two-starred constellation shape rising in Bartholomew when he looked closely"
+        ]
+      },
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "Held the line beside Sol against the clockwork horrors, working his aim from cover",
+          "Cast Arms of Hadar rendered through his constellations, tentacles of starlight filling the shaft",
+          "Climbed the crew down toward the deck below by rope"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "QST-3mW8kP5v",
+        "name": "The Path to Viren",
+        "type": "quest",
+        "slug": "the-path-to-viren",
+        "url": "/quests/the-path-to-viren.html"
+      }
+    ],
+    "fields": {
+      "Character": "Casey Geim",
+      "Player Concept (as known)": "Hadozee Warlock; zodiac-flavored magic; reads the sky",
+      "Affiliation(s)": null,
+      "Personal Thread": "Following a vision and a voice that told him 'Go there' — a path toward a place beyond H’catha in the Viren star system.",
+      "Current State": "A cadet and the crew's bosun aboard a tyrant ship, still drawn on by a familiar presence.",
+      "What They Last Learned": "That Bartholomew's inner form carries a two-starred constellation from a childhood fall.",
+      "Notable Items": "Star-etched constellation shirt (stolen from Mirt's wardrobe)",
+      "Overview (Player)": "Casey is a hadozee warlock cadet at Caelestis, barefoot and composed beneath a pale green cloak stitched with constellations, wielding cold star-bright magic. Awkward and half-orbiting any conversation, he serves as the crew's bosun. A vision beyond Mirt's wardrobe pointed him toward the Viren star system, and a familiar presence has begun following him elsewhere.",
+      "Linked": null,
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "PC-BGCfmbF3",
+    "type": "pc",
+    "slug": "gregory",
+    "name": "Gregory",
+    "url": "/crew-manifest/gregory.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Used clever spellwork to spoil a deadly strike during the Moonraider simulation",
+          "Recalled the code of conduct forbidding gifts and unofficial payments at the sky dock",
+          "Unsettled by Mr. Blip, an autognome who looked unnervingly like him",
+          "Overcame thinking too far ahead in the Nexus helm exercise once Saerthe named the problem",
+          "Saw through the gym's first illusion and called the truth to Sol",
+          "Added frightened but effective magic in the fight in Mirt's quarters"
+        ]
+      },
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Accepted a set of spare utensils from Ryeback, taking the kindly-meant gesture as it was offered",
+          "Took the navigator's role and joined the second helm exercise at the Nexus",
+          "Plotted the hammerhead's course toward the asteroid field and named targets in the githyanki fight",
+          "Saw the arc of black lightning snap out of Sol and back again during the asteroid crossing",
+          "Duplicated the salvage logbook alongside Casey to confound the enemy",
+          "Judged, straight-faced, that no cadet-manual provision governed stopping for stranded vessels"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Spotted the arcane rod jammed in the wall, worked it free, and stepped clear as energy arced off it",
+          "Assessed the rod with precision as spent arcane dynamite, unlikely to detonate again absent another strong magic source, then thrust it at Boatswain Tarto and fled",
+          "Sorted through Saerthe's chaotic desk and found a note about Bartholomew's helm affinity",
+          "Searched the Nexus terminals for arcane artillery and runes, but was locked out of a fleet-clearance category by his cadet star",
+          "Told Mirt of his master and creator, Gregory Prime, now dead and buried",
+          "Read his master's journal that night, dwelling on the line about getting underneath things before the break did",
+          "Saw his own face on the broken autognome the clockwork horrors were feeding on, and cast before he had fully decided to"
+        ]
+      },
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "Opened the tyrant-ship fight with a volley of magic missiles across the clockwork horrors",
+          "Pulled the broken autognome Ostekk-6 clear of danger with a Vortex Warp before turning back to fight — a mercy the table felt",
+          "Understood, with Boogie, that Ostekk-6's ruin was mechanical and no magic could close it",
+          "Shared the telepathic link Tumak opened, receiving Ostekk-6's warnings, and sent magic missiles into the wisp swarm"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "QST-6bC9wN4k",
+        "name": "Gregory's Pull",
+        "type": "quest",
+        "slug": "gregorys-pull",
+        "url": "/quests/gregorys-pull.html"
+      }
+    ],
+    "fields": {
+      "Character": "Gregory",
+      "Player Concept (as known)": "Autognome; navigation-minded; senses direction and anomalies",
+      "Affiliation(s)": null,
+      "Personal Thread": "Farther from home and his master than ever, feeling a new tug in his core drawing him somewhere unknown.",
+      "Current State": "Aboard an abandoned tyrant ship as the crew's navigator, moved by the broken autognome he chose to save.",
+      "What They Last Learned": "That the broken autognome Ostekk-6 needs physical repair no magic can supply, and that a mimic and a persistent wisp bloom lurk aboard.",
+      "Notable Items": null,
+      "Overview (Player)": "Gregory is a bronze autognome cadet at Caelestis with glasses and a mustache, hesitant and observant, quick to notice what others miss. He has settled as the crew's navigator, his course-plotting proven under pressure. Far from his dead master, he feels a pull in his core drawing him toward somewhere he cannot yet name, and has begun to reach for others before the damage does.",
+      "Linked": null,
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "PC-6rzWlD8Q",
+    "type": "pc",
+    "slug": "sol-fortuna",
+    "name": "Sol Fortuna",
+    "url": "/crew-manifest/sol-fortuna.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Drove a ballista bolt through an attacker during the Moonraider simulation",
+          "Stepped silently behind Boogie in the bunk dispute to back him without being asked",
+          "Sought out Joffrey and asked what this life truly offered; talked his way into heavier armament",
+          "Navigated the Nexus helm exercise by anticipating danger before it arrived",
+          "Fell hard on the gym course but forced himself back up to finish after Boogie shouted him on",
+          "Noticed the wardrobe in Mirt's chambers opened onto bounded astral night",
+          "Subdued the final centipede creature alive, sensing it might matter as evidence",
+          "Told Boogie his life had always turned unlucky and he wanted to spend it exploring"
+        ]
+      },
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Asked Ryeback for soup and was given knock-your-mama's-socks-off soup",
+          "Took the guns for the crew",
+          "Sensed misfortune reaching for a crewmate mid-jump and took it onto himself instead, saving Boogie's landing",
+          "Heard a woman laugh three times as his strength dropped and understood it was Beshaba"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Traced the crate at the Sky Dock with Boogie, finding it marked with the same symbol as the rod",
+          "Worked an elven cargo clerk in conversation and learned shipments route through Mr. Blip, with Toril and H’catha as destinations",
+          "Heard a curious, unhurried voice in the night ask why he embraced chaos and whether he had truly escaped where he came from, and answered honestly"
+        ]
+      },
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "Took the front of both tyrant-ship fights and held the line, drawing the enemy onto himself",
+          "Cast Divine Sense across the wisp bloom and struck the first flower with Sacred Flame",
+          "Cast Arms of Hadar into the wisp swarm, dark tentacles catching the weak-limbed things",
+          "Used Misfortune's Favor to draw ill luck onto his own shoulders and made the save through it"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "QST-4wN8kB2v",
+        "name": "The Laughter of Beshaba",
+        "type": "quest",
+        "slug": "the-laughter-of-beshaba",
+        "url": "/quests/the-laughter-of-beshaba.html"
+      }
+    ],
+    "fields": {
+      "Character": "Sol Fortuna",
+      "Player Concept (as known)": "Astral Elf Paladin of Beshaba; resilient and resourceful",
+      "Affiliation(s)": null,
+      "Personal Thread": "A paladin of Beshaba whose luck turns unlucky, now having heard the goddess herself laugh at his shoulder.",
+      "Current State": "Aboard an abandoned tyrant ship as the crew's gunner and front line, watched now by a curious voice that speaks of fate.",
+      "What They Last Learned": "That academy shipments route through Mr. Blip toward Toril and H’catha, and that a voice takes interest in his fate, doubting he has escaped where he came from.",
+      "Notable Items": "Heavier armament acquired from the quartermaster's stores",
+      "Overview (Player)": "Sol Fortuna is a tall, pale, dark-haired astral elf paladin of Beshaba with white eyes, steady even after simulated death. He anticipates danger before it arrives and puts himself between it and his crew as their gunner and front line. Beshaba has laughed at his shoulder, and now a curious voice speaks to him of fate and whether he has truly escaped his origin.",
+      "Linked": null,
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "PC-wI087olT",
+    "type": "pc",
+    "slug": "tumak-swan",
+    "name": "Tumak Swan",
+    "url": "/crew-manifest/tumak-swan.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Answered the Moonraider chaos with a crossbow shot, then took a brutal blast to the shoulder",
+          "Traded for a darker bunk more to his liking",
+          "Bought a healing potion at the quartermaster's stores",
+          "Managed the Nexus helm exercise, though Saerthe noticed part of his mind seemed elsewhere",
+          "Followed Casey into the wardrobe and claimed a crimson bag of holding and valuables",
+          "Admitted to Boogie he is searching for his own family",
+          "Hung curtains around his bunk and hid Casey's stolen shirt without question"
+        ]
+      },
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Studied the refectory notice board for anything familiar from home and found nothing",
+          "Ordered two meatloafs from Ryeback",
+          "Warned the table that things going missing all over the academy might mean something, then said no more",
+          "Took the captain's chair for the crew, calling movement during the salvage run",
+          "Fired a rope line across the void to try to catch Boogie, missing by half a body's length"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Searched Saerthe's desk at the Nexus and looked for symbols on the terminals, finding nothing useful",
+          "Found a dim blue half-rune glowing on the sole of his left foot and a second, different mark on his right shoulder — two halves of two separate wholes",
+          "Told Mirt of Joffrey's suspicious exchange at the Sky Dock, and of the family and destination he is trying to find",
+          "Glimpsed 'fleet intelligence archive' written on Mirt's notepad, the same phrase from the locked Nexus terminal",
+          "Argued Mirt into granting the crew sailor-level clearance"
+        ]
+      },
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "Grew frustrated with Ostekk-6's silence and opened a telepathic link between himself, Gregory, and Ostekk-6 in a moment of need, without understanding how",
+          "Cast a fire bolt for the first time, magic he did not know he had",
+          "Summoned his soul knife for the first time as his two runes flared, drawn through a small portal, and felt for the first time a tether running toward home",
+          "Heard the Rune Keeper say all things find their way home as his throw went wide, and the blade curved true to strike the last wisp"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "ITM-Yq5kW8vn",
+        "name": "Tumak's Soul Knife",
+        "type": "item",
+        "slug": "tumaks-soul-knife",
+        "url": "/inventory/entries/tumaks-soul-knife.html"
+      },
+      {
+        "id": "NPC-Jv7kW3mq",
+        "name": "The Rune Keeper",
+        "type": "npc",
+        "slug": "the-rune-keeper",
+        "url": "/dossiers/the-rune-keeper.html"
+      },
+      {
+        "id": "QST-Zk6mW3vn",
+        "name": "Tumak's Runes and the Tether Home",
+        "type": "quest",
+        "slug": "tumaks-runes-and-the-tether-home",
+        "url": "/quests/tumaks-runes-and-the-tether-home.html"
+      },
+      {
+        "id": "QST-5kN7wB3v",
+        "name": "Tumak's Search for Family",
+        "type": "quest",
+        "slug": "tumaks-search-for-family",
+        "url": "/quests/tumaks-search-for-family.html"
+      }
+    ],
+    "fields": {
+      "Character": "Tumak Swan",
+      "Player Concept (as known)": "Rogue (Soulknife); searching for somewhere they cannot yet name",
+      "Affiliation(s)": null,
+      "Personal Thread": "Searching for his own family, now trusting the crew to help him find them.",
+      "Current State": "Aboard an abandoned tyrant ship as the crew's captain, newly awakened to runes, powers, and a tether pulling toward home.",
+      "What They Last Learned": "That his soul knife is drawn through a small portal that is a piece of the home he seeks, and that the tether he feels is a connection to it rather than a direction on any map.",
+      "Notable Items": "Healing potion, crimson bag of holding and valuables (from Mirt's wardrobe), hidden star-etched shirt, soul knife",
+      "Overview (Player)": "Tumak Swan is a slight rogue swallowed by an oversized coat, muttering reassurances to himself, whose mind often seems divided. He holds the captain's chair for the crew and keeps a curtained corner of his bunk for things he would rather not explain. He is searching for a family he cannot yet name — and has begun to manifest powers and glowing half-runes he does not understand, with a tether now pulling him toward home.",
+      "Linked": null,
+      "Status": "Active"
+    },
+    "items": [
+      {
+        "id": "ITM-8kL3nWp5",
+        "name": "Star-Etched Constellation Shirt",
+        "type": "item",
+        "slug": "constellation-shirt",
+        "url": "/inventory/entries/constellation-shirt.html"
+      },
+      {
+        "id": "ITM-6rW9kT4v",
+        "name": "Crimson Bag of Holding",
+        "type": "item",
+        "slug": "crimson-bag-of-holding",
+        "url": "/inventory/entries/crimson-bag-of-holding.html"
+      },
+      {
+        "id": "ITM-Yq5kW8vn",
+        "name": "Tumak's Soul Knife",
+        "type": "item",
+        "slug": "tumaks-soul-knife",
+        "url": "/inventory/entries/tumaks-soul-knife.html"
+      }
+    ]
+  },
+  {
+    "id": "PC-Bw9kt3Lq",
+    "type": "pc",
+    "slug": "bartholomew-grayson",
+    "name": "Bartholomew Grayson",
+    "url": "/crew-manifest/bartholomew-grayson.html",
+    "voyages": [
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Oriented by Boatswain Tarto, who told him being a wilder changed nothing once he was aboard a crew",
+          "Found a seat at the Weeping Goddess beside Miken and joined the gathering crew",
+          "Ordered the dragon scale pizza Tarto had recommended",
+          "Took instantly to the helm in a Nexus practice, settling the open spelljammer's seat for the crew",
+          "Flew the hammerhead through an electrical storm and led the salvage race",
+          "Called a fog cloud over the hull and, during the githyanki attack, slowed the ship to give Boogie a way back aboard"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Pulled members of the rival crew upright in the wreckage of the simulation chamber"
+        ]
+      },
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "Shifted into a starry form of light bearing two stars, and recognized it as the shape he saw during a childhood fall",
+          "Dropped a lit match down the bottomless quarters shaft and watched wisps rise toward the light",
+          "Cast into the wisp fight in the choked shafts and took a full shock for ten damage"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Character": "Bartholomew Grayson",
+      "Player Concept (as known)": "Human; Druid; Wilder; newly arrived cadet with a natural helm affinity",
+      "Affiliation(s)": null,
+      "Personal Thread": "A newly arrived wilder cadet finding his place aboard a crew, with an uncanny natural gift for the helm.",
+      "Current State": "Aboard an abandoned tyrant ship as the crew's spelljammer, his childhood two-starred vision surfacing in his own form.",
+      "What They Last Learned": "That the two-starred constellation he saw during a childhood fall is a shape he can now call to the surface of himself.",
+      "Notable Items": null,
+      "Overview (Player)": "Bartholomew is a human druid and wilder, a cadet at Caelestis with an uncanny natural affinity for the helm. Quiet and untroubled, he has slipped into the crew and settled as its spelljammer. When he shifts into a starry form, a two-starred constellation surfaces — a shape he carries from a fall he took as a child.",
+      "Linked": null,
+      "Status": "Active"
+    }
+  }
+]

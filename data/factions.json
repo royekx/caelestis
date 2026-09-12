@@ -1,0 +1,66 @@
+[
+  {
+    "id": "FAO-Lx7kR2vN",
+    "type": "faction",
+    "slug": "caelestis-academy",
+    "name": "Caelestis Academy",
+    "url": "/factions/caelestis-academy.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Hosted the cadets' first day: a simulated battle, orientation, cadet quarters, sky dock, quartermaster's stores, Nexus helm exercise, and gymnasium",
+          "Revealed as a machine of access and hierarchy governed by halls, ranks, thresholds, and access stars",
+          "Grown tense from recent thefts; a wave of burglaries struck across the tower during the attack on Mirt",
+          "Led by Mirt the Merciless, with Boatswain and Joffrey named among its great spelljammers"
+        ]
+      },
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Received the new wilder cadet Bartholomew into a crew of six",
+          "Ran a salvage race between two cadet crews in the Simulation Deck",
+          "Struck again by theft, this time of Saerthe's own named miniature spelljamming ship"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Nearly killed a chamber of cadets when an arcane device detonated during the salvage simulation",
+          "Governs a fleet-intelligence archive locked behind clearance the cadets cannot yet access",
+          "Granted the crew sailor-level clearance and dispatched them, aboard a tyrant ship, to recover a meteor that struck H’catha"
+        ]
+      }
+    ],
+    "seen": [
+      "S01",
+      "S02",
+      "S03"
+    ],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "LOC-Tn4bK9wR",
+        "name": "Caelestis",
+        "type": "location",
+        "slug": "caelestis",
+        "url": "/navigation-records/caelestis.html"
+      }
+    ],
+    "fields": {
+      "Faction": "Caelestis Academy",
+      "Type": "Institution / Spelljammer academy",
+      "Party Relationship": "The cadets' academy",
+      "Visibility": "Player",
+      "Current State": "Shaken by an arcane attack in its own simulation chamber and the named threat of Vocath.",
+      "Seen": "S01, S02, S03",
+      "Mentioned": null,
+      "Overview (Player)": "Caelestis is the spelljammer academy where the cadets train, a layered machine of halls, ranks, and access permissions overlooking the Astral Sea. Led by Mirt the Merciless, it is currently tense from a spreading wave of thefts.",
+      "Linked": null,
+      "Status": "Active"
+    }
+  }
+]

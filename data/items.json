@@ -1,0 +1,580 @@
+[
+  {
+    "id": "ITM-2pQ7vHm9",
+    "type": "item",
+    "slug": "half-ship",
+    "name": "Incomplete Model Spelljamming Ship",
+    "url": "/inventory/entries/half-ship.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Boogie pulled a tiny model spelljamming ship from his own chest, the same kind he guided in training, except half of it is missing",
+          "He has no explanation for how it formed inside him or why it is incomplete"
+        ]
+      },
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Boogie set it on the table for the crew; Tumak remarked that things had been going missing all over the academy",
+          "Revealed to be the same model as the miniature spelljamming ship stolen from Saerthe"
+        ]
+      }
+    ],
+    "seen": [
+      "S01",
+      "S02"
+    ],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "ITM-8pC4kW2n",
+        "name": "Saerthe's Miniature Spelljamming Ship",
+        "type": "item",
+        "slug": "saerthes-miniature-ship",
+        "url": "/inventory/entries/saerthes-miniature-ship.html"
+      },
+      {
+        "id": "PC-647haWGJ",
+        "name": "Boogie",
+        "type": "pc",
+        "slug": "boogie",
+        "url": "/crew-manifest/boogie.html"
+      },
+      {
+        "id": "QST-9dK3wR7n",
+        "name": "The Caelestis Burglaries",
+        "type": "quest",
+        "slug": "the-caelestis-burglaries",
+        "url": "/quests/the-caelestis-burglaries.html"
+      },
+      {
+        "id": "QST-8vT4kR2m",
+        "name": "The Unfinished Ship Within Boogie",
+        "type": "quest",
+        "slug": "the-unfinished-ship-within-boogie",
+        "url": "/quests/the-unfinished-ship-within-boogie.html"
+      }
+    ],
+    "fields": {
+      "Item": "Incomplete Model Spelljamming Ship",
+      "Type": "Mysterious object",
+      "Held By": "Boogie",
+      "Origin": "Formed inside Boogie for unknown reasons",
+      "Overview (Player)": "A tiny model spelljamming ship that formed inside Boogie for reasons he cannot explain, half of it inexplicably missing. It is the same model as the personal miniature ship stolen from the instructor Saerthe — a connection Boogie has kept to himself.",
+      "Linked": "PC-647haWGJ",
+      "Visibility": "Player",
+      "Seen": "S01, S02",
+      "Mentioned": null,
+      "Status": "Held",
+      "Class": "Magic Item",
+      "Item Type": "Wondrous Item",
+      "Rarity": "Unknown"
+    }
+  },
+  {
+    "id": "ITM-8kL3nWp5",
+    "type": "item",
+    "slug": "constellation-shirt",
+    "name": "Star-Etched Constellation Shirt",
+    "url": "/inventory/entries/constellation-shirt.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Casey stole a shirt from Mirt's wardrobe and etched into it the constellation pattern he saw beyond",
+          "Passed to Tumak's hidden bunk corner without explanation, and hidden without question"
+        ]
+      }
+    ],
+    "seen": [
+      "S01"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Item": "Star-Etched Constellation Shirt",
+      "Type": "Garment",
+      "Held By": "Tumak Swan",
+      "Origin": "Taken from Mirt's wardrobe",
+      "Overview (Player)": "A shirt Casey stole from Mirt's wardrobe and etched with the unfamiliar constellations he glimpsed inside it. It now sits hidden in Tumak's curtained bunk corner.",
+      "Linked": null,
+      "Visibility": "Player",
+      "Seen": "S01",
+      "Mentioned": null,
+      "Status": "Held",
+      "Class": "Mundane",
+      "Item Type": "Wondrous Item",
+      "Rarity": null
+    }
+  },
+  {
+    "id": "ITM-6rW9kT4v",
+    "type": "item",
+    "slug": "crimson-bag-of-holding",
+    "name": "Crimson Bag of Holding",
+    "url": "/inventory/entries/crimson-bag-of-holding.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Tumak found and claimed a crimson bag of holding and valuables within Mirt's wardrobe"
+        ]
+      }
+    ],
+    "seen": [
+      "S01"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Item": "Crimson Bag of Holding",
+      "Type": "Magic item",
+      "Held By": "Tumak Swan",
+      "Origin": "Claimed from within Mirt's wardrobe",
+      "Overview (Player)": "A crimson bag of holding, along with valuables, that Tumak claimed for himself from inside Mirt's impossible wardrobe.",
+      "Linked": null,
+      "Visibility": "Player",
+      "Seen": "S01",
+      "Mentioned": null,
+      "Status": "Held",
+      "Class": "Magic Item",
+      "Item Type": "Wondrous Item",
+      "Rarity": "Uncommon"
+    }
+  },
+  {
+    "id": "ITM-4kD8vRt2",
+    "type": "item",
+    "slug": "mirts-wardrobe",
+    "name": "Mirt's Wardrobe",
+    "url": "/inventory/entries/mirts-wardrobe.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "A wardrobe in Mirt's chambers whose interior opens onto a bounded stretch of astral night, a floor you can stand on and stars where walls should be",
+          "Casey saw unfamiliar constellations and a flickering point inside, and a familiar voice told him 'Go there'",
+          "Revealed by Mirt to be a magical replica of a place beyond H’catha in the Viren star system, gifted by the spellcaster Zerathis"
+        ]
+      }
+    ],
+    "seen": [
+      "S01"
+    ],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "LOC-Jd5cW7nK",
+        "name": "Mirt's Quarters",
+        "type": "location",
+        "slug": "mirts-quarters",
+        "url": null
+      },
+      {
+        "id": "LOC-Cw8kM4vB",
+        "name": "Viren Star System",
+        "type": "location",
+        "slug": "viren-star-system",
+        "url": "/navigation-records/viren-star-system.html"
+      },
+      {
+        "id": "NPC-Wc9fT2nJ",
+        "name": "Mirt the Merciless",
+        "type": "npc",
+        "slug": "mirt",
+        "url": "/dossiers/mirt.html"
+      },
+      {
+        "id": "QST-3mW8kP5v",
+        "name": "The Path to Viren",
+        "type": "quest",
+        "slug": "the-path-to-viren",
+        "url": "/quests/the-path-to-viren.html"
+      }
+    ],
+    "fields": {
+      "Item": "Mirt's Wardrobe",
+      "Type": "Magical portal object",
+      "Held By": "Mirt's Quarters",
+      "Origin": "Gifted to Mirt by the spellcaster Zerathis",
+      "Overview (Player)": "Mirt's wardrobe is an impossible object that opens not onto ordinary space but a bounded stretch of astral night, a magical replica of a place beyond H’catha in the Viren star system, gifted to Mirt by the spellcaster Zerathis.",
+      "Linked": "LOC-Cw8kM4vB",
+      "Visibility": "Player",
+      "Seen": "S01",
+      "Mentioned": null,
+      "Status": "Held",
+      "Class": "Magic Item",
+      "Item Type": "Wondrous Item",
+      "Rarity": "Unknown"
+    }
+  },
+  {
+    "id": "ITM-5nB7wK9x",
+    "type": "item",
+    "slug": "crated-centipede-creature",
+    "name": "Crated Centipede Creature",
+    "url": "/inventory/entries/crated-centipede-creature.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Worm-like centipede creatures burst from the crate delivered to Mirt and attacked the cadets",
+          "Sol subdued the final creature alive and forced it back into the crate, sensing it might matter as evidence",
+          "Mirt praised the instinct to keep it alive"
+        ]
+      }
+    ],
+    "seen": [
+      "S01"
+    ],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "QST-9dK3wR7n",
+        "name": "The Caelestis Burglaries",
+        "type": "quest",
+        "slug": "the-caelestis-burglaries",
+        "url": "/quests/the-caelestis-burglaries.html"
+      },
+      {
+        "id": "QST-7hN4kV2m",
+        "name": "The Living Clue in the Crate",
+        "type": "quest",
+        "slug": "the-living-clue-in-the-crate",
+        "url": "/quests/the-living-clue-in-the-crate.html"
+      }
+    ],
+    "fields": {
+      "Item": "Crated Centipede Creature",
+      "Type": "Living clue / evidence",
+      "Held By": "Mirt's Quarters",
+      "Origin": "Delivered to Mirt in a crate from the sky dock",
+      "Overview (Player)": "A worm-like centipede creature, one of several that burst from the crate delivered to Mirt, kept alive and sealed back in the crate by Sol as potential evidence in the academy's spreading thefts.",
+      "Linked": "QST-7hN4kV2m",
+      "Visibility": "Player",
+      "Seen": "S01",
+      "Mentioned": null,
+      "Status": "Held",
+      "Class": "Evidence",
+      "Item Type": "Curiosity",
+      "Rarity": null
+    }
+  },
+  {
+    "id": "ITM-8pC4kW2n",
+    "type": "item",
+    "slug": "saerthes-miniature-ship",
+    "name": "Saerthe's Miniature Spelljamming Ship",
+    "url": "/inventory/entries/saerthes-miniature-ship.html",
+    "voyages": [
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Saerthe's own named miniature spelljamming ship, stolen from him in some manner not yet explained",
+          "He briefly lost his composure over its theft during the cadets' helm exercise",
+          "The same model as the half-missing ship that came out of Boogie's chest"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [
+      "S02"
+    ],
+    "links": [
+      {
+        "id": "ITM-2pQ7vHm9",
+        "name": "Incomplete Model Spelljamming Ship",
+        "type": "item",
+        "slug": "half-ship",
+        "url": "/inventory/entries/half-ship.html"
+      },
+      {
+        "id": "NPC-Zx4Bn7Lq",
+        "name": "Saerthe Abizjn",
+        "type": "npc",
+        "slug": "saerthe-abizjn",
+        "url": "/dossiers/saerthe-abizjn.html"
+      },
+      {
+        "id": "QST-9dK3wR7n",
+        "name": "The Caelestis Burglaries",
+        "type": "quest",
+        "slug": "the-caelestis-burglaries",
+        "url": "/quests/the-caelestis-burglaries.html"
+      },
+      {
+        "id": "QST-8vT4kR2m",
+        "name": "The Unfinished Ship Within Boogie",
+        "type": "quest",
+        "slug": "the-unfinished-ship-within-boogie",
+        "url": "/quests/the-unfinished-ship-within-boogie.html"
+      }
+    ],
+    "fields": {
+      "Item": "Saerthe's Miniature Spelljamming Ship",
+      "Type": "Miniature vessel",
+      "Held By": null,
+      "Origin": "Saerthe Abizjn's personal miniature, missing from the academy",
+      "Overview (Player)": "A personal miniature spelljamming ship belonging to the instructor Saerthe, taken from him in a manner not yet explained. It is the same model as the incomplete ship that formed inside Boogie.",
+      "Linked": "NPC-Zx4Bn7Lq, ITM-2pQ7vHm9",
+      "Visibility": "Player",
+      "Seen": null,
+      "Mentioned": "S02",
+      "Status": "Lost",
+      "Class": "Magic Item",
+      "Item Type": "Wondrous Item",
+      "Rarity": "Unknown"
+    }
+  },
+  {
+    "id": "ITM-Wp4kT8vn",
+    "type": "item",
+    "slug": "vocath-arcane-rod",
+    "name": "Vocath Arcane Rod",
+    "url": "/inventory/entries/vocath-arcane-rod.html",
+    "voyages": [
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Gregory pried it from the wall of the wrecked simulation chamber, a length of sigil-engraved metal that arced energy as it came loose",
+          "Built to feed on ambient magical energy and hold the charge until it could no longer contain it — arcane dynamite",
+          "Assessed as spent and unlikely to detonate again, save near another strong source of magic",
+          "Bears the marking 'Vocath'; Saerthe took it and drew it back before Boogie could examine it",
+          "Saerthe produced an illusion of it for Mirt at the bridge"
+        ]
+      }
+    ],
+    "seen": [
+      "S03"
+    ],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "NPC-Mw6kT2vn",
+        "name": "Vocath",
+        "type": "npc",
+        "slug": "vocath",
+        "url": "/dossiers/vocath.html"
+      },
+      {
+        "id": "QST-9dK3wR7n",
+        "name": "The Caelestis Burglaries",
+        "type": "quest",
+        "slug": "the-caelestis-burglaries",
+        "url": "/quests/the-caelestis-burglaries.html"
+      }
+    ],
+    "fields": {
+      "Item": "Vocath Arcane Rod",
+      "Type": "Arcane device",
+      "Held By": "Saerthe Abizjn",
+      "Origin": "Jammed into the wall of the simulation chamber during the salvage exercise",
+      "Overview (Player)": "A sigil-engraved metal rod Gregory pulled from the wall of the wrecked simulation chamber — a device built to feed on ambient magic and detonate, now spent. It bears the marking 'Vocath,' and Saerthe has taken it to study.",
+      "Linked": "NPC-Mw6kT2vn",
+      "Visibility": "Player",
+      "Seen": "S03",
+      "Mentioned": null,
+      "Status": "Held",
+      "Class": "Magic Item",
+      "Item Type": "Rod",
+      "Rarity": "Unknown"
+    }
+  },
+  {
+    "id": "ITM-Xn7kW2vm",
+    "type": "item",
+    "slug": "marked-crate",
+    "name": "Marked Crate at the Sky Dock",
+    "url": "/inventory/entries/marked-crate.html",
+    "voyages": [
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "A crate Boogie found tucked behind others at the Sky Dock, marked with the same symbol as the Vocath rod",
+          "Knocking on it revealed nothing living inside, but it was not hollow",
+          "Its contents would route through Mr. Blip, with Toril and H’catha as destinations; no one came for it while the crew watched"
+        ]
+      }
+    ],
+    "seen": [
+      "S03"
+    ],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "NPC-Mw6kT2vn",
+        "name": "Vocath",
+        "type": "npc",
+        "slug": "vocath",
+        "url": "/dossiers/vocath.html"
+      },
+      {
+        "id": "QST-9dK3wR7n",
+        "name": "The Caelestis Burglaries",
+        "type": "quest",
+        "slug": "the-caelestis-burglaries",
+        "url": "/quests/the-caelestis-burglaries.html"
+      }
+    ],
+    "fields": {
+      "Item": "Marked Crate at the Sky Dock",
+      "Type": "Suspicious cargo",
+      "Held By": "Sky Dock",
+      "Origin": "Placed at the Sky Dock by an unknown party",
+      "Overview (Player)": "A crate the crew found at the Sky Dock, tucked behind others and marked with the same symbol as the Vocath rod. It is not hollow but holds nothing living, and no one came for it while the crew watched.",
+      "Linked": "NPC-Mw6kT2vn",
+      "Visibility": "Player",
+      "Seen": "S03",
+      "Mentioned": null,
+      "Status": "Held",
+      "Class": "Evidence",
+      "Item Type": "Container",
+      "Rarity": null
+    }
+  },
+  {
+    "id": "ITM-Yq5kW8vn",
+    "type": "item",
+    "slug": "tumaks-soul-knife",
+    "name": "Tumak's Soul Knife",
+    "url": "/inventory/entries/tumaks-soul-knife.html",
+    "voyages": [
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "Summoned by Tumak for the first time in the tyrant-ship shaft fight, a spectral blade drawn out of a small portal",
+          "As it left him, his two half-runes flared, and he felt for the first time a tether toward home — the portal a piece of that somewhere",
+          "Thrown wide, it curved true and struck the last wisp as the Rune Keeper said all things find their way home"
+        ]
+      }
+    ],
+    "seen": [
+      "S04"
+    ],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "PC-wI087olT",
+        "name": "Tumak Swan",
+        "type": "pc",
+        "slug": "tumak-swan",
+        "url": "/crew-manifest/tumak-swan.html"
+      },
+      {
+        "id": "QST-Zk6mW3vn",
+        "name": "Tumak's Runes and the Tether Home",
+        "type": "quest",
+        "slug": "tumaks-runes-and-the-tether-home",
+        "url": "/quests/tumaks-runes-and-the-tether-home.html"
+      }
+    ],
+    "fields": {
+      "Item": "Tumak's Soul Knife",
+      "Type": "Psionic weapon",
+      "Held By": "Tumak Swan",
+      "Origin": "Manifested by Tumak, drawn through a small portal tied to home",
+      "Overview (Player)": "A spectral blade Tumak manifests through a small portal at his call. When he first drew it, his half-runes flared and he felt a tether running toward the home he seeks — the portal itself a piece of that somewhere.",
+      "Linked": "PC-wI087olT",
+      "Visibility": "Player",
+      "Seen": "S04",
+      "Mentioned": null,
+      "Status": "Held",
+      "Class": "Magic Item",
+      "Item Type": "Weapon",
+      "Rarity": null
+    }
+  },
+  {
+    "id": "ITM-Dk4nW7pv",
+    "type": "item",
+    "slug": "derelict-logbook",
+    "name": "Derelict Logbook",
+    "url": "/inventory/entries/derelict-logbook.html",
+    "voyages": [
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Found in the captain’s quarters of the derelict, half-tucked behind a long-decomposed body",
+          "Boogie slipped it inside his own chest without explaining the impulse",
+          "Casey bound a duplicate of the pages and Gregory followed with a second, leaving three identical logbooks"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Boogie confirmed it still rests in his chest beside the half-ship"
+        ]
+      }
+    ],
+    "seen": [
+      "S02",
+      "S03"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Item": "Derelict Logbook",
+      "Type": "Ship’s log",
+      "Held By": "Boogie",
+      "Origin": "Recovered from a derelict in the salvage simulation",
+      "Overview (Player)": "The logbook the crews raced for in the salvage exercise, found behind the body of something long decomposed. Boogie slipped it into his own chest and has carried it since. Casey and Gregory each bound a duplicate of its pages during the githyanki attack, so three identical copies exist.",
+      "Seen": "S02, S03",
+      "Mentioned": null,
+      "Status": "Held",
+      "Visibility": "Player",
+      "Linked": null,
+      "Class": "Document",
+      "Item Type": "Curiosity",
+      "Rarity": null
+    }
+  },
+  {
+    "id": "ITM-Cm8rT3wk",
+    "type": "item",
+    "slug": "collection-manifest",
+    "name": "Collection Manifest",
+    "url": "/inventory/entries/collection-manifest.html",
+    "voyages": [
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "Gave the broken autognome in the cargo hold its name: Ostekk-6"
+        ]
+      }
+    ],
+    "seen": [
+      "S04"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Item": "Collection Manifest",
+      "Type": "Cargo manifest",
+      "Held By": "The Tyrant Ship",
+      "Origin": "Found aboard the tyrant ship",
+      "Overview (Player)": "The tyrant ship’s own cargo record. It is what gave the broken autognome in the hold a name — Ostekk-6 — and it lists what else the vessel was carrying.",
+      "Seen": "S04",
+      "Mentioned": null,
+      "Status": "Held",
+      "Visibility": "Player",
+      "Linked": null,
+      "Class": "Document",
+      "Item Type": "Curiosity",
+      "Rarity": null
+    }
+  }
+]

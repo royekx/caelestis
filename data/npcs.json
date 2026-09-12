@@ -1,0 +1,1036 @@
+[
+  {
+    "id": "NPC-3xR7kLm2",
+    "type": "npc",
+    "slug": "captain-sardax",
+    "name": "Captain Sardax",
+    "url": "/dossiers/captain-sardax.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Appeared bleeding across the deck of the Moonraider, ordering the cadets to hold the top deck and give no quarter, within a simulation of his doomed final battle"
+        ]
+      }
+    ],
+    "seen": [
+      "S01"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Name": "Captain Sardax",
+      "Gender": null,
+      "Affiliation(s)": "Caelestis / Moonraider",
+      "Party Relationship": "Encountered only within a simulation of his final battle",
+      "Role (as known)": "Captain of the Moonraider",
+      "Visibility": "Player",
+      "Current State": "Known only through the simulation of his final battle.",
+      "Seen": "S01",
+      "Mentioned": null,
+      "Overview (Player)": "Captain Sardax was the captain of the Moonraider, whose doomed final battle the cadets relived as their first test at Caelestis. He is known to the party only as the dying commander in that simulated memory.",
+      "Linked": null,
+      "Category": "Beyond the Academy",
+      "Status": "Deceased"
+    }
+  },
+  {
+    "id": "NPC-9dTp4qWz",
+    "type": "npc",
+    "slug": "boatswain-tarto",
+    "name": "Boatswain Tarto",
+    "url": "/dossiers/boatswain-tarto.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Revealed the Moonraider battle was a simulation of Sardax's doomed final stand, never meant to be won",
+          "Praised each cadet's strengths and issued their assignments",
+          "Warned the cadets to stay together amid recent thefts and gave them the errand to deliver a crate to Mirt",
+          "Named the lag between the cadets as a good sign they were becoming a crew",
+          "Named by Mr. Blip as a great spelljammer of Caelestis in years past"
+        ]
+      },
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Oriented the new cadet Bartholomew, telling him being a wilder changed nothing aboard a crew, and pointed him to the Weeping Goddess",
+          "Told cadets they needed no simulation chamber to practice and took them to the Nexus, sending for Saerthe",
+          "Ran the salvage simulation briefing alongside Saerthe"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Moved through the wreckage of the simulation chamber ushering the injured out, and received the recovered rod from Gregory",
+          "Conferred with Saerthe over the rod and its marking, Vocath",
+          "Met the cadets at the bridge and walked them in to Mirt",
+          "Woke the cadets at four in the morning banging metal, and briefed them over breakfast on the H’catha meteor recovery aboard a tyrant ship"
+        ]
+      }
+    ],
+    "seen": [
+      "S01",
+      "S02",
+      "S03"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Name": "Boatswain Tarto",
+      "Gender": null,
+      "Affiliation(s)": "Caelestis Academy",
+      "Party Relationship": "Instructor overseeing the cadets",
+      "Role (as known)": "Boatswain and instructor at Caelestis",
+      "Visibility": "Player",
+      "Current State": "Overseeing the cadets' training and their mission to crew a tyrant ship to H’catha.",
+      "Seen": "S01, S02, S03",
+      "Mentioned": null,
+      "Overview (Player)": "Boatswain Tarto is an instructor at Caelestis who oversees the cadets' testing and orientation. Once counted among the academy's great spelljammers, she reads the shape of a forming crew keenly.",
+      "Linked": null,
+      "Category": "Command & Staff",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-Kf2mNb8x",
+    "type": "npc",
+    "slug": "sor-kur",
+    "name": "Sor'Kur",
+    "url": "/dossiers/sor-kur.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Greeted the cadets in administration with a voice that entered their minds instead of their ears",
+          "Issued packets, vouchers, and temporary access stars"
+        ]
+      }
+    ],
+    "seen": [
+      "S01"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Name": "Sor'Kur",
+      "Gender": null,
+      "Affiliation(s)": "Caelestis Academy (administration)",
+      "Party Relationship": "Academy receptionist",
+      "Role (as known)": "Thri-kreen administration receptionist",
+      "Visibility": "Player",
+      "Current State": "Working administration at Caelestis.",
+      "Seen": "S01",
+      "Mentioned": null,
+      "Overview (Player)": "Sor’Kur is a thri-kreen receptionist in Caelestis's administration whose voice enters the mind directly. She issues the packets, vouchers, and access stars that govern the academy's layered order.",
+      "Linked": null,
+      "Category": "Command & Staff",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-Vn5wYh3k",
+    "type": "npc",
+    "slug": "veena",
+    "name": "Veena",
+    "url": "/dossiers/veena.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Tried to take Boogie's corner bunk before he had settled in, then backed off when Sol stepped in behind him"
+        ]
+      },
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Assigned with Miken, Barret, and the rest of their squad to the salvage race from the opposite chamber"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Injured in the arcane blast that wrecked the simulation chamber, and lay bandaged and unconscious but breathing in the infirmary"
+        ]
+      }
+    ],
+    "seen": [
+      "S01",
+      "S02",
+      "S03"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Name": "Veena",
+      "Gender": "Female",
+      "Affiliation(s)": "Caelestis Academy (cadet)",
+      "Party Relationship": "Rival cadet",
+      "Role (as known)": "Fellow cadet",
+      "Visibility": "Player",
+      "Current State": "Recovering unconscious in the infirmary after the simulation blast.",
+      "Seen": "S01, S02, S03",
+      "Mentioned": null,
+      "Overview (Player)": "Veena is a fellow cadet at Caelestis on the crew that races opposite the party. She contested Boogie's corner bunk on the first day before backing down, and was badly hurt in the arcane blast that wrecked the simulation chamber — she now recovers, unconscious but breathing, in the infirmary.",
+      "Linked": null,
+      "Category": "Cadet Corps",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-Qp8jL2vR",
+    "type": "npc",
+    "slug": "kip-and-pik",
+    "name": "Kip and Pik",
+    "url": "/dossiers/kip-and-pik.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "With Pik, guided the cadets through the anatomy of a vessel and the meaning of the spelljamming helm, speaking almost as a shared thought",
+          "With Kip, guided the cadets through the anatomy of a vessel and the meaning of the spelljamming helm, speaking almost as a shared thought"
+        ]
+      }
+    ],
+    "seen": [
+      "S01"
+    ],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "NPC-Qp8jL2vR",
+        "name": "Kip and Pik",
+        "type": "npc",
+        "slug": "kip-and-pik",
+        "url": "/dossiers/kip-and-pik.html"
+      }
+    ],
+    "fields": {
+      "Name": "Kip and Pik",
+      "Gender": null,
+      "Affiliation(s)": "Caelestis Academy (sky dock)",
+      "Party Relationship": "Instructor at the sky dock",
+      "Role (as known)": "Gnome sky dock instructor",
+      "Visibility": "Player",
+      "Current State": "Instructing at the sky dock.",
+      "Seen": "S01",
+      "Mentioned": null,
+      "Overview (Player)": "Two gnomes who run the Sky Dock and speak almost as a shared thought. They taught the cadets the anatomy of a spelljamming vessel and what the helm actually does — that a ship is not steered so much as joined.",
+      "Linked": "NPC-Rt7bZ4mK",
+      "Category": "Command & Staff",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-Hs6cW9pM",
+    "type": "npc",
+    "slug": "joffrey",
+    "name": "Joffrey",
+    "url": "/dossiers/joffrey.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Sol sought him out to ask what this life truly offered; he answered not riches but duty, vigilance, and survival",
+          "Named by Mr. Blip as the present-day great spelljammer of Caelestis"
+        ]
+      },
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Casey went looking for him at the Sea Dock and later the Sky Dock to ask about hadozee birth signs, but did not find him either place"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Tumak told Mirt of the suspicious exchange he and the others had seen Joffrey make at the Sky Dock; Mirt urged them to look into him cautiously given his standing"
+        ]
+      }
+    ],
+    "seen": [
+      "S01"
+    ],
+    "mentioned": [
+      "S02",
+      "S03"
+    ],
+    "links": [
+      {
+        "id": "QST-9dK3wR7n",
+        "name": "The Caelestis Burglaries",
+        "type": "quest",
+        "slug": "the-caelestis-burglaries",
+        "url": "/quests/the-caelestis-burglaries.html"
+      }
+    ],
+    "fields": {
+      "Name": "Joffrey",
+      "Gender": null,
+      "Affiliation(s)": "Caelestis Academy",
+      "Party Relationship": "Respected sailor the cadets sought out",
+      "Role (as known)": "Respected sailor and current great spelljammer of Caelestis",
+      "Visibility": "Player",
+      "Current State": "Serving as a respected sailor at Caelestis, now quietly under the cadets' suspicion.",
+      "Seen": "S01",
+      "Mentioned": "S02, S03",
+      "Overview (Player)": "Joffrey is a respected sailor at Caelestis, named the present-day great spelljammer of the academy. He frames the spelljamming life as one of duty, vigilance, and survival rather than riches.",
+      "Linked": null,
+      "Category": "Command & Staff",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-Zx4Bn7Lq",
+    "type": "npc",
+    "slug": "saerthe-abizjn",
+    "name": "Saerthe Abizjn",
+    "url": "/dossiers/saerthe-abizjn.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Brought the cadets into the Nexus under the tension of an ectoplasmic breach elsewhere in the tower",
+          "Ran the cadets' first helm exercise over a floating field of miniature ships",
+          "Named Gregory's problem of thinking too far ahead, and noticed the divided quality in Tumak's mind"
+        ]
+      },
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Ran a second helm exercise for Boogie, Gregory, and Bartholomew at the Nexus",
+          "Briefly lost his composure over the theft of his own named miniature spelljamming ship, then caught himself and apologized",
+          "Ran the salvage simulation briefing alongside Tarto"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Helped usher the injured from the wrecked simulation chamber alongside Tarto",
+          "Took the recovered rod, drew it back before Boogie could examine it, and said he simply did not yet know what it was",
+          "Conferred with Tarto over a marking on the rod: Vocath",
+          "At the bridge, produced an illusion of the rod for Mirt and named the marking Vocath"
+        ]
+      }
+    ],
+    "seen": [
+      "S01",
+      "S02",
+      "S03"
+    ],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "ITM-8pC4kW2n",
+        "name": "Saerthe's Miniature Spelljamming Ship",
+        "type": "item",
+        "slug": "saerthes-miniature-ship",
+        "url": "/inventory/entries/saerthes-miniature-ship.html"
+      },
+      {
+        "id": "QST-9dK3wR7n",
+        "name": "The Caelestis Burglaries",
+        "type": "quest",
+        "slug": "the-caelestis-burglaries",
+        "url": "/quests/the-caelestis-burglaries.html"
+      },
+      {
+        "id": "QST-8vT4kR2m",
+        "name": "The Unfinished Ship Within Boogie",
+        "type": "quest",
+        "slug": "the-unfinished-ship-within-boogie",
+        "url": "/quests/the-unfinished-ship-within-boogie.html"
+      }
+    ],
+    "fields": {
+      "Name": "Saerthe Abizjn",
+      "Gender": null,
+      "Affiliation(s)": "Caelestis Academy (Spelljammer Nexus)",
+      "Party Relationship": "Instructor at the Nexus",
+      "Role (as known)": "Helm instructor at the Spelljammer Nexus",
+      "Visibility": "Player",
+      "Current State": "Instructing at the Nexus and investigating the recovered arcane rod and its marking, Vocath.",
+      "Seen": "S01, S02, S03",
+      "Mentioned": null,
+      "Overview (Player)": "Saerthe Abizjn is a helm instructor at Caelestis's Spelljammer Nexus who runs the cadets' first true helm exercise over the Astral Sea. He reads each cadet's approach sharply, naming their difficulties as they arise.",
+      "Linked": null,
+      "Category": "Command & Staff",
+      "Status": "Active"
+    },
+    "items": [
+      {
+        "id": "ITM-Wp4kT8vn",
+        "name": "Vocath Arcane Rod",
+        "type": "item",
+        "slug": "vocath-arcane-rod",
+        "url": "/inventory/entries/vocath-arcane-rod.html"
+      }
+    ]
+  },
+  {
+    "id": "NPC-Mb3vK8dW",
+    "type": "npc",
+    "slug": "mr-blip",
+    "name": "Mr. Blip",
+    "url": "/dossiers/mr-blip.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Outfitted the cadets at the quartermaster's stores; unsettled Gregory by looking unnervingly like him",
+          "Charmed by Boogie into giving up a light hammer",
+          "Named Boatswain and Joffrey as great spelljammers of Caelestis, with older absences hanging over the stories",
+          "Arrived with officers in Mirt's chambers and confirmed the attack was likely a diversion amid a wave of burglaries"
+        ]
+      }
+    ],
+    "seen": [
+      "S01"
+    ],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "QST-9dK3wR7n",
+        "name": "The Caelestis Burglaries",
+        "type": "quest",
+        "slug": "the-caelestis-burglaries",
+        "url": "/quests/the-caelestis-burglaries.html"
+      }
+    ],
+    "fields": {
+      "Name": "Mr. Blip",
+      "Gender": null,
+      "Affiliation(s)": "Caelestis Academy (quartermaster's stores)",
+      "Party Relationship": "Quartermaster who outfitted the cadets",
+      "Role (as known)": "Autognome at the quartermaster's stores",
+      "Visibility": "Player",
+      "Current State": "Working the quartermaster's stores at Caelestis.",
+      "Seen": "S01",
+      "Mentioned": null,
+      "Overview (Player)": "Mr. Blip is an autognome running Caelestis's quartermaster's stores, unnervingly similar in appearance to Gregory. He supplies the cadets and keeps the lore of the academy's great spelljammers.",
+      "Linked": null,
+      "Category": "Command & Staff",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-Wc9fT2nJ",
+    "type": "npc",
+    "slug": "mirt",
+    "name": "Mirt the Merciless",
+    "url": "/dossiers/mirt.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Found half-buried in a hangover in cluttered chambers scattered with curiosities and a fishbowl of two octopi, Flotsam and Jetsam",
+          "Praised Sol's instinct to subdue the creature alive as evidence",
+          "Rewarded the cadets with gold and revealed to Casey that the wardrobe is a magical replica of a place beyond H’catha in the Viren star system, gifted by a spellcaster named Zerathis"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Summoned the six cadets to the bridge, thanked them again, and asked what they had noticed collecting the crate",
+          "Went still when Saerthe named the rod's marking, and revealed that Vocath had long borne him a grudge, making anyone connected to him a target",
+          "Told the cadets to keep it to themselves, check the teaching rooms for similar devices, and look cautiously into Joffrey and a man named Jeffrey",
+          "Rewarded the cadets for the simulation win and paid extra for their discretion, then granted them sailor-level clearance",
+          "Left the phrase 'fleet intelligence archive' visible on his notepad beside the fishbowl"
+        ]
+      }
+    ],
+    "seen": [
+      "S01",
+      "S03"
+    ],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "ITM-4kD8vRt2",
+        "name": "Mirt's Wardrobe",
+        "type": "item",
+        "slug": "mirts-wardrobe",
+        "url": "/inventory/entries/mirts-wardrobe.html"
+      },
+      {
+        "id": "NPC-Mw6kT2vn",
+        "name": "Vocath",
+        "type": "npc",
+        "slug": "vocath",
+        "url": "/dossiers/vocath.html"
+      },
+      {
+        "id": "QST-9dK3wR7n",
+        "name": "The Caelestis Burglaries",
+        "type": "quest",
+        "slug": "the-caelestis-burglaries",
+        "url": "/quests/the-caelestis-burglaries.html"
+      }
+    ],
+    "fields": {
+      "Name": "Mirt the Merciless",
+      "Gender": null,
+      "Affiliation(s)": "Caelestis Academy",
+      "Party Relationship": "Head of the academy the cadets served",
+      "Role (as known)": "Head of Caelestis",
+      "Visibility": "Player",
+      "Current State": "Leading Caelestis and directing the cadets against Vocath, an old enemy who bears him a grudge.",
+      "Seen": "S01, S03",
+      "Mentioned": null,
+      "Overview (Player)": "Mirt the Merciless is the head of Caelestis, occupying cluttered chambers full of status and excess, including an impossible wardrobe that opens onto astral night. He rewarded the cadets and let slip the wardrobe's origin in the Viren system.",
+      "Linked": "ITM-4kD8vRt2",
+      "Category": "Command & Staff",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-Py6hN3xB",
+    "type": "npc",
+    "slug": "zerathis",
+    "name": "Zerathis",
+    "url": "/dossiers/zerathis.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Named by Mirt as the spellcaster who gifted him the magical wardrobe replicating a place beyond H’catha in the Viren star system"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [
+      "S01"
+    ],
+    "links": [
+      {
+        "id": "QST-3mW8kP5v",
+        "name": "The Path to Viren",
+        "type": "quest",
+        "slug": "the-path-to-viren",
+        "url": "/quests/the-path-to-viren.html"
+      }
+    ],
+    "fields": {
+      "Name": "Zerathis",
+      "Gender": null,
+      "Affiliation(s)": null,
+      "Party Relationship": "Unknown (named only)",
+      "Role (as known)": "Spellcaster who gifted Mirt the wardrobe",
+      "Visibility": "Player",
+      "Current State": "Referenced only; whereabouts unknown.",
+      "Seen": null,
+      "Mentioned": "S01",
+      "Overview (Player)": "Zerathis is a spellcaster named by Mirt as the one who gifted him the impossible wardrobe replicating a place in the Viren star system. The party has not encountered them.",
+      "Linked": null,
+      "Category": "Beyond the Academy",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-4tR8kW2n",
+    "type": "npc",
+    "slug": "winston-ryeback",
+    "name": "Winston Ryeback",
+    "url": "/dossiers/winston-ryeback.html",
+    "voyages": [
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Ran the Weeping Goddess kitchen at a bellow that carried over the crowd",
+          "Served the crew bowls with brusque affection and took their special orders",
+          "Gave Boogie a silvery starfruit, Sol his knock-your-mama's-socks-off soup, and Tumak two meatloafs",
+          "Offered Gregory spare utensils as a kindness, not knowing what else to give an autognome",
+          "Mentioned a cadet named Barret talking about a hadozee who could read birthdays",
+          "Warmed to Casey's questions about his private life — hot baths and knitting — and gave him an extra portion"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Served the subdued academy without his usual bellow the evening after the explosion",
+          "Joined the tyrant-ship crew, saluting alongside Tarto, to cook and command the deckhands"
+        ]
+      },
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "Among the crew present aboard the tyrant ship as they settled and took stock in the lull"
+        ]
+      }
+    ],
+    "seen": [
+      "S02",
+      "S03",
+      "S04"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Name": "Winston Ryeback",
+      "Gender": "Male",
+      "Affiliation(s)": "Caelestis Academy (Weeping Goddess)",
+      "Party Relationship": "Galley cook who fed and warmed to the cadets",
+      "Role (as known)": "Petty officer and galley cook at the Weeping Goddess",
+      "Visibility": "Player",
+      "Current State": "Aboard the tyrant ship as the crew's cook, commanding the deckhands.",
+      "Seen": "S02, S03, S04",
+      "Mentioned": null,
+      "Overview (Player)": "Petty Officer Winston Ryeback runs the kitchen at the Weeping Goddess refectory, commanding the din with a bellow and feeding the cadets with brusque affection. Beneath the gruffness he keeps hot baths and knitting for himself, and warms to anyone who asks kindly.",
+      "Linked": null,
+      "Category": "Command & Staff",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-7wK4mB9x",
+    "type": "npc",
+    "slug": "miken",
+    "name": "Miken",
+    "url": "/dossiers/miken.html",
+    "voyages": [
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Shared his table at the Weeping Goddess with Bartholomew and the gathering crew",
+          "Nervous and talkative about the simulation, glancing repeatedly at an empty chair no one named",
+          "Left graciously when Boogie signaled the crew had matters to discuss",
+          "Silenced Tumak's strange snoring with an incantation beyond a cadet of his year",
+          "Assigned with Veena, Barret, and the rest of his squad to the same salvage exercise from the opposite chamber"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Knelt over a fallen crewmate in the wrecked simulation chamber, working to bring them back",
+          "Sat unhurt but shaken in the infirmary beside his injured crewmates, hiding a wince, and asked to stay with them, calling them his crew",
+          "Was among the crew aboard the tyrant ship, present as they settled and took stock"
+        ]
+      },
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "Among the crew as they settled the cleared area aboard the tyrant ship and took stock of themselves"
+        ]
+      }
+    ],
+    "seen": [
+      "S02",
+      "S03",
+      "S04"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Name": "Miken",
+      "Gender": "Male",
+      "Affiliation(s)": "Caelestis Academy (cadet)",
+      "Party Relationship": "Friendly cadet from the rival crew",
+      "Role (as known)": "Fellow cadet on the rival crew",
+      "Visibility": "Player",
+      "Current State": "Aboard the tyrant ship with the crew, keeping close to those he counts as his own.",
+      "Seen": "S02, S03, S04",
+      "Mentioned": null,
+      "Overview (Player)": "Miken is a slight, nervous cadet at Caelestis on the crew that races opposite the party. Easy company and quick to understand, he showed a command of magic that seems to run ahead of his year.",
+      "Linked": null,
+      "Category": "Cadet Corps",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-2mV7kB4w",
+    "type": "npc",
+    "slug": "rindle-gearloft",
+    "name": "Rindle Gearloft",
+    "url": "/dossiers/rindle-gearloft.html",
+    "voyages": [
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Ran a dock Casey reached by mistake while looking for the Sea Dock",
+          "Barked orders at Casey and had him work cargo for the better part of an hour",
+          "Apologized when he learned a cadet had filled the refectory job, and quietly paid Casey for the time"
+        ]
+      }
+    ],
+    "seen": [
+      "S02"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Name": "Rindle Gearloft",
+      "Gender": "Male",
+      "Affiliation(s)": null,
+      "Party Relationship": "Dock master Casey worked a shift for",
+      "Role (as known)": "Dock master",
+      "Visibility": "Player",
+      "Current State": "Running his dock near the Sea Dock.",
+      "Seen": "S02",
+      "Mentioned": null,
+      "Overview (Player)": "Rindle Gearloft runs a dock near the Sea Dock, gruff and preoccupied until his attention is demanded. He worked Casey hard over a cargo job, then apologized and paid him fairly once he realized a cadet had answered the notice.",
+      "Linked": null,
+      "Category": "Beyond the Academy",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-Dm3vT8wq",
+    "type": "npc",
+    "slug": "derek",
+    "name": "Derek",
+    "url": "/dossiers/derek.html",
+    "voyages": [
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Lay bandaged and unconscious but breathing in the infirmary beside Veena after the simulation blast"
+        ]
+      }
+    ],
+    "seen": [
+      "S03"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Name": "Derek",
+      "Gender": null,
+      "Affiliation(s)": "Caelestis Academy (cadet)",
+      "Party Relationship": "Cadet on the rival crew",
+      "Role (as known)": "Fellow cadet on the rival crew",
+      "Visibility": "Player",
+      "Current State": "Recovering unconscious in the infirmary after the simulation blast.",
+      "Seen": "S03",
+      "Mentioned": null,
+      "Overview (Player)": "Derek is a cadet at Caelestis who was injured in the arcane blast that wrecked the simulation chamber. He recovers, unconscious but breathing, in the infirmary alongside Veena.",
+      "Linked": null,
+      "Category": "Cadet Corps",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-Fq6kW2vn",
+    "type": "npc",
+    "slug": "krik-lit",
+    "name": "Krik'Lit",
+    "url": "/dossiers/krik-lit.html",
+    "voyages": [
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "A thri-kreen deckhand assigned under Ryeback for the tyrant-ship voyage to H’catha"
+        ]
+      }
+    ],
+    "seen": [
+      "S03"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Name": "Krik'Lit",
+      "Gender": null,
+      "Affiliation(s)": "Caelestis Academy",
+      "Party Relationship": "Deckhand on the tyrant-ship crew",
+      "Role (as known)": "Thri-kreen deckhand",
+      "Visibility": "Player",
+      "Current State": "Serving as a deckhand aboard the tyrant ship.",
+      "Seen": "S03",
+      "Mentioned": null,
+      "Overview (Player)": "Krik’Lit is a thri-kreen deckhand assigned to the crew for the voyage to recover the H’catha meteor, serving under Petty Officer Ryeback.",
+      "Linked": null,
+      "Category": "Tyrant Ship",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-Gp8mT4kw",
+    "type": "npc",
+    "slug": "pffred",
+    "name": "Pffred",
+    "url": "/dossiers/pffred.html",
+    "voyages": [
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "A plasmoid deckhand who wears a kerchief knotted at the throat like a necktie, assigned under Ryeback for the tyrant-ship voyage to H’catha"
+        ]
+      },
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "Among the crew, in his knotted kerchief, as they settled and took stock aboard the tyrant ship"
+        ]
+      }
+    ],
+    "seen": [
+      "S03",
+      "S04"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Name": "Pffred",
+      "Gender": null,
+      "Affiliation(s)": "Caelestis Academy",
+      "Party Relationship": "Deckhand on the tyrant-ship crew",
+      "Role (as known)": "Plasmoid deckhand",
+      "Visibility": "Player",
+      "Current State": "Serving as a deckhand aboard the tyrant ship.",
+      "Seen": "S03, S04",
+      "Mentioned": null,
+      "Overview (Player)": "Pffred is a plasmoid deckhand who wears a kerchief knotted like a necktie, assigned to the tyrant-ship crew under Petty Officer Ryeback for the voyage to H’catha.",
+      "Linked": null,
+      "Category": "Tyrant Ship",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-Hn4kW9vm",
+    "type": "npc",
+    "slug": "ostekk-6",
+    "name": "Ostekk-6",
+    "url": "/dossiers/ostekk-6.html",
+    "voyages": [
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Found in the tyrant ship's cargo hold, lower half gone and voice box destroyed, as clockwork horrors fed on it"
+        ]
+      },
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "Named on the cargo manifest as Ostekk-6; its arcane core intact but its mechanical body beyond magical repair",
+          "Pulled to safety by Gregory's Vortex Warp during the fight",
+          "Communicated through a telepathic link Tumak opened, warning of a shape-shifting mimic aboard, a bloom overrunning the ship, and more clockwork horrors",
+          "Explained that the way to the command deck runs through the access shafts, and that killing the flowers does not unmake the wisps already loose",
+          "Confirmed the way to the command deck runs through the choked access shafts, which are not passable while the bloom holds",
+          "Explained through the link that the flower produces the wisps, but killing it does not unmake the ones already loose — something else keeps them present"
+        ]
+      }
+    ],
+    "seen": [
+      "S03",
+      "S04"
+    ],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "QST-Xr4mW8vn",
+        "name": "The Tyrant Ship and the H’catha Meteor",
+        "type": "quest",
+        "slug": "the-tyrant-ship-and-the-hcatha-meteor",
+        "url": "/quests/the-tyrant-ship-and-the-hcatha-meteor.html"
+      }
+    ],
+    "fields": {
+      "Name": "Ostekk-6",
+      "Gender": null,
+      "Affiliation(s)": null,
+      "Party Relationship": "A broken autognome the crew saved aboard the tyrant ship",
+      "Role (as known)": "Damaged autognome aboard the tyrant ship",
+      "Visibility": "Player",
+      "Current State": "Saved but immobilized aboard the tyrant ship, guiding the crew through a telepathic link.",
+      "Seen": "S03, S04",
+      "Mentioned": null,
+      "Overview (Player)": "Ostekk-6 is an autognome the crew found broken in the tyrant ship's cargo hold, its lower half gone and its voice box destroyed. Its arcane core is intact but its body needs physical repair no magic can provide. Saved by the crew, it warns them of the dangers aboard through a telepathic link.",
+      "Linked": null,
+      "Category": "Tyrant Ship",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-Jv7kW3mq",
+    "type": "npc",
+    "slug": "the-rune-keeper",
+    "name": "The Rune Keeper",
+    "url": "/dossiers/the-rune-keeper.html",
+    "voyages": [
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "Spoke again as Tumak's first soul-knife throw went wide, saying quietly that all things find their way home, and the blade bent around true to strike the last wisp"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [
+      "S04"
+    ],
+    "links": [
+      {
+        "id": "PC-wI087olT",
+        "name": "Tumak Swan",
+        "type": "pc",
+        "slug": "tumak-swan",
+        "url": "/crew-manifest/tumak-swan.html"
+      },
+      {
+        "id": "QST-Zk6mW3vn",
+        "name": "Tumak's Runes and the Tether Home",
+        "type": "quest",
+        "slug": "tumaks-runes-and-the-tether-home",
+        "url": "/quests/tumaks-runes-and-the-tether-home.html"
+      }
+    ],
+    "fields": {
+      "Name": "The Rune Keeper",
+      "Gender": null,
+      "Affiliation(s)": null,
+      "Party Relationship": "A presence tied to Tumak's runes",
+      "Role (as known)": "The presence behind Tumak's marks",
+      "Visibility": "Player",
+      "Current State": "A voice tied to Tumak's runes, speaking to him of finding the way home.",
+      "Seen": null,
+      "Mentioned": "S04",
+      "Overview (Player)": "The Rune Keeper is the presence Tumak associates with the half-runes on his body. It spoke to him as his first soul-knife throw went astray, telling him that all things find their way home — and the blade bent back to its mark.",
+      "Linked": "PC-wI087olT",
+      "Category": "Unfiled",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-Lp3kW8vn",
+    "type": "npc",
+    "slug": "jeffrey",
+    "name": "Jeffrey",
+    "url": "/dossiers/jeffrey.html",
+    "voyages": [
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Named by Mirt, alongside Joffrey, as a man the cadets should look into cautiously"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [
+      "S03"
+    ],
+    "links": [
+      {
+        "id": "QST-9dK3wR7n",
+        "name": "The Caelestis Burglaries",
+        "type": "quest",
+        "slug": "the-caelestis-burglaries",
+        "url": "/quests/the-caelestis-burglaries.html"
+      }
+    ],
+    "fields": {
+      "Name": "Jeffrey",
+      "Gender": null,
+      "Affiliation(s)": null,
+      "Party Relationship": "Named by Mirt as one to look into",
+      "Role (as known)": "A man Mirt wants investigated",
+      "Visibility": "Player",
+      "Current State": "Named only; the cadets have been asked to look into him.",
+      "Seen": null,
+      "Mentioned": "S03",
+      "Overview (Player)": "Jeffrey is a man Mirt named to the cadets as someone to look into, alongside the sailor Joffrey. The party has not yet encountered him.",
+      "Linked": null,
+      "Category": "Beyond the Academy",
+      "Status": "Active"
+    }
+  },
+  {
+    "id": "NPC-Mw6kT2vn",
+    "type": "npc",
+    "slug": "vocath",
+    "name": "Vocath",
+    "url": "/dossiers/vocath.html",
+    "voyages": [
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "A marking found on the arcane rod recovered from the wrecked simulation chamber; neither Saerthe nor Tarto recognized the word",
+          "Named by Mirt as one who had long borne him a grudge, making anyone connected to Mirt a potential target"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [
+      "S03"
+    ],
+    "links": [
+      {
+        "id": "ITM-Xn7kW2vm",
+        "name": "Marked Crate at the Sky Dock",
+        "type": "item",
+        "slug": "marked-crate",
+        "url": "/inventory/entries/marked-crate.html"
+      },
+      {
+        "id": "ITM-Wp4kT8vn",
+        "name": "Vocath Arcane Rod",
+        "type": "item",
+        "slug": "vocath-arcane-rod",
+        "url": "/inventory/entries/vocath-arcane-rod.html"
+      },
+      {
+        "id": "NPC-Wc9fT2nJ",
+        "name": "Mirt the Merciless",
+        "type": "npc",
+        "slug": "mirt",
+        "url": "/dossiers/mirt.html"
+      },
+      {
+        "id": "QST-9dK3wR7n",
+        "name": "The Caelestis Burglaries",
+        "type": "quest",
+        "slug": "the-caelestis-burglaries",
+        "url": "/quests/the-caelestis-burglaries.html"
+      }
+    ],
+    "fields": {
+      "Name": "Vocath",
+      "Gender": null,
+      "Affiliation(s)": null,
+      "Party Relationship": "An old enemy of Mirt, threat to those connected to him",
+      "Role (as known)": "Old enemy of Mirt behind the arcane device",
+      "Visibility": "Player",
+      "Current State": "A named enemy of Mirt, tied to the arcane device that struck the academy.",
+      "Seen": null,
+      "Mentioned": "S03",
+      "Overview (Player)": "Vocath is a name marked on the arcane device that nearly killed the cadets in the simulation chamber. Mirt named Vocath as an old enemy who has long borne him a grudge, warning that anyone connected to him could be a target.",
+      "Linked": "NPC-Wc9fT2nJ",
+      "Category": "Beyond the Academy",
+      "Status": "Active"
+    }
+  }
+]

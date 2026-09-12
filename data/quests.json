@@ -1,0 +1,842 @@
+[
+  {
+    "id": "QST-9dK3wR7n",
+    "type": "quest",
+    "slug": "the-caelestis-burglaries",
+    "name": "The Caelestis Burglaries",
+    "url": "/quests/the-caelestis-burglaries.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Caelestis had already grown tense from recent thefts before the cadets' first day",
+          "Boogie noticed a suspicious exchange between a dock officer and a merchant at the sky dock",
+          "The attack on Mirt was likely a diversion; Mr. Blip and officers confirmed more burglaries struck the academy simultaneously"
+        ]
+      },
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Tumak warned the crew that things were going missing all over the academy",
+          "Saerthe's personal miniature spelljamming ship was revealed stolen — the same model as the incomplete ship inside Boogie"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "An arcane device marked 'Vocath' detonated in the simulation chamber, nearly killing everyone inside",
+          "Mirt named Vocath as an old enemy bearing him a grudge, making anyone connected to him a target",
+          "A crate at the Sky Dock bore the same symbol as the rod; its contents route through Mr. Blip toward Toril and H’catha",
+          "Mirt asked the cadets to check the teaching rooms for similar devices and to look cautiously into Joffrey and a man named Jeffrey"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "ITM-5nB7wK9x",
+        "name": "Crated Centipede Creature",
+        "type": "item",
+        "slug": "crated-centipede-creature",
+        "url": "/inventory/entries/crated-centipede-creature.html"
+      },
+      {
+        "id": "ITM-2pQ7vHm9",
+        "name": "Incomplete Model Spelljamming Ship",
+        "type": "item",
+        "slug": "half-ship",
+        "url": "/inventory/entries/half-ship.html"
+      },
+      {
+        "id": "ITM-Xn7kW2vm",
+        "name": "Marked Crate at the Sky Dock",
+        "type": "item",
+        "slug": "marked-crate",
+        "url": "/inventory/entries/marked-crate.html"
+      },
+      {
+        "id": "ITM-8pC4kW2n",
+        "name": "Saerthe's Miniature Spelljamming Ship",
+        "type": "item",
+        "slug": "saerthes-miniature-ship",
+        "url": "/inventory/entries/saerthes-miniature-ship.html"
+      },
+      {
+        "id": "ITM-Wp4kT8vn",
+        "name": "Vocath Arcane Rod",
+        "type": "item",
+        "slug": "vocath-arcane-rod",
+        "url": "/inventory/entries/vocath-arcane-rod.html"
+      },
+      {
+        "id": "NPC-Lp3kW8vn",
+        "name": "Jeffrey",
+        "type": "npc",
+        "slug": "jeffrey",
+        "url": "/dossiers/jeffrey.html"
+      },
+      {
+        "id": "NPC-Hs6cW9pM",
+        "name": "Joffrey",
+        "type": "npc",
+        "slug": "joffrey",
+        "url": "/dossiers/joffrey.html"
+      },
+      {
+        "id": "NPC-Wc9fT2nJ",
+        "name": "Mirt the Merciless",
+        "type": "npc",
+        "slug": "mirt",
+        "url": "/dossiers/mirt.html"
+      },
+      {
+        "id": "NPC-Mb3vK8dW",
+        "name": "Mr. Blip",
+        "type": "npc",
+        "slug": "mr-blip",
+        "url": "/dossiers/mr-blip.html"
+      },
+      {
+        "id": "NPC-Zx4Bn7Lq",
+        "name": "Saerthe Abizjn",
+        "type": "npc",
+        "slug": "saerthe-abizjn",
+        "url": "/dossiers/saerthe-abizjn.html"
+      },
+      {
+        "id": "NPC-Mw6kT2vn",
+        "name": "Vocath",
+        "type": "npc",
+        "slug": "vocath",
+        "url": "/dossiers/vocath.html"
+      }
+    ],
+    "fields": {
+      "Quest": "The Caelestis Burglaries",
+      "Type": "Mystery",
+      "Related Character(s)": "Boogie, Gregory, Sol Fortuna",
+      "Current State": "An arcane device marked 'Vocath' nearly killed a chamber of cadets; Mirt has named Vocath an old enemy, and a matching crate sits at the Sky Dock.",
+      "Overview (Player)": "A wave of thefts and now an arcane attack have struck Caelestis. The device that nearly killed a chamber of cadets bore the marking 'Vocath' — an old enemy of Mirt who bears him a grudge, putting anyone connected to Mirt at risk. A crate at the Sky Dock carries the same symbol and routes through the quartermaster Mr. Blip. Mirt has asked the cadets to check the teaching rooms and look into Joffrey and a man named Jeffrey.",
+      "Visibility": "Player",
+      "Urgency": "High",
+      "Last Engaged (Session #)": 3,
+      "Next Planned Beat": "Check the teaching rooms for more devices and investigate Joffrey, Jeffrey, and the marked crate's route through Mr. Blip.",
+      "Status": "Open",
+      "Linked": "ITM-5nB7wK9x, NPC-Wc9fT2nJ, NPC-Zx4Bn7Lq, ITM-8pC4kW2n, ITM-2pQ7vHm9, NPC-Mw6kT2vn, ITM-Wp4kT8vn, ITM-Xn7kW2vm, NPC-Hs6cW9pM, NPC-Lp3kW8vn, NPC-Mb3vK8dW"
+    },
+    "parent": null,
+    "kind": "Quest",
+    "objectives": [
+      {
+        "done": true,
+        "text": "Recover the arcane device from the wrecked simulation chamber"
+      },
+      {
+        "done": false,
+        "text": "Look into Joffrey and the man named Jeffrey"
+      },
+      {
+        "done": false,
+        "text": "Trace the marked crate’s route through Mr. Blip"
+      }
+    ],
+    "progress": {
+      "done": 1,
+      "total": 3
+    },
+    "giver": {
+      "name": "Mirt the Merciless",
+      "slug": "mirt",
+      "url": "/dossiers/mirt.html"
+    },
+    "children": [
+      {
+        "slug": "the-living-clue-in-the-crate",
+        "name": "The Living Clue in the Crate",
+        "url": "/quests/the-living-clue-in-the-crate.html",
+        "kind": "Thread"
+      },
+      {
+        "slug": "vocaths-grudge",
+        "name": "Vocath’s Grudge Against Mirt",
+        "url": "/quests/vocaths-grudge.html",
+        "kind": "Thread"
+      }
+    ]
+  },
+  {
+    "id": "QST-7hN4kV2m",
+    "type": "quest",
+    "slug": "the-living-clue-in-the-crate",
+    "name": "The Living Clue in the Crate",
+    "url": "/quests/the-living-clue-in-the-crate.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Worm-like centipede creatures burst from the crate meant for Mirt",
+          "Sol subdued the last one alive, sensing it might matter as evidence, and Mirt praised the choice"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "ITM-5nB7wK9x",
+        "name": "Crated Centipede Creature",
+        "type": "item",
+        "slug": "crated-centipede-creature",
+        "url": "/inventory/entries/crated-centipede-creature.html"
+      }
+    ],
+    "fields": {
+      "Quest": "The Living Clue in the Crate",
+      "Type": "Investigation",
+      "Related Character(s)": "Sol Fortuna",
+      "Current State": "A live centipede creature from the crate is held as evidence, its meaning unknown.",
+      "Overview (Player)": "One of the creatures that burst from Mirt's crate was captured alive and kept as evidence. What it is and where it came from remains unknown.",
+      "Visibility": "Player",
+      "Urgency": "Medium",
+      "Last Engaged (Session #)": 1,
+      "Next Planned Beat": "Question or examine the surviving creature to learn what the crate was really carrying.",
+      "Status": "Open",
+      "Linked": "ITM-5nB7wK9x"
+    },
+    "parent": {
+      "slug": "the-caelestis-burglaries",
+      "name": "The Caelestis Burglaries",
+      "url": "/quests/the-caelestis-burglaries.html"
+    },
+    "kind": "Thread",
+    "objectives": [],
+    "progress": null,
+    "children": []
+  },
+  {
+    "id": "QST-3mW8kP5v",
+    "type": "quest",
+    "slug": "the-path-to-viren",
+    "name": "The Path to Viren",
+    "url": "/quests/the-path-to-viren.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Inside Mirt's wardrobe Casey saw unfamiliar constellations and a flickering point, and a familiar voice told him 'Go there'",
+          "Casey etched the constellation pattern onto a stolen shirt",
+          "Mirt revealed the wardrobe replicates a place beyond H’catha in the Viren star system, gifted by the spellcaster Zerathis"
+        ]
+      },
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Casey sat at the Sky Dock thinking of his brother when the same familiar presence settled beside him again, then departed before he rose"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "An adamantine meteor struck the spire on H’catha, the beholder world beyond which Viren lies, and the crew was sent to recover it aboard a tyrant ship"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "ITM-4kD8vRt2",
+        "name": "Mirt's Wardrobe",
+        "type": "item",
+        "slug": "mirts-wardrobe",
+        "url": "/inventory/entries/mirts-wardrobe.html"
+      },
+      {
+        "id": "LOC-Cw8kM4vB",
+        "name": "Viren Star System",
+        "type": "location",
+        "slug": "viren-star-system",
+        "url": "/navigation-records/viren-star-system.html"
+      },
+      {
+        "id": "NPC-Py6hN3xB",
+        "name": "Zerathis",
+        "type": "npc",
+        "slug": "zerathis",
+        "url": "/dossiers/zerathis.html"
+      },
+      {
+        "id": "PC-t0jvvcOZ",
+        "name": "Casey Geim",
+        "type": "pc",
+        "slug": "casey-geim",
+        "url": "/crew-manifest/casey-geim.html"
+      }
+    ],
+    "fields": {
+      "Quest": "The Path to Viren",
+      "Type": "Personal / Mystery",
+      "Related Character(s)": "Casey",
+      "Current State": "A meteor has struck H’catha, the world beyond which Viren lies, and the crew is bound there aboard a tyrant ship.",
+      "Overview (Player)": "A vision in Mirt's wardrobe and a familiar voice told Casey to 'Go there' — a place beyond H’catha in the Viren star system. Now a meteor has struck H’catha itself, and the crew is bound there aboard a tyrant ship. Casey carries the constellations that point the way.",
+      "Visibility": "Player",
+      "Urgency": "Medium",
+      "Last Engaged (Session #)": 3,
+      "Next Planned Beat": "Reach H’catha, recover the meteor, and find a way toward Viren beyond it.",
+      "Status": "Open",
+      "Linked": "PC-t0jvvcOZ, ITM-4kD8vRt2, LOC-Cw8kM4vB, NPC-Py6hN3xB"
+    },
+    "parent": null,
+    "kind": "Quest",
+    "objectives": [
+      {
+        "done": true,
+        "text": "Learn what the wardrobe shows"
+      },
+      {
+        "done": false,
+        "text": "Find Zerathis, or charts and word of him"
+      },
+      {
+        "done": false,
+        "text": "Find a route to Viren"
+      }
+    ],
+    "progress": {
+      "done": 1,
+      "total": 3
+    },
+    "children": []
+  },
+  {
+    "id": "QST-6bC9wN4k",
+    "type": "quest",
+    "slug": "gregorys-pull",
+    "name": "Gregory's Pull",
+    "url": "/quests/gregorys-pull.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Farther from home and his master than ever, Gregory felt a new tug in his core drawing him somewhere unknown"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "PC-BGCfmbF3",
+        "name": "Gregory",
+        "type": "pc",
+        "slug": "gregory",
+        "url": "/crew-manifest/gregory.html"
+      }
+    ],
+    "fields": {
+      "Quest": "Gregory's Pull",
+      "Type": "Personal / Mystery",
+      "Related Character(s)": "Gregory",
+      "Current State": "Gregory feels a new, unexplained tug in his core drawing him somewhere unknown.",
+      "Overview (Player)": "Since leaving his master, Gregory has felt a new pull in his core, drawing him toward a place he cannot name.",
+      "Visibility": "Player",
+      "Urgency": "Low",
+      "Last Engaged (Session #)": 1,
+      "Next Planned Beat": "Discover what the pull in Gregory's core is drawing him toward.",
+      "Status": "Open",
+      "Linked": "PC-BGCfmbF3"
+    },
+    "parent": null,
+    "kind": "Thread",
+    "objectives": [],
+    "progress": null,
+    "children": []
+  },
+  {
+    "id": "QST-8vT4kR2m",
+    "type": "quest",
+    "slug": "the-unfinished-ship-within-boogie",
+    "name": "The Unfinished Ship Within Boogie",
+    "url": "/quests/the-unfinished-ship-within-boogie.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Boogie pulled a tiny model spelljamming ship from his chest, half of it missing, with no explanation for how it formed or why it is incomplete"
+        ]
+      },
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Boogie set the ship on the table for the crew, but none took up its meaning",
+          "Revealed that the ship is the same model as the miniature vessel stolen from Saerthe — a link Boogie has not spoken aloud"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Boogie confirmed the half-ship and the derelict logbook both still rest within his chest",
+          "Dreamed of countless other versions of himself in an infinite dark, a presence pressing down through them toward him, and woke half-dissolved"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "ITM-2pQ7vHm9",
+        "name": "Incomplete Model Spelljamming Ship",
+        "type": "item",
+        "slug": "half-ship",
+        "url": "/inventory/entries/half-ship.html"
+      },
+      {
+        "id": "ITM-8pC4kW2n",
+        "name": "Saerthe's Miniature Spelljamming Ship",
+        "type": "item",
+        "slug": "saerthes-miniature-ship",
+        "url": "/inventory/entries/saerthes-miniature-ship.html"
+      },
+      {
+        "id": "NPC-Zx4Bn7Lq",
+        "name": "Saerthe Abizjn",
+        "type": "npc",
+        "slug": "saerthe-abizjn",
+        "url": "/dossiers/saerthe-abizjn.html"
+      },
+      {
+        "id": "PC-647haWGJ",
+        "name": "Boogie",
+        "type": "pc",
+        "slug": "boogie",
+        "url": "/crew-manifest/boogie.html"
+      }
+    ],
+    "fields": {
+      "Quest": "The Unfinished Ship Within Boogie",
+      "Type": "Personal / Mystery",
+      "Related Character(s)": "Boogie",
+      "Current State": "Boogie's dreams now fill with other versions of himself and a presence converging on him, deepening the mystery of the ship within.",
+      "Overview (Player)": "A tiny, half-missing model spelljamming ship has formed inside Boogie, the same model as the one stolen from the instructor Saerthe. He cannot explain how it came to be, and now his sleep fills with visions of countless other versions of himself and a presence converging on him.",
+      "Visibility": "Player",
+      "Urgency": "Medium",
+      "Last Engaged (Session #)": 3,
+      "Next Planned Beat": "Learn what the model ship inside Boogie is, why it matches Saerthe's stolen vessel, and what the presence in his dreams wants.",
+      "Status": "Open",
+      "Linked": "PC-647haWGJ, ITM-2pQ7vHm9, NPC-Zx4Bn7Lq, ITM-8pC4kW2n"
+    },
+    "parent": null,
+    "kind": "Thread",
+    "objectives": [],
+    "progress": null,
+    "children": []
+  },
+  {
+    "id": "QST-5kN7wB3v",
+    "type": "quest",
+    "slug": "tumaks-search-for-family",
+    "name": "Tumak's Search for Family",
+    "url": "/quests/tumaks-search-for-family.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Tumak admitted to Boogie that he is searching for his own family",
+          "Boogie answered that now they have a crew, and the crew would help him find them"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "PC-wI087olT",
+        "name": "Tumak Swan",
+        "type": "pc",
+        "slug": "tumak-swan",
+        "url": "/crew-manifest/tumak-swan.html"
+      }
+    ],
+    "fields": {
+      "Quest": "Tumak's Search for Family",
+      "Type": "Personal",
+      "Related Character(s)": "Tumak Swan",
+      "Current State": "Tumak is searching for his family, now with the crew pledged to help.",
+      "Overview (Player)": "Tumak is searching for a family he cannot yet name. The crew has promised to help him find them.",
+      "Visibility": "Player",
+      "Urgency": "Low",
+      "Last Engaged (Session #)": 1,
+      "Next Planned Beat": "Find the first thread leading to Tumak's family.",
+      "Status": "Open",
+      "Linked": "PC-wI087olT"
+    },
+    "parent": null,
+    "kind": "Quest",
+    "objectives": [
+      {
+        "done": false,
+        "text": "Find a way home"
+      }
+    ],
+    "progress": {
+      "done": 0,
+      "total": 1
+    },
+    "children": [
+      {
+        "slug": "tumaks-runes-and-the-tether-home",
+        "name": "Tumak's Runes and the Tether Home",
+        "url": "/quests/tumaks-runes-and-the-tether-home.html",
+        "kind": "Thread"
+      }
+    ]
+  },
+  {
+    "id": "QST-4wN8kB2v",
+    "type": "quest",
+    "slug": "the-laughter-of-beshaba",
+    "name": "The Laughter of Beshaba",
+    "url": "/quests/the-laughter-of-beshaba.html",
+    "voyages": [
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Sol took a stroke of misfortune onto himself to save Boogie's jump, his strength dropping in a measured amount",
+          "As it left him, a woman laughed three times, and by the third he understood it was Beshaba",
+          "Gregory and Bartholomew saw a hair-thin arc of black lightning flicker out of Sol and back"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "In the night a curious, unhurried voice asked Sol why he embraced chaos and whether he had truly escaped where he came from",
+          "The voice said it now had his attention, that fate could still be wielded, and that it looked forward to watching him wield it"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "PC-6rzWlD8Q",
+        "name": "Sol Fortuna",
+        "type": "pc",
+        "slug": "sol-fortuna",
+        "url": "/crew-manifest/sol-fortuna.html"
+      }
+    ],
+    "fields": {
+      "Quest": "The Laughter of Beshaba",
+      "Type": "Personal / Mystery",
+      "Related Character(s)": "Sol Fortuna",
+      "Current State": "Beshaba's laugh has passed, but a new curious voice now speaks to Sol of fate and whether he has escaped his origin.",
+      "Overview (Player)": "When Sol spent his own luck to spare a crewmate, a woman's laughter answered — and he knew it for Beshaba. Now a curious, unhurried voice speaks to him in the night of fate and whether he has truly escaped his origin, saying it looks forward to watching how he wields what lies ahead. What these presences want of him is not yet clear.",
+      "Visibility": "Player",
+      "Urgency": "Medium",
+      "Last Engaged (Session #)": 3,
+      "Next Planned Beat": "Learn who the voice speaking to Sol of fate is, and what Beshaba's attention asks of him.",
+      "Status": "Open",
+      "Linked": "PC-6rzWlD8Q"
+    },
+    "parent": null,
+    "kind": "Thread",
+    "objectives": [],
+    "progress": null,
+    "children": []
+  },
+  {
+    "id": "QST-Zk6mW3vn",
+    "type": "quest",
+    "slug": "tumaks-runes-and-the-tether-home",
+    "name": "Tumak's Runes and the Tether Home",
+    "url": "/quests/tumaks-runes-and-the-tether-home.html",
+    "voyages": [
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Tumak found a dim blue half-rune glowing on the sole of his left foot and a second, different mark on his right shoulder — two halves of two separate wholes"
+        ]
+      },
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "Tumak opened a telepathic link and cast his first fire bolt, magic he did not understand and did not know he had",
+          "Summoning his soul knife for the first time, his runes flared and he felt not where home is but a connection to it — the little portal the knife came through a piece of that somewhere",
+          "As the throw went wide, the Rune Keeper said all things find their way home, and the blade bent true"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "ITM-Yq5kW8vn",
+        "name": "Tumak's Soul Knife",
+        "type": "item",
+        "slug": "tumaks-soul-knife",
+        "url": "/inventory/entries/tumaks-soul-knife.html"
+      },
+      {
+        "id": "NPC-Jv7kW3mq",
+        "name": "The Rune Keeper",
+        "type": "npc",
+        "slug": "the-rune-keeper",
+        "url": "/dossiers/the-rune-keeper.html"
+      },
+      {
+        "id": "PC-wI087olT",
+        "name": "Tumak Swan",
+        "type": "pc",
+        "slug": "tumak-swan",
+        "url": "/crew-manifest/tumak-swan.html"
+      }
+    ],
+    "fields": {
+      "Quest": "Tumak's Runes and the Tether Home",
+      "Type": "Personal / Mystery",
+      "Related Character(s)": "Tumak Swan",
+      "Current State": "Tumak's powers surface unbidden aboard the tyrant ship; his soul knife's portal is a piece of the home he seeks, and its tether a connection to it.",
+      "Overview (Player)": "Tumak has begun to manifest powers he does not understand — telepathy, fire, and a soul knife drawn through a small portal — and bears two glowing half-runes, each half of a separate whole. When he called the knife, his runes flared and he felt a tether toward the home he has been seeking, and a voice he calls the Rune Keeper spoke of all things finding their way home.",
+      "Visibility": "Player",
+      "Urgency": "Medium",
+      "Last Engaged (Session #)": 4,
+      "Next Planned Beat": "Learn what Tumak's half-runes mean, who the Rune Keeper is, and where the tether toward home leads.",
+      "Status": "Open",
+      "Linked": "PC-wI087olT, NPC-Jv7kW3mq, ITM-Yq5kW8vn"
+    },
+    "parent": {
+      "slug": "tumaks-search-for-family",
+      "name": "Tumak's Search for Family",
+      "url": "/quests/tumaks-search-for-family.html"
+    },
+    "kind": "Thread",
+    "objectives": [],
+    "progress": null,
+    "children": []
+  },
+  {
+    "id": "QST-Xr4mW8vn",
+    "type": "quest",
+    "slug": "the-tyrant-ship-and-the-hcatha-meteor",
+    "name": "The Tyrant Ship and the H’catha Meteor",
+    "url": "/quests/the-tyrant-ship-and-the-hcatha-meteor.html",
+    "voyages": [
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Boatswain Tarto woke the crew at four in the morning to recover an adamantine meteor that struck the spire on H’catha",
+          "The plan: crew an abandoned beholder tyrant ship, install the helm on the command deck, and use its appearance to move through H’cathan space unchallenged",
+          "The Flighty Foundling dropped the crew into the tyrant ship's cargo deck and departed",
+          "The crew found and saved the broken autognome Ostekk-6, learning of a mimic aboard, a wisp bloom, and more clockwork horrors"
+        ]
+      },
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "The crew dispatched the clockwork horrors feeding on Ostekk-6, saved it, and cleared the lantern-wisp bloom choking the garden shaft",
+          "A magical floating dolly can bear the helm's weight, but the helm must still be routed up through the internal access shafts to the command deck",
+          "Ostekk-6 confirmed the shafts are impassable while the bloom holds, and that killing a flower does not unmake the wisps already loose",
+          "Bloodied and unrested, the crew decided for the first time not to press on, holding to recover before descending to the deck below by rope"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "LOC-Sk4mW8vn",
+        "name": "H'catha",
+        "type": "location",
+        "slug": "hcatha",
+        "url": "/navigation-records/hcatha.html"
+      },
+      {
+        "id": "LOC-Rp7kW4vn",
+        "name": "The Tyrant Ship",
+        "type": "location",
+        "slug": "the-tyrant-ship",
+        "url": "/navigation-records/the-tyrant-ship.html"
+      },
+      {
+        "id": "LOC-Tv6kW3mn",
+        "name": "Toril",
+        "type": "location",
+        "slug": "toril",
+        "url": "/navigation-records/toril.html"
+      },
+      {
+        "id": "NPC-Hn4kW9vm",
+        "name": "Ostekk-6",
+        "type": "npc",
+        "slug": "ostekk-6",
+        "url": "/dossiers/ostekk-6.html"
+      }
+    ],
+    "fields": {
+      "Quest": "The Tyrant Ship and the H’catha Meteor",
+      "Type": "Mission",
+      "Related Character(s)": "Bartholomew, Gregory, Tumak Swan, Sol Fortuna, Casey, Boogie",
+      "Current State": "The crew cleared the hold and the garden shaft aboard the tyrant ship but chose to hold and rest, bloodied, before descending to the deck below.",
+      "Overview (Player)": "The crew has been sent to recover an adamantine meteor that struck the spire on H’catha, a world of beholders. They board an abandoned tyrant ship to install a helm on its command deck and fly it through H’cathan space unnoticed — but the vessel is choked with a lantern-wisp bloom, prowled by clockwork horrors, and said to hide a shape-shifting mimic. The way up runs through its access shafts, and a deck below still waits unexplored.",
+      "Visibility": "Player",
+      "Urgency": "High",
+      "Last Engaged (Session #)": 4,
+      "Next Planned Beat": "Rest, then descend to the deck below by rope and continue routing the helm up the access shafts to the command deck.",
+      "Status": "Open",
+      "Linked": "LOC-Rp7kW4vn, LOC-Sk4mW8vn, LOC-Tv6kW3mn, NPC-Hn4kW9vm"
+    },
+    "parent": null,
+    "kind": "Quest",
+    "objectives": [
+      {
+        "done": true,
+        "text": "Board the tyrant ship"
+      },
+      {
+        "done": false,
+        "text": "Commandeer the tyrant ship"
+      },
+      {
+        "done": false,
+        "text": "Install the spelljamming helm on the command deck"
+      },
+      {
+        "done": false,
+        "text": "Fly to H’catha"
+      },
+      {
+        "done": false,
+        "text": "Recover the adamantine meteor"
+      }
+    ],
+    "progress": {
+      "done": 1,
+      "total": 5
+    },
+    "giver": {
+      "name": "Boatswain Tarto",
+      "slug": "boatswain-tarto",
+      "url": "/dossiers/boatswain-tarto.html"
+    },
+    "children": [
+      {
+        "slug": "ostekk-6-thread",
+        "name": "Ostekk-6",
+        "url": "/quests/ostekk-6-thread.html",
+        "kind": "Thread"
+      }
+    ]
+  },
+  {
+    "id": "QST-Vg7kR2nw",
+    "type": "quest",
+    "slug": "vocaths-grudge",
+    "name": "Vocath’s Grudge Against Mirt",
+    "url": "/quests/vocaths-grudge.html",
+    "voyages": [
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "The rod recovered from the simulation chamber bore the marking Vocath",
+          "Saerthe raised an illusion of the rod before Mirt and named the marking",
+          "Mirt’s face went still — not confusion. He said Vocath had harboured a grudge against him for a long time",
+          "He told the cadets to keep it to themselves, and warned that anyone connected to him could be a target"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Quest": "Vocath’s Grudge Against Mirt",
+      "Type": "World / Mystery",
+      "Related Character(s)": "Mirt the Merciless",
+      "Current State": "Mirt has named Vocath an old enemy who has borne him a grudge for a long time, which makes anyone connected to Mirt a target.",
+      "Overview (Player)": "The arcane device that nearly killed a chamber of cadets carried a single marking: Vocath. Mirt knew the name at once. He has said only that Vocath has held a grudge against him for a long time, and that anyone connected to him is a potential target.",
+      "Last Engaged (Session #)": 3,
+      "Urgency": "High",
+      "Status": "Open",
+      "Visibility": "Player",
+      "Linked": null
+    },
+    "parent": {
+      "slug": "the-caelestis-burglaries",
+      "name": "The Caelestis Burglaries",
+      "url": "/quests/the-caelestis-burglaries.html"
+    },
+    "kind": "Thread",
+    "objectives": [],
+    "progress": null,
+    "children": []
+  },
+  {
+    "id": "QST-Ok5mB8tz",
+    "type": "quest",
+    "slug": "ostekk-6-thread",
+    "name": "Ostekk-6",
+    "url": "/quests/ostekk-6-thread.html",
+    "voyages": [
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Found in the cargo hold with its lower half gone and its voice box destroyed, the clockwork horrors still feeding on it",
+          "Gregory looked at its face and saw his own"
+        ]
+      },
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "The cargo manifest gave it a name: Ostekk-6",
+          "Its core is arcane and intact, but the frame is a physical repair beyond what the crew can do aboard",
+          "It warned of a mimic aboard, a spreading bloom, and more clockwork horrors"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Quest": "Ostekk-6",
+      "Type": "Character / Mystery",
+      "Related Character(s)": "Gregory",
+      "Current State": "Ostekk-6 is saved but mute and broken, its core intact and its body beyond what magic can mend. It wears Gregory’s face and nobody has explained why.",
+      "Overview (Player)": "The autognome the crew pulled out of the wreckage in the tyrant ship’s cargo hold wears Gregory’s face. Its core is sound; its body is a mechanical problem no spell will close. It speaks only through the link Tumak opened, and what it knows about the ship has already proved worth having.",
+      "Last Engaged (Session #)": 4,
+      "Urgency": "Medium",
+      "Status": "Open",
+      "Visibility": "Player",
+      "Linked": null
+    },
+    "parent": {
+      "slug": "the-tyrant-ship-and-the-hcatha-meteor",
+      "name": "The Tyrant Ship and the H’catha Meteor",
+      "url": "/quests/the-tyrant-ship-and-the-hcatha-meteor.html"
+    },
+    "kind": "Thread",
+    "objectives": [],
+    "progress": null,
+    "children": []
+  }
+]

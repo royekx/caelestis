@@ -1,0 +1,568 @@
+[
+  {
+    "id": "LOC-Tn4bK9wR",
+    "type": "location",
+    "slug": "caelestis",
+    "name": "Caelestis",
+    "url": "/navigation-records/caelestis.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "The tower academy where the cadets train, containing the simulation deck, administration, cadet quarters, sky dock, quartermaster's stores, Spelljammer Nexus, and gymnasium",
+          "Overlooks the Astral Sea and is organized as a layered order of halls, ranks, and thresholds",
+          "Struck by a coordinated wave of burglaries during the attack on Mirt"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "An arcane device detonated in its simulation chamber, nearly killing a room of cadets",
+          "Holds a bridge where Mirt keeps his fishbowl, and an infirmary where the injured recover",
+          "Governs a fleet-intelligence archive locked behind clearance beyond a cadet's star"
+        ]
+      }
+    ],
+    "seen": [
+      "S01",
+      "S02",
+      "S03"
+    ],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "FAO-Lx7kR2vN",
+        "name": "Caelestis Academy",
+        "type": "faction",
+        "slug": "caelestis-academy",
+        "url": "/factions/caelestis-academy.html"
+      }
+    ],
+    "fields": {
+      "Location": "Caelestis",
+      "Type": "Spelljammer academy tower",
+      "Key NPCs / Factions": "Caelestis Academy, Mirt the Merciless, Boatswain Tarto",
+      "Visibility": "Player",
+      "Visited": "S01, S02, S03",
+      "Mentioned": null,
+      "Overview (Player)": "Caelestis is the spelljammer academy where the cadets train, a layered machine of halls, ranks, and access permissions overlooking the Astral Sea. Led by Mirt the Merciless, it drills its cadets through simulation and salvage exercise. A wave of thefts continues to spread through the tower, reaching an instructor's own possessions.",
+      "Region": "Caelestis",
+      "Linked": "FAO-Lx7kR2vN",
+      "Status": "Accessible"
+    },
+    "kind": "station",
+    "parent": "toril",
+    "hasPage": true
+  },
+  {
+    "id": "LOC-Gh2mV8pL",
+    "type": "location",
+    "slug": "spelljammer-nexus",
+    "name": "Spelljammer Nexus",
+    "url": null,
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "A room overlooking the Astral Sea where cadets guide miniature spelljamming ships over a floating field",
+          "The cadets ran their first true helm exercise here under the tension of an ectoplasmic breach elsewhere in the tower"
+        ]
+      },
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Tarto brought Boogie, Gregory, and Bartholomew here to practice, where Saerthe learned his own miniature ship had been stolen",
+          "Bartholomew's ease at the helm here settled the crew's open spelljammer seat"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Holds library terminals between the mock helms and Saerthe's cluttered desk",
+          "Gregory searched its terminals for arcane artillery and runes but was locked out of a fleet-intelligence archive category by his cadet star"
+        ]
+      }
+    ],
+    "seen": [
+      "S01",
+      "S02",
+      "S03"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Location": "Spelljammer Nexus",
+      "Type": "Training chamber",
+      "Key NPCs / Factions": "Saerthe Abizjn, Caelestis Academy",
+      "Visibility": "Player",
+      "Visited": "S01, S02, S03",
+      "Mentioned": null,
+      "Overview (Player)": "The Spelljammer Nexus is a training chamber at Caelestis overlooking the Astral Sea, where cadets learn to extend mind and magic into a vessel by guiding miniature ships across a floating field.",
+      "Region": "Caelestis",
+      "Linked": null,
+      "Status": "Accessible"
+    },
+    "kind": "room",
+    "parent": "caelestis",
+    "hasPage": false
+  },
+  {
+    "id": "LOC-Jd5cW7nK",
+    "type": "location",
+    "slug": "mirts-quarters",
+    "name": "Mirt's Quarters",
+    "url": null,
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Cluttered chambers of Caelestis's head, scattered with clothes, curiosities, and a fishbowl holding two octopi, Flotsam and Jetsam",
+          "Contains a wardrobe that opens onto a bounded stretch of astral night with unfamiliar constellations",
+          "Site of the fight with the centipede creatures released from the delivered crate"
+        ]
+      }
+    ],
+    "seen": [
+      "S01"
+    ],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "ITM-4kD8vRt2",
+        "name": "Mirt's Wardrobe",
+        "type": "item",
+        "slug": "mirts-wardrobe",
+        "url": "/inventory/entries/mirts-wardrobe.html"
+      }
+    ],
+    "fields": {
+      "Location": "Mirt's Quarters",
+      "Type": "Private chambers",
+      "Key NPCs / Factions": "Mirt the Merciless",
+      "Visibility": "Player",
+      "Visited": "S01",
+      "Mentioned": null,
+      "Overview (Player)": "Mirt's quarters are the cluttered, excess-strewn chambers of Caelestis's head, home to a fishbowl of octopi and an impossible wardrobe that opens onto bounded astral night — a magical replica of a place in the Viren star system.",
+      "Region": "Caelestis",
+      "Linked": "ITM-4kD8vRt2",
+      "Status": "Accessible"
+    },
+    "kind": "room",
+    "parent": "caelestis",
+    "hasPage": false,
+    "items": [
+      {
+        "id": "ITM-4kD8vRt2",
+        "name": "Mirt's Wardrobe",
+        "type": "item",
+        "slug": "mirts-wardrobe",
+        "url": "/inventory/entries/mirts-wardrobe.html"
+      },
+      {
+        "id": "ITM-5nB7wK9x",
+        "name": "Crated Centipede Creature",
+        "type": "item",
+        "slug": "crated-centipede-creature",
+        "url": "/inventory/entries/crated-centipede-creature.html"
+      }
+    ]
+  },
+  {
+    "id": "LOC-Bf3xN6qT",
+    "type": "location",
+    "slug": "sky-dock",
+    "name": "Sky Dock",
+    "url": null,
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Where spelljamming ships of every shape rest beneath the void; Kip and Pik taught the cadets the anatomy of a vessel and the meaning of the helm",
+          "Boogie noticed a suspicious exchange between a dock officer and a merchant here"
+        ]
+      },
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Casey came here looking for Joffrey, did not find him, and sat at the rail thinking of his brother when the familiar presence settled beside him again"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Boogie and Sol talked past a security guard, invoking Mirt's name, to trace a crate here",
+          "They found a crate marked with the rod's symbol tucked behind others, holding something neither living nor hollow",
+          "Sol learned from a cargo clerk that shipments route through Mr. Blip, with Toril as the nearest destination and H’catha a secondary stop"
+        ]
+      }
+    ],
+    "seen": [
+      "S01",
+      "S02",
+      "S03"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Location": "Sky Dock",
+      "Type": "Docking bay",
+      "Key NPCs / Factions": "Kip, Pik, Caelestis Academy",
+      "Visibility": "Player",
+      "Visited": "S01, S02, S03",
+      "Mentioned": null,
+      "Overview (Player)": "The sky dock is Caelestis's docking bay beneath the void, where spelljamming ships of every shape rest and cadets learn the anatomy of a vessel and the workings of the helm.",
+      "Region": "Caelestis",
+      "Linked": null,
+      "Status": "Accessible"
+    },
+    "kind": "room",
+    "parent": "caelestis",
+    "hasPage": false,
+    "items": [
+      {
+        "id": "ITM-Xn7kW2vm",
+        "name": "Marked Crate at the Sky Dock",
+        "type": "item",
+        "slug": "marked-crate",
+        "url": "/inventory/entries/marked-crate.html"
+      }
+    ]
+  },
+  {
+    "id": "LOC-Cw8kM4vB",
+    "type": "location",
+    "slug": "viren-star-system",
+    "name": "Viren Star System",
+    "url": "/navigation-records/viren-star-system.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Named by Mirt as the location, beyond H’catha, that his wardrobe magically replicates; the destination Casey's vision and guiding voice pointed toward"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [
+      "S01"
+    ],
+    "links": [
+      {
+        "id": "ITM-4kD8vRt2",
+        "name": "Mirt's Wardrobe",
+        "type": "item",
+        "slug": "mirts-wardrobe",
+        "url": "/inventory/entries/mirts-wardrobe.html"
+      },
+      {
+        "id": "QST-3mW8kP5v",
+        "name": "The Path to Viren",
+        "type": "quest",
+        "slug": "the-path-to-viren",
+        "url": "/quests/the-path-to-viren.html"
+      }
+    ],
+    "fields": {
+      "Location": "Viren Star System",
+      "Type": "Star system",
+      "Key NPCs / Factions": "Zerathis",
+      "Visibility": "Player",
+      "Visited": null,
+      "Mentioned": "S01",
+      "Overview (Player)": "The Viren star system, beyond a place called H’catha, is the region Mirt's impossible wardrobe magically replicates. A vision and a guiding voice have pointed Casey toward it as a destination.",
+      "Region": "Viren",
+      "Linked": null,
+      "Status": "Accessible"
+    },
+    "kind": "sphere",
+    "parent": null,
+    "hasPage": true
+  },
+  {
+    "id": "LOC-6cT4kW9n",
+    "type": "location",
+    "slug": "the-weeping-goddess",
+    "name": "The Weeping Goddess",
+    "url": null,
+    "voyages": [
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Caelestis's crowded refectory, packed with cadets of every wildspace people beneath blue-glowing orbs",
+          "Petty Officer Winston Ryeback runs its kitchen at a carrying bellow",
+          "Known for its dragon scale pizza and knock-your-mama's-socks-off soup",
+          "Along the back wall runs a board of handwritten notices — well-wishes, odd jobs, dock requests, and missing-item notices",
+          "Where the crew first gathered as a table and sorted out their shipboard roles"
+        ]
+      }
+    ],
+    "seen": [
+      "S02"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Location": "The Weeping Goddess",
+      "Type": "Refectory",
+      "Key NPCs / Factions": "Winston Ryeback, Caelestis Academy",
+      "Visibility": "Player",
+      "Visited": "S02",
+      "Mentioned": null,
+      "Overview (Player)": "The Weeping Goddess is Caelestis's bustling refectory, thronged with cadets from every corner of wildspace beneath blue-glowing orbs. Its kitchen is run by Petty Officer Winston Ryeback, and a back-wall notice board carries odd jobs, dock requests, and missing-item notices.",
+      "Region": "Caelestis",
+      "Linked": null,
+      "Status": "Accessible"
+    },
+    "kind": "room",
+    "parent": "caelestis",
+    "hasPage": false
+  },
+  {
+    "id": "LOC-3kW8mB2v",
+    "type": "location",
+    "slug": "the-sea-dock",
+    "name": "The Sea Dock",
+    "url": null,
+    "voyages": [
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "The dock named in a cargo notice Casey pulled from the refectory board",
+          "Casey confused it with another dock and ended up working cargo for Rindle Gearloft instead"
+        ]
+      }
+    ],
+    "seen": [
+      "S02"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Location": "The Sea Dock",
+      "Type": "Docking bay",
+      "Key NPCs / Factions": "Rindle Gearloft",
+      "Visibility": "Player",
+      "Visited": "S02",
+      "Mentioned": null,
+      "Overview (Player)": "The Sea Dock is one of Caelestis's docking bays, named on a cargo notice Casey pulled from the refectory board. He meant to work a job here but confused it with a neighboring dock.",
+      "Region": "Caelestis",
+      "Linked": null,
+      "Status": "Accessible"
+    },
+    "kind": "room",
+    "parent": "caelestis",
+    "hasPage": false
+  },
+  {
+    "id": "LOC-9mB4kW7n",
+    "type": "location",
+    "slug": "simulation-deck",
+    "name": "Simulation Deck",
+    "url": null,
+    "voyages": [
+      {
+        "session": "S02",
+        "number": 2,
+        "bullets": [
+          "Where both cadet crews were summoned and briefed by Saerthe and Tarto for a salvage race",
+          "Cadets entered pods here to run the simulation of a hammerhead recovering a logbook from a derelict in an asteroid field"
+        ]
+      }
+    ],
+    "seen": [
+      "S02"
+    ],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Location": "Simulation Deck",
+      "Type": "Training chamber",
+      "Key NPCs / Factions": "Saerthe Abizjn, Boatswain Tarto, Caelestis Academy",
+      "Visibility": "Player",
+      "Visited": "S02",
+      "Mentioned": null,
+      "Overview (Player)": "The Simulation Deck is the chamber at Caelestis where cadets enter pods to run immersive exercises. Here both cadet crews were briefed and set against each other in a salvage race through simulated wildspace.",
+      "Region": "Caelestis",
+      "Linked": null,
+      "Status": "Accessible"
+    },
+    "kind": "room",
+    "parent": "caelestis",
+    "hasPage": false
+  },
+  {
+    "id": "LOC-Rp7kW4vn",
+    "type": "location",
+    "slug": "the-tyrant-ship",
+    "name": "The Tyrant Ship",
+    "url": "/navigation-records/the-tyrant-ship.html",
+    "voyages": [
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "A stone-carved beholder vessel drifting in orbit above Toril, believed abandoned",
+          "The crew was to install a spelljamming helm on its command deck and use its appearance to move through H’cathan space unchallenged",
+          "Its interior is stone-floored, dim, and smells old; a lantern-wisp bloom has overrun much of it",
+          "Clockwork horrors were found feeding on the broken autognome Ostekk-6 in the cargo hold"
+        ]
+      },
+      {
+        "session": "S04",
+        "number": 4,
+        "bullets": [
+          "The crew dispatched the clockwork horrors in the cargo hold and cleared the lantern-wisp bloom choking the garden shaft, but found the wisps persisted by some unknown cause",
+          "A deck below waits reachable only by rope; the crew held to rest before descending, sensing something waiting there"
+        ]
+      }
+    ],
+    "seen": [
+      "S03",
+      "S04"
+    ],
+    "mentioned": [],
+    "links": [
+      {
+        "id": "QST-Xr4mW8vn",
+        "name": "The Tyrant Ship and the H’catha Meteor",
+        "type": "quest",
+        "slug": "the-tyrant-ship-and-the-hcatha-meteor",
+        "url": "/quests/the-tyrant-ship-and-the-hcatha-meteor.html"
+      }
+    ],
+    "fields": {
+      "Location": "The Tyrant Ship",
+      "Type": "Beholder vessel",
+      "Key NPCs / Factions": "Ostekk-6, Winston Ryeback",
+      "Visibility": "Player",
+      "Visited": "S03, S04",
+      "Mentioned": null,
+      "Overview (Player)": "The tyrant ship is a stone-carved beholder vessel drifting above Toril, believed abandoned when the crew boarded it. They mean to install a helm on its command deck and fly it through H’cathan space unnoticed, but its interior is choked with a lantern-wisp bloom, prowled by clockwork horrors, and said to hide a shape-shifting mimic.",
+      "Region": "H’cathan Space",
+      "Linked": null,
+      "Status": "Accessible"
+    },
+    "kind": "vessel",
+    "parent": "toril",
+    "hasPage": true,
+    "items": [
+      {
+        "id": "ITM-Cm8rT3wk",
+        "name": "Collection Manifest",
+        "type": "item",
+        "slug": "collection-manifest",
+        "url": "/inventory/entries/collection-manifest.html"
+      }
+    ]
+  },
+  {
+    "id": "LOC-Sk4mW8vn",
+    "type": "location",
+    "slug": "hcatha",
+    "name": "H'catha",
+    "url": "/navigation-records/hcatha.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Named by Mirt as a place the Viren star system lies beyond"
+        ]
+      },
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "A world populated entirely by beholders and their kin, watched by beholder patrols",
+          "Struck by an adamantine meteor that hit its spire, which the crew was sent to recover",
+          "Named by a Sky Dock cargo clerk as a secondary destination for certain shipments"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [
+      "S03"
+    ],
+    "links": [
+      {
+        "id": "QST-Xr4mW8vn",
+        "name": "The Tyrant Ship and the H’catha Meteor",
+        "type": "quest",
+        "slug": "the-tyrant-ship-and-the-hcatha-meteor",
+        "url": "/quests/the-tyrant-ship-and-the-hcatha-meteor.html"
+      }
+    ],
+    "fields": {
+      "Location": "H'catha",
+      "Type": "World",
+      "Key NPCs / Factions": null,
+      "Visibility": "Player",
+      "Visited": null,
+      "Mentioned": "S03",
+      "Overview (Player)": "H’catha is a world populated entirely by beholders and their kin, watched by beholder patrols. An adamantine meteor has struck its spire, and the crew has been sent to recover it — using a tyrant ship's appearance to move through H’cathan space unchallenged.",
+      "Region": "H’cathan Space",
+      "Linked": null,
+      "Status": "Accessible"
+    },
+    "kind": "body",
+    "parent": null,
+    "hasPage": true
+  },
+  {
+    "id": "LOC-Tv6kW3mn",
+    "type": "location",
+    "slug": "toril",
+    "name": "Toril",
+    "url": "/navigation-records/toril.html",
+    "voyages": [
+      {
+        "session": "S03",
+        "number": 3,
+        "bullets": [
+          "Named by a Sky Dock cargo clerk as the nearest destination on most shipping routes",
+          "The world above which the abandoned tyrant ship drifts in orbit"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [
+      "S03"
+    ],
+    "links": [
+      {
+        "id": "QST-Xr4mW8vn",
+        "name": "The Tyrant Ship and the H’catha Meteor",
+        "type": "quest",
+        "slug": "the-tyrant-ship-and-the-hcatha-meteor",
+        "url": "/quests/the-tyrant-ship-and-the-hcatha-meteor.html"
+      }
+    ],
+    "fields": {
+      "Location": "Toril",
+      "Type": "World",
+      "Key NPCs / Factions": null,
+      "Visibility": "Player",
+      "Visited": null,
+      "Mentioned": "S03",
+      "Overview (Player)": "Toril is a world named as the nearest destination on most of the academy's shipping routes. The abandoned tyrant ship the crew boarded drifts in orbit above it.",
+      "Region": "Realmspace",
+      "Linked": null,
+      "Status": "Accessible"
+    },
+    "kind": "body",
+    "parent": null,
+    "hasPage": true
+  }
+]
