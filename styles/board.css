@@ -105,7 +105,7 @@ html, body { overflow-x: hidden; }
 .q-entry[hidden] { display: none; }
 
 /* ── REGISTER (navigation records) ── */
-.register { border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
+.register { border: 1px solid var(--rule); border-radius: 0; overflow: hidden; }
 .ent + .ent { border-top: 1px solid var(--rule); }
 .ent-row {
   width: 100%; display: grid; grid-template-columns: 18px 1fr auto auto auto;
@@ -132,7 +132,7 @@ html, body { overflow-x: hidden; }
 .ent[hidden] { display: none; }
 
 /* ── CHART ── */
-.survey { border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; margin-bottom: 1.3rem; line-height: 0; }
+.survey { border: 1px solid var(--rule); border-radius: 0; overflow: hidden; margin-bottom: 1.3rem; line-height: 0; }
 .survey img { width: 100%; height: auto; display: block; }
 .chart-wrap { overflow-x: auto; margin: 0 -0.4rem 1.2rem; padding: 0 0.4rem; }
 .chart { width: 100%; min-width: 620px; max-width: 900px; height: auto; display: block; margin: 0 auto; }
@@ -174,7 +174,7 @@ html, body { overflow-x: hidden; }
   background: var(--bg-card);
   backdrop-filter: blur(9px); -webkit-backdrop-filter: blur(9px);
   border: 1px solid var(--rule); border-left: 3px solid var(--gold);
-  border-radius: 12px; padding: 1.1rem 1.3rem 1.2rem;
+  border-radius: 0; padding: 1.1rem 1.3rem 1.2rem;
   display: flex; flex-direction: column; gap: 0.45rem;
 }
 /* display:flex would otherwise beat the hidden attribute. */
@@ -238,12 +238,12 @@ html, body { overflow-x: hidden; }
 .js-tabs .account-panel.is-active { display: block; }
 
 /* ── SOFTENED EDGES ── */
-.voyage-glance { border-radius: 12px; }
+.voyage-glance { border-radius: 0; }
 .chip, .log-badge, .log-type-badge { border-radius: 999px; }
-.video-container { border-radius: 10px; }
+.video-container { border-radius: 0; }
 .voyage-nav-bar, .voyage-nav-bottom { border-radius: 999px; }
-.log-entry:first-child { border-radius: 12px 12px 0 0; }
-.log-entry:last-child  { border-radius: 0 0 12px 12px; }
+.log-entry:first-child { border-radius: 0; }
+.log-entry:last-child  { border-radius: 0; }
 
 @media (max-width: 720px) {
   .account-tab-note { display: none; }
