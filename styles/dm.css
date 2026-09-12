@@ -1,3 +1,65 @@
+/* ═══════════════════════════════════════════════════════════════
+   PRIME PALETTE OVERRIDE
+
+   dm.css loads after caelestis.css, so this :root wins. Prime is the
+   authored layer seen from outside — the continuum itself. Where the
+   player site takes gold, this takes gossamer: pearl and filament
+   white, with the faint violet the threads carry. Same family, one
+   remove further out, and nothing here is warm.
+
+   Redefines the shared tokens rather than adding new ones, so every
+   rule written against --bg / --gold / --rule follows automatically.
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+  /* Backgrounds — deeper than the player site */
+  --bg:          #0d111a;
+  --bg-deep:     #080b12;
+  --bg-panel:    rgba(20, 27, 40, 0.76);
+  --bg-card:     rgba(20, 27, 40, 0.74);
+  --bg-raised:   rgba(31, 40, 57, 0.70);
+
+  --rule:        rgba(196, 212, 232, 0.14);
+  --rule-soft:   rgba(196, 212, 232, 0.08);
+
+  /* Gossamer takes every slot gold occupies on the player site, so
+     inherited rules need no edits. */
+  --gold:        #cbd8e8;
+  --gold-light:  #e6eef8;
+  --gold-dim:    #8c9cb2;
+  --gold-faint:  rgba(203, 216, 232, 0.08);
+  --gold-rule:   rgba(203, 216, 232, 0.24);
+
+  --ice:         #9683c4;
+  --ice-light:   #b6a6dc;
+  --ice-dim:     #6f5f9c;
+  --ice-faint:   rgba(150, 131, 196, 0.10);
+
+  --text:        #dfe6f0;
+  --text-dim:    #a2aec0;
+  --text-muted:  #6d798c;
+
+  /* DM-only accents */
+  --dm-violet:      #9683c4;
+  --dm-violet-dim:  #453a63;
+  --dm-crimson:     #b8695a;
+  --dm-teal:        #6fa9a0;
+  --dm-elev-1:      rgba(20, 27, 40, 0.60);
+  --dm-elev-2:      rgba(31, 40, 57, 0.68);
+}
+
+/* ── CONTINUUM BACKDROP ──
+   Replaces the player site's nebula. html carries the fallback colour
+   because an opaque body fill would paint over body::before, which
+   sits at z-index -2. */
+html { background: var(--bg-deep); }
+body::before {
+  background: url('/assets/continuum.jpg') center / cover no-repeat;
+}
+body::after {
+  background: radial-gradient(ellipse at 50% 45%,
+    rgba(8,11,18,0.58) 0%, rgba(8,11,18,0.80) 65%, rgba(8,11,18,0.92) 100%);
+}
+
 /* ═══════════════════════════════════════════════
    CAELESTIS — DM Space Stylesheet
    Loaded AFTER caelestis.css. Inherits the
@@ -10,18 +72,6 @@
             /prime/campaign.html, /prime/world.html, /prime/voyages/*.html
    ═══════════════════════════════════════════════ */
 
-/* ── DM-ONLY TOKEN EXTENSIONS ── */
-/* Caelestis palette stays as-is. Adding only accent colours the wiki needs. */
-:root {
-  --dm-violet:      #7a5ea8;
-  --dm-violet-dim:  #3d3056;
-  --dm-crimson:     #a8553c;
-  --dm-teal:        #5ea89e;
-
-  /* Slight elevation tints over the deep bg, for cards/callouts/tables */
-  --dm-elev-1:      rgba(20, 15, 8, 0.55);
-  --dm-elev-2:      rgba(30, 22, 10, 0.65);
-}
 
 /* ── DM CONTENT WRAPPER ── */
 /* All wiki-page content lives inside <main class="dm-content">. Sized to sit
