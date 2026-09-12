@@ -53,7 +53,7 @@
    sits at z-index -2. */
 html { background: var(--bg-deep); }
 body::before {
-  background: url('/assets/continuum.jpg') center / cover no-repeat;
+  background: url('../assets/continuum.jpg') center / cover no-repeat;
 }
 body::after {
   background: radial-gradient(ellipse at 50% 45%,
