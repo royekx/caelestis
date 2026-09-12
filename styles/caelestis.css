@@ -9,44 +9,52 @@
 /* ── TOKENS ── */
 :root {
   /* ── Backgrounds ──
-     Lifted and cooled. The old card fills were warm browns (20,15,8),
-     which fought the gold; these are cool slate and sit under the
-     nebula backdrop without muddying it. */
-  --bg:          #171b27;
-  --bg-deep:     #12151f;
-  --bg-panel:    rgba(26, 32, 46, 0.90);
-  --bg-card:     rgba(30, 37, 52, 0.88);
-  --bg-raised:   rgba(40, 48, 66, 0.78);
+     Sampled from the nebula backdrop: steel blue at 210° carries the most
+     area, so the panels take a blue tint rather than a neutral slate. They
+     read as part of the same space instead of grey cards over a picture. */
+  --bg:          #0a0e17;
+  --bg-deep:     #05060c;
+  --bg-panel:    rgba(24, 33, 50, 0.90);
+  --bg-card:     rgba(28, 37, 56, 0.88);
+  --bg-raised:   rgba(40, 52, 76, 0.76);
 
   /* ── Rules ──
-     Neutral, not gold. Every hairline on the site used to be a gold
-     rule, which is why gold read as the entire interface. */
-  --rule:        rgba(160, 178, 205, 0.16);
-  --rule-soft:   rgba(160, 178, 205, 0.09);
+     Blue-tinted rather than gold. Every hairline on the site used to be a
+     gold rule, which is why gold read as the whole interface. */
+  --rule:        rgba(130, 168, 210, 0.15);
+  --rule-soft:   rgba(130, 168, 210, 0.08);
 
-  /* ── Gold: accent only ── */
-  --gold:        #dab058;
-  --gold-light:  #f2dca4;
-  --gold-dim:    #b08e3f;
-  --gold-faint:  rgba(218, 176, 88, 0.09);
-  --gold-rule:   rgba(218, 176, 88, 0.28);
+  /* ── Ember: the warm accent ──
+     Gold appears in the backdrop only as thin specular filaments; the rust
+     in the clouds is the real warm note. Keeps the --gold-* names so every
+     existing rule follows without edits. */
+  --gold:        #c08652;
+  --gold-light:  #e2ae7e;
+  --gold-dim:    #8d5f39;
+  --gold-faint:  rgba(192, 134, 82, 0.10);
+  --gold-rule:   rgba(192, 134, 82, 0.30);
 
-  /* ── Ice: wayfinding, links, hover ── */
-  --ice:         #7fb0d8;
-  --ice-light:   #a9cde8;
-  --ice-dim:     #567f9f;
-  --ice-faint:   rgba(127, 176, 216, 0.10);
+  /* ── Steel: wayfinding, links, hover ──
+     The dominant hue in the image. */
+  --ice:         #6f9ec9;
+  --ice-light:   #9cc0e0;
+  --ice-dim:     #4a7099;
+  --ice-faint:   rgba(111, 158, 201, 0.10);
+
+  /* ── Violet: second hue, held in reserve for a third state ── */
+  --violet:      #9678bd;
+  --violet-dim:  #6a5289;
 
   /* ── Text ── */
-  --text:        #e9eef6;
-  --text-dim:    #a8b5c8;
-  --text-muted:  #74829a;
+  --text:        #e4ebf5;
+  --text-dim:    #a6b4c8;
+  --text-muted:  #6f7d92;
 
   /* ── Rank colours ── */
   --cadet:       #b04a4a;
   --sailor:      #4a7fb0;
   --officer:     #8a63b8;
-  --bridge:      #c9a04a;
+  --bridge:      #c08652;
 
   /* ── Misc ── */
   --radius:      10px;
