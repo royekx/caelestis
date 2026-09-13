@@ -23,7 +23,7 @@ html { overflow-x: clip; }
   border: 1px solid var(--rule); border-bottom: none;
   border-radius: 12px 12px 0 0; margin-bottom: -1px;
   cursor: pointer; font: inherit;
-  font-family: 'Cinzel', serif; font-size: 0.78rem;
+  font-family: 'Cinzel', serif; font-size: 0.835rem;
   letter-spacing: 0.15em; text-transform: uppercase;
   color: var(--text-muted); white-space: nowrap;
   transition: background .18s, color .18s;
@@ -33,7 +33,7 @@ html { overflow-x: clip; }
   background: var(--bg-card); border-color: var(--ice-dim);
   color: var(--gold); padding-bottom: 0.85rem;
 }
-.board-count { font-size: 0.7rem; opacity: 0.65; }
+.board-count { font-size: 0.812rem; opacity: 0.65; }
 
 .board-panels { position: relative; z-index: 1; }
 .board-panel {
@@ -51,7 +51,7 @@ html { overflow-x: clip; }
 /* ── FILTER PILLS ── */
 .filter-row { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1.1rem; }
 .filter-tag {
-  font-family: 'Cinzel', serif; font-size: 0.64rem; letter-spacing: 0.13em;
+  font-family: 'Cinzel', serif; font-size: 0.742rem; letter-spacing: 0.13em;
   text-transform: uppercase; border: 1px solid var(--rule); border-radius: 999px;
   background: transparent; color: var(--text-muted);
   padding: 0.3rem 0.85rem; cursor: pointer;
@@ -62,11 +62,11 @@ html { overflow-x: clip; }
 
 .filter-bar { display: flex; align-items: baseline; gap: 0.9rem; margin-bottom: 0.6rem; min-height: 1.6rem; }
 .filter-state {
-  font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.13em;
+  font-family: 'Cinzel', serif; font-size: 0.696rem; letter-spacing: 0.13em;
   text-transform: uppercase; color: var(--text-muted);
 }
 .clear-btn {
-  margin-left: auto; font-family: 'Cinzel', serif; font-size: 0.6rem;
+  margin-left: auto; font-family: 'Cinzel', serif; font-size: 0.696rem;
   letter-spacing: 0.13em; text-transform: uppercase;
   border: 1px solid var(--rule); border-radius: 999px; background: transparent;
   color: var(--ice-dim); padding: 0.25rem 0.8rem; cursor: pointer;
@@ -78,7 +78,7 @@ html { overflow-x: clip; }
 /* ── QUEST ROWS ──
    Expandable in place, so twenty quests stay twenty scannable rows. */
 .q-kind {
-  font-family: 'Cinzel', serif; font-size: 0.53rem; letter-spacing: 0.14em;
+  font-family: 'Cinzel', serif; font-size: 0.647rem; letter-spacing: 0.14em;
   text-transform: uppercase; padding: 0.15rem 0.55rem;
   border: 1px solid; border-radius: 999px;
   margin-left: 0.6rem; vertical-align: 0.2em; white-space: nowrap;
@@ -86,12 +86,12 @@ html { overflow-x: clip; }
 .kind-quest  { color: var(--gold-dim); border-color: var(--gold-rule); background: var(--gold-faint); }
 .kind-thread { color: var(--ice); border-color: rgba(74,127,176,0.4); background: var(--ice-faint); }
 .row-sub, .row-giver {
-  display: block; font-family: 'Crimson Pro', serif; font-size: 0.82rem;
+  display: block; font-family: 'Crimson Pro', serif; font-size: 0.877rem;
   font-weight: 400; letter-spacing: 0; color: var(--text-muted);
   font-style: italic; margin-top: 0.2rem;
 }
 .obj-progress {
-  font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.06em;
+  font-family: 'Cinzel', serif; font-size: 0.835rem; letter-spacing: 0.06em;
   color: var(--gold); white-space: nowrap; margin-left: 0.9rem;
 }
 .obj-progress.is-none { color: var(--text-muted); opacity: 0.4; }
@@ -99,7 +99,7 @@ html { overflow-x: clip; }
 /* Subquests nest beneath their parent, joined by a short elbow. */
 .q-entry.is-child .log-row { padding-left: 2.1rem; background: rgba(18,21,31,0.3); }
 .q-entry.is-child .log-row::before { left: 2.1rem; opacity: 0.25; }
-.q-entry.is-child .log-title { font-size: 0.9rem; }
+.q-entry.is-child .log-title { font-size: 0.963rem; }
 .q-entry.is-child .log-row::after {
   content: ''; position: absolute; left: 1.1rem; top: 0; bottom: 50%;
   width: 10px; border-left: 1px solid var(--rule);
@@ -126,7 +126,7 @@ html { overflow-x: clip; }
 .ent-name { font-family: 'Cinzel', serif; font-size: 0.95rem; font-weight: 700; color: var(--text); letter-spacing: 0.02em; }
 .ent.is-unknown .ent-name { color: var(--text-dim); font-weight: 400; }
 .ent-type, .ent-dist, .ent-state {
-  font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.12em;
+  font-family: 'Cinzel', serif; font-size: 0.708rem; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--text-muted); white-space: nowrap;
 }
 .ent-state { color: var(--gold-dim); }
@@ -141,7 +141,7 @@ html { overflow-x: clip; }
 .chart-wrap { overflow-x: auto; margin: 0 -0.4rem 1.2rem; padding: 0 0.4rem; }
 .chart { width: 100%; min-width: 620px; max-width: 900px; height: auto; display: block; margin: 0 auto; }
 .chart-hint {
-  font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.14em;
+  font-family: 'Cinzel', serif; font-size: 0.696rem; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--text-muted); opacity: 0.6;
   text-align: center; margin-bottom: 0.7rem;
 }
@@ -185,30 +185,30 @@ html { overflow-x: clip; }
 .stub[hidden] { display: none; }
 .stub.is-unknown { border-color: var(--rule); border-left-color: var(--rule); }
 .stub-top { display: flex; align-items: baseline; gap: 0.9rem; }
-.stub-type { font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
+.stub-type { font-family: 'Cinzel', serif; font-size: 0.696rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
 .stub-state {
-  margin-left: auto; font-family: 'Cinzel', serif; font-size: 0.58rem;
+  margin-left: auto; font-family: 'Cinzel', serif; font-size: 0.708rem;
   letter-spacing: 0.13em; text-transform: uppercase; color: var(--gold-dim); white-space: nowrap;
 }
 .stub-name { font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; color: var(--text); letter-spacing: 0.02em; }
 .stub-desc { font-size: 0.96rem; line-height: 1.6; color: var(--text-dim); margin: 0; }
 .det-sites, .stub-sites { display: flex; align-items: baseline; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.3rem; }
 .det-label, .stub-sites-label {
-  font-family: 'Cinzel', serif; font-size: 0.56rem; letter-spacing: 0.14em;
+  font-family: 'Cinzel', serif; font-size: 0.683rem; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--text-muted); white-space: nowrap;
 }
 .det-chips, .stub-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
 .stub-chip {
-  display: inline-flex; align-items: baseline; gap: 0.4rem; font-size: 0.87rem;
+  display: inline-flex; align-items: baseline; gap: 0.4rem; font-size: 0.931rem;
   padding: 0.17rem 0.68rem; border-radius: 999px; border: 1px solid var(--rule);
   background: var(--bg-raised); color: var(--text-dim); text-decoration: none;
   transition: border-color .18s, color .18s;
 }
 .stub-chip:hover { border-color: var(--ice-dim); color: var(--ice); }
-.chip-note { font-family: 'Cinzel', serif; font-size: 0.52rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+.chip-note { font-family: 'Cinzel', serif; font-size: 0.634rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
 .stub-open {
   align-self: flex-start; margin-top: 0.4rem; font-family: 'Cinzel', serif;
-  font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
+  font-size: 0.719rem; letter-spacing: 0.15em; text-transform: uppercase;
   color: var(--ice-dim); text-decoration: none;
 }
 .stub-open:hover { color: var(--ice); }
@@ -226,11 +226,11 @@ html { overflow-x: clip; }
 .account-tab:hover { background: var(--ice-faint); }
 .account-tab.is-active { background: var(--bg-card); border-color: var(--ice-dim); padding-bottom: 0.85rem; }
 .account-tab-name {
-  font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 0.15em;
+  font-family: 'Cinzel', serif; font-size: 0.856rem; letter-spacing: 0.15em;
   text-transform: uppercase; color: var(--text-muted); white-space: nowrap;
 }
 .account-tab.is-active .account-tab-name { color: var(--gold); }
-.account-tab-note { font-size: 0.85rem; font-style: italic; color: var(--text-muted); white-space: nowrap; }
+.account-tab-note { font-size: 0.909rem; font-style: italic; color: var(--text-muted); white-space: nowrap; }
 .account-tab:not(.is-active) .account-tab-note { opacity: 0.6; }
 .account-panels { position: relative; z-index: 1; }
 .account-panel {
@@ -252,7 +252,7 @@ html { overflow-x: clip; }
 @media (max-width: 720px) {
   .account-tab-note { display: none; }
   .account-tab { padding: 0.6rem 1rem 0.65rem; flex: 1 1 auto; align-items: center; }
-  .account-tab-name { font-size: 0.72rem; letter-spacing: 0.1em; }
+  .account-tab-name { font-size: 0.835rem; letter-spacing: 0.1em; }
 }
 @media (max-width: 700px) {
   .ent-row { grid-template-columns: 16px 1fr auto; gap: 0.7rem; padding: 0.75rem 0.9rem; }
@@ -260,7 +260,7 @@ html { overflow-x: clip; }
 }
 @media (max-width: 620px) {
   .board-panel { padding: 0.9rem; }
-  .board-tab { padding: 0.6rem 0.9rem 0.65rem; font-size: 0.68rem; letter-spacing: 0.08em; }
+  .board-tab { padding: 0.6rem 0.9rem 0.65rem; font-size: 0.789rem; letter-spacing: 0.08em; }
   .q-kind { display: inline-block; margin: 0.3rem 0 0; vertical-align: 0; }
   .q-entry.is-child .log-row { padding-left: 1.4rem; }
   .q-entry.is-child .log-row::before { left: 1.4rem; }

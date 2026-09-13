@@ -48,12 +48,12 @@
   .facet-stacked { flex-direction: column; align-items: stretch; gap: 0.45rem; }
   .facet[hidden] { display: none; }
   .facet-label {
-    font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.16em;
+    font-family: 'Cinzel', serif; font-size: 0.708rem; letter-spacing: 0.16em;
     text-transform: uppercase; color: var(--text-muted); white-space: nowrap; min-width: 3.4rem;
   }
   .facet-pills { display: flex; flex-wrap: wrap; gap: 0.35rem; }
   .filter-tag {
-    font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.12em;
+    font-family: 'Cinzel', serif; font-size: 0.696rem; letter-spacing: 0.12em;
     text-transform: uppercase; border: 1px solid var(--rule); border-radius: 999px;
     background: transparent; color: var(--text-muted); padding: 0.26rem 0.75rem;
     cursor: pointer; transition: color .18s, border-color .18s, background .18s;
@@ -67,13 +67,13 @@
     display: flex; align-items: baseline; gap: 0.5rem; padding: 0.7rem 1.35rem 0.75rem;
     background: var(--bg-raised); border: 1px solid var(--rule); border-bottom: none;
     border-radius: 12px 12px 0 0; margin-bottom: -1px; cursor: pointer; font: inherit;
-    font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.15em;
+    font-family: 'Cinzel', serif; font-size: 0.835rem; letter-spacing: 0.15em;
     text-transform: uppercase; color: var(--text-muted); white-space: nowrap;
     transition: background .18s, color .18s;
   }
   .board-tab:hover { background: var(--ice-faint); color: var(--ice); }
   .board-tab.is-active { background: var(--bg-card); border-color: var(--ice-dim); color: var(--gold); padding-bottom: 0.85rem; }
-  .board-count { font-size: 0.7rem; opacity: 0.6; }
+  .board-count { font-size: 0.812rem; opacity: 0.6; }
   .board-body { border: 1px solid var(--ice-dim); border-radius: 0 12px 12px 12px; background: var(--bg-card); padding: 1.3rem; }
 
   .register { border: 1px solid var(--rule); }
@@ -94,19 +94,19 @@
     overflow: hidden; display: flex; align-items: center; justify-content: center;
   }
   .ent-face img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .face-mono { font-family: 'Cinzel', serif; font-size: 0.9rem; color: var(--ice-dim); }
+  .face-mono { font-family: 'Cinzel', serif; font-size: 0.963rem; color: var(--ice-dim); }
   .ent-face.magic-item { border-color: var(--gold-dim); }
   .ent-face.evidence   { border-color: var(--violet-dim); }
   .ent-face.document   { border-color: var(--ice-dim); }
   .ent-name { font-family: 'Cinzel', serif; font-size: 0.94rem; font-weight: 700; color: var(--text); line-height: 1.3; }
-  .ent-sub { display: block; font-family: 'Crimson Pro', serif; font-size: 0.84rem; font-weight: 400; font-style: italic; color: var(--text-muted); letter-spacing: 0; }
+  .ent-sub { display: block; font-family: 'Crimson Pro', serif; font-size: 0.899rem; font-weight: 400; font-style: italic; color: var(--text-muted); letter-spacing: 0; }
   .ent-type, .ent-state {
-    font-family: 'Cinzel', serif; font-size: 0.57rem; letter-spacing: 0.12em;
+    font-family: 'Cinzel', serif; font-size: 0.695rem; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--text-muted); white-space: nowrap;
   }
   .ent-state { color: var(--ice-dim); }
   .ent-rarity {
-    font-family: 'Cinzel', serif; font-size: 0.55rem; letter-spacing: 0.13em;
+    font-family: 'Cinzel', serif; font-size: 0.671rem; letter-spacing: 0.13em;
     text-transform: uppercase; white-space: nowrap; color: var(--text-muted);
   }
   .r-uncommon { color: #6fae7a; }
@@ -119,11 +119,11 @@
   .ent-detail[hidden] { display: none; }
   .stub-desc { font-size: 0.95rem; line-height: 1.6; color: var(--text-dim); margin: 0; }
   .det-sites { display: flex; align-items: baseline; gap: 0.8rem; flex-wrap: wrap; }
-  .det-label { font-family: 'Cinzel', serif; font-size: 0.55rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
-  .stub-open { align-self: flex-start; font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ice-dim); text-decoration: none; }
+  .det-label { font-family: 'Cinzel', serif; font-size: 0.671rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
+  .stub-open { align-self: flex-start; font-family: 'Cinzel', serif; font-size: 0.696rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ice-dim); text-decoration: none; }
   .stub-open:hover { color: var(--ice); }
-  .result-line { font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.6rem; display: flex; align-items: baseline; gap: 0.9rem; }
-  .clear-btn { margin-left: auto; font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.13em; text-transform: uppercase; border: 1px solid var(--rule); border-radius: 999px; background: transparent; color: var(--ice-dim); padding: 0.22rem 0.75rem; cursor: pointer; }
+  .result-line { font-family: 'Cinzel', serif; font-size: 0.708rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.6rem; display: flex; align-items: baseline; gap: 0.9rem; }
+  .clear-btn { margin-left: auto; font-family: 'Cinzel', serif; font-size: 0.708rem; letter-spacing: 0.13em; text-transform: uppercase; border: 1px solid var(--rule); border-radius: 999px; background: transparent; color: var(--ice-dim); padding: 0.22rem 0.75rem; cursor: pointer; }
   .clear-btn:hover { border-color: var(--ice-dim); color: var(--ice); }
   .clear-btn[hidden] { display: none; }
   .no-results { padding: 1.6rem 1.1rem; color: var(--text-muted); font-style: italic; }
@@ -134,7 +134,7 @@
     .ent-type, .ent-rarity { display: none; }
     .ent-detail { padding-left: 1.6rem; }
     .facet-label { min-width: 0; }
-    .board-tab { padding: 0.6rem 0.9rem 0.65rem; font-size: 0.68rem; letter-spacing: 0.08em; }
+    .board-tab { padding: 0.6rem 0.9rem 0.65rem; font-size: 0.789rem; letter-spacing: 0.08em; }
     .board-body { padding: 0.9rem; }
   }
 
@@ -184,7 +184,7 @@
     align-items: center; gap: 0.15rem;
   }
   .log-num-label {
-    font-size: 0.62rem; letter-spacing: 0.15em;
+    font-size: 0.719rem; letter-spacing: 0.15em;
     text-transform: uppercase; color: var(--gold-dim);
   }
   .log-num-val {
@@ -199,7 +199,7 @@
     font-weight: 700; color: var(--text); letter-spacing: 0.02em;
   }
   .log-open {
-    font-family: 'Cinzel', serif; font-size: 0.66rem;
+    font-family: 'Cinzel', serif; font-size: 0.766rem;
     letter-spacing: 0.14em; text-transform: uppercase;
     color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem;
     white-space: nowrap; transition: color 0.2s;
@@ -211,7 +211,7 @@
     flex-shrink: 0;
     background: none; border: none; border-left: 1px solid var(--gold-rule);
     padding: 0 1.1rem; cursor: pointer;
-    font-family: 'Cinzel', serif; font-size: 0.66rem;
+    font-family: 'Cinzel', serif; font-size: 0.766rem;
     letter-spacing: 0.14em; text-transform: uppercase;
     color: var(--gold-dim);
     display: flex; align-items: center; gap: 0.5rem;
@@ -237,14 +237,14 @@
   }
   .glance-row { display: grid; grid-template-columns: 90px 1fr; gap: 0.8rem; align-items: flex-start; }
   .glance-label {
-    font-family: 'Cinzel', serif; font-size: 0.68rem;
+    font-family: 'Cinzel', serif; font-size: 0.789rem;
     letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--gold-dim); padding-top: 0.25rem;
   }
   .glance-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
   .chip {
     font-family: 'Crimson Pro', serif;
-    font-size: 0.90rem; padding: 0.15rem 0.6rem;
+    font-size: 0.963rem; padding: 0.15rem 0.6rem;
     border: 1px solid var(--gold-rule);
     color: var(--text); background: rgba(201,153,58,0.05);
     text-decoration: none; white-space: nowrap;
@@ -262,7 +262,7 @@
     padding-top: 0.4rem; border-top: 1px solid var(--gold-rule);
   }
   .overview-link {
-    font-family: 'Cinzel', serif; font-size: 0.68rem;
+    font-family: 'Cinzel', serif; font-size: 0.789rem;
     letter-spacing: 0.13em; text-transform: uppercase;
     color: var(--gold-dim); text-decoration: none;
     border: 1px solid var(--gold-rule); padding: 0.32rem 0.9rem;
@@ -346,7 +346,7 @@
   }
   .ent-type, .ent-dist { display: none; }
   .board-panel { padding: 0.85rem; }
-  .board-tab { padding: 0.6rem 0.9rem 0.65rem; font-size: 0.68rem; letter-spacing: 0.08em; }
+  .board-tab { padding: 0.6rem 0.9rem 0.65rem; font-size: 0.789rem; letter-spacing: 0.08em; }
 }
 
 /* ─────────────────────────────────────────────────────────────────
@@ -475,13 +475,107 @@ img { max-width: 100%; }
 /* ─────────────────────────────────────────────────────────────────
    SECTION 10 — ENTRY vs OBJECT
    Most entries are a ledger record only. Where the crew can actually
-   read the thing, the ledger row says so. The entry-page half of this
-   pair lives in entity.css — no entry page loads this sheet.
+   read the thing, the entry carries a block through to it and the
+   ledger row says so.
    ───────────────────────────────────────────────────────────────── */
+.xref-card.the-object { border-left: 3px solid var(--gold); }
+.xref-card.the-object .stub-desc { margin: 0.6rem 0 0.8rem; }
 .readable-badge {
-  font-family: 'Cinzel', serif; font-size: 0.52rem; letter-spacing: 0.14em;
+  font-family: 'Cinzel', serif; font-size: 0.634rem; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--gold-dim);
   border: 1px solid var(--gold-rule); border-radius: 999px;
   padding: 0.1rem 0.5rem; margin-left: 0.5rem; vertical-align: 0.15em;
   white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   SECTION 11 — THE TEXT TIERS
+   --text-dim used to carry both prose and small labels. It now
+   carries subtext, and prose sits one step brighter. Appended here
+   so the tier is applied in one place rather than chased through
+   four stylesheets.
+   ───────────────────────────────────────────────────────────────── */
+.stub-desc, .s-desc, .glance-synopsis, .cb-conseq, .intro-note,
+.entry-body, .entry-body p, .last-text, .crew-line, .q-next,
+.nexus-entry-sub, .protocol-desc, .board-note, .record-list li,
+.log-item, .hub-sub { color: var(--text-soft); }
+
+/* Genuinely recessive: placeholders, hints, and the faintest labels. */
+.chart-hint, .cb-search input::placeholder, .search-input::placeholder,
+.ent.is-unknown .ent-state, .lbl-dim { color: var(--text-faint); }
+
+/* The command bar reads first, so it gets a little more size than the
+   labels elsewhere. */
+.cb-label    { font-size: 0.68rem; letter-spacing: 0.16em; }
+.cb-key      { font-size: 0.6rem; }
+.cb-val      { font-size: 1rem; }
+.cb-op-name  { font-size: 0.78rem; }
+.cb-op-note  { font-size: 0.92rem; }
+.cb-search input     { font-size: 1.02rem; }
+.cb-search-tag       { font-size: 0.62rem; }
+.cb-quest, .cb-chip  { font-size: 0.92rem; }
+
+/* ─────────────────────────────────────────────────────────────────
+   SECTION 12 — COMPANION PAGES
+   Two crew members carry a page of their own: Casey's stellar chart
+   and Tumak's wayfinder runes. In the old build this lived inline on
+   Casey's page alone, which is why Tumak's page was never linked from
+   anywhere. It is a shared component now, so the next one is markup
+   and nothing else.
+   ───────────────────────────────────────────────────────────────── */
+.companion-card {
+  border: 1px solid var(--gold-rule);
+  border-left: 3px solid var(--gold);
+  background: rgba(192, 134, 82, 0.05);
+  padding: 1.3rem 1.5rem 1.4rem;
+  margin: 1.6rem 0 0;
+}
+.companion-head {
+  display: flex; align-items: baseline; gap: 0.9rem;
+  padding-bottom: 0.7rem; margin-bottom: 0.9rem;
+  border-bottom: 1px solid var(--gold-rule);
+}
+.companion-label {
+  font-family: 'Cinzel', serif; font-size: 0.7rem;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold);
+}
+.companion-intro {
+  font-size: 1.02rem; line-height: 1.75; color: var(--text-soft);
+  margin: 0 0 1.1rem;
+}
+.feat-card {
+  background: var(--gold-faint);
+  border: 1px solid var(--gold-rule);
+  padding: 1.1rem 1.3rem;
+}
+.feat-flavor {
+  font-style: italic; color: var(--text-dim);
+  font-size: 1.01rem; margin: 0 0 0.7rem;
+}
+.feat-rules { font-size: 1.01rem; line-height: 1.65; color: var(--text); margin: 0 0 0.7rem; }
+.feat-outcomes { list-style: none; padding: 0; margin: 0; }
+.feat-outcomes li { padding: 0.3rem 0; font-size: 1.01rem; line-height: 1.55; color: var(--text); }
+.feat-outcomes b {
+  font-family: 'Cinzel', serif; font-size: 0.72rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold); margin-right: 0.4rem;
+}
+.feat-coda {
+  font-style: italic; color: var(--text-dim);
+  font-size: 0.94rem; margin: 0.7rem 0 0;
+  padding-top: 0.7rem; border-top: 1px solid var(--gold-rule);
+}
+.companion-cta { text-align: center; margin-top: 1.4rem; }
+.companion-cta-link {
+  display: inline-block;
+  font-family: 'Cinzel', serif; font-size: 0.74rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold-dim); text-decoration: none;
+  border: 1px solid var(--gold-rule);
+  padding: 0.55rem 1.3rem;
+  transition: border-color .2s, color .2s, background .2s;
+}
+.companion-cta-link:hover {
+  border-color: var(--gold-dim); color: var(--gold-light);
+  background: rgba(192, 134, 82, 0.08);
 }

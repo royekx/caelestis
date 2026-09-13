@@ -96,7 +96,7 @@ body::after {
 }
 .dm-page-eyebrow {
   font-family: 'Cinzel', serif;
-  font-size: 0.84rem;
+  font-size: 0.899rem;
   letter-spacing: 0.25em;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -200,7 +200,7 @@ body::after {
   content: '✦ ✦ ✦';
   color: var(--gold-dim);
   letter-spacing: 1rem;
-  font-size: 0.84rem;
+  font-size: 0.899rem;
 }
 
 /* ── PULL-QUOTE ── */
@@ -301,7 +301,7 @@ body::after {
   border: 1px solid var(--gold);
   color: var(--gold);
   font-family: 'Cinzel', serif;
-  font-size: 0.86rem;
+  font-size: 0.92rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   text-decoration: none;
@@ -341,7 +341,7 @@ body::after {
 .dm-callout.is-info    { border-left-color: var(--dm-teal); }
 .dm-callout-label {
   font-family: 'Cinzel', serif;
-  font-size: 0.84rem;
+  font-size: 0.899rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
@@ -402,7 +402,7 @@ body::after {
   font-weight: 600;
   text-align: left;
   padding: 0.65rem 0.85rem;
-  font-size: 0.83rem;
+  font-size: 0.888rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   border-bottom: 1px solid var(--gold-rule);
@@ -420,7 +420,7 @@ body::after {
 .dm-xref {
   display: inline-block;
   font-family: 'Cinzel', serif;
-  font-size: 0.78rem;
+  font-size: 0.835rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   padding: 0.12rem 0.45rem;
@@ -442,7 +442,7 @@ body::after {
 .dm-tag {
   display: inline-block;
   font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
+  font-size: 0.835rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   padding: 0.1rem 0.4rem;
@@ -461,7 +461,7 @@ body::after {
 .dm-content dl { margin: 1rem 0; }
 .dm-content dt {
   font-family: 'Cinzel', serif;
-  font-size: 0.88rem;
+  font-size: 0.942rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gold);
@@ -495,7 +495,7 @@ body::after {
 }
 .dm-tile-eyebrow {
   font-family: 'Cinzel', serif;
-  font-size: 0.78rem;
+  font-size: 0.835rem;
   letter-spacing: 0.22em;
   color: var(--gold-dim);
   text-transform: uppercase;
@@ -537,7 +537,7 @@ body::after {
   padding-top: 1.5rem;
   border-top: 1px solid rgba(201, 153, 58, 0.14);
   font-family: 'Cinzel', serif;
-  font-size: 0.84rem;
+  font-size: 0.899rem;
   letter-spacing: 0.18em;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -577,7 +577,7 @@ body::after {
   align-self: start;
   max-height: calc(100vh - 4rem);
   overflow-y: auto;
-  font-size: 0.90rem;
+  font-size: 0.963rem;
   line-height: 1.4;
   padding-left: 1rem;
   border-left: 1px solid var(--gold-rule);
@@ -585,7 +585,7 @@ body::after {
 
 .dm-toc-title {
   font-family: 'Cinzel', serif;
-  font-size: 0.79rem;
+  font-size: 0.845rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -616,7 +616,7 @@ body::after {
 /* h3-level entries indent under their h2. */
 .dm-toc a.dm-toc-sub {
   padding-left: calc(1.5rem + 1rem - 2px);
-  font-size: 0.86rem;
+  font-size: 0.92rem;
   color: var(--text-muted);
   opacity: 0.78;
 }
@@ -688,7 +688,7 @@ body::after {
 .dossier thead th {
   text-align: left;
   font-family: 'Cinzel', serif;
-  font-size: 0.84rem;
+  font-size: 0.899rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-dim);
@@ -722,7 +722,7 @@ body::after {
 }
 
 .dossier .dossier-role {
-  font-size: 0.90rem;
+  font-size: 0.963rem;
   color: var(--text-dim);
   font-style: italic;
 }
@@ -824,7 +824,7 @@ body::after {
 .dm-collapse > summary::before {
   content: '▸';
   display: inline-block;
-  font-size: 0.84rem;
+  font-size: 0.899rem;
   color: var(--gold-dim);
   transition: transform 0.18s;
 }
@@ -863,7 +863,7 @@ body::after {
 
 .dm-ops-links a {
   font-family: 'Cinzel', serif;
-  font-size: 0.86rem;
+  font-size: 0.92rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--gold-dim);
@@ -900,7 +900,7 @@ body::after {
 
 .voyage-grid .voyage-col-eyebrow {
   font-family: 'Cinzel', serif;
-  font-size: 0.84rem;
+  font-size: 0.899rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-dim);
@@ -921,7 +921,7 @@ body::after {
 .voyage-grid .voyage-col-link {
   display: inline-block;
   margin-top: 0.6rem;
-  font-size: 0.86rem;
+  font-size: 0.92rem;
   color: var(--gold-dim);
   text-decoration: none;
   border-bottom: 1px solid var(--gold-rule);
@@ -943,7 +943,7 @@ body::after {
 
 .voyage-delta-eyebrow {
   font-family: 'Cinzel', serif;
-  font-size: 0.84rem;
+  font-size: 0.899rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-dim);
@@ -1083,7 +1083,7 @@ body::after {
 .dossier-row > summary::after {
   content: '▸';
   display: inline-block;
-  font-size: 0.83rem;
+  font-size: 0.888rem;
   color: var(--gold-dim);
   transition: transform 0.18s;
   text-align: center;
@@ -1141,7 +1141,7 @@ body::after {
 }
 
 .dossier-row .dossier-role {
-  font-size: 0.88rem;
+  font-size: 0.942rem;
   color: var(--text-dim);
   font-style: italic;
   margin-top: 0.15rem;
@@ -1171,7 +1171,7 @@ body::after {
 .dossier-row-body dl { margin: 0.4rem 0; }
 .dossier-row-body dt {
   font-family: 'Cinzel', serif;
-  font-size: 0.86rem;
+  font-size: 0.92rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--gold-dim);
@@ -1186,7 +1186,7 @@ body::after {
 .dossier-status {
   display: inline-block;
   font-family: 'Cinzel', serif;
-  font-size: 0.84rem;
+  font-size: 0.899rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0.15rem 0.5rem;
@@ -1202,7 +1202,7 @@ body::after {
 
 /* Inline tag-pills used inside dossier rows (e.g. plot-hook type tags) */
 .dossier-row .dm-tag {
-  font-size: 0.74rem;
+  font-size: 0.858rem;
   padding: 0.1rem 0.4rem;
   margin-left: 0.3rem;
   vertical-align: middle;
@@ -1236,7 +1236,7 @@ body::after {
   .dossier-row .dossier-detail {
     grid-column: 2;
     grid-row: 2;
-    font-size: 0.90rem;
+    font-size: 0.963rem;
   }
   .dossier-row > summary::after { grid-column: 3; grid-row: 1; }
   .dossier-row-body { padding-left: 1rem; }

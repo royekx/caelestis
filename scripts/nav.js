@@ -226,16 +226,26 @@
   // 900px column — wider than its own page, and a different width on the hub
   // (which nests inside .hub at 1040px) than anywhere else. One insertion
   // point fixes both the overflow and the inconsistency.
-  // On the hub the column is .hub and the title already lives inside it, so
-  // the bar goes under the title. On every other page the column is .content
-  // and the bar goes at its top.
+  // Where the bar goes.
+  //
+  // .content carries a scrim (.content::before) that sits behind the page's
+  // own material. The bar is not page material — it is the terminal chrome,
+  // the same on every page — so it belongs outside that scrim, sitting on the
+  // backdrop the way it does on the hub, which has no scrim at all.
+  //
+  // So on a normal page it is inserted BEFORE .content rather than inside it,
+  // and given the column width itself (see .command-bar in caelestis.css).
+  // On the hub the column is .hub and the title lives inside it, so the bar
+  // goes under the title as before.
   var head = document.querySelector('.hub-head');
-  var col = document.querySelector('.content') ||
-            document.querySelector('.terminal-wrap');   // S.E.A.R.C.H. names its column differently
+  var col = document.querySelector('.content');
+  var term = document.querySelector('.terminal-wrap');   // S.E.A.R.C.H. names its column differently
   if (head) {
     head.insertAdjacentHTML('afterend', buildCommandBar());
   } else if (col) {
-    col.insertAdjacentHTML('afterbegin', buildCommandBar());
+    col.insertAdjacentHTML('beforebegin', buildCommandBar());
+  } else if (term) {
+    term.insertAdjacentHTML('afterbegin', buildCommandBar());
   } else {
     document.body.insertAdjacentHTML('afterbegin', buildCommandBar());
   }
