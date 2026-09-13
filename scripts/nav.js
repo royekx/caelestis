@@ -217,17 +217,27 @@
   document.body.insertAdjacentHTML('afterbegin', html);
   document.body.classList.add('with-sidebar');
 
-  // The bar belongs in the page's own column, directly under the title, so
-  // it shares the body's width and never breaks the backdrop across the page.
-  // It sticks once scrolled to; the title above it scrolls away normally.
-  var anchor = document.querySelector('.hub-head') ||
-               document.querySelector('.page-header');
-  if (anchor) {
-    anchor.insertAdjacentHTML('afterend', buildCommandBar());
+  // The bar goes INSIDE the page column, at its top.
+  //
+  // It used to be inserted after .page-header, which made it a sibling of
+  // .content rather than a child. .content is max-width:900px centred;
+  // .page-content has no max-width at all. So on every sub-page the bar
+  // rendered the full width of the viewport while the page under it sat in a
+  // 900px column — wider than its own page, and a different width on the hub
+  // (which nests inside .hub at 1040px) than anywhere else. One insertion
+  // point fixes both the overflow and the inconsistency.
+  // On the hub the column is .hub and the title already lives inside it, so
+  // the bar goes under the title. On every other page the column is .content
+  // and the bar goes at its top.
+  var head = document.querySelector('.hub-head');
+  var col = document.querySelector('.content') ||
+            document.querySelector('.terminal-wrap');   // S.E.A.R.C.H. names its column differently
+  if (head) {
+    head.insertAdjacentHTML('afterend', buildCommandBar());
+  } else if (col) {
+    col.insertAdjacentHTML('afterbegin', buildCommandBar());
   } else {
-    var col = document.querySelector('.content') || document.querySelector('.hub');
-    if (col) col.insertAdjacentHTML('afterbegin', buildCommandBar());
-    else document.body.insertAdjacentHTML('afterbegin', buildCommandBar());
+    document.body.insertAdjacentHTML('afterbegin', buildCommandBar());
   }
 
   var cbBtn = document.getElementById('js-cb-expand');
