@@ -579,3 +579,132 @@ img { max-width: 100%; }
   border-color: var(--gold-dim); color: var(--gold-light);
   background: rgba(192, 134, 82, 0.08);
 }
+
+/* ─────────────────────────────────────────────────────────────────
+   SECTION 13 — THE IDENTITY CARD AT 118%
+   caelestis.css already fixed this, but scoped to `.stat-list`, and
+   the pages use `.stat-card` — so the fix never applied. At the old
+   root size the values happened to fit anyway. At 118% they stopped,
+   and long ones ran out of the column.
+
+   A key never wraps. A value that will not sit beside its key drops
+   to its own full-width line and wraps there, so the two can never
+   collide and nothing is ever clipped.
+   ───────────────────────────────────────────────────────────────── */
+.stat-card .stat-row {
+  flex-wrap: wrap;
+  gap: 0.2rem 0.9rem;
+}
+.stat-card .stat-key { flex: 0 0 auto; white-space: nowrap; }
+.stat-card .stat-val {
+  flex: 1 1 auto; min-width: 0;
+  text-align: right;
+  overflow-wrap: anywhere; hyphens: auto;
+}
+/* Anything longer than about the column takes the whole line. */
+.stat-card .stat-val { max-width: 100%; }
+.stat-card .stat-row:has(.stat-val:not(:empty)) { align-items: baseline; }
+
+/* The column itself needs a little more room at the larger root size. */
+@media (min-width: 561px) {
+  .content .entry-header { grid-template-columns: 224px minmax(0, 1fr); }
+}
+.identity-card, .stat-card, .portrait-frame { min-width: 0; max-width: 100%; }
+.stat-card .stat-val.stat-val-long {
+  flex: 1 1 100%; text-align: left; white-space: normal;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   SECTION 14 — THE IDENTITY CARD STACKS
+   Section 13 widened the column and let long values wrap. It was not
+   enough: a key like AFFILIATION is nowrap and eats most of a 224px
+   column, so even a short value like "Caelestis Academy" had nothing
+   left to wrap into and clipped.
+
+   In a column this narrow, side-by-side was never going to hold. The
+   key sits on its own line and the value sits under it, left-aligned
+   and free to wrap. Nothing can clip, at any root size.
+   ───────────────────────────────────────────────────────────────── */
+.identity-card .stat-card .stat-row {
+  display: block;
+  padding: 0.6rem 0;
+}
+.identity-card .stat-card .stat-key {
+  display: block;
+  margin-bottom: 0.15rem;
+  white-space: normal;
+}
+.identity-card .stat-card .stat-val,
+.identity-card .stat-card .stat-val.stat-val-long {
+  display: block;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+
+/* A quest has no portrait — its stat card is the full width of the page
+   column, where key-beside-value still reads better. */
+.identity-card > .stat-card:first-child .stat-row {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 0.9rem;
+}
+.identity-card > .stat-card:first-child .stat-key { display: inline; margin: 0; white-space: nowrap; }
+.identity-card > .stat-card:first-child .stat-val { display: inline; text-align: right; }
+
+/* ─────────────────────────────────────────────────────────────────
+   SECTION 15 — TABS DOWN THE SIDE
+   Two hooks: .railed on the wrapper, .tabrail on the tab container.
+   It does not care what the tabs inside are called, which is why the
+   Quest Board, Inventory, Navigation Records and the voyage records
+   all take it unchanged.
+
+   The rail is sticky, so the tabs stay in reach while a long board
+   scrolls. --rail-top is measured to clear the command bar, which is
+   three bands tall and sticky at 0 — the number to change if the bar
+   ever gains or loses a band.
+   ───────────────────────────────────────────────────────────────── */
+:root { --rail: 210px; --rail-top: 8.5rem; }
+
+.railed {
+  display: grid;
+  grid-template-columns: var(--rail) minmax(0, 1fr);
+  align-items: start;
+}
+.railed > .tabrail {
+  display: flex; flex-direction: column; gap: 0;
+  position: sticky; top: var(--rail-top);
+  min-width: 0; z-index: 2;
+}
+.railed > .tabrail > button {
+  width: 100%; text-align: left; justify-content: flex-start;
+  border-radius: 12px 0 0 12px; border-right: none;
+  margin: 0; min-width: 0;
+}
+.railed > .tabrail > button + button { border-top: none; }
+.railed > .tabrail > button.is-active {
+  background: var(--bg-card); border-color: var(--ice-dim);
+  margin-right: -1px; padding-right: 1.2rem;   /* bleeds into the panel */
+}
+.railed > .panels { min-width: 0; z-index: 1; }
+.railed > .panels, .railed > .panels > * { border-radius: 0 12px 12px 12px; }
+
+/* A voyage tab carries a name and a note. The top row hid the note for want
+   of width; the rail has height instead, so it stacks them and keeps it. */
+.railed > .account-tabs > .account-tab {
+  flex-direction: column; align-items: flex-start; gap: 0.2rem; padding: 0.9rem 1.1rem;
+}
+.railed > .account-tabs > .account-tab .account-tab-note {
+  display: block; white-space: normal; line-height: 1.35;
+}
+
+/* Under 820px the rail costs more than it gives. Tabs go back on top. */
+@media (max-width: 820px) {
+  .railed { grid-template-columns: minmax(0, 1fr); }
+  .railed > .tabrail { flex-direction: row; position: static; }
+  .railed > .tabrail > button {
+    width: auto; border-radius: 12px 12px 0 0;
+    border-right: 1px solid var(--rule); margin-right: 0; padding-right: 1.1rem;
+  }
+  .railed > .account-tabs > .account-tab { flex-direction: row; align-items: center; }
+  .railed > .account-tabs > .account-tab .account-tab-note { display: none; }
+}
