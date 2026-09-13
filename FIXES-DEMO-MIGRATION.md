@@ -418,3 +418,69 @@ separators and hover to match the registers.
 The eleven pages behind the FIA gate render the command bar without a bearing
 strip. They are a separate security context with their own chrome, so that may
 well be right — but say the word and they get the strip like everything else.
+
+---
+
+# Sixth pass — the column, the brass, the backdrop
+
+## One column width
+
+`body.with-sidebar .content` was `max-width: 100%`, so every page except the
+hub ran to the edge of whatever monitor it was opened on. The hub reads better
+because it has always been bounded.
+
+A `--column` token now holds `min(1180px, 100%)`, and the page header, the
+content and the command bar all sit inside it. It is a `min()` rather than a
+fixed width, so the column still gives space back on a laptop — it just stops
+growing once a line gets too long to scan.
+
+That is also what "the command bar is incorrectly placed on the dossier pages"
+was. Checked the injection point on eight pages across every page type: it is
+the first child of the page column on all of them, hub included. The bar was in
+the right place and the column around it was not.
+
+## The command bar in brass
+
+Two blues stacked: an ice-toned bar above ice-toned panels, so it read as
+another panel rather than as the thing sitting above them. The bar is now
+brass — a warm dark gradient, gold rules between its bands, gold on the search
+glyph, the caret and the chips, and a gold wash on hover.
+
+## The backdrop
+
+`assets/astral.jpg`, replacing `nebula.jpg` on the player-facing site. The
+scrim behind `.content` is unchanged and still carries text contrast, which
+matters more with this one — it is a brighter image than the one it replaces.
+
+If it turns out too loud behind long prose, the dial is `.content::before` in
+`caelestis.css`; raising its alpha darkens every page at once without touching
+the image.
+
+## Inventory
+
+**The manifest was missing from Evidence & Documents.** The tab carried
+`data-class="evidence"` and matched by equality, so the one row classed
+`document` fell through — it appeared under All Items and nowhere else. The tab
+now carries both classes and the matcher reads it as a set. Evidence &
+Documents returns 4.
+
+**The entry did not link to the object.** The distinction from the earlier
+restructure — an entry is the ledger record, an item is the thing the crew can
+actually read — had the return link but not the outbound one. The entry now
+carries an *"The Object Itself"* block through to `items/collection-manifest.html`,
+and the ledger row carries a **Readable** badge, which is what marks the one
+entry in eleven that has an object behind it.
+
+## One fix on top of the bundle
+
+Section 10 shipped both halves of the entry/object pair in `register.css`, but
+no entry page loads that sheet — every detail page loads `caelestis` + `entity`
++ `board` and stops there. So `.xref-card.the-object` was dead on the only page
+that uses it: the block rendered as an ordinary connections card, without the
+gold rule that marks it as the object.
+
+Split along the seam the classes already imply. `.readable-badge` is a ledger-row
+thing and stays in `register.css`, which the inventory index does load.
+`.xref-card.the-object` moved to `entity.css` beside the `.xref-card` base rule
+it modifies. `.stub-desc` and `.stub-open` inside the block were already covered
+— they live in `board.css`, which the entry page loads.
