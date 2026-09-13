@@ -5,42 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caelestis — Ostekk-6</title>
 <link rel="stylesheet" href="../styles/caelestis.css">
-<style>
-  .portrait-frame { width:100%; aspect-ratio:1; border:1px solid var(--gold-rule); background:var(--bg-card); display:flex; align-items:center; justify-content:center; color:var(--text-muted); }
-  .portrait-frame svg { width:44px; opacity:0.2; }
-  .portrait-frame img { width:100%; height:100%; object-fit:cover; display:block; }
-  .portrait-label { font-family:'Cinzel',serif; font-size: 0.66rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-muted); text-align:center; margin-top:0.5rem; }
-  .stat-list { display:flex; flex-direction:column; gap:0; margin-top:0.8rem; }
-  .stat-row { display:flex; justify-content:space-between; align-items:baseline; padding:0.28rem 0; border-bottom:1px solid var(--gold-rule); font-size: 0.90rem; }
-  .stat-row:last-child { border-bottom:none; }
-  .stat-key { font-family:'Cinzel',serif; font-size: 0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); }
-  .stat-val { color:var(--text); text-align:right; font-style:italic; }
-  .classification { display:inline-block; font-family:'Cinzel',serif; font-size: 0.66rem; letter-spacing:0.15em; text-transform:uppercase; padding:0.22rem 0.65rem; border:1px solid; margin-bottom:0.5rem; }
-  .class-ally    { color:#5a8ab8; border-color:rgba(30,74,122,0.45); }
-  .class-neutral { color:var(--gold-dim); border-color:var(--gold-rule); }
-  .entry-header { display:grid; grid-template-columns:160px 1fr; gap:2rem; margin-bottom:2.5rem; align-items:start; }
-  .entry-info { display:flex; flex-direction:column; gap:0.35rem; }
-  .entry-name { font-family:'Cinzel',serif; font-size:1.5rem; font-weight:700; color:var(--text); letter-spacing:0.03em; line-height:1.1; }
-  .entry-sub { font-size: 0.99rem; font-style:italic; color:var(--text-dim); }
-  .entry-body { font-size: 1.02rem; line-height:1.78; color:var(--text); }
-  .entry-body p { margin-bottom:0.85rem; }
-  .entry-body p:last-child { margin-bottom:0; }
-  .log-list { display:flex; flex-direction:column; gap:0.4rem; }
-  .log-item { font-size: 0.99rem; line-height:1.5; padding-left:1rem; position:relative; color:var(--text); }
-  .log-item::before { content:'›'; position:absolute; left:0; color:var(--gold-dim); }
-  .log-item b { font-weight:600; }
-  .log-item em { color:var(--text-dim); font-style:italic; }
-  @media(max-width:560px){ .entry-header{ grid-template-columns:1fr; } }
-</style>
-  <script src="../scripts/nav.js" defer></script>
+<link rel="stylesheet" href="../styles/entity.css">
+<link rel="stylesheet" href="../styles/board.css">
+<script src="../data/bearing.js" defer></script>
+<script src="../scripts/nav.js" defer></script>
+<script src="../scripts/ui.js" defer></script>
 </head>
-<body data-pagefind-filter="section:dossiers">
+<body data-entity="NPC-Hn4kW9vm" data-pagefind-filter="section:dossiers, category:Tyrant Ship, status:Active">
 <div class="page-content">
+
   <div class="page-header">
     <div class="page-emblem" data-pagefind-ignore>
       <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
         <line x1="0" y1="20" x2="42" y2="20" stroke-width="0.6" opacity="0.4"/>
-        <polyline points="38,15 43,20 38,25" opacity="0.5"/><polyline points="33,16 38,20 33,24" opacity="0.3"/>
+        <polyline points="38,15 43,20 38,25" opacity="0.5"/>
+        <polyline points="33,16 38,20 33,24" opacity="0.3"/>
         <g transform="translate(60,20)">
           <line x1="0" y1="-11" x2="0" y2="-6"/><line x1="0" y1="6" x2="0" y2="11"/>
           <line x1="-11" y1="0" x2="-6" y2="0"/><line x1="6" y1="0" x2="11" y2="0"/>
@@ -48,43 +27,42 @@
           <line x1="-7.5" y1="7.5" x2="-4.5" y2="4.5"/><line x1="4.5" y1="4.5" x2="7.5" y2="7.5"/>
           <circle cx="0" cy="0" r="4"/><circle cx="0" cy="0" r="1.2" fill="currentColor" stroke="none"/>
         </g>
-        <polyline points="82,15 77,20 82,25" opacity="0.3"/><polyline points="87,16 82,20 87,24" opacity="0.5"/>
+        <polyline points="82,15 77,20 82,25" opacity="0.3"/>
+        <polyline points="87,16 82,20 87,24" opacity="0.5"/>
         <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
       </svg>
     </div>
-    <div class="page-title" data-pagefind-meta="title">Ostekk-6</div>
+    <div class="page-title" data-pagefind-meta="title" data-field="name">Ostekk-6</div>
   </div>
+
   <div class="content">
 
-    <div class="voyage-nav-bar" data-pagefind-ignore>
-      <a class="voyage-nav-link" href="vena.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Vena</a>
-      <a class="voyage-nav-center" href="index.html">Dossiers</a>
-      <a class="voyage-nav-link" href="pffred.html">Pffred <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a>
-    </div>
+    <div class="voyage-nav-bar" data-pagefind-ignore><a class="voyage-nav-link" href="mr-blip.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Mr. Blip</span></a><a class="voyage-nav-center" href="index.html">Dossiers</a><a class="voyage-nav-link" href="pffred.html"><span class="nav-label">Pffred</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
 
     <div class="entry-header">
-      <div>
-        <div class="portrait-frame"><img src="https://lh3.googleusercontent.com/d/1kRxGB6tcRWliypOvuE0TlfeKixlE9CUw" alt="Ostekk-6"></div>
-        <div class="stat-list"><div class="stat-row"><span class="stat-key">Species</span> <span class="stat-val">Autognome</span></div><div class="stat-row"><span class="stat-key">Role</span> <span class="stat-val">Clerical Unit</span></div><div class="stat-row"><span class="stat-key">Vessel</span> <span class="stat-val">Tyrant Ship</span></div><div class="stat-row"><span class="stat-key">Last Seen</span> <span class="stat-val">V04 — Cargo Deck</span></div><div class="stat-row"><span class="stat-key">Status</span> <span class="stat-val">Damaged — Core Sound</span></div></div>
+      <div class="identity-card">
+        <div class="portrait-frame" data-field="portrait"><span class="monogram">O</span></div>
+        <div class="stat-card" data-field="stats"><div class="stat-row"><span class="stat-key">Role</span><span class="stat-val">Damaged autognome aboard the tyrant ship</span></div><div class="stat-row"><span class="stat-key">Crew</span><span class="stat-val">A broken autognome the crew saved aboard the tyrant ship</span></div><div class="stat-row"><span class="stat-key">Last Seen</span><span class="stat-val">Voyage 004</span></div><div class="stat-row"><span class="stat-key">Status</span><span class="stat-val">Active</span></div></div>
       </div>
+
       <div class="entry-info">
-        <div class="classification class-ally">Ally — Survivor</div>
-        <div class="entry-name">Ostekk-6</div>
-        <div class="entry-sub">Autognome · Clerical Unit</div>
-        <div class="entry-body" style="margin-top:0.8rem;"><p>Found in the cargo hold with its lower half gone and its voice box destroyed, eyes and mouth still moving, trying to speak. It had been waiting a long time for anyone to come.</p><p>Gregory looked at its face and saw his own. He cast before he had fully decided to. The crew tried to heal it and learned the damage was mechanical rather than arcane — the core sound, the body past anything they could restore aboard.</p><p>Its designation came off the collection manifest it had been keeping: Ostekk-6. When Tumak reached for a way to speak with it and found a telepathic link he did not understand, Ostekk-6 finally answered. It warned of a specimen that takes the shape of other objects, and of a bloom that has spread through much of the ship.</p></div>
+        <div class="entry-name" data-field="name">Ostekk-6</div>
+        <div class="entry-sub" data-field="subtitle">Damaged autognome aboard the tyrant ship</div>
+        <div class="entry-body" data-field="overview"><p>Ostekk-6 is an autognome the crew found broken in the tyrant ship&#x27;s cargo hold, its lower half gone and its voice box destroyed. Its arcane core is intact but its body needs physical repair no magic can provide. Saved by the crew, it warns them of the dangers aboard through a telepathic link.</p></div>
+        
       </div>
     </div>
+
+    
+
     <div class="divider">✦ ✦ ✦</div>
-    <div class="section-block">
-      <div class="section-label">Voyage 003</div>
-      <div class="log-list"><div class="log-item">First seen in the cargo hold, surrounded by clockwork horrors crouched over wreckage.</div><div class="log-item"><b>Gregory</b> recognised his own face in it.</div></div>
-    </div>
-    <div class="section-block">
-      <div class="section-label">Voyage 004</div>
-      <div class="log-list"><div class="log-item">Pulled clear of the fight by <b>Gregory</b>'s Vortex Warp.</div><div class="log-item">Named by the <a href="../inventory/entries/collection-manifest.html">collection manifest</a> it had been keeping.</div><div class="log-item">Damage is mechanical, not arcane — beyond what the crew can repair in transit.</div><div class="log-item">Reached through <b>Tumak</b>'s telepathic link. Warned of a mimic aboard and a bloom through the ship.</div><div class="log-item">Confirmed the access shafts as the only route to the command deck.</div><div class="log-item">Explained that killing the flower does not unmake the wisps already loose — <em>something else keeps them here</em>.</div></div>
-    </div>
+
+    <div data-field="latestVoyage"><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 004</span></div><ul class="record-list"><li>Named on the cargo manifest as Ostekk-6; its arcane core intact but its mechanical body beyond magical repair</li><li>Pulled to safety by Gregory&#x27;s Vortex Warp during the fight</li><li>Communicated through a telepathic link Tumak opened, warning of a shape-shifting mimic aboard, a bloom overrunning the ship, and more clockwork horrors</li><li>Explained that the way to the command deck runs through the access shafts, and that killing the flowers does not unmake the wisps already loose</li><li>Confirmed the way to the command deck runs through the choked access shafts, which are not passable while the bloom holds</li><li>Explained through the link that the flower produces the wisps, but killing it does not unmake the ones already loose — something else keeps them present</li></ul></div></div>
+    <div data-field="priorVoyages"><details class="prior"><summary>Previous Voyages <span class="prior-keys">S03</span></summary><div class="prior-body"><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 003</span></div><ul class="record-list"><li>Found in the tyrant ship&#x27;s cargo hold, lower half gone and voice box destroyed, as clockwork horrors fed on it</li></ul></div></div></details></div>
+
+    <div class="divider">✦ ✦ ✦</div><div class="xref-card"><div class="xref-head"><span class="xref-title">Connections</span></div><div class="xref-cols"><div class="xref-col"><div class="xref-col-head">Quests</div><a class="chip chip-quest" href="../quests/the-tyrant-ship-and-the-hcatha-meteor.html">The Tyrant Ship and the H’catha Meteor</a></div></div></div>
+
   </div>
 </div>
-
 </body>
 </html>

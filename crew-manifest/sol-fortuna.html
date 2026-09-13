@@ -3,83 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Caelestis — Sol</title>
+<title>Caelestis — Sol Fortuna</title>
 <link rel="stylesheet" href="../styles/caelestis.css">
-<style>
-  .entry-header {
-    display: grid; grid-template-columns: 160px 1fr;
-    gap: 2rem; margin-bottom: 2.5rem; align-items: start;
-  }
-  .portrait-frame {
-    width: 100%; aspect-ratio: 1;
-    border: 1px solid var(--gold-rule); background: var(--bg-card);
-    display: flex; align-items: center; justify-content: center;
-    color: var(--text-muted);
-  }
-  .portrait-frame svg { width: 44px; opacity: 0.2; }
-  .portrait-frame img { width:100%; height:100%; object-fit:cover; display:block; }
-  .portrait-label {
-    font-family: 'Cinzel', serif; font-size: 0.66rem;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--text-muted); text-align: center; margin-top: 0.5rem;
-  }
-  .stat-list { display: flex; flex-direction: column; gap: 0; margin-top: 0.8rem; }
-  .stat-row {
-    display: flex; justify-content: space-between; align-items: baseline;
-    padding: 0.28rem 0; border-bottom: 1px solid var(--gold-rule); font-size: 0.90rem;
-  }
-  .stat-row:last-child { border-bottom: none; }
-  .stat-key {
-    font-family: 'Cinzel', serif; font-size: 0.65rem;
-    letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
-  }
-  .stat-val { color: var(--text); text-align: right; font-style: italic; }
-  .classification {
-    display: inline-block; font-family: 'Cinzel', serif; font-size: 0.66rem;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    padding: 0.22rem 0.65rem; border: 1px solid; margin-bottom: 0.5rem;
-  }
-  .class-ally    { color: #5a8ab8; border-color: rgba(30,74,122,0.45); }
-  .class-neutral { color: var(--gold-dim); border-color: var(--gold-rule); }
-  .class-threat  { color: #c05050; border-color: rgba(139,32,32,0.45); }
-  .class-unknown { color: var(--text-muted); border-color: var(--gold-rule); }
-  .class-cadet   { color: #c05050; border-color: rgba(139,32,32,0.35); }
-  .class-item    { color: var(--gold-dim); border-color: var(--gold-rule); }
-  .class-sphere  { color: #5a8ab8; border-color: rgba(30,74,122,0.45); }
-  .class-system  { color: #9a6ad0; border-color: rgba(90,45,130,0.45); }
-  .entry-info { display: flex; flex-direction: column; gap: 0.35rem; }
-  .entry-name {
-    font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700;
-    color: var(--text); letter-spacing: 0.03em; line-height: 1.1;
-  }
-  .entry-sub { font-size: 0.99rem; font-style: italic; color: var(--text-dim); }
-  .entry-body { font-size: 1.02rem; line-height: 1.78; color: var(--text); }
-  .entry-body p { margin-bottom: 0.85rem; }
-  .entry-body p:last-child { margin-bottom: 0; }
-  .log-list { display: flex; flex-direction: column; gap: 0.4rem; }
-  .log-item {
-    font-size: 0.99rem; line-height: 1.5; padding-left: 1rem;
-    position: relative; color: var(--text);
-  }
-  .log-item::before { content: '›'; position: absolute; left: 0; color: var(--gold-dim); }
-  .log-item b { font-weight: 600; }
-  .log-item em { color: var(--text-dim); font-style: italic; }
-  .status-row {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    font-family: 'Cinzel', serif; font-size: 0.72rem;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--gold-dim); border: 1px solid var(--gold-rule);
-    padding: 0.25rem 0.7rem; margin-top: 0.3rem;
-  }
-  .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-dim); }
-  @media(max-width:560px){
-    .entry-header { grid-template-columns: 1fr; }
-  }
-</style>
-  <script src="../scripts/nav.js" defer></script>
+<link rel="stylesheet" href="../styles/entity.css">
+<link rel="stylesheet" href="../styles/board.css">
+<script src="../data/bearing.js" defer></script>
+<script src="../scripts/nav.js" defer></script>
+<script src="../scripts/ui.js" defer></script>
 </head>
-<body data-pagefind-filter="section:crew-manifest">
+<body data-entity="PC-6rzWlD8Q" data-pagefind-filter="section:crew-manifest, status:Active">
 <div class="page-content">
+
   <div class="page-header">
     <div class="page-emblem" data-pagefind-ignore>
       <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
@@ -98,68 +32,37 @@
         <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
       </svg>
     </div>
-    <div class="page-title" data-pagefind-meta="title">Sol</div>
+    <div class="page-title" data-pagefind-meta="title" data-field="name">Sol Fortuna</div>
   </div>
+
   <div class="content">
 
-    <div class="voyage-nav-bar" data-pagefind-ignore>
-      <a class="voyage-nav-link" href="gregory.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Gregory</a>
-      <a class="voyage-nav-center" href="index.html">Crew Manifest</a>
-      <a class="voyage-nav-link" href="tumak.html">Tumak <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a>
-    </div>
+    <div class="voyage-nav-bar" data-pagefind-ignore><a class="voyage-nav-link" href="gregory.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Gregory</span></a><a class="voyage-nav-center" href="index.html">Crew Manifest</a><a class="voyage-nav-link" href="tumak-swan.html"><span class="nav-label">Tumak Swan</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
 
     <div class="entry-header">
-      <div>
-        <div class="portrait-frame"><img src="https://lh3.googleusercontent.com/d/1PT-7qxrvN3XUFPm3xAkUZ8IbToM5qsDo" alt="Sol" loading="lazy"></div>
-        <div class="stat-list"><div class="stat-row"><span class="stat-key">Species</span> <span class="stat-val">Astral Elf</span></div><div class="stat-row"><span class="stat-key">Class</span> <span class="stat-val">Paladin</span></div><div class="stat-row"><span class="stat-key">Station</span> <span class="stat-val">Gunner</span></div><div class="stat-row"><span class="stat-key">Affiliation</span> <span class="stat-val">Spelljammer Academy</span></div><div class="stat-row"><span class="stat-key">First Voyage</span> <span class="stat-val">V01 — Caelestis</span></div><div class="stat-row"><span class="stat-key">Clearance</span> <span class="stat-val">Sailor</span></div><div class="stat-row"><span class="stat-key">Status</span> <span class="stat-val">Active</span></div></div>
+      <div class="identity-card">
+        <div class="portrait-frame" data-field="portrait"><span class="monogram">S</span></div>
+        <div class="stat-card" data-field="stats"><div class="stat-row"><span class="stat-key">Concept</span><span class="stat-val">Astral Elf Paladin of Beshaba; resilient and resourceful</span></div><div class="stat-row"><span class="stat-key">Last Seen</span><span class="stat-val">Unseen</span></div><div class="stat-row"><span class="stat-key">Status</span><span class="stat-val">Active</span></div></div>
       </div>
+
       <div class="entry-info">
-        <div class="entry-name">Sol</div>
-        <div class="entry-sub">Astral Elf · Paladin · Gunner</div>
-        <div class="entry-body" style="margin-top:0.8rem;"><p>Tall, pale-skinned, dark-haired, with eyes the colour of blank white sky. Sol has the look of someone who has survived things by learning to read them before they happen. He moves deliberately. He speaks when it matters.</p>
-<p>When asked why he came to Caelestis, he answered simply: his life had always turned in unlucky directions, and he wanted to spend it exploring anyway. There is no bitterness in the statement. It reads as fact — a decision made clearly and held to.</p>
-<p>He knows the name now. On the salvage run he felt misfortune reach for a crewmate mid-jump and pulled it onto himself instead, and beneath his hearing a woman laughed. By the third laugh there was no mistaking it: <b>Beshaba</b>. The voice that visits him is unhurried and asks whether he has truly escaped where he came from. He answers that he has accepted what lies ahead. Fate can still be wielded, it tells him, and it looks forward to watching.</p></div>
+        <div class="entry-name" data-field="name">Sol Fortuna</div>
+        <div class="entry-sub" data-field="subtitle">Astral Elf Paladin of Beshaba; resilient and resourceful</div>
+        <div class="entry-body" data-field="overview"><p>Sol Fortuna is a tall, pale, dark-haired astral elf paladin of Beshaba with white eyes, steady even after simulated death. He anticipates danger before it arrives and puts himself between it and his crew as their gunner and front line. Beshaba has laughed at his shoulder, and now a curious voice speaks to him of fate and whether he has truly escaped his origin.</p></div>
+        <div class="pursuit" data-field="pursuit"><span class="pursuit-label">Pursuit</span><span class="pursuit-text">A paladin of Beshaba whose luck turns unlucky, now having heard the goddess herself laugh at his shoulder.</span></div>
       </div>
     </div>
-    <div class="divider">✦ ✦ ✦</div>
-    <div class="section-block">
-      <div class="section-label">Voyage 001</div>
-      <div class="log-list"><div class="log-item"><b>Simulation Deck:</b> Took position at a ballista without hesitation. Killed an attacker, turned panic into focus.</div>
-<div class="log-item"><b>Cadet Quarters:</b> Moved close behind Boogie when Vena challenged him for the bunk. No words needed.</div>
-<div class="log-item"><b>Sky Dock:</b> Sought out Joffrey directly and asked what this life actually offers. Received an honest answer.</div>
-<div class="log-item"><b>Gymnasium:</b> Fell hard enough to be dragged aside by automatons. Got back up anyway after Boogie called it.</div>
-<div class="log-item"><b>Mirt's Quarters:</b> Subdued the final creature alive rather than kill it. Correctly read that it might matter as evidence. Mirt noted the call.</div></div>
-    </div>
+
+    
 
     <div class="divider">✦ ✦ ✦</div>
 
-    <div class="section-block">
-      <div class="section-label">Voyage 002</div>
-      <div class="log-list"><div class="log-item"><b>The Weeping Goddess:</b> Took an open seat. Ryeback brought him soup and called it knock-your-mama's-socks-off soup.</div>
-<div class="log-item"><b>The Salvage Race:</b> Felt misfortune reach for a crewmate mid-jump and took it onto himself instead. Strength dropped out of him in a measured wave, and beneath his hearing a woman laughed. By the third laugh he knew the name: <b>Beshaba</b>.</div>
-<div class="log-item"><b>Witnessed:</b> Gregory and Bartholomew saw a hair-thin arc of black lightning snap out of him and back in. He winced and said nothing.</div></div>
-    </div>
+    <div data-field="latestVoyage"><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 004</span></div><ul class="record-list"><li>Took the front of both tyrant-ship fights and held the line, drawing the enemy onto himself</li><li>Cast Divine Sense across the wisp bloom and struck the first flower with Sacred Flame</li><li>Cast Arms of Hadar into the wisp swarm, dark tentacles catching the weak-limbed things</li><li>Used Misfortune&#x27;s Favor to draw ill luck onto his own shoulders and made the save through it</li></ul></div></div>
+    <div data-field="priorVoyages"><details class="prior"><summary>Previous Voyages <span class="prior-keys">S01 · S02 · S03</span></summary><div class="prior-body"><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 003</span></div><ul class="record-list"><li>Traced the crate at the Sky Dock with Boogie, finding it marked with the same symbol as the rod</li><li>Worked an elven cargo clerk in conversation and learned shipments route through Mr. Blip, with Toril and H’catha as destinations</li><li>Heard a curious, unhurried voice in the night ask why he embraced chaos and whether he had truly escaped where he came from, and answered honestly</li></ul></div><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 002</span></div><ul class="record-list"><li>Asked Ryeback for soup and was given knock-your-mama&#x27;s-socks-off soup</li><li>Took the guns for the crew</li><li>Sensed misfortune reaching for a crewmate mid-jump and took it onto himself instead, saving Boogie&#x27;s landing</li><li>Heard a woman laugh three times as his strength dropped and understood it was Beshaba</li></ul></div><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 001</span></div><ul class="record-list"><li>Drove a ballista bolt through an attacker during the Moonraider simulation</li><li>Stepped silently behind Boogie in the bunk dispute to back him without being asked</li><li>Sought out Joffrey and asked what this life truly offered; talked his way into heavier armament</li><li>Navigated the Nexus helm exercise by anticipating danger before it arrived</li><li>Fell hard on the gym course but forced himself back up to finish after Boogie shouted him on</li><li>Noticed the wardrobe in Mirt&#x27;s chambers opened onto bounded astral night</li><li>Subdued the final centipede creature alive, sensing it might matter as evidence</li><li>Told Boogie his life had always turned unlucky and he wanted to spend it exploring</li></ul></div></div></details></div>
 
-    <div class="divider">✦ ✦ ✦</div>
+    <div class="divider">✦ ✦ ✦</div><div class="xref-card"><div class="xref-head"><span class="xref-title">Connections</span></div><div class="xref-cols"><div class="xref-col"><div class="xref-col-head">Quests</div><a class="chip chip-quest" href="../quests/the-laughter-of-beshaba.html">The Laughter of Beshaba</a></div></div></div>
 
-    <div class="section-block">
-      <div class="section-label">Voyage 003</div>
-      <div class="log-list"><div class="log-item"><b>Sky Dock:</b> Searched the marked crate with Boogie. Learned from a cargo worker that shipments route through Mr. Blip, with Toril and H'Catha as common destinations.</div>
-<div class="log-item"><b>Night:</b> Visited again by the unhurried voice. It asked whether he had truly escaped where he came from. He answered that he had accepted what lies ahead. Fate can still be wielded, it told him, and it looks forward to watching.</div>
-<div class="log-item"><b>Archive Clearance:</b> Mirt granted the crew sailor-level access to the fleet intelligence archive, and told them not to abuse it.</div></div>
-    </div>
-
-    <div class="divider">✦ ✦ ✦</div>
-
-    <div class="section-block">
-      <div class="section-label">Voyage 004</div>
-      <div class="log-list"><div class="log-item"><b>The Clockwork Horrors:</b> Moved to the front and stayed there, taking the weight of the encounter onto himself.</div>
-<div class="log-item"><b>The Flower:</b> Opened with a Divine Sense, then struck with Sacred Flame.</div>
-<div class="log-item"><b>The Wisps:</b> Cast Arms of Hadar — dark celestial tentacles that caught the swarm, which failed almost every save.</div>
-<div class="log-item"><b>Misfortune's Favor:</b> Took a burden onto himself and succeeded through it.</div></div>
-    </div>
   </div>
 </div>
-
 </body>
 </html>

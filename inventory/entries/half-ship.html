@@ -3,159 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Caelestis — Half Ship</title>
+<title>Caelestis — Incomplete Model Spelljamming Ship</title>
 <link rel="stylesheet" href="../../styles/caelestis.css">
-<style>
-  .entry-header {
-    display: grid; grid-template-columns: 160px 1fr;
-    gap: 2rem; margin-bottom: 2.5rem; align-items: start;
-  }
-  .portrait-frame {
-    width: 100%; aspect-ratio: 1;
-    border: 1px solid var(--gold-rule); background: var(--bg-card);
-    display: flex; align-items: center; justify-content: center;
-    color: var(--text-muted);
-  }
-  .portrait-frame svg { width: 44px; opacity: 0.2; }
-  .portrait-label {
-    font-family: 'Cinzel', serif; font-size: 0.66rem;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--text-muted); text-align: center; margin-top: 0.5rem;
-  }
-  .stat-list { display: flex; flex-direction: column; gap: 0; margin-top: 0.8rem; }
-  .stat-row {
-    display: flex; justify-content: space-between; align-items: baseline;
-    padding: 0.28rem 0; border-bottom: 1px solid var(--gold-rule); font-size: 0.90rem;
-  }
-  .stat-row:last-child { border-bottom: none; }
-  .stat-key {
-    font-family: 'Cinzel', serif; font-size: 0.65rem;
-    letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
-  }
-  .stat-val { color: var(--text); text-align: right; font-style: italic; }
-  .classification {
-    display: inline-block; font-family: 'Cinzel', serif; font-size: 0.66rem;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    padding: 0.22rem 0.65rem; border: 1px solid; margin-bottom: 0.5rem;
-  }
-  .class-ally    { color: #5a8ab8; border-color: rgba(30,74,122,0.45); }
-  .class-neutral { color: var(--gold-dim); border-color: var(--gold-rule); }
-  .class-threat  { color: #c05050; border-color: rgba(139,32,32,0.45); }
-  .class-unknown { color: var(--text-muted); border-color: var(--gold-rule); }
-  .class-cadet   { color: #c05050; border-color: rgba(139,32,32,0.35); }
-  .class-item    { color: var(--gold-dim); border-color: var(--gold-rule); }
-  .class-sphere  { color: #5a8ab8; border-color: rgba(30,74,122,0.45); }
-  .class-system  { color: #9a6ad0; border-color: rgba(90,45,130,0.45); }
-  .entry-info { display: flex; flex-direction: column; gap: 0.35rem; }
-  .entry-name {
-    font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700;
-    color: var(--text); letter-spacing: 0.03em; line-height: 1.1;
-  }
-  .entry-sub { font-size: 0.99rem; font-style: italic; color: var(--text-dim); }
-  .entry-body { font-size: 1.02rem; line-height: 1.78; color: var(--text); }
-  .entry-body p { margin-bottom: 0.85rem; }
-  .entry-body p:last-child { margin-bottom: 0; }
-  .log-list { display: flex; flex-direction: column; gap: 0.4rem; }
-  .log-item {
-    font-size: 0.99rem; line-height: 1.5; padding-left: 1rem;
-    position: relative; color: var(--text);
-  }
-  .log-item::before { content: '›'; position: absolute; left: 0; color: var(--gold-dim); }
-  .log-item b { font-weight: 600; }
-  .log-item em { color: var(--text-dim); font-style: italic; }
-  .status-row {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    font-family: 'Cinzel', serif; font-size: 0.72rem;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--gold-dim); border: 1px solid var(--gold-rule);
-    padding: 0.25rem 0.7rem; margin-top: 0.3rem;
-  }
-  .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-dim); }
-  @media(max-width:560px){
-    .entry-header { grid-template-columns: 1fr; }
-  }
-
-  .artifact-link {
-    border: 1px solid var(--gold-rule);
-    border-left: 3px solid var(--gold);
-    background: var(--bg-card);
-    padding: 1.2rem 1.4rem;
-    margin: 2rem 0 0.5rem;
-  }
-  .artifact-label {
-    font-family: 'Cinzel', serif; font-size: 0.7rem;
-    letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 0.6rem;
-  }
-  .artifact-link p { font-size: 0.99rem; line-height: 1.7; color: var(--text-dim); margin-bottom: 1rem; }
-  .artifact-btn {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    font-family: 'Cinzel', serif; font-size: 0.68rem;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--gold-light); text-decoration: none;
-    border: 1px solid var(--gold-dim); background: var(--gold-faint);
-    padding: 0.45rem 1.1rem;
-    transition: background 0.2s, border-color 0.2s;
-  }
-  .artifact-btn:hover { background: rgba(201,153,58,0.2); border-color: var(--gold); }
-  .artifact-btn svg { width: 11px; }
-</style>
-  <script src="../../scripts/nav.js" defer></script>
+<link rel="stylesheet" href="../../styles/entity.css">
+<link rel="stylesheet" href="../../styles/board.css">
+<script src="../../data/bearing.js" defer></script>
+<script src="../../scripts/nav.js" defer></script>
+<script src="../../scripts/ui.js" defer></script>
 </head>
-<body data-pagefind-filter="section:inventory">
+<body data-entity="ITM-2pQ7vHm9" data-pagefind-filter="section:inventory, category:Magic Item, status:Held">
 <div class="page-content">
+
   <div class="page-header">
-    <div class="page-eyebrow">Inventory</div>
-    <div class="page-title" data-pagefind-meta="title">Half Ship</div>
+    <div class="page-emblem" data-pagefind-ignore>
+      <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="0" y1="20" x2="42" y2="20" stroke-width="0.6" opacity="0.4"/>
+        <polyline points="38,15 43,20 38,25" opacity="0.5"/>
+        <polyline points="33,16 38,20 33,24" opacity="0.3"/>
+        <g transform="translate(60,20)">
+          <line x1="0" y1="-11" x2="0" y2="-6"/><line x1="0" y1="6" x2="0" y2="11"/>
+          <line x1="-11" y1="0" x2="-6" y2="0"/><line x1="6" y1="0" x2="11" y2="0"/>
+          <line x1="-7.5" y1="-7.5" x2="-4.5" y2="-4.5"/><line x1="4.5" y1="-4.5" x2="7.5" y2="-7.5"/>
+          <line x1="-7.5" y1="7.5" x2="-4.5" y2="4.5"/><line x1="4.5" y1="4.5" x2="7.5" y2="7.5"/>
+          <circle cx="0" cy="0" r="4"/><circle cx="0" cy="0" r="1.2" fill="currentColor" stroke="none"/>
+        </g>
+        <polyline points="82,15 77,20 82,25" opacity="0.3"/>
+        <polyline points="87,16 82,20 87,24" opacity="0.5"/>
+        <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="page-title" data-pagefind-meta="title" data-field="name">Incomplete Model Spelljamming Ship</div>
   </div>
+
   <div class="content">
 
-    <div class="voyage-nav-bar" data-pagefind-ignore>
-      <a class="voyage-nav-link" href="constellation-shirt.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Constellation Shirt</a>
-      <a class="voyage-nav-center" href="../index.html">Inventory</a>
-      <a class="voyage-nav-link" href="derelict-logbook.html">Derelict Logbook <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a>
-    </div>
+    <div class="voyage-nav-bar" data-pagefind-ignore><a class="voyage-nav-link" href="derelict-logbook.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Derelict Logbook</span></a><a class="voyage-nav-center" href="../index.html">Inventory</a><a class="voyage-nav-link" href="marked-crate.html"><span class="nav-label">Marked Crate at the Sky Dock</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
 
     <div class="entry-header">
-      <div>
-        <div class="portrait-frame"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 30 Q10 26 24 25 Q38 26 40 30 L36 38 Q24 40 12 38 Z"/><line x1="24" y1="25" x2="24" y2="10"/><path d="M24 11 L33 17 L24 21"/><path d="M24 11 L17 17 L24 21" stroke-dasharray="2 3" opacity="0.4"/></svg></div>
-        <div class="portrait-label" data-pagefind-ignore>Portrait Pending</div>
-        <div class="stat-list"><div class="stat-row"><span class="stat-key">Type</span> <span class="stat-val">Miniature Spelljammer</span></div>
-<div class="stat-row"><span class="stat-key">Origin</span> <span class="stat-val">Boogie's Chest</span></div>
-<div class="stat-row"><span class="stat-key">Holder</span> <span class="stat-val">Boogie</span></div>
-<div class="stat-row"><span class="stat-key">Logged</span> <span class="stat-val">No — Undeclared</span></div></div>
+      <div class="identity-card">
+        <div class="portrait-frame" data-field="portrait"><span class="monogram">I</span></div>
+        <div class="stat-card" data-field="stats"><div class="stat-row"><span class="stat-key">Type</span><span class="stat-val">Mysterious object</span></div><div class="stat-row"><span class="stat-key">Held By</span><span class="stat-val">Boogie</span></div><div class="stat-row"><span class="stat-key">Origin</span><span class="stat-val">Formed inside Boogie for unknown reasons</span></div><div class="stat-row"><span class="stat-key">Last Seen</span><span class="stat-val">Voyage 002</span></div><div class="stat-row"><span class="stat-key">Status</span><span class="stat-val">Held</span></div></div>
       </div>
+
       <div class="entry-info">
-        <div class="classification class-item">Anomalous — Unexplained</div>
-        <div class="entry-name">Half Ship</div>
-        <div class="entry-sub">Model Spelljammer · Incomplete</div>
-        <div class="entry-body" style="margin-top:0.8rem;"><p>A miniature spelljamming ship of the same make used in the Nexus helm exercises. Roughly half of it is missing — not broken away, not scorched, simply absent, as though the model had only ever been made to that point.</p>
-<p>Boogie drew it out of his own chest on the first night at Caelestis. He has no explanation for how it formed there, why it is incomplete, or what the missing half would have been.</p>
-<p>In Voyage 002 the crew learned that a miniature had gone missing from Saerth Abyzine's instruction set — and that it was the same model. Whether the half in Boogie's chest is that miniature, a copy of it, or something that only resembles it has not been established.</p></div>
+        <div class="entry-name" data-field="name">Incomplete Model Spelljamming Ship</div>
+        <div class="entry-sub" data-field="subtitle">Mysterious object</div>
+        <div class="entry-body" data-field="overview"><p>A tiny model spelljamming ship that formed inside Boogie for reasons he cannot explain, half of it inexplicably missing. It is the same model as the personal miniature ship stolen from the instructor Saerthe — a connection Boogie has kept to himself.</p></div>
+        
       </div>
     </div>
+
+    
 
     <div class="divider">✦ ✦ ✦</div>
 
-    <div class="section-block">
-      <div class="section-label">Voyage 001</div>
-      <div class="log-list"><div class="log-item">Withdrawn from Boogie's chest in the cadet quarters on the first night. He had no account of how it got there.</div>
-<div class="log-item">Same model as the miniatures used in the Spelljammer Nexus helm exercise.</div>
-<div class="log-item"><em>Half of the object is missing. The break is clean and does not read as damage.</em></div></div>
-    </div>
-    <div class="section-block">
-      <div class="section-label">Voyage 002</div>
-      <div class="log-list"><div class="log-item">Boogie set it on the table at the <b>Weeping Goddess</b> and let the crew look at it.</div>
-<div class="log-item">A miniature was reported missing from <b>Saerth Abyzine</b>'s instruction set — the same model.</div>
-<div class="log-item">Boogie recognised the match. The relationship between the two objects remains open.</div></div>
-    </div>
-    <div class="section-block">
-      <div class="section-label">Voyage 003</div>
-      <div class="log-list"><div class="log-item">Still carried inside Boogie's chest, alongside the derelict logbook.</div>
-<div class="log-item"><em>Undeclared to academy command.</em></div></div>
-    </div>
+    <div data-field="latestVoyage"><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 002</span></div><ul class="record-list"><li>Boogie set it on the table for the crew; Tumak remarked that things had been going missing all over the academy</li><li>Revealed to be the same model as the miniature spelljamming ship stolen from Saerthe</li></ul></div></div>
+    <div data-field="priorVoyages"><details class="prior"><summary>Previous Voyages <span class="prior-keys">S01</span></summary><div class="prior-body"><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 001</span></div><ul class="record-list"><li>Boogie pulled a tiny model spelljamming ship from his own chest, the same kind he guided in training, except half of it is missing</li><li>He has no explanation for how it formed inside him or why it is incomplete</li></ul></div></div></details></div>
+
+    <div class="divider">✦ ✦ ✦</div><div class="xref-card"><div class="xref-head"><span class="xref-title">Connections</span></div><div class="xref-cols"><div class="xref-col"><div class="xref-col-head">Quests</div><a class="chip chip-quest" href="../../quests/the-caelestis-burglaries.html">The Caelestis Burglaries</a><a class="chip chip-quest" href="../../quests/the-unfinished-ship-within-boogie.html">The Unfinished Ship Within Boogie</a></div><div class="xref-col"><div class="xref-col-head">Characters</div><a class="chip chip-npc" href="../../crew-manifest/boogie.html">Boogie</a></div><div class="xref-col"><div class="xref-col-head">Items</div><a class="chip chip-item" href="../../inventory/entries/saerthes-miniature-ship.html">Saerthe&#x27;s Miniature Spelljamming Ship</a></div></div></div>
+
   </div>
 </div>
-
 </body>
 </html>

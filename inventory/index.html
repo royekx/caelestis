@@ -3,183 +3,249 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Caelestis — Crew Inventory</title>
+<title>Caelestis — Inventory</title>
 <link rel="stylesheet" href="../styles/caelestis.css">
-<style>
-  .intro-note {
-    background: var(--gold-faint);
-    border-left: 3px solid var(--gold-dim);
-    padding: 0.7rem 1rem;
-    font-size: 0.97rem; line-height: 1.55;
-    color: var(--text-dim); margin-bottom: 2rem;
-  }
-
-  /* Category filter row */
-  .filter-row {
-    display: flex; gap: 0.5rem; flex-wrap: wrap;
-    margin-bottom: 1.5rem;
-  }
-  .filter-tag {
-    font-family: 'Cinzel', serif; font-size: 0.68rem;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    border: 1px solid var(--gold-rule);
-    color: var(--text-muted); padding: 0.25rem 0.6rem;
-    cursor: default;
-  }
-  .filter-tag.active { border-color: var(--gold-dim); color: var(--gold-dim); }
-
-  /* Item cards grid */
-  .item-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.9rem;
-  }
-
-  .item-card {
-    background: var(--bg-card);
-    border: 1px solid var(--gold-rule);
-    text-decoration: none;
-    padding: 1rem 1.2rem;
-    position: relative; overflow: hidden;
-    transition: border-color 0.22s, background 0.22s, transform 0.22s;
-    display: flex; flex-direction: column; gap: 0.3rem;
-  }
-  .item-card::before {
-    content: '';
-    position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
-    background: var(--gold-dim); opacity: 0.4; transition: opacity 0.22s;
-  }
-  .item-card:hover {
-    border-color: rgba(201,153,58,0.4);
-    background: rgba(201,153,58,0.04);
-    transform: translateX(2px);
-  }
-  .item-card:hover::before { opacity: 1; }
-
-  .item-type {
-    font-family: 'Cinzel', serif; font-size: 0.66rem;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--text-muted);
-  }
-  .item-name {
-    font-family: 'Cinzel', serif; font-size: 0.99rem;
-    font-weight: 700; color: var(--text); letter-spacing: 0.02em;
-  }
-  .item-artifact {
-    display: inline-flex; align-items: center; gap: 0.4rem;
-    align-self: flex-start; margin-top: 0.35rem;
-    font-family: 'Cinzel', serif; font-size: 0.6rem;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--gold-light); border: 1px solid var(--gold-dim);
-    background: var(--gold-faint); padding: 0.18rem 0.55rem;
-  }
-  .item-artifact svg { width: 10px; }
-
-  .item-holder {
-    font-size: 0.88rem; color: var(--text-dim);
-    font-style: italic;
-  }
-
-  /* Empty state */
-  .empty-state {
-    text-align: center;
-    padding: 4rem 2rem;
-    border: 1px solid var(--gold-rule);
-    background: var(--bg-card);
-  }
-  .empty-icon { color: var(--text-muted); margin-bottom: 1rem; opacity: 0.4; }
-  .empty-icon svg { width: 48px; }
-  .empty-title {
-    font-family: 'Cinzel', serif; font-size: 0.83rem;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--text-muted); margin-bottom: 0.5rem;
-  }
-  .empty-body { font-size: 0.97rem; color: var(--text-muted); font-style: italic; }
-
-  @media(max-width:520px){ .item-grid{ grid-template-columns: 1fr; } }
-</style>
-  <script src="../scripts/nav.js" defer></script>
-  <script src="../data/vocabulary.js" defer></script>
-  <script src="../scripts/spelling.js" defer></script>
-  <script src="../scripts/search.js" defer></script>
+<link rel="stylesheet" href="../styles/entity.css">
+<link rel="stylesheet" href="../styles/board.css">
+<script src="../data/bearing.js" defer></script>
+<script src="../scripts/nav.js" defer></script>
+<script src="../scripts/ui.js" defer></script>
 </head>
 <body data-pagefind-filter="section:inventory">
 <div class="page-content">
   <div class="page-header">
     <div class="page-emblem" data-pagefind-ignore>
-    <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="0" y1="20" x2="42" y2="20" stroke-width="0.6" opacity="0.4"/>
-      <polyline points="38,15 43,20 38,25" opacity="0.5"/>
-      <polyline points="33,16 38,20 33,24" opacity="0.3"/>
-      <g transform="translate(60,20)">
-        <line x1="0" y1="-11" x2="0" y2="-6"/>
-        <line x1="0" y1="6"  x2="0" y2="11"/>
-        <line x1="-11" y1="0" x2="-6" y2="0"/>
-        <line x1="6"  y1="0" x2="11" y2="0"/>
-        <line x1="-7.5" y1="-7.5" x2="-4.5" y2="-4.5"/>
-        <line x1="4.5"  y1="-4.5" x2="7.5"  y2="-7.5"/>
-        <line x1="-7.5" y1="7.5"  x2="-4.5" y2="4.5"/>
-        <line x1="4.5"  y1="4.5"  x2="7.5"  y2="7.5"/>
-        <circle cx="0" cy="0" r="4"/>
-        <circle cx="0" cy="0" r="1.2" fill="currentColor" stroke="none"/>
-      </g>
-      <polyline points="82,15 77,20 82,25" opacity="0.3"/>
-      <polyline points="87,16 82,20 87,24" opacity="0.5"/>
-      <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
-    </svg>
+      <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="0" y1="20" x2="42" y2="20" stroke-width="0.6" opacity="0.4"/>
+        <polyline points="38,15 43,20 38,25" opacity="0.5"/>
+        <polyline points="33,16 38,20 33,24" opacity="0.3"/>
+        <g transform="translate(60,20)">
+          <line x1="0" y1="-11" x2="0" y2="-6"/><line x1="0" y1="6" x2="0" y2="11"/>
+          <line x1="-11" y1="0" x2="-6" y2="0"/><line x1="6" y1="0" x2="11" y2="0"/>
+          <line x1="-7.5" y1="-7.5" x2="-4.5" y2="-4.5"/><line x1="4.5" y1="-4.5" x2="7.5" y2="-7.5"/>
+          <line x1="-7.5" y1="7.5" x2="-4.5" y2="4.5"/><line x1="4.5" y1="4.5" x2="7.5" y2="7.5"/>
+          <circle cx="0" cy="0" r="4"/><circle cx="0" cy="0" r="1.2" fill="currentColor" stroke="none"/>
+        </g>
+        <polyline points="82,15 77,20 82,25" opacity="0.3"/>
+        <polyline points="87,16 82,20 87,24" opacity="0.5"/>
+        <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="page-title" data-pagefind-meta="title">Inventory</div>
+    <div class="page-subtitle">Everything the crew carries, and everything worth keeping track of</div>
   </div>
-    <div class="page-title" data-pagefind-meta="title">Crew Inventory</div>
-    <div class="page-subtitle">Items, artifacts, and materials in the crew's possession. Logged upon recovery.</div>
-  </div>
-
   <div class="content">
-
-    <div class="intro-note">
-      All items of operational significance recovered during missions are to be logged here. Crew members are responsible for the items assigned to them. Unlogged items are considered unaccounted for.
+    <div class="board-tabs" data-pagefind-ignore>
+      <button class="board-tab is-active" type="button" data-class="all">All Items <span class="board-count">11</span></button>
+      <button class="board-tab" type="button" data-class="magic-item">Magic Items</button>
+      <button class="board-tab" type="button" data-class="mundane">Mundane</button>
+      <button class="board-tab" type="button" data-class="evidence">Evidence &amp; Documents</button>
     </div>
-
-    <div class="section-label">Logged Items</div>
-
-    <div class="filter-row" data-pagefind-ignore>
-      <div class="filter-tag active">All</div>
-      <div class="filter-tag">Magical</div>
-      <div class="filter-tag">Clothing</div>
-      <div class="filter-tag">Document</div>
-      <div class="filter-tag">Anomalous</div>
+    <div class="board-body">
+      <div class="search-row" data-pagefind-ignore>
+        <input class="search-input" type="search" placeholder="Search by name..." aria-label="Search inventory">
+      </div>
+      <div class="facets" data-pagefind-ignore>
+        <div class="facet facet-stacked"><span class="facet-label">Type</span><div class="facet-pills"><button class="filter-tag" type="button" data-type="container">Container</button><button class="filter-tag" type="button" data-type="curiosity">Curiosity</button><button class="filter-tag" type="button" data-type="rod">Rod</button><button class="filter-tag" type="button" data-type="weapon">Weapon</button><button class="filter-tag" type="button" data-type="wondrous-item">Wondrous Item</button></div></div>
+        <div class="facet" data-rarity-facet><span class="facet-label">Rarity</span><div class="facet-pills"><button class="filter-tag" type="button" data-rarity="uncommon">Uncommon</button><button class="filter-tag" type="button" data-rarity="unknown">Unknown</button></div></div>
+      </div>
+      <div class="result-line"><span class="result-count">11 on record</span><button class="clear-btn" type="button" hidden>Clear filters</button></div>
+      <div class="register">
+<div class="ent item-row" data-class="document" data-type="curiosity" data-rarity="" data-name="collection manifest">
+          <button class="ent-row" type="button" aria-expanded="false" aria-controls="i-collection-manifest">
+            <span class="ent-face document"><span class="face-mono">C</span></span>
+            <span class="ent-name">Collection Manifest<span class="ent-sub">Cargo manifest</span></span>
+            <span class="ent-type">Curiosity</span>
+            <span class="ent-rarity"></span>
+            <span class="ent-state">The Tyrant Ship</span>
+          </button>
+          <div class="ent-detail" id="i-collection-manifest" hidden>
+            <p class="stub-desc">The tyrant ship’s own cargo record. It is what gave the broken autognome in the hold a name — Ostekk-6 — and it lists what else the vessel was carrying.</p>
+            <a class="stub-open" href="entries/collection-manifest.html">Open entry ›</a>
+          </div>
+        </div>
+<div class="ent item-row" data-class="evidence" data-type="curiosity" data-rarity="" data-name="crated centipede creature">
+          <button class="ent-row" type="button" aria-expanded="false" aria-controls="i-crated-centipede-creature">
+            <span class="ent-face evidence"><span class="face-mono">C</span></span>
+            <span class="ent-name">Crated Centipede Creature<span class="ent-sub">Living clue / evidence</span></span>
+            <span class="ent-type">Curiosity</span>
+            <span class="ent-rarity"></span>
+            <span class="ent-state">Mirt&#x27;s Quarters</span>
+          </button>
+          <div class="ent-detail" id="i-crated-centipede-creature" hidden>
+            <p class="stub-desc">A worm-like centipede creature, one of several that burst from the crate delivered to Mirt, kept alive and sealed back in the crate by Sol as potential evidence in the academy&#x27;s spreading thefts.</p>
+            <a class="stub-open" href="entries/crated-centipede-creature.html">Open entry ›</a>
+          </div>
+        </div>
+<div class="ent item-row" data-class="magic-item" data-type="wondrous-item" data-rarity="uncommon" data-name="crimson bag of holding">
+          <button class="ent-row" type="button" aria-expanded="false" aria-controls="i-crimson-bag-of-holding">
+            <span class="ent-face magic-item"><span class="face-mono">C</span></span>
+            <span class="ent-name">Crimson Bag of Holding<span class="ent-sub">Magic item</span></span>
+            <span class="ent-type">Wondrous Item</span>
+            <span class="ent-rarity r-uncommon">Uncommon</span>
+            <span class="ent-state">Tumak Swan</span>
+          </button>
+          <div class="ent-detail" id="i-crimson-bag-of-holding" hidden>
+            <p class="stub-desc">A crimson bag of holding, along with valuables, that Tumak claimed for himself from inside Mirt&#x27;s impossible wardrobe.</p>
+            <a class="stub-open" href="entries/crimson-bag-of-holding.html">Open entry ›</a>
+          </div>
+        </div>
+<div class="ent item-row" data-class="document" data-type="curiosity" data-rarity="" data-name="derelict logbook">
+          <button class="ent-row" type="button" aria-expanded="false" aria-controls="i-derelict-logbook">
+            <span class="ent-face document"><span class="face-mono">D</span></span>
+            <span class="ent-name">Derelict Logbook<span class="ent-sub">Ship’s log</span></span>
+            <span class="ent-type">Curiosity</span>
+            <span class="ent-rarity"></span>
+            <span class="ent-state">Boogie</span>
+          </button>
+          <div class="ent-detail" id="i-derelict-logbook" hidden>
+            <p class="stub-desc">The logbook the crews raced for in the salvage exercise, found behind the body of something long decomposed. Boogie slipped it into his own chest and has carried it since. Casey and Gregory each bound a duplicate of its pages during the githyanki attack, so three identical copies exist.</p>
+            <a class="stub-open" href="entries/derelict-logbook.html">Open entry ›</a>
+          </div>
+        </div>
+<div class="ent item-row" data-class="magic-item" data-type="wondrous-item" data-rarity="unknown" data-name="incomplete model spelljamming ship">
+          <button class="ent-row" type="button" aria-expanded="false" aria-controls="i-half-ship">
+            <span class="ent-face magic-item"><span class="face-mono">I</span></span>
+            <span class="ent-name">Incomplete Model Spelljamming Ship<span class="ent-sub">Mysterious object</span></span>
+            <span class="ent-type">Wondrous Item</span>
+            <span class="ent-rarity r-unknown">Unknown</span>
+            <span class="ent-state">Boogie</span>
+          </button>
+          <div class="ent-detail" id="i-half-ship" hidden>
+            <p class="stub-desc">A tiny model spelljamming ship that formed inside Boogie for reasons he cannot explain, half of it inexplicably missing. It is the same model as the personal miniature ship stolen from the instructor Saerthe — a connection Boogie has kept to himself.</p>
+            <a class="stub-open" href="entries/half-ship.html">Open entry ›</a>
+          </div>
+        </div>
+<div class="ent item-row" data-class="evidence" data-type="container" data-rarity="" data-name="marked crate at the sky dock">
+          <button class="ent-row" type="button" aria-expanded="false" aria-controls="i-marked-crate">
+            <span class="ent-face evidence"><span class="face-mono">M</span></span>
+            <span class="ent-name">Marked Crate at the Sky Dock<span class="ent-sub">Suspicious cargo</span></span>
+            <span class="ent-type">Container</span>
+            <span class="ent-rarity"></span>
+            <span class="ent-state">Sky Dock</span>
+          </button>
+          <div class="ent-detail" id="i-marked-crate" hidden>
+            <p class="stub-desc">A crate the crew found at the Sky Dock, tucked behind others and marked with the same symbol as the Vocath rod. It is not hollow but holds nothing living, and no one came for it while the crew watched.</p>
+            <a class="stub-open" href="entries/marked-crate.html">Open entry ›</a>
+          </div>
+        </div>
+<div class="ent item-row" data-class="magic-item" data-type="wondrous-item" data-rarity="unknown" data-name="mirt&#x27;s wardrobe">
+          <button class="ent-row" type="button" aria-expanded="false" aria-controls="i-mirts-wardrobe">
+            <span class="ent-face magic-item"><span class="face-mono">M</span></span>
+            <span class="ent-name">Mirt&#x27;s Wardrobe<span class="ent-sub">Magical portal object</span></span>
+            <span class="ent-type">Wondrous Item</span>
+            <span class="ent-rarity r-unknown">Unknown</span>
+            <span class="ent-state">Mirt&#x27;s Quarters</span>
+          </button>
+          <div class="ent-detail" id="i-mirts-wardrobe" hidden>
+            <p class="stub-desc">Mirt&#x27;s wardrobe is an impossible object that opens not onto ordinary space but a bounded stretch of astral night, a magical replica of a place beyond H’catha in the Viren star system, gifted to Mirt by the spellcaster Zerathis.</p>
+            <a class="stub-open" href="entries/mirts-wardrobe.html">Open entry ›</a>
+          </div>
+        </div>
+<div class="ent item-row" data-class="magic-item" data-type="wondrous-item" data-rarity="unknown" data-name="saerthe&#x27;s miniature spelljamming ship">
+          <button class="ent-row" type="button" aria-expanded="false" aria-controls="i-saerthes-miniature-ship">
+            <span class="ent-face magic-item"><span class="face-mono">S</span></span>
+            <span class="ent-name">Saerthe&#x27;s Miniature Spelljamming Ship<span class="ent-sub">Miniature vessel</span></span>
+            <span class="ent-type">Wondrous Item</span>
+            <span class="ent-rarity r-unknown">Unknown</span>
+            <span class="ent-state">—</span>
+          </button>
+          <div class="ent-detail" id="i-saerthes-miniature-ship" hidden>
+            <p class="stub-desc">A personal miniature spelljamming ship belonging to the instructor Saerthe, taken from him in a manner not yet explained. It is the same model as the incomplete ship that formed inside Boogie.</p>
+            <a class="stub-open" href="entries/saerthes-miniature-ship.html">Open entry ›</a>
+          </div>
+        </div>
+<div class="ent item-row" data-class="mundane" data-type="wondrous-item" data-rarity="" data-name="star-etched constellation shirt">
+          <button class="ent-row" type="button" aria-expanded="false" aria-controls="i-constellation-shirt">
+            <span class="ent-face mundane"><span class="face-mono">S</span></span>
+            <span class="ent-name">Star-Etched Constellation Shirt<span class="ent-sub">Garment</span></span>
+            <span class="ent-type">Wondrous Item</span>
+            <span class="ent-rarity"></span>
+            <span class="ent-state">Tumak Swan</span>
+          </button>
+          <div class="ent-detail" id="i-constellation-shirt" hidden>
+            <p class="stub-desc">A shirt Casey stole from Mirt&#x27;s wardrobe and etched with the unfamiliar constellations he glimpsed inside it. It now sits hidden in Tumak&#x27;s curtained bunk corner.</p>
+            <a class="stub-open" href="entries/constellation-shirt.html">Open entry ›</a>
+          </div>
+        </div>
+<div class="ent item-row" data-class="magic-item" data-type="weapon" data-rarity="" data-name="tumak&#x27;s soul knife">
+          <button class="ent-row" type="button" aria-expanded="false" aria-controls="i-tumaks-soul-knife">
+            <span class="ent-face magic-item"><span class="face-mono">T</span></span>
+            <span class="ent-name">Tumak&#x27;s Soul Knife<span class="ent-sub">Psionic weapon</span></span>
+            <span class="ent-type">Weapon</span>
+            <span class="ent-rarity"></span>
+            <span class="ent-state">Tumak Swan</span>
+          </button>
+          <div class="ent-detail" id="i-tumaks-soul-knife" hidden>
+            <p class="stub-desc">A spectral blade Tumak manifests through a small portal at his call. When he first drew it, his half-runes flared and he felt a tether running toward the home he seeks — the portal itself a piece of that somewhere.</p>
+            <a class="stub-open" href="entries/tumaks-soul-knife.html">Open entry ›</a>
+          </div>
+        </div>
+<div class="ent item-row" data-class="magic-item" data-type="rod" data-rarity="unknown" data-name="vocath arcane rod">
+          <button class="ent-row" type="button" aria-expanded="false" aria-controls="i-vocath-arcane-rod">
+            <span class="ent-face magic-item"><span class="face-mono">V</span></span>
+            <span class="ent-name">Vocath Arcane Rod<span class="ent-sub">Arcane device</span></span>
+            <span class="ent-type">Rod</span>
+            <span class="ent-rarity r-unknown">Unknown</span>
+            <span class="ent-state">Saerthe Abizjn</span>
+          </button>
+          <div class="ent-detail" id="i-vocath-arcane-rod" hidden>
+            <p class="stub-desc">A sigil-engraved metal rod Gregory pulled from the wall of the wrecked simulation chamber — a device built to feed on ambient magic and detonate, now spent. It bears the marking &#x27;Vocath,&#x27; and Saerthe has taken it to study.</p>
+            <a class="stub-open" href="entries/vocath-arcane-rod.html">Open entry ›</a>
+          </div>
+        </div>
+      </div>
+      <p class="no-results" hidden>Nothing matches that.</p>
     </div>
-    <div class="item-grid" data-pagefind-ignore>
-      <a class="item-card" href="entries/crimson-bag-of-holding.html">
-        <div class="item-type">Magical · Bag of Holding</div>
-        <div class="item-name">Crimson Bag of Holding</div>
-        <div class="item-holder">Held by: Tumak · Unregistered</div>
-      </a>
-      <a class="item-card" href="entries/constellation-shirt.html">
-        <div class="item-type">Clothing · Personal Reference</div>
-        <div class="item-name">Constellation Shirt</div>
-        <div class="item-holder">Held by: Tumak (via Casey) · Unregistered</div>
-      </a>
-      <a class="item-card" href="entries/half-ship.html">
-        <div class="item-type">Anomalous · Model Spelljammer</div>
-        <div class="item-name">Half Ship</div>
-        <div class="item-holder">Held by: Boogie · Undeclared</div>
-      </a>
-      <a class="item-card" href="entries/derelict-logbook.html">
-        <div class="item-type">Document · Ship's Log</div>
-        <div class="item-name">Derelict Logbook</div>
-        <div class="item-holder">Held by: Boogie · Retained</div>
-      </a>
-      <a class="item-card" href="entries/collection-manifest.html">
-        <div class="item-type">Document · Etched Slate</div>
-        <div class="item-name">Collection Manifest</div>
-        <div class="item-holder">Held by: The Crew · In Transit</div>
-        <span class="item-artifact">Readable <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span>
-      </a>
-    </div>
-
   </div>
 </div>
-
-
-
+<script>
+(function () {
+  var state = { cls: 'all', type: null, rarity: null, q: '' };
+  var tabs = document.querySelectorAll('.board-tab');
+  var pills = document.querySelectorAll('.filter-tag');
+  var rows = document.querySelectorAll('.item-row');
+  var clear = document.querySelector('.clear-btn');
+  var count = document.querySelector('.result-count');
+  var none = document.querySelector('.no-results');
+  var search = document.querySelector('.search-input');
+  var rarityFacet = document.querySelector('[data-rarity-facet]');
+  function match(r) {
+    return (state.cls === 'all' || r.dataset.class === state.cls)
+        && (!state.type || r.dataset.type === state.type)
+        && (!state.rarity || r.dataset.rarity === state.rarity)
+        && (!state.q || r.dataset.name.indexOf(state.q) !== -1);
+  }
+  function apply() {
+    var n = 0;
+    rows.forEach(function (r) { var ok = match(r); r.hidden = !ok; if (ok) n++; else { r.querySelector('.ent-row').setAttribute('aria-expanded','false'); r.querySelector('.ent-detail').hidden = true; } });
+    count.textContent = n + ' on record'; none.hidden = n > 0;
+    clear.hidden = state.cls === 'all' && !state.type && !state.rarity && !state.q;
+    rarityFacet.hidden = !(state.cls === 'all' || state.cls === 'magic-item');
+    pills.forEach(function (p) {
+      var attr = p.dataset.type ? 'type' : 'rarity', val = p.dataset.type || p.dataset.rarity;
+      var any = Array.prototype.some.call(rows, function (r) { return (state.cls === 'all' || r.dataset.class === state.cls) && r.dataset[attr] === val; });
+      p.hidden = !any;
+      if (!any && p.classList.contains('is-active')) { p.classList.remove('is-active'); state[attr] = null; }
+    });
+  }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { state.cls = t.dataset.class; tabs.forEach(function (o) { o.classList.toggle('is-active', o === t); }); apply(); }); });
+  pills.forEach(function (p) {
+    p.addEventListener('click', function () {
+      var attr = p.dataset.type ? 'type' : 'rarity', val = p.dataset.type || p.dataset.rarity;
+      state[attr] = state[attr] === val ? null : val;
+      pills.forEach(function (o) { var oa = o.dataset.type ? 'type' : 'rarity', ov = o.dataset.type || o.dataset.rarity; o.classList.toggle('is-active', state[oa] === ov); });
+      apply();
+    });
+  });
+  search.addEventListener('input', function () { state.q = search.value.trim().toLowerCase(); apply(); });
+  clear.addEventListener('click', function () { state = { cls: 'all', type: null, rarity: null, q: '' }; search.value = ''; tabs.forEach(function (t) { t.classList.toggle('is-active', t.dataset.class === 'all'); }); pills.forEach(function (p) { p.classList.remove('is-active'); }); apply(); });
+  document.querySelectorAll('.ent-row').forEach(function (b) {
+    var d = document.getElementById(b.getAttribute('aria-controls'));
+    b.addEventListener('click', function () { var open = b.getAttribute('aria-expanded') === 'true'; b.setAttribute('aria-expanded', open ? 'false' : 'true'); d.hidden = open; });
+  });
+  apply();
+})();
+</script>
 </body>
 </html>

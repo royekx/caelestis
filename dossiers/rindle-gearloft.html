@@ -5,42 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caelestis — Rindle Gearloft</title>
 <link rel="stylesheet" href="../styles/caelestis.css">
-<style>
-  .portrait-frame { width:100%; aspect-ratio:1; border:1px solid var(--gold-rule); background:var(--bg-card); display:flex; align-items:center; justify-content:center; color:var(--text-muted); }
-  .portrait-frame svg { width:44px; opacity:0.2; }
-  .portrait-frame img { width:100%; height:100%; object-fit:cover; display:block; }
-  .portrait-label { font-family:'Cinzel',serif; font-size: 0.66rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-muted); text-align:center; margin-top:0.5rem; }
-  .stat-list { display:flex; flex-direction:column; gap:0; margin-top:0.8rem; }
-  .stat-row { display:flex; justify-content:space-between; align-items:baseline; padding:0.28rem 0; border-bottom:1px solid var(--gold-rule); font-size: 0.90rem; }
-  .stat-row:last-child { border-bottom:none; }
-  .stat-key { font-family:'Cinzel',serif; font-size: 0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); }
-  .stat-val { color:var(--text); text-align:right; font-style:italic; }
-  .classification { display:inline-block; font-family:'Cinzel',serif; font-size: 0.66rem; letter-spacing:0.15em; text-transform:uppercase; padding:0.22rem 0.65rem; border:1px solid; margin-bottom:0.5rem; }
-  .class-ally    { color:#5a8ab8; border-color:rgba(30,74,122,0.45); }
-  .class-neutral { color:var(--gold-dim); border-color:var(--gold-rule); }
-  .entry-header { display:grid; grid-template-columns:160px 1fr; gap:2rem; margin-bottom:2.5rem; align-items:start; }
-  .entry-info { display:flex; flex-direction:column; gap:0.35rem; }
-  .entry-name { font-family:'Cinzel',serif; font-size:1.5rem; font-weight:700; color:var(--text); letter-spacing:0.03em; line-height:1.1; }
-  .entry-sub { font-size: 0.99rem; font-style:italic; color:var(--text-dim); }
-  .entry-body { font-size: 1.02rem; line-height:1.78; color:var(--text); }
-  .entry-body p { margin-bottom:0.85rem; }
-  .entry-body p:last-child { margin-bottom:0; }
-  .log-list { display:flex; flex-direction:column; gap:0.4rem; }
-  .log-item { font-size: 0.99rem; line-height:1.5; padding-left:1rem; position:relative; color:var(--text); }
-  .log-item::before { content:'›'; position:absolute; left:0; color:var(--gold-dim); }
-  .log-item b { font-weight:600; }
-  .log-item em { color:var(--text-dim); font-style:italic; }
-  @media(max-width:560px){ .entry-header{ grid-template-columns:1fr; } }
-</style>
-  <script src="../scripts/nav.js" defer></script>
+<link rel="stylesheet" href="../styles/entity.css">
+<link rel="stylesheet" href="../styles/board.css">
+<script src="../data/bearing.js" defer></script>
+<script src="../scripts/nav.js" defer></script>
+<script src="../scripts/ui.js" defer></script>
 </head>
-<body data-pagefind-filter="section:dossiers">
+<body data-entity="NPC-2mV7kB4w" data-pagefind-filter="section:dossiers, category:Beyond the Academy, status:Active">
 <div class="page-content">
+
   <div class="page-header">
     <div class="page-emblem" data-pagefind-ignore>
       <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
         <line x1="0" y1="20" x2="42" y2="20" stroke-width="0.6" opacity="0.4"/>
-        <polyline points="38,15 43,20 38,25" opacity="0.5"/><polyline points="33,16 38,20 33,24" opacity="0.3"/>
+        <polyline points="38,15 43,20 38,25" opacity="0.5"/>
+        <polyline points="33,16 38,20 33,24" opacity="0.3"/>
         <g transform="translate(60,20)">
           <line x1="0" y1="-11" x2="0" y2="-6"/><line x1="0" y1="6" x2="0" y2="11"/>
           <line x1="-11" y1="0" x2="-6" y2="0"/><line x1="6" y1="0" x2="11" y2="0"/>
@@ -48,40 +27,42 @@
           <line x1="-7.5" y1="7.5" x2="-4.5" y2="4.5"/><line x1="4.5" y1="4.5" x2="7.5" y2="7.5"/>
           <circle cx="0" cy="0" r="4"/><circle cx="0" cy="0" r="1.2" fill="currentColor" stroke="none"/>
         </g>
-        <polyline points="82,15 77,20 82,25" opacity="0.3"/><polyline points="87,16 82,20 87,24" opacity="0.5"/>
+        <polyline points="82,15 77,20 82,25" opacity="0.3"/>
+        <polyline points="87,16 82,20 87,24" opacity="0.5"/>
         <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
       </svg>
     </div>
-    <div class="page-title" data-pagefind-meta="title">Rindle Gearloft</div>
+    <div class="page-title" data-pagefind-meta="title" data-field="name">Rindle Gearloft</div>
   </div>
+
   <div class="content">
 
-    <div class="voyage-nav-bar" data-pagefind-ignore>
-      <a class="voyage-nav-link" href="winston-ryeback.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Ryeback</a>
-      <a class="voyage-nav-center" href="index.html">Dossiers</a>
-      <a class="voyage-nav-link" href="joffrey.html">Joffrey <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a>
-    </div>
+    <div class="voyage-nav-bar" data-pagefind-ignore><a class="voyage-nav-link" href="pffred.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Pffred</span></a><a class="voyage-nav-center" href="index.html">Dossiers</a><a class="voyage-nav-link" href="saerthe-abizjn.html"><span class="nav-label">Saerthe Abizjn</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
 
     <div class="entry-header">
-      <div>
-        <div class="portrait-frame"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="24" r="8"/><circle cx="24" cy="24" r="3"/><line x1="24" y1="8" x2="24" y2="14"/><line x1="24" y1="34" x2="24" y2="40"/><line x1="8" y1="24" x2="14" y2="24"/><line x1="34" y1="24" x2="40" y2="24"/><line x1="13" y1="13" x2="17" y2="17"/><line x1="31" y1="31" x2="35" y2="35"/><line x1="35" y1="13" x2="31" y2="17"/><line x1="17" y1="31" x2="13" y2="35"/></svg></div>
-        <div class="portrait-label" data-pagefind-ignore>Portrait Pending</div>
-        <div class="stat-list"><div class="stat-row"><span class="stat-key">Role</span> <span class="stat-val">Cargo Foreman</span></div><div class="stat-row"><span class="stat-key">Station</span> <span class="stat-val">Sea Dock</span></div><div class="stat-row"><span class="stat-key">Affiliation</span> <span class="stat-val">Spelljammer Academy</span></div><div class="stat-row"><span class="stat-key">Last Seen</span> <span class="stat-val">V02 — Sea Dock</span></div><div class="stat-row"><span class="stat-key">Status</span> <span class="stat-val">Active</span></div></div>
+      <div class="identity-card">
+        <div class="portrait-frame" data-field="portrait"><span class="monogram">R</span></div>
+        <div class="stat-card" data-field="stats"><div class="stat-row"><span class="stat-key">Role</span><span class="stat-val">Dock master</span></div><div class="stat-row"><span class="stat-key">Crew</span><span class="stat-val">Dock master Casey worked a shift for</span></div><div class="stat-row"><span class="stat-key">Last Seen</span><span class="stat-val">Voyage 002</span></div><div class="stat-row"><span class="stat-key">Status</span><span class="stat-val">Active</span></div></div>
       </div>
+
       <div class="entry-info">
-        <div class="classification class-neutral">Neutral — Dock Staff</div>
-        <div class="entry-name">Rindle Gearloft</div>
-        <div class="entry-sub">Sea Dock · Cargo Foreman</div>
-        <div class="entry-body" style="margin-top:0.8rem;"><p>Brusque, distracted, attention fixed somewhere other than the person in front of him. Rindle kept Casey standing long enough that Casey had to demand the attention rather than receive it.</p><p>He posts cargo work to the refectory board. When Casey mentioned he had taken the job from that board, Rindle hesitated, apologised for not realising a cadet was filling it, and quietly paid him for the hour. The correction came without being asked for.</p><p>Whatever was holding his attention elsewhere has not been established.</p></div>
+        <div class="entry-name" data-field="name">Rindle Gearloft</div>
+        <div class="entry-sub" data-field="subtitle">Dock master</div>
+        <div class="entry-body" data-field="overview"><p>Rindle Gearloft runs a dock near the Sea Dock, gruff and preoccupied until his attention is demanded. He worked Casey hard over a cargo job, then apologized and paid him fairly once he realized a cadet had answered the notice.</p></div>
+        
       </div>
     </div>
+
+    
+
     <div class="divider">✦ ✦ ✦</div>
-    <div class="section-block">
-      <div class="section-label">Voyage 002</div>
-      <div class="log-list"><div class="log-item"><b>Casey</b> answered a cargo notice at the Sea Dock and worked an hour for him.</div><div class="log-item">Did not register that a cadet had taken the job until Casey said so directly.</div><div class="log-item">Apologised and paid him for the time.</div><div class="log-item"><em>Distracted throughout. Cause unknown.</em></div></div>
-    </div>
+
+    <div data-field="latestVoyage"><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 002</span></div><ul class="record-list"><li>Ran a dock Casey reached by mistake while looking for the Sea Dock</li><li>Barked orders at Casey and had him work cargo for the better part of an hour</li><li>Apologized when he learned a cadet had filled the refectory job, and quietly paid Casey for the time</li></ul></div></div>
+    <div data-field="priorVoyages"></div>
+
+    
+
   </div>
 </div>
-
 </body>
 </html>
