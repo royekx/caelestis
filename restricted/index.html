@@ -9,7 +9,8 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 115%; background: #030208; }
 body {
-  background: #030208;
+  /* No background here. An opaque body fill paints over body::before,
+     which carries the lattice at z-index -2. html holds the fallback. */
   font-family: 'Crimson Pro', Georgia, serif;
   color: #c9a96e;
   min-height: 100vh;

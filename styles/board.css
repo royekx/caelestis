@@ -4,7 +4,11 @@
    Everything here is list, tab, or chart furniture.
    ════════════════════════════════════════════════════════════════ */
 
-html, body { overflow-x: hidden; }
+/* overflow-x: clip, not hidden. `hidden` on html/body makes the body a scroll
+   container, which silently breaks `position: sticky` on every descendant —
+   including the command bar. `clip` stops the sideways scroll without that
+   side effect. */
+html { overflow-x: clip; }
 .page-content, .content { box-sizing: border-box; }
 
 /* ── TABS ──

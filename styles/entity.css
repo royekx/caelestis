@@ -4,7 +4,11 @@
    inline CSS per page.
    ════════════════════════════════════════════════════════════════ */
 
-html, body { overflow-x: hidden; }
+/* overflow-x: clip, not hidden. `hidden` on html/body makes the body a scroll
+   container, which silently breaks `position: sticky` on every descendant —
+   including the command bar. `clip` stops the sideways scroll without that
+   side effect. */
+html { overflow-x: clip; }
 /* box-sizing only — max-width:100% here would override the 900px cap
    caelestis.css sets on .content and let pages span a whole monitor. */
 .page-content, .content { box-sizing: border-box; }
