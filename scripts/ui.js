@@ -94,8 +94,6 @@
       ents.forEach(function (e) {
         e.hidden = false;
         e.classList.remove('is-selected');
-        e.querySelector('.ent-row').setAttribute('aria-expanded', 'false');
-        e.querySelector('.ent-detail').hidden = true;
       });
       if (clearBtn) clearBtn.hidden = true;
       if (stateLbl) stateLbl.textContent = 'Showing all entries';
@@ -104,11 +102,11 @@
     function filterTo(name) {
       nodes.forEach(function (b) { b.classList.toggle('is-selected', b.dataset.body === name); });
       ents.forEach(function (e) {
+        // Selecting a body narrows the register to it. The entry's own
+        // account is already on the row — there is nothing left to expand.
         var on = e.dataset.entry === name;
         e.hidden = !on;
         e.classList.toggle('is-selected', on);
-        e.querySelector('.ent-row').setAttribute('aria-expanded', on ? 'true' : 'false');
-        e.querySelector('.ent-detail').hidden = !on;
       });
       if (clearBtn) clearBtn.hidden = false;
       if (stateLbl) stateLbl.textContent = name;

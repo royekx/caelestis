@@ -858,21 +858,20 @@ body.with-sidebar .page-header {
    The strip trims with ellipsis on purpose; the caret opens what it cut.
    ══════════════════════════════════════════════════════════════════ */
 .command-bar {
-  /* Scrolls with the page. It was sticky, which meant an opaque band riding
-     over the content on every page and a blur surface the backdrop had to be
-     re-composited against on each frame. It sits at the top of the column and
-     leaves with the rest of the page.
+  /* Sticky, as in the hub demo: it travels down the column with the page and
+     parks at the top once it gets there.
 
-     min-width:0 on the flex/grid children below is what keeps it inside the
-     column — without it the bearing values set the strip's min-content width
-     and pushed the whole bar past the page edge. */
-  position: relative; z-index: 1;
+     max-width / overflow / the min-width:0 on the flex children below are what
+     keep it inside the column. Without them the bearing values set the strip's
+     min-content width and pushed the whole bar past the page edge. */
+  position: sticky; top: 0; z-index: 150;
   background: rgba(12, 17, 28, 0.97);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--rule);
   border-left: 3px solid var(--gold);
   margin: 0 0 2.2rem;
   max-width: 100%; min-width: 0; overflow: hidden;
-  box-shadow: 0 10px 28px rgba(3, 5, 10, 0.35);
+  box-shadow: 0 14px 34px rgba(3, 5, 10, 0.45);
 }
 
 /* ── Global search ── */
