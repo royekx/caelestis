@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../styles/caelestis.css">
 <link rel="stylesheet" href="../styles/entity.css">
 <link rel="stylesheet" href="../styles/board.css">
+<link rel="stylesheet" href="../styles/register.css">
 <script src="../data/bearing.js" defer></script>
 <script src="../scripts/nav.js" defer></script>
 <script src="../scripts/ui.js" defer></script>
@@ -43,7 +44,7 @@
       <div class="facet"><span class="facet-label">Affiliations</span><div class="facet-pills"><button class="filter-tag" type="button" data-fac="caelestis">Caelestis</button><button class="filter-tag" type="button" data-fac="caelestis-academy">Caelestis Academy</button></div></div>
     </div>
     <div class="result-line"><span class="result-count">20 on record</span><button class="clear-btn" type="button" hidden>Clear filters</button></div>
-    <div class="register">
+    <div class="register" data-pagefind-ignore>
 <div class="ent npc-row" data-loc="caelestis simulation-deck"
              data-fac="caelestis-academy" data-name="boatswain tarto">
           <button class="ent-row" type="button" aria-expanded="false" aria-controls="n-boatswain-tarto">
@@ -325,10 +326,8 @@
   });
   search.addEventListener('input', function () { state.q = search.value.trim().toLowerCase(); apply(); });
   clear.addEventListener('click', function () { state = { loc: null, fac: null, q: '' }; search.value = ''; pills.forEach(function (p) { p.classList.remove('is-active'); }); apply(); });
-  document.querySelectorAll('.ent-row').forEach(function (b) {
-    var d = document.getElementById(b.getAttribute('aria-controls'));
-    b.addEventListener('click', function () { var open = b.getAttribute('aria-expanded') === 'true'; b.setAttribute('aria-expanded', open ? 'false' : 'true'); d.hidden = open; });
-  });
+  // Row expansion is wired once, in scripts/ui.js. Binding it here as well
+  // toggled every row twice, which read as rows that would not open at all.
   apply();
 })();
 </script>

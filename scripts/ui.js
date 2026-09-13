@@ -14,7 +14,10 @@
   function initTabs(tabSel, panelSel) {
     var tabs = document.querySelectorAll(tabSel);
     var panels = document.querySelectorAll(panelSel);
-    if (!tabs.length) return;
+    // Both halves are required. The Inventory ledger uses .board-tab to switch
+    // a filter rather than a panel, and without this guard that page picked up
+    // the panel machinery, got .js-tabs on <html>, and fought its own handler.
+    if (!tabs.length || !panels.length) return;
     document.documentElement.classList.add('js-tabs');
 
     var names = Array.prototype.map.call(tabs, function (t) { return t.dataset.panel; });
@@ -101,7 +104,9 @@
     function filterTo(name) {
       nodes.forEach(function (b) { b.classList.toggle('is-selected', b.dataset.body === name); });
       ents.forEach(function (e) {
-        var on = e.dataset.entry === name;
+        // A body on the chart stands for itself and for everything filed
+      // inside it — selecting Caelestis brings its rooms with it.
+      var on = e.dataset.entry === name || e.dataset.parent === name;
         e.hidden = !on;
         e.classList.toggle('is-selected', on);
         e.querySelector('.ent-row').setAttribute('aria-expanded', on ? 'true' : 'false');

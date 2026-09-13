@@ -76,46 +76,61 @@
     text-align: right; margin-left: auto;
   }
 
-  /* ── OPERATIONS CARDS ── */
-  .action-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-  .action-card {
+  /* ── CURRENT BEARING CARD ── */
+  .bearing-card {
+    display: block; text-decoration: none;
     background: rgba(20,12,5,0.95);
     border: 1px solid var(--gold-dim);
-    padding: 1.9rem 1.8rem 1.6rem;
-    text-decoration: none;
-    display: flex; flex-direction: column; align-items: center;
-    text-align: center; position: relative; overflow: hidden;
+    border-left: 3px solid var(--gold);
+    padding: 1.3rem 1.5rem 1.2rem;
     transition: border-color 0.22s, box-shadow 0.22s, transform 0.22s;
   }
-  .action-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(to right, var(--gold), transparent);
-    opacity: 0.7; transition: opacity 0.22s;
+  .bearing-card:hover {
+    border-color: var(--gold); border-left-color: var(--gold-light);
+    box-shadow: 0 8px 50px rgba(192,134,82,0.16);
+    transform: translateY(-2px);
   }
-  .action-card:hover {
-    border-color: var(--gold);
-    box-shadow: 0 8px 50px rgba(201,153,58,0.18);
-    transform: translateY(-3px);
+  .bearing-card-head {
+    display: flex; align-items: baseline; gap: 0.9rem;
+    padding-bottom: 0.75rem; margin-bottom: 0.95rem;
+    border-bottom: 1px solid var(--gold-rule);
   }
-  .action-card:hover::before { opacity: 1; }
-  .action-icon { color: var(--gold); margin-bottom: 0.9rem; opacity: 0.85; }
-  .action-icon svg { width: 40px; height: 40px; }
-  .action-title {
-    font-family: 'Cinzel', serif; font-size: 1.01rem;
-    font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 0.5rem;
+  .bearing-card-label {
+    font-family: 'Cinzel', serif; font-size: 0.68rem;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold);
   }
-  .action-desc { font-size: 0.97rem; color: var(--text-dim); line-height: 1.55; margin-bottom: 1.3rem; flex: 1; }
-  .action-cta {
-    font-family: 'Cinzel', serif; font-size: 0.67rem;
-    letter-spacing: 0.16em; text-transform: uppercase;
-    color: var(--text-muted); border: 1px solid var(--gold-rule);
-    padding: 0.35rem 1.1rem;
-    transition: border-color 0.2s, color 0.2s;
-    display: flex; align-items: center; gap: 0.4rem;
+  .bearing-card-open {
+    margin-left: auto;
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-muted); white-space: nowrap; transition: color 0.2s;
   }
-  .action-cta svg { width: 9px; }
-  .action-card:hover .action-cta { border-color: var(--gold-dim); color: var(--gold-dim); }
+  .bearing-card:hover .bearing-card-open { color: var(--gold-dim); }
+
+  .bearing-card-grid {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem 1.6rem;
+  }
+  .bearing-cell-wide { grid-column: 1 / -1; }
+  .bearing-cell { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
+  .bearing-key {
+    font-family: 'Cinzel', serif; font-size: 0.55rem;
+    letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted);
+  }
+  .bearing-val { font-size: 1.02rem; line-height: 1.45; color: var(--text); }
+  .bearing-val .bearing-note { font-style: italic; color: var(--text-dim); font-size: 0.92rem; }
+
+  .bearing-quests { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+  .bearing-quests:empty { display: none; }
+  .bearing-quest {
+    display: inline-flex; align-items: baseline; gap: 0.5rem;
+    border: 1px solid var(--gold-rule); padding: 0.3rem 0.75rem;
+    font-size: 0.88rem; color: var(--text-dim);
+  }
+  .bearing-quest .bearing-prog {
+    font-family: 'Cinzel', serif; font-size: 0.62rem;
+    letter-spacing: 0.1em; color: var(--gold-dim);
+  }
 
   /* ── STANDARD CARDS ── */
   .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
@@ -199,7 +214,7 @@
     .card-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media(max-width:600px) {
-    .action-row { grid-template-columns: 1fr; }
+    .bearing-card-grid { grid-template-columns: 1fr; }
     .hub-section-desc { display: none; }
   }
   @media(max-width:540px) {
@@ -216,6 +231,11 @@
     .card-grid, .card-grid.two-up { grid-template-columns: 1fr; }
   }
 </style>
+  <!-- bearing.js must precede nav.js: deferred scripts run in document order,
+       and buildCommandBar() renders operations only when the data is absent.
+       This was the reason the hub's command bar had no Current Bearing strip
+       while every other page on the site did. -->
+  <script src="data/bearing.js" defer></script>
   <script src="scripts/nav.js" defer></script>
   <script src="data/voyage.js" defer></script>
 </head>
@@ -247,51 +267,40 @@
     <div class="hub-sub">Everything the Fleet keeps, and everything you need to sail.</div>
   </div>
 
-  <!-- ══════════ BRIDGE OPERATIONS ══════════ -->
+  <!-- ══════════ CREW OPERATIONS ══════════
+       The helm and the scheduler used to sit here as two large cards.
+       They also sit in the command bar above, on this page and every
+       other — so the band repeated the only two things the terminal
+       already offers everywhere. The band now carries what the sidebar
+       group leads with and the hub had nowhere: where the crew stands.
+       Rendered from data/bearing.js, so it never goes stale by hand. -->
   <section class="hub-section">
     <div class="hub-section-head">
       <span class="hub-section-title">Crew Operations</span>
-      <span class="hub-section-desc">Where the game happens — set the next one, then sail it.</span>
+      <span class="hub-section-desc">Where the game happens — where you stand, and what is still open.</span>
     </div>
 
-    <div class="action-row">
-
-      <a class="action-card" href="https://rallly.co/invite/B8uUYlcm4oKB" target="_blank" rel="noopener">
-        <div class="action-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="5" y="7" width="26" height="24" rx="2"/>
-          <line x1="5" y1="14" x2="31" y2="14"/>
-          <line x1="12" y1="4" x2="12" y2="10"/>
-          <line x1="24" y1="4" x2="24" y2="10"/>
-          <circle cx="12" cy="21" r="1.5" fill="currentColor" stroke="none"/>
-          <circle cx="18" cy="21" r="1.5" fill="currentColor" stroke="none"/>
-          <circle cx="24" cy="21" r="1.5" fill="currentColor" stroke="none"/>
-          <circle cx="12" cy="27" r="1.5" fill="currentColor" stroke="none"/>
-          <circle cx="18" cy="27" r="1.5" fill="currentColor" stroke="none"/>
-        </svg></div>
-        <div class="action-title">Plot the Next Voyage</div>
-        <div class="action-desc">Coordinate with the crew to find a time for the next session.</div>
-        <div class="action-cta">Open Scheduler <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 2H2a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1V6M6 1h3v3M9 1L4.5 5.5"/></svg></div>
-      </a>
-
-      <a class="action-card" href="https://royek.foundryserver.com/game" target="_blank" rel="noopener">
-        <div class="action-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="18" cy="18" r="13"/>
-          <circle cx="18" cy="18" r="3.5"/>
-          <line x1="18" y1="14.5" x2="18" y2="5"/>
-          <line x1="18" y1="21.5" x2="18" y2="31"/>
-          <line x1="13.5" y1="18" x2="5" y2="18"/>
-          <line x1="22.5" y1="18" x2="31" y2="18"/>
-          <line x1="20.5" y1="15.5" x2="26" y2="10"/>
-          <line x1="15.5" y1="20.5" x2="10" y2="26"/>
-          <line x1="20.5" y1="20.5" x2="26" y2="26"/>
-          <line x1="15.5" y1="15.5" x2="10" y2="10"/>
-        </svg></div>
-        <div class="action-title">Take the Helm</div>
-        <div class="action-desc">Launch the current session and enter Caelestis through Foundry.</div>
-        <div class="action-cta">Enter Foundry <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 2H2a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1V6M6 1h3v3M9 1L4.5 5.5"/></svg></div>
-      </a>
-
-    </div>
+    <a class="bearing-card" href="bearings/index.html" id="js-hub-bearing">
+      <div class="bearing-card-head">
+        <span class="bearing-card-label">Current Bearing</span>
+        <span class="bearing-card-open">Full bearing and timeline ›</span>
+      </div>
+      <div class="bearing-card-grid">
+        <div class="bearing-cell">
+          <span class="bearing-key">Position</span>
+          <span class="bearing-val" data-bearing="position">—</span>
+        </div>
+        <div class="bearing-cell">
+          <span class="bearing-key">Last Voyage</span>
+          <span class="bearing-val" data-bearing="voyage">—</span>
+        </div>
+        <div class="bearing-cell bearing-cell-wide">
+          <span class="bearing-key">Outstanding</span>
+          <span class="bearing-val" data-bearing="outstanding">—</span>
+        </div>
+      </div>
+      <div class="bearing-quests" data-bearing="quests"></div>
+    </a>
   </section>
 
   <!-- ══════════ CREW INTEL ══════════ -->
@@ -484,6 +493,36 @@
       el.firstChild.nodeValue = '\n            Voyage ' + latest.num + ' ';
     }
   }
+
+  // The Crew Operations band reads the same file the command bar does, so
+  // the two can never disagree. Missing data leaves the card off entirely
+  // rather than showing em-dashes.
+  var b = window.CAELESTIS_BEARING;
+  var card = document.getElementById('js-hub-bearing');
+  if (!card) return;
+  if (!b) { card.hidden = true; return; }
+
+  function set(key, html) {
+    var el = card.querySelector('[data-bearing="' + key + '"]');
+    if (el) el.innerHTML = html;
+  }
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  set('position', esc(b.position) +
+    (b.posNote ? ' <span class="bearing-note">' + esc(b.posNote) + '</span>' : ''));
+  set('voyage', ('00' + b.voyage).slice(-3) + ' \u00b7 ' + esc(b.title));
+  set('outstanding', esc(b.outstanding));
+
+  var quests = (b.detail && b.detail.quests) || [];
+  set('quests', quests.map(function (q) {
+    return '<span class="bearing-quest">' + esc(q.name) +
+           '<span class="bearing-prog">' + esc(q.progress) + '</span></span>';
+  }).join(''));
+
+  if (b.links && b.links.bearing) card.setAttribute('href', b.links.bearing);
 })();
 </script>
 </body>

@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../styles/caelestis.css">
 <link rel="stylesheet" href="../styles/entity.css">
 <link rel="stylesheet" href="../styles/board.css">
+<link rel="stylesheet" href="../styles/register.css">
 <script src="../data/bearing.js" defer></script>
 <script src="../scripts/nav.js" defer></script>
 <script src="../scripts/ui.js" defer></script>
@@ -35,33 +36,164 @@
     <div class="page-subtitle">Active personnel — who's aboard, and what they carry</div>
   </div>
   <div class="content">
-    <div class="card-grid">
-<a class="s-card" href="bartholomew-grayson.html">
-        <div class="s-card-head"><div class="s-icon"><span class="face-mono">B</span></div><div class="s-title">Bartholomew Grayson</div></div>
-        <div class="s-desc">Bartholomew is a human druid and wilder, a cadet at Caelestis with an uncanny natural affinity for the helm. Quiet and untroubled, he has sl</div>
-      </a>
-<a class="s-card" href="boogie.html">
-        <div class="s-card-head"><div class="s-icon"><span class="face-mono">B</span></div><div class="s-title">Boogie</div></div>
-        <div class="s-desc">Boogie is a plasmoid cadet at Caelestis in a semi-transparent blue form with a glittering stone inside him and an inner rhythm that pulls hi</div>
-      </a>
-<a class="s-card" href="casey-geim.html">
-        <div class="s-card-head"><div class="s-icon"><span class="face-mono">C</span></div><div class="s-title">Casey Geim</div></div>
-        <div class="s-desc">Casey is a hadozee warlock cadet at Caelestis, barefoot and composed beneath a pale green cloak stitched with constellations, wielding cold </div>
-      </a>
-<a class="s-card" href="gregory.html">
-        <div class="s-card-head"><div class="s-icon"><span class="face-mono">G</span></div><div class="s-title">Gregory</div></div>
-        <div class="s-desc">Gregory is a bronze autognome cadet at Caelestis with glasses and a mustache, hesitant and observant, quick to notice what others miss. He h</div>
-      </a>
-<a class="s-card" href="sol-fortuna.html">
-        <div class="s-card-head"><div class="s-icon"><span class="face-mono">S</span></div><div class="s-title">Sol Fortuna</div></div>
-        <div class="s-desc">Sol Fortuna is a tall, pale, dark-haired astral elf paladin of Beshaba with white eyes, steady even after simulated death. He anticipates da</div>
-      </a>
-<a class="s-card" href="tumak-swan.html">
-        <div class="s-card-head"><div class="s-icon"><span class="face-mono">T</span></div><div class="s-title">Tumak Swan</div></div>
-        <div class="s-desc">Tumak Swan is a slight rogue swallowed by an oversized coat, muttering reassurances to himself, whose mind often seems divided. He holds the</div>
-      </a>
+    <p class="intro-note">Six cadets, one crew. Open a row for the short version, or the personnel file for the whole record — appearances, carried items, and what each of them last worked out.</p>
+    <div class="board-body">
+      <div class="facets" data-pagefind-ignore>
+        <div class="search-row">
+          <input class="search-input" type="search" placeholder="Search by name..." aria-label="Search the manifest">
+        </div>
+        <div class="facet">
+          <span class="facet-label">Species</span>
+          <div class="facet-pills"><button class="filter-tag" type="button" data-facet="species" data-value="Astral Elf">Astral Elf</button><button class="filter-tag" type="button" data-facet="species" data-value="Autognome">Autognome</button><button class="filter-tag" type="button" data-facet="species" data-value="Hadozee">Hadozee</button><button class="filter-tag" type="button" data-facet="species" data-value="Human">Human</button><button class="filter-tag" type="button" data-facet="species" data-value="Plasmoid">Plasmoid</button></div>
+        </div>
+        <div class="facet">
+          <span class="facet-label">Class</span>
+          <div class="facet-pills"><button class="filter-tag" type="button" data-facet="class" data-value="Druid">Druid</button><button class="filter-tag" type="button" data-facet="class" data-value="Paladin">Paladin</button><button class="filter-tag" type="button" data-facet="class" data-value="Rogue">Rogue</button><button class="filter-tag" type="button" data-facet="class" data-value="Sorcerer">Sorcerer</button><button class="filter-tag" type="button" data-facet="class" data-value="Warlock">Warlock</button><button class="filter-tag" type="button" data-facet="class" data-value="Wizard">Wizard</button></div>
+        </div>
+        <div class="facet">
+          <span class="facet-label">Station</span>
+          <div class="facet-pills"><button class="filter-tag" type="button" data-facet="station" data-value="Bosun">Bosun</button><button class="filter-tag" type="button" data-facet="station" data-value="Captain">Captain</button><button class="filter-tag" type="button" data-facet="station" data-value="Gunner">Gunner</button><button class="filter-tag" type="button" data-facet="station" data-value="Medic">Medic</button><button class="filter-tag" type="button" data-facet="station" data-value="Navigator">Navigator</button><button class="filter-tag" type="button" data-facet="station" data-value="Spelljammer">Spelljammer</button></div>
+        </div>
+      </div>
+      <div class="result-line" data-pagefind-ignore>
+        <span class="result-count">6 aboard</span>
+        <button class="clear-btn" type="button" hidden>Clear filters</button>
+      </div>
+      <div class="register" data-pagefind-ignore>
+      <div class="ent crew-row" data-species="Human" data-class="Rogue" data-station="Captain">
+        <button class="ent-row" type="button" aria-expanded="false" aria-controls="c-tumak-swan">
+          <span class="ent-face"><img src="https://lh3.googleusercontent.com/d/1Qk-udGpqGpv2oZL9hahqjXgMRRCDrWnr" alt="" loading="lazy"></span>
+          <span class="ent-name">Tumak Swan<span class="ent-sub">Human &middot; Rogue</span></span>
+          <span class="ent-type">Captain</span>
+          <span class="ent-state">Sailor</span>
+        </button>
+        <div class="ent-detail" id="c-tumak-swan" hidden>
+          <p class="stub-desc">Tumak Swan is a slight rogue swallowed by an oversized coat, muttering reassurances to himself, whose mind often seems divided. He holds the captain&#x27;s chair for the crew and keeps a curtained corner of his bunk for things he would rather not explain. He is searching for a family he cannot yet name — and has begun to manifest powers and glowing half-runes he does not understand, with a tether now pulling him toward home.</p>
+          <p class="stub-desc"><span class="glance-label">Now</span> Aboard an abandoned tyrant ship as the crew&#x27;s captain, newly awakened to runes, powers, and a tether pulling toward home.</p>
+          <a class="stub-open" href="tumak-swan.html">Open personnel file &rsaquo;</a>
+        </div>
+      </div>
+      <div class="ent crew-row" data-species="Autognome" data-class="Wizard" data-station="Navigator">
+        <button class="ent-row" type="button" aria-expanded="false" aria-controls="c-gregory">
+          <span class="ent-face"><img src="https://lh3.googleusercontent.com/d/1fzRY-WITl425-WA_HCThclBYYsRH4tun" alt="" loading="lazy"></span>
+          <span class="ent-name">Gregory<span class="ent-sub">Autognome &middot; Wizard</span></span>
+          <span class="ent-type">Navigator</span>
+          <span class="ent-state">Sailor</span>
+        </button>
+        <div class="ent-detail" id="c-gregory" hidden>
+          <p class="stub-desc">Gregory is a bronze autognome cadet at Caelestis with glasses and a mustache, hesitant and observant, quick to notice what others miss. He has settled as the crew&#x27;s navigator, his course-plotting proven under pressure. Far from his dead master, he feels a pull in his core drawing him toward somewhere he cannot yet name, and has begun to reach for others before the damage does.</p>
+          <p class="stub-desc"><span class="glance-label">Now</span> Aboard an abandoned tyrant ship as the crew&#x27;s navigator, moved by the broken autognome he chose to save.</p>
+          <a class="stub-open" href="gregory.html">Open personnel file &rsaquo;</a>
+        </div>
+      </div>
+      <div class="ent crew-row" data-species="Hadozee" data-class="Warlock" data-station="Bosun">
+        <button class="ent-row" type="button" aria-expanded="false" aria-controls="c-casey-geim">
+          <span class="ent-face"><img src="https://lh3.googleusercontent.com/d/1XLFP2beF16GU12VCcwInFzpfTv3mjhaO" alt="" loading="lazy"></span>
+          <span class="ent-name">Casey Geim<span class="ent-sub">Hadozee &middot; Warlock</span></span>
+          <span class="ent-type">Bosun</span>
+          <span class="ent-state">Sailor</span>
+        </button>
+        <div class="ent-detail" id="c-casey-geim" hidden>
+          <p class="stub-desc">Casey is a hadozee warlock cadet at Caelestis, barefoot and composed beneath a pale green cloak stitched with constellations, wielding cold star-bright magic. Awkward and half-orbiting any conversation, he serves as the crew&#x27;s bosun. A vision beyond Mirt&#x27;s wardrobe pointed him toward the Viren star system, and a familiar presence has begun following him elsewhere.</p>
+          <p class="stub-desc"><span class="glance-label">Now</span> A cadet and the crew&#x27;s bosun aboard a tyrant ship, still drawn on by a familiar presence.</p>
+          <a class="stub-open" href="casey-geim.html">Open personnel file &rsaquo;</a>
+        </div>
+      </div>
+      <div class="ent crew-row" data-species="Plasmoid" data-class="Sorcerer" data-station="Medic">
+        <button class="ent-row" type="button" aria-expanded="false" aria-controls="c-boogie">
+          <span class="ent-face"><img src="https://lh3.googleusercontent.com/d/1_ZhT9rX4PrCKjegHu3Fc8gPnubg27Dqu" alt="" loading="lazy"></span>
+          <span class="ent-name">Boogie<span class="ent-sub">Plasmoid &middot; Sorcerer</span></span>
+          <span class="ent-type">Medic</span>
+          <span class="ent-state">Sailor</span>
+        </button>
+        <div class="ent-detail" id="c-boogie" hidden>
+          <p class="stub-desc">Boogie is a plasmoid cadet at Caelestis in a semi-transparent blue form with a glittering stone inside him and an inner rhythm that pulls him into dance. He instinctively helps and repairs rather than commands, and has taken the crew&#x27;s medical role rather than the helm. The incomplete model ship that formed inside him matches one stolen from an instructor, and his sleep has begun to fill with visions of other versions of himself and a presence converging on him.</p>
+          <p class="stub-desc"><span class="glance-label">Now</span> Aboard an abandoned tyrant ship as the crew&#x27;s medic, unsettled by a dream of converging selves and a presence reaching for him.</p>
+          <a class="stub-open" href="boogie.html">Open personnel file &rsaquo;</a>
+        </div>
+      </div>
+      <div class="ent crew-row" data-species="Astral Elf" data-class="Paladin" data-station="Gunner">
+        <button class="ent-row" type="button" aria-expanded="false" aria-controls="c-sol-fortuna">
+          <span class="ent-face"><img src="https://lh3.googleusercontent.com/d/1PT-7qxrvN3XUFPm3xAkUZ8IbToM5qsDo" alt="" loading="lazy"></span>
+          <span class="ent-name">Sol Fortuna<span class="ent-sub">Astral Elf &middot; Paladin</span></span>
+          <span class="ent-type">Gunner</span>
+          <span class="ent-state">Sailor</span>
+        </button>
+        <div class="ent-detail" id="c-sol-fortuna" hidden>
+          <p class="stub-desc">Sol Fortuna is a tall, pale, dark-haired astral elf paladin of Beshaba with white eyes, steady even after simulated death. He anticipates danger before it arrives and puts himself between it and his crew as their gunner and front line. Beshaba has laughed at his shoulder, and now a curious voice speaks to him of fate and whether he has truly escaped his origin.</p>
+          <p class="stub-desc"><span class="glance-label">Now</span> Aboard an abandoned tyrant ship as the crew&#x27;s gunner and front line, watched now by a curious voice that speaks of fate.</p>
+          <a class="stub-open" href="sol-fortuna.html">Open personnel file &rsaquo;</a>
+        </div>
+      </div>
+      <div class="ent crew-row" data-species="Human" data-class="Druid" data-station="Spelljammer">
+        <button class="ent-row" type="button" aria-expanded="false" aria-controls="c-bartholomew-grayson">
+          <span class="ent-face"><img src="https://lh3.googleusercontent.com/d/1ThgrZS-SGvWVIgGkvuwEm08oMyWActWF" alt="" loading="lazy"></span>
+          <span class="ent-name">Bartholomew Grayson<span class="ent-sub">Human &middot; Druid</span></span>
+          <span class="ent-type">Spelljammer</span>
+          <span class="ent-state">Sailor</span>
+        </button>
+        <div class="ent-detail" id="c-bartholomew-grayson" hidden>
+          <p class="stub-desc">Bartholomew is a human druid and wilder, a cadet at Caelestis with an uncanny natural affinity for the helm. Quiet and untroubled, he has slipped into the crew and settled as its spelljammer. When he shifts into a starry form, a two-starred constellation surfaces — a shape he carries from a fall he took as a child.</p>
+          <p class="stub-desc"><span class="glance-label">Now</span> Aboard an abandoned tyrant ship as the crew&#x27;s spelljammer, his childhood two-starred vision surfacing in his own form.</p>
+          <a class="stub-open" href="bartholomew-grayson.html">Open personnel file &rsaquo;</a>
+        </div>
+      </div>
+      </div>
+      <p class="no-results" hidden>No one aboard matches that.</p>
     </div>
   </div>
 </div>
+
+<script>
+(function () {
+  var search  = document.querySelector('.search-input');
+  var pills   = document.querySelectorAll('.filter-tag');
+  var rows    = Array.prototype.slice.call(document.querySelectorAll('.crew-row'));
+  var count   = document.querySelector('.result-count');
+  var empty   = document.querySelector('.no-results');
+  var clear   = document.querySelector('.clear-btn');
+  var active  = {};
+
+  function apply() {
+    var q = (search && search.value.trim().toLowerCase()) || '';
+    var shown = 0;
+    rows.forEach(function (r) {
+      var ok = true;
+      for (var k in active) {
+        if (active[k] && r.dataset[k] !== active[k]) { ok = false; break; }
+      }
+      if (ok && q) ok = r.querySelector('.ent-name').textContent.toLowerCase().indexOf(q) !== -1;
+      r.hidden = !ok;
+      if (ok) shown++;
+    });
+    if (count) count.textContent = shown + (shown === 1 ? ' aboard' : ' aboard');
+    if (empty) empty.hidden = shown !== 0;
+    var any = q !== '' || Object.keys(active).some(function (k) { return active[k]; });
+    if (clear) clear.hidden = !any;
+  }
+
+  pills.forEach(function (p) {
+    p.addEventListener('click', function () {
+      var k = p.dataset.facet, v = p.dataset.value;
+      var on = active[k] === v;
+      active[k] = on ? null : v;
+      pills.forEach(function (o) {
+        if (o.dataset.facet === k) o.classList.toggle('is-active', !on && o === p);
+      });
+      apply();
+    });
+  });
+  if (search) search.addEventListener('input', apply);
+  if (clear) clear.addEventListener('click', function () {
+    active = {};
+    pills.forEach(function (o) { o.classList.remove('is-active'); });
+    if (search) search.value = '';
+    apply();
+  });
+
+  // Row expansion is wired once, in scripts/ui.js — binding it here too
+  // toggled every row twice, which read as rows that would not open.
+})();
+</script>
 </body>
 </html>
