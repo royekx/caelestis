@@ -922,7 +922,14 @@ body.with-sidebar .page-header {
   display: flex; align-items: center; gap: 0.7rem;
   padding: 0.6rem 1.1rem; border-bottom: 1px solid var(--gold-rule);
 }
-.cb-search svg { width: 14px; color: var(--gold-dim); flex-shrink: 0; }
+/* Both the glyph and the tag submit the form. */
+.cb-search-go {
+  background: none; border: none; padding: 0; margin: 0;
+  display: flex; align-items: center; cursor: pointer;
+  color: var(--gold-dim); flex-shrink: 0; transition: color .18s;
+}
+.cb-search-go:hover { color: var(--gold-light); }
+.cb-search svg { width: 14px; flex-shrink: 0; }
 .cb-search input {
   flex: 1; min-width: 0; background: none; border: none; outline: none;
   color: var(--text); font-family: 'Crimson Pro', serif;
@@ -930,11 +937,14 @@ body.with-sidebar .page-header {
 }
 .cb-search input::placeholder { color: var(--text-muted); }
 .cb-search-tag {
+  background: none; border: none; cursor: pointer;
+  transition: color .18s;
   font-family: 'Cinzel', serif; font-size: 0.683rem; letter-spacing: 0.16em;
   text-transform: uppercase; color: var(--gold-dim); white-space: nowrap;
   padding-left: 0.9rem; border-left: 1px solid var(--rule-soft);
 }
-.cb-search:focus-within svg, .cb-search:focus-within .cb-search-tag { color: var(--gold); }
+.cb-search:focus-within .cb-search-go, .cb-search:focus-within .cb-search-tag { color: var(--gold); }
+.cb-search-tag:hover { color: var(--gold-light); }
 
 /* ── Operations ── */
 .cb-ops { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-bottom: 1px solid var(--gold-rule); }

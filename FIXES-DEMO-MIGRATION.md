@@ -768,3 +768,88 @@ all four tabs still filter the register (11 / 6 / 1 / 4).
 
 The voyage rail keeps the tab notes ("What happened, beat by beat") that the top
 row hid for want of width.
+
+---
+
+# Fourteenth pass — the rail was on the voyage pages, the CSS was not
+
+The markup was right: all four voyage records carried `.railed` and `.tabrail`,
+and the tabs switched. They just rendered as a row, because
+**`voyages/voyage-00*.html` loaded `caelestis.css` and nothing else.** No
+`board.css`, no `register.css` — so Section 15, where the rail lives, was never
+on those pages.
+
+That is the third time a fix has been written correctly and landed nowhere
+because a page was missing a stylesheet. So rather than patch these four, the
+check is now mechanical: every page that loads `nav.js` is scanned for the
+shared component classes it actually uses — `railed`, `tabrail`, `board-tab`,
+`account-tab`, `ent-row`, `register`, `facets`, `entry-header`, `stat-card` —
+and given the sheets those classes live in.
+
+Ten pages were short:
+
+```
+voyages/voyage-001…004.html          + board.css, register.css
+spelljammer-nexus/*.html (5 pages)   + entity.css, board.css, register.css
+inventory/entries/entry-template.html + entity.css, board.css
+```
+
+The five Nexus article pages were in the same state as the voyage records —
+using shared classes with none of the shared sheets behind them.
+
+Verified after: all seven railed pages carry `register.css`, all switch, and no
+railed page is missing it.
+
+---
+
+# Fifteenth pass — search
+
+## Why a scoped search found nothing
+
+Built the Pagefind index locally and read the filter file, which settled it in
+one look.
+
+Pages carried filters like:
+
+```
+data-pagefind-filter="section:dossiers, category:Tyrant Ship, status:Active"
+```
+
+Pagefind does **not** split that comma list once the first token carries an
+explicit value. It read the whole string as one filter named `section` with the
+value `dossiers, category:Tyrant Ship, status:Active`. So the search page
+asking for `{ section: 'dossiers' }` matched nothing, on every page that had
+more than one facet.
+
+The pages that worked were the ones with a single bare filter — which is why
+the failure looked arbitrary rather than total.
+
+61 pages are now `section:<dir>` alone. Rebuilt and read back, the recorded
+values are clean: `crew-manifest`, `dossiers`, `inventory`, `navigation-records`,
+`quests`, `voyages`, `factions`, `handouts`, `spelljammer-nexus`, `logs`,
+`bearings`.
+
+The `category`, `status` and `kind` facets are gone. Nothing surfaced them —
+the search page only ever offered `section`. If they are wanted later, each
+needs its own element; they cannot share one attribute.
+
+**Two sections were indexed but missing from the scope selector**, so they were
+unreachable: **Quest Board** and **Factions**. Both added.
+
+## The S.E.A.R.C.H. tag now searches
+
+It was a `<span>`, so only Enter submitted. Both the magnifying glyph and the
+tag are `<button type="submit">` now, and the form's existing handler does the
+rest. Styled to look as they did, with a hover state they lacked.
+
+## Note on the index
+
+`pagefind/` is not in the bundle. The GitHub Action rebuilds it on push, and a
+committed copy would be stale from the first edit. To check search locally
+before pushing, the Action's own command works from the repo root:
+
+```
+npx -y pagefind --site . \
+  --glob "{index.html,hub.html,voyages/*.html,bearings/*.html,logs/*.html,crew-manifest/**/*.html,dossiers/**/*.html,factions/**/*.html,quests/**/*.html,spelljammer-nexus/**/*.html,inventory/**/*.html,handouts/**/*.html,navigation-records/**/*.html}" \
+  --exclude-selectors "[data-pagefind-ignore], nav, .site-nav, footer"
+```
