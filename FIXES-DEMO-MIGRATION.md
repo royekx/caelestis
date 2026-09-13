@@ -471,16 +471,134 @@ carries an *"The Object Itself"* block through to `items/collection-manifest.htm
 and the ledger row carries a **Readable** badge, which is what marks the one
 entry in eleven that has an object behind it.
 
-## One fix on top of the bundle
+---
 
-Section 10 shipped both halves of the entry/object pair in `register.css`, but
-no entry page loads that sheet — every detail page loads `caelestis` + `entity`
-+ `board` and stops there. So `.xref-card.the-object` was dead on the only page
-that uses it: the block rendered as an ordinary connections card, without the
-gold rule that marks it as the object.
+# Seventh pass — the backdrop, and the type
 
-Split along the seam the classes already imply. `.readable-badge` is a ledger-row
-thing and stays in `register.css`, which the inventory index does load.
-`.xref-card.the-object` moved to `entity.css` beside the `.xref-card` base rule
-it modifies. `.stub-desc` and `.stub-open` inside the block were already covered
-— they live in `board.css`, which the entry page loads.
+## Darkening the backdrop
+
+Done to the file, not with a veil over it. A heavy veil flattens colour, and
+the colour was the reason for choosing the image.
+
+`assets/astral.jpg` is the upload at **34% brightness** with saturation pushed
+back up 18% and a touch of contrast — darkening reads as desaturating, so the
+colour needs a nudge to survive it. Mean value lands around `rgb(20, 22, 33)`,
+which is roughly where the old nebula sat.
+
+`assets/astral-source.jpg` is the original, kept in the repo so the cut can be
+redone at a different strength without re-uploading anything.
+
+The veil is now a token pair rather than a hardcoded gradient:
+
+```
+--veil-centre: rgba(8, 11, 20, 0.28);
+--veil-edge:   rgba(8, 11, 20, 0.62);
+```
+
+Between the file and those two values there are two independent dials — bake
+it darker, or sink it further under the veil.
+
+## Type
+
+Root size **112% → 118%**, which moves everything at once since the site is in
+rem throughout.
+
+On top of that the bottom of the scale was lifted, because the smallest sizes
+carry the most labels and were furthest from readable: anything under 0.60rem
+up 22%, 0.60–0.75rem up 16%, 0.75–0.92rem up 7%. Body copy and the `clamp()`
+headings are untouched. 134 declarations across the six stylesheets, plus 33
+pages that still hold their own `<style>` — the FIA files, the voyage records
+and the stellar chart among them.
+
+The command bar gets a further bump on top of that, since it reads first.
+
+## A fourth text tier
+
+`--text-dim` was doing two jobs: body-adjacent prose and small labels. At label
+size it sat too close to the background to read, and lightening it enough for
+labels would have washed out the prose.
+
+Four tiers now, all in the same blue family:
+
+```
+--text        #e4ebf5   headings, values
+--text-soft   #c6d2e2   prose — accounts, overviews, descriptions
+--text-dim    #b3c1d5   subtext — was #a6b4c8
+--text-muted  #8797ad   small labels — was #6f7d92
+--text-faint  #6f7d92   placeholders, hints, unreached entries
+```
+
+The old `--text-muted` survives as `--text-faint`, so anything that should stay
+recessive still can. Section 11 of `register.css` assigns the prose tier in one
+place rather than chasing it through four stylesheets.
+
+---
+
+# Eighth pass — the companion pages
+
+Casey's stellar chart and Tumak's wayfinder runes exist in the repo and neither
+was reachable from the crew pages.
+
+## What the old build actually did
+
+Only half of it. `crew-manifest/casey.html` carried a **Stellar Reading**
+section — intro, a rules card with the feat, the two outcomes, a coda — and a
+"Consult the chart →" link out to `stellar-chart/`. All of it was inline CSS on
+that one page.
+
+`crew-manifest/tumak.html` had nothing. No block, no link. That is why the
+wayfinder page has never been reachable: there was never a pattern to follow,
+only a one-off on Casey's page.
+
+## Ported as a component
+
+`.companion-card` now lives in `register.css`, and both crew pages use it. The
+next crew member who gets a page of their own needs markup and nothing else.
+
+Casey's block is the old one carried over as written — the feat text, the
+outcomes and the coda are unchanged. Tumak's is new prose, drawn from what the
+site already records: the half-marks, the soul knife coming through a piece of
+the home he is looking for, the tether being a connection rather than a
+heading. **Read it before you ship it** — the canon is yours, and I was working
+from the voyage records rather than from what you know.
+
+While linking the sheet, `register.css` went onto all 62 entity pages. They
+were carrying `caelestis.css`, `entity.css` and `board.css` but not the shared
+one, so they missed the type-tier pass as well as the companion styles.
+
+## The wayfinder page keeps its own skin
+
+It is a bespoke artifact — bronze and parchment, its own font stack, its own
+tokens, closer to the FIA files than to the rest of the site. Wrapping it in
+the sidebar and the command bar would have cost it that.
+
+So it keeps its design and gains only the thing it lacked: a return link to
+Tumak, built from its own palette rather than the site's. The stellar chart
+already returns to Casey the same way.
+
+---
+
+# Ninth pass — the bar and the scrim
+
+`.content` carries a scrim — `.content::before`, a blurred dark rectangle
+inset `-1.5rem -1.75rem` so it sits behind the page's own material and holds
+prose legible over the backdrop.
+
+The bar was the first child of `.content`, so it was drawn on that scrim. But
+the bar is not page material. It is terminal chrome — the same object on every
+page — and it belongs on the backdrop, not on the panel the page's content
+sits on. The hub is the reference: it has no scrim, and the bar reads
+correctly there.
+
+`nav.js` now inserts it **before** `.content` rather than inside it, so the
+scrim begins below it. Since it no longer inherits the column, it carries
+`max-width: var(--column)` and `margin: 0 auto` itself, which keeps it aligned
+with the content beneath. The 2.2rem bottom margin clears the scrim's 1.5rem
+overhang.
+
+Verified across ten pages of every kind — listing, dossier, item, crew,
+voyage, bearing, S.E.A.R.C.H., hub. On all of them the bar is followed
+immediately by the column it heads.
+
+S.E.A.R.C.H. keeps the bar inside `.terminal-wrap`; that page has no `.content`
+and no scrim, so there is nothing to sit outside of.
