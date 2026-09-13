@@ -232,3 +232,77 @@ html, body { overflow-x: hidden; }
   .portrait-frame { aspect-ratio: 16 / 10; }
   .entry-name { font-size: 1.5rem; }
 }
+
+/* ════════════════════════════════════════════════════════════════
+   INDEX CARDS (Crew Manifest, Factions)
+   Migrated from hub.html's inline styles, which only that one page
+   could see — any other page using .s-card / .card-grid rendered as
+   unstyled links. This is the corrected, denser layout: icon and
+   title share a row, description clamps to two lines, links wrap
+   instead of forcing card width.
+   ════════════════════════════════════════════════════════════════ */
+.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.85rem; }
+.card-grid.two-up { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.s-card {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 0.95rem 1.1rem 0.85rem;
+  min-height: 0; min-width: 0;
+  display: flex; flex-direction: column; gap: 0.4rem;
+  text-decoration: none;
+  transition: border-color .2s, background .2s;
+}
+.s-card:hover { border-color: var(--ice-dim); background: var(--bg-raised); }
+
+.s-card-head { display: flex; align-items: center; gap: 0.6rem; }
+.s-icon { width: 20px; height: 20px; flex-shrink: 0; color: var(--gold-dim); }
+.s-icon svg, .s-icon .face-mono { width: 100%; height: 100%; display: block; }
+.s-icon .face-mono {
+  font-family: 'Cinzel', serif; font-size: 0.9rem; line-height: 20px; text-align: center;
+}
+.s-title {
+  font-family: 'Cinzel', serif; font-size: 0.9rem; font-weight: 700;
+  color: var(--text); letter-spacing: 0.02em; text-align: left;
+}
+.s-card:hover .s-title { color: var(--gold-light); }
+
+.s-desc {
+  font-size: 0.87rem; line-height: 1.5; color: var(--text-dim); text-align: left;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden; max-height: 3em; flex: none;
+}
+
+.s-links {
+  display: flex; flex-wrap: wrap; gap: 0.25rem 0.9rem;
+  align-items: baseline; padding-top: 0.5rem; margin-top: auto; min-width: 0;
+}
+.s-link {
+  display: inline-block; text-align: left; max-width: 100%;
+  font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gold-dim); text-decoration: none;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  transition: color .18s;
+}
+.s-link:hover { color: var(--gold-light); }
+.s-link-all { margin-top: 0; padding-top: 0; border-top: none; color: var(--text-muted); }
+.s-link-all:hover { color: var(--gold-dim); }
+
+@media (max-width: 900px) {
+  .card-grid, .card-grid.two-up { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .card-grid, .card-grid.two-up { grid-template-columns: 1fr; }
+}
+
+/* ── Register row subtitle ──
+   Dossier and inventory index rows put the role/type directly inside
+   .ent-name as a nested span. Without this rule it rendered inline with
+   no separator — "TARTOBoatswain and instructor". */
+.ent-sub {
+  display: block;
+  font-family: 'Crimson Pro', serif; font-weight: 400; font-style: italic;
+  font-size: 0.82rem; color: var(--text-muted); letter-spacing: 0;
+  margin-top: 0.1rem;
+}

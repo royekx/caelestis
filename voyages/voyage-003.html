@@ -155,6 +155,47 @@
     .account-note { display: none; }
     .account-body { padding: 0.4rem 1.1rem 1.5rem; }
   }
+
+  /* ── ACCOUNT TABS ──
+     Browser-style: rounded tops, the active tab merging into the panel
+     below it. Panels stay in the DOM; JS only toggles visibility. */
+  .account-tabs { display: flex; gap: 0.25rem; flex-wrap: wrap; position: relative; z-index: 2; }
+  .account-tab {
+    flex: 0 1 auto; display: flex; flex-direction: column; gap: 0.15rem; text-align: left;
+    padding: 0.7rem 1.35rem 0.75rem;
+    background: rgba(255,255,255,0.015);
+    border: 1px solid var(--rule); border-bottom: none;
+    border-radius: 12px 12px 0 0; margin-bottom: -1px;
+    cursor: pointer; font: inherit; color: inherit;
+    transition: background .18s ease, color .18s ease;
+  }
+  .account-tab:hover { background: rgba(201,153,58,0.06); }
+  .account-tab.is-active { background: var(--bg-card); border-color: var(--ice-dim); padding-bottom: 0.85rem; }
+  .account-tab-name {
+    font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--text-muted); white-space: nowrap;
+  }
+  .account-tab.is-active .account-tab-name { color: var(--gold); }
+  .account-tab-note { font-size: 0.85rem; font-style: italic; color: var(--text-muted); white-space: nowrap; }
+  .account-tab:not(.is-active) .account-tab-note { opacity: 0.6; }
+  .account-panels { position: relative; z-index: 1; }
+  .account-panel {
+    border: 1px solid var(--ice-dim); border-radius: 0 12px 12px 12px;
+    background: var(--bg-card);
+  }
+  .js-tabs .account-panel { display: none; }
+  .js-tabs .account-panel.is-active { display: block; }
+  @media (max-width: 720px) {
+    .account-tab-note { display: none; }
+    .account-tab { padding: 0.6rem 1rem 0.65rem; flex: 1 1 auto; align-items: center; }
+    .account-tab-name { font-size: 0.72rem; letter-spacing: 0.1em; }
+  }
+
+  .voyage-glance { border-radius: 12px; }
+  .chip { border-radius: 999px; }
+  .log-badge, .log-type-badge { border-radius: 999px; }
+  .video-container { border-radius: 10px; }
+  .voyage-nav-bar, .voyage-nav-bottom { border-radius: 999px; }
 </style>
   <script src="../scripts/nav.js" defer></script>
 </head>
@@ -240,24 +281,27 @@
       </div>
       </div>
 
-    <!-- RECORDING -->
-    <div class="video-block">
-      <div class="section-label">Voyage Recording</div>
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/Vk9TANGljWM" allowfullscreen></iframe>
-      </div>
-      <div class="video-link">Watch on YouTube: <a href="https://youtu.be/Vk9TANGljWM" target="_blank">youtu.be/Vk9TANGljWM</a></div>
+    <!-- ACCOUNTS — tabbed. Panels stay in the DOM so Pagefind indexes them;
+     the inactive ones hide with CSS, not removal. -->
+    <div class="account-tabs" data-pagefind-ignore>
+      <button class="account-tab is-active" type="button" data-panel="brief" aria-selected="true">
+        <span class="account-tab-name">Brief Account</span>
+        <span class="account-tab-note">What happened, beat by beat</span>
+      </button>
+      <button class="account-tab" type="button" data-panel="full" aria-selected="false">
+        <span class="account-tab-name">Full Account</span>
+        <span class="account-tab-note">The whole story, as written</span>
+      </button>
+      <button class="account-tab" type="button" data-panel="recording" aria-selected="false">
+        <span class="account-tab-name">Recording</span>
+        <span class="account-tab-note">The session as it was played</span>
+      </button>
     </div>
 
-    <!-- BRIEF ACCOUNT -->
-    <details class="account" open>
-      <summary>
-        <svg class="account-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2l4 4-4 4"/></svg>
-        <span class="account-name">Brief Account</span>
-        <span class="account-note">What happened, beat by beat</span>
-      </summary>
-      <div class="account-body">
-        <div class="brief-section">
+    <div class="account-panels">
+      <section class="account-panel is-active" id="brief" data-panel="brief">
+        <div class="account-body">
+<div class="brief-section">
         <div class="brief-heading">After the Blast</div>
         <ul class="brief-list">
           <li>The salvage simulation ends in a real explosion. The pods smoke; rival cadets are down. Casey and Bartholomew pull the injured clear; <b>Miken</b> works to revive a fallen crewmate.</li>
@@ -317,18 +361,12 @@
           <li><b>Gregory</b> looks at its face and sees his own. He casts before he's fully decided to — the spell still arcing through the dark as the night ends.</li>
         </ul>
       </div>
-      </div>
-    </details>
+        </div>
+      </section>
 
-    <!-- FULL ACCOUNT -->
-    <details class="account">
-      <summary>
-        <svg class="account-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2l4 4-4 4"/></svg>
-        <span class="account-name">Full Account</span>
-        <span class="account-note">The whole story, as written</span>
-      </summary>
-      <div class="account-body">
-        <div class="narrative">
+      <section class="account-panel" id="full" data-panel="full">
+        <div class="account-body">
+<div class="narrative">
   
         <p>The simulation pods were still smoking when the cadets climbed out of them.</p>
   
@@ -393,8 +431,18 @@
         <p>The crew had come a long way from the simulation deck. The things that could hurt them were no longer simulations. Somewhere in the wreckage ahead, something that looked like Gregory was asking to be saved, and the question of whether they could reach it in time was not yet answered.</p>
   
       </div>
+        </div>
+      </section>
+
+      <section class="account-panel" id="recording" data-panel="recording">
+        <div class="account-body">
+<div class="video-container">
+        <iframe src="https://www.youtube.com/embed/Vk9TANGljWM" allowfullscreen></iframe>
       </div>
-    </details>
+      <div class="video-link">Watch on YouTube: <a href="https://youtu.be/Vk9TANGljWM" target="_blank">youtu.be/Vk9TANGljWM</a></div>
+        </div>
+      </section>
+    </div>
 
     <div class="voyage-nav-bottom" data-pagefind-ignore>
       <a class="voyage-nav-link" href="voyage-002.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Previous Voyage</a>
@@ -404,5 +452,30 @@
 
   </div><!-- /content -->
 </div><!-- /page-content -->
+<script>
+(function () {
+  var tabs = document.querySelectorAll('.account-tab');
+  var panels = document.querySelectorAll('.account-panel');
+  if (!tabs.length) return;
+  document.documentElement.classList.add('js-tabs');
+  var names = Array.prototype.map.call(tabs, function (t) { return t.dataset.panel; });
+  function show(name, push) {
+    if (names.indexOf(name) === -1) name = names[0];
+    tabs.forEach(function (t) {
+      var on = t.dataset.panel === name;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    panels.forEach(function (p) { p.classList.toggle('is-active', p.dataset.panel === name); });
+    if (push && history.replaceState) history.replaceState(null, '', '#' + name);
+  }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { show(t.dataset.panel, true); }); });
+  var hash = location.hash.replace('#', '');
+  if (hash) show(hash, false);
+  window.addEventListener('hashchange', function () {
+    var h = location.hash.replace('#', ''); if (h) show(h, false);
+  });
+})();
+</script>
 </body>
 </html>
