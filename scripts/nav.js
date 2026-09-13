@@ -33,36 +33,129 @@
 
   // ── Sections ──────────────────────────────────────────────────────────────
   // To add, remove, or rename a section: edit this array only.
+  //
+  // The split is by how a reader came to know a thing, not by subject:
+  //   Crew Operations — what you do to run a session
+  //   Crew Intel      — what this crew has learned, been given, or carries
+  //   Fleet Records   — what anyone aboard would already know
+  //
+  // That is why Dossiers and Navigation Records sit under Intel: they are
+  // acquired in play. The Nexus is ambient world knowledge, so it does not.
+  //
+  // An item with `href` is external and opens in a new tab; one with `path`
+  // is internal and resolves against the page's depth.
 
   var groups = [
     {
+      label: 'Crew Operations',
+      items: [
+        { key: 'bearings',      label: 'Current Bearing', path: 'bearings/index.html'                },
+        { label: 'Plot the Next Voyage', href: 'https://rallly.co/invite/B8uUYlcm4oKB' },
+        { label: 'Take the Helm',        href: 'https://royek.foundryserver.com/game'  }
+      ]
+    },
+    {
       label: 'Crew Intel',
       items: [
-        { key: 'voyages',       label: 'Voyages',       path: 'voyages/index.html'       },
-        { key: 'logs',          label: 'Logs',          path: 'logs/index.html'          },
-        { key: 'crew-manifest', label: 'Manifest',      path: 'crew-manifest/index.html' },
-        { key: 'inventory',     label: 'Inventory',     path: 'inventory/index.html'     }
+        { key: 'voyages',            label: 'Voyages',            path: 'voyages/index.html'            },
+        { key: 'quests',             label: 'Quest Board',        path: 'quests/index.html'             },
+        { key: 'crew-manifest',      label: 'Manifest',           path: 'crew-manifest/index.html'      },
+        { key: 'dossiers',           label: 'Dossiers',           path: 'dossiers/index.html'           },
+        { key: 'navigation-records', label: 'Navigation Records', path: 'navigation-records/index.html' },
+        { key: 'inventory',          label: 'Inventory',          path: 'inventory/index.html'          },
+        { key: 'logs',               label: 'Logs',               path: 'logs/index.html'               }
       ]
     },
     {
       label: 'Fleet Records',
       items: [
-        { key: 'search',             label: 'S.E.A.R.C.H.',       path: 'search/index.html'             },
-        { key: 'dossiers',           label: 'Dossiers',           path: 'dossiers/index.html'           },
-        { key: 'navigation-records', label: 'Navigation Records', path: 'navigation-records/index.html' },
+        { key: 'factions',           label: 'Factions',           path: 'factions/index.html'           },
         { key: 'spelljammer-nexus',  label: 'Spelljammer Nexus',  path: 'spelljammer-nexus/index.html'  },
-        { key: 'handouts',           label: 'Corps Protocols',    path: 'handouts/index.html'           }
+        { key: 'handouts',           label: 'Corps Protocols',    path: 'handouts/index.html'           },
+        { key: 'search',             label: 'S.E.A.R.C.H.',       path: 'search/index.html'             }
       ]
     }
   ];
 
-  // External links shown at the bottom of the sidebar under "Crew Operations".
-  // To add a link: { label: 'Name', href: 'https://...' }
 
-  var extLinks = [
-    { label: 'Scheduler',       href: 'https://rallly.co/invite/B8uUYlcm4oKB'    },
-    { label: 'Take the Helm',   href: 'https://royek.foundryserver.com/game'      },
-  ];
+  // ── Command bar ───────────────────────────────────────────────────────────
+  // Sticks to the top of every page. Two operations, then where the crew
+  // stands. The strip trims with ellipsis by design — the caret opens the
+  // detail it had to cut, and the strip itself links through to the full
+  // bearing and its timeline.
+  //
+  // Data comes from data/bearing.js, which the publish step regenerates.
+  // Without that file the bar renders operations only and nothing breaks.
+
+  var CARET = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l4 4 4-4"/></svg>';
+
+  function buildCommandBar() {
+    var b = window.CAELESTIS_BEARING;
+    var L = (b && b.links) || {};
+
+    // Site-wide search. Index pages keep their own field inside their filter
+    // block — that one narrows the list in front of you, this one leaves it.
+    var search =
+      '<form class="cb-search" id="js-cb-search" role="search" autocomplete="off">' +
+        SEARCH_ICON +
+        '<input type="text" id="js-cb-search-input" ' +
+          'placeholder="Query the archive \u2014 a name, a place, a thing you half remember\u2026" ' +
+          'aria-label="Search all records">' +
+        '<span class="cb-search-tag">S.E.A.R.C.H.</span>' +
+      '</form>';
+    var helm = L.helm || 'https://royek.foundryserver.com/game';
+    var sched = L.scheduler || 'https://rallly.co/invite/B8uUYlcm4oKB';
+
+    var ops =
+      '<div class="cb-ops">' +
+        '<a class="cb-op" href="' + helm + '" target="_blank" rel="noopener">' +
+          '<span class="cb-op-name">Take the Helm</span>' +
+          '<span class="cb-op-note">Enter Foundry</span>' + EXT_ICON +
+        '</a>' +
+        '<a class="cb-op" href="' + sched + '" target="_blank" rel="noopener">' +
+          '<span class="cb-op-name">Plot the Next Voyage</span>' +
+          '<span class="cb-op-note">Open Scheduler</span>' + EXT_ICON +
+        '</a>' +
+      '</div>';
+
+    if (!b) return '<div class="command-bar">' + search + ops + '</div>';
+
+    var pad = function (n) { return ('00' + n).slice(-3); };
+    var strip =
+      '<div class="cb-strip">' +
+        '<a class="cb-face" href="' + base + (L.bearing || 'bearings/index.html') + '">' +
+          '<span class="cb-label">Current Bearing</span>' +
+          '<span class="cb-cell"><span class="cb-key">Position</span>' +
+            '<span class="cb-val">' + b.position +
+            (b.posNote ? ' <span class="cb-note">' + b.posNote + '</span>' : '') + '</span></span>' +
+          '<span class="cb-cell"><span class="cb-key">Last Voyage</span>' +
+            '<span class="cb-val">' + pad(b.voyage) + ' \u00b7 ' + b.title + '</span></span>' +
+          '<span class="cb-cell"><span class="cb-key">Outstanding</span>' +
+            '<span class="cb-val">' + b.outstanding + '</span></span>' +
+        '</a>' +
+        '<button class="cb-expand" id="js-cb-expand" aria-expanded="false" aria-controls="js-cb-detail" aria-label="More detail">' +
+          CARET + '</button>' +
+      '</div>';
+
+    var d = b.detail || {};
+    var quests = (d.quests || []).map(function (q) {
+      return '<a class="cb-quest" href="' + base + q.href + '">' + q.name +
+             '<span class="cb-prog">' + q.progress + '</span></a>';
+    }).join('');
+    var met = (d.met || []).map(function (m) {
+      return '<a class="cb-chip" href="' + base + m.href + '">' + m.name + '</a>';
+    }).join('');
+
+    var detail =
+      '<div class="cb-detail" id="js-cb-detail" hidden>' +
+        (d.consequence ? '<p class="cb-conseq">' + d.consequence + '</p>' : '') +
+        (quests ? '<div class="cb-row"><span class="cb-key">Quests</span><div class="cb-quests">' + quests + '</div></div>' : '') +
+        (met ? '<div class="cb-row"><span class="cb-key">Met</span><div class="cb-chips">' + met + '</div></div>' : '') +
+        '<a class="cb-more" href="' + base + (L.bearing || 'bearings/index.html') + '">Full bearing and timeline \u203a</a>' +
+      '</div>';
+
+    return '<div class="command-bar">' + search + ops + strip + detail + '</div>';
+  }
 
   // ── Inject critical positioning CSS (self-contained — doesn't depend on caelestis.css load order) ──
 
@@ -92,22 +185,16 @@
 
   var sectionLinks = groups.map(function (g) {
     var links = g.items.map(function (s) {
-      return '<a class="side-nav-link" href="' + base + s.path + '" data-section="' + s.key + '">' + s.label + '</a>';
+      if (s.href) {
+        return '<a class="side-nav-ext-link" href="' + s.href + '" target="_blank" rel="noopener">' +
+               s.label + ' ' + EXT_ICON + '</a>';
+      }
+      return '<a class="side-nav-link" href="' + base + s.path + '" data-section="' + s.key + '">' +
+             s.label + '</a>';
     }).join('');
     return '<div class="side-nav-group-label">' + g.label + '</div>' + links;
   }).join('');
 
-  var externalLinks = extLinks.map(function (l) {
-    return '<a class="side-nav-ext-link" href="' + l.href + '" target="_blank" rel="noopener">' + l.label + ' ' + EXT_ICON + '</a>';
-  }).join('');
-
-  // Global S.E.A.R.C.H. field — submitting jumps to the full terminal with
-  // the query pre-run. Also acts as the nav's entry point to search.
-  var searchField =
-    '<form class="side-nav-search" id="js-nav-search" role="search" autocomplete="off">' +
-    SEARCH_ICON +
-    '<input type="text" id="js-nav-search-input" placeholder="Search records\u2026" aria-label="Search all records">' +
-    '</form>';
 
   var html = [
     '<button class="side-nav-toggle" id="js-nav-toggle" aria-label="Toggle navigation">',
@@ -120,11 +207,7 @@
     '    <a class="side-nav-hub" href="' + base + 'hub.html">Terminal Hub</a>',
     '  </div>',
     '  <div class="side-nav-body">',
-    searchField,
     sectionLinks,
-    '    <div class="side-nav-divider"></div>',
-    '    <div class="side-nav-group-label">Crew Operations</div>',
-    externalLinks,
     '  </div>',
     '</nav>',
   ].join('');
@@ -133,6 +216,29 @@
 
   document.body.insertAdjacentHTML('afterbegin', html);
   document.body.classList.add('with-sidebar');
+
+  // The bar belongs in the page's own column, directly under the title, so
+  // it shares the body's width and never breaks the backdrop across the page.
+  // It sticks once scrolled to; the title above it scrolls away normally.
+  var anchor = document.querySelector('.hub-head') ||
+               document.querySelector('.page-header');
+  if (anchor) {
+    anchor.insertAdjacentHTML('afterend', buildCommandBar());
+  } else {
+    var col = document.querySelector('.content') || document.querySelector('.hub');
+    if (col) col.insertAdjacentHTML('afterbegin', buildCommandBar());
+    else document.body.insertAdjacentHTML('afterbegin', buildCommandBar());
+  }
+
+  var cbBtn = document.getElementById('js-cb-expand');
+  if (cbBtn) {
+    cbBtn.addEventListener('click', function () {
+      var panel = document.getElementById('js-cb-detail');
+      var open = cbBtn.getAttribute('aria-expanded') === 'true';
+      cbBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      panel.hidden = open;
+    });
+  }
 
   // ── Active state ──────────────────────────────────────────────────────────
 
@@ -171,8 +277,8 @@
   // ── Global search field ───────────────────────────────────────────────────
   // Submitting jumps to the full S.E.A.R.C.H. terminal with the query pre-run.
 
-  var searchForm  = document.getElementById('js-nav-search');
-  var searchInput = document.getElementById('js-nav-search-input');
+  var searchForm  = document.getElementById('js-cb-search');
+  var searchInput = document.getElementById('js-cb-search-input');
   if (searchForm && searchInput) {
     searchForm.addEventListener('submit', function (e) {
       e.preventDefault();
