@@ -97,11 +97,13 @@
     // block — that one narrows the list in front of you, this one leaves it.
     var search =
       '<form class="cb-search" id="js-cb-search" role="search" autocomplete="off">' +
-        SEARCH_ICON +
+        '<button type="submit" class="cb-search-go" aria-label="Search">' + SEARCH_ICON + '</button>' +
         '<input type="text" id="js-cb-search-input" ' +
           'placeholder="Query the archive \u2014 a name, a place, a thing you half remember\u2026" ' +
           'aria-label="Search all records">' +
-        '<span class="cb-search-tag">S.E.A.R.C.H.</span>' +
+        // Was a <span>, so only Enter ran the search. Both the glyph and the
+        // tag are submit buttons now — the form's own handler does the rest.
+        '<button type="submit" class="cb-search-tag">S.E.A.R.C.H.</button>' +
       '</form>';
     var helm = L.helm || 'https://royek.foundryserver.com/game';
     var sched = L.scheduler || 'https://rallly.co/invite/B8uUYlcm4oKB';
