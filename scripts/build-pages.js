@@ -68,7 +68,10 @@ const TYPES = {
     ]
   },
   'locations.json': {
-    dir: 'locations',
+    // locations.json carries url: /navigation-records/<slug>.html. Writing to
+    // locations/ scaffolded every room into a directory nothing links to,
+    // which is why six register entries had no page behind them.
+    dir: 'navigation-records',
     label: 'Locations',
     subtitleField: 'Type',
     classField: 'Region',
@@ -226,9 +229,12 @@ function renderPriorVoyages(rec) {
   // Keys stay visible while collapsed so appearance history can be scanned.
   const keys = prior.map(g => esc(g.session)).join(' · ');
   const blocks = prior.reverse().map(renderVoyageBlock).join('');
-  return `<details class="prior-voyages">` +
+  // The class is `prior`, not `prior-voyages` — entity.css styles the former,
+  // so every page this builder scaffolded rendered its history as a bare
+  // <details> with no summary chrome.
+  return `<details class="prior">` +
     `<summary>Previous Voyages <span class="prior-keys">${keys}</span></summary>` +
-    blocks + `</details>`;
+    `<div class="prior-body">` + blocks + `</div></details>`;
 }
 
 function renderXrefs(list, heading) {

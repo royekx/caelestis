@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../styles/caelestis.css">
 <link rel="stylesheet" href="../styles/entity.css">
 <link rel="stylesheet" href="../styles/board.css">
+<link rel="stylesheet" href="../styles/register.css">
 <script src="../data/bearing.js" defer></script>
 <script src="../scripts/nav.js" defer></script>
 <script src="../scripts/ui.js" defer></script>
@@ -325,10 +326,8 @@
   });
   search.addEventListener('input', function () { state.q = search.value.trim().toLowerCase(); apply(); });
   clear.addEventListener('click', function () { state = { loc: null, fac: null, q: '' }; search.value = ''; pills.forEach(function (p) { p.classList.remove('is-active'); }); apply(); });
-  document.querySelectorAll('.ent-row').forEach(function (b) {
-    var d = document.getElementById(b.getAttribute('aria-controls'));
-    b.addEventListener('click', function () { var open = b.getAttribute('aria-expanded') === 'true'; b.setAttribute('aria-expanded', open ? 'false' : 'true'); d.hidden = open; });
-  });
+  // Row expansion is wired once, in scripts/ui.js. Binding it here as well
+  // toggled every row twice, which read as rows that would not open at all.
   apply();
 })();
 </script>

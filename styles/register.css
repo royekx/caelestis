@@ -1,0 +1,212 @@
+/* ════════════════════════════════════════════════════════════════
+   register.css — the listing pages: Quest Board, Dossiers,
+   Inventory, Crew Manifest, Navigation Records.
+
+   Same gap bearing.css closed. These classes only ever existed as
+   inline <style> inside the demos (and inside voyages/index.html,
+   which is why that one page looks right and the others don't).
+   The generated pages emit the markup; nothing defined the rules.
+   This is that migration.
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── FACET BLOCK ──
+   The filter cluster that sits above a register: a name field, then
+   one pill row per axis. The field narrows the list in front of you;
+   the command bar's S.E.A.R.C.H. leaves the page. */
+.facets {
+  border: 1px solid var(--rule);
+  background: var(--bg-card);
+  padding: 1rem 1.1rem 0.9rem;
+  margin-bottom: 1.1rem;
+  display: flex; flex-direction: column; gap: 0.75rem;
+}
+.facets .search-row { margin: 0; }
+.facet { display: flex; align-items: baseline; gap: 0.8rem; flex-wrap: wrap; min-width: 0; }
+.facet-stacked { flex-direction: column; align-items: stretch; gap: 0.45rem; }
+.facet-label {
+  font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--text-muted);
+  white-space: nowrap; flex-shrink: 0;
+}
+.facet-pills { display: flex; flex-wrap: wrap; gap: 0.35rem; min-width: 0; }
+
+/* ── RESULT COUNT ── */
+.result-line {
+  display: flex; align-items: baseline; gap: 0.8rem;
+  margin: 0 0 0.6rem; min-height: 1.4rem;
+}
+.result-count {
+  font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.no-results {
+  padding: 2rem 1.1rem; text-align: center;
+  font-style: italic; color: var(--text-muted);
+}
+.no-results[hidden] { display: none; }
+
+/* ── REGISTER ROWS WITH A FACE ──
+   Dossiers and Inventory carry a monogram or portrait square that the
+   bare .ent-row grid (navigation records) has no column for. */
+.npc-row .ent-row,
+.item-row .ent-row,
+.crew-row .ent-row {
+  grid-template-columns: 30px minmax(0, 1fr) auto auto;
+  align-items: center; gap: 0.85rem;
+}
+.ent-face {
+  width: 30px; height: 30px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--rule); background: var(--bg-raised);
+  overflow: hidden;
+}
+.ent-face img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ent-face .face-mono {
+  font-family: 'Cinzel', serif; font-size: 0.86rem;
+  color: var(--gold-dim); line-height: 1;
+}
+.ent-row:hover .ent-face { border-color: var(--gold-rule); }
+
+/* Item faces carry their category as a tint, so the ledger reads by
+   kind at a glance without a badge column. */
+.ent-face.magic-item { border-color: var(--violet-dim); }
+.ent-face.magic-item .face-mono { color: var(--violet); }
+.ent-face.document,
+.ent-face.evidence { border-color: var(--ice-dim); }
+.ent-face.document .face-mono,
+.ent-face.evidence .face-mono { color: var(--ice); }
+.ent-face.mundane .face-mono { color: var(--text-muted); }
+
+.ent-rarity {
+  font-family: 'Cinzel', serif; font-size: 0.55rem; letter-spacing: 0.12em;
+  text-transform: uppercase; white-space: nowrap; color: var(--text-muted);
+}
+.r-uncommon { color: var(--gold-dim); }
+.r-unknown  { color: var(--text-muted); opacity: 0.65; }
+
+/* ── BOARD BODY ──
+   The wrapper inside a tabbed panel that holds facets + register. */
+.board-body { display: flex; flex-direction: column; min-width: 0; }
+
+/* ════════════════════════════════════════════════════════════════
+   BOARD ROWS — the Quest Board and the voyage index share this.
+   Lifted verbatim in behaviour from voyages/index.html's inline
+   block so the two pages cannot drift apart again.
+   ════════════════════════════════════════════════════════════════ */
+.log-table { margin-top: 0.5rem; }
+
+.log-entry {
+  border: 1px solid var(--gold-rule);
+  border-bottom: none;
+  background: var(--bg-card);
+}
+.log-entry:last-child { border-bottom: 1px solid var(--gold-rule); }
+
+.log-row {
+  display: flex; align-items: stretch;
+  position: relative;
+  transition: background 0.2s;
+}
+.log-row::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--gold-dim); opacity: 0.4; transition: opacity 0.2s;
+}
+.log-row:hover::before { opacity: 1; }
+.log-row:hover { background: rgba(192,134,82,0.04); }
+
+.log-row-link {
+  flex: 1; display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center; gap: 1.2rem;
+  padding: 0.95rem 1.2rem;
+  text-decoration: none; min-width: 0;
+}
+.log-row-link:hover { text-decoration: none; }
+
+.log-num {
+  font-family: 'Cinzel', serif;
+  display: flex; flex-direction: column; align-items: center; gap: 0.15rem;
+}
+.log-num-label {
+  font-size: 0.62rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--gold-dim);
+}
+.log-num-val {
+  font-size: 1.4rem; font-weight: 700;
+  color: var(--text-dim); line-height: 1; transition: color 0.2s;
+}
+.log-row-link:hover .log-num-val { color: var(--gold-light); }
+
+.log-title {
+  font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 700;
+  color: var(--text); letter-spacing: 0.02em; line-height: 1.35;
+  min-width: 0; transition: color 0.2s;
+}
+.log-row-link:hover .log-title { color: var(--gold-light); }
+
+.log-open {
+  font-family: 'Cinzel', serif; font-size: 0.62rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--text-muted); white-space: nowrap; transition: color 0.2s;
+}
+.log-row-link:hover .log-open { color: var(--gold-dim); }
+
+/* The giver / parent line sits under the title rather than beside it,
+   so a long quest name and a long attribution never collide. */
+.row-sub, .row-giver { display: block; }
+
+/* ── OVERVIEW PANEL (voyage index) ── */
+.log-toggle {
+  display: flex; align-items: center; gap: 0.35rem;
+  padding: 0 1.1rem; background: none; cursor: pointer;
+  border: none; border-left: 1px solid var(--gold-rule);
+  font: inherit; color: var(--text-muted); transition: color 0.2s, background 0.2s;
+}
+.log-toggle:hover { color: var(--gold-dim); background: var(--gold-faint); }
+.log-toggle-label {
+  font-family: 'Cinzel', serif; font-size: 0.62rem;
+  letter-spacing: 0.15em; text-transform: uppercase; white-space: nowrap;
+}
+.log-overview {
+  border-top: 1px solid var(--gold-rule);
+  padding: 1.1rem 1.2rem 1.2rem;
+  background: rgba(10,14,23,0.5);
+  display: flex; flex-direction: column; gap: 0.7rem;
+}
+.log-overview[hidden] { display: none; }
+.glance-synopsis { font-size: 0.97rem; line-height: 1.65; color: var(--text-dim); margin: 0; }
+.glance-row { display: flex; align-items: baseline; gap: 0.8rem; flex-wrap: wrap; min-width: 0; }
+.glance-label {
+  font-family: 'Cinzel', serif; font-size: 0.55rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--text-muted);
+  white-space: nowrap; flex-shrink: 0;
+}
+.glance-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; min-width: 0; }
+.overview-foot {
+  display: flex; justify-content: flex-end;
+  padding-top: 0.5rem; border-top: 1px solid var(--rule-soft);
+}
+.overview-link {
+  font-family: 'Cinzel', serif; font-size: 0.62rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold-dim); text-decoration: none; transition: color 0.2s;
+}
+.overview-link:hover { color: var(--gold-light); }
+
+.intro-note {
+  border-left: 2px solid var(--gold-dim);
+  background: var(--bg-card);
+  padding: 0.9rem 1.2rem;
+  margin: 0 0 1.3rem;
+  font-size: 0.97rem; font-style: italic; line-height: 1.6; color: var(--text-dim);
+}
+
+@media (max-width: 640px) {
+  .log-row-link { grid-template-columns: minmax(0, 1fr) auto; gap: 0.7rem; padding: 0.8rem 0.9rem; }
+  .log-open { display: none; }
+  .npc-row .ent-row,
+  .item-row .ent-row,
+  .crew-row .ent-row { grid-template-columns: 26px minmax(0, 1fr) auto; }
+  .ent-rarity { display: none; }
+  .facets { padding: 0.85rem 0.9rem 0.8rem; }
+}

@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../styles/caelestis.css">
 <link rel="stylesheet" href="../styles/entity.css">
 <link rel="stylesheet" href="../styles/board.css">
+<link rel="stylesheet" href="../styles/register.css">
 <script src="../data/bearing.js" defer></script>
 <script src="../scripts/nav.js" defer></script>
 <script src="../scripts/ui.js" defer></script>
@@ -35,161 +36,237 @@
     <div class="page-subtitle">Charted spheres, and everywhere the crew has set down</div>
   </div>
   <div class="content">
-    <div class="board-tabs" data-pagefind-ignore><button class="board-tab is-active" type="button" data-panel="viren-star-system" aria-selected="true">Viren Star System</button><button class="board-tab" type="button" data-panel="realmspace" aria-selected="false">Realmspace</button></div>
-    <div class="board-panels"><section class="board-panel is-active" id="viren-star-system" data-panel="viren-star-system">
-          <div class="search-row" data-pagefind-ignore><input class="search-input" type="search" placeholder="Search by name..." aria-label="Search records"></div>
-          <div class="register"><div class="ent" data-entry="viren-star-system">
-              <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-viren-star-system">
-                <span class="ent-glyph"></span>
-                <span class="ent-name">Viren Star System</span>
-                <span class="ent-type">Sphere</span>
-                <span class="ent-state">Charted only</span>
-              </button>
-              <div class="ent-detail" id="l-viren-star-system" hidden>
-                <p class="stub-desc">The Viren star system, beyond a place called H’catha, is the region Mirt&#x27;s impossible wardrobe magically replicates. A vision and a guiding voice have pointed Casey toward it as a destination.</p>
-                <a class="stub-open" href="viren-star-system.html">Open record ›</a>
-              </div>
-            </div></div>
-        </section><section class="board-panel" id="realmspace" data-panel="realmspace">
-          <div class="search-row" data-pagefind-ignore><input class="search-input" type="search" placeholder="Search by name..." aria-label="Search records"></div>
-          <div class="register"><div class="ent" data-entry="realmspace">
-              <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-realmspace">
-                <span class="ent-glyph"></span>
-                <span class="ent-name">Realmspace</span>
-                <span class="ent-type">Sphere</span>
-                <span class="ent-state">Charted only</span>
-              </button>
-              <div class="ent-detail" id="l-realmspace" hidden>
-                <p class="stub-desc">The crystal sphere the crew calls home — a sun, a scatter of inner and outer worlds, and the shell of Deep Astral holding it all in.</p>
-                <a class="stub-open" href="realmspace.html">Open record ›</a>
-              </div>
-            </div><div class="ent" data-entry="hcatha">
-              <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-hcatha">
-                <span class="ent-glyph"></span>
-                <span class="ent-name">H&#x27;catha</span>
-                <span class="ent-type">Planet</span>
-                <span class="ent-state">Charted only</span>
-              </button>
-              <div class="ent-detail" id="l-hcatha" hidden>
-                <p class="stub-desc">H’catha is a world populated entirely by beholders and their kin, watched by beholder patrols. An adamantine meteor has struck its spire, and the crew has been sent to recover it — using a tyrant ship&#x27;s appearance to move through H’cathan space unchallenged.</p>
-                <a class="stub-open" href="hcatha.html">Open record ›</a>
-              </div>
-            </div><div class="ent" data-entry="toril">
-              <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-toril">
-                <span class="ent-glyph"></span>
-                <span class="ent-name">Toril</span>
-                <span class="ent-type">Planet</span>
-                <span class="ent-state">Charted only</span>
-              </button>
-              <div class="ent-detail" id="l-toril" hidden>
-                <p class="stub-desc">Toril is a world named as the nearest destination on most of the academy&#x27;s shipping routes. The abandoned tyrant ship the crew boarded drifts in orbit above it.</p>
-                <a class="stub-open" href="toril.html">Open record ›</a>
-              </div>
-            </div><div class="ent" data-entry="caelestis">
-              <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-caelestis">
-                <span class="ent-glyph"></span>
-                <span class="ent-name">Caelestis</span>
-                <span class="ent-type">Station</span>
-                <span class="ent-state">Charted</span>
-              </button>
-              <div class="ent-detail" id="l-caelestis" hidden>
-                <p class="stub-desc">Caelestis is the spelljammer academy where the cadets train, a layered machine of halls, ranks, and access permissions overlooking the Astral Sea. Led by Mirt the Merciless, it drills its cadets through simulation and salvage exercise. A wave of thefts continu</p>
-                <a class="stub-open" href="caelestis.html">Open record ›</a>
-              </div>
-            </div><div class="ent" data-entry="spelljammer-nexus">
-              <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-spelljammer-nexus">
-                <span class="ent-glyph"></span>
-                <span class="ent-name">Spelljammer Nexus</span>
-                <span class="ent-type">Room</span>
-                <span class="ent-state">Charted</span>
-              </button>
-              <div class="ent-detail" id="l-spelljammer-nexus" hidden>
-                <p class="stub-desc">The Spelljammer Nexus is a training chamber at Caelestis overlooking the Astral Sea, where cadets learn to extend mind and magic into a vessel by guiding miniature ships across a floating field.</p>
-                
-              </div>
-            </div><div class="ent" data-entry="mirts-quarters">
-              <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-mirts-quarters">
-                <span class="ent-glyph"></span>
-                <span class="ent-name">Mirt&#x27;s Quarters</span>
-                <span class="ent-type">Room</span>
-                <span class="ent-state">Charted</span>
-              </button>
-              <div class="ent-detail" id="l-mirts-quarters" hidden>
-                <p class="stub-desc">Mirt&#x27;s quarters are the cluttered, excess-strewn chambers of Caelestis&#x27;s head, home to a fishbowl of octopi and an impossible wardrobe that opens onto bounded astral night — a magical replica of a place in the Viren star system.</p>
-                
-              </div>
-            </div><div class="ent" data-entry="sky-dock">
-              <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-sky-dock">
-                <span class="ent-glyph"></span>
-                <span class="ent-name">Sky Dock</span>
-                <span class="ent-type">Room</span>
-                <span class="ent-state">Charted</span>
-              </button>
-              <div class="ent-detail" id="l-sky-dock" hidden>
-                <p class="stub-desc">The sky dock is Caelestis&#x27;s docking bay beneath the void, where spelljamming ships of every shape rest and cadets learn the anatomy of a vessel and the workings of the helm.</p>
-                
-              </div>
-            </div><div class="ent" data-entry="the-weeping-goddess">
-              <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-the-weeping-goddess">
-                <span class="ent-glyph"></span>
-                <span class="ent-name">The Weeping Goddess</span>
-                <span class="ent-type">Room</span>
-                <span class="ent-state">Charted</span>
-              </button>
-              <div class="ent-detail" id="l-the-weeping-goddess" hidden>
-                <p class="stub-desc">The Weeping Goddess is Caelestis&#x27;s bustling refectory, thronged with cadets from every corner of wildspace beneath blue-glowing orbs. Its kitchen is run by Petty Officer Winston Ryeback, and a back-wall notice board carries odd jobs, dock requests, and missing</p>
-                
-              </div>
-            </div><div class="ent" data-entry="the-sea-dock">
-              <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-the-sea-dock">
-                <span class="ent-glyph"></span>
-                <span class="ent-name">The Sea Dock</span>
-                <span class="ent-type">Room</span>
-                <span class="ent-state">Charted</span>
-              </button>
-              <div class="ent-detail" id="l-the-sea-dock" hidden>
-                <p class="stub-desc">The Sea Dock is one of Caelestis&#x27;s docking bays, named on a cargo notice Casey pulled from the refectory board. He meant to work a job here but confused it with a neighboring dock.</p>
-                
-              </div>
-            </div><div class="ent" data-entry="simulation-deck">
-              <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-simulation-deck">
-                <span class="ent-glyph"></span>
-                <span class="ent-name">Simulation Deck</span>
-                <span class="ent-type">Room</span>
-                <span class="ent-state">Charted</span>
-              </button>
-              <div class="ent-detail" id="l-simulation-deck" hidden>
-                <p class="stub-desc">The Simulation Deck is the chamber at Caelestis where cadets enter pods to run immersive exercises. Here both cadet crews were briefed and set against each other in a salvage race through simulated wildspace.</p>
-                
-              </div>
-            </div><div class="ent" data-entry="the-tyrant-ship">
-              <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-the-tyrant-ship">
-                <span class="ent-glyph"></span>
-                <span class="ent-name">The Tyrant Ship</span>
-                <span class="ent-type">Vessel</span>
-                <span class="ent-state">Charted</span>
-              </button>
-              <div class="ent-detail" id="l-the-tyrant-ship" hidden>
-                <p class="stub-desc">The tyrant ship is a stone-carved beholder vessel drifting above Toril, believed abandoned when the crew boarded it. They mean to install a helm on its command deck and fly it through H’cathan space unnoticed, but its interior is choked with a lantern-wisp blo</p>
-                <a class="stub-open" href="the-tyrant-ship.html">Open record ›</a>
-              </div>
-            </div></div>
-        </section></div>
+    <p class="intro-note">Everywhere the crew has set foot, and every sphere the charts admit to. Open a row for the short account, or the record for the full survey.</p>
+    <div class="board-tabs" data-pagefind-ignore>
+      <button class="board-tab is-active" type="button" data-panel="realmspace" aria-selected="true">Realmspace <span class="board-count">11</span></button>
+      <button class="board-tab" type="button" data-panel="viren-star-system" aria-selected="false">Viren Star System <span class="board-count">1</span></button>
+    </div>
+    <div class="board-panels">
+      <section class="board-panel is-active" id="realmspace" data-panel="realmspace">
+        <div class="chart-wrap" data-pagefind-ignore>
+          <svg class="chart" viewBox="0 0 620 300" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Realmspace schematic">
+            <!-- Deep Astral — the shell of the sphere itself -->
+            <g class="body boundary known" data-body="realmspace" tabindex="0" role="button" aria-label="Realmspace">
+              <path class="bound-arc" d="M 560 12 A 519 519 0 0 1 560 288"/>
+              <path class="bound-arc faint" d="M 578 22 A 540 540 0 0 1 578 278"/>
+              <text class="lbl lbl-dim" x="556" y="155" text-anchor="end">Deep Astral</text>
+            </g>
+
+            <!-- orbits -->
+            <circle class="orbit" cx="60" cy="150" r="193"/>
+            <circle class="orbit" cx="60" cy="150" r="368"/>
+
+            <!-- the sun -->
+            <circle class="sun-glow" cx="60" cy="150" r="34"/>
+            <circle class="sun-core" cx="60" cy="150" r="13"/>
+
+            <!-- tethers from Toril to what holds its orbit -->
+            <line class="tether" x1="250" y1="185" x2="196" y2="247"/>
+            <line class="tether" x1="250" y1="185" x2="312" y2="250"/>
+
+          <g class="body  " data-body="toril" tabindex="0" role="button" aria-label="Toril">
+            <circle class="hit" cx="250" cy="185" r="29"/>
+            <circle class="disc" cx="250" cy="185" r="15"/>
+            <text class="lbl" x="250" y="215" text-anchor="middle">Toril</text>
+          </g>
+          <g class="body  " data-body="hcatha" tabindex="0" role="button" aria-label="H&#x27;catha">
+            <circle class="hit" cx="425" cy="105" r="27"/>
+            <circle class="disc" cx="425" cy="105" r="13"/>
+            <text class="lbl" x="425" y="133" text-anchor="middle">H&#x27;catha</text>
+          </g>
+          <g class="body sat known" data-body="caelestis" tabindex="0" role="button" aria-label="Caelestis">
+            <circle class="hit" cx="196" cy="247" r="22"/>
+            <circle class="disc" cx="196" cy="247" r="8"/>
+            <text class="lbl" x="196" y="270" text-anchor="middle">Caelestis</text>
+          </g>
+          <g class="body sat known" data-body="the-tyrant-ship" tabindex="0" role="button" aria-label="The Tyrant Ship">
+            <circle class="hit" cx="312" cy="250" r="22"/>
+            <circle class="disc" cx="312" cy="250" r="8"/>
+            <text class="lbl" x="312" y="273" text-anchor="middle">Tyrant Ship</text>
+          </g>
+          </svg>
+          <p class="chart-hint">Select a body to narrow the register to it and everything filed inside it.</p>
+        </div>
+        <div class="filter-bar" data-pagefind-ignore>
+          <span class="filter-state">Showing all entries</span>
+          <button class="clear-btn" type="button" hidden>Show all</button>
+        </div>
+        <div class="register">
+          <div class="ent" data-entry="realmspace">
+            <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-realmspace">
+              <span class="ent-glyph boundary"></span>
+              <span class="ent-name">Realmspace</span>
+              <span class="ent-type">Sphere</span>
+              <span class="ent-dist">Voyage 004 · named only</span>
+              <span class="ent-state">Charted only</span>
+            </button>
+            <div class="ent-detail" id="l-realmspace" hidden>
+              <p class="stub-desc">The crystal sphere the crew calls home — a sun, a scatter of inner and outer worlds, and the shell of Deep Astral holding it all in.</p>
+              <a class="stub-open" href="realmspace.html">Open record &rsaquo;</a>
+            </div>
+          </div>
+          <div class="ent" data-entry="toril" data-parent="realmspace">
+            <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-toril">
+              <span class="ent-glyph "></span>
+              <span class="ent-name">Toril</span>
+              <span class="ent-type">Planet</span>
+              <span class="ent-dist">Voyage 003 · named only</span>
+              <span class="ent-state">Charted only</span>
+            </button>
+            <div class="ent-detail" id="l-toril" hidden>
+              <p class="stub-desc">Toril is a world named as the nearest destination on most of the academy&#x27;s shipping routes. The abandoned tyrant ship the crew boarded drifts in orbit above it.</p>
+              <a class="stub-open" href="toril.html">Open record &rsaquo;</a>
+            </div>
+          </div>
+          <div class="ent" data-entry="hcatha" data-parent="realmspace">
+            <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-hcatha">
+              <span class="ent-glyph "></span>
+              <span class="ent-name">H&#x27;catha</span>
+              <span class="ent-type">Planet</span>
+              <span class="ent-dist">Voyage 003 · named only</span>
+              <span class="ent-state">Charted only</span>
+            </button>
+            <div class="ent-detail" id="l-hcatha" hidden>
+              <p class="stub-desc">H’catha is a world populated entirely by beholders and their kin, watched by beholder patrols. An adamantine meteor has struck its spire, and the crew has been sent to recover it — using a tyrant ship&#x27;s appearance to move through H’cathan space unchallenged.</p>
+              <a class="stub-open" href="hcatha.html">Open record &rsaquo;</a>
+            </div>
+          </div>
+          <div class="ent" data-entry="caelestis" data-parent="toril">
+            <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-caelestis">
+              <span class="ent-glyph sat"></span>
+              <span class="ent-name">Caelestis</span>
+              <span class="ent-type">Station</span>
+              <span class="ent-dist">Voyage 003</span>
+              <span class="ent-state">Charted</span>
+            </button>
+            <div class="ent-detail" id="l-caelestis" hidden>
+              <p class="stub-desc">Caelestis is the spelljammer academy where the cadets train, a layered machine of halls, ranks, and access permissions overlooking the Astral Sea. Led by Mirt the Merciless, it drills its cadets through simulation and salvage exercise. A wave of thefts continues to spread through the tower, reaching an instructor&#x27;s own possessions.</p>
+              <a class="stub-open" href="caelestis.html">Open record &rsaquo;</a>
+            </div>
+          </div>
+          <div class="ent" data-entry="the-tyrant-ship" data-parent="toril">
+            <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-the-tyrant-ship">
+              <span class="ent-glyph sat"></span>
+              <span class="ent-name">The Tyrant Ship</span>
+              <span class="ent-type">Vessel</span>
+              <span class="ent-dist">Voyage 004</span>
+              <span class="ent-state">Charted</span>
+            </button>
+            <div class="ent-detail" id="l-the-tyrant-ship" hidden>
+              <p class="stub-desc">The tyrant ship is a stone-carved beholder vessel drifting above Toril, believed abandoned when the crew boarded it. They mean to install a helm on its command deck and fly it through H’cathan space unnoticed, but its interior is choked with a lantern-wisp bloom, prowled by clockwork horrors, and said to hide a shape-shifting mimic.</p>
+              <a class="stub-open" href="the-tyrant-ship.html">Open record &rsaquo;</a>
+            </div>
+          </div>
+          <div class="ent" data-entry="sky-dock" data-parent="caelestis">
+            <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-sky-dock">
+              <span class="ent-glyph sat"></span>
+              <span class="ent-name">Sky Dock</span>
+              <span class="ent-type">Room</span>
+              <span class="ent-dist">Voyage 003</span>
+              <span class="ent-state">Charted</span>
+            </button>
+            <div class="ent-detail" id="l-sky-dock" hidden>
+              <p class="stub-desc">The sky dock is Caelestis&#x27;s docking bay beneath the void, where spelljamming ships of every shape rest and cadets learn the anatomy of a vessel and the workings of the helm.</p>
+              <a class="stub-open" href="sky-dock.html">Open record &rsaquo;</a>
+            </div>
+          </div>
+          <div class="ent" data-entry="the-sea-dock" data-parent="caelestis">
+            <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-the-sea-dock">
+              <span class="ent-glyph sat"></span>
+              <span class="ent-name">The Sea Dock</span>
+              <span class="ent-type">Room</span>
+              <span class="ent-dist">Voyage 002</span>
+              <span class="ent-state">Charted</span>
+            </button>
+            <div class="ent-detail" id="l-the-sea-dock" hidden>
+              <p class="stub-desc">The Sea Dock is one of Caelestis&#x27;s docking bays, named on a cargo notice Casey pulled from the refectory board. He meant to work a job here but confused it with a neighboring dock.</p>
+              <a class="stub-open" href="the-sea-dock.html">Open record &rsaquo;</a>
+            </div>
+          </div>
+          <div class="ent" data-entry="spelljammer-nexus" data-parent="caelestis">
+            <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-spelljammer-nexus">
+              <span class="ent-glyph sat"></span>
+              <span class="ent-name">Spelljammer Nexus</span>
+              <span class="ent-type">Room</span>
+              <span class="ent-dist">Voyage 003</span>
+              <span class="ent-state">Charted</span>
+            </button>
+            <div class="ent-detail" id="l-spelljammer-nexus" hidden>
+              <p class="stub-desc">The Spelljammer Nexus is a training chamber at Caelestis overlooking the Astral Sea, where cadets learn to extend mind and magic into a vessel by guiding miniature ships across a floating field.</p>
+              <a class="stub-open" href="spelljammer-nexus.html">Open record &rsaquo;</a>
+            </div>
+          </div>
+          <div class="ent" data-entry="simulation-deck" data-parent="caelestis">
+            <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-simulation-deck">
+              <span class="ent-glyph sat"></span>
+              <span class="ent-name">Simulation Deck</span>
+              <span class="ent-type">Room</span>
+              <span class="ent-dist">Voyage 002</span>
+              <span class="ent-state">Charted</span>
+            </button>
+            <div class="ent-detail" id="l-simulation-deck" hidden>
+              <p class="stub-desc">The Simulation Deck is the chamber at Caelestis where cadets enter pods to run immersive exercises. Here both cadet crews were briefed and set against each other in a salvage race through simulated wildspace.</p>
+              <a class="stub-open" href="simulation-deck.html">Open record &rsaquo;</a>
+            </div>
+          </div>
+          <div class="ent" data-entry="the-weeping-goddess" data-parent="caelestis">
+            <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-the-weeping-goddess">
+              <span class="ent-glyph sat"></span>
+              <span class="ent-name">The Weeping Goddess</span>
+              <span class="ent-type">Room</span>
+              <span class="ent-dist">Voyage 002</span>
+              <span class="ent-state">Charted</span>
+            </button>
+            <div class="ent-detail" id="l-the-weeping-goddess" hidden>
+              <p class="stub-desc">The Weeping Goddess is Caelestis&#x27;s bustling refectory, thronged with cadets from every corner of wildspace beneath blue-glowing orbs. Its kitchen is run by Petty Officer Winston Ryeback, and a back-wall notice board carries odd jobs, dock requests, and missing-item notices.</p>
+              <a class="stub-open" href="the-weeping-goddess.html">Open record &rsaquo;</a>
+            </div>
+          </div>
+          <div class="ent" data-entry="mirts-quarters" data-parent="caelestis">
+            <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-mirts-quarters">
+              <span class="ent-glyph sat"></span>
+              <span class="ent-name">Mirt&#x27;s Quarters</span>
+              <span class="ent-type">Room</span>
+              <span class="ent-dist">Voyage 001</span>
+              <span class="ent-state">Charted</span>
+            </button>
+            <div class="ent-detail" id="l-mirts-quarters" hidden>
+              <p class="stub-desc">Mirt&#x27;s quarters are the cluttered, excess-strewn chambers of Caelestis&#x27;s head, home to a fishbowl of octopi and an impossible wardrobe that opens onto bounded astral night — a magical replica of a place in the Viren star system.</p>
+              <a class="stub-open" href="mirts-quarters.html">Open record &rsaquo;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="board-panel" id="viren-star-system" data-panel="viren-star-system">
+        <p class="board-note">Named in a vision and replicated behind a wardrobe. Nothing in it has been surveyed, so there is nothing yet to chart.</p>
+        <div class="register">
+          <div class="ent" data-entry="viren-star-system">
+            <button class="ent-row" type="button" aria-expanded="false" aria-controls="l-viren-star-system">
+              <span class="ent-glyph "></span>
+              <span class="ent-name">Viren Star System</span>
+              <span class="ent-type">Sphere</span>
+              <span class="ent-dist">Voyage 001 · named only</span>
+              <span class="ent-state">Charted only</span>
+            </button>
+            <div class="ent-detail" id="l-viren-star-system" hidden>
+              <p class="stub-desc">The Viren star system, beyond a place called H’catha, is the region Mirt&#x27;s impossible wardrobe magically replicates. A vision and a guiding voice have pointed Casey toward it as a destination.</p>
+              <a class="stub-open" href="viren-star-system.html">Open record &rsaquo;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 </div>
 <script>
 (function () {
-  document.querySelectorAll('.board-panel').forEach(function (panel) {
-    var search = panel.querySelector('.search-input');
-    var rows = panel.querySelectorAll('.ent');
-    if (search) search.addEventListener('input', function () {
-      var q = search.value.trim().toLowerCase();
-      rows.forEach(function (r) { r.hidden = q && r.querySelector('.ent-name').textContent.toLowerCase().indexOf(q) === -1; });
+  // Switching spheres clears any selection made on the chart. Without this a
+  // body picked in Realmspace left the Viren entry hidden behind its own tab.
+  var clear = document.querySelector('.clear-btn');
+  document.querySelectorAll('.board-tab').forEach(function (t) {
+    t.addEventListener('click', function () {
+      if (clear && !clear.hidden) clear.click();
     });
-  });
-  document.querySelectorAll('.ent-row').forEach(function (b) {
-    var d = document.getElementById(b.getAttribute('aria-controls'));
-    b.addEventListener('click', function () { var open = b.getAttribute('aria-expanded') === 'true'; b.setAttribute('aria-expanded', open ? 'false' : 'true'); d.hidden = open; });
   });
 })();
 </script>
