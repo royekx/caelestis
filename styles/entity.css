@@ -161,7 +161,7 @@ html { overflow-x: clip; }
   font-family: 'Cinzel', serif; font-size: 0.719rem; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--text-muted); white-space: nowrap;
 }
-.carry-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.carry-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; min-width: 0; max-width: 100%; }
 
 /* ── QUEST ──
    Modelled on a quest log: giver, briefing, objectives and rewards up

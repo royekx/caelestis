@@ -16,7 +16,8 @@
     letter-spacing: 0.18em; text-transform: uppercase;
     color: var(--text-muted); border: 1px solid var(--gold-rule);
     padding: 0.5rem 0.8rem; margin-bottom: 1.6rem;
-    display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.3rem 1rem;
+    /* Both halves wrap on a phone instead of running off the page. */
   }
   .doc-source-title { color: var(--gold-dim); }
 </style>

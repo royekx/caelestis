@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Voyage 002 — The Day After · Caelestis DM</title>
 <style>
 @page { size: 8.5in 11in; margin: 0.6in 0.7in; }
@@ -49,6 +50,11 @@ p { margin-bottom: 5pt; } strong { font-weight: bold; } em { font-style: italic;
 .scene-num { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; color: #1e3d6e; border: 0.75pt solid #1e3d6e; padding: 1.5pt 5pt; border-radius: 2pt; white-space: nowrap; }
 .scene-title { font-size: 10.5pt; font-weight: bold; flex: 1; }
 .scene-tag { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 1px; color: #666; text-transform: uppercase; white-space: nowrap; }
+@media screen and (max-width: 620px) {
+  /* nowrap is for the printed sheet; on a phone it runs off the page. */
+  .scene-header { flex-wrap: wrap; }
+  .scene-tag { white-space: normal; }
+}
 .scene-body { padding: 6pt 8pt; }
 .scene-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 8pt; margin-bottom: 5pt; }
 .meta-label { font-family: 'Arial Narrow', Arial, sans-serif; font-size: 7pt; font-weight: bold; letter-spacing: 1.5px; text-transform: uppercase; color: #666; margin-bottom: 1pt; }

@@ -259,6 +259,9 @@ html { overflow-x: clip; }
   .ent-type, .ent-dist { display: none; }
 }
 @media (max-width: 620px) {
+  /* The trailing badge sits on its own line under the name at this width,
+     so it no longer needs to stay on one. */
+  .ent-state { white-space: normal; }
   .board-panel { padding: 0.9rem; }
   .board-tab { padding: 0.6rem 0.9rem 0.65rem; font-size: 0.789rem; letter-spacing: 0.08em; }
   .q-kind { display: inline-block; margin: 0.3rem 0 0; vertical-align: 0; }

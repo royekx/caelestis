@@ -708,3 +708,59 @@ img { max-width: 100%; }
   .railed > .account-tabs > .account-tab { flex-direction: row; align-items: center; }
   .railed > .account-tabs > .account-tab .account-tab-note { display: none; }
 }
+
+/* ─────────────────────────────────────────────────────────────────
+   SECTION 16 — PHONES
+
+   Several grids were written for a desktop column and had no fallback,
+   so on a phone they kept their track count and squeezed the content
+   to one word per line.
+   ───────────────────────────────────────────────────────────────── */
+
+@media (max-width: 820px) {
+  /* Record layouts that pair a body with a fixed-width aside. */
+  .brief-grid { grid-template-columns: minmax(0, 1fr); }
+  .bearing    { grid-template-columns: minmax(0, 1fr); }
+  .xref-cols  { grid-template-columns: minmax(0, 1fr); }
+  .card-grid, .card-grid.two-up { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 620px) {
+  /* The identity card stops being a column and becomes a header:
+     portrait above, stats below, both full width. */
+  .entry-header,
+  .content .entry-header { grid-template-columns: minmax(0, 1fr); gap: 1.1rem; }
+  .identity-card { display: flex; flex-direction: column; gap: 0.9rem; }
+  .portrait-frame { max-width: 220px; margin: 0 auto; }
+
+  /* A register row is a face, a name, and a trailing badge — and the
+     badge column is auto, so it takes its whole max-content width
+     before the name column gets anything left over. "Spelljammer
+     Nexus" beside a name left the name track 0px wide, and the name
+     came out one character per line. The badges get their own line
+     under the name instead of competing with it for the same one. */
+  .npc-row .ent-row,
+  .item-row .ent-row,
+  .crew-row .ent-row { grid-template-columns: 40px minmax(0, 1fr); row-gap: 0.4rem; }
+  .npc-row .ent-state, .npc-row .ent-rarity,
+  .item-row .ent-state, .item-row .ent-rarity,
+  .crew-row .ent-state, .crew-row .ent-rarity {
+    grid-column: 2; justify-self: start; white-space: normal;
+  }
+
+  /* Registers drop their meta columns before their names get squeezed. */
+  .ent-row, .register .ent > .ent-row { gap: 0.6rem; }
+  .ent-type, .ent-dist { display: none; }
+
+  /* Nothing may set a min-content width wider than the screen. */
+  .page-content, .content, .board-body, .board-panel, .register,
+  .railed, .railed > .panels, .companion-card, .feat-card,
+  .q-grid, .crew-grid, .chips, .facet-pills { max-width: 100%; min-width: 0; }
+}
+
+/* Long unbroken strings — ship names, slugs, run-together labels — are the
+   usual cause of a phone scrolling sideways. */
+@media (max-width: 620px) {
+  .ent-name, .log-title, .stub-desc, .entry-body, .glance-synopsis,
+  .cb-val, .q-name, .crew-name, .feat-rules { overflow-wrap: anywhere; }
+}

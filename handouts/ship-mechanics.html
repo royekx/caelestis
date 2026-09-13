@@ -43,6 +43,7 @@
   }
   .flow-badge.dim { background: rgba(154, 116, 40, 0.4); color: var(--text-dim); }
   .flow-body {
+    min-width: 0;
     background: var(--gold-faint);
     border: 1px solid var(--gold-rule);
     border-left: none;
@@ -95,8 +96,11 @@
   .skill-pill span { font-size: 0.899rem; display: block; color: var(--text-muted); }
 
   @media(max-width:640px){
+    /* minmax(0, 1fr), not 1fr: a plain 1fr track still takes the
+       min-content width of what is in it, which on a narrow phone is
+       wider than the column the grid sits in. */
     .stat-grid, .two-col, .col-wide, .target-grid, .formula-grid, .skill-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 </style>

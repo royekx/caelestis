@@ -11,19 +11,9 @@
 .bearing {
   display: grid; grid-template-columns: 1fr 215px; gap: 1.8rem; align-items: start;
 }
-@media (max-width: 880px) {
-  .bearing { grid-template-columns: 1fr; }
-  .timeline { position: static; order: -1; margin-bottom: 1.2rem; }
-  .tl-stops { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.4rem; }
-  .tl-stop {
-    flex: 0 0 auto; grid-template-columns: 1fr; min-width: 150px;
-    background: var(--bg-card); border: 1px solid var(--rule);
-    border-radius: 10px; padding: 0.6rem 0.8rem;
-  }
-  .tl-stop::before { display: none; }
-  .tl-dot { display: none; }
-}
-
+/* A grid item's automatic minimum is its min-content width, so one wide
+   child sizes the track rather than the track sizing the child. */
+.bearing > * { min-width: 0; }
 .panel {
   background: var(--bg-card); border: 1px solid var(--rule);
   border-radius: 12px; padding: 1.15rem 1.35rem 1.25rem; margin-bottom: 0.9rem;
@@ -68,7 +58,7 @@
 }
 .chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
 
-.q-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 0.6rem; }
+.q-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.6rem; }
 .q-card {
   display: flex; flex-direction: column; gap: 0.4rem; min-width: 0;
   padding: 0.85rem 1rem 0.9rem; text-decoration: none;
@@ -88,7 +78,7 @@
   text-transform: uppercase; color: var(--text-muted); margin-right: 0.35rem;
 }
 
-.crew-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 0.6rem; }
+.crew-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.6rem; }
 .crew-card {
   display: flex; flex-direction: column; gap: 0.25rem; min-width: 0;
   padding: 0.8rem 1rem 0.85rem; text-decoration: none;
@@ -130,3 +120,40 @@
 .tl-stop.is-now .tl-dot { background: var(--gold); border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-faint); }
 .tl-stop.is-now .tl-num { color: var(--gold); }
 .tl-stop.is-now .tl-title { color: var(--text); font-weight: 600; }
+
+/* ════════════════════════════════════════════════════════════════
+   PHONES
+
+   This block used to sit at the top of the file, above the rules it
+   overrides. Equal specificity, and a media query adds none, so the
+   later plain rules won every time: the timeline stayed sticky, the
+   stops kept their 16px number column, and the connector line and
+   dots stayed drawn. It belongs at the end, after everything it is
+   meant to replace.
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 880px) {
+  .bearing { grid-template-columns: minmax(0, 1fr); }
+  .timeline { position: static; order: -1; margin-bottom: 1.2rem; }
+  .tl-stops { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.4rem; }
+  .tl-stop {
+    flex: 0 0 auto; grid-template-columns: minmax(0, 1fr); min-width: 150px;
+    background: var(--bg-card); border: 1px solid var(--rule);
+    border-radius: 10px; padding: 0.6rem 0.8rem;
+  }
+  .tl-stop::before { display: none; }
+  .tl-dot { display: none; }
+}
+
+@media (max-width: 620px) {
+  /* The two labels either side of a panel head are both nowrap, so the
+     head reported a min-content width of ~400px and dragged the whole
+     column — and with it the page — past the screen. Let the second
+     label drop to its own line instead. */
+  .panel-head { flex-wrap: wrap; row-gap: 0.35rem; }
+  .panel-title, .panel-more { white-space: normal; }
+
+  /* A fixed track minimum still overflows once the column is narrower
+     than the minimum itself. min() caps it at the space available. */
+  .q-grid { grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr)); }
+  .crew-grid { grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); }
+}
