@@ -247,13 +247,6 @@
     <div class="hub-sub">Everything the Fleet keeps, and everything you need to sail.</div>
   </div>
 
-  <!-- ── QUERY BAR ── -->
-  <form class="hub-query" id="js-hub-query" role="search" autocomplete="off">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
-    <input type="text" id="js-hub-query-input" placeholder="Query the archive — a name, a place, a thing you half remember…" aria-label="Search all records">
-    <span class="hub-query-tag"><a href="search/index.html">S.E.A.R.C.H.</a></span>
-  </form>
-
   <!-- ══════════ BRIDGE OPERATIONS ══════════ -->
   <section class="hub-section">
     <div class="hub-section-head">
@@ -482,16 +475,6 @@
 
 <script>
 (function () {
-  var form  = document.getElementById('js-hub-query');
-  var input = document.getElementById('js-hub-query-input');
-  if (form && input) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var term = input.value.trim();
-      window.location.href = 'search/index.html' + (term ? '?q=' + encodeURIComponent(term) : '');
-    });
-  }
-
   // data/voyage.js is the voyage registry — keep the card on the latest entry.
   if (window.CAELESTIS_VOYAGES && CAELESTIS_VOYAGES.length) {
     var latest = CAELESTIS_VOYAGES[CAELESTIS_VOYAGES.length - 1];
