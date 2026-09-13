@@ -853,3 +853,107 @@ npx -y pagefind --site . \
   --glob "{index.html,hub.html,voyages/*.html,bearings/*.html,logs/*.html,crew-manifest/**/*.html,dossiers/**/*.html,factions/**/*.html,quests/**/*.html,spelljammer-nexus/**/*.html,inventory/**/*.html,handouts/**/*.html,navigation-records/**/*.html}" \
   --exclude-selectors "[data-pagefind-ignore], nav, .site-nav, footer"
 ```
+
+---
+
+# Sixteenth pass — phones
+
+Tested at 320, 360 and 390px against every page on the site, plus 768,
+1024 and 1280 to check nothing moved on the way back up. The measure is
+whether a page can be scrolled sideways and whether any content sits
+outside the viewport, not whether it looks narrow.
+
+## The one-word columns
+
+`bearing.css` built its quest and crew strips with:
+
+```
+grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+```
+
+`auto-fit` only wraps when the minimum is a real width. With a minimum of `0`
+it never wraps — it makes one track per item and shrinks each to nothing. Six
+crew members, six columns, one word per line, at any screen size narrow enough
+to matter.
+
+Now `minmax(210px, 1fr)` for quests and `minmax(180px, 1fr)` for crew, and
+`minmax(min(210px, 100%), 1fr)` under 620px, since a fixed track minimum
+overflows once the column is narrower than the minimum itself.
+
+## The register rows were the same bug wearing a different hat
+
+`.ent-row` is a face, a name and a trailing badge, and the badge column is
+`auto`. An `auto` track takes its whole max-content width before an `fr`
+track gets anything left over, so "Spelljammer Nexus" sitting beside a name
+left the name track **0px wide** on Dossiers and 30px on Inventory — and
+`overflow-wrap: anywhere` then broke the names one character per line. That
+is the column of single letters in the report.
+
+Hiding `.ent-type` and `.ent-dist` does not help: `display: none` takes the
+element out of the grid but the tracks are declared explicitly, so they stay.
+Under 620px the badge columns now get their own line under the name instead
+of competing with it for the same one.
+
+## A media query that never applied
+
+`bearing.css` opened with `@media (max-width: 880px)`, above every rule it
+was meant to override. Equal specificity, and a media query adds none, so the
+later plain rules won: the timeline stayed sticky on a phone, its stops kept
+the 16px number column that clipped "004", and the connector line and dots
+stayed drawn over the card layout. The block now sits at the end of the file.
+
+## What actually pushed the bearings page sideways
+
+`.panel-head` puts two labels either side of a rule and both are `nowrap`, so
+the head reported a min-content width of ~400px, the `1fr` track floored at
+that, and the page went with it. The second label now drops to its own line
+under 620px. `.bearing > *` also carries `min-width: 0`, since a grid item's
+automatic minimum is its min-content width — one wide child sizes the track
+rather than the track sizing the child.
+
+Worth noting for the next pass: the bearings pages and the hub do not load
+`register.css`, so anything put there does not reach them. The bearing strip
+(`.cb-face`) is injected into every page by `nav.js`, so its phone rule lives
+in `caelestis.css` now — it was rendering two columns on bearings and one
+everywhere else.
+
+## Prev / next bars
+
+`.nav-bar`, `.voyage-nav-bar` and `.voyage-nav-bottom` are three links in a
+row, all `nowrap`, and the centre link is `flex-shrink: 0`. Min-content up to
+700px, on pages 390px wide. Under 620px they become two rows: the centre link
+across the top, prev and next below. All three also wrap when they do not fit,
+which fixes the next link being clipped on a 1024px laptop as well.
+
+## A phone layer
+
+Several grids were written for a desktop column with no fallback at all.
+Section 16 of `register.css` collapses them:
+
+- under 820px — `.brief-grid`, `.bearing`, `.xref-cols`, `.card-grid`
+- under 620px — the entity header, so the portrait sits above the stats rather
+  than beside them; the register rows above
+
+## The narrow end
+
+At 320px a further set of `nowrap` and no-shrink cases clipped: the chart
+tabs, the nexus document-source line, the DM briefing's scene tags, the
+combat-flow rows on the ship-mechanics handout, the log page's button row,
+and `.carry-chips` (a flex item cannot shrink below its min-content unless
+told to). Each now wraps. `.col-wide` and its siblings on the handout use
+`minmax(0, 1fr)` rather than `1fr` for the same reason as everything else
+above.
+
+## Eleven pages had no viewport meta
+
+`crew-logs/`, `crew-notes/` and one Prime briefing. Without it a phone renders
+the page at 980px and scales the whole thing down, which produces sideways
+scroll on its own regardless of the CSS. All eleven now declare it; every page
+on the site does.
+
+## Still open
+
+`navigation-records/index.html` clips its last `.ent-state` badge at 1024px —
+the railed layout leaves the register a 362px panel and five columns do not
+fit in it. Pre-existing, and not a phone width; it wants a container query or
+a rethink of the rail rather than another breakpoint.
