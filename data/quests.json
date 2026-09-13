@@ -126,7 +126,8 @@
       "Last Engaged (Session #)": 3,
       "Next Planned Beat": "Check the teaching rooms for more devices and investigate Joffrey, Jeffrey, and the marked crate's route through Mr. Blip.",
       "Status": "Open",
-      "Linked": "ITM-5nB7wK9x, NPC-Wc9fT2nJ, NPC-Zx4Bn7Lq, ITM-8pC4kW2n, ITM-2pQ7vHm9, NPC-Mw6kT2vn, ITM-Wp4kT8vn, ITM-Xn7kW2vm, NPC-Hs6cW9pM, NPC-Lp3kW8vn, NPC-Mb3vK8dW"
+      "Linked": "ITM-5nB7wK9x, NPC-Wc9fT2nJ, NPC-Zx4Bn7Lq, ITM-8pC4kW2n, ITM-2pQ7vHm9, NPC-Mw6kT2vn, ITM-Wp4kT8vn, ITM-Xn7kW2vm, NPC-Hs6cW9pM, NPC-Lp3kW8vn, NPC-Mb3vK8dW",
+      "Rewards": ""
     },
     "parent": null,
     "kind": "Quest",
@@ -206,7 +207,8 @@
       "Last Engaged (Session #)": 1,
       "Next Planned Beat": "Question or examine the surviving creature to learn what the crate was really carrying.",
       "Status": "Open",
-      "Linked": "ITM-5nB7wK9x"
+      "Linked": "ITM-5nB7wK9x",
+      "Rewards": ""
     },
     "parent": {
       "slug": "the-caelestis-burglaries",
@@ -292,7 +294,8 @@
       "Last Engaged (Session #)": 3,
       "Next Planned Beat": "Reach H’catha, recover the meteor, and find a way toward Viren beyond it.",
       "Status": "Open",
-      "Linked": "PC-t0jvvcOZ, ITM-4kD8vRt2, LOC-Cw8kM4vB, NPC-Py6hN3xB"
+      "Linked": "PC-t0jvvcOZ, ITM-4kD8vRt2, LOC-Cw8kM4vB, NPC-Py6hN3xB",
+      "Rewards": ""
     },
     "parent": null,
     "kind": "Quest",
@@ -353,7 +356,8 @@
       "Last Engaged (Session #)": 1,
       "Next Planned Beat": "Discover what the pull in Gregory's core is drawing him toward.",
       "Status": "Open",
-      "Linked": "PC-BGCfmbF3"
+      "Linked": "PC-BGCfmbF3",
+      "Rewards": ""
     },
     "parent": null,
     "kind": "Thread",
@@ -435,7 +439,8 @@
       "Last Engaged (Session #)": 3,
       "Next Planned Beat": "Learn what the model ship inside Boogie is, why it matches Saerthe's stolen vessel, and what the presence in his dreams wants.",
       "Status": "Open",
-      "Linked": "PC-647haWGJ, ITM-2pQ7vHm9, NPC-Zx4Bn7Lq, ITM-8pC4kW2n"
+      "Linked": "PC-647haWGJ, ITM-2pQ7vHm9, NPC-Zx4Bn7Lq, ITM-8pC4kW2n",
+      "Rewards": ""
     },
     "parent": null,
     "kind": "Thread",
@@ -481,7 +486,8 @@
       "Last Engaged (Session #)": 1,
       "Next Planned Beat": "Find the first thread leading to Tumak's family.",
       "Status": "Open",
-      "Linked": "PC-wI087olT"
+      "Linked": "PC-wI087olT",
+      "Rewards": ""
     },
     "parent": null,
     "kind": "Quest",
@@ -551,7 +557,8 @@
       "Last Engaged (Session #)": 3,
       "Next Planned Beat": "Learn who the voice speaking to Sol of fate is, and what Beshaba's attention asks of him.",
       "Status": "Open",
-      "Linked": "PC-6rzWlD8Q"
+      "Linked": "PC-6rzWlD8Q",
+      "Rewards": ""
     },
     "parent": null,
     "kind": "Thread",
@@ -619,7 +626,8 @@
       "Last Engaged (Session #)": 4,
       "Next Planned Beat": "Learn what Tumak's half-runes mean, who the Rune Keeper is, and where the tether toward home leads.",
       "Status": "Open",
-      "Linked": "PC-wI087olT, NPC-Jv7kW3mq, ITM-Yq5kW8vn"
+      "Linked": "PC-wI087olT, NPC-Jv7kW3mq, ITM-Yq5kW8vn",
+      "Rewards": ""
     },
     "parent": {
       "slug": "tumaks-search-for-family",
@@ -696,13 +704,14 @@
       "Type": "Mission",
       "Related Character(s)": "Bartholomew, Gregory, Tumak Swan, Sol Fortuna, Casey, Boogie",
       "Current State": "The crew cleared the hold and the garden shaft aboard the tyrant ship but chose to hold and rest, bloodied, before descending to the deck below.",
-      "Overview (Player)": "The crew has been sent to recover an adamantine meteor that struck the spire on H’catha, a world of beholders. They board an abandoned tyrant ship to install a helm on its command deck and fly it through H’cathan space unnoticed — but the vessel is choked with a lantern-wisp bloom, prowled by clockwork horrors, and said to hide a shape-shifting mimic. The way up runs through its access shafts, and a deck below still waits unexplored.",
+      "Overview (Player)": "Boatswain Tarto has sent the crew to recover an adamantine meteor that struck the spire on H’catha, a world of beholders. Arriving as themselves is not an option. An abandoned tyrant ship drifts in Toril’s orbit: commandeer it, install a spelljamming helm on its command deck, and fly it through H’cathan space as one of their own — the vessel itself the disguise. Reach the spire under that cover and bring the meteor back.",
       "Visibility": "Player",
       "Urgency": "High",
       "Last Engaged (Session #)": 4,
       "Next Planned Beat": "Rest, then descend to the deck below by rope and continue routing the helm up the access shafts to the command deck.",
       "Status": "Open",
-      "Linked": "LOC-Rp7kW4vn, LOC-Sk4mW8vn, LOC-Tv6kW3mn, NPC-Hn4kW9vm"
+      "Linked": "LOC-Rp7kW4vn, LOC-Sk4mW8vn, LOC-Tv6kW3mn, NPC-Hn4kW9vm",
+      "Rewards": "The adamantine meteor; The tyrant ship"
     },
     "parent": null,
     "kind": "Quest",
@@ -777,7 +786,8 @@
       "Urgency": "High",
       "Status": "Open",
       "Visibility": "Player",
-      "Linked": null
+      "Linked": null,
+      "Rewards": ""
     },
     "parent": {
       "slug": "the-caelestis-burglaries",
@@ -827,7 +837,8 @@
       "Urgency": "Medium",
       "Status": "Open",
       "Visibility": "Player",
-      "Linked": null
+      "Linked": null,
+      "Rewards": ""
     },
     "parent": {
       "slug": "the-tyrant-ship-and-the-hcatha-meteor",

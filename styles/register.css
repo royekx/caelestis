@@ -764,3 +764,38 @@ img { max-width: 100%; }
   .ent-name, .log-title, .stub-desc, .entry-body, .glance-synopsis,
   .cb-val, .q-name, .crew-name, .feat-rules { overflow-wrap: anywhere; }
 }
+
+/* ─────────────────────────────────────────────────────────────────
+   SECTION 17 — NOTABLE ITEMS & REWARDS
+   Two more panels in the quest's right-hand column, under Objectives.
+   Items are links into the ledger; rewards are not, because a reward
+   is a promise rather than a record until it is collected.
+   ───────────────────────────────────────────────────────────────── */
+.loot-list { list-style: none; margin: 0; padding: 0; }
+.loot-item {
+  display: block;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.loot-item:last-child { border-bottom: none; }
+.loot-link { display: block; text-decoration: none; }
+.loot-name {
+  display: block;
+  font-size: 0.97rem; line-height: 1.4; color: var(--text);
+  overflow-wrap: anywhere; transition: color .18s;
+}
+.loot-link:hover .loot-name { color: var(--gold-light); }
+.loot-note {
+  display: block; margin-top: 0.1rem;
+  font-size: 0.86rem; font-style: italic; color: var(--text-muted);
+}
+
+/* A reward reads as a prize, not an inventory line. */
+.loot-item.is-reward .loot-name {
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif; font-size: 0.92rem; letter-spacing: 0.03em;
+}
+
+/* Thread pages have no objectives column, so their panels sit on their own
+   full-width row rather than beside something. */
+.brief-grid-solo { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }

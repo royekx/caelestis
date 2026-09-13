@@ -957,3 +957,46 @@ on the site does.
 the railed layout leaves the register a 362px panel and five columns do not
 fit in it. Pre-existing, and not a phone width; it wants a container query or
 a rethink of the rail rather than another breakpoint.
+
+---
+
+# Eighteenth pass — quest loot, and Connections moved up
+
+Rebased onto the uploaded repo, which was one pass behind — the tyrant ship
+briefing rewrite was not in it, so it is re-applied here.
+
+## Connections
+
+It sat at the very bottom, under every voyage record a quest had accumulated.
+On a long quest that is several screens away from the thing it describes.
+
+It now sits directly under the briefing, above the records. The quest's
+context reads with the quest; the history reads after it.
+
+## Notable Items
+
+Derived from the links the records already hold — every item linked to a quest
+becomes a row, with its type underneath and a link into the ledger. Five quests
+have items: the Burglaries (5), the Unfinished Ship (2), the Living Clue, the
+Path to Viren, and Tumak's Runes (1 each). The other six get no panel rather
+than an empty one.
+
+## Rewards
+
+**There is no Rewards column in the tracker**, so there was nothing to read. A
+`Rewards` field is added to every quest record so the panel has somewhere to
+read from, empty on all but one.
+
+The tyrant ship quest is seeded, and only with stakes the records already
+state — the meteor, and the ship itself if they can hold it. Nothing invented,
+no gold or XP. Delete or rewrite freely; it is there so the panel can be seen
+working.
+
+For this to survive a sync, the tracker needs a **Rewards** column. Until then
+the field lives only in `data/quests.json` and `data/raw/quests.json`.
+
+## Shape
+
+Four quests have the two-column briefing layout and take the new panels in the
+right-hand column under Objectives. The seven thread pages have no objectives
+column, so theirs sit on their own full-width row above the records.
