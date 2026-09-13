@@ -6,7 +6,7 @@
 <title>Caelestis — Terminal</title>
 <link rel="stylesheet" href="styles/caelestis.css">
 <style>
-  .hub {
+.hub {
     position: relative; z-index: 1;
     max-width: 1040px; margin: 0 auto;
     padding: 2.6rem 2rem 6rem;
@@ -29,31 +29,6 @@
   .hub-sub { font-size: 1.01rem; font-style: italic; color: var(--text-dim); margin-top: 0.5rem; }
 
   /* ── TERMINAL QUERY BAR ── */
-  .hub-query {
-    display: flex; align-items: center; gap: 0.85rem;
-    border: 1px solid var(--gold-rule);
-    background: rgba(10,7,18,0.85);
-    padding: 0.85rem 1.2rem;
-    margin-bottom: 3rem;
-    transition: border-color 0.22s, box-shadow 0.22s;
-    animation: fadeUp 0.7s ease both; animation-delay: 0.06s;
-  }
-  .hub-query:focus-within { border-color: var(--gold-dim); box-shadow: 0 0 34px rgba(201,153,58,0.1); }
-  .hub-query svg { width: 16px; color: var(--gold-dim); flex-shrink: 0; }
-  .hub-query input {
-    flex: 1; background: none; border: none; outline: none;
-    font-family: 'Crimson Pro', Georgia, serif; font-size: 1rem;
-    color: var(--text); min-width: 0;
-  }
-  .hub-query input::placeholder { color: var(--text-muted); font-style: italic; }
-  .hub-query-tag {
-    font-family: 'Cinzel', serif; font-size: 0.62rem;
-    letter-spacing: 0.16em; text-transform: uppercase;
-    color: var(--text-muted); border-left: 1px solid var(--gold-rule);
-    padding-left: 0.85rem; white-space: nowrap;
-  }
-  .hub-query-tag a { color: var(--gold-dim); text-decoration: none; }
-  .hub-query-tag a:hover { color: var(--gold-light); }
 
   /* ── SECTIONS ── */
   .hub-section { margin-bottom: 3.2rem; animation: fadeUp 0.7s ease both; }
@@ -76,65 +51,51 @@
     text-align: right; margin-left: auto;
   }
 
-  /* ── CURRENT BEARING CARD ── */
-  .bearing-card {
-    display: block; text-decoration: none;
+  /* ── OPERATIONS CARDS ── */
+  .action-row {
+    /* three operations now: bearing, scheduler, helm */ display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .action-card {
     background: rgba(20,12,5,0.95);
     border: 1px solid var(--gold-dim);
-    border-left: 3px solid var(--gold);
-    padding: 1.3rem 1.5rem 1.2rem;
+    padding: 1.9rem 1.8rem 1.6rem;
+    text-decoration: none;
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center; position: relative; overflow: hidden;
     transition: border-color 0.22s, box-shadow 0.22s, transform 0.22s;
   }
-  .bearing-card:hover {
-    border-color: var(--gold); border-left-color: var(--gold-light);
-    box-shadow: 0 8px 50px rgba(192,134,82,0.16);
-    transform: translateY(-2px);
+  .action-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    opacity: 0.7; transition: opacity 0.22s;
   }
-  .bearing-card-head {
-    display: flex; align-items: baseline; gap: 0.9rem;
-    padding-bottom: 0.75rem; margin-bottom: 0.95rem;
-    border-bottom: 1px solid var(--gold-rule);
+  .action-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 8px 50px rgba(201,153,58,0.18);
+    transform: translateY(-3px);
   }
-  .bearing-card-label {
-    font-family: 'Cinzel', serif; font-size: 0.68rem;
-    letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold);
+  .action-card:hover::before { opacity: 1; }
+  .action-icon { color: var(--gold); margin-bottom: 0.9rem; opacity: 0.85; }
+  .action-icon svg { width: 40px; height: 40px; }
+  .action-title {
+    font-family: 'Cinzel', serif; font-size: 1.01rem;
+    font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.5rem;
   }
-  .bearing-card-open {
-    margin-left: auto;
-    font-family: 'Cinzel', serif; font-size: 0.6rem;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--text-muted); white-space: nowrap; transition: color 0.2s;
+  .action-desc { font-size: 0.97rem; color: var(--text-dim); line-height: 1.55; margin-bottom: 1.3rem; flex: 1; }
+  .action-cta {
+    font-family: 'Cinzel', serif; font-size: 0.67rem;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--text-muted); border: 1px solid var(--gold-rule);
+    padding: 0.35rem 1.1rem;
+    transition: border-color 0.2s, color 0.2s;
+    display: flex; align-items: center; gap: 0.4rem;
   }
-  .bearing-card:hover .bearing-card-open { color: var(--gold-dim); }
-
-  .bearing-card-grid {
-    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.9rem 1.6rem;
-  }
-  .bearing-cell-wide { grid-column: 1 / -1; }
-  .bearing-cell { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
-  .bearing-key {
-    font-family: 'Cinzel', serif; font-size: 0.55rem;
-    letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted);
-  }
-  .bearing-val { font-size: 1.02rem; line-height: 1.45; color: var(--text); }
-  .bearing-val .bearing-note { font-style: italic; color: var(--text-dim); font-size: 0.92rem; }
-
-  .bearing-quests { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
-  .bearing-quests:empty { display: none; }
-  .bearing-quest {
-    display: inline-flex; align-items: baseline; gap: 0.5rem;
-    border: 1px solid var(--gold-rule); padding: 0.3rem 0.75rem;
-    font-size: 0.88rem; color: var(--text-dim);
-  }
-  .bearing-quest .bearing-prog {
-    font-family: 'Cinzel', serif; font-size: 0.62rem;
-    letter-spacing: 0.1em; color: var(--gold-dim);
-  }
+  .action-cta svg { width: 9px; }
+  .action-card:hover .action-cta { border-color: var(--gold-dim); color: var(--gold-dim); }
 
   /* ── STANDARD CARDS ── */
-  .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-  .card-grid.two-up { grid-template-columns: repeat(2, 1fr); }
+  .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
+  .card-grid.two-up { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   /* A lone card on the final row sits centred rather than orphaned left */
   @media(min-width: 821px) {
     .card-grid > .s-card:last-child:nth-child(3n+1) { grid-column: 2; }
@@ -214,27 +175,64 @@
     .card-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media(max-width:600px) {
-    .bearing-card-grid { grid-template-columns: 1fr; }
+    .action-row {
+    /* three operations now: bearing, scheduler, helm */ grid-template-columns: 1fr; }
     .hub-section-desc { display: none; }
   }
   @media(max-width:540px) {
     .hub { padding: 2rem 1rem 4rem; }
-    .card-grid, .card-grid.two-up { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+    .card-grid, .card-grid.two-up { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; }
     .s-card { padding: 1.2rem 1rem 1rem; }
     .s-icon { width: 28px; height: 28px; }
     .s-title { font-size: 0.95rem; }
     .s-desc { font-size: 0.88rem; }
     .s-link { font-size: 0.65rem; }
-    .hub-query-tag { display: none; }
   }
   @media(max-width:360px) {
     .card-grid, .card-grid.two-up { grid-template-columns: 1fr; }
   }
+
+
+  /* ── DENSER CARDS ──
+     Icon moved inline with the title and the text left-aligned, so a card
+     is about two thirds its old height and three fit across without the
+     centred column of air down the middle. */
+  .card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.85rem; }
+  .s-card { padding: 0.95rem 1.1rem 0.85rem; gap: 0.4rem; min-width: 0; }
+  .s-card-head { display: flex; align-items: center; gap: 0.6rem; position: relative; z-index: 2; pointer-events: none; }
+  .s-icon { width: 20px; height: 20px; margin: 0; }
+  .s-title { text-align: left; font-size: 0.9rem; }
+  .s-desc {
+    text-align: left; font-size: 0.87rem; line-height: 1.5;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden; max-height: 3em; flex: none;
+  }
+  .s-links {
+    flex-direction: row; flex-wrap: wrap; gap: 0.25rem 0.9rem;
+    align-items: baseline; padding-top: 0.5rem; margin-top: auto;
+    justify-content: flex-start; min-width: 0;
+  }
+  /* display:flex defeats text-overflow, so the label clipped at both ends
+     instead of ellipsising. inline-block restores it. */
+  .s-link {
+    display: inline-block; text-align: left;
+    max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  /* The rule above "view all" made sense when links stacked; in a row it
+     reads as a broken divider over one link. The container's own border
+     does the separating now. */
+  .s-link-all { margin-top: 0; padding-top: 0; border-top: none; }
+  .action-card { padding: 1.2rem 1.4rem 1rem; }
+
+  @media (max-width: 900px) {
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .card-grid { grid-template-columns: 1fr; }
+  }
 </style>
   <!-- bearing.js must precede nav.js: deferred scripts run in document order,
-       and buildCommandBar() renders operations only when the data is absent.
-       This was the reason the hub's command bar had no Current Bearing strip
-       while every other page on the site did. -->
+       and buildCommandBar() renders operations only when the data is absent. -->
   <script src="data/bearing.js" defer></script>
   <script src="scripts/nav.js" defer></script>
   <script src="data/voyage.js" defer></script>
@@ -267,113 +265,66 @@
     <div class="hub-sub">Everything the Fleet keeps, and everything you need to sail.</div>
   </div>
 
-  <!-- ══════════ CREW OPERATIONS ══════════
-       The helm and the scheduler used to sit here as two large cards.
-       They also sit in the command bar above, on this page and every
-       other — so the band repeated the only two things the terminal
-       already offers everywhere. The band now carries what the sidebar
-       group leads with and the hub had nowhere: where the crew stands.
-       Rendered from data/bearing.js, so it never goes stale by hand. -->
-  <section class="hub-section">
-    <div class="hub-section-head">
-      <span class="hub-section-title">Crew Operations</span>
-      <span class="hub-section-desc">Where the game happens — where you stand, and what is still open.</span>
-    </div>
-
-    <a class="bearing-card" href="bearings/index.html" id="js-hub-bearing">
-      <div class="bearing-card-head">
-        <span class="bearing-card-label">Current Bearing</span>
-        <span class="bearing-card-open">Full bearing and timeline ›</span>
-      </div>
-      <div class="bearing-card-grid">
-        <div class="bearing-cell">
-          <span class="bearing-key">Position</span>
-          <span class="bearing-val" data-bearing="position">—</span>
-        </div>
-        <div class="bearing-cell">
-          <span class="bearing-key">Last Voyage</span>
-          <span class="bearing-val" data-bearing="voyage">—</span>
-        </div>
-        <div class="bearing-cell bearing-cell-wide">
-          <span class="bearing-key">Outstanding</span>
-          <span class="bearing-val" data-bearing="outstanding">—</span>
-        </div>
-      </div>
-      <div class="bearing-quests" data-bearing="quests"></div>
-    </a>
-  </section>
-
-  <!-- ══════════ CREW INTEL ══════════ -->
   <section class="hub-section">
     <div class="hub-section-head">
       <span class="hub-section-title">Crew Intel</span>
-      <span class="hub-section-desc">Yours — where you've been, what you worked out, what you're carrying.</span>
+      <span class="hub-section-desc">Yours — where you've been, who you've met, what you're chasing.</span>
     </div>
 
     <div class="card-grid">
 
-      <!-- VOYAGES -->
       <div class="s-card">
         <a class="s-card-overlay" href="voyages/index.html" aria-label="Voyages"></a>
-        <div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="4" width="20" height="28" rx="2"/><path d="M8 8H6a2 2 0 00-2 2v18a2 2 0 002 2h2"/><line x1="13" y1="13" x2="23" y2="13"/><line x1="13" y1="18" x2="23" y2="18"/><line x1="13" y1="23" x2="19" y2="23"/></svg></div>
-        <div class="s-title">Voyages</div>
+        <div class="s-card-head"><div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="4" width="20" height="28" rx="2"/><path d="M8 8H6a2 2 0 00-2 2v18a2 2 0 002 2h2"/><line x1="13" y1="13" x2="23" y2="13"/><line x1="13" y1="18" x2="23" y2="18"/><line x1="13" y1="23" x2="19" y2="23"/></svg></div><div class="s-title">Voyages</div></div>
         <div class="s-desc">Every voyage on record — recording, quick account, and the whole story, all on one page.</div>
-        <div class="s-links" id="voyages-links">
-          <a class="s-link" href="voyages/voyage-004.html">
-            Latest Voyage <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-          <a class="s-link s-link-all" href="voyages/index.html">
-            All Voyages <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-        </div>
+        <div class="s-links"><a class="s-link" href="voyages/voyage-004.html">Latest Voyage</a><a class="s-link s-link-all" href="voyages/index.html">All Voyages</a></div>
       </div>
 
-      <!-- LOGS (crew notes) -->
       <div class="s-card">
-        <a class="s-card-overlay" href="logs/index.html" aria-label="Logs"></a>
-        <div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h14l5 5v21a1 1 0 01-1 1H9a1 1 0 01-1-1V6a1 1 0 011-1z"/><path d="M23 5v5h5"/><line x1="13" y1="18" x2="24" y2="18"/><line x1="13" y1="23" x2="24" y2="23"/><line x1="13" y1="28" x2="19" y2="28"/><path d="M27 14.5 L31 18.5 L23.5 26 L19.5 26 L19.5 22 Z" opacity="0.55"/></svg></div>
-        <div class="s-title">Logs</div>
-        <div class="s-desc">Your own logs. Running theories, open threads, and whatever each of you writes down between sessions.</div>
-        <div class="s-links">
-          <a class="s-link s-link-all" href="logs/index.html">
-            Open Logs <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-        </div>
+        <a class="s-card-overlay" href="quests/index.html" aria-label="Quest Board"></a>
+        <div class="s-card-head"><div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14v18l-7-4-7 4z"/><path d="M9 8h6M9 12h4"/></svg></div><div class="s-title">Quest Board</div></div>
+        <div class="s-desc">What the crew has taken on, and what is still hanging over them. Threads become quests when someone decides to chase one.</div>
+        <div class="s-links"><a class="s-link" href="quests/index.html#threads">Open Threads</a><a class="s-link s-link-all" href="quests/index.html">Open Board</a></div>
       </div>
 
-      <!-- MANIFEST -->
       <div class="s-card">
         <a class="s-card-overlay" href="crew-manifest/index.html" aria-label="Manifest"></a>
-        <div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21 Q5 18 18 17 Q31 18 33 21 L29 27 Q18 29 7 27 Z"/><path d="M33 21 L36 19"/><line x1="18" y1="17" x2="18" y2="7"/><path d="M18 8 L27 13 L18 17"/><path d="M18 8 L11 13 L18 17"/><path d="M18 27 L18 31 L21 29"/></svg></div>
-        <div class="s-title">Manifest</div>
+        <div class="s-card-head"><div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21 Q5 18 18 17 Q31 18 33 21 L29 27 Q18 29 7 27 Z"/><path d="M33 21 L36 19"/><line x1="18" y1="17" x2="18" y2="7"/><path d="M18 8 L27 13 L18 17"/><path d="M18 8 L11 13 L18 17"/><path d="M18 27 L18 31 L21 29"/></svg></div><div class="s-title">Manifest</div></div>
         <div class="s-desc">Active personnel files — who's aboard, what they can do, and what they're carrying.</div>
-        <div class="s-links">
-          <a class="s-link" href="crew-manifest/index.html">
-            View All Personnel <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-        </div>
+        <div class="s-links"><a class="s-link s-link-all" href="crew-manifest/index.html">View All Personnel</a></div>
       </div>
 
-      <!-- INVENTORY -->
+      <div class="s-card">
+        <a class="s-card-overlay" href="dossiers/index.html" aria-label="Dossiers"></a>
+        <div class="s-card-head"><div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="11" r="4"/><path d="M10 29c0-4.4 3.6-8 8-8s8 3.6 8 8"/><circle cx="7" cy="13" r="3"/><path d="M2 28c0-3.3 2.2-6 5-6"/><circle cx="29" cy="13" r="3"/><path d="M34 28c0-3.3-2.2-6-5-6"/></svg></div><div class="s-title">Dossiers</div></div>
+        <div class="s-desc">Filed profiles on contacts, threats, and figures of significance. Updated as intelligence arrives.</div>
+        <div class="s-links"><a class="s-link" href="dossiers/mirt.html">Mirt the Merciless</a><a class="s-link s-link-all" href="dossiers/index.html">View All Dossiers</a></div>
+      </div>
+
+      <div class="s-card">
+        <a class="s-card-overlay" href="navigation-records/index.html" aria-label="Navigation Records"></a>
+        <div class="s-card-head"><div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="28" height="28" rx="2"/><path d="M4 12 Q18 10 32 12"/><path d="M4 20 Q18 18 32 20"/><path d="M4 28 Q18 26 32 28"/><path d="M12 4 Q10 18 12 32"/><path d="M20 4 Q18 18 20 32"/><path d="M28 4 Q26 18 28 32"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="28" cy="11" r="1" fill="currentColor" stroke="none"/><circle cx="20" cy="19" r="1.8" fill="currentColor" stroke="none"/><circle cx="10" cy="23" r="1" fill="currentColor" stroke="none"/><circle cx="27" cy="25" r="1.2" fill="currentColor" stroke="none"/><line x1="12" y1="12" x2="20" y2="19" opacity="0.5"/><line x1="28" y1="11" x2="20" y2="19" opacity="0.5"/><line x1="20" y1="19" x2="27" y2="25" opacity="0.5"/></svg></div><div class="s-title">Navigation Records</div></div>
+        <div class="s-desc">Charted systems, known routes, and points of interest across the spheres.</div>
+        <div class="s-links"><a class="s-link" href="navigation-records/index.html#viren">Viren System</a><a class="s-link s-link-all" href="navigation-records/index.html">View All Records</a></div>
+      </div>
+
       <div class="s-card">
         <a class="s-card-overlay" href="inventory/index.html" aria-label="Inventory"></a>
-        <div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="20" width="26" height="12" rx="2"/><path d="M5 20 L5 14 Q5 10 18 10 Q31 10 31 14 L31 20"/><path d="M7 20 L7 15 Q7 13 18 13 Q29 13 29 15 L29 20"/><line x1="5" y1="26" x2="31" y2="26"/><rect x="15" y="23" width="6" height="5" rx="1"/><path d="M18 12 L19.2 14 L18 13.4 L16.8 14 Z" fill="currentColor" stroke="none" opacity="0.7"/></svg></div>
-        <div class="s-title">Inventory</div>
+        <div class="s-card-head"><div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="20" width="26" height="12" rx="2"/><path d="M5 20 L5 14 Q5 10 18 10 Q31 10 31 14 L31 20"/><path d="M7 20 L7 15 Q7 13 18 13 Q29 13 29 15 L29 20"/><line x1="5" y1="26" x2="31" y2="26"/><rect x="15" y="23" width="6" height="5" rx="1"/><path d="M18 12 L19.2 14 L18 13.4 L16.8 14 Z" fill="currentColor" stroke="none" opacity="0.7"/></svg></div><div class="s-title">Inventory</div></div>
         <div class="s-desc">Items, artifacts, and materials recovered on operations. Logged on recovery.</div>
-        <div class="s-links">
-          <a class="s-link" href="inventory/entries/crimson-bag-of-holding.html">
-            Crimson Bag of Holding <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-          <a class="s-link s-link-all" href="inventory/index.html">
-            Browse Inventory <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-        </div>
+        <div class="s-links"><a class="s-link" href="inventory/entries/crimson-bag-of-holding.html">Crimson Bag of Holding</a><a class="s-link s-link-all" href="inventory/index.html">Browse Inventory</a></div>
+      </div>
+
+      <div class="s-card">
+        <a class="s-card-overlay" href="logs/index.html" aria-label="Logs"></a>
+        <div class="s-card-head"><div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h14l5 5v21a1 1 0 01-1 1H9a1 1 0 01-1-1V6a1 1 0 011-1z"/><path d="M23 5v5h5"/><line x1="13" y1="18" x2="24" y2="18"/><line x1="13" y1="23" x2="24" y2="23"/><line x1="13" y1="28" x2="19" y2="28"/><path d="M27 14.5 L31 18.5 L23.5 26 L19.5 26 L19.5 22 Z" opacity="0.55"/></svg></div><div class="s-title">Logs</div></div>
+        <div class="s-desc">Your own logs. Running theories, open threads, and whatever each of you writes down between sessions.</div>
+        <div class="s-links"><a class="s-link s-link-all" href="logs/index.html">Open Logs</a></div>
       </div>
 
     </div>
   </section>
 
-  <!-- ══════════ FLEET RECORDS ══════════ -->
   <section class="hub-section">
     <div class="hub-section-head">
       <span class="hub-section-title">Fleet Records</span>
@@ -382,99 +333,38 @@
 
     <div class="card-grid">
 
-      <!-- S.E.A.R.C.H. -->
-      <div class="s-card">
-        <a class="s-card-overlay" href="search/index.html" aria-label="S.E.A.R.C.H."></a>
-        <div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="10"/><path d="M23.5 23.5 L31 31"/><path d="M16 11 L16 21 M11 16 L21 16" opacity="0.45"/></svg></div>
-        <div class="s-title">S.E.A.R.C.H.</div>
-        <div class="s-desc">Standard Enquiry of Assets, Records &amp; Communications. Pull the thread on anything you've heard before.</div>
-        <div class="s-links">
-          <a class="s-link s-link-all" href="search/index.html">
-            Open Terminal <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- DOSSIERS -->
-      <div class="s-card">
-        <a class="s-card-overlay" href="dossiers/index.html" aria-label="Dossiers"></a>
-        <div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="11" r="4"/><path d="M10 29c0-4.4 3.6-8 8-8s8 3.6 8 8"/><circle cx="7" cy="13" r="3"/><path d="M2 28c0-3.3 2.2-6 5-6"/><circle cx="29" cy="13" r="3"/><path d="M34 28c0-3.3-2.2-6-5-6"/></svg></div>
-        <div class="s-title">Dossiers</div>
-        <div class="s-desc">Filed profiles on contacts, threats, and figures of significance. Updated as intelligence arrives.</div>
-        <div class="s-links">
-          <a class="s-link" href="dossiers/mirt.html">
-            Mirt the Merciless <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-          <a class="s-link s-link-all" href="dossiers/index.html">
-            View All Dossiers <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- NAVIGATION RECORDS -->
-      <div class="s-card">
-        <a class="s-card-overlay" href="navigation-records/index.html" aria-label="Navigation Records"></a>
-        <div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="28" height="28" rx="2"/><path d="M4 12 Q18 10 32 12"/><path d="M4 20 Q18 18 32 20"/><path d="M4 28 Q18 26 32 28"/><path d="M12 4 Q10 18 12 32"/><path d="M20 4 Q18 18 20 32"/><path d="M28 4 Q26 18 28 32"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="28" cy="11" r="1" fill="currentColor" stroke="none"/><circle cx="20" cy="19" r="1.8" fill="currentColor" stroke="none"/><circle cx="10" cy="23" r="1" fill="currentColor" stroke="none"/><circle cx="27" cy="25" r="1.2" fill="currentColor" stroke="none"/><line x1="12" y1="12" x2="20" y2="19" opacity="0.5"/><line x1="28" y1="11" x2="20" y2="19" opacity="0.5"/><line x1="20" y1="19" x2="27" y2="25" opacity="0.5"/></svg></div>
-        <div class="s-title">Navigation Records</div>
-        <div class="s-desc">Charted systems, known routes, and points of interest across the spheres.</div>
-        <div class="s-links">
-          <a class="s-link" href="navigation-records/viren-star-system.html">
-            Viren System <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-          <a class="s-link s-link-all" href="navigation-records/index.html">
-            View All Records <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- SPELLJAMMER NEXUS -->
       <div class="s-card">
         <a class="s-card-overlay" href="spelljammer-nexus/index.html" aria-label="Spelljammer Nexus"></a>
-        <div class="s-icon">
-          <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+        <div class="s-card-head"><div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
             <circle cx="18" cy="18" r="14"/><circle cx="18" cy="18" r="8"/>
             <circle cx="18" cy="18" r="2.5" fill="currentColor" stroke="none"/>
             <line x1="18" y1="4" x2="18" y2="10"/><line x1="18" y1="26" x2="18" y2="32"/>
             <line x1="4" y1="18" x2="10" y2="18"/><line x1="26" y1="18" x2="32" y2="18"/>
             <line x1="18" y1="10" x2="14" y2="16"/><line x1="14" y1="16" x2="18" y2="18"/>
             <line x1="18" y1="18" x2="24" y2="12"/>
-          </svg>
-        </div>
-        <div class="s-title">Spelljammer Nexus</div>
+          </svg></div><div class="s-title">Spelljammer Nexus</div></div>
         <div class="s-desc">The reference archive — cosmology, crystal spheres, wildspace, factions, and how the setting fits together.</div>
-        <div class="s-links">
-          <a class="s-link" href="spelljammer-nexus/spelljamming.html">
-            Spelljamming <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-          <a class="s-link" href="spelljammer-nexus/crystal-spheres.html">
-            Crystal Spheres <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-          <a class="s-link s-link-all" href="spelljammer-nexus/index.html">
-            Open Nexus <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-        </div>
+        <div class="s-links"><a class="s-link" href="spelljammer-nexus/spelljamming.html">Spelljamming</a><a class="s-link" href="spelljammer-nexus/crystal-spheres.html">Crystal Spheres</a><a class="s-link s-link-all" href="spelljammer-nexus/index.html">Open Nexus</a></div>
       </div>
 
-      <!-- CORPS PROTOCOLS -->
       <div class="s-card">
         <a class="s-card-overlay" href="handouts/index.html" aria-label="Corps Protocols"></a>
-        <div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4 L30 9 L30 21 Q30 30 18 34 Q6 30 6 21 L6 9 Z"/><path d="M18 7.5 L27 11.5 L27 21 Q27 28 18 31.5 Q9 28 9 21 L9 11.5 Z"/><line x1="18" y1="14" x2="18" y2="26"/><line x1="12" y1="19" x2="24" y2="19"/><circle cx="14.5" cy="15.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="21.5" cy="15.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="14.5" cy="22.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="21.5" cy="22.5" r="0.9" fill="currentColor" stroke="none"/></svg></div>
-        <div class="s-title">Corps Protocols</div>
+        <div class="s-card-head"><div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4 L30 9 L30 21 Q30 30 18 34 Q6 30 6 21 L6 9 Z"/><path d="M18 7.5 L27 11.5 L27 21 Q27 28 18 31.5 Q9 28 9 21 L9 11.5 Z"/><line x1="18" y1="14" x2="18" y2="26"/><line x1="12" y1="19" x2="24" y2="19"/><circle cx="14.5" cy="15.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="21.5" cy="15.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="14.5" cy="22.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="21.5" cy="22.5" r="0.9" fill="currentColor" stroke="none"/></svg></div><div class="s-title">Corps Protocols</div></div>
         <div class="s-desc">How to run a ship — bridge stations, ship systems, and the rules that keep the vessel flying.</div>
-        <div class="s-links">
-          <a class="s-link" href="handouts/ship-mechanics.html">
-            Ship Mechanics <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-          <a class="s-link" href="handouts/crew-roles.html">
-            Bridge Crew Roles <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-          <a class="s-link s-link-all" href="handouts/index.html">
-            View All Protocols <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </a>
-        </div>
+        <div class="s-links"><a class="s-link" href="handouts/ship-mechanics.html">Ship Mechanics</a><a class="s-link" href="handouts/crew-roles.html">Bridge Crew Roles</a><a class="s-link s-link-all" href="handouts/index.html">View All Protocols</a></div>
       </div>
+
+      <div class="s-card">
+        <a class="s-card-overlay" href="search/index.html" aria-label="S.E.A.R.C.H."></a>
+        <div class="s-card-head"><div class="s-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="10"/><path d="M23.5 23.5 L31 31"/><path d="M16 11 L16 21 M11 16 L21 16" opacity="0.45"/></svg></div><div class="s-title">S.E.A.R.C.H.</div></div>
+        <div class="s-desc">Standard Enquiry of Assets, Records &amp; Communications. Pull the thread on anything you've heard before.</div>
+        <div class="s-links"><a class="s-link s-link-all" href="search/index.html">Open Terminal</a></div>
+      </div>
+
     </div>
   </section>
+
+  
 
   <div class="hub-footer">
     <b>Caelestis</b> &nbsp;·&nbsp; A Spelljammer Campaign &nbsp;·&nbsp; <a href="index.html">Return to the gate</a>
@@ -487,42 +377,13 @@
   // data/voyage.js is the voyage registry — keep the card on the latest entry.
   if (window.CAELESTIS_VOYAGES && CAELESTIS_VOYAGES.length) {
     var latest = CAELESTIS_VOYAGES[CAELESTIS_VOYAGES.length - 1];
-    var el = document.querySelector('#voyages-links .s-link');
+    var el = document.querySelector('#voyages-links .s-link') ||
+             document.querySelector('.s-links .s-link');
     if (el && latest.path) {
       el.setAttribute('href', latest.path);
-      el.firstChild.nodeValue = '\n            Voyage ' + latest.num + ' ';
+      el.textContent = 'Voyage ' + latest.num;
     }
   }
-
-  // The Crew Operations band reads the same file the command bar does, so
-  // the two can never disagree. Missing data leaves the card off entirely
-  // rather than showing em-dashes.
-  var b = window.CAELESTIS_BEARING;
-  var card = document.getElementById('js-hub-bearing');
-  if (!card) return;
-  if (!b) { card.hidden = true; return; }
-
-  function set(key, html) {
-    var el = card.querySelector('[data-bearing="' + key + '"]');
-    if (el) el.innerHTML = html;
-  }
-  function esc(s) {
-    return String(s == null ? '' : s)
-      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  }
-
-  set('position', esc(b.position) +
-    (b.posNote ? ' <span class="bearing-note">' + esc(b.posNote) + '</span>' : ''));
-  set('voyage', ('00' + b.voyage).slice(-3) + ' \u00b7 ' + esc(b.title));
-  set('outstanding', esc(b.outstanding));
-
-  var quests = (b.detail && b.detail.quests) || [];
-  set('quests', quests.map(function (q) {
-    return '<span class="bearing-quest">' + esc(q.name) +
-           '<span class="bearing-prog">' + esc(q.progress) + '</span></span>';
-  }).join(''));
-
-  if (b.links && b.links.bearing) card.setAttribute('href', b.links.bearing);
 })();
 </script>
 </body>

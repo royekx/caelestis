@@ -231,3 +231,112 @@ and the truncated demo descriptions replaced with the full text from
 Dossiers had no `.board-body` and the Crew Manifest had its search field inside
 `.facets` rather than above it. Both now follow the Inventory demo:
 `.board-body > .search-row > .facets > .result-line > .register`.
+
+---
+
+# Third pass — against the screenshots
+
+## The command bar sticks again
+
+Read "should scroll with the page" as "should not be sticky" and made it
+`position: relative`. Wrong call — the hub demo is sticky, and sticky *is*
+travelling down the page and parking at the top. Restored, with the overflow
+guards from the second pass kept.
+
+## The hub is the demo now
+
+Rather than patching toward it, `hub.html` is the demo's markup and the demo's
+stylesheet, with the repo's script wiring re-attached.
+
+That means the condensed card: `.s-card-head` putting icon and title on one
+row, description clamped to two lines, links wrapping instead of forcing card
+width. The tall centred card it replaces was hub-local CSS that predated the
+migration into `entity.css`.
+
+It also means **no Crew Operations band**. The demo goes header → command bar →
+Crew Intel → Fleet Records. The helm and the scheduler are in the command bar
+on every page, so the band was showing the same two things twice. That settles
+the judgment call left open two passes ago.
+
+## The Quest Board
+
+Section 2 of `register.css` is the voyage index verbatim, and a voyage row
+leads with a 70px `.log-num` plate — `grid-template-columns: 70px 1fr auto`. A
+quest row has no plate: its three children are the title, the objective count
+and the open link. So every quest title inherited the 70px column and wrapped
+one letter per line, and the row's min-content width set the page's scroll
+width. That is both the broken rendering and the remaining overflow.
+
+Scoped in Section 5. Quest rows get `minmax(0, 1fr) auto auto`; voyage rows
+keep the plate.
+
+## The survey chart
+
+The demo's survey was a wide strip. The chart on file is a tall poster, so at
+`width: 100%` it ran most of a screen before the register came into view.
+Capped at 360px and centred, in Section 6.
+
+This is a stopgap. Merging the survey with the location records is a design
+question, not a CSS one — it needs deciding before it needs building.
+
+## The FIA gate
+
+The gate was drawing a CSS starfield where the demo has the lattice survey
+grid. Extracted to `assets/fia-lattice.jpg` (116KB) rather than left inline,
+with the demo's veil over it — a radial gradient holding text contrast steady,
+since the lattice runs bright along its filaments. `html` carries the fallback
+colour because an opaque `body` fill would paint over `body::before`.
+
+Note this is **not** the existing `assets/lattice.jpg`, which is a different
+image and is left alone.
+
+---
+
+# Fourth pass — portraits, and one click
+
+## Why no portrait ever loaded
+
+Not a Drive problem and not a sharing problem — the files are shared with
+`anyone: reader`, and checked. **No page ever had an `<img>` in it.** Every
+`portrait-frame` and every register face held a monogram.
+
+`build-pages.js` was what rendered portraits, from the map in
+`scripts/portraits.js`. The scaffolder is benched, so nothing has rendered them
+since. The pages are static now, so the portraits are baked in: fifteen entity
+pages, and the register rows on Dossiers and the Manifest.
+
+Two were missing from the map entirely — **Ostekk-6** and **Pffred**, both
+present in the Drive folder. Added to `scripts/portraits.js` and baked. That
+brings the Dossiers index to eight faces.
+
+The Drive folder holds eight NPC portraits in total; all eight are now on the
+site. Anyone added later needs a line in `portraits.js` *and* a bake, until the
+pipeline comes back.
+
+## One click, not two
+
+A row expanded to reveal an account and an "Open ›" link you then had to click.
+Two clicks to reach a page, and the first one told you almost nothing.
+
+Now the account is on the row and the row is the link. Applied to Dossiers,
+Navigation Records, Inventory and the Manifest. The `Open ›` links are gone —
+the row carries their href.
+
+Rows with no record behind them — the charted-but-unreached worlds, the
+named-but-unfiled NPCs — render as `.ent-row.is-unlinked`: same layout, no
+hover, no cursor. Their account still shows.
+
+Filtering is what shrinks the list, as you said. Blurbs clamp to three lines so
+twenty open rows still scan; the row selected on the chart un-clamps.
+
+`ui.js` no longer toggles `.ent-detail` when the chart selects a body, and the
+inline filter scripts no longer collapse rows they hide — both would have shut
+the accounts that are now meant to stay open.
+
+### One thing to watch
+
+The clickable area is the row header — face, name, meta. The account below it
+is not part of the anchor, because it contains its own links (the "In orbit"
+chips under Toril, the sites under Caelestis) and anchors cannot nest. If the
+blurb should be clickable too, that wants an overlay anchor and a pass over
+those chips.
