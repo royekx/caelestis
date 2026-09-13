@@ -471,3 +471,17 @@ a.ent-row:hover .ent-name { color: var(--gold-light); }
 .board-tabs { max-width: 100%; }
 .chart-wrap { max-width: 100%; }
 img { max-width: 100%; }
+
+/* ─────────────────────────────────────────────────────────────────
+   SECTION 10 — ENTRY vs OBJECT
+   Most entries are a ledger record only. Where the crew can actually
+   read the thing, the ledger row says so. The entry-page half of this
+   pair lives in entity.css — no entry page loads this sheet.
+   ───────────────────────────────────────────────────────────────── */
+.readable-badge {
+  font-family: 'Cinzel', serif; font-size: 0.52rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold-dim);
+  border: 1px solid var(--gold-rule); border-radius: 999px;
+  padding: 0.1rem 0.5rem; margin-left: 0.5rem; vertical-align: 0.15em;
+  white-space: nowrap;
+}

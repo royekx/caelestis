@@ -135,6 +135,15 @@ html { overflow-x: clip; }
   border-bottom: 1px solid var(--rule); width: 100%;
 }
 
+/* ── ENTRY vs OBJECT ──
+   Most entries are a ledger record only. Where the crew can actually read
+   the thing, the entry carries a block through to it, marked off from the
+   ordinary connections card by the gold rule. The matching ledger-row badge
+   lives in register.css; these rules are here because entry pages load
+   entity.css and never load register.css. */
+.xref-card.the-object { border-left: 3px solid var(--gold); }
+.xref-card.the-object .stub-desc { margin: 0.6rem 0 0.8rem; }
+
 /* ── NAV BAR ──
    caelestis.css sets flex-shrink:0 and nowrap on prev/next links, so a
    long entity name pushes the bar off-screen on mobile. */

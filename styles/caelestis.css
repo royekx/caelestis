@@ -76,7 +76,7 @@ body {
 /* Fixed starfield behind every page. */
 body::before {
   content: ''; position: fixed; inset: 0; z-index: -2;
-  background: url('../assets/nebula.jpg') center / cover no-repeat;
+  background: url('../assets/astral.jpg') center / cover no-repeat;
 }
 /* Only the faintest vignette at the very edge — the nebula should read at
    full contrast. Panels carry their own opacity instead of relying on a
@@ -312,13 +312,23 @@ body.with-sidebar .page-content {
   max-width: 100%;
   padding: 0 3rem;
 }
+/* One column width across the whole site.
+
+   This used to be max-width:100%, which let every page but the hub run to the
+   edge of whatever monitor it was opened on. The hub reads better because it
+   has always been bounded. --column is that bound, and the header, the content
+   and the command bar all sit inside it.
+
+   It is a min(), not a fixed width — the column still gives back space on a
+   laptop, it just stops growing once lines get too long to scan. */
+:root { --column: min(1180px, 100%); }
 body.with-sidebar .content {
-  max-width: 100%;
-  margin: 0;
+  max-width: var(--column);
+  margin: 0 auto;
 }
 /* Page header stays contained and centred within the content area */
 body.with-sidebar .page-header {
-  max-width: 780px;
+  max-width: var(--column);
   margin-left: auto;
   margin-right: auto;
 }
@@ -865,9 +875,12 @@ body.with-sidebar .page-header {
      keep it inside the column. Without them the bearing values set the strip's
      min-content width and pushed the whole bar past the page edge. */
   position: sticky; top: 0; z-index: 150;
-  background: rgba(12, 17, 28, 0.97);
+  /* Brass, not a second blue. The registers and panels below it are all
+     ice-toned; when the bar was too, it read as another panel rather than as
+     the thing that sits above them. */
+  background: linear-gradient(180deg, rgba(26, 18, 9, 0.97), rgba(18, 13, 7, 0.97));
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--rule);
+  border: 1px solid var(--gold-rule);
   border-left: 3px solid var(--gold);
   margin: 0 0 2.2rem;
   max-width: 100%; min-width: 0; overflow: hidden;
@@ -877,9 +890,9 @@ body.with-sidebar .page-header {
 /* ── Global search ── */
 .cb-search {
   display: flex; align-items: center; gap: 0.7rem;
-  padding: 0.6rem 1.1rem; border-bottom: 1px solid var(--rule-soft);
+  padding: 0.6rem 1.1rem; border-bottom: 1px solid var(--gold-rule);
 }
-.cb-search svg { width: 14px; color: var(--text-muted); flex-shrink: 0; }
+.cb-search svg { width: 14px; color: var(--gold-dim); flex-shrink: 0; }
 .cb-search input {
   flex: 1; min-width: 0; background: none; border: none; outline: none;
   color: var(--text); font-family: 'Crimson Pro', serif;
@@ -894,13 +907,13 @@ body.with-sidebar .page-header {
 .cb-search:focus-within svg, .cb-search:focus-within .cb-search-tag { color: var(--gold); }
 
 /* ── Operations ── */
-.cb-ops { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-bottom: 1px solid var(--rule-soft); }
+.cb-ops { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-bottom: 1px solid var(--gold-rule); }
 .cb-op {
   display: flex; align-items: baseline; gap: 0.6rem; min-width: 0;
   padding: 0.55rem 1.1rem; text-decoration: none;
   transition: background .18s, color .18s;
 }
-.cb-op + .cb-op { border-left: 1px solid var(--rule-soft); }
+.cb-op + .cb-op { border-left: 1px solid var(--gold-rule); }
 .cb-op:hover { background: var(--gold-faint); }
 .cb-op-name {
   font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.16em;
@@ -922,7 +935,7 @@ body.with-sidebar .page-header {
   padding: 0.65rem 1.1rem; text-decoration: none;
   transition: background .18s;
 }
-.cb-face:hover { background: var(--bg-raised); }
+.cb-face:hover { background: rgba(192, 134, 82, 0.10); }
 .cb-label {
   font-family: 'Cinzel', serif; font-size: 0.56rem; letter-spacing: 0.18em;
   text-transform: uppercase; color: var(--gold); white-space: nowrap;
@@ -940,17 +953,17 @@ body.with-sidebar .page-header {
 .cb-face:hover .cb-val { color: var(--gold-light); }
 
 .cb-expand {
-  flex-shrink: 0; width: 44px; border: none; border-left: 1px solid var(--rule-soft);
-  background: transparent; color: var(--ice-dim); cursor: pointer;
+  flex-shrink: 0; width: 44px; border: none; border-left: 1px solid var(--gold-rule);
+  background: transparent; color: var(--gold-dim); cursor: pointer;
   display: flex; align-items: center; justify-content: center; transition: color .18s, background .18s;
 }
 .cb-expand svg { width: 12px; transition: transform .2s; }
-.cb-expand:hover { color: var(--ice); background: var(--ice-faint); }
+.cb-expand:hover { color: var(--gold-light); background: var(--gold-faint); }
 .cb-expand[aria-expanded="true"] svg { transform: rotate(180deg); }
 
 /* ── Expanded detail ── */
 .cb-detail {
-  padding: 0.9rem 1.1rem 1rem; border-top: 1px solid var(--rule-soft);
+  padding: 0.9rem 1.1rem 1rem; border-top: 1px solid var(--gold-rule);
   display: flex; flex-direction: column; gap: 0.75rem;
 }
 .cb-detail[hidden] { display: none; }
@@ -960,7 +973,7 @@ body.with-sidebar .page-header {
 .cb-quest, .cb-chip {
   display: inline-flex; align-items: baseline; gap: 0.45rem;
   font-size: 0.85rem; padding: 0.16rem 0.68rem; border-radius: 999px;
-  border: 1px solid var(--rule); background: var(--bg-raised);
+  border: 1px solid var(--gold-rule); background: rgba(192, 134, 82, 0.07);
   color: var(--text-dim); text-decoration: none; transition: border-color .18s, color .18s;
 }
 .cb-quest:hover, .cb-chip:hover { border-color: var(--ice-dim); color: var(--ice); }

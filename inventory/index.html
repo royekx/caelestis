@@ -40,7 +40,7 @@
       <button class="board-tab is-active" type="button" data-class="all">All Items <span class="board-count">11</span></button>
       <button class="board-tab" type="button" data-class="magic-item">Magic Items</button>
       <button class="board-tab" type="button" data-class="mundane">Mundane</button>
-      <button class="board-tab" type="button" data-class="evidence">Evidence &amp; Documents</button>
+      <button class="board-tab" type="button" data-class="evidence document">Evidence &amp; Documents</button>
     </div>
     <div class="board-body">
       <div class="search-row" data-pagefind-ignore>
@@ -52,10 +52,10 @@
       </div>
       <div class="result-line"><span class="result-count">11 on record</span><button class="clear-btn" type="button" hidden>Clear filters</button></div>
       <div class="register" data-pagefind-ignore>
-<div class="ent item-row" data-class="document" data-type="curiosity" data-rarity="" data-name="collection manifest">
+<div class="ent item-row is-readable" data-class="document" data-type="curiosity" data-rarity="" data-name="collection manifest">
             <a class="ent-row" href="entries/collection-manifest.html">
             <span class="ent-face document"><span class="face-mono">C</span></span>
-            <span class="ent-name">Collection Manifest<span class="ent-sub">Cargo manifest</span></span>
+            <span class="ent-name">Collection Manifest <span class="readable-badge">Readable</span><span class="ent-sub">Cargo manifest</span></span>
             <span class="ent-type">Curiosity</span>
             <span class="ent-rarity"></span>
             <span class="ent-state">The Tyrant Ship</span>
@@ -179,7 +179,7 @@
   var search = document.querySelector('.search-input');
   var rarityFacet = document.querySelector('[data-rarity-facet]');
   function match(r) {
-    return (state.cls === 'all' || r.dataset.class === state.cls)
+    return (state.cls === 'all' || state.cls.split(' ').indexOf(r.dataset.class) !== -1)
         && (!state.type || r.dataset.type === state.type)
         && (!state.rarity || r.dataset.rarity === state.rarity)
         && (!state.q || r.dataset.name.indexOf(state.q) !== -1);
@@ -192,7 +192,7 @@
     rarityFacet.hidden = !(state.cls === 'all' || state.cls === 'magic-item');
     pills.forEach(function (p) {
       var attr = p.dataset.type ? 'type' : 'rarity', val = p.dataset.type || p.dataset.rarity;
-      var any = Array.prototype.some.call(rows, function (r) { return (state.cls === 'all' || r.dataset.class === state.cls) && r.dataset[attr] === val; });
+      var any = Array.prototype.some.call(rows, function (r) { return (state.cls === 'all' || state.cls.split(' ').indexOf(r.dataset.class) !== -1) && r.dataset[attr] === val; });
       p.hidden = !any;
       if (!any && p.classList.contains('is-active')) { p.classList.remove('is-active'); state[attr] = null; }
     });
