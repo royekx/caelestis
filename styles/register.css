@@ -412,3 +412,62 @@ a.ent-row:hover .ent-name { color: var(--gold-light); }
 .ent-face img {
   width: 100%; height: 100%; object-fit: cover; display: block;
 }
+
+/* ─────────────────────────────────────────────────────────────────
+   SECTION 8 — THE REFERENCE LISTS
+   Spelljammer Nexus and Corps Protocols build their own rows. They
+   now sit on the same panel as every other listing rather than
+   floating on the backdrop.
+   ───────────────────────────────────────────────────────────────── */
+.board-body > .nexus-list,
+.board-body > .protocol-list { margin: 0; }
+.board-body .nexus-entry,
+.board-body .protocol-card {
+  border-bottom: 1px solid var(--rule);
+  transition: background .18s;
+}
+.board-body .nexus-entry:last-child,
+.board-body .protocol-card:last-child { border-bottom: none; }
+.board-body .nexus-entry:hover,
+.board-body .protocol-card:hover { background: var(--ice-faint); }
+
+/* ── Bigger faces ──
+   34px read as a stamp beside two lines of type. The row is two lines
+   tall; the portrait should be too. */
+.npc-row .ent-row,
+.item-row .ent-row,
+.crew-row .ent-row { grid-template-columns: 52px minmax(0, 1fr) auto auto; }
+.ent-face { width: 52px; height: 52px; }
+.ent-face .face-mono { font-size: 1.25rem; }
+.npc-row .ent-detail,
+.item-row .ent-detail,
+.crew-row .ent-detail { padding-left: calc(1.1rem + 52px + 0.85rem); }
+
+@media (max-width: 760px) {
+  .npc-row .ent-row,
+  .item-row .ent-row,
+  .crew-row .ent-row { grid-template-columns: 40px minmax(0, 1fr) auto; }
+  .ent-face { width: 40px; height: 40px; }
+  .npc-row .ent-detail,
+  .item-row .ent-detail,
+  .crew-row .ent-detail { padding-left: 0.9rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   SECTION 9 — NOTHING SETS ITS OWN WIDTH
+   Anything in a page column that can report a min-content width wider
+   than the column will push the page sideways. With overflow-x:clip on
+   html that no longer scrolls, but it still clips — so the guards go
+   on the elements themselves.
+   ───────────────────────────────────────────────────────────────── */
+.page-content, .content, .board-panels, .board-panel, .board-body,
+.register, .ent, .log-table, .log-entry, .facets, .facet-pills,
+.nexus-list, .protocol-list { min-width: 0; max-width: 100%; }
+
+.ent-name, .log-title, .stub-desc, .ent-sub,
+.nexus-entry-name, .nexus-entry-sub,
+.protocol-title, .protocol-desc { min-width: 0; overflow-wrap: anywhere; }
+
+.board-tabs { max-width: 100%; }
+.chart-wrap { max-width: 100%; }
+img { max-width: 100%; }

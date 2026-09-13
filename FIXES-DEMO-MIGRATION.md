@@ -340,3 +340,81 @@ is not part of the anchor, because it contains its own links (the "In orbit"
 chips under Toril, the sites under Caelestis) and anchors cannot nest. If the
 blurb should be clickable too, that wants an overlay anchor and a pass over
 those chips.
+
+---
+
+# Fifth pass — the sticky bar, the overlay, and the filter
+
+## Why the command bar never stuck
+
+`board.css` and `entity.css` both opened with `html, body { overflow-x: hidden }`.
+
+`overflow-x: hidden` on `body` makes the body a scroll container, and a scroll
+container silently breaks `position: sticky` on everything inside it. The rule
+was there to hide sideways scroll — so it was hiding the overflow *and*
+disabling the fix for it at the same time.
+
+Both now use `html { overflow-x: clip }`. Clip stops the sideways scroll
+without creating a scroll container, so sticky works.
+
+Section 9 of `register.css` then puts `min-width: 0` and `max-width: 100%` on
+every page column, panel, register and row, because clip stops the scrollbar
+but still clips — the guards have to go on the elements themselves.
+
+## The Navigation Records overlay
+
+Broken markup, and mine. Rebuilding the register last pass left it **ten
+`</div>` heavier than it should have been**, so the panel closed early and the
+rows after it rendered on the page backdrop instead of inside the card.
+
+Two regex mistakes stacked up. The extractor matched `<div class="ent"` exactly,
+which skipped every `is-unknown` row; and the detail was pulled with a greedy
+`([\s\S]*)</div>` that swallowed the detail's own closing tag. Both replaced
+with a depth-counting slice. All eleven rows are back and the page balances at
+50 `<div>` / 50 `</div>`.
+
+Every page is now checked for `<div>` balance. All 132 balance.
+
+## The Dossiers filter
+
+Reproduced exactly as described: location, then affiliation, then location
+again, and the list empties with a pill still lit.
+
+The old script recomputed which pills were still reachable on every pass, and
+in that loop it could clear an axis whose pill it had just decided to hide.
+State and pills then disagreed, and the filter ran against a value nothing
+carried.
+
+Rewritten: two axes, one value each, pills reflect state rather than steering
+it. The count and the empty line carry the feedback the pill-hiding was
+attempting. Walked through the failing sequence and the one after it —
+20 → 2 → 0 → 1 → 20.
+
+That 0 is real, incidentally. Nobody is filed under both the Caelestis location
+and the bare Caelestis affiliation.
+
+## The FIA gate
+
+The backdrop was in place and still invisible. `body` kept
+`background: #030208`, which is opaque and paints straight over `body::before`
+at `z-index: -2`. I wrote a comment about exactly this last pass and then left
+the rule in. Removed; `html` holds the fallback colour.
+
+## Portraits
+
+34px read as a stamp next to two lines of type. The row is two lines tall, so
+the portrait is now 52px (40px under 760px), with the account indented to line
+up under the name rather than under the face.
+
+## The Nexus and Corps Protocols
+
+Neither loaded `entity.css`, `board.css` or `register.css` — they had
+`caelestis.css` alone, so their rows sat on the backdrop with no panel. Both
+now load the shared sheets and wrap their list in `.board-body`, with row
+separators and hover to match the registers.
+
+## Left alone, deliberately
+
+The eleven pages behind the FIA gate render the command bar without a bearing
+strip. They are a separate security context with their own chrome, so that may
+well be right — but say the word and they get the strip like everything else.

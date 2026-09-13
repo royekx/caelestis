@@ -233,42 +233,64 @@
 </div>
 <script>
 (function () {
-  var state = { loc: null, fac: null, q: '' };
-  var pills = document.querySelectorAll('.filter-tag');
-  var rows = document.querySelectorAll('.npc-row');
-  var clear = document.querySelector('.clear-btn');
-  var count = document.querySelector('.result-count');
-  var none = document.querySelector('.no-results');
+  'use strict';
+  /* Two independent axes: location and affiliation. Each holds at most one
+     value, and clicking the active pill clears that axis.
+
+     The version this replaces recomputed which pills were still reachable on
+     every pass and cleared an axis whose pill it had just decided to hide.
+     With both axes set, selecting and deselecting a location could leave the
+     state and the pills disagreeing, and the list came back empty with a pill
+     still lit. Pills are static now — the count and the empty line carry the
+     feedback instead. */
+  var rows   = Array.prototype.slice.call(document.querySelectorAll('.npc-row'));
+  var pills  = Array.prototype.slice.call(document.querySelectorAll('.filter-tag'));
   var search = document.querySelector('.search-input');
-  function has(el, attr, val) { return (el.dataset[attr] || '').split(' ').indexOf(val) !== -1; }
+  var count  = document.querySelector('.result-count');
+  var none   = document.querySelector('.no-results');
+  var clear  = document.querySelector('.clear-btn');
+  var state  = { loc: null, fac: null, q: '' };
+
+  function axisOf(p) { return p.dataset.loc ? 'loc' : 'fac'; }
+  function valueOf(p) { return p.dataset.loc || p.dataset.fac; }
+  function has(el, axis, val) {
+    return (el.dataset[axis] || '').split(' ').indexOf(val) !== -1;
+  }
+
   function apply() {
     var n = 0;
     rows.forEach(function (r) {
-      var ok = (!state.loc || has(r, 'loc', state.loc)) && (!state.fac || has(r, 'fac', state.fac))
-            && (!state.q || r.dataset.name.indexOf(state.q) !== -1);
-      r.hidden = !ok; if (ok) n++;
+      var ok = (!state.loc || has(r, 'loc', state.loc)) &&
+               (!state.fac || has(r, 'fac', state.fac)) &&
+               (!state.q   || (r.dataset.name || '').indexOf(state.q) !== -1);
+      r.hidden = !ok;
+      if (ok) n++;
     });
-    count.textContent = n + ' on record'; none.hidden = n > 0;
-    clear.hidden = !state.loc && !state.fac && !state.q;
     pills.forEach(function (p) {
-      var attr = p.dataset.loc ? 'loc' : 'fac', val = p.dataset.loc || p.dataset.fac;
-      var any = Array.prototype.some.call(rows, function (r) { return has(r, attr, val); });
-      p.hidden = !any;
-      if (!any && p.classList.contains('is-active')) { p.classList.remove('is-active'); state[attr] = null; }
+      p.classList.toggle('is-active', state[axisOf(p)] === valueOf(p));
     });
+    if (count) count.textContent = n + ' on record';
+    if (none)  none.hidden = n > 0;
+    if (clear) clear.hidden = !(state.loc || state.fac || state.q);
   }
+
   pills.forEach(function (p) {
     p.addEventListener('click', function () {
-      var attr = p.dataset.loc ? 'loc' : 'fac', val = p.dataset.loc || p.dataset.fac;
-      state[attr] = state[attr] === val ? null : val;
-      pills.forEach(function (o) { var oa = o.dataset.loc ? 'loc' : 'fac', ov = o.dataset.loc || o.dataset.fac; o.classList.toggle('is-active', state[oa] === ov); });
+      var axis = axisOf(p), val = valueOf(p);
+      state[axis] = state[axis] === val ? null : val;
       apply();
     });
   });
-  search.addEventListener('input', function () { state.q = search.value.trim().toLowerCase(); apply(); });
-  clear.addEventListener('click', function () { state = { loc: null, fac: null, q: '' }; search.value = ''; pills.forEach(function (p) { p.classList.remove('is-active'); }); apply(); });
-  // Row expansion is wired once, in scripts/ui.js. Binding it here as well
-  // toggled every row twice, which read as rows that would not open at all.
+  if (search) search.addEventListener('input', function () {
+    state.q = search.value.trim().toLowerCase();
+    apply();
+  });
+  if (clear) clear.addEventListener('click', function () {
+    state = { loc: null, fac: null, q: '' };
+    if (search) search.value = '';
+    apply();
+  });
+
   apply();
 })();
 </script>
