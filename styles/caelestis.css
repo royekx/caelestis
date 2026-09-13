@@ -207,6 +207,14 @@ body::after {
    So any page with an entry header gets a real panel behind its content:
    the blue fill, a rule, a hard edge. :has() picks them up without a class
    on the markup; .content.is-panel forces it where the header is absent. */
+/* On an entity page the scrim is not a scrim — it is the panel the record
+   sits on, and it is visible. It used to bleed 2rem past .content on each
+   side, which made it wider than the command bar above it. The bar carries
+   the column width exactly, so the two never lined up.
+
+   Horizontal inset is 0 now: the panel is the column, the same width as the
+   bar and as the listing panels on every other page. .content's own 2.5rem
+   padding keeps the record off the panel edge, so nothing moves inward. */
 body:has(.entry-header) .content::before,
 body:has(.doc-paper) .content::before,
 .content.is-panel::before {
@@ -214,11 +222,11 @@ body:has(.doc-paper) .content::before,
   border: 1px solid var(--rule);
   border-radius: 0;
   box-shadow: 0 18px 50px rgba(3, 5, 10, 0.45);
-  inset: -1.75rem -2rem;
+  inset: -1.75rem 0;
 }
 @media (max-width: 620px) {
   body:has(.entry-header) .content::before,
-  .content.is-panel::before { inset: -0.9rem -1rem; }
+  .content.is-panel::before { inset: -0.9rem 0; }
 }
 
 

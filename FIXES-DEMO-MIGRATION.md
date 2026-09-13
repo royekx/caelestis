@@ -602,3 +602,169 @@ immediately by the column it heads.
 
 S.E.A.R.C.H. keeps the bar inside `.terminal-wrap`; that page has no `.content`
 and no scrim, so there is nothing to sit outside of.
+
+---
+
+# Tenth pass — wrapping, and a side-tab demo
+
+## The identity card
+
+`caelestis.css` already carried the fix for this — keys that never wrap, values
+that drop to their own full-width line rather than colliding. It was scoped to
+`.stat-list`. The pages use `.stat-card`. So it never applied, and at the old
+root size the values happened to fit anyway.
+
+At 118% they stopped fitting, and long ones ran out of the column: *Caelestis
+Academy (sky dock)* clipped mid-word.
+
+Section 13 of `register.css` applies the same rule to `.stat-card`, and the
+portrait column goes 196px → 224px to match the larger type. 43 values longer
+than about 26 characters are marked `stat-val-long` and take their own line.
+
+## Side tabs — demo only
+
+`quest-board-side-tabs-demo.html`, built from the live Quest Board rather than
+mocked, so what you are looking at is the real page with the rail swapped in.
+It opens on its own — the four stylesheets and the backdrop are inlined.
+
+The change is about 40 lines. `.board-tabs` stops being a row above the panel
+and becomes a 200px rail beside it, `position: sticky` at `top: 8.5rem` so it
+clears the command bar and stays in reach while a long board scrolls. The
+active tab bleeds one pixel into the panel so the two read as one surface,
+and the panel's radius moves to `0 12px 12px 12px`.
+
+Under 820px the rail costs more than it gives, so the tabs go back across the
+top and the panel takes the full width.
+
+Nothing in the site itself changed. If it works, the same rail drops onto
+Navigation Records and Inventory — both already use `.board-tabs` and
+`.board-panel`, so it is the same wrapper and the same block of CSS.
+
+---
+
+# Eleventh pass — the demo that broke, and a voyage rail
+
+## Why the first demo rendered as source code
+
+`scripts/nav.js` contains two literal `</script>` strings inside its HTML
+builders. An HTML parser ends a `<script>` block at the first `</script` it
+sees — anywhere, including inside a quoted JavaScript string. So the block
+closed early and the rest of nav.js was parsed as page content, which is the
+`', sectionLinks, '` and `var EXT_ICON = '` in the screenshot.
+
+Inlined scripts now have `</` escaped to `<\/`, which is identical to the
+engine and invisible to the parser. Both demos are checked for a bare
+`</script` inside a script block, and for script source reaching the page as
+visible text. Neither has any.
+
+## Two demos now
+
+Both built from the live pages, not mocked, and both open standalone —
+stylesheets and backdrop inlined.
+
+- `demo-quest-board-side-tabs.html` — Quests / Threads / Closed
+- `demo-voyage-side-tabs.html` — Voyage 004: Brief / Full / Recording
+
+The rail is one shared block of CSS keyed off two classes, `.railed` on the
+wrapper and `.tabrail` on the tab container. It does not care whether the tabs
+inside are `.board-tab` or `.account-tab`, which is what let the voyage page
+take it without changes.
+
+Two variables sit at the top: `--rail` for its width and `--rail-top` for how
+far down the sticky rail parks. `--rail-top` is measured to clear the command
+bar's three bands — the number to change if the bar ever gains or loses one.
+
+The voyage rail differs in one way. A voyage tab carries a name *and* a note
+("What happened, beat by beat"), and the top row hides the note under 640px for
+want of width. The rail has the height instead, so it stacks them and the note
+stays.
+
+Under 820px both fall back to tabs across the top.
+
+Still demo-only. Nothing in the site changed.
+
+---
+
+# Twelfth pass — the voyage demo, properly
+
+Two faults, both mine, both in how the demo was assembled rather than in the
+rail itself.
+
+**Index arithmetic again.** I sliced the panels block by searching for a
+closing string instead of counting depth, and came up two `</div>` heavy. The
+grid collapsed, the rail sat on top of the panel and the account ran underneath
+it. This is the same mistake that broke the Navigation Records register a few
+passes back, made the same way.
+
+Both demos are now cut with a depth-counting `element()` helper, and each is
+checked for `<div>` balance as it is written. Quest Board 33/33, voyage 32/32.
+
+**The page's own stylesheet was left out.** Voyage records carry an inline
+`<style>` holding `.brief-heading`, `.brief-list` and `.account-body` — the
+structure of the account itself. Only the four shared sheets were inlined, so
+the account rendered as unstyled prose with its headings indistinguishable from
+its bullets.
+
+The builder now inlines the source page's own `<style>` blocks after the shared
+sheets. `.brief-heading` is confirmed present in the voyage demo and absent
+from the Quest Board demo, which is correct — the Quest Board does not have one.
+
+Both demos verified end to end: rail and panels are grid children, three tabs
+and three panels each, every tab switches, the sidebar and command bar build,
+and no script source reaches the page as text.
+
+---
+
+# Thirteenth pass — the rail folded in, and the bar made uniform
+
+## Why the bar never matched on entity pages
+
+On a listing page `.content::before` is a scrim — a dark blur behind the page's
+material. On an entity page the same pseudo-element becomes the **panel**: card
+background, border, shadow. And it was inset `-1.75rem -2rem`, bleeding 2rem
+past `.content` on each side.
+
+The command bar carries the column width exactly. The panel was the column plus
+4rem. They were never going to line up.
+
+Horizontal inset is 0 now, so the panel *is* the column — the same width as the
+bar above it and as the listing panels everywhere else. `.content` keeps its own
+2.5rem padding, so the record itself does not move; only the panel edge does.
+
+## The identity card, again
+
+Section 13 widened the column to 224px and let values wrap. Not enough: a key
+like AFFILIATION is `nowrap` and eats most of that column, so even a short value
+had nothing left to wrap into and clipped mid-word.
+
+Side-by-side was never going to hold at that width. Section 14 stacks them —
+key on its own line, value beneath it, left-aligned and free to wrap. Nothing
+can clip at any root size.
+
+A quest is the exception: it has no portrait, so its stat card is the full page
+column, where key-beside-value still reads better. That case is carved out.
+
+## The rail is in
+
+Section 15 of `register.css`, same two hooks as the demo — `.railed` on the
+wrapper, `.tabrail` on the tab container. Applied to:
+
+- **Quest Board** — Quests / Threads / Closed
+- **Navigation Records** — Realmspace / Viren
+- **Voyages 001–004** — Brief / Full / Recording
+
+Every one was wrapped with the depth-counting slice and checked for `<div>`
+balance as it was written. All balance, all switch panels, all keep their
+command bar.
+
+**Inventory is railed too.** I skipped it first time on bad reasoning: its tabs
+filter one list rather than switching panels, so there is no `.board-panels`,
+and I took that to mean the rail could not apply.
+
+Wrong — the rail never needed panels. It needs a wrapper and two children, and
+the second can be anything. Inventory's `.board-body` takes `.panels` and sits
+beside the rail exactly as a panel group would. No change to its filter model;
+all four tabs still filter the register (11 / 6 / 1 / 4).
+
+The voyage rail keeps the tab notes ("What happened, beat by beat") that the top
+row hid for want of width.
