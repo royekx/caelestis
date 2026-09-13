@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelestis — Quest Board</title>
+<link rel="stylesheet" href="../styles/caelestis.css">
+<link rel="stylesheet" href="../styles/entity.css">
+<link rel="stylesheet" href="../styles/board.css">
+<script src="../data/bearing.js" defer></script>
+<script src="../scripts/nav.js" defer></script>
+<script src="../scripts/ui.js" defer></script>
+</head>
+<body data-pagefind-filter="section:quests">
+<div class="page-content">
+  <div class="page-header">
+    <div class="page-emblem" data-pagefind-ignore>
+      <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="0" y1="20" x2="42" y2="20" stroke-width="0.6" opacity="0.4"/>
+        <polyline points="38,15 43,20 38,25" opacity="0.5"/>
+        <polyline points="33,16 38,20 33,24" opacity="0.3"/>
+        <g transform="translate(60,20)">
+          <line x1="0" y1="-11" x2="0" y2="-6"/><line x1="0" y1="6" x2="0" y2="11"/>
+          <line x1="-11" y1="0" x2="-6" y2="0"/><line x1="6" y1="0" x2="11" y2="0"/>
+          <line x1="-7.5" y1="-7.5" x2="-4.5" y2="-4.5"/><line x1="4.5" y1="-4.5" x2="7.5" y2="-7.5"/>
+          <line x1="-7.5" y1="7.5" x2="-4.5" y2="4.5"/><line x1="4.5" y1="4.5" x2="7.5" y2="7.5"/>
+          <circle cx="0" cy="0" r="4"/><circle cx="0" cy="0" r="1.2" fill="currentColor" stroke="none"/>
+        </g>
+        <polyline points="82,15 77,20 82,25" opacity="0.3"/>
+        <polyline points="87,16 82,20 87,24" opacity="0.5"/>
+        <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="page-title" data-pagefind-meta="title">Quest Board</div>
+    <div class="page-subtitle">What the crew is chasing, and what is chasing them</div>
+  </div>
+  <div class="content">
+    <div class="board-tabs" data-pagefind-ignore>
+      <button class="board-tab is-active" type="button" data-panel="quests" aria-selected="true">Quests <span class="board-count">8</span></button>
+      <button class="board-tab" type="button" data-panel="threads" aria-selected="false">Threads <span class="board-count">3</span></button>
+      <button class="board-tab" type="button" data-panel="closed" aria-selected="false">Closed <span class="board-count">0</span></button>
+    </div>
+    <div class="board-panels">
+      <section class="board-panel is-active" id="quests" data-panel="quests">
+        <p class="board-note">Work the crew has taken on, whether handed to them or picked up because a thread mattered enough to follow.</p>
+        <div class="log-table"><div class="log-entry q-entry" data-kind="quest">
+          <div class="log-row">
+            <a class="log-row-link" href="the-caelestis-burglaries.html">
+              <span class="log-title">The Caelestis Burglaries <span class="q-kind kind-quest">Quest</span><span class="row-giver">Assigned by Mirt the Merciless</span></span>
+              <span class="obj-progress">1/3</span>
+              <span class="log-open">Open ›</span>
+            </a>
+          </div>
+        </div><div class="log-entry q-entry is-child" data-kind="thread">
+          <div class="log-row">
+            <a class="log-row-link" href="the-living-clue-in-the-crate.html">
+              <span class="log-title">The Living Clue in the Crate <span class="q-kind kind-thread">Thread</span><span class="row-sub">Part of The Caelestis Burglaries</span></span>
+              <span class="obj-progress is-none">—</span>
+              <span class="log-open">Open ›</span>
+            </a>
+          </div>
+        </div><div class="log-entry q-entry is-child" data-kind="thread">
+          <div class="log-row">
+            <a class="log-row-link" href="vocaths-grudge.html">
+              <span class="log-title">Vocath’s Grudge Against Mirt <span class="q-kind kind-thread">Thread</span><span class="row-sub">Part of The Caelestis Burglaries</span></span>
+              <span class="obj-progress is-none">—</span>
+              <span class="log-open">Open ›</span>
+            </a>
+          </div>
+        </div><div class="log-entry q-entry" data-kind="quest">
+          <div class="log-row">
+            <a class="log-row-link" href="the-path-to-viren.html">
+              <span class="log-title">The Path to Viren <span class="q-kind kind-quest">Quest</span></span>
+              <span class="obj-progress">1/3</span>
+              <span class="log-open">Open ›</span>
+            </a>
+          </div>
+        </div><div class="log-entry q-entry" data-kind="quest">
+          <div class="log-row">
+            <a class="log-row-link" href="tumaks-search-for-family.html">
+              <span class="log-title">Tumak&#x27;s Search for Family <span class="q-kind kind-quest">Quest</span></span>
+              <span class="obj-progress">0/1</span>
+              <span class="log-open">Open ›</span>
+            </a>
+          </div>
+        </div><div class="log-entry q-entry is-child" data-kind="thread">
+          <div class="log-row">
+            <a class="log-row-link" href="tumaks-runes-and-the-tether-home.html">
+              <span class="log-title">Tumak&#x27;s Runes and the Tether Home <span class="q-kind kind-thread">Thread</span><span class="row-sub">Part of Tumak&#x27;s Search for Family</span></span>
+              <span class="obj-progress is-none">—</span>
+              <span class="log-open">Open ›</span>
+            </a>
+          </div>
+        </div><div class="log-entry q-entry" data-kind="quest">
+          <div class="log-row">
+            <a class="log-row-link" href="the-tyrant-ship-and-the-hcatha-meteor.html">
+              <span class="log-title">The Tyrant Ship and the H’catha Meteor <span class="q-kind kind-quest">Quest</span><span class="row-giver">Assigned by Boatswain Tarto</span></span>
+              <span class="obj-progress">1/5</span>
+              <span class="log-open">Open ›</span>
+            </a>
+          </div>
+        </div><div class="log-entry q-entry is-child" data-kind="thread">
+          <div class="log-row">
+            <a class="log-row-link" href="ostekk-6-thread.html">
+              <span class="log-title">Ostekk-6 <span class="q-kind kind-thread">Thread</span><span class="row-sub">Part of The Tyrant Ship and the H’catha Meteor</span></span>
+              <span class="obj-progress is-none">—</span>
+              <span class="log-open">Open ›</span>
+            </a>
+          </div>
+        </div></div>
+      </section>
+      <section class="board-panel" id="threads" data-panel="threads">
+        <p class="board-note">Loose ends and open questions. Nobody has committed to chasing these. Any of them could become a quest.</p>
+        <div class="log-table"><div class="log-entry q-entry" data-kind="thread">
+          <div class="log-row">
+            <a class="log-row-link" href="gregorys-pull.html">
+              <span class="log-title">Gregory&#x27;s Pull <span class="q-kind kind-thread">Thread</span></span>
+              <span class="obj-progress is-none">—</span>
+              <span class="log-open">Open ›</span>
+            </a>
+          </div>
+        </div><div class="log-entry q-entry" data-kind="thread">
+          <div class="log-row">
+            <a class="log-row-link" href="the-unfinished-ship-within-boogie.html">
+              <span class="log-title">The Unfinished Ship Within Boogie <span class="q-kind kind-thread">Thread</span></span>
+              <span class="obj-progress is-none">—</span>
+              <span class="log-open">Open ›</span>
+            </a>
+          </div>
+        </div><div class="log-entry q-entry" data-kind="thread">
+          <div class="log-row">
+            <a class="log-row-link" href="the-laughter-of-beshaba.html">
+              <span class="log-title">The Laughter of Beshaba <span class="q-kind kind-thread">Thread</span></span>
+              <span class="obj-progress is-none">—</span>
+              <span class="log-open">Open ›</span>
+            </a>
+          </div>
+        </div></div>
+      </section>
+      <section class="board-panel" id="closed" data-panel="closed">
+        <p class="board-empty">Nothing has been laid to rest yet.</p>
+      </section>
+    </div>
+  </div>
+</div>
+</body>
+</html>

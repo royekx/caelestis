@@ -5,81 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caelestis — Boogie</title>
 <link rel="stylesheet" href="../styles/caelestis.css">
-<style>
-  .entry-header {
-    display: grid; grid-template-columns: 160px 1fr;
-    gap: 2rem; margin-bottom: 2.5rem; align-items: start;
-  }
-  .portrait-frame {
-    width: 100%; aspect-ratio: 1;
-    border: 1px solid var(--gold-rule); background: var(--bg-card);
-    display: flex; align-items: center; justify-content: center;
-    color: var(--text-muted);
-  }
-  .portrait-frame svg { width: 44px; opacity: 0.2; }
-  .portrait-frame img { width:100%; height:100%; object-fit:cover; display:block; }
-  .portrait-label {
-    font-family: 'Cinzel', serif; font-size: 0.66rem;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--text-muted); text-align: center; margin-top: 0.5rem;
-  }
-  .stat-list { display: flex; flex-direction: column; gap: 0; margin-top: 0.8rem; }
-  .stat-row {
-    display: flex; justify-content: space-between; align-items: baseline;
-    padding: 0.28rem 0; border-bottom: 1px solid var(--gold-rule); font-size: 0.90rem;
-  }
-  .stat-row:last-child { border-bottom: none; }
-  .stat-key {
-    font-family: 'Cinzel', serif; font-size: 0.65rem;
-    letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
-  }
-  .stat-val { color: var(--text); text-align: right; font-style: italic; }
-  .classification {
-    display: inline-block; font-family: 'Cinzel', serif; font-size: 0.66rem;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    padding: 0.22rem 0.65rem; border: 1px solid; margin-bottom: 0.5rem;
-  }
-  .class-ally    { color: #5a8ab8; border-color: rgba(30,74,122,0.45); }
-  .class-neutral { color: var(--gold-dim); border-color: var(--gold-rule); }
-  .class-threat  { color: #c05050; border-color: rgba(139,32,32,0.45); }
-  .class-unknown { color: var(--text-muted); border-color: var(--gold-rule); }
-  .class-cadet   { color: #c05050; border-color: rgba(139,32,32,0.35); }
-  .class-item    { color: var(--gold-dim); border-color: var(--gold-rule); }
-  .class-sphere  { color: #5a8ab8; border-color: rgba(30,74,122,0.45); }
-  .class-system  { color: #9a6ad0; border-color: rgba(90,45,130,0.45); }
-  .entry-info { display: flex; flex-direction: column; gap: 0.35rem; }
-  .entry-name {
-    font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700;
-    color: var(--text); letter-spacing: 0.03em; line-height: 1.1;
-  }
-  .entry-sub { font-size: 0.99rem; font-style: italic; color: var(--text-dim); }
-  .entry-body { font-size: 1.02rem; line-height: 1.78; color: var(--text); }
-  .entry-body p { margin-bottom: 0.85rem; }
-  .entry-body p:last-child { margin-bottom: 0; }
-  .log-list { display: flex; flex-direction: column; gap: 0.4rem; }
-  .log-item {
-    font-size: 0.99rem; line-height: 1.5; padding-left: 1rem;
-    position: relative; color: var(--text);
-  }
-  .log-item::before { content: '›'; position: absolute; left: 0; color: var(--gold-dim); }
-  .log-item b { font-weight: 600; }
-  .log-item em { color: var(--text-dim); font-style: italic; }
-  .status-row {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    font-family: 'Cinzel', serif; font-size: 0.72rem;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--gold-dim); border: 1px solid var(--gold-rule);
-    padding: 0.25rem 0.7rem; margin-top: 0.3rem;
-  }
-  .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-dim); }
-  @media(max-width:560px){
-    .entry-header { grid-template-columns: 1fr; }
-  }
-</style>
-  <script src="../scripts/nav.js" defer></script>
+<link rel="stylesheet" href="../styles/entity.css">
+<link rel="stylesheet" href="../styles/board.css">
+<script src="../data/bearing.js" defer></script>
+<script src="../scripts/nav.js" defer></script>
+<script src="../scripts/ui.js" defer></script>
 </head>
-<body data-pagefind-filter="section:crew-manifest">
+<body data-entity="PC-647haWGJ" data-pagefind-filter="section:crew-manifest, status:Active">
 <div class="page-content">
+
   <div class="page-header">
     <div class="page-emblem" data-pagefind-ignore>
       <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
@@ -98,73 +32,37 @@
         <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
       </svg>
     </div>
-    <div class="page-title" data-pagefind-meta="title">Boogie</div>
+    <div class="page-title" data-pagefind-meta="title" data-field="name">Boogie</div>
   </div>
+
   <div class="content">
 
-    <div class="voyage-nav-bar" data-pagefind-ignore>
-      <a class="voyage-nav-link" href="bartholomew.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Bartholomew</a>
-      <a class="voyage-nav-center" href="index.html">Crew Manifest</a>
-      <a class="voyage-nav-link" href="casey.html">Casey <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a>
-    </div>
+    <div class="voyage-nav-bar" data-pagefind-ignore><a class="voyage-nav-link" href="bartholomew-grayson.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Bartholomew Grayson</span></a><a class="voyage-nav-center" href="index.html">Crew Manifest</a><a class="voyage-nav-link" href="casey-geim.html"><span class="nav-label">Casey Geim</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
 
     <div class="entry-header">
-      <div>
-        <div class="portrait-frame"><img src="https://lh3.googleusercontent.com/d/1_ZhT9rX4PrCKjegHu3Fc8gPnubg27Dqu" alt="Boogie" loading="lazy"></div>
-        <div class="stat-list"><div class="stat-row"><span class="stat-key">Species</span> <span class="stat-val">Plasmoid</span></div><div class="stat-row"><span class="stat-key">Class</span> <span class="stat-val">Sorcerer</span></div><div class="stat-row"><span class="stat-key">Station</span> <span class="stat-val">Medic</span></div><div class="stat-row"><span class="stat-key">Affiliation</span> <span class="stat-val">Spelljammer Academy</span></div><div class="stat-row"><span class="stat-key">First Voyage</span> <span class="stat-val">V01 — Caelestis</span></div><div class="stat-row"><span class="stat-key">Clearance</span> <span class="stat-val">Sailor</span></div><div class="stat-row"><span class="stat-key">Status</span> <span class="stat-val">Active</span></div></div>
+      <div class="identity-card">
+        <div class="portrait-frame" data-field="portrait"><span class="monogram">B</span></div>
+        <div class="stat-card" data-field="stats"><div class="stat-row"><span class="stat-key">Concept</span><span class="stat-val">Plasmoid Sorcerer; excels at spelljamming; carries part of a ship within himself</span></div><div class="stat-row"><span class="stat-key">Last Seen</span><span class="stat-val">Unseen</span></div><div class="stat-row"><span class="stat-key">Status</span><span class="stat-val">Active</span></div></div>
       </div>
+
       <div class="entry-info">
-        <div class="entry-name">Boogie</div>
-        <div class="entry-sub">Plasmoid · Sorcerer · Medic</div>
-        <div class="entry-body" style="margin-top:0.8rem;"><p>Boogie arrived at Caelestis the way he has arrived everywhere — in motion. Semi-transparent and deep blue, he carries a small glittering stone somewhere inside himself and a shield that rarely leaves his arm. His past is one of borrowed identities and odd jobs, drifting between spaces that were never quite his own. He has no family he can name. He has had no lasting home.</p>
-<p>What Caelestis offered him, and what no place before it had, was a reason to stay. During spelljamming training he found something he hadn't expected: a purpose that fit the shape of him. He doesn't want the helm. He wants to keep the ship alive — to make sure it carries others safely through whatever comes. When he said it aloud, something inside him answered back.</p>
-<p>Four voyages on, he is carrying things. A half-finished ship that came out of his own chest and matches one stolen from a teacher. A logbook he pocketed on a salvage run and never handed back. And a dream he woke from half-dissolved — every version of himself he almost was, multiplying outward into a network, and something pressing down through all of them toward him.</p></div>
+        <div class="entry-name" data-field="name">Boogie</div>
+        <div class="entry-sub" data-field="subtitle">Plasmoid Sorcerer; excels at spelljamming; carries part of a ship within himself</div>
+        <div class="entry-body" data-field="overview"><p>Boogie is a plasmoid cadet at Caelestis in a semi-transparent blue form with a glittering stone inside him and an inner rhythm that pulls him into dance. He instinctively helps and repairs rather than commands, and has taken the crew&#x27;s medical role rather than the helm. The incomplete model ship that formed inside him matches one stolen from an instructor, and his sleep has begun to fill with visions of other versions of himself and a presence converging on him.</p></div>
+        <div class="pursuit" data-field="pursuit"><span class="pursuit-label">Pursuit</span><span class="pursuit-text">A drifting plasmoid with no family or lasting home, now carrying an incomplete model spelljamming ship that formed inside him for reasons he cannot explain.</span></div>
       </div>
     </div>
-    <div class="divider">✦ ✦ ✦</div>
-    <div class="section-block">
-      <div class="section-label">Voyage 001</div>
-      <div class="log-list"><div class="log-item"><b>Simulation Deck:</b> Moved toward Tumak to help before any order was given.</div>
-<div class="log-item"><b>Sky Dock:</b> Noticed a suspicious exchange between a dock officer and a merchant — no one else caught it.</div>
-<div class="log-item"><b>Spelljammer Nexus:</b> Took to helm training immediately. Declared his purpose: keep the ship alive, not pilot it.</div>
-<div class="log-item"><b>Gymnasium:</b> Shouted Sol back onto his feet after a hard fall. Used magic to help Gregory on the final ascent.</div>
-<div class="log-item"><b>Cadet Quarters:</b> Held his corner bunk against a challenge. Sol stood at his back without being asked.</div>
-<div class="log-item"><b>After the Mirt Errand:</b> Reached into his chest and pulled out half a miniature spelljamming ship. No explanation for how it formed inside him, or why it is incomplete.</div></div>
-    </div>
+
+    <div class="carry-row" data-field="carried"><span class="carry-label">Notable Items</span><div class="carry-chips"><a class="chip chip-item" href="../inventory/entries/half-ship.html">Incomplete Model Spelljamming Ship</a><a class="chip chip-item" href="../inventory/entries/derelict-logbook.html">Derelict Logbook</a></div></div>
 
     <div class="divider">✦ ✦ ✦</div>
 
-    <div class="section-block">
-      <div class="section-label">Voyage 002</div>
-      <div class="log-list"><div class="log-item"><b>The Weeping Goddess:</b> Set the <a href="../inventory/entries/half-ship.html">half-missing model ship</a> from his chest on the table and let the crew look at it. Nobody picked up what he set down.</div>
-<div class="log-item"><b>Crew Roles:</b> Took medical. Quietly insisted the spelljammer's seat should be Gregory's rather than his own.</div>
-<div class="log-item"><b>Spelljammer Nexus:</b> Recognised Saerth's stolen miniature as the same model that came out of his chest. Said nothing and did the exercise.</div>
-<div class="log-item"><b>The Salvage Race:</b> Misjudged a jump as mist swallowed the next asteroid — then landed clean, without knowing why he had thought he wouldn't.</div>
-<div class="log-item"><b>The Derelict:</b> Collected the <a href="../inventory/entries/derelict-logbook.html">logbook</a> and slipped it inside his own chest without quite explaining the impulse to himself.</div>
-<div class="log-item"><b>The Ambush:</b> Leapt onto the githyanki deck alone, recognised it was more than he could finish, and turned back. The crew bent the whole ship to give him a way home. He made the leap.</div></div>
-    </div>
+    <div data-field="latestVoyage"><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 004</span></div><ul class="record-list"><li>Understood, alongside Gregory, that Ostekk-6&#x27;s damage was mechanical and beyond anything magic could mend</li></ul></div></div>
+    <div data-field="priorVoyages"><details class="prior"><summary>Previous Voyages <span class="prior-keys">S01 · S02 · S03</span></summary><div class="prior-body"><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 003</span></div><ul class="record-list"><li>Helped pull members of the rival crew upright in the wreckage of the simulation chamber</li><li>Understood the recovered rod for what it was — a device built to feed on ambient magic and detonate — before catching the word &#x27;Vocath&#x27; spoken between Saerthe and Tarto</li><li>Told Mirt of the tribal sacrifice he survived as a child and the sense of being watched ever since</li><li>Dreamed of countless other versions of himself in an infinite dark, a presence converging on him, and woke with his form half-dissolved before humming himself back together</li><li>Checked his chest and found the half-ship and the derelict logbook both still there</li></ul></div><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 002</span></div><ul class="record-list"><li>Ordered only fruit and was given a silvery starfruit at the Weeping Goddess</li><li>Set his half-missing model ship on the table for the crew to see, though no one took up the meaning</li><li>Spoke for the medical role and quietly insisted Gregory take the helm</li><li>Heard Saerthe describe his own stolen miniature ship — the same model as the one within Boogie — and said nothing</li><li>Tended the bulwark through the storm and collected the salvage logbook into his own chest</li><li>Leapt onto the githyanki ship, realized he was overmatched, and threw himself back to the hammerhead</li></ul></div><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 001</span></div><ul class="record-list"><li>Rushed to help wounded Tumak during the Moonraider simulation rather than seek glory</li><li>Held a contested corner bunk calmly when Veena tried to take it, with Sol backing him</li><li>Charmed a light hammer from Mr. Blip, thinking about repair over command</li><li>Took instantly to the Nexus helm exercise and declared he wants to keep the ship alive, not take the helm</li><li>Endured the gym assault course and used magic to help Gregory up the final climb</li><li>Shared his lonely drifting past with Tumak and promised the crew would help find Tumak&#x27;s family</li><li>Helped Mirt in his hangover before reacting to the room</li><li>Pulled a tiny, half-missing model spelljamming ship from his own chest</li></ul></div></div></details></div>
 
-    <div class="divider">✦ ✦ ✦</div>
+    <div class="divider">✦ ✦ ✦</div><div class="xref-card"><div class="xref-head"><span class="xref-title">Connections</span></div><div class="xref-cols"><div class="xref-col"><div class="xref-col-head">Quests</div><a class="chip chip-quest" href="../quests/the-unfinished-ship-within-boogie.html">The Unfinished Ship Within Boogie</a></div><div class="xref-col"><div class="xref-col-head">Items</div><a class="chip chip-item" href="../inventory/entries/half-ship.html">Incomplete Model Spelljamming Ship</a></div></div></div>
 
-    <div class="section-block">
-      <div class="section-label">Voyage 003</div>
-      <div class="log-list"><div class="log-item"><b>After the Blast:</b> Recognised the metal rod for what it was — arcane dynamite, built to feed on ambient magic and discharge.</div>
-<div class="log-item"><b>The Device:</b> Glimpsed a single word on it before Saerth drew it back: <em>Vocath</em>.</div>
-<div class="log-item"><b>Sky Dock:</b> Searched the marked crate with Sol. Sealed, not hollow, nothing living inside.</div>
-<div class="log-item"><b>The Bridge:</b> Spoke about his childhood sacrifice and the sense of being watched that has followed him since.</div>
-<div class="log-item"><b>Night:</b> Dreamed of infinite other versions of himself multiplying into a network, and something pressing down through all of them toward him. Woke half-dissolved and hummed himself back together.</div>
-<div class="log-item"><em>The <a href="../inventory/entries/half-ship.html">half ship</a> and the <a href="../inventory/entries/derelict-logbook.html">derelict logbook</a> were still in his chest when he checked.</em></div>
-<div class="log-item"><b>Archive Clearance:</b> Mirt granted the crew sailor-level access to the fleet intelligence archive, and told them not to abuse it.</div></div>
-    </div>
-
-    <div class="divider">✦ ✦ ✦</div>
-
-    <div class="section-block">
-      <div class="section-label">Voyage 004</div>
-      <div class="log-list"><div class="log-item"><b>Ostekk-6:</b> Looked closely at the broken autognome alongside Gregory and understood that this was not a wound magic could close.</div></div>
-    </div>
   </div>
 </div>
-
 </body>
 </html>

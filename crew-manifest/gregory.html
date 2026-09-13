@@ -5,81 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caelestis — Gregory</title>
 <link rel="stylesheet" href="../styles/caelestis.css">
-<style>
-  .entry-header {
-    display: grid; grid-template-columns: 160px 1fr;
-    gap: 2rem; margin-bottom: 2.5rem; align-items: start;
-  }
-  .portrait-frame {
-    width: 100%; aspect-ratio: 1;
-    border: 1px solid var(--gold-rule); background: var(--bg-card);
-    display: flex; align-items: center; justify-content: center;
-    color: var(--text-muted);
-  }
-  .portrait-frame svg { width: 44px; opacity: 0.2; }
-  .portrait-frame img { width:100%; height:100%; object-fit:cover; display:block; }
-  .portrait-label {
-    font-family: 'Cinzel', serif; font-size: 0.66rem;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--text-muted); text-align: center; margin-top: 0.5rem;
-  }
-  .stat-list { display: flex; flex-direction: column; gap: 0; margin-top: 0.8rem; }
-  .stat-row {
-    display: flex; justify-content: space-between; align-items: baseline;
-    padding: 0.28rem 0; border-bottom: 1px solid var(--gold-rule); font-size: 0.90rem;
-  }
-  .stat-row:last-child { border-bottom: none; }
-  .stat-key {
-    font-family: 'Cinzel', serif; font-size: 0.65rem;
-    letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
-  }
-  .stat-val { color: var(--text); text-align: right; font-style: italic; }
-  .classification {
-    display: inline-block; font-family: 'Cinzel', serif; font-size: 0.66rem;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    padding: 0.22rem 0.65rem; border: 1px solid; margin-bottom: 0.5rem;
-  }
-  .class-ally    { color: #5a8ab8; border-color: rgba(30,74,122,0.45); }
-  .class-neutral { color: var(--gold-dim); border-color: var(--gold-rule); }
-  .class-threat  { color: #c05050; border-color: rgba(139,32,32,0.45); }
-  .class-unknown { color: var(--text-muted); border-color: var(--gold-rule); }
-  .class-cadet   { color: #c05050; border-color: rgba(139,32,32,0.35); }
-  .class-item    { color: var(--gold-dim); border-color: var(--gold-rule); }
-  .class-sphere  { color: #5a8ab8; border-color: rgba(30,74,122,0.45); }
-  .class-system  { color: #9a6ad0; border-color: rgba(90,45,130,0.45); }
-  .entry-info { display: flex; flex-direction: column; gap: 0.35rem; }
-  .entry-name {
-    font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700;
-    color: var(--text); letter-spacing: 0.03em; line-height: 1.1;
-  }
-  .entry-sub { font-size: 0.99rem; font-style: italic; color: var(--text-dim); }
-  .entry-body { font-size: 1.02rem; line-height: 1.78; color: var(--text); }
-  .entry-body p { margin-bottom: 0.85rem; }
-  .entry-body p:last-child { margin-bottom: 0; }
-  .log-list { display: flex; flex-direction: column; gap: 0.4rem; }
-  .log-item {
-    font-size: 0.99rem; line-height: 1.5; padding-left: 1rem;
-    position: relative; color: var(--text);
-  }
-  .log-item::before { content: '›'; position: absolute; left: 0; color: var(--gold-dim); }
-  .log-item b { font-weight: 600; }
-  .log-item em { color: var(--text-dim); font-style: italic; }
-  .status-row {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    font-family: 'Cinzel', serif; font-size: 0.72rem;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--gold-dim); border: 1px solid var(--gold-rule);
-    padding: 0.25rem 0.7rem; margin-top: 0.3rem;
-  }
-  .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-dim); }
-  @media(max-width:560px){
-    .entry-header { grid-template-columns: 1fr; }
-  }
-</style>
-  <script src="../scripts/nav.js" defer></script>
+<link rel="stylesheet" href="../styles/entity.css">
+<link rel="stylesheet" href="../styles/board.css">
+<script src="../data/bearing.js" defer></script>
+<script src="../scripts/nav.js" defer></script>
+<script src="../scripts/ui.js" defer></script>
 </head>
-<body data-pagefind-filter="section:crew-manifest">
+<body data-entity="PC-BGCfmbF3" data-pagefind-filter="section:crew-manifest, status:Active">
 <div class="page-content">
+
   <div class="page-header">
     <div class="page-emblem" data-pagefind-ignore>
       <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
@@ -98,73 +32,37 @@
         <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
       </svg>
     </div>
-    <div class="page-title" data-pagefind-meta="title">Gregory</div>
+    <div class="page-title" data-pagefind-meta="title" data-field="name">Gregory</div>
   </div>
+
   <div class="content">
 
-    <div class="voyage-nav-bar" data-pagefind-ignore>
-      <a class="voyage-nav-link" href="casey.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Casey</a>
-      <a class="voyage-nav-center" href="index.html">Crew Manifest</a>
-      <a class="voyage-nav-link" href="sol-fortuna.html">Sol <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a>
-    </div>
+    <div class="voyage-nav-bar" data-pagefind-ignore><a class="voyage-nav-link" href="casey-geim.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Casey Geim</span></a><a class="voyage-nav-center" href="index.html">Crew Manifest</a><a class="voyage-nav-link" href="sol-fortuna.html"><span class="nav-label">Sol Fortuna</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
 
     <div class="entry-header">
-      <div>
-        <div class="portrait-frame"><img src="https://lh3.googleusercontent.com/d/1fzRY-WITl425-WA_HCThclBYYsRH4tun" alt="Gregory" loading="lazy"></div>
-        <div class="stat-list"><div class="stat-row"><span class="stat-key">Species</span> <span class="stat-val">Autognome</span></div><div class="stat-row"><span class="stat-key">Class</span> <span class="stat-val">Wizard</span></div><div class="stat-row"><span class="stat-key">Station</span> <span class="stat-val">Navigator</span></div><div class="stat-row"><span class="stat-key">Affiliation</span> <span class="stat-val">Spelljammer Academy</span></div><div class="stat-row"><span class="stat-key">First Voyage</span> <span class="stat-val">V01 — Caelestis</span></div><div class="stat-row"><span class="stat-key">Clearance</span> <span class="stat-val">Sailor</span></div><div class="stat-row"><span class="stat-key">Status</span> <span class="stat-val">Active</span></div></div>
+      <div class="identity-card">
+        <div class="portrait-frame" data-field="portrait"><span class="monogram">G</span></div>
+        <div class="stat-card" data-field="stats"><div class="stat-row"><span class="stat-key">Concept</span><span class="stat-val">Autognome; navigation-minded; senses direction and anomalies</span></div><div class="stat-row"><span class="stat-key">Last Seen</span><span class="stat-val">Unseen</span></div><div class="stat-row"><span class="stat-key">Status</span><span class="stat-val">Active</span></div></div>
       </div>
+
       <div class="entry-info">
-        <div class="entry-name">Gregory</div>
-        <div class="entry-sub">Autognome · Wizard · Navigator</div>
-        <div class="entry-body" style="margin-top:0.8rem;"><p>Bronze-skinned with small round glasses and a neat mustache, Gregory has the quality of someone who always measures the room before stepping into it. He is thoughtful to the point of hesitation, precise to the point of self-correction, and dutiful in a way that reads less like rule-following and more like genuine belief in order.</p>
-<p>He is farther from home and his maker than he has ever been, and something changed the day he moved into his bunk. A pull in his core — directional, purposeful, toward somewhere he cannot yet name. He has told no one.</p>
-<p>He has since seen his own face on a broken autognome in the dark of a stone ship and cast a spell before he had finished deciding to. He reads his master's journal at night — mending a brass aligner from the inside, reaching a thing before the break does — and thinks about arriving before the damage.</p></div>
+        <div class="entry-name" data-field="name">Gregory</div>
+        <div class="entry-sub" data-field="subtitle">Autognome; navigation-minded; senses direction and anomalies</div>
+        <div class="entry-body" data-field="overview"><p>Gregory is a bronze autognome cadet at Caelestis with glasses and a mustache, hesitant and observant, quick to notice what others miss. He has settled as the crew&#x27;s navigator, his course-plotting proven under pressure. Far from his dead master, he feels a pull in his core drawing him toward somewhere he cannot yet name, and has begun to reach for others before the damage does.</p></div>
+        <div class="pursuit" data-field="pursuit"><span class="pursuit-label">Pursuit</span><span class="pursuit-text">Farther from home and his master than ever, feeling a new tug in his core drawing him somewhere unknown.</span></div>
       </div>
     </div>
-    <div class="divider">✦ ✦ ✦</div>
-    <div class="section-block">
-      <div class="section-label">Voyage 001</div>
-      <div class="log-list"><div class="log-item"><b>Simulation Deck:</b> Most hesitant in the opening fight. Used clever spellwork to spoil a deadly strike when cornered.</div>
-<div class="log-item"><b>Sky Dock:</b> Recalled from the code of conduct that unofficial payments are forbidden. Noted the exchange Boogie flagged.</div>
-<div class="log-item"><b>Spelljammer Nexus:</b> Struggled with thinking toward the destination before the method. Saerth named it. Gregory adjusted.</div>
-<div class="log-item"><b>Gymnasium:</b> Saw through the first illusion and called it to Sol before anyone else.</div>
-<div class="log-item"><b>Cadet Quarters:</b> Felt a directional pull from somewhere inside his core after settling in. Source unknown.</div></div>
-    </div>
+
+    
 
     <div class="divider">✦ ✦ ✦</div>
 
-    <div class="section-block">
-      <div class="section-label">Voyage 002</div>
-      <div class="log-list"><div class="log-item"><b>The Weeping Goddess:</b> Arrived first, the others orbiting his pace. Ryeback offered him spare utensils, kindly and without comment.</div>
-<div class="log-item"><b>Crew Roles:</b> Took navigator. Boogie argued the spelljammer's seat should be his.</div>
-<div class="log-item"><b>The Salvage Race:</b> Plotted a line straight through an electrical storm of silver eels. The crew pushed through rather than around and held the lead.</div>
-<div class="log-item"><b>The Ambush:</b> Spotted the githyanki ship slipping through the field — not the cadet rivals — and shouted the crew up from below. Conjured the third <a href="../inventory/entries/derelict-logbook.html">logbook</a>. Put covering fire through the enemy hull.</div>
-<div class="log-item"><b>Afterward:</b> Asked in earnest whether the manual required stopping for stranded vessels, and concluded that no such provision appears to exist.</div></div>
-    </div>
+    <div data-field="latestVoyage"><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 004</span></div><ul class="record-list"><li>Opened the tyrant-ship fight with a volley of magic missiles across the clockwork horrors</li><li>Pulled the broken autognome Ostekk-6 clear of danger with a Vortex Warp before turning back to fight — a mercy the table felt</li><li>Understood, with Boogie, that Ostekk-6&#x27;s ruin was mechanical and no magic could close it</li><li>Shared the telepathic link Tumak opened, receiving Ostekk-6&#x27;s warnings, and sent magic missiles into the wisp swarm</li></ul></div></div>
+    <div data-field="priorVoyages"><details class="prior"><summary>Previous Voyages <span class="prior-keys">S01 · S02 · S03</span></summary><div class="prior-body"><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 003</span></div><ul class="record-list"><li>Spotted the arcane rod jammed in the wall, worked it free, and stepped clear as energy arced off it</li><li>Assessed the rod with precision as spent arcane dynamite, unlikely to detonate again absent another strong magic source, then thrust it at Boatswain Tarto and fled</li><li>Sorted through Saerthe&#x27;s chaotic desk and found a note about Bartholomew&#x27;s helm affinity</li><li>Searched the Nexus terminals for arcane artillery and runes, but was locked out of a fleet-clearance category by his cadet star</li><li>Told Mirt of his master and creator, Gregory Prime, now dead and buried</li><li>Read his master&#x27;s journal that night, dwelling on the line about getting underneath things before the break did</li><li>Saw his own face on the broken autognome the clockwork horrors were feeding on, and cast before he had fully decided to</li></ul></div><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 002</span></div><ul class="record-list"><li>Accepted a set of spare utensils from Ryeback, taking the kindly-meant gesture as it was offered</li><li>Took the navigator&#x27;s role and joined the second helm exercise at the Nexus</li><li>Plotted the hammerhead&#x27;s course toward the asteroid field and named targets in the githyanki fight</li><li>Saw the arc of black lightning snap out of Sol and back again during the asteroid crossing</li><li>Duplicated the salvage logbook alongside Casey to confound the enemy</li><li>Judged, straight-faced, that no cadet-manual provision governed stopping for stranded vessels</li></ul></div><div class="record-block"><div class="record-head"><span class="record-voyage">Voyage 001</span></div><ul class="record-list"><li>Used clever spellwork to spoil a deadly strike during the Moonraider simulation</li><li>Recalled the code of conduct forbidding gifts and unofficial payments at the sky dock</li><li>Unsettled by Mr. Blip, an autognome who looked unnervingly like him</li><li>Overcame thinking too far ahead in the Nexus helm exercise once Saerthe named the problem</li><li>Saw through the gym&#x27;s first illusion and called the truth to Sol</li><li>Added frightened but effective magic in the fight in Mirt&#x27;s quarters</li></ul></div></div></details></div>
 
-    <div class="divider">✦ ✦ ✦</div>
+    <div class="divider">✦ ✦ ✦</div><div class="xref-card"><div class="xref-head"><span class="xref-title">Connections</span></div><div class="xref-cols"><div class="xref-col"><div class="xref-col-head">Quests</div><a class="chip chip-quest" href="../quests/gregorys-pull.html">Gregory&#x27;s Pull</a></div></div></div>
 
-    <div class="section-block">
-      <div class="section-label">Voyage 003</div>
-      <div class="log-list"><div class="log-item"><b>After the Blast:</b> Found the metal rod jammed in the wall and identified it as arcane dynamite. Confirmed it was spent but still dangerous near strong magic.</div>
-<div class="log-item"><b>The Nexus:</b> Searched the terminals. A category on arcane artillery is locked behind fleet intelligence archive clearance and turned his cadet star away.</div>
-<div class="log-item"><b>Saerth's Desk:</b> Read a note about Bartholomew — does shifting form bear on spelljamming?</div>
-<div class="log-item"><b>The Bridge:</b> Spoke about his dead creator. Argued with Tumak for expanded archive access. Mirt granted the whole crew sailor-level clearance.</div>
-<div class="log-item"><b>Night:</b> Reread his master's journal — mending a brass aligner from the inside, reaching a thing before the break does. He thought about arriving before the damage.</div>
-<div class="log-item"><b>The Hold:</b> Looked at the broken autognome's face and saw his own. Cast before he had fully decided to.</div></div>
-    </div>
-
-    <div class="divider">✦ ✦ ✦</div>
-
-    <div class="section-block">
-      <div class="section-label">Voyage 004</div>
-      <div class="log-list"><div class="log-item"><b>The Clockwork Horrors:</b> Opened with a volley of magic missiles, then used Vortex Warp to fold space and set Ostekk-6 down safe behind him before turning back to the fight.</div>
-<div class="log-item"><b>Ostekk-6:</b> Understood with Boogie that the damage was mechanical, not arcane — the core sound, the body past what they could restore here.</div>
-<div class="log-item"><b>The Telepathic Link:</b> One of the three Tumak connected without meaning to.</div>
-<div class="log-item"><b>The Wisps:</b> Sent magic missiles into the swarm.</div></div>
-    </div>
   </div>
 </div>
-
 </body>
 </html>

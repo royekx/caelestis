@@ -5,89 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caelestis — Crew Manifest</title>
 <link rel="stylesheet" href="../styles/caelestis.css">
-<style>
-  .intro-note {
-    background: var(--gold-faint);
-    border-left: 3px solid var(--gold-dim);
-    padding: 0.7rem 1rem;
-    font-size: 0.97rem; line-height: 1.55;
-    color: var(--text-dim); margin-bottom: 2rem;
-  }
-
-  .crew-list { display: flex; flex-direction: column; gap: 0.7rem; }
-
-  .crew-row {
-    background: var(--bg-card);
-    border: 1px solid var(--gold-rule);
-    text-decoration: none;
-    display: grid;
-    grid-template-columns: 56px 1fr auto;
-    align-items: center;
-    gap: 1.1rem;
-    padding: 0.75rem 1.2rem 0.75rem 0.75rem;
-    position: relative; overflow: hidden;
-    transition: border-color 0.22s, background 0.22s, transform 0.22s;
-    animation: fadeUp 0.6s ease both;
-  }
-  .crew-row::before {
-    content: '';
-    position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
-    background: var(--gold-dim); opacity: 0.4; transition: opacity 0.22s;
-  }
-  .crew-row:hover {
-    border-color: rgba(201,153,58,0.4);
-    background: rgba(201,153,58,0.04);
-    transform: translateX(3px);
-  }
-  .crew-row:hover::before { opacity: 1; }
-
-  .crew-row:nth-child(1){ animation-delay: 0.05s; }
-  .crew-row:nth-child(2){ animation-delay: 0.10s; }
-  .crew-row:nth-child(3){ animation-delay: 0.15s; }
-  .crew-row:nth-child(4){ animation-delay: 0.20s; }
-  .crew-row:nth-child(5){ animation-delay: 0.25s; }
-  .crew-row:nth-child(6){ animation-delay: 0.30s; }
-
-  /* Mini portrait */
-  .crew-thumb {
-    width: 56px; height: 56px;
-    border: 1px solid var(--gold-rule);
-    background: var(--bg-card);
-    display: flex; align-items: center; justify-content: center;
-    color: var(--text-muted); overflow: hidden; flex-shrink: 0;
-  }
-  .crew-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .crew-thumb svg { width: 26px; opacity: 0.2; }
-
-  .crew-info { display: flex; flex-direction: column; gap: 0.15rem; }
-  .crew-name {
-    font-family: 'Cinzel', serif; font-size: 0.99rem;
-    font-weight: 700; color: var(--text); letter-spacing: 0.02em;
-  }
-  .crew-sub { font-size: 0.90rem; color: var(--text-dim); font-style: italic; }
-
-  .crew-badge {
-    font-family: 'Cinzel', serif; font-size: 0.62rem;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    padding: 0.2rem 0.5rem; border: 1px solid;
-    flex-shrink: 0;
-    color: var(--gold-dim); border-color: var(--gold-rule);
-  }
-
-  @keyframes fadeUp {
-    from { opacity:0; transform:translateY(16px); }
-    to   { opacity:1; transform:translateY(0); }
-  }
-  @media(max-width:480px){
-    .crew-row { grid-template-columns: 48px 1fr; }
-    .crew-thumb { width: 48px; height: 48px; }
-    .crew-badge { display: none; }
-  }
-</style>
-  <script src="../scripts/nav.js" defer></script>
-  <script src="../data/vocabulary.js" defer></script>
-  <script src="../scripts/spelling.js" defer></script>
-  <script src="../scripts/search.js" defer></script>
+<link rel="stylesheet" href="../styles/entity.css">
+<link rel="stylesheet" href="../styles/board.css">
+<script src="../data/bearing.js" defer></script>
+<script src="../scripts/nav.js" defer></script>
+<script src="../scripts/ui.js" defer></script>
 </head>
 <body data-pagefind-filter="section:crew-manifest">
 <div class="page-content">
@@ -110,79 +32,36 @@
       </svg>
     </div>
     <div class="page-title" data-pagefind-meta="title">Crew Manifest</div>
-    <div class="page-subtitle">Active personnel aboard Caelestis.</div>
+    <div class="page-subtitle">Active personnel — who's aboard, and what they carry</div>
   </div>
-
   <div class="content">
-
-    <div class="intro-note">
-      Personnel files are maintained by station command and updated as crew members advance in rank or assignment.
+    <div class="card-grid">
+<a class="s-card" href="bartholomew-grayson.html">
+        <div class="s-card-head"><div class="s-icon"><span class="face-mono">B</span></div><div class="s-title">Bartholomew Grayson</div></div>
+        <div class="s-desc">Bartholomew is a human druid and wilder, a cadet at Caelestis with an uncanny natural affinity for the helm. Quiet and untroubled, he has sl</div>
+      </a>
+<a class="s-card" href="boogie.html">
+        <div class="s-card-head"><div class="s-icon"><span class="face-mono">B</span></div><div class="s-title">Boogie</div></div>
+        <div class="s-desc">Boogie is a plasmoid cadet at Caelestis in a semi-transparent blue form with a glittering stone inside him and an inner rhythm that pulls hi</div>
+      </a>
+<a class="s-card" href="casey-geim.html">
+        <div class="s-card-head"><div class="s-icon"><span class="face-mono">C</span></div><div class="s-title">Casey Geim</div></div>
+        <div class="s-desc">Casey is a hadozee warlock cadet at Caelestis, barefoot and composed beneath a pale green cloak stitched with constellations, wielding cold </div>
+      </a>
+<a class="s-card" href="gregory.html">
+        <div class="s-card-head"><div class="s-icon"><span class="face-mono">G</span></div><div class="s-title">Gregory</div></div>
+        <div class="s-desc">Gregory is a bronze autognome cadet at Caelestis with glasses and a mustache, hesitant and observant, quick to notice what others miss. He h</div>
+      </a>
+<a class="s-card" href="sol-fortuna.html">
+        <div class="s-card-head"><div class="s-icon"><span class="face-mono">S</span></div><div class="s-title">Sol Fortuna</div></div>
+        <div class="s-desc">Sol Fortuna is a tall, pale, dark-haired astral elf paladin of Beshaba with white eyes, steady even after simulated death. He anticipates da</div>
+      </a>
+<a class="s-card" href="tumak-swan.html">
+        <div class="s-card-head"><div class="s-icon"><span class="face-mono">T</span></div><div class="s-title">Tumak Swan</div></div>
+        <div class="s-desc">Tumak Swan is a slight rogue swallowed by an oversized coat, muttering reassurances to himself, whose mind often seems divided. He holds the</div>
+      </a>
     </div>
-
-    <div class="section-label">Active Personnel</div>
-
-    <div class="crew-list" data-pagefind-ignore>
-
-      <a class="crew-row" href="bartholomew.html">
-        <div class="crew-thumb"><img src="https://lh3.googleusercontent.com/d/1ThgrZS-SGvWVIgGkvuwEm08oMyWActWF" alt="Bartholomew" loading="lazy"></div>
-        <div class="crew-info">
-          <div class="crew-name">Bartholomew</div>
-          <div class="crew-sub">Human · Druid · Spelljammer</div>
-        </div>
-        <div class="crew-badge">Active</div>
-      </a>
-
-      <a class="crew-row" href="boogie.html">
-        <div class="crew-thumb"><img src="https://lh3.googleusercontent.com/d/1_ZhT9rX4PrCKjegHu3Fc8gPnubg27Dqu" alt="Boogie" loading="lazy"></div>
-        <div class="crew-info">
-          <div class="crew-name">Boogie</div>
-          <div class="crew-sub">Plasmoid · Sorcerer · Medic</div>
-        </div>
-        <div class="crew-badge">Active</div>
-      </a>
-
-      <a class="crew-row" href="casey.html">
-        <div class="crew-thumb"><img src="https://lh3.googleusercontent.com/d/1XLFP2beF16GU12VCcwInFzpfTv3mjhaO" alt="Casey" loading="lazy"></div>
-        <div class="crew-info">
-          <div class="crew-name">Casey</div>
-          <div class="crew-sub">Hadozee · Warlock · Bosun</div>
-        </div>
-        <div class="crew-badge">Active</div>
-      </a>
-
-      <a class="crew-row" href="gregory.html">
-        <div class="crew-thumb"><img src="https://lh3.googleusercontent.com/d/1fzRY-WITl425-WA_HCThclBYYsRH4tun" alt="Gregory" loading="lazy"></div>
-        <div class="crew-info">
-          <div class="crew-name">Gregory</div>
-          <div class="crew-sub">Autognome · Wizard · Navigator</div>
-        </div>
-        <div class="crew-badge">Active</div>
-      </a>
-
-      <a class="crew-row" href="sol-fortuna.html">
-        <div class="crew-thumb"><img src="https://lh3.googleusercontent.com/d/1PT-7qxrvN3XUFPm3xAkUZ8IbToM5qsDo" alt="Sol" loading="lazy"></div>
-        <div class="crew-info">
-          <div class="crew-name">Sol</div>
-          <div class="crew-sub">Astral Elf · Paladin · Gunner</div>
-        </div>
-        <div class="crew-badge">Active</div>
-      </a>
-
-      <a class="crew-row" href="tumak.html">
-        <div class="crew-thumb"><img src="https://lh3.googleusercontent.com/d/1Qk-udGpqGpv2oZL9hahqjXgMRRCDrWnr" alt="Tumak" loading="lazy"></div>
-        <div class="crew-info">
-          <div class="crew-name">Tumak</div>
-          <div class="crew-sub">Human · Rogue · Captain</div>
-        </div>
-        <div class="crew-badge">Active</div>
-      </a>
-
-    </div>
-
   </div>
 </div>
-
-
-
 </body>
 </html>

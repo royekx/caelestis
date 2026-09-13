@@ -42,19 +42,60 @@
     ],
     "fields": {
       "Location": "Caelestis",
-      "Type": "Spelljammer academy tower",
+      "Type": "Station",
       "Key NPCs / Factions": "Caelestis Academy, Mirt the Merciless, Boatswain Tarto",
       "Visibility": "Player",
       "Visited": "S01, S02, S03",
       "Mentioned": null,
       "Overview (Player)": "Caelestis is the spelljammer academy where the cadets train, a layered machine of halls, ranks, and access permissions overlooking the Astral Sea. Led by Mirt the Merciless, it drills its cadets through simulation and salvage exercise. A wave of thefts continues to spread through the tower, reaching an instructor's own possessions.",
-      "Region": "Caelestis",
       "Linked": "FAO-Lx7kR2vN",
       "Status": "Accessible"
     },
-    "kind": "station",
-    "parent": "toril",
-    "hasPage": true
+    "parent": {
+      "slug": "toril",
+      "name": "Toril",
+      "url": "/navigation-records/toril.html"
+    },
+    "kind": "Station",
+    "hasPage": true,
+    "within": [
+      {
+        "slug": "spelljammer-nexus",
+        "name": "Spelljammer Nexus",
+        "url": null,
+        "type": "Room"
+      },
+      {
+        "slug": "mirts-quarters",
+        "name": "Mirt's Quarters",
+        "url": null,
+        "type": "Room"
+      },
+      {
+        "slug": "sky-dock",
+        "name": "Sky Dock",
+        "url": null,
+        "type": "Room"
+      },
+      {
+        "slug": "the-weeping-goddess",
+        "name": "The Weeping Goddess",
+        "url": null,
+        "type": "Room"
+      },
+      {
+        "slug": "the-sea-dock",
+        "name": "The Sea Dock",
+        "url": null,
+        "type": "Room"
+      },
+      {
+        "slug": "simulation-deck",
+        "name": "Simulation Deck",
+        "url": null,
+        "type": "Room"
+      }
+    ]
   },
   {
     "id": "LOC-Gh2mV8pL",
@@ -97,19 +138,23 @@
     "links": [],
     "fields": {
       "Location": "Spelljammer Nexus",
-      "Type": "Training chamber",
+      "Type": "Room",
       "Key NPCs / Factions": "Saerthe Abizjn, Caelestis Academy",
       "Visibility": "Player",
       "Visited": "S01, S02, S03",
       "Mentioned": null,
       "Overview (Player)": "The Spelljammer Nexus is a training chamber at Caelestis overlooking the Astral Sea, where cadets learn to extend mind and magic into a vessel by guiding miniature ships across a floating field.",
-      "Region": "Caelestis",
       "Linked": null,
       "Status": "Accessible"
     },
-    "kind": "room",
-    "parent": "caelestis",
-    "hasPage": false
+    "parent": {
+      "slug": "caelestis",
+      "name": "Caelestis",
+      "url": "/navigation-records/caelestis.html"
+    },
+    "kind": "Room",
+    "hasPage": false,
+    "within": []
   },
   {
     "id": "LOC-Jd5cW7nK",
@@ -143,19 +188,23 @@
     ],
     "fields": {
       "Location": "Mirt's Quarters",
-      "Type": "Private chambers",
+      "Type": "Room",
       "Key NPCs / Factions": "Mirt the Merciless",
       "Visibility": "Player",
       "Visited": "S01",
       "Mentioned": null,
       "Overview (Player)": "Mirt's quarters are the cluttered, excess-strewn chambers of Caelestis's head, home to a fishbowl of octopi and an impossible wardrobe that opens onto bounded astral night — a magical replica of a place in the Viren star system.",
-      "Region": "Caelestis",
       "Linked": "ITM-4kD8vRt2",
       "Status": "Accessible"
     },
-    "kind": "room",
-    "parent": "caelestis",
+    "parent": {
+      "slug": "caelestis",
+      "name": "Caelestis",
+      "url": "/navigation-records/caelestis.html"
+    },
+    "kind": "Room",
     "hasPage": false,
+    "within": [],
     "items": [
       {
         "id": "ITM-4kD8vRt2",
@@ -214,19 +263,23 @@
     "links": [],
     "fields": {
       "Location": "Sky Dock",
-      "Type": "Docking bay",
+      "Type": "Room",
       "Key NPCs / Factions": "Kip, Pik, Caelestis Academy",
       "Visibility": "Player",
       "Visited": "S01, S02, S03",
       "Mentioned": null,
       "Overview (Player)": "The sky dock is Caelestis's docking bay beneath the void, where spelljamming ships of every shape rest and cadets learn the anatomy of a vessel and the workings of the helm.",
-      "Region": "Caelestis",
       "Linked": null,
       "Status": "Accessible"
     },
-    "kind": "room",
-    "parent": "caelestis",
+    "parent": {
+      "slug": "caelestis",
+      "name": "Caelestis",
+      "url": "/navigation-records/caelestis.html"
+    },
+    "kind": "Room",
     "hasPage": false,
+    "within": [],
     "items": [
       {
         "id": "ITM-Xn7kW2vm",
@@ -274,19 +327,19 @@
     ],
     "fields": {
       "Location": "Viren Star System",
-      "Type": "Star system",
+      "Type": "Sphere",
       "Key NPCs / Factions": "Zerathis",
       "Visibility": "Player",
       "Visited": null,
       "Mentioned": "S01",
       "Overview (Player)": "The Viren star system, beyond a place called H’catha, is the region Mirt's impossible wardrobe magically replicates. A vision and a guiding voice have pointed Casey toward it as a destination.",
-      "Region": "Viren",
       "Linked": null,
       "Status": "Accessible"
     },
-    "kind": "sphere",
     "parent": null,
-    "hasPage": true
+    "kind": "Sphere",
+    "hasPage": true,
+    "within": []
   },
   {
     "id": "LOC-6cT4kW9n",
@@ -314,19 +367,23 @@
     "links": [],
     "fields": {
       "Location": "The Weeping Goddess",
-      "Type": "Refectory",
+      "Type": "Room",
       "Key NPCs / Factions": "Winston Ryeback, Caelestis Academy",
       "Visibility": "Player",
       "Visited": "S02",
       "Mentioned": null,
       "Overview (Player)": "The Weeping Goddess is Caelestis's bustling refectory, thronged with cadets from every corner of wildspace beneath blue-glowing orbs. Its kitchen is run by Petty Officer Winston Ryeback, and a back-wall notice board carries odd jobs, dock requests, and missing-item notices.",
-      "Region": "Caelestis",
       "Linked": null,
       "Status": "Accessible"
     },
-    "kind": "room",
-    "parent": "caelestis",
-    "hasPage": false
+    "parent": {
+      "slug": "caelestis",
+      "name": "Caelestis",
+      "url": "/navigation-records/caelestis.html"
+    },
+    "kind": "Room",
+    "hasPage": false,
+    "within": []
   },
   {
     "id": "LOC-3kW8mB2v",
@@ -351,19 +408,23 @@
     "links": [],
     "fields": {
       "Location": "The Sea Dock",
-      "Type": "Docking bay",
+      "Type": "Room",
       "Key NPCs / Factions": "Rindle Gearloft",
       "Visibility": "Player",
       "Visited": "S02",
       "Mentioned": null,
       "Overview (Player)": "The Sea Dock is one of Caelestis's docking bays, named on a cargo notice Casey pulled from the refectory board. He meant to work a job here but confused it with a neighboring dock.",
-      "Region": "Caelestis",
       "Linked": null,
       "Status": "Accessible"
     },
-    "kind": "room",
-    "parent": "caelestis",
-    "hasPage": false
+    "parent": {
+      "slug": "caelestis",
+      "name": "Caelestis",
+      "url": "/navigation-records/caelestis.html"
+    },
+    "kind": "Room",
+    "hasPage": false,
+    "within": []
   },
   {
     "id": "LOC-9mB4kW7n",
@@ -388,19 +449,23 @@
     "links": [],
     "fields": {
       "Location": "Simulation Deck",
-      "Type": "Training chamber",
+      "Type": "Room",
       "Key NPCs / Factions": "Saerthe Abizjn, Boatswain Tarto, Caelestis Academy",
       "Visibility": "Player",
       "Visited": "S02",
       "Mentioned": null,
       "Overview (Player)": "The Simulation Deck is the chamber at Caelestis where cadets enter pods to run immersive exercises. Here both cadet crews were briefed and set against each other in a salvage race through simulated wildspace.",
-      "Region": "Caelestis",
       "Linked": null,
       "Status": "Accessible"
     },
-    "kind": "room",
-    "parent": "caelestis",
-    "hasPage": false
+    "parent": {
+      "slug": "caelestis",
+      "name": "Caelestis",
+      "url": "/navigation-records/caelestis.html"
+    },
+    "kind": "Room",
+    "hasPage": false,
+    "within": []
   },
   {
     "id": "LOC-Rp7kW4vn",
@@ -444,19 +509,23 @@
     ],
     "fields": {
       "Location": "The Tyrant Ship",
-      "Type": "Beholder vessel",
+      "Type": "Vessel",
       "Key NPCs / Factions": "Ostekk-6, Winston Ryeback",
       "Visibility": "Player",
       "Visited": "S03, S04",
       "Mentioned": null,
       "Overview (Player)": "The tyrant ship is a stone-carved beholder vessel drifting above Toril, believed abandoned when the crew boarded it. They mean to install a helm on its command deck and fly it through H’cathan space unnoticed, but its interior is choked with a lantern-wisp bloom, prowled by clockwork horrors, and said to hide a shape-shifting mimic.",
-      "Region": "H’cathan Space",
       "Linked": null,
       "Status": "Accessible"
     },
-    "kind": "vessel",
-    "parent": "toril",
+    "parent": {
+      "slug": "toril",
+      "name": "Toril",
+      "url": "/navigation-records/toril.html"
+    },
+    "kind": "Vessel",
     "hasPage": true,
+    "within": [],
     "items": [
       {
         "id": "ITM-Cm8rT3wk",
@@ -506,19 +575,23 @@
     ],
     "fields": {
       "Location": "H'catha",
-      "Type": "World",
+      "Type": "Planet",
       "Key NPCs / Factions": null,
       "Visibility": "Player",
       "Visited": null,
       "Mentioned": "S03",
       "Overview (Player)": "H’catha is a world populated entirely by beholders and their kin, watched by beholder patrols. An adamantine meteor has struck its spire, and the crew has been sent to recover it — using a tyrant ship's appearance to move through H’cathan space unchallenged.",
-      "Region": "H’cathan Space",
       "Linked": null,
       "Status": "Accessible"
     },
-    "kind": "body",
-    "parent": null,
-    "hasPage": true
+    "parent": {
+      "slug": "realmspace",
+      "name": "Realmspace",
+      "url": "/navigation-records/realmspace.html"
+    },
+    "kind": "Planet",
+    "hasPage": true,
+    "within": []
   },
   {
     "id": "LOC-Tv6kW3mn",
@@ -551,18 +624,79 @@
     ],
     "fields": {
       "Location": "Toril",
-      "Type": "World",
+      "Type": "Planet",
       "Key NPCs / Factions": null,
       "Visibility": "Player",
       "Visited": null,
       "Mentioned": "S03",
       "Overview (Player)": "Toril is a world named as the nearest destination on most of the academy's shipping routes. The abandoned tyrant ship the crew boarded drifts in orbit above it.",
-      "Region": "Realmspace",
       "Linked": null,
       "Status": "Accessible"
     },
-    "kind": "body",
+    "parent": {
+      "slug": "realmspace",
+      "name": "Realmspace",
+      "url": "/navigation-records/realmspace.html"
+    },
+    "kind": "Planet",
+    "hasPage": true,
+    "within": [
+      {
+        "slug": "caelestis",
+        "name": "Caelestis",
+        "url": "/navigation-records/caelestis.html",
+        "type": "Station"
+      },
+      {
+        "slug": "the-tyrant-ship",
+        "name": "The Tyrant Ship",
+        "url": "/navigation-records/the-tyrant-ship.html",
+        "type": "Vessel"
+      }
+    ]
+  },
+  {
+    "id": "LOC-Sp4hR9nk",
+    "type": "location",
+    "slug": "realmspace",
+    "name": "Realmspace",
+    "url": "/navigation-records/realmspace.html",
+    "voyages": [],
+    "seen": [],
+    "mentioned": [
+      "S01",
+      "S02",
+      "S03",
+      "S04"
+    ],
+    "links": [],
+    "fields": {
+      "Location": "Realmspace",
+      "Type": "Sphere",
+      "Key NPCs / Factions": null,
+      "Overview (Player)": "The crystal sphere the crew calls home — a sun, a scatter of inner and outer worlds, and the shell of Deep Astral holding it all in.",
+      "Visited": null,
+      "Mentioned": "S01, S02, S03, S04",
+      "Status": "Accessible",
+      "Visibility": "Player",
+      "Linked": null
+    },
     "parent": null,
-    "hasPage": true
+    "kind": "Sphere",
+    "hasPage": true,
+    "within": [
+      {
+        "slug": "hcatha",
+        "name": "H'catha",
+        "url": "/navigation-records/hcatha.html",
+        "type": "Planet"
+      },
+      {
+        "slug": "toril",
+        "name": "Toril",
+        "url": "/navigation-records/toril.html",
+        "type": "Planet"
+      }
+    ]
   }
 ]

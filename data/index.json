@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-12T21:22:17.382Z",
+  "generated": "2026-09-13T00:40:14.922Z",
   "latestSession": "S04",
   "latestSessionNumber": 4,
   "counts": {
@@ -7,7 +7,7 @@
     "playerCharacters": 6,
     "npcs": 20,
     "factions": 1,
-    "locations": 11,
+    "locations": 12,
     "items": 11,
     "quests": 11
   }
