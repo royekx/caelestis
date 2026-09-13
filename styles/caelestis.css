@@ -858,16 +858,21 @@ body.with-sidebar .page-header {
    The strip trims with ellipsis on purpose; the caret opens what it cut.
    ══════════════════════════════════════════════════════════════════ */
 .command-bar {
-  /* Sits in the page column and sticks once it reaches the top. Opaque, so
-     content scrolling beneath it stays hidden without a full-bleed band
-     cutting the backdrop in half. */
-  position: sticky; top: 0; z-index: 150;
+  /* Scrolls with the page. It was sticky, which meant an opaque band riding
+     over the content on every page and a blur surface the backdrop had to be
+     re-composited against on each frame. It sits at the top of the column and
+     leaves with the rest of the page.
+
+     min-width:0 on the flex/grid children below is what keeps it inside the
+     column — without it the bearing values set the strip's min-content width
+     and pushed the whole bar past the page edge. */
+  position: relative; z-index: 1;
   background: rgba(12, 17, 28, 0.97);
-  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--rule);
   border-left: 3px solid var(--gold);
   margin: 0 0 2.2rem;
-  box-shadow: 0 14px 34px rgba(3, 5, 10, 0.45);
+  max-width: 100%; min-width: 0; overflow: hidden;
+  box-shadow: 0 10px 28px rgba(3, 5, 10, 0.35);
 }
 
 /* ── Global search ── */
@@ -892,7 +897,7 @@ body.with-sidebar .page-header {
 /* ── Operations ── */
 .cb-ops { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-bottom: 1px solid var(--rule-soft); }
 .cb-op {
-  display: flex; align-items: baseline; gap: 0.6rem;
+  display: flex; align-items: baseline; gap: 0.6rem; min-width: 0;
   padding: 0.55rem 1.1rem; text-decoration: none;
   transition: background .18s, color .18s;
 }
@@ -902,12 +907,15 @@ body.with-sidebar .page-header {
   font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.16em;
   text-transform: uppercase; color: var(--gold); white-space: nowrap;
 }
-.cb-op-note { font-size: 0.83rem; font-style: italic; color: var(--text-muted); }
+.cb-op-note {
+  font-size: 0.83rem; font-style: italic; color: var(--text-muted);
+  min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
 .cb-op svg { width: 9px; margin-left: auto; color: var(--text-muted); flex-shrink: 0; align-self: center; }
 .cb-op:hover .cb-op-note, .cb-op:hover svg { color: var(--gold-dim); }
 
 /* ── Bearing strip ── */
-.cb-strip { display: flex; align-items: stretch; }
+.cb-strip { display: flex; align-items: stretch; min-width: 0; }
 .cb-face {
   flex: 1; min-width: 0; display: grid;
   grid-template-columns: auto 1fr 1.2fr 1.6fr;

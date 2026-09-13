@@ -148,3 +148,86 @@ inventory/index.html                duplicate binder removed, register.css
 quests/, factions/                  register.css
 voyages/, spelljammer-nexus/, handouts/   search.js include removed
 ```
+
+---
+
+# Second pass — against the four demos
+
+The demos arrived after the first pass. Three of the four
+(`hub-demo`, `check-voyages-index`, `inventory-index-demo`) carry the current
+token palette and are authoritative. `nav-records-demo` carries the **old**
+palette — `--gold: #c9993a` on `--bg: #06040e`, with no `--ice` tokens at all.
+Its structure is the spec; its colours are not, and were not adopted.
+
+## The command bar
+
+Three separate faults, one visible symptom.
+
+**It was outside the page column.** `nav.js` inserted it after `.page-header`,
+making it a sibling of `.content` rather than a child. `.content` is
+`max-width: 900px` centred; `.page-content` has no max-width at all. So on
+every sub-page the bar rendered the full width of the viewport above a 900px
+page — and a different width again on the hub, which nests inside `.hub` at
+1040px. It now injects into the column itself on every page: `.content`,
+or `.hub` under the title, or `.terminal-wrap` on S.E.A.R.C.H.
+
+**Sixteen pages had no bearing strip.** `buildCommandBar()` renders operations
+only when `window.CAELESTIS_BEARING` is absent, and sixteen pages never loaded
+`data/bearing.js` — all four voyage records, all six Nexus pages, Corps
+Protocols, Crew Logs, S.E.A.R.C.H. and the stellar chart. That is the bulk of
+what "not uniform" was. All sixteen now load it.
+
+**It no longer sticks.** Now `position: relative`, and it scrolls away with
+the page. The blur surface went with it.
+
+Guards added so it cannot outgrow its column again: `max-width: 100%` and
+`overflow: hidden` on the bar, `min-width: 0` on `.cb-strip` and `.cb-op`,
+ellipsis on `.cb-op-note`.
+
+## The overflow
+
+Same root cause. The bar was the widest thing on the page and the only element
+not bound by the column, so it set the page's scroll width. Pages loading
+`board.css` or `entity.css` hid it behind `html, body { overflow-x: hidden }`
+and pages that didn't showed it — which is exactly the "some pages overflow and
+others don't" split.
+
+## register.css, rebuilt from the demos
+
+The first pass approximated these rules. They are now copied verbatim:
+
+- **Section 1** — the Inventory demo's stylesheet: the register, the facet
+  block, the tabbed `.board-body` panel, the rarity scale, `.facet[hidden]`
+  and `.filter-tag[hidden]` (without which the JS hides pills that keep
+  rendering), and the 760px responsive block.
+- **Section 2** — the voyage index's stylesheet, which was byte-identical to
+  its demo. It lived inline where only that page could see it; the Quest Board
+  uses the same class names and had nothing. `voyages/index.html` now loads the
+  shared file instead of holding its own copy.
+- **Section 3** — what no demo covered: `.board-body` without a tab row above
+  it, portrait faces in crew and dossier rows, and `min-width: 0` on every
+  listing container.
+- **Section 4** — Navigation Records. Section 1 gives every `.ent-row` a 34px
+  face column; Navigation Records has an 11px glyph and a distance column
+  instead. Both grids are now scoped and stop overwriting each other.
+
+## Navigation Records, rebuilt from its demo
+
+The first pass invented a two-orbit schematic. The demo is an orrery: sun at
+the right, Deep Astral at the left, and all eight Realmspace worlds at their
+charted distances — Anadia, Coliar, Toril, Karpri, Chandos, Glyth, Garden,
+H'catha — with Caelestis and the tyrant ship tethered to Toril.
+
+Also from the demo: the survey chart above it, the `.ent-dist` column carrying
+distance from the sun, charted-but-unreached worlds drawn back as
+`.is-unknown`, Caelestis's six rooms as `.det-chips` under its own entry rather
+than as register rows of their own, and Viren as a single `.stub` card on its
+own tab. Naming retargeted from the demo's `Hakatha` to the repo's `H'catha`,
+and the truncated demo descriptions replaced with the full text from
+`locations.json`.
+
+## Listing structure
+
+Dossiers had no `.board-body` and the Crew Manifest had its search field inside
+`.facets` rather than above it. Both now follow the Inventory demo:
+`.board-body > .search-row > .facets > .result-line > .register`.

@@ -104,9 +104,7 @@
     function filterTo(name) {
       nodes.forEach(function (b) { b.classList.toggle('is-selected', b.dataset.body === name); });
       ents.forEach(function (e) {
-        // A body on the chart stands for itself and for everything filed
-      // inside it — selecting Caelestis brings its rooms with it.
-      var on = e.dataset.entry === name || e.dataset.parent === name;
+        var on = e.dataset.entry === name;
         e.hidden = !on;
         e.classList.toggle('is-selected', on);
         e.querySelector('.ent-row').setAttribute('aria-expanded', on ? 'true' : 'false');
