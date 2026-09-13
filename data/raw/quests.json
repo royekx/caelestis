@@ -21,7 +21,8 @@
     "Linked": "ITM-5nB7wK9x, NPC-Wc9fT2nJ, NPC-Zx4Bn7Lq, ITM-8pC4kW2n, ITM-2pQ7vHm9, NPC-Mw6kT2vn, ITM-Wp4kT8vn, ITM-Xn7kW2vm, NPC-Hs6cW9pM, NPC-Lp3kW8vn, NPC-Mb3vK8dW",
     "Flag": "",
     "action": "update",
-    "sheet": "Quests"
+    "sheet": "Quests",
+    "Rewards": ""
   },
   {
     "row_number": 3,
@@ -45,7 +46,8 @@
     "Linked": "ITM-5nB7wK9x",
     "Flag": "",
     "action": "append",
-    "sheet": "Quests"
+    "sheet": "Quests",
+    "Rewards": ""
   },
   {
     "row_number": 4,
@@ -69,7 +71,8 @@
     "Linked": "PC-t0jvvcOZ, ITM-4kD8vRt2, LOC-Cw8kM4vB, NPC-Py6hN3xB",
     "Flag": "",
     "action": "update",
-    "sheet": "Quests"
+    "sheet": "Quests",
+    "Rewards": ""
   },
   {
     "row_number": 5,
@@ -93,7 +96,8 @@
     "Linked": "PC-BGCfmbF3",
     "Flag": "",
     "action": "append",
-    "sheet": "Quests"
+    "sheet": "Quests",
+    "Rewards": ""
   },
   {
     "row_number": 6,
@@ -117,7 +121,8 @@
     "Linked": "PC-647haWGJ, ITM-2pQ7vHm9, NPC-Zx4Bn7Lq, ITM-8pC4kW2n",
     "Flag": "",
     "action": "update",
-    "sheet": "Quests"
+    "sheet": "Quests",
+    "Rewards": ""
   },
   {
     "row_number": 7,
@@ -141,7 +146,8 @@
     "Linked": "PC-wI087olT",
     "Flag": "",
     "action": "append",
-    "sheet": "Quests"
+    "sheet": "Quests",
+    "Rewards": ""
   },
   {
     "row_number": 8,
@@ -165,7 +171,8 @@
     "Linked": "PC-6rzWlD8Q",
     "Flag": "",
     "action": "update",
-    "sheet": "Quests"
+    "sheet": "Quests",
+    "Rewards": ""
   },
   {
     "row_number": 9,
@@ -189,7 +196,8 @@
     "Linked": "PC-wI087olT, NPC-Jv7kW3mq, ITM-Yq5kW8vn",
     "Flag": "",
     "action": "update",
-    "sheet": "Quests"
+    "sheet": "Quests",
+    "Rewards": ""
   },
   {
     "row_number": 10,
@@ -200,7 +208,7 @@
     "Current State": "The crew cleared the hold and the garden shaft aboard the tyrant ship but chose to hold and rest, bloodied, before descending to the deck below.",
     "Key Details (Player)": "• [S03] Boatswain Tarto woke the crew at four in the morning to recover an adamantine meteor that struck the spire on Hakatha\n• [S03] The plan: crew an abandoned beholder tyrant ship, install the helm on the command deck, and use its appearance to move through Hakathan space unchallenged\n• [S03] The Flighty Foundling dropped the crew into the tyrant ship's cargo deck and departed\n• [S03] The crew found and saved the broken autognome Ostekk-6, learning of a mimic aboard, a wisp bloom, and more clockwork horrors\n• [S04] The crew dispatched the clockwork horrors feeding on Ostekk-6, saved it, and cleared the lantern-wisp bloom choking the garden shaft\n• [S04] A magical floating dolly can bear the helm's weight, but the helm must still be routed up through the internal access shafts to the command deck\n• [S04] Ostekk-6 confirmed the shafts are impassable while the bloom holds, and that killing a flower does not unmake the wisps already loose\n• [S04] Bloodied and unrested, the crew decided for the first time not to press on, holding to recover before descending to the deck below by rope",
     "Key Details (DM)": "—",
-    "Overview (Player)": "The crew has been sent to recover an adamantine meteor that struck the spire on Hakatha, a world of beholders. They board an abandoned tyrant ship to install a helm on its command deck and fly it through Hakathan space unnoticed — but the vessel is choked with a lantern-wisp bloom, prowled by clockwork horrors, and said to hide a shape-shifting mimic. The way up runs through its access shafts, and a deck below still waits unexplored.",
+    "Overview (Player)": "Boatswain Tarto has sent the crew to recover an adamantine meteor that struck the spire on H’catha, a world of beholders. Arriving as themselves is not an option. An abandoned tyrant ship drifts in Toril’s orbit: commandeer it, install a spelljamming helm on its command deck, and fly it through H’cathan space as one of their own — the vessel itself the disguise. Reach the spire under that cover and bring the meteor back.",
     "Overview (DM)": "",
     "Visibility": "Player",
     "Urgency": "High",
@@ -213,6 +221,7 @@
     "Linked": "LOC-Rp7kW4vn, LOC-Sk4mW8vn, LOC-Tv6kW3mn, NPC-Hn4kW9vm",
     "Flag": "",
     "action": "update",
-    "sheet": "Quests"
+    "sheet": "Quests",
+    "Rewards": ""
   }
 ]
