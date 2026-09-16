@@ -162,7 +162,7 @@ const NEW_QUESTS = [
 // stay data, surfaced in the Within section of whatever contains them,
 // until one earns promotion to its own page.
 const LOC_TYPE = {
-  'realmspace': 'Sphere', 'viren-star-system': 'Sphere',
+  'realmspace': 'System', 'viren-star-system': 'System',
   'toril': 'Planet', 'hcatha': 'Planet',
   'caelestis': 'Station', 'the-tyrant-ship': 'Vessel',
   'spelljammer-nexus': 'Room', 'mirts-quarters': 'Room', 'sky-dock': 'Room',
@@ -179,8 +179,8 @@ const LOC_PARENT = {
 const NEW_LOCATIONS = [
   {
     id: 'LOC-Sp4hR9nk', Location: 'Realmspace', Slug: 'realmspace',
-    Type: 'Sphere', 'Key NPCs / Factions': null,
-    'Overview (Player)': 'The crystal sphere the crew calls home \u2014 a sun, a scatter of inner and outer worlds, and the shell of Deep Astral holding it all in.',
+    Type: 'System', 'Key NPCs / Factions': null,
+    'Overview (Player)': 'The system the crew calls home \u2014 a sun, a scatter of inner and outer worlds, and the edge where Wildspace begins.',
     'Key Details (Player)': null, Visited: null, Mentioned: 'S01, S02, S03, S04',
     Status: 'Accessible', Visibility: 'Player', Linked: ''
   }

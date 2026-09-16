@@ -327,7 +327,7 @@
     ],
     "fields": {
       "Location": "Viren Star System",
-      "Type": "Sphere",
+      "Type": "System",
       "Key NPCs / Factions": "Zerathis",
       "Visibility": "Player",
       "Visited": null,
@@ -337,7 +337,7 @@
       "Status": "Accessible"
     },
     "parent": null,
-    "kind": "Sphere",
+    "kind": "System",
     "hasPage": true,
     "within": []
   },
@@ -672,9 +672,9 @@
     "links": [],
     "fields": {
       "Location": "Realmspace",
-      "Type": "Sphere",
+      "Type": "System",
       "Key NPCs / Factions": null,
-      "Overview (Player)": "The crystal sphere the crew calls home — a sun, a scatter of inner and outer worlds, and the shell of Deep Astral holding it all in.",
+      "Overview (Player)": "The system the crew calls home — a sun, a scatter of inner and outer worlds, and the edge where Wildspace begins.",
       "Visited": null,
       "Mentioned": "S01, S02, S03, S04",
       "Status": "Accessible",
@@ -682,7 +682,7 @@
       "Linked": null
     },
     "parent": null,
-    "kind": "Sphere",
+    "kind": "System",
     "hasPage": true,
     "within": [
       {
