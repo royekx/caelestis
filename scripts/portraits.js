@@ -66,7 +66,7 @@
     'zerathis':      { name: 'Zerathis',            fileId: '' },
 
     // ── Artifacts (treated as portrait-like for dossier consistency) ──
-    'world-surveyor': { name: 'The World Surveyor', fileId: '1PszrX48t8qd24acEGVLa87ir5AXlLJeR' },
+    'world-surveyor': { name: 'A.T.L.A.S.', fileId: '1PszrX48t8qd24acEGVLa87ir5AXlLJeR' },
 
     // ── Places ──
     'realmspace':    { name: 'Realmspace',          fileId: '1kI7fIgdRRyDrNaoauZBw_QsKadJmgHf8' },
