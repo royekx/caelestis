@@ -81,7 +81,7 @@
     'hcatha':        { name: 'H\'Catha',            fileId: '' },
     'virenspace':    { name: 'Virenspace',          fileId: '' },
     'aethris':       { name: 'Aethris',             fileId: '' },
-    'hollow':        { name: 'The Hollow',          fileId: '' },
+    'hollow':        { name: 'The Reach World',          fileId: '' },
     'tumak-homeworld': { name: 'Lunarfoot',         fileId: '' },
     'cairn-station': { name: 'Cairn Station',       fileId: '' },
 
