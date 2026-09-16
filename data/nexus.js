@@ -25,7 +25,7 @@ const CAELESTIS_NEXUS = [
   },
   {
     href: 'crystal-spheres.html',
-    title: 'Crystal Spheres & the Phlogiston',
+    title: 'Spheres & the Flow',
     sub: 'The shells that enclose each system, and the volatile medium that lies between them',
     badge: 'Cosmology'
   },

@@ -165,7 +165,7 @@ window.DM_SECTIONS = {
     },
     {
       "id": "wildspaces",
-      "label": "Wildspaces"
+      "label": "Systems"
     },
     {
       "id": "cairn-station",

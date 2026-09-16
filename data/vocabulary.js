@@ -10,7 +10,7 @@
  */
 
 var CAELESTIS_VOCAB = [
-  "Abyzine",
+  "Abizjn",
   "Adamantine",
   "Autognome",
   "Barret",
@@ -60,7 +60,7 @@ var CAELESTIS_VOCAB = [
   "Records",
   "Rindle",
   "Ryeback",
-  "Saerth",
+  "Saerthe",
   "Ship",
   "Shirt",
   "Simulation",

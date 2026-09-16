@@ -37,7 +37,7 @@
     // ── Academy & Fleet ──
     'mirt':          { name: 'Mirt',                fileId: '1D9Hh3pn8e_QbMAF69ABg4bld6kMHj4qr' },
     'tarto':         { name: 'Boatswain Tarto',     fileId: '13-w6epUMG5kO54FqZpJpelexFufDzu2W' },
-    'saerthe':       { name: 'Saerthe Abyzine',     fileId: '1d7cDR1TYwEkaSuDVJC8bEOOJnoPT5S_D' },
+    'saerthe':       { name: 'Saerthe Abizjn',     fileId: '1d7cDR1TYwEkaSuDVJC8bEOOJnoPT5S_D' },
     'blip':          { name: 'Mr. Blip',            fileId: '1gcMlDsoM10pyQ62SC6MG1UcLgWnepLcX' },
     'ryeback':       { name: 'Petty Officer Winston Ryeback', fileId: '1H3TaoPPU1F_Ocit_CLn1RCbdR2f-FnJl' },
     'sorcur':        { name: 'Sorcur',              fileId: '' },
