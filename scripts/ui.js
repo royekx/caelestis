@@ -82,8 +82,14 @@
 
   /* ── Sphere chart ──
      Selecting a body on the schematic filters the register to it. The
-     list starts complete; "Show all" restores it. */
-  var nodes = document.querySelectorAll('.body');
+     list starts complete; "Show all" restores it.
+
+     Only nodes carrying data-body are chart nodes. The register rows mark
+     their glyph .ent-glyph.body too, and without this the block bound those
+     eight spans, called filterTo(undefined) on a glyph click — hiding every
+     entry and labelling the filter "undefined" — and bound "Show all" a
+     second time alongside the page's own chart script. */
+  var nodes = document.querySelectorAll('.body[data-body]');
   var ents = document.querySelectorAll('.ent');
   if (nodes.length && ents.length) {
     var clearBtn = document.querySelector('.clear-btn');
