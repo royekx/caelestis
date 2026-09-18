@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Rules &middot; Caelestis &middot; DM</title>
+<link rel="stylesheet" href="../../styles/caelestis.css">
+<link rel="stylesheet" href="../../styles/dm.css">
+<script src="../../scripts/dm-nav.js" defer></script>
+<script src="../../scripts/dm-toc.js" defer></script>
+</head>
+<body>
+
+<main class="dm-content has-toc">
+
+  <header class="dm-page-header">
+    <div class="dm-page-eyebrow">Table<span class="sep">&middot;</span>Mechanics Reference</div>
+    <h1>Rules</h1>
+    <p class="dm-page-lede">
+      Homebrew mechanics that need a DM-side answer at the table. The inscription tracker comes in two copies: <a href="wayfinder-path-dm.html">the unlocked DM version</a>, with every rune matched, and the <a href="../../wayfinder-path/index.html">player-facing one</a>.
+    </p>
+  </header>
+
+  <details class="dm-collapse-section" id="runekeeper">
+    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Tumak &mdash; the inscription</h2></summary>
+    <div class="dm-collapse-section-body">
+
+  <p>
+    Wan and Tu are two separate hosts sharing one persona. The Dissolution fragment is forming in both of them, and the inscription is how that shows: <strong>the world writes runes onto their bodies, one half per twin.</strong> A rune does nothing until both halves exist. Twenty positions in total.
+  </p>
+
+  <div class="dm-callout is-info">
+    <span class="dm-callout-label">Core loop</span>
+    Each level, roll a d20 per bearer against a diminishing pool to place a half-rune. A position with both halves is <em>matched</em> and awake. Matched runes power the four Wayscribes and, at the top end, Reach for Home.
+  </div>
+
+  <h3>Standing mechanics</h3>
+  <table>
+    <thead><tr><th>Mechanic</th><th>Detail</th></tr></thead>
+    <tbody>
+      <tr><td>Twin stacking</td><td>Disadvantage on Acrobatics.</td></tr>
+      <tr><td>Twinsight</td><td>Advantage on Insight. Two perspectives processing one conversation.</td></tr>
+      <tr><td>Shared magic</td><td>Sorcerer multiclass. Magic is shared across the twins and awakens through coordinated action.</td></tr>
+      <tr><td>Rune rolling</td><td>d20 per level, diminishing pool, pacing rule applies.</td></tr>
+      <tr><td>Wayscribe cost</td><td>First casting per Wayscribe is free; each further casting adds a level of exhaustion.</td></tr>
+      <tr><td>Wayscribe recharge</td><td>At dawn: d2 (Soul), d4 (Maker), d4 (Walker), d10 (Vessel).</td></tr>
+      <tr><td>Marks</td><td>Every matched rune carries the same three uses: place a mark (10-minute ritual, physical presence), reclaim a mark (free), and perceive through any of your marks (1 per long rest, one minute at one mark).</td></tr>
+      <tr><td>Twin Bond Compass</td><td>Passive directional sense between the twins if they are separated.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Wayfind</h3>
+  <p>
+    The teleport. An action, always targeting one of Tumak's placed marks. It opens on the <strong>first matched rune</strong> and grows with the inscription.
+  </p>
+  <table>
+    <thead><tr><th>Element</th><th>Rule</th></tr></thead>
+    <tbody>
+      <tr><td>Cost</td><td>First Wayfind per long rest is free. Each further one adds a level of exhaustion.</td></tr>
+      <tr><td>Passengers</td><td>Willing creatures within 5 feet, <strong>floor(awakened &divide; 2)</strong>, maximum 8. The Heart counts toward awakened, so the first match already carries one passenger, and the full inscription carries eight.</td></tr>
+      <tr><td>Mishap by distance</td><td>0% &middot; 20% &middot; 40% &middot; 60% &middot; 75% &middot; 90%, rising with range.</td></tr>
+      <tr><td>Network modifiers</td><td>&minus;10% if the mark was placed by a rune from another set; &minus;25% if from the same set.</td></tr>
+      <tr><td>Floor</td><td>5% during the arc, except within 100 feet and for the Heart once it awakens.</td></tr>
+      <tr><td>Mishap result</td><td>The twins separate, and the traveler arrives at a previous Wayfinder's resting place. On a group jump the party lands at that sanctuary with one twin; the other stays at the origin.</td></tr>
+      <tr><td>While separated</td><td>Wayfind locks until the twins reunite. He cannot teleport out of the consequence.</td></tr>
+      <tr><td>After the arc</td><td>Mishap drops to 0%. Wayfind reaches any of his marks.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Homebound</h3>
+  <p>
+    The Heart (20) is intrinsic and pre-matched. It <strong>awakens when the other sixteen placeable runes are matched</strong>, and from then on it is an always-accessible home anchor: no range requirement and no mishap. <em>Homebound is a Wayfind to the Heart.</em> That moment is the arc's resolution &mdash; Tumak goes home and the Zenith follows.
+  </p>
+
+  <h3>The four Wayscribes</h3>
+  <p>
+    A Wayscribe awakens when every rune in its group is matched. The player then picks <strong>one</strong> spell from that Wayscribe's menu, permanently.
+  </p>
+  <table>
+    <thead><tr><th>Wayscribe</th><th>Group &amp; tier</th><th>Flavor</th><th>Menu</th></tr></thead>
+    <tbody>
+          <tr><td><strong>Soul Runes</strong></td><td>Heart group &middot; 2nd level</td><td>The world perceives through you.</td><td>Detect Thoughts &middot; See Invisibility &middot; Mind Spike &middot; Locate Object &middot; Borrowed Knowledge</td></tr>
+          <tr><td><strong>Maker Runes</strong></td><td>Hand group &middot; 3rd level</td><td>The world grasps through you.</td><td>Maximilian's Earthen Grasp &middot; Pulse Wave &middot; Catapult &middot; Hold Person &middot; Erupting Earth</td></tr>
+          <tr><td><strong>Walker Runes</strong></td><td>Foot group &middot; 3rd level</td><td>The world steps through you.</td><td>Thunder Step &middot; Fly &middot; Water Walk &middot; Blink &middot; Misty Step</td></tr>
+          <tr><td><strong>Vessel Runes</strong></td><td>Core group &middot; 5th level</td><td>The world acts wholly through you.</td><td>Telekinesis &middot; Wall of Stone &middot; Animate Objects &middot; Tree Stride &middot; Transmute Rock</td></tr>
+    </tbody>
+  </table>
+
+  <h3>The twenty positions</h3>
+  <table>
+    <thead><tr><th>#</th><th>Locus</th><th>Wayscribe</th><th>State</th></tr></thead>
+    <tbody>
+          <tr><td>01</td><td>Top of left hand</td><td>Maker</td><td>Unmarked</td></tr>
+          <tr><td>02</td><td>Top of right hand</td><td>Maker</td><td>Unmarked</td></tr>
+          <tr><td>03</td><td>Left palm</td><td>Maker</td><td>Unmarked</td></tr>
+          <tr><td>04</td><td>Right palm</td><td>Maker</td><td>Unmarked</td></tr>
+          <tr><td>05</td><td>Top of left foot</td><td>Walker</td><td>Unmarked</td></tr>
+          <tr><td>06</td><td>Top of right foot</td><td>Walker</td><td>Unmarked</td></tr>
+          <tr><td>07</td><td>Right sole</td><td>Walker</td><td>Unmarked</td></tr>
+          <tr><td>08</td><td>Left sole</td><td>Walker</td><td>Wan's half</td></tr>
+          <tr><td>09</td><td>Forehead</td><td>Soul</td><td>Unmarked</td></tr>
+          <tr><td>10</td><td>Tongue</td><td>Soul</td><td>Unmarked</td></tr>
+          <tr><td>11</td><td>Left shoulder</td><td>Vessel</td><td>Unmarked</td></tr>
+          <tr><td>12</td><td>Lower back</td><td>Vessel</td><td>Unmarked</td></tr>
+          <tr><td>13</td><td>Stomach</td><td>Vessel</td><td>Unmarked</td></tr>
+          <tr><td>14</td><td>Left thigh</td><td>Vessel</td><td>Unmarked</td></tr>
+          <tr><td>15</td><td>Right thigh</td><td>Vessel</td><td>Unmarked</td></tr>
+          <tr><td>16</td><td>Right shoulder</td><td>Vessel</td><td>Tu's half</td></tr>
+          <tr><td>17</td><td>Unassigned (bestowed)</td><td>—</td><td>Bestowed at a story moment</td></tr>
+          <tr><td>18</td><td>Unassigned (bestowed)</td><td>—</td><td>Bestowed at a story moment</td></tr>
+          <tr><td>19</td><td>Unassigned (bestowed)</td><td>—</td><td>Bestowed at a story moment</td></tr>
+          <tr><td>20</td><td>Heart</td><td>Soul</td><td>Matched, hidden</td></tr>
+    </tbody>
+  </table>
+
+  <div class="dm-callout is-warn">
+    <span class="dm-callout-label">Hidden</span>
+    Rune 20, the Heart, is intrinsic and was matched before the campaign began. Tumak does not know he carries it. It is hidden from both the figure and the table until you reveal it by removing <code>hidden: true</code> in the tracker.
+  </div>
+
+  <h3>Current state</h3>
+  <ul>
+    <li>V003 emergence: Wan took the left sole (08), Tu took the right shoulder (16). Two unmatched halves; no rune complete.</li>
+    <li>The Heart (20) is matched and concealed.</li>
+    <li>No Wayscribe is awake, so no spell has been chosen.</li>
+  </ul>
+
+  <h3>Running it</h3>
+  <ul>
+    <li>Half-runes surface through small physical prompts: itches, tingles, heat. The player drives discovery.</li>
+    <li>Matched runes arrive in pairs across two bodies, so a match is a scene between the twins, not a die result in isolation.</li>
+    <li>Wayfind is usable from the first match, so the mark network starts early and the range grows with the inscription.</li>
+    <li>Mishaps are a story tool: a separated twin, and a dead Wayfinder's sanctuary to wake up in.</li>
+    <li>Homebound is the Becoming: sixteen matched, the Heart awakens, Tumak goes home, and the Zenith fires. See <a href="../campaign/spine.html#tumak">Spine &rarr; Tumak</a>.</li>
+  </ul>
+
+  <div class="dm-callout is-warn">
+    <span class="dm-callout-label">Open</span>
+    Runes 17, 18 and 19 are unassigned and bestowed at story moments. The distance bands behind the mishap percentages are undecided, and so is the early-home door (a natural 20 on a d20 before declaring a target, then a confirmation roll to reach home ahead of the arc). The pending redesign turns them into fixed narrative <em>Anchors</em>: permanent destinations Tumak attunes to through play rather than by rolling, with a proposed Hearth / Threshold / Horizon split tied to Gregory's calibration sites. Two decisions remain: whether one Anchor is set at campaign start, and what an Anchored Reach actually grants &mdash; mishap-free transit, a reduced mishap tier, or one free trip per rest.
+  </div>
+
+    </div>
+  </details>
+
+</main>
+
+</body>
+</html>

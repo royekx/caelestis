@@ -83,6 +83,7 @@
     { key: 'realms',    label: 'Realms',       path: 'realms/'     },
     { key: 'factions',  label: 'Factions &amp; Characters', path: 'factions/' },
     { key: 'artifacts', label: 'Artifacts',    path: 'artifacts/'  },
+    { key: 'rules',     label: 'Rules',        path: 'rules/'      },
   ];
 
   var extLinks = [
