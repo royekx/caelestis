@@ -126,6 +126,41 @@
   // After DOM ready, walk every <td class="dossier-portrait" data-key="..."> and
   // fill it with either an <img> or a monogram fallback. This lets the HTML
   // declare just the key and stay terse.
+  // Quest givers: .giver-face on a quest page, .row-giver-face on the board.
+  // A data-key wins; otherwise the key comes from the dossier link beside it.
+  var SLUG_KEY = { 'boatswain-tarto': 'tarto', 'saerthe-abizjn': 'saerthe', 'mr-blip': 'blip' };
+  function keyFromSlug(slug) {
+    if (!slug) return null;
+    if (SLUG_KEY[slug]) return SLUG_KEY[slug];
+    return PORTRAITS[slug] ? slug : null;
+  }
+  function hydrateGivers() {
+    document.querySelectorAll('.giver-face, .row-giver-face').forEach(function (el) {
+      if (el.querySelector('img')) return;
+      var key = el.getAttribute('data-key');
+      if (!key) {
+        var strip = el.closest('.giver-strip, .row-giver, .log-title') || el.parentNode;
+        var link = strip && strip.querySelector('a[href*="/dossiers/"], a[href*="dossiers/"]');
+        if (link) {
+          var slug = link.getAttribute('href').split('/').pop().replace('.html', '');
+          key = keyFromSlug(slug);
+        }
+      }
+      if (!key) return;
+      var url = portraitUrl(key);
+      if (url) {
+        var img = document.createElement('img');
+        img.src = url;
+        img.alt = (PORTRAITS[key] && PORTRAITS[key].name) || key;
+        img.loading = 'lazy';
+        el.innerHTML = '';
+        el.appendChild(img);
+      } else if (!el.textContent.trim()) {
+        el.innerHTML = '<span class="monogram">' + monogramFor(key) + '</span>';
+      }
+    });
+  }
+
   function hydrate() {
     var cells = document.querySelectorAll('.dossier-portrait[data-key]');
     cells.forEach(function (cell) {
@@ -146,10 +181,12 @@
     });
   }
 
+  function hydrateAll() { hydrate(); hydrateGivers(); }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', hydrate);
+    document.addEventListener('DOMContentLoaded', hydrateAll);
   } else {
-    hydrate();
+    hydrateAll();
   }
 
   // Expose for debugging / future inline use.

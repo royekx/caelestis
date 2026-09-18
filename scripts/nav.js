@@ -332,6 +332,14 @@
       targets.push({ frame: frame, img: img });
     });
 
+    // Charts, handouts and any other standing image expand the same way.
+    document.querySelectorAll('.survey, .expandable, figure.plate').forEach(function (frame) {
+      var img = frame.querySelector('img');
+      if (!img || frame.hasAttribute('onclick')) return;
+      frame.classList.add('is-expandable');
+      targets.push({ frame: frame, img: img });
+    });
+
     if (!targets.length) return;
 
     var box = document.createElement('div');
