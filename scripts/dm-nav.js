@@ -77,7 +77,7 @@
     { key: 'voyages',   label: 'Voyages',      path: 'campaign/voyages/',        indent: true },
     { key: 'spine',     label: 'Spine',        path: 'campaign/spine.html',      indent: true },
     { key: 'becoming',  label: 'The Ascension', path: 'campaign/ascension/',       indent: true },
-    { key: 'remaking',  label: 'Colony Ops',    path: 'campaign/remaking/',       indent: true },
+    { key: 'colony',    label: 'Colony Ops',    path: 'campaign/colony/',       indent: true },
     { key: 'plot-hooks',label: 'Plot Hooks',   path: 'campaign/plot-hooks.html', indent: true },
     { key: 'what-if',   label: 'What If',      path: 'campaign/what-if.html',    indent: true },
     { key: 'glossary',  label: 'Glossary',     path: 'glossary/'   },
@@ -158,7 +158,7 @@
 
   // ── Active state ──────────────────────────────────────────────────────────
   // Active-state: match each section's full path against the current URL and
-  // pick the MOST SPECIFIC (longest) match, so /campaign/remaking/ highlights
+  // pick the MOST SPECIFIC (longest) match, so /campaign/colony/ highlights
   // The Remaking, not its parent Campaign.
   (function () {
     var links = Array.prototype.slice.call(
@@ -166,7 +166,7 @@
     );
     var best = null, bestLen = -1;
     links.forEach(function (link) {
-      var p = link.dataset.path;          // e.g. "campaign/remaking/"
+      var p = link.dataset.path;          // e.g. "campaign/colony/"
       if (!p) return;
       // Normalize: strip trailing index.html if present in the URL.
       var here = pathname;
