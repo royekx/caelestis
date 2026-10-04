@@ -79,6 +79,8 @@
     'vaelorix':      { name: 'Vaelorix',            fileId: '' },
     'ostekk':        { name: 'Ostekk',              fileId: '' },
     'runekeeper':    { name: 'The Runekeeper',      fileId: '' },
+    'thessalar':     { name: 'Thessalar',           fileId: '' },
+    'verrow':        { name: 'Quartermaster Halix Verrow', fileId: '' },
 
     // ── Artifacts (treated as portrait-like for dossier consistency) ──
     'world-surveyor': { name: 'A.T.L.A.S.', fileId: '1PszrX48t8qd24acEGVLa87ir5AXlLJeR' },
