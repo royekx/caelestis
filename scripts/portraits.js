@@ -48,7 +48,7 @@
     'ostekk-6':      { name: 'Ostekk-6', fileId: '1kRxGB6tcRWliypOvuE0TlfeKixlE9CUw' },
     'pffred':        { name: 'Pffred', fileId: '1BlgQkqqZYL5E5M6X7DJMFOJKbr23hda6' },
     'miken':         { name: 'Miken Haverstance',   fileId: '1naBafRe55ibGcJ7vcQ1vxHCpg0rhaKpk' },
-    'wizpop':        { name: 'Wizpop',              fileId: '' },
+    'ostekk-6':      { name: 'OSTEKK-6',            fileId: '' },
 
     // ── Order / Watchers ──
     'ezra':          { name: 'Ezra',                fileId: '' },
