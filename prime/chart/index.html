@@ -626,7 +626,7 @@ function showNode(n, offer){
     ${isSph ? `<h3>Systems</h3><p>${systemsOf(n.id).length} systems, ${systemsOf(n.id).reduce((a,s)=>a+s.bodies.length,0)} charted worlds.</p>` : ""}
     ${dmlist(n.dm)}${list("Open", n.open===true?[]:n.open)}${btn}`;
 }
-function intro(){ panel.innerHTML = `<h2>Caelestis cosmos</h2><p class="kind">DM chart</p><p>Three levels: the cosmos, a sphere, a system. Designations follow Caelestis's charting; names follow after a colon when known.</p><p class="hint">Tap anything for details. Tap a sphere or system twice to open it.</p>`; }
+function intro(){ panel.innerHTML = `<h2>Caelestis cosmos</h2><p class="kind">DM chart</p><p>Three levels: the cosmos, a sphere, a system. Designations follow Caelestis's charting; names follow after a colon when known.</p><p class="hint">Tap anything for details. Tap a sphere or system twice to open it.</p><p class="hint">This chart is the registry and the picture. <a href="../realms/">Realms</a> is the source of truth for any place with a situation attached &mdash; routes, stations, worlds in play. Where the two differ, Realms is current.</p>`; }
 
 function activate(g){
   if(g.dataset.up){ const sp = view.sphere||"sph01"; renderCosmos(); show(sp); return; }
