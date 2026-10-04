@@ -48,7 +48,14 @@
     'ostekk-6':      { name: 'Ostekk-6', fileId: '1kRxGB6tcRWliypOvuE0TlfeKixlE9CUw' },
     'pffred':        { name: 'Pffred', fileId: '1BlgQkqqZYL5E5M6X7DJMFOJKbr23hda6' },
     'miken':         { name: 'Miken Haverstance',   fileId: '1naBafRe55ibGcJ7vcQ1vxHCpg0rhaKpk' },
-    'ostekk-6':      { name: 'OSTEKK-6',            fileId: '' },
+
+    // ── The Vth'orama ──
+    'nghathrod':     { name: "N'ghathrod",          fileId: '1oedgB7qGvCAU1IZ_aO6gkLi5JpFDzkrj' },
+    'osskhal':       { name: 'Osskhal',             fileId: '' },
+    'ulhrek':        { name: "Ulh'rek",             fileId: '' },
+    'zhauveth':      { name: 'Zhauveth',            fileId: '' },
+    'ithvarn':       { name: "Ith'varn",            fileId: '' },
+    'khaleth':       { name: 'Khaleth',             fileId: '' },
 
     // ── Order / Watchers ──
     'ezra':          { name: 'Ezra',                fileId: '' },
@@ -63,10 +70,19 @@
     'tymora':        { name: 'Tymora',              fileId: '' },
     'astra':         { name: 'Astra',               fileId: '' },
     'polly':         { name: 'Polly',               fileId: '' },
+    'astra-virex':   { name: 'Astra Virex',         fileId: '' },
     'zerathis':      { name: 'Zerathis',            fileId: '' },
+    'joffrey':       { name: 'Joffrey',             fileId: '' },
+    'jeffrey':       { name: 'Jeffrey',             fileId: '' },
+    'clint':         { name: 'Clint Dashforest',    fileId: '' },
+    'tarroway':      { name: 'M. Tarroway',         fileId: '' },
+    'vaelorix':      { name: 'Vaelorix',            fileId: '' },
+    'ostekk':        { name: 'Ostekk',              fileId: '' },
+    'runekeeper':    { name: 'The Runekeeper',      fileId: '' },
 
     // ── Artifacts (treated as portrait-like for dossier consistency) ──
     'world-surveyor': { name: 'A.T.L.A.S.', fileId: '1PszrX48t8qd24acEGVLa87ir5AXlLJeR' },
+    'containment-engine': { name: 'The Lantern of Flourishing', fileId: '1xiThO5QYp74A5SSAmvt49NQXs1yWbeLT' },
 
     // ── Places ──
     'realmspace':    { name: 'Realmspace',          fileId: '1kI7fIgdRRyDrNaoauZBw_QsKadJmgHf8' },
@@ -83,6 +99,7 @@
     'aethris':       { name: 'Aethris',             fileId: '' },
     'hollow':        { name: 'The Reach World',          fileId: '' },
     'tumak-homeworld': { name: 'Lunarfoot',         fileId: '' },
+    'vthoramu':      { name: "Vth'oramu",           fileId: '1QtPE3ft4QNpQRKZlkhXteCXxI9vAphxK' },
     'cairn-station': { name: 'Cairn Station',       fileId: '' },
 
     // ── Ships & vehicles ──
