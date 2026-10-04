@@ -80,6 +80,7 @@
     { key: 'colony',    label: 'Colony Ops',    path: 'campaign/colony/',       indent: true },
     { key: 'plot-hooks',label: 'Plot Hooks',   path: 'campaign/plot-hooks.html', indent: true },
     { key: 'what-if',   label: 'What If',      path: 'campaign/what-if.html',    indent: true },
+    { key: 'crew',      label: 'Crew',         path: 'crew/'       },
     { key: 'glossary',  label: 'Glossary',     path: 'glossary/'   },
     { key: 'cosmology', label: 'Cosmology',    path: 'cosmology/'  },
     { key: 'realms',    label: 'Realms',       path: 'realms/'     },
