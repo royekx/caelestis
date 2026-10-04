@@ -76,7 +76,7 @@
     { key: 'campaign',  label: 'Campaign',     path: 'campaign/'   },
     { key: 'voyages',   label: 'Voyages',      path: 'campaign/voyages/',        indent: true },
     { key: 'spine',     label: 'Spine',        path: 'campaign/spine.html',      indent: true },
-    { key: 'becoming',  label: 'The Becoming', path: 'campaign/becoming/',       indent: true },
+    { key: 'becoming',  label: 'The Ascension', path: 'campaign/ascension/',       indent: true },
     { key: 'remaking',  label: 'Colony Ops',    path: 'campaign/remaking/',       indent: true },
     { key: 'plot-hooks',label: 'Plot Hooks',   path: 'campaign/plot-hooks.html', indent: true },
     { key: 'what-if',   label: 'What If',      path: 'campaign/what-if.html',    indent: true },
