@@ -9,35 +9,59 @@
 <link rel="stylesheet" href="../../styles/dm.css">
 <script src="../../scripts/dm-nav.js" defer></script>
 <script src="../../scripts/dm-toc.js" defer></script>
-<style>
-  .sb { border:1px solid rgba(130,168,210,0.22); border-radius:4px; padding:0.9rem 1.1rem; margin:0.8rem 0 1.2rem; background:rgba(130,168,210,0.045); }
-  .sb-name { font-weight:700; font-size:1.05rem; }
-  .sb-type { font-style:italic; opacity:0.75; font-size:0.9rem; margin-bottom:0.5rem; }
-  .sb-line { margin:0.15rem 0; font-size:0.94rem; }
-  .sb-abil { width:100%; border-collapse:collapse; margin:0.6rem 0; font-size:0.9rem; }
-  .sb-abil th, .sb-abil td { text-align:center; padding:0.25rem 0.3rem; border-top:1px solid rgba(130,168,210,0.16); }
-  .sb h4 { margin:0.9rem 0 0.35rem; font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; opacity:0.7; }
-  .sb dl { margin:0; }
-  .sb dt { font-weight:600; font-style:italic; margin-top:0.45rem; }
-  .sb dd { margin:0.1rem 0 0 0; }
-</style>
 </head>
 <body>
 
 <main class="dm-content has-toc">
 
   <header class="dm-page-header">
-    <div class="dm-page-eyebrow">Reference<span class="sep">&middot;</span>Mechanics</div>
+    <div class="dm-page-eyebrow">Reference<span class="sep">&middot;</span>Appendix</div>
     <h1>Stat Blocks</h1>
     <p class="dm-page-lede">
-      Homebrew and retuned creatures, consolidated so they stop living in chat logs. Who each one <em>is</em> stays in <a href="../factions/">Factions</a>; what they do in a fight is here.
+      The appendix. Every homebrew and retuned creature in one list, with the opening line you need to start a fight and a link to the full block.
     </p>
   </header>
 
-  <div class="dm-callout is-warn">
-    <span class="dm-callout-label">Fidelity note</span>
-    These are reconstructed from the design conversations and carry <strong>every settled decision and number</strong> that was recorded. Where a full list was produced in a working file rather than discussed line by line, the entry says so instead of guessing. <strong>Anything marked pending is missing from the record, not invented away.</strong>
+  <div class="dm-callout is-info">
+    <span class="dm-callout-label">Where the blocks actually live</span>
+    <strong>Each full stat block sits with its own entry</strong>, the way a module puts a creature where it first appears. This page is the flip-to-the-back view &mdash; it holds no second copy, so there is one place to edit and one place that can be wrong.
   </div>
+
+
+  <!-- ════════════════════════════════════════════════════════════════
+       THE INDEX
+       ════════════════════════════════════════════════════════════════ -->
+  <details class="dm-collapse-section" id="index" open>
+    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">The list</h2></summary>
+    <div class="dm-collapse-section-body">
+
+      <table>
+        <thead><tr><th>Creature</th><th>AC</th><th>HP</th><th>Speed</th><th>CR</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong><a href="../factions/#tarto-statblock">Boatswain Tarto</a></strong><br><span style="opacity:.7;font-size:.9rem;">Hadozee, Lawful Neutral</span></td>
+            <td>16</td><td>153</td><td>30 ft., climb 30 ft.</td><td>10</td>
+            <td>Maneuver save DC 16. <span class="dm-tag is-open">Revision proposed</span></td>
+          </tr>
+          <tr>
+            <td><strong><a href="../factions/#saerthe-statblock">Saerthe Abizjn</a></strong><br><span style="opacity:.7;font-size:.9rem;">Materializer wizard</span></td>
+            <td>15</td><td>117</td><td>&mdash;</td><td>11</td>
+            <td>Four 5-ft. cubes as a returning pool. Encase on recharge.</td>
+          </tr>
+          <tr>
+            <td><strong><a href="../factions/#crc-statblock">Crystalline Retrieval Construct</a></strong><br><span style="opacity:.7;font-size:.9rem;">Medium construct, unaligned</span></td>
+            <td>17</td><td>136</td><td>30 ft.</td><td>7</td>
+            <td>Vulnerable to <strong>thunder</strong>. Withdraws at 68 HP and is never killable.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Creatures taken from published material without changes stay in their source book and off this list. <strong>What belongs here is anything retuned</strong> &mdash; the tyrant ship's revised wisps and horrors are the next candidates, since their numbers were changed during prep and currently live only in that working file.
+      </p>
+
+    </div>
+  </details>
 
 
   <!-- ════════════════════════════════════════════════════════════════
@@ -48,17 +72,17 @@
     <div class="dm-collapse-section-body">
 
       <p>
-        One instructor joins the crew for <a href="../campaign/spine.html#hcatha-arc">H'Catha</a>, and <strong>the party picks which.</strong> That makes the comparison below a decision aid rather than trivia: whichever they take shapes how the arc runs, and they are choosing without knowing that.
+        One instructor joins the crew for <a href="../campaign/spine.html#hcatha-arc">H'Catha</a>, and <strong>the party picks which.</strong> The comparison lives here rather than on either dossier, because it belongs to neither of them.
       </p>
 
       <table>
-        <thead><tr><th></th><th><a href="#saerthe">Saerthe</a> &mdash; CR 11</th><th><a href="#tarto">Tarto</a> &mdash; CR 10</th></tr></thead>
+        <thead><tr><th></th><th><a href="../factions/#saerthe">Saerthe</a> &mdash; CR 11</th><th><a href="../factions/#tarto">Tarto</a> &mdash; CR 10</th></tr></thead>
         <tbody>
           <tr><td><strong>Defence</strong></td><td>AC 15, 117 HP, plus escape options</td><td>AC 16, 153 HP, Parry, Indomitable</td></tr>
-          <tr><td><strong>Damage / round</strong></td><td>~48, at up to 120 ft</td><td>~39 in melee, plus an ally's attack</td></tr>
-          <tr><td><strong>Burst</strong></td><td>Collapse &mdash; 33 to a sealed target, splash around it</td><td>Clear the Deck &mdash; an attack and a maneuver on everyone she passes</td></tr>
+          <tr><td><strong>Damage / round</strong></td><td>~48, out to 120 ft.</td><td>~39 in melee, plus an ally's attack</td></tr>
+          <tr><td><strong>Burst</strong></td><td>Collapse &mdash; 27 to a sealed target, 16 splash</td><td>Clear the Deck &mdash; one attack and a maneuver on everyone he passes</td></tr>
           <tr><td><strong>Control</strong></td><td>One hard lockdown per turn, plus <em>wall of force</em></td><td>Up to three soft effects per turn, each against a save</td></tr>
-          <tr><td><strong>Protecting the crew</strong></td><td>Interpose at 60 ft; Encase as a lifeboat</td><td>Take It &mdash; body in the way</td></tr>
+          <tr><td><strong>Protecting the crew</strong></td><td>Interpose at 60 ft.; Encase as a lifeboat</td><td>Take It &mdash; body in the way</td></tr>
           <tr><td><strong>Terrain</strong></td><td><strong>Makes it</strong> &mdash; walls, stairs, bridges</td><td><strong>Uses it</strong> &mdash; pushes enemies off it</td></tr>
           <tr><td><strong>Utility</strong></td><td>Very high</td><td>Low</td></tr>
         </tbody>
@@ -66,270 +90,14 @@
 
       <div class="dm-callout is-cosmic">
         <span class="dm-callout-label">What the choice actually decides</span>
-        Saerthe changes the battlefield; Tarto changes what is happening on it. <strong>The pair barely overlap</strong>, which is what you want from two possible allies rather than two versions of the same help.
+        Saerthe changes the battlefield; Tarto changes what is happening on it. <strong>They barely overlap</strong>, which is what you want from two possible allies rather than two versions of the same help.
         <p>
-          At H'Catha specifically: the terrain cancels magic in places and the domains impose <a href="../realms/#hcatha-terrain">ray effects</a>, so <strong>Saerthe arrives as capability</strong> &mdash; the magic problems get smaller and the crew gains a bridge-builder on a water world. <strong>Tarto arrives as authority</strong> &mdash; she is their own chain of command, so the crew's decisions get supervised, and she makes the party's own turns better rather than taking the spotlight.
+          At H'Catha specifically: the terrain cancels magic in places and the domains impose <a href="../realms/#hcatha-terrain">ray effects</a>, so <strong>Saerthe arrives as capability</strong> &mdash; the magic problems shrink and the crew gains a bridge-builder on a water world. <strong>Tarto arrives as authority</strong> &mdash; she is their own chain of command, so their decisions get supervised, and she improves the party's own turns rather than taking the spotlight.
         </p>
       </div>
 
       <p>
-        Both of them also answer <a href="../campaign/voyages/#v006">Ryeback's question</a> at the Cargo debrief, which is how the reinforcement gets invited rather than imposed.
-      </p>
-
-    </div>
-  </details>
-
-
-  <!-- ════════════════════════════════════════════════════════════════
-       TARTO
-       ════════════════════════════════════════════════════════════════ -->
-  <details class="dm-collapse-section" id="tarto">
-    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Boatswain Tarto <span class="dm-tag is-open">Needs a revisit</span></h2></summary>
-    <div class="dm-collapse-section-body">
-
-      <p>
-        <em>&quot;Listen to what I tell you; it might just save your life.&quot;</em>
-      </p>
-      <p>
-        Hadozee boatswain and training officer at Caelestis. Scarred, grey at the temples, wreathed in cigar smoke. One wing flap was torn away long ago; she has not glided since and has never needed to.
-      </p>
-
-      <div class="sb">
-        <div class="sb-name">Boatswain Tarto</div>
-        <div class="sb-type">Medium Humanoid (Hadozee), Lawful Neutral</div>
-        <div class="sb-line"><strong>Armor Class</strong> 16 (studded leather)</div>
-        <div class="sb-line"><strong>Hit Points</strong> 153 (18d8 + 72)</div>
-        <div class="sb-line"><strong>Speed</strong> 30 ft., Climb 30 ft.</div>
-
-        <table class="sb-abil">
-          <thead><tr><th>STR</th><th>DEX</th><th>CON</th><th>INT</th><th>WIS</th><th>CHA</th></tr></thead>
-          <tbody><tr><td>16 (+3)</td><td>18 (+4)</td><td>18 (+4)</td><td>12 (+1)</td><td>16 (+3)</td><td>14 (+2)</td></tr></tbody>
-        </table>
-
-        <div class="sb-line"><strong>Saving Throws</strong> Str +7, Dex +8, Con +8</div>
-        <div class="sb-line"><strong>Skills</strong> Acrobatics +8, Athletics +7, Insight +7, Intimidation +6, Perception +7</div>
-        <div class="sb-line"><strong>Tools</strong> Carpenter's tools</div>
-        <div class="sb-line"><strong>Senses</strong> Passive Perception 17</div>
-        <div class="sb-line"><strong>Languages</strong> Common, Hadozee, and the worst words of a dozen others</div>
-        <div class="sb-line"><strong>Challenge</strong> 10 (5,900 XP) &middot; <strong>Proficiency Bonus</strong> +4</div>
-
-        <h4>Traits</h4>
-        <dl>
-          <dt>Maneuvers.</dt>
-          <dd>When Tarto hits with an attack, she can use one maneuver. <strong>No die is spent and no extra damage is added.</strong> Maneuver save DC 16.</dd>
-          <dt>Indomitable (2/Day).</dt>
-          <dd>If Tarto fails a saving throw, she can reroll it and must use the new roll.</dd>
-        </dl>
-
-        <h4>Actions</h4>
-        <dl>
-          <dt>Multiattack.</dt>
-          <dd>Tarto makes three attacks, using Cutlass or Belaying Pin in any combination.</dd>
-          <dt>Cutlass.</dt>
-          <dd><em>Melee Attack Roll:</em> +8, reach 5 ft. <em>Hit:</em> 13 (2d8 + 4) slashing damage.</dd>
-          <dt>Belaying Pin.</dt>
-          <dd><em>Melee or Ranged Attack Roll:</em> +8, reach 5 ft. or range 20/60 ft. <em>Hit:</em> 8 (1d8 + 4) bludgeoning damage.</dd>
-          <dt>Clear the Deck (Recharge 5&ndash;6).</dt>
-          <dd>Tarto moves up to her full Speed without provoking opportunity attacks, and makes <strong>one Cutlass attack plus one maneuver against every creature she passes.</strong></dd>
-        </dl>
-
-        <h4>Bonus Actions</h4>
-        <dl>
-          <dt>Commander's Strike.</dt>
-          <dd>An ally within 60 feet who can hear her uses its Reaction to make one attack.</dd>
-          <dt>&quot;There!&quot;</dt>
-          <dd>She calls a weak point on a creature. The next ally attack against it before her next turn has Advantage.</dd>
-          <dt>&quot;Eyes on Me!&quot;</dt>
-          <dd>A creature within 30 feet makes a DC 16 Wisdom saving throw. On a failure it has Disadvantage on attack rolls against anyone other than Tarto until the end of her next turn.</dd>
-        </dl>
-
-        <h4>Reactions</h4>
-        <dl>
-          <dt>Take It.</dt>
-          <dd><em>Trigger:</em> an ally within 5 feet is targeted by an attack. <em>Response:</em> Tarto swaps places with the ally and becomes the target.</dd>
-          <dt>Parry.</dt>
-          <dd><em>Trigger:</em> Tarto takes damage from a melee attack. <em>Response:</em> she reduces the damage by 9 (1d10 + 4).</dd>
-        </dl>
-      </div>
-
-      <p>
-        <strong>Cut during design, deliberately:</strong> superiority dice, <em>Deck Ape</em> (redundant with her climb speed), <em>Silhouette Deck</em> (replaced by &quot;There!&quot;), and the <em>&quot;Hold!&quot;</em> temporary-hit-point order. <span class="dm-tag is-stub">Her maneuver list is in the working file and is not recorded here</span>
-      </p>
-
-      <h3>Why it does not hold up</h3>
-      <div class="dm-callout is-warn">
-        <span class="dm-callout-label">The diagnosis</span>
-        <p>
-          <strong>Removing superiority dice removed the decision.</strong> A Battle Master is interesting because the resource is finite and spending it is a judgement call. Maneuvers on every hit with no damage attached turns that into three saves a turn, forever &mdash; which is simultaneously <em>more bookkeeping</em> and <em>less memorable</em>, because nothing ever spikes.
-        </p>
-        <p>
-          <strong>She contributes neither burst nor flexibility.</strong> At CR 10 her ~39 damage is unremarkable and her utility is rated low, so what she brings is durability plus admin. <em>Clear the Deck</em> is the only button anyone will remember.
-        </p>
-        <p>
-          <strong>Her best features queue behind each other.</strong> Commander's Strike and her maneuvers both spend an <em>ally's</em> reaction, so the same cadet cannot take both, and at a six-PC table the routing gets congested rather than generous.
-        </p>
-      </div>
-      <p>
-        <strong>The direction I would take:</strong> give her fewer, larger moments. Restore a limited resource so spending is a choice again, drop the per-hit maneuver to once per turn, and keep <em>Clear the Deck</em> as the payoff. Alternatively, lean all the way into the opposite reading &mdash; make her the ally who improves the party's <em>own</em> turns and barely acts herself, which suits a training officer better than a damage-dealer does.
-      </p>
-      <p>
-        <strong>Canon note:</strong> she passed on the crate holding the neogi hatchlings <em>because she was informed rather than having checked it herself.</em> Guilt without negligence, which is the version that lets her stay sympathetic and still be answerable.
-      </p>
-
-    </div>
-  </details>
-
-
-  <!-- ════════════════════════════════════════════════════════════════
-       SAERTHE
-       ════════════════════════════════════════════════════════════════ -->
-  <details class="dm-collapse-section" id="saerthe">
-    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Saerthe Abizjn <span class="dm-tag is-canon">Materializer</span></h2></summary>
-    <div class="dm-collapse-section-body">
-
-      <p>
-        Senior caster at Caelestis, they/them, and the holder of the station's permanent <a href="../rules/#forbiddance">Forbiddance</a>. Their combat identity is a <strong>Materializer</strong> wizard &mdash; barrier work, built on conjured cubes rather than blasting.
-      </p>
-
-      <div class="dm-callout is-cosmic">
-        <span class="dm-callout-label">The core mechanic</span>
-        <strong>Four active 5-foot cubes.</strong> They are a pool rather than a per-rest resource: a cube returns to the pool when dismissed, collapsed or destroyed, so Saerthe is never out of barriers, only ever out of <em>placed</em> ones.
-        <p>
-          Cubes configure contiguously into walls and blocks &mdash; or, corner to corner, into a checkerboard line roughly <strong>25 by 2 feet</strong> that works as stairs or a bridge by exploiting corner elevation. On a water world, that last one matters.
-        </p>
-      </div>
-
-      <div class="sb">
-        <div class="sb-name">Saerthe Abizjn</div>
-        <div class="sb-type">Materializer wizard &middot; CR 11</div>
-        <div class="sb-line"><strong>Armor Class</strong> 15</div>
-        <div class="sb-line"><strong>Hit Points</strong> 117</div>
-        <div class="sb-line"><strong>Damage</strong> roughly 48 per round, out to 120 ft.</div>
-        <div class="sb-line"><span class="dm-tag is-stub">Ability scores, saves, skills and the full spell list are in the working file</span></div>
-
-        <h4>Signature features</h4>
-        <dl>
-          <dt>Encase (Recharge 5&ndash;6).</dt>
-          <dd>The hard lockdown &mdash; seals a target inside the barrier. Gated by recharge rather than available every round.</dd>
-          <dt>Collapse (bonus action).</dt>
-          <dd>Crushes a cube inward. <strong>27 (5d10) to a sealed target, 16 (3d10) splash</strong> to creatures nearby.</dd>
-          <dt>Barrier Footing.</dt>
-          <dd>Saerthe walks on open air one step at a time, <strong>each step vanishing as they leave it.</strong> No bridge is left behind for anyone else.</dd>
-          <dt>Mend (bonus action).</dt>
-          <dd>Casts <em>mending</em> on one of their own cubes, restoring all its hit points. Anyone else can do the same with a normal one-minute casting &mdash; so holding a patch under fire is a job you can hand a cadet, and <a href="../crew/#gregory">Gregory</a> knows the spell.</dd>
-          <dt>Interpose.</dt>
-          <dd>Protects an ally at up to 60 feet. Encase doubles as a lifeboat.</dd>
-          <dt>Dematerialize.</dt>
-          <dd>Their escape. Also the campaign's natural counter to the <a href="#crc">CRC's</a> Detention Orb.</dd>
-        </dl>
-      </div>
-
-      <p>
-        <strong>Cut during design:</strong> Painted Barrier and Material Enhancement, as superfluous or off-theme. <strong>Not a wizard mechanic:</strong> the quicksilver eyes are an origin trait tied to Nimbral, and <em>detect magic</em> sight was rejected as a fit.
-      </p>
-
-      <div class="dm-callout is-warn">
-        <span class="dm-callout-label">The ceiling, and its price</span>
-        Saerthe can <strong>mentally call a fleet of tethered spelljamming ships</strong> after a minute of concentration. It sits outside the subclass entirely and it costs <strong>prolonged helm-blindness</strong> afterward, which is what keeps it from being a solution to every problem. It is the reason Caelestis can respond to anything at all, and it is the reason Saerthe is not sent out often.
-      </div>
-
-      <p>
-        <strong>At the table against the CRC:</strong> Dematerialize answers the orb, so <strong>Saerthe should not engage the construct directly</strong> &mdash; the encounter is built as an escape, and a CR 11 ally standing in the way converts it into a fight the party does not need to have.
-      </p>
-
-      <p>
-        <strong>One ruling worth keeping handy:</strong> the simulation in the <a href="../realms/#caelestis">Spelljammer Nexus</a> is pure illusion. Small mundane objects can bleed through at the exit threshold; <strong>magic items never cross.</strong>
-      </p>
-
-      <p>
-        <strong>Open:</strong> the full action and spell list, and whether the cube pool needs a cap on how far from Saerthe a cube can be placed.
-      </p>
-
-    </div>
-  </details>
-
-
-  <!-- ════════════════════════════════════════════════════════════════
-       CRC
-       ════════════════════════════════════════════════════════════════ -->
-  <details class="dm-collapse-section" id="crc">
-    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Crystalline Retrieval Construct <span class="dm-tag is-canon">Retuned for level 4</span></h2></summary>
-    <div class="dm-collapse-section-body">
-
-      <p>
-        <em>&quot;Sol Fortuna. You are required.&quot;</em>
-      </p>
-      <p>
-        Commissioned by the Fortuned of <a href="../realms/#aethris">Aethris</a> <strong>after</strong> <a href="../crew/#sol">Sol's</a> escape, which makes it bespoke: his leaving is the reason it exists. Its assignment is capture, correction and return. <strong>There is one of it.</strong> It stands seven to eight feet tall and occupies a single square.
-      </p>
-
-      <div class="sb">
-        <div class="sb-name">Crystalline Retrieval Construct</div>
-        <div class="sb-type">Medium Construct (Bespoke Retrieval Unit), Unaligned</div>
-        <div class="sb-line"><strong>Armor Class</strong> 17 (faceted crystalline plating)</div>
-        <div class="sb-line"><strong>Hit Points</strong> 136 (16d8 + 64)</div>
-        <div class="sb-line"><strong>Speed</strong> 30 ft.</div>
-
-        <table class="sb-abil">
-          <thead><tr><th>STR</th><th>DEX</th><th>CON</th><th>INT</th><th>WIS</th><th>CHA</th></tr></thead>
-          <tbody><tr><td>18 (+4)</td><td>14 (+2)</td><td>18 (+4)</td><td>14 (+2)</td><td>16 (+3)</td><td>10 (+0)</td></tr></tbody>
-        </table>
-
-        <div class="sb-line"><strong>Saving Throws</strong> Dex +5, Wis +6</div>
-        <div class="sb-line"><strong>Resistances</strong> slashing, piercing; bludgeoning from nonmagical attacks</div>
-        <div class="sb-line"><strong>Vulnerabilities</strong> <strong>thunder</strong></div>
-        <div class="sb-line"><strong>Immunities</strong> poison, psychic; charmed, exhaustion, frightened, paralyzed, petrified, poisoned</div>
-        <div class="sb-line"><strong>Senses</strong> Truesight 60 ft., Passive Perception 13</div>
-        <div class="sb-line"><strong>Languages</strong> Understands all languages. Speaks only in retrieval protocols.</div>
-        <div class="sb-line"><strong>Challenge</strong> 7 (2,900 XP) &middot; <strong>Proficiency Bonus</strong> +3</div>
-
-        <h4>Traits</h4>
-        <dl>
-          <dt>Bespoke Target Lock.</dt>
-          <dd>While on the same plane as Sol, it knows his direction and approximate distance, with Advantage on Perception and Insight checks involving him.</dd>
-          <dt>Legendary Resistance (2/Day).</dt>
-          <dd>On a failed save, it can choose to succeed instead.</dd>
-          <dt>Regeneration.</dt>
-          <dd>Regains 10 hit points at the start of its turn if it has at least 1. <strong>Thunder damage switches this off</strong> for the start of its next turn.</dd>
-          <dt>Refracting Shielding.</dt>
-          <dd>Reaction against a ranged or spell attack: impose Disadvantage. If it misses, redirect it at another creature within 30 feet that was in the original path, rolling a new attack with the original attacker's bonus.</dd>
-          <dt>Adaptive Reconfiguration.</dt>
-          <dd>At 75%, 50% and 25% of its hit points, it gains Resistance to one damage type that has hurt it since the last threshold. <strong>Resistances carry forward into future encounters</strong> &mdash; it remembers.</dd>
-          <dt>Non-Lethal Retrieval.</dt>
-          <dd>Anyone other than Sol reduced to 0 hit points falls Unconscious and stable rather than dying, and it will not pursue them unless they obstruct the retrieval.</dd>
-          <dt>Withdrawal Threshold.</dt>
-          <dd>At <strong>68 hit points</strong> it disengages and leaves. <em>It is never killable</em>, so the party can survive it without it ever reading as beatable.</dd>
-        </dl>
-
-        <h4>Actions</h4>
-        <dl>
-          <dt>Multiattack.</dt>
-          <dd>One Crystal Strike, plus one of: Detention Orb, Geometric Growth, or a stored spell.</dd>
-          <dt>Detention Orb.</dt>
-          <dd>The win condition &mdash; put Sol in the orb and leave. <strong>The orb is a destructible object: AC 13, 25 hit points, vulnerable to thunder.</strong> Breaking it is the rescue, which keeps the answer available to a level-4 party.</dd>
-          <dt>Geometric Growth.</dt>
-          <dd>Battlefield reshaping with crystal terrain.</dd>
-          <dt>Stored spell.</dt>
-          <dd><em>Locate creature</em>, which doubles down on inevitability.</dd>
-          <dt>Crystal Strike &middot; legendary action.</dt>
-          <dd><span class="dm-tag is-stub">Numbers in the working file</span> One legendary action exists so six PCs cannot strip its action economy outright.</dd>
-        </dl>
-      </div>
-
-      <div class="dm-callout is-cosmic">
-        <span class="dm-callout-label">Run it as an escape</span>
-        It is built to retrieve rather than kill, so the first encounter is objective-based and survivable by moving. <strong>The win is breaking the orb and getting clear, not dropping the construct.</strong> They survived; they did not win.
-        <p>
-          <strong>Track which damage types hit it</strong>, because the resistances it takes away are permanent. By a second or third meeting the party has to find new vectors, which is the whole point: <em>you cannot beat it the same way twice.</em>
-        </p>
-      </div>
-
-      <p>
-        <strong>The face</strong> progressively resolves into a perfect mirror of Sol's. Visual only, with no mechanic attached &mdash; the horror should cost the player nothing.
-      </p>
-
-      <p>
-        <strong>Open:</strong> where on Caelestis the first encounter happens. The Sky Dock on arrival &mdash; off the ship, in the open, before anyone knows they are back &mdash; is the stronger scene, and it removes the warded-interior objective, so it needs something else to run toward.
+        Both answer <a href="../campaign/voyages/#v006">Ryeback's question</a> at the Cargo debrief, which is how the reinforcement gets invited rather than imposed. The crew is several sessions from the choice.
       </p>
 
     </div>
@@ -337,7 +105,7 @@
 
 
   <div class="dm-footer">
-    Stat Blocks &middot; Reference &middot; Caelestis DM
+    Stat Blocks &middot; Appendix &middot; Caelestis DM
   </div>
 
 </main>
