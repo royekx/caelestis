@@ -79,6 +79,7 @@
     { key: 'remaking',  label: 'The Remaking', path: 'campaign/remaking/',       indent: true },
     { key: 'plot-hooks',label: 'Plot Hooks',   path: 'campaign/plot-hooks.html', indent: true },
     { key: 'what-if',   label: 'What If',      path: 'campaign/what-if.html',    indent: true },
+    { key: 'glossary',  label: 'Glossary',     path: 'glossary/'   },
     { key: 'cosmology', label: 'Cosmology',    path: 'cosmology/'  },
     { key: 'realms',    label: 'Realms',       path: 'realms/'     },
     { key: 'factions',  label: 'Factions &amp; Characters', path: 'factions/' },
