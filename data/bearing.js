@@ -2,7 +2,8 @@
  * Caelestis — Current Bearing
  * ───────────────────────────
  * Powers the command bar that nav.js injects at the top of every page.
- * Regenerated from the tracker on publish; hand-editable in the meantime.
+ * Written during a session run (prime/notes/SESSION-RUN.md) and checked
+ * against the record by `node scripts/data.js check`.
  */
 window.CAELESTIS_BEARING = {
   voyage:   4,
@@ -15,10 +16,10 @@ window.CAELESTIS_BEARING = {
   detail: {
     consequence: 'The wisps persist by some unknown cause and can kill. Bloodied by two hard fights with no rest between, the crew chose for the first time since boarding not to push forward.',
     quests: [
-      { name: 'The Tyrant Ship and the H\u2019catha Meteor', progress: '2/6', href: 'quests/the-tyrant-ship-and-the-hcatha-meteor.html' },
-      { name: 'The Caelestis Burglaries',                     progress: '1/4', href: 'quests/the-caelestis-burglaries.html' },
+      { name: 'The Tyrant Ship and the H\u2019catha Meteor', progress: '1/5', href: 'quests/the-tyrant-ship-and-the-hcatha-meteor.html' },
+      { name: 'The Caelestis Burglaries',                     progress: '1/3', href: 'quests/the-caelestis-burglaries.html' },
       { name: 'The Path to Viren',                            progress: '1/3', href: 'quests/the-path-to-viren.html' },
-      { name: 'Tumak\u2019s Search for Family',               progress: '0/3', href: 'quests/tumaks-search-for-family.html' }
+      { name: 'Tumak\u2019s Search for Family',               progress: '0/1', href: 'quests/tumaks-search-for-family.html' }
     ],
     met: [
       { name: 'Ostekk-6',        href: 'dossiers/ostekk-6.html' },
