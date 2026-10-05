@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T00:40:14.922Z",
+  "generated": "2026-10-05T05:43:56.995Z",
   "latestSession": "S04",
   "latestSessionNumber": 4,
   "counts": {
@@ -9,6 +9,6 @@
     "factions": 1,
     "locations": 12,
     "items": 11,
-    "quests": 11
+    "quests": 12
   }
 }

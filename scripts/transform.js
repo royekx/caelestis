@@ -29,7 +29,13 @@ const SLUG = {
     'Veena': 'veena',                      // file was vena.html
     'Saerthe Abizjn': 'saerthe-abizjn',    // file was saerth-abyzine.html
     "Sor'Kur": 'sor-kur',
-    'Mirt the Merciless': 'mirt',       // tracker still carries the old title
+    // Keyed on the tracker's NAME column. The Sheet has since dropped the
+    // epithet, so the row reads "Mirt" while its Slug cell still says
+    // mirt-the-merciless - and with only the old key here the overlay stopped
+    // firing and the raw slug passed through to /dossiers/mirt-the-merciless.html,
+    // which is not the page. Both spellings map to the one canonical slug.
+    'Mirt': 'mirt',
+    'Mirt the Merciless': 'mirt',
     "Krik'Lit": 'krik-lit',                // tracker had "Crick Lit"
     'Kip and Pik': 'kip-and-pik'
   },
@@ -129,6 +135,22 @@ const QUEST_META = {
     kind: 'Quest', giver: null, parent: null,
     objectives: [[' ', 'Find a way home']]
   },
+  // The one quest the crew has finished outright. Its objectives are not
+  // inferred - they are Handout 2.1, the Orientation Tasks sheet every cadet
+  // was given, copied task for task, and every one of them is answered in the
+  // V001 record. Until this was added the board could show no completed quest
+  // at all, which is why nothing the crew did ever read as a win.
+  'orientation': {
+    kind: 'Quest', giver: 'Boatswain Tarto', giverSlug: 'boatswain-tarto', parent: null,
+    objectives: [
+      ['x', 'Collect the welcome pack from Administration'],
+      ['x', 'Report to quarters for bunk assignment'],
+      ['x', 'Report to the Sky Dock for spelljamming ship inspection'],
+      ['x', "Collect service weaponry from Mister Blip in Stores"],
+      ['x', 'Report to the Spelljammer Nexus for basic training'],
+      ['x', 'Complete the gymnasium assault course']
+    ]
+  },
   'the-living-clue-in-the-crate':     { kind: 'Thread', parent: 'the-caelestis-burglaries' },
   'vocaths-grudge':                   { kind: 'Thread', parent: 'the-caelestis-burglaries' },
   'ostekk-6':                         { kind: 'Thread', parent: 'the-tyrant-ship-and-the-hcatha-meteor' },
@@ -155,6 +177,15 @@ const NEW_QUESTS = [
     'Overview (Player)': 'The autognome the crew pulled out of the wreckage in the tyrant ship\u2019s cargo hold wears Gregory\u2019s face. Its core is sound; its body is a mechanical problem no spell will close. It speaks only through the link Tumak opened, and what it knows about the ship has already proved worth having.',
     'Key Details (Player)': '\u2022 [S03] Found in the cargo hold with its lower half gone and its voice box destroyed, the clockwork horrors still feeding on it\n\u2022 [S03] Gregory looked at its face and saw his own\n\u2022 [S04] The cargo manifest gave it a name: Ostekk-6\n\u2022 [S04] Its core is arcane and intact, but the frame is a physical repair beyond what the crew can do aboard\n\u2022 [S04] It warned of a mimic aboard, a spreading bloom, and more clockwork horrors',
     'Last Engaged (Session #)': 4, Urgency: 'Medium', Status: 'Open', Visibility: 'Player', Linked: ''
+  },
+  {
+    id: 'QST-Or1nT4ks', Quest: 'Orientation', Slug: 'orientation',
+    Type: 'Academy / Induction',
+    'Related Character(s)': 'Boogie, Casey Geim, Gregory, Sol Fortuna, Tumak Swan',
+    'Current State': 'Complete. Every task on the orientation sheet was signed off on the cadets’ first day.',
+    'Overview (Player)': 'The first thing Caelestis ever asked of the crew: a printed list of six tasks, handed out by Boatswain Tarto, to be worked through in whatever order they liked. They did all six in a day — and in the course of it met the quartermaster, took their first turn at a helm, argued over bunks, and noticed a dock officer taking a bribe.',
+    'Key Details (Player)': '• [S01] Sor’Kur received them in Administration, her voice arriving in their minds rather than their ears\n• [S01] Bunks were settled the hard way — Veena went for Boogie’s corner, Sol stepped in behind him, and Tumak traded for something darker\n• [S01] At the Sky Dock they inspected a ship and saw a dock officer take a bribe; Gregory recalled the code of conduct that forbids it\n• [S01] Mr. Blip issued from Stores — Boogie charmed a light hammer out of him, and Gregory found the autognome unnervingly like himself\n• [S01] Saerthe ran their first helm exercise in the Nexus, over a floating field of miniature ships, under the tension of an ectoplasmic breach elsewhere in the tower\n• [S01] All of them finished the gymnasium assault course — Casey with ease, Sol by getting back up after a hard fall, Boogie hauling Gregory up the last climb',
+    'Last Engaged (Session #)': 1, Urgency: 'Resolved', Status: 'Complete', Visibility: 'Player', Linked: ''
   }
 ];
 
