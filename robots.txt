@@ -1,0 +1,11 @@
+# Caelestis
+# The player-facing site is public. The DM wiki and the Fleet Intelligence
+# Archive are not: both carry noindex on every page, and are disallowed here
+# as well so compliant crawlers never request them.
+
+User-agent: *
+Disallow: /caelestis/prime/
+Disallow: /caelestis/restricted/
+Disallow: /prime/
+Disallow: /restricted/
+Allow: /
