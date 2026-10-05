@@ -260,4 +260,97 @@
     });
   }
 
+  // ── Portrait lightbox ──
+  // Ported verbatim from scripts/nav.js, which the DM pages do not load.
+  // Keep the two in step: a change there wants the same change here.
+  // ── (original comment follows) ─────────────────────────────────────────────────────
+  // Any .portrait-frame containing an image becomes click-to-expand. Runs on
+  // every page that loads nav.js, so crew, dossiers, inventory and navigation
+  // records all pick it up without per-page markup. Frames that already carry
+  // their own handler (the Realmspace chart) are left alone.
+
+  // On the player pages the <img> is in the markup, so nav.js can wire this
+  // immediately. Here portraits.js injects the image on DOMContentLoaded, and
+  // it is loaded after this file, so its handler runs after ours. Deferring
+  // by a tick puts this behind it and the frames have images by then.
+  function initLightbox() {
+    var frames = document.querySelectorAll('.portrait-frame');
+    var targets = [];
+
+    frames.forEach(function (frame) {
+      var img = frame.querySelector('img');
+      if (!img) return;                                   // placeholder frames
+      if (frame.hasAttribute('onclick')) return;          // already wired
+      if (frame.classList.contains('map-thumb')) return;
+      targets.push({ frame: frame, img: img });
+    });
+
+    // Charts, handouts and any other standing image expand the same way.
+    document.querySelectorAll('.survey, .expandable, figure.plate').forEach(function (frame) {
+      var img = frame.querySelector('img');
+      if (!img || frame.hasAttribute('onclick')) return;
+      frame.classList.add('is-expandable');
+      targets.push({ frame: frame, img: img });
+    });
+
+    if (!targets.length) return;
+
+    var box = document.createElement('div');
+    box.className = 'cae-lightbox';
+    box.innerHTML =
+      '<button class="cae-lightbox-close" type="button" aria-label="Close">Close \u2715</button>' +
+      '<img alt="">';
+    document.body.appendChild(box);
+
+    var boxImg = box.querySelector('img');
+
+    // Drive thumbnails serve small by default — ask for a wide render instead.
+    function fullSize(src) {
+      if (src.indexOf('googleusercontent.com') === -1) return src;
+      return src.replace(/=[swh]\d+.*$/, '') + '=w1600';
+    }
+
+    function open(t) {
+      boxImg.src = fullSize(t.img.getAttribute('src'));
+      boxImg.alt = t.img.getAttribute('alt') || '';
+      box.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function close() {
+      box.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    targets.forEach(function (t) {
+      t.frame.classList.add('cae-expandable');
+      t.frame.setAttribute('role', 'button');
+      t.frame.setAttribute('tabindex', '0');
+      t.frame.setAttribute('aria-label', 'Expand ' + (t.img.getAttribute('alt') || 'portrait'));
+      t.frame.addEventListener('click', function () { open(t); });
+      t.frame.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(t); }
+      });
+
+      // A quiet caption, matching the Realmspace chart's affordance
+      if (!t.frame.nextElementSibling ||
+          !t.frame.nextElementSibling.classList.contains('portrait-label')) {
+        var label = document.createElement('div');
+        label.className = 'portrait-label';
+        label.textContent = 'Tap to Expand';
+        t.frame.parentNode.insertBefore(label, t.frame.nextSibling);
+      }
+    });
+
+    box.addEventListener('click', function (e) { if (e.target !== boxImg) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && box.classList.contains('open')) close();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { setTimeout(initLightbox, 0); });
+  } else {
+    setTimeout(initLightbox, 0);
+  }
+
 })();

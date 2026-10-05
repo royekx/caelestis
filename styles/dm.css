@@ -1539,3 +1539,28 @@ body::after {
 }
 .side-nav-body > .side-nav-group-label:first-of-type { padding-top: 0.3rem; }
 .side-nav-link { padding-top: 0.36rem; padding-bottom: 0.36rem; }
+
+/* ── Identity card: unbox it ──
+   The player site's rule is that the backdrop does the work and what
+   separates things is a rule and space, not a box. The identity card still
+   carried a fill, a blur and a border, so on a dossier page it read as a
+   panel bolted to the side of the prose. The portrait and the hairlines
+   between rows are enough structure. */
+.dm-content .identity-card {
+  background: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+}
+.dm-content .identity-card .stat-card { padding-left: 0; padding-right: 0; }
+.dm-content .identity-card .stat-row:last-child { border-bottom: none; }
+
+/* The expand affordance, matching the player pages. */
+.dm-content .portrait-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0.45rem 0 0.2rem;
+}
+.dm-content .cae-expandable { cursor: zoom-in; }
