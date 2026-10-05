@@ -68,21 +68,36 @@ jobs:
             --exclude-selectors "[data-pagefind-ignore], nav, footer" \
             --verbose
 
-      # -- Prune build-only inputs from the published artifact --
-      # path: . below publishes the whole working tree, so anything left here
-      # is fetchable by URL even when it is absent from every Pagefind index.
-      # data/raw/ is the UNFILTERED tracker export: it carries Visibility: DM
-      # rows verbatim. transform.js and build-data.js have already consumed it
-      # by this point, and no page loads it in the browser, so it is removed
-      # from the tree before upload. The repo keeps its copy; only the artifact
-      # loses it.
-      - name: Prune build-only inputs
+      # -- Prune machine inputs from the published artifact --
+      #
+      # Pipeline contract (Workflow C -> this Action):
+      #   data/raw/*.json  is the VERBATIM seven-tab tracker dump that n8n
+      #                    commits. It is machine-written, regenerated on every
+      #                    publish, and carries Visibility: DM rows as-is.
+      #                    Never hand-edit it - the next sync overwrites it and
+      #                    the repo silently drifts from the Sheet.
+      #   data/*.json      is the PLAYER-SAFE output. scripts/transform.js is
+      #                    the designated filter and drops Visibility: DM rows
+      #                    from all seven builds.
+      #
+      # `path: .` below publishes the whole working tree, so the raw dump would
+      # be fetchable by URL even though no page loads it and no Pagefind index
+      # contains it. Filtering DM content is this Action's job, so the Action
+      # removes the raw dump from the tree it is about to upload. The repo and
+      # the n8n round-trip are untouched; only the published site loses it.
+      - name: Prune machine inputs from the artifact
         run: |
+          set -e
           rm -rf data/raw
-          rm -f  scripts/transform.js scripts/build-data.js
-          rm -f  data/coverage.md
+          rm -f  scripts/transform.js scripts/build-data.js data/coverage.md
           find . -name '*-template.html' -not -path './.git/*' -delete
-          echo "pruned from artifact:"; echo "  data/raw/, transform.js, build-data.js, coverage.md, *-template.html"
+          # Fail the deploy rather than publish a DM row.
+          if grep -rlq '"Visibility": *"DM"' --include='*.json' . ; then
+            echo "::error::a published JSON still carries a Visibility: DM row"
+            grep -rl '"Visibility": *"DM"' --include='*.json' .
+            exit 1
+          fi
+          echo "pruned: data/raw/, transform.js, build-data.js, coverage.md, *-template.html"
 
       # -- Publish the whole site (with all three index bundles) --
       - name: Setup Pages
