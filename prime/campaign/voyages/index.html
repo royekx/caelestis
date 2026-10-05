@@ -7,7 +7,9 @@
 <title>Voyages · Caelestis · DM</title>
 <link rel="stylesheet" href="../../../styles/caelestis.css">
 <link rel="stylesheet" href="../../../styles/dm.css">
+<script src="../../../data/voyage.js" defer></script>
 <script src="../../scripts/dm-nav.js" defer></script>
+<script src="../../scripts/dm-threadboard.js" defer></script>
 <script src="../../scripts/dm-sections.js" defer></script>
 <script src="../../scripts/dm-toc.js" defer></script>
 </head>
@@ -19,9 +21,27 @@
     <div class="dm-page-eyebrow">Campaign<span class="sep">·</span>Briefing vs. Voyage Audit</div>
     <h1>Voyages</h1>
     <p class="dm-page-lede">
-      Per session: what was planned (briefing) against what actually happened (voyage), with the delta surfaced underneath. The audit surface that feeds back into <a href="../spine.html">Spine</a>. Briefings live in this directory; voyage narrative lives on the player site under <code>voyages/</code>, and titles here match the <a href="../../../data/voyage.js">voyage registry</a>.
+      Two views of the same sessions. <strong>The board</strong> reads across voyages, so a thread going quiet is visible; <strong>the record</strong> reads down one voyage at a time, planned against actual, with the delta underneath. The audit surface that feeds back into <a href="../spine.html">Spine</a>. Briefings live in this directory; voyage narrative lives on the player site under <code>voyages/</code>, and titles here match the <a href="../../../data/voyage.js">voyage registry</a>.
     </p>
   </header>
+
+
+  <!-- ════════════════════════════════════════════════════════════════
+       THE BOARD
+       ════════════════════════════════════════════════════════════════ -->
+  <details class="dm-collapse-section" open id="board">
+    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">The board</h2></summary>
+    <div class="dm-collapse-section-body">
+      <p>
+        Voyages across, lanes down, and a cell is the beats that lane got in that voyage. <strong>A row of marks that stops is a thread going cold</strong> &mdash; which is the one question the record below cannot answer, because the answer only exists across sessions. Built from the same <code>data/</code> the player site runs on, so it stays true without a second place to update.
+      </p>
+      <div id="thread-board" data-base="../../../data/"></div>
+      <div class="dm-callout is-warn">
+        <span class="dm-callout-label">The board is only as current as the tracker</span>
+        <strong>The published data reaches V004.</strong> V005 was played and V006 is next, so those columns are hatched rather than blank &mdash; an empty column for a session that happened would read as a quiet session, which is the opposite of the truth. Everything the board says about what has gone cold is therefore a statement about the state at V004, and the automation pass is what moves it forward.
+      </div>
+    </div>
+  </details>
 
 
   <!-- ════════════════════════════════════════════════════════════════

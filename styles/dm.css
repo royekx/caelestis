@@ -1579,3 +1579,279 @@ body::after {
   margin: 0.45rem 0 0.2rem;
 }
 .dm-content .cae-expandable { cursor: zoom-in; }
+
+/* ═══════════════════════════════════════════════════════════════
+   THREAD BOARD — voyages across, lanes down
+
+   The Voyages page was a linear archive: briefing, actual, delta,
+   one session after another. Read top to bottom it answers "what
+   happened in V003" and cannot answer the question prep actually
+   asks, which is "what has gone quiet." That answer only exists
+   across sessions, so it needs an axis the page did not have.
+
+   Every entity in data/*.json already carries a voyages[] array, so
+   the matrix is in the data and this is presentation only. Lanes are
+   rows, voyages are columns, a cell is the beats that lane got in
+   that voyage. A row of dots that stops is a thread going cold, and
+   that is the whole point of the view.
+
+   Grid, not table: the gutter and the header both have to stick
+   while the body scrolls in two directions, which a table cannot do
+   without fighting its own layout.
+   ═══════════════════════════════════════════════════════════════ */
+.tb-wrap {
+  /* The prose column is sized for reading; a matrix is sized for seeing.
+     Pull the board out to the full width available so more than two
+     voyages are on screen at once - the comparison IS the feature. */
+  width: calc(100% + 2 * clamp(0.6rem, 4vw, 4.5rem));
+  margin: 0 clamp(-4.5rem, -4vw, -0.6rem) 2rem;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--dm-elev-1);
+  overflow: auto;
+  max-height: 78vh;
+}
+.tb {
+  display: grid;
+  min-width: max-content;
+  position: relative;
+  font-size: 0.86rem;
+}
+
+/* ── the sticky corner, column heads and row gutter ── */
+.tb-corner {
+  position: sticky;
+  left: 0; top: 0; z-index: 6;
+  background: var(--bg-deep);
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 0.6rem 0.8rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: flex;
+  align-items: flex-end;
+}
+.tb-col {
+  position: sticky; top: 0; z-index: 4;
+  background: var(--bg-deep);
+  border-right: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule);
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  min-width: 0;
+}
+.tb-col-num {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+}
+.tb-col-title {
+  font-size: 0.74rem;
+  line-height: 1.3;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+  overflow-wrap: anywhere;
+}
+/* A voyage the data has not caught up to. The column still exists, so
+   an unsynced session never reads as a quiet one. */
+.tb-col.is-unsynced .tb-col-num { color: var(--text-muted); }
+.tb-col.is-unsynced,
+.tb-cell.is-unsynced {
+  background: repeating-linear-gradient(135deg,
+    rgba(203, 216, 232, 0.035) 0 6px, transparent 6px 12px);
+}
+.tb-col.is-ghost { border-bottom-style: dashed; }
+.tb-col.is-ghost .tb-col-num { color: var(--ice-dim); }
+
+/* ── tier bands: Crew / Threads / Cast ── */
+.tb-tier {
+  position: sticky; left: 0; z-index: 5;
+  grid-column: 1 / -1;
+  background: var(--bg-deep);
+  border-top: 1px solid var(--gold-rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 0.5rem 0.8rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.tb-tier:hover { color: var(--gold-light); }
+.tb-tier-caret { font-size: 0.7rem; transition: transform 0.15s; color: var(--text-muted); }
+.tb-tier.is-closed .tb-tier-caret { transform: rotate(-90deg); }
+.tb-tier-count {
+  margin-left: auto;
+  font-family: inherit;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+}
+
+.tb-lane {
+  position: sticky; left: 0; z-index: 3;
+  background: var(--bg-deep);
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule-soft);
+  padding: 0.45rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+.tb-lane-name {
+  color: var(--text);
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.tb-lane.is-child { padding-left: 1.7rem; }
+.tb-lane.is-child .tb-lane-name { color: var(--text-dim); font-size: 0.85rem; }
+.tb-lane.is-child .tb-lane-name::before {
+  content: '\2514\2500\00a0';
+  color: var(--text-muted);
+}
+.tb-lane-note {
+  font-family: 'Cinzel', serif;
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.tb-lane.is-cold .tb-lane-name { color: var(--text-dim); }
+.tb-lane.is-cold .tb-lane-note { color: var(--dm-crimson); }
+
+/* ── cells ── */
+.tb-cell {
+  border-right: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule-soft);
+  padding: 0.3rem 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 2.6rem;
+}
+.tb-cell.is-empty::after {
+  content: '\00b7';
+  color: var(--text-muted);
+  opacity: 0.35;
+  margin: auto;
+}
+.tb-beat {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: 100%;
+  background: none;
+  border: none;
+  border-left: 2px solid var(--gold-rule);
+  padding: 0.3rem 0.45rem;
+  border-radius: 2px;
+  cursor: pointer;
+  font: inherit;
+  color: var(--text-dim);
+  text-align: left;
+  transition: background 0.12s, color 0.12s;
+}
+.tb-beat:hover { background: var(--gold-faint); color: var(--text); }
+.tb-beat.is-selected {
+  background: var(--gold-faint);
+  border-left-color: var(--gold);
+  color: var(--text);
+}
+.tb-beat:focus-visible { outline: 2px solid var(--ice); outline-offset: 1px; }
+.tb-dots { display: flex; gap: 2px; flex: none; }
+.tb-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.8;
+}
+.tb-beat-n {
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+/* ── the detail panel ── */
+.tb-panel {
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--dm-elev-1);
+  padding: 1.1rem 1.3rem;
+  margin: 0 0 2rem;
+}
+.tb-panel-empty { color: var(--text-muted); font-size: 0.92rem; }
+.tb-panel-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.9rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+.tb-panel-name { font-family: 'Cinzel', serif; font-size: 1.05rem; color: var(--gold-light); }
+.tb-panel-where {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.tb-panel-link { margin-left: auto; font-size: 0.82rem; }
+.tb-panel ul { margin: 0; padding-left: 1.1rem; }
+.tb-panel li { margin-bottom: 0.4rem; line-height: 1.55; color: var(--text-dim); }
+
+/* ── controls above the board ── */
+.tb-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.2rem;
+  margin: 0 0 0.8rem;
+}
+.tb-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  cursor: pointer;
+  user-select: none;
+}
+.tb-toggle input { accent-color: var(--ice); cursor: pointer; }
+.tb-toggle:hover { color: var(--text); }
+.tb-legend {
+  margin-left: auto;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+.tb-legend-swatch {
+  display: inline-block;
+  width: 0.8rem; height: 0.8rem;
+  vertical-align: -0.1rem;
+  margin-right: 0.3rem;
+  border: 1px solid var(--rule);
+}
+.tb-legend-swatch.is-unsynced {
+  background: repeating-linear-gradient(135deg,
+    rgba(203, 216, 232, 0.14) 0 4px, transparent 4px 8px);
+}
+
+@media (max-width: 760px) {
+  .tb-wrap { max-height: 70vh; }
+  .tb-legend { margin-left: 0; width: 100%; }
+}
