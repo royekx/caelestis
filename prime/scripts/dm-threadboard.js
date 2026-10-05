@@ -305,16 +305,23 @@
     });
     root.appendChild(strip);
 
+    // The key says what each term MEANS, not just which colour it is. A
+    // legend that only maps colour to word still has to be memorised.
     var legend = el('div', 'tb-legend');
-    ['owed', 'live', 'quiet'].forEach(function (s) {
+    [
+      ['owed',  'open objectives, nothing moved lately'],
+      ['live',  'open objectives, moved recently'],
+      ['quiet', 'nothing outstanding']
+    ].forEach(function (p) {
       var x = el('span', 'tb-legend-item');
-      x.appendChild(el('span', 'tb-pip is-' + s));
-      x.appendChild(document.createTextNode(s));
+      x.appendChild(el('span', 'tb-pip is-' + p[0]));
+      x.appendChild(el('b', null, p[0]));
+      x.appendChild(document.createTextNode(' — ' + p[1]));
       legend.appendChild(x);
     });
     var u = el('span', 'tb-legend-item');
     u.appendChild(el('span', 'tb-legend-swatch is-unsynced'));
-    u.appendChild(document.createTextNode('awaiting sync'));
+    u.appendChild(document.createTextNode('voyage the tracker has not reached'));
     legend.appendChild(u);
     root.appendChild(legend);
   }
@@ -462,15 +469,22 @@
     } else { nm.appendChild(document.createTextNode(lane.name)); }
     g.appendChild(nm);
 
-    if (lane.open.length) {
-      g.appendChild(el('div', 'tb-lane-note is-open-objs',
-        lane.open.length + ' open · last V' + pad(lane.last)));
-    } else if (lane.status === 'quiet' && lane.last) {
-      // Information, not an accusation: nothing is outstanding here.
-      g.appendChild(el('div', 'tb-lane-note', 'last seen V' + pad(lane.last)));
-    } else if (!lane.last) {
-      g.appendChild(el('div', 'tb-lane-note', 'not yet on screen'));
+    // Every row states its own status in words. The pip repeats it in colour
+    // rather than carrying it alone, so nothing here depends on remembering
+    // what a colour meant.
+    var note;
+    if (!lane.last) {
+      note = 'not yet on screen';
+    } else if (lane.status === 'owed') {
+      note = 'owed · ' + lane.open.length + ' open since V' + pad(lane.last);
+    } else if (lane.status === 'live') {
+      note = lane.open.length
+        ? 'live · ' + lane.open.length + ' open'
+        : 'live';
+    } else {
+      note = 'quiet · last V' + pad(lane.last);
     }
+    g.appendChild(el('div', 'tb-lane-note is-' + lane.status, note));
     return g;
   }
 
@@ -481,12 +495,13 @@
       (beats && beats.length ? '' : ' is-empty'));
     if (!beats || !beats.length) return cell;
 
+    // The count alone, not a row of dots. Dots here collided with the status
+    // pip in the gutter - same shape, unrelated meaning - and a reader who
+    // has to learn which dots are which is a reader the board has failed.
     var b = el('button', 'tb-beat is-' + lane.status);
     b.type = 'button';
-    var dots = el('span', 'tb-dots');
-    for (var i = 0; i < Math.min(beats.length, 4); i++) dots.appendChild(el('span', 'tb-dot'));
-    b.appendChild(dots);
     b.appendChild(el('span', 'tb-beat-n', String(beats.length)));
+    b.appendChild(el('span', 'tb-beat-unit', beats.length === 1 ? 'beat' : 'beats'));
     b.setAttribute('aria-label',
       lane.name + ', voyage ' + pad(c.number) + ', ' + beats.length + ' beats');
     if (state.selected && state.selected.slug === lane.slug && state.selected.col === c.number) {
