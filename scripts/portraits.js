@@ -40,7 +40,7 @@
     'saerthe':       { name: 'Saerthe Abizjn',     fileId: '1d7cDR1TYwEkaSuDVJC8bEOOJnoPT5S_D' },
     'blip':          { name: 'Mr. Blip',            fileId: '1gcMlDsoM10pyQ62SC6MG1UcLgWnepLcX' },
     'ryeback':       { name: 'Petty Officer Winston Ryeback', fileId: '1H3TaoPPU1F_Ocit_CLn1RCbdR2f-FnJl' },
-    'sorcur':        { name: 'Sorcur',              fileId: '' },
+    'sorkor':        { name: "Sor'Kur",             fileId: '' },
     'kip-pik':       { name: 'Kip & Pik',           fileId: '' },
     'rindle':        { name: 'Rindle Gearloft',     fileId: '' },
 
