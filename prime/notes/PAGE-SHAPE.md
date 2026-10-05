@@ -105,9 +105,9 @@ A played voyage carries Briefing, Actual and Delta instead.
 |---|---|
 | `prime/` | DM canon. Everything the players should not read. |
 | the site root | player-facing, indexed, published. |
-| the Google Sheet | the operational snapshot of what the party knows. |
-| `data/raw/` | the verbatim machine dump. Never hand-edited. |
-| `data/*.json` | the player-safe output of `transform.js`. |
+| `data/*.json` | the record: what the crew has met, kept by hand. |
+| `prime/data/*.json` | the DM layer over the record, keyed by the same ids. |
 
-A fix to published data belongs in the Sheet, or in `transform.js`'s overlays
-when the tracker cannot express it. See `DATA-BOUNDARY.md`.
+A fact is entered in the record and nowhere else. A page that shows it is
+corrected by correcting the record and rendering the page again. See
+`DATA-BOUNDARY.md` for the rule and `SESSION-RUN.md` for the method.
