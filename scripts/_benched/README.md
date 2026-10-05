@@ -3,9 +3,19 @@
 `build-pages.js` is out of service while the automation pipeline is
 backtracked. It is here rather than deleted so the logic survives.
 
-**Nothing runs it.** `.github/workflows/deploy.yml` only builds the three
-Pagefind indexes and uploads the site — there has never been a build step in
-the deploy. Benching it changes nothing about how the site publishes.
+**Nothing runs it.** `.github/workflows/deploy.yml` currently builds the three
+Pagefind indexes and uploads the site, with no build step.
+
+*Correction to an earlier version of this note, which said there had never been
+one.* There was. Commit `610b61c` ran `build-data.js` and `build-pages.js` and
+committed the regenerated files, under the workflow name "Build site & deploy
+to Pages". Commit `020af89` (2026-09-10, "Modify deploy workflow for search
+index building") removed all three steps and dropped `contents: write` to
+`contents: read`. Its message mentions only the search work, so the data build
+appears to have gone as collateral rather than by decision.
+
+Benching this scaffolder was deliberate. Losing `build-data.js` from CI alongside
+it probably was not — see `prime/notes/DATA-BOUNDARY.md`.
 
 Every entity page under `crew-manifest/`, `dossiers/`, `factions/`,
 `inventory/`, `navigation-records/` and `quests/` is now fully rendered
