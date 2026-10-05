@@ -326,19 +326,34 @@ body::after {
   color: var(--gold-dim, var(--gold));
 }
 
-/* ── CALLOUTS ── */
-/* Smaller inline emphasis blocks. Used for "DM note:", "Player-facing:", etc. */
+/* ── CALLOUT ──
+   There are 658 of these across the wiki, against about 1,100 paragraphs.
+   At that density a filled, tinted box stops meaning "look here" and becomes
+   the page's baseline texture, which is what made the DM pages read as
+   stacked walls rather than prose.
+
+   Two changes, both here rather than in markup:
+
+   1. One treatment, not three. is-warn / is-cosmic / is-info were applied
+      with no consistent meaning - "The objective" was info, "The visible
+      symptom" was warn, "The pattern is the person" was cosmic - so the
+      colour taught the reader nothing and only fragmented the page. The
+      variant classes still parse; they just no longer paint.
+
+   2. A rule and space, not a box. The fill is gone and the left bar is a
+      hairline, matching the player site's own surface rule. The label still
+      carries the emphasis; the body now reads as part of the prose column. */
 .dm-callout {
-  background: var(--dm-elev-2);
-  border-left: 3px solid var(--gold);
-  padding: 0.85rem 1.1rem;
-  margin: 1rem 0;
-  border-radius: 0 2px 2px 0;
-  font-size: 0.96rem;
+  background: none;
+  border-left: 1px solid var(--gold-rule);
+  padding: 0.1rem 0 0.1rem 1.1rem;
+  margin: 1.5rem 0;
+  border-radius: 0;
+  font-size: 1rem;
 }
-.dm-callout.is-warn    { border-left-color: var(--dm-crimson); }
-.dm-callout.is-cosmic  { border-left-color: var(--dm-violet); }
-.dm-callout.is-info    { border-left-color: var(--dm-teal); }
+.dm-callout.is-warn,
+.dm-callout.is-cosmic,
+.dm-callout.is-info { border-left-color: var(--gold-rule); }
 .dm-callout-label {
   font-family: 'Cinzel', serif;
   font-size: 0.899rem;
@@ -348,9 +363,9 @@ body::after {
   display: block;
   margin-bottom: 0.3rem;
 }
-.dm-callout.is-warn    .dm-callout-label { color: var(--dm-crimson); }
-.dm-callout.is-cosmic  .dm-callout-label { color: var(--dm-violet); }
-.dm-callout.is-info    .dm-callout-label { color: var(--dm-teal); }
+.dm-callout.is-warn    .dm-callout-label,
+.dm-callout.is-cosmic  .dm-callout-label,
+.dm-callout.is-info    .dm-callout-label { color: var(--gold-dim); }
 
 /* ── COLLAPSIBLE SECTIONS ── */
 /* Wiki pages are long. Default-open, click to collapse. */
