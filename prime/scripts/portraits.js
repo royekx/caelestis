@@ -108,7 +108,7 @@
     'virenspace':    { name: 'Virenspace',          fileId: '' },
     'aethris':       { name: 'Aethris',             fileId: '' },
     'hollow':        { name: 'The Reach World',          fileId: '' },
-    'tumak-homeworld': { name: 'Lunarfoot',         fileId: '' },
+    'tumak-homeworld': { name: "the Wayfinders' homeworld", fileId: '' },
     'vthoramu':      { name: "Vth'oramu",           fileId: '1QtPE3ft4QNpQRKZlkhXteCXxI9vAphxK' },
     'cairn-station': { name: 'Cairn Station',       fileId: '' },
 
