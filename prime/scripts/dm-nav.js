@@ -72,25 +72,62 @@
   // Order: Campaign (+ Remaking, Voyages nested) / Cosmology / Realms / Factions & Characters.
   // a divider, then the trackable throughlines (The Remaking / Voyages).
 
-  var sections = [
-    { key: 'campaign',  label: 'Campaign',     path: 'campaign/'   },
-    { key: 'voyages',   label: 'Voyages',      path: 'campaign/voyages/',        indent: true },
-    { key: 'spine',     label: 'Spine',        path: 'campaign/spine.html',      indent: true },
-    { key: 'becoming',  label: 'The Ascension', path: 'campaign/ascension/',       indent: true },
-    { key: 'colony',    label: 'Colony Ops',    path: 'campaign/colony/',       indent: true },
-    { key: 'plot-hooks',label: 'Plot Hooks',   path: 'campaign/plot-hooks.html', indent: true },
-    { key: 'what-if',   label: 'What If',      path: 'campaign/what-if.html',    indent: true },
-    { key: 'crew',      label: 'Crew',         path: 'crew/'       },
-    { key: 'glossary',  label: 'Glossary',     path: 'glossary/'   },
-    { key: 'cosmology', label: 'Cosmology',    path: 'cosmology/'  },
-    { key: 'realms',    label: 'Realms',       path: 'realms/'     },
-    { key: 'factions',  label: 'Factions &amp; Characters', path: 'factions/' },
-    { key: 'artifacts', label: 'Artifacts',    path: 'artifacts/'  },
-    { key: 'rules',     label: 'Rules',        path: 'rules/'      },
-    { key: 'dossiers',  label: 'DM Dossiers', path: 'dossiers/'   },
-    { key: 'statblocks',label: 'Stat Blocks',  path: 'statblocks/' },
-    { key: 'chart',     label: 'Cosmos Chart', path: 'chart/'      },
+  // Grouped the way the work divides, rather than one flat list:
+  //
+  //   Run      — what you open while prepping or at the table
+  //   Cast     — the people, on both sides
+  //   Setting  — what is true regardless of who is in the room
+  //   Systems  — the homebrew machinery
+  //
+  // Campaign keeps its nested children; everything else sits flat under a
+  // group label. The player sidebar uses the same pattern (nav.js groups).
+  var groups = [
+    {
+      label: 'Run',
+      items: [
+        { key: 'campaign',  label: 'Campaign',      path: 'campaign/'   },
+        { key: 'spine',     label: 'Spine',         path: 'campaign/spine.html',      indent: true },
+        { key: 'voyages',   label: 'Voyages',       path: 'campaign/voyages/',        indent: true },
+        { key: 'plot-hooks',label: 'Plot Hooks',    path: 'campaign/plot-hooks.html', indent: true },
+        { key: 'what-if',   label: 'What If',       path: 'campaign/what-if.html',    indent: true },
+      ]
+    },
+    {
+      label: 'Cast',
+      items: [
+        { key: 'crew',      label: 'The Crew',      path: 'crew/'       },
+        { key: 'dossiers',  label: 'DM Dossiers',   path: 'dossiers/'   },
+        { key: 'factions',  label: 'Factions',      path: 'factions/'   },
+        { key: 'statblocks',label: 'Stat Blocks',   path: 'statblocks/' },
+      ]
+    },
+    {
+      label: 'The Opposition',
+      items: [
+        { key: 'colony',    label: 'Colony Ops',    path: 'campaign/colony/'    },
+        { key: 'becoming',  label: 'The Ascension', path: 'campaign/ascension/' },
+      ]
+    },
+    {
+      label: 'Setting',
+      items: [
+        { key: 'cosmology', label: 'Cosmology',     path: 'cosmology/'  },
+        { key: 'realms',    label: 'Realms',        path: 'realms/'     },
+        { key: 'artifacts', label: 'Artifacts',     path: 'artifacts/'  },
+        { key: 'chart',     label: 'Cosmos Chart',  path: 'chart/'      },
+      ]
+    },
+    {
+      label: 'Reference',
+      items: [
+        { key: 'rules',     label: 'Rules',         path: 'rules/'      },
+        { key: 'glossary',  label: 'Glossary',      path: 'glossary/'   },
+      ]
+    },
   ];
+
+  // Flattened for the active-link logic further down, which keys off paths.
+  var sections = groups.reduce(function (all, g) { return all.concat(g.items); }, []);
 
   var extLinks = [
     { label: 'Player Site',          href: siteBase + 'index.html' },
@@ -115,12 +152,13 @@
   document.head.appendChild(styleEl);
 
   // ── Build HTML ────────────────────────────────────────────────────────────
-  var sectionLinks = sections.map(function (s) {
-    if (s.key === '__divider') {
-      return '<div class="side-nav-divider"></div>';
-    }
+  function linkFor(s) {
     var cls = 'side-nav-link' + (s.indent ? ' side-nav-link-indent' : '');
     return '<a class="' + cls + '" href="' + base + s.path + '" data-section="' + s.key + '" data-path="' + s.path + '">' + s.label + '</a>';
+  }
+
+  var sectionLinks = groups.map(function (g) {
+    return '<div class="side-nav-group-label">' + g.label + '</div>' + g.items.map(linkFor).join('');
   }).join('');
 
   var externalLinks = extLinks.map(function (l) {
