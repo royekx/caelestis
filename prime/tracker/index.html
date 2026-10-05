@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Tracker · Caelestis · DM</title>
+<link rel="stylesheet" href="../../styles/caelestis.css">
+<link rel="stylesheet" href="../../styles/dm.css">
+<script src="../scripts/dm-nav.js" defer></script>
+<script src="../scripts/portraits.js" defer></script>
+<script src="../scripts/dm-tracker.js" defer></script>
+<script src="../scripts/dm-sections.js" defer></script>
+</head>
+<body>
+
+<main class="dm-content">
+
+  <header class="dm-page-header">
+    <div class="dm-page-eyebrow">Campaign<span class="sep">·</span>The Record, As It Stands</div>
+    <h1>Tracker</h1>
+    <p class="dm-page-lede">
+      Everything the crew has met, and where each of them stands now. A row is one record in <code>data/</code> with the DM layer from <code>prime/data/</code> laid over it, and nothing is entered on this page. <a href="../campaign/voyages/#board">The board</a> reads the same record across voyages; <a href="../dossiers/">DM Dossiers</a> hold what is true of a character; the record changes through a session run, set out in <code>prime/notes/SESSION-RUN.md</code>.
+    </p>
+  </header>
+
+  <!-- Where the record stands, and the filter. Filled by dm-tracker.js. -->
+  <div id="tracker" data-base="../../data/" data-dm-base="../data/"></div>
+
+  <details class="dm-collapse-section" open id="threads">
+    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Threads</h2></summary>
+    <div class="dm-collapse-section-body">
+      <div class="tr-set" data-set="quests" data-keep-closed></div>
+    </div>
+  </details>
+
+  <details class="dm-collapse-section" id="crew">
+    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Crew</h2></summary>
+    <div class="dm-collapse-section-body">
+      <div class="tr-set" data-set="pcs" data-keep-closed></div>
+    </div>
+  </details>
+
+  <details class="dm-collapse-section" id="cast">
+    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Cast</h2></summary>
+    <div class="dm-collapse-section-body">
+      <div class="tr-set" data-set="npcs" data-keep-closed></div>
+    </div>
+  </details>
+
+  <details class="dm-collapse-section" id="places">
+    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Places</h2></summary>
+    <div class="dm-collapse-section-body">
+      <div class="tr-set" data-set="locations" data-keep-closed></div>
+    </div>
+  </details>
+
+  <details class="dm-collapse-section" id="things">
+    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Things</h2></summary>
+    <div class="dm-collapse-section-body">
+      <div class="tr-set" data-set="items" data-keep-closed></div>
+    </div>
+  </details>
+
+  <details class="dm-collapse-section" id="factions">
+    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Factions</h2></summary>
+    <div class="dm-collapse-section-body">
+      <div class="tr-set" data-set="factions" data-keep-closed></div>
+    </div>
+  </details>
+
+  <details class="dm-collapse-section" id="off-screen">
+    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Off-screen</h2></summary>
+    <div class="dm-collapse-section-body">
+      <p>
+        What the crew has never met has no record. Lanes carry DM beats for powers moving out of sight; the dossiers below belong to no record yet, and each gains one at first contact.
+      </p>
+      <div class="tr-set" data-set="offscreen" data-keep-closed></div>
+    </div>
+  </details>
+
+  <div class="dm-footer">Tracker · Caelestis DM</div>
+
+</main>
+
+</body>
+</html>
