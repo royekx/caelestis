@@ -91,12 +91,21 @@ jobs:
           rm -rf data/raw
           rm -f  scripts/transform.js scripts/build-data.js data/coverage.md
           find . -name '*-template.html' -not -path './.git/*' -delete
-          # Fail the deploy rather than publish a DM row.
+          # Fail the deploy rather than publish DM material.
+          # See prime/notes/DATA-BOUNDARY.md for the rule these two guards enforce.
+          fail=0
           if grep -rlq '"Visibility": *"DM"' --include='*.json' . ; then
-            echo "::error::a published JSON still carries a Visibility: DM row"
+            echo "::error::a published JSON carries a Visibility: DM row"
             grep -rl '"Visibility": *"DM"' --include='*.json' .
-            exit 1
+            fail=1
           fi
+          # A DM column holding anything other than an em-dash or empty string.
+          if grep -rElq '"(Key Details \(DM\)|Overview \(DM\))": *"[^"\u2014]' --include='*.json' . ; then
+            echo "::error::a published JSON carries DM column content"
+            grep -rEl '"(Key Details \(DM\)|Overview \(DM\))": *"[^"\u2014]' --include='*.json' .
+            fail=1
+          fi
+          [ "$fail" -eq 0 ] || exit 1
           echo "pruned: data/raw/, transform.js, build-data.js, coverage.md, *-template.html"
 
       # -- Publish the whole site (with all three index bundles) --
