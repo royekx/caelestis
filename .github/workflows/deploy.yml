@@ -68,6 +68,22 @@ jobs:
             --exclude-selectors "[data-pagefind-ignore], nav, footer" \
             --verbose
 
+      # -- Prune build-only inputs from the published artifact --
+      # path: . below publishes the whole working tree, so anything left here
+      # is fetchable by URL even when it is absent from every Pagefind index.
+      # data/raw/ is the UNFILTERED tracker export: it carries Visibility: DM
+      # rows verbatim. transform.js and build-data.js have already consumed it
+      # by this point, and no page loads it in the browser, so it is removed
+      # from the tree before upload. The repo keeps its copy; only the artifact
+      # loses it.
+      - name: Prune build-only inputs
+        run: |
+          rm -rf data/raw
+          rm -f  scripts/transform.js scripts/build-data.js
+          rm -f  data/coverage.md
+          find . -name '*-template.html' -not -path './.git/*' -delete
+          echo "pruned from artifact:"; echo "  data/raw/, transform.js, build-data.js, coverage.md, *-template.html"
+
       # -- Publish the whole site (with all three index bundles) --
       - name: Setup Pages
         uses: actions/configure-pages@v5

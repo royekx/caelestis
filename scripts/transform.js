@@ -253,7 +253,7 @@ npcs.forEach(n => {
 });
 
 // ── Player characters ──────────────────────────────────────────────────────
-const pcs = raw.pcs.filter(r => !blank(r.id)).map(p => {
+const pcs = raw.pcs.filter(r => !blank(r.id) && r.Visibility !== 'DM').map(p => {
   const was = p.Character;
   if (RENAME.pc[p.Character]) { p.Character = RENAME.pc[p.Character]; notes.renamed.push(`PC ${was} \u2192 ${p.Character}`); }
   const slug = SLUG.pc[p.Character] || p.Slug;
@@ -331,7 +331,7 @@ function build(rows, cfg) {
 }
 
 const out = {
-  sessions: build(raw.sessions.filter(r => !blank(r.id)),
+  sessions: build(raw.sessions.filter(r => !blank(r.id) && r.Visibility !== 'DM'),
     { type: 'session', nameCol: 'Title', dir: 'voyages' })
     .map(s => ({ ...s, slug: `voyage-${String(parseInt(s.fields.Session.slice(1),10)).padStart(3,'0')}`,
                  url: `/voyages/voyage-${String(parseInt(s.fields.Session.slice(1),10)).padStart(3,'0')}.html` })),
