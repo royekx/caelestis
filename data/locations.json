@@ -43,11 +43,11 @@
     "fields": {
       "Location": "Caelestis",
       "Type": "Station",
-      "Key NPCs / Factions": "Caelestis Academy, Mirt the Merciless, Boatswain Tarto",
+      "Key NPCs / Factions": "Caelestis Academy, Mirt, Boatswain Tarto",
       "Visibility": "Player",
       "Visited": "S01, S02, S03",
       "Mentioned": null,
-      "Overview (Player)": "Caelestis is the spelljammer academy where the cadets train, a layered machine of halls, ranks, and access permissions overlooking the Astral Sea. Led by Mirt the Merciless, it drills its cadets through simulation and salvage exercise. A wave of thefts continues to spread through the tower, reaching an instructor's own possessions.",
+      "Overview (Player)": "Caelestis is the spelljammer academy where the cadets train, a layered machine of halls, ranks, and access permissions overlooking the Astral Sea. Led by Mirt, it drills its cadets through simulation and salvage exercise. A wave of thefts continues to spread through the tower, reaching an instructor's own possessions.",
       "Linked": "FAO-Lx7kR2vN",
       "Status": "Accessible"
     },
@@ -189,7 +189,7 @@
     "fields": {
       "Location": "Mirt's Quarters",
       "Type": "Room",
-      "Key NPCs / Factions": "Mirt the Merciless",
+      "Key NPCs / Factions": "Mirt",
       "Visibility": "Player",
       "Visited": "S01",
       "Mentioned": null,

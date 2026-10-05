@@ -12,7 +12,7 @@
    The fileId is the long alphanumeric string between /d/ and /view.
 
    Drive folder for all wiki images:
-     https://drive.google.com/drive/folders/1DEdQYRW2V3YpFDj8XZ2eKoSJF_eO7k1H
+     (see the DM copy)
 
    The dossier helper expects a portrait URL of the form:
      https://lh3.googleusercontent.com/d/{fileId}
@@ -25,86 +25,32 @@
   // Keys are kebab-case character identifiers (matching anchor ids where
   // possible). `fileId` is the Drive file ID; leave empty until populated.
   var PORTRAITS = {
-
-    // ── PCs (The Crew) ──
+    'sor-kur':       { name: "Sor'Kur",             fileId: '' },
     'bartholomew':   { name: 'Bartholomew Grayson', fileId: '1ThgrZS-SGvWVIgGkvuwEm08oMyWActWF' },
-    'boogie':        { name: 'Boogie',              fileId: '1_ZhT9rX4PrCKjegHu3Fc8gPnubg27Dqu' },
-    'casey':         { name: 'Casey Geim',          fileId: '1XLFP2beF16GU12VCcwInFzpfTv3mjhaO' },
-    'gregory':       { name: 'Gregory',             fileId: '1fzRY-WITl425-WA_HCThclBYYsRH4tun' },
-    'sol':           { name: 'Sol Fortuna',         fileId: '1PT-7qxrvN3XUFPm3xAkUZ8IbToM5qsDo' },
-    'tumak':         { name: 'Tumak Swan',          fileId: '1Qk-udGpqGpv2oZL9hahqjXgMRRCDrWnr' },
-
-    // ── Academy & Fleet ──
-    'mirt':          { name: 'Mirt',                fileId: '1D9Hh3pn8e_QbMAF69ABg4bld6kMHj4qr' },
-    'tarto':         { name: 'Boatswain Tarto',     fileId: '13-w6epUMG5kO54FqZpJpelexFufDzu2W' },
-    'saerthe':       { name: 'Saerthe Abizjn',     fileId: '1d7cDR1TYwEkaSuDVJC8bEOOJnoPT5S_D' },
     'blip':          { name: 'Mr. Blip',            fileId: '1gcMlDsoM10pyQ62SC6MG1UcLgWnepLcX' },
-    'ryeback':       { name: 'Petty Officer Winston Ryeback', fileId: '1H3TaoPPU1F_Ocit_CLn1RCbdR2f-FnJl' },
-    'sorcur':        { name: 'Sorcur',              fileId: '' },
+    'boogie':        { name: 'Boogie',              fileId: '1_ZhT9rX4PrCKjegHu3Fc8gPnubg27Dqu' },
+    "captain-sardax": { name: "Captain Sardax", fileId: '' },
+    'casey':         { name: 'Casey Geim',          fileId: '1XLFP2beF16GU12VCcwInFzpfTv3mjhaO' },
+    "derek": { name: "Derek", fileId: '' },
+    'gregory':       { name: 'Gregory',             fileId: '1fzRY-WITl425-WA_HCThclBYYsRH4tun' },
+    'jeffrey':       { name: 'Jeffrey',             fileId: '' },
+    'joffrey':       { name: 'Joffrey',             fileId: '' },
     'kip-pik':       { name: 'Kip & Pik',           fileId: '' },
-    'rindle':        { name: 'Rindle Gearloft',     fileId: '' },
-
-    // ── Cadets ──
+    "krik-lit": { name: "Krik'Lit", fileId: '' },
+    'miken':         { name: 'Miken Haverstance',   fileId: '1naBafRe55ibGcJ7vcQ1vxHCpg0rhaKpk' },
+    'mirt':          { name: 'Mirt',                fileId: '1D9Hh3pn8e_QbMAF69ABg4bld6kMHj4qr' },
     'ostekk-6':      { name: 'Ostekk-6', fileId: '1kRxGB6tcRWliypOvuE0TlfeKixlE9CUw' },
     'pffred':        { name: 'Pffred', fileId: '1BlgQkqqZYL5E5M6X7DJMFOJKbr23hda6' },
-    'miken':         { name: 'Miken Haverstance',   fileId: '1naBafRe55ibGcJ7vcQ1vxHCpg0rhaKpk' },
-    'wizpop':        { name: 'Wizpop',              fileId: '' },
-
-    // ── Order / Watchers ──
-    'ezra':          { name: 'Ezra',                fileId: '' },
-
-    // ── Network ──
+    'rindle':        { name: 'Rindle Gearloft',     fileId: '' },
+    'runekeeper':    { name: 'The Runekeeper',      fileId: '' },
+    'ryeback':       { name: 'Petty Officer Winston Ryeback', fileId: '1H3TaoPPU1F_Ocit_CLn1RCbdR2f-FnJl' },
+    'saerthe':       { name: 'Saerthe Abizjn',     fileId: '1d7cDR1TYwEkaSuDVJC8bEOOJnoPT5S_D' },
+    'sol':           { name: 'Sol Fortuna',         fileId: '1PT-7qxrvN3XUFPm3xAkUZ8IbToM5qsDo' },
+    'tarto':         { name: 'Boatswain Tarto',     fileId: '13-w6epUMG5kO54FqZpJpelexFufDzu2W' },
+    'tumak':         { name: 'Tumak Swan',          fileId: '1Qk-udGpqGpv2oZL9hahqjXgMRRCDrWnr' },
+    "veena": { name: "Veena", fileId: '' },
     'vocath':        { name: 'Vocath',              fileId: '' },
-    'qitru':         { name: 'Qitru',               fileId: '' },
-    'crc':           { name: 'Crystalline Retrieval Construct', fileId: '' },
-
-    // ── Deities & Cosmic Powers ──
-    'beshaba':       { name: 'Beshaba',             fileId: '' },
-    'tymora':        { name: 'Tymora',              fileId: '' },
-    'astra':         { name: 'Astra',               fileId: '' },
-    'polly':         { name: 'Polly',               fileId: '' },
-    'zerathis':      { name: 'Zerathis',            fileId: '' },
-
-    // ── Artifacts (treated as portrait-like for dossier consistency) ──
-    'world-surveyor': { name: 'A.T.L.A.S.', fileId: '1PszrX48t8qd24acEGVLa87ir5AXlLJeR' },
-
-    // ── Places ──
-    'realmspace':    { name: 'Realmspace',          fileId: '1kI7fIgdRRyDrNaoauZBw_QsKadJmgHf8' },
-    'caelestis':     { name: 'Caelestis',           fileId: '12jMujp5d1d3RehxqPDrtQiW33_iKM6_Q' },
-    'caelestis-interior': { name: 'Caelestis (interior)', fileId: '1whKOZlbCNZru1zzQN715dif4OXJfL9bC' },
-    'caelestis-sim-deck': { name: 'Caelestis (Simulation Deck)', fileId: '1fEQepmzGqnT7MN-qOD-dDjyOVdbd6Ds6' },
-    'brig':          { name: 'The Brig',            fileId: '' },
-    'sea-dock':      { name: 'Sea Dock',            fileId: '' },
-    'sky-dock':      { name: 'Sky Dock',            fileId: '' },
-    'weeping-goddess': { name: 'Weeping Goddess',   fileId: '' },
-    'toril':         { name: 'Toril',               fileId: '' },
-    'hcatha':        { name: 'H\'Catha',            fileId: '' },
-    'virenspace':    { name: 'Virenspace',          fileId: '' },
-    'aethris':       { name: 'Aethris',             fileId: '' },
-    'hollow':        { name: 'The Reach World',          fileId: '' },
-    'tumak-homeworld': { name: 'Lunarfoot',         fileId: '' },
-    'cairn-station': { name: 'Cairn Station',       fileId: '' },
-
-    // ── Ships & vehicles ──
-    'foundling':     { name: 'The Foundling',       fileId: '' },
-    'moonraider':    { name: 'The Moonraider',      fileId: '' },
-    'tyrant-ship':   { name: 'Tyrant ship',         fileId: '' },
-
-    // ── Threads, hooks, named objects (sketches/icons) ──
-    'hcatha-meteor': { name: 'H\'Catha Meteor',     fileId: '' },
-    'sabotage-sigil':{ name: 'Sabotage sigil',      fileId: '' },
-    'latchling':     { name: 'The Latchling',       fileId: '' },
-    'fonains-shard': { name: 'Fonains shard',       fileId: '' },
-    'wardrobe':      { name: 'Mirt\'s wardrobe',    fileId: '' },
-
-    // ── Security stars & badges (available for in-prose use) ──
-    'security-star-visitor': { name: 'Visitor clearance star', fileId: '1aRgq_BbRCWtQACZoHUQM_IUvxVpIoF1D' },
-    'security-star-sailor':  { name: 'Sailor clearance star',  fileId: '1KCRQ4OJ-7G5RmKUg-NACrRM3DKmVVpEA' },
-    'security-star-officer': { name: 'Officer clearance star', fileId: '1cnruOaO9A-2TVB0s8Dx_RKUTRJS-2AKz' },
-    'security-star-cadet':   { name: 'Cadet clearance star',   fileId: '1BntfZECdJWqMpkWfd-S6MMarJb6UrZxr' },
-    'security-star-bridge':  { name: 'Bridge clearance star',  fileId: '1QfPTPyN7UA0IdkDmDrX4Vcu4xDBa9sCE' },
-    'cadet-badge':           { name: 'Cadet badge',            fileId: '1vOloKg0dEMeRobUJzL8i5dQXG2WxQzQj' },
-
+    'zerathis':      { name: 'Zerathis',            fileId: '' }
   };
 
   // ── Rendering helpers ─────────────────────────────────────────────────────
@@ -128,7 +74,19 @@
   // declare just the key and stay terse.
   // Quest givers: .giver-face on a quest page, .row-giver-face on the board.
   // A data-key wins; otherwise the key comes from the dossier link beside it.
-  var SLUG_KEY = { 'boatswain-tarto': 'tarto', 'saerthe-abizjn': 'saerthe', 'mr-blip': 'blip' };
+  var SLUG_KEY = {
+    'bartholomew-grayson': 'bartholomew',
+    'boatswain-tarto': 'tarto',
+    'casey-geim': 'casey',
+    'kip-and-pik': 'kip-pik',
+    'mr-blip': 'blip',
+    'rindle-gearloft': 'rindle',
+    'saerthe-abizjn': 'saerthe',
+    'sol-fortuna': 'sol',
+    'the-rune-keeper': 'runekeeper',
+    'tumak-swan': 'tumak',
+    'winston-ryeback': 'ryeback',
+  };
   function keyFromSlug(slug) {
     if (!slug) return null;
     if (SLUG_KEY[slug]) return SLUG_KEY[slug];

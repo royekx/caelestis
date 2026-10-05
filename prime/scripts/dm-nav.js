@@ -76,14 +76,20 @@
     { key: 'campaign',  label: 'Campaign',     path: 'campaign/'   },
     { key: 'voyages',   label: 'Voyages',      path: 'campaign/voyages/',        indent: true },
     { key: 'spine',     label: 'Spine',        path: 'campaign/spine.html',      indent: true },
-    { key: 'remaking',  label: 'The Remaking', path: 'campaign/remaking/',       indent: true },
+    { key: 'becoming',  label: 'The Ascension', path: 'campaign/ascension/',       indent: true },
+    { key: 'colony',    label: 'Colony Ops',    path: 'campaign/colony/',       indent: true },
     { key: 'plot-hooks',label: 'Plot Hooks',   path: 'campaign/plot-hooks.html', indent: true },
     { key: 'what-if',   label: 'What If',      path: 'campaign/what-if.html',    indent: true },
+    { key: 'crew',      label: 'Crew',         path: 'crew/'       },
+    { key: 'glossary',  label: 'Glossary',     path: 'glossary/'   },
     { key: 'cosmology', label: 'Cosmology',    path: 'cosmology/'  },
     { key: 'realms',    label: 'Realms',       path: 'realms/'     },
     { key: 'factions',  label: 'Factions &amp; Characters', path: 'factions/' },
     { key: 'artifacts', label: 'Artifacts',    path: 'artifacts/'  },
     { key: 'rules',     label: 'Rules',        path: 'rules/'      },
+    { key: 'dossiers',  label: 'DM Dossiers', path: 'dossiers/'   },
+    { key: 'statblocks',label: 'Stat Blocks',  path: 'statblocks/' },
+    { key: 'chart',     label: 'Cosmos Chart', path: 'chart/'      },
   ];
 
   var extLinks = [
@@ -155,7 +161,7 @@
 
   // ── Active state ──────────────────────────────────────────────────────────
   // Active-state: match each section's full path against the current URL and
-  // pick the MOST SPECIFIC (longest) match, so /campaign/remaking/ highlights
+  // pick the MOST SPECIFIC (longest) match, so /campaign/colony/ highlights
   // The Remaking, not its parent Campaign.
   (function () {
     var links = Array.prototype.slice.call(
@@ -163,7 +169,7 @@
     );
     var best = null, bestLen = -1;
     links.forEach(function (link) {
-      var p = link.dataset.path;          // e.g. "campaign/remaking/"
+      var p = link.dataset.path;          // e.g. "campaign/colony/"
       if (!p) return;
       // Normalize: strip trailing index.html if present in the URL.
       var here = pathname;

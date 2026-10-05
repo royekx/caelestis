@@ -68,6 +68,46 @@ jobs:
             --exclude-selectors "[data-pagefind-ignore], nav, footer" \
             --verbose
 
+      # -- Prune machine inputs from the published artifact --
+      #
+      # Pipeline contract (Workflow C -> this Action):
+      #   data/raw/*.json  is the VERBATIM seven-tab tracker dump that n8n
+      #                    commits. It is machine-written, regenerated on every
+      #                    publish, and carries Visibility: DM rows as-is.
+      #                    Never hand-edit it - the next sync overwrites it and
+      #                    the repo silently drifts from the Sheet.
+      #   data/*.json      is the PLAYER-SAFE output. scripts/transform.js is
+      #                    the designated filter and drops Visibility: DM rows
+      #                    from all seven builds.
+      #
+      # `path: .` below publishes the whole working tree, so the raw dump would
+      # be fetchable by URL even though no page loads it and no Pagefind index
+      # contains it. Filtering DM content is this Action's job, so the Action
+      # removes the raw dump from the tree it is about to upload. The repo and
+      # the n8n round-trip are untouched; only the published site loses it.
+      - name: Prune machine inputs from the artifact
+        run: |
+          set -e
+          rm -rf data/raw
+          rm -f  scripts/transform.js scripts/build-data.js data/coverage.md
+          find . -name '*-template.html' -not -path './.git/*' -delete
+          # Fail the deploy rather than publish DM material.
+          # See prime/notes/DATA-BOUNDARY.md for the rule these two guards enforce.
+          fail=0
+          if grep -rlq '"Visibility": *"DM"' --include='*.json' . ; then
+            echo "::error::a published JSON carries a Visibility: DM row"
+            grep -rl '"Visibility": *"DM"' --include='*.json' .
+            fail=1
+          fi
+          # A DM column holding anything other than an em-dash or empty string.
+          if grep -rElq '"(Key Details \(DM\)|Overview \(DM\))": *"[^"\u2014]' --include='*.json' . ; then
+            echo "::error::a published JSON carries DM column content"
+            grep -rEl '"(Key Details \(DM\)|Overview \(DM\))": *"[^"\u2014]' --include='*.json' .
+            fail=1
+          fi
+          [ "$fail" -eq 0 ] || exit 1
+          echo "pruned: data/raw/, transform.js, build-data.js, coverage.md, *-template.html"
+
       # -- Publish the whole site (with all three index bundles) --
       - name: Setup Pages
         uses: actions/configure-pages@v5

@@ -14,7 +14,7 @@ What this pass changed that the tracker does not yet reflect. Backfill from here
 
 - NPC Sor'Kur: sorcur → sor-kur
 - NPC Kip and Pik: kip → kip-and-pik
-- NPC Mirt the Merciless: mirt-the-merciless → mirt
+- NPC Mirt: mirt-the-merciless → mirt
 - NPC Krik'Lit: crick-lit → krik-lit
 - PC Casey Geim: casey → casey-geim
 - PC Bartholomew Grayson: bartholomew → bartholomew-grayson

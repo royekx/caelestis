@@ -29,7 +29,7 @@ const SLUG = {
     'Veena': 'veena',                      // file was vena.html
     'Saerthe Abizjn': 'saerthe-abizjn',    // file was saerth-abyzine.html
     "Sor'Kur": 'sor-kur',
-    'Mirt the Merciless': 'mirt',
+    'Mirt the Merciless': 'mirt',       // tracker still carries the old title
     "Krik'Lit": 'krik-lit',                // tracker had "Crick Lit"
     'Kip and Pik': 'kip-and-pik'
   },
@@ -98,7 +98,7 @@ const NEW_ITEMS = [
 // fought through to get there is record, not objective.
 const QUEST_META = {
   'the-caelestis-burglaries': {
-    kind: 'Quest', giver: 'Mirt the Merciless', giverSlug: 'mirt', parent: null,
+    kind: 'Quest', giver: 'Mirt', giverSlug: 'mirt', parent: null,
     objectives: [
       ['x', 'Recover the arcane device from the wrecked simulation chamber'],
       [' ', 'Look into Joffrey and the man named Jeffrey'],
@@ -142,7 +142,7 @@ const QUEST_META = {
 const NEW_QUESTS = [
   {
     id: 'QST-Vg7kR2nw', Quest: "Vocath\u2019s Grudge Against Mirt", Slug: 'vocaths-grudge',
-    Type: 'World / Mystery', 'Related Character(s)': 'Mirt the Merciless',
+    Type: 'World / Mystery', 'Related Character(s)': 'Mirt',
     'Current State': 'Mirt has named Vocath an old enemy who has borne him a grudge for a long time, which makes anyone connected to Mirt a target.',
     'Overview (Player)': 'The arcane device that nearly killed a chamber of cadets carried a single marking: Vocath. Mirt knew the name at once. He has said only that Vocath has held a grudge against him for a long time, and that anyone connected to him is a potential target.',
     'Key Details (Player)': '\u2022 [S03] The rod recovered from the simulation chamber bore the marking Vocath\n\u2022 [S03] Saerthe raised an illusion of the rod before Mirt and named the marking\n\u2022 [S03] Mirt\u2019s face went still \u2014 not confusion. He said Vocath had harboured a grudge against him for a long time\n\u2022 [S03] He told the cadets to keep it to themselves, and warned that anyone connected to him could be a target',
@@ -253,7 +253,7 @@ npcs.forEach(n => {
 });
 
 // ── Player characters ──────────────────────────────────────────────────────
-const pcs = raw.pcs.filter(r => !blank(r.id)).map(p => {
+const pcs = raw.pcs.filter(r => !blank(r.id) && r.Visibility !== 'DM').map(p => {
   const was = p.Character;
   if (RENAME.pc[p.Character]) { p.Character = RENAME.pc[p.Character]; notes.renamed.push(`PC ${was} \u2192 ${p.Character}`); }
   const slug = SLUG.pc[p.Character] || p.Slug;
@@ -331,7 +331,7 @@ function build(rows, cfg) {
 }
 
 const out = {
-  sessions: build(raw.sessions.filter(r => !blank(r.id)),
+  sessions: build(raw.sessions.filter(r => !blank(r.id) && r.Visibility !== 'DM'),
     { type: 'session', nameCol: 'Title', dir: 'voyages' })
     .map(s => ({ ...s, slug: `voyage-${String(parseInt(s.fields.Session.slice(1),10)).padStart(3,'0')}`,
                  url: `/voyages/voyage-${String(parseInt(s.fields.Session.slice(1),10)).padStart(3,'0')}.html` })),
