@@ -25,6 +25,10 @@
   // Keys are kebab-case character identifiers (matching anchor ids where
   // possible). `fileId` is the Drive file ID; leave empty until populated.
   var PORTRAITS = {
+    "krik-lit": { name: "Krik'Lit", fileId: '' },
+    "captain-sardax": { name: "Captain Sardax", fileId: '' },
+    "veena": { name: "Veena", fileId: '' },
+    "derek": { name: "Derek", fileId: '' },
 
     // ── PCs (The Crew) ──
     'bartholomew':   { name: 'Bartholomew Grayson', fileId: '1ThgrZS-SGvWVIgGkvuwEm08oMyWActWF' },
