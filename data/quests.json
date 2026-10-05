@@ -88,7 +88,7 @@
       },
       {
         "id": "NPC-Wc9fT2nJ",
-        "name": "Mirt the Merciless",
+        "name": "Mirt",
         "type": "npc",
         "slug": "mirt",
         "url": "/dossiers/mirt.html"
@@ -150,7 +150,7 @@
       "total": 3
     },
     "giver": {
-      "name": "Mirt the Merciless",
+      "name": "Mirt",
       "slug": "mirt",
       "url": "/dossiers/mirt.html"
     },
@@ -779,7 +779,7 @@
     "fields": {
       "Quest": "Vocath’s Grudge Against Mirt",
       "Type": "World / Mystery",
-      "Related Character(s)": "Mirt the Merciless",
+      "Related Character(s)": "Mirt",
       "Current State": "Mirt has named Vocath an old enemy who has borne him a grudge for a long time, which makes anyone connected to Mirt a target.",
       "Overview (Player)": "The arcane device that nearly killed a chamber of cadets carried a single marking: Vocath. Mirt knew the name at once. He has said only that Vocath has held a grudge against him for a long time, and that anyone connected to him is a potential target.",
       "Last Engaged (Session #)": 3,

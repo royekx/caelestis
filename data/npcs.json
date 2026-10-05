@@ -433,7 +433,7 @@
     "id": "NPC-Wc9fT2nJ",
     "type": "npc",
     "slug": "mirt",
-    "name": "Mirt the Merciless",
+    "name": "Mirt",
     "url": "/dossiers/mirt.html",
     "voyages": [
       {
@@ -486,16 +486,16 @@
       }
     ],
     "fields": {
-      "Name": "Mirt the Merciless",
+      "Name": "Mirt",
       "Gender": null,
       "Affiliation(s)": "Caelestis Academy",
       "Party Relationship": "Head of the academy the cadets served",
-      "Role (as known)": "Head of Caelestis",
+      "Role (as known)": "Headmaster, Caelestis Academy",
       "Visibility": "Player",
       "Current State": "Leading Caelestis and directing the cadets against Vocath, an old enemy who bears him a grudge.",
       "Seen": "S01, S03",
       "Mentioned": null,
-      "Overview (Player)": "Mirt the Merciless is the head of Caelestis, occupying cluttered chambers full of status and excess, including an impossible wardrobe that opens onto astral night. He rewarded the cadets and let slip the wardrobe's origin in the Viren system.",
+      "Overview (Player)": "Mirt is the head of Caelestis, occupying cluttered chambers full of status and excess, including an impossible wardrobe that opens onto astral night. He rewarded the cadets and let slip the wardrobe's origin in the Viren system.",
       "Linked": "ITM-4kD8vRt2",
       "Category": "Command & Staff",
       "Status": "Active"
@@ -1004,7 +1004,7 @@
       },
       {
         "id": "NPC-Wc9fT2nJ",
-        "name": "Mirt the Merciless",
+        "name": "Mirt",
         "type": "npc",
         "slug": "mirt",
         "url": "/dossiers/mirt.html"
