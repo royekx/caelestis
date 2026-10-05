@@ -32,18 +32,29 @@
       .slice(0, 60);
   }
 
-  ready(function () {
-    var main = document.querySelector('main.dm-content.has-toc');
-    if (!main) return;
+  var teardown = null;
+
+  function build(main, scope) {
+    if (teardown) { teardown(); teardown = null; }
+    var stale = main.querySelector(':scope > nav.dm-toc');
+    if (stale) stale.parentNode.removeChild(stale);
 
     // Collect h2 + h3 in document order, skipping opted-out headings.
+    // `scope` is the active section panel when dm-sections.js has turned
+    // the top level into tabs; the rail then covers the open tab only,
+    // which is the only part of the page that can actually be scrolled to.
     var headings = Array.prototype.slice
-      .call(main.querySelectorAll('h2, h3'))
+      .call((scope || main).querySelectorAll(scope ? 'h3, h4' : 'h2, h3'))
       .filter(function (h) {
         return !h.classList.contains('dm-toc-skip');
       });
 
-    if (headings.length < 2) return; // not worth a rail
+    // Fewer than two and the rail is noise; the page reclaims the column.
+    if (headings.length < 2) {
+      main.classList.add('toc-empty');
+      return;
+    }
+    main.classList.remove('toc-empty');
 
     // Read heading text without the noise of inline <span> tag chips.
     // Headings like:  <h3 id="caelestis">Caelestis <span class="dm-tag is-canon">Home base</span></h3>
@@ -108,6 +119,8 @@
     });
 
     nav.appendChild(ul);
+    var old = main.querySelector(':scope > nav.dm-toc');
+    if (old) old.parentNode.removeChild(old);
     main.appendChild(nav);
 
     // ── Scroll-spy ──
@@ -177,5 +190,27 @@
 
     // Initial state.
     recompute();
+
+    teardown = function () {
+      observer.disconnect();
+      if (nav.parentNode) nav.parentNode.removeChild(nav);
+      main.classList.remove('toc-empty');
+    };
+  }
+
+  ready(function () {
+    var main = document.querySelector('main.dm-content.has-toc');
+    if (!main) return;
+
+    // dm-sections.js fires this on every tab change.
+    main.addEventListener('dm:sectionchange', function (e) {
+      build(main, e.detail && e.detail.panel);
+    });
+
+    // Its first dispatch happens inside its own DOMContentLoaded handler,
+    // which runs before this one, so the listener above would miss it. It
+    // also records the active panel on the element, which does not race.
+    // Absent that property, the page has no tabs and the rail covers it all.
+    build(main, main.dmActivePanel || null);
   });
 })();

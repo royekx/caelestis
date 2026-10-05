@@ -1269,3 +1269,242 @@ body::after {
 .pill-tab:focus-visible { outline:2px solid var(--gold,#c08652); outline-offset:3px; }
 .pill-panel[hidden] { display:none; }
 @media (max-width:520px) { .pill-tab { flex:1 1 auto; text-align:center; } }
+
+
+/* ═══════════════════════════════════════════════
+   CONTENT SCRIM, SECTION TABS, IDENTITY CARD
+   ───────────────────────────────────────────────
+   Carries the player site's treatment across to the DM wiki. Three
+   problems this solves, in order of how badly they read:
+
+   1. DM prose sat directly on the continuum backdrop with nothing behind
+      it, so the page looked thin where the player pages look composed.
+      The player site answers this with .content::before — a translucent
+      field that behaves as a shadow rather than a panel, its edges
+      dissolved by a wide box-shadow spread of the same colour. Same
+      treatment here, on .dm-content.
+
+   2. The identity card is a 190px column, and .stat-row is a flex row
+      with the value right-aligned. A value of any length therefore wrapped
+      one word per line against the right edge. Rows now stack: label over
+      value, left-aligned, which is what the player manifest pages do.
+
+   3. Top-level sections were collapsed <details>, so a reference page
+      loaded as a list of closed headings with no substance, and the
+      "On this page" rail linked to subsections inside them that could not
+      be scrolled to. Those sections are now a tab strip — see
+      prime/scripts/dm-sections.js — with everything inside the active tab
+      expanded.
+   ═══════════════════════════════════════════════ */
+
+/* ── 1. Content scrim ── */
+.dm-content::before {
+  content: '';
+  position: absolute;
+  inset: 0 -1.75rem;
+  z-index: -1;
+  background: rgba(7, 10, 18, 0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 70px 55px rgba(7, 10, 18, 0.62);
+  pointer-events: none;
+}
+@media (max-width: 620px) {
+  .dm-content::before { inset: 0 -0.9rem; }
+}
+
+/* ── 2. Identity card ──
+   Wider column, and rows that stack instead of fighting for horizontal
+   room. .stat-val-long keeps working; plain .stat-val now behaves the
+   same way, because in a column this narrow every value is long. */
+.entry-header { grid-template-columns: 236px 1fr; }
+.identity-card .stat-row {
+  display: block;
+  padding: 0.55rem 0;
+}
+.identity-card .stat-key {
+  display: block;
+  white-space: normal;
+  margin-bottom: 0.2rem;
+}
+.identity-card .stat-val,
+.identity-card .stat-val.stat-val-long {
+  display: block;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: break-word;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+@media (max-width: 760px) {
+  .entry-header { grid-template-columns: 1fr; }
+  .identity-card { max-width: 320px; }
+}
+
+/* ── 3. Section tabs ──
+   The strip replaces the stack of closed <summary> headings. It scrolls
+   sideways rather than wrapping into rows, so a 13-section page keeps one
+   clean line instead of three ragged ones. */
+.dm-sectabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.15rem;
+  margin: 0 0 2rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--gold-rule);
+}
+.dm-sectab {
+  flex: 0 0 auto;
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 0.5rem 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color .15s ease, background .15s ease, border-color .15s ease;
+}
+.dm-sectab:hover { color: var(--gold-light); background: var(--gold-faint); }
+.dm-sectab[aria-selected="true"] {
+  color: var(--gold-light);
+  background: var(--dm-elev-2);
+  border-color: var(--gold-rule);
+}
+.dm-sectab:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
+
+/* A section acting as a tab panel: no summary marker, never indented. */
+.dm-collapse-section.is-sectab-panel {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+.dm-collapse-section.is-sectab-panel > summary { display: none; }
+.dm-collapse-section.is-sectab-panel > .dm-collapse-section-body {
+  padding: 0;
+  border: none;
+}
+.dm-collapse-section.is-sectab-panel[hidden] { display: none; }
+
+/* A tab with no subsections has nothing to put in the rail, so the content
+   takes the whole canvas back rather than leaving a 220px gutter. */
+.dm-content.has-toc.toc-empty {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 920px;
+}
+
+/* ── Identity-card portrait ──
+   .dossier-portrait is pinned to 64px because it was built for the inline
+   rows on the Factions page. On a dossier page it is the portrait, and it
+   should fill the card the way the player manifest pages do. */
+.identity-card .dossier-portrait,
+.identity-card .portrait-frame {
+  width: 100%;
+  min-width: 0;
+  padding: 0 !important;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.identity-card .dossier-portrait img,
+.identity-card .portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+}
+.identity-card .dossier-monogram {
+  font-family: 'Cinzel', serif;
+  font-size: 2.6rem;
+  letter-spacing: 0.08em;
+  color: var(--gold-faint);
+}
+
+/* ── Ops links ──
+   Was a bordered box full of bordered boxes, which read as two competing
+   frames and wrapped into ragged rows. Now a quiet row of links under the
+   page header: no outer panel, no chrome per item, a hairline to sit on. */
+.dm-ops-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 1.4rem;
+  margin: -0.4rem 0 2.2rem;
+  padding: 0 0 0.9rem;
+  border: none;
+  border-bottom: 1px solid var(--rule-soft);
+  background: none;
+}
+.dm-ops-links a {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.2rem 0;
+  border: none;
+  background: none;
+  transition: color 0.18s;
+}
+.dm-ops-links a:hover { color: var(--gold-light); background: none; }
+
+/* ── Dossier cards ──
+   The index was a table of names. A dossier's portrait is the fastest way
+   to find it, so the listing is a grid of faces instead. Auto-fill keeps
+   the rows honest at any width without a media query per breakpoint. */
+.dm-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  gap: 0.6rem;
+  margin: 1.4rem 0 0.5rem;
+}
+.dm-card {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  padding: 0.7rem;
+  border: 1px solid var(--rule-soft);
+  background: var(--dm-elev-1);
+  text-decoration: none;
+  transition: border-color .18s ease, background .18s ease, transform .18s ease;
+}
+.dm-card:hover {
+  border-color: var(--gold-rule);
+  background: var(--dm-elev-2);
+  transform: translateY(-1px);
+}
+.dm-card-face {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  background: rgba(255,255,255,0.02);
+  padding: 0 !important;
+  min-width: 0 !important;
+}
+.dm-card-face img { width: 100%; height: 100%; object-fit: cover; border: none; }
+.dm-card-face .dossier-monogram {
+  font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--gold-faint);
+}
+.dm-card-text { display: flex; flex-direction: column; gap: 0.12rem; min-width: 0; }
+.dm-card-name {
+  font-family: 'Cinzel', serif; font-size: 0.95rem; color: var(--gold-light);
+  line-height: 1.25;
+}
+.dm-card-role {
+  font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ice-dim);
+}
+.dm-card-sub {
+  font-size: 0.82rem; color: var(--text-dim); line-height: 1.35; margin-top: 0.15rem;
+}
