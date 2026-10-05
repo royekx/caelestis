@@ -25,8 +25,32 @@
   // Keys are kebab-case character identifiers (matching anchor ids where
   // possible). `fileId` is the Drive file ID; leave empty until populated.
   var PORTRAITS = {
+    'sor-kur':       { name: "Sor'Kur",             fileId: '' },
+    'bartholomew':   { name: 'Bartholomew Grayson', fileId: '1ThgrZS-SGvWVIgGkvuwEm08oMyWActWF' },
+    'blip':          { name: 'Mr. Blip',            fileId: '1gcMlDsoM10pyQ62SC6MG1UcLgWnepLcX' },
+    'boogie':        { name: 'Boogie',              fileId: '1_ZhT9rX4PrCKjegHu3Fc8gPnubg27Dqu' },
+    "captain-sardax": { name: "Captain Sardax", fileId: '' },
+    'casey':         { name: 'Casey Geim',          fileId: '1XLFP2beF16GU12VCcwInFzpfTv3mjhaO' },
+    "derek": { name: "Derek", fileId: '' },
+    'gregory':       { name: 'Gregory',             fileId: '1fzRY-WITl425-WA_HCThclBYYsRH4tun' },
+    'jeffrey':       { name: 'Jeffrey',             fileId: '' },
+    'joffrey':       { name: 'Joffrey',             fileId: '' },
+    'kip-pik':       { name: 'Kip & Pik',           fileId: '' },
+    "krik-lit": { name: "Krik'Lit", fileId: '' },
+    'miken':         { name: 'Miken Haverstance',   fileId: '1naBafRe55ibGcJ7vcQ1vxHCpg0rhaKpk' },
     'mirt':          { name: 'Mirt',                fileId: '1D9Hh3pn8e_QbMAF69ABg4bld6kMHj4qr' },
-    'tarto':         { name: 'Boatswain Tarto',     fileId: '13-w6epUMG5kO54FqZpJpelexFufDzu2W' }
+    'ostekk-6':      { name: 'Ostekk-6', fileId: '1kRxGB6tcRWliypOvuE0TlfeKixlE9CUw' },
+    'pffred':        { name: 'Pffred', fileId: '1BlgQkqqZYL5E5M6X7DJMFOJKbr23hda6' },
+    'rindle':        { name: 'Rindle Gearloft',     fileId: '' },
+    'runekeeper':    { name: 'The Runekeeper',      fileId: '' },
+    'ryeback':       { name: 'Petty Officer Winston Ryeback', fileId: '1H3TaoPPU1F_Ocit_CLn1RCbdR2f-FnJl' },
+    'saerthe':       { name: 'Saerthe Abizjn',     fileId: '1d7cDR1TYwEkaSuDVJC8bEOOJnoPT5S_D' },
+    'sol':           { name: 'Sol Fortuna',         fileId: '1PT-7qxrvN3XUFPm3xAkUZ8IbToM5qsDo' },
+    'tarto':         { name: 'Boatswain Tarto',     fileId: '13-w6epUMG5kO54FqZpJpelexFufDzu2W' },
+    'tumak':         { name: 'Tumak Swan',          fileId: '1Qk-udGpqGpv2oZL9hahqjXgMRRCDrWnr' },
+    "veena": { name: "Veena", fileId: '' },
+    'vocath':        { name: 'Vocath',              fileId: '' },
+    'zerathis':      { name: 'Zerathis',            fileId: '' }
   };
 
   // ── Rendering helpers ─────────────────────────────────────────────────────
@@ -50,7 +74,19 @@
   // declare just the key and stay terse.
   // Quest givers: .giver-face on a quest page, .row-giver-face on the board.
   // A data-key wins; otherwise the key comes from the dossier link beside it.
-  var SLUG_KEY = { 'boatswain-tarto': 'tarto', 'saerthe-abizjn': 'saerthe', 'mr-blip': 'blip' };
+  var SLUG_KEY = {
+    'bartholomew-grayson': 'bartholomew',
+    'boatswain-tarto': 'tarto',
+    'casey-geim': 'casey',
+    'kip-and-pik': 'kip-pik',
+    'mr-blip': 'blip',
+    'rindle-gearloft': 'rindle',
+    'saerthe-abizjn': 'saerthe',
+    'sol-fortuna': 'sol',
+    'the-rune-keeper': 'runekeeper',
+    'tumak-swan': 'tumak',
+    'winston-ryeback': 'ryeback',
+  };
   function keyFromSlug(slug) {
     if (!slug) return null;
     if (SLUG_KEY[slug]) return SLUG_KEY[slug];

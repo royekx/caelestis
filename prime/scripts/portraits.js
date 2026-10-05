@@ -25,6 +25,10 @@
   // Keys are kebab-case character identifiers (matching anchor ids where
   // possible). `fileId` is the Drive file ID; leave empty until populated.
   var PORTRAITS = {
+    'ilsabet':       { name: 'Ilsabet Crann',        fileId: '' },
+    'vecna':         { name: 'Vecna',                fileId: '' },
+    'rod':           { name: 'Rod of Seven Parts',   fileId: '' },
+    'dissolution-fragment': { name: 'Dissolution Fragment', fileId: '' },
     "krik-lit": { name: "Krik'Lit", fileId: '' },
     "captain-sardax": { name: "Captain Sardax", fileId: '' },
     "veena": { name: "Veena", fileId: '' },
@@ -44,7 +48,7 @@
     'saerthe':       { name: 'Saerthe Abizjn',     fileId: '1d7cDR1TYwEkaSuDVJC8bEOOJnoPT5S_D' },
     'blip':          { name: 'Mr. Blip',            fileId: '1gcMlDsoM10pyQ62SC6MG1UcLgWnepLcX' },
     'ryeback':       { name: 'Petty Officer Winston Ryeback', fileId: '1H3TaoPPU1F_Ocit_CLn1RCbdR2f-FnJl' },
-    'sorkor':        { name: "Sor'Kur",             fileId: '' },
+    'sor-kur':       { name: "Sor'Kur",             fileId: '' },
     'kip-pik':       { name: 'Kip & Pik',           fileId: '' },
     'rindle':        { name: 'Rindle Gearloft',     fileId: '' },
 
@@ -151,7 +155,19 @@
   // declare just the key and stay terse.
   // Quest givers: .giver-face on a quest page, .row-giver-face on the board.
   // A data-key wins; otherwise the key comes from the dossier link beside it.
-  var SLUG_KEY = { 'boatswain-tarto': 'tarto', 'saerthe-abizjn': 'saerthe', 'mr-blip': 'blip' };
+  var SLUG_KEY = {
+    'bartholomew-grayson': 'bartholomew',
+    'boatswain-tarto': 'tarto',
+    'casey-geim': 'casey',
+    'kip-and-pik': 'kip-pik',
+    'mr-blip': 'blip',
+    'rindle-gearloft': 'rindle',
+    'saerthe-abizjn': 'saerthe',
+    'sol-fortuna': 'sol',
+    'the-rune-keeper': 'runekeeper',
+    'tumak-swan': 'tumak',
+    'winston-ryeback': 'ryeback',
+  };
   function keyFromSlug(slug) {
     if (!slug) return null;
     if (SLUG_KEY[slug]) return SLUG_KEY[slug];
