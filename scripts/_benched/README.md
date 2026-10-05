@@ -14,8 +14,10 @@ index building") removed all three steps and dropped `contents: write` to
 `contents: read`. Its message mentions only the search work, so the data build
 appears to have gone as collateral rather than by decision.
 
-Benching this scaffolder was deliberate. Losing `build-data.js` from CI alongside
-it probably was not — see `prime/notes/DATA-BOUNDARY.md`.
+Benching this scaffolder was deliberate. `build-data.js` and its successor
+`transform.js` have since been retired with the Google Sheet they read from:
+`data/*.json` is now the record itself, kept by hand and verified by
+`scripts/data.js`. See `prime/notes/DATA-BOUNDARY.md`.
 
 Every entity page under `crew-manifest/`, `dossiers/`, `factions/`,
 `inventory/`, `navigation-records/` and `quests/` is now fully rendered

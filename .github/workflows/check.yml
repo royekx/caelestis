@@ -1,0 +1,31 @@
+name: Check the record
+
+# Runs on every pull request. Verifies that data/*.json is consistent with
+# itself, with the DM layer in prime/data/, and with every page that displays
+# it. A session run is not finished until this passes.
+#
+#   node scripts/data.js check
+#
+# The same command runs locally; see prime/notes/SESSION-RUN.md.
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Check the record against the pages
+        run: node scripts/data.js check
