@@ -1,0 +1,243 @@
+[
+  {
+    "slug": "astra-virex",
+    "name": "Astra Virex",
+    "path": "dossiers/astra-virex.html",
+    "records": []
+  },
+  {
+    "slug": "beshaba",
+    "name": "Beshaba",
+    "path": "dossiers/beshaba.html",
+    "records": []
+  },
+  {
+    "slug": "boatswain-tarto",
+    "name": "Boatswain Tarto",
+    "path": "dossiers/boatswain-tarto.html",
+    "records": [
+      "NPC-9dTp4qWz"
+    ]
+  },
+  {
+    "slug": "captain-sardax",
+    "name": "Captain Sardax",
+    "path": "dossiers/captain-sardax.html",
+    "records": [
+      "NPC-3xR7kLm2"
+    ]
+  },
+  {
+    "slug": "clint",
+    "name": "Clint Dashforest",
+    "path": "dossiers/clint.html",
+    "records": []
+  },
+  {
+    "slug": "crc",
+    "name": "Crystalline Retrieval Construct",
+    "path": "dossiers/crc.html",
+    "records": []
+  },
+  {
+    "slug": "ezra",
+    "name": "Ezra",
+    "path": "dossiers/ezra.html",
+    "records": []
+  },
+  {
+    "slug": "ilsabet-crann",
+    "name": "Ilsabet Crann",
+    "path": "dossiers/ilsabet-crann.html",
+    "records": []
+  },
+  {
+    "slug": "ithvarn",
+    "name": "Ith'varn",
+    "path": "dossiers/ithvarn.html",
+    "records": []
+  },
+  {
+    "slug": "jeffrey",
+    "name": "Jeffrey",
+    "path": "dossiers/jeffrey.html",
+    "records": [
+      "NPC-Lp3kW8vn"
+    ]
+  },
+  {
+    "slug": "joffrey",
+    "name": "Joffrey",
+    "path": "dossiers/joffrey.html",
+    "records": [
+      "NPC-Hs6cW9pM"
+    ]
+  },
+  {
+    "slug": "khaleth",
+    "name": "Khaleth",
+    "path": "dossiers/khaleth.html",
+    "records": []
+  },
+  {
+    "slug": "krik-lit",
+    "name": "Krik'Lit",
+    "path": "dossiers/krik-lit.html",
+    "records": [
+      "NPC-Fq6kW2vn"
+    ]
+  },
+  {
+    "slug": "miken",
+    "name": "Miken Haverstance",
+    "path": "dossiers/miken.html",
+    "records": [
+      "NPC-7wK4mB9x"
+    ]
+  },
+  {
+    "slug": "mirt",
+    "name": "Mirt",
+    "path": "dossiers/mirt.html",
+    "records": [
+      "NPC-Wc9fT2nJ"
+    ]
+  },
+  {
+    "slug": "nghathrod",
+    "name": "N'ghathrod",
+    "path": "dossiers/nghathrod.html",
+    "records": []
+  },
+  {
+    "slug": "osskhal",
+    "name": "Osskhal",
+    "path": "dossiers/osskhal.html",
+    "records": []
+  },
+  {
+    "slug": "ostekk-6",
+    "name": "OSTEKK-6",
+    "path": "dossiers/ostekk-6.html",
+    "records": [
+      "NPC-Hn4kW9vm"
+    ]
+  },
+  {
+    "slug": "ostekk",
+    "name": "Ostekk",
+    "path": "dossiers/ostekk.html",
+    "records": []
+  },
+  {
+    "slug": "polly",
+    "name": "Polly Geim",
+    "path": "dossiers/polly.html",
+    "records": []
+  },
+  {
+    "slug": "qitru",
+    "name": "Qitru",
+    "path": "dossiers/qitru.html",
+    "records": []
+  },
+  {
+    "slug": "rindle-gearloft",
+    "name": "Rindle Gearloft",
+    "path": "dossiers/rindle-gearloft.html",
+    "records": [
+      "NPC-2mV7kB4w"
+    ]
+  },
+  {
+    "slug": "saerthe-abizjn",
+    "name": "Saerthe Abizjn",
+    "path": "dossiers/saerthe-abizjn.html",
+    "records": [
+      "NPC-Zx4Bn7Lq"
+    ]
+  },
+  {
+    "slug": "sor-kur",
+    "name": "Sor'Kur",
+    "path": "dossiers/sor-kur.html",
+    "records": [
+      "NPC-Kf2mNb8x"
+    ]
+  },
+  {
+    "slug": "tarroway",
+    "name": "M. Tarroway",
+    "path": "dossiers/tarroway.html",
+    "records": []
+  },
+  {
+    "slug": "the-runekeeper",
+    "name": "The Runekeeper",
+    "path": "dossiers/the-runekeeper.html",
+    "records": [
+      "NPC-Jv7kW3mq"
+    ]
+  },
+  {
+    "slug": "thessalar",
+    "name": "Thessalar",
+    "path": "dossiers/thessalar.html",
+    "records": []
+  },
+  {
+    "slug": "ulhrek",
+    "name": "Ulh'rek",
+    "path": "dossiers/ulhrek.html",
+    "records": []
+  },
+  {
+    "slug": "vaelorix",
+    "name": "Vaelorix",
+    "path": "dossiers/vaelorix.html",
+    "records": []
+  },
+  {
+    "slug": "veena-derek",
+    "name": "Veena & Derek",
+    "path": "dossiers/veena-derek.html",
+    "records": [
+      "NPC-Vn5wYh3k",
+      "NPC-Dm3vT8wq"
+    ]
+  },
+  {
+    "slug": "verrow",
+    "name": "Quartermaster Halix Verrow",
+    "path": "dossiers/verrow.html",
+    "records": []
+  },
+  {
+    "slug": "vocath",
+    "name": "Vocath",
+    "path": "dossiers/vocath.html",
+    "records": [
+      "NPC-Mw6kT2vn"
+    ]
+  },
+  {
+    "slug": "vthoramu",
+    "name": "Vth'oramu",
+    "path": "dossiers/vthoramu.html",
+    "records": []
+  },
+  {
+    "slug": "zerathis",
+    "name": "Zerathis",
+    "path": "dossiers/zerathis.html",
+    "records": [
+      "NPC-Py6hN3xB"
+    ]
+  },
+  {
+    "slug": "zhauveth",
+    "name": "Zhauveth",
+    "path": "dossiers/zhauveth.html",
+    "records": []
+  }
+]

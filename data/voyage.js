@@ -1,27 +1,21 @@
 /**
  * Caelestis — Voyage Registry
  * ────────────────────────────
- * The single list of voyages on record. The hub's Voyages card
- * always points at the most recent entry automatically.
+ * Every voyage on record. The hub's Voyages card points at the last entry.
  *
- * To add a voyage:
- *   1. Duplicate the last entry block below.
- *   2. Update num, title, and path.
- *   3. Push this file — the hub card updates itself.
- *
- * Each voyage is one page: glance, recording, brief account,
- * full account. There is no separate brief/detailed split.
+ * Written by `node scripts/data.js derive` from data/sessions.json.
+ * To add a voyage, add its session record there and run derive.
  */
 
 var CAELESTIS_VOYAGES = [
   {
     num:   '001',
-    title: 'The Shape of a Crew',
+    title: "The Shape of a Crew",
     path:  'voyages/voyage-001.html',
   },
   {
     num:   '002',
-    title: 'What the Crew Offers',
+    title: "What the Crew Offers",
     path:  'voyages/voyage-002.html',
   },
   {
@@ -31,7 +25,7 @@ var CAELESTIS_VOYAGES = [
   },
   {
     num:   '004',
-    title: 'All Things Find Their Way Home',
+    title: "All Things Find Their Way Home",
     path:  'voyages/voyage-004.html',
   },
 ];
