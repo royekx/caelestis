@@ -53,9 +53,11 @@
    ────────────────────────────────────────────────────────────────
    SOURCE
 
-   Reads the published data/ the player site runs on - never data/raw/.
-   No markdown, no second place to update, no build step. Delete this
-   file and the page is the archive it was.
+   Reads the record in data/ - the same files the player pages are
+   rendered from - and the DM layer in prime/data/ for what sits behind
+   it: which voyages exist past the record, and the beats the crew never
+   saw. Nothing is entered here. Delete this file and the page is the
+   archive it was.
    ════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -70,13 +72,22 @@
     { id: 'things',  label: 'Things',  file: 'items.json' }
   ];
 
-  // Voyages the published data has not reached. Held here rather than
-  // inferred, because from the data alone an absent column and an
-  // unplayed session are indistinguishable.
-  var EXTRA_COLUMNS = [
-    { number: 5, title: 'the descent', state: 'unsynced' },
-    { number: 6, title: 'the Command Deck → the swap', state: 'ghost' }
-  ];
+  // Voyages the record has not reached come from prime/data/voyages.json,
+  // because from the record alone an absent column and an unplayed session
+  // are indistinguishable. A played voyage the record lacks is "unsynced";
+  // anything not yet played is a ghost column.
+  function extraColumns(voyages, dataMax) {
+    return (voyages || []).filter(function (v) { return v.number > dataMax; })
+      .sort(function (a, b) { return a.number - b.number; })
+      .map(function (v) {
+        return {
+          number: v.number,
+          title: v.title || v.working || '',
+          state: v.state === 'played' ? 'unsynced' : 'ghost',
+          label: v.state === 'played' ? 'not synced' : v.state
+        };
+      });
+  }
 
   function ready(fn) {
     if (document.readyState === 'loading') {
@@ -96,13 +107,24 @@
     var mount = document.getElementById(MOUNT);
     if (!mount) return;
     var base = mount.getAttribute('data-base') || '../../../data/';
+    var dmBase = mount.getAttribute('data-dm-base') || '../../data/';
+    // Record urls are site-relative ("quests/x.html"), so they are resolved
+    // against the site root rather than against this page.
+    var site = base.replace(/data\/$/, '');
 
-    Promise.all(SETS.map(function (s) {
-      return fetch(base + s.file)
-        .then(function (r) { return r.ok ? r.json() : []; })
-        .catch(function () { return []; });
-    })).then(function (raw) {
-      build(mount, raw, window.CAELESTIS_VOYAGES || null);
+    function get(url, fallback) {
+      return fetch(url)
+        .then(function (r) { return r.ok ? r.json() : fallback; })
+        .catch(function () { return fallback; });
+    }
+
+    Promise.all(SETS.map(function (s) { return get(base + s.file, []); }).concat([
+      get(dmBase + 'voyages.json', []),
+      get(dmBase + 'overlay.json', { entities: {}, lanes: [] })
+    ])).then(function (got) {
+      var overlay = got.pop(), voyages = got.pop();
+      build(mount, got, window.CAELESTIS_VOYAGES || null,
+        { site: site, prime: dmBase.replace(/data\/$/, ''), voyages: voyages, overlay: overlay });
     }).catch(function (e) {
       mount.appendChild(el('p', 'tb-empty', 'The board could not load its data. ' + e));
     });
@@ -112,7 +134,8 @@
      MODEL
      ═══════════════════════════════════════════════════════════════ */
 
-  function build(mount, raw, registry) {
+  function build(mount, raw, registry, dm) {
+    var behind = (dm.overlay && dm.overlay.entities) || {};
     /* ---- columns ---- */
     var seen = {};
     raw.forEach(function (list) {
@@ -130,7 +153,7 @@
         state: 'synced'
       };
     });
-    EXTRA_COLUMNS.forEach(function (c) { if (c.number > dataMax) cols.push(c); });
+    extraColumns(dm.voyages, dataMax).forEach(function (c) { cols.push(c); });
 
     /* ---- lanes ---- */
     var lanes = [];
@@ -147,8 +170,10 @@
           setLabel: set.label,
           name: e.name,
           slug: e.slug,
-          url: e.url || '',
+          url: e.url ? dm.site + e.url : '',
           kind: e.kind || '',
+          // DM-only beats for this record, by voyage, from the overlay.
+          dm: dmBeats(behind[e.id]),
           parent: (e.parent && e.parent.slug) || null,
           // Who the thread belongs to. The tracker spells PC names a little
           // loosely here ("Bartholomew", "Casey"), so matching is by prefix
@@ -160,6 +185,20 @@
           by: by,
           last: ns.length ? Math.max.apply(null, ns) : 0
         });
+      });
+    });
+
+    // Lanes for what the crew has never met. They hold only DM beats, and
+    // the group stays off the board until the overlay has one.
+    ((dm.overlay && dm.overlay.lanes) || []).forEach(function (l) {
+      var d = dmBeats(l);
+      var ns = Object.keys(d).map(Number);
+      lanes.push({
+        set: 'offscreen', setLabel: 'Off-screen', name: l.name, slug: l.id,
+        url: l.dossier ? dm.prime + l.dossier : '', kind: l.kind || '', parent: null,
+        forRaw: '', state: l.state || '', objectives: [], open: [],
+        by: d, dm: {}, offscreen: true,
+        last: ns.length ? Math.max.apply(null, ns) : 0
       });
     });
 
@@ -178,6 +217,12 @@
     };
 
     render(mount, model);
+  }
+
+  function dmBeats(o) {
+    var by = {};
+    ((o && o.voyages) || []).forEach(function (v) { by[v.number] = v.beats || []; });
+    return by;
   }
 
   // OWED is the only status that is a problem, so it is the only one that
@@ -381,6 +426,8 @@
       rows = s.nest ? nest(rows, m) : rows.slice().sort(byStatus);
       out.push({ key: s.id, label: s.label, rows: rows, closed: s.id !== 'crew' && s.id !== 'threads' });
     });
+    var off = m.lanes.filter(function (l) { return l.set === 'offscreen'; });
+    if (off.length) out.push({ key: 'offscreen', label: 'Off-screen', rows: off });
     return out;
   }
 
@@ -423,7 +470,7 @@
       h.appendChild(el('div', 'tb-col-num', 'V' + pad(c.number)));
       var sub = c.title || '';
       if (c.state === 'unsynced') sub = (sub || 'played') + ' · not synced';
-      if (c.state === 'ghost') sub = (sub || 'planned') + ' · next';
+      if (c.state === 'ghost') sub = (sub || 'planned') + ' · ' + (c.label || 'next');
       h.appendChild(el('div', 'tb-col-title', sub));
       grid.appendChild(h);
     });
@@ -489,11 +536,12 @@
   }
 
   function beatCell(lane, c, m, state, panel, grid) {
-    var beats = lane.by[c.number];
+    var beats = lane.by[c.number] || [];
+    var hidden = (lane.dm && lane.dm[c.number]) || [];
     var cell = el('div', 'tb-cell' +
       (c.state === 'unsynced' ? ' is-unsynced' : '') +
-      (beats && beats.length ? '' : ' is-empty'));
-    if (!beats || !beats.length) return cell;
+      (beats.length || hidden.length ? '' : ' is-empty'));
+    if (!beats.length && !hidden.length) return cell;
 
     // The count alone, not a row of dots. Dots here collided with the status
     // pip in the gutter - same shape, unrelated meaning - and a reader who
@@ -502,6 +550,9 @@
     b.type = 'button';
     b.appendChild(el('span', 'tb-beat-n', String(beats.length)));
     b.appendChild(el('span', 'tb-beat-unit', beats.length === 1 ? 'beat' : 'beats'));
+    // Beats the crew did not see are counted apart, so the number on the
+    // left stays the number the players could repeat back.
+    if (hidden.length) b.appendChild(el('span', 'tb-beat-dm', '+' + hidden.length + ' DM'));
     b.setAttribute('aria-label',
       lane.name + ', voyage ' + pad(c.number) + ', ' + beats.length + ' beats');
     if (state.selected && state.selected.slug === lane.slug && state.selected.col === c.number) {
@@ -509,7 +560,7 @@
     }
     b.addEventListener('click', function () {
       state.selected = { slug: lane.slug, col: c.number };
-      showPanel(panel, lane, c, beats);
+      showPanel(panel, lane, c, beats, hidden);
       drawGrid(grid, m, state, panel);
     });
     cell.appendChild(b);
@@ -524,7 +575,7 @@
       'Pick any cell to read that lane’s beats for that voyage.'));
   }
 
-  function showPanel(panel, lane, col, beats) {
+  function showPanel(panel, lane, col, beats, hidden) {
     panel.textContent = '';
     var head = el('div', 'tb-panel-head');
     head.appendChild(el('span', 'tb-panel-name', lane.name));
@@ -541,9 +592,19 @@
       panel.appendChild(el('p', 'tb-panel-state', lane.state));
     }
 
-    var ul = el('ul');
-    beats.forEach(function (t) { ul.appendChild(el('li', null, t)); });
-    panel.appendChild(ul);
+    if (beats.length) {
+      if (lane.offscreen) panel.appendChild(el('div', 'tb-panel-objs-label', 'Behind the screen'));
+      var ul = el('ul');
+      beats.forEach(function (t) { ul.appendChild(el('li', null, t)); });
+      panel.appendChild(ul);
+    }
+
+    if (hidden && hidden.length) {
+      panel.appendChild(el('div', 'tb-panel-objs-label', 'Behind the screen'));
+      var hl = el('ul', 'tb-panel-dm');
+      hidden.forEach(function (t) { hl.appendChild(el('li', null, t)); });
+      panel.appendChild(hl);
+    }
 
     if (lane.objectives.length) {
       panel.appendChild(el('div', 'tb-panel-objs-label', 'Objectives'));

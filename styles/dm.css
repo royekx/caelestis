@@ -1956,9 +1956,213 @@ body::after {
 .tb-panel-objs li.is-done { color: var(--text-muted); text-decoration: line-through; }
 .tb-panel-objs li.is-open { color: var(--text); }
 
+/* Beats the crew did not see. Violet is the DM wiki's own accent, so the
+   count and the list read as "ours" without a second legend to learn. */
+.tb-beat-dm {
+  margin-left: auto;
+  font-family: 'Cinzel', serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  color: var(--ice-light);
+  white-space: nowrap;
+}
+.tb-panel-dm li { color: var(--text); }
+.tb-panel-dm li::marker { color: var(--ice); }
+
 @media (max-width: 760px) {
   .tb-wrap { max-height: 66vh; }
   .tb-legend { margin-left: 0; width: 100%; }
   .tb-ledger-sub { margin-left: 0; width: 100%; }
   .tb-debt { flex-direction: column; gap: 0.2rem; }
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   TRACKER — the record as it stands (prime/tracker/)
+   ----------------------------------------------------------------
+   Rows are the wiki's own dossier rows with one more column, so a
+   record here reads like a hook on Plot Hooks or a member on
+   Factions. Only what the tracker adds is defined below: the
+   standing strip, the filter, the fourth column, and the row body.
+   Violet marks the DM layer, as it does on the Voyages board.
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── where the record stands ── */
+.tr-standing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--dm-elev-1);
+  margin: 0 0 1.4rem;
+}
+.tr-fact {
+  flex: 1 1 14rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.8rem 1.1rem;
+  border-right: 1px solid var(--rule-soft);
+  min-width: 0;
+}
+.tr-fact:last-child { border-right: none; }
+.tr-fact-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.tr-fact-body { font-size: 1rem; line-height: 1.4; color: var(--text-dim); }
+.tr-fact-voyage { font-family: 'Cinzel', serif; letter-spacing: 0.06em; color: var(--gold-light); }
+/* A voyage played and not yet written in is the one thing on the strip
+   that asks for action, so it is the one thing in alarm colour. */
+.tr-fact.is-behind { box-shadow: inset 3px 0 0 var(--dm-crimson); }
+.tr-fact.is-behind .tr-fact-label { color: var(--dm-crimson); }
+
+/* ── filter ── */
+.tr-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem 1rem;
+  margin: 0 0 1.6rem;
+}
+.tr-filter {
+  flex: 1 1 16rem;
+  min-width: 0;
+  background: var(--bg-deep);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  color: var(--text);
+  font: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+}
+.tr-filter::placeholder { color: var(--text-muted); font-style: italic; }
+.tr-filter:focus-visible { outline: 2px solid var(--ice); outline-offset: 1px; }
+.tr-voyages { display: flex; flex-wrap: wrap; gap: 0.2rem; }
+.tr-voyage {
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 0.45rem 0.7rem;
+  cursor: pointer;
+}
+.tr-voyage:hover { color: var(--gold-light); background: var(--gold-faint); }
+.tr-voyage[aria-pressed="true"] { color: var(--gold-light); background: var(--dm-elev-2); border-color: var(--gold-rule); }
+.tr-voyage:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
+
+/* ── a set ── */
+.tr-count {
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 0.5rem;
+}
+.tr-empty { color: var(--text-muted); font-size: 0.95rem; margin: 0.5rem 0 1.5rem; }
+.tr-list { margin-top: 0; }
+.tr-list .dossier-row { scroll-margin-top: 4rem; }   /* clears the fixed nav bar on a phone */
+
+/* The dossier row, with a fourth column for where the record stands. */
+.tr-list .dossier-row > summary {
+  grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1.5fr) 7.2rem 0.85rem;
+  align-items: start;
+  padding: 0.7rem 0.9rem;
+}
+.tr-list .dossier-row > summary::after { align-self: center; }
+.tr-list .dossier-row .dossier-detail { font-size: 0.94rem; }
+.tr-list .dossier-row .dossier-role { font-size: 0.9rem; }
+.tr-list .dossier-row.is-child .dossier-id { padding-left: 0.9rem; border-left: 1px solid var(--rule); }
+.tr-list .dossier-row .dm-tag { font-size: 0.58rem; letter-spacing: 0.14em; padding: 0.08rem 0.38rem; margin-left: 0.5rem; }
+.tr-meta {
+  grid-column: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.18rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.64rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: right;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.tr-meta-main { color: var(--text-dim); }
+.tr-meta-dm { color: var(--ice-light); }
+
+/* ── a row, open ── */
+.tr-list .dossier-row-body dt { font-size: 0.7rem; letter-spacing: 0.16em; color: var(--text-muted); }
+.tr-list .dossier-row-body dt.is-dm { color: var(--ice-light); }
+.tr-list .dossier-row-body dd.is-dm { border-left: 2px solid var(--ice-dim); padding-left: 0.8rem; }
+.tr-facts, .tr-dm {
+  display: grid;
+  grid-template-columns: minmax(7rem, 11rem) minmax(0, 1fr);
+  gap: 0.3rem 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.tr-fact-key { color: var(--text-muted); }
+.tr-fact-val { color: var(--text-dim); margin: 0; }
+ul.tr-fact-val { padding-left: 1.1rem; }
+ul.tr-fact-val li { margin-bottom: 0.25rem; color: var(--text); }
+.tr-objs { list-style: none; margin: 0; padding: 0; font-size: 0.97rem; }
+.tr-objs li { padding-left: 1.4rem; position: relative; margin-bottom: 0.2rem; }
+.tr-objs li::before { content: '\25A1'; position: absolute; left: 0; color: var(--text-muted); }
+.tr-objs li.is-done { color: var(--text-muted); text-decoration: line-through; }
+.tr-objs li.is-done::before { content: '\25A0'; text-decoration: none; }
+.tr-voyage-block { border-top: 1px solid var(--rule-soft); padding: 0.35rem 0; }
+.tr-voyage-block:first-child { border-top: none; padding-top: 0; }
+.tr-voyage-block > summary {
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--gold-dim);
+}
+.tr-voyage-block[open] > summary { color: var(--gold-light); }
+.tr-voyage-n { margin-left: 0.7rem; font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+.tr-voyage-block ul { margin: 0.4rem 0 0.3rem; padding-left: 1.1rem; }
+.tr-voyage-block li { font-size: 0.96rem; line-height: 1.5; color: var(--text-dim); margin-bottom: 0.3rem; }
+.tr-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.2rem 0 0; }
+.tr-chip {
+  font-size: 0.9rem;
+  padding: 0.12rem 0.55rem;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  color: var(--text-dim);
+  text-decoration: none;
+  border-bottom-style: solid;
+}
+.tr-chip:hover { border-color: var(--gold-dim); color: var(--gold-light); }
+.tr-out {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 1.2rem;
+  margin-top: 1rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--rule-soft);
+  font-size: 0.86rem;
+}
+.tr-id { margin-left: auto; font-family: ui-monospace, monospace; font-size: 0.72rem; color: var(--text-muted); }
+
+@media (max-width: 720px) {
+  .tr-fact { border-right: none; border-bottom: 1px solid var(--rule-soft); }
+  .tr-fact:last-child { border-bottom: none; }
+  .tr-list .dossier-row > summary { grid-template-columns: 44px minmax(0, 1fr) 0.85rem; }
+  .tr-list .dossier-row .dossier-detail { grid-column: 1 / -1; grid-row: auto; margin-top: 0.35rem; }
+  .tr-meta { grid-column: 1 / -1; flex-direction: row; justify-content: flex-start; gap: 0.9rem; margin-top: 0.35rem; }
+  .tr-list .dossier-row > summary::after { grid-column: 3; grid-row: 1; }
+  .tr-facts, .tr-dm { grid-template-columns: 1fr; gap: 0 0; }
+  .tr-fact-key { margin-top: 0.4rem; }
 }

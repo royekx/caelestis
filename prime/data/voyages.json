@@ -1,0 +1,57 @@
+[
+  {
+    "number": 1,
+    "title": "The Shape of a Crew",
+    "state": "played",
+    "source": { "kind": "transcript", "file": "Caelestis - The Spelljammer Academy _ Voyage 1 _ Orientation.txt" },
+    "playerRecord": true,
+    "crewLog": true,
+    "anchor": "v001"
+  },
+  {
+    "number": 2,
+    "title": "What the Crew Offers",
+    "state": "played",
+    "source": { "kind": "transcript", "file": "Caelestis - The Spelljammer Academy _ Voyage 2.txt" },
+    "playerRecord": true,
+    "crewLog": true,
+    "anchor": "v002"
+  },
+  {
+    "number": 3,
+    "title": "The Weight of What's Real",
+    "state": "played",
+    "source": { "kind": "transcript", "file": "Caelestis _ The Spelljaming Academy _ Voyage 003.txt" },
+    "playerRecord": true,
+    "crewLog": true,
+    "anchor": "v003"
+  },
+  {
+    "number": 4,
+    "title": "All Things Find Their Way Home",
+    "state": "played",
+    "source": { "kind": "dictation", "file": null },
+    "playerRecord": true,
+    "crewLog": true,
+    "anchor": "v004"
+  },
+  {
+    "number": 5,
+    "title": null,
+    "working": "the descent",
+    "state": "played",
+    "source": { "kind": "transcript", "file": "Caelestis _ The Spelljamming Academy _ Voyage 005.txt" },
+    "playerRecord": false,
+    "crewLog": false,
+    "anchor": "v005"
+  },
+  {
+    "number": 6,
+    "title": null,
+    "working": "the Command Deck → the swap",
+    "state": "next",
+    "playerRecord": false,
+    "crewLog": false,
+    "anchor": "v006"
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "entities": {
+    "QST-9dK3wR7n": {
+      "urgency": "High",
+      "next": "Check the teaching rooms for more devices and investigate Joffrey, Jeffrey, and the marked crate's route through Mr. Blip."
+    },
+    "QST-7hN4kV2m": {
+      "urgency": "Medium",
+      "next": "Question or examine the surviving creature to learn what the crate was really carrying."
+    },
+    "QST-3mW8kP5v": {
+      "urgency": "Medium",
+      "next": "Reach H’catha, recover the meteor, and find a way toward Viren beyond it."
+    },
+    "QST-6bC9wN4k": {
+      "urgency": "Low",
+      "next": "Discover what the pull in Gregory's core is drawing him toward."
+    },
+    "QST-8vT4kR2m": {
+      "urgency": "Medium",
+      "next": "Learn what the model ship inside Boogie is, why it matches Saerthe's stolen vessel, and what the presence in his dreams wants."
+    },
+    "QST-5kN7wB3v": {
+      "urgency": "Low",
+      "next": "Find the first thread leading to Tumak's family."
+    },
+    "QST-4wN8kB2v": {
+      "urgency": "Medium",
+      "next": "Learn who the voice speaking to Sol of fate is, and what Beshaba's attention asks of him."
+    },
+    "QST-Zk6mW3vn": {
+      "urgency": "Medium",
+      "next": "Learn what Tumak's half-runes mean, who the Runekeeper is, and where the tether toward home leads."
+    },
+    "QST-Xr4mW8vn": {
+      "urgency": "High",
+      "next": "Rest, then descend to the deck below by rope and continue routing the helm up the access shafts to the command deck."
+    },
+    "QST-Vg7kR2nw": {
+      "urgency": "High"
+    },
+    "QST-Ok5mB8tz": {
+      "urgency": "Medium"
+    },
+    "QST-Or1nT4ks": {
+      "urgency": "Resolved"
+    },
+    "NPC-Jv7kW3mq": {
+      "dossier": "dossiers/the-runekeeper.html"
+    },
+    "NPC-Vn5wYh3k": {
+      "dossier": "dossiers/veena-derek.html"
+    },
+    "NPC-Dm3vT8wq": {
+      "dossier": "dossiers/veena-derek.html"
+    }
+  },
+  "lanes": []
+}
