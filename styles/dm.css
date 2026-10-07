@@ -326,19 +326,34 @@ body::after {
   color: var(--gold-dim, var(--gold));
 }
 
-/* ── CALLOUTS ── */
-/* Smaller inline emphasis blocks. Used for "DM note:", "Player-facing:", etc. */
+/* ── CALLOUT ──
+   There are 658 of these across the wiki, against about 1,100 paragraphs.
+   At that density a filled, tinted box stops meaning "look here" and becomes
+   the page's baseline texture, which is what made the DM pages read as
+   stacked walls rather than prose.
+
+   Two changes, both here rather than in markup:
+
+   1. One treatment, not three. is-warn / is-cosmic / is-info were applied
+      with no consistent meaning - "The objective" was info, "The visible
+      symptom" was warn, "The pattern is the person" was cosmic - so the
+      colour taught the reader nothing and only fragmented the page. The
+      variant classes still parse; they just no longer paint.
+
+   2. A rule and space, not a box. The fill is gone and the left bar is a
+      hairline, matching the player site's own surface rule. The label still
+      carries the emphasis; the body now reads as part of the prose column. */
 .dm-callout {
-  background: var(--dm-elev-2);
-  border-left: 3px solid var(--gold);
-  padding: 0.85rem 1.1rem;
-  margin: 1rem 0;
-  border-radius: 0 2px 2px 0;
-  font-size: 0.96rem;
+  background: none;
+  border-left: 1px solid var(--gold-rule);
+  padding: 0.1rem 0 0.1rem 1.1rem;
+  margin: 1.5rem 0;
+  border-radius: 0;
+  font-size: 1rem;
 }
-.dm-callout.is-warn    { border-left-color: var(--dm-crimson); }
-.dm-callout.is-cosmic  { border-left-color: var(--dm-violet); }
-.dm-callout.is-info    { border-left-color: var(--dm-teal); }
+.dm-callout.is-warn,
+.dm-callout.is-cosmic,
+.dm-callout.is-info { border-left-color: var(--gold-rule); }
 .dm-callout-label {
   font-family: 'Cinzel', serif;
   font-size: 0.899rem;
@@ -348,9 +363,9 @@ body::after {
   display: block;
   margin-bottom: 0.3rem;
 }
-.dm-callout.is-warn    .dm-callout-label { color: var(--dm-crimson); }
-.dm-callout.is-cosmic  .dm-callout-label { color: var(--dm-violet); }
-.dm-callout.is-info    .dm-callout-label { color: var(--dm-teal); }
+.dm-callout.is-warn    .dm-callout-label,
+.dm-callout.is-cosmic  .dm-callout-label,
+.dm-callout.is-info    .dm-callout-label { color: var(--gold-dim); }
 
 /* ── COLLAPSIBLE SECTIONS ── */
 /* Wiki pages are long. Default-open, click to collapse. */
@@ -1539,3 +1554,411 @@ body::after {
 }
 .side-nav-body > .side-nav-group-label:first-of-type { padding-top: 0.3rem; }
 .side-nav-link { padding-top: 0.36rem; padding-bottom: 0.36rem; }
+
+/* ── Identity card: unbox it ──
+   The player site's rule is that the backdrop does the work and what
+   separates things is a rule and space, not a box. The identity card still
+   carried a fill, a blur and a border, so on a dossier page it read as a
+   panel bolted to the side of the prose. The portrait and the hairlines
+   between rows are enough structure. */
+.dm-content .identity-card {
+  background: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+}
+.dm-content .identity-card .stat-card { padding-left: 0; padding-right: 0; }
+.dm-content .identity-card .stat-row:last-child { border-bottom: none; }
+
+/* The expand affordance, matching the player pages. */
+.dm-content .portrait-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0.45rem 0 0.2rem;
+}
+.dm-content .cae-expandable { cursor: zoom-in; }
+
+/* ═══════════════════════════════════════════════════════════════
+   THE VOYAGE BOARD
+
+   Two parts, and the order matters: the LEDGER states the finding,
+   the MATRIX shows the evidence. A DM opening this page to plan wants
+   the finding; a DM arguing with the finding wants the evidence.
+
+   One colour decision carries the whole thing. Only OWED - an open
+   objective the players still hold, with nothing moved lately - takes
+   the alarm. Everything else is muted. A board that flags eight things
+   to mean three is a board that gets ignored, so "quiet" is deliberately
+   boring to look at.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── status pips ── */
+.tb-pip {
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  margin-right: 0.45rem;
+  vertical-align: 0.08em;
+  flex: none;
+}
+.tb-pip.is-owed  { background: var(--dm-crimson); }
+.tb-pip.is-live  { background: var(--gold); }
+.tb-pip.is-quiet { background: var(--text-muted); opacity: 0.5; }
+
+/* ── the ledger ── */
+.tb-ledger { margin: 0 0 1.6rem; }
+.tb-ledger-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 1rem;
+  border-bottom: 1px solid var(--gold-rule);
+  padding-bottom: 0.45rem;
+  margin-bottom: 0.9rem;
+}
+.tb-ledger-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  color: var(--gold-light);
+}
+.tb-ledger-sub {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+.tb-debt {
+  display: flex;
+  gap: 0.9rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.tb-debt:last-child { border-bottom: none; }
+.tb-debt-age {
+  flex: none;
+  min-width: 5.6rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-top: 0.2rem;
+}
+.tb-debt-age.is-old { color: var(--dm-crimson); }
+.tb-debt-body { min-width: 0; }
+.tb-debt-name { font-size: 1.02rem; color: var(--text); }
+.tb-debt-for {
+  margin-left: 0.6rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+}
+.tb-debt-objs {
+  margin: 0.3rem 0 0.25rem;
+  padding-left: 1.1rem;
+  font-size: 0.95rem;
+}
+.tb-debt-objs li { margin: 0.15rem 0; color: var(--text-dim); line-height: 1.45; }
+.tb-debt-last {
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── controls ── */
+.tb-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1.2rem;
+  margin: 0 0 0.8rem;
+}
+.tb-group-strip { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+.tb-group {
+  font-family: 'Cinzel', serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+.tb-group:hover { color: var(--text); }
+.tb-group[aria-selected="true"] {
+  color: var(--gold-light);
+  border-color: var(--gold-rule);
+  background: var(--gold-faint);
+}
+.tb-group:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
+.tb-legend {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.6rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--rule-soft);
+  padding-top: 0.55rem;
+}
+.tb-legend-item { display: inline-flex; align-items: baseline; }
+.tb-legend b {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 400;
+  margin-right: 0.35rem;
+}
+.tb-legend-swatch {
+  display: inline-block;
+  width: 0.75rem; height: 0.75rem;
+  margin-right: 0.4rem;
+  border: 1px solid var(--rule);
+  background: repeating-linear-gradient(135deg,
+    rgba(203, 216, 232, 0.14) 0 4px, transparent 4px 8px);
+}
+
+/* ── the matrix ──
+   The prose column is sized for reading; a matrix is sized for seeing,
+   so the board breaks out of the column. Grid rather than table: the
+   gutter and the header both stick while the body scrolls both ways,
+   which a table cannot do without fighting its own layout. */
+.tb-wrap {
+  width: calc(100% + 2 * clamp(0.6rem, 4vw, 4.5rem));
+  margin: 0 clamp(-4.5rem, -4vw, -0.6rem) 1.6rem;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--dm-elev-1);
+  overflow: auto;
+  max-height: 74vh;
+}
+.tb {
+  display: grid;
+  min-width: max-content;
+  position: relative;
+  font-size: 0.86rem;
+}
+
+.tb-corner {
+  position: sticky; left: 0; top: 0; z-index: 6;
+  background: var(--bg-deep);
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 0.6rem 0.75rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: flex;
+  align-items: flex-end;
+}
+.tb-col {
+  position: sticky; top: 0; z-index: 4;
+  background: var(--bg-deep);
+  border-right: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule);
+  padding: 0.5rem 0.6rem;
+  min-width: 0;
+}
+.tb-col-num {
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+}
+.tb-col-title {
+  font-size: 0.72rem;
+  line-height: 1.3;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+  overflow-wrap: anywhere;
+}
+/* A voyage the data has not reached. The column still exists, so an
+   unsynced session never reads as a quiet one. */
+.tb-col.is-unsynced .tb-col-num { color: var(--text-muted); }
+.tb-col.is-unsynced,
+.tb-cell.is-unsynced {
+  background: repeating-linear-gradient(135deg,
+    rgba(203, 216, 232, 0.035) 0 6px, transparent 6px 12px);
+}
+.tb-col.is-ghost { border-bottom-style: dashed; }
+.tb-col.is-ghost .tb-col-num { color: var(--ice-dim); }
+
+.tb-tier {
+  position: sticky; left: 0; z-index: 5;
+  grid-column: 1 / -1;
+  background: var(--bg-deep);
+  border-top: 1px solid var(--gold-rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 0.5rem 0.75rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.tb-tier:hover { color: var(--gold-light); }
+.tb-tier:focus-visible { outline: 2px solid var(--ice); outline-offset: -2px; }
+.tb-tier-caret { font-size: 0.68rem; color: var(--text-muted); transition: transform 0.15s; }
+.tb-tier.is-closed .tb-tier-caret { transform: rotate(-90deg); }
+.tb-tier-note {
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  color: var(--dm-crimson);
+  text-transform: none;
+  font-style: italic;
+}
+.tb-tier-count {
+  margin-left: auto;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.tb-lane {
+  position: sticky; left: 0; z-index: 3;
+  background: var(--bg-deep);
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule-soft);
+  padding: 0.45rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  min-width: 0;
+}
+.tb-lane-name { color: var(--text); line-height: 1.3; overflow-wrap: anywhere; }
+.tb-lane.is-quiet .tb-lane-name { color: var(--text-dim); }
+.tb-lane.is-child { padding-left: 1.6rem; }
+.tb-lane.is-child .tb-lane-name { font-size: 0.82rem; }
+.tb-lane-note {
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-left: 0.95rem;
+}
+.tb-lane-note.is-owed  { color: var(--dm-crimson); }
+.tb-lane-note.is-live  { color: var(--gold-dim); }
+.tb-lane-note.is-quiet { color: var(--text-muted); }
+
+.tb-cell {
+  border-right: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule-soft);
+  padding: 0.3rem 0.4rem;
+  display: flex;
+  align-items: center;
+  min-height: 2.5rem;
+}
+.tb-cell.is-empty::after {
+  content: '\00b7';
+  color: var(--text-muted);
+  opacity: 0.3;
+  margin: auto;
+}
+.tb-beat {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: 100%;
+  background: none;
+  border: none;
+  border-left: 2px solid var(--rule);
+  padding: 0.3rem 0.4rem;
+  border-radius: 2px;
+  cursor: pointer;
+  font: inherit;
+  color: var(--text-dim);
+  text-align: left;
+  transition: background 0.12s, color 0.12s;
+}
+.tb-beat.is-owed { border-left-color: var(--dm-crimson); }
+.tb-beat.is-live { border-left-color: var(--gold-rule); }
+.tb-beat:hover { background: var(--gold-faint); color: var(--text); }
+.tb-beat.is-selected { background: var(--gold-faint); color: var(--text); border-left-color: var(--gold); }
+.tb-beat:focus-visible { outline: 2px solid var(--ice); outline-offset: 1px; }
+.tb-beat-n {
+  font-family: 'Cinzel', serif;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+.tb-beat-unit {
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── panel ── */
+.tb-panel {
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--dm-elev-1);
+  padding: 1.1rem 1.25rem;
+  margin: 0 0 2rem;
+}
+.tb-empty { color: var(--text-muted); font-size: 0.92rem; margin: 0; }
+.tb-panel-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 0.9rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.55rem;
+  margin-bottom: 0.75rem;
+}
+.tb-panel-name { font-family: 'Cinzel', serif; font-size: 1.05rem; color: var(--gold-light); }
+.tb-panel-where {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.tb-panel-link { margin-left: auto; font-size: 0.82rem; }
+.tb-panel-state {
+  font-style: italic;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  margin: 0 0 0.6rem;
+}
+.tb-panel ul { margin: 0; padding-left: 1.1rem; }
+.tb-panel li { margin-bottom: 0.35rem; line-height: 1.5; color: var(--text-dim); font-size: 0.98rem; }
+.tb-panel-objs-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0.9rem 0 0.35rem;
+}
+.tb-panel-objs li.is-done { color: var(--text-muted); text-decoration: line-through; }
+.tb-panel-objs li.is-open { color: var(--text); }
+
+@media (max-width: 760px) {
+  .tb-wrap { max-height: 66vh; }
+  .tb-legend { margin-left: 0; width: 100%; }
+  .tb-ledger-sub { margin-left: 0; width: 100%; }
+  .tb-debt { flex-direction: column; gap: 0.2rem; }
+}

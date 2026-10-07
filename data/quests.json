@@ -127,7 +127,7 @@
       "Next Planned Beat": "Check the teaching rooms for more devices and investigate Joffrey, Jeffrey, and the marked crate's route through Mr. Blip.",
       "Status": "Open",
       "Linked": "ITM-5nB7wK9x, NPC-Wc9fT2nJ, NPC-Zx4Bn7Lq, ITM-8pC4kW2n, ITM-2pQ7vHm9, NPC-Mw6kT2vn, ITM-Wp4kT8vn, ITM-Xn7kW2vm, NPC-Hs6cW9pM, NPC-Lp3kW8vn, NPC-Mb3vK8dW",
-      "Rewards": ""
+      "Rewards": null
     },
     "parent": null,
     "kind": "Quest",
@@ -208,7 +208,7 @@
       "Next Planned Beat": "Question or examine the surviving creature to learn what the crate was really carrying.",
       "Status": "Open",
       "Linked": "ITM-5nB7wK9x",
-      "Rewards": ""
+      "Rewards": null
     },
     "parent": {
       "slug": "the-caelestis-burglaries",
@@ -295,7 +295,7 @@
       "Next Planned Beat": "Reach H’catha, recover the meteor, and find a way toward Viren beyond it.",
       "Status": "Open",
       "Linked": "PC-t0jvvcOZ, ITM-4kD8vRt2, LOC-Cw8kM4vB, NPC-Py6hN3xB",
-      "Rewards": ""
+      "Rewards": null
     },
     "parent": null,
     "kind": "Quest",
@@ -357,7 +357,7 @@
       "Next Planned Beat": "Discover what the pull in Gregory's core is drawing him toward.",
       "Status": "Open",
       "Linked": "PC-BGCfmbF3",
-      "Rewards": ""
+      "Rewards": null
     },
     "parent": null,
     "kind": "Thread",
@@ -440,7 +440,7 @@
       "Next Planned Beat": "Learn what the model ship inside Boogie is, why it matches Saerthe's stolen vessel, and what the presence in his dreams wants.",
       "Status": "Open",
       "Linked": "PC-647haWGJ, ITM-2pQ7vHm9, NPC-Zx4Bn7Lq, ITM-8pC4kW2n",
-      "Rewards": ""
+      "Rewards": null
     },
     "parent": null,
     "kind": "Thread",
@@ -487,7 +487,7 @@
       "Next Planned Beat": "Find the first thread leading to Tumak's family.",
       "Status": "Open",
       "Linked": "PC-wI087olT",
-      "Rewards": ""
+      "Rewards": null
     },
     "parent": null,
     "kind": "Quest",
@@ -558,7 +558,7 @@
       "Next Planned Beat": "Learn who the voice speaking to Sol of fate is, and what Beshaba's attention asks of him.",
       "Status": "Open",
       "Linked": "PC-6rzWlD8Q",
-      "Rewards": ""
+      "Rewards": null
     },
     "parent": null,
     "kind": "Thread",
@@ -627,7 +627,7 @@
       "Next Planned Beat": "Learn what Tumak's half-runes mean, who the Rune Keeper is, and where the tether toward home leads.",
       "Status": "Open",
       "Linked": "PC-wI087olT, NPC-Jv7kW3mq, ITM-Yq5kW8vn",
-      "Rewards": ""
+      "Rewards": null
     },
     "parent": {
       "slug": "tumaks-search-for-family",
@@ -711,7 +711,7 @@
       "Next Planned Beat": "Rest, then descend to the deck below by rope and continue routing the helm up the access shafts to the command deck.",
       "Status": "Open",
       "Linked": "LOC-Rp7kW4vn, LOC-Sk4mW8vn, LOC-Tv6kW3mn, NPC-Hn4kW9vm",
-      "Rewards": "The adamantine meteor; The tyrant ship"
+      "Rewards": null
     },
     "parent": null,
     "kind": "Quest",
@@ -786,8 +786,7 @@
       "Urgency": "High",
       "Status": "Open",
       "Visibility": "Player",
-      "Linked": null,
-      "Rewards": ""
+      "Linked": null
     },
     "parent": {
       "slug": "the-caelestis-burglaries",
@@ -837,8 +836,7 @@
       "Urgency": "Medium",
       "Status": "Open",
       "Visibility": "Player",
-      "Linked": null,
-      "Rewards": ""
+      "Linked": null
     },
     "parent": {
       "slug": "the-tyrant-ship-and-the-hcatha-meteor",
@@ -848,6 +846,80 @@
     "kind": "Thread",
     "objectives": [],
     "progress": null,
+    "children": []
+  },
+  {
+    "id": "QST-Or1nT4ks",
+    "type": "quest",
+    "slug": "orientation",
+    "name": "Orientation",
+    "url": "/quests/orientation.html",
+    "voyages": [
+      {
+        "session": "S01",
+        "number": 1,
+        "bullets": [
+          "Sor’Kur received them in Administration, her voice arriving in their minds rather than their ears",
+          "Bunks were settled the hard way — Veena went for Boogie’s corner, Sol stepped in behind him, and Tumak traded for something darker",
+          "At the Sky Dock they inspected a ship and saw a dock officer take a bribe; Gregory recalled the code of conduct that forbids it",
+          "Mr. Blip issued from Stores — Boogie charmed a light hammer out of him, and Gregory found the autognome unnervingly like himself",
+          "Saerthe ran their first helm exercise in the Nexus, over a floating field of miniature ships, under the tension of an ectoplasmic breach elsewhere in the tower",
+          "All of them finished the gymnasium assault course — Casey with ease, Sol by getting back up after a hard fall, Boogie hauling Gregory up the last climb"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [],
+    "links": [],
+    "fields": {
+      "Quest": "Orientation",
+      "Type": "Academy / Induction",
+      "Related Character(s)": "Boogie, Casey Geim, Gregory, Sol Fortuna, Tumak Swan",
+      "Current State": "Complete. Every task on the orientation sheet was signed off on the cadets’ first day.",
+      "Overview (Player)": "The first thing Caelestis ever asked of the crew: a printed list of six tasks, handed out by Boatswain Tarto, to be worked through in whatever order they liked. They did all six in a day — and in the course of it met the quartermaster, took their first turn at a helm, argued over bunks, and noticed a dock officer taking a bribe.",
+      "Last Engaged (Session #)": 1,
+      "Urgency": "Resolved",
+      "Status": "Complete",
+      "Visibility": "Player",
+      "Linked": null
+    },
+    "parent": null,
+    "kind": "Quest",
+    "objectives": [
+      {
+        "done": true,
+        "text": "Collect the welcome pack from Administration"
+      },
+      {
+        "done": true,
+        "text": "Report to quarters for bunk assignment"
+      },
+      {
+        "done": true,
+        "text": "Report to the Sky Dock for spelljamming ship inspection"
+      },
+      {
+        "done": true,
+        "text": "Collect service weaponry from Mister Blip in Stores"
+      },
+      {
+        "done": true,
+        "text": "Report to the Spelljammer Nexus for basic training"
+      },
+      {
+        "done": true,
+        "text": "Complete the gymnasium assault course"
+      }
+    ],
+    "progress": {
+      "done": 6,
+      "total": 6
+    },
+    "giver": {
+      "name": "Boatswain Tarto",
+      "slug": "boatswain-tarto",
+      "url": "/dossiers/boatswain-tarto.html"
+    },
     "children": []
   }
 ]

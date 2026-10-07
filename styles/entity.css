@@ -219,8 +219,32 @@ html { overflow-x: clip; }
   display: flex; align-items: center; justify-content: center;
 }
 .obj-box svg { width: 10px; color: var(--gold); }
-.obj-item.is-done .obj-box { border-color: var(--gold-dim); background: var(--gold-faint); }
-.obj-item.is-done .obj-text { color: var(--text-muted); text-decoration: line-through; text-decoration-color: var(--rule); }
+/* A finished objective is the one thing on this page the crew earned, and
+   it was styled as deleted text - muted grey, struck through. That is the
+   visual language of "cancelled", so the only win on the board read as the
+   faintest line on it.
+
+   It now reads as a win: the box fills, the check lands in full gold, and
+   the text stays legible in the warm tone. No strikethrough - the check
+   already says it is done, and striking it out says it no longer counts. */
+.obj-item.is-done .obj-box {
+  border-color: var(--gold);
+  background: var(--gold-faint);
+  box-shadow: 0 0 0 2px var(--gold-faint);
+}
+.obj-item.is-done .obj-box svg { color: var(--gold-light); }
+.obj-item.is-done .obj-text { color: var(--gold-light); }
+
+/* A quest with every objective met. Rare and worth marking - the crew
+   should be able to point at it. */
+.panel-count.is-complete,
+.obj-progress.is-complete {
+  color: var(--gold-light);
+  border: 1px solid var(--gold-rule);
+  background: var(--gold-faint);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+}
 .obj-text { color: var(--text); }
 
 .rew-item { display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.97rem; line-height: 1.5; color: var(--text); }

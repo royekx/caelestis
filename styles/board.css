@@ -269,3 +269,9 @@ html { overflow-x: clip; }
   .q-entry.is-child .log-row::before { left: 1.4rem; }
   .q-entry.is-child .log-row::after { left: 0.5rem; }
 }
+
+/* A finished quest. "Open" is the link affordance on every other row, and
+   beside a completed one it reads as the status instead - so the finished
+   row says "View" and lets the filled progress pill carry the state. */
+.q-entry.is-complete .log-title { color: var(--gold-light); }
+.q-entry.is-complete .log-open { color: var(--gold-dim); }
