@@ -6,15 +6,15 @@
  * against the record by `node scripts/data.js check`.
  */
 window.CAELESTIS_BEARING = {
-  voyage:   4,
-  title:    'All Things Find Their Way Home',
+  voyage:   5,
+  title:    'Retreat Is Always an Option',
   position: 'The Tyrant Ship',
   posNote:  'Toril orbit',
-  outstanding: 'Route the spelljamming helm up to the command deck',
+  outstanding: 'Bring the helm down to the Command Deck and install it where magic fails',
 
   /* Revealed when the bar is expanded — the detail the strip has to trim. */
   detail: {
-    consequence: 'The wisps persist by some unknown cause and can kill. Bloodied by two hard fights with no rest between, the crew chose for the first time since boarding not to push forward.',
+    consequence: 'The crew went down without resting and found the Command Deck, and where the helm must go: on the platform beneath a dead beholder whose central eye still cancels magic in the room. Between it and the helm, a mechanical behir that nearly killed Bartholomew still holds the Hollow Deck, and the crew retreated from it.',
     quests: [
       { name: 'The Tyrant Ship and the H\u2019catha Meteor', progress: '1/5', href: 'quests/the-tyrant-ship-and-the-hcatha-meteor.html' },
       { name: 'The Caelestis Burglaries',                     progress: '1/3', href: 'quests/the-caelestis-burglaries.html' },
@@ -22,16 +22,18 @@ window.CAELESTIS_BEARING = {
       { name: 'Tumak\u2019s Search for Family',               progress: '0/1', href: 'quests/tumaks-search-for-family.html' }
     ],
     met: [
-      { name: 'Ostekk-6',        href: 'dossiers/ostekk-6.html' },
-      { name: 'Winston Ryeback', href: 'dossiers/winston-ryeback.html' },
-      { name: 'Miken',           href: 'dossiers/miken.html' },
-      { name: 'Pffred',          href: 'dossiers/pffred.html' }
+      { name: 'Ostekk-6',         href: 'dossiers/ostekk-6.html' },
+      { name: 'Ostekk-2',         href: 'dossiers/ostekk-2.html' },
+      { name: 'The Behir',        href: 'dossiers/the-behir.html' },
+      { name: 'Vaelorix',         href: 'dossiers/vaelorix.html' },
+      { name: 'Miken',            href: 'dossiers/miken.html' },
+      { name: 'Winston Ryeback',  href: 'dossiers/winston-ryeback.html' }
     ]
   },
 
   links: {
     bearing:   'bearings/index.html',
-    voyage:    'voyages/voyage-004.html',
+    voyage:    'voyages/voyage-005.html',
     helm:      'https://royek.foundryserver.com/game',
     scheduler: 'https://rallly.co/invite/B8uUYlcm4oKB'
   }

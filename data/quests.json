@@ -324,7 +324,7 @@
     "fields": {
       "Type": "Personal / Mystery",
       "Related Character(s)": "Gregory",
-      "Current State": "Gregory feels a new, unexplained tug in his core drawing him somewhere unknown.",
+      "Current State": "The pull in Gregory's core points at the dead beholder on the Command Deck.",
       "Overview (Player)": "Since leaving his master, Gregory has felt a new pull in his core, drawing him toward a place he cannot name.",
       "Status": "Open"
     },
@@ -335,15 +335,30 @@
         "bullets": [
           "Farther from home and his master than ever, Gregory felt a new tug in his core drawing him somewhere unknown"
         ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "On the Hollow Deck a pull in Gregory's chest led him to Ostekk-2, the one unit still holding a light",
+          "On the Command Deck the pull came back stronger, pointing at the dead beholder's body"
+        ]
       }
     ],
     "seen": [],
     "mentioned": [],
     "linked": [
-      "PC-BGCfmbF3"
+      "PC-BGCfmbF3",
+      "NPC-lfleUUeT"
     ],
     "url": "quests/gregorys-pull.html",
     "links": [
+      {
+        "id": "NPC-lfleUUeT",
+        "name": "Vaelorix",
+        "type": "npc",
+        "slug": "vaelorix",
+        "url": "dossiers/vaelorix.html"
+      },
       {
         "id": "PC-BGCfmbF3",
         "name": "Gregory",
@@ -571,6 +586,12 @@
           "Summoning his soul knife for the first time, his runes flared and he felt not where home is but a connection to it — the little portal the knife came through a piece of that somewhere",
           "As the throw went wide, the Runekeeper said all things find their way home, and the blade bent true"
         ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "Tumak called up his soul knives a second time against the behir, his grip on them still uncertain"
+        ]
       }
     ],
     "seen": [],
@@ -622,7 +643,7 @@
     "fields": {
       "Type": "Mission",
       "Related Character(s)": "Bartholomew Grayson, Gregory, Tumak Swan, Sol Fortuna, Casey Geim, Boogie",
-      "Current State": "The crew cleared the hold and the garden shaft aboard the tyrant ship but chose to hold and rest, bloodied, before descending to the deck below.",
+      "Current State": "The crew has found the Command Deck and where the helm must go, but magic fails there, the behir holds the Hollow Deck above it, and the helm still waits in the cargo hold.",
       "Overview (Player)": "Boatswain Tarto has sent the crew to recover an adamantine meteor that struck the spire on H’catha, a world of beholders. Arriving as themselves is not an option. An abandoned tyrant ship drifts in Toril’s orbit: commandeer it, install a spelljamming helm on its command deck, and fly it through H’cathan space as one of their own — the vessel itself the disguise. Reach the spire under that cover and bring the meteor back.",
       "Status": "Open"
     },
@@ -676,6 +697,15 @@
           "Ostekk-6 confirmed the shafts are impassable while the bloom holds, and that killing a flower does not unmake the wisps already loose",
           "Bloodied and unrested, the crew decided for the first time not to press on, holding to recover before descending to the deck below by rope"
         ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "The crew left the helm in the cargo hold under guard and scouted down the shaft first",
+          "On the Hollow Deck a mechanical behir and three clockwork horrors drove them back",
+          "They reached the Command Deck past a plane where the ship's gravity turns over",
+          "The helm belongs on the platform where the dead beholder lies, in a room where magic fails"
+        ]
       }
     ],
     "seen": [],
@@ -684,7 +714,8 @@
       "LOC-Rp7kW4vn",
       "LOC-Sk4mW8vn",
       "LOC-Tv6kW3mn",
-      "NPC-Hn4kW9vm"
+      "NPC-Hn4kW9vm",
+      "LOC-4wNvxXYk"
     ],
     "url": "quests/the-tyrant-ship-and-the-hcatha-meteor.html",
     "links": [
@@ -694,6 +725,13 @@
         "type": "location",
         "slug": "hcatha",
         "url": "navigation-records/hcatha.html"
+      },
+      {
+        "id": "LOC-4wNvxXYk",
+        "name": "The Command Deck",
+        "type": "location",
+        "slug": "the-command-deck",
+        "url": "navigation-records/the-command-deck.html"
       },
       {
         "id": "LOC-Rp7kW4vn",
@@ -785,11 +823,16 @@
     "fields": {
       "Type": "Character / Mystery",
       "Related Character(s)": "Gregory",
-      "Current State": "Ostekk-6 is saved but mute and broken, its core intact and its body beyond what magic can mend. It wears Gregory’s face and nobody has explained why.",
-      "Overview (Player)": "The autognome the crew pulled out of the wreckage in the tyrant ship’s cargo hold wears Gregory’s face. Its core is sound; its body is a mechanical problem no spell will close. It speaks only through the link Tumak opened, and what it knows about the ship has already proved worth having.",
+      "Current State": "Ostekk-6 gets about on legs Boogie made him. A repair bay on the Hollow Deck could mend him, but the behir lies coiled beside it.",
+      "Overview (Player)": "The automaton the crew pulled out of the wreckage in the tyrant ship’s cargo hold wears Gregory’s face. He is one of nine units that served the ship’s beholder master, Vaelorix, and shares his name with a tinkerer, the original Ostekk, said to have sent the behir that destroyed the rest. His core is sound; his body is a mechanical problem no spell will close, and what he knows about the ship has already proved worth having.",
       "Status": "Open"
     },
-    "objectives": [],
+    "objectives": [
+      {
+        "done": false,
+        "text": "Repair Ostekk-6 at the Hollow Deck repair bay"
+      }
+    ],
     "voyages": [
       {
         "number": 3,
@@ -805,20 +848,50 @@
           "Its core is arcane and intact, but the frame is a physical repair beyond what the crew can do aboard",
           "It warned of a mimic aboard, a spreading bloom, and more clockwork horrors"
         ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "Ostekk-6 told the crew he is a unit, an automaton",
+          "He named his master, the beholder Vaelorix, and said there had been nine units, nearly all now destroyed",
+          "Gregory found the remains of Ostekk-8 and Ostekk-4 and woke Ostekk-2, which said the original Ostekk had sent the behir",
+          "A repair bay on the Hollow Deck could fix Ostekk-6's legs, if it still works and has parts"
+        ]
       }
     ],
     "seen": [],
     "mentioned": [],
-    "linked": [],
+    "linked": [
+      "NPC-nmdnCFvr",
+      "LOC-p6GYEwKt"
+    ],
     "url": "quests/ostekk-6-thread.html",
-    "links": [],
+    "links": [
+      {
+        "id": "LOC-p6GYEwKt",
+        "name": "The Hollow Deck",
+        "type": "location",
+        "slug": "the-hollow-deck",
+        "url": "navigation-records/the-hollow-deck.html"
+      },
+      {
+        "id": "NPC-nmdnCFvr",
+        "name": "Ostekk-2",
+        "type": "npc",
+        "slug": "ostekk-2",
+        "url": "dossiers/ostekk-2.html"
+      }
+    ],
     "parent": {
       "slug": "the-tyrant-ship-and-the-hcatha-meteor",
       "name": "The Tyrant Ship and the H’catha Meteor",
       "url": "quests/the-tyrant-ship-and-the-hcatha-meteor.html"
     },
     "children": [],
-    "progress": null
+    "progress": {
+      "done": 0,
+      "total": 1
+    }
   },
   {
     "id": "QST-Or1nT4ks",
