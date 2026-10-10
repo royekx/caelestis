@@ -127,7 +127,9 @@
     "slug": "ostekk",
     "name": "Ostekk",
     "path": "dossiers/ostekk.html",
-    "records": []
+    "records": [
+      "NPC-ijDm41rn"
+    ]
   },
   {
     "slug": "polly",
@@ -195,7 +197,9 @@
     "slug": "vaelorix",
     "name": "Vaelorix",
     "path": "dossiers/vaelorix.html",
-    "records": []
+    "records": [
+      "NPC-lfleUUeT"
+    ]
   },
   {
     "slug": "veena-derek",

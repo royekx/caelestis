@@ -528,8 +528,8 @@
       "Affiliation(s)": "Caelestis Academy (Weeping Goddess)",
       "Party Relationship": "Galley cook who fed and warmed to the cadets",
       "Role (as known)": "Petty officer and galley cook at the Weeping Goddess",
-      "Current State": "Aboard the tyrant ship as the crew's cook, commanding the deckhands.",
-      "Overview (Player)": "Petty Officer Winston Ryeback runs the kitchen at the Weeping Goddess refectory, commanding the din with a bellow and feeding the cadets with brusque affection. Beneath the gruffness he keeps hot baths and knitting for himself, and warms to anyone who asks kindly.",
+      "Current State": "In the tyrant ship's cargo hold, keeping a camp kitchen and guarding the helm with Sol and the deckhands.",
+      "Overview (Player)": "Petty Officer Winston Ryeback, a hippogriff, runs the kitchen at the Weeping Goddess refectory, commanding the din with a bellow and feeding the cadets with brusque affection. Beneath the gruffness he keeps hot baths and knitting for himself, and warms to anyone who asks kindly.",
       "Category": "Command & Staff",
       "Status": "Active"
     },
@@ -557,12 +557,21 @@
         "bullets": [
           "Among the crew present aboard the tyrant ship as they settled and took stock in the lull"
         ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "Named the wisps for Miken and told the crew to keep watch in case they came back",
+          "Went off to set up a camp kitchen, reminding the crew that getting the helm installed was their problem",
+          "Stayed above with Sol, Pffred and Krik'Lit to guard the helm and the crew"
+        ]
       }
     ],
     "seen": [
       2,
       3,
-      4
+      4,
+      5
     ],
     "mentioned": [],
     "linked": [],
@@ -579,7 +588,7 @@
       "Affiliation(s)": "Caelestis Academy (cadet)",
       "Party Relationship": "Friendly cadet from the rival crew",
       "Role (as known)": "Fellow cadet on the rival crew",
-      "Current State": "Aboard the tyrant ship with the crew, keeping close to those he counts as his own.",
+      "Current State": "Back in the cargo hold with the crew, having seen the Command Deck for himself.",
       "Overview (Player)": "Miken is a slight, nervous cadet at Caelestis on the crew that races opposite the party. Easy company and quick to understand, he showed a command of magic that seems to run ahead of his year.",
       "Category": "Cadet Corps",
       "Status": "Active"
@@ -608,12 +617,21 @@
         "bullets": [
           "Among the crew as they settled the cleared area aboard the tyrant ship and took stock of themselves"
         ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "Asked what the crew had fought, and offered to come along or stay and guard the crew",
+          "Came down the rope after the crew during the retreat from the Hollow Deck",
+          "Followed them through the gravity plane, saw the dead beholder on the Command Deck, and declared all hands on deck"
+        ]
       }
     ],
     "seen": [
       2,
       3,
-      4
+      4,
+      5
     ],
     "mentioned": [],
     "linked": [],
@@ -694,7 +712,7 @@
       "Affiliation(s)": "Caelestis Academy",
       "Party Relationship": "Deckhand on the tyrant-ship crew",
       "Role (as known)": "Thri-kreen deckhand",
-      "Current State": "Serving as a deckhand aboard the tyrant ship.",
+      "Current State": "Guarding the helm in the tyrant ship's cargo hold.",
       "Overview (Player)": "Krik’Lit is a thri-kreen deckhand assigned to the crew for the voyage to recover the H’catha meteor, serving under Petty Officer Ryeback.",
       "Category": "Tyrant Ship",
       "Status": "Active"
@@ -705,10 +723,17 @@
         "bullets": [
           "A thri-kreen deckhand assigned under Ryeback for the tyrant-ship voyage to H’catha"
         ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "Stayed above in the cargo hold with Sol and Ryeback to guard the helm and the crew"
+        ]
       }
     ],
     "seen": [
-      3
+      3,
+      5
     ],
     "mentioned": [],
     "linked": [],
@@ -725,7 +750,7 @@
       "Affiliation(s)": "Caelestis Academy",
       "Party Relationship": "Deckhand on the tyrant-ship crew",
       "Role (as known)": "Plasmoid deckhand",
-      "Current State": "Serving as a deckhand aboard the tyrant ship.",
+      "Current State": "Guarding the helm in the tyrant ship's cargo hold.",
       "Overview (Player)": "Pffred is a plasmoid deckhand who wears a kerchief knotted like a necktie, assigned to the tyrant-ship crew under Petty Officer Ryeback for the voyage to H’catha.",
       "Category": "Tyrant Ship",
       "Status": "Active"
@@ -742,11 +767,18 @@
         "bullets": [
           "Among the crew, in his knotted kerchief, as they settled and took stock aboard the tyrant ship"
         ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "Stayed above in the cargo hold with Sol and Ryeback to guard the helm and the crew"
+        ]
       }
     ],
     "seen": [
       3,
-      4
+      4,
+      5
     ],
     "mentioned": [],
     "linked": [],
@@ -760,11 +792,11 @@
     "name": "Ostekk-6",
     "fields": {
       "Gender": null,
-      "Affiliation(s)": null,
+      "Affiliation(s)": "Vaelorix (the tyrant ship's master)",
       "Party Relationship": "A broken automaton the crew saved aboard the tyrant ship",
-      "Role (as known)": "Damaged automaton aboard the tyrant ship",
-      "Current State": "Saved but immobilized aboard the tyrant ship, guiding the crew through a telepathic link.",
-      "Overview (Player)": "Ostekk-6 is an automaton the crew found broken in the tyrant ship's cargo hold, his lower half gone and his voice box destroyed. His arcane core is intact but his body needs physical repair no magic can provide. Saved by the crew, he warns them of the dangers aboard through a telepathic link.",
+      "Role (as known)": "Automaton unit of the tyrant ship, one of nine that served Vaelorix",
+      "Current State": "Legless and unrepaired, riding legs Boogie made him, back in the cargo hold with the crew.",
+      "Overview (Player)": "Ostekk-6 is an automaton, one of nine units that served the tyrant ship's beholder master, Vaelorix, found broken in the cargo hold with his lower half gone. His arcane core is intact but his body needs physical repair no magic can provide; a repair bay on the Hollow Deck may serve, if it still works. He gets about on legs Boogie made him and guides the crew through the ship he knows.",
       "Category": "Tyrant Ship",
       "Status": "Active"
     },
@@ -785,16 +817,46 @@
           "Confirmed the way to the command deck runs through the choked access shafts, which are not passable while the bloom holds",
           "Explained through the link that the flower produces the wisps, but killing it does not unmake the ones already loose — something else keeps them present"
         ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "Told the crew he is a unit, an automaton",
+          "Rode on legs Boogie made him, facing backwards and calling out directions",
+          "Told the crew the ship's master was Vaelorix, a beholder, and that the creatures had destroyed nearly all of the nine units",
+          "Named the decks below the cargo space: the Hollow Deck, then the Command Deck",
+          "Pointed out a repair bay on the Hollow Deck where he could fix his legs, if it still works and has parts",
+          "Was launched across the Hollow Deck at the behir by Boogie's leaping charm",
+          "Slowed and stuttered on the Command Deck but kept talking",
+          "Confirmed the Command Deck is where Vaelorix flew the ship"
+        ]
       }
     ],
     "seen": [
       3,
-      4
+      4,
+      5
     ],
     "mentioned": [],
-    "linked": [],
+    "linked": [
+      "NPC-lfleUUeT"
+    ],
     "url": "dossiers/ostekk-6.html",
     "links": [
+      {
+        "id": "NPC-nmdnCFvr",
+        "name": "Ostekk-2",
+        "type": "npc",
+        "slug": "ostekk-2",
+        "url": "dossiers/ostekk-2.html"
+      },
+      {
+        "id": "NPC-lfleUUeT",
+        "name": "Vaelorix",
+        "type": "npc",
+        "slug": "vaelorix",
+        "url": "dossiers/vaelorix.html"
+      },
       {
         "id": "QST-Xr4mW8vn",
         "name": "The Tyrant Ship and the H’catha Meteor",
@@ -951,6 +1013,245 @@
         "type": "quest",
         "slug": "the-caelestis-burglaries",
         "url": "quests/the-caelestis-burglaries.html"
+      }
+    ]
+  },
+  {
+    "id": "NPC-nmdnCFvr",
+    "type": "npc",
+    "slug": "ostekk-2",
+    "name": "Ostekk-2",
+    "fields": {
+      "Gender": null,
+      "Affiliation(s)": "Vaelorix (the tyrant ship's master)",
+      "Party Relationship": "An automaton Gregory woke on the Hollow Deck",
+      "Role (as known)": "Automaton unit of the tyrant ship",
+      "Current State": "Left on the Hollow Deck when the crew retreated, one arm missing, held awake only briefly by Gregory's jolt.",
+      "Overview (Player)": "Ostekk-2 is one of the tyrant ship's automaton units, found on the Hollow Deck whole but for a missing arm, a dim light still in its eyes. Gregory woke it with a jolt of lightning, and it named the mechanical behir as the thing that destroyed its comrades, sent by the original Ostekk. The jolt holds it for only a few moments.",
+      "Category": "Tyrant Ship",
+      "Status": "Active"
+    },
+    "voyages": [
+      {
+        "number": 5,
+        "bullets": [
+          "Found on the Hollow Deck among the wrecked units, whole but for a missing arm, a dim light in its eyes",
+          "Woken by Gregory's jolt of lightning, it offered its service",
+          "Named the behir as the entity that boarded the ship and destroyed most of its comrades, sent, it believed, by the original Ostekk",
+          "Knew of no weakness in the behir, called the original Ostekk a brilliant tinkerer, and said retreat is always an option"
+        ]
+      }
+    ],
+    "seen": [
+      5
+    ],
+    "mentioned": [],
+    "linked": [
+      "NPC-Hn4kW9vm",
+      "NPC-ijDm41rn",
+      "NPC-MZZkLc0g"
+    ],
+    "url": "dossiers/ostekk-2.html",
+    "links": [
+      {
+        "id": "LOC-p6GYEwKt",
+        "name": "The Hollow Deck",
+        "type": "location",
+        "slug": "the-hollow-deck",
+        "url": "navigation-records/the-hollow-deck.html"
+      },
+      {
+        "id": "NPC-ijDm41rn",
+        "name": "Ostekk",
+        "type": "npc",
+        "slug": "ostekk",
+        "url": "dossiers/ostekk.html"
+      },
+      {
+        "id": "NPC-Hn4kW9vm",
+        "name": "Ostekk-6",
+        "type": "npc",
+        "slug": "ostekk-6",
+        "url": "dossiers/ostekk-6.html"
+      },
+      {
+        "id": "NPC-MZZkLc0g",
+        "name": "The Behir",
+        "type": "npc",
+        "slug": "the-behir",
+        "url": "dossiers/the-behir.html"
+      },
+      {
+        "id": "QST-Ok5mB8tz",
+        "name": "Ostekk-6",
+        "type": "quest",
+        "slug": "ostekk-6-thread",
+        "url": "quests/ostekk-6-thread.html"
+      }
+    ]
+  },
+  {
+    "id": "NPC-lfleUUeT",
+    "type": "npc",
+    "slug": "vaelorix",
+    "name": "Vaelorix",
+    "fields": {
+      "Gender": "Male",
+      "Affiliation(s)": "The tyrant ship",
+      "Party Relationship": "The tyrant ship's dead master, as the crew understands it",
+      "Role (as known)": "Beholder master of the tyrant ship",
+      "Current State": "Dead on the Command Deck, a great flower grown out of his body, his central eye still cancelling magic.",
+      "Overview (Player)": "Vaelorix was the beholder who owned the tyrant ship and flew it from its Command Deck, needing no helm and floating between its decks. Ostekk-6 served him and has not seen him since the creatures boarded. The crew found a beholder's body on the Command Deck platform, overgrown by a great flower, its central eye still cancelling magic in the room.",
+      "Category": "Tyrant Ship",
+      "Status": "Deceased"
+    },
+    "voyages": [
+      {
+        "number": 5,
+        "bullets": [
+          "Named by Ostekk-6 as his master and the ship's owner, a beholder who simply floated between decks",
+          "Not seen by Ostekk-6 since the creatures boarded",
+          "Never needed a helm, but flew the ship from the Command Deck",
+          "A beholder's body lay on the Command Deck platform, a great flower grown out of it, its central eye still cancelling magic"
+        ]
+      }
+    ],
+    "seen": [
+      5
+    ],
+    "mentioned": [],
+    "linked": [
+      "NPC-Hn4kW9vm"
+    ],
+    "url": "dossiers/vaelorix.html",
+    "links": [
+      {
+        "id": "LOC-4wNvxXYk",
+        "name": "The Command Deck",
+        "type": "location",
+        "slug": "the-command-deck",
+        "url": "navigation-records/the-command-deck.html"
+      },
+      {
+        "id": "NPC-Hn4kW9vm",
+        "name": "Ostekk-6",
+        "type": "npc",
+        "slug": "ostekk-6",
+        "url": "dossiers/ostekk-6.html"
+      },
+      {
+        "id": "QST-6bC9wN4k",
+        "name": "Gregory's Pull",
+        "type": "quest",
+        "slug": "gregorys-pull",
+        "url": "quests/gregorys-pull.html"
+      }
+    ]
+  },
+  {
+    "id": "NPC-MZZkLc0g",
+    "type": "npc",
+    "slug": "the-behir",
+    "name": "The Behir",
+    "fields": {
+      "Gender": null,
+      "Affiliation(s)": "The original Ostekk",
+      "Party Relationship": "Hostile",
+      "Role (as known)": "Mechanical behir that boarded the tyrant ship",
+      "Current State": "Alive and wounded on the Hollow Deck, where the crew left it.",
+      "Overview (Player)": "The behir is a serpentine metal creature made in imitation of the legendary behir, with metal horns, deep blue eyes and four stout legs. It boarded the tyrant ship and destroyed most of its automaton units, sent, Ostekk-2 believed, by the original Ostekk. It climbs walls, bites, and breathes lightning, and its screech brings clockwork horrors.",
+      "Category": "Tyrant Ship",
+      "Status": "Active"
+    },
+    "voyages": [
+      {
+        "number": 5,
+        "bullets": [
+          "Lay coiled in a corner of the Hollow Deck beside the repair bay, whirring and clanking",
+          "Woke at the clang of Boogie's shield and fought the crew from the walls and ceiling",
+          "Caught Bartholomew in its jaws and dropped him, and breathed lightning across the crew",
+          "Its screech brought three clockwork horrors into the room, and the crew retreated"
+        ]
+      }
+    ],
+    "seen": [
+      5
+    ],
+    "mentioned": [],
+    "linked": [
+      "LOC-p6GYEwKt"
+    ],
+    "url": "dossiers/the-behir.html",
+    "links": [
+      {
+        "id": "LOC-p6GYEwKt",
+        "name": "The Hollow Deck",
+        "type": "location",
+        "slug": "the-hollow-deck",
+        "url": "navigation-records/the-hollow-deck.html"
+      },
+      {
+        "id": "NPC-ijDm41rn",
+        "name": "Ostekk",
+        "type": "npc",
+        "slug": "ostekk",
+        "url": "dossiers/ostekk.html"
+      },
+      {
+        "id": "NPC-nmdnCFvr",
+        "name": "Ostekk-2",
+        "type": "npc",
+        "slug": "ostekk-2",
+        "url": "dossiers/ostekk-2.html"
+      }
+    ]
+  },
+  {
+    "id": "NPC-ijDm41rn",
+    "type": "npc",
+    "slug": "ostekk",
+    "name": "Ostekk",
+    "fields": {
+      "Gender": null,
+      "Affiliation(s)": null,
+      "Party Relationship": "Unknown",
+      "Role (as known)": "A brilliant tinkerer, as Ostekk-2 tells it",
+      "Current State": "Unknown; believed by Ostekk-2 to have sent the behir.",
+      "Overview (Player)": "The original Ostekk is a brilliant tinkerer, according to Ostekk-2, and believed to have sent the mechanical behir that boarded the tyrant ship and destroyed most of its units. The ship's automaton units share his name.",
+      "Category": "Beyond the Academy",
+      "Status": "Active"
+    },
+    "voyages": [
+      {
+        "number": 5,
+        "bullets": [
+          "Named by Ostekk-2 as the one it believed sent the behir",
+          "Called by Ostekk-2 a brilliant tinkerer"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [
+      5
+    ],
+    "linked": [
+      "NPC-MZZkLc0g"
+    ],
+    "url": "dossiers/ostekk.html",
+    "links": [
+      {
+        "id": "NPC-nmdnCFvr",
+        "name": "Ostekk-2",
+        "type": "npc",
+        "slug": "ostekk-2",
+        "url": "dossiers/ostekk-2.html"
+      },
+      {
+        "id": "NPC-MZZkLc0g",
+        "name": "The Behir",
+        "type": "npc",
+        "slug": "the-behir",
+        "url": "dossiers/the-behir.html"
       }
     ]
   }

@@ -12,8 +12,8 @@
       "Player Concept (as known)": "Plasmoid Sorcerer; excels at spelljamming; carries part of a ship within himself",
       "Affiliation(s)": null,
       "Personal Thread": "A drifting plasmoid with no family or lasting home, now carrying an incomplete model spelljamming ship that formed inside him for reasons he cannot explain.",
-      "Current State": "Aboard an abandoned tyrant ship as the crew's medic, unsettled by a dream of converging selves and a presence reaching for him.",
-      "What They Last Learned": "That the recovered rod fed on ambient magic to detonate, and that a mimic and a persistent wisp bloom lurk aboard the tyrant ship.",
+      "Current State": "Back in the cargo hold as the crew's medic after reaching the Command Deck, where his magic failed him.",
+      "What They Last Learned": "That the ship's dead master is a beholder whose central eye still cancels magic on the Command Deck.",
       "Notable Items": "Light hammer, shield, incomplete model spelljamming ship",
       "Overview (Player)": "Boogie is a plasmoid cadet at Caelestis in a semi-transparent blue form with a glittering stone inside him and an inner rhythm that pulls him into dance. He instinctively helps and repairs rather than commands, and has taken the crew's medical role rather than the helm. The incomplete model ship that formed inside him matches one stolen from an instructor, and his sleep has begun to fill with visions of other versions of himself and a presence converging on him.",
       "Status": "Active"
@@ -57,6 +57,19 @@
         "number": 4,
         "bullets": [
           "Understood, alongside Gregory, that Ostekk-6's damage was mechanical and beyond anything magic could mend"
+        ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "Gave the legless Ostekk-6 a pair of legs, a small, wrongly built replica of himself that carried him at the waist",
+          "Spread his own gel over the crew and laid a slowing charm on them so they drifted down the shaft",
+          "Blessed Casey, Tumak and Bartholomew as the behir woke, and steadied Casey's strike",
+          "Filled Ostekk-6's legs with a leaping charm and launched him across the Hollow Deck at the behir",
+          "Called the retreat when three clockwork horrors answered the behir's screech",
+          "Missed the rope and fell down the shaft, calling on his faith to burn a gap through the flowers below him",
+          "Found the plane where the ship's gravity turns over, pulled himself through, and called the others down",
+          "Recognized the body on the Command Deck as a beholder whose central eye still cancels magic"
         ]
       }
     ],
@@ -110,8 +123,8 @@
       "Player Concept (as known)": "Hadozee Warlock; zodiac-flavored magic; reads the sky",
       "Affiliation(s)": null,
       "Personal Thread": "Following a vision and a voice that told him 'Go there' — a path toward a place beyond H’catha in the Viren star system.",
-      "Current State": "A cadet and the crew's bosun aboard a tyrant ship, still drawn on by a familiar presence.",
-      "What They Last Learned": "That Bartholomew's inner form carries a two-starred constellation from a childhood fall.",
+      "Current State": "Back in the cargo hold as the crew's bosun after the descent to the Command Deck.",
+      "What They Last Learned": "That the behir was coiled around something giving off a soft light, and that the Command Deck's wisps can be struck once they latch on.",
       "Notable Items": "Star-etched constellation shirt (stolen from Mirt's wardrobe)",
       "Overview (Player)": "Casey is a hadozee warlock cadet at Caelestis, barefoot and composed beneath a pale green cloak stitched with constellations, wielding cold star-bright magic. Awkward and half-orbiting any conversation, he serves as the crew's bosun. A vision beyond Mirt's wardrobe pointed him toward the Viren star system, and a familiar presence has begun following him elsewhere.",
       "Status": "Active"
@@ -155,6 +168,15 @@
           "Cast Arms of Hadar rendered through his constellations, tentacles of starlight filling the shaft",
           "Climbed the crew down toward the deck below by rope"
         ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "Split into copies of himself and cut into the behir from the walls",
+          "Saw that the behir had been coiled around something giving off a soft light",
+          "Glided down the shaft and flipped through the gravity plane without the rope",
+          "Was latched onto and drained by wisps on the Command Deck, and learned to slap them off"
+        ]
       }
     ],
     "seen": [],
@@ -184,8 +206,8 @@
       "Player Concept (as known)": "Autognome; navigation-minded; senses direction and anomalies",
       "Affiliation(s)": null,
       "Personal Thread": "Farther from home and his master than ever, feeling a new tug in his core drawing him somewhere unknown.",
-      "Current State": "Aboard an abandoned tyrant ship as the crew's navigator, moved by the broken autognome he chose to save.",
-      "What They Last Learned": "That the broken autognome Ostekk-6 needs physical repair no magic can supply, and that a mimic and a persistent wisp bloom lurk aboard.",
+      "Current State": "Back in the cargo hold as the crew's navigator, the pull in his chest pointing toward the Command Deck.",
+      "What They Last Learned": "That the pull in his chest grows stronger near the dead beholder on the Command Deck.",
       "Notable Items": null,
       "Overview (Player)": "Gregory is a bronze autognome cadet at Caelestis with glasses and a mustache, hesitant and observant, quick to notice what others miss. He has settled as the crew's navigator, his course-plotting proven under pressure. Far from his dead master, he feels a pull in his core drawing him toward somewhere he cannot yet name, and has begun to reach for others before the damage does.",
       "Status": "Active"
@@ -233,6 +255,16 @@
           "Understood, with Boogie, that Ostekk-6's ruin was mechanical and no magic could close it",
           "Shared the telepathic link Tumak opened, receiving Ostekk-6's warnings, and sent magic missiles into the wisp swarm"
         ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "Found the remains of Ostekk-8 and Ostekk-4 among the Hollow Deck's wreckage",
+          "Followed a pull in his chest to Ostekk-2 and woke it with a jolt of lightning",
+          "Fought the behir with lightning and with twin jets of water from cannons in his own chest",
+          "Climbed down after Boogie and carried the rope through the gravity plane",
+          "Felt the pull in his chest again on the Command Deck, stronger, pointing at the beholder's body"
+        ]
       }
     ],
     "seen": [],
@@ -262,7 +294,7 @@
       "Player Concept (as known)": "Astral Elf Paladin of Beshaba; resilient and resourceful",
       "Affiliation(s)": null,
       "Personal Thread": "A paladin of Beshaba whose luck turns unlucky, now having heard the goddess herself laugh at his shoulder.",
-      "Current State": "Aboard an abandoned tyrant ship as the crew's gunner and front line, watched now by a curious voice that speaks of fate.",
+      "Current State": "Guarding the helm in the tyrant ship's cargo hold as the crew's gunner while the others scouted below.",
       "What They Last Learned": "That academy shipments route through Mr. Blip toward Toril and H’catha, and that a voice takes interest in his fate, doubting he has escaped where he came from.",
       "Notable Items": "Heavier armament acquired from the quartermaster's stores",
       "Overview (Player)": "Sol Fortuna is a tall, pale, dark-haired astral elf paladin of Beshaba with white eyes, steady even after simulated death. He anticipates danger before it arrives and puts himself between it and his crew as their gunner and front line. Beshaba has laughed at his shoulder, and now a curious voice speaks to him of fate and whether he has truly escaped his origin.",
@@ -307,6 +339,12 @@
           "Cast Arms of Hadar into the wisp swarm, dark tentacles catching the weak-limbed things",
           "Used Misfortune's Favor to draw ill luck onto his own shoulders and made the save through it"
         ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "Stayed above in the cargo hold with Ryeback, Pffred and Krik'Lit to guard the helm and the crew"
+        ]
       }
     ],
     "seen": [],
@@ -336,9 +374,9 @@
       "Player Concept (as known)": "Rogue (Soulknife); searching for somewhere they cannot yet name",
       "Affiliation(s)": null,
       "Personal Thread": "Searching for his own family, now trusting the crew to help him find them.",
-      "Current State": "Aboard an abandoned tyrant ship as the crew's captain, newly awakened to runes, powers, and a tether pulling toward home.",
-      "What They Last Learned": "That his soul knife is drawn through a small portal that is a piece of the home he seeks, and that the tether he feels is a connection to it rather than a direction on any map.",
-      "Notable Items": "Healing potion, crimson bag of holding and valuables (from Mirt's wardrobe), hidden star-etched shirt, soul knife",
+      "Current State": "Back in the cargo hold as the crew's captain, knowing where the helm must go.",
+      "What They Last Learned": "That the helm belongs on the platform beneath the dead beholder at the heart of the Command Deck.",
+      "Notable Items": "Crimson bag of holding and valuables (from Mirt's wardrobe), hidden star-etched shirt, soul knife",
       "Overview (Player)": "Tumak Swan is a slight rogue swallowed by an oversized coat, muttering reassurances to himself, whose mind often seems divided. He holds the captain's chair for the crew and keeps a curtained corner of his bunk for things he would rather not explain. He is searching for a family he cannot yet name — and has begun to manifest powers and glowing half-runes he does not understand, with a tether now pulling him toward home.",
       "Status": "Active"
     },
@@ -382,6 +420,17 @@
           "Cast a fire bolt for the first time, magic he did not know he had",
           "Summoned his soul knife for the first time as his two runes flared, drawn through a small portal, and felt for the first time a tether running toward home",
           "Heard the Runekeeper say all things find their way home as his throw went wide, and the blade curved true to strike the last wisp"
+        ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "Called up his soul knives for the second time in his life and drove one into the behir",
+          "Threw up a shield of force that the behir's bite could not get through",
+          "Poured his potion into Bartholomew after the behir dropped him",
+          "Saw the near-invisible wisps on the Command Deck gathering on Casey and Bartholomew",
+          "Worked out that the dead beholder lay on the helm's platform, and that the helm belongs there",
+          "Told Miken the crew had defeated the beholder"
         ]
       }
     ],
@@ -457,8 +506,8 @@
       "Player Concept (as known)": "Human; Druid; Wilder; newly arrived cadet with a natural helm affinity",
       "Affiliation(s)": null,
       "Personal Thread": "A newly arrived wilder cadet finding his place aboard a crew, with an uncanny natural gift for the helm.",
-      "Current State": "Aboard an abandoned tyrant ship as the crew's spelljammer, his childhood two-starred vision surfacing in his own form.",
-      "What They Last Learned": "That the two-starred constellation he saw during a childhood fall is a shape he can now call to the surface of himself.",
+      "Current State": "Back in the cargo hold as the crew's spelljammer, recovering after nearly dying in the behir's jaws.",
+      "What They Last Learned": "That magic fails on the Command Deck, and that the wisps there drain whoever they latch onto.",
       "Notable Items": null,
       "Overview (Player)": "Bartholomew is a human druid and wilder, a cadet at Caelestis with an uncanny natural affinity for the helm. Quiet and untroubled, he has slipped into the crew and settled as its spelljammer. When he shifts into a starry form, a two-starred constellation surfaces — a shape he carries from a fall he took as a child.",
       "Status": "Active"
@@ -487,6 +536,17 @@
           "Shifted into a starry form of light bearing two stars, and recognized it as the shape he saw during a childhood fall",
           "Dropped a lit match down the bottomless quarters shaft and watched wisps rise toward the light",
           "Cast into the wisp fight in the choked shafts and took a full shock for ten damage"
+        ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "Lit his staff to light the shaft for the descent",
+          "Loosed frost at the behir, then soaked it with a jet of water that scattered the lightning in its mouth",
+          "Went down in the behir's jaws and was brought back by Tumak's potion",
+          "Threw back a clockwork horror with a wave of thunder during the retreat",
+          "Found his magic would not answer on the Command Deck and drank a potion instead",
+          "Touched a wisp and was latched onto and drained, and learned to slap them off"
         ]
       }
     ],

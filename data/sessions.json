@@ -82,5 +82,26 @@
     "linked": [],
     "url": "voyages/voyage-004.html",
     "links": []
+  },
+  {
+    "id": "SES-3WhYUYi5",
+    "type": "session",
+    "slug": "voyage-005",
+    "name": "Retreat Is Always an Option",
+    "number": 5,
+    "fields": {
+      "Major Events": "The crew chose not to rest and pressed on from the cargo hold. Boogie gave the legless Ostekk-6 a pair of legs made from a small, wrongly built piece of himself, and the crew left the helm above with Sol, Ryeback, Pffred and Krik'Lit while the rest drifted down the shaft under Boogie's slowing charm to the Hollow Deck. There they found the ship's other units torn apart among wrecked clockwork horrors, and Gregory followed a pull in his chest to Ostekk-2, the one unit still holding a light, and woke it with a jolt of lightning. The clang of Boogie's shield woke a metal creature coiled in the corner, a mechanical copy of a behir that Ostekk-2 said the original Ostekk had sent. The fight went badly: Bartholomew went down in its jaws and was brought back with Tumak's potion, and when its screech drew three clockwork horrors into the room Boogie called the retreat. Boogie missed the rope and fell down the shaft, burning a gap through the flowers below him with holy fire; the others followed and found a plane where the ship's gravity turned over, and beyond it the Command Deck. There magic failed, wisps rose from the flowers and drained whoever they latched onto, and at the room's heart lay a dead beholder overgrown by a great flower, its central eye still cancelling magic. Tumak worked out that the helm belonged on the platform beneath the body. Miken followed them down, and the crew climbed back to the cargo hold, the helm and the others.",
+      "Character Beats": "Boogie built Ostekk-6 a pair of legs out of himself, wrapped the crew in his own gel and a slowing charm for the descent, blessed the crew as the behir woke, launched Ostekk-6 across the room with a leaping charm, called the retreat, and after missing the rope fell through the flowers and found the gravity plane. Gregory found the remains of Ostekk-8 and Ostekk-4, followed a pull in his chest to wake Ostekk-2, opened his own chest to fire twin jets of water at the behir, and felt the pull again on the Command Deck, stronger and pointing at the beholder's body. Tumak called up his soul knives for the second time in his life, threw up a shield of force the behir's bite could not break, poured his potion into Bartholomew, and worked out where the helm must go. Casey split into copies of himself and cut into the behir from the walls, saw that it had been coiled around something giving off a soft light, and glided down through the gravity plane without the rope. Bartholomew lit the way down, fought the behir with frost and water, went down in its jaws and came back, threw back a horror with thunder, and found on the Command Deck that his magic would not answer. Sol stayed above with Ryeback and the deckhands to guard the helm.",
+      "New Clues / Reveals": "Ostekk-6 is a unit, an automaton, one of nine that served the ship's master, Vaelorix, a beholder who simply floated between decks; the creatures destroyed nearly all the others. Below the cargo space lie the Hollow Deck, once for repairs and maintenance with a repair bay that might mend Ostekk-6, and below that the Command Deck. The mechanical behir was sent, Ostekk-2 believed, by the original Ostekk, a brilliant tinkerer, and Ostekk-2 knew no weakness for it. Partway down the shaft is a plane where the ship's gravity turns over. On the Command Deck magic fails: the dead beholder's central eye still cancels it. Wisps bloom from the flowers there, latch on and drain whoever they touch, and become solid enough to strike once latched. Clockwork horrors stand frozen mid-stride among the flowers, and Ostekk-6 slows there but keeps going. The helm belongs on the platform where the beholder's body lies. Casey saw the behir coiled around something giving off a soft light.",
+      "NPC / Faction Movement": "Miken joined the descent, came down the rope after the crew, and saw the dead beholder for himself. Ostekk-2 was woken and left on the Hollow Deck. The behir and three clockwork horrors hold the Hollow Deck. Ryeback set up a camp kitchen and, with Pffred and Krik'Lit, stayed above with Sol to guard the helm.",
+      "Consequences": "The behir is alive and wounded on the Hollow Deck, between the cargo hold and the Command Deck. Bartholomew nearly died in its jaws and Tumak's potion is spent. A rope now runs down the shaft to the gravity plane. The crew knows where the helm must go but not how to install it where magic fails.",
+      "Next Session Pressure": "Get a helm of two to three hundred pounds down past the Hollow Deck and the behir, through the gravity plane, and onto the Command Deck platform, in a room where magic will not work and wisps drain whoever they touch."
+    },
+    "voyages": [],
+    "seen": [],
+    "mentioned": [],
+    "linked": [],
+    "url": "voyages/voyage-005.html",
+    "links": []
   }
 ]

@@ -441,8 +441,8 @@
     "parentId": "LOC-Tv6kW3mn",
     "fields": {
       "Type": "Vessel",
-      "Key NPCs / Factions": "Ostekk-6, Winston Ryeback",
-      "Overview (Player)": "The tyrant ship is a stone-carved beholder vessel drifting above Toril, believed abandoned when the crew boarded it. They mean to install a helm on its command deck and fly it through H’cathan space unnoticed, but its interior is choked with a lantern-wisp bloom, prowled by clockwork horrors, and said to hide a shape-shifting mimic.",
+      "Key NPCs / Factions": "Ostekk-6, Winston Ryeback, Ostekk-2, Vaelorix",
+      "Overview (Player)": "The tyrant ship is a stone-carved beholder vessel in Toril’s orbit, whose master, the beholder Vaelorix, the crew found dead and overgrown on its Command Deck. They mean to install a helm there and fly it through H’cathan space unnoticed, but the ship is choked with a lantern-wisp bloom, prowled by clockwork horrors and a mechanical behir, and said to hide a shape-shifting mimic, and on its Command Deck magic fails.",
       "Status": "Accessible"
     },
     "voyages": [
@@ -461,11 +461,22 @@
           "The crew dispatched the clockwork horrors in the cargo hold and cleared the lantern-wisp bloom choking the garden shaft, but found the wisps persisted by some unknown cause",
           "A deck below waits reachable only by rope; the crew held to rest before descending, sensing something waiting there"
         ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "Has no windows; circling Toril, its hours run close to the academy's",
+          "Its decks are joined by shafts once served by a small propulsion system for its units, no longer working",
+          "Below the cargo space lie the Hollow Deck and then the Command Deck",
+          "Partway down the shaft, a plane where the ship's gravity turns over lies just above the Command Deck",
+          "Its master, the beholder Vaelorix, lies dead on the Command Deck"
+        ]
       }
     ],
     "seen": [
       3,
-      4
+      4,
+      5
     ],
     "mentioned": [],
     "linked": [],
@@ -484,7 +495,20 @@
       "name": "Toril",
       "url": "navigation-records/toril.html"
     },
-    "within": [],
+    "within": [
+      {
+        "slug": "the-hollow-deck",
+        "name": "The Hollow Deck",
+        "url": "navigation-records/the-hollow-deck.html",
+        "type": "Room"
+      },
+      {
+        "slug": "the-command-deck",
+        "name": "The Command Deck",
+        "url": "navigation-records/the-command-deck.html",
+        "type": "Room"
+      }
+    ],
     "items": [
       {
         "id": "ITM-Cm8rT3wk",
@@ -641,5 +665,124 @@
         "type": "Planet"
       }
     ]
+  },
+  {
+    "id": "LOC-p6GYEwKt",
+    "type": "location",
+    "slug": "the-hollow-deck",
+    "name": "The Hollow Deck",
+    "kind": "Room",
+    "parentId": "LOC-Rp7kW4vn",
+    "fields": {
+      "Type": "Room",
+      "Key NPCs / Factions": "Ostekk-2, The Behir",
+      "Overview (Player)": "The Hollow Deck lies below the tyrant ship’s cargo space: a round, enclosed room shaped like a pit, its walls lined with unfamiliar machinery. It was the ship’s deck for repairs and maintenance, with a repair bay on its far side. Its floor is strewn with the torn-apart remains of the ship’s automaton units and wrecked clockwork horrors, and a mechanical behir lies coiled in the corner beside the bay.",
+      "Status": "Accessible"
+    },
+    "voyages": [
+      {
+        "number": 5,
+        "bullets": [
+          "Reached from the shaft through a side opening carved and scored as if cut through the ship one pass at a time",
+          "A round room shaped like a pit, walls lined with machinery, strewn with wrecked units and clockwork horrors",
+          "Once the ship's deck for repairs and maintenance, run by Vaelorix, with a repair bay on its far side",
+          "A mechanical behir lies coiled beside the repair bay; the crew fought it there and retreated"
+        ]
+      }
+    ],
+    "seen": [
+      5
+    ],
+    "mentioned": [],
+    "linked": [
+      "NPC-nmdnCFvr"
+    ],
+    "url": "navigation-records/the-hollow-deck.html",
+    "links": [
+      {
+        "id": "NPC-nmdnCFvr",
+        "name": "Ostekk-2",
+        "type": "npc",
+        "slug": "ostekk-2",
+        "url": "dossiers/ostekk-2.html"
+      },
+      {
+        "id": "NPC-MZZkLc0g",
+        "name": "The Behir",
+        "type": "npc",
+        "slug": "the-behir",
+        "url": "dossiers/the-behir.html"
+      },
+      {
+        "id": "QST-Ok5mB8tz",
+        "name": "Ostekk-6",
+        "type": "quest",
+        "slug": "ostekk-6-thread",
+        "url": "quests/ostekk-6-thread.html"
+      }
+    ],
+    "parent": {
+      "slug": "the-tyrant-ship",
+      "name": "The Tyrant Ship",
+      "url": "navigation-records/the-tyrant-ship.html"
+    },
+    "within": []
+  },
+  {
+    "id": "LOC-4wNvxXYk",
+    "type": "location",
+    "slug": "the-command-deck",
+    "name": "The Command Deck",
+    "kind": "Room",
+    "parentId": "LOC-Rp7kW4vn",
+    "fields": {
+      "Type": "Room",
+      "Key NPCs / Factions": "Vaelorix",
+      "Overview (Player)": "The Command Deck lies at the bottom of the tyrant ship’s shaft, past a plane where gravity turns over. It is a large room with side passages, its air drifting with colored light and its walls overgrown with flowers that loose wisps. At its center the beholder Vaelorix lies dead on the helm platform, a great dark flower grown out of his body, and his central eye still cancels magic in the room. Clockwork horrors stand frozen mid-stride among the flowers.",
+      "Status": "Accessible"
+    },
+    "voyages": [
+      {
+        "number": 5,
+        "bullets": [
+          "Reached through a carved opening just past the plane where the ship's gravity turns over",
+          "A large room of drifting colored light, its walls overgrown with flowers, a great dark flower rising from a mound at its center",
+          "Clockwork horrors stand frozen mid-stride among the flowers",
+          "Magic fails there: the dead beholder at its heart still cancels it with its central eye",
+          "Wisps bloom from the flowers and drift toward the living, latching on and draining them",
+          "The beholder's body lies on the platform where the helm must go"
+        ]
+      }
+    ],
+    "seen": [
+      5
+    ],
+    "mentioned": [],
+    "linked": [
+      "NPC-lfleUUeT"
+    ],
+    "url": "navigation-records/the-command-deck.html",
+    "links": [
+      {
+        "id": "NPC-lfleUUeT",
+        "name": "Vaelorix",
+        "type": "npc",
+        "slug": "vaelorix",
+        "url": "dossiers/vaelorix.html"
+      },
+      {
+        "id": "QST-Xr4mW8vn",
+        "name": "The Tyrant Ship and the H’catha Meteor",
+        "type": "quest",
+        "slug": "the-tyrant-ship-and-the-hcatha-meteor",
+        "url": "quests/the-tyrant-ship-and-the-hcatha-meteor.html"
+      }
+    ],
+    "parent": {
+      "slug": "the-tyrant-ship",
+      "name": "The Tyrant Ship",
+      "url": "navigation-records/the-tyrant-ship.html"
+    },
+    "within": []
   }
 ]

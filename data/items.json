@@ -437,10 +437,17 @@
           "As it left him, his two half-runes flared, and he felt for the first time a tether toward home — the portal a piece of that somewhere",
           "Thrown wide, it curved true and struck the last wisp as the Runekeeper said all things find their way home"
         ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "Called up a second time against the behir: one blade flickered loose, the other sank in and drove a pulse of force into it"
+        ]
       }
     ],
     "seen": [
-      4
+      4,
+      5
     ],
     "mentioned": [],
     "linked": [

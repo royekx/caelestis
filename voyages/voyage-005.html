@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelestis — Voyage 005</title>
+<link rel="stylesheet" href="../styles/caelestis.css">
+<link rel="stylesheet" href="../styles/board.css">
+<link rel="stylesheet" href="../styles/register.css">
+<style>
+  /* ── VIDEO ── */
+  .video-block { margin-bottom: 2.4rem; }
+  .video-container {
+    position: relative; width: 100%; padding-bottom: 56.25%;
+    background: #0a0814; border: 1px solid var(--gold-rule); overflow: hidden;
+  }
+  .video-container iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+  .video-placeholder {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 0.8rem;
+  }
+  .video-placeholder svg { width: 48px; color: var(--gold-dim); opacity: 0.4; }
+  .video-placeholder p {
+    font-family: 'Cinzel', serif; font-size: 0.835rem;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted);
+  }
+  .video-link { margin-top: 0.5rem; font-size: 0.963rem; font-style: italic; color: var(--text-muted); }
+  .video-link a { color: var(--gold-dim); text-decoration: none; }
+  .video-link a:hover { color: var(--gold); }
+
+  /* ── LOG META ── */
+  .log-meta {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 1.6rem; flex-wrap: wrap;
+  }
+  .log-badge {
+    font-family: 'Cinzel', serif; font-size: 0.835rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    background: var(--gold-faint); border: 1px solid var(--gold-rule);
+    color: var(--gold-dim); padding: 0.25rem 0.6rem;
+  }
+  .log-type-badge {
+    font-family: 'Cinzel', serif; font-size: 0.812rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); border: 1px solid var(--gold-rule);
+    padding: 0.25rem 0.6rem;
+  }
+
+  /* ── AT A GLANCE ── */
+  .voyage-glance {
+    background: var(--bg-card);
+    border: 1px solid var(--gold-rule);
+    border-left: 3px solid var(--gold-dim);
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 2.2rem;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .glance-synopsis {
+    font-size: 1.04rem; line-height: 1.72; color: var(--text);
+    font-style: italic; padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gold-rule);
+  }
+  .glance-row { display: grid; grid-template-columns: 90px 1fr; gap: 0.8rem; align-items: flex-start; }
+  .glance-label {
+    font-family: 'Cinzel', serif; font-size: 0.789rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold-dim); padding-top: 0.25rem;
+  }
+  .glance-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .chip {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.963rem; padding: 0.15rem 0.6rem;
+    border: 1px solid var(--gold-rule);
+    color: var(--text); background: rgba(201,153,58,0.05);
+    text-decoration: none; white-space: nowrap;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .chip:hover { border-color: var(--gold-dim); color: var(--gold-light); }
+  .chip-npc { border-color: rgba(30,74,122,0.35); color: var(--text-dim); background: rgba(30,74,122,0.05); }
+  .chip-npc:hover { border-color: rgba(30,74,122,0.7); color: #7aaad0; }
+  .chip-place { border-color: rgba(90,45,130,0.3); color: var(--text-dim); background: rgba(90,45,130,0.04); }
+  .chip-item { border-color: rgba(160,120,32,0.4); color: var(--text-dim); background: rgba(160,120,32,0.05); }
+  .chip-item:hover { border-color: var(--gold); color: var(--gold-light); }
+
+  /* ── ACCOUNT ACCORDIONS ── */
+  .account {
+    border: 1px solid var(--gold-rule);
+    background: var(--bg-card);
+    margin-bottom: 1.2rem;
+  }
+  .account > summary {
+    list-style: none; cursor: pointer;
+    padding: 1rem 1.3rem;
+    display: flex; align-items: center; gap: 0.9rem;
+    transition: background 0.2s;
+  }
+  .account > summary::-webkit-details-marker { display: none; }
+  .account > summary:hover { background: rgba(201,153,58,0.05); }
+  .account-caret {
+    width: 11px; flex-shrink: 0; color: var(--gold-dim);
+    transition: transform 0.22s ease;
+  }
+  .account[open] > summary .account-caret { transform: rotate(90deg); }
+  .account-name {
+    font-family: 'Cinzel', serif; font-size: 0.92rem;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold);
+  }
+  .account-note {
+    font-size: 0.94rem; font-style: italic; color: var(--text-muted);
+    margin-left: auto; text-align: right;
+  }
+  .account-body { padding: 0.4rem 1.5rem 1.8rem; border-top: 1px solid var(--gold-rule); }
+  .account-body > *:first-child { margin-top: 1.4rem; }
+
+  /* ── BRIEF SECTIONS ── */
+  .brief-section { margin-bottom: 1.8rem; }
+  .brief-section:last-child { margin-bottom: 0; }
+  .brief-heading {
+    font-family: 'Cinzel', serif; font-size: 0.877rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.7rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .brief-heading::after { content: ''; flex: 1; height: 1px; background: var(--gold-rule); }
+  .brief-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.45rem; }
+  .brief-list li {
+    font-size: 1.01rem; line-height: 1.55; color: var(--text);
+    padding-left: 1.1rem; position: relative;
+  }
+  .brief-list li::before { content: '\203A'; position: absolute; left: 0; color: var(--gold-dim); }
+  .brief-list li b { font-weight: 600; }
+  .brief-list li em { color: var(--text-dim); font-style: italic; }
+
+  /* ── NARRATIVE PROSE ── */
+  .narrative { max-width: 720px; }
+  .narrative p {
+    font-size: 1.05rem; line-height: 1.85; color: var(--text);
+    margin-bottom: 1.4rem; letter-spacing: 0.01em;
+  }
+  .narrative p:first-child::first-letter {
+    font-family: 'Cinzel', serif; font-size: 3.2rem; font-weight: 700;
+    float: left; line-height: 0.75; margin-right: 0.08em; margin-top: 0.12em;
+    color: var(--gold);
+  }
+  .chapter-break { display: flex; align-items: center; gap: 1rem; margin: 2.2rem 0 1.8rem; }
+  .chapter-break::before, .chapter-break::after { content: ''; flex: 1; height: 1px; background: var(--gold-rule); }
+  .chapter-break-text {
+    font-family: 'Cinzel', serif; font-size: 0.835rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold-dim); white-space: nowrap; flex-shrink: 0;
+  }
+
+  @media(max-width:560px){
+    .glance-row { grid-template-columns: 1fr; gap: 0.3rem; }
+    .glance-label { padding-top: 0; }
+    .account-note { display: none; }
+    .account-body { padding: 0.4rem 1.1rem 1.5rem; }
+  }
+
+  /* ── ACCOUNT TABS ──
+     Browser-style: rounded tops, the active tab merging into the panel
+     below it. Panels stay in the DOM; JS only toggles visibility. */
+  .account-tabs { display: flex; gap: 0.25rem; flex-wrap: wrap; position: relative; z-index: 2; }
+  .account-tab {
+    flex: 0 1 auto; display: flex; flex-direction: column; gap: 0.15rem; text-align: left;
+    padding: 0.7rem 1.35rem 0.75rem;
+    background: rgba(255,255,255,0.015);
+    border: 1px solid var(--rule); border-bottom: none;
+    border-radius: 12px 12px 0 0; margin-bottom: -1px;
+    cursor: pointer; font: inherit; color: inherit;
+    transition: background .18s ease, color .18s ease;
+  }
+  .account-tab:hover { background: rgba(201,153,58,0.06); }
+  .account-tab.is-active { background: var(--bg-card); border-color: var(--ice-dim); padding-bottom: 0.85rem; }
+  .account-tab-name {
+    font-family: 'Cinzel', serif; font-size: 0.856rem; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--text-muted); white-space: nowrap;
+  }
+  .account-tab.is-active .account-tab-name { color: var(--gold); }
+  .account-tab-note { font-size: 0.909rem; font-style: italic; color: var(--text-muted); white-space: nowrap; }
+  .account-tab:not(.is-active) .account-tab-note { opacity: 0.6; }
+  .account-panels { position: relative; z-index: 1; }
+  .account-panel {
+    border: 1px solid var(--ice-dim); border-radius: 0 12px 12px 12px;
+    background: var(--bg-card);
+  }
+  .js-tabs .account-panel { display: none; }
+  .js-tabs .account-panel.is-active { display: block; }
+  @media (max-width: 720px) {
+    .account-tab-note { display: none; }
+    .account-tab { padding: 0.6rem 1rem 0.65rem; flex: 1 1 auto; align-items: center; }
+    .account-tab-name { font-size: 0.835rem; letter-spacing: 0.1em; }
+  }
+
+  .voyage-glance { border-radius: 12px; }
+  .chip { border-radius: 999px; }
+  .log-badge, .log-type-badge { border-radius: 999px; }
+  .video-container { border-radius: 10px; }
+  .voyage-nav-bar, .voyage-nav-bottom { border-radius: 999px; }
+</style>
+  <script src="../data/bearing.js" defer></script>
+  <script src="../scripts/nav.js" defer></script>
+</head>
+<body data-pagefind-filter="section:voyages">
+<div class="page-content">
+  <div class="page-header">
+    <div class="page-emblem" data-pagefind-ignore>
+      <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="0" y1="20" x2="42" y2="20" stroke-width="0.6" opacity="0.4"/>
+        <polyline points="38,15 43,20 38,25" opacity="0.5"/>
+        <polyline points="33,16 38,20 33,24" opacity="0.3"/>
+        <g transform="translate(60,20)">
+          <line x1="0" y1="-11" x2="0" y2="-6"/><line x1="0" y1="6" x2="0" y2="11"/>
+          <line x1="-11" y1="0" x2="-6" y2="0"/><line x1="6" y1="0" x2="11" y2="0"/>
+          <line x1="-7.5" y1="-7.5" x2="-4.5" y2="-4.5"/><line x1="4.5" y1="-4.5" x2="7.5" y2="-7.5"/>
+          <line x1="-7.5" y1="7.5" x2="-4.5" y2="4.5"/><line x1="4.5" y1="4.5" x2="7.5" y2="7.5"/>
+          <circle cx="0" cy="0" r="4"/><circle cx="0" cy="0" r="1.2" fill="currentColor" stroke="none"/>
+        </g>
+        <polyline points="82,15 77,20 82,25" opacity="0.3"/>
+        <polyline points="87,16 82,20 87,24" opacity="0.5"/>
+        <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="page-eyebrow">Voyage 005</div>
+    <div class="page-title" data-pagefind-meta="title">Retreat Is Always an Option</div>
+  </div>
+
+  <div class="content">
+
+    <div class="log-meta">
+      <span class="log-badge">Voyage 005</span>
+      <span class="log-type-badge">Crew Log</span>
+    </div>
+
+    <div class="voyage-nav-bar" data-pagefind-ignore>
+      <a class="voyage-nav-link" href="voyage-004.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Previous Voyage</a>
+      <a class="voyage-nav-center" href="index.html">All Voyages</a>
+      <span class="voyage-nav-link disabled">Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></span>
+    </div>
+
+    <!-- AT A GLANCE -->
+    <div class="voyage-glance">
+      <div class="glance-synopsis">The crew skips the rest and goes down. Boogie gives <b>Ostekk-6</b> legs, and on the Hollow Deck Gregory wakes <b>Ostekk-2</b> just as a mechanical <b>behir</b> wakes in the corner; when its screech brings clockwork horrors, the crew retreats. Boogie falls down the shaft and through a plane where gravity turns over, and the crew follows him onto the <b>Command Deck</b>, where magic fails, a dead beholder lies overgrown on the platform, and the helm will have to go.</div>
+      <div class="glance-row">
+        <span class="glance-label">The Crew</span>
+        <div class="glance-chips">
+          <a class="chip" href="../crew-manifest/boogie.html">Boogie</a>
+          <a class="chip" href="../crew-manifest/sol-fortuna.html">Sol</a>
+          <a class="chip" href="../crew-manifest/casey-geim.html">Casey</a>
+          <a class="chip" href="../crew-manifest/gregory.html">Gregory</a>
+          <a class="chip" href="../crew-manifest/tumak-swan.html">Tumak</a>
+          <a class="chip" href="../crew-manifest/bartholomew-grayson.html">Bartholomew</a>
+        </div>
+      </div>
+      <div class="glance-row">
+        <span class="glance-label">Key NPCs</span>
+        <div class="glance-chips">
+          <a class="chip chip-npc" href="../dossiers/ostekk-6.html">Ostekk-6</a>
+          <a class="chip chip-npc" href="../dossiers/ostekk-2.html">Ostekk-2</a>
+          <a class="chip chip-npc" href="../dossiers/the-behir.html">The Behir</a>
+          <a class="chip chip-npc" href="../dossiers/vaelorix.html">Vaelorix</a>
+          <a class="chip chip-npc" href="../dossiers/miken.html">Miken</a>
+          <a class="chip chip-npc" href="../dossiers/winston-ryeback.html">Ryeback</a>
+        </div>
+      </div>
+      <div class="glance-row">
+        <span class="glance-label">Locations</span>
+        <div class="glance-chips">
+          <a class="chip chip-place" href="../navigation-records/the-tyrant-ship.html">The Tyrant Ship</a>
+          <a class="chip chip-place" href="../navigation-records/the-hollow-deck.html">The Hollow Deck</a>
+          <a class="chip chip-place" href="../navigation-records/the-command-deck.html">The Command Deck</a>
+        </div>
+      </div>
+      <div class="glance-row">
+        <span class="glance-label">Items</span>
+        <div class="glance-chips">
+          <a class="chip chip-item" href="../inventory/entries/tumaks-soul-knife.html">Tumak's Soul Knife</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ACCOUNTS — tabbed. Panels stay in the DOM so Pagefind indexes them;
+     the inactive ones hide with CSS, not removal. -->
+    <div class="railed">
+<div class="account-tabs tabrail" data-pagefind-ignore>
+      <button class="account-tab is-active" type="button" data-panel="brief" aria-selected="true">
+        <span class="account-tab-name">Brief Account</span>
+        <span class="account-tab-note">What happened, beat by beat</span>
+      </button>
+      <button class="account-tab" type="button" data-panel="full" aria-selected="false">
+        <span class="account-tab-name">Full Account</span>
+        <span class="account-tab-note">The whole story, as written</span>
+      </button>
+      <button class="account-tab" type="button" data-panel="recording" aria-selected="false">
+        <span class="account-tab-name">Recording</span>
+        <span class="account-tab-note">The session as it was played</span>
+      </button>
+    </div>
+<div class="account-panels panels">
+      <section class="account-panel is-active" id="brief" data-panel="brief">
+        <div class="account-body">
+<div class="brief-section">
+        <div class="brief-heading">Legs for Ostekk-6</div>
+        <ul class="brief-list">
+          <li>The crew decides against resting. <b>Miken</b> asks what they fought; <b>Ryeback</b> names the will-o'-wisps, tells them to keep watch, and goes off to set up a camp kitchen, reminding them the helm is their problem.</li>
+          <li><b>Ostekk-6</b> tells them plainly: he is a unit, an automaton.</li>
+          <li><b>Boogie</b> gives him legs: a small, wrongly built replica of himself that swallows Ostekk-6 at the waist and walks him around backwards, Ostekk-6 calling out directions to it.</li>
+        </ul>
+      </div>
+
+        <div class="brief-section">
+        <div class="brief-heading">The Shaft</div>
+        <ul class="brief-list">
+          <li>The helm waits on its floating dolly at the lip of the shafts. <b>Bartholomew</b> lights his staff; fifty feet down, a carved opening breaks the shaft wall.</li>
+          <li>Ostekk-6 explains the ship: his master was <b>Vaelorix</b>, a beholder who simply floated between decks. There were nine units, and the creatures destroyed nearly all of them. Below the cargo space lie the Hollow Deck, then the Command Deck.</li>
+          <li><b>Sol</b> stays above with Ryeback, <b>Pffred</b> and <b>Krik'Lit</b> to guard the helm. Boogie wraps the rest in his own gel and a slowing charm, and they drift down the shaft and into the opening.</li>
+        </ul>
+      </div>
+
+        <div class="brief-section">
+        <div class="brief-heading">The Hollow Deck</div>
+        <ul class="brief-list">
+          <li>A round room shaped like a pit, its walls lined with machinery, strewn with the wreckage of the ship's units and of clockwork horrors. Something large and metal lies coiled in the corner, whirring.</li>
+          <li>Ostekk-6 says this was the deck for repairs and maintenance. A repair bay on the far side could fix his legs, if it works and has parts. It sits beside the coiled thing.</li>
+          <li><b>Gregory</b> finds the remains of Ostekk-8 and Ostekk-4, then feels a pull in his chest that leads him to <b>Ostekk-2</b>, whole but for one arm, a dim light in its eyes.</li>
+          <li>Creeping toward the bay, Boogie's shield rings off a dead horror. The thing in the corner uncoils and lifts a snake's head with metal horns and deep blue eyes.</li>
+        </ul>
+      </div>
+
+        <div class="brief-section">
+        <div class="brief-heading">The Behir</div>
+        <ul class="brief-list">
+          <li>Gregory jolts Ostekk-2 awake with lightning. It names the creature: the entity that destroyed its comrades, made in imitation of a <b>behir</b>, sent by <em>the original Ostekk</em>.</li>
+          <li>The behir moves faster than anyone expects, up the walls and across the ceiling. <b>Tumak</b> calls up his soul knives for the second time in his life and throws up a shield of force its bite cannot break. <b>Casey</b> splits into copies of himself and cuts into it from the walls. Bartholomew's water scatters the lightning in its mouth.</li>
+          <li>Boogie launches Ostekk-6 across the room with a leaping charm. What Ostekk-6 was meant to do when he landed was never settled.</li>
+          <li>The behir catches Bartholomew in its jaws and drops him. Ostekk-2 knows no weakness: the original Ostekk is a brilliant tinkerer, and <em>retreat is always an option.</em> Tumak pours his potion into Bartholomew and brings him back.</li>
+          <li>The behir screeches, and three clockwork horrors come clanking out of the shafts. Boogie makes the call: <em>we gotta go.</em></li>
+        </ul>
+      </div>
+
+        <div class="brief-section">
+        <div class="brief-heading">The Fall</div>
+        <ul class="brief-list">
+          <li>The behir breathes lightning across the crew as they break for the rope. Casey notices it had been coiled around something giving off a soft light.</li>
+          <li>Boogie leaps for the rope in the dark, misses, and falls. Flowers on the shaft walls start loosing lights around him; he calls on his faith and holy fire burns a gap through them.</li>
+          <li>He stops in midair: a plane where the ship's gravity turns over. He pulls himself through, finds a second carved opening spilling colored light, and calls the others down.</li>
+          <li>The rest follow, Gregory carrying the rope through the plane, Casey gliding down without it. <b>Miken</b> comes down behind them.</li>
+        </ul>
+      </div>
+
+        <div class="brief-section">
+        <div class="brief-heading">The Command Deck</div>
+        <ul class="brief-list">
+          <li>A large room of drifting colored light, its walls overgrown with flowers, a great dark flower rising from a mound at its center. Clockwork horrors stand frozen mid-stride among the flowers. The room makes them feel incomplete.</li>
+          <li>Magic fails: Bartholomew's healing will not come, nor Boogie's lights. Ostekk-6 stutters and slows but keeps talking.</li>
+          <li>The mound is a body. Boogie sees the eyes on their stalks and knows it: a <b>beholder</b>, its central eye still cancelling magic in the room.</li>
+          <li>Wisps bloom from the flowers, latch onto Bartholomew and Casey and drain them, and turn solid enough to slap away. Gregory feels the pull in his chest again, stronger, pointing at the body.</li>
+          <li>Tumak works it out: the beholder lies on a platform, and the helm goes there. Ostekk-6 confirms it is where Vaelorix flew the ship.</li>
+          <li>Miken sees the beholder. <em>We defeated it,</em> Tumak tells him. <em>All hands on deck,</em> says Miken. The crew climbs back to Sol and the helm, knowing where it must go and what lies between.</li>
+        </ul>
+      </div>
+        </div>
+      </section>
+
+      <section class="account-panel" id="full" data-panel="full">
+        <div class="account-body">
+<div class="narrative">
+  
+        <p>The crew did not rest.</p>
+  
+        <p>They had cleared the cargo hold and burned the bloom out of the garden shaft, and they were bruised from both, but when they took stock they found they had more left in them than they had feared. Sol had carried the worst of it and was still on his feet. So they gathered in the open space among the crates, where Winston Ryeback's torch threw the only real light, and decided what came next.</p>
+  
+        <p>One of them wondered aloud what night and day even meant out here. The ship hung in Toril's orbit, a long way off from Caelestis but circling the same world, so its hours ran close to the academy's own. There was no telling which hour it was now. The tyrant ship had no windows, no seam anywhere to let the sun in. They had arrived during the day, and that was all they knew.</p>
+  
+        <p>Miken came over, rattled, still shaking off the fight. He had cast a few spells to help them and wanted to know what those things had been. Ryeback, the hippogriff, answered for the crew as he came up in the apron he had not yet cooked in: will-o'-wisps, deadly, and someone should keep watch in case they came back in the night. Then he went off toward the way they had come in, muttering a menu to himself, to set up a camp kitchen. Before he left he reminded them that the helm still had to be installed somewhere, and that getting it there was their problem and not his.</p>
+  
+        <p>Miken offered to come with them, or to stay and guard the crew, whichever they needed. He was here to help, he said; they had helped him. He was coming along for the ride.</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">Legs for Ostekk-6</span></div>
+  
+        <p>Tumak wanted to know how the broken figure was doing. Ostekk-6 sat where they had propped him, his lower half gone. "I am a unit," he told them. "An automaton."</p>
+  
+        <p>If they meant to bring him, he would need to move, and he had no legs to move on. Boogie solved it. A glob of himself dropped from his hand to the deck and drew itself up into a small replica of Boogie built entirely wrong: a short stump of a body, no neck at all, the head sitting straight on broad shoulders, and two enormous legs with calves like barrels, ending in feet that were somehow also flip-flops. It pattered over to Ostekk-6, who greeted it politely and asked how he might be of assistance. The little Boogie answered by swallowing Ostekk-6 at the waist, lifting him, and walking off.</p>
+  
+        <p>It walked backwards, as far as Ostekk-6 was concerned. He faced one way while his new legs went the other, and he had to learn to call out directions to the thing carrying him. Boogie could not steer it from inside his own head; Ostekk-6 would have to tell it where he wanted to go. "Understood," said Ostekk-6. "I am not accustomed to giving commands to my superiors."</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">The Shaft</span></div>
+  
+        <p>That left the helm. A spelljamming helm weighs somewhere between two and three hundred pounds, which every cadet remembered from class, and the crew had it on a floating dolly at the lip of the shafts. Bartholomew tapped his staff and lit it, and they leaned over and looked down. The shaft dropped straight. About fifty feet below, at the edge of the light, an opening broke the wall. The stone around it had been carved rather than built, grooved and scored and nearly smooth, as if something had cut its way through the ship one pass at a time.</p>
+  
+        <p>Ostekk-6 told them how the ship had worked. There had been a small propulsion system to carry the units between floors, no longer working. His master, Vaelorix, had simply floated. Vaelorix was a beholder. Ostekk-6 had not seen him since the creatures boarded, and the creatures had killed nearly all the other units. There had been nine of them in all. Below the cargo space, he said, was the Hollow Deck, and below that, the Command Deck.</p>
+  
+        <p>The crew made a plan. Sol would stay above with Ryeback, Pffred and Krik'Lit, to guard the helm and the crew. A rope was tied off to the helm itself. The rest would go down first and see what they were dealing with before anyone tried to lower three hundred pounds into the dark.</p>
+  
+        <p>Boogie had his own idea about the going down. He spat small blobs of gel onto each of them, wrapped them in the soft bounce of his own body, and laid a slowing charm over all of it so they would drift rather than drop. Then they took the leap.</p>
+  
+        <p>They fell slowly through the dark, twenty feet, thirty, fifty, Bartholomew's staff holding its light the whole way. The shaft looked the same until the side opening appeared. Below it the shaft went on, and Bartholomew's light picked out flowers growing across it farther down, the same lattice that had choked the garden shaft. The crew tilted themselves sideways and floated into the opening, onto the Hollow Deck.</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">The Hollow Deck</span></div>
+  
+        <p>It was a round, enclosed room shaped like a pit, its walls rising up around them and lined with machinery none of them recognized. Debris lay everywhere. So did the units: other automatons, the same make as Ostekk-6, torn apart and scattered, and among them the broken pieces of clockwork horrors. In the far corner something large and metal lay coiled against the wall, and from it came a low whirring and clanking.</p>
+  
+        <p>Ostekk-6 did not know what it was. It was foreign to this ship. This deck, he told them, was for repairs and maintenance, and there was a repair bay on the far side of the room where he could fix his own legs, if the bay still worked and it had parts. Vaelorix had run it. The bay was right beside the coiled thing.</p>
+  
+        <p>Gregory knelt among the remains. Much of the scrap was the same material as Ostekk-6, and two pieces still carried their markings: Ostekk-8, and, more broken, Ostekk-4. These were the other units, taken apart. Then he felt a nudge in his chest, a small pull, and he followed it, moving pieces aside until he found a unit lying whole except for one missing arm, with a dim light still in its eyes. Its marking read Ostekk-2.</p>
+  
+        <p>While Bartholomew held his light over Gregory, Casey, Tumak and Boogie crept toward the coiled thing and the repair bay beside it. They were nearly there when Boogie's shield struck the remains of a clockwork horror. The ring of it filled the domed room.</p>
+  
+        <p>The thing in the corner shifted. Its neck uncoiled from its body, and a snake's head came up, crowned with metal horns, its eyes deep blue. They swept the room and settled on the three of them.</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">The Behir</span></div>
+  
+        <p>Gregory got there first. He charged his hands with a quick pulse of lightning and put it into Ostekk-2, and then once more, until the unit sat up and its eyes brightened and dulled back to an ordinary working glow. "Hello," it said. "I am Ostekk-2. How can I be of service?"</p>
+  
+        <p>Gregory asked what had happened here and what the thing behind them was. Ostekk-2 turned toward it far more slowly than anyone wanted. That, it said, was the entity that had boarded the ship and destroyed most of its comrades. It had been sent, Ostekk-2 believed, by the original Ostekk. It was made in imitation of a behir: a serpentine creature, and a deadly one. The jolt would only hold Ostekk-2 for a few moments.</p>
+  
+        <p>Bartholomew struck first. Frost grew over his hands as his body shifted toward something built for the cold, and he loosed it at the creature. The ice melted off its metal hide. Tumak called up his soul knives, only the second time in his life he had ever done it, and his grip on them was still uncertain. One flickered loose before it reached the creature; the other sank in and drove a pulse of force into it. It barely reacted, but it noticed. Casey flipped backward and left a copy of himself standing where he had been, then flipped again and left another, until there were three of him passing daggers between them faster than anyone could follow. Boogie's inner stone sparkled, and he pointed at Casey, Tumak and Bartholomew one by one, and each of them felt his blessing settle over them.</p>
+  
+        <p>Then the behir moved, faster than any of them had expected. It rose onto two of its four stout legs like a snake standing on its tail, flattened itself, and poured through the gap between Casey and Tumak and up the wall. One of Casey's copies slashed it as it went. From its perch it lunged at Tumak. He did not like the way it moved, and he threw up his hands and winced, and a shield of force flared up from his chest. The bite struck it and stopped. The behir tried again, and the shield held again, and it squirmed around him, unable to understand why it could not get purchase. Light began to build at its base and climb its body until electricity crackled in its mouth.</p>
+  
+        <p>Gregory's lightning arced against it, bolt answering bolt, and faded. Bartholomew's throat swelled like a bullfrog's, and he spat a jet of water that hit it full and soaked it through; the electricity in its mouth jumped out across the water and scattered. Tumak's blades found it a second time. Then he ran, and its snap at his back missed as his body bent in a way it did not expect. Casey ran up the wall, and his copies climbed with him, and he cut into it with both daggers. He felt Boogie in the strike, a small correction to his hand, as if someone had nudged the blade onto its line.</p>
+  
+        <p>Boogie had a plan for Ostekk-6, and nobody else understood it. He had the little legs do some squats, then filled them with a leaping charm, and Ostekk-6, still facing the wrong way, launched himself forty feet across the room toward the behir. He landed close. What he was meant to do when he got there was never settled.</p>
+  
+        <p>The behir went for the one who had hurt it most. It came down the wall, caught Bartholomew in its jaws, held him there, and stared at the rest of them over his body with its blue eyes. Then it dropped him, and he lay where he fell. Luck shifted in the crew's favor around him, and Gregory, in his honor, opened his own chest. Two small cannons pushed out of it and fired twin jets of water into the behir. Gregory asked Ostekk-2 if there was anything at all they could use against it. Ostekk-2 knew of no weakness. The original Ostekk was a brilliant tinkerer, it said. Retreat is always an option. It apologized for not being of more help.</p>
+  
+        <p>The behir screeched. Its mouth did not move; the sound simply came out of it. Tumak ran to Bartholomew and poured his potion into him, and Bartholomew came back. Casey ran the wall again and struck with both blades, and both of them landed.</p>
+  
+        <p>Then they heard clanking steps in the shafts, metal on stone, whirring and screeching, and three clockwork horrors came into the room. One had a running saw, one an arm that ended in a chainsaw, one only blades. All three had jagged metal teeth.</p>
+  
+        <p>Boogie was the medic, and he made the call. "We gotta go."</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">The Fall</span></div>
+  
+        <p>He sent Ostekk-6's legs running toward Tumak, Ostekk-6 still facing backwards the whole way. The behir climbed to the ceiling, and lightning broke from its mouth in a wide cone across Bartholomew and Gregory. Gregory made for the side tunnel and the rope. Bartholomew followed, and a wave of thunder burst out from him and threw one of the horrors back. Tumak was caught in it too, flung ten feet clear, which got him out from between two of them. Casey had his eye on the machine the whole time. When the behir first uncoiled, he had seen that it was curled around something giving off a soft light, though he could not make out what it was.</p>
+  
+        <p>Boogie leapt for the rope in the dark and missed it. He told himself he had it right up until he was falling down the shaft. The others heard him go.</p>
+  
+        <p>Gregory tied on more rope and climbed down after him. As he did he saw a figure coming down the rope from above. Bartholomew's light caught the brown-green of a cadet's uniform: Miken. The horrors pressed at the tunnel mouth and kept missing; the crew's luck held against them. Bartholomew followed Gregory down. Tumak cut into one of the horrors as he backed away. Casey went last, because he had the easiest way down.</p>
+  
+        <p>Boogie fell twenty feet, thirty, fifty, through the dark. Small bobbles of light began to show around him, rising out of flowers on the shaft walls. Boogie called on his faith, and holy fire flared down onto the flowers below him. They writhed back from it and opened a gap. He fell through it, curled up and braced for the ground.</p>
+  
+        <p>Then he stopped, with no ground under him. For a moment he thought he had died, but there was no pain and no impact, only floating, his body caught between something pulling it up and something pulling it down. He had reached a plane where the ship's gravity turned over. If he pulled himself down, down would become up. Five or ten feet past the plane there was another opening in the shaft, carved like the one above, and multicolored light was spilling out of it. He called up to the others that it was safer down here. Then he pulled himself through. It felt like dragging himself out of thick mud, until the pull flipped and he was climbing, and he caught the lip and hauled himself up.</p>
+  
+        <p>The rope could not cross the plane alone. When it dropped, it stopped at the plane and hung there in loops in the air. Gregory pulled himself through and carried the rope with him. Bartholomew came after him, then Tumak. Casey skipped the rope. He spread himself and glided down the shaft, struck the plane without knowing it was there, and flipped through. Ostekk-6 came down with one of them, and Miken came behind.</p>
+  
+        <div class="chapter-break"><span class="chapter-break-text">The Command Deck</span></div>
+  
+        <p>The room was large, with smaller passages opening off it into other rooms, and the air was full of light. It drifted in fine particles, like a mist, in more than one color, some of it seeping in from the side rooms. Flowers grew all over the walls. In the center rose a great mound, and out of it grew roots and vines that twisted together into a single stalk, and the stalk opened into a huge flower with leaves so dark they were nearly black, deep blue at the edges. Light came out of the stalk itself.</p>
+  
+        <p>Standing among the flowers were clockwork horrors, stopped mid-stride, each one halted with a step half taken.</p>
+  
+        <p>The room felt wrong. Standing in it made them feel incomplete.</p>
+  
+        <p>Bartholomew reached for his magic to close his own wounds, and nothing answered. The power that had always been simply there was gone. He drank a potion instead. Boogie tried to call up a scatter of small lights and felt the same emptiness where his magic should have been. Ostekk-6 slowed as well. He stuttered and went sluggish, less himself than he had been, but he kept talking.</p>
+  
+        <p>Boogie looked closer at the mound. At its base, the thing the crew had taken for a root was a tentacle, and at the end of it was a glazed, rotten eye. There were eight of them, spread evenly around the mound. Boogie knew what had eight eyes on stalks around one great one. Ostekk-6's master had been a beholder, and a beholder's central eye cancels magic. The flower had grown out of a beholder's body, and its eye was still doing what it had done in life.</p>
+  
+        <p>The flowers were busy. Every so often one bloomed and let out a small light, a wisp like the ones the crew had fought in the garden shaft, whole as it left the flower. Then its shell fell away and only a faint ghostly thing was left, drifting toward them. Bartholomew reached out to touch one. His hand went into it as if it were barely there, and a chill shot through his whole body. It latched onto his skin and drew the life out of him, and when he pulled his hand back it came with him, and other wisps began to drift his way. Someone tried to cut one of the eyes free and found the stalk all knotted root, nearly too tough to pierce, and when it gave, more wisps came out. They latched onto Casey and drained him. Bartholomew and Casey discovered that once a wisp latched on it became solid enough to hit, and they slapped them off like mosquitoes.</p>
+  
+        <p>Gregory felt the pull in his chest again, stronger here than it had been below, and pointing at the beholder's body.</p>
+  
+        <p>Tumak walked the chamber with care. There were flowers in every side room, and a second massive flower on the ceiling. He noticed small distortions in the air that shifted when he moved, and when he watched long enough he saw what they were: the room was full of wisps he could barely see, all of them drifting slowly toward Casey and Bartholomew, gathering on whoever had already been marked. He also saw that the body sat off-kilter. There was a platform underneath it. He remembered what Ostekk-6 had told them about the Command Deck, and he worked it out. A ship like this needed a spelljamming helm, its owner had been a beholder, and the beholder was lying on the platform in the middle of the command deck. The helm went here.</p>
+  
+        <p>Ostekk-6 confirmed it. This was the Command Deck, and Captain Tumak was correct. Vaelorix had never needed a helm himself, but this was where he had flown the ship.</p>
+  
+        <p>Miken came in last, confused and disoriented by the flip. Something latched onto him and he slapped it away, and then he saw what was in the middle of the room and stopped. "Is that a beholder?"</p>
+  
+        <p>"As you can see," said Tumak, "we defeated it."</p>
+  
+        <p>Miken took that in. He asked what they needed to do next, what these things were that kept grabbing him, and how a spelljamming helm was supposed to work in a room where magic failed. Then he answered himself. "We'll figure it out," he said. "All hands on deck."</p>
+  
+        <p>They went back the way they had come, down into the shaft until gravity took them and flipped them again, and up the rope, all the way to the top, to Sol and the crew and the helm.</p>
+  
+        <p>They had fought a mechanical copy of a creature out of legend and walked away from it. They had found what they took to be the ship's master, dead and overgrown, his own eye still keeping magic out of the room where they needed it most. They still did not know how to put a helm where no magic would work. But they knew where it had to go, and they knew what was waiting between here and there. They had taken the measure of the ship, and of their own limits, and both were worse than they had hoped.</p>
+  
+      </div>
+        </div>
+      </section>
+
+      <section class="account-panel" id="recording" data-panel="recording">
+        <div class="account-body">
+<div class="video-container">
+        <div class="video-placeholder">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="24" r="20"/><polygon points="20,16 36,24 20,32" fill="currentColor" stroke="none" opacity="0.4"/></svg>
+          <p>Recording Pending</p>
+        </div>
+      </div>
+        </div>
+      </section>
+    </div>
+    </div>
+
+    <div class="voyage-nav-bottom" data-pagefind-ignore>
+      <a class="voyage-nav-link" href="voyage-004.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Previous Voyage</a>
+      <a class="voyage-nav-center" href="index.html">All Voyages</a>
+      <span class="voyage-nav-link disabled">Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></span>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /page-content -->
+<script>
+(function () {
+  var tabs = document.querySelectorAll('.account-tab');
+  var panels = document.querySelectorAll('.account-panel');
+  if (!tabs.length) return;
+  document.documentElement.classList.add('js-tabs');
+  var names = Array.prototype.map.call(tabs, function (t) { return t.dataset.panel; });
+  function show(name, push) {
+    if (names.indexOf(name) === -1) name = names[0];
+    tabs.forEach(function (t) {
+      var on = t.dataset.panel === name;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    panels.forEach(function (p) { p.classList.toggle('is-active', p.dataset.panel === name); });
+    if (push && history.replaceState) history.replaceState(null, '', '#' + name);
+  }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { show(t.dataset.panel, true); }); });
+  var hash = location.hash.replace('#', '');
+  if (hash) show(hash, false);
+  window.addEventListener('hashchange', function () {
+    var h = location.hash.replace('#', ''); if (h) show(h, false);
+  });
+})();
+</script>
+</body>
+</html>

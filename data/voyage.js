@@ -28,4 +28,9 @@ var CAELESTIS_VOYAGES = [
     title: "All Things Find Their Way Home",
     path:  'voyages/voyage-004.html',
   },
+  {
+    num:   '005',
+    title: "Retreat Is Always an Option",
+    path:  'voyages/voyage-005.html',
+  },
 ];

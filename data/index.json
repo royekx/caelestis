@@ -1,11 +1,11 @@
 {
-  "latestVoyage": 4,
+  "latestVoyage": 5,
   "counts": {
-    "sessions": 4,
+    "sessions": 5,
     "pcs": 6,
-    "npcs": 20,
+    "npcs": 24,
     "factions": 1,
-    "locations": 12,
+    "locations": 14,
     "items": 11,
     "quests": 12
   }

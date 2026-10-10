@@ -13,8 +13,16 @@
       "next": "Reach H’catha, recover the meteor, and find a way toward Viren beyond it."
     },
     "QST-6bC9wN4k": {
-      "urgency": "Low",
-      "next": "Discover what the pull in Gregory's core is drawing him toward."
+      "urgency": "Medium",
+      "next": "Learn what in the dead beholder's body the pull in Gregory's core is pointing at.",
+      "voyages": [
+        {
+          "number": 5,
+          "beats": [
+            "The pull near Ostekk-2 was Gregory's first paracausal ping, not a magic detection. On the Command Deck it points at the Lantern inside the beholder's body. The players will read it as finding magical things for a long while."
+          ]
+        }
+      ]
     },
     "QST-8vT4kR2m": {
       "urgency": "Medium",
@@ -34,13 +42,31 @@
     },
     "QST-Xr4mW8vn": {
       "urgency": "High",
-      "next": "Rest, then descend to the deck below by rope and continue routing the helm up the access shafts to the command deck."
+      "next": "Get the helm down past the behir on the Hollow Deck, through the gravity plane, and onto the Command Deck platform, then find a way to install it where the beholder's eye cancels magic.",
+      "voyages": [
+        {
+          "number": 5,
+          "beats": [
+            "The planned abduction by the behir never happened; Boogie's missed rope delivered the crew to the Command Deck a session early, by their own descent. Scrap the abduction.",
+            "The Command Deck's field unmakes constructs: the crew can cross it, the behir cannot. Both sides need it cleared, for different destinations."
+          ]
+        }
+      ]
     },
     "QST-Vg7kR2nw": {
       "urgency": "High"
     },
     "QST-Ok5mB8tz": {
-      "urgency": "Medium"
+      "urgency": "Medium",
+      "next": "Reach the Hollow Deck repair bay past the behir and mend Ostekk-6's legs.",
+      "voyages": [
+        {
+          "number": 5,
+          "beats": [
+            "The OSTEKK units were built with the Lantern's fragment, so they carry a trace of it: the field slows Ostekk-6 but cannot stop him."
+          ]
+        }
+      ]
     },
     "QST-Or1nT4ks": {
       "urgency": "Resolved"
@@ -53,6 +79,57 @@
     },
     "NPC-Dm3vT8wq": {
       "dossier": "dossiers/veena-derek.html"
+    },
+    "NPC-Hn4kW9vm": {
+      "voyages": [
+        {
+          "number": 5,
+          "beats": [
+            "Stuttered and slowed in the Command Deck field but kept running: the Lantern trace in the OSTEKK units."
+          ]
+        }
+      ]
+    },
+    "NPC-nmdnCFvr": {
+      "voyages": [
+        {
+          "number": 5,
+          "beats": [
+            "Built with the Lantern's fragment like the other OSTEKK units. Its state after the fight is unresolved."
+          ]
+        }
+      ]
+    },
+    "NPC-MZZkLc0g": {
+      "voyages": [
+        {
+          "number": 5,
+          "beats": [
+            "Ostekk's separate build, with no Lantern trace: it cannot enter the Command Deck at all, which is why it waits.",
+            "Alive, roughly seventy damage down, and it does not repair."
+          ]
+        }
+      ]
+    },
+    "LOC-4wNvxXYk": {
+      "voyages": [
+        {
+          "number": 5,
+          "beats": [
+            "Clockwork horrors are Ostekk's separate builds and freeze outright in the field."
+          ]
+        }
+      ]
+    },
+    "NPC-7wK4mB9x": {
+      "voyages": [
+        {
+          "number": 5,
+          "beats": [
+            "Miken saw the dead beholder with his own eyes. That is what he reports through his channel in Voyage 006."
+          ]
+        }
+      ]
     }
   },
   "lanes": []

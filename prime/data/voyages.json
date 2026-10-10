@@ -37,12 +37,11 @@
   },
   {
     "number": 5,
-    "title": null,
-    "working": "the descent",
+    "title": "Retreat Is Always an Option",
     "state": "played",
     "source": { "kind": "transcript", "file": "Caelestis _ The Spelljamming Academy _ Voyage 005.txt" },
-    "playerRecord": false,
-    "crewLog": false,
+    "playerRecord": true,
+    "crewLog": true,
     "anchor": "v005"
   },
   {
