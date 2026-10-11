@@ -76,6 +76,42 @@ else. "The crew" and "the party" are in-world nouns and stay; "the players",
 **Bold marks the one claim a tab turns on.** If three things are bold, none of
 them are.
 
+## Which register a thing belongs in
+
+The split already in use, stated so it stops looking like duplication.
+
+> **A dossier answers "what is it, and what does it want."**
+> **A Realms entry answers "what happens when we go inside."**
+
+A thing earns a **dossier** when a DM has to play it — when it has motive,
+something withheld, and a way it reacts to being pushed. That is not the same
+as being a person: a construct, a celestial, a god or a ship under command all
+qualify. The tab set is written to work for any of them.
+
+A thing earns a **Realms entry** when the crew can go there and the interior is
+the adventure. Realms already carries a *Vessels as places* section for exactly
+this.
+
+**Both is normal, and is not duplication.** The Vth'oramu has a dossier because
+it is alive, under command, and has a role in the campaign; it has a Realms
+entry because the crew will board it and walk around inside. The two answer
+different questions and link to each other. The tyrant ship, by contrast, is
+Realms only — it is a dungeon with no will, so there is nothing for a dossier
+to hold.
+
+**Artifacts** is for objects that are carried, held or used. A vessel is not an
+artifact, however important it is.
+
+| | Dossier | Realms | Artifacts |
+|---|---|---|---|
+| A person, a construct, a god | yes | only if you can go there | no |
+| A ship with something driving it | yes | yes, if boardable | no |
+| A ship that is only a place | no | yes | no |
+| A thing you carry | no | no | yes |
+
+Every dossier carries a **Kind** line in its identity card, so a vessel or a
+construct is not mistaken for a character.
+
 ## Open questions
 
 A call that has not been made gets `<span class="dm-tag is-open">` with a short
