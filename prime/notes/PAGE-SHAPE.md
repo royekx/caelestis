@@ -53,23 +53,226 @@ One shape, every character:
 
 | Tab | Voice | Holds |
 |---|---|---|
-| Bio | in-world | who they are now |
-| History | in-world | what happened, in order |
-| Beliefs | in-world | what they think is true |
-| Secrets | in-world | what is true that they would not say |
-| At the table | DM | how to run them, what is open, what to decide |
-| Stat Block | — | the block, if they have one |
+| What it is | in-world | nature, current state, and how it got here |
+| What it wants | in-world | motive, drive, what it is for |
+| What's hidden | in-world | true and unrevealed |
+| Running it | DM | how to play it, what is open, what to decide |
+| Stat block | — | the block, if it has one |
+
+Every tab answers a question in the same form, so the set works whether the
+subject is a person, a ship, a faction or a place. The earlier set — Bio,
+History, Beliefs, Secrets, At the table — sat on four different axes at once
+(subject matter, disclosure, audience, format), which is why it read as five
+unrelated words. History was on 8 of 35 pages and folded into *What it is*.
 
 Include only the tabs with content. Never invent a one-off tab name.
 
-**The voice rule.** Bio, History, Beliefs and Secrets are written from inside the
-world. They state what is true, not what it is for. "At the table" is where the
+**The voice rule.** *What it is*, *What it wants* and *What's hidden* are written
+from inside the world. They state what is true, not what it is for. *Running it* is where the
 DM voice belongs — design notes, open calls and advice live there and nowhere
 else. "The crew" and "the party" are in-world nouns and stay; "the players",
 "the campaign", "the session" and "the scenario" are not.
 
 **Bold marks the one claim a tab turns on.** If three things are bold, none of
 them are.
+
+## Group by likeness
+
+The rule that decides where anything goes, and whether it gets a page.
+
+> **A thing gets a page. A concept gets a section.**
+
+A **thing** — a person, a place, a vessel, a physical object — has an entry
+page of its own, however thin, and sits on a register of its own likeness.
+A stub page is a correct outcome: a name, what little is known, and the tag
+that says so. It is better than a bullet in a list, because next time there is
+somewhere to put the next fact.
+
+A **concept** — a mechanic, a cosmological principle, a term — is a section on
+the page about its parent subject. Zeniths, Monoliths, hearts and Atria are
+sections of Cosmology, not pages. A concept earns a page only when it grows
+involved enough that a section can no longer hold it.
+
+| Register | Holds | Each entry |
+|---|---|---|
+| `dossiers/` | people, and anything with a will | a page |
+| `realms/` | places, grouped by sphere | a page |
+| `vessels/` | ships with a name and a history | a page |
+| `artifacts/` | objects that are carried, held or used | a page |
+| `cosmology/` | how the universe works | a section |
+| `rules/` | adjudication | a section |
+| `glossary/` | definitions | a line |
+
+### What a register page looks like
+
+Not a scroll. A list you can narrow:
+
+- a search field, filtering as you type
+- facet pills, one group per axis — AND across axes, OR within one
+- a result count, and a clear control that appears when a filter is on
+- rows that expand in place for a preview, and link through to the entry
+
+`prime/scripts/dm-register.js` drives all of it and knows nothing about the
+subject: axes are discovered from whatever `data-` attributes the pills carry,
+so a page adds a filter by adding a pill group.
+
+Six pages are registers, and they are the six collections of things:
+
+| Register | Entries | Axes |
+|---|---|---|
+| `prime/realms/` | places | system, kind, standing |
+| `prime/dossiers/` | everyone the DM plays | side, kind, standing |
+| `prime/factions/` | organized interests | reach, posture |
+| `prime/crew/` | the player characters | where the rules live |
+| `prime/vessels/` | ships | where, standing, depth |
+| `prime/artifacts/` | things you carry | fragment, standing |
+
+A row can hold several values on one axis, space-separated, which is how Joffrey
+sits under both Caelestis and the colony. One axis is enough when there is only
+one question worth asking, as on the crew.
+
+### A thing that contains other things
+
+A faction has members, a system has worlds, a ship has a crew. The container
+gets a page; the things inside it get a row on that page, and the row expands
+in place.
+
+That is what `.dossier-row` is for, and it is the shape to reach for whenever a
+page lists people: portrait, name, role, and a one-line read, with the fuller
+paragraph a click away and a link onward to the entry of their own. A reader
+scanning for who is in a faction never leaves the page; a reader who wants the
+whole of someone is one click from it.
+
+The row is not the entry. Anyone substantial enough to need motive, something
+withheld, and a way they react to being pushed has a dossier, and their row
+links to it. The row is the quick read.
+
+A register page carries `dm-nav.js` and `dm-register.js` and nothing else. The
+register is the page's navigation, so a section tab strip and a right-rail
+table of contents both duplicate it.
+
+Material that is a concept rather than an entry stays on the register as a
+collapsed section below the rows — routes, the sphere table, the constellation
+catalogue. A tool the page needs is embedded rather than linked away to: the
+Cosmos Chart renders inside the sphere section in a `.dm-embed`, with
+**Open full** for the times a chart in a panel is not enough.
+
+### Why the scroll had to go
+
+A reference page written as one long document works until there are more than
+a dozen entries, and then it stops: no way to find one thing, no way to see
+what exists, and a new entry means wedging another section into a document
+that is already hard to navigate. Realms had 66 collapsible sections across 11
+tabs before this rule, which is the same problem at a scale where it is
+obvious.
+
+A page should also not have to explain how it works. If a page opens by
+telling you how to read it, the shape is wrong.
+
+## Which register a thing belongs in
+
+The split already in use, stated so it stops looking like duplication.
+
+> **A dossier answers "what is it, and what does it want."**
+> **A Realms entry answers "what happens when we go inside."**
+
+A thing earns a **dossier** when a DM has to play it — when it has motive,
+something withheld, and a way it reacts to being pushed. That is not the same
+as being a person: a construct, a celestial, a god or a ship under command all
+qualify. The tab set is written to work for any of them.
+
+A thing earns a **Realms entry** when it is somewhere the crew can go: a
+system, a world, a station, a region, or a stop on a lane.
+
+A thing earns a **Vessels entry** when it is a ship with a name and a history.
+A ship is a thing rather than a place, so its interior belongs on its own
+entry rather than in Realms. Realms says where it is; Vessels says what it is
+and what is inside it.
+
+**Artifacts** is for objects that are carried, held or used. A vessel is not an
+artifact, however important it is.
+
+| | Dossier | Realms | Vessels | Artifacts |
+|---|---|---|---|---|
+| A person, a construct, a god | yes | no | no | no |
+| A ship with something driving it | yes | no | yes | no |
+| A ship that is only a place | no | no | yes | no |
+| A system, world, station or site | no | yes | no | no |
+| A thing you carry | no | no | no | yes |
+
+**A dossier and a vessel entry together is normal, and is not duplication.**
+The Vth'oramu has a dossier because it is alive, under command, and has a role
+in the campaign; it is a vessel because it is a ship. The tyrant ship has a
+vessel entry only — it is a dungeon with no will, so there is nothing for a
+dossier to hold.
+
+### Grouping inside a register
+
+A register of more than a dozen entries needs an axis the DM already thinks in.
+Realms groups by the system an entry sits in, because that is how travel works:
+the question at the table is "what is in Realmspace", not "what is a station".
+Kind and standing are the second and third axes, and a row carries its own
+designation in the face column so the list reads like a chart.
+
+Containers get rows too. A system is a thing, so SYS-01 has an entry listing
+its worlds, and so does SYS-04, even though most of its content is on the two
+worlds below it. Uniformity is worth a thin page.
+
+Every dossier carries a **Kind** line in its identity card, so a vessel or a
+construct is not mistaken for a character.
+
+## Tags
+
+A tag answers exactly one question, and which question it answers is the class.
+There are four, and there is no fifth.
+
+| Class | The question | Labels |
+|---|---|---|
+| `is-canon` | How settled is it? | **Canon**, **Played** |
+| `is-open` | What is still open? | a short label, three words at most |
+| `is-dm` | Can this go player-side? | **DM only** |
+| `is-kind` | What sort of thing is it? | **Character**, **Object**, **Place**, **Event**, **Pattern** |
+
+`is-canon` and `is-dm` have fixed labels. `is-open` is the one that takes its
+own words, because *what* is open is the useful part: "Name open", "Scale open",
+"To build", "Your call".
+
+**Three rules, all of them learned the hard way.**
+
+A tag is a label, not a sentence. If it needs a verb it is prose, and it belongs
+in the paragraph underneath.
+
+A tag never restates the text beside it. Most of the one-off tags removed in
+this pass were saying what the next sentence already said.
+
+A fact about the subject is not a tag. A ship's standing, a world's state, a
+character's role — those are rows in the identity card or words in the heading.
+`is-locked` and `is-stub` were retired because they had filled up with exactly
+this: "Encounter dial", "Zenith underway", "Arc 2 antagonist", "Running now".
+
+The retired pair is worth remembering as the failure mode. `is-locked` ended up
+meaning *settled canon* on one page and *never show the players* on another, two
+unrelated things in one word, which is why "Locked" stopped meaning anything at
+all.
+
+## Who gets a player dossier
+
+**A named presence gets a dossier.** If the party has a name for it — met, mentioned
+by someone, or only heard — it has a page under `dossiers/` at the site root.
+
+"Presence" is wider than "person". Beshaba has a dossier on the strength of
+laughter Sol recognised; the Runekeeper has one on the strength of a voice. Neither
+has been met and neither needs to be.
+
+The page carries only what the table has: what happened, sourced to the voyage it
+happened in, with **named only** or **laughter only** in the Last Seen row when that
+is all there is. A page saying nothing more than "named by Mirt, not yet
+encountered" is doing its job. What the presence actually is belongs in the DM
+dossier, and the two never mirror each other.
+
+The player dossier set tracks the NPC tab of the campaign tracker one page to one
+row. A dossier written ahead of its row is fine and the page works, but the row
+should follow, or the next sync will disagree with the site.
 
 ## Open questions
 

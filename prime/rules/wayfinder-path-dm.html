@@ -4,6 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
+<script>
+/* DM gate. Every page under /prime/ sends an unauthenticated visitor back to
+   the gate. Inline rather than a shared file: this page carries its own styles
+   and does not load dm-nav.js, and a boundary check that can fail to load is
+   not a boundary check. Mirrors the guard in scripts/dm-nav.js. */
+(function () {
+  var pn = window.location.pathname;
+  var i = pn.indexOf('/prime/');
+  if (i === -1) return;
+  var authed = false;
+  try { authed = sessionStorage.getItem('caelestis_continuum_auth') === '1'; } catch (err) { authed = false; }
+  if (authed) return;
+  var depth = (pn.slice(i + 7).match(/\//g) || []).length;
+  window.location.replace((depth > 0 ? new Array(depth + 1).join('../') : './') + 'index.html');
+})();
+</script>
 <title>Wayfinder's Path — DM copy — Tumak Swan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

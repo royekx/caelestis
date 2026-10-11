@@ -1012,37 +1012,17 @@
 </div>
 
 <script>
-/* ============================================================
-   ░░░░░░░░░░░░░░░░░░  DM CONTROL  ░░░░░░░░░░░░░░░░░░
-   ============================================================
-   To activate a half-rune, add an entry to ACTIVE_HALVES below.
-
-   Each entry: { num, bearer, url }
-     num    : 1–20 (the rune's roll-number)
-     bearer : 1 = Wan's half (left side of frame)
-              2 = Tu's half  (right side of frame)
-     url    : Google Drive direct-image URL, format:
-              'https://lh3.googleusercontent.com/d/FILE_ID'
-              (or omit for now — placeholder text will show)
-
-   Both halves of a rune (same num, bearers 1 + 2) = matched.
-   The page re-renders entirely from this list — nothing else
-   needs to change when activating a new half.
-   ============================================================ */
+/* ── Revealed runes ──────────────────────────────────────────
+   Each entry: { num, bearer }.  bearer 1 = Wan, 2 = Tu.
+   ──────────────────────────────────────────────────────────── */
 
 const ACTIVE_HALVES = [
-  // Heart (#20) — pre-matched, intrinsic. Tumak doesn't know he carries it.
-  // Currently completely hidden from figure and table.
   { num: 20, bearer: 1 },  // Wan's Heart half
   { num: 20, bearer: 2 },  // Tu's Heart half
 
-  // V003 emergence
   { num: 8,  bearer: 1 },  // Wan's Left sole
   { num: 16, bearer: 2 },  // Tu's Right shoulder
 
-  // Add new entries below as runes activate. Format: { num: N, bearer: 1|2 }.
-  // Image is pulled automatically from RUNE_FULL_URLS[num] below.
-  // If you ever want to override with a per-half image, add `url: '...'` to the entry.
 ];
 
 /* Full-rune image URLs (one per rune number).
@@ -1070,7 +1050,7 @@ const RUNE_FULL_URLS = {
   17: 'https://lh3.googleusercontent.com/d/1jTXU9Q5jer8X8aFwGX3QJ29RG9wegEiJ',  // rune_17.png — Floating (DM-bestowed)
   18: 'https://lh3.googleusercontent.com/d/1yY1b16PPriHZH3j4HmhpRya3S7k5E-Lv',  // rune_18.png — Floating (DM-bestowed)
   19: 'https://lh3.googleusercontent.com/d/1bpHSWSTeBaot5xhxg_eGBsScRufYQXji',  // rune_19.png — Floating (DM-bestowed)
-  20: 'https://lh3.googleusercontent.com/d/1AJBYcWCZKUOMGY2o3RHkaBKL61yZsr70',  // rune_20.png — Heart (hidden)
+  20: 'https://lh3.googleusercontent.com/d/1AJBYcWCZKUOMGY2o3RHkaBKL61yZsr70',
 };
 
 /* ============================================================
@@ -1136,8 +1116,7 @@ const WAYSCRIBES = {
    Each rune-mark on the figure is a 44x44 box (containing two
    22x44 halves side by side).
 
-   17 positions total: 16 rollable (1-16) + Heart (#20, hidden from table,
-   pre-matched, shown as a chest glow on the figure).
+   16 rollable positions (1-16).
 
    Floating runes (17, 18, 19) are bestowed by the DM at story moments
    and will be added to this array when assigned a body position.
@@ -1160,15 +1139,12 @@ const INSCRIPTION = [
   { num: 14, locus: "Left thigh",        ws: "core",  side: "front", x: 172, y: 470 },
   { num: 15, locus: "Right thigh",       ws: "core",  side: "front", x: 108, y: 470 },
   { num: 16, locus: "Right shoulder",    ws: "core",  side: "front", x: 60,  y: 130 },
-  // Heart — intrinsic, pre-matched from session 1, hidden everywhere until DM reveals.
-  // Tumak doesn't know he carries it. To reveal: remove `hidden: true` below.
-  // Once revealed, Heart will appear on the figure as a chest glow.
   { num: 20, locus: "Heart",             ws: "heart", side: "front", x: 140, y: 200, hidden: true }
 ];
 
 INSCRIPTION.forEach(r => { r.bearer1 = false; r.bearer2 = false; });
 
-/* ---- Apply DM CONTROL: ACTIVE_HALVES → bearer flags + URL lookup ---- */
+/* ---- Apply ACTIVE_HALVES: bearer flags + URL lookup ---- */
 const _halfUrls = {};
 for (const h of ACTIVE_HALVES) {
   _halfUrls[`${h.num}_${h.bearer}`] = h.url || '';
@@ -1222,7 +1198,7 @@ function renderMarkers() {
   backGroup.innerHTML  = '';
 
   for (const rune of INSCRIPTION) {
-    // Skip hidden runes (Heart) entirely — not visible on figure until DM reveals
+    // Skip unrevealed runes entirely
     if (rune.hidden) continue;
 
     // Determine what to show based on currentView
@@ -1362,7 +1338,7 @@ function renderTable() {
   const container = document.getElementById('inscription-table');
   container.innerHTML = '';
 
-  // Exclude hidden runes (Heart) from the table — they live on the figure only
+  // Unrevealed runes are not listed
   const runes = INSCRIPTION.filter(r => !r.hidden).sort((a, b) => a.num - b.num);
 
   const block = document.createElement('section');
@@ -1518,7 +1494,7 @@ function setupToggles() {
    ============================================================ */
 
 function renderSummary(container) {
-  // Count matched runes — exclude hidden (Heart) from visible totals
+  // Count matched runes
   const visibleRunes = INSCRIPTION.filter(r => !r.hidden);
   const matched = visibleRunes.filter(isMatched).length;
   const totalVisible = visibleRunes.length; // 16

@@ -114,6 +114,7 @@
       items: [
         { key: 'cosmology', label: 'Cosmology',     path: 'cosmology/'  },
         { key: 'realms',    label: 'Realms',        path: 'realms/'     },
+        { key: 'vessels',   label: 'Vessels',       path: 'vessels/'    },
         { key: 'artifacts', label: 'Artifacts',     path: 'artifacts/'  },
         { key: 'chart',     label: 'Cosmos Chart',  path: 'chart/'      },
       ]

@@ -353,6 +353,13 @@
     "url": "crew-manifest/sol-fortuna.html",
     "links": [
       {
+        "id": "NPC-Bq5nH7wt",
+        "name": "Beshaba",
+        "type": "npc",
+        "slug": "beshaba",
+        "url": "dossiers/beshaba.html"
+      },
+      {
         "id": "QST-4wN8kB2v",
         "name": "The Laughter of Beshaba",
         "type": "quest",

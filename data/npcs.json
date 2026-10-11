@@ -5,12 +5,12 @@
     "slug": "captain-sardax",
     "name": "Captain Sardax",
     "fields": {
-      "Gender": null,
+      "Gender": "Female",
       "Affiliation(s)": "Caelestis / Moonraider",
-      "Party Relationship": "Encountered only within a simulation of his final battle",
+      "Party Relationship": "Encountered only within a simulation of her final battle",
       "Role (as known)": "Captain of the Moonraider",
-      "Current State": "Known only through the simulation of his final battle.",
-      "Overview (Player)": "Captain Sardax was the captain of the Moonraider, whose doomed final battle the cadets relived as their first test at Caelestis. He is known to the party only as the dying commander in that simulated memory.",
+      "Current State": "Known only through the simulation of her final battle.",
+      "Overview (Player)": "Captain Sardax was the captain of the Moonraider, whose doomed final battle the cadets relived as their first test at Caelestis. She is known to the party only as the dying commander in that simulated memory.",
       "Category": "Beyond the Academy",
       "Status": "Deceased"
     },
@@ -18,7 +18,7 @@
       {
         "number": 1,
         "bullets": [
-          "Appeared bleeding across the deck of the Moonraider, ordering the cadets to hold the top deck and give no quarter, within a simulation of his doomed final battle"
+          "Appeared bleeding across the deck of the Moonraider, ordering the cadets to hold the top deck and give no quarter, within a simulation of her doomed final battle"
         ]
       }
     ],
@@ -1252,6 +1252,64 @@
         "type": "npc",
         "slug": "the-behir",
         "url": "dossiers/the-behir.html"
+      }
+    ]
+  },
+  {
+    "id": "NPC-Bq5nH7wt",
+    "type": "npc",
+    "slug": "beshaba",
+    "name": "Beshaba",
+    "fields": {
+      "Gender": "Female",
+      "Affiliation(s)": null,
+      "Party Relationship": "Sol's patron deity",
+      "Role (as known)": "Goddess of misfortune; Sol's patron",
+      "Current State": "Attending Sol directly — once in laughter, once in the night.",
+      "Overview (Player)": "Beshaba is the goddess Sol serves. She answered him directly for the first time when he took a stroke of misfortune onto himself to save Boogie's jump — a woman laughed three times, and by the third he knew whose laughter it was. She has since spoken to him once in the night, unhurried and curious, about fate and whether he has truly escaped his origin.",
+      "Category": "Beyond the Academy",
+      "Status": "Active"
+    },
+    "voyages": [
+      {
+        "number": 2,
+        "bullets": [
+          "Sol took a stroke of misfortune onto himself to save Boogie's jump, his strength dropping in a measured amount",
+          "As it left him, a woman laughed three times, and by the third he understood it was Beshaba",
+          "Gregory and Bartholomew saw a hair-thin arc of black lightning flicker out of Sol and back"
+        ]
+      },
+      {
+        "number": 3,
+        "bullets": [
+          "Visited Sol again in the night, unhurried and curious, asking why he embraced chaos rather than fled it",
+          "Told him it had had his curiosity before but now had his attention, asked whether he was certain he had escaped where he came from, and said fate could still be wielded"
+        ]
+      }
+    ],
+    "seen": [],
+    "mentioned": [
+      2,
+      3
+    ],
+    "linked": [
+      "PC-6rzWlD8Q"
+    ],
+    "url": "dossiers/beshaba.html",
+    "links": [
+      {
+        "id": "PC-6rzWlD8Q",
+        "name": "Sol Fortuna",
+        "type": "pc",
+        "slug": "sol-fortuna",
+        "url": "crew-manifest/sol-fortuna.html"
+      },
+      {
+        "id": "QST-4wN8kB2v",
+        "name": "The Laughter of Beshaba",
+        "type": "quest",
+        "slug": "the-laughter-of-beshaba",
+        "url": "quests/the-laughter-of-beshaba.html"
       }
     ]
   }

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Vessels · Caelestis · DM</title>
+<link rel="stylesheet" href="../../styles/caelestis.css">
+<link rel="stylesheet" href="../../styles/entity.css">
+<link rel="stylesheet" href="../../styles/dm.css">
+<script src="../scripts/dm-nav.js" defer></script>
+<script src="../scripts/dm-register.js" defer></script>
+</head>
+<body>
+
+<main class="dm-content">
+
+  <header class="dm-page-header">
+    <div class="dm-page-eyebrow">Setting<span class="sep">&middot;</span>Register</div>
+    <h1>Vessels</h1>
+    <p class="dm-page-lede">
+      Ships with a name and a history. Each one has an entry covering its interior, and the one that is alive carries a <a href="../dossiers/">dossier</a> as well. Where they are is in <a href="../realms/">Realms</a>.
+    </p>
+  </header>
+
+  <div class="dm-register-bar">
+    <input class="dm-register-search" type="search" placeholder="Filter by name, class, owner&hellip;" aria-label="Filter vessels">
+  </div>
+
+  <div class="facets">
+    <div class="facet">
+      <span class="facet-label">Where</span>
+      <div class="facet-pills">
+        <button class="filter-tag" type="button" data-sphere="realmspace">Realmspace</button>
+        <button class="filter-tag" type="button" data-sphere="astral">The Astral Sea</button>
+        <button class="filter-tag" type="button" data-sphere="unknown">Unplaced</button>
+      </div>
+    </div>
+    <div class="facet">
+      <span class="facet-label">Standing</span>
+      <div class="facet-pills">
+        <button class="filter-tag" type="button" data-state="active">Active</button>
+        <button class="filter-tag" type="button" data-state="held">Held by the crew</button>
+        <button class="filter-tag" type="button" data-state="lost">Lost</button>
+      </div>
+    </div>
+    <div class="facet">
+      <span class="facet-label">Depth</span>
+      <div class="facet-pills">
+        <button class="filter-tag" type="button" data-depth="dossier">Full dossier</button>
+        <button class="filter-tag" type="button" data-depth="entry">Entry</button>
+        <button class="filter-tag" type="button" data-depth="stub">Stub</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="result-line">
+    <span class="result-count"></span>
+    <button class="clear-btn" type="button" hidden>Clear</button>
+  </div>
+
+  <div class="register">
+
+    <div class="ent" data-sphere="astral" data-state="active" data-depth="dossier">
+      <a class="ent-row" href="../dossiers/vthoramu.html">
+        <span class="ent-face"><span class="face-mono">V</span></span>
+        <span class="ent-name">The Vth&rsquo;oramu<span class="ent-sub">A living astral dreadnought, under command</span></span>
+        <span class="ent-state">Active</span>
+      </a>
+      <div class="ent-detail">
+        <p>An astral dreadnought taken alive a little over fifty years ago and rebuilt into a ship. The colony lives aboard and took the ship&rsquo;s name for its own. <a href="../dossiers/nghathrod.html">N&rsquo;ghathrod</a> is fused into it, so it has no helm and no helmsman.</p>
+        <p>Every anomaly in the Tetherbreak file resolves to this one object, and no Fleet model has room for it.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../dossiers/vthoramu.html">Full dossier</a>
+          <a class="chip chip-quest" href="../campaign/colony/">Colony Ops</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-sphere="realmspace" data-state="held" data-depth="entry">
+      <a class="ent-row" href="tyrant-ship.html">
+        <span class="ent-face"><span class="face-mono">T</span></span>
+        <span class="ent-name">The Tyrant<span class="ent-sub">Vaelorix&rsquo;s derelict tyrant ship, in Toril orbit</span></span>
+        <span class="ent-state">Held</span>
+      </a>
+      <div class="ent-detail">
+        <p>Boarded and largely taken. The crew holds Cargo and the helm, and the helm is not yet seated. Its interior holds the Containment Engine and the garden that produced Bartholomew&rsquo;s unbloomed flower.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="tyrant-ship.html">Entry</a>
+          <a class="chip chip-npc" href="../dossiers/vaelorix.html">Vaelorix</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-sphere="realmspace" data-state="active" data-depth="stub">
+      <a class="ent-row" href="flighty-foundling.html">
+        <span class="ent-face"><span class="face-mono">F</span></span>
+        <span class="ent-name">The Flighty Foundling<span class="ent-sub">Fleet vessel; brings Ezra out at the crew swap</span></span>
+        <span class="ent-state">Active</span>
+      </a>
+      <div class="ent-detail">
+        <p>The ship that answers when the crew reports the commissioning. It collects <a href="../dossiers/ezra.html">Ezra</a>, takes Krik&rsquo;Lit and Pffred off, and leaves.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="flighty-foundling.html">Entry</a>
+          <a class="chip chip-quest" href="../campaign/voyages/">Voyage 006</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-sphere="unknown" data-state="lost" data-depth="stub">
+      <a class="ent-row" href="moonraider.html">
+        <span class="ent-face"><span class="face-mono">M</span></span>
+        <span class="ent-name">The Moonraider<span class="ent-sub">Lost with her captain; the Academy&rsquo;s founding simulation</span></span>
+        <span class="ent-state">Lost</span>
+      </a>
+      <div class="ent-detail">
+        <p>Taken by astral reavers boarding from a pirate galleon. <a href="../dossiers/captain-sardax.html">Captain Sardax</a> died on her own top deck ordering cadets to hold and give no quarter, and every cadet since has run the battle on their first day.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="moonraider.html">Entry</a>
+          <a class="chip chip-npc" href="../dossiers/captain-sardax.html">Captain Sardax</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-sphere="unknown" data-state="lost" data-depth="stub">
+      <a class="ent-row" href="the-derelict.html">
+        <span class="ent-face"><span class="face-mono">D</span></span>
+        <span class="ent-name">The Derelict<span class="ent-sub">Unnamed; the salvage exercise, and the logbook</span></span>
+        <span class="ent-state">Lost</span>
+      </a>
+      <div class="ent-detail">
+        <p>The wreck in the asteroid cluster that the salvage exercise was run against. A long-decomposed body in the captain&rsquo;s quarters, and a logbook behind it &mdash; which the crew carries in three copies and nobody has read for meaning.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="the-derelict.html">Entry</a>
+          <a class="chip chip-item" href="../../inventory/entries/derelict-logbook.html">The logbook</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="register-empty" hidden>Nothing matches those filters.</div>
+
+  </div>
+
+  <div class="dm-footer">
+    Vessels &middot; Setting &middot; Caelestis DM
+  </div>
+
+</main>
+
+</body>
+</html>
