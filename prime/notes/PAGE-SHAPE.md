@@ -53,17 +53,22 @@ One shape, every character:
 
 | Tab | Voice | Holds |
 |---|---|---|
-| Bio | in-world | who they are now |
-| History | in-world | what happened, in order |
-| Beliefs | in-world | what they think is true |
-| Secrets | in-world | what is true that they would not say |
-| At the table | DM | how to run them, what is open, what to decide |
-| Stat Block | — | the block, if they have one |
+| What it is | in-world | nature, current state, and how it got here |
+| What it wants | in-world | motive, drive, what it is for |
+| What's hidden | in-world | true and unrevealed |
+| Running it | DM | how to play it, what is open, what to decide |
+| Stat block | — | the block, if it has one |
+
+Every tab answers a question in the same form, so the set works whether the
+subject is a person, a ship, a faction or a place. The earlier set — Bio,
+History, Beliefs, Secrets, At the table — sat on four different axes at once
+(subject matter, disclosure, audience, format), which is why it read as five
+unrelated words. History was on 8 of 35 pages and folded into *What it is*.
 
 Include only the tabs with content. Never invent a one-off tab name.
 
-**The voice rule.** Bio, History, Beliefs and Secrets are written from inside the
-world. They state what is true, not what it is for. "At the table" is where the
+**The voice rule.** *What it is*, *What it wants* and *What's hidden* are written
+from inside the world. They state what is true, not what it is for. *Running it* is where the
 DM voice belongs — design notes, open calls and advice live there and nowhere
 else. "The crew" and "the party" are in-world nouns and stay; "the players",
 "the campaign", "the session" and "the scenario" are not.
