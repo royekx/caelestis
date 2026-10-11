@@ -76,6 +76,59 @@ else. "The crew" and "the party" are in-world nouns and stay; "the players",
 **Bold marks the one claim a tab turns on.** If three things are bold, none of
 them are.
 
+## Group by likeness
+
+The rule that decides where anything goes, and whether it gets a page.
+
+> **A thing gets a page. A concept gets a section.**
+
+A **thing** — a person, a place, a vessel, a physical object — has an entry
+page of its own, however thin, and sits on a register of its own likeness.
+A stub page is a correct outcome: a name, what little is known, and the tag
+that says so. It is better than a bullet in a list, because next time there is
+somewhere to put the next fact.
+
+A **concept** — a mechanic, a cosmological principle, a term — is a section on
+the page about its parent subject. Zeniths, Monoliths, hearts and Atria are
+sections of Cosmology, not pages. A concept earns a page only when it grows
+involved enough that a section can no longer hold it.
+
+| Register | Holds | Each entry |
+|---|---|---|
+| `dossiers/` | people, and anything with a will | a page |
+| `realms/` | places, grouped by sphere | a page |
+| `vessels/` | ships with a name and a history | a page |
+| `artifacts/` | objects that are carried, held or used | a page |
+| `cosmology/` | how the universe works | a section |
+| `rules/` | adjudication | a section |
+| `glossary/` | definitions | a line |
+
+### What a register page looks like
+
+Not a scroll. A list you can narrow:
+
+- a search field, filtering as you type
+- facet pills, one group per axis — AND across axes, OR within one
+- a result count, and a clear control that appears when a filter is on
+- rows that expand in place for a preview, and link through to the entry
+
+`prime/scripts/dm-register.js` drives all of it and knows nothing about the
+subject: axes are discovered from whatever `data-` attributes the pills carry,
+so a page adds a filter by adding a pill group. `prime/vessels/` is the worked
+example.
+
+### Why the scroll had to go
+
+A reference page written as one long document works until there are more than
+a dozen entries, and then it stops: no way to find one thing, no way to see
+what exists, and a new entry means wedging another section into a document
+that is already hard to navigate. Realms had 66 collapsible sections across 11
+tabs before this rule, which is the same problem at a scale where it is
+obvious.
+
+A page should also not have to explain how it works. If a page opens by
+telling you how to read it, the shape is wrong.
+
 ## Which register a thing belongs in
 
 The split already in use, stated so it stops looking like duplication.

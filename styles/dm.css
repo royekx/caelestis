@@ -2030,3 +2030,118 @@ body::after {
   padding: 0;
   backdrop-filter: none;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   REGISTER — the shape every DM index should take
+
+   A list you can narrow, where each row is a real entry with a page
+   of its own. Replaces the long scroll, where a new thing meant
+   another section wedged into a document nobody could navigate.
+
+   Class names follow the player site's register so the two halves of
+   the wiki read as one, with the prime palette underneath.
+   ═══════════════════════════════════════════════════════════════ */
+.dm-register-bar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .6rem;
+  margin: 0 0 .9rem;
+}
+.dm-register-search {
+  flex: 1 1 15rem; min-width: 0;
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 1rem;
+  background: var(--bg-card); color: var(--text);
+  border: 1px solid var(--rule); border-radius: 2px;
+  padding: .5rem .8rem;
+}
+.dm-register-search::placeholder { color: var(--text-muted); font-style: italic; }
+.dm-register-search:focus { outline: none; border-color: var(--gold-rule); }
+
+.facets { display: flex; flex-direction: column; gap: .5rem; margin-bottom: .8rem; }
+.facet { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem .6rem; }
+.facet-label {
+  font-family: 'Cinzel', serif; font-size: .62rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--text-muted);
+  flex: 0 0 5.5rem;
+}
+.facet-pills { display: flex; flex-wrap: wrap; gap: .3rem; }
+.filter-tag {
+  font-family: 'Cinzel', serif; font-size: .66rem; letter-spacing: .1em;
+  text-transform: uppercase; cursor: pointer;
+  background: none; color: var(--text-dim);
+  border: 1px solid var(--rule); border-radius: 999px;
+  padding: .2rem .65rem; transition: color .13s, border-color .13s, background .13s;
+}
+.filter-tag:hover { color: var(--text); border-color: var(--gold-rule); }
+.filter-tag.is-active {
+  color: var(--gold-light); border-color: var(--gold-rule);
+  background: var(--gold-faint);
+}
+.filter-tag:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
+
+.result-line {
+  display: flex; align-items: baseline; gap: .8rem;
+  font-family: 'Cinzel', serif; font-size: .64rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--text-muted);
+  border-bottom: 1px solid var(--rule); padding-bottom: .5rem; margin-bottom: .2rem;
+}
+.clear-btn {
+  margin-left: auto; font: inherit; cursor: pointer;
+  background: none; border: none; color: var(--gold-dim);
+  border-bottom: 1px solid var(--gold-rule); padding: 0 0 .1rem;
+}
+.clear-btn:hover { color: var(--gold-light); }
+
+.register { display: flex; flex-direction: column; }
+.ent { border-bottom: 1px solid var(--rule-soft); position: relative; }
+.ent:last-child { border-bottom: none; }
+.ent-row {
+  display: grid; grid-template-columns: 3.1rem 1fr auto;
+  gap: .9rem; align-items: center;
+  padding: .7rem 2.2rem .7rem .7rem;
+  text-decoration: none; border: none; transition: background .13s;
+}
+.ent-row:hover { background: var(--bg-raised); }
+.ent-face {
+  width: 3.1rem; height: 3.1rem; border-radius: 2px; overflow: hidden;
+  background: var(--bg-raised); border: 1px solid var(--rule);
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+.ent-face img { width: 100%; height: 100%; object-fit: cover; }
+.face-mono {
+  font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--gold-dim);
+}
+.ent-name {
+  font-family: 'Cinzel', serif; font-size: 1rem; color: var(--text);
+  display: flex; flex-direction: column; gap: .15rem; min-width: 0;
+}
+.ent-sub {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: .92rem;
+  color: var(--text-dim); letter-spacing: 0;
+}
+.ent-state {
+  font-family: 'Cinzel', serif; font-size: .6rem; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--text-muted); text-align: right;
+}
+.ent-toggle {
+  position: absolute; top: .9rem; right: .5rem;
+  width: 1.5rem; height: 1.5rem; line-height: 1;
+  background: none; border: none; cursor: pointer;
+  color: var(--text-muted); font-size: .7rem;
+  transition: transform .15s, color .13s;
+}
+.ent-toggle:hover { color: var(--text); }
+.ent.is-open .ent-toggle { transform: rotate(180deg); }
+.ent-detail {
+  display: none;
+  padding: 0 .9rem 1rem 4.7rem;
+  color: var(--text-dim); font-size: .96rem; line-height: 1.6;
+}
+.ent.is-open .ent-detail { display: block; }
+.ent-detail p { margin: 0 0 .5rem; }
+.ent-detail .ent-links { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .6rem; }
+.register-empty {
+  padding: 1.4rem .7rem; color: var(--text-muted); font-style: italic;
+}
+@media (max-width: 620px) {
+  .facet-label { flex: 0 0 100%; }
+  .ent-detail { padding-left: 1rem; }
+}
