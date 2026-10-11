@@ -50,7 +50,11 @@
       });
 
     // Fewer than two and the rail is noise; the page reclaims the column.
-    if (headings.length < 2) {
+    // A rail with two or three entries costs a column of page width and
+    // saves nobody a scroll - the section tab strip already got you here,
+    // and what is left is short enough to see. It earns its place only
+    // once a section is long enough to get lost in.
+    if (headings.length < 4) {
       main.classList.add('toc-empty');
       return;
     }
