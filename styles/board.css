@@ -275,3 +275,15 @@ html { overflow-x: clip; }
    row says "View" and lets the filled progress pill carry the state. */
 .q-entry.is-complete .log-title { color: var(--gold-light); }
 .q-entry.is-complete .log-open { color: var(--gold-dim); }
+
+/* ── WHAT THE CREW HAS DONE ──
+   The board opens on Quests, where every row reads "Open". The standing
+   sits under the subtitle so the first thing it answers is what has been
+   finished, without anyone having to find the Closed tab. */
+.page-standing {
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--text-muted); margin-top: 0.55rem;
+}
+.page-standing strong { color: var(--gold); font-weight: 600; }
+.standing-sep { opacity: 0.5; margin: 0 0.35rem; }
