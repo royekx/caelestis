@@ -356,21 +356,15 @@ body::after {
   border-radius: 0;
   font-size: 1rem;
 }
-.dm-callout.is-warn,
-.dm-callout.is-cosmic,
-.dm-callout.is-info { border-left-color: var(--gold-rule); }
 .dm-callout-label {
   font-family: 'Cinzel', serif;
   font-size: 0.899rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-dim);
   display: block;
   margin-bottom: 0.3rem;
 }
-.dm-callout.is-warn    .dm-callout-label,
-.dm-callout.is-cosmic  .dm-callout-label,
-.dm-callout.is-info    .dm-callout-label { color: var(--gold-dim); }
 
 /* ── COLLAPSIBLE SECTIONS ── */
 /* Wiki pages are long. Default-open, click to collapse. */
@@ -471,11 +465,17 @@ body::after {
   vertical-align: middle;
   font-weight: 600;
 }
-.dm-tag.is-locked   { background: rgba(201, 153, 58, 0.18); color: var(--gold-light); }
-.dm-tag.is-open     { background: rgba(168,  85, 60, 0.20); color: var(--dm-crimson); }
-.dm-tag.is-stub     { background: rgba(110, 104, 87, 0.20); color: var(--text-dim); }
+/* Four classes, one axis each. A tag answers exactly one question:
+     is-canon  how settled is it        Canon, Played
+     is-open   what is still open       a short label, three words at most
+     is-dm     can this go player-side  DM only
+     is-kind   what sort of thing       Character, Object, Place, Event, Pattern
+   is-locked and is-stub are retired. "Locked" meant settled canon in one
+   place and DM-only in another, which is why it read as meaningless. */
 .dm-tag.is-canon    { background: rgba( 94, 168, 158, 0.18); color: var(--dm-teal); }
-.dm-tag.is-cosmic   { background: rgba(122,  94, 168, 0.20); color: var(--dm-violet); }
+.dm-tag.is-open     { background: rgba(168,  85, 60, 0.20); color: var(--dm-crimson); }
+.dm-tag.is-dm       { background: rgba(122,  94, 168, 0.22); color: var(--dm-violet); }
+.dm-tag.is-kind     { background: rgba(110, 104, 87, 0.20); color: var(--text-dim); }
 
 /* ── DEFINITION LISTS ── */
 .dm-content dl { margin: 1rem 0; }
@@ -2176,4 +2176,15 @@ body::after {
 }
 @media (max-width: 620px) {
   .dm-embed iframe { height: 60vh; min-height: 360px; }
+}
+
+/* A register row can use a portrait as its face. The .dossier-portrait frame
+   is sized for the card grid, so the row re-states its own size rather than
+   letting two rules disagree. */
+.ent-face.dossier-portrait {
+  width: 3.1rem; min-width: 3.1rem; height: 3.1rem;
+  border-color: var(--rule); border-radius: 2px;
+}
+.ent-face.dossier-portrait .dossier-monogram {
+  font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--gold-dim);
 }
