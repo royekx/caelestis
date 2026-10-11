@@ -4,37 +4,391 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Realms · Caelestis · DM</title>
+<title>Realms &middot; Caelestis &middot; DM</title>
 <link rel="stylesheet" href="../../styles/caelestis.css">
+<link rel="stylesheet" href="../../styles/entity.css">
 <link rel="stylesheet" href="../../styles/dm.css">
 <script src="../scripts/dm-nav.js" defer></script>
-<script src="../scripts/dm-sections.js" defer></script>
-<script src="../scripts/dm-toc.js" defer></script>
+<script src="../scripts/dm-register.js" defer></script>
 </head>
 <body>
 
-<main class="dm-content has-toc">
+<main class="dm-content">
 
   <header class="dm-page-header">
-    <div class="dm-page-eyebrow">Setting<span class="sep">&middot;</span>Geography</div>
+    <div class="dm-page-eyebrow">Setting<span class="sep">&middot;</span>Register</div>
     <h1>Realms</h1>
     <p class="dm-page-lede">
-      The systems, the worlds in them, and the places on those worlds. Organized by designation, with a route table at the top, so that the question &ldquo;can we get there, and what is waiting&rdquo; has one answer in one place.
+      Every place the crew can go, grouped by the system it sits in. Ships have their own register in <a href="../vessels/">Vessels</a>; what a crossing between these places contains is in <a href="astral-sea.html">The Astral Sea</a>.
     </p>
   </header>
 
-  <div class="dm-callout is-info">
-    <span class="dm-callout-label">This page and the chart</span>
-    The <a href="../chart/">Cosmos Chart</a> is the registry: every designated body, every lane, the whole world list, drawn. <strong>This page is the places you can run</strong> &mdash; what is physically there, who is standing in it, what happens if the crew pushes. A world that is only a survey entry lives on the chart and stays off this page until it has a situation.
+  <div class="dm-register-bar">
+    <input class="dm-register-search" type="search" placeholder="Filter by name, designation, who is there&hellip;" aria-label="Filter realms">
   </div>
 
+  <div class="facets">
+    <div class="facet">
+      <span class="facet-label">System</span>
+      <div class="facet-pills">
+        <button class="filter-tag" type="button" data-where="realmspace">Realmspace</button>
+        <button class="filter-tag" type="button" data-where="virenspace">Virenspace</button>
+        <button class="filter-tag" type="button" data-where="aethris">Aethris</button>
+        <button class="filter-tag" type="button" data-where="sys04">SYS-04</button>
+        <button class="filter-tag" type="button" data-where="tetherbreak">Tetherbreak</button>
+        <button class="filter-tag" type="button" data-where="astral">The Astral Sea</button>
+        <button class="filter-tag" type="button" data-where="untethered">Untethered</button>
+      </div>
+    </div>
+    <div class="facet">
+      <span class="facet-label">Kind</span>
+      <div class="facet-pills">
+        <button class="filter-tag" type="button" data-kind="system">System</button>
+        <button class="filter-tag" type="button" data-kind="world">World</button>
+        <button class="filter-tag" type="button" data-kind="station">Station</button>
+        <button class="filter-tag" type="button" data-kind="region">Region</button>
+        <button class="filter-tag" type="button" data-kind="site">Site</button>
+      </div>
+    </div>
+    <div class="facet">
+      <span class="facet-label">Standing</span>
+      <div class="facet-pills">
+        <button class="filter-tag" type="button" data-standing="been">Been there</button>
+        <button class="filter-tag" type="button" data-standing="next">Next</button>
+        <button class="filter-tag" type="button" data-standing="paper">On paper</button>
+        <button class="filter-tag" type="button" data-standing="unwritten">Unwritten</button>
+      </div>
+    </div>
+  </div>
 
-  <!-- ════════════════════════════════════════════════════════════════
-       ROUTES
-       ════════════════════════════════════════════════════════════════ -->
-  <details class="dm-collapse-section" id="routes" open>
-    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Routes <span class="dm-tag is-canon">Reference</span></h2></summary>
+  <div class="result-line">
+    <span class="result-count"></span>
+    <button class="clear-btn" type="button" hidden>Clear</button>
+  </div>
+
+  <div class="register">
+
+    <div class="ent" data-where="realmspace" data-kind="system" data-standing="been">
+      <a class="ent-row" href="realmspace.html">
+        <span class="ent-face"><span class="face-mono">01</span></span>
+        <span class="ent-name">SYS-01 &mdash; Realmspace<span class="ent-sub">The home system. Eight designated worlds, four with a situation on them.</span></span>
+        <span class="ent-state">Been there</span>
+      </a>
+      <div class="ent-detail">
+        <p>Populous and well charted. Caelestis orbits Toril here, and Toril is the nearest destination on most Academy shipping routes. The other four designated worlds are registry entries with nothing on them yet.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="caelestis.html">Caelestis</a>
+          <a class="chip chip-place" href="toril.html">Toril</a>
+          <a class="chip chip-place" href="hcatha.html">H'Catha</a>
+          <a class="chip chip-place" href="glyth.html">Glyth</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="realmspace" data-kind="station" data-standing="been">
+      <a class="ent-row" href="caelestis.html">
+        <span class="ent-face"><span class="face-mono">C</span></span>
+        <span class="ent-name">Caelestis<span class="ent-sub">Fleet station in Toril orbit; the Academy and the operations wing.</span></span>
+        <span class="ent-state">Been there</span>
+      </a>
+      <div class="ent-detail">
+        <p>One structure, two wings, under permanent <em>Forbiddance.</em> It holds <a href="../artifacts/atlas.html">A.T.L.A.S.</a> in the Brig, and <a href="../factions/#joffrey">Joffrey</a> has spent a year mapping routes to it from inside operations. Fleet Intelligence sees incidents and has not assembled them.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../dossiers/mirt.html">Mirt</a>
+          <a class="chip chip-item" href="../artifacts/atlas.html">A.T.L.A.S.</a>
+          <a class="chip chip-place" href="caelestis.html#brig">The Brig</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="realmspace" data-kind="world" data-standing="been">
+      <a class="ent-row" href="toril.html">
+        <span class="ent-face"><span class="face-mono">W1</span></span>
+        <span class="ent-name">W-01 &mdash; Toril<span class="ent-sub">The sphere's namesake world, two days out.</span></span>
+        <span class="ent-state">Been there</span>
+      </a>
+      <div class="ent-detail">
+        <p>Contact with Caelestis is established and deliberately limited. The Cogfast Enclave is placed here in draft, which makes it the strongest unclaimed lead attached to <a href="../crew/#gregory">Gregory</a> and close enough to reach between voyages.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../crew/#gregory">Gregory</a>
+          <a class="chip chip-place" href="caelestis.html">Caelestis</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="realmspace" data-kind="world" data-standing="next">
+      <a class="ent-row" href="hcatha.html">
+        <span class="ent-face"><span class="face-mono">W2</span></span>
+        <span class="ent-name">W-02 &mdash; H'Catha<span class="ent-sub">Beholder toroid; eight rival domains and an adamantine meteor.</span></span>
+        <span class="ent-state">Next</span>
+      </a>
+      <div class="ent-detail">
+        <p>A disk of sea with the Spindle at its center and rim fog closing the edge. Six of the eight domains hold a port at the Spindle&rsquo;s base and accept outsiders with goods to trade, so arriving openly is possible and comes with a deadline to leave. The meteor landed on a seam, which is why it is still there.</p>
+        <div class="ent-links">
+          <a class="chip chip-quest" href="../campaign/spine.html#hcatha-arc">The H'Catha arc</a>
+          <a class="chip chip-place" href="hcatha.html#domains">The eight domains</a>
+          <a class="chip chip-place" href="hcatha.html#terrain">Terrain at the table</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="realmspace" data-kind="world" data-standing="paper">
+      <a class="ent-row" href="glyth.html">
+        <span class="ent-face"><span class="face-mono">W7</span></span>
+        <span class="ent-name">W-07 &mdash; Glyth<span class="ent-sub">The illithid world that refused the unthinned.</span></span>
+        <span class="ent-state">On paper</span>
+      </a>
+      <div class="ent-detail">
+        <p>Ringed and remote, ten days out. <a href="../dossiers/nghathrod.html">N&rsquo;ghathrod</a> brought the unthinned here and Glyth refused them, which is the origin of everything the colony is doing. Glyth has no idea what the refusal set in motion, and by colony reckoning it is not an enemy &mdash; only a door that closed.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../dossiers/nghathrod.html">N&rsquo;ghathrod</a>
+          <a class="chip chip-npc" href="../dossiers/vthoramu.html">The Vth&rsquo;oramu</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="virenspace" data-kind="system" data-standing="paper">
+      <a class="ent-row" href="virenspace.html">
+        <span class="ent-face"><span class="face-mono">02</span></span>
+        <span class="ent-name">SYS-02 &mdash; Virenspace<span class="ent-sub">An overlap site that speaks in a dead Starchild&rsquo;s voice.</span></span>
+        <span class="ent-state">On paper</span>
+      </a>
+      <div class="ent-detail">
+        <p>It holds the stellar feature matching the destination encoded in Mirt&rsquo;s wardrobe. Zerathis tethered here repeatedly and dissolved into the system&rsquo;s paracausal layer, so what is at Viren now is part Zerathis, part Astra&rsquo;s reach, and part the site itself. It is loud enough for <a href="../crew/#casey">Casey</a> to feel on arrival.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../crew/#casey">Casey</a>
+          <a class="chip chip-npc" href="../dossiers/zerathis.html">Zerathis</a>
+          <a class="chip chip-npc" href="../dossiers/mirt.html">Mirt</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="aethris" data-kind="system" data-standing="paper">
+      <a class="ent-row" href="aethris.html">
+        <span class="ent-face"><span class="face-mono">03</span></span>
+        <span class="ent-name">SYS-03 &mdash; Aethris<span class="ent-sub">Sol's homeworld, with its Zenith underway and unfinished.</span></span>
+        <span class="ent-state">On paper</span>
+      </a>
+      <div class="ent-detail">
+        <p>A long-prepared ritual of perfection began the Zenith and the Prism Ascendant answered it. <a href="../crew/#sol">Sol</a> escaped before the ritual closed. Three parties want it finished for different reasons, and nobody on Aethris knows the third party is involved.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../crew/#sol">Sol</a>
+          <a class="chip chip-npc" href="../factions/#vecna">Vecna</a>
+          <a class="chip chip-place" href="../cosmology/#zeniths">Zeniths</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="sys04" data-kind="system" data-standing="paper">
+      <a class="ent-row" href="sys04.html">
+        <span class="ent-face"><span class="face-mono">04</span></span>
+        <span class="ent-name">SYS-04<span class="ent-sub">Unnamed. Holds both of the campaign&rsquo;s pieces of other-table history.</span></span>
+        <span class="ent-state">On paper</span>
+      </a>
+      <div class="ent-detail">
+        <p>Two known worlds, reached from Realmspace on an uncharted route. Position and routes are drafts.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="fonains.html">Fonains</a>
+          <a class="chip chip-place" href="krynn.html">Krynn</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="sys04" data-kind="world" data-standing="paper">
+      <a class="ent-row" href="fonains.html">
+        <span class="ent-face"><span class="face-mono">W21</span></span>
+        <span class="ent-name">W-21 &mdash; Fonains<span class="ent-sub">The only world on record whose Monolith was destroyed.</span></span>
+        <span class="ent-state">On paper</span>
+      </a>
+      <div class="ent-detail">
+        <p>Vecna encouraged the Zenith, Tharizdun corrupted the Monolith that answered it, and Lola&rsquo;s Boys destroyed the corrupted Monolith. That is the proof a point can be taken back out of a finished working &mdash; and a piece of that Monolith is sitting in <a href="../crew/#boogie">Boogie&rsquo;s</a> chest.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../crew/#boogie">Boogie</a>
+          <a class="chip chip-item" href="../artifacts/fonains-shard.html">Fonains's shard</a>
+          <a class="chip chip-place" href="../cosmology/#monoliths">Monoliths</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="sys04" data-kind="world" data-standing="paper">
+      <a class="ent-row" href="krynn.html">
+        <span class="ent-face"><span class="face-mono">W10</span></span>
+        <span class="ent-name">W-10 &mdash; Krynn<span class="ent-sub">Where the dragons of Fonains went.</span></span>
+        <span class="ent-state">On paper</span>
+      </a>
+      <div class="ent-detail">
+        <p>An aspect of Bahamut is held here by Tiamat, and the dragons who left Fonains came to fight that war. A complete setting that needs nothing from this campaign; its value is as the place a question about dragons leads.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="fonains.html">Fonains</a>
+          <a class="chip chip-place" href="first-world.html">The First World</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="tetherbreak" data-kind="region" data-standing="been">
+      <a class="ent-row" href="tetherbreak.html">
+        <span class="ent-face"><span class="face-mono">T</span></span>
+        <span class="ent-name">The Tetherbreak sector<span class="ent-sub">The perimeter ring on the sphere&rsquo;s edge; one post silent for a year.</span></span>
+        <span class="ent-state">Been there</span>
+      </a>
+      <div class="ent-detail">
+        <p><span class="dm-tag is-locked">Restricted past Strake</span></p>
+        <p>Under elevated monitoring. The approach to Strake is open and everything past it is closed without Bridge authorization. Three posts: Hollis filing normally, Strake at the authorized limit, Cairn silent.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="strake-station.html">Strake</a>
+          <a class="chip chip-place" href="cairn-station.html">Cairn</a>
+          <a class="chip chip-place" href="tetherbreak.html#hollis-post">Hollis Post</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="tetherbreak" data-kind="station" data-standing="been">
+      <a class="ent-row" href="strake-station.html">
+        <span class="ent-face"><span class="face-mono">S</span></span>
+        <span class="ent-name">Strake Station<span class="ent-sub">The authorized limit, and the staging point for everything beyond it.</span></span>
+        <span class="ent-state">Been there</span>
+      </a>
+      <div class="ent-detail">
+        <p>Everything a crew needs to reach Cairn is here, and so is the order telling them they cannot. <a href="../dossiers/tarroway.html">Tarroway</a> has revised the approach packet three times in one cycle for a patrol that was never a patrol &mdash; every fact right, the model wrong.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../dossiers/tarroway.html">Tarroway</a>
+          <a class="chip chip-npc" href="../dossiers/verrow.html">Verrow</a>
+          <a class="chip chip-place" href="cairn-station.html">Cairn Station</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="tetherbreak" data-kind="station" data-standing="been">
+      <a class="ent-row" href="cairn-station.html">
+        <span class="ent-face"><span class="face-mono">Ca</span></span>
+        <span class="ent-name">Cairn Station<span class="ent-sub">Silent for a year. Something was left behind and is still there.</span></span>
+        <span class="ent-state">Been there</span>
+      </a>
+      <div class="ent-detail">
+        <p>The mass signature in Cairn&rsquo;s final transmission was the <a href="../dossiers/vthoramu.html">Vth&rsquo;oramu</a> holding the bearing. <a href="../factions/#vocath-op">Vocath&rsquo;s</a> people took the station afterward and waited, because a silent Fleet station guarantees a relief run on one predictable bearing. The FIA chain records the whole event accurately and understands none of it.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../dossiers/vthoramu.html">The Vth&rsquo;oramu</a>
+          <a class="chip chip-npc" href="../factions/#joffrey">Joffrey</a>
+          <a class="chip chip-npc" href="../dossiers/clint.html">Clint</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="astral" data-kind="region" data-standing="been">
+      <a class="ent-row" href="astral-sea.html">
+        <span class="ent-face"><span class="face-mono">A</span></span>
+        <span class="ent-name">The Astral Sea<span class="ent-sub">What a crossing can contain. Wildspace between systems, the Flow between spheres.</span></span>
+        <span class="ent-state">Been there</span>
+      </a>
+      <div class="ent-detail">
+        <p>Psychic wind, currents and eddies, color pools, and dead gods drifting. Any of it can be scenery, an obstacle, or a thread the crew chooses to pull. Give each leg one feature and let them decide whether to look.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="astral-sea.html#psychic-wind">Psychic wind</a>
+          <a class="chip chip-place" href="astral-sea.html#color-pools">Color pools</a>
+          <a class="chip chip-place" href="#routes">Routes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="astral" data-kind="site" data-standing="unwritten">
+      <a class="ent-row" href="waystation.html">
+        <span class="ent-face"><span class="face-mono">W</span></span>
+        <span class="ent-name">The Astral waystation<span class="ent-sub">The last reliable resupply before the long haul onward.</span></span>
+        <span class="ent-state">Unwritten</span>
+      </a>
+      <div class="ent-detail">
+        <p>The well-known stop on the charted lane between Realmspace and <a href="virenspace.html">Virenspace</a>, where the lane splits. Any crew heading out that way stops here, which makes it the natural place to put a rumor, a meeting or a tail. <strong>Open:</strong> name, operator, and what it trades in.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="virenspace.html">Virenspace</a>
+          <a class="chip chip-place" href="#routes">Routes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="astral" data-kind="site" data-standing="unwritten">
+      <a class="ent-row" href="cantina.html">
+        <span class="ent-face"><span class="face-mono">Cn</span></span>
+        <span class="ent-name">The traveling cantina<span class="ent-sub">Works a circuit rather than holding a position.</span></span>
+        <span class="ent-state">Unwritten</span>
+      </a>
+      <div class="ent-detail">
+        <p>Drop it wherever the crew is traveling &mdash; it is the answer to a long quiet leg that needs a scene, and the fact that it moves means it can show up twice without explanation. Odds is the plasmoid bartender a crew is likely to meet on it. <strong>Open:</strong> name, owner, and the circuit.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="#routes">Routes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="astral" data-kind="site" data-standing="unwritten">
+      <a class="ent-row" href="meteor-hub.html">
+        <span class="ent-face"><span class="face-mono">M</span></span>
+        <span class="ent-name">The carved-meteor hub<span class="ent-sub">A social hub rather than a Fleet installation.</span></span>
+        <span class="ent-state">Unwritten</span>
+      </a>
+      <div class="ent-detail">
+        <p>A hollowed meteor turned into a gathering place, on the long haul between Realmspace and <a href="aethris.html">SYS-03</a>. The place to hear something the Fleet would not file. <strong>Open:</strong> placement, name, and who lives there.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="aethris.html">Aethris</a>
+          <a class="chip chip-place" href="#routes">Routes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="untethered" data-kind="world" data-standing="paper">
+      <a class="ent-row" href="first-world.html">
+        <span class="ent-face"><span class="face-mono">F</span></span>
+        <span class="ent-name">The First World<span class="ent-sub">Where the Reach happened. Destroyed, and nameless on every record.</span></span>
+        <span class="ent-state">On paper</span>
+      </a>
+      <div class="ent-detail">
+        <p>Its civilization reached for the Axioms directly. The Core manifested above it mid-Zenith and remained after the world was destroyed. Every child heart in the cosmos pulls faintly toward this one, and that pull is what the Ascension is built to mass and aim.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="../cosmology/#core">The Core</a>
+          <a class="chip chip-place" href="../glossary/#yearning">The Yearning</a>
+          <a class="chip chip-quest" href="../campaign/ascension/">The Ascension</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="untethered" data-kind="system" data-standing="paper">
+      <a class="ent-row" href="wayfinders-homeworld.html">
+        <span class="ent-face"><span class="face-mono">06</span></span>
+        <span class="ent-name">SYS-06 &mdash; the Wayfinders' homeworld<span class="ent-sub">Hidden by a living ritual. Nameless by doctrine.</span></span>
+        <span class="ent-state">On paper</span>
+      </a>
+      <div class="ent-detail">
+        <p>A halfling world that decides what reaches it. The concealment is held by one living practitioner and rides on the Dissolution fragment&rsquo;s oscillation, so the world sits where it always sat and finding it means knowing the way back rather than the coordinates. The fragment is currently leaving the Runekeeper.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../crew/#tumak">Tumak</a>
+          <a class="chip chip-npc" href="../dossiers/the-runekeeper.html">The Runekeeper</a>
+          <a class="chip chip-item" href="../artifacts/runekeepers-fragment.html">The fragment</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-where="untethered" data-kind="world" data-standing="unwritten">
+      <a class="ent-row" href="ascension-world.html">
+        <span class="ent-face"><span class="face-mono">05</span></span>
+        <span class="ent-name">SYS-05 &mdash; the Ascension World<span class="ent-sub">A threshold Vecna already forced, at local scale.</span></span>
+        <span class="ent-state">Unwritten</span>
+      </a>
+      <div class="ent-detail">
+        <p>Terrain, atmosphere and surviving structures all carry the residue of an event in which a single will dictated local reality. Everything the Ascension intends at cosmic scale, this world has already experienced at small scale, which makes it the cheapest honest foreshadowing available.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../factions/#vecna">Vecna</a>
+          <a class="chip chip-quest" href="../campaign/ascension/">The Ascension</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="register-empty" hidden>Nothing matches those filters.</div>
+
+  </div>
+
+  <details class="dm-collapse-section" id="routes">
+    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Routes</h2></summary>
     <div class="dm-collapse-section-body">
+
 
       <p>
         Travel between worlds in a system takes days by spelljamming helm. Travel between systems crosses Wildspace on lanes. Crossing the Flow to another sphere is a senior-crew operation and has never been on the table for cadets.
@@ -46,7 +400,7 @@
         <tbody>
           <tr><td><strong>Charted</strong></td><td>Surveyed, logged, and routinely sailed. Quiet more often than not. One feature per leg, and the crew decides whether to look at it.</td></tr>
           <tr><td><strong>Long haul</strong></td><td>Charted and far. Supplies matter, and a crossing is long enough that something should happen on it.</td></tr>
-          <tr><td><strong>Uncharted</strong></td><td>Sailed rarely and recorded badly. Intensity varies along it, and arrival time and arrival place are both negotiable &mdash; see <a href="#astral-wind">psychic wind</a>.</td></tr>
+          <tr><td><strong>Uncharted</strong></td><td>Sailed rarely and recorded badly. Intensity varies along it, and arrival time and arrival place are both negotiable &mdash; see <a href="astral-sea.html#psychic-wind">psychic wind</a>.</td></tr>
           <tr><td><strong>Closed</strong></td><td>Standing order. Physically sailable, institutionally forbidden, and the consequence of being caught on one is a Fleet consequence rather than a cosmic one.</td></tr>
         </tbody>
       </table>
@@ -55,21 +409,21 @@
       <table>
         <thead><tr><th>From</th><th>To</th><th>Tier</th><th>Standing</th></tr></thead>
         <tbody>
-          <tr><td>SYS-01 Realmspace</td><td><a href="#virenspace">SYS-02 Virenspace</a></td><td>Charted</td><td>Open. Splits at the <a href="#waystation">Astral waystation</a>, the last reliable resupply before the long haul onward.</td></tr>
-          <tr><td>SYS-01</td><td><a href="#strake-station">Strake Station</a></td><td>Charted</td><td>Open. The <a href="#tetherbreak">Tetherbreak</a> approach, running along the sphere's edge.</td></tr>
-          <tr><td>SYS-01</td><td><a href="#hollis-post">Hollis Post</a></td><td>Charted</td><td>Open. The western perimeter post.</td></tr>
-          <tr><td>Strake Station</td><td><a href="#cairn-station">Cairn Station</a></td><td><strong>Closed</strong></td><td>The edge run. Shut by standing order <a href="../../restricted/sa-005.html">SA-005</a>, and nobody has been along it since the Crow turned back.</td></tr>
-          <tr><td>SYS-01</td><td><a href="#aethris">SYS-03</a></td><td>Long haul</td><td>Open, passing the <a href="#meteor-hub">carved-meteor hub</a>.</td></tr>
+          <tr><td>SYS-01 Realmspace</td><td><a href="virenspace.html">SYS-02 Virenspace</a></td><td>Charted</td><td>Open. Splits at the <a href="waystation.html">Astral waystation</a>, the last reliable resupply before the long haul onward.</td></tr>
+          <tr><td>SYS-01</td><td><a href="strake-station.html">Strake Station</a></td><td>Charted</td><td>Open. The <a href="tetherbreak.html">Tetherbreak</a> approach, running along the sphere's edge.</td></tr>
+          <tr><td>SYS-01</td><td><a href="tetherbreak.html#hollis-post">Hollis Post</a></td><td>Charted</td><td>Open. The western perimeter post.</td></tr>
+          <tr><td>Strake Station</td><td><a href="cairn-station.html">Cairn Station</a></td><td><strong>Closed</strong></td><td>The edge run. Shut by standing order <a href="../../restricted/sa-005.html">SA-005</a>, and nobody has been along it since the Crow turned back.</td></tr>
+          <tr><td>SYS-01</td><td><a href="aethris.html#zenith">SYS-03</a></td><td>Long haul</td><td>Open, passing the <a href="meteor-hub.html">carved-meteor hub</a>.</td></tr>
           <tr><td>SYS-03</td><td>SYS-02</td><td>Long haul</td><td>Open.</td></tr>
-          <tr><td>SYS-01</td><td><a href="#sys04">SYS-04</a></td><td>Uncharted</td><td>Open and badly recorded. Clint Dashforest reached SYS-04 along it in a stolen craft and a psychic wind took him.</td></tr>
-          <tr><td>SYS-01</td><td><a href="#ascension-world">SYS-05</a></td><td>Uncharted</td><td>Open.</td></tr>
+          <tr><td>SYS-01</td><td><a href="sys04.html">SYS-04</a></td><td>Uncharted</td><td>Open and badly recorded. Clint Dashforest reached SYS-04 along it in a stolen craft and a psychic wind took him.</td></tr>
+          <tr><td>SYS-01</td><td><a href="ascension-world.html">SYS-05</a></td><td>Uncharted</td><td>Open.</td></tr>
           <tr><td>SYS-02</td><td>SYS-05</td><td>Charted</td><td>Open.</td></tr>
           <tr><td>SYS-02</td><td>SYS-07</td><td>Long haul</td><td>Open.</td></tr>
           <tr><td>SYS-04</td><td>SYS-05</td><td>Long haul</td><td>Open.</td></tr>
           <tr><td>SYS-04</td><td>SYS-08</td><td>Uncharted</td><td>Open.</td></tr>
           <tr><td>SYS-05</td><td>SYS-07</td><td>Uncharted</td><td>Open.</td></tr>
           <tr><td>SYS-05</td><td>SYS-08</td><td>Long haul</td><td>Open.</td></tr>
-          <tr><td>&mdash;</td><td><a href="#tumak-homeworld">SYS-06 &mdash; the Wayfinders' homeworld</a></td><td><strong>No route</strong></td><td>The concealment is the reason. A Wayfinder leaves with no map and recognizes the way back or fails to.</td></tr>
+          <tr><td>&mdash;</td><td><a href="wayfinders-homeworld.html">SYS-06 &mdash; the Wayfinders' homeworld</a></td><td><strong>No route</strong></td><td>The concealment is the reason. A Wayfinder leaves with no map and recognizes the way back or fails to.</td></tr>
         </tbody>
       </table>
 
@@ -78,19 +432,16 @@
         Everything beyond Strake is closed without Bridge authorization, which makes the Cairn run <strong>the one destination on the board that the crew has to either be sent to or steal.</strong> That is a feature: it forces the question of who sent them and what they were told.
       </div>
 
+      <p>
+        Three stops sit on the lanes rather than in a system &mdash; the <a href="waystation.html">Astral waystation</a>, the <a href="cantina.html">traveling cantina</a> and the <a href="meteor-hub.html">carved-meteor hub</a>. Each is deliberately light, so it can carry whatever a given voyage needs.
+      </p>
     </div>
   </details>
 
-
-  <hr>
-
-
-  <!-- ════════════════════════════════════════════════════════════════
-       SPHERES
-       ════════════════════════════════════════════════════════════════ -->
   <details class="dm-collapse-section" id="spheres">
     <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">The spheres</h2></summary>
     <div class="dm-collapse-section-body">
+
 
       <p>
         Five crystal spheres are designated. One is home and charted; the rest are held deliberately empty, because each is a campaign that has yet to be run. <a href="../campaign/ascension/#figure">The Figure</a> needs three linked systems in every one of the five, which is the structural reason they all exist and the reason none of them can stay blank forever.
@@ -124,777 +475,20 @@
         Crossing the Flow between spheres is a senior-crew operation and has never been within a cadet crew's reach. Lane-level detail and the drawn layout are on the <a href="../chart/">Cosmos Chart</a>.
       </p>
 
-    </div>
-  </details>
-
-
-  <!-- ════════════════════════════════════════════════════════════════
-       REALMSPACE
-       ════════════════════════════════════════════════════════════════ -->
-  <details class="dm-collapse-section" id="realmspace">
-    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">SYS-01 &mdash; Realmspace</h2></summary>
-    <div class="dm-collapse-section-body">
-
-      <p>
-        The home system, populous and well charted on standard Fleet navigation maps. Caelestis orbits Toril here, and Toril is the nearest destination on most academy shipping routes.
-      </p>
-
-      <h3>The worlds</h3>
-      <table>
-        <thead><tr><th>Designation</th><th>Class</th><th>Out</th><th>What it is</th></tr></thead>
-        <tbody>
-          <tr><td><strong>W-03 Anadia</strong></td><td>Inner</td><td>12 hours</td><td>Closest of the inner worlds.</td></tr>
-          <tr><td><strong>W-04 Coliar</strong></td><td>Inner</td><td>1 day</td><td>Open air and floating islands.</td></tr>
-          <tr><td><strong><a href="#toril">W-01 Toril</a></strong></td><td>Inner</td><td>2 days</td><td>The sphere's namesake world. Fleet keeps a low profile on the surface.</td></tr>
-          <tr><td><strong>W-05 Karpri</strong></td><td>Inner</td><td>3 days</td><td>A water world, riding well above the common lanes.</td></tr>
-          <tr><td><strong>W-06 Chandos</strong></td><td>Inner</td><td>4 days</td><td>Rides below the plane of the inner worlds.</td></tr>
-          <tr><td><strong><a href="#glyth">W-07 Glyth</a></strong></td><td>Outer</td><td>10 days</td><td>Ringed and remote. The illithid world, and the reason the <a href="#vthoramu">Vth'oramu</a> is a ship rather than a city.</td></tr>
-          <tr><td><strong>W-09 Garden</strong></td><td>Outer</td><td>12 days</td><td>A cluster of linked bodies turning as a set.</td></tr>
-          <tr><td><strong><a href="#hcatha">W-02 H'Catha</a></strong></td><td>Outer</td><td>16 days</td><td>Beholder toroid ruled by rival hives.</td></tr>
-        </tbody>
-      </table>
-
-
-      <details class="dm-collapse-section is-sub" id="caelestis">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">Caelestis</h3></summary>
-        <div class="dm-collapse-section-body">
-
-          <p>
-            A Fleet station in Toril orbit. A single structure with two functional wings: the <strong>Academy wing</strong>, where cadets train and live, and the <strong>Fleet operations wing</strong>, where contracts are issued and operational vessels work. Cadet graduation is internal movement from one wing to the other.
-          </p>
-
-          <p>
-            Staffed and run by the <a href="../factions/#academy-fleet">Caelestis Academy &amp; Fleet</a>. Mirt is its headmaster.
-          </p>
-
-          <div class="dm-callout is-warn">
-            <span class="dm-callout-label">It is a target and the staff half-know it</span>
-            Caelestis holds <a href="../artifacts/atlas.html">A.T.L.A.S.</a> in the Brig, and <a href="../factions/#joffrey">Joffrey</a> has been mapping routes to it from inside the operations wing for a year. The sabotage, the thefts and <a href="../factions/#vocath-op">Vocath's</a> grudge campaign against Mirt are all noise over that one objective. <strong>Fleet Intelligence sees incidents and has not assembled them.</strong>
-          </div>
-
-          <details class="dm-collapse" id="caelestis-security">
-            <summary>Security</summary>
-            <p>
-              Caelestis is under permanent <em>Forbiddance</em>, maintained by Saerthe Abizjn as senior caster. Teleportation in, out, or within the warded area fails. The ward is renewed nightly across a 30-day cycle and tested monthly at the dock perimeters. Mechanics in <a href="../rules/#forbiddance">Rules</a>.
-            </p>
-            <p>
-              Authorized internal transit uses bound <em>Teleportation Circle</em> sigils linking a small number of fixed points: the Bridge, the Brig, the Sky Dock control house, a handful of operational nodes. Sigil sequences are issued by role on a need-to-know basis and rotated periodically. Saerthe maintains the registry. Cadets and most personnel never see a sigil.
-            </p>
-            <p>
-              The wards are standard Fleet security for installations of consequence, which is the point: <strong>nobody reads them as evidence that Caelestis holds anything unusual.</strong>
-            </p>
-          </details>
-
-          <details class="dm-collapse" id="brig">
-            <summary>The Brig — Bay of Restricted Inert Goods</summary>
-            <p>
-              Caelestis's high-security holding. A vault, in plain Fleet language, for objects whose cosmological character is unknown, unstable, or institutionally inconvenient to discuss. The acronym is bureaucratic.
-            </p>
-            <p>
-              Access is heavily compartmentalized. The full inventory is known to a small handful at Bridge level; individual handlers know what passes through their own station and nothing about what is held elsewhere. Routes to and from the Brig are themselves classified, and couriers know only the next handoff. Teleportation fails in and out of it.
-            </p>
-            <p>
-              Current holdings include <a href="../artifacts/atlas.html">A.T.L.A.S.</a>, catalogued as a navigational instrument of antique origin.
-            </p>
-            <p>
-              <strong>Its location and access protocols are classified well enough that Vocath could never have found it</strong>, which is why the strike against it exists at all: Joffrey found it and told him it was there. See <a href="../campaign/colony/#vocath-op">Colony Operations</a>.
-            </p>
-          </details>
-
-          <details class="dm-collapse">
-            <summary>Simulation Deck</summary>
-            <p>
-              Where Trial by Fire simulations run. Pods, scenario controls, instructor stations, run by Boatswain Tarto. A sabotage incident here injured cadets and left metallic plates and a jagged sigil in the chamber walls &mdash; the same hand as the astrally collared neogi's brand.
-            </p>
-          </details>
-
-          <details class="dm-collapse">
-            <summary>Weeping Goddess</summary>
-            <p>
-              The station's main refectory and informal social hub. Cadets, instructors, visiting personnel, dock workers and Fleet staff all eat here. Petty Officer Winston Ryeback presides over the galley, and it is the one room on the station where every faction's people are in each other's hearing.
-            </p>
-          </details>
-
-          <details class="dm-collapse">
-            <summary>Sky Dock</summary>
-            <p>
-              The surface-facing ship dock, where most cadet ship-handling exercises take place. Kip and Pik, two rock gnomes, run ship-anatomy drills and dock operations.
-            </p>
-            <p>
-              <strong>The bribed seam is here.</strong> <a href="../dossiers/jeffrey.html">Jeffrey</a> is a Sky Dock hand paid to let certain manifests go unchecked, which is how the colony's material moves in and out &mdash; and it is where the crew already watched <a href="../dossiers/joffrey.html">Joffrey</a> make an exchange they thought was odd.
-            </p>
-          </details>
-
-          <details class="dm-collapse">
-            <summary>Sea Dock</summary>
-            <p>
-              The lower cargo dock. A working dock for bulk supply, maintenance and salvage handling, where Rindle Gearloft works. The aligner berths along the mooring struts are where <a href="../crew/#gregory">the Latchling</a> is, and Rindle has been protecting it from the academy.
-            </p>
-          </details>
-
-          <details class="dm-collapse">
-            <summary>Spelljammer Nexus / Chart Room</summary>
-            <p>
-              Navigational training and reference. Star charts, sphere maps, registered route logs, ledger archives. Saerthe is sometimes present. Anyone trying to work out where a lane goes without Bridge authorization comes here first.
-            </p>
-          </details>
-
-          <details class="dm-collapse">
-            <summary>Stores</summary>
-            <p>
-              The station's supply office and Mr. Blip's domain. Issued kit, ration rotation and miscellaneous logistics pass through here. Blip is also the control case for <a href="../crew/#gregory">Gregory</a>: an autognome with personhood inside the normal range, who cannot cast.
-            </p>
-          </details>
-
-          <details class="dm-collapse">
-            <summary>Cadet Quarters</summary>
-            <p>
-              Bunk space for the Academy wing. Communal, with a few windows onto the astral dark for the wings that face outward.
-            </p>
-          </details>
-
-          <details class="dm-collapse">
-            <summary>Gymnasium / Assault Course</summary>
-            <p>
-              Physical training. Fitness, combat drill and obstacle assessment.
-            </p>
-          </details>
-
-          <details class="dm-collapse">
-            <summary>Mirt's Quarters</summary>
-            <p>
-              The headmaster's private quarters, on the Bridge level. Contains an extradimensional wardrobe of unknown manufacture whose interior corresponds to a stellar location in <a href="#virenspace">Virenspace</a>, and Mirt has disclosed nothing about its provenance.
-            </p>
-            <p>
-              <strong>It is one of <a href="../factions/#zerathis">Zerathis's</a> tethers</strong> &mdash; a paracausal replica of his anchor site, carrying a thread of the Viren shift across space. That is why <a href="../crew/#casey">Casey</a> was drawn to it and why Polly could reach him there. Mirt has been keeping a piece of Astra's network in his bedroom for years.
-            </p>
-          </details>
-
+      <div class="dm-embed">
+        <div class="dm-embed-bar">
+          <span class="dm-embed-title">Caelestis Cosmos</span>
+          <a class="dm-embed-out" href="../chart/">Open full &rarr;</a>
         </div>
-      </details>
-
-
-      <details class="dm-collapse-section is-sub" id="toril">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">W-01 &mdash; Toril</h3></summary>
-        <div class="dm-collapse-section-body">
-
-          <p>
-            The principal inhabited world of Realmspace and the sphere's namesake. A standard-class world by Fleet cataloguing: atmosphere, oceans, continents, varied civilizations. Diplomatic and trade contact with Caelestis is established and limited, and the Fleet's standing practice is to operate discreetly rather than advertise the wider cosmos to surface populations.
-          </p>
-
-          <p>
-            <strong>The Cogfast Enclave</strong> is placed here in draft &mdash; the Cycle 1489 auroral event in <a href="../../restricted/sa-002.html">SA-002</a>, where mechanical installations across a region synchronized. It is the strongest unclaimed lead attached to <a href="../crew/#gregory">Gregory</a>, and it is close enough to home that the crew can reach it between voyages.
-          </p>
-
-        </div>
-      </details>
-
-
-      <details class="dm-collapse-section is-sub" id="hcatha">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">W-02 &mdash; H'Catha</h3></summary>
-        <div class="dm-collapse-section-body">
-
-          <p>
-            A toroidal water world sixteen days out &mdash; a disk of sea with the <strong>Spindle</strong> rising at its center and <strong>rim fog</strong> closing the edge. Ruled by beholders, and the only world in the system where the political geography is written into the terrain.
-          </p>
-
-          <p>
-            Non-beholder traffic is rare and dangerous. Patrols range broadly through the surrounding space, screening incoming vessels and engaging anything they fail to recognize or intimidate. <strong>Six of the eight domains hold a port</strong> at the Spindle's base and accept outsiders with goods to trade, so arriving openly is possible and comes with a deadline to leave.
-          </p>
-
-          <h4>Scale</h4>
-          <p>
-            The Spindle's base runs roughly <strong>630 miles</strong> around, giving each domain about <strong>80 miles of frontage</strong> on it. Crossing a single domain along the shore is a multi-day trip, which is what makes a border crossing a decision rather than a transition.
-          </p>
-
-          <details class="dm-collapse" id="spindle">
-            <summary>The Spindle</summary>
-            <p>
-              The structure at the center, and the reason beholders are here at all. In the geography of the world it is <strong>the central eye</strong>, with the eight domains arranged around it like eyestalks.
-            </p>
-            <p>
-              <strong>Magic grows unreliable the higher you climb.</strong> At the summit is a knowledge station that drives small-brained visitors insane. Beholders who survive it <em>come back lawful neutral</em> &mdash; and are cast out by their own kind for it, which is the single most useful fact on this world.
-            </p>
-            <div class="dm-callout is-cosmic">
-              <span class="dm-callout-label">The endless cycle</span>
-              Beholders <strong>conquered H'Catha cooperatively</strong>, before the curse of their own paranoia set in. They gathered here drawn by the Spindle, and a world this dense with paranoid dreamers now breeds them, since a beholder's dreams can make another. <strong>They came here, and now it makes more of them.</strong>
-              <p>
-                That is also why the war never ends: whenever one nation gains a foothold on the Spindle, the others bring it down. The eight-domain layout was designed during the cooperative conquest and outlived the cooperation.
-              </p>
-            </div>
-            <p>
-              Each domain's terrain carries its ruler's signature ray, soaked in over ages &mdash; the same way a dragon's presence shapes its region. The land remembers who has been looking at it.
-            </p>
-          </details>
-
-          <details class="dm-collapse" id="hcatha-domains">
-            <summary>The eight domains</summary>
-            <p>
-              Positions are map-relative. Six hold a port; the two contested wedges have none, and that is where the usurpation cycle is currently hot.
-            </p>
-            <table>
-              <thead><tr><th>Position</th><th>Domain</th><th>Ray and terrain</th><th>State</th></tr></thead>
-              <tbody>
-                <tr><td>East</td><td><strong>Kurrzot</strong></td><td>Paralysis &mdash; still water, dead currents</td><td>Claimant on the meteorite seam.</td></tr>
-                <tr><td>Southeast</td><td><strong>The Rival</strong></td><td>Fear &mdash; dread carried in the fog</td><td>The other claimant. <span class="dm-tag is-stub">Unnamed</span></td></tr>
-                <tr><td>South</td><td><strong>Arrival port</strong></td><td>Charm &mdash; calm, lulling water</td><td>Trade-friendly. Its ruler charms visitors rather than killing them.</td></tr>
-                <tr><td>Southwest</td><td><strong>Contested &mdash; active war</strong></td><td>Slowing and telekinesis, flickering with the front line</td><td>Two beholders fighting through agents. The terrain effect shifts as control does.</td></tr>
-                <tr><td>West</td><td>Domain</td><td>Enervation &mdash; withered sea life</td><td>Stable, offstage.</td></tr>
-                <tr><td>Northwest</td><td>Domain</td><td>Sleep &mdash; drowsy haze</td><td>Stable, offstage.</td></tr>
-                <tr><td>North</td><td>Domain</td><td>Petrification &mdash; stone-crusted shore</td><td>Stable, offstage.</td></tr>
-                <tr><td>Northeast</td><td><strong>Contested &mdash; fallen</strong></td><td>Telekinesis, fading &mdash; drifting unmoored debris</td><td>No ruler. The effect is decaying and the <strong>freed thralls live here.</strong></td></tr>
-              </tbody>
-            </table>
-            <p>
-              The two contested wedges answer the question in both directions: one has <em>two</em> beholders fighting over it, and the other has <em>none.</em>
-            </p>
-            <div class="dm-callout is-info">
-              <span class="dm-callout-label">Seams</span>
-              The no-man's strips between domains, owned by nobody, <strong>where all the non-beholder life collects.</strong> Free locathah, guides, exiles and anyone avoiding a ruler. A seam is the only ground on this world where a crew can stand without being in someone's territory.
-            </div>
-          </details>
-
-          <details class="dm-collapse" id="hcatha-terrain">
-            <summary>Terrain effects at the table</summary>
-            <p>
-              <strong>Eye rays are terrain hazards here, not attack rolls.</strong> The ray belongs to the land rather than to a creature, which is what lets a level-appropriate party cross a beholder's domain at all.
-            </p>
-            <table>
-              <thead><tr><th>Ray</th><th>Effect in that domain</th></tr></thead>
-              <tbody>
-                <tr><td><strong>Charm</strong></td><td>Calm water that lulls. Wisdom save or linger.</td></tr>
-                <tr><td><strong>Paralysis</strong></td><td>Still zones where the currents stop. Movement costs double.</td></tr>
-                <tr><td><strong>Fear</strong></td><td>The fog carries dread. Disadvantage on the first check each hour.</td></tr>
-                <tr><td><strong>Slowing</strong></td><td>Thick, heavy air. No reactions for creatures new to the domain.</td></tr>
-                <tr><td><strong>Enervation</strong></td><td>Withered sea life. Short rests restore half.</td></tr>
-                <tr><td><strong>Telekinesis</strong></td><td>Floating debris and shifting stone. Unstable footing.</td></tr>
-                <tr><td><strong>Sleep</strong></td><td>Drowsy haze. Long watches call for Constitution saves.</td></tr>
-                <tr><td><strong>Petrification</strong></td><td>Stone-crusted shoreline full of calcified creatures. Slow, loud travel.</td></tr>
-              </tbody>
-            </table>
-            <p>
-              <strong>Disintegration and death rays stay off the board</strong> at this tier. They have no domain and no terrain effect.
-            </p>
-          </details>
-
-          <details class="dm-collapse" id="hcatha-peoples">
-            <summary>Who lives here</summary>
-            <p>
-              H'Catha is a ruled world rather than a hostile one. Most of its population is bound, native or neutral, and the hostile majority is concentrated in the agents rulers send.
-            </p>
-            <table>
-              <thead><tr><th>People</th><th>Disposition</th></tr></thead>
-              <tbody>
-                <tr><td><strong>Spectators</strong></td><td>Bound guardians, lawful neutral. Dutiful beings with real problems rather than villains.</td></tr>
-                <tr><td><strong>Locathah</strong></td><td>Native fish-folk with a long history of enslavement, and the most endangered natives on the world. Free ones live in the seams and the fallen domain. <strong>Natural guides and allies.</strong></td></tr>
-                <tr><td><strong>Thralls</strong></td><td>Charmed or held rather than evil by choice. The freed ones in the fallen domain are survivors.</td></tr>
-                <tr><td><strong>The Arcane</strong></td><td>Neutral traders working the ports. <strong>Only one of them works for <a href="../factions/#vocath">Vocath</a>.</strong></td></tr>
-                <tr><td><strong>Giff mercenaries</strong></td><td>Port muscle, lawful and professional.</td></tr>
-                <tr><td><strong>Kuo-toa and ogres</strong></td><td>The hostile majority among the agents rulers send. The module's ogre belongs to Kurrzot.</td></tr>
-              </tbody>
-            </table>
-          </details>
-
-          <details class="dm-collapse" id="hcatha-exile">
-            <summary>The enlightened exile <span class="dm-tag is-open">Unnamed</span></summary>
-            <p>
-              A beholder that reached the Spindle's summit, came back lawful neutral, and was driven out for it. Hiding in the fallen domain or near the rim fog, hunted by every other beholder on the world, <strong>and surviving there alongside the <a href="../factions/#watchers">Watcher</a></strong> who is working this world.
-            </p>
-            <p>
-              <strong>What it offers:</strong> it knows the Spindle, the domains, and how beholders think, which means it can say exactly what Kurrzot will do before he does it. <strong>What it wants:</strong> a way off H'Catha.
-            </p>
-            <div class="dm-callout is-cosmic">
-              <span class="dm-callout-label">The trade writes itself</span>
-              A crew arriving in a tyrant ship is holding the one thing it has wanted for however long it has been hiding. <strong>Passage, for everything it knows</strong> &mdash; and it is the only creature on the world whose interests are permanently opposed to every ruler on it.
-            </div>
-          </details>
-
-          <details class="dm-collapse" id="hcatha-moons">
-            <summary>The moons</summary>
-            <p>
-              <strong>Turnbetl</strong> &mdash; a flammable atmosphere. <strong>Lumbe</strong> &mdash; a metallic cylinder with doors in it, and almost certainly artificial.
-            </p>
-            <p>
-              Neither has been visited. Lumbe is the more interesting of the two and is unattached to anything, which makes it available.
-            </p>
-          </details>
-
-          <p>
-            <strong>The meteor.</strong> An adamantine meteor struck the Spindle in recent record and the strike site remains. It landed <em>on a seam</em>, which is why it is still there. Everything about the recovery &mdash; the claimants, the clock, the routes in &mdash; is in <a href="../campaign/spine.html#hcatha-arc">Spine &rarr; the H'Catha arc</a>.
-          </p>
-
-          <p>
-            <strong>Open:</strong> the Rival's name, the exile's name, whether <a href="../artifacts/containment-engine.html">Ostekk</a> lives on this world, and what Lumbe is.
-          </p>
-
-        </div>
-      </details>
-
-
-      <details class="dm-collapse-section is-sub" id="glyth">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">W-07 &mdash; Glyth</h3></summary>
-        <div class="dm-collapse-section-body">
-
-          <p>
-            Ringed and remote, ten days out. The illithid world in this system, and a settled civilization with elder brains, thrall populations and the full apparatus of illithid society.
-          </p>
-
-          <div class="dm-callout is-cosmic">
-            <span class="dm-callout-label">Glyth is the reason the colony exists</span>
-            <a href="../factions/#nghathrod">N'ghathrod</a> returned here with illithids the world judged unfit &mdash; the <em>unthinned</em>, raised without an elder brain &mdash; and Glyth refused them. <strong>That refusal is the origin of everything the <a href="../factions/#vthorama">Vth'orama</a> is doing.</strong> They are building a home because they were denied one, and they are opening worlds to do it.
-          </div>
-
-          <p>
-            Glyth has no idea what the refusal set in motion, and by colony reckoning Glyth is not an enemy. It is simply a door that closed. A crew that reaches Glyth can learn the colony's history from the only party with a reason to tell it plainly, and will be talking to illithids to do so.
-          </p>
-
-          <p>
-            <strong>Open:</strong> whether Glyth knows the colony still exists, and what Glyth would do if told what it is building.
-          </p>
-
-        </div>
-      </details>
-
-    </div>
-  </details>
-
-
-  <hr>
-
-
-  <!-- ════════════════════════════════════════════════════════════════
-       VIRENSPACE
-       ════════════════════════════════════════════════════════════════ -->
-  <details class="dm-collapse-section" id="virenspace">
-    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">SYS-02 &mdash; Virenspace</h2></summary>
-    <div class="dm-collapse-section-body">
-
-      <p>
-        A system beyond H'Catha, sparsely documented in standard Fleet archives, reached on a charted lane that splits at the <a href="#waystation">Astral waystation</a>. It contains the stellar feature corresponding to the destination encoded in Mirt's wardrobe, and Mirt has identified the match as somewhere in the Viren system without narrowing it further.
-      </p>
-
-      <div class="dm-callout is-cosmic">
-        <span class="dm-callout-label">It is already altered</span>
-        <a href="../factions/#zerathis">Zerathis</a> was a <a href="../glossary/#starchild">Starchild</a> who tethered here repeatedly, took every gift offered, and dissolved into the system's paracausal layer. <strong>Virenspace is an overlap site</strong>, which means paracausal change here runs faster than a single tether would produce and is loud enough for <a href="../crew/#casey">Casey</a> to feel on arrival.
+        <iframe src="../chart/index.html" title="Caelestis Cosmos chart" loading="lazy"></iframe>
       </div>
-
-      <p>
-        What is at Viren now is part Zerathis, part Astra's reach, part the site itself. It speaks, sometimes in his voice and with his memories. It is malevolent in no direction at all, and it may call Casey <em>brother</em> or <em>Starchild</em> without preamble, which is how he first hears the word applied to himself.
-      </p>
-
-      <p>
-        <strong>W-34</strong> sits here in draft placement: an <a href="../glossary/#ortholith">Ortholith</a> &mdash; the Order's word for a Monolith &mdash; established and recording, over a natural convergence Zenith, flagged high priority in the FIA registry. A standing Ortholith in the same system as Casey's first tether point is a coincidence the campaign can cash at any time.
-      </p>
-
-      <p>
-        Long-form notes in the <a href="https://docs.google.com/document/d/1XjOAGPAWvDivwI2ThihwCG84ACk2eF_HKtzbxgbVTMQ/edit" target="_blank" rel="noopener" class="dm-link-external">Wildspace Lore Bible</a>.
-      </p>
-
-      <p>
-        <strong>Open:</strong> what Casey's first tether point actually is, and how many tethers Viren already holds, which decides how deep the overlap runs.
-      </p>
-
     </div>
   </details>
 
-
-  <hr>
-
-
-  <!-- ════════════════════════════════════════════════════════════════
-       SYS-03 — AETHRIS
-       ════════════════════════════════════════════════════════════════ -->
-  <details class="dm-collapse-section" id="sys03">
-    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">SYS-03 &mdash; Aethris</h2></summary>
-    <div class="dm-collapse-section-body">
-
-      <p>
-        One known world, a long haul from Realmspace past the <a href="#meteor-hub">carved-meteor hub</a>. The system has no permanent name on record.
-      </p>
-
-      <details class="dm-collapse-section is-sub" id="aethris">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">W-08 &mdash; Aethris <span class="dm-tag is-locked">Zenith underway</span></h3></summary>
-        <div class="dm-collapse-section-body">
-
-          <p>
-            <a href="../crew/#sol">Sol's</a> homeworld, and a <a href="../factions/#tymora">Tymora</a>-devoted world whose culture frames fortune as destiny and compresses fated outcomes into ritual. Two named categories of person exist in relation to the religion: <strong>the Fortuned</strong>, born marked by Tymora's favor and treated as the natural elite, and <strong>the Misfortuned</strong>, born marked against it and treated as aberrations.
-          </p>
-
-          <p>
-            A long-prepared ritual of perfection at the temple site <strong>began</strong> Aethris's Zenith, and the <strong>Prism Ascendant</strong> manifested above the temple in response. Aethris holds that the Monolith's arrival is Tymora's answer to the ritual.
-          </p>
-
-          <div class="dm-callout is-warn">
-            <span class="dm-callout-label">The ritual is incomplete and that is the whole situation</span>
-            The Zenith is <em>underway.</em> Sol escaped before the ritual closed, <strong>the Fortuned need him to finish it</strong>, and Vecna is pushing it toward completion from outside. The <a href="../crew/#sol">Crystalline Retrieval Construct</a> exists because of the escape and was built afterward, which makes it bespoke: his leaving is the reason it was made.
-          </div>
-
-          <p>
-            Three parties want the same event for different reasons. The Fortuned want their perfection, Vecna wants a completed Zenith he can use, and Sol wants to stay a person. <strong>Nobody on Aethris knows the third party is involved</strong>, and the Prism Ascendant still stands above the temple with its present function undocumented.
-          </p>
-
-          <p>
-            Sol is the campaign's proof that this already happened once, and Aethris is the world the crew can visit to see what the rest of the cosmos is being aimed toward.
-          </p>
-
-          <p>
-            <strong>Open:</strong> whether the Fortuned want him back as a person or as a component, and what the Prism Ascendant has been doing above an unfinished Zenith for all this time.
-          </p>
-
-        </div>
-      </details>
-
-    </div>
-  </details>
-
-
-  <hr>
-
-
-  <!-- ════════════════════════════════════════════════════════════════
-       SYS-04
-       ════════════════════════════════════════════════════════════════ -->
-  <details class="dm-collapse-section" id="sys04">
-    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">SYS-04 <span class="dm-tag is-canon">Two known worlds</span></h2></summary>
-    <div class="dm-collapse-section-body">
-
-      <p>
-        Two known worlds, reached from Realmspace on an uncharted route. Position and routes are drafts. This is the system that holds the campaign's two pieces of other-table history, and both of them matter.
-      </p>
-
-      <details class="dm-collapse-section is-sub" id="fonains">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">W-21 &mdash; Fonains</h3></summary>
-        <div class="dm-collapse-section-body">
-
-          <p>
-            <strong>The site of the only Monolith on record to be destroyed.</strong> Vecna encouraged the world's Zenith; Tharizdun corrupted the Monolith that answered it, without Vecna's knowledge; and Lola's Boys destroyed the corrupted Monolith, which forced Vecna to change his plan.
-          </p>
-
-          <div class="dm-callout is-cosmic">
-            <span class="dm-callout-label">Why it is the most important precedent in the setting</span>
-            A destroyed Monolith is the <strong>proof that a point can be taken back out of a finished working.</strong> That is the late-game answer to &ldquo;how do you stop a completed spell,&rdquo; and it is sourced from another table's history rather than invented for this one. A piece of that Monolith is sitting in <a href="../crew/#boogie">Boogie's</a> chest.
-          </div>
-
-          <p>
-            Most of Fonains's dragons left for Krynn to fight Tiamat. The world's current population and condition are unestablished, and the half-logbook Boogie carries was pulled from a simulation of a real wreck &mdash; meaning <strong>the original is somewhere in Caelestis with pages missing.</strong>
-          </p>
-
-          <p>
-            <strong>Open:</strong> what remains on Fonains, and whether the released population went anywhere the crew can reach.
-          </p>
-
-        </div>
-      </details>
-
-      <details class="dm-collapse-section is-sub" id="krynn">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">W-10 &mdash; Krynn</h3></summary>
-        <div class="dm-collapse-section-body">
-
-          <p>
-            An aspect of Bahamut is held here by Tiamat. The dragons who left Fonains came to fight that war, which makes Krynn the destination of a migration the campaign has already established and never followed.
-          </p>
-
-          <p>
-            It is a complete setting in its own right and needs nothing from this campaign. Its value here is as the place a question about dragons leads &mdash; and the <a href="../campaign/ascension/#open">First World and dragons</a> thread is the one that would make Krynn load-bearing rather than adjacent.
-          </p>
-
-        </div>
-      </details>
-
-    </div>
-  </details>
-
-
-  <hr>
-
-
-  <!-- ════════════════════════════════════════════════════════════════
-       TETHERBREAK
-       ════════════════════════════════════════════════════════════════ -->
-  <details class="dm-collapse-section" id="tetherbreak">
-    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">The Tetherbreak sector <span class="dm-tag is-locked">Restricted</span></h2></summary>
-    <div class="dm-collapse-section-body">
-
-      <p>
-        A Fleet sector under elevated monitoring, out along the edge of SPH-01. The approach lane from Realmspace to <a href="#strake-station">Strake Station</a> is open. Everything past Strake is closed without Bridge authorization.
-      </p>
-
-      <details class="dm-collapse-section is-sub" id="perimeter-watch">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">The perimeter watch</h3></summary>
-        <div class="dm-collapse-section-body">
-
-          <p>
-            Fleet keeps a ring of posts on the edge of SPH-01, on the side facing the center of the cosmos and the neighbouring spheres. They watch for traffic entering the sphere from the Flow and cover the approaches to SYS-01 behind them, each filing instrument readings, transit sightings and anomaly reports on a shared rotation.
-          </p>
-
-          <table>
-            <thead><tr><th>Post</th><th>Position</th><th>State</th></tr></thead>
-            <tbody>
-              <tr><td><strong><a href="#hollis-post">Hollis Post</a></strong></td><td>Western approach</td><td>Crewed, filing normally.</td></tr>
-              <tr><td><strong><a href="#strake-station">Strake Station</a></strong></td><td>Directly out from SYS-01, on the Tetherbreak bearing</td><td>Crewed, filing normally. The authorized limit.</td></tr>
-              <tr><td><strong><a href="#cairn-station">Cairn Station</a></strong></td><td>Eastern end, between the SYS-01 and SYS-04 bearings</td><td><strong>Silent for a year.</strong></td></tr>
-            </tbody>
-          </table>
-
-          <p>
-            Two things make this bearing worth the expense: anything crossing the Flow into SPH-01 arrives on this side, and the astral dreadnought's territory lies along the eastern end of the ring. Strake and Hollis both appear in the <a href="../../restricted/fr-005.html">FR-005</a> sector survey. The edge run connects Strake to Cairn.
-          </p>
-
-        </div>
-      </details>
-
-      <details class="dm-collapse-section is-sub" id="hollis-post">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">Hollis Post</h3></summary>
-        <div class="dm-collapse-section-body">
-
-          <p>
-            The western perimeter post, on a charted lane from Realmspace. Crewed, filing instrument and transit readings on the perimeter rotation as recorded in <a href="../../restricted/fr-005.html">FR-005</a>.
-          </p>
-
-          <p>
-            Hollis is the <strong>control case</strong>. It is a post on the same ring, doing the same job, with the same equipment, and nothing has happened to it. That is what makes Cairn's silence legible as an event rather than as the ordinary attrition of a remote station, and it is where a crew goes to find out what a normal filing looks like.
-          </p>
-
-          <p>
-            <strong>Open:</strong> its complement, its commander, and whether its readings on the Cairn bearing a year ago caught anything that Strake's did not.
-          </p>
-
-        </div>
-      </details>
-
-      <details class="dm-collapse-section is-sub" id="strake-station">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">Strake Station</h3></summary>
-        <div class="dm-collapse-section-body">
-
-          <p>
-            The middle post of the three, directly out from SYS-01, and the last Fleet relay on the Cairn approach. <strong>Operational, crewed, and the authorized limit of the bearing.</strong> Everything a crew needs to reach Cairn is here, and so is the order telling them they cannot.
-          </p>
-
-          <h4>What is on station</h4>
-          <table>
-            <thead><tr><th>Thing or person</th><th>Why it matters</th></tr></thead>
-            <tbody>
-              <tr><td><strong>The staged Cairn approach packet</strong></td><td>Charts, survey material, and timing tables for the dreadnought's patrol. <strong>The only copies in the sector.</strong></td></tr>
-              <tr><td><strong>M. Tarroway</strong>, station cartographer</td><td>Keeps the packet and has revised it three times in one cycle. Alive, on station, still working the problem.</td></tr>
-              <tr><td><strong>Quartermaster Halix Verrow</strong></td><td>Counter-signs everything that moves on this bearing, which makes him the obstacle and the paper trail both.</td></tr>
-              <tr><td><strong>Secure storage</strong></td><td>An item held here under seal. <span class="dm-tag is-open">Contents open</span></td></tr>
-            </tbody>
-          </table>
-
-          <div class="dm-callout is-cosmic">
-            <span class="dm-callout-label">Tarroway's tables cannot work and he does not know why</span>
-            The patrol the timing tables track is <a href="#vthoramu">the Vth'oramu</a> itself. <strong>A hunting animal keeps a rhythm; a ship under command goes where it is wanted.</strong> He has spent cycles revising a patrol table for something that was never keeping a patrol, and he is the most useful person in the sector to talk to for exactly that reason.
-          </div>
-
-          <p>
-            He also does not know the thing his tables tracked has gone. Strake is where the crew can learn the shape of the problem from a competent professional who has every fact and the wrong model, which is the cleanest way to hand players a mystery without an NPC solving it for them.
-          </p>
-
-          <div class="dm-callout is-info">
-            <span class="dm-callout-label">Run it as the staging point</span>
-            Strake is the last friendly deck before anything happens. <strong>Everyone who went out went through here, and everyone who came back came back through here</strong> &mdash; so every account of the engagement, every revised table and every signature on the manifest is on this one station. Treat it as the hub the Cairn arc is launched from rather than a checkpoint on the way.
-          </div>
-
-          <p>
-            <strong>Open:</strong> what the secure-storage item is, and whether Verrow can be moved by authorization, persuasion or something worse.
-          </p>
-
-        </div>
-      </details>
-
-      <details class="dm-collapse-section is-sub" id="cairn-station">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">Cairn Station</h3></summary>
-        <div class="dm-collapse-section-body">
-
-          <p>
-            A station in the territory of an astral dreadnought &mdash; the apex predator of the Astral Sea, a titanic chain-tailed leviathan that hunts dead cosmic matter. The dreadnought is the hazard the Fleet's records name for this location, and the last assessment to say so is a year old.
-          </p>
-
-          <p>
-            Cairn is the eastern end of the perimeter ring, reached along the edge run from Strake. It carries a small standing complement and files through Strake on the resupply rotation rather than directly, so its filings have always been irregular. A year ago it reported something on the long scope whose readings made no sense, holding on the station bearing and closing slow. Then it went silent and stayed silent.
-          </p>
-
-          <p>
-            <strong>The chain in the FIA:</strong> <a href="../../restricted/lg-003.html">LG-003</a> (Cairn's final logistics report, filed through Strake, carrying the last transmission) &rarr; <a href="../../restricted/wm-002.html">WM-002</a> (the relief vessel engaged by an eye-in-a-wheel craft past Strake, and whether that party was after the packet) &rarr; <a href="../../restricted/sa-005.html">SA-005</a> (the standing order closing everything beyond Strake) &rarr; <a href="../../restricted/fr-005.html">FR-005</a> (Cairn beyond the sector limit, with gravitational variance strongest along its bearing).
-          </p>
-
-          <h4>What actually happened</h4>
-          <p>
-            The dreadnought whose territory this is was taken a little over fifty years ago and has been <a href="../factions/#nghathrod">N'ghathrod's</a> since. <strong>A year ago the <a href="#vthoramu">Vth'oramu</a> sat on the Cairn bearing for days.</strong> That is the mass signature in Cairn's final transmission &mdash; closing slow, matching no vessel profile, reading differently on every sweep, because the thing on the scope was a ship pretending to be nothing at all. It moved on afterward and has stayed away.
-          </p>
-
-          <div class="dm-callout is-warn">
-            <span class="dm-callout-label">The ambush was the point of holding the position</span>
-            <a href="../factions/#vocath-op">Vocath's</a> people took Cairn after it went dark and waited there, <strong>because a silent Fleet station guarantees a relief run on a single predictable bearing.</strong> The eye-in-a-wheel craft that engaged the relief vessel was his. His line has run goods through the sector for years and had every reason to know the rotation.
-          </div>
-
-          <h4>The engagement, in two actions</h4>
-          <p>
-            It reads in the file as one running fight. It was two, and only the first was planned.
-          </p>
-          <table>
-            <thead><tr><th>Action</th><th>What happened</th></tr></thead>
-            <tbody>
-              <tr><td><strong>First</strong></td><td>Vocath's people boarded the Crow and <strong>took what they had agreed to take.</strong> This was the entire purpose of holding Cairn, and it went as intended.</td></tr>
-              <tr><td><strong>Second</strong></td><td><strong>Clint Dashforest seized the boarders' craft and broke away with it</strong>, drawing their pursuit off the Crow. Nobody planned this, and it is the only reason a second action happened. A psychic wind carried him to <a href="#sys04">SYS-04</a>.</td></tr>
-            </tbody>
-          </table>
-
-          <div class="dm-callout is-cosmic">
-            <span class="dm-callout-label">The survivors were allowed to live</span>
-            <strong><a href="../factions/#joffrey">Joffrey</a> was taken during the second action.</strong> The rest of the complement was let go on purpose, so that there would be a story and he would be its hero. The decoration is real in the sense that matters: the survivors believe every word of their own account, and they gave it unanimously.
-            <p>
-              So the Crow brought home a decorated survivor who held his crew together through the withdrawal, and that man is the embedded asset. <strong>The FIA chain records the whole event accurately and understands none of it.</strong>
-            </p>
-          </div>
-
-          <p>
-            The dreadnought moved on long ago. Vocath's people withdrew after the ambush <strong>and left something behind.</strong> Whatever it is has been alone for a year, reports to nobody who answers, and will register the first Fleet vessel to come up that bearing since the standing order.
-          </p>
-
-          <p>
-            <strong>Open:</strong> what was left &mdash; a taken creature, a construct, a brine cache with something growing in it, or a person. If it is a person or a taken thing, <em>it is a witness as well as a tripwire</em>, because it knows what happened to the crew that did not come back. Also open: what remains of the station, what became of its complement, who built onto it, and whether any of Cairn's own instrument record survives. The payoff should open onto something larger rather than resolve in one room.
-          </p>
-
-        </div>
-      </details>
-
-    </div>
-  </details>
-
-
-  <hr>
-
-
-  <!-- ════════════════════════════════════════════════════════════════
-       WILDSPACE SITES
-       ════════════════════════════════════════════════════════════════ -->
-  <details class="dm-collapse-section" id="wildspace-sites">
-    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Wildspace sites</h2></summary>
-    <div class="dm-collapse-section-body">
-
-      <p>
-        Places on the lanes rather than in a system. Each one is a stop the crew can use, and each is deliberately light so it can carry whatever a given voyage needs.
-      </p>
-
-      <details class="dm-collapse" id="waystation">
-        <summary>The Astral waystation <span class="dm-tag is-stub">Name pending</span></summary>
-        <p>
-          The well-known stop on the charted lane between Realmspace and Virenspace, and <strong>the last reliable resupply before the long haul onward.</strong> Any crew heading out that way stops here, which makes it the natural place to put a rumor, a meeting or a tail.
-        </p>
-        <p>
-          <strong>Open:</strong> name, operator, and what it trades in.
-        </p>
-      </details>
-
-      <details class="dm-collapse" id="cantina">
-        <summary>The traveling cantina <span class="dm-tag is-stub">Name pending</span></summary>
-        <p>
-          Works a circuit of the charted lanes rather than holding a position. <strong>Drop it wherever the crew is traveling</strong> &mdash; it is the answer to a long quiet leg that needs a scene, and the fact that it moves means it can show up twice without explanation.
-        </p>
-        <p>
-          Odds is the plasmoid bartender a crew is likely to meet on it, and has drifted through wildspace for decades.
-        </p>
-        <p>
-          <strong>Open:</strong> name, owner, and the circuit.
-        </p>
-      </details>
-
-      <details class="dm-collapse" id="meteor-hub">
-        <summary>The carved-meteor hub <span class="dm-tag is-stub">Placement pending</span></summary>
-        <p>
-          A hollowed meteor turned into a gathering place, sitting on the long haul between Realmspace and <a href="#aethris">SYS-03</a>. A social hub rather than a Fleet installation, which makes it the place to hear something the Fleet would not file.
-        </p>
-        <p>
-          <strong>Open:</strong> placement, name, and who lives there.
-        </p>
-      </details>
-
-    </div>
-  </details>
-
-
-  <!-- ════════════════════════════════════════════════════════════════
-       ASTRAL SEA
-       ════════════════════════════════════════════════════════════════ -->
-  <details class="dm-collapse-section" id="astral-sea">
-    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">The Astral Sea</h2></summary>
-    <div class="dm-collapse-section-body">
-
-      <p>
-        The Astral Sea is the space between worlds. <strong>Wildspace</strong> is the stretch between systems; <strong>the Flow</strong> fills the space between spheres. Intensity varies between systems and between spheres, and a lane's tier records how well that variation is charted.
-      </p>
-
-      <p>
-        What follows is what a crossing can contain. Any of these can be scenery, an obstacle, or a thread the crew chooses to pull. <em>Nothing here needs to connect to the campaign's spine unless it earns it.</em>
-      </p>
-
-      <details class="dm-collapse-section is-sub" id="astral-wind">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">Psychic wind</h3></summary>
-        <div class="dm-collapse-section-body">
-          <p>
-            A surge in the Astral that throws a vessel off course. A crew can arrive far from their heading and later than they experienced. It is the honest answer whenever someone ends up somewhere they could not have sailed to.
-          </p>
-          <p>
-            <strong>In play:</strong> the Bellwether Crow engagement. Clint Dashforest broke away in a stolen craft and reached <a href="#sys04">SYS-04</a>; a psychic wind took him. Intensity on the Cairn bearing shifts, which is why a crossing there is scored against the cycle rather than the chart.
-          </p>
-        </div>
-      </details>
-
-      <details class="dm-collapse-section is-sub" id="astral-currents">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">Currents and eddies</h3></summary>
-        <div class="dm-collapse-section-body">
-          <p>
-            The charted lanes run with the Astral's currents. Off-lane, currents run uncharted: some carry a vessel inward toward a system, some hold it in place, some feed a bearing nobody has surveyed.
-          </p>
-          <p>
-            <strong>In play:</strong> a chase or a breakaway can end with a vessel pushed into a current it cannot leave.
-          </p>
-        </div>
-      </details>
-
-      <details class="dm-collapse-section is-sub" id="astral-pools">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">Color pools</h3></summary>
-        <div class="dm-collapse-section-body">
-          <p>
-            Shimmering portals adrift in the Astral Sea, each opening onto another plane. They are stable enough to chart and dangerous enough that the Fleet logs them and sails around them.
-          </p>
-          <p>
-            <strong>In play:</strong> a pool is an exit from the campaign's geography rather than a shortcut across it.
-          </p>
-        </div>
-      </details>
-
-      <details class="dm-collapse-section is-sub" id="astral-drift">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">Dead gods and drifting matter</h3></summary>
-        <div class="dm-collapse-section-body">
-          <p>
-            The corpses of gods drift through the Astral Sea, along with the wreckage, debris and abandoned works that collect around them. They are the landmarks of an otherwise featureless crossing, and salvage crews, hermits and githyanki all work them.
-          </p>
-          <p>
-            <strong>In play:</strong> a place to hide, a place to be ambushed, and a place where something can be found. Each one can carry its own small thing of interest with no tie to anything larger.
-          </p>
-        </div>
-      </details>
-
-      <div class="dm-callout is-info">
-        <span class="dm-callout-label">Running a crossing</span>
-        Give each leg one feature. Name it, let the crew see it, and let them decide whether to look. A charted lane crossing should be quiet more often than not; a long haul or an uncharted route should not be.
-      </div>
-
-    </div>
-  </details>
-
-
-  <hr>
-
-
-  <!-- ════════════════════════════════════════════════════════════════
-       CONSTELLATIONS
-       ════════════════════════════════════════════════════════════════ -->
   <details class="dm-collapse-section" id="constellations">
-    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Constellations <span class="dm-tag is-open">Meanings open</span></h2></summary>
+    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Constellations</h2></summary>
     <div class="dm-collapse-section-body">
+
 
       <p>
         A constellation is a pattern visible from one or more systems, and it is geography of a particular kind: it belongs to no world and is seen from many. Four are catalogued. <strong>Two have already appeared at the table attached to a player character</strong>, which is the reason this section exists.
@@ -902,7 +496,7 @@
 
       <h3>How the catalogue numbers work</h3>
       <p>
-        <strong>The number is the bearing.</strong> Each designation records the constellation's bearing in degrees from the charting origin, <a href="#realmspace">SYS-01 Realmspace</a>, measured clockwise. The catalogue runs 001 to 360, so <em>CON-025 sits almost dead ahead on the charting axis and CON-312 sits behind the shoulder.</em>
+        <strong>The number is the bearing.</strong> Each designation records the constellation's bearing in degrees from the charting origin, <a href="realmspace.html">SYS-01 Realmspace</a>, measured clockwise. The catalogue runs 001 to 360, so <em>CON-025 sits almost dead ahead on the charting axis and CON-312 sits behind the shoulder.</em>
       </p>
       <p>
         Three consequences, all of them wanted. A navigator reading a designation knows roughly where to look. A new constellation takes whatever number its bearing gives it, so the catalogue fills in between the existing entries rather than after them. And nothing about the number records when it was found.
@@ -914,9 +508,9 @@
       <table>
         <thead><tr><th>Designation</th><th>Bearing</th><th>Visible from</th><th>Where it has appeared</th></tr></thead>
         <tbody>
-          <tr><td><strong>CON-025</strong></td><td>025&deg;</td><td>SYS-01 and <a href="#sys03">SYS-03</a></td><td>Unused.</td></tr>
-          <tr><td><strong>CON-055</strong></td><td>055&deg;</td><td><a href="#virenspace">SYS-02 Virenspace</a></td><td><strong>The view inside Mirt's wardrobe.</strong> The wardrobe's interior corresponds to a stellar location in Viren, and this is the sky it shows.</td></tr>
-          <tr><td><strong>CON-091</strong></td><td>091&deg;</td><td><a href="#ascension-world">SYS-05</a>, SYS-07 and SYS-08</td><td>Unused.</td></tr>
+          <tr><td><strong>CON-025</strong></td><td>025&deg;</td><td>SYS-01 and <a href="aethris.html">SYS-03</a></td><td>Unused.</td></tr>
+          <tr><td><strong>CON-055</strong></td><td>055&deg;</td><td><a href="virenspace.html">SYS-02 Virenspace</a></td><td><strong>The view inside Mirt's wardrobe.</strong> The wardrobe's interior corresponds to a stellar location in Viren, and this is the sky it shows.</td></tr>
+          <tr><td><strong>CON-091</strong></td><td>091&deg;</td><td><a href="ascension-world.html">SYS-05</a>, SYS-07 and SYS-08</td><td>Unused.</td></tr>
           <tr><td><strong>CON-312</strong></td><td>312&deg;</td><td>SYS-01 Realmspace <span class="dm-tag is-stub">Draft</span></td><td><strong>The constellation in <a href="../crew/#bartholomew">Bartholomew's</a> chest.</strong></td></tr>
         </tbody>
       </table>
@@ -941,155 +535,20 @@
       <p>
         <strong>Open:</strong> what any of them mean, where CON-312 is actually visible from, and whether the wardrobe's sky is CON-055 seen from the tether or from the world beneath it.
       </p>
-
     </div>
   </details>
 
-
-  <!-- ════════════════════════════════════════════════════════════════
-       VESSELS
-       ════════════════════════════════════════════════════════════════ -->
-  <details class="dm-collapse-section" id="vessels">
-    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Vessels</h2></summary>
+  <details class="dm-collapse-section" id="unplaced">
+    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">On the registry, unplaced</h2></summary>
     <div class="dm-collapse-section-body">
 
-      <p>
-        Ships with a name and a history have entries of their own in <a href="../vessels/">Vessels</a>. What follows is only the ones the crew can <em>board</em> &mdash; where the interior is the adventure and the ship is, for that session, a place.
-      </p>
-
-      <details class="dm-collapse-section is-sub" id="vthoramu">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">The Vth&rsquo;oramu</h3></summary>
-        <div class="dm-collapse-section-body">
-          <p>
-            A taken astral dreadnought, and the largest moving thing on the board. <a href="../dossiers/vthoramu.html">Full dossier &rarr;</a>
-          </p>
-          <p>
-            <strong>Boarding it means boarding a home.</strong> The colony lives aboard in full &mdash; <a href="../dossiers/nghathrod.html">N&rsquo;ghathrod</a>, the bearers, the unthinned, the taken, the thralls and their children &mdash; which makes it the one location in the campaign where the antagonist faction is a society going about an ordinary day.
-          </p>
-          <p>
-            The interior is a demiplane reached through fixed plane-shift points rather than corridors, which is how a place that size fits inside one creature. <strong>Boarding the hull and reaching the colony are separate problems</strong>, and solving the first does not begin the second. <span class="dm-tag is-open">Layout and scale open</span>
-          </p>
-        </div>
-      </details>
-
-      <details class="dm-collapse-section is-sub" id="tyrant-ship">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">The Tyrant</h3></summary>
-        <div class="dm-collapse-section-body">
-          <p>
-            Vaelorix&rsquo;s derelict tyrant ship, in Toril orbit, already boarded. <a href="../vessels/tyrant-ship.html">Entry &rarr;</a>
-          </p>
-          <p>
-            Its interior holds the <a href="../artifacts/containment-engine.html">Containment Engine, Fourth Series</a>, built by Ostekk around a piece of the Rod, and the garden that produced <a href="../crew/#bartholomew">Bartholomew&rsquo;s</a> unbloomed flower. The crew retreated to Cargo with the helm and left without seating it, so <strong>the ship is unfinished business with a known inventory.</strong>
-          </p>
-        </div>
-      </details>
-
-    </div>
-  </details>
-
-  <details class="dm-collapse-section" id="untethered">
-    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Untethered</h2></summary>
-    <div class="dm-collapse-section-body">
-
-      <p>
-        Places whose sphere is uncatalogued, or that are deliberately unfindable.
-      </p>
-
-      <details class="dm-collapse-section is-sub" id="hollow">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">The First World</h3></summary>
-        <div class="dm-collapse-section-body">
-
-          <p>
-            The world where <a href="../cosmology/#reach">the Reach</a> happened. Its civilization reached for the Axioms directly. The Reach was a Zenith, the first Monolith &mdash; <a href="../cosmology/#core">the Core</a> &mdash; manifested above the world while the Zenith was occurring, and the Zenith concluded with the world's destruction. The Core remained.
-          </p>
-
-          <p>
-            <strong>Location:</strong> the <a href="#the-center">center of the cosmos</a>, beneath the Core and the Citadel. Deeper still lies its <a href="../cosmology/#first-heart">heart</a>, the deepest heart there is and the only closed one, known to almost nobody.
-          </p>
-
-          <p>
-            <strong>Name:</strong> no canonical name in any institutional record. The civilization's own name for itself went into the Core with its people, and their descendants in the Citadel carry it &mdash; for as long as the <a href="../cosmology/#citadel">forgetting</a> leaves it with them.
-          </p>
-
-          <p>
-            Every child heart in the cosmos pulls faintly toward this one. That latent pull is <a href="../glossary/#yearning">the Yearning</a>, and it is the force the <a href="../campaign/ascension/#cast">Ascension</a> is built to mass and aim.
-          </p>
-
-        </div>
-      </details>
-
-      <details class="dm-collapse-section is-sub" id="tumak-homeworld">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">SYS-06 &mdash; the Wayfinders' homeworld <span class="dm-tag is-locked">Unnamed by doctrine</span></h3></summary>
-        <div class="dm-collapse-section-body">
-
-        <h3>The world has no name, and that is canon</h3>
-        <p>
-          <strong>&ldquo;Lunarfoot&rdquo; is the clan, not the world.</strong> The arc doc is explicit: <em>Tumak does not know the name of the homeworld. This is intentional and cultural, not a gap in the backstory. A Wayfinder is given no map.</em>
-        </p>
-        <p>
-          An earlier pass promoted the clan name to the world's name &mdash; it appeared here as &ldquo;SYS-06 Lunarfoot&rdquo; and on the chart as &ldquo;W-11: Lunarfoot&rdquo; &mdash; which contradicted the paragraph below it on this same page. <strong>Corrected: the world is referred to by designation and description only.</strong>
-        </p>
-        <p>
-          Lunarfoot stays correct for the people and the order: <em>the Lunarfoot clan</em>, <em>the Lunarfoot Runekeeper</em>, <em>Children of Lunarfoot</em>, <em>a Lunarfoot wayfinder's script</em>. <span class="dm-tag is-locked">Do not name the world</span>
-        </p>
-
-        <p>
-            A halfling world that hides itself cosmically. The world is a living thing that decides what reaches it, and its concealment is held by a single living practitioner &mdash; <strong>the Runekeeper</strong>, whose body bears the inscription that carries the ritual.
-          </p>
-
-          <div class="dm-callout is-cosmic">
-            <span class="dm-callout-label">The concealment rides on the fragment</span>
-            The ritual points the working; <strong>the <a href="../artifacts/runekeepers-fragment.html">Dissolution fragment's</a> oscillation powers it.</strong> The world sits exactly where it has always sat, and finding it requires knowing the way back rather than knowing the coordinates. The fragment is currently leaving the Runekeeper and forming in <a href="../crew/#tumak">Wan and Tu</a>, which is why the Runekeeper dims and why the twins were sent out at all.
-          </div>
-
-          <p>
-            Children of Lunarfoot sent into the cosmos as Wayfinders are given no map and no name, and a returning exile identifies home through remembered sensory and cultural fragments. The withholding is doctrine: <strong>a way home that lives only in a person cannot be taken off a chart.</strong> The <a href="../factions/#runekeepers">Runekeepers</a> maintain the ritual and the practice both.
-          </p>
-
-          <p>
-            Wan and Tu are two separate hosts. <strong>When both arrive home, three poles stall the cycle and the result is a Zenith</strong> &mdash; which means the act of going home is the act of ending the concealment. Mechanics in <a href="../rules/#homebound">Rules</a>.
-          </p>
-
-          <p>
-            <strong>Open:</strong> what happens to the concealment while the fragment is between bearers.
-          </p>
-
-        </div>
-      </details>
-
-      <details class="dm-collapse-section is-sub" id="ascension-world">
-        <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">SYS-05 &mdash; the Ascension World <span class="dm-tag is-stub">Specifics pending</span></h3></summary>
-        <div class="dm-collapse-section-body">
-
-          <p>
-            A world where Vecna once forced a local threshold and won &mdash; a small, personal ascension distinct from the canonical Sigil event. The world remains marked by it: terrain, atmosphere and surviving structures all carry the residue of an event in which a single will dictated local reality.
-          </p>
-
-          <p>
-            Surface accessible, reached from Realmspace on an uncharted route and from Virenspace on a charted lane. The sphere is uncatalogued.
-          </p>
-
-          <div class="dm-callout is-warn">
-            <span class="dm-callout-label">It is a worked example the crew can walk around in</span>
-            Everything the <a href="../campaign/ascension/">Ascension</a> intends at cosmic scale, this world has already experienced at local scale. <strong>A crew that visits sees the endpoint before they understand the plan</strong>, which is the cheapest and most honest foreshadowing available.
-          </div>
-
-          <p>
-            <strong>Open:</strong> what he forced here and what it cost him, what the residue does to a visitor, and whether anyone survived it.
-          </p>
-
-        </div>
-      </details>
-
-      <details class="dm-collapse" id="unplaced">
-        <summary>On the registry, unplaced</summary>
         <p>
           FIA registry entries without a confirmed position. Each is available wherever the campaign needs a world.
         </p>
         <table>
           <thead><tr><th>Entry</th><th>What the registry says</th><th>Draft placement</th></tr></thead>
           <tbody>
-            <tr><td><strong>W-34</strong></td><td>Ortholith established and recording, over a natural convergence Zenith. High priority.</td><td><a href="#virenspace">SYS-02</a></td></tr>
+            <tr><td><strong>W-34</strong></td><td>Ortholith established and recording, over a natural convergence Zenith. High priority.</td><td><a href="virenspace.html">SYS-02</a></td></tr>
             <tr><td><strong>W-47 Vetharra</strong></td><td>Sole standing structure, surface population zero, archive monitoring only.</td><td>A new designated system in SPH-01.</td></tr>
             <tr><td><strong>W-52 Kaldris</strong></td><td>Sole standing structure. Zenith collapse variant, labelled &ldquo;control case.&rdquo;</td><td>A new designated system in SPH-01, near SYS-03.</td></tr>
             <tr><td><strong>Casey's homeworld</strong></td><td>A star fell on it, and Polly left afterward.</td><td>Possibly the Cycle 1486 &ldquo;deliberate&rdquo; meteor event in <a href="../../restricted/sa-002.html">SA-002</a>.</td></tr>
@@ -1099,11 +558,8 @@
         <p>
           Two PC homeworlds are unplaced, and both are load-bearing. Full registry on the <a href="../chart/">Cosmos Chart</a>.
         </p>
-      </details>
-
     </div>
   </details>
-
 
   <div class="dm-footer">
     Realms &middot; Setting &middot; Caelestis DM

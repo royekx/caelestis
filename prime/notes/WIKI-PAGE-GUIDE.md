@@ -341,7 +341,7 @@ without sweeping references and running the integrity check.
 ### Cross-references
 
 Relative paths. From `prime/artifacts/index.html` to the Brig:
-`<a href="../realms/#brig">the Brig</a>`. From
+`<a href="../realms/caelestis.html#brig">the Brig</a>`. From
 `prime/campaign/remaking/index.html` to Artifacts:
 `<a href="../../artifacts/#world-surveyor">…</a>`. The double-up is
 correct — Remaking is one level deeper than its siblings.

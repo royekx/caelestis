@@ -2145,3 +2145,35 @@ body::after {
   .facet-label { flex: 0 0 100%; }
   .ent-detail { padding-left: 1rem; }
 }
+
+/* ── Embedded tool ────────────────────────────────────────────────────────
+   The Cosmos Chart is a page in its own right, with its own layout and its
+   own token set. Embedding it keeps one source of truth: the chart renders
+   where it is useful without being rebuilt, and "Open full" is there for the
+   times a chart in a panel is not enough. */
+.dm-embed {
+  margin: 1.2rem 0 .4rem;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: var(--bg-card);
+  overflow: hidden;
+}
+.dm-embed-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding: .5rem .8rem;
+  border-bottom: 1px solid var(--rule);
+  background: var(--bg-raised);
+}
+.dm-embed-title {
+  font-family: 'Cinzel', serif; font-size: .78rem;
+  letter-spacing: .09em; text-transform: uppercase;
+  color: var(--text-muted);
+}
+.dm-embed-out { font-size: .9rem; white-space: nowrap; }
+.dm-embed iframe {
+  display: block; width: 100%; height: 70vh; min-height: 460px;
+  border: 0; background: #070a12;
+}
+@media (max-width: 620px) {
+  .dm-embed iframe { height: 60vh; min-height: 360px; }
+}

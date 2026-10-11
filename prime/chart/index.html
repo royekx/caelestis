@@ -1,9 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
+<script>
+/* DM gate. Every page under /prime/ sends an unauthenticated visitor back to
+   the gate. Inline rather than a shared file: this page carries its own styles
+   and does not load dm-nav.js, and a boundary check that can fail to load is
+   not a boundary check. Mirrors the guard in scripts/dm-nav.js. */
+(function () {
+  var pn = window.location.pathname;
+  var i = pn.indexOf('/prime/');
+  if (i === -1) return;
+  var authed = false;
+  try { authed = sessionStorage.getItem('caelestis_continuum_auth') === '1'; } catch (err) { authed = false; }
+  if (authed) return;
+  var depth = (pn.slice(i + 7).match(/\//g) || []).length;
+  window.location.replace((depth > 0 ? new Array(depth + 1).join('../') : './') + 'index.html');
+})();
+</script>
 <title>Caelestis Cosmos — DM Chart</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,9 +90,17 @@ h1{font-family:var(--display);font-weight:600;font-size:1.35rem;letter-spacing:.
 .crumbs button{font:inherit;color:var(--ice-l);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .dmbox{border:1px solid var(--violet);border-left-width:3px;background:rgba(150,120,189,.09);padding:.5rem .8rem .2rem;margin:1rem 0;border-radius:3px}
 .dmbox h3{color:var(--violet);margin-top:.3rem}
+/* Embedded: the host page supplies the title and the way out, so drop the
+   masthead and keep the controls. */
+body.is-framed header>p,body.is-framed header>h1,body.is-framed header>.sub-h{display:none}
+body.is-framed header{padding-top:.6rem}
 </style>
 </head>
 <body>
+<script>
+/* Embedded in another page? Say so, so the stylesheet can drop the masthead. */
+try { if (window.self !== window.top) document.body.className = 'is-framed'; } catch (e) {}
+</script>
 <header>
   <p style="margin:0 0 .4rem"><a href="../hub.html" style="font-family:var(--display);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none">&larr; DM Hub</a></p>
   <h1>Caelestis Cosmos</h1>
