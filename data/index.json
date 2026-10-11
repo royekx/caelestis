@@ -1,13 +1,11 @@
 {
-  "generated": "2026-10-05T05:43:56.995Z",
-  "latestSession": "S04",
-  "latestSessionNumber": 4,
+  "latestVoyage": 5,
   "counts": {
-    "sessions": 4,
-    "playerCharacters": 6,
-    "npcs": 20,
+    "sessions": 5,
+    "pcs": 6,
+    "npcs": 25,
     "factions": 1,
-    "locations": 12,
+    "locations": 14,
     "items": 11,
     "quests": 12
   }

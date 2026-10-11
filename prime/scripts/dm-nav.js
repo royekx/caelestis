@@ -90,6 +90,7 @@
         { key: 'voyages',   label: 'Voyages',       path: 'campaign/voyages/',        indent: true },
         { key: 'plot-hooks',label: 'Plot Hooks',    path: 'campaign/plot-hooks.html', indent: true },
         { key: 'what-if',   label: 'What If',       path: 'campaign/what-if.html',    indent: true },
+        { key: 'tracker',   label: 'Tracker',       path: 'tracker/'    },
       ]
     },
     {

@@ -178,6 +178,9 @@
   function openEverything(root) {
     var inner = root.querySelectorAll('details');
     for (var i = 0; i < inner.length; i++) {
+      // A list of rows meant to be scanned shut marks itself data-keep-closed.
+      // Opening seventy tracker rows at once is the opposite of a glance.
+      if (inner[i].closest('[data-keep-closed]')) continue;
       if (!inner[i].classList.contains('is-sectab-panel')) inner[i].open = true;
     }
   }

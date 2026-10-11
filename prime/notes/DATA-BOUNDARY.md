@@ -5,113 +5,82 @@ that decides which is which.
 
 ## The rule
 
-> **A tracker row exists if and only if the players have encountered the entity.**
+> **A record exists if and only if the crew has encountered the entity.**
 
-Everything else follows from it.
+Met in person, or named to them. Everything else follows from it.
 
 | | Lives in | Written by |
 |---|---|---|
-| An entity the players have met | a Google Sheet tracker row | the triage agent, from the recap |
-| DM truth about an entity they have met | that row's `Key Details (DM)` / `Overview (DM)` | you, by dictation, via the DM agent |
-| An entity they have **not** met | `prime/` only | you |
-| A PC's hidden interior | the character arc tracker (`Visibility`: Public / Hidden / Private) | the arc agent |
+| An entity the crew has met | a record in `data/*.json` | a session run, from the approved account |
+| DM truth about an entity they have met | `prime/data/overlay.json`, under that record's id, and its dossier in `prime/dossiers/` | a session run, or the DM |
+| An entity they have **not** met | `prime/` only | the DM |
+| A power moving off-screen | a lane in `prime/data/overlay.json` | a session run |
 
-The campaign tracker's own README states the intent: *"It is framed around what
-the players know"* and *"Only record what the players know; deep hidden material
-lives in separate DM notes."* The rule above is that sentence made operational.
-
-## Why entity rows and not a Visibility flag
-
-`Visibility: DM` on a **row** was the earlier answer, and it works mechanically —
-`transform.js` drops those rows. It fails for three other reasons.
-
-1. **It creates a second canon.** The `prime/` wiki is the DM source of truth. A
-   `Visibility: DM` row is a one-line stub of something already written properly
-   in `prime/`, so the two drift and you reconcile by hand. That is exactly the
-   friction the data-driven rebuild was meant to remove.
-2. **It drifts stale.** The three rows this rule retired were
-   *Order of the All-Father*, *Watchers* and *Vecna's network*. The first two were
-   one-sentence summaries of full `prime/factions` sections. The third described a
-   faction that **no longer exists** — the network was retired and replaced by the
-   Seekers — so the tracker was carrying superseded canon that nothing updated.
-3. **It puts DM material on the wrong side of the publish boundary.** `data/raw/`
-   is a verbatim dump committed by n8n, so a DM row travels into the repo and,
-   with `path: .`, onto the public site. The filter has to work perfectly forever
-   for that to stay safe. Keeping DM entities out of the Sheet means the raw dump
-   is **player-safe by construction**, and the filter becomes a second line rather
-   than the only one.
-
-`Visibility` stays useful. It still marks the **columns** to drop
-(`Key Details (DM)`, `Overview (DM)`, `action`, `sheet`, `Sessions Since`,
-`Heat`, `Flag`) and it remains a working safety net for rows. It just stops being
-the mechanism the boundary depends on.
-
-## What the two halves hold
-
-**The Sheet** — the operational snapshot of what the party knows. Current state,
-what to prep next. Seven tabs, each row keyed by a stable 8-character `id`.
-
-**`prime/`** — DM canon. Cosmology, the antagonist, factions the crew has never
-heard of, NPC interiors, the arc spine, rulings. Far richer than a tracker cell,
-and under version control.
-
-An entity crosses from `prime/` into the Sheet **at first contact**, and keeps its
-`prime/` dossier afterward. The row holds what the party saw; the dossier holds
+An entity crosses from `prime/` into the record **at first contact**, and keeps
+its dossier afterward. The record holds what the crew saw; the dossier holds
 what is true.
 
-## The pipeline contract
+## The two layers
+
+**`data/*.json` — the record.** Seven files: voyages, crew, cast, factions,
+places, things, threads. One record per entity, keyed by a stable id that never
+changes and is never reused. It holds only what the crew knows, so it is
+player-safe by construction: there is no DM field in it to filter out. It is
+published with the site.
+
+**`prime/data/*.json` — the DM layer.** Keyed by the same ids, so one entity is
+one id with two files' worth of knowledge.
+
+| File | Holds |
+|---|---|
+| `voyages.json` | every voyage, its state, and whether the record has reached it |
+| `overlay.json` | per record: urgency, next beat, notes, DM beats by voyage. Plus lanes for what the crew has never met |
+| `dossiers.json` | derived: which DM dossiers exist and which record each belongs to |
+
+The prep fields that were once published in the player data, Urgency and Next
+Planned Beat, live in the overlay.
+
+## How a fact moves
 
 ```
-Google Sheet  ──n8n Workflow C──►  data/raw/*.json  ──transform.js──►  data/*.json
-  player-known                      VERBATIM dump            drops DM rows + DM columns
-  by construction                   machine-written          player-safe output
+session source ─► Full Account ─► data/*.json ─► player pages
+                   (approved)     prime/data/     DM pages, Tracker, board
+                                  (approved)
 ```
 
-- **Never hand-edit `data/raw/`.** It is regenerated on every publish, so an edit
-  is overwritten and the repo silently drifts from the Sheet. If something is
-  wrong there, fix the Sheet.
-- **`transform.js` is the designated filter.** All seven builds drop
-  `Visibility: DM`. (`pcs` and `sessions` were missing that check until it was
-  added — worth remembering that the filter is per-build, not global.)
-- **The deploy prunes machine inputs from the artifact**: `data/raw/`, the two
-  build scripts, `coverage.md`, and the `*-template.html` files. The repo keeps
-  them; only the published tree loses them.
-- **CI fails the deploy** if a published JSON would carry a `Visibility: DM` row
-  or a DM column with content.
+- **The record is the only place a fact is entered.** Pages are its rendering.
+  A page is corrected by correcting the record and rendering the page again.
+- **Pages are written by hand**, during a session run. Nothing generates them.
+- **`node scripts/data.js derive`** fills the fields that follow mechanically
+  from the authored ones: links in both directions, parents and children, held
+  items, progress, urls.
+- **`node scripts/data.js check`** proves the record is sound and that every
+  page displaying it agrees with it. It runs on every pull request.
+- **`node scripts/data.js guard`** asks only whether `data/` is fit to publish.
+  It runs in the deploy.
+- **The Tracker** (`prime/tracker/`) and **the Voyages board** read both layers
+  directly. They are views, and nothing is entered in them.
 
-## Known gap — and how it happened
+The method is in `SESSION-RUN.md`.
 
-The spec says *"a GitHub Action handles all transformation logic."* **It was
-built, and then it was removed.**
+## What holds the boundary
 
-| Commit | Date | What |
-|---|---|---|
-| `610b61c` | | Workflow named **"Build site & deploy to Pages"**, with `contents: write` and three real steps: `node scripts/build-data.js`, `node scripts/build-pages.js`, and a commit-regenerated-files step. |
-| `020af89` | 2026-09-10 | **"Modify deploy workflow for search index building."** Renamed it to *"Build search indexes & deploy to Pages"*, dropped `contents: write` to `contents: read`, and deleted all three steps. |
+1. **Construction.** The record's schema is closed. Every key a record may
+   carry, and every field each set may hold, is listed at the top of
+   `scripts/data.js`. None of them is a DM field, so a DM fact has no key in
+   `data/` to sit under.
+2. **The check.** `check` rejects any key or field outside that list, on every
+   pull request.
+3. **The deploy.** `guard` is the same test, and the deploy will not publish
+   without it passing.
 
-The commit message for `020af89` describes only the search-index work. It does
-not mention removing the data build, so **the transform looks like collateral
-from rewriting the workflow for Pagefind rather than a decision to bench it.**
-Benching the scaffolder (`build-pages.js`) was deliberate and is documented;
-losing the data build (`build-data.js`) alongside it probably was not.
+The schema tests the key, not the sentence. A DM fact typed into a player
+field passes all three. That is what the two approvals in a session run are
+for.
 
-So today `data/*.json` is generated by hand and CI does nothing to it. The prune
-step and the two guards are what actually hold the boundary.
+## What the boundary does not do
 
-## Two transform scripts, and the safer one is the one that was wired up
-
-| | `build-data.js` | `transform.js` |
-|---|---|---|
-| Was in CI | **yes**, until `020af89` | never |
-| Lines | 471 | 438 |
-| DM filter | **one global check** inside the shared row loop, counted as `issues.dmFiltered` | **repeated per build**, seven times |
-| Extras | — | overlays: slug corrections, the H'catha spelling, item classification, quest objectives, all reported in `coverage.md` |
-
-`transform.js` supersedes it on features and is the one that produced the
-current `data/*.json`. But its per-build filtering is the weaker pattern: the
-check has to be remembered seven times, and **two of the seven were missing**
-(`pcs` and `sessions`) until they were added. `build-data.js` filters once, in
-the one place every row passes through, which cannot be forgotten per tab.
-
-If the data build is ever restored to CI, fold `transform.js`'s overlays into a
-single global filter rather than keeping seven copies of the check.
+`prime/` is gated in the browser and disallowed to crawlers. It is published
+with the site and it sits in a public repository, so it is out of the players'
+way and it is not secret. `prime/data/` has exactly the exposure the rest of
+`prime/` has. Anything that must stay private stays out of the repository.
