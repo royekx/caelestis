@@ -116,12 +116,13 @@ Not a scroll. A list you can narrow:
 subject: axes are discovered from whatever `data-` attributes the pills carry,
 so a page adds a filter by adding a pill group.
 
-Five pages are registers, and they are the five collections of things:
+Six pages are registers, and they are the six collections of things:
 
 | Register | Entries | Axes |
 |---|---|---|
 | `prime/realms/` | places | system, kind, standing |
 | `prime/dossiers/` | everyone the DM plays | side, kind, standing |
+| `prime/factions/` | organized interests | reach, posture |
 | `prime/crew/` | the player characters | where the rules live |
 | `prime/vessels/` | ships | where, standing, depth |
 | `prime/artifacts/` | things you carry | fragment, standing |
@@ -129,6 +130,22 @@ Five pages are registers, and they are the five collections of things:
 A row can hold several values on one axis, space-separated, which is how Joffrey
 sits under both Caelestis and the colony. One axis is enough when there is only
 one question worth asking, as on the crew.
+
+### A thing that contains other things
+
+A faction has members, a system has worlds, a ship has a crew. The container
+gets a page; the things inside it get a row on that page, and the row expands
+in place.
+
+That is what `.dossier-row` is for, and it is the shape to reach for whenever a
+page lists people: portrait, name, role, and a one-line read, with the fuller
+paragraph a click away and a link onward to the entry of their own. A reader
+scanning for who is in a faction never leaves the page; a reader who wants the
+whole of someone is one click from it.
+
+The row is not the entry. Anyone substantial enough to need motive, something
+withheld, and a way they react to being pushed has a dossier, and their row
+links to it. The row is the quick read.
 
 A register page carries `dm-nav.js` and `dm-register.js` and nothing else. The
 register is the page's navigation, so a section tab strip and a right-rail
