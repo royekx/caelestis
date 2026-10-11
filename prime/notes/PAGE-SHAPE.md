@@ -114,8 +114,21 @@ Not a scroll. A list you can narrow:
 
 `prime/scripts/dm-register.js` drives all of it and knows nothing about the
 subject: axes are discovered from whatever `data-` attributes the pills carry,
-so a page adds a filter by adding a pill group. `prime/vessels/` is the smallest
-worked example; `prime/realms/` is the largest.
+so a page adds a filter by adding a pill group.
+
+Five pages are registers, and they are the five collections of things:
+
+| Register | Entries | Axes |
+|---|---|---|
+| `prime/realms/` | places | system, kind, standing |
+| `prime/dossiers/` | everyone the DM plays | side, kind, standing |
+| `prime/crew/` | the player characters | where the rules live |
+| `prime/vessels/` | ships | where, standing, depth |
+| `prime/artifacts/` | things you carry | fragment, standing |
+
+A row can hold several values on one axis, space-separated, which is how Joffrey
+sits under both Caelestis and the colony. One axis is enough when there is only
+one question worth asking, as on the crew.
 
 A register page carries `dm-nav.js` and `dm-register.js` and nothing else. The
 register is the page's navigation, so a section tab strip and a right-rail
@@ -190,6 +203,40 @@ worlds below it. Uniformity is worth a thin page.
 
 Every dossier carries a **Kind** line in its identity card, so a vessel or a
 construct is not mistaken for a character.
+
+## Tags
+
+A tag answers exactly one question, and which question it answers is the class.
+There are four, and there is no fifth.
+
+| Class | The question | Labels |
+|---|---|---|
+| `is-canon` | How settled is it? | **Canon**, **Played** |
+| `is-open` | What is still open? | a short label, three words at most |
+| `is-dm` | Can this go player-side? | **DM only** |
+| `is-kind` | What sort of thing is it? | **Character**, **Object**, **Place**, **Event**, **Pattern** |
+
+`is-canon` and `is-dm` have fixed labels. `is-open` is the one that takes its
+own words, because *what* is open is the useful part: "Name open", "Scale open",
+"To build", "Your call".
+
+**Three rules, all of them learned the hard way.**
+
+A tag is a label, not a sentence. If it needs a verb it is prose, and it belongs
+in the paragraph underneath.
+
+A tag never restates the text beside it. Most of the one-off tags removed in
+this pass were saying what the next sentence already said.
+
+A fact about the subject is not a tag. A ship's standing, a world's state, a
+character's role — those are rows in the identity card or words in the heading.
+`is-locked` and `is-stub` were retired because they had filled up with exactly
+this: "Encounter dial", "Zenith underway", "Arc 2 antagonist", "Running now".
+
+The retired pair is worth remembering as the failure mode. `is-locked` ended up
+meaning *settled canon* on one page and *never show the players* on another, two
+unrelated things in one word, which is why "Locked" stopped meaning anything at
+all.
 
 ## Open questions
 
