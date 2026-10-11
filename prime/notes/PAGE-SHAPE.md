@@ -255,6 +255,25 @@ meaning *settled canon* on one page and *never show the players* on another, two
 unrelated things in one word, which is why "Locked" stopped meaning anything at
 all.
 
+## Who gets a player dossier
+
+**A named presence gets a dossier.** If the party has a name for it — met, mentioned
+by someone, or only heard — it has a page under `dossiers/` at the site root.
+
+"Presence" is wider than "person". Beshaba has a dossier on the strength of
+laughter Sol recognised; the Runekeeper has one on the strength of a voice. Neither
+has been met and neither needs to be.
+
+The page carries only what the table has: what happened, sourced to the voyage it
+happened in, with **named only** or **laughter only** in the Last Seen row when that
+is all there is. A page saying nothing more than "named by Mirt, not yet
+encountered" is doing its job. What the presence actually is belongs in the DM
+dossier, and the two never mirror each other.
+
+The player dossier set tracks the NPC tab of the campaign tracker one page to one
+row. A dossier written ahead of its row is fine and the page works, but the row
+should follow, or the next sync will disagree with the site.
+
 ## Open questions
 
 A call that has not been made gets `<span class="dm-tag is-open">` with a short
