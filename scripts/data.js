@@ -571,6 +571,33 @@ function checkIndex(set, recs, err) {
     if (!src.includes(`href="${rel}"`) && !src.includes(`data-panel="${r.slug}"`)) err(`${p}: no link to ${r.url}`);
     if (!page.includes(plain(r.name))) err(`${p}: "${r.name}" is not named`);
   });
+
+  // A board with panels files each row under one of them. The row's own text
+  // agreeing with the record is not enough: a finished quest left sitting in
+  // the open panel reads as unfinished, and every check above it passes. So
+  // the panel a row sits in, and the count on its tab, are tested too.
+  if (/class="board-panel/.test(src)) {
+    const panelOf = r => r.fields.Status === 'Complete' ? 'closed'
+                       : (r.kind === 'Thread' && !r.parent) ? 'threads' : 'quests';
+    const seen = {};
+    matches(/<section class="board-panel[^"]*" id="([^"]+)"[^>]*>([\s\S]*?)<\/section>/g, src).forEach(m => {
+      const id = m[1];
+      seen[id] = 0;
+      matches(/<a class="log-row-link" href="([^"]+)">/g, m[2]).forEach(a => {
+        seen[id]++;
+        const r = resolve(a[1]);
+        if (!r) return;
+        const want = panelOf(r);
+        if (want !== id) err(`${p}: ${r.slug} is on the ${id} panel, record puts it on ${want}`);
+      });
+    });
+    matches(/data-panel="([^"]+)"[^>]*>[^<]*<span class="board-count">(\d+)<\/span>/g, src).forEach(m => {
+      const [, id, n] = m;
+      if (seen[id] === undefined) return;
+      if (Number(n) !== seen[id]) err(`${p}: the ${id} tab counts ${n}, the panel holds ${seen[id]}`);
+    });
+  }
+
 }
 
 // ── links ──────────────────────────────────────────────────────────────────
