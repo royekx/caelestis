@@ -33,4 +33,9 @@ var CAELESTIS_VOYAGES = [
     title: "Retreat Is Always an Option",
     path:  'voyages/voyage-005.html',
   },
+  {
+    num:   '006',
+    title: "What Is Here Has Not Left",
+    path:  'voyages/voyage-006.html',
+  },
 ];

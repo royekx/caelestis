@@ -46,11 +46,20 @@
   },
   {
     "number": 6,
+    "title": "What Is Here Has Not Left",
+    "state": "played",
+    "source": { "kind": "transcript", "file": "Caelestis _ The Spelljamming Academy _ Voyage 006.txt" },
+    "playerRecord": true,
+    "crewLog": true,
+    "anchor": "v006"
+  },
+  {
+    "number": 7,
     "title": null,
-    "working": "the Command Deck → the swap",
+    "working": "the helm seats → H’Catha",
     "state": "next",
     "playerRecord": false,
     "crewLog": false,
-    "anchor": "v006"
+    "anchor": "v007"
   }
 ]
