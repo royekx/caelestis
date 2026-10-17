@@ -771,18 +771,18 @@
         "url": "navigation-records/the-command-deck.html"
       },
       {
-        "id": "LOC-Rp7kW4vn",
-        "name": "The Tyrant Ship",
-        "type": "location",
-        "slug": "the-tyrant-ship",
-        "url": "navigation-records/the-tyrant-ship.html"
-      },
-      {
         "id": "LOC-Tv6kW3mn",
         "name": "Toril",
         "type": "location",
         "slug": "toril",
         "url": "navigation-records/toril.html"
+      },
+      {
+        "id": "LOC-Rp7kW4vn",
+        "name": "Tyrant Ship",
+        "type": "location",
+        "slug": "the-tyrant-ship",
+        "url": "navigation-records/the-tyrant-ship.html"
       },
       {
         "id": "NPC-Hn4kW9vm",

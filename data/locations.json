@@ -433,13 +433,13 @@
     "within": [
       {
         "slug": "the-moonraider",
-        "name": "The Moonraider",
+        "name": "Moonraider",
         "url": "navigation-records/the-moonraider.html",
         "type": "Vessel"
       },
       {
         "slug": "the-derelict",
-        "name": "The Derelict",
+        "name": "Derelict",
         "url": "navigation-records/the-derelict.html",
         "type": "Vessel"
       }
@@ -449,7 +449,7 @@
     "id": "LOC-I7jHhD0b",
     "type": "location",
     "slug": "the-moonraider",
-    "name": "The Moonraider",
+    "name": "Moonraider",
     "kind": "Vessel",
     "parentId": "LOC-9mB4kW7n",
     "fields": {
@@ -496,7 +496,7 @@
     "id": "LOC-0cquusDI",
     "type": "location",
     "slug": "the-derelict",
-    "name": "The Derelict",
+    "name": "Derelict",
     "kind": "Vessel",
     "parentId": "LOC-9mB4kW7n",
     "fields": {
@@ -544,7 +544,7 @@
     "id": "LOC-Rp7kW4vn",
     "type": "location",
     "slug": "the-tyrant-ship",
-    "name": "The Tyrant Ship",
+    "name": "Tyrant Ship",
     "kind": "Vessel",
     "parentId": "LOC-Tv6kW3mn",
     "fields": {
@@ -601,7 +601,7 @@
     "links": [
       {
         "id": "LOC-yAV2JeVr",
-        "name": "The Flighty Foundling",
+        "name": "Flighty Foundling",
         "type": "location",
         "slug": "the-flighty-foundling",
         "url": "navigation-records/the-flighty-foundling.html"
@@ -659,7 +659,7 @@
     "id": "LOC-yAV2JeVr",
     "type": "location",
     "slug": "the-flighty-foundling",
-    "name": "The Flighty Foundling",
+    "name": "Flighty Foundling",
     "kind": "Vessel",
     "parentId": "LOC-Tv6kW3mn",
     "fields": {
@@ -701,7 +701,7 @@
     "links": [
       {
         "id": "LOC-Rp7kW4vn",
-        "name": "The Tyrant Ship",
+        "name": "Tyrant Ship",
         "type": "location",
         "slug": "the-tyrant-ship",
         "url": "navigation-records/the-tyrant-ship.html"
@@ -844,13 +844,13 @@
       },
       {
         "slug": "the-tyrant-ship",
-        "name": "The Tyrant Ship",
+        "name": "Tyrant Ship",
         "url": "navigation-records/the-tyrant-ship.html",
         "type": "Vessel"
       },
       {
         "slug": "the-flighty-foundling",
-        "name": "The Flighty Foundling",
+        "name": "Flighty Foundling",
         "url": "navigation-records/the-flighty-foundling.html",
         "type": "Vessel"
       }
@@ -959,7 +959,7 @@
     ],
     "parent": {
       "slug": "the-tyrant-ship",
-      "name": "The Tyrant Ship",
+      "name": "Tyrant Ship",
       "url": "navigation-records/the-tyrant-ship.html"
     },
     "within": []
@@ -1033,7 +1033,7 @@
     ],
     "parent": {
       "slug": "the-tyrant-ship",
-      "name": "The Tyrant Ship",
+      "name": "Tyrant Ship",
       "url": "navigation-records/the-tyrant-ship.html"
     },
     "within": []
@@ -1088,7 +1088,7 @@
     ],
     "parent": {
       "slug": "the-tyrant-ship",
-      "name": "The Tyrant Ship",
+      "name": "Tyrant Ship",
       "url": "navigation-records/the-tyrant-ship.html"
     },
     "within": []

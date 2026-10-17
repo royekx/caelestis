@@ -537,7 +537,7 @@
     "links": [
       {
         "id": "LOC-0cquusDI",
-        "name": "The Derelict",
+        "name": "Derelict",
         "type": "location",
         "slug": "the-derelict",
         "url": "navigation-records/the-derelict.html"
@@ -551,7 +551,7 @@
     "name": "Collection Manifest",
     "fields": {
       "Type": "Cargo manifest",
-      "Held By": "The Tyrant Ship",
+      "Held By": "Tyrant Ship",
       "Origin": "Found aboard the tyrant ship",
       "Overview (Player)": "The tyrant ship’s own cargo record. It is what gave the broken autognome in the hold a name — Ostekk-6 — and it lists what else the vessel was carrying.",
       "Status": "Held",
