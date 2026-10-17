@@ -492,6 +492,13 @@
     "url": "navigation-records/the-tyrant-ship.html",
     "links": [
       {
+        "id": "LOC-yAV2JeVr",
+        "name": "The Flighty Foundling",
+        "type": "location",
+        "slug": "the-flighty-foundling",
+        "url": "navigation-records/the-flighty-foundling.html"
+      },
+      {
         "id": "NPC-4tR8kW2n",
         "name": "Winston Ryeback",
         "type": "npc",
@@ -539,6 +546,93 @@
         "url": "inventory/entries/collection-manifest.html"
       }
     ]
+  },
+  {
+    "id": "LOC-yAV2JeVr",
+    "type": "location",
+    "slug": "the-flighty-foundling",
+    "name": "The Flighty Foundling",
+    "kind": "Vessel",
+    "parentId": "LOC-Tv6kW3mn",
+    "fields": {
+      "Type": "Vessel",
+      "Key NPCs / Factions": "Boatswain Tarto, Saerthe Abizjn",
+      "Overview (Player)": "The Flighty Foundling is a Caelestis Academy ship. It carried the crew out from the academy to the tyrant ship above Toril, dropped them into its cargo deck and left. Once the helm was seated it came back to meet them with Saerthe and Boatswain Tarto aboard, easing alongside until the two ships' air envelopes met. It is to carry Pffred and Krik'Lit back to Caelestis.",
+      "Status": "Accessible"
+    },
+    "voyages": [
+      {
+        "number": 3,
+        "bullets": [
+          "Carried the crew from Caelestis to the tyrant ship in orbit above Toril",
+          "Dropped them into the tyrant ship's cargo deck and departed"
+        ]
+      },
+      {
+        "number": 6,
+        "bullets": [
+          "Answered Ryeback's word to Caelestis and came to meet the crew on the third day after the helm was seated",
+          "Eased alongside until its air envelope met the tyrant ship's, with Saerthe and Boatswain Tarto at its rail",
+          "Is to return Pffred and Krik'Lit to Caelestis, and its crew ran a gangway out between the ships"
+        ]
+      }
+    ],
+    "seen": [
+      3,
+      6
+    ],
+    "mentioned": [],
+    "linked": [
+      "NPC-9dTp4qWz",
+      "NPC-Zx4Bn7Lq",
+      "NPC-Fq6kW2vn",
+      "NPC-Gp8mT4kw",
+      "LOC-Rp7kW4vn"
+    ],
+    "url": "navigation-records/the-flighty-foundling.html",
+    "links": [
+      {
+        "id": "LOC-Rp7kW4vn",
+        "name": "The Tyrant Ship",
+        "type": "location",
+        "slug": "the-tyrant-ship",
+        "url": "navigation-records/the-tyrant-ship.html"
+      },
+      {
+        "id": "NPC-9dTp4qWz",
+        "name": "Boatswain Tarto",
+        "type": "npc",
+        "slug": "boatswain-tarto",
+        "url": "dossiers/boatswain-tarto.html"
+      },
+      {
+        "id": "NPC-Fq6kW2vn",
+        "name": "Krik'Lit",
+        "type": "npc",
+        "slug": "krik-lit",
+        "url": "dossiers/krik-lit.html"
+      },
+      {
+        "id": "NPC-Gp8mT4kw",
+        "name": "Pffred",
+        "type": "npc",
+        "slug": "pffred",
+        "url": "dossiers/pffred.html"
+      },
+      {
+        "id": "NPC-Zx4Bn7Lq",
+        "name": "Saerthe Abizjn",
+        "type": "npc",
+        "slug": "saerthe-abizjn",
+        "url": "dossiers/saerthe-abizjn.html"
+      }
+    ],
+    "parent": {
+      "slug": "toril",
+      "name": "Toril",
+      "url": "navigation-records/toril.html"
+    },
+    "within": []
   },
   {
     "id": "LOC-Sk4mW8vn",
@@ -644,6 +738,12 @@
         "slug": "the-tyrant-ship",
         "name": "The Tyrant Ship",
         "url": "navigation-records/the-tyrant-ship.html",
+        "type": "Vessel"
+      },
+      {
+        "slug": "the-flighty-foundling",
+        "name": "The Flighty Foundling",
+        "url": "navigation-records/the-flighty-foundling.html",
         "type": "Vessel"
       }
     ]

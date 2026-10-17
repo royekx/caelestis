@@ -84,6 +84,13 @@
     "url": "dossiers/boatswain-tarto.html",
     "links": [
       {
+        "id": "LOC-yAV2JeVr",
+        "name": "The Flighty Foundling",
+        "type": "location",
+        "slug": "the-flighty-foundling",
+        "url": "navigation-records/the-flighty-foundling.html"
+      },
+      {
         "id": "QST-Or1nT4ks",
         "name": "Orientation",
         "type": "quest",
@@ -337,6 +344,13 @@
         "type": "item",
         "slug": "saerthes-miniature-ship",
         "url": "inventory/entries/saerthes-miniature-ship.html"
+      },
+      {
+        "id": "LOC-yAV2JeVr",
+        "name": "The Flighty Foundling",
+        "type": "location",
+        "slug": "the-flighty-foundling",
+        "url": "navigation-records/the-flighty-foundling.html"
       },
       {
         "id": "QST-Or1nT4ks",
@@ -803,7 +817,15 @@
     "mentioned": [],
     "linked": [],
     "url": "dossiers/krik-lit.html",
-    "links": []
+    "links": [
+      {
+        "id": "LOC-yAV2JeVr",
+        "name": "The Flighty Foundling",
+        "type": "location",
+        "slug": "the-flighty-foundling",
+        "url": "navigation-records/the-flighty-foundling.html"
+      }
+    ]
   },
   {
     "id": "NPC-Gp8mT4kw",
@@ -856,7 +878,15 @@
     "mentioned": [],
     "linked": [],
     "url": "dossiers/pffred.html",
-    "links": []
+    "links": [
+      {
+        "id": "LOC-yAV2JeVr",
+        "name": "The Flighty Foundling",
+        "type": "location",
+        "slug": "the-flighty-foundling",
+        "url": "navigation-records/the-flighty-foundling.html"
+      }
+    ]
   },
   {
     "id": "NPC-Hn4kW9vm",

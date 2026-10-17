@@ -91,6 +91,7 @@ contact an entity gains a record and keeps its DM dossier.
   identical is a question for the DM. Never a second record.
 - **A new record** gets a new id: the set's prefix, a hyphen, eight random
   letters and digits (`NPC-7wK4mB9x`). An id is never reused or edited.
+- **Ships the crew encounters get a record**: a place with Type `Vessel`, parented to where it was last seen, with whoever the crew met aboard in Key NPCs.
 - **Every record has a page.** A new record is not finished until its page and
   its register row exist.
 - **Bullets** go under `voyages[n].bullets`. One fact each, past tense, in the
