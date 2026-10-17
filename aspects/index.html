@@ -85,11 +85,26 @@ td.asp{font-style:italic;font-weight:600;color:var(--star);white-space:nowrap}
 @media (max-width:620px){
   table,thead,tbody,tr,td{display:block;width:100%}
   thead{display:none}
-  tbody tr{padding:10px 14px;border-bottom:1px solid var(--line)}
+  tbody tr{padding:10px 14px;border-bottom:1px solid var(--line);box-sizing:border-box}
   tbody tr:last-child{border-bottom:none}
   td{padding:2px 0;border:none;background:none!important;white-space:normal}
   td.beast{font-size:17px}
 }
+
+.ways{margin:0;padding-left:1.1em;display:grid;gap:10px;max-width:68ch}
+.ways li::marker{color:var(--faint)}
+.ways b{font-weight:600;font-style:italic;color:var(--star)}
+.hint{font-family:var(--label);font-size:15px;color:var(--muted)}
+.tabs{display:flex;flex-wrap:wrap;gap:6px}
+.tab{font-family:var(--label);font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:4px;padding:8px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.tab:hover{color:var(--ink);border-color:var(--faint)}
+.tab[aria-selected="true"]{color:var(--night);background:var(--star);border-color:var(--star)}
+.tab .n{font-size:12px;opacity:.75}
+.tab .k{width:7px;height:7px;border-radius:50%;background:var(--leaf)}
+.tab[aria-selected="true"] .k{background:#2f6b2a}
+.js-tabs .catalog caption{display:none}
+.js-tabs .tbl[hidden]{display:none}
+@media (max-width:540px){.tab{flex:1 1 calc(33% - 6px);justify-content:center;padding:8px 6px;font-size:13px}}
 </style>
 </head>
 <body>
@@ -139,19 +154,23 @@ td.asp{font-style:italic;font-weight:600;color:var(--star);white-space:nowrap}
   <div class="feature">
     <p>You can channel a single trait of a creature you know without taking its form.</p>
     <p><b>Manifest Aspect.</b> As a Bonus Action, you manifest one of your prepared aspects. It lasts for 1 minute, until you manifest another aspect, or until you have the Incapacitated condition. You can't manifest an aspect while in a Wild Shape form. You can use this feature a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
-    <p><b>Prepared Aspects.</b> When you finish a Long Rest, choose a number of aspects from your catalog equal to your Proficiency Bonus. Each aspect is tied to an ability score. You can't prepare more than one aspect tied to the same ability score.</p>
-    <p><b>Limited Benefits.</b> If an aspect lets you take an action or a Bonus Action, you can do so once per manifestation. Speeds, senses, and other passive benefits last for the full duration.</p>
-    <p><b>Learning Aspects.</b> You can learn an aspect from a living creature that isn't humanoid in form. Constructs, Elementals, Oozes, Plants, and Undead can't be learned from. You learn an aspect in one of two ways. The DM sets the DC.</p>
-    <p><b>Track.</b> Spend 1 hour following and watching the creature, and make three checks: Wisdom (Survival) to track it, Wisdom (Perception) to observe it, and Intelligence (Nature) or Wisdom (Animal Handling) to understand it. If at least two succeed, you learn the aspect.</p>
-    <p><b>Glimpse.</b> Take the Study action while the creature is within 30 feet of you and you can see it. Make one of the checks above with Disadvantage. If it succeeds, you learn the aspect.</p>
-    <p>When you learn an aspect, add one of the creature's aspects to your catalog. If you fail, you can't try to learn from that creature again until 24 hours have passed. You can learn only one aspect per day.</p>
-    <p><b>Starting Catalog.</b> Your catalog begins with 10 aspects: the four marked below, plus six more of your choice from this list. Your 10 aspects must cover at least four ability scores.</p>
+    <p><b>Prepared Aspects.</b> When you finish a Long Rest, choose a number of aspects from your catalog equal to your Proficiency Bonus. Each aspect is tied to the ability score it's listed under, and you can't prepare two aspects tied to the same score.</p>
+    <p><b>Using an Aspect.</b> If an aspect lets you take an action or a Bonus Action, you can do so once per manifestation. Speeds, senses, and other passive benefits last for the full duration.</p>
+    <p><b>Learning Aspects.</b> You can learn an aspect from a living creature that isn't humanoid in form. Constructs, Elementals, Oozes, Plants, and Undead have no aspects to learn. There are two ways to learn one, and the DM sets the DC:</p>
+    <ul class="ways">
+      <li><b>Track.</b> Spend 1 hour following and watching the creature, and make three checks: Wisdom (Survival) to track it, Wisdom (Perception) to observe it, and Intelligence (Nature) or Wisdom (Animal Handling) to understand it. If at least two succeed, you learn the aspect.</li>
+      <li><b>Glimpse.</b> Take the Study action while you can see the creature within 30 feet of you. Make one of the checks above with Disadvantage. If it succeeds, you learn the aspect.</li>
+    </ul>
+    <p>When you succeed, add one of that creature's aspects to your catalog. When you fail, you can't try that creature again for 24 hours. You can learn only one aspect per day.</p>
+    <p><b>Starting Catalog.</b> Your catalog starts with 10 aspects: the four marked <span class="yours" style="margin-left:0">Known</span>, plus six more of your choice from the catalog below. Together they must cover at least four ability scores.</p>
   </div>
 </section>
 
-<section>
+<section class="catalog">
   <h2>Catalog</h2>
-  <div class="tbl"><table>
+  <p class="hint">One tab per ability score. <span class="yours" style="margin-left:0">Known</span> marks the aspects you start with.</p>
+  <div class="tabs" role="tablist" aria-label="Ability score" hidden></div>
+  <div class="tbl" id="ab-strength" role="tabpanel" aria-label="Strength"><table>
     <caption><span class="dot"></span>Strength</caption>
     <thead><tr><th scope="col">Creature</th><th scope="col">Aspect</th><th scope="col">Effect</th></tr></thead>
     <tbody>
@@ -162,7 +181,7 @@ td.asp{font-style:italic;font-weight:600;color:var(--star);white-space:nowrap}
       <tr><td class="beast">Boar <span class="yours">Known</span></td><td class="asp">Bloodied Fury</td><td>While Bloodied, you have Advantage on melee attack rolls.</td></tr>
     </tbody>
   </table></div>
-  <div class="tbl"><table>
+  <div class="tbl" id="ab-dexterity" role="tabpanel" aria-label="Dexterity"><table>
     <caption><span class="dot"></span>Dexterity</caption>
     <thead><tr><th scope="col">Creature</th><th scope="col">Aspect</th><th scope="col">Effect</th></tr></thead>
     <tbody>
@@ -175,7 +194,7 @@ td.asp{font-style:italic;font-weight:600;color:var(--star);white-space:nowrap}
       <tr><td class="beast">Giant Badger</td><td class="asp">Burrow</td><td>You gain a Burrow Speed of 10 feet.</td></tr>
     </tbody>
   </table></div>
-  <div class="tbl"><table>
+  <div class="tbl" id="ab-constitution" role="tabpanel" aria-label="Constitution"><table>
     <caption><span class="dot"></span>Constitution</caption>
     <thead><tr><th scope="col">Creature</th><th scope="col">Aspect</th><th scope="col">Effect</th></tr></thead>
     <tbody>
@@ -184,7 +203,7 @@ td.asp{font-style:italic;font-weight:600;color:var(--star);white-space:nowrap}
       <tr><td class="beast">Crocodile</td><td class="asp">Hold Breath</td><td>You don't need to breathe.</td></tr>
     </tbody>
   </table></div>
-  <div class="tbl"><table>
+  <div class="tbl" id="ab-intelligence" role="tabpanel" aria-label="Intelligence"><table>
     <caption><span class="dot"></span>Intelligence</caption>
     <thead><tr><th scope="col">Creature</th><th scope="col">Aspect</th><th scope="col">Effect</th></tr></thead>
     <tbody>
@@ -192,7 +211,7 @@ td.asp{font-style:italic;font-weight:600;color:var(--star);white-space:nowrap}
       <tr><td class="beast">Hare</td><td class="asp">Escape</td><td>As a Bonus Action, you take the Dash, Disengage, or Hide action.</td></tr>
     </tbody>
   </table></div>
-  <div class="tbl"><table>
+  <div class="tbl" id="ab-wisdom" role="tabpanel" aria-label="Wisdom"><table>
     <caption><span class="dot"></span>Wisdom</caption>
     <thead><tr><th scope="col">Creature</th><th scope="col">Aspect</th><th scope="col">Effect</th></tr></thead>
     <tbody>
@@ -201,11 +220,11 @@ td.asp{font-style:italic;font-weight:600;color:var(--star);white-space:nowrap}
       <tr><td class="beast">Fox</td><td class="asp">Keen Hearing</td><td>You have Advantage on Wisdom (Perception) checks that rely on hearing.</td></tr>
     </tbody>
   </table></div>
-  <div class="tbl"><table>
+  <div class="tbl" id="ab-charisma" role="tabpanel" aria-label="Charisma"><table>
     <caption><span class="dot"></span>Charisma</caption>
     <thead><tr><th scope="col">Creature</th><th scope="col">Aspect</th><th scope="col">Effect</th></tr></thead>
     <tbody>
-      <tr><td colspan="3" class="empty">No creature you know fits here yet.</td></tr>
+      <tr><td colspan="3" class="empty">No aspects here yet.</td></tr>
     </tbody>
   </table></div>
 </section>
@@ -213,5 +232,38 @@ td.asp{font-style:italic;font-weight:600;color:var(--star);white-space:nowrap}
 <div class="closing">Two stars burn. The rest are waiting.</div>
 </div>
 
+<script>
+(function () {
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.catalog .tbl'));
+  var bar = document.querySelector('.catalog .tabs');
+  if (!panels.length || !bar) return;
+  document.documentElement.classList.add('js-tabs');
+  bar.hidden = false;
+  var tabs = panels.map(function (p, i) {
+    var name = p.querySelector('caption').textContent.trim();
+    var rows = p.querySelectorAll('tbody tr td.beast').length;
+    var known = p.querySelector('.yours');
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'tab'; b.setAttribute('role', 'tab');
+    b.setAttribute('aria-controls', p.id);
+    b.innerHTML = (known ? '<span class="k" title="Includes a known aspect"></span>' : '') + name + ' <span class="n">' + rows + '</span>';
+    b.addEventListener('click', function () { show(i); });
+    bar.appendChild(b);
+    return b;
+  });
+  function show(i) {
+    panels.forEach(function (p, j) { p.hidden = j !== i; tabs[j].setAttribute('aria-selected', j === i ? 'true' : 'false'); });
+  }
+  bar.addEventListener('keydown', function (e) {
+    var i = tabs.indexOf(document.activeElement); if (i < 0) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      e.preventDefault();
+      var n = (i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length;
+      tabs[n].focus(); show(n);
+    }
+  });
+  show(0);
+})();
+</script>
 </body>
 </html>
