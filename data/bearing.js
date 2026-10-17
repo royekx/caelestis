@@ -10,13 +10,13 @@ window.CAELESTIS_BEARING = {
   title:    'What Is Here Has Not Left',
   position: 'The Tyrant Ship',
   posNote:  'Toril orbit',
-  outstanding: 'Seat the helm and fly the tyrant ship to H\u2019catha',
+  outstanding: 'Choose the instructor who joins the crew, and cross to H\u2019Catha',
 
   /* Revealed when the bar is expanded — the detail the strip has to trim. */
   detail: {
     consequence: 'The crew held the ship, burned the bloom off the Command Deck and tore the great flower from the dead beholder. Beneath it Gregory found the Lantern of Flourishing, the device the mechanical behir, Ostekk-10, had asked for. They told it nothing was found and put it out through the cargo hold, still searching. Bartholomew caught Miken speaking into a sending stone.',
     quests: [
-      { name: 'The Tyrant Ship and the H\u2019catha Meteor', progress: '2/5', href: 'quests/the-tyrant-ship-and-the-hcatha-meteor.html' },
+      { name: 'The Tyrant Ship and the H\u2019Catha Meteor', progress: '3/5', href: 'quests/the-tyrant-ship-and-the-hcatha-meteor.html' },
       { name: 'The Caelestis Burglaries',                     progress: '1/3', href: 'quests/the-caelestis-burglaries.html' },
       { name: 'The Path to Viren',                            progress: '1/3', href: 'quests/the-path-to-viren.html' },
       { name: 'Tumak\u2019s Search for Family',               progress: '0/1', href: 'quests/tumaks-search-for-family.html' }

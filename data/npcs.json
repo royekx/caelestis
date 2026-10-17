@@ -28,7 +28,15 @@
     "mentioned": [],
     "linked": [],
     "url": "dossiers/captain-sardax.html",
-    "links": []
+    "links": [
+      {
+        "id": "LOC-I7jHhD0b",
+        "name": "The Moonraider",
+        "type": "location",
+        "slug": "the-moonraider",
+        "url": "navigation-records/the-moonraider.html"
+      }
+    ]
   },
   {
     "id": "NPC-9dTp4qWz",
@@ -40,7 +48,7 @@
       "Affiliation(s)": "Caelestis Academy",
       "Party Relationship": "Instructor overseeing the cadets",
       "Role (as known)": "Boatswain and instructor at Caelestis",
-      "Current State": "Overseeing the cadets' training and their mission to crew a tyrant ship to H’catha.",
+      "Current State": "Aboard the Flighty Foundling alongside the tyrant ship, relieving Pffred and Krik'Lit and sending a Watcher cadet to join the crew.",
       "Overview (Player)": "Boatswain Tarto is an instructor at Caelestis who oversees the cadets' testing and orientation. Once counted among the academy's great spelljammers, she reads the shape of a forming crew keenly.",
       "Category": "Command & Staff",
       "Status": "Active"
@@ -70,7 +78,7 @@
           "Moved through the wreckage of the simulation chamber ushering the injured out, and received the recovered rod from Gregory",
           "Conferred with Saerthe over the rod and its marking, Vocath",
           "Met the cadets at the bridge and walked them in to Mirt",
-          "Woke the cadets at four in the morning banging metal, and briefed them over breakfast on the H’catha meteor recovery aboard a tyrant ship"
+          "Woke the cadets at four in the morning banging metal, and briefed them over breakfast on the H’Catha meteor recovery aboard a tyrant ship"
         ]
       }
     ],
@@ -83,6 +91,13 @@
     "linked": [],
     "url": "dossiers/boatswain-tarto.html",
     "links": [
+      {
+        "id": "LOC-yAV2JeVr",
+        "name": "The Flighty Foundling",
+        "type": "location",
+        "slug": "the-flighty-foundling",
+        "url": "navigation-records/the-flighty-foundling.html"
+      },
       {
         "id": "QST-Or1nT4ks",
         "name": "Orientation",
@@ -290,7 +305,7 @@
       "Affiliation(s)": "Caelestis Academy (Spelljammer Nexus)",
       "Party Relationship": "Instructor at the Nexus",
       "Role (as known)": "Helm instructor at the Spelljammer Nexus",
-      "Current State": "Instructing at the Nexus and investigating the recovered arcane rod and its marking, Vocath.",
+      "Current State": "Alongside the tyrant ship on the Flighty Foundling. One instructor, Saerthe or Tarto, will join the crew's mission; the choice is theirs.",
       "Overview (Player)": "Saerthe Abizjn is a helm instructor at Caelestis's Spelljammer Nexus who runs the cadets' first true helm exercise over the Astral Sea. He reads each cadet's approach sharply, naming their difficulties as they arise.",
       "Category": "Command & Staff",
       "Status": "Active"
@@ -337,6 +352,13 @@
         "type": "item",
         "slug": "saerthes-miniature-ship",
         "url": "inventory/entries/saerthes-miniature-ship.html"
+      },
+      {
+        "id": "LOC-yAV2JeVr",
+        "name": "The Flighty Foundling",
+        "type": "location",
+        "slug": "the-flighty-foundling",
+        "url": "navigation-records/the-flighty-foundling.html"
       },
       {
         "id": "QST-Or1nT4ks",
@@ -440,7 +462,7 @@
         "bullets": [
           "Found half-buried in a hangover in cluttered chambers scattered with curiosities and a fishbowl of two octopi, Flotsam and Jetsam",
           "Praised Sol's instinct to subdue the creature alive as evidence",
-          "Rewarded the cadets with gold and revealed to Casey that the wardrobe is a magical replica of a place beyond H’catha in the Viren star system, gifted by a spellcaster named Zerathis"
+          "Rewarded the cadets with gold and revealed to Casey that the wardrobe is a magical replica of a place beyond H’Catha in the Viren star system, gifted by a spellcaster named Zerathis"
         ]
       },
       {
@@ -506,7 +528,7 @@
       {
         "number": 1,
         "bullets": [
-          "Named by Mirt as the spellcaster who gifted him the magical wardrobe replicating a place beyond H’catha in the Viren star system"
+          "Named by Mirt as the spellcaster who gifted him the magical wardrobe replicating a place beyond H’Catha in the Viren star system"
         ]
       }
     ],
@@ -536,8 +558,8 @@
       "Affiliation(s)": "Caelestis Academy (Weeping Goddess)",
       "Party Relationship": "Galley cook who fed and warmed to the cadets",
       "Role (as known)": "Petty officer and galley cook at the Weeping Goddess",
-      "Current State": "Keeping the camp kitchen on the tyrant ship, satisfied the crew can finish the job without calling Tarto or Saerthe.",
-      "Overview (Player)": "Petty Officer Winston Ryeback, a giff, runs the kitchen at the Weeping Goddess refectory, commanding the din with a bellow and feeding the cadets with brusque affection. Beneath the gruffness he keeps hot baths and knitting for himself, and warms to anyone who asks kindly.",
+      "Current State": "Aboard the tyrant ship, the helm in and the ship flying, after sending word to Caelestis.",
+      "Overview (Player)": "Petty Officer Winston Ryeback, a giff, runs the kitchen at the Weeping Goddess refectory, commanding the din with a bellow and feeding the cadets with brusque affection. Beneath the gruffness he keeps hot baths and knitting for himself, and warms to anyone who asks kindly. He carries a hand cannon of his own and is quick to use it.",
       "Category": "Command & Staff",
       "Status": "Active"
     },
@@ -592,9 +614,19 @@
       6
     ],
     "mentioned": [],
-    "linked": [],
+    "linked": [
+      "LOC-Rp7kW4vn"
+    ],
     "url": "dossiers/winston-ryeback.html",
-    "links": []
+    "links": [
+      {
+        "id": "LOC-Rp7kW4vn",
+        "name": "The Tyrant Ship",
+        "type": "location",
+        "slug": "the-tyrant-ship",
+        "url": "navigation-records/the-tyrant-ship.html"
+      }
+    ]
   },
   {
     "id": "NPC-7wK4mB9x",
@@ -607,7 +639,7 @@
       "Party Relationship": "Friendly cadet from the rival crew, now under suspicion",
       "Role (as known)": "Fellow cadet on the rival crew",
       "Current State": "Aboard the tyrant ship with the crew, after Bartholomew caught him speaking into a sending stone in the night.",
-      "Overview (Player)": "Miken is a slight, nervous cadet at Caelestis on the crew that races opposite the party. Easy company and quick to understand, he showed a command of magic that seems to run ahead of his year.",
+      "Overview (Player)": "Miken is a slight, nervous cadet at Caelestis on the crew that races opposite the party. Easy company and quick to understand, he showed a command of magic that seems to run ahead of his year. On the tyrant ship Bartholomew caught him in the night speaking into a sending stone, and his explanation sat poorly with the crew.",
       "Category": "Cadet Corps",
       "Status": "Active"
     },
@@ -757,8 +789,8 @@
       "Affiliation(s)": "Caelestis Academy",
       "Party Relationship": "Deckhand on the tyrant-ship crew",
       "Role (as known)": "Thri-kreen deckhand",
-      "Current State": "Fitting the helm into the Command Deck platform with Pffred.",
-      "Overview (Player)": "Krik’Lit is a thri-kreen deckhand assigned to the crew for the voyage to recover the H’catha meteor, serving under Petty Officer Ryeback.",
+      "Current State": "Relieved at the Flighty Foundling's rendezvous after rigging the crew stations; the Foundling will return him to Caelestis.",
+      "Overview (Player)": "Krik’Lit is a thri-kreen deckhand assigned to the crew for the voyage to recover the H’Catha meteor, serving under Petty Officer Ryeback.",
       "Category": "Tyrant Ship",
       "Status": "Active"
     },
@@ -766,7 +798,7 @@
       {
         "number": 3,
         "bullets": [
-          "A thri-kreen deckhand assigned under Ryeback for the tyrant-ship voyage to H’catha"
+          "A thri-kreen deckhand assigned under Ryeback for the tyrant-ship voyage to H’Catha"
         ]
       },
       {
@@ -793,7 +825,15 @@
     "mentioned": [],
     "linked": [],
     "url": "dossiers/krik-lit.html",
-    "links": []
+    "links": [
+      {
+        "id": "LOC-yAV2JeVr",
+        "name": "The Flighty Foundling",
+        "type": "location",
+        "slug": "the-flighty-foundling",
+        "url": "navigation-records/the-flighty-foundling.html"
+      }
+    ]
   },
   {
     "id": "NPC-Gp8mT4kw",
@@ -805,8 +845,8 @@
       "Affiliation(s)": "Caelestis Academy",
       "Party Relationship": "Deckhand on the tyrant-ship crew",
       "Role (as known)": "Plasmoid deckhand",
-      "Current State": "Fitting the helm into the Command Deck platform with Krik'Lit.",
-      "Overview (Player)": "Pffred is a plasmoid deckhand who wears a kerchief knotted like a necktie, assigned to the tyrant-ship crew under Petty Officer Ryeback for the voyage to H’catha.",
+      "Current State": "Relieved at the Flighty Foundling's rendezvous after rigging the crew stations; the Foundling will return him to Caelestis.",
+      "Overview (Player)": "Pffred is a plasmoid deckhand who wears a kerchief knotted like a necktie, assigned to the tyrant-ship crew under Petty Officer Ryeback for the voyage to H’Catha.",
       "Category": "Tyrant Ship",
       "Status": "Active"
     },
@@ -814,7 +854,7 @@
       {
         "number": 3,
         "bullets": [
-          "A plasmoid deckhand who wears a kerchief knotted at the throat like a necktie, assigned under Ryeback for the tyrant-ship voyage to H’catha"
+          "A plasmoid deckhand who wears a kerchief knotted at the throat like a necktie, assigned under Ryeback for the tyrant-ship voyage to H’Catha"
         ]
       },
       {
@@ -846,7 +886,15 @@
     "mentioned": [],
     "linked": [],
     "url": "dossiers/pffred.html",
-    "links": []
+    "links": [
+      {
+        "id": "LOC-yAV2JeVr",
+        "name": "The Flighty Foundling",
+        "type": "location",
+        "slug": "the-flighty-foundling",
+        "url": "navigation-records/the-flighty-foundling.html"
+      }
+    ]
   },
   {
     "id": "NPC-Hn4kW9vm",
@@ -858,7 +906,7 @@
       "Affiliation(s)": "Vaelorix (the tyrant ship's master)",
       "Party Relationship": "A broken automaton the crew saved aboard the tyrant ship",
       "Role (as known)": "Automaton unit of the tyrant ship, one of nine that served Vaelorix",
-      "Current State": "Rebuilding below the waist under the containment engine's light, and ready to travel with the crew.",
+      "Current State": "Guiding the crew through the tyrant ship's decks while his body rebuilds.",
       "Overview (Player)": "Ostekk-6 is an automaton, one of nine units that served the tyrant ship's beholder master, Vaelorix, found broken in the cargo hold with his lower half gone. Gregory spent a charge of the containment engine on him and his body began to rebuild itself. He knows the ship, has no reservations about the crew taking it, and will travel with them if they wish. He calls himself a servant, not capable of making plans.",
       "Category": "Tyrant Ship",
       "Status": "Active"
@@ -939,8 +987,15 @@
         "url": "dossiers/vaelorix.html"
       },
       {
+        "id": "QST-Ok5mB8tz",
+        "name": "Ostekk-6",
+        "type": "quest",
+        "slug": "ostekk-6-thread",
+        "url": "quests/ostekk-6-thread.html"
+      },
+      {
         "id": "QST-Xr4mW8vn",
-        "name": "The Tyrant Ship and the H’catha Meteor",
+        "name": "The Tyrant Ship and the H’Catha Meteor",
         "type": "quest",
         "slug": "the-tyrant-ship-and-the-hcatha-meteor",
         "url": "quests/the-tyrant-ship-and-the-hcatha-meteor.html"
@@ -1190,7 +1245,7 @@
       "Party Relationship": "The tyrant ship's dead master, as the crew understands it",
       "Role (as known)": "Beholder master of the tyrant ship",
       "Current State": "Dead on the Command Deck platform, the great flower torn from his body and his central eye dried open.",
-      "Overview (Player)": "Vaelorix was the beholder who owned the tyrant ship and flew it from its Command Deck, needing no helm and floating between its decks. Ostekk-6 served him and has not seen him since the creatures boarded. The crew found a beholder's body on the Command Deck platform, overgrown by a great flower, its central eye still cancelling magic in the room.",
+      "Overview (Player)": "Vaelorix was the beholder who owned the tyrant ship and flew it from its Command Deck, needing no helm and floating between its decks. Ostekk-6 served him and has not seen him since the creatures boarded. The crew found his body on the Command Deck platform, overgrown by a great flower. The flowers there, a specimen he had been researching, made both the wisps and the field that killed magic, and the crew tore the great one from his body.",
       "Category": "Tyrant Ship",
       "Status": "Deceased"
     },

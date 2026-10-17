@@ -37,7 +37,7 @@
     'joffrey':       { name: 'Joffrey',             fileId: '' },
     'kip-pik':       { name: 'Kip & Pik',           fileId: '' },
     "krik-lit": { name: "Krik'Lit", fileId: '' },
-    'miken':         { name: 'Miken Haverstance',   fileId: '1naBafRe55ibGcJ7vcQ1vxHCpg0rhaKpk' },
+    'miken':         { name: 'Miken',               fileId: '1naBafRe55ibGcJ7vcQ1vxHCpg0rhaKpk' },
     'mirt':          { name: 'Mirt',                fileId: '1D9Hh3pn8e_QbMAF69ABg4bld6kMHj4qr' },
     'ostekk-6':      { name: 'Ostekk-6', fileId: '1kRxGB6tcRWliypOvuE0TlfeKixlE9CUw' },
     'pffred':        { name: 'Pffred', fileId: '1BlgQkqqZYL5E5M6X7DJMFOJKbr23hda6' },

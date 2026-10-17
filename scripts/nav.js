@@ -62,6 +62,7 @@
         { key: 'crew-manifest',      label: 'Manifest',           path: 'crew-manifest/index.html'      },
         { key: 'dossiers',           label: 'Dossiers',           path: 'dossiers/index.html'           },
         { key: 'navigation-records', label: 'Navigation Records', path: 'navigation-records/index.html' },
+        { key: 'vessels',            label: 'Vessels',            path: 'vessels/index.html'            },
         { key: 'inventory',          label: 'Inventory',          path: 'inventory/index.html'          },
         { key: 'logs',               label: 'Logs',               path: 'logs/index.html'               }
       ]

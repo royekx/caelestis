@@ -136,9 +136,27 @@
       6
     ],
     "mentioned": [],
-    "linked": [],
+    "linked": [
+      "ITM-Z1eGrfAb",
+      "PC-wI087olT"
+    ],
     "url": "inventory/entries/crimson-bag-of-holding.html",
-    "links": []
+    "links": [
+      {
+        "id": "ITM-Z1eGrfAb",
+        "name": "Lantern of Flourishing",
+        "type": "item",
+        "slug": "lantern-of-flourishing",
+        "url": "inventory/entries/lantern-of-flourishing.html"
+      },
+      {
+        "id": "PC-wI087olT",
+        "name": "Tumak Swan",
+        "type": "pc",
+        "slug": "tumak-swan",
+        "url": "crew-manifest/tumak-swan.html"
+      }
+    ]
   },
   {
     "id": "ITM-4kD8vRt2",
@@ -149,7 +167,7 @@
       "Type": "Magical portal object",
       "Held By": "Mirt's Quarters",
       "Origin": "Gifted to Mirt by the spellcaster Zerathis",
-      "Overview (Player)": "Mirt's wardrobe is an impossible object that opens onto a bounded stretch of astral night rather than ordinary space, a magical replica of a place beyond H’catha in the Viren star system, gifted to Mirt by the spellcaster Zerathis.",
+      "Overview (Player)": "Mirt's wardrobe is an impossible object that opens onto a bounded stretch of astral night rather than ordinary space, a magical replica of a place beyond H’Catha in the Viren star system, gifted to Mirt by the spellcaster Zerathis.",
       "Status": "Held",
       "Class": "Magic Item",
       "Item Type": "Wondrous Item",
@@ -161,7 +179,7 @@
         "bullets": [
           "A wardrobe in Mirt's chambers whose interior opens onto a bounded stretch of astral night, a floor you can stand on and stars where walls should be",
           "Casey saw unfamiliar constellations and a flickering point inside, and a familiar voice told him 'Go there'",
-          "Revealed by Mirt to be a magical replica of a place beyond H’catha in the Viren star system, gifted by the spellcaster Zerathis"
+          "Revealed by Mirt to be a magical replica of a place beyond H’Catha in the Viren star system, gifted by the spellcaster Zerathis"
         ]
       }
     ],
@@ -392,7 +410,7 @@
         "bullets": [
           "A crate Boogie found tucked behind others at the Sky Dock, marked with the same symbol as the Vocath rod",
           "Knocking on it revealed nothing living inside, but it was not hollow",
-          "Its contents would route through Mr. Blip, with Toril and H’catha as destinations; no one came for it while the crew watched"
+          "Its contents would route through Mr. Blip, with Toril and H’Catha as destinations; no one came for it while the crew watched"
         ]
       }
     ],
@@ -516,7 +534,15 @@
     "mentioned": [],
     "linked": [],
     "url": "inventory/entries/derelict-logbook.html",
-    "links": []
+    "links": [
+      {
+        "id": "LOC-0cquusDI",
+        "name": "The Derelict",
+        "type": "location",
+        "slug": "the-derelict",
+        "url": "navigation-records/the-derelict.html"
+      }
+    ]
   },
   {
     "id": "ITM-Cm8rT3wk",
@@ -585,10 +611,18 @@
       "NPC-lfleUUeT",
       "NPC-Hn4kW9vm",
       "QST-6bC9wN4k",
-      "LOC-4wNvxXYk"
+      "LOC-4wNvxXYk",
+      "PC-wI087olT"
     ],
     "url": "inventory/entries/lantern-of-flourishing.html",
     "links": [
+      {
+        "id": "ITM-6rW9kT4v",
+        "name": "Crimson Bag of Holding",
+        "type": "item",
+        "slug": "crimson-bag-of-holding",
+        "url": "inventory/entries/crimson-bag-of-holding.html"
+      },
       {
         "id": "LOC-4wNvxXYk",
         "name": "The Command Deck",
@@ -625,11 +659,25 @@
         "url": "dossiers/vaelorix.html"
       },
       {
+        "id": "PC-wI087olT",
+        "name": "Tumak Swan",
+        "type": "pc",
+        "slug": "tumak-swan",
+        "url": "crew-manifest/tumak-swan.html"
+      },
+      {
         "id": "QST-6bC9wN4k",
         "name": "Gregory's Pull",
         "type": "quest",
         "slug": "gregorys-pull",
         "url": "quests/gregorys-pull.html"
+      },
+      {
+        "id": "QST-Ok5mB8tz",
+        "name": "Ostekk-6",
+        "type": "quest",
+        "slug": "ostekk-6-thread",
+        "url": "quests/ostekk-6-thread.html"
       }
     ]
   },
@@ -644,8 +692,9 @@
       "Origin": "Vaelorix's garden aboard the tyrant ship",
       "Overview (Player)": "A newly bloomed flower Bartholomew found in Vaelorix's garden. Its scent was familiar and he could not place it. When he breathed it in, his body wanted to become something he had never been, but the flower had already given off most of what it had. He sealed it in one of the garden's containers.",
       "Status": "Held",
-      "Class": "Curiosity",
-      "Item Type": "Curiosity"
+      "Class": "Magic Item",
+      "Item Type": "Curiosity",
+      "Rarity": "Unknown"
     },
     "voyages": [
       {
@@ -661,9 +710,26 @@
       6
     ],
     "mentioned": [],
-    "linked": [],
+    "linked": [
+      "PC-Bw9kt3Lq"
+    ],
     "url": "inventory/entries/garden-bloom.html",
-    "links": []
+    "links": [
+      {
+        "id": "LOC-0zVUE8xF",
+        "name": "The Garden",
+        "type": "location",
+        "slug": "the-garden",
+        "url": "navigation-records/the-garden.html"
+      },
+      {
+        "id": "PC-Bw9kt3Lq",
+        "name": "Bartholomew Grayson",
+        "type": "pc",
+        "slug": "bartholomew-grayson",
+        "url": "crew-manifest/bartholomew-grayson.html"
+      }
+    ]
   },
   {
     "id": "ITM-1pRB4oz6",

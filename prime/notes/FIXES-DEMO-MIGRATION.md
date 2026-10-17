@@ -90,7 +90,7 @@ The schematic shipped as CSS and JS and never as markup. `board.css` already
 had `.chart`, `.orbit`, `.body`, `.sun-core`, `.sat`, `.bound-arc` and
 `.tether`; `ui.js` already had the selection logic.
 
-Realmspace now renders as a chart: the sun, two orbits, Toril and H'catha,
+Realmspace now renders as a chart: the sun, two orbits, Toril and H'Catha,
 Caelestis and the tyrant ship tethered in Toril's orbit, and the Deep Astral
 shell as the sphere itself. Selecting a body narrows the register.
 
@@ -216,13 +216,13 @@ The first pass approximated these rules. They are now copied verbatim:
 The first pass invented a two-orbit schematic. The demo is an orrery: sun at
 the right, Deep Astral at the left, and all eight Realmspace worlds at their
 charted distances — Anadia, Coliar, Toril, Karpri, Chandos, Glyth, Garden,
-H'catha — with Caelestis and the tyrant ship tethered to Toril.
+H'Catha — with Caelestis and the tyrant ship tethered to Toril.
 
 Also from the demo: the survey chart above it, the `.ent-dist` column carrying
 distance from the sun, charted-but-unreached worlds drawn back as
 `.is-unknown`, Caelestis's six rooms as `.det-chips` under its own entry rather
 than as register rows of their own, and Viren as a single `.stub` card on its
-own tab. Naming retargeted from the demo's `Hakatha` to the repo's `H'catha`,
+own tab. Naming retargeted from the demo's `Hakatha` to the repo's `H'Catha`,
 and the truncated demo descriptions replaced with the full text from
 `locations.json`.
 

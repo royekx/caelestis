@@ -48,7 +48,7 @@
         "bullets": [
           "An arcane device marked 'Vocath' detonated in the simulation chamber, nearly killing everyone inside",
           "Mirt named Vocath as an old enemy bearing him a grudge, making anyone connected to him a target",
-          "A crate at the Sky Dock bore the same symbol as the rod; its contents route through Mr. Blip toward Toril and H’catha",
+          "A crate at the Sky Dock bore the same symbol as the rod; its contents route through Mr. Blip toward Toril and H’Catha",
           "Mirt asked the cadets to check the teaching rooms for similar devices and to look cautiously into Joffrey and a man named Jeffrey"
         ]
       }
@@ -229,8 +229,8 @@
     "fields": {
       "Type": "Personal / Mystery",
       "Related Character(s)": "Casey Geim",
-      "Current State": "A meteor has struck H’catha, the world beyond which Viren lies, and the crew is bound there aboard a tyrant ship.",
-      "Overview (Player)": "A vision in Mirt's wardrobe and a familiar voice told Casey to 'Go there' — a place beyond H’catha in the Viren star system. Now a meteor has struck H’catha itself, and the crew is bound there aboard a tyrant ship. Casey carries the constellations that point the way.",
+      "Current State": "A meteor has struck H’Catha, the world beyond which Viren lies, and the crew is bound there aboard a tyrant ship.",
+      "Overview (Player)": "A vision in Mirt's wardrobe and a familiar voice told Casey to 'Go there' — a place beyond H’Catha in the Viren star system. Now a meteor has struck H’Catha itself, and the crew is bound there aboard a tyrant ship. Casey carries the constellations that point the way.",
       "Status": "Open"
     },
     "objectives": [
@@ -253,7 +253,7 @@
         "bullets": [
           "Inside Mirt's wardrobe Casey saw unfamiliar constellations and a flickering point, and a familiar voice told him 'Go there'",
           "Casey etched the constellation pattern onto a stolen shirt",
-          "Mirt revealed the wardrobe replicates a place beyond H’catha in the Viren star system, gifted by the spellcaster Zerathis"
+          "Mirt revealed the wardrobe replicates a place beyond H’Catha in the Viren star system, gifted by the spellcaster Zerathis"
         ]
       },
       {
@@ -265,7 +265,7 @@
       {
         "number": 3,
         "bullets": [
-          "An adamantine meteor struck the spire on H’catha, the beholder world beyond which Viren lies, and the crew was sent to recover it aboard a tyrant ship"
+          "An adamantine meteor struck the spire on H’Catha, the beholder world beyond which Viren lies, and the crew was sent to recover it aboard a tyrant ship"
         ]
       }
     ],
@@ -666,14 +666,14 @@
     "id": "QST-Xr4mW8vn",
     "type": "quest",
     "slug": "the-tyrant-ship-and-the-hcatha-meteor",
-    "name": "The Tyrant Ship and the H’catha Meteor",
+    "name": "The Tyrant Ship and the H’Catha Meteor",
     "kind": "Quest",
     "giverId": "NPC-9dTp4qWz",
     "fields": {
       "Type": "Mission",
       "Related Character(s)": "Bartholomew Grayson, Gregory, Tumak Swan, Sol Fortuna, Casey Geim, Boogie",
       "Current State": "The crew holds the tyrant ship. The Command Deck is clear, the behir is gone, and the helm is being fitted into the platform.",
-      "Overview (Player)": "Boatswain Tarto has sent the crew to recover an adamantine meteor that struck the spire on H’catha, a world of beholders. Arriving as themselves is not an option. An abandoned tyrant ship drifts in Toril’s orbit: commandeer it, install a spelljamming helm on its command deck, and fly it through H’cathan space as one of their own — the vessel itself the disguise. Reach the spire under that cover and bring the meteor back.",
+      "Overview (Player)": "Boatswain Tarto has sent the crew to recover an adamantine meteor that struck the spire on H’Catha, a world of beholders. Arriving as themselves is not an option. An abandoned tyrant ship drifts in Toril’s orbit: commandeer it, install a spelljamming helm on its command deck, and fly it through H’Cathan space as one of their own — the vessel itself the disguise. Reach the spire under that cover and bring the meteor back.",
       "Status": "Open"
     },
     "objectives": [
@@ -686,12 +686,12 @@
         "text": "Commandeer the tyrant ship"
       },
       {
-        "done": false,
+        "done": true,
         "text": "Install the spelljamming helm on the command deck"
       },
       {
         "done": false,
-        "text": "Fly to H’catha"
+        "text": "Fly to H’Catha"
       },
       {
         "done": false,
@@ -712,8 +712,8 @@
       {
         "number": 3,
         "bullets": [
-          "Boatswain Tarto woke the crew at four in the morning to recover an adamantine meteor that struck the spire on H’catha",
-          "The plan: crew an abandoned beholder tyrant ship, install the helm on the command deck, and use its appearance to move through H’cathan space unchallenged",
+          "Boatswain Tarto woke the crew at four in the morning to recover an adamantine meteor that struck the spire on H’Catha",
+          "The plan: crew an abandoned beholder tyrant ship, install the helm on the command deck, and use its appearance to move through H’Cathan space unchallenged",
           "The Flighty Foundling dropped the crew into the tyrant ship's cargo deck and departed",
           "The crew found and saved the broken autognome Ostekk-6, learning of a mimic aboard, a wisp bloom, and more clockwork horrors"
         ]
@@ -758,7 +758,7 @@
     "links": [
       {
         "id": "LOC-Sk4mW8vn",
-        "name": "H'catha",
+        "name": "H'Catha",
         "type": "location",
         "slug": "hcatha",
         "url": "navigation-records/hcatha.html"
@@ -807,7 +807,7 @@
       }
     ],
     "progress": {
-      "done": 2,
+      "done": 3,
       "total": 5
     }
   },
@@ -861,7 +861,7 @@
       "Type": "Character / Mystery",
       "Related Character(s)": "Gregory",
       "Current State": "Ostekk-6 is rebuilding under the containment engine's light and will travel with the crew.",
-      "Overview (Player)": "The automaton the crew pulled out of the wreckage in the tyrant ship’s cargo hold wears Gregory’s face. He is one of nine units that served the ship’s beholder master, Vaelorix, and shares his name with a tinkerer, the original Ostekk, said to have sent the behir that destroyed the rest. His core is sound; his body is a mechanical problem no spell will close, and what he knows about the ship has already proved worth having.",
+      "Overview (Player)": "The automaton the crew pulled out of the wreckage in the tyrant ship’s cargo hold wears Gregory’s face. He is one of nine units that served the ship’s beholder master, Vaelorix, and shares his name with his maker, the original Ostekk, a beholder tinkerer who also built Ostekk-10, the mechanical behir that destroyed the rest. His core is sound, and a charge from the containment engine set his ruined body rebuilding. What he knows about the ship has already proved worth having.",
       "Status": "Open"
     },
     "objectives": [
@@ -907,10 +907,19 @@
     "mentioned": [],
     "linked": [
       "NPC-nmdnCFvr",
-      "LOC-p6GYEwKt"
+      "LOC-p6GYEwKt",
+      "NPC-Hn4kW9vm",
+      "ITM-Z1eGrfAb"
     ],
     "url": "quests/ostekk-6-thread.html",
     "links": [
+      {
+        "id": "ITM-Z1eGrfAb",
+        "name": "Lantern of Flourishing",
+        "type": "item",
+        "slug": "lantern-of-flourishing",
+        "url": "inventory/entries/lantern-of-flourishing.html"
+      },
       {
         "id": "LOC-p6GYEwKt",
         "name": "The Hollow Deck",
@@ -924,11 +933,18 @@
         "type": "npc",
         "slug": "ostekk-2",
         "url": "dossiers/ostekk-2.html"
+      },
+      {
+        "id": "NPC-Hn4kW9vm",
+        "name": "Ostekk-6",
+        "type": "npc",
+        "slug": "ostekk-6",
+        "url": "dossiers/ostekk-6.html"
       }
     ],
     "parent": {
       "slug": "the-tyrant-ship-and-the-hcatha-meteor",
-      "name": "The Tyrant Ship and the H’catha Meteor",
+      "name": "The Tyrant Ship and the H’Catha Meteor",
       "url": "quests/the-tyrant-ship-and-the-hcatha-meteor.html"
     },
     "children": [],
