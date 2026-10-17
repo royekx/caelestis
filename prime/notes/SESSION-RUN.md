@@ -168,7 +168,6 @@ Pages are written by hand from the record. Nothing generates them.
 | `voyages/index.html` | a row and its Overview |
 | `bearings/voyage-NNN.html` | new, from the previous bearing page |
 | `bearings/index.html` | a copy of the new bearing page |
-| `bearings/timeline.html` | the voyage's key events in order, and any milestone it reached |
 | `data/bearing.js` | voyage, title, position, outstanding, consequence, quests, met, links |
 | `data/vocabulary.js` | every new proper noun |
 | each changed record's page | the new voyage becomes the latest block and the old one moves into Previous Voyages; stat rows; overview; objectives; Connections |
