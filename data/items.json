@@ -136,9 +136,27 @@
       6
     ],
     "mentioned": [],
-    "linked": [],
+    "linked": [
+      "ITM-Z1eGrfAb",
+      "PC-wI087olT"
+    ],
     "url": "inventory/entries/crimson-bag-of-holding.html",
-    "links": []
+    "links": [
+      {
+        "id": "ITM-Z1eGrfAb",
+        "name": "Lantern of Flourishing",
+        "type": "item",
+        "slug": "lantern-of-flourishing",
+        "url": "inventory/entries/lantern-of-flourishing.html"
+      },
+      {
+        "id": "PC-wI087olT",
+        "name": "Tumak Swan",
+        "type": "pc",
+        "slug": "tumak-swan",
+        "url": "crew-manifest/tumak-swan.html"
+      }
+    ]
   },
   {
     "id": "ITM-4kD8vRt2",
@@ -585,10 +603,18 @@
       "NPC-lfleUUeT",
       "NPC-Hn4kW9vm",
       "QST-6bC9wN4k",
-      "LOC-4wNvxXYk"
+      "LOC-4wNvxXYk",
+      "PC-wI087olT"
     ],
     "url": "inventory/entries/lantern-of-flourishing.html",
     "links": [
+      {
+        "id": "ITM-6rW9kT4v",
+        "name": "Crimson Bag of Holding",
+        "type": "item",
+        "slug": "crimson-bag-of-holding",
+        "url": "inventory/entries/crimson-bag-of-holding.html"
+      },
       {
         "id": "LOC-4wNvxXYk",
         "name": "The Command Deck",
@@ -625,11 +651,25 @@
         "url": "dossiers/vaelorix.html"
       },
       {
+        "id": "PC-wI087olT",
+        "name": "Tumak Swan",
+        "type": "pc",
+        "slug": "tumak-swan",
+        "url": "crew-manifest/tumak-swan.html"
+      },
+      {
         "id": "QST-6bC9wN4k",
         "name": "Gregory's Pull",
         "type": "quest",
         "slug": "gregorys-pull",
         "url": "quests/gregorys-pull.html"
+      },
+      {
+        "id": "QST-Ok5mB8tz",
+        "name": "Ostekk-6",
+        "type": "quest",
+        "slug": "ostekk-6-thread",
+        "url": "quests/ostekk-6-thread.html"
       }
     ]
   },
@@ -644,8 +684,9 @@
       "Origin": "Vaelorix's garden aboard the tyrant ship",
       "Overview (Player)": "A newly bloomed flower Bartholomew found in Vaelorix's garden. Its scent was familiar and he could not place it. When he breathed it in, his body wanted to become something he had never been, but the flower had already given off most of what it had. He sealed it in one of the garden's containers.",
       "Status": "Held",
-      "Class": "Curiosity",
-      "Item Type": "Curiosity"
+      "Class": "Magic Item",
+      "Item Type": "Curiosity",
+      "Rarity": "Unknown"
     },
     "voyages": [
       {
@@ -661,9 +702,26 @@
       6
     ],
     "mentioned": [],
-    "linked": [],
+    "linked": [
+      "PC-Bw9kt3Lq"
+    ],
     "url": "inventory/entries/garden-bloom.html",
-    "links": []
+    "links": [
+      {
+        "id": "LOC-0zVUE8xF",
+        "name": "The Garden",
+        "type": "location",
+        "slug": "the-garden",
+        "url": "navigation-records/the-garden.html"
+      },
+      {
+        "id": "PC-Bw9kt3Lq",
+        "name": "Bartholomew Grayson",
+        "type": "pc",
+        "slug": "bartholomew-grayson",
+        "url": "crew-manifest/bartholomew-grayson.html"
+      }
+    ]
   },
   {
     "id": "ITM-1pRB4oz6",

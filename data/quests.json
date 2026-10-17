@@ -861,7 +861,7 @@
       "Type": "Character / Mystery",
       "Related Character(s)": "Gregory",
       "Current State": "Ostekk-6 is rebuilding under the containment engine's light and will travel with the crew.",
-      "Overview (Player)": "The automaton the crew pulled out of the wreckage in the tyrant ship’s cargo hold wears Gregory’s face. He is one of nine units that served the ship’s beholder master, Vaelorix, and shares his name with a tinkerer, the original Ostekk, said to have sent the behir that destroyed the rest. His core is sound; his body is a mechanical problem no spell will close, and what he knows about the ship has already proved worth having.",
+      "Overview (Player)": "The automaton the crew pulled out of the wreckage in the tyrant ship’s cargo hold wears Gregory’s face. He is one of nine units that served the ship’s beholder master, Vaelorix, and shares his name with his maker, the original Ostekk, a beholder tinkerer who also built Ostekk-10, the mechanical behir that destroyed the rest. His core is sound, and a charge from the containment engine set his ruined body rebuilding. What he knows about the ship has already proved worth having.",
       "Status": "Open"
     },
     "objectives": [
@@ -907,10 +907,19 @@
     "mentioned": [],
     "linked": [
       "NPC-nmdnCFvr",
-      "LOC-p6GYEwKt"
+      "LOC-p6GYEwKt",
+      "NPC-Hn4kW9vm",
+      "ITM-Z1eGrfAb"
     ],
     "url": "quests/ostekk-6-thread.html",
     "links": [
+      {
+        "id": "ITM-Z1eGrfAb",
+        "name": "Lantern of Flourishing",
+        "type": "item",
+        "slug": "lantern-of-flourishing",
+        "url": "inventory/entries/lantern-of-flourishing.html"
+      },
       {
         "id": "LOC-p6GYEwKt",
         "name": "The Hollow Deck",
@@ -924,6 +933,13 @@
         "type": "npc",
         "slug": "ostekk-2",
         "url": "dossiers/ostekk-2.html"
+      },
+      {
+        "id": "NPC-Hn4kW9vm",
+        "name": "Ostekk-6",
+        "type": "npc",
+        "slug": "ostekk-6",
+        "url": "dossiers/ostekk-6.html"
       }
     ],
     "parent": {

@@ -537,7 +537,7 @@
       "Party Relationship": "Galley cook who fed and warmed to the cadets",
       "Role (as known)": "Petty officer and galley cook at the Weeping Goddess",
       "Current State": "Keeping the camp kitchen on the tyrant ship, satisfied the crew can finish the job without calling Tarto or Saerthe.",
-      "Overview (Player)": "Petty Officer Winston Ryeback, a giff, runs the kitchen at the Weeping Goddess refectory, commanding the din with a bellow and feeding the cadets with brusque affection. Beneath the gruffness he keeps hot baths and knitting for himself, and warms to anyone who asks kindly.",
+      "Overview (Player)": "Petty Officer Winston Ryeback, a giff, runs the kitchen at the Weeping Goddess refectory, commanding the din with a bellow and feeding the cadets with brusque affection. Beneath the gruffness he keeps hot baths and knitting for himself, and warms to anyone who asks kindly. He carries a hand cannon of his own and is quick to use it.",
       "Category": "Command & Staff",
       "Status": "Active"
     },
@@ -592,9 +592,19 @@
       6
     ],
     "mentioned": [],
-    "linked": [],
+    "linked": [
+      "LOC-Rp7kW4vn"
+    ],
     "url": "dossiers/winston-ryeback.html",
-    "links": []
+    "links": [
+      {
+        "id": "LOC-Rp7kW4vn",
+        "name": "The Tyrant Ship",
+        "type": "location",
+        "slug": "the-tyrant-ship",
+        "url": "navigation-records/the-tyrant-ship.html"
+      }
+    ]
   },
   {
     "id": "NPC-7wK4mB9x",
@@ -607,7 +617,7 @@
       "Party Relationship": "Friendly cadet from the rival crew, now under suspicion",
       "Role (as known)": "Fellow cadet on the rival crew",
       "Current State": "Aboard the tyrant ship with the crew, after Bartholomew caught him speaking into a sending stone in the night.",
-      "Overview (Player)": "Miken is a slight, nervous cadet at Caelestis on the crew that races opposite the party. Easy company and quick to understand, he showed a command of magic that seems to run ahead of his year.",
+      "Overview (Player)": "Miken is a slight, nervous cadet at Caelestis on the crew that races opposite the party. Easy company and quick to understand, he showed a command of magic that seems to run ahead of his year. On the tyrant ship Bartholomew caught him in the night speaking into a sending stone, and his explanation sat poorly with the crew.",
       "Category": "Cadet Corps",
       "Status": "Active"
     },
@@ -939,6 +949,13 @@
         "url": "dossiers/vaelorix.html"
       },
       {
+        "id": "QST-Ok5mB8tz",
+        "name": "Ostekk-6",
+        "type": "quest",
+        "slug": "ostekk-6-thread",
+        "url": "quests/ostekk-6-thread.html"
+      },
+      {
         "id": "QST-Xr4mW8vn",
         "name": "The Tyrant Ship and the H’catha Meteor",
         "type": "quest",
@@ -1190,7 +1207,7 @@
       "Party Relationship": "The tyrant ship's dead master, as the crew understands it",
       "Role (as known)": "Beholder master of the tyrant ship",
       "Current State": "Dead on the Command Deck platform, the great flower torn from his body and his central eye dried open.",
-      "Overview (Player)": "Vaelorix was the beholder who owned the tyrant ship and flew it from its Command Deck, needing no helm and floating between its decks. Ostekk-6 served him and has not seen him since the creatures boarded. The crew found a beholder's body on the Command Deck platform, overgrown by a great flower, its central eye still cancelling magic in the room.",
+      "Overview (Player)": "Vaelorix was the beholder who owned the tyrant ship and flew it from its Command Deck, needing no helm and floating between its decks. Ostekk-6 served him and has not seen him since the creatures boarded. The crew found his body on the Command Deck platform, overgrown by a great flower. The flowers there, a specimen he had been researching, made both the wisps and the field that killed magic, and the crew tore the great one from his body.",
       "Category": "Tyrant Ship",
       "Status": "Deceased"
     },

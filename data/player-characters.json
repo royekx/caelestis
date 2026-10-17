@@ -13,7 +13,7 @@
       "Affiliation(s)": null,
       "Personal Thread": "A drifting plasmoid with no family or lasting home, now carrying an incomplete model spelljamming ship that formed inside him for reasons he cannot explain.",
       "Current State": "Aboard the tyrant ship, named second in command pending the crew's vote.",
-      "What They Last Learned": "That the ship's dead master is a beholder whose central eye still cancels magic on the Command Deck.",
+      "What They Last Learned": "That the mechanical behir calls itself Ostekk-10 and serves its maker, Ostekk.",
       "Notable Items": "Light hammer, shield, incomplete model spelljamming ship",
       "Overview (Player)": "Boogie is a plasmoid cadet at Caelestis in a semi-transparent blue form with a glittering stone inside him and an inner rhythm that pulls him into dance. He instinctively helps and repairs rather than commands, and has taken the crew's medical role rather than the helm. The incomplete model ship that formed inside him matches one stolen from an instructor, and his sleep has begun to fill with visions of other versions of himself and a presence converging on him.",
       "Status": "Active"
@@ -133,7 +133,7 @@
       "Affiliation(s)": null,
       "Personal Thread": "Following a vision and a voice that told him 'Go there' — a path toward a place beyond H’catha in the Viren star system.",
       "Current State": "Aboard the tyrant ship, glad to be done with the Command Deck.",
-      "What They Last Learned": "That the behir was coiled around something giving off a soft light, and that the Command Deck's wisps can be struck once they latch on.",
+      "What They Last Learned": "That the flowers on the Command Deck made both the wisps and the field that killed magic, and that a single clean blow bursts a wisp.",
       "Notable Items": "Star-etched constellation shirt (stolen from Mirt's wardrobe)",
       "Overview (Player)": "Casey is a hadozee warlock cadet at Caelestis, barefoot and composed beneath a pale green cloak stitched with constellations, wielding cold star-bright magic. Awkward and half-orbiting any conversation, he serves as the crew's bosun. A vision beyond Mirt's wardrobe pointed him toward the Viren star system, and a familiar presence has begun following him elsewhere.",
       "Status": "Active"
@@ -224,7 +224,7 @@
       "Affiliation(s)": null,
       "Personal Thread": "Farther from home and his master than ever, feeling a new tug in his core drawing him somewhere unknown.",
       "Current State": "Aboard the tyrant ship, the pull that led him to the containment engine still with him.",
-      "What They Last Learned": "That the pull in his chest grows stronger near the dead beholder on the Command Deck.",
+      "What They Last Learned": "That the pull in his core led him to the containment engine, which holds three charges a day, each mending a body, constructs best.",
       "Notable Items": null,
       "Overview (Player)": "Gregory is a bronze autognome cadet at Caelestis with glasses and a mustache, hesitant and observant, quick to notice what others miss. He has settled as the crew's navigator, his course-plotting proven under pressure. Far from his dead master, he feels a pull in his core drawing him toward somewhere he cannot yet name, and has begun to reach for others before the damage does.",
       "Status": "Active"
@@ -321,7 +321,7 @@
       "Affiliation(s)": null,
       "Personal Thread": "A paladin of Beshaba whose luck turns unlucky, now having heard the goddess herself laugh at his shoulder.",
       "Current State": "Aboard the tyrant ship, still thinking of Ostekk-2 on the Hollow Deck.",
-      "What They Last Learned": "That academy shipments route through Mr. Blip toward Toril and H’catha, and that a voice takes interest in his fate, doubting he has escaped where he came from.",
+      "What They Last Learned": "That the mechanical behir is Ostekk-10, sent by Ostekk for the containment engine, and that Ostekk-2 still lies on the Hollow Deck.",
       "Notable Items": "Heavier armament acquired from the quartermaster's stores",
       "Overview (Player)": "Sol Fortuna is a tall, pale, dark-haired astral elf paladin of Beshaba with white eyes, steady even after simulated death. He anticipates danger before it arrives and puts himself between it and his crew as their gunner and front line. Beshaba has laughed at his shoulder, and now a curious voice speaks to him of fate and whether he has truly escaped his origin.",
       "Status": "Active"
@@ -417,8 +417,8 @@
       "Affiliation(s)": null,
       "Personal Thread": "Searching for his own family, now trusting the crew to help him find them.",
       "Current State": "Captain of the tyrant ship's crew, the containment engine in his bag of holding.",
-      "What They Last Learned": "That the helm belongs on the platform beneath the dead beholder at the heart of the Command Deck.",
-      "Notable Items": "Crimson bag of holding and valuables (from Mirt's wardrobe), hidden star-etched shirt, soul knife",
+      "What They Last Learned": "That most things leave the tyrant ship through the cargo hold, with the expulsion worked from the Command Deck, and that nothing aboard puts out a fire.",
+      "Notable Items": "Crimson bag of holding and valuables (from Mirt's wardrobe), hidden star-etched shirt, soul knife, Lantern of Flourishing (in the bag)",
       "Overview (Player)": "Tumak Swan is a slight rogue swallowed by an oversized coat, muttering reassurances to himself, whose mind often seems divided. He holds the captain's chair for the crew and keeps a curtained corner of his bunk for things he would rather not explain. He is searching for a family he cannot yet name — and has begun to manifest powers and glowing half-runes he does not understand, with a tether now pulling him toward home.",
       "Status": "Active"
     },
@@ -490,6 +490,20 @@
     "linked": [],
     "url": "crew-manifest/tumak-swan.html",
     "links": [
+      {
+        "id": "ITM-6rW9kT4v",
+        "name": "Crimson Bag of Holding",
+        "type": "item",
+        "slug": "crimson-bag-of-holding",
+        "url": "inventory/entries/crimson-bag-of-holding.html"
+      },
+      {
+        "id": "ITM-Z1eGrfAb",
+        "name": "Lantern of Flourishing",
+        "type": "item",
+        "slug": "lantern-of-flourishing",
+        "url": "inventory/entries/lantern-of-flourishing.html"
+      },
       {
         "id": "ITM-Yq5kW8vn",
         "name": "Tumak's Soul Knife",
@@ -565,8 +579,8 @@
       "Affiliation(s)": null,
       "Personal Thread": "A newly arrived wilder cadet finding his place aboard a crew, with an uncanny natural gift for the helm.",
       "Current State": "Aboard the tyrant ship, carrying a sealed garden bloom whose scent made his body want to change.",
-      "What They Last Learned": "That magic fails on the Command Deck, and that the wisps there drain whoever they latch onto.",
-      "Notable Items": null,
+      "What They Last Learned": "That Miken carries a sending stone, and that a flower in Vaelorix's garden made his body want to become something it had never been.",
+      "Notable Items": "Sealed garden bloom",
       "Overview (Player)": "Bartholomew is a human druid and wilder, a cadet at Caelestis with an uncanny natural affinity for the helm. Quiet and untroubled, he has slipped into the crew and settled as its spelljammer. When he shifts into a starry form, a two-starred constellation surfaces — a shape he carries from a fall he took as a child.",
       "Status": "Active"
     },
@@ -621,7 +635,15 @@
     "mentioned": [],
     "linked": [],
     "url": "crew-manifest/bartholomew-grayson.html",
-    "links": [],
+    "links": [
+      {
+        "id": "ITM-FN53o66z",
+        "name": "Garden Bloom",
+        "type": "item",
+        "slug": "garden-bloom",
+        "url": "inventory/entries/garden-bloom.html"
+      }
+    ],
     "items": [
       {
         "id": "ITM-FN53o66z",

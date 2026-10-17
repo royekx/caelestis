@@ -492,6 +492,13 @@
     "url": "navigation-records/the-tyrant-ship.html",
     "links": [
       {
+        "id": "NPC-4tR8kW2n",
+        "name": "Winston Ryeback",
+        "type": "npc",
+        "slug": "winston-ryeback",
+        "url": "dossiers/winston-ryeback.html"
+      },
+      {
         "id": "QST-Xr4mW8vn",
         "name": "The Tyrant Ship and the H’catha Meteor",
         "type": "quest",
@@ -594,7 +601,7 @@
     "fields": {
       "Type": "Planet",
       "Key NPCs / Factions": null,
-      "Overview (Player)": "Toril is a world named as the nearest destination on most of the academy's shipping routes. The abandoned tyrant ship the crew boarded drifts in orbit above it.",
+      "Overview (Player)": "Toril is a world named as the nearest destination on most of the academy's shipping routes. The tyrant ship the crew boarded, and now holds, drifts in orbit above it.",
       "Status": "Accessible"
     },
     "voyages": [
@@ -689,7 +696,7 @@
     "parentId": "LOC-Rp7kW4vn",
     "fields": {
       "Type": "Room",
-      "Key NPCs / Factions": "Ostekk-2, The Behir",
+      "Key NPCs / Factions": "Ostekk-2",
       "Overview (Player)": "The Hollow Deck lies below the tyrant ship's cargo space: a round, enclosed room shaped like a pit, its walls lined with unfamiliar machinery. It was the ship's deck for repairs and maintenance, with a repair bay on its far side. Its floor is strewn with the torn-apart remains of the ship's automaton units and wrecked clockwork horrors, and three or four dormant horrors stand where the mechanical behir used to lie.",
       "Status": "Accessible"
     },
@@ -851,10 +858,18 @@
     ],
     "mentioned": [],
     "linked": [
-      "NPC-lfleUUeT"
+      "NPC-lfleUUeT",
+      "ITM-FN53o66z"
     ],
     "url": "navigation-records/the-garden.html",
     "links": [
+      {
+        "id": "ITM-FN53o66z",
+        "name": "Garden Bloom",
+        "type": "item",
+        "slug": "garden-bloom",
+        "url": "inventory/entries/garden-bloom.html"
+      },
       {
         "id": "NPC-lfleUUeT",
         "name": "Vaelorix",
