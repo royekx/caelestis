@@ -430,6 +430,114 @@
       "name": "Caelestis",
       "url": "navigation-records/caelestis.html"
     },
+    "within": [
+      {
+        "slug": "the-moonraider",
+        "name": "The Moonraider",
+        "url": "navigation-records/the-moonraider.html",
+        "type": "Vessel"
+      },
+      {
+        "slug": "the-derelict",
+        "name": "The Derelict",
+        "url": "navigation-records/the-derelict.html",
+        "type": "Vessel"
+      }
+    ]
+  },
+  {
+    "id": "LOC-I7jHhD0b",
+    "type": "location",
+    "slug": "the-moonraider",
+    "name": "The Moonraider",
+    "kind": "Vessel",
+    "parentId": "LOC-9mB4kW7n",
+    "fields": {
+      "Type": "Vessel",
+      "Key NPCs / Factions": "Captain Sardax",
+      "Overview (Player)": "The Moonraider was Captain Sardax's ship. The crew has been aboard it only in simulation: they woke on its deck in the middle of a losing battle against astral reavers, Sardax bleeding across the planks, until the scene froze and revealed itself as a simulation of her final stand, a test never meant to be won.",
+      "Status": "Simulated"
+    },
+    "voyages": [
+      {
+        "number": 1,
+        "bullets": [
+          "Known to the crew only in simulation, as the ship of Captain Sardax's final stand",
+          "The cadets woke on its deck mid-battle as astral reavers swarmed over the rail, explosions tearing through rigging and mast",
+          "The scene froze and peeled away, and they woke on the Simulation Deck of Caelestis"
+        ]
+      }
+    ],
+    "seen": [
+      1
+    ],
+    "mentioned": [],
+    "linked": [
+      "NPC-3xR7kLm2"
+    ],
+    "url": "navigation-records/the-moonraider.html",
+    "links": [
+      {
+        "id": "NPC-3xR7kLm2",
+        "name": "Captain Sardax",
+        "type": "npc",
+        "slug": "captain-sardax",
+        "url": "dossiers/captain-sardax.html"
+      }
+    ],
+    "parent": {
+      "slug": "simulation-deck",
+      "name": "Simulation Deck",
+      "url": "navigation-records/simulation-deck.html"
+    },
+    "within": []
+  },
+  {
+    "id": "LOC-0cquusDI",
+    "type": "location",
+    "slug": "the-derelict",
+    "name": "The Derelict",
+    "kind": "Vessel",
+    "parentId": "LOC-9mB4kW7n",
+    "fields": {
+      "Type": "Vessel",
+      "Key NPCs / Factions": null,
+      "Overview (Player)": "The derelict was the prize of the salvage race, a wreck adrift in an asteroid field, met only in simulation. The crew reached it across a chain of drifting asteroids, and in its captain's quarters found the logbook half-tucked behind the body of something long decomposed.",
+      "Status": "Simulated"
+    },
+    "voyages": [
+      {
+        "number": 2,
+        "bullets": [
+          "Known to the crew only in simulation, as the objective of the salvage race against Miken's crew",
+          "Adrift in an asteroid field, reached by leaping between asteroids",
+          "Its lower corridors were dark and creaking; the logbook lay in the captain's quarters behind a long-decomposed body",
+          "A githyanki vessel closed on it through the asteroids while the crew was aboard"
+        ]
+      }
+    ],
+    "seen": [
+      2
+    ],
+    "mentioned": [],
+    "linked": [
+      "ITM-Dk4nW7pv"
+    ],
+    "url": "navigation-records/the-derelict.html",
+    "links": [
+      {
+        "id": "ITM-Dk4nW7pv",
+        "name": "Derelict Logbook",
+        "type": "item",
+        "slug": "derelict-logbook",
+        "url": "inventory/entries/derelict-logbook.html"
+      }
+    ],
+    "parent": {
+      "slug": "simulation-deck",
+      "name": "Simulation Deck",
+      "url": "navigation-records/simulation-deck.html"
+    },
     "within": []
   },
   {

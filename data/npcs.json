@@ -28,7 +28,15 @@
     "mentioned": [],
     "linked": [],
     "url": "dossiers/captain-sardax.html",
-    "links": []
+    "links": [
+      {
+        "id": "LOC-I7jHhD0b",
+        "name": "The Moonraider",
+        "type": "location",
+        "slug": "the-moonraider",
+        "url": "navigation-records/the-moonraider.html"
+      }
+    ]
   },
   {
     "id": "NPC-9dTp4qWz",

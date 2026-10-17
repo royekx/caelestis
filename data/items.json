@@ -534,7 +534,15 @@
     "mentioned": [],
     "linked": [],
     "url": "inventory/entries/derelict-logbook.html",
-    "links": []
+    "links": [
+      {
+        "id": "LOC-0cquusDI",
+        "name": "The Derelict",
+        "type": "location",
+        "slug": "the-derelict",
+        "url": "navigation-records/the-derelict.html"
+      }
+    ]
   },
   {
     "id": "ITM-Cm8rT3wk",

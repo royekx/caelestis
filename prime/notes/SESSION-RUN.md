@@ -91,7 +91,7 @@ contact an entity gains a record and keeps its DM dossier.
   identical is a question for the DM. Never a second record.
 - **A new record** gets a new id: the set's prefix, a hyphen, eight random
   letters and digits (`NPC-7wK4mB9x`). An id is never reused or edited.
-- **Ships the crew encounters get a record**: a place with Type `Vessel`, parented to where it was last seen, with whoever the crew met aboard in Key NPCs.
+- **Ships the crew encounters get a record**: a place with Type `Vessel`, parented to where it was last seen, with whoever the crew met aboard in Key NPCs. A ship met only in simulation is parented to the Simulation Deck with Status `Simulated`. Every vessel also gets a row in `vessels/index.html`, and vessel pages chain to each other and to that register rather than to Navigation Records.
 - **Every record has a page.** A new record is not finished until its page and
   its register row exist.
 - **Bullets** go under `voyages[n].bullets`. One fact each, past tense, in the
@@ -115,7 +115,7 @@ Status vocabulary is in-world and fixed per set:
 |---|---|
 | Crew, factions | Active |
 | Cast | Active · Deceased |
-| Places | Accessible |
+| Places | Accessible · Simulated (a ship met only in simulation) |
 | Things | Held · Lost |
 | Threads | Open · Complete |
 
@@ -173,7 +173,7 @@ Pages are written by hand from the record. Nothing generates them.
 | `data/vocabulary.js` | every new proper noun |
 | each changed record's page | the new voyage becomes the latest block and the old one moves into Previous Voyages; stat rows; overview; objectives; Connections |
 | each new record's page | new, from a sibling page of the same kind, with `data-entity` set to its id |
-| each register | `crew-manifest/` `dossiers/` `factions/` `navigation-records/` `inventory/` `quests/` index pages: rows, overview text, progress, counts |
+| each register | `crew-manifest/` `dossiers/` `factions/` `navigation-records/` `vessels/` `inventory/` `quests/` index pages: rows, overview text, progress, counts |
 
 The Brief Account and At a Glance are taken from the approved Full Account.
 They add nothing it does not say.
