@@ -233,6 +233,15 @@ html { overflow-x: clip; }
   box-shadow: 0 0 0 2px var(--gold-faint);
 }
 .obj-item.is-done .obj-box svg { color: var(--gold-light); }
+/* The filled box alone read as "highlighted" rather than "done" (DM
+   feedback, V006), so a done objective also carries a drawn check mark.
+   Drawn with borders rather than a glyph so it renders the same in every
+   font and on every phone. */
+.obj-item.is-done .obj-box::after {
+  content: ''; width: 4px; height: 8px; margin-top: -2px;
+  border: solid var(--gold-light); border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
 .obj-item.is-done .obj-text { color: var(--gold-light); }
 
 /* A quest with every objective met. Rare and worth marking - the crew
