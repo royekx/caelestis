@@ -39,8 +39,10 @@
   //   Crew Intel      — what this crew has learned, been given, or carries
   //   Fleet Records   — what anyone aboard would already know
   //
-  // That is why Dossiers and Navigation Records sit under Intel: they are
-  // acquired in play. The Nexus is ambient world knowledge, so it does not.
+  // That is why Dossiers, Factions, Navigation Records and Vessels sit under
+  // Intel: they are acquired in play. The Nexus is ambient world knowledge,
+  // so it does not. Intel runs story, goals, people, organisations, places,
+  // ships, things, then the crew's own notes.
   //
   // An item with `href` is external and opens in a new tab; one with `path`
   // is internal and resolves against the page's depth.
@@ -61,6 +63,7 @@
         { key: 'quests',             label: 'Quest Board',        path: 'quests/index.html'             },
         { key: 'crew-manifest',      label: 'Manifest',           path: 'crew-manifest/index.html'      },
         { key: 'dossiers',           label: 'Dossiers',           path: 'dossiers/index.html'           },
+        { key: 'factions',           label: 'Factions',           path: 'factions/index.html'           },
         { key: 'navigation-records', label: 'Navigation Records', path: 'navigation-records/index.html' },
         { key: 'vessels',            label: 'Vessels',            path: 'vessels/index.html'            },
         { key: 'inventory',          label: 'Inventory',          path: 'inventory/index.html'          },
@@ -70,7 +73,6 @@
     {
       label: 'Fleet Records',
       items: [
-        { key: 'factions',           label: 'Factions',           path: 'factions/index.html'           },
         { key: 'spelljammer-nexus',  label: 'Spelljammer Nexus',  path: 'spelljammer-nexus/index.html'  },
         { key: 'handouts',           label: 'Corps Protocols',    path: 'handouts/index.html'           },
         { key: 'search',             label: 'S.E.A.R.C.H.',       path: 'search/index.html'             }
