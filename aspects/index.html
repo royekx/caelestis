@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aspects — Bartholomew Grayson</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700&family=Alegreya:ital,wght@0,400;0,600;1,400&family=Alegreya+Sans:wght@400;500&display=swap">
+<style>
+/* Layout: a single night-sky column. A drawn constellation opens the page; the catalog reads like a star chart's legend, one band per ability score. Committed to one dark look on purpose. */
+:root{
+  color-scheme:dark;
+  --night:#0d1220;      /* deep sky */
+  --night-2:#141b2e;    /* card ground */
+  --ink:#f3f5fa;        /* starlight text */
+  --muted:#b3bcd2;      /* faint text */
+  --line:#34405f;       /* chart rule */
+  --star:#f4e7bf;       /* lit star, warm white */
+  --faint:#6d7a9c;      /* unlit star */
+  --leaf:#9fcf9a;       /* druid green, for "yours" */
+  --display:"Alegreya SC",Georgia,serif;
+  --body:"Alegreya",Georgia,serif;
+  --label:"Alegreya Sans",system-ui,sans-serif;
+}
+html{background:var(--night)}
+body{
+  background:
+    radial-gradient(1px 1px at 12% 18%,rgba(244,231,191,.55) 50%,transparent 51%),
+    radial-gradient(1px 1px at 78% 9%,rgba(244,231,191,.4) 50%,transparent 51%),
+    radial-gradient(1px 1px at 64% 32%,rgba(233,236,243,.35) 50%,transparent 51%),
+    radial-gradient(1px 1px at 30% 44%,rgba(233,236,243,.3) 50%,transparent 51%),
+    radial-gradient(1px 1px at 88% 58%,rgba(244,231,191,.35) 50%,transparent 51%),
+    radial-gradient(1px 1px at 6% 71%,rgba(233,236,243,.3) 50%,transparent 51%),
+    radial-gradient(1px 1px at 46% 86%,rgba(244,231,191,.3) 50%,transparent 51%),
+    radial-gradient(1200px 600px at 50% -10%,#1b2440 0%,transparent 70%),
+    var(--night);
+  background-attachment:fixed;
+  color:var(--ink);font-family:var(--body);font-size:20px;line-height:1.65;
+}
+.wrap{max-width:860px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 72px;display:grid;gap:36px}
+h1,h2,h3{font-family:var(--display);font-weight:700;margin:0;line-height:1.1;text-wrap:balance}
+h1{font-size:56px;letter-spacing:.06em;color:var(--star)}
+h2{font-size:30px;letter-spacing:.08em;color:var(--star)}
+h3{font-size:18px;letter-spacing:.08em}
+p{margin:0;max-width:68ch}
+.hero{display:grid;gap:10px;justify-items:center;text-align:center}
+.hero svg{width:100%;max-width:480px;height:auto}
+.byline{font-family:var(--label);font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.story{display:grid;gap:14px}
+.story p{font-style:italic;color:#eef0f6}
+.divider{display:flex;align-items:center;gap:12px;color:var(--faint);font-size:12px}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--line)}
+section{display:grid;gap:14px}
+.feature{display:grid;gap:14px;background:rgba(20,27,46,.85);border:1px solid var(--line);border-radius:4px;padding:18px}
+.feature p b{font-weight:600;font-style:italic;color:var(--star)}
+.band{display:grid;gap:2px}
+.band-head{display:flex;align-items:center;gap:10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.band-head .dot{width:9px;height:9px;border-radius:50%;background:var(--faint);box-shadow:0 0 0 3px rgba(109,122,156,.18);flex:none}
+.band-head .dot.lit{background:var(--star);box-shadow:0 0 10px 2px rgba(244,231,191,.55)}
+.band-head small{font-family:var(--label);font-size:13px;color:var(--muted);letter-spacing:.04em}
+.row{display:grid;grid-template-columns:10.5rem 1fr;gap:14px;padding:9px 0;border-bottom:1px dotted var(--line)}
+.row:last-child{border-bottom:none}
+.row>div{min-width:0}
+.beast{font-family:var(--label);font-weight:500;letter-spacing:.02em}
+.yours{display:inline-block;margin-left:6px;font-family:var(--label);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--leaf)}
+.row b{font-style:italic;font-weight:600}
+.empty{font-style:italic;color:var(--muted)}
+.closing{font-family:var(--display);font-size:24px;letter-spacing:.06em;text-align:center;color:var(--star)}
+@media (max-width:540px){h1{font-size:38px}.row{grid-template-columns:1fr;gap:2px}}
+@media (prefers-reduced-motion:no-preference){
+  .twinkle{animation:tw 4.5s ease-in-out infinite}
+  .twinkle.b{animation-delay:1.7s}
+  @keyframes tw{0%,100%{opacity:1}50%{opacity:.72}}
+}
+
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:rgba(20,27,46,.85)}
+table{border-collapse:collapse;width:100%;font-size:18px}
+caption{caption-side:top;text-align:left;font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:.08em;color:var(--star);padding:12px 14px 8px;display:flex;align-items:center;gap:10px}
+th{font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 14px;border-bottom:1px solid var(--line);background:rgba(13,18,32,.6)}
+td{padding:11px 14px;vertical-align:top;border-bottom:1px solid var(--line)}
+tbody tr:nth-child(even) td{background:rgba(255,255,255,.025)}
+tbody tr:last-child td{border-bottom:none}
+td.beast{font-family:var(--label);font-weight:500;white-space:nowrap}
+td.asp{font-style:italic;font-weight:600;color:var(--star);white-space:nowrap}
+.yours{display:inline-block;margin-left:8px;font-family:var(--label);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf)}
+@media (max-width:620px){
+  table,thead,tbody,tr,td{display:block;width:100%}
+  thead{display:none}
+  tbody tr{padding:10px 14px;border-bottom:1px solid var(--line)}
+  tbody tr:last-child{border-bottom:none}
+  td{padding:2px 0;border:none;background:none!important;white-space:normal}
+  td.beast{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<header class="hero">
+  <svg viewBox="0 0 420 220" role="img" aria-label="A constellation of six stars. Two burn brightly. Four are faint.">
+    <defs>
+      <radialGradient id="glow"><stop offset="0" stop-color="#f4e7bf" stop-opacity=".9"/><stop offset="1" stop-color="#f4e7bf" stop-opacity="0"/></radialGradient>
+    </defs>
+    <g stroke="#6d7a9c" stroke-width="1" stroke-dasharray="3 5" fill="none" opacity=".7">
+      <path d="M70 150 L150 92 L232 120 L300 58 L362 104"/>
+      <path d="M232 120 L262 182"/>
+    </g>
+    <g fill="#6d7a9c">
+      <circle cx="70" cy="150" r="3"/>
+      <circle cx="300" cy="58" r="3"/>
+      <circle cx="362" cy="104" r="3"/>
+      <circle cx="262" cy="182" r="3"/>
+    </g>
+    <g>
+      <circle cx="150" cy="92" r="22" fill="url(#glow)" class="twinkle"/>
+      <circle cx="150" cy="92" r="4.5" fill="#f4e7bf"/>
+      <circle cx="232" cy="120" r="22" fill="url(#glow)" class="twinkle b"/>
+      <circle cx="232" cy="120" r="4.5" fill="#f4e7bf"/>
+    </g>
+  </svg>
+  <h1>Aspects</h1>
+  <div class="byline">Bartholomew Grayson · Circle of the Stars</div>
+</header>
+
+<div class="story">
+  <p>In Vaelorix's garden, among the cultivated walls, you find a flower that has only just bloomed. You breathe it in. Its scent is familiar, but you can't place it.</p>
+  <p>You feel your body wanting to change. You know the feeling from every shape you've taken, but this pulls toward something else, something you've never been. You try to let it happen, but the pull fades. The flower has already given everything it had.</p>
+  <p>You take one of the garden's glass vials to keep it in. The stopper is stuck. You twist harder, and without meaning to, you feel the pull of the ape. You brace for the change, but only its strength comes. Your shoulders thicken, and the glass creaks in your hand.</p>
+  <p>You ease off, and your grip goes with it. The vial slips from your fingers. You grab for it, and this time the spider answers. The glass sticks to your palm and stays there.</p>
+  <p>Something in you is missing, a shape you've never taken, and none of your beasts fit it. Each of them gives you a piece to make yourself whole.</p>
+  <p>You feel the two stars in your chest burn brighter, answering your call. Faintly, beside them, other stars begin to form, waiting to complete their shape.</p>
+  <p>You seal the flower in the vial, wondering what else it might reveal.</p>
+</div>
+
+<div class="divider" aria-hidden="true">✦</div>
+
+<section>
+  <h2>Feature</h2>
+  <div class="feature">
+    <p>You can channel a single trait of a creature you know without taking its form.</p>
+    <p><b>Manifest Aspect.</b> As a Bonus Action, you manifest one of your prepared aspects. It lasts for 1 minute, until you manifest another aspect, or until you have the Incapacitated condition. You can't manifest an aspect while in a Wild Shape form. You can use this feature a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+    <p><b>Prepared Aspects.</b> When you finish a Long Rest, choose a number of aspects from your catalog equal to your Proficiency Bonus. Each aspect is tied to an ability score. You can't prepare more than one aspect tied to the same ability score.</p>
+    <p><b>Limited Benefits.</b> If an aspect lets you take an action or a Bonus Action, you can do so once per manifestation. Speeds, senses, and other passive benefits last for the full duration.</p>
+    <p><b>Learning Aspects.</b> You can learn an aspect from a living creature that isn't humanoid in form. Constructs, Elementals, Oozes, Plants, and Undead can't be learned from. You learn an aspect in one of two ways. The DM sets the DC.</p>
+    <p><b>Track.</b> Spend 1 hour following and watching the creature, and make three checks: Wisdom (Survival) to track it, Wisdom (Perception) to observe it, and Intelligence (Nature) or Wisdom (Animal Handling) to understand it. If at least two succeed, you learn the aspect.</p>
+    <p><b>Glimpse.</b> Take the Study action while the creature is within 30 feet of you and you can see it. Make one of the checks above with Disadvantage. If it succeeds, you learn the aspect.</p>
+    <p>When you learn an aspect, add one of the creature's aspects to your catalog. If you fail, you can't try to learn from that creature again until 24 hours have passed. You can learn only one aspect per day.</p>
+    <p><b>Starting Catalog.</b> Your catalog begins with 10 aspects: the four marked below, plus six more of your choice from this list. Your 10 aspects must cover at least four ability scores.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Catalog</h2>
+  <div class="tbl"><table>
+    <caption><span class="dot"></span>Strength</caption>
+    <thead><tr><th scope="col">Creature</th><th scope="col">Aspect</th><th scope="col">Effect</th></tr></thead>
+    <tbody>
+      <tr><td class="beast">Ape <span class="yours">Known</span></td><td class="asp">Grip</td><td>You have Advantage on Strength checks and Strength saving throws.</td></tr>
+      <tr><td class="beast">Black Bear</td><td class="asp">Rend</td><td>Your Unarmed Strikes deal Slashing damage equal to 1d8 + your Strength modifier.</td></tr>
+      <tr><td class="beast">Constrictor Snake</td><td class="asp">Constrict</td><td>A creature Grappled by you also has the Restrained condition.</td></tr>
+      <tr><td class="beast">Rothé</td><td class="asp">Charge</td><td>If you move at least 20 feet straight toward a creature and then hit it with a melee attack on the same turn, it takes an extra 1d8 damage.</td></tr>
+      <tr><td class="beast">Boar <span class="yours">Known</span></td><td class="asp">Bloodied Fury</td><td>While Bloodied, you have Advantage on melee attack rolls.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tbl"><table>
+    <caption><span class="dot"></span>Dexterity</caption>
+    <thead><tr><th scope="col">Creature</th><th scope="col">Aspect</th><th scope="col">Effect</th></tr></thead>
+    <tbody>
+      <tr><td class="beast">Giant Wolf Spider <span class="yours">Known</span></td><td class="asp">Spider Climb</td><td>You can climb difficult surfaces, including ceilings, without making an ability check.</td></tr>
+      <tr><td class="beast">Giant Frog</td><td class="asp">Standing Leap</td><td>Your Long Jump is up to 20 feet and your High Jump is up to 10 feet, with or without a running start.</td></tr>
+      <tr><td class="beast">Panther</td><td class="asp">Prowl</td><td>Your Speed increases by 20 feet, and you gain a Climb Speed equal to your Speed.</td></tr>
+      <tr><td class="beast">Deer</td><td class="asp">Agile</td><td>You don't provoke Opportunity Attacks when you move out of an enemy's reach.</td></tr>
+      <tr><td class="beast">Octopus</td><td class="asp">Ink Cloud</td><td>While underwater, you can release ink as a Bonus Action. A 5-foot Emanation around you is Heavily Obscured until the end of your next turn.</td></tr>
+      <tr><td class="beast">Dolphin</td><td class="asp">Swimmer</td><td>You gain a Swim Speed of 60 feet.</td></tr>
+      <tr><td class="beast">Giant Badger</td><td class="asp">Burrow</td><td>You gain a Burrow Speed of 10 feet.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tbl"><table>
+    <caption><span class="dot"></span>Constitution</caption>
+    <thead><tr><th scope="col">Creature</th><th scope="col">Aspect</th><th scope="col">Effect</th></tr></thead>
+    <tbody>
+      <tr><td class="beast">Camel</td><td class="asp">Endurance</td><td>You have Advantage on saving throws to avoid or end the Poisoned condition, disease, and Exhaustion.</td></tr>
+      <tr><td class="beast">Giant Snail</td><td class="asp">Shell</td><td>As a Bonus Action, you gain a +4 bonus to AC until the start of your next turn. Your Speed is 0 for that time.</td></tr>
+      <tr><td class="beast">Crocodile</td><td class="asp">Hold Breath</td><td>You don't need to breathe.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tbl"><table>
+    <caption><span class="dot"></span>Intelligence</caption>
+    <thead><tr><th scope="col">Creature</th><th scope="col">Aspect</th><th scope="col">Effect</th></tr></thead>
+    <tbody>
+      <tr><td class="beast">Wolf <span class="yours">Known</span></td><td class="asp">Pack Tactics</td><td>You have Advantage on an attack roll against a creature if at least one of your allies is within 5 feet of it and doesn't have the Incapacitated condition.</td></tr>
+      <tr><td class="beast">Hare</td><td class="asp">Escape</td><td>As a Bonus Action, you take the Dash, Disengage, or Hide action.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tbl"><table>
+    <caption><span class="dot"></span>Wisdom</caption>
+    <thead><tr><th scope="col">Creature</th><th scope="col">Aspect</th><th scope="col">Effect</th></tr></thead>
+    <tbody>
+      <tr><td class="beast">Jackal</td><td class="asp">Night Eyes</td><td>You have Darkvision with a range of 90 feet.</td></tr>
+      <tr><td class="beast">Cave Badger</td><td class="asp">Tremorsense</td><td>You have Tremorsense with a range of 30 feet.</td></tr>
+      <tr><td class="beast">Fox</td><td class="asp">Keen Hearing</td><td>You have Advantage on Wisdom (Perception) checks that rely on hearing.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tbl"><table>
+    <caption><span class="dot"></span>Charisma</caption>
+    <thead><tr><th scope="col">Creature</th><th scope="col">Aspect</th><th scope="col">Effect</th></tr></thead>
+    <tbody>
+      <tr><td colspan="3" class="empty">No creature you know fits here yet.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<div class="closing">Two stars burn. The rest are waiting.</div>
+</div>
+
+</body>
+</html>
