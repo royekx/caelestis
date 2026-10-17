@@ -76,7 +76,7 @@ Build the name list fresh for each run from the `name` of every record in
 how the last one went stale.
 
 Garbles seen in past transcripts, as a guide to the kind of error to expect:
-"Calestis" for Caelestis, "Hakatha" for H'catha, "Sareth Abazine" for Saerthe
+"Calestis" for Caelestis, "Hakatha" for H'Catha, "Sareth Abazine" for Saerthe
 Abizjn, "Aztec-6" and "Austech" for Ostekk-6, "Volkath" for Vocath, "Vena" for
 Veena, "Crick Lit" for Krik'Lit.
 

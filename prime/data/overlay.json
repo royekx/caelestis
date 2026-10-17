@@ -10,7 +10,7 @@
     },
     "QST-3mW8kP5v": {
       "urgency": "Medium",
-      "next": "Reach H’catha, recover the meteor, and find a way toward Viren beyond it."
+      "next": "Reach H’Catha, recover the meteor, and find a way toward Viren beyond it."
     },
     "QST-6bC9wN4k": {
       "urgency": "Medium",
@@ -48,7 +48,7 @@
     },
     "QST-Xr4mW8vn": {
       "urgency": "High",
-      "next": "Seat the helm in the gaze cradle, fly the ship to the Flighty Foundling for the swap, and cross to H’catha.",
+      "next": "Choose the instructor at the Flighty Foundling, make the swap, and cross to H’Catha.",
       "voyages": [
         {
           "number": 5,
@@ -60,7 +60,7 @@
         {
           "number": 6,
           "beats": [
-            "The symbiosis broke when the great flower came out by the roots, which drops the field and makes the seating possible. Level 4 fires on the seating, at the top of Voyage 007."
+            "The symbiosis broke when the great flower came out by the roots, which drops the field and makes the seating possible. Level 4 fires on the seating, which happens off the table in the V006.5 interlude, before Voyage 007."
           ]
         }
       ]

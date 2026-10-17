@@ -51,7 +51,7 @@ var CAELESTIS_VOCAB = [
   "Grayson",
   "Gregory",
   "H'Catha",
-  "H'catha",
+  "H'Catha",
   "Hadozee",
   "Half",
   "Halfling",
