@@ -123,10 +123,17 @@
         "bullets": [
           "Tumak found and claimed a crimson bag of holding and valuables within Mirt's wardrobe"
         ]
+      },
+      {
+        "number": 6,
+        "bullets": [
+          "Holds the containment engine, hidden from Ostekk-10 while Tumak lied to it"
+        ]
       }
     ],
     "seen": [
-      1
+      1,
+      6
     ],
     "mentioned": [],
     "linked": [],
@@ -541,5 +548,163 @@
     "linked": [],
     "url": "inventory/entries/collection-manifest.html",
     "links": []
+  },
+  {
+    "id": "ITM-Z1eGrfAb",
+    "type": "item",
+    "slug": "lantern-of-flourishing",
+    "name": "Lantern of Flourishing",
+    "fields": {
+      "Type": "Containment engine, fourth series",
+      "Held By": "Tumak Swan",
+      "Origin": "Built by Ostekk; recovered from Vaelorix's body on the Command Deck",
+      "Overview (Player)": "A small iron lamp six or eight inches tall, with a handle and an iris shutter over a faint green light. Ostekk-6 knows it as the containment engine, fourth series, built by Ostekk and kept and studied by Vaelorix, who called it the Lantern of Flourishing. It holds three charges that renew each day, and each one mends a body, constructs better than the living. Ostekk-10 was sent to bring it back.",
+      "Status": "Held",
+      "Class": "Magic Item",
+      "Item Type": "Wondrous Item",
+      "Rarity": "Uncommon"
+    },
+    "voyages": [
+      {
+        "number": 6,
+        "bullets": [
+          "Found by Gregory's pull beneath the roots, between two of the dead beholder's eyestalks",
+          "Read with a spell: three charges a day, each mending a body, constructs better than the living",
+          "A charge spent on Ostekk-6 set his body rebuilding below the waist",
+          "Hidden in Tumak's bag of holding while Tumak told Ostekk-10 nothing had been found"
+        ]
+      }
+    ],
+    "seen": [
+      6
+    ],
+    "mentioned": [],
+    "linked": [
+      "NPC-ijDm41rn",
+      "NPC-MZZkLc0g",
+      "NPC-lfleUUeT",
+      "NPC-Hn4kW9vm",
+      "QST-6bC9wN4k",
+      "LOC-4wNvxXYk"
+    ],
+    "url": "inventory/entries/lantern-of-flourishing.html",
+    "links": [
+      {
+        "id": "LOC-4wNvxXYk",
+        "name": "The Command Deck",
+        "type": "location",
+        "slug": "the-command-deck",
+        "url": "navigation-records/the-command-deck.html"
+      },
+      {
+        "id": "NPC-ijDm41rn",
+        "name": "Ostekk",
+        "type": "npc",
+        "slug": "ostekk",
+        "url": "dossiers/ostekk.html"
+      },
+      {
+        "id": "NPC-MZZkLc0g",
+        "name": "Ostekk-10",
+        "type": "npc",
+        "slug": "the-behir",
+        "url": "dossiers/the-behir.html"
+      },
+      {
+        "id": "NPC-Hn4kW9vm",
+        "name": "Ostekk-6",
+        "type": "npc",
+        "slug": "ostekk-6",
+        "url": "dossiers/ostekk-6.html"
+      },
+      {
+        "id": "NPC-lfleUUeT",
+        "name": "Vaelorix",
+        "type": "npc",
+        "slug": "vaelorix",
+        "url": "dossiers/vaelorix.html"
+      },
+      {
+        "id": "QST-6bC9wN4k",
+        "name": "Gregory's Pull",
+        "type": "quest",
+        "slug": "gregorys-pull",
+        "url": "quests/gregorys-pull.html"
+      }
+    ]
+  },
+  {
+    "id": "ITM-FN53o66z",
+    "type": "item",
+    "slug": "garden-bloom",
+    "name": "Garden Bloom",
+    "fields": {
+      "Type": "Flower",
+      "Held By": "Bartholomew Grayson",
+      "Origin": "Vaelorix's garden aboard the tyrant ship",
+      "Overview (Player)": "A newly bloomed flower Bartholomew found in Vaelorix's garden. Its scent was familiar and he could not place it. When he breathed it in, his body wanted to become something he had never been, but the flower had already given off most of what it had. He sealed it in one of the garden's containers.",
+      "Status": "Held",
+      "Class": "Curiosity",
+      "Item Type": "Curiosity"
+    },
+    "voyages": [
+      {
+        "number": 6,
+        "bullets": [
+          "Found newly bloomed in Vaelorix's garden by Bartholomew",
+          "Breathed in, it made his body want to change into something he had never been, and it was not enough",
+          "Sealed in one of the garden's containers and kept"
+        ]
+      }
+    ],
+    "seen": [
+      6
+    ],
+    "mentioned": [],
+    "linked": [],
+    "url": "inventory/entries/garden-bloom.html",
+    "links": []
+  },
+  {
+    "id": "ITM-1pRB4oz6",
+    "type": "item",
+    "slug": "mikens-sending-stone",
+    "name": "Miken's Sending Stone",
+    "fields": {
+      "Type": "Sending stone",
+      "Held By": "Miken",
+      "Origin": "Unknown",
+      "Overview (Player)": "A sending stone Miken carries. Bartholomew caught him speaking into it in the night aboard the tyrant ship. Miken says he was saying hello to his family. Who is at the other end, the crew cannot say.",
+      "Status": "Held",
+      "Class": "Magic Item",
+      "Item Type": "Wondrous Item",
+      "Rarity": "Uncommon"
+    },
+    "voyages": [
+      {
+        "number": 6,
+        "bullets": [
+          "Seen by Bartholomew in Miken's hand on the first watch, Miken speaking into it",
+          "Miken said he was saying hello to his family"
+        ]
+      }
+    ],
+    "seen": [
+      6
+    ],
+    "mentioned": [],
+    "linked": [
+      "NPC-7wK4mB9x"
+    ],
+    "url": "inventory/entries/mikens-sending-stone.html",
+    "links": [
+      {
+        "id": "NPC-7wK4mB9x",
+        "name": "Miken",
+        "type": "npc",
+        "slug": "miken",
+        "url": "dossiers/miken.html"
+      }
+    ]
   }
 ]

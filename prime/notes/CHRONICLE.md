@@ -189,6 +189,10 @@ words it was described in.
   decisions that changed the course of events.
 - Carry the meaning of important dialogue in prose. Do not quote long stretches
   of the source.
+- Quote a few lines directly: a character's own words at the moments that
+  turned the session ("What is here has not left," "Nice job, cadets"). The DM
+  likes these. A handful per voyage, spread through it; enough to hear the
+  characters, never so many it reads like a script.
 - Do not give every character equal space artificially. In an ensemble, do
   register what each cadet present was doing.
 - Tie each vision, dream or private scene to the cadet who had it. The record

@@ -324,7 +324,7 @@
     "fields": {
       "Type": "Personal / Mystery",
       "Related Character(s)": "Gregory",
-      "Current State": "The pull in Gregory's core points at the dead beholder on the Command Deck.",
+      "Current State": "The pull led Gregory to the containment engine, and it is the same nudge he felt on Caelestis.",
       "Overview (Player)": "Since leaving his master, Gregory has felt a new pull in his core, drawing him toward a place he cannot name.",
       "Status": "Open"
     },
@@ -342,6 +342,14 @@
           "On the Hollow Deck a pull in Gregory's chest led him to Ostekk-2, the one unit still holding a light",
           "On the Command Deck the pull came back stronger, pointing at the dead beholder's body"
         ]
+      },
+      {
+        "number": 6,
+        "bullets": [
+          "The pull drew Gregory beneath the beholder's body, where he found the containment engine",
+          "He had felt the same nudge before, on Caelestis",
+          "He read the flowers by touch: they made the wisps and the field"
+        ]
       }
     ],
     "seen": [],
@@ -352,6 +360,13 @@
     ],
     "url": "quests/gregorys-pull.html",
     "links": [
+      {
+        "id": "ITM-Z1eGrfAb",
+        "name": "Lantern of Flourishing",
+        "type": "item",
+        "slug": "lantern-of-flourishing",
+        "url": "inventory/entries/lantern-of-flourishing.html"
+      },
       {
         "id": "NPC-lfleUUeT",
         "name": "Vaelorix",
@@ -600,6 +615,12 @@
         "bullets": [
           "Tumak called up his soul knives a second time against the behir, his grip on them still uncertain"
         ]
+      },
+      {
+        "number": 6,
+        "bullets": [
+          "Tumak spoke into the whole crew's minds to plan the lie to Ostekk-10"
+        ]
       }
     ],
     "seen": [],
@@ -651,7 +672,7 @@
     "fields": {
       "Type": "Mission",
       "Related Character(s)": "Bartholomew Grayson, Gregory, Tumak Swan, Sol Fortuna, Casey Geim, Boogie",
-      "Current State": "The crew has found the Command Deck and where the helm must go, but magic fails there, the behir holds the Hollow Deck above it, and the helm still waits in the cargo hold.",
+      "Current State": "The crew holds the tyrant ship. The Command Deck is clear, the behir is gone, and the helm is being fitted into the platform.",
       "Overview (Player)": "Boatswain Tarto has sent the crew to recover an adamantine meteor that struck the spire on H’catha, a world of beholders. Arriving as themselves is not an option. An abandoned tyrant ship drifts in Toril’s orbit: commandeer it, install a spelljamming helm on its command deck, and fly it through H’cathan space as one of their own — the vessel itself the disguise. Reach the spire under that cover and bring the meteor back.",
       "Status": "Open"
     },
@@ -661,7 +682,7 @@
         "text": "Board the tyrant ship"
       },
       {
-        "done": false,
+        "done": true,
         "text": "Commandeer the tyrant ship"
       },
       {
@@ -713,6 +734,14 @@
           "On the Hollow Deck a mechanical behir and three clockwork horrors drove them back",
           "They reached the Command Deck past a plane where the ship's gravity turns over",
           "The helm belongs on the platform where the dead beholder lies, in a room where magic fails"
+        ]
+      },
+      {
+        "number": 6,
+        "bullets": [
+          "The crew burned the bloom from the Command Deck and tore the great flower from the beholder's body",
+          "They lied to Ostekk-10 about the containment engine and ejected it through the cargo hold",
+          "The helm was carried to the Command Deck and its fitting begun"
         ]
       }
     ],
@@ -778,7 +807,7 @@
       }
     ],
     "progress": {
-      "done": 1,
+      "done": 2,
       "total": 5
     }
   },
@@ -831,13 +860,13 @@
     "fields": {
       "Type": "Character / Mystery",
       "Related Character(s)": "Gregory",
-      "Current State": "Ostekk-6 gets about on legs Boogie made him. A repair bay on the Hollow Deck could mend him, but the behir lies coiled beside it.",
+      "Current State": "Ostekk-6 is rebuilding under the containment engine's light and will travel with the crew.",
       "Overview (Player)": "The automaton the crew pulled out of the wreckage in the tyrant ship’s cargo hold wears Gregory’s face. He is one of nine units that served the ship’s beholder master, Vaelorix, and shares his name with a tinkerer, the original Ostekk, said to have sent the behir that destroyed the rest. His core is sound; his body is a mechanical problem no spell will close, and what he knows about the ship has already proved worth having.",
       "Status": "Open"
     },
     "objectives": [
       {
-        "done": false,
+        "done": true,
         "text": "Repair Ostekk-6 at the Hollow Deck repair bay"
       }
     ],
@@ -864,6 +893,13 @@
           "He named his master, the beholder Vaelorix, and said there had been nine units, nearly all now destroyed",
           "Gregory found the remains of Ostekk-8 and Ostekk-4 and woke Ostekk-2, which said the original Ostekk had sent the behir",
           "A repair bay on the Hollow Deck could fix Ostekk-6's legs, if it still works and has parts"
+        ]
+      },
+      {
+        "number": 6,
+        "bullets": [
+          "Gregory spent a charge of the containment engine on Ostekk-6, and his body began to rebuild",
+          "Ostekk-6 said he would travel with the crew if they wished"
         ]
       }
     ],
@@ -897,7 +933,7 @@
     },
     "children": [],
     "progress": {
-      "done": 0,
+      "done": 1,
       "total": 1
     }
   },

@@ -442,7 +442,7 @@
     "fields": {
       "Type": "Vessel",
       "Key NPCs / Factions": "Ostekk-6, Winston Ryeback, Ostekk-2, Vaelorix",
-      "Overview (Player)": "The tyrant ship is a stone-carved beholder vessel in Toril’s orbit, whose master, the beholder Vaelorix, the crew found dead and overgrown on its Command Deck. They mean to install a helm there and fly it through H’cathan space unnoticed, but the ship is choked with a lantern-wisp bloom, prowled by clockwork horrors and a mechanical behir, and said to hide a shape-shifting mimic, and on its Command Deck magic fails.",
+      "Overview (Player)": "The tyrant ship is a stone-carved beholder vessel in Toril's orbit, once the vessel of the beholder Vaelorix, who lies dead on its Command Deck. The crew holds it now. They burned the bloom off the Command Deck, put the mechanical behir out through the cargo hold, and are fitting a helm into the platform so they can fly it through H'cathan space unnoticed. It has no fire suppression; most things leave it through the cargo hold.",
       "Status": "Accessible"
     },
     "voyages": [
@@ -471,12 +471,21 @@
           "Partway down the shaft, a plane where the ship's gravity turns over lies just above the Command Deck",
           "Its master, the beholder Vaelorix, lies dead on the Command Deck"
         ]
+      },
+      {
+        "number": 6,
+        "bullets": [
+          "Most things leave the ship through the cargo hold, with the expulsion worked from the Command Deck",
+          "Nothing aboard puts out a fire",
+          "The crew holds it, and a helm is being fitted on the Command Deck"
+        ]
       }
     ],
     "seen": [
       3,
       4,
-      5
+      5,
+      6
     ],
     "mentioned": [],
     "linked": [],
@@ -507,6 +516,11 @@
         "name": "The Command Deck",
         "url": "navigation-records/the-command-deck.html",
         "type": "Room"
+      },
+      {
+        "slug": "the-garden",
+        "name": "The Garden",
+        "url": "navigation-records/the-garden.html"
       }
     ],
     "items": [
@@ -676,7 +690,7 @@
     "fields": {
       "Type": "Room",
       "Key NPCs / Factions": "Ostekk-2, The Behir",
-      "Overview (Player)": "The Hollow Deck lies below the tyrant ship’s cargo space: a round, enclosed room shaped like a pit, its walls lined with unfamiliar machinery. It was the ship’s deck for repairs and maintenance, with a repair bay on its far side. Its floor is strewn with the torn-apart remains of the ship’s automaton units and wrecked clockwork horrors, and a mechanical behir lies coiled in the corner beside the bay.",
+      "Overview (Player)": "The Hollow Deck lies below the tyrant ship's cargo space: a round, enclosed room shaped like a pit, its walls lined with unfamiliar machinery. It was the ship's deck for repairs and maintenance, with a repair bay on its far side. Its floor is strewn with the torn-apart remains of the ship's automaton units and wrecked clockwork horrors, and three or four dormant horrors stand where the mechanical behir used to lie.",
       "Status": "Accessible"
     },
     "voyages": [
@@ -688,10 +702,17 @@
           "Once the ship's deck for repairs and maintenance, run by Vaelorix, with a repair bay on its far side",
           "A mechanical behir lies coiled beside the repair bay; the crew fought it there and retreated"
         ]
+      },
+      {
+        "number": 6,
+        "bullets": [
+          "Passed on the way to the garden, Ostekk-10 curled in its corner with three or four clockwork horrors dormant around it"
+        ]
       }
     ],
     "seen": [
-      5
+      5,
+      6
     ],
     "mentioned": [],
     "linked": [
@@ -700,18 +721,18 @@
     "url": "navigation-records/the-hollow-deck.html",
     "links": [
       {
+        "id": "NPC-MZZkLc0g",
+        "name": "Ostekk-10",
+        "type": "npc",
+        "slug": "the-behir",
+        "url": "dossiers/the-behir.html"
+      },
+      {
         "id": "NPC-nmdnCFvr",
         "name": "Ostekk-2",
         "type": "npc",
         "slug": "ostekk-2",
         "url": "dossiers/ostekk-2.html"
-      },
-      {
-        "id": "NPC-MZZkLc0g",
-        "name": "The Behir",
-        "type": "npc",
-        "slug": "the-behir",
-        "url": "dossiers/the-behir.html"
       },
       {
         "id": "QST-Ok5mB8tz",
@@ -738,7 +759,7 @@
     "fields": {
       "Type": "Room",
       "Key NPCs / Factions": "Vaelorix",
-      "Overview (Player)": "The Command Deck lies at the bottom of the tyrant ship’s shaft, past a plane where gravity turns over. It is a large room with side passages, its air drifting with colored light and its walls overgrown with flowers that loose wisps. At its center the beholder Vaelorix lies dead on the helm platform, a great dark flower grown out of his body, and his central eye still cancels magic in the room. Clockwork horrors stand frozen mid-stride among the flowers.",
+      "Overview (Player)": "The Command Deck lies past the plane where the tyrant ship's gravity turns over. Its flowers made the wisps and the field that killed magic; the crew burned and tore them out, and magic works there again. The beholder Vaelorix lies dead on the helm platform, his central eye dried open, and a helm is being fitted where he died. The controls for the ship's expulsion are here.",
       "Status": "Accessible"
     },
     "voyages": [
@@ -752,10 +773,20 @@
           "Wisps bloom from the flowers and drift toward the living, latching on and draining them",
           "The beholder's body lies on the platform where the helm must go"
         ]
+      },
+      {
+        "number": 6,
+        "bullets": [
+          "Spores from the garden flower showed the wisps, and the flowers proved to make both the wisps and the field",
+          "The side flowers were cut down one by one, the ceiling flower dropped, and Bartholomew tore the great flower from the body",
+          "Magic returned once the flowers fell",
+          "The helm was carried here and its fitting begun"
+        ]
       }
     ],
     "seen": [
-      5
+      5,
+      6
     ],
     "mentioned": [],
     "linked": [
@@ -763,6 +794,13 @@
     ],
     "url": "navigation-records/the-command-deck.html",
     "links": [
+      {
+        "id": "ITM-Z1eGrfAb",
+        "name": "Lantern of Flourishing",
+        "type": "item",
+        "slug": "lantern-of-flourishing",
+        "url": "inventory/entries/lantern-of-flourishing.html"
+      },
       {
         "id": "NPC-lfleUUeT",
         "name": "Vaelorix",
@@ -776,6 +814,53 @@
         "type": "quest",
         "slug": "the-tyrant-ship-and-the-hcatha-meteor",
         "url": "quests/the-tyrant-ship-and-the-hcatha-meteor.html"
+      }
+    ],
+    "parent": {
+      "slug": "the-tyrant-ship",
+      "name": "The Tyrant Ship",
+      "url": "navigation-records/the-tyrant-ship.html"
+    },
+    "within": []
+  },
+  {
+    "id": "LOC-0zVUE8xF",
+    "type": "location",
+    "slug": "the-garden",
+    "name": "The Garden",
+    "parentId": "LOC-Rp7kW4vn",
+    "fields": {
+      "Type": "Room",
+      "Key NPCs / Factions": "Vaelorix",
+      "Overview (Player)": "The garden lies at the bottom of the tyrant ship's garden shaft, where Vaelorix kept his research specimens. It is a lavish greenhouse: cultivated flowers along the walls, a bed of grass at its centre, and research tables laid out with instruments and dissected flowers. A thick stalk of unopened velvet-blue buds stands at the heart of it, and a single whole wisp drifts in the air.",
+      "Status": "Accessible"
+    },
+    "voyages": [
+      {
+        "number": 6,
+        "bullets": [
+          "Reached down the garden shaft on Ostekk-6's directions",
+          "A greenhouse of cultivated flowers, a grass bed and research tables",
+          "Tumak took a half-dissected flower that glowed pink inside its bud",
+          "Bartholomew found a newly bloomed flower whose scent made his body want to change"
+        ]
+      }
+    ],
+    "seen": [
+      6
+    ],
+    "mentioned": [],
+    "linked": [
+      "NPC-lfleUUeT"
+    ],
+    "url": "navigation-records/the-garden.html",
+    "links": [
+      {
+        "id": "NPC-lfleUUeT",
+        "name": "Vaelorix",
+        "type": "npc",
+        "slug": "vaelorix",
+        "url": "dossiers/vaelorix.html"
       }
     ],
     "parent": {

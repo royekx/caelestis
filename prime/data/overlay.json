@@ -14,12 +14,18 @@
     },
     "QST-6bC9wN4k": {
       "urgency": "Medium",
-      "next": "Learn what in the dead beholder's body the pull in Gregory's core is pointing at.",
+      "next": "Follow the pull once the Lantern is seated: the note is louder in the bay, and it is calling past Gregory rather than to him.",
       "voyages": [
         {
           "number": 5,
           "beats": [
             "The pull near Ostekk-2 was Gregory's first paracausal ping, not a magic detection. On the Command Deck it points at the Lantern inside the beholder's body. The players will read it as finding magical things for a long while."
+          ]
+        },
+        {
+          "number": 6,
+          "beats": [
+            "The pull led to the Lantern itself. Its source is sealed inside the lamp, below the light, where identify cannot read."
           ]
         }
       ]
@@ -42,13 +48,19 @@
     },
     "QST-Xr4mW8vn": {
       "urgency": "High",
-      "next": "Get the helm down past the behir on the Hollow Deck, through the gravity plane, and onto the Command Deck platform, then find a way to install it where the beholder's eye cancels magic.",
+      "next": "Seat the helm in the gaze cradle, fly the ship to the Flighty Foundling for the swap, and cross to H’catha.",
       "voyages": [
         {
           "number": 5,
           "beats": [
             "The planned abduction by the behir never happened; Boogie's missed rope delivered the crew to the Command Deck a session early, by their own descent. Scrap the abduction.",
             "The Command Deck's field unmakes constructs: the crew can cross it, the behir cannot. Both sides need it cleared, for different destinations."
+          ]
+        },
+        {
+          "number": 6,
+          "beats": [
+            "The symbiosis broke when the great flower came out by the roots, which drops the field and makes the seating possible. Level 4 fires on the seating, at the top of Voyage 007."
           ]
         }
       ]
@@ -58,12 +70,18 @@
     },
     "QST-Ok5mB8tz": {
       "urgency": "Medium",
-      "next": "Reach the Hollow Deck repair bay past the behir and mend Ostekk-6's legs.",
+      "next": "Seat the Lantern in the repair bay so Ostekk-6 finishes rebuilding.",
       "voyages": [
         {
           "number": 5,
           "beats": [
             "The OSTEKK units were built with the Lantern's fragment, so they carry a trace of it: the field slows Ostekk-6 but cannot stop him."
+          ]
+        },
+        {
+          "number": 6,
+          "beats": [
+            "One Lantern charge set Ostekk-6 rebuilding without the bay. The seated Lantern finishes the job."
           ]
         }
       ]
@@ -87,6 +105,12 @@
           "beats": [
             "Stuttered and slowed in the Command Deck field but kept running: the Lantern trace in the OSTEKK units."
           ]
+        },
+        {
+          "number": 6,
+          "beats": [
+            "Rebuilding on a Lantern charge. Did not know Ostekk-10 existed, because Ostekk built it separately."
+          ]
         }
       ]
     },
@@ -96,6 +120,12 @@
           "number": 5,
           "beats": [
             "Built with the Lantern's fragment like the other OSTEKK units. Its state after the fight is unresolved."
+          ]
+        },
+        {
+          "number": 6,
+          "beats": [
+            "Left on the Hollow Deck. The seated Lantern and the pod can wake it for good in Voyage 007."
           ]
         }
       ]
@@ -107,6 +137,12 @@
           "beats": [
             "Ostekk's separate build, with no Lantern trace: it cannot enter the Command Deck at all, which is why it waits.",
             "Alive, roughly seventy damage down, and it does not repair."
+          ]
+        },
+        {
+          "number": 6,
+          "beats": [
+            "Came to parley because the crew could cross the field and it could not. Lied to and ejected through Cargo, it is still searching, and Ostekk now has a reason to come for the engine."
           ]
         }
       ]
@@ -127,6 +163,22 @@
           "number": 5,
           "beats": [
             "Miken saw the dead beholder with his own eyes. That is what he reports through his channel in Voyage 006."
+          ]
+        },
+        {
+          "number": 6,
+          "beats": [
+            "Reported through the sending stone on the first watch, as planned, and was overheard by Bartholomew. Suspected, not exposed: the beacon and the report both reached Qitru."
+          ]
+        }
+      ]
+    },
+    "ITM-Z1eGrfAb": {
+      "voyages": [
+        {
+          "number": 6,
+          "beats": [
+            "The Lantern's empty cradle is above the repair-bay pod. Seated, it turns the ship into a safehouse."
           ]
         }
       ]

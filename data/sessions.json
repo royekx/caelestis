@@ -103,5 +103,26 @@
     "linked": [],
     "url": "voyages/voyage-005.html",
     "links": []
+  },
+  {
+    "id": "SES-CaM0VLoV",
+    "type": "session",
+    "slug": "voyage-006",
+    "name": "What Is Here Has Not Left",
+    "number": 6,
+    "fields": {
+      "Major Events": "While the crew was below, Sol, Ryeback, Pffred and Krik'Lit fought off three clockwork horrors in the cargo hold until a wail from below called them away. The crew came back up, told Ryeback they could finish the mission, and planned to burn the growth off the Command Deck and put the mechanical behir out through the hold. On the last watch the behir came up the garden shaft and, through Krik'Lit, asked for a device on the Command Deck, the containment engine, fourth series, for its master Ostekk; it promised to leave if they brought it out and named itself Ostekk-10. The crew went down to Vaelorix's garden, where Tumak took a glowing flower and Bartholomew found a bloom that made his body want to change. On the Command Deck the garden flower's spores showed the wisps, Gregory learned the flowers made both the wisps and the field that killed magic, and the crew cut down the side flowers, dropped the ceiling flower, and Bartholomew as an ape tore the great flower from the beholder's body. Gregory found the containment engine beneath it. When Ostekk-10 returned, Tumak told it nothing had been found; it searched the ship, and Bartholomew struck the expulsion and put it out through the cargo hold. The helm was carried to the Command Deck and Pffred and Krik'Lit began fitting it.",
+      "Character Beats": "Sol fought the horrors beside Ryeback, spoke for the crew at the garden shaft, destroyed two side flowers and brought down the ceiling flower with his javelin, and remembered Ostekk-2. Tumak answered Ryeback's question, named Boogie second in command and told the crew to vote on it, burned the dead horrors, and planned and told the lie in the crew's minds. Bartholomew caught Miken with a sending stone on the first watch, breathed the bloom in the garden, tore the great flower from the body as an ape, and struck the expulsion. Gregory held the last watch, fed his magic into the garden flower, read the flowers by touch, followed his pull to the containment engine, and spent a charge on Ostekk-6. Casey climbed into the garden head down and anchored the rope, cut a wisp from Sol's arm, and brought the ceiling flower down from where he lay. Boogie slept through his watch, asked Ostekk-10 its name, cut down a side flower, and pressed a potion on Tumak.",
+      "New Clues / Reveals": "The mechanical behir is Ostekk-10, sent by Ostekk to recover the containment engine, fourth series. Ostekk is a beholder, the maker of the ship's units and of the engine; Vaelorix kept and studied it. The engine is a small iron lamp with an iris shutter and green light, three charges a day, each mending a body, constructs better than the living. The flowers on the Command Deck were a specimen Vaelorix was researching, and they made both the wisps and the field that killed magic. Most things leave the ship through the cargo hold, with the expulsion worked from the Command Deck, and nothing aboard puts out a fire. Gregory's pull matches a nudge he felt on Caelestis. Miken carries a sending stone.",
+      "NPC / Faction Movement": "Ostekk-10 asked for the engine, was lied to, searched the ship and was ejected through the cargo hold, still searching. Miken was caught speaking into a sending stone, grew sharp, then apologized; he is the only one of Veena's crew not badly hurt. Ryeback believes the crew killed the beholder and no longer means to call Tarto or Saerthe. Ostekk-6 is rebuilding and will travel with the crew. Pffred and Krik'Lit began fitting the helm.",
+      "Consequences": "The crew holds the tyrant ship and the containment engine, and the Command Deck is clear. They answered a request for mutual trust with a lie, and the creature they lied to is outside the hull, still searching. Ostekk-2 still lies on the Hollow Deck.",
+      "Next Session Pressure": "Seat the helm and fly the ship. Decide what to do about Miken's sending stone, Ostekk-2 on the Hollow Deck, and the second in command. Ostekk-10 is still out there, and Ostekk may want his engine back."
+    },
+    "voyages": [],
+    "seen": [],
+    "mentioned": [],
+    "linked": [],
+    "url": "voyages/voyage-006.html",
+    "links": []
   }
 ]
