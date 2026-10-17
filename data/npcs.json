@@ -31,7 +31,7 @@
     "links": [
       {
         "id": "LOC-I7jHhD0b",
-        "name": "The Moonraider",
+        "name": "Moonraider",
         "type": "location",
         "slug": "the-moonraider",
         "url": "navigation-records/the-moonraider.html"
@@ -93,7 +93,7 @@
     "links": [
       {
         "id": "LOC-yAV2JeVr",
-        "name": "The Flighty Foundling",
+        "name": "Flighty Foundling",
         "type": "location",
         "slug": "the-flighty-foundling",
         "url": "navigation-records/the-flighty-foundling.html"
@@ -355,7 +355,7 @@
       },
       {
         "id": "LOC-yAV2JeVr",
-        "name": "The Flighty Foundling",
+        "name": "Flighty Foundling",
         "type": "location",
         "slug": "the-flighty-foundling",
         "url": "navigation-records/the-flighty-foundling.html"
@@ -621,7 +621,7 @@
     "links": [
       {
         "id": "LOC-Rp7kW4vn",
-        "name": "The Tyrant Ship",
+        "name": "Tyrant Ship",
         "type": "location",
         "slug": "the-tyrant-ship",
         "url": "navigation-records/the-tyrant-ship.html"
@@ -828,7 +828,7 @@
     "links": [
       {
         "id": "LOC-yAV2JeVr",
-        "name": "The Flighty Foundling",
+        "name": "Flighty Foundling",
         "type": "location",
         "slug": "the-flighty-foundling",
         "url": "navigation-records/the-flighty-foundling.html"
@@ -889,7 +889,7 @@
     "links": [
       {
         "id": "LOC-yAV2JeVr",
-        "name": "The Flighty Foundling",
+        "name": "Flighty Foundling",
         "type": "location",
         "slug": "the-flighty-foundling",
         "url": "navigation-records/the-flighty-foundling.html"
