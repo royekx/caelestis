@@ -53,22 +53,26 @@ One shape, every character:
 
 | Tab | Voice | Holds |
 |---|---|---|
-| What it is | in-world | nature, current state, and how it got here |
-| What it wants | in-world | motive, drive, what it is for |
+| Who they are | in-world | nature, current state, and how it got here |
+| What they want | in-world | motive, drive, what it is for |
 | What's hidden | in-world | true and unrevealed |
-| Running it | DM | how to play it, what is open, what to decide |
+| How to run them | DM | how to play it, what is open, what to decide |
 | Stat block | — | the block, if it has one |
+
+The labels never inflect for the subject. A dossier is for anything with a
+will, so "they" covers a person, a construct, a god and a ship under command
+without the set changing shape page to page.
 
 Every tab answers a question in the same form, so the set works whether the
 subject is a person, a ship, a faction or a place. The earlier set — Bio,
 History, Beliefs, Secrets, At the table — sat on four different axes at once
 (subject matter, disclosure, audience, format), which is why it read as five
-unrelated words. History was on 8 of 35 pages and folded into *What it is*.
+unrelated words. History was folded into *Who they are*.
 
 Include only the tabs with content. Never invent a one-off tab name.
 
-**The voice rule.** *What it is*, *What it wants* and *What's hidden* are written
-from inside the world. They state what is true, not what it is for. *Running it* is where the
+**The voice rule.** *Who they are*, *What they want* and *What's hidden* are written
+from inside the world. They state what is true, not what it is for. *How to run them* is where the
 DM voice belongs — design notes, open calls and advice live there and nowhere
 else. "The crew" and "the party" are in-world nouns and stay; "the players",
 "the campaign", "the session" and "the scenario" are not.
