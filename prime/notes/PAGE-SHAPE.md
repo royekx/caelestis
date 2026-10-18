@@ -55,9 +55,28 @@ One shape, every character:
 |---|---|---|
 | Who they are | in-world | nature, current state, and how it got here |
 | What they want | in-world | motive, drive, what it is for |
-| What's hidden | in-world | true and unrevealed |
-| How to run them | DM | how to play it, what is open, what to decide |
+| DM notes | DM | what's hidden, threads, how to run them, what is open |
 | Stat block | — | the block, if it has one |
+
+The split is surface and engine. The first two tabs and the block are the
+surface: everything true about the subject, whether or not the crew knows
+it. *DM notes* is the engine: everything needed to play them.
+
+*DM notes* carries `<h4>` subsections rather than running as one block, in
+this order, including only the ones with content:
+
+| Subsection | Holds |
+|---|---|
+| What's hidden | true and unrevealed. Keeps its in-world voice. |
+| Threads | where they connect — to whom, to which arc, to what else |
+| How to run them | personality, tactics, how they engage |
+| Open | calls not yet made, each with an `is-open` tag |
+
+*What's hidden* was a tab of its own and is now a subsection. It is still
+in-world and still states what is true; it moved because a secret is
+something the DM needs rather than something the page is about. Splitting
+the set by disclosure, by voice and by use at the same time is what made
+five tabs read as five unrelated words.
 
 The labels never inflect for the subject. A dossier is for anything with a
 will, so "they" covers a person, a construct, a god and a ship under command
@@ -71,11 +90,17 @@ unrelated words. History was folded into *Who they are*.
 
 Include only the tabs with content. Never invent a one-off tab name.
 
-**The voice rule.** *Who they are*, *What they want* and *What's hidden* are written
-from inside the world. They state what is true, not what it is for. *How to run them* is where the
-DM voice belongs — design notes, open calls and advice live there and nowhere
-else. "The crew" and "the party" are in-world nouns and stay; "the players",
-"the campaign", "the session" and "the scenario" are not.
+**The voice rule.** *Who they are*, *What they want* and the *What's hidden*
+subsection are written from inside the world. They state what is true, not what
+it is for. The rest of *DM notes* is where the DM voice belongs — design notes,
+open calls and advice live there and nowhere else. "The crew" and "the party"
+are in-world nouns and stay; "the players", "the campaign", "the session" and
+"the scenario" are not.
+
+**Backlink what connects.** A name that has a page of its own gets a link on
+its first mention in a panel, and once per panel is enough. Link where the
+mention carries weight — a person, place, vessel, artifact or faction the
+reader might want to follow — and leave passing nouns alone.
 
 **Bold marks the one claim a tab turns on.** If three things are bold, none of
 them are.
