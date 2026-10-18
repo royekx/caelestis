@@ -160,6 +160,21 @@ body::after {
   text-transform: uppercase;
   margin: 1.5rem 0 0.5rem;
 }
+/* A dossier's DM notes panel heads its subsections with h4, so headings
+   that were h4 inside the old separate panels sit a level below. Lower
+   case and no tracking, so the two levels read as different ranks rather
+   than two sizes of the same thing. */
+.dm-content h5 {
+  font-family: 'Cinzel', serif;
+  /* Body runs at 1.25rem, so a heading below that reads as fine print
+     rather than as a heading. Sits just above the text it heads. */
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--gold-light);
+  text-transform: none;
+  margin: 1.35rem 0 0.4rem;
+}
 
 /* ── BODY TEXT ── */
 .dm-content { font-size: 1.25rem; line-height: 1.65; color: var(--text); }
