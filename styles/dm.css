@@ -1494,10 +1494,10 @@ body::after {
    Wider column, and rows that stack instead of fighting for horizontal
    room. .stat-val-long keeps working; plain .stat-val now behaves the
    same way, because in a column this narrow every value is long. */
-.entry-header { grid-template-columns: 236px 1fr; }
+.entry-header { grid-template-columns: 264px 1fr; gap: 2.4rem; }
 .identity-card .stat-row {
   display: block;
-  padding: 0.55rem 0;
+  padding: 0.5rem 0;
 }
 .identity-card .stat-key {
   display: block;
@@ -1514,8 +1514,8 @@ body::after {
   line-height: 1.45;
 }
 @media (max-width: 760px) {
-  .entry-header { grid-template-columns: 1fr; }
-  .identity-card { max-width: 320px; }
+  .entry-header { grid-template-columns: 1fr; gap: 1.6rem; }
+  .identity-card { max-width: 340px; }
 }
 
 /* ── 3. Section tabs ──
@@ -1719,7 +1719,10 @@ body::after {
   -webkit-backdrop-filter: blur(9px);
   overflow: hidden;
 }
-.dm-content .identity-card .stat-card { padding-left: 0; padding-right: 0; }
+/* The card's own 1.1rem gutter was being zeroed here, so every label and
+   value sat flush against the border. Restored, with a little more room
+   at the foot. */
+.dm-content .identity-card .stat-card { padding: 0.45rem 1.05rem 0.8rem; }
 .dm-content .identity-card .stat-row:last-child { border-bottom: none; }
 
 /* The expand affordance, matching the player pages. */
@@ -1728,7 +1731,10 @@ body::after {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-muted);
-  margin: 0.45rem 0 0.2rem;
+  /* Sits outside .stat-card, so it needs the card's gutter of its own
+     rather than running into the border. */
+  margin: 0.55rem 0 0.1rem;
+  padding: 0 1.05rem;
 }
 .dm-content .cae-expandable { cursor: zoom-in; }
 
