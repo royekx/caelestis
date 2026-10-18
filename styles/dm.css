@@ -1411,20 +1411,23 @@ body::after {
   cursor: pointer;
   flex: 0 0 auto;
   font-family: 'Cinzel', serif;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  /* Five tabs have to clear the entry column without wrapping to a
+     second row, so the tracking and gutters are set to fit the set. */
+  letter-spacing: 0.085em;
   text-transform: uppercase;
   color: var(--text-muted);
   background: transparent;
   border: none;
   border-bottom: 2px solid transparent;
   border-radius: 0;
-  padding: 0.55rem 0.95rem;
+  padding: 0.55rem 0.7rem;
   margin-bottom: -1px;
   white-space: nowrap;
   transition: color .15s ease, border-color .15s ease, background .15s ease;
 }
+.pill-tab:first-child { padding-left: 0; }
 .pill-tab:hover { color: var(--gold-light); background: var(--gold-faint); }
 .pill-tab[aria-selected="true"] {
   color: var(--gold);
@@ -1466,6 +1469,12 @@ body::after {
    ═══════════════════════════════════════════════ */
 
 /* ── 1. Content scrim ── */
+/* The scrim is a pseudo-element inset NEGATIVELY past its column, so it
+   pushes the document wider than the viewport whenever the column is
+   near full width. It is decorative and pointer-events:none, so clip the
+   overflow rather than shrinking it. dm.css loads only under /prime/. */
+body { overflow-x: clip; }
+
 .dm-content::before {
   content: '';
   position: absolute;
@@ -1476,18 +1485,26 @@ body::after {
 
      So this inverts it: the panel is a shade LIGHTER than the backdrop, with
      a hairline edge, which is what gives the column a surface to sit on. */
-  inset: -1.5rem -1.75rem;
+  /* The panel is sized off the column, which is now 1140px. The old
+     inset was set against a 920px column and left the content crowding
+     its own edge once the column grew. */
+  inset: -2rem -2.5rem;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(26, 34, 52, 0.72), rgba(16, 22, 36, 0.78));
-  border-left: 1px solid rgba(150, 172, 206, 0.10);
-  border-right: 1px solid rgba(150, 172, 206, 0.10);
-  backdrop-filter: blur(14px) saturate(115%);
-  -webkit-backdrop-filter: blur(14px) saturate(115%);
-  box-shadow: 0 0 60px 30px rgba(7, 10, 18, 0.55);
+  background: linear-gradient(180deg, rgba(26, 34, 52, 0.70), rgba(16, 22, 36, 0.80));
+  border-left: 1px solid rgba(150, 172, 206, 0.09);
+  border-right: 1px solid rgba(150, 172, 206, 0.09);
+  backdrop-filter: blur(16px) saturate(115%);
+  -webkit-backdrop-filter: blur(16px) saturate(115%);
+  /* A wider column needs a wider falloff, or the panel reads as a hard
+     rectangle pasted on the backdrop rather than a shadow. */
+  box-shadow: 0 0 90px 48px rgba(7, 10, 18, 0.58);
   pointer-events: none;
 }
+@media (max-width: 1240px) {
+  .dm-content::before { inset: -1.5rem -1.5rem; }
+}
 @media (max-width: 620px) {
-  .dm-content::before { inset: -0.75rem -0.9rem; }
+  .dm-content::before { inset: -0.75rem -0.9rem; box-shadow: 0 0 40px 20px rgba(7, 10, 18, 0.5); }
 }
 
 /* ── 2. Identity card ──
