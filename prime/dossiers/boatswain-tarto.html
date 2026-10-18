@@ -43,7 +43,9 @@
 
       <div class="pill-tabs" role="tablist" data-pill-group aria-label="Boatswain Tarto sections">
         <button class="pill-tab" role="tab" id="tab-bio" aria-controls="panel-bio" aria-selected="true">Who this is</button>
+        <button class="pill-tab" role="tab" id="tab-wants" aria-controls="panel-wants" aria-selected="false">What she wants</button>
         <button class="pill-tab" role="tab" id="tab-secrets" aria-controls="panel-secrets" aria-selected="false">What's hidden</button>
+        <button class="pill-tab" role="tab" id="tab-run" aria-controls="panel-run" aria-selected="false">Running her</button>
         <button class="pill-tab" role="tab" id="tab-sb" aria-controls="panel-sb" aria-selected="false">Stat block</button>
       </div>
 
@@ -52,7 +54,10 @@
           Runs the Simulation Deck. Clipped manner, tracks cadet performance closely, and assigns to scenarios without sentiment. Once counted among the academy's great spelljammers.
         </p>
         <p>
-          Scarred, grey at the temples, wreathed in cigar smoke. One wing flap was torn away long ago; she has not glided since and has never needed to.
+          Scarred, grey at the temples, wreathed in cigar smoke. Worn leathers, a cutlass on one hip and on the other a belaying pin of dark wood banded in tarnished brass, something carved deep into its grain.
+        </p>
+        <p>
+          One wing flap was torn away long ago; she has not glided since and has never needed to. She crosses a mooring line hand over hand the way only a hadozee can, and arrives unwinded.
         </p>
         <p>
           <em>&quot;Listen to what I tell you; it might just save your life.&quot;</em>
@@ -62,11 +67,46 @@
         </p>
       </div>
 
+      <div class="pill-panel" role="tabpanel" id="panel-wants" aria-labelledby="tab-wants" hidden>
+        <p>
+          <strong>Cadets come home.</strong> Everything else she does is downstream of that. She drills them hard because the alternative is burying them, and she tells them so.
+        </p>
+        <p>
+          She wants the name of whoever routed the neogi crate through her. That is a chain of custody, a manifest and a signature, and a boatswain can pull all three without anyone thinking twice about it.
+        </p>
+        <p>
+          She does not want command. She had the helm once and gave it up, and she has never explained which way round that went.
+        </p>
+      </div>
+
       <div class="pill-panel" role="tabpanel" id="panel-secrets" aria-labelledby="tab-secrets" hidden>
         <div class="dm-callout">
           <span class="dm-callout-label">The neogi crate</span>
           She passed on the crate holding the neogi hatchlings <strong>because she was informed rather than having checked it herself.</strong> Guilt without negligence, which is the version that keeps her sympathetic and still answerable.
         </div>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-run" aria-labelledby="tab-run" hidden>
+        <p>
+          <strong>She fights through the crew.</strong> Commander's Strike, Distracting and Maneuvering all put the payoff in a cadet's hands, so let them roll the big numbers. &quot;Eyes on Me!&quot; and Take It pull danger onto her and off them.
+        </p>
+        <p>
+          <strong>Spend her dice early.</strong> Four is two committed rounds, and running dry in front of cadets is a scene worth having. A spent round is about 55 damage; an empty one is about 39.
+        </p>
+
+        <div class="dm-callout">
+          <span class="dm-callout-label">The ally-reaction bottleneck</span>
+          Commander's Strike and her maneuvers both spend an <em>ally's</em> reaction, so the same cadet cannot take both, and at a six-PC table that congests rather than scales. <strong>It is a constraint on her rather than a flaw in her</strong> &mdash; she lends her tactics to one person at a time, and the table has a reason to spread her attention around. <span class="dm-tag is-open">Revisit in play</span>
+        </div>
+
+        <div class="dm-callout">
+          <span class="dm-callout-label">Against Saerthe</span>
+          <strong>Tarto is the pick that makes the crew hit harder and survive a bad opening</strong>; <a href="saerthe-abizjn.html">Saerthe</a> is the pick that changes what the crew can do. The choice should read as trading capability for muscle rather than picking the better block. <a href="../statblocks/#the-choice">The comparison</a>
+        </div>
+
+        <p>
+          On a deck, <strong>Pushing is the kill</strong>. Fifteen feet and a missing section of rail ends a boarder without a second attack, and it teaches the crew to look at the terrain.
+        </p>
       </div>
 
       <div class="pill-panel" role="tabpanel" id="panel-sb" aria-labelledby="tab-sb" hidden>
@@ -102,7 +142,7 @@
             <dt>Cutlass.</dt>
             <dd><em>Melee Attack Roll:</em> +8, reach 5 ft. <em>Hit:</em> 13 (2d8 + 4) slashing.</dd>
             <dt>Belaying Pin.</dt>
-            <dd><em>Melee or Ranged Attack Roll:</em> +8, reach 5 ft. or range 20/60 ft. <em>Hit:</em> 8 (1d8 + 4) bludgeoning.</dd>
+            <dd><em>Melee or Ranged Attack Roll:</em> +8, reach 5 ft. or range 20/60 ft. <em>Hit:</em> 8 (1d8 + 4) bludgeoning. Dark wood banded in tarnished brass, carved deep into the grain. Mundane.</dd>
           </dl>
 
           <h4>Maneuvers</h4>
@@ -110,7 +150,7 @@
             <dt>Trip.</dt>
             <dd>Strength save or Prone.</dd>
             <dt>Pushing.</dt>
-            <dd>Strength save or pushed up to 15 ft. away. <strong>On a deck, this is the kill.</strong></dd>
+            <dd>Strength save or pushed up to 15 ft. away.</dd>
             <dt>Disarming.</dt>
             <dd>Strength save or it drops one held object of her choice.</dd>
             <dt>Goading.</dt>
@@ -142,42 +182,6 @@
           </dl>
         </div>
 
-        <p>
-          <strong>Cut during design, deliberately:</strong> <em>Deck Ape</em> (redundant with her climb speed), <em>Silhouette Deck</em> (became &quot;There!&quot;), and the <em>&quot;Hold!&quot;</em> temporary-hit-point order.
-        </p>
-
-        <h4>Revised &mdash; what changed and why</h4>
-        <p>
-          The block above is the revision. <strong>She was failing to read as a warrior for two reasons, and both are now fixed.</strong>
-        </p>
-        <table>
-          <thead><tr><th>Was</th><th>Now</th><th>Why</th></tr></thead>
-          <tbody>
-            <tr>
-              <td>Maneuvers on every hit, free, with no damage attached.</td>
-              <td><strong>Superiority dice, 4d10, short rest.</strong> The die adds damage and fuels the maneuver together.</td>
-              <td>Removing the dice had removed the decision and the spike at once. Three saves a turn forever is bookkeeping; four dice she can burn in two rounds is a choice. <strong>A committed round goes from about 39 damage to about 55</strong>, which is what a CR 10 veteran should manage when she means it &mdash; and running dry now means something.</td>
-            </tr>
-            <tr>
-              <td><em>Clear the Deck</em> as an action, replacing Multiattack.</td>
-              <td><strong>A bonus action.</strong> Same movement, same attack on everyone she passes, and her Attack action is untouched.</td>
-              <td>As an action it was a worse Multiattack against one target &mdash; her signature button went dead in exactly the fights meant to feel biggest. It is never a downgrade now, and it keeps the thing she is actually for: crossing a deck under fire.</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="dm-callout">
-          <span class="dm-callout-label">One problem left standing on purpose</span>
-          <strong>Commander's Strike and her maneuvers both spend an <em>ally's</em> reaction</strong>, so the same cadet cannot take both, and at a six-PC table the routing congests rather than scales.
-          <p>
-            Left alone deliberately. <em>It is a constraint on her rather than a flaw in her</em> &mdash; she can only lend her tactics to one person at a time, which is a fair thing for a boatswain to be limited by, and it gives the table a reason to spread her attention around. Revisit only if it slows a turn in play.
-          </p>
-        </div>
-
-        <div class="dm-callout">
-          <span class="dm-callout-label">Against Saerthe</span>
-          The revision widens the gap on purpose. <strong>Tarto is now the pick that makes the crew hit harder and survive a bad opening</strong>; <a href="saerthe-abizjn.html">Saerthe</a> is the pick that changes what the crew can do. <em>The choice should feel like trading capability for muscle</em> rather than picking the better statblock. <a href="../statblocks/#the-choice">The comparison</a>
-        </div>
       </div>
     </div>
   </div>
