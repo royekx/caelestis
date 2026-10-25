@@ -167,9 +167,11 @@
       svg.appendChild(s('line', { x1: tx, x2: tx, y1: 30, y2: H, stroke: C.rule, 'stroke-width': 1 }));
       svg.appendChild(s('text', { x: tx, y: 20, fill: C.muted, 'font-size': 12, 'text-anchor': 'middle' }, tk[1]));
     });
+    var labels = s('svg', { width: LW, height: H, style: 'position:sticky;left:0;z-index:2;flex:none' });
+    labels.appendChild(s('rect', { x: 0, y: 0, width: LW, height: H, fill: C.bg }));
     data.lanes.forEach(function (lane, i) {
       if (i % 2 === 0) svg.appendChild(s('rect', { x: 0, y: lane._top - 6, width: W, height: lane._h + 4, fill: 'rgba(255,255,255,0.025)' }));
-      svg.appendChild(s('text', { x: 14, y: lane._top + 14, fill: C.soft, 'font-size': 14 }, lane.label));
+      labels.appendChild(s('text', { x: 14, y: lane._top + 14, fill: C.soft, 'font-size': 14 }, lane.label));
     });
     (data.clocks || []).forEach(function (c) {
       var cx = x(c.t), primary = c.kind === 'primary';
@@ -198,8 +200,13 @@
       g.addEventListener('mouseleave', hideTip);
       svg.appendChild(g);
     });
-    host.appendChild(svg);
-    host.scrollLeft = x(-1) - LW - 60;
+    var row = document.createElement('div');
+    row.style.display = 'flex';
+    svg.style.marginLeft = (-LW) + 'px';
+    svg.style.flex = 'none';
+    row.appendChild(labels); row.appendChild(svg);
+    host.appendChild(row);
+    host.scrollLeft = Math.max(0, x(-1) - host.clientWidth / 2);
     document.getElementById('undated').textContent = data.events.filter(function (e) { return e.t == null; }).map(function (e) { return e.title; }).join(', ') || 'none';
   }
 
