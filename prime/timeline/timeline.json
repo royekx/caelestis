@@ -391,8 +391,8 @@
       "lane": "colony",
       "status": "past",
       "cert": "canon",
-      "title": "N'ghathrod captured; the craft crashes",
-      "desc": "His paracausal ceremorphosis makes his tadpoles copies of him and stops his aging. The craft is massive, a megadungeon whose unexplored levels become the Mad Mage dungeon. It breaks up as it comes down: the main body raises the Barrier Peaks, a broken-off section becomes Dowing Glowing, and the Thessalkraken lands separately in the sea, where it later guards the trident's reef. The elder brain is carried to Fonains; when N'ghathrod reaches for it, Vecna answers.",
+      "title": "The clash, the capture, the crash",
+      "desc": "N'ghathrod's ship clashes with Thessalar's planar craft and cripples it. Thessalar and the Thessalkraken capture him and some of his illithids and experiment on him aboard; the Rod's seventh piece makes his ceremorphosis paracausal, so his tadpoles become copies of him and his aging stops. The damaged craft finally comes down, and he escapes in the crash with his lieutenants. The craft is a megadungeon whose unexplored levels become the Mad Mage dungeon; it breaks up as it falls: the main body raises the Barrier Peaks, a broken-off section becomes Dowing Glowing, and the Thessalkraken lands separately in the sea, where it later guards the trident's reef. The elder brain is carried on to Fonains; when N'ghathrod reaches for it, Vecna answers.",
       "t": -500
     },
     {
@@ -527,7 +527,7 @@
   ],
   "decisions": [
     "Caelestis's present sits a few months after the Fonains Monolith broke, shortly after Fonains's Session 28. Clint reaches Fonains about a year before Caelestis's present, before the Monolith appears. Boogie's shard came from the broken Monolith through Vocath's line, before V001. This replaces \"Caelestis runs about a year before Fonains.\"",
-    "Thessalar's planar craft crashed about 500 years ago, when N'ghathrod's capture brought it down. \"Some millennia ago\" in Lola's Boys is rumour.",
+    "Thessalar's planar craft crashed about 500 years ago. N'ghathrod's clash with it crippled the craft; he was captured and experimented on aboard, and escaped when it came down. \"Some millennia ago\" in Lola's Boys is rumour.",
     "Benedetta fell ill at Rihiri's birth, about twelve years ago, and died about ten years ago. The illness was Vanifer siphoning her soul into the illegitimate Bloodstone, which took about two years."
   ],
   "threads": {
@@ -560,7 +560,7 @@
       {
         "t": -480,
         "status": "past",
-        "title": "N'ghathrod reaches for his lost elder brain; Vecna answers",
+        "title": "The clash and the crash: N'ghathrod captured, changed, escapes; Vecna answers him",
         "who": [
           "N'ghathrod",
           "Vecna"
