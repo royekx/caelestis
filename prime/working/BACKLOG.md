@@ -33,18 +33,18 @@ staging once Korey has read and accepted them.
 | Cosmology | cosmology/, glossary/, chart/ | 3 | 7 | 21 | 0 | 26 |
 | Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 35 | 3 | 49 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
-| Timeline | the rest of timeline.json | 1 | 1 | 6 | 0 | 0 |
+| Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
 | Factions | factions/ | 1 | 4 | 22 | 2 | 40 |
 | Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 12 | 1 | 46 | 5 | 42 |
 | Dossiers | dossiers/ | 9 | 6 | 43 | 0 | 51 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
-| Artifacts and vessels | artifacts/, vessels/ | 7 | 2 | 27 | 0 | 43 |
+| Artifacts and vessels | artifacts/, vessels/ | 6 | 2 | 27 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 21 |
 | New pages | 14 proposed pages, the hub, notes/ | 3 | 17 | 8 | 2 | 35 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 2 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 5 | 0 | 1 |
-| **Total** | | **73** | **82** | **272** | **14** | **420** |
+| **Total** | | **71** | **83** | **272** | **14** | **420** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -306,9 +306,9 @@ Order under each page: decide, fix, drop, add.
   Ruled: its temple was aboard the planar craft, and its true vestige may still be there; Giorge may be heading for it (STAGING round 6). Check the Session 14–15 notes for what Lola's Boys did to it in the Monolith, and whether part of it rides in Ziko's black blade.
   src: Korey, 2026-10-25 (rounds 5–6)
 
-- **[decide]** What N'ghathrod is doing now (brainstorm with Korey) *(shape)*
-  Vth'oramu's whereabouts follow from it (STAGING round 5). The shape, not every move: which worlds his crews work, which hearts they chase, how close the colony runs to Realmspace.
-  src: Korey, 2026-10-25 (round 5)
+- **[decide]** Where and how N'ghathrod is working now *(shape)* (brainstorm with Korey)
+  Ruled: he is working now on all four parts of his plan (STAGING round 10). Set where his crews are and how they are going about it. Vth'oramu's position and the two figures above follow from it.
+  src: Korey, 2026-10-25 (round 10)
 
 - **[later]** The colony's arms
   Ruled: they echo a hand and an eye without showing them outright (STAGING round 5). The design is open.
@@ -1188,14 +1188,9 @@ Order: decide, fix, drop, add.
   "The Glyth Watcher gets out" sits at t -3 (cert working). glyth-watcher.md leaves how she got out open. Options: keep about three years ago; or leave the event undated.
   src: glyth-watcher § Open; timeline.json
 
-- **[decide]** The sister artifact Clint carried (brainstorm with Korey) *(shape)*
-  Ruled: the ambush was for a sister artifact of A.T.L.A.S.; Clint took it through the color pool (STAGING round 4). Settled since: it is somewhere on Fonains (Korey, 2026-10-25, backlog pass). Open:
-  - What the artifact is. Earlier canon had A.T.L.A.S. as one of three artifacts that point to each other; this could be one of the other two.
-  - Where on Fonains it is, and whether Clint still has it (a possible adventure there).
-  - Whether Caelestis knows what the boarders were after. Lean: yes, and that is when security tightened and A.T.L.A.S. went into the Brig.
-  - How Vocath's crew knew it was aboard the Crow.
-  Touches: dossiers/clint.html, artifacts/atlas.html, factions/vocath-operation.html, campaign/colony/, timeline.
-  src: Korey, 2026-10-25 (round 4)
+- **[later]** The other three Boundary pieces
+  Ruled: the Boundary fragment is five pieces, each a finder; A.T.L.A.S. and its sister are two (STAGING round 10). What the other three find, and where they are, waits until play needs them.
+  src: Korey, 2026-10-25 (round 10)
 
 - **[fix]** Arcs, not acts
   Rename the planned crew events to the spine's arc names (the wiki says "Arc", never "Act"):
@@ -2865,11 +2860,9 @@ Items whose source sweep is still partial keep their `(sampled)` or
   A living Starchild like Casey will appear (see the add below). Set their shape: further along than Casey, earlier, diverged, or opposing. Set where they are headed.
   src: BCS § Casey/Open
 
-- **[decide]** The level 3 narrative scene *(shape)*
-  Options: first tether, first area change, or Polly speaking to him directly.
-  Answered in part: it has not run. V003's level-3 vignettes landed for Tumak, Sol, Boogie and Gregory, not Casey (campaign/voyages/index.html, V003 Actual), and no session record from V001–V006 shows a Casey level-up scene (data/sessions.json).
-  Missing: which scene. The Casey chat's last shape went unanswered (turn 105): a waking vision where his sight sharpens, a lifelong constellation resolves and points to Viren, Polly says one word, he stitches it onto his cloak, and he glimpses someone else's chart. The crew is now level 4, so also rule whether it still runs as a catch-up scene.
-  src: BCS § Casey/Open, § Superseded (L3 scene); Casey chat f7712be1 (turn 105)
+- **[decide]** Casey's beat for the crossing to H'Catha *(prep)*
+  Ruled: the missed level 3 scene is dropped, and visions are used sparingly (STAGING round 10). Set Casey's beat for the crossing: a small nudge from the Polly voice toward something, not a vision.
+  src: Korey, 2026-10-25 (round 10)
 
 - **[add]** What Casey wants beyond Polly
   Ruled (STAGING round 8). Add (DM voice): "Casey is the younger brother who does not know his full identity. He finds it in having an older brother, which is why he clings to Tumak." This replaces the offered "to be chosen the way Polly was chosen", and sits beside his flaw (he relies too heavily on others).
@@ -3276,10 +3269,6 @@ numbers, every item tagged *(counts)* flips.
   The set is the Reach residue: four fragments, one per Axiom, seventeen pieces. The three-artifact set (Eye, Key, Voice, with A.T.L.A.S. leading to the other two) was replaced by the four fragments, and "Artifacts of Convergence" is not a name for anything. No live page uses the term (0 hits outside prime/working/), so there is nothing to change on this page; keep it off. The Uk'otoa-orb constraint survives as the "Each fragment is its own adventure" add below. Memory's constraint line still says "the three pieces"; update memory.
   src: memory-canon (open-decisions § Planned: constraints on the Vecna/N'ghathrod layer); chat-cosmic § Superseded
   answered: inbox/chat-cosmic-campaign-structure.md § Superseded ("Artifacts of Convergence as Eye, Key, Voice → four Reach fragments as residue"), § Artifacts of Convergence (Settled)
-
-- **[decide]** A holdings ledger of residue pieces (brainstorm with Korey) *(shape)*
-  Who holds each residue piece, and who knows. Known: the Boundary piece is housed in A.T.L.A.S. in the Brig; the crew holds the Lantern of Flourishing (the Rod's fourth piece, "regenerate") since V006; Xanathar keeps the fifth piece ("find the path"), which the Lantern can pull the crew toward; the seventh piece (simulacrum) was left aboard Thessalar's craft; the two Dissolution pieces are forming in Wan and Tu. Vecna has collected residue for centuries but has never assembled a fragment, because a near-complete fragment is a beacon. Who knows what: N'ghathrod wants A.T.L.A.S.; Ostekk sent Ostekk-10 after the Lantern. Still open: which pieces Vecna's side actually holds (none is named), and where the ledger lives: a section of this page, or a new DM page.
-  src: framework § Open; memory-canon (campaign-canon, Rod holders; open-decisions, seventh piece); chat-cosmic § V006 and the arc ("Rod pieces located"), § Cosmology redesign ("near-complete Rod is a beacon")
 
 - **[fix]** Residue counts per fragment *(counts)*
   Restate the set as Dissolution 2, Transformation 3, Boundary 5, Convergence 7. The line "A Boundary piece points toward its one sibling" becomes "toward its four siblings"; "so A.T.L.A.S. points at the only other Boundary piece in existence" becomes "so A.T.L.A.S. points toward the four other Boundary pieces". "A Convergence piece feels six" stays.

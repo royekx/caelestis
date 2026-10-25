@@ -322,3 +322,28 @@ writing rules.
 ### Erevos and Aurath (cosmology/, glossary/, chart/, realms/)
 - The center of the cosmos is Erevos: the remains of the Reach world, a black hole beneath the Core Monolith and the Radiant Citadel.
 - Those who dwell in the Core Monolith call it Aurath.
+
+## Rulings of 2026-10-25, round 10
+
+### The Boundary fragment and A.T.L.A.S.'s sister (artifacts/atlas.html, artifacts/index.html, dossiers/clint.html)
+- The Boundary fragment is in five pieces. Every Boundary piece, in whatever housing, finds, reveals or draws toward something.
+- A.T.L.A.S. houses one Boundary piece. It reveals the aspects of a world, and a world's heart is one of them.
+- A.T.L.A.S.'s sister houses another. Caelestis held it as a device, and like every housing it hides what it really does. On the surface it finds magic items, a lesser kind of item-finder, because every enchanted thing carries a trace of residue. Its true use is finding Reach artifacts. This is what Vocath's crew ambushed the Bellwether Crow to take. Clint carried it through the color pool; it is somewhere on Fonains.
+- The other three Boundary pieces are unknown. They find something too.
+
+### Residue holdings (artifacts/index.html, campaign/ascension/, factions/vthorama.html)
+- Vecna's side holds one residue piece: the colony carries it from world to world to open hearts. If the crew ever takes it, N'ghathrod must win it back or find another before he can open another heart.
+- Seekers chapters hunt for more. Vecna steers them: he lets each chapter believe that finding these artifacts will lead it to what it seeks, or that the artifacts are what it seeks.
+- Everything else is scattered. The crew carries the fourth Rod piece in the Lantern. Thessalar holds the seventh. The twins carry the Dissolution fragment. The rest are loose or unknown.
+- Pieces stay scarce. The crew may never gather a full fragment, and every piece is a race.
+
+### N'ghathrod now (campaign/colony/, dossiers/nghathrod.html)
+- N'ghathrod is working now on all four parts of his plan: planting the taken in key positions, finding hearts, opening them, and seeking links. Where and how is not yet set.
+
+### The Fleet's strain (campaign/spine.html; NEW: Cosmos texture)
+- At the edge of a system, or between systems, a sovereign rules a hidden polity, in the vein of Mara Sov. She is the one who will one day face Vth'oramu.
+- A brilliant officer of the Order or the Fleet broke away decades ago to study Monoliths, in the vein of Osiris. The crew hears of them through contradictory accounts long before any meeting.
+- Together with the rise in Monoliths and the Watchers' calls for help, these strain the Fleet.
+
+### Visions (DM principles)
+- Use visions sparingly; there have been many. Polly's voice nudges Casey toward things rather than directing him. Casey's missed level 3 scene is dropped; his beat comes with H'Catha prep.
