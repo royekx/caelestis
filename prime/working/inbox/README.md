@@ -8,7 +8,7 @@ settled decision as **in repo**, **not in repo** or **conflicts**.
 | File | Chats | Coverage | Not in repo | Conflicts | Resume at |
 |---|---|---|---|---|---|
 | chat-astral-sea-worldbuilding.md | Astral Sea session worldbuilding | Full | 55 | 2 | — |
-| chat-cosmic-campaign-structure.md | Structuring a cosmic campaign | Turns 0–90 of 488 | 59 | 1 | t91 |
+| chat-cosmic-campaign-structure.md | Structuring a cosmic campaign | Full | 84 | 4 | — |
 | chat-organizing-framework.md | Organizing a sprawling campaign framework | Turns 0–40 of 166 | 3 | 4 | t41 |
 | chat-voyage-6-7-planning.md | Voyage six session planning; Voyage 7 prep | V6 full; V7 turns 0–78 of 182 | 37 | 2 | V7 t79 |
 | chat-automation.md | Automating with n8n; Voyage 5 runbook | V5 full; n8n mostly | 0 | 2 | — |
