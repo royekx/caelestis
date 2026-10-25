@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 | Realms | realms/ except Fonains; a new Oerth page | 35 | 33 | 3 | 47 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 13 | 13 | 1 | 29 |
 | Timeline | the rest of timeline.json | 3 | 5 | 0 | 0 |
-| Factions | factions/ | 21 | 20 | 2 | 40 |
+| Factions | factions/ | 20 | 20 | 2 | 40 |
 | Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 19 | 45 | 5 | 40 |
 | Dossiers | dossiers/ | 26 | 41 | 0 | 50 |
 | Crew | crew/ | 32 | 16 | 0 | 73 |
@@ -40,7 +40,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 10 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 2 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 7 | 4 | 0 | 1 |
-| **Total** | | **234** | **252** | **14** | **398** |
+| **Total** | | **233** | **252** | **14** | **398** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1360,9 +1360,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/seekers.html
 
-- **[decide]** The colony's chapter name
-  Ruled: the Seekers are the faith, and each chapter is named for what it seeks (STAGING § The Seekers). N'ghathrod's colony seeks a home and needs a chapter name with more life than "Seekers of a Home". The other chapters' names are set as they come up.
-  src: Korey, 2026-10-25 (round 3)
 - **[fix]** Chapters know him under many names
   The intro says "No chapter knows the name Vecna." Rewrite: "Chapters know him by many names. Some use his own." Shape the rest per the decide above.
   src: session-rulings (Vecna)

@@ -121,8 +121,10 @@ writing rules.
 
 ## Rulings of 2026-10-25, round 3
 
-### The Seekers and the colony (factions/seekers.html, factions/vthorama.html)
-- N'ghathrod's colony is a chapter of the Seekers, the one that seeks a home. It serves the same hidden god as every other chapter, believing it answers to an elder brain, and Vecna feeds it the few secrets it needs.
+### The Seekers and the colony (factions/seekers.html, factions/vthorama.html, dossiers/vthoramu.html)
+- N'ghathrod's colony is a chapter of the Seekers: the Seekers of a New Home. They serve the same hidden god as every other chapter, believing they answer to an elder brain, and Vecna feeds them the few secrets they need.
+- In their own tongue the chapter's name is their people's name, Vth'orama. The roots are vth- "the whole of", or- "toward", amu "home", with -a marking a people: all who go toward home. Rendered in Common, the Seekers of a New Home.
+- Their ship carries the same roots. Vth'oramu means "the passage to a new home". The founders say it as a promise; those born aboard say it as "here".
 
 ### N'ghathrod's long life (dossiers/nghathrod.html, artifacts/rod-of-seven-parts.html, factions/vthorama.html)
 - The residue piece Thessalar experimented with was the seventh Rod piece, simulacrum. It is why N'ghathrod's tadpoles make copies of him, and it is the root of the taking.
