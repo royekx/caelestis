@@ -1597,10 +1597,9 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   DM note: an homage to Captain Raymond Holt. He gets a new dossier, `dossiers/haymond-rolt.html`, and a row on dossiers/index.html.
   src: Korey, 2026-10-25 (round 8)
 
-- **[decide]** The Fleet's strain in broad strokes (brainstorm with Korey) *(shape)*
-  Korey's threads to shape: a Mara Sov–style "Reef" sovereign; an Osiris-style figure who warned and was pushed out; N'ghathrod's sect and its affiliates (unnamed to the Fleet Corps). He wants broad brushstrokes, not everything figured out. Context since: STAGING § The Order (Watchers fighting oddities across many worlds; Caelestis is thin partly because it answers their calls) and § The Axiom strain cover part of the strain. The Reef-style mystery's place is ruled: outside Realmspace, in another system or between systems, crossing paths with Vth'oramu later (STAGING round 8; see the add under NEW: Cosmos texture). Still open: who the sovereign and the Osiris-style figure are. Note: the repo's "Osiris" is an unrelated town on Fonains (the Blooming Glass bounty came out of it).
-  src: chat-astral-sea-worldbuilding § Open; memory-canon open-decisions (Voyage 007 intent, Taken King)
-
+- **[decide]** What the edge sovereign and the broken-away officer are doing *(shape)* (brainstorm with Korey)
+  Ruled: their shapes (STAGING round 10). Next: what each is doing now, likely tied to what N'ghathrod is doing.
+  src: Korey, 2026-10-25 (round 10)
 - **[add]** The Princes' pressure reaches the crew as phenomena
   Ruled (STAGING round 8). Add to Cosmological Pressures (DM voice): "The crew meets the Princes of Elemental Evil's pressure as strange elemental-plane phenomena on the worlds they visit, never as the Princes themselves."
   src: Korey, 2026-10-25 (round 8); chat-organizing-framework § Open
