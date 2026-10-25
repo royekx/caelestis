@@ -344,8 +344,8 @@ writing rules.
 - By the time the crew graduates, his landed operations have begun to ripple outward at contract scale: taken in small positions, odd disappearances, a station or crew acting strangely. These are the first things the crew meets as Driftwardens. (DM: this is the shape of Arc 1 after graduation and the run into Arc 2.)
 
 ### The Fleet's strain (campaign/spine.html; NEW: Cosmos texture)
-- At the edge of a system, or between systems, a sovereign rules a hidden polity, in the vein of Mara Sov. She has noticed more traffic than usual near her borders, and once something large brushed the edge of her sight and was gone. She keeps watch for it. She is the one who will one day face Vth'oramu.
-- A Watcher of the Order saw the same pattern, warned the Order, and was not heeded. He softly defected: he never broke with the Order openly, but he left his post to find the thing himself, in the vein of Osiris. The crew hears of him through contradictory accounts long before any meeting.
+- At the edge of a system, or between systems, Ilsevaine Corr rules a hidden polity, in the vein of Mara Sov. She has noticed more traffic than usual near her borders, and once something large brushed the edge of her sight and was gone. She keeps watch for it. She is the one who will one day face Vth'oramu.
+- Aurel Venn, a Watcher of the Order, saw the same pattern, warned the Order, and was not heeded. He softly defected: he never broke with the Order openly, but he left his post to find the thing himself, in the vein of Osiris. The crew hears of him through contradictory accounts long before any meeting.
 - The fringe sage of Ascher Mir is the one who tracks the Seekers' pattern across chapters, a separate figure from the rogue Watcher.
 - Together with the rise in Monoliths and the Watchers' calls for help, these strain the Fleet.
 
@@ -357,11 +357,11 @@ writing rules.
 ### Residue piece counts (cosmology/, glossary/, artifacts/)
 - Each fragment broke into a prime number of pieces, set by its Axiom: Dissolution 2, Boundary 3, Transformation 5, Convergence 7.
 
-### Caelestis and its sister institutions (factions/academy-fleet.html, factions/index.html, cosmology/)
-- Caelestis is not the only one of its kind. Sister institutions do the same work in other system clusters, spheres and systems, under different names and different governance. Their function is similar: train crews, watch the edge, answer what comes in from the dark.
-- The sister institutions share information across clusters, spheres and systems. None of them commands the others.
-- The Order's Watchers are more organized than the sister institutions and also span the spheres, more densely in some places than others.
-- Caelestis stays a school. Its Driftwarden operations run out of another location: a neutral zone away from Toril. Captain Haymond Rolt is based there, and the crew works from it in Arc 2.
+### Caelestis, the Driftwardens and their sister institutions (factions/academy-fleet.html, factions/index.html, cosmology/)
+- Caelestis is the Spelljammer academy. It trains cadets and stays a school.
+- Driftwarden operations are a separate body with its own name, based at Ondrel Anchorage on the moon Ostrel, a neutral port away from Toril. Captain Haymond Rolt works out of Ondrel, and the crew takes its Arc 2 contracts from there.
+- Caelestis and the Driftwarden body are both affiliates of a higher organization. So are the sister institutions in other system clusters, spheres and systems, which do similar work under their own names and governance. The higher organization works like a united nations: its affiliates share information across clusters, spheres and systems, and each mostly runs itself.
+- The Order's Watchers are more organized than these affiliates and also span the spheres, more densely in some places than others.
 
 ### Edge stations (factions/academy-fleet.html, realms/, cosmology/)
 - Each institution keeps the satellites and stations at the edge of its own system cluster. Strake Station and its sister satellites are Caelestis's.

@@ -35,7 +35,7 @@ staging once Korey has read and accepted them.
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
 | Factions | factions/ | 1 | 4 | 22 | 2 | 40 |
-| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 14 | 1 | 46 | 5 | 42 |
+| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 13 | 1 | 46 | 5 | 42 |
 | Dossiers | dossiers/ | 9 | 6 | 43 | 0 | 51 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 6 | 2 | 26 | 0 | 43 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 2 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 5 | 0 | 1 |
-| **Total** | | **73** | **83** | **271** | **14** | **420** |
+| **Total** | | **72** | **83** | **271** | **14** | **420** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1597,15 +1597,13 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   DM note: an homage to Captain Raymond Holt. He gets a new dossier, `dossiers/haymond-rolt.html`, and a row on dossiers/index.html.
   src: Korey, 2026-10-25 (round 8)
 
-- **[decide]** Names for the edge sovereign and the rogue Watcher *(shape)*
-  Ruled: the sovereign noticed the traffic and the brush at her borders and keeps watch; the Watcher warned, was ignored, and softly defected to find it himself (STAGING rounds 10–11). Left: their names (pitched in chat).
-
-- **[decide]** Caelestis's Arc 2 operations hub *(shape)*
-  Ruled: Driftwarden operations run out of a neutral zone away from Toril, where Rolt is based (STAGING round 11). Left: its name, and roughly where it sits.
+- **[decide]** Names of the Driftwarden body and the higher organization *(shape)*
+  Ruled: Caelestis is the academy; Driftwarden operations are a separate affiliate at Ondrel Anchorage on the moon Ostrel, under Rolt; Caelestis, the Driftwarden body and the sister institutions are all affiliates of a higher organization that works like a united nations; Ilsevaine Corr and Aurel Venn named (STAGING round 11). Left: the Driftwarden body's name (built from "Driftwarden"), the higher organization's name, what "the Fleet" now names, and Ostrel's world designation.
 
 - **[decide]** Names of the sister institutions *(prep)*
-  Ruled: Caelestis has sister institutions across clusters, spheres and systems, under other names and governance (STAGING round 11). Name the one or two the crew is likely to hear of first; the rest wait.
-  src: Korey, 2026-10-25 (round 10)
+  Ruled: sister institutions across clusters, spheres and systems, under other names and governance (STAGING round 11). Name the one or two the crew is likely to hear of first; the rest wait.
+  src: Korey, 2026-10-25 (rounds 10–11)
+
 - **[add]** The Princes' pressure reaches the crew as phenomena
   Ruled (STAGING round 8). Add to Cosmological Pressures (DM voice): "The crew meets the Princes of Elemental Evil's pressure as strange elemental-plane phenomena on the worlds they visit, never as the Princes themselves."
   src: Korey, 2026-10-25 (round 8); chat-organizing-framework § Open
