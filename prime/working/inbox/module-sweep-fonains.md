@@ -28,6 +28,12 @@ Applied to the Fonains Canon Reference doc, `prime/timeline/timeline.json` and
 | Air Spire | **Feathergale Spire** |
 | Ogremoch | **Ogrémoch** |
 
+## Party names (from Korey)
+
+Jorgi Panamop, Lola Lolita Bacon (Granny), Xero Cre'Tez, Lusion Cre'Tez, Hayden
+Crabshore, Ziko Mistbane, Eldree, Duran. Applied in the doc and the timeline.
+George, the Darkest Day vessel, is a different person and keeps his name.
+
 ## Spellings kept from the table
 
 - **Seldra.** The module has Seodra. The DM spelled S-E-L-D-R-A at the table, so
@@ -129,7 +135,7 @@ Confirms:
   especially rubies.
 - The statue of Moloch's ruby eyes are the largest rubies ever taken from the
   lake. They are wired with silver to every lab control panel. Moloch is an
-  exiled archdevil whose worship faded, as Zero said.
+  exiled archdevil whose worship faded, as Xero said.
 - Thessalar was a high priest of Moloch and an artificer. He killed the other
   priests and turned the temple into his lab. He made the thessalhydra, the
   owlbear and similar beasts, and he is pursuing lichdom.

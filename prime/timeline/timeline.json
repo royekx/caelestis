@@ -557,7 +557,7 @@
       "status": "past",
       "cert": "canon",
       "title": "Lola's Boys in the year 425",
-      "desc": "Sent back by the Accordance (Nelson: \"you all are going the wrong way\"), they take two gems from the Temple of Moloch: the red gem from the cavern lake and the hazy yellow gem from Thessalar's workshop. These were the planar craft's control and defense components. Without them the craft falls, and the crash is N'ghathrod's chance to escape. The party unknowingly frees their own villain from another campaign. Back in the present, the same gems restart the craft for Kwalish. While ethereal, Zero sees a giant purple slit-pupiled eye watching the party: the Elder Elemental Eye, Tharizdun. The gems formed where Olhydra and Ogrémoch collided.",
+      "desc": "Sent back by the Accordance (Nelson: \"you all are going the wrong way\"), they take two gems from the Temple of Moloch: the red gem from the cavern lake and the hazy yellow gem from Thessalar's workshop. These were the planar craft's control and defense components. Without them the craft falls, and the crash is N'ghathrod's chance to escape. The party unknowingly frees their own villain from another campaign. Back in the present, the same gems restart the craft for Kwalish. While ethereal, Xero sees a giant purple slit-pupiled eye watching the party: the Elder Elemental Eye, Tharizdun. The gems formed where Olhydra and Ogrémoch collided.",
       "tier": 1
     },
     {
@@ -612,7 +612,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The Sacred Stone takes the war pick",
-      "desc": "Lola's Boys open the dwarven vault under the Martyr Dome at the Tournament of Masters. Marlos petrifies Georgie and leaves with the pick."
+      "desc": "Lola's Boys open the dwarven vault under the Martyr Dome at the Tournament of Masters. Marlos petrifies Jorgi and leaves with the pick."
     },
     {
       "lane": "princes",
@@ -1004,7 +1004,7 @@
       {
         "t": -0.45,
         "status": "past",
-        "title": "Bastian falls; Kevulan bound to Zero; \"the fire witch will avenge\"",
+        "title": "Bastian falls; Kevulan bound to Xero; \"the fire witch will avenge\"",
         "who": [
           "Lola's Boys",
           "Vanifer",
