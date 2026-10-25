@@ -3,8 +3,7 @@
 Coverage note. The read tool hit its hourly call limit partway through.
 - Boogie: read in full (turns 0–88 of 89).
 - Casey Geim: read in full (turns 0–107 of 108; 41–107 swept 2026-10-25).
-- Sol Fortuna: turns 0–202 of 908 read in full. Turns 203–907 seen only through targeted search snippets. Items from that range are marked "(snippet)".
-- A re-sweep of Sol 203+ is needed before this file is treated as complete.
+- Sol Fortuna: read in full (turns 0–907 of 908; 203–907 swept 2026-10-25). Earlier snippet items are confirmed or corrected; no "(snippet)" tags remain.
 
 Repo checks are targeted greps of `prime/` only.
 
@@ -255,7 +254,7 @@ Coverage: read in full, turns 0–107 of 108. Items marked "(snippet)" in the ea
 ---
 
 # Sol Fortuna
-Source: https://claude.ai/chat/447bee07-5ead-401a-a4af-18813ad143ec · updated 2026-10-24
+Source: https://claude.ai/chat/447bee07-5ead-401a-a4af-18813ad143ec · updated 2026-10-25 (turns 0–907 read in full)
 
 ## Settled
 
@@ -265,19 +264,49 @@ Source: https://claude.ai/chat/447bee07-5ead-401a-a4af-18813ad143ec · updated 2
 - Recruited off-world by a Watcher. — **in repo** (campaign/spine.html, "was recruited by a Watcher")
 - Beshaba speaks minimally: "Stand," "Again," "Continue." — **in repo** (crew/sol.html)
 - The player chose Beshaba and wants to lean into her. — **not in repo** as a note
-- Sol has the Lucky feat. — **not in repo** (no "Lucky" hit)
+- Sol has the Lucky feat. — **not in repo** (BACKLOG's "Lucky feat" line is Casey's)
+- Sol's sheet runs CON +4 and CHA +4 (CHA 18) at the oath. — **not in repo**
+- The party has no cleric; Korey weighed oath spells against that. — **not in repo**
+- Sol's player likes complex mechanics, but Korey does not want the table bogged down. — **not in repo**
+- The table already struggles with ambiguity, so Augury-style vague answers are out. — **not in repo**
+- In V002 Sol took Boogie's misfortune onto himself, manifested black lightning, and heard Beshaba laugh for the first time. — **not in repo** (no "black lightning" on a Sol page)
+- Sol wears a chain at his chest (detail in the first scene draft). (inference: Claude's addition, never confirmed)
 
 ### C.R.C. and the scry beats
 - The Crystalline Retrieval Construct hunts Sol. — **in repo** (dossiers/crc.html)
-- Scry 1 is a Wisdom save, early at the academy, rolled with the scry's −5 behind the screen. Sol feels something either way; the save sets clarity only. — **in repo** in part (voyage-briefing-002.html has the first scry save, but says "The pressure passes on a success", not "feels something either way")
+- Scry 1 is a Wisdom save, early at the academy, rolled with the scry's −5 behind the screen. Sol feels something either way; the save sets clarity only. — **in repo** in part (voyage-briefing-002.html says "The pressure passes on a success", not "feels something either way")
 - Scry 2 comes just before the crew leaves H'Catha to return. — **not in repo**
-- On return the C.R.C. waits at the Caelestis main entrance; the crew hears murmurs first; then "Sol Fortuna. You are required." — **in repo** for the line (crew/sol.html); the main-entrance staging is **not in repo**
+- On return the C.R.C. waits at the Caelestis main entrance; the crew hears murmurs first; then "Sol Fortuna. You are required." — **in repo** (crew/sol.html for the line; working/BACKLOG.md for the main-entrance staging)
 - The Watcher order broke protocol to recommend Sol be taken to Caelestis. — **not in repo**
 - Mirt, Tarto and Saerthe know Sol's background and do not speak of it. — **not in repo**
 - When the C.R.C. arrives, Tarto stands up for Sol: he is under the academy's protection. — **not in repo**
 - Ezra does not know about the protocol break; he is a trainee. — **not in repo**
 - Ezra Ahl-Sier is Korey's own character, cameoed in a friend's campaign; this campaign shows him earlier, before that one. — **not in repo** (dossiers/ezra.html has no cameo note)
-- Ezra joins near Sol's oath moment, going into H'Catha. — **in repo** (dossiers/ezra.html, joins at the crew swap before H'Catha)
+- Ezra joins near Sol's oath moment, going into H'Catha. — **in repo** (dossiers/ezra.html)
+- The C.R.C. was built by Aethris after Sol left, specifically to find him (Korey, turn 848). — **in repo** (dossiers/crc.html, "Commissioned by the Fortuned of Aethris after Sol's escape")
+- Sent by the Fortuned; mission is capture, correction, return. Tone: cold inevitability, sterile certainty, beautiful-yet-wrong, no taunts (from Korey's other chat, pasted at turn 852). — **in repo** (dossiers/crc.html)
+- Look (Korey's image): faceted crystalline humanoid, glowing constellation points across the chest, polished featureless mask, glowing white eyes; the mask resolves toward Sol's face. — **in repo** in part (dossiers/crc.html has the face resolving; no constellation-chest or white-eyes detail)
+- Base is the advanced detention drone, with lethality reduced. — **in repo** in effect (crew/sol.html, "advanced detention drone chassis")
+- The C.R.C. tracks Sol by resonance, strongest where he has been. It cannot keep pace with a spelljammer in transit, and it has no Aethris handler (Korey rejected a handler as diminishing it). — **not in repo**
+- During the H'Catha transit the C.R.C. stays near Caelestis, Sol's largest recent signature; its appearance on the trail is low probability only. — **not in repo**
+- First encounter is an objective-based escape, not a kill. — **in repo** (dossiers/crc.html; crew/sol.html)
+- Chat stat block draft: Large, CR 8, AC 18, HP 152, Regeneration (thunder stops it), Refracting Shielding, Adaptive Reconfiguration at 75/50/25%, Non-Lethal Retrieval, Bespoke Target Lock, Crystal Strike with grapple, Detention Orb DC 14, Geometric Growth. — **conflicts** (dossiers/crc.html: "Medium Construct", "Challenge 7", "Armor Class 17", "Hit Points 136", adds Legendary Resistance 2/Day and a Withdrawal Threshold at 68 HP. The repo is likely the later version. Note crew/sol.html still says "CR 8", which disagrees with dossiers/crc.html.)
+- Retrieval-protocol lines drafted: "Resistance has been accounted for." "Interference is inefficient." "Your absence has created imbalance." "Adjustment required." "Retrieval delayed. Not abandoned." — **not in repo** (Claude drafts; Korey did not object)
+
+### H'Catha transit (next beats)
+- The crew has the beholder ship and is heading to H'Catha; about two weeks of transit, run as downtime rather than fights every session. — **in repo** in part (BACKLOG, "Fourteen days out"; the downtime framing is not)
+- A stop at a cantina or way-station on the way. — **not in repo** as a Sol beat (realms/cantina.html exists)
+- A wanted-style poster for Sol is on the bounty board. Aethris can do this; the C.R.C. proves its reach. — **not in repo**
+- Whoever engages the board sees it (Korey's example: Tumak asks for a bounty board). If nobody engages, Sol or the highest passive Perception notices it, or notices someone watching. No roll needed to recognise Sol. — **not in repo**
+- The watcher saw the poster, then saw someone matching it walk in. How the watcher engages is undecided. — **not in repo**
+- Design principle for arcs: present something and let the player respond; never dictate. — **not in repo** as a Sol note
+- Keep small daily misfortunes in play for Sol (chores landing on him, things falling). Korey flagged this as something the player really wants. — **not in repo**
+- A per-day roll table of backstory beats across the crew was floated; Korey liked it as an option. — **not in repo**
+
+### Acknowledgment scene (level 3 oath)
+- Korey's own text: misfortune's possibilities settle beside Sol "like the memory of an old friend"; "Well, you had my curiosity but now, you have my attention." [Sol RPs] "I must say, it was a bold move leaving your 'perfect' home, but what makes you so sure you escaped? Fate can be a cruel and twisted thing. Wield it wisely. Or not." *chuckles* — **in repo** (crew/sol.html; dossiers/beshaba.html)
+- Beshaba talks, capriciously; she is not limited to three words. Korey rejected a prescriptive version that told Sol what he felt. — **in repo** in effect (crew/sol.html, "she talks at him rather than to him")
+- Run before V003's Convening, Sol alone; the scene is the level-up. — **not in repo**
 
 ### Pre-oath Fortune mechanic (levels 1–2)
 - Trigger: a party member fails any roll. Sol may intervene. — **not in repo**
@@ -292,27 +321,51 @@ Source: https://claude.ai/chat/447bee07-5ead-401a-a4af-18813ad143ec · updated 2
 - After two or three interventions Beshaba asks: "How long will you bear it?" His answer shapes the oath scene. — **not in repo**
 - Oath scene: a full commitment clears penalties quietly; a hedged answer earns "Finally." — **not in repo**
 
-### Misfortune feature (permanent character feature)
-- Korey's mechanic is Sol's own because he is Misfortuned; the oath is separate because he embraces Beshaba. It persists even if he breaks the oath. — **not in repo**
-- Cap: Misfortune up to proficiency bonus. Each point is −1 to a d6-rolled ability modifier, including spell save DC and spell attack. — **not in repo**
-- Absorb (reaction): a friendly creature within 60 ft fails; after the die is shown, before the outcome is declared, it becomes a success and Sol gains 1 Misfortune. — **not in repo**
-- Discharge (reaction): at cap, apply ± total Misfortune to any creature's roll within 60 ft; all Misfortune clears. A natural 20 stays a crit. — **not in repo**
-- Absorb and Discharge share the reaction and cannot both happen in a round. — **not in repo**
-- Clear Misfortune items in D&D Beyond before processing a level up. — **not in repo**
-- The feature was first named "Misfortune's Favored", then renamed "Misfortune" so the capstone could take "Misfortune's Favored". (snippet) — **in repo** for the capstone name (crew/sol.html, "20 Misfortune's Favored")
+### Misfortuned (Sol's permanent character feature)
+- The character feature is Sol's own because he is Misfortuned; the oath is separate because he embraces Beshaba. It persists even if he breaks the oath. — **not in repo**
+- The personal burden lives in this feature; the oath stays pure upside, matching official paladin oaths (turn 443). — **not in repo**
+- Name: first "Misfortune's Favored", then "Misfortuned" (Korey, turn 688: "That is what Sol is"). "Misfortune's Favored" moved to the oath capstone. Arc: Misfortuned → Oath of Misfortune → Misfortune's Favored. — **not in repo** for the feature name; **in repo** for the capstone (crew/sol.html, "20 Misfortune's Favored")
+- Last locked text (turn 757): Misfortune up to proficiency bonus; each point is −1 to a d6-rolled ability modifier, including spell save DC and spell attack; clears on Unburden or level up. — **not in repo**
+- Reactions renamed Absorb → Burden and Discharge → Unburden (Korey, turn 756). Burden: a friendly creature within 60 ft fails; after the die, before the outcome, it becomes a success and Sol gains 1 Misfortune. Unburden: at cap, apply ± total Misfortune to any creature's roll within 60 ft; all Misfortune clears; a natural 20 stays a crit. One reaction per round. — **not in repo**
+- D&D Beyond tracking: each point is a "Misfortune (STR)" etc. item; clear them before processing a level up. — **not in repo**
+- D&D Beyond text: plain words, no arrows, dashes or equals signs; two-column d6 table. — **not in repo**
 
-### Oath (late state, snippet range)
-- The homebrew oath ends as the Oath of Misfortune. — **in repo** (crew/sol.html)
-- Oath resource is Jinx; the condition is Jinxed. — **in repo** (crew/sol.html)
-- Tenets: Never Yield; Trial by Fire; Risk Is Not Ruin. — **in repo** (crew/sol.html)
-- Rebalanced to 5.5e. (snippet) — **in repo** in effect (crew/sol.html uses d20 tests, magic action)
-- Feature names in the last snippet seen: Spread of Misfortune (CD), Twist of Fate (L3), Harbinger's Veil (L7), Crucible of Misfortune (L15: Reversal + Inevitable Strike), capstone sub-features Withering Presence, Source of Misfortune, Mantle of Misfortune, Redistribute Fortune. (snippet) — **conflicts** (crew/sol.html: CD "Misfortune's Wake" and "Misfortune's Edge", L7 "Misfortune's Pall", L15 "Misfortune's Reckoning"; Reversal and Inevitable Strike match. The repo is likely the later version.)
+### Oath of Misfortune (final, turns 203–841)
+- Name path: Oath of Ill Omen → Oath of Misfortune (turn 684), to name it after what it does. — **in repo** (crew/sol.html)
+- Written deity-agnostic: no Beshaba in features, capstone or intro ("They face misfortune not in fear but in understanding"). — **in repo** (crew/sol.html)
+- 5.5e structure and D&D Beyond wording: "may" over "can"; "use Channel Divinity"; 2024 oath-spell intro; no [action] tags; [rules] and [spell] tags kept. — **in repo** in effect (crew/sol.html; "Full D&D Beyond snippets exist outside the wiki")
+- Damage identity: subclass features deal necrotic (and psychic); Divine Smite stays radiant as the base class. Korey: "That's paladin main class. subclass gives him necrotic." — **in repo** in part (crew/sol.html has necrotic and psychic; the smite rule is not stated)
+- Bruiser identity: no defensive level-15 feature; defense comes from the base class and oath spells. Korey: "Ill Omen isn't about changing what happened but instead about mitigating it entirely or rolling with it." — **not in repo**
+- Tenets: Never Yield; Court Adversity (replaced "Trial by Fire", turn 737); Risk Is Not Ruin. "Forged" became "earned". — **conflicts** (crew/sol.html: "Trial by Fire &mdash; a life without adversity is a life unlived")
+- Oath spells: 3rd Arms of Hadar, Hex; 5th Detect Thoughts, Warding Bond; 9th Bestow Curse, Life Transference; 13th Death Ward, Phantasmal Killer; 17th Steel Wind Strike, Synaptic Static. Alphabetical in row. 2 of 10 on the paladin list. — **in repo** (crew/sol.html)
+- Oath spells may come from any class list (Ancients, Vengeance, Glory precedent). — **not in repo**
+- Jinx (L3), one feature with two free options on your turn, each once per turn: Jinx a Creature (1 charge; a creature within 30 ft has Disadvantage on d20 Tests using a chosen ability until the start of your next turn) and Jinx Yourself (before a d20 Test, spend any number of charges; crit and fail thresholds each move 1 per charge until the start of your next turn; 1d4 psychic per charge on a critical failure). Usable outside combat. — **in repo** (crew/sol.html)
+- Any Jinx-affected creature, Sol included, counts as cursed; Remove Curse or Greater Restoration ends it. Korey accepted that this can end a self-Jinx. — **in repo** in part (crew/sol.html, "Jinxed is a curse and can be removed as one")
+- Jinx charges: 1 + Charisma modifier (minimum 2), all back on a long rest (Korey, turn 720). — **conflicts** (crew/sol.html: "Charges equal his Charisma modifier, minimum one")
+- Regain 1 charge on a critical hit, a critical failure, or being the target of a critical hit; Korey framed this as self-balancing. — **in repo** (crew/sol.html)
+- Channel Divinity (L3), two options so the player chooses: Misfortune's Wake and Misfortune's Edge. — **in repo** (crew/sol.html)
+- Misfortune's Wake: a bonus action, no Jinx charge; choose a creature within 30 ft and an ability; it and others of your choice within 15 ft have Disadvantage on d20 Tests with that ability until the start of your next turn. No damage, no save. — **conflicts** (crew/sol.html: "Misfortune's Wake &mdash; a magic action spreading Jinxed")
+- Misfortune's Edge: a bonus action, 1 minute; weapon hits deal 1d4 + CHA necrotic, 1d6 + CHA against a cursed target. — **in repo** (crew/sol.html)
+- Misfortune's Pall (L7): you and allies in the Aura of Protection have Advantage on death saves and regain 1 HP on a 19 or 20; Advantage on saves against any effect from a cursed creature, wherever that creature is. — **not in repo** (crew/sol.html names the feature only)
+- Misfortune's Reckoning (L15): Reversal (reaction weapon attack with Advantage on your own critical failure) and Inevitable Strike (once per turn, critical hit on a cursed creature adds psychic damage equal to twice paladin level). Korey kept the cap rather than add a crit-fail cost. — **in repo** (crew/sol.html; the damage figure is not stated)
+- Reckoning flavor: "You no longer endure misfortune. You direct it." — **not in repo**
+- Misfortune's Favored (L20): bonus action, 10 minutes, once per long rest or a 5th-level slot. Misfortune: any creature in the aura takes CHA-mod necrotic on entering or starting its turn there; hostile creatures in the aura don't score critical hits. Favor: Sol is exempt; allies in the aura crit on 19–20 and have Advantage on attacks against cursed creatures; Sol's Jinx can pick two abilities. — **not in repo** (crew/sol.html says "The capstone." only)
+- Capstone damage hits allies too: "misfortune does not care who the target is" (Korey); Cloak of Flies cited as precedent. Allies trade the damage for shared benefits. — **not in repo**
+- Naming convention: "Misfortune's ___" for CDs and L7–20; Jinx stands apart; capstone halves "Misfortune" and "Favor" (Korey changed "Favored" to "Favor"). — **in repo** in effect (crew/sol.html names)
 
-### Aethris and the gods (snippet range)
-- The Prism Ascendant is a Monolith: reality's automatic response to a Zenith. The Temple believes it is Tymora's answer. It is not. — **in repo** (campaign/spine.html, "Aethris holds that the Monolith's arrival is Tymora's answer")
-- This Zenith/Monolith is the first on Aethris, though Misfortuned have existed for generations. (snippet) — **in repo** in effect (realms/aethris.html)
-- Neither goddess owns or controls the Monolith; their rivalry plays out beneath it. (snippet) — **not in repo** as stated
-- Korey wants to develop Tymora and the Beshaba/Tymora interplay. (snippet) — **not in repo**
+### Aethris and the gods
+- The Prism Ascendant is a Monolith: reality's automatic response to a Zenith. The Temple believes it is Tymora's answer. It is not (Korey, turn 864). — **in repo** (realms/aethris.html, "Aethris holds that the Monolith's arrival is Tymora's answer")
+- This Zenith/Monolith is the first on Aethris, though Misfortuned have existed for generations (turn 858). — **in repo** in effect (realms/aethris.html)
+- Gods know little to nothing about monoliths; the archive of the cosmos sits above every god, Vecna included (turn 872). — **in repo** (cosmology/index.html, "Monoliths preserve something, though not in ways gods un[derstand]")
+- Monoliths record what is, not what people believe; they are agnostic (turn 872). — **not in repo** as stated
+- Tymora's tenet "fortune favors the bold" was misread by her followers: they pushed luck until it stopped being luck, removing the risk luck needs (Korey, turn 862). — **not in repo**
+- Tymora and Beshaba need each other; fortune needs misfortune (Korey, turn 862). — **not in repo**
+- Gods give direction that never shows the full picture of what they want; the sisters' conflict should not read as simple or direct (Korey, turn 860). — **in repo** in effect (dossiers/beshaba.html, "She has never named a want")
+- Aethris is a whole planet; not everyone follows Tymora. There may be a lesser Beshaba following and other fortune gods, major and minor (Korey, turn 860). — **not in repo**
+- Korey wants to develop Tymora and the Beshaba/Tymora interplay. — **not in repo**
+
+### Style
+- No stacked negations, and no three short sentences in a row for emphasis; avoid AI-isms (Korey, turns 866 and 870). — **in repo** in part (CLAUDE.md, "no stacked negations"; the triple-sentence rule is not written)
 
 ## Superseded
 - Fortune mechanic v1: DM-prompted CHA check DC 12 minus Misfortune; d12 then d8 mishap table; scripted then category mishaps → retired.
@@ -324,23 +377,51 @@ Source: https://claude.ai/chat/447bee07-5ead-401a-a4af-18813ad143ec · updated 2
 - Pre-oath mechanic as a level 1–2 precursor that retires at level 3 → permanent feature.
 - Auto-release at six Misfortune → cap at proficiency bonus with chosen Discharge.
 - Discharge declared before the roll → after the die is shown, before the outcome.
-- Oath resource Karma → Doom → Omen → Jinx.
-- Oath of Misfortune (player's original homebrew) → Oath of the Doomed → Oath of Ill Omen → Oath of Misfortune.
-- L15 Misfortune's Favourite → Beshaba's Boon (working title) → Grim Resilience → Crucible of Fortune → Crucible of Misfortune (snippet) → repo shows Misfortune's Reckoning.
-- Capstone: crit-failure immunity (Master of Fortune) → Ill Omen (activated, 1 minute) → 5.5e version (bonus action, 10 minutes) → Misfortune's Favored (snippet).
-- Beshaba as a schemer playing generational chess over the Ascendant → corrected by Korey: the Ascendant is a Monolith above both goddesses. (snippet)
+- Character feature named "Misfortune's Favored" → "Misfortuned".
+- Absorb / Discharge → Burden / Unburden.
+- Oath resource Karma → Doom → Omen (accumulating, reset to 1, d6/d8 spend) → Omen pool of CHA mod → Omened condition → Jinx.
+- Oath name: Oath of Misfortune (player's original homebrew) → Oath of the Doomed → Oath of Ill Omen → Oath of Misfortune.
+- Channel Divinity: Bad Omen and Cloak of Ire → Spread of Misfortune (magic action, 2d8 + CHA psychic AoE + Omened) → Misfortune's Wake (bonus action, no damage) plus Misfortune's Edge.
+- Edge as crit range 18–20 / fail 1–3 → necrotic damage rider; a self-damage backfire on Edge → removed.
+- Misfortune's Gambit (L7 CD, crit 18–20 / fail 1–3, 1d6 psychic on crit fail) → folded into Jinx Yourself.
+- Twist of Fate (passive crit 19–20 / fail 1–2, L3) → removed; renamed "Tempt Fate" briefly → Jinx Yourself.
+- Self-Jinx on a random d6 ability after a crit fail → dropped (spiral, tracking).
+- Jinx as a bonus action → free action on your turn.
+- Omened lasting to end of next turn → start of next turn (blocked double-dipping).
+- Omened as a unique tracked condition keyed to Sol → any cursed creature triggers the kit.
+- L7 aura: Aura of Vulnerability (player's original) → Aura of Ill Omen (d4 penalty) → no-Advantage + necrotic on failed saves → Charmed-save Advantage + Sol's Advantage on the Omened ability → Harbinger's Veil → Pall of Misfortune → Misfortune's Pall.
+- L15: Misfortune's Favourite → Beshaba's Boon (working title) → Grim Resilience (Deny the Fall + Endurance) → Crucible of Fortune → Crucible of Misfortune → Misfortune's Reckoning.
+- Capstone: crit-failure immunity (Master of Fortune) → Ill Omen (activated, 1 minute) → 5.5e version (bonus action, 10 minutes; Redistribute Fortune + Transcend Failure) → Wellspring/Cascade of Doom drafts → Withering Presence, Source of Misfortune, Mantle of Misfortune, Redistribute Fortune → Misfortune and Favor halves under Misfortune's Favored.
+- Oath spell list went through Bane, Blindness/Deafness, Darkness, Ray of Enfeeblement, Fear, Speak with Dead, Revivify, Blight, Contagion, Insect Plague, Hallow (cool for the ship, not worth 1,000 gp), Enervation and Geas → the final list above.
+- Tenet "Trial by Fire" → "Court Adversity".
+- Beshaba as a schemer playing generational chess over the Ascendant, the Ascendant as Tymora's monument or a prison of Beshaba → corrected by Korey: the Ascendant is a Monolith above both goddesses, and gods know little of monoliths.
+- Monolith archives what people believe (Claude) → corrected: monoliths record what is.
+- C.R.C. "older than your scars" / built before Sol survived → built after he left.
+- First acknowledgment drafts (three words only; then a long Beshaba monologue) → Korey's own text.
 - Scry 2 before departure to H'Catha → just before leaving H'Catha.
 - "Fail = feels nothing" on the scry → feels something either way.
 
 ## Open
+- Misfortuned rebalance, on hold since turn 899 ("hold that and I'll come back to it"). Korey's diagnosis: Sol can change several rolls a combat and Unburden without feeling the cost. Pending draft: Burden charges equal to proficiency bonus, reset on a long rest only; Misfortune level = charges spent, a flat −1 per level to all Sol's d20 Tests; Burden adds +CHA to an ally's roll after the roll and before the outcome (Korey moved off auto-success after comparing it to Legendary Resistance); Unburden once per long rest at Misfortune 2+, adding proficiency bonus × Misfortune to Sol's own d20 Test or damage roll. Exhaustion as the cost was tried and dropped. Self-Burden is out.
 - Sol's reward from Beshaba at the oath, based on the tally: support-flavored and unique to him, still to be found in play.
 - Whether Sol ever learns how much of his escape Beshaba arranged.
 - Whether the Fortuned want him as a person or a component (also open in crew/sol.html).
-- Beshaba's want (repo says she has never named one; the chat explored several without settling).
-- Turns 203–907 not fully read; many oath and lore decisions are likely there.
+- Beshaba's want. Claude's last read: she wants him to keep existing as her local anchor. Korey did not confirm.
+- Developing Tymora: her doctrine's misreading, and whether she notices herself thinning on Aethris.
+- What the Prism Ascendant does above an unfinished Zenith (also open in realms/aethris.html).
+- Who on Aethris commissioned the C.R.C., and why they care.
+- The C.R.C.'s first encounter location (dossiers/crc.html leans Sky Dock; chat had the main entrance). Whether its stored spell is Locate Creature or Hold Person.
+- How the poster watcher engages: mercenary, opportunist, informant or sympathiser. Poster issuer name ("Threadbare Consortium") is a placeholder.
+- Whether the crew-wide transit roll table gets built.
+- Whether the C.R.C. is unique (Claude recommended unique for now).
 
 ## Documents produced
 - sol-fortune-mechanic.md (two versions), file in chat outputs. Not in repo.
 - sol-beshaba-arc.md, DM arc notes, file in chat outputs. Not in repo.
-- sol-the-misfortuned-feature.md → sol-misfortunes-favored.md (full and D&D Beyond short text), file in chat outputs. Not in repo.
-- oath-of-the-doomed.md → oath-of-ill-omen.md → oath-of-misfortune.md, file in chat outputs. The oath reached the repo in summary form (crew/sol.html; "Full D&D Beyond snippets exist outside the wiki").
+- sol-the-misfortuned-feature.md → sol-misfortunes-favored.md → misfortuned.md (full text plus D&D Beyond snippet, Burden/Unburden version), file in chat outputs. Not in repo.
+- oath-of-the-doomed.md → oath-of-ill-omen.md → oath-of-misfortune.md, file in chat outputs. Reached the repo in summary form (crew/sol.html), with the tenet, charge-count and Wake-action differences noted above.
+- oath-of-misfortune-dnd-beyond-snippets.md, per-feature copy-paste snippets, file in chat outputs. Not in repo ("Full D&D Beyond snippets exist outside the wiki").
+- oath_comparison, visualizer widget comparing Devotion, Vengeance and Ill Omen. Chat only.
+- sol-acknowledgment-scene.md, three drafts, the last holding Korey's text plus RP prompts and C.R.C. hooks, file in chat outputs. The scene text reached the repo (crew/sol.html).
+- crc-stat-block.md, C.R.C. stat block, voice lines and first-encounter structure, file in chat outputs. A different version is in the repo (dossiers/crc.html).
+- Wanted poster draft text ("RETURN REQUESTED ... No reward for remains ... Threadbare Consortium"), in chat only. Not in repo.
