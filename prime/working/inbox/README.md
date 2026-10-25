@@ -21,4 +21,6 @@ taken from search snippets.
 
 ## Other
 
+- module-sweep-fonains.md: Princes of the Apocalypse, Lost Laboratory of Kwalish
+  and Temple of Moloch checked against the transcripts.
 - cretez-foundry-notes.md: the Cre'Tez family notes, exported from Foundry.

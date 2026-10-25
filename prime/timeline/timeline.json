@@ -189,7 +189,7 @@
       "lane": "princes",
       "status": "past",
       "cert": "canon",
-      "title": "Olhydra and Ogremoch collide",
+      "title": "Olhydra and Ogrémoch collide",
       "desc": "Their clash carves the waterway under what becomes the Temple of Moloch; elemental gems flow into it.",
       "t": -15000,
       "tier": 2
@@ -244,7 +244,7 @@
       "lane": "fonains",
       "status": "past",
       "cert": "canon",
-      "title": "Qalish loses the craft",
+      "title": "Kwalish loses the craft",
       "desc": "His party dies to the Sphinx; he puts their brains in tubes, opens a gate to the Nine Hells, and a bone devil drives him out.",
       "t": -30,
       "tier": 2
@@ -263,7 +263,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The Drowned God: the trident taken",
-      "desc": "Straight after the Vessel theft. The trident was sealed in the heart of a living coral reef grown over the ruins of a sunken city (\"an old craft of some sort\"), guarded by the Thessalkraken and revered by kraken priests who serve \"the mind.\" Pulling it killed the reef and sank the island. Gar Shatterkill holds it and hears a voice in the water: \"The others are in motion.\"",
+      "desc": "Straight after the Vessel theft. The trident was sealed in the heart of a living coral reef grown over the ruins of a sunken city (\"an old craft of some sort\"), guarded by the Thessalkraken and revered by kraken priests who serve \"the mind.\" Pulling it killed the reef and sank the island. Gar Shatterkeel holds it and hears a voice in the water: \"The others are in motion.\"",
       "t": -6,
       "tier": 1
     },
@@ -300,7 +300,7 @@
       "status": "past",
       "cert": "canon",
       "title": "Lola's Boys, Sessions 1–13",
-      "desc": "Qalish found, time travel to the Temple of Moloch in 425, the Accordance names its champions, the craft restarted with the stolen gems.",
+      "desc": "Kwalish found, time travel to the Temple of Moloch in 425, the Accordance names its champions, the craft restarted with the stolen gems.",
       "t": -0.88,
       "end": -0.62,
       "tier": 1
@@ -310,7 +310,7 @@
       "status": "now",
       "cert": "canon",
       "title": "Fonains now: Session 28",
-      "desc": "Two months after the Monolith broke. The elder brain under the Barrier Peaks is buried, not confirmed dead. The air shard opens onto the Air Spire, where the spear summons Yan-C-Bin.",
+      "desc": "Two months after the Monolith broke. The elder brain under the Barrier Peaks is buried, not confirmed dead. The air shard opens onto the Feathergale Spire, where the spear summons Yan-C-Bin.",
       "t": -0.43,
       "tier": 1
     },
@@ -557,7 +557,7 @@
       "status": "past",
       "cert": "canon",
       "title": "Lola's Boys in the year 425",
-      "desc": "Sent back by the Accordance (Nelson: \"you all are going the wrong way\"), they take two gems from the Temple of Moloch: the red gem from the cavern lake and the hazy yellow gem from Thessalar's workshop. These were the planar craft's control and defense components. Without them the craft falls, and the crash is N'ghathrod's chance to escape. The party unknowingly frees their own villain from another campaign. Back in the present, the same gems restart the craft for Qalish. While ethereal, Zero sees a giant purple slit-pupiled eye watching the party: the Elder Elemental Eye, Tharizdun. The gems formed where Olhydra and Ogremoch collided.",
+      "desc": "Sent back by the Accordance (Nelson: \"you all are going the wrong way\"), they take two gems from the Temple of Moloch: the red gem from the cavern lake and the hazy yellow gem from Thessalar's workshop. These were the planar craft's control and defense components. Without them the craft falls, and the crash is N'ghathrod's chance to escape. The party unknowingly frees their own villain from another campaign. Back in the present, the same gems restart the craft for Kwalish. While ethereal, Zero sees a giant purple slit-pupiled eye watching the party: the Elder Elemental Eye, Tharizdun. The gems formed where Olhydra and Ogrémoch collided.",
       "tier": 1
     },
     {
@@ -566,7 +566,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The craft falls; N'ghathrod escapes",
-      "desc": "Stripped of its gems, the craft comes down. N'ghathrod escapes in the crash with his lieutenants and the tadpoles he can carry. The craft is a megadungeon whose unexplored levels become the Mad Mage dungeon, and it breaks up as it falls: the main body raises the Barrier Peaks, a broken-off section becomes Dowing Glowing, and the Thessalkraken lands separately in the sea, where it later guards the trident's reef. The elder brain is carried on to Fonains; when N'ghathrod reaches for it, Vecna answers.",
+      "desc": "Stripped of its gems, the craft comes down. N'ghathrod escapes in the crash with his lieutenants and the tadpoles he can carry. The craft is a megadungeon whose unexplored levels become the Mad Mage dungeon, and it breaks up as it falls: the main body raises the Barrier Peaks, a broken-off section becomes Daoine Gloine, and the Thessalkraken lands separately in the sea, where it later guards the trident's reef. The elder brain is carried on to Fonains; when N'ghathrod reaches for it, Vecna answers.",
       "tier": 1
     },
     {
@@ -585,7 +585,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The Monolith breaks",
-      "desc": "Sessions 14–15. Qalish's cannon splits it into four shards, each guarded by a Prince-aligned elemental. The cyst drops Ziko, his blade now black. Tharizdun: \"Wait for the day of chaos.\""
+      "desc": "Sessions 14–15. Kwalish's cannon splits it into four shards, each guarded by a Prince-aligned elemental. The cyst drops Ziko, his blade now black. Tharizdun: \"Wait for the day of chaos.\""
     },
     {
       "lane": "princes",
@@ -621,7 +621,7 @@
       "status": "now",
       "cert": "canon",
       "title": "Yan-C-Bin summoned",
-      "desc": "On the floating island above the Air Spire, Aerisi Kalinoth, the winged elf queen, raises the spear: \"With this key, I call forth my lord and master.\" The Prince of Air manifests."
+      "desc": "On the floating island above the Feathergale Spire, Aerisi Kalinoth, the winged elf queen, raises the spear: \"With this key, I call forth my lord and master.\" The Prince of Air manifests."
     },
     {
       "lane": "princes",
@@ -1004,7 +1004,7 @@
       {
         "t": -0.45,
         "status": "past",
-        "title": "Bastion falls; Kevulan bound to Zero; \"the fire witch will avenge\"",
+        "title": "Bastian falls; Kevulan bound to Zero; \"the fire witch will avenge\"",
         "who": [
           "Lola's Boys",
           "Vanifer",
