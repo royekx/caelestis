@@ -47,6 +47,7 @@ staging is distributed page by page.
   planning pages hold what is undecided. A dossier, item or location entry
   never carries "pending", "TBD" or "decision needed". If a detail is unknown,
   the entry says what is known and stops.
+- **Names for constructs and concepts are plain and definitive.** Avoid "The" plus one vague word ("the Figure"): it tells the reader nothing. A few descriptive words are better. People may carry monikers.
 - Not everything will be decided, and some things will change. That is fine;
   rewrite the entry when it does.
 
