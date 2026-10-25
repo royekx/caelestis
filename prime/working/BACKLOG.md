@@ -26,7 +26,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | fix | drop | add |
 |---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 18 | 19 | 0 | 25 |
+| Cosmology | cosmology/, glossary/, chart/ | 14 | 20 | 0 | 25 |
 | Realms | realms/ except Fonains; a new Oerth page | 35 | 33 | 3 | 47 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 13 | 13 | 1 | 29 |
 | Timeline | the rest of timeline.json | 3 | 5 | 0 | 0 |
@@ -36,11 +36,11 @@ staging once Korey has read and accepted them.
 | Crew | crew/ | 32 | 16 | 0 | 73 |
 | Artifacts and vessels | artifacts/, vessels/ | 12 | 26 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 18 | 19 | 0 | 17 |
-| New pages | 14 proposed pages, the hub, notes/ | 20 | 7 | 2 | 33 |
+| New pages | 14 proposed pages, the hub, notes/ | 22 | 7 | 2 | 34 |
 | Automation and tracker | the session pipeline and tracker alternatives | 10 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 2 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 7 | 4 | 0 | 1 |
-| **Total** | | **233** | **252** | **14** | **398** |
+| **Total** | | **231** | **253** | **14** | **399** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -51,7 +51,7 @@ Each settles items on several pages at once. Rule these first.
 1. ~~**Residue piece counts by Axiom.**~~ *Answered: Dissolution 2, Transformation 3, Boundary 5, Convergence 7.*
 2. ~~**Aperture or Atrium.**~~ *Answered: Atrium.*
 3. ~~**Does opening a heart need a Monolith?**~~ *Ruled: no; linking does (STAGING round 2).*
-4. **A name for Vecna's fifteen-heart circle.** *Model ruled (STAGING round 2); the name is open.* Glossary, chart, realms index, ascension, timeline.
+4. ~~**A name for Vecna's fifteen-heart circle.**~~ *Ruled: the Circle of Fifteenths, Vecna's private name for it.*
 5. ~~**Act structure and the Citadel.**~~ *Ruled: Citadel and Core are late Arc 3 or Arc 4.* Level bands per arc are a new decide on the spine.
 6. ~~**N'ghathrod's five centuries.**~~ *Ruled: exile from Glyth about four centuries ago; centuries of searching; the push for hearts only in recent decades.* Which residue piece gave him long life is a new decide.
 7. **What the H'Catha meteor is and why Caelestis wants it.** *Narrowed: containment for Caelestis, and the Sovereign Eye can't see through it; open: the Ortholith-fragment layer and why now.*
@@ -65,8 +65,8 @@ Each settles items on several pages at once. Rule these first.
 15. ~~**OSTEKK-6 as sole survivor.**~~ *Ruled: the only active survivor; OSTEKK-2 is inert and can be healed.*
 16. **The tracker and session ingest.** Keep the repo JSON record and in-chat runbook, or move to an alternative. See the Automation and tracker section.
 17. **Dossier tab names and "Open" subsections.** *Tab names answered: the four tabs stand. Open: whether "Open" subsections may stay in DM notes.*
-18. **How Clint left the Bellwether Crow**, and whether Caelestis knows Vocath was behind it. Dossiers, factions, colony, chart, timeline.
-19. **Keep or cut Tarroway.** Ten pages.
+18. ~~**How Clint left the Bellwether Crow.**~~ *Ruled: a deliberate dive through a color pool to draw the boarders off.* What the ambush was after is a new decide.
+19. ~~**Keep or cut Tarroway.**~~ *Ruled: keep him as a thread, mainly in the archive; cut the timing tables.*
 
 ## Answered from the sources (review)
 
@@ -155,10 +155,6 @@ Order under each page: decide, fix, drop, add.
 - **[decide]** Names for the spheres and designated systems
   SPH-01 included. Listed in the page's § Open.
   src: framework § Open
-
-- **[decide]** New name for the world-heart network
-  Same question as "A name for Vecna's fifteen-heart circle" in the glossary; settle once.
-  src: Korey, 2026-10-25 (round 2)
 
 - **[decide]** Keep or rename "residue"
   Memory: "the name 'Reach residue' may change".
@@ -315,17 +311,10 @@ Order under each page: decide, fix, drop, add.
 
 ### glossary/index.html
 
-- **[decide]** Keep or cut Tarroway
-  M. Tarroway is Strake Station's cartographer, who keeps the staged Cairn approach packet and "has every fact and the wrong model". Korey does not recognise him; he likely came from a chat. He appears on dossiers/tarroway.html, the dossiers index, Miken, Vth'oramu, Joffrey, Verrow, the Vocath operation, the realms index, Strake Station and the chart. Keep him (and say why his timing tables fail), or cut him from every page.
-  src: Korey, 2026-10-25 (round 2)
-
-- **[decide]** Vecna's divine domains
-  Ruled: secrets, knowledge, manipulation and trickery, with a hold over death and undeath. Published 5e lists Vecna as "the god of evil secrets" (2014 Player's Handbook, Greyhawk; 2014 DMG, Dawn War pantheon) with the Knowledge domain, and the DMG adds Death; the Sword Coast Adventurer's Guide names him for the Arcana domain. Older editions add Magic and Evil, with Planning, Pride, Tyranny and Destiny as minor portfolios. His symbol is an eye in the palm of a left hand. Proposal: Knowledge, Death and Trickery, with Arcana as an option. His symbol fits the reveal: the eye and the hand he is missing.
-  src: Korey, 2026-10-25 (round 3); greyhawkonline.com/greyhawkwiki/Vecna; en.wikipedia.org/wiki/Vecna
-
-- **[decide]** A name for Vecna's fifteen-heart circle
-  The model is ruled (STAGING § Vecna's working): fifteen opened, linked hearts, three per sphere, each sphere linking to both neighbours and to the First Heart, forming a spellcasting circle across the cosmos. "The Figure" and "the lattice" are both out under the naming rule. Pick a plain, descriptive name of a few words. It replaces "the Figure", "the lattice" and "the world-heart network" on glossary, chart, realms index, ascension and timeline.
-  src: Korey, 2026-10-25 (round 2)
+- **[fix]** Trim Tarroway to a thread
+  Keep M. Tarroway as Strake Station's cartographer whose readings first hinted at an unknown vessel disturbing the satellites at the system's edge (STAGING round 4). Cut the "timing tables" and their failure everywhere. Reduce his presence on the ten pages that mention him to passing references; his main home is the Fleet Intelligence Archive (restricted/). Nothing public.
+  Touches: dossiers/tarroway.html, dossiers/index.html, dossiers/miken.html, dossiers/vthoramu.html, dossiers/joffrey.html, dossiers/verrow.html, factions/vocath-operation.html, realms/index.html, realms/strake-station.html, chart/index.html, restricted/.
+  src: Korey, 2026-10-25 (round 4)
 
 - **[decide]** The downward tithe
   "The downward tithe" names the lesser taken Vecna's vessels can pass through Atria. A new ruling adds an upward tithe: a portion of every taken person flows up to N'ghathrod and extends his life (STAGING round 3). Rename the vessel sense so the two are not confused, and drop "tithe" from anything that reads as worship.
@@ -398,6 +387,7 @@ Order under each page: decide, fix, drop, add.
 - **[fix]** How Clint reached Fonains
   The Crow site says "How he crossed is undecided" and lists "How Clint Dashforest reached Fonains" as open. State it: after the Bellwether Crow ambush, a psychic wind carried Clint Dashforest to SYS-04, and he reached W-21 Fonains before its Monolith appeared. Close the open line. (Whether he went overboard or took a craft is a separate decide in the Timeline section.)
   src: memory-canon (campaign-canon, Astral Sea travel features); timeline "Clint lands on Fonains"
+  updated (round 4): superseded. Clint went through a color pool on purpose, drawing the boarders off; write it from STAGING § Clint Dashforest and the Bellwether Crow.
 
 - **[fix]** Realmspace travel line
   Says "Closed lane to the Tetherbreak sector." Change to "Charted lane to Strake Station; closed beyond it." Only Strake–Cairn is closed (the Tetherbreak entry already says so).
@@ -1205,10 +1195,10 @@ Order: decide, fix, drop, add.
   "The Glyth Watcher gets out" sits at t -3 (cert working). glyth-watcher.md leaves how she got out open. Options: keep about three years ago; or leave the event undated.
   src: glyth-watcher § Open; timeline.json
 
-- **[decide]** How Clint left the Bellwether Crow
-  Ruled: Tarto and Saerthe saw him go overboard, and that belief is part of their story. Vocath's people were the attackers. Options for what really happened: (a) he went overboard into an astral wind on purpose; (b) he took a skiff into an astral wind to lure Vocath's people away from the crew. Also: does Caelestis (Saerthe, Mirt) know Vocath was behind the ambush?
-  Touches: dossiers/clint.html, factions/vocath-operation.html, campaign/colony/, chart (Crow site), timeline.
-  src: Korey, 2026-10-25 (round 2)
+- **[decide]** What Vocath's crew was after on the Bellwether Crow
+  Ruled: Clint left the ship through a color pool to draw the boarders off, letting them believe he carried what they came for (STAGING round 4). What were they ambushing the Crow for? It must be something Caelestis had aboard, worth an ambush with N'ghathrod's help, and it ties to the deal (captives for Vocath, an asset inside Caelestis for N'ghathrod). Also: does Caelestis know Vocath's crew was behind it?
+  Touches: dossiers/clint.html, factions/vocath-operation.html, campaign/colony/, timeline.
+  src: Korey, 2026-10-25 (round 4)
 
 - **[fix]** Arcs, not acts
   Rename the planned crew events to the spine's arc names (the wiki says "Arc", never "Act"):
@@ -1563,12 +1553,14 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   Page says "When the first boarding came, he seized the boarders' own craft and broke away with it" and "How he crossed is undecided." Canon: Clint Dashforest went overboard in the Bellwether Crow ambush, and a psychic wind carried him to Fonains. Rewrite both lines.
   src: memory-canon campaign-canon § Cosmology (Clint line), § Naming (Astral Sea travel); open-decisions (operative resolved); timeline "The Bellwether Crow ambushed"
   check (resolve pass): two sweeps record the reverse. chat-organizing-framework § Superseded: "Clint Dashforest 'went overboard' → he seized the boarders' craft and broke away with it; a psychic wind carried him to SYS-04." chat-cosmic-campaign-structure § Tetherbreak (final canon, turns 238–241): "Clint seized the boarders' craft and broke away; a psychic wind carried him out of system." The page's "How he crossed is undecided" is stale either way (the psychic wind is agreed). Confirm overboard vs seized craft with Korey.
+  updated (round 4): superseded. Clint went through a color pool on purpose, drawing the boarders off; write it from STAGING § Clint Dashforest and the Bellwether Crow.
 
 - **[fix]** What Tarroway's tables track
   Page says "He has no idea the patrol his tables track was a ship under command rather than an animal keeping a rhythm, or that it stopped keeping the patrol because it left." Canon: the psychic wind is the explanation for Tarroway's failing timing tables. Rewrite: his tables fail because the psychic wind does not keep a rhythm.
   Touches: dossiers/tarroway.html, dossiers/vthoramu.html.
   src: memory-canon campaign-canon § Naming (Astral Sea travel); chat-cosmic-campaign-structure § Superseded
   check (resolve pass): the cited Superseded line runs the other way: "Tarroway's cause as the psychic wind → the dreadnought" (turns 238–241), and § Tetherbreak (final canon) says "The 'patrol' Tarroway's tables track is the Vth'oramu itself." The page matches that sweep. Confirm with Korey which is newer before applying.
+  updated (round 4): superseded. The timing tables are cut; Tarroway stays as a thread (see "Trim Tarroway to a thread").
 
 - **[fix]** The account lives on Colony Operations
   Page says "Full account in the Remaking" and links "The Remaking" in Connections. Link `campaign/colony/`.
@@ -1920,6 +1912,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   Page says "Clint seized the boarders' craft and broke away with it to pull the pursuit off the Crow". Canon: Clint Dashforest went overboard in the Bellwether Crow ambush, and the psychic wind carried him to Fonains. Rewrite the line.
   src: memory-canon open-decisions (operative resolved); campaign-canon § Naming (Astral Sea travel); timeline "The Bellwether Crow ambushed"
   check (resolve pass): chat-organizing-framework § Superseded and chat-cosmic-campaign-structure § Tetherbreak (final canon) both record "went overboard → seized the boarders' craft". Confirm with Korey (same check as on factions/vocath-operation.html).
+  updated (round 4): superseded. Clint went through a color pool on purpose, drawing the boarders off; write it from STAGING § Clint Dashforest and the Bellwether Crow.
 
 - **[fix]** Heart entrance term
   Page says "Atrium"/"Atria" throughout How they work, World status, State A and The race. Apply the Aperture/Atrium ruling under campaign/ascension/index.html.
@@ -2280,6 +2273,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[fix]** Clint went overboard
   The page says "When the first boarding came, he seized the boarders' own craft and broke away with it", the table says "Took the boarders' craft…", and the infobox says "Crossing open". Write: "Clint Dashforest went overboard in the Bellwether Crow ambush near Cairn Station. A psychic wind carried him across the Astral Sea to Fonains." Remove "Crossing open".
   src: memory-canon open-decisions (operative resolved), campaign-canon § Naming (Astral Sea travel); timeline "The Bellwether Crow ambushed"
+  updated (round 4): superseded. Clint went through a color pool on purpose, drawing the boarders off; write it from STAGING § Clint Dashforest and the Bellwether Crow.
 
 - **[fix]** Vocath's people chased him
   The page says "A crew went looking for him", "a rescue crew went out", and "What his rescue attempt dragged home". Write: "Vocath's people chased Clint because he had something they wanted. They never found him. They came back from Fonains with fragments of the broken Monolith, moved through Vocath's Cairn Station line, and one of those fragments ended up inside Boogie."
@@ -2592,6 +2586,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   src: memory-canon campaign-canon § Naming (Astral Sea travel); chat-cosmic-campaign-structure § Tetherbreak, § Superseded
 
 ---
+  updated (round 4): superseded. The timing tables are cut; Tarroway stays as a thread (see "Trim Tarroway to a thread").
 
 ### dossiers/the-runekeeper.html
 
@@ -3972,6 +3967,19 @@ against the complete Tumak sweep (all 336 turns).
 
 # New pages
 
+### NEW: Languages (reference)
+
+- **[add]** A home for invented languages
+  Purpose: one DM reference for every made-up language in the cosmos, so names stay consistent. Voice: DM. First entry: the Vth'orama tongue, with its roots (vth- the whole of; ghath to hold and keep hold; n'- one who, one that is; -rod unbroken, that does not release; ulh the cull; -an negation; mer- to bear; enna near, inner; or- toward; amu home; -a a people), and the glossed words (Vth'orama, Vth'oramu, Vth'ghathu, Vth'ulhan, Vth'merru, n'ghathu, Enna Vth'ghathu, N'ghathrod). Add a section per language as others appear (Githyanki, chapter names for the Seekers).
+  src: Korey, 2026-10-25 (round 4); factions/vthorama.html § Roots
+
+### NEW: Fringe watcher of the cosmos (dossier, later)
+
+- **[decide]** The sage who sees it coming
+  A fringe figure who senses that something is wrong in the cosmos and has his own name for it, but no one believes him, in the vein of Ascher Mir. Who, where, and what he calls it can wait.
+  src: Korey, 2026-10-25 (round 4)
+
+
 Each proposed new page has a purpose, a voice, and its content items. Paths are
 suggestions for the overhaul. Items run decide, fix, drop, add.
 
@@ -4236,6 +4244,11 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   src: chat-cosmic § Cosmos texture; memory-canon
 
 ### NEW: DM principles
+
+- **[decide]** Contract categories
+  Ruled: three or four categories by how a contract ties to the world (loose, Seekers-tied, personal, more as needed), and contracts surface from a world already in motion (STAGING round 4). Name the categories and set how many of each the board offers at a time.
+  src: Korey, 2026-10-25 (round 4)
+
 
 - **[add]** Situations, not scripts
   Put situations into the world and let the characters respond, or do nothing. Threads are not scripted toward an outcome.

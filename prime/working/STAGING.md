@@ -135,3 +135,38 @@ writing rules.
 
 ### Level bands (campaign/spine.html)
 - Arc 1 runs from level 1 to 4, Arc 2 from 5 to 10, Arc 3 from 11 to 15, and Arc 4 from 15 up. Level-ups come more slowly in later arcs.
+
+## Rulings of 2026-10-25, round 4
+
+### The Circle of Fifteenths (campaign/ascension/, glossary/, cosmology/)
+- Vecna calls his working the Circle of Fifteenths, after the circle of fifths in music. He has a taste for music, and it shows in how he names things.
+- The name is his alone. No one else knows what he is building. The Seekers do not know, and neither does the Order. Some gods suspect he is up to something. A few people on the fringes sense that something is wrong in the cosmos, but they do not know what it is or what to call it, and no one believes them.
+- Pages that describe the working from outside call it Vecna's working; the Circle of Fifteenths is his name for it.
+
+### Vecna's domains and symbol (factions/deities.html)
+- Vecna's domains are Knowledge, Death and Trickery.
+- His symbol is an eye in the palm of a left hand. Chapters read it their own way. Some take the eye for sight and revelation. Some glorify it in green, for light, nourishment and the life of the body. The same symbol means different things across his faith.
+
+### Chapters across the cosmos (factions/seekers.html, campaign/)
+- Each chapter's name is in its own people's language, and every one of them carries the word for "seekers". A crew that translates enough chapter names, by magic or by study, will notice the pattern.
+- Chapters seek many things: hearts, lost knowledge, a cure for death, a home. Vecna needs them hungry for something, and their seeking ripples outward through the worlds they work on.
+- The Watchers flag some chapters' work as a danger to a world's Zenith and track it, without knowing who stands behind it.
+
+### Clint Dashforest and the Bellwether Crow (dossiers/clint.html, factions/vocath-operation.html, campaign/colony/, chart/, timeline)
+- When Vocath's crew ambushed the Bellwether Crow, Clint left the ship to draw them off. He made the boarders believe he had taken what they came for. Whether he really had it is unknown; the point was to pull them away from the Crow.
+- He steered for a color pool he could see opening, and went through it on purpose. Color pools open and close quickly, and this one carried him through a small pocket of another dimension and spat him out on Fonains, separated from the boarders who followed him in.
+- The Crow's survivors still argue about whether he meant to go through. He did.
+- In the Fleet, "went overboard" means more than falling from a ship. A crew member who leaves the ship to fight for it and does not come back has gone overboard. It is a softer way of saying killed in action. Tarto and Saerthe both feel they could have done something.
+- This replaces the psychic wind as the way Clint reached Fonains.
+
+### Tarroway (dossiers/tarroway.html, restricted/)
+- M. Tarroway is a cartographer on Strake Station. His readings were the first hint that an unknown vessel or structure was disturbing the satellites at the edge of the system.
+- He is a thread, not a figure: mentioned here and there so the players can put pieces together. He appears mainly in the Fleet Intelligence Archive. Nothing about him is public yet.
+
+### The Vth'orama (factions/vthorama.html)
+- The colony's chapter name, Vth'orama, translates as the Seekers of a New Home. The etymology above stands.
+
+### Building contracts (DM: a planning page)
+- Contracts fall into three or four categories by how they tie to the larger world: loosely tied, tied to a Seekers chapter, personal to a crew member, and others as they come up. Each contract can be built out from its category.
+- The world is already in motion. A contract surfaces because of the state of the world, and the place around it should feel like it exists without the crew. The crew's choices, or their failure to act, change what was already happening.
+- Contracts take any shape: excavations, politics, hunts. Many quietly lead back to a Seekers chapter, some of them knowingly nefarious and some unwitting.
