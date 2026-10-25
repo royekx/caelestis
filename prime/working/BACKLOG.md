@@ -1800,7 +1800,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   The organizing-framework chat named this the largest gap; the later cosmology redesign in the cosmic-structure chat filled it. Confirm The Cast and The Figure state it, and add whatever is missing (DM voice):
   - The First Heart lies closed beneath the Core, at the center. It is the one point from which the Axiom layer can be reached, and Vecna's target is the Convergence seat.
   - Fifteen hearts, three per sphere across five spheres, are opened and linked. Every heart yearns toward the First Heart; the massed Yearning of the fifteen forces it open, and the opening is his arrival.
-  - He cannot make the crossing himself, because polarity pushes every god back from a heart. He arrives through vessels: the enna plus a downward tithe of taken, fifteen at minimum.
+  - He cannot make the crossing himself, because polarity pushes every god back from a heart. He arrives through vessels: the enna plus lesser taken, fifteen at minimum.
   - Each Monolith licenses its world's heart to hold a link; the near-complete Rod is a beacon, so he has never assembled a fragment, and the whole Rod is his fallback.
   src: chat-organizing-framework § Open; memory-canon open-decisions ("Locked this pass"; Vecna/gods 2026-10-25)
   answered: inbox/chat-cosmic-campaign-structure.md § Cosmology redesign (turns 244–305, Settled: First Heart, Yearning, fifteen hearts, forced open by massed Yearning, vessels and downward tithe, Convergence seat, Rod as fallback); session-rulings (polarity)
