@@ -391,9 +391,10 @@
       "lane": "colony",
       "status": "past",
       "cert": "canon",
-      "title": "The clash, the capture, the crash",
-      "desc": "Days after Lola's Boys strip the craft's control and defense gems, N'ghathrod's ship attacks it and cripples it. Thessalar and the Thessalkraken capture him and some of his illithids and experiment on him aboard; the Rod's seventh piece makes his ceremorphosis paracausal, so his tadpoles become copies of him and his aging stops. The damaged craft finally comes down, and he escapes in the crash with his lieutenants. The craft is a megadungeon whose unexplored levels become the Mad Mage dungeon; it breaks up as it falls: the main body raises the Barrier Peaks, a broken-off section becomes Dowing Glowing, and the Thessalkraken lands separately in the sea, where it later guards the trident's reef. The elder brain is carried on to Fonains; when N'ghathrod reaches for it, Vecna answers.",
-      "t": -500
+      "title": "Captured aboard Thessalar's craft",
+      "desc": "N'ghathrod's ship clashes with Thessalar's planar craft and loses. Thessalar and the Thessalkraken capture him and some of his illithids, and he is held and experimented on aboard; the Rod's seventh piece makes his ceremorphosis paracausal, so his tadpoles become copies of him and his aging stops. He is still a prisoner when Lola's Boys arrive from the future.",
+      "t": -506,
+      "end": -500
     },
     {
       "lane": "colony",
@@ -518,7 +519,15 @@
       "status": "past",
       "cert": "canon",
       "title": "Lola's Boys in the year 425",
-      "desc": "Sent back by the Accordance (Nelson: \"you all are going the wrong way\"), they take two gems from the Temple of Moloch: the red gem from the cavern lake and the hazy yellow gem from Thessalar's workshop. These were the planar craft's control and defense components. Losing them leaves the craft unable to steer or defend itself, which is why N'ghathrod's attack can bring it down. Back in the present, the same gems restart the craft for Qalish."
+      "desc": "Sent back by the Accordance (Nelson: \"you all are going the wrong way\"), they take two gems from the Temple of Moloch: the red gem from the cavern lake and the hazy yellow gem from Thessalar's workshop. These were the planar craft's control and defense components. Without them the craft falls, and the crash is N'ghathrod's chance to escape. The party unknowingly frees their own villain from another campaign. Back in the present, the same gems restart the craft for Qalish."
+    },
+    {
+      "lane": "colony",
+      "t": -500,
+      "status": "past",
+      "cert": "canon",
+      "title": "The craft falls; N'ghathrod escapes",
+      "desc": "Stripped of its gems, the craft comes down. N'ghathrod escapes in the crash with his lieutenants and the tadpoles he can carry. The craft is a megadungeon whose unexplored levels become the Mad Mage dungeon, and it breaks up as it falls: the main body raises the Barrier Peaks, a broken-off section becomes Dowing Glowing, and the Thessalkraken lands separately in the sea, where it later guards the trident's reef. The elder brain is carried on to Fonains; when N'ghathrod reaches for it, Vecna answers."
     }
   ],
   "clocks": [
@@ -535,9 +544,8 @@
   ],
   "decisions": [
     "Caelestis's present sits a few months after the Fonains Monolith broke, shortly after Fonains's Session 28. Clint reaches Fonains about a year before Caelestis's present, before the Monolith appears. Boogie's shard came from the broken Monolith through Vocath's line, before V001. This replaces \"Caelestis runs about a year before Fonains.\"",
-    "Thessalar's planar craft crashed about 500 years ago. N'ghathrod's clash with it crippled the craft; he was captured and experimented on aboard, and escaped when it came down. \"Some millennia ago\" in Lola's Boys is rumour.",
     "Benedetta fell ill at Rihiri's birth, about twelve years ago, and died about ten years ago. The illness was Vanifer siphoning her soul into the illegitimate Bloodstone, which took about two years.",
-    "Lola's Boys' theft of the two gems in the year 425 is what let the planar craft fall. The Accordance sent them back, so the gods share responsibility for the crash and for N'ghathrod's escape. The window between the theft and the clash is short."
+    "Thessalar's planar craft fell about 500 years ago. N'ghathrod had already lost a clash with it and was a prisoner aboard, being experimented on. Lola's Boys, sent back by the Accordance, took the craft's control and defense gems; without them it fell, and the crash let N'ghathrod escape. The party unknowingly made their own villain in another campaign. \"Some millennia ago\" in Lola's Boys is rumour."
   ],
   "threads": {
     "entities": [
@@ -566,15 +574,6 @@
       "The crew"
     ],
     "scenes": [
-      {
-        "t": -500,
-        "status": "past",
-        "title": "The clash and the crash: N'ghathrod captured, changed, escapes; Vecna answers him",
-        "who": [
-          "N'ghathrod",
-          "Vecna"
-        ]
-      },
       {
         "t": -6,
         "status": "past",
@@ -744,9 +743,27 @@
       {
         "t": -500.2,
         "status": "past",
-        "title": "Sent back by the Accordance, Lola's Boys take the craft's gems from Thessalar",
+        "title": "Sent back by the Accordance, Lola's Boys take the craft's gems while N'ghathrod is a prisoner aboard",
         "who": [
-          "Lola's Boys"
+          "Lola's Boys",
+          "N'ghathrod"
+        ]
+      },
+      {
+        "t": -506,
+        "status": "past",
+        "title": "N'ghathrod loses a clash with Thessalar's craft and is taken prisoner",
+        "who": [
+          "N'ghathrod"
+        ]
+      },
+      {
+        "t": -500,
+        "status": "past",
+        "title": "The craft falls without its gems; N'ghathrod escapes; Vecna answers his call",
+        "who": [
+          "N'ghathrod",
+          "Vecna"
         ]
       }
     ]
