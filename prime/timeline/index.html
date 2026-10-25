@@ -15,6 +15,10 @@
   .tl-filters { display:flex; flex-wrap:wrap; gap:.4rem .6rem; align-items:center; margin:.5rem 0 .75rem; font-size:.95rem; color:var(--text-muted); }
   .tl-filters button { display:inline-flex; align-items:center; gap:.4rem; font-size:.92rem; padding:.2rem .6rem; }
   .tl-filters button[aria-pressed="false"] { opacity:.45; }
+  .tl-group { display:flex; flex-wrap:wrap; gap:.35rem .5rem; align-items:center; margin:.25rem 0; }
+  .tl-group > span { color:var(--text-muted); font-size:.9rem; width:5.5rem; }
+  #presets button[aria-pressed="true"] { color:var(--gold-light); border-color:var(--gold); opacity:1; }
+  .tl-pin text { transition: transform .25s ease; }
   .tl-key { display:inline-block; width:.85rem; height:.85rem; }
   .tl-scroll { overflow-x:auto; border:1px solid var(--rule); background:var(--bg-panel); position:relative; }
   .tl-scroll svg { display:block; font-family:inherit; }
@@ -55,13 +59,15 @@
       <button type="button" data-status="now" aria-pressed="true"><span class="tl-key" style="background:var(--gold)"></span>Happening now</button>
       <button type="button" data-status="planned" aria-pressed="true"><span class="tl-key" style="border:1.5px dashed var(--ice-light)"></span>Planned for the crew</button>
       <button type="button" data-status="projected" aria-pressed="true"><span class="tl-key" style="border:1.5px dashed var(--violet)"></span>If unopposed</button>
+      <button type="button" id="minor-toggle" aria-pressed="false">Minor events</button>
     </div>
     <div class="tl-scroll" id="overview"></div>
     <p class="tl-meta">The axis is compressed: each step left is ten times further back. Bars are spans; dots are moments. Lines mark each campaign's present. Undated: <span id="undated"></span></p>
   </section>
 
   <section id="view-threads" hidden>
-    <div class="tl-filters" id="entity-filters"><span>Follow (up to 8):</span></div>
+    <div class="tl-filters" id="presets"><span>Lens:</span></div>
+    <div id="entity-filters"></div>
     <div class="tl-scroll" id="threads"></div>
     <p class="tl-meta">Columns are moments in order, not to scale. A line joins a box when that thread is part of that moment.</p>
     <details>
@@ -130,7 +136,7 @@
   }
 
   /* ---------- Overview ---------- */
-  var hiddenStatus = {};
+  var hiddenStatus = {}, showMinor = false;
   function drawOverview(data) {
     var host = document.getElementById('overview');
     host.innerHTML = '';
@@ -139,10 +145,12 @@
     var LW = 190, W = Math.max(1200, host.clientWidth), PL = LW + 20, PR = 30, plotW = W - PL - PR;
     function x(t) { return PL + (f(t) - f(T0)) / (f(T1) - f(T0)) * plotW; }
 
-    var events = data.events.filter(function (e) { return e.t != null && !hiddenStatus[e.status]; });
+    var events = data.events.filter(function (e) { return e.t != null && !hiddenStatus[e.status] && (showMinor || e.tier !== 2); });
     var rowH = 22, laneGap = 14, top = 46, y = top, layout = [];
     data.lanes.forEach(function (lane) {
       var items = events.filter(function (e) { return e.lane === lane.id; }).sort(function (a, b) { return a.t - b.t; });
+      lane._skip = !items.length;
+      if (lane._skip) return;
       var rows = [];
       items.forEach(function (e) {
         var x0 = x(e.t), x1 = e.end != null ? x(e.end) : x0;
@@ -169,7 +177,7 @@
     });
     var labels = s('svg', { width: LW, height: H, style: 'position:sticky;left:0;z-index:2;flex:none' });
     labels.appendChild(s('rect', { x: 0, y: 0, width: LW, height: H, fill: C.bg }));
-    data.lanes.forEach(function (lane, i) {
+    data.lanes.filter(function (l) { return !l._skip; }).forEach(function (lane, i) {
       if (i % 2 === 0) svg.appendChild(s('rect', { x: 0, y: lane._top - 6, width: W, height: lane._h + 4, fill: 'rgba(255,255,255,0.025)' }));
       labels.appendChild(s('text', { x: 14, y: lane._top + 14, fill: C.soft, 'font-size': 14 }, lane.label));
     });
@@ -202,6 +210,7 @@
     });
     var row = document.createElement('div');
     row.style.display = 'flex';
+    row.style.width = 'max-content';
     svg.style.marginLeft = (-LW) + 'px';
     svg.style.flex = 'none';
     row.appendChild(labels); row.appendChild(svg);
@@ -253,13 +262,12 @@
       }
       return d;
     }
+    var last = scenes.length - 1;
     ents.forEach(function (e) {
       var color = SLOTS[slotOf[e]];
       var idx = scenes.map(function (sc, i) { return sc.who.indexOf(e) >= 0 ? i : -1; }).filter(function (i) { return i >= 0; });
-      var last = scenes.length - 1;
       svg.appendChild(s('path', { d: pathFor(e, 0, last), fill: 'none', stroke: color, 'stroke-width': 1.5, opacity: 0.22, 'stroke-dasharray': '2 5' }));
       if (idx.length) svg.appendChild(s('path', { d: pathFor(e, idx[0], idx[idx.length - 1]), fill: 'none', stroke: color, 'stroke-width': 2.5, 'stroke-linecap': 'round' }));
-      svg.appendChild(s('text', { x: cx(0) - 16, y: cy(0, e) + 4, fill: C.text, 'font-size': 12.5, 'text-anchor': 'end' }, e));
       svg.appendChild(s('text', { x: cx(last) + 16, y: cy(last, e) + 4, fill: C.soft, 'font-size': 12 }, e));
     });
 
@@ -280,37 +288,84 @@
       g.addEventListener('mouseleave', hideTip);
       svg.appendChild(g);
     });
-    host.appendChild(svg);
+
+    // Pinned labels: stay on the left and follow each line to the first visible column.
+    var pin = s('svg', { width: LW, height: H, class: 'tl-pin', style: 'position:sticky;left:0;z-index:2;flex:none' });
+    pin.appendChild(s('rect', { x: 0, y: 0, width: LW - 10, height: H, fill: C.bg }));
+    var tags = {};
+    ents.forEach(function (e) {
+      var g = s('g');
+      g.appendChild(s('rect', { x: 10, y: -5, width: 10, height: 10, fill: SLOTS[slotOf[e]] }));
+      g.appendChild(s('text', { x: 26, y: 4, fill: C.text, 'font-size': 12.5 }, e));
+      g.style.transition = 'transform .25s ease';
+      pin.appendChild(g); tags[e] = g;
+    });
+    function place() {
+      var i = Math.min(last, Math.max(0, Math.ceil((host.scrollLeft - colW / 2) / colW)));
+      ents.forEach(function (e) { tags[e].setAttribute('transform', 'translate(0,' + cy(i, e) + ')'); });
+    }
+    var row = document.createElement('div');
+    row.style.display = 'flex';
+    row.style.width = 'max-content';
+    svg.style.marginLeft = (-LW) + 'px';
+    svg.style.flex = 'none';
+    row.appendChild(pin); row.appendChild(svg);
+    host.appendChild(row);
+    host.onscroll = place;
+    place();
   }
 
   function buildEntityFilters(data) {
     var box = document.getElementById('entity-filters');
-    data.threads.entities.forEach(function (e) {
-      var b = h('button'); b.type = 'button';
-      var key = h('span', 'tl-key'); b.appendChild(key); b.appendChild(document.createTextNode(e));
-      function paint() {
-        var on = selected.indexOf(e) >= 0;
-        b.setAttribute('aria-pressed', on ? 'true' : 'false');
-        key.style.background = on ? SLOTS[slotOf[e]] : 'transparent';
-        key.style.border = on ? 'none' : '1px solid ' + C.faint;
-      }
-      b.addEventListener('click', function () {
-        var i = selected.indexOf(e);
-        if (i >= 0) { selected.splice(i, 1); delete slotOf[e]; }
-        else {
-          if (selected.length >= 8) return;
-          var used = selected.map(function (x) { return slotOf[x]; });
-          for (var k = 0; k < 8; k++) if (used.indexOf(k) < 0) { slotOf[e] = k; break; }
-          selected.push(e);
-        }
-        box.querySelectorAll('button').forEach(function (bb) { bb._paint(); });
-        drawThreads(data);
-      });
-      b._paint = paint;
-      box.appendChild(b);
+    var presetBox = document.getElementById('presets');
+    var groups = {};
+    data.threads.entities.forEach(function (en) { (groups[en.group] = groups[en.group] || []).push(en.name); });
+    var buttons = [];
+    function repaint() { buttons.forEach(function (b) { b._paint(); }); presetBox.querySelectorAll('button').forEach(function (b) {
+      var list = data.threads.presets[b.textContent];
+      b.setAttribute('aria-pressed', list.length === selected.length && list.every(function (x) { return selected.indexOf(x) >= 0; }) ? 'true' : 'false');
+    }); }
+    function choose(list) {
+      selected = []; slotOf = {};
+      list.slice(0, 8).forEach(function (e, k) { selected.push(e); slotOf[e] = k; });
+      repaint(); drawThreads(data);
+    }
+    Object.keys(data.threads.presets).forEach(function (name) {
+      var b = h('button', null, name); b.type = 'button';
+      b.addEventListener('click', function () { choose(data.threads.presets[name]); });
+      presetBox.appendChild(b);
     });
-    data.threads['default'].forEach(function (e, k) { selected.push(e); slotOf[e] = k; });
-    box.querySelectorAll('button').forEach(function (bb) { bb._paint(); });
+    Object.keys(groups).forEach(function (gname) {
+      var row = h('div', 'tl-group tl-filters'); row.appendChild(h('span', null, gname));
+      groups[gname].forEach(function (e) {
+        var b = h('button'); b.type = 'button';
+        var key = h('span', 'tl-key'); b.appendChild(key); b.appendChild(document.createTextNode(e));
+        b._paint = function () {
+          var on = selected.indexOf(e) >= 0;
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+          key.style.background = on ? SLOTS[slotOf[e]] : 'transparent';
+          key.style.border = on ? 'none' : '1px solid ' + C.faint;
+        };
+        b.addEventListener('click', function () {
+          var i = selected.indexOf(e);
+          if (i >= 0) { selected.splice(i, 1); delete slotOf[e]; }
+          else {
+            if (selected.length >= 8) return;
+            var used = selected.map(function (x) { return slotOf[x]; });
+            for (var k = 0; k < 8; k++) if (used.indexOf(k) < 0) { slotOf[e] = k; break; }
+            selected.push(e);
+          }
+          repaint(); drawThreads(data);
+        });
+        buttons.push(b); row.appendChild(b);
+      });
+      box.appendChild(row);
+    });
+    var note = h('p', 'tl-meta', 'Up to eight at a time. Pick a lens, then add or drop threads.');
+    box.appendChild(note);
+    var def = data.threads.presets[data.threads['default']];
+    def.forEach(function (e, k) { selected.push(e); slotOf[e] = k; });
+    repaint();
   }
 
   function render(data) {
@@ -332,6 +387,9 @@
       d.appendChild(h('p', null, p.detail));
       d.appendChild(h('p', null, 'Options: ' + p.options));
       document.getElementById('problem-list').appendChild(d);
+    });
+    document.getElementById('minor-toggle').addEventListener('click', function () {
+      showMinor = !showMinor; this.setAttribute('aria-pressed', showMinor ? 'true' : 'false'); drawOverview(data);
     });
     document.getElementById('status-filters').addEventListener('click', function (ev) {
       var b = ev.target.closest('button[data-status]'); if (!b) return;
