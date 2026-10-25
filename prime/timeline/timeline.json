@@ -593,8 +593,8 @@
       "tier": 1,
       "status": "past",
       "cert": "canon",
-      "title": "Arise takes the air spear",
-      "desc": "She splits Eldath's tree in the Misty Vale and takes the spear while the Green Lady, cut off from Eldath, is trapped in dragon form. A black spiral spreads on the altar."
+      "title": "Aerisi takes the air spear",
+      "desc": "Aerisi Kalinoth, Yan-C-Bin's prophet, splits Eldath's tree in the Misty Vale and takes the spear while the Green Lady, cut off from Eldath, is trapped in dragon form. A black spiral spreads on the altar."
     },
     {
       "lane": "princes",
@@ -621,7 +621,7 @@
       "status": "now",
       "cert": "canon",
       "title": "Yan-C-Bin summoned",
-      "desc": "On the floating island above the Air Spire, the winged elf queen raises the spear: \"With this key, I call forth my lord and master.\" The Prince of Air manifests."
+      "desc": "On the floating island above the Air Spire, Aerisi Kalinoth, the winged elf queen, raises the spear: \"With this key, I call forth my lord and master.\" The Prince of Air manifests."
     },
     {
       "lane": "princes",
@@ -686,6 +686,10 @@
       },
       {
         "name": "George",
+        "group": "People"
+      },
+      {
+        "name": "Aerisi",
         "group": "People"
       },
       {
@@ -754,8 +758,8 @@
         "The war pick",
         "The spear",
         "The trident",
-        "Pedra Ardante",
         "Vanifer",
+        "Aerisi",
         "Lola's Boys"
       ],
       "N'ghathrod's origin": [
@@ -967,13 +971,14 @@
       {
         "t": -0.5,
         "status": "past",
-        "title": "Arise takes the spear from the Misty Vale; Boogie takes the shard from a shipment",
+        "title": "Aerisi takes the spear from the Misty Vale; Boogie takes the shard from a shipment",
         "who": [
           "The spear",
           "Tharizdun and the Princes",
           "The Fonains shard",
           "The crew",
-          "Vocath"
+          "Vocath",
+          "Aerisi"
         ]
       },
       {
@@ -1013,7 +1018,8 @@
         "who": [
           "Lola's Boys",
           "Tharizdun and the Princes",
-          "The spear"
+          "The spear",
+          "Aerisi"
         ]
       },
       {
@@ -1051,7 +1057,8 @@
           "Vanifer",
           "Asmodus",
           "Vecna",
-          "Pedra Ardante"
+          "Pedra Ardante",
+          "Aerisi"
         ]
       },
       {
