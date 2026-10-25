@@ -1,0 +1,1600 @@
+{
+  "lanes": [
+    {
+      "id": "cosmos",
+      "label": "Cosmos"
+    },
+    {
+      "id": "vecna",
+      "label": "Gods and Vecna"
+    },
+    {
+      "id": "princes",
+      "label": "The Princes and the keys"
+    },
+    {
+      "id": "fonains",
+      "label": "Fonains"
+    },
+    {
+      "id": "crew",
+      "label": "Caelestis and the crew"
+    },
+    {
+      "id": "colony",
+      "label": "N'ghathrod and the colony"
+    },
+    {
+      "id": "order",
+      "label": "Order, Watchers, Restorers"
+    },
+    {
+      "id": "dragons",
+      "label": "Krynn and the dragons"
+    }
+  ],
+  "problems": [],
+  "events": [
+    {
+      "lane": "cosmos",
+      "status": "past",
+      "cert": "canon",
+      "title": "The Reach",
+      "desc": "The people of the First World reach for the Axioms. The cosmos is reconfigured: souls become gods, debris becomes worlds, and every world gets a heart.",
+      "t": -50000,
+      "tier": 1
+    },
+    {
+      "lane": "cosmos",
+      "status": "past",
+      "cert": "canon",
+      "title": "The Core and the First Heart",
+      "desc": "The first Monolith appears above the First World during its Zenith and stays when the world is destroyed. The remains are the black hole at the center. The Citadel lives inside the Core; the First Heart lies closed beneath.",
+      "t": -50000,
+      "tier": 1
+    },
+    {
+      "lane": "cosmos",
+      "status": "past",
+      "cert": "canon",
+      "title": "Monoliths become how Continuity works",
+      "desc": "After the first, a Monolith manifests at every Zenith and relays what it archives to the Core.",
+      "t": -45000,
+      "end": 0,
+      "tier": 2
+    },
+    {
+      "lane": "cosmos",
+      "status": "now",
+      "cert": "canon",
+      "title": "Zeniths arriving too often",
+      "desc": "Thresholds are crossing at a rate the Order can't explain. Convergence is the most stressed Axiom.",
+      "t": -20,
+      "end": 0,
+      "tier": 1
+    },
+    {
+      "lane": "cosmos",
+      "status": "projected",
+      "cert": "canon",
+      "title": "Convergence stabilizes",
+      "desc": "The Continuum answers a failing Axiom with a stabilization. When it comes, the seat closes permanently. Vecna gets one attempt before it.",
+      "t": 5,
+      "tier": 1
+    },
+    {
+      "lane": "vecna",
+      "status": "past",
+      "cert": "canon",
+      "title": "Reach-born gods",
+      "desc": "The first gods are the souls of the First World, reshaped. Pantheons cluster in spheres where their worship is densest.",
+      "t": -48000,
+      "tier": 2
+    },
+    {
+      "lane": "vecna",
+      "status": "past",
+      "cert": "canon",
+      "title": "The Accordance seals the Princes",
+      "desc": "Six gods, Asmodeus, Eldath, Muriel and Ryujin among them, seal the four Princes of Elemental Evil and hide the keys.",
+      "t": -12000,
+      "tier": 1
+    },
+    {
+      "lane": "vecna",
+      "status": "past",
+      "cert": "working",
+      "title": "Vecna rules Oerth and ascends",
+      "desc": "A mage recruited by a voice, then a lich who rules Oerth and is never stopped. He ascends through a Zenith; the Monolith archives his mortality to the Citadel. Becoming a god gives him the same charge as Oerth's heart, and the world pushes him off.",
+      "t": -900,
+      "end": -700,
+      "tier": 1
+    },
+    {
+      "lane": "vecna",
+      "status": "past",
+      "cert": "working",
+      "title": "Centuries of worship",
+      "desc": "He builds faithful across spheres under many names, wide and thin. Separately, a voice teaches chapters a method: the Seekers.",
+      "t": -700,
+      "end": 0,
+      "tier": 2
+    },
+    {
+      "lane": "vecna",
+      "status": "past",
+      "cert": "open",
+      "title": "The Ascension World",
+      "desc": "He forces a small local threshold on a world in SPH-01. When, and what it cost him, are open.",
+      "t": -250,
+      "tier": 2
+    },
+    {
+      "lane": "vecna",
+      "status": "past",
+      "cert": "working",
+      "title": "A Seeker chapter reaches Vanifer",
+      "desc": "It trades her the lost meaning of the Alpha and the secret in the Cre'Tez blood.",
+      "t": -12,
+      "tier": 1
+    },
+    {
+      "lane": "vecna",
+      "status": "now",
+      "cert": "canon",
+      "title": "The failsafe, running",
+      "desc": "Encoded messages archived into the Citadel through Monolith relays, waiting for someone to come out the wrong way.",
+      "t": -600,
+      "end": 0,
+      "tier": 2
+    },
+    {
+      "lane": "vecna",
+      "status": "projected",
+      "cert": "open",
+      "title": "The pantheons notice",
+      "desc": "Which gods are alarmed, indifferent or glad is set arc by arc as the crew gives them something to react to.",
+      "t": 1,
+      "tier": 2
+    },
+    {
+      "lane": "vecna",
+      "status": "projected",
+      "cert": "canon",
+      "title": "The lattice fills",
+      "desc": "Fifteen opened, linked hearts, three per sphere across five spheres, each with vessels. He builds past the count as surplus.",
+      "t": 2,
+      "end": 4,
+      "tier": 1
+    },
+    {
+      "lane": "vecna",
+      "status": "projected",
+      "cert": "canon",
+      "title": "The Cast",
+      "desc": "The lattice's massed Yearning forces the First Heart open. Arriving and opening are one act. If he takes the seat: the Remaking.",
+      "t": 5,
+      "tier": 1
+    },
+    {
+      "lane": "princes",
+      "status": "past",
+      "cert": "canon",
+      "title": "Tharizdun imprisoned",
+      "desc": "Sealed in a prison with no address. If he can't get out, he will bring everything to him.",
+      "t": -30000,
+      "tier": 1
+    },
+    {
+      "lane": "princes",
+      "status": "past",
+      "cert": "canon",
+      "title": "Olhydra and Ogrémoch collide",
+      "desc": "Their clash carves the waterway under what becomes the Temple of Moloch; elemental gems flow into it.",
+      "t": -15000,
+      "tier": 2
+    },
+    {
+      "lane": "princes",
+      "status": "past",
+      "cert": "canon",
+      "title": "The fire genasi war over Imix",
+      "desc": "A sect tries to summon Imix. The few who resist call for help; Asmodeus gives them Tinderstrike to seal him. Imix must be forgotten, and over generations the line turns tiefling: the Cre'Tez. Chloe Chespetes is trapped in the lab she flooded with lava.",
+      "t": -350,
+      "tier": 1
+    },
+    {
+      "lane": "princes",
+      "status": "past",
+      "cert": "working",
+      "title": "The five-person ritual",
+      "desc": "Four cultists channel the Princes; the fifth holds pieces of a Tharizdun artifact. It is the Zenith, nudged by Vecna. The Monolith that answers is corrupted as it forms.",
+      "t": -0.92,
+      "tier": 1
+    },
+    {
+      "lane": "princes",
+      "status": "projected",
+      "cert": "canon",
+      "title": "The Day of Chaos",
+      "desc": "The four Princes enter Fonains together, the barriers break, and Tharizdun gets his chance to leave. Yan-C-Bin is already manifest at Session 28.",
+      "t": 0.6,
+      "tier": 1
+    },
+    {
+      "lane": "fonains",
+      "status": "past",
+      "cert": "canon",
+      "title": "Korvalatel's Clutch",
+      "desc": "White dragon siblings raid a crystal dragon's spire. The Green Lady is told to flee to the Misty Vale, where she later becomes its keeper.",
+      "t": -150,
+      "tier": 2
+    },
+    {
+      "lane": "fonains",
+      "status": "past",
+      "cert": "canon",
+      "title": "More Than Just Desserts",
+      "desc": "Granny (Lolita), Manny and Cookie Farnsworth's old adventuring party. Granny's Vale pilgrimage is about a hundred years ago.",
+      "t": -140,
+      "end": -60,
+      "tier": 2
+    },
+    {
+      "lane": "fonains",
+      "status": "past",
+      "cert": "canon",
+      "title": "Kwalish loses the craft",
+      "desc": "His party dies to the Sphinx; he puts their brains in tubes, opens a gate to the Nine Hells, and a bone devil drives him out.",
+      "t": -30,
+      "tier": 2
+    },
+    {
+      "lane": "fonains",
+      "status": "past",
+      "cert": "canon",
+      "title": "The Vessel of Tui and La stolen",
+      "desc": "The Silver Wave Bandits get Hayden drunk on Nev's and take the Vessel. Lola's Boys later steal it back from Garshak's ship through time.",
+      "t": -6.1,
+      "tier": 2
+    },
+    {
+      "lane": "princes",
+      "status": "past",
+      "cert": "canon",
+      "title": "The Drowned God: the trident taken",
+      "desc": "Straight after the Vessel theft. The trident was sealed in the heart of a living coral reef grown over the ruins of a sunken city (\"an old craft of some sort\"), guarded by the Thessalkraken and revered by kraken priests who serve \"the mind.\" Pulling it killed the reef and sank the island. Gar Shatterkeel holds it and hears a voice in the water: \"The others are in motion.\"",
+      "t": -6,
+      "tier": 1
+    },
+    {
+      "lane": "fonains",
+      "t": -12,
+      "end": -10,
+      "status": "past",
+      "cert": "canon",
+      "title": "Vanifer siphons Benedetta",
+      "desc": "Benedetta falls ill at Rihiri's birth. The illness is Vanifer slowly siphoning her soul into an illegitimate Bloodstone, which takes about two years and ends with Benedetta's death.",
+      "tier": 1
+    },
+    {
+      "lane": "fonains",
+      "status": "past",
+      "cert": "canon",
+      "title": "The Alpha is invoked",
+      "desc": "Vanifer tries to make her father concede to her; he invokes the Alpha instead, locking them both out. Asmodus, dreaming of his mother, starts hunting; Rihiri is stabbed and survives.",
+      "t": -2,
+      "tier": 1
+    },
+    {
+      "lane": "fonains",
+      "status": "past",
+      "cert": "canon",
+      "title": "The Darkest Day",
+      "desc": "Vecna's cult works a ritual on Giorge at the eclipse, as bait. The Monolith erupts over the cemetery. The first Accordance champions die fighting it.",
+      "t": -0.9,
+      "tier": 1
+    },
+    {
+      "lane": "crew",
+      "status": "past",
+      "cert": "canon",
+      "title": "A star falls on Casey's world",
+      "desc": "Polly goes to it, is changed, and leaves to find where it came from: Astra Virex.",
+      "t": -5,
+      "tier": 2
+    },
+    {
+      "lane": "crew",
+      "status": "past",
+      "cert": "canon",
+      "title": "Sol escapes Aethris",
+      "desc": "He flees the ritual before it completes and is recruited by a Watcher. The Fortuned build the CRC to bring him back.",
+      "t": -1.5,
+      "tier": 2
+    },
+    {
+      "lane": "crew",
+      "status": "past",
+      "cert": "canon",
+      "title": "The Bellwether Crow ambushed",
+      "desc": "About a year before now, near Cairn Station. N'ghathrod takes Joffrey and lets him go; most of the crew doesn't return. Clint Dashforest goes overboard and the psychic wind carries him to Fonains.",
+      "t": -1.1,
+      "tier": 1
+    },
+    {
+      "lane": "crew",
+      "status": "now",
+      "cert": "canon",
+      "title": "Now: the helm seated",
+      "desc": "The crew holds the tyrant ship and is level 4. Voyage 007, the crossing to H'Catha, is next.",
+      "t": 0,
+      "tier": 1
+    },
+    {
+      "lane": "crew",
+      "status": "planned",
+      "cert": "canon",
+      "title": "Behold H'Catha",
+      "desc": "Recover the adamantine meteor from a contested seam. Sol's first CRC encounter.",
+      "t": 0.08,
+      "end": 0.15,
+      "tier": 1
+    },
+    {
+      "lane": "crew",
+      "status": "planned",
+      "cert": "canon",
+      "title": "Attack on Caelestis and graduation",
+      "desc": "The crew becomes Driftwardens. The meteor is reclassified above their clearance. The Brig breach and the A.T.L.A.S. fork resolve.",
+      "t": 0.2,
+      "tier": 1
+    },
+    {
+      "lane": "crew",
+      "status": "planned",
+      "cert": "working",
+      "title": "Act 2: ranked missions",
+      "desc": "Contracts from town to world scale. Seeker chapters met one at a time. Scuffles with N'ghathrod's satellite crews.",
+      "t": 0.3,
+      "end": 1.5,
+      "tier": 1
+    },
+    {
+      "lane": "crew",
+      "status": "planned",
+      "cert": "working",
+      "title": "Act 3: N'ghathrod",
+      "desc": "Vth'oramu and the real N'ghathrod. A real victory that moves Vecna onto his failsafe.",
+      "t": 1.5,
+      "end": 3,
+      "tier": 1
+    },
+    {
+      "lane": "crew",
+      "status": "planned",
+      "cert": "working",
+      "title": "Act 4: the center",
+      "desc": "The Citadel, where the answers are, or the First Heart, where the ending is.",
+      "t": 3,
+      "end": 5,
+      "tier": 1
+    },
+    {
+      "lane": "colony",
+      "status": "past",
+      "cert": "canon",
+      "title": "Thessalar's experiments",
+      "desc": "About 500 years before Fonains's present. The Rod's seventh piece, the Thessalkraken, clone tubes Thessalar I–VIII.",
+      "t": -530,
+      "end": -500,
+      "tier": 2
+    },
+    {
+      "lane": "colony",
+      "status": "past",
+      "cert": "canon",
+      "title": "Captured aboard Thessalar's craft",
+      "desc": "N'ghathrod's ship clashes with Thessalar's planar craft and loses. Thessalar and the Thessalkraken capture him and some of his illithids, and he is held and experimented on aboard; the Rod's seventh piece makes his ceremorphosis paracausal, so his tadpoles become copies of him and his aging stops. He is still a prisoner when Lola's Boys arrive from the future.",
+      "t": -506,
+      "end": -500,
+      "tier": 1
+    },
+    {
+      "lane": "colony",
+      "status": "past",
+      "cert": "canon",
+      "title": "Exile from Glyth",
+      "desc": "Glyth casts out the brainless-raised and he leaves with them. A living astral dreadnought becomes Vth'oramu.",
+      "t": -60,
+      "tier": 2
+    },
+    {
+      "lane": "colony",
+      "status": "now",
+      "cert": "canon",
+      "title": "Saturating worlds",
+      "desc": "Taking key individuals, seeding Zeniths so Monoliths stand where hearts can be opened. Joffrey is on station at Caelestis.",
+      "t": -1,
+      "end": 0,
+      "tier": 2
+    },
+    {
+      "lane": "colony",
+      "status": "projected",
+      "cert": "canon",
+      "title": "The Brig breach",
+      "desc": "Joffrey moves under cover of the graduation chaos. N'ghathrod wants A.T.L.A.S.",
+      "t": 0.2,
+      "tier": 1
+    },
+    {
+      "lane": "colony",
+      "status": "projected",
+      "cert": "canon",
+      "title": "Hearts opened and linked",
+      "desc": "The Passage gains a circle per linked world. Linked worlds bleed into each other.",
+      "t": 1.5,
+      "end": 4,
+      "tier": 1
+    },
+    {
+      "lane": "order",
+      "status": "past",
+      "cert": "canon",
+      "title": "The Order of the All-Father",
+      "desc": "Guards Ortholiths, believing the taken are inside them. Watchers posted one per region.",
+      "t": -30000,
+      "end": 0,
+      "tier": 2
+    },
+    {
+      "lane": "order",
+      "status": "past",
+      "cert": "canon",
+      "title": "The Restorers walk into Zeniths",
+      "desc": "For four centuries, trying to reach the Core and the All-Mother. Many arrived.",
+      "t": -400,
+      "end": 0,
+      "tier": 2
+    },
+    {
+      "lane": "order",
+      "status": "past",
+      "cert": "working",
+      "title": "The Glyth Watcher gets out",
+      "desc": "Years inside the elder brain's range; she still hears it.",
+      "t": -3,
+      "tier": 2
+    },
+    {
+      "lane": "order",
+      "status": "now",
+      "cert": "canon",
+      "title": "The Fleet stretched thin",
+      "desc": "More Zeniths, more Watcher requests, an illithid whiff, movements at the sphere's edge. Vocath uses the thinning to stress the Academy.",
+      "t": -1,
+      "end": 0,
+      "tier": 2
+    },
+    {
+      "lane": "dragons",
+      "status": "past",
+      "cert": "canon",
+      "title": "The dragons leave",
+      "desc": "Dragons on Fonains and most worlds leave to face Takhisis. Fonains remembers it as a great hunt. Few remain. They have not yet reached Krynn; what holds them is their own politics, not yet revealed.",
+      "t": -300,
+      "tier": 2
+    },
+    {
+      "lane": "dragons",
+      "status": "past",
+      "cert": "canon",
+      "title": "Korvalatel's eggs",
+      "desc": "Three white dragon eggs leave Winter's Teeth: two with Walter and Grizabella, one damaged with Phantom.",
+      "t": -150,
+      "tier": 2
+    },
+    {
+      "lane": "dragons",
+      "status": "now",
+      "cert": "canon",
+      "title": "Shadow of the Dragon Queen",
+      "desc": "The Krynn campaign. Its present is level with Caelestis now: the prelude to the War of the Lance, with the Dragon Armies marching on Solamnia.",
+      "t": -0.15,
+      "tier": 1,
+      "end": 0,
+      "kind": "campaign"
+    },
+    {
+      "lane": "crew",
+      "t": -1.05,
+      "status": "past",
+      "cert": "canon",
+      "title": "Clint lands on Fonains",
+      "desc": "Carried by the psychic wind after the Bellwether Crow. He arrives before the Monolith and is on Fonains when it appears.",
+      "tier": 2
+    },
+    {
+      "lane": "crew",
+      "t": -0.5,
+      "status": "past",
+      "cert": "canon",
+      "title": "Boogie takes the shard",
+      "desc": "Vocath's people chased Clint to Fonains, never found him, and came back with fragments of the broken Monolith through Vocath's Cairn Station line. Boogie looks into a shipment he shouldn't and the shard ends up in him, before V001.",
+      "tier": 1
+    },
+    {
+      "lane": "fonains",
+      "t": -500.2,
+      "status": "past",
+      "cert": "canon",
+      "title": "Lola's Boys in the year 425",
+      "desc": "Sent back by the Accordance (Nelson: \"you all are going the wrong way\"), they take two gems from the Temple of Moloch: the red gem from the cavern lake and the hazy yellow gem from Thessalar's workshop. These were the planar craft's control and defense components. Without them the craft falls, and the crash is N'ghathrod's chance to escape. The party unknowingly frees their own villain from another campaign. Back in the present, the same gems restart the craft for Kwalish. While ethereal, Xero sees a giant purple slit-pupiled eye watching the party: the Elder Elemental Eye, Tharizdun. The gems formed where Olhydra and Ogrémoch collided.",
+      "tier": 1
+    },
+    {
+      "lane": "colony",
+      "t": -500,
+      "status": "past",
+      "cert": "canon",
+      "title": "The craft falls; N'ghathrod escapes",
+      "desc": "Stripped of its gems, the craft comes down. N'ghathrod escapes in the crash with his lieutenants and the tadpoles he can carry. The craft is a megadungeon whose unexplored levels become the Mad Mage dungeon, and it breaks up as it falls: the main body raises the Barrier Peaks, a broken-off section becomes Daoine Gloine, and the Thessalkraken lands separately in the sea, where it later guards the trident's reef. The elder brain is carried on to Fonains; when N'ghathrod reaches for it, Vecna answers.",
+      "tier": 1
+    },
+    {
+      "lane": "vecna",
+      "t": -0.75,
+      "tier": 1,
+      "status": "past",
+      "cert": "canon",
+      "title": "The Accordance chooses Lola's Boys",
+      "desc": "Nelson shows each champion the gods tied to them and visions of their homes destroyed: \"First we start with the Monolith destroyed. Then you must find the other portals to the Elemental Planes.\""
+    },
+    {
+      "lane": "fonains",
+      "t": -0.64,
+      "tier": 1,
+      "status": "past",
+      "cert": "canon",
+      "title": "The Monolith breaks",
+      "desc": "Kwalish's cannon splits it into four shards, each guarded by a Prince-aligned elemental. The cyst drops Ziko, his blade now black. Tharizdun: \"Wait for the day of chaos.\""
+    },
+    {
+      "lane": "princes",
+      "t": -0.5,
+      "tier": 1,
+      "status": "past",
+      "cert": "canon",
+      "title": "Aerisi takes the air spear",
+      "desc": "Aerisi Kalinoth, Yan-C-Bin's prophet, splits Eldath's tree in the Misty Vale and takes the spear while the Green Lady, cut off from Eldath, is trapped in dragon form. A black spiral spreads on the altar."
+    },
+    {
+      "lane": "princes",
+      "t": -0.55,
+      "tier": 1,
+      "status": "past",
+      "cert": "canon",
+      "title": "Pedra Ardante reaches Vanifer",
+      "desc": "Clint's crew rescues the archaeologists from the Blooming Glass and hands the fire-plane ruby to Fernerva, \"for the eldest brother.\""
+    },
+    {
+      "lane": "princes",
+      "t": -0.46,
+      "tier": 1,
+      "status": "past",
+      "cert": "canon",
+      "title": "The Sacred Stone takes the war pick",
+      "desc": "Lola's Boys open the dwarven vault under the Martyr Dome at the Tournament of Masters. Marlos petrifies Jorgi and leaves with the pick."
+    },
+    {
+      "lane": "princes",
+      "t": -0.43,
+      "tier": 1,
+      "status": "now",
+      "cert": "canon",
+      "title": "Yan-C-Bin summoned",
+      "desc": "On the floating island above the Feathergale Spire, Aerisi Kalinoth, the winged elf queen, raises the spear: \"With this key, I call forth my lord and master.\" The Prince of Air manifests."
+    },
+    {
+      "lane": "princes",
+      "t": -1.0,
+      "tier": 2,
+      "status": "past",
+      "cert": "canon",
+      "title": "Tinderstrike under guard",
+      "desc": "The fire key is still held by the Cre'Tez line in the Eternal Flame temple. Asmodus needs every birthright to claim it; Vanifer is waiting to take it from whoever does."
+    },
+    {
+      "lane": "fonains",
+      "t": -0.82,
+      "tier": 1,
+      "status": "now",
+      "cert": "canon",
+      "title": "Lola's Boys",
+      "desc": "From the hunt for Kwalish's lost laboratory to the air Prince's rising. The campaign everything on Fonains builds from.",
+      "end": -0.43,
+      "kind": "campaign"
+    },
+    {
+      "lane": "crew",
+      "t": -0.4,
+      "tier": 1,
+      "status": "now",
+      "cert": "canon",
+      "title": "The crew at the Academy",
+      "desc": "Cadet intake to the seated helm: the thefts, the neogi, the tyrant ship. The Lantern taken, Ostekk-10 ejected.",
+      "end": 0,
+      "kind": "campaign"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.82,
+      "tier": 2,
+      "status": "past",
+      "cert": "canon",
+      "title": "The hunt for Kwalish's lost laboratory",
+      "desc": "Across the Jaded Forest and the Barrier Peaks to the Monastery of the Distressed Body, then down into Daoine Gloine, where Kwalish is found and the Accordance chooses its champions.",
+      "end": -0.75,
+      "kind": "arc",
+      "session": "S1–S10"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.74,
+      "tier": 2,
+      "status": "past",
+      "cert": "canon",
+      "title": "Back to the Temple of Moloch",
+      "desc": "Sent 500 years back to take the craft's lost gems from Thessalar's temple. Lusion joins.",
+      "end": -0.73,
+      "kind": "arc",
+      "session": "S11–S12"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.7,
+      "tier": 2,
+      "status": "past",
+      "cert": "canon",
+      "title": "Breaking the Monolith",
+      "desc": "The craft rises on the stolen gems, and its cannon splits the Monolith into four elemental shards.",
+      "end": -0.64,
+      "kind": "arc",
+      "session": "S13–S15"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.64,
+      "tier": 2,
+      "status": "past",
+      "cert": "canon",
+      "title": "Downtime and the fire cult",
+      "desc": "A month at Lola's Place, then the road to Baratol to free Dara and Rahiri from Elizar Dryflagon's fire cult.",
+      "end": -0.49,
+      "kind": "arc",
+      "session": "S16–S19"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.485,
+      "tier": 2,
+      "status": "past",
+      "cert": "canon",
+      "title": "The Tournament of Masters",
+      "desc": "Jorgi questions Cobra Kai's creed; the Sacred Stone seizes the dojos and the party must win them back at Zonlilimer.",
+      "end": -0.46,
+      "kind": "arc",
+      "session": "S20–S23"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.455,
+      "tier": 2,
+      "status": "past",
+      "cert": "canon",
+      "title": "Sibling Rivalries",
+      "desc": "Xero answers a phoenix's summons to Gransby and faces Bastian's devastation orb.",
+      "end": -0.45,
+      "kind": "arc",
+      "session": "S24–S25"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.445,
+      "tier": 2,
+      "status": "past",
+      "cert": "canon",
+      "title": "One's strange message",
+      "desc": "Pulled back to the planar craft and on to the elder brain's lair under the Barrier Peaks.",
+      "end": -0.44,
+      "kind": "arc",
+      "session": "S26–S27"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.435,
+      "tier": 2,
+      "status": "now",
+      "cert": "canon",
+      "title": "Weathering the storm",
+      "desc": "Eight days of storm, heaviest at the Monolith ruins. The air shard opens.",
+      "end": -0.43,
+      "kind": "arc",
+      "session": "S28"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.82,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Hired to find Kwalish",
+      "desc": "Randy the Red hires the party. Anaxi lends an unfinished map of the Barrier Peaks from the Myriad of Maps.",
+      "kind": "session",
+      "session": "S1"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.81,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Through the Jaded Forest",
+      "desc": "Sprites guide the party, a withered walking tree attacks, and Eldree joins at the elven ruins.",
+      "kind": "session",
+      "session": "S2"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.8,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Ctenmiir in Kwalish's walker",
+      "desc": "Turvum's temple, the thirsty dryad at the grove, and a starved dwarf freed from a coffin on golem legs.",
+      "kind": "session",
+      "session": "S3"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.79,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Ctenmiir is a vampire",
+      "desc": "He bites Granny, summons wolves, and flees as a bat.",
+      "kind": "session",
+      "session": "S4"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.785,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Into the caverns",
+      "desc": "Infernal names on the walls and a sleeping rock creature on the way through the peaks.",
+      "kind": "session",
+      "session": "S5"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.78,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "The Monastery of the Distressed Body",
+      "desc": "The sphinx, the skiff across the valley, and the monks' welcome on the floating island.",
+      "kind": "session",
+      "session": "S6"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.775,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "The Grand Master is Whazzit",
+      "desc": "The bone devil falls and a quasit climbs out. Brains in tubes run the island.",
+      "kind": "session",
+      "session": "S7"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.77,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Captured; Kwalish's journal",
+      "desc": "Whazzit turns on the party. Xero reads the journal in the cells, and Eldree becomes Hayden's familiar.",
+      "kind": "session",
+      "session": "S8"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.76,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Into Daoine Gloine",
+      "desc": "The glass city under the ooze, and the clockwork tentacles guarding its baubles.",
+      "kind": "session",
+      "session": "S9"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.75,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Kwalish found",
+      "desc": "The bauble lab, the shadow doubles, and the time device. Nelson names the Accordance's champions.",
+      "kind": "session",
+      "session": "S10"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.74,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Lusion arrives; the Temple of Moloch",
+      "desc": "Asmodeus spares Lusion from the Alpha and sends him to the temple. The ruby eye and the heart construct.",
+      "kind": "session",
+      "session": "S11"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.73,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Seldra and the hazy yellow gem",
+      "desc": "Hayden's solo through his past, Seldra freed, and the red and yellow gems taken.",
+      "kind": "session",
+      "session": "S12"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.7,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Home with the gems",
+      "desc": "Kwalish frees his friends' brains, and One keeps the craft aloft.",
+      "kind": "session",
+      "session": "S13"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.65,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Kwalish's cannon splits the Monolith",
+      "desc": "Four shards turn around a black cyst in the Trintara Forest.",
+      "kind": "session",
+      "session": "S14"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.64,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "The four shards and the cyst",
+      "desc": "An elemental in each shard. The cyst drops Ziko, his blade black.",
+      "kind": "session",
+      "session": "S15"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.6,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "A month at Lola's Place",
+      "desc": "Paid by Randy the Red. Granny takes in the Trintar refugees.",
+      "kind": "session",
+      "session": "S16"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.55,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "The road to Baratol",
+      "desc": "Hayden's prosthetic arm, and three weeks by cart toward the fire cult.",
+      "kind": "session",
+      "session": "S17"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.52,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Dara and Rahiri freed",
+      "desc": "The tower fight in Baratol, Asmodus's letter, and word that Lola's Place was attacked.",
+      "kind": "session",
+      "session": "S18"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.505,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Elizar left in the woods",
+      "desc": "Jorgi's vision of a fanged eye; Elizar's brand matches the Cre'Tez emblem; hellhounds on the road home.",
+      "kind": "session",
+      "session": "S19"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.485,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Jorgi questions the creed",
+      "desc": "Two weeks guarding Lola's Place, and Ferguson's toy castle.",
+      "kind": "session",
+      "session": "S20"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.48,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Asmodeus answers",
+      "desc": "Hayden summons him by name. Eli arrives: the Sacred Stone has taken the dojos.",
+      "kind": "session",
+      "session": "S21"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.47,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "The Drainsville lich",
+      "desc": "An excavated complex of Moloch statues on the road to Zonlilimer.",
+      "kind": "session",
+      "session": "S22"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.46,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "The Tournament of Masters",
+      "desc": "The war pick under the Martyr Dome. Marlos petrifies Jorgi and leaves with it.",
+      "kind": "session",
+      "session": "S23"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.455,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "A phoenix's summons",
+      "desc": "Xero, Kevulan and the Bacon siblings answer Bastian's call to Gransby.",
+      "kind": "session",
+      "session": "S24"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.45,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Bastian's orb",
+      "desc": "A fire elemental in the town square. Bastian falls; Kevulan is bound to Xero.",
+      "kind": "session",
+      "session": "S25"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.445,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "One's strange message",
+      "desc": "The bracelets pull the party back to the planar craft.",
+      "kind": "session",
+      "session": "S26"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.44,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "The elder brain",
+      "desc": "Duran wakes from his loop, Jorgi burns the mind flayer, and the elder brain is buried.",
+      "kind": "session",
+      "session": "S27"
+    },
+    {
+      "lane": "fonains",
+      "t": -0.43,
+      "tier": 3,
+      "status": "now",
+      "cert": "canon",
+      "title": "The storm at the Monolith ruins",
+      "desc": "Mandu the Red sends them in. The air shard opens onto the Feathergale Spire.",
+      "kind": "session",
+      "session": "S28"
+    },
+    {
+      "lane": "crew",
+      "t": -0.36,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "The Shape of a Crew",
+      "desc": "Voyage 001.",
+      "kind": "session",
+      "session": "V001"
+    },
+    {
+      "lane": "crew",
+      "t": -0.292,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "What the Crew Offers",
+      "desc": "Voyage 002.",
+      "kind": "session",
+      "session": "V002"
+    },
+    {
+      "lane": "crew",
+      "t": -0.224,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "The Weight of What's Real",
+      "desc": "Voyage 003.",
+      "kind": "session",
+      "session": "V003"
+    },
+    {
+      "lane": "crew",
+      "t": -0.156,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "All Things Find Their Way Home",
+      "desc": "Voyage 004.",
+      "kind": "session",
+      "session": "V004"
+    },
+    {
+      "lane": "crew",
+      "t": -0.088,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "Retreat Is Always an Option",
+      "desc": "Voyage 005.",
+      "kind": "session",
+      "session": "V005"
+    },
+    {
+      "lane": "crew",
+      "t": -0.02,
+      "tier": 3,
+      "status": "past",
+      "cert": "canon",
+      "title": "What Is Here Has Not Left",
+      "desc": "Voyage 006.",
+      "kind": "session",
+      "session": "V006"
+    },
+    {
+      "lane": "dragons",
+      "t": 0,
+      "tier": 1,
+      "status": "now",
+      "cert": "canon",
+      "title": "Takhisis moves, not yet free",
+      "desc": "The Dragon Queen works through her armies while still bound. The War of the Lance has not begun."
+    },
+    {
+      "lane": "dragons",
+      "t": null,
+      "tier": 2,
+      "status": "past",
+      "cert": "canon",
+      "title": "Takhisis traps an aspect of Bahamut",
+      "desc": "Held in the ruined temple of Paladine. It speaks through Eldree's egg on Fonains, a link between the campaigns not yet in play."
+    }
+  ],
+  "clocks": [
+    {
+      "t": 0,
+      "label": "Caelestis now",
+      "kind": "primary"
+    },
+    {
+      "t": -0.43,
+      "label": "Fonains now (S28)",
+      "kind": "secondary"
+    }
+  ],
+  "decisions": [
+    "Caelestis's present sits a few months after the Fonains Monolith broke, shortly after Fonains's Session 28. Clint reaches Fonains about a year before Caelestis's present, before the Monolith appears. Boogie's shard came from the broken Monolith through Vocath's line, before V001. This replaces \"Caelestis runs about a year before Fonains.\"",
+    "Benedetta fell ill at Rihiri's birth, about twelve years ago, and died about ten years ago. The illness was Vanifer siphoning her soul into the illegitimate Bloodstone, which took about two years.",
+    "Thessalar's planar craft fell about 500 years ago. N'ghathrod had already lost a clash with it and was a prisoner aboard, being experimented on. Lola's Boys, sent back by the Accordance, took the craft's control and defense gems; without them it fell, and the crash let N'ghathrod escape. The party unknowingly made their own villain in another campaign. \"Some millennia ago\" in Lola's Boys is rumour.",
+    "Session and voyage dates inside a campaign are spaced by feel; their order is canon. Lola's Boys runs from about a month after the Darkest Day to Session 28, two to three months after the Monolith broke.",
+    "Krynn is the third campaign world. Its present is level with Caelestis now. The dragons that left Fonains have not yet reached it."
+  ],
+  "threads": {
+    "entities": [
+      {
+        "name": "Vecna",
+        "group": "Powers"
+      },
+      {
+        "name": "Tharizdun and the Princes",
+        "group": "Powers"
+      },
+      {
+        "name": "The Accordance",
+        "group": "Powers"
+      },
+      {
+        "name": "N'ghathrod",
+        "group": "Powers"
+      },
+      {
+        "name": "Lola's Boys",
+        "group": "People"
+      },
+      {
+        "name": "The crew",
+        "group": "People"
+      },
+      {
+        "name": "Vanifer",
+        "group": "People"
+      },
+      {
+        "name": "Asmodus",
+        "group": "People"
+      },
+      {
+        "name": "Giorge",
+        "group": "People"
+      },
+      {
+        "name": "Aerisi",
+        "group": "People"
+      },
+      {
+        "name": "Clint",
+        "group": "People"
+      },
+      {
+        "name": "Joffrey",
+        "group": "People"
+      },
+      {
+        "name": "Vocath",
+        "group": "People"
+      },
+      {
+        "name": "Thessalar",
+        "group": "People"
+      },
+      {
+        "name": "Tinderstrike",
+        "group": "Keys"
+      },
+      {
+        "name": "The war pick",
+        "group": "Keys"
+      },
+      {
+        "name": "The spear",
+        "group": "Keys"
+      },
+      {
+        "name": "The trident",
+        "group": "Keys"
+      },
+      {
+        "name": "Pedra Ardante",
+        "group": "Artifacts"
+      },
+      {
+        "name": "Ziko's sword",
+        "group": "Artifacts"
+      },
+      {
+        "name": "The Fonains shard",
+        "group": "Artifacts"
+      },
+      {
+        "name": "The craft's gems",
+        "group": "Artifacts"
+      }
+    ],
+    "presets": {
+      "The big picture": [
+        "Vecna",
+        "Tharizdun and the Princes",
+        "The Accordance",
+        "N'ghathrod",
+        "Lola's Boys",
+        "The crew",
+        "Vanifer",
+        "The Fonains shard"
+      ],
+      "The four keys": [
+        "Tharizdun and the Princes",
+        "Tinderstrike",
+        "The war pick",
+        "The spear",
+        "The trident",
+        "Vanifer",
+        "Aerisi",
+        "Lola's Boys"
+      ],
+      "N'ghathrod's origin": [
+        "N'ghathrod",
+        "Thessalar",
+        "Lola's Boys",
+        "The Accordance",
+        "The craft's gems",
+        "Vecna",
+        "Joffrey",
+        "The crew"
+      ],
+      "Ziko's sword and Giorge": [
+        "Ziko's sword",
+        "Giorge",
+        "Lola's Boys",
+        "Vecna",
+        "Tharizdun and the Princes"
+      ],
+      "The Cre'Tez line": [
+        "Tinderstrike",
+        "Vanifer",
+        "Asmodus",
+        "Lola's Boys",
+        "Pedra Ardante",
+        "Vecna"
+      ],
+      "Caelestis": [
+        "The crew",
+        "Joffrey",
+        "Vocath",
+        "Clint",
+        "N'ghathrod",
+        "The Fonains shard"
+      ]
+    },
+    "default": "The big picture",
+    "scenes": [
+      {
+        "t": -12000,
+        "status": "past",
+        "title": "The Accordance seals the four Princes and hides the keys",
+        "who": [
+          "The Accordance",
+          "Tharizdun and the Princes",
+          "Tinderstrike",
+          "The war pick",
+          "The spear",
+          "The trident"
+        ]
+      },
+      {
+        "t": -350,
+        "status": "past",
+        "title": "Asmodeus gives the fire genasi Tinderstrike to seal Imix; the Cre'Tez line begins",
+        "who": [
+          "The Accordance",
+          "Tharizdun and the Princes",
+          "Tinderstrike"
+        ]
+      },
+      {
+        "t": -506,
+        "status": "past",
+        "title": "N'ghathrod loses a clash with Thessalar's craft and is taken prisoner",
+        "who": [
+          "N'ghathrod",
+          "Thessalar"
+        ]
+      },
+      {
+        "t": -500.2,
+        "status": "past",
+        "title": "Year 425: sent back by the Accordance, Lola's Boys take the craft's gems; the Elder Elemental Eye watches",
+        "who": [
+          "Lola's Boys",
+          "The Accordance",
+          "Thessalar",
+          "N'ghathrod",
+          "Tharizdun and the Princes",
+          "The craft's gems"
+        ]
+      },
+      {
+        "t": -500,
+        "status": "past",
+        "title": "The craft falls; N'ghathrod escapes; Vecna answers his call",
+        "who": [
+          "N'ghathrod",
+          "Vecna",
+          "Thessalar"
+        ]
+      },
+      {
+        "t": -150,
+        "status": "past",
+        "title": "The Green Lady flees to the Misty Vale, where she will guard the spear",
+        "who": [
+          "The spear"
+        ]
+      },
+      {
+        "t": -13,
+        "status": "past",
+        "title": "A Seeker chapter tells Vanifer the secret in the Cre'Tez blood",
+        "who": [
+          "Vanifer",
+          "Vecna",
+          "Tinderstrike"
+        ]
+      },
+      {
+        "t": -6,
+        "status": "past",
+        "title": "The Drowned God: the Silver Wave Bandits take the trident",
+        "who": [
+          "The trident"
+        ]
+      },
+      {
+        "t": -2,
+        "status": "past",
+        "title": "The Alpha is invoked; Asmodus starts hunting his siblings",
+        "who": [
+          "Asmodus",
+          "Vanifer",
+          "Tinderstrike"
+        ]
+      },
+      {
+        "t": -1.1,
+        "status": "past",
+        "title": "The Bellwether Crow ambushed: Joffrey taken, Clint overboard",
+        "who": [
+          "N'ghathrod",
+          "Joffrey",
+          "Clint",
+          "Vocath"
+        ]
+      },
+      {
+        "t": -1.05,
+        "status": "past",
+        "title": "Clint lands on Fonains",
+        "who": [
+          "Clint"
+        ]
+      },
+      {
+        "t": -0.9,
+        "status": "past",
+        "title": "The Darkest Day: Vecna's bait ritual on Giorge; the corrupted Monolith rises",
+        "who": [
+          "Vecna",
+          "Tharizdun and the Princes",
+          "Giorge",
+          "The Accordance"
+        ]
+      },
+      {
+        "t": -0.7,
+        "status": "past",
+        "title": "The craft restarted with the stolen gems; the Accordance names its champions",
+        "who": [
+          "Lola's Boys",
+          "The Accordance",
+          "The craft's gems"
+        ]
+      },
+      {
+        "t": -0.64,
+        "status": "past",
+        "title": "The Monolith breaks; Ziko's blade turns black; the shards scatter",
+        "who": [
+          "Lola's Boys",
+          "Tharizdun and the Princes",
+          "Ziko's sword",
+          "The Fonains shard"
+        ]
+      },
+      {
+        "t": -0.56,
+        "status": "past",
+        "title": "Vocath's people leave Fonains with fragments",
+        "who": [
+          "Vocath",
+          "The Fonains shard"
+        ]
+      },
+      {
+        "t": -0.55,
+        "status": "past",
+        "title": "The Blooming Glass: Clint's crew hands Pedra Ardante to Vanifer",
+        "who": [
+          "Clint",
+          "Vanifer",
+          "Pedra Ardante"
+        ]
+      },
+      {
+        "t": -0.52,
+        "status": "past",
+        "title": "Ziko leaves his sword under the bed at Lola's Place",
+        "who": [
+          "Lola's Boys",
+          "Ziko's sword"
+        ]
+      },
+      {
+        "t": -0.5,
+        "status": "past",
+        "title": "Aerisi takes the spear from the Misty Vale; Boogie takes the shard from a shipment",
+        "who": [
+          "The spear",
+          "Tharizdun and the Princes",
+          "The Fonains shard",
+          "The crew",
+          "Vocath",
+          "Aerisi"
+        ]
+      },
+      {
+        "t": -0.48,
+        "status": "past",
+        "title": "Giorge attacks Lola's Place for the sword",
+        "who": [
+          "Giorge",
+          "Ziko's sword",
+          "Lola's Boys"
+        ]
+      },
+      {
+        "t": -0.46,
+        "status": "past",
+        "title": "The Sacred Stone takes the war pick from under the Martyr Dome",
+        "who": [
+          "Lola's Boys",
+          "The war pick",
+          "Tharizdun and the Princes"
+        ]
+      },
+      {
+        "t": -0.45,
+        "status": "past",
+        "title": "Bastian falls; Kevulan bound to Xero; \"the fire witch will avenge\"",
+        "who": [
+          "Lola's Boys",
+          "Vanifer",
+          "Asmodus"
+        ]
+      },
+      {
+        "t": -0.43,
+        "status": "now",
+        "title": "Fonains now: the spear summons Yan-C-Bin",
+        "who": [
+          "Lola's Boys",
+          "Tharizdun and the Princes",
+          "The spear",
+          "Aerisi"
+        ]
+      },
+      {
+        "t": -0.2,
+        "status": "past",
+        "title": "V001–V006: thefts, the neogi, the tyrant ship",
+        "who": [
+          "The crew",
+          "Vocath",
+          "Joffrey",
+          "The Fonains shard"
+        ]
+      },
+      {
+        "t": 0.2,
+        "status": "planned",
+        "title": "Graduation and the Brig breach",
+        "who": [
+          "The crew",
+          "Joffrey",
+          "N'ghathrod"
+        ]
+      },
+      {
+        "t": 0.6,
+        "status": "projected",
+        "title": "The Day of Chaos",
+        "who": [
+          "Tharizdun and the Princes",
+          "Tinderstrike",
+          "The war pick",
+          "The spear",
+          "The trident",
+          "Lola's Boys",
+          "Vanifer",
+          "Asmodus",
+          "Vecna",
+          "Pedra Ardante",
+          "Aerisi"
+        ]
+      },
+      {
+        "t": 2,
+        "status": "planned",
+        "title": "Act 3: Vth'oramu",
+        "who": [
+          "The crew",
+          "N'ghathrod",
+          "The Fonains shard"
+        ]
+      },
+      {
+        "t": 5,
+        "status": "projected",
+        "title": "The Cast",
+        "who": [
+          "Vecna",
+          "N'ghathrod",
+          "The crew"
+        ]
+      }
+    ]
+  },
+  "campaigns": [
+    {
+      "id": "caelestis",
+      "label": "Caelestis",
+      "lanes": [
+        "crew"
+      ],
+      "from": -0.45,
+      "to": 0.3
+    },
+    {
+      "id": "fonains",
+      "label": "Fonains",
+      "lanes": [
+        "fonains"
+      ],
+      "from": -0.95,
+      "to": -0.4
+    },
+    {
+      "id": "krynn",
+      "label": "Krynn",
+      "lanes": [
+        "dragons"
+      ],
+      "from": -0.3,
+      "to": 0.3
+    }
+  ]
+}

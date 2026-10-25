@@ -88,6 +88,7 @@
         { key: 'campaign',  label: 'Campaign',      path: 'campaign/'   },
         { key: 'spine',     label: 'Spine',         path: 'campaign/spine.html',      indent: true },
         { key: 'voyages',   label: 'Voyages',       path: 'campaign/voyages/',        indent: true },
+        { key: 'timeline',  label: 'Timeline',      path: 'timeline/',                indent: true },
         { key: 'plot-hooks',label: 'Plot Hooks',    path: 'campaign/plot-hooks.html', indent: true },
         { key: 'what-if',   label: 'What If',       path: 'campaign/what-if.html',    indent: true },
         { key: 'tracker',   label: 'Tracker',       path: 'tracker/'    },
