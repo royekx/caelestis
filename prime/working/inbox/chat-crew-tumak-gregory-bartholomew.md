@@ -2,7 +2,7 @@
 
 Five chats. Repo checks are targeted greps of `prime/` against `prime/crew/*.html`, `prime/rules/index.html`, `prime/rules/wayfinder-path-dm.html`, `prime/dossiers/`, `prime/realms/wayfinders-homeworld.html`, `prime/factions/runekeepers.html`, `prime/campaign/spine.html` and `prime/campaign/voyages/voyage-briefing-002.html`.
 
-**Coverage warning:** the Tumak Swan chat has 336 turns. I read turns 0–114 in full. The hourly read limit then cut me off. I sampled turns 115–335 with in-chat search only. Items from that range are marked **(sampled)**. Their final status is unconfirmed. A follow-up sweep should read turns 115–335 in full.
+**Coverage warning:** the Tumak Swan chat has 336 turns. Turns 0–150 are now read in full (0–114 in the first sweep, 115–150 in a follow-up). The hourly read limit stopped the follow-up at turn 150. Turns 151–335 were sampled with in-chat search only. Items from that range are marked **(sampled)**, and their final status is unconfirmed. Resume reading at page_token `t151`.
 
 **Newer canon overrides the older chats.** The repo now frames Tumak's homeworld around the **Dissolution fragment** and "three poles" (`realms/wayfinders-homeworld.html`, `dossiers/the-runekeeper.html`). The early Tumak chat framed it as "the world bestows runes as gifts" with "two discharges". Treat the repo as current where the two conflict.
 
@@ -57,12 +57,46 @@ Source: https://claude.ai/chat/fa2979bd-9459-4eed-829c-d44bf6a5d6b0 · updated 2
 - Narrative safety valve: the world can place a rune directly. — **in repo** (rules "The safety valve")
 - Gregory as Tumak's navigator, and waypoints that overlap other PCs' arcs (Casey's Viren pull). — **not in repo** for Tumak (inference)
 - Body-point list as of turn 87 (Forehead, hand tops, palms, foot tops, soles, Chest, upper/lower back, shoulder blades, shoulders, collar bones, thighs). Each was mapped to one of 20 generated rune images. — **conflicts**. The repo uses a later list: 16 rollable positions including Tongue and Stomach, positions 17–19 bestowed, 20 = Heart. See Superseded.
-- Rune boons are unique per body part. The activation cost is 1 Psionic Energy die **or** 1 sorcery point, specific to this character (turn 110). — **conflicts** (the repo lists "per-rune boons" without defining them. The sampled late chat strips per-rune boons, see below.)
+- Rune boons are unique per body part. The activation cost is 1 Psionic Energy die **or** 1 sorcery point, specific to this character (turn 110). — **conflicts** (the repo lists "per-rune boons" without defining them. The sampled late chat strips per-rune boons, see below.) Revised at turns 115–119, see Superseded.
+
+### Wayscribe design (turns 115–150, read in full)
+- Twenty unique active boons was judged too much (turn 115). Korey's fix: the matched runes themselves are the resource, spent on use and recharged (turns 116–118). — **in repo** in substance (rules "Matched runes … power the four Wayscribes")
+- Design rule: each group ability is a symbolic extension of its body region. The hands reaching at a distance suggest Telekinesis (turns 120–121). — **in repo** in substance (rules flavor "The world grasps through you")
+- Korey: Tumak is an extension of his world, and the world reaches out *through* him (turn 126). — **in repo** (rules "The world perceives through you")
+- Group abilities must be existing published 5e spells (5e.tools, partner content allowed) so there is no homebrew to track (turns 124, 128). — **in repo** in substance (all menu entries are published spells)
+- Tier caps: Heart 2nd, Hand and Foot 3rd, Core 5th (turn 132). — **in repo** (rules "Heart group · 2nd level", "Core group · 5th level")
+- A lower-level spell qualifies for a menu only if upcasting it to the group's tier gives a real benefit (turn 132). — **not in repo**
+- Korey: no entity summoning in the Core group. Movement and manipulation fit; Conjure Elemental was cut (turn 132). — **in repo** in substance (Vessel menu has no summons)
+- When a group completes, the player picks one spell from a menu of at most five, permanently. The world's reach is filtered through Tumak's own experience, so the picks build what kind of Wayfinder he is (turns 130–132). — **in repo** (rules "The player then picks one spell from that Wayscribe's menu, permanently")
+- Group logic: Hands and Feet are 4 each, Heart/Mind is small, and the Core is everything that connects and is the largest (turn 126). — **in repo** (Soul / Maker / Walker / Vessel; group sizes later changed, see Superseded)
+- Recharge rolls per group (Model 2), and the player chooses which spent runes refresh (turns 125–126, 140–141). — **in repo** (rules "Wayscribe recharge"; see the late conflict on the dice)
+- After a week or more of downtime, every rune refreshes without rolling (turns 140, 145). — **not in repo**
+- Pacing Rule, light version: a roll on a Core position rerolls once while that twin has unresolved smaller groups (turns 134–135). — **in repo** (rules "The Pacing Rule")
+- Exhaustion throttle: the first group use is free and each further use adds a level (turns 144–145). — **in repo** (rules "each further casting adds a level of exhaustion")
+- Korey wants a stark, visible trade-off so other players do not feel Tumak has too much (turn 144). — **not in repo** (design intent)
+- "Wayscribes" is Korey's name for the groups (turn 146). — **in repo** (confirms the sampled item below)
+
+### Separation and attempts (turns 140–143)
+- A mishap separates only one twin. The other stays with the crew so the player stays at the table (turn 142). — **in repo** (rules "the other stays at the origin")
+- A separated twin runs at reduced capacity. Korey floated half HP, half spell slots and possibly half skills (turn 140). — **not in repo**
+- The crew gets a way to home in on the missing twin: the Twin Bond Compass, direction without distance, sharper with proximity (turns 142–143). — **in repo** for the Compass. The proximity table is **not in repo**.
+- Failed attempts keep the twins within the Wildspace setting, and mishaps are never time-related (turn 140). — **not in repo** as a stated rule
+- Attempts cost runes and rest, so he cannot try every day (turn 140). — **in repo** in substance (rules Wayfind cost)
+
+### Runekeeper lore and pressure (turns 140–150)
+- The Runekeeper is the only permitted way in and out of the homeworld. Leaving is rare and only for specific reasons, the Becoming among them (turns 140, 142). — **not in repo** (no hit for "in or out")
+- The current Runekeeper personally sent Tumak away (turn 142). — **not in repo** (the repo says only "Wayfinders are sent out")
+- The Runekeeper's dimming is the accumulated cost of using the door over a long life. It worsens with age, which is why a new Runekeeper is needed (turns 142, 148). — **conflicts** (dossiers/the-runekeeper.html "The fragment is leaving him and forming in Wan and Tu")
+- Korey: Tumak's arc lacks pressure. The Runekeeper's fading is the reason he must go home now, and it should push him to start attempting (turn 148). — **partly in repo** (the dossier shows the dimming; its use as Tumak's pressure is not stated)
+- The pressure reaches the player through memories of his grandmother and of home, such as a smell or how the trees look (turn 150). — **not in repo**
+- Homeworld sensory anchors (arc doc v3): a luminous haze like light beneath water; tall pale trunks with smooth, glasslike bark spiralling toward one unseen point; warm earth after rain and sap touched by lightning; people who move with certainty. Korey still has to work out what the planet looks like. — **not in repo** (no hits for "haze", "bark", "sap")
+- Reference note: Tumak's arc sits between *The Giver* and *Avatar* as inspirations (turn 150). — **not in repo**
+- Tracker brief: informative rather than interactive, styled to sit in the site like Casey's page. Columns per twin, numbers 1–20, which half appeared, the full-rune benefit, the Wayscribe and its benefit, and the capstone (turn 150). — **in repo** (wayfinder-path/index.html)
 
 ### Late-chat design (sampled; final acceptance unconfirmed)
 - 20 runes: 16 rollable (hands 4, feet 4, Forehead and Tongue for Soul, shoulders/lower back/stomach/thighs for Vessel), 3 floating runes bestowed by the DM, and the Heart (20) intrinsic, pre-matched and hidden. — **in repo** (rules "The twenty positions")
 - Heart stays hidden in the diagram until Korey reveals it in game. — **in repo** (rules "hidden: true")
-- Wayscribes is the name for the four groups (Korey's choice). The groups were later renamed Soul / Maker / Walker / Vessel Runes. "Waypost" was dropped. — **in repo** (rules "The four Wayscribes")
+- Wayscribes is the name for the four groups (Korey's choice, confirmed at turn 146). The groups were later renamed Soul / Maker / Walker / Vessel Runes. "Waypost" was dropped. — **in repo** (rules "The four Wayscribes")
 - The tracker is titled "Wayfinder's Path" (not "Wayfinder's Body"), and its table columns use the twins' names. — **in repo** (rules/wayfinder-path-dm.html)
 - Marks: place (10-minute ritual, physical presence), reclaim (free), perceive (1 per long rest). — **in repo**
 - Wayfind mishap result: the twins separate and arrive at previous Runekeepers' resting places (sanctuaries). — **in repo** (rules "Mishap result")
@@ -93,6 +127,18 @@ Source: https://claude.ai/chat/fa2979bd-9459-4eed-829c-d44bf6a5d6b0 · updated 2
 - Per-set passive boons (Soul +5 passive Perception/Insight, Maker Mending, Walker +10 ft, Vessel +5 HP) and the Wayscribe spell menus were proposed, dropped, then partly revived (sampled). The repo has spell menus.
 - Wayfind "100 ft base, anything beyond needs a mishap roll, 1/long rest, 2 exhaustion automatic" (sampled) → repo cost model → later per-band cost proposal.
 - "Tumak's chest glows faintly from day one" → Heart fully hidden.
+- Scale-back options for 20 boons (A: 6–8 iconic runes, B: zone boons, C: no active boons) and a flat d4 dawn die → Korey's pool-size die (pool of 20 rolls d20) → per-group recharge dice (turns 115–127).
+- Per-rune +1 boons: 18 runes each +1 to one skill, one +1 attack, one +1 saves, with a body-part mapping (Forehead Insight, Chest Intimidation, left sole Stealth, right shoulder attack rolls, lower back saves, and so on; turns 118–135) → per-rune boons stripped (sampled late chat; the repo leaves them undefined).
+- Five groups of four (Hands, Feet, Heart, Spine, Reach) → Hands 4 / Feet 4 / Heart-Mind 2 / Core 10 (turn 127; "Reach" felt awkward) → the repo's Soul / Maker / Walker / Vessel over 16 rollable positions.
+- Group abilities at full 5th-level power (Telekinesis, Dimension Door, Truesight) → 3rd-level homebrew versions with level escalation → published spells only, escalation dropped (turns 121–124).
+- Option A (even 5×4, all 2nd–3rd level) vs Option B (small groups plus one large 5th-level capstone group) → Option B with Model 2 recharge (turn 126).
+- Menus of 7–12 spells per group → five per group (turn 132). The turn-133 menus had Augury (Heart) and Longstrider (Foot) → the repo has Mind Spike and Misty Step in those places.
+- Capstone Plane Shift (turn 137) → Gate, 9th level, all 20 charges, +4 exhaustion, targets home only while off the homeworld and any world once home (turns 138–143) → Homebound, a Wayfind to the Heart (repo).
+- Reach for Home: a d20 table from 10 matched runes → a d100 table modeled on Teleport, spending all matched runes, with a d10 mishap subtable (Twins Sundered, Catastrophic Drift, Inscription Frays, the Continuum Notices, Echo Through) (turns 137–141) → Wayfind to placed marks with mishap by distance (repo).
+- Gate fatigue as halved recharge dice for a week → +4 exhaustion (turns 143–145).
+- Both twins sent to separate worlds on a mishap → only one twin is pulled away (turn 142).
+- Group names Bearings, Quarters, Mantles, Wayposts, Voices, Inscriptions → Wayscribes (turn 146).
+- Tracker columns labelled "one" and "two" to keep the twins' names off the public site (turn 150) → the player tracker names Wan and Tu (wayfinder-path/index.html view tabs).
 
 ## Open
 - Which turn-114+ proposals Korey accepted: reach gate, tiered mishap consequences, per-band exhaustion, three-outcome roll, Anchors for 17/18/19. (sampled)
@@ -105,10 +151,15 @@ Source: https://claude.ai/chat/fa2979bd-9459-4eed-829c-d44bf6a5d6b0 · updated 2
 - The Runekeeper's name (also open in the repo).
 - Half of each rune vs splitting the total runes between the twins (turn 88; the assistant's reply was empty). Effectively answered by the repo's rule that Wan takes the left half and Tu the right.
 - What the inscription completing costs Tumak (open in the repo).
+- The retroactive backfill: two more rune-halves per twin for levels 1–2, to be dropped in between V3 and V5 (turn 134). **Not in repo.**
+- 2014 or 2024 exhaustion rules (turn 145).
+- A hard clock or a soft clock for the Runekeeper's fade (arc doc v3).
+- How to play out a lost twin: off-screen montage, a solo one-shot, or shared visions (turn 143).
+- An optional spell-inscription track separate from the runes (turn 137).
 
 ## Documents produced
 - `the-becoming.html`: player handout, HTML with print-to-PDF styles, Lunarfoot seal. At /mnt/user-data/outputs in the chat. **Not in repo.**
-- `tumak-swan-arc.md` (turn 41) and `tumak-swan-arc-v2.md` (turn 97): replacement text for the Drive doc "Tumak Swan" (id 1JxGhqzpAf0nZ46z6cBYJzjQYw4bqorw_PAAzCfI88WI). Korey was to paste it in by hand. A `tumak-swan-arc-v3.md` is referenced (sampled). **Not in repo** as files. Parts reached crew/tumak.html and the rules.
+- `tumak-swan-arc.md` (turn 41) and `tumak-swan-arc-v2.md` (turn 97): replacement text for the Drive doc "Tumak Swan" (id 1JxGhqzpAf0nZ46z6cBYJzjQYw4bqorw_PAAzCfI88WI). Korey was to paste it in by hand. `tumak-swan-arc-v3.md` (turn 149, at /mnt/user-data/outputs in the chat) is confirmed: the full Wayscribe design, Reach for Home, the Gate capstone, the Twin Bond Compass, a new Pressure section and a five-phase roadmap, for paste into the same Drive doc. **Not in repo** as files. Parts reached crew/tumak.html and the rules.
 - 20-rune image-generation prompt and a generated 20-rune image set. **Not in repo** (inference).
 - `tumak-inscription-tracker.html`, "Wayfinder's Path" (sampled). **In repo** as `wayfinder-path/index.html` (player) and `prime/rules/wayfinder-path-dm.html` (DM).
 - `wayfinder-runekeeper-mechanics.md`: mechanics design doc (sampled). **Not in repo** as a file. Its content is in the `prime/rules/index.html#runekeeper` section.
@@ -229,6 +280,7 @@ Source: https://claude.ai/chat/3ab2b3ef-7800-494c-85df-0d026af08f2e · updated 2
 ---
 
 ## Tally
-- **Not in repo:** 34 Settled bullets
-- **Conflicts with repo** (including partial conflicts): 16 Settled bullets
+- **Not in repo:** 45 Settled bullets (Tumak Swan alone: 32, after the turns 115–150 merge)
+- **Conflicts with repo** (including partial conflicts): 17 Settled bullets (Tumak Swan alone: 14)
+- Tumak Swan coverage: turns 0–150 read in full; 151–335 sampled. Resume at page_token `t151`.
 - Highest-value repo fixes: Tu's left-sole match (rules state is stale); "sky dock" in Gregory's Clear clue; the stale Wayscribe recharge dice; and a decision on the late Wayfind reach and cost proposals.
