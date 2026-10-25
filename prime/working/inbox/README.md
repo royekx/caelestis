@@ -13,7 +13,7 @@ settled decision as **in repo**, **not in repo** or **conflicts**.
 | chat-voyage-6-7-planning.md | Voyage six session planning; Voyage 7 prep | Full | 45 | 3 | — |
 | chat-automation.md | Automating with n8n; Voyage 5 runbook | V5 full; n8n mostly | 0 | 2 | — |
 | chat-crew-boogie-casey-sol.md | Boogie; Casey Geim; Sol Fortuna | Boogie full; Casey full; Sol 0–202 of 908 | 87 | 7 | Sol t203 |
-| chat-crew-tumak-gregory-bartholomew.md | Tumak Swan; Tumak's tracker; Gregory; Bartholomew; Gregory's anomaly arc | Tumak Swan 0–150 of 336; rest full | 45 | 16 | Tumak t151 |
+| chat-crew-tumak-gregory-bartholomew.md | Tumak Swan; Tumak's tracker; Gregory; Bartholomew; Gregory's anomaly arc | Full | 62 | 19 | — |
 | chat-early-planning.md | Campaign Planning; Campaign organization; D&D module where evil won; New campaign idea | Planning 0–36 of 417; New idea 0–69 of 102; rest full | 18 | 6 | Planning t37, New idea t70 |
 
 Reading stopped at the chat tool's hourly limit. Partial files mark late items
