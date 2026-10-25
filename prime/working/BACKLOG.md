@@ -33,13 +33,13 @@ staging once Korey has read and accepted them.
 | Factions | factions/ | 24 | 18 | 2 | 38 |
 | Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 29 | 39 | 5 | 34 |
 | Dossiers | dossiers/ | 34 | 38 | 0 | 45 |
-| Crew | crew/ | 31 | 11 | 0 | 66 |
+| Crew | crew/ | 32 | 13 | 0 | 68 |
 | Artifacts and vessels | artifacts/, vessels/ | 17 | 23 | 0 | 42 |
-| Rules | rules/, statblocks/, tracker/ | 19 | 10 | 0 | 12 |
+| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 22 | 17 | 0 | 17 |
 | New pages | 14 proposed pages, the hub, notes/ | 22 | 3 | 2 | 33 |
 | Automation and tracker | the session pipeline and tracker alternatives | 11 | 1 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 6 | 3 | 0 | 0 |
-| **Total** | | **275** | **211** | **13** | **369** |
+| **Total** | | **279** | **220** | **13** | **376** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -58,7 +58,7 @@ Each settles items on several pages at once. Rule these first.
 9. **Astra, Astra Virex or Virex, and what wounded Astra.** Crew (Casey), dossiers, realms.
 10. **The real elder brain.** Buried under the Barrier Peaks, or escaped. Timeline, realms/fonains, N'ghathrod.
 11. **Which sphere holds Oerth.** One of the five charted spheres or a sixth. Realms, chart, cosmology, the new Oerth page.
-12. **Runes 17–19 as Anchors (Hearth, Threshold, Horizon)** and the Wayfind rules that hang on them. Crew (Tumak), rules.
+12. **Runes 17–19 as Anchors.** Fixed places Tumak goes to is settled; what they grant is not. The Wayfind rules that hang on them (cost, reach, odds) are decides beside it. Crew (Tumak), rules.
 13. **Can a taken person be released?** Tadpole removal, the real N'ghathrod's death, or both. Rules, N'ghathrod, colony.
 14. **Fonains–Caelestis offset.** The timeline puts Fonains Session 28 about five months before Caelestis now; older notes say Caelestis is "around" Session 28. Timeline, Fonains doc, campaign.
 15. **OSTEKK-6 as sole survivor.** Saved decisions say so; the V005 record has Gregory waking OSTEKK-2. Dossiers, vessels.
@@ -87,9 +87,10 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 
 ## Still coming in
 
-Five chat sweeps are partial and resume after the read limit: Casey (from turn
-101), Sol (203), Tumak (151), Campaign Planning (37) and New campaign idea (70).
-Items from their unread stretches carry *(sampled)* or *(snippet)* tags.
+Four chat sweeps are partial and resume after the read limit: Casey (from turn
+101), Sol (203), Campaign Planning (37) and New campaign idea (70). Items from
+their unread stretches carry *(sampled)* or *(snippet)* tags. The Tumak sweep is
+complete, and its items no longer carry the tags.
 
 # Cosmology
 
@@ -2533,7 +2534,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   src: chat-cosmic-campaign-structure § Open; chat-crew-tumak-gregory-bartholomew § Tumak/Open
 
 - **[decide]** How the Heart cycle resolves
-  Does Tumak make his own Heart-rune? Does he meet the previous Runekeeper?
+  Does Tumak make his own Heart-rune? Does he meet the previous Runekeeper? Korey's lean (turn 257): the Heart may be the current Runekeeper's personal rune, and Tumak may make his own Heart-rune when he returns home. The Heart stays hidden from the table until Korey reveals it.
   src: chat-crew-tumak-gregory-bartholomew § Tumak/Open
 
 - **[fix]** The fragment is dividing
@@ -2943,26 +2944,39 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 ### crew/tumak.html
 
-Rules for the runes, Wayfind and the Wayscribes live on rules/index.html; see the Rules section.
+Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; see the Rules section.
+
+- **[decide]** What completing the inscription costs Tumak
+  The page carries two questions as "Open:" lines (the stat row and the closing paragraph): what the inscription completing costs him, and what happens to the homeworld's concealment while the fragment is between bearers. Rule both. Either way, take the "Open:" lines off the page; open questions live in this backlog. Touches crew/tumak.html and dossiers/the-runekeeper.html.
+  src: TGB § Tumak/Open; crew/tumak.html
 
 - **[decide]** Hard clock or soft clock for the Runekeeper's fade
-  src: TGB § Tumak/Open (sampled)
+  Hard clock: the fade runs to a deadline the DM counts down. Soft clock: the fade worsens as pressure, with no date. The arc doc v3 Pressure section leaves it open.
+  src: TGB § Tumak/Open
 
-- **[decide]** How a lost twin plays out
-  When a twin is lost or separated for a long stretch: off-screen montage, a solo one-shot, or shared visions.
-  src: TGB § Tumak/Open (sampled)
+- **[decide]** How a separated twin plays out at the table
+  Settled so far (Korey, turn 227): at the table only the twin with the crew is played, a lower-level one-shot with the separated twin is possible, and the twins reunite through the campaign, through the crew or by other means. Still open for a long separation: off-screen montage, a solo one-shot, or shared visions (turn 143). The reunion mechanics are a separate decide on rules/index.html.
+  src: TGB § Tumak/Mishap and separation, Open
 
-- **[fix]** Wayfind grows with level
-  Page says "its growth with understanding rather than with level". Change to: Wayfind opens on the first matched rune and grows with the inscription, which advances by a rune roll every level. Matches rules/index.html.
-  src: TGB § Tumak/Rune system (sampled); rules/index.html
+- **[fix]** Wayfind opens on the first match
+  The "Wayfinding" row says "The partial mark, and its growth with understanding rather than with level. The full mark is several levels out." Change to: Wayfind opens on the first matched rune and always targets one of his placed marks. The network grows as runes match, with one rune roll per character level. Whether the range itself grows with matched runes waits on the reach-gate decide on rules/index.html.
+  src: TGB § Tumak/Wayfind, Rune structure, final; rules/index.html
 
 - **[fix]** Runes are not a proximity detector
   Page says "The runes surface on skin near cosmic threat, which gives the crew a proximity detector". Change to: runes arrive with level-ups, character moments and DM-bestowed story beats, so the player cannot equate a rune with a place. A rune surfacing near something cosmic can stay as an occasional story trigger, not a rule.
-  src: TGB § Tumak/Rune system (sampled)
+  src: TGB § Tumak/Rune system
+
+- **[fix]** The level-4 roll matched the left sole
+  Page says "Level 4 fires with the seating in the V006.5 interlude, before V007, which brings his per-level rune roll." The roll has happened. Tu's half landed on 08, so the left sole is Tumak's first matched rune (Korey, turn 328). Write it as done and point to Rules → Current state.
+  src: TGB § Tumak/Rune structure, final
+
+- **[fix]** The inscription row: reroll and choose
+  The "Runekeeper inscription" row lists "the choose band". The d20 now reads: 1–16 resolve that position, 17–19 reroll, 20 lets the player choose, a duplicate rerolls. Change "the choose band" to "the reroll and choose results". The full table is a fix on rules/index.html.
+  src: TGB § Tumak/Rune structure, final
 
 - **[add]** Soulknife is the first step of the manifestation
   Tumak took Rogue 3 (Soulknife) between sessions 2 and 3. Soulknife is the first step of the Runechild manifestation because the twins' souls are bound. The soul knife and the twins' telepathic link first manifested in V004; the player decides how the psychic blade looks.
-  src: TGB § Tumak/Soulknife and the first rune (sampled); memory-canon § Tumak Swan
+  src: TGB § Tumak/Soulknife and the first rune; memory-canon § Tumak Swan
 
 - **[add]** First Sorcerer level at level 4
   Tumak takes his first Sorcerer level at level 4. His player wants to discover in-world how the abilities work.
@@ -2970,27 +2984,35 @@ Rules for the runes, Wayfind and the Wayscribes live on rules/index.html; see th
 
 - **[add]** What the table believes (add to that box)
   The player sheet reads Variant Human, 5'7" ("long body, shorter arms, smallish head"). CHA 18 with Deception expertise is why the disguise holds.
-  src: TGB § Tumak/Backstory (sampled)
+  src: TGB § Tumak/Backstory
 
 - **[add]** "Left side" and "right side"
   At the table Korey addresses the twins as "left side" and "right side", so only the player knows which twin he means.
-  src: TGB § Tumak/Backstory (sampled)
+  src: TGB § Tumak/Backstory
 
 - **[add]** Why he enrolled, and the note
   Tumak enrolled at the Academy as the quickest way home. Both twins were sent away with a note reading "come home safe".
-  src: TGB § Tumak/Backstory (sampled)
+  src: TGB § Tumak/Backstory
+
+- **[add]** One arc in three stages
+  Runechild, Wayfinder, Runekeeper is one continuous story. Tumak was born or chosen a Runechild; his sorcery is the in-world answer to his backstory. He is now a Wayfinder, on the journey. He becomes the Runekeeper when he returns home.
+  src: TGB § Tumak/Arc framing (turn 211)
+
+- **[add]** What the marks are for
+  Each mark Tumak places is a sensor his world puts out into the universe: its patch of information, so it can protect itself. The world needs "enough" marks, and nobody can say how many. The marks give Tumak a goal beyond going home.
+  src: TGB § Tumak/Marks (turn 223)
 
 - **[add]** The fading as pressure
   The Runekeeper's fading is Tumak's pressure to go home now and to start attempting the journey. It reaches the player through memories of his grandmother and of home: a smell, how the trees look.
-  src: TGB § Tumak/Runekeeper lore and pressure (sampled)
+  src: TGB § Tumak/Runekeeper lore and pressure
 
 - **[add]** Inspirations (DM note)
-  Tumak's arc sits between The Giver and Avatar.
-  src: TGB § Tumak/Runekeeper lore and pressure (sampled)
+  Tumak's arc sits between The Giver and Avatar. The two are the tonal reference for the grandmother-and-memory sequences above all (arc doc v3, Pressure section).
+  src: TGB § Tumak/Runekeeper lore and pressure, Arc framing (turns 150–151)
 
 - **[add]** Design intent: a stark trade-off
-  Tumak's powers carry a stark, visible trade-off so the other players do not feel he has too much.
-  src: TGB § Tumak/Wayscribe design (sampled)
+  Tumak's powers carry a stark, visible trade-off so the other players do not feel he has too much. Every Rune Set spell past the first cast per long rest costs exhaustion, and so does every Wayfind beyond 100 feet.
+  src: TGB § Tumak/Wayscribe design, Rune sets, Wayfind
 
 - **[add]** V007 beat
   While resting, Tumak marks a spot without meaning to, then Wayfinds back to it aboard the ship.
@@ -3569,8 +3591,8 @@ numbers, every item tagged *(counts)* flips.
 
 Pages under `prime/rules/`, `prime/statblocks/` and `prime/tracker/` (whose DM
 layer is `prime/data/overlay.json`), plus one player-site rules page. Items
-under each page run decide, fix, drop, add. Items from the partial Tumak sweep
-keep their `(sampled)` tag in `src:`.
+under each page run decide, fix, drop, add. The Tumak items are checked
+against the complete Tumak sweep (all 336 turns).
 
 ### rules/index.html
 
@@ -3588,69 +3610,112 @@ keep their `(sampled)` tag in `src:`.
   Canon disagrees with itself. One line (marked "Locked this pass") says a heart can only be opened where a Monolith stands, which is why N'ghathrod needs Zeniths. An earlier line says a world's heart is intrinsic to the world and not tied to its Monolith. The cosmic sweep and this page say a Monolith only licenses a link and opens nothing. Options: (a) a Monolith is required to open a heart; (b) a Monolith is required only to link two opened hearts. § Opening on this page, glossary/, and the N'ghathrod and Seekers pages follow the ruling.
   src: memory-canon (open-decisions § Deferred "Locked this pass"; § Planned "Constraints on the Vecna/N'ghathrod layer"); chat-cosmic § Cosmology redesign
 
-#### Tumak: runes, Wayscribes, Wayfind
+#### Tumak: runes, Rune Sets, Wayfind
 
-- **[decide]** Runes 17–19: Anchors or bestowed story runes
-  Page: "Unassigned (bestowed)", given at story moments. Proposed redesign (not locked): runes 17, 18 and 19 become external Anchors, Hearth, Threshold and Horizon, attuned through Gregory's Calibration and tied to his calibration sites, possibly bypassing reach. Anchors are personal and portable, distinct from heart-links (fixed public infrastructure); their overlap with Calibration sites is intended. If Anchors stand, two more rulings: whether one Anchor is pre-set at campaign start, and what an Anchored Wayfind grants (mishap-free transit, a tiered mishap reduction, or one free trip per rest). Touches rules/index.html (position table and § Open) and rules/wayfinder-path-dm.html.
-  src: memory-canon (open-decisions § Pending; campaign-canon § Tumak Swan); TGB § Tumak/Late-chat design (sampled); framework § Open
+- **[decide]** Runes 17–19 as Anchors: what they grant
+  Settled idea (Korey, turn 326): runes 17, 18 and 19 become Anchors, fixed places Tumak goes to, so the arc leans into navigation and working with Gregory. Only the idea is settled. Undecided:
+  1. What an Anchor grants, and what a Wayfind to an Anchor gets: guaranteed arrival, a lower cost, or modestly better odds.
+  2. Whether one Anchor is pre-set at campaign start.
+  3. How a place becomes an Anchor, and how Gregory takes part.
+  4. Which Rune Set each Anchor counts toward. Claude suggested at least one be Soul, since only 09 (Forehead) and 10 (Tongue) are rollable Soul positions (turns 258, 268).
+  Offered and never accepted, so not the default: the names Hearth, Threshold and Horizon; a loop where Gregory's Calibration finds anchorable sites; Anchors bypassing the reach gate (turns 327, 333). The page still reads "Unassigned (bestowed)" and "bestowed at story moments", and § The safety valve leans on the three bestowed positions. Touches rules/index.html (position table, § The safety valve, § Open), rules/wayfinder-path-dm.html, crew/gregory.html.
+  src: TGB § Tumak/Rune structure, final (turn 326), Open; memory-canon (open-decisions § Pending; campaign-canon § Tumak Swan); framework § Open
 
 - **[decide]** Which two runes are active now
-  Still undefined. Set them (see the Tu's-half fix below, which may make the left sole the first matched rune).
+  Still undefined. Set them. The left sole (08) is now matched; see the Tu's-half fix below.
   src: chat-voyage-6-7-planning § Open; framework § Open
 
-- **[decide]** Wayscribe recharge
-  Page: "At dawn: d2 (Soul), d4 (Maker), d4 (Walker), d10 (Vessel)." The late chat drops the dawn dice and keeps "the first cast per long rest is free, then 1 exhaustion per cast". Options: confirm the drop, or keep the dice. If any recharge survives, add the downtime-refresh item below.
-  src: TGB § Tumak/Late-chat design (sampled)
-
-- **[decide]** Wayscribe spellcasting ability
-  Proposed: Wayscribe spells use Charisma, save DC 8 + proficiency bonus + CHA modifier. Confirm and add.
-  src: TGB § Tumak/Late-chat design (sampled)
+- **[decide]** Rune Set spellcasting ability
+  Proposed at turns 329 and 331, no reply: Rune Set spells use Charisma, with save DC 8 + proficiency bonus + CHA modifier, cast at the set's tier with no upcasting. Accept or reject, then add to § The four Wayscribes.
+  src: TGB § Tumak/Open
 
 - **[decide]** Wayfind reach gated by matched runes
-  Proposed reach by matched count: 1–3 Touch (≤100 ft.); 4–6 Local (~10 miles); 7–9 Planetary; 10–12 System; 13–15 Near wildspace; 16 Deep. An attempt beyond reach fails at no cost. The page has no reach table. Accept or reject.
-  src: TGB § Tumak/Late-chat design (sampled)
+  Proposed at turn 333 after Korey's H'catha example ("Something has to scale the wayfind distance"): reach by matched count, 1–3 Touch (≤100 ft.); 4–6 Local (~10 miles); 7–9 Planetary; 10–12 System; 13–15 Near wildspace; 16 Deep. An attempt beyond reach fails at no cost. Marks can still be placed at any distance. Korey moved on to cost without objecting; he did not accept it. The page has no reach table, but says "grows with the inscription" (§ Wayfind) and "the range grows with the inscription" (§ Running it); both lines follow this ruling.
+  src: TGB § Tumak/Open, Superseded (Wayfind range)
 
-- **[decide]** Distance bands: thresholds and consequences
-  Page: "Mishap by distance 0% · 20% · 40% · 60% · 75% · 90%, rising with range", with one mishap result for every band, and the band thresholds undecided. Two rulings:
-  1. Set the distance thresholds behind the six percentages (or adopt the reach bands above as the bands).
-  2. Keep one mishap result, or adopt tiered consequences: Touch 0%; Local, a fizzle; Planetary, a 1d10-mile overshoot; System, a short separation; Near wildspace, the standard mishap; Deep, a full mishap. The tiered version comes with a three-outcome roll: success, failure, mishap.
-  src: TGB § Tumak/Late-chat design, Open (sampled); framework § Open
+- **[decide]** Distance-band thresholds
+  The page gives six mishap bands ("0% · 20% · 40% · 60% · 75% · 90%, rising with range") with no distances behind them. Proposed at turn 329: Touch ≤100 ft. / Local / Planetary / System / Near wildspace / Deep wildspace. The locked exhaustion rule uses four distances (within 100 ft. / same planet / same system / cross-system; see the Wayfind cost fix), so set the bands to agree with it, or adopt the reach-gate bands if that passes.
+  src: TGB § Tumak/Open; framework § Open
 
-- **[decide]** Wayfind cost
-  Page: "First Wayfind per long rest is free. Each further one adds a level of exhaustion." Proposed: one free Wayfind per long rest, unlimited free Touch jumps, otherwise exhaustion equal to the band (1–5). Rule.
-  src: TGB § Tumak/Late-chat design (sampled)
+- **[decide]** Tiered mishap consequences
+  Proposed at turn 331, after Korey said a mishap at level 4 "would be really bad"; he did not confirm it. By band: Touch, none; Local, a fizzle plus 1 exhaustion; Planetary, a 1d10-mile overshoot; System, a short separation on the destination world; Near wildspace, sanctuary plus twin at origin; Deep wildspace, two sanctuaries. Options: keep the one fixed mishap result (the twins split to two sanctuaries; see the mishap-result fix), or adopt the tiers. The Near-wildspace tier brings back "twin at origin", which Korey rejected at turns 251–252.
+  src: TGB § Tumak/Open
+
+- **[decide]** Wayfind cost: the turn-335 proposal
+  The locked rule is exhaustion by distance band (see the Wayfind cost fix). Proposed at turn 335 and unanswered: one free Wayfind per long rest in any band, Touch always free, otherwise exhaustion equal to the band (1–5). The chat ends on three questions: does the daily free Wayfind apply in every band; is Homebound fully free; do Anchors pay full cost, one band less, or nothing. Keep the turn-267 rule, or adopt this and answer the three.
+  src: TGB § Tumak/Open, Superseded (Wayfind cost)
+
+- **[decide]** Network modifiers: where Tumak stands, or which set placed the target
+  Chat (turns 241–247, 262): jumping from one of his own marks lowers the mishap, a little if the two marks come from different sets and more if from the same set, and only when Tumak stands at a mark as he casts. A jump from anywhere else is allowed at full risk (turn 246). Page: "−10% if the mark was placed by a rune from another set; −25% if from the same set", with no standing condition. Rule which reading holds, then reword § Wayfind → Network modifiers and add the full-risk line.
+  src: TGB § Tumak/Wayfind, Open
 
 - **[decide]** The early-home door
   Keep or drop: a natural 20 on a d20, rolled before declaring a target, then a confirmation roll to reach home ahead of the arc.
-  src: TGB § Tumak/Open (sampled); framework § Open
+  src: TGB § Tumak/Open; framework § Open
 
-- **[decide]** Does Sending always work between separated twins?
-  Confirm, then add beside the Twin Bond Compass.
-  src: TGB § Tumak/Late-chat design, Open (sampled)
+- **[decide]** Does Sending work between separated twins?
+  An open proposal, never confirmed. Accept and add beside the Twin Bond Compass, or reject.
+  src: TGB § Tumak/Open
 
 - **[decide]** How resources split when the twins separate
-  HP, death, consumables. Korey floated half HP, half spell slots, maybe half skills. Rule.
-  src: TGB § Tumak/Separation and attempts, Open (sampled)
+  Korey's working position (turn 257): the separated twins split resources about in half (spell slots, sorcery points, Runechild charges, psionic dice), and both keep the full spell list. Earlier he floated half HP, half spell slots and maybe half skills (turn 140). Still to rule: HP, death, consumables, and the exact split. Then add to § Wayfind → While separated.
+  src: TGB § Tumak/Separation and attempts, Mishap and separation, Open
+
+- **[decide]** How separated twins reunite
+  Settled (Korey, turn 227): they reunite through the campaign, through the crew or by other means. Proposed at turn 329, no reply: by travel, by following the Compass pull, or by one return Wayfind from the sanctuary. A return Wayfind conflicts with the page line "Wayfind locks until the twins reunite", so adopting it rewrites that row.
+  src: TGB § Tumak/Mishap and separation, Open
+
+- **[decide]** Mark lifecycle and Perceive details
+  Proposed at turn 329, no reply. Marks: whether a mark can sit on an object or a willing creature, what anti-magic does to one, and what happens to a mark inside a Bag of Holding. Perceive: sight and hearing only, with Tumak's own senses blinded while he perceives. Rule each, then add to the Marks row.
+  src: TGB § Tumak/Open
 
 - **[decide]** 2014 or 2024 exhaustion rules
-  Pick one; Wayscribe and Wayfind costs both use exhaustion.
-  src: TGB § Tumak/Open (sampled)
+  Pick one; Rune Set spells and Wayfind both cost exhaustion.
+  src: TGB § Tumak/Open (turn 145)
 
-- **[decide]** The retroactive backfill
-  Two more rune-halves per twin for levels 1–2 were proposed, then dropped somewhere between V3 and V5. Confirm whether it happened, then update the position table.
-  src: TGB § Tumak/Open (sampled)
+- **[decide]** The retroactive backfill: when the two runes land
+  Korey intends two more rune-halves per twin to backfill levels 1–2, dropped in between V3 and V5 (turn 134), and restated "give him two runes as well" at turn 259. The page has no backfill. Rule when they land and which positions they take (rolled, or placed by the DM), then update the position table and "Current state".
+  src: TGB § Tumak/Open, Rune structure, final
 
 - **[decide]** An optional spell-inscription track
   A spell-inscription track separate from the runes. Keep or drop.
-  src: TGB § Tumak/Open (sampled)
+  src: TGB § Tumak/Open (turn 137)
 
 - **[fix]** Matched runes carry marks; the per-rune boons are gone
-  Page says "Matched runes carry the per-rune boons, power the four Wayscribes". Change to "Matched runes carry marks, power the four Wayscribes". The per-rune +1 boons are removed.
-  src: framework § Tumak, § Superseded; chat-crew-tumak-gregory-bartholomew § Superseded; TGB § Tumak/Superseded (sampled)
+  Page says "Matched runes carry the per-rune boons, power the four Wayscribes, and at the top end carry Wayfind and Homebound." Change to: "Matched runes carry marks. A completed set grants its spell. At the top end the runes carry Wayfind and Homebound." The per-rune +1 boons are removed (Korey, turns 215, 221), and runes are no longer spent and recharged.
+  src: TGB § Tumak/Rune sets and per-rune boons, Superseded; framework § Tumak, § Superseded
+
+- **[fix]** One spell per Rune Set; the recharge dice are gone
+  The Standing mechanics rows say "Wayscribe cost: First casting per Wayscribe is free; each further casting adds a level of exhaustion" and "Wayscribe recharge: At dawn: d2 (Soul), d4 (Maker), d4 (Walker), d10 (Vessel)." Settled (Korey, turns 330–331): when a set completes, Tumak picks one spell from its menu. The first cast of it per long rest is free; each further cast costs 1 level of exhaustion. Rewrite the cost row with "per long rest" and delete the recharge row.
+  src: TGB § Tumak/Rune sets and per-rune boons, Superseded (set rewards)
+
+- **[fix]** "Rune Sets", not "Wayscribes"
+  Korey dropped both "Waypost" and "Wayscribe" for the player page (turns 164–180). The groups are Soul Runes, Maker Runes, Walker Runes and Vessel Runes, with no leading "The", and the player tally counts them as "Rune Sets". Page heads its section "The four Wayscribes", labels table columns "Wayscribe", and says "Wayscribe" in the Pacing Rule and § Current state. Change to "Rune Sets" / "Set" so the DM page uses the player's terms. The player tracker's code still names its constant WAYSCRIBES; that is internal and can stay.
+  src: TGB § Tumak/Rune sets and per-rune boons, Superseded (group names, tally labels)
+
+- **[fix]** The d20 table: 17–19 reroll, 20 chooses
+  Page says "17–20 The player chooses any position still unresolved for that twin" and "A position already resolved for that twin: Treated as a choose result." Change to: 1–16 resolve that position; 17, 18 and 19 reroll; 20 lets the player choose any unresolved position; a position already resolved rerolls. Also reword the line above the table so 17–19 stay off the roll ("bestowed by the DM", or Anchors once that decide lands).
+  src: TGB § Tumak/Rune structure, final (turns 257–260)
 
 - **[fix]** Tu's half landed on 08: the left sole is matched
-  At the level 4 roll Tu's half landed on 08, so the left sole is Tumak's first matched rune. Page "Current state" says "Wan took the left sole (08), Tu took the right shoulder (16). Two unmatched halves; no rune complete", and position 08 shows only "Wan's half". Confirm against the sampled sweep, then update the position table, "Current state", and ACTIVE_HALVES on rules/wayfinder-path-dm.html.
-  src: TGB § Tumak/Late-chat design (sampled); memory-canon (open-decisions § Voyage 007, first rune match)
+  At the level-4 roll Tu's half landed on 08, so the left sole is Tumak's first matched rune (Korey, turn 328). Page "Current state" says "Wan took the left sole (08), Tu took the right shoulder (16). Two unmatched halves; no rune complete", and position 08 shows only Wan's half. Update the position table and "Current state". Wayfind is now open. The player tracker needs the same change (see wayfinder-path/index.html below); the DM copy already shows every rune matched.
+  src: TGB § Tumak/Rune structure, final; memory-canon (open-decisions § Voyage 007, first rune match)
+
+- **[fix]** Wayfind cost: exhaustion by distance
+  Page says "First Wayfind per long rest is free. Each further one adds a level of exhaustion." Locked at turn 267 (Korey's "Interpretation A"): each Wayfind costs exhaustion by distance: within 100 ft. 0, same planet 1, same system 2, cross-system 3. The network buys safety, not energy, so marks lower the mishap and never the exhaustion. A later proposal is a decide above.
+  src: TGB § Tumak/Wayfind, Superseded (Wayfind cost)
+
+- **[fix]** Wayfind odds: three outcomes, rare mishaps
+  Page gives one mishap percentage per band and "Floor 5% during the arc, except within 100 feet and for the Heart once it awakens." Settled: mishaps are rare, and each band carries a chance of plain failure (Korey, turn 253). The roll is a d100 with three outcomes: mishap, failure, success (turns 254, 268). The floor is 1% in-network at most ranges and 5% cross-system (turns 258, 268), and a mishap stays possible in-network (turn 257). Replace the single percentages with the three-outcome bands from the mechanics spec `wayfinder-runekeeper-mechanics.md`. That file is not in the repo, so copy the numbers from the chat output.
+  src: TGB § Tumak/Wayfind, Mishap and separation; TGB § Tumak/Documents produced
+
+- **[fix]** Mishap result: two sanctuaries
+  Page says "The twins separate, and the traveler arrives at a previous Wayfinder's resting place. On a group jump the party lands at that sanctuary with one twin; the other stays at the origin." Change to: the twins separate, and each lands safe at a different previous Runekeeper's resting place. Never home. On a group jump the party goes with the active twin. Korey replaced "the other stays at the origin" at turns 251–252. Use "Runekeeper", not "Wayfinder", for the resting places.
+  src: TGB § Tumak/Mishap and separation, Superseded
+
+- **[fix]** Perceive through a mark needs concentration
+  The Marks row says "perceive through any of your marks (1 per long rest, one minute at one mark)". Add concentration (Korey, turn 259).
+  src: TGB § Tumak/Marks
 
 - **[fix]** Wan and Tu are two hosts
   § One in two says "Tumak is one person occupying two bodies" and calls the twins "a whole Dissolution fragment walking around in two pieces, which is a paradox the cosmology does not otherwise permit". The same section already says "two separate hosts sharing one persona". Restate as two hosts throughout. The fragment wording follows the canon counts (Dissolution has two pieces) and the first-key decide on artifacts/runekeepers-fragment.html.
@@ -3668,25 +3733,41 @@ keep their `(sampled)` tag in `src:`.
   Name the plant and give its numbers. The Faelight spore is a knuckled, colourless fungus with pustules. Fuelled by a caster's spell slot, it makes a persistent Faerie Fire cloud: bonus action, no concentration, no save, reusable. Radius 10/20/30 ft. by slot; lasts 1 minute. Anything entering is coated: attacks against it have advantage and it cannot benefit from invisibility or obscurement. Allies are coated too. It grows in the tyrant ship's Garden.
   src: memory-canon § Cosmology ("Faelight spore"); chat-voyage-6-7-planning § Superseded (Garden)
 
-- **[add]** Wayscribe menus: what qualifies
-  Add to "The four Wayscribes": a lower-level spell qualifies for a Wayscribe menu only if upcasting it to that group's tier gives a real benefit.
-  src: TGB § Tumak/Wayscribe design (sampled)
+- **[add]** Two layers, one inscription
+  In the fiction the Runechild essence runes and the Wayfinder runes are one inscription on Tumak's body. Mechanically they are two layers that share the fiction and never share resources. Tumak tracks three resources on three timescales: sorcery points, Runechild charged runes, and Wayfinder progression. There is no separate Wayfinder spend pool.
+  src: TGB § Tumak/Arc framing (turns 211–220)
 
-- **[add]** Downtime refresh (only if a recharge rule survives)
-  After a week or more of downtime every rune refreshes without rolling.
-  src: TGB § Tumak/Wayscribe design (sampled)
+- **[add]** Rune Set menus: what qualifies
+  Add to the menus section: a lower-level spell qualifies for a menu only if upcasting it to that set's tier gives a real benefit.
+  src: TGB § Tumak/Wayscribe design (turn 132)
+
+- **[add]** Why Mind Spike and Misty Step
+  Augury and Longstrider overlap the Runechild's Runic Spells, so the Soul menu takes Mind Spike and the Walker menu takes Misty Step in their places.
+  src: TGB § Tumak/Rune sets and per-rune boons (turn 212)
+
+- **[add]** How the Rune Sets are offered
+  When a set completes, offer its spell menu out of game; the menus are not on the player tracker (Korey, turns 187, 207). Design note: the sets are built around what a Runekeeper needs, not what a Wayfinder needs (Korey, turn 231).
+  src: TGB § Tumak/Player tracker, Rune sets and per-rune boons
+
+- **[add]** The safety valve: when the DM places a rune
+  Add to § The safety valve: the DM places runes for player moments and engagement, for the two backfill runes for levels 1–2, and as a pacing nudge if Tumak has no complete set by level 5–6 (turns 259–260).
+  src: TGB § Tumak/Rune structure, final
+
+- **[add]** Many marks on one world
+  Add to the Marks row: marking many places on one world is allowed and carries no penalty (Korey, turn 223).
+  src: TGB § Tumak/Marks
 
 - **[add]** Failed attempts and mishaps
   Add to Wayfind: a failed attempt keeps the twins inside Wildspace. Mishaps are never time-related.
-  src: TGB § Tumak/Separation and attempts (sampled)
+  src: TGB § Tumak/Separation and attempts (turn 140)
 
 - **[add]** The Twin Bond Compass
   The compass gives direction without distance, and it sharpens with proximity.
-  src: TGB § Tumak/Separation and attempts (sampled)
+  src: TGB § Tumak/Separation and attempts (turns 142–143)
 
-- **[add]** Prep item: Runekeepers' resting places
-  Keep a stock of 5–10 previous Runekeepers' resting places to serve as mishap sanctuaries. The page's mishap result says "a previous Wayfinder's resting place"; align the term (Runekeeper).
-  src: TGB § Tumak/Open (sampled)
+- **[add]** The sanctuaries, and a stock of them
+  Lore for § Wayfind → Mishap result: the sanctuaries are where past Runekeepers went after passing on their runes. Each found a piece of home off-world and made one last Wayfind to it, a rite so that two Runekeepers never share the homeworld. A sanctuary is always safe, so a split twin is never in danger (Korey, turn 227). Prep: keep a stock of 5–10 previous Runekeepers' resting places.
+  src: TGB § Tumak/Mishap and separation, Open
 
 #### Character subsystems
 
@@ -3705,10 +3786,6 @@ keep their `(sampled)` tag in `src:`.
 - **[decide]** The floating runes 17–19
   The page lists runes 17, 18 and 19 as "Floating (DM-bestowed)" placeholders. Update when the Anchor decide on rules/index.html lands.
   src: memory-canon (open-decisions § Pending)
-
-- **[fix]** ACTIVE_HALVES
-  Add Tu's half at 08 once the Tu's-half fix on rules/index.html is confirmed.
-  src: TGB § Tumak/Late-chat design (sampled)
 
 ### statblocks/index.html
 
@@ -3753,6 +3830,16 @@ keep their `(sampled)` tag in `src:`.
   src: chat-voyage-6-7-planning § The field and constructs
 
 - *(The OSTEKK-2 "wake it for good" line in overlay.json is a decide under artifacts/containment-engine.html in the Artifacts and vessels section.)*
+
+### wayfinder-path/index.html (player site, outside prime)
+
+- **[fix]** ACTIVE_HALVES: Tu's half at 08
+  The player tracker's ACTIVE_HALVES lists Wan's 08 and Tu's 16 only. Add `{ num: 8, bearer: 2 }`, Tu's half of the left sole, so 08 shows as matched. Tumak knows this match, so it belongs on the player page. (The DM copy, rules/wayfinder-path-dm.html, already shows every rune matched and needs no change.)
+  src: TGB § Tumak/Rune structure, final (turn 328); wayfinder-path/index.html
+
+- **[add]** Who gets the tracker link (DM note, kept in prime)
+  Korey sends the tracker link only to Tumak's player, or puts it on the character sheet marked player-only (turn 162). Record this with the rules page's tracker links.
+  src: TGB § Tumak/Player tracker
 
 ### aspects/index.html (player site, outside prime)
 
@@ -3937,16 +4024,16 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 - **[decide]** "The Unfolding"
   The tale's inherited name for the hiding is "the Unfolding", which collides with the glossary's heart-opening sense of "unfolding". Options: keep both; rename the tale's term; or rename the glossary sense.
-  src: TGB § Tumak/"The Becoming" handout (sampled); glossary/
+  src: TGB § Tumak/"The Becoming" handout; glossary/
 
 - **[add]** The tale
   It opens: "Long ago, my hearts — before my mother's mother's mother". In it the thing that came looking is "a star with too many mouths" or "a name written wrong", and the world folds itself around its people and bestows runes on them as gifts. It closes: "The two of you have always been one to me." / "When the time comes — come home safe."
   DM note (prime only): this is Lunarfoot belief. The runes come from the Dissolution fragment, not from a gift.
-  src: TGB § Tumak/"The Becoming" handout (sampled); memory-canon (Dissolution fragment model)
+  src: TGB § Tumak/"The Becoming" handout; memory-canon (Dissolution fragment model)
 
 - **[add]** The Lunarfoot seal
   A crescent moon cradling a footprint, with two four-point stars for the twins. Also usable on the-runekeeper.html.
-  src: TGB § Tumak/"The Becoming" handout (sampled)
+  src: TGB § Tumak/"The Becoming" handout
 
 ### NEW: Bellwether Crow (vessel)
 
