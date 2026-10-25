@@ -9,7 +9,7 @@ settled decision as **in repo**, **not in repo** or **conflicts**.
 |---|---|---|---|---|---|
 | chat-astral-sea-worldbuilding.md | Astral Sea session worldbuilding | Full | 55 | 2 | — |
 | chat-cosmic-campaign-structure.md | Structuring a cosmic campaign | Full | 84 | 4 | — |
-| chat-organizing-framework.md | Organizing a sprawling campaign framework | Turns 0–40 of 166 | 3 | 4 | t41 |
+| chat-organizing-framework.md | Organizing a sprawling campaign framework | Full | 11 | 6 | — |
 | chat-voyage-6-7-planning.md | Voyage six session planning; Voyage 7 prep | V6 full; V7 turns 0–78 of 182 | 37 | 2 | V7 t79 |
 | chat-automation.md | Automating with n8n; Voyage 5 runbook | V5 full; n8n mostly | 0 | 2 | — |
 | chat-crew-boogie-casey-sol.md | Boogie; Casey Geim; Sol Fortuna | Boogie full; Casey 0–40 of 108; Sol 0–202 of 908 | 56 | 4 | Casey t41, Sol t203 |
