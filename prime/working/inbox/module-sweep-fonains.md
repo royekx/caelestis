@@ -31,7 +31,7 @@ Applied to the Fonains Canon Reference doc, `prime/timeline/timeline.json` and
 ## Party names (from Korey)
 
 Jorgi Panamop, Lola Lolita Bacon (Granny), Xero Cre'Tez, Lusion Cre'Tez, Hayden
-Crabshore, Ziko Mistbane, Eldree, Duran. Applied in the doc and the timeline.
+Crabshore, Ziko Mistbane, Eldree, Duran Solas. Applied in the doc and the timeline.
 Giorge, the Darkest Day vessel, is a different person and keeps his name.
 
 ## Spellings kept from the table
