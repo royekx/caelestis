@@ -27,12 +27,12 @@ staging once Korey has read and accepted them.
 | Section | Covers | decide | fix | drop | add |
 |---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 18 | 19 | 0 | 25 |
-| Realms | realms/ except Fonains; a new Oerth page | 36 | 33 | 3 | 47 |
+| Realms | realms/ except Fonains; a new Oerth page | 35 | 33 | 3 | 47 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 13 | 13 | 1 | 29 |
 | Timeline | the rest of timeline.json | 3 | 5 | 0 | 0 |
 | Factions | factions/ | 21 | 20 | 2 | 40 |
-| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 20 | 45 | 5 | 40 |
-| Dossiers | dossiers/ | 27 | 41 | 0 | 50 |
+| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 19 | 45 | 5 | 40 |
+| Dossiers | dossiers/ | 26 | 41 | 0 | 50 |
 | Crew | crew/ | 32 | 16 | 0 | 73 |
 | Artifacts and vessels | artifacts/, vessels/ | 12 | 26 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 18 | 19 | 0 | 17 |
@@ -40,7 +40,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 10 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 2 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 7 | 4 | 0 | 1 |
-| **Total** | | **237** | **252** | **14** | **398** |
+| **Total** | | **234** | **252** | **14** | **398** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -58,7 +58,7 @@ Each settles items on several pages at once. Rule these first.
 8. ~~**How the Seekers divide.**~~ *Ruled: the Seekers of Secrets; every chapter worships Vecna, often under another name, unaware of the others.* Whether N'ghathrod's colony is a chapter is a new decide.
 9. ~~**Astra's name and wound.**~~ *Ruled: any of the three names; the Axiom strain's ripple woke and broke it.*
 10. ~~**The real elder brain.**~~ *Ruled: the Session 27 brain is his; it teleported out.* Where it went is a new decide.
-11. **Which sphere holds Oerth.** *Narrowed: one of SPH-03 to SPH-05.*
+11. ~~**Which sphere holds Oerth.**~~ *Ruled: SPH-05, the farthest from Caelestis.*
 12. **Runes 17–19 as Anchors.** Fixed places Tumak goes to is settled; what they grant is open. Crew (Tumak), rules.
 13. ~~**Can a taken person be released?**~~ *Ruled: the taken outlive N'ghathrod, each keeping part of him.*
 14. **Fonains–Caelestis offset.** The timeline puts Fonains Session 28 about five months before Caelestis now; older notes say Caelestis is "around" Session 28. Timeline, Fonains doc, campaign.
@@ -320,17 +320,16 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-25 (round 2)
 
 - **[decide]** Vecna's divine domains
-  Ruled: secrets, knowledge, manipulation and trickery, with a hold over death and undeath. Decide the formal domain list for his deity entry (for example Knowledge, Death, Trickery), and check published sources for a ready list.
-  src: Korey, 2026-10-25 (round 2)
-
+  Ruled: secrets, knowledge, manipulation and trickery, with a hold over death and undeath. Published 5e lists Vecna as "the god of evil secrets" (2014 Player's Handbook, Greyhawk; 2014 DMG, Dawn War pantheon) with the Knowledge domain, and the DMG adds Death; the Sword Coast Adventurer's Guide names him for the Arcana domain. Older editions add Magic and Evil, with Planning, Pride, Tyranny and Destiny as minor portfolios. His symbol is an eye in the palm of a left hand. Proposal: Knowledge, Death and Trickery, with Arcana as an option. His symbol fits the reveal: the eye and the hand he is missing.
+  src: Korey, 2026-10-25 (round 3); greyhawkonline.com/greyhawkwiki/Vecna; en.wikipedia.org/wiki/Vecna
 
 - **[decide]** A name for Vecna's fifteen-heart circle
   The model is ruled (STAGING § Vecna's working): fifteen opened, linked hearts, three per sphere, each sphere linking to both neighbours and to the First Heart, forming a spellcasting circle across the cosmos. "The Figure" and "the lattice" are both out under the naming rule. Pick a plain, descriptive name of a few words. It replaces "the Figure", "the lattice" and "the world-heart network" on glossary, chart, realms index, ascension and timeline.
   src: Korey, 2026-10-25 (round 2)
 
 - **[decide]** The downward tithe
-  "The downward tithe" (worship that pools in the taken instead of rising) sits awkwardly with the ruling that worship is what gives a god power (inference). Options: keep it as a named exception and say why; or reword it so it does not read as worship.
-  src: session-rulings; glossary "The downward tithe"
+  "The downward tithe" names the lesser taken Vecna's vessels can pass through Atria. A new ruling adds an upward tithe: a portion of every taken person flows up to N'ghathrod and extends his life (STAGING round 3). Rename the vessel sense so the two are not confused, and drop "tithe" from anything that reads as worship.
+  src: Korey, 2026-10-25 (round 3); glossary "The downward tithe"
 
 - **[fix]** The Seekers
   Glossary says the Seekers "have never heard his name." The session ruling settles it: Vecna is an open god with a following under many names, and his followers are the Seekers. Rewrite:
@@ -495,10 +494,6 @@ Order under each page: decide, fix, drop, add.
 ### NEW: Oerth
 
 No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms/index.html`, and an entry on the chart.
-
-- **[decide]** Which sphere holds Oerth
-  Ruled: one of the five spheres; not Caelestis's sphere (SPH-01) and not the godless sphere (SPH-02). Pick SPH-03, SPH-04 or SPH-05.
-  src: Korey, 2026-10-25 (round 2)
 
 - **[add]** Oerth
   "Oerth is Vecna's homeworld, in a sphere of its own. It is a darkest-timeline world: the heroes failed, Vecna ruled as a lich and was never stopped, and his hold there is the strongest anywhere. He ascended on Oerth through a Zenith, and its Monolith archived his mortality; his followers keep that Monolith as their holiest site. Vecna's divine realm is anchored to Oerth's sphere. Becoming a god gave him the same charge as Oerth's heart, and the world pushed him off; he has not stood on it since."
@@ -1365,10 +1360,9 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/seekers.html
 
-- **[decide]** Is N'ghathrod's colony a chapter of the Seekers of Secrets?
-  Ruled: every Seekers chapter worships Vecna, often under another name, and chapters do not know of each other (STAGING § The Seekers of Secrets). N'ghathrod serves Vecna believing he hears an elder brain, but he seeks a home, not secrets. Options: (a) the colony is a Seekers chapter in Vecna's eyes, the strangest one; (b) the colony is Vecna's tool and not a chapter; the Seekers are the worshippers.
-  Touches: factions/seekers.html, factions/vthorama.html, campaign/ascension/.
-  src: Korey, 2026-10-25 (round 2)
+- **[decide]** The Seekers' name
+  Ruled: the Seekers of Secrets, every chapter worshipping Vecna, the colony among them (STAGING rounds 2 and 3). Korey thinks the name may still need work, since the colony seeks a home, not secrets. Keep "the Seekers of Secrets", or find a name that also covers chapters like the colony.
+  src: Korey, 2026-10-25 (round 3)
 
 - **[fix]** Chapters know him under many names
   The intro says "No chapter knows the name Vecna." Rewrite: "Chapters know him by many names. Some use his own." Shape the rest per the decide above.
@@ -1651,11 +1645,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 ---
 
 ### campaign/spine.html
-
-- **[decide]** Level bands per arc
-  The early plan set Arc 1 at levels 1–4, Arc 2 at 5–10, Arc 3 at 11–15, Arc 4 at 15 and up. Korey wants this re-checked against the power the crew should have at each stage, with level-ups slowing in later arcs. Confirm or adjust the bands, and set the pace of level-ups per arc. The twins' key (about level 12, end of Arc 3) depends on it.
-  src: Korey, 2026-10-25 (round 2); chat-early-planning § Arc 1 close
-
 
 - **[fix]** "Arc", never "Act" *(answered)*
   The wiki says "Arc". The timeline events say "Act 2: ranked missions", "Act 3: N'ghathrod", "Act 4: the center" and "Act 3: Vth'oramu"; change each to "Arc". Sweep colony and ascension for any "Act 1–4" left. Memory canon's "Act" wording is Korey's spoken shorthand and does not need to match.
@@ -2473,10 +2462,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ---
 
 ### dossiers/nghathrod.html
-
-- **[decide]** Which residue piece gave N'ghathrod his long life
-  Ruled: Thessalar's experiments with a residue piece gave N'ghathrod and his lieutenants greatly extended lives. Canon names the piece Thessalar held as the seventh Rod piece (simulacrum), which also explains the taking. Korey called it "regeneration", which is the fourth piece, held in the Lantern. Options: (a) the seventh piece (simulacrum) did both; (b) Thessalar held the fourth piece at the time, before it reached the Lantern; (c) both pieces passed through his hands.
-  src: Korey, 2026-10-25 (round 2); memory canon (seventh piece)
 
 - **[decide]** N'ghathrod's mouse
   He saved a mouse during the escape and it travels with him. Its quirk and what it means to him are open.

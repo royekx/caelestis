@@ -118,3 +118,18 @@ writing rules.
 
 ### Naming
 - See the naming rule in README.md § Writing staged entries and pages.
+
+## Rulings of 2026-10-25, round 3
+
+### The Seekers and the colony (factions/seekers.html, factions/vthorama.html)
+- N'ghathrod's colony is a chapter of the Seekers, and the oddest one. It seeks a home, not secrets, and N'ghathrod believes he answers to an elder brain. It serves the same hidden god as every other chapter, and Vecna feeds it the few secrets it needs.
+
+### N'ghathrod's long life (dossiers/nghathrod.html, artifacts/rod-of-seven-parts.html, factions/vthorama.html)
+- The residue piece Thessalar experimented with was the seventh Rod piece, simulacrum. It is why N'ghathrod's tadpoles make copies of him, and it is the root of the taking.
+- N'ghathrod's long life comes from his taken. A portion of every taken person is tithed upward to him, the way a hive feeds its center, and it extends his life. The more he takes, the longer he lasts. This replaces the earlier line that the altered ceremorphosis stopped his aging.
+
+### Oerth (realms/oerth, chart/, cosmology/)
+- Oerth lies in SPH-05, the sphere farthest from Caelestis's.
+
+### Level bands (campaign/spine.html)
+- Arc 1 runs from level 1 to 4, Arc 2 from 5 to 10, Arc 3 from 11 to 15, and Arc 4 from 15 up. Level-ups come more slowly in later arcs.
