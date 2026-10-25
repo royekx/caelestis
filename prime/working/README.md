@@ -47,7 +47,10 @@ staging is distributed page by page.
   planning pages hold what is undecided. A dossier, item or location entry
   never carries "pending", "TBD" or "decision needed". If a detail is unknown,
   the entry says what is known and stops.
-- **Names for constructs and concepts are plain and definitive.** Avoid "The" plus one vague word ("the Figure"): it tells the reader nothing. A few descriptive words are better. People may carry monikers.
+- **Names.** Avoid "The" plus a vague word ("the Figure", "the Hollow") everywhere.
+  - Places and celestial bodies get proper names, the way real astronomy names things: Andromeda, Sagittarius A*, Cygnus X-1. A name, not a moniker or a title, often paired with a catalogue designation.
+  - Constructs and concepts get plain, definitive descriptions, even if that takes a few words.
+  - People may carry monikers.
 - Not everything will be decided, and some things will change. That is fine;
   rewrite the entry when it does.
 
