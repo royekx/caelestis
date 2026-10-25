@@ -245,3 +245,11 @@ writing rules.
 ### Prep (DM principles)
 - A world that is named has core facts, even if nothing else is built: what it is like, who lives there. Anything named in play needs work from that point.
 - Prep where the crew is going and one ring out from it: H'Catha and the cantina now. Seekers chapters and other far details get built when they become active in the larger shape, not before.
+
+## Rulings of 2026-10-25, round 7
+
+### The Princes on Fonains (timeline, realms/fonains.html, Fonains doc, the Cre'Tez line)
+- Long ago, about twelve thousand years before now, the Princes of Elemental Evil rose on Fonains. The six gods of the Accordance stepped in, helped forge the four weapons, and sealed the Princes away with the weapons as their keys.
+- The fire genasi who became the Cre'Tez have guarded the fire key since that sealing.
+- About three and a half centuries ago a sect of the fire genasi tried to summon Imix. Asmodeus gave the few who resisted Tinderstrike to seal him again, and bound the key to their blood; the price was that Imix be forgotten. Over the generations since, the line has turned tiefling.
+- About five hundred years ago Thessalar's planar craft crashed on Fonains, and Tharizdun's influence arrived with the temple aboard it. It spread slowly through the world and into new cults. Those cults raised the four prophets, and in recent years everything has begun to move.

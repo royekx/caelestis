@@ -32,7 +32,7 @@ staging once Korey has read and accepted them.
 |---|---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 6 | 7 | 20 | 0 | 25 |
 | Realms | realms/ except Fonains; a new Oerth page | 22 | 7 | 34 | 3 | 48 |
-| Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 8 | 6 | 13 | 1 | 29 |
+| Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 7 | 6 | 13 | 1 | 29 |
 | Timeline | the rest of timeline.json | 1 | 1 | 6 | 0 | 0 |
 | Factions | factions/ | 2 | 4 | 22 | 2 | 40 |
 | Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 15 | 1 | 45 | 5 | 40 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 2 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 5 | 0 | 1 |
-| **Total** | | **116** | **81** | **260** | **14** | **400** |
+| **Total** | | **115** | **81** | **260** | **14** | **400** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -930,12 +930,6 @@ Items for `realms/fonains.html`, the Fonains Canon Reference (a Claude doc, "Fon
 Order under each heading: decide, fix, drop, add.
 
 ### realms/fonains.html
-
-- **[decide]** When the Princes were last sealed on Fonains *(shape)*
-  Korey's lean: the craft's crash about five hundred years ago coincides with the last time the elementals ravaged Fonains; the gods stepped in, helped forge the four weapons and sealed the Princes. That conflicts with the timeline ("The Accordance seals the Princes", about 12,000 years ago) and with Asmodeus giving the fire genasi Tinderstrike about 350 years ago. Options: (a) one sealing about 500 years ago, and the 12,000 and 350 dates move; (b) an ancient first sealing, a second rising about 500 years ago when the weapons were forged, and Tinderstrike's handover after it.
-  Touches: timeline, Fonains doc, realms/fonains.html, the Cre'Tez line.
-  src: Korey, 2026-10-25 (round 6); timeline.json
-
 
 - **[fix]** Fonains's world designation *(answered)*
   Fonains is W-21, and Aethris is W-08. Caelestis and the FIA share one numbering. The early registry's "W-02 Fonains" and "W-01 Aethris" were renumbered (W-02 to W-021, then W-21; W-008 to W-08), and W-02 is H'Catha. The realm pages and the chart stand. Correct any FIA file or note that still shows W-02 or W-021 for Fonains, or W-01 or W-008 for Aethris; drop "Draft:" from the chart note "Draft: Fonains matches FIA W-21".
