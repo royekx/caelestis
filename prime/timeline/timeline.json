@@ -551,7 +551,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.6,
+      "t": -0.64,
       "tier": 1,
       "status": "past",
       "cert": "canon",
@@ -657,13 +657,13 @@
       "cert": "canon",
       "title": "Breaking the Monolith",
       "desc": "The craft rises on the stolen gems, and its cannon splits the Monolith into four elemental shards.",
-      "end": -0.6,
+      "end": -0.64,
       "kind": "arc",
       "session": "S13–S15"
     },
     {
       "lane": "fonains",
-      "t": -0.6,
+      "t": -0.64,
       "tier": 2,
       "status": "past",
       "cert": "canon",
@@ -866,7 +866,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.61,
+      "t": -0.65,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -877,7 +877,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.6,
+      "t": -0.64,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -888,7 +888,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.57,
+      "t": -0.6,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -899,7 +899,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.52,
+      "t": -0.55,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -910,7 +910,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.5,
+      "t": -0.52,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -921,7 +921,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.49,
+      "t": -0.505,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1112,7 +1112,8 @@
     "Caelestis's present sits a few months after the Fonains Monolith broke, shortly after Fonains's Session 28. Clint reaches Fonains about a year before Caelestis's present, before the Monolith appears. Boogie's shard came from the broken Monolith through Vocath's line, before V001. This replaces \"Caelestis runs about a year before Fonains.\"",
     "Benedetta fell ill at Rihiri's birth, about twelve years ago, and died about ten years ago. The illness was Vanifer siphoning her soul into the illegitimate Bloodstone, which took about two years.",
     "Thessalar's planar craft fell about 500 years ago. N'ghathrod had already lost a clash with it and was a prisoner aboard, being experimented on. Lola's Boys, sent back by the Accordance, took the craft's control and defense gems; without them it fell, and the crash let N'ghathrod escape. The party unknowingly made their own villain in another campaign. \"Some millennia ago\" in Lola's Boys is rumour.",
-    "Session and voyage dates inside a campaign are spaced by feel; their order is canon. Lola's Boys runs from about a month after the Darkest Day to Session 28, two months after the Monolith broke."
+    "Session and voyage dates inside a campaign are spaced by feel; their order is canon. Lola's Boys runs from about a month after the Darkest Day to Session 28, two to three months after the Monolith broke.",
+    "Krynn is the third campaign world, alongside Caelestis and Fonains. It has no dated events yet."
   ],
   "threads": {
     "entities": [
@@ -1394,7 +1395,7 @@
         ]
       },
       {
-        "t": -0.6,
+        "t": -0.64,
         "status": "past",
         "title": "The Monolith breaks; Ziko's blade turns black; the shards scatter",
         "who": [
