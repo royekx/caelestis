@@ -34,6 +34,12 @@ again somewhere colder.
 A god can preach on a far world. Most don't, because a handful of believers in
 another sphere gives almost nothing back.
 
+### One god, many names
+
+A god worshipped on several worlds is one god under several names. Takhisis
+is Tiamat and Paladine is Bahamut; Krynn knows them by Krynn's names. Vecna's
+faithful use many names for the same reason.
+
 ## Polarity
 
 No god walks on a world in person. They act through apparitions, avatars,
