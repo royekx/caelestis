@@ -365,10 +365,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   The section marked Canon ("The Restorers are a Seeker chapter. They are the first one…") and the reveal sequence ending "Then read the providence entries in order. Then find the first entry." carry the superseded v1 framing (oldest Seeker chapter, fed by Vecna as providence). Restorers v2 has no tie to Vecna. Remove the section and rewrite the reveal bullet without the providence entries.
   src: chat-cosmic-campaign-structure § Superseded (Restorers v1 → v2); campaign/ascension
 
-- **[add]** Four centuries of crossings
-  Add if missing: "For four centuries the Restorers have walked into Zeniths, trying to reach the Core and the All-Mother. Many arrived."
-  src: timeline "The Restorers walk into Zeniths"
-
 ---
 
 ## factions/aethris.html
