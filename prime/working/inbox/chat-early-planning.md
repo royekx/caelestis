@@ -2,18 +2,18 @@
 
 Four older chats. Later canon often supersedes them. Repo checks are targeted greps of `prime/` (and `restricted/` for the FIA archive). Status tags compare each chat decision to the repo as it stands now.
 
-**Coverage.** The read_conversation hourly call budget has cut two sweeps short.
-- "Campaign Planning": read turns 0–140 of 417 (about a third). Turns 0–36 came from the first sweep; 37–140 were merged on 2026-10-25. Turns 141–416 are **unread**. Resume at page token **`t141`**.
+**Coverage.** All four chats are read in full.
+- "Campaign Planning": read in full (turns 0–416). Turns 0–36 came from the first sweep; 37–140 and 141–416 were merged on 2026-10-25.
 - "New campaign idea development": read in full (turns 0–101; 70–101 merged on 2026-10-25).
 - "Campaign organization system feedback": read in full (4 turns).
 - "D&D module where evil won": read in full (10 turns).
 
-Turns 41–140 of "Campaign Planning" are mostly the first DM wiki build (CSS, nav and page plumbing), with lore decisions at turns 37–43, 80, 91–102, 108 and 124.
+Turns 41–140 of "Campaign Planning" are mostly the first DM wiki build (CSS, nav and page plumbing), with lore decisions at turns 37–43, 80, 91–102, 108 and 124. Turns 141–273 restructure the wiki, 178–323 build the Brig heist, the Reach and A.T.L.A.S., 282–325 draft a master source doc, 326–345 publish crew logs V002–V004, and 346–416 build S.E.A.R.C.H. (mostly plumbing).
 
 ---
 
 # Campaign Planning
-Source: https://claude.ai/chat/0852f52d-cb7d-4fd8-a1f0-3cafec340ce5 · updated 2026-08-12 · **turns 0–140 of 417 read** (37–140 merged 2026-10-25; resume at `t141`)
+Source: https://claude.ai/chat/0852f52d-cb7d-4fd8-a1f0-3cafec340ce5 · updated 2026-08-12 · **read in full, turns 0–416** (37–416 merged 2026-10-25)
 
 ## Settled
 
@@ -111,6 +111,69 @@ Source: https://claude.ai/chat/0852f52d-cb7d-4fd8-a1f0-3cafec340ce5 · updated 2
 - Arc I beats: the Convening, then Fire in the Galley (Ryeback dies, Miken's betrayal lands), then Behold H'Catha. — **in repo** in part (Convening in voyages pages; "Fire in the Galley" only in BACKLOG.md)
 - Breadcrumbs: Xanathar (the sanctum grudge fragment), Toril named but unremarked, Ezra as a cross-campaign tie. — **in repo** (Xanathar in dossiers)
 
+### Wiki structure (turns 141–273)
+- The Watchers are the field arm of the Order of the All-Father. Rogue Watchers sit inside the Watchers entry. — **in repo** (factions/order.html, "Rogue Watchers" section)
+- What gods are and what they know sits on Cosmology. Individual gods are entries under Factions. — **in repo** (factions/deities.html)
+- Tymora is Lady Luck, Beshaba's twin. Aethris is Tymora-devoted. — **in repo** (realms/aethris.html: "a Tymora-devoted world")
+- Realms run Wildspace, then celestial body, then locale. Realmspace holds Toril and Caelestis. Places with no known system are listed apart as untethered. — **in repo** (realms/; BACKLOG moves two untethered entries under SPH-01)
+- Pillar renames: Continuum became Cosmology, World became Realms. Factions and Characters is its own pillar. Seeds fold into Campaign. The Remaking and Voyages move under `prime/campaign/`. — **in repo** (`prime/cosmology/`, `realms/`, `factions/`, `campaign/`)
+- Cosmology, Realms and Factions are setting: reusable across campaigns and in-world one-shots. Campaign is this run (turns 166–167). — **in repo** (WIKI-PAGE-GUIDE: "Other DMs running in this universe")
+- Setting pages are encyclopedic and carry no DM craft. They describe the world's current state; Campaign pages hold the transient and the planned. — **in repo** (WIKI-PAGE-GUIDE)
+- Entries describe what a thing is and make no comparative absolutes. Gregory's entry says he casts; the reader builds the comparison. — **in repo** (WIKI-PAGE-GUIDE: "let the reader build the comparison")
+- Campaign splits into Plot Hooks (grounded threads tagged Character, Place, Event, Object, plus Pattern) and What If (untethered ideas). Resolution-pending stubs live on entity pages. — **in repo** (plot-hooks.html kind tags; campaign/what-if.html)
+- The Spine is organized by Arcs: Arc 1 Spelljammer Academy, Arc 2 Driftwardens in the Field, Arc 3 Recognition, Arc 4 Cast. It carries a Crew section (PC dossiers) and operational links. — **in repo** (spine.html)
+- Renames: The North became Central Question, the Weather of Reality became Cosmological Pressures, Acts became Arcs, and "D — The End" became Failure state. Functional titles take no stylistic "The". — **in repo** (spine.html; WIKI-PAGE-GUIDE). BACKLOG still has "Arc or Act" as a decide.
+- Voyages separate the DM briefing (`voyage-briefing-NNN.html`), the voyage as played, and a delta audit between them. The player's detailed log is its own page. — **in repo** (campaign/voyages/; player logs now under `logs/`)
+- Campaign nav order: Voyages, Spine, Remaking, Plot Hooks, What If. — **in repo**, reshaped (the Remaking is now the Ascension)
+- Dossier rows carry portraits from a Drive images folder through `scripts/portraits.js`. — **in repo** (prime/scripts/portraits.js)
+- Arc 4's success shape: the crew changes what success means for Vecna. His spell gets one cast. — **in repo** (spine: "Vecna's spell gets its one cast")
+- A "Hakatha" stub was a voice-to-text garble of H'Catha and was removed (turns 266–267). — **in repo** (DEPLOY-README: "A stale Hakatha stub existed")
+
+### Artifacts, the Brig and the Reach (turns 178–323)
+- Famous D&D items exist, but their fame comes from another era of their beings. Vecna's Hand and Eye date from his god-of-secrets era and are not part of his plan. An item earns a place by what it says about the cosmology. — **in repo** (campaign/index.html: "Famous D&D items exist in this multiverse")
+- The Caelestis vault is the Brig, the Bay of Restricted Inert Goods. — **in repo** (realms/caelestis.html)
+- The thefts are reconnaissance to locate the Brig. — **in repo** (spine: "The reconnaissance against the Brig is the real operation")
+- Caelestis is under a permanent Forbiddance. Internal transit uses bound Teleportation Circle sigils issued to named personnel, so any extraction must be physical, by ship. — **in repo** (campaign/index.html)
+- Saerthe maintains the Forbiddance and the sigil registry. — **in repo** (dossiers/saerthe-abizjn.html)
+- The artifact projects a holographic chart of the world below, reaching about as far as Commune with Nature, once per long rest. What it reveals differs by world. — **in repo** (artifacts/atlas.html)
+- The artifacts are overflow residue of the Reach, a world that reached for the Axioms. The first Monolith answered it. — **in repo** (cosmology § The Reach)
+- Residue is unsanctioned; every instrument built from it is grave-goods. — **in repo** (cosmology: "Unsanctioned use")
+- Hearts can be primed, and the crew races the other side to them (a Mighty Nein / Tomb Takers model). — **in repo**, reshaped (heart-links and saturation on campaign/colony/)
+- The Runekeepers are a faction. Their homeworld hides itself, and they hold a residue artifact, which is why they hide. The homeworld is tied to the Lunarfoot clan. — **in repo** (factions/runekeepers.html; artifacts/runekeepers-fragment.html, Dissolution)
+- Fleet naming culture uses acronyms. The artifact is A.T.L.A.S. Korey ruled that the acronym must not reference the Axioms, and the expansion became **Astral Topographic Lithic Augury System** (turns 320–322). — A.T.L.A.S. **in repo**. The expansion is **not in repo**.
+- "World Surveyor" was its common name in this chat. — **conflicts** with later canon, which retired the name: the repo still carries it (artifacts/atlas.html eyebrow "The World Surveyor"; artifacts/index.html; plot-hooks anchor `world-surveyor-thread`; portraits key `world-surveyor`; WIKI-PAGE-GUIDE). BACKLOG covers the artifact pages and the guides.
+- FIA breadcrumbs: a line that the Brig exists, and an incident-pattern entry "flagged for review by Brig liaison". — **in repo** (prime/notes/FIA-BREADCRUMBS.md)
+- Vocath and Qitru are outside Vecna's side. An agent of that side approached Vocath on aligned interests, and that agent is the thief. The real target is A.T.L.A.S. in the Brig (turn 301). — **in repo**, reshaped (colony: Joffrey runs the Brig)
+
+### Arc 1 close and planning method (turns 282–325)
+- The master source doc's NPC rubric: Wants, Will do to get it, Won't cross, Current pressure. — **not in repo**
+- Prep is situations, not scripts. — **not in repo** on a page (BACKLOG carries it under NEW: DM principles)
+- Status tags LOCKED, CANON, SHOWN, PLANNED, PLANTED, OPEN, DEFERRED, DRAFT, STUB and SOURCE. A SHOWN fact changes only with care. — **in repo** in part (`is-canon`, `is-open` tags). SHOWN and PLANTED are **not in repo**.
+- Prose rules: dictation is never taken verbatim, no stacked negations, no provenance artefacts, and working decisions hold open questions only. — **in repo** (CLAUDE.md; working/README.md)
+- The Foundling's errand collects Ezra on the way to H'Catha. — **in repo** (spine)
+- The C.R.C. waits at Caelestis when the crew returns. The first meeting is an objective-based escape. — **conflicts** (spine: "Sol's first CRC encounter lands in this window" of Behold H'Catha). BACKLOG already moves it.
+- Beshaba's warning before the C.R.C. arrives: "your face cut in glass you did not make." — **not in repo**
+- The graduation attack hits during the ceremony. Its real point is the public unmaking of Mirt. — **in repo** (colony: "A restricted vault breached on Mirt's watch, during his own crew's graduation")
+- Module finale pieces port into it: Mustaf Shultz and his giff mercenaries, the decapitation threat, Miken at 2 HP, Wizpop's return, and the transmutation sigil as Vocath's eye-in-a-wheel mark. — **in repo** in part (the damselfly and Qitru are on dossiers/qitru.html). Mustaf, the decapitation threat and Miken at 2 HP are **not in repo**.
+- The Light of Xaryxis hook is cut. — **in repo** (no Xaryxis material anywhere in `prime/`)
+- Arc level bands: Arc 1 levels 1–4, Arc 2 levels 5–10, Arc 3 levels 11–15, Arc 4 level 15 and up. — **not in repo**
+- Gregory's paracausality is that he casts. — **in repo** (crew/gregory.html)
+
+### Player pages (turns 326–345)
+- Crew logs: V002 "What the Crew Offers", V003 "The Weight of What's Real", V004 "All Things Find Their Way Home". — **in repo** (player site, `logs/` and `voyages/`)
+- V004: OSTEKK-6 named, Tumak's first soul knife and tether home, the Runekeeper's "all things find their way home", Pffred present, the behir waiting below. — **in repo** (campaign/voyages/index.html; dossiers/the-runekeeper.html)
+- Bartholomew's manifest: Human, Druid, Wilder (an academy role). — **in repo** (crew-manifest)
+- The player site's "Saerth Abyzine" spelling was wrong. — **in repo**, fixed (dossiers/saerthe-abizjn.html)
+
+### S.E.A.R.C.H. (turns 346–416)
+- The site's goal is that players can pull up what they heard between sessions. — **in repo** (search/)
+- Three Pagefind indexes (player, prime, restricted) keep the boundaries. The GitHub Action builds them on deploy; they are never committed. — **in repo** (.github/workflows/deploy.yml; notes/SEARCH-SETUP.md)
+- The name is S.E.A.R.C.H., the Standard Enquiry of Assets, Records & Communications Hub. Korey picked "Communiqués" at turn 383 and changed it to "Communications" at turn 385. — **in repo** (search/index.html eyebrow)
+- The S.E.A.R.C.H. brand belongs to the player terminal. The DM and FIA searches keep their own names. — **in repo** (prime/search.html "DM Search"; restricted/search.html "Archive Search")
+- A search field sits at the top of every nav and pre-runs the terminal. S.E.A.R.C.H. is also a nav entry, and the per-section boxes stay for scoped, in-place search (turns 403–408). — **in repo** (scripts/nav.js)
+- A result that matches only on a stopword ("of" in "bag of holding") is dropped (turn 414). — **in repo** (search/index.html, scripts/search.js)
+- Result titles come from `data-pagefind-meta="title"` on each page's title. — **in repo** (104 pages)
+
 ## Superseded
 - Destiny-style "residue engine", where jobs are designed to shed clues at a tuned ratio → Mighty Nein living-world architecture, with Destiny kept as the vibe only.
 - Mission ladder by danger tier (Runs, Recoveries, Interventions, Standoffs) → categories by dramatic function (Runs, Recoveries, Interventions, Quiet jobs, Contracts-gone-wrong). The jobs become entry vectors into situations already running.
@@ -133,9 +196,23 @@ Source: https://claude.ai/chat/0852f52d-cb7d-4fd8-a1f0-3cafec340ce5 · updated 2
 - A single campaign "Design Bible" file in Markdown → an HTML DM wiki in `prime/`.
 - A sidebar with every page's sections folded in → tried, then reverted to a right-rail table of contents (turn 134).
 - Gregory's "Existence, generative face" and Sol's "Existence, the survivor" → Continuity in both.
+- The Caelestis artifact as a locator-lens, then the Sparrow compass, a lodestone compass and an armillary (turns 178–196) → the "World Surveyor" survey device → A.T.L.A.S.
+- A.T.L.A.S. as "Axiom-Tuned Lithic Augury System" (turn 280) → "Astral Topographic Lithic Augury System" (turn 322), since no mortal knows the Axioms → (memory canon) the name is the acronym alone.
+- Placeholder "the Hollow" for the Reach site (turn 210) → name dropped; the Reach world is unnamed and its remains formed the black hole at the cosmos's center, with the Core above it. WIKI-PAGE-GUIDE still uses "The Hollow" as a title example.
+- A space, time and web artifact set (turn 204) → four Axiom-biased residues split into prime-number pieces (memory canon).
+- Claude's Boundary lean for the Runekeepers' artifact (turn 217) → the Dissolution fragment (repo).
+- The Wayfinder mark as attunement to a world's heart, so Caelestis, with no heart, could never be marked (turns 215–218) → Wayfind targets marked places; Tumak marks a spot in his own quarters on Caelestis (BACKLOG, campaign/voyages).
+- The thief as an unnamed network agent who approached Vocath (turn 301) → Joffrey, taken by N'ghathrod through the Vocath–N'ghathrod deal (memory canon; colony).
+- Qitru and her githyanki striking during graduation (turn 300) → Qitru chooses her moment on H'Catha (dossiers/qitru.html).
+- The tyrant ship's beholder name gated behind saving Wizpop (turn 300) → Vaelorix, named in the repo.
+- H'Catha as a torus of beholder hives (turn 275) → ten domains under the Sovereign Eye at the Spindle, 5e solitary beholders (memory canon).
+- Bartholomew as a Firbolg and a wilder shapeshifter → Human, with Wilder as his academy role.
+- `caelestis-source.md` as the single source of truth, with the wiki as its presentation (Model C, turns 282–325) → the `data/*.json` record plus hand-written pages (CLAUDE.md).
+- Misspelling aliases seeded as hidden page text, then as Pagefind metadata (turns 346–410) → the query is repaired instead (scripts/spelling.js).
+- Wizpop's entry describing ordinary autognomes (turn 300) → OSTEKK-6 is an automaton.
 
 ## Open
-These are open as of turn 140. Turns 141–416 are unread and may resolve them.
+These are open at the chat's end (turn 416). Items from turns 0–140 stay listed unless a later turn closed them.
 - Handler: Claude pitched a dohwar broker ("Pip"), a defected scro ("Vahl"), a xixchil contract-surgeon, and a washed-up human captain (set aside because it overlaps with Saerthe). No pick yet. (Repo: handler still unnamed.)
 - The second system: what it is and why the Fleet operates there.
 - What is at Cairn Station: (a) a derelict site, or (b) an inhabited hidden outpost of fences and scholars. Also whether the crew reaches it in Arc II.
@@ -143,8 +220,14 @@ These are open as of turn 140. Turns 141–416 are unread and may resolve them.
 - The live point on the figure, the Ascension World's specifics, and which Zeniths are natural versus manufactured.
 - Confirmation of the PC verdict words, especially Casey and Bartholomew.
 - Claude's proposed Act questions, which Korey had not approved when the reading stopped: Arc I "Who counts as a real crew?", Arc II "Who decides what's worth saving?", Arc III "Who's been deciding this all along?", Arc IV "Who gets to decide for everyone, forever?" — **not in repo**
-- Who keeps the crew together after graduation (Mirt, a Watcher or the Order, Saerthe, or the Fleet bureaucracy), and Mirt's reputation outcome.
+- Who signs the order keeping the crew together after graduation: Mirt (patronage), a Watcher or the Order (fated), Saerthe (mentor; ties off his missing ship), or the Fleet bureaucracy with the real reason hidden ("who signed this order?" becomes investigable). Still open at turn 300 and in the repo.
+- Mirt's reputation after the graduation attack: the crew saves his standing, it genuinely suffers (an inquiry that clouds Arc 2), or it stays ambiguous. Still open at turn 300 and in the repo.
 - Who on Aethris commissioned the CRC, and why.
+- Whether Casey has met the word "Starchild" before, and whether Zerathis recruited other Starchildren. (Repo carries both as open on crew/casey.html and dossiers/zerathis.html.)
+- The sanctum puzzle, the keystone specimen, and stats for the wisps and the Nine-Flower Cone Lattice (turn 300). Likely closed by play since V006 (inference; wisp stats sit in BACKLOG).
+- How Vecna's side finds heart sites (turns 212–214). Later canon routes this through N'ghathrod and the Seekers.
+- Who speaks one V003 Sky Dock line, Sol or Boogie (turns 326–345). Unresolved in the chat.
+- Crew Notes, a shared player notes space (Etherpad or a Google Doc), deferred until search shipped (turns 346–383). Search has shipped.
 - (Resolved: "shouldn't the party hold the charts?" was answered by the literacy asymmetry, then by the artifact reframe. See The heist.)
 
 ## Documents produced
@@ -153,6 +236,13 @@ These are open as of turn 140. Turns 141–416 are unread and may resolve them.
 - `caelestis-arc-ii-design-log.md` (turn 41), a running Markdown log of locked, filed and pending decisions plus a back-burner list. Chat output. **Not in repo** as a file; its content went into the wiki build.
 - `caelestis-design-bible.md` (turn 51), a single Markdown consolidation of the charter, state of the world, Arc II structure and workspace. Chat output, superseded by the HTML wiki.
 - The first DM wiki build (turns 65–139), delivered as chat outputs: `styles/dm.css`, `scripts/dm-nav.js`, `scripts/dm-toc.js`, `prime/index.html` (gate, redirects to hub), `hub.html`, `continuum.html` (first `physics.html`), `campaign.html`, `world.html`, `remaking.html`, `seeds.html`, `voyages/index.html`. **Reached the repo** in later, restructured form (`prime/hub.html`, `prime/cosmology/`, `prime/campaign/`, `prime/factions/`).
+- Structural wiki rebuilds (turns 141–273): `factions.html` (groups with members), `realms` pages, `plot-hooks.html`, `what-if.html`, `spine.html`, the voyage briefings, and `caelestis-dm-wiki.zip` bundles. **Reached the repo** (`prime/factions/`, `prime/realms/`, `prime/campaign/`).
+- `WIKI-PAGE-GUIDE.md`, the page-writing guide. **In repo** (`prime/notes/WIKI-PAGE-GUIDE.md`), still using retired names ("World Surveyor", "The Hollow").
+- `DEPLOY-README.txt`, deploy notes for a wiki bundle. **In repo** (`prime/notes/DEPLOY-README.txt`).
+- `FIA-BREADCRUMBS.md`, two drafted FIA entries pointing at the Brig. **In repo** (`prime/notes/FIA-BREADCRUMBS.md`).
+- `caelestis-source.md` (turns 282–325), a master source doc with sections §0–§17, status tags and the NPC rubric. Chat output. **Not in repo**; superseded by the `data/*.json` record.
+- Player crew logs for V002–V004 and `bartholomew.html` for the crew manifest. **Reached the repo** (player site).
+- The S.E.A.R.C.H. build (turns 346–416): `search/index.html`, `scripts/search.js`, `prime/search.html`, `restricted/search.html`, the `deploy.yml` Action, `SEARCH-SETUP.md`, and nav changes, shipped as `caelestis-search-deploy.zip` and fix bundles. **Reached the repo** (`search/`, `scripts/`, `prime/notes/SEARCH-SETUP.md`, `.github/workflows/deploy.yml`).
 
 ---
 
@@ -301,5 +391,5 @@ These are open as of the chat's end (turn 101).
 ---
 
 ## Tally
-- **not in repo:** 20 items fully. 4 more are partly in repo with one part missing (shroudstone crossover, the three-resolution method by name, the revisable-figure rule, the Remaking Node Log).
-- **conflicts:** 7 (Aethris Zenith complete vs incomplete; eye-in-a-wheel as network mark vs Vocath's merchant mark; "Cogfast Enclave" in sa-002 vs Gregory from Toril; Strake as the silent station vs Cairn; the Bellwether Crow lost vs returned; Clint Dashforest lost overboard vs seizing the boarders' craft; Wizpop as an autognome vs OSTEKK-6 automaton). Resolved since the last tally: Resonator vs Ortholith (Ortholith settled in the chat itself), the archive file set (the chat ends at the repo's 9 files), and monoliths as Vecna's ink (corrected in the chat to the figure model the repo uses).
+- **not in repo:** 25 items fully. 6 more are partly in repo with one part missing (shroudstone crossover, the three-resolution method by name, the revisable-figure rule, the Remaking Node Log, the SHOWN and PLANTED status tags, the graduation module pieces). Campaign Planning turns 141–416 added five full items: the A.T.L.A.S. expansion, the NPC rubric, situations not scripts, Beshaba's glass warning, and the arc level bands.
+- **conflicts:** 9 (Aethris Zenith complete vs incomplete; eye-in-a-wheel as network mark vs Vocath's merchant mark; "Cogfast Enclave" in sa-002 vs Gregory from Toril; Strake as the silent station vs Cairn; the Bellwether Crow lost vs returned; Clint Dashforest lost overboard vs seizing the boarders' craft; Wizpop as an autognome vs OSTEKK-6 automaton; "World Surveyor" still in the repo after its retirement; the first C.R.C. encounter on H'Catha vs on Caelestis at the return). Resolved since the last tally: Resonator vs Ortholith (Ortholith settled in the chat itself), the archive file set (the chat ends at the repo's 9 files), and monoliths as Vecna's ink (corrected in the chat to the figure model the repo uses).

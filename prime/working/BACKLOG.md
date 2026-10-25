@@ -31,16 +31,16 @@ staging once Korey has read and accepted them.
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 16 | 12 | 1 | 29 |
 | Timeline | the rest of timeline.json | 4 | 4 | 0 | 0 |
 | Factions | factions/ | 26 | 18 | 2 | 40 |
-| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 32 | 39 | 5 | 36 |
-| Dossiers | dossiers/ | 36 | 38 | 0 | 48 |
+| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 36 | 40 | 5 | 36 |
+| Dossiers | dossiers/ | 37 | 38 | 0 | 48 |
 | Crew | crew/ | 32 | 16 | 0 | 73 |
 | Artifacts and vessels | artifacts/, vessels/ | 17 | 23 | 0 | 42 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 22 | 17 | 0 | 17 |
-| New pages | 14 proposed pages, the hub, notes/ | 22 | 3 | 2 | 33 |
+| New pages | 14 proposed pages, the hub, notes/ | 23 | 4 | 2 | 33 |
 | Automation and tracker | the session pipeline and tracker alternatives | 11 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 1 | 2 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 6 | 3 | 0 | 1 |
-| **Total** | | **288** | **225** | **13** | **391** |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 7 | 3 | 0 | 1 |
+| **Total** | | **295** | **227** | **13** | **391** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -88,8 +88,8 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 
 ## Still coming in
 
-One chat sweep is partial: Campaign Planning, from turn 141. Every other sweep
-is complete.
+Every chat sweep is complete. Campaign Planning, the last partial sweep, was
+read to its end (turn 416) and merged on 2026-10-25.
 
 # Cosmology
 
@@ -1710,6 +1710,29 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   Touches: campaign/spine.html (timeline, approach table, forces table), dossiers/index.html.
   src: chat-astral-sea-worldbuilding § Superseded
 
+- **[decide]** Level bands per arc
+  The master source doc planned Arc 1 at levels 1–4, Arc 2 at 5–10, Arc 3 at 11–15, and Arc 4 at 15 and up. The spine gives no bands; it says only that level 4 comes with the helm. Confirm the bands (or set new ones) and add one line per arc to the spine. Revisit if the act-structure decide above changes the arcs.
+  Touches: campaign/spine.html (each arc's header block).
+  src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300); memory-canon (party levels to 4 at the helm)
+
+- **[decide]** Who signs the order that keeps the crew together
+  At graduation the crew becomes Driftwardens and stays one unit. Who signs that order sets Arc 2's tone. Options:
+  (a) Mirt: patronage, warm and compromising.
+  (b) A Watcher or the Order: fated, cosmic.
+  (c) Saerthe: personal, a mentor's call.
+  (d) The Fleet, as routine paperwork with the real reason hidden, so "who signed this order?" becomes a thread the crew can investigate.
+  Touches: campaign/spine.html (Arc 1 close, Arc 2 shape), dossiers/mirt.html or dossiers/saerthe-abizjn.html if either signs.
+  src: chat-early-planning § Campaign Planning, Open (turn 300)
+
+- **[decide]** Mirt's standing after the graduation attack
+  The attack aims at Mirt's public disgrace: a restricted vault breached on his watch, during his own crew's graduation. Options:
+  (a) The crew saves his standing; they are why it is not a massacre.
+  (b) His standing suffers: an inquiry that clouds Arc 2.
+  (c) Ambiguous: limited damage, Mirt shaken, his future uncertain.
+  The Fork state (A.T.L.A.S. gone or returned) may feed the answer.
+  Touches: campaign/spine.html (Arc 1 close), campaign/colony/index.html (the Fork), dossiers/mirt.html, factions/vocath-operation.html (whether Vocath's grudge is served).
+  src: chat-early-planning § Campaign Planning, Open (turn 300)
+
 - **[fix]** Lowest Driftwarden rank is Grade IV
   The grade table puts Grade V (station, lane, ship; levels 4–5) at the bottom and says the crew graduates at the lowest rank. The graduation board is all Grade IV (Lane Marker 14 and Repossession moved to Grade IV), and memory canon says every graduation contract is at rank. So the lowest Driftwarden rank matches Grade IV. Change the table note: Grade V work is never posted to Driftwardens.
   src: memory-canon open-decisions (Mission board line); chat-cosmic-campaign-structure § Contract board, § Superseded
@@ -1907,6 +1930,11 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 - **[decide]** N'ghathrod's orders
   Follows the ruling under campaign/ascension/index.html. This page says "he has never been given an order".
+
+- **[decide]** What the surface attack at graduation is made of
+  The page has "security diverted by the surface operation" while Joffrey runs the Brig, and names nothing in that operation. The early plan collapsed the module's two finale events into one: the attack hits during the ceremony, a battle across the school. It ported these module pieces: Mustaf Shultz and his giff mercenaries, a decapitation threat, Miken at 2 HP, Wizpop's return (now OSTEKK-6), and the transmutation sigil as Vocath's eye-in-a-wheel. Qitru and her githyanki have since moved to H'Catha. Pick which pieces stay, and write the surface operation into the Brig run section.
+  Touches: campaign/colony/index.html (the Brig run), campaign/spine.html (Arc 1 close), factions/vocath-operation.html, dossiers/miken.html.
+  src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300); dossiers/qitru.html
 
 - **[fix]** A heart opens only where a Monolith stands
   The world-status table makes an entrance-found world without a Monolith "enterable and unlinkable". Locked canon: a heart can only be opened where a Monolith stands, which is why N'ghathrod needs Zeniths and saturates worlds with Monoliths. Rewrite the table so a world without a Monolith cannot be opened at all, even with its entrance found.
@@ -2116,6 +2144,11 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   Page says "Where each thread stands with the crew is on the Tracker". Point to the `data/*.json` record and the Voyages board.
   src: memory-canon site-and-automation § Automation pipeline
 
+- **[fix]** The A.T.L.A.S. hook still carries the old name in its ids
+  The hook row's anchor is `world-surveyor-thread` and its portrait key is `world-surveyor`. "World Surveyor" is retired. Rename the anchor to `atlas-thread` and the key to `atlas`, and update the spine's link (`plot-hooks.html#world-surveyor-thread`, under Arc 1 threads) and the key in `prime/scripts/portraits.js`.
+  Touches: campaign/plot-hooks.html, campaign/spine.html, prime/scripts/portraits.js.
+  src: memory-canon (A.T.L.A.S. naming); chat-early-planning § Campaign Planning, Artifacts, the Brig and the Reach
+
 - **[drop]** Abandoned Beholders
   The hook says "The tyrant ship had beholder crew. They left." Vaelorix was alone; his crew were the nine OSTEKK units; crewed tyrant ships are rejected 2e lore. Drop the hook. (Also listed under Arc 2 threads on the spine and in the V003 briefing.)
   src: memory-canon campaign-canon § Antagonists (beholders follow 5e; no thralls aboard); chat-voyage-6-7-planning § Open
@@ -2312,6 +2345,11 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[decide]** Who on Aethris commissioned it
   The page says the Fortuned commissioned it. Which of them, and why they care, is open.
   src: BCS § Sol/Open
+
+- **[decide]** Beshaba's warning before it arrives
+  The early plan paid off Sol's acknowledgment vignette with a Beshaba line before the C.R.C. first appears: "your face cut in glass you did not make." It fits the construct's crystal body and her short register. Use it, reword it, or drop it. If used, it lands in the session before the first encounter.
+  Touches: dossiers/crc.html, dossiers/beshaba.html (register examples), crew/sol.html.
+  src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300)
 
 - **[add]** Its look
   Add to Who they are: "A faceted crystalline humanoid. Constellation points glow across its chest, its mask is polished and featureless, and its eyes burn white. Over time the mask resolves toward Sol's face." The face line is already on the page; the rest is not.
@@ -3402,8 +3440,8 @@ numbers, every item tagged *(counts)* flips.
   src: memory-canon (open-decisions § Planned, world-heart framework; Runekeepers line); chat-cosmic § Superseded
 
 - **[decide]** What the letters A.T.L.A.S. stand for
-  Options: leave it unexpanded, or settle an expansion. Any expansion must not contain "Axiom".
-  src: memory-canon § Cosmology
+  Options: leave it unexpanded, or settle an expansion. Any expansion must not contain "Axiom". Korey's last pick in the Campaign Planning chat was **Astral Topographic Lithic Augury System** (turn 322), chosen to replace "Axiom-Tuned Lithic Augury System"; it is the ready candidate.
+  src: memory-canon § Cosmology; chat-early-planning § Campaign Planning, Artifacts, the Brig and the Reach
 
 - **[fix]** Eyebrow: no "World Surveyor"
   Eyebrow reads "Artifact · The World Surveyor". Change to "Artifact · Boundary piece".
@@ -4317,6 +4355,11 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   PAGE-SHAPE.md uses four tabs: Who they are / What they want / DM notes / Stat block, and explains folding "What's hidden" into DM notes. The earlier rule (turn 460) had five: What it is / What it wants / What's hidden / Running it / Stat block. Options: keep PAGE-SHAPE's four, or return to five.
   src: chat-cosmic § Wiki structure rules (turn 460)
 
+- **[decide]** A motivation rubric for "What they want"
+  The early master source doc gave every NPC four lines: **Wants** (specific, never "a happy life"), **Will do to get it** (the tools they will actually use), **Won't cross** (the line they keep), and **Current pressure** (what makes it urgent now, or nothing). Options: adopt it as the shape of the "What they want" tab (or its successor), keep it as a writing check only, or leave it out.
+  Touches: PAGE-SHAPE.md, every prime dossier if adopted.
+  src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300)
+
 - **[add]** Concept backlinks
   Concept backlinks deep-link to the section, not the page.
   src: chat-cosmic § Wiki structure rules
@@ -4331,6 +4374,10 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 - **[fix]** A.T.L.A.S., not "the World Surveyor"
   Lines 45, 63–64, 490 and 525 say "the World Surveyor". Change each to A.T.L.A.S.
   src: framework § A.T.L.A.S.; memory-canon (campaign-canon)
+
+- **[fix]** Retired names in the title examples
+  "The Hollow" is retired: the Reach world is unnamed, and its remains are the black hole under the Core. The guide still names it at line 116 ("The Restorers' awareness of the Hollow is not known"), line 319 (a world-object title example) and line 566 ("*The Reach*, *The Hollow*"). Drop "The Hollow" from all three. Lines 310 and 564 also offer *Network* as a functional title; "the network" is retired, so swap in a live title. The anchor examples at lines 337 and 346 use `world-surveyor`; change them to `atlas`.
+  src: memory-canon (campaign-canon: "The Hollow" name dropped; A.T.L.A.S. naming); chat-early-planning § Campaign Planning, Superseded
 
 - **[drop]** "The network" as a faction term
   Line 48 says "who Vecna's current network is". "The network" is retired; reword to N'ghathrod's colony and the Seekers.
@@ -4476,6 +4523,11 @@ run decide, fix, drop, add.
 - **[decide]** Leftover UI calls from the migration notes
   Still open in FIXES-DEMO-MIGRATION.md: the FIA bearing strip, merging the survey chart, the navigation-records clip at 1024px, the clickable blurb overlay, and missing links on voyage briefings 001, 003 and 004. Keep any of these, or drop them with the notes.
   src: notes/FIXES-DEMO-MIGRATION.md, notes/RESTRUCTURE-NOTES.md
+
+- **[decide]** Crew Notes, now that search has shipped
+  A shared space where players write their own notes (an Etherpad or a Google Doc linked from the site) was deferred until S.E.A.R.C.H. shipped, then to be weighed on its own. S.E.A.R.C.H. is live. The old `crew-notes/` page now only redirects to Crew Logs. Options: build it (and pick the tool), or drop it.
+  Touches: the player nav (scripts/nav.js), a new player page or external link.
+  src: chat-early-planning § Campaign Planning, Open; memory-canon (Crew Notes deferred)
 
 # Player pages
 

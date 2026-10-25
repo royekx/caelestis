@@ -14,10 +14,10 @@ settled decision as **in repo**, **not in repo** or **conflicts**.
 | chat-automation.md | Automating with n8n; Voyage 5 runbook | V5 full; n8n mostly | 0 | 2 | — |
 | chat-crew-boogie-casey-sol.md | Boogie; Casey Geim; Sol Fortuna | Full | 112 | 10 | — |
 | chat-crew-tumak-gregory-bartholomew.md | Tumak Swan; Tumak's tracker; Gregory; Bartholomew; Gregory's anomaly arc | Full | 62 | 19 | — |
-| chat-early-planning.md | Campaign Planning; Campaign organization; D&D module where evil won; New campaign idea | Planning 0–140 of 417; rest full | 24 | 8 | Planning t141 |
+| chat-early-planning.md | Campaign Planning; Campaign organization; D&D module where evil won; New campaign idea | Full | 31 | 9 | — |
 
-Reading stopped at the chat tool's hourly limit. Partial files mark late items
-taken from search snippets.
+All sweeps are finished. chat-automation.md covers most of the n8n chat, not
+all of it.
 
 ## Other
 
