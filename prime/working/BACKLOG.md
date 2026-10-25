@@ -55,7 +55,7 @@ Each settles items on several pages at once. Rule these first.
 5. ~~**Act structure and the Citadel.**~~ *Ruled: Citadel and Core are late Arc 3 or Arc 4.* Level bands per arc are a new decide on the spine.
 6. ~~**N'ghathrod's five centuries.**~~ *Ruled: exile from Glyth about four centuries ago; centuries of searching; the push for hearts only in recent decades.* Which residue piece gave him long life is a new decide.
 7. **What the H'Catha meteor is and why Caelestis wants it.** *Narrowed: containment for Caelestis, and the Sovereign Eye can't see through it; open: the Ortholith-fragment layer and why now.*
-8. ~~**How the Seekers divide.**~~ *Ruled: the Seekers of Secrets; every chapter worships Vecna, often under another name, unaware of the others.* Whether N'ghathrod's colony is a chapter is a new decide.
+8. ~~**How the Seekers divide.**~~ *Ruled: the Seekers are the faith; each chapter is named for what it seeks (the Seekers of Secrets are one); every chapter worships Vecna, often under another name, unaware of the others.* Whether N'ghathrod's colony is a chapter is a new decide.
 9. ~~**Astra's name and wound.**~~ *Ruled: any of the three names; the Axiom strain's ripple woke and broke it.*
 10. ~~**The real elder brain.**~~ *Ruled: the Session 27 brain is his; it teleported out.* Where it went is a new decide.
 11. ~~**Which sphere holds Oerth.**~~ *Ruled: SPH-05, the farthest from Caelestis.*
