@@ -291,7 +291,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The Darkest Day",
-      "desc": "Vecna's cult works a ritual on George at the eclipse, as bait. The Monolith erupts over the cemetery. The first Accordance champions die fighting it.",
+      "desc": "Vecna's cult works a ritual on Giorge at the eclipse, as bait. The Monolith erupts over the cemetery. The first Accordance champions die fighting it.",
       "t": -0.9,
       "tier": 1
     },
@@ -685,7 +685,7 @@
         "group": "People"
       },
       {
-        "name": "George",
+        "name": "Giorge",
         "group": "People"
       },
       {
@@ -772,9 +772,9 @@
         "Joffrey",
         "The crew"
       ],
-      "Ziko's sword and George": [
+      "Ziko's sword and Giorge": [
         "Ziko's sword",
-        "George",
+        "Giorge",
         "Lola's Boys",
         "Vecna",
         "Tharizdun and the Princes"
@@ -911,11 +911,11 @@
       {
         "t": -0.9,
         "status": "past",
-        "title": "The Darkest Day: Vecna's bait ritual on George; the corrupted Monolith rises",
+        "title": "The Darkest Day: Vecna's bait ritual on Giorge; the corrupted Monolith rises",
         "who": [
           "Vecna",
           "Tharizdun and the Princes",
-          "George",
+          "Giorge",
           "The Accordance"
         ]
       },
@@ -984,9 +984,9 @@
       {
         "t": -0.48,
         "status": "past",
-        "title": "George attacks Lola's Place for the sword",
+        "title": "Giorge attacks Lola's Place for the sword",
         "who": [
-          "George",
+          "Giorge",
           "Ziko's sword",
           "Lola's Boys"
         ]

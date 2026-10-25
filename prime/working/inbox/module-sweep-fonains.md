@@ -32,7 +32,7 @@ Applied to the Fonains Canon Reference doc, `prime/timeline/timeline.json` and
 
 Jorgi Panamop, Lola Lolita Bacon (Granny), Xero Cre'Tez, Lusion Cre'Tez, Hayden
 Crabshore, Ziko Mistbane, Eldree, Duran. Applied in the doc and the timeline.
-George, the Darkest Day vessel, is a different person and keeps his name.
+Giorge, the Darkest Day vessel, is a different person and keeps his name.
 
 ## Spellings kept from the table
 

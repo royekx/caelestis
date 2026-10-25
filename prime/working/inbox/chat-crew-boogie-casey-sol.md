@@ -43,7 +43,7 @@ Source: https://claude.ai/chat/fa8c4131-81e2-44e5-9ec2-e4a8a0850312 · updated 2
 - Fonains retcon: the Vanished went to Tharizdun's prison. Scholars guessed the Shadowfell as their best framework. — **in repo** (working/tharizdun.md)
 - The Fonains Monolith broke into a vast number of shards (scaled up to about 333,333) now spread across the cosmos. Collecting them is not a goal; this is no fetch quest. — **not in repo** (no "333" hit)
 - Tharizdun is opportunistic and lucid only at times. He did not plan the Monolith corruption; it happened because of the ritual he was part of, as the Elder Elemental Eye, and became a contingency. — **conflicts** (working/tharizdun.md, "Vecna knew the Fonains Zenith would be ridden"; the chat's framing had Vecna unaware. The repo explicitly replaces that line, so the repo is likely the later decision.)
-- Giorge Forsworn, an NPC retrofitted on Fonains, is searching for shards and may overlap with Boogie later. — **not in repo** (no "Forsworn" hit; "George" appears in the repo only as the site of Vecna's bait ritual)
+- Giorge Forsworn, an NPC retrofitted on Fonains, is searching for shards and may overlap with Boogie later. — **not in repo** (no "Forsworn" hit; "Giorge" appears in the repo only as the site of Vecna's bait ritual)
 
 ### Arc method
 - No fixed reveal. Gates are planted where relevant and follow the player; he may never learn the source, and that is fine. — **not in repo** as a Boogie note

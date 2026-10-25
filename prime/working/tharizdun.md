@@ -35,7 +35,7 @@ Shothragot, speaks of it, and so does Vecna.
 4. The crystal replicated into the Monolith as it formed. That was the
    corruption.
 
-The same eclipse carried Vecna's own cult ritual on George, which the
+The same eclipse carried Vecna's own cult ritual on Giorge, which the
 Darkest Day party disrupted. That ritual was bait.
 
 ## Vecna and Tharizdun

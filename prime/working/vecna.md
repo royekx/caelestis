@@ -106,7 +106,7 @@ details, but the hand and eye recur.
 ## On Fonains
 
 - **The Darkest Day cult** is a faithful congregation that names him and
-  expects his return. He used them as bait: their ritual on George was meant to
+  expects his return. He used them as bait: their ritual on Giorge was meant to
   be found and stopped, while the sister ritual to the Princes ran on the same
   eclipse.
 - **Vanifer's voice** was a Seeker chapter. It traded her the lost meaning of
