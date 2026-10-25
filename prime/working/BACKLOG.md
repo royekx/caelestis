@@ -1360,10 +1360,9 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/seekers.html
 
-- **[decide]** The Seekers' name
-  Ruled: the Seekers of Secrets, every chapter worshipping Vecna, the colony among them (STAGING rounds 2 and 3). Korey thinks the name may still need work, since the colony seeks a home, not secrets. Keep "the Seekers of Secrets", or find a name that also covers chapters like the colony.
+- **[decide]** The colony's chapter name
+  Ruled: the Seekers are the faith, and each chapter is named for what it seeks (STAGING § The Seekers). N'ghathrod's colony seeks a home and needs a chapter name with more life than "Seekers of a Home". The other chapters' names are set as they come up.
   src: Korey, 2026-10-25 (round 3)
-
 - **[fix]** Chapters know him under many names
   The intro says "No chapter knows the name Vecna." Rewrite: "Chapters know him by many names. Some use his own." Shape the rest per the decide above.
   src: session-rulings (Vecna)

@@ -62,8 +62,8 @@ writing rules.
 - Vecna and Tharizdun distrust each other. Tharizdun's weakening of reality on Fonains serves Vecna's ends, and Vecna lets it run.
 - Lich Vecna, the mortal form the Core Monolith archived when Vecna ascended, sits in the Radiant Citadel. He has had centuries to conclude he was wrong, and he is calm, almost redeemed. Meeting him unsettles everything the crew thinks they know.
 
-### The Seekers of Secrets (factions/seekers.html)
-- Vecna's worshippers are the Seekers of Secrets, "the Seekers" for short.
+### The Seekers (factions/seekers.html)
+- The Seekers are Vecna's faith. Seeking is the faith itself; what a chapter seeks is what names it. The Seekers of Secrets are one chapter. Others seek knowledge, a cure for death, or a home.
 - Every chapter worships Vecna, often under another name or in the belief that he is something else. Chapters do not know about each other; each serves on its own. Their mutual ignorance is itself a secret Vecna keeps and feeds on.
 
 ### The Core Monolith's pressure (cosmology/, factions/order.html, factions/restorers.html)
@@ -122,7 +122,7 @@ writing rules.
 ## Rulings of 2026-10-25, round 3
 
 ### The Seekers and the colony (factions/seekers.html, factions/vthorama.html)
-- N'ghathrod's colony is a chapter of the Seekers, and the oddest one. It seeks a home, not secrets, and N'ghathrod believes he answers to an elder brain. It serves the same hidden god as every other chapter, and Vecna feeds it the few secrets it needs.
+- N'ghathrod's colony is a chapter of the Seekers, the one that seeks a home. It serves the same hidden god as every other chapter, believing it answers to an elder brain, and Vecna feeds it the few secrets it needs.
 
 ### N'ghathrod's long life (dossiers/nghathrod.html, artifacts/rod-of-seven-parts.html, factions/vthorama.html)
 - The residue piece Thessalar experimented with was the seventh Rod piece, simulacrum. It is why N'ghathrod's tadpoles make copies of him, and it is the root of the taking.
