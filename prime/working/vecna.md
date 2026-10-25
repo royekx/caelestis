@@ -1,7 +1,12 @@
 # Vecna
 
-Vecna is a god, and has been for centuries. That is a fact of the world, known
-the way any god is known. What is hidden is his plan, not his existence.
+Vecna is a god, and has been for centuries. His godhood ascension happened on
+Oerth and is finished. That is a fact of the world, known the way any god is
+known. What is hidden is his plan, not his existence.
+
+His plan is a second climb: from god to Axiom, taking the Convergence seat. The
+repo calls that plan **the Ascension** (Campaign → Ascension). In these drafts,
+"the Ascension" always means the Axiom plan, never his godhood.
 
 ## The two bodies
 
@@ -11,11 +16,12 @@ He has two groups of people, and they must not be confused.
 |---|---|---|
 | What they are | Open worship of a god of secrets, under many names | Chapters taught a method by a voice |
 | Do they know him? | Yes, by some name, sometimes by his own | No. No chapter knows the name Vecna |
-| What they give him | Worship: his power, reach and awareness | Zeniths, and therefore Monoliths |
+| What they give him | Worship: his power, reach and awareness | Zeniths, and therefore Monoliths, for the Axiom plan |
 | Do they know the plan? | No | No |
 | Where | Wide and thin, across spheres | Dozens of worlds |
 
-The faithful are why he is a god. The Seekers are how the Ascension happens.
+The faithful are why he is a god. The Seekers are how he means to become an
+Axiom.
 A temple to the Keeper of Secrets in a port city and a scholarly order chasing
 a lost discipline on another world can both trace back to him, and neither
 would recognise the other.
@@ -25,24 +31,41 @@ never suspecting the two are the same hand.
 
 ## History
 
-1. A mortal mage on his home world. Recruited as a boy by a voice (published
-   lore; the layer above him stays parked).
+1. A mortal mage on Oerth. Recruited as a boy by a voice (published lore; the
+   layer above him stays parked).
 2. Became a lich to stop ending.
-3. Ascended to godhood through a Zenith on his home world. A Monolith answered,
-   and his mortality was archived to the Core, where that half still lives in
-   the Citadel.
-4. Spent the centuries since building worship. He failed before he had
-   believers; he does not intend to fail that way again.
-5. Now working toward the Convergence seat (see the Ascension).
+3. Built a following on Oerth over a long reign. Heroes rose against him and
+   failed. Oerth is the world where nobody stopped him.
+4. Ascended to godhood through a Zenith on Oerth. A Monolith answered, and his
+   mortality was archived to the Core, where that half still lives in the
+   Citadel.
+5. **The ascension pushed him off the world.** Becoming a god made him the same
+   polarity as Oerth's heart, and the world repelled him. He has not stood on
+   Oerth since. Everything he has done there since, he has done through his
+   faithful.
+6. Spent the centuries since building worship across the cosmos.
+7. Now working toward the Convergence seat (the Ascension).
 
-### Home world
+### Why the repulsion matters
 
-His home world is **Oerth**, in its own sphere. It is the centre of his worship
-and the anchor of his realm. The Monolith from his ascension still stands
-there, and his faithful treat it as their holiest site.
+The same repulsion keeps him from the First Heart at the center, only far
+stronger. He cannot walk to any heart, so he has to send himself through
+others: opened child hearts, linked, filled with vessels. Oerth is the first
+proof of the rule that shapes his whole plan.
+
+### Oerth
+
+His home world, in its own sphere. The centre of his worship, the anchor of his
+realm, and the place his hold is strongest.
+
+- The Monolith from his ascension still stands. His faithful treat it as the
+  holiest site in the cosmos.
+- It is the darkest timeline in miniature: a world that lost to him. A crew
+  that goes there finds out what winning looks like from his side.
+- It is reachable, and it should be horrible.
 
 The Ascension World (SYS-05) is a different place: a world in SPH-01 where he
-later forced a small, local threshold.
+later forced a small, local threshold through agents.
 
 Exandria exists in the cosmos with none of his history there.
 
@@ -117,5 +140,5 @@ plan.
 - Which faithful congregation the crew meets first.
 - Whether the benevolent church is entirely sincere, or one of its high clergy
   knows more.
-- Whether Oerth's sphere is reachable in this campaign.
+- How the crew could reach Oerth's sphere, and how late.
 - The Accordance's view of him.

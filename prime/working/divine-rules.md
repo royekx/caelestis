@@ -34,29 +34,40 @@ again somewhere colder.
 A god can preach on a far world. Most don't, because a handful of believers in
 another sphere gives almost nothing back.
 
-## The divine gate
+## Polarity
 
 No god walks on a world in person. They act through apparitions, avatars,
 chosen agents and champions.
 
-The reason is the Yearning. Worlds were formed from the Reach's debris and their
-hearts are pieces of it. Reach-born gods are the souls of the Reach world,
-reshaped. When a god's full presence stands on a world, the world's heart pulls
-at it the way child hearts pull toward the First Heart: like calls to like. A
-god who stays risks being drawn in and anchored, bound to that world's fate.
+The reason is polarity. Worlds were formed from the Reach's debris, and their
+hearts are pieces of it. Gods are the souls of the Reach world, reshaped, or
+later beings raised to the same nature. A god and a heart carry the same
+charge, and like charges push apart.
 
-The same pull, scaled up, is why the approach to the center kills gods. The
-First Heart pulls hardest of all.
+It works like two magnets of the same pole. A god can push toward a world, and
+the closer it gets the harder the push back, until going further is unbearable.
+Nothing breaks; the effort simply becomes more than any god will spend. Reach
+residue pushes back the same way.
+
+The center is the same rule at its strongest. The First Heart is the deepest
+heart, so the push there is the greatest. Approaching it does a god real harm,
+and the Reach-born feel it worst.
 
 | | On a world | Approaching the center |
 |---|---|---|
-| Reach-born gods | Strong pull; full presence is dangerous | Lethal |
-| Later gods (Vecna) | Weaker pull; still unsafe | Harmful, survivable for a time; still cannot cross |
-| Mortals | No pull | Dangerous, crossable |
+| Reach-born gods | Pushed away hard; a full presence can't hold | Unbearable well before the end |
+| Later gods (Vecna) | Pushed away; a full presence can't hold | Harmful and slow; still can't cross |
+| Mortals | No push | Dangerous for other reasons; crossable |
 
-An apparition or avatar is thin enough that the pull finds little to hold.
-That is why Vecna appeared as a projection in The Darkest Day, and why the
-Accordance spoke through visions and chose champions: "even the gods have laws."
+An apparition or avatar carries too little of the god to be pushed. That is why
+Vecna appeared as a projection in The Darkest Day, and why the Accordance spoke
+through visions and chose champions: "even the gods have laws."
+
+### Ascension flips a being's charge
+
+A mortal who becomes a god takes on the charge. Vecna stood on Oerth as a lich
+and was pushed off it the moment he ascended. Any mortal raised to godhood
+leaves the world they rose on.
 
 ## Realms
 
@@ -71,17 +82,14 @@ generations.
 ## Promotes to
 
 - Cosmology → The Gods: worship as power, concentration and reach, the
-  clustering loop, the divine gate.
+  clustering loop, polarity.
 - Cosmology → Pantheons and spheres: replace "gravitated" with the clustering
   loop.
 - Cosmology → Other Planes: realm anchoring (already partly stated).
 
 ## Open
 
-- Whether a god physically entering a world also strains Continuity enough to
-  read as a threshold. Possibly why gods learned the rule in the first place.
-- What a god anchored to a world looks like. Is any god already trapped this
-  way?
+- Whether any god has ever forced its way onto a world, and what it cost.
 - Whether worship crosses the Flow. If it doesn't, Vecna's faithful in other
   spheres only pay him through a foothold in each sphere, and those footholds
   become targets.

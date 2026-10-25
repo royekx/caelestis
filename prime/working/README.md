@@ -18,7 +18,7 @@ it names, and the draft is deleted or reduced to what is still open.
 
 | Draft | Subject | State |
 |---|---|---|
-| [divine-rules.md](divine-rules.md) | Worship, spheres, the divine gate, realms | Draft |
+| [divine-rules.md](divine-rules.md) | Worship, spheres, polarity, realms | Draft |
 | [vecna.md](vecna.md) | Vecna's history, realm, faithful and their names | Draft |
 | [tharizdun.md](tharizdun.md) | The prison, the Day of Chaos, how Vecna uses him | Draft |
 | [glyth-watcher.md](glyth-watcher.md) | The Watcher who came back from Glyth | Sketch |
