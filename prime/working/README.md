@@ -1,24 +1,60 @@
 # Working
 
-Drafts that are not canon yet. Anything here can be argued with, rewritten or
-thrown out. When a draft settles, its content is promoted into the canon page
-it names, and the draft is deleted or reduced to what is still open.
+Drafts and staging for the DM wiki. Nothing here is canon until it reaches a
+page under `prime/`. Nothing here is linked from a page or deployed.
+
+## How material moves
+
+```
+inbox/  →  drafts  →  BACKLOG.md  →  STAGING.md  →  pages under prime/
+ raw       argued      to rule on     ruled, waiting    canon
+```
+
+1. **inbox/** holds raw material: chat sweeps, module sweeps, exports. Dump
+   freely.
+2. **Drafts** (`*.md` in this folder) are where a subject is argued out. Each
+   ends with **Promotes to** and **Open**.
+3. **BACKLOG.md** lists everything still to rule on or fix, grouped by the page
+   it lands on: facts missing from a page, page lines that are wrong or stale,
+   open calls, and retired material to drop.
+4. **STAGING.md** holds what IS, once ruled, grouped by target page. It is not
+   a log. An entry is as long as it needs to be: a line, a paragraph, or a full
+   section. When a ruling changes, the entry is rewritten.
+5. **Distribution** writes staged entries into their pages, then deletes them
+   from STAGING.md and the matching backlog items.
+
+A chat session works the backlog: Korey rules, the result goes to staging, and
+staging is distributed page by page.
 
 ## Rules
 
 - Markdown, one file per subject. No page shell, no styling.
-- Each draft ends with **Promotes to**, listing the canon pages it changes, and
-  **Open**, listing the calls not yet made.
-- Deliberation is allowed here and nowhere else. Canon pages state what is.
-- Nothing here is linked from a page under `prime/` or the player site.
-- Dumping is fine. Paste notes, chat excerpts or exports into `inbox/` and sort
-  them later.
+- Deliberation lives in drafts and the backlog. Staging and pages state what is.
+- The player record (`data/`) never takes anything from here.
 
-## Status
+## Writing staged entries and pages
+
+- **Specific over sparse.** Write the detail out. A generic line breeds
+  misreadings later; a long, exact entry does not.
+- **Plain, simple, precise, readable.** Short sentences, concrete nouns, no
+  hedging.
+- **In-world voice for anything that exists in the world.** People, places,
+  items, factions, history and events read like a fan wiki: "Thessalar's craft
+  fell about 500 years ago," never "Korey decided the craft fell…".
+- **DM voice for how it is played.** Mechanics, rules, encounter tables,
+  session plans and pacing notes speak to the DM.
+- **Open questions stay on the planning layer.** The backlog, drafts and
+  planning pages hold what is undecided. A dossier, item or location entry
+  never carries "pending", "TBD" or "decision needed". If a detail is unknown,
+  the entry says what is known and stops.
+- Not everything will be decided, and some things will change. That is fine;
+  rewrite the entry when it does.
+
+## Drafts
 
 | Draft | Subject | State |
 |---|---|---|
-| [divine-rules.md](divine-rules.md) | Worship, spheres, polarity, realms | Draft |
+| [divine-rules.md](divine-rules.md) | Worship, spheres, polarity, realms, one god many names | Draft |
 | [vecna.md](vecna.md) | Vecna's history, realm, faithful and their names | Draft |
 | [tharizdun.md](tharizdun.md) | The prison, the Day of Chaos, how Vecna uses him | Draft |
 | [glyth-watcher.md](glyth-watcher.md) | The Watcher who came back from Glyth | Sketch |
