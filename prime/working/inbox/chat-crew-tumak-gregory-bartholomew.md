@@ -229,6 +229,6 @@ Source: https://claude.ai/chat/3ab2b3ef-7800-494c-85df-0d026af08f2e · updated 2
 ---
 
 ## Tally
-- **Not in repo:** 38
-- **Conflicts with repo** (including partial conflicts): 21
+- **Not in repo:** 34 Settled bullets
+- **Conflicts with repo** (including partial conflicts): 16 Settled bullets
 - Highest-value repo fixes: Tu's left-sole match (rules state is stale); "sky dock" in Gregory's Clear clue; the stale Wayscribe recharge dice; and a decision on the late Wayfind reach and cost proposals.
