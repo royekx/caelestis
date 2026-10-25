@@ -207,7 +207,7 @@ writing rules.
 - Vecna's hand on H'Catha goes back only to its founding. A residue of worship lingers there. He may once have tried to turn the dreaming of the Sovereign Eye into a Zenith and fallen short. One of the eldest rulers may know something of it. H'Catha is the crew's first world beyond Caelestis, and Vecna stays faint there.
 
 ### Vth'oramu and the colony (dossiers/vthoramu.html, factions/vthorama.html)
-- Vth'oramu has moved since it sat on the Cairn bearing a year ago. It stays outside Realmspace and keeps to the dark between systems: a vessel that size near a world's planets would raise alarms. Where it lies now follows from what N'ghathrod is doing.
+- Vth'oramu has moved since it sat on the Cairn bearing a year ago. It can enter a system, but a vessel that size near a world's planets would almost certainly be seen, so it keeps to the dark between systems. Where it lies now follows from what N'ghathrod is doing. The unidentified mass Strake Station reported was Vth'oramu.
 - The dreadnought bore no wound before the siege. N'ghathrod saw an opportunity and took it. He knew a dreadnought's physiology, and a whisper from Vecna told him it was the best way to keep a colony on its passage home. The fight lasted a long time, and controlling the creature took a great many tadpoles.
 - The colony's arms should echo a hand and an eye without showing them outright.
 - The tithe runs one way. Every taken person comes from N'ghathrod's tadpoles. As each grows, a portion of it passes up through the rungs of the taken, and all of it ends with N'ghathrod. The flow is paracausal, not physical. "The downward tithe" is retired.
@@ -253,3 +253,62 @@ writing rules.
 - The fire genasi who became the Cre'Tez have guarded the fire key since that sealing.
 - About three and a half centuries ago a sect of the fire genasi tried to summon Imix. Asmodeus gave the few who resisted Tinderstrike to seal him again, and bound the key to their blood; the price was that Imix be forgotten. Over the generations since, the line has turned tiefling.
 - About five hundred years ago Thessalar's planar craft crashed on Fonains, and Tharizdun's influence arrived with the temple aboard it. It spread slowly through the world and into new cults. Those cults raised the four prophets, and in recent years everything has begun to move.
+
+## Rulings of 2026-10-25, round 8
+
+### N'ghathrod's lieutenants (factions/vthorama.html, dossiers/ enna pages)
+- Two of the five lieutenants are properly raised illithids who were captured with N'ghathrod aboard Thessalar's craft. The other three are unthinned: made aboard the craft from bodies Thessalar supplied for his experiments and N'ghathrod's own tadpoles.
+
+### Vocath's crates (factions/vocath-operation.html, campaign/colony/)
+- The crates at the Sky Dock carry Vocath's mark, the eye in a wheel.
+
+### Captain Haymond Rolt (NEW: dossier; campaign/spine.html)
+- Captain Haymond Rolt is the crew's handler in Arc 2. He oversees several Driftwarden crews at once. (DM: an homage to Captain Raymond Holt.)
+
+### The Princes' pressure (campaign/spine.html)
+- The crew meets the Princes' pressure as strange elemental-plane phenomena on the worlds they visit, not as the Princes themselves.
+
+### Residue and the fragments (cosmology/, artifacts/)
+- "Residue" stays as the term.
+- Caelestis's sphere holds pieces of three fragments both by chance and by pull. Pieces of a fragment draw toward each other; once a few came to rest near Realmspace, more followed.
+
+### Aethris (realms/aethris.html)
+- Aethris's Zenith is unfinished, because the Fortuned have not completed their ritual. The Prism Ascendant is the Monolith that answered it. It has archived what it can and stays where it is. It does nothing.
+
+### The Fonains shards (realms/fonains.html, artifacts/fonains-shard.html, timeline)
+- When the Monolith broke, four great shards fell, and many smaller shards came from them. Three hundred and thirty-three of the small shards are black. The rest took colors close to their elemental affinities. This replaces "about 333,333 shards".
+
+### The Cre'Tez (Fonains doc, realms/fonains.html)
+- The Cre'Tez father is Cenvinzo. He is barely alive, a shadow of himself, held captive somewhere and bound to Vanifer.
+- Rihiri is a sister. Darra is a sister.
+- Finerva is Vanifer under another name. The Pedra Ardente is a gem.
+- Kevulan first willed his birthright to Asmodus, then rescinded it and willed it to Xero.
+
+### Gregory (crew/gregory.html, realms/toril.html, factions/academy-fleet.html)
+- Gregory's anchor on Toril is the Cogfast Enclave on Lantan.
+- Whether the Lantern becomes his next anomaly depends on whether he investigates it.
+
+### Casey (crew/casey.html, dossiers/polly.html, dossiers/astra-virex.html)
+- The voice Casey hears as Polly is Astra Virex wearing Polly's shape. It grows clearer with each tether.
+- What became of the real Polly: consumed, or caught between life and death.
+- Casey is the younger brother who does not know his full identity. He finds it in having an older brother, which is why he clings to Tumak.
+
+### Sol (crew/sol.html, dossiers/beshaba.html)
+- Beshaba's reward for the oath is power. To give it shape, she needs to want something and lay that want on Sol as a quest.
+- Beshaba did not arrange Sol's escape.
+
+### Tumak (crew/tumak.html, dossiers/the-runekeeper.html)
+- The Runekeeper's fade runs on a soft clock: rising pressure, no date.
+- Tumak has his own Heart-rune.
+- Tumak knows of the previous Runekeeper and met him once, briefly. He does not understand what that meeting was.
+
+### Boogie (crew/boogie.html)
+- Tharizdun wants nothing specific from Boogie. Tharizdun is not lucid; it is an opportunist. What happens through the shard depends on what Boogie does, and things may come through the current. Boogie's plot is reactive.
+- Boogie sometimes feels corruption leaking into him from the shard: a role-playing beat, not a mechanic.
+- Boogie holds half of the derelict logbook. The other half was in his chest inside the Monolith.
+
+### The edge mystery (NEW: Cosmos texture)
+- The Reef-style mystery lies outside Realmspace, in another system or between systems. It will cross paths with Vth'oramu later, once N'ghathrod grows bolder. It needs an introduction somewhere first.
+
+### The crew's pasts (crew/, DM principles)
+- The PCs remember where they came from. Their pasts get filled in retroactively; nobody arrived with amnesia.
