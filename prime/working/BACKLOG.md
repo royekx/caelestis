@@ -4154,7 +4154,7 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   src: chat-cosmic § Open; campaign/spine.html
 
 - **[add]** The edge mystery
-  Ruled (STAGING round 8). Add (DM voice): "The Reef-style mystery lies outside Realmspace, in another system or between systems. It will cross paths with Vth'oramu later, once N'ghathrod grows bolder. It needs an introduction somewhere before that."
+  Ruled (STAGING round 8). Add (DM voice): "A mystery lies at the edge, outside Realmspace, in another system or between systems. It will cross paths with Vth'oramu once N'ghathrod grows bolder." Planning layer: it needs an introduction before that.
   The sovereign and the Osiris-style figure ride with the brainstorm item under campaign/spine.html ("The Fleet's strain in broad strokes").
   src: Korey, 2026-10-25 (round 8); chat-cosmic § Open
 

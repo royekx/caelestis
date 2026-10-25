@@ -40,7 +40,7 @@ writing rules.
 - The dragons that left Fonains and most worlds set out to face Takhisis and have not reached Krynn. Their own politics hold them; the reason is unrevealed.
 - An aspect of Bahamut is trapped by Takhisis in the ruined temple of Paladine on Krynn. It speaks through Eldree's egg on Fonains.
 
-## Rulings of 2026-10-25, round 2 (backlog category 1)
+## Rulings of 2026-10-25, round 2
 
 ### Hearts, Atria and Monoliths (cosmology/, glossary/, rules/ § Opening)
 - Every world has a heart, and every heart has an Atrium: its own hidden entrance, which manifests differently on each world according to what that world is. Residue carried into an Atrium opens the heart. Opening needs no Monolith.
@@ -50,7 +50,7 @@ writing rules.
 ### Vecna's working: the linked circle (cosmology/, glossary/, campaign/ascension/, chart/)
 - Vecna needs fifteen opened, linked hearts: three in each of the five spheres. In each sphere, one heart links to the sphere on one side, one to the sphere on the other side, and one to the First Heart. Together the links form a spellcasting circle drawn across the cosmos, and Vecna works toward completing it.
 - Today almost none of it stands. A handful of hearts may have been found in the past few decades; a couple at most are linked.
-- The chart's "claimed" and "primed" node states, and their counts, are retired. The chart shows Monolith worlds, found hearts, opened hearts and links, with very few of the last three.
+- The chart shows Monolith worlds, found hearts, opened hearts and links, with very few of the last three.
 
 ### Vecna (factions/deities.html, factions/seekers.html, campaign/ascension/, realms/oerth)
 - Vecna is a god of secrets, knowledge, manipulation and trickery, with a hold over death and the undead. He thrives on what others do not know.
@@ -79,7 +79,6 @@ writing rules.
 ### The theme (campaign/spine.html, hub.html)
 - The campaign has no central question. It has a theme: everyone is missing something and is trying to become whole, to find or make their place in the cosmos.
 - The theme takes a different shape at each level. Vecna wants the answer to the cosmos and what was taken from him. N'ghathrod wants a home for his people. Casey wants his brother. Tumak wants his home. Bartholomew wants the peace within him, his constellation. Boogie wants to belong to something. Astra Virex wants to heal. Gregory and Sol carry it too.
-- "Who decides what's real?" is retired, and the hub stops quoting it.
 
 ### Campaign shape (campaign/spine.html)
 - N'ghathrod is the main villain of the campaign, and stopping his invasion takes most of it. Vecna stands behind him and beyond the campaign's direct reach; the late campaign is about stopping Vecna's working, not necessarily fighting him. A confrontation could be with a part of him manifested in the First Heart.
@@ -114,10 +113,7 @@ writing rules.
 - OSTEKK-6 is the only active survivor of Vaelorix's nine units. OSTEKK-2 lies inert on the Hollow Deck. The crew could heal it back to function if they return for it, for example with the Lantern of Flourishing they have kept hidden.
 
 ### Constellation designations (realms/, crew/bartholomew.html, chart/)
-- Constellation designations are catalogue numbers that read as long established, tied to their system and near random. A newly met constellation never gets a low or sequential number; it already had one before the crew found it. CON-312 is the model.
-
-### Naming
-- See the naming rule in README.md § Writing staged entries and pages.
+- Constellation designations are catalogue numbers that read as long established, tied to their system and near random. A newly met constellation never gets a low or sequential number; it already had one before the crew found it. CON-312 is one such number.
 
 ## Rulings of 2026-10-25, round 3
 
@@ -128,7 +124,7 @@ writing rules.
 
 ### N'ghathrod's long life (dossiers/nghathrod.html, artifacts/rod-of-seven-parts.html, factions/vthorama.html)
 - The residue piece Thessalar experimented with was the seventh Rod piece, simulacrum. It is why N'ghathrod's tadpoles make copies of him, and it is the root of the taking.
-- N'ghathrod's long life comes from his taken. A portion of every taken person is tithed upward to him, the way a hive feeds its center, and it extends his life. The more he takes, the longer he lasts. This replaces the earlier line that the altered ceremorphosis stopped his aging.
+- N'ghathrod's long life comes from his taken. A portion of every taken person is tithed upward to him, the way a hive feeds its center, and it extends his life. The more he takes, the longer he lasts.
 
 ### Oerth (realms/oerth, chart/, cosmology/)
 - Oerth lies in SPH-05, the sphere farthest from Caelestis's.
@@ -141,7 +137,6 @@ writing rules.
 ### The Circle of Fifteenths (campaign/ascension/, glossary/, cosmology/)
 - Vecna calls his working the Circle of Fifteenths, after the circle of fifths in music. He has a taste for music, and it shows in how he names things.
 - The name is his alone. No one else knows what he is building. The Seekers do not know, and neither does the Order. Some gods suspect he is up to something. A few people on the fringes sense that something is wrong in the cosmos, but they do not know what it is or what to call it, and no one believes them.
-- Pages that describe the working from outside call it Vecna's working; the Circle of Fifteenths is his name for it.
 
 ### Vecna's domains and symbol (factions/deities.html)
 - Vecna's domains are Knowledge, Death and Trickery.
@@ -158,21 +153,17 @@ writing rules.
 - He steered for a color pool he could see opening, and went through it on purpose. Color pools open and close quickly, and this one carried him through a small pocket of another dimension and spat him out on Fonains, separated from the boarders who followed him in.
 - The Crow's survivors still argue about whether he meant to go through. He did.
 - In the Fleet, "went overboard" means more than falling from a ship. A crew member who leaves the ship to fight for it and does not come back has gone overboard. It is a softer way of saying killed in action. Tarto and Saerthe both feel they could have done something.
-- This replaces the psychic wind as the way Clint reached Fonains.
 
 ### Tarroway (dossiers/tarroway.html, restricted/)
 - M. Tarroway is a cartographer on Strake Station. His readings were the first hint that an unknown vessel or structure was disturbing the satellites at the edge of the system.
-- He is a thread, not a figure: mentioned here and there so the players can put pieces together. He appears mainly in the Fleet Intelligence Archive. Nothing about him is public yet.
-
-### The Vth'orama (factions/vthorama.html)
-- The colony's chapter name, Vth'orama, translates as the Seekers of a New Home. The etymology above stands.
+- His name turns up here and there, mainly in the Fleet Intelligence Archive. Nothing about him is public. (DM: a thread for the players to piece together, not a figure they meet.)
 
 ### Building contracts (DM: a planning page)
 - Contracts fall into three or four categories by how they tie to the larger world: loosely tied, tied to a Seekers chapter, personal to a crew member, and others as they come up. Each contract can be built out from its category.
 - The world is already in motion. A contract surfaces because of the state of the world, and the place around it should feel like it exists without the crew. The crew's choices, or their failure to act, change what was already happening.
 - Contracts take any shape: excavations, politics, hunts. Many quietly lead back to a Seekers chapter, some of them knowingly nefarious and some unwitting.
 
-## Rulings of 2026-10-25, round 5 (backlog category 2)
+## Rulings of 2026-10-25, round 5
 
 ### The gods (cosmology/, factions/deities.html, working/divine-rules.md)
 - Most gods came into being in the Reach event and grew into godhood over time, some sooner than others, so gods have different ages. Later gods ascended from mortality. Their standing as greater or lesser gods comes from how much worship they hold, the influence they gain from it, and the niche they find, through the same loop of attention and belief.
@@ -187,9 +178,9 @@ writing rules.
 
 ### Vecna (factions/deities.html, realms/oerth, campaign/ascension/)
 - Vecna's realm is Cavitius.
-- Oerth is the world where Vecna became a god. His ritual to become a god pushed Oerth to its Zenith, and the Zenith made him one; the Monolith that answered archived his mortal form, Lich Vecna. That was his first ascension, the Godhood Ascension. The climb he is making now, to take an Axiom's place, is the Axiomic Ascension. The separate "Ascension World" is retired; Oerth is that world.
+- Oerth is the world where Vecna became a god. His ritual to become a god pushed Oerth to its Zenith, and the Zenith made him one; the Monolith that answered archived his mortal form, Lich Vecna. That was his first ascension, the Godhood Ascension. The climb he is making now, to take an Axiom's place, is the Axiomic Ascension. Oerth is the Ascension World.
 - His grievance: something was taken from him and hidden from him. He believes the cosmos and every being in it are owed an answer, and he means to find it.
-- How the other gods respond if he comes close is left to reveal itself. The campaign is not a war of the gods.
+- DM: the campaign is not a war of the gods.
 
 ### Tharizdun (working/tharizdun.md, realms/fonains.html, dossiers/thessalar.html)
 - Fonains's Monolith is the only one ever to carry Tharizdun's crystal, and the only one recorded as destroyed.
@@ -207,10 +198,10 @@ writing rules.
 - Vecna's hand on H'Catha goes back only to its founding. A residue of worship lingers there. He may once have tried to turn the dreaming of the Sovereign Eye into a Zenith and fallen short. One of the eldest rulers may know something of it. H'Catha is the crew's first world beyond Caelestis, and Vecna stays faint there.
 
 ### Vth'oramu and the colony (dossiers/vthoramu.html, factions/vthorama.html)
-- Vth'oramu has moved since it sat on the Cairn bearing a year ago. It can enter a system, but a vessel that size near a world's planets would almost certainly be seen, so it keeps to the dark between systems. Where it lies now follows from what N'ghathrod is doing. The unidentified mass Strake Station reported was Vth'oramu.
+- Vth'oramu has moved since it sat on the Cairn bearing a year ago. It can enter a system, but a vessel that size near a world's planets would almost certainly be seen, so it keeps to the dark between systems. The unidentified mass Strake Station reported was Vth'oramu.
 - The dreadnought bore no wound before the siege. N'ghathrod saw an opportunity and took it. He knew a dreadnought's physiology, and a whisper from Vecna told him it was the best way to keep a colony on its passage home. The fight lasted a long time, and controlling the creature took a great many tadpoles.
-- The colony's arms should echo a hand and an eye without showing them outright.
-- The tithe runs one way. Every taken person comes from N'ghathrod's tadpoles. As each grows, a portion of it passes up through the rungs of the taken, and all of it ends with N'ghathrod. The flow is paracausal, not physical. "The downward tithe" is retired.
+- The colony's arms echo a hand and an eye without showing either outright.
+- The tithe runs one way. Every taken person comes from N'ghathrod's tadpoles. As each grows, a portion of it passes up through the rungs of the taken, and all of it ends with N'ghathrod. The flow is paracausal, not physical.
 - Qitru serves Vocath. She does not care who stands above him; for her, the top is Vocath.
 
 ### Thessalar (dossiers/thessalar.html)
@@ -219,7 +210,7 @@ writing rules.
 ### The Order (factions/order.html)
 - The Watchers keep watching. Over the past century they have seen Monoliths rise more often, and it worries them; some want to act. They are fighting oddities across many worlds and trying to keep a lid on them. Caelestis is thin partly because it answers the Watchers' calls for help.
 - The Hall of Sight and Sound is the great hall within the Order's seat.
-- H'Catha's Watcher is Nereth Vaul. Her species sets the final form of the name.
+- H'Catha's Watcher is Nereth Vaul.
 
 ### Aethris (factions/aethris.html, realms/aethris.html, dossiers/beshaba.html, factions/deities.html)
 - The Fortuned want Sol back alive because he is a component of their unfinished ritual. They do not care about him as a person.
@@ -263,20 +254,20 @@ writing rules.
 - The crates at the Sky Dock carry Vocath's mark, the eye in a wheel.
 
 ### Captain Haymond Rolt (NEW: dossier; campaign/spine.html)
-- Captain Haymond Rolt is the crew's handler in Arc 2. He oversees several Driftwarden crews at once. (DM: an homage to Captain Raymond Holt.)
+- Captain Haymond Rolt is the crew's handler in Arc 2. He oversees several Driftwarden crews at once, out of Ondrel Anchorage.
 
 ### The Princes' pressure (campaign/spine.html)
 - The crew meets the Princes' pressure as strange elemental-plane phenomena on the worlds they visit, not as the Princes themselves.
 
 ### Residue and the fragments (cosmology/, artifacts/)
-- "Residue" stays as the term.
+- The pieces of the Reach fragments are called residue.
 - Caelestis's sphere holds pieces of three fragments both by chance and by pull. Pieces of a fragment draw toward each other; once a few came to rest near Realmspace, more followed.
 
 ### Aethris (realms/aethris.html)
 - Aethris's Zenith is unfinished, because the Fortuned have not completed their ritual. The Prism Ascendant is the Monolith that answered it. It has archived what it can and stays where it is. It does nothing.
 
 ### The Fonains shards (realms/fonains.html, artifacts/fonains-shard.html, timeline)
-- When the Monolith broke, four great shards fell, and many smaller shards came from them. Three hundred and thirty-three of the small shards are black. The rest took colors close to their elemental affinities. This replaces "about 333,333 shards".
+- When the Monolith broke, four great shards fell, and many smaller shards came from them. Three hundred and thirty-three of the small shards are black. The rest took colors close to their elemental affinities.
 
 ### The Cre'Tez (Fonains doc, realms/fonains.html)
 - The Cre'Tez father is Cenvinzo. He is barely alive, a shadow of himself, held captive somewhere and bound to Vanifer.
@@ -286,15 +277,15 @@ writing rules.
 
 ### Gregory (crew/gregory.html, realms/toril.html, factions/academy-fleet.html)
 - Gregory's anchor on Toril is the Cogfast Enclave on Lantan.
-- Whether the Lantern becomes his next anomaly depends on whether he investigates it.
+- DM: the Lantern becomes Gregory's next anomaly if he investigates it.
 
 ### Casey (crew/casey.html, dossiers/polly.html, dossiers/astra-virex.html)
 - The voice Casey hears as Polly is Astra Virex wearing Polly's shape. It grows clearer with each tether.
-- What became of the real Polly: consumed, or caught between life and death.
+- The real Polly was consumed, or is caught between life and death. No one knows which.
 - Casey is the younger brother who does not know his full identity. He finds it in having an older brother, which is why he clings to Tumak.
 
 ### Sol (crew/sol.html, dossiers/beshaba.html)
-- Beshaba's reward for the oath is power. To give it shape, she needs to want something and lay that want on Sol as a quest.
+- Beshaba's reward for the oath is power. She gives it shape through a want of her own, laid on Sol as a quest.
 - Beshaba did not arrange Sol's escape.
 
 ### Tumak (crew/tumak.html, dossiers/the-runekeeper.html)
@@ -308,7 +299,7 @@ writing rules.
 - Boogie holds half of the derelict logbook. The other half was in his chest inside the Monolith.
 
 ### The edge mystery (NEW: Cosmos texture)
-- The Reef-style mystery lies outside Realmspace, in another system or between systems. It will cross paths with Vth'oramu later, once N'ghathrod grows bolder. It needs an introduction somewhere first.
+- A mystery lies at the edge, outside Realmspace, in another system or between systems. It will cross paths with Vth'oramu once N'ghathrod grows bolder.
 
 ### The crew's pasts (crew/, DM principles)
 - The PCs remember where they came from. Their pasts get filled in retroactively; nobody arrived with amnesia.
@@ -316,7 +307,7 @@ writing rules.
 ## Rulings of 2026-10-25, round 9
 
 ### Names across the cosmos (README naming rule; cosmology/, realms/, chart/)
-- Celestial bodies have names or designations. Caelestis gives designations (CON-312); the people who live near a body may have their own name for it, sometimes a local epithet ("the falling star of Gethros"). A body known across a system or a sphere may also carry a wider epithet, the way a moon has a name and is also called the Blood Moon. Most things have only a name or a designation.
+- Celestial bodies have names or designations. Caelestis gives designations (W-021 for Fonains); the people who live near a body may have their own name for it, sometimes a local epithet ("the falling star of Gethros"). A body known across a system or a sphere may also carry a wider epithet, the way a moon has a name and is also called the Blood Moon. Most things have only a name or a designation.
 - The same place can be called different things in different parts of the cosmos.
 
 ### Erevos and Aurath (cosmology/, glossary/, chart/, realms/)
@@ -340,17 +331,17 @@ writing rules.
 ### N'ghathrod now (campaign/colony/, dossiers/nghathrod.html)
 - N'ghathrod is working now on all four parts of his plan: planting the taken in key positions, finding hearts, opening them, and seeking links.
 - Vth'oramu is hunkered down on the periphery, in the dark between systems. It works as a mothership: skiffs go out from it to the worlds in that vicinity, and it stays where no one looks.
-- He has a broad set of target worlds in that vicinity. The specifics of each world are written as the crew nears it.
+- He has a broad set of target worlds in that vicinity. (DM: build each world's specifics as the crew nears it.)
 - By the time the crew graduates, his landed operations have begun to ripple outward at contract scale: taken in small positions, odd disappearances, a station or crew acting strangely. These are the first things the crew meets as Driftwardens. (DM: this is the shape of Arc 1 after graduation and the run into Arc 2.)
 
 ### The Fleet's strain (campaign/spine.html; NEW: Cosmos texture)
-- At the edge of a system, or between systems, Ilsevaine Corr rules a hidden polity, in the vein of Mara Sov. She has noticed more traffic than usual near her borders, and once something large brushed the edge of her sight and was gone. She keeps watch for it. She is the one who will one day face Vth'oramu.
-- Aurel Venn, a Watcher of the Order, saw the same pattern, warned the Order, and was not heeded. He softly defected: he never broke with the Order openly, but he left his post to find the thing himself, in the vein of Osiris. The crew hears of him through contradictory accounts long before any meeting.
+- At the edge of a system, or between systems, Ilsevaine Corr rules a hidden polity. She has noticed more traffic than usual near her borders, and once something large brushed the edge of her sight and was gone. She keeps watch for it. She is the one who will one day face Vth'oramu. (DM touchstone: Mara Sov.)
+- Aurel Venn, a Watcher of the Order, saw the same pattern, warned the Order, and was not heeded. He softly defected: he never broke with the Order openly, but he left his post to find the thing himself. The crew hears of him through contradictory accounts long before any meeting. (DM touchstone: Osiris.)
 - The fringe sage of Ascher Mir is the one who tracks the Seekers' pattern across chapters, a separate figure from the rogue Watcher.
 - Together with the rise in Monoliths and the Watchers' calls for help, these strain the Fleet.
 
 ### Visions (DM principles)
-- Use visions sparingly; there have been many. Polly's voice nudges Casey toward things rather than directing him. Casey's missed level 3 scene is dropped; his beat comes with H'Catha prep.
+- Use visions sparingly; there have been many. Polly's voice nudges Casey toward things rather than directing him.
 
 ## Rulings of 2026-10-25, round 11
 
@@ -358,7 +349,7 @@ writing rules.
 - Each fragment broke into a prime number of pieces, set by its Axiom: Dissolution 2, Boundary 3, Transformation 5, Convergence 7.
 
 ### Caelestis, the Driftwardens and their sister institutions (factions/academy-fleet.html, factions/index.html, cosmology/)
-- Caelestis is the Spelljammer academy. It trains cadets and stays a school.
+- Caelestis is the Spelljammer academy. It trains cadets; it is a school.
 - Driftwarden operations are a separate body with its own name, based at Ondrel Anchorage on the moon Ostrel, a neutral port away from Toril. Captain Haymond Rolt works out of Ondrel, and the crew takes its Arc 2 contracts from there.
 - Caelestis and the Driftwarden body are both affiliates of a higher organization. So are the sister institutions in other system clusters, spheres and systems, which do similar work under their own names and governance. The higher organization works like a united nations: its affiliates share information across clusters, spheres and systems, and each mostly runs itself.
 - The Order's Watchers are more organized than these affiliates and also span the spheres, more densely in some places than others.
