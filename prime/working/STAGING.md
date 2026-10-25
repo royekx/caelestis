@@ -312,3 +312,13 @@ writing rules.
 
 ### The crew's pasts (crew/, DM principles)
 - The PCs remember where they came from. Their pasts get filled in retroactively; nobody arrived with amnesia.
+
+## Rulings of 2026-10-25, round 9
+
+### Names across the cosmos (README naming rule; cosmology/, realms/, chart/)
+- Celestial bodies have names or designations. Caelestis gives designations (CON-312); the people who live near a body may have their own name for it, sometimes a local epithet ("the falling star of Gethros"). A body known across a system or a sphere may also carry a wider epithet, the way a moon has a name and is also called the Blood Moon. Most things have only a name or a designation.
+- The same place can be called different things in different parts of the cosmos.
+
+### Erevos and Aurath (cosmology/, glossary/, chart/, realms/)
+- The center of the cosmos is Erevos: the remains of the Reach world, a black hole beneath the Core Monolith and the Radiant Citadel.
+- Those who dwell in the Core Monolith call it Aurath.

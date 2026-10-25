@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 4 | 7 | 20 | 0 | 26 |
+| Cosmology | cosmology/, glossary/, chart/ | 3 | 7 | 21 | 0 | 26 |
 | Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 35 | 3 | 49 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 1 | 1 | 6 | 0 | 0 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 2 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 5 | 0 | 1 |
-| **Total** | | **74** | **82** | **271** | **14** | **420** |
+| **Total** | | **73** | **82** | **272** | **14** | **420** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -160,10 +160,9 @@ Order under each page: decide, fix, drop, add.
   src: memory-canon (campaign-canon, Planes); framework § Cosmic structure
   answered: memory-canon (campaign-canon, planar travel: "astral projection as hull-less seafaring"); inbox/chat-organizing-framework.md § Other planes (Settled: "astral projection doubles as hull-less travel"). That chat's line "The Astral Sea is the Astral Plane" loses to memory's ruling that the cosmos is the Material Plane.
 
-- **[decide]** Name for the center (brainstorm with Korey) *(shape)*
-  Korey dislikes "the center". Offered: the Cradle, the Wound, the Origin, the Nadir. Touches this page, the glossary, chart and every page that says "the center".
-  src: framework § Open; memory-canon (open-decisions, names for the center and SPH-01)
-
+- **[fix]** The center is Erevos
+  Replace "the center" (as a name) with Erevos across this page, the glossary, the chart and every page that names it. The Core Monolith keeps its name; those who dwell in it call it Aurath. Plain phrases like "toward the center" may stay where they are directions, not names.
+  src: Korey, 2026-10-25 (round 9)
 - **[later]** Names for the spheres and designated systems
   SPH-01 included. Listed in the page's § Open.
   src: framework § Open
