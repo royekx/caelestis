@@ -153,7 +153,8 @@ writing rules.
 - The Watchers flag some chapters' work as a danger to a world's Zenith and track it, without knowing who stands behind it.
 
 ### Clint Dashforest and the Bellwether Crow (dossiers/clint.html, factions/vocath-operation.html, campaign/colony/, chart/, timeline)
-- When Vocath's crew ambushed the Bellwether Crow, Clint left the ship to draw them off. He made the boarders believe he had taken what they came for. Whether he really had it is unknown; the point was to pull them away from the Crow.
+- Vocath's crew ambushed the Bellwether Crow for a sister artifact of A.T.L.A.S. that the Crow was carrying. Clint took it and left the ship to draw the boarders off.
+- What became of the artifact is not known. It may have been lost in the crossing, or Clint may still have it on Fonains.
 - He steered for a color pool he could see opening, and went through it on purpose. Color pools open and close quickly, and this one carried him through a small pocket of another dimension and spat him out on Fonains, separated from the boarders who followed him in.
 - The Crow's survivors still argue about whether he meant to go through. He did.
 - In the Fleet, "went overboard" means more than falling from a ship. A crew member who leaves the ship to fight for it and does not come back has gone overboard. It is a softer way of saying killed in action. Tarto and Saerthe both feel they could have done something.

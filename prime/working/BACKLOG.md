@@ -65,7 +65,7 @@ Each settles items on several pages at once. Rule these first.
 15. ~~**OSTEKK-6 as sole survivor.**~~ *Ruled: the only active survivor; OSTEKK-2 is inert and can be healed.*
 16. **The tracker and session ingest.** Keep the repo JSON record and in-chat runbook, or move to an alternative. See the Automation and tracker section.
 17. **Dossier tab names and "Open" subsections.** *Tab names answered: the four tabs stand. Open: whether "Open" subsections may stay in DM notes.*
-18. ~~**How Clint left the Bellwether Crow.**~~ *Ruled: a deliberate dive through a color pool to draw the boarders off.* What the ambush was after is a new decide.
+18. ~~**How Clint left the Bellwether Crow.**~~ *Ruled: a deliberate dive through a color pool with a sister artifact of A.T.L.A.S.* The artifact's identity is a new decide.
 19. ~~**Keep or cut Tarroway.**~~ *Ruled: keep him as a thread, mainly in the archive; cut the timing tables.*
 
 ## Answered from the sources (review)
@@ -1195,11 +1195,14 @@ Order: decide, fix, drop, add.
   "The Glyth Watcher gets out" sits at t -3 (cert working). glyth-watcher.md leaves how she got out open. Options: keep about three years ago; or leave the event undated.
   src: glyth-watcher § Open; timeline.json
 
-- **[decide]** What Vocath's crew was after on the Bellwether Crow
-  Ruled: Clint left the ship through a color pool to draw the boarders off, letting them believe he carried what they came for (STAGING round 4). What were they ambushing the Crow for? It must be something Caelestis had aboard, worth an ambush with N'ghathrod's help, and it ties to the deal (captives for Vocath, an asset inside Caelestis for N'ghathrod). Also: does Caelestis know Vocath's crew was behind it?
-  Touches: dossiers/clint.html, factions/vocath-operation.html, campaign/colony/, timeline.
+- **[decide]** The sister artifact Clint carried
+  Ruled: the ambush was for a sister artifact of A.T.L.A.S.; Clint took it through the color pool (STAGING round 4). Open:
+  - What the artifact is. Earlier canon had A.T.L.A.S. as one of three artifacts that point to each other; this could be one of the other two.
+  - Where it is now: lost in the crossing, or still with Clint on Fonains (a possible adventure there).
+  - Whether Caelestis knows what the boarders were after. Lean: yes, and that is when security tightened and A.T.L.A.S. went into the Brig.
+  - How Vocath's crew knew it was aboard the Crow.
+  Touches: dossiers/clint.html, artifacts/atlas.html, factions/vocath-operation.html, campaign/colony/, timeline.
   src: Korey, 2026-10-25 (round 4)
-
 - **[fix]** Arcs, not acts
   Rename the planned crew events to the spine's arc names (the wiki says "Arc", never "Act"):
   "Act 2: ranked missions" becomes "Arc 2: Driftwardens in the Field".
