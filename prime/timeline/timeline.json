@@ -1,57 +1,4 @@
 {
-  "eras": [
-    {
-      "id": "reach",
-      "label": "The Reach",
-      "note": "The cosmos begins"
-    },
-    {
-      "id": "ancient",
-      "label": "Ancient",
-      "note": "Ages before memory"
-    },
-    {
-      "id": "centuries",
-      "label": "Centuries ago",
-      "note": "Roughly 100 to 1,000 years"
-    },
-    {
-      "id": "living",
-      "label": "Living memory",
-      "note": "Decades; long-lived people remember"
-    },
-    {
-      "id": "recent",
-      "label": "The last few years",
-      "note": "Up to about ten years"
-    },
-    {
-      "id": "now",
-      "label": "Now",
-      "note": "Caelestis present: after V006",
-      "now": true
-    },
-    {
-      "id": "next",
-      "label": "Next",
-      "note": "Act 1 close"
-    },
-    {
-      "id": "year",
-      "label": "Within a year",
-      "note": "By the stated Caelestis–Fonains offset"
-    },
-    {
-      "id": "later",
-      "label": "Later",
-      "note": "Acts 2 and 3"
-    },
-    {
-      "id": "end",
-      "label": "Endgame",
-      "note": "Act 4"
-    }
-  ],
   "lanes": [
     {
       "id": "cosmos",
@@ -88,11 +35,6 @@
   ],
   "problems": [
     {
-      "title": "Caelestis runs a year before Fonains, but already holds Fonains Monolith material",
-      "detail": "Canon puts Caelestis's present about a year before Fonains's current point (Session 28, two months after the Monolith broke). That places the Darkest Day months after Caelestis's present. Yet Boogie has carried a shard of the corrupted Fonains Monolith since V001, Vocath's people came back from Fonains with fragments, and the Ascension page treats the Fonains loss as past.",
-      "options": "Move Caelestis to run after the Monolith broke (the shard, Vocath's fragments and the surplus doctrine all fit), or keep the offset and have the fragments taken while the Monolith still stood, which still needs the Darkest Day to happen before V001."
-    },
-    {
       "title": "When Thessalar's planar craft crashed",
       "detail": "Lola's Boys sessions say the crash raised the Barrier Peaks \"some millennia ago.\" Thessalar was running experiments in the Temple of Moloch about 500 years before Fonains's present, and N'ghathrod's capture on the craft caused the crash.",
       "options": "Make the crash about 500 years ago and treat \"millennia\" as rumour, or split Thessalar's work across two eras."
@@ -106,432 +48,694 @@
   "events": [
     {
       "lane": "cosmos",
-      "era": "reach",
       "status": "past",
       "cert": "canon",
       "title": "The Reach",
-      "desc": "The people of the First World reach for the Axioms. The cosmos is reconfigured: souls become gods, debris becomes worlds, and every world gets a heart."
+      "desc": "The people of the First World reach for the Axioms. The cosmos is reconfigured: souls become gods, debris becomes worlds, and every world gets a heart.",
+      "t": -50000
     },
     {
       "lane": "cosmos",
-      "era": "reach",
       "status": "past",
       "cert": "canon",
       "title": "The Core and the First Heart",
-      "desc": "The first Monolith appears above the First World during its Zenith and stays when the world is destroyed. The remains are the black hole at the center. The Citadel lives inside the Core; the First Heart lies closed beneath."
+      "desc": "The first Monolith appears above the First World during its Zenith and stays when the world is destroyed. The remains are the black hole at the center. The Citadel lives inside the Core; the First Heart lies closed beneath.",
+      "t": -50000
     },
     {
       "lane": "cosmos",
-      "era": "ancient",
       "status": "past",
       "cert": "canon",
       "title": "Monoliths become how Continuity works",
-      "desc": "After the first, a Monolith manifests at every Zenith and relays what it archives to the Core."
+      "desc": "After the first, a Monolith manifests at every Zenith and relays what it archives to the Core.",
+      "t": -45000,
+      "end": 0
     },
     {
       "lane": "cosmos",
-      "era": "now",
       "status": "now",
       "cert": "canon",
       "title": "Zeniths arriving too often",
-      "desc": "Thresholds are crossing at a rate the Order can't explain. Convergence is the most stressed Axiom."
+      "desc": "Thresholds are crossing at a rate the Order can't explain. Convergence is the most stressed Axiom.",
+      "t": -20,
+      "end": 0
     },
     {
       "lane": "cosmos",
-      "era": "end",
       "status": "projected",
       "cert": "canon",
       "title": "Convergence stabilizes",
-      "desc": "The Continuum answers a failing Axiom with a stabilization. When it comes, the seat closes permanently. Vecna gets one attempt before it."
+      "desc": "The Continuum answers a failing Axiom with a stabilization. When it comes, the seat closes permanently. Vecna gets one attempt before it.",
+      "t": 5
     },
     {
       "lane": "vecna",
-      "era": "reach",
       "status": "past",
       "cert": "canon",
       "title": "Reach-born gods",
-      "desc": "The first gods are the souls of the First World, reshaped. Pantheons cluster in spheres where their worship is densest."
+      "desc": "The first gods are the souls of the First World, reshaped. Pantheons cluster in spheres where their worship is densest.",
+      "t": -48000
     },
     {
       "lane": "vecna",
-      "era": "ancient",
       "status": "past",
       "cert": "canon",
       "title": "The Accordance seals the Princes",
-      "desc": "Six gods, Asmodeus, Eldath, Muriel and Ryujin among them, seal the four Princes of Elemental Evil and hide the keys."
+      "desc": "Six gods, Asmodeus, Eldath, Muriel and Ryujin among them, seal the four Princes of Elemental Evil and hide the keys.",
+      "t": -12000
     },
     {
       "lane": "vecna",
-      "era": "centuries",
       "status": "past",
       "cert": "working",
       "title": "Vecna rules Oerth and ascends",
-      "desc": "A mage recruited by a voice, then a lich who rules Oerth and is never stopped. He ascends through a Zenith; the Monolith archives his mortality to the Citadel. Becoming a god gives him the same charge as Oerth's heart, and the world pushes him off."
+      "desc": "A mage recruited by a voice, then a lich who rules Oerth and is never stopped. He ascends through a Zenith; the Monolith archives his mortality to the Citadel. Becoming a god gives him the same charge as Oerth's heart, and the world pushes him off.",
+      "t": -900,
+      "end": -700
     },
     {
       "lane": "vecna",
-      "era": "living",
       "status": "past",
       "cert": "working",
       "title": "Centuries of worship",
-      "desc": "He builds faithful across spheres under many names, wide and thin. Separately, a voice teaches chapters a method: the Seekers."
+      "desc": "He builds faithful across spheres under many names, wide and thin. Separately, a voice teaches chapters a method: the Seekers.",
+      "t": -700,
+      "end": 0
     },
     {
       "lane": "vecna",
-      "era": "living",
       "status": "past",
       "cert": "open",
       "title": "The Ascension World",
-      "desc": "He forces a small local threshold on a world in SPH-01. When, and what it cost him, are open."
+      "desc": "He forces a small local threshold on a world in SPH-01. When, and what it cost him, are open.",
+      "t": -250
     },
     {
       "lane": "vecna",
-      "era": "recent",
       "status": "past",
       "cert": "working",
       "title": "A Seeker chapter reaches Vanifer",
-      "desc": "It trades her the lost meaning of the Alpha and the secret in the Cre'Tez blood."
+      "desc": "It trades her the lost meaning of the Alpha and the secret in the Cre'Tez blood.",
+      "t": -12
     },
     {
       "lane": "vecna",
-      "era": "now",
       "status": "now",
       "cert": "canon",
       "title": "The failsafe, running",
-      "desc": "Encoded messages archived into the Citadel through Monolith relays, waiting for someone to come out the wrong way."
+      "desc": "Encoded messages archived into the Citadel through Monolith relays, waiting for someone to come out the wrong way.",
+      "t": -600,
+      "end": 0
     },
     {
       "lane": "vecna",
-      "era": "year",
       "status": "projected",
       "cert": "open",
       "title": "The pantheons notice",
-      "desc": "Which gods are alarmed, indifferent or glad is set arc by arc as the crew gives them something to react to."
+      "desc": "Which gods are alarmed, indifferent or glad is set arc by arc as the crew gives them something to react to.",
+      "t": 1
     },
     {
       "lane": "vecna",
-      "era": "later",
       "status": "projected",
       "cert": "canon",
       "title": "The lattice fills",
-      "desc": "Fifteen opened, linked hearts, three per sphere across five spheres, each with vessels. He builds past the count as surplus."
+      "desc": "Fifteen opened, linked hearts, three per sphere across five spheres, each with vessels. He builds past the count as surplus.",
+      "t": 2,
+      "end": 4
     },
     {
       "lane": "vecna",
-      "era": "end",
       "status": "projected",
       "cert": "canon",
       "title": "The Cast",
-      "desc": "The lattice's massed Yearning forces the First Heart open. Arriving and opening are one act. If he takes the seat: the Remaking."
+      "desc": "The lattice's massed Yearning forces the First Heart open. Arriving and opening are one act. If he takes the seat: the Remaking.",
+      "t": 5
     },
     {
       "lane": "princes",
-      "era": "ancient",
       "status": "past",
       "cert": "canon",
       "title": "Tharizdun imprisoned",
-      "desc": "Sealed in a prison with no address. If he can't get out, he will bring everything to him."
+      "desc": "Sealed in a prison with no address. If he can't get out, he will bring everything to him.",
+      "t": -30000
     },
     {
       "lane": "princes",
-      "era": "ancient",
       "status": "past",
       "cert": "canon",
       "title": "Olhydra and Ogremoch collide",
-      "desc": "Their clash carves the waterway under what becomes the Temple of Moloch; elemental gems flow into it."
+      "desc": "Their clash carves the waterway under what becomes the Temple of Moloch; elemental gems flow into it.",
+      "t": -15000
     },
     {
       "lane": "princes",
-      "era": "centuries",
       "status": "past",
       "cert": "canon",
       "title": "The fire genasi war over Imix",
-      "desc": "A sect tries to summon Imix. The few who resist call for help; Asmodeus gives them Tinderstrike to seal him. Imix must be forgotten, and over generations the line turns tiefling: the Cre'Tez. Chloe Chespetes is trapped in the lab she flooded with lava."
+      "desc": "A sect tries to summon Imix. The few who resist call for help; Asmodeus gives them Tinderstrike to seal him. Imix must be forgotten, and over generations the line turns tiefling: the Cre'Tez. Chloe Chespetes is trapped in the lab she flooded with lava.",
+      "t": -350
     },
     {
       "lane": "princes",
-      "era": "year",
       "status": "past",
       "cert": "working",
       "title": "The five-person ritual",
       "desc": "Four cultists channel the Princes; the fifth holds pieces of a Tharizdun artifact. It is the Zenith, nudged by Vecna. The Monolith that answers is corrupted as it forms.",
-      "conflict": "See timing problem 1."
+      "t": -0.92
     },
     {
       "lane": "princes",
-      "era": "later",
       "status": "projected",
       "cert": "canon",
       "title": "The Day of Chaos",
-      "desc": "The four Princes enter Fonains together, the barriers break, and Tharizdun gets his chance to leave. Yan-C-Bin is already manifest at Session 28."
+      "desc": "The four Princes enter Fonains together, the barriers break, and Tharizdun gets his chance to leave. Yan-C-Bin is already manifest at Session 28.",
+      "t": 0.6
     },
     {
       "lane": "fonains",
-      "era": "living",
       "status": "past",
       "cert": "canon",
       "title": "Korvalatel's Clutch",
-      "desc": "White dragon siblings raid a crystal dragon's spire. The Green Lady is told to flee to the Misty Vale, where she later becomes its keeper."
+      "desc": "White dragon siblings raid a crystal dragon's spire. The Green Lady is told to flee to the Misty Vale, where she later becomes its keeper.",
+      "t": -150
     },
     {
       "lane": "fonains",
-      "era": "living",
       "status": "past",
       "cert": "canon",
       "title": "More Than Just Desserts",
-      "desc": "Granny (Lolita), Manny and Cookie Farnsworth's old adventuring party. Granny's Vale pilgrimage is about a hundred years ago."
+      "desc": "Granny (Lolita), Manny and Cookie Farnsworth's old adventuring party. Granny's Vale pilgrimage is about a hundred years ago.",
+      "t": -140,
+      "end": -60
     },
     {
       "lane": "fonains",
-      "era": "living",
       "status": "past",
       "cert": "canon",
       "title": "Qalish loses the craft",
-      "desc": "His party dies to the Sphinx; he puts their brains in tubes, opens a gate to the Nine Hells, and a bone devil drives him out."
+      "desc": "His party dies to the Sphinx; he puts their brains in tubes, opens a gate to the Nine Hells, and a bone devil drives him out.",
+      "t": -30
     },
     {
       "lane": "fonains",
-      "era": "recent",
       "status": "past",
       "cert": "canon",
       "title": "The Vessel of Tui and La stolen",
-      "desc": "The Silver Wave Bandits get Hayden drunk on Nev's and take the Vessel. Lola's Boys later steal it back from Garshak's ship through time."
+      "desc": "The Silver Wave Bandits get Hayden drunk on Nev's and take the Vessel. Lola's Boys later steal it back from Garshak's ship through time.",
+      "t": -6.1
     },
     {
       "lane": "fonains",
-      "era": "recent",
       "status": "past",
       "cert": "canon",
       "title": "The Drowned God: the trident taken",
-      "desc": "Straight after the Vessel theft. The trident was sealed in the heart of a living coral reef grown over the ruins of a sunken city (\"an old craft of some sort\"), guarded by the Thessalkraken and revered by kraken priests who serve \"the mind.\" Pulling it killed the reef and sank the island. Gar Shatterkill holds it and hears a voice in the water: \"The others are in motion.\""
+      "desc": "Straight after the Vessel theft. The trident was sealed in the heart of a living coral reef grown over the ruins of a sunken city (\"an old craft of some sort\"), guarded by the Thessalkraken and revered by kraken priests who serve \"the mind.\" Pulling it killed the reef and sank the island. Gar Shatterkill holds it and hears a voice in the water: \"The others are in motion.\"",
+      "t": -6
     },
     {
       "lane": "fonains",
-      "era": "recent",
       "status": "past",
       "cert": "canon",
       "title": "Benedetta dies; the Alpha is invoked",
       "desc": "Vanifer siphons her mother's soul into an illegitimate Bloodstone. Her father invokes the Alpha instead of conceding. Asmodus, dreaming of his mother, starts hunting; Rihiri is stabbed and survives.",
-      "conflict": "See timing problem 3."
+      "conflict": "See timing problem 3.",
+      "t": -10,
+      "end": -1.5
     },
     {
       "lane": "fonains",
-      "era": "year",
       "status": "past",
       "cert": "canon",
       "title": "The Darkest Day",
       "desc": "Vecna's cult works a ritual on George at the eclipse, as bait. The Monolith erupts over the cemetery. The first Accordance champions die fighting it.",
-      "conflict": "See timing problem 1."
+      "t": -0.9
     },
     {
       "lane": "fonains",
-      "era": "year",
       "status": "past",
       "cert": "canon",
       "title": "Lola's Boys, Sessions 1–15",
-      "desc": "Qalish found, time travel to the Temple of Moloch, the Accordance names its champions, the Monolith split into four shards and broken."
+      "desc": "Qalish found, time travel to the Temple of Moloch, the Accordance names its champions, the Monolith split into four shards and broken.",
+      "t": -0.88,
+      "end": -0.6
     },
     {
       "lane": "fonains",
-      "era": "year",
       "status": "past",
       "cert": "canon",
       "title": "Keys change hands",
-      "desc": "Arise takes the air spear from the Misty Vale. George attacks Lola's Place for Ziko's sword. Clint's crew delivers Pedra Ardante to Vanifer. The Sacred Stone takes the war pick."
+      "desc": "Arise takes the air spear from the Misty Vale. George attacks Lola's Place for Ziko's sword. Clint's crew delivers Pedra Ardante to Vanifer. The Sacred Stone takes the war pick.",
+      "t": -0.58,
+      "end": -0.44
     },
     {
       "lane": "fonains",
-      "era": "year",
       "status": "now",
       "cert": "canon",
       "title": "Fonains now: Session 28",
-      "desc": "Two months after the Monolith broke. The air shard opens onto the Air Spire and Yan-C-Bin is summoned. The elder brain under the Barrier Peaks is buried, not confirmed dead."
+      "desc": "Two months after the Monolith broke. The air shard opens onto the Air Spire and Yan-C-Bin is summoned. The elder brain under the Barrier Peaks is buried, not confirmed dead.",
+      "t": -0.43
     },
     {
       "lane": "crew",
-      "era": "recent",
       "status": "past",
       "cert": "canon",
       "title": "A star falls on Casey's world",
-      "desc": "Polly goes to it, is changed, and leaves to find where it came from: Astra Virex."
+      "desc": "Polly goes to it, is changed, and leaves to find where it came from: Astra Virex.",
+      "t": -5
     },
     {
       "lane": "crew",
-      "era": "recent",
       "status": "past",
       "cert": "canon",
       "title": "Sol escapes Aethris",
-      "desc": "He flees the ritual before it completes and is recruited by a Watcher. The Fortuned build the CRC to bring him back."
+      "desc": "He flees the ritual before it completes and is recruited by a Watcher. The Fortuned build the CRC to bring him back.",
+      "t": -1.5
     },
     {
       "lane": "crew",
-      "era": "recent",
       "status": "past",
       "cert": "canon",
       "title": "The Bellwether Crow ambushed",
-      "desc": "About a year before now, near Cairn Station. N'ghathrod takes Joffrey and lets him go; most of the crew doesn't return. Clint Dashforest goes overboard and the psychic wind carries him to Fonains."
+      "desc": "About a year before now, near Cairn Station. N'ghathrod takes Joffrey and lets him go; most of the crew doesn't return. Clint Dashforest goes overboard and the psychic wind carries him to Fonains.",
+      "t": -1.1
     },
     {
       "lane": "crew",
-      "era": "now",
       "status": "past",
       "cert": "canon",
       "title": "V001–V006",
-      "desc": "Cadet intake, the thefts, the neogi, the tyrant ship. The Lantern taken, Ostekk-10 ejected."
+      "desc": "Cadet intake, the thefts, the neogi, the tyrant ship. The Lantern taken, Ostekk-10 ejected.",
+      "t": -0.4,
+      "end": 0
     },
     {
       "lane": "crew",
-      "era": "now",
       "status": "now",
       "cert": "canon",
       "title": "Now: the helm seated",
-      "desc": "The crew holds the tyrant ship and is level 4. Voyage 007, the crossing to H'Catha, is next."
+      "desc": "The crew holds the tyrant ship and is level 4. Voyage 007, the crossing to H'Catha, is next.",
+      "t": 0
     },
     {
       "lane": "crew",
-      "era": "next",
       "status": "planned",
       "cert": "canon",
       "title": "Behold H'Catha",
-      "desc": "Recover the adamantine meteor from a contested seam. Sol's first CRC encounter."
+      "desc": "Recover the adamantine meteor from a contested seam. Sol's first CRC encounter.",
+      "t": 0.08,
+      "end": 0.15
     },
     {
       "lane": "crew",
-      "era": "next",
       "status": "planned",
       "cert": "canon",
       "title": "Attack on Caelestis and graduation",
-      "desc": "The crew becomes Driftwardens. The meteor is reclassified above their clearance. The Brig breach and the A.T.L.A.S. fork resolve."
+      "desc": "The crew becomes Driftwardens. The meteor is reclassified above their clearance. The Brig breach and the A.T.L.A.S. fork resolve.",
+      "t": 0.2
     },
     {
       "lane": "crew",
-      "era": "year",
       "status": "planned",
       "cert": "working",
       "title": "Act 2: ranked missions",
-      "desc": "Contracts from town to world scale. Seeker chapters met one at a time. Scuffles with N'ghathrod's satellite crews."
+      "desc": "Contracts from town to world scale. Seeker chapters met one at a time. Scuffles with N'ghathrod's satellite crews.",
+      "t": 0.3,
+      "end": 1.5
     },
     {
       "lane": "crew",
-      "era": "later",
       "status": "planned",
       "cert": "working",
       "title": "Act 3: N'ghathrod",
-      "desc": "Vth'oramu and the real N'ghathrod. A real victory that moves Vecna onto his failsafe."
+      "desc": "Vth'oramu and the real N'ghathrod. A real victory that moves Vecna onto his failsafe.",
+      "t": 1.5,
+      "end": 3
     },
     {
       "lane": "crew",
-      "era": "end",
       "status": "planned",
       "cert": "working",
       "title": "Act 4: the center",
-      "desc": "The Citadel, where the answers are, or the First Heart, where the ending is."
+      "desc": "The Citadel, where the answers are, or the First Heart, where the ending is.",
+      "t": 3,
+      "end": 5
     },
     {
       "lane": "colony",
-      "era": "centuries",
       "status": "past",
       "cert": "canon",
       "title": "Thessalar's experiments",
       "desc": "About 500 years before Fonains's present. The Rod's seventh piece, the Thessalkraken, clone tubes Thessalar I–VIII.",
-      "conflict": "See timing problem 2."
+      "conflict": "See timing problem 2.",
+      "t": -520,
+      "end": -500
     },
     {
       "lane": "colony",
-      "era": "centuries",
       "status": "past",
       "cert": "canon",
       "title": "N'ghathrod captured; the craft crashes",
       "desc": "His paracausal ceremorphosis makes his tadpoles copies of him and stops his aging. The craft is massive, a megadungeon whose unexplored levels become the Mad Mage dungeon. It breaks up as it comes down: the main body raises the Barrier Peaks, a broken-off section becomes Dowing Glowing, and the Thessalkraken lands separately in the sea, where it later guards the trident's reef. The elder brain is carried to Fonains; when N'ghathrod reaches for it, Vecna answers.",
-      "conflict": "See timing problem 2."
+      "conflict": "See timing problem 2.",
+      "t": -480
     },
     {
       "lane": "colony",
-      "era": "living",
       "status": "past",
       "cert": "canon",
       "title": "Exile from Glyth",
-      "desc": "Glyth casts out the brainless-raised and he leaves with them. A living astral dreadnought becomes Vth'oramu."
+      "desc": "Glyth casts out the brainless-raised and he leaves with them. A living astral dreadnought becomes Vth'oramu.",
+      "t": -60
     },
     {
       "lane": "colony",
-      "era": "now",
       "status": "now",
       "cert": "canon",
       "title": "Saturating worlds",
-      "desc": "Taking key individuals, seeding Zeniths so Monoliths stand where hearts can be opened. Joffrey is on station at Caelestis."
+      "desc": "Taking key individuals, seeding Zeniths so Monoliths stand where hearts can be opened. Joffrey is on station at Caelestis.",
+      "t": -1,
+      "end": 0
     },
     {
       "lane": "colony",
-      "era": "next",
       "status": "projected",
       "cert": "canon",
       "title": "The Brig breach",
-      "desc": "Joffrey moves under cover of the graduation chaos. N'ghathrod wants A.T.L.A.S."
+      "desc": "Joffrey moves under cover of the graduation chaos. N'ghathrod wants A.T.L.A.S.",
+      "t": 0.2
     },
     {
       "lane": "colony",
-      "era": "later",
       "status": "projected",
       "cert": "canon",
       "title": "Hearts opened and linked",
-      "desc": "The Passage gains a circle per linked world. Linked worlds bleed into each other."
+      "desc": "The Passage gains a circle per linked world. Linked worlds bleed into each other.",
+      "t": 1.5,
+      "end": 4
     },
     {
       "lane": "order",
-      "era": "ancient",
       "status": "past",
       "cert": "canon",
       "title": "The Order of the All-Father",
-      "desc": "Guards Ortholiths, believing the taken are inside them. Watchers posted one per region."
+      "desc": "Guards Ortholiths, believing the taken are inside them. Watchers posted one per region.",
+      "t": -30000,
+      "end": 0
     },
     {
       "lane": "order",
-      "era": "centuries",
       "status": "past",
       "cert": "canon",
       "title": "The Restorers walk into Zeniths",
-      "desc": "For four centuries, trying to reach the Core and the All-Mother. Many arrived."
+      "desc": "For four centuries, trying to reach the Core and the All-Mother. Many arrived.",
+      "t": -400,
+      "end": 0
     },
     {
       "lane": "order",
-      "era": "recent",
       "status": "past",
       "cert": "working",
       "title": "The Glyth Watcher gets out",
-      "desc": "Years inside the elder brain's range; she still hears it."
+      "desc": "Years inside the elder brain's range; she still hears it.",
+      "t": -3
     },
     {
       "lane": "order",
-      "era": "now",
       "status": "now",
       "cert": "canon",
       "title": "The Fleet stretched thin",
-      "desc": "More Zeniths, more Watcher requests, an illithid whiff, movements at the sphere's edge. Vocath uses the thinning to stress the Academy."
+      "desc": "More Zeniths, more Watcher requests, an illithid whiff, movements at the sphere's edge. Vocath uses the thinning to stress the Academy.",
+      "t": -1,
+      "end": 0
     },
     {
       "lane": "dragons",
-      "era": "centuries",
       "status": "past",
       "cert": "canon",
       "title": "The dragons leave",
-      "desc": "Dragons on Fonains and most worlds leave to deal with Takhisis. Fonains remembers it as a great hunt. Few remain."
+      "desc": "Dragons on Fonains and most worlds leave to deal with Takhisis. Fonains remembers it as a great hunt. Few remain.",
+      "t": -300
     },
     {
       "lane": "dragons",
-      "era": "living",
       "status": "past",
       "cert": "canon",
       "title": "Korvalatel's eggs",
-      "desc": "Three white dragon eggs leave Winter's Teeth: two with Walter and Grizabella, one damaged with Phantom."
+      "desc": "Three white dragon eggs leave Winter's Teeth: two with Walter and Grizabella, one damaged with Phantom.",
+      "t": -150
     },
     {
       "lane": "dragons",
-      "era": "year",
       "status": "past",
       "cert": "open",
       "title": "Shadow of the Dragon Queen on Krynn",
-      "desc": "The Krynn campaign. Where it sits relative to Caelestis and Fonains is open."
+      "desc": "The Krynn campaign. Where it sits relative to Caelestis and Fonains is open.",
+      "t": null
+    },
+    {
+      "lane": "crew",
+      "t": -1.05,
+      "status": "past",
+      "cert": "canon",
+      "title": "Clint lands on Fonains",
+      "desc": "Carried by the psychic wind after the Bellwether Crow. He arrives before the Monolith and is on Fonains when it appears."
+    },
+    {
+      "lane": "crew",
+      "t": -0.5,
+      "status": "past",
+      "cert": "canon",
+      "title": "Boogie takes the shard",
+      "desc": "Vocath's people chased Clint to Fonains, never found him, and came back with fragments of the broken Monolith through Vocath's Cairn Station line. Boogie looks into a shipment he shouldn't and the shard ends up in him, before V001."
+    },
+    {
+      "lane": "fonains",
+      "t": -0.55,
+      "status": "past",
+      "cert": "canon",
+      "title": "The Blooming Glass",
+      "desc": "After the Monolith is thwarted. Clint's crew rescues the archaeologists and delivers Pedra Ardante to Fernerva (Vanifer) for \"the eldest brother.\""
     }
-  ]
+  ],
+  "clocks": [
+    {
+      "t": 0,
+      "label": "Caelestis now",
+      "kind": "primary"
+    },
+    {
+      "t": -0.43,
+      "label": "Fonains now (S28)",
+      "kind": "secondary"
+    }
+  ],
+  "decisions": [
+    "Caelestis's present sits a few months after the Fonains Monolith broke, shortly after Fonains's Session 28. Clint reaches Fonains about a year before Caelestis's present, before the Monolith appears. Boogie's shard came from the broken Monolith through Vocath's line, before V001. This replaces \"Caelestis runs about a year before Fonains.\""
+  ],
+  "threads": {
+    "entities": [
+      "Vecna",
+      "Tharizdun and the Princes",
+      "N'ghathrod",
+      "Lola's Boys",
+      "Ziko's sword",
+      "The trident",
+      "The Fonains shard",
+      "The crew",
+      "Clint",
+      "Joffrey",
+      "Vocath",
+      "George",
+      "Vanifer"
+    ],
+    "default": [
+      "Vecna",
+      "Tharizdun and the Princes",
+      "N'ghathrod",
+      "Lola's Boys",
+      "Ziko's sword",
+      "The trident",
+      "The Fonains shard",
+      "The crew"
+    ],
+    "scenes": [
+      {
+        "t": -480,
+        "status": "past",
+        "title": "N'ghathrod reaches for his lost elder brain; Vecna answers",
+        "who": [
+          "N'ghathrod",
+          "Vecna"
+        ]
+      },
+      {
+        "t": -6,
+        "status": "past",
+        "title": "The Drowned God: the Silver Wave Bandits take the trident",
+        "who": [
+          "The trident"
+        ]
+      },
+      {
+        "t": -1.1,
+        "status": "past",
+        "title": "The Bellwether Crow ambushed; Joffrey taken; Clint overboard",
+        "who": [
+          "N'ghathrod",
+          "Joffrey",
+          "Clint",
+          "Vocath"
+        ]
+      },
+      {
+        "t": -1.05,
+        "status": "past",
+        "title": "Clint lands on Fonains",
+        "who": [
+          "Clint"
+        ]
+      },
+      {
+        "t": -0.9,
+        "status": "past",
+        "title": "The Darkest Day: Vecna's bait ritual on George; the corrupted Monolith rises",
+        "who": [
+          "Vecna",
+          "Tharizdun and the Princes",
+          "George"
+        ]
+      },
+      {
+        "t": -0.6,
+        "status": "past",
+        "title": "Lola's Boys break the Monolith; Ziko's blade turns black; the shards scatter",
+        "who": [
+          "Lola's Boys",
+          "Tharizdun and the Princes",
+          "Ziko's sword",
+          "The Fonains shard"
+        ]
+      },
+      {
+        "t": -0.56,
+        "status": "past",
+        "title": "Vocath's people leave Fonains with fragments",
+        "who": [
+          "Vocath",
+          "The Fonains shard"
+        ]
+      },
+      {
+        "t": -0.55,
+        "status": "past",
+        "title": "The Blooming Glass: Clint's crew hands Pedra Ardante to Vanifer",
+        "who": [
+          "Clint",
+          "Vanifer"
+        ]
+      },
+      {
+        "t": -0.52,
+        "status": "past",
+        "title": "Ziko leaves his sword under the bed at Lola's Place",
+        "who": [
+          "Lola's Boys",
+          "Ziko's sword"
+        ]
+      },
+      {
+        "t": -0.5,
+        "status": "past",
+        "title": "Boogie takes the shard from a shipment",
+        "who": [
+          "The Fonains shard",
+          "The crew",
+          "Vocath"
+        ]
+      },
+      {
+        "t": -0.48,
+        "status": "past",
+        "title": "George attacks Lola's Place for the sword",
+        "who": [
+          "George",
+          "Ziko's sword",
+          "Lola's Boys"
+        ]
+      },
+      {
+        "t": -0.45,
+        "status": "past",
+        "title": "Bastion falls; \"the fire witch will avenge\"",
+        "who": [
+          "Lola's Boys",
+          "Vanifer"
+        ]
+      },
+      {
+        "t": -0.43,
+        "status": "now",
+        "title": "Fonains now: Yan-C-Bin summoned",
+        "who": [
+          "Lola's Boys",
+          "Tharizdun and the Princes"
+        ]
+      },
+      {
+        "t": -0.2,
+        "status": "past",
+        "title": "V001–V006: thefts, the neogi, the tyrant ship",
+        "who": [
+          "The crew",
+          "Vocath",
+          "Joffrey",
+          "The Fonains shard"
+        ]
+      },
+      {
+        "t": 0.2,
+        "status": "planned",
+        "title": "Graduation and the Brig breach",
+        "who": [
+          "The crew",
+          "Joffrey",
+          "N'ghathrod"
+        ]
+      },
+      {
+        "t": 0.6,
+        "status": "projected",
+        "title": "The Day of Chaos",
+        "who": [
+          "Tharizdun and the Princes",
+          "The trident",
+          "Lola's Boys",
+          "Vanifer",
+          "Vecna"
+        ]
+      },
+      {
+        "t": 2,
+        "status": "planned",
+        "title": "Act 3: Vth'oramu",
+        "who": [
+          "The crew",
+          "N'ghathrod",
+          "The Fonains shard"
+        ]
+      },
+      {
+        "t": 5,
+        "status": "projected",
+        "title": "The Cast",
+        "who": [
+          "Vecna",
+          "N'ghathrod",
+          "The crew"
+        ]
+      }
+    ]
+  }
 }
