@@ -35,16 +35,16 @@ staging once Korey has read and accepted them.
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
 | Factions | factions/ | 1 | 4 | 22 | 2 | 40 |
-| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 12 | 1 | 46 | 5 | 42 |
+| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 14 | 1 | 46 | 5 | 42 |
 | Dossiers | dossiers/ | 9 | 6 | 43 | 0 | 51 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
-| Artifacts and vessels | artifacts/, vessels/ | 6 | 2 | 27 | 0 | 43 |
+| Artifacts and vessels | artifacts/, vessels/ | 6 | 2 | 26 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 21 |
 | New pages | 14 proposed pages, the hub, notes/ | 3 | 17 | 8 | 2 | 35 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 2 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 5 | 0 | 1 |
-| **Total** | | **71** | **83** | **272** | **14** | **420** |
+| **Total** | | **73** | **83** | **271** | **14** | **420** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -52,7 +52,7 @@ The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
 Each settles items on several pages at once. Rule these first.
 
-1. ~~**Residue piece counts by Axiom.**~~ *Answered: Dissolution 2, Transformation 3, Boundary 5, Convergence 7.*
+1. ~~**Residue piece counts by Axiom.**~~ *Ruled: Dissolution 2, Boundary 3, Transformation 5, Convergence 7 (STAGING round 11).*
 2. ~~**Aperture or Atrium.**~~ *Answered: Atrium.*
 3. ~~**Does opening a heart need a Monolith?**~~ *Ruled: no; linking does (STAGING round 2).*
 4. ~~**A name for Vecna's fifteen-heart circle.**~~ *Ruled: the Circle of Fifteenths, Vecna's private name for it.*
@@ -145,10 +145,10 @@ Order under each page: decide, fix, drop, add.
 ### cosmology/index.html
 
 - **[fix]** Residue counts by Axiom *(answered)*
-  The split is Dissolution 2, Transformation 3, Boundary 5, Convergence 7. The pages use Boundary 2, Dissolution 3, Transformation 5. Correct each:
-  - This page's residue table, and the line "A Boundary piece points toward its one sibling. A Convergence piece feels six." Change to: "A Boundary piece points toward its four siblings. A Convergence piece feels six."
-  - Glossary "Residue" ("split 2 / 3 / 5 / 7 by Axiom bias"): name the order, "Dissolution 2, Transformation 3, Boundary 5, Convergence 7".
-  - `artifacts/atlas.html` and the artifacts register: wherever A.T.L.A.S. points at "its one sibling" or "the only other Boundary piece in existence", it points toward four siblings.
+  The split is Dissolution 2, Boundary 3, Transformation 5, Convergence 7 (STAGING round 11). The pages use Boundary 2, Dissolution 3, Transformation 5. Correct each:
+  - This page's residue table, and the line "A Boundary piece points toward its one sibling. A Convergence piece feels six." Change to: "A Boundary piece points toward its two siblings. A Convergence piece feels six."
+  - Glossary "Residue" ("split 2 / 3 / 5 / 7 by Axiom bias"): name the order, "Dissolution 2, Boundary 3, Transformation 5, Convergence 7".
+  - `artifacts/atlas.html` and the artifacts register: wherever A.T.L.A.S. points at "its one sibling" or "the only other Boundary piece in existence", it points toward its two siblings.
   - `artifacts/runekeepers-fragment.html` ("all three pieces"): "both pieces".
   - The twins' Zenith text on `realms/wayfinders-homeworld.html`: the fragment's two pieces forming in both twins makes three poles for the first time.
   In-world line for the table intro: "The Dissolution fragment lies in two pieces, the Transformation fragment in three, the Boundary fragment in five, and the Convergence fragment, the Rod of Seven Parts, in seven."
@@ -306,8 +306,8 @@ Order under each page: decide, fix, drop, add.
   Ruled: its temple was aboard the planar craft, and its true vestige may still be there; Giorge may be heading for it (STAGING round 6). Check the Session 14–15 notes for what Lola's Boys did to it in the Monolith, and whether part of it rides in Ziko's black blade.
   src: Korey, 2026-10-25 (rounds 5–6)
 
-- **[decide]** Where and how N'ghathrod is working now *(shape)* (brainstorm with Korey)
-  Ruled: he is working now on all four parts of his plan (STAGING round 10). Set where his crews are and how they are going about it. Vth'oramu's position and the two figures above follow from it.
+- **[decide]** N'ghathrod's target worlds near Vth'oramu *(shape)*
+  Ruled: Vth'oramu is a mothership hunkered on the periphery between systems, sending skiffs to nearby worlds; his landed operations ripple at contract scale after graduation (STAGING rounds 10–11). Left: broadly which worlds in that vicinity he is plotting on (Monolith worlds, worlds with taken in place). Specifics wait until the crew nears each one.
   src: Korey, 2026-10-25 (round 10)
 
 - **[later]** The colony's arms
@@ -1188,8 +1188,8 @@ Order: decide, fix, drop, add.
   "The Glyth Watcher gets out" sits at t -3 (cert working). glyth-watcher.md leaves how she got out open. Options: keep about three years ago; or leave the event undated.
   src: glyth-watcher § Open; timeline.json
 
-- **[later]** The other three Boundary pieces
-  Ruled: the Boundary fragment is five pieces, each a finder; A.T.L.A.S. and its sister are two (STAGING round 10). What the other three find, and where they are, waits until play needs them.
+- **[later]** The third Boundary piece
+  Ruled: the Boundary fragment is three pieces, each a finder; A.T.L.A.S. and its sister are two (STAGING rounds 10–11). What the third finds, and where it is, waits until play needs it.
   src: Korey, 2026-10-25 (round 10)
 
 - **[fix]** Arcs, not acts
@@ -1597,8 +1597,14 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   DM note: an homage to Captain Raymond Holt. He gets a new dossier, `dossiers/haymond-rolt.html`, and a row on dossiers/index.html.
   src: Korey, 2026-10-25 (round 8)
 
-- **[decide]** What the edge sovereign and the broken-away officer are doing *(shape)* (brainstorm with Korey)
-  Ruled: their shapes (STAGING round 10). Next: what each is doing now, likely tied to what N'ghathrod is doing.
+- **[decide]** Names for the edge sovereign and the rogue Watcher *(shape)*
+  Ruled: the sovereign noticed the traffic and the brush at her borders and keeps watch; the Watcher warned, was ignored, and softly defected to find it himself (STAGING rounds 10–11). Left: their names (pitched in chat).
+
+- **[decide]** Caelestis's Arc 2 operations hub *(shape)*
+  Ruled: Driftwarden operations run out of a neutral zone away from Toril, where Rolt is based (STAGING round 11). Left: its name, and roughly where it sits.
+
+- **[decide]** Names of the sister institutions *(prep)*
+  Ruled: Caelestis has sister institutions across clusters, spheres and systems, under other names and governance (STAGING round 11). Name the one or two the crew is likely to hear of first; the rest wait.
   src: Korey, 2026-10-25 (round 10)
 - **[add]** The Princes' pressure reaches the crew as phenomena
   Ruled (STAGING round 8). Add to Cosmological Pressures (DM voice): "The crew meets the Princes of Elemental Evil's pressure as strange elemental-plane phenomena on the worlds they visit, never as the Princes themselves."
@@ -1749,7 +1755,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   src: chat-cosmic-campaign-structure § Contract board; memory-canon open-decisions (Act 2 plan, Mission board lines)
 
 - **[add]** How Arc 2 meets the opposition
-  Add to Arc 2 Shape: Seeker chapters are met one at a time, each on its own world. The crew scuffles with N'ghathrod's satellite crews, not with him. Zeniths visibly become more frequent across the crew's contracts.
+  Add to Arc 2 Shape: Seeker chapters are met one at a time, each on its own world. The crew scuffles with the crews of N'ghathrod's skiffs, sent out from Vth'oramu, not with him (STAGING round 11). Zeniths visibly become more frequent across the crew's contracts.
   src: timeline "Act 2: ranked missions"; memory-canon open-decisions (antagonist structure line)
 
 - **[add]** Linked worlds bleed
@@ -3256,11 +3262,10 @@ Pages under `prime/artifacts/` and `prime/vessels/`. Items under each page run
 decide, fix, drop, add.
 
 **Residue counts.** Memory canon (Cosmology, locked) sets the pieces per
-fragment by Axiom, prime numbers: Dissolution 2, Transformation 3, Boundary 5,
-Convergence 7 (17 in all). Every artifact page uses Boundary 2, Dissolution 3,
-Transformation 5, Convergence 7, from the cosmic sweep. Memory ranks higher, so
-the count items below are `fix`, not `decide`. If Korey prefers the pages'
-numbers, every item tagged *(counts)* flips.
+fragment by Axiom, prime numbers. Ruled (STAGING round 11): Dissolution 2, Boundary 3,
+Transformation 5, Convergence 7 (17 in all). Every artifact page uses Boundary 2,
+Dissolution 3, Transformation 5, Convergence 7, so the Boundary and Dissolution
+counts change and Transformation stays.
 
 ### artifacts/index.html
 
@@ -3270,8 +3275,8 @@ numbers, every item tagged *(counts)* flips.
   answered: inbox/chat-cosmic-campaign-structure.md § Superseded ("Artifacts of Convergence as Eye, Key, Voice → four Reach fragments as residue"), § Artifacts of Convergence (Settled)
 
 - **[fix]** Residue counts per fragment *(counts)*
-  Restate the set as Dissolution 2, Transformation 3, Boundary 5, Convergence 7. The line "A Boundary piece points toward its one sibling" becomes "toward its four siblings"; "so A.T.L.A.S. points at the only other Boundary piece in existence" becomes "so A.T.L.A.S. points toward the four other Boundary pieces". "A Convergence piece feels six" stays.
-  src: memory-canon § Cosmology ("Every Reach residue fragment…"; "a Boundary piece points toward its four siblings")
+  Restate the set as Dissolution 2, Boundary 3, Transformation 5, Convergence 7. The line "A Boundary piece points toward its one sibling" becomes "toward its two siblings"; "so A.T.L.A.S. points at the only other Boundary piece in existence" becomes "so A.T.L.A.S. points toward the two other Boundary pieces, one of them its sister". "A Convergence piece feels six" stays.
+  src: Korey, 2026-10-25 (round 11)
 
 - **[fix]** The set intro contradicts its table
   Page says "Four fragments. Seventeen pieces. Two of them are located"; the table counts more located pieces than two. Restate the intro from the table once the counts are applied. Under the canon counts the located pieces are 1 Boundary (A.T.L.A.S.), 2 Dissolution (forming in Wan and Tu) and 3 Convergence (Rod pieces), six in all (inference: assumes the twins' pieces count as located).
@@ -3313,9 +3318,9 @@ numbers, every item tagged *(counts)* flips.
   Eyebrow reads "Artifact · The World Surveyor". Change to "Artifact · Boundary piece".
   src: memory-canon § Cosmology; framework § A.T.L.A.S.
 
-- **[fix]** A.T.L.A.S. points toward four siblings *(counts)*
-  As a Boundary piece among five, A.T.L.A.S. points toward its four siblings. Antagonists want it partly for that reason. State this in the body (the index row carries the same fix).
-  src: memory-canon § Cosmology ("a Boundary piece points toward its four siblings")
+- **[fix]** A.T.L.A.S. points toward two siblings *(counts)*
+  As one of three Boundary pieces, A.T.L.A.S. points toward its two siblings: its sister, on Fonains, and the third. Antagonists want it partly for that reason. State this in the body (the index row carries the same fix).
+  src: Korey, 2026-10-25 (rounds 10–11)
 
 - **[add]** Status & provenance: the target of the thefts
   A.T.L.A.S. is what the Academy thefts are really after, and the thefts come forward when the crew returns to Caelestis. In the antagonists' hands it gives them reach, so the crew keeping it out of their hands denies them capacity. (Write without the retired word "network".)
@@ -3485,10 +3490,6 @@ numbers, every item tagged *(counts)* flips.
   src: chat-cosmic § N'ghathrod and the colony; dossiers/nghathrod.html
 
 ### artifacts/transformation-fragment.html
-
-- **[fix]** Three pieces, not five *(counts)*
-  Eyebrow says "Five pieces, none located"; sub says "Five pieces. Nowhere anyone has written down."; body says "Five pieces, and the only fragment the record is entirely silent on". Change each "Five" to "Three".
-  src: memory-canon § Cosmology
 
 ### vessels/index.html
 

@@ -326,10 +326,10 @@ writing rules.
 ## Rulings of 2026-10-25, round 10
 
 ### The Boundary fragment and A.T.L.A.S.'s sister (artifacts/atlas.html, artifacts/index.html, dossiers/clint.html)
-- The Boundary fragment is in five pieces. Every Boundary piece, in whatever housing, finds, reveals or draws toward something.
+- The Boundary fragment is in three pieces. Every Boundary piece, in whatever housing, finds, reveals or draws toward something.
 - A.T.L.A.S. houses one Boundary piece. It reveals the aspects of a world, and a world's heart is one of them.
 - A.T.L.A.S.'s sister houses another. Caelestis held it as a device, and like every housing it hides what it really does. On the surface it finds magic items, a lesser kind of item-finder, because every enchanted thing carries a trace of residue. Its true use is finding Reach artifacts. This is what Vocath's crew ambushed the Bellwether Crow to take. Clint carried it through the color pool; it is somewhere on Fonains.
-- The other three Boundary pieces are unknown. They find something too.
+- The third Boundary piece is unknown. It finds something too.
 
 ### Residue holdings (artifacts/index.html, campaign/ascension/, factions/vthorama.html)
 - Vecna's side holds one residue piece: the colony carries it from world to world to open hearts. If the crew ever takes it, N'ghathrod must win it back or find another before he can open another heart.
@@ -338,12 +338,32 @@ writing rules.
 - Pieces stay scarce. The crew may never gather a full fragment, and every piece is a race.
 
 ### N'ghathrod now (campaign/colony/, dossiers/nghathrod.html)
-- N'ghathrod is working now on all four parts of his plan: planting the taken in key positions, finding hearts, opening them, and seeking links. Where and how is not yet set.
+- N'ghathrod is working now on all four parts of his plan: planting the taken in key positions, finding hearts, opening them, and seeking links.
+- Vth'oramu is hunkered down on the periphery, in the dark between systems. It works as a mothership: skiffs go out from it to the worlds in that vicinity, and it stays where no one looks.
+- He has a broad set of target worlds in that vicinity. The specifics of each world are written as the crew nears it.
+- By the time the crew graduates, his landed operations have begun to ripple outward at contract scale: taken in small positions, odd disappearances, a station or crew acting strangely. These are the first things the crew meets as Driftwardens. (DM: this is the shape of Arc 1 after graduation and the run into Arc 2.)
 
 ### The Fleet's strain (campaign/spine.html; NEW: Cosmos texture)
-- At the edge of a system, or between systems, a sovereign rules a hidden polity, in the vein of Mara Sov. She is the one who will one day face Vth'oramu.
-- A brilliant officer of the Order or the Fleet broke away decades ago to study Monoliths, in the vein of Osiris. The crew hears of them through contradictory accounts long before any meeting.
+- At the edge of a system, or between systems, a sovereign rules a hidden polity, in the vein of Mara Sov. She has noticed more traffic than usual near her borders, and once something large brushed the edge of her sight and was gone. She keeps watch for it. She is the one who will one day face Vth'oramu.
+- A Watcher of the Order saw the same pattern, warned the Order, and was not heeded. He softly defected: he never broke with the Order openly, but he left his post to find the thing himself, in the vein of Osiris. The crew hears of him through contradictory accounts long before any meeting.
+- The fringe sage of Ascher Mir is the one who tracks the Seekers' pattern across chapters, a separate figure from the rogue Watcher.
 - Together with the rise in Monoliths and the Watchers' calls for help, these strain the Fleet.
 
 ### Visions (DM principles)
 - Use visions sparingly; there have been many. Polly's voice nudges Casey toward things rather than directing him. Casey's missed level 3 scene is dropped; his beat comes with H'Catha prep.
+
+## Rulings of 2026-10-25, round 11
+
+### Residue piece counts (cosmology/, glossary/, artifacts/)
+- Each fragment broke into a prime number of pieces, set by its Axiom: Dissolution 2, Boundary 3, Transformation 5, Convergence 7.
+
+### Caelestis and its sister institutions (factions/academy-fleet.html, factions/index.html, cosmology/)
+- Caelestis is not the only one of its kind. Sister institutions do the same work in other system clusters, spheres and systems, under different names and different governance. Their function is similar: train crews, watch the edge, answer what comes in from the dark.
+- The sister institutions share information across clusters, spheres and systems. None of them commands the others.
+- The Order's Watchers are more organized than the sister institutions and also span the spheres, more densely in some places than others.
+- Caelestis stays a school. Its Driftwarden operations run out of another location: a neutral zone away from Toril. Captain Haymond Rolt is based there, and the crew works from it in Arc 2.
+
+### Edge stations (factions/academy-fleet.html, realms/, cosmology/)
+- Each institution keeps the satellites and stations at the edge of its own system cluster. Strake Station and its sister satellites are Caelestis's.
+- The stations differ with the local ecology of their edge: what drifts there, what lives there, what threatens it. Their crews are drawn from the institution that keeps them.
+- Readings from the edge stations pass between the institutions. This is how a disturbance seen at one edge reaches another.
