@@ -1,8 +1,10 @@
 # Staging
 
-What IS, ruled and waiting to be written into pages. One statement per line,
-grouped by target page. Rewrite a line when a ruling changes; delete it once
-the page carries it. See [README.md](README.md) for the flow.
+What IS, ruled and waiting to be written into pages, grouped by target page.
+Entries run as long as they need to. World facts are written in-world; rules
+and play notes in DM voice. Rewrite an entry when a ruling changes; delete it
+once the page carries it. See [README.md](README.md) for the flow and the
+writing rules.
 
 ## Rulings of 2026-10-25 not yet on their pages
 

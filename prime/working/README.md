@@ -17,11 +17,11 @@ inbox/  →  drafts  →  BACKLOG.md  →  STAGING.md  →  pages under prime/
 3. **BACKLOG.md** lists everything still to rule on or fix, grouped by the page
    it lands on: facts missing from a page, page lines that are wrong or stale,
    open calls, and retired material to drop.
-4. **STAGING.md** holds what IS, once ruled: one plain statement per line,
-   grouped by target page. It is not a log. When a ruling changes, the line is
-   rewritten.
-5. **Distribution** writes staged lines into their pages, then deletes them from
-   STAGING.md and the matching backlog lines.
+4. **STAGING.md** holds what IS, once ruled, grouped by target page. It is not
+   a log. An entry is as long as it needs to be: a line, a paragraph, or a full
+   section. When a ruling changes, the entry is rewritten.
+5. **Distribution** writes staged entries into their pages, then deletes them
+   from STAGING.md and the matching backlog items.
 
 A chat session works the backlog: Korey rules, the result goes to staging, and
 staging is distributed page by page.
@@ -31,6 +31,24 @@ staging is distributed page by page.
 - Markdown, one file per subject. No page shell, no styling.
 - Deliberation lives in drafts and the backlog. Staging and pages state what is.
 - The player record (`data/`) never takes anything from here.
+
+## Writing staged entries and pages
+
+- **Specific over sparse.** Write the detail out. A generic line breeds
+  misreadings later; a long, exact entry does not.
+- **Plain, simple, precise, readable.** Short sentences, concrete nouns, no
+  hedging.
+- **In-world voice for anything that exists in the world.** People, places,
+  items, factions, history and events read like a fan wiki: "Thessalar's craft
+  fell about 500 years ago," never "Korey decided the craft fell…".
+- **DM voice for how it is played.** Mechanics, rules, encounter tables,
+  session plans and pacing notes speak to the DM.
+- **Open questions stay on the planning layer.** The backlog, drafts and
+  planning pages hold what is undecided. A dossier, item or location entry
+  never carries "pending", "TBD" or "decision needed". If a detail is unknown,
+  the entry says what is known and stops.
+- Not everything will be decided, and some things will change. That is fine;
+  rewrite the entry when it does.
 
 ## Drafts
 
