@@ -2,18 +2,18 @@
 
 Four older chats. Later canon often supersedes them. Repo checks are targeted greps of `prime/` (and `restricted/` for the FIA archive). Status tags compare each chat decision to the repo as it stands now.
 
-**Coverage warning.** The read_conversation hourly call budget ran out partway through.
-- "Campaign Planning": read turns 0–36 of 417 (about 9%). Turns 37–416 are **unread**.
-- "New campaign idea development": read in full (turns 0–101; 70–101 merged in a follow-up sweep, 2026-10-25).
+**Coverage.** The read_conversation hourly call budget has cut two sweeps short.
+- "Campaign Planning": read turns 0–140 of 417 (about a third). Turns 0–36 came from the first sweep; 37–140 were merged on 2026-10-25. Turns 141–416 are **unread**. Resume at page token **`t141`**.
+- "New campaign idea development": read in full (turns 0–101; 70–101 merged on 2026-10-25).
 - "Campaign organization system feedback": read in full (4 turns).
 - "D&D module where evil won": read in full (10 turns).
 
-A follow-up sweep needs to resume at page token `t37` (Campaign Planning) and `t70` (New campaign idea development).
+Turns 41–140 of "Campaign Planning" are mostly the first DM wiki build (CSS, nav and page plumbing), with lore decisions at turns 37–43, 80, 91–102, 108 and 124.
 
 ---
 
 # Campaign Planning
-Source: https://claude.ai/chat/0852f52d-cb7d-4fd8-a1f0-3cafec340ce5 · updated 2026-08-12 · **turns 0–36 of 417 read**
+Source: https://claude.ai/chat/0852f52d-cb7d-4fd8-a1f0-3cafec340ce5 · updated 2026-08-12 · **turns 0–140 of 417 read** (37–140 merged 2026-10-25; resume at `t141`)
 
 ## Settled
 
@@ -22,7 +22,12 @@ Source: https://claude.ai/chat/0852f52d-cb7d-4fd8-a1f0-3cafec340ce5 · updated 2
 - Arc II stays in Toril's Wildspace (Realmspace) plus at most one other system. — **not in repo** (no second-system decision found)
 - Vecna did ascend in canon (Oerth, via Iuz; failed Sigil attempt). Korey can place his own ascension site without contradicting canon. — **in repo** (working/vecna.md covers Oerth and the ascension)
 - There should be a reachable world where Vecna ascended. It nods to Critical Role campaign one without copying it. — **in repo**, reshaped. The repo splits it in two: Oerth, where his ascension Monolith still stands ("the darkest timeline in miniature"), and the Ascension World (SYS-05), "a small, local threshold through agents."
-- Monoliths are "Vecna's spell ink in a cosmic inscription." Activating a node means creating a Zenith. Vecna either claims existing monoliths or inscribes new ones by forcing Zeniths. — **conflicts** (repo: "Zeniths happen on their own schedule; Monoliths follow when the strain is great enough; the Atrium has to be..."; working/vecna.md frames the plan as opening and linking hearts toward "the Convergence seat"). The word "inscription" survives in repo: "The inscription completes or fails. Vecna's spell gets its one cast."
+- Monoliths and Zeniths are ordinary Continuum behaviour and continue with or without Vecna. A monolith is an emergency archival response to a world reaching a pivotal moment, for better or worse (turn 91). — **in repo** (cosmology; "Zeniths happen on their own schedule")
+- Vecna is one being inside the Continuum. His lens stays off the cosmology pages (turn 93). — **in repo** (cosmology page describes the system without him)
+- Vecna creates neither monoliths nor Zeniths. He chooses positions so that standing and future monoliths, seen across Wildspace in three dimensions, form an arcane figure: a spell circle or sphere (turn 95). — **in repo** (spine: "the figure being drawn")
+- Where the figure needs a Zenith and none is coming, he engineers one: a late nudge, or long-arc seeding (a cult, an artifact, an idea), or planting from scratch. Not every seed takes, so the figure has to be revisable (turn 97). — **in repo** in part ("nudge" appears in campaign pages). The revisable-figure rule is **not in repo**.
+- Vecna's ascension was itself a Zenith, and a monolith answered it. Godhood let him look back, see machinery even gods don't understand, and aim past godhood (turn 91). — **in repo**, reshaped (session-rulings: godhood achieved on Oerth, his Monolith a holy site; the Ascension still to come is his climb to Axiom)
+- Gods sense the Radiant Citadel is different but mostly don't know the Core (turn 91). — **in repo** ("The Core is not public knowledge. Most gods do not understand it.")
 - The failure state, if the players fail, is Eve of Ruin, or an alternate reality shaped like it. — **not in repo** (neither "Eve of Ruin" nor "Ritual of Remaking" appears)
 - Act 4 material to draw on: Eve of Ruin ("Vecna about to win") and Doomed Forgotten Realms ("Vecna won"). Both would be heavily reskinned to the cosmology. — **not in repo**
 - Doomed Forgotten Realms' shroudstones can be reskinned as the key monoliths the spell is bound to. Korey sees them as literal world-sized gems that Vecna would protect. — **not in repo**
@@ -30,7 +35,7 @@ Source: https://claude.ai/chat/0852f52d-cb7d-4fd8-a1f0-3cafec340ce5 · updated 2
 
 ### Institutions
 - The Watchers are a known, working organization. They are structured, morally forward (more so than the Fleet), and not mysterious or ominous. The Fleet knows them, works with them, and often transports them. — **in repo** in part (factions treat Watchers as an order the Fleet partners with). No line states the "not mysterious" tone correction.
-- The Watchers act as "space police": order-keepers who decide when to intervene. Their authority is one they believe the All-Father bestowed. — **not in repo** (neither "space police" nor "All-Father" found)
+- The Watchers act as "space police": order-keepers who decide when to intervene. Their authority is one they believe the All-Father bestowed. — **in repo** in part (All-Father appears, e.g. dossiers/ezra.html; "space police" does not)
 - The Fleet is self-made and non-governmental. It can be hired for contracts. Its authority is self-bestowed, not granted by any council of worlds. — **in repo** ("Authority is self-bestowed by reputation rather than granted by any council of worlds")
 - The Fleet operates covertly because most worlds do not know Wildspace exists. — **in repo** ("Operations are for-hire and frequently covert. Most worlds do not know that Wildspace exists")
 - The Bridge is high command and issues assignments. — **in repo** (Above Bridge clearance is in use)
@@ -47,9 +52,9 @@ Source: https://claude.ai/chat/0852f52d-cb7d-4fd8-a1f0-3cafec340ce5 · updated 2
 
 ### Campaign identity
 - Architecture is Mighty Nein (a living world where story waits wherever the players go). Vibe is Destiny, Star Wars and Guardians of the Galaxy (space opera, space pirates). — **not in repo** (no "Mighty Nein", "Critical Role" or "Destiny" reference)
-- True north: "Everyone, on some level, is trying to answer the question of who gets to be real, and Vecna wants to be the answer." — **not in repo** under `prime/` (it lives in the project doc `caelestis-campaign-charter.md`)
+- Campaign question (turn 80): **"Who decides what's real?"** It replaced "who gets to be real." Vecna wants to be the answer. — **in repo** (spine.html, hub.html)
 - Found family is an explicit emotional pillar and the mechanism of the theme. — **not in repo**
-- Proposed one-word PC verdicts: Gregory "inventory", Sol "error", Boogie "container", Tumak "constructed self", Casey "instrument", Bartholomew "the thing he won't look at". Claude asked Korey to confirm Casey and Bartholomew. Whether he did falls in the unread portion. — **not in repo**
+- Proposed one-word PC verdicts: Gregory "inventory", Sol "error", Boogie "container", Tumak "constructed self", Casey "instrument", Bartholomew "the thing he won't look at". Korey never confirmed Casey and Bartholomew through turn 140. — **not in repo**
 - Korey wants a Variks-style, characterful non-human NPC; Variks from Destiny is a favourite. — **not in repo** (handler is unnamed; no Variks-type found)
 
 ### Method
@@ -66,6 +71,46 @@ Source: https://claude.ai/chat/0852f52d-cb7d-4fd8-a1f0-3cafec340ce5 · updated 2
 - Cairn Station is the territory of an astral dreadnought. — **in repo**, reshaped: "Vth'oramu sat on the Cairn bearing for days... it was not a vessel. Cairn reported it and stopped reporting anything. The dreadnought moved on afterward." A separate colony lives in a hollowed astral dreadnought.
 - Cairn is somewhere the party can go once they unlock the FIA and work out where it is. — **in repo** in part ("The standing order closes everything past Strake")
 
+### The heist (turns 37–43)
+- The FIA is separate from the heist. It is the crew's own investigation, and the network does not know it exists (turn 38). — **not in repo** as a stated rule (inference; no line found)
+- The network's head start is literacy, not possession: it can read what it took and the crew can't yet. — **in repo** ("literacy" in plot-hooks, spine, colony)
+- Two thieves worked the same chaos (turn 42). Vocath is a mercane with a personal and commercial grudge, not a cultist. He wants Mirt disgraced loose from the school's protection so someone else can finish him; his thefts and sabotage are noise. The network is the hidden hand using his operation, through a bribed dock seam (the Joffrey thread; Mr. Blip not complicit). — **in repo** ("two thieves" in plot-hooks). Later canon names the hidden hand's operative through a Vocath–N'ghathrod deal (memory canon).
+- The network's real prize is an artifact nobody at Caelestis understood, shelved as a curio: "you can't guard what you don't know is precious." That explains the "things are missing" texture. The charts are Vocath's cover-grab and possible misdirection (turn 42). — **in repo**, resolved: the artifact is A.T.L.A.S. (spine: "thief escapes with A.T.L.A.S.")
+- The prize is non-fungible to Caelestis: it was there, unrecognised, so the in-person operation was worth the risk. — **in repo** (inference)
+
+### Cosmology correction (turns 99–102)
+- Existence is **not** an Axiom. Existence is Continuity, the product of the four Axioms in equilibrium. — **in repo** (cosmology: "Continuity is what the four Axioms produce... both are existence")
+- The four Axioms are Convergence, Dissolution, Boundary and Transformation. They are sentient but bound entirely by their function. — **in repo** (cosmology)
+- Equilibrium is dynamic tension within tolerances, not balance or peace. — **in repo** (cosmology)
+- Axiom Fracture has two phases: the Shock (sudden destabilisation) and the Unraveling (a long, imperfect decline until replacement, reformation or redistribution). — **in repo** (cosmology)
+- What gods know is bounded: monoliths predate them, appear in crises, and survive destruction of their cause; the Axioms exist and predate them. Few understand the Zenith–monolith–Continuity link. — **in repo** (cosmology)
+- Vecna's hypothesis: the strain shows in Convergence but accumulates in Continuity. Whether he is right is open. — **in repo** in part (vecna.md, cosmology)
+- Convergence is the most stressed Axiom because of the monoliths, and it is Vecna's fracture target. Other paths to the Axioms exist; monoliths are the one he found (turn 101). — **in repo** (vecna.md, glossary: "Convergence seat")
+- The dual attack: drawing the figure and stressing Convergence are the same work. The endgame is half spell, half structural collapse. — **not in repo** by name
+- Continuity is under live stress: anomalies (Gregory, the Latchling, clockwork horrors) increase as monoliths multiply. — **in repo** (campaign index: "Paracausal events become more common")
+- The Fonains Monolith is an exceptional case: an elemental and shadow Zenith tied to Tharizdun, later corrupted by Tharizdun and Vecna, and the only one destroyed. — **in repo** in part (Boogie's shard; session-rulings add the five-person ritual and Tharizdun's crystal)
+
+### DM wiki and naming (turns 52–137)
+- One DM wiki in HTML under `prime/` on the Caelestis site. Sheets hold tracking, Docs hold the archive (transcripts, crew logs), and one inbox doc holds untethered ideas. The Lore Bible, throughline and decisions dump fold into the wiki (turn 56). — **in repo** (`prime/` exists)
+- The wiki holds context and roadmap (unresolved state). Trackers hold "what is now" and how to reach the next destination. Session prep stays out of the wiki; each voyage gets its own briefing file for planned-versus-actual comparison (turns 60–62). — **in repo** (prime/campaign/voyages briefings)
+- "Doors" are renamed **hooks**. Five hook types: network direct, network indirect, a different cosmic pull, purely local (about two in three), and personal (turn 62). — **in repo** (plot-hooks.html; "hook type" in campaign index)
+- The cosmology layer is named **Continuum** instead of Physics (turn 89). — **in repo**, reshaped (repo uses `prime/cosmology/`; `continuum.html` survives only in `prime/scripts/dm-nav.js` and DEPLOY-README)
+- The antagonist plot is called **the Remaking**: its own pillar and a throughline parallel to Voyages, tracked over time, including how the players affected it directly and indirectly (turn 124). — **in repo** ("the Remaking" across campaign pages). The Node Log table is **not in repo**.
+- Seeds and Factions get their own pages (turn 122). — **in repo** in part (`prime/factions/` exists; no seeds page)
+- As of this chat the players were in Module 3 of Spelljammer Academy. Arc I stretches for pacing: the tyrant ship runs 2–3 sessions, and the crew moves through a sandbox beyond the Academy (turn 108). — **in repo** (spine: "Module 3... pacing extended")
+
+### Lore restated in the wiki build (from the Lore Bible, throughline and decisions doc)
+- Restorers: a hidden faction seeking the Core, which their doctrine calls the Mother of the Universe; offstage until Arc III. — **in repo** (factions/restorers.html)
+- Graduates become Driftwardens and are kept together as a unit. — **in repo** (spine)
+- The H'Catha meteor held at three depths (resonant; an Ortholith fragment, shed or aimed; the strike was bait), and reclassified above the crew's clearance at graduation. — **in repo** (reclassification in spine, plot-hooks)
+- Gregory is the only autognome who can cast; Mr. Blip is the control case (personhood and soul, no magic). — **in repo** (crew/gregory.html)
+- Wizpop as an ordinary autognome who reacts with wonder to Gregory casting. — **conflicts** with later canon (memory canon: OSTEKK-6 "Wizpop" is an automaton, not an autognome; repo uses OSTEKK in spine and voyages)
+- Counter-spore plant: fuelled by a spell slot through a non-Weave conduit, so it works in anti-magic. — **in repo** (rules/index.html)
+- The CRC: built by the Fortuned after Sol's escape; capture, not murder; "Sol Fortuna. You are required." — **in repo** (dossiers/crc.html)
+- Tumak is twins Wan and Tu; his homeworld hides itself; the Runekeeper is dimming; a joint return is a Zenith risk. — **in repo** (spine, the-runekeeper.html)
+- Arc I beats: the Convening, then Fire in the Galley (Ryeback dies, Miken's betrayal lands), then Behold H'Catha. — **in repo** in part (Convening in voyages pages; "Fire in the Galley" only in BACKLOG.md)
+- Breadcrumbs: Xanathar (the sanctum grudge fragment), Toril named but unremarked, Ezra as a cross-campaign tie. — **in repo** (Xanathar in dossiers)
+
 ## Superseded
 - Destiny-style "residue engine", where jobs are designed to shed clues at a tuned ratio → Mighty Nein living-world architecture, with Destiny kept as the vibe only.
 - Mission ladder by danger tier (Runs, Recoveries, Interventions, Standoffs) → categories by dramatic function (Runs, Recoveries, Interventions, Quiet jobs, Contracts-gone-wrong). The jobs become entry vectors into situations already running.
@@ -76,20 +121,38 @@ Source: https://claude.ai/chat/0852f52d-cb7d-4fd8-a1f0-3cafec340ce5 · updated 2
 - Watchers framed as mysterious or ominous → a known, principled partner organization.
 - The Lore Bible's "hidden magical navy that protects Toril" framing → a self-made, for-hire, covert, non-governmental Fleet.
 - The network's name was still pending in this chat → the repo now calls it the **Vth'orama**.
+- "Who gets to be real" as the campaign question → "Who decides what's real?" (turn 80).
+- Monoliths as Vecna's ink and Zeniths as his act of inscribing → (turns 94–97) the Continuum makes both; Vecna picks positions for a figure and engineers Zeniths where needed. The node ladder became Map, Claim, Nudge, Link, Complete → (later canon) Vecna's plan runs through world-hearts toward the Convergence seat (vecna.md).
+- The heist prize as charts the crew could hold → the literacy asymmetry → an artifact nobody understood, with the charts as Vocath's cover → (repo) A.T.L.A.S. Claude's candidates along the way: a locator-lens (his lean), a monolith-key, a glyph-fragment, and a lens-plus-station-logs fusion.
+- Lore Bible axioms Existence, Convergence, Intensification & Escalation, and Conflict & Friction → Convergence, Dissolution, Boundary, Transformation, with Existence recast as Continuity (turn 99).
+- "Vecna targets the Existence axiom" → he stresses Continuity by over-firing Convergence toward a Fracture.
+- Astra "wounded by the Existence Axiom" → no such Axiom exists; what wounded Astra is still unworded (memory canon).
+- Polly written as "her" and as Astra's proxy → Polly is Casey's brother, he/him (repo polly.html, spine).
+- Wizpop as an autognome → OSTEKK-6, an automaton (memory canon).
+- "Physics" as the cosmology page name → Continuum → (repo) `cosmology/`.
+- A single campaign "Design Bible" file in Markdown → an HTML DM wiki in `prime/`.
+- A sidebar with every page's sections folded in → tried, then reverted to a right-rail table of contents (turn 134).
+- Gregory's "Existence, generative face" and Sol's "Existence, the survivor" → Continuity in both.
 
 ## Open
-These are open as of turn 36. The unread turns may resolve them.
+These are open as of turn 140. Turns 141–416 are unread and may resolve them.
 - Handler: Claude pitched a dohwar broker ("Pip"), a defected scro ("Vahl"), a xixchil contract-surgeon, and a washed-up human captain (set aside because it overlaps with Saerthe). No pick yet. (Repo: handler still unnamed.)
 - The second system: what it is and why the Fleet operates there.
 - What is at Cairn Station: (a) a derelict site, or (b) an inhabited hidden outpost of fences and scholars. Also whether the crew reaches it in Arc II.
-- If the party foils the network, shouldn't the party end up holding the charts? (Raised at turn 36. The answer is in the unread portion.)
 - Whether the true ending is "prevent Eve of Ruin" or "survive Eve of Ruin."
-- The live glyph or site, the Ascension World's specifics, and which Zeniths are natural versus manufactured.
+- The live point on the figure, the Ascension World's specifics, and which Zeniths are natural versus manufactured.
 - Confirmation of the PC verdict words, especially Casey and Bartholomew.
+- Claude's proposed Act questions, which Korey had not approved when the reading stopped: Arc I "Who counts as a real crew?", Arc II "Who decides what's worth saving?", Arc III "Who's been deciding this all along?", Arc IV "Who gets to decide for everyone, forever?" — **not in repo**
+- Who keeps the crew together after graduation (Mirt, a Watcher or the Order, Saerthe, or the Fleet bureaucracy), and Mirt's reputation outcome.
+- Who on Aethris commissioned the CRC, and why.
+- (Resolved: "shouldn't the party hold the charts?" was answered by the literacy asymmetry, then by the artifact reframe. See The heist.)
 
 ## Documents produced
 - `caelestis-campaign-charter.md`, a Markdown file written to chat outputs. It is now a project doc. **Not in repo** under `prime/` (the theme lines are absent).
 - `caelestis-state-of-the-world-arc-ii.md`, a Markdown file written twice; the second version adds the inscription mechanism, the five-node ladder, the three-resolution method, Eve of Ruin as D, and Fork State A/B. **Partly in repo**: the Fork, the Ascension World and the PC next-beats appear in repo pages. The node ladder and the Eve of Ruin framing do not.
+- `caelestis-arc-ii-design-log.md` (turn 41), a running Markdown log of locked, filed and pending decisions plus a back-burner list. Chat output. **Not in repo** as a file; its content went into the wiki build.
+- `caelestis-design-bible.md` (turn 51), a single Markdown consolidation of the charter, state of the world, Arc II structure and workspace. Chat output, superseded by the HTML wiki.
+- The first DM wiki build (turns 65–139), delivered as chat outputs: `styles/dm.css`, `scripts/dm-nav.js`, `scripts/dm-toc.js`, `prime/index.html` (gate, redirects to hub), `hub.html`, `continuum.html` (first `physics.html`), `campaign.html`, `world.html`, `remaking.html`, `seeds.html`, `voyages/index.html`. **Reached the repo** in later, restructured form (`prime/hub.html`, `prime/cosmology/`, `prime/campaign/`, `prime/factions/`).
 
 ---
 
@@ -238,5 +301,5 @@ These are open as of the chat's end (turn 101).
 ---
 
 ## Tally
-- **not in repo:** 18 fully. About 4 more are partly in repo, with one part missing (shroudstone crossover, three-resolution method, Watcher tone, geographic leash).
-- **conflicts:** 6 (monolith-as-ink mechanism; Resonator vs Ortholith; archive file set; Aethris Zenith complete vs incomplete; eye-wheel as network mark vs Vocath's house mark; Strake/Cairn/Bellwether Crow roles)
+- **not in repo:** 20 items fully. 4 more are partly in repo with one part missing (shroudstone crossover, the three-resolution method by name, the revisable-figure rule, the Remaking Node Log).
+- **conflicts:** 7 (Aethris Zenith complete vs incomplete; eye-in-a-wheel as network mark vs Vocath's merchant mark; "Cogfast Enclave" in sa-002 vs Gregory from Toril; Strake as the silent station vs Cairn; the Bellwether Crow lost vs returned; Clint Dashforest lost overboard vs seizing the boarders' craft; Wizpop as an autognome vs OSTEKK-6 automaton). Resolved since the last tally: Resonator vs Ortholith (Ortholith settled in the chat itself), the archive file set (the chat ends at the repo's 9 files), and monoliths as Vecna's ink (corrected in the chat to the figure model the repo uses).

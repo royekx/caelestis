@@ -31,15 +31,16 @@ staging once Korey has read and accepted them.
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 16 | 12 | 1 | 29 |
 | Timeline | the rest of timeline.json | 4 | 4 | 0 | 0 |
 | Factions | factions/ | 26 | 18 | 2 | 40 |
-| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 31 | 39 | 5 | 34 |
+| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 32 | 39 | 5 | 36 |
 | Dossiers | dossiers/ | 36 | 38 | 0 | 48 |
 | Crew | crew/ | 32 | 16 | 0 | 73 |
 | Artifacts and vessels | artifacts/, vessels/ | 17 | 23 | 0 | 42 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 22 | 17 | 0 | 17 |
 | New pages | 14 proposed pages, the hub, notes/ | 22 | 3 | 2 | 33 |
 | Automation and tracker | the session pipeline and tracker alternatives | 11 | 1 | 0 | 0 |
+| Player pages | restricted/ and other player pages | 1 | 2 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 6 | 3 | 0 | 1 |
-| **Total** | | **286** | **223** | **13** | **389** |
+| **Total** | | **288** | **225** | **13** | **391** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -87,8 +88,8 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 
 ## Still coming in
 
-Two chat sweeps are partial: Campaign Planning (from turn 37) and New campaign
-idea (70). Every other sweep is complete.
+One chat sweep is partial: Campaign Planning, from turn 141. Every other sweep
+is complete.
 
 # Cosmology
 
@@ -2155,6 +2156,20 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 - **[drop]** "What if the lattice reaches the Core?"
   Its premise ("he has no solution for the approach") contradicts the Ascension page: the massed Yearning forces the First Heart open, and the opening is his arrival. Drop the item.
   src: campaign/ascension § The Cast; timeline "The Cast"
+
+### campaign/ascension (early planning)
+
+- **[add]** One working, two effects (DM voice)
+  Drawing Vecna's figure and stressing Convergence are the same work: every node he plants does both.
+  src: inbox/chat-early-planning.md § Campaign Planning (turn 80)
+
+- **[add]** The figure must be revisable (DM voice)
+  When a planted Zenith fails, as Fonains's did, Vecna redraws the figure around the loss rather than abandoning it.
+  src: inbox/chat-early-planning.md § Campaign Planning
+
+- **[decide]** A node log for player impact
+  An early plan kept a Remaking Node Log tracking how the players have changed Vecna's plan. Bring it back as a planning table on the Ascension page, or let the timeline carry it.
+  src: inbox/chat-early-planning.md § Campaign Planning (turn 124)
 
 # Dossiers
 
@@ -4461,3 +4476,26 @@ run decide, fix, drop, add.
 - **[decide]** Leftover UI calls from the migration notes
   Still open in FIXES-DEMO-MIGRATION.md: the FIA bearing strip, merging the survey chart, the navigation-records clip at 1024px, the clickable blurb overlay, and missing links on voyage briefings 001, 003 and 004. Keep any of these, or drop them with the notes.
   src: notes/FIXES-DEMO-MIGRATION.md, notes/RESTRUCTURE-NOTES.md
+
+# Player pages
+
+Fixes to player-facing pages, including the Fleet Intelligence Archive (`restricted/`). These pages hold only what the crew could know; corrections must keep that boundary.
+
+### restricted/wm-002.html
+
+- **[fix]** The Bellwether Crow did not come home
+  The archive has the Crow limping home by way of Strake. Canon: most of the crew did not return; Joffrey and a few survivors were let go. Rewrite the entry so the Crow is lost with most hands, in the archive's clipped voice, with nothing the crew couldn't know.
+  src: inbox/chat-early-planning.md § Campaign Planning; memory canon (Bellwether Crow)
+
+### restricted/sa-002.html
+
+- **[fix]** Gregory's origin is not Cogfast Enclave
+  The archive names "Cogfast Enclave" as Gregory's origin. Gregory is from Toril; he reached Caelestis on a cargo ship. Replace the Cogfast line, or redact it, so the archive does not assert a false origin.
+  src: inbox/chat-early-planning.md § Campaign Planning; memory canon (Gregory)
+
+### restricted/sa-005.html
+
+- **[decide]** The out-of-sequence SJN-2417 entry
+  Strake and Cairn swapped roles after this chat: Cairn is now the post that went silent after reporting an unidentified mass, and Strake is open and crewed, with Tarroway alive and working there. sa-005 still carries an out-of-sequence SJN-2417 entry. Handle it by uniform redaction or by a footnote.
+  Touches: restricted/sa-005.html, realms/strake-station.html, dossiers/tarroway.html.
+  src: inbox/chat-early-planning.md § Campaign Planning
