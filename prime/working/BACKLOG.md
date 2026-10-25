@@ -26,20 +26,20 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | fix | drop | add |
 |---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 23 | 17 | 0 | 24 |
-| Realms | realms/ except Fonains; a new Oerth page | 39 | 32 | 3 | 46 |
+| Cosmology | cosmology/, glossary/, chart/ | 23 | 17 | 0 | 25 |
+| Realms | realms/ except Fonains; a new Oerth page | 40 | 32 | 3 | 47 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 16 | 12 | 1 | 29 |
 | Timeline | the rest of timeline.json | 4 | 4 | 0 | 0 |
-| Factions | factions/ | 24 | 18 | 2 | 38 |
-| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 29 | 39 | 5 | 34 |
-| Dossiers | dossiers/ | 34 | 38 | 0 | 45 |
-| Crew | crew/ | 32 | 13 | 0 | 68 |
+| Factions | factions/ | 26 | 18 | 2 | 40 |
+| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 31 | 39 | 5 | 34 |
+| Dossiers | dossiers/ | 36 | 38 | 0 | 48 |
+| Crew | crew/ | 32 | 16 | 0 | 73 |
 | Artifacts and vessels | artifacts/, vessels/ | 17 | 23 | 0 | 42 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 22 | 17 | 0 | 17 |
 | New pages | 14 proposed pages, the hub, notes/ | 22 | 3 | 2 | 33 |
 | Automation and tracker | the session pipeline and tracker alternatives | 11 | 1 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 6 | 3 | 0 | 0 |
-| **Total** | | **279** | **220** | **13** | **376** |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 6 | 3 | 0 | 1 |
+| **Total** | | **286** | **223** | **13** | **389** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -87,10 +87,8 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 
 ## Still coming in
 
-Four chat sweeps are partial and resume after the read limit: Casey (from turn
-101), Sol (203), Campaign Planning (37) and New campaign idea (70). Items from
-their unread stretches carry *(sampled)* or *(snippet)* tags. The Tumak sweep is
-complete, and its items no longer carry the tags.
+Two chat sweeps are partial: Campaign Planning (from turn 37) and New campaign
+idea (70). Every other sweep is complete.
 
 # Cosmology
 
@@ -210,6 +208,11 @@ Order under each page: decide, fix, drop, add.
 - **[fix]** Every place carries a designation
   Page says "Systems Caelestis has not charted, such as the Wayfinders' homeworld and the Ascension world's, carry no designation." Replace: every sphere, system and world carries a designation, including uncharted and hidden ones. The Ascension World's system is SYS-05 and the Wayfinders' homeworld's is SYS-06, both in SPH-01. Player-facing material shows only what the crew knows.
   src: memory-canon (campaign-canon, placeholder designations); chat-organizing-framework § Superseded
+
+- **[add]** Monoliths stand above the gods
+  Add to § The Gods, beside "What the gods generally know":
+  "The archive of the cosmos sits above every god, Vecna included. Gods know little to nothing about Monoliths. A Monolith records what is, never what anyone believes: it holds no faith and answers no prayer. Aethris's Prism Ascendant shows the gap. Its people take it for Tymora's answer, and it is not."
+  src: BCS § Sol/Aethris and the gods (turns 864, 872)
 
 - **[add]** Polarity: why gods stay off worlds
   Add to § The Gods as the rule for divine absence, and to § The center:
@@ -786,9 +789,17 @@ No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms
 
 ### realms/aethris.html
 
-- **[add]** The Prism Ascendant belongs to neither goddess
-  "Neither Tymora nor Beshaba owns or controls the Prism Ascendant. Their rivalry plays out beneath it."
-  src: chat-crew-boogie-casey-sol § Sol/Aethris and the gods; memory-canon (Prism Ascendant is a Monolith)
+- **[decide]** What the Prism Ascendant does above an unfinished Zenith
+  The page's Open asks what it "has been doing above an unfinished Zenith for all this time". Set an answer, or keep it unknown in-world and drop the Open line.
+  src: BCS § Sol/Open; realms/aethris.html
+
+- **[add]** The Prism Ascendant is a Monolith
+  "The Prism Ascendant is a Monolith, reality's own response to Aethris's Zenith. The Temple holds that it is Tymora's answer to the ritual of perfection; it is not. Neither Tymora nor Beshaba owns or controls it, and their rivalry plays out beneath it. It is the first Monolith Aethris has had, though the Misfortuned have been born there for generations."
+  src: BCS § Sol/Aethris and the gods (turns 858, 864); memory-canon (Prism Ascendant is a Monolith)
+
+- **[add]** Other faiths on Aethris
+  "Aethris is a whole world, and not everyone on it follows Tymora. Other faiths hold ground there, among them a lesser following of Beshaba."
+  src: BCS § Sol/Aethris and the gods (turn 860)
 
 - **[add]** Concentrated worship
   "Tymora and Beshaba are strongest on Aethris. Worship concentrated on one world buys them force there that they have nowhere else."
@@ -1403,6 +1414,10 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   Their view of him, and whether any of them saw his hand in the Fonains ritual. Options: they know and stay silent; they suspect; they do not know.
   src: working/vecna.md § What the gods think of him, § Open
 
+- **[decide]** How far to develop Tymora
+  Korey wants to develop Tymora and the Beshaba/Tymora interplay. Open: how her doctrine's misreading plays on Aethris (see the add below), and whether she notices herself thinning there as the ritual removes the risk her luck needs. Keep the sisters' conflict indirect: gods give direction that never shows the whole of what they want. Beshaba's want is its own decide under dossiers/beshaba.html.
+  src: BCS § Sol/Aethris and the gods (turn 860), § Sol/Open
+
 - **[fix]** Zerathis is he
   The Zerathis entry says "where she now exists" and "Her allegiance was to Astra Virex". Change to he/his.
   src: memory-canon campaign-canon § Casey ("he is not a member"); chat-cosmic-campaign-structure § Superseded
@@ -1469,6 +1484,14 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 - **[add]** The bounds of the gods
   Add under the lead: "Worship gives every god its power, influence and reach, which is why pantheons gather in particular spheres. One god carries many names across worlds: Takhisis is Tiamat, and Paladine is Bahamut."
   src: session-rulings (worship; one god many names); working/divine-rules.md
+
+- **[add]** Tymora's misread tenet
+  Add to the Tymora entry: "Tymora's tenet is 'fortune favors the bold.' Her followers on Aethris misread it. They pushed luck until it stopped being luck, and in perfecting fortune they removed the risk that luck needs." Also add to W-08 on realms/aethris.html.
+  src: BCS § Sol/Aethris and the gods (turn 862)
+
+- **[add]** Fortune needs misfortune
+  Add to the Tymora and Beshaba entries: "Fortune cannot exist without misfortune. Tymora and Beshaba need each other." Also add to The twin reading on dossiers/beshaba.html.
+  src: BCS § Sol/Aethris and the gods (turn 862)
 
 ---
 
@@ -1571,6 +1594,10 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ---
 
 ### factions/aethris.html
+
+- **[decide]** Sol as a person or a component
+  Whether the Fortuned want Sol back as a person or as a component of the unfinished ritual. The answer decides whether his thematic question is answered by his enemies or by himself. Open on this page, crew/sol.html and realms/aethris.html; all three follow the ruling.
+  src: BCS § Sol/Open; crew/sol.html
 
 - **[add]** The Prism Ascendant
   Add to the lead: "The Prism Ascendant is the Monolith that answered Aethris's Zenith. Aethris believes it came from Tymora, as an answer to their ritual of perfection. Its appearance did not end the Zenith: the ritual is unfinished, and Aethris still wants Sol to complete it."
@@ -1964,8 +1991,16 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   src: chat-voyage-6-7-planning § Open; memory-canon open-decisions (Voyage 007 intent)
 
 - **[decide]** Sol's misfortune piece
-  Korey to set.
-  src: chat-voyage-6-7-planning § Open
+  Korey to set. The Sol chat asks for small daily misfortunes kept in play (chores landing on him, things falling), which the player wants; the piece can be one of those or ride on the wanted notice in Beats owed.
+  src: chat-voyage-6-7-planning § Open; BCS § Sol/H'Catha transit
+
+- **[decide]** The watcher at the notice board
+  Someone at the lane marker saw Sol's wanted notice, then saw him walk in. How the watcher engages: mercenary, opportunist, informant or sympathiser. Also the notice's issuer: the chat draft signs it "Threadbare Consortium" as a placeholder. Keep that name, choose another, or leave the issuer unnamed.
+  src: BCS § Sol/H'Catha transit, § Sol/Open
+
+- **[decide]** A crew backstory table for the crossing
+  A per-day roll table of backstory beats across the whole crew was floated for the two-week crossing; Korey liked it as an option. Build it, or keep beats hand-placed.
+  src: BCS § Sol/H'Catha transit, § Sol/Open
 
 - **[decide]** Treasury contents in Vaelorix's Quarters
   The Quarters hold a treasury of coin (see add). Contents and amounts are open.
@@ -1999,12 +2034,12 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 - **[add]** Beats owed in V007
   Add to Beats owed:
   - **Tumak.** Resting in his quarters he feels something settle that he can't name; he has inadvertently marked the spot. Later, needing to escape within 100 ft of his quarters, his Wayfind fires and lands him back there. His first rune match.
-  - **Sol.** On the day-7 lane-marker board, a wanted notice from the Fortuned seeks an astral elf marked by misfortune, reward on return to Aethris. It describes him and names no one.
+  - **Sol.** On the day-7 lane-marker board, a wanted notice from Aethris seeks an astral elf marked by misfortune: "RETURN REQUESTED", reward on return to Aethris, no reward for remains. It describes him and names no one. Aethris can post this far out, and the C.R.C. already proves its reach. Whoever engages the board finds it (Tumak asking for a bounty board, for example). If nobody does, Sol or the highest passive Perception notices it, or notices someone watching. Recognising Sol needs no roll. Someone in the room saw the notice, then saw a person matching it walk in (how the watcher engages is a decide above). The C.R.C. itself stays near Caelestis (see dossiers/crc.html).
   - **Gregory.** In Toril orbit his pull points straight down at his home world, then falls behind as the ship leaves, and he chooses whether to speak. (Joins the existing "louder in the bay" note.)
   - **Boogie.** He alone feels out of step with the Lantern's pulse. If the Lantern heals him he regains the hit points, then is a loose puddle until the end of his next turn (Speed 10 ft., drops what he holds, can't cast), with only the stone keeping its shape. The shard escalates without revealing it is a Monolith piece.
   - **Casey.** His thread needs a small nudge back (beat in the decide above).
   - **Ezra.** He arrives with his own hook that others can latch onto, so he is more than another person aboard (the Pffred and Krik'Lit problem). Hook options are a decide under dossiers/ezra.html.
-  src: memory-canon open-decisions (Voyage 007 intent); campaign-canon § Naming (Boogie near the Lantern); chat-voyage-6-7-planning § V007 player beats, § Settled
+  src: memory-canon open-decisions (Voyage 007 intent); campaign-canon § Naming (Boogie near the Lantern); chat-voyage-6-7-planning § V007 player beats, § Settled; BCS § Sol/H'Catha transit
 
 - **[add]** Crew nights on the crossing
   Add to the V007 briefing: Ryeback cooks from the Garden and dares someone to eat first. Ezra spars and shares a line of the Watcher creed. Miken sits alone by the intake. OSTEKK-6 asks Gregory what a plan is.
@@ -2192,8 +2227,8 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ### dossiers/beshaba.html
 
 - **[decide]** Beshaba's want
-  The page says "She has never named a want." The Sol chat explored several without settling, and Korey wants to develop the Beshaba/Tymora interplay. Keep "no named want", or set one.
-  src: chat-crew-boogie-casey-sol § Sol/Open
+  The page says "She has never named a want." The Sol chat explored several without settling. Its last reading, that she wants Sol to keep existing as her local anchor, was never confirmed. Korey wants to develop the Beshaba/Tymora interplay (see the Tymora decide under factions/deities.html). Keep "no named want", or set one.
+  src: BCS § Sol/Open
 
 - **[add]** Where she is strongest
   Add to The twin reading: "Tymora and Beshaba are strongest on Aethris, where their worship is most concentrated."
@@ -2249,6 +2284,31 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[add]** When he landed
   Add to the Then/What happened table: "Clint landed on Fonains about a year before the present, before the Monolith appeared, and was on Fonains when it did."
   src: session-rulings (Timing); timeline decisions, "Clint lands on Fonains"
+
+---
+
+### dossiers/crc.html
+
+- **[decide]** Where the first encounter happens, and the stored spell
+  The chat and memory canon stage it at the Caelestis main entrance when the crew returns from H'Catha (see the main-entrance add under crew/sol.html and the Timeline fix "Sol's first C.R.C. encounter"). This page's Open leans toward the Sky Dock on arrival. Options: main entrance, or Sky Dock. Also pick the stored spell: Locate Creature (the page) or Hold Person.
+  Touches: this page, crew/sol.html, timeline.json.
+  src: BCS § Sol/Open, § Sol/C.R.C. and the scry beats; dossiers/crc.html
+
+- **[decide]** Who on Aethris commissioned it
+  The page says the Fortuned commissioned it. Which of them, and why they care, is open.
+  src: BCS § Sol/Open
+
+- **[add]** Its look
+  Add to Who they are: "A faceted crystalline humanoid. Constellation points glow across its chest, its mask is polished and featureless, and its eyes burn white. Over time the mask resolves toward Sol's face." The face line is already on the page; the rest is not.
+  src: BCS § Sol/C.R.C. and the scry beats
+
+- **[add]** How it tracks Sol (DM voice)
+  Add to How to run them: it tracks Sol by resonance, strongest where he has been. It cannot keep pace with a spelljammer in transit, and it has no handler from Aethris (a handler would diminish it). During the crossing to H'Catha it stays near Caelestis, Sol's strongest recent trail; an appearance on the trail is low probability only.
+  src: BCS § Sol/C.R.C. and the scry beats
+
+- **[add]** Retrieval protocols
+  Add as its voice lines: "Resistance has been accounted for." "Interference is inefficient." "Your absence has created imbalance." "Adjustment required." "Retrieval delayed. Not abandoned."
+  src: BCS § Sol/C.R.C. and the scry beats (Claude drafts; Korey did not object)
 
 ---
 
@@ -2750,54 +2810,103 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 ### crew/sol.html
 
-- **[decide]** The oath scene with Beshaba: has it played, and what is the reward
-  Record whether the oath scene has already run at the table. Then set the reward Beshaba gives from the intervention tally; it should be support-flavoured and unique to Sol.
-  src: BCS § Sol/Open
+- **[decide]** Beshaba's reward from the oath
+  The acknowledgment scene is the level-3 oath and the level-up itself, run with Sol alone before V003's Convening; confirm it ran as planned. The reward Beshaba gives comes from the intervention tally. It should be support-flavoured and unique to Sol, and the chat left it to be found in play. Options: set it now, or let it surface in play.
+  src: BCS § Sol/Acknowledgment scene, § Sol/Open
 
 - **[decide]** Whether Sol ever learns how much of his escape Beshaba arranged
   Options: he learns it (and when), or he never does.
   src: BCS § Sol/Open
 
-- **[decide]** Whether Misfortune's Favor can target Sol himself
-  Options: yes, or allies and enemies only.
-  src: framework § Open
+- **[decide]** Misfortuned rebalance (on hold)
+  Korey paused this at turn 899 ("hold that and I'll come back to it"). His diagnosis: Sol can change several rolls a combat and Unburden without feeling the cost. The pending draft:
+  - Burden charges equal his proficiency bonus and come back on a long rest only.
+  - Burden adds his Charisma modifier to an ally's roll, after the roll and before the outcome. It no longer turns a failure into a success (Korey compared auto-success to Legendary Resistance).
+  - Misfortune level equals Burden charges spent. Each level is a flat −1 to all of Sol's d20 Tests, replacing the d6 ability penalty.
+  - Unburden, once per long rest at Misfortune 2 or more, adds proficiency bonus × Misfortune to Sol's own d20 Test or damage roll.
+  Exhaustion as the cost was tried and dropped. Sol cannot Burden himself. Options: adopt the draft, adjust it, or keep the locked turn-757 text (the add below).
+  src: BCS § Sol/Open, § Sol/Misfortuned
 
 - **[fix]** The C.R.C. is CR 7
-  Page says "CR 8, on an advanced detention drone chassis"; change to "CR 7, on an advanced detention drone chassis". Matches dossiers/crc.html, statblocks/index.html and the canon block (CR 7, AC 17, 136 HP, Withdrawal Threshold at 68 HP).
-  src: memory-canon § Antagonists (CRC stat block); dossiers/crc.html
+  Page says "CR 8, on an advanced detention drone chassis"; change to "CR 7, on an advanced detention drone chassis". Add Legendary Resistance (2/Day) and the Withdrawal Threshold to the trait list. This matches dossiers/crc.html, statblocks/index.html and the canon block (Medium, CR 7, AC 17, 136 HP, Withdrawal Threshold at 68 HP). The chat's stat block (Large, CR 8, AC 18, 152 HP) is the earlier draft; the dossier is the later version.
+  src: memory-canon § Antagonists (CRC stat block); dossiers/crc.html; BCS § Sol/C.R.C. and the scry beats
 
-- **[add]** Lucky feat
-  Sol has the Lucky feat.
+- **[fix]** Tenet: Court Adversity
+  Page says "Trial by Fire &mdash; a life without adversity is a life unlived". The tenet is now Court Adversity (Korey, turn 737). Rename it, and take its gloss from oath-of-misfortune.md in the chat outputs. The tenets read Never Yield, Court Adversity, Risk Is Not Ruin.
+  src: BCS § Sol/Oath of Misfortune
+
+- **[fix]** Jinx charges and duration
+  Page says "Charges equal his Charisma modifier, minimum one". Change to "Charges equal 1 + his Charisma modifier, minimum two, all regained on a long rest" (Korey, turn 720). Also: each Jinx option is usable once per turn, and the self-Jinx's shifted thresholds last until the start of his next turn; the page gives neither.
+  src: BCS § Sol/Oath of Misfortune
+
+- **[fix]** Misfortune's Wake is a bonus action
+  Page says "Misfortune's Wake &mdash; a magic action spreading Jinxed". Change to: "Misfortune's Wake &mdash; a bonus action, no Jinx charge. Choose a creature within 30 feet and an ability; it and any others of his choice within 15 feet of it have Disadvantage on d20 Tests with that ability until the start of his next turn. No damage, no save."
+  src: BCS § Sol/Oath of Misfortune
+
+- **[add]** Lucky feat and sheet
+  Sol has the Lucky feat. At the oath his sheet runs CON +4 and CHA +4 (CHA 18).
   src: BCS § Sol/Identity
 
-- **[add]** Table note: the player chose Beshaba
-  Sol's player chose Beshaba and wants to lean into her.
+- **[add]** Table notes
+  - Sol's player chose Beshaba and wants to lean into her.
+  - He likes complex mechanics; keep them from bogging down the table.
+  - The table struggles with ambiguity, so Augury-style vague answers are out.
+  - The party has no cleric; the oath spells were weighed against that.
+  - Keep small daily misfortunes in play around him (chores landing on him, things falling). The player wants this.
+  - Present something and let him respond; never dictate what he feels or does.
+  src: BCS § Sol/Identity, § Sol/H'Catha transit, § Sol/Acknowledgment scene
+
+- **[add]** Black lightning in V002
+  Add to his arc: "In V002 Sol took Boogie's misfortune onto himself. Black lightning broke from him, and he heard Beshaba laugh for the first time."
   src: BCS § Sol/Identity
 
-- **[add]** Misfortune section (core rule)
-  New section, listed under "Where the rules live". Misfortune is Sol's own permanent feature because he is Misfortuned. It is separate from the oath and persists even if he breaks the oath.
+- **[add]** Misfortuned (core rule)
+  New section, listed under "Where the rules live". Misfortuned is Sol's own permanent character feature because he is Misfortuned; the points it tracks are called Misfortune. It is separate from the oath and persists even if he breaks the oath. The personal burden lives here so the oath stays pure upside, like the official oaths. The arc runs Misfortuned → Oath of Misfortune → Misfortune's Favored (the capstone).
+  Locked text (turn 757):
   - Misfortune caps at his proficiency bonus.
-  - Each point is −1 to one ability modifier, chosen by d6 (1 Str, 2 Dex, 3 Con, 4 Int, 5 Wis, 6 Cha). The penalty carries through to spell save DC and spell attack. Penalties stack.
-  - **Absorb** (reaction): when a friendly creature within 60 ft. fails a roll, after the die is shown and before the outcome is declared, the roll becomes a success and Sol gains 1 Misfortune.
-  - **Discharge** (reaction): at cap, Sol applies plus or minus his total Misfortune to any creature's roll within 60 ft., and all Misfortune clears. A natural 20 stays a critical hit.
-  - Absorb and Discharge share his reaction, so only one happens per round.
-  src: BCS § Sol/Misfortune feature, Pre-oath Fortune mechanic
+  - Each point is −1 to one ability modifier, chosen by d6 (1 Str, 2 Dex, 3 Con, 4 Int, 5 Wis, 6 Cha). The penalty carries through to spell save DC and spell attack. Penalties stack. All Misfortune clears on Unburden or at level-up.
+  - **Burden** (reaction): when a friendly creature within 60 ft. fails a roll, after the die is shown and before the outcome is declared, the roll becomes a success and Sol gains 1 Misfortune.
+  - **Unburden** (reaction): at cap, Sol applies plus or minus his total Misfortune to any creature's roll within 60 ft., and all Misfortune clears. A natural 20 stays a critical hit.
+  - Burden and Unburden share his reaction, so only one happens per round.
+  At levels 1–2, before the oath, it ran without a cap or Unburden: penalties persisted until level-up, and the player did not know when they would clear. A rebalance is on hold (decide above).
+  src: BCS § Sol/Misfortuned, § Sol/Pre-oath Fortune mechanic
 
 - **[add]** How the player tracks Misfortune
-  The player tracks Misfortune with six "Misfortune" items on D&D Beyond and clears them before processing a level-up. He does not know when penalties clear.
-  src: BCS § Sol/Pre-oath Fortune mechanic, Misfortune feature
+  The player tracks each point as an item on D&D Beyond named "Misfortune (STR)", "Misfortune (DEX)" and so on, and clears them before processing a level-up. The D&D Beyond text uses plain words (no arrows, dashes or equals signs) and a two-column d6 table.
+  src: BCS § Sol/Misfortuned, § Sol/Pre-oath Fortune mechanic
 
 - **[add]** Beshaba's test (add to "Beshaba's voice")
   The pre-oath interventions were Beshaba testing Sol. First comes distant laughter only he hears. After two or three interventions she asks: "How long will you bear it?"
   At the oath scene a full commitment quietly clears his penalties. A hedged answer earns one word: "Finally."
   src: BCS § Sol/Beshaba's test
 
+- **[add]** Misfortune's Pall (L7)
+  The page names the feature only. Add: "He and allies in his Aura of Protection have Advantage on death saving throws and regain 1 hit point on a 19 or 20. They also have Advantage on saving throws against any effect from a cursed creature, wherever that creature is."
+  src: BCS § Sol/Oath of Misfortune
+
+- **[add]** Misfortune's Reckoning (L15) damage and line
+  Add the Inevitable Strike figure: once per turn, a critical hit on a cursed creature adds psychic damage equal to twice his paladin level. Korey kept the once-per-turn cap rather than add a crit-fail cost. Flavor line: "You no longer endure misfortune. You direct it."
+  src: BCS § Sol/Oath of Misfortune
+
+- **[add]** Misfortune's Favored (L20)
+  The page says "The capstone." only. Add: a bonus action, lasting 10 minutes, once per long rest or by spending a 5th-level slot. Two halves:
+  - **Misfortune.** Any creature that enters the aura or starts its turn there takes necrotic damage equal to his Charisma modifier. Hostile creatures in the aura cannot score critical hits.
+  - **Favor.** Sol is exempt from the damage. Allies in the aura score critical hits on 19–20 and have Advantage on attacks against cursed creatures. His Jinx may pick two abilities.
+  The damage hits allies too: "misfortune does not care who the target is" (Korey; Cloak of Flies is the precedent). Allies trade the damage for the Favor. This settles the old question of whether the capstone can target Sol himself.
+  src: BCS § Sol/Oath of Misfortune; framework § Open
+
+- **[add]** Oath design notes (DM voice)
+  - Subclass features deal necrotic and psychic; Divine Smite stays radiant, as the base class.
+  - He is a bruiser with no defensive level-15 feature; defense comes from the base class and the oath spells. Korey: "Ill Omen isn't about changing what happened but instead about mitigating it entirely or rolling with it."
+  - Oath spells may come from any class list (Ancients, Vengeance and Glory set the precedent).
+  src: BCS § Sol/Oath of Misfortune
+
 - **[add]** Scry 2 timing
   Scry 2 comes just before the crew leaves H'Catha to return to Caelestis.
   src: BCS § Sol/C.R.C. and the scry beats
 
 - **[add]** The C.R.C. at the main entrance
-  When the crew returns, the C.R.C. is waiting at the Caelestis main entrance. The crew hears murmurs first, then: "Sol Fortuna. You are required." The encounter is an objective-based escape, not a kill. Also stage this on dossiers/crc.html.
+  When the crew returns, the C.R.C. is waiting at the Caelestis main entrance. The crew hears murmurs first, then: "Sol Fortuna. You are required." The encounter is an objective-based escape, not a kill. Also stage this on dossiers/crc.html, where the location is a decide.
   src: BCS § Sol/C.R.C. and the scry beats; memory-canon § Antagonists (first CRC encounter on Caelestis)
 
 - **[add]** Tarto stands up for Sol
@@ -4323,6 +4432,10 @@ run decide, fix, drop, add.
 - **[decide]** One vocabulary for the record's sets
   DATA-BOUNDARY.md and SESSION-RUN.md call the sets voyages, crew, cast, factions, places, things, threads. The files in `data/` are sessions, player-characters, npcs, factions, locations, items, quests. Suggested: the file names in all process docs; in-world labels only on pages.
   src: notes/DATA-BOUNDARY.md, notes/SESSION-RUN.md, scripts/data.js
+
+- **[add]** Writing rule: no triple short sentences
+  Add to the prose rules in CLAUDE.md ("Prose: no stacked negations…") and to working/README.md § Writing staged entries and pages: "No three short sentences in a row for emphasis." Korey asks for AI-isms to be avoided in general; this is the pattern he named alongside stacked negations.
+  src: BCS § Sol/Style (turns 866, 870)
 
 ## Record and schema
 
