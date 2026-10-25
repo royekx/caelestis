@@ -318,6 +318,7 @@
       tbl.appendChild(tr);
     });
     (data.decisions || []).forEach(function (t) { document.getElementById('decision-list').appendChild(h('p', 'tl-note', t)); });
+    if (!(data.problems || []).length) document.getElementById('problem-list').appendChild(h('p', 'tl-meta', 'None open.'));
     (data.problems || []).forEach(function (p, i) {
       var d = h('div', 'tl-problem');
       d.appendChild(h('h3', null, (i + 1) + '. ' + p.title));

@@ -33,18 +33,7 @@
       "label": "Krynn and the dragons"
     }
   ],
-  "problems": [
-    {
-      "title": "When Thessalar's planar craft crashed",
-      "detail": "Lola's Boys sessions say the crash raised the Barrier Peaks \"some millennia ago.\" Thessalar was running experiments in the Temple of Moloch about 500 years before Fonains's present, and N'ghathrod's capture on the craft caused the crash.",
-      "options": "Make the crash about 500 years ago and treat \"millennia\" as rumour, or split Thessalar's work across two eras."
-    },
-    {
-      "title": "Benedetta's death and Rihiri's age",
-      "detail": "The Foundry notes say she died ten years ago. Session 19 says shortly after Rihiri's birth, and Rihiri is twelve.",
-      "options": "Pick one, or make the illness begin at the birth."
-    }
-  ],
+  "problems": [],
   "events": [
     {
       "lane": "cosmos",
@@ -255,13 +244,20 @@
     },
     {
       "lane": "fonains",
+      "t": -12,
+      "end": -10,
       "status": "past",
       "cert": "canon",
-      "title": "Benedetta dies; the Alpha is invoked",
-      "desc": "Vanifer siphons her mother's soul into an illegitimate Bloodstone. Her father invokes the Alpha instead of conceding. Asmodus, dreaming of his mother, starts hunting; Rihiri is stabbed and survives.",
-      "conflict": "See timing problem 3.",
-      "t": -10,
-      "end": -1.5
+      "title": "Vanifer siphons Benedetta",
+      "desc": "Benedetta falls ill at Rihiri's birth. The illness is Vanifer slowly siphoning her soul into an illegitimate Bloodstone, which takes about two years and ends with Benedetta's death."
+    },
+    {
+      "lane": "fonains",
+      "status": "past",
+      "cert": "canon",
+      "title": "The Alpha is invoked",
+      "desc": "Vanifer tries to make her father concede to her; he invokes the Alpha instead, locking them both out. Asmodus, dreaming of his mother, starts hunting; Rihiri is stabbed and survives.",
+      "t": -2
     },
     {
       "lane": "fonains",
@@ -388,8 +384,7 @@
       "cert": "canon",
       "title": "Thessalar's experiments",
       "desc": "About 500 years before Fonains's present. The Rod's seventh piece, the Thessalkraken, clone tubes Thessalar I–VIII.",
-      "conflict": "See timing problem 2.",
-      "t": -520,
+      "t": -530,
       "end": -500
     },
     {
@@ -398,8 +393,7 @@
       "cert": "canon",
       "title": "N'ghathrod captured; the craft crashes",
       "desc": "His paracausal ceremorphosis makes his tadpoles copies of him and stops his aging. The craft is massive, a megadungeon whose unexplored levels become the Mad Mage dungeon. It breaks up as it comes down: the main body raises the Barrier Peaks, a broken-off section becomes Dowing Glowing, and the Thessalkraken lands separately in the sea, where it later guards the trident's reef. The elder brain is carried to Fonains; when N'ghathrod reaches for it, Vecna answers.",
-      "conflict": "See timing problem 2.",
-      "t": -480
+      "t": -500
     },
     {
       "lane": "colony",
@@ -532,7 +526,9 @@
     }
   ],
   "decisions": [
-    "Caelestis's present sits a few months after the Fonains Monolith broke, shortly after Fonains's Session 28. Clint reaches Fonains about a year before Caelestis's present, before the Monolith appears. Boogie's shard came from the broken Monolith through Vocath's line, before V001. This replaces \"Caelestis runs about a year before Fonains.\""
+    "Caelestis's present sits a few months after the Fonains Monolith broke, shortly after Fonains's Session 28. Clint reaches Fonains about a year before Caelestis's present, before the Monolith appears. Boogie's shard came from the broken Monolith through Vocath's line, before V001. This replaces \"Caelestis runs about a year before Fonains.\"",
+    "Thessalar's planar craft crashed about 500 years ago, when N'ghathrod's capture brought it down. \"Some millennia ago\" in Lola's Boys is rumour.",
+    "Benedetta fell ill at Rihiri's birth, about twelve years ago, and died about ten years ago. The illness was Vanifer siphoning her soul into the illegitimate Bloodstone, which took about two years."
   ],
   "threads": {
     "entities": [
