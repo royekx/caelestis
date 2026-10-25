@@ -33,13 +33,13 @@ staging once Korey has read and accepted them.
 | Factions | factions/ | 24 | 18 | 2 | 38 |
 | Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 29 | 39 | 5 | 34 |
 | Dossiers | dossiers/ | 34 | 38 | 0 | 45 |
-| Crew | crew/ | 30 | 10 | 0 | 64 |
+| Crew | crew/ | 31 | 11 | 0 | 66 |
 | Artifacts and vessels | artifacts/, vessels/ | 17 | 23 | 0 | 42 |
 | Rules | rules/, statblocks/, tracker/ | 19 | 10 | 0 | 12 |
-| New pages | 14 proposed pages, the hub, notes/ | 22 | 3 | 2 | 32 |
+| New pages | 14 proposed pages, the hub, notes/ | 22 | 3 | 2 | 33 |
 | Automation and tracker | the session pipeline and tracker alternatives | 11 | 1 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 6 | 3 | 0 | 0 |
-| **Total** | | **274** | **210** | **13** | **366** |
+| **Total** | | **275** | **211** | **13** | **369** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2813,6 +2813,22 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 ### crew/casey.html
 
+- **[fix]** "Hearer" becomes "Starchild"
+  Astra's warlocks are Starchildren. Replace "hearer" with "Starchild" throughout this page and on `dossiers/astra-virex.html`. Casey's power works through sight; the only voice he hears is Polly's.
+  src: inbox/chat-crew-boogie-casey-sol.md § Casey (turns 101–107)
+
+- **[add]** Overlapping Starchildren
+  Where several Starchildren gather at one celestial body, Astra holds more tethers there and the change around them speeds up.
+  src: inbox/chat-crew-boogie-casey-sol.md § Casey
+
+- **[decide]** How often Polly speaks
+  The page says Polly's voice comes through cleaner after each tether. A later suggestion made his voice rare, a single event each time. Pick one.
+  src: inbox/chat-crew-boogie-casey-sol.md § Casey
+
+- **[add]** Viren threads on the crossing to H'Catha (DM voice)
+  The two-week crossing to H'Catha is where Viren information gets scattered: rumours and small clues placed in the world for the crew to notice or ignore, not every one a mystical pull or Polly speaking. A list of about sixteen candidate rumours exists in the Casey chat; none is chosen yet.
+  src: inbox/chat-crew-boogie-casey-sol.md § Casey
+
 - **[decide]** What the first tether at Viren is
   Options: a dying stellar entity; a Zerathis-connected place or person; stellar-touched inhabitants; a rift onto a missing constellation.
   src: BCS § Casey/Open
@@ -2821,8 +2837,8 @@ Items whose source sweep is still partial keep their `(sampled)` or
   Design a non-catastrophic event at Viren that makes Casey question whether the change is worth what he gains.
   src: BCS § Casey/Tethering, Open
 
-- **[decide]** The other hearer
-  A living hearer like Casey will appear (see the add below). Set their shape: further along than Casey, earlier, diverged, or opposing. Set where they are headed.
+- **[decide]** The other Starchild
+  A living Starchild like Casey will appear (see the add below). Set their shape: further along than Casey, earlier, diverged, or opposing. Set where they are headed.
   src: BCS § Casey/Open
 
 - **[decide]** The level 3 narrative scene
@@ -2846,7 +2862,7 @@ Items whose source sweep is still partial keep their `(sampled)` or
   src: BCS § Casey/Tethering
 
 - **[decide]** Whether Zerathis recruited other Starchildren
-  Page lists it as open. Options: yes (and whether the other hearer is one), or Casey is the only one.
+  Page lists it as open. Options: yes (and whether the other Starchild is one), or Casey is the only one.
   src: framework § Open
 
 - **[fix]** First tether point: Virenspace
@@ -2914,7 +2930,7 @@ Items whose source sweep is still partial keep their `(sampled)` or
   src: BCS § Casey/Tethering
 
 - **[add]** A living hearer
-  Another living hearer like Casey will appear as pressure: possibly a rival, possibly a partner, modelled on Avantika.
+  Another living Starchild like Casey will appear as pressure: possibly a rival, possibly a partner, modelled on Avantika.
   src: BCS § Casey/Tethering
 
 - **[add]** The players never learn the word "Axiom"
@@ -4010,6 +4026,10 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   src: chat-cosmic § Cosmos texture; memory-canon
 
 ### NEW: DM principles
+
+- **[add]** Situations, not scripts
+  Put situations into the world and let the characters respond, or do nothing. Threads are not scripted toward an outcome.
+  src: inbox/chat-crew-boogie-casey-sol.md § Casey (turns 101–107)
 
 **Purpose.** How Korey runs this table: the story, pacing and reveal rules learned so far, in one place. Merges the "Running principles" and "DM principles" proposals. Suggested: its own page, or a section of `prime/campaign/spine.html`.
 

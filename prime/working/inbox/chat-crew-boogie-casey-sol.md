@@ -2,9 +2,9 @@
 
 Coverage note. The read tool hit its hourly call limit partway through.
 - Boogie: read in full (turns 0–88 of 89).
-- Casey Geim: turns 0–100 of 108 read in full (41–100 re-swept 2026-10-25). Turns 101–107 not yet read; resume at page_token "t101".
+- Casey Geim: read in full (turns 0–107 of 108; 41–107 swept 2026-10-25).
 - Sol Fortuna: turns 0–202 of 908 read in full. Turns 203–907 seen only through targeted search snippets. Items from that range are marked "(snippet)".
-- A re-sweep of Casey 101+ and Sol 203+ is needed before this file is treated as complete.
+- A re-sweep of Sol 203+ is needed before this file is treated as complete.
 
 Repo checks are targeted greps of `prime/` only.
 
@@ -92,7 +92,7 @@ Source: https://claude.ai/chat/fa8c4131-81e2-44e5-9ec2-e4a8a0850312 · updated 2
 # Casey Geim
 Source: https://claude.ai/chat/f7712be1-509e-42bb-a151-4bf24b58224e · updated 2026-10-25
 
-Coverage: turns 0–100 of 108 read in full. Turns 101–107 not read (read limit hit); resume at page_token "t101". Items marked "(snippet)" in the earlier pass are now confirmed or corrected unless still marked.
+Coverage: read in full, turns 0–107 of 108. Items marked "(snippet)" in the earlier pass are now confirmed or corrected unless still marked.
 
 ## Settled
 
@@ -176,6 +176,24 @@ Coverage: turns 0–100 of 108 read in full. Turns 101–107 not read (read limi
 - Each point has five parts: the Sign (hook), the Subject (what the point is), the Work (the adventure), the Gift (what he learns), the Toll (what Astra takes, never named at the table). — **not in repo** (no "Toll" hit)
 - Variance axes: scale, subject, tone, engagement, guidance. Each new point shifts at least three from the last. — **not in repo**
 
+### Starchildren and Viren (turns 101–105)
+- "Starchildren" replaces "hearer" as the term for Astra's warlocks (Korey, turn 102). — **conflicts** in part: Starchild is **in repo** (crew/casey.html, glossary link "A Starchild"), but "hearer" survives in crew/casey.html ("needs a hearer to do the stitching") and dossiers/astra-virex.html ("It finds a hearer and draws them in")
+- Where Starchildren overlap at a celestial body, change speeds up, because Astra has more tethers there (Korey, turn 102). — **in repo** (crew/casey.html, "Where more than one Starchild has tethered, paracausal change accelerates")
+- Overlap scale: one Starchild = slow drift over decades or centuries; two = visible within years; three or more = months, the Astra hotspots. (Claude elaboration of Korey's idea) — **not in repo** as a scale (crew/casey.html states acceleration only)
+- Zerathis was a Starchild (Korey, turn 102). — **in repo** (crew/casey.html, "Zerathis was a prior Starchild")
+- Zerathis was consumed: he went deep and dissolved into Viren's paracausal layer; what remains can speak and may call Casey "brother" or "Starchild". (Claude read Korey's "great starting point" as choosing this; Korey did not confirm it explicitly in the chat) — **in repo** (crew/casey.html, "dissolved into the paracausal layer of the system")
+- Mirt's wardrobe is a paracausal replica of Zerathis's anchor at Viren, which is why Casey was drawn to it and why Polly could reach him there. (Claude, turn 103) — **in repo** (dossiers/mirt.html; crew/casey.html, "a paracausal replica of Zerathis's anchor")
+- Polly is the only voice Casey hears. The "hearing" motif was Claude's error; Casey's paracausal faculty is sight (Korey correction, turn 104). — **in repo** (crew/casey.html, "his faculty is visual: he sees constellations nobody else can")
+- When Casey's tethers change a place, he sees it as new stars appearing above things that had none. (Claude, turn 105, unanswered) — **not in repo**
+- Folk shorthand for Starchildren: "they see things", "they read the sky", "the stars know them". (Claude, turn 105, unanswered) — **not in repo**
+
+### Ambient Viren seeding (turns 106–107)
+- Korey's table method: put situations in the world and let characters respond or do nothing; do not script how people act. — **not in repo** as a stated principle
+- Not every Viren thread should be a mystical tug or Polly speaking. Some Viren information should simply be in the world, useful or harmful, for Casey to pick up or ignore. — **not in repo**
+- Casey's only live thread is the voyage to H'Catha (dictated "Hakata"), about two weeks; it is the space to sprinkle Viren information. — **in repo** for the H'Catha destination (campaign/spine.html); the seeding plan is **not in repo**
+- Claude's seed list (proposal; Korey had not picked yet): veteran's tall tale ("the stars sit funny"), a shanty about a sailor who came back someone else, a mess-table "Viren route" argument, a "Viren-stone" card bet, an old captain's log, a chart margin note "ask Zerathis re: approach", an unclaimed Viren crate, a "Viren-blessed" trinket merchant, a patrol officer asking about overdue Viren ships, a pilgrim ship ("we were called"), a notice seeking Lashrik bound for Viren, a pragmatic trader with charts, a street preacher on "the cold stars" and "the children they take", a cadet who doodles one of Casey's cloak patterns, an old Academy lecture naming Virenspace as a folk-cosmology case study, Mirt mentioning a friend who would never return to Virenspace. — **not in repo** (no "Lashrik", "shanty" or "Viren-stone" hit)
+- Execution guidance (proposal): no seed gated to Casey; the pilgrim ship is the only pressure seed, saved for mid-journey; at most two or three seeds per in-game day. — **not in repo**
+
 ## Superseded
 - Soft hook: advantage on Insight/Persuasion once per long rest after learning a sign → replaced by Stellar Reading.
 - Two-step reading (identify, then Insight roll to "land" it) → rejected because it gates on NPC cooperation.
@@ -199,11 +217,23 @@ Coverage: turns 0–100 of 108 read in full. Turns 101–107 not read (read limi
 - Gaining stars by aligning with stellar entities that "show him something" → point-driven attunement at constellation points.
 - Area-change list of magic-flavored oddities (coins on edge, off-color light, time stutters) → nature-level paracausal change.
 - Astra's clock as "the thing that wounded it is still out there" → Korey set the Axiom as the wound; clock not adopted.
+- "Hearer" as the term for Astra's warlocks → "Starchildren".
+- Casey's paracausal faculty as hearing (cosmic voices, a second voice in the background) → sight; Polly is the only voice.
+- L3 scene as a waking vision where his hearing sharpens → his sight sharpens: a lifelong constellation resolves and points to Viren, Polly says one word, he stitches it onto his cloak, and he glimpses someone else's chart. (Claude proposal, unanswered)
+- Zerathis's fate options "departed" and "diverged" → "consumed" (see Settled).
 
 ## Open
 - What the first tether point is and what happens at Viren (also open in crew/casey.html). Options offered: a dying stellar entity, a Zerathis-connected place or person, stellar-touched inhabitants, a rift onto a missing constellation.
 - What "bad" event at Viren makes Casey question the trade.
-- Whether Casey's paracausal nature is innate or began when Polly left. Claude proposed his hearing reaches the paracausal layer; this **conflicts** with crew/casey.html ("his faculty is visual: he sees constellations nobody else can").
+- Whether Casey's paracausal nature is innate or began when Polly left. (The hearing proposal is withdrawn; the faculty is sight, matching crew/casey.html.)
+- Whether Casey has heard the word "Starchild" before (also open in crew/casey.html).
+- Whether Zerathis recruited other Starchildren, which sets how deep Viren's overlap runs (also open in crew/casey.html).
+- What Casey cares about at Viren that gets changed (a befriended creature, a loved view, a phrase of Polly's).
+- Whether Polly's voice is rationed as a rare event (Claude, turn 105). This may conflict with crew/casey.html's loop, where his voice "comes through cleaner" with each tether.
+- Whether there is a port call on the way to H'Catha.
+- Whether to use the cadet-who-draws-Casey's-pattern seed.
+- The unclaimed crate's contents (star-flowers, an obsidian lens showing another sky, a letter to a dead addressee).
+- Whether to flesh the seeds into runnable beats or a day-by-day scatter for the two weeks.
 - Casey's want beyond Polly. Claude offered "to be chosen the way Polly was chosen"; not confirmed.
 - The other hearer's shape (further along, earlier, diverged, or opposing) and destination.
 - The level 3 narrative scene (first tether, first area change, or Polly speaking directly to him).
@@ -212,7 +242,6 @@ Coverage: turns 0–100 of 108 read in full. Turns 101–107 not read (read limi
 - The Lantern Node alignment bonus.
 - Final name for Astra.
 - Whether to add the Gemini brand and zodiac spell names to Casey's page.
-- Turns 101–107 not yet read.
 
 ## Documents produced
 - Stellar reading chart widget, versions v1 to v5.2 (visualize widgets in chat). A version reached the repo as /stellar-chart/index.html (site root, outside prime/).
@@ -220,6 +249,8 @@ Coverage: turns 0–100 of 108 read in full. Turns 101–107 not read (read limi
 - crew-manifest/casey.html with a Stellar Reading section and chart link. File in chat outputs; reached the repo as crew-manifest/casey-geim.html (site root).
 - Stellar Reading writeup, several drafts ending in a D&D Beyond-style feat. The final text reached the player page; not under prime/.
 - Tumak and Casey mechanical comparison and the point-design framework. Chat only. Not in repo.
+- Viren ambient seed list for the H'Catha voyage (turn 107). Chat only. Not in repo.
+- Claude noted the Casey arc doc (Google Drive) is thin and needs a consolidated rewrite, and the lore bible's Virenspace entry needs a development pass. Neither was done in this chat.
 
 ---
 
