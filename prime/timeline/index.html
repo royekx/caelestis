@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Timeline · Caelestis · DM</title>
+<link rel="stylesheet" href="../../styles/caelestis.css">
+<link rel="stylesheet" href="../../styles/dm.css">
+<script src="../scripts/dm-nav.js" defer></script>
+<style>
+  .tl-legend { display:flex; flex-wrap:wrap; gap:.5rem 1.25rem; font-size:1rem; color:var(--text-dim); margin:1rem 0; }
+  .tl-legend button { font:inherit; color:inherit; background:none; border:1px solid var(--rule); padding:.2rem .6rem; cursor:pointer; display:inline-flex; align-items:center; gap:.4rem; }
+  .tl-legend button[aria-pressed="false"] { opacity:.4; }
+  .tl-swatch { width:.9rem; height:.9rem; display:inline-block; }
+  .tl-wrap { overflow-x:auto; border:1px solid var(--rule); background:var(--bg-panel); }
+  .tl-grid { display:grid; min-width:max-content; }
+  .tl-head, .tl-lane, .tl-cell { padding:.5rem; border-right:1px solid var(--rule-soft); border-bottom:1px solid var(--rule-soft); }
+  .tl-head { font-size:.95rem; color:var(--gold-light); position:sticky; top:0; background:var(--bg-deep); z-index:1; }
+  .tl-head small { display:block; color:var(--text-faint); font-size:.8rem; }
+  .tl-lane { font-size:1rem; color:var(--text-soft); position:sticky; left:0; background:var(--bg-deep); z-index:2; width:11rem; }
+  .tl-corner { position:sticky; left:0; top:0; z-index:3; background:var(--bg-deep); }
+  .tl-cell { width:13rem; display:flex; flex-direction:column; gap:.4rem; }
+  .tl-now { background:var(--gold-faint); }
+  .tl-head.tl-now { box-shadow: inset 0 -2px 0 var(--gold); }
+  .tl-chip { text-align:left; font:inherit; font-size:.92rem; line-height:1.3; color:var(--text); padding:.35rem .5rem; cursor:pointer; border:1px solid; background:var(--bg-card); }
+  .tl-chip:hover, .tl-chip:focus-visible { background:var(--bg-raised); outline:none; }
+  .tl-chip.is-past      { border-color:var(--ice-dim); }
+  .tl-chip.is-now       { border-color:var(--gold); background:var(--gold-faint); }
+  .tl-chip.is-planned   { border-color:var(--ice-light); border-style:dashed; }
+  .tl-chip.is-projected { border-color:var(--violet); border-style:dashed; }
+  .tl-chip.is-working::after { content:" · draft"; color:var(--text-faint); font-size:.8rem; }
+  .tl-chip.is-open::after    { content:" · open"; color:var(--text-faint); font-size:.8rem; }
+  .tl-chip.has-conflict { box-shadow: inset 3px 0 0 var(--cadet); }
+  .tl-chip.is-hidden { display:none; }
+  .tl-detail { margin:1rem 0; padding:1rem 1.25rem; border:1px solid var(--gold-rule); background:var(--bg-card); min-height:4rem; }
+  .tl-detail h3 { margin-top:0; }
+  .tl-detail .tl-meta { color:var(--text-muted); font-size:.95rem; }
+  .tl-detail .tl-conflict { color:#e08a8a; }
+  .tl-problem { border-left:3px solid var(--cadet); padding:.25rem 0 .25rem 1rem; margin:1rem 0; }
+  .tl-problem p { margin:.35rem 0; }
+</style>
+</head>
+<body>
+
+<main class="dm-content">
+
+  <header class="dm-page-header">
+    <div class="dm-page-eyebrow">Campaign<span class="sep">·</span>Cosmic Timeline</div>
+    <h1>Timeline</h1>
+    <p class="dm-page-lede">
+      What has happened, what is happening, and what will happen if nobody intervenes, across every campaign in the cosmos. The DM's truth, never shown to players. Columns are eras rather than years, and the gold column is the Caelestis present. Session detail lives in <a href="../campaign/voyages/">Voyages</a>, arc shape in the <a href="../campaign/spine.html">Spine</a>, and the opposition's plan in <a href="../campaign/ascension/">the Ascension</a>. Entries are kept in <code>prime/timeline/timeline.json</code>.
+    </p>
+  </header>
+
+  <div class="tl-legend" id="tl-legend" aria-label="Filter by status">
+    <button type="button" data-status="past" aria-pressed="true"><span class="tl-swatch" style="border:1px solid var(--ice-dim)"></span>Happened</button>
+    <button type="button" data-status="now" aria-pressed="true"><span class="tl-swatch" style="border:1px solid var(--gold);background:var(--gold-faint)"></span>Happening now</button>
+    <button type="button" data-status="planned" aria-pressed="true"><span class="tl-swatch" style="border:1px dashed var(--ice-light)"></span>Planned for the crew</button>
+    <button type="button" data-status="projected" aria-pressed="true"><span class="tl-swatch" style="border:1px dashed var(--violet)"></span>Will happen if unopposed</button>
+    <span><span class="tl-swatch" style="box-shadow:inset 3px 0 0 var(--cadet);border:1px solid var(--rule)"></span> Timing problem</span>
+  </div>
+
+  <div class="tl-wrap"><div class="tl-grid" id="tl-grid"></div></div>
+
+  <div class="tl-detail" id="tl-detail" aria-live="polite">
+    <p class="tl-meta">Select an entry to read it.</p>
+  </div>
+
+  <details class="dm-collapse-section" open id="problems">
+    <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Timing problems</h2></summary>
+    <div class="dm-collapse-section-body" id="tl-problems"></div>
+  </details>
+
+</main>
+
+<script>
+(function () {
+  var STATUS = { past: 'Happened', now: 'Happening now', planned: 'Planned for the crew', projected: 'Will happen if unopposed' };
+  var CERT = { canon: 'Canon', working: 'Working draft', open: 'Open' };
+  var hidden = {};
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+
+  function render(data) {
+    var grid = document.getElementById('tl-grid');
+    grid.style.gridTemplateColumns = '11rem repeat(' + data.eras.length + ', 13rem)';
+    grid.appendChild(el('div', 'tl-head tl-corner', ''));
+    data.eras.forEach(function (e) {
+      var h = el('div', 'tl-head' + (e.now ? ' tl-now' : ''), e.label);
+      h.appendChild(el('small', null, e.note));
+      grid.appendChild(h);
+    });
+    data.lanes.forEach(function (lane) {
+      grid.appendChild(el('div', 'tl-lane', lane.label));
+      data.eras.forEach(function (era) {
+        var cell = el('div', 'tl-cell' + (era.now ? ' tl-now' : ''));
+        data.events.filter(function (ev) { return ev.lane === lane.id && ev.era === era.id; })
+          .forEach(function (ev) {
+            var b = el('button', 'tl-chip is-' + ev.status + (ev.cert !== 'canon' ? ' is-' + ev.cert : '') + (ev.conflict ? ' has-conflict' : ''), ev.title);
+            b.type = 'button';
+            b.dataset.status = ev.status;
+            b.addEventListener('click', function () { show(ev, lane, era); });
+            cell.appendChild(b);
+          });
+        grid.appendChild(cell);
+      });
+    });
+
+    var nowHead = grid.querySelector('.tl-head.tl-now');
+    if (nowHead) grid.parentNode.scrollLeft = nowHead.offsetLeft - grid.querySelector('.tl-lane').offsetWidth - 40;
+
+    var probs = document.getElementById('tl-problems');
+    data.problems.forEach(function (p, i) {
+      var d = el('div', 'tl-problem');
+      d.appendChild(el('h3', null, (i + 1) + '. ' + p.title));
+      d.appendChild(el('p', null, p.detail));
+      var o = el('p', null, 'Options: ' + p.options);
+      d.appendChild(o);
+      probs.appendChild(d);
+    });
+  }
+
+  function show(ev, lane, era) {
+    var d = document.getElementById('tl-detail');
+    d.innerHTML = '';
+    d.appendChild(el('h3', null, ev.title));
+    d.appendChild(el('p', 'tl-meta', lane.label + ' · ' + era.label + ' · ' + STATUS[ev.status] + ' · ' + CERT[ev.cert]));
+    d.appendChild(el('p', null, ev.desc));
+    if (ev.conflict) d.appendChild(el('p', 'tl-conflict', ev.conflict));
+  }
+
+  document.getElementById('tl-legend').addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-status]');
+    if (!b) return;
+    var s = b.dataset.status;
+    hidden[s] = !hidden[s];
+    b.setAttribute('aria-pressed', hidden[s] ? 'false' : 'true');
+    document.querySelectorAll('.tl-chip').forEach(function (c) {
+      c.classList.toggle('is-hidden', !!hidden[c.dataset.status]);
+    });
+  });
+
+  fetch('timeline.json').then(function (r) { return r.json(); }).then(render).catch(function () {
+    document.getElementById('tl-grid').textContent = 'timeline.json could not be loaded.';
+  });
+})();
+</script>
+</body>
+</html>
