@@ -89,7 +89,189 @@ Old URLs get one-line redirect stubs for a while, so links already shared with p
 3. Session accounts. Merge `bearings/`, `crew-logs/` and `logs/` into `voyages/`, or keep "current bearing" as its own page?
 4. Order of work. Refactor the player side first and the prime overhaul second, or do both in one pass?
 5. Stale branches. Delete all but `main` and the working branch?
-6. `prime/notes/`. Which docs survive the consolidation, and do they move to an undeployed `docs/` folder?
+6. `prime/notes/`. Approve the three-doc consolidation below, and choose `docs/` (undeployed) or a prune line in `deploy.yml`.
+
+## prime/notes consolidation
+
+### Plan
+
+Three files total, in an undeployed `docs/` (refactor call 6), or kept under `prime/notes/` with a prune line added to `deploy.yml`.
+
+**1. `CLAUDE.md`** (repo root, already pruned from deploy). Grows to hold:
+- Folder map (current, then refactor shape as it lands) and which side each folder is on.
+- The record and the data boundary, condensed from DB: the encounter rule, where each fact lives, record vs DM layer files, authored vs derived, `derive`/`check`/`guard`, the closed schema, "the schema tests the key, not the sentence", gating is not secrecy.
+- Writing rules, lifted from `prime/working/README.md`: specific over sparse; plain, precise; in-world voice for world facts, DM voice for mechanics and planning; open questions only on the planning layer; no stacked negations; canon voice not changelog voice.
+- The working flow pointer (inbox → drafts → BACKLOG → STAGING → pages) with a link to `prime/working/README.md`.
+- Deploy and search: three indexes, the player glob is the boundary, add new player folders to the glob and scope selector, one bare `section:` filter, `data-pagefind-ignore` on chrome, `vocabulary.js` for misspellings, gated search flags.
+- Naming: the settled names list above.
+- Existing rules (PRs not main, `_benched/` out of service, site-relative urls, never reuse a retired path).
+- Read-before-editing table updated to the two docs below.
+
+**2. `SESSION-RUN.md`**: SESSION-RUN with CHRONICLE merged in as its step 2 section (they are always read together, and SR already points to CHR). Fix the step 2 write target, use one set vocabulary, update the vessel rule once Conflict #3 is ruled, and drop the bearings rows if refactor call 3 folds them into voyages.
+
+**3. `PAGE-GUIDE.md`** (one page guide, both sides): PAGE-SHAPE as the spine, plus from WPG the setting-voice discipline (seam table, one-shot DM test, comparative absolutes, no option menus), functional headings, anchors, cross-refs, head template (corrected paths), voyage-entry markup, plot-hook pills, default-open list; plus the player-page rules (player dossiers, inventory entry/item, crew manifest fields, shared-sheet rule, layout guards, portraits, companion pages); plus a short FIA voice section. The dossier tab set and `is-open` placement wait on Conflicts #1 and #2.
+
+**Deleted**: CHRONICLE.md (merged), DATA-BOUNDARY.md (into CLAUDE.md), PAGE-SHAPE.md and WIKI-PAGE-GUIDE.md (into PAGE-GUIDE.md), DEPLOY-README.txt, FIA-BREADCRUMBS.md, FIXES-DEMO-MIGRATION.md, RESTRUCTURE-NOTES.md, SEARCH-SETUP.md, init.md, restricted.md.
+
+If Korey prefers to keep the data boundary standalone (the refactor's own list names four docs), it becomes a fourth file; everything else stands.
+
+**References to update when the files move** (or `check`/readers will point at nothing):
+- `CLAUDE.md` lines 23, 30–32
+- `scripts/data.js` header comment (line 10)
+- `.github/workflows/check.yml` line 9, `deploy.yml` line 75 (comment)
+- `prime/tracker/index.html` line 23 (`prime/notes/SESSION-RUN.md`)
+- `prime/campaign/index.html` line 321 ("WIKI-PAGE-GUIDE.md at the repo root"; already a BACKLOG fix)
+- `prime/scripts/dm-tracker.js` line 22 (comment)
+- `scripts/_benched/README.md` (cites DATA-BOUNDARY.md)
+
+### Retired notes
+
+- **FIXES-DEMO-MIGRATION.md**: sixteen passes of CSS/demo migration logs (missing classes, sticky bar, overflow, register.css sections 1–16, rails, phones, quest loot). Durable lessons extracted above; the rest is history in git.
+- **RESTRUCTURE-NOTES.md**: one-off bundle notes for the gate/hub, crew-logs → voyages rename, legibility pass, portrait CSS, inventory split, V004 manifest reconcile, dossier batch, search bleed, stat-row wrap. Durable rules extracted above.
+- **DEPLOY-README.txt**: a zip-bundle deploy list from before Actions deploy; stale-file deletions already done; verification steps and "still pending" refer to the old flat prime/ layout and World Surveyor.
+- **SEARCH-SETUP.md** "one thing you do once": done. Alias section: replaced. Remaining rules move to CLAUDE.md.
+- **FIA-BREADCRUMBS.md** entries 1–2: paste-ready Brig drafts. Content belongs in BACKLOG/STAGING (as FIA page items) or is already placed; voice rules move to the guide.
+- **WPG integrity-check script**: replaced by `data.js check`.
+- **WPG tag list** (`is-locked`, `is-cosmic`, `is-stub`, `is-warn`, `is-info`): retired; zero uses on prime pages.
+- **WPG hierarchy diagram and reference table**: pre-register layout (`remaking/` no longer exists; `ascension/`, `colony/`, registers missing).
+- **WPG "Things in Play" / "Untethered" Realms subsections**: replaced by registers.
+- **PS "Why the scroll had to go" and the tab-set history paragraphs**: rationale, not rules.
+- **FIX "Still outstanding"**: `_templates/entity.html`, `build-data.js`, tracker Visited column: scaffolder is benched, Sheet retired.
+- **Voyage-briefing-001/003/004 missing links** (RN, FIX, DEP): a BACKLOG item, not a guide rule.
+- **Side-tab demos** (`demo-*-side-tabs.html`): folded into the site in pass 13.
+- **`init.md`, `restricted.md`**: empty.
+- **DEP "Tumak's homeworld renamed Lunarfoot"**: superseded (Lunarfoot is the clan).
+- **FIX open UI calls** (FIA bearing strip, survey chart merge, nav-records 1024px clip, clickable blurb overlay): move to BACKLOG if still wanted.
+
+### Rules to carry into the three docs
+
+Lifted from the notes; each line keeps its source file. Conflicts with the new
+writing rules are in BACKLOG.md § Repo and process.
+
+### Data boundary and the record
+
+- A record exists if and only if the crew has encountered the entity: met in person, or named to them. Everything else lives in `prime/` only. (DB, SR)
+- An entity crosses into the record at first contact and keeps its DM dossier afterward. The record holds what the crew saw; the dossier holds what is true. (DB)
+- Where each kind of fact lives: a met entity → a record in `data/*.json`; DM truth about it → `prime/data/overlay.json` under the same id, plus its dossier in `prime/dossiers/`; an unmet entity → `prime/` only; a power moving off-screen → a lane in `overlay.json` with its own `DM-` id. (DB, SR)
+- The record is the only place a fact is entered. Pages are its rendering, written by hand. To correct a page, correct the record, run `derive`, edit the page to match. (DB, SR, PS; already in CLAUDE.md)
+- `derive` fills mechanical fields; `check` runs on every PR and proves record, DM layer and pages agree, including every local link and anchor; `guard` runs in the deploy and asks only whether `data/` is fit to publish. (DB)
+- The schema is closed and listed at the top of `scripts/data.js`. A new field is a change to that list, made in its own commit and named in the PR. (SR, DB)
+- Authored fields (edit): `id slug name number kind parentId giverId fields objectives rewards voyages seen mentioned linked`. Derived (never edit): `type url links parent giver children within items progress`, plus `data/index.json`, `data/voyage.js`, `prime/data/dossiers.json`. (SR; matches data.js)
+- The schema tests the key, not the sentence. A DM fact typed into a player field passes every check. That is what the two session-run approvals are for. (DB)
+- `prime/` is gated in the browser and disallowed to crawlers, but it is published and the repo is public: out of the players' way, not secret. Anything that must stay private stays out of the repository. Same for the DM and FIA search indexes. (DB, SRCH)
+- The Tracker (`prime/tracker/`) and the Voyages board read both layers directly. They are views; nothing is entered in them. (DB, SR)
+- DM-side `overlay.json` keys per record: `urgency`, `next`, `note`, `dossier`, `voyages[n].beats`. Urgency and Next Planned Beat live here, never in `data/`. (DB, SR)
+- A DM beat is what a voyage meant that the crew could not see: a planned beat that landed, a clue misread, something that moved behind them. It is the DM-side twin of a bullet. (SR)
+
+#### Session run
+
+- Steps 0–7: Open (branch + passing check) → Read → Chronicle (**approval 1**) → Extract (**approval 2**) → Record → Render → Check → Publish. Nothing written to the repo before approval 1; nothing to the record before approval 2. (SR; matches CLAUDE.md)
+- A run needs nothing from an earlier chat. A run that stops halfway is picked up from its branch. (SR)
+- Step 0: `git fetch origin main && git checkout -b claude/voyage-NNN origin/main`, then `check`. If it fails, fix it first in a separate commit; a run that starts on a disagreeing record cannot tell its mistakes from old ones. (SR)
+- Inputs: source in Drive named `Caelestis _ The Spelljamming Academy _ Voyage NNN.txt` (transcript or dictation, same name); repo `royekx/caelestis`; Crew Logs = Google Doc "Voyages"; voyage number from the file name. (SR)
+- Read order: CHRONICLE rules → the voyage's entry in `prime/campaign/voyages/index.html` (briefing, plan, corrections) → every record `name` and current state, `data/vocabulary.js` → Full Accounts of the last two voyages → the source in full. (SR)
+- Extract works from the approved account, never the source. Output is one change table: Record | Change | Detail. (SR)
+- Consider all seven sets every run (sessions, PCs, NPCs, factions, locations, items, quests). Usual misses: places visited, things changing hands, threads touched in passing. (SR)
+- Match on id, never on name. A near-match name is a question for the DM, never a second record. (SR, CHR)
+- New id: set prefix, hyphen, eight random letters/digits (`NPC-7wK4mB9x`). Never reused or edited. Prefixes per data.js: `SES PC NPC FAO LOC ITM QST`. (SR + data.js)
+- Every record has a page; a new record is not finished until its page and its register row exist. (SR)
+- Bullets go under `voyages[n].bullets`: one fact each, past tense, the account's own wording, only what the crew knows. (SR)
+- `seen` if present, `mentioned` if only named. (SR)
+- "Now" fields are overwritten, never a history: Current State, What They Last Learned, Status, Held By. Overview changes only when what the crew understands the thing to *be* has changed. (SR)
+- Objectives hold what the party knows it must do next (decided, told, or the only reasonable inference). What they fought through is a bullet. Tick done, add new. (SR)
+- `linked` is entered once, on either record; `derive` shows it on both. (SR)
+- Status vocabulary is in-world and fixed per set: crew/factions Active; cast Active · Deceased; places Accessible · Simulated; things Held · Lost; threads Open · Complete. A new value is a question for the DM. (SR)
+- Player render surfaces: new `voyages/voyage-NNN.html` from `voyage-template.html` (At a Glance, Brief Account, Full Account, Recording); previous voyage's next link; `voyages/index.html` row + Overview; `bearings/voyage-NNN.html` from the previous one; `bearings/index.html` = copy of latest; `data/bearing.js`; `data/vocabulary.js` (every new proper noun); each changed record's page (new voyage becomes latest block, old moves to Previous Voyages; stat rows, overview, objectives, Connections); each new record's page from a sibling with `data-entity` set; every register index. (SR) *Bearings rows depend on refactor call 3.*
+- Brief Account and At a Glance are taken from the approved Full Account and add nothing it does not say. (SR)
+- DM render surfaces: `prime/campaign/voyages/index.html` (Actual, Delta, clear its flags, player link, Next session block); `spine.html` if an arc beat closed; `plot-hooks.html` for hooks that moved; `prime/dossiers/*` History, in-world, for anyone who acted; `prime/crew/` only if a PC's mechanics changed. (SR)
+- Check: zero errors before the PR; warnings fixed or named in the PR. Then open the changed pages in a browser once. (SR)
+- What `check` cannot see (the approvals cover it): whether a bullet is true to the session, whether a fact belongs player-side at all, voyage glance/Brief/Full prose, bearing wording, any `prime/` prose, the Crew Logs doc. (SR)
+- Publish: append Full Account to "Voyages" under `Voyage NNN – Title`; one PR per voyage titled `Voyage NNN: Title`, body = the change table + check warnings; Korey merges; deploy publishes on merge. (SR)
+- Standing rules: DM corrections outrank the source. A doubt is asked, never guessed (name, attribution, new status). Nothing invented to fill a gap. Earlier voyages are history: a later correction is recorded in the voyage where the crew learned it, earlier bullets stay as the crew understood things then, unless the DM rules otherwise. (SR)
+
+#### The chronicle (Full Account)
+
+- Player-facing; on the voyage page and appended to Crew Logs. Reads like the next chapter of one continuous fantasy-adventure novel, fully faithful to the table. (CHR)
+- Infer source type. Transcript: order reliable, proper nouns and speaker attribution unreliable; correct names against the record, never guess attribution. Dictation: authoritative for events, names, attribution; rebuild loose chronology; never narrate asides; flagged doubt → treat as ambiguous transcript. The recap never says which it was. (CHR)
+- Length is set by the source, not earlier voyages. Do not pad. Prose rules never license invention: no unsourced physical description; established description may carry forward. (CHR)
+- Authority, high to low: DM corrections on `prime/campaign/voyages/` (written as events in sequence) → the record (spellings, names, pronouns, roles, state) → earlier voyages → the source. The record governs continuity only, never adds events. Apply record corrections silently. (CHR)
+- Build the name list fresh each run from every record's `name` plus `data/vocabulary.js`. Known garbles as a guide: Calestis, Hakatha, Sareth Abazine, Aztec-6/Austech, Volkath, Vena (for Veena), Crick Lit (for Krik'Lit). (CHR)
+- Perspective: only what was revealed, experienced, learned, witnessed or reasonably inferred this voyage or earlier. Exclude DM notes, future plot, unrevealed motives/identities/titles/affiliations, anything from `prime/` (corrections excepted, as perceived), rules/dice/classes/levels/feat names (render mechanics as lived experience), connections the players have not made, names for things only glimpsed. (CHR)
+- Two checks every recap: perceived is not named; the narrator knows only what the crew knows. Unresolved stays unresolved; suspicion stays suspicion; an unexposed lie is written as experienced. (CHR)
+- Style: third person ensemble; paragraphs open on a place or transition; deliberate short standalone sentences; em-dash allowed but never stacked; overlong sentences split; closes on a reflective paragraph naming what is still gathering. No bullets, scene rules or timestamps. Humour only where it happened. (CHR)
+- Prose discipline, the core rule: render the specific thing, do not characterize the type of thing. Remove five tics: "the kind of / the way of"; definition by negation (one earned contrast max); clipped negation as false depth; the aphorism reflex; hollow intensifier framing. Applies even when the source used the construction. (CHR)
+- Characters: consistent names; quote a handful of turning-point lines per voyage, spread through; no artificial equal space but register each cadet present; tie each vision to its cadet; unattributed actions stay "one of the cadets". Combat is a novel scene, never round-by-round (V001 simulation is the model). (CHR)
+- Title: `Voyage NNN – Title`, en dash, three digits; short, evocative, never repeated; approved with the account. (CHR)
+- Eight-point pre-approval checklist (names, continuity, corrections, attribution, spoilers, invention, voice, prose tics) and a DM-notes list after the account (uncertain attributions, near-match names, unreconciled corrections), never published. (CHR)
+
+#### DM page shape (`prime/`)
+
+- A callout is a one-breath aside inside prose. Anything with a table or more than one paragraph is a subsection with a heading. One callout treatment; `is-warn/is-cosmic/is-info` no longer paint and are not used. (PS)
+- Page opening: `dm-page-header` with eyebrow `Section · Kind`, `<h1>`, and one-paragraph lede carrying the routing (what is here, what is elsewhere, where terms are defined). No "how to use this page" box. A page that has to explain how to read it has the wrong shape. (PS)
+- Top-level sections are `<details class="dm-collapse-section">` with `<h2>` in the summary; three or more become a tab strip via `dm-sections.js`. Subsections `<h3>`, then `<h4>`; inside a dossier tab start at `<h4>`. (PS)
+- Dossier tabs, in order, only those with content, never a one-off name: Who they are (in-world) · What they want (in-world) · DM notes (DM) · Stat block. DM notes subsections in order: What's hidden (in-world) · Threads · How to run them · Open. Labels never inflect for the subject. History folds into Who they are. (PS) *See Conflicts #1 and #2.*
+- Voice: in-world tabs state what is true, not what it is for. "The crew"/"the party" are in-world nouns; "the players", "the campaign", "the session", "the scenario" are not. (PS)
+- Link a name that has its own page on first weighty mention per panel; leave passing nouns alone. (PS) Candidate addition from the cosmic-campaign sweep (BACKLOG): concept backlinks deep-link to the section, not the page.
+- Bold marks the one claim a tab turns on. Italics for sentence emphasis, bold for terms to retain, both sparingly. (PS, WPG)
+- A thing gets a page; a concept gets a section. A stub page is a correct outcome. A concept earns a page only when a section can no longer hold it. (PS)
+- Registers and what they hold: dossiers = anything with a will; realms = places, grouped by system; vessels = ships with a name and history; artifacts = objects carried, held or used; factions; crew. Cosmology and rules = sections; glossary = lines. (PS)
+- A register page is a narrowable list: search field, facet pills (AND across axes, OR within), result count, clear control, rows expanding in place and linking through. It loads `dm-nav.js` and `dm-register.js` only (no tab strip, no TOC). Axes come from `data-` attributes on pills; a row may hold several space-separated values on one axis. Concept material sits as a collapsed section below the rows; tools are embedded (`.dm-embed`, "Open full"). (PS)
+- Register axes: realms system/kind/standing; dossiers side/kind/standing; factions reach/posture; crew where the rules live; vessels where/standing/depth; artifacts fragment/standing. (PS)
+- A container (faction, system, ship) gets a page; its members get `.dossier-row`s on it (portrait, name, role, one-line read, expand, link to their own entry). The row is the quick read, not the entry. One representation per entity: no separate status table, no table-plus-notes duplication. (PS, WPG)
+- Which register: a dossier answers "what is it and what does it want" (earned when a DM has to play it); a Realms entry answers "what happens when we go inside"; a Vessels entry is any named ship with a history, interior included; Artifacts never holds a vessel. A dossier and a vessel entry for the same ship is normal (Vth'oramu yes/yes; tyrant ship vessel only). (PS; matches refactor rule)
+- Containers get entries even when thin (SYS-01, SYS-04). Every dossier carries a Kind line in its identity card. (PS)
+- Tags: four classes, no fifth. `is-canon` (Canon, Played) · `is-open` (own label, three words max) · `is-dm` (DM only) · `is-kind` (Character, Object, Place, Event, Pattern). A tag is a label, never a sentence; never restates adjacent text; a fact about the subject is a stat row, not a tag. `is-locked`/`is-stub` stay retired. Tags are stripped from the TOC by `dm-toc.js`. (PS, WPG) *`is-open` placement: Conflicts #2.*
+- Plot Hooks rows: type tags with `is-canon` styling; status pill `dossier-status is-active | is-forthcoming | is-imminent | is-inactive` (all four are live). (WPG)
+- Voyage entries (planned): What this session can pay · The swap / cast changes · Settled · Open · To run. Played: Briefing, Actual, Delta, using the `voyage-grid` / `voyage-delta` markup. Most recent first; upcoming in a Next session block on top. (PS, WPG)
+- Setting describes what an entity is, currently. No comparative absolutes ("the only known X"); no authorial planning, framing, forward planning or player-facing meta; no option menus (commit to what is true, rewrite if it changes); no "Running the X" sections; no PC roster as illustration of a principle. Current state that implicates PCs and permanent history the campaign created both stay. The one-shot DM test: if a DM running a different campaign in this universe would delete the sentence, it is misplaced. (WPG; this is the new in-world-voice rule with worked examples)
+- Campaign pages reference setting pages, not the reverse (exception: an artifact's custody line). (WPG)
+- Functional headings: declarative, never questions; no enumeration leftovers ("D — The End" → "Failure state"); no stylistic "The" except where it is part of a world-object's name (The Reach, The Hollow, The Bridge). (WPG)
+- Anchors: kebab-case, semantic, brief; part of the public contract; rename only with a reference sweep and `check`. (WPG)
+- Cross-references are relative. External links: `target="_blank" rel="noopener" class="dm-link-external"`. (WPG) Record urls: site-relative, no leading slash (CLAUDE.md).
+- Head template: charset, viewport, `robots noindex,nofollow`, title `[Page] · Caelestis · DM`, `caelestis.css` + `dm.css` (+ `entity.css` on entries), `dm-nav.js` from `prime/scripts/`. (WPG, corrected: WPG's `[base]/scripts/dm-nav.js` paths are wrong; live pages use `../scripts/dm-nav.js`.)
+- Default open: Spine (Central Question, Arcs, Arc 1); Voyages (Next session, Record, most recent voyage); Plot Hooks (Active). Everything else closed. (WPG; drop the hard-coded "V003")
+- `dm-nav.js` refuses to render outside `/prime/`; player `nav.js` stays separate. Never load DM scripts on a player page. (WPG)
+
+#### Player pages
+
+- A named presence gets a player dossier under `dossiers/`: met, mentioned or only heard (Beshaba from laughter, the Runekeeper from a voice). It carries only what the table has, sourced to the voyage, with "named only"/"laughter only" in Last Seen when that is all. The player and DM dossiers never mirror each other. (PS; matches refactor rule 1)
+- Ships the crew encounters get a record and a page. (SR) *Shape: Conflicts #3.*
+- Inventory: an entry is the ledger record (what it is, who holds it, what happened); an item is the readable object, where one exists. An entry with an object carries "The Object Itself" linking through, its ledger row gets a Readable badge, and the item links back. New entries start from `entry-template.html`. (RN, FIX) *Refactor proposes "one folder of item entries"; keep the entry/item rule either way.*
+- Crew manifest reads species · class · station; Specialisation (e.g. Bartholomew's Wilder) is its own row, not the class. Stations are current assignment and expected to move. (RN)
+- Every new player page carries `data-pagefind-filter="section:<top-level dir>"` on `<body>`, one bare value only. Pagefind reads a comma list as a single filter, so extra facets each need their own element. (SRCH, FIX)
+- Navigation chrome and listing containers that only repeat their target pages carry `data-pagefind-ignore` (prev/next bars, portrait labels, filter rows, `.crew-list`/`.dossier-list`/`.item-grid`, voyage overview panels), so index pages do not outrank or pollute detail pages. Named-but-unfiled lines stay indexed. (FIX, RN)
+- Misspelling support: add every new proper noun to `data/vocabulary.js`; `scripts/spelling.js` corrects as a fallback only (query runs as typed first, then "Showing results for…"). Nothing goes on the page. (RN)
+- Never reuse a retired path for different content; retire and redirect instead (the `crew-logs/` → `voyages/` lesson). Redirect stubs carry `data-pagefind-ignore`. (RN; directly relevant to refactor call 2)
+- Every page declares a viewport meta. (FIX)
+- A page that uses a shared component class must load the sheet it lives in (`railed`, `tabrail`, `board-tab`, `account-tab`, `ent-row`, `register`, `facets`, `entry-header`, `stat-card` → `entity.css`/`board.css`/`register.css`). Missing sheets caused three silent failures. (FIX)
+- Layout guards worth one line each in the guide: use `html { overflow-x: clip }` never `overflow-x: hidden` on body (it breaks sticky); give grid/flex children `min-width: 0`; `auto-fit` needs a real track minimum, e.g. `minmax(min(210px,100%),1fr)`; inline scripts escape `</` as `<\/`; cut HTML with a depth-counting slice, never a greedy regex, and check `<div>` balance. (FIX)
+- Portraits: every new face needs a line in `scripts/portraits.js` (DM) or `scripts/portraits-player.js` and the `<img>` baked into the page; nothing renders them at runtime while the scaffolder is benched. (FIX, WPG)
+- Bespoke companion pages (wayfinder path, stellar chart) keep their own skin and carry a return link to their crew page; crew pages link out via `.companion-card`. (FIX)
+
+#### Deploy and search
+
+- Deploy runs on push to `main` (Pages source = GitHub Actions): builds three Pagefind indexes (player `/pagefind/`, DM `/prime/pagefind/`, FIA `/restricted/pagefind/`), runs `guard`, prunes, publishes. The index is never committed. (SRCH, deploy.yml)
+- The security boundary is the index contents: the player glob names only player directories. A new player top-level folder must be added to the glob (and to the S.E.A.R.C.H. scope selector) or it is unsearchable. (SRCH, FIX) Note: `vessels/` is currently missing from the player glob.
+- Pagefind indexes static HTML only; JS-injected text is not indexed. Debug via the Action's `--verbose` log: glob, static vs JS, section filter. (SRCH)
+- Local test: the Action's `npx -y pagefind --site . --glob "{…}" --exclude-selectors "[data-pagefind-ignore], nav, .site-nav, footer"`. (FIX)
+- Gated search pages check the same sessionStorage flags as their sections: DM `caelestis_continuum_auth`, FIA `caelestis_restricted_v1`. Client-side gating only. (SRCH)
+- Player home is `hub.html` (the terminal); `index.html` is the gate, reachable only from the hub footer. Sidebar groups match the hub bands. (RN, FIX)
+
+#### FIA (restricted/)
+
+- The FIA is Fleet Intelligence speaking to Fleet personnel: dry, factual, bureaucratic, clipped; never mysterious or suggestive. The mystery comes from the reader noticing patterns the FIA has not connected. Write as an author mildly puzzled but professionally restrained. (FIA)
+- FIA reports facts about incidents, not theories about coherent enemy projects. Never list Brig contents, never name the central artifact (now A.T.L.A.S.), never reference Vecna, the network or the Reach until they are FIA-readable. (FIA)
+- The FIA is a separate security context: its own index, its own chrome, no bearing strip (left deliberately; Korey's call). (SRCH, FIX)
+
+#### Naming (settled in these notes)
+
+- H'Catha, never Hakatha (stub removed, portrait key removed). (DEP)
+- Pffred, never Fred. (RN)
+- Ostekk-6, Vocath, Saerthe Abizjn, Veena, Krik'Lit, Sor'kur, Winston Ryeback, Rindle Gearloft (from the garble and correction lists). (CHR, RN) *Vena/Veena and Crick Lit/Krik'Lit are inconsistent across notes; record spelling wins.*
+- Jeffrey and Joffrey are two different people. (repo-refactor, kept for the guide)
+- Lunarfoot is the clan; the Wayfinders' homeworld stays unnamed by doctrine. (BACKLOG supersedes DEP's "homeworld renamed Lunarfoot")
+- The World Surveyor is retired; the artifact is A.T.L.A.S. (BACKLOG; WPG, DEP and FIA still say World Surveyor)
+- Voyage, never session, in player-facing labels. Folder and file naming: `voyage-NNN`, three digits. (RN, SR)
 
 ## Promotes to
 

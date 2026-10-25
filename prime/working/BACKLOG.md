@@ -38,7 +38,8 @@ staging once Korey has read and accepted them.
 | Rules | rules/, statblocks/, tracker/ | 19 | 10 | 0 | 12 |
 | New pages | 14 proposed pages, the hub, notes/ | 22 | 3 | 2 | 32 |
 | Automation and tracker | the session pipeline and tracker alternatives | 11 | 1 | 0 | 0 |
-| **Total** | | **268** | **207** | **13** | **366** |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 6 | 3 | 0 | 0 |
+| **Total** | | **274** | **210** | **13** | **366** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -62,6 +63,7 @@ Each settles items on several pages at once. Rule these first.
 14. **Fonains–Caelestis offset.** The timeline puts Fonains Session 28 about five months before Caelestis now; older notes say Caelestis is "around" Session 28. Timeline, Fonains doc, campaign.
 15. **OSTEKK-6 as sole survivor.** Saved decisions say so; the V005 record has Gregory waking OSTEKK-2. Dossiers, vessels.
 16. **The tracker and session ingest.** Keep the repo JSON record and in-chat runbook, or move to an alternative. See the Automation and tracker section.
+17. **Dossier tab names and "Open" subsections.** Which tab set every dossier uses, and whether open questions may sit in a DM page's notes at all. Every prime dossier. See the Repo and process section.
 
 ## Second looks
 
@@ -4192,3 +4194,50 @@ run decide, fix, drop, add.
 - **[fix]** The search-repair table runs backwards
   `prime/notes/RESTRUCTURE-NOTES.md` maps wrong spellings to right ones. Line 348 reads "Saerthe → Saerth"; change to "Saerth → Saerthe". The roster line (line 225) lists "Saerth"; change to "Saerthe". "Sor'kur" should read "Sor'Kur" on lines 226, 341 and 347 (line 347: "Sorker → Sor'Kur").
   src: automation § Open; memory-canon (campaign-canon, spellings)
+
+# Repo and process
+
+## Page conventions
+
+- **[decide]** Dossier tab names
+  The 36 live prime dossiers and PAGE-SHAPE.md use *Who they are / What they want / DM notes / Stat block*. A later ruling in the cosmic campaign chat (turn 460) set *What it is / What it wants / What's hidden / Running it / Stat block*. Pick one set. Either way the PAGE-SHAPE principles hold: one set everywhere, labels never inflect, a page carries only the tabs it has content for.
+  Touches: every dossier under prime/dossiers/, PAGE-SHAPE.md (or its successor guide).
+  src: notes/PAGE-SHAPE.md; inbox/chat-cosmic-campaign-structure.md
+
+- **[decide]** "Open" subsections on DM pages
+  PAGE-SHAPE.md puts an *Open* subsection with `is-open` tags inside a dossier's DM notes; 35 prime pages carry one. The new writing rule keeps open questions on the planning layer only. Options: (a) DM notes count as planning, so *Open* stays on DM pages but never on player pages; (b) *Open* moves off every entry page into BACKLOG.md, and `is-open` survives only on planning pages (Spine, Plot Hooks, Voyages, What If).
+  Touches: 35 prime pages, the page guide.
+  src: notes/PAGE-SHAPE.md; working/README.md
+
+- **[decide]** How a page states an unknown
+  WIKI-PAGE-GUIDE.md: "The Reach's name is not known… phrase gaps as such." The new rule: an entry says what is known and stops. Suggested split: an in-world gap ("the Fleet does not know the Reach's name") is a world fact and may stay; a DM gap ("name not yet decided") is a backlog item.
+  src: notes/WIKI-PAGE-GUIDE.md; working/README.md
+
+- **[decide]** One vocabulary for the record's sets
+  DATA-BOUNDARY.md and SESSION-RUN.md call the sets voyages, crew, cast, factions, places, things, threads. The files in `data/` are sessions, player-characters, npcs, factions, locations, items, quests. Suggested: the file names in all process docs; in-world labels only on pages.
+  src: notes/DATA-BOUNDARY.md, notes/SESSION-RUN.md, scripts/data.js
+
+## Record and schema
+
+- **[decide]** Ships in the record
+  SESSION-RUN.md files a ship as a place with Type `Vessel`, parented to where it was last seen, and parks simulated ships under the Simulation Deck with Status `Simulated`. The ruling "vessels are vessels" needs either a vessel set in `data/` or a `kind` field, a status vocabulary without "Simulated" on places, and a choice of whether a ship's whereabouts is a field or a parent link. Lands with the refactor (`navigation-records/` ships move to `vessels/`).
+  Touches: scripts/data.js schema, data/locations.json, SESSION-RUN.md, navigation-records/, vessels/.
+  src: notes/SESSION-RUN.md; working/repo-refactor.md
+
+## Fixes
+
+- **[fix]** SESSION-RUN step 2 write target
+  Step 2 says to write the Full Account to `CHRONICLE.md`, which would overwrite the chronicle rules. The Full Account goes to the chat for review and onto the voyage page at step 5.
+  src: notes/SESSION-RUN.md
+
+- **[fix]** Process docs ship with the site
+  `deploy.yml` prunes CLAUDE.md, scripts/data.js, prime/working and templates, but not `prime/notes/`. Move the surviving docs to an undeployed `docs/` folder, or add `prime/notes` to the prune step.
+  src: .github/workflows/deploy.yml
+
+- **[fix]** `vessels/` missing from the player search index
+  The player Pagefind glob lists every player folder except `vessels/`. Add `vessels/**/*.html` (and update the glob again when the refactor renames folders).
+  src: .github/workflows/deploy.yml
+
+- **[decide]** Leftover UI calls from the migration notes
+  Still open in FIXES-DEMO-MIGRATION.md: the FIA bearing strip, merging the survey chart, the navigation-records clip at 1024px, the clickable blurb overlay, and missing links on voyage briefings 001, 003 and 004. Keep any of these, or drop them with the notes.
+  src: notes/FIXES-DEMO-MIGRATION.md, notes/RESTRUCTURE-NOTES.md
