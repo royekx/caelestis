@@ -171,3 +171,57 @@ writing rules.
 - Contracts fall into three or four categories by how they tie to the larger world: loosely tied, tied to a Seekers chapter, personal to a crew member, and others as they come up. Each contract can be built out from its category.
 - The world is already in motion. A contract surfaces because of the state of the world, and the place around it should feel like it exists without the crew. The crew's choices, or their failure to act, change what was already happening.
 - Contracts take any shape: excavations, politics, hunts. Many quietly lead back to a Seekers chapter, some of them knowingly nefarious and some unwitting.
+
+## Rulings of 2026-10-25, round 5 (backlog category 2)
+
+### The gods (cosmology/, factions/deities.html, working/divine-rules.md)
+- Most gods came into being in the Reach event and grew into godhood over time, some sooner than others, so gods have different ages. Later gods ascended from mortality. Their standing as greater or lesser gods comes from how much worship they hold, the influence they gain from it, and the niche they find, through the same loop of attention and belief.
+- Gods are not physical. They are woven into the cosmos and dwell between the spheres, in a space of their own. A god drifts toward the sphere where its worship is greatest. Worship reaches a god from any sphere, but the farther away it comes from, the weaker its signal.
+- Gods are of the same make as worlds and their hearts, so polarity pushes them apart. The more powerful a god, the larger it is in that metaphysical sense, and the harder the push. This is why the greatest gods are kept farthest from worlds and from the center.
+- Once, a god forced its way down onto a world. The friction between god and world was cataclysmic: it destroyed the god, and what remained became the Knowhere. Every god since has taken it as a warning.
+
+### Asmodeus and the Accordance (factions/deities.html, Fonains doc)
+- Asmodeus and Lord Primus are the eldest gods of the Accordance. Asmodeus is its face, though not its ruler or its leader.
+- Asmodeus was among the first to understand what the gods had become. He began as a good-natured god. The Reach let loose good and evil alike, demons among them, and he took up the fight against them while the other gods sat in their comfort. He was betrayed, and he became the lord of the Nine Hells. He is called evil because someone has to do this work, and he does it.
+- The Accordance know little of Vecna. A few centuries ago they felt something change: a new entity like them, where there had been none. Asmodeus likely knows something is wrong, and Lord Primus may.
+
+### Vecna (factions/deities.html, realms/oerth, campaign/ascension/)
+- Vecna's realm is Cavitius.
+- Oerth is the world where Vecna became a god. His ritual to become a god pushed Oerth to its Zenith, and the Zenith made him one; the Monolith that answered archived his mortal form, Lich Vecna. That was his first ascension, the Godhood Ascension. The climb he is making now, to take an Axiom's place, is the Axiomic Ascension. The separate "Ascension World" is retired; Oerth is that world.
+- His grievance: something was taken from him and hidden from him. He believes the cosmos and every being in it are owed an answer, and he means to find it.
+- How the other gods respond if he comes close is left to reveal itself. The campaign is not a war of the gods.
+
+### Tharizdun (working/tharizdun.md, realms/fonains.html, dossiers/thessalar.html)
+- Fonains's Monolith is the only one ever to carry Tharizdun's crystal, and the only one recorded as destroyed.
+- Tharizdun wanted nothing from Thessalar but chaos. His influence reached Thessalar through the craft's gems, born where Olhydra and Ogrémoch collided, and it drove him slowly mad. One of Tharizdun's temples lies within the planar craft's depths.
+
+### The first Seekers chapter the crew meets (campaign/ascension/, factions/seekers.html)
+- It is a benevolent church that shows Vecna's hand and eye openly. It is good and docile, with something a little odd about it: not evil, but easy to misread. The crew first hears of it through Hessa Dun, a Caelestis contract contact whose uncle tells strange stories. The meeting itself comes well after graduation.
+- DM: the players will recognise the symbol and expect villainy; the characters know nothing of it. The church's goodness should sit wrong with the players without giving them anything to act on.
+
+### The Restorers (factions/restorers.html)
+- The Restorers are trying to reach a heart, and through it the Core Monolith, where they believe everything lost is stored. They compete for residue pieces. Without knowing it, they advance Vecna's plan.
+- They follow the Core Monolith's pressure as Vecna does, read through a different mind. Their understanding is theory and vision, little of it concrete. They and the Seekers have clashed over the years, and some on each side believe they walk the same path.
+
+### Vecna on H'Catha (realms/hcatha.html)
+- Vecna's hand on H'Catha goes back only to its founding. A residue of worship lingers there. He may once have tried to turn the dreaming of the Sovereign Eye into a Zenith and fallen short. One of the eldest rulers may know something of it. H'Catha is the crew's first world beyond Caelestis, and Vecna stays faint there.
+
+### Vth'oramu and the colony (dossiers/vthoramu.html, factions/vthorama.html)
+- Vth'oramu has moved since it sat on the Cairn bearing a year ago. It stays outside Realmspace and keeps to the dark between systems: a vessel that size near a world's planets would raise alarms. Where it lies now follows from what N'ghathrod is doing.
+- The dreadnought bore no wound before the siege. N'ghathrod saw an opportunity and took it. He knew a dreadnought's physiology, and a whisper from Vecna told him it was the best way to keep a colony on its passage home. The fight lasted a long time, and controlling the creature took a great many tadpoles.
+- The colony's arms should echo a hand and an eye without showing them outright.
+- The tithe runs one way. Every taken person comes from N'ghathrod's tadpoles. As each grows, a portion of it passes up through the rungs of the taken, and all of it ends with N'ghathrod. The flow is paracausal, not physical. "The downward tithe" is retired.
+- Qitru serves Vocath. She does not care who stands above him; for her, the top is Vocath.
+
+### Thessalar (dossiers/thessalar.html)
+- Thessalar is Halaster Blackcloak, and he is still in the planar craft. His records of the work on N'ghathrod are there too.
+
+### The Order (factions/order.html)
+- The Watchers keep watching. Over the past century they have seen Monoliths rise more often, and it worries them; some want to act. They are fighting oddities across many worlds and trying to keep a lid on them. Caelestis is thin partly because it answers the Watchers' calls for help.
+- The Order's seat holds a Hall of Sight and a Hall of Sound. The seat as a whole needs a name.
+- H'Catha's Watcher is Nereth Vaul. Her species sets the final form of the name.
+
+### Aethris (factions/aethris.html, realms/aethris.html, dossiers/beshaba.html, factions/deities.html)
+- The Fortuned want Sol back alive because he is a component of their unfinished ritual. They do not care about him as a person.
+- Beshaba finds the Fortuned heretical, a spit in her face. She thinks Tymora is fuelling them, and blames her sister for it. On Aethris Beshaba is the lesser of the two, because people favour luck over misfortune, and she calls what the Fortuned do unnatural.
+- Neither sister knows what both of them need: each other. Luck and misfortune are two sides of one coin.

@@ -18,6 +18,8 @@ rulings of the day, his saved decisions, timeline canon, drafts, chat sweeps
 - **drop**: retired material to remove.
 - **add**: a settled fact missing from its page, written the way it will read.
 
+Decide items ask for the shape of a thing, not every detail. Specifics wait until play needs them; a decide that only matters once the crew gets somewhere can stay open until then.
+
 Work order: rule the cross-cutting decisions first, then go file by file. A
 ruled item becomes a STAGING.md entry; `add`, `fix` and `drop` items move to
 staging once Korey has read and accepted them.
@@ -26,13 +28,13 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | fix | drop | add |
 |---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 14 | 20 | 0 | 25 |
-| Realms | realms/ except Fonains; a new Oerth page | 35 | 33 | 3 | 47 |
+| Cosmology | cosmology/, glossary/, chart/ | 15 | 20 | 0 | 25 |
+| Realms | realms/ except Fonains; a new Oerth page | 32 | 33 | 3 | 47 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 13 | 13 | 1 | 29 |
 | Timeline | the rest of timeline.json | 3 | 5 | 0 | 0 |
-| Factions | factions/ | 20 | 20 | 2 | 40 |
-| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 19 | 45 | 5 | 40 |
-| Dossiers | dossiers/ | 26 | 41 | 0 | 50 |
+| Factions | factions/ | 11 | 20 | 2 | 40 |
+| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 16 | 45 | 5 | 40 |
+| Dossiers | dossiers/ | 20 | 41 | 0 | 50 |
 | Crew | crew/ | 32 | 16 | 0 | 73 |
 | Artifacts and vessels | artifacts/, vessels/ | 12 | 26 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 18 | 19 | 0 | 17 |
@@ -40,7 +42,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 10 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 2 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 7 | 4 | 0 | 1 |
-| **Total** | | **231** | **253** | **14** | **399** |
+| **Total** | | **211** | **253** | **14** | **399** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -182,22 +184,6 @@ Order under each page: decide, fix, drop, add.
 - **[decide]** Whether a world's heart has a counterpart in its echoes
   src: framework § Open
 
-- **[decide]** Why the center is worse for Reach-born gods
-  Polarity explains why the center harms gods. The page says the approach is "most dangerous to gods born from the Reach", and divine-rules gives Reach-born gods a harsher row than later gods. What makes the difference is still unstated.
-  src: divine-rules § Polarity; framework § Open
-
-- **[decide]** Whether any god has ever forced its way onto a world
-  Options: never; once, at a ruinous cost, with a dead god adrift in the Astral Sea as the proof; leave unanswered.
-  src: divine-rules § Open
-
-- **[decide]** Whether worship crosses the Flow
-  Options: it crosses freely; or it does not, so Vecna's faithful in other spheres feed him only through a foothold in each sphere, and those footholds become targets.
-  src: divine-rules § Open
-
-- **[decide]** Whether any other Monolith carries Tharizdun's crystal
-  Options: Fonains is unique; others exist and are unfound; a Seeker chapter is seeding them (inference).
-  src: tharizdun § Open
-
 - **[decide]** The four named weathers
   Fraying, Turning, Walling and Gathering are an unreviewed Crossing Companion proposal. Lock or cut before they go under the weather section.
   src: astral § Open
@@ -311,14 +297,36 @@ Order under each page: decide, fix, drop, add.
 
 ### glossary/index.html
 
+- **[decide]** Shothragot
+  Shothragot is Tharizdun's avatar, a great black mass of dark energy, met in the Fonains Monolith sessions. Check the Session 14–15 transcripts for whether Lola's Boys destroyed it. Lean (Korey): it was not truly destroyed; it now lives in Ziko's black blade, and that is what drives Giorge. Retcon in place if needed.
+  src: Korey, 2026-10-25 (round 5); working/tharizdun.md
+
+- **[decide]** What N'ghathrod is doing now
+  Vth'oramu's whereabouts follow from it (STAGING round 5). The shape, not every move: which worlds his crews work, which hearts they chase, how close the colony runs to Realmspace.
+  src: Korey, 2026-10-25 (round 5)
+
+- **[decide]** The dreadnought's tether and weapon
+  Ruled: no prior wound; a long siege, many tadpoles (STAGING round 5). Still open: what lies at the end of its astral tether, whether it can be freed, and its main weapon (an antimagic cone is rejected; an eversion was proposed and never confirmed).
+  src: chat-cosmic-campaign-structure § Open
+
+- **[decide]** Fracture Cult and the Archivists
+  The Spectrum page has them as independent groups: the Fracture Cult "exists to create peak events" (Zeniths) and the Archivists "operate on monoliths". Korey does not recognise them. Options: (a) fold both into the Seekers as chapters named for what they seek (a chapter seeking to bring worlds to their Zenith; a chapter seeking what the Monoliths record); (b) cut them and make something new when needed.
+  Touches: factions/spectrum.html, factions/index.html, factions/seekers.html.
+  src: factions/spectrum.html; Korey, 2026-10-25 (round 5)
+
+- **[decide]** The colony's arms
+  Ruled: they echo a hand and an eye without showing them outright (STAGING round 5). The design is open.
+  src: Korey, 2026-10-25 (round 5)
+
+- **[decide]** The Order's seat
+  Ruled: it holds a Hall of Sight and a Hall of Sound (STAGING round 5). Name the seat as a whole and place it when the crew is headed there.
+  src: Korey, 2026-10-25 (round 5)
+
+
 - **[fix]** Trim Tarroway to a thread
   Keep M. Tarroway as Strake Station's cartographer whose readings first hinted at an unknown vessel disturbing the satellites at the system's edge (STAGING round 4). Cut the "timing tables" and their failure everywhere. Reduce his presence on the ten pages that mention him to passing references; his main home is the Fleet Intelligence Archive (restricted/). Nothing public.
   Touches: dossiers/tarroway.html, dossiers/index.html, dossiers/miken.html, dossiers/vthoramu.html, dossiers/joffrey.html, dossiers/verrow.html, factions/vocath-operation.html, realms/index.html, realms/strake-station.html, chart/index.html, restricted/.
   src: Korey, 2026-10-25 (round 4)
-
-- **[decide]** The downward tithe
-  "The downward tithe" names the lesser taken Vecna's vessels can pass through Atria. A new ruling adds an upward tithe: a portion of every taken person flows up to N'ghathrod and extends his life (STAGING round 3). Rename the vessel sense so the two are not confused, and drop "tithe" from anything that reads as worship.
-  src: Korey, 2026-10-25 (round 3); glossary "The downward tithe"
 
 - **[fix]** The Seekers
   Glossary says the Seekers "have never heard his name." The session ruling settles it: Vecna is an open god with a following under many names, and his followers are the Seekers. Rewrite:
@@ -590,10 +598,6 @@ No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms
 - **[decide]** Who betrayed Ondessa, and who backs the occupiers
   Lean: a neighbour, Ulmorrow or Gorrathax.
   src: astral § Open
-
-- **[decide]** How deep Vecna goes on H'Catha
-  Lean: the founding only (a quiet voice taught the rulers the dreaming method), with "The Eye looks one way more than they know" held in reserve. Memory's options: all the rulers, one, or only the original.
-  src: astral § Open; memory-canon (H'Catha leaning)
 
 - **[decide]** The Underground
   Options: rare pockets only (caves, the Old Courses); or a larger hidden underworld (Korey finds that too Underdark-like).
@@ -906,14 +910,6 @@ No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms
   src: chat-crew-tumak-gregory-bartholomew § Tumak/Leader concept; memory-canon (the Zenith, twins)
 
 ### realms/ascension-world.html
-
-- **[decide]** Whether the Ascension World keeps its name
-  "The Ascension" now means Vecna's climb to Axiom, and his godhood happened on Oerth. Options: keep the world as a separate SPH-01 world under a new name; or retire it. Touches this page, the realms index, chart SYS-05, and timeline "The Ascension World".
-  src: session-rulings #14; timeline "The Ascension World"; vecna § Oerth
-
-- **[decide]** What Vecna forced here, when, and what it cost him
-  The timeline event is cert "open" at t -250.
-  src: framework § Open; timeline.json
 
 - **[fix]** A local threshold, distinct from Oerth
   Page says "a small, personal ascension distinct from the canonical Sigil event". Change to: "a small, local threshold he forced through agents, distinct from his ascension on Oerth." His godhood came first, on Oerth; this was later and smaller.
@@ -1307,20 +1303,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/order.html
 
-- **[decide]** The Hall: one name or two, and where
-  Ezra's dossier and this page say "the Hall of Sight and Sound". Memory canon says the crew takes Ezra to "the Hall of the Watchers". Options: one hall under two names (pick which the wiki uses), or two places (a training hall and the Order's seat). Also unset: where the Hall sits.
-  Note: the Crossing Companion doc proposes "Hall of Sight and Sound = Hall of the Watchers" (one hall), but Korey never reviewed that list (chat-astral-sea-worldbuilding § Open, unreviewed proposals).
-  Touches: factions/order.html, dossiers/ezra.html, campaign/spine.html (H'Catha report chain), working/glyth-watcher.md.
-  src: memory-canon campaign-canon § Key NPCs (Ezra); chat-cosmic-campaign-structure § Open; chat-astral-sea-worldbuilding § Open
-
-- **[decide]** What the Watchers are doing now
-  The parallel Watchers track for the campaign view.
-  src: chat-organizing-framework § Open; memory-canon open-decisions (DM views)
-
-- **[decide]** Names for two Watchers
-  H'Catha's Watcher is a woman with no name yet (placeholder Nereth Vaul, a triton; Ondessa's name is taken). Names already offered: Nereth Vaul, Maris Ilune, Sefa Corrath. The Glyth Watcher has no name, and how she got out is unset.
-  src: memory-canon campaign-canon § Antagonists (H'Catha refinement); chat-astral-sea-worldbuilding § H'Catha: Ondessa and the Watcher; working/glyth-watcher.md
-
 - **[fix]** Watchers are posted to regions of worlds
   Page says Watchers "take a posting — to a plane rather than a world". Change to: "then take a posting to a region of a world. A world may hold several Watchers, depending on its size and peoples."
   src: memory-canon campaign-canon § Key NPCs (Watcher ruling corrected); timeline "The Order of the All-Father"; working/glyth-watcher.md § Sketch
@@ -1395,18 +1377,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ---
 
 ### factions/deities.html
-
-- **[decide]** The name of Vecna's realm
-  Published lore calls it Cavitius. Keep Cavitius or name it.
-  src: working/vecna.md § Realm; memory-canon open-decisions (Vecna/Tharizdun 2026-10-25)
-
-- **[decide]** Shothragot
-  His shape and where he is now.
-  src: working/tharizdun.md § Open
-
-- **[decide]** What the Accordance knows of Vecna
-  Their view of him, and whether any of them saw his hand in the Fonains ritual. Options: they know and stay silent; they suspect; they do not know.
-  src: working/vecna.md § What the gods think of him, § Open
 
 - **[decide]** How far to develop Tymora
   Korey wants to develop Tymora and the Beshaba/Tymora interplay.
@@ -1494,10 +1464,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/vthorama.html
 
-- **[decide]** The colony's coat of arms
-  The broken-ring arms are dropped. The Passage stays the field mark. Arms are unset.
-  src: chat-cosmic-campaign-structure § Open, § Superseded
-
 - **[fix]** "kesh" is retired *(answered)*
   The page says "Many of the kesh were offered it and accepted — the outcast, the discarded, the ones with nothing… The colony's word for them is a kinship term." "Kesh n'ghathu" ("the many of him") was a Claude lexicon draft for the taken outside the five. Korey retired it: the rest of the taken need no term of their own and are simply Vth'ghathu. Change "Many of the kesh were offered it" to "Many of the taken were offered it", and remove "The colony's word for them is a kinship term."
   src: (inference) factions/vthorama.html
@@ -1577,12 +1543,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/restorers.html
 
-- **[decide]** Rivals for the set?
-  Settled since: the Restorers (v2) have no part in Vecna's plan, and their true restoration needs a Monolith, a heart and all four fragments. So they want the same residue Vecna's side wants, for their own reasons.
-  Still open: (1) whether they actively compete for pieces in play (rivals the crew meets at a piece) or stay a background pressure; (2) whether they know that reversing the Core's archived loss would undo the cosmos.
-  src: chat-organizing-framework § Open
-  answered (part): inbox/chat-cosmic-campaign-structure.md § Cosmology redesign (Settled: "The Restorers have no part in Vecna's plan"; "True restoration needs a Monolith, a heart and all four fragments")
-
 - **[fix]** The All-Mother
   Page says "which their doctrine names the Mother of the Universe" and the Doctrine stat "The Core is the Mother of the Universe". Change both to the All-Mother.
   src: chat-cosmic-campaign-structure § Superseded
@@ -1594,10 +1554,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ---
 
 ### factions/aethris.html
-
-- **[decide]** Sol as a person or a component
-  Whether the Fortuned want Sol back as a person or as a component of the unfinished ritual. The answer decides whether his thematic question is answered by his enemies or by himself. Open on this page, crew/sol.html and realms/aethris.html; all three follow the ruling.
-  src: BCS § Sol/Open; crew/sol.html
 
 - **[add]** The Prism Ascendant
   Add to the lead: "The Prism Ascendant is the Monolith that answered Aethris's Zenith. Aethris believes it came from Tymora, as an answer to their ritual of perfection. Its appearance did not end the Zenith: the ritual is unfinished, and Aethris still wants Sol to complete it."
@@ -1849,16 +1805,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   src: chat-organizing-framework § Open; memory-canon open-decisions ("Locked this pass"; Vecna/gods 2026-10-25)
   answered: inbox/chat-cosmic-campaign-structure.md § Cosmology redesign (turns 244–305, Settled: First Heart, Yearning, fifteen hearts, forced open by massed Yearning, vessels and downward tithe, Convergence seat, Rod as fallback); session-rulings (polarity)
 
-- **[decide]** Vecna's grievance, the Cast's floor, the diminished arrival, the pantheons
-  Still open: Vecna's grievance (the page already carries it as open), the floor for the Cast, what a diminished arrival looks like, and how the pantheons respond.
-  src: chat-cosmic-campaign-structure § Open
-
-- **[decide]** Which congregation the crew meets first, and how sincere
-  Settled: the first chapter the crew meets should be a good one, and their first Seeker contact is planted in Arc 1 through Hessa Dun, whose living uncle has strange stories. That rules out the fringe returning-god cult as the first meeting.
-  Still open: which good congregation comes first — (a) the benevolent church that names Vecna openly (plays on players knowing the name while the characters do not), or (b) a Keeper congregation. And whether the benevolent church is sincere throughout or one of its high clergy knows more.
-  answered (part): inbox/chat-cosmic-campaign-structure.md § The Seekers (Settled: "The first chapter met should be good"), § Act 1 retrofit (Hessa Dun); memory-canon open-decisions (Vecna direction 2026-10-24: one faction sees him as benevolent and uses the name)
-  src: working/vecna.md § Open
-
 - **[fix]** Worship powers Vecna; the method does his work
   "Why he needs hands" says "which is why he taught a method instead of founding a church, why his agents have never heard his name". Vecna is an open god with a following under many names. Rewrite: "Worship gives him power; the method does his work. Most of those who do that work know him by another name, and some, like N'ghathrod, do not know him at all."
   src: session-rulings (Vecna); working/vecna.md § Promotes to
@@ -1899,9 +1845,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   This page lists "the Passage marks on the Sky Dock crates" as colony work. The Vocath's Operation page puts the eye-in-a-wheel on "the Sky Dock crate", and so does dossiers/vocath.html ("it turns up on the recovered rod, on the Sky Dock crate, and in the Bellwether Crow's last transmission"). The Passage is N'ghathrod's mark; the eye-in-a-wheel is Vocath's, and players already know it as his. Options: the Passage, the eye-in-a-wheel, or both on different crates (Vocath's goods carry his mark; a crate the colony handled carries the Passage).
   Touches: campaign/colony/index.html, factions/vocath-operation.html, dossiers/vocath.html.
   src: factions/vocath-operation.html; memory-canon open-decisions ("Locked this pass")
-
-- **[decide]** N'ghathrod's orders
-  Follows the ruling under campaign/ascension/index.html. This page says "he has never been given an order".
 
 - **[decide]** What the surface attack at graduation is made of
   The page has "security diverted by the surface operation" while Joffrey runs the Brig, and names nothing in that operation. The early plan collapsed the module's two finale events into one: the attack hits during the ceremony, a battle across the school. It ported these module pieces: Mustaf Shultz and his giff mercenaries, a decapitation threat, Miken at 2 HP, Wizpop's return (now OSTEKK-6), and the transmutation sigil as Vocath's eye-in-a-wheel. Qitru and her githyanki have since moved to H'Catha. Vocath is a merchant, no fighter, and stays out of the siege himself (settled: chat-cosmic-campaign-structure § Act 1 retrofit), so whoever leads the surface operation is hired or his crew. Pick which pieces stay, and write the surface operation into the Brig run section.
@@ -2231,14 +2174,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/beshaba.html
 
-- **[decide]** Beshaba's want
-  The page says "She has never named a want." The Sol chat explored several without settling. Its last reading, that she wants Sol to keep existing as her local anchor, was never confirmed. Korey wants to develop the Beshaba/Tymora interplay (see the Tymora decide under factions/deities.html). Settled context any want must fit: Tymora and Beshaba need each other (fortune needs misfortune); gods give direction without showing the full picture; Tymora's followers on Aethris pushed luck until it stopped being luck.
-  Options:
-  (a) Keep "She has never named a want."
-  (b) She wants Sol to keep existing, as her anchor on Aethris (the chat's last reading).
-  (c) A want set by the Tymora interplay, decided with the Tymora item.
-  src: BCS § Sol/Open, § Sol/Aethris and the gods
-
 - **[add]** Where she is strongest
   Add to The twin reading: "Tymora and Beshaba are strongest on Aethris, where their worship is most concentrated."
   src: working/divine-rules.md § Concentration and reach; memory-canon open-decisions (Vecna/Tharizdun 2026-10-25)
@@ -2528,10 +2463,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/qitru.html
 
-- **[decide]** When Qitru learns Vocath is not at the top
-  What she does next.
-  src: chat-cosmic-campaign-structure § Open
-
 - **[fix]** What she wants
   The infobox says "Wants Miken" and What they want says "She wants Miken because he is leverage…". Write: "Qitru pursues Vocath's aim: to embarrass Mirt by making the cadet mission fail. Miken is her channel." Infobox: "Wants: the cadet mission to fail."
   src: memory-canon campaign-canon § Key NPCs (Vocath's aim)
@@ -2625,14 +2556,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/thessalar.html
 
-- **[decide]** His copies and his records
-  Which Thessalar copies are loose, and where his records of the N'ghathrod work are.
-  src: chat-cosmic-campaign-structure § Open
-
-- **[decide]** What Tharizdun wanted from him
-  Thessalar is tied to Tharizdun through the Elder Elemental Eye (see add). Did Tharizdun take an interest in the experiment, the Rod piece, or the man? Note that the Eye watched the year-425 visit. The page's own Open asks the same.
-  src: dossiers/thessalar.html § Open; working/tharizdun.md § Vecna and Tharizdun; memory-canon open-decisions (Fonains lore tie-in)
-
 - **[fix]** The Elder Elemental Eye
   The page says "the Elder Eye" twice. Change to "the Elder Elemental Eye".
   src: session-rulings (Elder Elemental Eye)
@@ -2709,20 +2632,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ---
 
 ### dossiers/vthoramu.html
-
-- **[decide]** Where Vth'oramu is
-  The infobox says "Last placed: On Cairn's bearing, closing slowly". Tarroway and Verrow say it "left the sector a year ago". The Tarroway fix (psychic wind) removes one reason for "left the sector".
-  Settled: Vth'oramu is harboured outside Realmspace while its crews work inside it. It sat on the Cairn bearing about a year ago, Cairn reported it and then went silent, and the colony page has it move on afterward.
-  Left: where that harbour is now. Options:
-  (a) Still on the Cairn bearing at the sphere's edge, closing slowly (the infobox).
-  (b) Gone from the Tetherbreak sector since Cairn went silent, harboured somewhere else outside Realmspace (Tarroway and Verrow).
-  Apply the pick across all three pages.
-  Touches: dossiers/vthoramu.html, dossiers/tarroway.html, dossiers/verrow.html.
-  src: dossiers/vthoramu.html; dossiers/tarroway.html; dossiers/verrow.html; chat-cosmic-campaign-structure § The dreadnought, § Tetherbreak; campaign/colony/index.html ("The dreadnought moved on afterward")
-
-- **[decide]** Its wound and its tether
-  What wounded the dreadnought before the siege, what lies at the end of its tether, and whether it can be freed. The astral cord is held in reserve.
-  src: chat-cosmic-campaign-structure § Open
 
 - **[decide]** Its main weapon
   An antimagic cone is rejected. An eversion (the interior pushed out) was proposed and never confirmed. Options: eversion, or something else.
