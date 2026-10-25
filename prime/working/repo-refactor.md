@@ -18,16 +18,16 @@ is there, proposes a shape, and lists the calls to make before anything moves.
 | `stellar-chart/` | Casey's Stellar Reading chart | Belongs under his crew page |
 | `voyages/` | Voyage accounts V001–V006 | Core |
 | `bearings/` | Current bearing, a timeline, per-voyage bearing pages | Overlaps `voyages/` |
-| `crew-logs/` | Old brief and detailed logs V001–V004; index is a "Moved" stub | Superseded by `voyages/` and `logs/` |
-| `logs/` | Crew Logs index | Overlaps the two above |
-| `crew-notes/` | "Moved" stub redirecting to `logs/` | Remove |
-| `dossiers/` | 26 NPC pages | `jeffrey.html` and `joffrey.html` are copies with the name swapped |
+| `crew-logs/` | Old brief and detailed logs V001–V004; index redirects to `voyages/` | Renamed to `voyages/` in August; kept for old links |
+| `logs/` | Crew Logs: the Google Docs embed page | Distinct from voyage accounts |
+| `crew-notes/` | Redirect stub to `logs/` (renamed in August) | Kept for old links |
+| `dossiers/` | 26 NPC pages (player-facing) | Jeffrey and Joffrey are two different people |
 | `factions/` | Factions index and one faction | Thin |
 | `navigation-records/` | 19 places and ships | Ships overlap `vessels/` |
 | `vessels/` | Vessels index | Thin |
 | `spelljammer-nexus/` | Setting primer (spheres, wildspace, the Academy) | Overlaps `navigation-records/` and `factions/` |
 | `quests/` | Quest board and 12 quests | Core |
-| `inventory/` | Inventory, `entries/` (15) and `items/` (1) | `items/collection-manifest.html` duplicates `entries/collection-manifest.html` with different content |
+| `inventory/` | Inventory: `entries/` are ledger records (15), `items/` are readable artifacts (1) | By design; the Collection Manifest has both a ledger entry and a readable page |
 | `handouts/` | Corps Protocols (crew roles, ship mechanics) | Fine |
 | `restricted/` | The Fleet Intelligence Archive (in-world gated files) | Fine; keep separate |
 | `search/` | S.E.A.R.C.H. | Fine |
@@ -45,9 +45,16 @@ is there, proposes a shape, and lists the calls to make before anything moves.
 ### Clutter
 
 - Empty placeholder files (one blank line each): `restricted/init.md`, `stellar-chart/init.md`, `wayfinder-path/init.md`, `prime/notes/init.md`, `prime/notes/restricted.md`, `handouts/README.md`.
-- Redirect stubs: `crew-notes/index.html`, `crew-logs/index.html`.
+- Redirect stubs: `crew-notes/index.html`, `crew-logs/index.html` (from the August renames). Retire once old links no longer matter.
 - About 70 remote branches. Main's history was rewritten on 2026-10-18, so every old branch shows hundreds of commits "ahead" and none can be merged as is. Only `main` and the current working branch are live.
 - `prime/notes/*.md` and `data/` ship with the site. The notes are DM process docs and should not be public files.
+
+## Ground rules
+
+- **Player and DM versions are separate on purpose.** A person, place, vessel or item can have a player page (what the crew knows) and a prime page (the DM truth). Same subject, two pages, is not duplication. A real duplicate is two pages on the same layer.
+- **Vessels are vessels.** Ships are not locations and not items. Realms keep only what can be boarded as a place; ships live in the vessels register. (Ruled in the cosmic campaign chat; see `inbox/chat-cosmic-campaign-structure.md`.)
+- **The refactor runs in tandem with the backlog.** Page moves and content rulings land together, so a page is rewritten once, in its new home, with ruled content.
+- **`prime/notes/` is bloat.** A previous chat produced overlapping guideline docs. Consolidate to the few that are used (CLAUDE.md, the session run, one page guide, the data boundary) and retire the rest.
 
 ## Proposed shape
 
@@ -82,7 +89,7 @@ Old URLs get one-line redirect stubs for a while, so links already shared with p
 3. Session accounts. Merge `bearings/`, `crew-logs/` and `logs/` into `voyages/`, or keep "current bearing" as its own page?
 4. Order of work. Refactor the player side first and the prime overhaul second, or do both in one pass?
 5. Stale branches. Delete all but `main` and the working branch?
-6. `prime/notes/`. Move to an undeployed `docs/` folder, merge the overlapping guides (PAGE-SHAPE, WIKI-PAGE-GUIDE), and retire the one-off migration notes?
+6. `prime/notes/`. Which docs survive the consolidation, and do they move to an undeployed `docs/` folder?
 
 ## Promotes to
 
