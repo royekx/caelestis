@@ -4,7 +4,7 @@ Four older chats. Later canon often supersedes them. Repo checks are targeted gr
 
 **Coverage warning.** The read_conversation hourly call budget ran out partway through.
 - "Campaign Planning": read turns 0–36 of 417 (about 9%). Turns 37–416 are **unread**.
-- "New campaign idea development": read turns 0–69 of 102. Turns 70–101 are **unread**.
+- "New campaign idea development": read in full (turns 0–101; 70–101 merged in a follow-up sweep, 2026-10-25).
 - "Campaign organization system feedback": read in full (4 turns).
 - "D&D module where evil won": read in full (10 turns).
 
@@ -141,7 +141,7 @@ Korey asked for the fan module where Vecna won. Answer: Doomed Forgotten Realms,
 ---
 
 # New campaign idea development
-Source: https://claude.ai/chat/8e0354c1-ab60-4189-bacd-27066fd1627e · updated 2026-05-13 · **turns 0–69 of 102 read**
+Source: https://claude.ai/chat/8e0354c1-ab60-4189-bacd-27066fd1627e · updated 2026-05-13 · **read in full (turns 0–101)**
 
 This chat **is** Caelestis. It covers the Fleet Intelligence Archive (FIA) ARG behind the restricted gate of the site.
 
@@ -155,49 +155,85 @@ This chat **is** Caelestis. It covers the Fleet Intelligence Archive (FIA) ARG b
 - The gate passcode is flotsam&jetsam, which reads as Mirt's personal credential. Gold is Bridge clearance; Above Bridge sits higher. — **in repo** (one "flotsam" hit; Above Bridge clearance in use)
 
 ### Terminology
-- "Monolith" is the colloquial field term. "Resonator" is the official term used in studious contexts and the FIA. — **conflicts** (repo: "Ortholith is the Order's word for a Monolith"; "Resonator" appears nowhere in the repo)
+- "Monolith" is the colloquial field term. The formal Order and Above Bridge term is **Ortholith**, which marks the thing as "not a normal monolith structure." FIA documents use Ortholith. (Settled at turn 98, replacing Resonator and then Stele.) — **in repo** ("Ortholith is the Order's word for a Monolith"; Ortholith in fr-022, wm-003, wm-006)
 - Cadets learn of the Watchers in SJA adventure 3 or 4 but do not learn their full scope. — not checked
 
 ### Archive structure
 - File prefixes are by category, with gaps in the numbering: FR (Field Reports), LG (Logistics), WM (World Monitoring), SA (Strategic Assessment), zero-padded. — **in repo** (`restricted/` has fr-, lg-, wm-, sa- files)
-- Archive at end of turn 69: fr-005, fr-014, fr-016, fr-022, lg-003, lg-019, wm-002, wm-003, wm-006, sa-002, sa-005. — **conflicts** (repo `restricted/` has 9 files: fr-014 and lg-019 are gone)
+- Final archive (turn 75): fr-005, fr-016, fr-022, lg-003, wm-002, wm-003, wm-006, sa-002, sa-005. fr-014 (chart-theft pattern) and lg-019 (recurring-mark registry) were deleted. — **in repo** (`restricted/` has these 9 case files)
+- Chart thefts stay out of the archive because they are live in play. — **in repo** (no theft file in `restricted/`)
+- Direct network mentions survive in two files only: the Strake relief file (wm-002) and one unrelated symbol incident (fr-016). — **in repo**
+- No hover-reveals anywhere. Text is either plain or redacted, with partial redaction where needed. — **in repo** (no `title=` reveals in `restricted/`)
+- Gate and archive are named "Fleet Intelligence Archive" (renamed from "Classified Archive"). — **in repo**
+- A wrong passcode leads to a disintegration page: a 3-2-1 countdown with a zap sound, then a reprieve under Academy Regulation 17.2(b), because Form 44-C (Authorisation for Disintegration of Enrolled Personnel) was never filed. — **in repo** (`restricted/disintegration.html`)
 - Nothing may appear in the archive before it happens in play. Examples: the H'Catha meteorite (SJA-03), Vocath supply-chain analysis, the graduation strike force (SJA-04). — **in repo** in part (no H'Catha file in `restricted/`)
 - files.html is data-driven from an ARCHIVE array. — not checked (site plumbing)
 
 ### FIA lore content
-- The registry worlds are W-01 Aethris, W-02 Fonains (name fully redacted, no hover-reveal), W-03 (an unnamed natural Zenith), W-04 Vetharra, W-05 Kaldris (collapse variant, labelled "control case"), and W-06 Toril/Realmspace (pre-Zenith, HIGH priority). W-07 and above are Above Bridge restricted. — **in repo** (Vetharra, Kaldris and W-02 present)
+- Registry worlds use gappy numbers (turn 75): W-008 Aethris, W-021 destroyed (Fonains, name illegible, fragment in fr-022), W-034 an unnamed natural Zenith, W-047 Vetharra, W-052 Kaldris (collapse variant, "control case"). Further entries are Above Bridge restricted. — **in repo** (wm-003 lists W-08, W-21, W-34, W-47, W-52)
+- Toril shows no Zenith activity and is off the registry. — **in repo** (no Toril row in wm-003)
 - The Aethris manufactured Zenith happened in Cycle 1490. The Prism Ascendant is "still recording," and one survivor escaped. — **conflicts** (repo: "The ritual is incomplete: the Fortuned need Sol to finish it." "Cycle 1490" is not in repo)
-- A Watcher extracted Sol from Aethris against the Order's "preserve worlds, not individuals" remit; Korey stated this as context. In the archive it is an oblique allusion in wm-006, plus Order liaison provenance in fr-022. — **not in repo** (neither phrase found in `prime/`)
-- The FR-022 fragment comes from Fonains' destroyed black monolith. That monolith was corrupted, but Fleet only notes it as "different from other samples." The Order recovered the fragment a few years ago and routed it to Fleet. It is one of many fragments, and it is **not** Boogie's piece. Boogie may find it and consume it. — **in repo** in part ("Boogie's shard when retrieved"; the Fonains fragment is in the archive)
-- The Directive (now sa-002) is pre-existing intel from about six years ago. It is signed by something "larger, older" than the eye-wheel. Legible phrases: "WHEN THE CONVERGENCE IS COMPLETE", "THE ALIGNMENT HOLDS ACROSS ALL MARKED WORLDS", "PROCEED". — **in repo** (sa-002 exists)
-- Operative LORN was intercepted carrying a manifest, a recognition protocol and wax discs. — **in repo** (fr-016 exists). The name "LORN" is not in `prime/`.
-- The eye-above-broken-wheel is the network's mark, and Vocath is not network; the network used his grudge. — **conflicts** (repo: "The eye-in-a-wheel is his own merchant mark"; the network is the Vth'orama, and Zhauveth "makes the arrangement with Vocath")
+- wm-006 calls the Prism Ascendant the only documented Ortholith produced by a deliberately engineered Zenith, "a proof of concept." The Misfortuned were the ritual's focal points. — **in repo** in part (Prism Ascendant and Misfortuned present in `prime/`)
+- A Watcher extracted Sol from Aethris against the Order's "preserve worlds, not individuals" remit; Korey stated this as context. In the archive it is an oblique allusion in wm-006, with the operative's code left as a plain block redaction. — **not in repo** under `prime/` (the phrase is only in BACKLOG.md and this inbox)
+- fr-022 (turn 74 to 75): Fleet knows the fragment is Ortholith material because a Watcher was at the recovery. It flags two unprecedented features: it is black, and it is shattered (Ortholith material is not destructible by any known process). It is held in containment at a redacted site that is not Caelestis. Players may guess Strake; that guess is wrong. The file stays short. — **in repo** (fr-022: "deep black", "shattered", "retained in containment at")
+- The fragment is one of many from Fonains' destroyed Monolith and is **not** Boogie's piece. Boogie may find it and consume it. — **in repo** in part ("Boogie's shard when retrieved"). Note: later canon has Boogie's own shard come from the broken Monolith through Vocath's line, before V001 (session-rulings).
+- fr-016 is one isolated incident: a pressed wax disc bearing the mark, recovered years ago from a redacted source, with no match in the Bridge registry and no related incidents. — **in repo**
+- The mark is an **eye inside a ship's wheel**, a subtle nod to Vecna's hand-and-eye symbol (Korey supplied the image, turn 86). It looks almost like the Fleet Intelligence seal, which leaves its origin ambiguous. — **in repo** ("Eye In Wheel" in fr-016; eye-in-a-wheel across `prime/`)
+- The mark belongs to the network, and Vocath is not network; the network used his grudge. — **conflicts** (repo: "The eye-in-a-wheel is his own merchant mark"; locked in memory canon as Vocath's merchant symbol)
 - Vocath is a mercane operating off-script. — **in repo** (mercane hits alongside Vocath)
+- sa-002 is a Celestial Phenomena Registry (turn 83 to 85): six selected entries, Cycles 1481, 1485, 1486, 1488, 1489, 1491. Fleet logged the events but not their cause, which is unknown or of no concern to Fleet. — **in repo** (repo adds SYS- labels and Academy-intake notes)
+- Entry 1486 is Casey's tie: the starfall meteor he and Polly witnessed, with trajectories surface witnesses called "deliberate." — **in repo** (sa-002 1486). Later canon: the meteor fell on Casey's home world (memory).
+- Entry 1489 is Gregory's tie: a brief aurora over the "Cogfast Enclave" with synchronised activity among mechanical installations. Cogfast was a placeholder name for Gregory's origin. — **conflicts** (repo `restricted/sa-002.html` still reads "Cogfast Enclave — SYS-01"; memory canon and BACKLOG.md: "Gregory is from Toril... no Zenith is tied to his origin")
+
+### Cosmology Korey stated (turn 84)
+- Axioms are the pillars of reality. Vecna is trying to usurp one by applying cosmological pressure. — **in repo** (spine and vecna.md frame Vecna's climb toward the Convergence seat; session-rulings: the Ascension still to come is his climb to Axiom)
+- The pressure degrades reality and ripples from the top down; mortals downstream feel small effects. — **not in repo** as a stated mechanism (memory canon calls it the "weather of reality"; only BACKLOG.md and an inbox mention it)
+- One effect is anomalies in non-living things, such as Gregory. It is not a known field of study in player context. — **not in repo** (no "non-living" or "inanimate"). Later canon reframes Gregory as a paracausal Reach item (memory).
+- Another effect is damage to celestial bodies. Astra (then "Virex Astra", name pending) is a sentient celestial body partly destroyed by the ripple. — **in repo** in part (Astra Virex in spine, polly.html). Memory canon: what wounded Astra "still needs precise wording."
+- Astra's fragments found mortals it could speak to. It entices them as a patron to restore it, without saying so directly. — **in repo** (Astra as Casey's true patron)
+- Casey and his brother Polly (the voice Casey hears) are bound to Astra. Casey is compelled to seek out the stars and commune with them. — **in repo** (polly.html, zerathis.html)
+- Astra's goal: use those bound to it to form "constellations" with other celestial bodies, so it recovers, grows, and is never wounded this way again. — **in repo** (Starchild tethers, constellations in spine)
+- Viren is Polly's destination, not the site of Casey's event. — **in repo** (Viren in spine and plot-hooks)
 
 ### Side quest
-- The Cache at Cairn Station (asset code DCO-1490-B-7) was dropped as too tied to the network. It was replaced by a slow-burn, pirate-flavoured side quest: a lost waystation consumed by an astral dreadnought, with a redacted stored device. — **in repo**, reshaped (see the next two items)
-- Side-quest station named **Strake Station**. Its anomalies come first (FR-005), then its last contact reports an eye-and-wheel hostile at the "outer Tetherbreak edge" (LG-003). The relief vessel *Bellwether Crow* does not return (WM-002), and a standing order and memorial follow (SA-005). — **conflicts** (repo: **Cairn** is the silent post, and Strake "remains open, crewed, and entirely unaware of what it is the last stop before." The Crow "came about under damage, made Strake, and limped home")
-- NPC lead: Quartermaster Halix Verrow. Puzzle lead: cartographer Maren Tarroway (SJN-2417, out of sequence, "not confirmed lost"). The lost vessels are the *Mendren* and the *Quivering Lark*. — **in repo** (Halix Verrow is "Strake Station · quartermaster"; there is an M. Tarroway dossier). The *Mendren* and the *Quivering Lark* were not checked.
+- The Cache at Cairn Station (asset code DCO-1490-B-7) was dropped as too tied to the network. It was replaced by a slow-burn, pirate-flavoured side quest: a lost waystation consumed by an astral dreadnought, with a redacted stored device. — **in repo**, reshaped (see the next items)
+- Side-quest station named **Strake Station**. Its anomalies come first (fr-005). Its final transmission (lg-003, turn 71) reports an "unidentifiable signature, mass reading inconsistent with vessel profile... closing slow," and no hostile contact. The DM knows it is the dreadnought. A standing order and memorial follow (sa-005). — **conflicts** (repo: **Cairn** is the silent post and the mass signature is Cairn's report; Strake "remains open, crewed")
+- The relief vessel *Bellwether Crow* met the network en route (turn 70 correction): a small, fast craft bearing the mark attacked, the engagement resolved, and the Crow continued to Strake. Then silence; the Crow did not return. The network thread is a real lead that does not explain the loss. — **conflicts** (repo wm-002: the Crow "returned under own power by way of Strake, well behind schedule"; memory canon still says "that crew didn't return")
+- **Clint Dashforest**, a Bellwether Crow crewmate, was lost overboard in the network engagement, drawing the boarders' fire to clear the deck. He is an easter egg tying Caelestis to Korey's other campaign. — **conflicts** (repo clint.html: "he seized the boarders' own craft and broke away with it." Memory canon still says "lost overboard," with psychic wind carrying him to Fonains)
+- NPC lead: Quartermaster Halix Verrow. Puzzle lead: cartographer Maren Tarroway (SJN-2417, out of sequence, "not confirmed lost"). The lost vessels are the *Mendren* and the *Quivering Lark*. — **in repo** in part (Verrow is "Strake Station · quartermaster"; *Mendren* and *Quivering Lark* are in `restricted/fr-005.html`). Tarroway is reshaped: see Superseded.
 
 ## Superseded
-- 21 files in five blocks → 13 → 11 in four blocks → category prefixes → the repo's 9 files.
+- 21 files in five blocks → 13 → 11 in four blocks → category prefixes → 9 files (fr-014 and lg-019 cut at turn 75), as in the repo.
 - "Block I — Cairn Station Operation" grouping → files scattered across sections so no block reveals the thread.
 - Cairn named outright in SA-4474 → replaced by asset code DCO-1490-B-7 and an unlabelled map → the cache concept dropped entirely.
 - A dedicated Watcher file → two allusions only.
 - Watchers as "unattributed witnesses" → a known Order partner.
-- The fragment came from LORN's case → the Order recovered it at the W-02 site.
+- The fragment came from LORN's case → the Order recovered it at the W-02 site → (turn 75) a Watcher was at the recovery; W-02 renumbered W-021.
+- Operative LORN carrying a manifest, recognition protocol and wax discs (fr-016) → one isolated wax disc, no operative.
 - The fragment was "the rest of Boogie" → one of many fragments, not Boogie's.
 - The SA prefix meaning "Spelljammer Academy" → SA meaning Strategic Assessment.
-- Strake as the lost station → (repo) Cairn is the lost post, and Strake is the open last stop.
+- Registry W-01 to W-06, with Toril as W-06 "pre-Zenith, HIGH" → gappy W-008 to W-052, Toril removed.
+- sa-002 as the Directive ("WHEN THE CONVERGENCE IS COMPLETE", "PROCEED") → a fragmented "observe and report, do not engage" directive → the Celestial Phenomena Registry.
+- Casey's registry entry as a Viren/H'Catha luminous phenomenon → the 1486 starfall meteor.
+- "Resonator" as the formal term → "Stele" (dropped: homophone of steel and steal at the table) → **Ortholith**. Claude's other offers were Menhir, Betyl and Omphalos.
+- Eye above a broken wheel → eye inside a ship's wheel.
+- Strake's last contact reporting an eye-and-wheel hostile → an unidentified mass signature; the network encounter moved to the Bellwether Crow en route.
+- Strake as the lost station and the Crow lost → (repo) Cairn is the lost post, Strake is the open last stop, and the Crow came home.
+- Clint Dashforest lost overboard → (repo) seized the boarders' craft and broke away; psychic wind carried him to Fonains (memory canon, clint.html).
+- Maren Tarroway as a missing survivor, shown first by hover-reveal and then as the one unredacted memorial name → Claude offered uniform redaction (SJN-2417 out of sequence) or a footnote, leaning to redaction → (repo) "M. Tarroway" is alive on Strake, he/him, keeper of the Cairn approach packet; sa-005 lists SJN-2401 to 2408 with no 2417.
+- "Cogfast Enclave" as Gregory's origin → Toril (working decision in memory canon; BACKLOG.md flags the sa-002 entry for a fix).
+- "Virex Astra" → Astra (Astra Virex, one entity).
 
 ## Open
-These are open as of turn 69. Turns 70–101 are unread.
-- The map Drive file ID placeholder, and the Watcher operative designation code in wm-006.
-- What the stored device at the waystation is (redacted on purpose; Korey will decide later).
-- The FIA interior files (file-005/011/017) still read the network as a known group; cleanup was deferred, then overtaken by the cuts.
+These are open as of the chat's end (turn 101).
+- The map Drive file ID placeholder.
+- What the stored device at the waystation is (redacted on purpose). Repo: Tarroway's secure-storage item, "Contents open."
+- sa-005: uniform redaction or footnote. Korey had not picked when the chat ended. (Repo resolved it differently: see Superseded.)
+- The Cogfast Enclave name and its redacted sphere were left for Korey to swap. (Still live: repo sa-002 has Cogfast.)
+- What exactly wounded Astra. The chat says Vecna's ripple; memory canon says the wording is still unsettled.
 
 ## Documents produced
-- Restricted archive HTML files: several revisions, delivered as chat outputs, including files.html and the case files fr-/lg-/wm-/sa-. **Reached the repo** in later form (`restricted/` has 9 case files, files.html, index.html and disintegration.html).
+- Restricted archive HTML files: several revisions, delivered as chat outputs, including files.html, index.html (gate), disintegration.html and the nine case files. **Reached the repo** in later form (`restricted/` has 9 case files, files.html, index.html and disintegration.html).
 
 ---
 
