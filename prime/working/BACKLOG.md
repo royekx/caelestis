@@ -28,13 +28,13 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | fix | drop | add |
 |---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 15 | 20 | 0 | 25 |
+| Cosmology | cosmology/, glossary/, chart/ | 13 | 20 | 0 | 25 |
 | Realms | realms/ except Fonains; a new Oerth page | 32 | 33 | 3 | 47 |
-| Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 13 | 13 | 1 | 29 |
+| Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 14 | 13 | 1 | 29 |
 | Timeline | the rest of timeline.json | 3 | 5 | 0 | 0 |
-| Factions | factions/ | 11 | 20 | 2 | 40 |
+| Factions | factions/ | 9 | 20 | 2 | 40 |
 | Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 16 | 45 | 5 | 40 |
-| Dossiers | dossiers/ | 20 | 41 | 0 | 50 |
+| Dossiers | dossiers/ | 19 | 41 | 0 | 50 |
 | Crew | crew/ | 32 | 16 | 0 | 73 |
 | Artifacts and vessels | artifacts/, vessels/ | 12 | 26 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 18 | 19 | 0 | 17 |
@@ -42,7 +42,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 10 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 2 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 7 | 4 | 0 | 1 |
-| **Total** | | **211** | **253** | **14** | **399** |
+| **Total** | | **207** | **253** | **14** | **399** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -298,30 +298,20 @@ Order under each page: decide, fix, drop, add.
 ### glossary/index.html
 
 - **[decide]** Shothragot
-  Shothragot is Tharizdun's avatar, a great black mass of dark energy, met in the Fonains Monolith sessions. Check the Session 14–15 transcripts for whether Lola's Boys destroyed it. Lean (Korey): it was not truly destroyed; it now lives in Ziko's black blade, and that is what drives Giorge. Retcon in place if needed.
-  src: Korey, 2026-10-25 (round 5); working/tharizdun.md
+  Ruled: its temple was aboard the planar craft, and its true vestige may still be there; Giorge may be heading for it (STAGING round 6). Check the Session 14–15 notes for what Lola's Boys did to it in the Monolith, and whether part of it rides in Ziko's black blade.
+  src: Korey, 2026-10-25 (rounds 5–6)
 
 - **[decide]** What N'ghathrod is doing now
   Vth'oramu's whereabouts follow from it (STAGING round 5). The shape, not every move: which worlds his crews work, which hearts they chase, how close the colony runs to Realmspace.
   src: Korey, 2026-10-25 (round 5)
-
-- **[decide]** The dreadnought's tether and weapon
-  Ruled: no prior wound; a long siege, many tadpoles (STAGING round 5). Still open: what lies at the end of its astral tether, whether it can be freed, and its main weapon (an antimagic cone is rejected; an eversion was proposed and never confirmed).
-  src: chat-cosmic-campaign-structure § Open
-
-- **[decide]** Fracture Cult and the Archivists
-  The Spectrum page has them as independent groups: the Fracture Cult "exists to create peak events" (Zeniths) and the Archivists "operate on monoliths". Korey does not recognise them. Options: (a) fold both into the Seekers as chapters named for what they seek (a chapter seeking to bring worlds to their Zenith; a chapter seeking what the Monoliths record); (b) cut them and make something new when needed.
-  Touches: factions/spectrum.html, factions/index.html, factions/seekers.html.
-  src: factions/spectrum.html; Korey, 2026-10-25 (round 5)
 
 - **[decide]** The colony's arms
   Ruled: they echo a hand and an eye without showing them outright (STAGING round 5). The design is open.
   src: Korey, 2026-10-25 (round 5)
 
 - **[decide]** The Order's seat
-  Ruled: it holds a Hall of Sight and a Hall of Sound (STAGING round 5). Name the seat as a whole and place it when the crew is headed there.
-  src: Korey, 2026-10-25 (round 5)
-
+  The Hall of Sight and Sound is its great hall (STAGING rounds 5–6). Name and place the seat itself when the crew is headed there.
+  src: Korey, 2026-10-25 (round 6)
 
 - **[fix]** Trim Tarroway to a thread
   Keep M. Tarroway as Strake Station's cartographer whose readings first hinted at an unknown vessel disturbing the satellites at the system's edge (STAGING round 4). Cut the "timing tables" and their failure everywhere. Reduce his presence on the ten pages that mention him to passing references; his main home is the Fleet Intelligence Archive (restricted/). Nothing public.
@@ -933,6 +923,12 @@ Order under each heading: decide, fix, drop, add.
 
 ### realms/fonains.html
 
+- **[decide]** When the Princes were last sealed on Fonains
+  Korey's lean: the craft's crash about five hundred years ago coincides with the last time the elementals ravaged Fonains; the gods stepped in, helped forge the four weapons and sealed the Princes. That conflicts with the timeline ("The Accordance seals the Princes", about 12,000 years ago) and with Asmodeus giving the fire genasi Tinderstrike about 350 years ago. Options: (a) one sealing about 500 years ago, and the 12,000 and 350 dates move; (b) an ancient first sealing, a second rising about 500 years ago when the weapons were forged, and Tinderstrike's handover after it.
+  Touches: timeline, Fonains doc, realms/fonains.html, the Cre'Tez line.
+  src: Korey, 2026-10-25 (round 6); timeline.json
+
+
 - **[fix]** Fonains's world designation *(answered)*
   Fonains is W-21, and Aethris is W-08. Caelestis and the FIA share one numbering. The early registry's "W-02 Fonains" and "W-01 Aethris" were renumbered (W-02 to W-021, then W-21; W-008 to W-08), and W-02 is H'Catha. The realm pages and the chart stand. Correct any FIA file or note that still shows W-02 or W-021 for Fonains, or W-01 or W-008 for Aethris; drop "Draft:" from the chart note "Draft: Fonains matches FIA W-21".
   src: chat-early-planning § New campaign idea development; realms/fonains.html; chart/index.html
@@ -1233,14 +1229,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   The brainless-raised are the Vth'ulhan, "the unthinned". They took Glyth's insult for themselves. factions/index.html already says "unthinned" and needs no change. factions/vthorama.html also says "unculled" in three places ("The unculled are an obscenity", "most of the colony is unculled", "The contradiction about the unculled"); change each to "unthinned". Timeline lines that say "brainless-raised" describe them and can stay.
   src: memory-canon open-decisions (operative-resolved open list); chat-cosmic-campaign-structure § N'ghathrod origin, § N'ghathrod and the colony
   answered: inbox/chat-cosmic-campaign-structure.md § N'ghathrod and the colony (Settled: "Vth'ulhan = the unthinned") and § Superseded ("Vth'ulhan kept as 'the unthinned'"). Korey used it himself in the taxonomy turn ("the Vithulan who are of the ship and unthinned"), which comes after the memory open-list line.
-
-- **[decide]** Fracture Cult and Archivists against the Seekers
-  Both drive or work Zeniths and Monoliths, which overlaps the Seekers. Options:
-  (a) Keep them independent, with some cells serving as chapters (current Spectrum text).
-  (b) Fold them into the Seekers as chapter types.
-  (c) Retire them.
-  Touches: factions/index.html (Spectrum card), factions/spectrum.html, factions/seekers.html.
-  src: memory-canon open-decisions (audit line)
 
 - **[decide]** Thumbnails for people with pages
   Do people with their own dossiers get thumbnails on the Factions page?
@@ -1578,10 +1566,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ---
 
 ### factions/spectrum.html
-
-- **[decide]** Fracture Cult and Archivists
-  Follows the decide under factions/index.html; the page body carries the same overlap text.
-  src: memory-canon open-decisions (audit line)
 
 # Campaign
 
@@ -2632,10 +2616,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ---
 
 ### dossiers/vthoramu.html
-
-- **[decide]** Its main weapon
-  An antimagic cone is rejected. An eversion (the interior pushed out) was proposed and never confirmed. Options: eversion, or something else.
-  src: chat-cosmic-campaign-structure § Open, § Superseded
 
 - **[fix]** The name
   The infobox says "Name: The whole of the going-home", and the body says the name "restates the promise". The name is locked: Vth'oramu, shortened to Oramu, means "the passage to a new home". Change the infobox. The body's line "The passage to a home they were promised and have yet to be given" already fits.

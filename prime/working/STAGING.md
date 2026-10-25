@@ -218,10 +218,30 @@ writing rules.
 
 ### The Order (factions/order.html)
 - The Watchers keep watching. Over the past century they have seen Monoliths rise more often, and it worries them; some want to act. They are fighting oddities across many worlds and trying to keep a lid on them. Caelestis is thin partly because it answers the Watchers' calls for help.
-- The Order's seat holds a Hall of Sight and a Hall of Sound. The seat as a whole needs a name.
+- The Hall of Sight and Sound is the great hall within the Order's seat.
 - H'Catha's Watcher is Nereth Vaul. Her species sets the final form of the name.
 
 ### Aethris (factions/aethris.html, realms/aethris.html, dossiers/beshaba.html, factions/deities.html)
 - The Fortuned want Sol back alive because he is a component of their unfinished ritual. They do not care about him as a person.
 - Beshaba finds the Fortuned heretical, a spit in her face. She thinks Tymora is fuelling them, and blames her sister for it. On Aethris Beshaba is the lesser of the two, because people favour luck over misfortune, and she calls what the Fortuned do unnatural.
 - Neither sister knows what both of them need: each other. Luck and misfortune are two sides of one coin.
+
+## Rulings of 2026-10-25, round 6
+
+### Tharizdun and the planar craft (realms/fonains.html, dossiers/thessalar.html, working/tharizdun.md, Fonains doc)
+- One of Tharizdun's temples was aboard Thessalar's planar craft. When the craft broke apart in its fall, the piece holding the temple came down somewhere other than the Barrier Peaks.
+- The crash, about five hundred years ago, is how the Elder Elemental Eye reached Fonains. Tharizdun's influence spread across the world from the fallen temple. It is why the Eye watched Lola's Boys in the year 425, and why the craft's gems carried his touch.
+- Shothragot, his avatar, was bound to that temple. Its true vestige may still be there, and Giorge may be trying to reach it.
+- Lola's Boys, by taking the gems in the year 425, brought down the craft. In doing so they freed N'ghathrod and landed Tharizdun's foothold on their own world.
+- What the planar craft was, a vast floating city of many tiers, and where it came from, is unknown.
+
+### Vth'oramu (dossiers/vthoramu.html)
+- The dreadnought's tether is an astral cord, a silver line running off to somewhere unknown. Its physical tail is immensely long, which is part of why Vth'oramu cannot enter a system.
+- Its mouth draws things in, the way an astral dreadnought's mouth opens on its inner demiplane. Its great weapon is the reverse: a pulse pressed outward from every side of its body, and everything within range is teleported away. It takes a long time to charge and is rarely used.
+
+### The Seekers (factions/seekers.html, factions/spectrum.html)
+- The Fracture Cult and the Archivists are Seekers chapters. The Fracture Cult seeks to bring worlds to their Zenith. The Archivists seek what the Monoliths record.
+
+### Prep (DM principles)
+- A world that is named has core facts, even if nothing else is built: what it is like, who lives there. Anything named in play needs work from that point.
+- Prep where the crew is going and one ring out from it: H'Catha and the cantina now. Seekers chapters and other far details get built when they become active in the larger shape, not before.
