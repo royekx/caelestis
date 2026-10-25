@@ -12,7 +12,7 @@ settled decision as **in repo**, **not in repo** or **conflicts**.
 | chat-organizing-framework.md | Organizing a sprawling campaign framework | Full | 11 | 6 | — |
 | chat-voyage-6-7-planning.md | Voyage six session planning; Voyage 7 prep | Full | 45 | 3 | — |
 | chat-automation.md | Automating with n8n; Voyage 5 runbook | V5 full; n8n mostly | 0 | 2 | — |
-| chat-crew-boogie-casey-sol.md | Boogie; Casey Geim; Sol Fortuna | Boogie full; Casey 0–40 of 108; Sol 0–202 of 908 | 56 | 4 | Casey t41, Sol t203 |
+| chat-crew-boogie-casey-sol.md | Boogie; Casey Geim; Sol Fortuna | Boogie full; Casey 0–100 of 108; Sol 0–202 of 908 | 79 | 7 | Casey t101, Sol t203 |
 | chat-crew-tumak-gregory-bartholomew.md | Tumak Swan; Tumak's tracker; Gregory; Bartholomew; Gregory's anomaly arc | Tumak Swan 0–114 of 336; rest full | 34 | 16 | Tumak t115 |
 | chat-early-planning.md | Campaign Planning; Campaign organization; D&D module where evil won; New campaign idea | Planning 0–36 of 417; New idea 0–69 of 102; rest full | 18 | 6 | Planning t37, New idea t70 |
 

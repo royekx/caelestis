@@ -2,9 +2,9 @@
 
 Coverage note. The read tool hit its hourly call limit partway through.
 - Boogie: read in full (turns 0–88 of 89).
-- Casey Geim: turns 0–40 of 108 read in full. Turns 41–107 seen only through targeted search snippets. Items from that range are marked "(snippet)".
+- Casey Geim: turns 0–100 of 108 read in full (41–100 re-swept 2026-10-25). Turns 101–107 not yet read; resume at page_token "t101".
 - Sol Fortuna: turns 0–202 of 908 read in full. Turns 203–907 seen only through targeted search snippets. Items from that range are marked "(snippet)".
-- A re-sweep of Casey 41+ and Sol 203+ is needed before this file is treated as complete.
+- A re-sweep of Casey 101+ and Sol 203+ is needed before this file is treated as complete.
 
 Repo checks are targeted greps of `prime/` only.
 
@@ -90,7 +90,9 @@ Source: https://claude.ai/chat/fa8c4131-81e2-44e5-9ec2-e4a8a0850312 · updated 2
 ---
 
 # Casey Geim
-Source: https://claude.ai/chat/f7712be1-509e-42bb-a151-4bf24b58224e · updated 2026-10-24
+Source: https://claude.ai/chat/f7712be1-509e-42bb-a151-4bf24b58224e · updated 2026-10-25
+
+Coverage: turns 0–100 of 108 read in full. Turns 101–107 not read (read limit hit); resume at page_token "t101". Items marked "(snippet)" in the earlier pass are now confirmed or corrected unless still marked.
 
 ## Settled
 
@@ -108,25 +110,71 @@ Source: https://claude.ai/chat/f7712be1-509e-42bb-a151-4bf24b58224e · updated 2
 - The Many feature mapping (Guarded, heads visible on Intimidation, death-save head, L6, L14). — **in repo** (crew/casey.html)
 - The Lantern Node / Viren quest is Casey's first named alignment. — **not in repo** under that name (no "Lantern Node" hit); Viren as point one is **in repo** (crew/casey.html)
 
-### Stellar Reading
-- Stellar Reading costs one star as a bonus action. — **not in repo** as rules text (crew/casey.html names the faculty only)
-- It must be used before engaging the target. Correct sign: Advantage on Charisma checks for that social encounter. Wrong sign: Disadvantage. Declining: straight rolls. (snippet) — **not in repo** as rules text
-- The birthday/ask-the-sign path was removed from the feature; it is pre-emptive only. (snippet) — **not in repo**
-- The player-facing writeup must not name Virex Astra. (snippet) — consistent with repo (crew/casey.html is DM-side)
+### Character sheet (turn 84–85)
+- Warlock 2 with proficiency +2, so 3 stars; the chart's star cap of 3 matches. — **in repo** in effect (stellar-chart STAR_CAP 3)
+- CHA 18 (+4) is his main stat. — **not in repo**
+- His faith is listed as Astrology. — **not in repo** (no "Astrology" hit)
+- He has a Gemini brand on his left shoulder, the sign he shares with Polly. — **not in repo** (no "Gemini" hit in prime/)
+- His prepared spells are zodiac-named: Ward of the Capricorn, Duplicate (Gemini), Armor of Taurus, Arms of Aquarius, Life of Cancer (false life via Fiendish Vigor), Disguise of Aries (Mask of Many Faces). — **not in repo**
+- Bond: his brother Polly. Flaw: relies too heavily on others. — **in repo** for the Polly bond (crew/casey.html); the flaw is **not in repo**
+- WIS 4 (−3), passive Perception 7: he reads cosmic patterns and misses the obvious. — **not in repo**
+- He has the Lucky feat. — **not in repo** (no "Lucky" hit)
+- Background: Wayfarer (named in Claude's summary of the arc doc). — **not in repo** (no "Wayfarer" hit)
+- Casey reached level 3, and Korey wants a personal narrative scene for that level-up. — **not in repo** as a planned scene
+
+### Stellar Reading (final player text, turn 69)
+- Choose a creature you can see that you have not yet engaged in conversation. Bonus action, expend 1 star. Your stars appear as a partial constellation above the target, visible only to you. You may attempt to name the constellation it forms. — **not in repo** under prime/; **in repo** on the player page (crew-manifest/casey-geim.html, Stellar Reading companion card)
+- Correct: advantage on Charisma checks against the target for 1 minute. Incorrect: disadvantage for 1 minute. — same as above (crew-manifest/casey-geim.html, "for 1 minute")
+- "Once the encounter begins, the window closes." No retries by walking away and returning. — same as above
+- The player-facing text does not name Virex Astra or Astra. — consistent with repo (player page has no Astra mention)
+- The number of stars shown equals Casey's total star count; the "one node always hidden" note was cut from the player text. — **in repo** in effect (player page text)
+- Balance: compared with Friends; judged slightly stronger in a different shape; duration cut to 1 minute for easy tracking. — **not in repo** as a note
+- Full chart access for the player is intended and is no loophole; the stars over the target are the throttle. — **not in repo** as a note
+- DM guidance: do not reveal NPC signs casually; vary sign distribution so archetypes do not give signs away; do not confirm wrong guesses outside fiction; no retries. — **not in repo**
+- Hit rates with full chart knowledge: 3 stars about 50%, 4 about 83%, 5 about 92%, 7 at 100%. — **not in repo**
+
+### Stellar chart (page)
 - Grid: 10 nodes; each sign is an 8-node constellation; max 7 stars (1 + max proficiency); one node always hidden. — **not in repo** under prime/ (player page /stellar-chart/ exists)
 - Star cap tracks Casey's current count, starting at 3. — **not in repo** under prime/
-- Ambiguity at 3 stars: two trios (Aries/Leo/Taurus, Capricorn/Virgo/Gemini), two pairs (Cancer/Scorpio, Aquarius/Pisces), Libra and Sagittarius unique. Aries/Leo stays paired to 7 stars. — **not in repo** under prime/
-- Chart lives as a site page with the DM tab behind a password, renamed "Keeper's chart", in-game wording ("Read the Sky", "You've charted the stars you know", "Release the stars", "chart their stars"). — **in repo** at site root (/stellar-chart/index.html has "Keeper's chart", "Read the Sky"); not under prime/
+- Ambiguity at 3 stars: trios {1,2,7} Aries/Leo/Taurus and {3,6,8} Capricorn/Virgo/Gemini; pairs {4,6,9} Cancer/Scorpio and {3,5,10} Aquarius/Pisces; Libra {1,7,9} and Sagittarius {1,8,10} unique. Aries and Leo share their first 6 stars and resolve at 7. — **not in repo** under prime/; **conflicts** for Sagittarius (voyage-briefing-002.html: "Three points light over Ryeback: {5, 7, 8} — uniquely Sagittarius"; the published chart's Sagittarius starts 10, 1, 8)
+- Chart lives as a site page with the DM tab behind a password, renamed "Keeper's chart", in-game wording ("Read the Sky", "You've charted the stars you know", "Release the stars", "Chart their stars"). — **in repo** at site root (/stellar-chart/index.html); not under prime/
+- The "Mirrors X through N stars" text was removed from the player-facing Signs tab; the pair and trio math is Keeper's-chart only. — **in repo** at site root (no "Mirrors" text in /stellar-chart/index.html)
+- The candidate list on Read the Sky ("The pattern echoes more than one sign") stays; it is the read itself, not meta-information. — **in repo** at site root
+- Stellar Reading sits on Casey's player page between bio and Voyage 001, with a "Consult the chart" link; the chart page links back to Casey. — **in repo** at site root (crew-manifest/casey-geim.html)
 
-### Astra and tethering (snippet range)
-- Virex Astra renamed to Astra "for now", because it was too close to the Viren system. (snippet) — **conflicts** (repo uses "Astra Virex": dossiers/astra-virex.html, crew/casey.html)
-- Astra is paracausal, wounded and changed by the Existence pulse/Axiom, and still changing. (snippet) — **in repo** in part (paracausal and "wounded celestial" appear; "Existence Axiom" has no hit)
-- Each constellation point Casey attunes to becomes a tether; Astra reaches through and the region drifts over time. Casey never pays; the cosmos does. (snippet) — **in repo** (crew/casey.html, "The loop")
-- Polly, Casey's brother, is Astra's proxy; his voice clarifies with each tether. (snippet) — **in repo** (crew/casey.html; dossiers/polly.html)
-- Other warlocks have tethered too; Viren is Casey's first point and should change most. Something "bad" must happen there to make him question the trade. (snippet) — **in repo** in part (crew/casey.html, Zerathis at Viren and overlap sites)
-- Another hearer like Casey should appear as pressure. (snippet) — **in repo** in part (crew/casey.html, Zerathis as prior Starchild)
-- Casey's stars are a lens he reads with, distinct from Tumak's runes, which are an apparatus that fires once. (snippet) — **not in repo** as a stated contrast
-- Gregory's Calibration picks up Casey's tethers as paracausal static. (snippet, Claude proposal; acceptance not confirmed) — **not in repo**
+### Mechanical distinction from Tumak
+- Korey accepts thematic overlap with Tumak; the mechanics must feel distinct. — **not in repo** as a stated contrast
+- Tumak is time-driven: marks arrive per level, and he chooses where they go. Casey is point-driven: he must find constellation points and attune. — **not in repo** (no "point-driven" hit)
+- Casey does not teleport to his constellations. — **not in repo**
+- Casey's stars are a lens he reads with, continuous and unbounded. Tumak's runes are an apparatus on his body that fires once. — **not in repo** as a stated contrast
+- Each point should be a different experience; Casey learns something at each and feels the connection grow. — **in repo** in part (crew/casey.html tethering loop); the variety rule is **not in repo**
+- Each point is a real adventure for the whole party, modeled on Fjord (Critical Role campaign two) placing the stones on Uk'otoa's seal. — **not in repo** (no "Fjord" hit)
+
+### Astra
+- Virex Astra is renamed Astra "for now", because it was too close to the Viren system. — **conflicts** (repo uses "Astra Virex": dossiers/astra-virex.html, crew/casey.html)
+- Astra is a sentient celestial body. — **in repo** (dossiers/astra-virex.html, "A sentient paracausal celestial body")
+- Astra wants to expand so that what happened to it never happens again, and to grow stronger. — **in repo** (dossiers/astra-virex.html, "to be strong, and to never let this happen again")
+- It works through warlocks and other hearers, pulling them to make constellations that form a route back to it. Casey does not know he is building that path. — **in repo** in part (crew/casey.html, "needs a hearer to do the stitching")
+- Polly is the face-value patron and Astra's proxy; his voice clarifies with each tether. — **in repo** (crew/casey.html; dossiers/polly.html)
+- The Existence pulse (the Axiom) wounded Astra and changed it; Astra is paracausal and still changing. — **conflicts** in part (dossiers/astra-virex.html: "wounded by a Seam — Transformation and Boundary overlapping"); "still changing" is **in repo** ("every action it takes shapes what it becomes")
+- Astra's long game may be to connect to the Axiom so this cannot happen again (Korey: not nailed down). — **not in repo**
+- Patrons make pacts for a reason: Astra needs the warlock, and opting out must rob him of something. — **in repo** (crew/casey.html, "What withdrawal costs")
+- Withdrawal costs: Polly's voice thins; the chart goes quiet; the cloak stops mattering. (Claude proposal; Korey said "right direction") — **in repo** (crew/casey.html)
+
+### Tethering
+- Each constellation point Casey attunes to becomes a tether; Astra reaches through and the region changes over time. Casey never pays; the cosmos does. — **in repo** (crew/casey.html, "The loop")
+- Paracausal means the reality of a thing has changed, how it exists, not that it was made magical. — **in repo** (cosmology/index.html, "Paracausal = the reality of a thing has been changed")
+- Anchored regions change at the level of nature, not as magic effects: a river reflects another sky; wind holds one direction; children born there recognize each other. — **not in repo** as examples (crew/casey.html describes drift generally)
+- Other warlocks have tethered too, so regions change at different rates. — **in repo** (crew/casey.html, "Where more than one Starchild has tethered, paracausal change accelerates")
+- Viren is Casey's first point and should change the most; he may feel it changing. — **in repo** in part (crew/casey.html, Viren and Zerathis)
+- Something "bad", not catastrophic, must happen there to make Casey ask whether the change is worth what he gains. — **not in repo** as a planned beat (also Open)
+- Another hearer like Casey should appear as pressure, possibly contentious, possibly a partner, modeled on Avantika. — **in repo** in part (crew/casey.html, Zerathis as prior Starchild); the living rival is **not in repo** (no "Avantika" hit)
+- Players never learn the word "Axiom"; Casey learns only that specific things are wrong or changed. — **not in repo** (no "never learn" hit)
+- Gregory's Calibration picks up Casey's tethers as paracausal static. (Claude proposal, repeated in turns 93 and 97; acceptance not confirmed) — **not in repo**
+
+### Point design guardrails (Claude framework; Korey: "going in the right direction")
+- Each point has five parts: the Sign (hook), the Subject (what the point is), the Work (the adventure), the Gift (what he learns), the Toll (what Astra takes, never named at the table). — **not in repo** (no "Toll" hit)
+- Variance axes: scale, subject, tone, engagement, guidance. Each new point shifts at least three from the last. — **not in repo**
 
 ## Superseded
 - Soft hook: advantage on Insight/Persuasion once per long rest after learning a sign → replaced by Stellar Reading.
@@ -137,19 +185,41 @@ Source: https://claude.ai/chat/f7712be1-509e-42bb-a151-4bf24b58224e · updated 2
 - Password "watchtower" → "virexastra".
 - "DM ref" tab → "Keeper's chart".
 - Alignment completions add heads → proficiency sets head count; alignments name existing heads.
-- Virex Astra → Astra (snippet; repo still says Astra Virex).
+- Virex Astra → Astra (repo still says Astra Virex).
+- Stellar Reading "Birthday Question" (knowing the birth-month confirms the read) → removed; pre-emptive only.
+- Next Charisma check only → whole social encounter → minutes equal to Charisma modifier → 1 minute.
+- Decline-to-commit option (straight rolls) → removed.
+- Stars shown "equal to your remaining star count" → your stars (total count).
+- Player text noting one star is always hidden → removed from the player text.
+- "When you can see a creature" → "Choose a creature you can see".
+- "Mirrors" pair text on the Signs tab → Keeper's chart only.
+- A "middle ground" for the candidate list → withdrawn by Claude; list kept.
+- A named role for Casey (Reader, Cartographer, Brother and others) → Korey disliked the label; left unnamed.
+- Arc-level comparison with Tumak's document → Korey redirected to the mechanical comparison.
+- Gaining stars by aligning with stellar entities that "show him something" → point-driven attunement at constellation points.
+- Area-change list of magic-flavored oddities (coins on edge, off-color light, time stutters) → nature-level paracausal change.
+- Astra's clock as "the thing that wounded it is still out there" → Korey set the Axiom as the wound; clock not adopted.
 
 ## Open
-- What the first tether point is and what happens at Viren (also open in crew/casey.html).
+- What the first tether point is and what happens at Viren (also open in crew/casey.html). Options offered: a dying stellar entity, a Zerathis-connected place or person, stellar-touched inhabitants, a rift onto a missing constellation.
 - What "bad" event at Viren makes Casey question the trade.
-- Whether Casey's paracausal hearing is innate or began when Polly left.
+- Whether Casey's paracausal nature is innate or began when Polly left. Claude proposed his hearing reaches the paracausal layer; this **conflicts** with crew/casey.html ("his faculty is visual: he sees constellations nobody else can").
+- Casey's want beyond Polly. Claude offered "to be chosen the way Polly was chosen"; not confirmed.
+- The other hearer's shape (further along, earlier, diverged, or opposing) and destination.
+- The level 3 narrative scene (first tether, first area change, or Polly speaking directly to him).
+- What the Toll looks like in play as a hidden meter.
+- When someone first notices a changed region (suggested V005–V006).
 - The Lantern Node alignment bonus.
 - Final name for Astra.
-- Turns 41–107 not fully read; more decisions are likely there.
+- Whether to add the Gemini brand and zodiac spell names to Casey's page.
+- Turns 101–107 not yet read.
 
 ## Documents produced
-- Stellar reading chart widget, versions v1 to v5.1 (visualize widgets in chat). A version reached the repo as /stellar-chart/index.html (site root, outside prime/).
-- Stellar Reading player writeup (snippet range). Chat only as far as seen.
+- Stellar reading chart widget, versions v1 to v5.2 (visualize widgets in chat). A version reached the repo as /stellar-chart/index.html (site root, outside prime/).
+- stellar-chart/index.html, standalone site page with Caelestis CSS and nav.js, later edited to add a back-link and remove the mirrors text. File in chat outputs; reached the repo at site root.
+- crew-manifest/casey.html with a Stellar Reading section and chart link. File in chat outputs; reached the repo as crew-manifest/casey-geim.html (site root).
+- Stellar Reading writeup, several drafts ending in a D&D Beyond-style feat. The final text reached the player page; not under prime/.
+- Tumak and Casey mechanical comparison and the point-design framework. Chat only. Not in repo.
 
 ---
 
