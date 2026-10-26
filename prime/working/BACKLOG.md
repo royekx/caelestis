@@ -144,6 +144,11 @@ Order under each page: decide, fix, drop, add.
 
 ### cosmology/index.html
 
+- **[decide]** A different game system in each sphere *(shape)*
+  Korey's idea (2026-10-25): sub-genres already differ world to world; game systems go one step further and differ sphere to sphere. The cosmology carries it: what a sphere holds (prime gods, good gods, the Weave) shapes how magic and reality work there, so the rules change when the crew crosses. SPH-02, the godless sphere (no gods, no Weave; the Axioms and Continuity still hold), runs as Call of Cthulhu. Caelestis's sphere runs as D&D 5e.
+  To shape: what physically or metaphysically changes at a sphere's edge, and what the crew feels crossing it; which presences set a sphere's system (prime gods, good gods, the Weave, an Axiom's lean); what happens to a character's abilities across the line (divine magic fades, arcane magic falters, a sanity track appears); which systems SPH-03 to SPH-05 lean toward, decided only when a campaign goes there; whether worlds inside a sphere keep their own genre on top of it.
+  src: Korey, 2026-10-25 (chat); inbox/chat-organizing-framework.md (SPH-02 godless, cosmic horror); memory-canon (a different vibe on each world)
+
 - **[fix]** Residue counts by Axiom *(answered)*
   The split is Dissolution 2, Boundary 3, Transformation 5, Convergence 7 (STAGING round 11). The pages use Boundary 2, Dissolution 3, Transformation 5. Correct each:
   - This page's residue table, and the line "A Boundary piece points toward its one sibling. A Convergence piece feels six." Change to: "A Boundary piece points toward its two siblings. A Convergence piece feels six."
