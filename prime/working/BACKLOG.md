@@ -154,7 +154,7 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-26
 
 - **[later]** Place GAL-01's inscription on the chart
-  Ruled: GAL-01's inscription is the eye he lost, sixteen heart worlds (ten lids, six iris); the iris worlds are key (STAGING, Campaign; diagram 2026-10-26). Left for when play needs it: which systems hold which strokes, and whether any known system (Greyspace, Realmspace, Krynnspace) lies on the figure, and whether Greyspace sits in the iris.
+  Ruled: GAL-01's inscription is the eye he lost, sixteen heart worlds (ten lids, six iris); the iris worlds are key (STAGING, Campaign; diagram 2026-10-26). Left for when play needs it: which systems hold which strokes, and whether any known system (Realmspace, Krynnspace, Virenspace) lies on the figure. Greyspace is not on it: Oerth is the retina every eye world links back to (STAGING, Campaign).
   src: Korey, 2026-10-26
 
 - **[decide]** Who works the other galaxies' cores *(later)*
