@@ -108,7 +108,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ### The galaxies in play (DM)
 - Each galaxy is assigned a game system ahead of time: GAL-01 runs as D&D 5e and GAL-02 as Call of Cthulhu. GAL-03, GAL-04 and GAL-05 get theirs before any campaign goes there.
-- Where each galaxy stands: GAL-01 has one link, between two worlds in one system on the hand's outline; one of them is a little-charted planet the crew learns of late in the campaign. One more heart on the hand is found and not yet opened. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and their fate turns on GAL-01.
+- Where each galaxy stands: GAL-01 has one link, between two worlds in one system on the upper lid; one of them is a little-charted planet the crew learns of late in the campaign. One more heart on the lower lid is found and not yet opened. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and their fate turns on GAL-01.
 - A galaxy's contents stay unbuilt until play reaches it. What Vecna's working needs from it is tracked as counts only: hearts found, opened and linked. Which worlds they are is decided when it matters, as with the bleeding between linked worlds.
 - The survey (prime/data/survey.json, kept with scripts/survey.js) holds every rolled system that is kept. Once saved, a system is part of the record and is edited by hand as play fills it in.
 
@@ -266,10 +266,11 @@ when a ruling changes; delete it once the page carries it. See
 - Through the opened center lies Continuity itself. Whoever reaches it can push and pull the Axioms and remake reality. That is what Vecna seeks, and what the beings working the other galaxies seek.
 - A galaxy's core wakes when its inscription is whole: a figure drawn in linked heart worlds across the galaxy. World hearts link only to worlds in their own galaxy; only a woken core reaches beyond it.
 - Every galaxy's inscription is different, the way each node of a spell circle carries its own glyph. Its shape follows where that galaxy's Monolith worlds lie along its arms, and the being working that core.
-- GAL-01's inscription is Vecna's mark: an eye in the palm of a left hand, drawn across the galaxy. The hand is rounded, with a nub of a thumb and a wrist, and its worlds lie along the spiral arms without crowding. The hand's outline closes a binding circle around the core. The eye surrounds the core, and the core is its pupil: when the figure is whole, the eye opens.
-- The hand's worlds can be replaced: a lost stroke can be redrawn through another Monolith world near it, at a cost of years. The eye's worlds are key. Lose one and the eye must be redrawn, a real setback but not the end.
+- GAL-01's inscription is an eye: the left eye Vecna lost, remade across a galaxy, an eye that would see everything. Seen at an angle the galaxy is almond-shaped; heart worlds along its arms trace the two lids, and a ring of heart worlds around the core forms the iris. The core is the pupil. When lids and iris are whole, the eye opens and the core wakes.
+- The iris closes the binding circle around the core. Its worlds are key: lose one and the iris must be redrawn, a real setback but not the end. Lid worlds can be replaced: a lost stroke can be redrawn through another Monolith world near it, at a cost of years.
+- The eye in the palm of a left hand remains Vecna's holy symbol on worlds. Only the eye is written across the sky; the chapters that read his symbol's eye as sight and revelation are closest to the truth.
 - The figure is loose. Plotted on a chart, the found and opened hearts begin to trace it, and someone who knows Vecna's mark can recognize it.
-- (DM: the number of hearts follows the figure, about sixteen for GAL-01, not a fixed rule.)
+- (DM: the number of hearts follows the figure, sixteen for GAL-01: ten on the lids, six in the iris. Not a fixed rule.)
 - Vecna works GAL-01's core. In each of the other galaxies, another being works its own core toward the same end. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and what happens in GAL-01 decides them.
 - Once Erevos opens, every linked heart becomes a door: through its Atrium to the core, and through the core to the center. Vecna's vessels go that way.
 - Vecna calls his working the Circle of Fifths, after the circle of fifths in music: five galaxies, each a fifth of what he needs, around the center where the Axioms meet. He has a taste for music, and it shows in how he names things.
