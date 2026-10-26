@@ -35,7 +35,7 @@ staging once Korey has read and accepted them.
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
 | Factions | factions/ | 1 | 4 | 22 | 2 | 40 |
-| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 15 | 1 | 46 | 5 | 42 |
+| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 14 | 1 | 46 | 5 | 42 |
 | Dossiers | dossiers/ | 9 | 6 | 43 | 0 | 51 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 6 | 2 | 26 | 0 | 43 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 2 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 5 | 0 | 1 |
-| **Total** | | **77** | **86** | **273** | **14** | **420** |
+| **Total** | | **76** | **86** | **273** | **14** | **420** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1631,15 +1631,11 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   src: Korey, 2026-10-25 (round 8)
 
 - **[decide]** The higher organization's name *(shape)*
-  Ruled: every member of its service is a Driftwarden, ranked like a police force; Caelestis is its academy; Driftwarden operations for Caelestis's cluster run from Ondrel Anchorage on the moon Ostrel; its affiliates share information and each mostly runs itself (STAGING, Factions). Left: a name in the style of a real international body, using "Intergalactic".
+  Ruled: every member of its service is a Driftwarden, ranked like a police force; Caelestis is its academy; Driftwarden operations for Caelestis's cluster run from Ondrel Anchorage on the moon Ostrel; its affiliates share information and each mostly runs itself (STAGING, Factions). Left: a name in the style of a real international body, with "Intergalactic" and "Fleet" in it; "the Fleet" stays as the everyday word for the service.
   src: Korey, 2026-10-26
 
 - **[decide]** Driftwarden ranks *(prep)*
   Ruled: one service, many ranks, the way every police officer is a cop. Set the ladder from the newest graduate up to the organization's head, and where the crew starts.
-  src: Korey, 2026-10-26
-
-- **[decide]** What "the Fleet" names *(shape)*
-  Pages and staging use "the Fleet" (Caelestis Academy & Fleet, "went overboard" as Fleet slang, the strain on the Fleet, the Fleet Intelligence Archive). With every member a Driftwarden, decide whether "the Fleet" is the everyday word for the organization's ships and people, or is retired.
   src: Korey, 2026-10-26
 
 - **[decide]** Names of the sister institutions *(prep)*

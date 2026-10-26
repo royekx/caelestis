@@ -69,7 +69,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ### The galaxies in play (DM)
 - Each galaxy is assigned a game system ahead of time: GAL-01 runs as D&D 5e and GAL-02 as Call of Cthulhu. GAL-03 to GAL-05 get theirs before any campaign goes there.
-- Hearts for Vecna's working, by galaxy (found / opened / linked): GAL-01 3 / 1 / 1; GAL-02 4 / 0 / 0; GAL-03 3 / 2 / 0; GAL-04 4 / 0 / 0; GAL-05 2 / 2 / 1. The one link runs between GAL-01 and GAL-05.
+- Hearts for Vecna's working, by galaxy (found / opened / linked): GAL-01 3 / 1 / 1; GAL-02 4 / 0 / 0; GAL-03 3 / 2 / 0; GAL-04 4 / 0 / 0; GAL-05 2 / 2 / 1. The one link runs between a world in GAL-01 and a world in GAL-05, the neighbouring galaxy. The GAL-01 world is a little-charted planet; the crew learns of it late in the campaign.
 - A galaxy's contents stay unbuilt until play reaches it. What Vecna's working needs from it is tracked as counts only: hearts found, opened and linked. Which worlds they are is decided when it matters, as with the bleeding between linked worlds.
 - The survey (prime/data/survey.json, kept with scripts/survey.js) holds every rolled system that is kept. Once saved, a system is part of the record and is edited by hand as play fills it in.
 
@@ -192,6 +192,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ### Caelestis, the Driftwardens and the higher organization (factions/academy-fleet.html, factions/index.html, cosmology/, realms/, glossary/)
 - Spacers call the dark between systems, and between galaxies, the drift.
+- The organization's ships and people together are the Fleet. "The Fleet" is what Driftwardens and spacers call the whole service.
 - Everyone in the service of the higher organization is a Driftwarden. Driftwardens hold ranks, from the newest graduate up through officers and commanders, but every one of them is a Driftwarden.
 - Caelestis is the academy. It trains cadets to become Driftwardens; it is a school.
 - Driftwarden operations for Caelestis's cluster run out of Ondrel Anchorage on the moon Ostrel, a neutral port away from Toril. Captain Haymond Rolt works out of Ondrel, and the crew takes its Arc 2 contracts from there.
@@ -216,6 +217,7 @@ when a ruling changes; delete it once the page carries it. See
 - Vecna has contingencies. N'ghathrod is a means to an end: Vecna needs him to open and link hearts so that Vecna's vessels can pass through Atria. Getting N'ghathrod's five lieutenants through would make it certain; many lesser taken, grown over time through the colony's spread, could still get him there. Defeating N'ghathrod does not end the threat, though it is never undone by fiat. Other avenues, such as the Restorers' aims, can bring Vecna close again or only delay him.
 - The failure state is Vecna succeeding.
 - The Radiant Citadel and the Core Monolith are late Arc 3 or Arc 4 destinations. The crew reaches them by a long voyage or through a linked heart, both late-game.
+- The campaign scales outward the way a fantasy campaign grows from town to kingdom to realm: the early levels play at the scale of one system, then neighbouring systems, then the galaxy, and late in the campaign beyond it.
 - Level pacing (DM): level-ups slow down in later arcs, so the crew is not at the top of the level range before the final arc.
 - Arc 1 runs from level 1 to 4, Arc 2 from 5 to 10, Arc 3 from 11 to 15, and Arc 4 from 15 up.
 
