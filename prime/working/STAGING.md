@@ -307,7 +307,7 @@ writing rules.
 ## Rulings of 2026-10-25, round 9
 
 ### Names across the cosmos (README naming rule; cosmology/, realms/, chart/)
-- Celestial bodies have names or designations. Caelestis gives designations (W-021 for Fonains); the people who live near a body may have their own name for it, sometimes a local epithet ("the falling star of Gethros"). A body known across a system or a sphere may also carry a wider epithet, the way a moon has a name and is also called the Blood Moon. Most things have only a name or a designation.
+- Celestial bodies have names or designations. Caelestis gives designations (see Designations below); the people who live near a body may have their own name for it, sometimes a local epithet ("the falling star of Gethros"). A body known across a system or a sphere may also carry a wider epithet, the way a moon has a name and is also called the Blood Moon. Most things have only a name or a designation.
 - The same place can be called different things in different parts of the cosmos.
 
 ### Erevos and Aurath (cosmology/, glossary/, chart/, realms/)
@@ -361,3 +361,28 @@ writing rules.
 
 ### SPH-02 (cosmology/, chart/, factions/deities.html)
 - SPH-02 has gods, but none of them are good. Its gods are eldritch, and over time they gathered there, each drifting toward the sphere where it is worshipped most. No prime or good god holds the sphere, and it has no Weave. The Axioms and Continuity still hold there.
+
+## Rulings of 2026-10-25, round 12
+
+### Designations (cosmology/, glossary/, chart/, realms/)
+- Caelestis charts the cosmos the way astronomers chart the sky. Its surveyors keep the Caelestis Survey Catalogue (CSC), and every star they have charted has a CSC number. The numbers are old and scattered: a star is never given a low or sequential number when the crew first hears of it. Example: CSC 48213.
+- Each sister institution keeps its own catalogue, so one star carries a different number in each. Sharing charts between institutions means matching one catalogue against another.
+- A constellation is a region of Caelestis's sky, numbered by its bearing in degrees: CON-312 lies at bearing 312°. A star without a proper name can be called by its brightness within its constellation, from Alpha down: Alpha CON-312 is the brightest star in CON-312.
+- A system takes the name or number of its primary.
+- A planet takes its star's name or number and a lowercase letter, beginning with b, in the order Caelestis charted it. The order is not the orbit. Example: CSC 48213 c.
+- A moon takes its planet's designation and a Roman numeral, in the order charted. Example: CSC 48213 c II.
+- A small body seen once gets a provisional designation from the Cycle it was sighted. Once its path is known it may get a permanent number, and a name only if someone gives it one. A comet that returns is marked P/, and one that passes once is marked C/: P/1490 K2.
+- A meteor shower is named for the constellation it seems to fall from.
+- A body nobody has charted has no designation.
+- Anything inhabited or famous carries the name its own people give it, sometimes alongside an epithet. Designations are what the charts use; names are what people say.
+
+### What Caelestis knows (cosmology/, chart/)
+- Caelestis and its affiliates chart their own sphere. They know almost nothing of the other spheres, and what lies there carries no designation. Whoever first charts a world in another sphere is the one who designates it.
+
+### Most of space is empty (cosmology/, chart/; NEW: Cosmos texture)
+- Most bodies have no one living on them, and many could never support anyone. Some are desolate. Some are lethal: crushing air, elemental storms, dead magic. Some are overrun by creatures, hostile or harmless. Many have never been visited, and much of space is uncharted. An inhabited world is rare.
+
+### The spheres in play (DM)
+- Each sphere is assigned a game system ahead of time: SPH-01 runs as D&D 5e and SPH-02 as Call of Cthulhu. SPH-03 to SPH-05 get theirs before any campaign goes there.
+- A sphere's contents stay unbuilt until play reaches it. What Vecna's working needs from it is tracked as counts only: hearts found, opened and linked. Which worlds they are is decided when it matters, as with the bleeding between linked worlds.
+- The survey (prime/data/survey.json, kept with scripts/survey.js) holds every rolled system that is kept. Once saved, a system is part of the record and is edited by hand as play fills it in.

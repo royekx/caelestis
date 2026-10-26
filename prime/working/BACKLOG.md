@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 3 | 7 | 21 | 0 | 26 |
+| Cosmology | cosmology/, glossary/, chart/ | 5 | 9 | 22 | 0 | 26 |
 | Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 35 | 3 | 49 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 2 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 5 | 0 | 1 |
-| **Total** | | **72** | **83** | **271** | **14** | **420** |
+| **Total** | | **74** | **85** | **272** | **14** | **420** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -143,6 +143,22 @@ Items for `cosmology/index.html`, `glossary/index.html` and `chart/index.html`.
 Order under each page: decide, fix, drop, add.
 
 ### cosmology/index.html
+
+- **[fix]** Replace the W-, SYS- registers with the CSC scheme
+  Ruled (STAGING round 12): designations follow real astronomy; nothing has reached the players. Retire every W-0n and SYS-0n designation and replace it with a CSC number, a star-and-letter designation, or the body's proper name. Pages: prime/chart, prime/cosmology, prime/realms/* (realmspace, toril, hcatha, aethris, glyth, fonains, krynn, virenspace, sys04, tetherbreak, wayfinders-homeworld, ascension-world, caelestis, strake-station, cairn-station, meteor-hub, astral-sea), prime/campaign/index.html, prime/timeline/timeline.json, and restricted/ (fr-005, sa-002, wm-003, wm-006). Fonains's W-021 and Aethris's W-008 go with them. Do this with the distribution pass, and save the known systems (Realmspace, Virenspace, Aethris's system, Krynnspace, Glyth's) into the survey first so the new designations have one source.
+  src: Korey, 2026-10-25 (round 12)
+
+- **[decide]** Hearts per sphere for Vecna's working *(shape)*
+  Ruled: tracked as counts only, per sphere (STAGING round 12); the working needs three in each sphere, and almost none stand today (round 2). Set found, opened and linked for each of SPH-01 to SPH-05. They go in prime/data/survey.json.
+  src: Korey, 2026-10-25 (round 12)
+
+- **[later]** Game systems for SPH-03 to SPH-05
+  Ruled: assigned ahead of time (STAGING round 12). Set when a campaign heads there.
+  src: Korey, 2026-10-25 (round 12)
+
+- **[later]** The survey becomes part of the record
+  prime/data/survey.json is checked by scripts/survey.js, not scripts/data.js. Fold it into the record's checks, and decide how the chart reads it, during the repo refactor.
+  src: Korey, 2026-10-25 (round 12)
 
 - **[decide]** A different game system in each sphere *(shape)*
   Korey's idea (2026-10-25): sub-genres already differ world to world; game systems go one step further and differ sphere to sphere. The cosmology carries it: what a sphere holds (prime gods, good gods, the Weave) shapes how magic and reality work there, so the rules change when the crew crosses. SPH-02 runs as Call of Cthulhu. It is not godless: its gods are eldritch, not good, and they gathered there, each drifting toward its greatest worship. No prime or good gods hold it, and there is no Weave; the Axioms and Continuity still hold. (Fix: "the godless sphere" in STAGING round 2, the chart and the organizing-framework sweep; SPH-02 needs a proper name.) Caelestis's sphere runs as D&D 5e.
