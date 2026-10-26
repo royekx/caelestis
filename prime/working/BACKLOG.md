@@ -153,8 +153,8 @@ Order under each page: decide, fix, drop, add.
   Ruled: Continuity and the Prime Continuum are the same thing (STAGING, Cosmology). The cosmology page treats Continuity as something produced "within the Prime Continuum"; rewrite it as one thing with two names, and check the glossary and Connections layer for the split.
   src: Korey, 2026-10-26
 
-- **[decide]** The geometry of a galaxy's working *(shape)*
-  Ruled: a galaxy's core wakes when enough of its world hearts are opened and linked; world links stay inside the galaxy; five woken cores open Erevos (STAGING, Campaign); the working is the Circle of Fifths, each galaxy a fifth. Left: the pattern inside a galaxy, how many systems around the core and how many linked worlds in each.
+- **[later]** Place GAL-01's inscription on the chart
+  Ruled: GAL-01's inscription is Vecna's mark, about sixteen heart worlds along the spiral arms; the eye's four worlds are key (STAGING, Campaign; diagram 2026-10-26). Left for when play needs it: which systems hold which strokes, and whether any known system (Greyspace, Realmspace, Krynnspace) lies on the figure.
   src: Korey, 2026-10-26
 
 - **[decide]** Who works the other galaxies' cores *(later)*

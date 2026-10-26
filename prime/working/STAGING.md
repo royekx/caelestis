@@ -17,6 +17,12 @@ when a ruling changes; delete it once the page carries it. See
   - **Negentropy** makes and keeps things different from each other.
   - **Possibility** keeps every outcome undecided until it is decided. Each decision opens new undecided things.
 - Gravity and Expansion decide where energy goes. Entropy and Negentropy decide what form it takes. Possibility stands between the two pairs: Gravity and Entropy close possibilities, pulling toward one place and one state; Expansion and Negentropy open them, making more room and more distinct things.
+- The four laws on the two axes meet in four ways, and each meeting does something to Possibility:
+  - **Collapse** (Gravity and Entropy): one place, one state. It closes possibilities.
+  - **Proliferation** (Expansion and Negentropy): more room, more distinct things. It opens them.
+  - **Formation** (Gravity and Negentropy): drawn together and made distinct: stars, worlds, life. It holds a few possibilities and makes them last.
+  - **Dispersal** (Expansion and Entropy): spread out and evened out: cooling, thinning, the drift. It scatters possibilities too thin to ever meet.
+- Possibility acts on the four in turn: it decides where each tension tips. It is why Gravity wins in one place and Expansion in another. Without it the cosmos would be the same everywhere.
 - None of the five is a substance. Energy is the only thing there is; the Axioms are how it behaves.
 - Each Axiom is the absolute manifestation of its law, with the barest awareness and no more: Gravity knows only to pull. They want nothing and choose nothing. (DM touchstone: Destiny 2's Nine.)
 - The five are balanced, but they are not equal.
@@ -30,7 +36,8 @@ when a ruling changes; delete it once the page carries it. See
 - The Reach: the people of the first world, the only world in an earlier version of reality, reached into Continuity and changed it. Their world was destroyed. It was the first time Continuity had to answer, and the first Monolith, the Core Monolith, stands where it answered. The Reach world's remains spread across the cosmos, and reality rebalanced from there into the form it has now.
 - Since then Continuity has answered every such strain the same way, with a Monolith. Monoliths are how this version of reality preserves itself. A reality remade from inside might answer differently, or not at all.
 - The people of the Reach did not simply die. They became woven into the cosmos at different depths, and over time they became the gods. Some may remember what they were. Other gods have risen since, and some have fallen.
-- A galaxy's core is Gravity and Entropy winning outright. The drift between galaxies belongs to Expansion.
+- A galaxy's core is Gravity and Entropy winning outright.
+- Star systems lie unevenly through a galaxy. All of them circle the core, at different speeds. They crowd along the spiral arms, gather in clusters, and leave long empty reaches between, and the galaxy thins toward its edge. The drift between galaxies belongs to Expansion.
 - DM: the Axioms are named only on the DM side. Scholars, faiths and Vecna describe them in their own terms; Vecna hears them as music.
 
 ### The gods (cosmology/, realms/, the divine-rules draft, factions/deities.html, working/divine-rules.md)
@@ -100,7 +107,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ### The galaxies in play (DM)
 - Each galaxy is assigned a game system ahead of time: GAL-01 runs as D&D 5e and GAL-02 as Call of Cthulhu. GAL-03, GAL-04 and GAL-05 get theirs before any campaign goes there.
-- Where each galaxy stands: GAL-01 has one link, between two worlds in one system; one of them is a little-charted planet the crew learns of late in the campaign. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and their fate turns on GAL-01.
+- Where each galaxy stands: GAL-01 has one link, between two worlds in one system on the hand's outline; one of them is a little-charted planet the crew learns of late in the campaign. One more heart on the hand is found and not yet opened. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and their fate turns on GAL-01.
 - A galaxy's contents stay unbuilt until play reaches it. What Vecna's working needs from it is tracked as counts only: hearts found, opened and linked. Which worlds they are is decided when it matters, as with the bleeding between linked worlds.
 - The survey (prime/data/survey.json, kept with scripts/survey.js) holds every rolled system that is kept. Once saved, a system is part of the record and is edited by hand as play fills it in.
 
@@ -256,7 +263,12 @@ when a ruling changes; delete it once the page carries it. See
 ### Vecna's working (cosmology/, glossary/, campaign/ascension/, chart/)
 - Erevos opens only when the cores of all five galaxies are awake and joined: each core to its neighbours, and each to Erevos.
 - Through the opened center lies Continuity itself. Whoever reaches it can push and pull the Axioms and remake reality. That is what Vecna seeks, and what the beings working the other galaxies seek.
-- A galaxy's core wakes when enough of its world hearts are opened and linked. World hearts link only to worlds in their own galaxy; only a woken core reaches beyond it.
+- A galaxy's core wakes when its inscription is whole: a figure drawn in linked heart worlds across the galaxy. World hearts link only to worlds in their own galaxy; only a woken core reaches beyond it.
+- Every galaxy's inscription is different, the way each node of a spell circle carries its own glyph. Its shape follows where that galaxy's Monolith worlds lie along its arms, and the being working that core.
+- GAL-01's inscription is Vecna's mark: an eye in the palm of a left hand, drawn across the galaxy. The hand's outline closes a binding circle around the core. The eye surrounds the core, and the core is its pupil: when the figure is whole, the eye opens.
+- The hand's worlds can be replaced: a lost stroke can be redrawn through another Monolith world near it, at a cost of years. The eye's worlds are key. Lose one and the eye must be redrawn, a real setback but not the end.
+- The figure is loose. Plotted on a chart, the found and opened hearts begin to trace it, and someone who knows Vecna's mark can recognize it.
+- (DM: the number of hearts follows the figure, about sixteen for GAL-01, not a fixed rule.)
 - Vecna works GAL-01's core. In each of the other galaxies, another being works its own core toward the same end. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and what happens in GAL-01 decides them.
 - Once Erevos opens, every linked heart becomes a door: through its Atrium to the core, and through the core to the center. Vecna's vessels go that way.
 - Vecna calls his working the Circle of Fifths, after the circle of fifths in music: five galaxies, each a fifth of what he needs, around the center where the Axioms meet. He has a taste for music, and it shows in how he names things.
