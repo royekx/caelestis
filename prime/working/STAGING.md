@@ -360,4 +360,4 @@ writing rules.
 - Readings from the edge stations pass between the institutions. This is how a disturbance seen at one edge reaches another.
 
 ### SPH-02 (cosmology/, chart/, factions/deities.html)
-- SPH-02 has gods, but none of them are good. Its gods are eldritch, and over time they gathered there, drawn toward each other and toward the worship that feeds them. No prime or good god holds the sphere, and it has no Weave. The Axioms and Continuity still hold there.
+- SPH-02 has gods, but none of them are good. Its gods are eldritch, and over time they gathered there, each drifting toward the sphere where it is worshipped most. No prime or good god holds the sphere, and it has no Weave. The Axioms and Continuity still hold there.
