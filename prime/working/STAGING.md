@@ -17,10 +17,13 @@ when a ruling changes; delete it once the page carries it. See
   - **Negentropy** makes and keeps things different from each other.
   - **Possibility** keeps every outcome undecided until it is decided. Each decision opens new undecided things.
 - Gravity and Expansion decide where energy goes. Entropy and Negentropy decide what form it takes. Possibility stands between the two pairs: Gravity and Entropy close possibilities, pulling toward one place and one state; Expansion and Negentropy open them, making more room and more distinct things.
-- None of the five is a substance or a mind. Energy is the only thing there is; the Axioms are how it behaves. They did not choose to be as they are.
-- No Axiom can be removed or replaced, any more than energy can be destroyed. What changes is their balance: over the ages the push and pull between them has shifted, and reality has changed with it.
+- None of the five is a substance. Energy is the only thing there is; the Axioms are how it behaves.
+- Each Axiom is the absolute manifestation of its law, with the barest awareness and no more: Gravity knows only to pull. They want nothing and choose nothing. (DM touchstone: Destiny 2's Nine.)
+- The five are balanced, but they are not equal.
+- No Axiom can be removed, replaced or added, any more than energy can be made or destroyed. What changes is their balance: over the ages the push and pull between them has shifted, and reality has changed with it.
 - Monoliths are Continuity's response, not any one Axiom's: reality preserving itself when a world reaches its Zenith.
-- Structure, every star, world and living thing, is what the five make together. Continuity is their interplay: reality itself. Time runs one way because of Entropy.
+- Structure, every star, world and living thing, is what the five make together. Continuity is their interplay: reality itself, the fabric that rises out of how the Axioms resolve.
+- Continuity runs both ways. It rises out of the Axioms, and whoever reaches into it can push and pull how the Axioms work, and so remake reality. Everyone else lives inside what it serves them. Time runs one way because of Entropy.
 - How things came to be: energy lay perfectly even, and nothing happened. At the smallest scale its outcomes were undecided, and tiny differences resolved. Expansion stretched space and gave those differences room. Gravity drew the richer places together into clouds, stars, worlds and galaxies, and where it won outright it collapsed into the cores. In the flow of energy from hot stars into cold space, Negentropy built and held distinct things: elements, weather, life, minds. Entropy is the price of all of it: every pocket of difference sends more sameness out into the cosmos than it keeps, and everything is running down. At every step, Possibility left the outcome open.
 - A Zenith is a world at its peak of Negentropy, the most fully itself it will ever be. A Monolith answers it and records the pattern at that peak.
 - A galaxy's core is Gravity and Entropy winning outright. The drift between galaxies belongs to Expansion.
@@ -175,7 +178,7 @@ when a ruling changes; delete it once the page carries it. See
 - Vecna's domains are Knowledge, Death and Trickery.
 - His symbol is an eye in the palm of a left hand. Chapters read it their own way. Some take the eye for sight and revelation. Some glorify it in green, for light, nourishment and the life of the body. The same symbol means different things across his faith.
 - Vecna's realm is Cavitius.
-- Oerth is the world where Vecna became a god. His ritual to become a god pushed Oerth to its Zenith, and the Zenith made him one; the Monolith that answered archived his mortal form, Lich Vecna. That was his first ascension, the Godhood Ascension. The climb he is making now is the Axiomic Ascension. Oerth is the Ascension World.
+- Oerth is the world where Vecna became a god. His ritual to become a god pushed Oerth to its Zenith, and the Zenith made him one; the Monolith that answered archived his mortal form, Lich Vecna. That was his first ascension, the Godhood Ascension. The climb he is making now, into Continuity itself, is the Axiomic Ascension. Oerth is the Ascension World.
 - His grievance: something was taken from him and hidden from him. He believes the cosmos and every being in it are owed an answer, and he means to find it.
 - DM: the campaign is not a war of the gods.
 
@@ -248,6 +251,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ### Vecna's working (cosmology/, glossary/, campaign/ascension/, chart/)
 - Erevos opens only when the cores of all five galaxies are awake and joined: each core to its neighbours, and each to Erevos.
+- Through the opened center lies Continuity itself. Whoever reaches it can push and pull the Axioms and remake reality. That is what Vecna seeks, and what the beings working the other galaxies seek.
 - A galaxy's core wakes when enough of its world hearts are opened and linked. World hearts link only to worlds in their own galaxy; only a woken core reaches beyond it.
 - Vecna works GAL-01's core. In each of the other galaxies, another being works its own core toward the same end. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and what happens in GAL-01 decides them.
 - Once Erevos opens, every linked heart becomes a door: through its Atrium to the core, and through the core to the center. Vecna's vessels go that way.

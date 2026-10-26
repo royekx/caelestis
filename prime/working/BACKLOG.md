@@ -149,8 +149,8 @@ Order under each page: decide, fix, drop, add.
   Pages: prime/cosmology (the Four Axioms, Continuity, the strain, the seam section to cut), prime/glossary, prime/chart, prime/artifacts/* (index, rod-of-seven-parts, runekeepers-fragment, transformation-fragment → possibility-fragment, containment-engine, fonains-shard), prime/campaign/* (index, ascension, spine, plot-hooks, what-if), prime/crew/index.html and tumak.html, prime/dossiers/nghathrod.html and the-runekeeper.html, prime/factions/* (academy-fleet, deities, runekeepers, vthorama), prime/realms/index.html and wayfinders-homeworld.html (concealment rides on the Entropy fragment's cycle), prime/rules/index.html, timeline.json, working/vecna.md. Done with the distribution pass. STAGING, the survey and the Connections layer already use the five.
   src: Korey, 2026-10-26
 
-- **[decide]** Vecna as a sixth Axiom *(shape)*
-  Ruled: no Axiom can be removed or replaced; their balance shifts and reality with it; Vecna does not take a seat (STAGING, Cosmology). Korey (2026-10-26): his aim is to introduce himself as a law, a sixth spoke. Left: what behavior he would become, where it draws from, what happens to reality when it re-resolves around six, and whether the Reach was the first such attempt. Discussed in chat 2026-10-26.
+- **[decide]** Continuity and the Prime Continuum *(shape)*
+  Ruled: Continuity is reality itself, rising out of how the Axioms resolve; it runs both ways, and whoever reaches into it through the opened center can push and pull the Axioms (STAGING, Cosmology and Campaign). No sixth Axiom. The cosmology page uses two terms: the Prime Continuum (all of existence) and Continuity (what the Axioms produce within it). Left: keep both, or fold them into one; and whether the Reach was the first attempt to reach into Continuity.
   src: Korey, 2026-10-26
 
 - **[decide]** The geometry of a galaxy's working *(shape)*
