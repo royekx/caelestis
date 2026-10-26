@@ -10,6 +10,9 @@ when a ruling changes; delete it once the page carries it. See
 
 ### The gods (cosmology/, realms/, the divine-rules draft, factions/deities.html, working/divine-rules.md)
 - Worship gives gods power, influence and reach.
+- The greater gods dwell in the drift between galaxies. The push of a galaxy's core keeps them out, and a greater god forcing its way into a galaxy would tear it apart. A greater god may lean toward one galaxy, but it is known across all of them.
+- The lesser gods can pass into a galaxy and travel the drift between its systems. A system's edge pushes them back.
+- One god is known by different names, and told different origins, in different galaxies. Asmodeus's role is the same wherever he is known as the devil. In the eldritch galaxy the gods wear names closer to Earth's own pantheons.
 - Gods can't walk on worlds or reach the center because of polarity: like charges push apart, and the push grows until it is unbearable. The center harms them without destroying them.
 - A god worshipped on several worlds is one god under several names. Takhisis is Tiamat; Paladine is Bahamut.
 - Most gods came into being in the Reach event and grew into godhood over time, some sooner than others, so gods have different ages. Later gods ascended from mortality. Their standing as greater or lesser gods comes from how much worship they hold, the influence they gain from it, and the niche they find, through the same loop of attention and belief.
@@ -18,7 +21,8 @@ when a ruling changes; delete it once the page carries it. See
 - Once, a god forced its way down onto a world. The friction between god and world was cataclysmic: it destroyed the god, and what remained became the Knowhere. Every god since has taken it as a warning.
 
 ### The eldritch galaxy (cosmology/, chart/, factions/deities.html)
-- GAL-02 has gods, but none of them are good. Its gods are eldritch, and over time they gathered there, each drifting toward the galaxy where it is worshipped most. No prime or good god holds the galaxy, and it has no Weave. The Axioms and Continuity still hold there.
+- GAL-02 has gods, but none of them are good. Its core is already awake, and the galaxy is overrun by dark beings.
+- GAL-02's gods are eldritch, and over time they gathered there, each drifting toward the galaxy where it is worshipped most. No prime or good god holds the galaxy, and it has no Weave. The Axioms and Continuity still hold there.
 
 ### Hearts, Atria and Monoliths (cosmology/, glossary/, rules/ § Opening)
 - Every world has a heart, and every heart has an Atrium: its own hidden entrance, which manifests differently on each world according to what that world is. Residue carried into an Atrium opens the heart. Opening needs no Monolith.
@@ -41,8 +45,10 @@ when a ruling changes; delete it once the page carries it. See
 - Each fragment broke into a prime number of pieces, set by its Axiom: Dissolution 2, Boundary 3, Transformation 5, Convergence 7.
 
 ### Erevos and Aurath (cosmology/, glossary/, chart/, realms/)
-- The cosmos is five galaxies. At its center is Erevos: the remains of the Reach world, a black hole beneath the Core Monolith and the Radiant Citadel.
+- The cosmos is four galaxies. At its center is Erevos: the remains of the Reach world, a black hole beneath the Core Monolith and the Radiant Citadel.
 - Those who dwell in the Core Monolith call it Aurath.
+- Every galaxy has a black hole at its own center, its core. A galaxy's core is to the galaxy what Erevos is to the cosmos.
+- The cosmos repeats one pattern at every scale: four around a center. Four Axioms stand around Continuity, and four galaxies around Erevos.
 
 ### Names and designations (README naming rule, cosmology/, realms/, chart/, crew/bartholomew.html, glossary/)
 - Celestial bodies have names or designations. Caelestis gives designations (see Designations below); the people who live near a body may have their own name for it, sometimes a local epithet ("the falling star of Gethros"). A body known across a system or a galaxy may also carry a wider epithet, the way a moon has a name and is also called the Blood Moon. Most things have only a name or a designation.
@@ -68,15 +74,15 @@ when a ruling changes; delete it once the page carries it. See
 - Most bodies have no one living on them, and many could never support anyone. Some are desolate. Some are lethal: crushing air, elemental storms, dead magic. Some are overrun by creatures, hostile or harmless. Many have never been visited, and much of space is uncharted. An inhabited world is rare.
 
 ### The galaxies in play (DM)
-- Each galaxy is assigned a game system ahead of time: GAL-01 runs as D&D 5e and GAL-02 as Call of Cthulhu. GAL-03 to GAL-05 get theirs before any campaign goes there.
-- Hearts for Vecna's working, by galaxy (found / opened / linked): GAL-01 3 / 1 / 1; GAL-02 4 / 0 / 0; GAL-03 3 / 2 / 0; GAL-04 4 / 0 / 0; GAL-05 2 / 2 / 1. The one link runs between a world in GAL-01 and a world in GAL-05, the neighbouring galaxy. The GAL-01 world is a little-charted planet; the crew learns of it late in the campaign.
+- Each galaxy is assigned a game system ahead of time: GAL-01 runs as D&D 5e and GAL-02 as Call of Cthulhu. GAL-03 and GAL-04 get theirs before any campaign goes there.
+- Where each galaxy stands: GAL-01 has one link, between two worlds in one system; one of them is a little-charted planet the crew learns of late in the campaign. GAL-02's core is awake. GAL-03 and GAL-04 are partway, and their fate turns on GAL-01.
 - A galaxy's contents stay unbuilt until play reaches it. What Vecna's working needs from it is tracked as counts only: hearts found, opened and linked. Which worlds they are is decided when it matters, as with the bleeding between linked worlds.
 - The survey (prime/data/survey.json, kept with scripts/survey.js) holds every rolled system that is kept. Once saved, a system is part of the record and is edited by hand as play fills it in.
 
 ## Realms
 
 ### Oerth (realms/oerth, cosmology/, chart/)
-- Oerth lies in GAL-05, the galaxy farthest from Caelestis's.
+- Oerth lies in GAL-01, Caelestis's own galaxy, in the system of Greyspace.
 
 ### H'Catha (realms/hcatha.html)
 - Vecna's hand on H'Catha goes back only to its founding. A residue of worship lingers there. He may once have tried to turn the dreaming of the Sovereign Eye into a Zenith and fallen short. One of the eldest rulers may know something of it. H'Catha is the crew's first world beyond Caelestis, and Vecna stays faint there.
@@ -215,18 +221,21 @@ when a ruling changes; delete it once the page carries it. See
 ### Campaign shape (campaign/spine.html)
 - N'ghathrod is the main villain of the campaign, and stopping his invasion takes most of it. Vecna stands behind him and beyond the campaign's direct reach; the late campaign is about stopping Vecna's working, not necessarily fighting him. A confrontation could be with a part of him manifested in the First Heart.
 - Vecna has contingencies. N'ghathrod is a means to an end: Vecna needs him to open and link hearts so that Vecna's vessels can pass through Atria. Getting N'ghathrod's five lieutenants through would make it certain; many lesser taken, grown over time through the colony's spread, could still get him there. Defeating N'ghathrod does not end the threat, though it is never undone by fiat. Other avenues, such as the Restorers' aims, can bring Vecna close again or only delay him.
-- The failure state is Vecna succeeding.
+- The failure state is GAL-01's core waking for Vecna. It sets the fate of the other galaxies: if GAL-01 falls, GAL-03 and GAL-04 fall with it, and Erevos can open. Success in GAL-01 holds them, though work remains.
+- An awake core presses on its neighbours. GAL-02's presses on GAL-01's, and late in the campaign it can pull the crew into the eldritch galaxy, where the rules become Call of Cthulhu. What they do there is to get home, or to close what is open.
 - The Radiant Citadel and the Core Monolith are late Arc 3 or Arc 4 destinations. The crew reaches them by a long voyage or through a linked heart, both late-game.
 - The campaign scales outward the way a fantasy campaign grows from town to kingdom to realm: the early levels play at the scale of one system, then neighbouring systems, then the galaxy, and late in the campaign beyond it.
 - Level pacing (DM): level-ups slow down in later arcs, so the crew is not at the top of the level range before the final arc.
 - Arc 1 runs from level 1 to 4, Arc 2 from 5 to 10, Arc 3 from 11 to 15, and Arc 4 from 15 up.
 
-### Vecna's working: the Circle of Fifteenths (cosmology/, glossary/, campaign/ascension/, chart/)
-- Vecna needs fifteen opened, linked hearts: three in each of the five galaxies. In each galaxy, one heart links to the galaxy on one side, one to the galaxy on the other side, and one to the First Heart. Together the links form a spellcasting circle drawn across the cosmos, and Vecna works toward completing it.
-- Today almost none of it stands. A handful of hearts may have been found in the past few decades; a couple at most are linked.
-- The chart shows Monolith worlds, found hearts, opened hearts and links, with very few of the last three.
+### Vecna's working (cosmology/, glossary/, campaign/ascension/, chart/)
+- Erevos opens only when the cores of all four galaxies are awake and joined: each core to its neighbours, and each to Erevos.
+- A galaxy's core wakes when enough of its world hearts are opened and linked. World hearts link only to worlds in their own galaxy; only a woken core reaches beyond it.
+- Vecna works GAL-01's core. In each of the other galaxies, another being works its own core toward the same end. GAL-02's core is awake. GAL-03 and GAL-04 are partway, and what happens in GAL-01 decides them.
+- Once Erevos opens, every linked heart becomes a door: through its Atrium to the core, and through the core to the center. Vecna's vessels go that way.
 - Vecna calls his working the Circle of Fifteenths, after the circle of fifths in music. He has a taste for music, and it shows in how he names things.
 - The name is his alone. No one else knows what he is building. The Seekers do not know, and neither does the Order. Some gods suspect he is up to something. A few people on the fringes sense that something is wrong in the cosmos, but they do not know what it is or what to call it, and no one believes them.
+- The chart shows Monolith worlds, found hearts, opened hearts, links and cores.
 
 ### Residue holdings (artifacts/index.html, campaign/ascension/, factions/vthorama.html)
 - Vecna's side holds one residue piece: the colony carries it from world to world to open hearts. If the crew ever takes it, N'ghathrod must win it back or find another before he can open another heart.

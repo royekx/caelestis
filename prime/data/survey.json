@@ -150,6 +150,32 @@
       "notes": "Home system. Its bodies are known by name, not by letter."
     },
     {
+      "id": "Greyspace",
+      "galaxy": "GAL-01",
+      "seed": null,
+      "catalogue": null,
+      "bayer": null,
+      "bearing": null,
+      "name": "Greyspace",
+      "primary": "star",
+      "status": "surveyed",
+      "bodies": [
+        {
+          "designation": null,
+          "name": "Oerth",
+          "kind": "planet",
+          "status": "charted",
+          "composition": "earth",
+          "size": "medium",
+          "habitability": "livable",
+          "life": "benign",
+          "inhabitants": "civilization",
+          "notes": "Vecna's homeworld, where he became a god. His worship there is large and public; its Monolith is a holy site."
+        }
+      ],
+      "notes": "Oerth's system. Its designation waits for the charting pass."
+    },
+    {
       "id": "CSC 69387",
       "galaxy": "GAL-01",
       "seed": null,
@@ -272,53 +298,25 @@
       "name": null,
       "home": true,
       "game": "D&D 5e",
-      "hearts": {
-        "found": 3,
-        "opened": 1,
-        "linked": 1
-      },
-      "heartsNote": "The one link runs between GAL-01 and GAL-05."
+      "core": "One link, between two worlds in one system (the little-charted planet)."
     },
     {
       "id": "GAL-02",
       "name": null,
       "game": "Call of Cthulhu",
-      "hearts": {
-        "found": 4,
-        "opened": 0,
-        "linked": 0
-      }
+      "core": "Core awake; overrun by dark beings."
     },
     {
       "id": "GAL-03",
       "name": null,
       "game": null,
-      "hearts": {
-        "found": 3,
-        "opened": 2,
-        "linked": 0
-      }
+      "core": "Partway; its fate turns on GAL-01."
     },
     {
       "id": "GAL-04",
       "name": null,
       "game": null,
-      "hearts": {
-        "found": 4,
-        "opened": 0,
-        "linked": 0
-      }
-    },
-    {
-      "id": "GAL-05",
-      "name": null,
-      "game": null,
-      "hearts": {
-        "found": 2,
-        "opened": 2,
-        "linked": 1
-      },
-      "heartsNote": "The one link runs between GAL-01 and GAL-05."
+      "core": "Partway; its fate turns on GAL-01."
     }
   ]
 }

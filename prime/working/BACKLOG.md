@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 6 | 10 | 23 | 0 | 26 |
+| Cosmology | cosmology/, glossary/, chart/ | 11 | 10 | 23 | 0 | 26 |
 | Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 35 | 3 | 49 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 2 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 5 | 0 | 1 |
-| **Total** | | **76** | **86** | **273** | **14** | **420** |
+| **Total** | | **81** | **86** | **273** | **14** | **420** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -144,8 +144,28 @@ Order under each page: decide, fix, drop, add.
 
 ### cosmology/index.html
 
+- **[decide]** The geometry of a galaxy's working *(shape)*
+  Ruled: a galaxy's core wakes when enough of its world hearts are opened and linked; world links stay inside the galaxy; four woken cores open Erevos; the cosmos repeats four-around-a-center (STAGING, Cosmology and Campaign). Proposed: the same pattern inside a galaxy, four systems around the core, and inside a system, four linked worlds around the primary: 16 world hearts per galaxy (diagram sent 2026-10-26). Left: confirm the geometry, whether a system's primary "wakes" as a step, and whether the working keeps the name Circle of Fifteenths (a circle of fourths is the same circle run the other way).
+  src: Korey, 2026-10-26
+
+- **[decide]** Who works the other galaxies' cores *(later)*
+  Ruled: in each galaxy another being works its own core, as Vecna works GAL-01's (STAGING, Campaign). Left: who they are (lesser gods like Vecna, or other things), and whether they know of each other, cooperate or race for the center. Only matters when play crosses a galaxy.
+  src: Korey, 2026-10-26
+
+- **[decide]** If GAL-01 falls *(shape)*
+  Ruled: GAL-01's core waking for Vecna takes GAL-03 and GAL-04 with it (STAGING, Campaign). Left: what the campaign becomes in that state: crossing galaxies to close cores, a last stand at Erevos, or the end.
+  src: Korey, 2026-10-26
+
+- **[decide]** The Knowhere *(shape)*
+  Korey (2026-10-26): a lesser god forced its way into a system and onto a world; the push destroyed the world and left the Knowhere, and a Monolith answered. Left: whether the god died too; which galaxy it lies in; whether its heart lies exposed, and whether it is the little-charted planet in GAL-01's one link. STAGING still has the older "a god forced its way down onto a world … it destroyed the god" line; rewrite it when settled.
+  src: Korey, 2026-10-26
+
+- **[decide]** The inner ring of gods *(shape)*
+  Ruled: greater gods in the drift between galaxies, lesser gods inside a galaxy stopped at systems (STAGING, Cosmology). Proposed: a third ring (demigods, saints, the newly ascended) that can enter a system and stops at a world's heart; and where Vecna, a lesser god, sits among them.
+  src: Korey, 2026-10-26
+
 - **[fix]** Spheres become galaxies, everywhere
-  Ruled (STAGING, Cosmology): the cosmos is five galaxies around Erevos; "sphere" as a region of space is retired, and SPH-0n becomes GAL-0n. Pages: prime/cosmology, prime/chart (labels, the sphere layer, "the godless sphere"), prime/glossary, prime/realms/*, prime/factions/*, prime/campaign/*, timeline.json, working/divine-rules.md, the README naming rule, and the Fonains Canon Reference doc. Every backlog item below that quotes "sphere" reads as "galaxy". Done with the distribution pass. The survey, the Connections DM layer and STAGING already use galaxies.
+  Ruled (STAGING, Cosmology): the cosmos is four galaxies around Erevos; "sphere" as a region of space is retired, and SPH-0n becomes GAL-0n (SPH-05 is dropped; Oerth moves to GAL-01). Pages: prime/cosmology, prime/chart (labels, the sphere layer, "the godless sphere"), prime/glossary, prime/realms/*, prime/factions/*, prime/campaign/*, timeline.json, working/divine-rules.md, the README naming rule, and the Fonains Canon Reference doc. Every backlog item below that quotes "sphere" reads as "galaxy". Done with the distribution pass. The survey, the Connections DM layer and STAGING already use galaxies.
   src: Korey, 2026-10-26
 
 - **[decide]** The name of Caelestis's galaxy *(shape)*
@@ -164,7 +184,7 @@ Order under each page: decide, fix, drop, add.
   Ruled (STAGING round 12): designations follow real astronomy; nothing has reached the players. Retire every W-0n and SYS-0n designation and replace it with a CSC number, a star-and-letter designation, or the body's proper name. Pages: prime/chart, prime/cosmology, prime/realms/* (realmspace, toril, hcatha, aethris, glyth, fonains, krynn, virenspace, sys04, tetherbreak, wayfinders-homeworld, ascension-world, caelestis, strake-station, cairn-station, meteor-hub, astral-sea), prime/campaign/index.html, prime/timeline/timeline.json, and restricted/ (fr-005, sa-002, wm-003, wm-006). Fonains's W-021 and Aethris's W-008 go with them. Do this with the distribution pass, and save the known systems (Realmspace, Virenspace, Aethris's system, Krynnspace, Glyth's) into the survey first so the new designations have one source.
   src: Korey, 2026-10-25 (round 12)
 
-- **[later]** Game systems for GAL-03 to GAL-05
+- **[later]** Game systems for GAL-03 and GAL-04
   Ruled: assigned ahead of time (STAGING round 12). Set when a campaign heads there.
   src: Korey, 2026-10-25 (round 12)
 
