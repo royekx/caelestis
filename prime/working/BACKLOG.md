@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 11 | 10 | 23 | 0 | 26 |
+| Cosmology | cosmology/, glossary/, chart/ | 12 | 10 | 24 | 0 | 26 |
 | Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 35 | 3 | 49 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 2 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 5 | 0 | 1 |
-| **Total** | | **81** | **86** | **273** | **14** | **420** |
+| **Total** | | **82** | **86** | **274** | **14** | **420** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -144,8 +144,17 @@ Order under each page: decide, fix, drop, add.
 
 ### cosmology/index.html
 
+- **[fix]** Retrofit the five Axioms across the wiki
+  Ruled (STAGING, Cosmology § The Axioms): the Axioms are Gravity, Expansion, Entropy, Negentropy and Possibility, acting on energy that was always there. The old four map: Convergence → Gravity (the Rod of Seven Parts is the Gravity fragment, 7 pieces); Dissolution → Entropy (the twins' fragment, 2); Boundary → Negentropy (A.T.L.A.S., its sister and the third piece, 3); Transformation → Possibility (5). Expansion's fragment is new: 11 pieces, none found. A Zenith is a world at its peak of Negentropy, not "Convergence driving a system to maximum expression"; the Monolith rise strains Negentropy, not Convergence. Every backlog item that quotes an old Axiom name reads under this mapping.
+  Pages: prime/cosmology (the Four Axioms, Continuity, the strain, the Transformation–Boundary seam: decide what it becomes), prime/glossary, prime/chart, prime/artifacts/* (index, rod-of-seven-parts, runekeepers-fragment, transformation-fragment → possibility-fragment, containment-engine, fonains-shard), prime/campaign/* (index, ascension, spine, plot-hooks, what-if), prime/crew/index.html and tumak.html, prime/dossiers/nghathrod.html and the-runekeeper.html, prime/factions/* (academy-fleet, deities, runekeepers, vthorama), prime/realms/index.html and wayfinders-homeworld.html (concealment rides on the Entropy fragment's cycle), prime/rules/index.html, timeline.json, working/vecna.md. Done with the distribution pass. STAGING, the survey and the Connections layer already use the five.
+  src: Korey, 2026-10-26
+
+- **[decide]** Which Axiom's seat Vecna climbs toward *(shape)*
+  Ruled: weakening an Axiom so he can take its place is part of his plan; the Axiomic Ascension is that climb (STAGING). Left: which seat. Suggested: Possibility. A god of secrets who wants the answer to everything cannot bear an undecided future, and the seat of Possibility would let him decide what becomes. Alternatives: Negentropy (the surge he feeds), Entropy (death, his domain).
+  src: Korey, 2026-10-26
+
 - **[decide]** The geometry of a galaxy's working *(shape)*
-  Ruled: a galaxy's core wakes when enough of its world hearts are opened and linked; world links stay inside the galaxy; four woken cores open Erevos; the cosmos repeats four-around-a-center (STAGING, Cosmology and Campaign). Proposed: the same pattern inside a galaxy, four systems around the core, and inside a system, four linked worlds around the primary: 16 world hearts per galaxy (diagram sent 2026-10-26). Left: confirm the geometry, whether a system's primary "wakes" as a step, and whether the working keeps the name Circle of Fifteenths (a circle of fourths is the same circle run the other way).
+  Ruled: a galaxy's core wakes when enough of its world hearts are opened and linked; world links stay inside the galaxy; five woken cores open Erevos (STAGING, Campaign); the name Circle of Fifteenths stays. Proposed: five systems around a galaxy's core, three linked worlds in each: fifteen world hearts per galaxy. Left: confirm.
   src: Korey, 2026-10-26
 
 - **[decide]** Who works the other galaxies' cores *(later)*
@@ -153,7 +162,7 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-26
 
 - **[decide]** If GAL-01 falls *(shape)*
-  Ruled: GAL-01's core waking for Vecna takes GAL-03 and GAL-04 with it (STAGING, Campaign). Left: what the campaign becomes in that state: crossing galaxies to close cores, a last stand at Erevos, or the end.
+  Ruled: GAL-01's core waking for Vecna takes GAL-03, GAL-04 and GAL-05 with it (STAGING, Campaign). Left: what the campaign becomes in that state: crossing galaxies to close cores, a last stand at Erevos, or the end.
   src: Korey, 2026-10-26
 
 - **[decide]** The Knowhere *(shape)*
@@ -165,7 +174,7 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-26
 
 - **[fix]** Spheres become galaxies, everywhere
-  Ruled (STAGING, Cosmology): the cosmos is four galaxies around Erevos; "sphere" as a region of space is retired, and SPH-0n becomes GAL-0n (SPH-05 is dropped; Oerth moves to GAL-01). Pages: prime/cosmology, prime/chart (labels, the sphere layer, "the godless sphere"), prime/glossary, prime/realms/*, prime/factions/*, prime/campaign/*, timeline.json, working/divine-rules.md, the README naming rule, and the Fonains Canon Reference doc. Every backlog item below that quotes "sphere" reads as "galaxy". Done with the distribution pass. The survey, the Connections DM layer and STAGING already use galaxies.
+  Ruled (STAGING, Cosmology): the cosmos is five galaxies around Erevos; "sphere" as a region of space is retired, and SPH-0n becomes GAL-0n; Oerth moves to GAL-01. Pages: prime/cosmology, prime/chart (labels, the sphere layer, "the godless sphere"), prime/glossary, prime/realms/*, prime/factions/*, prime/campaign/*, timeline.json, working/divine-rules.md, the README naming rule, and the Fonains Canon Reference doc. Every backlog item below that quotes "sphere" reads as "galaxy". Done with the distribution pass. The survey, the Connections DM layer and STAGING already use galaxies.
   src: Korey, 2026-10-26
 
 - **[decide]** The name of Caelestis's galaxy *(shape)*
@@ -184,7 +193,7 @@ Order under each page: decide, fix, drop, add.
   Ruled (STAGING round 12): designations follow real astronomy; nothing has reached the players. Retire every W-0n and SYS-0n designation and replace it with a CSC number, a star-and-letter designation, or the body's proper name. Pages: prime/chart, prime/cosmology, prime/realms/* (realmspace, toril, hcatha, aethris, glyth, fonains, krynn, virenspace, sys04, tetherbreak, wayfinders-homeworld, ascension-world, caelestis, strake-station, cairn-station, meteor-hub, astral-sea), prime/campaign/index.html, prime/timeline/timeline.json, and restricted/ (fr-005, sa-002, wm-003, wm-006). Fonains's W-021 and Aethris's W-008 go with them. Do this with the distribution pass, and save the known systems (Realmspace, Virenspace, Aethris's system, Krynnspace, Glyth's) into the survey first so the new designations have one source.
   src: Korey, 2026-10-25 (round 12)
 
-- **[later]** Game systems for GAL-03 and GAL-04
+- **[later]** Game systems for GAL-03, GAL-04 and GAL-05
   Ruled: assigned ahead of time (STAGING round 12). Set when a campaign heads there.
   src: Korey, 2026-10-25 (round 12)
 

@@ -285,7 +285,7 @@
           "habitability": "livable",
           "life": "benign",
           "inhabitants": "civilization",
-          "notes": "The Wayfinders' homeworld. Its concealment rides on the Dissolution fragment's cycle."
+          "notes": "The Wayfinders' homeworld. Its concealment rides on the Entropy fragment's cycle."
         }
       ],
       "notes": "Hidden. No route; Wayfinders leave with no map and must re-recognize home."
@@ -314,6 +314,12 @@
     },
     {
       "id": "GAL-04",
+      "name": null,
+      "game": null,
+      "core": "Partway; its fate turns on GAL-01."
+    },
+    {
+      "id": "GAL-05",
       "name": null,
       "game": null,
       "core": "Partway; its fate turns on GAL-01."

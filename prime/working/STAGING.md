@@ -8,6 +8,22 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Cosmology
 
+### The Axioms (cosmology/, glossary/, chart/, working/divine-rules.md)
+- Energy has always existed. It is never made and never destroyed, only arranged. Everything that exists, a star, a world, a person, is energy held in a pattern for a while.
+- Five Axioms govern how energy behaves:
+  - **Gravity** draws things together.
+  - **Expansion** spreads things apart.
+  - **Entropy** pulls everything toward sameness.
+  - **Negentropy** makes and keeps things different from each other.
+  - **Possibility** keeps every outcome undecided until it is decided. Each decision opens new undecided things.
+- Gravity and Expansion decide where energy goes. Entropy and Negentropy decide what form it takes. Possibility stands between the two pairs: Gravity and Entropy close possibilities, pulling toward one place and one state; Expansion and Negentropy open them, making more room and more distinct things.
+- None of the five is a substance. Energy is the only thing there is; the Axioms are how it behaves.
+- Structure, every star, world and living thing, is what the five make together. Continuity is their interplay: reality itself. Time runs one way because of Entropy.
+- How things came to be: energy lay perfectly even, and nothing happened. At the smallest scale its outcomes were undecided, and tiny differences resolved. Expansion stretched space and gave those differences room. Gravity drew the richer places together into clouds, stars, worlds and galaxies, and where it won outright it collapsed into the cores. In the flow of energy from hot stars into cold space, Negentropy built and held distinct things: elements, weather, life, minds. Entropy is the price of all of it: every pocket of difference sends more sameness out into the cosmos than it keeps, and everything is running down. At every step, Possibility left the outcome open.
+- A Zenith is a world at its peak of Negentropy, the most fully itself it will ever be. A Monolith answers it and records the pattern at that peak.
+- A galaxy's core is Gravity and Entropy winning outright. The drift between galaxies belongs to Expansion.
+- DM: the Axioms are named only on the DM side. Scholars, faiths and Vecna describe them in their own terms; Vecna hears them as music.
+
 ### The gods (cosmology/, realms/, the divine-rules draft, factions/deities.html, working/divine-rules.md)
 - Worship gives gods power, influence and reach.
 - The greater gods dwell in the drift between galaxies. The push of a galaxy's core keeps them out, and a greater god forcing its way into a galaxy would tear it apart. A greater god may lean toward one galaxy, but it is known across all of them.
@@ -33,22 +49,22 @@ when a ruling changes; delete it once the page carries it. See
 - The Core Monolith has a degree of sentience. It presses an idea outward through the cosmos, and those who sense it read it differently. The Restorers take it as a call to bring back what was lost. The Order takes it as a charge to maintain things as they are, though some within the Order doubt that reading. Vecna took it as something he could learn, and change. The Restorers and the Seekers are separate.
 
 ### The Axiom strain (cosmology/, factions/deities.html, dossiers/astra-virex.html, crew/gregory.html)
-- Over the past century Monoliths have been forming more often. Some of the rise is Vecna's doing; some is simply worlds reaching their moments.
-- The rise strains an Axiom. Weakening an Axiom so that he can take its place is part of Vecna's plan.
+- Over the past century Zeniths have come more often, and Monoliths with them. Some of the rise is Vecna's doing; some is simply worlds reaching their moments.
+- The rise strains the balance of the Axioms: Negentropy surges on world after world, and the others strain to answer it. Weakening an Axiom so that he can take its place is part of Vecna's plan.
 - The strain ripples outward through the planes and the cosmos. It is slow and more metaphysical than physical, and it weakens as it travels, but mortals are starting to feel it. Gregory's awakening is one result; the Latchling and other oddities are others. The strain helps Vecna, Tharizdun and other powers, good and bad.
 - The ripple woke Astra Virex. It also caused collisions between celestial bodies, and part of the entity broke off. All it knows is that it must heal and become whole.
 - The entity can be called Astra Virex, Astra or Virex.
 
 ### Residue and the fragments (cosmology/, artifacts/, glossary/)
 - The pieces of the Reach fragments are called residue.
-- Caelestis's galaxy holds pieces of three fragments both by chance and by pull. Pieces of a fragment draw toward each other; once a few came to rest near Realmspace, more followed.
-- Each fragment broke into a prime number of pieces, set by its Axiom: Dissolution 2, Boundary 3, Transformation 5, Convergence 7.
+- Caelestis's galaxy holds pieces of three fragments, Gravity, Entropy and Negentropy, both by chance and by pull. Pieces of a fragment draw toward each other; once a few came to rest near Realmspace, more followed.
+- The Reach left five fragments of residue, one for each Axiom. Each broke into a prime number of pieces: Entropy 2, Negentropy 3, Possibility 5, Gravity 7, Expansion 11.
+- The Gravity fragment is the Rod of Seven Parts. Its pieces draw toward each other. The Expansion fragment's eleven pieces have never been found.
 
 ### Erevos and Aurath (cosmology/, glossary/, chart/, realms/)
-- The cosmos is four galaxies. At its center is Erevos: the remains of the Reach world, a black hole beneath the Core Monolith and the Radiant Citadel.
+- The cosmos is five galaxies. At its center is Erevos: the remains of the Reach world, a black hole beneath the Core Monolith and the Radiant Citadel.
 - Those who dwell in the Core Monolith call it Aurath.
 - Every galaxy has a black hole at its own center, its core. A galaxy's core is to the galaxy what Erevos is to the cosmos.
-- The cosmos repeats one pattern at every scale: four around a center. Four Axioms stand around Continuity, and four galaxies around Erevos.
 
 ### Names and designations (README naming rule, cosmology/, realms/, chart/, crew/bartholomew.html, glossary/)
 - Celestial bodies have names or designations. Caelestis gives designations (see Designations below); the people who live near a body may have their own name for it, sometimes a local epithet ("the falling star of Gethros"). A body known across a system or a galaxy may also carry a wider epithet, the way a moon has a name and is also called the Blood Moon. Most things have only a name or a designation.
@@ -74,8 +90,8 @@ when a ruling changes; delete it once the page carries it. See
 - Most bodies have no one living on them, and many could never support anyone. Some are desolate. Some are lethal: crushing air, elemental storms, dead magic. Some are overrun by creatures, hostile or harmless. Many have never been visited, and much of space is uncharted. An inhabited world is rare.
 
 ### The galaxies in play (DM)
-- Each galaxy is assigned a game system ahead of time: GAL-01 runs as D&D 5e and GAL-02 as Call of Cthulhu. GAL-03 and GAL-04 get theirs before any campaign goes there.
-- Where each galaxy stands: GAL-01 has one link, between two worlds in one system; one of them is a little-charted planet the crew learns of late in the campaign. GAL-02's core is awake. GAL-03 and GAL-04 are partway, and their fate turns on GAL-01.
+- Each galaxy is assigned a game system ahead of time: GAL-01 runs as D&D 5e and GAL-02 as Call of Cthulhu. GAL-03, GAL-04 and GAL-05 get theirs before any campaign goes there.
+- Where each galaxy stands: GAL-01 has one link, between two worlds in one system; one of them is a little-charted planet the crew learns of late in the campaign. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and their fate turns on GAL-01.
 - A galaxy's contents stay unbuilt until play reaches it. What Vecna's working needs from it is tracked as counts only: hearts found, opened and linked. Which worlds they are is decided when it matters, as with the bleeding between linked worlds.
 - The survey (prime/data/survey.json, kept with scripts/survey.js) holds every rolled system that is kept. Once saved, a system is part of the record and is edited by hand as play fills it in.
 
@@ -221,7 +237,7 @@ when a ruling changes; delete it once the page carries it. See
 ### Campaign shape (campaign/spine.html)
 - N'ghathrod is the main villain of the campaign, and stopping his invasion takes most of it. Vecna stands behind him and beyond the campaign's direct reach; the late campaign is about stopping Vecna's working, not necessarily fighting him. A confrontation could be with a part of him manifested in the First Heart.
 - Vecna has contingencies. N'ghathrod is a means to an end: Vecna needs him to open and link hearts so that Vecna's vessels can pass through Atria. Getting N'ghathrod's five lieutenants through would make it certain; many lesser taken, grown over time through the colony's spread, could still get him there. Defeating N'ghathrod does not end the threat, though it is never undone by fiat. Other avenues, such as the Restorers' aims, can bring Vecna close again or only delay him.
-- The failure state is GAL-01's core waking for Vecna. It sets the fate of the other galaxies: if GAL-01 falls, GAL-03 and GAL-04 fall with it, and Erevos can open. Success in GAL-01 holds them, though work remains.
+- The failure state is GAL-01's core waking for Vecna. It sets the fate of the other galaxies: if GAL-01 falls, GAL-03, GAL-04 and GAL-05 fall with it, and Erevos can open. Success in GAL-01 holds them, though work remains.
 - An awake core presses on its neighbours. GAL-02's presses on GAL-01's, and late in the campaign it can pull the crew into the eldritch galaxy, where the rules become Call of Cthulhu. What they do there is to get home, or to close what is open.
 - The Radiant Citadel and the Core Monolith are late Arc 3 or Arc 4 destinations. The crew reaches them by a long voyage or through a linked heart, both late-game.
 - The campaign scales outward the way a fantasy campaign grows from town to kingdom to realm: the early levels play at the scale of one system, then neighbouring systems, then the galaxy, and late in the campaign beyond it.
@@ -229,9 +245,9 @@ when a ruling changes; delete it once the page carries it. See
 - Arc 1 runs from level 1 to 4, Arc 2 from 5 to 10, Arc 3 from 11 to 15, and Arc 4 from 15 up.
 
 ### Vecna's working (cosmology/, glossary/, campaign/ascension/, chart/)
-- Erevos opens only when the cores of all four galaxies are awake and joined: each core to its neighbours, and each to Erevos.
+- Erevos opens only when the cores of all five galaxies are awake and joined: each core to its neighbours, and each to Erevos.
 - A galaxy's core wakes when enough of its world hearts are opened and linked. World hearts link only to worlds in their own galaxy; only a woken core reaches beyond it.
-- Vecna works GAL-01's core. In each of the other galaxies, another being works its own core toward the same end. GAL-02's core is awake. GAL-03 and GAL-04 are partway, and what happens in GAL-01 decides them.
+- Vecna works GAL-01's core. In each of the other galaxies, another being works its own core toward the same end. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and what happens in GAL-01 decides them.
 - Once Erevos opens, every linked heart becomes a door: through its Atrium to the core, and through the core to the center. Vecna's vessels go that way.
 - Vecna calls his working the Circle of Fifteenths, after the circle of fifths in music. He has a taste for music, and it shows in how he names things.
 - The name is his alone. No one else knows what he is building. The Seekers do not know, and neither does the Order. Some gods suspect he is up to something. A few people on the fringes sense that something is wrong in the cosmos, but they do not know what it is or what to call it, and no one believes them.
@@ -240,7 +256,7 @@ when a ruling changes; delete it once the page carries it. See
 ### Residue holdings (artifacts/index.html, campaign/ascension/, factions/vthorama.html)
 - Vecna's side holds one residue piece: the colony carries it from world to world to open hearts. If the crew ever takes it, N'ghathrod must win it back or find another before he can open another heart.
 - Seekers chapters hunt for more. Vecna steers them: he lets each chapter believe that finding these artifacts will lead it to what it seeks, or that the artifacts are what it seeks.
-- Everything else is scattered. The crew carries the fourth Rod piece in the Lantern. Thessalar holds the seventh. The twins carry the Dissolution fragment. The rest are loose or unknown.
+- Everything else is scattered. The crew carries the fourth Rod piece in the Lantern. Thessalar holds the seventh. The twins carry the Entropy fragment. The rest are loose or unknown.
 - Pieces stay scarce. The crew may never gather a full fragment, and every piece is a race.
 
 ### N'ghathrod now (campaign/colony/, dossiers/nghathrod.html)
@@ -334,11 +350,11 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Artifacts and vessels
 
-### The Boundary fragment and A.T.L.A.S.'s sister (artifacts/atlas.html, artifacts/index.html, dossiers/clint.html)
-- The Boundary fragment is in three pieces. Every Boundary piece, in whatever housing, finds, reveals or draws toward something.
-- A.T.L.A.S. houses one Boundary piece. It reveals the aspects of a world, and a world's heart is one of them.
+### The Negentropy fragment and A.T.L.A.S.'s sister (artifacts/atlas.html, artifacts/index.html, dossiers/clint.html)
+- The Negentropy fragment is in three pieces. Every Negentropy piece, in whatever housing, finds or reveals something: it tells one thing apart from everything else.
+- A.T.L.A.S. houses one Negentropy piece. It reveals the aspects of a world, and a world's heart is one of them.
 - A.T.L.A.S.'s sister houses another. Caelestis held it as a device, and like every housing it hides what it really does. On the surface it finds magic items, a lesser kind of item-finder, because every enchanted thing carries a trace of residue. Its true use is finding Reach artifacts. This is what Vocath's crew ambushed the Bellwether Crow to take. Clint carried it through the color pool; it is somewhere on Fonains.
-- The third Boundary piece is unknown. It finds something too.
+- The third Negentropy piece is unknown. It finds something too.
 
 ### Wan, Tu and the fragment (artifacts/runekeepers-fragment.html, rules/)
 - The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a three-part state. The twins are not a key to the First Heart until enough of the stone has rebuilt between them through resolved runes: not before about level 12, around the end of Arc 3.
