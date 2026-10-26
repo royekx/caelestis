@@ -104,7 +104,7 @@ writing rules.
 - N'ghathrod's elder brain was separated from him in the crash. He believed it dead, or could not reach it. It lay trapped beneath the Barrier Peaks for about five hundred years, possibly growing a colony of its own, until Lola's Boys broke it in Session 27. It was buried in the collapse, but it teleported out and escaped.
 
 ### Oerth (realms/oerth, cosmology/, chart/)
-- Oerth lies in one of the five spheres. It is not in Caelestis's sphere and not in the godless sphere.
+- Oerth lies in one of the five spheres. It is not in Caelestis's sphere and not in SPH-02, the sphere of the eldritch gods.
 
 ### Wan, Tu and the fragment (artifacts/runekeepers-fragment.html, rules/)
 - The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a three-part state. The twins are not a key to the First Heart until enough of the stone has rebuilt between them through resolved runes: not before about level 12, around the end of Arc 3.
@@ -358,3 +358,6 @@ writing rules.
 - Each institution keeps the satellites and stations at the edge of its own system cluster. Strake Station and its sister satellites are Caelestis's.
 - The stations differ with the local ecology of their edge: what drifts there, what lives there, what threatens it. Their crews are drawn from the institution that keeps them.
 - Readings from the edge stations pass between the institutions. This is how a disturbance seen at one edge reaches another.
+
+### SPH-02 (cosmology/, chart/, factions/deities.html)
+- SPH-02 has gods, but none of them are good. Its gods are eldritch, and over time they gathered there, drawn toward each other and toward the worship that feeds them. No prime or good god holds the sphere, and it has no Weave. The Axioms and Continuity still hold there.
