@@ -6,7 +6,7 @@
    "label": "The Prime Continuum",
    "type": "concept",
    "scope": "cosmos",
-   "summary": "All of existence: every sphere, the Astral Sea between, the Flow and the center.",
+   "summary": "All of existence: every galaxy, the Astral Sea between, the Flow and the center.",
    "facts": [
     {
      "t": "The Prime Continuum holds every plane, reality, timeline and divine realm, and it has no will of its own.",
@@ -17,7 +17,7 @@
      "src": "cosmology/index.html"
     },
     {
-     "t": "The cosmos is a collective of five spheres arranged around Erevos at its center.",
+     "t": "The cosmos is a collective of five galaxies arranged around Erevos at its center.",
      "src": "cosmology/index.html"
     }
    ]
@@ -63,7 +63,7 @@
      "src": "cosmology/index.html"
     },
     {
-     "t": "The Axioms and Continuity hold in every sphere, including SPH-02.",
+     "t": "The Axioms and Continuity hold in every galaxy, including GAL-02.",
      "src": "STAGING round 11"
     }
    ]
@@ -556,7 +556,7 @@
      "src": "cosmology/index.html"
     },
     {
-     "t": "Caelestis's sphere holds pieces of three fragments, by chance and by pull.",
+     "t": "Caelestis's galaxy holds pieces of three fragments, by chance and by pull.",
      "src": "STAGING round 8"
     },
     {
@@ -577,11 +577,11 @@
    "summary": "Vecna's working: fifteen opened, linked hearts drawn as a spellcasting circle across the cosmos.",
    "facts": [
     {
-     "t": "Vecna needs fifteen opened, linked hearts, three in each of the five spheres.",
+     "t": "Vecna needs fifteen opened, linked hearts, three in each of the five galaxies.",
      "src": "STAGING round 2"
     },
     {
-     "t": "In each sphere one heart links to the sphere on each side and one to the First Heart.",
+     "t": "In each galaxy one heart links to the galaxy on each side and one to the First Heart.",
      "src": "STAGING round 2"
     },
     {
@@ -616,14 +616,14 @@
    ]
   },
   {
-   "id": "sph-01",
-   "label": "SPH-01",
+   "id": "gal-01",
+   "label": "GAL-01",
    "type": "place",
    "scope": "cosmos",
-   "summary": "Caelestis's sphere, home to Realmspace, Fonains and Krynn.",
+   "summary": "Caelestis's galaxy, home to Realmspace, Fonains and Krynn.",
    "facts": [
     {
-     "t": "SPH-01 runs as D&D 5e.",
+     "t": "GAL-01 runs as D&D 5e.",
      "src": "STAGING round 12"
     },
     {
@@ -635,41 +635,41 @@
      "src": "cosmology/index.html"
     },
     {
-     "t": "Caelestis and its affiliates chart this sphere and know almost nothing of the others.",
+     "t": "Caelestis and its affiliates chart this galaxy and know almost nothing of the others.",
      "src": "STAGING round 12"
     }
    ]
   },
   {
-   "id": "sph-02",
-   "label": "SPH-02",
+   "id": "gal-02",
+   "label": "GAL-02",
    "type": "place",
    "scope": "cosmos",
-   "summary": "The sphere of the eldritch gods.",
+   "summary": "The galaxy of the eldritch gods.",
    "facts": [
     {
-     "t": "SPH-02 has gods, none of them good; its gods are eldritch and gathered there over time.",
+     "t": "GAL-02 has gods, none of them good; its gods are eldritch and gathered there over time.",
      "src": "STAGING round 11"
     },
     {
-     "t": "No prime or good god holds SPH-02, and it has no Weave.",
+     "t": "No prime or good god holds GAL-02, and it has no Weave.",
      "src": "STAGING round 11"
     },
     {
-     "t": "SPH-02 runs as Call of Cthulhu.",
+     "t": "GAL-02 runs as Call of Cthulhu.",
      "src": "STAGING round 12"
     }
    ]
   },
   {
-   "id": "sph-05",
-   "label": "SPH-05",
+   "id": "gal-05",
+   "label": "GAL-05",
    "type": "place",
    "scope": "cosmos",
-   "summary": "The sphere farthest from Caelestis's, where Oerth lies.",
+   "summary": "The galaxy farthest from Caelestis's, where Oerth lies.",
    "facts": [
     {
-     "t": "SPH-05 is the sphere farthest from Caelestis's.",
+     "t": "GAL-05 is the galaxy farthest from Caelestis's.",
      "src": "STAGING round 3"
     }
    ]
@@ -679,14 +679,14 @@
    "label": "The Astral Sea",
    "type": "place",
    "scope": "cosmos",
-   "summary": "The material medium between worlds, systems and spheres.",
+   "summary": "The material medium between worlds, systems and galaxies.",
    "facts": [
     {
-     "t": "Wildspace is the Astral Sea between systems, and the Flow fills the space between spheres.",
+     "t": "Wildspace is the Astral Sea between systems, and the Flow fills the space between galaxies.",
      "src": "realms/astral-sea.html"
     },
     {
-     "t": "Divine spells fail in the Flow, because a god's realm is anchored to its own sphere.",
+     "t": "Divine spells fail in the Flow, because a god's realm is anchored to its own galaxy.",
      "src": "cosmology/index.html"
     },
     {
@@ -848,7 +848,7 @@
      "src": "STAGING round 2"
     },
     {
-     "t": "Oerth lies in SPH-05.",
+     "t": "Oerth lies in GAL-05.",
      "src": "STAGING round 3"
     }
    ]
@@ -1318,7 +1318,7 @@
      "src": "cosmology/index.html"
     },
     {
-     "t": "The Order spans the spheres and is more organized than Caelestis and its affiliates.",
+     "t": "The Order spans the galaxies and is more organized than Caelestis and its affiliates.",
      "src": "STAGING round 11"
     },
     {
@@ -1632,11 +1632,11 @@
      "src": "STAGING round 11"
     },
     {
-     "t": "Its affiliates share information across clusters, spheres and systems, and each mostly runs itself.",
+     "t": "Its affiliates share information across the galaxy, and each mostly runs itself.",
      "src": "STAGING round 11"
     },
     {
-     "t": "Sister institutions in other clusters and spheres do similar work under their own names, each with its own star catalogue.",
+     "t": "Sister institutions in other clusters and galaxies do similar work under their own names, each with its own star catalogue.",
      "src": "STAGING round 11"
     }
    ]
@@ -2585,10 +2585,10 @@
    "label": "The Tetherbreak sector",
    "type": "place",
    "scope": "caelestis",
-   "summary": "A perimeter ring on the edge of SPH-01 under elevated monitoring.",
+   "summary": "A perimeter ring on the edge of GAL-01 under elevated monitoring.",
    "facts": [
     {
-     "t": "The Fleet keeps a ring of posts on the edge of SPH-01 to watch traffic entering from the Flow.",
+     "t": "The Fleet keeps a ring of posts on the edge of GAL-01 to watch traffic entering from the Flow.",
      "src": "realms/tetherbreak.html"
     },
     {
@@ -2727,7 +2727,7 @@
      "src": "STAGING round 5"
     },
     {
-     "t": "More Zeniths, more Watcher requests and movements at the sphere's edge are straining the Fleet.",
+     "t": "More Zeniths, more Watcher requests and movements at the galaxy's edge are straining the Fleet.",
      "src": "STAGING round 10"
     },
     {
@@ -3852,14 +3852,14 @@
    "label": "The Wayfinders' homeworld",
    "type": "place",
    "scope": "caelestis",
-   "summary": "A halfling world in SPH-01, hidden by a living ritual and nameless by doctrine.",
+   "summary": "A halfling world in GAL-01, hidden by a living ritual and nameless by doctrine.",
    "facts": [
     {
      "t": "The world sits where it has always sat, and finding it means knowing the way back rather than the coordinates.",
      "src": "realms/wayfinders-homeworld.html"
     },
     {
-     "t": "It shares a sphere with the threats its Wayfinders map.",
+     "t": "It shares a galaxy with the threats its Wayfinders map.",
      "src": "cosmology/index.html"
     },
     {
@@ -3902,7 +3902,7 @@
    "summary": "The home system.",
    "facts": [
     {
-     "t": "Realmspace lies in SPH-01, and Caelestis orbits Toril there.",
+     "t": "Realmspace lies in GAL-01, and Caelestis orbits Toril there.",
      "src": "realms/realmspace.html"
     }
    ]
@@ -3991,7 +3991,7 @@
    "summary": "The world of Lola's Boys, whose Monolith is the only one ever destroyed.",
    "facts": [
     {
-     "t": "Fonains and Krynn share a system in SPH-01.",
+     "t": "Fonains and Krynn share a system in GAL-01.",
      "src": "cosmology/index.html"
     },
     {
@@ -5052,19 +5052,19 @@
   },
   {
    "s": "prime-continuum",
-   "t": "sph-01",
+   "t": "gal-01",
    "rel": "contains",
    "src": "cosmology/index.html"
   },
   {
    "s": "prime-continuum",
-   "t": "sph-02",
+   "t": "gal-02",
    "rel": "contains",
    "src": "cosmology/index.html"
   },
   {
    "s": "prime-continuum",
-   "t": "sph-05",
+   "t": "gal-05",
    "rel": "contains",
    "src": "cosmology/index.html"
   },
@@ -5334,7 +5334,7 @@
   },
   {
    "s": "oerth",
-   "t": "sph-05",
+   "t": "gal-05",
    "rel": "located in",
    "src": "STAGING round 3"
   },
@@ -5526,13 +5526,13 @@
   },
   {
    "s": "krynn",
-   "t": "sph-01",
+   "t": "gal-01",
    "rel": "located in",
    "src": "cosmology/index.html"
   },
   {
    "s": "fonains",
-   "t": "sph-01",
+   "t": "gal-01",
    "rel": "located in",
    "src": "cosmology/index.html"
   },
@@ -6150,7 +6150,7 @@
   },
   {
    "s": "LOC-Sp4hR9nk",
-   "t": "sph-01",
+   "t": "gal-01",
    "rel": "located in",
    "src": "cosmology/index.html"
   },
@@ -6762,7 +6762,7 @@
   },
   {
    "s": "tetherbreak",
-   "t": "sph-01",
+   "t": "gal-01",
    "rel": "lies on the edge of",
    "src": "realms/tetherbreak.html"
   },
@@ -7062,7 +7062,7 @@
   },
   {
    "s": "LOC-Cw8kM4vB",
-   "t": "sph-01",
+   "t": "gal-01",
    "rel": "located in",
    "src": "cosmology/index.html"
   },
@@ -7158,7 +7158,7 @@
   },
   {
    "s": "aethris",
-   "t": "sph-01",
+   "t": "gal-01",
    "rel": "located in",
    "src": "cosmology/index.html"
   },
@@ -7200,7 +7200,7 @@
   },
   {
    "s": "wayfinders-homeworld",
-   "t": "sph-01",
+   "t": "gal-01",
    "rel": "located in",
    "src": "cosmology/index.html"
   },

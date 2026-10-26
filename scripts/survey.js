@@ -11,7 +11,7 @@
  *
  * Roll options:
  *   --seed N        roll the same system again (every roll prints its seed)
- *   --sphere ID     SPH-01 (default) … SPH-05; other spheres roll uncharted
+ *   --galaxy ID     GAL-01 (default) … GAL-05; other galaxies roll uncharted
  *   --name TEXT     a proper name for the primary, if someone has named it
  *   --bodies N      how many bodies orbit the primary (default 3 to 9)
  *
@@ -132,15 +132,15 @@ function used(survey) {
 function roll(survey, opts) {
   const seed = opts.seed != null ? Number(opts.seed) : Math.floor(Math.random() * 2 ** 31);
   const r = rng(seed);
-  const sphere = (opts.sphere || 'SPH-01').toUpperCase();
-  const sph = survey.spheres.find(s => s.id === sphere);
-  if (!sph) throw new Error(`unknown sphere ${sphere}`);
-  const near = sph.home === true;
+  const galaxy = (opts.galaxy || 'GAL-01').toUpperCase();
+  const gal = survey.galaxies.find(s => s.id === galaxy);
+  if (!gal) throw new Error(`unknown galaxy ${galaxy}`);
+  const near = gal.home === true;
   const { nums, bayer } = used(survey);
-  const sys = { id: null, sphere, seed, catalogue: null, bayer: null, bearing: null, name: opts.name || null,
+  const sys = { id: null, galaxy, seed, catalogue: null, bayer: null, bearing: null, name: opts.name || null,
     primary: pick(r, T.primary), status: near ? pick(r, [[30, 'charted'], [40, 'surveyed'], [30, 'sighted']]) : 'uncharted',
     bodies: [], notes: '' };
-  if (near) { // Caelestis catalogues what it can see; other spheres it barely knows
+  if (near) { // Caelestis catalogues what it can see; other galaxies it barely knows
     let n; do { n = int(r, 1000, 99999); } while (nums.has(n));
     sys.catalogue = n;
     sys.bearing = int(r, 0, 359);
@@ -150,7 +150,7 @@ function roll(survey, opts) {
   }
   const count = opts.bodies != null ? Number(opts.bodies) : int(r, 1, 4) + int(r, 1, 4) + 1;
   for (let i = 0; i < count; i++) sys.bodies.push(rollBody(r, near));
-  sys.id = sys.catalogue ? `CSC ${sys.catalogue}` : `${sphere}-U${seed}`;
+  sys.id = sys.catalogue ? `CSC ${sys.catalogue}` : `${galaxy}-U${seed}`;
   designate(sys, survey.year);
   return sys;
 }
@@ -159,7 +159,7 @@ function roll(survey, opts) {
 // the order they orbit. A roll letters what it charts; `chart` letters the rest
 // as play reaches them, so later letters can sit anywhere in the orbit.
 function designate(sys, year) {
-  const base = sys.name || sys.id;
+  const base = sys.starName || sys.id; // a named star lends its name; otherwise its catalogue number
   const letters = 'bcdefghijklmnopqrstuvwxyz';
   const takenL = new Set(sys.bodies.map(b => b.letter).filter(Boolean));
   sys.bodies.forEach((b, i) => {
@@ -196,7 +196,7 @@ function line(b, indent) {
 }
 function print(sys) {
   const title = [sys.name, sys.id, sys.bayer].filter(Boolean).join(' · ');
-  console.log(`${title}\n  ${sys.primary} · ${sys.sphere}${sys.bearing != null ? ` · bearing ${sys.bearing}°` : ''} · ${sys.status} · seed ${sys.seed}`);
+  console.log(`${title}\n  ${sys.primary} · ${sys.galaxy}${sys.bearing != null ? ` · bearing ${sys.bearing}°` : ''} · ${sys.status} · seed ${sys.seed}`);
   sys.bodies.forEach(b => console.log(line(b, '  ').join('\n')));
   const n = sys.bodies.length, inh = sys.bodies.filter(b => b.inhabitants && !['none', 'ruins'].includes(b.inhabitants)).length;
   console.log(`  ${n} bodies, ${inh} inhabited`);
@@ -219,11 +219,11 @@ function find(survey, q) {
 }
 function check(survey) {
   const errs = [];
-  if (!Array.isArray(survey.spheres) || !Array.isArray(survey.systems)) errs.push('needs "spheres" and "systems" lists');
+  if (!Array.isArray(survey.galaxies) || !Array.isArray(survey.systems)) errs.push('needs "galaxies" and "systems" lists');
   const ids = new Set();
   (survey.systems || []).forEach(s => {
     if (ids.has(s.id)) errs.push(`${s.id}: duplicate`); ids.add(s.id);
-    if (!survey.spheres.some(p => p.id === s.sphere)) errs.push(`${s.id}: unknown sphere ${s.sphere}`);
+    if (!survey.galaxies.some(p => p.id === s.galaxy)) errs.push(`${s.id}: unknown galaxy ${s.galaxy}`);
     const all = s.bodies.concat(...s.bodies.map(b => b.moons || []));
     all.forEach(b => { if (!STATUSES.includes(b.status)) errs.push(`${s.id}: a body has unknown status "${b.status}"`); });
     const des = all.map(b => b.designation).filter(Boolean);
@@ -246,7 +246,7 @@ function main() {
     } else console.log(`(not saved: add --save, with --seed ${sys.seed}, to keep it)`);
   } else if (cmd === 'list') {
     if (!survey.systems.length) return console.log('no systems saved');
-    survey.systems.forEach(s => console.log(`${s.id.padEnd(14)} ${(s.name || '').padEnd(16)} ${s.sphere} · ${s.primary} · ${s.bodies.length} bodies · ${s.status}`));
+    survey.systems.forEach(s => console.log(`${s.id.padEnd(14)} ${(s.name || '').padEnd(16)} ${s.galaxy} · ${s.primary} · ${s.bodies.length} bodies · ${s.status}`));
   } else if (cmd === 'show') {
     const s = find(survey, o._.slice(1).join(' '));
     if (!s) throw new Error('no such system'); print(s);

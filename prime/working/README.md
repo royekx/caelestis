@@ -58,7 +58,7 @@ staging is distributed page by page.
 
 | Draft | Subject | State |
 |---|---|---|
-| [divine-rules.md](divine-rules.md) | Worship, spheres, polarity, realms, one god many names | Draft |
+| [divine-rules.md](divine-rules.md) | Worship, galaxies, polarity, realms, one god many names | Draft |
 | [vecna.md](vecna.md) | Vecna's history, realm, faithful and their names | Draft |
 | [tharizdun.md](tharizdun.md) | The prison, the Day of Chaos, how Vecna uses him | Draft |
 | [glyth-watcher.md](glyth-watcher.md) | The Watcher who came back from Glyth | Sketch |

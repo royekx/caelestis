@@ -30,12 +30,12 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 5 | 9 | 22 | 0 | 26 |
+| Cosmology | cosmology/, glossary/, chart/ | 6 | 10 | 23 | 0 | 26 |
 | Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 35 | 3 | 49 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
 | Factions | factions/ | 1 | 4 | 22 | 2 | 40 |
-| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 13 | 1 | 46 | 5 | 42 |
+| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 15 | 1 | 46 | 5 | 42 |
 | Dossiers | dossiers/ | 9 | 6 | 43 | 0 | 51 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 6 | 2 | 26 | 0 | 43 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 2 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 5 | 0 | 1 |
-| **Total** | | **74** | **85** | **272** | **14** | **420** |
+| **Total** | | **77** | **86** | **273** | **14** | **420** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -144,15 +144,27 @@ Order under each page: decide, fix, drop, add.
 
 ### cosmology/index.html
 
+- **[fix]** Spheres become galaxies, everywhere
+  Ruled (STAGING, Cosmology): the cosmos is five galaxies around Erevos; "sphere" as a region of space is retired, and SPH-0n becomes GAL-0n. Pages: prime/cosmology, prime/chart (labels, the sphere layer, "the godless sphere"), prime/glossary, prime/realms/*, prime/factions/*, prime/campaign/*, timeline.json, working/divine-rules.md, the README naming rule, and the Fonains Canon Reference doc. Every backlog item below that quotes "sphere" reads as "galaxy". Done with the distribution pass. The survey, the Connections DM layer and STAGING already use galaxies.
+  src: Korey, 2026-10-26
+
+- **[decide]** The name of Caelestis's galaxy *(shape)*
+  Ruled: the five regions are galaxies, each with a proper name and a designation (README naming rule). Name GAL-01 now; the others are named when a campaign reaches them, or by whoever first charts them.
+  src: Korey, 2026-10-26
+
+- **[decide]** The calendar the Cycle counts *(later)*
+  Pages date orders by Cycle (1486, 1489, 1490); the survey uses Cycle 1490 as the present for provisional designations. Set what the Cycle counts from, and how Toril's reckoning, Fonains's "year 425" and Krynn's calendar line up against it.
+  src: Korey, 2026-10-26; restricted/ orders
+
+- **[later]** Spelljammer's own terms
+  Korey wants to wear down the Spelljammer barriers ("spelljamming" means nothing for a ship); spheres have become galaxies. Review the remaining genre terms (spelljammer, spelljamming helm, wildspace, Astral Sea, phlogiston) for plainer replacements during the overhaul.
+  src: Korey, 2026-10-26
+
 - **[fix]** Replace the W-, SYS- registers with the CSC scheme
   Ruled (STAGING round 12): designations follow real astronomy; nothing has reached the players. Retire every W-0n and SYS-0n designation and replace it with a CSC number, a star-and-letter designation, or the body's proper name. Pages: prime/chart, prime/cosmology, prime/realms/* (realmspace, toril, hcatha, aethris, glyth, fonains, krynn, virenspace, sys04, tetherbreak, wayfinders-homeworld, ascension-world, caelestis, strake-station, cairn-station, meteor-hub, astral-sea), prime/campaign/index.html, prime/timeline/timeline.json, and restricted/ (fr-005, sa-002, wm-003, wm-006). Fonains's W-021 and Aethris's W-008 go with them. Do this with the distribution pass, and save the known systems (Realmspace, Virenspace, Aethris's system, Krynnspace, Glyth's) into the survey first so the new designations have one source.
   src: Korey, 2026-10-25 (round 12)
 
-- **[decide]** Hearts per sphere for Vecna's working *(shape)*
-  Ruled: tracked as counts only, per sphere (STAGING round 12); the working needs three in each sphere, and almost none stand today (round 2). Set found, opened and linked for each of SPH-01 to SPH-05. They go in prime/data/survey.json.
-  src: Korey, 2026-10-25 (round 12)
-
-- **[later]** Game systems for SPH-03 to SPH-05
+- **[later]** Game systems for GAL-03 to GAL-05
   Ruled: assigned ahead of time (STAGING round 12). Set when a campaign heads there.
   src: Korey, 2026-10-25 (round 12)
 
@@ -160,7 +172,7 @@ Order under each page: decide, fix, drop, add.
   prime/data/survey.json is checked by scripts/survey.js, not scripts/data.js. Fold it into the record's checks, and decide how the chart reads it, during the repo refactor.
   src: Korey, 2026-10-25 (round 12)
 
-- **[decide]** A different game system in each sphere *(shape)*
+- **[decide]** A different game system in each galaxy *(shape)*
   Korey's idea (2026-10-25): sub-genres already differ world to world; game systems go one step further and differ sphere to sphere. The cosmology carries it: what a sphere holds (prime gods, good gods, the Weave) shapes how magic and reality work there, so the rules change when the crew crosses. SPH-02 runs as Call of Cthulhu. It is not godless: its gods are eldritch, not good, and they gathered there, each drifting toward its greatest worship. No prime or good gods hold it, and there is no Weave; the Axioms and Continuity still hold. (Fix: "the godless sphere" in STAGING round 2, the chart and the organizing-framework sweep; SPH-02 needs a proper name.) Caelestis's sphere runs as D&D 5e.
   To shape: what physically or metaphysically changes at a sphere's edge, and what the crew feels crossing it; which presences set a sphere's system (prime gods, good gods, the Weave, an Axiom's lean); what happens to a character's abilities across the line (divine magic fades, arcane magic falters, a sanity track appears); which systems SPH-03 to SPH-05 lean toward, decided only when a campaign goes there; whether worlds inside a sphere keep their own genre on top of it.
   src: Korey, 2026-10-25 (chat); inbox/chat-organizing-framework.md (SPH-02, cosmic horror); memory-canon (a different vibe on each world)
@@ -1618,11 +1630,20 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   DM note: an homage to Captain Raymond Holt. He gets a new dossier, `dossiers/haymond-rolt.html`, and a row on dossiers/index.html.
   src: Korey, 2026-10-25 (round 8)
 
-- **[decide]** Names of the Driftwarden body and the higher organization *(shape)*
-  Ruled: Caelestis is the academy; Driftwarden operations are a separate affiliate at Ondrel Anchorage on the moon Ostrel, under Rolt; Caelestis, the Driftwarden body and the sister institutions are all affiliates of a higher organization that works like a united nations; Ilsevaine Corr and Aurel Venn named (STAGING round 11). Left: the Driftwarden body's name (built from "Driftwarden"), the higher organization's name, what "the Fleet" now names, and Ostrel's world designation.
+- **[decide]** The higher organization's name *(shape)*
+  Ruled: every member of its service is a Driftwarden, ranked like a police force; Caelestis is its academy; Driftwarden operations for Caelestis's cluster run from Ondrel Anchorage on the moon Ostrel; its affiliates share information and each mostly runs itself (STAGING, Factions). Left: a name in the style of a real international body, using "Intergalactic".
+  src: Korey, 2026-10-26
+
+- **[decide]** Driftwarden ranks *(prep)*
+  Ruled: one service, many ranks, the way every police officer is a cop. Set the ladder from the newest graduate up to the organization's head, and where the crew starts.
+  src: Korey, 2026-10-26
+
+- **[decide]** What "the Fleet" names *(shape)*
+  Pages and staging use "the Fleet" (Caelestis Academy & Fleet, "went overboard" as Fleet slang, the strain on the Fleet, the Fleet Intelligence Archive). With every member a Driftwarden, decide whether "the Fleet" is the everyday word for the organization's ships and people, or is retired.
+  src: Korey, 2026-10-26
 
 - **[decide]** Names of the sister institutions *(prep)*
-  Ruled: sister institutions across clusters, spheres and systems, under other names and governance (STAGING round 11). Name the one or two the crew is likely to hear of first; the rest wait.
+  Ruled: sister institutions in other system clusters, under other names and governance (STAGING, Factions). Name the one or two the crew is likely to hear of first; the rest wait.
   src: Korey, 2026-10-25 (rounds 10–11)
 
 - **[add]** The Princes' pressure reaches the crew as phenomena
