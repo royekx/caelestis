@@ -17,6 +17,7 @@ when a ruling changes; delete it once the page carries it. See
   - **Negentropy** makes and keeps things different from each other.
   - **Possibility** keeps every outcome undecided until it is decided. Each decision opens new undecided things.
 - Gravity and Expansion decide where energy goes. Entropy and Negentropy decide what form it takes. Possibility stands between the two pairs: Gravity and Entropy close possibilities, pulling toward one place and one state; Expansion and Negentropy open them, making more room and more distinct things.
+- Pictured, the four lie on one plane and Possibility stands above its center, with Continuity at the heart of the figure: five points, the same figure as the five galaxies around Erevos. (DM: a mirror for meaning, not a map. No galaxy belongs to an Axiom.)
 - The four laws on the two axes meet in four ways, and each meeting does something to Possibility:
   - **Collapse** (Gravity and Entropy): one place, one state. It closes possibilities.
   - **Proliferation** (Expansion and Negentropy): more room, more distinct things. It opens them.
@@ -265,7 +266,7 @@ when a ruling changes; delete it once the page carries it. See
 - Through the opened center lies Continuity itself. Whoever reaches it can push and pull the Axioms and remake reality. That is what Vecna seeks, and what the beings working the other galaxies seek.
 - A galaxy's core wakes when its inscription is whole: a figure drawn in linked heart worlds across the galaxy. World hearts link only to worlds in their own galaxy; only a woken core reaches beyond it.
 - Every galaxy's inscription is different, the way each node of a spell circle carries its own glyph. Its shape follows where that galaxy's Monolith worlds lie along its arms, and the being working that core.
-- GAL-01's inscription is Vecna's mark: an eye in the palm of a left hand, drawn across the galaxy. The hand's outline closes a binding circle around the core. The eye surrounds the core, and the core is its pupil: when the figure is whole, the eye opens.
+- GAL-01's inscription is Vecna's mark: an eye in the palm of a left hand, drawn across the galaxy. The hand is rounded, with a nub of a thumb and a wrist, and its worlds lie along the spiral arms without crowding. The hand's outline closes a binding circle around the core. The eye surrounds the core, and the core is its pupil: when the figure is whole, the eye opens.
 - The hand's worlds can be replaced: a lost stroke can be redrawn through another Monolith world near it, at a cost of years. The eye's worlds are key. Lose one and the eye must be redrawn, a real setback but not the end.
 - The figure is loose. Plotted on a chart, the found and opened hearts begin to trace it, and someone who knows Vecna's mark can recognize it.
 - (DM: the number of hearts follows the figure, about sixteen for GAL-01, not a fixed rule.)
