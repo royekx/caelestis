@@ -624,7 +624,7 @@ function checkLinks(err) {
   (function walk(dir) {
     fs.readdirSync(path.join(ROOT, dir)).forEach(f => {
       const rel = dir ? `${dir}/${f}` : f;
-      if (rel.startsWith('.') || rel === 'node_modules' || rel === 'scripts/_benched') return;
+      if (rel.startsWith('.') || rel === 'node_modules') return;
       const st = fs.statSync(path.join(ROOT, rel));
       if (st.isDirectory()) return walk(rel);
       if (!f.endsWith('.html') || f.endsWith('-template.html')) return;

@@ -528,6 +528,14 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
   color: var(--gold);
   letter-spacing: 0.03em;
 }
+/* A heading inside the summary takes the summary's type, not its own. */
+.dm-collapse-section > summary > h2,
+.dm-collapse-section > summary > h3 {
+  display: inline;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
 .dm-collapse-section > summary::-webkit-details-marker { display: none; }
 .dm-collapse-section > summary::before {
   content: '▸';

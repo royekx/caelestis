@@ -315,7 +315,7 @@ two tabs, About and DM notes.
 
 ```html
 <details class="dm-collapse-section" id="section-id">
-  <summary><h2 style="display:inline;margin:0;font:inherit;color:inherit;">Section</h2></summary>
+  <summary><h2>Section</h2></summary>
   <div class="dm-collapse-section-body">
     <p>…</p>
   </div>
@@ -323,7 +323,8 @@ two tabs, About and DM notes.
 ```
 
 A subsection may be wrapped the same way with `class="dm-collapse-section is-sub"`
-and an `<h3>`.
+and an `<h3>`. The heading takes the summary's type from `dm.css`
+(`.dm-collapse-section > summary > h2, h3`) and carries no inline style.
 
 Sections are closed by default. Open only these:
 
@@ -481,7 +482,7 @@ A played voyage carries Briefing, Actual and Delta:
 
 ```html
 <details class="dm-collapse-section is-sub" id="vNNN">
-  <summary><h3 style="display:inline;margin:0;font:inherit;color:inherit;">Voyage NNN — Title</h3></summary>
+  <summary><h3>Voyage NNN — Title</h3></summary>
   <div class="dm-collapse-section-body">
     <div class="voyage-grid">
       <div class="voyage-col">

@@ -21,7 +21,7 @@ Do not write to the repo before the first or to the record before the second.
 
 | Side | Folders |
 |---|---|
-| Player (root) | `index.html` (the gate), `hub.html` (the terminal, the player home), `voyages/`, `bearings/`, `logs/`, `crew-manifest/`, `dossiers/`, `factions/`, `navigation-records/`, `vessels/`, `quests/`, `inventory/` (`entries/`, `items/`), `handouts/`, `spelljammer-nexus/`, `search/`; companion pages `aspects/`, `wayfinder-path/`, `stellar-chart/`; redirect stubs `crew-logs/`, `crew-notes/` |
+| Player (root) | `index.html` (the gate), `hub.html` (the terminal, the player home), `voyages/`, `bearings/`, `logs/`, `crew-manifest/`, `dossiers/`, `factions/`, `navigation-records/`, `vessels/`, `quests/`, `inventory/` (`entries/`, `items/`), `handouts/`, `spelljammer-nexus/`, `search/`; companion pages `aspects/`, `wayfinder-path/`, `stellar-chart/` |
 | FIA | `restricted/`: the Fleet Intelligence Archive, gated, its own chrome and index |
 | DM | `prime/`: the DM wiki, gated |
 | Record | `data/` (player-safe), `prime/data/` (DM layer) |
@@ -108,6 +108,7 @@ url links parent giver children within items progress`, plus `data/index.json`,
 node scripts/data.js derive   # after editing the record: fills derived fields
 node scripts/data.js check    # record, DM layer and pages agree, every local link and anchor resolves; 0 errors before a pull request
 node scripts/terms.js         # retired terms, decision voice, moved paths on prime/ and restricted/; rules in prime/working/terms.json
+node scripts/visual.js capture <dir> [--player] / diff <before> <after>   # screenshots and pixel diff; usage in its header
 ```
 
 `node scripts/data.js guard` runs in the deploy and asks only whether `data/`
@@ -188,7 +189,6 @@ state what is. Rules: `prime/working/README.md`.
 ## Rules
 
 - Changes go up as a pull request for review. Do not push to `main`.
-- `scripts/_benched/` is out of service. Do not run it.
 - Record urls are site-relative with no leading slash. An absolute path
   resolves above `/caelestis/` on Pages.
 - A moved page updates every link to it in the same commit, joins the link

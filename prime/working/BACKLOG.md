@@ -43,8 +43,8 @@ staging once Korey has read and accepted them.
 | New pages | 14 proposed pages, the hub, notes/ | 3 | 17 | 5 | 2 | 35 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 5 | 3 | 0 | 1 |
-| **Total** | | **80** | **87** | **238** | **14** | **369** |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 3 | 0 | 1 |
+| **Total** | | **80** | **88** | **238** | **14** | **369** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -4034,7 +4034,7 @@ run decide, fix, drop, add.
 - **The record.** `data/*.json` is the player-facing campaign record, kept by hand: sessions, npcs, locations, items, factions, quests, player-characters (plus derived `index.json`, `voyage.js`). `prime/data/*.json` is the DM layer over it, keyed by the same ids (`overlay.json`, `voyages.json`, derived `dossiers.json`). The schema is closed and listed at the top of `scripts/data.js`; a DM fact has no key to sit under, which keeps `data/` player-safe. Records already carry `parentId` (16 locations use it).
 - **Verbs.** `node scripts/data.js derive` fills derived fields; `check` verifies record, DM layer and pages (must report 0 errors before a PR); `guard` is the deploy test.
 - **CI.** `check.yml` runs `data.js check`. `deploy.yml` builds three Pagefind indexes (player, DM, FIA), runs `data.js guard`, prunes, and deploys to GitHub Pages. There is no build step.
-- **Benched.** `scripts/_benched/build-pages.js` (the template-entity scaffolder) is out of service and must not be run. `build-data.js` and `transform.js` were retired with the Google Sheet.
+- **Retired scripts.** `build-pages.js` (the template-entity scaffolder) was deleted in Pass 0. `build-data.js` and `transform.js` were retired with the Google Sheet.
 - **The Google Sheet tracker** ("Caelestis Campaign Tracker") is frozen. `prime/tracker/` shows the repo record plus the DM overlay.
 - **Unmigrated sheets.** "Caelestis Character Arc Tracker" and "Caelestis Wildspace Tracker" still exist as synced Google Sheets; the hub still links them.
 - **Timeline.** `prime/timeline/timeline.json` is hand-edited JSON with four lanes and a clocks list; `prime/timeline/index.html` fetches it in the browser.
@@ -4059,8 +4059,8 @@ run decide, fix, drop, add.
   src: automation § Open; prime/notes/SESSION-RUN.md step 7
 
 - **[later]** Deploy and search
-  Current: deploy.yml builds the three Pagefind indexes and guards the record; the transform and scaffold steps are gone, and `scripts/_benched/` is out of service. Options: keep as is, or revise during the overhaul (for example, retire or delete the benched scaffolder).
-  src: automation § Documents produced; memory-canon (site-and-automation); scripts/_benched/README.md
+  Current: deploy.yml builds the three Pagefind indexes and guards the record; the transform and scaffold steps are gone, and the scaffolder was deleted in Pass 0. Options: keep as is, or revise during the overhaul.
+  src: automation § Documents produced; memory-canon (site-and-automation)
 
 ### DM views
 
@@ -4143,9 +4143,13 @@ run decide, fix, drop, add.
   src: notes/FIXES-DEMO-MIGRATION.md, notes/RESTRUCTURE-NOTES.md
 
 - **[later]** Crew Notes, now that search has shipped
-  A shared space where players write their own notes (an Etherpad or a Google Doc linked from the site) was deferred until S.E.A.R.C.H. shipped, then to be weighed on its own. S.E.A.R.C.H. is live. The old `crew-notes/` page now only redirects to Crew Logs. Options: build it (and pick the tool), or drop it.
+  A shared space where players write their own notes (an Etherpad or a Google Doc linked from the site) was deferred until S.E.A.R.C.H. shipped, then to be weighed on its own. S.E.A.R.C.H. is live. The old `crew-notes/` redirect is gone; Crew Logs lives at `logs/`. Options: build it (and pick the tool), or drop it.
   Touches: the player nav (scripts/nav.js), a new player page or external link.
   src: chat-early-planning § Campaign Planning, Open; memory-canon (Crew Notes deferred)
+
+- **[later]** Revisit generating record fields on pages
+  The retired scripts/_benched/build-pages.js scaffolded player entity pages from data/*.json and rewrote marked fields (role, affiliation, status, last seen) on every build; it was deleted in Pass 0 (still in git history). The idea — filling record-derived fields so pages cannot drift from the record — is worth revisiting once the site is stable. It would change the CLAUDE.md rule that pages are written by hand, and would need to respect the session-run approvals and the current record and page shapes; the old script's known bugs are in its README in history.
+  src: chat 2026-10-27 (Korey: "delete it for now. add a note to the backlog to revisit the idea when the site is stable")
 
 # Player pages
 

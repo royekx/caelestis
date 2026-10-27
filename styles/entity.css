@@ -344,7 +344,7 @@ html { overflow-x: clip; }
   margin-top: 0.1rem;
 }
 
-/* Pages scaffolded before build-pages.js was corrected carry `prior-voyages`
+/* Pages scaffolded by the retired page generator carry `prior-voyages`
    where the stylesheet expects `prior`. Aliased rather than rewritten so an
    old page picks the chrome up without being regenerated. */
 .prior-voyages { margin-top: 1.1rem; }
