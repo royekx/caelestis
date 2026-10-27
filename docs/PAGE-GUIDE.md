@@ -94,6 +94,12 @@ world. The DM notes tab holds what is meta to the DM: how a fact is used at the
 table, a lever for play, pacing, a name chosen for the DM's convenience, and
 anything still to decide. A fact about the world never lives only in DM notes.
 
+**Meta lives beside its subject.** Most setting pages carry a DM notes tab,
+the last tab before a stat block. Meta about one subject goes in that
+subject's tab, next to the facts it concerns, and not on a campaign page.
+Campaign pages hold the meta that spans subjects (arcs, voyages, plot hooks)
+and link to the subject tabs for the rest.
+
 "The crew" and "the party" are in-world nouns and may appear. "The players",
 "the campaign", "the session" and "the scenario" are not in-world.
 

@@ -208,7 +208,10 @@ because later sections link into earlier ones.
 
 ### 5. Per-page procedure
 1. Gather: the page's STAGING entries (by home), its BACKLOG items, the current
-   page, the finished pages it links to.
+   page, the finished pages it links to, and any meta about this subject now
+   sitting on campaign pages (spine, plot hooks, voyages, what-if). That meta
+   moves into the page's DM notes tab; the campaign page keeps only what spans
+   subjects and links to the tab.
 2. Write the whole page in its target shape (page guide), at its target path.
 3. Run `check` and the terms/voice script: zero hits.
 4. Cold review (guardrail 5). Fix what it finds.
