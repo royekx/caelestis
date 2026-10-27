@@ -19,7 +19,10 @@
     var id = decodeURIComponent(location.hash.slice(1));
     var target = id && document.getElementById(id);
     if (!target) return;
+    var row = target.tagName === 'DETAILS' ? target : null;
+    if (row) row.open = true;
     var panel = target.closest('.pill-panel');
+    if (row && (!panel || !panel.hidden)) { target.scrollIntoView(); return; }
     if (!panel || !panel.hidden) return;
     var tab = document.querySelector('.pill-tab[aria-controls="' + panel.id + '"]');
     if (tab) { tab.click(); target.scrollIntoView(); }
