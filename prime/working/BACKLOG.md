@@ -36,7 +36,7 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
 | Factions | factions/ | 1 | 4 | 21 | 2 | 36 |
 | Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 13 | 1 | 45 | 5 | 42 |
-| Dossiers | dossiers/ | 9 | 6 | 43 | 0 | 53 |
+| Dossiers | dossiers/ | 9 | 6 | 43 | 1 | 53 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 6 | 2 | 26 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 21 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 5 | 3 | 0 | 1 |
-| **Total** | | **79** | **87** | **246** | **13** | **375** |
+| **Total** | | **79** | **87** | **246** | **14** | **375** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1898,6 +1898,10 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ---
 
 ### dossiers/index.html
+
+- **[drop]** "What the DM page adds"
+  The collapsible table on dossiers/index.html comparing each DM page with its public page (with its subsections "Who deliberately has no DM page", "Still to build", "Inbound from other tables", "Handing an ally's block to the players"). Remove it when the index is rewritten; move anything still needed to a dossier's DM notes or BACKLOG.
+  src: chat 2026-10-27 (Korey: "No clue what this section is supposed to do but it should go")
 
 - **[fix]** The Krik'Lit swap is the V006 swap *(answered)*
   The Krik'Lit dossier says he leaves "At the V007 swap" (dossiers/ostekk.html has the same "at the V007 swap"). Change both to "at the V006 swap". The index's "The window shuts at the V006 swap" already matches. Write: "Krik'Lit and Pffred were relieved at the V006 rendezvous, in the Make Ready interlude, when the Flighty Foundling came alongside the Tyrant Ship. They returned with the Foundling." This matches data/npcs.json. The behir's parley window shut when the Foundling arrived.
