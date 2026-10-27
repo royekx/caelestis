@@ -716,8 +716,8 @@
       ]
     },
     {
-      "id": "knowhere",
-      "label": "The Knowhere",
+      "id": "nowhere",
+      "label": "Nowhere",
       "type": "place",
       "scope": "cosmos",
       "summary": "A world destroyed when a lesser god forced its way onto it; a lid world of Vecna's eye, its heart exposed.",
@@ -5138,7 +5138,7 @@
       "src": "STAGING round 1"
     },
     {
-      "s": "knowhere",
+      "s": "nowhere",
       "t": "polarity",
       "rel": "is the warning of",
       "src": "STAGING round 5"

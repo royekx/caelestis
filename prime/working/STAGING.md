@@ -17,7 +17,7 @@ when a ruling changes; delete it once the page carries it. See
   - **Negentropy** makes and keeps things different from each other.
   - **Possibility** keeps every outcome undecided until it is decided. Each decision opens new undecided things.
 - Gravity and Expansion decide where energy goes. Entropy and Negentropy decide what form it takes. Possibility stands between the two pairs: Gravity and Entropy close possibilities, pulling toward one place and one state; Expansion and Negentropy open them, making more room and more distinct things.
-- Pictured, the four lie on one plane and Possibility stands above its center, with Continuity at the heart of the figure: five points, the same figure as the five galaxies around Erevos. (DM: a mirror for meaning, not a map. No galaxy belongs to an Axiom.)
+- Pictured, Continuity is the center and the five Axioms are five spokes out from it in three dimensions: the two axes on one plane, and Possibility rising from the center. Possibility is really a cloud through all the others, the likelihood that permeates them, and it is drawn as a fifth spoke. Five spokes around a center: the same figure as the five galaxies around Erevos. (DM: a mirror for meaning, not a map. No galaxy belongs to an Axiom.)
 - The four laws on the two axes meet in four ways, and each meeting does something to Possibility:
   - **Collapse** (Gravity and Entropy): one place, one state. It closes possibilities.
   - **Proliferation** (Expansion and Negentropy): more room, more distinct things. It opens them.
@@ -51,7 +51,7 @@ when a ruling changes; delete it once the page carries it. See
 - Most gods came into being in the Reach event and grew into godhood over time, some sooner than others, so gods have different ages. Later gods ascended from mortality. Their standing as greater or lesser gods comes from how much worship they hold, the influence they gain from it, and the niche they find, through the same loop of attention and belief.
 - Gods are not physical. They are woven into the cosmos and dwell between the galaxies, in a space of their own. A god drifts toward the galaxy where its worship is greatest. Worship reaches a god from any galaxy, but the farther away it comes from, the weaker its signal.
 - Gods are of the same make as worlds and their hearts, so polarity pushes them apart. The more powerful a god, the larger it is in that metaphysical sense, and the harder the push. This is why the greatest gods are kept farthest from worlds and from the center.
-- Once, a lesser god forced its way into a system and down onto a world. The push between god and world destroyed them both, and what remained became the Knowhere. A Monolith answered. Every god since has taken it as a warning.
+- Once, a lesser god forced its way into a system and down onto a world. The push between god and world destroyed them both, and what remained is Nowhere, so called because the charts mark a world there and there is none. A Monolith answered. Every god since has taken it as a warning.
 
 ### The eldritch galaxy (cosmology/, chart/, factions/deities.html)
 - GAL-02 has gods, but none of them are good. Its core is already awake, and the galaxy is overrun by dark beings.
@@ -108,7 +108,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ### The galaxies in play (DM)
 - Each galaxy is assigned a game system ahead of time: GAL-01 runs as D&D 5e and GAL-02 as Call of Cthulhu. GAL-03, GAL-04 and GAL-05 get theirs before any campaign goes there.
-- Where each galaxy stands: GAL-01 has one link, between two worlds in one system on the upper lid; one of them is a little-charted planet the crew learns of late in the campaign. One more heart, on the lower lid, is found and not yet opened: the Knowhere's. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and their fate turns on GAL-01.
+- Where each galaxy stands: GAL-01 has one link, between two worlds in one system on the upper lid; one of them is a little-charted planet the crew learns of late in the campaign. One more heart, on the lower lid, is found and not yet opened: Nowhere's. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and their fate turns on GAL-01.
 - A galaxy's contents stay unbuilt until play reaches it. What Vecna's working needs from it is tracked as counts only: hearts found, opened and linked. Which worlds they are is decided when it matters, as with the bleeding between linked worlds.
 - The survey (prime/data/survey.json, kept with scripts/survey.js) holds every rolled system that is kept. Once saved, a system is part of the record and is edited by hand as play fills it in.
 
@@ -267,7 +267,7 @@ when a ruling changes; delete it once the page carries it. See
 - A galaxy's core can be woken, but there is no one way to do it. Vecna, an archmage older than his godhood, does it with spellwork: an inscription, a figure drawn in linked heart worlds across the galaxy. The beings working the other galaxies have their own methods. World hearts link only to worlds in their own galaxy; only a woken core reaches beyond it.
 - GAL-01's inscription is an eye: the left eye Vecna lost, remade across a galaxy, an eye that would see everything. Ten heart worlds trace the two lids, and six form the iris around the core. The core is the pupil. When lids and iris are whole, the eye opens and the core wakes.
 - The eye is drawn the way a constellation is. Its worlds lie wherever the spiral arms carry them, far apart and at different heights above and below the galaxy's plane; from above, their links make no shape at all. From Oerth, where Vecna became a god, they line up into the eye. Vecna chose them, from thousands of Monolith worlds, for how they look from there. The links are real wherever the worlds lie; only the picture needs Oerth.
-- The Knowhere is one of the lid worlds. Its heart lies exposed in the wreck, the easiest in the galaxy to find and open, which is why Vecna chose it. It is the heart already found.
+- Nowhere is one of the lid worlds. Its heart lies exposed in the wreck, the easiest in the galaxy to find and open, which is why Vecna chose it. It is the heart already found.
 - Oerth is the eye's retina, the point where its image lands. Every heart world in the figure is also linked back to Oerth's heart, so the links run in a cone from the eye to Oerth, the way light runs from an eye to the back of it. Oerth's heart has been Vecna's since his ascension charged him into it.
 - When the core opens, the pupil opens, and what lands on Oerth is sight: a view into Continuity itself.
 - Oerth is the one world Vecna cannot lose. Every link in the eye runs back to it.
