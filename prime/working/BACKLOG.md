@@ -31,7 +31,7 @@ staging once Korey has read and accepted them.
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 10 | 12 | 16 | 0 | 4 |
-| Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 35 | 3 | 49 |
+| Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 23 | 2 | 28 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
 | Factions | factions/ | 1 | 4 | 21 | 2 | 36 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 5 | 3 | 0 | 1 |
-| **Total** | | **79** | **87** | **258** | **14** | **396** |
+| **Total** | | **79** | **87** | **246** | **13** | **375** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -503,12 +503,6 @@ No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms
   People believe it does ("light-sworn"). Rule whether it is true.
   src: astral § Open
 
-- **[add]** The Watcher's name *(answered)*
-  "H'Catha's Watcher is Nereth Vaul. She lives near the rim, in the fog."
-  DM note: her species sets the final form of the name. The placeholder species was triton; the species itself is not yet ruled. Earlier alternatives were Maris Ilune and Sefa Corrath. The name must stay distinct from Ondessa's.
-  src: astral § Open; chat-voyage-6-7-planning § Open; memory-canon
-  answered: STAGING § The Order (round 5: "H'Catha's Watcher is Nereth Vaul. Her species sets the final form of the name.")
-
 - **[decide]** The Rival's name *(prep)*
   The page lists "The Rival · Name open" (Fear, dread carried in the fog). The spine also uses "the Rival".
   src: chat § Open; spine.html
@@ -558,142 +552,9 @@ No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms
   `data/locations.json` says H'Catha is "watched by beholder patrols"; canon puts the tension at domain borders. Flag only: decide whether the player record needs a correction through the record workflow.
   src: data/locations.json; memory-canon (H'Catha layout)
 
-- **[fix]** Ten domains
-  Page says "Ruled by Eight rival beholder domains" and has an eight-row domain table. Rebuild for ten: "H'Catha has ten domains, one for each eyestalk, and ten rulers, all of them enlightened. Over them stands the Sovereign Eye, which the rulers dreamt together."
-  src: memory-canon (campaign-canon, H'Catha supersedes eight domains; sovereign); astral § The Pact
-
-- **[fix]** The Pact replaces "The endless cycle"
-  Replace § The endless cycle with the Pact (full text in the adds below): as H'Catha turns and a domain falls into full dark, that domain's eye shuts on every beholder, giving partial sleep; the shadow is the Eye's blind spot.
-  src: memory-canon (campaign-canon, H'Catha refinement; decisions)
-
-- **[fix]** Nobody is cast out for enlightenment
-  Page says beholders who survive the summit "come back lawful neutral — and are cast out by their own kind for it". Remove. All rulers are enlightened.
-  src: memory-canon (campaign-canon); astral § The Pact
-
-- **[fix]** No Spindle foothold war
-  Page says "whenever one nation gains a foothold on the Spindle, the others bring it down." Remove. Floating rulers have no use for footholds.
-  src: memory-canon (campaign-canon, H'Catha supersedes); astral § Superseded
-
-- **[fix]** Ports
-  Page says "Six of the eight domains hold a port at the Spindle's base". Change to: ports are spread across the world.
-  src: memory-canon (campaign-canon, H'Catha refinement)
-
-- **[fix]** Arrival tension
-  Page says "Patrols range broadly through the surrounding space, screening incoming vessels". Replace: "Arrival tension comes from crossing watched domain borders, not orbital checkpoints. Every beholder ship is carved stone, so the tyrant ship reads as native traffic, and a Caelestis scuttle ship docks in its Cargo Deck intake and carries the landing party in unnoticed. Landing is hard for everyone."
-  src: memory-canon (campaign-canon, H'Catha layout; approach to H'Catha)
-
-- **[fix]** Continent-scale domains
-  Scale section gives "about 80 miles of frontage" per domain on a "630 miles around" Spindle base. Rescale: domains are continent-scale, and crossing to another domain is like going to another continent, with natural and unnatural obstacles between. Exact numbers follow the Measures decide.
-  src: memory-canon (campaign-canon, H'Catha working)
-
-- **[fix]** The meteor
-  Page says it "landed on a seam, which is why it is still there". Replace: "The meteor is large. It is mined as a vein in an occupied area that rival forces fight over in skirmishes. Adamantine matters on H'Catha because the Eye cannot see through it."
-  src: memory-canon (campaign-canon, H'Catha decisions); astral § Meteorite and mission
-
-- **[fix]** Death and disintegration are in play
-  Page says "Disintegration and death rays stay off the board at this tier. They have no domain and no terrain effect." Replace: each eye ray belongs to a domain, death and disintegration included. The Eye punishes a lawbreaker with whichever eye is shut that hour, so a crime in the Death hour is punished with death.
-  src: astral § The Pact
-
-- **[fix]** Lumbe
-  Page says Lumbe "is unattached to anything, which makes it available". Replace: Lumbe is Sarelk's laboratory and has no part in the Pact.
-  src: astral § The eclipse
-
-- **[fix]** Ostekk rules here
-  Page's Open asks "whether Ostekk lives on this world". Close it: Ostekk is a ruling beholder of H'Catha. DM note: the crew hearing his name soon after landing is the payoff (OSTEKK-6 and the Containment Engine carry his pattern).
-  src: memory-canon (campaign-canon, H'Catha decisions); astral § Meteorite and mission
-
-- **[fix]** Turnbetl
-  The moons entry lists Turnbetl only as "a flammable atmosphere". Add that its close passes cause the eclipse (see add below).
-  src: astral § The eclipse
-
-- **[drop]** The summit knowledge station and the enlightened exile
-  Remove the station that turns beholders lawful neutral, and the section "The enlightened exile · Name open". Ondessa takes the role (see adds).
-  src: memory-canon (campaign-canon, "supersedes eight domains and summit-exile"); chat-astral-sea-worldbuilding § Superseded
-
-- **[add]** Register
-  DM voice: "H'Catha plays as a Cold War spy thriller on a drowned world. Subterfuge, stealth, information and a silver tongue win. Violence is always an option, and it always has consequences. Player-facing rules stay minimal: darkness moves, places have rules, consequences follow."
-  src: memory-canon (campaign-canon, H'Catha play register; later pass); astral § Register
-
-- **[add]** The Sovereign Eye
-  "The rulers dreamt a Sovereign Eye together. It sees everything in daylight and enforces the Pact. Its gaze covers the world and the space around it wherever H'Catha's day falls. Shadow is its blind spot, kept as the founders' agreed privacy." (Sauron's eye is the model.)
-  src: memory-canon (H'Catha sovereign; decisions); astral § The Pact
-
-- **[add]** The Pact and partial sleep
-  "When the shadow reaches a domain, that domain's eye shuts on every beholder, and it stays shut until the shadow reaches the next domain. A shut eye gives a beholder partial sleep, enough rest without the full sleep in which a beholder dreams a rival. The Eye punishes a lawbreaker with whichever eye is shut that hour."
-  src: memory-canon (H'Catha refinement); astral § The Pact
-
-- **[add]** Common Law and Edicts
-  "Common Law holds everywhere in daylight. It forbids killing, wounding, stealing, and taking anyone against their will. Each domain also has one Edict, a strange law born of its ruler's paranoia, and the Eye enforces it." The Edicts themselves are a decide.
-  src: astral § The Pact; memory-canon (H'Catha later pass)
-
-- **[add]** The dark decides, the light keeps
-  "Nothing can be taken by force in daylight. People believe the Eye holds deals made in daylight, called light-sworn, so true deals are struck in the light. Deals the Eye should not see are made in the dark."
-  src: astral § The Pact; memory-canon (H'Catha later pass)
-
-- **[add]** New rulers
-  "A new ruler can be dreamt only when a seat is open, and it is an ally of whoever dreamt it."
-  src: memory-canon (H'Catha sovereign); astral § The Pact
-
-- **[add]** Sleepborn
-  "Partial sleep leaks. What leaks becomes sleepborn: ill-formed beholders that live in the shadow, where light unmakes them. Some rulers hunt them; some ignore them and let their domains be ravaged; some fear what they could become."
-  src: memory-canon (H'Catha sovereign); astral § The Pact
-
-- **[add]** The Spindle as sundial
-  "The Spindle is a sundial and the world's clock. Its tapering shadow sweeps the disk; night lasts longest near the Spindle and never comes near the rim. Each ruler chooses where in its domain to keep its citadel."
-  src: memory-canon (H'Catha later pass); astral § The Pact
-
-- **[add]** The bands
-  "The bands are named for the parts of an eye. From the rim inward: Lashline, Sclera, Iris, Pupil. The Pupil is the smallest, most contested and most lawless band, because its dark lasts longest; overlapping occupying forces struggle there constantly. The misty rim holds the most 'civilised' people, under the Eye's constant threat. Danger changes band by band, like a neighbourhood changing."
-  src: memory-canon (H'Catha decisions; later pass); astral § Names
-
 - **[add]** Brighteyes and Shades
   "Brighteyes live in the always-lit band; Shades live near the Spindle. They are told apart by behaviour and by their eyes, not by skin tone." (A lean in memory.)
   src: memory-canon (H'Catha later pass); astral § Names
-
-- **[add]** The eclipse
-  "Turnbetl darkens H'Catha at a close pass, roughly once a year and unevenly, for three to four hours of full dark. The Sovereign Eye shuts and every ruler sleeps at once. It is the only time open action is possible, and the rulers spend the gap between eclipses plotting toward it. Asleep, they act through forces, tentative alliances and betrayals: agents cross enemy lines to find a sleeping ruler, kill it and take its seat. An eclipse is coming soon."
-  DM note: the crew arrives as it nears, which puts the Watcher on a clock.
-  src: memory-canon (H'Catha eclipse; sovereign); astral § The eclipse
-
-- **[add]** Ondessa
-  "Ondessa is a ruling beholder who still holds her seat and her link to the Sovereign Eye. At the last eclipse she was struck down through a betrayal inside her court, and her citadel is occupied. The attack ruined her central eye: she cannot see out of it or use it to cancel magic. The other rulers want her dead; the populace may not know she lives. She is better than her neighbours without being good, and she has a beholder's paranoias and obsessions."
-  src: memory-canon (H'Catha leaning; eclipse; decisions; later pass); astral § Ondessa
-
-- **[add]** Ondessa's reserve
-  DM note, held in reserve: Ondessa may be immune to the eclipse sleep, which she does not yet know. Reveal it at the eclipse.
-  src: memory-canon (H'Catha decisions); astral § Ondessa
-
-- **[add]** Ondessa and the Watcher
-  "Ondessa and the Watcher protect each other and trade information. H'Catha sits at Realmspace's edge, where traffic and merchants pass, so her port is an intelligence hub. The Watcher relays what she learns to the Order and to Caelestis, where her reports are known as unusually useful."
-  src: memory-canon (H'Catha eclipse); astral § Ondessa
-
-- **[add]** Reinstating Ondessa
-  DM voice: an optional larger goal. The crew can stay through the eclipse to protect Ondessa or help her retake her citadel (a huge ally and higher stakes), or call the mission done.
-  src: memory-canon (H'Catha eclipse); astral § Ondessa
-
-- **[add]** The Watcher
-  "H'Catha's Watcher lives near the rim, a trek from any landing. She saw factions moving on the meteorite and reported it to Caelestis as a precaution against escalation. She fears what the fighting might bring on, and the ore is valuable to both Caelestis and the Order. She expected a seasoned crew, is suspicious of cadets, and probes whether they are real sailors." That suspicion carries the thread that Caelestis is spread thin.
-  src: memory-canon (Watcher ruling; decisions; refinement); astral § Ondessa, § Meteorite and mission
-
-- **[add]** Arrival timing
-  The crew arrives about three weeks after the impact, behind rivals who have been there two weeks or more. The crossing takes 14 days.
-  src: memory-canon (campaign-canon, refinement; Watcher ruling)
-
-- **[add]** The module's shape
-  DM voice: kept from the module: a 500-lb chunk in the ogre's cave; the spectators Greelob and Orlob; Tarto's 500-lb bag of holding and a sending stone.
-  src: astral § Meteorite and mission
-
-- **[add]** The tyrant ship obeys the Pact
-  "The tyrant ship holds some beholder essence, so it obeys the Pact: the eyestalk matching the hour's shut eye goes dead, and the whole ship goes dark in the eclipse."
-  src: memory-canon (H'Catha decisions); chat-astral-sea-worldbuilding § meteorite
-
-- **[add]** Ezra
-  Ezra the Watcher joins the crew for the H'Catha voyage, where his final training is. A later graduation-board contract collects him at H'Catha and takes him to the Hall of the Watchers.
-  src: memory-canon (campaign-canon, Key NPCs)
-
-- **[add]** Vaelorix came from H'Catha
-  "Vaelorix the Cultivant, the dead beholder collector whose tyrant ship the crew now holds, came from H'Catha."
-  src: memory-canon (campaign-canon, antagonists)
 
 ### realms/glyth.html
 
@@ -1539,6 +1400,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   Touches: campaign/spine.html (Beat 2 approach table, Beat 4 avenues), dossiers/ezra.html, dossiers/qitru.html, factions/order.html (Watcher row), realms H'Catha page.
   src: memory-canon campaign-canon § Antagonists (H'Catha leaning, eclipse, sovereign lines); chat-astral-sea-worldbuilding § Superseded
   answered: inbox/chat-astral-sea-worldbuilding.md § H'Catha: Ondessa and the Watcher (Settled: "Ondessa still holds her seat", "Her citadel is occupied", the eye, the trade, reinstatement as an optional goal) and § Superseded ("Ondessa hides in the light, in her own Lashline"; "The fallen northeast domain is Ondessa's"). This chat (2026-10-21) settles memory's "leaning" and replaces its earlier "deposed ruler" line.
+  done: locations/hcatha.html (pilot)
 
 - **[decide]** The Rival's name *(prep)*
   The second claimant to the meteor is "the Rival" on the page. The sweep proposes Oszrax. Confirm Oszrax or name him.

@@ -229,7 +229,7 @@ const SYS_CHART = {
 const BODY_CHART = {
   "Anadia":{d:50,a:205,size:10}, "Coliar":{d:100,a:318,size:14}, "Toril":{d:200,a:24,size:16,page:"toril.html"},
   "Karpri":{d:300,a:140,size:12}, "Chandos":{d:400,a:252,size:12}, "Glyth":{d:1000,a:78,size:12,ring:true,page:"glyth.html"},
-  "Garden":{d:1200,a:172,size:13}, "H'Catha":{d:1600,a:292,size:14,page:"hcatha.html"},
+  "Garden":{d:1200,a:172,size:13}, "H'Catha":{d:1600,a:292,size:14,page:"../locations/hcatha.html"},
   "Caelestis":{of:"Toril",dx:46,dy:-56,shape:"diamond",page:"caelestis.html"}, "Tyrant ship":{of:"Toril",dx:66,dy:42,shape:"square"},
   "Selûne":{of:"Toril",dx:-44,dy:30,shape:"moon"},
   "Oerth":{orbit:.5,a:140,size:16,mono:"holy", note:`Oerth's heart has been Vecna's since his ascension charged him into it. Every heart in the inscription links back to it.`},
@@ -770,7 +770,7 @@ window.addEventListener("resize", apply);
 /* ---------- side panel ---------- */
 const list = (t,items) => items && items.length ? `<h3>${t}</h3><ul>${items.map(i=>`<li>${i}</li>`).join("")}</ul>` : "";
 const dmlist = items => items && items.length ? `<div class="dmbox"><h3>At the table</h3><ul>${items.map(i=>`<li>${i}</li>`).join("")}</ul></div>` : "";
-const pageLink = p => p ? `<p><a href="../realms/${p}">Realms entry &rarr;</a></p>` : "";
+const pageLink = p => p ? `<p><a href="${p.includes("/") ? p : "../realms/" + p}">Realms entry &rarr;</a></p>` : "";
 function mark(id){ selected = id; svg.querySelectorAll(".node").forEach(g=>g.classList.toggle("is-selected", g.dataset.id===id)); document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("is-selected", c.dataset.chip===id)); }
 function heartsCount(){
   const worlds = HEARTS.reduce((a,h)=>a+(h.pair?2:1),0);

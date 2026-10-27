@@ -11,9 +11,6 @@ when a ruling changes; delete it once the page carries it. See
 ### Oerth (realms/oerth, cosmology/, chart/)
 - Oerth lies in GAL-01, Caelestis's own galaxy, in the system of Greyspace.
 
-### H'Catha (realms/hcatha.html)
-- Vecna's hand on H'Catha goes back to its founding. He influenced the making of the Sovereign Eye, hoping its dreaming would bring H'Catha to a Zenith. It did not. It is a secret, and one of Vecna's plans that failed. A trace of his worship lingers there. H'Catha is the crew's first world beyond Caelestis, and Vecna stays faint there.
-
 ### Aethris (realms/aethris.html)
 - Aethris's Zenith is unfinished, because the Fortuned have not completed their ritual. The Prism Ascendant is the Monolith that answered it. It has archived what it can and stays where it is. It does nothing.
 

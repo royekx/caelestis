@@ -108,7 +108,12 @@
       "note": "no 'Open' sections or tags: write what is undecided as a sentence in a DM notes tab or planning page"
     }
   ],
-  "moved": [],
+  "moved": [
+    {
+      "old": "realms/hcatha.html",
+      "new": "locations/hcatha.html"
+    }
+  ],
   "allow": [],
   "scan": [
     "prime",

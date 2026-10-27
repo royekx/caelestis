@@ -3461,15 +3461,19 @@
         },
         {
           "t": "Each domain's terrain carries its ruler's signature ray, soaked in over ages.",
-          "src": "realms/hcatha.html"
+          "src": "locations/hcatha.html"
         },
         {
           "t": "Free locathah, guides and exiles live on the seams between domains.",
-          "src": "realms/hcatha.html"
+          "src": "locations/hcatha.html"
         },
         {
           "t": "Only one of the mercane in its ports works for Vocath.",
-          "src": "realms/hcatha.html"
+          "src": "locations/hcatha.html"
+        },
+        {
+          "t": "H'Catha has ten domains, one for each eyestalk, each with one enlightened ruler, under the Sovereign Eye.",
+          "src": "locations/hcatha.html"
         }
       ]
     },
@@ -3478,11 +3482,15 @@
       "label": "The Sovereign Eye",
       "type": "entity",
       "scope": "caelestis",
-      "summary": "The presence over H'Catha's rulers, born of their dreaming.",
+      "summary": "The presence the rulers of H'Catha dreamt together, which sees everything in daylight and enforces the Pact.",
       "facts": [
         {
-          "t": "Vecna may once have tried to turn the dreaming of the Sovereign Eye into a Zenith and fallen short.",
-          "src": "STAGING round 5"
+          "t": "The Sovereign Eye sees everything in daylight and enforces the Pact; shadow is its blind spot.",
+          "src": "locations/hcatha.html"
+        },
+        {
+          "t": "Vecna influenced the making of the Sovereign Eye, hoping its dreaming would bring H'Catha to a Zenith. It did not.",
+          "src": "locations/hcatha.html"
         }
       ]
     },
@@ -3495,11 +3503,11 @@
       "facts": [
         {
           "t": "The beholders gathered on H'Catha drawn by the Spindle.",
-          "src": "realms/hcatha.html"
+          "src": "locations/hcatha.html"
         },
         {
           "t": "Magic grows unreliable the higher one climbs the Spindle.",
-          "src": "realms/hcatha.html"
+          "src": "locations/hcatha.html"
         }
       ]
     },
@@ -3511,12 +3519,8 @@
       "summary": "A beholder ruler of H'Catha, a claimant to the meteor.",
       "facts": [
         {
-          "t": "Kurrzot's domain carries the ray of paralysis: still water and dead currents.",
-          "src": "realms/hcatha.html"
-        },
-        {
-          "t": "He claims the meteor that struck on the seam of his domain.",
-          "src": "realms/hcatha.html"
+          "t": "He claims the meteor that struck the Pupil on the seam between his domain and his rival's.",
+          "src": "locations/hcatha.html"
         },
         {
           "t": "He sends an emissary rather than an attack over his unsettled business with Vaelorix.",
@@ -3536,8 +3540,12 @@
           "src": "campaign/spine.html"
         },
         {
-          "t": "It struck on the seam between Kurrzot's domain and the Rival's.",
-          "src": "campaign/spine.html"
+          "t": "It struck the Pupil, on the seam between Kurrzot's domain and his rival's, and is mined as a vein in an occupied, skirmished area.",
+          "src": "locations/hcatha.html"
+        },
+        {
+          "t": "Adamantine matters on H'Catha because the Sovereign Eye cannot see through it.",
+          "src": "locations/hcatha.html"
         }
       ]
     },
@@ -6987,19 +6995,19 @@
       "s": "spindle",
       "t": "LOC-Sk4mW8vn",
       "rel": "stands at the center of",
-      "src": "realms/hcatha.html"
+      "src": "locations/hcatha.html"
     },
     {
       "s": "kurrzot",
       "t": "LOC-Sk4mW8vn",
       "rel": "rules a domain of",
-      "src": "realms/hcatha.html"
+      "src": "locations/hcatha.html"
     },
     {
       "s": "kurrzot",
       "t": "hcatha-meteor",
       "rel": "claims",
-      "src": "realms/hcatha.html"
+      "src": "locations/hcatha.html"
     },
     {
       "s": "hcatha-meteor",
@@ -7017,7 +7025,7 @@
       "s": "LOC-Sk4mW8vn",
       "t": "LOC-Sp4hR9nk",
       "rel": "located in",
-      "src": "realms/hcatha.html"
+      "src": "locations/hcatha.html"
     },
     {
       "s": "PC-wI087olT",
@@ -7768,6 +7776,12 @@
       "t": "expansion",
       "rel": "includes",
       "src": "STAGING, Cosmology"
+    },
+    {
+      "s": "NPC-ijDm41rn",
+      "t": "LOC-Sk4mW8vn",
+      "rel": "rules a domain of",
+      "src": "locations/hcatha.html"
     }
   ]
 }
