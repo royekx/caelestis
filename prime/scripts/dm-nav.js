@@ -72,63 +72,62 @@
   // Order: Campaign (+ Remaking, Voyages nested) / Cosmology / Realms / Factions & Characters.
   // a divider, then the trackable throughlines (The Remaking / Voyages).
 
-  // Grouped the way the work divides, rather than one flat list:
+  // Five groups, one for each Axiom colour (dm.css). The page takes its
+  // group's colour as its accent, and each group label carries its own.
   //
-  //   Run      — what you open while prepping or at the table
-  //   Cast     — the people, on both sides
-  //   Setting  — what is true regardless of who is in the room
-  //   Systems  — the homebrew machinery
-  //
-  // Campaign keeps its nested children; everything else sits flat under a
-  // group label. The player sidebar uses the same pattern (nav.js groups).
+  //   Play      — Determination — what you open at the table
+  //   Story     — Consolidation — the campaign, the opposition, the timeline
+  //   People    — Distinction   — the crew, everyone else, the factions
+  //   World     — Expansion     — what is true regardless of who is in the room
+  //   Reference — Dissolution   — terms and principles
   var groups = [
     {
-      label: 'Run',
+      label: 'Play',
       axiom: 'determination',
       items: [
-        { key: 'campaign',  label: 'Campaign',      path: 'campaign/'   },
-        { key: 'spine',     label: 'Spine',         path: 'campaign/spine.html',      indent: true },
-        { key: 'voyages',   label: 'Voyages',       path: 'campaign/voyages/',        indent: true },
-        { key: 'timeline',  label: 'Timeline',      path: 'timeline/',                indent: true },
-        { key: 'plot-hooks',label: 'Plot Hooks',    path: 'campaign/plot-hooks.html', indent: true },
-        { key: 'what-if',   label: 'What If',       path: 'campaign/what-if.html',    indent: true },
+        { key: 'voyages',   label: 'Voyages',       path: 'campaign/voyages/' },
         { key: 'tracker',   label: 'Tracker',       path: 'tracker/'    },
-      ]
-    },
-    {
-      label: 'Cast',
-      axiom: 'distinction',
-      items: [
-        { key: 'crew',      label: 'The Crew',      path: 'crew/'       },
-        { key: 'dossiers',  label: 'DM Dossiers',   path: 'dossiers/'   },
-        { key: 'factions',  label: 'Factions',      path: 'factions/'   },
+        { key: 'plot-hooks',label: 'Plot Hooks',    path: 'campaign/plot-hooks.html' },
         { key: 'statblocks',label: 'Stat Blocks',   path: 'statblocks/' },
+        { key: 'rules',     label: 'Rules',         path: 'rules/'      },
       ]
     },
     {
-      label: 'The Opposition',
+      label: 'Story',
       axiom: 'consolidation',
       items: [
-        { key: 'colony',    label: 'Colony Ops',    path: 'campaign/colony/'    },
+        { key: 'campaign',  label: 'Campaign',      path: 'campaign/'   },
+        { key: 'spine',     label: 'Spine',         path: 'campaign/spine.html',   indent: true },
+        { key: 'what-if',   label: 'What If',       path: 'campaign/what-if.html', indent: true },
+        { key: 'colony',    label: 'Colony',        path: 'campaign/colony/'    },
         { key: 'becoming',  label: 'Vecna',         path: 'opposition/vecna.html' },
+        { key: 'timeline',  label: 'Timeline',      path: 'timeline/'   },
       ]
     },
     {
-      label: 'Setting',
+      label: 'People',
+      axiom: 'distinction',
+      items: [
+        { key: 'crew',      label: 'Crew',          path: 'crew/'       },
+        { key: 'dossiers',  label: 'Dossiers',      path: 'dossiers/'   },
+        { key: 'factions',  label: 'Factions',      path: 'factions/'   },
+      ]
+    },
+    {
+      label: 'World',
       axiom: 'expansion',
       items: [
         { key: 'cosmology', label: 'Cosmology',     path: 'cosmology/'  },
-        { key: 'realms',    label: 'Realms',        path: 'realms/', also: ['locations/'] },
+        { key: 'realms',    label: 'Locations',     path: 'realms/', also: ['locations/'] },
         { key: 'vessels',   label: 'Vessels',       path: 'vessels/'    },
         { key: 'artifacts', label: 'Artifacts',     path: 'artifacts/'  },
-        { key: 'chart',     label: 'Cosmos Chart',  path: 'chart/'      },
+        { key: 'chart',     label: 'Chart',         path: 'chart/'      },
       ]
     },
     {
       label: 'Reference',
       axiom: 'dissolution',
       items: [
-        { key: 'rules',     label: 'Rules',         path: 'rules/'      },
         { key: 'glossary',  label: 'Glossary',      path: 'glossary/'   },
       ]
     },
@@ -166,7 +165,7 @@
   }
 
   var sectionLinks = groups.map(function (g) {
-    return '<div class="side-nav-group-label">' + g.label + '</div>' + g.items.map(linkFor).join('');
+    return '<div class="side-nav-group" data-axiom="' + g.axiom + '"><div class="side-nav-group-label">' + g.label + '</div>' + g.items.map(linkFor).join('') + '</div>';
   }).join('');
 
   var externalLinks = extLinks.map(function (l) {

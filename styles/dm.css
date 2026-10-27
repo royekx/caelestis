@@ -2691,3 +2691,19 @@ html[data-axiom="determination"] { --accent: var(--ax-determination); }
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
+
+/* ── Sidebar groups in their Axiom colours ──
+   Each group label carries its Axiom; a link's hover and active marker
+   take the same colour, so the nav reads as five coloured families. */
+.side-nav-group[data-axiom="determination"] { --group: var(--ax-determination); }
+.side-nav-group[data-axiom="consolidation"] { --group: var(--ax-consolidation); }
+.side-nav-group[data-axiom="distinction"]   { --group: var(--ax-distinction); }
+.side-nav-group[data-axiom="expansion"]     { --group: var(--ax-expansion); }
+.side-nav-group[data-axiom="dissolution"]   { --group: var(--ax-dissolution); }
+.side-nav-group .side-nav-group-label { color: var(--group); opacity: 0.85; }
+.side-nav-body > .side-nav-group:first-of-type .side-nav-group-label { padding-top: 0.3rem; }
+.side-nav-group .side-nav-link:hover { color: color-mix(in srgb, var(--group) 70%, white); }
+.side-nav-group .side-nav-link.active {
+  border-left-color: var(--group) !important;
+  background: color-mix(in srgb, var(--group) 10%, transparent);
+}
