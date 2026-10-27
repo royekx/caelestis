@@ -20,9 +20,11 @@ in `CLAUDE.md` § Folder map.
 - **No status labels on factual pages.** "Unresolved", "open", "pending" and
   similar labels go in the page's DM notes tab or on a DM planning page. If an
   entry is light because little is known, write what is known and stop.
-- **Bold** marks the one claim a tab or section turns on, and terms to retain.
-  *Italics* mark sentence emphasis. Both sparingly: if three things are bold,
-  none of them are.
+- **No bold or colour inside running prose.** A paragraph reads straight
+  through: no bolded phrases, no coloured words. Links are the one exception,
+  in the link colour with an underline. Bold is for structure only: headings,
+  table headers, and a short label that opens a list item ("**H'Catha.** …").
+  Italics are for titles, ship names and the odd word that needs stress.
 
 ### Headings
 
