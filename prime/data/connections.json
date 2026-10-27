@@ -48,14 +48,14 @@
       "label": "The Axioms",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "The five laws that govern how energy behaves: Gravity, Expansion, Entropy, Negentropy and Possibility.",
+      "summary": "The five laws that govern how energy behaves: Consolidation, Expansion, Dissolution, Distinction and Determination.",
       "facts": [
         {
           "t": "Energy has always existed; it is never made or destroyed, only arranged.",
           "src": "STAGING, Cosmology"
         },
         {
-          "t": "Gravity and Expansion decide where energy goes; Entropy and Negentropy decide what form it takes; Possibility keeps outcomes open.",
+          "t": "Consolidation and Expansion decide where energy goes; Dissolution and Distinction decide what form it takes; Determination keeps outcomes open.",
           "src": "STAGING, Cosmology"
         },
         {
@@ -65,89 +65,89 @@
       ]
     },
     {
-      "id": "gravity",
-      "label": "Gravity",
+      "id": "consolidation",
+      "label": "Consolidation",
       "type": "concept",
       "scope": "cosmos",
       "summary": "The Axiom that draws things together.",
       "facts": [
         {
-          "t": "Gravity draws energy together into clouds, stars, worlds and galaxies.",
+          "t": "Consolidation draws energy together into clouds, stars, worlds and galaxies.",
           "src": "STAGING, Cosmology"
         },
         {
-          "t": "Where Gravity wins outright with Entropy, it collapses into a core.",
+          "t": "Where Consolidation wins outright with Dissolution, it collapses into a core.",
           "src": "STAGING, Cosmology"
         },
         {
-          "t": "Gravity and Entropy close possibilities; Expansion and Negentropy open them.",
+          "t": "Consolidation and Dissolution close possibilities; Expansion and Distinction open them.",
           "src": "STAGING, Cosmology"
         },
         {
-          "t": "The Rod of Seven Parts is the Gravity fragment.",
+          "t": "The Rod of Seven Parts is the Consolidation fragment.",
           "src": "STAGING, Cosmology"
         }
       ]
     },
     {
-      "id": "entropy",
-      "label": "Entropy",
+      "id": "dissolution",
+      "label": "Dissolution",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "The Axiom that pulls everything toward sameness.",
+      "summary": "The Axiom that mixes everything into sameness, until nothing stands apart.",
       "facts": [
         {
           "t": "Every pocket of difference sends more sameness out into the cosmos than it keeps.",
           "src": "STAGING, Cosmology"
         },
         {
-          "t": "Time runs one way because of Entropy.",
+          "t": "Time runs one way because of Dissolution.",
           "src": "STAGING, Cosmology"
         },
         {
-          "t": "The twins carry the Entropy fragment, two pieces.",
+          "t": "The twins carry the Dissolution fragment, two pieces.",
           "src": "STAGING, Cosmology"
         }
       ]
     },
     {
-      "id": "negentropy",
-      "label": "Negentropy",
+      "id": "distinction",
+      "label": "Distinction",
       "type": "concept",
       "scope": "cosmos",
       "summary": "The Axiom that makes and keeps things different.",
       "facts": [
         {
-          "t": "Negentropy builds and holds distinct things in the flow of energy: elements, weather, life, minds.",
+          "t": "Distinction builds and holds distinct things in the flow of energy: elements, weather, life, minds.",
           "src": "STAGING, Cosmology"
         },
         {
-          "t": "A Zenith is a world at its peak of Negentropy.",
+          "t": "A Zenith is a world at its peak of Distinction.",
           "src": "STAGING, Cosmology"
         },
         {
-          "t": "Every Negentropy piece finds or reveals something, telling one thing apart from everything else.",
+          "t": "Every Distinction piece finds or reveals something, telling one thing apart from everything else.",
           "src": "STAGING, Cosmology"
         }
       ]
     },
     {
-      "id": "possibility",
-      "label": "Possibility",
+      "id": "determination",
+      "label": "Determination",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "The Axiom that keeps every outcome undecided until it is decided.",
+      "summary": "The Axiom by which every outcome must be decided, while nothing sets which way it goes.",
       "facts": [
         {
-          "t": "Each decision opens new undecided things.",
+          "t": "Until an outcome is decided it stays open; once decided it stays decided, and each decision opens new undecided things.",
           "src": "STAGING, Cosmology"
         },
         {
-          "t": "Possibility stands between the two pairs of Axioms.",
+          "t": "Determination stands between the two pairs of Axioms.",
           "src": "STAGING, Cosmology"
         },
         {
-          "t": "The Possibility fragment has five pieces.",
+          "t": "The Determination fragment has five pieces.",
           "src": "STAGING, Cosmology"
         }
       ]
@@ -552,7 +552,7 @@
           "src": "cosmology/index.html"
         },
         {
-          "t": "The four fragments broke by Axiom into prime numbers of pieces: Entropy 2, Negentropy 3, Possibility 5, Gravity 7.",
+          "t": "The four fragments broke by Axiom into prime numbers of pieces: Dissolution 2, Distinction 3, Determination 5, Consolidation 7.",
           "src": "STAGING round 11"
         },
         {
@@ -1661,10 +1661,10 @@
       "label": "A.T.L.A.S.",
       "type": "item",
       "scope": "caelestis",
-      "summary": "A brass-and-glass device housing a Negentropy piece; it reveals the aspects of a world, its heart among them.",
+      "summary": "A brass-and-glass device housing a Distinction piece; it reveals the aspects of a world, its heart among them.",
       "facts": [
         {
-          "t": "A.T.L.A.S. houses one Negentropy piece and reveals the aspects of a world, a world's heart among them.",
+          "t": "A.T.L.A.S. houses one Distinction piece and reveals the aspects of a world, a world's heart among them.",
           "src": "STAGING round 10"
         },
         {
@@ -1676,7 +1676,7 @@
           "src": "artifacts/atlas.html"
         },
         {
-          "t": "As one of three Negentropy pieces it pulls toward the other two.",
+          "t": "As one of three Distinction pieces it pulls toward the other two.",
           "src": "STAGING round 10"
         },
         {
@@ -1690,10 +1690,10 @@
       "label": "A.T.L.A.S.'s sister",
       "type": "item",
       "scope": "fonains",
-      "summary": "A second Negentropy housing; it seems to find magic items and truly finds Reach artifacts.",
+      "summary": "A second Distinction housing; it seems to find magic items and truly finds Reach artifacts.",
       "facts": [
         {
-          "t": "A.T.L.A.S.'s sister houses another Negentropy piece and was held by Caelestis as a device.",
+          "t": "A.T.L.A.S.'s sister houses another Distinction piece and was held by Caelestis as a device.",
           "src": "STAGING round 10"
         },
         {
@@ -1711,40 +1711,40 @@
       ]
     },
     {
-      "id": "third-negentropy-piece",
-      "label": "The third Negentropy piece",
+      "id": "third-distinction-piece",
+      "label": "The third Distinction piece",
       "type": "item",
       "scope": "cosmos",
-      "summary": "The last piece of the Negentropy fragment, whereabouts unknown.",
+      "summary": "The last piece of the Distinction fragment, whereabouts unknown.",
       "facts": [
         {
-          "t": "The third Negentropy piece finds something too.",
+          "t": "The third Distinction piece finds something too.",
           "src": "STAGING round 10"
         }
       ]
     },
     {
-      "id": "negentropy-fragment",
-      "label": "The Negentropy fragment",
+      "id": "distinction-fragment",
+      "label": "The Distinction fragment",
       "type": "item",
       "scope": "cosmos",
-      "summary": "Negentropy residue, in three pieces.",
+      "summary": "Distinction residue, in three pieces.",
       "facts": [
         {
-          "t": "The Negentropy fragment is in three pieces.",
+          "t": "The Distinction fragment is in three pieces.",
           "src": "STAGING round 10"
         }
       ]
     },
     {
-      "id": "entropy-fragment",
-      "label": "The Entropy fragment",
+      "id": "dissolution-fragment",
+      "label": "The Dissolution fragment",
       "type": "item",
       "scope": "caelestis",
       "summary": "The Runekeepers' fragment, two pieces, now forming in Wan and Tu.",
       "facts": [
         {
-          "t": "The Entropy fragment lies in two pieces.",
+          "t": "The Dissolution fragment lies in two pieces.",
           "src": "STAGING round 11"
         },
         {
@@ -1756,7 +1756,7 @@
           "src": "STAGING round 2"
         },
         {
-          "t": "The twins carry the Entropy fragment.",
+          "t": "The twins carry the Dissolution fragment.",
           "src": "STAGING round 10"
         },
         {
@@ -1766,14 +1766,14 @@
       ]
     },
     {
-      "id": "possibility-fragment",
-      "label": "The Possibility fragment",
+      "id": "determination-fragment",
+      "label": "The Determination fragment",
       "type": "item",
       "scope": "cosmos",
       "summary": "Five pieces that have left no trace in any record.",
       "facts": [
         {
-          "t": "The Possibility fragment is in five pieces, and none has left a trace in any record.",
+          "t": "The Determination fragment is in five pieces, and none has left a trace in any record.",
           "src": "artifacts/transformation-fragment.html"
         }
       ]
@@ -1783,14 +1783,14 @@
       "label": "The Rod of Seven Parts",
       "type": "item",
       "scope": "cosmos",
-      "summary": "The Gravity fragment, seven pieces each known by its working.",
+      "summary": "The Consolidation fragment, seven pieces each known by its working.",
       "facts": [
         {
           "t": "Each Rod piece performs a single working impossibly well, so a piece can be recognized by its effect.",
           "src": "artifacts/rod-of-seven-parts.html"
         },
         {
-          "t": "A Gravity piece feels the other six and a direction toward them.",
+          "t": "A Consolidation piece feels the other six and a direction toward them.",
           "src": "artifacts/index.html"
         },
         {
@@ -1812,7 +1812,7 @@
       "label": "The Rod's fifth piece",
       "type": "item",
       "scope": "cosmos",
-      "summary": "A Gravity piece keyed to find the path, held by Xanathar.",
+      "summary": "A Consolidation piece keyed to find the path, held by Xanathar.",
       "facts": [
         {
           "t": "The fifth Rod piece is keyed to find the path and is held by Xanathar.",
@@ -1829,7 +1829,7 @@
       "label": "The Rod's seventh piece",
       "type": "item",
       "scope": "fonains",
-      "summary": "The Gravity piece keyed to simulacrum, held by Thessalar.",
+      "summary": "The Consolidation piece keyed to simulacrum, held by Thessalar.",
       "facts": [
         {
           "t": "The seventh Rod piece is keyed to simulacrum.",
@@ -3557,7 +3557,7 @@
           "src": "crew/tumak.html"
         },
         {
-          "t": "The Entropy fragment is forming in both twins, half a rune to each.",
+          "t": "The Dissolution fragment is forming in both twins, half a rune to each.",
           "src": "artifacts/runekeepers-fragment.html"
         },
         {
@@ -3849,7 +3849,7 @@
           "src": "dossiers/the-runekeeper.html"
         },
         {
-          "t": "He is dimming as the Entropy fragment leaves him for Wan and Tu.",
+          "t": "He is dimming as the Dissolution fragment leaves him for Wan and Tu.",
           "src": "dossiers/the-runekeeper.html"
         },
         {
@@ -4962,37 +4962,37 @@
       "src": "cosmology/index.html"
     },
     {
-      "s": "gravity",
+      "s": "consolidation",
       "t": "axioms",
       "rel": "is one of",
       "src": "cosmology/index.html"
     },
     {
-      "s": "entropy",
+      "s": "dissolution",
       "t": "axioms",
       "rel": "is one of",
       "src": "cosmology/index.html"
     },
     {
-      "s": "negentropy",
+      "s": "distinction",
       "t": "axioms",
       "rel": "is one of",
       "src": "cosmology/index.html"
     },
     {
-      "s": "possibility",
+      "s": "determination",
       "t": "axioms",
       "rel": "is one of",
       "src": "cosmology/index.html"
     },
     {
-      "s": "entropy",
-      "t": "gravity",
+      "s": "dissolution",
+      "t": "consolidation",
       "rel": "counterweights",
       "src": "cosmology/index.html"
     },
     {
-      "s": "gravity",
+      "s": "consolidation",
       "t": "zeniths",
       "rel": "produces",
       "src": "cosmology/index.html"
@@ -5149,7 +5149,7 @@
     },
     {
       "s": "axiom-strain",
-      "t": "gravity",
+      "t": "consolidation",
       "rel": "strains",
       "src": "STAGING round 2"
     },
@@ -5161,19 +5161,19 @@
     },
     {
       "s": "residue",
-      "t": "entropy-fragment",
+      "t": "dissolution-fragment",
       "rel": "includes",
       "src": "STAGING round 11"
     },
     {
       "s": "residue",
-      "t": "negentropy-fragment",
+      "t": "distinction-fragment",
       "rel": "includes",
       "src": "STAGING round 11"
     },
     {
       "s": "residue",
-      "t": "possibility-fragment",
+      "t": "determination-fragment",
       "rel": "includes",
       "src": "STAGING round 11"
     },
@@ -5184,26 +5184,26 @@
       "src": "STAGING round 11"
     },
     {
-      "s": "entropy-fragment",
-      "t": "entropy",
+      "s": "dissolution-fragment",
+      "t": "dissolution",
       "rel": "is biased toward",
       "src": "STAGING round 11"
     },
     {
-      "s": "negentropy-fragment",
-      "t": "negentropy",
+      "s": "distinction-fragment",
+      "t": "distinction",
       "rel": "is biased toward",
       "src": "STAGING round 11"
     },
     {
-      "s": "possibility-fragment",
-      "t": "possibility",
+      "s": "determination-fragment",
+      "t": "determination",
       "rel": "is biased toward",
       "src": "STAGING round 11"
     },
     {
       "s": "rod-of-seven-parts",
-      "t": "gravity",
+      "t": "consolidation",
       "rel": "is biased toward",
       "src": "STAGING round 11"
     },
@@ -5221,19 +5221,19 @@
     },
     {
       "s": "atlas",
-      "t": "negentropy-fragment",
+      "t": "distinction-fragment",
       "rel": "houses a piece of",
       "src": "STAGING round 10"
     },
     {
       "s": "atlas-sister",
-      "t": "negentropy-fragment",
+      "t": "distinction-fragment",
       "rel": "houses a piece of",
       "src": "STAGING round 10"
     },
     {
-      "s": "third-negentropy-piece",
-      "t": "negentropy-fragment",
+      "s": "third-distinction-piece",
+      "t": "distinction-fragment",
       "rel": "is a piece of",
       "src": "STAGING round 10"
     },
@@ -5245,7 +5245,7 @@
     },
     {
       "s": "atlas",
-      "t": "third-negentropy-piece",
+      "t": "third-distinction-piece",
       "rel": "pulls toward",
       "src": "STAGING round 10"
     },
@@ -5335,7 +5335,7 @@
     },
     {
       "s": "axiomic-ascension",
-      "t": "gravity",
+      "t": "consolidation",
       "rel": "aims at the seat of",
       "src": "campaign/ascension/index.html"
     },
@@ -7021,7 +7021,7 @@
     },
     {
       "s": "PC-wI087olT",
-      "t": "entropy-fragment",
+      "t": "dissolution-fragment",
       "rel": "carries",
       "src": "STAGING round 10"
     },
@@ -7213,7 +7213,7 @@
     },
     {
       "s": "NPC-Jv7kW3mq",
-      "t": "entropy-fragment",
+      "t": "dissolution-fragment",
       "rel": "is losing",
       "src": "dossiers/the-runekeeper.html"
     },
@@ -7231,12 +7231,12 @@
     },
     {
       "s": "runekeepers",
-      "t": "entropy-fragment",
+      "t": "dissolution-fragment",
       "rel": "keep",
       "src": "STAGING round 2"
     },
     {
-      "s": "entropy-fragment",
+      "s": "dissolution-fragment",
       "t": "wayfinders-homeworld",
       "rel": "conceals",
       "src": "realms/wayfinders-homeworld.html"
@@ -7741,25 +7741,25 @@
     },
     {
       "s": "axioms",
-      "t": "gravity",
+      "t": "consolidation",
       "rel": "includes",
       "src": "STAGING, Cosmology"
     },
     {
       "s": "axioms",
-      "t": "entropy",
+      "t": "dissolution",
       "rel": "includes",
       "src": "STAGING, Cosmology"
     },
     {
       "s": "axioms",
-      "t": "negentropy",
+      "t": "distinction",
       "rel": "includes",
       "src": "STAGING, Cosmology"
     },
     {
       "s": "axioms",
-      "t": "possibility",
+      "t": "determination",
       "rel": "includes",
       "src": "STAGING, Cosmology"
     },

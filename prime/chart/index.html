@@ -177,7 +177,7 @@ const GAL_DRAW = {
   "GAL-01": { ang:-90, tone:"#e2ae7e", core:"asleep", spin:0.0,
     line1:"Caelestis · D&D 5e", line2:"core asleep · one link",
     summary:`Caelestis's galaxy, and the only one it charts. Its systems crowd along two spiral arms around a sleeping core, and the galaxy thins toward its edge.`,
-    there:[`Pieces of three Reach fragments, Gravity, Entropy and Negentropy, both by chance and by pull: once a few came to rest near Realmspace, more followed.`,
+    there:[`Pieces of three Reach fragments, Consolidation, Dissolution and Distinction, both by chance and by pull: once a few came to rest near Realmspace, more followed.`,
       `Realmspace, Caelestis's home system, and the sister institutions of the higher organization across the galaxy.`,
       `Oerth, in Greyspace, where Vecna became a god.`],
     dm:[`Runs as D&D 5e. The keystone: what happens here decides GAL-03, GAL-04 and GAL-05.`,
@@ -807,9 +807,9 @@ function galaxyPanel(g, offer){
 }
 function corePanel(n){
   const g = GALAXIES.find(x=>x.id===n.galaxy), home = n.galaxy==="GAL-01";
-  const t = { asleep:`A black hole at the galaxy's center, where Gravity and Entropy win outright. It sleeps.`,
-    awake:`A black hole at the galaxy's center, where Gravity and Entropy win outright. It is awake, and it presses on its neighbours.`,
-    partway:`A black hole at the galaxy's center, where Gravity and Entropy win outright. Something is working it awake, and it is partway there.` }[n.core];
+  const t = { asleep:`A black hole at the galaxy's center, where Consolidation and Dissolution win outright. It sleeps.`,
+    awake:`A black hole at the galaxy's center, where Consolidation and Dissolution win outright. It is awake, and it presses on its neighbours.`,
+    partway:`A black hole at the galaxy's center, where Consolidation and Dissolution win outright. Something is working it awake, and it is partway there.` }[n.core];
   const dm = home ? [`The inscription's pupil. When lids and iris are whole, the eye opens and the core wakes, and what lands on Oerth is sight: a view into Continuity itself.`,`Its waking for Vecna is the failure state. It sets the fate of GAL-03, GAL-04 and GAL-05.`,`Once Erevos opens, every linked heart becomes a door: through its Atrium to this core, and through the core to the center.`]
     : n.galaxy==="GAL-02" ? [`Its pressure on GAL-01's core is how the crew can be pulled into this galaxy late in the campaign.`] : [`Its fate turns on GAL-01.`];
   panel.innerHTML = `<h2>${esc(n.name)}</h2><p class="kind">${esc(n.kind)}</p><span class="badge" style="color:${CORE_TONE[n.core]};border-color:${CORE_TONE[n.core]}">${CORE_WORD[n.core]}</span><p>${t}</p>${dmlist(dm)}`;

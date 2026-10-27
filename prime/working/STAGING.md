@@ -11,33 +11,34 @@ when a ruling changes; delete it once the page carries it. See
 ### The Axioms (cosmology/, glossary/, chart/, working/divine-rules.md)
 - Energy has always existed. It is never made and never destroyed, only arranged. Everything that exists, a star, a world, a person, is energy held in a pattern for a while.
 - Five Axioms govern how energy behaves:
-  - **Gravity** draws things together.
+  - **Consolidation** draws things together.
   - **Expansion** spreads things apart.
-  - **Entropy** pulls everything toward sameness.
-  - **Negentropy** makes and keeps things different from each other.
-  - **Possibility** keeps every outcome undecided until it is decided. Each decision opens new undecided things.
-- Gravity and Expansion decide where energy goes. Entropy and Negentropy decide what form it takes. Possibility stands between the two pairs: Gravity and Entropy close possibilities, pulling toward one place and one state; Expansion and Negentropy open them, making more room and more distinct things.
-- Pictured, the five Axioms stand equally far from one another, like pins in a cushion, with Continuity at the center. Possibility is really a cloud through all the others, the likelihood that permeates them, and stands as a fifth pin. Five points all equally apart exist only one dimension up, in the figure called the 5-cell; drawn flat, it is a pentagon with every pair joined, the same figure as the five galaxies around Erevos. (DM: a mirror for meaning, not a map. No galaxy belongs to an Axiom. The pairs Gravity–Expansion and Entropy–Negentropy oppose in what they do, not in where they stand.)
-- The four laws on the two axes meet in four ways, and each meeting does something to Possibility:
-  - **Collapse** (Gravity and Entropy): one place, one state. It closes possibilities.
-  - **Proliferation** (Expansion and Negentropy): more room, more distinct things. It opens them.
-  - **Formation** (Gravity and Negentropy): drawn together and made distinct: stars, worlds, life. It holds a few possibilities and makes them last.
-  - **Dispersal** (Expansion and Entropy): spread out and evened out: cooling, thinning, the drift. It scatters possibilities too thin to ever meet.
-- Possibility acts on the four in turn: it decides where each tension tips. It is why Gravity wins in one place and Expansion in another. Without it the cosmos would be the same everywhere.
+  - **Dissolution** pulls everything toward sameness.
+  - **Distinction** makes and keeps things different from each other.
+  - **Determination**: every outcome must be decided, and nothing sets which way it goes. Until it is decided it stays open; once decided it stays decided, and each decision opens new undecided things.
+- Consolidation and Expansion decide where energy goes. Dissolution and Distinction decide what form it takes. Determination stands between the two pairs: Consolidation and Dissolution close possibilities, pulling toward one place and one state; Expansion and Distinction open them, making more room and more distinct things.
+- Pictured, the five Axioms stand equally far from one another, like pins in a cushion, with Continuity at the center. Determination is really a cloud through all the others, the likelihood that permeates them, and stands as a fifth pin. Five points all equally apart exist only one dimension up, in the figure called the 5-cell; drawn flat, it is a pentagon with every pair joined, the same figure as the five galaxies around Erevos. (DM: a mirror for meaning, not a map. No galaxy belongs to an Axiom. The pairs Consolidation–Expansion and Dissolution–Distinction oppose in what they do, not in where they stand.)
+- The four laws on the two axes meet in four ways, and each meeting does something to what is possible:
+  - **Collapse** (Consolidation and Dissolution): one place, one state. It closes possibilities.
+  - **Proliferation** (Expansion and Distinction): more room, more distinct things. It opens them.
+  - **Formation** (Consolidation and Distinction): drawn together and made distinct: stars, worlds, life. It holds a few possibilities and makes them last.
+  - **Dispersal** (Expansion and Dissolution): spread out and evened out: cooling, thinning, the drift. It scatters possibilities too thin to ever meet.
+- Determination acts on the four in turn: it is why each tension tips one way or another, without fixing which. It is why Consolidation wins in one place and Expansion in another. Without it the cosmos would be the same everywhere.
+- Each Axiom is named for what it means; the physics is in how it behaves. Dissolution is the way ink spreads through water: scattered up close, an even sameness from a distance. Determination does not mean that outcomes are fated; it means every outcome must be reached, and nothing chooses it in advance.
 - None of the five is a substance. Energy is the only thing there is; the Axioms are how it behaves.
-- Each Axiom is the absolute manifestation of its law, with the barest awareness and no more: Gravity knows only to pull. They want nothing and choose nothing. (DM touchstone: Destiny 2's Nine.)
+- Each Axiom is the absolute manifestation of its law, with the barest awareness and no more: Consolidation knows only to pull. They want nothing and choose nothing. (DM touchstone: Destiny 2's Nine.)
 - The five are balanced, but they are not equal.
 - No Axiom can be removed, replaced or added, any more than energy can be made or destroyed. What changes is their balance: over the ages the push and pull between them has shifted, and reality has changed with it.
 - Monoliths are Continuity's response, not any one Axiom's: reality preserving itself when a world reaches its Zenith.
 - Structure, every star, world and living thing, is what the five make together. Continuity is their interplay: reality itself, the fabric that rises out of how the Axioms resolve.
 - Continuity and the Prime Continuum are one thing: all of existence.
-- Continuity runs both ways. It rises out of the Axioms, and whoever reaches into it can push and pull how the Axioms work, and so remake reality. Everyone else lives inside what it serves them. Time runs one way because of Entropy.
-- How things came to be: energy lay perfectly even, and nothing happened. At the smallest scale its outcomes were undecided, and tiny differences resolved. Expansion stretched space and gave those differences room. Gravity drew the richer places together into clouds, stars, worlds and galaxies, and where it won outright it collapsed into the cores. In the flow of energy from hot stars into cold space, Negentropy built and held distinct things: elements, weather, life, minds. Entropy is the price of all of it: every pocket of difference sends more sameness out into the cosmos than it keeps, and everything is running down. At every step, Possibility left the outcome open.
-- A Zenith is a world at its peak of Negentropy, the most fully itself it will ever be. A Monolith answers it and records the pattern at that peak.
+- Continuity runs both ways. It rises out of the Axioms, and whoever reaches into it can push and pull how the Axioms work, and so remake reality. Everyone else lives inside what it serves them. Time runs one way because of Dissolution.
+- How things came to be: energy lay perfectly even, and nothing happened. At the smallest scale its outcomes were undecided, and tiny differences resolved. Expansion stretched space and gave those differences room. Consolidation drew the richer places together into clouds, stars, worlds and galaxies, and where it won outright it collapsed into the cores. In the flow of energy from hot stars into cold space, Distinction built and held distinct things: elements, weather, life, minds. Dissolution is the price of all of it: every pocket of difference sends more sameness out into the cosmos than it keeps, and everything is running down. At every step, Determination demanded an outcome and set none.
+- A Zenith is a world at its peak of Distinction, the most fully itself it will ever be. A Monolith answers it and records the pattern at that peak.
 - The Reach: the people of the first world, the only world in an earlier version of reality, reached into Continuity and changed it. Their world was destroyed. It was the first time Continuity had to answer, and the first Monolith, the Core Monolith, stands where it answered. The Reach world's remains spread across the cosmos, and reality rebalanced from there into the form it has now.
 - Since then Continuity has answered every such strain the same way, with a Monolith. Monoliths are how this version of reality preserves itself. A reality remade from inside might answer differently, or not at all.
 - The people of the Reach did not simply die. They became woven into the cosmos at different depths, and over time they became the gods. Some may remember what they were. Other gods have risen since, and some have fallen.
-- A galaxy's core is Gravity and Entropy winning outright.
+- A galaxy's core is Consolidation and Dissolution winning outright.
 - Star systems lie unevenly through a galaxy. All of them circle the core, at different speeds. They crowd along the spiral arms, gather in clusters, and leave long empty reaches between, and the galaxy thins toward its edge. The drift between galaxies belongs to Expansion.
 - DM: the Axioms are named only on the DM side. Scholars, faiths and Vecna describe them in their own terms; Vecna hears them as music.
 
@@ -74,9 +75,9 @@ when a ruling changes; delete it once the page carries it. See
 
 ### Residue and the fragments (cosmology/, artifacts/, glossary/)
 - The pieces of the Reach fragments are called residue.
-- Caelestis's galaxy holds pieces of three fragments, Gravity, Entropy and Negentropy, both by chance and by pull. Pieces of a fragment draw toward each other; once a few came to rest near Realmspace, more followed.
-- The Reach left five fragments of residue, one for each Axiom. Each broke into a prime number of pieces: Entropy 2, Negentropy 3, Possibility 5, Gravity 7, Expansion 11.
-- The Gravity fragment is the Rod of Seven Parts. Its pieces draw toward each other. The Expansion fragment's eleven pieces have never been found.
+- Caelestis's galaxy holds pieces of three fragments, Consolidation, Dissolution and Distinction, both by chance and by pull. Pieces of a fragment draw toward each other; once a few came to rest near Realmspace, more followed.
+- The Reach left five fragments of residue, one for each Axiom. Each broke into a prime number of pieces: Dissolution 2, Distinction 3, Determination 5, Consolidation 7, Expansion 11.
+- The Consolidation fragment is the Rod of Seven Parts. Its pieces draw toward each other. The Expansion fragment's eleven pieces have never been found.
 
 ### Erevos and Aurath (cosmology/, glossary/, chart/, realms/)
 - The cosmos is five galaxies. At its center is Erevos: the remains of the Reach world, a black hole beneath the Core Monolith and the Radiant Citadel.
@@ -286,7 +287,7 @@ when a ruling changes; delete it once the page carries it. See
 ### Residue holdings (artifacts/index.html, campaign/ascension/, factions/vthorama.html)
 - Vecna's side holds one residue piece: the colony carries it from world to world to open hearts. If the crew ever takes it, N'ghathrod must win it back or find another before he can open another heart.
 - Seekers chapters hunt for more. Vecna steers them: he lets each chapter believe that finding these artifacts will lead it to what it seeks, or that the artifacts are what it seeks.
-- Everything else is scattered. The crew carries the fourth Rod piece in the Lantern. Thessalar holds the seventh. The twins carry the Entropy fragment. The rest are loose or unknown.
+- Everything else is scattered. The crew carries the fourth Rod piece in the Lantern. Thessalar holds the seventh. The twins carry the Dissolution fragment. The rest are loose or unknown.
 - Pieces stay scarce. The crew may never gather a full fragment, and every piece is a race.
 
 ### N'ghathrod now (campaign/colony/, dossiers/nghathrod.html)
@@ -380,11 +381,11 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Artifacts and vessels
 
-### The Negentropy fragment and A.T.L.A.S.'s sister (artifacts/atlas.html, artifacts/index.html, dossiers/clint.html)
-- The Negentropy fragment is in three pieces. Every Negentropy piece, in whatever housing, finds or reveals something: it tells one thing apart from everything else.
-- A.T.L.A.S. houses one Negentropy piece. It reveals the aspects of a world, and a world's heart is one of them.
+### The Distinction fragment and A.T.L.A.S.'s sister (artifacts/atlas.html, artifacts/index.html, dossiers/clint.html)
+- The Distinction fragment is in three pieces. Every Distinction piece, in whatever housing, finds or reveals something: it tells one thing apart from everything else.
+- A.T.L.A.S. houses one Distinction piece. It reveals the aspects of a world, and a world's heart is one of them.
 - A.T.L.A.S.'s sister houses another. Caelestis held it as a device, and like every housing it hides what it really does. On the surface it finds magic items, a lesser kind of item-finder, because every enchanted thing carries a trace of residue. Its true use is finding Reach artifacts. This is what Vocath's crew ambushed the Bellwether Crow to take. Clint carried it through the color pool; it is somewhere on Fonains.
-- The third Negentropy piece is unknown. It finds something too.
+- The third Distinction piece is unknown. It finds something too.
 
 ### Wan, Tu and the fragment (artifacts/runekeepers-fragment.html, rules/)
 - The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a three-part state. The twins are not a key to the First Heart until enough of the stone has rebuilt between them through resolved runes: not before about level 12, around the end of Arc 3.
