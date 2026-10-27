@@ -18,9 +18,7 @@ is there, proposes a shape, and lists the calls to make before anything moves.
 | `stellar-chart/` | Casey's Stellar Reading chart | Belongs under his crew page |
 | `voyages/` | Voyage accounts V001–V006 | Core |
 | `bearings/` | Current bearing, a timeline, per-voyage bearing pages | Overlaps `voyages/` |
-| `crew-logs/` | Old brief and detailed logs V001–V004; index redirects to `voyages/` | Renamed to `voyages/` in August; kept for old links |
 | `logs/` | Crew Logs: the Google Docs embed page | Distinct from voyage accounts |
-| `crew-notes/` | Redirect stub to `logs/` (renamed in August) | Kept for old links |
 | `dossiers/` | 26 NPC pages (player-facing) | Jeffrey and Joffrey are two different people |
 | `factions/` | Factions index and one faction | Thin |
 | `navigation-records/` | 19 places and ships | Ships overlap `vessels/` |
@@ -45,7 +43,6 @@ is there, proposes a shape, and lists the calls to make before anything moves.
 ### Clutter
 
 - Empty placeholder files (one blank line each): `restricted/init.md`, `stellar-chart/init.md`, `wayfinder-path/init.md`, `prime/notes/init.md`, `prime/notes/restricted.md`, `handouts/README.md`.
-- Redirect stubs: `crew-notes/index.html`, `crew-logs/index.html` (from the August renames). Retire once old links no longer matter.
 - About 70 remote branches. Main's history was rewritten on 2026-10-18, so every old branch shows hundreds of commits "ahead" and none can be merged as is. Only `main` and the current working branch are live.
 - `prime/notes/*.md` and `data/` ship with the site. The notes are DM process docs and should not be public files.
 
@@ -258,6 +255,16 @@ Old path → new path, added by each pull request that moves a page.
 |---|---|---|
 | `prime/realms/hcatha.html` | `prime/locations/hcatha.html` | H'Catha pilot (deep-lore-working) |
 | `prime/campaign/ascension/index.html` | `prime/opposition/vecna.html` | Opposition: Vecna (opposition-vecna) |
+| `crew-logs/index.html` | `voyages/index.html` | Removed redirect stub (pass-0) |
+| `crew-logs/brief/voyage-brief-001.html` | `voyages/voyage-001.html` | Removed redirect stub (pass-0) |
+| `crew-logs/brief/voyage-brief-002.html` | `voyages/voyage-002.html` | Removed redirect stub (pass-0) |
+| `crew-logs/brief/voyage-brief-003.html` | `voyages/voyage-003.html` | Removed redirect stub (pass-0) |
+| `crew-logs/brief/voyage-brief-004.html` | `voyages/voyage-004.html` | Removed redirect stub (pass-0) |
+| `crew-logs/detailed/voyage-detailed-001.html` | `voyages/voyage-001.html` | Removed redirect stub (pass-0) |
+| `crew-logs/detailed/voyage-detailed-002.html` | `voyages/voyage-002.html` | Removed redirect stub (pass-0) |
+| `crew-logs/detailed/voyage-detailed-003.html` | `voyages/voyage-003.html` | Removed redirect stub (pass-0) |
+| `crew-logs/detailed/voyage-detailed-004.html` | `voyages/voyage-004.html` | Removed redirect stub (pass-0) |
+| `crew-notes/index.html` | `logs/index.html` | Removed redirect stub (pass-0) |
 
 ## Stale branches
 

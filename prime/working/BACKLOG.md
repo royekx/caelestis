@@ -4143,7 +4143,7 @@ run decide, fix, drop, add.
   src: notes/FIXES-DEMO-MIGRATION.md, notes/RESTRUCTURE-NOTES.md
 
 - **[later]** Crew Notes, now that search has shipped
-  A shared space where players write their own notes (an Etherpad or a Google Doc linked from the site) was deferred until S.E.A.R.C.H. shipped, then to be weighed on its own. S.E.A.R.C.H. is live. The old `crew-notes/` page now only redirects to Crew Logs. Options: build it (and pick the tool), or drop it.
+  A shared space where players write their own notes (an Etherpad or a Google Doc linked from the site) was deferred until S.E.A.R.C.H. shipped, then to be weighed on its own. S.E.A.R.C.H. is live. The old `crew-notes/` redirect is gone; Crew Logs lives at `logs/`. Options: build it (and pick the tool), or drop it.
   Touches: the player nav (scripts/nav.js), a new player page or external link.
   src: chat-early-planning § Campaign Planning, Open; memory-canon (Crew Notes deferred)
 
