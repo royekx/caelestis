@@ -602,10 +602,6 @@
       "summary": "What residue does when assembled: one fragment whole opens a door; all four bend reality.",
       "facts": [
         {
-          "t": "One fragment made whole opens any Atrium, including the First Heart's.",
-          "src": "artifacts/index.html"
-        },
-        {
           "t": "All four fragments together carry enough axiomity to put a thing back into being.",
           "src": "artifacts/index.html"
         }
@@ -1750,10 +1746,6 @@
         {
           "t": "The twins carry the Dissolution fragment.",
           "src": "STAGING round 10"
-        },
-        {
-          "t": "The twins are not a key to the First Heart until enough stone has rebuilt between them through resolved runes.",
-          "src": "STAGING round 2"
         }
       ]
     },
@@ -1784,10 +1776,6 @@
         {
           "t": "A Consolidation piece feels the other six and a direction toward them.",
           "src": "artifacts/index.html"
-        },
-        {
-          "t": "All seven pieces brought before an Atrium would force the First Heart.",
-          "src": "cosmology/index.html"
         },
         {
           "t": "Four of its pieces are loose and their workings unidentified.",

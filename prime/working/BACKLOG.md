@@ -35,16 +35,16 @@ staging once Korey has read and accepted them.
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
 | Factions | factions/ | 1 | 4 | 20 | 2 | 36 |
-| Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 40 | 5 | 36 |
+| Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 39 | 5 | 36 |
 | Dossiers | dossiers/ | 9 | 6 | 43 | 1 | 53 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
-| Artifacts and vessels | artifacts/, vessels/ | 6 | 2 | 26 | 0 | 43 |
+| Artifacts and vessels | artifacts/, vessels/ | 7 | 2 | 26 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 21 |
 | New pages | 14 proposed pages, the hub, notes/ | 3 | 17 | 5 | 2 | 35 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 5 | 3 | 0 | 1 |
-| **Total** | | **79** | **87** | **239** | **14** | **369** |
+| **Total** | | **80** | **87** | **238** | **14** | **369** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -87,7 +87,6 @@ The resolve pass settled these decide items from later sweeps, saved decisions o
 - Arc 2's range *(add)*
 - Ondessa holds her seat; her citadel is occupied *(fix)*
 - Heart entrance term is Atrium *(fix)*
-- N'ghathrod's one secondhand instruction *(fix)*
 - Tyrant ship weapons: four eyes at stations *(add)*
 - Sol's vignette ran in V006; the mimic is retired *(fix)*
 - What the behir was wrapped around *(add)*
@@ -1547,12 +1546,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   answered: inbox/chat-cosmic-campaign-structure.md § Superseded ("'Aperture' as the heart's entrance → 'Atrium' (turn 278)"). The memory lines that say "Aperture" come from earlier in the same chat (the Seekers pass, turns 108–151), and Korey used the new word himself afterward ("using a reach residue as the key into an atrium makes sense").
   done: opposition/vecna.html (pilot)
 
-- **[fix]** N'ghathrod's one secondhand instruction *(answered)*
-  Keep this page's line: the single operational instruction Vecna has ever given reached N'ghathrod secondhand, "a world with a Monolith is a marked world." It fits memory canon's rule (no handshake deals, no direct orders), because it arrived as the voice he takes for his elder brain. Colony Operations says "he has never been given an order"; change it to "he has never been given an order he knew came from anyone but his elder brain."
-  Touches: opposition/vecna.html, campaign/colony/index.html.
-  src: chat-cosmic-campaign-structure § Open; memory-canon open-decisions (working direction line)
-  answered: inbox/chat-cosmic-campaign-structure.md § Cosmology redesign (Settled: "Vecna's only instruction reached N'ghathrod secondhand: 'a world with a Monolith is a marked world'") and § Superseded ("'Marked' survives only as Vecna's word to N'ghathrod", turn 248)
-
 - **[add]** The lattice is a body
   Add to The Figure: N'ghathrod's lattice of linked worlds is a body. Linked worlds are its organs, links its nerves, colonies its cells. It is deliberately the same shape as Vecna's own aim: a mind with the cosmos for a body.
   src: memory-canon open-decisions (N'ghathrod's plan accepted direction); chat-cosmic-campaign-structure § World-hearts
@@ -2996,6 +2989,13 @@ fragment by Axiom, prime numbers. Ruled (STAGING round 11): Dissolution 2, Bound
 Transformation 5, Convergence 7 (17 in all). Every artifact page uses Boundary 2,
 Dissolution 3, Transformation 5, Convergence 7, so the Boundary and Dissolution
 counts change and Transformation stays.
+
+
+### Every fragment
+
+- **[decide]** What a fragment made whole does
+  A whole fragment does not open the First Heart (Korey 2026-10-27: "Assembling the pieces should do something but probably not open the first heart. Our structure has changed since then."). What assembling one does is not set. Cosmology, the Glossary, opposition/vecna.html and connections.json no longer say it opens the First Heart. Still to rewrite when this is decided: artifacts/index.html (the Rod card "opens the First Heart without any of Vecna's infrastructure"; "The two thresholds" table, "One fragment made whole: opens any Atrium, including the First Heart's"), artifacts/runekeepers-fragment.html ("a first-key threshold"), and the old "second key" (Vecna holding the whole Rod as his fallback), which is retired with it.
+  src: chat 2026-10-27
 
 ### artifacts/index.html
 
