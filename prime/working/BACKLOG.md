@@ -36,7 +36,7 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
 | Factions | factions/ | 1 | 4 | 22 | 2 | 40 |
 | Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 13 | 1 | 45 | 5 | 42 |
-| Dossiers | dossiers/ | 9 | 6 | 43 | 0 | 51 |
+| Dossiers | dossiers/ | 11 | 6 | 43 | 0 | 51 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 6 | 2 | 26 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 21 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 5 | 3 | 0 | 1 |
-| **Total** | | **77** | **87** | **270** | **14** | **420** |
+| **Total** | | **79** | **87** | **270** | **14** | **420** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2329,6 +2329,14 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   (a) The eye-in-a-wheel sketch (ties to crossing table entries 4 and 8).
   (b) The sealed letter: "Watch one thing until it changes."
   src: chat-voyage-6-7-planning § Open; memory-canon open-decisions (Voyage 007 intent)
+
+- **[decide]** The Order's title for a Watcher in training
+  The page calls Ezra a cadet, which is the Academy's word. The Order of the All-Father needs its own title for a trainee who has not yet been knighted and sworn the Oath of the Watchers. Once chosen, it replaces "cadet" and "Watcher in training" on dossiers/ezra.html and factions/order.html, and goes into data/vocabulary.js if the crew hears it.
+  src: chat 2026-10-27 (Korey: "let's come up with a name for a watcher in training")
+
+- **[decide]** Ezra's stat block in this campaign
+  Korey's sheet shows Ezra at the start of Emporia: knighted, Paladin 3, Oath of the Watchers. In Caelestis he has not been knighted or sworn the oath. His in-training stat block for H'Catha is still to build; the Emporia sheet is staged for his DM notes tab only.
+  src: chat 2026-10-27; STAGING § Ezra Ahl-Sier
 
 - **[fix]** The Hall transport is the crew's last stint with Ezra *(answered)*
   The page's order of operations ends "assigned to Emporia → optional ferry". Drop the optional Emporia ferry. Write: "The Watcher Transport, from H'Catha to the Hall of the Watchers, is the last time a Caelestis crew travels with Ezra. His training is finished, and it is his last leg before his journey begins. The Hall is where he departs from." Emporia stays as his posting, which he reaches without the crew.
