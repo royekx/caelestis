@@ -91,9 +91,16 @@ below closes those three gaps.
 6. **Distribution consumes its sources.** The commit that writes a page deletes
    the STAGING entries and BACKLOG items it used. STAGING empties section by
    section; anything left over is visibly undistributed.
-7. **Moves and content land together.** A page moves to its new path in the
-   same commit as its rewrite, with a redirect at the old path and `check`
-   passing, so nothing is rewritten twice.
+7. **Moves and content land together, with no redirects.** A page moves to its
+   new path in the same commit as its rewrite, and every link to it is updated.
+   Old paths are not kept. Each pull request adds its moves to the link
+   catalogue below (old path → new path), and `check` proves every new link
+   resolves.
+8. **Depth follows weight.** Pages carry all the appropriate information at the
+   depth their subject deserves, factual with a little narrative prose, with
+   back-links. Status labels such as "unresolved" stay off factual pages; they
+   go in a DM notes tab or a planning page (README § Writing staged entries and
+   pages).
 
 ## Phases
 
@@ -133,8 +140,7 @@ one page guide, not four.
 | — | `campaign/principles.html` (new) | DM principles: prep, visions, contracts, the crew's pasts |
 | — | `cosmology/` sections for Cosmos texture and Languages | sections before pages |
 
-Everything else keeps its path. Each move gets a redirect and is listed in the
-terms check so stale links surface.
+Everything else keeps its path. Each move updates every link to it and is added to the link catalogue; the old path is listed in the terms check so a missed link fails.
 
 ### 4. Distribution, in dependency order
 One pull request per section, each reviewed and merged before the next starts,
@@ -169,8 +175,11 @@ because later sections link into earlier ones.
    the page changed.
 
 ### 6. Player-side refactor
-The player folder shape (calls 1–3) after the DM overhaul, in its own pull
-requests, with redirects for links already shared.
+After the DM overhaul, in its own pull requests. Folder names stay in-world but
+functional and distinct (`dossiers/`, `inventory/`). `bearings/` and the logs
+keep their own files, moved under `voyages/` as subfolders. No redirects: every
+moved path goes into the link catalogue so links already shared with players can
+be reissued.
 
 ### 7. Done means
 STAGING holds only undistributed future material; BACKLOG holds no fix or add
@@ -183,20 +192,29 @@ whose home moves under phase 3 follow the move (Oerth → `realms/oerth.html`,
 Vecna → `dossiers/vecna.html`, the Fleet → `factions/fleet.html`, DM principles
 → `campaign/principles.html`, Rolt → `dossiers/haymond-rolt.html`).
 
-## Calls to make
+## Calls
 
-1. **Player folder names**: keep in-world names (`navigation-records/`,
-   `crew-manifest/`) or switch to plain (`people/`, `places/`)?
-2. **Old URLs**: keep redirect stubs, and for how long?
-3. **Session accounts**: fold `bearings/`, `crew-logs/` and `logs/` into
-   `voyages/`, or keep the current bearing as its own page?
-4. **Order of work**: DM overhaul first, player refactor second (as above)?
-5. **Stale branches**: delete all but `main` and the working branch?
-6. **prime/notes**: approve the three-document consolidation, and choose
-   `docs/` (undeployed) or a prune line in `deploy.yml`.
-7. **The DM directory moves** in phase 3.
-8. **The terms check**: approve a separate script alongside `data.js`, run in
-   `check.yml`.
+Answered 2026-10-27:
+
+1. **Player folder names**: in-world, but functional and distinct, like `dossiers/` and `inventory/`.
+2. **Old URLs**: no redirects. Clean everything up, verify the new links, and keep the link catalogue below.
+3. **Session accounts**: `bearings/` and the logs stay separate files; they may move under `voyages/` as subfolders.
+4. **Order of work**: DM side first.
+5. **Stale branches**: list them for Korey; delete at the very end, after review. The list is below.
+6. **prime/notes**: consolidate where it makes sense (the three-document plan below).
+7. **DM directory moves** (phase 3): to be walked through with Korey before phase 3 starts.
+8. **Terms check**: approved, as a separate script.
+
+## Link catalogue
+
+Old path → new path, added by each pull request that moves a page.
+
+| Old | New | Pull request |
+|---|---|---|
+
+## Stale branches
+
+Seventy remote branches as of 2026-10-27; only `main` and `deep-lore-working` are live. The full list is in the pull request for this plan. They are deleted last, after Korey reviews the list.
 
 ## prime/notes consolidation
 
@@ -386,4 +404,4 @@ CLAUDE.md (folder map and rules), `scripts/nav.js`, `.github/workflows/deploy.ym
 
 ## Open
 
-The eight calls above.
+Call 7, the DM directory moves.

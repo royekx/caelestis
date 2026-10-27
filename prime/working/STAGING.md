@@ -121,7 +121,7 @@ when a ruling changes; delete it once the page carries it. See
 - Oerth lies in GAL-01, Caelestis's own galaxy, in the system of Greyspace.
 
 ### H'Catha (realms/hcatha.html)
-- Vecna's hand on H'Catha goes back to its founding. A trace of his worship lingers there. He may once have tried to turn the dreaming of the Sovereign Eye into a Zenith and fallen short. One of the eldest rulers may know something of it. H'Catha is the crew's first world beyond Caelestis, and Vecna stays faint there.
+- Vecna's hand on H'Catha goes back to its founding. He influenced the making of the Sovereign Eye, hoping its dreaming would bring H'Catha to a Zenith. It did not. It is a secret, and one of Vecna's plans that failed. A trace of his worship lingers there. H'Catha is the crew's first world beyond Caelestis, and Vecna stays faint there.
 
 ### Aethris (realms/aethris.html)
 - Aethris's Zenith is unfinished, because the Fortuned have not completed their ritual. The Prism Ascendant is the Monolith that answered it. It has archived what it can and stays where it is. It does nothing.
@@ -139,13 +139,13 @@ when a ruling changes; delete it once the page carries it. See
 - Benedetta fell ill at Rihiri's birth, from Vanifer's slow siphoning for the Bloodstone, and died two years later.
 
 ### Tharizdun (working/tharizdun.md, realms/fonains.html, dossiers/thessalar.html, Fonains doc)
-- The Day of Chaos is when the Princes of Elemental Evil break the barriers so Tharizdun can leave his prison.
+- The Day of Chaos is when the Princes of Elemental Evil break the barriers so Tharizdun can leave her prison.
 - The purple slit-pupiled eye the party saw in the year 425 is the Elder Elemental Eye, Tharizdun.
 - Fonains's Monolith is the only one ever to carry Tharizdun's crystal, and the only one recorded as destroyed.
-- Tharizdun wanted nothing from Thessalar but chaos. His influence reached Thessalar through the craft's gems, born where Olhydra and Ogrémoch collided, and it drove him slowly mad.
+- Tharizdun wanted nothing from Thessalar but chaos. Her influence reached Thessalar through the craft's gems, born where Olhydra and Ogrémoch collided, and it drove him slowly mad.
 - One of Tharizdun's temples was aboard Thessalar's planar craft. When the craft broke apart in its fall, the piece holding the temple came down somewhere other than the Barrier Peaks.
-- The crash, about five hundred years ago, is how the Elder Elemental Eye reached Fonains. Tharizdun's influence spread across the world from the fallen temple. It is why the Eye watched Lola's Boys in the year 425, and why the craft's gems carried his touch.
-- Shothragot, his avatar, was bound to that temple. Its true vestige may still be there, and Giorge may be trying to reach it.
+- The crash, about five hundred years ago, is how the Elder Elemental Eye reached Fonains. Tharizdun's influence spread across the world from the fallen temple. It is why the Eye watched Lola's Boys in the year 425, and why the craft's gems carried her touch.
+- Shothragot, her avatar, was bound to that temple. Its true vestige may still be there, and Giorge may be trying to reach it.
 - Lola's Boys, by taking the gems in the year 425, brought down the craft. In doing so they freed N'ghathrod and landed Tharizdun's foothold on their own world.
 - The planar craft was a vast floating city of many tiers. Where it came from is unknown.
 
@@ -163,7 +163,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ### The Cre'Tez (Fonains doc, realms/fonains.html)
 - The Cre'Tez father is Cenvinzo. He is barely alive, a shadow of himself, held captive somewhere and bound to Vanifer.
-- Rihiri and Darra are sisters.
+- Rihiri and Dharra are sisters.
 - Finerva is Vanifer under another name. The Pedra Ardente is a gem.
 - Kevulan first willed his birthright to Asmodus (his sibling, not the archdevil), then rescinded it and willed it to Xero.
 
@@ -239,7 +239,7 @@ when a ruling changes; delete it once the page carries it. See
 - Caelestis is the academy. It trains cadets to become Driftwardens; it is a school.
 - Fleet operations for Caelestis's cluster run out of Ondrel Anchorage on the moon Ostrel, a neutral port away from Toril. Captain Haymond Rolt works out of Ondrel, and the crew takes its Arc 2 contracts from there.
 - Caelestis, Ondrel and the sister institutions in other system clusters are all affiliates of the Fleet. The sister institutions do similar work under their own names and governance. The Fleet works like a united nations: its affiliates share information across the galaxy, and each mostly runs itself.
-- The Order's Watchers are more organized than these affiliates and also span the galaxies, more densely in some places than others.
+- The Order's Watchers are more organized than these affiliates. They keep to the Rykoe Galaxy, as the Fleet does, more densely in some places than others.
 - Each institution keeps the satellites and stations at the edge of its own system cluster. Strake Station and its sister satellites are Caelestis's.
 - The stations differ with the local ecology of their edge: what drifts there, what lives there, what threatens it. Their crews are drawn from the institution that keeps them.
 - Readings from the edge stations pass between the institutions. This is how a disturbance seen at one edge reaches another.
@@ -372,7 +372,7 @@ when a ruling changes; delete it once the page carries it. See
 - Tumak knows of the previous Runekeeper and met him once, briefly. He does not understand what that meeting was.
 
 ### Boogie (crew/boogie.html)
-- Tharizdun wants nothing specific from Boogie. Tharizdun is not lucid; he is an opportunist. What happens through the shard depends on what Boogie does, and things may come through the current. Boogie's plot is reactive.
+- Tharizdun wants nothing specific from Boogie. Tharizdun is not lucid; she is an opportunist. What happens through the shard depends on what Boogie does, and things may come through the current. Boogie's plot is reactive.
 - Boogie sometimes feels corruption leaking into him from the shard: a role-playing beat, not a mechanic.
 - Boogie holds half of the derelict logbook. The other half was in his chest inside the Monolith.
 

@@ -897,7 +897,7 @@
           "src": "STAGING round 1"
         },
         {
-          "t": "Tharizdun is not lucid; he is an opportunist.",
+          "t": "Tharizdun is not lucid; she is an opportunist.",
           "src": "STAGING round 8"
         },
         {
@@ -4366,20 +4366,20 @@
           "src": "STAGING round 8"
         },
         {
-          "t": "Lola's Boys freed Rihiri and Darra from Elizar Dryflagon's fire cult in Baratol.",
+          "t": "Lola's Boys freed Rihiri and Dharra from Elizar Dryflagon's fire cult in Baratol.",
           "src": "timeline/timeline.json"
         }
       ]
     },
     {
-      "id": "darra",
-      "label": "Darra",
+      "id": "dharra",
+      "label": "Dharra",
       "type": "person",
       "scope": "fonains",
       "summary": "A Cre'Tez sister.",
       "facts": [
         {
-          "t": "Darra is a Cre'Tez sister.",
+          "t": "Dharra is a Cre'Tez sister.",
           "src": "STAGING round 8"
         }
       ]
@@ -7392,7 +7392,7 @@
       "src": "STAGING round 8"
     },
     {
-      "s": "darra",
+      "s": "dharra",
       "t": "cretez",
       "rel": "is a sister of",
       "src": "STAGING round 8"
