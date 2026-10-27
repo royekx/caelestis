@@ -2691,3 +2691,47 @@ html[data-axiom="determination"] { --accent: var(--ax-determination); }
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   ARTICLE PAGES (dm-sections.js adds .is-article)
+   Long pages read as one article: sections are headings, not boxes or
+   toggles, and the "On this page" rail is the navigation. Tables keep
+   their own surface; nothing else is boxed.
+   ═══════════════════════════════════════════════════════════════ */
+.dm-content.is-article .dm-collapse-section.is-flat {
+  margin: 2.6rem 0 0;
+  padding-top: 0;
+  border-top: 0;
+}
+.dm-content.is-article .dm-collapse-section.is-flat.is-sub { margin-top: 1.8rem; }
+.dm-content.is-article .dm-collapse-section.is-flat > summary {
+  cursor: default;
+  padding: 0 0 0.45rem;
+  margin-bottom: 0.9rem;
+  border-bottom: 1px solid var(--accent-rule);
+  color: var(--text);
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+}
+.dm-content.is-article .dm-collapse-section.is-flat.is-sub > summary {
+  font-size: 1.12rem;
+  border-bottom: 0;
+  margin-bottom: 0.4rem;
+  color: var(--text);
+}
+.dm-content.is-article .dm-collapse-section.is-flat > summary::before { display: none; }
+.dm-content.is-article .dm-collapse-section.is-flat > summary:hover { color: var(--text); }
+.dm-content.is-article .dm-collapse-section.is-flat > .dm-collapse-section-body {
+  background: none;
+  border: 0;
+  padding: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+/* The rail: every section and subsection, the current one in the accent. */
+.dm-content .dm-toc { border-left-color: var(--accent-rule); }
+.dm-content .dm-toc a.is-active { color: var(--accent-text); border-left-color: var(--accent); }
+.dm-content.is-article .dm-collapse-section.is-flat > summary > h2,
+.dm-content.is-article .dm-collapse-section.is-flat > summary > h3 {
+  border: 0 !important; padding: 0 !important; margin: 0 !important;
+}
