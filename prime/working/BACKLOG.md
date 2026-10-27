@@ -42,9 +42,9 @@ staging once Korey has read and accepted them.
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 21 |
 | New pages | 14 proposed pages, the hub, notes/ | 3 | 17 | 8 | 2 | 35 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 2 | 0 | 0 |
-| Player pages | restricted/ and other player pages | 0 | 0 | 2 | 1 | 0 |
+| Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 5 | 0 | 1 |
-| **Total** | | **77** | **88** | **277** | **14** | **420** |
+| **Total** | | **77** | **88** | **276** | **14** | **420** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -4517,10 +4517,6 @@ Fixes to player-facing pages, including the Fleet Intelligence Archive (`restric
   src: inbox/chat-early-planning.md § Campaign Planning; memory canon (Bellwether Crow)
 
 ### restricted/sa-002.html
-
-- **[fix]** Gregory and the Cogfast Enclave
-  The archive names "Cogfast Enclave" as Gregory's origin. Gregory is from Toril and reached Caelestis on a cargo ship; the Cogfast Enclave on Lantan is his anchor on Toril (STAGING, Crew). Reword the archive line to that.
-  src: inbox/chat-early-planning.md § Campaign Planning; memory canon (Gregory)
 
 ### restricted/sa-005.html
 

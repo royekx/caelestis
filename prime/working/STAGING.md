@@ -354,7 +354,7 @@ when a ruling changes; delete it once the page carries it. See
 ## Crew
 
 ### Gregory (crew/gregory.html, realms/toril.html, factions/academy-fleet.html)
-- Gregory's anchor on Toril is the Cogfast Enclave on Lantan.
+- Gregory comes from the Cogfast Enclave on Lantan, on Toril. He reached Caelestis on a cargo ship.
 - DM: the Lantern becomes Gregory's next anomaly if he investigates it.
 
 ### Casey (crew/casey.html, dossiers/polly.html, dossiers/astra-virex.html)

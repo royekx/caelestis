@@ -3623,7 +3623,7 @@
           "src": "STAGING round 2"
         },
         {
-          "t": "His anchor on Toril is the Cogfast Enclave on Lantan.",
+          "t": "He comes from the Cogfast Enclave on Lantan, on Toril.",
           "src": "STAGING round 8"
         },
         {
@@ -3891,7 +3891,7 @@
       "summary": "An enclave on Lantan, on Toril.",
       "facts": [
         {
-          "t": "The Cogfast Enclave on Lantan is Gregory's anchor on Toril.",
+          "t": "The Cogfast Enclave on Lantan, on Toril, is where Gregory comes from.",
           "src": "STAGING round 8"
         }
       ]
