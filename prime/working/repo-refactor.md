@@ -108,14 +108,16 @@ below closes those three gaps.
 The calls at the end of this section. Nothing below starts until they are made.
 
 ### 1. Tooling
-- `scripts/terms.js` and a terms list in `prime/working/terms.json`: retired
+- Built 2026-10-27: `scripts/terms.js` and a terms list in `prime/working/terms.json`: retired
   term → replacement, with an allow-list for legitimate uses (FIA history,
   quoted in-world speech). Run in `check.yml` as a warning; promoted to an error
   per finished section. Pruned from deploy like `data.js`.
 - A voice pass in the same script: flags "ruled", "retired", "replaces",
   "pending", "TBD", "to be decided", "not yet set" on pages under prime/.
-- Baseline report of every hit on today's pages, attached to the first pull
-  request, so the size of the job is known.
+- Baseline, 2026-10-27: 308 retired-term hits across 109 DM files (realms 173,
+  cosmology 64, campaign 18, artifacts 17, dossiers 8, vessels 8, timeline 8,
+  glossary 6, factions 4, crew 1, hub 1); chart 0. `node scripts/terms.js --list`
+  gives each one.
 
 ### 2. Rules in one place
 The prime/notes consolidation below (three documents). The page rewrites follow
