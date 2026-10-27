@@ -272,6 +272,46 @@
     if (foot) main.insertBefore(bar, foot); else main.appendChild(bar);
   })();
 
+  // ── Connections in their Axiom colours ───────────────────────────────────
+  // Each chip takes the colour of the nav group its target belongs to
+  // (a dossier jade, a place blue, an arc gold); each column heading takes
+  // the colour most of its chips share.
+  (function () {
+    var cards = document.querySelectorAll('.xref-card');
+    if (!cards.length) return;
+    function axiomFor(href) {
+      var u;
+      try { u = new URL(href, window.location.href); } catch (e) { return null; }
+      var i = u.pathname.indexOf('/prime/');
+      if (i === -1) return null;
+      var rel = u.pathname.slice(i + 7);
+      var best = null, bestLen = -1;
+      groups.forEach(function (g) {
+        g.items.forEach(function (it) {
+          [it.path].concat(it.also || []).forEach(function (q) {
+            var hit = q.slice(-1) === '/' ? rel.indexOf(q) === 0 : rel === q;
+            if (hit && q.length > bestLen) { best = g.axiom; bestLen = q.length; }
+          });
+        });
+      });
+      return best;
+    }
+    Array.prototype.forEach.call(cards, function (card) {
+      Array.prototype.forEach.call(card.querySelectorAll('.xref-col'), function (col) {
+        var count = {};
+        Array.prototype.forEach.call(col.querySelectorAll('a.chip'), function (chip) {
+          var ax = axiomFor(chip.getAttribute('href'));
+          if (!ax) return;
+          chip.dataset.axiom = ax;
+          count[ax] = (count[ax] || 0) + 1;
+        });
+        var top = Object.keys(count).sort(function (a, b) { return count[b] - count[a]; })[0];
+        var head = col.querySelector('.xref-col-head');
+        if (top && head) head.dataset.axiom = top;
+      });
+    });
+  })();
+
   // ── Mobile toggle ─────────────────────────────────────────────────────────
   var toggle = document.getElementById('js-nav-toggle');
   var nav    = document.getElementById('js-side-nav');

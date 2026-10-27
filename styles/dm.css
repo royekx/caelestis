@@ -757,6 +757,27 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
   border-radius: 2px;
 }
 .dm-content .chip { border-color: var(--accent-rule); background: rgba(203, 216, 232, 0.03); }
+/* Connections: each chip and column heading in its target's Axiom colour
+   (dm-nav.js sets data-axiom). */
+.dm-content [data-axiom="consolidation"] { --ax: var(--ax-consolidation); }
+.dm-content [data-axiom="expansion"]     { --ax: var(--ax-expansion); }
+.dm-content [data-axiom="dissolution"]   { --ax: var(--ax-dissolution); }
+.dm-content [data-axiom="distinction"]   { --ax: var(--ax-distinction); }
+.dm-content [data-axiom="determination"] { --ax: var(--ax-determination); }
+.dm-content .chip[data-axiom] {
+  color: color-mix(in srgb, var(--ax) 72%, white);
+  border-color: color-mix(in srgb, var(--ax) 45%, transparent);
+  background: color-mix(in srgb, var(--ax) 8%, transparent);
+}
+.dm-content .chip[data-axiom]:hover {
+  color: #fff;
+  border-color: var(--ax);
+  background: color-mix(in srgb, var(--ax) 18%, transparent);
+}
+.dm-content .xref-col-head[data-axiom] {
+  color: color-mix(in srgb, var(--ax) 80%, white);
+  border-bottom-color: color-mix(in srgb, var(--ax) 35%, transparent);
+}
 .dm-content .chip:hover { background: var(--accent-faint); }
 
 /* ── Wiki layout ──
