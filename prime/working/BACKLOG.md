@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 8 | 12 | 17 | 0 | 5 |
+| Cosmology | cosmology/, glossary/, chart/ | 9 | 12 | 16 | 0 | 4 |
 | Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 35 | 3 | 49 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 5 | 3 | 0 | 1 |
-| **Total** | | **77** | **87** | **260** | **14** | **399** |
+| **Total** | | **78** | **87** | **259** | **14** | **398** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -258,22 +258,13 @@ Order under each page: decide, fix, drop, add.
   Fraying, Turning, Walling and Gathering are an unreviewed Crossing Companion proposal. Lock or cut before they go under the weather section.
   src: astral § Open
 
-- **[fix]** Every place carries a designation
-  Page says "Systems Caelestis has not charted, such as the Wayfinders' homeworld and the Ascension world's, carry no designation." Replace: every sphere, system and world carries a designation, including uncharted and hidden ones. The Ascension World's system is SYS-05 and the Wayfinders' homeworld's is SYS-06, both in SPH-01. Player-facing material shows only what the crew knows.
-  src: memory-canon (campaign-canon, placeholder designations); chat-organizing-framework § Superseded
+- **[decide]** Which places Caelestis has charted
+  Every place carries a designation in the survey, charted or not (Korey 2026-10-27: "Every place needs a designation for my purposes but it may not be charted"). Go through the survey and mark each system and body charted or uncharted. Known uncharted: the Wayfinders' homeworld's system.
+  src: chat 2026-10-27
 
-- **[add]** The weather of reality
-  Add as a named section under Zeniths (the page covers Convergence strain without the name):
-  "The weather of reality is an escalating pressure with no owner. It comes from an Axiom under strain, Convergence, loaded by Zenith after Zenith. Tharizdun's rifting feeds it, but the weather itself is Convergence strain and belongs to no one."
-  DM note: rarely seen early; track it on the campaign view.
-  src: framework § Vecna and his working; memory-canon (campaign-canon, weather of reality)
-
-- **[add]** Faelight spore specification
-  The counter-spore plant spec lacks the name and the radius steps. Add (DM voice):
-  "Faelight spore. A knuckled, colorless fungus with pustules. As a bonus action, a caster feeds it a spell slot and it releases a persistent Faerie Fire cloud: radius 10 ft (1st-level slot), 20 ft (2nd), 30 ft (3rd); lasts 1 minute; no concentration; no save; reusable. Anything that enters is coated, allies included: attacks against it have advantage, and it cannot benefit from invisibility or being obscured."
-  src: memory-canon (campaign-canon, Faelight spore)
-
-### glossary/index.html
+- **[add]** A charted flag in the survey, with a tag and a view toggle
+  Add `charted` (true/false) to systems and bodies in prime/data/survey.json and to scripts/survey.js's check. The Chart shows an "uncharted" tag on uncharted places and a toggle between the full survey and Caelestis's charts only. In-world pages give a designation only to charted places.
+  src: chat 2026-10-27
 
 - **[decide]** Shothragot *(shape)*
   Ruled: its temple was aboard the planar craft, and its true vestige may still be there; Giorge may be heading for it (STAGING round 6). Check the Session 14–15 notes for what Lola's Boys did to it in the Monolith, and whether part of it rides in Ziko's black blade.
@@ -3703,8 +3694,8 @@ against the complete Tumak sweep (all 336 turns).
   Page says only "Gods cannot make the crossing at all". Add the reason: polarity. A god and a heart carry the same charge, so as a god pushes toward a world or the centre the resistance grows until it is unbearable. The centre has ill effects on a god without destroying it. There is no "divine gate".
   src: session-rulings (polarity); working/divine-rules.md § Polarity
 
-- **[add]** The counter-spore plant is the Faelight spore (inference; confirm)
-  Name the plant and give its numbers. The Faelight spore is a knuckled, colourless fungus with pustules. Fuelled by a caster's spell slot, it makes a persistent Faerie Fire cloud: bonus action, no concentration, no save, reusable. Radius 10/20/30 ft. by slot; lasts 1 minute. Anything entering is coated: attacks against it have advantage and it cannot benefit from invisibility or obscurement. Allies are coated too. It grows in the tyrant ship's Garden.
+- **[add]** The Faelight spore's mechanics move to its item entry
+  The counter-spore plant is the Faelight spore, an item; its mechanics live with it in inventory, and rules/index.html#counter-spore is removed (Korey 2026-10-27). The Rules page caps a 3rd-level caster at a 2nd-level slot; reconcile with the radius steps below when writing the entry. The Faelight spore is a knuckled, colourless fungus with pustules. Fuelled by a caster's spell slot, it makes a persistent Faerie Fire cloud: bonus action, no concentration, no save, reusable. Radius 10/20/30 ft. by slot; lasts 1 minute. Anything entering is coated: attacks against it have advantage and it cannot benefit from invisibility or obscurement. Allies are coated too. It grows in the tyrant ship's Garden.
   src: memory-canon § Cosmology ("Faelight spore"); chat-voyage-6-7-planning § Superseded (Garden)
 
 - **[add]** Two layers, one inscription
@@ -4271,7 +4262,7 @@ run decide, fix, drop, add.
   src: framework § Open; memory-canon (open-decisions, DM views; Locked 2026-10-25, timeline formats); chat-voyage-6-7-planning § Open ("Korey wants a linear event timeline"), § Superseded (timeline page unlinked)
 
 - **[later]** Where the weather of reality is tracked
-  Settled: it is tracked on the campaign view (canon: "rarely seen early but must be tracked on the campaign view"), so a tracker row is out; the tracker shows the player record plus the DM overlay. timeline.json has no clock or lane for it yet. Still open: a timeline clock (one escalating meter, fits "escalating, ownerless pressure") or a timeline lane (dated events, fits strain that shows up as incidents). The weather also still needs its canonical section on a cosmology page.
+  Settled: it is tracked on the campaign view (canon: "rarely seen early but must be tracked on the campaign view"), so a tracker row is out; the tracker shows the player record plus the DM overlay. timeline.json has no clock or lane for it yet. Still open: a timeline clock (one escalating meter, fits "escalating, ownerless pressure") or a timeline lane (dated events, fits strain that shows up as incidents). The weather of reality is the in-world name for the Axiom strain (cosmology/#axiom-strain).
   src: framework § Open; memory-canon (campaign-canon, "weather of reality")
 
 - **[later]** The prep brief
