@@ -10,121 +10,198 @@
 <link rel="stylesheet" href="../../styles/dm.css">
 <script src="../scripts/dm-nav.js" defer></script>
 <script src="../scripts/portraits.js" defer></script>
+<script src="../scripts/dm-tabs.js" defer></script>
 </head>
 <body>
 
 <main class="dm-content">
 
   <header class="dm-page-header">
-    <div class="dm-page-eyebrow">Faction<span class="sep">&middot;</span>Interworld</div>
+    <div class="dm-page-eyebrow">Faction<span class="sep">&middot;</span>The Rykoe Galaxy</div>
     <h1>Order of the All-Father</h1>
   </header>
 
-  <div class="voyage-nav-bar"><a class="voyage-nav-link" href="academy-fleet.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Caelestis Academy & Fleet</span></a><a class="voyage-nav-center" href="index.html">Realms</a><a class="voyage-nav-link" href="runekeepers.html"><span class="nav-label">Runekeepers</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
+  <div class="voyage-nav-bar"><a class="voyage-nav-link" href="academy-fleet.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Caelestis Academy &amp; Fleet</span></a><a class="voyage-nav-center" href="index.html">Factions</a><a class="voyage-nav-link" href="runekeepers.html"><span class="nav-label">Runekeepers</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
 
-  <div class="entry-header">
-    <div class="identity-card">
+  <div class="entry-header is-wiki">
+    <aside class="identity-card" aria-label="The Order at a glance">
+      <div class="portrait-frame dossier-portrait" data-key="order"></div>
       <div class="stat-card">
-        <div class="stat-row"><span class="stat-key">Reach</span><span class="stat-val stat-val-long">Many worlds</span></div>
-        <div class="stat-row"><span class="stat-key">Posture</span><span class="stat-val stat-val-long">Allied, so far</span></div>
-        <div class="stat-row"><span class="stat-key">Named here</span><span class="stat-val stat-val-long">1</span></div>
-        <div class="stat-row"><span class="stat-key">Arms</span><span class="stat-val stat-val-long">The Watchers, and the rogue ones</span></div>
-        <div class="stat-row"><span class="stat-key">Open</span><span class="stat-val stat-val-long">What the rogue Watchers are actually doing</span></div>
+        <div class="stat-row"><span class="stat-key">Kind</span><span class="stat-val stat-val-long">A custodial order and priesthood</span></div>
+        <div class="stat-row"><span class="stat-key">Serves</span><span class="stat-val stat-val-long">The All-Father, its name for the <a href="../cosmology/#core-pressure">Core Monolith's pressure</a></span></div>
+        <div class="stat-row"><span class="stat-key">Leader</span><span class="stat-val stat-val-long">Captain-Commander Dejexic</span></div>
+        <div class="stat-row"><span class="stat-key">Seat</span><span class="stat-val stat-val-long">Unnamed; its great hall is the Hall of Sight and Sound</span></div>
+        <div class="stat-row"><span class="stat-key">Reach</span><span class="stat-val stat-val-long">The <a href="../cosmology/#rykoe-galaxy">Rykoe Galaxy</a>, denser in some places than others</span></div>
+        <div class="stat-row"><span class="stat-key">Ranks</span><span class="stat-val stat-val-long">Glimpse, Watcher, Captain-Commander</span></div>
+        <div class="stat-row"><span class="stat-key">Device</span><span class="stat-val stat-val-long">A white tower with a blue-violet eye at its centre</span></div>
+        <div class="stat-row"><span class="stat-key">To Caelestis</span><span class="stat-val stat-val-long">Partner; the Fleet carries it, it lends the Fleet its mandate</span></div>
       </div>
-    </div>
+    </aside>
+
     <div class="entry-info">
       <div class="entry-name">Order of the All-Father</div>
-      <div class="entry-sub">Interprets the All-Father and works to preserve Continuity. Two field arms, one of them off its leash.</div>
-    </div>
-  </div>
+      <div class="entry-sub">The watchers of the Rykoe Galaxy's worlds, sworn to keep things as they are.</div>
 
-  <div class="entry-body">
+      <div class="pill-tabs" role="tablist" data-pill-group aria-label="Order of the All-Father sections">
+        <button class="pill-tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true">About</button>
+        <button class="pill-tab" role="tab" id="tab-dm" aria-controls="panel-dm" aria-selected="false">DM notes</button>
+      </div>
 
+      <div class="pill-panel" role="tabpanel" id="panel-about" aria-labelledby="tab-about">
+        <p>
+          The Order of the All-Father is an order that interprets the pressure of the <a href="../cosmology/#core">Core Monolith</a>, which it calls the All-Father, and acts to preserve Continuity. It recruits from many worlds and peoples. Its field arm, the <strong>Watchers</strong>, are posted across the Rykoe Galaxy to observe worlds approaching dangerous thresholds, report on them, and intervene where they must.
+        </p>
 
-      <p>
-        An interworld organization that interprets the influence of the <a href="../cosmology/#core">All-Father</a> and acts to preserve Continuity where possible. Recruits from many worlds and cultures; members include mystics, scholars, spelljammers, operatives, diplomats, ritual specialists, and planetary wardens. Operates with two field arms: the <strong>Watchers</strong> (sanctioned) and the Rogue Watchers (heterodox).
-      </p>
+        <h4>Beliefs</h4>
+        <p>
+          The Order takes the Core Monolith's pressure as a charge to <strong>maintain things as they are</strong>. Its authority is divine by belief: Watchers hold that the All-Father charged them, and carry themselves with the bearing of a priesthood. Some within the Order doubt that reading. Its mandate is the preservation of Continuity, not universal rescue, and the Order takes the distinction seriously.
+        </p>
+        <p>
+          It guards the <a href="../cosmology/#monoliths">Monoliths</a> as though the taken were kept inside them. In its registries a Monolith is an <a href="../glossary/#ortholith">Ortholith</a>.
+        </p>
 
-      <details class="dm-collapse" id="watchers">
-        <summary>Watchers</summary>
+        <h4 id="watchers">Ranks and training</h4>
+        <p>
+          A trainee is a <strong>Glimpse</strong>: one who has seen part of what the All-Father sees. Glimpses train for about a century in the Hall of Sight and Sound, the great hall within the Order's seat. At their knighting they are christened Watchers. The Order's paladins are sworn to the Oath of the Watchers. A new Watcher takes a posting to a region of a world; a world may hold several Watchers, depending on its size and its peoples. A Glimpse can be sent into the field to finish training under a Watcher already posted there.
+        </p>
+        <p>
+          Over all of it stands <strong>Captain-Commander Dejexic</strong>, leader of the Watchers and speaker of the All-Father. Dejexic is a purplish-blue plasmoid in obsidian armour that reflects tiny swirling galaxies. The Captain-Commander floats rather than walks, barely raises his voice, and silences a hall by entering it. The leadership instructs in aphorism: &ldquo;Doubt is a choice. Worry is a crutch.&rdquo;
+        </p>
 
-          <p>
-            The Order's sanctioned field arm. A known partner organization to the Fleet. Authority is divine-by-belief: members hold that the All-Father charged them, and carry themselves with the bearing of a priesthood.
-          </p>
-          <h3>The device and the working</h3>
-          <p>
-            <strong>The device is a white tower with a blue-violet eye at its centre</strong>, carried on the shield, the tower's outline a little wrong. It is distinct from <a href="vocath-operation.html#vocath">Vocath's</a> eye-in-a-wheel. And the order's own members render their magic as violet light and cosmic dust, with something larger standing behind the caster &mdash; so a Watcher working is recognisable on sight once the crew has seen one.
-          </p>
+        <h4>The Watchers' work</h4>
+        <p>
+          Watchers keep to the Rykoe Galaxy, as the Fleet does, and are more organized than the Fleet's other affiliates. They watch for worlds nearing a <a href="../cosmology/#zeniths">Zenith</a> and pass contracts and tips to the Fleet to head off trouble long before one arrives. They flag some <a href="seekers.html">Seekers</a> chapters' work as a danger to a world's Zenith and track it, without knowing who stands behind it.
+        </p>
+        <p>
+          Over the past century the Watchers have seen Monoliths rise more often, and it worries them; some want to act. They are fighting oddities across many worlds and trying to keep a lid on them. Their calls for help are one reason <a href="academy-fleet.html">Caelestis</a> is stretched thin.
+        </p>
 
-          <h3>The leadership instructs in aphorism</h3>
-          <p>
-            &ldquo;Doubt is a choice. Worry is a crutch.&rdquo; A parting word to <a href="../dossiers/ezra.html">Ezra</a> about watching birds, meant as advice on vigilance, was taken as a literal order and is still being carried out. <em>That is register rather than secrecy</em> &mdash; and it means a junior Watcher can be sincerely following an instruction nobody intended to give.
-          </p>
+        <h4>How they look</h4>
+        <p>
+          The Order's device is <strong>a white tower with a blue-violet eye at its centre</strong>, the tower's outline a little wrong, carried on the shield. It is distinct from <a href="vocath-operation.html#vocath">Vocath's</a> eye-in-a-wheel. A Watcher's magic renders as violet light and cosmic dust, with something larger standing behind the caster, so a Watcher at work is recognisable on sight once someone has seen one.
+        </p>
 
-          <h3>Structure</h3>
-          <p>
-            Trainees spend about a century in the <strong>Hall of Sight and Sound</strong>, are knighted into the Order and christened Watchers, then take a posting &mdash; to a plane rather than a world. Over all of it is Captain-Commander Dejexic, leader of the Watchers and <em>speaker of the All-Father</em>: a purplish-blue plasmoid in obsidian armour with galaxies swirling in its reflection, who floats and silences a hall by entering it.
-          </p>
-          <p>
-            Function: observe, report on, and where necessary intervene in worlds approaching dangerous cosmological thresholds. Their mandate is preservation of Continuity, not universal rescue — a distinction the order takes seriously.
-          </p>
-          <p>
-            Operations rely on the Fleet for transport and reach; the Fleet relies on the order for moral mandate and divine cover.
-          </p>
+        <h4>Relationships</h4>
+        <h5><a href="academy-fleet.html">Caelestis and the Fleet</a></h5>
+        <p>
+          A known partner. The Order relies on the Fleet for transport and reach; the Fleet relies on the Order for moral mandate and divine cover. Reports from Watchers reach Caelestis through the Order, and some become cadet missions.
+        </p>
+        <h5><a href="seekers.html">The Seekers</a></h5>
+        <p>
+          The Watchers track some chapters as threats to worlds, chapter by chapter, and have not seen the faith that joins them.
+        </p>
 
-          <div class="dossier-list">
-
-            <details class="dossier-row" id="ezra">
-              <summary>
-                <div class="dossier-portrait" data-key="ezra"></div>
-                <div class="dossier-id">
-                  <div class="dossier-name">Ezra</div>
-                  <div class="dossier-role">Watcher-in-training</div>
-                </div>
-                <div class="dossier-detail">A Watcher in training. Currently assigned to in-field instruction on a Fleet rendezvous.</div>
-              </summary>
-              <div class="dossier-row-body">
-                <p>
-                  A Watcher-in-training. Currently assigned to a field rendezvous with a Fleet vessel for in-field instruction. <a href="../dossiers/ezra.html">DM dossier &rarr;</a>
-                </p>
+        <h4>Members</h4>
+        <div class="dossier-list" data-pagefind-ignore>
+          <details class="dossier-row" id="ezra">
+            <summary>
+              <div class="dossier-portrait" data-key="ezra"></div>
+              <div class="dossier-id">
+                <div class="dossier-name">Ezra Ahl-Sier</div>
+                <div class="dossier-role">Glimpse</div>
               </div>
-            </details>
+              <div class="dossier-detail">An astral elf near the end of his training, sent to finish it on H'Catha.</div>
+            </summary>
+            <div class="dossier-row-body">
+              <p>
+                Among the youngest batch of Glimpses, after about a century in the Hall. He finishes his field training on <a href="../locations/hcatha.html">H'Catha</a> under its Watcher, travelling there with a Caelestis crew. <a href="../dossiers/ezra.html">Dossier &rarr;</a>
+              </p>
+            </div>
+          </details>
+          <details class="dossier-row" id="nereth-vaul">
+            <summary>
+              <div class="dossier-portrait" data-key="nereth-vaul"></div>
+              <div class="dossier-id">
+                <div class="dossier-name">Nereth Vaul</div>
+                <div class="dossier-role">Watcher of H'Catha</div>
+              </div>
+              <div class="dossier-detail">Posted near H'Catha's misty rim. Ezra's instructor.</div>
+            </summary>
+            <div class="dossier-row-body">
+              <p>
+                She lives near <a href="../locations/hcatha.html">H'Catha</a>'s rim, in the fog, a trek from any landing. She trades intelligence and protection with Ondessa and relays what she learns to the Order and to Caelestis. Her reports are known as unusually useful, because H'Catha sits at Realmspace's edge, where traffic and merchants pass. She saw factions moving on the meteorite and reported it as a precaution. She expected seasoned sailors, not cadets.
+              </p>
+            </div>
+          </details>
+          <details class="dossier-row" id="aurel-venn">
+            <summary>
+              <div class="dossier-portrait" data-key="aurel-venn"></div>
+              <div class="dossier-id">
+                <div class="dossier-name">Aurel Venn</div>
+                <div class="dossier-role">Watcher, gone from his post</div>
+              </div>
+              <div class="dossier-detail">Warned the Order of a pattern, was not heeded, and went to find it himself.</div>
+            </summary>
+            <div class="dossier-row-body">
+              <p>
+                He saw a pattern of more traffic and something large moving at the edges of systems, and warned the Order. It did not heed him. He never broke with the Order openly, but he left his post to find the thing himself. Accounts of him contradict one another.
+              </p>
+            </div>
+          </details>
+        </div>
 
-          </div>
+        <h4 id="rogue-watchers">Rogue Watchers</h4>
+        <p>
+          Some Watchers do not follow the Order's protocols as closely as it would prefer. They act on their own judgment: intervening where doctrine would not, holding back where it would act, or taking the work somewhere other than where they were sent. It is a range, not a category; some are nearly indistinguishable from sanctioned Watchers and some are openly heterodox. The Order tolerates them with more or less patience depending on the Watcher. One who saves a world by acting outside doctrine is quietly celebrated; one who breaks a precept and causes harm is censured. Most worlds cannot tell a Watcher from a rogue one.
+        </p>
+      </div>
 
-      </details>
+      <div class="pill-panel" role="tabpanel" id="panel-dm" aria-labelledby="tab-dm" hidden>
+        <h4>What's hidden</h4>
+        <ul>
+          <li><strong>Sol Fortuna.</strong> A Watcher extracted <a href="../crew/sol.html">Sol</a> from Aethris, against the Order's remit to preserve worlds, not individuals. As a Glimpse, Ezra knows nothing of it.</li>
+          <li><strong>Vecna.</strong> The Order does not know what <a href="../dossiers/vecna.html">Vecna</a> is building, or that the Seekers chapters it tracks are one faith.</li>
+        </ul>
 
-      <details class="dm-collapse" id="rogue-watchers">
-        <summary>Rogue Watchers</summary>
+        <h4>How to run them</h4>
+        <p>
+          Watchers speak like priests and act like wardens. They are sincere, sure of their charge, and more interested in a world than in any one person on it, which is where they and the crew will rub. The leadership speaks in aphorism, and its juniors take aphorisms literally.
+        </p>
 
-          <p>
-            Watchers who do not follow the Order's protocols as closely as it would prefer. They operate on their own judgment — sometimes intervening where doctrine would not, sometimes failing to intervene where doctrine would expect, sometimes taking the work in a different direction than they were sent. A range, not a category. Some are nearly indistinguishable from sanctioned Watchers; some are openly heterodox.
-          </p>
-          <p>
-            The Order tolerates them with varying degrees of patience depending on the individual and the era. A Rogue Watcher who saves a world by acting outside doctrine is quietly celebrated; one who violates a precept and creates downstream harm is censured. The line between principled disobedience and dangerous overreach is not always clear to either side.
-          </p>
-          <p>
-            They appear in the world as local protectors, unorthodox interventionists, or quietly excommunicated former colleagues of sanctioned Watchers. Most worlds that encounter one cannot distinguish a Watcher from a Rogue Watcher.
-          </p>
+        <h4>Threads</h4>
+        <ul>
+          <li>Nereth Vaul's report on the H'Catha meteorite went from her to the Hall, to the Fleet, to the Academy, where it became the crew's mission.</li>
+          <li>Aurel Venn and Ilsevaine Corr have seen the same thing: something large moving where no one looks. It is <a href="../dossiers/vthoramu.html">Vth'oramu</a>.</li>
+          <li>After H'Catha, a Caelestis crew collects Ezra and carries him to the Hall, the last troop he travels with before his journey as a Watcher begins.</li>
+          <li>The rise in Monoliths the Watchers see is the <a href="../cosmology/#axiom-strain">Axiom strain</a>.</li>
+        </ul>
 
-      </details>
+        <h4>Still to decide</h4>
+        <ul>
+          <li>The Order's seat is not named or placed; it is named when the crew is headed there.</li>
+          <li>Nereth Vaul's species is not set, and it sets the final form of her name.</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <div class="divider">&#10022; &#10022; &#10022;</div>
 
   <div class="xref-card">
     <div class="xref-head"><span class="xref-title">Connections</span></div>
-    <div class="xref-cols"><div class="xref-col">
+    <div class="xref-cols">
+      <div class="xref-col">
+        <div class="xref-col-head">People and factions</div>
         <a class="chip chip-npc" href="../dossiers/ezra.html">Ezra</a>
-        <a class="chip chip-place" href="../cosmology/#core">The Core</a>
-    </div></div>
+        <a class="chip chip-npc" href="academy-fleet.html">Caelestis and the Fleet</a>
+        <a class="chip chip-npc" href="seekers.html">The Seekers</a>
+        <a class="chip chip-npc" href="../crew/sol.html">Sol</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Places</div>
+        <a class="chip chip-place" href="../locations/hcatha.html">H'Catha</a>
+        <a class="chip chip-place" href="../cosmology/#core">The Core Monolith</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Campaign</div>
+        <a class="chip chip-quest" href="../campaign/spine.html#hcatha-arc">The H'Catha arc</a>
+      </div>
+    </div>
   </div>
-
   <div class="dm-footer">
     Order of the All-Father &middot; Factions &middot; Caelestis DM
   </div>
 
 </main>
-
 </body>
 </html>

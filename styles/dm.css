@@ -2373,6 +2373,7 @@ body { overflow-x: clip; }
 }
 .ent-face.dossier-portrait .dossier-monogram {
   font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--gold-dim);
+}
 
 /* ════════════════════════════════════════════════════════════════
    TRACKER — the record as it stands (prime/tracker/)
@@ -2562,4 +2563,51 @@ ul.tr-fact-val li { margin-bottom: 0.25rem; color: var(--text); }
   .tr-list .dossier-row > summary::after { grid-column: 3; grid-row: 1; }
   .tr-facts, .tr-dm { grid-template-columns: 1fr; gap: 0 0; }
   .tr-fact-key { margin-top: 0.4rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   WIKI DOSSIER
+   A fan-wiki layout: the infobox on the right, the article on the left.
+   The infobox stays beside every tab, so the face and the key facts are
+   in view while reading DM notes. Rows read as a two-column table.
+   ═══════════════════════════════════════════════════════════════ */
+.dm-content .entry-header.is-wiki {
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 2.6rem;
+}
+.dm-content .is-wiki .entry-info { order: 1; }
+.dm-content .is-wiki .identity-card {
+  order: 2;
+  position: sticky;
+  top: 1.2rem;
+}
+.dm-content .is-wiki .identity-card .stat-row {
+  display: grid;
+  grid-template-columns: 5.6rem minmax(0, 1fr);
+  gap: 0.7rem;
+  align-items: baseline;
+  padding: 0.45rem 0;
+}
+.dm-content .is-wiki .identity-card .stat-key { margin: 0; }
+/* The page title already names the subject; the article starts at the tagline. */
+.dm-content .is-wiki .entry-name { display: none; }
+.dm-content .is-wiki .pill-panel h4 {
+  margin: 1.9rem 0 0.6rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--rule);
+}
+.dm-content .is-wiki .pill-panel h4:first-child { margin-top: 0.4rem; }
+.dm-content .is-wiki .pill-panel h5 {
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin: 1.2rem 0 0.35rem;
+}
+.dm-content .is-wiki .pill-panel h5 a { color: inherit; }
+@media (max-width: 860px) {
+  .dm-content .entry-header.is-wiki { grid-template-columns: 1fr; gap: 1.6rem; }
+  .dm-content .is-wiki .identity-card { order: 0; position: static; max-width: none; }
+  .dm-content .is-wiki .identity-card .portrait-frame { aspect-ratio: 16 / 9; }
 }

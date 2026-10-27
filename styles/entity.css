@@ -139,7 +139,7 @@ html { overflow-x: clip; }
    caelestis.css sets flex-shrink:0 and nowrap on prev/next links, so a
    long entity name pushes the bar off-screen on mobile. */
 .voyage-nav-bar { border-radius: 999px; max-width: 100%; box-sizing: border-box; }
-.voyage-nav-link { flex-shrink: 1; min-width: 0; overflow: hidden; }
+.voyage-nav-link { flex-shrink: 1; min-width: 0; max-width: 100%; overflow: hidden; }
 .voyage-nav-link .nav-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .voyage-nav-link svg { flex-shrink: 0; }
 .voyage-nav-center { flex-shrink: 0; }

@@ -114,7 +114,7 @@
       label: 'Setting',
       items: [
         { key: 'cosmology', label: 'Cosmology',     path: 'cosmology/'  },
-        { key: 'realms',    label: 'Realms',        path: 'realms/'     },
+        { key: 'realms',    label: 'Realms',        path: 'realms/', also: ['locations/'] },
         { key: 'vessels',   label: 'Vessels',       path: 'vessels/'    },
         { key: 'artifacts', label: 'Artifacts',     path: 'artifacts/'  },
         { key: 'chart',     label: 'Cosmos Chart',  path: 'chart/'      },
@@ -215,10 +215,13 @@
       // Normalize: strip trailing index.html if present in the URL.
       var here = pathname;
       // The section is current if the URL contains "/<path>" (path already ends in /).
-      var needle = '/' + p;
-      if (here.indexOf(needle) !== -1 && p.length > bestLen) {
-        best = link; bestLen = p.length;
-      }
+      // A section can also claim folders it is moving into (realms/ → locations/).
+      var sec = sections.filter(function (s) { return s.path === p; })[0];
+      [p].concat((sec && sec.also) || []).forEach(function (q) {
+        if (here.indexOf('/' + q) !== -1 && q.length > bestLen) {
+          best = link; bestLen = q.length;
+        }
+      });
     });
     if (best) best.classList.add('active');
   })();

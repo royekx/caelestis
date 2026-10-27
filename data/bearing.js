@@ -2,7 +2,7 @@
  * Caelestis — Current Bearing
  * ───────────────────────────
  * Powers the command bar that nav.js injects at the top of every page.
- * Written during a session run (prime/notes/SESSION-RUN.md) and checked
+ * Written during a session run (docs/SESSION-RUN.md) and checked
  * against the record by `node scripts/data.js check`.
  */
 window.CAELESTIS_BEARING = {

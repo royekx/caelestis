@@ -38,6 +38,7 @@ staging is distributed page by page.
   misreadings later; a long, exact entry does not.
 - **Plain, simple, precise, readable.** Short sentences, concrete nouns, no
   hedging.
+- **No stacked negations, and no three short sentences in a row for emphasis.**
 - **In-world voice for anything that exists in the world.** People, places,
   items, factions, history and events read like a fan wiki: "Thessalar's craft
   fell about 500 years ago," never "Korey decided the craft fell…".
@@ -51,6 +52,8 @@ staging is distributed page by page.
   - Places and celestial bodies get proper names, the way real astronomy names things: Andromeda, Sagittarius A*, Cygnus X-1. A name, not a moniker or a title, often paired with a catalogue designation.
   - Constructs and concepts get plain, definitive descriptions, even if that takes a few words.
   - People may carry monikers.
+- **Depth follows weight.** A page gives all the appropriate information there is, at the depth its subject deserves: a central figure like N'ghathrod gets a full, detailed page; his lieutenants get shorter pages that still carry their key details. Factual, with a little narrative prose where it helps, never a generalized or flowery recount. Back-link every name, place and thing that has its own page.
+- **No status labels on factual pages.** "Unresolved", "open", "pending" and similar callouts do not belong on a world page. They go in the page's DM notes tab or on a DM planning page. If an entry is light because little is known, write what is known and stop.
 - Not everything will be decided, and some things will change. That is fine;
   rewrite the entry when it does.
 
@@ -61,4 +64,5 @@ staging is distributed page by page.
 | [divine-rules.md](divine-rules.md) | Worship, galaxies, polarity, realms, one god many names | Draft |
 | [vecna.md](vecna.md) | Vecna's history, realm, faithful and their names | Draft |
 | [tharizdun.md](tharizdun.md) | The prison, the Day of Chaos, how Vecna uses him | Draft |
+| [page-split.md](page-split.md) | Subject pages vs campaign pages, tested on Vecna | Draft |
 | [glyth-watcher.md](glyth-watcher.md) | The Watcher who came back from Glyth | Sketch |

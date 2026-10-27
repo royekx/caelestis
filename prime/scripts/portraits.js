@@ -119,6 +119,10 @@
 
     // ── Threads, hooks, named objects (sketches/icons) ──
     'hcatha-meteor': { name: 'H\'Catha Meteor',     fileId: '' },
+    'ondessa':       { name: 'Ondessa',             fileId: '' },
+    'kurrzot':       { name: 'Kurrzot',             fileId: '' },
+    'hcatha-rival':  { name: 'Kurrzot\'s rival',    fileId: '' },
+    'nereth-vaul':   { name: 'Nereth Vaul',         fileId: '' },
     'sabotage-sigil':{ name: 'Sabotage sigil',      fileId: '' },
     'latchling':     { name: 'The Latchling',       fileId: '' },
     'fonains-shard': { name: 'Fonains shard',       fileId: '' },

@@ -6,14 +6,14 @@
       "label": "The Prime Continuum",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "All of existence: every galaxy, the Astral Sea between, the Flow and the center.",
+      "summary": "All of existence, one thing with Continuity: every galaxy, the Astral Sea between, and Erevos at the center.",
       "facts": [
         {
-          "t": "The Prime Continuum holds every plane, reality, timeline and divine realm, and it has no will of its own.",
+          "t": "Continuity and the Prime Continuum are one thing: all of existence.",
           "src": "cosmology/index.html"
         },
         {
-          "t": "It keeps its equilibrium through five Axioms, and what their equilibrium produces is Continuity.",
+          "t": "Every galaxy, system, world and plane lies inside it.",
           "src": "cosmology/index.html"
         },
         {
@@ -27,14 +27,14 @@
       "label": "Continuity",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "The persistence of reality that the five Axioms produce between them.",
+      "summary": "The interplay of the five Axioms: reality itself, one thing with the Prime Continuum.",
       "facts": [
         {
-          "t": "Continuity is the ongoing persistence of reality, and it changes if any Axiom changes.",
+          "t": "Continuity runs both ways: it rises out of the Axioms, and whoever reaches into it can push and pull them and remake reality.",
           "src": "cosmology/index.html"
         },
         {
-          "t": "Continuity has function without will: under enough strain it answers with Monoliths.",
+          "t": "Continuity preserves itself: when a world is pushed to an extreme, it answers with a Monolith.",
           "src": "cosmology/index.html"
         },
         {
@@ -897,7 +897,7 @@
           "src": "STAGING round 1"
         },
         {
-          "t": "Tharizdun is not lucid; he is an opportunist.",
+          "t": "Tharizdun is not lucid; she is an opportunist.",
           "src": "STAGING round 8"
         },
         {
@@ -3461,15 +3461,19 @@
         },
         {
           "t": "Each domain's terrain carries its ruler's signature ray, soaked in over ages.",
-          "src": "realms/hcatha.html"
+          "src": "locations/hcatha.html"
         },
         {
           "t": "Free locathah, guides and exiles live on the seams between domains.",
-          "src": "realms/hcatha.html"
+          "src": "locations/hcatha.html"
         },
         {
           "t": "Only one of the mercane in its ports works for Vocath.",
-          "src": "realms/hcatha.html"
+          "src": "locations/hcatha.html"
+        },
+        {
+          "t": "H'Catha has ten domains, one for each eyestalk, each with one enlightened ruler, under the Sovereign Eye.",
+          "src": "locations/hcatha.html"
         }
       ]
     },
@@ -3478,11 +3482,15 @@
       "label": "The Sovereign Eye",
       "type": "entity",
       "scope": "caelestis",
-      "summary": "The presence over H'Catha's rulers, born of their dreaming.",
+      "summary": "The presence the rulers of H'Catha dreamt together, which sees everything in daylight and enforces the Pact.",
       "facts": [
         {
-          "t": "Vecna may once have tried to turn the dreaming of the Sovereign Eye into a Zenith and fallen short.",
-          "src": "STAGING round 5"
+          "t": "The Sovereign Eye sees everything in daylight and enforces the Pact; shadow is its blind spot.",
+          "src": "locations/hcatha.html"
+        },
+        {
+          "t": "Vecna influenced the making of the Sovereign Eye, hoping its dreaming would bring H'Catha to a Zenith. It did not.",
+          "src": "locations/hcatha.html"
         }
       ]
     },
@@ -3495,11 +3503,11 @@
       "facts": [
         {
           "t": "The beholders gathered on H'Catha drawn by the Spindle.",
-          "src": "realms/hcatha.html"
+          "src": "locations/hcatha.html"
         },
         {
           "t": "Magic grows unreliable the higher one climbs the Spindle.",
-          "src": "realms/hcatha.html"
+          "src": "locations/hcatha.html"
         }
       ]
     },
@@ -3511,12 +3519,8 @@
       "summary": "A beholder ruler of H'Catha, a claimant to the meteor.",
       "facts": [
         {
-          "t": "Kurrzot's domain carries the ray of paralysis: still water and dead currents.",
-          "src": "realms/hcatha.html"
-        },
-        {
-          "t": "He claims the meteor that struck on the seam of his domain.",
-          "src": "realms/hcatha.html"
+          "t": "He claims the meteor that struck the Pupil on the seam between his domain and his rival's.",
+          "src": "locations/hcatha.html"
         },
         {
           "t": "He sends an emissary rather than an attack over his unsettled business with Vaelorix.",
@@ -3536,8 +3540,12 @@
           "src": "campaign/spine.html"
         },
         {
-          "t": "It struck on the seam between Kurrzot's domain and the Rival's.",
-          "src": "campaign/spine.html"
+          "t": "It struck the Pupil, on the seam between Kurrzot's domain and his rival's, and is mined as a vein in an occupied, skirmished area.",
+          "src": "locations/hcatha.html"
+        },
+        {
+          "t": "Adamantine matters on H'Catha because the Sovereign Eye cannot see through it.",
+          "src": "locations/hcatha.html"
         }
       ]
     },
@@ -3623,7 +3631,7 @@
           "src": "STAGING round 2"
         },
         {
-          "t": "His anchor on Toril is the Cogfast Enclave on Lantan.",
+          "t": "He comes from the Cogfast Enclave on Lantan, on Toril.",
           "src": "STAGING round 8"
         },
         {
@@ -3891,7 +3899,7 @@
       "summary": "An enclave on Lantan, on Toril.",
       "facts": [
         {
-          "t": "The Cogfast Enclave on Lantan is Gregory's anchor on Toril.",
+          "t": "The Cogfast Enclave on Lantan, on Toril, is where Gregory comes from.",
           "src": "STAGING round 8"
         }
       ]
@@ -4366,20 +4374,20 @@
           "src": "STAGING round 8"
         },
         {
-          "t": "Lola's Boys freed Rihiri and Darra from Elizar Dryflagon's fire cult in Baratol.",
+          "t": "Lola's Boys freed Rihiri and Dharra from Elizar Dryflagon's fire cult in Baratol.",
           "src": "timeline/timeline.json"
         }
       ]
     },
     {
-      "id": "darra",
-      "label": "Darra",
+      "id": "dharra",
+      "label": "Dharra",
       "type": "person",
       "scope": "fonains",
       "summary": "A Cre'Tez sister.",
       "facts": [
         {
-          "t": "Darra is a Cre'Tez sister.",
+          "t": "Dharra is a Cre'Tez sister.",
           "src": "STAGING round 8"
         }
       ]
@@ -6987,19 +6995,19 @@
       "s": "spindle",
       "t": "LOC-Sk4mW8vn",
       "rel": "stands at the center of",
-      "src": "realms/hcatha.html"
+      "src": "locations/hcatha.html"
     },
     {
       "s": "kurrzot",
       "t": "LOC-Sk4mW8vn",
       "rel": "rules a domain of",
-      "src": "realms/hcatha.html"
+      "src": "locations/hcatha.html"
     },
     {
       "s": "kurrzot",
       "t": "hcatha-meteor",
       "rel": "claims",
-      "src": "realms/hcatha.html"
+      "src": "locations/hcatha.html"
     },
     {
       "s": "hcatha-meteor",
@@ -7017,7 +7025,7 @@
       "s": "LOC-Sk4mW8vn",
       "t": "LOC-Sp4hR9nk",
       "rel": "located in",
-      "src": "realms/hcatha.html"
+      "src": "locations/hcatha.html"
     },
     {
       "s": "PC-wI087olT",
@@ -7392,7 +7400,7 @@
       "src": "STAGING round 8"
     },
     {
-      "s": "darra",
+      "s": "dharra",
       "t": "cretez",
       "rel": "is a sister of",
       "src": "STAGING round 8"
@@ -7768,6 +7776,12 @@
       "t": "expansion",
       "rel": "includes",
       "src": "STAGING, Cosmology"
+    },
+    {
+      "s": "NPC-ijDm41rn",
+      "t": "LOC-Sk4mW8vn",
+      "rel": "rules a domain of",
+      "src": "locations/hcatha.html"
     }
   ]
 }

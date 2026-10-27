@@ -23,7 +23,7 @@ His marks are spirals, a fanged eye in a split black crystal, and the words
 ## The Day of Chaos
 
 The day the four Princes of Elemental Evil enter Fonains together. The barriers
-between planes break down, and Tharizdun gets his chance to leave. His avatar,
+between planes break down, and Tharizdun gets her chance to leave. Her avatar,
 Shothragot, speaks of it, and so does Vecna.
 
 ## How the Fonains Monolith formed

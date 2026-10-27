@@ -72,7 +72,7 @@ jobs:
       #
       # data/*.json is the campaign record: hand-kept, player-known by
       # construction, and published. The DM layer lives in prime/data/ beside
-      # the rest of the DM wiki. See prime/notes/DATA-BOUNDARY.md.
+      # the rest of the DM wiki. See CLAUDE.md § The record.
       #
       # `guard` fails the deploy if data/ holds any key the record's schema
       # does not list. The schema is closed, so a DM fact has no key to sit
@@ -87,10 +87,10 @@ jobs:
       - name: Prune what the site does not serve
         run: |
           set -e
-          rm -f  scripts/data.js scripts/survey.js CLAUDE.md
-          rm -rf prime/working
+          rm -f  scripts/data.js scripts/survey.js scripts/terms.js CLAUDE.md
+          rm -rf prime/working docs
           find . -name '*-template.html' -not -path './.git/*' -delete
-          echo "pruned: scripts/data.js, scripts/survey.js, CLAUDE.md, prime/working, *-template.html"
+          echo "pruned: scripts/data.js, scripts/survey.js, scripts/terms.js, CLAUDE.md, prime/working, docs, *-template.html"
 
       # -- Publish the whole site (with all three index bundles) --
       - name: Setup Pages

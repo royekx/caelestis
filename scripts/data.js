@@ -7,7 +7,7 @@
  *   node scripts/data.js guard     the deploy's test: is data/ fit to publish
  *
  * The record is data/*.json. It is written by hand during a session run (see
- * prime/notes/SESSION-RUN.md) and it is the only place a fact is entered.
+ * docs/SESSION-RUN.md) and it is the only place a fact is entered.
  * Pages are its rendering. This script generates no page: `derive` fills in
  * the fields that follow mechanically from the authored ones, and `check`
  * proves that the record is consistent with itself, with the DM layer under
@@ -636,7 +636,7 @@ function checkLinks(err) {
 }
 
 // ── prose ──────────────────────────────────────────────────────────────────
-// PAGE-SHAPE.md: three or more negations in one sentence is a rewrite.
+// CLAUDE.md § Writing: three or more negations in one sentence is a rewrite.
 const NEG = /\b(no|not|never|nothing|none|without|nor|neither|nobody|nowhere)\b|n't\b/gi;
 function stacked(s) {
   return String(s).split(/(?<=[.!?])\s+/).filter(x => (x.match(NEG) || []).length >= 3);

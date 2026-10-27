@@ -12,4 +12,18 @@
       });
     });
   });
+
+  // A link to an anchor inside a hidden panel (page.html#terrain) opens that
+  // panel first, then scrolls to the anchor.
+  function reveal(){
+    var id = decodeURIComponent(location.hash.slice(1));
+    var target = id && document.getElementById(id);
+    if (!target) return;
+    var panel = target.closest('.pill-panel');
+    if (!panel || !panel.hidden) return;
+    var tab = document.querySelector('.pill-tab[aria-controls="' + panel.id + '"]');
+    if (tab) { tab.click(); target.scrollIntoView(); }
+  }
+  reveal();
+  window.addEventListener('hashchange', reveal);
 })();

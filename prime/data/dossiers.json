@@ -204,6 +204,12 @@
     ]
   },
   {
+    "slug": "vecna",
+    "name": "Vecna",
+    "path": "dossiers/vecna.html",
+    "records": []
+  },
+  {
     "slug": "veena-derek",
     "name": "Veena & Derek",
     "path": "dossiers/veena-derek.html",
