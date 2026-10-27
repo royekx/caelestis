@@ -1,24 +1,36 @@
 /* ═══════════════════════════════════════════════════════════════
-   PRIME PALETTE OVERRIDE
+   CAELESTIS — DM wiki stylesheet
 
-   dm.css loads after caelestis.css, so this :root wins. Prime is the
-   authored layer seen from outside — the continuum itself. Where the
-   player site takes gold, this takes gossamer: pearl and filament
-   white, with the faint violet the threads carry. Same family, one
-   remove further out, and nothing here is warm.
+   Loaded only by pages under prime/, after caelestis.css and usually
+   entity.css, which are shared with the player site. Those files supply
+   the base reset, fonts, sidebar and entry layout; this file sets the DM
+   palette and everything specific to the DM wiki.
 
-   Redefines the shared tokens rather than adding new ones, so every
-   rule written against --bg / --gold / --rule follows automatically.
+   Sections
+     1  Tokens
+     2  Backdrop and page frame
+     3  Typography and links
+     4  Navigation: sidebar, rail and scrollbars
+     5  Page header
+     6  Article pages
+     7  Entries: wiki layout, infobox, tabs, cards
+     8  Tables, collapsibles, callouts, tags, tiles, stat blocks
+     9  Dossier rows and registers
+    10  Boards: tracker and voyage board
+    11  Chart embed
+    12  Responsive
+    13  Print
+   ═══════════════════════════════════════════════════════════════ */
+
+
+/* ═══════════════════════════════════════════════════════════════
+   1  TOKENS
    ═══════════════════════════════════════════════════════════════ */
 :root {
-  /* Backgrounds — deeper than the player site */
+  /* Backgrounds, deeper than the player site. Surfaces sit a clear step
+     above the page and lean toward violet. */
   --bg:          #0d111a;
   --bg-deep:     #080b12;
-  /* Surfaces have to sit visibly ABOVE the page, not within a few points of
-     it. The player site lifts its cards ~20 points over its background and
-     that is what makes an entry read as an entry; these were within four,
-     so every card on the DM side rendered as bare text on the backdrop.
-     Lifted, and carried toward the violet the prime palette runs on. */
   --bg-panel:    rgba(28, 34, 54, 0.92);
   --bg-card:     rgba(33, 40, 62, 0.90);
   --bg-raised:   rgba(45, 53, 80, 0.82);
@@ -26,8 +38,10 @@
   --rule:        rgba(196, 212, 232, 0.14);
   --rule-soft:   rgba(196, 212, 232, 0.08);
 
-  /* Gossamer takes every slot gold occupies on the player site, so
-     inherited rules need no edits. */
+  /* The player palette's --gold* tokens, remapped to blue-grey. Kept
+     because caelestis.css and entity.css paint the sidebar, entry header,
+     infobox and tabs with them on DM pages too; without the remap those
+     shared rules would turn amber. */
   --gold:        #cbd8e8;
   --gold-light:  #e6eef8;
   --gold-dim:    #8c9cb2;
@@ -43,94 +57,105 @@
   --text-dim:    #a2aec0;
   --text-muted:  #6d798c;
 
-  /* DM-only accents */
+  /* DM-only accents and elevations */
   --dm-violet:      #9683c4;
   --dm-violet-dim:  #453a63;
   --dm-crimson:     #b8695a;
   --dm-teal:        #6fa9a0;
   --dm-elev-1:      rgba(17, 23, 35, 0.82);
   --dm-elev-2:      rgba(28, 36, 52, 0.86);
-}
 
-/* ── AXIOM BACKDROP ──
-   The five Axioms around Continuity, in their colours. Replaces the player
-   site's nebula. html carries the fallback colour
-   because an opaque body fill would paint over body::before, which
-   sits at z-index -2. */
+  /* Axiom palette: one colour per Axiom, matched in brightness. Each nav
+     group takes one (dm-nav.js sets html[data-axiom]) and the page accent
+     follows it. Accents mark structure only: links, section rules, tabs,
+     labels, chips.
+       Play          Determination  rose crimson
+       People        Distinction    jade
+       Story         Consolidation  amber gold
+       World         Expansion      cornflower blue
+       Reference     Dissolution    pearl silver */
+  --ax-consolidation: #D4A256;
+  --ax-expansion:     #6E95D4;
+  --ax-dissolution:   #B9C2CC;
+  --ax-distinction:   #56B4A6;
+  --ax-determination: #D45F78;
+
+  --accent:       var(--ax-dissolution);
+  --accent-text:  color-mix(in srgb, var(--accent) 72%, white);
+  --accent-rule:  color-mix(in srgb, var(--accent) 38%, transparent);
+  --accent-faint: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+html[data-axiom="consolidation"] { --accent: var(--ax-consolidation); }
+html[data-axiom="expansion"]     { --accent: var(--ax-expansion); }
+html[data-axiom="dissolution"]   { --accent: var(--ax-dissolution); }
+html[data-axiom="distinction"]   { --accent: var(--ax-distinction); }
+html[data-axiom="determination"] { --accent: var(--ax-determination); }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   2  BACKDROP AND PAGE FRAME
+   ═══════════════════════════════════════════════════════════════ */
+
+/* The five Axioms around Continuity, in place of the player nebula. html
+   carries the fallback colour, because an opaque body fill would paint
+   over body::before. The body::after shorthand also drops the player
+   starfield; the image has its own. */
 html { background: var(--bg-deep); }
 body::before {
   background: url('../assets/axioms.jpg') center / cover no-repeat;
 }
 body::after {
-  /* Only the faintest edge vignette — the continuum should read at full
-     contrast. Panels carry their own opacity instead. Note this is the
-     shorthand, so it also drops the player site's starfield; the image
-     has its own. */
   background: radial-gradient(ellipse at 50% 45%,
     transparent 55%, rgba(6,9,15,0.45) 100%);
 }
 
-/* ═══════════════════════════════════════════════
-   CAELESTIS — DM Space Stylesheet
-   Loaded AFTER caelestis.css. Inherits the
-   palette, fonts, sidebar, starfield, and base
-   reset. Only adds DM-wiki-specific layers:
-   content typography, collapsibles, cards,
-   callouts, tags, tiles, pull-quote, print.
+/* The scrim below is inset past its column; clip the overflow it would
+   otherwise add to the page width. */
+body { overflow-x: clip; }
 
-   Used by: /prime/index.html, /prime/hub.html, /prime/continuum.html,
-            /prime/campaign.html, /prime/world.html, /prime/voyages/*.html
-   ═══════════════════════════════════════════════ */
-
-
-/* ── DM CONTENT WRAPPER ── */
-/* All wiki-page content lives inside <main class="dm-content">. Sized to sit
-   beside the inherited 220px sidebar with comfortable reading width. */
+/* All wiki content lives in <main class="dm-content">. */
 .dm-content {
-  max-width: 1140px;
+  max-width: 1260px;
   margin: 0 auto;
   padding: 2.5rem clamp(1.2rem, 4vw, 3.25rem) 5rem;
   position: relative;
   z-index: 1;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text);
 }
 
-/* ── PAGE HEADER ── */
-.dm-page-header {
-  padding-bottom: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid var(--gold-rule);
+/* The reading column: a soft scrim, so the backdrop shows at the edges and
+   the text keeps its contrast. */
+.dm-content::before {
+  content: '';
+  position: absolute;
+  inset: -2rem -2.5rem;
+  z-index: -1;
+  background: linear-gradient(90deg,
+    rgba(8, 11, 19, 0) 0%, rgba(8, 11, 19, 0.62) 7%,
+    rgba(8, 11, 19, 0.62) 93%, rgba(8, 11, 19, 0) 100%);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  pointer-events: none;
 }
-.dm-page-eyebrow {
+
+.dm-footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(201, 153, 58, 0.14);
   font-family: 'Cinzel', serif;
   font-size: 0.899rem;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.18em;
   color: var(--text-muted);
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
-.dm-page-eyebrow .sep {
-  margin: 0 0.5rem;
-  color: var(--gold-dim);
-}
-.dm-content h1 {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(2.25rem, 5vw, 3.125rem);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--gold);
-  margin: 0 0 0.4rem;
-  line-height: 1.15;
-}
-.dm-page-lede {
-  font-size: 1.31rem;
-  color: var(--text-dim);
-  font-style: italic;
-  margin-top: 0.5rem;
-  max-width: 65ch;
-  line-height: 1.55;
+  text-align: center;
 }
 
-/* ── HEADINGS ── */
+
+/* ═══════════════════════════════════════════════════════════════
+   3  TYPOGRAPHY AND LINKS
+   ═══════════════════════════════════════════════════════════════ */
 .dm-content h2 {
   font-family: 'Cinzel', serif;
   font-size: 1.875rem;
@@ -161,14 +186,11 @@ body::after {
   text-transform: uppercase;
   margin: 1.5rem 0 0.5rem;
 }
-/* A dossier's DM notes panel heads its subsections with h4, so headings
-   that were h4 inside the old separate panels sit a level below. Lower
-   case and no tracking, so the two levels read as different ranks rather
-   than two sizes of the same thing. */
+/* h5 heads the subsections of a dossier's DM notes: lower case and no
+   tracking, so it reads as a different rank from h4, and just above body
+   size so it reads as a heading. */
 .dm-content h5 {
   font-family: 'Cinzel', serif;
-  /* Body runs at 1.25rem, so a heading below that reads as fine print
-     rather than as a heading. Sits just above the text it heads. */
   font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -177,21 +199,28 @@ body::after {
   margin: 1.35rem 0 0.4rem;
 }
 
-/* ── BODY TEXT ── */
-.dm-content { font-size: 1.25rem; line-height: 1.65; color: var(--text); }
 .dm-content p { margin: 0.75rem 0; }
 .dm-content strong { color: var(--gold-light); font-weight: 600; }
 .dm-content em { color: var(--text); font-style: italic; }
 
+/* Running prose carries no bold or colour: a paragraph reads straight
+   through. Links keep their colour and underline. */
+.dm-content p strong, .dm-content p b,
+.dm-content dd strong {
+  font-weight: inherit;
+  color: inherit;
+}
+
+/* Links: the accent, with an underline. */
 .dm-content a {
-  color: var(--gold);
+  color: var(--accent-text);
   text-decoration: none;
-  border-bottom: 1px dotted var(--gold-rule);
+  border-bottom: 1px solid var(--accent-rule);
   transition: color 0.15s, border-color 0.15s;
 }
 .dm-content a:hover {
-  color: var(--gold-light);
-  border-bottom-color: var(--gold-light);
+  color: #fff;
+  border-bottom-color: var(--accent);
 }
 .dm-content a.dm-link-external::after {
   content: ' ↗';
@@ -211,21 +240,7 @@ body::after {
   font-style: italic;
 }
 
-/* Decorative divider — matches the ✦ ✦ ✦ style from the voyage doc */
-.dm-content hr {
-  border: none;
-  text-align: center;
-  margin: 2.5rem 0;
-}
-.dm-content hr::before {
-  content: '✦ ✦ ✦';
-  color: var(--gold-dim);
-  letter-spacing: 1rem;
-  font-size: 0.899rem;
-}
-
-/* ── PULL-QUOTE ── */
-/* For the north-star tagline. Used sparingly. */
+/* The north-star tagline. Used sparingly. */
 .dm-pullquote {
   font-family: 'Cinzel', serif;
   font-size: 1.44rem;
@@ -239,183 +254,530 @@ body::after {
   font-style: italic;
 }
 
-/* ── CARDS ── */
-/* Visual unit for grouped reference content. Status colour on left border. */
-.dm-card {
-  background: var(--dm-elev-1);
-  border: 1px solid var(--gold-rule);
-  border-left: 3px solid var(--gold-rule);
-  border-radius: 2px;
-  padding: 1.25rem 1.5rem;
-  margin: 1.25rem 0;
-}
-.dm-card.is-locked  { border-left-color: var(--gold); }
-.dm-card.is-open    { border-left-color: var(--dm-crimson); }
-.dm-card.is-cosmic  { border-left-color: var(--dm-violet); }
-.dm-card.is-info    { border-left-color: var(--dm-teal); }
-
-.dm-card-title {
+.dm-content dl { margin: 1rem 0; }
+.dm-content dt {
   font-family: 'Cinzel', serif;
-  font-size: 0.99rem;
-  letter-spacing: 0.12em;
+  font-size: 0.942rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gold);
-  margin: 0 0 0.5rem;
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+  margin-top: 0.85rem;
+}
+.dm-content dd { margin: 0.2rem 0 0 1.25rem; color: var(--text); }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   4  NAVIGATION: SIDEBAR AND RAIL
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Sidebar ──
+   The DM nav carries more destinations than the player one, so labels and
+   links run tighter. Each group carries its Axiom colour in --group; its
+   label, link hover and active marker take it. */
+.side-nav-group[data-axiom="determination"] { --group: var(--ax-determination); }
+.side-nav-group[data-axiom="consolidation"] { --group: var(--ax-consolidation); }
+.side-nav-group[data-axiom="distinction"]   { --group: var(--ax-distinction); }
+.side-nav-group[data-axiom="expansion"]     { --group: var(--ax-expansion); }
+.side-nav-group[data-axiom="dissolution"]   { --group: var(--ax-dissolution); }
+
+.side-nav-group-label {
+  padding: 0.8rem 1.4rem 0.22rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  color: var(--group);
+  opacity: 0.85;
+}
+.side-nav-body > .side-nav-group:first-of-type .side-nav-group-label { padding-top: 0.3rem; }
+
+.side-nav-link { padding-top: 0.36rem; padding-bottom: 0.36rem; }
+/* Nested pillars (Spine and What If under Campaign). */
+.side-nav-link-indent {
+  padding-left: 2rem !important;
+  font-size: 0.92em;
+}
+.side-nav-group .side-nav-link.active {
+  color: #fff;
+  border-left-color: var(--group) !important;
+  background: color-mix(in srgb, var(--group) 10%, transparent);
+}
+.side-nav-group .side-nav-link:hover { color: color-mix(in srgb, var(--group) 70%, white); }
+
+/* Sign out: dimmer than the links above it, with no arrow. */
+.side-nav-signout {
+  color: var(--text-muted) !important;
+  font-style: italic;
+  cursor: pointer;
+}
+.side-nav-signout:hover { color: var(--dm-crimson) !important; }
+
+/* ── Rail: "On this page" ──
+   dm-toc.js adds .has-toc to the content column and injects <nav
+   class="dm-toc">. Content takes the first column; the rail sticks in the
+   second and lists every section and subsection. */
+.dm-content.has-toc {
+  max-width: 1180px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  column-gap: 2.5rem;
+  align-items: start;
+}
+.dm-content.has-toc > *:not(.dm-toc) {
+  grid-column: 1;
+  min-width: 0;
+}
+/* A page with no sections for the rail takes the whole canvas. */
+.dm-content.has-toc.toc-empty {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 920px;
 }
 
-/* Subordinate footer paragraphs inside a card.
-   Used in the Act Map for "PC arcs in this Act" / "Faction moves in this Act"
-   rows that contextualize the main beats above them. */
-.dm-card-footnote {
-  font-size: 0.94rem;
-  color: var(--dm-text-dim, var(--ivory-dim, #9a8f7a));
-  border-top: 1px dashed var(--dm-border-dim, rgba(180, 150, 90, 0.18));
-  padding-top: 0.6rem;
-  margin-top: 0.85rem;
-  margin-bottom: 0.4rem;
+.dm-toc {
+  grid-column: 2;
+  grid-row: 1 / 9999;
+  position: sticky;
+  top: 2.5rem;
+  align-self: start;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  font-size: 0.963rem;
+  line-height: 1.4;
+  padding-left: 1rem;
+  border-left: 1px solid var(--accent-rule);
+}
+/* Scrollbars: thin, in the page's accent, on a clear track. Firefox reads
+   scrollbar-*; Chrome, Edge and Safari read the ::-webkit-scrollbar rules. */
+html, .dm-toc, .side-nav {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-rule, rgba(185,194,204,0.38)) transparent;
+}
+html::-webkit-scrollbar, .dm-toc::-webkit-scrollbar, .side-nav::-webkit-scrollbar,
+.dm-content *::-webkit-scrollbar { width: 8px; height: 8px; }
+html::-webkit-scrollbar-track, .dm-toc::-webkit-scrollbar-track, .side-nav::-webkit-scrollbar-track,
+.dm-content *::-webkit-scrollbar-track { background: transparent; }
+html::-webkit-scrollbar-thumb, .dm-toc::-webkit-scrollbar-thumb, .side-nav::-webkit-scrollbar-thumb,
+.dm-content *::-webkit-scrollbar-thumb {
+  background: var(--accent-rule, rgba(185,194,204,0.38));
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
+.side-nav::-webkit-scrollbar-thumb:hover, .dm-content *::-webkit-scrollbar-thumb:hover {
+  background: var(--accent, #B9C2CC);
+  background-clip: padding-box;
+}
+
+.dm-toc-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.845rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 0.75rem;
+}
+.dm-toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.dm-toc li {
+  margin: 0;
+}
+.dm-toc a {
+  display: block;
+  padding: 0.28rem 0.6rem;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  margin-left: -1rem;
+  padding-left: calc(0.6rem + 1rem - 2px);
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+/* h3-level entries indent under their h2. */
+.dm-toc a.dm-toc-sub {
+  padding-left: calc(1.5rem + 1rem - 2px);
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  opacity: 0.78;
+}
+.dm-toc a:hover {
+  color: #fff;
+  background: var(--dm-elev-2);
+}
+/* Scroll-spy state, set by dm-toc.js. */
+.dm-content .dm-toc a.is-active {
+  color: var(--accent-text);
+  border-left-color: var(--accent);
+  background: var(--dm-elev-2);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   5  PAGE HEADER
+   ═══════════════════════════════════════════════════════════════ */
+.dm-page-header {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gold-rule);
+}
+.dm-page-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.899rem;
+  letter-spacing: 0.25em;
+  color: var(--accent-text);
+  opacity: .8;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.dm-page-eyebrow .sep {
+  margin: 0 0.5rem;
+  color: var(--gold-dim);
+}
+.dm-content h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2.25rem, 5vw, 3.125rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin: 0 0 0.4rem;
+  line-height: 1.15;
+}
+.dm-page-lede {
+  font-size: 1.31rem;
+  color: var(--text-dim);
+  font-style: italic;
+  margin-top: 0.5rem;
+  max-width: 65ch;
   line-height: 1.55;
 }
 
-.dm-card-footnote + .dm-card-footnote {
-  border-top: none;
-  padding-top: 0;
-  margin-top: -0.2rem;
+/* Ops links: a quiet row of links under the header, on a hairline. */
+.dm-ops-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 1.4rem;
+  margin: -0.4rem 0 2.2rem;
+  padding: 0 0 0.9rem;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.dm-ops-links a {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  padding: 0.2rem 0;
+  transition: color 0.18s;
 }
 
-.dm-card-footnote em {
-  color: var(--gold-dim, var(--gold));
-  font-style: normal;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
 
-/* Subtitle / date line immediately under a card title.
-   Used in the voyages list for the voyage subtitle. */
-.dm-card-eyebrow {
+/* ═══════════════════════════════════════════════════════════════
+   6  ARTICLE PAGES
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Section collapsibles ──
+   Top-level sections written as <details class="dm-collapse-section">. */
+.dm-collapse-section {
+  margin: 1.5rem 0;
+  border-top: 1px solid var(--gold-rule);
+  padding-top: 0.5rem;
+}
+.dm-collapse-section > summary {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  padding: 0.6rem 0;
+  font-family: 'Cinzel', serif;
+  font-size: 1.35rem;
+  color: var(--gold);
+  letter-spacing: 0.03em;
+}
+.dm-collapse-section > summary::-webkit-details-marker { display: none; }
+.dm-collapse-section > summary::before {
+  content: '▸';
+  display: inline-block;
   font-size: 0.94rem;
-  font-style: italic;
-  color: var(--gold-dim, var(--gold));
-  letter-spacing: 0.04em;
-  margin: -0.2rem 0 0.7rem;
-  opacity: 0.85;
+  color: var(--gold-dim);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  width: 0.85rem;
+  text-align: center;
+  position: relative;
+  top: -0.15rem;
+}
+.dm-collapse-section[open] > summary::before {
+  transform: rotate(90deg);
+}
+.dm-collapse-section > summary:hover {
+  color: var(--gold-bright, var(--gold));
+}
+.dm-collapse-section > summary:hover::before {
+  color: var(--gold);
+}
+/* Subsection: h3-level sizing inside an outer section. */
+.dm-collapse-section.is-sub {
+  margin: 1rem 0;
+  border-top: 1px solid rgba(201,153,58,0.18);
+}
+.dm-collapse-section.is-sub > summary {
+  font-size: 1.1rem;
+  padding: 0.45rem 0;
+}
+.dm-collapse-section > .dm-collapse-section-body {
+  padding: 0.5rem 0 1rem 1.55rem;
+}
+.dm-content .dm-collapse-section-body {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 1.1rem 1.3rem 1.2rem;
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
 }
 
-/* Action row inside a card — for buttons like "Open DM notes". */
-.dm-card-actions {
-  margin-top: 0.9rem;
+/* ── Article pages ──
+   dm-sections.js adds .is-article and .is-flat. A long page reads as one
+   article: sections are headings, the rail is the navigation, and only
+   tables keep a surface of their own. */
+.dm-content.is-article .dm-collapse-section.is-flat {
+  margin: 2.6rem 0 0;
+  padding-top: 0;
+  border-top: 0;
+}
+.dm-content.is-article .dm-collapse-section.is-flat.is-sub { margin-top: 1.8rem; }
+.dm-content.is-article .dm-collapse-section.is-flat > summary {
+  cursor: default;
+  padding: 0 0 0.45rem;
+  margin-bottom: 0.9rem;
+  border-bottom: 1px solid var(--accent-rule);
+  color: var(--text);
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+}
+.dm-content.is-article .dm-collapse-section.is-flat.is-sub > summary {
+  font-size: 1.12rem;
+  border-bottom: 0;
+  margin-bottom: 0.4rem;
+  color: var(--text);
+}
+.dm-content.is-article .dm-collapse-section.is-flat > summary::before { display: none; }
+.dm-content.is-article .dm-collapse-section.is-flat > summary:hover { color: var(--text); }
+.dm-content.is-article .dm-collapse-section.is-flat > summary > h2,
+.dm-content.is-article .dm-collapse-section.is-flat > summary > h3 {
+  border: 0 !important; padding: 0 !important; margin: 0 !important;
+}
+.dm-content.is-article .dm-collapse-section.is-flat > .dm-collapse-section-body {
+  background: none;
+  border: 0;
+  padding: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   7  ENTRIES: WIKI LAYOUT, INFOBOX, TABS, CARDS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Entry header and identity card ──
+   Rows stack, label over value, because in a column this narrow every
+   value is long. */
+.entry-header { grid-template-columns: 264px 1fr; gap: 2.4rem; }
+.identity-card .stat-row {
+  display: block;
+  padding: 0.5rem 0;
+}
+.identity-card .stat-key {
+  display: block;
+  white-space: normal;
   margin-bottom: 0.2rem;
 }
-
-.dm-card-actions + .dm-card-actions {
-  margin-top: 0.4rem;
-}
-
-/* DM-styled button. Used in card actions. */
-.dm-button {
-  display: inline-block;
-  padding: 0.45rem 0.95rem;
-  background: var(--dm-elev-2);
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  font-family: 'Cinzel', serif;
-  font-size: 0.92rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background 0.18s ease, color 0.18s ease;
-}
-
-.dm-button:hover,
-.dm-button:focus {
-  background: var(--gold);
-  color: var(--dm-elev-1, #0a0a14);
-  outline: none;
-}
-
-/* is-stub card variant — for upcoming/projected entries.
-   Slightly dimmer than canon, distinct from is-open. */
-.dm-card.is-stub {
-  border-left-color: var(--dm-border-dim, rgba(180, 150, 90, 0.35));
-  opacity: 0.88;
-}
-
-.dm-card.is-stub .dm-card-title {
-  color: var(--gold-dim, var(--gold));
-}
-
-/* ── CALLOUT ──
-   There are 658 of these across the wiki, against about 1,100 paragraphs.
-   At that density a filled, tinted box stops meaning "look here" and becomes
-   the page's baseline texture, which is what made the DM pages read as
-   stacked walls rather than prose.
-
-   Two changes, both here rather than in markup:
-
-   1. One treatment, not three. is-warn / is-cosmic / is-info were applied
-      with no consistent meaning - "The objective" was info, "The visible
-      symptom" was warn, "The pattern is the person" was cosmic - so the
-      colour taught the reader nothing and only fragmented the page. The
-      variant classes still parse; they just no longer paint.
-
-   2. A rule and space, not a box. The fill is gone and the left bar is a
-      hairline, matching the player site's own surface rule. The label still
-      carries the emphasis; the body now reads as part of the prose column. */
-.dm-callout {
-  background: none;
-  border-left: 1px solid var(--gold-rule);
-  padding: 0.1rem 0 0.1rem 1.1rem;
-  margin: 1.5rem 0;
-  border-radius: 0;
-  font-size: 1rem;
-}
-.dm-callout-label {
-  font-family: 'Cinzel', serif;
-  font-size: 0.899rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gold-dim);
+.identity-card .stat-val,
+.identity-card .stat-val.stat-val-long {
   display: block;
-  margin-bottom: 0.3rem;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: break-word;
+  font-size: 0.9rem;
+  line-height: 1.45;
 }
+.dm-content .identity-card {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  overflow: hidden;
+}
+.dm-content .identity-card .stat-card {
+  padding: 0.45rem 1.05rem 0.8rem;
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+.dm-content .identity-card .stat-row:last-child { border-bottom: none; }
 
-/* ── COLLAPSIBLE SECTIONS ── */
-/* Wiki pages are long. Default-open, click to collapse. */
-.dm-collapse {
-  border-top: 1px solid rgba(201, 153, 58, 0.14);
-  margin: 0;
-}
-.dm-collapse > summary {
-  cursor: pointer;
-  padding: 1rem 0;
-  font-family: 'Cinzel', serif;
-  font-size: 1.31rem;
-  color: var(--gold);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  list-style: none;
+/* On a dossier page the portrait fills the card. */
+.identity-card .dossier-portrait,
+.identity-card .portrait-frame {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  padding: 0 !important;
+  aspect-ratio: 1;
+  border: none;
+  border-bottom: 1px solid var(--rule);
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  user-select: none;
+  justify-content: center;
 }
-.dm-collapse > summary::-webkit-details-marker { display: none; }
-.dm-collapse > summary::before {
-  content: '▸';
-  color: var(--gold-dim);
-  font-size: 0.9em;
-  transition: transform 0.15s;
-  display: inline-block;
-  width: 0.8em;
+.identity-card .dossier-portrait img,
+.identity-card .portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
 }
-.dm-collapse[open] > summary::before { transform: rotate(90deg); }
-.dm-collapse > summary:hover { color: var(--gold-light); }
-.dm-collapse > *:not(summary) { padding-bottom: 1.25rem; }
+.identity-card .dossier-monogram {
+  font-family: 'Cinzel', serif;
+  font-size: 2.6rem;
+  letter-spacing: 0.08em;
+  color: var(--gold-faint);
+}
+/* The expand affordance, with the card's gutter of its own. */
+.dm-content .portrait-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0.55rem 0 0.1rem;
+  padding: 0 1.05rem;
+}
+.dm-content .cae-expandable { cursor: zoom-in; }
 
-/* ── TABLES ── */
+/* ── Tabs ──
+   Underlined tabs, the same control as the section strip on reference
+   pages; the register pages use pills for filters. */
+.pill-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+  margin: 1.2rem 0 1.3rem;
+  padding-bottom: 0;
+  border-bottom: 1px solid var(--gold-rule);
+}
+.pill-tab {
+  appearance: none;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: 'Cinzel', serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  /* Tracking and gutters let five tabs fit the entry column on one row. */
+  letter-spacing: 0.085em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 0.55rem 0.7rem;
+  margin-bottom: -1px;
+  white-space: nowrap;
+  transition: color .15s ease, border-color .15s ease, background .15s ease;
+}
+.pill-tab:first-child { padding-left: 0; }
+.pill-tab:hover { color: var(--gold-light); background: var(--gold-faint); }
+.pill-tab[aria-selected="true"] {
+  color: var(--gold);
+  border-bottom-color: var(--accent);
+  background: transparent;
+}
+.pill-tab:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
+.pill-panel[hidden] { display: none; }
+
+/* The strip spans the body under the header and sits on the rule the
+   panels hang from. */
+.entry-info .pill-tabs {
+  margin: 1rem 0 0;
+  padding-bottom: 0;
+}
+.entry-info .pill-panel { margin-top: 1rem; }
+
+/* ── Cards ──
+   Panels, cross-reference cards and stat cards sit on a filled surface a
+   clear step above the backdrop. */
+.dm-content .pill-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 1.2rem 1.4rem 1.4rem;
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+.dm-content .xref-card,
+.dm-content .stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+}
+.dm-content .chip { border-color: var(--accent-rule); }
+.dm-content .chip:hover { background: var(--accent-faint); }
+
+/* ── Wiki layout ──
+   The article on the left, the infobox on the right. The infobox stays
+   beside every tab and is the only panel; text sits on the page. */
+.dm-content .entry-header.is-wiki {
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 3.2rem;
+}
+.dm-content .is-wiki .entry-info { order: 1; }
+.dm-content .is-wiki .identity-card {
+  order: 2;
+  position: sticky;
+  top: 1.2rem;
+  border-top: 2px solid var(--accent-rule);
+}
+.dm-content .is-wiki .identity-card .portrait-frame { aspect-ratio: 4 / 3; }
+.dm-content .is-wiki .identity-card .stat-row {
+  display: grid;
+  grid-template-columns: 6.4rem minmax(0, 1fr);
+  gap: 0.7rem;
+  align-items: baseline;
+  padding: 0.45rem 0;
+}
+.dm-content .is-wiki .identity-card .stat-key { margin: 0; }
+/* The page title already names the subject; the article starts at the tagline. */
+.dm-content .is-wiki .entry-name { display: none; }
+.dm-content .is-wiki .entry-sub { font-size: 1.15rem; color: var(--text-dim); }
+.dm-content .is-wiki .pill-panel {
+  background: none; border: 0; box-shadow: none; padding: 0;
+  backdrop-filter: none; -webkit-backdrop-filter: none;
+}
+.dm-content .is-wiki .pill-panel h4 {
+  margin: 1.9rem 0 0.6rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--accent-rule);
+  font-size: 1.05rem;
+  letter-spacing: .12em;
+  color: var(--text);
+}
+.dm-content .is-wiki .pill-panel h4:first-child { margin-top: 0.4rem; }
+.dm-content .is-wiki .pill-panel h5 {
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin: 1.2rem 0 0.35rem;
+}
+.dm-content .is-wiki .pill-panel h5 a { color: inherit; }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   8  TABLES, COLLAPSIBLES, CALLOUTS, TAGS, TILES, STAT BLOCKS
+   ═══════════════════════════════════════════════════════════════ */
 .dm-content table {
   width: 100%;
   border-collapse: collapse;
@@ -445,30 +807,74 @@ body::after {
 .dm-content tbody tr:last-child td { border-bottom: none; }
 .dm-content tbody tr:hover td { background: var(--dm-elev-2); }
 
-/* ── CROSS-REFERENCE PILLS ── */
-/* Inline references between wiki pages: "see Continuum → Monoliths". */
-.dm-xref {
-  display: inline-block;
-  font-family: 'Cinzel', serif;
-  font-size: 0.835rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  padding: 0.12rem 0.45rem;
-  border: 1px solid var(--gold-rule);
-  border-radius: 2px;
-  color: var(--gold-dim);
-  background: var(--dm-elev-1);
-  margin-right: 0.3rem;
-  vertical-align: middle;
-  text-decoration: none;
+/* ── Detail collapsibles ──
+   <details class="dm-collapse">: a small chevron summary on a left rule,
+   for prose that expands under a list or a row. */
+.dm-collapse {
+  border-top: 1px solid rgba(201, 153, 58, 0.14);
+  border-left: 2px solid var(--gold-rule);
+  margin: 0.6rem 0 0.4rem;
+  padding-left: 1rem;
 }
-.dm-xref:hover {
-  color: var(--gold-light);
-  border-color: var(--gold-dim);
+.dm-collapse > summary {
+  cursor: pointer;
+  padding: 0.4rem 0;
+  font-family: 'Cinzel', serif;
+  font-size: 0.92rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+}
+.dm-collapse > summary::-webkit-details-marker { display: none; }
+.dm-collapse > summary::before {
+  content: '▸';
+  color: var(--gold-dim);
+  font-size: 0.899rem;
+  transition: transform 0.18s;
+  display: inline-block;
+  width: 0.8em;
+}
+.dm-collapse[open] > summary::before { transform: rotate(90deg); }
+.dm-collapse > summary:hover { color: var(--gold); }
+.dm-collapse[open] > summary {
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+.dm-collapse > *:not(summary) { padding-bottom: 1.25rem; font-size: 1.02rem; }
+
+/* ── Callout ──
+   One treatment for every variant: a hairline rule and space, not a box,
+   so the body reads as part of the prose column. The label carries the
+   emphasis. The is-warn / is-cosmic / is-info classes add nothing. */
+.dm-callout {
+  background: none;
+  border-left: 1px solid var(--gold-rule);
+  padding: 0.1rem 0 0.1rem 1.1rem;
+  margin: 1.5rem 0;
+  border-radius: 0;
+  font-size: 1rem;
+}
+.dm-callout-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.899rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  display: block;
+  margin-bottom: 0.3rem;
 }
 
-/* ── STATUS TAGS ── */
-/* Scan-at-a-glance markers for the wiki's information-state vocabulary. */
+/* ── Status tags ──
+   Four classes, one question each:
+     is-canon  how settled is it        Canon, Played
+     is-open   what is still open       a short label, three words at most
+     is-dm     can this go player-side  DM only
+     is-kind   what sort of thing       Character, Object, Place, Event, Pattern */
 .dm-tag {
   display: inline-block;
   font-family: 'Cinzel', serif;
@@ -481,32 +887,13 @@ body::after {
   vertical-align: middle;
   font-weight: 600;
 }
-/* Four classes, one axis each. A tag answers exactly one question:
-     is-canon  how settled is it        Canon, Played
-     is-open   what is still open       a short label, three words at most
-     is-dm     can this go player-side  DM only
-     is-kind   what sort of thing       Character, Object, Place, Event, Pattern
-   is-locked and is-stub are retired. "Locked" meant settled canon in one
-   place and DM-only in another, which is why it read as meaningless. */
 .dm-tag.is-canon    { background: rgba( 94, 168, 158, 0.18); color: var(--dm-teal); }
 .dm-tag.is-open     { background: rgba(168,  85, 60, 0.20); color: var(--dm-crimson); }
 .dm-tag.is-dm       { background: rgba(122,  94, 168, 0.22); color: var(--dm-violet); }
 .dm-tag.is-kind     { background: rgba(110, 104, 87, 0.20); color: var(--text-dim); }
 
-/* ── DEFINITION LISTS ── */
-.dm-content dl { margin: 1rem 0; }
-.dm-content dt {
-  font-family: 'Cinzel', serif;
-  font-size: 0.942rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-top: 0.85rem;
-}
-.dm-content dd { margin: 0.2rem 0 0 1.25rem; color: var(--text); }
-
-/* ── TILE GRID ── */
-/* For the index / hub page — links into wiki, out to trackers / archive. */
+/* ── Tile grid ──
+   The hub: links into the wiki and out to the trackers. */
 .dm-tile-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -550,402 +937,20 @@ body::after {
   color: var(--text-dim);
   line-height: 1.45;
 }
-.dm-tile.dm-tile-external .dm-tile-title::after {
-  content: ' ↗';
-  color: var(--text-muted);
-  font-size: 0.8em;
-}
 
-/* ── SIDEBAR SIGN OUT ── */
-/* Distinct from the external links above it — no arrow, dimmer, with hover. */
-.side-nav-signout {
-  color: var(--text-muted) !important;
-  font-style: italic;
-  cursor: pointer;
-}
-.side-nav-signout svg { display: none; }
-.side-nav-signout:hover { color: var(--dm-crimson) !important; }
-
-
-/* ── PAGE FOOTER ── */
-.dm-footer {
-  margin-top: 4rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(201, 153, 58, 0.14);
-  font-family: 'Cinzel', serif;
-  font-size: 0.899rem;
-  letter-spacing: 0.18em;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  text-align: center;
-}
-
-/* ════════════════════════════════════════════════════════════════
-   RIGHT-RAIL TABLE OF CONTENTS
-   Opt-in per page: add class "has-toc" to <main class="dm-content">.
-   The dm-toc.js script injects the <nav class="dm-toc"> and the
-   scroll-spy. Pages without has-toc are completely unaffected.
-   ════════════════════════════════════════════════════════════════ */
-
-/* On TOC pages, the content column gives up its auto-centering and
-   instead reserves space on the right for the rail. We widen the
-   effective canvas and lay content + rail side by side. */
-.dm-content.has-toc {
-  max-width: 1180px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 220px;
-  column-gap: 2.5rem;
-  align-items: start;
-}
-
-/* The header and all direct content children live in the first column. */
-.dm-content.has-toc > *:not(.dm-toc) {
-  grid-column: 1;
-  min-width: 0;
-}
-
-/* The rail itself, second column, sticky. */
-.dm-toc {
-  grid-column: 2;
-  grid-row: 1 / 9999;
-  position: sticky;
-  top: 2.5rem;
-  align-self: start;
-  max-height: calc(100vh - 4rem);
-  overflow-y: auto;
-  font-size: 0.963rem;
-  line-height: 1.4;
-  padding-left: 1rem;
-  border-left: 1px solid var(--gold-rule);
-}
-
-.dm-toc-title {
-  font-family: 'Cinzel', serif;
-  font-size: 0.845rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin: 0 0 0.75rem;
-}
-
-.dm-toc ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.dm-toc li {
-  margin: 0;
-}
-
-.dm-toc a {
-  display: block;
-  padding: 0.28rem 0.6rem;
-  color: var(--text-muted);
-  text-decoration: none;
-  border-left: 2px solid transparent;
-  margin-left: -1rem;
-  padding-left: calc(0.6rem + 1rem - 2px);
-  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
-}
-
-/* h3-level entries indent under their h2. */
-.dm-toc a.dm-toc-sub {
-  padding-left: calc(1.5rem + 1rem - 2px);
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  opacity: 0.78;
-}
-
-.dm-toc a:hover {
-  color: var(--gold-light);
-  background: var(--dm-elev-2);
-}
-
-/* Scroll-spy active state — set by dm-toc.js. */
-.dm-toc a.is-active {
-  color: var(--gold-light);
-  border-left-color: var(--gold);
-  background: var(--dm-elev-2);
-}
-
-/* Below 1100px, drop the rail entirely and restore centered content.
-   The sidebar still navigates between pages; in-page nav is desktop-only. */
-@media (max-width: 1100px) {
-  .dm-content.has-toc {
-    display: block;
-    max-width: 920px;
-    margin: 0 auto;
-  }
-  .dm-toc {
-    display: none;
-  }
-}
-
-/* Nested sidebar pillars (Seeds under Campaign, Factions under World).
-   Slight indent + dimmer to read as children of the pillar above. */
-.side-nav-link-indent {
-  padding-left: 2rem !important;
-  font-size: 0.92em;
-}
-
-/* ── PRINT ── */
-@media print {
-  .side-nav, .side-nav-toggle, .dm-toc { display: none !important; }
-  body.with-sidebar { padding-left: 0 !important; }
-  .dm-content.has-toc { display: block; max-width: none; }
-  body { background: white; color: black; font-size: 11pt; }
-  body::before { display: none; }
-  .dm-content h1, .dm-content h2, .dm-content h3, .dm-content h4 { color: black; }
-  .dm-card { background: #f8f6ef; border-color: #b89a3a; }
-  .dm-callout { background: #f8f6ef; }
-  /* Force collapsibles open when printing so nothing's hidden */
-  .dm-collapse[open] { break-inside: avoid; }
-  .dm-collapse:not([open]) > *:not(summary) { display: block !important; }
-}
-
-
-/* ════════════════════════════════════════════════════════════════
-   DOSSIER TABLES
-   Tabular character/entity rosters with portraits, populated via
-   /scripts/portraits.js. Each .dossier table is followed by collapsible
-   <details class="dm-collapse"> for the expandable prose.
-   ════════════════════════════════════════════════════════════════ */
-
-.dossier {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0 1.5rem;
-  font-size: 1.01rem;
-  background: rgba(255,255,255,0.01);
-  border: 1px solid var(--gold-rule);
-}
-
-.dossier thead th {
-  text-align: left;
-  font-family: 'Cinzel', serif;
-  font-size: 0.899rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--gold-dim);
-  border-bottom: 1px solid var(--gold-rule);
-  padding: 0.6rem 0.8rem;
-  font-weight: 600;
-  background: rgba(201,153,58,0.04);
-}
-
-.dossier tbody td {
-  vertical-align: middle;
-  padding: 0.7rem 0.8rem;
-  border-bottom: 1px solid rgba(201,153,58,0.12);
-  color: var(--text);
-}
-
-.dossier tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.dossier tbody tr:hover {
-  background: rgba(201,153,58,0.03);
-}
-
-.dossier .dossier-name {
-  font-family: 'Cinzel', serif;
-  font-weight: 600;
-  color: var(--text);
-  font-size: 1.01rem;
-  letter-spacing: 0.01em;
-}
-
-.dossier .dossier-role {
-  font-size: 0.963rem;
-  color: var(--text-dim);
-  font-style: italic;
-}
-
-.dossier .dossier-detail {
-  font-size: 0.97rem;
-  color: var(--text-dim);
-  line-height: 1.45;
-}
-
-/* One scale for portraits, three contexts:
-     row face   56px — inline lists and the Factions dossier rows
-     card face  72px — the dossier index grid
-     identity  fills — the portrait on a dossier page
-   The wrapper used to be 64px with a 56px image padded inside it, which
-   made the frame and the picture disagree at every size. They match now. */
-.dossier-portrait {
-  width: 56px;
-  min-width: 56px;
-  height: 56px;
-  padding: 0 !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border: 1px solid var(--gold-rule);
-}
-
-.dossier-portrait img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: none;
-  display: block;
-}
-
-.dossier-monogram {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  border: 1px solid var(--gold-rule);
-  background: rgba(201,153,58,0.06);
-  color: var(--gold-dim);
-  font-family: 'Cinzel', serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-/* On narrow screens collapse to 2-column with portrait inline */
-@media (max-width: 720px) {
-  .dossier thead { display: none; }
-  .dossier, .dossier tbody, .dossier tr, .dossier td { display: block; width: 100%; }
-  .dossier tr {
-    display: grid;
-    grid-template-columns: 64px 1fr;
-    gap: 0.5rem 0.9rem;
-    padding: 0.6rem 0.4rem;
-    border-bottom: 1px solid rgba(201,153,58,0.12);
-  }
-  .dossier td { border: none; padding: 0; }
-  .dossier-portrait { grid-row: span 3; }
-}
-
-
-/* ════════════════════════════════════════════════════════════════
-   ARTIFACT DOSSIER — wider portrait slot for objects
-   ════════════════════════════════════════════════════════════════ */
-
-.dossier.dossier-artifacts .dossier-portrait {
-  width: 80px;
-  min-width: 80px;
-}
-
-.dossier.dossier-artifacts .dossier-portrait img,
-.dossier.dossier-artifacts .dossier-portrait .dossier-monogram {
-  width: 72px;
-  height: 72px;
-}
-
-
-/* ════════════════════════════════════════════════════════════════
-   COLLAPSIBLE DETAIL SECTIONS (under dossiers)
-   <details class="dm-collapse"> with a chevron summary.
-   ════════════════════════════════════════════════════════════════ */
-
-.dm-collapse {
-  margin: 0.6rem 0 0.4rem;
-  border-left: 2px solid var(--gold-rule);
-  padding-left: 1rem;
-}
-
-.dm-collapse > summary {
-  cursor: pointer;
-  font-family: 'Cinzel', serif;
-  font-size: 0.92rem;
-  letter-spacing: 0.05em;
-  color: var(--gold-dim);
-  padding: 0.4rem 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  user-select: none;
-}
-
-.dm-collapse > summary::-webkit-details-marker { display: none; }
-
-.dm-collapse > summary::before {
-  content: '▸';
-  display: inline-block;
-  font-size: 0.899rem;
-  color: var(--gold-dim);
-  transition: transform 0.18s;
-}
-
-.dm-collapse[open] > summary::before {
-  transform: rotate(90deg);
-}
-
-.dm-collapse > summary:hover {
-  color: var(--gold);
-}
-
-.dm-collapse[open] > summary {
-  color: var(--gold);
-  margin-bottom: 0.4rem;
-}
-
-.dm-collapse > *:not(summary) {
-  font-size: 1.02rem;
-}
-
-
-/* ════════════════════════════════════════════════════════════════
-   OPERATIONAL LINKS BAR (top of Spine)
-   ════════════════════════════════════════════════════════════════ */
-
-.dm-ops-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem 0 2rem;
-  padding: 0.8rem 1rem;
-  border: 1px solid var(--gold-rule);
-  background: rgba(201,153,58,0.03);
-}
-
-.dm-ops-links a {
-  font-family: 'Cinzel', serif;
-  font-size: 0.92rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--gold-dim);
-  text-decoration: none;
-  padding: 0.3rem 0.7rem;
-  border: 1px solid var(--gold-rule);
-  background: rgba(0,0,0,0.15);
-  transition: color 0.18s, border-color 0.18s, background 0.18s;
-}
-
-.dm-ops-links a:hover {
-  color: var(--gold);
-  border-color: var(--gold-dim);
-  background: rgba(201,153,58,0.08);
-}
-
-
-/* ════════════════════════════════════════════════════════════════
-   VOYAGE GRID — briefing | voyage | delta layout per entry
-   ════════════════════════════════════════════════════════════════ */
-
+/* ── Voyage grid ──
+   Briefing and voyage side by side, with the delta under them. */
 .voyage-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   margin: 1rem 0;
 }
-
 .voyage-grid .voyage-col {
   padding: 0.9rem 1rem;
   border: 1px solid var(--gold-rule);
   background: rgba(255,255,255,0.01);
 }
-
 .voyage-grid .voyage-col-eyebrow {
   font-family: 'Cinzel', serif;
   font-size: 0.899rem;
@@ -956,16 +961,13 @@ body::after {
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--gold-rule);
 }
-
 .voyage-grid .voyage-col-body {
   font-size: 0.99rem;
   line-height: 1.55;
   color: var(--text-dim);
 }
-
 .voyage-grid .voyage-col-body p { margin: 0 0 0.6rem; }
 .voyage-grid .voyage-col-body p:last-child { margin-bottom: 0; }
-
 .voyage-grid .voyage-col-link {
   display: inline-block;
   margin-top: 0.6rem;
@@ -975,12 +977,10 @@ body::after {
   border-bottom: 1px solid var(--gold-rule);
   padding-bottom: 0.1rem;
 }
-
 .voyage-grid .voyage-col-link:hover {
   color: var(--gold);
   border-bottom-color: var(--gold-dim);
 }
-
 .voyage-delta {
   margin: 0.6rem 0 2rem;
   padding: 1rem 1.2rem;
@@ -988,7 +988,6 @@ body::after {
   border-left: 3px solid var(--dm-teal, var(--gold-dim));
   background: rgba(0,0,0,0.18);
 }
-
 .voyage-delta-eyebrow {
   font-family: 'Cinzel', serif;
   font-size: 0.899rem;
@@ -997,309 +996,20 @@ body::after {
   color: var(--gold-dim);
   margin-bottom: 0.5rem;
 }
-
 .voyage-delta-body {
   font-size: 1.01rem;
   line-height: 1.6;
   color: var(--text);
 }
-
 .voyage-delta-body em {
   color: var(--text-muted);
   font-size: 0.97rem;
 }
 
-@media (max-width: 720px) {
-  .voyage-grid { grid-template-columns: 1fr; }
-}
-
-
-/* ════════════════════════════════════════════════════════════════
-   PAGE-SPINE COLLAPSIBLES
-   For top-level (h2/h3) sections that are themselves collapsible.
-   Reads as a section heading; chevron at the leading edge.
-   ════════════════════════════════════════════════════════════════ */
-
-.dm-collapse-section {
-  margin: 1.5rem 0;
-  border-top: 1px solid var(--gold-rule);
-  padding-top: 0.5rem;
-}
-
-.dm-collapse-section > summary {
-  cursor: pointer;
-  list-style: none;
-  user-select: none;
-  display: flex;
-  align-items: baseline;
-  gap: 0.7rem;
-  padding: 0.6rem 0;
-  font-family: 'Cinzel', serif;
-  font-size: 1.35rem;
-  color: var(--gold);
-  letter-spacing: 0.03em;
-}
-
-.dm-collapse-section > summary::-webkit-details-marker { display: none; }
-
-.dm-collapse-section > summary::before {
-  content: '▸';
-  display: inline-block;
-  font-size: 0.94rem;
-  color: var(--gold-dim);
-  transition: transform 0.2s;
-  flex-shrink: 0;
-  width: 0.85rem;
-  text-align: center;
-  position: relative;
-  top: -0.15rem;
-}
-
-.dm-collapse-section[open] > summary::before {
-  transform: rotate(90deg);
-}
-
-.dm-collapse-section > summary:hover {
-  color: var(--gold-bright, var(--gold));
-}
-
-.dm-collapse-section > summary:hover::before {
-  color: var(--gold);
-}
-
-/* Subsection variant — uses h3-level sizing inside an outer section */
-.dm-collapse-section.is-sub {
-  margin: 1rem 0;
-  border-top: 1px solid rgba(201,153,58,0.18);
-}
-
-.dm-collapse-section.is-sub > summary {
-  font-size: 1.1rem;
-  padding: 0.45rem 0;
-}
-
-.dm-collapse-section > .dm-collapse-section-body {
-  padding: 0.5rem 0 1rem 1.55rem;
-}
-
-
-/* ════════════════════════════════════════════════════════════════
-   DOSSIER LIST — collapsible rows that expand inline
-   No <table>. Each entity is a <details class="dossier-row">.
-   Collapsed: portrait | name | role | brief detail (grid layout)
-   Expanded: same row stays + body unfolds underneath, indented
-   under the name column.
-   ════════════════════════════════════════════════════════════════ */
-
-.dossier-list {
-  margin: 1rem 0 1.5rem;
-  border: 1px solid var(--gold-rule);
-  background: rgba(255,255,255,0.01);
-}
-
-.dossier-row {
-  border-bottom: 1px solid rgba(201,153,58,0.12);
-}
-
-.dossier-row:last-child {
-  border-bottom: none;
-}
-
-.dossier-row > summary {
-  cursor: pointer;
-  list-style: none;
-  user-select: none;
-  display: grid;
-  grid-template-columns: 64px 1fr 1.6fr 0.85rem;
-  align-items: center;
-  gap: 0 1rem;
-  padding: 0.55rem 0.9rem;
-  transition: background 0.15s;
-}
-
-.dossier-row > summary::-webkit-details-marker { display: none; }
-
-.dossier-row > summary:hover {
-  background: rgba(201,153,58,0.04);
-}
-
-.dossier-row[open] > summary {
-  background: rgba(201,153,58,0.06);
-}
-
-/* Chevron at the trailing edge of the row */
-.dossier-row > summary::after {
-  content: '▸';
-  display: inline-block;
-  font-size: 0.888rem;
-  color: var(--gold-dim);
-  transition: transform 0.18s;
-  text-align: center;
-}
-
-.dossier-row[open] > summary::after {
-  transform: rotate(90deg);
-}
-
-/* Row cells inside the summary */
-.dossier-row .dossier-portrait {
-  grid-column: 1;
-  width: 56px;
-  height: 56px;
-  padding: 0;
-}
-
-.dossier-row .dossier-portrait img {
-  width: 56px;
-  height: 56px;
-  object-fit: cover;
-  border: 1px solid var(--gold-rule);
-  display: block;
-}
-
-.dossier-row .dossier-portrait .dossier-monogram {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  border: 1px solid var(--gold-rule);
-  background: rgba(201,153,58,0.06);
-  color: var(--gold-dim);
-  font-family: 'Cinzel', serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-.dossier-row .dossier-id {
-  grid-column: 2;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
-.dossier-row .dossier-name {
-  font-family: 'Cinzel', serif;
-  font-weight: 600;
-  color: var(--text);
-  font-size: 1.04rem;
-  letter-spacing: 0.01em;
-  line-height: 1.25;
-}
-
-.dossier-row .dossier-role {
-  font-size: 0.942rem;
-  color: var(--text-dim);
-  font-style: italic;
-  margin-top: 0.15rem;
-}
-
-.dossier-row .dossier-detail {
-  grid-column: 3;
-  font-size: 0.97rem;
-  color: var(--text-dim);
-  line-height: 1.45;
-  min-width: 0;
-}
-
-/* Expanded body — sits underneath, indented past portrait column */
-.dossier-row-body {
-  padding: 0.4rem 1rem 1.1rem calc(64px + 1rem + 0.9rem);
-  font-size: 1.01rem;
-  line-height: 1.6;
-  color: var(--text);
-  background: rgba(0,0,0,0.12);
-  border-top: 1px solid rgba(201,153,58,0.1);
-}
-
-.dossier-row-body p { margin: 0 0 0.7rem; }
-.dossier-row-body p:last-child { margin-bottom: 0; }
-
-.dossier-row-body dl { margin: 0.4rem 0; }
-.dossier-row-body dt {
-  font-family: 'Cinzel', serif;
-  font-size: 0.92rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold-dim);
-  margin-top: 0.8rem;
-}
-.dossier-row-body dt:first-child { margin-top: 0; }
-.dossier-row-body dd {
-  margin: 0.3rem 0 0;
-}
-
-/* Status pill — for plot-hook rows and other state-bearing dossiers */
-.dossier-status {
-  display: inline-block;
-  font-family: 'Cinzel', serif;
-  font-size: 0.899rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.15rem 0.5rem;
-  border: 1px solid var(--gold-rule);
-  color: var(--gold-dim);
-  margin-top: 0.2rem;
-}
-
-.dossier-status.is-active { color: var(--gold); border-color: var(--gold-dim); }
-.dossier-status.is-forthcoming { color: var(--dm-teal, var(--gold-dim)); }
-.dossier-status.is-imminent { color: var(--dm-crimson, var(--gold)); border-color: var(--dm-crimson, var(--gold-dim)); }
-.dossier-status.is-inactive { color: var(--text-muted); opacity: 0.8; }
-
-/* Inline tag-pills used inside dossier rows (e.g. plot-hook type tags) */
-.dossier-row .dm-tag {
-  font-size: 0.858rem;
-  padding: 0.1rem 0.4rem;
-  margin-left: 0.3rem;
-  vertical-align: middle;
-}
-
-/* Variants for artifacts page — wider portrait, item-image-friendly */
-.dossier-list.dossier-artifacts .dossier-row > summary {
-  grid-template-columns: 80px 1fr 1.8fr 0.85rem;
-}
-
-.dossier-list.dossier-artifacts .dossier-row .dossier-portrait,
-.dossier-list.dossier-artifacts .dossier-row .dossier-portrait img,
-.dossier-list.dossier-artifacts .dossier-row .dossier-portrait .dossier-monogram {
-  width: 72px;
-  height: 72px;
-}
-
-.dossier-list.dossier-artifacts .dossier-row-body {
-  padding-left: calc(80px + 1rem + 0.9rem);
-}
-
-/* Mobile: collapse to single column inside the row summary */
-@media (max-width: 720px) {
-  .dossier-row > summary {
-    grid-template-columns: 56px 1fr 1rem;
-    grid-template-rows: auto auto;
-    gap: 0.3rem 0.7rem;
-  }
-  .dossier-row .dossier-portrait { grid-row: 1 / 3; }
-  .dossier-row .dossier-id { grid-column: 2; }
-  .dossier-row .dossier-detail {
-    grid-column: 2;
-    grid-row: 2;
-    font-size: 0.963rem;
-  }
-  .dossier-row > summary::after { grid-column: 3; grid-row: 1; }
-  .dossier-row-body { padding-left: 1rem; }
-}
-
-/* ── Stat blocks ─────────────────────────────────────────────────────
-   Shaped after a D&D Beyond block, which is the format every player at
-   the table already reads: a tight column of labelled lines, one rule
-   between each band, and features as hanging-indent paragraphs rather
-   than a two-level list. The old block set every feature name on its
-   own line above its text, which is what made a long block unreadable
-   — the eye had to travel twice per feature.
-
-   Scoped so a block sits in one narrow column even on a wide page. A
-   stat block is scanned, not read, and a 1100px line length defeats it. */
+/* ── Stat blocks ──
+   Shaped after a D&D Beyond block: a tight column of labelled lines, one
+   rule between bands, and features as hanging-indent paragraphs. Held to
+   one narrow column even on a wide page, because a block is scanned. */
 .sb {
   border: 1px solid var(--gold-rule);
   border-top: 3px solid var(--gold-dim);
@@ -1331,8 +1041,8 @@ body::after {
 .sb-line { margin: 0.18rem 0; }
 .sb-line strong { color: var(--gold-light); font-weight: 600; }
 
-/* The ability row: score over modifier, six even columns, ruled off
-   above and below the way the printed block does it. */
+/* The ability row: score over modifier, six even columns, ruled above
+   and below. */
 .sb-abil {
   width: 100%;
   border-collapse: collapse;
@@ -1361,7 +1071,7 @@ body::after {
 }
 .dm-content .sb-abil tbody tr:hover td { background: none; }
 
-/* Band headings — Traits, Actions, Bonus Actions, Reactions. */
+/* Band headings: Traits, Actions, Bonus Actions, Reactions. */
 .sb h4 {
   font-family: 'Cinzel', serif;
   font-size: 1.05rem;
@@ -1375,9 +1085,8 @@ body::after {
   border-bottom: 1px solid var(--gold-rule);
 }
 
-/* Features. dt and dd run together as one paragraph with a hanging
-   indent, so a feature reads as a sentence that starts with its name.
-   Done in CSS rather than in markup so every existing block gains it. */
+/* Features: dt and dd run together as one paragraph with a hanging
+   indent, so a feature reads as a sentence that starts with its name. */
 .sb dl { margin: 0; }
 .dm-content .sb dt {
   display: inline;
@@ -1395,397 +1104,487 @@ body::after {
   display: block;
   margin-bottom: 0.55rem;
 }
-.sb dd > p:first-child { display: inline; }
 .sb ul, .dm-content .sb ul { margin: 0.35rem 0 0.55rem; }
 
-/* A spell list reads as a list, not as prose. */
+/* A spell list reads as a list. */
 .sb-spells { margin: 0.4rem 0 0; padding-left: 0; list-style: none; }
 .sb-spells li { margin: 0.3rem 0; padding-left: 1.1rem; text-indent: -1.1rem; }
 .sb-spells .sb-slot { color: var(--gold-light); font-weight: 600; }
 
-@media (max-width: 620px) {
-  .sb { padding: 0.9rem 1rem 1rem; font-size: 0.98rem; }
-  .sb-name { font-size: 1.3rem; }
-  .sb-abil { font-size: 0.9rem; }
+
+/* ═══════════════════════════════════════════════════════════════
+   9  DOSSIER ROWS AND REGISTERS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Portraits ──
+   One scale: a 56px row face, filled by portraits.js with an image or a
+   monogram. The identity card and register rows set their own size. */
+.dossier-portrait {
+  width: 56px;
+  min-width: 56px;
+  height: 56px;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--gold-rule);
+}
+.dossier-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  display: block;
+}
+.dossier-monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--gold-rule);
+  background: rgba(201,153,58,0.06);
+  color: var(--gold-dim);
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
 }
 
-/* ── DM dossier tabs ─────────────────────────────────────────────────
-   Tabs, not pills. The pill shape read as a row of filter chips, which
-   is what the register pages use them for — two different controls in
-   one costume. These match the section tab strip on the reference
-   pages, so a dossier and a reference page are navigated the same way. */
-.pill-tabs {
+/* ── Dossier list ──
+   Each entity is a <details class="dossier-row">. Collapsed: portrait,
+   name and role, brief detail, chevron. Open: the body unfolds under the
+   row, indented past the portrait. */
+.dossier-list {
+  margin: 1rem 0 1.5rem;
+  border: 1px solid var(--gold-rule);
+  background: rgba(255,255,255,0.01);
+}
+.dossier-row {
+  border-bottom: 1px solid rgba(201,153,58,0.12);
+}
+.dossier-row:last-child {
+  border-bottom: none;
+}
+.dossier-row > summary {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  display: grid;
+  grid-template-columns: 64px 1fr 1.6fr 0.85rem;
+  align-items: center;
+  gap: 0 1rem;
+  padding: 0.55rem 0.9rem;
+  transition: background 0.15s;
+}
+.dossier-row > summary::-webkit-details-marker { display: none; }
+.dossier-row > summary:hover {
+  background: rgba(201,153,58,0.04);
+}
+.dossier-row[open] > summary {
+  background: rgba(201,153,58,0.06);
+}
+.dossier-row > summary::after {
+  content: '▸';
+  display: inline-block;
+  font-size: 0.888rem;
+  color: var(--gold-dim);
+  transition: transform 0.18s;
+  text-align: center;
+}
+.dossier-row[open] > summary::after {
+  transform: rotate(90deg);
+}
+.dossier-row .dossier-portrait {
+  grid-column: 1;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+}
+.dossier-row .dossier-portrait img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border: 1px solid var(--gold-rule);
+  display: block;
+}
+.dossier-row .dossier-portrait .dossier-monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--gold-rule);
+  background: rgba(201,153,58,0.06);
+  color: var(--gold-dim);
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.dossier-row .dossier-id {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.dossier-row .dossier-name {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 1.04rem;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+.dossier-row .dossier-role {
+  font-size: 0.942rem;
+  color: var(--text-dim);
+  font-style: italic;
+  margin-top: 0.15rem;
+}
+.dossier-row .dossier-detail {
+  grid-column: 3;
+  font-size: 0.97rem;
+  color: var(--text-dim);
+  line-height: 1.45;
+  min-width: 0;
+}
+.dossier-row .dm-tag {
+  font-size: 0.858rem;
+  padding: 0.1rem 0.4rem;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+}
+.dossier-row-body {
+  padding: 0.4rem 1rem 1.1rem calc(64px + 1rem + 0.9rem);
+  font-size: 1.01rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: rgba(0,0,0,0.12);
+  border-top: 1px solid rgba(201,153,58,0.1);
+}
+.dossier-row-body p { margin: 0 0 0.7rem; }
+.dossier-row-body p:last-child { margin-bottom: 0; }
+.dossier-row-body dl { margin: 0.4rem 0; }
+.dossier-row-body dt {
+  font-family: 'Cinzel', serif;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-top: 0.8rem;
+}
+.dossier-row-body dt:first-child { margin-top: 0; }
+.dossier-row-body dd {
+  margin: 0.3rem 0 0;
+}
+
+/* Status pill, for plot hooks and other rows that carry a state. */
+.dossier-status {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.899rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--gold-rule);
+  color: var(--gold-dim);
+  margin-top: 0.2rem;
+}
+.dossier-status.is-active { color: var(--gold); border-color: var(--gold-dim); }
+.dossier-status.is-forthcoming { color: var(--dm-teal, var(--gold-dim)); }
+.dossier-status.is-imminent { color: var(--dm-crimson, var(--gold)); border-color: var(--dm-crimson, var(--gold-dim)); }
+.dossier-status.is-inactive { color: var(--text-muted); opacity: 0.8; }
+
+/* ── Register ──
+   A list you can narrow, where each row is an entry with a page of its
+   own. Class names follow the player site's register. */
+.dm-register-bar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .6rem;
+  margin: 0 0 .9rem;
+}
+.dm-register-search {
+  flex: 1 1 15rem; min-width: 0;
+  font-family: 'Crimson Pro', Georgia, serif; font-size: 1rem;
+  background: var(--bg-card); color: var(--text);
+  border: 1px solid var(--rule); border-radius: 2px;
+  padding: .5rem .8rem;
+}
+.dm-register-search::placeholder { color: var(--text-muted); font-style: italic; }
+.dm-register-search:focus { outline: none; border-color: var(--gold-rule); }
+
+.facets { display: flex; flex-direction: column; gap: .5rem; margin-bottom: .8rem; }
+.facet { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem .6rem; }
+.facet-label {
+  font-family: 'Cinzel', serif; font-size: .62rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--text-muted);
+  flex: 0 0 5.5rem;
+}
+.facet-pills { display: flex; flex-wrap: wrap; gap: .3rem; }
+.filter-tag {
+  font-family: 'Cinzel', serif; font-size: .66rem; letter-spacing: .1em;
+  text-transform: uppercase; cursor: pointer;
+  background: none; color: var(--text-dim);
+  border: 1px solid var(--rule); border-radius: 999px;
+  padding: .2rem .65rem; transition: color .13s, border-color .13s, background .13s;
+}
+.filter-tag:hover { color: var(--text); border-color: var(--gold-rule); }
+.filter-tag.is-active {
+  color: var(--gold-light); border-color: var(--gold-rule);
+  background: var(--gold-faint);
+}
+.filter-tag:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
+
+.result-line {
+  display: flex; align-items: baseline; gap: .8rem;
+  font-family: 'Cinzel', serif; font-size: .64rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--text-muted);
+  border-bottom: 1px solid var(--rule); padding-bottom: .5rem; margin-bottom: .2rem;
+}
+.clear-btn {
+  margin-left: auto; font: inherit; cursor: pointer;
+  background: none; border: none; color: var(--gold-dim);
+  border-bottom: 1px solid var(--gold-rule); padding: 0 0 .1rem;
+}
+.clear-btn:hover { color: var(--gold-light); }
+
+.register { display: flex; flex-direction: column; }
+.ent { border-bottom: 1px solid var(--rule-soft); position: relative; }
+.ent:last-child { border-bottom: none; }
+.ent-row {
+  display: grid; grid-template-columns: 3.1rem 1fr auto;
+  gap: .9rem; align-items: center;
+  padding: .7rem 2.2rem .7rem .7rem;
+  text-decoration: none; border: none; transition: background .13s;
+}
+.ent-row:hover { background: var(--bg-raised); }
+.ent-face {
+  width: 3.1rem; height: 3.1rem; border-radius: 2px; overflow: hidden;
+  background: var(--bg-raised); border: 1px solid var(--rule);
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+.ent-face img { width: 100%; height: 100%; object-fit: cover; }
+/* A row can use a portrait as its face; it keeps the row's size. */
+.ent-face.dossier-portrait {
+  width: 3.1rem; min-width: 3.1rem; height: 3.1rem;
+  border-color: var(--rule); border-radius: 2px;
+}
+.ent-face.dossier-portrait .dossier-monogram {
+  font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--gold-dim);
+}
+.face-mono {
+  font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--gold-dim);
+}
+.ent-name {
+  font-family: 'Cinzel', serif; font-size: 1rem; color: var(--text);
+  display: flex; flex-direction: column; gap: .15rem; min-width: 0;
+}
+.ent-sub {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: .92rem;
+  color: var(--text-dim); letter-spacing: 0;
+}
+.ent-state {
+  font-family: 'Cinzel', serif; font-size: .6rem; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--text-muted); text-align: right;
+}
+.ent-toggle {
+  position: absolute; top: .9rem; right: .5rem;
+  width: 1.5rem; height: 1.5rem; line-height: 1;
+  background: none; border: none; cursor: pointer;
+  color: var(--text-muted); font-size: .7rem;
+  transition: transform .15s, color .13s;
+}
+.ent-toggle:hover { color: var(--text); }
+.ent.is-open .ent-toggle { transform: rotate(180deg); }
+.ent-detail {
+  display: none;
+  padding: 0 .9rem 1rem 4.7rem;
+  color: var(--text-dim); font-size: .96rem; line-height: 1.6;
+}
+.ent.is-open .ent-detail { display: block; }
+.ent-detail p { margin: 0 0 .5rem; }
+.ent-detail .ent-links { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .6rem; }
+.register-empty {
+  padding: 1.4rem .7rem; color: var(--text-muted); font-style: italic;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   10  BOARDS: TRACKER AND VOYAGE BOARD
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Tracker (prime/tracker/) ──
+   Rows are the wiki's dossier rows with a fourth column for where the
+   record stands. Violet marks the DM layer, as on the voyage board. */
+.tr-standing {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.15rem;
-  margin: 1.2rem 0 1.3rem;
-  padding-bottom: 0;
-  border-bottom: 1px solid var(--gold-rule);
+  gap: 0;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--dm-elev-1);
+  margin: 0 0 1.4rem;
 }
-.pill-tab {
-  appearance: none;
-  cursor: pointer;
-  flex: 0 0 auto;
+.tr-fact {
+  flex: 1 1 14rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.8rem 1.1rem;
+  border-right: 1px solid var(--rule-soft);
+  min-width: 0;
+}
+.tr-fact:last-child { border-right: none; }
+.tr-fact-label {
   font-family: 'Cinzel', serif;
-  font-size: 0.76rem;
-  font-weight: 600;
-  /* Five tabs have to clear the entry column without wrapping to a
-     second row, so the tracking and gutters are set to fit the set. */
-  letter-spacing: 0.085em;
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--text-muted);
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid transparent;
-  border-radius: 0;
-  padding: 0.55rem 0.7rem;
-  margin-bottom: -1px;
-  white-space: nowrap;
-  transition: color .15s ease, border-color .15s ease, background .15s ease;
 }
-.pill-tab:first-child { padding-left: 0; }
-.pill-tab:hover { color: var(--gold-light); background: var(--gold-faint); }
-.pill-tab[aria-selected="true"] {
-  color: var(--gold);
-  border-bottom-color: var(--gold);
-  background: transparent;
-}
-.pill-tab:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
-.pill-panel[hidden] { display: none; }
-@media (max-width: 560px) {
-  .pill-tabs { gap: 0; }
-  .pill-tab { flex: 1 1 auto; text-align: center; padding: 0.5rem 0.5rem; font-size: 0.7rem; letter-spacing: 0.08em; }
-}
+.tr-fact-body { font-size: 1rem; line-height: 1.4; color: var(--text-dim); }
+.tr-fact-voyage { font-family: 'Cinzel', serif; letter-spacing: 0.06em; color: var(--gold-light); }
+/* A voyage played and not yet written in asks for action: alarm colour. */
+.tr-fact.is-behind { box-shadow: inset 3px 0 0 var(--dm-crimson); }
+.tr-fact.is-behind .tr-fact-label { color: var(--dm-crimson); }
 
-
-/* ═══════════════════════════════════════════════
-   CONTENT SCRIM, SECTION TABS, IDENTITY CARD
-   ───────────────────────────────────────────────
-   Carries the player site's treatment across to the DM wiki. Three
-   problems this solves, in order of how badly they read:
-
-   1. DM prose sat directly on the continuum backdrop with nothing behind
-      it, so the page looked thin where the player pages look composed.
-      The player site answers this with .content::before — a translucent
-      field that behaves as a shadow rather than a panel, its edges
-      dissolved by a wide box-shadow spread of the same colour. Same
-      treatment here, on .dm-content.
-
-   2. The identity card is a 190px column, and .stat-row is a flex row
-      with the value right-aligned. A value of any length therefore wrapped
-      one word per line against the right edge. Rows now stack: label over
-      value, left-aligned, which is what the player manifest pages do.
-
-   3. Top-level sections were collapsed <details>, so a reference page
-      loaded as a list of closed headings with no substance, and the
-      "On this page" rail linked to subsections inside them that could not
-      be scrolled to. Those sections are now a tab strip — see
-      prime/scripts/dm-sections.js — with everything inside the active tab
-      expanded.
-   ═══════════════════════════════════════════════ */
-
-/* ── 1. Content scrim ── */
-/* The scrim is a pseudo-element inset NEGATIVELY past its column, so it
-   pushes the document wider than the viewport whenever the column is
-   near full width. It is decorative and pointer-events:none, so clip the
-   overflow rather than shrinking it. dm.css loads only under /prime/. */
-body { overflow-x: clip; }
-
-.dm-content::before {
-  content: '';
-  position: absolute;
-  /* The player site darkens a bright nebula to make its column readable.
-     Copying that here did nothing, because the continuum backdrop is already
-     near-black - a dark scrim over a dark photograph is invisible, which is
-     why the DM pages read as text floating in space.
-
-     So this inverts it: the panel is a shade LIGHTER than the backdrop, with
-     a hairline edge, which is what gives the column a surface to sit on. */
-  /* The panel is sized off the column, which is now 1140px. The old
-     inset was set against a 920px column and left the content crowding
-     its own edge once the column grew. */
-  inset: -2rem -2.5rem;
-  z-index: -1;
-  background: linear-gradient(180deg, rgba(26, 34, 52, 0.70), rgba(16, 22, 36, 0.80));
-  border-left: 1px solid rgba(150, 172, 206, 0.09);
-  border-right: 1px solid rgba(150, 172, 206, 0.09);
-  backdrop-filter: blur(16px) saturate(115%);
-  -webkit-backdrop-filter: blur(16px) saturate(115%);
-  /* A wider column needs a wider falloff, or the panel reads as a hard
-     rectangle pasted on the backdrop rather than a shadow. */
-  box-shadow: 0 0 90px 48px rgba(7, 10, 18, 0.58);
-  pointer-events: none;
-}
-@media (max-width: 1240px) {
-  .dm-content::before { inset: -1.5rem -1.5rem; }
-}
-@media (max-width: 620px) {
-  .dm-content::before { inset: -0.75rem -0.9rem; box-shadow: 0 0 40px 20px rgba(7, 10, 18, 0.5); }
-}
-
-/* ── 2. Identity card ──
-   Wider column, and rows that stack instead of fighting for horizontal
-   room. .stat-val-long keeps working; plain .stat-val now behaves the
-   same way, because in a column this narrow every value is long. */
-.entry-header { grid-template-columns: 264px 1fr; gap: 2.4rem; }
-.identity-card .stat-row {
-  display: block;
-  padding: 0.5rem 0;
-}
-.identity-card .stat-key {
-  display: block;
-  white-space: normal;
-  margin-bottom: 0.2rem;
-}
-.identity-card .stat-val,
-.identity-card .stat-val.stat-val-long {
-  display: block;
-  text-align: left;
-  white-space: normal;
-  overflow-wrap: break-word;
-  font-size: 0.9rem;
-  line-height: 1.45;
-}
-@media (max-width: 760px) {
-  .entry-header { grid-template-columns: 1fr; gap: 1.6rem; }
-  .identity-card { max-width: 340px; }
-}
-
-/* ── 3. Section tabs ──
-   The strip replaces the stack of closed <summary> headings. It scrolls
-   sideways rather than wrapping into rows, so a 13-section page keeps one
-   clean line instead of three ragged ones. */
-.dm-sectabs {
+.tr-controls {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.2rem 0.15rem;
-  margin: 0 0 2rem;
-  padding-bottom: 0.7rem;
-  border-bottom: 1px solid var(--gold-rule);
+  align-items: center;
+  gap: 0.7rem 1rem;
+  margin: 0 0 1.6rem;
 }
-.dm-sectab {
-  flex: 0 0 auto;
+.tr-filter {
+  flex: 1 1 16rem;
+  min-width: 0;
+  background: var(--bg-deep);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  color: var(--text);
+  font: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+}
+.tr-filter::placeholder { color: var(--text-muted); font-style: italic; }
+.tr-filter:focus-visible { outline: 2px solid var(--ice); outline-offset: 1px; }
+.tr-voyages { display: flex; flex-wrap: wrap; gap: 0.2rem; }
+.tr-voyage {
   font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
   background: transparent;
   border: 1px solid transparent;
   border-radius: 2px;
-  padding: 0.5rem 0.85rem;
+  padding: 0.45rem 0.7rem;
   cursor: pointer;
-  white-space: nowrap;
-  transition: color .15s ease, background .15s ease, border-color .15s ease;
 }
-.dm-sectab:hover { color: var(--gold-light); background: var(--gold-faint); }
-.dm-sectab[aria-selected="true"] {
-  color: var(--gold-light);
-  background: var(--dm-elev-2);
-  border-color: var(--gold-rule);
-}
-.dm-sectab:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
+.tr-voyage:hover { color: var(--gold-light); background: var(--gold-faint); }
+.tr-voyage[aria-pressed="true"] { color: var(--gold-light); background: var(--dm-elev-2); border-color: var(--gold-rule); }
+.tr-voyage:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 
-/* A section acting as a tab panel: no summary marker, never indented. */
-.dm-collapse-section.is-sectab-panel {
-  border: none;
-  margin: 0;
-  padding: 0;
-  background: none;
-}
-.dm-collapse-section.is-sectab-panel > summary { display: none; }
-.dm-collapse-section.is-sectab-panel > .dm-collapse-section-body {
-  padding: 0;
-  border: none;
-}
-.dm-collapse-section.is-sectab-panel[hidden] { display: none; }
-
-/* A tab with no subsections has nothing to put in the rail, so the content
-   takes the whole canvas back rather than leaving a 220px gutter. */
-.dm-content.has-toc.toc-empty {
-  grid-template-columns: minmax(0, 1fr);
-  max-width: 920px;
-}
-
-/* ── Identity-card portrait ──
-   .dossier-portrait is pinned to 64px because it was built for the inline
-   rows on the Factions page. On a dossier page it is the portrait, and it
-   should fill the card the way the player manifest pages do. */
-.identity-card .dossier-portrait,
-.identity-card .portrait-frame {
-  width: 100%;
-  min-width: 0;
-  height: auto;          /* beats the 56px row-face height */
-  padding: 0 !important;
-  aspect-ratio: 1;
-  border: none;
-  border-bottom: 1px solid var(--rule);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.identity-card .dossier-portrait img,
-.identity-card .portrait-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: none;
-}
-.identity-card .dossier-monogram {
+.tr-count {
   font-family: 'Cinzel', serif;
-  font-size: 2.6rem;
-  letter-spacing: 0.08em;
-  color: var(--gold-faint);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 0.5rem;
 }
+.tr-empty { color: var(--text-muted); font-size: 0.95rem; margin: 0.5rem 0 1.5rem; }
+.tr-list { margin-top: 0; }
+.tr-list .dossier-row { scroll-margin-top: 4rem; }   /* clears the fixed nav bar on a phone */
 
-/* ── Ops links ──
-   Was a bordered box full of bordered boxes, which read as two competing
-   frames and wrapped into ragged rows. Now a quiet row of links under the
-   page header: no outer panel, no chrome per item, a hairline to sit on. */
-.dm-ops-links {
+.tr-list .dossier-row > summary {
+  grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1.5fr) 7.2rem 0.85rem;
+  align-items: start;
+  padding: 0.7rem 0.9rem;
+}
+.tr-list .dossier-row > summary::after { align-self: center; }
+.tr-list .dossier-row .dossier-detail { font-size: 0.94rem; }
+.tr-list .dossier-row .dossier-role { font-size: 0.9rem; }
+.tr-list .dossier-row.is-child .dossier-id { padding-left: 0.9rem; border-left: 1px solid var(--rule); }
+.tr-list .dossier-row .dm-tag { font-size: 0.58rem; letter-spacing: 0.14em; padding: 0.08rem 0.38rem; margin-left: 0.5rem; }
+.tr-meta {
+  grid-column: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.18rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.64rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: right;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.tr-meta-main { color: var(--text-dim); }
+.tr-meta-dm { color: var(--ice-light); }
+
+/* An open row. */
+.tr-list .dossier-row-body dt { font-size: 0.7rem; letter-spacing: 0.16em; color: var(--text-muted); }
+.tr-list .dossier-row-body dt.is-dm { color: var(--ice-light); }
+.tr-list .dossier-row-body dd.is-dm { border-left: 2px solid var(--ice-dim); padding-left: 0.8rem; }
+.tr-facts, .tr-dm {
+  display: grid;
+  grid-template-columns: minmax(7rem, 11rem) minmax(0, 1fr);
+  gap: 0.3rem 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.tr-fact-key { color: var(--text-muted); }
+.tr-fact-val { color: var(--text-dim); margin: 0; }
+ul.tr-fact-val { padding-left: 1.1rem; }
+ul.tr-fact-val li { margin-bottom: 0.25rem; color: var(--text); }
+.tr-objs { list-style: none; margin: 0; padding: 0; font-size: 0.97rem; }
+.tr-objs li { padding-left: 1.4rem; position: relative; margin-bottom: 0.2rem; }
+.tr-objs li::before { content: '\25A1'; position: absolute; left: 0; color: var(--text-muted); }
+.tr-objs li.is-done { color: var(--text-muted); text-decoration: line-through; }
+.tr-objs li.is-done::before { content: '\25A0'; text-decoration: none; }
+.tr-voyage-block { border-top: 1px solid var(--rule-soft); padding: 0.35rem 0; }
+.tr-voyage-block:first-child { border-top: none; padding-top: 0; }
+.tr-voyage-block > summary {
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--gold-dim);
+}
+.tr-voyage-block[open] > summary { color: var(--gold-light); }
+.tr-voyage-n { margin-left: 0.7rem; font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+.tr-voyage-block ul { margin: 0.4rem 0 0.3rem; padding-left: 1.1rem; }
+.tr-voyage-block li { font-size: 0.96rem; line-height: 1.5; color: var(--text-dim); margin-bottom: 0.3rem; }
+.tr-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.2rem 0 0; }
+.tr-chip {
+  font-size: 0.9rem;
+  padding: 0.12rem 0.55rem;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  color: var(--text-dim);
+  text-decoration: none;
+  border-bottom-style: solid;
+}
+.tr-chip:hover { border-color: var(--gold-dim); color: var(--gold-light); }
+.tr-out {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.15rem 1.4rem;
-  margin: -0.4rem 0 2.2rem;
-  padding: 0 0 0.9rem;
-  border: none;
-  border-bottom: 1px solid var(--rule-soft);
-  background: none;
+  gap: 0.4rem 1.2rem;
+  margin-top: 1rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--rule-soft);
+  font-size: 0.86rem;
 }
-.dm-ops-links a {
-  font-family: 'Cinzel', serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  text-decoration: none;
-  padding: 0.2rem 0;
-  border: none;
-  background: none;
-  transition: color 0.18s;
-}
-.dm-ops-links a:hover { color: var(--gold-light); background: none; }
+.tr-id { margin-left: auto; font-family: ui-monospace, monospace; font-size: 0.72rem; color: var(--text-muted); }
 
-/* ── Dossier cards ──
-   The index was a table of names. A dossier's portrait is the fastest way
-   to find it, so the listing is a grid of faces instead. Auto-fill keeps
-   the rows honest at any width without a media query per breakpoint. */
-.dm-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
-  gap: 0.6rem;
-  margin: 1.4rem 0 0.5rem;
-}
-.dm-card {
-  display: flex;
-  gap: 0.85rem;
-  align-items: flex-start;
-  padding: 0.7rem;
-  border: 1px solid var(--rule-soft);
-  background: var(--dm-elev-1);
-  text-decoration: none;
-  transition: border-color .18s ease, background .18s ease, transform .18s ease;
-}
-.dm-card:hover {
-  border-color: var(--gold-rule);
-  background: var(--dm-elev-2);
-  transform: translateY(-1px);
-}
-.dm-card-face {
-  flex: 0 0 72px;
-  width: 72px;
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border: 1px solid var(--rule);
-  background: rgba(255,255,255,0.02);
-  padding: 0 !important;
-  min-width: 72px !important;
-  border-color: var(--rule);
-}
-.dm-card-face img { width: 100%; height: 100%; object-fit: cover; border: none; }
-.dm-card-face .dossier-monogram {
-  font-family: 'Cinzel', serif; font-size: 1.4rem; color: var(--gold-faint);
-}
-.dm-card-text { display: flex; flex-direction: column; gap: 0.12rem; min-width: 0; }
-.dm-card-name {
-  font-family: 'Cinzel', serif; font-size: 0.95rem; color: var(--gold-light);
-  line-height: 1.25;
-}
-.dm-card-role {
-  font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--ice-dim);
-}
-.dm-card-sub {
-  font-size: 0.82rem; color: var(--text-dim); line-height: 1.35; margin-top: 0.15rem;
-}
-
-/* ── Grouped sidebar ──
-   Five group labels cost vertical room the player sidebar can afford and
-   this one cannot, since the DM nav carries more destinations. Tighter
-   label and link rhythm so the whole list fits without scrolling at a
-   normal window height. */
-.side-nav-group-label {
-  padding: 0.8rem 1.4rem 0.22rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  color: var(--ice-dim);
-  opacity: 1;
-}
-.side-nav-body > .side-nav-group-label:first-of-type { padding-top: 0.3rem; }
-.side-nav-link { padding-top: 0.36rem; padding-bottom: 0.36rem; }
-
-/* ── Identity card: unbox it ──
-   The player site's rule is that the backdrop does the work and what
-   separates things is a rule and space, not a box. The identity card still
-   carried a fill, a blur and a border, so on a dossier page it read as a
-   panel bolted to the side of the prose. The portrait and the hairlines
-   between rows are enough structure. */
-.dm-content .identity-card {
-  background: var(--bg-card);
-  border: 1px solid var(--rule);
-  border-radius: 2px;
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
-  overflow: hidden;
-}
-/* The card's own 1.1rem gutter was being zeroed here, so every label and
-   value sat flush against the border. Restored, with a little more room
-   at the foot. */
-.dm-content .identity-card .stat-card { padding: 0.45rem 1.05rem 0.8rem; }
-.dm-content .identity-card .stat-row:last-child { border-bottom: none; }
-
-/* The expand affordance, matching the player pages. */
-.dm-content .portrait-label {
-  font-size: 0.68rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  /* Sits outside .stat-card, so it needs the card's gutter of its own
-     rather than running into the border. */
-  margin: 0.55rem 0 0.1rem;
-  padding: 0 1.05rem;
-}
-.dm-content .cae-expandable { cursor: zoom-in; }
-
-/* ═══════════════════════════════════════════════════════════════
-   THE VOYAGE BOARD
-
-   Two parts, and the order matters: the LEDGER states the finding,
-   the MATRIX shows the evidence. A DM opening this page to plan wants
-   the finding; a DM arguing with the finding wants the evidence.
-
-   One colour decision carries the whole thing. Only OWED - an open
-   objective the players still hold, with nothing moved lately - takes
-   the alarm. Everything else is muted. A board that flags eight things
-   to mean three is a board that gets ignored, so "quiet" is deliberately
-   boring to look at.
-   ═══════════════════════════════════════════════════════════════ */
-
-/* ── status pips ── */
+/* ── Voyage board (campaign/voyages/) ──
+   The ledger states the finding; the matrix shows the evidence. Only
+   OWED, an open objective with nothing moved lately, takes the alarm
+   colour; everything else stays muted. */
 .tb-pip {
   display: inline-block;
   width: 6px; height: 6px;
@@ -1798,7 +1597,7 @@ body { overflow-x: clip; }
 .tb-pip.is-live  { background: var(--gold); }
 .tb-pip.is-quiet { background: var(--text-muted); opacity: 0.5; }
 
-/* ── the ledger ── */
+/* Ledger */
 .tb-ledger { margin: 0 0 1.6rem; }
 .tb-ledger-head {
   display: flex;
@@ -1865,7 +1664,7 @@ body { overflow-x: clip; }
   color: var(--text-muted);
 }
 
-/* ── controls ── */
+/* Controls */
 .tb-controls {
   display: flex;
   flex-wrap: wrap;
@@ -1923,11 +1722,8 @@ body { overflow-x: clip; }
     rgba(203, 216, 232, 0.14) 0 4px, transparent 4px 8px);
 }
 
-/* ── the matrix ──
-   The prose column is sized for reading; a matrix is sized for seeing,
-   so the board breaks out of the column. Grid rather than table: the
-   gutter and the header both stick while the body scrolls both ways,
-   which a table cannot do without fighting its own layout. */
+/* Matrix: breaks out of the prose column. A grid rather than a table, so
+   the gutter and the header both stick while the body scrolls both ways. */
 .tb-wrap {
   width: calc(100% + 2 * clamp(0.6rem, 4vw, 4.5rem));
   margin: 0 clamp(-4.5rem, -4vw, -0.6rem) 1.6rem;
@@ -1943,7 +1739,6 @@ body { overflow-x: clip; }
   position: relative;
   font-size: 0.86rem;
 }
-
 .tb-corner {
   position: sticky; left: 0; top: 0; z-index: 6;
   background: var(--bg-deep);
@@ -1979,8 +1774,8 @@ body { overflow-x: clip; }
   margin-top: 0.15rem;
   overflow-wrap: anywhere;
 }
-/* A voyage the data has not reached. The column still exists, so an
-   unsynced session never reads as a quiet one. */
+/* A voyage the data has not reached keeps its column, hatched, so it
+   never reads as a quiet one. */
 .tb-col.is-unsynced .tb-col-num { color: var(--text-muted); }
 .tb-col.is-unsynced,
 .tb-cell.is-unsynced {
@@ -2100,8 +1895,17 @@ body { overflow-x: clip; }
   text-transform: uppercase;
   color: var(--text-muted);
 }
+/* Beats the crew did not see, in the DM wiki's violet. */
+.tb-beat-dm {
+  margin-left: auto;
+  font-family: 'Cinzel', serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  color: var(--ice-light);
+  white-space: nowrap;
+}
 
-/* ── panel ── */
+/* Panel: the selected beat. */
 .tb-panel {
   border: 1px solid var(--rule);
   border-radius: 3px;
@@ -2146,198 +1950,15 @@ body { overflow-x: clip; }
 }
 .tb-panel-objs li.is-done { color: var(--text-muted); text-decoration: line-through; }
 .tb-panel-objs li.is-open { color: var(--text); }
-
-/* Beats the crew did not see. Violet is the DM wiki's own accent, so the
-   count and the list read as "ours" without a second legend to learn. */
-.tb-beat-dm {
-  margin-left: auto;
-  font-family: 'Cinzel', serif;
-  font-size: 0.58rem;
-  letter-spacing: 0.08em;
-  color: var(--ice-light);
-  white-space: nowrap;
-}
 .tb-panel-dm li { color: var(--text); }
 .tb-panel-dm li::marker { color: var(--ice); }
 
-@media (max-width: 760px) {
-  .tb-wrap { max-height: 66vh; }
-  .tb-legend { margin-left: 0; width: 100%; }
-  .tb-ledger-sub { margin-left: 0; width: 100%; }
-  .tb-debt { flex-direction: column; gap: 0.2rem; }
-}
-
-
-/* ── DOSSIER TABS, ATTACHED ──
-   The strip used to sit in the identity card's right column, beside the
-   portrait, which left it floating next to the page rather than heading
-   it. It now spans the body under the header and sits on the same rule
-   the panels hang from, so the tabs and their content read as one object. */
-.entry-info .pill-tabs {
-  margin: 1rem 0 0;
-  padding-bottom: 0;
-}
-.entry-info .pill-panel { margin-top: 1rem; }
-
-
-/* ── ENTRIES ARE CARDS ──
-   On the player site every entry sits on a filled panel a clear step above
-   the background, which is what stops it reading as text laid on a
-   photograph. The DM side had the markup and none of the fill. */
-.dm-content .pill-panel {
-  background: var(--bg-card);
-  border: 1px solid var(--rule);
-  border-radius: 2px;
-  padding: 1.2rem 1.4rem 1.4rem;
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
-}
-.dm-content .xref-card,
-.dm-content .stat-card {
-  background: var(--bg-card);
-  border: 1px solid var(--rule);
-  border-radius: 2px;
-}
-.dm-content .identity-card .stat-card {
-  background: none;
-  border: none;
-  border-radius: 0;
-}
-.dm-content .dm-collapse-section-body {
-  background: var(--bg-card);
-  border: 1px solid var(--rule);
-  border-radius: 2px;
-  padding: 1.1rem 1.3rem 1.2rem;
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
-}
-.dm-content .dm-collapse-section.is-sectab-panel > .dm-collapse-section-body {
-  border: none;
-  background: none;
-  padding: 0;
-  backdrop-filter: none;
-}
 
 /* ═══════════════════════════════════════════════════════════════
-   REGISTER — the shape every DM index should take
-
-   A list you can narrow, where each row is a real entry with a page
-   of its own. Replaces the long scroll, where a new thing meant
-   another section wedged into a document nobody could navigate.
-
-   Class names follow the player site's register so the two halves of
-   the wiki read as one, with the prime palette underneath.
+   11  CHART EMBED
+   The Cosmos Chart is its own page; a panel embeds it, with a bar that
+   opens it full size.
    ═══════════════════════════════════════════════════════════════ */
-.dm-register-bar {
-  display: flex; flex-wrap: wrap; align-items: center; gap: .6rem;
-  margin: 0 0 .9rem;
-}
-.dm-register-search {
-  flex: 1 1 15rem; min-width: 0;
-  font-family: 'Crimson Pro', Georgia, serif; font-size: 1rem;
-  background: var(--bg-card); color: var(--text);
-  border: 1px solid var(--rule); border-radius: 2px;
-  padding: .5rem .8rem;
-}
-.dm-register-search::placeholder { color: var(--text-muted); font-style: italic; }
-.dm-register-search:focus { outline: none; border-color: var(--gold-rule); }
-
-.facets { display: flex; flex-direction: column; gap: .5rem; margin-bottom: .8rem; }
-.facet { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem .6rem; }
-.facet-label {
-  font-family: 'Cinzel', serif; font-size: .62rem; letter-spacing: .18em;
-  text-transform: uppercase; color: var(--text-muted);
-  flex: 0 0 5.5rem;
-}
-.facet-pills { display: flex; flex-wrap: wrap; gap: .3rem; }
-.filter-tag {
-  font-family: 'Cinzel', serif; font-size: .66rem; letter-spacing: .1em;
-  text-transform: uppercase; cursor: pointer;
-  background: none; color: var(--text-dim);
-  border: 1px solid var(--rule); border-radius: 999px;
-  padding: .2rem .65rem; transition: color .13s, border-color .13s, background .13s;
-}
-.filter-tag:hover { color: var(--text); border-color: var(--gold-rule); }
-.filter-tag.is-active {
-  color: var(--gold-light); border-color: var(--gold-rule);
-  background: var(--gold-faint);
-}
-.filter-tag:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
-
-.result-line {
-  display: flex; align-items: baseline; gap: .8rem;
-  font-family: 'Cinzel', serif; font-size: .64rem; letter-spacing: .14em;
-  text-transform: uppercase; color: var(--text-muted);
-  border-bottom: 1px solid var(--rule); padding-bottom: .5rem; margin-bottom: .2rem;
-}
-.clear-btn {
-  margin-left: auto; font: inherit; cursor: pointer;
-  background: none; border: none; color: var(--gold-dim);
-  border-bottom: 1px solid var(--gold-rule); padding: 0 0 .1rem;
-}
-.clear-btn:hover { color: var(--gold-light); }
-
-.register { display: flex; flex-direction: column; }
-.ent { border-bottom: 1px solid var(--rule-soft); position: relative; }
-.ent:last-child { border-bottom: none; }
-.ent-row {
-  display: grid; grid-template-columns: 3.1rem 1fr auto;
-  gap: .9rem; align-items: center;
-  padding: .7rem 2.2rem .7rem .7rem;
-  text-decoration: none; border: none; transition: background .13s;
-}
-.ent-row:hover { background: var(--bg-raised); }
-.ent-face {
-  width: 3.1rem; height: 3.1rem; border-radius: 2px; overflow: hidden;
-  background: var(--bg-raised); border: 1px solid var(--rule);
-  display: flex; align-items: center; justify-content: center; flex: none;
-}
-.ent-face img { width: 100%; height: 100%; object-fit: cover; }
-.face-mono {
-  font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--gold-dim);
-}
-.ent-name {
-  font-family: 'Cinzel', serif; font-size: 1rem; color: var(--text);
-  display: flex; flex-direction: column; gap: .15rem; min-width: 0;
-}
-.ent-sub {
-  font-family: 'Crimson Pro', Georgia, serif; font-size: .92rem;
-  color: var(--text-dim); letter-spacing: 0;
-}
-.ent-state {
-  font-family: 'Cinzel', serif; font-size: .6rem; letter-spacing: .13em;
-  text-transform: uppercase; color: var(--text-muted); text-align: right;
-}
-.ent-toggle {
-  position: absolute; top: .9rem; right: .5rem;
-  width: 1.5rem; height: 1.5rem; line-height: 1;
-  background: none; border: none; cursor: pointer;
-  color: var(--text-muted); font-size: .7rem;
-  transition: transform .15s, color .13s;
-}
-.ent-toggle:hover { color: var(--text); }
-.ent.is-open .ent-toggle { transform: rotate(180deg); }
-.ent-detail {
-  display: none;
-  padding: 0 .9rem 1rem 4.7rem;
-  color: var(--text-dim); font-size: .96rem; line-height: 1.6;
-}
-.ent.is-open .ent-detail { display: block; }
-.ent-detail p { margin: 0 0 .5rem; }
-.ent-detail .ent-links { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .6rem; }
-.register-empty {
-  padding: 1.4rem .7rem; color: var(--text-muted); font-style: italic;
-}
-@media (max-width: 620px) {
-  .facet-label { flex: 0 0 100%; }
-  .ent-detail { padding-left: 1rem; }
-}
-
-/* ── Embedded tool ────────────────────────────────────────────────────────
-   The Cosmos Chart is a page in its own right, with its own layout and its
-   own token set. Embedding it keeps one source of truth: the chart renders
-   where it is useful without being rebuilt, and "Open full" is there for the
-   times a chart in a panel is not enough. */
 .dm-embed {
   margin: 1.2rem 0 .4rem;
   border: 1px solid var(--rule);
@@ -2361,201 +1982,62 @@ body { overflow-x: clip; }
   display: block; width: 100%; height: 70vh; min-height: 460px;
   border: 0; background: #070a12;
 }
-@media (max-width: 620px) {
-  .dm-embed iframe { height: 60vh; min-height: 360px; }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   12  RESPONSIVE
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 1240px) {
+  .dm-content::before { inset: -1.5rem -1.5rem; }
 }
 
-/* A register row can use a portrait as its face. The .dossier-portrait frame
-   is sized for the card grid, so the row re-states its own size rather than
-   letting two rules disagree. */
-.ent-face.dossier-portrait {
-  width: 3.1rem; min-width: 3.1rem; height: 3.1rem;
-  border-color: var(--rule); border-radius: 2px;
-}
-.ent-face.dossier-portrait .dossier-monogram {
-  font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--gold-dim);
+/* Below 1100px the rail goes and the content centres again; the sidebar
+   still moves between pages. */
+@media (max-width: 1100px) {
+  .dm-content.has-toc {
+    display: block;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  .dm-toc {
+    display: none;
+  }
 }
 
-/* ════════════════════════════════════════════════════════════════
-   TRACKER — the record as it stands (prime/tracker/)
-   ----------------------------------------------------------------
-   Rows are the wiki's own dossier rows with one more column, so a
-   record here reads like a hook on Plot Hooks or a member on
-   Factions. Only what the tracker adds is defined below: the
-   standing strip, the filter, the fourth column, and the row body.
-   Violet marks the DM layer, as it does on the Voyages board.
-   ════════════════════════════════════════════════════════════════ */
+/* Wiki entries stack below 860px: infobox first, article under it. */
+@media (max-width: 860px) {
+  .dm-content .entry-header.is-wiki { grid-template-columns: 1fr; gap: 1.6rem; }
+  .dm-content .is-wiki .identity-card { order: 0; position: static; max-width: none; }
+  .dm-content .is-wiki .identity-card .portrait-frame { aspect-ratio: 16 / 9; }
+}
 
-/* ── where the record stands ── */
-.tr-standing {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0;
-  border: 1px solid var(--rule);
-  border-radius: 3px;
-  background: var(--dm-elev-1);
-  margin: 0 0 1.4rem;
+@media (max-width: 760px) {
+  .entry-header { grid-template-columns: 1fr; gap: 1.6rem; }
+  .identity-card { max-width: 340px; }
+  .tb-wrap { max-height: 66vh; }
+  .tb-legend { margin-left: 0; width: 100%; }
+  .tb-ledger-sub { margin-left: 0; width: 100%; }
+  .tb-debt { flex-direction: column; gap: 0.2rem; }
 }
-.tr-fact {
-  flex: 1 1 14rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  padding: 0.8rem 1.1rem;
-  border-right: 1px solid var(--rule-soft);
-  min-width: 0;
-}
-.tr-fact:last-child { border-right: none; }
-.tr-fact-label {
-  font-family: 'Cinzel', serif;
-  font-size: 0.66rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-.tr-fact-body { font-size: 1rem; line-height: 1.4; color: var(--text-dim); }
-.tr-fact-voyage { font-family: 'Cinzel', serif; letter-spacing: 0.06em; color: var(--gold-light); }
-/* A voyage played and not yet written in is the one thing on the strip
-   that asks for action, so it is the one thing in alarm colour. */
-.tr-fact.is-behind { box-shadow: inset 3px 0 0 var(--dm-crimson); }
-.tr-fact.is-behind .tr-fact-label { color: var(--dm-crimson); }
-
-/* ── filter ── */
-.tr-controls {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.7rem 1rem;
-  margin: 0 0 1.6rem;
-}
-.tr-filter {
-  flex: 1 1 16rem;
-  min-width: 0;
-  background: var(--bg-deep);
-  border: 1px solid var(--rule);
-  border-radius: 2px;
-  color: var(--text);
-  font: inherit;
-  font-size: 1rem;
-  padding: 0.5rem 0.8rem;
-}
-.tr-filter::placeholder { color: var(--text-muted); font-style: italic; }
-.tr-filter:focus-visible { outline: 2px solid var(--ice); outline-offset: 1px; }
-.tr-voyages { display: flex; flex-wrap: wrap; gap: 0.2rem; }
-.tr-voyage {
-  font-family: 'Cinzel', serif;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  background: transparent;
-  border: 1px solid transparent;
-  border-radius: 2px;
-  padding: 0.45rem 0.7rem;
-  cursor: pointer;
-}
-.tr-voyage:hover { color: var(--gold-light); background: var(--gold-faint); }
-.tr-voyage[aria-pressed="true"] { color: var(--gold-light); background: var(--dm-elev-2); border-color: var(--gold-rule); }
-.tr-voyage:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
-
-/* ── a set ── */
-.tr-count {
-  font-family: 'Cinzel', serif;
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin: 0 0 0.5rem;
-}
-.tr-empty { color: var(--text-muted); font-size: 0.95rem; margin: 0.5rem 0 1.5rem; }
-.tr-list { margin-top: 0; }
-.tr-list .dossier-row { scroll-margin-top: 4rem; }   /* clears the fixed nav bar on a phone */
-
-/* The dossier row, with a fourth column for where the record stands. */
-.tr-list .dossier-row > summary {
-  grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1.5fr) 7.2rem 0.85rem;
-  align-items: start;
-  padding: 0.7rem 0.9rem;
-}
-.tr-list .dossier-row > summary::after { align-self: center; }
-.tr-list .dossier-row .dossier-detail { font-size: 0.94rem; }
-.tr-list .dossier-row .dossier-role { font-size: 0.9rem; }
-.tr-list .dossier-row.is-child .dossier-id { padding-left: 0.9rem; border-left: 1px solid var(--rule); }
-.tr-list .dossier-row .dm-tag { font-size: 0.58rem; letter-spacing: 0.14em; padding: 0.08rem 0.38rem; margin-left: 0.5rem; }
-.tr-meta {
-  grid-column: 4;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.18rem;
-  font-family: 'Cinzel', serif;
-  font-size: 0.64rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-align: right;
-  color: var(--text-muted);
-  white-space: nowrap;
-}
-.tr-meta-main { color: var(--text-dim); }
-.tr-meta-dm { color: var(--ice-light); }
-
-/* ── a row, open ── */
-.tr-list .dossier-row-body dt { font-size: 0.7rem; letter-spacing: 0.16em; color: var(--text-muted); }
-.tr-list .dossier-row-body dt.is-dm { color: var(--ice-light); }
-.tr-list .dossier-row-body dd.is-dm { border-left: 2px solid var(--ice-dim); padding-left: 0.8rem; }
-.tr-facts, .tr-dm {
-  display: grid;
-  grid-template-columns: minmax(7rem, 11rem) minmax(0, 1fr);
-  gap: 0.3rem 1rem;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-.tr-fact-key { color: var(--text-muted); }
-.tr-fact-val { color: var(--text-dim); margin: 0; }
-ul.tr-fact-val { padding-left: 1.1rem; }
-ul.tr-fact-val li { margin-bottom: 0.25rem; color: var(--text); }
-.tr-objs { list-style: none; margin: 0; padding: 0; font-size: 0.97rem; }
-.tr-objs li { padding-left: 1.4rem; position: relative; margin-bottom: 0.2rem; }
-.tr-objs li::before { content: '\25A1'; position: absolute; left: 0; color: var(--text-muted); }
-.tr-objs li.is-done { color: var(--text-muted); text-decoration: line-through; }
-.tr-objs li.is-done::before { content: '\25A0'; text-decoration: none; }
-.tr-voyage-block { border-top: 1px solid var(--rule-soft); padding: 0.35rem 0; }
-.tr-voyage-block:first-child { border-top: none; padding-top: 0; }
-.tr-voyage-block > summary {
-  cursor: pointer;
-  font-family: 'Cinzel', serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
-  color: var(--gold-dim);
-}
-.tr-voyage-block[open] > summary { color: var(--gold-light); }
-.tr-voyage-n { margin-left: 0.7rem; font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
-.tr-voyage-block ul { margin: 0.4rem 0 0.3rem; padding-left: 1.1rem; }
-.tr-voyage-block li { font-size: 0.96rem; line-height: 1.5; color: var(--text-dim); margin-bottom: 0.3rem; }
-.tr-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.2rem 0 0; }
-.tr-chip {
-  font-size: 0.9rem;
-  padding: 0.12rem 0.55rem;
-  border: 1px solid var(--rule);
-  border-radius: 2px;
-  color: var(--text-dim);
-  text-decoration: none;
-  border-bottom-style: solid;
-}
-.tr-chip:hover { border-color: var(--gold-dim); color: var(--gold-light); }
-.tr-out {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.4rem 1.2rem;
-  margin-top: 1rem;
-  padding-top: 0.6rem;
-  border-top: 1px solid var(--rule-soft);
-  font-size: 0.86rem;
-}
-.tr-id { margin-left: auto; font-family: ui-monospace, monospace; font-size: 0.72rem; color: var(--text-muted); }
 
 @media (max-width: 720px) {
+  .dossier-portrait { grid-row: span 3; }
+  .voyage-grid { grid-template-columns: 1fr; }
+  /* Dossier rows: portrait beside name and detail, chevron top right. */
+  .dossier-row > summary {
+    grid-template-columns: 56px 1fr 1rem;
+    grid-template-rows: auto auto;
+    gap: 0.3rem 0.7rem;
+  }
+  .dossier-row .dossier-portrait { grid-row: 1 / 3; }
+  .dossier-row .dossier-id { grid-column: 2; }
+  .dossier-row .dossier-detail {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 0.963rem;
+  }
+  .dossier-row > summary::after { grid-column: 3; grid-row: 1; }
+  .dossier-row-body { padding-left: 1rem; }
   .tr-fact { border-right: none; border-bottom: 1px solid var(--rule-soft); }
   .tr-fact:last-child { border-bottom: none; }
   .tr-list .dossier-row > summary { grid-template-columns: 44px minmax(0, 1fr) 0.85rem; }
@@ -2566,186 +2048,34 @@ ul.tr-fact-val li { margin-bottom: 0.25rem; color: var(--text); }
   .tr-fact-key { margin-top: 0.4rem; }
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   WIKI DOSSIER
-   A fan-wiki layout: the infobox on the right, the article on the left.
-   The infobox stays beside every tab, so the face and the key facts are
-   in view while reading DM notes. Rows read as a two-column table.
-   ═══════════════════════════════════════════════════════════════ */
-.dm-content .entry-header.is-wiki {
-  grid-template-columns: minmax(0, 1fr) 280px;
-  gap: 2.6rem;
-}
-.dm-content .is-wiki .entry-info { order: 1; }
-.dm-content .is-wiki .identity-card {
-  order: 2;
-  position: sticky;
-  top: 1.2rem;
-}
-.dm-content .is-wiki .identity-card .stat-row {
-  display: grid;
-  grid-template-columns: 5.6rem minmax(0, 1fr);
-  gap: 0.7rem;
-  align-items: baseline;
-  padding: 0.45rem 0;
-}
-.dm-content .is-wiki .identity-card .stat-key { margin: 0; }
-/* The page title already names the subject; the article starts at the tagline. */
-.dm-content .is-wiki .entry-name { display: none; }
-.dm-content .is-wiki .pill-panel h4 {
-  margin: 1.9rem 0 0.6rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid var(--rule);
-}
-.dm-content .is-wiki .pill-panel h4:first-child { margin-top: 0.4rem; }
-.dm-content .is-wiki .pill-panel h5 {
-  font-family: 'Cinzel', serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  margin: 1.2rem 0 0.35rem;
-}
-.dm-content .is-wiki .pill-panel h5 a { color: inherit; }
-@media (max-width: 860px) {
-  .dm-content .entry-header.is-wiki { grid-template-columns: 1fr; gap: 1.6rem; }
-  .dm-content .is-wiki .identity-card { order: 0; position: static; max-width: none; }
-  .dm-content .is-wiki .identity-card .portrait-frame { aspect-ratio: 16 / 9; }
+@media (max-width: 620px) {
+  .dm-content::before { inset: -0.75rem -0.9rem; }
+  .sb { padding: 0.9rem 1rem 1rem; font-size: 0.98rem; }
+  .sb-name { font-size: 1.3rem; }
+  .sb-abil { font-size: 0.9rem; }
+  .facet-label { flex: 0 0 100%; }
+  .ent-detail { padding-left: 1rem; }
+  .dm-embed iframe { height: 60vh; min-height: 360px; }
 }
 
-/* Running prose carries no bold or colour: a paragraph reads straight through.
-   Links keep their colour and underline. Pages still being rewritten may hold
-   <strong> in paragraphs; it renders as plain text until they are. */
-.dm-content p strong, .dm-content p b,
-.dm-content dd strong {
-  font-weight: inherit;
-  color: inherit;
+@media (max-width: 560px) {
+  .pill-tabs { gap: 0; }
+  .pill-tab { flex: 1 1 auto; text-align: center; padding: 0.5rem 0.5rem; font-size: 0.7rem; letter-spacing: 0.08em; }
 }
+
 
 /* ═══════════════════════════════════════════════════════════════
-   AXIOM PALETTE
-   One colour for each Axiom, softened and matched in brightness so none
-   is harsh against another. Each nav group takes one (dm-nav.js sets
-   html[data-axiom]); the page's accent follows. Accents mark structure
-   only: links, section rules, tabs, labels, chips. Never prose.
-     Play / Run        Determination  rose crimson
-     People / Cast     Distinction    jade
-     Story / Opposition Consolidation amber gold
-     World / Setting   Expansion      cornflower blue
-     Reference         Dissolution    pearl silver
+   13  PRINT
    ═══════════════════════════════════════════════════════════════ */
-:root {
-  --ax-consolidation: #D4A256;
-  --ax-expansion:     #6E95D4;
-  --ax-dissolution:   #B9C2CC;
-  --ax-distinction:   #56B4A6;
-  --ax-determination: #D45F78;
-  --accent: var(--ax-dissolution);
-}
-html[data-axiom="consolidation"] { --accent: var(--ax-consolidation); }
-html[data-axiom="expansion"]     { --accent: var(--ax-expansion); }
-html[data-axiom="dissolution"]   { --accent: var(--ax-dissolution); }
-html[data-axiom="distinction"]   { --accent: var(--ax-distinction); }
-html[data-axiom="determination"] { --accent: var(--ax-determination); }
-:root {
-  --accent-text: color-mix(in srgb, var(--accent) 72%, white);
-  --accent-rule: color-mix(in srgb, var(--accent) 38%, transparent);
-  --accent-faint: color-mix(in srgb, var(--accent) 12%, transparent);
-}
-
-/* Links: the accent, with an underline. */
-.dm-content a { color: var(--accent-text); border-bottom: 1px solid var(--accent-rule); }
-.dm-content a:hover { color: #fff; border-bottom-color: var(--accent); }
-.dm-content .dm-page-eyebrow { color: var(--accent-text); opacity: .8; }
-.side-nav-link.active { border-left-color: var(--accent) !important; color: #fff; }
-.dm-content .pill-tab[aria-selected="true"] { border-bottom-color: var(--accent) !important; }
-.dm-content .chip { border-color: var(--accent-rule); }
-.dm-content .chip:hover { background: var(--accent-faint); }
-
-/* ── Reading layout (the wiki entry) ──
-   Text sits on the page, not in a box; the infobox is the only panel.
-   Body type is a step smaller and the page a step wider. */
-.dm-content { max-width: 1260px; font-size: 1.15rem; line-height: 1.7; }
-.dm-content .is-wiki .pill-panel {
-  background: none; border: 0; box-shadow: none; padding: 0;
-  backdrop-filter: none; -webkit-backdrop-filter: none;
-}
-.dm-content .entry-header.is-wiki { grid-template-columns: minmax(0, 1fr) 320px; gap: 3.2rem; }
-.dm-content .is-wiki .identity-card { border-top: 2px solid var(--accent-rule); }
-.dm-content .is-wiki .identity-card .portrait-frame { aspect-ratio: 4 / 3; }
-.dm-content .is-wiki .identity-card .stat-row { grid-template-columns: 6.4rem minmax(0, 1fr); }
-.dm-content .is-wiki .pill-panel h4 {
-  font-size: 1.05rem; letter-spacing: .12em; color: var(--text);
-  border-bottom: 1px solid var(--accent-rule);
-}
-.dm-content .is-wiki .entry-sub { font-size: 1.15rem; color: var(--text-dim); }
-
-/* The reading column: a soft scrim instead of a slab, so the Axiom
-   backdrop shows at the edges and the text keeps its contrast. */
-.dm-content::before {
-  background: linear-gradient(90deg,
-    rgba(8, 11, 19, 0) 0%, rgba(8, 11, 19, 0.62) 7%,
-    rgba(8, 11, 19, 0.62) 93%, rgba(8, 11, 19, 0) 100%);
-  border: 0;
-  box-shadow: none;
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-}
-
-/* ── Sidebar groups in their Axiom colours ──
-   Each group label carries its Axiom; a link's hover and active marker
-   take the same colour, so the nav reads as five coloured families. */
-.side-nav-group[data-axiom="determination"] { --group: var(--ax-determination); }
-.side-nav-group[data-axiom="consolidation"] { --group: var(--ax-consolidation); }
-.side-nav-group[data-axiom="distinction"]   { --group: var(--ax-distinction); }
-.side-nav-group[data-axiom="expansion"]     { --group: var(--ax-expansion); }
-.side-nav-group[data-axiom="dissolution"]   { --group: var(--ax-dissolution); }
-.side-nav-group .side-nav-group-label { color: var(--group); opacity: 0.85; }
-.side-nav-body > .side-nav-group:first-of-type .side-nav-group-label { padding-top: 0.3rem; }
-.side-nav-group .side-nav-link:hover { color: color-mix(in srgb, var(--group) 70%, white); }
-.side-nav-group .side-nav-link.active {
-  border-left-color: var(--group) !important;
-  background: color-mix(in srgb, var(--group) 10%, transparent);
-/* ═══════════════════════════════════════════════════════════════
-   ARTICLE PAGES (dm-sections.js adds .is-article)
-   Long pages read as one article: sections are headings, not boxes or
-   toggles, and the "On this page" rail is the navigation. Tables keep
-   their own surface; nothing else is boxed.
-   ═══════════════════════════════════════════════════════════════ */
-.dm-content.is-article .dm-collapse-section.is-flat {
-  margin: 2.6rem 0 0;
-  padding-top: 0;
-  border-top: 0;
-}
-.dm-content.is-article .dm-collapse-section.is-flat.is-sub { margin-top: 1.8rem; }
-.dm-content.is-article .dm-collapse-section.is-flat > summary {
-  cursor: default;
-  padding: 0 0 0.45rem;
-  margin-bottom: 0.9rem;
-  border-bottom: 1px solid var(--accent-rule);
-  color: var(--text);
-  font-size: 1.4rem;
-  letter-spacing: 0.06em;
-}
-.dm-content.is-article .dm-collapse-section.is-flat.is-sub > summary {
-  font-size: 1.12rem;
-  border-bottom: 0;
-  margin-bottom: 0.4rem;
-  color: var(--text);
-}
-.dm-content.is-article .dm-collapse-section.is-flat > summary::before { display: none; }
-.dm-content.is-article .dm-collapse-section.is-flat > summary:hover { color: var(--text); }
-.dm-content.is-article .dm-collapse-section.is-flat > .dm-collapse-section-body {
-  background: none;
-  border: 0;
-  padding: 0;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-}
-/* The rail: every section and subsection, the current one in the accent. */
-.dm-content .dm-toc { border-left-color: var(--accent-rule); }
-.dm-content .dm-toc a.is-active { color: var(--accent-text); border-left-color: var(--accent); }
-.dm-content.is-article .dm-collapse-section.is-flat > summary > h2,
-.dm-content.is-article .dm-collapse-section.is-flat > summary > h3 {
-  border: 0 !important; padding: 0 !important; margin: 0 !important;
+@media print {
+  .side-nav, .side-nav-toggle, .dm-toc { display: none !important; }
+  body.with-sidebar { padding-left: 0 !important; }
+  .dm-content.has-toc { display: block; max-width: none; }
+  body { background: white; color: black; font-size: 11pt; }
+  body::before { display: none; }
+  .dm-content h1, .dm-content h2, .dm-content h3, .dm-content h4 { color: black; }
+  .dm-callout { background: #f8f6ef; }
+  /* Collapsibles print open, so nothing is hidden. */
+  .dm-collapse[open] { break-inside: avoid; }
+  .dm-collapse:not([open]) > *:not(summary) { display: block !important; }
 }

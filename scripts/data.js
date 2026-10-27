@@ -603,6 +603,22 @@ function checkIndex(set, recs, err) {
 // ── links ──────────────────────────────────────────────────────────────────
 // Every local href and src on the site resolves, and every #anchor exists.
 // Templates carry placeholders by design and are left out.
+// Every stylesheet's braces balance. A lost } (twice now, both from merges)
+// nests every rule after it and silently breaks the styles below.
+function checkStyles(err) {
+  const dir = path.join(ROOT, 'styles');
+  fs.readdirSync(dir).filter(f => f.endsWith('.css')).forEach(f => {
+    const src = fs.readFileSync(path.join(dir, f), 'utf8').replace(/\/\*[\s\S]*?\*\//g, m => m.replace(/[^\n]/g, ' '));
+    let depth = 0, line = 1, open = [];
+    for (const ch of src) {
+      if (ch === '\n') line++;
+      else if (ch === '{') { depth++; open.push(line); }
+      else if (ch === '}') { depth--; open.pop(); if (depth < 0) { err(`styles/${f}:${line}: a } with no {`); return; } }
+    }
+    if (depth > 0) err(`styles/${f}: ${depth} unclosed {, the first opened at line ${open[0]}`);
+  });
+}
+
 function checkLinks(err) {
   const pages = new Map();
   (function walk(dir) {
@@ -754,6 +770,7 @@ function check() {
   all(fresh).forEach(r => guarded(r.url, () => checkPage(r, err)));
   SETS.forEach(s => guarded(s.index, () => checkIndex(s, fresh[s.key], err)));
   guarded('links', () => checkLinks(err));
+  guarded('styles', () => checkStyles(err));
 
   // 6. the command bar and the current bearing
   guarded('data/bearing.js', () => {
