@@ -340,11 +340,17 @@ treatment:
 
 `is-warn`, `is-cosmic` and `is-info` are not used.
 
-## 5. Dossiers
+## 5. Entries: dossiers, factions, items and places
 
-A dossier reads like a fan-wiki character page (the model is the Critical Role
-wiki): an infobox on the right, a short overview, then the character in
-sections. It is the page the DM opens to grab anything about its subject
+Every entry for one subject, a person, a faction, an item or a place, reads
+like a fan-wiki page (the model is the Critical Role wiki: Veth Brenatto for a
+person, the Cobalt Soul for an order, the Luxon beacon for an item, Rexxentrum
+for a place). They share one frame: an infobox on the right, *About* and *DM
+notes* tabs, and the Connections card at the foot. Only the *About* sections
+and the infobox rows change with the kind; see § Other kinds, below.
+
+A dossier reads like a fan-wiki character page: an infobox on the right, a
+short overview, then the character in sections. It is the page the DM opens to grab anything about its subject
 mid-session: a face, a voice, a signature item, the short version of their
 past. Some dossiers are dense and some are sparse; every one follows the same
 order and includes only the sections with content.
@@ -395,9 +401,23 @@ Only the subsections with content.
 | Threads | why a connection matters to running them, in sentences; the links themselves are in *Connections* |
 | Still to decide | each a full, specific sentence ("Ezra's surname is not chosen yet."), never a bare label |
 
+### Other kinds
+
+Same frame, same *DM notes*, same Connections card. *About* sections, in
+order, only those with content:
+
+| Kind | Infobox rows | About sections |
+|---|---|---|
+| Faction (`factions/`) | kind, what it serves, leader, seat, reach, ranks, device, standing with Caelestis | Overview · Beliefs (public aim; a secret aim goes in *What's hidden*) · Structure and ranks · History · Operations · How they look (device, dress, magic) · Seats and branches (one subsection each, with its known members) · Members · Relationships |
+| Item (`artifacts/`) | kind, made by, made of, held by, where, status | Overview · Appearance · Properties (what it does, in prose, then the rules as an item card) · History · In the campaign (a recap by voyage) |
+| Place (`locations/`) | kind, designation, system, galaxy, ruled by, peoples, status | Overview · Description (look, climate, terrain) · History · Peoples and culture · Notable people · Points of interest (one subsection each) · In the campaign (a recap by voyage) |
+
+The DM item page holds the full rules; the player inventory entry holds what
+the crew has learned of them.
+
 ### Connections
 
-Every dossier ends with the Connections card, below the tabs and visible
+Every entry ends with the Connections card, below the tabs and visible
 whichever tab is open: a hot bar of chips linking to everything the entry
 touches. Columns, only those with chips: *People and factions*, *Places*,
 *Items*, *Campaign* (voyages, arcs, Opposition pages). The card lists;
