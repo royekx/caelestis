@@ -30,13 +30,13 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 9 | 12 | 16 | 0 | 4 |
+| Cosmology | cosmology/, glossary/, chart/ | 10 | 12 | 16 | 0 | 4 |
 | Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 35 | 3 | 49 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
 | Factions | factions/ | 1 | 4 | 22 | 2 | 40 |
 | Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 13 | 1 | 45 | 5 | 42 |
-| Dossiers | dossiers/ | 9 | 6 | 43 | 0 | 51 |
+| Dossiers | dossiers/ | 9 | 6 | 43 | 0 | 53 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 6 | 2 | 26 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 21 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 5 | 3 | 0 | 1 |
-| **Total** | | **78** | **87** | **259** | **14** | **398** |
+| **Total** | | **79** | **87** | **259** | **14** | **400** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -141,6 +141,13 @@ read to its end (turn 416) and merged on 2026-10-25.
 
 Items for `cosmology/index.html`, `glossary/index.html` and `chart/index.html`.
 Order under each page: decide, fix, drop, add.
+
+
+### How gods look
+
+- **[decide]** What gods look like
+  Gods could keep humanoid forms, as Critical Role's do, or appear as concepts more than bodies. Korey leans humanoid as the workable choice and wanted concepts. Decides how every god's Appearance is written, Vecna's included.
+  src: chat 2026-10-27
 
 ### cosmology/index.html
 
@@ -2032,6 +2039,18 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 # Dossiers
 
 DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decide, fix, drop, add. Dossiers are in-world pages: proposed text reads like a fan-wiki character entry and states only what is settled. Anything undecided stays in a `decide` item. Lines marked DM-only belong in the dossier's DM notes.
+
+---
+
+### Every dossier
+
+- **[add]** An appearance for every dossier
+  Every dossier gets an Appearance section. Where nothing is set, write a general sketch from the subject's species and what is known about them, and Korey confirms or changes it (Korey 2026-10-27). Vecna's is sketched.
+  src: chat 2026-10-27
+
+- **[add]** Portraits for every dossier
+  Dossiers without a portrait show a monogram. Each one needs an image for its infobox and its row on dossiers/index.html (prime/scripts/portraits.js).
+  src: chat 2026-10-27
 
 ---
 
