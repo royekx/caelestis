@@ -92,7 +92,7 @@ never to campaign pages, with one exception: an artifact's custody line.
 **In-world tabs and the DM notes tab.** In-world tabs hold facts about the
 world. The DM notes tab holds what is meta to the DM: how a fact is used at the
 table, a lever for play, pacing, a name chosen for the DM's convenience, and
-anything still to decide. A fact about the world never lives only in DM notes.
+anything still to decide. A fact about the world never lives only in DM notes, except a subject's secrets, which live in *What's hidden* (§ 5).
 
 **Meta lives beside its subject.** Most setting pages carry a DM notes tab,
 the last tab before a stat block. Meta about one subject goes in that
@@ -342,40 +342,62 @@ treatment:
 
 ## 5. Dossiers
 
-One tab set for every dossier, in this order, including only the tabs with
-content. Never add a one-off tab. Labels never inflect for the subject.
+A dossier reads like a fan-wiki character page (the model is the Critical Role
+wiki): an infobox on the right, a short overview, then the character in
+sections. It is the page the DM opens to grab anything about its subject
+mid-session: a face, a voice, a signature item, the short version of their
+past. Some dossiers are dense and some are sparse; every one follows the same
+order and includes only the sections with content.
+
+### Tabs
 
 | Tab | Voice | Holds |
 |---|---|---|
-| Who they are | in-world | everything about them, wiki-style: what they are, what they look like, who they were and how they got here (history), what they can do, the items that belong to them (linked), and where they stand now |
-| What they want | in-world | motive, drive, what it is for |
-| DM notes | DM | the subsections below |
+| About | in-world | the infobox and the sections below: everything about them that a wiki would say |
+| DM notes | DM | what the DM needs to run them, below |
 | Stat block | | the block, if it has one |
 
 Tabs are `.pill-tab` buttons in a `.pill-tabs[data-pill-group]` strip with
 `.pill-panel` panels, driven by `dm-tabs.js`. Headings inside a tab start at
 `<h4>`.
 
-A dossier is the page the DM opens to grab anything about its subject
-mid-session: a face, a voice, a signature item, the short version of their
-past. *Who they are* carries all of it. History is the short, exact version
-("an archmage of Oerth who became a lich, gathered magical secrets, and rose
-to godhood"), not a recount of the cosmos. Appearance is always written when
-it is known; when it is not, the DM notes say so in a sentence. Key items get
-their own line, linked to their artifact pages.
+### The infobox
 
-*DM notes* subsections, in order, only those with content:
+Right-hand pane, at the top of *About*: portrait, then name and epithet, and
+the rows that apply: species, class or role, affiliation, origin, home or
+base, status, key items (linked), first appearance (voyage).
+
+### About, in order
+
+| Section | Holds |
+|---|---|
+| Overview | two to four sentences, unheaded: who they are and why they matter |
+| Appearance | what they look like, how they dress, what people notice first |
+| Personality | temperament, manner, voice, what they want and what drives them |
+| Biography | *Background*: their past before the crew, short and exact ("an archmage of Oerth who became a lich, gathered magical secrets, and rose to godhood"), never a recount of the cosmos. *In the campaign*: a recap of what has happened with them, by arc or voyage |
+| Relationships | one short subsection per person or group that matters to them, linked |
+| Abilities | what they can do, in prose; numbers go in *Stat block* |
+| Notable items | each item on its own line, linked to its artifact page |
+| Quotes | lines said in play or canon, when there are any |
+
+When appearance is not set, *DM notes* says so in a sentence.
+
+### DM notes, in order
+
+Only the subsections with content.
 
 | Subsection | Holds |
 |---|---|
-| What's hidden | what is true and unrevealed, in in-world voice |
-| Threads | where they connect: to whom, to which arc, to what else |
-| How to run them | personality, tactics, how they engage |
-| DM notes | anything still to decide or keep track of, each written as a full, specific sentence ("Ezra's surname is not chosen yet."), never a bare label |
+| What's hidden | true things about them that are secret and that running them depends on (Vecna's hand in the Sovereign Eye), in in-world voice |
+| How to run them | voice, tactics, how they engage, how they react under pressure |
+| Their arc | where their story is going in this campaign |
+| Threads | what they connect to: people, arcs, places, other notes the DM needs alongside them |
+| Still to decide | each a full, specific sentence ("Ezra's surname is not chosen yet."), never a bare label |
 
-*Who they are*, *What they want* and *What's hidden* state what is true, not
-what it is for. Design notes, calls still to make and advice go in the rest of *DM
-notes* and nowhere else on the dossier. There is no "Open" subsection: a note says exactly what is undecided.
+*About* holds what a wiki would say about them. A secret that the DM needs to
+run them or the things around them is true, but it lives in *What's hidden*,
+not in *About*. There is no "Open" subsection: a note says exactly what is
+undecided.
 
 ## 6. Tags
 
