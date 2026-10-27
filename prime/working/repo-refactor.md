@@ -1,4 +1,4 @@
-# Repo refactor
+# Repo refactor and distribution plan
 
 The repo has grown past its first plan: 332 tracked files, 25 top-level folders
 on the player side, three systems for session accounts, per-character pages at
@@ -56,40 +56,147 @@ is there, proposes a shape, and lists the calls to make before anything moves.
 - **The refactor runs in tandem with the backlog.** Page moves and content rulings land together, so a page is rewritten once, in its new home, with ruled content.
 - **`prime/notes/` is bloat.** A previous chat produced overlapping guideline docs. Consolidate to the few that are used (CLAUDE.md, the session run, one page guide, the data boundary) and retire the rest.
 
-## Proposed shape
+## Why the plan is strict
 
-```
-/                       index.html, hub.html
-crew/                   the six crew pages
-  bartholomew/aspects/  (was aspects/)
-  casey/stellar-chart/  (was stellar-chart/)
-  tumak/wayfinder-path/ (was wayfinder-path/)
-voyages/                voyage accounts; the current bearing and timeline fold in here
-people/                 NPC dossiers (was dossiers/)
-places/                 locations (was navigation-records/, minus ships)
-vessels/                ships, from navigation-records/ and vessels/
-factions/               factions, including the Academy pages from spelljammer-nexus/
-primer/                 the setting primer (was spelljammer-nexus/)
-quests/                 unchanged
-inventory/              one folder of item entries
-handouts/               unchanged
-restricted/             unchanged
-search/                 unchanged
-data/ assets/ styles/ scripts/
-prime/                  DM wiki (overhaul separately)
-docs/                   repo and process docs, not deployed (was prime/notes/)
-```
+Past rewrites left pages diluted, contradicting each other, or half updated:
+"World Surveyor" outlived its retirement on three pages, Clint still rides a
+psychic wind on four, and the cosmology page still counts four Axioms. Each
+came from patching pages one line at a time, from facts living on several pages
+at once, and from nobody checking a finished page against its sources. The plan
+below closes those three gaps.
 
-Old URLs get one-line redirect stubs for a while, so links already shared with players keep working.
+## Guardrails
+
+1. **One home per fact.** Every staged fact is written on one page, its home.
+   Other pages link to it or summarize it in a line that adds nothing new. A
+   fact stated in full in two places drifts.
+2. **Rewrite, never patch.** A page that receives staged content is rewritten
+   whole, from its sources (STAGING, its BACKLOG items, the current page, the
+   pages it links to), in its target shape and path. No line survives because
+   it was already there.
+3. **Nothing half-written merges.** No "pending", "TBD", "Open:" on a world
+   page, no hedges standing in for facts, no stub sections promising content.
+   If a detail is unknown the page says what is known and stops (README §
+   Writing staged entries and pages).
+4. **Retired terms are checked by a script, not by memory.** A list of retired
+   terms and their replacements (spheres, SPH-/SYS-/W- designations, World
+   Surveyor, the old Axiom names, Circle of Fifteenths, downward tithe, psychic
+   wind, the godless sphere, claimed/primed, Knowhere, Ascension World as a
+   separate place) is run over prime/ on every pull request. It warns during the
+   overhaul and fails once a section is done.
+5. **Two readers.** The page is written by one pass and read cold by a separate
+   reviewer that has only STAGING, the page and this checklist: every staged
+   fact present, nothing contradicting STAGING or another finished page, no
+   decision voice, no hedging, no retired term, specific rather than sparse.
+6. **Distribution consumes its sources.** The commit that writes a page deletes
+   the STAGING entries and BACKLOG items it used. STAGING empties section by
+   section; anything left over is visibly undistributed.
+7. **Moves and content land together.** A page moves to its new path in the
+   same commit as its rewrite, with a redirect at the old path and `check`
+   passing, so nothing is rewritten twice.
+
+## Phases
+
+### 0. Decisions before anything moves
+The calls at the end of this section. Nothing below starts until they are made.
+
+### 1. Tooling
+- `scripts/terms.js` and a terms list in `prime/working/terms.json`: retired
+  term → replacement, with an allow-list for legitimate uses (FIA history,
+  quoted in-world speech). Run in `check.yml` as a warning; promoted to an error
+  per finished section. Pruned from deploy like `data.js`.
+- A voice pass in the same script: flags "ruled", "retired", "replaces",
+  "pending", "TBD", "to be decided", "not yet set" on pages under prime/.
+- Baseline report of every hit on today's pages, attached to the first pull
+  request, so the size of the job is known.
+
+### 2. Rules in one place
+The prime/notes consolidation below (three documents). The page rewrites follow
+one page guide, not four.
+
+### 3. DM directory shape (proposed)
+
+| Now | Becomes | Why |
+|---|---|---|
+| `realms/ascension-world.html` | redirect to `realms/oerth.html` (new) | Oerth is that world |
+| `realms/sys04.html` | `realms/krynnspace.html` | system pages carry names; Krynn and Fonains |
+| — | `realms/greyspace.html` (new) | Oerth's system; containers get entries |
+| `realms/first-world.html` | `realms/erevos.html` | the Reach world is Erevos now |
+| — | `realms/nowhere.html`, `realms/ondrel-anchorage.html` (new) | staged places |
+| `artifacts/transformation-fragment.html` | `artifacts/expansion-fragment.html` | five pieces, ex-Transformation |
+| `artifacts/runekeepers-fragment.html` | keep path, retitle as the Dissolution fragment | the Runekeepers keep it |
+| `artifacts/rod-of-seven-parts.html` | keep; it is the Consolidation fragment | |
+| — | Distinction and Determination fragments as sections of `artifacts/index.html` | a concept gets a section until it outgrows it |
+| `factions/academy-fleet.html` | `factions/fleet.html` | the United Intergalactic Fleet, Caelestis as its academy |
+| — | `dossiers/haymond-rolt.html`, `dossiers/ilsevaine-corr.html`, `dossiers/aurel-venn.html` (new) | staged figures with a will |
+| — | `dossiers/vecna.html` (new) | Vecna has no dossier; his facts sit on four pages |
+| — | `campaign/principles.html` (new) | DM principles: prep, visions, contracts, the crew's pasts |
+| — | `cosmology/` sections for Cosmos texture and Languages | sections before pages |
+
+Everything else keeps its path. Each move gets a redirect and is listed in the
+terms check so stale links surface.
+
+### 4. Distribution, in dependency order
+One pull request per section, each reviewed and merged before the next starts,
+because later sections link into earlier ones.
+
+1. **Cosmology and glossary**: the Axioms, galaxies and cores, Erevos and the
+   First Heart, the Reach, the gods, hearts and links, residue, designations,
+   most of space is empty. Chart is done; recheck it against this pass.
+2. **Factions**: deities and the Accordance, the Fleet and Caelestis, the Order,
+   the Seekers, the Vth'orama, the Restorers, Aethris, Vocath's crew.
+3. **Realms**: Oerth and Greyspace, Krynnspace, Erevos, H'Catha, Aethris,
+   Krynn, Nowhere, Ondrel, the retirements above.
+4. **Artifacts and vessels**: the five fragments, A.T.L.A.S. and its sister,
+   the Rod, the twins' fragment.
+5. **Dossiers**: Vecna (new), N'ghathrod, Vth'oramu, Thessalar, Clint,
+   Tarroway, Rolt, Ilsevaine, Venn, OSTEKK.
+6. **Campaign**: spine (theme, shape, failure state), ascension (Vecna's
+   working, the eye, Oerth), colony (N'ghathrod now), plot hooks, principles.
+7. **Crew**: the five crew items in STAGING, plus the crew backlog.
+8. **Fonains and timeline**: the Fonains page and doc, `timeline.json`.
+9. **Player side**: only what the record already carries; designations on
+   restricted/ pages. Nothing from prime/ crosses.
+
+### 5. Per-page procedure
+1. Gather: the page's STAGING entries (by home), its BACKLOG items, the current
+   page, the finished pages it links to.
+2. Write the whole page in its target shape (page guide), at its target path.
+3. Run `check` and the terms/voice script: zero hits.
+4. Cold review (guardrail 5). Fix what it finds.
+5. Delete the consumed STAGING entries and BACKLOG items in the same commit.
+6. Update the Connections layer (`prime/data/connections.json`) for any fact
+   the page changed.
+
+### 6. Player-side refactor
+The player folder shape (calls 1–3) after the DM overhaul, in its own pull
+requests, with redirects for links already shared.
+
+### 7. Done means
+STAGING holds only undistributed future material; BACKLOG holds no fix or add
+item for a finished section; the terms check runs as an error across prime/;
+`check` reports zero errors.
+
+## Staging homes
+The first target listed on each STAGING subject is its home page. Subjects
+whose home moves under phase 3 follow the move (Oerth → `realms/oerth.html`,
+Vecna → `dossiers/vecna.html`, the Fleet → `factions/fleet.html`, DM principles
+→ `campaign/principles.html`, Rolt → `dossiers/haymond-rolt.html`).
 
 ## Calls to make
 
-1. Folder names. The shape above uses plain names (`people/`, `places/`). The current names are in-world (`navigation-records/`, `crew-manifest/`). Keep in-world names, or switch?
-2. Old URLs. Keep redirect stubs, and for how long? Players have links in Discord.
-3. Session accounts. Merge `bearings/`, `crew-logs/` and `logs/` into `voyages/`, or keep "current bearing" as its own page?
-4. Order of work. Refactor the player side first and the prime overhaul second, or do both in one pass?
-5. Stale branches. Delete all but `main` and the working branch?
-6. `prime/notes/`. Approve the three-doc consolidation below, and choose `docs/` (undeployed) or a prune line in `deploy.yml`.
+1. **Player folder names**: keep in-world names (`navigation-records/`,
+   `crew-manifest/`) or switch to plain (`people/`, `places/`)?
+2. **Old URLs**: keep redirect stubs, and for how long?
+3. **Session accounts**: fold `bearings/`, `crew-logs/` and `logs/` into
+   `voyages/`, or keep the current bearing as its own page?
+4. **Order of work**: DM overhaul first, player refactor second (as above)?
+5. **Stale branches**: delete all but `main` and the working branch?
+6. **prime/notes**: approve the three-document consolidation, and choose
+   `docs/` (undeployed) or a prune line in `deploy.yml`.
+7. **The DM directory moves** in phase 3.
+8. **The terms check**: approve a separate script alongside `data.js`, run in
+   `check.yml`.
 
 ## prime/notes consolidation
 
@@ -279,4 +386,4 @@ CLAUDE.md (folder map and rules), `scripts/nav.js`, `.github/workflows/deploy.ym
 
 ## Open
 
-The six calls above.
+The eight calls above.

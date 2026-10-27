@@ -52,17 +52,17 @@ The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
 Each settles items on several pages at once. Rule these first.
 
-1. ~~**Residue piece counts by Axiom.**~~ *Ruled: Dissolution 2, Boundary 3, Transformation 5, Convergence 7 (STAGING round 11).*
+1. ~~**Residue piece counts by Axiom.**~~ *Ruled: Dissolution 2, Distinction 3, Expansion 5, Consolidation 7, Determination 11 (STAGING, Cosmology).*
 2. ~~**Aperture or Atrium.**~~ *Answered: Atrium.*
 3. ~~**Does opening a heart need a Monolith?**~~ *Ruled: no; linking does (STAGING round 2).*
-4. ~~**A name for Vecna's fifteen-heart circle.**~~ *Ruled: the Circle of Fifteenths, Vecna's private name for it.*
+4. ~~**A name for Vecna's working.**~~ *Ruled: the Circle of Fifths, his name for it; GAL-01's part is the eye inscription (STAGING, Campaign).*
 5. ~~**Act structure and the Citadel.**~~ *Ruled: Citadel and Core are late Arc 3 or Arc 4.* Level bands per arc are a new decide on the spine.
 6. ~~**N'ghathrod's five centuries.**~~ *Ruled: exile from Glyth about four centuries ago; centuries of searching; the push for hearts only in recent decades.* Which residue piece gave him long life is a new decide.
 7. **What the H'Catha meteor is and why Caelestis wants it.** *Narrowed: containment for Caelestis, and the Sovereign Eye can't see through it; open: the Ortholith-fragment layer and why now.*
 8. ~~**How the Seekers divide.**~~ *Ruled: the Seekers are the faith; each chapter is named for what it seeks (the Seekers of Secrets are one); every chapter worships Vecna, often under another name, unaware of the others.* Whether N'ghathrod's colony is a chapter is a new decide.
 9. ~~**Astra's name and wound.**~~ *Ruled: any of the three names; the Axiom strain's ripple woke and broke it.*
 10. ~~**The real elder brain.**~~ *Ruled: the Session 27 brain is his; it teleported out.* Where it went is no longer a question.
-11. ~~**Which sphere holds Oerth.**~~ *Ruled: SPH-05, the farthest from Caelestis.*
+11. ~~**Where Oerth lies.**~~ *Ruled: GAL-01, in Greyspace; Oerth is the eye's retina (STAGING).*
 12. **Runes 17–19 as Anchors.** Fixed places Tumak goes to is settled; what they grant is open. Crew (Tumak), rules.
 13. ~~**Can a taken person be released?**~~ *Ruled: the taken outlive N'ghathrod, each keeping part of him.*
 14. **Fonains–Caelestis offset.** The timeline puts Fonains Session 28 about five months before Caelestis now; older notes say Caelestis is "around" Session 28. Timeline, Fonains doc, campaign.
@@ -199,9 +199,9 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-25 (chat); inbox/chat-organizing-framework.md (SPH-02, cosmic horror); memory-canon (a different vibe on each world)
 
 - **[fix]** Residue counts by Axiom *(answered)*
-  The split is Dissolution 2, Boundary 3, Transformation 5, Convergence 7 (STAGING round 11). The pages use Boundary 2, Dissolution 3, Transformation 5. Correct each:
+  The split is Dissolution 2, Distinction 3, Expansion 5, Consolidation 7, Determination 11 (STAGING, Cosmology). The pages use Boundary 2, Dissolution 3, Transformation 5. Correct each:
   - This page's residue table, and the line "A Boundary piece points toward its one sibling. A Convergence piece feels six." Change to: "A Boundary piece points toward its two siblings. A Convergence piece feels six."
-  - Glossary "Residue" ("split 2 / 3 / 5 / 7 by Axiom bias"): name the order, "Dissolution 2, Boundary 3, Transformation 5, Convergence 7".
+  - Glossary "Residue" ("split 2 / 3 / 5 / 7 by Axiom bias"): name the order, "Dissolution 2, Distinction 3, Expansion 5, Consolidation 7, Determination 11".
   - `artifacts/atlas.html` and the artifacts register: wherever A.T.L.A.S. points at "its one sibling" or "the only other Boundary piece in existence", it points toward its two siblings.
   - `artifacts/runekeepers-fragment.html` ("all three pieces"): "both pieces".
   - The twins' Zenith text on `realms/wayfinders-homeworld.html`: the fragment's two pieces forming in both twins makes three poles for the first time.
@@ -1720,8 +1720,8 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   src: chat-cosmic-campaign-structure § Superseded
 
 - **[fix]** Arc 4 is the Cast
-  Page says "The inscription completes or fails" and "The Convergence rule says he gets one cast". The inscription mechanism is superseded. Write: "Arc 4 — Cast. Vecna's working reaches its single cast," and keep the rest of the paragraph. Cite the Ascension page § The Cast for the one-cast rule.
-  src: campaign/ascension § The Cast; chat-early-planning (inscription superseded)
+  Page says "The inscription completes or fails" and "The Convergence rule says he gets one cast". The Convergence rule is retired; the inscription is current again, as the eye (STAGING, Campaign § Vecna's working). Rewrite Arc 4 to that: the eye opens or fails to.
+  src: campaign/ascension § The Cast; Korey, 2026-10-26 (the eye)
 
 - **[fix]** Tracker links point to the record
   The page links "Tracker", "Character Arc Tracker" and "Wildspace Tracker" and says current-state tracking "lives in the Character Arc Tracker". The Google Sheet trackers are retired. Point to the hand-kept record in `data/*.json` and the Voyages board.
@@ -3328,7 +3328,7 @@ counts change and Transformation stays.
   answered: inbox/chat-cosmic-campaign-structure.md § Superseded ("Artifacts of Convergence as Eye, Key, Voice → four Reach fragments as residue"), § Artifacts of Convergence (Settled)
 
 - **[fix]** Residue counts per fragment *(counts)*
-  Restate the set as Dissolution 2, Boundary 3, Transformation 5, Convergence 7. The line "A Boundary piece points toward its one sibling" becomes "toward its two siblings"; "so A.T.L.A.S. points at the only other Boundary piece in existence" becomes "so A.T.L.A.S. points toward the two other Boundary pieces, one of them its sister". "A Convergence piece feels six" stays.
+  Restate the set as Dissolution 2, Distinction 3, Expansion 5, Consolidation 7, Determination 11. The line "A Boundary piece points toward its one sibling" becomes "toward its two siblings"; "so A.T.L.A.S. points at the only other Boundary piece in existence" becomes "so A.T.L.A.S. points toward the two other Boundary pieces, one of them its sister". "A Convergence piece feels six" stays.
   src: Korey, 2026-10-25 (round 11)
 
 - **[fix]** The set intro contradicts its table
@@ -4506,8 +4506,8 @@ Fixes to player-facing pages, including the Fleet Intelligence Archive (`restric
 
 ### restricted/sa-002.html
 
-- **[fix]** Gregory's origin is not Cogfast Enclave
-  The archive names "Cogfast Enclave" as Gregory's origin. Gregory is from Toril; he reached Caelestis on a cargo ship. Replace the Cogfast line, or redact it, so the archive does not assert a false origin.
+- **[fix]** Gregory and the Cogfast Enclave
+  The archive names "Cogfast Enclave" as Gregory's origin. Gregory is from Toril and reached Caelestis on a cargo ship; the Cogfast Enclave on Lantan is his anchor on Toril (STAGING, Crew). Reword the archive line to that.
   src: inbox/chat-early-planning.md § Campaign Planning; memory canon (Gregory)
 
 ### restricted/sa-005.html
