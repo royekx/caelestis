@@ -35,16 +35,16 @@ staging once Korey has read and accepted them.
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
 | Factions | factions/ | 1 | 4 | 22 | 2 | 40 |
-| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 13 | 1 | 46 | 5 | 42 |
+| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 13 | 1 | 45 | 5 | 42 |
 | Dossiers | dossiers/ | 9 | 6 | 43 | 0 | 51 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 6 | 2 | 26 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 21 |
-| New pages | 14 proposed pages, the hub, notes/ | 3 | 17 | 8 | 2 | 35 |
-| Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 2 | 0 | 0 |
+| New pages | 14 proposed pages, the hub, notes/ | 3 | 17 | 6 | 2 | 35 |
+| Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 5 | 0 | 1 |
-| **Total** | | **77** | **88** | **276** | **14** | **420** |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 5 | 3 | 0 | 1 |
+| **Total** | | **77** | **87** | **270** | **14** | **420** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1965,9 +1965,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   The example path uses "../../artifacts/#world-surveyor". "World Surveyor" is retired; the artifact is A.T.L.A.S. Change the example anchor.
   src: memory-canon campaign-canon § Cosmology (A.T.L.A.S. line)
 
-- **[fix]** Guide path
-  Page says the guide "lives in WIKI-PAGE-GUIDE.md at the repo root". It lives at `prime/notes/WIKI-PAGE-GUIDE.md`.
-  src: CLAUDE.md § Read before editing
 
 ---
 
@@ -4318,10 +4315,6 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 #### notes/PAGE-SHAPE.md
 
-- **[fix]** Dossier tab grammar: PAGE-SHAPE's four tabs stand *(answered)*
-  No change to PAGE-SHAPE.md. The four tabs Who they are / What they want / DM notes / Stat block are the current rule, with "What's hidden" folded into DM notes. The five-tab set from turn 460 (What it is / What it wants / What's hidden / Running it / Stat block) was replaced: PR #77, "the four-tab dossier shape", moved every dossier to four tabs and rewrote PAGE-SHAPE.md, and Korey merged it on 2026-10-18, after the cosmic chat's turn 460 (that chat's page-shape work merged as PR #60 on 2026-10-07 and PR #63 on 2026-10-11). The same item in the Repo and process section closes with this one.
-  src: chat-cosmic § Wiki structure rules (turn 460)
-  answered: repo history (PR #77, merged 2026-10-18: "Formatting pass across the DM wiki, and the four-tab dossier shape"; last change to prime/notes/PAGE-SHAPE.md)
 
 - **[later]** A motivation rubric for "What they want"
   The early master source doc gave every NPC four lines: **Wants** (specific, never "a happy life"), **Will do to get it** (the tools they will actually use), **Won't cross** (the line they keep), and **Current pressure** (what makes it urgent now, or nothing). Options: adopt it as the shape of the "What they want" tab (or its successor), keep it as a writing check only, or leave it out.
@@ -4343,9 +4336,6 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   Lines 45, 63–64, 490 and 525 say "the World Surveyor". Change each to A.T.L.A.S.
   src: framework § A.T.L.A.S.; memory-canon (campaign-canon)
 
-- **[fix]** Retired names in the title examples
-  "The Hollow" is retired: the Reach world is unnamed, and its remains are the black hole under the Core. The guide still names it at line 116 ("The Restorers' awareness of the Hollow is not known"), line 319 (a world-object title example) and line 566 ("*The Reach*, *The Hollow*"). Drop "The Hollow" from all three. Lines 310 and 564 also offer *Network* as a functional title; "the network" is retired, so swap in a live title. The anchor examples at lines 337 and 346 use `world-surveyor`; change them to `atlas`.
-  src: memory-canon (campaign-canon: "The Hollow" name dropped; A.T.L.A.S. naming); chat-early-planning § Campaign Planning, Superseded
 
 - **[drop]** "The network" as a faction term
   Line 48 says "who Vecna's current network is". "The network" is retired; reword to N'ghathrod's colony and the Seekers.
@@ -4438,9 +4428,6 @@ run decide, fix, drop, add.
   src: automation § Open; memory-canon § Key NPCs (OSTEKK-6)
   answered: inbox/chat-automation.md § Voyage 5 runbook, Method (Settled: "Earlier voyages keep 'autognome' as history"). PR #61 asked "Say if you want them swept" and PR #62 repeated the default; Korey merged both without asking for a sweep.
 
-- **[fix]** The search-repair table runs backwards
-  `prime/notes/RESTRUCTURE-NOTES.md` maps wrong spellings to right ones. Line 348 reads "Saerthe → Saerth"; change to "Saerth → Saerthe". The roster line (line 225) lists "Saerth"; change to "Saerthe". "Sor'kur" should read "Sor'Kur" on lines 226, 341 and 347 (line 347: "Sorker → Sor'Kur").
-  src: automation § Open; memory-canon (campaign-canon, spellings)
 
 # Repo and process
 
@@ -4468,9 +4455,6 @@ run decide, fix, drop, add.
   WIKI-PAGE-GUIDE.md: "The Reach's name is not known… phrase gaps as such." The new rule: an entry says what is known and stops. Suggested split: an in-world gap ("the Fleet does not know the Reach's name") is a world fact and may stay; a DM gap ("name not yet decided") is a backlog item.
   src: notes/WIKI-PAGE-GUIDE.md; working/README.md
 
-- **[later]** One vocabulary for the record's sets
-  DATA-BOUNDARY.md and SESSION-RUN.md call the sets voyages, crew, cast, factions, places, things, threads. The files in `data/` are sessions, player-characters, npcs, factions, locations, items, quests. Suggested: the file names in all process docs; in-world labels only on pages.
-  src: notes/DATA-BOUNDARY.md, notes/SESSION-RUN.md, scripts/data.js
 
 - **[add]** Writing rule: no triple short sentences
   Add to the prose rules in CLAUDE.md ("Prose: no stacked negations…") and to working/README.md § Writing staged entries and pages: "No three short sentences in a row for emphasis." Korey asks for AI-isms to be avoided in general; this is the pattern he named alongside stacked negations.
@@ -4485,13 +4469,7 @@ run decide, fix, drop, add.
 
 ## Fixes
 
-- **[fix]** SESSION-RUN step 2 write target
-  Step 2 says to write the Full Account to `CHRONICLE.md`, which would overwrite the chronicle rules. The Full Account goes to the chat for review and onto the voyage page at step 5.
-  src: notes/SESSION-RUN.md
 
-- **[fix]** Process docs ship with the site
-  `deploy.yml` prunes CLAUDE.md, scripts/data.js, prime/working and templates, but not `prime/notes/`. Move the surviving docs to an undeployed `docs/` folder, or add `prime/notes` to the prune step.
-  src: .github/workflows/deploy.yml
 
 - **[fix]** `vessels/` missing from the player search index
   The player Pagefind glob lists every player folder except `vessels/`. Add `vessels/**/*.html` (and update the glob again when the refactor renames folders).

@@ -230,9 +230,9 @@ item for a finished section; the terms check runs as an error across prime/;
 
 ## Staging homes
 The first target listed on each STAGING subject is its home page. Subjects
-whose home moves under phase 3 follow the move (Oerth → `realms/oerth.html`,
+whose home moves under phase 3 follow the move (Oerth → `locations/oerth.html`,
 Vecna → `dossiers/vecna.html`, the Fleet → `factions/fleet.html`, DM principles
-→ `campaign/principles.html`, Rolt → `dossiers/haymond-rolt.html`).
+→ `principles.html`, Rolt → `dossiers/haymond-rolt.html`).
 
 ## Calls
 
@@ -260,36 +260,24 @@ Seventy remote branches as of 2026-10-27; only `main` and `deep-lore-working` ar
 
 ## prime/notes consolidation
 
-### Plan
+### Done (2026-10-27)
 
-Three files total, in an undeployed `docs/` (refactor call 6), or kept under `prime/notes/` with a prune line added to `deploy.yml`.
+`prime/notes/` is deleted. Its rules now live in three files; `docs/` is pruned
+from deploy.
 
-**1. `CLAUDE.md`** (repo root, already pruned from deploy). Grows to hold:
-- Folder map (current, then refactor shape as it lands) and which side each folder is on.
-- The record and the data boundary, condensed from DB: the encounter rule, where each fact lives, record vs DM layer files, authored vs derived, `derive`/`check`/`guard`, the closed schema, "the schema tests the key, not the sentence", gating is not secrecy.
-- Writing rules, lifted from `prime/working/README.md`: specific over sparse; plain, precise; in-world voice for world facts, DM voice for mechanics and planning; open questions only on the planning layer; no stacked negations; canon voice not changelog voice.
-- The working flow pointer (inbox → drafts → BACKLOG → STAGING → pages) with a link to `prime/working/README.md`.
-- Deploy and search: three indexes, the player glob is the boundary, add new player folders to the glob and scope selector, one bare `section:` filter, `data-pagefind-ignore` on chrome, `vocabulary.js` for misspellings, gated search flags.
-- Naming: the settled names list above.
-- Existing rules (PRs not main, `_benched/` out of service, site-relative urls, never reuse a retired path).
-- Read-before-editing table updated to the two docs below.
+| File | Holds |
+|---|---|
+| `CLAUDE.md` | folder map (current and the approved DM structure), the record and the data boundary, commands (`data.js`, `terms.js`), writing rules, naming, working flow, deploy and search, repo rules |
+| `docs/SESSION-RUN.md` | the session run, with CHRONICLE merged in as step 2; sets and statuses named by record file |
+| `docs/PAGE-GUIDE.md` | one page guide for player, DM and FIA pages: page rules, setting voice, DM structure and registers, page anatomy, dossiers, tags, the Voyages page, player pages, FIA voice |
 
-**2. `SESSION-RUN.md`**: SESSION-RUN with CHRONICLE merged in as its step 2 section (they are always read together, and SR already points to CHR). Fix the step 2 write target, use one set vocabulary, update the vessel rule once Conflict #3 is ruled, and drop the bearings rows if refactor call 3 folds them into voyages.
+References updated: `CLAUDE.md`, `scripts/data.js`, `data/bearing.js`,
+`.github/workflows/check.yml` and `deploy.yml`, `prime/tracker/index.html`,
+`prime/campaign/index.html`, `prime/scripts/dm-tracker.js`.
+`scripts/_benched/README.md` still cites DATA-BOUNDARY.md and is left as is.
 
-**3. `PAGE-GUIDE.md`** (one page guide, both sides): PAGE-SHAPE as the spine, plus from WPG the setting-voice discipline (seam table, one-shot DM test, comparative absolutes, no option menus), functional headings, anchors, cross-refs, head template (corrected paths), voyage-entry markup, plot-hook pills, default-open list; plus the player-page rules (player dossiers, inventory entry/item, crew manifest fields, shared-sheet rule, layout guards, portraits, companion pages); plus a short FIA voice section. The dossier tab set and `is-open` placement wait on Conflicts #1 and #2.
-
-**Deleted**: CHRONICLE.md (merged), DATA-BOUNDARY.md (into CLAUDE.md), PAGE-SHAPE.md and WIKI-PAGE-GUIDE.md (into PAGE-GUIDE.md), DEPLOY-README.txt, FIA-BREADCRUMBS.md, FIXES-DEMO-MIGRATION.md, RESTRUCTURE-NOTES.md, SEARCH-SETUP.md, init.md, restricted.md.
-
-If Korey prefers to keep the data boundary standalone (the refactor's own list names four docs), it becomes a fourth file; everything else stands.
-
-**References to update when the files move** (or `check`/readers will point at nothing):
-- `CLAUDE.md` lines 23, 30–32
-- `scripts/data.js` header comment (line 10)
-- `.github/workflows/check.yml` line 9, `deploy.yml` line 75 (comment)
-- `prime/tracker/index.html` line 23 (`prime/notes/SESSION-RUN.md`)
-- `prime/campaign/index.html` line 321 ("WIKI-PAGE-GUIDE.md at the repo root"; already a BACKLOG fix)
-- `prime/scripts/dm-tracker.js` line 22 (comment)
-- `scripts/_benched/README.md` (cites DATA-BOUNDARY.md)
+The retired notes and the rule checklist below are kept as the record of what
+was carried.
 
 ### Retired notes
 
@@ -446,4 +434,4 @@ CLAUDE.md (folder map and rules), `scripts/nav.js`, `.github/workflows/deploy.ym
 
 ## Open
 
-None. Phase 2 (process notes) is next.
+None. Phase 2 (process notes) is done; phase 3 is next.

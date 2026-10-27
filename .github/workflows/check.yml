@@ -7,7 +7,7 @@ name: Check the record
 #   node scripts/data.js check
 #   node scripts/terms.js     (retired terms on DM pages; fails only for finished folders)
 #
-# The same command runs locally; see prime/notes/SESSION-RUN.md.
+# The same command runs locally; see docs/SESSION-RUN.md.
 
 on:
   pull_request:

@@ -19,7 +19,7 @@
 
    A row is the wiki's dossier row: closed, it is the scannable line;
    open, it is everything held about that record. One representation
-   per entity, as WIKI-PAGE-GUIDE.md asks.
+   per entity, as docs/PAGE-GUIDE.md asks.
    ════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
