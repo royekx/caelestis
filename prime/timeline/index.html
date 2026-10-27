@@ -34,6 +34,26 @@
   .tl-scenes td, .tl-scenes th { border-bottom:1px solid var(--rule-soft); padding:.35rem .5rem; text-align:left; vertical-align:top; }
   .tl-scenes th { color:var(--text-muted); font-weight:normal; }
   [hidden] { display:none !important; }
+  .cx-grid { display:grid; grid-template-columns:minmax(0,1fr) 22rem; gap:1rem; align-items:start; }
+  @media (max-width: 900px) { .cx-grid { grid-template-columns:1fr; } }
+  .cx-chart { position:relative; border:1px solid var(--rule); background:var(--bg-panel); height:min(74vh, 52rem); overflow:hidden; touch-action:none; }
+  .cx-chart svg { display:block; width:100%; height:100%; cursor:grab; font-family:inherit; }
+  .cx-chart svg.panning { cursor:grabbing; }
+  .cx-node { cursor:pointer; }
+  .cx-label { pointer-events:none; fill:var(--text-soft); paint-order:stroke; stroke:var(--bg-deep); stroke-width:3px; stroke-linejoin:round; }
+  .cx-ledger { border:1px solid var(--gold-rule); background:var(--bg-card); padding:1rem 1.1rem; max-height:min(74vh, 52rem); overflow:auto; }
+  .cx-ledger h3 { margin:0 0 .2rem; }
+  .cx-ledger ul { margin:.4rem 0 .9rem; padding-left:1.1rem; }
+  .cx-ledger li { margin:.25rem 0; }
+  .cx-tag { display:inline-block; font-size:.78rem; letter-spacing:.04em; text-transform:uppercase; color:var(--text-muted); border:1px solid var(--rule); padding:0 .35rem; margin-right:.35rem; }
+  .cx-tag.dm { color:var(--violet); border-color:var(--violet-dim); }
+  .cx-link { background:none; border:none; padding:0; font:inherit; color:var(--ice-light); cursor:pointer; text-align:left; }
+  .cx-link:hover { color:var(--gold-light); }
+  .cx-rel { color:var(--text-muted); }
+  #cx-search { font:inherit; font-size:.95rem; background:var(--bg-deep); color:var(--text); border:1px solid var(--rule); padding:.25rem .5rem; width:min(16rem,100%); }
+  #cx-voyage { vertical-align:middle; }
+  .cx-zoom { position:absolute; right:.5rem; bottom:.5rem; display:flex; gap:.3rem; }
+  .cx-zoom button { font:inherit; color:var(--text-soft); background:var(--bg-deep); border:1px solid var(--rule); width:2rem; height:2rem; cursor:pointer; }
 </style>
 </head>
 <body>
@@ -51,6 +71,7 @@
   <div class="tl-tabs" role="tablist">
     <button type="button" role="tab" aria-selected="true" data-view="overview">Overview</button>
     <button type="button" role="tab" aria-selected="false" data-view="threads">Threads</button>
+    <button type="button" role="tab" aria-selected="false" data-view="connections">Connections</button>
   </div>
 
   <section id="view-overview">
@@ -76,6 +97,27 @@
       <summary>Moments as a table</summary>
       <table class="tl-scenes" id="scene-table"></table>
     </details>
+  </section>
+
+  <section id="view-connections" hidden>
+    <div class="tl-filters" id="cx-layer">
+      <span>Layer:</span>
+      <button type="button" data-layer="play" aria-pressed="false">In play</button>
+      <button type="button" data-layer="dm" aria-pressed="true">DM</button>
+      <label style="margin-left:.75rem">As of <span id="cx-voyage-label">every voyage</span> <input type="range" id="cx-voyage" min="1" max="1" value="1"></label>
+      <input type="search" id="cx-search" placeholder="Find a name…" aria-label="Find a name" list="cx-names">
+      <datalist id="cx-names"></datalist>
+    </div>
+    <div class="tl-filters" id="cx-scope"><span>Scope:</span></div>
+    <div class="tl-filters" id="cx-types"><span>Types:</span></div>
+    <div class="cx-grid">
+      <div class="cx-chart" id="cx-chart">
+        <svg id="cx-svg" role="img" aria-label="Connections between people, places, factions and things"></svg>
+        <div class="cx-zoom"><button type="button" data-z="1.25" aria-label="Zoom in">+</button><button type="button" data-z="0.8" aria-label="Zoom out">−</button><button type="button" data-z="0" aria-label="Fit">⤢</button></div>
+      </div>
+      <aside class="cx-ledger" id="cx-ledger" aria-live="polite"><p class="tl-meta">Select a name to read what is known and what it connects to.</p></aside>
+    </div>
+    <p class="tl-meta"><strong>In play</strong> shows only the campaign record: what has happened at the table, stamped by voyage. <strong>DM</strong> adds what only the DM knows; hollow circles and dashed lines are DM-only. Drag to pan, scroll to zoom, drag a circle to pin it.</p>
   </section>
 
   <div class="tl-detail" id="detail" aria-live="polite"><p class="tl-meta">Select an entry to read it.</p></div>
@@ -471,6 +513,352 @@
   fetch('timeline.json').then(function (r) { return r.json(); }).then(render).catch(function () {
     document.getElementById('overview').textContent = 'timeline.json could not be loaded.';
   });
+})();
+</script>
+<script>
+/* Connections: a map of who and what connects to whom.
+   In play = the campaign record (data/*.json), voyage-stamped.
+   DM      = prime/data/connections.json, hand-kept, keyed by the same ids. */
+(function () {
+  var NS = 'http://www.w3.org/2000/svg';
+  var css = getComputedStyle(document.documentElement);
+  function v(n, f) { return (css.getPropertyValue(n) || '').trim() || f; }
+  var TYPES = {
+    crew:    { label: 'Crew',     color: '#e2ae7e' },
+    person:  { label: 'People',   color: '#7fb2e5' },
+    faction: { label: 'Factions', color: '#d55181' },
+    place:   { label: 'Places',   color: '#4fb286' },
+    item:    { label: 'Items',    color: '#c98500' },
+    vessel:  { label: 'Vessels',  color: '#5fb0c8' },
+    entity:  { label: 'Powers',   color: '#a98be0' },
+    concept: { label: 'Concepts', color: '#b39a7a' },
+    event:   { label: 'Events',   color: '#9aa3ad' },
+    quest:   { label: 'Quests',   color: '#d0605a' }
+  };
+  var SCOPES = { caelestis: 'Caelestis', fonains: 'Fonains', krynn: 'Krynn', cosmos: 'Cosmos' };
+  var REC = [['player-characters', 'crew'], ['npcs', 'person'], ['factions', 'faction'], ['locations', 'place'], ['items', 'item'], ['quests', 'quest']];
+
+  var state = { layer: 'dm', voyage: null, maxVoyage: 1, scopes: {}, types: {}, sel: null, k: 1, tx: 0, ty: 0 };
+  var all = { nodes: {}, edges: [] }, sim = [], simEdges = [], loaded = false;
+  var svg, gRoot, gEdges, gNodes, gLabels, ledger;
+
+  function el(tag, attrs, text) { var n = document.createElementNS(NS, tag); for (var k in attrs) n.setAttribute(k, attrs[k]); if (text != null) n.textContent = text; return n; }
+  function h(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
+  function getJSON(u) { return fetch(u).then(function (r) { if (!r.ok) throw new Error(u); return r.json(); }); }
+
+  // ── build the merged graph ────────────────────────────────────────────────
+  function addNode(n) { all.nodes[n.id] = n; return n; }
+  function first(e) {
+    var vs = (e.seen || []).concat(e.mentioned || [], (e.voyages || []).map(function (x) { return x.number; }));
+    return vs.length ? Math.min.apply(null, vs) : 1;
+  }
+  function build(record, dm) {
+    REC.forEach(function (r, i) {
+      (record[i] || []).forEach(function (e) {
+        var f = e.fields || {};
+        addNode({ id: e.id, label: e.name, type: r[1], scope: 'caelestis', play: true, from: first(e), url: e.url,
+          summary: f['Overview (Player)'] || f['Role (as known)'] || f['Type'] || '',
+          facts: [].concat.apply([], (e.voyages || []).map(function (x) {
+            state.maxVoyage = Math.max(state.maxVoyage, x.number);
+            return (x.bullets || []).map(function (b) { return { t: b, v: x.number }; });
+          })) });
+      });
+    });
+    var seen = {};
+    function edge(s, t, rel, play, src) {
+      if (!all.nodes[s] || !all.nodes[t] || s === t) return;
+      var key = [s, t].sort().join('|') + '|' + (play ? 'p' : rel);
+      if (seen[key]) return; seen[key] = 1;
+      all.edges.push({ s: s, t: t, rel: rel, play: play, src: src });
+    }
+    REC.forEach(function (r, i) {
+      (record[i] || []).forEach(function (e) {
+        if (e.parentId) edge(e.id, e.parentId, r[1] === 'quest' ? 'part of' : 'within', true);
+        if (e.giverId) edge(e.giverId, e.id, 'gave', true);
+        (e.links || []).forEach(function (l) { edge(e.id, l.id, 'connected', true); });
+      });
+    });
+    (dm.nodes || []).forEach(function (n) {
+      var ex = all.nodes[n.id];
+      var facts = (n.facts || []).map(function (f) { return { t: f.t, src: f.src, dm: true }; });
+      if (ex) {
+        ex.facts = ex.facts.concat(facts);
+        if (n.summary) ex.dmSummary = n.summary;
+      } else {
+        addNode({ id: n.id, label: n.label || n.id, type: TYPES[n.type] ? n.type : 'concept', scope: SCOPES[n.scope] ? n.scope : 'cosmos',
+          play: false, summary: n.summary || '', facts: facts });
+      }
+    });
+    (dm.edges || []).forEach(function (e) { edge(e.s, e.t, e.rel || 'connected', false, e.src); });
+    all.edges.forEach(function (e) {
+      var a = all.nodes[e.s], b = all.nodes[e.t];
+      e.from = e.play ? Math.max(a.from || 1, b.from || 1) : null;
+    });
+  }
+
+  // ── what is visible ───────────────────────────────────────────────────────
+  function visible() {
+    var V = state.voyage || state.maxVoyage, ids = {};
+    Object.keys(all.nodes).forEach(function (id) {
+      var n = all.nodes[id];
+      if (state.layer === 'play' && (!n.play || n.from > V)) return;
+      if (!state.scopes[n.scope] || !state.types[n.type]) return;
+      ids[id] = true;
+    });
+    var edges = all.edges.filter(function (e) {
+      if (!ids[e.s] || !ids[e.t]) return false;
+      if (state.layer === 'play' && (!e.play || e.from > V)) return false;
+      return true;
+    });
+    return { ids: ids, edges: edges };
+  }
+
+  // ── layout: a small force simulation ─────────────────────────────────────
+  var pos = {}, alpha = 0, raf = null;
+  function layout() {
+    var vis = visible();
+    sim = Object.keys(vis.ids).map(function (id) {
+      var p = pos[id] || (pos[id] = { x: (Math.random() - 0.5) * 600, y: (Math.random() - 0.5) * 600, vx: 0, vy: 0 });
+      p.id = id; p.deg = 0; return p;
+    });
+    var at = {}; sim.forEach(function (p) { at[p.id] = p; });
+    simEdges = vis.edges.map(function (e) { at[e.s].deg++; at[e.t].deg++; return { e: e, a: at[e.s], b: at[e.t] }; });
+    draw();
+    heat(1);
+  }
+  function heat(a) { alpha = Math.max(alpha, a); if (!raf) raf = requestAnimationFrame(tick); }
+  function tick() {
+    raf = null;
+    var n = sim.length, i, j, p, q, dx, dy, d2, f;
+    for (i = 0; i < n; i++) {
+      p = sim[i];
+      for (j = i + 1; j < n; j++) {
+        q = sim[j]; dx = p.x - q.x; dy = p.y - q.y; d2 = dx * dx + dy * dy || 0.01;
+        if (d2 > 250000) continue;
+        f = (900 + 40 * (p.deg + q.deg)) / d2 * alpha;
+        p.vx += dx * f; p.vy += dy * f; q.vx -= dx * f; q.vy -= dy * f;
+      }
+    }
+    simEdges.forEach(function (l) {
+      dx = l.b.x - l.a.x; dy = l.b.y - l.a.y; var d = Math.sqrt(dx * dx + dy * dy) || 1;
+      var want = 60 + 4 * Math.min(l.a.deg, l.b.deg);
+      f = (d - want) / d * 0.06 * alpha;
+      l.a.vx += dx * f; l.a.vy += dy * f; l.b.vx -= dx * f; l.b.vy -= dy * f;
+    });
+    sim.forEach(function (p) {
+      p.vx -= p.x * 0.004 * alpha; p.vy -= p.y * 0.004 * alpha;
+      if (p.fixed) { p.vx = p.vy = 0; return; }
+      p.vx *= 0.6; p.vy *= 0.6; p.x += p.vx; p.y += p.vy;
+    });
+    alpha *= 0.985;
+    place();
+    if (alpha > 0.02) raf = requestAnimationFrame(tick);
+  }
+
+  // ── drawing ──────────────────────────────────────────────────────────────
+  function R(p) { return 4 + Math.min(10, Math.sqrt(p.deg) * 2); }
+  function draw() {
+    gEdges.textContent = ''; gNodes.textContent = ''; gLabels.textContent = '';
+    simEdges.forEach(function (l) {
+      l.line = el('line', { stroke: l.e.play ? 'rgba(156,192,224,0.32)' : 'rgba(150,120,189,0.45)', 'stroke-width': 1.2 });
+      if (!l.e.play) l.line.setAttribute('stroke-dasharray', '4 3');
+      gEdges.appendChild(l.line);
+    });
+    sim.forEach(function (p) {
+      var n = all.nodes[p.id], c = TYPES[n.type].color;
+      p.circle = el('circle', { r: R(p), class: 'cx-node', fill: n.play ? c : 'var(--bg-deep)', stroke: c, 'stroke-width': n.play ? 1 : 2 });
+      p.circle.appendChild(el('title', {}, n.label));
+      p.circle.addEventListener('pointerdown', function (ev) { startDrag(ev, p); });
+      gNodes.appendChild(p.circle);
+      p.text = el('text', { class: 'cx-label', 'font-size': 12, 'text-anchor': 'middle' }, n.label);
+      gLabels.appendChild(p.text);
+    });
+    emphasise();
+  }
+  function place() {
+    simEdges.forEach(function (l) { l.line.setAttribute('x1', l.a.x); l.line.setAttribute('y1', l.a.y); l.line.setAttribute('x2', l.b.x); l.line.setAttribute('y2', l.b.y); });
+    sim.forEach(function (p) {
+      p.circle.setAttribute('cx', p.x); p.circle.setAttribute('cy', p.y);
+      p.text.setAttribute('x', p.x); p.text.setAttribute('y', p.y - R(p) - 3);
+    });
+  }
+  function emphasise() {
+    var near = {};
+    if (state.sel) { near[state.sel] = 2; simEdges.forEach(function (l) { if (l.a.id === state.sel) near[l.b.id] = 1; if (l.b.id === state.sel) near[l.a.id] = 1; }); }
+    var any = !!state.sel && near[state.sel];
+    sim.forEach(function (p) {
+      var on = !any || near[p.id];
+      p.circle.setAttribute('opacity', on ? 1 : 0.15);
+      p.circle.setAttribute('stroke-width', near[p.id] === 2 ? 3 : (all.nodes[p.id].play ? 1 : 2));
+      var show = any ? near[p.id] : (p.deg >= 4 || state.k > 1.6);
+      p.text.setAttribute('opacity', show ? (on ? 1 : 0.2) : 0);
+      p.text.setAttribute('font-size', Math.max(9, 12 / Math.sqrt(state.k)));
+    });
+    simEdges.forEach(function (l) {
+      var on = !any || l.a.id === state.sel || l.b.id === state.sel;
+      l.line.setAttribute('opacity', on ? 1 : 0.06);
+    });
+  }
+
+  // ── pan, zoom, drag ──────────────────────────────────────────────────────
+  function apply() { gRoot.setAttribute('transform', 'translate(' + state.tx + ',' + state.ty + ') scale(' + state.k + ')'); }
+  function toWorld(ev) { var b = svg.getBoundingClientRect(); return { x: (ev.clientX - b.left - state.tx) / state.k, y: (ev.clientY - b.top - state.ty) / state.k }; }
+  function zoomAt(f, cx, cy) {
+    var k = Math.max(0.15, Math.min(5, state.k * f)); f = k / state.k;
+    state.tx = cx - (cx - state.tx) * f; state.ty = cy - (cy - state.ty) * f; state.k = k; apply(); emphasise();
+  }
+  function fit() {
+    if (!sim.length) return;
+    var b = svg.getBoundingClientRect(), xs = sim.map(function (p) { return p.x; }), ys = sim.map(function (p) { return p.y; });
+    var x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs), y0 = Math.min.apply(null, ys), y1 = Math.max.apply(null, ys);
+    state.k = Math.max(0.15, Math.min(2, 0.9 * Math.min(b.width / (x1 - x0 + 60), b.height / (y1 - y0 + 60))));
+    state.tx = b.width / 2 - state.k * (x0 + x1) / 2; state.ty = b.height / 2 - state.k * (y0 + y1) / 2; apply(); emphasise();
+  }
+  function centre(id) {
+    var p = pos[id]; if (!p) return; var b = svg.getBoundingClientRect();
+    if (state.k < 1) state.k = 1;
+    state.tx = b.width / 2 - p.x * state.k; state.ty = b.height / 2 - p.y * state.k; apply(); emphasise();
+  }
+  var drag = null;
+  function startDrag(ev, p) {
+    ev.stopPropagation(); svg.setPointerCapture(ev.pointerId);
+    drag = { p: p, moved: false, x: ev.clientX, y: ev.clientY };
+  }
+  function bindPan() {
+    var pan = null;
+    svg.addEventListener('pointerdown', function (ev) { if (drag) return; pan = { x: ev.clientX, y: ev.clientY, tx: state.tx, ty: state.ty, moved: false }; svg.classList.add('panning'); svg.setPointerCapture(ev.pointerId); });
+    svg.addEventListener('pointermove', function (ev) {
+      if (drag) {
+        if (Math.abs(ev.clientX - drag.x) + Math.abs(ev.clientY - drag.y) > 3) drag.moved = true;
+        if (drag.moved) { var w = toWorld(ev); drag.p.x = w.x; drag.p.y = w.y; drag.p.fixed = true; heat(0.3); place(); }
+      } else if (pan) {
+        if (Math.abs(ev.clientX - pan.x) + Math.abs(ev.clientY - pan.y) > 3) pan.moved = true;
+        state.tx = pan.tx + ev.clientX - pan.x; state.ty = pan.ty + ev.clientY - pan.y; apply();
+      }
+    });
+    svg.addEventListener('pointerup', function () {
+      if (drag && !drag.moved) select(drag.p.id);
+      else if (pan && !pan.moved) select(null);
+      drag = null; pan = null; svg.classList.remove('panning');
+    });
+    svg.addEventListener('wheel', function (ev) { ev.preventDefault(); var b = svg.getBoundingClientRect(); zoomAt(ev.deltaY < 0 ? 1.15 : 1 / 1.15, ev.clientX - b.left, ev.clientY - b.top); }, { passive: false });
+    document.querySelector('.cx-zoom').addEventListener('click', function (ev) {
+      var z = ev.target.closest('button'); if (!z) return; var b = svg.getBoundingClientRect();
+      if (z.dataset.z === '0') fit(); else zoomAt(Number(z.dataset.z), b.width / 2, b.height / 2);
+    });
+  }
+
+  // ── the ledger ───────────────────────────────────────────────────────────
+  function select(id) {
+    state.sel = id; emphasise();
+    ledger.textContent = '';
+    if (!id) { ledger.appendChild(h('p', 'tl-meta', 'Select a name to read what is known and what it connects to.')); return; }
+    var n = all.nodes[id], V = state.voyage || state.maxVoyage, dm = state.layer === 'dm';
+    ledger.appendChild(h('h3', null, n.label));
+    var meta = h('p', 'tl-meta');
+    meta.appendChild(h('span', 'cx-tag', TYPES[n.type].label.replace(/s$/, '')));
+    meta.appendChild(h('span', 'cx-tag' + (n.play ? '' : ' dm'), n.play ? 'In play since Voyage ' + n.from : 'DM only'));
+    meta.appendChild(h('span', 'cx-tag', SCOPES[n.scope]));
+    ledger.appendChild(meta);
+    if (n.summary) ledger.appendChild(h('p', null, n.summary));
+    if (dm && n.dmSummary) { var ds = h('p'); ds.appendChild(h('span', 'cx-tag dm', 'DM')); ds.appendChild(document.createTextNode(n.dmSummary)); ledger.appendChild(ds); }
+    var facts = n.facts.filter(function (f) { return f.dm ? dm : f.v <= V; });
+    if (facts.length) {
+      ledger.appendChild(h('h4', null, 'Facts'));
+      var ul = h('ul');
+      facts.forEach(function (f) {
+        var li = h('li'); li.appendChild(h('span', 'cx-tag' + (f.dm ? ' dm' : ''), f.dm ? 'DM' : 'V' + f.v));
+        li.appendChild(document.createTextNode(f.t)); if (f.src) li.title = f.src; ul.appendChild(li);
+      });
+      ledger.appendChild(ul);
+    }
+    var links = simEdges.filter(function (l) { return l.a.id === id || l.b.id === id; });
+    if (links.length) {
+      ledger.appendChild(h('h4', null, 'Connections (' + links.length + ')'));
+      var ul2 = h('ul');
+      links.sort(function (x, y) { var a = x.a.id === id ? x.b : x.a, b = y.a.id === id ? y.b : y.a; return all.nodes[a.id].label.localeCompare(all.nodes[b.id].label); })
+        .forEach(function (l) {
+          var other = l.a.id === id ? l.b.id : l.a.id, li = h('li');
+          if (!l.e.play) li.appendChild(h('span', 'cx-tag dm', 'DM'));
+          var rel = l.e.rel === 'connected' ? '' : (l.a.id === id ? l.e.rel + ' → ' : '← ' + l.e.rel + ' · ');
+          if (rel) li.appendChild(h('span', 'cx-rel', rel));
+          var b = h('button', 'cx-link', all.nodes[other].label); b.type = 'button';
+          b.addEventListener('click', function () { select(other); centre(other); });
+          li.appendChild(b); ul2.appendChild(li);
+        });
+      ledger.appendChild(ul2);
+    }
+    if (n.url) { var a = h('a', null, 'Open the record entry'); a.href = '../../' + n.url; ledger.appendChild(a); }
+  }
+
+  // ── controls ─────────────────────────────────────────────────────────────
+  function toggles(box, map, store, counts) {
+    Object.keys(map).forEach(function (k) {
+      if (!counts[k]) return;
+      store[k] = true;
+      var b = h('button'); b.type = 'button'; b.setAttribute('aria-pressed', 'true');
+      if (map[k].color) { var key = h('span', 'tl-key'); key.style.background = map[k].color; key.style.borderRadius = '50%'; b.appendChild(key); }
+      b.appendChild(document.createTextNode((map[k].label || map[k]) + ' ' + counts[k]));
+      b.addEventListener('click', function () { store[k] = !store[k]; b.setAttribute('aria-pressed', store[k] ? 'true' : 'false'); layout(); if (state.sel && !visible().ids[state.sel]) select(null); });
+      box.appendChild(b);
+    });
+  }
+  function controls() {
+    var tc = {}, sc = {};
+    Object.keys(all.nodes).forEach(function (id) { var n = all.nodes[id]; tc[n.type] = (tc[n.type] || 0) + 1; sc[n.scope] = (sc[n.scope] || 0) + 1; });
+    toggles(document.getElementById('cx-types'), TYPES, state.types, tc);
+    toggles(document.getElementById('cx-scope'), SCOPES, state.scopes, sc);
+    document.getElementById('cx-layer').addEventListener('click', function (ev) {
+      var b = ev.target.closest('button[data-layer]'); if (!b) return;
+      state.layer = b.dataset.layer;
+      this.querySelectorAll('button[data-layer]').forEach(function (o) { o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
+      layout(); select(state.sel && visible().ids[state.sel] ? state.sel : null);
+    });
+    var r = document.getElementById('cx-voyage'), lab = document.getElementById('cx-voyage-label');
+    r.max = state.maxVoyage; r.value = state.maxVoyage;
+    r.addEventListener('input', function () {
+      state.voyage = Number(r.value); lab.textContent = state.voyage === state.maxVoyage ? 'every voyage' : 'Voyage ' + state.voyage;
+      layout(); select(state.sel && visible().ids[state.sel] ? state.sel : null);
+    });
+    var dl = document.getElementById('cx-names');
+    Object.keys(all.nodes).map(function (id) { return all.nodes[id].label; }).sort().forEach(function (l) { var o = h('option'); o.value = l; dl.appendChild(o); });
+    document.getElementById('cx-search').addEventListener('change', function () {
+      var q = this.value.trim().toLowerCase(); if (!q) return;
+      var ids = Object.keys(visible().ids), hit = ids.filter(function (id) { return all.nodes[id].label.toLowerCase() === q; })[0]
+        || ids.filter(function (id) { return all.nodes[id].label.toLowerCase().indexOf(q) >= 0; })[0];
+      if (hit) { select(hit); centre(hit); }
+    });
+  }
+
+  function start() {
+    if (loaded) return; loaded = true;
+    svg = document.getElementById('cx-svg'); ledger = document.getElementById('cx-ledger');
+    gRoot = el('g'); gEdges = el('g'); gNodes = el('g'); gLabels = el('g');
+    gRoot.appendChild(gEdges); gRoot.appendChild(gNodes); gRoot.appendChild(gLabels); svg.appendChild(gRoot);
+    Promise.all(REC.map(function (r) { return getJSON('../../data/' + r[0] + '.json').catch(function () { return []; }); }))
+      .then(function (record) {
+        return getJSON('../data/connections.json').catch(function () { return { nodes: [], edges: [] }; }).then(function (dm) { build(record, dm); });
+      })
+      .then(function () {
+        controls(); bindPan(); var b = svg.getBoundingClientRect(); state.tx = b.width / 2; state.ty = b.height / 2; state.k = 0.8; apply(); layout();
+        setTimeout(fit, 2200);
+      })
+      .catch(function (e) { ledger.textContent = 'The record could not be loaded: ' + e.message; });
+  }
+
+  var extra = ['detail', 'decisions', 'problems'];
+  document.querySelectorAll('.tl-tabs button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var on = b.dataset.view === 'connections';
+      document.querySelectorAll('.tl-tabs button').forEach(function (o) { o.setAttribute('aria-selected', o === b ? 'true' : 'false'); });
+      document.getElementById('view-overview').hidden = b.dataset.view !== 'overview';
+      document.getElementById('view-threads').hidden = b.dataset.view !== 'threads';
+      document.getElementById('view-connections').hidden = !on;
+      extra.forEach(function (id) { var n = document.getElementById(id); if (n) n.hidden = on; });
+      if (on) start();
+    });
+  });
+  if (location.hash === '#connections') document.querySelector('.tl-tabs button[data-view="connections"]').click();
 })();
 </script>
 </body>

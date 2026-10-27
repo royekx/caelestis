@@ -11,12 +11,16 @@ rulings of the day, his saved decisions, timeline canon, drafts, chat sweeps
 
 ## Item types
 
-- **decide**: Korey rules. The item names the options and every page it
+- **decide**: Korey rules. Tagged *(shape)* when it changes the overall picture, *(prep)* when the next sessions need it.
+  The item names the options and every page it
   touches. When one question touches several pages, the full item sits on one
   page and the others point to it.
+- **later**: a detail that waits until the crew gets there or the thing becomes active. Kept intact; not served for ruling now.
 - **fix**: a page line is wrong or stale. Checked against the current page.
 - **drop**: retired material to remove.
 - **add**: a settled fact missing from its page, written the way it will read.
+
+Decide items ask for the shape of a thing, not every detail. Specifics wait until play needs them; a decide that only matters once the crew gets somewhere can stay open until then.
 
 Work order: rule the cross-cutting decisions first, then go file by file. A
 ruled item becomes a STAGING.md entry; `add`, `fix` and `drop` items move to
@@ -24,23 +28,23 @@ staging once Korey has read and accepted them.
 
 ## Sections
 
-| Section | Covers | decide | fix | drop | add |
-|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 23 | 17 | 0 | 25 |
-| Realms | realms/ except Fonains; a new Oerth page | 40 | 32 | 3 | 47 |
-| Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 16 | 12 | 1 | 29 |
-| Timeline | the rest of timeline.json | 4 | 4 | 0 | 0 |
-| Factions | factions/ | 26 | 18 | 2 | 40 |
-| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 36 | 40 | 5 | 36 |
-| Dossiers | dossiers/ | 37 | 38 | 0 | 48 |
-| Crew | crew/ | 32 | 16 | 0 | 73 |
-| Artifacts and vessels | artifacts/, vessels/ | 17 | 23 | 0 | 42 |
-| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 22 | 17 | 0 | 17 |
-| New pages | 14 proposed pages, the hub, notes/ | 23 | 4 | 2 | 33 |
-| Automation and tracker | the session pipeline and tracker alternatives | 11 | 1 | 0 | 0 |
-| Player pages | restricted/ and other player pages | 1 | 2 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 7 | 3 | 0 | 1 |
-| **Total** | | **295** | **227** | **13** | **391** |
+| Section | Covers | decide | later | fix | drop | add |
+|---|---|---|---|---|---|---|
+| Cosmology | cosmology/, glossary/, chart/ | 8 | 11 | 25 | 0 | 26 |
+| Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 35 | 3 | 49 |
+| Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
+| Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
+| Factions | factions/ | 1 | 4 | 22 | 2 | 40 |
+| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 13 | 1 | 46 | 5 | 42 |
+| Dossiers | dossiers/ | 9 | 6 | 43 | 0 | 51 |
+| Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
+| Artifacts and vessels | artifacts/, vessels/ | 6 | 2 | 26 | 0 | 43 |
+| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 21 |
+| New pages | 14 proposed pages, the hub, notes/ | 3 | 17 | 8 | 2 | 35 |
+| Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 2 | 0 | 0 |
+| Player pages | restricted/ and other player pages | 0 | 0 | 2 | 1 | 0 |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 5 | 0 | 1 |
+| **Total** | | **77** | **87** | **275** | **14** | **420** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -48,35 +52,77 @@ The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
 Each settles items on several pages at once. Rule these first.
 
-1. **Residue piece counts by Axiom.** Saved decisions: Dissolution 2, Transformation 3, Boundary 5, Convergence 7. Artifact pages and a later chat: Boundary 2, Dissolution 3, Transformation 5, Convergence 7. Touches cosmology, glossary, A.T.L.A.S., the Runekeepers' and Transformation fragments, rules, the hub, and whether Wan and Tu carry a whole fragment as a first key. (The crew/artifacts merge applied the saved decisions; items marked *(counts)* flip if the other split wins.)
-2. **Aperture or Atrium.** The name of a world heart's entrance. Saved decisions say Aperture; the latest chat renamed it Atrium. Seven pages.
-3. **Does opening a heart need a Monolith?** Settles priming versus opening and why N'ghathrod needs Zeniths. Saved decisions say both ways in different places. Cosmology, glossary, chart, rules, N'ghathrod, the Seekers, timeline.
-4. **The Figure and its nodes.** Fifteen single hearts or three-world systems; whether any node stands today. Glossary, chart, realms index, ascension, timeline.
-5. **Act structure and where the Citadel sits.** The spine's four arcs against the timeline's acts; N'ghathrod in Arc 2 or 3; the Citadel in Arc 3 or 4. Spine, colony, ascension, timeline, N'ghathrod.
-6. **N'ghathrod's five centuries.** Nothing covers the time between the crash (about 500 years ago) and the exile from Glyth (about 60 years ago). Also sets when the five lieutenants got their Holds. Nine pages say "a century".
-7. **What the H'Catha meteor is and why Caelestis wants it.** The reason the H'Catha arc happens. Spine, H'Catha, Academy and Fleet.
-8. **How the Seekers divide.** Every chapter worships Vecna under some name, or a faith wing and a method wing. Also reconciles vecna.md's "two bodies" with today's ruling that the Seekers are Vecna's followers. Seekers, deities, ascension, vecna.md.
-9. **Astra, Astra Virex or Virex, and what wounded Astra.** Crew (Casey), dossiers, realms.
-10. **The real elder brain.** Buried under the Barrier Peaks, or escaped. Timeline, realms/fonains, N'ghathrod.
-11. **Which sphere holds Oerth.** One of the five charted spheres or a sixth. Realms, chart, cosmology, the new Oerth page.
-12. **Runes 17–19 as Anchors.** Fixed places Tumak goes to is settled; what they grant is not. The Wayfind rules that hang on them (cost, reach, odds) are decides beside it. Crew (Tumak), rules.
-13. **Can a taken person be released?** Tadpole removal, the real N'ghathrod's death, or both. Rules, N'ghathrod, colony.
+1. ~~**Residue piece counts by Axiom.**~~ *Ruled: Dissolution 2, Boundary 3, Transformation 5, Convergence 7 (STAGING round 11).*
+2. ~~**Aperture or Atrium.**~~ *Answered: Atrium.*
+3. ~~**Does opening a heart need a Monolith?**~~ *Ruled: no; linking does (STAGING round 2).*
+4. ~~**A name for Vecna's fifteen-heart circle.**~~ *Ruled: the Circle of Fifteenths, Vecna's private name for it.*
+5. ~~**Act structure and the Citadel.**~~ *Ruled: Citadel and Core are late Arc 3 or Arc 4.* Level bands per arc are a new decide on the spine.
+6. ~~**N'ghathrod's five centuries.**~~ *Ruled: exile from Glyth about four centuries ago; centuries of searching; the push for hearts only in recent decades.* Which residue piece gave him long life is a new decide.
+7. **What the H'Catha meteor is and why Caelestis wants it.** *Narrowed: containment for Caelestis, and the Sovereign Eye can't see through it; open: the Ortholith-fragment layer and why now.*
+8. ~~**How the Seekers divide.**~~ *Ruled: the Seekers are the faith; each chapter is named for what it seeks (the Seekers of Secrets are one); every chapter worships Vecna, often under another name, unaware of the others.* Whether N'ghathrod's colony is a chapter is a new decide.
+9. ~~**Astra's name and wound.**~~ *Ruled: any of the three names; the Axiom strain's ripple woke and broke it.*
+10. ~~**The real elder brain.**~~ *Ruled: the Session 27 brain is his; it teleported out.* Where it went is no longer a question.
+11. ~~**Which sphere holds Oerth.**~~ *Ruled: SPH-05, the farthest from Caelestis.*
+12. **Runes 17–19 as Anchors.** Fixed places Tumak goes to is settled; what they grant is open. Crew (Tumak), rules.
+13. ~~**Can a taken person be released?**~~ *Ruled: the taken outlive N'ghathrod, each keeping part of him.*
 14. **Fonains–Caelestis offset.** The timeline puts Fonains Session 28 about five months before Caelestis now; older notes say Caelestis is "around" Session 28. Timeline, Fonains doc, campaign.
-15. **OSTEKK-6 as sole survivor.** Saved decisions say so; the V005 record has Gregory waking OSTEKK-2. Dossiers, vessels.
+15. ~~**OSTEKK-6 as sole survivor.**~~ *Ruled: the only active survivor; OSTEKK-2 is inert and can be healed.*
 16. **The tracker and session ingest.** Keep the repo JSON record and in-chat runbook, or move to an alternative. See the Automation and tracker section.
-17. **Dossier tab names and "Open" subsections.** Which tab set every dossier uses, and whether open questions may sit in a DM page's notes at all. Every prime dossier. See the Repo and process section.
+17. **Dossier tab names and "Open" subsections.** *Tab names answered: the four tabs stand. Open: whether "Open" subsections may stay in DM notes.*
+18. ~~**How Clint left the Bellwether Crow.**~~ *Ruled: a deliberate dive through a color pool with a sister artifact of A.T.L.A.S.* The artifact's identity is a new decide.
+19. ~~**Keep or cut Tarroway.**~~ *Ruled: keep him as a thread, mainly in the archive; cut the timing tables.*
+
+## Answered from the sources (review)
+
+The resolve pass settled these decide items from later sweeps, saved decisions or the repo's history. Each is tagged *(answered)* in its section with the source that answered it. Confirm them as a batch, or overturn any.
+
+- Residue counts by Axiom *(fix)*
+- What astral projection reaches *(fix)*
+- What "Lunarfoot" names *(fix)*
+- Fonains's world designation *(fix)*
+- When Thessalar made his eight copies *(fix)*
+- The colony's word for its brainless-raised *(fix)*
+- "kesh" is retired *(fix)*
+- "Arc", never "Act" *(fix)*
+- Arc 2's range *(add)*
+- Ondessa holds her seat; her citadel is occupied *(fix)*
+- Heart entrance term is Atrium *(fix)*
+- N'ghathrod's one secondhand instruction *(fix)*
+- How Vecna connects his working to the Core *(add)*
+- Tyrant ship weapons: four eyes at stations *(add)*
+- Sol's vignette ran in V006; the mimic is retired *(fix)*
+- What the behir was wrapped around *(add)*
+- The Krik'Lit swap is the V006 swap *(fix)*
+- The elemental woman is Chloe Chespetes *(fix)*
+- The Blooming Glass *(add)*
+- The Hall transport is the crew's last stint with Ezra *(fix)*
+- Ryeback lives *(add)*
+- "Artifacts of Convergence" is retired *(fix)*
+- A heart's hidden entrance is the Atrium *(fix)*
+- What the letters stand for *(add)*
+- The ship reads as native traffic at H'Catha *(fix)*
+- Residue housings are dampened in anti-magic, not switched off *(fix)*
+- Network modifiers apply only when Tumak stands at a mark *(fix)*
+- The hub's Drive Root is right; memory's folder id is the rune images folder *(fix)*
+- The Ascension card keeps "the second key" *(fix)*
+- Dossier tab grammar: PAGE-SHAPE's four tabs stand *(fix)*
+- "Autognome" in V003 and V004 stays as history *(fix)*
+- Dossier tab names: keep the four tabs *(fix)*
+- The out-of-sequence SJN-2417 entry *(drop)*
+- How the Toll shows in play *(add)*
+- What completing the inscription costs Tumak *(add)*
+- CON-312 and the Almosts *(add)*
+- Wayfind reach gated by matched runes *(add)*
+- Distance bands *(fix)*
+- Tiered mishap consequences *(add)*
+- Wayfind cost by band *(add)*
+- How separated twins reunite *(add)*
+
+Four of these rest on Korey merging a pull request or making a pick rather than a direct ruling: the dossier tabs, "autognome" as history, the A.T.L.A.S. expansion, and the Drive root.
 
 ## Second looks
 
-The merges applied the truth order mechanically. In these cases a saved
-decision beat a later chat that had marked it superseded. Overturn any where
-the later chat was the real ruling:
-
-- Why Tarroway's tables fail (the psychic wind).
-- Constellation designations (CON-01, CON-02).
-- Vth'oramu's meaning ("the passage to a new home").
-- Clint going overboard and the psychic wind carrying him.
-- A heart opens only where a Monolith stands (the Campaign section applied this; the Cosmology section and the Rules section keep it as decision 3).
+All five were ruled on 2026-10-25 (round 2): Tarroway is a keep-or-cut decide; constellation numbers follow the bearing scheme; Vth'oramu is "the passage to a new home"; Clint was seen going overboard (how is a decide); opening needs no Monolith, linking does.
 
 ## Player record flags
 
@@ -98,81 +144,108 @@ Order under each page: decide, fix, drop, add.
 
 ### cosmology/index.html
 
-- **[decide]** Residue counts by Axiom
-  Two splits are in circulation for the seventeen pieces.
-  (a) Dissolution 2, Transformation 3, Boundary 5, Convergence 7. Memory holds this, and it fits two other facts: the Dissolution fragment's two pieces sit in the twins and make "three poles for the first time", and A.T.L.A.S.'s Boundary piece points toward four siblings.
-  (b) Boundary 2, Dissolution 3, Transformation 5, Convergence 7. The page table, the glossary ("split 2 / 3 / 5 / 7") and `artifacts/runekeepers-fragment.html` ("all three pieces") use this, and a later chat sweep restates it.
-  Memory ranks higher, so (a) is the default unless Korey says otherwise. Touches: the residue table and the line "A Boundary piece points toward its one sibling" on this page; glossary "Residue"; `artifacts/atlas.html`; `artifacts/runekeepers-fragment.html`; the twins' Zenith text on `realms/wayfinders-homeworld.html`.
+- **[fix]** Retrofit the five Axioms across the wiki
+  Ruled (STAGING, Cosmology § The Axioms): the Axioms are Consolidation, Expansion, Dissolution, Distinction and Determination, acting on energy that was always there. The old four map: Convergence → Consolidation (the Rod of Seven Parts is the Consolidation fragment, 7 pieces); Dissolution stays Dissolution, now the mixing of everything into sameness (the twins' fragment, 2); Boundary → Distinction (A.T.L.A.S., its sister and the third piece, 3); Transformation → Expansion (the 5-piece fragment). Determination's fragment is new: 11 pieces, none found. A Zenith is a world at its peak of Distinction, not "Convergence driving a system to maximum expression"; Monoliths are Continuity's response, and the strain from their rise is a byproduct of Vecna's work, not a weight on one Axiom. The Transformation–Boundary seam is cut. Every backlog item that quotes an old Axiom name reads under this mapping.
+  Pages: prime/cosmology (the Four Axioms, Continuity, the strain, the seam section to cut), prime/glossary, prime/chart, prime/artifacts/* (index, rod-of-seven-parts, runekeepers-fragment, transformation-fragment → expansion-fragment, containment-engine, fonains-shard), prime/campaign/* (index, ascension, spine, plot-hooks, what-if), prime/crew/index.html and tumak.html, prime/dossiers/nghathrod.html and the-runekeeper.html, prime/factions/* (academy-fleet, deities, runekeepers, vthorama), prime/realms/index.html and wayfinders-homeworld.html (concealment rides on the Dissolution fragment's cycle), prime/rules/index.html, timeline.json, working/vecna.md. Done with the distribution pass. STAGING, the survey and the Connections layer already use the five.
+  src: Korey, 2026-10-26
+
+- **[fix]** One name for all of existence
+  Ruled: Continuity and the Prime Continuum are the same thing (STAGING, Cosmology). The cosmology page treats Continuity as something produced "within the Prime Continuum"; rewrite it as one thing with two names, and check the glossary and Connections layer for the split.
+  src: Korey, 2026-10-26
+
+- **[later]** Place GAL-01's inscription on the chart
+  Ruled: GAL-01's inscription is the eye he lost, sixteen heart worlds (ten lids, six iris); the iris worlds are key (STAGING, Campaign; diagram 2026-10-26). Left for when play needs it: which systems hold which strokes, and whether any known system (Realmspace, Krynnspace, Virenspace) lies on the figure. Greyspace is not on it: Oerth is the retina every eye world links back to (STAGING, Campaign).
+  src: Korey, 2026-10-26
+
+- **[decide]** Who works the other galaxies' cores *(later)*
+  Ruled: in each galaxy another being works its own core, as Vecna works GAL-01's (STAGING, Campaign). Left: who they are (lesser gods like Vecna, or other things), and whether they know of each other, cooperate or race for the center. Only matters when play crosses a galaxy.
+  src: Korey, 2026-10-26
+
+- **[decide]** If GAL-01 falls *(shape)*
+  Ruled: GAL-01's core waking for Vecna takes GAL-03, GAL-04 and GAL-05 with it (STAGING, Campaign). Left: what the campaign becomes in that state: crossing galaxies to close cores, a last stand at Erevos, or the end.
+  src: Korey, 2026-10-26
+
+- **[decide]** The inner ring of gods *(shape)*
+  Ruled: greater gods in the drift between galaxies, lesser gods inside a galaxy stopped at systems (STAGING, Cosmology). Proposed: a third ring (demigods, saints, the newly ascended) that can enter a system and stops at a world's heart; and where Vecna, a lesser god, sits among them.
+  src: Korey, 2026-10-26
+
+- **[fix]** Spheres become galaxies, everywhere
+  Ruled (STAGING, Cosmology): the cosmos is five galaxies around Erevos; "sphere" as a region of space is retired, and SPH-0n becomes GAL-0n; Oerth moves to GAL-01. Pages: prime/cosmology, prime/chart (labels, the sphere layer, "the godless sphere"), prime/glossary, prime/realms/*, prime/factions/*, prime/campaign/*, timeline.json, working/divine-rules.md, the README naming rule, and the Fonains Canon Reference doc. Every backlog item below that quotes "sphere" reads as "galaxy". Done with the distribution pass. The survey, the Connections DM layer and STAGING already use galaxies.
+  src: Korey, 2026-10-26
+
+- **[decide]** The calendar the Cycle counts *(later)*
+  Pages date orders by Cycle (1486, 1489, 1490); the survey uses Cycle 1490 as the present for provisional designations. Set what the Cycle counts from, and how Toril's reckoning, Fonains's "year 425" and Krynn's calendar line up against it.
+  src: Korey, 2026-10-26; restricted/ orders
+
+- **[later]** Spelljammer's own terms
+  Korey wants to wear down the Spelljammer barriers ("spelljamming" means nothing for a ship); spheres have become galaxies. Review the remaining genre terms (spelljammer, spelljamming helm, wildspace, Astral Sea, phlogiston) for plainer replacements during the overhaul.
+  src: Korey, 2026-10-26
+
+- **[fix]** Replace the W-, SYS- registers with the CSC scheme
+  Ruled (STAGING round 12): designations follow real astronomy; nothing has reached the players. Retire every W-0n and SYS-0n designation and replace it with a CSC number, a star-and-letter designation, or the body's proper name. Pages: prime/chart, prime/cosmology, prime/realms/* (realmspace, toril, hcatha, aethris, glyth, fonains, krynn, virenspace, sys04, tetherbreak, wayfinders-homeworld, ascension-world, caelestis, strake-station, cairn-station, meteor-hub, astral-sea), prime/campaign/index.html, prime/timeline/timeline.json, and restricted/ (fr-005, sa-002, wm-003, wm-006). Fonains's W-021 and Aethris's W-008 go with them. Do this with the distribution pass, and save the known systems (Realmspace, Virenspace, Aethris's system, Krynnspace, Glyth's) into the survey first so the new designations have one source.
+  src: Korey, 2026-10-25 (round 12)
+
+- **[later]** Game systems for GAL-03, GAL-04 and GAL-05
+  Ruled: assigned ahead of time (STAGING round 12). Set when a campaign heads there.
+  src: Korey, 2026-10-25 (round 12)
+
+- **[later]** The survey becomes part of the record
+  prime/data/survey.json is checked by scripts/survey.js, not scripts/data.js. Fold it into the record's checks, and decide how the chart reads it, during the repo refactor.
+  src: Korey, 2026-10-25 (round 12)
+
+- **[decide]** A different game system in each galaxy *(shape)*
+  Korey's idea (2026-10-25): sub-genres already differ world to world; game systems go one step further and differ sphere to sphere. The cosmology carries it: what a sphere holds (prime gods, good gods, the Weave) shapes how magic and reality work there, so the rules change when the crew crosses. SPH-02 runs as Call of Cthulhu. It is not godless: its gods are eldritch, not good, and they gathered there, each drifting toward its greatest worship. No prime or good gods hold it, and there is no Weave; the Axioms and Continuity still hold. (Fix: "the godless sphere" in STAGING round 2, the chart and the organizing-framework sweep; SPH-02 needs a proper name.) Caelestis's sphere runs as D&D 5e.
+  To shape: what physically or metaphysically changes at a sphere's edge, and what the crew feels crossing it; which presences set a sphere's system (prime gods, good gods, the Weave, an Axiom's lean); what happens to a character's abilities across the line (divine magic fades, arcane magic falters, a sanity track appears); which systems SPH-03 to SPH-05 lean toward, decided only when a campaign goes there; whether worlds inside a sphere keep their own genre on top of it.
+  src: Korey, 2026-10-25 (chat); inbox/chat-organizing-framework.md (SPH-02, cosmic horror); memory-canon (a different vibe on each world)
+
+- **[fix]** Residue counts by Axiom *(answered)*
+  The split is Dissolution 2, Boundary 3, Transformation 5, Convergence 7 (STAGING round 11). The pages use Boundary 2, Dissolution 3, Transformation 5. Correct each:
+  - This page's residue table, and the line "A Boundary piece points toward its one sibling. A Convergence piece feels six." Change to: "A Boundary piece points toward its two siblings. A Convergence piece feels six."
+  - Glossary "Residue" ("split 2 / 3 / 5 / 7 by Axiom bias"): name the order, "Dissolution 2, Boundary 3, Transformation 5, Convergence 7".
+  - `artifacts/atlas.html` and the artifacts register: wherever A.T.L.A.S. points at "its one sibling" or "the only other Boundary piece in existence", it points toward its two siblings.
+  - `artifacts/runekeepers-fragment.html` ("all three pieces"): "both pieces".
+  - The twins' Zenith text on `realms/wayfinders-homeworld.html`: the fragment's two pieces forming in both twins makes three poles for the first time.
+  In-world line for the table intro: "The Dissolution fragment lies in two pieces, the Transformation fragment in three, the Boundary fragment in five, and the Convergence fragment, the Rod of Seven Parts, in seven."
   src: memory-canon (campaign-canon, prime-number counts; the Zenith "three poles"); chat-cosmic-campaign-structure § Cosmology redesign
+  answered: memory-canon (campaign-canon, prime-number counts, locked); inbox/chat-organizing-framework.md § Residue (Settled). The Boundary-2 order in chat-cosmic-campaign-structure appears only in Claude's rewritten page text; a check of that chat found no Korey statement making the change, so memory stands.
 
-- **[decide]** Whether opening a heart needs a Monolith
-  (a) A heart can be opened only where a Monolith stands, so N'ghathrod seeds Zeniths and waits ("Zeniths are the cheap half, Atriums the rare half"). Memory marks this locked.
-  (b) Opening works on any world, and a Monolith only licenses a link between two opened hearts ("a Monolith licenses a link and opens nothing"). The page says this (§ The Atrium: "Possible on any world, with or without a Monolith"), and a later chat sweep lists (a) as superseded by it.
-  Rides on the same ruling: the open split of "priming" from "opening", so that only cross-Weave worlds need a heart dungeon. Touches: § The Atrium and the Found / opened / linked table here; glossary "Found / opened / linked"; chart NODES ("three primed worlds"); `rules/`; timeline "Saturating worlds" ("seeding Zeniths so Monoliths stand where hearts can be opened").
-  src: memory-canon (open-decisions, "Locked this pass"; audit line on priming vs opening); chat-cosmic-campaign-structure § Superseded
-
-- **[decide]** What astral projection reaches
-  Memory settles that the cosmos is the Material Plane and the Astral Sea is material space inside it (the page already says "material space between worlds" in § Other Planes). The page also says "Astral projection sends the traveler into the Astral Sea itself", which reads as if the Sea were the Astral Plane.
-  Options: the Astral Plane overlays the Sea, so a projected traveler crosses it without a hull; or reword the projection line so it reaches the Astral Plane and leaves the Sea out.
+- **[fix]** What astral projection reaches *(answered)*
+  The Astral Plane overlays the Astral Sea, so astral projection is hull-less seafaring. Page § Other Planes says "Astral projection sends the traveler into the Astral Sea itself." Replace with: "Astral projection sends the traveler onto the Astral Plane, which lies over the Astral Sea. A projected traveler can cross the Sea without a hull." The Sea itself stays material space between worlds.
   src: memory-canon (campaign-canon, Planes); framework § Cosmic structure
+  answered: memory-canon (campaign-canon, planar travel: "astral projection as hull-less seafaring"); inbox/chat-organizing-framework.md § Other planes (Settled: "astral projection doubles as hull-less travel"). That chat's line "The Astral Sea is the Astral Plane" loses to memory's ruling that the cosmos is the Material Plane.
 
-- **[decide]** Name for the center
-  Korey dislikes "the center". Offered: the Cradle, the Wound, the Origin, the Nadir. Touches this page, the glossary, chart and every page that says "the center".
-  src: framework § Open; memory-canon (open-decisions, names for the center and SPH-01)
-
-- **[decide]** Names for the spheres and designated systems
+- **[fix]** The center is Erevos
+  Replace "the center" (as a name) with Erevos across this page, the glossary, the chart and every page that names it. The Core Monolith keeps its name; those who dwell in it call it Aurath. Plain phrases like "toward the center" may stay where they are directions, not names.
+  src: Korey, 2026-10-25 (round 9)
+- **[later]** Names for the spheres and designated systems
   SPH-01 included. Listed in the page's § Open.
   src: framework § Open
 
-- **[decide]** New name for the world-heart network
-  The page uses "lattice"; memory says "heart network" and "the network" are overused. Tied to the Figure/lattice decide under glossary below.
-  src: framework § Open; memory-canon (campaign-canon)
-
-- **[decide]** Keep or rename "residue"
-  Memory: "the name 'Reach residue' may change".
-  src: framework § Open; memory-canon (campaign-canon)
-
-- **[decide]** How the Flow works
-  How it is crossed, and how it relates to the Astral Sea's intensity, which memory says changes between systems and between spheres. Listed in the page's § Open.
+- **[later]** How the Flow works
+  Settled: the Flow, also called the phlogiston, fills the space between spheres. It is combustible and silences gods, because a god's realm is anchored to its own sphere and a vessel in the Flow has left it. Crossing it is uncommon, restricted to senior crews, and belongs to late-game play; cadet operations stay inside SPH-01.
+  Still open: how a vessel crosses it (method, hazards, duration), and how it relates to the Astral Sea's intensity, which changes between systems and between spheres. Listed in the page's § Open.
   src: framework § Open; memory-canon (campaign-canon, Astral Sea intensity)
+  settled part: inbox/chat-organizing-framework.md § Cosmic structure (Settled)
 
-- **[decide]** Why SPH-01 holds pieces of three fragments
-  Options on the page: the pieces were carried here over time, or it is an abnormal concentration.
+- **[add]** Why Caelestis's sphere holds pieces of three fragments
+  Ruled (STAGING round 8). Write into the residue section, and take the question off this page and `artifacts/index.html`:
+  "Caelestis's sphere holds pieces of three fragments, partly by chance and partly by pull. Pieces of one fragment draw toward each other. Once a few came to rest near Realmspace, more of their fragment followed."
+  Touches: this page, artifacts/index.html.
+  src: Korey, 2026-10-25 (round 8); framework § Open
+
+- **[later]** Whether the four Axioms held their current configuration before the Reach
   src: framework § Open
 
-- **[decide]** Whether the four Axioms held their current configuration before the Reach
-  src: framework § Open
-
-- **[decide]** Echo planes per sphere
+- **[later]** Echo planes per sphere
   Whether every sphere has a full set of echo planes or only some. (The second half of this open line, where the Reach-born gods' realms anchor, is answered by divine-rules; see the fix below.)
   src: framework § Open
 
-- **[decide]** Whether a world's heart has a counterpart in its echoes
+- **[later]** Whether a world's heart has a counterpart in its echoes
   src: framework § Open
 
-- **[decide]** Why the center is worse for Reach-born gods
-  Polarity explains why the center harms gods. The page says the approach is "most dangerous to gods born from the Reach", and divine-rules gives Reach-born gods a harsher row than later gods. What makes the difference is still unstated.
-  src: divine-rules § Polarity; framework § Open
-
-- **[decide]** Whether any god has ever forced its way onto a world
-  Options: never; once, at a ruinous cost, with a dead god adrift in the Astral Sea as the proof; leave unanswered.
-  src: divine-rules § Open
-
-- **[decide]** Whether worship crosses the Flow
-  Options: it crosses freely; or it does not, so Vecna's faithful in other spheres feed him only through a foothold in each sphere, and those footholds become targets.
-  src: divine-rules § Open
-
-- **[decide]** Whether any other Monolith carries Tharizdun's crystal
-  Options: Fonains is unique; others exist and are unfound; a Seeker chapter is seeding them (inference).
-  src: tharizdun § Open
-
-- **[decide]** The four named weathers
+- **[decide]** The four named weathers *(prep)*
   Fraying, Turning, Walling and Gathering are an unreviewed Crossing Companion proposal. Lock or cut before they go under the weather section.
   src: astral § Open
-
-- **[decide]** Astra Virex's wound as a Seam
-  The page states as canon that Astra Virex was wounded in a Transformation–Boundary Seam ("Caught in one rather than made by one"). Memory keeps "what wounded Astra Virex" open. Options: confirm the Seam; or move it to a draft and leave the page silent on the cause.
-  src: memory-canon (campaign-canon, Astra; open-decisions still-open list)
 
 - **[fix]** Where the Fonains Vanished went
   Page (§ Corrupted Monoliths) says: "It was corrupted, so it held locally; when it was destroyed, what it held was released onto the world. Those people exist." Replace with:
@@ -283,21 +356,26 @@ Order under each page: decide, fix, drop, add.
 
 ### glossary/index.html
 
-- **[decide]** The Figure or the lattice, and what a node is
-  One name and one model across glossary, chart, realms index and timeline.
-  Name: "the Figure" (glossary, `realms/index.html`, `campaign/ascension/#figure`) or "the lattice" (memory, the timeline's "The lattice fills", the cosmology page). The network also needs a new name (see cosmology).
-  Model: (a) fifteen hearts, three per sphere across five spheres, one heart per node (glossary, timeline); or (b) three nodes per sphere, each node a system of three primed worlds (chart NODES, e.g. SYS-09 holds w13, w14, w15; `realms/index.html`: "three linked systems in every one of the five").
-  Also: the chart marks SPH-01's SYS-07 "claimed", SYS-02 "primed" and SYS-04 "damaged", and other spheres' nodes "claimed" or "primed", while the timeline has hearts opened and linked only from t 1.5. Rule whether any node stands today and what "claimed" and "primed" mean (this rides on priming vs opening).
-  Touches: glossary "The Figure"; chart NODES; `realms/index.html` spheres section; timeline "The lattice fills" and "Hearts opened and linked"; `campaign/ascension/`.
-  src: timeline.json; glossary "The Figure"; chart/index.html NODES; memory-canon (open-decisions, "the lattice of linked worlds")
+- **[decide]** Shothragot *(shape)*
+  Ruled: its temple was aboard the planar craft, and its true vestige may still be there; Giorge may be heading for it (STAGING round 6). Check the Session 14–15 notes for what Lola's Boys did to it in the Monolith, and whether part of it rides in Ziko's black blade.
+  src: Korey, 2026-10-25 (rounds 5–6)
 
-- **[decide]** Found / opened / linked
-  Whether opening needs a Monolith. Same ruling as the cosmology decide above; rewrite this entry to match.
-  src: see cosmology/index.html
+- **[decide]** N'ghathrod's target worlds near Vth'oramu *(shape)*
+  Ruled: Vth'oramu is a mothership hunkered on the periphery between systems, sending skiffs to nearby worlds; his landed operations ripple at contract scale after graduation (STAGING rounds 10–11). Left: broadly which worlds in that vicinity he is plotting on (Monolith worlds, worlds with taken in place). Specifics wait until the crew nears each one.
+  src: Korey, 2026-10-25 (round 10)
 
-- **[decide]** The downward tithe
-  "The downward tithe" (worship that pools in the taken instead of rising) sits awkwardly with the ruling that worship is what gives a god power (inference). Options: keep it as a named exception and say why; or reword it so it does not read as worship.
-  src: session-rulings; glossary "The downward tithe"
+- **[later]** The colony's arms
+  Ruled: they echo a hand and an eye without showing them outright (STAGING round 5). The design is open.
+  src: Korey, 2026-10-25 (round 5)
+
+- **[later]** The Order's seat
+  The Hall of Sight and Sound is its great hall (STAGING rounds 5–6). Name and place the seat itself when the crew is headed there.
+  src: Korey, 2026-10-25 (round 6)
+
+- **[fix]** Trim Tarroway to a thread
+  Keep M. Tarroway as Strake Station's cartographer whose readings first hinted at an unknown vessel disturbing the satellites at the system's edge (STAGING round 4). Cut the "timing tables" and their failure everywhere. Reduce his presence on the ten pages that mention him to passing references; his main home is the Fleet Intelligence Archive (restricted/). Nothing public.
+  Touches: dossiers/tarroway.html, dossiers/index.html, dossiers/miken.html, dossiers/vthoramu.html, dossiers/joffrey.html, dossiers/verrow.html, factions/vocath-operation.html, realms/index.html, realms/strake-station.html, chart/index.html, restricted/.
+  src: Korey, 2026-10-25 (round 4)
 
 - **[fix]** The Seekers
   Glossary says the Seekers "have never heard his name." The session ruling settles it: Vecna is an open god with a following under many names, and his followers are the Seekers. Rewrite:
@@ -343,16 +421,6 @@ Order under each page: decide, fix, drop, add.
 
 ### chart/index.html
 
-- **[decide]** Why Tarroway's timing tables fail
-  (a) The psychic wind. Memory gives it as the canon cause, alongside Clint's crossing.
-  (b) The Vth'oramu: the "patrol" his tables track is the dreadnought under command, which keeps no patrol pattern. `dossiers/vthoramu.html` and a later chat sweep say this and list (a) as superseded.
-  Touches: Tetherbreak DM note here; `realms/strake-station.html`; `realms/index.html`; `dossiers/tarroway.html`.
-  src: memory-canon (campaign-canon, Astral Sea travel features); chat-cosmic-campaign-structure § Superseded
-
-- **[decide]** Lattice progress and node model
-  Covered by the Figure/lattice decide under glossary.
-  src: chart NODES; timeline.json
-
 - **[fix]** Fonains note: Vecna knew
   Note says "Tharizdun corrupted the Monolith without Vecna's knowledge." Replace: "Vecna nudged its Zenith knowing it would be ridden. Tharizdun's crystal fused into the Monolith as it formed. Lola's Boys destroyed it." Keep the dragons line, which is already right.
   src: session-rulings; tharizdun § How the Fonains Monolith formed
@@ -376,6 +444,7 @@ Order under each page: decide, fix, drop, add.
 - **[fix]** How Clint reached Fonains
   The Crow site says "How he crossed is undecided" and lists "How Clint Dashforest reached Fonains" as open. State it: after the Bellwether Crow ambush, a psychic wind carried Clint Dashforest to SYS-04, and he reached W-21 Fonains before its Monolith appeared. Close the open line. (Whether he went overboard or took a craft is a separate decide in the Timeline section.)
   src: memory-canon (campaign-canon, Astral Sea travel features); timeline "Clint lands on Fonains"
+  updated (round 4): superseded. Clint went through a color pool on purpose, drawing the boarders off; write it from STAGING § Clint Dashforest and the Bellwether Crow.
 
 - **[fix]** Realmspace travel line
   Says "Closed lane to the Tetherbreak sector." Change to "Charted lane to Strake Station; closed beyond it." Only Strake–Cairn is closed (the Tetherbreak entry already says so).
@@ -390,7 +459,7 @@ Order under each page: decide, fix, drop, add.
   src: memory-canon (open-decisions, Taken King line)
 
 - **[add]** Oerth
-  No chart entry exists. Add Oerth, Vecna's homeworld, in a sphere of its own, once the sphere is ruled (see the Realms section § NEW: Oerth).
+  No chart entry exists. Add Oerth, Vecna's homeworld, in SPH-05, once the sphere is ruled (see the Realms section § NEW: Oerth).
   src: session-rulings; vecna § Oerth
 
 # Realms
@@ -400,25 +469,21 @@ Order under each page: decide, fix, drop, add.
 
 ### realms/index.html
 
-- **[decide]** Where Vetharra (W-47) and Kaldris (W-52) sit
+- **[later]** Where Vetharra (W-47) and Kaldris (W-52) sit
   Options: SYS-07 or SYS-08 (both draft candidates); or Kaldris near SYS-03 as the "control case".
   src: framework § Open
 
-- **[decide]** Names for CON-055, CON-312, the Astral waystation and the cantina
+- **[decide]** Names for CON-055, CON-312, the Astral waystation and the cantina *(prep)*
   All four carry designations or placeholders only. Touches this page, `realms/waystation.html`, `realms/cantina.html`, chart.
   src: chat § Open
 
-- **[decide]** The English name of N'ghathrod's people
-  Options: "the unthinned" (the page; Vth'ulhan); "the brainless-raised" (memory: a Glyth slur they took as their own name, and memory lists the slur as still open); "unculled" (a later sweep's form of the same insult). glyth-watcher.md also uses "pure-born" for the other side (illithids raised under an elder brain). Touches the W-07 entry here ("The illithid world that refused the unthinned"), `realms/glyth.html`, `dossiers/nghathrod.html`, glyth-watcher.md.
-  src: memory-canon (open-decisions, N'ghathrod settled; still-open list); chat-cosmic-campaign-structure § N'ghathrod; glyth-watcher
-
-- **[decide]** The Figure, three systems per sphere
-  The spheres section says "The Figure needs three linked systems in every one of the five". Follows the Figure/lattice decide in the Cosmology section § glossary.
-  src: the Cosmology section
-
-- **[decide]** Why Tarroway's tables fail
-  The Strake entry carries the same claim. Follows the Tarroway decide in the Cosmology section § chart.
-  src: the Cosmology section
+- **[later]** The English name of N'ghathrod's people
+  Settled in chat-cosmic-campaign-structure, later than memory's still-open list: the illithid word Vth'ulhan translates as "the unthinned", and "unculled" is the Glyth insult they took as their own name (both already on `factions/vthorama.html`). "Brainless-raised" is memory's working description, not a name.
+  Still open: which English name the pages lead with for the people. Options: (a) "the unthinned" as their own word, with "unculled" kept as the insult Glyth threw and they wear; (b) "unculled" everywhere, with Vth'ulhan glossed in the lexicon only. glyth-watcher.md's "pure-born" for illithids raised under an elder brain can stand either way. Touches the W-07 entry here ("The illithid world that refused the unthinned"), `realms/glyth.html`, `dossiers/nghathrod.html`, glyth-watcher.md.
+  Merged here: the realms/glyth.html decide "Name for illithids raised without an elder brain" asked the same question (unthinned, brainless-raised, unculled); that page uses "the unthinned, raised without an elder brain".
+  Related, settled since: the colony's chapter name is Vth'orama, the Seekers of a New Home (STAGING round 3). That names the chapter, not the people Glyth refused, so this stays open.
+  src: memory-canon (open-decisions, N'ghathrod settled; still-open list); chat-cosmic-campaign-structure § N'ghathrod; memory-canon; glyth-watcher; realms/glyth.html
+  settled part: inbox/chat-cosmic-campaign-structure.md § N'ghathrod origin ("unculled"), § N'ghathrod and the colony ("Vth'ulhan = the unthinned"), § Superseded; glyth-watcher
 
 - **[fix]** Spheres are regions, not shells
   Page says "Five crystal spheres are designated." Change to "Five spheres are designated." Spheres are regions of the Astral Sea.
@@ -479,12 +544,8 @@ Order under each page: decide, fix, drop, add.
 
 No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms/index.html`, and an entry on the chart.
 
-- **[decide]** Which sphere holds Oerth
-  Options: one of SPH-02 to SPH-05; or a sixth sphere (the cosmos is about five to six spheres). If a sixth, `cosmology/index.html` § Structure ("Five spheres are known and charted") and the realms index ("Five spheres are designated") change. Also open in vecna.md: how the crew could reach Oerth's sphere, and how late.
-  src: session-rulings; memory-canon (campaign-canon, cosmic model); vecna § Open
-
 - **[add]** Oerth
-  "Oerth is Vecna's homeworld, in a sphere of its own. It is a darkest-timeline world: the heroes failed, Vecna ruled as a lich and was never stopped, and his hold there is the strongest anywhere. He ascended on Oerth through a Zenith, and its Monolith archived his mortality; his followers keep that Monolith as their holiest site. Vecna's divine realm is anchored to Oerth's sphere. Becoming a god gave him the same charge as Oerth's heart, and the world pushed him off; he has not stood on it since."
+  "Oerth is Vecna's homeworld, in SPH-05. It is a darkest-timeline world: the heroes failed, Vecna ruled as a lich and was never stopped, and his hold there is the strongest anywhere. He ascended on Oerth through a Zenith, and its Monolith archived his mortality; his followers keep that Monolith as their holiest site. Vecna's divine realm is anchored to Oerth's sphere. Becoming a god gave him the same charge as Oerth's heart, and the world pushed him off; he has not stood on it since."
   DM note: Oerth is reachable, and a visit should be horrible.
   src: session-rulings; vecna § Oerth; memory-canon (Vecna/gods 2026-10-25)
 
@@ -504,9 +565,10 @@ No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms
 
 ### realms/toril.html
 
-- **[decide]** Gregory's anchor on Toril
-  Options: Lantan, home of "Gregory Prime"; or the Cogfast Enclave the page drafts.
-  src: chat-voyage-6-7-planning § Open
+- **[fix]** Gregory's anchor: the Cogfast Enclave on Lantan
+  Ruled (STAGING round 8). The page offers only the Cogfast lead. Write: "Gregory comes from the Cogfast Enclave on Lantan." On `crew/gregory.html` the origin reads "the Cogfast Enclave, Lantan, Toril". `restricted/sa-002.html` ("Cogfast Enclave — SYS-01") already agrees and stands.
+  Touches: this page, crew/gregory.html.
+  src: Korey, 2026-10-25 (round 8); chat-voyage-6-7-planning § Open
 
 - **[fix]** Toril names the system
   Page says "The sphere's namesake world" (subtitle) and "the sphere's namesake" (body). Change both to "the system's namesake".
@@ -522,11 +584,11 @@ No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms
 
 ### realms/caelestis.html
 
-- **[decide]** What the secret sliver of Caelestis is
+- **[decide]** What the secret sliver of Caelestis is *(prep)*
   Seeds: the office that decides what goes into the Brig; an Order liaison; what the station was before it was a school.
   src: astral § Open; memory-canon (campaign-canon, Mirt)
 
-- **[decide]** Who renews the Forbiddance while Saerthe is away
+- **[decide]** Who renews the Forbiddance while Saerthe is away *(prep)*
   Saerthe renews the Forbiddance nightly on a 30-day cycle, and he also holds the tyrant ship's helm at H'Catha and casts for the Flighty Foundling (inference: he cannot do both). Options: a deputy renews the ward while he is away; or another caster holds the Forbiddance.
   src: memory-canon (campaign-canon, approach to H'Catha; Flighty Foundling); realms/caelestis.html
 
@@ -552,72 +614,72 @@ No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms
 
 ### realms/hcatha.html
 
-- **[decide]** What the rulers can see
+- **[decide]** What the rulers can see *(prep)*
   (a) The Sovereign Eye lets every ruler see all, so none can act openly against another (memory, "H'Catha sovereign", which supersedes earlier options).
   (b) Each ruler sees only its own domain, day and night (astral § The Pact, a later turn).
+  Standing of the sources: (a) is in memory, the higher source. (b) comes from Claude's turn-57 rewrite, which Korey accepted only as "a very good foundation" without confirming each line, so it does not overrule memory on its own. Korey needs to pick. If (a), the Eye's whole-world sight is the reason no ruler acts openly; if (b), that reason must come from the Eye's enforcement alone.
   src: memory-canon (campaign-canon, H'Catha sovereign); astral § The Pact
 
-- **[decide]** Whether the per-ray terrain effects survive
+- **[decide]** Whether the per-ray terrain effects survive *(prep)*
   The current page ties a terrain effect to each ruler's eye ray across eight domains. With ten domains and death and disintegration back in play (see fix below), rule whether every domain keeps a ray-based terrain effect.
   src: astral § The Pact; page § Terrain effects
 
-- **[decide]** Whether the Eye actually enforces daylight contracts
+- **[decide]** Whether the Eye actually enforces daylight contracts *(prep)*
   People believe it does ("light-sworn"). Rule whether it is true.
   src: astral § Open
 
-- **[decide]** The Watcher's name
-  Placeholder Nereth Vaul (a triton); alternatives Maris Ilune, Sefa Corrath. Must differ from Ondessa. She lives near the rim, in the fog.
+- **[add]** The Watcher's name *(answered)*
+  "H'Catha's Watcher is Nereth Vaul. She lives near the rim, in the fog."
+  DM note: her species sets the final form of the name. The placeholder species was triton; the species itself is not yet ruled. Earlier alternatives were Maris Ilune and Sefa Corrath. The name must stay distinct from Ondessa's.
   src: astral § Open; chat-voyage-6-7-planning § Open; memory-canon
+  answered: STAGING § The Order (round 5: "H'Catha's Watcher is Nereth Vaul. Her species sets the final form of the name.")
 
-- **[decide]** The Rival's name
+- **[decide]** The Rival's name *(prep)*
   The page lists "The Rival · Name open" (Fear, dread carried in the fog). The spine also uses "the Rival".
   src: chat § Open; spine.html
 
-- **[decide]** What the meteor's Ortholith matter is
+- **[decide]** What the meteor's Ortholith matter is *(prep)*
   Options: valuable rock; a Monolith fragment (the glossary: "a Monolith fragment, shed or aimed"); bait.
+  The cosmic-campaign sweep lists "a Monolith fragment, shed or aimed" under Settled and also lists this question under Open, so it does not settle it. Settled either way: adamantine matters on H'Catha because the Eye cannot see through it (see the meteor fix below).
   src: chat § Open; glossary
 
-- **[decide]** A name for the Sovereign Eye
+- **[decide]** A name for the Sovereign Eye *(prep)*
   Options: the Unlidded (locals), the Overgaze (courts), Ahm-Vauth (rulers). The lean is all three, by speaker.
   src: astral § Open
 
-- **[decide]** Who betrayed Ondessa, and who backs the occupiers
+- **[decide]** Who betrayed Ondessa, and who backs the occupiers *(prep)*
   Lean: a neighbour, Ulmorrow or Gorrathax.
   src: astral § Open
 
-- **[decide]** How deep Vecna goes on H'Catha
-  Lean: the founding only (a quiet voice taught the rulers the dreaming method), with "The Eye looks one way more than they know" held in reserve. Memory's options: all the rulers, one, or only the original.
-  src: astral § Open; memory-canon (H'Catha leaning)
-
-- **[decide]** The Underground
+- **[decide]** The Underground *(prep)*
   Options: rare pockets only (caves, the Old Courses); or a larger hidden underworld (Korey finds that too Underdark-like).
   src: astral § Open
 
-- **[decide]** The Edicts
+- **[decide]** The Edicts *(prep)*
   Proposed table: Gorrathax, nothing written destroyed; Ondessa, no wheel may turn; Ulmorrow, no mourning aloud; Kurrzot, no running; Oszrax, no covered faces; Saelvex, no gift refused; Ostekk, no clock but his; Vhezzar, no likenesses; Hethrul, nothing planted; Oumnu, no sleeping alone. Memory also wants a friendlier word than "ruler rules".
   src: astral § Open, § Superseded; memory-canon (H'Catha later pass)
 
-- **[decide]** Ruler names and ray order
+- **[decide]** Ruler names and ray order *(prep)*
   Kurrzot, Ondessa and Ostekk are settled. Gorrathax, Ulmorrow, Oszrax, Saelvex, Vhezzar, Hethrul and Oumnu are proposals, and the ray order around the ring is a placeholder.
   src: astral § Open
 
-- **[decide]** Measures
+- **[decide]** Measures *(prep)*
   Sweep proposal: 30-hour turn; disk about 1,100 mi radius; Spindle base about 200 mi; shadow reach about 600 mi. Against it: the module's 1,000-mile Spindle and a day "no brighter than a starry night on Toril", and the page's 630-mile Spindle base. Settled whatever the numbers: domains are continent-scale (see fix below).
   src: astral § Open; memory-canon (H'Catha working)
 
-- **[decide]** Drafted rulings to lock or cut
+- **[decide]** Drafted rulings to lock or cut *(prep)*
   Edicts are strict (intent does not matter); a first strike is punished; sleepborn resistance is halved, non-radiant; a moving blind spot (adamantine in daylight) counts as theft; no sight on H'Catha reaches inside rock; the Carriers will not move stolen ore; the Unwaking is outside the Pact.
   src: astral § Open
 
-- **[decide]** Ondessa's fading ray and the Spindle's summit
+- **[decide]** Ondessa's fading ray and the Spindle's summit *(prep)*
   What Ondessa's fading ray does to her land, and what is at the Spindle's summit now that the knowledge station is dropped.
   src: astral § Open
 
-- **[decide]** The turn-59 drafts
+- **[decide]** The turn-59 drafts *(prep)*
   Unreviewed, kept in the H'Catha · Ground Level doc. The Unwaking: a centuries-old sleepborn under the Spindle that took Ondessa's citadel through Steward Halvane Teche, a mercane. Places: Fallmouth, the Weighhouse, the Fog Hold, Bell Harbor, Tally, the Held House, Low Weir. Factions: the Counted (Imsa Durr), the Stewardship, the Carriers (Oddo Hasp, a giff), the Unwheeled (Wick), the undertow (Elder Sennu), the Silent Court. Old things: Ninefathom (a dragon turtle), the Old Courses, the Sunken's bell (Annet Vry), the Spindle-scar carvings, Sarelk. Five routes inward.
   src: astral § Open
 
-- **[decide]** The player record's "beholder patrols"
+- **[decide]** The player record's "beholder patrols" *(prep)*
   `data/locations.json` says H'Catha is "watched by beholder patrols"; canon puts the tension at domain borders. Flag only: decide whether the player record needs a correction through the record workflow.
   src: data/locations.json; memory-canon (H'Catha layout)
 
@@ -760,10 +822,6 @@ No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms
 
 ### realms/glyth.html
 
-- **[decide]** Name for illithids raised without an elder brain
-  Same question as the realms/index.html decide on the people's English name (unthinned, brainless-raised, unculled). The page uses "the unthinned, raised without an elder brain".
-  src: memory-canon; glyth-watcher; realms/glyth.html
-
 - **[fix]** Glyth is kept unreachable
   Page says "A crew that reaches Glyth can learn the colony's history from the only party with a reason to tell it". Replace: Glyth is kept unreachable, so the source is someone who has come out of Glyth: the Watcher (see add below). Also soften "only a door that closed" to match: Glyth cast N'ghathrod's people out.
   src: memory-canon (open-decisions, Taken King line); chat-cosmic-campaign-structure (Glyth hard to reach)
@@ -790,9 +848,10 @@ No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms
 
 ### realms/aethris.html
 
-- **[decide]** What the Prism Ascendant does above an unfinished Zenith
-  The page's Open asks what it "has been doing above an unfinished Zenith for all this time". Set an answer, or keep it unknown in-world and drop the Open line.
-  src: BCS § Sol/Open; realms/aethris.html
+- **[add]** What the Prism Ascendant does
+  Ruled (STAGING round 8). Remove the page's Open line ("whether the Fortuned want him back as a person or as a component, and what the Prism Ascendant has been doing above an unfinished Zenith for all this time"). Its first half is answered too: the Fortuned want Sol as a component (STAGING round 5). Write:
+  "Aethris's Zenith is unfinished, because the Fortuned have not completed their ritual. The Prism Ascendant is the Monolith that answered it. It has archived what it can and stays where it is. It does nothing."
+  src: Korey, 2026-10-25 (round 8); realms/aethris.html
 
 - **[add]** The Prism Ascendant is a Monolith
   "The Prism Ascendant is a Monolith, reality's own response to Aethris's Zenith. The Temple holds that it is Tymora's answer to the ritual of perfection; it is not. Neither Tymora nor Beshaba owns or controls it, and their rivalry plays out beneath it. It is the first Monolith Aethris has had, though the Misfortuned have been born there for generations."
@@ -812,7 +871,7 @@ No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms
 
 ### realms/virenspace.html
 
-- **[decide]** Virenspace's location and route
+- **[later]** Virenspace's location and route
   Memory names Virenspace's location and its route from Realmspace as an unresolved gap. The page fixes it beyond H'Catha, on a charted lane that splits at the Astral waystation. Options: confirm the page's placement as canon; or mark it a draft. Also open: Ortholith standing in Casey's home system.
   src: memory-canon (open-decisions, unresolved gaps); chat § Open
 
@@ -826,26 +885,26 @@ No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms
 
 ### realms/strake-station.html
 
-- **[decide]** What is in Strake's secure storage
+- **[later]** What is in Strake's secure storage
   src: chat § Open; framework § Open
-
-- **[decide]** Strake's mass signature
-  Options: the dreadnought (Vth'oramu); or something that crossed the Flow.
-  src: framework § Open
-
-- **[decide]** Why Tarroway's timing tables fail
-  Follows the Tarroway decide in the Cosmology section § chart (psychic wind, or the Vth'oramu keeping no patrol).
-  src: the Cosmology section
 
 ### realms/cairn-station.html
 
-- **[decide]** What is at Cairn Station
-  What is there, whether anyone reached it first, and where Tarroway is. The payoff should open onto something larger. Memory ties Cairn to an astral dreadnought.
+- **[later]** What is at Cairn Station
+  Settled: Cairn went silent about a year ago after reporting readings of the dreadnought. Vocath's people took the station after it went dark and waited there for the relief run, which is how the Bellwether Crow ambush was set.
+  Still open: what is at Cairn now (Claude's draft: something left behind that watches, and what it reports to), and where Tarroway is. The payoff should open onto something larger.
   src: framework § Open; memory-canon (campaign-canon, Cairn)
+  settled part: inbox/chat-cosmic-campaign-structure.md § Tetherbreak (final canon, turns 238–241)
+  settled since: Tarroway is a cartographer on Strake Station (STAGING § Tarroway, round 4), so "where Tarroway is" is closed.
 
-- **[decide]** The dreadnought on the Cairn bearing
-  Options: drawn there; from the next sphere; always there; disrupting transit between spheres. Not yet in the FIA. The Vth'oramu is a carved astral dreadnought (inference: a candidate link).
+- **[fix]** The dreadnought on the Cairn bearing *(answered)*
+  "The dreadnought the Fleet read on the Cairn bearing a year ago was Vth'oramu. It has moved since. It keeps outside Realmspace, in the dark between systems, because a vessel that size near a world's planets would raise alarms. Where it lies now follows from what N'ghathrod is doing."
+  Correct any page that treats the Cairn dreadnought as a separate creature. Check Claude's Tetherbreak line "The dreadnought whose territory this is was taken a little over fifty years ago" against STAGING round 2 (taking it took decades, perhaps a century) and round 5 (it bore no wound before the siege; N'ghathrod saw an opportunity and took it).
+  The earlier sub-question, why the dreadnought held that bearing before he took it (options: drawn there; from the next sphere; always there; disrupting transit between spheres), rides with the shape decide "What N'ghathrod is doing now" (Cosmology § glossary). Not yet in the FIA.
+  Earlier settled part: Cairn is tied to the dreadnought, and the Vth'oramu is a living astral dreadnought N'ghathrod wore down and took, harboured outside Realmspace.
+  answered: STAGING § Vth'oramu and the colony (round 5: "Vth'oramu has moved since it sat on the Cairn bearing a year ago")
   src: framework § Open; memory-canon (open-decisions, Vth'oramu)
+  settled part: inbox/chat-cosmic-campaign-structure.md § The dreadnought, § Tetherbreak
 
 - **[fix]** Most of the complement died
   Page says "The rest of the complement was let go on purpose." Change to: "The second boarding killed the senior deck officers and most of the complement. The few survivors were let go on purpose, so that Joffrey would come home a hero."
@@ -861,7 +920,7 @@ No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms
 
 ### realms/cantina.html
 
-- **[decide]** Who tends bar on the cantina
+- **[decide]** Who tends bar on the cantina *(prep)*
   The page names Odds the plasmoid, but "Odds" is retired (see drop). Options: Glim the plasmoid, of a cantina called the Long Pour (unreviewed Crossing Companion proposal); or leave the bartender unnamed.
   src: astral § Open; memory-canon (campaign-canon, Ryeback absorbs Odds); chat-crew-boogie-casey-sol
 
@@ -871,15 +930,16 @@ No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms
 
 ### realms/meteor-hub.html
 
-- **[decide]** The hub's identity and name
+- **[later]** The hub's identity and name
   Korey liked the carved meteor as a dead god's severed head. Name options: the Crown, Godsrest, the Wanderhead, the Rock.
   src: chat-voyage-6-7-planning § Open
 
 ### realms/wayfinders-homeworld.html
 
-- **[decide]** What "Lunarfoot" names
-  The page uses it for the clan only. Memory says "Lunarfoot is in a hidden system inside Caelestis's sphere", which reads as the homeworld. Options: clan only, and reword memory; or the homeworld too.
+- **[fix]** What "Lunarfoot" names *(answered)*
+  "Lunarfoot" names the clan only. The Wayfinders' homeworld stays unnamed by doctrine. This page is right. Correct anything that names the world or its system Lunarfoot: the register entry "W-11 Lunarfoot" (becomes "W-11", the Wayfinders' homeworld), "SYS-06 is Lunarfoot's system" (becomes "SYS-06, the Wayfinders' homeworld's system"), and memory's line "Lunarfoot is in a hidden system", which should read "the Wayfinders' homeworld is in a hidden system". Remove any homeworld name that reaches the player side; "Lunarfoot" as the clan is fine there.
   src: memory-canon (campaign-canon, Cosmology); realms/wayfinders-homeworld.html
+  answered: inbox/chat-cosmic-campaign-structure.md § Rules and crew ("Lunarfoot is the clan; the Wayfinders' homeworld stays unnamed by doctrine", turn 399), § Superseded; PR #58 "Lunarfoot is the clan, not the world" (merged); inbox/chat-voyage-6-7-planning.md § Interlude and downtime (leaks)
 
 - **[fix]** SPH-01, hidden
   Page says "Sphere uncatalogued". Change to: "SPH-01, in a hidden system (SYS-06)." The Wayfinders go out to map what their world must be protected against, so it shares the sphere with those threats.
@@ -899,26 +959,21 @@ No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms
 
 ### realms/ascension-world.html
 
-- **[decide]** Whether the Ascension World keeps its name
-  "The Ascension" now means Vecna's climb to Axiom, and his godhood happened on Oerth. Options: keep the world as a separate SPH-01 world under a new name; or retire it. Touches this page, the realms index, chart SYS-05, and timeline "The Ascension World".
-  src: session-rulings #14; timeline "The Ascension World"; vecna § Oerth
-
-- **[decide]** What Vecna forced here, when, and what it cost him
-  The timeline event is cert "open" at t -250.
-  src: framework § Open; timeline.json
-
 - **[fix]** A local threshold, distinct from Oerth
   Page says "a small, personal ascension distinct from the canonical Sigil event". Change to: "a small, local threshold he forced through agents, distinct from his ascension on Oerth." His godhood came first, on Oerth; this was later and smaller.
   src: session-rulings; vecna § Oerth
+  updated (round 5): likely superseded. The separate Ascension World is retired and Oerth is that world (STAGING § Vecna, round 5); see the Timeline section's answered item "The Ascension World event".
 
 - **[fix]** SPH-01
   Page says "Sphere uncatalogued" (twice). Change to SPH-01, system SYS-05.
   src: vecna § Oerth ("a world in SPH-01"); chart (SYS-05 inside SPH-01); timeline "The Ascension World"
+  updated (round 5): likely superseded. The separate Ascension World is retired and Oerth is that world (STAGING § Vecna, round 5); see the Timeline section's answered item "The Ascension World event".
 
 ### realms/krynn.html
 
-- **[decide]** The "First World and dragons" thread
-  The infobox ("Dragons, and the First World") and the closing line name a thread with no source in memory, drafts or sweeps. Options: keep it as an open thread on the planning layer; or remove it. The settled dragon facts (they left to face Takhisis and have not reached Krynn) may be enough.
+- **[later]** The "First World and dragons" thread
+  The infobox ("Dragons, and the First World") and the closing line name a thread with no source in memory, drafts or sweeps. "The First World" is the glossary's name for the Reach world, so as written the line makes a cosmology claim about Krynn's dragons that nothing supports.
+  Options: (a) remove it and keep the settled dragon facts (they left to face Takhisis and have not reached Krynn; their own politics hold them); (b) move it to the planning layer as an open thread and take "First World" off the realm page.
   src: realms/krynn.html
 
 # Fonains
@@ -928,13 +983,10 @@ Order under each heading: decide, fix, drop, add.
 
 ### realms/fonains.html
 
-- **[decide]** Fonains's world designation
-  The realm page and the chart use W-21 (the chart note says "Draft: Fonains matches FIA W-21"). The early FIA registry lists "W-02 Fonains", and W-02 is H'Catha on the realm pages. Options: W-21, and correct the FIA file; or W-02, and renumber the realm pages. Check Aethris the same way (FIA W-01, cosmology W-08).
+- **[fix]** Fonains's world designation *(answered)*
+  Fonains is W-21, and Aethris is W-08. Caelestis and the FIA share one numbering. The early registry's "W-02 Fonains" and "W-01 Aethris" were renumbered (W-02 to W-021, then W-21; W-008 to W-08), and W-02 is H'Catha. The realm pages and the chart stand. Correct any FIA file or note that still shows W-02 or W-021 for Fonains, or W-01 or W-008 for Aethris; drop "Draft:" from the chart note "Draft: Fonains matches FIA W-21".
   src: chat-early-planning § New campaign idea development; realms/fonains.html; chart/index.html
-
-- **[decide]** The elder brain after Lola's Boys
-  Rule before it goes on this page. See the Timeline section below for the options.
-  src: timeline.json; memory-canon
+  answered: inbox/chat-early-planning.md § Superseded (turn 75: "W-02 renumbered W-021"; the gappy registry W-008 Aethris, W-021 Fonains); inbox/chat-organizing-framework.md § Designations (Settled: W-02 H'Catha, W-08 Aethris, W-21 Fonains; one shared scheme with the FIA)
 
 - **[fix]** The dragons
   Page says "Most of Fonains's dragons left for Krynn to fight Tiamat." Change to: "Most of Fonains's dragons left to face Takhisis (Tiamat), and few remain. They have not yet reached Krynn; their own politics hold them. Fonains remembers their leaving as a great hunt."
@@ -988,53 +1040,53 @@ Order under each heading: decide, fix, drop, add.
 
 The doc is current on names, the four keys, the cults, the party table, Krynn and the dragons, and Takhisis being Tiamat. Items below cover what is stale or missing.
 
-- **[decide]** The Cre'Tez father's name
-  Options: Cenvinzo (foundry notes § Parents); Vinbenzo (§ Reveal).
-  src: cretez-foundry-notes
+- **[fix]** The Cre'Tez father is Cenvinzo
+  Ruled (STAGING round 8). Use "Cenvinzo" everywhere; the foundry notes' "Vinbenzo" (§ Reveal) is a slip. Write:
+  "Cenvinzo, head of the Cre'Tez, is barely alive, a shadow of himself. He is held captive somewhere, bound to Vanifer."
+  This also settles the old question of whether Vanifer killed her father: she did not.
+  src: Korey, 2026-10-25 (round 8); cretez-foundry-notes § Parents, § Reveal
 
-- **[decide]** Rihiri's gender
-  The notes read "Rihiri (12M)" and also "youngest kind little sister". Options: sister (fix the M); brother.
-  src: cretez-foundry-notes § Siblings
+- **[fix]** Rihiri is a sister
+  Ruled (STAGING round 8). The notes' "Rihiri (12M)" is a slip. Write Rihiri as a sister throughout the doc.
+  src: Korey, 2026-10-25 (round 8); cretez-foundry-notes § Siblings
 
-- **[decide]** Dharra or Dara
-  The notes spell "Dharra"; the timeline spells "Dara" ("Dara and Rahiri freed"). Rihiri is settled by the session rulings. Options: Dharra; Dara. Touches the doc and the timeline S18 event.
-  src: cretez-foundry-notes § Siblings; timeline.json; session-rulings
+- **[fix]** Darra
+  Ruled (STAGING round 8): the spelling is Darra, and she is a sister. Change the notes' "Dharra" and the timeline's "Dara" everywhere: the doc, the S18 event ("Dara and Rahiri freed" becomes "Darra and Rihiri freed"), and the adds below.
+  src: Korey, 2026-10-25 (round 8); cretez-foundry-notes § Siblings; timeline.json
 
-- **[decide]** Whether Vanifer killed her father
-  Options: she killed him; or she keeps him seeming alive with programmed illusion and fire cultists.
-  src: cretez-foundry-notes § Reveal
+- **[fix]** Kevulan's birthright
+  Ruled (STAGING round 8). Replace the notes' "subject to change" with:
+  "Kevulan first willed his birthright to Asmodus, then rescinded it and willed it to Xero."
+  src: Korey, 2026-10-25 (round 8); cretez-foundry-notes § Reveal
 
-- **[decide]** Whether Kevulan willed his birthright to Asmodus when overpowered
-  The notes leave it "subject to change".
-  src: cretez-foundry-notes § Reveal
-
-- **[decide]** Seldra's gem-thief boss
+- **[later]** Seldra's gem-thief boss
   Options: keep Makedon; or Mack Francache, a wererat sent by Moghadam (the module).
   src: module-sweep-fonains § For Korey to confirm
 
-- **[decide]** Marlos or Marlos Urnrayle
+- **[later]** Marlos or Marlos Urnrayle
   Options: keep the table's "Marlos"; or adopt the module's full name.
   src: module-sweep-fonains § For Korey to confirm
 
-- **[decide]** The mind flayer arcanist in Kwalish's lab
+- **[later]** The mind flayer arcanist in Kwalish's lab
   It sits in stasis. Options: one of N'ghathrod's captured illithids; unrelated; leave it as a hook.
   src: module-sweep-fonains § Hooks, § Open
 
-- **[decide]** The demilich skull with gem eyes
+- **[later]** The demilich skull with gem eyes
   Whether the skull in Kwalish's lab is the one Seldra was forced to craft for Thessalar. Options: yes, it travelled with the craft; no.
   src: module-sweep-fonains § Hooks, § Open
 
-- **[decide]** Kwalish's price
+- **[later]** Kwalish's price
   Whether it is a piece of the characters' souls, as in the module. Options: adopt; leave unused.
   src: module-sweep-fonains § Hooks
 
-- **[decide]** Gar Shatterkeel's claw
+- **[later]** Gar Shatterkeel's claw
   Whether his crab-claw prosthetic echoes Hayden's prosthetic and one-armed father (inference). Options: tie them; leave it coincidental.
   src: module-sweep-fonains § Usable mechanics
 
-- **[decide]** The Pedra Ardente quest, its place and its broker
-  Spellings in circulation: "Pedra Ardente", "The Blooming Glass", "Fenerba" (`dossiers/clint.html`); "Pedra Ardante", "the Blooming Glass", "Fernerva" (timeline "Pedra Ardante reaches Vanifer"); memory names the quest "Search for the Blooming Grove", with Vanifer as its quest giver. Pick one spelling for each name and use it everywhere (doc, dossier, timeline).
-  src: dossiers/clint.html; timeline.json; memory-canon (Fonains canon 2026-10-25)
+- **[fix]** The Pedra Ardente quest: one spelling each
+  Ruled (STAGING round 8): the Pedra Ardente is a gem, and Finerva is Vanifer under another name. The place was already answered as the Blooming Glass (see dossiers/clint.html). Use these spellings everywhere (doc, dossier, timeline): the Blooming Glass; the Pedra Ardente; Finerva. Change the timeline's "Pedra Ardante" and "Fernerva" and the dossier's "Fenerba". Write in the doc:
+  "Vanifer posted the Blooming Glass bounty under the name Finerva, for the eldest Cre'Tez brother. The Pedra Ardente, the gem Clint's crew recovered there, went to her."
+  src: Korey, 2026-10-25 (round 8); dossiers/clint.html; timeline.json; memory-canon (Fonains canon 2026-10-25)
 
 - **[fix]** "Where the campaign stands"
   Says "roughly two months after the Monolith broke". Change to "two to three months after the Monolith broke".
@@ -1075,11 +1127,11 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
   src: chat § Fonains background
 
 - **[add]** Benedetta
-  "Benedetta was Cenvinzo's wife and the mother of the younger Cre'Tez siblings. She fell ill at Rihiri's birth, about twelve years ago, and died two years later, about ten years ago." (The father's name follows the decide above.)
+  "Benedetta was Cenvinzo's wife and the mother of the younger Cre'Tez siblings. She fell ill at Rihiri's birth, about twelve years ago, and died two years later, about ten years ago."
   src: cretez-foundry-notes § Parents; session-rulings; timeline decisions
 
 - **[add]** The Cre'Tez siblings
-  Eldest first: Vanifer (35, a half-sister by the same father), Asmodus (31), Kevulan (22), Xero (18), Lusion (16), Dharra (14), Rihiri (12). Vanifer raised most of the younger ones after Benedetta died. Kevulan follows Asmodus like a lackey and carries a regal air.
+  Eldest first: Vanifer (35, a half-sister by the same father), Asmodus (31), Kevulan (22), Xero (18), Lusion (16), Darra (14), Rihiri (12). Vanifer raised most of the younger ones after Benedetta died. Kevulan follows Asmodus like a lackey and carries a regal air.
   src: cretez-foundry-notes § Siblings
 
 - **[add]** The crest
@@ -1119,7 +1171,7 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
   src: cretez-foundry-notes § Reveal
 
 - **[add]** Rihiri and Kevulan
-  "Asmodus stabbed Rihiri. She survived, and Dharra got her out. Kevulan fled, then tracked Lola's Boys after hearing of the heroes of the Monolith."
+  "Asmodus stabbed Rihiri. She survived, and Darra got her out. Kevulan fled, then tracked Lola's Boys after hearing of the heroes of the Monolith."
   src: cretez-foundry-notes § Reveal; timeline "The Alpha is invoked"
 
 - **[add]** Vanifer's plan (DM)
@@ -1148,13 +1200,10 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
 
 ### Timeline (Fonains lane)
 
-- **[decide]** The real elder brain
-  Timeline S27 "The elder brain" says "the elder brain is buried" (lair under the Barrier Peaks). Memory says N'ghathrod's elder brain was carried on to Fonains in the crash and escaped, and lists "the real elder brain's location" as open. Options: (a) the brain under the Barrier Peaks is N'ghathrod's, and it is buried; (b) the S27 brain was another, and N'ghathrod's real elder brain escaped and lives somewhere unnamed. Touches timeline S27 and "The craft falls", `realms/fonains.html`, `dossiers/nghathrod.html`.
-  src: timeline.json; memory-canon (open-decisions, Fonains lore tie-in; still-open list); chat § N'ghathrod origin
-
-- **[decide]** Four shards or 333,333
-  Timeline S14–S15: Kwalish's cannon splits the Monolith into four shards, each guarded by a Prince-aligned elemental. Memory: 333,333 shards across the cosmos (the number shows the scale already in motion; it is not a collectible goal). Options, for example: four great shards plus countless fragments scattered beyond Fonains. Word both places to match.
-  src: timeline.json; memory-canon (campaign-canon, Scale)
+- **[fix]** The shards: four great, many small, 333 black
+  Ruled (STAGING round 8). The figure "about 333,333 shards" is retired. Word Timeline S14–S15 and every page that carries the count (artifacts/fonains-shard.html, crew/boogie.html) to match:
+  "When the Monolith broke, four great shards fell, each guarded by a Prince-aligned elemental, and many smaller shards came from them. Three hundred and thirty-three of the small shards are black. The rest took colors close to their elemental affinities."
+  src: Korey, 2026-10-25 (round 8); timeline.json
 
 - **[fix]** Fonains's present is level with Caelestis
   The clock "Fonains now (S28)" sits at t -0.43 against "Caelestis now" at 0, and the Lola's Boys band ends at -0.43. Shift the Fonains lane so Session 28 sits at about 0. Keep the Monolith break two to three months before it (today the break is at -0.64, which is about 0.21 before S28, so the spacing already holds).
@@ -1167,7 +1216,7 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
   src: memory-canon (open-decisions, Locked 2026-10-25)
 
 - **[fix]** Rihiri's spelling
-  The S18 event "Dara and Rahiri freed" spells "Rahiri". Change to "Rihiri". (Dara versus Dharra is a decide above.)
+  The S18 event "Dara and Rahiri freed" spells "Rahiri". Change to "Rihiri", and "Dara" to "Darra" (see the fix above).
   src: session-rulings
 
 # Timeline
@@ -1177,21 +1226,25 @@ Order: decide, fix, drop, add.
 
 ### Timeline
 
-- **[decide]** The Ascension World event
-  "The Ascension" now means Vecna's climb to Axiom, and his godhood happened on Oerth. The event "The Ascension World" (cert open, t -250: "He forces a small local threshold on a world in SPH-01. When, and what it cost him, are open.") follows the naming ruling in the Realms section § realms/ascension-world.html. Options: keep it as a separate SPH-01 world under a new name; or retire the world and the event.
+- **[fix]** The Ascension World event *(answered)*
+  Retire the world and the event. Remove "The Ascension World" (cert open, t -250). Oerth is the world where Vecna became a god: his ritual pushed Oerth to its Zenith, the Zenith made him a god, and the Monolith that answered archived his mortal form, Lich Vecna. That was his first ascension, the Godhood Ascension, and "Vecna rules Oerth and ascends" already carries it. The climb he is making now, to take an Axiom's place, is the Axiomic Ascension.
+  Knock-on: `realms/ascension-world.html` and its fixes in the Realms section, the SYS-05 entries on `realms/index.html` and the chart, and the Cosmology fix "Every place carries a designation" all assume the separate world.
+  answered: STAGING § Vecna (round 5: "The separate 'Ascension World' is retired; Oerth is that world.")
+  Original item: "The Ascension" now means Vecna's climb to Axiom, and his godhood happened on Oerth. The event "The Ascension World" (cert open, t -250: "He forces a small local threshold on a world in SPH-01. When, and what it cost him, are open.") follows the naming ruling in the Realms section § realms/ascension-world.html. Options: keep it as a separate SPH-01 world under a new name; or retire the world and the event.
   src: session-rulings #14; vecna § Oerth
 
-- **[decide]** When Thessalar made his eight copies
-  "Thessalar's experiments" (t -530 to -500) lists clone tubes Thessalar I–VIII before N'ghathrod's capture (t -506). `dossiers/thessalar.html` and `dossiers/nghathrod.html` say N'ghathrod was the prototype for that research. Options: move the clone tubes after -506; or the dossiers are wrong and the tubes predate him.
+- **[fix]** When Thessalar made his eight copies *(answered)*
+  N'ghathrod was Thessalar's first subject, and no copy of Thessalar existed yet. Thessalar experimented on him first, then made eight simulacra of himself, I–VIII. The dossiers are right. "Thessalar's experiments" (t -530 to -500) lists the clone tubes inside a span that starts before N'ghathrod's capture (t -506). Split it: keep the Rod's seventh piece and the Thessalkraken in "Thessalar's experiments", and add the clone tubes as their own event after -506, inside the capture span (for example "Thessalar copies himself": "With N'ghathrod as his first subject, Thessalar turns the Rod's seventh piece on himself and makes eight simulacra, Thessalar I–VIII.").
   src: dossiers/thessalar.html; dossiers/nghathrod.html; timeline.json
+  answered: inbox/chat-cosmic-campaign-structure.md § Thessalar and Fonains ("He experimented on N'ghathrod first, then made eight simulacra of himself"), § N'ghathrod and the colony ("N'ghathrod was Thessalar's first subject; no copy of Thessalar existed yet"); memory-canon (open-decisions, Rod's seventh piece: "N'ghathrod was a subject in that research")
 
-- **[decide]** When the Glyth Watcher got out
+- **[later]** When the Glyth Watcher got out
   "The Glyth Watcher gets out" sits at t -3 (cert working). glyth-watcher.md leaves how she got out open. Options: keep about three years ago; or leave the event undated.
   src: glyth-watcher § Open; timeline.json
 
-- **[decide]** Clint overboard, or in a seized craft
-  "The Bellwether Crow ambushed" says Clint Dashforest "goes overboard and the psychic wind carries him to Fonains", which matches memory. The factions and colony pages, and the chart ("in the craft he took"), say he seized the boarders' craft. Follows the ruling under `prime/factions/vocath-operation.html`. Options: overboard, carried by the psychic wind; he seized the boarders' craft and the psychic wind carried it; overboard first, then a craft.
-  src: timeline.json; memory-canon (open-decisions, "Operative resolved"; campaign-canon, Astral Sea travel features); chart Crow site
+- **[later]** The third Boundary piece
+  Ruled: the Boundary fragment is three pieces, each a finder; A.T.L.A.S. and its sister are two (STAGING rounds 10–11). What the third finds, and where it is, waits until play needs it.
+  src: Korey, 2026-10-25 (round 10)
 
 - **[fix]** Arcs, not acts
   Rename the planned crew events to the spine's arc names (the wiki says "Arc", never "Act"):
@@ -1223,19 +1276,13 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/index.html
 
-- **[decide]** The colony's word for its brainless-raised
-  Canon calls them the brainless-raised; the final slur is still to name. The index uses "unthinned"; the Vth'orama page uses "unthinned" (Vth'ulhan) and "unculled" side by side. Options: unthinned (Vth'ulhan), unculled, or another word. Apply on factions/index.html, factions/vthorama.html and the timeline.
+- **[fix]** The colony's word for its brainless-raised *(answered)*
+  The brainless-raised are the Vth'ulhan, "the unthinned". They took Glyth's insult for themselves. factions/index.html already says "unthinned" and needs no change. factions/vthorama.html also says "unculled" in three places ("The unculled are an obscenity", "most of the colony is unculled", "The contradiction about the unculled"); change each to "unthinned". Timeline lines that say "brainless-raised" describe them and can stay.
   src: memory-canon open-decisions (operative-resolved open list); chat-cosmic-campaign-structure § N'ghathrod origin, § N'ghathrod and the colony
+  answered: inbox/chat-cosmic-campaign-structure.md § N'ghathrod and the colony (Settled: "Vth'ulhan = the unthinned") and § Superseded ("Vth'ulhan kept as 'the unthinned'"). Korey used it himself in the taxonomy turn ("the Vithulan who are of the ship and unthinned"), which comes after the memory open-list line. STAGING § N'ghathrod's history uses "unthinned" as well.
+  merged: the factions/vthorama.html item "Brainless-raised term" ("Follows the decide under factions/index.html; this page uses both 'unculled' and 'unthinned'") is folded in here; the vthorama changes are listed above.
 
-- **[decide]** Fracture Cult and Archivists against the Seekers
-  Both drive or work Zeniths and Monoliths, which overlaps the Seekers. Options:
-  (a) Keep them independent, with some cells serving as chapters (current Spectrum text).
-  (b) Fold them into the Seekers as chapter types.
-  (c) Retire them.
-  Touches: factions/index.html (Spectrum card), factions/spectrum.html, factions/seekers.html.
-  src: memory-canon open-decisions (audit line)
-
-- **[decide]** Thumbnails for people with pages
+- **[later]** Thumbnails for people with pages
   Do people with their own dossiers get thumbnails on the Factions page?
   src: chat-cosmic-campaign-structure § Open
 
@@ -1247,20 +1294,20 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/academy-fleet.html
 
-- **[decide]** The Glyth loss
+- **[later]** The Glyth loss
   The Fleet lost a force at Glyth during the last approach window (see add). Its name and its commander are unnamed.
   src: chat-cosmic-campaign-structure § Cosmos texture, § Open
 
-- **[decide]** Sor'Kur or Sor'Kor
+- **[decide]** Sor'Kur or Sor'Kor *(prep)*
   The repo spells it Sor'Kur everywhere (this page, dossiers/sor-kur.html, data/dossiers.json); the sweep raises Sor'Kor. Confirm Sor'Kur.
   src: chat-cosmic-campaign-structure § Open
 
-- **[decide]** Gregory's origin wording
-  The page calls Gregory a Seam-product ("Transformation and Boundary overlapped where he stood"). Memory canon calls his arc "a Continuity (existence) ripple event" and him a paracausal Reach item like the Lantern. Decide together with Astra Virex's wound (under factions/deities.html). Options: keep the Seam wording, or revert to "Continuity ripple".
+- **[fix]** Gregory's origin wording *(answered)*
+  Replace the Seam wording ("Transformation and Boundary overlapped where he stood") on Gregory's row with: "Gregory was woken by the strain on an Axiom. Over the past century Monoliths have formed more often, and the strain that puts on an Axiom ripples outward through the planes and the cosmos, slow and more metaphysical than physical. Gregory's awakening is one result; the Latchling and other oddities are others. The same ripple woke Astra Virex." Carry the same cause to crew/gregory.html and dossiers/astra-virex.html (Astra Virex's wound: the ripple caused collisions between celestial bodies and part of the entity broke off).
+  answered: STAGING § The Axiom strain
+  Prior note: the page calls Gregory a Seam-product ("Transformation and Boundary overlapped where he stood"). Memory canon calls his arc "a Continuity (existence) ripple event" and him a paracausal Reach item like the Lantern. Decide together with Astra Virex's wound (under factions/deities.html). Options: keep the Seam wording, or revert to "Continuity ripple".
+  Why it is still open: Claude declared the three Seam-products "locked" in the cosmic-structure chat and wrote them into the repo; Korey answered "What's next" without confirming. Memory canon, updated later, still holds both Gregory's origin wording and Astra's wound as open. The two readings can also stack (a Seam woke him; that makes him paracausal), so a third option is: keep the Seam as the cause and call him paracausal, dropping "Reach item".
   src: memory-canon campaign-canon § Gregory, § Antagonists (Lantern line); chat-cosmic-campaign-structure § Cosmology redesign
-
-- **[decide]** OSTEKK-6's survivor line
-  The crew table says "One of two survivors of nine… OSTEKK-2 also survives, on the Hollow Deck." Follows the OSTEKK-2 ruling under dossiers/ostekk-6.html.
 
 - **[fix]** Flighty Foundling, and the swap has happened
   Page says "Travel together on Academy assignments aboard the Foundling", a Vessels row "The Foundling", and that its errand "includes collecting Ezra". Ship names carry no article: write "Flighty Foundling". The crew now flies the tyrant ship. Flighty Foundling delivered them and came back alongside for the swap at the tyrant ship, where Krik'Lit and Pffred left and Ezra and the chosen instructor came aboard. Update the crew row and the Vessels row to that.
@@ -1298,19 +1345,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/order.html
 
-- **[decide]** The Hall: one name or two, and where
-  Ezra's dossier and this page say "the Hall of Sight and Sound". Memory canon says the crew takes Ezra to "the Hall of the Watchers". Options: one hall under two names (pick which the wiki uses), or two places (a training hall and the Order's seat). Also unset: where the Hall sits.
-  Touches: factions/order.html, dossiers/ezra.html, campaign/spine.html (H'Catha report chain), working/glyth-watcher.md.
-  src: memory-canon campaign-canon § Key NPCs (Ezra); chat-cosmic-campaign-structure § Open; chat-astral-sea-worldbuilding § Open
-
-- **[decide]** What the Watchers are doing now
-  The parallel Watchers track for the campaign view.
-  src: chat-organizing-framework § Open; memory-canon open-decisions (DM views)
-
-- **[decide]** Names for two Watchers
-  H'Catha's Watcher is a woman with no name yet (placeholder Nereth Vaul; Ondessa's name is taken). The Glyth Watcher has no name, and how she got out is unset.
-  src: memory-canon campaign-canon § Antagonists (H'Catha refinement); chat-astral-sea-worldbuilding § H'Catha: Ondessa and the Watcher; working/glyth-watcher.md
-
 - **[fix]** Watchers are posted to regions of worlds
   Page says Watchers "take a posting — to a plane rather than a world". Change to: "then take a posting to a region of a world. A world may hold several Watchers, depending on its size and peoples."
   src: memory-canon campaign-canon § Key NPCs (Watcher ruling corrected); timeline "The Order of the All-Father"; working/glyth-watcher.md § Sketch
@@ -1343,13 +1377,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/seekers.html
 
-- **[decide]** How the Seekers divide
-  Settled: Vecna is an open god with a following under many names, and his followers are the Seekers. Still open is the inner shape, because the draft keeps a second body (open faithful vs method-taught chapters), and N'ghathrod's colony is a chapter that believes it serves an elder brain. Options:
-  (a) Every chapter worships him under some name; the colony is the lone exception.
-  (b) The Seekers are the umbrella: a public faith wing that worships him (some under his own name) and a method wing that works his method without knowing whose it is. Some people belong to both without knowing they serve the same hand.
-  Touches: factions/seekers.html, factions/deities.html (Vecna entry), campaign/ascension/index.html, working/vecna.md (§ The two bodies).
-  src: session-rulings (Vecna); memory-canon open-decisions (Seekers line, "Locked this pass"); working/vecna.md § The two bodies
-
 - **[fix]** Chapters know him under many names
   The intro says "No chapter knows the name Vecna." Rewrite: "Chapters know him by many names. Some use his own." Shape the rest per the decide above.
   src: session-rulings (Vecna)
@@ -1365,11 +1392,12 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 - **[add]** The founding story
   Add to The founding story: chapters share no glyph. They connect through the same account of the voice, the information-for-information trade rule, and the founding phrase "We were taught how to ask." Each chapter's symbol depicts its own secret, drawn so the subject is the void and only its surroundings show.
   src: memory-canon open-decisions ("Locked this pass")
+  updated (triage): conflicts with STAGING § Vecna's domains and symbol (one symbol, an eye in the palm of a left hand, read differently by each chapter) and § The Seekers (chapters do not know about each other). Rewrite from STAGING before applying.
 
-- **[add]** The largest chapter
-  Add under "What a chapter usually is" (or the Vth'orama dial): "N'ghathrod's colony is the largest Seeker chapter and the only one that travels. It coordinates with planet-bound chapters."
-  src: memory-canon open-decisions ("Locked this pass")
-
+- **[add]** The colony and the Monoliths
+  Add to Who they are: "Every heart N'ghathrod opens is worthless until it is linked, and a link needs a Monolith on both worlds. So the colony goes where Monoliths stand, and where they don't, it waits." Whether the colony counts as a Seekers chapter is a decide (see factions/seekers.html).
+  updated (triage): settled. The colony is a Seekers chapter, the Seekers of a New Home (STAGING § The Seekers and the colony). Note that opening a heart needs no Monolith; only linking does (STAGING § Hearts, Atria and Monoliths).
+  src: Korey, 2026-10-25 (round 2)
 - **[add]** Steered toward those who got close
   Add to the Vth'orama dial notes: N'ghathrod is steered toward chapter members who got close to heart information. His taking them is their ascension.
   src: chat-cosmic-campaign-structure § Vecna's following
@@ -1394,29 +1422,11 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/deities.html
 
-- **[decide]** What wounded Astra Virex
-  The page (and the Astra Virex dossier) says "wounded by a Seam — Transformation and Boundary overlapping across something that was already…". Memory canon says the wound still needs precise wording. The chat's "a disturbance in Continuity" is the alternative; the "Existence pulse" is dead because there is no Existence Axiom. Options:
-  (a) Lock the Seam.
-  (b) "A disturbance in Continuity".
-  (c) Reopen and strip the Seam wording.
-  Decide together with Gregory's origin (factions/academy-fleet.html) and with whether Astra's long game is to connect to the Axioms (dossiers/astra-virex.html).
-  Touches: factions/deities.html, dossiers/astra-virex.html, factions/academy-fleet.html (Gregory), dossiers/zerathis.html.
-  src: memory-canon campaign-canon § Cosmology (Astra line), open-decisions (open list); chat-cosmic-campaign-structure § Cosmology redesign; chat-organizing-framework § NPCs and PCs
-
-- **[decide]** The name of Vecna's realm
-  Published lore calls it Cavitius. Keep Cavitius or name it.
-  src: working/vecna.md § Realm; memory-canon open-decisions (Vecna/Tharizdun 2026-10-25)
-
-- **[decide]** Shothragot
-  His shape and where he is now.
-  src: working/tharizdun.md § Open
-
-- **[decide]** What the Accordance knows of Vecna
-  Their view of him, and whether any of them saw his hand in the Fonains ritual. Options: they know and stay silent; they suspect; they do not know.
-  src: working/vecna.md § What the gods think of him, § Open
-
-- **[decide]** How far to develop Tymora
-  Korey wants to develop Tymora and the Beshaba/Tymora interplay. Open: how her doctrine's misreading plays on Aethris (see the add below), and whether she notices herself thinning there as the ritual removes the risk her luck needs. Keep the sisters' conflict indirect: gods give direction that never shows the whole of what they want. Beshaba's want is its own decide under dossiers/beshaba.html.
+- **[later]** How far to develop Tymora
+  Korey wants to develop Tymora and the Beshaba/Tymora interplay.
+  Settled (Korey, turns 860–862): the misread tenet and "fortune needs misfortune" (both adds below); the sisters' conflict stays indirect, because gods give direction that never shows the whole of what they want; Aethris is a whole planet where not everyone follows Tymora, with a lesser Beshaba following and other fortune gods, major and minor. Add that last point to the Tymora entry and realms/aethris.html: "Not all of Aethris follows Tymora. Beshaba keeps a smaller following there, and other gods of fortune, major and minor, are worshipped too."
+  Still open: whether Tymora notices herself thinning on Aethris as the ritual removes the risk her luck needs, and whether she acts on it. Beshaba's want is its own decide under dossiers/beshaba.html.
+  answered (part): inbox/chat-crew-boogie-casey-sol.md § Sol / Aethris and the gods (Settled)
   src: BCS § Sol/Aethris and the gods (turn 860), § Sol/Open
 
 - **[fix]** Zerathis is he
@@ -1440,6 +1450,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   src: working/vecna.md § History; memory-canon open-decisions ("Locked this pass": the layer above him is parked; Vecna direction 2026-10-24)
 
 - **[add]** Oerth
+  updated (triage): Oerth lies in SPH-05, the sphere farthest from Caelestis's (STAGING § Oerth, round 3).
   Add: "Oerth, Vecna's homeworld, lies in its own sphere. It is a darkest-timeline world where the heroes failed, and his hold there is strongest. The Monolith of his ascension still stands, and his faithful treat it as their holiest site." DM: visiting should be horrible.
   src: session-rulings (Vecna); memory-canon open-decisions (Vecna/gods 2026-10-25); working/vecna.md § Oerth
 
@@ -1457,6 +1468,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 - **[add]** His realm
   Add: "Vecna's divine realm is anchored to Oerth's sphere, and he can reach it." (Name per the decide above.)
+  updated (triage): the realm is Cavitius (STAGING § Vecna, round 5).
   src: working/vecna.md § Realm; memory-canon open-decisions (Vecna/Tharizdun 2026-10-25)
 
 - **[add]** What the gods think of him
@@ -1498,32 +1510,27 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/vthorama.html
 
-- **[decide]** What happens to the taken when N'ghathrod's true body dies
-  The page says his death "ends every n'ghathu at once"; rules/index.html says "what that does to the taken is unwritten"; memory canon holds open whether the copies die with him or one inherits. Options: hosts die with their copies; hosts are freed; the copies persist on their own; one copy inherits.
-  Touches: factions/vthorama.html, dossiers/nghathrod.html, rules/index.html.
-  src: memory-canon open-decisions (simulacrum line); chat-cosmic-campaign-structure § Open
-
-- **[decide]** The colony's coat of arms
-  The broken-ring arms are dropped. The Passage stays the field mark. Arms are unset.
-  src: chat-cosmic-campaign-structure § Open, § Superseded
-
-- **[decide]** "kesh"
-  The page says "Many of the kesh were offered it". No source defines "kesh" (the only Kesh in the sweeps is Kesh Hollow on Anadia). Define the term or replace it.
+- **[fix]** "kesh" is retired *(answered)*
+  The page says "Many of the kesh were offered it and accepted — the outcast, the discarded, the ones with nothing… The colony's word for them is a kinship term." "Kesh n'ghathu" ("the many of him") was a Claude lexicon draft for the taken outside the five. Korey retired it: the rest of the taken need no term of their own and are simply Vth'ghathu. Change "Many of the kesh were offered it" to "Many of the taken were offered it", and remove "The colony's word for them is a kinship term."
   src: (inference) factions/vthorama.html
+  answered: Korey in the cosmic-structure chat, taxonomy turn ("Kesh Vithkathu doesn't mean anything because that would just be Vithkathu"); Claude's revised lexicon in reply: "No term is needed for the rest; they are simply Vth'ghathu." (chat f2f5d29e, § N'ghathrod and the colony)
 
-- **[decide]** When the five enna received their Holds
-  Follows the five-centuries decide under dossiers/nghathrod.html. This page says "Five illithids, taken a century ago" and "a century of grievance".
-
-- **[decide]** Brainless-raised term
-  Follows the decide under factions/index.html; this page uses both "unculled" and "unthinned".
+- **[fix]** When the five enna received their Holds *(answered)*
+  This page says "Five illithids, taken a century ago" and "a century of grievance". Change the first to: "Five illithids, changed alongside N'ghathrod by Thessalar's experiments aboard the planar craft about five hundred years ago, each carrying a Hold." The bearers' "a century of grievance" becomes "four centuries of grievance": the unthinned were exiled from Glyth roughly four to four and a half centuries ago.
+  The split (STAGING round 8): two of the five are bearers, properly raised illithids captured with N'ghathrod aboard Thessalar's craft. The other three are unthinned, made aboard the craft from bodies Thessalar supplied and N'ghathrod's own tadpoles. The page's three-and-two split stands; write the origins to match.
+  answered: STAGING § N'ghathrod's history
+  Originally followed the five-centuries decide under dossiers/nghathrod.html.
 
 - **[fix]** N'ghathrod's age
   Page says "A mind flayer roughly a century into his second life". Write: "A mind flayer more than five centuries into his second life. He was captured aboard Thessalar's planar craft about 506 years ago and escaped with his lieutenants when it fell, about 500 years ago. The ceremorphosis the Rod altered also stopped his aging."
   src: session-rulings (Thessalar); memory-canon open-decisions (Locked 2026-10-25); timeline "Captured aboard Thessalar's craft", "The craft falls"
+  updated (triage): the last sentence is superseded. His long life comes from his taken: a portion of every taken person is tithed upward to him (STAGING § N'ghathrod's long life).
 
 - **[fix]** The ship's name
   The lexicon gives "Vth'oramu — The whole of the going-home." The dreadnought's name is locked: Vth'oramu, shortened to Oramu, means "the passage to a new home". Change the lexicon line. Vth'orama ("the whole of the passage", the people named for the ship) can stay.
   src: memory-canon open-decisions (dreadnought name locked); chat-cosmic-campaign-structure § N'ghathrod and the colony
+  check (resolve pass): the cosmic-structure sweep records "Vth'oramu means 'the whole of the going-home' (turn 413)" as Settled, and turn 413 is later than the memory line. Confirm with Korey which gloss stands before applying.
+  updated (triage): resolved. "Vth'oramu means 'the passage to a new home'" (STAGING § The Seekers and the colony). Vth'orama is now glossed as "all who go toward home", the Seekers of a New Home, so the "whole of the passage" gloss for Vth'orama also changes.
 
 - **[fix]** The plan lives on the Ascension
   Page says "Full plan in the Remaking". Link `campaign/ascension/`.
@@ -1556,17 +1563,18 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/vocath-operation.html
 
-- **[decide]** The Sky Dock crate's mark
-  Follows the decide under campaign/colony/index.html. This page puts the eye-in-a-wheel "on the Sky Dock crate".
-
 - **[fix]** Clint went overboard, and the wind carried him
   Page says "When the first boarding came, he seized the boarders' own craft and broke away with it" and "How he crossed is undecided." Canon: Clint Dashforest went overboard in the Bellwether Crow ambush, and a psychic wind carried him to Fonains. Rewrite both lines.
   src: memory-canon campaign-canon § Cosmology (Clint line), § Naming (Astral Sea travel); open-decisions (operative resolved); timeline "The Bellwether Crow ambushed"
+  check (resolve pass): two sweeps record the reverse. chat-organizing-framework § Superseded: "Clint Dashforest 'went overboard' → he seized the boarders' craft and broke away with it; a psychic wind carried him to SYS-04." chat-cosmic-campaign-structure § Tetherbreak (final canon, turns 238–241): "Clint seized the boarders' craft and broke away; a psychic wind carried him out of system." The page's "How he crossed is undecided" is stale either way (the psychic wind is agreed). Confirm overboard vs seized craft with Korey.
+  updated (round 4): superseded. Clint went through a color pool on purpose, drawing the boarders off; write it from STAGING § Clint Dashforest and the Bellwether Crow.
 
 - **[fix]** What Tarroway's tables track
   Page says "He has no idea the patrol his tables track was a ship under command rather than an animal keeping a rhythm, or that it stopped keeping the patrol because it left." Canon: the psychic wind is the explanation for Tarroway's failing timing tables. Rewrite: his tables fail because the psychic wind does not keep a rhythm.
   Touches: dossiers/tarroway.html, dossiers/vthoramu.html.
   src: memory-canon campaign-canon § Naming (Astral Sea travel); chat-cosmic-campaign-structure § Superseded
+  check (resolve pass): the cited Superseded line runs the other way: "Tarroway's cause as the psychic wind → the dreadnought" (turns 238–241), and § Tetherbreak (final canon) says "The 'patrol' Tarroway's tables track is the Vth'oramu itself." The page matches that sweep. Confirm with Korey which is newer before applying.
+  updated (round 4): superseded. The timing tables are cut; Tarroway stays as a thread (see "Trim Tarroway to a thread").
 
 - **[fix]** The account lives on Colony Operations
   Page says "Full account in the Remaking" and links "The Remaking" in Connections. Link `campaign/colony/`.
@@ -1580,10 +1588,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/restorers.html
 
-- **[decide]** Rivals for the set?
-  Are the Restorers gathering the same set as Vecna's side, and do they know that reversing the Core's archived loss would undo the cosmos?
-  src: chat-organizing-framework § Open
-
 - **[fix]** The All-Mother
   Page says "which their doctrine names the Mother of the Universe" and the Doctrine stat "The Core is the Mother of the Universe". Change both to the All-Mother.
   src: chat-cosmic-campaign-structure § Superseded
@@ -1595,10 +1599,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ---
 
 ### factions/aethris.html
-
-- **[decide]** Sol as a person or a component
-  Whether the Fortuned want Sol back as a person or as a component of the unfinished ritual. The answer decides whether his thematic question is answered by his enemies or by himself. Open on this page, crew/sol.html and realms/aethris.html; all three follow the ruling.
-  src: BCS § Sol/Open; crew/sol.html
 
 - **[add]** The Prism Ascendant
   Add to the lead: "The Prism Ascendant is the Monolith that answered Aethris's Zenith. Aethris believes it came from Tymora, as an answer to their ritual of perfection. Its appearance did not end the Zenith: the ritual is unfinished, and Aethris still wants Sol to complete it."
@@ -1612,7 +1612,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/runekeepers.html
 
-- **[decide]** Parked Runekeeper questions
+- **[later]** Parked Runekeeper questions
   Parked, not locked: sealing as the inverse of opening; whether sealed worlds are invisible to A.T.L.A.S.; other worlds' own hiding methods; runes as the "finding" half of the art.
   src: memory-canon open-decisions (Runekeepers line)
 
@@ -1624,10 +1624,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/spectrum.html
 
-- **[decide]** Fracture Cult and Archivists
-  Follows the decide under factions/index.html; the page body carries the same overlap text.
-  src: memory-canon open-decisions (audit line)
-
 # Campaign
 
 Campaign planning pages under `prime/campaign/`. Items are grouped by page and ordered decide, fix, drop, add. Planning pages speak in DM voice. World facts quoted for a page read in-world.
@@ -1638,84 +1634,63 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ### campaign/spine.html
 
-- **[decide]** Central question beside the theme
-  The theme is canon (see the add below). The question is whether "Who decides what's real?" stays the Central Question. Options:
-  (a) Keep both: the question plus the theme beneath it.
-  (b) Make the belonging question the Central Question: "Can a home be made, or only returned to — and what does making one out of what was taken cost?"
-  (c) Retire "Who decides what's real?".
-  (d) State the early-planning version as a pair with the theme: "Who gets to be real — and Vecna wants to be the answer."
-  Touches: campaign/spine.html (Central Question), campaign/index.html if it quotes the question.
-  src: memory-canon open-decisions (theme line); chat-cosmic-campaign-structure § Open; chat-early-planning § Campaign identity
-
-- **[decide]** Act structure and where the Citadel sits
-  The spine runs Arc 1 Academy, Arc 2 Driftwardens, Arc 3 Recognition, Arc 4 Cast. The timeline runs Act 2 ranked missions, Act 3 N'ghathrod (Vth'oramu and the real N'ghathrod; the victory moves Vecna onto his failsafe), Act 4 the center. Memory canon calls N'ghathrod "the Act 2 villain the party works up to". Korey said the Radiant Citadel lands in Arc 4; the spine lists "The Radiant Citadel and the Core become a real destination" under Arc 3 possibilities. Options:
-  (a) Adopt the timeline's acts.
-  (b) Keep the spine's arcs as written.
-  (c) Merge: Arc 3 = N'ghathrod, Arc 4 = the center and the Citadel.
-  Touches: campaign/spine.html, campaign/colony/index.html, campaign/ascension/index.html, timeline.json act events, dossiers/nghathrod.html status line ("Arc 2 antagonist").
-  src: timeline events "Act 2/3/4"; memory-canon open-decisions (working direction line); chat-cosmic-campaign-structure § V006 and the arc, § Open
-
-- **[decide]** "Arc" or "Act"
-  The sweep records "Arc" names replacing "Act" names. Memory canon and the timeline say "Act". Pick one word and apply it across spine, colony, ascension and timeline.
+- **[fix]** "Arc", never "Act" *(answered)*
+  The wiki says "Arc". The timeline events say "Act 2: ranked missions", "Act 3: N'ghathrod", "Act 4: the center" and "Act 3: Vth'oramu"; change each to "Arc". Sweep colony and ascension for any "Act 1–4" left. Memory canon's "Act" wording is Korey's spoken shorthand and does not need to match.
   src: chat-cosmic-campaign-structure § Superseded; timeline; memory-canon open-decisions
+  answered: inbox/chat-early-planning.md § Wiki structure (Settled: "Acts became Arcs"); inbox/chat-cosmic-campaign-structure.md § V006 and the arc (Settled: "The wiki says 'Arc', never 'Act'"; Korey: "the spine governs")
 
-- **[decide]** Arc 2's range
-  Options:
-  (a) Realmspace plus at most one other system.
-  (b) A geographic leash that widens with rank: crews start leashed to a system and range grows as they rise ("town → region → world and beyond").
-  Once ruled, add the leash (or the fixed range) to Arc 2 Shape.
+- **[add]** Arc 2's range *(answered)*
+  Both options were settled, and they fit together. Add to Arc 2 Shape (DM voice): "Arc 2 stays in Realmspace plus at most one other system. Crews start leashed to a system and range grows with rank: contracts are graded by scale, from Grade V (station, lane, ship) through IV (settlement), III (region, moon, nation) and II (world) to I (system, sphere)."
+  Which second system, and why the Fleet works there, is still undecided; keep it off the page until chosen.
   src: chat-early-planning § Campaign Planning, § Institutions; memory-canon open-decisions (Act 2 plan line)
+  answered: inbox/chat-early-planning.md § Cosmology and setting (Settled: "Arc II stays in Toril's Wildspace (Realmspace) plus at most one other system") and § Institutions (Settled: "Early crews are leashed to a system, and range grows with rank"); inbox/chat-cosmic-campaign-structure.md § Contract board (grade ladder); memory-canon Act 2 plan line ("town → region → world and beyond")
 
-- **[decide]** The Act 2 handler
-  The spine says "The handler is unnamed." Korey wants a Variks-style non-human. Candidates:
-  (a) the Glyth Watcher (working/glyth-watcher.md § Where she fits);
-  (b) a dohwar broker (Pip);
-  (c) a defected scro (Vahl);
-  (d) a xixchil contract-surgeon.
-  Touches: campaign/spine.html (Arc 2 Open development), factions/order.html if the Glyth Watcher is chosen.
-  src: working/glyth-watcher.md; chat-early-planning § Campaign Planning § Open; memory-canon open-decisions (Act 2 handler in the open list)
+- **[add]** Captain Haymond Rolt, the Arc 2 handler
+  Ruled (STAGING round 8). The spine says "The handler is unnamed." Write:
+  "Captain Haymond Rolt is the crew's handler in Arc 2. He oversees several Driftwarden crews at once."
+  DM note: an homage to Captain Raymond Holt. He gets a new dossier, `dossiers/haymond-rolt.html`, and a row on dossiers/index.html.
+  src: Korey, 2026-10-25 (round 8)
 
-- **[decide]** Which repercussion follows N'ghathrod's death
-  Killing N'ghathrod has later repercussions, possibly in another campaign (canon; see add below). The sweep says two or three candidates exist without listing them. Korey to name the candidates and pick.
-  src: memory-canon open-decisions (Taken King line); chat-cosmic-campaign-structure § Campaign shape, § Open
+- **[decide]** Driftwarden ranks *(prep)*
+  Ruled: one service, many ranks, the way every police officer is a cop. Set the ladder from the newest graduate up to the organization's head, and where the crew starts.
+  src: Korey, 2026-10-26
 
-- **[decide]** The cosmos threads behind the Fleet's strain
-  Korey's threads to shape: a Mara Sov–style "Reef" sovereign at the sphere's edge; an Osiris-style figure who warned and was pushed out; N'ghathrod's sect and its affiliates (unnamed to the Fleet Corps). He wants broad brushstrokes, not everything figured out. Note: the repo's "Osiris" is an unrelated town on Fonains (the Blooming Glass bounty came out of it).
-  src: chat-astral-sea-worldbuilding § Open; memory-canon open-decisions (Voyage 007 intent, Taken King)
+- **[decide]** Names of the sister institutions *(prep)*
+  Ruled: sister institutions in other system clusters, under other names and governance (STAGING, Factions). Name the one or two the crew is likely to hear of first; the rest wait.
+  src: Korey, 2026-10-25 (rounds 10–11)
 
-- **[decide]** The Princes' elemental pressure and the crew
-  Does the Caelestis crew meet the Princes of Elemental Evil's pressure directly, meet its aftermath, or only hear of it?
-  src: chat-organizing-framework § Open
+- **[add]** The Princes' pressure reaches the crew as phenomena
+  Ruled (STAGING round 8). Add to Cosmological Pressures (DM voice): "The crew meets the Princes of Elemental Evil's pressure as strange elemental-plane phenomena on the worlds they visit, never as the Princes themselves."
+  src: Korey, 2026-10-25 (round 8); chat-organizing-framework § Open
 
-- **[decide]** What the meteor is and why Caelestis wants it
+- **[decide]** What the meteor is and why Caelestis wants it *(prep)*
   Fixed points: the meteor is adamantine, large, mined in an occupied area, and matters locally, to Caelestis and to the Order; working to obtain it is a form of treason on H'Catha; memory canon says "adamantine's value still needs something more". Options:
   (a) Containment. Adamantine survives disintegration, so the Fleet wants it for a vault, cradle or plating, and the cadet crew is cover.
   (b) Sight. The Sovereign Eye cannot see through adamantine, which gives it its local value.
   (c) The spine's three depths as written: adamantine, an Ortholith fragment, the strike as bait.
   (d) A combination, e.g. (a) for Caelestis and (b) for H'Catha.
   Also open: whether the Academy wanted this meteor or any adamantine, and what made it urgent (one lead points at the Brig).
+  Settled since, which is option (d): for Caelestis, containment. Adamantine survives disintegration, so the Fleet wants it for a vault, cradle or plating, and a cadet salvage crew is the cover; Tarto says only that it is rare, theirs by claim, and wanted first. For H'Catha, sight: the Sovereign Eye cannot see through adamantine, which replaced the dropped Spindle foothold war. The ore matters to both Caelestis and the Order.
+  Still open: (1) whether the spine's deeper layers stay under that — an Ortholith fragment, shed or aimed, and the strike as bait (the glossary already calls the meteor a Monolith fragment, but the cosmic-structure sweep lists it as open); (2) whether the Academy wanted this meteor or any adamantine, and what made it urgent now.
+  answered (part): inbox/chat-organizing-framework.md § Tyrant ship and Voyage 004 prep (Settled: containment, cadet cover); inbox/chat-astral-sea-worldbuilding.md § Superseded ("Adamantine now matters because the Eye cannot see through it"), § H'Catha: the meteorite and mission ("valuable to both Caelestis and the Order")
   Touches: campaign/spine.html (H'Catha arc), campaign/plot-hooks.html (meteorite hook), realms H'Catha page.
   src: memory-canon campaign-canon § Antagonists (H'Catha direction, H'Catha decisions); chat-organizing-framework § Settled, § Open; chat-astral-sea-worldbuilding § Superseded; chat-cosmic-campaign-structure § Open
 
-- **[decide]** Ondessa's standing
-  Canon so far: Ondessa is a beholder ruler; she was usurped or nearly killed at the last eclipse through betrayal or someone working into her good graces; her central (anti-magic) eye was destroyed in that assassination; she still lives, so the other rulers want her dead; the crew can choose to protect or reinstate her. Memory canon leans that she still holds her seat. The spine's approach table calls the northeast "Fallen domain — No ruler, no port, an unwatched coast", and the sweep says that domain is Ondessa's. Options:
-  (a) Seated but weakened.
-  (b) Deposed and hiding.
-  (c) Her domain occupied, with her alive.
+- **[fix]** Ondessa holds her seat; her citadel is occupied *(answered)*
+  The spine's approach table calls the northeast "Fallen domain — No ruler, no port, an unwatched coast". That domain is Ondessa's, and she still rules it. Rewrite the row and carry the same facts to the other touched pages (in-world voice):
+  "Ondessa still holds her seat. At the last eclipse she was struck down through betrayal inside her own court. Her central eye was destroyed: she cannot see out of it or use it to cancel magic. Her citadel is occupied, and she hides in the light of her own Lashline. The other rulers want her dead; most of the populace does not know she lives. She is better than her neighbours without being good, and she keeps a beholder's paranoias. She and H'Catha's Watcher protect each other and trade information, and her domain's port feeds intelligence through the Watcher to the Order and to Caelestis."
+  DM-only: the crew may protect her through the eclipse or help her retake her citadel; held in reserve, she may be immune to the eclipse sleep and does not know it. Who betrayed her and who backs the occupiers is still open (lean: a neighbour). The H'Catha Ground Level drafts (the Unwaking holding her citadel through a mercane steward) are unreviewed and are not canon.
   Touches: campaign/spine.html (Beat 2 approach table, Beat 4 avenues), dossiers/ezra.html, dossiers/qitru.html, factions/order.html (Watcher row), realms H'Catha page.
   src: memory-canon campaign-canon § Antagonists (H'Catha leaning, eclipse, sovereign lines); chat-astral-sea-worldbuilding § Superseded
+  answered: inbox/chat-astral-sea-worldbuilding.md § H'Catha: Ondessa and the Watcher (Settled: "Ondessa still holds her seat", "Her citadel is occupied", the eye, the trade, reinstatement as an optional goal) and § Superseded ("Ondessa hides in the light, in her own Lashline"; "The fallen northeast domain is Ondessa's"). This chat (2026-10-21) settles memory's "leaning" and replaces its earlier "deposed ruler" line.
 
-- **[decide]** The Rival's name
+- **[decide]** The Rival's name *(prep)*
   The second claimant to the meteor is "the Rival" on the page. The sweep proposes Oszrax. Confirm Oszrax or name him.
+  Note: "Oszrax" appears in the astral-sea sweep's Superseded line ("the seam between Kurrzot and Oszrax") and in the proposed Edict table ("no covered faces"), but that sweep also says every ruler name except Kurrzot, Ondessa and Ostekk is a proposal. Confirming Oszrax would also settle his Edict as a candidate.
   Touches: campaign/spine.html (timeline, approach table, forces table), dossiers/index.html.
   src: chat-astral-sea-worldbuilding § Superseded
 
-- **[decide]** Level bands per arc
-  The master source doc planned Arc 1 at levels 1–4, Arc 2 at 5–10, Arc 3 at 11–15, and Arc 4 at 15 and up. The spine gives no bands; it says only that level 4 comes with the helm. Confirm the bands (or set new ones) and add one line per arc to the spine. Revisit if the act-structure decide above changes the arcs.
-  Touches: campaign/spine.html (each arc's header block).
-  src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300); memory-canon (party levels to 4 at the helm)
-
-- **[decide]** Who signs the order that keeps the crew together
+- **[decide]** Who signs the order that keeps the crew together *(prep)*
   At graduation the crew becomes Driftwardens and stays one unit. Who signs that order sets Arc 2's tone. Options:
   (a) Mirt: patronage, warm and compromising.
   (b) A Watcher or the Order: fated, cosmic.
@@ -1724,7 +1699,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   Touches: campaign/spine.html (Arc 1 close, Arc 2 shape), dossiers/mirt.html or dossiers/saerthe-abizjn.html if either signs.
   src: chat-early-planning § Campaign Planning, Open (turn 300)
 
-- **[decide]** Mirt's standing after the graduation attack
+- **[decide]** Mirt's standing after the graduation attack *(prep)*
   The attack aims at Mirt's public disgrace: a restricted vault breached on his watch, during his own crew's graduation. Options:
   (a) The crew saves his standing; they are why it is not a massacre.
   (b) His standing suffers: an inquiry that clouds Arc 2.
@@ -1792,6 +1767,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   src: chat-voyage-6-7-planning § Open; memory-canon campaign-canon § Antagonists (beholders solitary; no thralls aboard)
 
 - **[add]** The theme: belonging
+  updated (triage): the campaign has no central question, and "Who decides what's real?" is retired. Write the theme from STAGING § The theme (everyone is missing something and is trying to become whole) and set the line below against it.
   Add beside the Central Question: "Everything in this setting is separated from what it belongs to and trying to get back — every PC, N'ghathrod and his people, Astra Virex, Vecna, the Seekers, the world-hearts and the residue pieces. New material should want to belong somewhere. The campaign asks whether a home can be made or only returned to, and what making one out of what was taken costs."
   src: memory-canon open-decisions (stated campaign theme line); chat-cosmic-campaign-structure § Act 1 retrofit
 
@@ -1832,7 +1808,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   src: chat-cosmic-campaign-structure § Contract board; memory-canon open-decisions (Act 2 plan, Mission board lines)
 
 - **[add]** How Arc 2 meets the opposition
-  Add to Arc 2 Shape: Seeker chapters are met one at a time, each on its own world. The crew scuffles with N'ghathrod's satellite crews, not with him. Zeniths visibly become more frequent across the crew's contracts.
+  Add to Arc 2 Shape: Seeker chapters are met one at a time, each on its own world. The crew scuffles with the crews of N'ghathrod's skiffs, sent out from Vth'oramu, not with him (STAGING round 11). Zeniths visibly become more frequent across the crew's contracts.
   src: timeline "Act 2: ranked missions"; memory-canon open-decisions (antagonist structure line)
 
 - **[add]** Linked worlds bleed
@@ -1851,37 +1827,26 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ### campaign/ascension/index.html
 
-- **[decide]** Heart entrance term: Aperture or Atrium
-  Memory canon uses "Aperture" (world-heart framework; "Zeniths are the cheap half and Apertures the rare half"). The sweep records a rename "Aperture" → "Atrium" (turn 278), and this page, Colony Operations, What If, the Vth'orama page and the Ulh'rek dossier say "Atrium"/"Atria". Options: Aperture, or Atrium.
+- **[fix]** Heart entrance term is Atrium *(answered)*
+  A heart's one hidden entrance is the Atrium (plural Atria). Every page already says Atrium/Atria, so nothing changes there; the pointer items under colony, what-if and vthorama are satisfied as written. New text uses Atrium too, including the hidden-entrance line on factions/runekeepers.html. Memory canon's "Aperture" is the older working name.
   Touches: campaign/ascension/index.html, campaign/colony/index.html, campaign/what-if.html, factions/vthorama.html, factions/runekeepers.html, dossiers/ulhrek.html, dossiers/khaleth.html.
   src: memory-canon open-decisions (world-heart framework; "Locked this pass"); chat-cosmic-campaign-structure § Superseded
+  answered: inbox/chat-cosmic-campaign-structure.md § Superseded ("'Aperture' as the heart's entrance → 'Atrium' (turn 278)"). The memory lines that say "Aperture" come from earlier in the same chat (the Seekers pass, turns 108–151), and Korey used the new word himself afterward ("using a reach residue as the key into an atrium makes sense").
 
-- **[decide]** Has N'ghathrod ever been given an order?
-  This page says "the single operational instruction he has ever given reached N'ghathrod secondhand: a world with a Monolith…". Colony Operations says "he has never been given an order". Memory canon says Vecna makes no handshake deals or direct orders. Options:
-  (a) Keep the secondhand instruction here and reword Colony Operations to "he has never been given an order he knew came from anyone but his elder brain".
-  (b) Drop the instruction here.
+- **[fix]** N'ghathrod's one secondhand instruction *(answered)*
+  Keep this page's line: the single operational instruction Vecna has ever given reached N'ghathrod secondhand, "a world with a Monolith is a marked world." It fits memory canon's rule (no handshake deals, no direct orders), because it arrived as the voice he takes for his elder brain. Colony Operations says "he has never been given an order"; change it to "he has never been given an order he knew came from anyone but his elder brain."
   Touches: campaign/ascension/index.html, campaign/colony/index.html.
   src: chat-cosmic-campaign-structure § Open; memory-canon open-decisions (working direction line)
+  answered: inbox/chat-cosmic-campaign-structure.md § Cosmology redesign (Settled: "Vecna's only instruction reached N'ghathrod secondhand: 'a world with a Monolith is a marked world'") and § Superseded ("'Marked' survives only as Vecna's word to N'ghathrod", turn 248)
 
-- **[decide]** How Vecna connects his working to the Core
-  The arc review's largest gap (Arcs 3 and 4). Fixed points: he is the First Seeker; he wants to know how it all began, and the Core holds the record of the Reach; he needs vessels because polarity pushed him off Oerth.
+- **[add]** How Vecna connects his working to the Core *(answered)*
+  The organizing-framework chat named this the largest gap; the later cosmology redesign in the cosmic-structure chat filled it. Confirm The Cast and The Figure state it, and add whatever is missing (DM voice):
+  - The First Heart lies closed beneath the Core, at the center. It is the one point from which the Axiom layer can be reached, and Vecna's target is the Convergence seat.
+  - Fifteen hearts, three per sphere across five spheres, are opened and linked. Every heart yearns toward the First Heart; the massed Yearning of the fifteen forces it open, and the opening is his arrival.
+  - He cannot make the crossing himself, because polarity pushes every god back from a heart. He arrives through vessels: the enna plus lesser taken, fifteen at minimum.
+  - Each Monolith licenses its world's heart to hold a link; the near-complete Rod is a beacon, so he has never assembled a fragment, and the whole Rod is his fallback.
   src: chat-organizing-framework § Open; memory-canon open-decisions ("Locked this pass"; Vecna/gods 2026-10-25)
-
-- **[decide]** Who coordinates the cross-sphere work
-  The chat gave Vecna lieutenants holding the pairings. Current canon gives N'ghathrod five lieutenants and leaves a hidden third party closer to Vecna. Options: lieutenants under Vecna; the hidden third party; nobody (the method runs itself).
-  src: chat-organizing-framework § Open; memory-canon open-decisions (antagonist structure line)
-
-- **[decide]** Vecna's grievance, the Cast's floor, the diminished arrival, the pantheons
-  Still open: Vecna's grievance (the page already carries it as open), the floor for the Cast, what a diminished arrival looks like, and how the pantheons respond.
-  src: chat-cosmic-campaign-structure § Open
-
-- **[decide]** The failure state
-  Which cosmic change the Remaking leaves: Axiom rewritten, Continuity severed, or paracausal channel captured. How it reaches the table: backstory pressure, a vision or flash-forward, or a playable alternate timeline (Eve of Ruin and Rise of Vecna as reskinnable references).
-  src: memory-canon open-decisions (Failure state line); chat-early-planning § D&D module where evil won § Open
-
-- **[decide]** Which congregation the crew meets first, and how sincere
-  Options for first meeting: the benevolent church that names Vecna openly; a Keeper congregation; a fringe returning-god cult. Also: is the benevolent church sincere throughout, or does one of its high clergy know more?
-  src: working/vecna.md § Open
+  answered: inbox/chat-cosmic-campaign-structure.md § Cosmology redesign (turns 244–305, Settled: First Heart, Yearning, fifteen hearts, forced open by massed Yearning, vessels and downward tithe, Convergence seat, Rod as fallback); session-rulings (polarity)
 
 - **[fix]** Worship powers Vecna; the method does his work
   "Why he needs hands" says "which is why he taught a method instead of founding a church, why his agents have never heard his name". Vecna is an open god with a following under many names. Rewrite: "Worship gives him power; the method does his work. Most of those who do that work know him by another name, and some, like N'ghathrod, do not know him at all."
@@ -1893,6 +1858,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 - **[fix]** The colony is a Seeker chapter
   Page says the two bodies have "never met" and "neither knows the other matters". N'ghathrod's colony is itself a Seeker chapter, the largest and the only travelling one, and it coordinates with planet-bound chapters. Restate: the colony is a chapter that works with other chapters without understanding the whole it serves.
+  updated (triage): chapters do not know about each other (STAGING § The Seekers). The colony is the Seekers of a New Home, believing it answers to an elder brain (STAGING § The Seekers and the colony). Drop "works with other chapters" and "coordinates with planet-bound chapters".
   src: memory-canon open-decisions ("Locked this pass"); factions/vthorama.html
 
 - **[fix]** The dragons have not reached Krynn
@@ -1919,30 +1885,23 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ### campaign/colony/index.html
 
-- **[decide]** Priming versus opening
-  Still open: whether only cross-weave worlds need a heart dungeon, what priming involves (what, where, how), and what it gains N'ghathrod. Options: split priming from opening as memory canon proposes, or confirm the sweep's retirement of priming.
-  src: memory-canon open-decisions (Fonains lore tie-in; audit line; operative-resolved open list)
+- **[fix]** The Sky Dock crates carry Vocath's mark
+  Ruled (STAGING round 8). This page lists "the Passage marks on the Sky Dock crates" as colony work. Change to: "The crates at the Sky Dock carry Vocath's mark, the eye in a wheel." factions/vocath-operation.html and dossiers/vocath.html already say so and stand.
+  src: Korey, 2026-10-25 (round 8); factions/vocath-operation.html
 
-- **[decide]** Which mark is on the Sky Dock crates
-  This page lists "the Passage marks on the Sky Dock crates" as colony work. The Vocath's Operation page puts the eye-in-a-wheel on "the Sky Dock crate". The Passage is N'ghathrod's mark; the eye-in-a-wheel is Vocath's. Options: the Passage, the eye-in-a-wheel, or both on different crates.
-  Touches: campaign/colony/index.html, factions/vocath-operation.html.
-  src: factions/vocath-operation.html; memory-canon open-decisions ("Locked this pass")
-
-- **[decide]** N'ghathrod's orders
-  Follows the ruling under campaign/ascension/index.html. This page says "he has never been given an order".
-
-- **[decide]** What the surface attack at graduation is made of
-  The page has "security diverted by the surface operation" while Joffrey runs the Brig, and names nothing in that operation. The early plan collapsed the module's two finale events into one: the attack hits during the ceremony, a battle across the school. It ported these module pieces: Mustaf Shultz and his giff mercenaries, a decapitation threat, Miken at 2 HP, Wizpop's return (now OSTEKK-6), and the transmutation sigil as Vocath's eye-in-a-wheel. Qitru and her githyanki have since moved to H'Catha. Pick which pieces stay, and write the surface operation into the Brig run section.
+- **[decide]** What the surface attack at graduation is made of *(prep)*
+  The page has "security diverted by the surface operation" while Joffrey runs the Brig, and names nothing in that operation. The early plan collapsed the module's two finale events into one: the attack hits during the ceremony, a battle across the school. It ported these module pieces: Mustaf Shultz and his giff mercenaries, a decapitation threat, Miken at 2 HP, Wizpop's return (now OSTEKK-6), and the transmutation sigil as Vocath's eye-in-a-wheel. Qitru and her githyanki have since moved to H'Catha. Vocath is a merchant, no fighter, and stays out of the siege himself (settled: chat-cosmic-campaign-structure § Act 1 retrofit), so whoever leads the surface operation is hired or his crew. Pick which pieces stay, and write the surface operation into the Brig run section.
   Touches: campaign/colony/index.html (the Brig run), campaign/spine.html (Arc 1 close), factions/vocath-operation.html, dossiers/miken.html.
   src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300); dossiers/qitru.html
 
-- **[fix]** A heart opens only where a Monolith stands
-  The world-status table makes an entrance-found world without a Monolith "enterable and unlinkable". Locked canon: a heart can only be opened where a Monolith stands, which is why N'ghathrod needs Zeniths and saturates worlds with Monoliths. Rewrite the table so a world without a Monolith cannot be opened at all, even with its entrance found.
-  src: memory-canon open-decisions ("Locked this pass")
-
+- **[fix]** World-status table: opening and linking
+  The table makes an entrance-found world without a Monolith "enterable and unlinkable". That matches the ruling (any heart can be opened; linking needs a Monolith on both worlds). Keep it, and align the wording with STAGING § Hearts, Atria and Monoliths.
+  src: Korey, 2026-10-25 (round 2)
 - **[fix]** Clint went overboard
   Page says "Clint seized the boarders' craft and broke away with it to pull the pursuit off the Crow". Canon: Clint Dashforest went overboard in the Bellwether Crow ambush, and the psychic wind carried him to Fonains. Rewrite the line.
   src: memory-canon open-decisions (operative resolved); campaign-canon § Naming (Astral Sea travel); timeline "The Bellwether Crow ambushed"
+  check (resolve pass): chat-organizing-framework § Superseded and chat-cosmic-campaign-structure § Tetherbreak (final canon) both record "went overboard → seized the boarders' craft". Confirm with Korey (same check as on factions/vocath-operation.html).
+  updated (round 4): superseded. Clint went through a color pool on purpose, drawing the boarders off; write it from STAGING § Clint Dashforest and the Bellwether Crow.
 
 - **[fix]** Heart entrance term
   Page says "Atrium"/"Atria" throughout How they work, World status, State A and The race. Apply the Aperture/Atrium ruling under campaign/ascension/index.html.
@@ -1975,10 +1934,9 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   Designations say "SPH for a crystal sphere". A sphere is a region of the Astral Sea holding several systems. Change to "SPH for a sphere".
   src: chat-organizing-framework § Cosmic structure; memory-canon campaign-canon § Cosmology (cosmic model)
 
-- **[fix]** Constellation designations are ordinal
-  The page and the sweep use bearings in degrees for CON designations (e.g. CON-312). Memory canon sets constellations as CON-01, CON-02 and so on, order-only like the other designations. Change the CON rule to ordinal numbers.
-  src: memory-canon campaign-canon § Cosmology (constellations line); chat-cosmic-campaign-structure § Superseded (bearings)
-
+- **[fix]** Constellation designations
+  Constellation designations are catalogue numbers that read as long established, tied to their system and near random, never low or sequential. The bearing scheme (CON-312) fits and stays; drop memory's ordinal CON-01, CON-02 rule. State the rule on this page.
+  src: Korey, 2026-10-25 (round 2)
 - **[fix]** Repoint every Remaking reference
   Page says strain rises "because of the Remaking", iconic items "are not part of The Remaking", custody "can reference Remaking", and "Remaking is one level deeper than it". Change each to the Ascension or Colony Operations as fits.
   src: chat-cosmic-campaign-structure § Superseded
@@ -2003,39 +1961,40 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ### campaign/voyages/index.html
 
-- **[decide]** OSTEKK-6's survivors
-  See the OSTEKK-2 decide under dossiers/ostekk-6.html; the V005 record here says Gregory jolted OSTEKK-2 awake and that its state after the fight is unresolved.
-
-- **[decide]** Tyrant ship weapons
-  Memory canon wires three of the ten eyestalks as cannons, with gunners in the Meditation Deck pods and seven dead conduits. The V006 record of play (Shake Ready interlude) reads "four of ten eyes answering at stations around the helm". Options: three cannons, or four stations. The record of play reads four.
+- **[add]** Tyrant ship weapons: four eyes at stations *(answered)*
+  Four stations, not three cannons. Add to vessels/tyrant-ship.html (in-world): "Vaelorix worked the great eyes with his own gaze. Pffred and Krik'Lit rigged a crew station for each eye around the helm on the Command Deck. Four of the ten answer; the rest need repairs." The voyages page already reads four and needs no change. Gunners in the Meditation Deck pods are retired. Which four eyes work, and what each does, is a separate open item (draft candidates: Fear, Telekinesis, Slowing).
   Touches: campaign/voyages/index.html, vessels/tyrant-ship.html.
   src: memory-canon campaign-canon § Naming (tyrant ship reconciliation); chat-voyage-6-7-planning § Superseded
+  answered: inbox/chat-voyage-6-7-planning.md § Voyage 7 / The Lantern and the ship (Settled: "Four of the ten respond… Korey recalled nine eyes; ten stands") and § Superseded ("Three eyestalks wired as cannons with gunners in Meditation pods → four of ten eyes answer at stations around the helm"), chat updated 2026-10-25
 
-- **[decide]** Sol's vignette and the mimic after V006
-  V006 is played and the behir parley has happened. Options: move Sol's vignette and the mimic to V007, or retire them.
+- **[fix]** Sol's vignette ran in V006; the mimic is retired *(answered)*
+  Nothing moves to V007. Sol's vignette ran in V006 as narration: three clockwork horrors attacked the Cargo Deck, Ryeback fired his hand cannon, Krik'Lit said "its mother is calling for them", and Miken went down the rope. The horrors replaced the mimic as the ambush, so the mimic is retired. Wherever the voyages page or V007 plan still lists Sol's vignette or the mimic as owed, remove it.
   src: chat-cosmic-campaign-structure § Open; memory-canon campaign-canon (Voyage 006 outcome)
+  answered: inbox/chat-voyage-6-7-planning.md § Voyage six / What happened in Voyage 6 (Settled: the vignette as run) and § Superseded ("Mimic as the vignette ambush → horrors")
 
-- **[decide]** Casey's V007 beat
+- **[decide]** Casey's V007 beat *(prep)*
   Options: a Vaelorix chart in Research showing the sky from inside Mirt's wardrobe beside a collecting site past the waystation; or something else. It must give Casey's cooling thread a small nudge back.
   src: chat-voyage-6-7-planning § Open; memory-canon open-decisions (Voyage 007 intent)
 
-- **[decide]** Sol's misfortune piece
+- **[decide]** Sol's misfortune piece *(prep)*
   Korey to set. The Sol chat asks for small daily misfortunes kept in play (chores landing on him, things falling), which the player wants; the piece can be one of those or ride on the wanted notice in Beats owed.
   src: chat-voyage-6-7-planning § Open; BCS § Sol/H'Catha transit
 
-- **[decide]** The watcher at the notice board
-  Someone at the lane marker saw Sol's wanted notice, then saw him walk in. How the watcher engages: mercenary, opportunist, informant or sympathiser. Also the notice's issuer: the chat draft signs it "Threadbare Consortium" as a placeholder. Keep that name, choose another, or leave the issuer unnamed.
+- **[decide]** The watcher at the notice board *(prep)*
+  Someone at the lane marker saw Sol's wanted notice, then saw him walk in. How the watcher engages: mercenary, opportunist, informant or sympathiser.
+  Settled since: the issuer. The Voyage 7 chat has the notice posted by the Fortuned of Aethris, reward paid on return to Aethris; "Threadbare Consortium" was a placeholder and is dropped. The Beats owed add below already reads that way.
+  answered (part): inbox/chat-voyage-6-7-planning.md § Voyage 7 / V007 player beats (Settled: "a wanted notice… posted by the Fortuned")
   src: BCS § Sol/H'Catha transit, § Sol/Open
 
-- **[decide]** A crew backstory table for the crossing
+- **[decide]** A crew backstory table for the crossing *(prep)*
   A per-day roll table of backstory beats across the whole crew was floated for the two-week crossing; Korey liked it as an option. Build it, or keep beats hand-placed.
   src: BCS § Sol/H'Catha transit, § Sol/Open
 
-- **[decide]** Treasury contents in Vaelorix's Quarters
+- **[decide]** Treasury contents in Vaelorix's Quarters *(prep)*
   The Quarters hold a treasury of coin (see add). Contents and amounts are open.
   src: chat-voyage-6-7-planning § Open
 
-- **[decide]** Did Miken cause the simulation blast?
+- **[decide]** Did Miken cause the simulation blast? *(prep)*
   Options: yes; or no, and the suspicion stays as misdirection from Joffrey.
   Touches: campaign/voyages/index.html, dossiers/miken.html.
   src: chat-voyage-6-7-planning § Open
@@ -2124,9 +2083,10 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ### campaign/plot-hooks.html
 
-- **[decide]** What the behir is wrapped around
-  The behir is wrapped around a freestanding object in the open space of the Hollow Deck, separate from the repair bay, giving off the soft light Casey saw. It is not a casket for the Lantern. It may be manifest entry 048, which is undefined. Options: define 048 now, or leave it as a planted hook with no answer yet. Add a hook row either way.
+- **[add]** What the behir was wrapped around *(answered)*
+  Manifest entry 048 is quietly dropped unless a player asks about it. Add no hook row. Add one DM-only line to the tyrant ship's Hollow Deck notes: "The soft light Casey saw under the behir came from a freestanding object in the open space of the Hollow Deck, apart from the repair bay. It is unexplained. If a player asks, it is manifest entry 048; define it then."
   src: memory-canon open-decisions (behir soft light line)
+  answered: inbox/chat-voyage-6-7-planning.md § Voyage 7 / The Lantern and the ship (Settled: "Manifest 048 is quietly dropped unless someone asks"); § Voyage six / The soft light and 048
 
 - **[fix]** The meteor's strike point
   Page says "Adamantine that struck the Spire on H'Catha" (twice). The meteor struck at the Pupil, the innermost band beside the Spindle, on a seam between two domains. (The player record's lowercase "spire" can stay generic.)
@@ -2200,7 +2160,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   When a planted Zenith fails, as Fonains's did, Vecna redraws the figure around the loss rather than abandoning it.
   src: inbox/chat-early-planning.md § Campaign Planning
 
-- **[decide]** A node log for player impact
+- **[later]** A node log for player impact
   An early plan kept a Remaking Node Log tracking how the players have changed Vecna's plan. Bring it back as a planning table on the Ascension page, or let the timeline carry it.
   src: inbox/chat-early-planning.md § Campaign Planning (turn 124)
 
@@ -2212,12 +2172,10 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/index.html
 
-- **[decide]** Which voyage carries the Krik'Lit swap
-  The index says "The window shuts at the V006 swap"; the Krik'Lit dossier says he leaves "At the V007 swap"; data/npcs.json has him relieved at the V006 rendezvous. Flighty Foundling relieves Krik'Lit and Pffred together. Pick one label and apply it on both pages.
+- **[fix]** The Krik'Lit swap is the V006 swap *(answered)*
+  The Krik'Lit dossier says he leaves "At the V007 swap" (dossiers/ostekk.html has the same "at the V007 swap"). Change both to "at the V006 swap". The index's "The window shuts at the V006 swap" already matches. Write: "Krik'Lit and Pffred were relieved at the V006 rendezvous, in the Make Ready interlude, when the Flighty Foundling came alongside the Tyrant Ship. They returned with the Foundling." This matches data/npcs.json. The behir's parley window shut when the Foundling arrived.
   src: dossiers/krik-lit.html; data/npcs.json (Krik'Lit)
-
-- **[decide]** OSTEKK-6's survivor card
-  Follows the OSTEKK-2 decide under dossiers/ostekk-6.html. The card says "One of two survivors of nine."
+  answered: inbox/chat-voyage-6-7-planning.md § Voyage 7 (Settled: The swap and NPCs; Make Ready interlude; Superseded "you're relieved"); inbox/chat-cosmic-campaign-structure.md § Superseded (window closes when the Foundling arrives)
 
 - **[fix]** The H'Catha cast
   The page names "Kurrzot, the Rival, the exile, and the Watcher at the rim fog", and "Still to build" lists "the exile". The enlightened exile is retired. The H'Catha cast is Kurrzot, Ostekk, Ondessa, the Rival and the Watcher at the rim fog. Replace "the exile" with Ondessa in both places and list Ostekk.
@@ -2243,21 +2201,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/astra-virex.html
 
-- **[decide]** The entity's final name
-  Options:
-  (a) "Astra Virex" (repo and memory canon).
-  (b) "Astra" alone (the Casey chat, "for now", because "Virex" sits too close to "Viren").
-  (c) "Virex" as the true name, with "Astra" as the Order's outside name (the dossier's current framing).
-  Then sweep crew/casey.html, dossiers/polly.html, dossiers/zerathis.html, factions/deities.html.
-  src: chat-crew-boogie-casey-sol § Casey/Astra; memory-canon open-decisions (audit line), campaign-canon § Casey Geim
-
-- **[decide]** What wounded it
-  Follows the decide under factions/deities.html. The dossier states "Wounded by a Seam — Transformation and Boundary overlapping" in the infobox and the body.
-
-- **[decide]** Its long game
-  Is Astra Virex's long game to connect to the Axioms so the wound can never recur? Whatever the ruling, it must stay consistent with Astra Virex knowing nothing of world-hearts.
-  src: chat-crew-boogie-casey-sol § Casey/Astra ("not nailed down")
-
 - **[add]** Where it is
   Add to the infobox: "Location: SPH-01, Caelestis's sphere."
   src: memory-canon campaign-canon § Cosmology
@@ -2273,10 +2216,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ---
 
 ### dossiers/beshaba.html
-
-- **[decide]** Beshaba's want
-  The page says "She has never named a want." The Sol chat explored several without settling. Its last reading, that she wants Sol to keep existing as her local anchor, was never confirmed. Korey wants to develop the Beshaba/Tymora interplay (see the Tymora decide under factions/deities.html). Keep "no named want", or set one.
-  src: BCS § Sol/Open
 
 - **[add]** Where she is strongest
   Add to The twin reading: "Tymora and Beshaba are strongest on Aethris, where their worship is most concentrated."
@@ -2298,35 +2237,39 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/clint.html
 
-- **[decide]** What information Clint is buying
-  src: chat-cosmic-campaign-structure § Open
+- **[later]** What information Clint is buying
+  The one-shot gives only Clint's own answer: he wants "money… for some information that you need to get." Nothing names the information. Set it, or leave it as Fonains business (Clint's present stays on Fonains).
+  src: chat-cosmic-campaign-structure § Open; scratchpad fonains_notes/12.md § Oneshot 03 (NPCs)
 
-- **[decide]** Mary Chispitez and Chloe Chespetes
-  Is Mary Chispitez, the fire-elemental woman fused to the Pedra Ardante, the same person as Chloe Chespetes, trapped in the lava-flooded lab in the genasi war over Imix? Options: the same person under one spelling, or two people. (inference)
+- **[fix]** The elemental woman is Chloe Chespetes *(answered)*
+  The page says "The elemental was a woman, Mary Chispitez, fused to an ancient crystal called the Pedra Ardente". Write: "The elemental was a woman, Chloe Chespetes, with the Pedra Ardente fused into her hand. Centuries earlier a sect of her own clan tried to use the gem to open a portal and release Imix. Her clan and the Cre'Tez fought them, and Chloe flooded the laboratory with lava to stop them. She was infused with the Plane of Fire and trapped in the elemental until Clint's crew freed her." She is the same Chloe Chespetes the timeline traps in the lab during the fire genasi war over Imix.
   src: dossiers/clint.html; timeline "The fire genasi war over Imix"
+  answered: scratchpad fonains_txt/Oneshot_03_Search_for_the_Blooming_Glass.txt ("My name is Chloe. Chloe Chespetes."); scratchpad fonains_notes/12.md § Oneshot 03; session-rulings (transcripts are canon)
 
-- **[decide]** The Blooming Glass and the Blooming Grove
-  The page and the timeline call the job "the Blooming Glass" (the timeline treats it as the place the archaeologists were rescued from). Memory canon names the one-shot "Search for the Blooming Grove". Options: the one-shot is Search for the Blooming Grove and the Blooming Glass is a place within it; or one name is a transcription slip and the other is used everywhere.
+- **[add]** The Blooming Glass *(answered)*
+  The one-shot is "Search for the Blooming Glass", and the Blooming Glass is the place. "Blooming Grove" in memory canon is a slip. Add to the Blooming Glass row: "The Blooming Glass stands in the Wandering Sands at the end of the Shattered Path: a petal-layered construct of Rubicon, a gem close to diamond, throwing prismatic light. A research facility lies buried beneath it, built to study the Pedra Ardente." The page and the timeline already use "Blooming Glass"; keep it everywhere.
   src: timeline "Pedra Ardante reaches Vanifer"; memory-canon open-decisions (Fonains canon 2026-10-25); scratchpad fonains_notes
+  answered: scratchpad fonains_txt/Oneshot_03_Search_for_the_Blooming_Glass.txt (opening line: "it's called Search for the Blooming Glass"); scratchpad fonains_notes/12.md § Oneshot 03 (Items and places); session-rulings (transcripts are canon)
 
 - **[fix]** Clint went overboard
   The page says "When the first boarding came, he seized the boarders' own craft and broke away with it", the table says "Took the boarders' craft…", and the infobox says "Crossing open". Write: "Clint Dashforest went overboard in the Bellwether Crow ambush near Cairn Station. A psychic wind carried him across the Astral Sea to Fonains." Remove "Crossing open".
   src: memory-canon open-decisions (operative resolved), campaign-canon § Naming (Astral Sea travel); timeline "The Bellwether Crow ambushed"
+  updated (round 4): superseded. Clint went through a color pool on purpose, drawing the boarders off; write it from STAGING § Clint Dashforest and the Bellwether Crow.
 
 - **[fix]** Vocath's people chased him
   The page says "A crew went looking for him", "a rescue crew went out", and "What his rescue attempt dragged home". Write: "Vocath's people chased Clint because he had something they wanted. They never found him. They came back from Fonains with fragments of the broken Monolith, moved through Vocath's Cairn Station line, and one of those fragments ended up inside Boogie."
   src: memory-canon open-decisions (Act 1 retrofit); timeline "Boogie takes the shard"
 
 - **[fix]** Who placed the bounty
-  The page says "placed by a broker named Fenerba for the Cortez family". Write: "posted by Fernerva — Vanifer under another name — for the Cre'Tez, 'for the eldest brother'."
+  The page says "placed by a broker named Fenerba for the Cortez family". Write: "posted by Finerva — Vanifer under another name — for the Cre'Tez, 'for the eldest brother'." (Spelling ruled in round 8; see the Fonains doc fix.)
   src: timeline "Pedra Ardante reaches Vanifer"; session-rulings (Cre'Tez spelling); scratchpad fonains_notes/12.md
 
-- **[fix]** Pedra Ardante
-  The page spells it "Pedra Ardente". Change to Pedra Ardante.
-  src: timeline "Pedra Ardante reaches Vanifer"
+- **[fix]** Pedra Ardente
+  Ruled (STAGING round 8): the spelling is Pedra Ardente, a gem. The page is right. The timeline's "Pedra Ardante" (event "Pedra Ardante reaches Vanifer") changes to Pedra Ardente.
+  src: Korey, 2026-10-25 (round 8); timeline "Pedra Ardante reaches Vanifer"
 
-- **[add]** Where the ruby went
-  Add to the Blooming Glass row: "Clint's crew rescued the archaeologists and handed the Pedra Ardante, the fire-plane ruby, to Fernerva. The job fed the Cre'Tez line's fire-key plot without anyone aboard knowing it."
+- **[add]** Where the gem went
+  Add to the Blooming Glass row: "Clint's crew rescued the archaeologists and handed the Pedra Ardente, the fire-plane gem, to Finerva. The job fed the Cre'Tez line's fire-key plot without anyone aboard knowing it."
   src: timeline "Pedra Ardante reaches Vanifer", "Tinderstrike under guard"
 
 - **[add]** When he landed
@@ -2337,19 +2280,24 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/crc.html
 
-- **[decide]** Where the first encounter happens, and the stored spell
-  The chat and memory canon stage it at the Caelestis main entrance when the crew returns from H'Catha (see the main-entrance add under crew/sol.html and the Timeline fix "Sol's first C.R.C. encounter"). This page's Open leans toward the Sky Dock on arrival. Options: main entrance, or Sky Dock. Also pick the stored spell: Locate Creature (the page) or Hold Person.
+- **[decide]** The stored spell *(prep)*
+  Settled: the first encounter is at the Caelestis main entrance when the crew returns from H'Catha. The crew hears murmurs first, then "Sol Fortuna. You are required." It is an objective-based escape. Rewrite this page's Open, which leans toward the Sky Dock, to the main entrance (see the main-entrance add under crew/sol.html and the Timeline fix "Sol's first C.R.C. encounter").
+  Left: the stored spell. Options: Locate Creature (the page) or Hold Person.
   Touches: this page, crew/sol.html, timeline.json.
   src: BCS § Sol/Open, § Sol/C.R.C. and the scry beats; dossiers/crc.html
+  answered (location): BCS § Sol/C.R.C. and the scry beats (Settled); memory-canon campaign-canon § Antagonists (first CRC encounter on Caelestis); chat-early-planning § Arc 1 close (C.R.C. waits at Caelestis on return)
 
-- **[decide]** Who on Aethris commissioned it
+- **[later]** Who on Aethris commissioned it
   The page says the Fortuned commissioned it. Which of them, and why they care, is open.
+  Settled since (why they care): "The Fortuned want Sol back alive because he is a component of their unfinished ritual. They do not care about him as a person." Still open: which of the Fortuned commissioned it.
+  answered (part): STAGING § Aethris
   src: BCS § Sol/Open
 
-- **[decide]** Beshaba's warning before it arrives
+- **[decide]** Beshaba's warning before it arrives *(prep)*
   The early plan paid off Sol's acknowledgment vignette with a Beshaba line before the C.R.C. first appears: "your face cut in glass you did not make." It fits the construct's crystal body and her short register. Use it, reword it, or drop it. If used, it lands in the session before the first encounter.
+  Provenance: the line appears in Claude's master source doc (§14.5, tone calibrations) beside "Stand." "Again." "Continue."; no Korey statement adopting it was found. Since then Korey's own acknowledgment text has Beshaba talk capriciously, past three words, so the line would need to fit that register too.
   Touches: dossiers/crc.html, dossiers/beshaba.html (register examples), crew/sol.html.
-  src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300)
+  src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300); original chat 0852f52d (§14.5); BCS § Sol/Acknowledgment scene
 
 - **[add]** Its look
   Add to Who they are: "A faceted crystalline humanoid. Constellation points glow across its chest, its mask is polished and featureless, and its eyes burn white. Over time the mask resolves toward Sol's face." The face line is already on the page; the rest is not.
@@ -2367,22 +2315,25 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/ezra.html
 
-- **[decide]** Ezra's own hook
+- **[decide]** Ezra's own hook *(prep)*
   Ezra must arrive with a hook others can latch onto. Options:
   (a) The eye-in-a-wheel sketch (ties to crossing table entries 4 and 8).
   (b) The sealed letter: "Watch one thing until it changes."
   src: chat-voyage-6-7-planning § Open; memory-canon open-decisions (Voyage 007 intent)
 
-- **[decide]** The crew's last stint with Ezra
-  Memory canon makes the H'Catha → Hall transport "the last troop he travels with before his journey begins". The page and chat-cosmic-campaign-structure turn 378 also have an optional later Emporia ferry. Options: keep both in order, or cut the Emporia ferry.
+- **[fix]** The Hall transport is the crew's last stint with Ezra *(answered)*
+  The page's order of operations ends "assigned to Emporia → optional ferry". Drop the optional Emporia ferry. Write: "The Watcher Transport, from H'Catha to the Hall of the Watchers, is the last time a Caelestis crew travels with Ezra. His training is finished, and it is his last leg before his journey begins. The Hall is where he departs from." Emporia stays as his posting, which he reaches without the crew.
   src: memory-canon campaign-canon § Key NPCs; dossiers/ezra.html; chat-cosmic-campaign-structure § Graduation board contracts
+  answered: memory-canon campaign-canon § Key NPCs ("the last troop he travels with before his journey begins"); original chat f2f5d29e, Korey: "Them being the last sort of troop that interacts with Ezra before he starts his journey"; the graduation board row ("This is his last leg before his journey starts")
 
-- **[decide]** Emporia and Tharizdun
+- **[later]** Emporia and Tharizdun
   Does Emporia read as a Zenith with Tharizdun behind it? Options: yes (a Tharizdun-touched Zenith); no (local trouble only); leave it to the other table.
   src: chat-cosmic-campaign-structure § Open
 
-- **[decide]** The Hall's name
-  Follows the decide under factions/order.html. The page says "the Hall of Sight and Sound".
+- **[fix]** The Hall's name *(answered)*
+  The page says "the Hall of Sight and Sound", and it stands: "The Hall of Sight and Sound is the great hall within the Order's seat." Where the page uses the name for the Order's seat as a whole, rewrite so the Hall is the great hall inside it.
+  answered: STAGING § The Order
+  Originally followed a decide under factions/order.html.
 
 - **[fix]** Watchers are posted to regions of worlds
   The page says "Postings are to planes rather than to worlds — the elemental planes, overlapping…". Write: "Watchers are posted to a region of a world. A large world may hold several."
@@ -2408,7 +2359,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/ilsabet-crann.html
 
-- **[decide]** What her Ledger shows
+- **[later]** What her Ledger shows
   The Restorers have walked into Zeniths deliberately for four centuries, which sits awkwardly with the page's claim that her Ledger holds the Zenith pattern unrecognised. Options: the Restorers know Zeniths as crossings but miss the rising frequency; or the pattern stays fully unread.
   src: timeline "The Restorers walk into Zeniths"; dossiers/ilsabet-crann.html § What's hidden
 
@@ -2440,10 +2391,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/khaleth.html, ithvarn.html, osskhal.html, ulhrek.html, zhauveth.html
 
-- **[decide]** The enna's century
-  Follows the five-centuries decide under dossiers/nghathrod.html. The enna pages say "a century": Osskhal argues for a century; Khaleth and Ulh'rek have been a century wrong about the Atria; Ulh'rek "Keeps … a century of Atria research" and the colony's hunt "has been wrong for a hundred years". Rewrite each once the ruling lands.
-  src: timeline "Exile from Glyth" (about 60 years ago), "Vecna answers" (about 500 years ago)
-
 - **[fix]** Heart entrance term
   Ulh'rek and Khaleth say "Atria". Apply the ruling under campaign/ascension/index.html.
 
@@ -2463,7 +2410,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/mirt.html
 
-- **[decide]** The player record overstates Mirt
+- **[decide]** The player record overstates Mirt *(prep)*
   data/npcs.json calls Mirt "the head of Caelestis" and "Leading Caelestis", which contradicts the Academy-only ruling. Flag for the player record; prime gives nothing to data/. Korey to correct the record by hand or leave it as the crew's belief.
   src: memory-canon campaign-canon § Naming (Mirt line); data/npcs.json (Mirt)
 
@@ -2491,20 +2438,10 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/nghathrod.html
 
-- **[decide]** His five centuries: the gap and the enna
-  N'ghathrod was captured about 506 years ago and escaped when the craft fell about 500 years ago. The exile from Glyth is about 60 years ago, and the Vth'oramu page has the dreadnought taken "a little over fifty years ago". Nothing accounts for the centuries between. The five enna pages, the Vth'orama page and Ulh'rek's hunt all say "a century". Options for the gap:
-  (a) He stayed on Glyth for centuries before the exile.
-  (b) The exile moves earlier.
-  Options for when the enna received their Holds:
-  (a) At the escape, about 500 years ago (the chat: they offered themselves in thanks for being saved).
-  (b) At the exile, about 60 years ago.
-  (c) When he fused with the ship.
-  Also set from this: how long the colony has hunted heart entrances (about 60 years since the exile, or about 500 since the voice).
-  Touches: dossiers/nghathrod.html, factions/vthorama.html, dossiers/vthoramu.html, dossiers/khaleth.html, ithvarn.html, osskhal.html, ulhrek.html, zhauveth.html, timeline.json.
-  src: timeline "The craft falls", "Exile from Glyth"; chat-cosmic-campaign-structure § N'ghathrod and the colony
+- **[later]** N'ghathrod's mouse
+  He saved a mouse during the escape and it travels with him. Its quirk and what it means to him are open.
+  src: Korey, 2026-10-25 (round 2)
 
-- **[decide]** What his death does to the taken
-  Follows the decide under factions/vthorama.html.
 
 - **[fix]** His age
   The infobox says "Age ~1 century into his second life" and the body says "A mind flayer roughly a century into his second life". Write: "A mind flayer more than five centuries into his second life, and a spacefaring elf before that." Infobox: "Age: more than five centuries since the experiment."
@@ -2516,6 +2453,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 - **[add]** What the experiment did
   Add to What the experiment actually did: "The Rod's seventh piece made his ceremorphosis paracausal. It also stopped his aging."
+  updated (triage): "stopped his aging" is superseded. The seventh piece is simulacrum, the root of the taking; his long life comes from the tithe of his taken (STAGING § N'ghathrod's long life).
   src: memory-canon open-decisions (Locked 2026-10-25); timeline "Captured aboard Thessalar's craft"
 
 - **[add]** Bound to the ship
@@ -2524,6 +2462,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 - **[add]** The largest chapter
   Add to Who they are: "N'ghathrod's colony is the largest Seeker chapter and the only one that travels. It coordinates with planet-bound chapters. A heart can only be opened where a Monolith stands, so he saturates worlds with Monoliths and waits."
+  updated (triage): conflicts with STAGING. Opening needs no Monolith; linking needs one on both worlds (§ Hearts, Atria and Monoliths). Chapters do not know about each other (§ The Seekers). The colony is the Seekers of a New Home (§ The Seekers and the colony). Rewrite before applying.
   src: memory-canon open-decisions ("Locked this pass")
 
 - **[add]** His mark
@@ -2538,7 +2477,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/ostekk.html
 
-- **[decide]** Why Vaelorix stole from Ostekk
+- **[decide]** Why Vaelorix stole from Ostekk *(prep)*
   The theft of the Lantern and the nine OSTEKK units is canon. Was it to escape a debt to Ostekk? The debt is an unreviewed draft, along with a Fallmouth porter mentioning "Ostekk's machines" and OSTEKK-6 freezing at the words.
   src: chat-astral-sea-worldbuilding § Open; memory-canon campaign-canon § Naming (OSTEKK units)
 
@@ -2559,28 +2498,16 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/ostekk-6.html
 
-- **[decide]** Sole survivor, or one of two
-  Memory canon: OSTEKK-6 is the sole survivor of Vaelorix's crew. The play record: in V005 Gregory jolted OSTEKK-2 awake for eighteen seconds, long enough for it to name itself; OSTEKK-2 still lies on the Hollow Deck and its state after the fight is unresolved. This page's infobox says "One of two survivors of nine" while the body says "The lone survivor of nine OSTEKK units". Options:
-  (a) OSTEKK-2 is inert or dead now, so OSTEKK-6 is the sole survivor.
-  (b) Two survivors.
-  Touches: dossiers/ostekk-6.html, dossiers/index.html (card), factions/academy-fleet.html (crew table), campaign/voyages/index.html, vessels/tyrant-ship.html.
-  src: memory-canon campaign-canon § Key NPCs (OSTEKK-6); chat-automation § Voyage 005 canon, § Open; chat-voyage-6-7-planning; campaign/voyages/index.html (V005)
-
----
-
 ### dossiers/polly.html
 
-- **[decide]** What became of Polly
-  The page leaves "alive, consumed, or something between" open. Korey to set when a scene needs it.
-  src: chat-cosmic-campaign-structure § Open; memory-canon open-decisions (open list)
+- **[fix]** What became of the real Polly
+  Ruled (STAGING round 8). The DM line "What actually became of him — alive, consumed, or something between. Worth leaving open until a scene needs the answer." becomes:
+  "What became of the real Polly is one of two things: he was consumed, or he is caught between life and death. The voice Casey hears as Polly is Astra Virex wearing his shape, and it grows clearer with each tether."
+  src: Korey, 2026-10-25 (round 8); dossiers/polly.html
 
 ---
 
 ### dossiers/qitru.html
-
-- **[decide]** When Qitru learns Vocath is not at the top
-  What she does next.
-  src: chat-cosmic-campaign-structure § Open
 
 - **[fix]** What she wants
   The infobox says "Wants Miken" and What they want says "She wants Miken because he is leverage…". Write: "Qitru pursues Vocath's aim: to embarrass Mirt by making the cadet mission fail. Miken is her channel." Infobox: "Wants: the cadet mission to fail."
@@ -2598,7 +2525,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/rindle-gearloft.html
 
-- **[decide]** Dock master or dock worker
+- **[decide]** Dock master or dock worker *(prep)*
   The player record calls Rindle a dock master who runs a dock near the Sea Dock; the dossier's role line says "Sea Dock worker". Align the dossier to the record, or confirm the difference is deliberate (what the crew believes vs what he is).
   src: data/npcs.json (Rindle Gearloft); dossiers/rindle-gearloft.html
 
@@ -2626,7 +2553,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/sor-kur.html
 
-- **[decide]** Spelling
+- **[decide]** Spelling *(prep)*
   Follows the Sor'Kur / Sor'Kor decide under factions/academy-fleet.html.
 
 ---
@@ -2639,16 +2566,18 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   src: memory-canon campaign-canon § Naming (Astral Sea travel); chat-cosmic-campaign-structure § Tetherbreak, § Superseded
 
 ---
+  updated (round 4): superseded. The timing tables are cut; Tarroway stays as a thread (see "Trim Tarroway to a thread").
 
 ### dossiers/the-runekeeper.html
 
-- **[decide]** The Runekeeper's name
+- **[later]** The Runekeeper's name
   The page has "Name open". Name him.
   src: chat-cosmic-campaign-structure § Open; chat-crew-tumak-gregory-bartholomew § Tumak/Open
 
-- **[decide]** How the Heart cycle resolves
-  Does Tumak make his own Heart-rune? Does he meet the previous Runekeeper? Korey's lean (turn 257): the Heart may be the current Runekeeper's personal rune, and Tumak may make his own Heart-rune when he returns home. The Heart stays hidden from the table until Korey reveals it.
-  src: chat-crew-tumak-gregory-bartholomew § Tumak/Open
+- **[add]** Tumak's Heart-rune and the previous Runekeeper
+  Ruled (STAGING round 8). Add to DM notes here and on crew/tumak.html, hidden from the table until revealed:
+  "Tumak has his own Heart-rune. He knows of the previous Runekeeper and met him once, briefly. He does not understand what that meeting was."
+  src: Korey, 2026-10-25 (round 8); chat-crew-tumak-gregory-bartholomew § Tumak/Open
 
 - **[fix]** The fragment is dividing
   The infobox says "Carries: The whole Dissolution fragment, for now". The fragment is now forming in both twins as well, so its fixed mass divides three ways between the Runekeeper, Wan and Tu; nobody reaches peak, and the cycle stalls mid-motion. Write: "Carries: the share of the Dissolution fragment still leaving him."
@@ -2673,14 +2602,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ---
 
 ### dossiers/thessalar.html
-
-- **[decide]** His copies and his records
-  Which Thessalar copies are loose, and where his records of the N'ghathrod work are.
-  src: chat-cosmic-campaign-structure § Open
-
-- **[decide]** What Tharizdun wanted from him
-  Thessalar is tied to Tharizdun through the Elder Elemental Eye (see add). Did Tharizdun take an interest in the experiment, the Rod piece, or the man? Note that the Eye watched the year-425 visit. The page's own Open asks the same.
-  src: dossiers/thessalar.html § Open; working/tharizdun.md § Vecna and Tharizdun; memory-canon open-decisions (Fonains lore tie-in)
 
 - **[fix]** The Elder Elemental Eye
   The page says "the Elder Eye" twice. Change to "the Elder Elemental Eye".
@@ -2735,7 +2656,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/veena-derek.html
 
-- **[decide]** Their reading
+- **[decide]** Their reading *(prep)*
   What Veena and Derek's reading is.
   src: chat-cosmic-campaign-structure § Open
 
@@ -2759,25 +2680,13 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/vthoramu.html
 
-- **[decide]** Where Vth'oramu is
-  The infobox says "Last placed: On Cairn's bearing, closing slowly". Tarroway and Verrow say it "left the sector a year ago". The chat has it harboured outside Realmspace while its crews work inside it. The Tarroway fix (psychic wind) removes one reason for "left the sector". Pick one placement across all three pages.
-  Touches: dossiers/vthoramu.html, dossiers/tarroway.html, dossiers/verrow.html.
-  src: dossiers/vthoramu.html; dossiers/tarroway.html; dossiers/verrow.html; chat-cosmic-campaign-structure § The dreadnought
-
-- **[decide]** Its wound and its tether
-  What wounded the dreadnought before the siege, what lies at the end of its tether, and whether it can be freed. The astral cord is held in reserve.
-  src: chat-cosmic-campaign-structure § Open
-
-- **[decide]** Its main weapon
-  An antimagic cone is rejected. An eversion (the interior pushed out) was proposed and never confirmed. Options: eversion, or something else.
-  src: chat-cosmic-campaign-structure § Open, § Superseded
-
 - **[fix]** The name
   The infobox says "Name: The whole of the going-home", and the body says the name "restates the promise". The name is locked: Vth'oramu, shortened to Oramu, means "the passage to a new home". Change the infobox. The body's line "The passage to a home they were promised and have yet to be given" already fits.
   src: memory-canon open-decisions (dreadnought name locked); chat-cosmic-campaign-structure turn 413
 
 - **[fix]** When it was taken
   The infobox says "Taken: A little over fifty years ago, after a long siege". The timeline puts the exile from Glyth, when the dreadnought became Vth'oramu, about 60 years ago. Align to about sixty years (or follow the five-centuries decide under dossiers/nghathrod.html if the exile moves).
+  updated (triage): the exile moved. The exile from Glyth was roughly four to four and a half centuries ago, and taking the dreadnought took decades, perhaps a century, after that (STAGING § N'ghathrod's history). The "about sixty years" alignment no longer holds; date the taking from STAGING.
   src: timeline "Exile from Glyth"
 
 - **[add]** The hull
@@ -2796,11 +2705,12 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/winston-ryeback.html
 
-- **[decide]** Is his death planned at all?
-  The Fire in the Galley beat is cut. Is Ryeback's death planned elsewhere, or not at all?
+- **[add]** Ryeback lives *(answered)*
+  DM notes: "Ryeback lives. His death belonged to Fire in the Galley, which is cut; Miken's sabotage became a beacon planted for Qitru, and Ryeback came through unhurt. No other death is planned for him." Take any open line about his death off the page.
   src: chat-organizing-framework § Open; memory-canon campaign-canon (Fire in the Galley not happening)
+  answered: inbox/chat-cosmic-campaign-structure.md § Superseded ("Ryeback's death as open → he lives"; "Fire in the Galley sabotage → Miken plants a beacon; Ryeback unhurt"), § V006 and the arc (Settled)
 
-- **[decide]** His stat block lines
+- **[decide]** His stat block lines *(prep)*
   The note says he has no Musket line "because the musket was stolen"; with the pistol stolen instead, the giff block's lines need re-deriving. Options: keep Musket and rename Pistol to hand cannon; or drop the block note.
   src: memory-canon campaign-canon § Key NPCs (Ryeback); dossiers/winston-ryeback.html
 
@@ -2848,14 +2758,17 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 ### crew/index.html
 
-- **[decide]** Where each PC's homeworld sits
-  Known so far: Gregory is from Toril (working decision, see crew/gregory.html). Tumak's world is the Wayfinders' homeworld (Lunarfoot), hidden by the Dissolution cycle. Sol's homeworld is mid-Zenith. Casey's is the world the 1486 "deliberate" meteor fell on; its system is withheld until surveyed. Bartholomew's comes from a celestial druid tradition and the FIA has no hint of it yet. Boogie's is unplaced.
-  Options per PC: place it now, or leave it unplaced until play needs it. Touches crew/index.html, each crew page, realms/index.html.
+- **[later]** Where each PC's homeworld sits
+  Placed already: Gregory, W-01 Toril in SYS-01 Realmspace (working decision, see crew/gregory.html). Sol, W-08 Aethris in SYS-03, mid-Zenith. Tumak, the Wayfinders' unnamed homeworld (W-11) in hidden SYS-06 inside SPH-01, concealed by the Dissolution cycle; Lunarfoot is the clan, never the world. Write these three onto crew/index.html.
+  Left: Casey's is the world the 1486 "deliberate" meteor fell on; its system is withheld until surveyed. Bartholomew's comes from a celestial druid tradition and the FIA has no hint of it yet. Boogie's is unplaced.
+  Options for each of the three: place it now, or leave it unplaced until play needs it. Touches crew/index.html, each crew page, realms/index.html.
   src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Gregory)
+  answered (Gregory, Sol, Tumak): inbox/chat-organizing-framework.md § Designations (SYS-03 Aethris's system, SYS-06 hidden, W-01 Toril, W-08 Aethris, W-11); memory-canon campaign-canon § Cosmology (Lunarfoot line), § Gregory; inbox/chat-cosmic-campaign-structure.md § Rules and crew (Lunarfoot is the clan)
 
-- **[decide]** How cadets from worlds without spelljamming reach Caelestis
-  The one known path is Sol's: the Watcher order broke protocol to recommend he be taken to Caelestis. Options: Watcher referral as the general route; several routes (Watcher referral, Fleet recruiters, walk-ins at stations); or a per-cadet answer with no general rule. Touches crew/index.html, crew/sol.html, and a new Cadet intake page (see the New pages section).
-  src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Watcher recruitment for Sol); BCS § Sol/C.R.C. and the scry beats
+- **[later]** How cadets from worlds without spelljamming reach Caelestis
+  The one route Korey has stated is Sol's: the Watcher order broke protocol to recommend he be taken to Caelestis. The FIA already hints at a route for each PC, with no dedicated intake file (Korey chose scattered hints over one file): WM-006 field referral and protective placement (Sol); SA-002 1486 meteor account by a minor referred to intake (Casey); FR-016 inspecting party reassigned to cadet intake (Boogie); SA-002 1491 two arrivals from an uncatalogued system (Wan and Tu). Gregory arrived on a cargo ship. Bartholomew has no hint.
+  Left: whether there is a general rule. Options: Watcher referral as the general route; several routes (Watcher referral, Fleet recruiters, walk-ins at stations); or a per-cadet answer with no general rule, as the FIA hints already read. Touches crew/index.html, crew/sol.html, and a new Cadet intake page (see the New pages section).
+  src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Watcher recruitment for Sol); BCS § Sol/C.R.C. and the scry beats; framework § FIA records (intake hints), § Superseded (no PF-004 intake file); memory-canon campaign-canon § Gregory (cargo ship)
 
 - **[add]** Each PC's tie to the sky
   Each crew member relates to the stars differently. Casey connects stars into his own constellation for Astra Virex. Bartholomew fills in a constellation the Circle of Stars already knows. Tumak builds a planetary network of marks to find his way home. Gregory senses paracausal signals. Sol has no star thread. Boogie carries a Tharizdun-tied shard. Add as a crew overview line.
@@ -2863,22 +2776,23 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 ### crew/sol.html
 
-- **[decide]** Beshaba's reward from the oath
-  The acknowledgment scene is the level-3 oath and the level-up itself, run with Sol alone before V003's Convening; confirm it ran as planned. The reward Beshaba gives comes from the intervention tally. It should be support-flavoured and unique to Sol, and the chat left it to be found in play. Options: set it now, or let it surface in play.
-  src: BCS § Sol/Acknowledgment scene, § Sol/Open
+- **[add]** Beshaba's reward is power
+  Ruled (STAGING round 8). Add to this page and dossiers/beshaba.html (DM voice): "Beshaba's reward for the oath is power. To give it shape she has to want something and lay that want on Sol as a quest."
+  The acknowledgment scene ran as planned: the level-3 oath landed before V003's Convening (campaign/voyages/index.html, V003 Actual: "All four level-3 vignettes landed, for Tumak, Sol, Boogie and Gregory").
+  src: Korey, 2026-10-25 (round 8); BCS § Sol/Acknowledgment scene
 
-- **[decide]** Whether Sol ever learns how much of his escape Beshaba arranged
-  Options: he learns it (and when), or he never does.
-  src: BCS § Sol/Open
+- **[add]** Beshaba did not arrange Sol's escape
+  Ruled (STAGING round 8). Add to DM notes here and on dossiers/beshaba.html: "Beshaba did not arrange Sol's escape from Aethris."
+  src: Korey, 2026-10-25 (round 8); BCS § Sol/Open
 
-- **[decide]** Misfortuned rebalance (on hold)
-  Korey paused this at turn 899 ("hold that and I'll come back to it"). His diagnosis: Sol can change several rolls a combat and Unburden without feeling the cost. The pending draft:
+- **[later]** Misfortuned rebalance (on hold)
+  Korey does not recall this thread; it waits until he returns to it. Until then the locked turn-757 text (the add below) stands. For reference, he paused it at turn 899 ("hold that and I'll come back to it"). His diagnosis then: Sol can change several rolls a combat and Unburden without feeling the cost. The pending draft:
   - Burden charges equal his proficiency bonus and come back on a long rest only.
   - Burden adds his Charisma modifier to an ally's roll, after the roll and before the outcome. It no longer turns a failure into a success (Korey compared auto-success to Legendary Resistance).
   - Misfortune level equals Burden charges spent. Each level is a flat −1 to all of Sol's d20 Tests, replacing the d6 ability penalty.
   - Unburden, once per long rest at Misfortune 2 or more, adds proficiency bonus × Misfortune to Sol's own d20 Test or damage roll.
-  Exhaustion as the cost was tried and dropped. Sol cannot Burden himself. Options: adopt the draft, adjust it, or keep the locked turn-757 text (the add below).
-  src: BCS § Sol/Open, § Sol/Misfortuned
+  Exhaustion as the cost was tried and dropped. Sol cannot Burden himself.
+  src: BCS § Sol/Open, § Sol/Misfortuned; Korey, 2026-10-25 (backlog pass)
 
 - **[fix]** The C.R.C. is CR 7
   Page says "CR 8, on an advanced detention drone chassis"; change to "CR 7, on an advanced detention drone chassis". Add Legendary Resistance (2/Day) and the Withdrawal Threshold to the trait list. This matches dossiers/crc.html, statblocks/index.html and the canon block (Medium, CR 7, AC 17, 136 HP, Withdrawal Threshold at 68 HP). The chat's stat block (Large, CR 8, AC 18, 152 HP) is the earlier draft; the dossier is the later version.
@@ -2921,7 +2835,7 @@ Items whose source sweep is still partial keep their `(sampled)` or
   - **Burden** (reaction): when a friendly creature within 60 ft. fails a roll, after the die is shown and before the outcome is declared, the roll becomes a success and Sol gains 1 Misfortune.
   - **Unburden** (reaction): at cap, Sol applies plus or minus his total Misfortune to any creature's roll within 60 ft., and all Misfortune clears. A natural 20 stays a critical hit.
   - Burden and Unburden share his reaction, so only one happens per round.
-  At levels 1–2, before the oath, it ran without a cap or Unburden: penalties persisted until level-up, and the player did not know when they would clear. A rebalance is on hold (decide above).
+  At levels 1–2, before the oath, it ran without a cap or Unburden: penalties persisted until level-up, and the player did not know when they would clear. A rebalance is on hold (later above).
   src: BCS § Sol/Misfortuned, § Sol/Pre-oath Fortune mechanic
 
 - **[add]** How the player tracks Misfortune
@@ -2984,47 +2898,50 @@ Items whose source sweep is still partial keep their `(sampled)` or
   Where several Starchildren gather at one celestial body, Astra holds more tethers there and the change around them speeds up.
   src: inbox/chat-crew-boogie-casey-sol.md § Casey
 
-- **[decide]** How often Polly speaks
-  The page says Polly's voice comes through cleaner after each tether. A later suggestion made his voice rare, a single event each time. Pick one.
-  src: inbox/chat-crew-boogie-casey-sol.md § Casey
+- **[add]** The voice is Astra Virex, and it clears with each tether
+  Ruled (STAGING round 8). The page stands: Polly's voice comes through cleaner after each tether. The rare-event suggestion is dropped. Add (DM-only): "The voice Casey hears as Polly is Astra Virex wearing Polly's shape. It grows clearer with each tether."
+  src: Korey, 2026-10-25 (round 8); inbox/chat-crew-boogie-casey-sol.md § Casey
 
 - **[add]** Viren threads on the crossing to H'Catha (DM voice)
   The two-week crossing to H'Catha is where Viren information gets scattered: rumours and small clues placed in the world for the crew to notice or ignore, not every one a mystical pull or Polly speaking. A list of about sixteen candidate rumours exists in the Casey chat; none is chosen yet.
   src: inbox/chat-crew-boogie-casey-sol.md § Casey
 
-- **[decide]** What the first tether at Viren is
+- **[later]** What the first tether at Viren is
   Options: a dying stellar entity; a Zerathis-connected place or person; stellar-touched inhabitants; a rift onto a missing constellation.
   src: BCS § Casey/Open
 
-- **[decide]** The "bad" event at Viren
+- **[later]** The "bad" event at Viren
   Design a non-catastrophic event at Viren that makes Casey question whether the change is worth what he gains.
   src: BCS § Casey/Tethering, Open
 
-- **[decide]** The other Starchild
+- **[later]** The other Starchild
   A living Starchild like Casey will appear (see the add below). Set their shape: further along than Casey, earlier, diverged, or opposing. Set where they are headed.
   src: BCS § Casey/Open
 
-- **[decide]** The level 3 narrative scene
-  Options: first tether, first area change, or Polly speaking to him directly. If it already ran, record which.
+- **[decide]** Casey's beat for the crossing to H'Catha *(prep)*
+  Ruled: the missed level 3 scene is dropped, and visions are used sparingly (STAGING round 10). Set Casey's beat for the crossing: a small nudge from the Polly voice toward something, not a vision.
+  src: Korey, 2026-10-25 (round 10)
+
+- **[add]** What Casey wants beyond Polly
+  Ruled (STAGING round 8). Add (DM voice): "Casey is the younger brother who does not know his full identity. He finds it in having an older brother, which is why he clings to Tumak." This replaces the offered "to be chosen the way Polly was chosen", and sits beside his flaw (he relies too heavily on others).
+  src: Korey, 2026-10-25 (round 8); BCS § Casey/Open
+
+- **[add]** How the Toll shows in play *(answered)*
+  The Toll is what Astra takes at each constellation point: the tethered region's paracausal drift, step 2 of "The loop" on this page. It is never named at the table, and the DM tracks it as a hidden meter. Add (DM voice):
+  "The Toll shows only as change at the level of nature, never as a magic effect. A river reflects another sky. The wind holds one direction. Children born there recognise each other. A single tether stays below anyone's notice for a long time; an overlap site does not. The first changed region anyone notices is Virenspace, already tethered by Zerathis. After Casey's first deliberate tether there, something he cared about at Viren is different: not destroyed, changed in its nature, and the change makes it more his."
+  The V005–V006 window is retired.
+  answered: crew/casey.html (The loop, step 2: "Nobody, for a long time"; § Overlap: "A single tether sits below his threshold; an overlap site does not"; "Virenspace is point one and it is already occupied"); inbox/chat-crew-boogie-casey-sol.md § Casey/Point design guardrails (the Toll, never named at the table), § Tethering (nature-level change); Casey chat f7712be1 (the first deliberate tether at Viren; Korey: "right direction")
   src: BCS § Casey/Open
 
-- **[decide]** Casey's want beyond Polly
-  Offered candidate: "to be chosen the way Polly was chosen". Confirm or replace.
-  src: BCS § Casey/Open
-
-- **[decide]** How the Toll shows in play, and when a changed region is first noticed
-  Two rulings: how the Toll works as a hidden meter, and when someone first notices a changed region. The suggested window (V005–V006) is now past, so pick a new one.
-  src: BCS § Casey/Open
-
-- **[decide]** The Lantern Node alignment: its bonus, and its name
+- **[later]** The Lantern Node alignment: its bonus, and its name
   Set the bonus. Decide whether to rename it, since "Lantern" collides with the Lantern of Flourishing.
   src: BCS § Casey/Open
 
-- **[decide]** Whether Gregory's Calibration picks up Casey's tethers as paracausal static
+- **[later]** Whether Gregory's Calibration picks up Casey's tethers as paracausal static
   Proposed, acceptance unconfirmed. Accept or drop. If accepted, cross-link from crew/gregory.html.
   src: BCS § Casey/Tethering
 
-- **[decide]** Whether Zerathis recruited other Starchildren
+- **[later]** Whether Zerathis recruited other Starchildren
   Page lists it as open. Options: yes (and whether the other Starchild is one), or Casey is the only one.
   src: framework § Open
 
@@ -3108,20 +3025,24 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; see the Rules section.
 
-- **[decide]** What completing the inscription costs Tumak
-  The page carries two questions as "Open:" lines (the stat row and the closing paragraph): what the inscription completing costs him, and what happens to the homeworld's concealment while the fragment is between bearers. Rule both. Either way, take the "Open:" lines off the page; open questions live in this backlog. Touches crew/tumak.html and dossiers/the-runekeeper.html.
+- **[add]** What completing the inscription costs Tumak *(answered)*
+  Take both "Open:" lines off crew/tumak.html (the stat row and the closing paragraph), and the matching Open lines on dossiers/the-runekeeper.html and realms/wayfinders-homeworld.html. Write (in-world):
+  "Completing the inscription takes Tumak home, and going home ends the concealment. When Wan and Tu both arrive, the three poles stall the Dissolution cycle and the result is a Zenith; the homeworld splits into a blessing faction and an omen faction, and a Monolith follows. Between them the twins then carry a whole fragment, a key to the First Heart held by someone who believes he is only going home. The office he comes home to dims whoever holds it."
+  For the concealment between bearers: "While the fragment is in transit, the concealment rests on the share still leaving the Runekeeper. It weakens as he fades, and the world's protection decays as the cosmos changes around it. The marks Tumak places are the sensors that let it be renewed when he returns."
+  DM: the fade runs on a soft clock (STAGING round 8). The twins are not a key before about level 12 (STAGING round 2).
+  answered: crew/tumak.html ("the completed inscription is a key to the First Heart"; "His homeworld stays unfindable while the fragment's oscillation carries the concealment, and the fragment is leaving"); dossiers/the-runekeeper.html ("the act of going home is the act of ending the concealment"; "Dimming is what the office is"); inbox/chat-crew-tumak-gregory-bartholomew.md § Tumak/Leader concept (Korey: "If the Wayfinder never returns, the protection decays as the universe changes"), § Marks (marks as the world's sensors, turn 223); STAGING rounds 2 and 8
   src: TGB § Tumak/Open; crew/tumak.html
 
-- **[decide]** Hard clock or soft clock for the Runekeeper's fade
-  Hard clock: the fade runs to a deadline the DM counts down. Soft clock: the fade worsens as pressure, with no date. The arc doc v3 Pressure section leaves it open.
-  src: TGB § Tumak/Open
+- **[add]** The Runekeeper's fade is a soft clock
+  Ruled (STAGING round 8). Add to "The fading as pressure" (DM voice): "The Runekeeper's fade runs on a soft clock: rising pressure, no date. Count nothing down."
+  src: Korey, 2026-10-25 (round 8); TGB § Tumak/Open
 
-- **[decide]** How a separated twin plays out at the table
+- **[later]** How a separated twin plays out at the table
   Settled so far (Korey, turn 227): at the table only the twin with the crew is played, a lower-level one-shot with the separated twin is possible, and the twins reunite through the campaign, through the crew or by other means. Still open for a long separation: off-screen montage, a solo one-shot, or shared visions (turn 143). The reunion mechanics are a separate decide on rules/index.html.
   src: TGB § Tumak/Mishap and separation, Open
 
 - **[fix]** Wayfind opens on the first match
-  The "Wayfinding" row says "The partial mark, and its growth with understanding rather than with level. The full mark is several levels out." Change to: Wayfind opens on the first matched rune and always targets one of his placed marks. The network grows as runes match, with one rune roll per character level. Whether the range itself grows with matched runes waits on the reach-gate decide on rules/index.html.
+  The "Wayfinding" row says "The partial mark, and its growth with understanding rather than with level. The full mark is several levels out." Change to: Wayfind opens on the first matched rune and always targets one of his placed marks. The network grows as runes match, with one rune roll per character level, and the reach grows with the matched count (see the reach-gate add on rules/index.html).
   src: TGB § Tumak/Wayfind, Rune structure, final; rules/index.html
 
 - **[fix]** Runes are not a proximity detector
@@ -3182,23 +3103,24 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
 
 ### crew/gregory.html
 
-- **[decide]** The Sailor gate at the Sea Dock
+- **[decide]** The Sailor gate at the Sea Dock *(prep)*
   (A) He truly needs Sailor clearance, and gets in with an escort via Kip or Pik or a sanctioned reason. (B) He only thinks he does, and a service route exists. (C) Hybrid: Rindle has moved the Latchling and Gregory must recalibrate.
   src: TGB § Revising voyage briefings/Open
 
-- **[decide]** What Gregory learns once the Latchling anomaly resolves
+- **[decide]** What Gregory learns once the Latchling anomaly resolves *(prep)*
   src: TGB § Gregory/Open
 
-- **[decide]** Gregory's Bearing feature
+- **[decide]** Gregory's Bearing feature *(prep)*
   Draft: once per long rest, 10 minutes of listening gives direction and rough distance to a paracausal source he has felt before. Through the seated Lantern, once a day, it reaches farther. Options: lock or hold. If locked, it goes here and in the character subsystems on rules/index.html.
   src: chat-voyage-6-7-planning § Open
 
-- **[decide]** Whether the Lantern becomes Gregory's Anomaly 02
-  Options: yes; or keep the Lantern separate from the anomaly queue. Touches crew/gregory.html and artifacts/containment-engine.html.
-  src: chat-voyage-6-7-planning § Open
+- **[add]** The Lantern and the anomaly queue
+  Ruled (STAGING round 8). Add to DM notes: "Whether the Lantern becomes Gregory's next anomaly depends on whether he investigates it." Touches crew/gregory.html and artifacts/containment-engine.html.
+  src: Korey, 2026-10-25 (round 8); chat-voyage-6-7-planning § Open
 
 - **[fix]** Origin: Toril
   Header says "Open: His origin, and what changed him". Record: Gregory is from Toril. He reached Caelestis on a cargo ship, and his origin has no Zenith tied to it. The Lantern's pull toward Toril starts his journey. What changed him stays an open question in the backlog, off the page.
+  updated (triage): what changed him is now settled. Gregory's awakening is a result of the Axiom strain's ripple (STAGING § The Axiom strain); write it on the page.
   src: memory-canon § Gregory (working decision); memory-canon (open-decisions § Voyage 007); chat-voyage-6-7-planning § PCs and the stars
 
 - **[fix]** The Latchling is at the Sea Dock
@@ -3250,29 +3172,34 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
 
 ### crew/bartholomew.html
 
-- **[decide]** Whether Almost-Shift slips still run
+- **[decide]** Whether Almost-Shift slips still run *(prep)*
   The page's "How a slip runs" has three registers and one weighted slip per scene, with a 3-strain threshold (wrongness and recognition, no anatomy). Options: keep slips running alongside Aspects, or fold slips into Aspects. Rule the 3-strain threshold either way.
   src: TGB § Bartholomew; crew/bartholomew.html "How a slip runs"
 
-- **[decide]** Tier 1 alien creatures for the Academy
+- **[decide]** Tier 1 alien creatures for the Academy *(prep)*
   Owed: 3–4 designs that echo his beast forms and his star-mapping. Schedule or draft.
   src: TGB § Bartholomew/Open; memory-canon (open-decisions)
 
-- **[decide]** The bloom's name
+- **[decide]** The bloom's name *(prep)*
   Options: Kinbloom, Mantlewort, Otherlily.
   src: chat-voyage-6-7-planning § Open
 
-- **[decide]** How a Lantern charge renews the bloom
+- **[decide]** How a Lantern charge renews the bloom *(prep)*
   Settled: renewing the bloom with a Lantern charge is the crew's active choice. Open: the details (cost, how often, what it restores). Touches crew/bartholomew.html and artifacts/containment-engine.html.
   src: chat-voyage-6-7-planning § Bartholomew: Aspects; memory-canon § Bartholomew
 
-- **[decide]** CON-312 and the word "Almosts"
-  Set the cosmic meaning of CON-312. Decide whether "Almosts" is an old druid term or the name changes.
+- **[add]** CON-312 and the Almosts *(answered)*
+  Add (DM voice):
+  "CON-312 is the blueprint of the creature Bartholomew is becoming: six stars, one per ability score. It is what lets him hold two natures at once. Every aspect he learns has a star to sit in, so he can take one living piece of a creature into his own pattern and stay himself. Without it he would come apart. Two stars from his childhood fall burn; the rest fill as he studies. When the constellation is complete, its shape is his full Almost form."
+  "'The Almosts' is an old druid name. Druidic tradition hands down whole beast shapes, worked out long ago, and Wild Shape is a clean swap into one. Keeping yourself while taking part of something else is harder, because two natures in one body want to separate. The tradition never taught it, and druids caught partway were warned about as the Almosts."
+  DM: an old druid or a text can one day tell him "they used to call people like you Almosts." The name stands for now; memory notes it may change.
+  answered: Voyage 7 chat 70f0c197 (Korey: "Okay, I see it now. It's utilizing an aspect of that creature while remaining yourself", accepting the Wild Shape and Aspects framing with the Almosts as the old name); inbox/chat-voyage-6-7-planning.md § Bartholomew: Aspects (CON-312 the blueprint, six stars, two burning); crew/bartholomew.html; aspects/index.html
   src: chat-voyage-6-7-planning § Open
 
-- **[decide]** Full Almost template details
-  Open: its HP, when the stars unlock, and whether dinosaurs are on his Wild Shape list.
-  src: chat-voyage-6-7-planning § Open
+- **[later]** Full Almost template details
+  Settled (see the Full Almost form add): physical scores come from the seated creatures with no cap, mental scores stay his own, AC is 10 + Dex unless an armour aspect applies, and the form costs a Wild Shape use and unlocks when the constellation is complete. Dinosaurs are off the aspect menu and must be earned.
+  Left: its HP; when each of CON-312's faint stars unlocks (two burn from his childhood fall); and whether dinosaurs join his Wild Shape list, which is separate from the aspect menu.
+  src: chat-voyage-6-7-planning § Open, § Bartholomew: Aspects (Settled)
 
 - **[fix]** The Almost: mechanic set, look open
   Page says "The creature design is deliberately unwritten until play surfaces what it should be." Reframe: the Almost is the creature Bartholomew builds. His constellation is its blueprint: six stars for six ability scores, and each catalogued aspect seats into the matching star. Its look and register are not yet set.
@@ -3315,21 +3242,24 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
 
 ### crew/boogie.html
 
-- **[decide]** Which deckhand item goes missing on the tyrant ship voyage
+- **[decide]** Which deckhand item goes missing on the tyrant ship voyage *(prep)*
   Korey names the item (see the "Next beat" add).
   src: BCS § Boogie/Open
 
-- **[decide]** What Tharizdun wants with Boogie
-  Options: an avatar; a moving tunnel; neither.
-  src: BCS § Boogie/Open
+- **[add]** Tharizdun, the shard and the current
+  Ruled (STAGING round 8). Add to DM notes: "Tharizdun wants nothing specific from Boogie. Tharizdun is not lucid; it is an opportunist. What happens through the shard depends on what Boogie does, and things may come back through the current. Boogie's plot is reactive. Now and then he feels corruption leaking into him from the shard."
+  DM: the corruption is a role-playing beat, not a mechanic.
+  src: Korey, 2026-10-25 (round 8); BCS § Boogie/Open
 
-- **[decide]** Whether anything comes back out through the current, and whether the shard corrupts Boogie over time
-  Rule both.
-  src: BCS § Boogie/Open
-
-- **[decide]** Giorge and the shards
-  Giorge is the Darkest Day vessel on Fonains (spelling per rulings; a different person from Jorgi Panamop). Open: whether he is searching for shards and may cross Boogie's path later (he was originally meant to tie to Tharizdun, possibly to be revisited). Also open: his surname. The sweep gives "Giorge Forsworn"; canon records only that he was inspired by George Foreswarn. Options: no surname on the page, or settle one. Touches crew/boogie.html and artifacts/fonains-shard.html.
+- **[later]** Giorge and the shards
+  Giorge is the Darkest Day vessel on Fonains (spelling per rulings; a different person from Jorgi Panamop).
+  Settled: Giorge is searching for pieces of the broken Monolith and may cross Boogie's path later. Korey, in the Boogie chat: "Giorge Forsworn is a character I retrofitted to be similar on Fonains. He is searching for pieces. Not super important here but may overlap at some point." Add to crew/boogie.html (DM notes) and artifacts/fonains-shard.html: "On Fonains, Giorge is searching for pieces of the broken Monolith. His path may cross Boogie's."
+  Left: (1) his surname. Korey typed "Giorge Forsworn"; memory canon records only that he was inspired by George Foreswarn. Options: Forsworn on the page, or no surname. (2) Whether his original Tharizdun tie is revisited (memory canon: "possibly to be revisited").
+  Touches crew/boogie.html and artifacts/fonains-shard.html.
   src: BCS § Boogie/The shard and Tharizdun; memory-canon § Naming (Giorge); session-rulings
+  answered (shard search): BCS § Boogie/The shard and Tharizdun (Settled); original Boogie chat fa8c4131 (Korey's line quoted above)
+  Settled since (Tharizdun tie, part): "Shothragot, Tharizdun's avatar, was bound to the temple aboard the planar craft. Its true vestige may still be there, and Giorge may be trying to reach it." Still open: his surname.
+  answered (part): STAGING § Tharizdun and the planar craft
 
 - **[fix]** Two archived objects, not three
   Page says "Three archived objects have accumulated inside one living body". Change to: two archived objects, the half-ship from Voyage 001 and the half-logbook, are held inside him by the shard. The shard is what keeps them there, not a third archived object.
@@ -3344,8 +3274,8 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
   src: BCS § Boogie/The shard and Tharizdun
 
 - **[add]** The scale of the shards
-  The Fonains Monolith broke into about 333,333 shards spread across the cosmos. The number conveys scope; collecting them is never a goal.
-  src: memory-canon (Scale); BCS § Boogie/The shard and Tharizdun
+  When the Fonains Monolith broke, four great shards fell and many smaller shards came from them. Three hundred and thirty-three of the small shards are black; the rest took colors close to their elemental affinities. Collecting them is never a goal.
+  src: Korey, 2026-10-25 (round 8) (replaces "about 333,333"); BCS § Boogie/The shard and Tharizdun
 
 - **[add]** The Blob Drop
   Boogie has a signature dance move called the Blob Drop.
@@ -3385,29 +3315,21 @@ Pages under `prime/artifacts/` and `prime/vessels/`. Items under each page run
 decide, fix, drop, add.
 
 **Residue counts.** Memory canon (Cosmology, locked) sets the pieces per
-fragment by Axiom, prime numbers: Dissolution 2, Transformation 3, Boundary 5,
-Convergence 7 (17 in all). Every artifact page uses Boundary 2, Dissolution 3,
-Transformation 5, Convergence 7, from the cosmic sweep. Memory ranks higher, so
-the count items below are `fix`, not `decide`. If Korey prefers the pages'
-numbers, every item tagged *(counts)* flips.
+fragment by Axiom, prime numbers. Ruled (STAGING round 11): Dissolution 2, Boundary 3,
+Transformation 5, Convergence 7 (17 in all). Every artifact page uses Boundary 2,
+Dissolution 3, Transformation 5, Convergence 7, so the Boundary and Dissolution
+counts change and Transformation stays.
 
 ### artifacts/index.html
 
-- **[decide]** Whether "Artifacts of Convergence" survives as a term
-  Canon describes three Convergence artifacts that work like Critical Role's Uk'otoa orbs: finding, using and the consequences of using each is its own adventure; the three do something different apiece and something more together; A.T.L.A.S. leads to the other two. The cosmic sweep later replaced Eye/Key/Voice with the four Reach fragments. Options: retire the term and keep the four-fragment set; or keep "three pieces, each its own adventure" as how N'ghathrod's hunt plays out (A.T.L.A.S. plus two siblings) and say so on this page.
+- **[fix]** "Artifacts of Convergence" is retired *(answered)*
+  The set is the Reach residue: four fragments, one per Axiom, seventeen pieces. The three-artifact set (Eye, Key, Voice, with A.T.L.A.S. leading to the other two) was replaced by the four fragments, and "Artifacts of Convergence" is not a name for anything. No live page uses the term (0 hits outside prime/working/), so there is nothing to change on this page; keep it off. The Uk'otoa-orb constraint survives as the "Each fragment is its own adventure" add below. Memory's constraint line still says "the three pieces"; update memory.
   src: memory-canon (open-decisions § Planned: constraints on the Vecna/N'ghathrod layer); chat-cosmic § Superseded
-
-- **[decide]** A holdings ledger: who holds each residue piece, and who knows
-  Known: the Boundary piece is housed in A.T.L.A.S. in the Brig; the crew holds the Lantern of Flourishing (the Rod's fourth piece) since V006; Xanathar keeps a Rod piece; the Rod's seventh piece was left aboard Thessalar's craft. Open: which pieces Vecna's side holds. Options for where the ledger lives: a section of this page, or a new DM page.
-  src: framework § Open; memory-canon (campaign-canon, Rod holders; open-decisions, seventh piece)
-
-- **[decide]** Why SPH-01 holds pieces of three fragments
-  Add the answer as a line here, or drop the question if the counts change which fragments are local.
-  src: framework § Open
+  answered: inbox/chat-cosmic-campaign-structure.md § Superseded ("Artifacts of Convergence as Eye, Key, Voice → four Reach fragments as residue"), § Artifacts of Convergence (Settled)
 
 - **[fix]** Residue counts per fragment *(counts)*
-  Restate the set as Dissolution 2, Transformation 3, Boundary 5, Convergence 7. The line "A Boundary piece points toward its one sibling" becomes "toward its four siblings"; "so A.T.L.A.S. points at the only other Boundary piece in existence" becomes "so A.T.L.A.S. points toward the four other Boundary pieces". "A Convergence piece feels six" stays.
-  src: memory-canon § Cosmology ("Every Reach residue fragment…"; "a Boundary piece points toward its four siblings")
+  Restate the set as Dissolution 2, Boundary 3, Transformation 5, Convergence 7. The line "A Boundary piece points toward its one sibling" becomes "toward its two siblings"; "so A.T.L.A.S. points at the only other Boundary piece in existence" becomes "so A.T.L.A.S. points toward the two other Boundary pieces, one of them its sister". "A Convergence piece feels six" stays.
+  src: Korey, 2026-10-25 (round 11)
 
 - **[fix]** The set intro contradicts its table
   Page says "Four fragments. Seventeen pieces. Two of them are located"; the table counts more located pieces than two. Restate the intro from the table once the counts are applied. Under the canon counts the located pieces are 1 Boundary (A.T.L.A.S.), 2 Dissolution (forming in Wan and Tu) and 3 Convergence (Rod pieces), six in all (inference: assumes the twins' pieces count as located).
@@ -3435,21 +3357,23 @@ numbers, every item tagged *(counts)* flips.
 
 ### artifacts/atlas.html
 
-- **[decide]** "Atrium" or "Aperture" for a heart's hidden entrance
-  Every page says Atrium. Memory canon (world-heart framework, marked "working") says Aperture; the later cosmic chat renamed Aperture to Atrium (turn 278) without memory being updated. Memory outranks the sweep, but its line is a working draft and the rename is newer. Options: keep Atrium and update memory; or revert pages to Aperture. Touches this page, artifacts/containment-engine.html, artifacts/runekeepers-fragment.html, rules/index.html (§ Finding an Atrium and the subsystems intro), hub.html and glossary/.
+- **[fix]** A heart's hidden entrance is the Atrium *(answered)*
+  Keep Atrium on every page; no page change. Korey renamed it himself in the cosmic chat ("I would also change aperture to be atrium to fit in the heart connotations"), after memory's working world-heart line was written. Memory's world-heart, Runekeepers and "Locked this pass" lines still say Aperture; update memory.
   src: memory-canon (open-decisions § Planned, world-heart framework; Runekeepers line); chat-cosmic § Superseded
+  answered: inbox/chat-cosmic-campaign-structure.md § Superseded ("'Aperture' → 'Atrium' (turn 278)"); confirmed in the chat at turn 278, Korey's own words
 
-- **[decide]** What the letters A.T.L.A.S. stand for
-  Options: leave it unexpanded, or settle an expansion. Any expansion must not contain "Axiom". Korey's last pick in the Campaign Planning chat was **Astral Topographic Lithic Augury System** (turn 322), chosen to replace "Axiom-Tuned Lithic Augury System"; it is the ready candidate.
+- **[add]** What the letters stand for *(answered)*
+  A.T.L.A.S. stands for Astral Topographic Lithic Augury System, the Fleet's catalogue name. Each word names only what the Fleet can observe: it maps worlds from astral space, its core is stone, and it reveals hidden things. Nobody who named it knew what the core is. Add the expansion to the identity card; the artifact is still called by the acronym alone, never "the World Surveyor".
   src: memory-canon § Cosmology; chat-early-planning § Campaign Planning, Artifacts, the Brig and the Reach
+  answered: inbox/chat-early-planning.md § Artifacts, the Brig and the Reach (turn 322; Korey: "Astral Topographic Lithic Augury System."). Memory's rule that the acronym must not contain "Axiom" is met, and memory's "the name is the acronym" retires "World Surveyor", not the expansion.
 
 - **[fix]** Eyebrow: no "World Surveyor"
   Eyebrow reads "Artifact · The World Surveyor". Change to "Artifact · Boundary piece".
   src: memory-canon § Cosmology; framework § A.T.L.A.S.
 
-- **[fix]** A.T.L.A.S. points toward four siblings *(counts)*
-  As a Boundary piece among five, A.T.L.A.S. points toward its four siblings. Antagonists want it partly for that reason. State this in the body (the index row carries the same fix).
-  src: memory-canon § Cosmology ("a Boundary piece points toward its four siblings")
+- **[fix]** A.T.L.A.S. points toward two siblings *(counts)*
+  As one of three Boundary pieces, A.T.L.A.S. points toward its two siblings: its sister, on Fonains, and the third. Antagonists want it partly for that reason. State this in the body (the index row carries the same fix).
+  src: Korey, 2026-10-25 (rounds 10–11)
 
 - **[add]** Status & provenance: the target of the thefts
   A.T.L.A.S. is what the Academy thefts are really after, and the thefts come forward when the crew returns to Caelestis. In the antagonists' hands it gives them reach, so the crew keeping it out of their hands denies them capacity. (Write without the retired word "network".)
@@ -3461,13 +3385,9 @@ numbers, every item tagged *(counts)* flips.
 
 ### artifacts/rod-of-seven-parts.html
 
-- **[decide]** Beholder ties on the fourth piece
-  Canon says Rod pieces other than Xanathar's must be decoupled from beholders, but the fourth piece's maker (Ostekk) and its last holder (Vaelorix) are both beholders. Options: the Lantern stands as the one exception (it has now left beholder hands); or the rule covers only the four loose pieces.
+- **[decide]** Beholder ties on the fourth piece *(prep)*
+  Canon says Rod pieces other than Xanathar's must be decoupled from beholders, but the fourth piece's maker (Ostekk) and its last holder (Vaelorix) are both beholders, and Ostekk now rules a domain on H'Catha and wants it back. Its current holder is the crew, so the rule's letter (holders) is met today. The question is the rule's purpose (keep the campaign from getting too beholder-heavy). Options: (a) the rule is about current holders, so the Lantern passes and stays a beholder-history object; (b) the Lantern is the one named exception, and the remaining loose pieces (first, second, third, sixth) get non-beholder holders; (c) soften the Lantern's beholder ties (for example, Ostekk stops pursuing it after H'Catha).
   src: memory-canon § Cosmology ("Rod holders…"); chat-voyage-6-7-planning § Naming ("Ostekk is a beholder")
-
-- **[decide]** Using the Rod against Vecna
-  Canon keeps forward that the Rod may be usable against Vecna; the mechanism is undecided. Settle it, then add beside "completing it opens the First Heart".
-  src: memory-canon § Cosmology ("Kept forward")
 
 - **[fix]** The fourth piece is with the crew
   Table says "aboard the tyrant ship. Still there: the crew withdrew to Cargo without reaching it". Change to: the fourth piece is inside the Lantern of Flourishing (the Containment Engine, Fourth Series), with the crew in Tumak's bag of holding since V006.
@@ -3485,22 +3405,24 @@ numbers, every item tagged *(counts)* flips.
   The paracausal ceremorphosis the seventh piece caused also stopped N'ghathrod's aging.
   src: memory-canon (open-decisions, Locked 2026-10-25); timeline.json "Captured aboard Thessalar's craft" (canon)
 
+  updated (round 3): superseded. His long life comes from the tithe of his taken; the seventh piece is the root of the taking (STAGING round 3).
 - **[add]** Connections: the tyrant ship
   The tyrant ship ties indirectly to the Rod through the Lantern, the kind of little-known link to the larger world the campaign wants.
   src: memory-canon § Cosmology
 
 ### artifacts/containment-engine.html
 
-- **[decide]** What Ostekk calls the Rod piece
+- **[decide]** What Ostekk calls the Rod piece *(prep)*
   Options: the Constant, the Inclusion, the Mender, the Kernel.
   src: chat-voyage-6-7-planning § Open
 
-- **[decide]** Why the behir could not sense the Lantern
-  Options: the bag of holding blocked it (lock this before players ask); another reason.
-  src: chat-voyage-6-7-planning § Open
+- **[decide]** Why the behir could not sense the Lantern *(prep)*
+  Options: the bag of holding blocked it, since its interior is an extradimensional space (lock this before players ask); or the anti-magic field around the Command Deck had already been muting the Lantern's pull, as it muted Gregory's tug, and the behir lost the trail inside it.
+  src: chat-voyage-6-7-planning § Open; memory-canon § Antagonists (field suppressing the Lantern)
 
-- **[decide]** Whether a pod charge plus an INT DC 15 parts check wakes OSTEKK-2 for good
+- **[decide]** Whether a pod charge plus an INT DC 15 parts check wakes OSTEKK-2 for good *(prep)*
   The page and prime/data/overlay.json offer this ("The seated Lantern and the pod can wake it for good in Voyage 007"); no settled source backs it. Options: keep it as the V007 offer, or drop it.
+  Partly settled by STAGING § OSTEKK-2: OSTEKK-6 is the only active survivor of Vaelorix's nine units; OSTEKK-2 lies inert on the Hollow Deck, and the crew could heal it back to function if they return for it, for example with the Lantern of Flourishing. Still open: whether the specific mechanic (a pod charge plus an INT DC 15 parts check) is how that healing works.
   src: artifacts/containment-engine.html; prime/data/overlay.json
 
 - *(The bloom-renewal and Anomaly 02 decides touch this page; they live in the Crew section under Bartholomew and Gregory.)*
@@ -3543,9 +3465,9 @@ numbers, every item tagged *(counts)* flips.
 
 ### artifacts/fonains-shard.html
 
-- **[decide]** The bound duplicates of the logbook
-  Settled (canon outranks the record): Boogie's chest holds half a logbook, pulled from a simulation of a real wreck. Open: whether the two duplicates Casey and Gregory bound during the githyanki attack also exist, as the player record says (data/items.json "Derelict Logbook": the whole logbook plus duplicates). Options: the duplicates exist alongside the half in Boogie; or they go. Either way, flag data/items.json for Korey; prime does not write to it. Touches this page and vessels/the-derelict.html.
-  src: memory-canon § Boogie; BCS § Boogie/Archived objects; data/items.json
+- **[fix]** The derelict logbook is in two halves
+  Ruled (STAGING round 8). Write: "Boogie holds half of the derelict logbook. The other half was in his chest inside the Monolith." The settled record is the two halves; drop the bound-duplicates line from this page and vessels/the-derelict.html. data/items.json still lists the whole logbook plus duplicates (see Player record flags).
+  src: Korey, 2026-10-25 (round 8); memory-canon § Boogie; data/items.json
 
 - *(The Giorge decide touches this page; it lives in the Crew section under Boogie.)*
 
@@ -3554,7 +3476,8 @@ numbers, every item tagged *(counts)* flips.
   src: memory-canon § Cosmology
 
 - **[fix]** One of a vast number
-  Page says the shard is "the only one of its kind anybody has". Change to: one of about 333,333 shards of the Fonains Monolith, now scattered across the cosmos. The number shows what is already in motion; collecting them is not a goal.
+  Page says the shard is "the only one of its kind anybody has". Change to: one of the many small shards that came from the four great shards when the Fonains Monolith broke, now scattered across the cosmos. Three hundred and thirty-three of the small shards are black; the rest took colors close to their elemental affinities. Collecting them is not a goal.
+  updated (round 8): "about 333,333" is retired (see the Fonains lane fix).
   src: memory-canon § Cosmology ("Scale"); BCS § Boogie/The shard and Tharizdun
 
 - **[add]** Lead: how the Monolith broke
@@ -3595,10 +3518,6 @@ numbers, every item tagged *(counts)* flips.
 
 ### artifacts/runekeepers-fragment.html
 
-- **[decide]** Whether the twins carry a whole fragment that is a first key to the First Heart
-  The page and rules/index.html say the twins carry the whole Dissolution fragment, a first key. Under canon the fragment never assembles whole in them: its two pieces oscillate, and the twins make three poles that stall the cycle. Options: drop the first-key claim; or keep a first-key role on a different footing. The hub's Ascension card ("the second key") follows this ruling.
-  src: memory-canon § Cosmology ("The Zenith…"); artifacts/runekeepers-fragment.html; rules/index.html
-
 - **[fix]** Wan and Tu are two hosts
   Page says "Wan and Tu, who are one person in two bodies". Change to "Wan and Tu, two hosts". They have always been two separate entities.
   src: memory-canon § Cosmology ("always two entities"); framework § Superseded
@@ -3625,15 +3544,11 @@ numbers, every item tagged *(counts)* flips.
 
 ### artifacts/transformation-fragment.html
 
-- **[fix]** Three pieces, not five *(counts)*
-  Eyebrow says "Five pieces, none located"; sub says "Five pieces. Nowhere anyone has written down."; body says "Five pieces, and the only fragment the record is entirely silent on". Change each "Five" to "Three".
-  src: memory-canon § Cosmology
-
 ### vessels/index.html
 
-- **[decide]** The Derelict's name, and records for the other salvage-race ships
-  Options: give it the fuller name "Salvage Race Derelict", or keep "Derelict". The salvage race's hammerhead and githyanki ship have no records; decide whether to add them. Touches this page and vessels/the-derelict.html.
-  src: chat-voyage-6-7-planning § Open
+- **[later]** The Derelict's name, and records for the other salvage-race ships
+  Settled for the other ships: every ship the crew encounters gets a record, and ships known only in simulation sit under the Simulation Deck with Status Simulated, so the salvage race's hammerhead and githyanki ship each get a simulated record and a register row, as the Moonraider and the Derelict did. Still open: the Derelict's name. Options: "Salvage Race Derelict", or keep "Derelict". Touches this page and vessels/the-derelict.html.
+  src: chat-voyage-6-7-planning § Open; § The swap and NPCs (Moonraider and Derelict as simulated records); § Table and story principles ("Every ship the crew encounters gets a record"); memory-canon § Naming ("Ships the crew encounters get cataloged")
 
 - **[fix]** Ship names carry no article
   Register rows say "The Tyrant", "The Flighty Foundling", "The Moonraider", "The Derelict". Change to Tyrant Ship, Flighty Foundling, Moonraider, Derelict. PR #70 already renamed the player side.
@@ -3661,20 +3576,21 @@ numbers, every item tagged *(counts)* flips.
 
 ### vessels/tyrant-ship.html
 
-- **[decide]** Which four eyes work, and the player ship sheet
-  Set which four eye stalks work and what each does. Draft candidates: Fear (wakes on crossing entry 7), Telekinesis (an easy first unlock), Slowing (later). Players were promised a ship sheet.
-  src: chat-voyage-6-7-planning § Open
+- **[decide]** Which four eyes work, and the player ship sheet *(prep)*
+  Settled: Vaelorix worked the great eyes with his own gaze; Pffred and Krik'Lit rigged a crew station for each eye around the helm on the Command Deck; four of the ten respond, and the rest need repairs. This replaces memory's "three stalks wired as cannons, gunners in the Meditation pods" (update memory). Also settled: the stalk matching the hour's eye goes dead on H'Catha under the Pact. Still open: which four respond and what each does. Draft candidates: Fear (wakes on crossing entry 7), Telekinesis (an easy first unlock), Slowing (later); the fourth is unnamed. Then the player ship sheet the players were promised. The V007 runsheet still has three cannons with two active.
+  src: chat-voyage-6-7-planning § Open, § The Lantern and the ship, § Superseded (three cannons → four of ten eyes); astral § The meteorite and mission
 
-- **[decide]** Which shaft letter Research gets
+- **[decide]** Which shaft letter Research gets *(prep)*
   The table set A as the Garden and C as the Quarters. Options: B or D.
   src: chat-voyage-6-7-planning § Open
 
-- **[decide]** How the ship reads at H'Catha
-  Canon says it reads as native traffic, because every beholder ship is carved stone. The page says Vaelorix was H'Cathan and landless, so it reads as a claimant returning. Options: native traffic; or a claimant, which invites domain attention.
+- **[fix]** The ship reads as native traffic at H'Catha *(answered)*
+  Page says "he was H'Cathan and landless, so the ship arriving reads as a claimant returning rather than as a trader." Change to: every beholder ship is carved stone, so the Tyrant Ship reads as native traffic, and a few such ships in orbit is normal. A tyrant ship draws less concern at the domain borders than an ordinary spelljammer. Nobody on H'Catha knows Vaelorix is dead. Keep "Vaelorix was originally from H'Catha" as a fact; drop the claimant reading.
   src: memory-canon § Naming ("Approach to H'Catha"), § Antagonists ("H'Catha layout")
+  answered: memory-canon § Naming ("reads as native because every beholder ship is carved stone (a few ships in orbit is normal traffic)"); § Antagonists ("a tyrant ship draws less concern than a normal spelljammer"). Memory outranks the page; no source backs the claimant line.
 
-- **[decide]** The lingering Lantern wisps
-  The crew may keep the wisps or eradicate them. Record the crew's choice when it is made.
+- **[later]** The lingering Lantern wisps
+  Settled: the choice is the crew's, keep the wisps or eradicate them. Nothing for Korey to rule; this waits on play. Record the crew's choice when it is made, and until then the page states that the wisps linger in the ship.
   src: chat-voyage-6-7-planning § The Lantern and the ship
 
 - **[fix]** The ship's name is Tyrant Ship
@@ -3739,7 +3655,7 @@ numbers, every item tagged *(counts)* flips.
 
 ### vessels/the-derelict.html
 
-- *(The Derelict-name decide lives under vessels/index.html; the logbook-duplicates decide under artifacts/fonains-shard.html. Both touch this page.)*
+- *(The Derelict-name item (later) lives under vessels/index.html; the logbook fix under artifacts/fonains-shard.html. Both touch this page.)*
 
 - **[fix]** The record name is Derelict
   Title and heading say "The Derelict". Drop the article.
@@ -3760,86 +3676,105 @@ against the complete Tumak sweep (all 336 turns).
 
 #### Cosmology rules
 
-- **[decide]** Can a taken person be released?
-  Page says "The tadpole is the person now. There is no release but N'ghathrod's death". The later cosmic chat (turn 190) rules that removing the tadpole frees a taken person only when they know what happened and object to it; factions/vthorama.html already follows turn 190. Canon adds that being taken is felt as a gift, so a captured taken person does not turn or fight their new self, and that a taken person is host plus a lesser copy of N'ghathrod held together. Korey leans toward the N'ghathrod the party meets being a simulacrum, with the real body aboard the Vth'oramu; whether the copies die with him or one inherits is open. Options: (a) the turn-190 rule (removal frees only those who know and object, which canon makes rare); (b) no release but the real N'ghathrod's death; (c) both, as two routes. Touches rules/index.html, factions/vthorama.html, dossiers/nghathrod.html.
-  src: chat-cosmic § N'ghathrod and the colony (turn 190); memory-canon § Deferred ("Being taken is experienced as a gift"; seventh piece and simulacrum)
-
-- **[decide]** Do residue housings work inside anti-magic?
-  Page says paracausal objects (residue and its housings) are "Unsuppressed … an instrument built around a piece works inside an anti-magic field". Canon says the field suppressed the Lantern and muted Gregory's tug toward it, and the OSTEKK units, built with the Lantern's fragment, stutter but keep running. Canon also says innate non-Weave processes are not suppressed. Options: partial suppression (housings stutter and their pull is muted, but they are not switched off); or full immunity, retiring the Lantern-suppression line. Touches rules/index.html, artifacts/containment-engine.html, dossiers on the OSTEKK units.
+- **[fix]** Residue housings are dampened in anti-magic, not switched off *(answered)*
+  Page says paracausal objects are "Unsuppressed … an instrument built around a piece works inside an anti-magic field". Change to: inside an anti-magic field an instrument built around a residue piece is suppressed in part. Its pull is muted and its working stutters, but it is not switched off. On the tyrant ship the Command Deck field suppressed the Lantern of Flourishing and muted Gregory's tug toward it; the OSTEKK units, built with the Lantern's fragment, stuttered and slowed and kept running, while the clockwork horrors froze and the behir could not enter. Gregory's own sluggishness there was narrative only. When the field lifts, the pull returns in full. The same wording goes on artifacts/containment-engine.html (§ Where it is, the anti-magic add) and the OSTEKK dossiers.
   src: memory-canon § Antagonists ("The anti-magic field has been suppressing the Lantern"), § Key NPCs (OSTEKK-6), § Cosmology (Weave ruling)
-
-- **[decide]** Does opening a heart need a Monolith?
-  Canon disagrees with itself. One line (marked "Locked this pass") says a heart can only be opened where a Monolith stands, which is why N'ghathrod needs Zeniths. An earlier line says a world's heart is intrinsic to the world and not tied to its Monolith. The cosmic sweep and this page say a Monolith only licenses a link and opens nothing. Options: (a) a Monolith is required to open a heart; (b) a Monolith is required only to link two opened hearts. § Opening on this page, glossary/, and the N'ghathrod and Seekers pages follow the ruling.
-  src: memory-canon (open-decisions § Deferred "Locked this pass"; § Planned "Constraints on the Vecna/N'ghathrod layer"); chat-cosmic § Cosmology redesign
+  answered: memory-canon § Antagonists ("The anti-magic field has been suppressing the Lantern, muting Gregory's tug … When the field lifts, Gregory can commune with it"), § Key NPCs ("in the anti-magic field they stutter but keep running"); inbox/chat-voyage-6-7-planning.md § The field and constructs (Settled). Memory outranks the page.
 
 #### Tumak: runes, Rune Sets, Wayfind
 
-- **[decide]** Runes 17–19 as Anchors: what they grant
-  Settled idea (Korey, turn 326): runes 17, 18 and 19 become Anchors, fixed places Tumak goes to, so the arc leans into navigation and working with Gregory. Only the idea is settled. Undecided:
-  1. What an Anchor grants, and what a Wayfind to an Anchor gets: guaranteed arrival, a lower cost, or modestly better odds.
+- **[decide]** Runes 17–19 as Anchors: what they grant *(shape)*
+  Settled idea (Korey, turn 326): runes 17, 18 and 19 become Anchors, fixed places Tumak goes to, so the arc leans into navigation and working with Gregory. The redo (turns 330–335) settled reach, bands, mishaps and cost around them (see the adds below) and left the Anchors open. Real gaps:
+  1. What an Anchor grants: whether a Wayfind to an Anchor bypasses the reach gate, and whether it pays full cost, one band less, or nothing (the last of turn 335's three questions).
   2. Whether one Anchor is pre-set at campaign start.
   3. How a place becomes an Anchor, and how Gregory takes part.
   4. Which Rune Set each Anchor counts toward. Claude suggested at least one be Soul, since only 09 (Forehead) and 10 (Tongue) are rollable Soul positions (turns 258, 268).
   Offered and never accepted, so not the default: the names Hearth, Threshold and Horizon; a loop where Gregory's Calibration finds anchorable sites; Anchors bypassing the reach gate (turns 327, 333). The page still reads "Unassigned (bestowed)" and "bestowed at story moments", and § The safety valve leans on the three bestowed positions. Touches rules/index.html (position table, § The safety valve, § Open), rules/wayfinder-path-dm.html, crew/gregory.html.
   src: TGB § Tumak/Rune structure, final (turn 326), Open; memory-canon (open-decisions § Pending; campaign-canon § Tumak Swan); framework § Open
 
-- **[decide]** Which two runes are active now
-  Still undefined. Set them. The left sole (08) is now matched; see the Tu's-half fix below.
+- **[decide]** Which two runes are active now *(shape)*
+  Still undefined, and the redo does not touch it. Set them. The left sole (08) is now matched; see the Tu's-half fix below.
   src: chat-voyage-6-7-planning § Open; framework § Open
 
-- **[decide]** Rune Set spellcasting ability
+- **[later]** Rune Set spellcasting ability
   Proposed at turns 329 and 331, no reply: Rune Set spells use Charisma, with save DC 8 + proficiency bonus + CHA modifier, cast at the set's tier with no upcasting. Accept or reject, then add to § The four Wayscribes.
   src: TGB § Tumak/Open
 
-- **[decide]** Wayfind reach gated by matched runes
-  Proposed at turn 333 after Korey's H'catha example ("Something has to scale the wayfind distance"): reach by matched count, 1–3 Touch (≤100 ft.); 4–6 Local (~10 miles); 7–9 Planetary; 10–12 System; 13–15 Near wildspace; 16 Deep. An attempt beyond reach fails at no cost. Marks can still be placed at any distance. Korey moved on to cost without objecting; he did not accept it. The page has no reach table, but says "grows with the inscription" (§ Wayfind) and "the range grows with the inscription" (§ Running it); both lines follow this ruling.
+- **[add]** Wayfind reach gated by matched runes *(answered)*
+  Add to § Wayfind as a reach table, and rewrite "grows with the inscription" (§ Wayfind) and "the range grows with the inscription" (§ Running it) to point at it:
+  | Matched runes | Reach |
+  |---|---|
+  | 1–3 | Touch: within 100 feet |
+  | 4–6 | Local: within 10 miles |
+  | 7–9 | Planetary: anywhere on the same world |
+  | 10–12 | System: any world in the same wildspace system |
+  | 13–15 | Near wildspace: an adjacent system |
+  | 16 | Deep wildspace: any of his marks |
+  "A Wayfind to a mark beyond his reach fails without cost: no roll, no exhaustion. The mark stays where it is, waiting. He can place marks at any distance; only the journey is gated."
+  answered: the Wayfind redo, turns 330–335 of the Tumak chat (fa2979bd), which Korey says is his latest system; turn 333 (Korey's H'Catha example: "Something has to scale the way find distance"); he moved straight to cost (turn 334) and did not revisit it.
   src: TGB § Tumak/Open, Superseded (Wayfind range)
 
-- **[decide]** Distance-band thresholds
-  The page gives six mishap bands ("0% · 20% · 40% · 60% · 75% · 90%, rising with range") with no distances behind them. Proposed at turn 329: Touch ≤100 ft. / Local / Planetary / System / Near wildspace / Deep wildspace. The locked exhaustion rule uses four distances (within 100 ft. / same planet / same system / cross-system; see the Wayfind cost fix), so set the bands to agree with it, or adopt the reach-gate bands if that passes.
+- **[fix]** Distance bands *(answered)*
+  The page's six mishap percentages ("0% · 20% · 40% · 60% · 75% · 90%, rising with range") get the reach-gate bands behind them: Touch 0%, Local 20%, Planetary 40%, System 60%, Near wildspace 75%, Deep wildspace 90%. The four-distance exhaustion rule (within 100 ft. / same planet / same system / cross-system) is retired with the turn-267 cost (see the cost add).
+  answered: the Wayfind redo, turns 330–335 of the Tumak chat (fa2979bd), which Korey says is his latest system; turns 331 and 333
   src: TGB § Tumak/Open; framework § Open
 
-- **[decide]** Tiered mishap consequences
-  Proposed at turn 331, after Korey said a mishap at level 4 "would be really bad"; he did not confirm it. By band: Touch, none; Local, a fizzle plus 1 exhaustion; Planetary, a 1d10-mile overshoot; System, a short separation on the destination world; Near wildspace, sanctuary plus twin at origin; Deep wildspace, two sanctuaries. Options: keep the one fixed mishap result (the twins split to two sanctuaries; see the mishap-result fix), or adopt the tiers. The Near-wildspace tier brings back "twin at origin", which Korey rejected at turns 251–252.
+- **[add]** Tiered mishap consequences *(answered)*
+  Replace the single mishap result with a consequence for each band:
+  | Band | Mishap | What a mishap does |
+  |---|---|---|
+  | Touch | 0% | Nothing; no roll. |
+  | Local | 20% | Fizzle. The Wayfind does not happen; 1 exhaustion; he stays put. |
+  | Planetary | 40% | Overshoot. Both twins arrive safely, 1d10 miles off target in a random direction. |
+  | System | 60% | Short separation. The twins land at different points on the destination world; the Compass points them together; reunion in hours. |
+  | Near wildspace | 75% | Standard mishap. The active twin and the party land at a Runekeeper sanctuary; the other twin stays at the origin; reunion in days. |
+  | Deep wildspace | 90% | Full mishap. The twins land safe at different sanctuaries; reunion is a multi-session arc. |
+  Network bonuses and the floor still apply to the roll. This is the latest form; the Near-wildspace row brings back "twin at origin", which Korey had replaced at turns 251–252, and the redo supersedes that.
+  answered: the Wayfind redo, turns 330–335 of the Tumak chat (fa2979bd), which Korey says is his latest system; turn 331 (Korey, turn 330: a mishap at level 4 "would be really bad"); "Mishap tiers" locked in the turn-331 pre-launch list, unchallenged after
   src: TGB § Tumak/Open
 
-- **[decide]** Wayfind cost: the turn-335 proposal
-  The locked rule is exhaustion by distance band (see the Wayfind cost fix). Proposed at turn 335 and unanswered: one free Wayfind per long rest in any band, Touch always free, otherwise exhaustion equal to the band (1–5). The chat ends on three questions: does the daily free Wayfind apply in every band; is Homebound fully free; do Anchors pay full cost, one band less, or nothing. Keep the turn-267 rule, or adopt this and answer the three.
+- **[add]** Wayfind cost by band *(answered)*
+  Replace the cost row: "The first Wayfind per long rest is free, in any band. Touch jumps (within 100 feet) are always free. Each further Wayfind costs exhaustion equal to its band: 1 for Local, 2 for Planetary, 3 for System, 4 for Near wildspace, 5 for Deep wildspace. Homebound is always free: no exhaustion, no mishap, no reach gate."
+  Turn 335's first two questions are answered by its own rule text (the daily free applies in every band; Homebound is fully free). The third, what Anchors pay, stays with the Anchor decide above.
+  answered: the Wayfind redo, turns 330–335 of the Tumak chat (fa2979bd), which Korey says is his latest system; turn 335 clean rule text
   src: TGB § Tumak/Open, Superseded (Wayfind cost)
 
-- **[decide]** Network modifiers: where Tumak stands, or which set placed the target
-  Chat (turns 241–247, 262): jumping from one of his own marks lowers the mishap, a little if the two marks come from different sets and more if from the same set, and only when Tumak stands at a mark as he casts. A jump from anywhere else is allowed at full risk (turn 246). Page: "−10% if the mark was placed by a rune from another set; −25% if from the same set", with no standing condition. Rule which reading holds, then reword § Wayfind → Network modifiers and add the full-risk line.
+- **[fix]** Network modifiers apply only when Tumak stands at a mark *(answered)*
+  Page: "−10% if the mark was placed by a rune from another set; −25% if from the same set", with no standing condition. Change § Wayfind → Network modifiers to: the network helps only when Tumak is standing at one of his own placed marks as he casts. If the destination mark is from the same set, add 25 to the d100 roll; if from a different set, add 10. Cast from anywhere else, the Wayfind is allowed at full risk with no bonus. The network buys safety, never energy: exhaustion is the same either way. (The d100 bands themselves are the Wayfind-odds fix below.)
   src: TGB § Tumak/Wayfind, Open
+  answered: inbox/chat-crew-tumak-gregory-bartholomew.md § Tumak/Wayfind (Settled, turns 241–247, 262). Confirmed in the chat: Korey, "he can use a marked rune to [hop] to another marked rune from the same set and mitigate the mishap chance"; the +25/+10 numbers are from the mechanics spec wayfinder-runekeeper-mechanics.md (turn 268), § Set network mechanic.
 
-- **[decide]** The early-home door
+- **[decide]** The early-home door *(shape)*
   Keep or drop: a natural 20 on a d20, rolled before declaring a target, then a confirmation roll to reach home ahead of the arc.
+  Missing from the sources: the redo never mentions it. Under the reach gate home is out of reach until the Heart awakens at 16, so keeping the door makes it an explicit exception to the gate.
   src: TGB § Tumak/Open; framework § Open
 
-- **[decide]** Does Sending work between separated twins?
+- **[later]** Does Sending work between separated twins?
   An open proposal, never confirmed. Accept and add beside the Twin Bond Compass, or reject.
   src: TGB § Tumak/Open
 
-- **[decide]** How resources split when the twins separate
-  Korey's working position (turn 257): the separated twins split resources about in half (spell slots, sorcery points, Runechild charges, psionic dice), and both keep the full spell list. Earlier he floated half HP, half spell slots and maybe half skills (turn 140). Still to rule: HP, death, consumables, and the exact split. Then add to § Wayfind → While separated.
+- **[decide]** How resources split when the twins separate *(shape)*
+  Korey's working position (turn 257): the separated twins split resources about in half (spell slots, sorcery points, Runechild charges, psionic dice), and both keep the full spell list. Earlier he floated half HP, half spell slots and maybe half skills (turn 140). Missing from the sources: the redo does not address it. Still to rule: HP, death, consumables, and the exact split. Then add to § Wayfind → While separated.
   src: TGB § Tumak/Separation and attempts, Mishap and separation, Open
 
-- **[decide]** How separated twins reunite
-  Settled (Korey, turn 227): they reunite through the campaign, through the crew or by other means. Proposed at turn 329, no reply: by travel, by following the Compass pull, or by one return Wayfind from the sanctuary. A return Wayfind conflicts with the page line "Wayfind locks until the twins reunite", so adopting it rewrites that row.
+- **[add]** How separated twins reunite *(answered)*
+  Add to § Wayfind → While separated: "The twins reunite by travel, through the crew, or by following the Twin Bond Compass. Wayfind stays locked until they do. A System mishap reunites them within hours, a Near-wildspace mishap within days, and a Deep-wildspace mishap over several sessions." The return-Wayfind proposal (turn 329) is not adopted, so the "Wayfind locks until the twins reunite" row stands.
+  answered: the Wayfind redo, turns 330–335 of the Tumak chat (fa2979bd), which Korey says is his latest system (turn 331 tier table: reunion in hours, days, a multi-session arc; "Twin Bond Compass points them together"); Korey, turn 227 (reunion through the campaign, the crew or other means)
   src: TGB § Tumak/Mishap and separation, Open
 
-- **[decide]** Mark lifecycle and Perceive details
-  Proposed at turn 329, no reply. Marks: whether a mark can sit on an object or a willing creature, what anti-magic does to one, and what happens to a mark inside a Bag of Holding. Perceive: sight and hearing only, with Tumak's own senses blinded while he perceives. Rule each, then add to the Marks row.
+- **[decide]** Mark lifecycle and Perceive details *(shape)*
+  Proposed at turn 329, no reply, and the redo left it open (turn 331: "still needs the one-page ruleset on duration, concurrency, creatures, anti-magic"). Marks: whether a mark can sit on an object or a willing creature, what anti-magic does to one, and what happens to a mark inside a Bag of Holding. Perceive: sight and hearing only, with Tumak's own senses blinded while he perceives. Rule each, then add to the Marks row.
   src: TGB § Tumak/Open
 
-- **[decide]** 2014 or 2024 exhaustion rules
-  Pick one; Rune Set spells and Wayfind both cost exhaustion.
+- **[decide]** 2014 or 2024 exhaustion rules *(shape)*
+  Pick one; Rune Set spells and Wayfind both cost exhaustion. Missing from the sources: Korey never picked. The redo's worked examples read the 2014 table (level 1 disadvantage on ability checks, level 2 speed halved), but that is Claude's framing, not a ruling.
   src: TGB § Tumak/Open (turn 145)
 
-- **[decide]** The retroactive backfill: when the two runes land
-  Korey intends two more rune-halves per twin to backfill levels 1–2, dropped in between V3 and V5 (turn 134), and restated "give him two runes as well" at turn 259. The page has no backfill. Rule when they land and which positions they take (rolled, or placed by the DM), then update the position table and "Current state".
-  src: TGB § Tumak/Open, Rune structure, final
+- **[decide]** The retroactive backfill: when the two runes land *(prep)*
+  Settled: two more rune-halves per twin backfill levels 1–2 (turn 134; restated "give him two runes as well" at turn 259), and they are DM-placed, not rolled: the backfill pair counts among the up-to-four runes at DM discretion (turns 259–260; see the safety-valve add). Still open: when they land, since the planned window (between V3 and V5) has passed (options: at V007's quiet stretch, or at the next level-up), and which positions they take (place them to steer toward a first complete set, or to match existing halves). Then update the position table and "Current state".
+  src: TGB § Tumak/Open, Rune structure, final ("Up to four runes are at DM discretion: two to backfill levels 1–2")
 
-- **[decide]** An optional spell-inscription track
+- **[later]** An optional spell-inscription track
   A spell-inscription track separate from the runes. Keep or drop.
   src: TGB § Tumak/Open (turn 137)
 
@@ -3864,15 +3799,18 @@ against the complete Tumak sweep (all 336 turns).
   src: TGB § Tumak/Rune structure, final; memory-canon (open-decisions § Voyage 007, first rune match)
 
 - **[fix]** Wayfind cost: exhaustion by distance
-  Page says "First Wayfind per long rest is free. Each further one adds a level of exhaustion." Locked at turn 267 (Korey's "Interpretation A"): each Wayfind costs exhaustion by distance: within 100 ft. 0, same planet 1, same system 2, cross-system 3. The network buys safety, not energy, so marks lower the mishap and never the exhaustion. A later proposal is a decide above.
+  Page says "First Wayfind per long rest is free. Each further one adds a level of exhaustion." Locked at turn 267 (Korey's "Interpretation A"): each Wayfind costs exhaustion by distance: within 100 ft. 0, same planet 1, same system 2, cross-system 3. The network buys safety, not energy, so marks lower the mishap and never the exhaustion.
+  updated (backlog pass): superseded by the redo. Write the cost from "Wayfind cost by band" above; the network still buys safety, never energy.
   src: TGB § Tumak/Wayfind, Superseded (Wayfind cost)
 
 - **[fix]** Wayfind odds: three outcomes, rare mishaps
+  updated (backlog pass): the redo keeps one mishap percentage per band and tiers the consequence (see "Tiered mishap consequences") instead of a separate failure band. The floor (1% in-network, 5% cross-system) and the network bonus stand; write the bands from the reach-gate and distance-band items.
   Page gives one mishap percentage per band and "Floor 5% during the arc, except within 100 feet and for the Heart once it awakens." Settled: mishaps are rare, and each band carries a chance of plain failure (Korey, turn 253). The roll is a d100 with three outcomes: mishap, failure, success (turns 254, 268). The floor is 1% in-network at most ranges and 5% cross-system (turns 258, 268), and a mishap stays possible in-network (turn 257). Replace the single percentages with the three-outcome bands from the mechanics spec `wayfinder-runekeeper-mechanics.md`. That file is not in the repo, so copy the numbers from the chat output.
   src: TGB § Tumak/Wayfind, Mishap and separation; TGB § Tumak/Documents produced
 
 - **[fix]** Mishap result: two sanctuaries
   Page says "The twins separate, and the traveler arrives at a previous Wayfinder's resting place. On a group jump the party lands at that sanctuary with one twin; the other stays at the origin." Change to: the twins separate, and each lands safe at a different previous Runekeeper's resting place. Never home. On a group jump the party goes with the active twin. Korey replaced "the other stays at the origin" at turns 251–252. Use "Runekeeper", not "Wayfinder", for the resting places.
+  updated (backlog pass): this is now the Deep-wildspace row of "Tiered mishap consequences"; write the mishap result as that table.
   src: TGB § Tumak/Mishap and separation, Superseded
 
 - **[fix]** Perceive through a mark needs concentration
@@ -3945,13 +3883,13 @@ against the complete Tumak sweep (all 336 turns).
 
 ### rules/wayfinder-path-dm.html
 
-- **[decide]** The floating runes 17–19
+- **[decide]** The floating runes 17–19 *(shape)*
   The page lists runes 17, 18 and 19 as "Floating (DM-bestowed)" placeholders. Update when the Anchor decide on rules/index.html lands.
   src: memory-canon (open-decisions § Pending)
 
 ### statblocks/index.html
 
-- **[decide]** Ostekk-10's stat block and Lightning Breath
+- **[decide]** Ostekk-10's stat block and Lightning Breath *(prep)*
   Build the stat block. For Lightning Breath, options: the 12d10 line; or the 20-ft. cone the table saw (suggested 4d10, DC 16 Dex).
   src: chat-voyage-6-7-planning § Open
 
@@ -3991,7 +3929,7 @@ against the complete Tumak sweep (all 336 turns).
   overlay.json says "The Command Deck's field unmakes constructs". Change to: the field froze the clockwork horrors, slowed the OSTEKK units and kept the behir out.
   src: chat-voyage-6-7-planning § The field and constructs
 
-- *(The OSTEKK-2 "wake it for good" line in overlay.json is a decide under artifacts/containment-engine.html in the Artifacts and vessels section.)*
+- *(The OSTEKK-2 "wake it for good" line in overlay.json is a decide (prep) under artifacts/containment-engine.html in the Artifacts and vessels section.)*
 
 ### wayfinder-path/index.html (player site, outside prime)
 
@@ -4003,13 +3941,20 @@ against the complete Tumak sweep (all 336 turns).
   Korey sends the tracker link only to Tumak's player, or puts it on the character sheet marked player-only (turn 162). Record this with the rules page's tracker links.
   src: TGB § Tumak/Player tracker
 
-### aspects/index.html (player site, outside prime)
-
-- **[decide]** Crocodile "Hold Breath"
-  Options: rename it Breathless; or limit it to 1 hour.
-  src: chat-voyage-6-7-planning § Open
-
 # New pages
+
+### NEW: Languages (reference)
+
+- **[add]** A home for invented languages
+  Purpose: one DM reference for every made-up language in the cosmos, so names stay consistent. Voice: DM. First entry: the Vth'orama tongue, with its roots (vth- the whole of; ghath to hold and keep hold; n'- one who, one that is; -rod unbroken, that does not release; ulh the cull; -an negation; mer- to bear; enna near, inner; or- toward; amu home; -a a people), and the glossed words (Vth'orama, Vth'oramu, Vth'ghathu, Vth'ulhan, Vth'merru, n'ghathu, Enna Vth'ghathu, N'ghathrod). Add a section per language as others appear (Githyanki, chapter names for the Seekers).
+  src: Korey, 2026-10-25 (round 4); factions/vthorama.html § Roots
+
+### NEW: Fringe watcher of the cosmos (dossier, later)
+
+- **[later]** The sage who sees it coming
+  A fringe figure who senses that something is wrong in the cosmos and has his own name for it, but no one believes him, in the vein of Ascher Mir. Who, where, and what he calls it can wait.
+  src: Korey, 2026-10-25 (round 4)
+
 
 Each proposed new page has a purpose, a voice, and its content items. Paths are
 suggestions for the overhaul. Items run decide, fix, drop, add.
@@ -4031,7 +3976,7 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 - **[add]** Dry Well, Anadia (Grade IV)
   The settlements of Dunmarrow and Kesh Hollow share a water compact four generations old. Elder Tobb Ashlow of Dunmarrow took payment from surveyors to deepen the well; Neth Kesh speaks for Kesh Hollow. Below the well is a chamber holding the eye-in-a-wheel and the bodies of four missing labourers. The surveyors were a tall, quiet woman and a talkative man; a child's drawing of them has their eyes wrong; they went inland toward the ranges.
-  DM: the chamber is a failed survey for the heart's Atrium (term per the Atrium/Aperture decide), and Tumak's runes surface there. Link to Colony Ops "How they search" (colony/index.html, Anadia well). Dunmarrow appears on no realms page yet.
+  DM: the chamber is a failed survey for the heart's Atrium, and Tumak's runes surface there. Link to Colony Ops "How they search" (colony/index.html, Anadia well). Dunmarrow appears on no realms page yet.
   src: chat-cosmic § Graduation board contracts; colony/index.html (Anadia well)
 
 - **[add]** Repossession (Grade IV)
@@ -4058,7 +4003,7 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 **Voice.** DM for the table; in-world for each ship, person and history entry.
 
-- **[decide]** Lock or change each Crossing Companion proposal
+- **[decide]** Lock or change each Crossing Companion proposal *(prep)*
   Unreviewed: d20 crossing entries 9–20; the *Hollow Bell* and Corrow (a world mid-Zenith); the *Fennick* plate; Oswin Pell and the Listeners of the Low Bell (the first account of the voice); Kith'rak Aznuil and the two-circle Passage mark; the *Steady Hand*, Warden Oru Basz and the *Marrow Gull* buoy; Thistlewhit's letter to Mirt; the frozen autognome ("Hold until called"); the creed lines; Watcher history (the Quiet of Seln, Aubrin's Hand, the Ferry Arrangement, the Neogi Winter, the Ashfall contract, where Tarto lost her wing flap); Driftwarden grades IV–I shown by collar knots.
   src: astral § Open
 
@@ -4072,11 +4017,12 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 **Voice.** In-world.
 
-- **[decide]** How the crew could reach Oerth's sphere, and how late
+- **[later]** How the crew could reach Oerth's sphere, and how late
+  Known from STAGING: Oerth lies in SPH-05, the sphere farthest from Caelestis's; the Radiant Citadel and the Core Monolith are late Arc 3 or Arc 4 destinations, reached by a long voyage or through a linked heart.
   src: working/vecna.md § Open
 
 - **[add]** Oerth
-  Oerth is Vecna's homeworld, in a far sphere of its own. He achieved godhood there. It is the centre of his worship, the anchor of his realm (published name Cavitius), and the place where his hold is strongest. The Monolith from his ascension still stands on Oerth, and his faithful treat it as the holiest site in the cosmos. Oerth is the darkest timeline in miniature: a world where heroes rose against him and failed. It can be reached, and visiting it is horrible.
+  Oerth is Vecna's homeworld, in SPH-05, the sphere farthest from Caelestis's. He achieved godhood there. It is the centre of his worship, the anchor of his realm (published name Cavitius), and the place where his hold is strongest. The Monolith from his ascension still stands on Oerth, and his faithful treat it as the holiest site in the cosmos. Oerth is the darkest timeline in miniature: a world where heroes rose against him and failed. It can be reached, and visiting it is horrible.
   src: session-rulings; working/vecna.md § Oerth, § Realm; memory-canon (open-decisions, Vecna/gods 2026-10-25)
 
 ### NEW: Exandria (realm stub or registry line)
@@ -4085,7 +4031,7 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 **Voice.** In-world for the stub; DM for the borrowing note.
 
-- **[decide]** Exandria's sphere
+- **[later]** Exandria's sphere
   Place it, or leave it unplaced.
   src: memory-canon (open-decisions)
 
@@ -4100,9 +4046,9 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 **Voice.** In-world.
 
-- **[decide]** Where the Hall is
-  Its world, station or sphere is not set.
-  src: memory-canon § Key NPCs (Ezra); working/glyth-watcher.md § Where she fits
+- **[decide]** Where the Hall is *(prep)*
+  Partly settled by STAGING § The Order (round 5): the Hall of Sight and Sound is the great hall within the Order's seat, so the Crossing Companion's identity question is answered. Still open: where the seat is. Its world, station or sphere is not set. Known around it: the H'Catha report ran Watcher → Hall → Fleet Corps → Academy, so the Hall is in reach of Caelestis's channels; Ezra trained about a century in the Hall of Sight and Sound (dossiers/ezra.html). Unreviewed: the Crossing Companion proposes that the Hall of Sight and Sound is the Hall of the Watchers. Rule that identity first, then place it: inside SPH-01 (the Watcher Transport contract is a graduation-grade job, so it should be reachable from Realmspace), or farther out.
+  src: memory-canon § Key NPCs (Ezra); working/glyth-watcher.md § Where she fits; astral § Caelestis structure, § Open (Crossing Companion proposals); chat-cosmic § Rules and crew (Hall of Sight and Sound)
 
 - **[add]** The Hall of the Watchers
   The Hall of the Watchers is the seat of the Watcher order. Watchers serve one per region, so a world may have several, depending on its size and who lives there.
@@ -4114,24 +4060,24 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 **Voice.** In-world.
 
-- **[decide]** Her name
+- **[later]** Her name
   src: glyth-watcher § Open
 
-- **[decide]** Her tell
+- **[later]** Her tell
   Options: her ears; her mouth; skin that ripples under the surface.
   src: glyth-watcher § Sketch
 
-- **[decide]** How she got out, and what it cost
+- **[later]** How she got out, and what it cost
   src: glyth-watcher § Open
 
-- **[decide]** What she wants now
+- **[later]** What she wants now
   Options: revenge; a cure; to go back.
   src: glyth-watcher § Open
 
-- **[decide]** Whether the Order trusts her
+- **[later]** Whether the Order trusts her
   src: glyth-watcher § Open
 
-- **[decide]** Where she lives
+- **[later]** Where she lives
   Options: the Hall of the Watchers; Caelestis's undecided secret sliver.
   src: glyth-watcher § Where she fits
 
@@ -4163,11 +4109,11 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 **Voice.** In-world; DM for the seed.
 
-- **[decide]** The faith's name
+- **[later]** The faith's name
   Options: The Willing and Taken; The Hollow Faithful; The Willing Departed; The Welcomed Home. "The Following" is retired and unavailable.
   src: BCS § Boogie/Open
 
-- **[decide]** Which planets hold the faith
+- **[later]** Which planets hold the faith
   src: BCS § Boogie/Open
 
 - **[add]** The faith
@@ -4184,7 +4130,7 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 **Voice.** In-world (the tale itself); one DM note in prime.
 
-- **[decide]** "The Unfolding"
+- **[later]** "The Unfolding"
   The tale's inherited name for the hiding is "the Unfolding", which collides with the glossary's heart-opening sense of "unfolding". Options: keep both; rename the tale's term; or rename the glossary sense.
   src: TGB § Tumak/"The Becoming" handout; glossary/
 
@@ -4231,7 +4177,7 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 **Voice.** DM.
 
-- **[decide]** Whether the board's forward columns are editable
+- **[later]** Whether the board's forward columns are editable
   src: chat-cosmic § Open
 
 - **[add]** What the board shows
@@ -4258,13 +4204,14 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 **Voice.** DM.
 
-- **[decide]** The ensemble of legendary figures
+- **[later]** The ensemble of legendary figures
   Who the named-but-unseen figures are. spine.html lists it under Open development.
   src: chat-cosmic § Open; campaign/spine.html
 
-- **[decide]** The edge-of-system Awoken equivalent
-  Something kept under wraps at the system's edge, with Mara Sov- and Osiris-style figures. Design it.
-  src: chat-cosmic § Open; memory-canon
+- **[add]** The edge mystery
+  Ruled (STAGING round 8). Add (DM voice): "A mystery lies at the edge, outside Realmspace, in another system or between systems. It will cross paths with Vth'oramu once N'ghathrod grows bolder." Planning layer: it needs an introduction before that.
+  The sovereign and the Osiris-style figure ride with the brainstorm item under campaign/spine.html ("The Fleet's strain in broad strokes").
+  src: Korey, 2026-10-25 (round 8); chat-cosmic § Open
 
 - **[add]** The patterns
   - Worlds state true facts they never explain (the Destiny's Reef effect).
@@ -4275,6 +4222,11 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   src: chat-cosmic § Cosmos texture; memory-canon
 
 ### NEW: DM principles
+
+- **[decide]** Contract categories *(prep)*
+  Ruled: three or four categories by how a contract ties to the world (loose, Seekers-tied, personal, more as needed), and contracts surface from a world already in motion (STAGING round 4). Name the categories and set how many of each the board offers at a time.
+  src: Korey, 2026-10-25 (round 4)
+
 
 - **[add]** Situations, not scripts
   Put situations into the world and let the characters respond, or do nothing. Threads are not scripted toward an outcome.
@@ -4319,25 +4271,28 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 ### hub.html
 
-- **[decide]** The hub's central question
-  The hub asks "Who decides what's real?" The stated campaign theme is that everything is separated from what it belongs to and trying to get back, and the campaign's question is whether a home can be made or only returned to, and what making one from what was taken costs. Options: replace the tagline with the belonging question, or keep both.
+- **[fix]** The hub states the theme, not a question *(answered)*
+  Remove "Who decides what's real?" from the hub; it is retired. The campaign has no central question. It has a theme: everyone is missing something and is trying to become whole, to find or make their place in the cosmos. The theme takes a different shape at each level: Vecna wants the answer to the cosmos and what was taken from him; N'ghathrod wants a home for his people; Casey wants his brother; Tumak wants his home; Bartholomew wants the peace within him, his constellation; Boogie wants to belong to something; Astra Virex wants to heal. Where the hub carried the tagline, it carries the theme line. (Earlier wording: the hub asks "Who decides what's real?"; memory's stated theme was that everything is separated from what it belongs to and trying to get back, with the question of whether a home can be made or only returned to. Both are superseded; update memory.)
   src: memory-canon § Deferred ("Stated campaign theme"); chat-cosmic § Open
+  answered: STAGING § The theme (round 2)
 
-- **[decide]** Which Lore Bible is current
-  The hub's "Wildspace Lore Bible" tile opens doc `1XjOAGPA…`. The project's synced Lore Bible is "Caelestis Campaign Lore Bible" (doc `1SLoMt7h9DboUQQlXZA61HukmnQBkjHKUNtLH2Qt4IMQ`). Confirm which is current, then fix the link and label.
-  src: hub.html; project synced sources
+- **[later]** Which Lore Bible is current
+  The hub's "Wildspace Lore Bible" tile opens "Caelestis Wildspaces Lore Bible" (doc `1XjOAGPAWvDivwI2ThihwCG84ACk2eF_HKtzbxgbVTMQ`, about 3 KB). The project's synced Lore Bible is "Caelestis Campaign Lore Bible" (doc `1SLoMt7h9DboUQQlXZA61HukmnQBkjHKUNtLH2Qt4IMQ`, about 13 KB). Drive shows both created and last edited on 2026-04-12, untouched since. The Campaign Planning chat folded the Lore Bible into the DM wiki (turn 56), so neither is the live source now. Options: point the tile at the Campaign Lore Bible and relabel it; or retire the tile, since prime/ replaced both.
+  src: hub.html; project synced sources; Drive metadata (checked 2026-10-25); chat-early-planning § DM wiki and naming (turn 56)
 
-- **[decide]** Which Drive folder is the root
-  The hub's Drive Root tile opens folder `1suJFIN_LYDmRrkzjk3PkVv2pOmbJxE8r`. Memory gives the Caelestis folder as `1KuFCCLYKM2LuW6Hd4NEDq9GIsHL2L3Y5`. Confirm and fix.
+- **[fix]** The hub's Drive Root is right; memory's folder id is the rune images folder *(answered)*
+  No page change. The hub's Drive Root tile opens `1suJFIN_LYDmRrkzjk3PkVv2pOmbJxE8r`, which Drive names "Caelestis". Memory's `1KuFCCLYKM2LuW6Hd4NEDq9GIsHL2L3Y5` is a folder named "runes" (created 2026-06-18), where Tumak's rune images live. Update memory's site-and-automation line: the Caelestis folder is `1suJFIN_LYDmRrkzjk3PkVv2pOmbJxE8r`, and `1KuFCC…` is the runes folder.
   src: hub.html; memory-canon § Tools and gotchas
+  answered: Drive metadata for both ids (checked 2026-10-25); inbox/chat-crew-tumak-gregory-bartholomew.md § Tumak/Documents produced (rune images in folder 1KuFCC…)
 
-- **[decide]** The Trackers band
+- **[later]** The Trackers band
   It says "The Tracker reads the record; the sheets beside it are edited in place." The Google Sheet tracker is frozen, and tracker alternatives are under review. Options: keep the Character Arc Tracker and Wildspace Tracker cards, or retire them. Follows the sheet decide in the Automation and tracker section.
   src: memory-canon § Automation pipeline; memory-canon (open-decisions, Plan 2026-10-25)
 
-- **[decide]** The Ascension card's "second key"
-  The card lists "the second key", which depends on the first-key decide on artifacts/runekeepers-fragment.html. Keep or drop after that ruling. (The card's Atrium wording follows the Atrium/Aperture decide.)
+- **[fix]** The Ascension card keeps "the second key" *(answered)*
+  No change. The card lists the sections of campaign/ascension/, and "The second key" there is the Rod route: a single fragment made whole (all seven Rod pieces, brought before the Atrium) forces the First Heart, which is why Vecna has never assembled a fragment and holds the whole Rod as his fallback. That stands whatever is ruled about the twins. The card's Atrium wording also stands (Atrium is answered in the Artifacts and vessels section).
   src: the Artifacts and vessels section (runekeepers-fragment decide)
+  answered: campaign/ascension/index.html § The second key (Canon); inbox/chat-cosmic-campaign-structure.md § Cosmology redesign ("The near-complete Rod is a beacon, so Vecna has never assembled a fragment; the whole Rod is his fallback"), § Superseded (Aperture → Atrium)
 
 - **[add]** A Vessels card under Setting
   The DM nav has Setting → Vessels, but the hub has no Vessels card. PR #71 added Factions and Vessels cards on the player side.
@@ -4351,11 +4306,12 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 #### notes/PAGE-SHAPE.md
 
-- **[decide]** Dossier tab grammar
-  PAGE-SHAPE.md uses four tabs: Who they are / What they want / DM notes / Stat block, and explains folding "What's hidden" into DM notes. The earlier rule (turn 460) had five: What it is / What it wants / What's hidden / Running it / Stat block. Options: keep PAGE-SHAPE's four, or return to five.
+- **[fix]** Dossier tab grammar: PAGE-SHAPE's four tabs stand *(answered)*
+  No change to PAGE-SHAPE.md. The four tabs Who they are / What they want / DM notes / Stat block are the current rule, with "What's hidden" folded into DM notes. The five-tab set from turn 460 (What it is / What it wants / What's hidden / Running it / Stat block) was replaced: PR #77, "the four-tab dossier shape", moved every dossier to four tabs and rewrote PAGE-SHAPE.md, and Korey merged it on 2026-10-18, after the cosmic chat's turn 460 (that chat's page-shape work merged as PR #60 on 2026-10-07 and PR #63 on 2026-10-11). The same item in the Repo and process section closes with this one.
   src: chat-cosmic § Wiki structure rules (turn 460)
+  answered: repo history (PR #77, merged 2026-10-18: "Formatting pass across the DM wiki, and the four-tab dossier shape"; last change to prime/notes/PAGE-SHAPE.md)
 
-- **[decide]** A motivation rubric for "What they want"
+- **[later]** A motivation rubric for "What they want"
   The early master source doc gave every NPC four lines: **Wants** (specific, never "a happy life"), **Will do to get it** (the tools they will actually use), **Won't cross** (the line they keep), and **Current pressure** (what makes it urgent now, or nothing). Options: adopt it as the shape of the "What they want" tab (or its successor), keep it as a writing check only, or leave it out.
   Touches: PAGE-SHAPE.md, every prime dossier if adopted.
   src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300)
@@ -4421,53 +4377,54 @@ run decide, fix, drop, add.
 
 ### Pipeline and tracker
 
-- **[decide]** Session ingest
+- **[later]** Session ingest
   Current: the in-chat runbook above, with two approvals and a PR. Options: (a) keep the in-chat runbook as is; (b) keep it and trim steps (for example, drop the Crew Logs append, see below); (c) adopt an alternative pipeline. Whatever is chosen, SESSION-RUN.md and CLAUDE.md change together.
   src: automation § Voyage 5 Method; memory-canon (open-decisions, Plan 2026-10-25; site-and-automation)
 
-- **[decide]** The tracker
+- **[later]** The tracker
   Current: the repo JSON record (`data/` plus `prime/data/`), checked in CI and shown on `prime/tracker/`; the Sheet is frozen. Options: (a) keep the repo record as the tracker; (b) move to a tracker alternative, which would need its own player/DM boundary to replace what the closed schema gives now. Touches hub.html (Trackers band), prime/tracker/, SESSION-RUN.md, DATA-BOUNDARY.md.
   src: automation § Voyage 5 Method; memory-canon (site-and-automation; open-decisions, Plan 2026-10-25)
 
-- **[decide]** The Character Arc Tracker and Wildspace Tracker sheets
+- **[later]** The Character Arc Tracker and Wildspace Tracker sheets
   Both are unmigrated. Options: fold them into the record (arcs into the DM layer, wildspace into locations); keep them as sheets; or retire them. The hub's Trackers band follows (see the New pages section, hub.html).
   src: automation § Open (both chats)
 
-- **[decide]** The Crew Logs Google Doc
+- **[later]** The Crew Logs Google Doc
   Korey calls it unused, yet the V005 run appended to it, the runbook's step 7 still does, and the voyage pages carry the same text. Options: retire it (drop step 7's append and the `logs/` embed); or keep appending.
   src: automation § Open; prime/notes/SESSION-RUN.md step 7
 
-- **[decide]** Deploy and search
+- **[later]** Deploy and search
   Current: deploy.yml builds the three Pagefind indexes and guards the record; the transform and scaffold steps are gone, and `scripts/_benched/` is out of service. Options: keep as is, or revise during the overhaul (for example, retire or delete the benched scaffolder).
   src: automation § Documents produced; memory-canon (site-and-automation); scripts/_benched/README.md
 
 ### DM views
 
-- **[decide]** The Campaign Board and a Chronicle view
-  The Campaign Board is an arc timeline with a "where are we" marker and parallel tracks; a Chronicle view was also planned. `prime/timeline/` exists (timeline.json with lanes and clocks); neither view is built under those names, and the Board exists only as claude.ai artifacts. Options: treat `prime/timeline/` as the Campaign Board and extend it; or build the Board and Chronicle as separate pages. See the New pages section, NEW: Campaign board.
-  src: framework § Open; memory-canon (open-decisions, DM views)
+- **[later]** The Campaign Board and a Chronicle view
+  The Campaign Board is an arc timeline with a "where are we" marker and parallel tracks; a Chronicle view was also planned. `prime/timeline/` exists (timeline.json with lanes and clocks); neither view is built under those names, and the Board exists only as claude.ai artifacts. Korey's latest steer: the timeline view should be a linear event timeline, not a list of bearings (bearings/timeline.html stays an unlinked draft), and for the cosmic timeline he is open to formats beyond the chapter-flow layout. Options: treat `prime/timeline/` as the Campaign Board and extend it with planned-against-actual per voyage; or build the Board and Chronicle as separate pages. See the New pages section, NEW: Campaign board.
+  src: framework § Open; memory-canon (open-decisions, DM views; Locked 2026-10-25, timeline formats); chat-voyage-6-7-planning § Open ("Korey wants a linear event timeline"), § Superseded (timeline page unlinked)
 
-- **[decide]** Where the weather of reality is tracked
-  timeline.json has no clock or lane for it. Options: a timeline clock; a timeline lane; or a tracker row.
-  src: framework § Open; memory-canon (campaign-canon)
+- **[later]** Where the weather of reality is tracked
+  Settled: it is tracked on the campaign view (canon: "rarely seen early but must be tracked on the campaign view"), so a tracker row is out; the tracker shows the player record plus the DM overlay. timeline.json has no clock or lane for it yet. Still open: a timeline clock (one escalating meter, fits "escalating, ownerless pressure") or a timeline lane (dated events, fits strain that shows up as incidents). The weather also still needs its canonical section on a cosmology page.
+  src: framework § Open; memory-canon (campaign-canon, "weather of reality")
 
-- **[decide]** The prep brief
+- **[later]** The prep brief
   A brief generated from open threads plus act structure was planned; there is no sign it was built. Options: build it from the record and timeline; or drop it.
   src: automation § Open
 
-- **[decide]** Locale-level places
+- **[later]** Locale-level places
   Merchants, shipyards and taverns with a parent world or station, so the register can filter by them. This was proposed for the Sheet's Locations tab, which is frozen. The record's locations already carry `parentId` (16 do). Options: use `parentId` for locales and add filtering to the register; or drop the idea.
   src: framework § Open; scripts/data.js schema
 
 ### Housekeeping
 
-- **[decide]** The SotDQ tracker cleanup
+- **[later]** The SotDQ tracker cleanup
   Deferred. Schedule it or drop it.
   src: automation § Open
 
-- **[decide]** "Autognome" in V003 and V004
-  Those voyages call the OSTEKK units "autognomes"; canon makes them automatons (Gregory is the autognome). Runbook default: leave them as history, since that is what the crew believed then. Confirm the default, or sweep them to "automaton".
+- **[fix]** "Autognome" in V003 and V004 stays as history *(answered)*
+  No sweep. V003 and V004 bullets and accounts keep "the broken autognome", because that is what the crew believed then; OSTEKK-6 states he is an automaton in V005, and every dossier and current page says automaton. State the rule in SESSION-RUN.md so it is not re-asked: earlier voyages keep the crew's belief at the time; correct the record and current pages only.
   src: automation § Open; memory-canon § Key NPCs (OSTEKK-6)
+  answered: inbox/chat-automation.md § Voyage 5 runbook, Method (Settled: "Earlier voyages keep 'autognome' as history"). PR #61 asked "Say if you want them swept" and PR #62 repeated the default; Korey merged both without asking for a sweep.
 
 - **[fix]** The search-repair table runs backwards
   `prime/notes/RESTRUCTURE-NOTES.md` maps wrong spellings to right ones. Line 348 reads "Saerthe → Saerth"; change to "Saerth → Saerthe". The roster line (line 225) lists "Saerth"; change to "Saerthe". "Sor'kur" should read "Sor'Kur" on lines 226, 341 and 347 (line 347: "Sorker → Sor'Kur").
@@ -4477,21 +4434,29 @@ run decide, fix, drop, add.
 
 ## Page conventions
 
-- **[decide]** Dossier tab names
-  The 36 live prime dossiers and PAGE-SHAPE.md use *Who they are / What they want / DM notes / Stat block*. A later ruling in the cosmic campaign chat (turn 460) set *What it is / What it wants / What's hidden / Running it / Stat block*. Pick one set. Either way the PAGE-SHAPE principles hold: one set everywhere, labels never inflect, a page carries only the tabs it has content for.
-  Touches: every dossier under prime/dossiers/, PAGE-SHAPE.md (or its successor guide).
-  src: notes/PAGE-SHAPE.md; inbox/chat-cosmic-campaign-structure.md
+- **[later]** Where the chart lives
+  The chart is its own page off to the side. Embed it where it is used (the realms register, or a cosmos map on the cosmology page) as part of the refactor. Also retire its "claimed" and "primed" node states (staged).
+  src: Korey, 2026-10-25 (round 2)
 
-- **[decide]** "Open" subsections on DM pages
-  PAGE-SHAPE.md puts an *Open* subsection with `is-open` tags inside a dossier's DM notes; 35 prime pages carry one. The new writing rule keeps open questions on the planning layer only. Options: (a) DM notes count as planning, so *Open* stays on DM pages but never on player pages; (b) *Open* moves off every entry page into BACKLOG.md, and `is-open` survives only on planning pages (Spine, Plot Hooks, Voyages, What If).
+
+- **[fix]** Dossier tab names: keep the four tabs *(answered)*
+  No change. The 36 live prime dossiers and PAGE-SHAPE.md use *Who they are / What they want / DM notes / Stat block*, and that is the current rule. Turn 460's five-tab set (*What it is / What it wants / What's hidden / Running it / Stat block*) is not the later ruling: it predates PR #77 ("the four-tab dossier shape"), which Korey merged on 2026-10-18. The PAGE-SHAPE principles hold: one set everywhere, labels never inflect, a page carries only the tabs it has content for. Same answer as the PAGE-SHAPE item in the New pages section.
+  Touches: nothing.
+  src: notes/PAGE-SHAPE.md; inbox/chat-cosmic-campaign-structure.md
+  answered: repo history (PR #77, merged 2026-10-18, after the cosmic chat's page-shape PRs #60 on 2026-10-07 and #63 on 2026-10-11)
+
+- **[fix]** "Open" subsections move off entry pages *(answered)*
+  Option (b). Open questions stay on the planning layer: the backlog, drafts and planning pages (Spine, Plot Hooks, Voyages, What If) hold what is undecided, and `is-open` survives only there. A dossier, item or location entry never carries "pending", "TBD" or "decision needed"; if a detail is unknown, the entry says what is known and stops. Move each entry page's *Open* subsection into BACKLOG.md and update PAGE-SHAPE.md to match.
+  answered: working/README.md § Writing staged entries and pages ("Open questions stay on the planning layer"); not in STAGING.md
+  Original item: PAGE-SHAPE.md puts an *Open* subsection with `is-open` tags inside a dossier's DM notes; 35 prime pages carry one. The new writing rule keeps open questions on the planning layer only. Options: (a) DM notes count as planning, so *Open* stays on DM pages but never on player pages; (b) *Open* moves off every entry page into BACKLOG.md, and `is-open` survives only on planning pages (Spine, Plot Hooks, Voyages, What If).
   Touches: 35 prime pages, the page guide.
   src: notes/PAGE-SHAPE.md; working/README.md
 
-- **[decide]** How a page states an unknown
+- **[later]** How a page states an unknown
   WIKI-PAGE-GUIDE.md: "The Reach's name is not known… phrase gaps as such." The new rule: an entry says what is known and stops. Suggested split: an in-world gap ("the Fleet does not know the Reach's name") is a world fact and may stay; a DM gap ("name not yet decided") is a backlog item.
   src: notes/WIKI-PAGE-GUIDE.md; working/README.md
 
-- **[decide]** One vocabulary for the record's sets
+- **[later]** One vocabulary for the record's sets
   DATA-BOUNDARY.md and SESSION-RUN.md call the sets voyages, crew, cast, factions, places, things, threads. The files in `data/` are sessions, player-characters, npcs, factions, locations, items, quests. Suggested: the file names in all process docs; in-world labels only on pages.
   src: notes/DATA-BOUNDARY.md, notes/SESSION-RUN.md, scripts/data.js
 
@@ -4501,10 +4466,10 @@ run decide, fix, drop, add.
 
 ## Record and schema
 
-- **[decide]** Ships in the record
-  SESSION-RUN.md files a ship as a place with Type `Vessel`, parented to where it was last seen, and parks simulated ships under the Simulation Deck with Status `Simulated`. The ruling "vessels are vessels" needs either a vessel set in `data/` or a `kind` field, a status vocabulary without "Simulated" on places, and a choice of whether a ship's whereabouts is a field or a parent link. Lands with the refactor (`navigation-records/` ships move to `vessels/`).
+- **[later]** Ships in the record
+  SESSION-RUN.md files a ship as a place with Type `Vessel`, parented to where it was last seen, and parks simulated ships under the Simulation Deck with Status `Simulated`. That rule is the latest one Korey accepted for the record (Voyage 7 chat, 2026-10-25, Settled: "Every ship the crew encounters gets a record"). "Vessels are vessels" was ruled earlier, in the cosmic chat, for the DM wiki: vessels are their own register with entry pages, not realms and not artifacts. So the two do not yet conflict; the question is whether the refactor should carry the register split down into the record. Options: (a) keep ships as Vessel-type places in `data/locations.json` and split only the pages (`navigation-records/` ships move to `vessels/`); (b) give the record a vessel set or a `kind` field, a status vocabulary without "Simulated" on places, and a choice of whether a ship's whereabouts is a field or a parent link.
   Touches: scripts/data.js schema, data/locations.json, SESSION-RUN.md, navigation-records/, vessels/.
-  src: notes/SESSION-RUN.md; working/repo-refactor.md
+  src: notes/SESSION-RUN.md; working/repo-refactor.md; chat-voyage-6-7-planning § Table and story principles; chat-cosmic § Wiki structure rules ("Vessels are a register of their own")
 
 ## Fixes
 
@@ -4520,11 +4485,11 @@ run decide, fix, drop, add.
   The player Pagefind glob lists every player folder except `vessels/`. Add `vessels/**/*.html` (and update the glob again when the refactor renames folders).
   src: .github/workflows/deploy.yml
 
-- **[decide]** Leftover UI calls from the migration notes
+- **[later]** Leftover UI calls from the migration notes
   Still open in FIXES-DEMO-MIGRATION.md: the FIA bearing strip, merging the survey chart, the navigation-records clip at 1024px, the clickable blurb overlay, and missing links on voyage briefings 001, 003 and 004. Keep any of these, or drop them with the notes.
   src: notes/FIXES-DEMO-MIGRATION.md, notes/RESTRUCTURE-NOTES.md
 
-- **[decide]** Crew Notes, now that search has shipped
+- **[later]** Crew Notes, now that search has shipped
   A shared space where players write their own notes (an Etherpad or a Google Doc linked from the site) was deferred until S.E.A.R.C.H. shipped, then to be weighed on its own. S.E.A.R.C.H. is live. The old `crew-notes/` page now only redirects to Crew Logs. Options: build it (and pick the tool), or drop it.
   Touches: the player nav (scripts/nav.js), a new player page or external link.
   src: chat-early-planning § Campaign Planning, Open; memory-canon (Crew Notes deferred)
@@ -4547,7 +4512,8 @@ Fixes to player-facing pages, including the Fleet Intelligence Archive (`restric
 
 ### restricted/sa-005.html
 
-- **[decide]** The out-of-sequence SJN-2417 entry
-  Strake and Cairn swapped roles after this chat: Cairn is now the post that went silent after reporting an unidentified mass, and Strake is open and crewed, with Tarroway alive and working there. sa-005 still carries an out-of-sequence SJN-2417 entry. Handle it by uniform redaction or by a footnote.
-  Touches: restricted/sa-005.html, realms/strake-station.html, dossiers/tarroway.html.
+- **[drop]** The out-of-sequence SJN-2417 entry *(answered)*
+  Nothing to change. sa-005 carries no SJN-2417 entry: its memorial lists SJN-2401 to SJN-2408 in sequence, each name redacted, with the cartographer at SJN-2405 (line 419). The out-of-sequence entry was removed when Strake and Cairn swapped roles and Tarroway became alive on Strake. The remaining sa-005 item (why Tarroway's name is withheld) lives in the New pages section under restricted/sa-005.html.
+  Touches: nothing.
   src: inbox/chat-early-planning.md § Campaign Planning
+  answered: restricted/sa-005.html lines 415–422 (checked 2026-10-25); inbox/chat-early-planning.md § New campaign idea development, Superseded ("sa-005 lists SJN-2401 to 2408 with no 2417")

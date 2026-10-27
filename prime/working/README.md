@@ -47,6 +47,10 @@ staging is distributed page by page.
   planning pages hold what is undecided. A dossier, item or location entry
   never carries "pending", "TBD" or "decision needed". If a detail is unknown,
   the entry says what is known and stops.
+- **Names.** Avoid "The" plus a vague word ("the Figure", "the Hollow") everywhere.
+  - Places and celestial bodies get proper names, the way real astronomy names things: Andromeda, Sagittarius A*, Cygnus X-1. A name, not a moniker or a title, often paired with a catalogue designation.
+  - Constructs and concepts get plain, definitive descriptions, even if that takes a few words.
+  - People may carry monikers.
 - Not everything will be decided, and some things will change. That is fine;
   rewrite the entry when it does.
 
@@ -54,7 +58,7 @@ staging is distributed page by page.
 
 | Draft | Subject | State |
 |---|---|---|
-| [divine-rules.md](divine-rules.md) | Worship, spheres, polarity, realms, one god many names | Draft |
+| [divine-rules.md](divine-rules.md) | Worship, galaxies, polarity, realms, one god many names | Draft |
 | [vecna.md](vecna.md) | Vecna's history, realm, faithful and their names | Draft |
 | [tharizdun.md](tharizdun.md) | The prison, the Day of Chaos, how Vecna uses him | Draft |
 | [glyth-watcher.md](glyth-watcher.md) | The Watcher who came back from Glyth | Sketch |

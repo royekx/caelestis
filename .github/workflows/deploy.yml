@@ -87,10 +87,10 @@ jobs:
       - name: Prune what the site does not serve
         run: |
           set -e
-          rm -f  scripts/data.js CLAUDE.md
+          rm -f  scripts/data.js scripts/survey.js CLAUDE.md
           rm -rf prime/working
           find . -name '*-template.html' -not -path './.git/*' -delete
-          echo "pruned: scripts/data.js, CLAUDE.md, prime/working, *-template.html"
+          echo "pruned: scripts/data.js, scripts/survey.js, CLAUDE.md, prime/working, *-template.html"
 
       # -- Publish the whole site (with all three index bundles) --
       - name: Setup Pages

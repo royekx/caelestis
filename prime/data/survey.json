@@ -1,0 +1,329 @@
+{
+  "about": "The DM's survey of the cosmos, kept by scripts/survey.js and by hand. DM material: never copied to data/ or a player page. Designations follow prime/working/STAGING.md § Designations.",
+  "catalogue": "CSC",
+  "year": 1490,
+  "systems": [
+    {
+      "id": "Realmspace",
+      "galaxy": "GAL-01",
+      "seed": null,
+      "catalogue": null,
+      "bayer": null,
+      "bearing": null,
+      "name": "Realmspace",
+      "primary": "yellow star, the sun",
+      "status": "charted",
+      "home": true,
+      "bodies": [
+        {
+          "designation": null,
+          "name": "Anadia",
+          "kind": "planet",
+          "status": "charted",
+          "composition": "earth",
+          "size": "small",
+          "habitability": "livable",
+          "life": "benign",
+          "inhabitants": "civilization",
+          "notes": "Closest of the inner worlds. Twelve hours from the sun."
+        },
+        {
+          "designation": null,
+          "name": "Coliar",
+          "kind": "giant of air",
+          "status": "charted",
+          "composition": "air",
+          "size": "huge",
+          "habitability": "livable with protection",
+          "life": "benign",
+          "inhabitants": "settlement",
+          "notes": "Open air and floating islands. One day from the sun."
+        },
+        {
+          "designation": null,
+          "name": "Toril",
+          "kind": "planet",
+          "status": "charted",
+          "composition": "earth",
+          "size": "medium",
+          "habitability": "livable",
+          "life": "benign",
+          "inhabitants": "civilization",
+          "notes": "Nearest destination on most academy routes. Caelestis and the Tyrant ship orbit it.",
+          "moons": [
+            {
+              "designation": null,
+              "name": "Selûne",
+              "kind": "moon",
+              "status": "charted",
+              "composition": "earth",
+              "size": "small",
+              "habitability": "livable with protection",
+              "life": "none",
+              "inhabitants": "none"
+            }
+          ]
+        },
+        {
+          "designation": null,
+          "name": "Caelestis",
+          "kind": "station",
+          "status": "charted",
+          "composition": null,
+          "habitability": "livable",
+          "life": "none",
+          "inhabitants": "settlement",
+          "notes": "The academy station, in orbit around Toril."
+        },
+        {
+          "designation": null,
+          "name": "Tyrant ship",
+          "kind": "wreck large enough to chart",
+          "status": "charted",
+          "habitability": "livable with protection",
+          "life": "hostile",
+          "inhabitants": "none",
+          "notes": "Vaelorix's derelict, in orbit around Toril."
+        },
+        {
+          "designation": null,
+          "name": "Karpri",
+          "kind": "planet",
+          "status": "charted",
+          "composition": "water",
+          "size": "medium",
+          "habitability": "livable",
+          "life": "benign",
+          "inhabitants": "settlement",
+          "notes": "A water world, three days out, above the common lanes."
+        },
+        {
+          "designation": null,
+          "name": "Chandos",
+          "kind": "planet",
+          "status": "charted",
+          "composition": "water",
+          "size": "medium",
+          "habitability": "livable with protection",
+          "life": "hostile",
+          "inhabitants": "settlement",
+          "notes": "Four days from the sun, below the plane of the inner worlds."
+        },
+        {
+          "designation": null,
+          "name": "Glyth",
+          "kind": "planet",
+          "status": "charted",
+          "composition": "earth",
+          "size": "medium",
+          "habitability": "livable with protection",
+          "life": "hostile",
+          "inhabitants": "civilization",
+          "notes": "Ringed and remote, ten days out. The illithids' world that exiled the unthinned."
+        },
+        {
+          "designation": null,
+          "name": "Garden",
+          "kind": "cluster of floating bodies",
+          "status": "charted",
+          "composition": "life",
+          "size": "large",
+          "habitability": "livable",
+          "life": "benign",
+          "inhabitants": "settlement",
+          "notes": "A cluster of linked bodies turning as a set."
+        },
+        {
+          "designation": null,
+          "name": "H'Catha",
+          "kind": "planet",
+          "status": "charted",
+          "shape": "disk",
+          "composition": "water",
+          "size": "large",
+          "habitability": "livable",
+          "life": "hostile",
+          "inhabitants": "civilization",
+          "notes": "The beholders' world, fourteen days out."
+        }
+      ],
+      "notes": "Home system. Its bodies are known by name, not by letter."
+    },
+    {
+      "id": "Greyspace",
+      "galaxy": "GAL-01",
+      "seed": null,
+      "catalogue": null,
+      "bayer": null,
+      "bearing": null,
+      "name": "Greyspace",
+      "primary": "star",
+      "status": "surveyed",
+      "bodies": [
+        {
+          "designation": null,
+          "name": "Oerth",
+          "kind": "planet",
+          "status": "charted",
+          "composition": "earth",
+          "size": "medium",
+          "habitability": "livable",
+          "life": "benign",
+          "inhabitants": "civilization",
+          "notes": "Vecna's homeworld, where he became a god. His worship there is large and public; its Monolith is a holy site."
+        }
+      ],
+      "notes": "Oerth's system. Its designation waits for the charting pass."
+    },
+    {
+      "id": "CSC 69387",
+      "galaxy": "GAL-01",
+      "seed": null,
+      "catalogue": 69387,
+      "bayer": null,
+      "bearing": null,
+      "name": "Virenspace",
+      "primary": "star",
+      "status": "surveyed",
+      "bodies": [
+        {
+          "designation": null,
+          "name": "The feature Mirt's wardrobe replicates",
+          "kind": "stellar feature",
+          "status": "surveyed",
+          "life": "none",
+          "inhabitants": "none",
+          "notes": "Casey's first tether point. Zerathis is a consumed presence in this system."
+        }
+      ],
+      "notes": "Long haul past the Astral waystation."
+    },
+    {
+      "id": "CSC 56973",
+      "galaxy": "GAL-01",
+      "seed": null,
+      "catalogue": 56973,
+      "bayer": null,
+      "bearing": null,
+      "name": null,
+      "primary": "star",
+      "status": "surveyed",
+      "bodies": [
+        {
+          "designation": "CSC 56973 b",
+          "name": "Aethris",
+          "kind": "planet",
+          "status": "charted",
+          "letter": "b",
+          "composition": "earth",
+          "size": "large",
+          "habitability": "livable",
+          "life": "benign",
+          "inhabitants": "civilization",
+          "oddity": "the Prism Ascendant hangs above the temple site",
+          "notes": "Sol's homeworld. The Fortuned and the Misfortuned."
+        }
+      ],
+      "notes": "A system of one known world."
+    },
+    {
+      "id": "CSC 16423",
+      "galaxy": "GAL-01",
+      "seed": null,
+      "catalogue": 16423,
+      "bayer": null,
+      "bearing": null,
+      "name": "Krynnspace",
+      "primary": "star",
+      "status": "surveyed",
+      "bodies": [
+        {
+          "designation": "CSC 16423 b",
+          "name": "Krynn",
+          "kind": "planet",
+          "status": "charted",
+          "letter": "b",
+          "composition": "earth",
+          "size": "large",
+          "habitability": "livable",
+          "life": "benign",
+          "inhabitants": "civilization",
+          "notes": "Takhisis holds an aspect of Bahamut in the ruined temple of Paladine."
+        },
+        {
+          "designation": "CSC 16423 c",
+          "name": "Fonains",
+          "kind": "planet",
+          "status": "charted",
+          "letter": "c",
+          "composition": "earth",
+          "size": "medium",
+          "habitability": "livable",
+          "life": "benign",
+          "inhabitants": "civilization",
+          "notes": "Site of the only Monolith on record to be destroyed."
+        }
+      ],
+      "notes": "Two known worlds."
+    },
+    {
+      "id": "GAL-01-hidden",
+      "galaxy": "GAL-01",
+      "seed": null,
+      "catalogue": null,
+      "bayer": null,
+      "bearing": null,
+      "name": null,
+      "primary": "unknown",
+      "status": "uncharted",
+      "bodies": [
+        {
+          "designation": null,
+          "name": null,
+          "kind": "planet",
+          "status": "uncharted",
+          "habitability": "livable",
+          "life": "benign",
+          "inhabitants": "civilization",
+          "notes": "The Wayfinders' homeworld. Its concealment rides on the Dissolution fragment's cycle."
+        }
+      ],
+      "notes": "Hidden. No route; Wayfinders leave with no map and must re-recognize home."
+    }
+  ],
+  "yearNote": "Cycle 1490, the latest Cycle on the pages (restricted orders). Which calendar the Cycle counts is open (BACKLOG).",
+  "galaxies": [
+    {
+      "id": "GAL-01",
+      "name": "Rykoe Galaxy",
+      "home": true,
+      "game": "D&D 5e",
+      "core": "One link, between two worlds in one system (the little-charted planet).",
+      "core_name": "Rykoe"
+    },
+    {
+      "id": "GAL-02",
+      "name": null,
+      "game": "Call of Cthulhu",
+      "core": "Core awake; overrun by dark beings."
+    },
+    {
+      "id": "GAL-03",
+      "name": null,
+      "game": null,
+      "core": "Partway; its fate turns on GAL-01."
+    },
+    {
+      "id": "GAL-04",
+      "name": null,
+      "game": null,
+      "core": "Partway; its fate turns on GAL-01."
+    },
+    {
+      "id": "GAL-05",
+      "name": null,
+      "game": null,
+      "core": "Partway; its fate turns on GAL-01."
+    }
+  ]
+}
