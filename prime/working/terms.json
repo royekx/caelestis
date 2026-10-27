@@ -99,6 +99,10 @@
     {
       "pattern": "\\bunresolved\\b",
       "note": "status label: move to a DM notes tab or planning page"
+    },
+    {
+      "pattern": ">\\s*Open\\s*<|\\bis-open\\b",
+      "note": "no 'Open' sections or tags: write what is undecided as a sentence in a DM notes tab or planning page"
     }
   ],
   "moved": [],

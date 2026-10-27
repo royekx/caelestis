@@ -44,6 +44,11 @@ Do not write to the repo before the first or to the record before the second.
 DM folders and pages use plain, functional names. Player folders use in-world
 names that are functional and distinct (`dossiers/`, `inventory/`).
 
+**Two versions of the same subjects.** A dossier, location, vessel or item can
+have a player page and a DM page. The DM page almost always holds more; the
+player page holds only what the crew knows, and only for entries the crew has
+met or been told of. Same subject on both sides is not duplication.
+
 ## The record
 
 **A record exists if and only if the crew has encountered the entity**: met in

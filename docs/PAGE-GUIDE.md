@@ -348,20 +348,19 @@ Tabs are `.pill-tab` buttons in a `.pill-tabs[data-pill-group]` strip with
 | What's hidden | what is true and unrevealed, in in-world voice |
 | Threads | where they connect: to whom, to which arc, to what else |
 | How to run them | personality, tactics, how they engage |
-| Open | calls not yet made, each with an `is-open` tag |
+| DM notes | anything still to decide or keep track of, each written as a full, specific sentence ("Ezra's surname is not chosen yet."), never a bare label |
 
 *Who they are*, *What they want* and *What's hidden* state what is true, not
-what it is for. Design notes, open calls and advice go in the rest of *DM
-notes* and nowhere else on the dossier.
+what it is for. Design notes, calls still to make and advice go in the rest of *DM
+notes* and nowhere else on the dossier. There is no "Open" subsection: a note says exactly what is undecided.
 
 ## 6. Tags
 
-Four classes. A tag answers one question, and the class is the question.
+Three classes. A tag answers one question, and the class is the question.
 
 | Class | Question | Labels |
 |---|---|---|
 | `is-canon` | How settled is it? | **Canon**, **Played** |
-| `is-open` | What is still open? | its own label, three words at most ("Name open", "To build") |
 | `is-dm` | Can this go player-side? | **DM only** |
 | `is-kind` | What sort of thing is it? | **Character**, **Object**, **Place**, **Event**, **Pattern** |
 
@@ -369,8 +368,7 @@ Four classes. A tag answers one question, and the class is the question.
 - A tag never restates the text beside it.
 - A fact about the subject (a standing, a state, a role) is a stat row or words
   in the heading, never a tag.
-- `is-open` appears only on planning pages (Spine, Plot Hooks, Voyages) and in
-  a dossier's *DM notes* tab.
+- There is no "open" tag. Something undecided is written as a sentence in a DM notes tab or on a planning page, saying exactly what is undecided.
 - `dm-toc.js` strips tags from the table of contents.
 
 **Plot Hooks rows** are dossier rows with `is-kind` type tags in the role
@@ -396,7 +394,7 @@ A planned voyage carries these slots, chosen by what kind of note it is:
 - **What this session can pay**: the outstanding debts in reach
 - **The swap / cast changes**: who joins and leaves
 - **Settled**: decided, and staying decided
-- **Open**: calls still to make
+- **Still to decide**: each call written as a full sentence
 - **To run**: how it plays at the table
 
 A played voyage carries Briefing, Actual and Delta:
@@ -425,6 +423,8 @@ A played voyage carries Briefing, Actual and Delta:
 ```
 
 ## 8. Player pages
+
+The player site and the DM wiki hold two versions of the same subjects: dossiers, locations, vessels, inventory and the rest each have a player page and a DM page. The DM page almost always holds more. The player page holds only what the crew knows, and exists only for entries the crew has met or been told of. The two never mirror each other.
 
 Player pages hold only what the crew could know, drawn from the record. Search
 attributes are in `CLAUDE.md` § Deploy and search.
