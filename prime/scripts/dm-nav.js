@@ -84,6 +84,7 @@
   var groups = [
     {
       label: 'Run',
+      axiom: 'determination',
       items: [
         { key: 'campaign',  label: 'Campaign',      path: 'campaign/'   },
         { key: 'spine',     label: 'Spine',         path: 'campaign/spine.html',      indent: true },
@@ -96,6 +97,7 @@
     },
     {
       label: 'Cast',
+      axiom: 'distinction',
       items: [
         { key: 'crew',      label: 'The Crew',      path: 'crew/'       },
         { key: 'dossiers',  label: 'DM Dossiers',   path: 'dossiers/'   },
@@ -105,6 +107,7 @@
     },
     {
       label: 'The Opposition',
+      axiom: 'consolidation',
       items: [
         { key: 'colony',    label: 'Colony Ops',    path: 'campaign/colony/'    },
         { key: 'becoming',  label: 'The Ascension', path: 'campaign/ascension/' },
@@ -112,6 +115,7 @@
     },
     {
       label: 'Setting',
+      axiom: 'expansion',
       items: [
         { key: 'cosmology', label: 'Cosmology',     path: 'cosmology/'  },
         { key: 'realms',    label: 'Realms',        path: 'realms/', also: ['locations/'] },
@@ -122,6 +126,7 @@
     },
     {
       label: 'Reference',
+      axiom: 'dissolution',
       items: [
         { key: 'rules',     label: 'Rules',         path: 'rules/'      },
         { key: 'glossary',  label: 'Glossary',      path: 'glossary/'   },
@@ -224,6 +229,12 @@
       });
     });
     if (best) best.classList.add('active');
+    // Each nav group carries an Axiom colour; the page takes its group's.
+    var key = best && best.dataset.section;
+    var group = groups.filter(function (g) {
+      return g.items.some(function (s) { return s.key === key; });
+    })[0];
+    document.documentElement.dataset.axiom = (group && group.axiom) || 'dissolution';
   })();
 
   // ── Mobile toggle ─────────────────────────────────────────────────────────

@@ -52,13 +52,14 @@
   --dm-elev-2:      rgba(28, 36, 52, 0.86);
 }
 
-/* ── CONTINUUM BACKDROP ──
-   Replaces the player site's nebula. html carries the fallback colour
+/* ── AXIOM BACKDROP ──
+   The five Axioms around Continuity, in their colours. Replaces the player
+   site's nebula. html carries the fallback colour
    because an opaque body fill would paint over body::before, which
    sits at z-index -2. */
 html { background: var(--bg-deep); }
 body::before {
-  background: url('../assets/continuum.jpg') center / cover no-repeat;
+  background: url('../assets/axioms.jpg') center / cover no-repeat;
 }
 body::after {
   /* Only the faintest edge vignette — the continuum should read at full
@@ -2619,4 +2620,74 @@ ul.tr-fact-val li { margin-bottom: 0.25rem; color: var(--text); }
 .dm-content dd strong {
   font-weight: inherit;
   color: inherit;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   AXIOM PALETTE
+   One colour for each Axiom, softened and matched in brightness so none
+   is harsh against another. Each nav group takes one (dm-nav.js sets
+   html[data-axiom]); the page's accent follows. Accents mark structure
+   only: links, section rules, tabs, labels, chips. Never prose.
+     Play / Run        Determination  rose crimson
+     People / Cast     Distinction    jade
+     Story / Opposition Consolidation amber gold
+     World / Setting   Expansion      cornflower blue
+     Reference         Dissolution    pearl silver
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+  --ax-consolidation: #D4A256;
+  --ax-expansion:     #6E95D4;
+  --ax-dissolution:   #B9C2CC;
+  --ax-distinction:   #56B4A6;
+  --ax-determination: #D45F78;
+  --accent: var(--ax-dissolution);
+}
+html[data-axiom="consolidation"] { --accent: var(--ax-consolidation); }
+html[data-axiom="expansion"]     { --accent: var(--ax-expansion); }
+html[data-axiom="dissolution"]   { --accent: var(--ax-dissolution); }
+html[data-axiom="distinction"]   { --accent: var(--ax-distinction); }
+html[data-axiom="determination"] { --accent: var(--ax-determination); }
+:root {
+  --accent-text: color-mix(in srgb, var(--accent) 72%, white);
+  --accent-rule: color-mix(in srgb, var(--accent) 38%, transparent);
+  --accent-faint: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+/* Links: the accent, with an underline. */
+.dm-content a { color: var(--accent-text); border-bottom: 1px solid var(--accent-rule); }
+.dm-content a:hover { color: #fff; border-bottom-color: var(--accent); }
+.dm-content .dm-page-eyebrow { color: var(--accent-text); opacity: .8; }
+.side-nav-link.active { border-left-color: var(--accent) !important; color: #fff; }
+.dm-content .pill-tab[aria-selected="true"] { border-bottom-color: var(--accent) !important; }
+.dm-content .chip { border-color: var(--accent-rule); }
+.dm-content .chip:hover { background: var(--accent-faint); }
+
+/* ── Reading layout (the wiki entry) ──
+   Text sits on the page, not in a box; the infobox is the only panel.
+   Body type is a step smaller and the page a step wider. */
+.dm-content { max-width: 1260px; font-size: 1.15rem; line-height: 1.7; }
+.dm-content .is-wiki .pill-panel {
+  background: none; border: 0; box-shadow: none; padding: 0;
+  backdrop-filter: none; -webkit-backdrop-filter: none;
+}
+.dm-content .entry-header.is-wiki { grid-template-columns: minmax(0, 1fr) 320px; gap: 3.2rem; }
+.dm-content .is-wiki .identity-card { border-top: 2px solid var(--accent-rule); }
+.dm-content .is-wiki .identity-card .portrait-frame { aspect-ratio: 4 / 3; }
+.dm-content .is-wiki .identity-card .stat-row { grid-template-columns: 6.4rem minmax(0, 1fr); }
+.dm-content .is-wiki .pill-panel h4 {
+  font-size: 1.05rem; letter-spacing: .12em; color: var(--text);
+  border-bottom: 1px solid var(--accent-rule);
+}
+.dm-content .is-wiki .entry-sub { font-size: 1.15rem; color: var(--text-dim); }
+
+/* The reading column: a soft scrim instead of a slab, so the Axiom
+   backdrop shows at the edges and the text keeps its contrast. */
+.dm-content::before {
+  background: linear-gradient(90deg,
+    rgba(8, 11, 19, 0) 0%, rgba(8, 11, 19, 0.62) 7%,
+    rgba(8, 11, 19, 0.62) 93%, rgba(8, 11, 19, 0) 100%);
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
