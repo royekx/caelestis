@@ -108,7 +108,7 @@ below closes those three gaps.
 The calls at the end of this section. Nothing below starts until they are made.
 
 ### 1. Tooling
-- Built 2026-10-27: `scripts/terms.js` and a terms list in `prime/working/terms.json`: retired
+- Built 2026-10-27, reading `prime/` and `restricted/`: `scripts/terms.js` and a terms list in `prime/working/terms.json`: retired
   term → replacement, with an allow-list for legitimate uses (FIA history,
   quoted in-world speech). Run in `check.yml` as a warning; promoted to an error
   per finished section. Pruned from deploy like `data.js`.
@@ -117,7 +117,7 @@ The calls at the end of this section. Nothing below starts until they are made.
 - Baseline, 2026-10-27: 308 retired-term hits across 109 DM files (realms 173,
   cosmology 64, campaign 18, artifacts 17, dossiers 8, vessels 8, timeline 8,
   glossary 6, factions 4, crew 1, hub 1); chart 0. `node scripts/terms.js --list`
-  gives each one.
+  gives each one. The FIA adds 22 hits across 6 of its 14 files.
 
 ### 2. Rules in one place
 The prime/notes consolidation below (three documents). The page rewrites follow
@@ -163,8 +163,14 @@ because later sections link into earlier ones.
    working, the eye, Oerth), colony (N'ghathrod now), plot hooks, principles.
 7. **Crew**: the five crew items in STAGING, plus the crew backlog.
 8. **Fonains and timeline**: the Fonains page and doc, `timeline.json`.
-9. **Player side**: only what the record already carries; designations on
-   restricted/ pages. Nothing from prime/ crosses.
+9. **The FIA (`restricted/`)**, next after the DM side and before any player
+   page. Fourteen files. Bring each in line with the finished DM pages, in the
+   FIA's own voice (§ FIA below): new designations, the Fleet and its
+   structure, Clint, Tarroway, Strake's readings. The FIA only knows what Fleet
+   Intelligence would: no Vecna, no Reach, no A.T.L.A.S. by name until the
+   crew has made them readable. The terms check already reads `restricted/`.
+10. **Player side**: only what the record already carries. Nothing from prime/
+   crosses.
 
 ### 5. Per-page procedure
 1. Gather: the page's STAGING entries (by home), its BACKLOG items, the current

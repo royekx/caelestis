@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * terms.js — keep retired terms, decision voice and moved paths off the DM wiki.
+ * terms.js — keep retired terms, decision voice and moved paths off the DM wiki and the FIA.
  *
  *   node scripts/terms.js            summary by folder; exit 1 if a finished folder has a retired hit
  *   node scripts/terms.js --list     every hit, file:line, with what to use instead
@@ -11,11 +11,12 @@
  *   retired  terms that must not appear (pattern → what to use instead)
  *   voice    decision voice and placeholders ("ruled", "pending", "TBD", "unresolved")
  *   moved    old page paths that must not be linked (old → new)
- *   finished prime/ folders whose retired-term and moved-path hits fail the check
+ *   scan     top folders to read (prime, restricted)
+ *   finished folders whose retired-term and moved-path hits fail the check
  *   allow    "path:regex" pairs for legitimate uses (a quoted archive line, say)
  *
- * Scans prime/**\/*.html and prime/timeline/timeline.json, skipping prime/working/
- * and prime/data/. Text inside <style> is skipped; everything else, including
+ * Scans the folders in terms.json 'scan' (the DM wiki prime/ and the FIA's restricted/):
+ * every .html file and prime/timeline/timeline.json, skipping prime/working/ and prime/data/. Text inside <style> is skipped; everything else, including
  * inline page data, is read, because that is what the reader sees. Pruned from
  * deploy like data.js.
  */
@@ -47,7 +48,7 @@ function walk(dir, out) {
   }
   return out;
 }
-let files = walk(path.join(ROOT, 'prime'), []);
+let files = (conf.scan || ['prime']).reduce((acc, d) => fs.existsSync(path.join(ROOT, d)) ? walk(path.join(ROOT, d), acc) : acc, []);
 if (only.length) files = files.filter(f => only.some(o => path.join(ROOT, f).startsWith(o)));
 
 // Blank out <style> blocks and HTML comments, keeping line numbers.

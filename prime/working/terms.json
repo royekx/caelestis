@@ -1,34 +1,110 @@
 {
-  "about": "Read by scripts/terms.js. 'retired' terms must not appear on DM pages once their section is finished; 'voice' patterns mark decision voice or placeholders on world pages; 'moved' lists old page paths that must not be linked. 'finished' lists the prime/ folders whose hits fail the check; everything else is reported as a warning. 'allow' holds 'path:regex' pairs for legitimate uses.",
+  "about": "Read by scripts/terms.js. 'retired' terms must not appear on DM pages once their section is finished; 'voice' patterns mark decision voice or placeholders on world pages; 'moved' lists old page paths that must not be linked. 'scan' lists the top folders read; 'finished' lists the folders whose hits fail the check; everything else is reported as a warning. 'allow' holds 'path:regex' pairs for legitimate uses.",
   "finished": [],
   "retired": [
-    { "pattern": "\\b(crystal )?spheres?\\b", "use": "galaxy / galaxies (a region of space); keep 'sphere' only for a shape" },
-    { "pattern": "\\bSPH-0\\d\\b", "use": "GAL-0n" },
-    { "pattern": "\\bSYS-\\d+\\b", "use": "the system's name or CSC number (Realmspace, Krynnspace, CSC 56973)" },
-    { "pattern": "\\bW-\\d{1,3}\\b", "use": "the world's name, or star-and-letter designation (CSC 16423 c)" },
-    { "pattern": "\\bgodless\\b", "use": "GAL-02, the galaxy of the eldritch gods" },
-    { "pattern": "\\bphlogiston\\b", "use": "the drift" },
-    { "pattern": "World Surveyor", "use": "A.T.L.A.S." },
-    { "pattern": "Circle of Fifteenths", "use": "the Circle of Fifths" },
-    { "pattern": "\\b(four|Four) Axioms\\b", "use": "five Axioms" },
-    { "pattern": "\\b(Boundary|Transformation|Convergence) (fragment|piece|pieces|Axiom|seat)\\b", "use": "Distinction / Expansion / Consolidation (fragment); the Axioms are Consolidation, Expansion, Dissolution, Distinction, Determination" },
-    { "pattern": "\\b(Negentropy|Possibility fragment|Gravity fragment|Entropy fragment)\\b", "use": "Distinction / Determination / Consolidation / Dissolution" },
-    { "pattern": "downward tithe", "use": "the tithe runs upward, to N'ghathrod" },
-    { "pattern": "psychic wind", "use": "Clint went through a color pool on purpose" },
-    { "pattern": "\\b(claimed|primed) (node|nodes|heart|hearts)\\b", "use": "found / opened / linked" },
-    { "pattern": "333,333", "use": "four great shards; 333 small black shards" },
-    { "pattern": "\\bKnowhere\\b", "use": "Nowhere" },
-    { "pattern": "\\bAscension world\\b", "use": "Oerth (the Ascension World is Oerth, not a separate place)" },
-    { "pattern": "\\bHakatha\\b", "use": "H'Catha" },
-    { "pattern": "\\bDarra\\b", "use": "Dharra" }
+    {
+      "pattern": "\\b(crystal )?spheres?\\b",
+      "use": "galaxy / galaxies (a region of space); keep 'sphere' only for a shape"
+    },
+    {
+      "pattern": "\\bSPH-0\\d\\b",
+      "use": "GAL-0n"
+    },
+    {
+      "pattern": "\\bSYS-\\d+\\b",
+      "use": "the system's name or CSC number (Realmspace, Krynnspace, CSC 56973)"
+    },
+    {
+      "pattern": "\\bW-\\d{1,3}\\b",
+      "use": "the world's name, or star-and-letter designation (CSC 16423 c)"
+    },
+    {
+      "pattern": "\\bgodless\\b",
+      "use": "GAL-02, the galaxy of the eldritch gods"
+    },
+    {
+      "pattern": "\\bphlogiston\\b",
+      "use": "the drift"
+    },
+    {
+      "pattern": "World Surveyor",
+      "use": "A.T.L.A.S."
+    },
+    {
+      "pattern": "Circle of Fifteenths",
+      "use": "the Circle of Fifths"
+    },
+    {
+      "pattern": "\\b(four|Four) Axioms\\b",
+      "use": "five Axioms"
+    },
+    {
+      "pattern": "\\b(Boundary|Transformation|Convergence) (fragment|piece|pieces|Axiom|seat)\\b",
+      "use": "Distinction / Expansion / Consolidation (fragment); the Axioms are Consolidation, Expansion, Dissolution, Distinction, Determination"
+    },
+    {
+      "pattern": "\\b(Negentropy|Possibility fragment|Gravity fragment|Entropy fragment)\\b",
+      "use": "Distinction / Determination / Consolidation / Dissolution"
+    },
+    {
+      "pattern": "downward tithe",
+      "use": "the tithe runs upward, to N'ghathrod"
+    },
+    {
+      "pattern": "psychic wind",
+      "use": "Clint went through a color pool on purpose"
+    },
+    {
+      "pattern": "\\b(claimed|primed) (node|nodes|heart|hearts)\\b",
+      "use": "found / opened / linked"
+    },
+    {
+      "pattern": "333,333",
+      "use": "four great shards; 333 small black shards"
+    },
+    {
+      "pattern": "\\bKnowhere\\b",
+      "use": "Nowhere"
+    },
+    {
+      "pattern": "\\bAscension world\\b",
+      "use": "Oerth (the Ascension World is Oerth, not a separate place)"
+    },
+    {
+      "pattern": "\\bHakatha\\b",
+      "use": "H'Catha"
+    },
+    {
+      "pattern": "\\bDarra\\b",
+      "use": "Dharra"
+    }
   ],
   "voice": [
-    { "pattern": "\\b(ruled|retired|superseded|supersedes)\\b", "note": "decision voice" },
-    { "pattern": "\\b(TBD|tbd)\\b", "note": "placeholder" },
-    { "pattern": "\\bpending\\b", "note": "placeholder" },
-    { "pattern": "to be decided|not yet set|decision needed|still to decide", "note": "placeholder" },
-    { "pattern": "\\bunresolved\\b", "note": "status label: move to a DM notes tab or planning page" }
+    {
+      "pattern": "\\b(ruled|retired|superseded|supersedes)\\b",
+      "note": "decision voice"
+    },
+    {
+      "pattern": "\\b(TBD|tbd)\\b",
+      "note": "placeholder"
+    },
+    {
+      "pattern": "\\bpending\\b",
+      "note": "placeholder"
+    },
+    {
+      "pattern": "to be decided|not yet set|decision needed|still to decide",
+      "note": "placeholder"
+    },
+    {
+      "pattern": "\\bunresolved\\b",
+      "note": "status label: move to a DM notes tab or planning page"
+    }
   ],
   "moved": [],
-  "allow": []
+  "allow": [],
+  "scan": [
+    "prime",
+    "restricted"
+  ]
 }
