@@ -619,6 +619,29 @@ body::after {
   border-left: 1px solid var(--gold-rule);
 }
 
+/* Scrollbars: thin, in the page's accent, on a clear track. Firefox reads
+   scrollbar-*; Chrome, Edge and Safari read the ::-webkit-scrollbar rules. */
+html, .dm-toc, .side-nav {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-rule, rgba(185,194,204,0.38)) transparent;
+}
+html::-webkit-scrollbar, .dm-toc::-webkit-scrollbar, .side-nav::-webkit-scrollbar,
+.dm-content *::-webkit-scrollbar { width: 8px; height: 8px; }
+html::-webkit-scrollbar-track, .dm-toc::-webkit-scrollbar-track, .side-nav::-webkit-scrollbar-track,
+.dm-content *::-webkit-scrollbar-track { background: transparent; }
+html::-webkit-scrollbar-thumb, .dm-toc::-webkit-scrollbar-thumb, .side-nav::-webkit-scrollbar-thumb,
+.dm-content *::-webkit-scrollbar-thumb {
+  background: var(--accent-rule, rgba(185,194,204,0.38));
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
+.side-nav::-webkit-scrollbar-thumb:hover, .dm-content *::-webkit-scrollbar-thumb:hover {
+  background: var(--accent, #B9C2CC);
+  background-clip: padding-box;
+}
+
 .dm-toc-title {
   font-family: 'Cinzel', serif;
   font-size: 0.845rem;
