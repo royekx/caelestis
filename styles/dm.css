@@ -2706,6 +2706,8 @@ html[data-axiom="determination"] { --accent: var(--ax-determination); }
 .side-nav-group .side-nav-link.active {
   border-left-color: var(--group) !important;
   background: color-mix(in srgb, var(--group) 10%, transparent);
+}
+
 /* ═══════════════════════════════════════════════════════════════
    ARTICLE PAGES (dm-sections.js adds .is-article)
    Long pages read as one article: sections are headings, not boxes or
