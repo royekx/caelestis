@@ -236,6 +236,42 @@
     document.documentElement.dataset.axiom = (group && group.axiom) || 'dissolution';
   })();
 
+  // ── Page navigation ───────────────────────────────────────────────────────
+  // The prev/next bar under the title becomes two quieter pieces: the
+  // eyebrow links back to the index, and prev/next sit at the foot of
+  // the page, where you reach for them when you have finished reading.
+  (function () {
+    var main = document.querySelector('main.dm-content');
+    var bar = main && main.querySelector(':scope > .voyage-nav-bar');
+    if (!bar) return;
+    var center = bar.querySelector('.voyage-nav-center');
+    var header = main.querySelector(':scope > .dm-page-header');
+    if (center && header) {
+      // The eyebrow's first part ("DM Dossier", "Faction") becomes the link
+      // back to the index; a page without an eyebrow gets one.
+      var eyebrow = header.querySelector('.dm-page-eyebrow');
+      if (!eyebrow) {
+        eyebrow = document.createElement('div');
+        eyebrow.className = 'dm-page-eyebrow';
+        eyebrow.textContent = center.textContent.trim();
+        header.insertBefore(eyebrow, header.firstChild);
+      }
+      var first = eyebrow.firstChild;
+      if (first && first.nodeType === 3 && first.textContent.trim()) {
+        var crumb = document.createElement('a');
+        crumb.className = 'dm-crumb';
+        crumb.href = center.getAttribute('href');
+        crumb.title = center.textContent.trim();
+        crumb.textContent = first.textContent.trim();
+        eyebrow.replaceChild(crumb, first);
+      }
+      center.parentNode.removeChild(center);
+    }
+    bar.classList.add('is-foot');
+    var foot = main.querySelector(':scope > .dm-footer');
+    if (foot) main.insertBefore(bar, foot); else main.appendChild(bar);
+  })();
+
   // ── Mobile toggle ─────────────────────────────────────────────────────────
   var toggle = document.getElementById('js-nav-toggle');
   var nav    = document.getElementById('js-side-nav');

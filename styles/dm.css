@@ -64,6 +64,9 @@
   --dm-teal:        #6fa9a0;
   --dm-elev-1:      rgba(17, 23, 35, 0.82);
   --dm-elev-2:      rgba(28, 36, 52, 0.86);
+  /* Panels (infobox, Connections card): dark glass over the backdrop. */
+  --panel:          rgba(9, 12, 20, 0.72);
+  --panel-rule:     rgba(203, 216, 232, 0.10);
 
   /* Axiom palette: one colour per Axiom, matched in brightness. Each nav
      group takes one (dm-nav.js sets html[data-axiom]) and the page accent
@@ -469,6 +472,37 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
   transition: color 0.18s;
 }
 
+/* Page navigation (dm-nav.js): the eyebrow's first part links back to the index,
+   and prev/next at the foot of the page as a plain row of two links. */
+.dm-content .dm-page-eyebrow .dm-crumb {
+  color: inherit;
+  border-bottom: 1px solid var(--accent-rule);
+}
+.dm-content .dm-page-eyebrow .dm-crumb:hover { color: #fff; border-bottom-color: var(--accent); }
+.dm-content .voyage-nav-bar.is-foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 3rem 0 1.5rem;
+  padding: 1rem 0 0;
+  border: 0;
+  border-top: 1px solid var(--rule);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+.dm-content .voyage-nav-bar.is-foot .voyage-nav-link {
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border-bottom: 0;
+}
+.dm-content .voyage-nav-bar.is-foot .voyage-nav-link:hover { color: var(--accent-text); }
+.dm-content .voyage-nav-bar.is-foot .voyage-nav-link:only-child { margin-left: auto; }
+.dm-content .voyage-nav-bar.is-foot .voyage-nav-link:first-child:only-child:has(svg:first-child) { margin-left: 0; }
+
 
 /* ═══════════════════════════════════════════════════════════════
    6  ARTICLE PAGES
@@ -603,8 +637,8 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
   line-height: 1.45;
 }
 .dm-content .identity-card {
-  background: var(--bg-card);
-  border: 1px solid var(--rule);
+  background: var(--panel);
+  border: 1px solid var(--panel-rule);
   border-radius: 2px;
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
@@ -718,11 +752,11 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
 }
 .dm-content .xref-card,
 .dm-content .stat-card {
-  background: var(--bg-card);
-  border: 1px solid var(--rule);
+  background: var(--panel);
+  border: 1px solid var(--panel-rule);
   border-radius: 2px;
 }
-.dm-content .chip { border-color: var(--accent-rule); }
+.dm-content .chip { border-color: var(--accent-rule); background: rgba(203, 216, 232, 0.03); }
 .dm-content .chip:hover { background: var(--accent-faint); }
 
 /* ── Wiki layout ──
@@ -737,9 +771,13 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
   order: 2;
   position: sticky;
   top: 1.2rem;
-  border-top: 2px solid var(--accent-rule);
+  border-top: 2px solid var(--accent);
 }
-.dm-content .is-wiki .identity-card .portrait-frame { aspect-ratio: 4 / 3; }
+.dm-content .is-wiki .identity-card .portrait-frame {
+  aspect-ratio: 4 / 3;
+  background: var(--accent-faint);
+  border-bottom-color: var(--panel-rule);
+}
 .dm-content .is-wiki .identity-card .stat-row {
   display: grid;
   grid-template-columns: 6.4rem minmax(0, 1fr);
