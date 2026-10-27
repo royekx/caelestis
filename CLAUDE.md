@@ -36,7 +36,7 @@ Do not write to the repo before the first or to the record before the second.
 | Nav group | Pages |
 |---|---|
 | Play | Voyages · Tracker · Plot Hooks · Stat Blocks · Rules |
-| Story | Spine (`campaign/index.html`) · Opposition (`opposition/vecna.html`, `opposition/colony.html`) · Timeline |
+| Story | Campaign (`campaign/index.html`) · Opposition (`opposition/vecna.html`, `opposition/colony.html`) · Timeline |
 | People | Crew · Dossiers · Factions (`factions/fleet.html` for the Fleet) |
 | World | Cosmology · Locations (`locations/`, was `realms/`) · Vessels · Artifacts · Chart |
 | Reference | Glossary · Principles (`principles.html`) |

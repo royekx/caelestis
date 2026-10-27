@@ -64,4 +64,5 @@ staging is distributed page by page.
 | [divine-rules.md](divine-rules.md) | Worship, galaxies, polarity, realms, one god many names | Draft |
 | [vecna.md](vecna.md) | Vecna's history, realm, faithful and their names | Draft |
 | [tharizdun.md](tharizdun.md) | The prison, the Day of Chaos, how Vecna uses him | Draft |
+| [page-split.md](page-split.md) | Subject pages vs campaign pages, tested on Vecna | Draft |
 | [glyth-watcher.md](glyth-watcher.md) | The Watcher who came back from Glyth | Sketch |

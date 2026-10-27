@@ -133,7 +133,7 @@ the player side.
 | Group | Pages |
 |---|---|
 | Play | Voyages · Tracker · Plot Hooks · Stat Blocks · Rules |
-| Story | Spine · Opposition · Timeline |
+| Story | Campaign · Opposition · Timeline |
 | People | Crew · Dossiers · Factions |
 | World | Cosmology · Locations · Vessels · Artifacts · Chart |
 | Reference | Glossary · Principles |

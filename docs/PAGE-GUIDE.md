@@ -146,7 +146,7 @@ and link to the subject tabs for the rest.
 | a player character | Crew |
 | a definition | Glossary, as a line |
 | adjudication | Rules, as a section; a stat block goes on Stat Blocks |
-| story shape and per-arc planning | Spine |
+| story shape and per-arc planning | Campaign |
 | the antagonists' workings | Opposition |
 | a grounded thread the DM can pull | Plot Hooks, Active or Inactive |
 | untethered speculation | Plot Hooks, Speculation section |
@@ -324,7 +324,7 @@ Sections are closed by default. Open only these:
 
 | Page | Open |
 |---|---|
-| Spine | Central Question; Arcs, with Arc 1 open inside |
+| Campaign | Theme; Arcs, with Arc 1 open inside |
 | Voyages | Next session; Record; the most recent recorded voyage |
 | Plot Hooks | Active |
 
