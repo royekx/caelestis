@@ -283,8 +283,7 @@ Add only the scripts the page uses:
 |---|---|
 | `portraits.js` | a page with portraits or dossier rows; a frame with `data-key` renders from the map |
 | `dm-tabs.js` | a dossier (its tab set) |
-| `dm-sections.js` | a page with three or more top-level sections |
-| `dm-toc.js` | a page whose `<main class="dm-content">` also carries `has-toc` |
+| `dm-sections.js` and `dm-toc.js` | every long page (sections in `<details>`); `<main class="dm-content has-toc">` |
 | `dm-register.js` | a register page |
 
 `dm-nav.js` renders only under `/prime/`. DM scripts never load on a player
@@ -307,8 +306,12 @@ page" box.
 ### Sections
 
 Top-level sections are `<details class="dm-collapse-section">` with the `<h2>`
-inside the `<summary>`. With three or more, `dm-sections.js` turns them into a
-tab strip.
+inside the `<summary>`; subsections are `is-sub` with an `<h3>`. A long page
+reads as one article: `dm-sections.js` opens every section, makes the
+summaries plain headings, drops the boxes, and the "On this page" rail
+(`dm-toc.js`) lists every section and subsection. There are no section tabs
+and nothing collapses; the rail is the navigation. Entries (§ 5) keep their
+two tabs, About and DM notes.
 
 ```html
 <details class="dm-collapse-section" id="section-id">
