@@ -34,7 +34,7 @@ staging once Korey has read and accepted them.
 | Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 35 | 3 | 49 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
-| Factions | factions/ | 1 | 4 | 22 | 2 | 40 |
+| Factions | factions/ | 1 | 4 | 21 | 2 | 36 |
 | Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 13 | 1 | 45 | 5 | 42 |
 | Dossiers | dossiers/ | 9 | 6 | 43 | 0 | 53 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 5 | 3 | 0 | 1 |
-| **Total** | | **79** | **87** | **259** | **14** | **400** |
+| **Total** | | **79** | **87** | **258** | **14** | **396** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1220,33 +1220,14 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/order.html
 
-- **[fix]** Watchers are posted to regions of worlds
-  Page says Watchers "take a posting — to a plane rather than a world". Change to: "then take a posting to a region of a world. A world may hold several Watchers, depending on its size and peoples."
-  src: memory-canon campaign-canon § Key NPCs (Watcher ruling corrected); timeline "The Order of the All-Father"; working/glyth-watcher.md § Sketch
-
-- **[add]** The Order guards the Ortholiths
-  Add to the lead: "The Order guards the Ortholiths, believing the taken are inside them. 'Ortholith' is the Order's word for what most people call a Monolith."
-  src: timeline "The Order of the All-Father"; memory-canon campaign-canon § Cosmology (Continuity and Ortholiths)
-
-- **[add]** Contracts and tips
-  Add to Function: "Watchers pass contracts and tips to the Fleet to head off trouble long before a world reaches a Zenith."
-  src: memory-canon campaign-canon § Key NPCs (world awareness)
-
 - **[add]** The Sol extraction
   Add under Watchers: "A Watcher extracted Sol Fortuna from Aethris, against the Order's remit to preserve worlds, not individuals." (Add a matching line on crew/sol.html.)
+  done: factions/order.html (pilot, What's hidden); crew/sol.html still needs its line.
   src: chat-early-planning § FIA lore content
-
-- **[add]** H'Catha's Watcher
-  Add a row: "H'Catha's Watcher. Posted near the misty rim. She trades intelligence and protection with Ondessa and relays what she learns to the Order and to Caelestis; her reports are known as unusually useful, because H'Catha sits at Realmspace's edge where traffic and merchants pass. She saw factions moving on the meteorite and reported it as a precaution. She expected seasoned sailors, not cadets." Ezra's instructor.
-  src: memory-canon campaign-canon § Antagonists (eclipse line), § Key NPCs, § Naming (H'Catha decisions); chat-astral-sea-worldbuilding § H'Catha
 
 - **[add]** The Watcher who came back from Glyth
   Add a named-but-unseen row: "A Watcher posted to a region of Glyth got out after years inside the elder brain's range. She still hears it." (Eris Morn pattern.)
   src: working/glyth-watcher.md; memory-canon open-decisions (Vecna direction 2026-10-24)
-
-- **[add]** Ezra's next stop
-  Add to Ezra's row: "Collected at H'Catha by a Caelestis crew and carried to the Hall, where his journey as a Watcher begins."
-  src: memory-canon campaign-canon § Key NPCs (Ezra)
 
 ---
 

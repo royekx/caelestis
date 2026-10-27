@@ -114,11 +114,6 @@ when a ruling changes; delete it once the page carries it. See
 - The Restorers are trying to reach a heart, and through it the Core Monolith, where they believe everything lost is stored. They compete for residue pieces. Without knowing it, they advance Vecna's plan.
 - They follow the Core Monolith's pressure as Vecna does, read through a different mind. Their understanding is theory and vision, little of it concrete. They and the Seekers have clashed over the years, and some on each side believe they walk the same path.
 
-### The Order (factions/order.html)
-- The Watchers keep watching. Over the past century they have seen Monoliths rise more often, and it worries them; some want to act. They are fighting oddities across many worlds and trying to keep a lid on them. Caelestis is thin partly because it answers the Watchers' calls for help.
-- The Hall of Sight and Sound is the great hall within the Order's seat.
-- H'Catha's Watcher is Nereth Vaul.
-
 ### Aethris and the sisters (factions/aethris.html, realms/aethris.html, dossiers/beshaba.html, factions/deities.html)
 - The Fortuned want Sol back alive because he is a component of their unfinished ritual. They do not care about him as a person.
 - Beshaba finds the Fortuned heretical, a spit in her face. She thinks Tymora is fuelling them, and blames her sister for it. On Aethris Beshaba is the lesser of the two, because people favour luck over misfortune, and she calls what the Fortuned do unnatural.
