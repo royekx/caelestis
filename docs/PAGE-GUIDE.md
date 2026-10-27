@@ -363,8 +363,9 @@ Tabs are `.pill-tab` buttons in a `.pill-tabs[data-pill-group]` strip with
 
 ### The infobox
 
-Right-hand pane, at the top of *About*: portrait, then name and epithet, and
-the rows that apply: species, class or role, affiliation, origin, home or
+A right-hand column beside every tab (`.entry-header.is-wiki`), so the face
+and key facts stay in view while reading DM notes; it stacks on top on a
+phone. Portrait, then the rows that apply: species, class or role, affiliation, origin, home or
 base, status, key items (linked), first appearance (voyage).
 
 ### About, in order
