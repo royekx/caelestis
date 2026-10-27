@@ -76,8 +76,8 @@ when a ruling changes; delete it once the page carries it. See
 ### Residue and the fragments (cosmology/, artifacts/, glossary/)
 - The pieces of the Reach fragments are called residue.
 - Caelestis's galaxy holds pieces of three fragments, Consolidation, Dissolution and Distinction, both by chance and by pull. Pieces of a fragment draw toward each other; once a few came to rest near Realmspace, more followed.
-- The Reach left five fragments of residue, one for each Axiom. Each broke into a prime number of pieces: Dissolution 2, Distinction 3, Determination 5, Consolidation 7, Expansion 11.
-- The Consolidation fragment is the Rod of Seven Parts. Its pieces draw toward each other. The Expansion fragment's eleven pieces have never been found.
+- The Reach left five fragments of residue, one for each Axiom. Each broke into a prime number of pieces: Dissolution 2, Distinction 3, Expansion 5, Consolidation 7, Determination 11.
+- The Consolidation fragment is the Rod of Seven Parts. Its pieces draw toward each other. The Determination fragment's eleven pieces have never been found.
 
 ### Erevos and Aurath (cosmology/, glossary/, chart/, realms/)
 - The cosmos is five galaxies. At its center is Erevos: the remains of the Reach world, a black hole beneath the Core Monolith and the Radiant Citadel.

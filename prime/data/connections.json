@@ -147,7 +147,7 @@
           "src": "STAGING, Cosmology"
         },
         {
-          "t": "The Determination fragment has five pieces.",
+          "t": "The Determination fragment has eleven pieces, none found.",
           "src": "STAGING, Cosmology"
         }
       ]
@@ -1766,14 +1766,14 @@
       ]
     },
     {
-      "id": "determination-fragment",
-      "label": "The Determination fragment",
+      "id": "expansion-fragment",
+      "label": "The Expansion fragment",
       "type": "item",
       "scope": "cosmos",
       "summary": "Five pieces that have left no trace in any record.",
       "facts": [
         {
-          "t": "The Determination fragment is in five pieces, and none has left a trace in any record.",
+          "t": "The Expansion fragment is in five pieces, and none has left a trace in any record.",
           "src": "artifacts/transformation-fragment.html"
         }
       ]
@@ -4929,7 +4929,7 @@
           "src": "STAGING, Cosmology"
         },
         {
-          "t": "The Expansion fragment's eleven pieces have never been found.",
+          "t": "The Expansion fragment has five pieces.",
           "src": "STAGING, Cosmology"
         }
       ]
@@ -5173,7 +5173,7 @@
     },
     {
       "s": "residue",
-      "t": "determination-fragment",
+      "t": "expansion-fragment",
       "rel": "includes",
       "src": "STAGING round 11"
     },
@@ -5196,7 +5196,7 @@
       "src": "STAGING round 11"
     },
     {
-      "s": "determination-fragment",
+      "s": "expansion-fragment",
       "t": "determination",
       "rel": "is biased toward",
       "src": "STAGING round 11"
