@@ -30,13 +30,13 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 8 | 12 | 27 | 0 | 26 |
+| Cosmology | cosmology/, glossary/, chart/ | 8 | 12 | 17 | 0 | 5 |
 | Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 35 | 3 | 49 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
 | Factions | factions/ | 1 | 4 | 22 | 2 | 40 |
 | Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 13 | 1 | 45 | 5 | 42 |
-| Dossiers | dossiers/ | 11 | 6 | 43 | 0 | 51 |
+| Dossiers | dossiers/ | 9 | 6 | 43 | 0 | 51 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 6 | 2 | 26 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 21 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 5 | 3 | 0 | 1 |
-| **Total** | | **79** | **87** | **270** | **14** | **420** |
+| **Total** | | **77** | **87** | **260** | **14** | **399** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -147,6 +147,7 @@ Order under each page: decide, fix, drop, add.
 - **[fix]** Tharizdun is she
   Tharizdun is female. Pages and drafts that call her he/his/him: cosmology/index.html, realms/fonains.html, realms/index.html, dossiers/thessalar.html, crew/boogie.html, artifacts/fonains-shard.html, campaign/spine.html, factions/academy-fleet.html, chart/index.html, working/tharizdun.md, and the Fonains Canon Reference doc. STAGING and the Connections layer are done.
   src: Korey, 2026-10-27
+  done: cosmology and glossary (distribution section 1, 2026-10-27).
 
 - **[fix]** Dharra, not Darra
   The Cre'Tez sister is Dharra. Fix the Fonains Canon Reference doc and any page that spells it Darra. STAGING and the Connections layer are done.
@@ -160,10 +161,7 @@ Order under each page: decide, fix, drop, add.
   Ruled (STAGING, Cosmology § The Axioms): the Axioms are Consolidation, Expansion, Dissolution, Distinction and Determination, acting on energy that was always there. The old four map: Convergence → Consolidation (the Rod of Seven Parts is the Consolidation fragment, 7 pieces); Dissolution stays Dissolution, now the mixing of everything into sameness (the twins' fragment, 2); Boundary → Distinction (A.T.L.A.S., its sister and the third piece, 3); Transformation → Expansion (the 5-piece fragment). Determination's fragment is new: 11 pieces, none found. A Zenith is a world at its peak of Distinction, not "Convergence driving a system to maximum expression"; Monoliths are Continuity's response, and the strain from their rise is a byproduct of Vecna's work, not a weight on one Axiom. The Transformation–Boundary seam is cut. Every backlog item that quotes an old Axiom name reads under this mapping.
   Pages: prime/cosmology (the Four Axioms, Continuity, the strain, the seam section to cut), prime/glossary, prime/chart, prime/artifacts/* (index, rod-of-seven-parts, runekeepers-fragment, transformation-fragment → expansion-fragment, containment-engine, fonains-shard), prime/campaign/* (index, ascension, spine, plot-hooks, what-if), prime/crew/index.html and tumak.html, prime/dossiers/nghathrod.html and the-runekeeper.html, prime/factions/* (academy-fleet, deities, runekeepers, vthorama), prime/realms/index.html and wayfinders-homeworld.html (concealment rides on the Dissolution fragment's cycle), prime/rules/index.html, timeline.json, working/vecna.md. Done with the distribution pass. STAGING, the survey and the Connections layer already use the five.
   src: Korey, 2026-10-26
-
-- **[fix]** One name for all of existence
-  Ruled: Continuity and the Prime Continuum are the same thing (STAGING, Cosmology). The cosmology page treats Continuity as something produced "within the Prime Continuum"; rewrite it as one thing with two names, and check the glossary and Connections layer for the split.
-  src: Korey, 2026-10-26
+  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27).
 
 - **[later]** Place GAL-01's inscription on the chart
   Ruled: GAL-01's inscription is the eye he lost, sixteen heart worlds (ten lids, six iris); the iris worlds are key (STAGING, Campaign; diagram 2026-10-26). Left for when play needs it: which systems hold which strokes, and whether any known system (Realmspace, Krynnspace, Virenspace) lies on the figure. Greyspace is not on it: Oerth is the retina every eye world links back to (STAGING, Campaign).
@@ -184,6 +182,7 @@ Order under each page: decide, fix, drop, add.
 - **[fix]** Spheres become galaxies, everywhere
   Ruled (STAGING, Cosmology): the cosmos is five galaxies around Erevos; "sphere" as a region of space is retired, and SPH-0n becomes GAL-0n; Oerth moves to GAL-01. Pages: prime/cosmology, prime/chart (labels, the sphere layer, "the godless sphere"), prime/glossary, prime/realms/*, prime/factions/*, prime/campaign/*, timeline.json, working/divine-rules.md, the README naming rule, and the Fonains Canon Reference doc. Every backlog item below that quotes "sphere" reads as "galaxy". Done with the distribution pass. The survey, the Connections DM layer and STAGING already use galaxies.
   src: Korey, 2026-10-26
+  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27).
 
 - **[decide]** The calendar the Cycle counts *(later)*
   Pages date orders by Cycle (1486, 1489, 1490); the survey uses Cycle 1490 as the present for provisional designations. Set what the Cycle counts from, and how Toril's reckoning, Fonains's "year 425" and Krynn's calendar line up against it.
@@ -196,6 +195,7 @@ Order under each page: decide, fix, drop, add.
 - **[fix]** Replace the W-, SYS- registers with the CSC scheme
   Ruled (STAGING round 12): designations follow real astronomy; nothing has reached the players. Retire every W-0n and SYS-0n designation and replace it with a CSC number, a star-and-letter designation, or the body's proper name. Pages: prime/chart, prime/cosmology, prime/realms/* (realmspace, toril, hcatha, aethris, glyth, fonains, krynn, virenspace, sys04, tetherbreak, wayfinders-homeworld, ascension-world, caelestis, strake-station, cairn-station, meteor-hub, astral-sea), prime/campaign/index.html, prime/timeline/timeline.json, and restricted/ (fr-005, sa-002, wm-003, wm-006). Fonains's W-021 and Aethris's W-008 go with them. Do this with the distribution pass, and save the known systems (Realmspace, Virenspace, Aethris's system, Krynnspace, Glyth's) into the survey first so the new designations have one source.
   src: Korey, 2026-10-25 (round 12)
+  done: prime/cosmology (distribution section 1, 2026-10-27).
 
 - **[later]** Game systems for GAL-03, GAL-04 and GAL-05
   Ruled: assigned ahead of time (STAGING round 12). Set when a campaign heads there.
@@ -220,15 +220,13 @@ Order under each page: decide, fix, drop, add.
   In-world line for the table intro: "The Dissolution fragment lies in two pieces, the Transformation fragment in three, the Boundary fragment in five, and the Convergence fragment, the Rod of Seven Parts, in seven."
   src: memory-canon (campaign-canon, prime-number counts; the Zenith "three poles"); chat-cosmic-campaign-structure § Cosmology redesign
   answered: memory-canon (campaign-canon, prime-number counts, locked); inbox/chat-organizing-framework.md § Residue (Settled). The Boundary-2 order in chat-cosmic-campaign-structure appears only in Claude's rewritten page text; a check of that chat found no Korey statement making the change, so memory stands.
-
-- **[fix]** What astral projection reaches *(answered)*
-  The Astral Plane overlays the Astral Sea, so astral projection is hull-less seafaring. Page § Other Planes says "Astral projection sends the traveler into the Astral Sea itself." Replace with: "Astral projection sends the traveler onto the Astral Plane, which lies over the Astral Sea. A projected traveler can cross the Sea without a hull." The Sea itself stays material space between worlds.
-  src: memory-canon (campaign-canon, Planes); framework § Cosmic structure
-  answered: memory-canon (campaign-canon, planar travel: "astral projection as hull-less seafaring"); inbox/chat-organizing-framework.md § Other planes (Settled: "astral projection doubles as hull-less travel"). That chat's line "The Astral Sea is the Astral Plane" loses to memory's ruling that the cosmos is the Material Plane.
+  done: the cosmology residue table and the glossary (distribution section 1, 2026-10-27).
 
 - **[fix]** The center is Erevos
   Replace "the center" (as a name) with Erevos across this page, the glossary, the chart and every page that names it. The Core Monolith keeps its name; those who dwell in it call it Aurath. Plain phrases like "toward the center" may stay where they are directions, not names.
   src: Korey, 2026-10-25 (round 9)
+  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27).
+
 - **[later]** Names for the spheres and designated systems
   SPH-01 included. Listed in the page's § Open.
   src: framework § Open
@@ -244,6 +242,7 @@ Order under each page: decide, fix, drop, add.
   "Caelestis's sphere holds pieces of three fragments, partly by chance and partly by pull. Pieces of one fragment draw toward each other. Once a few came to rest near Realmspace, more of their fragment followed."
   Touches: this page, artifacts/index.html.
   src: Korey, 2026-10-25 (round 8); framework § Open
+  done: prime/cosmology (§ Residue); artifacts/index.html is left (distribution section 1, 2026-10-27).
 
 - **[later]** Whether the four Axioms held their current configuration before the Reach
   src: framework § Open
@@ -259,107 +258,15 @@ Order under each page: decide, fix, drop, add.
   Fraying, Turning, Walling and Gathering are an unreviewed Crossing Companion proposal. Lock or cut before they go under the weather section.
   src: astral § Open
 
-- **[fix]** Where the Fonains Vanished went
-  Page (§ Corrupted Monoliths) says: "It was corrupted, so it held locally; when it was destroyed, what it held was released onto the world. Those people exist." Replace with:
-  "A corrupted Monolith is a tunnel to Tharizdun's prison. It redirects what it relays, sending existence to him instead of to the Core. The Vanished of Fonains went there. Scholars long guessed the Shadowfell, the most logical destination they had for displaced souls. The truth is worse: Tharizdun's prison has no map and no address in any known cosmology."
-  src: memory-canon (campaign-canon, the Vanished; Tharizdun's goal); tharizdun § Corrupted Monoliths
-
-- **[fix]** How the Fonains Monolith formed
-  Page says "Shadow-influence shaped its Zenith, Tharizdun had a hand in both" (§ Corrupted Monoliths) and "The Fonains Zenith rose out of elemental upheaval and shadow corruption, with Tharizdun behind both" (§ Crossover with Fonains). Replace both with:
-  "The Fonains Monolith formed corrupted. Five cultists held a ritual: four channelled the Princes of Elemental Evil, and the fifth held pieces of a black crystal, a Tharizdun artifact. The ritual was the Zenith, and Vecna nudged it, knowing it would be ridden. The Monolith manifested in answer, and the crystal replicated into it as it formed."
-  src: memory-canon (open-decisions, Locked 2026-10-25); tharizdun § How the Fonains Monolith formed; session-rulings
-
-- **[fix]** Tharizdun's prison is not an SPH-01 place
-  § Other Planes says "The Princes of Elemental Evil and Tharizdun's chains are both SPH-01 problems for this reason." Keep the Princes; remove Tharizdun's chains. His prison has no address in any known cosmology.
-  src: memory-canon (campaign-canon, the Vanished)
-
-- **[fix]** Why pantheons cluster in spheres
-  Page says "Pantheons gravitated to different spheres" twice (§ Pantheons and spheres, and § The Gods: "Pantheons gravitated to different spheres after the Reach"). Replace with the loop:
-  "Pantheons cluster through a feedback loop. A god answers where it is believed in; answered prayer draws more belief; attention follows worship and worship follows attention. Over centuries the loop pulls a pantheon onto one world, then one system, then one sphere."
-  src: divine-rules § Why pantheons cluster in spheres
-
-- **[fix]** The approach to the center harms gods without destroying them
-  Page says "The approach is lethal to anything." Change to: "The approach is dangerous to mortals, who can still cross it. It harms gods, worst of all the gods born from the Reach, and destroys neither."
-  src: memory-canon (open-decisions, Vecna/gods 2026-10-25); divine-rules § Polarity table
-
-- **[fix]** Reach-born gods' realms anchor by worship
-  The page's § Open asks "Where the Reach-born gods' realms are anchored, given the sphere they settled in came after them." Close it: a god's realm anchors to the sphere where its worship is densest now, whatever came first. Remove that half of the open line.
-  src: divine-rules § Realms
-
-- **[fix]** Vecna's godhood is known; his plan is hidden
-  § What the pantheons feel says he "is distributed across intermediaries who have never heard his name" and ends "The shape is legible. The author is not." Rewrite:
-  "Vecna is an open god, worshipped under many names. The gods know he ascended on Oerth, know what he is god of, and have opinions about him. His worship is wide and thin, which makes him hard to locate. What they do not know is his plan: it runs through people who do not know whose plan it is, and most of it looks like other people's ordinary ambition."
-  src: session-rulings; vecna § The two bodies, § What the gods think of him
-
 - **[fix]** Every place carries a designation
   Page says "Systems Caelestis has not charted, such as the Wayfinders' homeworld and the Ascension world's, carry no designation." Replace: every sphere, system and world carries a designation, including uncharted and hidden ones. The Ascension World's system is SYS-05 and the Wayfinders' homeworld's is SYS-06, both in SPH-01. Player-facing material shows only what the crew knows.
   src: memory-canon (campaign-canon, placeholder designations); chat-organizing-framework § Superseded
-
-- **[add]** Monoliths stand above the gods
-  Add to § The Gods, beside "What the gods generally know":
-  "The archive of the cosmos sits above every god, Vecna included. Gods know little to nothing about Monoliths. A Monolith records what is, never what anyone believes: it holds no faith and answers no prayer. Aethris's Prism Ascendant shows the gap. Its people take it for Tymora's answer, and it is not."
-  src: BCS § Sol/Aethris and the gods (turns 864, 872)
-
-- **[add]** Polarity: why gods stay off worlds
-  Add to § The Gods as the rule for divine absence, and to § The center:
-  "No god walks on a world in person. A god carries the same charge as a world's heart, and the two push apart like same-pole magnets. A god can push toward a heart, but the resistance grows with every step until going further is unbearable. Reach residue pushes back on gods the same way a heart does. An apparition or avatar carries too little of the god to be pushed, which is why gods act through avatars, visions, agents and champions.
-  The center is polarity at its strongest. The First Heart is the deepest heart, so the push there is greatest. The center harms gods without destroying them."
-  This replaces the retired "divine gate" wording.
-  src: session-rulings; divine-rules § Polarity; memory-canon (open-decisions, Vecna/gods 2026-10-25)
-
-- **[add]** Ascension flips a being's charge
-  Add to § The Gods, under later gods:
-  "A mortal who becomes a god takes on the divine charge and is pushed off the world they rose on. Vecna stood on Oerth as a lich; the moment he ascended, Oerth's heart pushed him away, and he has not stood there since. It is why he needs vessels to work his way toward the First Heart."
-  src: divine-rules § Ascension flips a being's charge; vecna § History; memory-canon (Vecna/gods 2026-10-25)
-
-- **[add]** Worship is power
-  Add to § The Gods:
-  "Worship is the source of every god's power, influence and reach. A god with no worshippers still exists but can do almost nothing. A god learns through its faithful: it knows what they see, report and pray about, and little beyond that."
-  src: session-rulings; divine-rules § Worship is power; memory-canon (Worship ruling)
-
-- **[add]** Concentration and reach
-  Add to § The Gods as a two-column table:
-  | | Concentration | Reach |
-  |---|---|---|
-  | What it buys | Force on one world | A foothold almost anywhere |
-  | What it costs | Near-blind elsewhere | Thin everywhere |
-  | Example | Tymora and Beshaba on Aethris | Vecna, across spheres |
-  src: divine-rules § Concentration and reach
-
-- **[add]** One god, many names
-  Add to § The Gods: "A god worshipped on several worlds is one god under several names. Takhisis is Tiamat; Paladine is Bahamut. Krynn knows them by Krynn's names."
-  src: session-rulings; divine-rules § One god, many names
-
-- **[add]** How divine realms anchor
-  Add to § Other Planes → Divine realms (the page has the partial form "anchored to the sphere their pantheon settled in"):
-  "A god's realm is anchored to the sphere where its worship is densest. It moves only when that centre of worship moves, which takes generations."
-  src: divine-rules § Realms
-
-- **[add]** Vecna ascended on Oerth
-  § A god is not taken omits the place. Add: "Vecna's ascension Zenith happened on Oerth, his homeworld. Its Monolith archived his mortality, and his followers keep it as their holiest site."
-  src: session-rulings; vecna § History
-
-- **[add]** Corrupted Monoliths are tunnels
-  Add to § Corrupted Monoliths: "A corrupted Monolith holds what it takes locally, and what it holds is drawn on toward Tharizdun's prison."
-  src: tharizdun § Corrupted Monoliths; memory-canon (Tharizdun's goal)
-
-- **[add]** Vecna uses Tharizdun
-  Add under § Corrupted Monoliths: "Vecna uses Tharizdun as a contingency, a battering ram he can point. It is use, not alliance, and each believes he is the one using the other."
-  src: session-rulings; tharizdun § Vecna and Tharizdun
-
-- **[add]** The Day of Chaos
-  Add to § Crossover with Fonains: "The Day of Chaos is the day the four Princes of Elemental Evil enter Fonains together. The barriers between the planes break, and Tharizdun gets his chance to leave his prison. Shothragot, Tharizdun's avatar, named it in the Monolith's last hours: 'Wait for the day of chaos.'"
-  src: session-rulings; tharizdun § The Day of Chaos; timeline "The Monolith breaks"
 
 - **[add]** The weather of reality
   Add as a named section under Zeniths (the page covers Convergence strain without the name):
   "The weather of reality is an escalating pressure with no owner. It comes from an Axiom under strain, Convergence, loaded by Zenith after Zenith. Tharizdun's rifting feeds it, but the weather itself is Convergence strain and belongs to no one."
   DM note: rarely seen early; track it on the campaign view.
   src: framework § Vecna and his working; memory-canon (campaign-canon, weather of reality)
-
-- **[add]** Convergence row: Rod piece and Lantern
-  Add to the Convergence row of the residue table: Xanathar keeps one piece of the Rod of Seven Parts. The Lantern of Flourishing is Vaelorix's name for the Containment Engine, Fourth Series; the crew holds it now.
-  src: memory-canon (campaign-canon, Rod holders; Lantern); chat-voyage-6-7-planning (Vaelorix renamed it)
 
 - **[add]** Faelight spore specification
   The counter-spore plant spec lacks the name and the radius steps. Add (DM voice):
@@ -388,48 +295,6 @@ Order under each page: decide, fix, drop, add.
   Keep M. Tarroway as Strake Station's cartographer whose readings first hinted at an unknown vessel disturbing the satellites at the system's edge (STAGING round 4). Cut the "timing tables" and their failure everywhere. Reduce his presence on the ten pages that mention him to passing references; his main home is the Fleet Intelligence Archive (restricted/). Nothing public.
   Touches: dossiers/tarroway.html, dossiers/index.html, dossiers/miken.html, dossiers/vthoramu.html, dossiers/joffrey.html, dossiers/verrow.html, factions/vocath-operation.html, realms/index.html, realms/strake-station.html, chart/index.html, restricted/.
   src: Korey, 2026-10-25 (round 4)
-
-- **[fix]** The Seekers
-  Glossary says the Seekers "have never heard his name." The session ruling settles it: Vecna is an open god with a following under many names, and his followers are the Seekers. Rewrite:
-  "The Seekers are Vecna's followers. Their chapters differ world to world and know him under many names; some of them name him and some do not. There is no shared glyph. Chapters recognise each other through the same account of a voice that taught them, the information-for-information trade rule, and the founding story 'we were taught how to ask.' Each chapter's symbol depicts its own secret, drawn so the subject is a void and only its surroundings show."
-  This overrides the "two bodies" split in vecna.md (open faithful versus name-blind chapters); vecna.md and `factions/seekers.html` follow.
-  src: session-rulings; memory-canon (campaign-canon, Seekers; open-decisions, Locked this pass)
-
-- **[add]** Lich Vecna has changed his mind
-  Entry says only "He has had an age to reconsider, and has." State the conclusion: Lich Vecna, his mortality archived in the Citadel, is changed, almost good-natured, and has concluded he was wrong.
-  src: chat § Cosmology redesign
-
-- **[add]** N'ghathrod is a Seeker chapter
-  "The hands" lists the Seekers and the Vth'orama as separate bodies. Add: N'ghathrod is himself the largest Seeker chapter and the only travelling one, and he coordinates with the planet-bound chapters. He believes the voice is an elder brain.
-  src: memory-canon (open-decisions, Locked this pass)
-
-- **[add]** The First Seeker
-  Add: Vecna is called the First Seeker. As a boy he was himself recruited by a voice.
-  src: memory-canon (open-decisions, Locked this pass)
-
-- **[add]** Polarity (new term)
-  "Polarity. A god and a world's heart carry the same charge and push apart. The push grows as a god comes closer, until going on is unbearable. It keeps gods off worlds and away from the center. Avatars carry too little of a god to be pushed."
-  src: session-rulings; divine-rules § Polarity
-
-- **[add]** Worship (new term)
-  "Worship. The source of a god's power, influence and reach. A god spends it as concentration (force on one world) or as reach (a thin foothold almost everywhere)."
-  src: session-rulings; divine-rules § Worship is power
-
-- **[add]** Corrupted Monolith (new term)
-  "Corrupted Monolith. A Monolith that is a tunnel to Tharizdun's prison: it holds what it takes and sends it to him instead of to the Core. The only one known formed on Fonains." Also note the exception in "Archiving", which says "A Monolith holds nothing locally" without one.
-  src: memory-canon (campaign-canon, Tharizdun's goal); tharizdun § Corrupted Monoliths
-
-- **[add]** The Day of Chaos (new term)
-  "The Day of Chaos. The day the four Princes of Elemental Evil enter Fonains together and break the barriers between the planes, so Tharizdun can leave his prison."
-  src: session-rulings
-
-- **[add]** The Passage (new term)
-  "The Passage. N'ghathrod's mark: a circle with a tail ending in another circle. It gains a circle for every linked world, so it doubles as a count." Keep it distinct from the existing "passage" entries (the Monolith–Core channel, and the link between two opened hearts).
-  src: memory-canon (open-decisions, Locked this pass)
-
-- **[add]** The Ascension, placed
-  The Ascension entry gives the sequence lich, god, Axiom without placing it. Add: the first steps are done. Vecna became a god on Oerth; "the Ascension" now names only his climb to an Axiom's seat, Convergence.
-  src: session-rulings; vecna § Oerth
 
 ### chart/index.html
 
@@ -2329,14 +2194,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   (a) The eye-in-a-wheel sketch (ties to crossing table entries 4 and 8).
   (b) The sealed letter: "Watch one thing until it changes."
   src: chat-voyage-6-7-planning § Open; memory-canon open-decisions (Voyage 007 intent)
-
-- **[decide]** The Order's title for a Watcher in training
-  The page calls Ezra a cadet, which is the Academy's word. The Order of the All-Father needs its own title for a trainee who has not yet been knighted and sworn the Oath of the Watchers. Once chosen, it replaces "cadet" and "Watcher in training" on dossiers/ezra.html and factions/order.html, and goes into data/vocabulary.js if the crew hears it.
-  src: chat 2026-10-27 (Korey: "let's come up with a name for a watcher in training")
-
-- **[decide]** Ezra's stat block in this campaign
-  Korey's sheet shows Ezra at the start of Emporia: knighted, Paladin 3, Oath of the Watchers. In Caelestis he has not been knighted or sworn the oath. His in-training stat block for H'Catha is still to build; the Emporia sheet is staged for his DM notes tab only.
-  src: chat 2026-10-27; STAGING § Ezra Ahl-Sier
 
 - **[fix]** The Hall transport is the crew's last stint with Ezra *(answered)*
   The page's order of operations ends "assigned to Emporia → optional ferry". Drop the optional Emporia ferry. Write: "The Watcher Transport, from H'Catha to the Hall of the Watchers, is the last time a Caelestis crew travels with Ezra. His training is finished, and it is his last leg before his journey begins. The Hall is where he departs from." Emporia stays as his posting, which he reaches without the crew.

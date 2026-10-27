@@ -6,115 +6,6 @@ facts are written in-world; rules and play notes in DM voice. Rewrite an entry
 when a ruling changes; delete it once the page carries it. See
 [README.md](README.md) for the flow and the writing rules.
 
-## Cosmology
-
-### The Axioms (cosmology/, glossary/, chart/, working/divine-rules.md)
-- Energy has always existed. It is never made and never destroyed, only arranged. Everything that exists, a star, a world, a person, is energy held in a pattern for a while.
-- Five Axioms govern how energy behaves:
-  - **Consolidation** draws things together.
-  - **Expansion** spreads things apart.
-  - **Dissolution** pulls everything toward sameness.
-  - **Distinction** makes and keeps things different from each other.
-  - **Determination**: every outcome must be decided, and nothing sets which way it goes. Until it is decided it stays open; once decided it stays decided, and each decision opens new undecided things.
-- Consolidation and Expansion decide where energy goes. Dissolution and Distinction decide what form it takes. Determination stands between the two pairs: Consolidation and Dissolution close possibilities, pulling toward one place and one state; Expansion and Distinction open them, making more room and more distinct things.
-- Pictured, the five Axioms stand equally far from one another, like pins in a cushion, with Continuity at the center. Determination is really a cloud through all the others, the likelihood that permeates them, and stands as a fifth pin. Five points all equally apart exist only one dimension up, in the figure called the 5-cell; drawn flat, it is five points around a center, the same figure as the five galaxies around Erevos. (DM: a mirror for meaning, not a map. No galaxy belongs to an Axiom. The pairs Consolidation–Expansion and Dissolution–Distinction oppose in what they do, not in where they stand.)
-- The four Axioms on the two axes meet in four ways, and each meeting does something to what is possible:
-  - **Collapse** (Consolidation and Dissolution): one place, one state. It closes possibilities.
-  - **Proliferation** (Expansion and Distinction): more room, more distinct things. It opens them.
-  - **Formation** (Consolidation and Distinction): drawn together and made distinct: stars, worlds, life. It holds a few possibilities and makes them last.
-  - **Dispersal** (Expansion and Dissolution): spread out and evened out: cooling, thinning, the Astral Sea between systems. It scatters possibilities too thin to ever meet.
-- Determination acts on the four in turn: it is why each tension tips one way or another, without fixing which. It is why Consolidation wins in one place and Expansion in another. Without it the cosmos would be the same everywhere.
-- Each Axiom is named for what it means; the physics is in how it behaves. Dissolution is the way ink spreads through water: scattered up close, an even sameness from a distance. Determination does not mean that outcomes are fated; it means every outcome must be reached, and nothing chooses it in advance.
-- None of the five is a substance. Energy is the only thing there is; the Axioms are how it behaves.
-- Each Axiom is the absolute manifestation of its law, with the barest awareness and no more: Consolidation knows only to pull. They want nothing and choose nothing. (DM touchstone: Destiny 2's Nine.)
-- The five are balanced, but they are not equal.
-- No Axiom can be removed, replaced or added, any more than energy can be made or destroyed. What changes is their balance: over the ages the push and pull between them has shifted, and reality has changed with it.
-- Monoliths are Continuity's response, not any one Axiom's: reality preserving itself when a world is pushed to an extreme. Most often that is a Zenith; the death of a god on a world, and the Reach itself, were others.
-- Structure, every star, world and living thing, is what the five make together. Continuity is their interplay: reality itself, the fabric that rises out of how the Axioms resolve.
-- Continuity and the Prime Continuum are one thing: all of existence.
-- Continuity runs both ways. It rises out of the Axioms, and whoever reaches into it can push and pull how the Axioms work, and so remake reality. Everyone else lives inside what it serves them. Time runs one way because of Dissolution.
-- How things came to be: energy lay perfectly even, and nothing happened. At the smallest scale its outcomes were undecided, and tiny differences resolved. Expansion stretched space and gave those differences room. Consolidation drew the richer places together into clouds, stars, worlds and galaxies, and where it won outright, with Dissolution, it collapsed into the cores. In the flow of energy from hot stars into cold space, Distinction built and held distinct things: elements, weather, life, minds. Dissolution is the price of all of it: every pocket of difference sends more sameness out into the cosmos than it keeps, and everything is running down. At every step, Determination demanded an outcome and set none.
-- A Zenith is a world at its peak of Distinction, the most fully itself it will ever be. A Monolith answers it and records the pattern at that peak.
-- The Reach: the people of the first world, the only world in an earlier version of reality, reached into Continuity and changed it. Their world was destroyed. It was the first time Continuity had to answer, and the first Monolith, the Core Monolith, stands where it answered. The Reach world collapsed into Erevos; its fragments spread across the cosmos, and reality rebalanced from there into the form it has now.
-- The First Heart is the Reach world's heart, the deepest heart in the cosmos, beneath Erevos.
-- Since then Continuity has answered every such strain the same way, with a Monolith. Monoliths are how this version of reality preserves itself. A reality remade from inside might answer differently, or not at all.
-- The people of the Reach did not simply die. They became woven into the cosmos at different depths, and over time they became the gods. Some may remember what they were. Other gods have risen since, and some have fallen.
-- A galaxy's core is Consolidation and Dissolution winning outright.
-- Star systems lie unevenly through a galaxy. All of them circle the core, at different speeds. They crowd along the spiral arms, gather in clusters, and leave long empty reaches between, and the galaxy thins toward its edge. The Astral Sea between galaxies belongs to Expansion.
-- DM: the Axioms are named only on the DM side. Scholars, faiths and Vecna describe them in their own terms; Vecna hears them as music.
-
-### The gods (cosmology/, realms/, the divine-rules draft, factions/deities.html, working/divine-rules.md)
-- Worship gives gods power, influence and reach.
-- The greater gods dwell in the Astral Sea between galaxies. The push of a galaxy's core keeps them out, and a greater god forcing its way into a galaxy would tear it apart. A greater god may lean toward one galaxy, but it is known across all of them.
-- The lesser gods can pass into a galaxy and travel the Astral Sea between its systems. A system's edge pushes them back.
-- One god is known by different names, and told different origins, in different galaxies and on different worlds. Takhisis is Tiamat; Paladine is Bahamut. Asmodeus's role is the same wherever he is known as the devil. (DM: in the eldritch galaxy the gods wear names close to real-world pantheons.)
-- No god can set foot on a world, or reach Erevos, without destruction, because of polarity: like charges push apart, and the push grows until it is unbearable. Erevos harms them without destroying them.
-- Most gods came into being in the Reach event and grew into godhood over time, some sooner than others, so gods have different ages. Later gods ascended from mortality. Their standing as greater or lesser gods comes from how much worship they hold, the influence they gain from it, and the niche they find, through the same loop of attention and belief.
-- Gods are not physical. They are woven into the cosmos, each as deep as its standing allows: the greater between the galaxies, the lesser within them. A god drifts toward the galaxy where its worship is greatest. Worship reaches a god from any galaxy, but the farther away it comes from, the weaker its signal.
-- Gods are of the same make as worlds and their hearts, so polarity pushes them apart. The more powerful a god, the larger it is in that metaphysical sense, and the harder the push. This is why the greatest gods are kept farthest from worlds and from Erevos.
-- Once, a lesser god forced its way into a system and down onto a world. The push between god and world destroyed them both, and what remained is Nowhere, so called because the charts mark a world there and there is none. A Monolith answered. Every god since has taken it as a warning.
-
-### The eldritch galaxy (cosmology/, chart/, factions/deities.html)
-- GAL-02 has gods, but none of them are good. Its core is already awake, and the galaxy is overrun by dark beings.
-- GAL-02's gods are eldritch, and over time they gathered there, each drifting toward the galaxy where it is worshipped most. No prime or good god holds the galaxy, and it has no Weave. The Axioms and Continuity still hold there.
-
-### Hearts, Atria and Monoliths (cosmology/, glossary/, rules/ § Opening)
-- Every world has a heart, and every heart has an Atrium: its own hidden entrance, which manifests differently on each world according to what that world is. Residue carried into an Atrium opens the heart. Opening needs no Monolith.
-- A Monolith is what makes a link possible. Two opened hearts can be linked, Atrium to Atrium, only where both worlds have a Monolith. The Monolith licenses the connection between one heart world and another.
-- Finding a heart, opening it and linking it are three separate, hard steps. In the Rykoe Galaxy many worlds have a Monolith, far fewer have a found heart, fewer still an opened one, and only one link stands.
-- Linked worlds bleed into each other over time, one gaining what the other loses. A link cannot be undone.
-
-### The Core Monolith's pressure (cosmology/, factions/order.html, factions/restorers.html)
-- The Core Monolith has a degree of sentience. It presses an idea outward through the cosmos, and those who sense it read it differently. The Restorers take it as a call to bring back what was lost. The Order takes it as a charge to maintain things as they are, though some within the Order doubt that reading. Vecna took it as something he could learn, and change. The Restorers and the Seekers are separate.
-
-### The Axiom strain (cosmology/, factions/deities.html, dossiers/astra-virex.html, crew/gregory.html)
-- Over the past century Zeniths have come more often, and Monoliths with them. Some of the rise is Vecna's doing; some is simply worlds reaching their moments.
-- The rise strains the balance of the Axioms. It is a byproduct of Vecna's work, not its aim.
-- The strain ripples outward through the planes and the cosmos. It is slow and more metaphysical than physical, and it weakens as it travels, but mortals are starting to feel it. Gregory's awakening is one result; the Latchling and other oddities are others. The strain helps Vecna, Tharizdun and other powers, good and bad.
-- The ripple woke Astra Virex. It also caused collisions between celestial bodies, and part of the entity broke off. All it knows is that it must heal and become whole.
-- The entity can be called Astra Virex, Astra or Virex.
-
-### Residue and the fragments (cosmology/, artifacts/, glossary/)
-- The pieces of the Reach fragments are called residue.
-- Caelestis's galaxy holds pieces of three fragments, Consolidation, Dissolution and Distinction, both by chance and by pull. Pieces of a fragment draw toward each other; once a few came to rest near Realmspace, more followed.
-- The Reach left five fragments of residue, one for each Axiom. Each broke into a prime number of pieces: Dissolution 2, Distinction 3, Expansion 5, Consolidation 7, Determination 11.
-- The Consolidation fragment is the Rod of Seven Parts. Its pieces draw toward each other. The Determination fragment's eleven pieces have never been found.
-
-### Erevos and Aurath (cosmology/, glossary/, chart/, realms/)
-- The cosmos is five galaxies. At its center is Erevos: the remains of the Reach world, a black hole beneath the Core Monolith and the Radiant Citadel.
-- Those who dwell in the Core Monolith call it Aurath.
-- Every galaxy has a black hole at its own center, its core. A galaxy's core is to the galaxy what Erevos is to the cosmos.
-- Caelestis's galaxy, GAL-01, is the Rykoe Galaxy, named for Rykoe, the black hole at its core.
-
-### Names and designations (README naming rule, cosmology/, realms/, chart/, crew/bartholomew.html, glossary/)
-- Celestial bodies have names or designations. Caelestis gives designations (below); the people who live near a body may have their own name for it, sometimes a local epithet ("the falling star of Gethros"). A body known across a system or a galaxy may also carry a wider epithet, the way a moon has a name and is also called the Blood Moon. Most things have only a name or a designation.
-- The same place can be called different things in different parts of the cosmos.
-- Caelestis charts the cosmos the way astronomers chart the sky. Its surveyors keep the Caelestis Survey Catalogue (CSC), and every star they have charted has a CSC number. The numbers are old and scattered: a star is never given a low or sequential number when the crew first hears of it. Example: CSC 48213.
-- Each sister institution keeps its own catalogue, so one star carries a different number in each. Sharing charts between institutions means matching one catalogue against another.
-- A constellation is a region of Caelestis's sky, numbered by its bearing in degrees: CON-312 lies at bearing 312°. A newly met constellation already has its number. A star without a proper name can be called by its brightness within its constellation, from Alpha down: Alpha CON-312 is the brightest star in CON-312.
-- A system takes the name or number of its primary.
-- The bodies of Realmspace, Caelestis's home system, are known by their names: Toril, Selûne, H'Catha. They carry no letters.
-- A planet takes its star's name or number and a lowercase letter, beginning with b, in the order Caelestis charted it. The order is not the orbit. Example: CSC 48213 c.
-- A moon takes its planet's designation and a Roman numeral, in the order charted. Example: CSC 48213 c II.
-- A small body seen once gets a provisional designation from the Cycle it was sighted. Once its path is known it may get a permanent number, and a name only if someone gives it one. A comet that returns is marked P/, and one that passes once is marked C/: P/1490 K2.
-- A meteor shower is named for the constellation it seems to fall from.
-- A body nobody has charted has no designation.
-- Anything inhabited or famous carries the name its own people give it, sometimes alongside an epithet. Designations are what the charts use; names are what people say.
-
-### What Caelestis knows (cosmology/, chart/)
-- Caelestis and its affiliates work almost entirely within their own galaxy, and they chart only that. Few expeditions have tried to leave it. Leaving is near impossible, and most who tried never returned. Many believe there is nothing beyond.
-- Scholars know their galaxy is one part of something larger, with something at its center, but no one they know has reached it.
-- What lies in the other galaxies carries no designation. Whoever first charts a world in another galaxy is the one who designates it.
-
-### Most of space is empty (cosmology/, chart/, NEW: Cosmos texture)
-- Most bodies have no one living on them, and many could never support anyone. Some are desolate. Some are lethal: crushing air, elemental storms, dead magic. Some are overrun by creatures, hostile or harmless. Many have never been visited, and much of space is uncharted. An inhabited world is rare.
-
-### The galaxies in play (DM)
-- Each galaxy is assigned a game system ahead of time: GAL-01 runs as D&D 5e and GAL-02 as Call of Cthulhu. GAL-03, GAL-04 and GAL-05 get theirs before any campaign goes there.
-- Where each galaxy stands: in GAL-01 two hearts are opened and linked to each other, two worlds that share one system on the upper lid, and both are linked back to Oerth; one of them is a little-charted planet the crew learns of late in the campaign. One more heart, on the lower lid, is found and not yet opened: Nowhere's. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and their fate turns on GAL-01.
-- A galaxy's contents stay unbuilt until play reaches it. What Vecna's working needs from it is tracked as counts only: hearts found, opened and linked. Which worlds they are is decided when it matters, as with the bleeding of linked worlds.
-- The survey (prime/data/survey.json, kept with scripts/survey.js) holds every rolled system that is kept. Once saved, a system is part of the record and is edited by hand as play fills it in.
-
 ## Realms
 
 ### Oerth (realms/oerth, cosmology/, chart/)
@@ -349,15 +240,17 @@ when a ruling changes; delete it once the page carries it. See
 - Captain Haymond Rolt is the crew's handler in Arc 2. He oversees several Driftwarden crews at once, out of Ondrel Anchorage.
 
 ### Ezra Ahl-Sier (dossiers/ezra.html, factions/order.html)
-- In this campaign Ezra is still a Watcher in training. His knighting, his posting and everything on his character sheet come later, in the campaign set on Emporia. That campaign is his story after the knighting; Caelestis is the prequel to it.
-- Ezra Ahl-Sier is an astral elf, his eyes like the Astral Sea. He speaks Celestial, Common and Deep Speech. He has trained for about a century in the Hall of Sight and Sound and is among the youngest batch of trainees in the Order of the All-Father. The All-Father's paladins swear the Oath of the Watchers at their knighting; Ezra has not sworn it yet.
+- Ezra is a Glimpse: the Order of the All-Father's title for a trainee who has not yet been knighted and christened a Watcher. A Glimpse has seen part of what the All-Father sees; knighting makes him a Watcher. Replaces "cadet" and "Watcher in training" on dossiers/ezra.html and factions/order.html.
+- Ezra Ahl-Sier is an astral elf, his eyes like the Astral Sea. He speaks Celestial, Common and Deep Speech. He has trained for about a century in the Hall of Sight and Sound and is among the youngest batch of Glimpses in the Order of the All-Father, a paladin of the Oath of the Watchers.
 - He has a wanderlust that pulls him toward a posting and away from home, and a lesson for every situation, drawn from watching nature. He holds the natural world above everything built by civilization. The enemy of his enemy is, to him, a temporary ally. He will not save those who cannot save themselves: it is nature's way that the strong thrive.
 - Captain-Commander Dejexic, leader of the Watchers and speaker of the All-Father, is a purplish-blue plasmoid in obsidian armour that reflects tiny swirling galaxies.
-- DM notes tab, after the crew leaves him on H'Catha:
-  - His knighting in the Hall of Sight and Sound, where Dejexic gives him the "birds" advice. This is the scene in Korey's backstory document "Ezra Ahl-Sier".
+- Stat block: Paladin 3 (Oath of the Watchers), Outlander. AC 18 (chain mail and shield), 35 hp, speed 30 ft. Str 16, Dex 14, Con 15, Int 10, Wis 14, Cha 16; proficiency +2; saves Wis +4, Cha +5. Skills: Athletics +5, Insight +4, Intimidation +5, Medicine +2, Nature +2, Perception +4, Survival +4. Blindsight 10 ft (Blind Fighting), darkvision 60 ft; immune to disease and magical sleep; advantage against being charmed. Divine Sense (4/long rest), Lay on Hands (15), Divine Smite, Channel Divinity 1/short rest (Watcher's Will, Abjure the Extraplanar), Harness Divine Power, Starlight Step (teleport 30 ft as a bonus action, 2/long rest), Astral Trance. Spell save DC 13, attack +5. Shortsword +5 (1d6+3 piercing), dagger +5 (1d4+3 piercing). Outlander background.
+- DM notes tab:
+  - Caelestis is Ezra's prequel. His knighting, his posting and his allies come after the crew leaves him on H'Catha, in the campaign set on Emporia.
+  - His knighting in the Hall of Sight and Sound, where Dejexic gives him the "birds" advice, is the scene in Korey's backstory document "Ezra Ahl-Sier".
   - His posting is Emporia, the world he was hoping to be spared. The [CJ's world] in the backstory document is Emporia.
   - On Emporia his allies are Valance, Irohden and Borgor. None of them has met him during this campaign.
-  - His sheet at the start of Emporia: Paladin 3 (Oath of the Watchers), Outlander. AC 18 (chain mail and shield), 35 hp, speed 30 ft. Str 16, Dex 14, Con 15, Int 10, Wis 14, Cha 16; proficiency +2; saves Wis +4, Cha +5. Skills: Athletics +5, Insight +4, Intimidation +5, Medicine +2, Nature +2, Perception +4, Survival +4. Blindsight 10 ft (Blind Fighting), darkvision 60 ft; immune to disease and magical sleep; advantage against being charmed. Divine Sense (4/long rest), Lay on Hands (15), Divine Smite, Channel Divinity 1/short rest (Watcher's Will, Abjure the Extraplanar), Harness Divine Power, Starlight Step (teleport 30 ft as a bonus action, 2/long rest), Astral Trance. Spell save DC 13, attack +5. Shortsword +5 (1d6+3 piercing), dagger +5 (1d4+3 piercing).
+  - His stat block is his Emporia sheet as it stands. Korey marks the younger Ezra with a changed appearance and roleplay.
 
 ### OSTEKK-2 (dossiers/ostekk-6.html, vessels/tyrant-ship.html)
 - OSTEKK-6 is the only active survivor of Vaelorix's nine units. OSTEKK-2 lies inert on the Hollow Deck. The crew could heal it back to function if they return for it, for example with the Lantern of Flourishing they have kept hidden.
