@@ -30,11 +30,11 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 10 | 12 | 16 | 0 | 4 |
+| Cosmology | cosmology/, glossary/, chart/ | 10 | 12 | 17 | 0 | 5 |
 | Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 23 | 2 | 28 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
-| Factions | factions/ | 1 | 4 | 20 | 2 | 36 |
+| Factions | factions/ | 3 | 6 | 20 | 3 | 36 |
 | Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 39 | 5 | 36 |
 | Dossiers | dossiers/ | 9 | 6 | 43 | 1 | 53 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 3 | 0 | 1 |
-| **Total** | | **80** | **88** | **238** | **14** | **369** |
+| **Total** | | **82** | **90** | **239** | **15** | **370** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -268,6 +268,14 @@ Order under each page: decide, fix, drop, add.
 
 - **[add]** A charted flag in the survey, with a tag and a view toggle
   Add `charted` (true/false) to systems and bodies in prime/data/survey.json and to scripts/survey.js's check. The Chart shows an "uncharted" tag on uncharted places and a toggle between the full survey and Caelestis's charts only. In-world pages give a designation only to charted places.
+  src: chat 2026-10-27
+
+- **[fix]** The chart shows systems only with the inscription layer on
+  In the Rykoe Galaxy view, the uncharted systems appear only when the inscription layer is switched on (Korey 2026-10-27). Every system in the survey shows in the base view, charted or not (with the charted tag once it exists); the inscription layer adds only the eye.
+  src: chat 2026-10-27
+
+- **[add]** Sectors on the chart
+  A layer that shades the Fleet's sectors in the Rykoe Galaxy view, the Caelestis Sector first, once its systems are decided (see Factions: The Caelestis Sector's systems).
   src: chat 2026-10-27
 
 - **[decide]** Shothragot *(shape)*
@@ -1006,6 +1014,29 @@ Faction pages under `prime/factions/`. Items are grouped by page and ordered dec
 The Remaking is now only the Ascension's fail state. Links that say "the Remaking" for Vecna's plan point to `opposition/vecna.html`; links for the colony's or Vocath's operations point to `campaign/colony/`.
 
 ---
+
+
+### Every faction page
+
+- **[decide]** The Caelestis Sector's systems, and the other sectors
+  The Fleet is four or five sector branches; Caelestis is one sector of several systems, including Toril's (Korey 2026-10-27). Which systems the Caelestis Sector covers, how many sectors there are, and their names and characters are not set. Feeds the chart's sector layer and factions/fleet.html.
+  src: chat 2026-10-27
+
+- **[decide]** Realmspace's name
+  Korey may rename Realmspace (and possibly Virenspace) now that systems sit inside named sectors: "Realmspace seems weird for where Toril and everything is". Rename everywhere at once if it changes, as a moved term in terms.json.
+  src: chat 2026-10-27
+
+- **[later]** The Fleet's admirals
+  A council of a few admirals sits above the sectors (touchstone: One Piece's Marine admirals). Names, number and seat are not set.
+  src: chat 2026-10-27
+
+- **[later]** What Vecna gives his faithful, by class
+  Clerics and wizards draw on him, perhaps paladins (Korey 2026-10-27). Check published sources for Vecna's clerics (Knowledge, Death, Trickery), wizards and any warlock or paladin patrons, and settle which this cosmos uses.
+  src: chat 2026-10-27
+
+- **[drop]** The Concordance and the Syndicate
+  Leftovers of factions/spectrum.html with no surviving purpose (Korey: "No clue what that was supposed to be"). Retire them when spectrum.html folds into seekers.html.
+  src: chat 2026-10-27
 
 ### factions/index.html
 
