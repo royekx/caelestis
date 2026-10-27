@@ -82,6 +82,7 @@ when a ruling changes; delete it once the page carries it. See
 - The cosmos is five galaxies. At its center is Erevos: the remains of the Reach world, a black hole beneath the Core Monolith and the Radiant Citadel.
 - Those who dwell in the Core Monolith call it Aurath.
 - Every galaxy has a black hole at its own center, its core. A galaxy's core is to the galaxy what Erevos is to the cosmos.
+- Caelestis's galaxy, GAL-01, is the Rykoe Galaxy, named for Rykoe, the black hole at its core.
 
 ### Names and designations (README naming rule, cosmology/, realms/, chart/, crew/bartholomew.html, glossary/)
 - Celestial bodies have names or designations. Caelestis gives designations (see Designations below); the people who live near a body may have their own name for it, sometimes a local epithet ("the falling star of Gethros"). A body known across a system or a galaxy may also carry a wider epithet, the way a moon has a name and is also called the Blood Moon. Most things have only a name or a designation.

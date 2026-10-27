@@ -367,7 +367,7 @@ function reg(id,n){ registry[id]=n; return `class="node" data-id="${esc(id)}" ta
 
 function buildFromSurvey(sv){
   SURVEY = sv;
-  GALAXIES = sv.galaxies.map(g => Object.assign({ id:g.id, label:g.id, record:g }, GAL_DRAW[g.id] || {}));
+  GALAXIES = sv.galaxies.map(g => Object.assign({ id:g.id, label:g.name ? `${g.name} · ${g.id}` : g.id, record:g }, GAL_DRAW[g.id] || {}));
   SYSTEMS = sv.systems.filter(s => SYS_CHART[s.id]).map(s => {
     const c = SYS_CHART[s.id], named = s.name || (s.catalogue ? "CSC " + s.catalogue : null);
     return Object.assign({ id:s.id, galaxy:s.galaxy, record:s,
@@ -551,7 +551,7 @@ function renderGalaxy(gid){
   o += `<circle cx="${GX.cx}" cy="${GX.cy}" r="${GX.R*.55}" fill="url(#g-bulge)"/>`;
   o += spiralDust(GX.cx, GX.cy, GX.R, g.spin||0, 300+g.ang, home?3200:1500, home?"#bcd6f0":g.core==="awake"?"#f0b0a8":"#c9b3ea", home?.6:.4, 4.6);
   o += `<text class="lbl-sub" x="${W/2}" y="${H-90}" text-anchor="middle" font-size="56">${esc(g.label)}${home?" · Caelestis's galaxy":""}</text>`;
-  const coreN = { id:gid+"-core", name:gid+" core", kind:"Galactic core, a black hole", core:g.core, galaxy:gid };
+  const coreN = { id:gid+"-core", name:(g.record && g.record.core_name) ? g.record.core_name : gid+" core", kind:"Galactic core, a black hole", core:g.core, galaxy:gid };
   o += `<g ${reg(coreN.id, coreN)}><circle cx="${GX.cx}" cy="${GX.cy}" r="110" fill="transparent"/>${coreGlyph(GX.cx,GX.cy,48,g.core)}<circle class="sel" cx="${GX.cx}" cy="${GX.cy}" r="48" fill="none" stroke="none"/>
     <text class="lbl" x="${GX.cx}" y="${GX.cy+130}" text-anchor="middle" font-size="56">${esc(coreN.name)}</text>
     <text class="lbl-sub" x="${GX.cx}" y="${GX.cy+180}" text-anchor="middle" font-size="42" fill="${CORE_TONE[g.core]}">${esc(CORE_WORD[g.core].toLowerCase())}</text></g>`;

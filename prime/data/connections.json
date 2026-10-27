@@ -621,11 +621,15 @@
     },
     {
       "id": "gal-01",
-      "label": "GAL-01",
+      "label": "The Rykoe Galaxy (GAL-01)",
       "type": "place",
       "scope": "cosmos",
       "summary": "Caelestis's galaxy, home to Realmspace, Fonains and Krynn.",
       "facts": [
+        {
+          "t": "The Rykoe Galaxy is named for Rykoe, the black hole at its core: the pupil of Vecna's eye.",
+          "src": "STAGING, Cosmology"
+        },
         {
           "t": "GAL-01 runs as D&D 5e.",
           "src": "STAGING round 12"
