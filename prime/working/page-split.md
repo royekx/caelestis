@@ -40,13 +40,16 @@ The campaign page and the Opposition pages are two cuts through one grid:
 | Arc 3 | | | | |
 | Arc 4 | | | | |
 
-- **Campaign** reads across a row: everything happening in Arc 2.
+- **Campaign** reads across the rows, in the campaign's chronology: what
+  happens, when it matters and how. Forces are woven through it where they
+  act, not set out in blocks. A force as large as Vecna may get a section of
+  its own, but mostly he appears where his work touches the story.
 - **An Opposition page** reads down a column: everything Vecna does, Arc 1 to 4.
 
-Each cell is written once, on the Opposition page, under an anchor
-(`opposition/vecna.html#arc-3`). The campaign page's arc section writes its
-own connecting text (what the arc is about, how the forces collide) and embeds
-each force's cell for that arc. This is where embeds earn their place.
+The Campaign page never retells who Vecna is. It shows what he is doing in
+this run, how and when, and links to the dossier and the Opposition page for
+the rest. Embeds are for the few places where the Campaign page wants a whole
+Opposition passage in line.
 
 Subject pages are not in the grid. A dossier's *Threads* subsection lists the
 cells and arcs the subject appears in, as links.

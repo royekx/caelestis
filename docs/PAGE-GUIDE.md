@@ -347,7 +347,7 @@ content. Never add a one-off tab. Labels never inflect for the subject.
 
 | Tab | Voice | Holds |
 |---|---|---|
-| Who they are | in-world | nature, current state, and how it got here (history) |
+| Who they are | in-world | everything about them, wiki-style: what they are, what they look like, who they were and how they got here (history), what they can do, the items that belong to them (linked), and where they stand now |
 | What they want | in-world | motive, drive, what it is for |
 | DM notes | DM | the subsections below |
 | Stat block | | the block, if it has one |
@@ -355,6 +355,14 @@ content. Never add a one-off tab. Labels never inflect for the subject.
 Tabs are `.pill-tab` buttons in a `.pill-tabs[data-pill-group]` strip with
 `.pill-panel` panels, driven by `dm-tabs.js`. Headings inside a tab start at
 `<h4>`.
+
+A dossier is the page the DM opens to grab anything about its subject
+mid-session: a face, a voice, a signature item, the short version of their
+past. *Who they are* carries all of it. History is the short, exact version
+("an archmage of Oerth who became a lich, gathered magical secrets, and rose
+to godhood"), not a recount of the cosmos. Appearance is always written when
+it is known; when it is not, the DM notes say so in a sentence. Key items get
+their own line, linked to their artifact pages.
 
 *DM notes* subsections, in order, only those with content:
 
