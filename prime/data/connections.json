@@ -353,10 +353,6 @@
         {
           "t": "Nothing has ever come out of the Citadel, and a sect of the recently taken wants a way out.",
           "src": "cosmology/index.html"
-        },
-        {
-          "t": "Vecna has archived encoded messages into the Citadel through Monolith relays for an age.",
-          "src": "campaign/ascension/index.html"
         }
       ]
     },
@@ -378,10 +374,6 @@
         {
           "t": "He holds the shape of Vecna's ambition and none of its method.",
           "src": "glossary/index.html"
-        },
-        {
-          "t": "He read one of Vecna's messages into the Citadel, recognized the hand and did nothing with it.",
-          "src": "campaign/ascension/index.html"
         }
       ]
     },
@@ -1795,11 +1787,7 @@
         },
         {
           "t": "All seven pieces brought before an Atrium would force the First Heart.",
-          "src": "campaign/ascension/index.html"
-        },
-        {
-          "t": "Vecna has never assembled a fragment, because a near-complete Rod is a beacon to everything that wants it.",
-          "src": "campaign/ascension/index.html"
+          "src": "cosmology/index.html"
         },
         {
           "t": "Four of its pieces are loose and their workings unidentified.",
@@ -5225,7 +5213,7 @@
       "s": "rod-of-seven-parts",
       "t": "first-heart",
       "rel": "could force",
-      "src": "campaign/ascension/index.html"
+      "src": "cosmology/index.html"
     },
     {
       "s": "atlas",
@@ -5342,12 +5330,6 @@
       "src": "STAGING round 5"
     },
     {
-      "s": "axiomic-ascension",
-      "t": "consolidation",
-      "rel": "aims at the seat of",
-      "src": "campaign/ascension/index.html"
-    },
-    {
       "s": "godhood-ascension",
       "t": "oerth",
       "rel": "took place on",
@@ -5415,12 +5397,6 @@
     },
     {
       "s": "vecna",
-      "t": "radiant-citadel",
-      "rel": "sends messages into",
-      "src": "campaign/ascension/index.html"
-    },
-    {
-      "s": "vecna",
       "t": "axiom-strain",
       "rel": "drives part of",
       "src": "STAGING round 2"
@@ -5460,12 +5436,6 @@
       "t": "darkest-day",
       "rel": "worked through his cult",
       "src": "timeline/timeline.json"
-    },
-    {
-      "s": "vecna",
-      "t": "rod-of-seven-parts",
-      "rel": "holds in reserve as a second key",
-      "src": "campaign/ascension/index.html"
     },
     {
       "s": "accordance",

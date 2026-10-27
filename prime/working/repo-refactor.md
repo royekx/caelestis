@@ -257,6 +257,7 @@ Old path → new path, added by each pull request that moves a page.
 | Old | New | Pull request |
 |---|---|---|
 | `prime/realms/hcatha.html` | `prime/locations/hcatha.html` | H'Catha pilot (deep-lore-working) |
+| `prime/campaign/ascension/index.html` | `prime/opposition/vecna.html` | Opposition: Vecna (opposition-vecna) |
 
 ## Stale branches
 

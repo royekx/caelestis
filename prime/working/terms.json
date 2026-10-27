@@ -112,6 +112,10 @@
     {
       "old": "realms/hcatha.html",
       "new": "locations/hcatha.html"
+    },
+    {
+      "old": "campaign/ascension/",
+      "new": "opposition/vecna.html"
     }
   ],
   "allow": [],
