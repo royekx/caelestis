@@ -104,16 +104,19 @@ html[data-axiom="determination"] { --accent: var(--ax-determination); }
    over body::before. The body::after shorthand also drops the player
    starfield; the image has its own. */
 html { background: var(--bg-deep); }
+/* The backdrop is softened and dimmed across the whole window, the same
+   treatment everywhere, so text reads anywhere on the page. The image is
+   scaled a touch so the blur has no soft edge at the window's border. */
 body::before {
   background: url('../assets/axioms.jpg') center / cover no-repeat;
+  filter: blur(3px);
+  transform: scale(1.02);
 }
 body::after {
-  background: radial-gradient(ellipse at 50% 45%,
-    transparent 55%, rgba(6,9,15,0.45) 100%);
+  background:
+    radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(6, 9, 15, 0.35) 100%),
+    rgba(8, 11, 19, 0.55);
 }
-
-/* The scrim below is inset past its column; clip the overflow it would
-   otherwise add to the page width. */
 body { overflow-x: clip; }
 
 /* All wiki content lives in <main class="dm-content">. */
@@ -126,21 +129,6 @@ body { overflow-x: clip; }
   font-size: 1.15rem;
   line-height: 1.7;
   color: var(--text);
-}
-
-/* The reading column: a soft scrim, so the backdrop shows at the edges and
-   the text keeps its contrast. */
-.dm-content::before {
-  content: '';
-  position: absolute;
-  inset: -2rem -2.5rem;
-  z-index: -1;
-  background: linear-gradient(90deg,
-    rgba(8, 11, 19, 0) 0%, rgba(8, 11, 19, 0.62) 7%,
-    rgba(8, 11, 19, 0.62) 93%, rgba(8, 11, 19, 0) 100%);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  pointer-events: none;
 }
 
 .dm-footer {
@@ -2054,10 +2042,6 @@ ul.tr-fact-val li { margin-bottom: 0.25rem; color: var(--text); }
 /* ═══════════════════════════════════════════════════════════════
    12  RESPONSIVE
    ═══════════════════════════════════════════════════════════════ */
-@media (max-width: 1240px) {
-  .dm-content::before { inset: -1.5rem -1.5rem; }
-}
-
 /* Below 1100px the rail goes and the content centres again; the sidebar
    still moves between pages. */
 @media (max-width: 1100px) {
@@ -2116,7 +2100,6 @@ ul.tr-fact-val li { margin-bottom: 0.25rem; color: var(--text); }
 }
 
 @media (max-width: 620px) {
-  .dm-content::before { inset: -0.75rem -0.9rem; }
   .sb { padding: 0.9rem 1rem 1rem; font-size: 0.98rem; }
   .sb-name { font-size: 1.3rem; }
   .sb-abil { font-size: 0.9rem; }
