@@ -348,6 +348,12 @@ when a ruling changes; delete it once the page carries it. See
 ### Captain Haymond Rolt (NEW: dossier, campaign/spine.html)
 - Captain Haymond Rolt is the crew's handler in Arc 2. He oversees several Driftwarden crews at once, out of Ondrel Anchorage.
 
+### Ezra Ahl-Sier (dossiers/ezra.html, factions/order.html)
+- Ezra Ahl-Sier, the All-Seer, is an astral elf, a paladin sworn to the All-Father under the Oath of the Watchers. His eyes are like the Astral Sea. He speaks Celestial, Common and Deep Speech.
+- He is driven by a wanderlust that led him away from home, and he has a lesson for every situation, drawn from watching nature. He holds the natural world above everything built by civilization. The enemy of his enemy is, to him, a temporary ally. He will not save those who cannot save themselves: it is nature's way that the strong thrive.
+- He trained for about a century in the Hall of Sight and Sound before his knighting into the Order of the All-Father. Captain-Commander Dejexic, leader of the Watchers and speaker of the All-Father, is a purplish-blue plasmoid in obsidian armour.
+- Stat block: Paladin 3 (Oath of the Watchers). AC 18 (chain mail and shield), 35 hp, speed 30 ft. Str 16, Dex 14, Con 15, Int 10, Wis 14, Cha 16; proficiency +2; saves Wis +4, Cha +5. Skills: Athletics +5, Insight +4, Intimidation +5, Medicine +2, Nature +2, Perception +4, Survival +4. Blindsight 10 ft (Blind Fighting), darkvision 60 ft; immune to disease and magical sleep; advantage against being charmed. Divine Sense (4/long rest), Lay on Hands (15), Divine Smite, Channel Divinity 1/short rest (Watcher's Will, Abjure the Extraplanar), Harness Divine Power, Starlight Step (teleport 30 ft as a bonus action, 2/long rest), Astral Trance. Spell save DC 13, attack +5. Shortsword +5 (1d6+3 piercing), dagger +5 (1d4+3 piercing). (DM: from Korey's own sheet for Ezra; his backstory is the Google Doc "Ezra Ahl-Sier".)
+
 ### OSTEKK-2 (dossiers/ostekk-6.html, vessels/tyrant-ship.html)
 - OSTEKK-6 is the only active survivor of Vaelorix's nine units. OSTEKK-2 lies inert on the Hollow Deck. The crew could heal it back to function if they return for it, for example with the Lantern of Flourishing they have kept hidden.
 
