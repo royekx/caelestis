@@ -236,6 +236,82 @@
     document.documentElement.dataset.axiom = (group && group.axiom) || 'dissolution';
   })();
 
+  // ── Page navigation ───────────────────────────────────────────────────────
+  // The prev/next bar under the title becomes two quieter pieces: the
+  // eyebrow links back to the index, and prev/next sit at the foot of
+  // the page, where you reach for them when you have finished reading.
+  (function () {
+    var main = document.querySelector('main.dm-content');
+    var bar = main && main.querySelector(':scope > .voyage-nav-bar');
+    if (!bar) return;
+    var center = bar.querySelector('.voyage-nav-center');
+    var header = main.querySelector(':scope > .dm-page-header');
+    if (center && header) {
+      // The eyebrow's first part ("DM Dossier", "Faction") becomes the link
+      // back to the index; a page without an eyebrow gets one.
+      var eyebrow = header.querySelector('.dm-page-eyebrow');
+      if (!eyebrow) {
+        eyebrow = document.createElement('div');
+        eyebrow.className = 'dm-page-eyebrow';
+        eyebrow.textContent = center.textContent.trim();
+        header.insertBefore(eyebrow, header.firstChild);
+      }
+      var first = eyebrow.firstChild;
+      if (first && first.nodeType === 3 && first.textContent.trim()) {
+        var crumb = document.createElement('a');
+        crumb.className = 'dm-crumb';
+        crumb.href = center.getAttribute('href');
+        crumb.title = center.textContent.trim();
+        crumb.textContent = first.textContent.trim();
+        eyebrow.replaceChild(crumb, first);
+      }
+      center.parentNode.removeChild(center);
+    }
+    bar.classList.add('is-foot');
+    var foot = main.querySelector(':scope > .dm-footer');
+    if (foot) main.insertBefore(bar, foot); else main.appendChild(bar);
+  })();
+
+  // ── Connections in their Axiom colours ───────────────────────────────────
+  // Each chip takes the colour of the nav group its target belongs to
+  // (a dossier jade, a place blue, an arc gold); each column heading takes
+  // the colour most of its chips share.
+  (function () {
+    var cards = document.querySelectorAll('.xref-card');
+    if (!cards.length) return;
+    function axiomFor(href) {
+      var u;
+      try { u = new URL(href, window.location.href); } catch (e) { return null; }
+      var i = u.pathname.indexOf('/prime/');
+      if (i === -1) return null;
+      var rel = u.pathname.slice(i + 7);
+      var best = null, bestLen = -1;
+      groups.forEach(function (g) {
+        g.items.forEach(function (it) {
+          [it.path].concat(it.also || []).forEach(function (q) {
+            var hit = q.slice(-1) === '/' ? rel.indexOf(q) === 0 : rel === q;
+            if (hit && q.length > bestLen) { best = g.axiom; bestLen = q.length; }
+          });
+        });
+      });
+      return best;
+    }
+    Array.prototype.forEach.call(cards, function (card) {
+      Array.prototype.forEach.call(card.querySelectorAll('.xref-col'), function (col) {
+        var count = {};
+        Array.prototype.forEach.call(col.querySelectorAll('a.chip'), function (chip) {
+          var ax = axiomFor(chip.getAttribute('href'));
+          if (!ax) return;
+          chip.dataset.axiom = ax;
+          count[ax] = (count[ax] || 0) + 1;
+        });
+        var top = Object.keys(count).sort(function (a, b) { return count[b] - count[a]; })[0];
+        var head = col.querySelector('.xref-col-head');
+        if (top && head) head.dataset.axiom = top;
+      });
+    });
+  })();
+
   // ── Mobile toggle ─────────────────────────────────────────────────────────
   var toggle = document.getElementById('js-nav-toggle');
   var nav    = document.getElementById('js-side-nav');
