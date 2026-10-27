@@ -84,6 +84,15 @@ never to campaign pages, with one exception: an artifact's custody line.
   city, a discovered artifact.
 - **Current operations, stated as fact.** Vocath has a long-standing commercial
   conflict with Mirt. Saerthe maintains the station's Forbiddance.
+- **What is true whether anyone knows it or not.** The whole wiki is DM
+  knowledge, but a setting page's in-world tabs describe the world itself, not
+  what people in it have noticed. A phenomenon nobody has named is still
+  described there, under the wiki's name for it.
+
+**In-world tabs and the DM notes tab.** In-world tabs hold facts about the
+world. The DM notes tab holds what is meta to the DM: how a fact is used at the
+table, a lever for play, pacing, a name chosen for the DM's convenience, and
+anything still to decide. A fact about the world never lives only in DM notes.
 
 "The crew" and "the party" are in-world nouns and may appear. "The players",
 "the campaign", "the session" and "the scenario" are not in-world.
