@@ -22,7 +22,7 @@ when a ruling changes; delete it once the page carries it. See
   - **Collapse** (Consolidation and Dissolution): one place, one state. It closes possibilities.
   - **Proliferation** (Expansion and Distinction): more room, more distinct things. It opens them.
   - **Formation** (Consolidation and Distinction): drawn together and made distinct: stars, worlds, life. It holds a few possibilities and makes them last.
-  - **Dispersal** (Expansion and Dissolution): spread out and evened out: cooling, thinning, the drift. It scatters possibilities too thin to ever meet.
+  - **Dispersal** (Expansion and Dissolution): spread out and evened out: cooling, thinning, the Astral Sea between systems. It scatters possibilities too thin to ever meet.
 - Determination acts on the four in turn: it is why each tension tips one way or another, without fixing which. It is why Consolidation wins in one place and Expansion in another. Without it the cosmos would be the same everywhere.
 - Each Axiom is named for what it means; the physics is in how it behaves. Dissolution is the way ink spreads through water: scattered up close, an even sameness from a distance. Determination does not mean that outcomes are fated; it means every outcome must be reached, and nothing chooses it in advance.
 - None of the five is a substance. Energy is the only thing there is; the Axioms are how it behaves.
@@ -40,13 +40,13 @@ when a ruling changes; delete it once the page carries it. See
 - Since then Continuity has answered every such strain the same way, with a Monolith. Monoliths are how this version of reality preserves itself. A reality remade from inside might answer differently, or not at all.
 - The people of the Reach did not simply die. They became woven into the cosmos at different depths, and over time they became the gods. Some may remember what they were. Other gods have risen since, and some have fallen.
 - A galaxy's core is Consolidation and Dissolution winning outright.
-- Star systems lie unevenly through a galaxy. All of them circle the core, at different speeds. They crowd along the spiral arms, gather in clusters, and leave long empty reaches between, and the galaxy thins toward its edge. The drift between galaxies belongs to Expansion.
+- Star systems lie unevenly through a galaxy. All of them circle the core, at different speeds. They crowd along the spiral arms, gather in clusters, and leave long empty reaches between, and the galaxy thins toward its edge. The Astral Sea between galaxies belongs to Expansion.
 - DM: the Axioms are named only on the DM side. Scholars, faiths and Vecna describe them in their own terms; Vecna hears them as music.
 
 ### The gods (cosmology/, realms/, the divine-rules draft, factions/deities.html, working/divine-rules.md)
 - Worship gives gods power, influence and reach.
-- The greater gods dwell in the drift between galaxies. The push of a galaxy's core keeps them out, and a greater god forcing its way into a galaxy would tear it apart. A greater god may lean toward one galaxy, but it is known across all of them.
-- The lesser gods can pass into a galaxy and travel the drift between its systems. A system's edge pushes them back.
+- The greater gods dwell in the Astral Sea between galaxies. The push of a galaxy's core keeps them out, and a greater god forcing its way into a galaxy would tear it apart. A greater god may lean toward one galaxy, but it is known across all of them.
+- The lesser gods can pass into a galaxy and travel the Astral Sea between its systems. A system's edge pushes them back.
 - One god is known by different names, and told different origins, in different galaxies and on different worlds. Takhisis is Tiamat; Paladine is Bahamut. Asmodeus's role is the same wherever he is known as the devil. (DM: in the eldritch galaxy the gods wear names close to real-world pantheons.)
 - No god can set foot on a world, or reach Erevos, without destruction, because of polarity: like charges push apart, and the push grows until it is unbearable. Erevos harms them without destroying them.
 - Most gods came into being in the Reach event and grew into godhood over time, some sooner than others, so gods have different ages. Later gods ascended from mortality. Their standing as greater or lesser gods comes from how much worship they hold, the influence they gain from it, and the niche they find, through the same loop of attention and belief.
@@ -233,7 +233,7 @@ when a ruling changes; delete it once the page carries it. See
 - Neither sister knows what both of them need: each other. Luck and misfortune are two sides of one coin.
 
 ### Caelestis, the Driftwardens and the United Intergalactic Fleet (factions/academy-fleet.html, factions/index.html, cosmology/, realms/, glossary/)
-- Spacers call the dark between systems, and between galaxies, the drift.
+- The Astral Sea fills the dark between systems and between galaxies. The Fleet calls it the drift.
 - Caelestis belongs to the United Intergalactic Fleet, which everyone calls the Fleet.
 - Everyone in the Fleet's service is a Driftwarden. Driftwardens hold ranks, from the newest graduate up through officers and commanders, but every one of them is a Driftwarden.
 - Caelestis is the academy. It trains cadets to become Driftwardens; it is a school.

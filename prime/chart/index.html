@@ -437,7 +437,7 @@ function galPos(g){ const R = 1050; return [Math.round(CEN.x + R*Math.cos(rad(g.
 function renderCosmos(){
   view = {level:"cosmos"}; canvas = LV.cosmos; registry = {};
   let o = backdrop(canvas.W, canvas.H, 5, 500);
-  o += `<text class="lbl-sub" x="110" y="150" font-size="46">the drift, where the greater gods dwell</text>`;
+  o += `<text class="lbl-sub" x="110" y="150" font-size="46">the Astral Sea, where the greater gods dwell</text>`;
   const pos = Object.fromEntries(GALAXIES.map(g=>[g.id, galPos(g)]));
   /* Circle of Fifths: spokes and rim */
   let lines = "", hit = "";

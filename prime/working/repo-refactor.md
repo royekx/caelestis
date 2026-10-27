@@ -123,26 +123,60 @@ The calls at the end of this section. Nothing below starts until they are made.
 The prime/notes consolidation below (three documents). The page rewrites follow
 one page guide, not four.
 
-### 3. DM directory shape (proposed)
+### 3. DM structure (approved 2026-10-27)
 
-| Now | Becomes | Why |
-|---|---|---|
-| `realms/ascension-world.html` | redirect to `realms/oerth.html` (new) | Oerth is that world |
-| `realms/sys04.html` | `realms/krynnspace.html` | system pages carry names; Krynn and Fonains |
-| — | `realms/greyspace.html` (new) | Oerth's system; containers get entries |
-| `realms/first-world.html` | `realms/erevos.html` | the Reach world is Erevos now |
-| — | `realms/nowhere.html`, `realms/ondrel-anchorage.html` (new) | staged places |
-| `artifacts/transformation-fragment.html` | `artifacts/expansion-fragment.html` | five pieces, ex-Transformation |
-| `artifacts/runekeepers-fragment.html` | keep path, retitle as the Dissolution fragment | the Runekeepers keep it |
-| `artifacts/rod-of-seven-parts.html` | keep; it is the Consolidation fragment | |
-| — | Distinction and Determination fragments as sections of `artifacts/index.html` | a concept gets a section until it outgrows it |
-| `factions/academy-fleet.html` | `factions/fleet.html` | the United Intergalactic Fleet, Caelestis as its academy |
-| — | `dossiers/haymond-rolt.html`, `dossiers/ilsevaine-corr.html`, `dossiers/aurel-venn.html` (new) | staged figures with a will |
-| — | `dossiers/vecna.html` (new) | Vecna has no dossier; his facts sit on four pages |
-| — | `campaign/principles.html` (new) | DM principles: prep, visions, contracts, the crew's pasts |
-| — | `cosmology/` sections for Cosmos texture and Languages | sections before pages |
+DM folders and pages use plain, functional names; the in-world names are for
+the player side.
 
-Everything else keeps its path. Each move updates every link to it and is added to the link catalogue; the old path is listed in the terms check so a missed link fails.
+**Navigation**
+
+| Group | Pages |
+|---|---|
+| Play | Voyages · Tracker · Plot Hooks · Stat Blocks · Rules |
+| Story | Spine · Opposition · Timeline |
+| People | Crew · Dossiers · Factions |
+| World | Cosmology · Locations · Vessels · Artifacts · Chart |
+| Reference | Glossary · Principles |
+
+**Moves**
+
+| Now | Becomes |
+|---|---|
+| `realms/` (whole folder) | `locations/` |
+| `realms/first-world.html` | `locations/erevos.html` |
+| `realms/ascension-world.html` | `locations/oerth.html` (Greyspace as a section) |
+| `realms/sys04.html` | `locations/krynnspace.html` |
+| `realms/aethris.html` (system page) | `locations/aethris.html`, the world page with its system as a section |
+| `campaign/ascension/index.html` | `opposition/vecna.html` (Vecna's working, the eye, Oerth) |
+| `campaign/colony/index.html` | `opposition/colony.html` |
+| `campaign/spine.html` | `campaign/index.html` |
+| `factions/academy-fleet.html` | `factions/fleet.html` |
+| `artifacts/runekeepers-fragment.html` | `artifacts/dissolution-fragment.html` |
+| `artifacts/transformation-fragment.html` | `artifacts/expansion-fragment.html` |
+
+**Consolidations**
+
+| Merge | Into |
+|---|---|
+| `campaign/index.html` (the wiki manual) | `principles.html` (operating principles, hook taxonomy, staged DM principles) and the page guide (wiki conventions) |
+| `campaign/what-if.html` | a Speculation section on Plot Hooks |
+| `campaign/voyages/voyage-briefing-002.html` | the Voyages page |
+| `factions/spectrum.html` | `factions/seekers.html` |
+| `factions/external.html` | `factions/index.html` or `factions/deities.html` |
+| single-world system pages | the world's page; a system keeps its own page only when it holds two or more places with pages (Realmspace, Krynnspace) or has no world (Virenspace) |
+
+**New pages**: `dossiers/vecna.html` (the god; his working is on the Opposition
+page), `dossiers/haymond-rolt.html`, `dossiers/ilsevaine-corr.html`,
+`dossiers/aurel-venn.html`, `locations/nowhere.html`,
+`locations/ondrel-anchorage.html`, `principles.html`.
+
+**Unchanged**: Tracker, Timeline (with Connections), Stat Blocks, Rules
+(with Tumak's Wayfinder's Path copy), Glossary, Cosmology, Vessels, the Chart,
+every dossier, the stations and sites, `locations/astral-sea.html` (the Astral
+Sea; the Fleet calls it the drift).
+
+Each move updates every link, joins the link catalogue, and puts the old path on
+the terms check's moved list.
 
 ### 4. Distribution, in dependency order
 One pull request per section, each reviewed and merged before the next starts,
@@ -210,7 +244,7 @@ Answered 2026-10-27:
 4. **Order of work**: DM side first.
 5. **Stale branches**: list them for Korey; delete at the very end, after review. The list is below.
 6. **prime/notes**: consolidate where it makes sense (the three-document plan below).
-7. **DM directory moves** (phase 3): to be walked through with Korey before phase 3 starts.
+7. **DM structure** (phase 3): approved, with `realms/` → `locations/`, the nav regrouping and the consolidations.
 8. **Terms check**: approved, as a separate script.
 
 ## Link catalogue
@@ -412,4 +446,4 @@ CLAUDE.md (folder map and rules), `scripts/nav.js`, `.github/workflows/deploy.ym
 
 ## Open
 
-Call 7, the DM directory moves.
+None. Phase 2 (process notes) is next.
