@@ -34,17 +34,17 @@ staging once Korey has read and accepted them.
 | Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 23 | 2 | 28 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
-| Factions | factions/ | 1 | 4 | 21 | 2 | 36 |
-| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 13 | 1 | 45 | 5 | 42 |
-| Dossiers | dossiers/ | 9 | 6 | 43 | 0 | 53 |
+| Factions | factions/ | 1 | 4 | 20 | 2 | 36 |
+| Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 39 | 5 | 36 |
+| Dossiers | dossiers/ | 9 | 6 | 43 | 1 | 53 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
-| Artifacts and vessels | artifacts/, vessels/ | 6 | 2 | 26 | 0 | 43 |
+| Artifacts and vessels | artifacts/, vessels/ | 7 | 2 | 26 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 21 |
-| New pages | 14 proposed pages, the hub, notes/ | 3 | 17 | 6 | 2 | 35 |
+| New pages | 14 proposed pages, the hub, notes/ | 3 | 17 | 5 | 2 | 35 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 5 | 3 | 0 | 1 |
-| **Total** | | **79** | **87** | **246** | **13** | **375** |
+| **Total** | | **80** | **87** | **238** | **14** | **369** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -87,8 +87,6 @@ The resolve pass settled these decide items from later sweeps, saved decisions o
 - Arc 2's range *(add)*
 - Ondessa holds her seat; her citadel is occupied *(fix)*
 - Heart entrance term is Atrium *(fix)*
-- N'ghathrod's one secondhand instruction *(fix)*
-- How Vecna connects his working to the Core *(add)*
 - Tyrant ship weapons: four eyes at stations *(add)*
 - Sol's vignette ran in V006; the mimic is retired *(fix)*
 - What the behir was wrapped around *(add)*
@@ -104,7 +102,6 @@ The resolve pass settled these decide items from later sweeps, saved decisions o
 - Residue housings are dampened in anti-magic, not switched off *(fix)*
 - Network modifiers apply only when Tumak stands at a mark *(fix)*
 - The hub's Drive Root is right; memory's folder id is the rune images folder *(fix)*
-- The Ascension card keeps "the second key" *(fix)*
 - Dossier tab grammar: PAGE-SHAPE's four tabs stand *(fix)*
 - "Autognome" in V003 and V004 stays as history *(fix)*
 - Dossier tab names: keep the four tabs *(fix)*
@@ -168,7 +165,7 @@ Order under each page: decide, fix, drop, add.
   Ruled (STAGING, Cosmology § The Axioms): the Axioms are Consolidation, Expansion, Dissolution, Distinction and Determination, acting on energy that was always there. The old four map: Convergence → Consolidation (the Rod of Seven Parts is the Consolidation fragment, 7 pieces); Dissolution stays Dissolution, now the mixing of everything into sameness (the twins' fragment, 2); Boundary → Distinction (A.T.L.A.S., its sister and the third piece, 3); Transformation → Expansion (the 5-piece fragment). Determination's fragment is new: 11 pieces, none found. A Zenith is a world at its peak of Distinction, not "Convergence driving a system to maximum expression"; Monoliths are Continuity's response, and the strain from their rise is a byproduct of Vecna's work, not a weight on one Axiom. The Transformation–Boundary seam is cut. Every backlog item that quotes an old Axiom name reads under this mapping.
   Pages: prime/cosmology (the Four Axioms, Continuity, the strain, the seam section to cut), prime/glossary, prime/chart, prime/artifacts/* (index, rod-of-seven-parts, runekeepers-fragment, transformation-fragment → expansion-fragment, containment-engine, fonains-shard), prime/campaign/* (index, ascension, spine, plot-hooks, what-if), prime/crew/index.html and tumak.html, prime/dossiers/nghathrod.html and the-runekeeper.html, prime/factions/* (academy-fleet, deities, runekeepers, vthorama), prime/realms/index.html and wayfinders-homeworld.html (concealment rides on the Dissolution fragment's cycle), prime/rules/index.html, timeline.json, working/vecna.md. Done with the distribution pass. STAGING, the survey and the Connections layer already use the five.
   src: Korey, 2026-10-26
-  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27).
+  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); opposition/vecna.html (pilot).
 
 - **[later]** Place GAL-01's inscription on the chart
   Ruled: GAL-01's inscription is the eye he lost, sixteen heart worlds (ten lids, six iris); the iris worlds are key (STAGING, Campaign; diagram 2026-10-26). Left for when play needs it: which systems hold which strokes, and whether any known system (Realmspace, Krynnspace, Virenspace) lies on the figure. Greyspace is not on it: Oerth is the retina every eye world links back to (STAGING, Campaign).
@@ -1006,7 +1003,7 @@ Order: decide, fix, drop, add.
 
 Faction pages under `prime/factions/`. Items are grouped by page and ordered decide, fix, drop, add. Proposed page text reads in-world, like a fan wiki; DM-only lines are marked.
 
-The Remaking is now only the Ascension's fail state. Links that say "the Remaking" for Vecna's plan point to `campaign/ascension/`; links for the colony's or Vocath's operations point to `campaign/colony/`.
+The Remaking is now only the Ascension's fail state. Links that say "the Remaking" for Vecna's plan point to `opposition/vecna.html`; links for the colony's or Vocath's operations point to `campaign/colony/`.
 
 ---
 
@@ -1097,10 +1094,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 - **[fix]** Chapters know him under many names
   The intro says "No chapter knows the name Vecna." Rewrite: "Chapters know him by many names. Some use his own." Shape the rest per the decide above.
   src: session-rulings (Vecna)
-
-- **[fix]** Structural detail lives on the Ascension
-  Page says "Structural detail in the Remaking". Link `campaign/ascension/`.
-  src: chat-cosmic-campaign-structure § Superseded
 
 - **[drop]** The Restorers as eldest chapter
   The section "The eldest chapter" says "The Restorers are the first of these, and the only one that outgrew its own world". That is Restorers v1, superseded by v2, which has no tie to Seekers or Vecna. Remove the section. (Same drop on factions/restorers.html.)
@@ -1250,11 +1243,11 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   updated (triage): resolved. "Vth'oramu means 'the passage to a new home'" (STAGING § The Seekers and the colony). Vth'orama is now glossed as "all who go toward home", the Seekers of a New Home, so the "whole of the passage" gloss for Vth'orama also changes.
 
 - **[fix]** The plan lives on the Ascension
-  Page says "Full plan in the Remaking". Link `campaign/ascension/`.
+  Page says "Full plan in the Remaking". Link `opposition/vecna.html`.
   src: chat-cosmic-campaign-structure § Superseded
 
 - **[fix]** Heart entrance term
-  Page says "the Atria research" and "the hunt for Atria". Apply the ruling under campaign/ascension/index.html.
+  Page says "the Atria research" and "the hunt for Atria". Apply the ruling under opposition/vecna.html.
 
 - **[add]** The Passage
   Add a Mark entry to the header or Terms: "N'ghathrod's mark is the Passage: a circle with a tail ending in another circle. It gains a circle for every linked world, so it doubles as a count."
@@ -1345,7 +1338,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 Campaign planning pages under `prime/campaign/`. Items are grouped by page and ordered decide, fix, drop, add. Planning pages speak in DM voice. World facts quoted for a page read in-world.
 
-The Remaking is now only the Ascension's fail state. Every page link that says "the Remaking" for the plan or the machinery points to `campaign/ascension/` (the plan) or `campaign/colony/` (the colony's operations and the Fork) instead.
+The Remaking is now only the Ascension's fail state. Every page link that says "the Remaking" for the plan or the machinery points to `opposition/vecna.html` (the plan) or `campaign/colony/` (the colony's operations and the Fork) instead.
 
 ---
 
@@ -1434,12 +1427,13 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   Page says "Spine, Remaking, Voyages", "The Remaking is the machinery of the opposition", "work the Remaking when deciding what moves against it", Arc 1 "See the Remaking", "the most visible symptom of the Remaking", and "see Remaking → Failure state". Change to:
   - The machinery of the opposition lives on the Ascension (the plan) and Colony Operations (the colony's work). The header line reads "Spine, Ascension, Colony Operations, Voyages".
   - "Zeniths arriving too often are the most visible symptom of the Ascension."
-  - The failure state lives on the Ascension page: link `campaign/ascension/`.
+  - The failure state lives on Opposition: Vecna: link `opposition/vecna.html#failure-state`.
   src: chat-cosmic-campaign-structure § Superseded
 
 - **[fix]** Arc 4 is the Cast
   Page says "The inscription completes or fails" and "The Convergence rule says he gets one cast". The Convergence rule is retired; the inscription is current again, as the eye (STAGING, Campaign § Vecna's working). Rewrite Arc 4 to that: the eye opens or fails to.
   src: campaign/ascension § The Cast; Korey, 2026-10-26 (the eye)
+  done: opposition/vecna.html (pilot)
 
 - **[fix]** Tracker links point to the record
   The page links "Tracker", "Character Arc Tracker" and "Wildspace Tracker" and says current-state tracking "lives in the Character Arc Tracker". The Google Sheet trackers are retired. Point to the hand-kept record in `data/*.json` and the Voyages board.
@@ -1543,61 +1537,18 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ---
 
-### campaign/ascension/index.html
+### opposition/vecna.html
 
 - **[fix]** Heart entrance term is Atrium *(answered)*
   A heart's one hidden entrance is the Atrium (plural Atria). Every page already says Atrium/Atria, so nothing changes there; the pointer items under colony, what-if and vthorama are satisfied as written. New text uses Atrium too, including the hidden-entrance line on factions/runekeepers.html. Memory canon's "Aperture" is the older working name.
-  Touches: campaign/ascension/index.html, campaign/colony/index.html, campaign/what-if.html, factions/vthorama.html, factions/runekeepers.html, dossiers/ulhrek.html, dossiers/khaleth.html.
+  Touches: opposition/vecna.html, campaign/colony/index.html, campaign/what-if.html, factions/vthorama.html, factions/runekeepers.html, dossiers/ulhrek.html, dossiers/khaleth.html.
   src: memory-canon open-decisions (world-heart framework; "Locked this pass"); chat-cosmic-campaign-structure § Superseded
   answered: inbox/chat-cosmic-campaign-structure.md § Superseded ("'Aperture' as the heart's entrance → 'Atrium' (turn 278)"). The memory lines that say "Aperture" come from earlier in the same chat (the Seekers pass, turns 108–151), and Korey used the new word himself afterward ("using a reach residue as the key into an atrium makes sense").
-
-- **[fix]** N'ghathrod's one secondhand instruction *(answered)*
-  Keep this page's line: the single operational instruction Vecna has ever given reached N'ghathrod secondhand, "a world with a Monolith is a marked world." It fits memory canon's rule (no handshake deals, no direct orders), because it arrived as the voice he takes for his elder brain. Colony Operations says "he has never been given an order"; change it to "he has never been given an order he knew came from anyone but his elder brain."
-  Touches: campaign/ascension/index.html, campaign/colony/index.html.
-  src: chat-cosmic-campaign-structure § Open; memory-canon open-decisions (working direction line)
-  answered: inbox/chat-cosmic-campaign-structure.md § Cosmology redesign (Settled: "Vecna's only instruction reached N'ghathrod secondhand: 'a world with a Monolith is a marked world'") and § Superseded ("'Marked' survives only as Vecna's word to N'ghathrod", turn 248)
-
-- **[add]** How Vecna connects his working to the Core *(answered)*
-  The organizing-framework chat named this the largest gap; the later cosmology redesign in the cosmic-structure chat filled it. Confirm The Cast and The Figure state it, and add whatever is missing (DM voice):
-  - The First Heart lies closed beneath the Core, at the center. It is the one point from which the Axiom layer can be reached, and Vecna's target is the Convergence seat.
-  - Fifteen hearts, three per sphere across five spheres, are opened and linked. Every heart yearns toward the First Heart; the massed Yearning of the fifteen forces it open, and the opening is his arrival.
-  - He cannot make the crossing himself, because polarity pushes every god back from a heart. He arrives through vessels: the enna plus lesser taken, fifteen at minimum.
-  - Each Monolith licenses its world's heart to hold a link; the near-complete Rod is a beacon, so he has never assembled a fragment, and the whole Rod is his fallback.
-  src: chat-organizing-framework § Open; memory-canon open-decisions ("Locked this pass"; Vecna/gods 2026-10-25)
-  answered: inbox/chat-cosmic-campaign-structure.md § Cosmology redesign (turns 244–305, Settled: First Heart, Yearning, fifteen hearts, forced open by massed Yearning, vessels and downward tithe, Convergence seat, Rod as fallback); session-rulings (polarity)
-
-- **[fix]** Worship powers Vecna; the method does his work
-  "Why he needs hands" says "which is why he taught a method instead of founding a church, why his agents have never heard his name". Vecna is an open god with a following under many names. Rewrite: "Worship gives him power; the method does his work. Most of those who do that work know him by another name, and some, like N'ghathrod, do not know him at all."
-  src: session-rulings (Vecna); working/vecna.md § Promotes to
-
-- **[fix]** The approach to the center
-  Page says "The approach is lethal to anything, worse for gods, and worst for the gods born from the Reach." Mortals can cross it. Polarity pushes gods back, harder the closer they come, until the resistance is unbearable; the center harms gods without destroying them. Rewrite to that, keeping that the Reach-born suffer worst and newer gods like Vecna differently.
-  src: session-rulings (polarity); memory-canon open-decisions (Vecna/gods 2026-10-25); working/divine-rules.md § Polarity
-
-- **[fix]** The colony is a Seeker chapter
-  Page says the two bodies have "never met" and "neither knows the other matters". N'ghathrod's colony is itself a Seeker chapter, the largest and the only travelling one, and it coordinates with planet-bound chapters. Restate: the colony is a chapter that works with other chapters without understanding the whole it serves.
-  updated (triage): chapters do not know about each other (STAGING § The Seekers). The colony is the Seekers of a New Home, believing it answers to an elder brain (STAGING § The Seekers and the colony). Drop "works with other chapters" and "coordinates with planet-bound chapters".
-  src: memory-canon open-decisions ("Locked this pass"); factions/vthorama.html
-
-- **[fix]** The dragons have not reached Krynn
-  "A thread worth pulling" says "the Fonains material, where dragons left for Krynn". Change to: "where the dragons left Fonains and most worlds to face Takhisis, and have not yet reached Krynn."
-  src: session-rulings (dragons)
-
-- **[add]** Polarity is why he needs hands
-  Add to "Why he needs hands": Vecna ascended to godhood on Oerth. Ascending gave him the same polarity as Oerth's heart, and the world pushed him off. Polarity pushes every god back from a heart, hardest at the deepest one, so the same push bars him from the First Heart. Oerth was the first proof of the rule. This is why he works through vessels.
-  src: session-rulings (Vecna; polarity); memory-canon open-decisions (Vecna/gods 2026-10-25); working/vecna.md § Why the repulsion matters
-
-- **[add]** The Ascension still to come
-  Add to the lead if missing: Vecna's godhood is already achieved. The Ascension still to come is his climb to Axiom.
-  src: session-rulings (Vecna)
+  done: opposition/vecna.html (pilot)
 
 - **[add]** The lattice is a body
   Add to The Figure: N'ghathrod's lattice of linked worlds is a body. Linked worlds are its organs, links its nerves, colonies its cells. It is deliberately the same shape as Vecna's own aim: a mind with the cosmos for a body.
   src: memory-canon open-decisions (N'ghathrod's plan accepted direction); chat-cosmic-campaign-structure § World-hearts
-
-- **[add]** Tharizdun as contingency
-  Add a short section under The hands: Vecna uses Tharizdun as a contingency and a battering ram against the barriers. Use, not alliance. The Day of Chaos — when the Princes of Elemental Evil break the barriers so Tharizdun can leave his prison — is part of that use, and Vecna plans his own exit before Tharizdun gets out.
-  src: session-rulings (Tharizdun); working/tharizdun.md § Vecna and Tharizdun
 
 ---
 
@@ -1622,7 +1573,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   updated (round 4): superseded. Clint went through a color pool on purpose, drawing the boarders off; write it from STAGING § Clint Dashforest and the Bellwether Crow.
 
 - **[fix]** Heart entrance term
-  Page says "Atrium"/"Atria" throughout How they work, World status, State A and The race. Apply the Aperture/Atrium ruling under campaign/ascension/index.html.
+  Page says "Atrium"/"Atria" throughout How they work, World status, State A and The race. Apply the Aperture/Atrium ruling under opposition/vecna.html.
 
 - **[add]** Succession: taking the doorkeepers
   Add to How they work: N'ghathrod's parallel objective is taking key individuals who control access to a heart, so the doors are already open when the residue arrives. He takes people who can rise into positions of control, never crowds, and installs them as figures on worlds to prepare for when he holds the artifacts. Denying him the artifacts is a setback, not a shutdown.
@@ -1850,12 +1801,8 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   The page asks "What if a link has to be severed?" and says "Nothing in canon yet says a link can be severed at all." Heart-links are permanent and run both ways. Reframe the item as living with a permanent link (a merged pair whose people have families on the far side), or drop it.
   src: memory-canon open-decisions (world-heart framework)
 
-- **[fix]** Settled matter lives in the Ascension
-  The lead says settled matter "lives in Cosmology, the Remaking or Factions". Change "the Remaking" to the Ascension.
-  src: chat-cosmic-campaign-structure § Superseded
-
 - **[fix]** Heart entrance term
-  The page uses "Atria"/"Atrium" in several items. Apply the ruling under campaign/ascension/index.html.
+  The page uses "Atria"/"Atrium" in several items. Apply the ruling under opposition/vecna.html.
 
 - **[drop]** "What if Vecna is from the Reach civilization?"
   Vecna is a mortal mage of Oerth who became a god later. Drop the item.
@@ -1865,18 +1812,10 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   Its premise ("he has no solution for the approach") contradicts the Ascension page: the massed Yearning forces the First Heart open, and the opening is his arrival. Drop the item.
   src: campaign/ascension § The Cast; timeline "The Cast"
 
-### campaign/ascension (early planning)
-
-- **[add]** One working, two effects (DM voice)
-  Drawing Vecna's figure and stressing Convergence are the same work: every node he plants does both.
-  src: inbox/chat-early-planning.md § Campaign Planning (turn 80)
-
-- **[add]** The figure must be revisable (DM voice)
-  When a planted Zenith fails, as Fonains's did, Vecna redraws the figure around the loss rather than abandoning it.
-  src: inbox/chat-early-planning.md § Campaign Planning
+### opposition/vecna.html (early planning)
 
 - **[later]** A node log for player impact
-  An early plan kept a Remaking Node Log tracking how the players have changed Vecna's plan. Bring it back as a planning table on the Ascension page, or let the timeline carry it.
+  An early plan kept a Remaking Node Log tracking how the players have changed Vecna's plan. Bring it back as a planning table on Opposition: Vecna, or let the timeline carry it.
   src: inbox/chat-early-planning.md § Campaign Planning (turn 124)
 
 # Dossiers
@@ -1898,6 +1837,10 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ---
 
 ### dossiers/index.html
+
+- **[drop]** "What the DM page adds"
+  The collapsible table on dossiers/index.html comparing each DM page with its public page (with its subsections "Who deliberately has no DM page", "Still to build", "Inbound from other tables", "Handing an ally's block to the players"). Remove it when the index is rewritten; move anything still needed to a dossier's DM notes or BACKLOG.
+  src: chat 2026-10-27 (Korey: "No clue what this section is supposed to do but it should go")
 
 - **[fix]** The Krik'Lit swap is the V006 swap *(answered)*
   The Krik'Lit dossier says he leaves "At the V007 swap" (dossiers/ostekk.html has the same "at the V007 swap"). Change both to "at the V006 swap". The index's "The window shuts at the V006 swap" already matches. Write: "Krik'Lit and Pffred were relieved at the V006 rendezvous, in the Make Ready interlude, when the Flighty Foundling came alongside the Tyrant Ship. They returned with the Foundling." This matches data/npcs.json. The behir's parley window shut when the Foundling arrived.
@@ -2119,7 +2062,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ### dossiers/khaleth.html, ithvarn.html, osskhal.html, ulhrek.html, zhauveth.html
 
 - **[fix]** Heart entrance term
-  Ulh'rek and Khaleth say "Atria". Apply the ruling under campaign/ascension/index.html.
+  Ulh'rek and Khaleth say "Atria". Apply the ruling under opposition/vecna.html.
 
 ---
 
@@ -3046,6 +2989,13 @@ fragment by Axiom, prime numbers. Ruled (STAGING round 11): Dissolution 2, Bound
 Transformation 5, Convergence 7 (17 in all). Every artifact page uses Boundary 2,
 Dissolution 3, Transformation 5, Convergence 7, so the Boundary and Dissolution
 counts change and Transformation stays.
+
+
+### Every fragment
+
+- **[decide]** What a fragment made whole does
+  A whole fragment does not open the First Heart (Korey 2026-10-27: "Assembling the pieces should do something but probably not open the first heart. Our structure has changed since then."). What assembling one does is not set. Cosmology, the Glossary, opposition/vecna.html and connections.json no longer say it opens the First Heart. Still to rewrite when this is decided: artifacts/index.html (the Rod card "opens the First Heart without any of Vecna's infrastructure"; "The two thresholds" table, "One fragment made whole: opens any Atrium, including the First Heart's"), artifacts/runekeepers-fragment.html ("a first-key threshold"), and the old "second key" (Vecna holding the whole Rod as his fallback), which is retired with it.
+  src: chat 2026-10-27
 
 ### artifacts/index.html
 
@@ -4015,11 +3965,6 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 - **[later]** The Trackers band
   It says "The Tracker reads the record; the sheets beside it are edited in place." The Google Sheet tracker is frozen, and tracker alternatives are under review. Options: keep the Character Arc Tracker and Wildspace Tracker cards, or retire them. Follows the sheet decide in the Automation and tracker section.
   src: memory-canon § Automation pipeline; memory-canon (open-decisions, Plan 2026-10-25)
-
-- **[fix]** The Ascension card keeps "the second key" *(answered)*
-  No change. The card lists the sections of campaign/ascension/, and "The second key" there is the Rod route: a single fragment made whole (all seven Rod pieces, brought before the Atrium) forces the First Heart, which is why Vecna has never assembled a fragment and holds the whole Rod as his fallback. That stands whatever is ruled about the twins. The card's Atrium wording also stands (Atrium is answered in the Artifacts and vessels section).
-  src: the Artifacts and vessels section (runekeepers-fragment decide)
-  answered: campaign/ascension/index.html § The second key (Canon); inbox/chat-cosmic-campaign-structure.md § Cosmology redesign ("The near-complete Rod is a beacon, so Vecna has never assembled a fragment; the whole Rod is his fallback"), § Superseded (Aperture → Atrium)
 
 - **[add]** A Vessels card under Setting
   The DM nav has Setting → Vessels, but the hub has no Vessels card. PR #71 added Factions and Vessels cards on the player side.

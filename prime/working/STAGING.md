@@ -65,7 +65,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Factions
 
-### Vecna (campaign/ascension/, realms/oerth, factions/, factions/deities.html, factions/seekers.html)
+### Vecna (opposition/vecna.html, realms/oerth, factions/, factions/deities.html, factions/seekers.html)
 - Vecna's godhood is complete. He ascended on Oerth, his homeworld, a darkest-timeline world where his hold is strongest; its Monolith is a holy site.
 - Ascension charged Vecna to Oerth's heart and pushed him off the world, so he works through vessels.
 - Vecna is an open god with a following under many names. His followers are the Seekers.
@@ -91,7 +91,7 @@ when a ruling changes; delete it once the page carries it. See
 - Asmodeus was among the first to understand what the gods had become. He began as a good-natured god. The Reach let loose good and evil alike, demons among them, and he took up the fight against them while the other gods sat in their comfort. He was betrayed, and he became the lord of the Nine Hells. He is called evil because someone has to do this work, and he does it.
 - The Accordance know little of Vecna. A few centuries ago they felt something change: a new entity like them, where there had been none. Asmodeus likely knows something is wrong, and Lord Primus may.
 
-### The Seekers (factions/seekers.html, campaign/, factions/spectrum.html, campaign/ascension/)
+### The Seekers (factions/seekers.html, campaign/, factions/spectrum.html, opposition/vecna.html)
 - The Seekers are Vecna's faith. Seeking is the faith itself; what a chapter seeks is what names it. The Seekers of Secrets are one chapter. Others seek knowledge, a cure for death, or a home.
 - Every chapter worships Vecna, often under another name or in the belief that he is something else. Chapters do not know about each other; each serves on its own. Their mutual ignorance is itself a secret Vecna keeps and feeds on.
 - Each chapter's name is in its own people's language, and every one of them carries the word for "seekers". A crew that translates enough chapter names, by magic or by study, will notice the pattern.
@@ -148,27 +148,13 @@ when a ruling changes; delete it once the page carries it. See
 - Level pacing (DM): level-ups slow down in later arcs, so the crew is not at the top of the level range before the final arc.
 - Arc 1 runs from level 1 to 4, Arc 2 from 5 to 10, Arc 3 from 11 to 15, and Arc 4 begins at 15.
 
-### Vecna's working (cosmology/, glossary/, campaign/ascension/, chart/)
+### Vecna's working (cosmology/, glossary/, opposition/vecna.html, chart/)
 - Erevos opens only when the cores of all five galaxies are awake and joined: each core to its neighbours, and each to Erevos.
 - Through opened Erevos lies the way into Continuity itself, into the workings of reality. Whoever reaches it can push and pull the Axioms and remake reality. That is what Vecna seeks, and what the beings working the other galaxies seek.
 - A galaxy's core can be woken, but there is no one way to do it. Vecna, an archmage older than his godhood, does it with spellwork: an inscription, a figure drawn in linked heart worlds across the galaxy. The beings working the other galaxies have their own methods. World hearts link only to worlds in their own galaxy; only a woken core reaches beyond it.
-- GAL-01's inscription is an eye: the left eye Vecna lost, remade across a galaxy, an eye that would see everything. Ten heart worlds trace the two lids, and six form the iris around the core. The core is the pupil. When lids and iris are whole, the eye opens and the core wakes.
-- The eye is drawn the way a constellation is. Its worlds lie wherever the spiral arms carry them, sometimes two in one system, far apart and at different heights above and below the galaxy's plane; from above, their links make no shape at all. From Oerth, where Vecna became a god, they line up into the eye. Vecna chose them, from thousands of Monolith worlds, for how they look from there. The links are real wherever the worlds lie; only the picture needs Oerth.
-- Nowhere is one of the lid worlds. Its heart lies exposed in the wreck, the easiest in the galaxy to find and open, which is why Vecna chose it. It is the heart already found.
-- Oerth is the eye's retina, the point where its image lands. Every heart world in the figure is also linked back to Oerth's heart, so the links run in a cone from the eye to Oerth, the way light runs from an eye to the back of it. Oerth's heart has been Vecna's since his ascension charged him into it.
-- When the core opens, the pupil opens, and what lands on Oerth is sight: a view into Continuity itself.
-- Oerth is the one world Vecna cannot lose. Every link in the eye runs back to it.
-- The iris closes the binding circle around the core. Its worlds are key: lose one and the iris must be redrawn, a real setback but not the end. Lid worlds can be replaced: a lost stroke can be redrawn through another Monolith world near it, at a cost of years.
-- The eye in the palm of a left hand remains Vecna's holy symbol on worlds. Only the eye is written across the sky; the chapters that read his symbol's eye as sight and revelation are closest to the truth.
-- The first thing anyone can notice is that every opened heart is linked back to the same world, in Greyspace. Why they all lead to Oerth is the question that opens the rest.
-- The figure is loose. Plotted on an ordinary chart, the heart worlds look random. Plotted as they appear from Oerth, they begin to trace the eye, and someone who knows Vecna's mark can recognize it.
-- (DM: the number of hearts follows the figure, sixteen for GAL-01: ten on the lids, six in the iris. Not a fixed rule. The clue the crew needs is the vantage: plot the hearts from Oerth.)
 - Vecna works GAL-01's core. In each of the other galaxies, another being works its own core toward the same end. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and what happens in GAL-01 decides them.
-- Once Erevos opens, every linked heart becomes a door: through its Atrium to the core, and through the core to the center. Vecna's vessels go that way.
-- Vecna calls his working the Circle of Fifths, after the circle of fifths in music: five galaxies, each a fifth of what he needs, around Erevos. He has a taste for music, and it shows in how he names things.
-- The name is his alone. No one else knows what he is building. The Seekers do not know, and neither does the Order. Some gods suspect he is up to something. A few people on the fringes sense that something is wrong in the cosmos, but they do not know what it is or what to call it, and no one believes them.
 
-### Residue holdings (artifacts/index.html, campaign/ascension/, factions/vthorama.html)
+### Residue holdings (artifacts/index.html, opposition/vecna.html, factions/vthorama.html)
 - Vecna's side holds one residue piece: the colony carries it from world to world to open hearts. If the crew ever takes it, N'ghathrod must win it back or find another before he can open another heart.
 - Seekers chapters hunt for more. Vecna steers them: he lets each chapter believe that finding these artifacts will lead it to what it seeks, or that the artifacts are what it seeks.
 - Everything else is scattered. The crew carries the fourth Rod piece in the Lantern of Flourishing, kept hidden. Thessalar holds the seventh. The twins carry the Dissolution fragment. The rest are loose or unknown.

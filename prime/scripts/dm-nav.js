@@ -110,7 +110,7 @@
       axiom: 'consolidation',
       items: [
         { key: 'colony',    label: 'Colony Ops',    path: 'campaign/colony/'    },
-        { key: 'becoming',  label: 'The Ascension', path: 'campaign/ascension/' },
+        { key: 'becoming',  label: 'Vecna',         path: 'opposition/vecna.html' },
       ]
     },
     {
