@@ -4262,7 +4262,7 @@ run decide, fix, drop, add.
   src: framework § Open; memory-canon (open-decisions, DM views; Locked 2026-10-25, timeline formats); chat-voyage-6-7-planning § Open ("Korey wants a linear event timeline"), § Superseded (timeline page unlinked)
 
 - **[later]** Where the weather of reality is tracked
-  Settled: it is tracked on the campaign view (canon: "rarely seen early but must be tracked on the campaign view"), so a tracker row is out; the tracker shows the player record plus the DM overlay. timeline.json has no clock or lane for it yet. Still open: a timeline clock (one escalating meter, fits "escalating, ownerless pressure") or a timeline lane (dated events, fits strain that shows up as incidents). The weather of reality is the in-world name for the Axiom strain (cosmology/#axiom-strain).
+  Settled: it is tracked on the campaign view (canon: "rarely seen early but must be tracked on the campaign view"), so a tracker row is out; the tracker shows the player record plus the DM overlay. timeline.json has no clock or lane for it yet. Still open: a timeline clock (one escalating meter, fits "escalating, ownerless pressure") or a timeline lane (dated events, fits strain that shows up as incidents). The weather of reality is the DM's name for the Axiom strain at the table (cosmology/#weather-of-reality); the name may change.
   src: framework § Open; memory-canon (campaign-canon, "weather of reality")
 
 - **[later]** The prep brief
