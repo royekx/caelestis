@@ -2611,3 +2611,12 @@ ul.tr-fact-val li { margin-bottom: 0.25rem; color: var(--text); }
   .dm-content .is-wiki .identity-card { order: 0; position: static; max-width: none; }
   .dm-content .is-wiki .identity-card .portrait-frame { aspect-ratio: 16 / 9; }
 }
+
+/* Running prose carries no bold or colour: a paragraph reads straight through.
+   Links keep their colour and underline. Pages still being rewritten may hold
+   <strong> in paragraphs; it renders as plain text until they are. */
+.dm-content p strong, .dm-content p b,
+.dm-content dd strong {
+  font-weight: inherit;
+  color: inherit;
+}
