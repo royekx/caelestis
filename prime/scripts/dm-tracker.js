@@ -427,8 +427,7 @@
         if (!target || seen[target.r.id]) return;
         seen[target.r.id] = true;
         var chip = link('tr-chip', l.name, '#' + target.r.id);
-        // dm-sections.js switches to the tab the target sits in and scrolls
-        // to it. Opening the row is the part it cannot know to do.
+        // The link scrolls to the row; opening it is done here.
         chip.addEventListener('click', function () {
           if (!document.getElementById(target.r.id) && m.clearFilter) m.clearFilter();
           var t = document.getElementById(target.r.id);
@@ -510,20 +509,14 @@
 
   /* ---- deep links ---------------------------------------------- */
 
-  // #NPC-… opens that row. The row may sit in a tab that is not showing,
-  // so its tab is selected first; dm-sections.js labels each tab with the
-  // id of the section it controls.
+  // #NPC-… opens that row and the section around it.
   function openFromHash() {
     var id = decodeURIComponent((location.hash || '').slice(1));
     if (!id) return;
     var target = document.getElementById(id);
     if (!target || !target.classList.contains('dossier-row')) return;
     var section = target.closest('details.dm-collapse-section');
-    if (section) {
-      var tab = document.querySelector('.dm-sectab[aria-controls="' + section.id + '"]');
-      if (tab && tab.getAttribute('aria-selected') !== 'true') tab.click();
-      section.open = true;
-    }
+    if (section) section.open = true;
     target.open = true;
     target.scrollIntoView({ block: 'start' });
   }
