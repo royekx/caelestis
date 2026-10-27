@@ -38,6 +38,7 @@ staging is distributed page by page.
   misreadings later; a long, exact entry does not.
 - **Plain, simple, precise, readable.** Short sentences, concrete nouns, no
   hedging.
+- **No stacked negations, and no three short sentences in a row for emphasis.**
 - **In-world voice for anything that exists in the world.** People, places,
   items, factions, history and events read like a fan wiki: "Thessalar's craft
   fell about 500 years ago," never "Korey decided the craft fell…".

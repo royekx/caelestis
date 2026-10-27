@@ -131,6 +131,7 @@ These hold on every page, staged entry and doc. Page-level rules are in
   narrate its own editing history.
 - **No stacked negations.** Three or more of no/not/never/nothing/none/without/nor
   in one sentence is a rewrite (`check` flags them).
+- **No three short sentences in a row for emphasis.** Vary the rhythm; let one sentence carry the weight.
 - **Names.** Avoid "The" plus a vague word ("the Figure"). Places and celestial
   bodies get proper names, often paired with a catalogue designation.
   Constructs and concepts get plain, definitive descriptions. People may carry
