@@ -181,7 +181,7 @@ const GAL_DRAW = {
       `Realmspace, Caelestis's home system, and the sister institutions of the higher organization across the galaxy.`,
       `Oerth, in Greyspace, where Vecna became a god.`],
     dm:[`Runs as D&D 5e. The keystone: what happens here decides GAL-03, GAL-04 and GAL-05.`,
-      `One link stands, between two worlds in one system on the upper lid. One more heart, on the lower lid, is found and not opened. The rest of the sixteen are unknown.`,
+      `One link stands, between two worlds in one system on the upper lid. One more heart, the Knowhere's on the lower lid, is found and not opened. The rest of the sixteen are unknown.`,
       `GAL-02's awake core presses on this one. Late in the campaign it can pull the crew into the eldritch galaxy.`] },
   "GAL-02": { ang:-18, tone:"#d07070", core:"awake", spin:1.3,
     line1:"eldritch gods · Call of Cthulhu", line2:"core awake · overrun",
@@ -784,14 +784,15 @@ function showHeart(h){
   const role = iris ? `An iris world. The iris closes the binding circle around the core, and its worlds are key: lose one and the iris must be redrawn, a real setback but not the end.`
                     : `A lid world. Lid worlds can be replaced: a lost stroke can be redrawn through another Monolith world near it, at a cost of years.`;
   const stateText = { linked:`Two worlds in one system, each with a Monolith. Both hearts are opened and linked, Atrium to Atrium. It is the only link standing in the galaxy.`,
-    found:`This heart has been found. It is not yet opened.`,
+    found:`The Knowhere. A lesser god forced its way into this system and down onto the world, and the push destroyed both. A Monolith answered. The world's heart lies exposed in the wreck: found, and not yet opened.`,
     unknown:`A Monolith world, chosen from thousands for how it looks from Oerth. Nothing is known of its heart.` }[h.state];
   const height = h.z > .15 ? "above the galaxy's plane" : h.z < -.15 ? "below the galaxy's plane" : "close to the galaxy's plane";
   const dm = [];
   if(h.pair) dm.push(`One of the two is a little-charted planet the crew learns of late in the campaign.`);
-  dm.push(`Which world this is gets decided when it matters. Vecna's progress here is tracked as counts: hearts found, opened and linked.`);
+  if(h.state==="found") dm.push(`Its exposed heart is the easiest in the galaxy to open, which is why Vecna chose it.`);
+  else dm.push(`Which world this is gets decided when it matters. Vecna's progress here is tracked as counts: hearts found, opened and linked.`);
   dm.push(`Like every heart in the figure, it links back to Oerth's heart as well as to its neighbours in the ${iris?"iris":"lid"}.`);
-  panel.innerHTML = `<h2>${h.pair?"Two heart worlds":"Heart world"}</h2><p class="kind">Inscription · ${partName}</p>
+  panel.innerHTML = `<h2>${h.pair?"Two heart worlds":(h.state==="found"?"The Knowhere":"Heart world")}</h2><p class="kind">Inscription · ${partName}</p>
     ${st.badge ? `<span class="badge ${st.badge}">${st.label}</span>` : `<span class="badge">${st.label}</span>`}${iris?`<span class="badge b-red">Key</span>`:`<span class="badge">Replaceable</span>`}
     <p>${stateText}</p><p>${role}</p><p class="hint">It lies ${height}, wherever the arm carries it.</p>${dmlist(dm)}`;
 }

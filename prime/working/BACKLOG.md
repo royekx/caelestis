@@ -30,12 +30,12 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 12 | 10 | 24 | 0 | 26 |
+| Cosmology | cosmology/, glossary/, chart/ | 9 | 11 | 25 | 0 | 26 |
 | Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 35 | 3 | 49 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
 | Factions | factions/ | 1 | 4 | 22 | 2 | 40 |
-| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 14 | 1 | 46 | 5 | 42 |
+| Campaign | campaign/: spine, ascension, colony, voyages, plot hooks | 13 | 1 | 46 | 5 | 42 |
 | Dossiers | dossiers/ | 9 | 6 | 43 | 0 | 51 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 6 | 2 | 26 | 0 | 43 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 2 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 5 | 0 | 1 |
-| **Total** | | **82** | **86** | **274** | **14** | **420** |
+| **Total** | | **78** | **87** | **275** | **14** | **420** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -163,10 +163,6 @@ Order under each page: decide, fix, drop, add.
 
 - **[decide]** If GAL-01 falls *(shape)*
   Ruled: GAL-01's core waking for Vecna takes GAL-03, GAL-04 and GAL-05 with it (STAGING, Campaign). Left: what the campaign becomes in that state: crossing galaxies to close cores, a last stand at Erevos, or the end.
-  src: Korey, 2026-10-26
-
-- **[decide]** The Knowhere *(shape)*
-  Korey (2026-10-26): a lesser god forced its way into a system and onto a world; the push destroyed the world and left the Knowhere, and a Monolith answered. Left: whether the god died too; which galaxy it lies in; whether its heart lies exposed, and whether it is the little-charted planet in GAL-01's one link. STAGING still has the older "a god forced its way down onto a world … it destroyed the god" line; rewrite it when settled.
   src: Korey, 2026-10-26
 
 - **[decide]** The inner ring of gods *(shape)*
@@ -1658,10 +1654,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   "Captain Haymond Rolt is the crew's handler in Arc 2. He oversees several Driftwarden crews at once."
   DM note: an homage to Captain Raymond Holt. He gets a new dossier, `dossiers/haymond-rolt.html`, and a row on dossiers/index.html.
   src: Korey, 2026-10-25 (round 8)
-
-- **[decide]** The higher organization's name *(shape)*
-  Ruled: every member of its service is a Driftwarden, ranked like a police force; Caelestis is its academy; Driftwarden operations for Caelestis's cluster run from Ondrel Anchorage on the moon Ostrel; its affiliates share information and each mostly runs itself (STAGING, Factions). Left: a name in the style of a real international body, with "Intergalactic" and "Fleet" in it; "the Fleet" stays as the everyday word for the service.
-  src: Korey, 2026-10-26
 
 - **[decide]** Driftwarden ranks *(prep)*
   Ruled: one service, many ranks, the way every police officer is a cop. Set the ladder from the newest graduate up to the organization's head, and where the crew starts.

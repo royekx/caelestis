@@ -720,15 +720,23 @@
       "label": "The Knowhere",
       "type": "place",
       "scope": "cosmos",
-      "summary": "What remains of the one god that forced its way down onto a world.",
+      "summary": "A world destroyed when a lesser god forced its way onto it; a lid world of Vecna's eye, its heart exposed.",
       "facts": [
         {
-          "t": "Once a god forced its way down onto a world, and the friction destroyed it; what remained became the Knowhere.",
-          "src": "STAGING round 5"
+          "t": "A lesser god forced its way into a system and down onto a world; the push destroyed them both.",
+          "src": "STAGING, Cosmology"
         },
         {
-          "t": "Every god since has taken the Knowhere as a warning.",
-          "src": "STAGING round 5"
+          "t": "A Monolith answered the destruction.",
+          "src": "STAGING, Cosmology"
+        },
+        {
+          "t": "Its heart lies exposed in the wreck, found and not yet opened: a lid world of GAL-01's eye.",
+          "src": "STAGING, Campaign"
+        },
+        {
+          "t": "Every god since has taken it as a warning.",
+          "src": "STAGING, Cosmology"
         }
       ]
     },
