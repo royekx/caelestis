@@ -188,7 +188,6 @@ state what is. Rules: `prime/working/README.md`.
 ## Rules
 
 - Changes go up as a pull request for review. Do not push to `main`.
-- `scripts/_benched/` is out of service. Do not run it.
 - Record urls are site-relative with no leading slash. An absolute path
   resolves above `/caelestis/` on Pages.
 - A moved page updates every link to it in the same commit, joins the link

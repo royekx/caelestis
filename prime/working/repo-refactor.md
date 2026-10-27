@@ -30,7 +30,7 @@ is there, proposes a shape, and lists the calls to make before anything moves.
 | `restricted/` | The Fleet Intelligence Archive (in-world gated files) | Fine; keep separate |
 | `search/` | S.E.A.R.C.H. | Fine |
 | `data/` | The campaign record (JSON) | Fine |
-| `assets/`, `styles/`, `scripts/` | Shared | `scripts/_benched/` is out of service |
+| `assets/`, `styles/`, `scripts/` | Shared | Fine |
 
 ### DM side
 
@@ -286,7 +286,6 @@ from deploy.
 References updated: `CLAUDE.md`, `scripts/data.js`, `data/bearing.js`,
 `.github/workflows/check.yml` and `deploy.yml`, `prime/tracker/index.html`,
 `prime/campaign/index.html`, `prime/scripts/dm-tracker.js`.
-`scripts/_benched/README.md` still cites DATA-BOUNDARY.md and is left as is.
 
 The retired notes and the rule checklist below are kept as the record of what
 was carried.
