@@ -84,6 +84,7 @@ when a ruling changes; delete it once the page carries it. See
 - Vecna's domains are Knowledge, Death and Trickery.
 - His symbol is an eye in the palm of a left hand. Chapters read it their own way. Some take the eye for sight and revelation. Some glorify it in green, for light, nourishment and the life of the body. The same symbol means different things across his faith.
 - Vecna's realm is Cavitius.
+- The Hand of Vecna, the Eye of Vecna and the Book of Vile Darkness exist in this cosmos. (DM: where each is, and whether any has reached Caelestis or the Rykoe Galaxy, is still to decide.)
 - Oerth is the world where Vecna became a god. His ritual to become a god pushed Oerth to its Zenith, and the Zenith made him one; the Monolith that answered archived his mortal form, Lich Vecna. That was his first ascension, the Godhood Ascension. The climb he is making now, into Continuity itself, is the Axiomic Ascension. Oerth is the Ascension World.
 - His grievance: something was taken from him and hidden from him. He believes the cosmos and every being in it are owed an answer, and he means to find it.
 - DM: the campaign is not a war of the gods.

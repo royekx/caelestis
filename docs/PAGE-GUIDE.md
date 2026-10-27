@@ -391,8 +391,17 @@ Only the subsections with content.
 | What's hidden | true things about them that are secret and that running them depends on (Vecna's hand in the Sovereign Eye), in in-world voice |
 | How to run them | voice, tactics, how they engage, how they react under pressure |
 | Their arc | where their story is going in this campaign |
-| Threads | what they connect to: people, arcs, places, other notes the DM needs alongside them |
+| Threads | why a connection matters to running them, in sentences; the links themselves are in *Connections* |
 | Still to decide | each a full, specific sentence ("Ezra's surname is not chosen yet."), never a bare label |
+
+### Connections
+
+Every dossier ends with the Connections card, below the tabs and visible
+whichever tab is open: a hot bar of chips linking to everything the entry
+touches. Columns, only those with chips: *People and factions*, *Places*,
+*Items*, *Campaign* (voyages, arcs, Opposition pages). The card lists;
+*Threads* explains. A connection that needs no explanation is a chip and
+nothing more.
 
 *About* holds what a wiki would say about them. A secret that the DM needs to
 run them or the things around them is true, but it lives in *What's hidden*,
