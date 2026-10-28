@@ -291,7 +291,7 @@
       "notes": "Hidden. No route; Wayfinders leave with no map and must re-recognize home."
     }
   ],
-  "yearNote": "Cycle 1491, the current Galactic time cycle (GTC). Cycle 0 is the founding of the Order of the All-Father; one cycle is one full turn of Erevos's heart, read in its four sparks, and its length in Toril years is a working default (BACKLOG, Galactic time cycles).",
+  "yearNote": "Cycle 1491, the current Galactic time cycle (GTC). Cycle 0 is the founding of the Order of All; one cycle is one full turn of Erevos's heart, read in its four sparks, and its length in Toril years is a working default (BACKLOG, Galactic time cycles).",
   "galaxies": [
     {
       "id": "GAL-01",

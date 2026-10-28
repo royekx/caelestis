@@ -26,7 +26,7 @@
     },
     {
       "id": "order",
-      "label": "Order, Watchers, Restorers"
+      "label": "The Order of All"
     },
     {
       "id": "dragons",
@@ -461,8 +461,8 @@
       "lane": "order",
       "status": "past",
       "cert": "working",
-      "title": "The Order of the All-Father is founded",
-      "desc": "Cycle 0. The Order begins counting the turns of Erevos, from the arm it sees lit, so that its Watchers, posted across the galaxy, have one clock to compare their reports. Placed by the working default of one cycle to about sixteen Toril months.",
+      "title": "The Order of All is founded",
+      "desc": "Cycle 0. The Order of All begins counting the turns of Erevos, from the arm it sees lit, so that its Watchers, posted across the galaxy, have one clock to compare their reports; its Keepers keep the count. Placed by the working default of one cycle to about sixteen Toril months.",
       "t": -1990,
       "tier": 1
     },
@@ -470,8 +470,8 @@
       "lane": "order",
       "status": "past",
       "cert": "canon",
-      "title": "The Order of the All-Father",
-      "desc": "Guards Ortholiths, believing the taken are inside them. Watchers posted one per region. Its founding is Cycle 0 of the count it keeps.",
+      "title": "The Order of All",
+      "desc": "One faith of three orders, one god in three aspects. The Watchers are posted one per region on worlds approaching a Zenith; the Keepers guard Ortholiths, believing the taken are inside them, and keep the count; the Restorers mend what Zeniths break. Its founding is Cycle 0 of the count the Keepers keep.",
       "t": -1990,
       "end": 0,
       "tier": 2
@@ -481,7 +481,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The Restorers walk into Zeniths",
-      "desc": "For four centuries Restorers walk into Zeniths on purpose to be archived, trying to reach the source they believe every Monolith answers to. The archiving is bodily, and many of the order's best people are in the Radiant Citadel.",
+      "desc": "For four centuries the radical edge of the Order of the Restorers walks into Zeniths on purpose to be archived, trying to reach the source they believe every Monolith answers to. The archiving is bodily, and many of the order's best people are in the Radiant Citadel.",
       "t": -400,
       "end": 0,
       "tier": 2

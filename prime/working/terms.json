@@ -465,6 +465,11 @@
     {
       "pattern": "Riverguard Keep",
       "use": "Rivergard Keep"
+    },
+    {
+      "pattern": "Order of the All-Father",
+      "use": "the Order of the Watchers, or the Order of All for the whole",
+      "i": true
     }
   ],
   "voice": [
