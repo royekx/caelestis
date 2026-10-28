@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 11 | 14 | 14 | 0 | 3 |
+| Cosmology | cosmology/, glossary/, chart/ | 11 | 13 | 14 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **114** | **147** | **50** | **2** | **54** |
+| **Total** |  | **114** | **146** | **50** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -329,13 +329,10 @@ Order under each page: decide, fix, drop, add.
 
 ### cosmology/index.html: Zeniths and Monoliths
 
-- **[decide]** How Determination relates to a Zenith's divergence
-  Ruled (Korey, 2026-10-28): a Monolith appears in the run-up to a Zenith, as the cosmos responds to the potential for drastic, immediate change, a coming moment from which outcomes diverge sharply; slow change, even harmful, is a world's own process. Cosmology frames Determination as every outcome having to be decided, not as divergence, so the page phrases this as Continuity registering a moment of divergence and names no Axiom. Decide whether the divergence is Determination's doing (a large undecided outcome about to be decided), and if so, say it on cosmology § Zeniths and § Monoliths and in the glossary.
-  src: Korey, 2026-10-28 (Monolith timing ruling)
-
-- **[later]** Whether a Monolith can fade on a stable world
-  Monoliths do not go away (Korey, 2026-10-28). Left open: whether a Monolith could fade if its world passes its Zenith and then holds steady for a long time, years to centuries.
-  src: Korey, 2026-10-28 (Monolith timing ruling)
+- **[decide]** How long a Monolith stands before it fades
+  Ruled (Korey, 2026-10-28): a Monolith fades some time after its Zenith; a later Zenith on the same world brings a new Monolith where that Zenith happens, and two Zeniths on one world within one Monolith's span are possible but rare (cosmology § Monoliths). Determination is settled the same day: Continuity responds when a sharp spread of outcomes is about to open, and its response leans on Determination without being Determination's alone (cosmology § Monoliths). Still open: how long a Monolith stands before it fades, and whether the span varies by Zenith.
+  Pages whose meaning assumes an old Monolith still stands, for Korey to rule on: Oerth's Monolith from Vecna's ascension, kept as his faithful's holiest site (locations/oerth.html, cosmology § Archiving, factions/seekers.html, locations/index.html); Nowhere's Monolith over the wreck (locations/nowhere.html, locations/index.html); heart links, possible only where both worlds have a Monolith, which ties Vecna's linked worlds and the colony's Ready state to a Monolith's span (cosmology § hearts table, glossary #link, opposition/vthorama.html, opposition/vecna.html inscription); the FIA's Vetharra and Kaldris "sole standing structure" stays as filed, and chart/index.html mirrors it.
+  src: Korey, 2026-10-28 (Monolith fading ruling)
 
 # Locations
 
@@ -781,10 +778,10 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   Touches: factions/watchers.html (Still to decide).
   src: Korey, 2026-10-28 (Order of All ruling)
 
-- **[decide]** Was a Watcher on Aethris during the ritual?
-  Aethris is a large civilization, the kind of world the Order posts Watchers to. Decide whether a Watcher was posted there while the Fortuned's ritual drove it toward its Zenith, and whether some of the Misfortuned were archived by the Prism Ascendant. Canon to keep: a Watcher extracted Sol, against the order's remit to preserve worlds, not individuals, and the Order then broke protocol to recommend him to Caelestis; it still reads right under the chain (Watchers mostly do not act, so the extraction was a Watcher acting outside doctrine).
+- **[decide]** A team of three on Aethris?
+  Settled (Korey, 2026-10-28): a Watcher was on Aethris for certain during the Fortuned's ritual and helped Sol off-world. Still open: whether a team of three was sent to Aethris, and whether they tried to intervene; and whether some of the Misfortuned were archived by the Prism Ascendant. This plays into Sol's backstory.
   Touches: factions/watchers.html, locations/aethris.html, factions/aethris.html, crew/sol.html.
-  src: Korey, 2026-10-28 (Order chain ruling)
+  src: Korey, 2026-10-28 (Order chain ruling; Aethris ruling)
 
 - **[add]** The Watcher who came back from Glyth
   Add a named-but-unseen row: "A Watcher posted to a region of Glyth got out after years inside the elder brain's range. She still hears it." (Eris Morn pattern.)

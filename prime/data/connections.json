@@ -477,7 +477,7 @@
           "src": "cosmology/index.html#monoliths"
         },
         {
-          "t": "It is the cosmos's self-preservation, like an immune system; a Monolith does not go away.",
+          "t": "It is the cosmos's self-preservation, like an immune system. A Monolith fades some time after its Zenith; a later Zenith on the same world brings a new Monolith where that Zenith happens.",
           "src": "cosmology/index.html#monoliths"
         },
         {
@@ -495,6 +495,10 @@
         {
           "t": "The Order of All calls a Monolith an Ortholith, after the Keepers' registries.",
           "src": "glossary/index.html"
+        },
+        {
+          "t": "Continuity responds when a sharp spread of possible outcomes is about to open; its response leans on Determination, though Determination is not the only Axiom at work.",
+          "src": "cosmology/index.html#monoliths"
         }
       ]
     },
