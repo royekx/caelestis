@@ -57,6 +57,10 @@ body::after {
   margin: 0 auto 1.6rem;
   color: rgba(201,153,58,0.55);
   display: block;
+  /* The FIA seal, shared with the records (styles/fia.css): one SVG used as a mask. */
+  background-color: currentColor;
+  -webkit-mask: url('../assets/fleet-device.svg') center / contain no-repeat;
+  mask: url('../assets/fleet-device.svg') center / contain no-repeat;
 }
 
 .institution {
@@ -65,16 +69,7 @@ body::after {
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: rgba(201,153,58,0.55);
-  margin-bottom: 0.3rem;
-}
-
-.division {
-  font-family: 'Cinzel', serif;
-  font-size: 0.696rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(201,153,58,0.4);
-  margin-bottom: 2rem;
+  margin-bottom: 0.6rem;
 }
 
 .title {
@@ -194,32 +189,9 @@ body::after {
 
 <div class="gate">
 
-  <svg class="seal" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-linecap="round">
-    <circle cx="28" cy="28" r="21" stroke-width="1.1"/>
-    <circle cx="28" cy="28" r="7.5" stroke-width="0.9"/>
-    <line x1="35.3" y1="28" x2="48.8" y2="28" stroke-width="0.8"/>
-    <line x1="33.1" y1="33.1" x2="42.9" y2="42.9" stroke-width="0.8"/>
-    <line x1="28" y1="35.3" x2="28" y2="48.8" stroke-width="0.8"/>
-    <line x1="22.9" y1="33.1" x2="13.1" y2="42.9" stroke-width="0.8"/>
-    <line x1="20.7" y1="28" x2="7.2" y2="28" stroke-width="0.8"/>
-    <line x1="22.9" y1="22.9" x2="13.1" y2="13.1" stroke-width="0.8"/>
-    <line x1="28" y1="20.7" x2="28" y2="7.2" stroke-width="0.8"/>
-    <line x1="33.1" y1="22.9" x2="42.9" y2="13.1" stroke-width="0.8"/>
-    <circle cx="51.5" cy="28" r="2.2" stroke-width="0.8"/>
-    <circle cx="44.9" cy="44.9" r="2.2" stroke-width="0.8"/>
-    <circle cx="28" cy="51.5" r="2.2" stroke-width="0.8"/>
-    <circle cx="11.1" cy="44.9" r="2.2" stroke-width="0.8"/>
-    <circle cx="4.5" cy="28" r="2.2" stroke-width="0.8"/>
-    <circle cx="11.1" cy="11.1" r="2.2" stroke-width="0.8"/>
-    <circle cx="28" cy="4.5" r="2.2" stroke-width="0.8"/>
-    <circle cx="44.9" cy="11.1" r="2.2" stroke-width="0.8"/>
-    <path d="M21 28 Q28 22.5 35 28 Q28 33.5 21 28 Z" stroke-width="0.9"/>
-    <circle cx="28" cy="28" r="3.8" stroke-width="0.8"/>
-    <circle cx="28" cy="28" r="1.5" fill="currentColor" stroke="none"/>
-  </svg>
+  <div class="seal" aria-hidden="true"></div>
 
-  <div class="institution">Spelljammer Academy</div>
-  <div class="division">Fleet Intelligence Division</div>
+  <div class="institution">Caelestis Sector</div>
 
   <div class="title">Fleet Intelligence Archive</div>
   <div class="subtitle">Gold Clearance — Bridge Access</div>

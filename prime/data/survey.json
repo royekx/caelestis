@@ -1,7 +1,7 @@
 {
   "about": "The DM's survey of the cosmos, kept by scripts/survey.js and by hand. DM material: never copied to data/ or a player page. Designations follow prime/working/STAGING.md § Designations.",
   "catalogue": "CSC",
-  "year": 1490,
+  "year": 1491,
   "systems": [
     {
       "id": "Realmspace",
@@ -291,7 +291,7 @@
       "notes": "Hidden. No route; Wayfinders leave with no map and must re-recognize home."
     }
   ],
-  "yearNote": "Cycle 1490, the latest Cycle on the pages (restricted orders). Which calendar the Cycle counts is open (BACKLOG).",
+  "yearNote": "Cycle 1491, the current Galactic time cycle (GTC). Cycle 0 is the founding of the Order of the All-Father; one cycle is one full turn of Erevos's heart, read in its four sparks, and its length in Toril years is a working default (BACKLOG, Galactic time cycles).",
   "galaxies": [
     {
       "id": "GAL-01",

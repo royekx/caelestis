@@ -30,21 +30,21 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 10 | 12 | 15 | 0 | 3 |
-| Locations | locations/ (Fonains stays in its own section) | 21 | 24 | 0 | 0 | 1 |
+| Cosmology | cosmology/, glossary/, chart/ | 10 | 13 | 14 | 0 | 3 |
+| Locations | locations/ (Fonains stays in its own section) | 21 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 4 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
-| Factions | factions/ | 3 | 10 | 1 | 0 | 2 |
+| Factions | factions/ | 4 | 10 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 1 |
-| Dossiers | dossiers/ | 18 | 15 | 0 | 0 | 1 |
+| Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
-| New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 4 | 2 | 24 |
+| New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 4 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
-| Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
+| Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **104** | **143** | **52** | **3** | **54** |
+| **Total** |  | **107** | **145** | **50** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -188,18 +188,13 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-26
   done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); prime/factions (section 2); prime/locations (section 3).
 
-- **[decide]** The calendar the Cycle counts *(later)*
-  Pages date orders by Cycle (1486, 1489, 1490); the survey uses Cycle 1490 as the present for provisional designations. Set what the Cycle counts from, and how Toril's reckoning, Fonains's "year 425" and Krynn's calendar line up against it.
-  src: Korey, 2026-10-26; restricted/ orders
-
+- **[decide]** Galactic time cycles (GTC): first arm, counts and the Toril ratio
+  Settled (Korey, 2026-10-28): the Order of the All-Father made the count so its Watchers had one clock; Cycle 0 is the Order's founding, and the current cycle is 1491. The Fleet, founded by Caelestis about 250 cycles ago (about Cycle 1240), adopted it; most call it cycles or Fleet time, and ordinary people keep their own world's calendar. The arms are the clock and the cycle is a full turn: Erevos, the heart at the core, turns once a cycle and throws an unseen beam; when it reaches an arm's root, that arm lights from root to tip over a quarter cycle, and the Erevos Galaxy has four arms. The Order's vocabulary is settled (Korey, 2026-10-28, replacing the hearth): the core is the All-Father's beacon, a signal fire kept burning to give direction, and the count is the Beacon, which the Order and its keepers keep. A beacon is one full turn (most say cycle); a spark is the moment the light strikes an arm's root and that arm's quarter, four to a beacon; a kindling is one marker cluster passed, numbered 1 to 16 through the beacon; an ember is one day-length count on an armillary. Dates read "the 1491st beacon, seventh kindling, twelfth ember", 1491.7.12 in Fleet logs; durations read "fourteen embers to H'Catha". The Fleet and travellers borrow kindling and ember. Each arm's spark has its own character; what each is is not set. FIA records keep writing "Cycle". The quickening (arms lighting early, cycles shortening over the past few centuries) is in-world on factions/order.html and fleet.html; its cause stays in the Order's What's hidden. The clock principle is on opposition/vecna.html#clock and principles.html#clock.
+  Still open: which arm's spark is first (the one the Order saw at its founding); kindlings per spark (working default four, sixteen a beacon, each about a Toril month); embers per kindling (working default about thirty, each roughly a Toril day); the character of each arm's spark; and the Toril ratio (working default one beacon to about sixteen Toril months, so each spark is about four, the Order was founded about 1,990 Toril years ago and the Fleet about 330; the timeline places both by it). Do not use "reckoning" for the count's name.
+  src: Korey, 2026-10-28 (GTC rulings); replaces "The calendar the Cycle counts" (Korey, 2026-10-26; restricted/ orders)
 - **[later]** Spelljammer's own terms
   Korey wants to wear down the Spelljammer barriers ("spelljamming" means nothing for a ship); spheres have become galaxies. Review the remaining genre terms (spelljammer, spelljamming helm, wildspace, Astral Sea, phlogiston) for plainer replacements during the overhaul.
   src: Korey, 2026-10-26
-
-- **[fix]** Replace the W-, SYS- registers with the CSC scheme
-  Ruled (STAGING round 12): designations follow real astronomy; nothing has reached the players. Retire every W-0n and SYS-0n designation and replace it with a CSC number, a star-and-letter designation, or the body's proper name. Pages: prime/chart, prime/cosmology, prime/locations/* (realmspace, toril, hcatha, aethris, glyth, fonains, krynn, virenspace, sys04, tetherbreak, wayfinders-homeworld, ascension-world, caelestis, strake-station, cairn-station, meteor-hub, astral-sea), prime/campaign/index.html, prime/timeline/timeline.json, and restricted/ (fr-005, sa-002, wm-003, wm-006). Fonains's W-021 and Aethris's W-008 go with them. Do this with the distribution pass, and save the known systems (Realmspace, Virenspace, Aethris's system, Krynnspace, Glyth's) into the survey first so the new designations have one source.
-  src: Korey, 2026-10-25 (round 12)
-  done: prime/cosmology (distribution section 1, 2026-10-27); prime/locations and the chart's page links (section 3).
 
 - **[later]** Game systems for GAL-03, GAL-04 and GAL-05
   Ruled: assigned ahead of time (STAGING round 12). Set when a campaign heads there.
@@ -297,12 +292,6 @@ Order under each page: decide, fix, drop, add.
   The Hall of Sight and Sound is its great hall (STAGING rounds 5–6). Name and place the seat itself when the crew is headed there.
   src: Korey, 2026-10-25 (round 6)
 
-- **[fix]** Trim Tarroway to a thread
-  Keep M. Tarroway as Strake Station's cartographer whose readings first hinted at an unknown vessel disturbing the satellites at the system's edge (STAGING round 4). Cut the "timing tables" and their failure everywhere. Reduce his presence on the ten pages that mention him to passing references; his main home is the Fleet Intelligence Archive (restricted/). Nothing public.
-  Touches: dossiers/tarroway.html, dossiers/index.html, dossiers/miken.html, dossiers/vthoramu.html, dossiers/joffrey.html, dossiers/verrow.html, factions/vocath-operation.html, locations/index.html, locations/strake-station.html, chart/index.html, restricted/.
-  src: Korey, 2026-10-25 (round 4)
-  done: factions/fleet.html and factions/vocath-operation.html (section 2); locations/strake-station.html, the register and the chart (section 3); every dossier and the dossier register (section 5). restricted/ still needs it.
-
 - **[fix]** "The only Monolith" on Fonains
   cosmology/#corrupted-monoliths says Fonains's is "the only Monolith ever to carry Tharizdun's crystal and the only one recorded as destroyed", and the chart's Fonains note says "the only one ever to carry Tharizdun's crystal". PAGE-GUIDE bars comparative absolutes on setting pages. Describe the Monolith instead: it formed corrupted, with her crystal replicated into it, and Lola's Boys broke it. locations/fonains.html already does.
   src: section 8, 2026-10-28
@@ -329,6 +318,15 @@ Order under each page: decide, fix, drop, add.
   The center's open list has "Why the approach harms Reach-born gods." Answer it in the note: polarity; a god and a heart carry the same charge, and the First Heart pushes hardest. Remove that open line. (Why Reach-born gods suffer more stays a decide; see cosmology.)
   src: session-rulings; divine-rules § Polarity
 
+
+- **[later]** CSC 31758, the 1491 entry in SA-002
+  SA-002 carries the Cycle 1491 auroral discharge at CSC 31758, outer fringe (the old SYS-05). The number is new: it is not in the survey or on the chart, and it collides with nothing in either. The entry stays as filed: two arrivals from an uncatalogued system entered Academy intake. Place the star in the survey, or leave it as a catalogue number only. It is not tied to Greyspace.
+  src: Korey, 2026-10-28 (FIA rulings, 10)
+
+- **[fix]** Redraw the charts and the Fleet seal with four arms
+  The Erevos Galaxy has four spiral arms (Korey, 2026-10-28), and the Fleet has one sector on each. Redraw the flat chart (chart/index.html), the holochart (chart/holo.html) and the Fleet seal (assets/fleet-device.svg) with four arms and one sector star per arm, keeping every system where it is. Follows PR #104; the text already says four.
+  src: Korey, 2026-10-28 (GTC model)
+
 # Locations
 
 Items for `locations/` pages. Fonains's items are in the Fonains section.
@@ -346,7 +344,7 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
   src: realms/index.html § Constellations (old page)
 
 - **[later]** The unplaced registry worlds: W-34, Vetharra and Kaldris
-  The old register carried three FIA registry entries without a position: W-34 (an Ortholith established and recording over a natural Zenith, high priority, drafted into Virenspace), W-47 Vetharra (sole standing structure, surface population zero) and W-52 Kaldris (sole standing structure, a Zenith collapse variant labelled "control case"). Re-designate them in the survey and place them, or drop them. The chart still lists all three.
+  The old register carried three FIA registry entries without a position: W-34 (an Ortholith established and recording over a natural Zenith, high priority, drafted into Virenspace), W-47 Vetharra (sole standing structure, surface population zero) and W-52 Kaldris (sole standing structure, a Zenith collapse variant labelled "control case"). The FIA (restricted/wm-003.html) now carries all three as not cross-referenced, with the registry's own reference numbers redacted. Re-designate them in the survey and place them, or drop them. The chart still lists all three.
   src: framework § Open; realms/index.html, realms/virenspace.html (old pages)
 
 - **[later]** The crew's unplaced homeworlds
@@ -560,6 +558,10 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
   Korey liked the carved meteor as a dead god's severed head. Name options: the Crown, Godsrest, the Wanderhead, the Rock. Where it sits on the lane, and who lives there, are not set.
   src: chat-voyage-6-7-planning § Open
 
+- **[later]** A second Zenith on Aethris
+  A Zenith is a moment: it builds, happens, a Monolith answers, and it is over. Aethris's came in Cycle 1490 and the Prism Ascendant answered it; the Fortuned's ritual is what stands incomplete. Whether a world can have a second Zenith, and whether completing the ritual could bring one to Aethris, is not established. Pages say nothing on it until it is ruled.
+  src: Korey, 2026-10-28 (FIA rulings, 4)
+
 # Fonains
 
 Items for `locations/fonains.html`, `factions/cretez.html`, `dossiers/vanifer.html`, the Fonains Canon Reference (a Claude doc outside the repo, "Fonains doc"), and the Fonains lane of `timeline/timeline.json`. Since section 8 the wiki is the canon home for Fonains; the doc follows it.
@@ -678,7 +680,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   src: Factions review, 2026-10-28
 
 - **[decide]** The Caelestis Sector's systems, and the other sectors
-  The Fleet is four or five sector branches; Caelestis is one sector of several systems, including Toril's (Korey 2026-10-27). Which systems the Caelestis Sector covers, how many sectors there are, and their names and characters are not set. Feeds the chart's sector layer and factions/fleet.html.
+  The Fleet is four sector branches, one along each of the Erevos Galaxy's four spiral arms, and Caelestis founded it (Korey 2026-10-28). The Caelestis Sector is the one on Realmspace's arm and covers several systems, including Toril's. Which systems it covers, and the other three sectors' names and characters, are not set. Feeds the chart's sector layer and factions/fleet.html.
   src: chat 2026-10-27
 
 - **[decide]** Realmspace's name
@@ -715,7 +717,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 - **[later]** Names of the sister institutions
   Ruled: sister institutions in other system clusters, under other names and governance (STAGING, Factions). Name the one or two the crew is likely to hear of first; the rest wait.
   src: Korey, 2026-10-25 (rounds 10–11)
-  Moved from the campaign section: the Fleet is four or five sector branches, each keeping its own names (factions/fleet.html), which answers the shape. Naming the one or two the crew hears of first waits until play needs it.
+  Moved from the campaign section: the Fleet is four sector branches, each keeping its own names (factions/fleet.html), which answers the shape. Naming the one or two the crew hears of first waits until play needs it.
 
 - **[later]** The Glyth loss
   The Fleet lost a force at Glyth during the last approach window (see add). Its name and its commander are unnamed.
@@ -758,6 +760,11 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   src: memory-canon open-decisions (Runekeepers line)
 
 ---
+
+- **[decide]** The Order's callings beyond the Watchers, and who leads it
+  Not everyone in the Order of the All-Father is a Watcher (Korey, 2026-10-28). The Watchers are its field calling, the Fleet its partner and hands for travel, and specialists come in for particular work. Name the other callings and what the specialists do, and say who leads the whole Order; Dejexic leads the Watchers and speaks for the All-Father.
+  Touches: factions/order.html (Still to decide), glossary, connections.json.
+  src: Korey, 2026-10-28 (Order callings ruling)
 
 # Campaign
 
@@ -841,7 +848,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 ### opposition/vthorama.html
 
 - **[decide]** What the surface attack at graduation is made of *(prep)*
-  The page has "security diverted by the surface operation" while Joffrey runs the Brig, and names nothing in that operation. The early plan collapsed the module's two finale events into one: the attack hits during the ceremony, a battle across the school. It ported these module pieces: Mustaf Shultz and his giff mercenaries, a decapitation threat, Miken at 2 HP, Wizpop's return (now Ostekk-6), and the transmutation sigil as Vocath's eye-in-a-wheel. Qitru and her githyanki have since moved to H'Catha. Vocath is a merchant, no fighter, and stays out of the siege himself (settled: chat-cosmic-campaign-structure § Act 1 retrofit), so whoever leads the surface operation is hired or his crew. Pick which pieces stay, and write the surface operation into the Brig run section.
+  The page has "security diverted by the surface operation" while Joffrey runs the Brig, and names nothing in that operation. The early plan collapsed the module's two finale events into one: the attack hits during the ceremony, a battle across the school. It ported these module pieces: Mustaf Shultz and his giff mercenaries, a decapitation threat, Miken at 2 HP, Wizpop's return (now Ostekk-6), and the transmutation sigil as Vocath's house mark. Qitru and her githyanki have since moved to H'Catha. Vocath is a merchant, no fighter, and stays out of the siege himself (settled: chat-cosmic-campaign-structure § Act 1 retrofit), so whoever leads the surface operation is hired or his crew. Pick which pieces stay, and write the surface operation into the Brig run section.
   Touches: opposition/vthorama.html (the run, the Fork; the page names "the surface attack" and nothing more), campaign/index.html (Arc 1 close), factions/vocath-operation.html, dossiers/miken.html.
   src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300); dossiers/qitru.html
 
@@ -990,9 +997,14 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 - **[decide]** Ezra's own hook *(prep)*
   Ezra must arrive with a hook others can latch onto. Options:
-  (a) The eye-in-a-wheel sketch (ties to crossing table entries 4 and 8).
+  (a) The eye-in-a-wheel sketch. The eye in a wheel is now the Vth'orama's mark (Korey, 2026-10-28). Crossing-table entries 4 and 8 now carry Vocath's house mark, the balance scale, so the old tie to them no longer holds.
   (b) The sealed letter: "Watch one thing until it changes."
   src: chat-voyage-6-7-planning § Open; memory-canon open-decisions (Voyage 007 intent)
+
+- **[decide]** Ezra's sketch of the Vth'orama's mark *(before V007)*
+  Ezra's hook on dossiers/ezra.html is the eye-in-a-wheel sketch, and the eye in a wheel is now the Vth'orama's mark. Korey wants it worked out before Voyage 007. Set what the sketch is (drawn by Ezra, copied from something, or handed to him), where he saw the mark, and what the Order of the All-Father knows of it. The Watchers flag some Seekers chapters' work without knowing who stands behind it (factions/order.html), so the Order may hold the mark without knowing it is the colony's.
+  Touches: dossiers/ezra.html, factions/order.html, campaign/voyages/index.html (V007).
+  src: Korey, 2026-10-28 (Ezra's hook ruling)
 
 - **[later]** Emporia and Tharizdun
   Does Emporia read as a Zenith with Tharizdun behind it? Options: yes (a Tharizdun-touched Zenith); no (local trouble only); leave it to the other table.
@@ -1121,6 +1133,11 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[later]** The accounts of Zerathis
   Zerathis is a name the crew hears long before they meet what remains of him, and the accounts disagree (the Osiris pattern). The accounts themselves are not written; each is set when it is used. His species and look in life are not set either.
   src: section 5 (2026-10-28)
+
+
+- **[decide]** Whose registry WM-003 is
+  The recovered monitoring registry in restricted/wm-003.html bears the marking catalogued in FR-016, which is Vocath's house mark, and uses the Order's registry terms, Zenith and Ortholith. Decide whose registry it is, and why it carries his mark. No finished DM page lists the mark on a registry.
+  src: Korey, 2026-10-28 (FIA rulings, 8)
 
 # Crew
 
@@ -1304,13 +1321,13 @@ left here is open.
 ### artifacts/distinction-fragment.html
 
 - **[later]** The third Distinction piece
-  Ruled: the Distinction fragment is three pieces, each a finder; A.T.L.A.S. and its sister are two (STAGING rounds 10–11). What the third finds, and where it is, waits until play needs it. (Moved from the Timeline section.)
+  Ruled: the Distinction fragment is three pieces, each a finder; A.T.L.A.S. and the second Distinction piece are two (STAGING rounds 10–11). What the third finds, and where it is, waits until play needs it. (Moved from the Timeline section.)
   src: Korey, 2026-10-25 (round 10)
 
-### artifacts/atlas-sister.html
+### artifacts/second-distinction-piece.html
 
-- **[later]** The sister's name
-  On the page it is "A.T.L.A.S.'s sister". Name it, and say whether the Fleet catalogued it under a name of its own as it did A.T.L.A.S. (Astral Topographic Lithic Augury System). Its look, its maker, how it shows what it finds, why the Bellwether Crow was carrying it, and whether Clint still has it are on the page as Still to decide.
+- **[later]** The second Distinction piece's catalogue name
+  Named the second Distinction piece (Korey, 2026-10-28; the page moved from artifacts/atlas-sister.html). Say whether the Fleet catalogued it under a name of its own as it did A.T.L.A.S. (Astral Topographic Lithic Augury System). Its look, its maker, how it shows what it finds, why the Bellwether Crow was carrying it, and whether Clint still has it are on the page as Still to decide.
   src: section 4 plan
 
 ### artifacts/expansion-fragment.html, artifacts/determination-fragment.html
@@ -1383,7 +1400,7 @@ left here is open.
 ### vessels/bellwether-crow.html
 
 - **[later]** The Crow after the ambush
-  The Crow made Strake under damage (locations/cairn-station.html). Whether it went back into service, its class, its captain, and the clean survivor's name wait until the crew pulls the roster.
+  The Crow made Strake under damage (locations/cairn-station.html). Its class is set: a light corvette (restricted/wm-002.html, vessels/bellwether-crow.html). Whether it went back into service, its captain, and the clean survivor's name wait until the crew pulls the roster.
   src: section 4
 
 ### vessels/moonraider.html
@@ -1991,12 +2008,6 @@ The page exists (`prime/principles.html`, Reference). Contracts are built on Cam
   Line 59 says "the World Surveyor". Change to A.T.L.A.S.
   src: framework § A.T.L.A.S.
 
-#### restricted/sa-005.html (FIA, player-readable)
-
-- **[add]** Why Tarroway's name is withheld
-  The memorial withholds the cartographer's name (SJN-2405) with no stated reason. Add: SA-005 keeps Tarroway's name "at Bridge direction pending resolution." Fleet never redacts a name stated plainly elsewhere, so the note explains the exception. (The quoted phrase is in-world FIA record language.)
-  src: framework § FIA records
-
 #### voyages/voyage-005.html (player site, outside prime)
 
 - **[fix]** Ryeback is a giff
@@ -2135,7 +2146,7 @@ run decide, fix, drop, add.
   src: .github/workflows/deploy.yml
 
 - **[later]** Leftover UI calls from the migration notes
-  Still open in FIXES-DEMO-MIGRATION.md: the FIA bearing strip, merging the survey chart, the navigation-records clip at 1024px, the clickable blurb overlay, and missing links on voyage briefings 001, 003 and 004. Keep any of these, or drop them with the notes.
+  Still open in FIXES-DEMO-MIGRATION.md: merging the survey chart, the navigation-records clip at 1024px, the clickable blurb overlay, and missing links on voyage briefings 001, 003 and 004. Keep any of these, or drop them with the notes.
   src: notes/FIXES-DEMO-MIGRATION.md, notes/RESTRUCTURE-NOTES.md
 
 - **[later]** Crew Notes, now that search has shipped
@@ -2151,18 +2162,9 @@ run decide, fix, drop, add.
 
 Fixes to player-facing pages, including the Fleet Intelligence Archive (`restricted/`). These pages hold only what the crew could know; corrections must keep that boundary.
 
-### restricted/wm-002.html
+### spelljammer-nexus/
 
-- **[fix]** The Bellwether Crow did not come home
-  The archive has the Crow limping home by way of Strake. Canon: most of the crew did not return; Joffrey and a few survivors were let go. Rewrite the entry so the Crow is lost with most hands, in the archive's clipped voice, with nothing the crew couldn't know.
-  src: inbox/chat-early-planning.md § Campaign Planning; memory canon (Bellwether Crow)
+- **[add]** The Fleet's organisation, as a Nexus record
+  The Fleet's organisation is not classified; cadets know who runs it. Write it as a player Spelljammer Nexus record (distribution section 10), from factions/fleet.html § Structure and ranks and the STAGING Fleet entry: a handful of sector branches, each overseeing a cluster of systems; the Caelestis Sector's two parts, the Corps and the Academy; the reporting chain from Driftwarden to station commander to sector command to a council of admirals; rank shown by gem or pin; and the Fleet's mercantile work. Only what a cadet would be taught.
+  src: Korey, 2026-10-28 (FIA rulings, 12; SA-001 dropped)
 
-### restricted/sa-002.html
-
-### restricted/sa-005.html
-
-- **[drop]** The out-of-sequence SJN-2417 entry *(answered)*
-  Nothing to change. sa-005 carries no SJN-2417 entry: its memorial lists SJN-2401 to SJN-2408 in sequence, each name redacted, with the cartographer at SJN-2405 (line 419). The out-of-sequence entry was removed when Strake and Cairn swapped roles and Tarroway became alive on Strake. The remaining sa-005 item (why Tarroway's name is withheld) lives in the New pages section under restricted/sa-005.html.
-  Touches: nothing.
-  src: inbox/chat-early-planning.md § Campaign Planning
-  answered: restricted/sa-005.html lines 415–422 (checked 2026-10-25); inbox/chat-early-planning.md § New campaign idea development, Superseded ("sa-005 lists SJN-2401 to 2408 with no 2417")

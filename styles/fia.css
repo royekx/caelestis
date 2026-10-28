@@ -1,0 +1,758 @@
+/* ════════════════════════════════════════════════════════════════
+   fia.css — the Fleet Intelligence Archive (restricted/)
+   ----------------------------------------------------------------
+   One sheet for the FIA's own chrome: the FIA bar, the register
+   (files.html), archive search (search.html) and the case records.
+   The gate (index.html) and disintegration.html keep their own
+   inline styles. FIA pages load no player or DM sheet or script.
+   ════════════════════════════════════════════════════════════════ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 115%; overflow-x: clip; background: #030208; }
+body {
+  background: #030208;
+  font-family: 'Crimson Pro', Georgia, serif;
+  color: #c9a96e;
+  min-height: 100vh;
+  padding: 0 0 5rem;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(1px 1px at 18% 22%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 80% 15%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 92% 70%, rgba(255,255,255,0.25) 0%, transparent 100%),
+    radial-gradient(2px 2px at 5% 60%, rgba(255,255,255,0.1) 0%, transparent 100%),
+    radial-gradient(1px 1px at 50% 90%, rgba(255,255,255,0.2) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page {
+  max-width: calc(760px + 3rem);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.fia-files .page { max-width: calc(760px + 3rem); }
+
+/* ── FIA bar ── */
+.fia-bar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 1.6rem;
+  padding: 0.85rem 1.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(201,153,58,0.15);
+  background: rgba(10,7,3,0.85);
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.fia-bar-name {
+  color: rgba(201,153,58,0.75);
+  letter-spacing: 0.22em;
+  margin-right: auto;
+}
+.fia-bar a {
+  color: rgba(201,153,58,0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.fia-bar a:hover,
+.fia-bar a[aria-current="page"] { color: #c9a96e; }
+.fia-bar a[aria-current="page"] { border-bottom: 1px solid rgba(201,153,58,0.45); }
+
+/* ── Record prev/next ── */
+.entry-nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+.entry-nav-bottom { margin-top: 2rem; margin-bottom: 0; }
+.nav-prev, .nav-next {
+  font-family: 'Cinzel', serif;
+  font-size: 0.766rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(201,153,58,0.4);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s;
+}
+.nav-prev:hover, .nav-next:hover { color: #c9a96e; }
+.nav-prev.disabled, .nav-next.disabled { opacity: 0.2; pointer-events: none; }
+.nav-next { justify-content: flex-end; }
+.nav-center {
+  font-family: 'Cinzel', serif;
+  font-size: 0.719rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(201,153,58,0.5);
+  text-decoration: none;
+  border: 1px solid rgba(201,153,58,0.2);
+  padding: 0.3rem 0.9rem;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.nav-center:hover { border-color: rgba(201,153,58,0.5); color: #c9a96e; }
+
+/* ── Parchment record ── */
+.doc-paper {
+  background: #f0ead8;
+  color: #1a1208;
+  padding: 3.5rem 4rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(201,153,58,0.4),
+    0 0 0 5px rgba(0,0,0,0.35),
+    0 8px 70px rgba(0,0,0,0.8),
+    inset 0 0 100px rgba(180,150,90,0.06);
+}
+.doc-paper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(26,18,8,0.08) 100%);
+  pointer-events: none;
+}
+.doc-paper::after {
+  content: 'CLASSIFIED';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-38deg);
+  font-family: 'Cinzel', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: rgba(160,20,20,0.07);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.doc-header {
+  text-align: center;
+  padding-bottom: 1.4rem;
+  margin-bottom: 1.4rem;
+  border-bottom: 2px solid #8a0000;
+  position: relative;
+}
+.doc-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.doc-seal {
+  display: block;
+  width: 48px;
+  height: 48px;
+  color: rgba(26,18,8,0.4);
+  flex-shrink: 0;
+  /* The FIA seal: an eight-pointed star in a double ring, one SVG shared
+     with the gate (restricted/index.html) and used as a mask. */
+  background-color: currentColor;
+  -webkit-mask: url('../assets/fleet-device.svg') center / contain no-repeat;
+  mask: url('../assets/fleet-device.svg') center / contain no-repeat;
+}
+.doc-header-text { flex: 1; min-width: 0; text-align: center; padding: 0 1rem; }
+.doc-classification-stamp {
+  font-family: 'Cinzel', serif;
+  font-size: 0.696rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #8a0000;
+  border: 1.5px solid #8a0000;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+  align-self: flex-start;
+}
+.doc-institution {
+  font-family: 'Cinzel', serif;
+  font-size: 0.766rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(26,18,8,0.5);
+  margin-bottom: 0.2rem;
+}
+.doc-institution + .doc-case { margin-top: 0.6rem; }
+.doc-division {
+  font-family: 'Cinzel', serif;
+  font-size: 0.719rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(26,18,8,0.4);
+  margin-bottom: 0.8rem;
+}
+.doc-case {
+  font-family: 'Cinzel', serif;
+  font-size: 0.899rem;
+  letter-spacing: 0.1em;
+  color: rgba(26,18,8,0.5);
+  margin-bottom: 0.3rem;
+}
+.doc-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1a1208;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+}
+.doc-meta-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25rem 2rem;
+  margin-top: 0.9rem;
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  background: rgba(26,18,8,0.04);
+  border: 1px solid rgba(26,18,8,0.08);
+}
+.doc-meta-item { font-size: 0.92rem; color: rgba(26,18,8,0.55); min-width: 0; }
+.doc-meta-item strong { color: rgba(26,18,8,0.7); font-weight: 600; }
+.doc-meta-wide { grid-column: 1 / -1; }
+
+/* Inter-sector exchange: banner and the originating sector's redaction */
+.exchange-banner {
+  border: 1px dashed rgba(26,18,8,0.35);
+  background: rgba(26,18,8,0.05);
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: rgba(26,18,8,0.75);
+  font-style: italic;
+}
+.exchange-banner-label {
+  font-family: 'Cinzel', serif;
+  font-style: normal;
+  font-size: 0.66rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(26,18,8,0.55);
+  margin-bottom: 0.25rem;
+}
+.rx-withheld {
+  font-family: 'Cinzel', serif;
+  font-style: normal;
+  font-size: 0.8em;
+  letter-spacing: 0.06em;
+  color: rgba(26,18,8,0.6);
+  white-space: normal;
+}
+
+.doc-section { margin-bottom: 1.4rem; position: relative; }
+.doc-section-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.696rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(26,18,8,0.45);
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(26,18,8,0.12);
+  padding-bottom: 0.25rem;
+}
+.doc-section p {
+  font-size: 1.04rem;
+  line-height: 1.75;
+  color: #1a1208;
+  margin-bottom: 0.5rem;
+}
+.doc-section p:last-child { margin-bottom: 0; }
+.doc-section em { font-style: italic; color: rgba(26,18,8,0.7); }
+.doc-section strong { font-weight: 600; }
+
+/* Redaction */
+.rx {
+  display: inline-block;
+  background: #1a1208;
+  color: #1a1208;
+  min-width: 50px;
+  border-radius: 1px;
+  padding: 0 3px 1px;
+  vertical-align: middle;
+  user-select: none;
+  line-height: 1.4;
+}
+.rx-sm  { min-width: 30px; }
+.rx-md  { min-width: 70px; }
+.rx-lg  { min-width: 90px; }
+.rx-xl  { min-width: 130px; }
+
+.doc-quote {
+  border-left: 2px solid rgba(26,18,8,0.2);
+  padding: 0.4rem 0 0.4rem 1rem;
+  margin: 0.5rem 0;
+  font-style: italic;
+  color: rgba(26,18,8,0.8);
+  font-size: 0.99rem;
+  line-height: 1.7;
+}
+
+.doc-footer {
+  margin-top: 1.5rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(26,18,8,0.12);
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Cinzel', serif;
+  font-size: 0.61rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(26,18,8,0.3);
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.handling-note {
+  background: rgba(139,0,0,0.06);
+  border: 1px solid rgba(139,0,0,0.25);
+  border-left: 3px solid rgba(139,0,0,0.5);
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: rgba(26,18,8,0.7);
+  font-style: italic;
+}
+.handling-note strong { color: #8a0000; font-style: normal; font-weight: 600; }
+
+
+/* Record tables */
+.world-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.8rem 0;
+  font-size: 0.963rem;
+}
+.world-table th {
+  font-family: 'Cinzel', serif;
+  font-size: 0.708rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(26,18,8,0.5);
+  text-align: left;
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1.5px solid rgba(26,18,8,0.2);
+  border-top: 1px solid rgba(26,18,8,0.12);
+}
+.world-table td {
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid rgba(26,18,8,0.07);
+  color: #1a1208;
+  vertical-align: top;
+}
+.world-table td { padding: 0.45rem 0.5rem; font-size: 0.963rem; }
+.world-table tr:last-child td { border-bottom: none; }
+.pri-high {
+  font-family: 'Cinzel', serif;
+  font-size: 0.835rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8a0000;
+}
+.pri-med {
+  font-family: 'Cinzel', serif;
+  font-size: 0.835rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(26,18,8,0.4);
+}
+.pri-high, .pri-med { font-size: 0.812rem; }
+.pri-med { color: rgba(26,18,8,0.45); }
+.registry-table { margin-top: 0.6rem; }
+.registry-table .col-cycle { width: 9%; }
+.registry-table .col-system { width: 38%; }
+.registry-table .col-status { width: 14%; }
+.world-table td.table-note {
+  font-style: italic;
+  color: rgba(26,18,8,0.45);
+  font-size: 0.86rem;
+}
+.world-table td.table-note.is-centered { text-align: center; padding: 0.7rem; }
+
+/* Record-specific blocks */
+.doc-section p.ledger-line {
+  text-align: center;
+  padding: 0.7rem 0;
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+}
+.memorial-roll {
+  font-family: 'Cinzel', serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  line-height: 2.1;
+  padding: 0.6rem 0;
+  color: rgba(26,18,8,0.85);
+}
+.doc-section p.memorial-note {
+  font-size: 0.86rem;
+  color: rgba(26,18,8,0.55);
+  font-style: italic;
+}
+.sigil-plate {
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0.8rem;
+  border: 1px solid rgba(26,18,8,0.12);
+}
+.sigil-drawing { display: block; margin: 0 auto 0.4rem; }
+.sigil-caption {
+  font-family: 'Cinzel', serif;
+  font-size: 0.54rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(26,18,8,0.4);
+  margin-top: 0.3rem;
+}
+
+/* ── Register (files.html) ── */
+.archive-header {
+  text-align: center;
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(201,153,58,0.15);
+}
+.archive-institution {
+  font-family: 'Cinzel', serif;
+  font-size: 0.719rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(201,153,58,0.4);
+  margin-bottom: 0.25rem;
+}
+.archive-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #c9a96e;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.3rem;
+}
+.archive-sub {
+  font-size: 0.963rem;
+  color: rgba(201,153,58,0.4);
+  font-style: italic;
+}
+.class-banner {
+  font-family: 'Cinzel', serif;
+  font-size: 0.719rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(180,40,40,0.7);
+  border: 1px solid rgba(140,30,30,0.3);
+  padding: 0.4rem 1rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  background: rgba(140,30,30,0.04);
+}
+.holdings-note {
+  border: 1px solid rgba(201,153,58,0.18);
+  border-left: 3px solid rgba(201,153,58,0.45);
+  background: rgba(40,30,10,0.3);
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 1.8rem;
+}
+.holdings-note-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(201,153,58,0.55);
+  margin-bottom: 0.4rem;
+}
+.holdings-note p {
+  font-size: 0.9rem;
+  color: rgba(201,153,58,0.6);
+  font-style: italic;
+  line-height: 1.7;
+}
+.file-list { display: flex; flex-direction: column; gap: 0.5rem; }
+.file-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.file-group-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.708rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(201,153,58,0.4);
+  padding: 1.2rem 0 0.4rem;
+  border-bottom: 1px solid rgba(201,153,58,0.1);
+  margin-bottom: 0.3rem;
+}
+.file-row {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr) auto;
+  align-items: stretch;
+  gap: 0;
+  text-decoration: none;
+  border: 1px solid rgba(201,153,58,0.12);
+  background: rgba(201,153,58,0.015);
+  transition: border-color 0.25s, background 0.25s;
+  overflow: hidden;
+}
+.file-row.has-cols {
+  grid-template-columns: 100px minmax(0, 1fr) 6.5rem 6rem auto;
+  grid-template-areas: "tab body origin cycle class";
+}
+.file-row.has-cols .file-tab { grid-area: tab; }
+.file-row.has-cols .file-body { grid-area: body; }
+.file-row.has-cols .file-origin { grid-area: origin; }
+.file-row.has-cols .file-cycle { grid-area: cycle; }
+.file-row.has-cols .file-class { grid-area: class; }
+.file-row:hover { border-color: rgba(201,153,58,0.35); background: rgba(201,153,58,0.04); }
+.file-tab {
+  background: rgba(201,153,58,0.04);
+  border-right: 1px solid rgba(201,153,58,0.12);
+  padding: 1.1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background 0.25s;
+}
+.file-row:hover .file-tab { background: rgba(201,153,58,0.07); }
+.file-case-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.61rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(201,153,58,0.4);
+  margin-bottom: 0.2rem;
+}
+.file-case-num {
+  font-family: 'Cinzel', serif;
+  font-size: 0.99rem;
+  color: #c9a96e;
+  white-space: nowrap;
+}
+.file-body { padding: 1.1rem 1.3rem; min-width: 0; }
+.file-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.99rem;
+  color: #c9a96e;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+.file-meta {
+  font-size: 0.888rem;
+  color: rgba(201,153,58,0.4);
+  font-style: italic;
+}
+.file-origin, .file-cycle {
+  padding: 1.1rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: rgba(201,153,58,0.65);
+  border-left: 1px solid rgba(201,153,58,0.08);
+}
+.file-col-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.56rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(201,153,58,0.35);
+  margin-bottom: 0.15rem;
+}
+.file-class {
+  padding: 1.1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.class-badge {
+  font-family: 'Cinzel', serif;
+  font-size: 0.61rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid rgba(180,40,40,0.35);
+  color: rgba(180,40,40,0.7);
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+.class-badge.gold { border-color: rgba(201,153,58,0.5); color: rgba(220,180,100,0.9); }
+.class-badge.above { border-color: rgba(180,40,40,0.6); color: rgba(200,50,50,0.9); }
+.file-legend {
+  margin-top: 1.2rem;
+  font-size: 0.86rem;
+  color: rgba(201,153,58,0.4);
+  font-style: italic;
+}
+.archive-note {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 0.888rem;
+  color: rgba(201,153,58,0.25);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* ── Archive search (search.html) ── */
+.search-head { text-align: center; margin-bottom: 2rem; }
+.search-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.719rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(201,153,58,0.4);
+  margin-bottom: 0.25rem;
+}
+.search-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #c9a96e;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.3rem;
+}
+.search-sub { font-size: 0.963rem; color: rgba(201,153,58,0.4); font-style: italic; }
+.search-console {
+  border: 1px solid rgba(201,153,58,0.15);
+  background: rgba(201,153,58,0.02);
+  padding: 1.3rem 1.3rem 1.1rem;
+}
+.search-field { position: relative; display: flex; align-items: center; }
+.search-field > svg {
+  position: absolute; left: 0.85rem; width: 16px; height: 16px;
+  stroke: rgba(201,153,58,0.5); pointer-events: none;
+}
+.search-input {
+  width: 100%;
+  background: rgba(20,15,5,0.6);
+  border: 1px solid rgba(201,153,58,0.3);
+  color: rgba(201,153,58,0.95);
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.05rem;
+  padding: 0.7rem 0.9rem 0.7rem 2.5rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.search-input::placeholder { color: rgba(201,153,58,0.3); font-style: italic; }
+.search-input:focus { border-color: rgba(201,153,58,0.65); }
+.search-facets { margin-top: 0.9rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.search-facet { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 0.5rem; }
+.search-facet-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(201,153,58,0.4);
+  min-width: 3.6rem;
+}
+.search-pill {
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid rgba(201,153,58,0.22);
+  color: rgba(201,153,58,0.55);
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+}
+.search-pill:hover { border-color: rgba(201,153,58,0.5); color: #c9a96e; }
+.search-pill[aria-pressed="true"] {
+  border-color: rgba(201,153,58,0.7);
+  color: #e2c48e;
+  background: rgba(201,153,58,0.08);
+}
+.scope-hint { margin-top: 0.8rem; font-size: 0.9rem; color: rgba(201,153,58,0.35); font-style: italic; }
+.results-meta {
+  margin: 1.8rem 0 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(201,153,58,0.12);
+}
+.results-count {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(201,153,58,0.5);
+}
+.results-term { color: #c9a96e; }
+.result {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 1.1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(201,153,58,0.12);
+  border-left: 2px solid rgba(201,153,58,0.35);
+  background: rgba(201,153,58,0.015);
+  transition: border-color 0.2s, background 0.2s;
+}
+.result:hover { border-color: rgba(201,153,58,0.35); background: rgba(201,153,58,0.04); }
+.result-head {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+  gap: 0.2rem 1rem; margin-bottom: 0.35rem;
+}
+.result-title { font-family: 'Cinzel', serif; font-size: 0.95rem; color: #c9a96e; min-width: 0; }
+.result-path {
+  font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: rgba(201,153,58,0.4); white-space: nowrap;
+}
+.result-snippet { font-size: 0.98rem; color: rgba(201,153,58,0.6); line-height: 1.55; }
+.result-snippet mark { background: rgba(201,153,58,0.14); color: #e2c48e; padding: 0 2px; }
+.search-state {
+  text-align: center; padding: 2.2rem 1rem; color: rgba(201,153,58,0.4);
+  font-style: italic; font-size: 1rem;
+}
+
+/* ── Phone ── */
+@media (max-width: 640px) {
+  .page { padding: 0 1rem; }
+  .fia-bar { padding: 0.75rem 1rem; gap: 0.35rem 1.1rem; }
+  .fia-bar-name { flex-basis: 100%; }
+  .doc-paper { padding: 2rem 1.25rem; }
+  .doc-paper::after { font-size: 2.6rem; }
+  .doc-header-top { flex-wrap: wrap; justify-content: center; gap: 0.6rem; }
+  .doc-header-text { order: 3; flex-basis: 100%; padding: 0; }
+  .doc-meta-row { grid-template-columns: 1fr; gap: 0.2rem; }
+  .world-table { display: block; overflow-x: auto; }
+  .entry-nav { grid-template-columns: 1fr 1fr; }
+  .entry-nav .nav-center { grid-column: 1 / -1; grid-row: 1; }
+  .file-row.has-cols {
+    grid-template-columns: 76px minmax(0, 1fr) auto;
+    grid-template-areas:
+      "tab body class"
+      "tab origin class"
+      "tab cycle class";
+  }
+  .file-tab { padding: 0.9rem 0.4rem; }
+  .file-case-num { font-size: 0.9rem; }
+  .file-body { padding: 0.9rem 0.9rem 0.5rem; }
+  .file-class { padding: 0.9rem 0.6rem; }
+  .file-origin, .file-cycle {
+    border-left: none;
+    padding: 0 0.9rem 0.2rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.45rem;
+    align-items: baseline;
+    font-size: 0.86rem;
+  }
+  .file-cycle { padding-bottom: 0.9rem; }
+}

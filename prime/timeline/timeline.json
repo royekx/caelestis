@@ -270,6 +270,15 @@
     {
       "lane": "crew",
       "status": "past",
+      "cert": "working",
+      "title": "The Fleet is founded at Caelestis",
+      "desc": "About Cycle 1240, some 250 cycles ago. Caelestis proposes a combined fleet, the separate institutions come together around it, and the Fleet adopts the Order's count of cycles. Placed by the working default of one cycle to about sixteen Toril months.",
+      "t": -330,
+      "tier": 1
+    },
+    {
+      "lane": "crew",
+      "status": "past",
       "cert": "canon",
       "title": "A star falls on Casey's world",
       "desc": "Polly goes to it, is changed, and leaves to find where it came from: Astra Virex.",
@@ -290,7 +299,7 @@
       "status": "past",
       "cert": "canon",
       "title": "Bellwether Crow ambushed",
-      "desc": "About a year before now, near Cairn Station. Vocath's crew boards for A.T.L.A.S.'s sister. N'ghathrod takes Joffrey and lets him go; most of the crew doesn't return. Clint Dashforest takes the device, leaves the ship to draw the boarders off, and goes through a color pool on purpose. The Crow makes Strake under damage.",
+      "desc": "About a year before now, near Cairn Station. Vocath's crew boards for the second Distinction piece. Clint Dashforest takes the device and leaves in one of the boarders' craft, drawing some of them off, and goes through a color pool on purpose; the crew fends off the rest. N'ghathrod's colony, shadowing the ambush as Vocath's backup under the arrangement Zhauveth had already made, boards second and takes Joffrey in the device's place, then lets him go with the few survivors; most of the crew doesn't return. The Crow makes Strake under damage.",
       "t": -1.1,
       "tier": 1
     },
@@ -443,7 +452,7 @@
       "status": "projected",
       "cert": "canon",
       "title": "Hearts opened and linked",
-      "desc": "The Passage gains a circle per linked world. Linked worlds bleed into each other.",
+      "desc": "Linked worlds bleed into each other.",
       "t": 1.5,
       "end": 4,
       "tier": 1
@@ -451,10 +460,19 @@
     {
       "lane": "order",
       "status": "past",
+      "cert": "working",
+      "title": "The Order of the All-Father is founded",
+      "desc": "Cycle 0. The Order begins counting the turns of Erevos, from the arm it sees lit, so that its Watchers, posted across the galaxy, have one clock to compare their reports. Placed by the working default of one cycle to about sixteen Toril months.",
+      "t": -1990,
+      "tier": 1
+    },
+    {
+      "lane": "order",
+      "status": "past",
       "cert": "canon",
       "title": "The Order of the All-Father",
-      "desc": "Guards Ortholiths, believing the taken are inside them. Watchers posted one per region.",
-      "t": -30000,
+      "desc": "Guards Ortholiths, believing the taken are inside them. Watchers posted one per region. Its founding is Cycle 0 of the count it keeps.",
+      "t": -1990,
       "end": 0,
       "tier": 2
     },

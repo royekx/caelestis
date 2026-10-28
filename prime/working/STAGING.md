@@ -13,11 +13,11 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Factions
 
-### Caelestis, the Driftwardens and the United Intergalactic Fleet (factions/fleet.html, factions/index.html, cosmology/, locations/, glossary/, restricted/)
-- The United Intergalactic Fleet, which everyone calls the Fleet, is made of a handful of sector branches, four or five. Each branch oversees one sector of the Erevos Galaxy, a cluster of several systems, and keeps sites in its systems, near them, or between them. The branches work together and together make the Fleet.
+### Caelestis, the Driftwardens and the United Intergalactic Fleet (factions/fleet.html, factions/index.html, cosmology/, locations/, glossary/, spelljammer-nexus/)
+- The United Intergalactic Fleet, which everyone calls the Fleet, is made of four sector branches, one along each of the Erevos Galaxy's four spiral arms. Caelestis founded it, and the Caelestis Sector lies on Realmspace's arm. Each branch oversees one sector of the Erevos Galaxy, a cluster of several systems, and keeps sites in its systems, near them, or between them. The branches work together and together make the Fleet.
 - Caelestis is one of these sectors: the Caelestis Sector, which includes the system where Toril lies. It has two parts. The Caelestis Corps is the sector's branch of the Fleet and oversees the sector. The Caelestis Spelljammer Academy trains cadets to become Driftwardens; there are only a handful of spelljammer academies in the galaxy.
 - Everyone in the Fleet's service is a Driftwarden, assigned to a sector. Driftwardens hold ranks, from the newest graduate up through officers and commanders. A Driftwarden reports to the commander of their station; station commanders answer to the sector's command, and the sectors to the Fleet.
-- Each sector has stations at its systems or between them, each with a commander, and smaller satellites and waystations around them. Strake Station and its sister satellites belong to the Caelestis Sector. Fleet operations for the Caelestis Sector run out of Ondrel Anchorage on the moon Ostrel, a neutral port away from Toril. Captain Haymond Rolt works out of Ondrel, and the crew takes its Arc 2 contracts from there.
+- Each sector has stations at its systems or between them, each with a commander, and smaller satellites and waystations around them. Strake Station, a waystation with a small Fleet presence watching Realmspace's edge, and its sister satellites belong to the Caelestis Sector. Fleet operations for the Caelestis Sector run out of Ondrel Anchorage on the moon Ostrel, a neutral port away from Toril. Captain Haymond Rolt works out of Ondrel, and the crew takes its Arc 2 contracts from there.
 - The Bridge is the Caelestis Sector's name for its command. The sectors began as separate institutions and came together over time, so each keeps its own ways and its own names; another sector's command is called something else.
 - Above the sectors sits a council of the Fleet's highest officers, a few admirals, not a single leader. (DM touchstone: One Piece's Marine admirals.)
 - The sectors differ in character. Some are disciplined and naval; others take any work for the coin. The Fleet is not the law of the cosmos. It keeps a self-imposed order, and much of its work is mercantile because it holds the easiest routes: shipments, protection, carrying passengers, and transport for the Watchers.
@@ -25,7 +25,7 @@ when a ruling changes; delete it once the page carries it. See
 - The sectors share information, but not all of it. Each keeps a good deal to itself, the way rival departments do. The Fleet Intelligence Archive is the Caelestis Sector's archive: it holds what Caelestis knows of its own sector and only some of what the others share.
 - The Order's Watchers are more organized than the sector branches. They keep to the Erevos Galaxy, as the Fleet does, more densely in some places than others.
 - The stations differ with the local ecology of their place: what drifts there, what lives there, what threatens it. Their crews are drawn from the sector that keeps them. Readings from the stations pass between the sectors; this is how a disturbance seen at one edge reaches another.
-- done: factions/fleet.html and the glossary lines for sector, the Caelestis Sector, Corps, Academy, the Bridge and the FIA (section 2); locations/ondrel-anchorage.html, locations/strake-station.html and locations/caelestis.html (section 3). Still waiting: the FIA's account of the Fleet on restricted/.
+- done: factions/fleet.html and the glossary lines for sector, the Caelestis Sector, Corps, Academy, the Bridge and the FIA (section 2); locations/ondrel-anchorage.html, locations/strake-station.html and locations/caelestis.html (section 3). Still waiting: the Fleet's organisation as a player Spelljammer Nexus record (section 10; BACKLOG # Player pages).
 
 ## Dossiers
 
@@ -41,10 +41,6 @@ when a ruling changes; delete it once the page carries it. See
 - N'ghathrod's long life comes from his taken. A portion of every taken person is tithed upward to him, the way a hive feeds its center, and it extends his life. The more he takes, the longer he lasts.
 - done: the capture, the experiments, the seventh piece and the escape are on artifacts/rod-of-seven-parts.html and vessels/thessalars-craft.html (section 4). dossiers/nghathrod.html carries them (section 5); the timeline carries the capture, the copies, the escape, the exile, the taking of Vth'oramu and the push for hearts (section 8). rules/ still needs them.
 - If N'ghathrod's true body dies, the taken do not die. Part of him lives on in each of them. His lieutenants are closest to him; each rung down the colony is further away. Given enough time, one of them could grow toward becoming another N'ghathrod. The taken lose a part of themselves when he dies.
-
-### Tarroway (restricted/; done on dossiers/tarroway.html, section 5)
-- M. Tarroway is a cartographer on Strake Station. His readings were the first hint that an unknown vessel or structure was disturbing the satellites at the edge of the system.
-- His name turns up here and there, mainly in the Fleet Intelligence Archive. Nothing about him is public. (DM: a thread for the players to piece together, not a figure they meet.)
 
 ## Artifacts and vessels
 

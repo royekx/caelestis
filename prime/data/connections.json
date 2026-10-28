@@ -122,7 +122,7 @@
           "src": "STAGING, Cosmology"
         },
         {
-          "t": "A Zenith is a world at its peak of Distinction.",
+          "t": "A Zenith is the moment a world reaches its peak of Distinction; it happens, a Monolith answers, and it does not continue.",
           "src": "STAGING, Cosmology"
         },
         {
@@ -1294,6 +1294,18 @@
       "summary": "An interworld order that preserves Continuity and reads the Core's pressure as the All-Father.",
       "facts": [
         {
+          "t": "The Order is made up of several callings; the Watchers are its field calling, and specialists come in for particular work. Dejexic leads the Watchers.",
+          "src": "factions/order.html"
+        },
+        {
+          "t": "The Order made Galactic time cycles and calls the count the Beacon, after the All-Father's beacon at the core: a beacon (cycle) is one full turn of Erevos, its four sparks lighting the arms in order, divided into kindlings and embers; Cycle 0 is the Order's founding and the current cycle is 1491.",
+          "src": "factions/order.html#cycles"
+        },
+        {
+          "t": "Over the past few centuries the arms have lit slightly early and the beacons have grown slightly shorter, and Watchers record them as irregular.",
+          "src": "factions/order.html#cycles"
+        },
+        {
           "t": "The Order takes the Core Monolith's pressure as a charge to maintain things as they are, though some within it doubt that reading.",
           "src": "STAGING round 2"
         },
@@ -1306,7 +1318,7 @@
           "src": "STAGING round 11"
         },
         {
-          "t": "Its device is a white tower with a blue-violet eye, and its members' magic shows as violet light and cosmic dust.",
+          "t": "Its device is a white spire crowned with a blue-violet light, and its members' magic shows as violet light and cosmic dust.",
           "src": "factions/order.html"
         },
         {
@@ -1629,10 +1641,22 @@
       "label": "The United Intergalactic Fleet",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "Four or five sector branches across the Erevos Galaxy, under a council of admirals. Caelestis is one of its sectors.",
+      "summary": "Four sector branches, one on each arm of the Erevos Galaxy, under a council of admirals. Caelestis founded it and is one of its sectors.",
       "facts": [
         {
-          "t": "The Fleet is made of four or five sector branches, each overseeing a cluster of systems in the Erevos Galaxy.",
+          "t": "The Fleet is made of four sector branches, one along each of the Erevos Galaxy's four spiral arms, each overseeing a cluster of systems.",
+          "src": "factions/fleet.html"
+        },
+        {
+          "t": "Caelestis founded the Fleet: it proposed a combined fleet, and the Caelestis Sector lies on Realmspace's arm.",
+          "src": "factions/fleet.html"
+        },
+        {
+          "t": "The Fleet dates by Galactic time cycles (GTC), the Order's count, adopted when the Fleet formed about 250 cycles ago; the current cycle is 1491.",
+          "src": "factions/fleet.html#gtc"
+        },
+        {
+          "t": "Not every spelljammer belongs to the Fleet; independents, other factions and smaller mercantile houses, Vocath's crew among them, work outside it.",
           "src": "factions/fleet.html"
         },
         {
@@ -1683,14 +1707,14 @@
       ]
     },
     {
-      "id": "atlas-sister",
-      "label": "A.T.L.A.S.'s sister",
+      "id": "second-distinction-piece",
+      "label": "Second Distinction piece",
       "type": "item",
       "scope": "fonains",
       "summary": "A second Distinction housing; it seems to find magic items and truly finds Reach artifacts.",
       "facts": [
         {
-          "t": "A.T.L.A.S.'s sister houses another Distinction piece and was held by Caelestis as a device.",
+          "t": "The second Distinction piece is housed in a device, which Caelestis held.",
           "src": "STAGING round 10"
         },
         {
@@ -1929,7 +1953,7 @@
           "src": "dossiers/nghathrod.html"
         },
         {
-          "t": "His field mark is the Passage, gaining a circle for every linked world.",
+          "t": "His colony's mark is the eye in a wheel: ordinary spokes above, illithid tentacles below.",
           "src": "dossiers/nghathrod.html"
         },
         {
@@ -2000,6 +2024,10 @@
       "scope": "caelestis",
       "summary": "N'ghathrod's illithid colony, the Seekers of a New Home.",
       "facts": [
+        {
+          "t": "The colony's mark is an eye inside a wheel: the top half has ordinary spokes and the bottom half turns into illithid tentacles; the wheel is navigation, finding a way home.",
+          "src": "factions/vthorama.html"
+        },
         {
           "t": "The colony is a chapter of the Seekers, the Seekers of a New Home, believing it answers to an elder brain.",
           "src": "STAGING round 3"
@@ -2394,7 +2422,7 @@
           "src": "dossiers/vocath.html"
         },
         {
-          "t": "His mark is an eye in a wheel.",
+          "t": "His mark is a private house mark: a balance scale, coins against cargo.",
           "src": "STAGING round 8"
         },
         {
@@ -2427,7 +2455,7 @@
           "src": "locations/cairn-station.html"
         },
         {
-          "t": "Vocath's crew ambushed the Bellwether Crow for A.T.L.A.S.'s sister.",
+          "t": "Vocath's crew ambushed the Bellwether Crow for the second Distinction piece.",
           "src": "STAGING round 4"
         },
         {
@@ -2445,14 +2473,14 @@
       ]
     },
     {
-      "id": "eye-in-a-wheel",
-      "label": "The eye in a wheel",
+      "id": "vocath-house-mark",
+      "label": "Vocath's house mark",
       "type": "concept",
       "scope": "caelestis",
       "summary": "Vocath's private house mark.",
       "facts": [
         {
-          "t": "The eye in a wheel is Vocath's own merchant mark, so the Fleet registry has no entry for it.",
+          "t": "Vocath's house mark is a balance scale with coins on one pan and cargo on the other; it is his own merchant mark, so the Fleet registry has no entry for it.",
           "src": "factions/vocath-operation.html"
         },
         {
@@ -2506,7 +2534,7 @@
       "summary": "A decorated Fleet officer, taken by the colony; its only operative on Caelestis.",
       "facts": [
         {
-          "t": "Joffrey was taken in the second boarding of the Bellwether Crow by one of N'ghathrod's tadpoles.",
+          "t": "Joffrey was taken in the second boarding of the Bellwether Crow, the colony's backup to Vocath's ambush, by one of N'ghathrod's tadpoles.",
           "src": "dossiers/joffrey.html"
         },
         {
@@ -2569,18 +2597,18 @@
       "label": "Bellwether Crow",
       "type": "vessel",
       "scope": "caelestis",
-      "summary": "The Fleet relief vessel ambushed on the Cairn approach a year ago.",
+      "summary": "A Caelestis light corvette, the relief vessel ambushed on the Cairn approach a year ago.",
       "facts": [
         {
           "t": "Bellwether Crow was sent to learn why Cairn Station had stopped answering.",
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "It was carrying A.T.L.A.S.'s sister when Vocath's crew ambushed it.",
+          "t": "It was carrying the second Distinction piece when Vocath's crew ambushed it.",
           "src": "STAGING round 4"
         },
         {
-          "t": "The second boarding killed the senior deck officers and most of the complement.",
+          "t": "A second boarding, by a different party, killed the senior deck officers and most of the complement.",
           "src": "vessels/bellwether-crow.html"
         },
         {
@@ -2605,16 +2633,20 @@
           "src": "timeline/timeline.json"
         },
         {
-          "t": "Clint took the sister artifact and left the ship to draw the boarders off.",
-          "src": "STAGING round 4"
+          "t": "Clint took the second Distinction piece and left the ship in one of the boarders' craft to draw them off.",
+          "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "Joffrey was taken in the second action.",
+          "t": "Some of the boarders went after him and some stayed, and enough went that the crew fended off the rest.",
+          "src": "vessels/bellwether-crow.html"
+        },
+        {
+          "t": "The second action was N'ghathrod's colony, shadowing Vocath's ambush as a backup; with the device gone, it took Joffrey instead.",
           "src": "opposition/vthorama.html"
         },
         {
-          "t": "In the Fleet, a crew member who leaves the ship to fight for it and does not come back has gone overboard.",
-          "src": "STAGING round 4"
+          "t": "In the Fleet, a crew member who leaves the ship, willingly or not, and does not come back has gone overboard.",
+          "src": "factions/fleet.html"
         }
       ]
     },
@@ -2626,7 +2658,7 @@
       "summary": "A Caelestis crewmate of the Bellwether Crow who went through a color pool and landed on Fonains.",
       "facts": [
         {
-          "t": "Clint took A.T.L.A.S.'s sister and left the Crow to draw the boarders off.",
+          "t": "Clint took the second Distinction piece and left the Crow in one of the boarders' craft to draw them off.",
           "src": "dossiers/clint.html"
         },
         {
@@ -2739,7 +2771,7 @@
       "label": "Strake Station",
       "type": "place",
       "scope": "caelestis",
-      "summary": "The Caelestis Sector's station at the edge of Realmspace, the last open deck before the closed run to Cairn.",
+      "summary": "The Caelestis Sector's waystation at the edge of Realmspace, with a small Fleet presence watching the edge; the last open deck before the closed run to Cairn.",
       "facts": [
         {
           "t": "Strake Station and its sister satellites are Caelestis's to keep.",
@@ -2969,7 +3001,7 @@
       "summary": "Headmaster of Caelestis Academy, in a long feud with Vocath.",
       "facts": [
         {
-          "t": "Mirt knows the eye in a wheel is Vocath's mark and cannot prove it in a filing.",
+          "t": "Mirt knows the house mark is Vocath's and cannot prove it in a filing.",
           "src": "dossiers/mirt.html"
         },
         {
@@ -3285,7 +3317,7 @@
       "summary": "A crate bearing Vocath's mark.",
       "facts": [
         {
-          "t": "The crates at the Sky Dock carry Vocath's mark, the eye in a wheel.",
+          "t": "The crates at the Sky Dock carry Vocath's house mark.",
           "src": "STAGING round 8"
         }
       ]
@@ -3298,7 +3330,7 @@
       "summary": "The spent rod from the simulation chamber.",
       "facts": [
         {
-          "t": "The rod carries Vocath's eye-in-a-wheel house mark.",
+          "t": "The rod carries Vocath's house mark.",
           "src": "factions/vocath-operation.html"
         }
       ]
@@ -4154,18 +4186,18 @@
       "label": "Aethris",
       "type": "place",
       "scope": "caelestis",
-      "summary": "Sol's Tymora-devoted homeworld, mid-Zenith.",
+      "summary": "Sol's Tymora-devoted homeworld, past its Zenith.",
       "facts": [
         {
           "t": "Aethris sorts its people into the Fortuned and the Misfortuned.",
           "src": "locations/aethris.html"
         },
         {
-          "t": "Aethris's Zenith is unfinished because the Fortuned have not completed their ritual.",
+          "t": "Aethris's Zenith came in Cycle 1490; what stands incomplete is the Fortuned's ritual.",
           "src": "STAGING round 8"
         },
         {
-          "t": "Vecna is pushing the Zenith toward completion from outside, and nobody on Aethris knows it.",
+          "t": "Vecna is pushing the Fortuned's ritual toward completion from outside, and nobody on Aethris knows it.",
           "src": "locations/aethris.html"
         }
       ]
@@ -4192,7 +4224,7 @@
       "label": "The Fortuned",
       "type": "faction",
       "scope": "caelestis",
-      "summary": "A sect grown from a temple order of Tymora on Aethris, mostly clerics, whose unfinished ritual began Aethris's Zenith.",
+      "summary": "A sect grown from a temple order of Tymora on Aethris, mostly clerics, whose ritual brought Aethris to its Zenith and stands incomplete.",
       "facts": [
         {
           "t": "The Fortuned want Sol back as a component of their ritual and do not care about him as a person.",
@@ -5556,7 +5588,7 @@
       "src": "STAGING round 10"
     },
     {
-      "s": "atlas-sister",
+      "s": "second-distinction-piece",
       "t": "distinction-fragment",
       "rel": "houses a piece of",
       "src": "STAGING round 10"
@@ -5569,8 +5601,8 @@
     },
     {
       "s": "atlas",
-      "t": "atlas-sister",
-      "rel": "sister of",
+      "t": "second-distinction-piece",
+      "rel": "shares the Distinction fragment with",
       "src": "STAGING round 10"
     },
     {
@@ -5738,7 +5770,7 @@
     {
       "s": "vecna",
       "t": "aethris",
-      "rel": "pushes the Zenith of",
+      "rel": "pushes the Fortuned's ritual on",
       "src": "locations/aethris.html"
     },
     {
@@ -6799,7 +6831,7 @@
     },
     {
       "s": "NPC-Mw6kT2vn",
-      "t": "eye-in-a-wheel",
+      "t": "vocath-house-mark",
       "rel": "uses as his mark",
       "src": "STAGING round 8"
     },
@@ -6889,7 +6921,7 @@
     },
     {
       "s": "NPC-Wc9fT2nJ",
-      "t": "eye-in-a-wheel",
+      "t": "vocath-house-mark",
       "rel": "recognizes",
       "src": "dossiers/mirt.html"
     },
@@ -6913,25 +6945,25 @@
     },
     {
       "s": "ITM-Xn7kW2vm",
-      "t": "eye-in-a-wheel",
+      "t": "vocath-house-mark",
       "rel": "bears",
       "src": "STAGING round 8"
     },
     {
       "s": "ITM-Wp4kT8vn",
-      "t": "eye-in-a-wheel",
+      "t": "vocath-house-mark",
       "rel": "bears",
       "src": "factions/vocath-operation.html"
     },
     {
       "s": "ITM-5nB7wK9x",
-      "t": "eye-in-a-wheel",
+      "t": "vocath-house-mark",
       "rel": "bears the sigil of",
       "src": "campaign/plot-hooks.html"
     },
     {
       "s": "LOC-9mB4kW7n",
-      "t": "eye-in-a-wheel",
+      "t": "vocath-house-mark",
       "rel": "bears the sigil of",
       "src": "campaign/plot-hooks.html"
     },
@@ -6985,7 +7017,7 @@
     },
     {
       "s": "clint",
-      "t": "atlas-sister",
+      "t": "second-distinction-piece",
       "rel": "carried",
       "src": "dossiers/clint.html"
     },
@@ -7021,7 +7053,7 @@
     },
     {
       "s": "bellwether-crow",
-      "t": "atlas-sister",
+      "t": "second-distinction-piece",
       "rel": "carried",
       "src": "STAGING round 4"
     },
