@@ -167,8 +167,8 @@ body::before {
   /* The FIA seal: an eight-pointed star in a double ring, one SVG shared
      with the gate (restricted/index.html) and used as a mask. */
   background-color: currentColor;
-  -webkit-mask: url('../assets/fia-seal.svg') center / contain no-repeat;
-  mask: url('../assets/fia-seal.svg') center / contain no-repeat;
+  -webkit-mask: url('../assets/fleet-device.svg') center / contain no-repeat;
+  mask: url('../assets/fleet-device.svg') center / contain no-repeat;
 }
 .doc-header-text { flex: 1; min-width: 0; text-align: center; padding: 0 1rem; }
 .doc-classification-stamp {
