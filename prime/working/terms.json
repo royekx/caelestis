@@ -3,7 +3,8 @@
   "finished": [
     "prime/cosmology",
     "prime/glossary",
-    "prime/factions"
+    "prime/factions",
+    "prime/locations"
   ],
   "retired": [
     {
@@ -110,6 +111,47 @@
     {
       "pattern": "\\bkesh\\b",
       "use": "the taken (Vth'ghathu)",
+      "i": true
+    },
+    {
+      "pattern": "\\bTetherbreak sector\\b",
+      "use": "the perimeter watch at Realmspace's edge (locations/realmspace.html#perimeter-watch); the Tetherbreak is the bearing, and a sector is a Fleet branch"
+    },
+    {
+      "pattern": "\\bUntethered\\b",
+      "use": "the place's galaxy and system (every place lies in a galaxy)"
+    },
+    {
+      "pattern": "\\bthe Flow\\b",
+      "use": "the Astral Sea, which fills the dark between systems and between galaxies"
+    },
+    {
+      "pattern": "Cosmos Chart",
+      "use": "the Chart"
+    },
+    {
+      "pattern": "\\bchild hearts?\\b",
+      "use": "heart; every heart pulls toward the First Heart",
+      "i": true
+    },
+    {
+      "pattern": "Astra(&rsquo;|'|\u2019)s network",
+      "use": "Astra Virex's reach",
+      "i": true
+    },
+    {
+      "pattern": "\\b(beholder|rival) hives\\b",
+      "use": "ten solitary beholder rulers under the Sovereign Eye",
+      "i": true
+    },
+    {
+      "pattern": "\\beight domains\\b",
+      "use": "ten domains, one ruler each",
+      "i": true
+    },
+    {
+      "pattern": "Sigil event",
+      "use": "Vecna ascended on Oerth",
       "i": true
     },
     {
