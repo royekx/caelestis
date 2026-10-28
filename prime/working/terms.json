@@ -524,6 +524,14 @@
       "new": "locations/hcatha.html"
     },
     {
+      "old": "realms/fonains.html",
+      "new": "locations/fonains.html"
+    },
+    {
+      "old": "realms/",
+      "new": "locations/ (folder retired)"
+    },
+    {
       "old": "campaign/ascension/",
       "new": "opposition/vecna.html"
     },

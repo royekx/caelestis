@@ -30,9 +30,9 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 9 | 12 | 14 | 0 | 3 |
-| Locations | locations/ (Fonains stays in its own section) | 21 | 22 | 0 | 0 | 1 |
-| Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
+| Cosmology | cosmology/, glossary/, chart/ | 9 | 12 | 15 | 0 | 3 |
+| Locations | locations/ (Fonains stays in its own section) | 21 | 24 | 0 | 0 | 1 |
+| Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 3 | 9 | 9 | 0 | 17 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 9 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 1 |
@@ -40,11 +40,11 @@ staging once Korey has read and accepted them.
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
-| New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 4 | 2 | 24 |
+| New pages | 12 proposed pages, the hub, notes/ | 3 | 17 | 4 | 2 | 24 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** |  | **98** | **130** | **78** | **4** | **83** |
+| **Total** |  | **101** | **136** | **69** | **3** | **71** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -65,7 +65,7 @@ Each settles items on several pages at once. Rule these first.
 11. ~~**Where Oerth lies.**~~ *Ruled: GAL-01, in Greyspace; Oerth is the eye's retina (STAGING).*
 12. **Runes 17–19 as Anchors.** Fixed places Tumak goes to is settled; what they grant is open. Crew (Tumak), rules.
 13. ~~**Can a taken person be released?**~~ *Ruled: the taken outlive N'ghathrod, each keeping part of him.*
-14. **Fonains–Caelestis offset.** The timeline puts Fonains Session 28 about five months before Caelestis now; older notes say Caelestis is "around" Session 28. Timeline, Fonains doc, campaign.
+14. ~~**Fonains–Caelestis offset.**~~ *Ruled: Caelestis's present is level with Fonains Session 28, two to three months after the Monolith broke (STAGING § Timing; locations/fonains.html DM notes).*
 15. ~~**Ostekk-6 as sole survivor.**~~ *Ruled: the only active survivor; Ostekk-2 is inert and can be healed.*
 16. **The tracker and session ingest.** Keep the repo JSON record and in-chat runbook, or move to an alternative. See the Automation and tracker section.
 17. **Dossier tab names and "Open" subsections.** *Tab names answered: the four tabs stand. Open: whether "Open" subsections may stay in DM notes.*
@@ -303,6 +303,10 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-25 (round 4)
   done: factions/fleet.html and factions/vocath-operation.html (section 2); locations/strake-station.html, the register and the chart (section 3); every dossier and the dossier register (section 5). restricted/ still needs it.
 
+- **[fix]** "The only Monolith" on Fonains
+  cosmology/#corrupted-monoliths says Fonains's is "the only Monolith ever to carry Tharizdun's crystal and the only one recorded as destroyed", and the chart's Fonains note says "the only one ever to carry Tharizdun's crystal". PAGE-GUIDE bars comparative absolutes on setting pages. Describe the Monolith instead: it formed corrupted, with her crystal replicated into it, and Lola's Boys broke it. locations/fonains.html already does.
+  src: section 8, 2026-10-28
+
 ### chart/index.html
 
 - **[fix]** Fonains note: Vecna knew
@@ -323,7 +327,7 @@ Order under each page: decide, fix, drop, add.
 
 # Locations
 
-Items for `locations/` pages. Fonains stays at `realms/fonains.html` until section 8; its items are in the Fonains section.
+Items for `locations/` pages. Fonains's items are in the Fonains section.
 Order under each page: decide, fix, drop, add.
 done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what was written is gone from this section, and each page's Still to decide carries the open items below.
 
@@ -348,6 +352,14 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
 - **[later]** The register's Standing filter
   The register sorts places by Been there, Next and Not yet. That is the crew's progress, campaign state on a setting page. Decide whether the register keeps the filter, or moves it to a campaign view.
   src: Locations review, 2026-10-28
+
+- **[later]** Register order: grouped by system or strict A–Z
+  The register lists places grouped by system (PAGE-GUIDE § Registers: "places, grouped by system"), and the same section asks every register for strict A–Z order, with prev/next bars following it. The Locations chain follows the grouped order: Krynnspace → Krynn → Fonains → Aethris. Settle which rule the register follows; if A–Z, reorder the rows and rewire every prev/next bar in locations/.
+  src: section 8 (C14), 2026-10-28
+
+- **[later]** Fonains sub-places as pages
+  Orerius, the Barrier Peaks and the Trentara Forest are subsections of `locations/fonains.html`, the way H'Catha holds the Spindle. Give one its own page when its section outgrows the Fonains page.
+  src: section 8 plan § 2
 
 ### locations/realmspace.html
 
@@ -546,59 +558,34 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
 
 # Fonains
 
-Items for `realms/fonains.html`, the Fonains Canon Reference (a Claude doc, "Fonains doc"), and the Fonains lane of `timeline/timeline.json`.
+Items for `locations/fonains.html`, `factions/cretez.html`, `dossiers/vanifer.html`, the Fonains Canon Reference (a Claude doc outside the repo, "Fonains doc"), and the Fonains lane of `timeline/timeline.json`. Since section 8 the wiki is the canon home for Fonains; the doc follows it.
 Order under each heading: decide, fix, drop, add.
 
-### realms/fonains.html
+### locations/fonains.html
 
-- **[fix]** Fonains's world designation *(answered)*
-  Fonains is W-21, and Aethris is W-08. Caelestis and the FIA share one numbering. The early registry's "W-02 Fonains" and "W-01 Aethris" were renumbered (W-02 to W-021, then W-21; W-008 to W-08), and W-02 is H'Catha. The realm pages and the chart stand. Correct any FIA file or note that still shows W-02 or W-021 for Fonains, or W-01 or W-008 for Aethris; drop "Draft:" from the chart note "Draft: Fonains matches FIA W-21".
-  src: chat-early-planning § New campaign idea development; realms/fonains.html; chart/index.html
-  answered: inbox/chat-early-planning.md § Superseded (turn 75: "W-02 renumbered W-021"; the gappy registry W-008 Aethris, W-021 Fonains); inbox/chat-organizing-framework.md § Designations (Settled: W-02 H'Catha, W-08 Aethris, W-21 Fonains; one shared scheme with the FIA)
+- **[decide]** Tinderstrike: kept since the sealing, or given 350 years ago
+  STAGING § The Princes says the fire genasi have guarded the fire key since the sealing, about twelve thousand years ago, and also that Asmodeus gave Tinderstrike to the few who resisted Imix about three and a half centuries ago (so do the foundry notes and factions/deities.html). The page writes both. Options: the genasi lost the key and Asmodeus returned it; the genasi kept a different charge until Asmodeus gave them the weapon; one of the two is wrong. Touches locations/fonains.html, factions/cretez.html, factions/deities.html#asmodeus, the timeline.
+  src: section 8 (C16), 2026-10-28
 
-- **[fix]** The dragons
-  Page says "Most of Fonains's dragons left for Krynn to fight Tiamat." Change to: "Most of Fonains's dragons left to face Takhisis (Tiamat), and few remain. They have not yet reached Krynn; their own politics hold them. Fonains remembers their leaving as a great hunt."
-  src: session-rulings; timeline "The dragons leave"
+- **[decide]** Zonlilimer or Zonlilemer; Baratol or Baratal
+  Korey's map spells the dojo town Zonlilemer and the isthmus town Baratal; the timeline and the page spell them Zonlilimer and Baratol. Pick one spelling each and apply it to the page, the timeline and connections.json.
+  src: assets/maps/fonains-full.webp; timeline.json; section 8
 
-- **[fix]** Vecna knew
-  Page says "Vecna encouraged the world's Zenith; Tharizdun corrupted the Monolith that answered it, without Vecna's knowledge". Replace: "Vecna nudged the world's Zenith knowing it would be ridden. He uses Tharizdun as a contingency, a battering ram; it is use, not alliance. Lola's Boys destroyed the corrupted Monolith, which forced Vecna to change his plan."
-  src: session-rulings; tharizdun § Vecna and Tharizdun
+- **[decide]** Randy the Red and Mandu the Red
+  The timeline has Randy the Red hire Lola's Boys (S1) and pay them (S16), and Mandu the Red send them into the storm (S28). One patron or two, and which spelling.
+  src: timeline.json; section 8
 
-- **[fix]** The Vanished
-  Page's Open asks "whether the released population went anywhere the crew can reach." Replace with the fact: the Vanished were sent through the corrupted Monolith to Tharizdun's prison, which has no address in any known cosmology. Remove the open line.
-  src: memory-canon (campaign-canon, the Vanished); tharizdun § Corrupted Monoliths
+- **[later]** Place the unmapped places
+  Korey's map does not show Gransby, the Misty Vale, the Jaded Forest, Drainsville, Lola's Place, the Eternal Flame temple, the Feathergale Spire or the valley of the Monastery of the Distressed Body. Place each when it matters, from the map or a ruling; the page gives what the sources say and no position. ("Jurek" in the section 8 brief has no source in the repo.)
+  src: section 8, 2026-10-28
 
-- **[fix]** Present condition
-  Page says "The world's current population and condition are unestablished" and the Standing row says "Current condition unestablished." Replace: "Fonains's present is Lola's Boys Session 28, two to three months after the Monolith broke. Yan-C-Bin, the air Prince, is manifest, the air shard has opened onto the Feathergale Spire, and the Day of Chaos approaches."
-  src: session-rulings (timing); timeline "The Day of Chaos", "The storm at the Monolith ruins"
+- **[later]** Where the Monolith rose
+  The Darkest Day has the Monolith erupt "over the cemetery"; STAGING puts its remains in the Trentara Forest. Where the cemetery lies, and whether it is in the forest, is not set. The page states both.
+  src: timeline.json "The Darkest Day"; STAGING § Fonains geography; section 8 (C12)
 
-- **[drop]** Boogie's half-logbook
-  Page says "the half-logbook Boogie carries was pulled from a simulation of a real wreck — meaning the original is somewhere in Caelestis". True, and unrelated to Fonains. Move it to Boogie's page and remove it here.
-  src: memory-canon (campaign-canon, Boogie)
-
-- **[add]** Three tables of canon
-  Add to the intro: "Fonains is one of three campaign worlds, with Caelestis and Krynn. Its canon comes first from Lola's Boys, the first campaign, which everything builds from, and also from one-shots where players played both heroes and villains. Every one-shot ties in."
-  src: session-rulings; memory-canon (Fonains canon 2026-10-25)
-
-- **[add]** Sources (DM note)
-  DM voice: Lola's Boys began as a run of the Lost Laboratory of Kwalish with Temple of Moloch and grew into a campaign built on Princes of the Apocalypse, Lost Laboratory of Kwalish and Temple of Moloch. Transcripts are canon; the modules fix spelling and context only.
-  src: session-rulings; module-sweep-fonains § intro; memory-canon (three campaign worlds)
-
-- **[add]** Timing against Caelestis
-  "Caelestis's present is a few months after the Fonains Monolith broke, about level with Lola's Boys Session 28. Clint Dashforest reached Fonains before the Monolith appeared and was there when it did. Boogie's shard came from the broken Monolith through Vocath's line, before Voyage 001."
-  src: session-rulings (timing)
-
-- **[add]** How the Monolith formed
-  "The Fonains Monolith formed corrupted. Five cultists held the ritual: four channelled the Princes of Elemental Evil, and the fifth held pieces of a Tharizdun black crystal. The ritual was the Zenith, the Monolith answered it, and the crystal replicated into the Monolith as it formed."
-  src: memory-canon (open-decisions, Locked 2026-10-25); tharizdun § How the Fonains Monolith formed
-
-- **[add]** The Day of Chaos
-  "The Day of Chaos is the day the four Princes of Elemental Evil enter Fonains together and break the barriers between the planes, so Tharizdun can leave her prison. It is still ahead of Fonains's present."
-  src: session-rulings; tharizdun § The Day of Chaos
-
-- **[add]** Thessalar's planar craft
-  One line here, detail in the Fonains doc and `dossiers/thessalar.html`: "Thessalar's planar craft fell on Fonains about 500 years ago. Lola's Boys, sent back by the Accordance, took its control and defense gems, and without them it came down. The crash freed N'ghathrod, a prisoner aboard. The craft's main body raised the Barrier Peaks and holds the Mad Mage megadungeon; Daoine Gloine is a piece that broke off; the Thessalkraken landed separately in the sea."
-  src: session-rulings; timeline "The craft falls; N'ghathrod escapes"
+- **[later]** The Trintar refugees
+  The timeline's S16 has Granny take in "the Trintar refugees". Whether Trintar is Trentara (refugees from the Monolith's ruins) or another place is not set; the page keeps the table's word.
+  src: timeline.json S16; section 8 (C11)
 
 - **[add]** The voice that reached Vanifer
   "A Seeker chapter was the voice that reached Vanifer. It traded her the lost meaning of the Alpha and the secret in the Cre'Tez blood."
@@ -606,7 +593,7 @@ Order under each heading: decide, fix, drop, add.
 
 ### Fonains doc
 
-The doc is current on names, the four keys, the cults, the party table, Krynn and the dragons, and Takhisis being Tiamat. Items below cover what is stale or missing.
+The doc is current on names, the four keys, the cults, the party table, Krynn and the dragons, and Takhisis being Tiamat. Items below cover what is stale or missing. done (section 8): the world-level items (timing, the divine gate as polarity, Vecna as a god, the keys and cults, the Haunted Keeps, Bastian, the neothelid hook, the time device, the table spellings) are on locations/fonains.html; the doc itself still needs a refresh (the later under # New pages).
 
 - **[fix]** The Cre'Tez father is Cenvinzo
   Ruled (STAGING round 8). Use "Cenvinzo" everywhere; the foundry notes' "Vinbenzo" (§ Reveal) is a slip. Write:
@@ -656,44 +643,6 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
   "Vanifer posted the Blooming Glass bounty under the name Finerva, for the eldest Cre'Tez brother. The Pedra Ardente, the gem Clint's crew recovered there, went to her."
   src: Korey, 2026-10-25 (round 8); dossiers/clint.html; timeline.json; memory-canon (Fonains canon 2026-10-25)
   done: dossiers/clint.html (section 5); the timeline and the Fonains doc still need it (terms.json now flags "Pedra Ardante" and "Fernerva").
-
-- **[fix]** "Where the campaign stands"
-  Says "roughly two months after the Monolith broke". Change to "two to three months after the Monolith broke".
-  src: session-rulings (timing)
-
-- **[fix]** Monolith table, last row
-  The row "About two months later" changes to "Two to three months later".
-  src: session-rulings (timing)
-
-- **[fix]** "Links into Caelestis": the divine gate
-  Remove the "Divine gate" bullet. Replace it with polarity: "Gods cannot walk on worlds or reach the center because a god and a world's heart carry the same charge and push apart. The push grows as a god comes closer until it is unbearable. It is why the Accordance acts through champions and Vecna appeared in The Darkest Day as a projection." Full rule in `prime/working/divine-rules.md`.
-  src: session-rulings; divine-rules § Polarity
-
-- **[fix]** The Day of Chaos hook
-  Says "Caelestis runs about a year before Fonains's current point." Replace: "Caelestis's present is level with Fonains Session 28, two to three months after the Monolith broke."
-  src: session-rulings (timing)
-
-- **[fix]** Vecna as a god
-  Says "Nobody in Fonains treats him as a god." True of Lola's Boys play so far. Add that elsewhere Vecna is an open god, worshipped across spheres under many names, and his followers are the Seekers; a Seeker chapter was the voice that reached Vanifer.
-  src: session-rulings; memory-canon (Vecna direction 2026-10-24)
-
-- **[add]** Keys and cults: check for these details
-  The keys and cults sections are current; add these if they are not already there.
-  Keys: the four weapons are Tinderstrike (dagger), Ironfang (war pick), Windvane (spear; a windvane staff at the table) and Drown (trident), each summoned with "With this key, I call forth…". A Prince's portal closes when its weapon is thrown or struck into it, and the weapon is destroyed (a ready answer for spending the keys). At the table the keys carry a family history (the Accordance; Imix sealed by the Cre'Tez line), and Vizeran DeVir's role is unused.
-  Cults: the air cult's sign is an inverted triangle with three lines; the earth cult's sign is a triangle.
-  src: module-sweep-fonains § Princes of the Apocalypse, § Homebrew divergences; memory-canon (Fonains canon 2026-10-25)
-
-- **[add]** The four Haunted Keeps
-  Feathergale Spire, Rivergard Keep, Sacred Stone Monastery and Scarlet Moon Hall.
-  src: module-sweep-fonains § Princes of the Apocalypse
-
-- **[add]** Bastian Thermandar
-  At the table he is a blond human (a fire genasi in the module).
-  src: module-sweep-fonains § Homebrew divergences
-
-- **[add]** Neothelid hook
-  Tadpoles left in the pool under the Barrier Peaks may grow into neothelids.
-  src: chat § Fonains background
 
 - **[add]** Benedetta
   "Benedetta was Cenvinzo's wife and the mother of the younger Cre'Tez siblings. She fell ill at Rihiri's birth, about twelve years ago, and died two years later, about ten years ago."
@@ -758,14 +707,6 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
 - **[add]** Kwalish's teleportation fields
   "Kwalish's teleportation-field devices work only in the monastery and in Daoine Gloine. The six recall bracelets are this technology."
   src: module-sweep-fonains § Lost Laboratory of Kwalish
-
-- **[add]** The time device and the year 425
-  "The table's time device is a mini Texel with four bauble slots, attuned with blood. The Temple of Moloch visit is set in the year 425, about 500 years before the present."
-  src: module-sweep-fonains § Temple of Moloch; timeline "Lola's Boys in the year 425"
-
-- **[add]** Table spellings kept (style note)
-  Lola's Boys keeps three table forms over the modules: Seldra (module: Seodra), "speckled amber" (module: speckled gold), "the plane of gems" (module: Quasi-elemental Plane of Mineral).
-  src: module-sweep-fonains § Spellings kept from the table; session-rulings
 
 ### Timeline (Fonains lane)
 
@@ -1852,6 +1793,12 @@ against the complete Tumak sweep (all 336 turns).
   src: TGB § Tumak/Player tracker
 
 # New pages
+
+### Fonains Canon Reference (Claude doc, outside the repo)
+
+- **[later]** Refresh or retire the Fonains doc
+  Since section 8 the wiki carries Fonains: locations/fonains.html, factions/cretez.html, dossiers/vanifer.html and vessels/thessalars-craft.html. The doc's open fix and add items (# Fonains § Fonains doc) were written against it. In a chat session, either refresh the doc from the wiki pages or retire it and point to them.
+  src: section 8 (Q1), 2026-10-28
 
 ### NEW: Player holochart
 

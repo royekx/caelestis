@@ -11,72 +11,53 @@ when a ruling changes; delete it once the page carries it. See
 ### Naming: Rykoe and Erevos (cosmology/, glossary/, chart/, survey; done everywhere)
 - Rykoe is the centre of the cosmos: the remains of the Reach world, the black hole beneath the Core Monolith and the Radiant Citadel, around which the five galaxies lie, and which opens only when all five cores wake. The First Heart lies beneath Rykoe. Erevos is the black hole at the core of GAL-01, and the galaxy is named for it: the Erevos Galaxy. (Korey 2026-10-28: the two names swapped. done: every page, the survey, the chart, connections.json; "Rykoe Galaxy" is a retired term.)
 
-## Locations
-
-### Krynn and the dragons (realms/fonains.html; done on locations/krynn.html, section 3)
-- The dragons that left Fonains and most worlds set out to face Takhisis and have not reached Krynn. Their own politics hold them.
-- An aspect of Bahamut is trapped by Takhisis in the ruined temple of Paladine on Krynn. It speaks through Eldree's egg on Fonains.
-
 ## Fonains
 
-### Fonains and the planar craft (realms/fonains, Fonains doc)
+### Fonains and the planar craft (locations/fonains.html, Fonains doc)
 - N'ghathrod was already a prisoner aboard Thessalar's craft. Lola's Boys, sent back in time by the Accordance, took its control and defense gems; without them it fell, and in the fall he escaped. Their year 425 is the year of the crash, about five hundred years before now.
 - The craft is a megadungeon (the Mad Mage dungeon). Daoine Gloine is a broken-off piece of it. The Thessalkraken landed separately in the sea and is the Drowned God's kraken.
 - The craft's gems formed where Olhydra and Ogrémoch collided. They are not Reach residue.
 - Benedetta fell ill at Rihiri's birth, from Vanifer's slow siphoning for the Bloodstone, and died two years later.
-- done: the craft, its gems, the fall, Daoine Gloine and the Thessalkraken are on vessels/thessalars-craft.html (section 4). dossiers/thessalar.html carries them (section 5). realms/fonains.html and the Fonains doc still need them.
+- done: vessels/thessalars-craft.html (section 4); dossiers/thessalar.html (section 5); locations/fonains.html (section 8). The Benedetta line still needs factions/cretez.html.
 
-### Tharizdun (working/tharizdun.md, realms/fonains.html, Fonains doc)
-- The Day of Chaos is when the Princes of Elemental Evil break the barriers so Tharizdun can leave her prison.
-- The purple slit-pupiled eye the party saw in the year 425 is the Elder Elemental Eye, Tharizdun.
-- Fonains's Monolith is the only one ever to carry Tharizdun's crystal, and the only one recorded as destroyed.
-- Tharizdun wanted nothing from Thessalar but chaos. Her influence reached Thessalar through the craft's gems, born where Olhydra and Ogrémoch collided, and it drove him slowly mad.
-- One of Tharizdun's temples was aboard Thessalar's planar craft. When the craft broke apart in its fall, the piece holding the temple came down somewhere other than the Barrier Peaks.
-- The crash, about five hundred years ago, is how the Elder Elemental Eye reached Fonains. Tharizdun's influence spread across the world from the fallen temple. It is why the Eye watched Lola's Boys in the year 425, and why the craft's gems carried her touch.
-- Shothragot, her avatar, was bound to that temple. Its true vestige may still be there, and Giorge may be trying to reach it.
-- Lola's Boys, by taking the gems in the year 425, brought down the craft. In doing so they freed N'ghathrod and landed Tharizdun's foothold on their own world.
-- The planar craft was a vast floating city of many tiers. Where it came from is unknown.
-- done: the temple aboard, the gems, the crash and the Eye's arrival are on vessels/thessalars-craft.html (section 4); Tharizdun and Thessalar are on dossiers/thessalar.html (section 5).
-
-### The Princes (timeline, realms/fonains.html, Fonains doc, the Cre'Tez line)
+### The Princes (timeline, locations/fonains.html, Fonains doc, the Cre'Tez line)
 - Long ago, about twelve thousand years before now, the Princes of Elemental Evil rose on Fonains. The six gods of the Accordance stepped in, helped forge the four weapons, and sealed the Princes away with the weapons as their keys.
 - The fire genasi who became the Cre'Tez have guarded the fire key since that sealing.
 - About three and a half centuries ago a sect of the fire genasi tried to summon Imix. Asmodeus gave the few who resisted Tinderstrike to seal him again, and bound the key to their blood; the price was that Imix be forgotten. Over the generations since, the line has turned tiefling.
 - About five hundred years ago Thessalar's planar craft crashed on Fonains, and Tharizdun's influence arrived with the temple aboard it. It spread slowly through the world and into new cults. Those cults raised the four prophets, and in recent years everything has begun to move.
+- done: locations/fonains.html (section 8). The Cre'Tez line still needs factions/cretez.html, and the timeline its Princes lane.
 
-### The elder brain (realms/fonains.html, timeline, dossiers/nghathrod.html)
+### The elder brain (locations/fonains.html, timeline, dossiers/nghathrod.html)
 - N'ghathrod's elder brain was separated from him in the crash. He believed it dead, or could not reach it. It lay trapped beneath the Barrier Peaks for about five hundred years, possibly growing a colony of its own, until Lola's Boys broke it in Session 27. It was buried in the collapse, but it teleported out and escaped.
-- done: dossiers/nghathrod.html (section 5); realms/fonains.html and the timeline still need it.
+- done: dossiers/nghathrod.html (section 5); locations/fonains.html (section 8). The timeline still needs it.
 
-### The Fonains shards (realms/fonains.html, artifacts/fonains-shard.html, timeline)
+### The Fonains shards (locations/fonains.html, artifacts/fonains-shard.html, timeline)
 - When the Monolith broke, four great shards fell, and many smaller shards came from them. Three hundred and thirty-three of the small shards are black. The rest took colors close to their elemental affinities.
-- done: artifacts/fonains-shard.html (section 4). realms/fonains.html and the timeline still need it.
+- done: artifacts/fonains-shard.html (section 4); locations/fonains.html (section 8). The timeline still needs it.
 
-### The Cre'Tez (Fonains doc, realms/fonains.html)
+### The Cre'Tez (factions/cretez.html, dossiers/vanifer.html, Fonains doc)
 - The Cre'Tez father is Cenvinzo. He is barely alive, a shadow of himself, held captive somewhere and bound to Vanifer.
 - Rihiri and Dharra are sisters.
 - Finerva is Vanifer under another name. The Pedra Ardente is a gem.
 - Kevulan first willed his birthright to Asmodus (his sibling, not the archdevil), then rescinded it and willed it to Xero.
 
-### Fonains geography (realms/fonains.html, Fonains doc; section 8)
+### Fonains geography (locations/fonains.html, Fonains doc; section 8)
 - T'Arionese is a region of Fonains. Orerius is in T'Arionese. The Cre'Tez estate is in Orerius, and it is the home of the Cre'Tez siblings (Xero, Lusion, Vanifer and the others). Clint works bounties out of Orerius, and Finerva (Vanifer) posted the Blooming Glass bounty there for the Cre'Tez.
 - The remains of the Fonains Monolith lie in the Trentara forest, in the north of the northern continent, between Nomnia and the Kingdom of Shaumala.
 - On Korey's map the Barrier Peaks lie in the south-west of the northern continent, below Gabuk and Selran, near the isthmus that runs down to T'Arionese. They are notable for Thessalar's crashed planar craft: its main body raised the peaks, and Thessalar is still inside (already on vessels/thessalars-craft.html and dossiers/thessalar.html; this line is for placing the peaks on the map).
-- Korey's Fonains map (his own) will be added in section 8 as the page's map; places on Fonains are placed from it.
-- done: dossiers/clint.html and connections.json carry Orerius (section 7 correction). realms/fonains.html, the Fonains doc and the timeline still need these lines.
+- Korey's Fonains map (his own) is the page's map (`assets/maps/fonains.webp`); places on Fonains are placed from it.
+- done: dossiers/clint.html and connections.json carry Orerius (section 7 correction); locations/fonains.html carries them and the map (section 8). Still waiting: Trentara and T'Arionese as nodes in connections.json.
 
 ## Timeline
 
-### Timing (timeline, campaign/, realms/fonains)
+### Timing (timeline, campaign/, locations/fonains.html)
 - Caelestis's present sits a few months after the Fonains Monolith broke, level with Fonains Session 28.
 - Session 28 is two to three months after the Monolith broke.
 - Krynn's present is level with Caelestis's.
 - Thessalar's planar craft fell about 500 years ago.
+- done: locations/fonains.html DM notes (section 8). The timeline still needs the shift.
 
 ## Factions
-
-### Asmodeus and the Accordance (Fonains doc; done on factions/deities.html, section 2)
-- done: the members, Nalsa, Asmodeus's history and every appearance are on factions/deities.html § The Accordance. The Fonains doc still needs them.
 
 ### Caelestis, the Driftwardens and the United Intergalactic Fleet (factions/fleet.html, factions/index.html, cosmology/, locations/, glossary/, restricted/)
 - The United Intergalactic Fleet, which everyone calls the Fleet, is made of a handful of sector branches, four or five. Each branch oversees one sector of the Erevos Galaxy, a cluster of several systems, and keeps sites in its systems, near them, or between them. The branches work together and together make the Fleet.
