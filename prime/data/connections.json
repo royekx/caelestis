@@ -856,11 +856,11 @@
         },
         {
           "t": "Fonains's Monolith is the only one ever to carry Tharizdun's crystal.",
-          "src": "factions/deities.html#tharizdun"
+          "src": "cosmology/#corrupted-monoliths"
         },
         {
           "t": "Tharizdun wanted nothing from Thessalar but chaos.",
-          "src": "factions/deities.html#tharizdun"
+          "src": "dossiers/thessalar.html"
         },
         {
           "t": "Her weakening of reality on Fonains serves Vecna's ends.",
@@ -877,11 +877,11 @@
       "facts": [
         {
           "t": "Shothragot was bound to Tharizdun's temple aboard Thessalar's planar craft.",
-          "src": "vessels/thessalars-craft.html#tharizduns-temple"
+          "src": "vessels/thessalars-craft.html"
         },
         {
           "t": "Its true vestige may still lie in that fallen temple.",
-          "src": "vessels/thessalars-craft.html#tharizduns-temple"
+          "src": "vessels/thessalars-craft.html"
         }
       ]
     },
@@ -4283,7 +4283,7 @@
       "facts": [
         {
           "t": "Fonains's Monolith is the only one recorded as destroyed.",
-          "src": "locations/fonains.html#monolith"
+          "src": "cosmology/#corrupted-monoliths"
         },
         {
           "t": "It formed corrupted, and Tharizdun's crystal replicated into it as it formed.",
@@ -4965,7 +4965,7 @@
         },
         {
           "t": "The piece holding Tharizdun's temple came down somewhere other than the Barrier Peaks.",
-          "src": "vessels/thessalars-craft.html#tharizduns-temple"
+          "src": "vessels/thessalars-craft.html"
         },
         {
           "t": "Kwalish's island, the Monastery of the Distressed Body, is a broken-off piece of the craft.",
@@ -5937,7 +5937,7 @@
       "s": "shothragot",
       "t": "thessalars-craft",
       "rel": "bound to the temple aboard",
-      "src": "vessels/thessalars-craft.html#tharizduns-temple"
+      "src": "vessels/thessalars-craft.html"
     },
     {
       "s": "giorge",

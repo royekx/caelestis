@@ -149,7 +149,7 @@ Order under each page: decide, fix, drop, add.
 ### cosmology/index.html
 
 - **[fix]** Tharizdun is she
-  Tharizdun is female. Pages and drafts that call her he/his/him: cosmology/index.html, realms/fonains.html, realms/index.html, dossiers/thessalar.html, crew/boogie.html, artifacts/fonains-shard.html, factions/academy-fleet.html, chart/index.html, working/tharizdun.md, and the Fonains Canon Reference doc. STAGING and the Connections layer are done.
+  Tharizdun is female. Pages and drafts that call her he/his/him: cosmology/index.html, locations/fonains.html, locations/index.html, dossiers/thessalar.html, crew/boogie.html, artifacts/fonains-shard.html, factions/academy-fleet.html, chart/index.html, working/tharizdun.md, and the Fonains Canon Reference doc. STAGING and the Connections layer are done.
   src: Korey, 2026-10-27
   done: cosmology and glossary (distribution section 1, 2026-10-27); factions (section 2); dossiers/thessalar.html (section 5); crew/boogie.html (section 7).
 
@@ -163,7 +163,7 @@ Order under each page: decide, fix, drop, add.
 
 - **[fix]** Retrofit the five Axioms across the wiki
   Ruled (STAGING, Cosmology § The Axioms): the Axioms are Consolidation, Expansion, Dissolution, Distinction and Determination, acting on energy that was always there. The old four map: Convergence → Consolidation (the Rod of Seven Parts is the Consolidation fragment, 7 pieces); Dissolution stays Dissolution, now the mixing of everything into sameness (the twins' fragment, 2); Boundary → Distinction (A.T.L.A.S., its sister and the third piece, 3); Transformation → Expansion (the 5-piece fragment). Determination's fragment is new: 11 pieces, none found. A Zenith is a world at its peak of Distinction, not "Convergence driving a system to maximum expression"; Monoliths are Continuity's response, and the strain from their rise is a byproduct of Vecna's work, not a weight on one Axiom. The Transformation–Boundary seam is cut. Every backlog item that quotes an old Axiom name reads under this mapping.
-  Pages: prime/cosmology (the Four Axioms, Continuity, the strain, the seam section to cut), prime/glossary, prime/chart, prime/artifacts/* (index, rod-of-seven-parts, runekeepers-fragment, transformation-fragment → expansion-fragment, containment-engine, fonains-shard), prime/campaign/* (index, ascension, spine, plot-hooks, what-if), prime/crew/index.html and tumak.html, prime/dossiers/nghathrod.html and the-runekeeper.html, prime/factions/* (academy-fleet, deities, runekeepers, vthorama), prime/realms/index.html and wayfinders-homeworld.html (concealment rides on the Dissolution fragment's cycle), prime/rules/index.html, timeline.json, working/vecna.md. Done with the distribution pass. STAGING, the survey and the Connections layer already use the five.
+  Pages: prime/cosmology (the Four Axioms, Continuity, the strain, the seam section to cut), prime/glossary, prime/chart, prime/artifacts/* (index, rod-of-seven-parts, runekeepers-fragment, transformation-fragment → expansion-fragment, containment-engine, fonains-shard), prime/campaign/* (index, ascension, spine, plot-hooks, what-if), prime/crew/index.html and tumak.html, prime/dossiers/nghathrod.html and the-runekeeper.html, prime/factions/* (academy-fleet, deities, runekeepers, vthorama), prime/locations/index.html and wayfinders-homeworld.html (concealment rides on the Dissolution fragment's cycle), prime/rules/index.html, timeline.json, working/vecna.md. Done with the distribution pass. STAGING, the survey and the Connections layer already use the five.
   src: Korey, 2026-10-26
   done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); opposition/vecna.html (pilot); prime/factions (section 2); prime/locations (section 3); prime/crew/tumak.html (section 7).
 
@@ -184,7 +184,7 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-26
 
 - **[fix]** Spheres become galaxies, everywhere
-  Ruled (STAGING, Cosmology): the cosmos is five galaxies around Rykoe; "sphere" as a region of space is retired, and SPH-0n becomes GAL-0n; Oerth moves to GAL-01. Pages: prime/cosmology, prime/chart (labels, the sphere layer, "the godless sphere"), prime/glossary, prime/realms/*, prime/factions/*, prime/campaign/*, timeline.json, working/divine-rules.md, the README naming rule, and the Fonains Canon Reference doc. Every backlog item below that quotes "sphere" reads as "galaxy". Done with the distribution pass. The survey, the Connections DM layer and STAGING already use galaxies.
+  Ruled (STAGING, Cosmology): the cosmos is five galaxies around Rykoe; "sphere" as a region of space is retired, and SPH-0n becomes GAL-0n; Oerth moves to GAL-01. Pages: prime/cosmology, prime/chart (labels, the sphere layer, "the godless sphere"), prime/glossary, prime/locations/*, prime/factions/*, prime/campaign/*, timeline.json, working/divine-rules.md, the README naming rule, and the Fonains Canon Reference doc. Every backlog item below that quotes "sphere" reads as "galaxy". Done with the distribution pass. The survey, the Connections DM layer and STAGING already use galaxies.
   src: Korey, 2026-10-26
   done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); prime/factions (section 2); prime/locations (section 3).
 
@@ -197,7 +197,7 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-26
 
 - **[fix]** Replace the W-, SYS- registers with the CSC scheme
-  Ruled (STAGING round 12): designations follow real astronomy; nothing has reached the players. Retire every W-0n and SYS-0n designation and replace it with a CSC number, a star-and-letter designation, or the body's proper name. Pages: prime/chart, prime/cosmology, prime/realms/* (realmspace, toril, hcatha, aethris, glyth, fonains, krynn, virenspace, sys04, tetherbreak, wayfinders-homeworld, ascension-world, caelestis, strake-station, cairn-station, meteor-hub, astral-sea), prime/campaign/index.html, prime/timeline/timeline.json, and restricted/ (fr-005, sa-002, wm-003, wm-006). Fonains's W-021 and Aethris's W-008 go with them. Do this with the distribution pass, and save the known systems (Realmspace, Virenspace, Aethris's system, Krynnspace, Glyth's) into the survey first so the new designations have one source.
+  Ruled (STAGING round 12): designations follow real astronomy; nothing has reached the players. Retire every W-0n and SYS-0n designation and replace it with a CSC number, a star-and-letter designation, or the body's proper name. Pages: prime/chart, prime/cosmology, prime/locations/* (realmspace, toril, hcatha, aethris, glyth, fonains, krynn, virenspace, sys04, tetherbreak, wayfinders-homeworld, ascension-world, caelestis, strake-station, cairn-station, meteor-hub, astral-sea), prime/campaign/index.html, prime/timeline/timeline.json, and restricted/ (fr-005, sa-002, wm-003, wm-006). Fonains's W-021 and Aethris's W-008 go with them. Do this with the distribution pass, and save the known systems (Realmspace, Virenspace, Aethris's system, Krynnspace, Glyth's) into the survey first so the new designations have one source.
   src: Korey, 2026-10-25 (round 12)
   done: prime/cosmology (distribution section 1, 2026-10-27); prime/locations and the chart's page links (section 3).
 
@@ -220,7 +220,7 @@ Order under each page: decide, fix, drop, add.
   - Glossary "Residue" ("split 2 / 3 / 5 / 7 by Axiom bias"): name the order, "Dissolution 2, Distinction 3, Expansion 5, Consolidation 7, Determination 11".
   - `artifacts/atlas.html` and the artifacts register: wherever A.T.L.A.S. points at "its one sibling" or "the only other Boundary piece in existence", it points toward its two siblings.
   - `artifacts/runekeepers-fragment.html` ("all three pieces"): "both pieces".
-  - The twins' Zenith text on `realms/wayfinders-homeworld.html`: the fragment's two pieces forming in both twins makes three poles for the first time.
+  - The twins' Zenith text on `locations/wayfinders-homeworld.html`: the fragment's two pieces forming in both twins makes three poles for the first time.
   In-world line for the table intro: "The Dissolution fragment lies in two pieces, the Transformation fragment in three, the Boundary fragment in five, and the Convergence fragment, the Rod of Seven Parts, in seven."
   src: memory-canon (campaign-canon, prime-number counts; the Zenith "three poles"); chat-cosmic-campaign-structure § Cosmology redesign
   answered: memory-canon (campaign-canon, prime-number counts, locked); inbox/chat-organizing-framework.md § Residue (Settled). The Boundary-2 order in chat-cosmic-campaign-structure appears only in Claude's rewritten page text; a check of that chat found no Korey statement making the change, so memory stands.
@@ -299,7 +299,7 @@ Order under each page: decide, fix, drop, add.
 
 - **[fix]** Trim Tarroway to a thread
   Keep M. Tarroway as Strake Station's cartographer whose readings first hinted at an unknown vessel disturbing the satellites at the system's edge (STAGING round 4). Cut the "timing tables" and their failure everywhere. Reduce his presence on the ten pages that mention him to passing references; his main home is the Fleet Intelligence Archive (restricted/). Nothing public.
-  Touches: dossiers/tarroway.html, dossiers/index.html, dossiers/miken.html, dossiers/vthoramu.html, dossiers/joffrey.html, dossiers/verrow.html, factions/vocath-operation.html, realms/index.html, realms/strake-station.html, chart/index.html, restricted/.
+  Touches: dossiers/tarroway.html, dossiers/index.html, dossiers/miken.html, dossiers/vthoramu.html, dossiers/joffrey.html, dossiers/verrow.html, factions/vocath-operation.html, locations/index.html, locations/strake-station.html, chart/index.html, restricted/.
   src: Korey, 2026-10-25 (round 4)
   done: factions/fleet.html and factions/vocath-operation.html (section 2); locations/strake-station.html, the register and the chart (section 3); every dossier and the dossier register (section 5). restricted/ still needs it.
 
@@ -738,14 +738,14 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 - **[later]** How far to develop Tymora
   Korey wants to develop Tymora and the Beshaba/Tymora interplay.
-  Settled (Korey, turns 860–862): the misread tenet and "fortune needs misfortune" (both adds below); the sisters' conflict stays indirect, because gods give direction that never shows the whole of what they want; Aethris is a whole planet where not everyone follows Tymora, with a lesser Beshaba following and other fortune gods, major and minor. Add that last point to the Tymora entry and realms/aethris.html: "Not all of Aethris follows Tymora. Beshaba keeps a smaller following there, and other gods of fortune, major and minor, are worshipped too."
+  Settled (Korey, turns 860–862): the misread tenet and "fortune needs misfortune" (both adds below); the sisters' conflict stays indirect, because gods give direction that never shows the whole of what they want; Aethris is a whole planet where not everyone follows Tymora, with a lesser Beshaba following and other fortune gods, major and minor. Add that last point to the Tymora entry and locations/aethris.html: "Not all of Aethris follows Tymora. Beshaba keeps a smaller following there, and other gods of fortune, major and minor, are worshipped too."
   Still open: whether Tymora notices herself thinning on Aethris as the ritual removes the risk her luck needs, and whether she acts on it. Beshaba's want is its own decide under dossiers/beshaba.html (added in section 5).
   answered (part): inbox/chat-crew-boogie-casey-sol.md § Sol / Aethris and the gods (Settled)
   src: BCS § Sol/Aethris and the gods (turn 860), § Sol/Open
   done (settled part): factions/deities.html (section 2) carries the misread tenet, fortune needs misfortune, and Aethris's other faiths; the open question is in its Still to decide. locations/aethris.html carries the Aethris line (section 3).
 
 - **[add]** Tymora's misread tenet
-  Add to the Tymora entry: "Tymora's tenet is 'fortune favors the bold.' Her followers on Aethris misread it. They pushed luck until it stopped being luck, and in perfecting fortune they removed the risk that luck needs." Also add to W-08 on realms/aethris.html.
+  Add to the Tymora entry: "Tymora's tenet is 'fortune favors the bold.' Her followers on Aethris misread it. They pushed luck until it stopped being luck, and in perfecting fortune they removed the risk that luck needs." Also add to W-08 on locations/aethris.html.
   src: BCS § Sol/Aethris and the gods (turn 862)
   done: factions/deities.html and factions/aethris.html (section 2); locations/aethris.html carries it (section 3).
 
@@ -804,7 +804,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   Settled since, which is option (d): for Caelestis, containment. Adamantine survives disintegration, so the Fleet wants it for a vault, cradle or plating, and a cadet salvage crew is the cover; Tarto says only that it is rare, theirs by claim, and wanted first. For H'Catha, sight: the Sovereign Eye cannot see through adamantine, which replaced the dropped Spindle foothold war. The ore matters to both Caelestis and the Order.
   Still open: (1) whether the spine's deeper layers stay under that — an Ortholith fragment, shed or aimed, and the strike as bait (the glossary already calls the meteor a Monolith fragment, but the cosmic-structure sweep lists it as open); (2) whether the Academy wanted this meteor or any adamantine, and what made it urgent now.
   answered (part): inbox/chat-organizing-framework.md § Tyrant ship and Voyage 004 prep (Settled: containment, cadet cover); inbox/chat-astral-sea-worldbuilding.md § Superseded ("Adamantine now matters because the Eye cannot see through it"), § H'Catha: the meteorite and mission ("valuable to both Caelestis and the Order")
-  Touches: campaign/index.html (H'Catha arc), campaign/plot-hooks.html (meteorite hook), realms H'Catha page.
+  Touches: campaign/index.html (H'Catha arc), campaign/plot-hooks.html (meteorite hook), locations/hcatha.html.
   src: memory-canon campaign-canon § Antagonists (H'Catha direction, H'Catha decisions); chat-organizing-framework § Settled, § Open; chat-astral-sea-worldbuilding § Superseded; chat-cosmic-campaign-structure § Open
 
 - **[decide]** The Rival's name *(prep)*
@@ -2089,7 +2089,7 @@ run decide, fix, drop, add.
 ## Page conventions
 
 - **[later]** Where the chart lives
-  The chart is its own page off to the side. Embed it where it is used (the realms register, or a cosmos map on the cosmology page) as part of the refactor. Also retire its "claimed" and "primed" node states (staged).
+  The chart is its own page off to the side. Embed it where it is used (the Locations register, or a cosmos map on the cosmology page) as part of the refactor. Also retire its "claimed" and "primed" node states (staged).
   src: Korey, 2026-10-25 (round 2)
 
 - **[fix]** Dossier tab names: keep the four tabs *(answered)*

@@ -644,7 +644,8 @@
     "prime/cosmology/:outcomes were undecided|new undecided things",
     "prime/locations/:Kesh Hollow",
     "prime/campaign/voyages/index.html:<td>1</td><td>Psychic wind</td>",
-    "prime/hub.html:Character Arc Tracker|Wildspace Tracker"
+    "prime/hub.html:Character Arc Tracker|Wildspace Tracker",
+    "prime/chart/holo.html:shape='sphere'"
   ],
   "scan": [
     "prime",

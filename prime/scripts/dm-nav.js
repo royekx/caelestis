@@ -422,8 +422,9 @@
       t.frame.setAttribute('role', 'button');
       t.frame.setAttribute('tabindex', '0');
       t.frame.setAttribute('aria-label', 'Expand ' + (t.img.getAttribute('alt') || 'portrait'));
-      t.frame.addEventListener('click', function () { open(t); });
+      t.frame.addEventListener('click', function (e) { if (e.target.closest('a')) return; open(t); });
       t.frame.addEventListener('keydown', function (e) {
+        if (e.target.closest('a')) return;
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(t); }
       });
 
