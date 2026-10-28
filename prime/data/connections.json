@@ -249,7 +249,7 @@
       ]
     },
     {
-      "id": "first-world",
+      "id": "reach-world",
       "label": "The Reach world",
       "type": "place",
       "scope": "cosmos",
@@ -378,18 +378,14 @@
       "label": "The First Heart",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "The Reach world's heart, the deepest in the cosmos and the one way into the Axiom layer.",
+      "summary": "The Reach world's heart, the deepest in the cosmos, beneath Rykoe; closed since the Reach.",
       "facts": [
         {
-          "t": "The First Heart is the one point from which the Axiom layer can be reached.",
+          "t": "The First Heart lies beneath Rykoe, and every other heart pulls faintly toward it.",
           "src": "cosmology/index.html"
         },
         {
           "t": "It has been closed since the Reach world ended.",
-          "src": "cosmology/index.html"
-        },
-        {
-          "t": "Residue alone cannot force it; the massed Yearning of linked hearts or one fragment made whole can.",
           "src": "cosmology/index.html"
         },
         {
@@ -523,16 +519,16 @@
           "src": "cosmology/index.html"
         },
         {
-          "t": "The four fragments broke by Axiom into prime numbers of pieces: Dissolution 2, Distinction 3, Determination 5, Consolidation 7.",
-          "src": "STAGING round 11"
+          "t": "The five fragments broke by Axiom into prime numbers of pieces: Dissolution 2, Distinction 3, Expansion 5, Consolidation 7, Determination 11.",
+          "src": "cosmology/index.html"
         },
         {
           "t": "Pieces of one fragment draw toward each other; pieces of different fragments are indifferent.",
           "src": "cosmology/index.html"
         },
         {
-          "t": "Caelestis's galaxy holds pieces of three fragments, by chance and by pull.",
-          "src": "STAGING round 8"
+          "t": "The Erevos Galaxy holds pieces of three fragments, Consolidation, Dissolution and Distinction, by chance and by pull.",
+          "src": "cosmology/index.html"
         },
         {
           "t": "Every enchanted thing carries a trace of residue.",
@@ -570,19 +566,6 @@
         {
           "t": "Only Vecna knows what he is building; the Seekers and the Order do not.",
           "src": "STAGING round 4"
-        }
-      ]
-    },
-    {
-      "id": "residue-thresholds",
-      "label": "The two thresholds",
-      "type": "concept",
-      "scope": "cosmos",
-      "summary": "What residue does when assembled: one fragment whole opens a door; all four bend reality.",
-      "facts": [
-        {
-          "t": "All four fragments together carry enough axiomity to put a thing back into being.",
-          "src": "artifacts/index.html"
         }
       ]
     },
@@ -1715,6 +1698,10 @@
         {
           "t": "The Distinction fragment is in three pieces.",
           "src": "STAGING round 10"
+        },
+        {
+          "t": "Every Distinction piece, in whatever housing, finds or reveals something: it tells one thing apart from everything else.",
+          "src": "artifacts/distinction-fragment.html"
         }
       ]
     },
@@ -1723,7 +1710,7 @@
       "label": "The Dissolution fragment",
       "type": "item",
       "scope": "caelestis",
-      "summary": "The Runekeepers' fragment, two pieces, now forming in Wan and Tu.",
+      "summary": "The fragment the Runekeepers carry, two pieces, now forming in Wan and Tu.",
       "facts": [
         {
           "t": "The Dissolution fragment lies in two pieces.",
@@ -1740,6 +1727,10 @@
         {
           "t": "The twins carry the Dissolution fragment.",
           "src": "STAGING round 10"
+        },
+        {
+          "t": "It is visible in its bearers, forming and re-forming in the chest of the Runekeeper and of the Wayfinders who carry it.",
+          "src": "STAGING (Korey 2026-10-27)"
         }
       ]
     },
@@ -1748,11 +1739,24 @@
       "label": "The Expansion fragment",
       "type": "item",
       "scope": "cosmos",
-      "summary": "Five pieces that have left no trace in any record.",
+      "summary": "Expansion residue, in five pieces, none located.",
       "facts": [
         {
-          "t": "The Expansion fragment is in five pieces, and none has left a trace in any record.",
-          "src": "artifacts/transformation-fragment.html"
+          "t": "The Expansion fragment is in five pieces, and none has been located; none lies in the Erevos Galaxy.",
+          "src": "artifacts/expansion-fragment.html"
+        }
+      ]
+    },
+    {
+      "id": "determination-fragment",
+      "label": "The Determination fragment",
+      "type": "item",
+      "scope": "cosmos",
+      "summary": "Determination residue, in eleven pieces, none ever found.",
+      "facts": [
+        {
+          "t": "The Determination fragment is in eleven pieces, and none has ever been found; none lies in the Erevos Galaxy.",
+          "src": "artifacts/determination-fragment.html"
         }
       ]
     },
@@ -1773,6 +1777,10 @@
         },
         {
           "t": "Four of its pieces are loose and their workings unidentified.",
+          "src": "artifacts/rod-of-seven-parts.html"
+        },
+        {
+          "t": "Its pieces have yearned toward each other for ages, and several now sit near Realmspace.",
           "src": "artifacts/rod-of-seven-parts.html"
         }
       ]
@@ -2237,6 +2245,10 @@
         {
           "t": "Its mouth draws things in to the demiplane its interior was widened into.",
           "src": "STAGING round 6"
+        },
+        {
+          "t": "Its eye is the bridge; its mouth is the only way in, onto a demiplane crossed by fixed plane-shift transit points.",
+          "src": "vessels/vthoramu.html"
         }
       ]
     },
@@ -2478,6 +2490,10 @@
         {
           "t": "Its survivors still argue about whether Clint meant to go through the color pool.",
           "src": "STAGING round 4"
+        },
+        {
+          "t": "The Crow made Strake under damage.",
+          "src": "locations/cairn-station.html"
         }
       ]
     },
@@ -3430,14 +3446,39 @@
       ]
     },
     {
+      "id": "faelight-spore",
+      "label": "Faelight spore",
+      "type": "item",
+      "scope": "caelestis",
+      "summary": "A fungus from Vaelorix's collection that throws a cloud of faerie light when fed a spell slot.",
+      "facts": [
+        {
+          "t": "Fed a spell slot, it makes a persistent faerie fire cloud for a minute, 10, 20 or 30 feet across by slot, with no concentration and no save.",
+          "src": "artifacts/faelight-spore.html"
+        },
+        {
+          "t": "It is a non-Weave conduit, so it works inside an anti-magic field.",
+          "src": "artifacts/faelight-spore.html"
+        },
+        {
+          "t": "It grows in the Tyrant Ship's Garden; the Collection Manifest lists it as entry 051, from the outer Kellis Belt.",
+          "src": "artifacts/faelight-spore.html"
+        }
+      ]
+    },
+    {
       "id": "LOC-yAV2JeVr",
       "label": "Flighty Foundling",
       "type": "vessel",
       "scope": "caelestis",
-      "summary": "A Fleet hammerhead.",
+      "summary": "A Caelestis hammerhead.",
       "facts": [
         {
           "t": "The Flighty Foundling brings Ezra out to the crew at the swap.",
+          "src": "vessels/flighty-foundling.html"
+        },
+        {
+          "t": "It supplies the scuttle ship that docks in the Tyrant Ship's Cargo intake for shore parties.",
           "src": "vessels/flighty-foundling.html"
         }
       ]
@@ -3568,7 +3609,7 @@
         },
         {
           "t": "The Dissolution fragment is forming in both twins, half a rune to each.",
-          "src": "artifacts/runekeepers-fragment.html"
+          "src": "artifacts/dissolution-fragment.html"
         },
         {
           "t": "When both twins arrive home, the stalled cycle brings a Zenith and ends the concealment.",
@@ -4680,6 +4721,39 @@
       ]
     },
     {
+      "id": "thessalars-craft",
+      "label": "Thessalar's planar craft",
+      "type": "vessel",
+      "scope": "fonains",
+      "summary": "A vast floating city of many tiers that fell on Fonains about five hundred years ago; the Mad Mage's dungeon now.",
+      "facts": [
+        {
+          "t": "Thessalar held N'ghathrod prisoner aboard and experimented on him with the Rod's seventh piece.",
+          "src": "STAGING § N'ghathrod"
+        },
+        {
+          "t": "Lola's Boys took its control and defence gems in the year 425; without them it fell, and N'ghathrod escaped in the fall.",
+          "src": "STAGING § Fonains and the planar craft"
+        },
+        {
+          "t": "Its gems formed where Olhydra and Ogrémoch collided, and they are not residue.",
+          "src": "STAGING § Fonains and the planar craft"
+        },
+        {
+          "t": "One of Tharizdun's temples was aboard; the crash is how the Elder Elemental Eye reached Fonains.",
+          "src": "STAGING § Tharizdun"
+        },
+        {
+          "t": "Its main body raised the Barrier Peaks; Daoine Gloine is a broken-off piece, and the Thessalkraken landed in the sea.",
+          "src": "STAGING § Fonains and the planar craft"
+        },
+        {
+          "t": "Thessalar is still inside, with his records and the seventh piece.",
+          "src": "STAGING § Thessalar"
+        }
+      ]
+    },
+    {
       "id": "planar-craft",
       "label": "Thessalar's planar craft",
       "type": "vessel",
@@ -5082,7 +5156,7 @@
     },
     {
       "s": "the-reach",
-      "t": "first-world",
+      "t": "reach-world",
       "rel": "destroyed",
       "src": "cosmology/index.html"
     },
@@ -5105,13 +5179,13 @@
       "src": "cosmology/index.html"
     },
     {
-      "s": "first-world",
+      "s": "reach-world",
       "t": "first-heart",
       "rel": "has",
       "src": "cosmology/index.html"
     },
     {
-      "s": "first-world",
+      "s": "reach-world",
       "t": "rykoe",
       "rel": "remains as",
       "src": "STAGING round 9"
@@ -5232,7 +5306,7 @@
     },
     {
       "s": "expansion-fragment",
-      "t": "determination",
+      "t": "expansion",
       "rel": "is biased toward",
       "src": "STAGING round 11"
     },
@@ -5241,18 +5315,6 @@
       "t": "consolidation",
       "rel": "is biased toward",
       "src": "STAGING round 11"
-    },
-    {
-      "s": "residue-thresholds",
-      "t": "residue",
-      "rel": "describes",
-      "src": "STAGING round 2"
-    },
-    {
-      "s": "rod-of-seven-parts",
-      "t": "first-heart",
-      "rel": "could force",
-      "src": "cosmology/index.html"
     },
     {
       "s": "atlas",
@@ -7779,6 +7841,54 @@
       "t": "gal-01",
       "rel": "located in",
       "src": "cosmology/index.html"
+    },
+    {
+      "s": "residue",
+      "t": "determination-fragment",
+      "rel": "includes",
+      "src": "cosmology/index.html"
+    },
+    {
+      "s": "determination-fragment",
+      "t": "determination",
+      "rel": "is biased toward",
+      "src": "cosmology/index.html"
+    },
+    {
+      "s": "thessalar",
+      "t": "thessalars-craft",
+      "rel": "is still aboard",
+      "src": "STAGING § Thessalar"
+    },
+    {
+      "s": "nghathrod",
+      "t": "thessalars-craft",
+      "rel": "was held prisoner aboard",
+      "src": "STAGING § N'ghathrod"
+    },
+    {
+      "s": "rod-seventh-piece",
+      "t": "thessalars-craft",
+      "rel": "is aboard",
+      "src": "vessels/thessalars-craft.html"
+    },
+    {
+      "s": "tharizdun",
+      "t": "thessalars-craft",
+      "rel": "had a temple aboard",
+      "src": "STAGING § Tharizdun"
+    },
+    {
+      "s": "faelight-spore",
+      "t": "LOC-0zVUE8xF",
+      "rel": "grows in",
+      "src": "vessels/tyrant-ship.html"
+    },
+    {
+      "s": "NPC-lfleUUeT",
+      "t": "faelight-spore",
+      "rel": "collected",
+      "src": "artifacts/faelight-spore.html"
     }
   ]
 }

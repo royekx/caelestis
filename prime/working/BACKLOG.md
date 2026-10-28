@@ -33,18 +33,18 @@ staging once Korey has read and accepted them.
 | Cosmology | cosmology/, glossary/, chart/ | 9 | 12 | 14 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 22 | 0 | 0 | 1 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
-| Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
+| Timeline | the rest of timeline.json | 0 | 1 | 8 | 0 | 0 |
 | Factions | factions/ | 3 | 6 | 2 | 0 | 4 |
 | Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 42 | 5 | 36 |
-| Dossiers | dossiers/ | 8 | 6 | 46 | 1 | 54 |
+| Dossiers | dossiers/ | 8 | 6 | 47 | 1 | 54 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
-| Artifacts and vessels | artifacts/, vessels/ | 7 | 2 | 26 | 0 | 43 |
-| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 21 |
-| New pages | 14 proposed pages, the hub, notes/ | 3 | 16 | 5 | 2 | 33 |
+| Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 1 | 0 | 1 |
+| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
+| New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 5 | 2 | 31 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 3 | 0 | 1 |
-| **Total** | | **82** | **107** | **201** | **10** | **308** |
+| **Total** | | **85** | **111** | **179** | **10** | **263** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -69,7 +69,7 @@ Each settles items on several pages at once. Rule these first.
 15. ~~**OSTEKK-6 as sole survivor.**~~ *Ruled: the only active survivor; OSTEKK-2 is inert and can be healed.*
 16. **The tracker and session ingest.** Keep the repo JSON record and in-chat runbook, or move to an alternative. See the Automation and tracker section.
 17. **Dossier tab names and "Open" subsections.** *Tab names answered: the four tabs stand. Open: whether "Open" subsections may stay in DM notes.*
-18. ~~**How Clint left the Bellwether Crow.**~~ *Ruled: a deliberate dive through a color pool with a sister artifact of A.T.L.A.S.* The artifact's identity is a new decide.
+18. ~~**How Clint left the Bellwether Crow.**~~ *Ruled: a deliberate dive through a color pool with a sister artifact of A.T.L.A.S.* *Answered (section 4): the artifact is A.T.L.A.S.'s sister, a Distinction housing (STAGING); its name is a later item under artifacts/atlas-sister.html.*
 19. ~~**Keep or cut Tarroway.**~~ *Ruled: keep him as a thread, mainly in the archive; cut the timing tables.*
 
 ## Answered from the sources (review)
@@ -804,9 +804,13 @@ Order: decide, fix, drop, add.
   "The Glyth Watcher gets out" sits at t -3 (cert working). glyth-watcher.md leaves how she got out open. Options: keep about three years ago; or leave the event undated.
   src: glyth-watcher § Open; timeline.json
 
-- **[later]** The third Boundary piece
-  Ruled: the Boundary fragment is three pieces, each a finder; A.T.L.A.S. and its sister are two (STAGING rounds 10–11). What the third finds, and where it is, waits until play needs it.
-  src: Korey, 2026-10-25 (round 10)
+- **[fix]** Clint and the psychic wind
+  "The Bellwether Crow ambushed" says "Clint Dashforest goes overboard and the psychic wind carries him to Fonains", and "Clint lands on Fonains" says "Carried by the psychic wind after the Bellwether Crow". Psychic wind is retired: Clint took A.T.L.A.S.'s sister and went through a color pool on purpose, which carried him through a pocket of another dimension to Fonains (STAGING § Clint; vessels/bellwether-crow.html). The Crow made Strake under damage.
+  src: section 4 (2026-10-28)
+
+- **[fix]** N'ghathrod's aging
+  "Captured aboard Thessalar's craft" says the seventh piece made his ceremorphosis paracausal "and his aging stops". His long life comes from the tithe of his taken, and the seventh piece is the root of the taking (STAGING § N'ghathrod; artifacts/rod-of-seven-parts.html). Drop "and his aging stops".
+  src: section 4 (2026-10-28)
 
 - **[fix]** Arcs, not acts
   Rename the planned crew events to the spine's arc names (the wiki says "Arc", never "Act"):
@@ -1984,6 +1988,10 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   Add to What's hidden: "The earliest copies of N'ghathrod are in the dreadnought's walls. N'ghathrod and the ship are joined: if his true body dies, the ship dies, and the colony loses its home."
   src: chat-cosmic-campaign-structure § N'ghathrod and the colony
 
+- **[fix]** The ship as a place lives on vessels/vthoramu.html
+  Section 4 wrote vessels/vthoramu.html: the eye as bridge, the mouth, the demiplane and its transit points, the tadpole pools, the colony's quarters, the skiffs, the pulse, the tail and the astral cord, the siege and the move off the Cairn bearing. The dossier keeps the creature and its command and summarises the interior in a line with a link. While rewriting, also fix "Tarroway's timing tables fail" (retired), "Last placed: On Cairn's bearing, closing slowly" (it has moved; it keeps to the dark between systems), and "The colony moved aboard and took the ship's name for its own" (the people's name and the ship's share roots: Vth'orama, Vth'oramu).
+  src: section 4 (2026-10-28); STAGING § Vth'oramu, § The Vth'orama
+
 ---
 
 ### dossiers/winston-ryeback.html
@@ -2315,9 +2323,9 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
 
 - **[add]** What completing the inscription costs Tumak *(answered)*
   Take both "Open:" lines off crew/tumak.html (the stat row and the closing paragraph), and the matching Open lines on dossiers/the-runekeeper.html and realms/wayfinders-homeworld.html. Write (in-world):
-  "Completing the inscription takes Tumak home, and going home ends the concealment. When Wan and Tu both arrive, the three poles stall the Dissolution cycle and the result is a Zenith; the homeworld splits into a blessing faction and an omen faction, and a Monolith follows. Between them the twins then carry a whole fragment, a key to the First Heart held by someone who believes he is only going home. The office he comes home to dims whoever holds it."
+  "Completing the inscription takes Tumak home, and going home ends the concealment. When Wan and Tu both arrive, the three poles stall the Dissolution cycle and the result is a Zenith; the homeworld splits into a blessing faction and an omen faction, and a Monolith follows. The office he comes home to dims whoever holds it."
   For the concealment between bearers: "While the fragment is in transit, the concealment rests on the share still leaving the Runekeeper. It weakens as he fades, and the world's protection decays as the cosmos changes around it. The marks Tumak places are the sensors that let it be renewed when he returns."
-  DM: the fade runs on a soft clock (STAGING round 8). The twins are not a key before about level 12 (STAGING round 2).
+  DM: the fade runs on a soft clock (STAGING round 8). The old "key to the First Heart" clause and its level-12 gate are retired; see the Artifacts decide "What a fragment made whole does".
   answered: crew/tumak.html ("the completed inscription is a key to the First Heart"; "His homeworld stays unfindable while the fragment's oscillation carries the concealment, and the fragment is leaving"); dossiers/the-runekeeper.html ("the act of going home is the act of ending the concealment"; "Dimming is what the office is"); inbox/chat-crew-tumak-gregory-bartholomew.md § Tumak/Leader concept (Korey: "If the Wayfinder never returns, the protection decays as the universe changes"), § Marks (marks as the world's sensors, turn 223); STAGING rounds 2 and 8
   src: TGB § Tumak/Open; crew/tumak.html
   done: locations/wayfinders-homeworld.html (section 3); crew/tumak.html and dossiers/the-runekeeper.html still need it.
@@ -2601,110 +2609,48 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
 # Artifacts and vessels
 
 Pages under `prime/artifacts/` and `prime/vessels/`. Items under each page run
-decide, fix, drop, add.
-
-**Residue counts.** Memory canon (Cosmology, locked) sets the pieces per
-fragment by Axiom, prime numbers. Ruled (STAGING round 11): Dissolution 2, Boundary 3,
-Transformation 5, Convergence 7 (17 in all). Every artifact page uses Boundary 2,
-Dissolution 3, Transformation 5, Convergence 7, so the Boundary and Dissolution
-counts change and Transformation stays.
-
+decide, later, fix, add. Section 4 rewrote every page on 2026-10-28; what is
+left here is open.
 
 ### Every fragment
 
 - **[decide]** What a fragment made whole does
-  A whole fragment does not open the First Heart (Korey 2026-10-27: "Assembling the pieces should do something but probably not open the first heart. Our structure has changed since then."). What assembling one does is not set. Cosmology, the Glossary, opposition/vecna.html and connections.json no longer say it opens the First Heart. Still to rewrite when this is decided: artifacts/index.html (the Rod card "opens the First Heart without any of Vecna's infrastructure"; "The two thresholds" table, "One fragment made whole: opens any Atrium, including the First Heart's"), artifacts/runekeepers-fragment.html ("a first-key threshold"), and the old "second key" (Vecna holding the whole Rod as his fallback), which is retired with it.
-  src: chat 2026-10-27
+  A whole fragment does not open the First Heart (Korey 2026-10-27: "Assembling the pieces should do something but probably not open the first heart. Our structure has changed since then."). What assembling one does is not set. The old "second key" (Vecna holding the whole Rod as his fallback) is retired with it. Every fragment page and the Artifacts register carry this as a Still to decide sentence, and nothing else. Two knock-ons wait on it: the twins carry both Dissolution pieces, so the Dissolution fragment is the first that could be whole in play; and the old gate on the twins ("not a key to the First Heart before about level 12, early in Arc 3") has lost its object, so what that level-12 gate now gates is part of this decide. Pages that carried the First Heart key (artifacts/, factions/runekeepers.html, locations/wayfinders-homeworld.html, rules/index.html, crew/tumak.html, connections.json) no longer say it.
+  src: chat 2026-10-27; section 4 (2026-10-28)
 
 ### artifacts/index.html
 
-- **[fix]** "Artifacts of Convergence" is retired *(answered)*
-  The set is the Reach residue: four fragments, one per Axiom, seventeen pieces. The three-artifact set (Eye, Key, Voice, with A.T.L.A.S. leading to the other two) was replaced by the four fragments, and "Artifacts of Convergence" is not a name for anything. No live page uses the term (0 hits outside prime/working/), so there is nothing to change on this page; keep it off. The Uk'otoa-orb constraint survives as the "Each fragment is its own adventure" add below. Memory's constraint line still says "the three pieces"; update memory.
-  src: memory-canon (open-decisions § Planned: constraints on the Vecna/N'ghathrod layer); chat-cosmic § Superseded
-  answered: inbox/chat-cosmic-campaign-structure.md § Superseded ("Artifacts of Convergence as Eye, Key, Voice → four Reach fragments as residue"), § Artifacts of Convergence (Settled)
+- **[decide]** Which fragment the colony's residue piece belongs to *(prep)*
+  The register carries the colony's piece as a row with no fragment. The Erevos Galaxy holds only Consolidation, Dissolution and Distinction pieces (Cosmology § Three fragments), and both Dissolution pieces are in the twins, so it is a Distinction piece (the third, whose housing is unknown) or one of the four loose Rod pieces (first, second, third or sixth). The answer changes the Rod's loose count and its pull, or makes the colony's piece the third finder. Touches artifacts/index.html, distinction-fragment.html or rod-of-seven-parts.html, opposition/vecna.html § The colony's residue piece, factions/vthorama.html, connections.json (colony-residue-piece).
+  src: section 4 plan, gap 3
 
-- **[fix]** Residue counts per fragment *(counts)*
-  Restate the set as Dissolution 2, Distinction 3, Expansion 5, Consolidation 7, Determination 11. The line "A Boundary piece points toward its one sibling" becomes "toward its two siblings"; "so A.T.L.A.S. points at the only other Boundary piece in existence" becomes "so A.T.L.A.S. points toward the two other Boundary pieces, one of them its sister". "A Convergence piece feels six" stays.
-  src: Korey, 2026-10-25 (round 11)
+- **[later]** Pages for the Hand of Vecna, the Eye of Vecna and the Book of Vile Darkness
+  They are one line each under Other named objects on the register. Each gets an entry once where it is, and whether it has reached Caelestis, is set (the decide lives on dossiers/vecna.html). The other lines there (the wardrobe, the marked crate, Saerthe's miniature ship, the derelict logbook, the Vocath Arcane Rod) get entries when there is DM truth beyond a sentence.
+  src: section 4 plan, gap 2
 
-- **[fix]** The set intro contradicts its table
-  Page says "Four fragments. Seventeen pieces. Two of them are located"; the table counts more located pieces than two. Restate the intro from the table once the counts are applied. Under the canon counts the located pieces are 1 Boundary (A.T.L.A.S.), 2 Dissolution (forming in Wan and Tu) and 3 Convergence (Rod pieces), six in all (inference: assumes the twins' pieces count as located).
-  src: artifacts/index.html § How the set works; memory-canon § Cosmology
+### artifacts/distinction-fragment.html
 
-- **[fix]** A.T.L.A.S. row: no subtitle name
-  The row sub reads "The World Surveyor — renders worlds as holographic models". Change to "Renders worlds as holographic models". The name is the acronym alone; "World Surveyor" is retired.
-  src: memory-canon § Cosmology; framework § A.T.L.A.S.
+- **[later]** The third Distinction piece
+  Ruled: the Distinction fragment is three pieces, each a finder; A.T.L.A.S. and its sister are two (STAGING rounds 10–11). What the third finds, and where it is, waits until play needs it. (Moved from the Timeline section.)
+  src: Korey, 2026-10-25 (round 10)
 
-- **[fix]** Mirt's wardrobe
-  Page says "opens onto a place beyond H'Catha". Change to: Mirt's wardrobe shows a sky seen from Virenspace, a constellation visible from there, gifted by Zerathis. ("Past H'Catha" only ever meant outside the crew's home system.)
-  src: chat-automation § quests ("The Path to Viren"); framework § Settled (constellations in play)
+### artifacts/atlas-sister.html
 
-- **[fix]** Saerthe's miniature ship
-  Page says "stolen, and the same model as the one inside Boogie". Change to: Saerthe's miniature ship is missing, and half of it is inside Boogie.
-  src: memory-canon § Key NPCs
+- **[later]** The sister's name
+  On the page it is "A.T.L.A.S.'s sister". Name it, and say whether the Fleet catalogued it under a name of its own as it did A.T.L.A.S. (Astral Topographic Lithic Augury System). Its look, its maker, how it shows what it finds, why the Bellwether Crow was carrying it, and whether Clint still has it are on the page as Still to decide.
+  src: section 4 plan
 
-- **[add]** Each fragment is its own adventure
-  Each residue fragment is its own adventure, in the way of Critical Role's Luxon beacons. Losing one is a setback for N'ghathrod, not a defeat, so he keeps other objectives running in parallel.
-  src: chat-cosmic § Artifacts of Convergence (reframed to the four fragments); memory-canon (Uk'otoa-orb constraint)
+### artifacts/expansion-fragment.html, artifacts/determination-fragment.html
 
-- **[add]** Scattered across the spheres (add to "Why they are scattered and hidden")
-  The seventeen residue pieces are scattered across the cosmos's spheres.
-  src: memory-canon § Cosmology
-
-### artifacts/atlas.html
-
-- **[fix]** A heart's hidden entrance is the Atrium *(answered)*
-  Keep Atrium on every page; no page change. Korey renamed it himself in the cosmic chat ("I would also change aperture to be atrium to fit in the heart connotations"), after memory's working world-heart line was written. Memory's world-heart, Runekeepers and "Locked this pass" lines still say Aperture; update memory.
-  src: memory-canon (open-decisions § Planned, world-heart framework; Runekeepers line); chat-cosmic § Superseded
-  answered: inbox/chat-cosmic-campaign-structure.md § Superseded ("'Aperture' → 'Atrium' (turn 278)"); confirmed in the chat at turn 278, Korey's own words
-
-- **[add]** What the letters stand for *(answered)*
-  A.T.L.A.S. stands for Astral Topographic Lithic Augury System, the Fleet's catalogue name. Each word names only what the Fleet can observe: it maps worlds from astral space, its core is stone, and it reveals hidden things. Nobody who named it knew what the core is. Add the expansion to the identity card; the artifact is still called by the acronym alone, never "the World Surveyor".
-  src: memory-canon § Cosmology; chat-early-planning § Campaign Planning, Artifacts, the Brig and the Reach
-  answered: inbox/chat-early-planning.md § Artifacts, the Brig and the Reach (turn 322; Korey: "Astral Topographic Lithic Augury System."). Memory's rule that the acronym must not contain "Axiom" is met, and memory's "the name is the acronym" retires "World Surveyor", not the expansion.
-
-- **[fix]** Eyebrow: no "World Surveyor"
-  Eyebrow reads "Artifact · The World Surveyor". Change to "Artifact · Boundary piece".
-  src: memory-canon § Cosmology; framework § A.T.L.A.S.
-
-- **[fix]** A.T.L.A.S. points toward two siblings *(counts)*
-  As one of three Boundary pieces, A.T.L.A.S. points toward its two siblings: its sister, on Fonains, and the third. Antagonists want it partly for that reason. State this in the body (the index row carries the same fix).
-  src: Korey, 2026-10-25 (rounds 10–11)
-
-- **[add]** Status & provenance: the target of the thefts
-  A.T.L.A.S. is what the Academy thefts are really after, and the thefts come forward when the crew returns to Caelestis. In the antagonists' hands it gives them reach, so the crew keeping it out of their hands denies them capacity. (Write without the retired word "network".)
-  src: memory-canon § Cosmology; framework § A.T.L.A.S.
-
-- **[add]** Status & provenance: the planned next custody
-  Joffrey takes A.T.L.A.S. from the Brig under cover of the attack on Caelestis at graduation. N'ghathrod wants A.T.L.A.S.; Vocath wants the Brig's other goods and to disgrace Mirt.
-  src: timeline.json "The Brig breach", "Attack on Caelestis and graduation" (canon); chat-cosmic § Campaign shape
+- **[later]** What an Expansion housing does, and what a Determination piece does
+  Neither fragment has a located piece, and the Erevos Galaxy holds none of either. Set what each does in a housing when a piece enters play.
+  src: section 4 plan
 
 ### artifacts/rod-of-seven-parts.html
 
 - **[decide]** Beholder ties on the fourth piece *(prep)*
   Canon says Rod pieces other than Xanathar's must be decoupled from beholders, but the fourth piece's maker (Ostekk) and its last holder (Vaelorix) are both beholders, and Ostekk now rules a domain on H'Catha and wants it back. Its current holder is the crew, so the rule's letter (holders) is met today. The question is the rule's purpose (keep the campaign from getting too beholder-heavy). Options: (a) the rule is about current holders, so the Lantern passes and stays a beholder-history object; (b) the Lantern is the one named exception, and the remaining loose pieces (first, second, third, sixth) get non-beholder holders; (c) soften the Lantern's beholder ties (for example, Ostekk stops pursuing it after H'Catha).
   src: memory-canon § Cosmology ("Rod holders…"); chat-voyage-6-7-planning § Naming ("Ostekk is a beholder")
-
-- **[fix]** The fourth piece is with the crew
-  Table says "aboard the tyrant ship. Still there: the crew withdrew to Cargo without reaching it". Change to: the fourth piece is inside the Lantern of Flourishing (the Containment Engine, Fourth Series), with the crew in Tumak's bag of holding since V006.
-  src: memory-canon § Antagonists (Voyage 006 outcome); data/items.json "Lantern of Flourishing"
-
-- **[fix]** Standing chip
-  "Three located, four loose" stands; add "one with the crew".
-  src: memory-canon § Antagonists (Voyage 006 outcome)
-
-- **[add]** The pieces are drawing close (add to "Why it matters more")
-  Rod pieces yearn toward each other. After long ages they are drawing close, and several now sit near Realmspace.
-  src: chat-cosmic § N'ghathrod origin; memory-canon (pieces yearning)
-
-- **[add]** The seventh piece stopped N'ghathrod's aging (add to "The seventh piece and the taking")
-  The paracausal ceremorphosis the seventh piece caused also stopped N'ghathrod's aging.
-  src: memory-canon (open-decisions, Locked 2026-10-25); timeline.json "Captured aboard Thessalar's craft" (canon)
-
-  updated (round 3): superseded. His long life comes from the tithe of his taken; the seventh piece is the root of the taking (STAGING round 3).
-- **[add]** Connections: the tyrant ship
-  The tyrant ship ties indirectly to the Rod through the Lantern, the kind of little-known link to the larger world the campaign wants.
-  src: memory-canon § Cosmology
 
 ### artifacts/containment-engine.html
 
@@ -2720,155 +2666,26 @@ counts change and Transformation stays.
   The page and prime/data/overlay.json offer this ("The seated Lantern and the pod can wake it for good in Voyage 007"); no settled source backs it. Options: keep it as the V007 offer, or drop it.
   Partly settled by STAGING § OSTEKK-2: OSTEKK-6 is the only active survivor of Vaelorix's nine units; OSTEKK-2 lies inert on the Hollow Deck, and the crew could heal it back to function if they return for it, for example with the Lantern of Flourishing. Still open: whether the specific mechanic (a pod charge plus an INT DC 15 parts check) is how that healing works.
   src: artifacts/containment-engine.html; prime/data/overlay.json
+  updated (section 4): the Lantern page carries this as a Still to decide sentence, and the overlay beat now follows STAGING (the crew could heal it if they return for it).
 
 - *(The bloom-renewal and Anomaly 02 decides touch this page; they live in the Crew section under Bartholomew and Gregory.)*
-
-- **[fix]** Eyebrow: where the Engine is
-  Eyebrow says "Housing, aboard the tyrant ship". Change to "Housing, in Tumak's bag of holding", matching the page's own Standing chip.
-  src: data/items.json "Lantern of Flourishing" (Held By: Tumak Swan)
-
-- **[fix]** The seated Lantern is a one-person rejuvenation pod
-  Page adds "a long rest aboard restores all Hit Dice, constructs aboard are fully repaired, and the Garden thrives"; cut that clause (superseded twice: all Hit Dice, then a Flourishing Rest for everyone, then the pod). Replace with: seated in the bay pod, the Lantern is a one-person rejuvenation pod. One creature spends an hour in the pod; all three charges are spent; the creature gains a long rest even if it already had one that day. The Lantern can be unseated at any time. Spent charges stay spent until dawn.
-  src: memory-canon § Bartholomew ("Lantern seated in the repair bay"); chat-voyage-6-7-planning § The Lantern and the ship, § Superseded
 
 - **[add]** Restoring a limb (add to the item description)
   Restoring a limb takes a compatible cradle and every charge, daily, for seven days.
   src: chat-voyage-6-7-planning § Lantern of Flourishing
+  held (section 4): the source chat marks this an inference, not in the repo. The page leaves it out and says in Still to decide that limb restoration is not set; confirm before it goes on the item card.
 
-- **[add]** Where it is: Ostekk
-  Ostekk, the Engine's maker, is a ruling beholder on H'Catha today. The crew hearing his name on landing is the payoff. (The cosmic sweep still lists "where Ostekk is" as open; memory settles it.)
-  src: memory-canon § Antagonists (H'Catha decisions)
+### artifacts/faelight-spore.html
 
-- **[add]** Where it is: the sealed core
-  The Lantern's sealed core, where the Rod piece sits, cannot be read by identify.
-  src: chat-voyage-6-7-planning § Lantern of Flourishing; prime/data/overlay.json
+- **[decide]** The Faelight spore's slot rules *(prep)*
+  The page reconciles the old rules/index.html#counter-spore section (removed in section 4) with the BACKLOG radius steps: the slot sets the radius only (10/20/30 ft for a 1st/2nd/3rd-level slot), the cloud lasts 1 minute whatever the slot, and there is no level cap. The Rules page had capped a 3rd-level caster at a 2nd-level slot and said slot level scaled area and duration; both were dropped as Rules-page additions with no ruling behind them. Confirm, or restore the cap or the duration scaling. Also open on the page: whether a slot above 3rd widens the cloud, whether a coated creature stays coated after leaving the cloud, and whether the spore can be carried off the ship.
+  src: section 4 (2026-10-28); rules/index.html#counter-spore as it stood
 
-- **[add]** Where it is: the anti-magic field
-  The Command Deck's anti-magic field suppressed the Lantern and muted Gregory's tug toward it. (Wording follows the rules/index.html decide on paracausal objects in anti-magic; see the Rules section.)
-  src: memory-canon § Antagonists
+### vessels/vthoramu.html
 
-- **[add]** At the table: Boogie and the Lantern
-  The Lantern holds the fourth Rod piece and pulls toward wholeness. Boogie feels out of step with its pulse, and only he feels it. If the Lantern heals Boogie, he regains the hit points and then becomes a loose puddle until the end of his next turn: Speed 10 ft., he drops what he holds, and he cannot cast. Only the stone keeps its shape.
-  src: chat-voyage-6-7-planning § The Lantern and the ship, § V007 player beats; memory-canon § Naming
-
-- **[add]** At the table: the fifth piece
-  The Lantern can pull the crew toward the fifth Rod piece.
-  src: memory-canon § Antagonists ("Lantern of Flourishing as an item")
-
-- **[add]** Cross-link: the Lantern and the shard
-  The Lantern pulls toward wholeness; Tharizdun's corruption turns the Fonains shard's archiving into pulling apart. Neither object is aware of the other. Link to artifacts/fonains-shard.html.
-  src: chat-voyage-6-7-planning § The Lantern and the ship
-
-### artifacts/fonains-shard.html
-
-- **[fix]** The derelict logbook is in two halves
-  Ruled (STAGING round 8). Write: "Boogie holds half of the derelict logbook. The other half was in his chest inside the Monolith." The settled record is the two halves; drop the bound-duplicates line from this page and vessels/the-derelict.html. data/items.json still lists the whole logbook plus duplicates (see Player record flags).
-  src: Korey, 2026-10-25 (round 8); memory-canon § Boogie; data/items.json
-
-- *(The Giorge decide touches this page; it lives in the Crew section under Boogie.)*
-
-- **[fix]** Subtitle: the Fonains Monolith
-  Subtitle says "A piece of the original Monolith". Change to "A piece of the Fonains Monolith". The original, first Monolith is the Core, the Continuum's response to the Reach.
-  src: memory-canon § Cosmology
-
-- **[fix]** One of a vast number
-  Page says the shard is "the only one of its kind anybody has". Change to: one of the many small shards that came from the four great shards when the Fonains Monolith broke, now scattered across the cosmos. Three hundred and thirty-three of the small shards are black; the rest took colors close to their elemental affinities. Collecting them is not a goal.
-  updated (round 8): "about 333,333" is retired (see the Fonains lane fix).
-  src: memory-canon § Cosmology ("Scale"); BCS § Boogie/The shard and Tharizdun
-
-- **[add]** Lead: how the Monolith broke
-  Kwalish's cannon split the Fonains Monolith into four great shards, each guarded by a Prince-aligned elemental, turning around a black cyst in the Trintara Forest. The many small fragments, Boogie's among them, sit beside those four great shards.
-  src: timeline.json "The Monolith breaks", "Kwalish's cannon splits the Monolith" (canon)
-
-- **[add]** How it got there
-  The shard came from the broken Monolith through Vocath's line, before V001 and after the Monolith broke.
-  src: session-rulings (Timing)
-
-- **[add]** Where the archive goes
-  A corrupted Monolith is a tunnel to Tharizdun's prison: what it takes goes toward him instead of to the Core. The line "still attempting to archive" should say so.
-  src: memory-canon § Cosmology ("Tharizdun's goal (locked)"); working/tharizdun.md § Corrupted Monoliths
-
-- **[add]** What it does to Boogie
-  Boogie's Divine Soul power comes from Tharizdun's influence through the shard, and he does not know it. In his level 3 dream he saw a fractal network of other Boogies, each with a differently shaped shard: this shard made this Boogie, and others exist.
-  src: BCS § Boogie/The shard and Tharizdun, The fractal dream
-
-- **[add]** The prophet thread
-  The shard draws people toward Boogie as something holy. A small faith that predates the corruption may treat him as a prophet. Available to pull on, never pushed.
-  src: memory-canon § Cosmology ("Boogie prophet arc"); BCS § Boogie/The faith
-
-- **[add]** Reaching for the archive
-  Boogie can eventually reach for the archive on purpose: something offered during a Pulse goes in incomplete and comes out incomplete. His ceiling stays bounded because he is a damaged relay.
-  src: memory-canon § Cosmology ("Boogie archive mechanic direction")
-
-- **[add]** Running note: escalate, don't repeat
-  The shard escalates rather than repeats, and is not revealed as a Monolith piece too soon.
-  src: memory-canon (open-decisions § Voyage 007 intent)
-
-- **[add]** The Lantern and the shard
-  The Lantern pulls toward wholeness, and Tharizdun's corruption turns the shard's archiving into pulling apart. Neither object is aware of the other. Cross-link artifacts/containment-engine.html and crew/boogie.html.
-  src: chat-voyage-6-7-planning § The Lantern and the ship
-
-- **[add]** FR-022 (threads)
-  The FR-022 fragment is a different piece of the Fonains Monolith, recovered by the Order and routed to the Fleet. Boogie may find it and consume it.
-  src: chat-early-planning § FIA lore content
-
-### artifacts/runekeepers-fragment.html
-
-- **[fix]** Wan and Tu are two hosts
-  Page says "Wan and Tu, who are one person in two bodies". Change to "Wan and Tu, two hosts". They have always been two separate entities.
-  src: memory-canon § Cosmology ("always two entities"); framework § Superseded
-
-- **[fix]** Subtitle: two Dissolution pieces *(counts)*
-  Subtitle says "All three Dissolution pieces, assembled — and assembled in a person." Dissolution has two pieces. Rewrite once the first-key decide lands, for example: "Both Dissolution pieces, forming in two people."
-  src: memory-canon § Cosmology
-
-- **[add]** It is changing hands: three poles
-  The fragment forming in both twins makes three poles for the first time ever. The fixed mass divides three ways, nobody reaches peak, and the cycle stalls mid-motion while the ritual hiding Lunarfoot rides on it. When both twins reach home, the result is a Zenith. That has not happened yet.
-  src: memory-canon § Cosmology ("The Zenith…"); realms/wayfinders-homeworld.html
-
-- **[add]** The dimming and the lineage
-  A Runekeeper's dimming is the fragment leaving them. The lineage passes because the fragment chooses a new host. Tumak was sent out because it began forming in him.
-  src: memory-canon § Cosmology ("Consequences of the Dissolution cycle")
-
-- **[add]** The first Runekeeper caught an existing process
-  The fragment was already oscillating before the first Runekeeper etched one pole into themselves.
-  src: memory-canon § Cosmology
-
-- **[add]** The counter to N'ghathrod (Connections, or "What nobody has said out loud")
-  Dissolution unmakes joins, and N'ghathrod is made of joins. The fragment inscribing itself onto the twins is the counter to him.
-  src: chat-cosmic § N'ghathrod and the colony; dossiers/nghathrod.html
-
-### artifacts/transformation-fragment.html
-
-### vessels/index.html
-
-- **[later]** The Derelict's name, and records for the other salvage-race ships
-  Settled for the other ships: every ship the crew encounters gets a record, and ships known only in simulation sit under the Simulation Deck with Status Simulated, so the salvage race's hammerhead and githyanki ship each get a simulated record and a register row, as the Moonraider and the Derelict did. Still open: the Derelict's name. Options: "Salvage Race Derelict", or keep "Derelict". Touches this page and vessels/the-derelict.html.
-  src: chat-voyage-6-7-planning § Open; § The swap and NPCs (Moonraider and Derelict as simulated records); § Table and story principles ("Every ship the crew encounters gets a record"); memory-canon § Naming ("Ships the crew encounters get cataloged")
-
-- **[fix]** Ship names carry no article
-  Register rows say "The Tyrant", "The Flighty Foundling", "The Moonraider", "The Derelict". Change to Tyrant Ship, Flighty Foundling, Moonraider, Derelict. PR #70 already renamed the player side.
-  src: memory-canon § Naming; chat-voyage-6-7-planning § The swap and NPCs; data/locations.json
-
-- **[fix]** The Vth'orama and the Vth'oramu
-  Row says "The colony lives aboard and took the ship's name for its own". Change to "The Vth'orama live aboard." The colony is the Vth'orama; the ship is the Vth'oramu, shortened to Oramu. They are distinct words.
-  src: memory-canon § Deferred (dreadnought name locked); chat-cosmic § N'ghathrod and the colony
-
-- **[fix]** What Vth'oramu means
-  Vth'oramu is illithid for "the passage to a new home". The founding colonists treat it as a means to an end; those born aboard take it as home itself; N'ghathrod keeps the promise unfulfilled to hold them. dossiers/vthoramu.html gives the name as "The whole of the going-home"; change it there too. (The cosmic sweep's later wording loses to memory's locked line; if Korey prefers "the whole of the going-home", flip this.)
-  src: memory-canon § Deferred ("The dreadnought's name is locked"); chat-cosmic § Superseded
-
-- **[add]** Bellwether Crow (new register row; needs an entry page, see the New pages section)
-  The *Bellwether Crow* was a Caelestis ship ambushed by Vocath's crew, working with N'ghathrod, on the Strake–Cairn leg near Cairn Station about a year ago, in the same engagement where Clint Dashforest went overboard. Joffrey was taken and let go with a few survivors; most of the crew did not return.
-  src: timeline.json "The Bellwether Crow ambushed" (canon); memory-canon § Deferred ("Operative resolved")
-
-- **[add]** Thessalar's planar craft (new register row; needs an entry page, see the New pages section)
-  Thessalar's planar craft fell about 500 years ago, with N'ghathrod already a prisoner aboard. It is now a megadungeon (the Mad Mage's), and Daoine Gloine is a broken-off piece of it. The Thessalkraken landed separately in the sea.
-  src: session-rulings
-
-- **[add]** Flighty Foundling row: the scuttle ship
-  The *Flighty Foundling* supplies a scuttle ship that docks in the Tyrant Ship's Cargo intake for small shore parties.
-  src: chat-voyage-6-7-planning § Crossing and H'Catha; memory-canon § Naming ("Approach to H'Catha")
+- **[fix]** When N'ghathrod fused into the ship
+  The vessel page gives no date. dossiers/vthoramu.html says "fused for forty or fifty years" and "taken a little over fifty years ago", against STAGING: the taking took decades, perhaps a century, after an exile four to four and a half centuries ago. Settle it with the dossier rewrite in section 5 (see dossiers/vthoramu.html).
+  src: section 4 plan; factions/vthorama.html § Still to decide
 
 ### vessels/tyrant-ship.html
 
@@ -2880,86 +2697,27 @@ counts change and Transformation stays.
   The table set A as the Garden and C as the Quarters. Options: B or D.
   src: chat-voyage-6-7-planning § Open
 
-- **[fix]** The ship reads as native traffic at H'Catha *(answered)*
-  Page says "he was H'Cathan and landless, so the ship arriving reads as a claimant returning rather than as a trader." Change to: every beholder ship is carved stone, so the Tyrant Ship reads as native traffic, and a few such ships in orbit is normal. A tyrant ship draws less concern at the domain borders than an ordinary spelljammer. Nobody on H'Catha knows Vaelorix is dead. Keep "Vaelorix was originally from H'Catha" as a fact; drop the claimant reading.
-  src: memory-canon § Naming ("Approach to H'Catha"), § Antagonists ("H'Catha layout")
-  answered: memory-canon § Naming ("reads as native because every beholder ship is carved stone (a few ships in orbit is normal traffic)"); § Antagonists ("a tyrant ship draws less concern than a normal spelljammer"). Memory outranks the page; no source backs the claimant line.
-
 - **[later]** The lingering Lantern wisps
   Settled: the choice is the crew's, keep the wisps or eradicate them. Nothing for Korey to rule; this waits on play. Record the crew's choice when it is made, and until then the page states that the wisps linger in the ship.
   src: chat-voyage-6-7-planning § The Lantern and the ship
 
-- **[fix]** The ship's name is Tyrant Ship
-  Title, heading and chips say "The Tyrant" (title: "The Tyrant · Caelestis · DM"). Change to "Tyrant Ship".
-  src: memory-canon § Naming; data/locations.json
+### vessels/bellwether-crow.html
 
-- **[add]** The gravity plane (deck notes)
-  The gravity plane runs through the ship's middle, almost level with the Command Deck floor. Cargo (entry, base camp) and the Hollow (the bowl, the behir's rest, the repair bay pod with its empty cradle) sit below it; the Command Deck sits above, with the Meditation nodes (Garden, Quarters, Research) at the top. A later mention placing it below the Command Deck was a misspeak.
-  src: chat-voyage-6-7-planning § Naming and corrections; framework (deck layout); campaign/voyages/index.html
-
-- **[add]** Why it obeys the Pact
-  The Tyrant Ship holds some beholder essence, so it obeys the Pact: the stalk matching the hour's eye goes dead, and the whole ship goes dark in the eclipse.
-  src: memory-canon § Antagonists (H'Catha decisions); astral § Meteorite and mission
-
-- **[add]** The helm
-  Vaelorix never installed a spelljamming helm. The dais he died on is the ship's helm, a beholder-only interface, and the Academy's chair-helm is installed into it.
-  src: memory-canon § Antagonists ("Beholders in Caelestis follow 5e…")
-
-- **[add]** Vaelorix's Quarters and study (deck notes)
-  The Quarters, still unvisited, are personal and hold a treasury of coin from his deals. His study is informational: notes, and star charts of the worlds he collected plants from.
-  src: memory-canon § Key NPCs; chat-voyage-6-7-planning § The Lantern and the ship
-
-- **[add]** The Faelight spore grows in the Garden
-  Add to the Garden line.
-  src: chat-voyage-6-7-planning § Superseded (moved from the Cargo Deck to the Garden)
-
-- **[add]** Approach to H'Catha
-  A scuttle ship supplied by the *Flighty Foundling* docks in the Cargo intake and carries the landing party. Someone able to cast must stay aboard to hold the helm: Saerthe at the helm, Ryeback commanding the deck. Leaving Miken aboard alone is the high-tension option.
-  src: memory-canon § Naming ("Approach to H'Catha"); chat-voyage-6-7-planning § Crossing and H'Catha
-
-- **[add]** Not the crew's to keep
-  The Tyrant Ship goes into the Caelestis inventory after the mission. The players don't need to know.
-  src: memory-canon § Antagonists ("Tyrant ship systems"); chat-voyage-6-7-planning § The Lantern and the ship
-
-- **[add]** The crew's name for it
-  The crew is still choosing a name for the ship; none has settled.
-  src: chat-voyage-6-7-planning § Make Ready interlude
-
-- **[add]** DM note: manifest entry 048
-  Manifest entry 048 is dropped unless a player asks. The soft light Casey saw under the behir is left undefined.
-  src: chat-voyage-6-7-planning § The Lantern and the ship
-
-### vessels/flighty-foundling.html
-
-- **[fix]** The ship's name is Flighty Foundling
-  Title and heading say "The Flighty Foundling". Drop the article.
-  src: memory-canon § Naming; data/locations.json
-
-- **[add]** Ezra's arrival
-  Ezra arrives on the *Flighty Foundling* with Tarto and Saerthe, as a Watcher cadet on his first field mission. The only people known aboard are Tarto and Saerthe. (Page now says only that it "carries Ezra out".)
-  src: chat-voyage-6-7-planning § The swap and NPCs; memory-canon § Key NPCs
-
-- **[add]** The scuttle ship
-  It supplies the scuttle ship used for shore parties.
-  src: chat-voyage-6-7-planning § Crossing and H'Catha
+- **[later]** The Crow after the ambush
+  The Crow made Strake under damage (locations/cairn-station.html). Whether it went back into service, its class, its captain, and the clean survivor's name wait until the crew pulls the roster.
+  src: section 4
 
 ### vessels/moonraider.html
 
-- **[fix]** The ship's name is Moonraider
-  Title and heading say "The Moonraider". Drop the article.
-  src: memory-canon § Naming; data/locations.json
+- **[decide]** What the Moonraider simulation is drawn from
+  Saerthe's simulation of the Derelict draws on real records (vessels/the-derelict.html). The same rule would answer the Moonraider's source, and captain-sardax.html poses the question ("either someone survived to describe it, or…"). Confirm that it applies, or set another source.
+  src: section 4 plan (inference)
 
 ### vessels/the-derelict.html
 
-- *(The Derelict-name item (later) lives under vessels/index.html; the logbook fix under artifacts/fonains-shard.html. Both touch this page.)*
-
-- **[fix]** The record name is Derelict
-  Title and heading say "The Derelict". Drop the article.
-  src: chat-voyage-6-7-planning § The swap and NPCs; data/locations.json
-
-- **[add]** The wreck is real
-  Saerthe's simulation draws on real records, so the wreck is real, and the original logbook sits somewhere in Caelestis with pages missing. Small mundane objects can cross the simulation threshold at exit, which is how Boogie carries a real logbook out of a simulated wreck; magic items cannot cross.
-  src: memory-canon § Boogie, § Key NPCs (Saerthe canon); BCS § Boogie/Archived objects
+- **[later]** The Derelict's name, and records for the other salvage-race ships
+  Settled for the other ships: every ship the crew encounters gets a record, and ships known only in simulation sit under the Simulation Deck with Status Simulated, so the salvage race's hammerhead and githyanki ship each get a simulated record and a register row, as the Moonraider and the Derelict did. Still open: the Derelict's name. Options: "Salvage Race Derelict", or keep "Derelict". Touches this page and vessels/the-derelict.html.
+  src: chat-voyage-6-7-planning § Open; § The swap and NPCs (Moonraider and Derelict as simulated records); § Table and story principles ("Every ship the crew encounters gets a record"); memory-canon § Naming ("Ships the crew encounters get cataloged")
 
 # Rules
 
@@ -3114,7 +2872,7 @@ against the complete Tumak sweep (all 336 turns).
   src: TGB § Tumak/Marks
 
 - **[fix]** Wan and Tu are two hosts
-  § One in two says "Tumak is one person occupying two bodies" and calls the twins "a whole Dissolution fragment walking around in two pieces, which is a paradox the cosmology does not otherwise permit". The same section already says "two separate hosts sharing one persona". Restate as two hosts throughout. The fragment wording follows the canon counts (Dissolution has two pieces) and the first-key decide on artifacts/runekeepers-fragment.html.
+  § One in two says "Tumak is one person occupying two bodies" and calls the twins "a whole Dissolution fragment walking around in two pieces, which is a paradox the cosmology does not otherwise permit". The same section already says "two separate hosts sharing one persona". Restate as two hosts throughout. The fragment wording follows the canon counts (Dissolution has two pieces) and the decide "What a fragment made whole does" (Artifacts, Every fragment). The § "The consequence of one-in-two" paragraph ("a second key to the First Heart") was cut in section 4.
   src: memory-canon § Cosmology ("always two entities")
 
 - **[fix]** Sol's oath is written
@@ -3124,10 +2882,6 @@ against the complete Tumak sweep (all 336 turns).
 - **[add]** Why gods cannot make the crossing (§ The approach to the Core)
   Page says only "Gods cannot make the crossing at all". Add the reason: polarity. A god and a heart carry the same charge, so as a god pushes toward a world or the centre the resistance grows until it is unbearable. The centre has ill effects on a god without destroying it. There is no "divine gate".
   src: session-rulings (polarity); working/divine-rules.md § Polarity
-
-- **[add]** The Faelight spore's mechanics move to its item entry
-  The counter-spore plant is the Faelight spore, an item; its mechanics live with it in inventory, and rules/index.html#counter-spore is removed (Korey 2026-10-27). The Rules page caps a 3rd-level caster at a 2nd-level slot; reconcile with the radius steps below when writing the entry. The Faelight spore is a knuckled, colourless fungus with pustules. Fuelled by a caster's spell slot, it makes a persistent Faerie Fire cloud: bonus action, no concentration, no save, reusable. Radius 10/20/30 ft. by slot; lasts 1 minute. Anything entering is coated: attacks against it have advantage and it cannot benefit from invisibility or obscurement. Allies are coated too. It grows in the tyrant ship's Garden.
-  src: memory-canon § Cosmology ("Faelight spore"); chat-voyage-6-7-planning § Superseded (Garden)
 
 - **[add]** Two layers, one inscription
   In the fiction the Runechild essence runes and the Wayfinder runes are one inscription on Tumak's body. Mechanically they are two layers that share the fiction and never share resources. Tumak tracks three resources on three timescales: sorcery points, Runechild charged runes, and Wayfinder progression. There is no separate Wayfinder spend pool.
@@ -3414,26 +3168,6 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 - **[add]** The Lunarfoot seal
   A crescent moon cradling a footprint, with two four-point stars for the twins. Also usable on the-runekeeper.html.
   src: TGB § Tumak/"The Becoming" handout
-
-### NEW: Bellwether Crow (vessel)
-
-**Purpose.** The Caelestis ship whose ambush planted N'ghathrod's operative inside the Academy. It needs an entry page for the vessels register row (see the Artifacts and vessels section). Suggested path: `prime/vessels/bellwether-crow.html`.
-
-**Voice.** In-world.
-
-- **[add]** The *Bellwether Crow*
-  A Caelestis ship. About a year ago Vocath's crew ambushed it on the Strake–Cairn leg near Cairn Station, under a deal with N'ghathrod: captives for Vocath, an asset inside sealed Caelestis for N'ghathrod. Clint Dashforest went overboard in the same engagement. Joffrey was taken and let go with a few survivors; most of the crew did not return. One clean, confused survivor noticed Joffrey had changed and never reported it; the crew can find them by pulling the roster.
-  src: timeline.json "The Bellwether Crow ambushed" (canon); memory-canon § Deferred ("Operative resolved")
-
-### NEW: Thessalar's planar craft (vessel / megadungeon)
-
-**Purpose.** The fallen craft that links Fonains, N'ghathrod and the Rod's seventh piece. It needs an entry page for the vessels register row. Suggested path: `prime/vessels/thessalars-craft.html`.
-
-**Voice.** In-world.
-
-- **[add]** Thessalar's planar craft
-  Thessalar's planar craft fell about 500 years ago ("millennia" in Lola's Boys is rumour). N'ghathrod was already a prisoner aboard. Lola's Boys, sent back by the Accordance, took the craft's control and defence gems (the red gem from the cavern lake and the hazy yellow gem). Without them the craft fell, and the crash let N'ghathrod escape. The craft is now a megadungeon (the Mad Mage's), Daoine Gloine is a broken-off piece of it, and the Thessalkraken landed separately in the sea (the Drowned God's kraken). The Rod's seventh piece was left aboard. The gems are not Reach residue.
-  src: session-rulings; memory-canon (open-decisions, seventh piece; Timing rulings)
 
 ### NEW: Cadet intake
 

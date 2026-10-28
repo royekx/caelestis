@@ -4,36 +4,38 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Vessels · Caelestis · DM</title>
+<title>Vessels &middot; Caelestis &middot; DM</title>
 <link rel="stylesheet" href="../../styles/caelestis.css">
 <link rel="stylesheet" href="../../styles/entity.css">
 <link rel="stylesheet" href="../../styles/dm.css">
 <script src="../scripts/dm-nav.js" defer></script>
 <script src="../scripts/dm-register.js" defer></script>
+<script src="../scripts/portraits.js" defer></script>
 </head>
 <body>
 
 <main class="dm-content">
 
   <header class="dm-page-header">
-    <div class="dm-page-eyebrow">Setting<span class="sep">&middot;</span>Register</div>
+    <div class="dm-page-eyebrow">World<span class="sep">&middot;</span>Register</div>
     <h1>Vessels</h1>
     <p class="dm-page-lede">
-      Ships with a name and a history. Each one has an entry covering its interior, and the one that is alive carries a <a href="../dossiers/">dossier</a> as well. Where they are is in <a href="../locations/">Locations</a>.
+      Ships with a name and a history. Each entry says what the ship is and what is inside it; a ship with something driving it has a <a href="../dossiers/">dossier</a> as well. Where a ship lies among the systems is in <a href="../locations/">Locations</a>, and objects carried aboard are in <a href="../artifacts/">Artifacts</a>.
     </p>
   </header>
 
   <div class="dm-register-bar">
-    <input class="dm-register-search" type="search" placeholder="Filter by name, class, owner&hellip;" aria-label="Filter vessels">
+    <input class="dm-register-search" type="search" placeholder="Filter by name, kind, who holds it&hellip;" aria-label="Filter vessels">
   </div>
 
   <div class="facets">
     <div class="facet">
       <span class="facet-label">Where</span>
       <div class="facet-pills">
-        <button class="filter-tag" type="button" data-sphere="realmspace">Realmspace</button>
-        <button class="filter-tag" type="button" data-sphere="astral">The Astral Sea</button>
-        <button class="filter-tag" type="button" data-sphere="unknown">Unplaced</button>
+        <button class="filter-tag" type="button" data-where="realmspace">Realmspace</button>
+        <button class="filter-tag" type="button" data-where="krynnspace">Krynnspace</button>
+        <button class="filter-tag" type="button" data-where="astral">The Astral Sea</button>
+        <button class="filter-tag" type="button" data-where="unplaced">Unplaced</button>
       </div>
     </div>
     <div class="facet">
@@ -42,14 +44,14 @@
         <button class="filter-tag" type="button" data-state="active">Active</button>
         <button class="filter-tag" type="button" data-state="held">Held by the crew</button>
         <button class="filter-tag" type="button" data-state="lost">Lost</button>
+        <button class="filter-tag" type="button" data-state="simulated">Simulated</button>
       </div>
     </div>
     <div class="facet">
       <span class="facet-label">Depth</span>
       <div class="facet-pills">
-        <button class="filter-tag" type="button" data-depth="dossier">Full dossier</button>
-        <button class="filter-tag" type="button" data-depth="entry">Entry</button>
-        <button class="filter-tag" type="button" data-depth="stub">Stub</button>
+        <button class="filter-tag" type="button" data-depth="dossier">Dossier and vessel entry</button>
+        <button class="filter-tag" type="button" data-depth="entry">Vessel entry</button>
       </div>
     </div>
   </div>
@@ -61,78 +63,95 @@
 
   <div class="register">
 
-    <div class="ent" data-sphere="astral" data-state="active" data-depth="dossier">
-      <a class="ent-row" href="../dossiers/vthoramu.html">
-        <span class="ent-face"><span class="face-mono">V</span></span>
-        <span class="ent-name">The Vth&rsquo;oramu<span class="ent-sub">A living astral dreadnought, under command</span></span>
+    <div class="ent" data-where="astral" data-state="active" data-depth="dossier">
+      <a class="ent-row" href="vthoramu.html">
+        <span class="ent-face dossier-portrait" data-key="vthoramu"></span>
+        <span class="ent-name">Vth'oramu<span class="ent-sub">A living astral dreadnought, under command</span></span>
         <span class="ent-state">Active</span>
       </a>
       <div class="ent-detail">
-        <p>An astral dreadnought taken alive a little over fifty years ago and rebuilt into a ship. The colony lives aboard and took the ship&rsquo;s name for its own. <a href="../dossiers/nghathrod.html">N&rsquo;ghathrod</a> is fused into it, so it has no helm and no helmsman.</p>
-        <p>Every anomaly in the Tetherbreak file resolves to this one object, and no Fleet model has room for it.</p>
+        <p>An astral dreadnought taken alive and rebuilt into a ship over decades, perhaps a century. The Vth'orama live aboard, and its name means the passage to a new home. <a href="../dossiers/nghathrod.html">N'ghathrod</a> is fused into it. It keeps to the dark between systems and sends skiffs to the worlds around it.</p>
         <div class="ent-links">
-          <a class="chip chip-npc" href="../dossiers/vthoramu.html">Full dossier</a>
-          <a class="chip chip-quest" href="../campaign/colony/">Colony Ops</a>
+          <a class="chip chip-npc" href="../dossiers/vthoramu.html">Dossier</a>
+          <a class="chip chip-npc" href="../factions/vthorama.html">The Vth'orama</a>
         </div>
       </div>
     </div>
 
-    <div class="ent" data-sphere="realmspace" data-state="held" data-depth="entry">
+    <div class="ent" data-where="realmspace" data-state="held" data-depth="entry">
       <a class="ent-row" href="tyrant-ship.html">
-        <span class="ent-face"><span class="face-mono">T</span></span>
-        <span class="ent-name">The Tyrant<span class="ent-sub">Vaelorix&rsquo;s derelict tyrant ship, in Toril orbit</span></span>
+        <span class="ent-face dossier-portrait" data-key="tyrant-ship"></span>
+        <span class="ent-name">Tyrant Ship<span class="ent-sub">Vaelorix's carved-stone beholder ship, in Toril orbit</span></span>
         <span class="ent-state">Held</span>
       </a>
       <div class="ent-detail">
-        <p>Taken in V006. The field is down, the Containment Engine is in Tumak&rsquo;s bag, and the helm seated in the V006.5 interlude; four of the ten eyes answer at the crew stations. The garden holds Vaelorix&rsquo;s specimens, including the bloom that woke Bartholomew&rsquo;s Aspects.</p>
+        <p>The crew took it from the dead beholder Vaelorix and fly it with the Academy's chair-helm in his dais; four of its ten great eyes answer. Its Garden holds his specimens, and the Hollow Deck holds the Lantern of Flourishing's empty cradle.</p>
         <div class="ent-links">
-          <a class="chip chip-npc" href="tyrant-ship.html">Entry</a>
           <a class="chip chip-npc" href="../dossiers/vaelorix.html">Vaelorix</a>
+          <a class="chip chip-item" href="../artifacts/containment-engine.html">Lantern of Flourishing</a>
         </div>
       </div>
     </div>
 
-    <div class="ent" data-sphere="realmspace" data-state="active" data-depth="stub">
+    <div class="ent" data-where="realmspace" data-state="active" data-depth="entry">
       <a class="ent-row" href="flighty-foundling.html">
-        <span class="ent-face"><span class="face-mono">F</span></span>
-        <span class="ent-name">The Flighty Foundling<span class="ent-sub">Fleet vessel; brings Ezra out at the crew swap</span></span>
+        <span class="ent-face dossier-portrait" data-key="flighty-foundling"></span>
+        <span class="ent-name">Flighty Foundling<span class="ent-sub">A Caelestis hammerhead</span></span>
         <span class="ent-state">Active</span>
       </a>
       <div class="ent-detail">
-        <p>The ship that answers when the crew reports the commissioning. It collects <a href="../dossiers/ezra.html">Ezra</a>, takes Krik&rsquo;Lit and Pffred off, and leaves.</p>
+        <p>It carried the crew to the tyrant ship and came back alongside with Tarto, Saerthe and <a href="../dossiers/ezra.html">Ezra</a>. It supplies the scuttle ship that docks in the Tyrant Ship's Cargo intake for shore parties.</p>
+      </div>
+    </div>
+
+    <div class="ent" data-where="realmspace" data-depth="entry">
+      <a class="ent-row" href="bellwether-crow.html">
+        <span class="ent-face dossier-portrait" data-key="bellwether-crow"></span>
+        <span class="ent-name">Bellwether Crow<span class="ent-sub">Ambushed on the Cairn approach a year ago</span></span>
+        <span class="ent-state">Returned</span>
+      </a>
+      <div class="ent-detail">
+        <p>The Caelestis relief run to Cairn Station. Vocath's crew ambushed it for A.T.L.A.S.'s sister, Clint Dashforest went overboard with the device, and Joffrey brought the few survivors home to Strake.</p>
         <div class="ent-links">
-          <a class="chip chip-npc" href="flighty-foundling.html">Entry</a>
-          <a class="chip chip-quest" href="../campaign/voyages/">Voyage 006</a>
+          <a class="chip chip-npc" href="../dossiers/clint.html">Clint Dashforest</a>
+          <a class="chip chip-npc" href="../dossiers/joffrey.html">Joffrey</a>
         </div>
       </div>
     </div>
 
-    <div class="ent" data-sphere="unknown" data-state="lost" data-depth="stub">
+    <div class="ent" data-where="unplaced" data-state="lost simulated" data-depth="entry">
       <a class="ent-row" href="moonraider.html">
-        <span class="ent-face"><span class="face-mono">M</span></span>
-        <span class="ent-name">The Moonraider<span class="ent-sub">Lost with her captain; the Academy&rsquo;s founding simulation</span></span>
+        <span class="ent-face dossier-portrait" data-key="moonraider"></span>
+        <span class="ent-name">Moonraider<span class="ent-sub">Lost with her captain; the Academy's first-day simulation</span></span>
         <span class="ent-state">Lost</span>
       </a>
       <div class="ent-detail">
-        <p>Taken by astral reavers boarding from a pirate galleon. <a href="../dossiers/captain-sardax.html">Captain Sardax</a> died on her own top deck ordering cadets to hold and give no quarter, and every cadet since has run the battle on their first day.</p>
-        <div class="ent-links">
-          <a class="chip chip-npc" href="moonraider.html">Entry</a>
-          <a class="chip chip-npc" href="../dossiers/captain-sardax.html">Captain Sardax</a>
-        </div>
+        <p>Astral reavers boarded her from a pirate galleon. <a href="../dossiers/captain-sardax.html">Captain Sardax</a> died on her top deck ordering the cadets to hold and give no quarter, and every cadet since has run the battle on their first day.</p>
       </div>
     </div>
 
-    <div class="ent" data-sphere="unknown" data-state="lost" data-depth="stub">
+    <div class="ent" data-where="unplaced" data-state="lost simulated" data-depth="entry">
       <a class="ent-row" href="the-derelict.html">
-        <span class="ent-face"><span class="face-mono">D</span></span>
-        <span class="ent-name">The Derelict<span class="ent-sub">Unnamed; the salvage exercise, and the logbook</span></span>
-        <span class="ent-state">Lost</span>
+        <span class="ent-face dossier-portrait" data-key="derelict"></span>
+        <span class="ent-name">Derelict<span class="ent-sub">A real wreck, the prize of the salvage exercise</span></span>
+        <span class="ent-state">Wreck</span>
       </a>
       <div class="ent-detail">
-        <p>The wreck in the asteroid cluster that the salvage exercise was run against. A long-decomposed body in the captain&rsquo;s quarters, and a logbook behind it &mdash; which the crew carries in three copies and nobody has read for meaning.</p>
+        <p>A wreck in an asteroid field, simulated from real records. Boogie carried half of its logbook out of the simulation; the original sits somewhere in Caelestis with pages missing.</p>
+      </div>
+    </div>
+
+    <div class="ent" data-where="krynnspace" data-state="lost" data-depth="entry">
+      <a class="ent-row" href="thessalars-craft.html">
+        <span class="ent-face dossier-portrait" data-key="thessalars-craft"></span>
+        <span class="ent-name">Thessalar's planar craft<span class="ent-sub">A floating city of many tiers, fallen on Fonains</span></span>
+        <span class="ent-state">Fallen</span>
+      </a>
+      <div class="ent-detail">
+        <p>Thessalar held N'ghathrod prisoner aboard and experimented on him with the Rod's seventh piece. It fell about five hundred years ago, raised the Barrier Peaks, and is the Mad Mage's dungeon now, with Thessalar still inside.</p>
         <div class="ent-links">
-          <a class="chip chip-npc" href="the-derelict.html">Entry</a>
-          <a class="chip chip-item" href="../../inventory/entries/derelict-logbook.html">The logbook</a>
+          <a class="chip chip-npc" href="../dossiers/thessalar.html">Thessalar</a>
+          <a class="chip chip-place" href="../realms/fonains.html">Fonains</a>
         </div>
       </div>
     </div>
@@ -142,7 +161,7 @@
   </div>
 
   <div class="dm-footer">
-    Vessels &middot; Setting &middot; Caelestis DM
+    Vessels &middot; World &middot; Caelestis DM
   </div>
 
 </main>

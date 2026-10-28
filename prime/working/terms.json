@@ -345,6 +345,18 @@
     {
       "old": "factions/external.html",
       "new": "factions/index.html#other-powers"
+    },
+    {
+      "old": "artifacts/runekeepers-fragment.html",
+      "new": "artifacts/dissolution-fragment.html"
+    },
+    {
+      "old": "artifacts/transformation-fragment.html",
+      "new": "artifacts/expansion-fragment.html"
+    },
+    {
+      "old": "surveyor-depths",
+      "new": "artifacts/atlas.html#reading-depths"
     }
   ],
   "allow": [

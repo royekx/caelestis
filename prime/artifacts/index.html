@@ -4,22 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Artifacts · Caelestis · DM</title>
+<title>Artifacts &middot; Caelestis &middot; DM</title>
 <link rel="stylesheet" href="../../styles/caelestis.css">
 <link rel="stylesheet" href="../../styles/entity.css">
 <link rel="stylesheet" href="../../styles/dm.css">
 <script src="../scripts/dm-nav.js" defer></script>
 <script src="../scripts/dm-register.js" defer></script>
+<script src="../scripts/portraits.js" defer></script>
 </head>
 <body>
 
 <main class="dm-content">
 
   <header class="dm-page-header">
-    <div class="dm-page-eyebrow">Setting<span class="sep">&middot;</span>Register</div>
+    <div class="dm-page-eyebrow">World<span class="sep">&middot;</span>Register</div>
     <h1>Artifacts</h1>
     <p class="dm-page-lede">
-      Named objects of cosmological weight, and where their pieces are. Most are housings built by finders around <a href="../cosmology/#reach-artifacts">Reach residue</a> &mdash; the device is made, the fragment is not.
+      Objects that are carried, held or used, and where the pieces of the Reach are. Most of these are residue or the housings finders built around it: the device is made, the piece is not. What residue is and why it opens a heart are in <a href="../cosmology/#reach-artifacts">Cosmology</a>; ships, even small ones, are in <a href="../vessels/">Vessels</a>. Holdings, why the pieces lie scattered, and the lesser named objects are below the list.
     </p>
   </header>
 
@@ -31,18 +32,19 @@
     <div class="facet">
       <span class="facet-label">Fragment</span>
       <div class="facet-pills">
-        <button class="filter-tag" type="button" data-frag="boundary">Boundary</button>
         <button class="filter-tag" type="button" data-frag="dissolution">Dissolution</button>
-        <button class="filter-tag" type="button" data-frag="transformation">Transformation</button>
-        <button class="filter-tag" type="button" data-frag="convergence">Convergence</button>
+        <button class="filter-tag" type="button" data-frag="distinction">Distinction</button>
+        <button class="filter-tag" type="button" data-frag="expansion">Expansion</button>
+        <button class="filter-tag" type="button" data-frag="consolidation">Consolidation</button>
+        <button class="filter-tag" type="button" data-frag="determination">Determination</button>
         <button class="filter-tag" type="button" data-frag="other">Not residue</button>
       </div>
     </div>
     <div class="facet">
       <span class="facet-label">Standing</span>
       <div class="facet-pills">
-        <button class="filter-tag" type="button" data-state="located">Located</button>
         <button class="filter-tag" type="button" data-state="party">With the crew</button>
+        <button class="filter-tag" type="button" data-state="located">Located</button>
         <button class="filter-tag" type="button" data-state="loose">Unlocated</button>
       </div>
     </div>
@@ -55,71 +57,140 @@
 
   <div class="register">
 
-    <div class="ent" data-frag="boundary" data-state="located">
+    <div class="ent" data-frag="dissolution" data-state="party">
+      <a class="ent-row" href="dissolution-fragment.html">
+        <span class="ent-face dossier-portrait" data-key="dissolution-fragment"></span>
+        <span class="ent-name">Dissolution fragment<span class="ent-sub">Both pieces, forming in Wan and Tu</span></span>
+        <span class="ent-state">In the twins</span>
+      </a>
+      <div class="ent-detail">
+        <p>The fragment the Runekeepers carry, cycling between whole and broken across its bearers and visible in their chests. The concealment of the Wayfinders' homeworld rides its oscillation. It is leaving the Runekeeper and rebuilding in two halves at once in <a href="../crew/tumak.html">Tumak</a>.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../crew/tumak.html">Tumak</a>
+          <a class="chip chip-npc" href="../factions/runekeepers.html">The Runekeepers</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-frag="distinction" data-state="located loose">
+      <a class="ent-row" href="distinction-fragment.html">
+        <span class="ent-face dossier-portrait" data-key="distinction-fragment"></span>
+        <span class="ent-name">Distinction fragment<span class="ent-sub">Three pieces, each housed in something that finds</span></span>
+        <span class="ent-state">2 housed, 1 unknown</span>
+      </a>
+      <div class="ent-detail">
+        <p>Every Distinction piece finds or reveals something: it tells one thing apart from everything else. Two of its pieces are housed in A.T.L.A.S. and its sister; the third is unknown, and it finds something too.</p>
+      </div>
+    </div>
+
+    <div class="ent" data-frag="distinction" data-state="located">
       <a class="ent-row" href="atlas.html">
-        <span class="ent-face"><span class="face-mono">A</span></span>
-        <span class="ent-name">A.T.L.A.S.<span class="ent-sub">The World Surveyor &mdash; renders worlds as holographic models</span></span>
+        <span class="ent-face dossier-portrait" data-key="atlas"></span>
+        <span class="ent-name">A.T.L.A.S.<span class="ent-sub">Renders a world as a chart and reveals its aspects</span></span>
         <span class="ent-state">The Brig</span>
       </a>
       <div class="ent-detail">
-        <p>Boundary-biased, and the only located piece of that fragment. It reads deeper the more its holder understands, which makes it a measure of the reader as much as the world.</p>
-        <p><strong>It is a compass and nobody has noticed.</strong> Pieces of one fragment pull toward each other, so A.T.L.A.S. points at the only other Boundary piece in existence.</p>
+        <p>A brass-and-glass instrument around a Distinction piece. A world's heart is one of the aspects it reveals, and a reader sees as deep as their understanding allows. Caelestis holds it in <a href="../locations/caelestis.html#brig">the Brig</a> as an antique navigational instrument. It pulls toward its two sisters.</p>
       </div>
     </div>
 
-    <div class="ent" data-frag="convergence" data-state="loose">
+    <div class="ent" data-frag="distinction" data-state="loose">
+      <a class="ent-row" href="atlas-sister.html">
+        <span class="ent-face dossier-portrait" data-key="atlas-sister"></span>
+        <span class="ent-name">A.T.L.A.S.'s sister<span class="ent-sub">Finds magic items, and beneath that, residue</span></span>
+        <span class="ent-state">On Fonains</span>
+      </a>
+      <div class="ent-detail">
+        <p>A device Caelestis held around another Distinction piece. Vocath's crew ambushed the <a href="../vessels/bellwether-crow.html">Bellwether Crow</a> for it, and Clint Dashforest carried it through a color pool to Fonains, where it is now.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../dossiers/clint.html">Clint Dashforest</a>
+          <a class="chip chip-place" href="../realms/fonains.html">Fonains</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent" data-frag="expansion" data-state="loose">
+      <a class="ent-row" href="expansion-fragment.html">
+        <span class="ent-face dossier-portrait" data-key="expansion-fragment"></span>
+        <span class="ent-name">Expansion fragment<span class="ent-sub">Five pieces, none located</span></span>
+        <span class="ent-state">Unlocated</span>
+      </a>
+      <div class="ent-detail">
+        <p>The residue of the Axiom that spreads things apart. Its five pieces lie outside the Erevos Galaxy, and none has been located.</p>
+      </div>
+    </div>
+
+    <div class="ent" data-frag="consolidation" data-state="party located loose">
       <a class="ent-row" href="rod-of-seven-parts.html">
-        <span class="ent-face"><span class="face-mono">R</span></span>
-        <span class="ent-name">The Rod of Seven Parts<span class="ent-sub">Three pieces accounted for, four loose</span></span>
+        <span class="ent-face dossier-portrait" data-key="rod"></span>
+        <span class="ent-name">Rod of Seven Parts<span class="ent-sub">The Consolidation fragment, seven pieces each known by its working</span></span>
         <span class="ent-state">3 of 7</span>
       </a>
       <div class="ent-detail">
-        <p>Convergence-biased. Each accounted piece is known by its working rather than by where it sits.</p>
-        <p><strong>Assembling it is the sharpest trap on the board.</strong> Finishing the Rod manufactures the one object that opens the First Heart without any of Vecna&rsquo;s infrastructure &mdash; the heroic version of that quest and the catastrophic one are the same quest.</p>
+        <p>The crew carries the fourth piece, keyed to regenerate, in the Lantern of Flourishing. Xanathar holds the fifth, and Thessalar the seventh, keyed to simulacrum and the root of the taking. Four are loose. A Consolidation piece feels the other six.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../dossiers/thessalar.html">Thessalar</a>
+          <a class="chip chip-npc" href="../factions/vthorama.html#the-taking">The taking</a>
+        </div>
       </div>
     </div>
 
-    <div class="ent" data-frag="dissolution" data-state="party">
-      <a class="ent-row" href="runekeepers-fragment.html">
-        <span class="ent-face"><span class="face-mono">D</span></span>
-        <span class="ent-name">The Runekeepers&rsquo; fragment<span class="ent-sub">All three Dissolution pieces, whole</span></span>
-        <span class="ent-state">Whole</span>
-      </a>
-      <div class="ent-detail">
-        <p>The only fragment anyone has assembled &mdash; and it is assembled <em>in a person</em>. <a href="../crew/tumak.html">Tumak</a> is one person in two bodies, which makes a first-key threshold something walking around with the crew, unremarked by anyone including him.</p>
-      </div>
-    </div>
-
-    <div class="ent" data-frag="convergence" data-state="located">
+    <div class="ent" data-frag="consolidation" data-state="party">
       <a class="ent-row" href="containment-engine.html">
-        <span class="ent-face"><span class="face-mono">C</span></span>
-        <span class="ent-name">Containment Engine, Fourth Series<span class="ent-sub">A housing built around a piece of the Rod</span></span>
-        <span class="ent-state">With the crew</span>
+        <span class="ent-face dossier-portrait" data-key="containment-engine"></span>
+        <span class="ent-name">Lantern of Flourishing<span class="ent-sub">Ostekk's Containment Engine, around the Rod's fourth piece</span></span>
+        <span class="ent-state">Tumak's bag</span>
       </a>
       <div class="ent-detail">
-        <p>Built by <a href="../dossiers/ostekk.html">Ostekk</a>, who worked out what it could do without ever working out what the piece was. Taken from <a href="../vessels/tyrant-ship.html">the tyrant ship</a> in V006 and carried by Tumak, and extractable &mdash; the Engine is not built to survive losing it.</p>
+        <p>A small iron lamp that mends bodies, constructs better than the living, three charges a day. Built by <a href="../dossiers/ostekk.html">Ostekk</a>, stolen by Vaelorix, taken from Vaelorix's body by the crew and carried hidden by Tumak. The piece is extractable; the Engine is not built to survive losing it.</p>
+      </div>
+    </div>
+
+    <div class="ent" data-frag="determination" data-state="loose">
+      <a class="ent-row" href="determination-fragment.html">
+        <span class="ent-face dossier-portrait" data-key="determination-fragment"></span>
+        <span class="ent-name">Determination fragment<span class="ent-sub">Eleven pieces, none ever found</span></span>
+        <span class="ent-state">Unlocated</span>
+      </a>
+      <div class="ent-detail">
+        <p>The residue of the Axiom that holds every outcome must be decided. Its eleven pieces lie outside the Erevos Galaxy, and none has ever been found.</p>
+      </div>
+    </div>
+
+    <div class="ent" data-state="located">
+      <a class="ent-row" href="../factions/vthorama.html">
+        <span class="ent-face dossier-portrait" data-key="vthorama"></span>
+        <span class="ent-name">The colony's residue piece<span class="ent-sub">Carried by the Vth'orama to open hearts</span></span>
+        <span class="ent-state">With the colony</span>
+      </a>
+      <div class="ent-detail">
+        <p>Vecna's side holds one residue piece, and N'ghathrod's colony carries it from world to world to open hearts. Taken from them, it leaves N'ghathrod to win it back or find another before he can open another heart. It has no entry of its own.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../factions/vthorama.html">The Vth'orama</a>
+          <a class="chip chip-quest" href="../opposition/vecna.html#residue-piece">Opposition: Vecna</a>
+        </div>
       </div>
     </div>
 
     <div class="ent" data-frag="other" data-state="party">
       <a class="ent-row" href="fonains-shard.html">
-        <span class="ent-face"><span class="face-mono">F</span></span>
-        <span class="ent-name">The Fonains shard<span class="ent-sub">A piece of the original Monolith, inside Boogie</span></span>
+        <span class="ent-face dossier-portrait" data-key="fonains-shard"></span>
+        <span class="ent-name">Fonains shard<span class="ent-sub">A piece of the Fonains Monolith, inside Boogie</span></span>
         <span class="ent-state">In Boogie</span>
       </a>
       <div class="ent-detail">
-        <p>Monolith matter rather than Reach residue, so it answers to none of the fragment rules. It is the source of the Pulse, which <a href="../crew/boogie.html">Boogie</a> reads as his own rhythm.</p>
+        <p>Monolith matter, not residue, so the fragment rules pass it by. It still archives, toward Tharizdun, and it is the source of the Pulse, which <a href="../crew/boogie.html">Boogie</a> reads as his own rhythm.</p>
       </div>
     </div>
 
-    <div class="ent" data-frag="transformation" data-state="loose">
-      <a class="ent-row" href="transformation-fragment.html">
-        <span class="ent-face"><span class="face-mono">T</span></span>
-        <span class="ent-name">The Transformation fragment<span class="ent-sub">Five pieces, none located</span></span>
-        <span class="ent-state">Unlocated</span>
+    <div class="ent" data-frag="other" data-state="party">
+      <a class="ent-row" href="faelight-spore.html">
+        <span class="ent-face dossier-portrait" data-key="faelight-spore"></span>
+        <span class="ent-name">Faelight spore<span class="ent-sub">A fungus that throws a cloud of faerie light</span></span>
+        <span class="ent-state">The Garden</span>
       </a>
       <div class="ent-detail">
-        <p>Five pieces, nowhere anyone has written down. The cleanest hook in the set and the most portable, because a Transformation piece can be found wherever one is needed. <span class="dm-tag is-open">Stub</span></p>
+        <p>A specimen from Vaelorix's collection, growing in the <a href="../vessels/tyrant-ship.html#garden">Tyrant Ship's Garden</a>. Fed a spell slot, it coats everything nearby in cold light, and it works inside an anti-magic field.</p>
       </div>
     </div>
 
@@ -128,62 +199,69 @@
   </div>
 
   <details class="dm-collapse-section" id="how-the-set-works">
-    <summary><h2>How the set works</h2></summary>
+    <summary><h2>Holdings</h2></summary>
     <div class="dm-collapse-section-body">
-
       <p>
-        Four fragments. Seventeen pieces. Two of them are located, and that number has stood for a long time.
+        The Reach left five fragments of residue, one for each Axiom, and each broke into a prime number of pieces. Pieces of one fragment draw toward each other; pieces of different fragments are indifferent. A Distinction piece points toward its two siblings, and a Consolidation piece feels six, a direction and a rough sense of how many. The Erevos Galaxy holds pieces of three fragments, Consolidation, Dissolution and Distinction, both by chance and by that pull.
       </p>
-
+      <div class="dm-table-scroll">
       <table>
-        <thead><tr><th>Fragment</th><th>Pieces</th><th>Located</th><th>Where</th></tr></thead>
+        <thead><tr><th>Fragment</th><th>Pieces</th><th>Where they are</th></tr></thead>
         <tbody>
-          <tr><td>Boundary</td><td>2</td><td>1</td><td><a href="atlas.html">A.T.L.A.S.</a>, in the Brig. The second is unlocated, and the first points at it.</td></tr>
-          <tr><td>Dissolution</td><td>3</td><td>3</td><td><a href="runekeepers-fragment.html">The Runekeepers&rsquo; fragment</a>, whole, and changing hands.</td></tr>
-          <tr><td>Transformation</td><td>5</td><td>0</td><td>Nowhere anyone has written down.</td></tr>
-          <tr><td>Convergence</td><td>7</td><td>3</td><td>Three pieces of <a href="rod-of-seven-parts.html">the Rod</a>, each known by its working. Four are loose.</td></tr>
+          <tr><td><a href="dissolution-fragment.html">Dissolution</a></td><td>2</td><td>Both, rebuilding in Wan and Tu.</td></tr>
+          <tr><td><a href="distinction-fragment.html">Distinction</a></td><td>3</td><td><a href="atlas.html">A.T.L.A.S.</a> in the Brig at Caelestis; <a href="atlas-sister.html">its sister</a> on Fonains; the third unknown.</td></tr>
+          <tr><td><a href="expansion-fragment.html">Expansion</a></td><td>5</td><td>None located.</td></tr>
+          <tr><td><a href="rod-of-seven-parts.html">Consolidation</a></td><td>7</td><td>The fourth with the crew, in the <a href="containment-engine.html">Lantern of Flourishing</a>; the fifth with Xanathar; the seventh with Thessalar; four loose.</td></tr>
+          <tr><td><a href="determination-fragment.html">Determination</a></td><td>11</td><td>None found, ever.</td></tr>
         </tbody>
       </table>
-
-      <h3>Pieces of a fragment pull toward each other</h3>
+      </div>
       <p>
-        <strong>This is the tracking mechanic.</strong> Pieces of the <em>same</em> fragment draw toward one another; pieces of different fragments are indifferent. A Boundary piece points toward its one sibling; a Convergence piece feels six &mdash; a direction and a rough sense of how many, which is why anyone holding one knows there is a great deal more out there.
+        Vecna's side holds one piece, which N'ghathrod's colony carries from world to world to open hearts. Seekers chapters hunt for more, and Vecna steers them: he lets each chapter believe that finding these artifacts will lead it to what it seeks, or that the artifacts are what it seeks. The <a href="../factions/restorers.html">Restorers</a> want every piece studied, and hold that restoring a world takes all five fragments. Everything else is scattered. Pieces stay scarce, and every piece is a race.
       </p>
-
-      <h3>The two thresholds</h3>
-      <table>
-        <thead><tr><th>Assembly</th><th>What it does</th></tr></thead>
-        <tbody>
-          <tr><td>One fragment made whole</td><td>Opens a door. Any <a href="../cosmology/#world-hearts">Atrium</a>, including the <a href="../cosmology/#first-heart">First Heart</a>'s.</td></tr>
-          <tr><td>All four fragments</td><td>Bends reality. Enough axiomity to put a thing back into being, and nowhere near enough to rewrite the world. Nobody has confirmed it.</td></tr>
-        </tbody>
-      </table>
-
-      <h3>Why they are scattered and hidden</h3>
-      <p>
-        Millennia of separate finders, each of whom worked out roughly what they had and then obscured that they had it. The pattern recurs across every documented housing: <strong>people who learn what they are holding stop telling anyone.</strong> That is why provenance trails run short and institutions hold so little.
-      </p>
-
     </div>
   </details>
 
-  <details class="dm-collapse-section" id="pending-objects">
-    <summary><h2>Named and unwritten <span class="dm-tag is-open">Stub</span></h2></summary>
+  <details class="dm-collapse-section" id="scattered">
+    <summary><h2>Why they are scattered and hidden</h2></summary>
     <div class="dm-collapse-section-body">
       <p>
-        Objects referenced across the wiki that have no entry yet. Each earns a page the moment there is more than a name to put on it.
+        The residue spread across the five galaxies when the Reach world collapsed into Rykoe. Since then it has passed through the hands of separate finders over long ages, each of whom worked out roughly what they had and then hid that they had it. People who learn what they are holding stop telling anyone, which is why provenance trails run short and institutions hold so little.
       </p>
+      <p>
+        A finder builds a housing around a piece that does one impossible thing, to express that thing as something usable. The device is made; the piece is not. Every housing hides what it really does behind a lesser use, the way A.T.L.A.S.'s sister passes for an item-finder.
+      </p>
+    </div>
+  </details>
+
+  <details class="dm-collapse-section" id="other-objects">
+    <summary><h2>Other named objects</h2></summary>
+    <div class="dm-collapse-section-body">
       <ul>
-        <li><em>Mirt&rsquo;s wardrobe</em> &mdash; opens onto a place beyond H&rsquo;Catha, gifted by Zerathis.</li>
-        <li><em>The marked crate</em> &mdash; routes through Mr. Blip toward Toril and H&rsquo;Catha.</li>
-        <li><em>Saerthe&rsquo;s miniature ship</em> &mdash; stolen, and the same model as the one inside Boogie.</li>
-        <li><em>The derelict logbook</em> &mdash; came out of a simulation as a real object. See <a href="../vessels/the-derelict.html">The Derelict</a>.</li>
+        <li><strong>Mirt's wardrobe.</strong> It opens onto a bounded stretch of astral night with a floor to stand on, a replica of the sky seen from <a href="../locations/virenspace.html">Virenspace</a> and a constellation visible from there. <a href="../dossiers/zerathis.html">Zerathis</a> gave it to <a href="../dossiers/mirt.html">Mirt</a>, and it stands in his quarters.</li>
+        <li><strong>The marked crate.</strong> A crate at the Sky Dock bearing Vocath's mark, the eye in a wheel. Something fills it, nothing living, and its contents route through Mr. Blip toward Toril and H'Catha.</li>
+        <li><strong>Saerthe's miniature ship.</strong> <a href="../dossiers/saerthe-abizjn.html">Saerthe</a>'s personal miniature spelljamming ship is missing from the Academy, and half of it is inside <a href="../crew/boogie.html">Boogie</a>.</li>
+        <li><strong>The derelict logbook.</strong> The logbook from the <a href="../vessels/the-derelict.html">Derelict</a>'s captain's quarters, in two halves; Boogie holds one. The original sits somewhere in Caelestis with pages missing.</li>
+        <li><strong>The Vocath Arcane Rod.</strong> A sigil-engraved metal rod built to feed on ambient magic until it detonates, now spent. It bears Vocath's mark. Gregory pulled it from the wall of the wrecked simulation chamber, and Saerthe holds it for study.</li>
+        <li><strong>The Hand of Vecna, the Eye of Vecna and the Book of Vile Darkness.</strong> Artifacts bearing or tied to <a href="../dossiers/vecna.html">Vecna</a>'s name, all three in this cosmos.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="dm-collapse-section" id="dm-notes">
+    <summary><h2>DM notes</h2></summary>
+    <div class="dm-collapse-section-body">
+      <h3>Still to decide</h3>
+      <ul>
+        <li>What a fragment made whole does is not set. A whole fragment does not open the First Heart.</li>
+        <li>Which fragment the colony's residue piece belongs to is not set. The Erevos Galaxy holds only Consolidation, Dissolution and Distinction pieces, and both Dissolution pieces are in the twins.</li>
+        <li>Where the Hand, the Eye and the Book of Vile Darkness are, and whether any has reached Caelestis, is not set.</li>
       </ul>
     </div>
   </details>
 
   <div class="dm-footer">
-    Artifacts &middot; Setting &middot; Caelestis DM
+    Artifacts &middot; World &middot; Caelestis DM
   </div>
 
 </main>

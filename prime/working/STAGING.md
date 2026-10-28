@@ -24,6 +24,7 @@ when a ruling changes; delete it once the page carries it. See
 - The craft is a megadungeon (the Mad Mage dungeon). Daoine Gloine is a broken-off piece of it. The Thessalkraken landed separately in the sea and is the Drowned God's kraken.
 - The craft's gems formed where Olhydra and Ogrémoch collided. They are not Reach residue.
 - Benedetta fell ill at Rihiri's birth, from Vanifer's slow siphoning for the Bloodstone, and died two years later.
+- done: the craft, its gems, the fall, Daoine Gloine and the Thessalkraken are on vessels/thessalars-craft.html (section 4). realms/fonains.html, dossiers/thessalar.html and the Fonains doc still need them.
 
 ### Tharizdun (working/tharizdun.md, realms/fonains.html, dossiers/thessalar.html, Fonains doc)
 - The Day of Chaos is when the Princes of Elemental Evil break the barriers so Tharizdun can leave her prison.
@@ -35,6 +36,7 @@ when a ruling changes; delete it once the page carries it. See
 - Shothragot, her avatar, was bound to that temple. Its true vestige may still be there, and Giorge may be trying to reach it.
 - Lola's Boys, by taking the gems in the year 425, brought down the craft. In doing so they freed N'ghathrod and landed Tharizdun's foothold on their own world.
 - The planar craft was a vast floating city of many tiers. Where it came from is unknown.
+- done: the temple aboard, the gems, the crash and the Eye's arrival are on vessels/thessalars-craft.html (section 4).
 
 ### The Princes (timeline, realms/fonains.html, Fonains doc, the Cre'Tez line)
 - Long ago, about twelve thousand years before now, the Princes of Elemental Evil rose on Fonains. The six gods of the Accordance stepped in, helped forge the four weapons, and sealed the Princes away with the weapons as their keys.
@@ -47,6 +49,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ### The Fonains shards (realms/fonains.html, artifacts/fonains-shard.html, timeline)
 - When the Monolith broke, four great shards fell, and many smaller shards came from them. Three hundred and thirty-three of the small shards are black. The rest took colors close to their elemental affinities.
+- done: artifacts/fonains-shard.html (section 4). realms/fonains.html and the timeline still need it.
 
 ### The Cre'Tez (Fonains doc, realms/fonains.html)
 - The Cre'Tez father is Cenvinzo. He is barely alive, a shadow of himself, held captive somewhere and bound to Vanifer.
@@ -118,15 +121,9 @@ when a ruling changes; delete it once the page carries it. See
 - A galaxy's core can be woken, but there is no one way to do it. Vecna, an archmage older than his godhood, does it with spellwork: an inscription, a figure drawn in linked heart worlds across the galaxy. The beings working the other galaxies have their own methods. World hearts link only to worlds in their own galaxy; only a woken core reaches beyond it.
 - Vecna works GAL-01's core. In each of the other galaxies, another being works its own core toward the same end. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and what happens in GAL-01 decides them.
 
-### Residue holdings (artifacts/index.html, opposition/vecna.html, factions/vthorama.html)
-- Vecna's side holds one residue piece: the colony carries it from world to world to open hearts. If the crew ever takes it, N'ghathrod must win it back or find another before he can open another heart.
-- Seekers chapters hunt for more. Vecna steers them: he lets each chapter believe that finding these artifacts will lead it to what it seeks, or that the artifacts are what it seeks.
-- Everything else is scattered. The crew carries the fourth Rod piece in the Lantern of Flourishing, kept hidden. Thessalar holds the seventh. The twins carry the Dissolution fragment. The rest are loose or unknown.
-- Pieces stay scarce. The crew may never gather a full fragment, and every piece is a race.
-
 ### N'ghathrod now (campaign/colony/, dossiers/nghathrod.html)
 - N'ghathrod is working now on all four parts of his plan: planting the taken in key positions, finding hearts, opening them, and seeking links.
-- Vth'oramu is hunkered down on the periphery, in the dark between systems. It works as a mothership: skiffs go out from it to the worlds in that vicinity, and it stays where no one looks.
+- Vth'oramu is hunkered down on the periphery, in the dark between systems. It works as a mothership: skiffs go out from it to the worlds in that vicinity, and it stays where no one looks. (done: vessels/vthoramu.html, section 4.)
 - He has a broad set of target worlds in that vicinity. (DM: build each world's specifics as the crew nears it.)
 - By the time the crew graduates, his landed operations have begun to ripple outward at contract scale: taken in small positions, odd disappearances, a station or crew acting strangely. These are the first things the crew meets as Driftwardens. (DM: this is the shape of Arc 1 after graduation and the run into Arc 2.)
 
@@ -156,6 +153,7 @@ when a ruling changes; delete it once the page carries it. See
 - The active push to find and open hearts began only in the past few decades.
 - The residue piece Thessalar experimented with was the seventh Rod piece, simulacrum. It is why N'ghathrod's tadpoles make copies of him, and it is the root of the taking.
 - N'ghathrod's long life comes from his taken. A portion of every taken person is tithed upward to him, the way a hive feeds its center, and it extends his life. The more he takes, the longer he lasts.
+- done: the capture, the experiments, the seventh piece and the escape are on artifacts/rod-of-seven-parts.html and vessels/thessalars-craft.html (section 4). dossiers/nghathrod.html, the timeline and rules/ still need them.
 - If N'ghathrod's true body dies, the taken do not die. Part of him lives on in each of them. His lieutenants are closest to him; each rung down the colony is further away. Given enough time, one of them could grow toward becoming another N'ghathrod. The taken lose a part of themselves when he dies.
 
 ### Vth'oramu (dossiers/vthoramu.html, factions/vthorama.html)
@@ -165,11 +163,12 @@ when a ruling changes; delete it once the page carries it. See
 - The tithe runs one way. Every taken person comes from N'ghathrod's tadpoles. As each grows, a portion of it passes up through the rungs of the taken, and all of it ends with N'ghathrod. The flow is paracausal, not physical.
 - The dreadnought's tether is an astral cord, a silver line running off to somewhere unknown. Its physical tail is immensely long, which is part of why it could never hide inside a system.
 - Its mouth draws things in, the way an astral dreadnought's mouth opens on its inner demiplane. Its great weapon is the reverse: a pulse pressed outward from every side of its body, and everything within range is teleported away. It takes a long time to charge and is rarely used.
+- done: vessels/vthoramu.html carries the ship as a place, the move off the Cairn bearing, the siege, the tail and cord, the mouth and the pulse (section 4). Still waiting: dossiers/vthoramu.html (section 5).
 
 ### Thessalar (dossiers/thessalar.html)
-- Thessalar is Halaster Blackcloak, and he is still in the planar craft. His records of the work on N'ghathrod are there too.
+- Thessalar is Halaster Blackcloak, and he is still in the planar craft. His records of the work on N'ghathrod are there too. (done: vessels/thessalars-craft.html, section 4.)
 
-### Clint Dashforest (dossiers/clint.html, campaign/colony/, timeline; done on factions/fleet.html and factions/vocath-operation.html, section 2, and on locations/cairn-station.html, locations/astral-sea.html and the chart, section 3)
+### Clint Dashforest (dossiers/clint.html, campaign/colony/, timeline; done on factions/fleet.html and factions/vocath-operation.html, section 2, on locations/cairn-station.html, locations/astral-sea.html and the chart, section 3, and on vessels/bellwether-crow.html and artifacts/atlas-sister.html, section 4)
 - Vocath's crew ambushed the Bellwether Crow for a sister artifact of A.T.L.A.S. that the Crow was carrying. Clint took it and left the ship to draw the boarders off.
 - He steered for a color pool he could see opening, and went through it on purpose. Color pools open and close quickly, and this one carried him through a small pocket of another dimension and spat him out on Fonains, separated from the boarders who followed him in.
 - The Crow's survivors still argue about whether he meant to go through. He did.
@@ -197,12 +196,13 @@ when a ruling changes; delete it once the page carries it. See
 
 ### OSTEKK-2 (dossiers/ostekk-6.html, vessels/tyrant-ship.html)
 - OSTEKK-6 is the only active survivor of Vaelorix's nine units. OSTEKK-2 lies inert on the Hollow Deck. The crew could heal it back to function if they return for it, for example with the Lantern of Flourishing they have kept hidden.
+- done: vessels/tyrant-ship.html and artifacts/containment-engine.html (section 4). Still waiting: dossiers/ostekk-6.html.
 
 ## Crew
 
 ### Gregory (crew/gregory.html; done on factions/fleet.html, section 2, and locations/toril.html, section 3)
 - Gregory comes from the Cogfast Enclave on Lantan, on Toril. He reached Caelestis on a cargo ship.
-- DM: the Lantern becomes Gregory's next anomaly if he investigates it.
+- DM: the Lantern becomes Gregory's next anomaly if he investigates it. (done on artifacts/containment-engine.html, section 4; crew/gregory.html still needs it.)
 
 ### Casey (crew/casey.html, dossiers/polly.html, dossiers/astra-virex.html)
 - The voice Casey hears as Polly is Astra Virex wearing Polly's shape. It grows clearer with each tether.
@@ -222,21 +222,20 @@ when a ruling changes; delete it once the page carries it. See
 - Tharizdun wants nothing specific from Boogie. Tharizdun is not lucid; she is an opportunist. What happens through the shard depends on what Boogie does, and things may come through the current. Boogie's plot is reactive.
 - Boogie sometimes feels corruption leaking into him from the shard: a role-playing beat, not a mechanic.
 - Boogie holds half of the derelict logbook. The other half was in his chest inside the Monolith.
+- done: artifacts/fonains-shard.html and vessels/the-derelict.html (section 4). crew/boogie.html still needs all three.
 
 ### The crew's pasts (crew/, DM principles)
 - The PCs remember where they came from. Their pasts get filled in retroactively; nobody arrived with amnesia.
 
 ## Artifacts and vessels
 
-### The Distinction fragment and A.T.L.A.S.'s sister (artifacts/atlas.html, artifacts/index.html, dossiers/clint.html)
-- The Distinction fragment is in three pieces. Every Distinction piece, in whatever housing, finds or reveals something: it tells one thing apart from everything else.
-- A.T.L.A.S. houses one Distinction piece. It reveals the aspects of a world, and a world's heart is one of them.
-- A.T.L.A.S.'s sister houses another. Caelestis held it as a device, and like every housing it hides what it really does. On the surface it finds magic items, a lesser kind of item-finder, because every enchanted thing carries a faint trace of the Reach. Its true use is finding Reach artifacts. This is what Vocath's crew ambushed the Bellwether Crow to take. Clint carried it through the color pool; it is somewhere on Fonains.
-- The third Distinction piece is unknown. It finds something too.
+### A.T.L.A.S.'s sister (dossiers/clint.html; done on artifacts/, section 4)
+- A.T.L.A.S.'s sister houses another Distinction piece. Caelestis held it as a device, and like every housing it hides what it really does. On the surface it finds magic items, a lesser kind of item-finder, because every enchanted thing carries a faint trace of the Reach. Its true use is finding Reach artifacts. This is what Vocath's crew ambushed the Bellwether Crow to take. Clint carried it through the color pool; it is somewhere on Fonains.
+- done: artifacts/distinction-fragment.html, artifacts/atlas.html, artifacts/atlas-sister.html and the register (section 4). Still waiting: dossiers/clint.html.
 
-### Wan, Tu and the fragment (artifacts/runekeepers-fragment.html, rules/)
-- The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) Homes: artifacts/runekeepers-fragment.html, crew/tumak.html, dossiers/the-runekeeper.html; factions/runekeepers.html carries it already.
-- The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a state neither whole nor broken. The twins are not a key to the First Heart until enough of the stone has rebuilt between them through resolved runes: not before about level 12, early in Arc 3.
+### Wan, Tu and the fragment (crew/tumak.html, dossiers/the-runekeeper.html, rules/; done on artifacts/dissolution-fragment.html, section 4)
+- The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) factions/runekeepers.html and artifacts/dissolution-fragment.html carry it; crew/tumak.html and dossiers/the-runekeeper.html still need it.
+- The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a state neither whole nor broken. (A whole fragment does not open the First Heart; the old gate, "not a key to the First Heart before about level 12, early in Arc 3", lost its object and went to the BACKLOG decide "What a fragment made whole does".)
 
 ## DM principles
 
