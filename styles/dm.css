@@ -801,6 +801,16 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
   background: var(--accent-faint);
   border-bottom-color: var(--panel-rule);
 }
+/* A portrait shows whole: the frame takes the image's own shape. The 4:3
+   frame holds only a monogram. */
+.dm-content .is-wiki .identity-card .portrait-frame:has(img) {
+  aspect-ratio: auto;
+}
+.dm-content .is-wiki .identity-card .portrait-frame img {
+  height: auto;
+  max-height: 34rem;
+  object-fit: contain;
+}
 .dm-content .is-wiki .identity-card .stat-row {
   display: grid;
   grid-template-columns: 6.4rem minmax(0, 1fr);
@@ -2144,6 +2154,7 @@ ul.tr-fact-val li { margin-bottom: 0.25rem; color: var(--text); }
   .dm-content .entry-header.is-wiki { grid-template-columns: minmax(0, 1fr); gap: 1.6rem; }
   .dm-content .is-wiki .identity-card { order: 0; position: static; max-width: none; }
   .dm-content .is-wiki .identity-card .portrait-frame { aspect-ratio: 16 / 9; }
+  .dm-content .is-wiki .identity-card .portrait-frame img { max-height: 70vh; }
 }
 
 @media (max-width: 760px) {
