@@ -80,11 +80,7 @@ when a ruling changes; delete it once the page carries it. See
 - Two of the five lieutenants are properly raised illithids who were captured with N'ghathrod aboard Thessalar's craft. The other three are unthinned: made aboard the craft from bodies Thessalar supplied for his experiments and N'ghathrod's own tadpoles.
 - done: factions/vthorama.html and factions/seekers.html (section 2). Still waiting: dossiers/vthoramu.html and the lieutenants' dossiers.
 
-### Aethris and the sisters (factions/aethris.html, realms/aethris.html, dossiers/beshaba.html, factions/deities.html)
-- The Fortuned are a sect that grew from a temple order of Tymora on Aethris. They are clerics for the most part, and a priest or priestess leads them. They are not the rulers of the whole world.
-- Long ago they cast a generational curse to increase their own fortune: a group of people were made to gather their misfortune. Those people are the Misfortuned.
-- They dress in pristine robes of white and gold, the colours of purity and good fortune.
-- The Fortuned want Sol back alive because he is a component of their unfinished ritual. They do not care about him as a person.
+### Aethris and the sisters (dossiers/beshaba.html; done on factions/aethris.html and factions/deities.html, section 2)
 - Beshaba finds the Fortuned heretical, a spit in her face. She thinks Tymora is fuelling them, and blames her sister for it. On Aethris Beshaba is the lesser of the two, because people favour luck over misfortune, and she calls what the Fortuned do unnatural.
 - Neither sister knows what both of them need: each other. Luck and misfortune are two sides of one coin.
 

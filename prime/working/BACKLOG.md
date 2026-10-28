@@ -1089,26 +1089,10 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ---
 
-### factions/aethris.html
-
-- **[add]** The Prism Ascendant
-  Add to the lead: "The Prism Ascendant is the Monolith that answered Aethris's Zenith. Aethris believes it came from Tymora, as an answer to their ritual of perfection. Its appearance did not end the Zenith: the ritual is unfinished, and Aethris still wants Sol to complete it."
-  src: memory-canon campaign-canon § Player characters (Aethris lines)
-
-- **[add]** Vecna's hand
-  DM-only: Vecna is pushing Aethris's Zenith toward completion. Tymora likely would not want it finished.
-  src: memory-canon campaign-canon § Player characters (Aethris lines)
-
----
-
 ### factions/runekeepers.html
 
 - **[later]** Parked Runekeeper questions
   Parked, not locked: sealing as the inverse of opening; whether sealed worlds are invisible to A.T.L.A.S.; other worlds' own hiding methods; runes as the "finding" half of the art.
-  src: memory-canon open-decisions (Runekeepers line)
-
-- **[add]** The hidden entrance
-  Add to the lead: "The Runekeepers hid their own world's heart entrance." DM: specific to Tumak's world, a sprinkle rather than a rule. Use the entrance term from the Aperture/Atrium ruling.
   src: memory-canon open-decisions (Runekeepers line)
 
 ---

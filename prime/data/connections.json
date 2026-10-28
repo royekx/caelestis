@@ -3823,10 +3823,10 @@
       "label": "The Runekeepers",
       "type": "faction",
       "scope": "caelestis",
-      "summary": "A hidden order of runic transit on an unfindable world.",
+      "summary": "A hidden order of Wayfinders on an unfindable world.",
       "facts": [
         {
-          "t": "The Runekeepers of the Lunarfoot clan practise runic transit, attuning to celestial bodies and through them to their hearts.",
+          "t": "The Runekeepers practise Wayfinding, attuning to places and through them to their hearts; the Lunarfoot clan is among them.",
           "src": "factions/runekeepers.html"
         },
         {
@@ -3971,7 +3971,7 @@
       "label": "The Fortuned",
       "type": "faction",
       "scope": "caelestis",
-      "summary": "Aethris's elite, born marked by Tymora's favour.",
+      "summary": "A sect grown from a temple order of Tymora on Aethris, mostly clerics, whose unfinished ritual began Aethris's Zenith.",
       "facts": [
         {
           "t": "The Fortuned want Sol back as a component of their ritual and do not care about him as a person.",
@@ -3980,6 +3980,18 @@
         {
           "t": "The Fortuned commissioned the Crystalline Retrieval Construct after Sol's escape.",
           "src": "dossiers/crc.html"
+        },
+        {
+          "t": "Long ago the Fortuned cast a generational curse that made a group of people gather their misfortune: the Misfortuned.",
+          "src": "factions/aethris.html"
+        },
+        {
+          "t": "They are led by a priest or priestess and are not the rulers of the whole world.",
+          "src": "factions/aethris.html"
+        },
+        {
+          "t": "They dress in pristine robes of white and gold.",
+          "src": "factions/aethris.html"
         }
       ]
     },
@@ -7148,8 +7160,8 @@
     {
       "s": "fortuned",
       "t": "aethris",
-      "rel": "rule",
-      "src": "realms/aethris.html"
+      "rel": "keep their Temple on",
+      "src": "factions/aethris.html"
     },
     {
       "s": "prism-ascendant",

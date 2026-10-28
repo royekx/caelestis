@@ -4,79 +4,190 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Runekeepers &middot; Caelestis &middot; DM</title>
+<title>The Runekeepers &middot; Caelestis &middot; DM</title>
 <link rel="stylesheet" href="../../styles/caelestis.css">
 <link rel="stylesheet" href="../../styles/entity.css">
 <link rel="stylesheet" href="../../styles/dm.css">
 <script src="../scripts/dm-nav.js" defer></script>
 <script src="../scripts/portraits.js" defer></script>
+<script src="../scripts/dm-tabs.js" defer></script>
 </head>
 <body>
 
 <main class="dm-content">
 
   <header class="dm-page-header">
-    <div class="dm-page-eyebrow">Faction<span class="sep">&middot;</span>Interworld</div>
-    <h1>Runekeepers</h1>
+    <div class="dm-page-eyebrow">Faction<span class="sep">&middot;</span>A hidden world</div>
+    <h1>The Runekeepers</h1>
   </header>
 
-  <div class="voyage-nav-bar"><a class="voyage-nav-link" href="order.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Order of the All-Father</span></a><a class="voyage-nav-center" href="index.html">Realms</a><a class="voyage-nav-link" href="seekers.html"><span class="nav-label">The Seekers</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
+  <div class="voyage-nav-bar"><a class="voyage-nav-link" href="order.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Order of the All-Father</span></a><a class="voyage-nav-center" href="index.html">Factions</a><a class="voyage-nav-link" href="seekers.html"><span class="nav-label">The Seekers</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
 
-  <div class="entry-header">
-    <div class="identity-card">
+  <div class="entry-header is-wiki">
+    <aside class="identity-card" aria-label="The Runekeepers at a glance">
+      <div class="portrait-frame dossier-portrait" data-key="runekeepers"></div>
       <div class="stat-card">
-        <div class="stat-row"><span class="stat-key">Reach</span><span class="stat-val stat-val-long">One hidden world, and its Wayfinders</span></div>
-        <div class="stat-row"><span class="stat-key">Posture</span><span class="stat-val stat-val-long">Allied</span></div>
-        <div class="stat-row"><span class="stat-key">Practice</span><span class="stat-val stat-val-long">Runic transit</span></div>
-        <div class="stat-row"><span class="stat-key">Open</span><span class="stat-val stat-val-long">The order&rsquo;s own name for itself</span></div>
+        <div class="stat-row"><span class="stat-key">Kind</span><span class="stat-val stat-val-long">A hidden order of Wayfinders</span></div>
+        <div class="stat-row"><span class="stat-key">Serves</span><span class="stat-val stat-val-long">Their homeworld, and its concealment</span></div>
+        <div class="stat-row"><span class="stat-key">Leader</span><span class="stat-val stat-val-long"><a href="../dossiers/the-runekeeper.html">The Runekeeper</a></span></div>
+        <div class="stat-row"><span class="stat-key">Seat</span><span class="stat-val stat-val-long"><a href="../realms/wayfinders-homeworld.html">The Wayfinders' homeworld</a>, unnamed</span></div>
+        <div class="stat-row"><span class="stat-key">Reach</span><span class="stat-val stat-val-long">One hidden world, and the Wayfinders sent out from it</span></div>
+        <div class="stat-row"><span class="stat-key">Ranks</span><span class="stat-val stat-val-long">Wayfinder with a partial mark; Wayfinder with a complete mark; the Runekeeper</span></div>
+        <div class="stat-row"><span class="stat-key">Device</span><span class="stat-val stat-val-long">A ring of runes around a crescent</span></div>
+        <div class="stat-row"><span class="stat-key">To Caelestis</span><span class="stat-val stat-val-long">Unknown to it; two of its Wayfinders are cadets there</span></div>
+      </div>
+    </aside>
+
+    <div class="entry-info">
+      <div class="entry-name">The Runekeepers</div>
+      <div class="entry-sub">A small, hidden order on a world that keeps itself unfindable, and the Wayfinders it sends out with no map home.</div>
+
+      <div class="pill-tabs" role="tablist" data-pill-group aria-label="The Runekeepers sections">
+        <button class="pill-tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true">About</button>
+        <button class="pill-tab" role="tab" id="tab-dm" aria-controls="panel-dm" aria-selected="false">DM notes</button>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-about" aria-labelledby="tab-about">
+        <p>
+          The Runekeepers are a small, hidden order on the <a href="../realms/wayfinders-homeworld.html">Wayfinders' homeworld</a>, a world that defends itself by being unfindable. They practise <a href="../glossary/#wayfinding">Wayfinding</a>: marking places in ways that attune the practitioner to them, and through them to their hearts. In the wider cosmos their existence is rumour at best.
+        </p>
+
+        <h4>Beliefs</h4>
+        <p>
+          A way home that lives only in a person cannot be taken off a chart. The order sends its Wayfinders into the wider cosmos with no map and no name, and its custom is that home must be recognised again through remembered sensory and cultural fragments. The Runekeeper holds this as doctrine, not cruelty.
+        </p>
+        <p>
+          The Lunarfoot clan tells a tale, <em>The Becoming</em>, in which something came looking for their world, and the world folded itself around its people and gave them runes as gifts.
+        </p>
+
+        <h4>Structure and ranks</h4>
+        <p>
+          The order draws on the homeworld's clans; the Lunarfoot clan is one of them. At its head is the Runekeeper, a title held by one living practitioner at a time, whose own body bears the inscription that holds the world's concealment.
+        </p>
+        <h5 id="wayfinders">Wayfinders</h5>
+        <p>
+          Members of the order sent out into the wider cosmos for assigned purposes: to learn, to recover, to witness, or to bring something back. A Wayfinder carries a partial mark, the inscription their training has earned, and it grows as their understanding does. A Wayfinder with a complete mark can attune to a celestial body by ritual and time, opening a route between attuned points.
+        </p>
+
+        <h4>Operations</h4>
+        <p>
+          The Runekeeper's ritual withdraws the homeworld from cosmological sight. The working draws on the oscillation of the <a href="../artifacts/runekeepers-fragment.html">Dissolution fragment</a> the order keeps, so the concealment rides a cycle and the ritual points it. The world sits where it has always sat, reachable by anyone who knows the way back. The Runekeepers also hid their own world's <a href="../glossary/#atrium">Atrium</a>, its heart's one entrance.
+        </p>
+        <p>
+          Wayfinding is not Weave-based, so a <em>Forbiddance</em>, which is set against Weave-based teleportation, does not stop it. A Wayfinder can attune only to bodies with a heart; a built installation does not qualify.
+        </p>
+
+        <h4>How they look</h4>
+        <p>
+          Runekeepers dress as their clans do. A Wayfinder's mark is on the skin, and its runes surface in the presence of cosmological threat. The order's device is a ring of runes around a crescent.
+        </p>
+
+        <h4>Members</h4>
+        <div class="dossier-list" data-pagefind-ignore>
+          <details class="dossier-row" id="runekeeper">
+            <summary>
+              <div class="dossier-portrait" data-key="runekeeper"></div>
+              <div class="dossier-id">
+                <div class="dossier-name">The Runekeeper</div>
+                <div class="dossier-role">Holder of the concealment</div>
+              </div>
+              <div class="dossier-detail">Carries the ritual that hides a world, and is dimming.</div>
+            </summary>
+            <div class="dossier-row-body">
+              <p>
+                The fragment is leaving him and forming in Wan and Tu, and the loss shows. He and the order lack a word for what is happening; they know only that the world's protection must continue. He believes the cost is his to carry. <a href="../dossiers/the-runekeeper.html">Dossier &rarr;</a>
+              </p>
+            </div>
+          </details>
+          <details class="dossier-row" id="tumak">
+            <summary>
+              <div class="dossier-portrait" data-key="tumak"></div>
+              <div class="dossier-id">
+                <div class="dossier-name">Wan and Tu (Tumak Swan)</div>
+                <div class="dossier-role">Partial Wayfinders, Lunarfoot clan</div>
+              </div>
+              <div class="dossier-detail">Twin halflings, disguised as one cadet at Caelestis.</div>
+            </summary>
+            <div class="dossier-row-body">
+              <p>
+                Sent out because the Dissolution fragment began forming in both of them. <a href="../crew/tumak.html">Crew page &rarr;</a>
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <h4>Relationships</h4>
+        <h5><a href="fleet.html">Caelestis</a></h5>
+        <p>
+          Caelestis does not know the order exists. Two of its Wayfinders are cadets there, as one person.
+        </p>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-dm" aria-labelledby="tab-dm" hidden>
+        <h4>What's hidden</h4>
+        <ul>
+          <li><strong>The fragment.</strong> The concealment depends on an object nobody in the order has identified as residue. It cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a state neither whole nor broken.</li>
+          <li><strong>Going home.</strong> When Wan and Tu both arrive home, the three poles stall the cycle and a Zenith begins: going home ends the concealment.</li>
+          <li><strong>The Becoming</strong> is Lunarfoot belief. The runes come from the Dissolution fragment, not from a gift.</li>
+          <li><strong>The fade</strong> runs on a soft clock: rising pressure, no date.</li>
+          <li><strong>Tumak</strong> knows of the previous Runekeeper and met him once, briefly. He does not understand what that meeting was.</li>
+        </ul>
+
+        <h4>How to run them</h4>
+        <p>
+          The order is competent and its doctrine is sound; the thing it stands on is a piece of the Reach world that none of them can name. Asked about the inscription, a Runekeeper answers honestly in the order's terms, which are wrong about the mechanism.
+        </p>
+
+        <h4>Their arc</h4>
+        <p>
+          The twins are not a key to the First Heart until enough of the stone has rebuilt between them through resolved runes: not before about level 12, early in Arc 3. The rules are on <a href="../rules/#runekeeper">Rules</a>.
+        </p>
+
+        <h4>Threads</h4>
+        <ul>
+          <li>N'ghathrod is made of joins, and Dissolution unmakes joins. The fragment forming in Tumak is a counter to him, and nobody holding it knows.</li>
+        </ul>
+
+        <h4>Still to decide</h4>
+        <ul>
+          <li>The order's own name for itself is not set.</li>
+          <li>Whether the Runekeepers are one people, halflings like the Lunarfoot clan, or many, is not set.</li>
+          <li>The device and dress are sketched, for Korey to confirm.</li>
+          <li>Parked, not settled: whether sealing is the inverse of opening; whether a sealed world is invisible to A.T.L.A.S.; how other worlds hide themselves; whether runes are the finding half of the art.</li>
+          <li>The Runekeeper's name is not set.</li>
+        </ul>
       </div>
     </div>
-    <div class="entry-info">
-      <div class="entry-name">Runekeepers</div>
-      <div class="entry-sub">A hidden order practising runic transit, on a world that defends itself by being unfindable.</div>
-    </div>
-  </div>
-
-  <div class="entry-body">
-
-
-      <p>
-        A small, hidden order on an unfindable world. Practitioners of <strong>runic transit</strong> — a discipline of marking celestial bodies in ways that attune the practitioner to that body, and through it, to the body's heart. Their existence in the wider cosmos is rumor at best.
-      </p>
-      <p>
-        Their homeworld defends itself by being unfindable. A ritual held by the order's senior practitioner, inscribed on that practitioner's own body, withdraws the world from cosmological visibility; the working draws on the oscillation of the <a href="../cosmology/#reach-artifacts">Dissolution fragment</a> the order keeps, so the concealment rides on a cycle and the ritual is what points it. The world sits where it has always sat, reachable by anyone who knows the way back. An exiled practitioner sent into the wider cosmos is given no map and no name; the order's custom is that home must be re-recognized through remembered sensory and cultural fragments.
-      </p>
-      <p>
-        Other arcane disciplines do not recognize what Runekeepers do as the same kind of work as Weave-based transit. The bypass of Forbiddance follows from this: the order's mode of travel is not Weave-based, and Forbiddance is specified against Weave-based teleportation. The deeper diagnostic is that a Wayfinder can only attune to bodies that have a heart in the cosmologically meaningful sense — a constructed installation does not qualify.
-      </p>
-
-      <details class="dm-collapse" id="wayfinders">
-        <summary>Wayfinders</summary>
-
-          <p>
-            Members of the order sent out into the wider cosmos for assigned purposes — to learn, to recover, to witness, or to bring something back. A Wayfinder carries a partial mark — the inscription their training has earned them — which grows as their understanding does. A Wayfinder with a complete mark can attune to a celestial body via ritual and time, opening a transit route between attuned points.
-          </p>
-
-      </details>
   </div>
 
   <div class="divider">&#10022; &#10022; &#10022;</div>
 
   <div class="xref-card">
     <div class="xref-head"><span class="xref-title">Connections</span></div>
-    <div class="xref-cols"><div class="xref-col">
+    <div class="xref-cols">
+      <div class="xref-col">
+        <div class="xref-col-head">People and factions</div>
         <a class="chip chip-npc" href="../dossiers/the-runekeeper.html">The Runekeeper</a>
         <a class="chip chip-npc" href="../crew/tumak.html">Tumak</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Places</div>
         <a class="chip chip-place" href="../realms/wayfinders-homeworld.html">The homeworld</a>
-        <a class="chip chip-note" href="../rules/#runekeeper">Mechanics</a>
-    </div></div>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Items</div>
+        <a class="chip chip-item" href="../artifacts/runekeepers-fragment.html">The Dissolution fragment</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Campaign</div>
+        <a class="chip chip-quest" href="../rules/#runekeeper">Wayfinding rules</a>
+      </div>
+    </div>
   </div>
-
   <div class="dm-footer">
-    Runekeepers &middot; Factions &middot; Caelestis DM
+    The Runekeepers &middot; Factions &middot; Caelestis DM
   </div>
 
 </main>
-
 </body>
 </html>
