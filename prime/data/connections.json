@@ -2001,6 +2001,10 @@
       "summary": "N'ghathrod's illithid colony, the Seekers of a New Home.",
       "facts": [
         {
+          "t": "The colony's mark is an eye inside a wheel: the wheel is navigation, finding a way home, and its lower spokes trail like an illithid's tentacles.",
+          "src": "factions/vthorama.html"
+        },
+        {
           "t": "The colony is a chapter of the Seekers, the Seekers of a New Home, believing it answers to an elder brain.",
           "src": "STAGING round 3"
         },
@@ -2394,7 +2398,7 @@
           "src": "dossiers/vocath.html"
         },
         {
-          "t": "His mark is an eye in a wheel.",
+          "t": "His mark is a private house mark.",
           "src": "STAGING round 8"
         },
         {
@@ -2445,14 +2449,14 @@
       ]
     },
     {
-      "id": "eye-in-a-wheel",
-      "label": "The eye in a wheel",
+      "id": "vocath-house-mark",
+      "label": "Vocath's house mark",
       "type": "concept",
       "scope": "caelestis",
       "summary": "Vocath's private house mark.",
       "facts": [
         {
-          "t": "The eye in a wheel is Vocath's own merchant mark, so the Fleet registry has no entry for it.",
+          "t": "Vocath's house mark is his own merchant mark, so the Fleet registry has no entry for it.",
           "src": "factions/vocath-operation.html"
         },
         {
@@ -2973,7 +2977,7 @@
       "summary": "Headmaster of Caelestis Academy, in a long feud with Vocath.",
       "facts": [
         {
-          "t": "Mirt knows the eye in a wheel is Vocath's mark and cannot prove it in a filing.",
+          "t": "Mirt knows the house mark is Vocath's and cannot prove it in a filing.",
           "src": "dossiers/mirt.html"
         },
         {
@@ -3289,7 +3293,7 @@
       "summary": "A crate bearing Vocath's mark.",
       "facts": [
         {
-          "t": "The crates at the Sky Dock carry Vocath's mark, the eye in a wheel.",
+          "t": "The crates at the Sky Dock carry Vocath's house mark.",
           "src": "STAGING round 8"
         }
       ]
@@ -3302,7 +3306,7 @@
       "summary": "The spent rod from the simulation chamber.",
       "facts": [
         {
-          "t": "The rod carries Vocath's eye-in-a-wheel house mark.",
+          "t": "The rod carries Vocath's house mark.",
           "src": "factions/vocath-operation.html"
         }
       ]
@@ -6803,7 +6807,7 @@
     },
     {
       "s": "NPC-Mw6kT2vn",
-      "t": "eye-in-a-wheel",
+      "t": "vocath-house-mark",
       "rel": "uses as his mark",
       "src": "STAGING round 8"
     },
@@ -6893,7 +6897,7 @@
     },
     {
       "s": "NPC-Wc9fT2nJ",
-      "t": "eye-in-a-wheel",
+      "t": "vocath-house-mark",
       "rel": "recognizes",
       "src": "dossiers/mirt.html"
     },
@@ -6917,25 +6921,25 @@
     },
     {
       "s": "ITM-Xn7kW2vm",
-      "t": "eye-in-a-wheel",
+      "t": "vocath-house-mark",
       "rel": "bears",
       "src": "STAGING round 8"
     },
     {
       "s": "ITM-Wp4kT8vn",
-      "t": "eye-in-a-wheel",
+      "t": "vocath-house-mark",
       "rel": "bears",
       "src": "factions/vocath-operation.html"
     },
     {
       "s": "ITM-5nB7wK9x",
-      "t": "eye-in-a-wheel",
+      "t": "vocath-house-mark",
       "rel": "bears the sigil of",
       "src": "campaign/plot-hooks.html"
     },
     {
       "s": "LOC-9mB4kW7n",
-      "t": "eye-in-a-wheel",
+      "t": "vocath-house-mark",
       "rel": "bears the sigil of",
       "src": "campaign/plot-hooks.html"
     },

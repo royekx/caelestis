@@ -36,7 +36,7 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 3 | 10 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 1 |
-| Dossiers | dossiers/ | 19 | 15 | 0 | 0 | 1 |
+| Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **105** | **145** | **49** | **2** | **54** |
+| **Total** |  | **106** | **145** | **49** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1098,6 +1098,12 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ---
 
+### dossiers/vocath.html
+
+- **[decide]** Vocath's house mark: its design (FR-016's drawing waits on it)
+  The eye inside a wheel is now the Vth'orama's mark (factions/vthorama.html), so Vocath's house mark needs a new design. Until it is picked, pages call it "his house mark" and describe it nowhere. restricted/fr-016.html keeps its drawing under the label "Unidentified sigil"; redraw the SVG once the design is set.
+  src: Korey, 2026-10-28 (symbols ruling)
+
 ### dossiers/vthoramu.html
 
 - **[decide]** Does the ship die with N'ghathrod?
@@ -1122,7 +1128,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 
 - **[decide]** Whose registry WM-003 is
-  The recovered monitoring registry in restricted/wm-003.html bears the eye-in-a-wheel marking catalogued in FR-016 and uses the Order's registry terms, Zenith and Ortholith. Decide whose registry it is, and why it carries the mark. No finished DM page lists the mark on a registry.
+  The recovered monitoring registry in restricted/wm-003.html bears the marking catalogued in FR-016, which is Vocath's house mark, and uses the Order's registry terms, Zenith and Ortholith. Decide whose registry it is, and why it carries his mark. No finished DM page lists the mark on a registry.
   src: Korey, 2026-10-28 (FIA rulings, 8)
 
 # Crew
