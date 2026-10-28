@@ -101,12 +101,6 @@ when a ruling changes; delete it once the page carries it. See
 - Level pacing (DM): level-ups slow down in later arcs, so the crew is not at the top of the level range before the final arc.
 - Arc 1 runs from level 1 to 4, Arc 2 from 5 to 10, Arc 3 from 11 to 15, and Arc 4 begins at 15.
 
-### Vecna's working (cosmology/, glossary/, opposition/vecna.html, chart/)
-- Rykoe opens only when the cores of all five galaxies are awake and joined: each core to its neighbours, and each to Rykoe.
-- Through opened Rykoe lies the way into Continuity itself, into the workings of reality. Whoever reaches it can push and pull the Axioms and remake reality. That is what Vecna seeks, and what the beings working the other galaxies seek.
-- A galaxy's core can be woken, but there is no one way to do it. Vecna, an archmage older than his godhood, does it with spellwork: an inscription, a figure drawn in linked heart worlds across the galaxy. The beings working the other galaxies have their own methods. World hearts link only to worlds in their own galaxy; only a woken core reaches beyond it.
-- Vecna works GAL-01's core. In each of the other galaxies, another being works its own core toward the same end. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and what happens in GAL-01 decides them.
-
 ### Ilsevaine Corr, Aurel Venn and the strain on the Fleet (campaign/spine.html, NEW: Cosmos texture; done on dossiers/ilsevaine-corr.html and dossiers/aurel-venn.html, section 5)
 - Outside Realmspace, at the edge of a system or between systems, Ilsevaine Corr rules a hidden polity that Caelestis does not know of. She has noticed more traffic than usual near her borders, and once something large brushed the edge of her sight and was gone. She keeps watch for it. Once N'ghathrod grows bolder, she will face Vth'oramu. (DM touchstone: Mara Sov.)
 - Aurel Venn, a Watcher of the Order, saw the same pattern, warned the Order, and was not heeded. He softly defected: he never broke with the Order openly, but he left his post to find the thing himself. The crew hears of him through contradictory accounts long before any meeting. (DM touchstone: Osiris.)

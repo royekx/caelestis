@@ -35,7 +35,7 @@ staging once Korey has read and accepted them.
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 7 | 2 | 0 | 3 |
-| Campaign | campaign/: spine, voyages, plot hooks; opposition/; principles.html | 13 | 1 | 37 | 5 | 27 |
+| Campaign | campaign/: spine, voyages, plot hooks; opposition/; principles.html | 13 | 1 | 36 | 5 | 27 |
 | Dossiers | dossiers/ | 16 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 9 | 12 | 17 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
@@ -1132,17 +1132,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 - **[add]** Arc 1's close
   Add to Arc 1's goal and critical beats: Arc 1 closes around sessions 8–10 with the attack on Caelestis and graduation, with the party at level 4. The Brig thief thread comes forward before graduation so the crew can engage with it and possibly learn who the thief is (Joffrey).
   src: memory-canon open-decisions (Planned line); timeline "Attack on Caelestis and graduation"
-
----
-
-### opposition/vecna.html
-
-- **[fix]** Heart entrance term is Atrium *(answered)*
-  A heart's one hidden entrance is the Atrium (plural Atria). Every page already says Atrium/Atria, so nothing changes there; the pointer items under colony, what-if and vthorama are satisfied as written. New text uses Atrium too, including the hidden-entrance line on factions/runekeepers.html. Memory canon's "Aperture" is the older working name.
-  Touches: opposition/vecna.html, opposition/vthorama.html, campaign/what-if.html, factions/vthorama.html, factions/runekeepers.html, dossiers/ulhrek.html, dossiers/khaleth.html.
-  src: memory-canon open-decisions (world-heart framework; "Locked this pass"); chat-cosmic-campaign-structure § Superseded
-  answered: inbox/chat-cosmic-campaign-structure.md § Superseded ("'Aperture' as the heart's entrance → 'Atrium' (turn 278)"). The memory lines that say "Aperture" come from earlier in the same chat (the Seekers pass, turns 108–151), and Korey used the new word himself afterward ("using a reach residue as the key into an atrium makes sense").
-  done: opposition/vecna.html (pilot)
 
 ---
 
