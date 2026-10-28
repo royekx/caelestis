@@ -839,6 +839,9 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
 /* ═══════════════════════════════════════════════════════════════
    8  TABLES, COLLAPSIBLES, CALLOUTS, TAGS, TILES, STAT BLOCKS
    ═══════════════════════════════════════════════════════════════ */
+/* A table too wide for a phone scrolls inside its own box. */
+.dm-table-scroll { overflow-x: auto; max-width: 100%; }
+.dm-table-scroll > table { min-width: 0; }
 .dm-content table {
   width: 100%;
   border-collapse: collapse;
@@ -2063,7 +2066,7 @@ ul.tr-fact-val li { margin-bottom: 0.25rem; color: var(--text); }
 
 /* Wiki entries stack below 860px: infobox first, article under it. */
 @media (max-width: 860px) {
-  .dm-content .entry-header.is-wiki { grid-template-columns: 1fr; gap: 1.6rem; }
+  .dm-content .entry-header.is-wiki { grid-template-columns: minmax(0, 1fr); gap: 1.6rem; }
   .dm-content .is-wiki .identity-card { order: 0; position: static; max-width: none; }
   .dm-content .is-wiki .identity-card .portrait-frame { aspect-ratio: 16 / 9; }
 }
