@@ -149,7 +149,7 @@
     'kurrzot':       { name: 'Kurrzot',             fileId: '' },
     'hcatha-rival':  { name: 'Kurrzot\'s rival',    fileId: '' },
     'nereth-vaul':   { name: 'Nereth Vaul',         fileId: '' },
-    'order':        { name: 'The Order of All',    fileId: '' },
+    'order':        { name: 'Order of All',        fileId: '' },
     'watchers':     { name: 'Order of the Watchers', fileId: '' },
     'keepers':      { name: 'Order of the Keepers', fileId: '' },
     'aurel-venn':   { name: 'Aurel Venn',          fileId: '' },
