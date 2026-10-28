@@ -60,6 +60,14 @@
   var base = primeDepth > 0 ? new Array(primeDepth + 1).join('../') : './';
   var siteBase = base + '../';
 
+  // ── Listen: read pages aloud (dm-listen.js) ─────────────────────────────
+  (function () {
+    var s = document.createElement('script');
+    s.src = base + 'scripts/dm-listen.js';
+    s.defer = true;
+    document.head.appendChild(s);
+  })();
+
   // ── Icons ─────────────────────────────────────────────────────────────────
   var EXT_ICON = '<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2H2a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1V6M6 1h3v3M9 1L4.5 5.5"/></svg>';
   var MENU_ICON = '<svg viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/></svg>';
