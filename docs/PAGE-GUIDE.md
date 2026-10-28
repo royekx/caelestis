@@ -207,6 +207,10 @@ A register page is a list you can narrow, driven by `prime/scripts/dm-register.j
 - a result count and a clear control (`.result-line`)
 - rows (`.register > .ent`) that expand in place and link through to the entry;
   a row may carry several space-separated values on one axis
+- rows in strict alphabetical order by the name as written, first word first:
+  Winston Ryeback sorts under W, Haymond Rolt under H. A leading "The" and a
+  rank title (Captain, Boatswain, Quartermaster) are skipped for sorting and
+  kept on the row. The entries' prev/next bars follow the same order.
 
 A register loads `dm-nav.js` and `dm-register.js` only: no tab strip, no table
 of contents. Concept material sits below the rows as a collapsed section. A
