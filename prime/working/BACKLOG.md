@@ -34,8 +34,8 @@ staging once Korey has read and accepted them.
 | Locations | locations/ (Fonains stays in its own section) | 21 | 22 | 0 | 0 | 1 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
-| Factions | factions/ | 3 | 7 | 2 | 0 | 3 |
-| Campaign | campaign/: spine, voyages, plot hooks; opposition/; principles.html | 17 | 1 | 1 | 0 | 0 |
+| Factions | factions/ | 3 | 9 | 2 | 0 | 3 |
+| Campaign | campaign/: spine, voyages, plot hooks; opposition/; principles.html | 15 | 1 | 1 | 0 | 0 |
 | Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 9 | 12 | 18 | 0 | 85 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
@@ -883,6 +883,16 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/fleet.html (was academy-fleet.html)
 
+- **[later]** Driftwarden ranks
+  Ruled: one service, many ranks, the way every police officer is a cop. Set the ladder from the newest graduate up to the organization's head, and where the crew starts.
+  src: Korey, 2026-10-26
+  Moved from the campaign section: STAGING § Caelestis, the Driftwardens and the Fleet already says ranks run from the newest graduate up through officers and commanders, shown in gems or pins; factions/fleet.html carries it. The full ladder waits until play needs it. Campaign § Still to decide names it.
+
+- **[later]** Names of the sister institutions
+  Ruled: sister institutions in other system clusters, under other names and governance (STAGING, Factions). Name the one or two the crew is likely to hear of first; the rest wait.
+  src: Korey, 2026-10-25 (rounds 10–11)
+  Moved from the campaign section: the Fleet is four or five sector branches, each keeping its own names (factions/fleet.html), which answers the shape. Naming the one or two the crew hears of first waits until play needs it.
+
 - **[later]** The Glyth loss
   The Fleet lost a force at Glyth during the last approach window (see add). Its name and its commander are unnamed.
   src: chat-cosmic-campaign-structure § Cosmos texture, § Open
@@ -969,14 +979,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   src: chat-cosmic-campaign-structure § Superseded; timeline; memory-canon open-decisions
   answered: inbox/chat-early-planning.md § Wiki structure (Settled: "Acts became Arcs"); inbox/chat-cosmic-campaign-structure.md § V006 and the arc (Settled: "The wiki says 'Arc', never 'Act'"; Korey: "the spine governs")
   done: the campaign and opposition pages (campaign section); timeline.json still needs it (section 8).
-
-- **[decide]** Driftwarden ranks *(prep)*
-  Ruled: one service, many ranks, the way every police officer is a cop. Set the ladder from the newest graduate up to the organization's head, and where the crew starts.
-  src: Korey, 2026-10-26
-
-- **[decide]** Names of the sister institutions *(prep)*
-  Ruled: sister institutions in other system clusters, under other names and governance (STAGING, Factions). Name the one or two the crew is likely to hear of first; the rest wait.
-  src: Korey, 2026-10-25 (rounds 10–11)
 
 - **[decide]** What the meteor is and why Caelestis wants it *(prep)*
   Fixed points: the meteor is adamantine, large, mined in an occupied area, and matters locally, to Caelestis and to the Order; working to obtain it is a form of treason on H'Catha; memory canon says "adamantine's value still needs something more". Options:

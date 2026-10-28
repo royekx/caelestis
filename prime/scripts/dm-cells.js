@@ -2,7 +2,7 @@
    dm-cells.js — embed an Opposition cell in the Campaign page
    ----------------------------------------------------------------
    The Campaign page reads across the arcs; each Opposition page reads
-   down one column (prime/working/page-split.md, the matrix). Where the
+   down one column (docs/PAGE-GUIDE.md § 3, Campaign and Opposition). Where the
    Campaign page wants a whole Opposition passage in line, it carries a
    plain link to that passage:
 

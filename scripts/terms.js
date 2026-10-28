@@ -16,7 +16,7 @@
  *            (for markup such as a bare "Open" label or an is-open class)
  *   moved    old page paths that must not be linked (old → new)
  *   scan     top folders to read (prime, restricted)
- *   finished folders whose retired-term and moved-path hits fail the check
+ *   finished folders (or single pages, by their .html path) whose retired-term and moved-path hits fail the check
  *   allow    "path:regex" pairs for legitimate uses (a quoted archive line, say)
  *
  * Scans the folders in terms.json 'scan' (the DM wiki prime/ and the FIA's restricted/):
@@ -41,7 +41,8 @@ const RETIRED = rx(conf.retired || []);
 const VOICES = rx(conf.voice || []);
 const MOVED = (conf.moved || []).map(m => Object.assign({}, m, { re: new RegExp(m.old.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g') }));
 const ALLOW = (conf.allow || []).map(a => { const i = a.indexOf(':'); return { file: a.slice(0, i), re: new RegExp(a.slice(i + 1)) }; });
-const FINISHED = (conf.finished || []).map(f => f.replace(/\/?$/, '/'));
+// A folder entry gets a trailing slash so prime/campaign does not also claim prime/campaign-x; a page entry (prime/principles.html) is matched as written.
+const FINISHED = (conf.finished || []).map(f => /\.html$/.test(f) ? f : f.replace(/\/?$/, '/'));
 
 function walk(dir, out) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {

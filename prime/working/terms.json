@@ -7,7 +7,10 @@
     "prime/locations",
     "prime/artifacts",
     "prime/vessels",
-    "prime/dossiers"
+    "prime/dossiers",
+    "prime/campaign",
+    "prime/opposition",
+    "prime/principles.html"
   ],
   "retired": [
     {
@@ -310,6 +313,57 @@
       "i": true
     },
     {
+      "pattern": "\\bSpine\\b",
+      "use": "the Campaign page (campaign/index.html)"
+    },
+    {
+      "pattern": "Central Question",
+      "use": "the theme (Campaign § Theme)"
+    },
+    {
+      "pattern": "Who decides what(&rsquo;|'|’)s real",
+      "use": "the theme: everyone is missing something and is trying to become whole",
+      "i": true
+    },
+    {
+      "pattern": "\\bWhat If\\b",
+      "use": "Plot Hooks § Speculation (campaign/plot-hooks.html#speculation)"
+    },
+    {
+      "pattern": "\\bthe Cast\\b|Arc 4 (—|&mdash;) Cast",
+      "use": "the casting of the eye; Arc 4 is Stopping N'ghathrod"
+    },
+    {
+      "pattern": "\\bthe network\\b",
+      "use": "Vocath's crew and the colony"
+    },
+    {
+      "pattern": "Tetherbreak engagement",
+      "use": "the Bellwether Crow ambush (vessels/bellwether-crow.html)",
+      "i": true
+    },
+    {
+      "pattern": "Abandoned Beholders",
+      "use": "cut: Vaelorix was alone; his crew were the OSTEKK units",
+      "i": true
+    },
+    {
+      "pattern": "Fleet Corps",
+      "use": "the Caelestis Corps"
+    },
+    {
+      "pattern": "\\bPassage marks?\\b",
+      "use": "Vocath's mark, the eye in a wheel (the crates); the Passage is the colony's device"
+    },
+    {
+      "pattern": "(?<=[a-z,;:] )Mercane\\b",
+      "use": "mercane (lowercase inside a sentence)"
+    },
+    {
+      "pattern": "Character Arc Tracker|Wildspace Tracker",
+      "use": "the record (data/*.json) and the Voyages board"
+    },
+    {
       "pattern": "\\bOSTEKK-[0-9]",
       "use": "Ostekk-n (the record's spelling: Ostekk-6, Ostekk-2, Ostekk-10)"
     }
@@ -496,7 +550,8 @@
   "allow": [
     "prime/cosmology/:outcomes were undecided|new undecided things",
     "prime/locations/:Kesh Hollow",
-    "prime/campaign/voyages/index.html:<td>1</td><td>Psychic wind</td>"
+    "prime/campaign/voyages/index.html:<td>1</td><td>Psychic wind</td>",
+    "prime/hub.html:Character Arc Tracker|Wildspace Tracker"
   ],
   "scan": [
     "prime",

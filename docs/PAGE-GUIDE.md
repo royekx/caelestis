@@ -34,7 +34,7 @@ in `CLAUDE.md` § Folder map.
   Forbiddance work?"
 - Headings say what the section holds. Rename enumeration leftovers ("D — The
   End" becomes "Failure state"). Campaign-page headings are functional:
-  "Central Question", "Cosmological Pressures", "Arcs".
+  "Theme", "Pressures", "Arcs".
 - Drop a stylistic leading "The" unless it is part of a world-object's name
   (The Reach, The Bridge, The Prime Continuum, The Axioms).
 
@@ -154,6 +154,28 @@ and link to the subject tabs for the rest.
 | untethered speculation | Plot Hooks, Speculation section |
 | what happened at the table | Voyages |
 | how the DM runs the campaign, the hook taxonomy | Principles |
+
+### Campaign and Opposition
+
+The Campaign page and the Opposition pages are two cuts through one matrix:
+arcs down the side, forces across the top. Campaign (`campaign/index.html`)
+reads across the rows, one arc at a time with every force in it. Each
+Opposition page (`opposition/vecna.html`, `opposition/vthorama.html`) reads
+down one column, everything that force does from Arc 1 to Arc 4. Neither
+retells who a subject is; that is the dossier's job.
+
+Each Opposition page carries its column as `#arc-1` to `#arc-4`. Those ids are
+the embed contract and do not change. Campaign ends each arc with the cells
+for it, as plain links:
+
+```html
+<a class="dm-cell" href="../opposition/vecna.html#arc-1">Opposition: Vecna · Arc 1</a>
+```
+
+`prime/scripts/dm-cells.js` replaces each link with that section's body under
+a `.dm-embed` bar ("Open full →"). Without the script the link stays, `check`
+validates it, and Pagefind indexes the passage once, on its own page. Embeds
+are for the matrix only; elsewhere, pages link.
 
 ### Things and concepts
 

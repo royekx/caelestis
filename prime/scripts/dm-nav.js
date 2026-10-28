@@ -10,12 +10,12 @@
  * In-page navigation is handled separately by the right-rail TOC (dm-toc.js)
  * on pages that opt in with class "has-toc".
  *
- * Usage (in <head> with defer):
- *   /prime/index.html:           <script src="../scripts/dm-nav.js" defer></script>
- *   /prime/continuum.html:       <script src="../scripts/dm-nav.js" defer></script>
- *   /prime/campaign.html:        <script src="../scripts/dm-nav.js" defer></script>
- *   /prime/world.html:           <script src="../scripts/dm-nav.js" defer></script>
- *   /prime/voyages/*.html:       <script src="../../scripts/dm-nav.js" defer></script>
+ * Usage (in <head> with defer), by depth under /prime/:
+ *   /prime/principles.html:              <script src="scripts/dm-nav.js" defer></script>
+ *   /prime/<folder>/page.html:           <script src="../scripts/dm-nav.js" defer></script>
+ *   /prime/campaign/voyages/index.html:  <script src="../../scripts/dm-nav.js" defer></script>
+ *
+ * The groups and their pages follow CLAUDE.md § Folder map (DM side target).
  */
 
 (function () {
@@ -69,9 +69,6 @@
   // Internal links — pages inside /prime/.
   // To add, remove, or rename a section: edit this array only.
   //
-  // Order: Campaign (+ Remaking, Voyages nested) / Cosmology / Realms / Factions & Characters.
-  // a divider, then the trackable throughlines (The Remaking / Voyages).
-
   // Five groups, one for each Axiom colour (dm.css). The page takes its
   // group's colour as its accent, and each group label carries its own.
   //

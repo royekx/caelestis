@@ -190,7 +190,7 @@ because later sections link into earlier ones.
    the Rod, the twins' fragment.
 5. **Dossiers**: Vecna (new), N'ghathrod, Vth'oramu, Thessalar, Clint,
    Tarroway, Rolt, Ilsevaine, Venn, OSTEKK.
-6. **Campaign**: spine (theme, shape, failure state), ascension (Vecna's
+6. **Campaign** (done, branch `campaign`: `campaign/index.html`, `opposition/vthorama.html`, `opposition/vecna.html`, `principles.html`, Plot Hooks with Speculation, Voyages): spine (theme, shape, failure state), ascension (Vecna's
    working, the eye, Oerth), colony (N'ghathrod now), plot hooks, principles.
 7. **Crew**: the five crew items in STAGING, plus the crew backlog.
 8. **Fonains and timeline**: the Fonains page and doc, `timeline.json`.
