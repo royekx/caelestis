@@ -127,12 +127,6 @@ when a ruling changes; delete it once the page carries it. See
 - Beshaba did not arrange Sol's escape.
 - done: dossiers/beshaba.html (section 5); crew/sol.html still needs both.
 
-### Tumak (crew/tumak.html, dossiers/the-runekeeper.html)
-- The Runekeeper's fade runs on a soft clock: rising pressure, no date.
-- Tumak has his own Heart-rune.
-- Tumak knows of the previous Runekeeper and met him once, briefly. He does not understand what that meeting was.
-- done: dossiers/the-runekeeper.html (section 5); crew/tumak.html still needs all three.
-
 ### Boogie (crew/boogie.html)
 - Tharizdun wants nothing specific from Boogie. Tharizdun is not lucid; she is an opportunist. What happens through the shard depends on what Boogie does, and things may come through the current. Boogie's plot is reactive.
 - Boogie sometimes feels corruption leaking into him from the shard: a role-playing beat, not a mechanic.
@@ -141,9 +135,3 @@ when a ruling changes; delete it once the page carries it. See
 
 ### The crew's pasts (crew/, DM principles)
 - The PCs remember where they came from. Their pasts get filled in retroactively; nobody arrived with amnesia.
-
-## Artifacts and vessels
-
-### Wan, Tu and the fragment (crew/tumak.html, rules/; done on artifacts/dissolution-fragment.html, section 4)
-- The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) factions/runekeepers.html and artifacts/dissolution-fragment.html carry it; dossiers/the-runekeeper.html carries it (section 5); crew/tumak.html still needs it.
-- The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a state neither whole nor broken.

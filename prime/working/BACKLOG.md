@@ -35,16 +35,16 @@ staging once Korey has read and accepted them.
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 9 | 2 | 0 | 3 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 15 | 1 | 1 | 0 | 0 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 15 | 1 | 2 | 0 | 0 |
 | Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
-| Crew | crew/ | 9 | 12 | 18 | 0 | 85 |
+| Crew | crew/ | 9 | 13 | 12 | 0 | 72 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 4 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** |  | **96** | **123** | **95** | **4** | **167** |
+| **Total** |  | **96** | **124** | **90** | **4** | **154** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -161,7 +161,7 @@ Order under each page: decide, fix, drop, add.
   Ruled (STAGING, Cosmology § The Axioms): the Axioms are Consolidation, Expansion, Dissolution, Distinction and Determination, acting on energy that was always there. The old four map: Convergence → Consolidation (the Rod of Seven Parts is the Consolidation fragment, 7 pieces); Dissolution stays Dissolution, now the mixing of everything into sameness (the twins' fragment, 2); Boundary → Distinction (A.T.L.A.S., its sister and the third piece, 3); Transformation → Expansion (the 5-piece fragment). Determination's fragment is new: 11 pieces, none found. A Zenith is a world at its peak of Distinction, not "Convergence driving a system to maximum expression"; Monoliths are Continuity's response, and the strain from their rise is a byproduct of Vecna's work, not a weight on one Axiom. The Transformation–Boundary seam is cut. Every backlog item that quotes an old Axiom name reads under this mapping.
   Pages: prime/cosmology (the Four Axioms, Continuity, the strain, the seam section to cut), prime/glossary, prime/chart, prime/artifacts/* (index, rod-of-seven-parts, runekeepers-fragment, transformation-fragment → expansion-fragment, containment-engine, fonains-shard), prime/campaign/* (index, ascension, spine, plot-hooks, what-if), prime/crew/index.html and tumak.html, prime/dossiers/nghathrod.html and the-runekeeper.html, prime/factions/* (academy-fleet, deities, runekeepers, vthorama), prime/realms/index.html and wayfinders-homeworld.html (concealment rides on the Dissolution fragment's cycle), prime/rules/index.html, timeline.json, working/vecna.md. Done with the distribution pass. STAGING, the survey and the Connections layer already use the five.
   src: Korey, 2026-10-26
-  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); opposition/vecna.html (pilot); prime/factions (section 2); prime/locations (section 3).
+  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); opposition/vecna.html (pilot); prime/factions (section 2); prime/locations (section 3); prime/crew/tumak.html (section 7).
 
 - **[later]** Place GAL-01's inscription on the chart
   Ruled: GAL-01's inscription is the eye he lost, fifteen heart worlds (ten lids, five iris; Korey 2026-10-27, from sixteen, so the count is a multiple of five); the iris worlds are key (STAGING, Campaign; diagram 2026-10-26). Left for when play needs it: which systems hold which strokes, and whether any known system (Realmspace, Krynnspace, Virenspace) lies on the figure. Greyspace is not on it: Oerth is the retina every eye world links back to (STAGING, Campaign).
@@ -1058,6 +1058,10 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   Touches: campaign/voyages/index.html, dossiers/miken.html.
   src: chat-voyage-6-7-planning § Open
 
+- **[fix]** V006: Tumak told Ryeback outright
+  V006 Actual says Ryeback "took 'the beholder was taken care of' to mean they killed it". The ruling on dossiers/winston-ryeback.html, now carried on crew/tumak.html, is that Tumak told him outright that the crew had killed it. Reword the V006 line to match. (The record's matching line is already a Player record flag.)
+  src: section 7 (2026-10-28); dossiers/winston-ryeback.html
+
 ---
 
 ### opposition/vecna.html (early planning)
@@ -1579,93 +1583,15 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 ### crew/tumak.html
 
-- **[fix]** "Three poles" and the Zenith on homecoming
-  The retired spine said that when both twins arrive home "the three poles stall the cycle and the result is a Zenith", and called the runes "a built-in proximity detector". The second is already a fix on this page; check the first against artifacts/dissolution-fragment.html (the fragment rebuilding in two halves) and rules/index.html (Homebound, the Becoming) before carrying it.
-  src: campaign/spine.html (retired, campaign section, conflict C16)
-
 Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; see the Rules section.
-
-- **[fix]** "Open" labels on the page
-  The infobox has an "Open" row ("What happens while the fragment is between bearers", line 30) and the body an "Open:" paragraph (line 79). Status labels stay off pages: write each as a Still to decide sentence in DM notes when the page is rewritten, or drop what the answered item below already settles.
-  src: section 4 cold review (2026-10-28)
-
-- **[add]** What completing the inscription costs Tumak *(answered)*
-  Take both "Open:" lines off crew/tumak.html (the stat row and the closing paragraph), and the matching Open lines on dossiers/the-runekeeper.html and realms/wayfinders-homeworld.html. Write (in-world):
-  "Completing the inscription takes Tumak home, and going home ends the concealment. When Wan and Tu both arrive, the three poles stall the Dissolution cycle and the result is a Zenith; the homeworld splits into a blessing faction and an omen faction, and a Monolith follows. The office he comes home to dims whoever holds it."
-  For the concealment between bearers: "While the fragment is in transit, the concealment rests on the share still leaving the Runekeeper. It weakens as he fades, and the world's protection decays as the cosmos changes around it. The marks Tumak places are the sensors that let it be renewed when he returns."
-  DM: the fade runs on a soft clock (STAGING round 8). The old "key to the First Heart" clause and its level-12 gate are retired; see the Artifacts decide "What a fragment made whole does".
-  answered: crew/tumak.html ("the completed inscription is a key to the First Heart"; "His homeworld stays unfindable while the fragment's oscillation carries the concealment, and the fragment is leaving"); dossiers/the-runekeeper.html ("the act of going home is the act of ending the concealment"; "Dimming is what the office is"); inbox/chat-crew-tumak-gregory-bartholomew.md § Tumak/Leader concept (Korey: "If the Wayfinder never returns, the protection decays as the universe changes"), § Marks (marks as the world's sensors, turn 223); STAGING rounds 2 and 8
-  src: TGB § Tumak/Open; crew/tumak.html
-  done: locations/wayfinders-homeworld.html (section 3) and dossiers/the-runekeeper.html (section 5); crew/tumak.html still needs it.
-
-- **[add]** The Runekeeper's fade is a soft clock
-  Ruled (STAGING round 8). Add to "The fading as pressure" (DM voice): "The Runekeeper's fade runs on a soft clock: rising pressure, no date. Count nothing down."
-  src: Korey, 2026-10-25 (round 8); TGB § Tumak/Open
-  done: dossiers/the-runekeeper.html (section 5); crew/tumak.html still needs it.
 
 - **[later]** How a separated twin plays out at the table
   Settled so far (Korey, turn 227): at the table only the twin with the crew is played, a lower-level one-shot with the separated twin is possible, and the twins reunite through the campaign, through the crew or by other means. Still open for a long separation: off-screen montage, a solo one-shot, or shared visions (turn 143). The reunion mechanics are a separate decide on rules/index.html.
   src: TGB § Tumak/Mishap and separation, Open
 
-- **[fix]** Wayfind opens on the first match
-  The "Wayfinding" row says "The partial mark, and its growth with understanding rather than with level. The full mark is several levels out." Change to: Wayfind opens on the first matched rune and always targets one of his placed marks. The network grows as runes match, with one rune roll per character level, and the reach grows with the matched count (see the reach-gate add on rules/index.html).
-  src: TGB § Tumak/Wayfind, Rune structure, final; rules/index.html
-
-- **[fix]** Runes are not a proximity detector
-  Page says "The runes surface on skin near cosmic threat, which gives the crew a proximity detector". Change to: runes arrive with level-ups, character moments and DM-bestowed story beats, so the player cannot equate a rune with a place. A rune surfacing near something cosmic can stay as an occasional story trigger, not a rule.
-  src: TGB § Tumak/Rune system
-
-- **[fix]** The level-4 roll matched the left sole
-  Page says "Level 4 fires with the seating in the V006.5 interlude, before V007, which brings his per-level rune roll." The roll has happened. Tu's half landed on 08, so the left sole is Tumak's first matched rune (Korey, turn 328). Write it as done and point to Rules → Current state.
-  src: TGB § Tumak/Rune structure, final
-
-- **[fix]** The inscription row: reroll and choose
-  The "Runekeeper inscription" row lists "the choose band". The d20 now reads: 1–16 resolve that position, 17–19 reroll, 20 lets the player choose, a duplicate rerolls. Change "the choose band" to "the reroll and choose results". The full table is a fix on rules/index.html.
-  src: TGB § Tumak/Rune structure, final
-
-- **[add]** Soulknife is the first step of the manifestation
-  Tumak took Rogue 3 (Soulknife) between sessions 2 and 3. Soulknife is the first step of the Runechild manifestation because the twins' souls are bound. The soul knife and the twins' telepathic link first manifested in V004; the player decides how the psychic blade looks.
-  src: TGB § Tumak/Soulknife and the first rune; memory-canon § Tumak Swan
-
-- **[add]** First Sorcerer level at level 4
-  Tumak takes his first Sorcerer level at level 4. His player wants to discover in-world how the abilities work.
-  src: chat-voyage-6-7-planning § PCs and the stars
-
-- **[add]** What the table believes (add to that box)
-  The player sheet reads Variant Human, 5'7" ("long body, shorter arms, smallish head"). CHA 18 with Deception expertise is why the disguise holds.
-  src: TGB § Tumak/Backstory
-
-- **[add]** "Left side" and "right side"
-  At the table Korey addresses the twins as "left side" and "right side", so only the player knows which twin he means.
-  src: TGB § Tumak/Backstory
-
-- **[add]** Why he enrolled, and the note
-  Tumak enrolled at the Academy as the quickest way home. Both twins were sent away with a note reading "come home safe".
-  src: TGB § Tumak/Backstory
-
-- **[add]** One arc in three stages
-  Runechild, Wayfinder, Runekeeper is one continuous story. Tumak was born or chosen a Runechild; his sorcery is the in-world answer to his backstory. He is now a Wayfinder, on the journey. He becomes the Runekeeper when he returns home.
-  src: TGB § Tumak/Arc framing (turn 211)
-
-- **[add]** What the marks are for
-  Each mark Tumak places is a sensor his world puts out into the universe: its patch of information, so it can protect itself. The world needs "enough" marks, and nobody can say how many. The marks give Tumak a goal beyond going home.
-  src: TGB § Tumak/Marks (turn 223)
-
-- **[add]** The fading as pressure
-  The Runekeeper's fading is Tumak's pressure to go home now and to start attempting the journey. It reaches the player through memories of his grandmother and of home: a smell, how the trees look.
-  src: TGB § Tumak/Runekeeper lore and pressure
-
-- **[add]** Inspirations (DM note)
-  Tumak's arc sits between The Giver and Avatar. The two are the tonal reference for the grandmother-and-memory sequences above all (arc doc v3, Pressure section).
-  src: TGB § Tumak/Runekeeper lore and pressure, Arc framing (turns 150–151)
-
-- **[add]** Design intent: a stark trade-off
-  Tumak's powers carry a stark, visible trade-off so the other players do not feel he has too much. Every Rune Set spell past the first cast per long rest costs exhaustion, and so does every Wayfind beyond 100 feet.
-  src: TGB § Tumak/Wayscribe design, Rune sets, Wayfind
-
-- **[add]** V007 beat
-  While resting, Tumak marks a spot without meaning to, then Wayfinds back to it aboard the ship.
-  src: memory-canon (open-decisions § Voyage 007 intent)
+- **[later]** Tumak's sheet
+  His current level, his class split (Rogue 3 and Sorcerer 1 at level 4?) and his D&D Beyond URL. When they arrive they go in Mechanics › Build on crew/tumak.html.
+  src: section 7 (2026-10-28)
 
 ### crew/gregory.html
 

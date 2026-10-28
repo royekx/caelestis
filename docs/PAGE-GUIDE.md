@@ -339,7 +339,7 @@ reads as one article: `dm-sections.js` opens every section, makes the
 summaries plain headings, drops the boxes, and the "On this page" rail
 (`dm-toc.js`) lists every section and subsection. There are no section tabs
 and nothing collapses; the rail is the navigation. Entries (§ 5) keep their
-two tabs, About and DM notes.
+two tabs, About and DM notes; crew pages keep four (§ 5, Other kinds).
 
 ```html
 <details class="dm-collapse-section" id="section-id">
@@ -446,6 +446,21 @@ order, only those with content:
 | Item (`artifacts/`) | kind, made by, made of, held by, where, status | Overview · Appearance · Properties (what it does, in prose, then the rules as an item card) · History · In the campaign (a recap by voyage) |
 | Place (`locations/`) | kind, designation, system, galaxy, ruled by, peoples, status | Overview · Description (look, climate, terrain) · History · Peoples and culture · Notable people · Points of interest (one subsection each) · In the campaign (a recap by voyage) |
 | Vessel (`vessels/`) | kind, built by, held by or under command of, where, status | Overview · Appearance · Decks and interior (one subsection per deck or space) · History · In the campaign (a recap by voyage) |
+| Player character (`crew/`) | kind, species, class, station (from the record), origin, affiliation, patron, carries (linked), where the rules live, first voyage, player page | Overview · Appearance · Personality · Biography (*Background*; *In the campaign*, one entry per voyage, written from the record) · Relationships · Abilities (prose, no numbers) · Notable items · Quotes |
+
+A player character page has four tabs, not two, because the arc and the
+homebrew are each too large for DM notes:
+
+| Tab | Voice | Holds |
+|---|---|---|
+| About | in-world | the sections above |
+| Arc | DM | *What he is missing* (`#missing`, linking Campaign § Crew) · *Where it heads* (`#heads`) · *Gates and escalation* · *Observation flags* · *Next beat* (`#next-beat`, linking the Voyages beat, never restating it) · *Table notes* · *Inspirations* |
+| Mechanics | DM | *Build* (`#build`: class and level path, key scores, feats, the sheet), then each homebrew system under its own id |
+| DM notes | DM | *What's hidden* (`#hidden`) · *Threads* · *Still to decide* |
+
+The eyebrow reads `Crew · <class> · <station>`. A character whose record
+deliberately differs from the truth adds an **On the record** row to the
+infobox (Tumak: human rogue).
 
 A residue item adds a **fragment** row to its infobox. The DM item page holds
 the full rules; the player inventory entry holds what the crew has learned of
