@@ -17,6 +17,10 @@
   ],
   "retired": [
     {
+      "pattern": "\\b[Hh]earthfire\\b|the Hearth\\b",
+      "use": "the Beacon; one full turn is a beacon"
+    },
+    {
       "pattern": "\\b[Tt]he Passage\\b",
       "use": "the eye in a wheel, the Vth'orama's mark; the Passage is retired"
     },
@@ -668,6 +672,14 @@
     {
       "old": "#arm-lighting",
       "new": "glossary/#kindling"
+    },
+    {
+      "old": "glossary/#hearthfire",
+      "new": "glossary/#beacon"
+    },
+    {
+      "old": "glossary/#hearth\"",
+      "new": "glossary/#beacon"
     }
   ],
   "allow": [
