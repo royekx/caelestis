@@ -303,6 +303,10 @@
     {
       "pattern": "\\bhearers?\\b",
       "use": "Starchild (Astra Virex's warlocks are Starchildren)"
+    },
+    {
+      "pattern": "\\bOSTEKK-[0-9]",
+      "use": "Ostekk-n (the record's spelling: Ostekk-6, Ostekk-2, Ostekk-10)"
     }
   ],
   "voice": [

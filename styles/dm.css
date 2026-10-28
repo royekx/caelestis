@@ -1543,6 +1543,10 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
   padding: 1.1rem .7rem .35rem; border-bottom: 1px solid var(--gold-rule);
 }
 .register-group-head[hidden] { display: none; }
+.ent-also {
+  font-family: 'Crimson Pro', Georgia, serif; font-size: .82rem; font-style: italic;
+  color: var(--text-muted); letter-spacing: 0;
+}
 
 
 /* ═══════════════════════════════════════════════════════════════

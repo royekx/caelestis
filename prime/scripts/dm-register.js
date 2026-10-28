@@ -38,7 +38,11 @@
    value each row holds on that axis, in the order of that axis's pills,
    and a .register-group-head is inserted before each group, labelled
    from the pill's text. A to Z order inside a group is the page's own
-   order. A group head hides when every row under it is filtered out.
+   order. A row with several values sits under its first and shows an
+   "also:" note for the rest; a value with no pill heads its group raw.
+   A group head hides when every row under it is filtered out. Pills,
+   search, count and view buttons are looked up in the register's own
+   container.
    ════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -53,11 +57,13 @@
     var register = document.querySelector('.register');
     if (!register) return;
 
+    // Everything the register drives lives in the same container as it.
+    var scope = register.parentNode;
     var ents = Array.prototype.slice.call(register.querySelectorAll('.ent'));
-    var pills = Array.prototype.slice.call(document.querySelectorAll('.filter-tag'));
-    var search = document.querySelector('.dm-register-search');
-    var count = document.querySelector('.result-count');
-    var clear = document.querySelector('.clear-btn');
+    var pills = Array.prototype.slice.call(scope.querySelectorAll('.filter-tag'));
+    var search = scope.querySelector('.dm-register-search');
+    var count = scope.querySelector('.result-count');
+    var clear = scope.querySelector('.clear-btn');
 
     // Each pill declares its axis through its data attribute. Collect the
     // axis names once rather than hard-coding what this page filters on.
@@ -166,13 +172,35 @@
 
     // Grouping by one axis, when the page asks for it.
     var groupAxis = register.getAttribute('data-group-axis');
-    var viewBtns = Array.prototype.slice.call(document.querySelectorAll('.view-btn'));
+    var viewBtns = Array.prototype.slice.call(scope.querySelectorAll('.view-btn'));
     var heads = [];
     var original = ents.slice();
     var empty = register.querySelector('.register-empty');
 
-    function groupOf(e) {
-      return ((e.dataset[groupAxis] || '').split(/\s+/).filter(Boolean)[0]) || '';
+    function valuesOf(e) {
+      return (e.dataset[groupAxis] || '').split(/\s+/).filter(Boolean);
+    }
+    function groupOf(e) { return valuesOf(e)[0] || ''; }
+
+    // A row with several values sits under its first; the rest show as
+    // a small "also" note while the view is grouped.
+    function labelFor(v) {
+      var pill = pills.filter(function (p) { return p.dataset[groupAxis] === v; })[0];
+      return pill ? pill.textContent : v;
+    }
+    function setAlso(on) {
+      original.forEach(function (e) {
+        var old = e.querySelector('.ent-also');
+        if (old) old.parentNode.removeChild(old);
+        var rest = valuesOf(e).slice(1);
+        if (!on || !rest.length) return;
+        var sub = e.querySelector('.ent-sub') || e.querySelector('.ent-name');
+        if (!sub) return;
+        var note = document.createElement('span');
+        note.className = 'ent-also';
+        note.textContent = 'also: ' + rest.map(labelFor).join(', ');
+        sub.parentNode.insertBefore(note, sub.nextSibling);
+      });
     }
 
     function setView(view) {
@@ -193,8 +221,7 @@
             var head = document.createElement('div');
             head.className = 'register-group-head';
             head.setAttribute('data-group', g);
-            var pill = axisPills[values.indexOf(g)];
-            head.textContent = pill ? pill.textContent : g;
+            head.textContent = labelFor(g);
             register.insertBefore(head, empty || null);
             heads.push(head);
             last = g;
@@ -204,6 +231,7 @@
       } else {
         order.forEach(function (e) { register.insertBefore(e, empty || null); });
       }
+      setAlso(view === 'group' && !!groupAxis);
       viewBtns.forEach(function (b) {
         var on = b.getAttribute('data-view') === view;
         b.classList.toggle('is-active', on);

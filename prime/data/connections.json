@@ -1933,7 +1933,7 @@
           "src": "dossiers/nghathrod.html"
         },
         {
-          "t": "He knows the Order's Watchers exist, likely through the Watcher posted to Glyth.",
+          "t": "He knows the Order's Watchers exist, through the Watchers posted to Glyth.",
           "src": "dossiers/nghathrod.html"
         }
       ]
@@ -3148,7 +3148,7 @@
           "src": "dossiers/krik-lit.html"
         },
         {
-          "t": "He and Pffred were relieved at the V006 rendezvous and returned with the Flighty Foundling.",
+          "t": "He and Pffred are relieved at the V006 swap and leave aboard the Flighty Foundling.",
           "src": "dossiers/krik-lit.html"
         }
       ]
@@ -3464,7 +3464,7 @@
       "summary": "An OSTEKK automaton travelling with the crew.",
       "facts": [
         {
-          "t": "OSTEKK-6 is the only active survivor of the nine OSTEKK units.",
+          "t": "Ostekk-6 is the only active survivor of the nine OSTEKK units.",
           "src": "STAGING round 2"
         },
         {
@@ -3485,11 +3485,11 @@
       "summary": "An OSTEKK automaton lying inert on the Hollow Deck.",
       "facts": [
         {
-          "t": "OSTEKK-2 lies inert on the Hollow Deck.",
+          "t": "Ostekk-2 lies inert on the Hollow Deck.",
           "src": "STAGING round 2"
         },
         {
-          "t": "The crew could heal OSTEKK-2 back to function with the Lantern of Flourishing.",
+          "t": "The crew could heal Ostekk-2 back to function with the Lantern of Flourishing.",
           "src": "STAGING round 2"
         }
       ]

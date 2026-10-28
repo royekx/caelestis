@@ -66,7 +66,7 @@ Each settles items on several pages at once. Rule these first.
 12. **Runes 17–19 as Anchors.** Fixed places Tumak goes to is settled; what they grant is open. Crew (Tumak), rules.
 13. ~~**Can a taken person be released?**~~ *Ruled: the taken outlive N'ghathrod, each keeping part of him.*
 14. **Fonains–Caelestis offset.** The timeline puts Fonains Session 28 about five months before Caelestis now; older notes say Caelestis is "around" Session 28. Timeline, Fonains doc, campaign.
-15. ~~**OSTEKK-6 as sole survivor.**~~ *Ruled: the only active survivor; OSTEKK-2 is inert and can be healed.*
+15. ~~**Ostekk-6 as sole survivor.**~~ *Ruled: the only active survivor; Ostekk-2 is inert and can be healed.*
 16. **The tracker and session ingest.** Keep the repo JSON record and in-chat runbook, or move to an alternative. See the Automation and tracker section.
 17. **Dossier tab names and "Open" subsections.** *Tab names answered: the four tabs stand. Open: whether "Open" subsections may stay in DM notes.*
 18. ~~**How Clint left the Bellwether Crow.**~~ *Ruled: a deliberate dive through a color pool with a sister artifact of A.T.L.A.S.* *Answered (section 4): the artifact is A.T.L.A.S.'s sister, a Distinction housing (STAGING); its name is a later item under artifacts/atlas-sister.html.*
@@ -127,9 +127,8 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 
 - `data/items.json` has Boogie holding the whole derelict logbook; the settled version is half.
 - `data/npcs.json` calls Mirt "the head of Caelestis".
-- `data/sessions.json`, `quests.json` and `items.json` call OSTEKK-6 an autognome; OSTEKK units are automatons.
+- `data/sessions.json`, `quests.json` and `items.json` call Ostekk-6 an autognome; OSTEKK units are automatons.
 - DM dossiers with no record, though the crew may have met or been told of them: Polly Geim (Casey's brother), Clint Dashforest, Qitru, Quartermaster Halix Verrow, the Crystalline Retrieval Construct, Ezra Ahl-Sier. Each gets a record at first contact; check whether any contact has already happened (section 5).
-- `data/npcs.json` spells the automatons Ostekk-6 and Ostekk-2 (CLAUDE.md lists Ostekk-6 as settled); the DM pages, the vessel page and STAGING write OSTEKK-6 and OSTEKK-2, and the behir Ostekk-10. Settle one spelling for the units.
 - `data/npcs.json` names Miken "Miken"; the DM dossier and the Fleet row use his full name, Miken Haverstance. Add the surname to the record if Korey agrees.
 - `data/npcs.json` (Winston Ryeback, Voyage 6) says he "was told the beholder had been taken care of, and took it to mean the crew had killed it"; the ruling is that Tumak told him outright that the crew killed it (dossiers/winston-ryeback.html).
 
@@ -1173,7 +1172,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   src: Korey, 2026-10-25 (round 8); factions/vocath-operation.html
 
 - **[decide]** What the surface attack at graduation is made of *(prep)*
-  The page has "security diverted by the surface operation" while Joffrey runs the Brig, and names nothing in that operation. The early plan collapsed the module's two finale events into one: the attack hits during the ceremony, a battle across the school. It ported these module pieces: Mustaf Shultz and his giff mercenaries, a decapitation threat, Miken at 2 HP, Wizpop's return (now OSTEKK-6), and the transmutation sigil as Vocath's eye-in-a-wheel. Qitru and her githyanki have since moved to H'Catha. Vocath is a merchant, no fighter, and stays out of the siege himself (settled: chat-cosmic-campaign-structure § Act 1 retrofit), so whoever leads the surface operation is hired or his crew. Pick which pieces stay, and write the surface operation into the Brig run section.
+  The page has "security diverted by the surface operation" while Joffrey runs the Brig, and names nothing in that operation. The early plan collapsed the module's two finale events into one: the attack hits during the ceremony, a battle across the school. It ported these module pieces: Mustaf Shultz and his giff mercenaries, a decapitation threat, Miken at 2 HP, Wizpop's return (now Ostekk-6), and the transmutation sigil as Vocath's eye-in-a-wheel. Qitru and her githyanki have since moved to H'Catha. Vocath is a merchant, no fighter, and stays out of the siege himself (settled: chat-cosmic-campaign-structure § Act 1 retrofit), so whoever leads the surface operation is hired or his crew. Pick which pieces stay, and write the surface operation into the Brig run section.
   Touches: campaign/colony/index.html (the Brig run), campaign/spine.html (Arc 1 close), factions/vocath-operation.html, dossiers/miken.html.
   src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300); dossiers/qitru.html
 
@@ -1284,11 +1283,11 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 - **[fix]** The Command Deck field did not unmake constructs
   The V005 entry says "the Command Deck is an anti-magic field that unmakes constructs". In the field the clockwork horrors froze, the OSTEKK units stuttered and slowed but kept running, and the behir could not enter. Gregory went sluggish, as narration only, with no mechanical effect; the construct table's "Gregory … Unaffected" changes to that.
-  src: chat-voyage-6-7-planning § The field and constructs; memory-canon campaign-canon § Key NPCs (OSTEKK-6)
+  src: chat-voyage-6-7-planning § The field and constructs; memory-canon campaign-canon § Key NPCs (Ostekk-6)
 
-- **[fix]** OSTEKK-6 is an automaton
-  V004 Actual and Delta say "gave the autognome its name", "the autognome warned", "Keep the autognome unrepaired", and the V004 plan says "a broken autognome". OSTEKK-6 is an automaton; Gregory is the autognome. Change each. Flag only (do not fix): data/sessions.json, data/quests.json and data/items.json also call him an autognome.
-  src: memory-canon campaign-canon § Key NPCs (OSTEKK-6)
+- **[fix]** Ostekk-6 is an automaton
+  V004 Actual and Delta say "gave the autognome its name", "the autognome warned", "Keep the autognome unrepaired", and the V004 plan says "a broken autognome". Ostekk-6 is an automaton; Gregory is the autognome. Change each. Flag only (do not fix): data/sessions.json, data/quests.json and data/items.json also call him an autognome.
+  src: memory-canon campaign-canon § Key NPCs (Ostekk-6)
 
 - **[fix]** No patrol at H'Catha
   The V007 plan lists "the H'Catha approach, the patrol, the landing". Change "the patrol" to "the border crossing".
@@ -1313,7 +1312,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   src: memory-canon open-decisions (Voyage 007 intent); campaign-canon § Naming (Boogie near the Lantern); chat-voyage-6-7-planning § V007 player beats, § Settled; BCS § Sol/H'Catha transit
 
 - **[add]** Crew nights on the crossing
-  Add to the V007 briefing: Ryeback cooks from the Garden and dares someone to eat first. Ezra spars and shares a line of the Watcher creed. Miken sits alone by the intake. OSTEKK-6 asks Gregory what a plan is.
+  Add to the V007 briefing: Ryeback cooks from the Garden and dares someone to eat first. Ezra spars and shares a line of the Watcher creed. Miken sits alone by the intake. Ostekk-6 asks Gregory what a plan is.
   src: chat-voyage-6-7-planning § Crossing and H'Catha
 
 - **[add]** The lane marker
@@ -1447,9 +1446,10 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   Dossiers without a portrait show a monogram. Each one needs an image for its infobox and its row on dossiers/index.html (prime/scripts/portraits.js).
   src: chat 2026-10-27
 
-- **[later]** Appearance sketches to confirm
-  Every dossier now has an Appearance section, or a Still to decide sentence where the species is unknown (Polly Geim, Captain Haymond Rolt, Hessa Dun, Ilsevaine Corr, Aurel Venn). Sketches written from species and record wait for confirmation: Vecna (Deity), Vecna (Lich), N'ghathrod, the five enna, Thessalar, Mirt, Joffrey, Jeffrey, Tarroway, Verrow, Ostekk, Vocath, Qitru, Ryeback, Sor'Kur, Ilsabet Crann, Astra Virex. Each page's Still to decide names it.
-  src: section 5 (2026-10-28)
+- **[later]** Appearances to set, and sketches to confirm
+  Appearances to set. These dossiers carry only sourced details, or no Appearance section, and a Still to decide sentence: N'ghathrod, Osskhal, Khaleth, Zhauveth (her height is set), Ostekk, Thessalar, Joffrey, Astra Virex; and, with species unknown, Polly Geim, Captain Haymond Rolt, Hessa Dun, Ilsevaine Corr, Aurel Venn.
+  Sketches to confirm. These were written from species and record and wait for confirmation: Vecna (Deity), Vecna (Lich), Ulh'rek, Ith'varn, Mirt, Jeffrey, Tarroway, Verrow, Vocath, Qitru, Ryeback, Sor'Kur, Ilsabet Crann.
+  src: section 5 (2026-10-28); cold review
 
 - **[later]** Dossiers still to build
   The old register's "Still to build" list: Ostekk-10, the behir; H'Catha's cast, Kurrzot, his Rival and Ondessa (rows on locations/hcatha.html for now); Captain-Commander Dejexic (factions/order.html for now). Kip & Pik, Pffred and Mr. Blip have public pages and earn a DM dossier on contact, when a scene needs a person where they stand.
@@ -1588,7 +1588,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ### dossiers/ostekk.html
 
 - **[decide]** Why Vaelorix stole from Ostekk *(prep)*
-  The theft of the Lantern and the nine OSTEKK units is canon. Was it to escape a debt to Ostekk? The debt is an unreviewed draft, along with a Fallmouth porter mentioning "Ostekk's machines" and OSTEKK-6 freezing at the words.
+  The theft of the Lantern and the nine OSTEKK units is canon. Was it to escape a debt to Ostekk? The debt is an unreviewed draft, along with a Fallmouth porter mentioning "Ostekk's machines" and Ostekk-6 freezing at the words.
   src: chat-astral-sea-worldbuilding § Open; memory-canon campaign-canon § Naming (OSTEKK units)
 
 ---
@@ -1620,7 +1620,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   src: module-sweep-fonains § Temple of Moloch; section 5 (2026-10-28)
 
 - **[later]** Thessalar's copies and the dungeon's tiers
-  Which of the eight copies, if any, are loose outside the wreck, and how many tiers of the dungeon are worth mapping, wait until the crew heads for the wreck. His appearance is a sketch.
+  Which of the eight copies, if any, are loose outside the wreck, and how many tiers of the dungeon are worth mapping, wait until the crew heads for the wreck. His appearance is not set.
   src: dossiers/thessalar.html; section 5 (2026-10-28)
 
 ---
@@ -1644,7 +1644,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ### dossiers/winston-ryeback.html
 
 - **[decide]** His stat block lines *(prep)*
-  The note says he has no Musket line "because the musket was stolen"; with the pistol stolen instead, the giff block's lines need re-deriving. Options: keep Musket and rename Pistol to hand cannon; or drop the block note.
+  The Hand Cannon line uses the giff's Pistol numbers (dossiers/winston-ryeback.html). With his custom pistol the stolen weapon, the open part is whether his block also keeps the giff's Musket line.
   src: memory-canon campaign-canon § Key NPCs (Ryeback); dossiers/winston-ryeback.html
 
 ---
@@ -2284,9 +2284,9 @@ left here is open.
   Options: the bag of holding blocked it, since its interior is an extradimensional space (lock this before players ask); or the anti-magic field around the Command Deck had already been muting the Lantern's pull, as it muted Gregory's tug, and the behir lost the trail inside it.
   src: chat-voyage-6-7-planning § Open; memory-canon § Antagonists (field suppressing the Lantern)
 
-- **[decide]** Whether a pod charge plus an INT DC 15 parts check wakes OSTEKK-2 for good *(prep)*
+- **[decide]** Whether a pod charge plus an INT DC 15 parts check wakes Ostekk-2 for good *(prep)*
   The page and prime/data/overlay.json offer this ("The seated Lantern and the pod can wake it for good in Voyage 007"); no settled source backs it. Options: keep it as the V007 offer, or drop it.
-  Partly settled by STAGING § OSTEKK-2: OSTEKK-6 is the only active survivor of Vaelorix's nine units; OSTEKK-2 lies inert on the Hollow Deck, and the crew could heal it back to function if they return for it, for example with the Lantern of Flourishing. Still open: whether the specific mechanic (a pod charge plus an INT DC 15 parts check) is how that healing works.
+  Partly settled by STAGING § Ostekk-2: Ostekk-6 is the only active survivor of Vaelorix's nine units; Ostekk-2 lies inert on the Hollow Deck, and the crew could heal it back to function if they return for it, for example with the Lantern of Flourishing. Still open: whether the specific mechanic (a pod charge plus an INT DC 15 parts check) is how that healing works.
   src: artifacts/containment-engine.html; prime/data/overlay.json
   updated (section 4): the Lantern page carries this as a Still to decide sentence, and the overlay beat now follows STAGING (the crew could heal it if they return for it).
 
@@ -2362,7 +2362,7 @@ against the complete Tumak sweep (all 336 turns).
 
 - **[fix]** Residue housings are dampened in anti-magic, not switched off *(answered)*
   Page says paracausal objects are "Unsuppressed … an instrument built around a piece works inside an anti-magic field". Change to: inside an anti-magic field an instrument built around a residue piece is suppressed in part. Its pull is muted and its working stutters, but it is not switched off. On the tyrant ship the Command Deck field suppressed the Lantern of Flourishing and muted Gregory's tug toward it; the OSTEKK units, built with the Lantern's fragment, stuttered and slowed and kept running, while the clockwork horrors froze and the behir could not enter. Gregory's own sluggishness there was narrative only. When the field lifts, the pull returns in full. The same wording goes on artifacts/containment-engine.html (§ Where it is, the anti-magic add) and the OSTEKK dossiers.
-  src: memory-canon § Antagonists ("The anti-magic field has been suppressing the Lantern"), § Key NPCs (OSTEKK-6), § Cosmology (Weave ruling)
+  src: memory-canon § Antagonists ("The anti-magic field has been suppressing the Lantern"), § Key NPCs (Ostekk-6), § Cosmology (Weave ruling)
   answered: memory-canon § Antagonists ("The anti-magic field has been suppressing the Lantern, muting Gregory's tug … When the field lifts, Gregory can commune with it"), § Key NPCs ("in the anti-magic field they stutter but keep running"); inbox/chat-voyage-6-7-planning.md § The field and constructs (Settled). Memory outranks the page.
 
 #### Tumak: runes, Rune Sets, Wayfind
@@ -2597,7 +2597,7 @@ against the complete Tumak sweep (all 336 turns).
   overlay.json says "Seated, it turns the ship into a safehouse." Change to: seated in the bay, the Lantern is a one-person rejuvenation pod (one creature, one hour, all three charges, a long rest even if it already had one that day).
   src: chat-voyage-6-7-planning § Superseded
 
-- **[fix]** OSTEKK-6's repair objective is closed
+- **[fix]** Ostekk-6's repair objective is closed
   overlay.json "next" says "Seat the Lantern in the repair bay so Ostekk-6 finishes rebuilding." A Lantern charge repaired him instead of the bay. Close the objective, or replace it with his current next step.
   src: chat-voyage-6-7-planning § The Lantern and the ship
 
@@ -2605,7 +2605,7 @@ against the complete Tumak sweep (all 336 turns).
   overlay.json says "The Command Deck's field unmakes constructs". Change to: the field froze the clockwork horrors, slowed the OSTEKK units and kept the behir out.
   src: chat-voyage-6-7-planning § The field and constructs
 
-- *(The OSTEKK-2 "wake it for good" line in overlay.json is a decide (prep) under artifacts/containment-engine.html in the Artifacts and vessels section.)*
+- *(The Ostekk-2 "wake it for good" line in overlay.json is a decide (prep) under artifacts/containment-engine.html in the Artifacts and vessels section.)*
 
 ### wayfinder-path/index.html (player site, outside prime)
 
@@ -3042,8 +3042,8 @@ run decide, fix, drop, add.
   src: automation § Open
 
 - **[fix]** "Autognome" in V003 and V004 stays as history *(answered)*
-  No sweep. V003 and V004 bullets and accounts keep "the broken autognome", because that is what the crew believed then; OSTEKK-6 states he is an automaton in V005, and every dossier and current page says automaton. State the rule in SESSION-RUN.md so it is not re-asked: earlier voyages keep the crew's belief at the time; correct the record and current pages only.
-  src: automation § Open; memory-canon § Key NPCs (OSTEKK-6)
+  No sweep. V003 and V004 bullets and accounts keep "the broken autognome", because that is what the crew believed then; Ostekk-6 states he is an automaton in V005, and every dossier and current page says automaton. State the rule in SESSION-RUN.md so it is not re-asked: earlier voyages keep the crew's belief at the time; correct the record and current pages only.
+  src: automation § Open; memory-canon § Key NPCs (Ostekk-6)
   answered: inbox/chat-automation.md § Voyage 5 runbook, Method (Settled: "Earlier voyages keep 'autognome' as history"). PR #61 asked "Say if you want them swept" and PR #62 repeated the default; Korey merged both without asking for a sweep.
 
 # Repo and process
