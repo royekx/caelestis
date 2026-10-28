@@ -3,9 +3,17 @@
   "finished": [
     "prime/cosmology",
     "prime/glossary",
-    "prime/factions"
+    "prime/factions",
+    "prime/locations",
+    "prime/artifacts",
+    "prime/vessels",
+    "prime/dossiers"
   ],
   "retired": [
+    {
+      "pattern": "\\bLich Vecna\\b",
+      "use": "Vecna (Lich)"
+    },
     {
       "pattern": "\\b(crystal )?spheres?\\b",
       "use": "galaxy / galaxies (a region of space); keep 'sphere' only for a shape"
@@ -47,8 +55,37 @@
       "use": "five Axioms"
     },
     {
-      "pattern": "\\b(Boundary|Transformation|Convergence) (fragment|piece|pieces|Axiom|seat|residue)\\b",
-      "use": "Distinction / Expansion / Consolidation (fragment); the Axioms are Consolidation, Expansion, Dissolution, Distinction, Determination"
+      "pattern": "\\b(Boundary|Transformation|Convergence)\\b",
+      "use": "Distinction / Expansion / Consolidation; the Axioms and their fragments are Consolidation, Expansion, Dissolution, Distinction, Determination"
+    },
+    {
+      "pattern": "\\b(four|Four) fragments\\b|\\bseventeen (residue )?pieces\\b",
+      "use": "five fragments, twenty-eight pieces: Dissolution 2, Distinction 3, Expansion 5, Consolidation 7, Determination 11",
+      "i": true
+    },
+    {
+      "pattern": "\\bfirst[- ]key\\b|\\bsecond key\\b|\\bkey to the First Heart\\b|\\bopens the First Heart\\b",
+      "use": "a whole fragment does not open the First Heart; what assembling one does is not set (a Still to decide sentence)",
+      "i": true
+    },
+    {
+      "pattern": "\\btwo thresholds\\b",
+      "use": "retired: a whole fragment does not open a door, and what all five do is not set",
+      "i": true
+    },
+    {
+      "pattern": "one person in two bodies",
+      "use": "Wan and Tu, two hosts sharing one persona",
+      "i": true
+    },
+    {
+      "pattern": "\\bThe (Tyrant Ship|Tyrant|Moonraider|Flighty Foundling|Bellwether Crow)\\b",
+      "use": "the name alone: Tyrant Ship, Moonraider, Flighty Foundling, Bellwether Crow (ship names carry no article)"
+    },
+    {
+      "pattern": "data-sphere",
+      "use": "data-where (the vessels register's Where axis)",
+      "raw": true
     },
     {
       "pattern": "\\b(Negentropy|Possibility fragment|Gravity fragment|Entropy fragment)\\b",
@@ -113,8 +150,53 @@
       "i": true
     },
     {
+      "pattern": "\\bTetherbreak sector\\b",
+      "use": "the perimeter watch at Realmspace's edge (locations/realmspace.html#perimeter-watch); the Tetherbreak is the bearing, and a sector is a Fleet branch"
+    },
+    {
+      "pattern": "\\bUntethered\\b",
+      "use": "the place's galaxy and system (every place lies in a galaxy)"
+    },
+    {
+      "pattern": "\\bthe Flow\\b",
+      "use": "the Astral Sea, which fills the dark between systems and between galaxies"
+    },
+    {
+      "pattern": "Cosmos Chart",
+      "use": "the Chart"
+    },
+    {
+      "pattern": "\\bchild hearts?\\b",
+      "use": "heart; every heart pulls toward the First Heart",
+      "i": true
+    },
+    {
+      "pattern": "Astra(&rsquo;|'|’)s network",
+      "use": "Astra Virex's reach",
+      "i": true
+    },
+    {
+      "pattern": "\\b(beholder|rival) hives\\b",
+      "use": "ten solitary beholder rulers under the Sovereign Eye",
+      "i": true
+    },
+    {
+      "pattern": "\\beight domains\\b",
+      "use": "ten domains, one ruler each",
+      "i": true
+    },
+    {
+      "pattern": "Sigil event",
+      "use": "Vecna ascended on Oerth",
+      "i": true
+    },
+    {
+      "pattern": "\\bRykoe Galaxy\\b",
+      "use": "the Erevos Galaxy (GAL-01 is named for its core, Erevos; Rykoe is the centre of the cosmos)"
+    },
+    {
       "pattern": "\\bFirst World\\b",
-      "use": "the Reach world, now Erevos"
+      "use": "the Reach world, now Rykoe"
     },
     {
       "pattern": "Mother of the Universe",
@@ -165,6 +247,66 @@
       "pattern": "Vocath(&rsquo;|'|’)s Operation",
       "use": "Vocath's crew",
       "i": true
+    },
+    {
+      "pattern": "\\bWatcher in training\\b|\\bGlimpse cadet\\b",
+      "use": "Glimpse"
+    },
+    {
+      "pattern": "\\bthe exile\\b",
+      "use": "Ondessa (H'Catha's enlightened exile is retired)"
+    },
+    {
+      "pattern": "Chispitez",
+      "use": "Chloe Chespetes"
+    },
+    {
+      "pattern": "Fenerba|Fernerva",
+      "use": "Finerva"
+    },
+    {
+      "pattern": "Cortez family",
+      "use": "the Cre'Tez"
+    },
+    {
+      "pattern": "Pedra Ardante",
+      "use": "Pedra Ardente"
+    },
+    {
+      "pattern": "\\bthe Elder Eye\\b",
+      "use": "the Elder Elemental Eye"
+    },
+    {
+      "pattern": "Blooming Grove",
+      "use": "the Blooming Glass"
+    },
+    {
+      "pattern": "unmakes constructs",
+      "use": "a field it could not enter (the field froze the horrors and slowed the OSTEKK units)"
+    },
+    {
+      "pattern": "V007 swap",
+      "use": "the V006 swap"
+    },
+    {
+      "pattern": "whole of the going-home",
+      "use": "the passage to a new home"
+    },
+    {
+      "pattern": "Crossing open",
+      "use": "cut"
+    },
+    {
+      "pattern": "\\bAct (1|2|3|4|I|II|III|IV)\\b",
+      "use": "Arc"
+    },
+    {
+      "pattern": "\\bhearers?\\b",
+      "use": "Starchild (Astra Virex's warlocks are Starchildren)"
+    },
+    {
+      "pattern": "\\bOSTEKK-[0-9]",
+      "use": "Ostekk-n (the record's spelling: Ostekk-6, Ostekk-2, Ostekk-10)"
     }
   ],
   "voice": [
@@ -198,12 +340,93 @@
       "note": "no 'Open' labels, rows or sections: write what is undecided as a sentence in a DM notes tab or planning page"
     },
     {
+      "pattern": "^\\s*Open:\\s",
+      "raw": true,
+      "note": "no 'Open:' lines in running text: write what is undecided as a sentence in a DM notes tab or planning page"
+    },
+    {
       "pattern": "class=\"[^\"]*\\bis-open\\b",
       "raw": true,
       "note": "no 'open' tag: write what is undecided as a sentence in a DM notes tab or planning page"
     }
   ],
   "moved": [
+    {
+      "old": "realms/index.html",
+      "new": "locations/index.html"
+    },
+    {
+      "old": "realms/realmspace.html",
+      "new": "locations/realmspace.html"
+    },
+    {
+      "old": "realms/caelestis.html",
+      "new": "locations/caelestis.html"
+    },
+    {
+      "old": "realms/toril.html",
+      "new": "locations/toril.html"
+    },
+    {
+      "old": "realms/glyth.html",
+      "new": "locations/glyth.html"
+    },
+    {
+      "old": "realms/strake-station.html",
+      "new": "locations/strake-station.html"
+    },
+    {
+      "old": "realms/cairn-station.html",
+      "new": "locations/cairn-station.html"
+    },
+    {
+      "old": "realms/aethris.html",
+      "new": "locations/aethris.html"
+    },
+    {
+      "old": "realms/virenspace.html",
+      "new": "locations/virenspace.html"
+    },
+    {
+      "old": "realms/wayfinders-homeworld.html",
+      "new": "locations/wayfinders-homeworld.html"
+    },
+    {
+      "old": "realms/astral-sea.html",
+      "new": "locations/astral-sea.html"
+    },
+    {
+      "old": "realms/waystation.html",
+      "new": "locations/waystation.html"
+    },
+    {
+      "old": "realms/cantina.html",
+      "new": "locations/cantina.html"
+    },
+    {
+      "old": "realms/meteor-hub.html",
+      "new": "locations/meteor-hub.html"
+    },
+    {
+      "old": "realms/krynn.html",
+      "new": "locations/krynn.html"
+    },
+    {
+      "old": "realms/sys04.html",
+      "new": "locations/krynnspace.html"
+    },
+    {
+      "old": "realms/first-world.html",
+      "new": "locations/rykoe.html"
+    },
+    {
+      "old": "realms/ascension-world.html",
+      "new": "locations/oerth.html"
+    },
+    {
+      "old": "realms/tetherbreak.html",
+      "new": "locations/realmspace.html#perimeter-watch"
+    },
     {
       "old": "realms/hcatha.html",
       "new": "locations/hcatha.html"
@@ -223,10 +446,31 @@
     {
       "old": "factions/external.html",
       "new": "factions/index.html#other-powers"
+    },
+    {
+      "old": "artifacts/runekeepers-fragment.html",
+      "new": "artifacts/dissolution-fragment.html"
+    },
+    {
+      "old": "artifacts/transformation-fragment.html",
+      "new": "artifacts/expansion-fragment.html"
+    },
+    {
+      "old": "surveyor-depths",
+      "new": "artifacts/atlas.html#reading-depths"
+    },
+    {
+      "old": "#counter-spore",
+      "new": "artifacts/faelight-spore.html"
+    },
+    {
+      "old": "world-surveyor-thread",
+      "new": "campaign/plot-hooks.html#atlas-thread"
     }
   ],
   "allow": [
-    "prime/cosmology/:outcomes were undecided|new undecided things"
+    "prime/cosmology/:outcomes were undecided|new undecided things",
+    "prime/locations/:Kesh Hollow"
   ],
   "scan": [
     "prime",

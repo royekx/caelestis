@@ -6,6 +6,12 @@
     "records": []
   },
   {
+    "slug": "aurel-venn",
+    "name": "Aurel Venn",
+    "path": "dossiers/aurel-venn.html",
+    "records": []
+  },
+  {
     "slug": "beshaba",
     "name": "Beshaba",
     "path": "dossiers/beshaba.html",
@@ -43,14 +49,32 @@
   },
   {
     "slug": "ezra",
-    "name": "Ezra",
+    "name": "Ezra Ahl-Sier",
     "path": "dossiers/ezra.html",
+    "records": []
+  },
+  {
+    "slug": "haymond-rolt",
+    "name": "Captain Haymond Rolt",
+    "path": "dossiers/haymond-rolt.html",
+    "records": []
+  },
+  {
+    "slug": "hessa-dun",
+    "name": "Hessa Dun",
+    "path": "dossiers/hessa-dun.html",
     "records": []
   },
   {
     "slug": "ilsabet-crann",
     "name": "Ilsabet Crann",
     "path": "dossiers/ilsabet-crann.html",
+    "records": []
+  },
+  {
+    "slug": "ilsevaine-corr",
+    "name": "Ilsevaine Corr",
+    "path": "dossiers/ilsevaine-corr.html",
     "records": []
   },
   {
@@ -119,10 +143,11 @@
   },
   {
     "slug": "ostekk-6",
-    "name": "OSTEKK-6",
+    "name": "Ostekk-6",
     "path": "dossiers/ostekk-6.html",
     "records": [
-      "NPC-Hn4kW9vm"
+      "NPC-Hn4kW9vm",
+      "NPC-nmdnCFvr"
     ]
   },
   {
@@ -204,8 +229,14 @@
     ]
   },
   {
+    "slug": "vecna-lich",
+    "name": "Vecna (Lich)",
+    "path": "dossiers/vecna-lich.html",
+    "records": []
+  },
+  {
     "slug": "vecna",
-    "name": "Vecna",
+    "name": "Vecna (Deity)",
     "path": "dossiers/vecna.html",
     "records": []
   },

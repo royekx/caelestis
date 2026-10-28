@@ -24,7 +24,7 @@ links to the others for the rest.
 
 | Page | Job | Vecna there |
 |---|---|---|
-| **Cosmology** (finished) | how the cosmos works | how cores wake, inscriptions, Erevos, the eye as a working |
+| **Cosmology** (finished) | how the cosmos works | how cores wake, inscriptions, Rykoe, the eye as a working |
 | **Vecna's dossier** | the person | who he is, what he wants, what's hidden, how to run him |
 | **Opposition: Vecna** | his lane through this campaign | where the working stands, his contingencies, the reveal ladder, the failure state |
 | **Campaign** | the whole story, all forces | the theme, the shape, the arcs; one or two sentences on Vecna, linked |
@@ -77,21 +77,21 @@ cells and arcs the subject appears in, as links.
 - To understand the cosmos and become part of it: where everything came from,
   what the Reach was, what was taken. His grievance: something was taken from
   him and hidden from him. He believes he could repair whatever breaks.
-- His aim is the Axiomic Ascension: through opened Erevos, into Continuity.
-  His method is the eye inscription across the Rykoe Galaxy, which he calls the
+- His aim is the Axiomic Ascension: through opened Rykoe, into Continuity.
+  His method is the eye inscription across the Erevos Galaxy, which he calls the
   Circle of Fifths. Two or three sentences here, linking to Cosmology § Vecna's
   working for how it works.
 
 **DM notes**
 - *What's hidden:* the Sovereign Eye on H'Catha was his attempt at a Zenith,
-  and it failed. Lich Vecna sits in the Radiant Citadel, calm and almost
+  and it failed. Vecna (Lich) sits in the Radiant Citadel, calm and almost
   redeemed. He uses Tharizdun as a contingency, and they distrust each other.
   He steers Seekers chapters with residue. No one else knows the name Circle
   of Fifths or what he is building.
 - *How to run him:* he never appears in person; he acts through vessels. He
   thrives on what others do not know, so he is played through what is
   withheld. A part of him can manifest in the First Heart.
-- *Threads:* N'ghathrod, the Seekers, Oerth, Tharizdun, Lich Vecna, H'Catha,
+- *Threads:* N'ghathrod, the Seekers, Oerth, Tharizdun, Vecna (Lich), H'Catha,
   the Restorers; Opposition: Vecna; the arcs he drives on the campaign page.
 
 ### Opposition: Vecna (`opposition/vecna.html`)
@@ -112,9 +112,9 @@ cells and arcs the subject appears in, as links.
 - **The reveal ladder:** every opened heart links back to one world in
   Greyspace → why Oerth → plotted from Oerth, the hearts trace an eye → the
   name Vecna surfaces through lore (a figure missing his left eye and left
-  hand) → Lich Vecna in the Citadel.
+  hand) → Vecna (Lich) in the Citadel.
 - **Failure state:** GAL-01's core wakes for him; GAL-03 to GAL-05 fall;
-  Erevos can open, and every linked heart becomes a door.
+  Rykoe can open, and every linked heart becomes a door.
 - **DM notes:** what is still to decide about his lane.
 
 ### Campaign (`campaign/index.html`)
@@ -142,11 +142,13 @@ cells and arcs the subject appears in, as links.
 - **The current Ascension page** (`campaign/ascension/`, to become
   `opposition/vecna.html`) is built on retired ideas (the seat, the Figure, the
   Cast, the downward tithe, the Remaking). It is rewritten, not moved.
-- **`working/vecna.md`** still describes the Convergence seat. It is retired
-  when the dossier is written.
 
 ## To settle
 
-- Lich Vecna: a section of Vecna's dossier, or a dossier of his own.
+The lich is settled: he is a separate character with his own dossier. Both
+pages are called Vecna: the god is Vecna (Deity), `dossiers/vecna.html`, and
+the lich is Vecna (Lich), `dossiers/vecna-lich.html`. In prose plain "Vecna"
+means the god; the lich is always "Vecna (Lich)".
+
 - What Vecna's side does in each arc. STAGING has the shape and the failure
   state, not the per-arc cells.

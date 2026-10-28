@@ -6,7 +6,7 @@
       "label": "The Prime Continuum",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "All of existence, one thing with Continuity: every galaxy, the Astral Sea between, and Erevos at the center.",
+      "summary": "All of existence, one thing with Continuity: every galaxy, the Astral Sea between, and Rykoe at the center.",
       "facts": [
         {
           "t": "Continuity and the Prime Continuum are one thing: all of existence.",
@@ -17,7 +17,7 @@
           "src": "cosmology/index.html"
         },
         {
-          "t": "The cosmos is a collective of five galaxies arranged around Erevos at its center.",
+          "t": "The cosmos is a collective of five galaxies arranged around Rykoe at its center.",
           "src": "cosmology/index.html"
         }
       ]
@@ -232,18 +232,14 @@
       "label": "The Reach",
       "type": "event",
       "scope": "cosmos",
-      "summary": "The First World's attempt to touch the Axioms directly; the birth of this cosmos.",
+      "summary": "The act of the people of the first world, who reached into Continuity and changed it; their world was destroyed.",
       "facts": [
         {
-          "t": "A civilization on the First World reached for the Axioms themselves, and no civilization has tried it since.",
+          "t": "The people of the first world, the only world in an earlier version of reality, reached into Continuity and changed it.",
           "src": "cosmology/index.html"
         },
         {
-          "t": "The Reach was a Zenith of extraordinary magnitude that ended with the First World's destruction.",
-          "src": "cosmology/index.html"
-        },
-        {
-          "t": "Its debris formed the worlds, and every world's heart originates there.",
+          "t": "It was the first time Continuity had to answer, and the Core Monolith stands where it answered.",
           "src": "cosmology/index.html"
         },
         {
@@ -253,48 +249,48 @@
       ]
     },
     {
-      "id": "first-world",
-      "label": "The First World",
+      "id": "reach-world",
+      "label": "The Reach world",
       "type": "place",
       "scope": "cosmos",
-      "summary": "The world where the Reach happened; destroyed and nameless on every record.",
+      "summary": "The first world, where the Reach happened; it collapsed into Rykoe.",
       "facts": [
         {
-          "t": "The First World was destroyed by its own Zenith, and every world formed from its debris.",
-          "src": "glossary/index.html"
-        },
-        {
-          "t": "Some of its people were sequestered into the Core, some were destroyed, and the rest became the first gods.",
+          "t": "The Reach world was destroyed by the Reach, and its fragments spread across the cosmos as residue.",
           "src": "cosmology/index.html"
         },
         {
-          "t": "Its own name for itself went into the Core with its people.",
-          "src": "realms/first-world.html"
+          "t": "Its people became woven into the cosmos, and over time they became the gods.",
+          "src": "cosmology/index.html"
+        },
+        {
+          "t": "Its people's own name for their world went into the Core Monolith with them.",
+          "src": "locations/rykoe.html"
         }
       ]
     },
     {
-      "id": "erevos",
-      "label": "Erevos",
+      "id": "rykoe",
+      "label": "Rykoe",
       "type": "place",
       "scope": "cosmos",
       "summary": "The center of the cosmos: the remains of the Reach world, a black hole beneath the Core Monolith.",
       "facts": [
         {
-          "t": "Erevos is the remains of the Reach world, a black hole beneath the Core Monolith and the Radiant Citadel.",
-          "src": "STAGING round 9"
-        },
-        {
-          "t": "What every chart marks as a black hole is the Core's intake, a permanent draw into an archive that never stops receiving.",
+          "t": "Rykoe is the remains of the Reach world, a black hole beneath the Core Monolith and the Radiant Citadel.",
           "src": "cosmology/index.html"
         },
         {
-          "t": "Mortals can cross the approach to the center; gods cannot.",
+          "t": "Rykoe opens only when the cores of all five galaxies are awake and joined.",
           "src": "cosmology/index.html"
         },
         {
-          "t": "The center is not a plane, so reaching it is travel rather than planar transit.",
-          "src": "cosmology/index.html"
+          "t": "Mortals can cross the approach; it harms gods without destroying them.",
+          "src": "locations/rykoe.html"
+        },
+        {
+          "t": "Rykoe is not a plane, so reaching it is travel rather than planar transit.",
+          "src": "locations/rykoe.html"
         }
       ]
     },
@@ -306,7 +302,7 @@
       "summary": "The first Monolith, at the center of the cosmos; every Monolith relays to it.",
       "facts": [
         {
-          "t": "The Core manifested above the First World during its Zenith and remained after the world was destroyed.",
+          "t": "The Core manifested above the Reach world during its Zenith and remained after the world was destroyed.",
           "src": "cosmology/index.html"
         },
         {
@@ -339,7 +335,7 @@
       "summary": "The city the archived built inside the Core.",
       "facts": [
         {
-          "t": "The Citadel holds everything the Monoliths have ever taken, beginning with the people of the First World.",
+          "t": "The Citadel holds everything the Monoliths have ever taken, beginning with the people of the Reach world.",
           "src": "cosmology/index.html"
         },
         {
@@ -357,15 +353,15 @@
       ]
     },
     {
-      "id": "lich-vecna",
-      "label": "Lich Vecna",
+      "id": "vecna-lich",
+      "label": "Vecna (Lich)",
       "type": "person",
       "scope": "cosmos",
       "summary": "Vecna's mortal form, archived by Oerth's Monolith when he became a god.",
       "facts": [
         {
-          "t": "Lich Vecna is the mortal form the Core Monolith archived when Vecna ascended, and he sits in the Radiant Citadel.",
-          "src": "STAGING round 2"
+          "t": "Vecna (Lich) is the mortal form Oerth's Monolith archived when Vecna ascended and relayed to the Core Monolith; he sits in the Radiant Citadel.",
+          "src": "dossiers/vecna-lich.html"
         },
         {
           "t": "He has had centuries to conclude he was wrong, and he is calm, almost redeemed.",
@@ -374,6 +370,10 @@
         {
           "t": "He holds the shape of Vecna's ambition and none of its method.",
           "src": "glossary/index.html"
+        },
+        {
+          "t": "He is a separate character from Vecna, with his own dossier.",
+          "src": "dossiers/vecna-lich.html"
         }
       ]
     },
@@ -382,18 +382,14 @@
       "label": "The First Heart",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "The First World's heart, the deepest in the cosmos and the one way into the Axiom layer.",
+      "summary": "The Reach world's heart, the deepest in the cosmos, beneath Rykoe; closed since the Reach.",
       "facts": [
         {
-          "t": "The First Heart is the one point from which the Axiom layer can be reached.",
+          "t": "The First Heart lies beneath Rykoe, and every other heart pulls faintly toward it.",
           "src": "cosmology/index.html"
         },
         {
-          "t": "It has been closed since the First World ended.",
-          "src": "cosmology/index.html"
-        },
-        {
-          "t": "Residue alone cannot force it; the massed Yearning of linked hearts or one fragment made whole can.",
+          "t": "It has been closed since the Reach world ended.",
           "src": "cosmology/index.html"
         },
         {
@@ -520,23 +516,23 @@
       "label": "Residue",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "The pieces of the Reach fragments: First World matter, paracausal by origin.",
+      "summary": "The pieces of the Reach fragments: Reach world matter, paracausal by origin.",
       "facts": [
         {
           "t": "Residue is the only matter that can act on an Atrium, and a piece is not consumed by opening one.",
           "src": "cosmology/index.html"
         },
         {
-          "t": "The four fragments broke by Axiom into prime numbers of pieces: Dissolution 2, Distinction 3, Determination 5, Consolidation 7.",
-          "src": "STAGING round 11"
+          "t": "The five fragments broke by Axiom into prime numbers of pieces: Dissolution 2, Distinction 3, Expansion 5, Consolidation 7, Determination 11.",
+          "src": "cosmology/index.html"
         },
         {
           "t": "Pieces of one fragment draw toward each other; pieces of different fragments are indifferent.",
           "src": "cosmology/index.html"
         },
         {
-          "t": "Caelestis's galaxy holds pieces of three fragments, by chance and by pull.",
-          "src": "STAGING round 8"
+          "t": "The Erevos Galaxy holds pieces of three fragments, Consolidation, Dissolution and Distinction, by chance and by pull.",
+          "src": "cosmology/index.html"
         },
         {
           "t": "Every enchanted thing carries a trace of residue.",
@@ -549,27 +545,27 @@
       ]
     },
     {
-      "id": "circle-of-fifteenths",
+      "id": "circle-of-fifths",
       "label": "The Circle of Fifths",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "Vecna's working: fifteen opened, linked hearts drawn as a spellcasting circle across the cosmos.",
+      "summary": "Vecna's name for his working: five galaxies, each a fifth of what he needs, around Rykoe. GAL-01's fifth is the eye inscription.",
       "facts": [
         {
-          "t": "Vecna needs fifteen opened, linked hearts, three in each of the five galaxies.",
-          "src": "STAGING round 2"
+          "t": "He named it after the circle of fifths in music: five galaxies, each a fifth of what he needs, around Rykoe. The name is his alone.",
+          "src": "opposition/vecna.html"
         },
         {
-          "t": "In each galaxy one heart links to the galaxy on each side and one to the First Heart.",
-          "src": "STAGING round 2"
+          "t": "In GAL-01 the working is the eye inscription: fifteen heart worlds, ten on the lids and five in the iris, which line up into an eye only as seen from Oerth.",
+          "src": "opposition/vecna.html"
         },
         {
-          "t": "He named it after the circle of fifths in music, and the name is his alone.",
-          "src": "STAGING round 4"
+          "t": "Oerth is not one of the fifteen; every heart world in the figure links back to Oerth's heart.",
+          "src": "opposition/vecna.html"
         },
         {
-          "t": "Almost none of the circle stands today: a handful of hearts may have been found in recent decades, and a couple at most are linked.",
-          "src": "STAGING round 2"
+          "t": "Three of the fifteen hearts are found and two opened and linked, each also linked to Oerth; Nowhere's heart is found and not opened.",
+          "src": "opposition/vecna.html"
         },
         {
           "t": "Only Vecna knows what he is building; the Seekers and the Order do not.",
@@ -578,27 +574,14 @@
       ]
     },
     {
-      "id": "residue-thresholds",
-      "label": "The two thresholds",
-      "type": "concept",
-      "scope": "cosmos",
-      "summary": "What residue does when assembled: one fragment whole opens a door; all four bend reality.",
-      "facts": [
-        {
-          "t": "All four fragments together carry enough axiomity to put a thing back into being.",
-          "src": "artifacts/index.html"
-        }
-      ]
-    },
-    {
       "id": "gal-01",
-      "label": "The Rykoe Galaxy (GAL-01)",
+      "label": "The Erevos Galaxy (GAL-01)",
       "type": "place",
       "scope": "cosmos",
       "summary": "Caelestis's galaxy, home to Realmspace, Fonains and Krynn.",
       "facts": [
         {
-          "t": "The Rykoe Galaxy is named for Rykoe, the black hole at its core: the pupil of Vecna's eye.",
+          "t": "The Erevos Galaxy is named for Erevos, the black hole at its core: the pupil of Vecna's eye.",
           "src": "STAGING, Cosmology"
         },
         {
@@ -652,20 +635,16 @@
       "summary": "The material medium between worlds, systems and galaxies.",
       "facts": [
         {
-          "t": "Wildspace is the Astral Sea between systems, and the Flow fills the space between galaxies.",
-          "src": "realms/astral-sea.html"
-        },
-        {
-          "t": "Divine spells fail in the Flow, because a god's realm is anchored to its own galaxy.",
+          "t": "The Astral Sea fills the dark between systems and between galaxies; the Fleet calls it the drift.",
           "src": "cosmology/index.html"
         },
         {
           "t": "The corpses of gods drift through it, worked by salvagers, hermits and githyanki.",
-          "src": "realms/astral-sea.html"
+          "src": "locations/astral-sea.html"
         },
         {
-          "t": "A psychic wind can throw a vessel far off its heading and late.",
-          "src": "realms/astral-sea.html"
+          "t": "Color pools open and close quickly; the Fleet charts them and sails around them.",
+          "src": "locations/astral-sea.html"
         },
         {
           "t": "Most bodies in space are uninhabited, and an inhabited world is rare.",
@@ -717,10 +696,10 @@
     },
     {
       "id": "vecna",
-      "label": "Vecna",
+      "label": "Vecna (Deity)",
       "type": "entity",
       "scope": "cosmos",
-      "summary": "God of secrets, knowledge, manipulation and trickery, climbing toward an Axiom's seat.",
+      "summary": "God of secrets, knowledge, manipulation and trickery, working to wake the Erevos Galaxy's core and reach Continuity.",
       "facts": [
         {
           "t": "Vecna is a later god who ascended on Oerth, his homeworld, at least a few centuries ago.",
@@ -739,10 +718,6 @@
           "src": "STAGING round 2"
         },
         {
-          "t": "Weakening an Axiom so he can take its place is part of his plan.",
-          "src": "STAGING round 2"
-        },
-        {
           "t": "Ascension charged him to Oerth's heart and pushed him off the world, so he works through vessels.",
           "src": "STAGING round 1"
         },
@@ -753,6 +728,10 @@
         {
           "t": "He believes he could repair whatever breaks, and breaking reality is not his goal.",
           "src": "STAGING round 2"
+        },
+        {
+          "t": "Only on Oerth is he worshipped openly as Vecna; elsewhere his faithful call him by other names, the First Seeker among them.",
+          "src": "dossiers/vecna.html"
         }
       ]
     },
@@ -768,7 +747,7 @@
           "src": "STAGING round 5"
         },
         {
-          "t": "The Monolith that answered archived his mortal form, Lich Vecna.",
+          "t": "The Monolith that answered archived his mortal form, Vecna (Lich).",
           "src": "STAGING round 5"
         },
         {
@@ -811,7 +790,7 @@
       "label": "Oerth",
       "type": "place",
       "scope": "cosmos",
-      "summary": "Vecna's homeworld, where he became a god: the Ascension World.",
+      "summary": "Vecna's homeworld in Greyspace, where he became a god: the Ascension World.",
       "facts": [
         {
           "t": "Oerth is a darkest-timeline world where Vecna's hold is strongest.",
@@ -826,8 +805,8 @@
           "src": "STAGING round 2"
         },
         {
-          "t": "Oerth lies in GAL-05.",
-          "src": "STAGING round 3"
+          "t": "Oerth lies in Greyspace, in GAL-01, the Erevos Galaxy.",
+          "src": "STAGING, Realms"
         },
         {
           "t": "Oerth is the retina of the eye drawn across GAL-01: every heart world in the figure links back to it.",
@@ -836,6 +815,10 @@
         {
           "t": "Oerth is the one world Vecna cannot lose.",
           "src": "STAGING, Campaign"
+        },
+        {
+          "t": "Oerth's Monolith archived Vecna's mortal form, Vecna (Lich), and relayed it to the Core Monolith.",
+          "src": "cosmology/index.html"
         }
       ]
     },
@@ -1045,6 +1028,14 @@
         {
           "t": "Aethris invented the Misfortuned through Tymora's worship; Beshaba did nothing to that world.",
           "src": "dossiers/beshaba.html"
+        },
+        {
+          "t": "Beshaba's reward for Sol's oath is power, given shape by a want she lays on him as a quest.",
+          "src": "dossiers/beshaba.html"
+        },
+        {
+          "t": "She is strongest on Aethris, where she is the lesser of the two sisters.",
+          "src": "dossiers/beshaba.html"
         }
       ]
     },
@@ -1077,6 +1068,10 @@
         },
         {
           "t": "It runs parallel to Vecna's working and has no part in it.",
+          "src": "dossiers/astra-virex.html"
+        },
+        {
+          "t": "Its missions read as grief: disappearances and people changed.",
           "src": "dossiers/astra-virex.html"
         }
       ]
@@ -1258,11 +1253,15 @@
       "label": "Hessa Dun",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A Caelestis contract contact whose uncle collects a lot of things and likes visitors.",
+      "summary": "A third-intake cadet who posts a notice-board job, and whose uncle collects things and likes visitors.",
       "facts": [
         {
-          "t": "Hessa Dun is a Caelestis contract contact the crew works with after graduation.",
-          "src": "factions/seekers.html"
+          "t": "Hessa Dun is a third-intake cadet at the Academy, planted in Arc 1.",
+          "src": "dossiers/hessa-dun.html"
+        },
+        {
+          "t": "She posts a notice-board job: hands and a strong back wanted to move her family's crates.",
+          "src": "dossiers/hessa-dun.html"
         },
         {
           "t": "She mentions that her uncle collects a lot of things and likes visitors.",
@@ -1401,10 +1400,10 @@
       "label": "Ezra Ahl-Sier",
       "type": "person",
       "scope": "cosmos",
-      "summary": "A Watcher cadet, an elf paladin of the All-Father, joining the crew for his field training.",
+      "summary": "An astral elf Glimpse of the Order, travelling with a Caelestis crew to finish his training on H'Catha.",
       "facts": [
         {
-          "t": "Ezra is an elf paladin of the All-Father near the end of about a century of training.",
+          "t": "Ezra is an astral elf paladin of the Oath of the Watchers near the end of about a century of training.",
           "src": "dossiers/ezra.html"
         },
         {
@@ -1421,6 +1420,14 @@
         },
         {
           "t": "His Channel Divinity guards allies against being reached into.",
+          "src": "dossiers/ezra.html"
+        },
+        {
+          "t": "Caelestis is his prequel; his knighting, his posting to Emporia and his allies come after the crew leaves him on H'Catha.",
+          "src": "dossiers/ezra.html"
+        },
+        {
+          "t": "A Caelestis crew later carries him from H'Catha to the Hall, the last troop he travels with.",
           "src": "dossiers/ezra.html"
         }
       ]
@@ -1576,6 +1583,10 @@
         {
           "t": "She is the one who will one day face Vth'oramu.",
           "src": "STAGING round 10"
+        },
+        {
+          "t": "Once N'ghathrod grows bolder, she will face Vth'oramu.",
+          "src": "dossiers/ilsevaine-corr.html"
         }
       ]
     },
@@ -1618,10 +1629,10 @@
       "label": "The United Intergalactic Fleet",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "Four or five sector branches across the Rykoe Galaxy, under a council of admirals. Caelestis is one of its sectors.",
+      "summary": "Four or five sector branches across the Erevos Galaxy, under a council of admirals. Caelestis is one of its sectors.",
       "facts": [
         {
-          "t": "The Fleet is made of four or five sector branches, each overseeing a cluster of systems in the Rykoe Galaxy.",
+          "t": "The Fleet is made of four or five sector branches, each overseeing a cluster of systems in the Erevos Galaxy.",
           "src": "factions/fleet.html"
         },
         {
@@ -1719,6 +1730,10 @@
         {
           "t": "The Distinction fragment is in three pieces.",
           "src": "STAGING round 10"
+        },
+        {
+          "t": "Every Distinction piece, in whatever housing, finds or reveals something: it tells one thing apart from everything else.",
+          "src": "artifacts/distinction-fragment.html"
         }
       ]
     },
@@ -1727,7 +1742,7 @@
       "label": "The Dissolution fragment",
       "type": "item",
       "scope": "caelestis",
-      "summary": "The Runekeepers' fragment, two pieces, now forming in Wan and Tu.",
+      "summary": "The fragment the Runekeepers carry, two pieces, now forming in Wan and Tu.",
       "facts": [
         {
           "t": "The Dissolution fragment lies in two pieces.",
@@ -1744,6 +1759,10 @@
         {
           "t": "The twins carry the Dissolution fragment.",
           "src": "STAGING round 10"
+        },
+        {
+          "t": "It is visible in its bearers, forming and re-forming in the chest of the Runekeeper and of the Wayfinders who carry it.",
+          "src": "STAGING (Korey 2026-10-27)"
         }
       ]
     },
@@ -1752,11 +1771,24 @@
       "label": "The Expansion fragment",
       "type": "item",
       "scope": "cosmos",
-      "summary": "Five pieces that have left no trace in any record.",
+      "summary": "Expansion residue, in five pieces, none located.",
       "facts": [
         {
-          "t": "The Expansion fragment is in five pieces, and none has left a trace in any record.",
-          "src": "artifacts/transformation-fragment.html"
+          "t": "The Expansion fragment is in five pieces, and none has been located; none lies in the Erevos Galaxy.",
+          "src": "artifacts/expansion-fragment.html"
+        }
+      ]
+    },
+    {
+      "id": "determination-fragment",
+      "label": "The Determination fragment",
+      "type": "item",
+      "scope": "cosmos",
+      "summary": "Determination residue, in eleven pieces, none ever found.",
+      "facts": [
+        {
+          "t": "The Determination fragment is in eleven pieces, and none has ever been found; none lies in the Erevos Galaxy.",
+          "src": "artifacts/determination-fragment.html"
         }
       ]
     },
@@ -1777,6 +1809,10 @@
         },
         {
           "t": "Four of its pieces are loose and their workings unidentified.",
+          "src": "artifacts/rod-of-seven-parts.html"
+        },
+        {
+          "t": "Its pieces have yearned toward each other for ages, and several now sit near Realmspace.",
           "src": "artifacts/rod-of-seven-parts.html"
         }
       ]
@@ -1887,6 +1923,18 @@
         {
           "t": "He is working on all four parts of his plan now: placing the taken, finding hearts, opening them and seeking links.",
           "src": "STAGING round 10"
+        },
+        {
+          "t": "His join with Vth'oramu is permanent; only a wish or an artifact could break it.",
+          "src": "dossiers/nghathrod.html"
+        },
+        {
+          "t": "His field mark is the Passage, gaining a circle for every linked world.",
+          "src": "dossiers/nghathrod.html"
+        },
+        {
+          "t": "He knows the Order's Watchers exist, through the Watchers posted to Glyth.",
+          "src": "dossiers/nghathrod.html"
         }
       ]
     },
@@ -2112,6 +2160,10 @@
         {
           "t": "He is the one who argues with N'ghathrod in front of others.",
           "src": "dossiers/osskhal.html"
+        },
+        {
+          "t": "Properly raised and captured with N'ghathrod aboard Thessalar's craft; Thessalar's experiments gave him a greatly extended lifespan.",
+          "src": "dossiers/osskhal.html"
         }
       ]
     },
@@ -2132,6 +2184,10 @@
         },
         {
           "t": "He is the best source in the cosmos on where Atria are.",
+          "src": "dossiers/ulhrek.html"
+        },
+        {
+          "t": "Unthinned and made aboard Thessalar's craft; Thessalar's experiments gave him a greatly extended lifespan.",
           "src": "dossiers/ulhrek.html"
         }
       ]
@@ -2158,6 +2214,10 @@
         {
           "t": "People who meet her remember the conversation fondly and cannot reconstruct what was said.",
           "src": "dossiers/zhauveth.html"
+        },
+        {
+          "t": "Unthinned and made aboard Thessalar's craft; Thessalar's experiments gave her a greatly extended lifespan.",
+          "src": "dossiers/zhauveth.html"
         }
       ]
     },
@@ -2179,6 +2239,10 @@
         {
           "t": "He has not left Vth'oramu in thirty years.",
           "src": "dossiers/ithvarn.html"
+        },
+        {
+          "t": "Unthinned and made aboard Thessalar's craft; Thessalar's experiments gave him a greatly extended lifespan.",
+          "src": "dossiers/ithvarn.html"
         }
       ]
     },
@@ -2199,6 +2263,10 @@
         },
         {
           "t": "Of the five he is the most likely to leave a fight rather than finish it.",
+          "src": "dossiers/khaleth.html"
+        },
+        {
+          "t": "Properly raised and captured with N'ghathrod aboard Thessalar's craft; Thessalar's experiments gave him a greatly extended lifespan.",
           "src": "dossiers/khaleth.html"
         }
       ]
@@ -2241,6 +2309,18 @@
         {
           "t": "Its mouth draws things in to the demiplane its interior was widened into.",
           "src": "STAGING round 6"
+        },
+        {
+          "t": "Its eye is the bridge; its mouth is the only way in, onto a demiplane crossed by fixed plane-shift transit points.",
+          "src": "vessels/vthoramu.html"
+        },
+        {
+          "t": "The earliest copies of N'ghathrod are in the dreadnought's walls.",
+          "src": "dossiers/vthoramu.html"
+        },
+        {
+          "t": "Illithid arcanists from N'ghathrod's own crew keep its plane-shift transit points.",
+          "src": "dossiers/vthoramu.html"
         }
       ]
     },
@@ -2261,7 +2341,11 @@
         },
         {
           "t": "Glyth is a settled illithid world with elder brains and thrall populations.",
-          "src": "realms/glyth.html"
+          "src": "locations/glyth.html"
+        },
+        {
+          "t": "Glyth is hard to reach, on a long orbit with a rare approach window, and closed to Fleet traffic.",
+          "src": "locations/glyth.html"
         }
       ]
     },
@@ -2316,6 +2400,14 @@
         {
           "t": "He used the Fleet's thinning to put stress on the Academy.",
           "src": "timeline/timeline.json"
+        },
+        {
+          "t": "His price to N'ghathrod's side was captives from a Caelestis crew, read as ordinary thrall work.",
+          "src": "dossiers/vocath.html"
+        },
+        {
+          "t": "He sees the Fleet stretched thin and uses it to press the Academy.",
+          "src": "dossiers/vocath.html"
         }
       ]
     },
@@ -2332,7 +2424,7 @@
         },
         {
           "t": "Vocath's crew took Cairn Station after it went dark and waited for the relief run.",
-          "src": "realms/cairn-station.html"
+          "src": "locations/cairn-station.html"
         },
         {
           "t": "Vocath's crew ambushed the Bellwether Crow for A.T.L.A.S.'s sister.",
@@ -2382,7 +2474,7 @@
       "label": "Qitru",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A githyanki intermediary in Vocath's operation, following the crew.",
+      "summary": "A githyanki intermediary of Vocath's crew, following the crew by Miken's beacon.",
       "facts": [
         {
           "t": "Qitru serves Vocath and does not care who stands above him.",
@@ -2398,6 +2490,10 @@
         },
         {
           "t": "Miken's report that the crew killed a beholder has reached her.",
+          "src": "dossiers/qitru.html"
+        },
+        {
+          "t": "She pursues Vocath's aim, to make the cadet mission fail; Miken is her channel.",
           "src": "dossiers/qitru.html"
         }
       ]
@@ -2415,7 +2511,7 @@
         },
         {
           "t": "The few survivors were let go so that he would come home a hero, and they believe every word of their account.",
-          "src": "realms/cairn-station.html"
+          "src": "locations/cairn-station.html"
         },
         {
           "t": "He is the colony's only operative on the station, and his allegiance runs to N'ghathrod.",
@@ -2432,6 +2528,18 @@
         {
           "t": "He means to take A.T.L.A.S. from the Brig under cover of the graduation chaos.",
           "src": "campaign/colony/index.html"
+        },
+        {
+          "t": "He was top of his class and is named the present-day great spelljammer of Caelestis.",
+          "src": "dossiers/joffrey.html"
+        },
+        {
+          "t": "He was taken slowly: for months he was himself, and he finished converting only recently.",
+          "src": "dossiers/joffrey.html"
+        },
+        {
+          "t": "One survivor of the Crow noticed he had changed and never reported it.",
+          "src": "dossiers/joffrey.html"
         }
       ]
     },
@@ -2478,6 +2586,10 @@
         {
           "t": "Its survivors still argue about whether Clint meant to go through the color pool.",
           "src": "STAGING round 4"
+        },
+        {
+          "t": "The Crow made Strake under damage.",
+          "src": "locations/cairn-station.html"
         }
       ]
     },
@@ -2540,6 +2652,14 @@
         {
           "t": "Saerthe and Tarto have worn a matched pair of bands of the lost and found since he was lost.",
           "src": "dossiers/clint.html"
+        },
+        {
+          "t": "He landed about a year before the present and was on Fonains when its Monolith appeared.",
+          "src": "dossiers/clint.html"
+        },
+        {
+          "t": "On the Blooming Glass job his crew freed Chloe Chespetes and handed the Pedra Ardente to Finerva.",
+          "src": "dossiers/clint.html"
         }
       ]
     },
@@ -2548,7 +2668,7 @@
       "label": "Miken Haverstance",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A cadet friend of the crew, leveraged by Vocath's operation.",
+      "summary": "A cadet friend of the crew, leveraged by Vocath's crew; he does not flip.",
       "facts": [
         {
           "t": "A mercane recruited Miken by paying his fiancé's debts.",
@@ -2565,6 +2685,14 @@
         {
           "t": "He is wrestling with guilt rather than hiding malice.",
           "src": "dossiers/miken.html"
+        },
+        {
+          "t": "Miken stays leveraged and complicit, does not flip, and lives.",
+          "src": "dossiers/miken.html"
+        },
+        {
+          "t": "The moneylender behind the Tallow Wren contract holds his fiancé's debts.",
+          "src": "dossiers/miken.html"
         }
       ]
     },
@@ -2577,32 +2705,32 @@
       "facts": [
         {
           "t": "The Brig holds objects whose cosmological character is unknown, unstable or inconvenient to discuss.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         },
         {
           "t": "Its location and access routes are classified, and teleportation fails in and out of it.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         },
         {
           "t": "Only a handful at Bridge level know its full inventory.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         }
       ]
     },
     {
       "id": "tetherbreak",
-      "label": "The Tetherbreak sector",
+      "label": "The perimeter watch",
       "type": "place",
       "scope": "caelestis",
-      "summary": "A perimeter ring on the edge of GAL-01 under elevated monitoring.",
+      "summary": "Strake Station and its sister satellites, Hollis Post and Cairn Station, watching the edge of Realmspace for the Caelestis Sector.",
       "facts": [
         {
-          "t": "The Fleet keeps a ring of posts on the edge of GAL-01 to watch traffic entering from the Flow.",
-          "src": "realms/tetherbreak.html"
+          "t": "The Caelestis Sector watches the edge of Realmspace from Strake Station and its two sister satellites, Hollis Post and Cairn Station.",
+          "src": "locations/realmspace.html#perimeter-watch"
         },
         {
-          "t": "Everything past Strake Station is closed without Bridge authorization.",
-          "src": "realms/tetherbreak.html"
+          "t": "Strake stands on the bearing called the Tetherbreak; everything past it is closed without Bridge authorization.",
+          "src": "locations/realmspace.html#perimeter-watch"
         }
       ]
     },
@@ -2611,7 +2739,7 @@
       "label": "Strake Station",
       "type": "place",
       "scope": "caelestis",
-      "summary": "The Fleet relay at the authorized limit of the Cairn bearing.",
+      "summary": "The Caelestis Sector's station at the edge of Realmspace, the last open deck before the closed run to Cairn.",
       "facts": [
         {
           "t": "Strake Station and its sister satellites are Caelestis's to keep.",
@@ -2636,7 +2764,7 @@
       "label": "Cairn Station",
       "type": "place",
       "scope": "caelestis",
-      "summary": "The far post on the perimeter ring, silent for a year.",
+      "summary": "The far satellite of the watch at Realmspace's edge, silent for a year.",
       "facts": [
         {
           "t": "A year ago Vth'oramu sat on the Cairn bearing.",
@@ -2644,11 +2772,11 @@
         },
         {
           "t": "Cairn went silent after reporting a mass that matched no vessel profile.",
-          "src": "realms/cairn-station.html"
+          "src": "locations/cairn-station.html"
         },
         {
           "t": "Vocath's people withdrew after the ambush and left something behind at Cairn.",
-          "src": "realms/cairn-station.html"
+          "src": "locations/cairn-station.html"
         }
       ]
     },
@@ -2657,11 +2785,11 @@
       "label": "Hollis Post",
       "type": "place",
       "scope": "caelestis",
-      "summary": "The western post on the perimeter ring, filing normally.",
+      "summary": "The western satellite of the watch at Realmspace's edge, filing normally.",
       "facts": [
         {
           "t": "Hollis Post does the same job as Strake and Cairn, and nothing has happened to it.",
-          "src": "realms/tetherbreak.html"
+          "src": "locations/realmspace.html#perimeter-watch"
         }
       ]
     },
@@ -2691,7 +2819,7 @@
       "label": "Quartermaster Halix Verrow",
       "type": "person",
       "scope": "caelestis",
-      "summary": "Strake's quartermaster, who counter-signs everything that moves on the Cairn bearing.",
+      "summary": "Strake's quartermaster, who counter-signs everything that moves on the edge run to Cairn.",
       "facts": [
         {
           "t": "Verrow enforces the standing order closing the run past Strake.",
@@ -2779,11 +2907,15 @@
       "label": "Ondrel Anchorage",
       "type": "place",
       "scope": "caelestis",
-      "summary": "A neutral port on the moon Ostrel, away from Toril.",
+      "summary": "A neutral port on the moon Ostrel, in a system neighbouring Realmspace within the Caelestis Sector.",
       "facts": [
         {
           "t": "Ondrel Anchorage is a neutral port on the moon Ostrel, away from Toril.",
           "src": "STAGING round 11"
+        },
+        {
+          "t": "Fleet operations for the Caelestis Sector run out of Ondrel Anchorage.",
+          "src": "locations/ondrel-anchorage.html"
         }
       ]
     },
@@ -2797,6 +2929,10 @@
         {
           "t": "Captain Haymond Rolt oversees several Driftwarden crews at once, out of Ondrel Anchorage.",
           "src": "STAGING round 8"
+        },
+        {
+          "t": "He is an homage to Captain Raymond Holt; his look, manner and history are not set.",
+          "src": "dossiers/haymond-rolt.html"
         }
       ]
     },
@@ -2809,11 +2945,11 @@
       "facts": [
         {
           "t": "Caelestis is under permanent Forbiddance, maintained by Saerthe.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         },
         {
           "t": "Authorized internal transit uses bound Teleportation Circle sigils between a few fixed points, the Brig among them.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         },
         {
           "t": "Caelestis has no echo in the Feywild or the Shadowfell.",
@@ -2821,7 +2957,7 @@
         },
         {
           "t": "The thefts, the sabotage and Vocath's grudge are noise over one objective: A.T.L.A.S. in the Brig.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         }
       ]
     },
@@ -2846,6 +2982,14 @@
         },
         {
           "t": "He does not know his wardrobe is one of Zerathis's tethers.",
+          "src": "dossiers/mirt.html"
+        },
+        {
+          "t": "Mirt runs the Academy only; the Caelestis Corps and the Bridge operate outside him.",
+          "src": "dossiers/mirt.html"
+        },
+        {
+          "t": "Caelestis protects him and keeps him quiet, so he is also stuck there.",
           "src": "dossiers/mirt.html"
         }
       ]
@@ -2872,6 +3016,14 @@
         {
           "t": "One wing flap was torn away long ago, and she has not glided since.",
           "src": "dossiers/boatswain-tarto.html"
+        },
+        {
+          "t": "She has four superiority dice, regained on a short rest.",
+          "src": "dossiers/boatswain-tarto.html"
+        },
+        {
+          "t": "When the CRC comes for Sol, she stands up for him.",
+          "src": "dossiers/boatswain-tarto.html"
         }
       ]
     },
@@ -2896,6 +3048,10 @@
         },
         {
           "t": "Half of his missing miniature ship is inside Boogie.",
+          "src": "dossiers/saerthe-abizjn.html"
+        },
+        {
+          "t": "He was not aboard the Bellwether Crow when Clint went overboard, and carries the guilt of it.",
           "src": "dossiers/saerthe-abizjn.html"
         }
       ]
@@ -2931,6 +3087,14 @@
         {
           "t": "He wants the cadets fed and alive, and treats both as the same job.",
           "src": "dossiers/winston-ryeback.html"
+        },
+        {
+          "t": "The Academy thefts took his custom pistol; the hand cannon is his own gun.",
+          "src": "dossiers/winston-ryeback.html"
+        },
+        {
+          "t": "Ryeback lives; no death is planned for him.",
+          "src": "dossiers/winston-ryeback.html"
         }
       ]
     },
@@ -2948,6 +3112,10 @@
         {
           "t": "He believes the academy would take the Latchling apart.",
           "src": "dossiers/rindle-gearloft.html"
+        },
+        {
+          "t": "The Latchling goes to Gregory as something familiar, and that reaction cracks Rindle's secrecy.",
+          "src": "dossiers/rindle-gearloft.html"
         }
       ]
     },
@@ -2960,7 +3128,7 @@
       "facts": [
         {
           "t": "Mr. Blip is an autognome with ordinary personhood who cannot cast.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         },
         {
           "t": "He is uninvolved in the run on the Brig.",
@@ -2977,6 +3145,10 @@
       "facts": [
         {
           "t": "Krik'Lit translated the crew's parley with Ostekk-10, because Ostekk's clockwork horrors speak thri-kreen.",
+          "src": "dossiers/krik-lit.html"
+        },
+        {
+          "t": "He and Pffred are relieved at the V006 swap and leave aboard the Flighty Foundling.",
           "src": "dossiers/krik-lit.html"
         }
       ]
@@ -3033,7 +3205,7 @@
       "facts": [
         {
           "t": "The sabotage on the Simulation Deck left metallic plates and a jagged sigil in the chamber walls.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         }
       ]
     },
@@ -3046,11 +3218,11 @@
       "facts": [
         {
           "t": "The bribed seam in the station's inventory handling is at the Sky Dock.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         },
         {
           "t": "Colony material moves in and out of Caelestis through the Sky Dock.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         }
       ]
     },
@@ -3264,7 +3436,7 @@
       "label": "Ostekk",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A beholder builder who made the Containment Engine and the OSTEKK units.",
+      "summary": "A ruling beholder of H'Catha and a builder, who made the Containment Engine and the OSTEKK units.",
       "facts": [
         {
           "t": "Ostekk built the Containment Engine around the Rod's fourth piece without knowing it was Reach residue.",
@@ -3277,6 +3449,10 @@
         {
           "t": "He now has reason to come for the Engine himself: the crew took it and lied to his machine.",
           "src": "dossiers/ostekk.html"
+        },
+        {
+          "t": "He rules one of H'Catha's ten domains like a workshop; he wants his property back.",
+          "src": "dossiers/ostekk.html"
         }
       ]
     },
@@ -3288,7 +3464,7 @@
       "summary": "An OSTEKK automaton travelling with the crew.",
       "facts": [
         {
-          "t": "OSTEKK-6 is the only active survivor of the nine OSTEKK units.",
+          "t": "Ostekk-6 is the only active survivor of the nine OSTEKK units.",
           "src": "STAGING round 2"
         },
         {
@@ -3309,11 +3485,11 @@
       "summary": "An OSTEKK automaton lying inert on the Hollow Deck.",
       "facts": [
         {
-          "t": "OSTEKK-2 lies inert on the Hollow Deck.",
+          "t": "Ostekk-2 lies inert on the Hollow Deck.",
           "src": "STAGING round 2"
         },
         {
-          "t": "The crew could heal OSTEKK-2 back to function with the Lantern of Flourishing.",
+          "t": "The crew could heal Ostekk-2 back to function with the Lantern of Flourishing.",
           "src": "STAGING round 2"
         }
       ]
@@ -3426,14 +3602,39 @@
       ]
     },
     {
+      "id": "faelight-spore",
+      "label": "Faelight spore",
+      "type": "item",
+      "scope": "caelestis",
+      "summary": "A fungus from Vaelorix's collection that throws a cloud of faerie light when fed a spell slot.",
+      "facts": [
+        {
+          "t": "Fed a spell slot, it makes a persistent faerie fire cloud for a minute, with a radius of 10, 20 or 30 feet by slot, with no concentration and no save.",
+          "src": "artifacts/faelight-spore.html"
+        },
+        {
+          "t": "It is a non-Weave conduit, so it works inside an anti-magic field.",
+          "src": "artifacts/faelight-spore.html"
+        },
+        {
+          "t": "The Tyrant Ship's Collection Manifest lists it as entry 051, from the outer Kellis Belt: intake, unprocessed.",
+          "src": "artifacts/faelight-spore.html"
+        }
+      ]
+    },
+    {
       "id": "LOC-yAV2JeVr",
       "label": "Flighty Foundling",
       "type": "vessel",
       "scope": "caelestis",
-      "summary": "A Fleet hammerhead.",
+      "summary": "A Caelestis hammerhead.",
       "facts": [
         {
           "t": "The Flighty Foundling brings Ezra out to the crew at the swap.",
+          "src": "vessels/flighty-foundling.html"
+        },
+        {
+          "t": "It supplies the scuttle ship that docks in the Tyrant Ship's Cargo intake for shore parties.",
           "src": "vessels/flighty-foundling.html"
         }
       ]
@@ -3564,11 +3765,11 @@
         },
         {
           "t": "The Dissolution fragment is forming in both twins, half a rune to each.",
-          "src": "artifacts/runekeepers-fragment.html"
+          "src": "artifacts/dissolution-fragment.html"
         },
         {
           "t": "When both twins arrive home, the stalled cycle brings a Zenith and ends the concealment.",
-          "src": "realms/wayfinders-homeworld.html"
+          "src": "locations/wayfinders-homeworld.html"
         },
         {
           "t": "Tumak has his own Heart-rune.",
@@ -3684,7 +3885,7 @@
         },
         {
           "t": "His constellation is CON-312.",
-          "src": "realms/index.html"
+          "src": "locations/index.html"
         },
         {
           "t": "He is circling a shape he has not taken, the Almost, and his slips toward it match none of his beast forms or his Starry Form.",
@@ -3756,6 +3957,14 @@
         {
           "t": "Astra Virex wears Polly's voice to reach Casey.",
           "src": "STAGING round 8"
+        },
+        {
+          "t": "The real Polly was consumed, or is caught between life and death; no one knows which.",
+          "src": "dossiers/polly.html"
+        },
+        {
+          "t": "The voice Casey hears as Polly is Astra Virex wearing his shape.",
+          "src": "dossiers/polly.html"
         }
       ]
     },
@@ -3777,6 +3986,10 @@
         {
           "t": "The wardrobe he gave Mirt is one of his tethers.",
           "src": "dossiers/zerathis.html"
+        },
+        {
+          "t": "Zerathis followed Astra Virex and was no part of Vecna's following.",
+          "src": "dossiers/zerathis.html"
         }
       ]
     },
@@ -3797,7 +4010,7 @@
         },
         {
           "t": "The sky inside it is CON-055, as seen from Virenspace.",
-          "src": "realms/index.html"
+          "src": "locations/index.html"
         }
       ]
     },
@@ -3810,11 +4023,11 @@
       "facts": [
         {
           "t": "Virenspace is an overlap site where paracausal change runs faster than a single tether would make it.",
-          "src": "realms/virenspace.html"
+          "src": "locations/virenspace.html"
         },
         {
           "t": "What is at Viren now is part Zerathis, part Astra's reach and part the site.",
-          "src": "realms/virenspace.html"
+          "src": "locations/virenspace.html"
         }
       ]
     },
@@ -3865,6 +4078,14 @@
         {
           "t": "Neither he nor the order knows the fragment is Reach residue.",
           "src": "dossiers/the-runekeeper.html"
+        },
+        {
+          "t": "He is the only permitted way into and out of the homeworld, and he sent Wan and Tu out himself.",
+          "src": "dossiers/the-runekeeper.html"
+        },
+        {
+          "t": "A Runekeeper's death is celebrated: “We do not mourn this. We sing.”",
+          "src": "dossiers/the-runekeeper.html"
         }
       ]
     },
@@ -3877,7 +4098,7 @@
       "facts": [
         {
           "t": "The world sits where it has always sat, and finding it means knowing the way back rather than the coordinates.",
-          "src": "realms/wayfinders-homeworld.html"
+          "src": "locations/wayfinders-homeworld.html"
         },
         {
           "t": "It shares a galaxy with the threats its Wayfinders map.",
@@ -3885,7 +4106,7 @@
         },
         {
           "t": "Lunarfoot is the clan, not the world.",
-          "src": "realms/wayfinders-homeworld.html"
+          "src": "locations/wayfinders-homeworld.html"
         }
       ]
     },
@@ -3911,7 +4132,7 @@
       "facts": [
         {
           "t": "Toril gives Realmspace its name.",
-          "src": "realms/toril.html"
+          "src": "locations/toril.html"
         }
       ]
     },
@@ -3924,7 +4145,7 @@
       "facts": [
         {
           "t": "Realmspace lies in GAL-01, and Caelestis orbits Toril there.",
-          "src": "realms/realmspace.html"
+          "src": "locations/realmspace.html"
         }
       ]
     },
@@ -3937,7 +4158,7 @@
       "facts": [
         {
           "t": "Aethris sorts its people into the Fortuned and the Misfortuned.",
-          "src": "realms/aethris.html"
+          "src": "locations/aethris.html"
         },
         {
           "t": "Aethris's Zenith is unfinished because the Fortuned have not completed their ritual.",
@@ -3945,7 +4166,7 @@
         },
         {
           "t": "Vecna is pushing the Zenith toward completion from outside, and nobody on Aethris knows it.",
-          "src": "realms/aethris.html"
+          "src": "locations/aethris.html"
         }
       ]
     },
@@ -3962,7 +4183,7 @@
         },
         {
           "t": "Aethris holds that the Prism Ascendant is Tymora's answer to the ritual.",
-          "src": "realms/aethris.html"
+          "src": "locations/aethris.html"
         }
       ]
     },
@@ -4012,6 +4233,14 @@
         },
         {
           "t": "It is built to retrieve rather than kill, and it remembers the damage that hurt it.",
+          "src": "dossiers/crc.html"
+        },
+        {
+          "t": "Its first encounter with the crew is at the Caelestis main entrance, on their return from H'Catha.",
+          "src": "dossiers/crc.html"
+        },
+        {
+          "t": "It tracks Sol by resonance and cannot keep pace with a spelljammer in transit.",
           "src": "dossiers/crc.html"
         }
       ]
@@ -4672,6 +4901,47 @@
         {
           "t": "He powers his work off the hazy yellow gem.",
           "src": "timeline/timeline.json"
+        },
+        {
+          "t": "He was a high priest of Moloch and an artificer, and he pursues lichdom.",
+          "src": "dossiers/thessalar.html"
+        },
+        {
+          "t": "Lola's Boys took the red gem from the cavern lake and the hazy yellow gem from his workshop.",
+          "src": "dossiers/thessalar.html"
+        }
+      ]
+    },
+    {
+      "id": "thessalars-craft",
+      "label": "Thessalar's planar craft",
+      "type": "vessel",
+      "scope": "fonains",
+      "summary": "A vast floating city of many tiers that fell on Fonains about five hundred years ago; the Mad Mage's dungeon now.",
+      "facts": [
+        {
+          "t": "Thessalar held N'ghathrod prisoner aboard and experimented on him with the Rod's seventh piece.",
+          "src": "STAGING § N'ghathrod"
+        },
+        {
+          "t": "Lola's Boys took its control and defence gems in the year 425; without them it fell, and N'ghathrod escaped in the fall.",
+          "src": "STAGING § Fonains and the planar craft"
+        },
+        {
+          "t": "Its gems formed where Olhydra and Ogrémoch collided, and they are not residue.",
+          "src": "STAGING § Fonains and the planar craft"
+        },
+        {
+          "t": "One of Tharizdun's temples was aboard; the crash is how the Elder Elemental Eye reached Fonains.",
+          "src": "STAGING § Tharizdun"
+        },
+        {
+          "t": "Its main body raised the Barrier Peaks; Daoine Gloine is a broken-off piece, and the Thessalkraken landed in the sea.",
+          "src": "STAGING § Fonains and the planar craft"
+        },
+        {
+          "t": "Thessalar is still inside, with his records and the seventh piece.",
+          "src": "STAGING § Thessalar"
         }
       ]
     },
@@ -4964,6 +5234,19 @@
           "src": "STAGING, Campaign"
         }
       ]
+    },
+    {
+      "id": "krynnspace",
+      "label": "Krynnspace (CSC 16423)",
+      "type": "place",
+      "scope": "krynn",
+      "summary": "A star system of two known worlds, Krynn and Fonains, reached from Realmspace on an uncharted route.",
+      "facts": [
+        {
+          "t": "Krynnspace, CSC 16423, holds Krynn (CSC 16423 b) and Fonains (CSC 16423 c).",
+          "src": "locations/krynnspace.html"
+        }
+      ]
     }
   ],
   "edges": [
@@ -5065,7 +5348,7 @@
     },
     {
       "s": "the-reach",
-      "t": "first-world",
+      "t": "reach-world",
       "rel": "destroyed",
       "src": "cosmology/index.html"
     },
@@ -5088,20 +5371,20 @@
       "src": "cosmology/index.html"
     },
     {
-      "s": "first-world",
+      "s": "reach-world",
       "t": "first-heart",
       "rel": "has",
       "src": "cosmology/index.html"
     },
     {
-      "s": "first-world",
-      "t": "erevos",
+      "s": "reach-world",
+      "t": "rykoe",
       "rel": "remains as",
       "src": "STAGING round 9"
     },
     {
       "s": "core-monolith",
-      "t": "erevos",
+      "t": "rykoe",
       "rel": "stands above",
       "src": "STAGING round 9"
     },
@@ -5113,7 +5396,7 @@
     },
     {
       "s": "first-heart",
-      "t": "erevos",
+      "t": "rykoe",
       "rel": "lies beneath",
       "src": "cosmology/index.html"
     },
@@ -5155,7 +5438,7 @@
     },
     {
       "s": "polarity",
-      "t": "erevos",
+      "t": "rykoe",
       "rel": "keeps gods from",
       "src": "STAGING round 1"
     },
@@ -5215,7 +5498,7 @@
     },
     {
       "s": "expansion-fragment",
-      "t": "determination",
+      "t": "expansion",
       "rel": "is biased toward",
       "src": "STAGING round 11"
     },
@@ -5224,18 +5507,6 @@
       "t": "consolidation",
       "rel": "is biased toward",
       "src": "STAGING round 11"
-    },
-    {
-      "s": "residue-thresholds",
-      "t": "residue",
-      "rel": "describes",
-      "src": "STAGING round 2"
-    },
-    {
-      "s": "rod-of-seven-parts",
-      "t": "first-heart",
-      "rel": "could force",
-      "src": "cosmology/index.html"
     },
     {
       "s": "atlas",
@@ -5323,20 +5594,14 @@
     },
     {
       "s": "vecna",
-      "t": "circle-of-fifteenths",
+      "t": "circle-of-fifths",
       "rel": "is building",
       "src": "STAGING round 4"
     },
     {
-      "s": "circle-of-fifteenths",
+      "s": "circle-of-fifths",
       "t": "hearts",
       "rel": "is drawn from",
-      "src": "STAGING round 2"
-    },
-    {
-      "s": "circle-of-fifteenths",
-      "t": "first-heart",
-      "rel": "links to",
       "src": "STAGING round 2"
     },
     {
@@ -5359,18 +5624,18 @@
     },
     {
       "s": "godhood-ascension",
-      "t": "lich-vecna",
+      "t": "vecna-lich",
       "rel": "archived",
       "src": "STAGING round 5"
     },
     {
-      "s": "lich-vecna",
+      "s": "vecna-lich",
       "t": "radiant-citadel",
       "rel": "sits in",
       "src": "STAGING round 2"
     },
     {
-      "s": "lich-vecna",
+      "s": "vecna-lich",
       "t": "vecna",
       "rel": "is the mortal form of",
       "src": "STAGING round 2"
@@ -5433,7 +5698,7 @@
       "s": "vecna",
       "t": "aethris",
       "rel": "pushes the Zenith of",
-      "src": "realms/aethris.html"
+      "src": "locations/aethris.html"
     },
     {
       "s": "vecna",
@@ -5523,7 +5788,7 @@
       "s": "tymora",
       "t": "aethris",
       "rel": "is worshipped on",
-      "src": "realms/aethris.html"
+      "src": "locations/aethris.html"
     },
     {
       "s": "takhisis",
@@ -5569,15 +5834,15 @@
     },
     {
       "s": "krynn",
-      "t": "gal-01",
+      "t": "krynnspace",
       "rel": "located in",
-      "src": "cosmology/index.html"
+      "src": "locations/krynnspace.html"
     },
     {
       "s": "fonains",
-      "t": "gal-01",
+      "t": "krynnspace",
       "rel": "located in",
-      "src": "cosmology/index.html"
+      "src": "locations/krynnspace.html"
     },
     {
       "s": "krynn",
@@ -5749,12 +6014,6 @@
     },
     {
       "s": "hessas-uncle",
-      "t": "hessa-dun",
-      "rel": "is secretly one of",
-      "src": "factions/seekers.html"
-    },
-    {
-      "s": "hessas-uncle",
       "t": "seekers",
       "rel": "is secretly one of",
       "src": "factions/seekers.html"
@@ -5762,8 +6021,8 @@
     {
       "s": "hessa-dun",
       "t": "driftwardens",
-      "rel": "is a contract contact of",
-      "src": "factions/seekers.html"
+      "rel": "is a cadet among",
+      "src": "dossiers/hessa-dun.html"
     },
     {
       "s": "order",
@@ -5973,7 +6232,7 @@
       "s": "FAO-Lx7kR2vN",
       "t": "LOC-Tn4bK9wR",
       "rel": "is housed at",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "driftwardens",
@@ -6003,7 +6262,7 @@
       "s": "NPC-Zx4Bn7Lq",
       "t": "LOC-Tn4bK9wR",
       "rel": "maintains the Forbiddance of",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "NPC-Zx4Bn7Lq",
@@ -6069,7 +6328,7 @@
       "s": "NPC-Mb3vK8dW",
       "t": "PC-BGCfmbF3",
       "rel": "is the control case for",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "NPC-4tR8kW2n",
@@ -6147,19 +6406,19 @@
       "s": "LOC-Tn4bK9wR",
       "t": "the-brig",
       "rel": "contains",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "LOC-Tn4bK9wR",
       "t": "LOC-Tv6kW3mn",
       "rel": "orbits",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "LOC-Tv6kW3mn",
       "t": "LOC-Sp4hR9nk",
       "rel": "located in",
-      "src": "realms/realmspace.html"
+      "src": "locations/realmspace.html"
     },
     {
       "s": "LOC-Sp4hR9nk",
@@ -6465,7 +6724,7 @@
       "s": "vthoramu",
       "t": "tetherbreak",
       "rel": "passed through",
-      "src": "realms/tetherbreak.html"
+      "src": "locations/realmspace.html#perimeter-watch"
     },
     {
       "s": "exile-from-glyth",
@@ -6477,7 +6736,7 @@
       "s": "glyth",
       "t": "LOC-Sp4hR9nk",
       "rel": "located in",
-      "src": "realms/glyth.html"
+      "src": "locations/glyth.html"
     },
     {
       "s": "vecna",
@@ -6573,7 +6832,7 @@
       "s": "NPC-Hs6cW9pM",
       "t": "the-brig",
       "rel": "is mapping routes to",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "NPC-Hs6cW9pM",
@@ -6759,25 +7018,25 @@
       "s": "strake-station",
       "t": "tetherbreak",
       "rel": "located in",
-      "src": "realms/tetherbreak.html"
+      "src": "locations/realmspace.html#perimeter-watch"
     },
     {
       "s": "cairn-station",
       "t": "tetherbreak",
       "rel": "located in",
-      "src": "realms/tetherbreak.html"
+      "src": "locations/realmspace.html#perimeter-watch"
     },
     {
       "s": "hollis-post",
       "t": "tetherbreak",
       "rel": "located in",
-      "src": "realms/tetherbreak.html"
+      "src": "locations/realmspace.html#perimeter-watch"
     },
     {
       "s": "tetherbreak",
-      "t": "gal-01",
-      "rel": "lies on the edge of",
-      "src": "realms/tetherbreak.html"
+      "t": "LOC-Sp4hR9nk",
+      "rel": "watches the edge of",
+      "src": "locations/realmspace.html#perimeter-watch"
     },
     {
       "s": "fia",
@@ -6789,19 +7048,19 @@
       "s": "LOC-Bf3xN6qT",
       "t": "LOC-Tn4bK9wR",
       "rel": "located in",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "LOC-3kW8mB2v",
       "t": "LOC-Tn4bK9wR",
       "rel": "located in",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "LOC-9mB4kW7n",
       "t": "LOC-Tn4bK9wR",
       "rel": "located in",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "NPC-lfleUUeT",
@@ -7119,7 +7378,7 @@
       "s": "PC-Bw9kt3Lq",
       "t": "con-312",
       "rel": "carries in his chest",
-      "src": "realms/index.html"
+      "src": "locations/index.html"
     },
     {
       "s": "PC-6rzWlD8Q",
@@ -7209,7 +7468,7 @@
       "s": "dissolution-fragment",
       "t": "wayfinders-homeworld",
       "rel": "conceals",
-      "src": "realms/wayfinders-homeworld.html"
+      "src": "locations/wayfinders-homeworld.html"
     },
     {
       "s": "wayfinders-homeworld",
@@ -7756,6 +8015,78 @@
       "t": "glyth",
       "rel": "lost a force at",
       "src": "factions/fleet.html"
+    },
+    {
+      "s": "krynnspace",
+      "t": "gal-01",
+      "rel": "located in",
+      "src": "cosmology/index.html"
+    },
+    {
+      "s": "residue",
+      "t": "determination-fragment",
+      "rel": "includes",
+      "src": "cosmology/index.html"
+    },
+    {
+      "s": "determination-fragment",
+      "t": "determination",
+      "rel": "is biased toward",
+      "src": "cosmology/index.html"
+    },
+    {
+      "s": "thessalar",
+      "t": "thessalars-craft",
+      "rel": "is still aboard",
+      "src": "STAGING § Thessalar"
+    },
+    {
+      "s": "nghathrod",
+      "t": "thessalars-craft",
+      "rel": "was held prisoner aboard",
+      "src": "STAGING § N'ghathrod"
+    },
+    {
+      "s": "rod-seventh-piece",
+      "t": "thessalars-craft",
+      "rel": "is aboard",
+      "src": "vessels/thessalars-craft.html"
+    },
+    {
+      "s": "tharizdun",
+      "t": "thessalars-craft",
+      "rel": "had a temple aboard",
+      "src": "STAGING § Tharizdun"
+    },
+    {
+      "s": "NPC-lfleUUeT",
+      "t": "faelight-spore",
+      "rel": "collected",
+      "src": "artifacts/faelight-spore.html"
+    },
+    {
+      "s": "faelight-spore",
+      "t": "LOC-Rp7kW4vn",
+      "rel": "is aboard",
+      "src": "inventory/items/collection-manifest.html"
+    },
+    {
+      "s": "circle-of-fifths",
+      "t": "oerth",
+      "rel": "is seen from",
+      "src": "opposition/vecna.html"
+    },
+    {
+      "s": "circle-of-fifths",
+      "t": "rykoe",
+      "rel": "is drawn around",
+      "src": "opposition/vecna.html"
+    },
+    {
+      "s": "hessas-uncle",
+      "t": "hessa-dun",
+      "rel": "is the uncle of",
+      "src": "dossiers/hessa-dun.html"
     }
   ]
 }
