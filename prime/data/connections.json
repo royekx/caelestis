@@ -2943,6 +2943,14 @@
         {
           "t": "He does not know his wardrobe is one of Zerathis's tethers.",
           "src": "dossiers/mirt.html"
+        },
+        {
+          "t": "Mirt runs the Academy only; the Caelestis Corps and the Bridge operate outside him.",
+          "src": "dossiers/mirt.html"
+        },
+        {
+          "t": "Caelestis protects him and keeps him quiet, so he is also stuck there.",
+          "src": "dossiers/mirt.html"
         }
       ]
     },
@@ -2968,6 +2976,14 @@
         {
           "t": "One wing flap was torn away long ago, and she has not glided since.",
           "src": "dossiers/boatswain-tarto.html"
+        },
+        {
+          "t": "She has four superiority dice, regained on a short rest.",
+          "src": "dossiers/boatswain-tarto.html"
+        },
+        {
+          "t": "When the CRC comes for Sol, she stands up for him.",
+          "src": "dossiers/boatswain-tarto.html"
         }
       ]
     },
@@ -2992,6 +3008,10 @@
         },
         {
           "t": "Half of his missing miniature ship is inside Boogie.",
+          "src": "dossiers/saerthe-abizjn.html"
+        },
+        {
+          "t": "He was not aboard the Bellwether Crow when Clint went overboard, and carries the guilt of it.",
           "src": "dossiers/saerthe-abizjn.html"
         }
       ]
@@ -3026,6 +3046,14 @@
         },
         {
           "t": "He wants the cadets fed and alive, and treats both as the same job.",
+          "src": "dossiers/winston-ryeback.html"
+        },
+        {
+          "t": "The Academy thefts took his custom pistol; the hand cannon is his own gun.",
+          "src": "dossiers/winston-ryeback.html"
+        },
+        {
+          "t": "Ryeback lives; no death is planned for him.",
           "src": "dossiers/winston-ryeback.html"
         }
       ]

@@ -36,15 +36,15 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 7 | 2 | 0 | 3 |
 | Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 42 | 5 | 36 |
-| Dossiers | dossiers/ | 15 | 12 | 25 | 1 | 20 |
+| Dossiers | dossiers/ | 16 | 12 | 19 | 1 | 11 |
 | Crew | crew/ | 9 | 12 | 17 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 1 | 0 | 1 |
-| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 21 | 0 | 20 |
+| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 5 | 2 | 31 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** | | **92** | **118** | **161** | **10** | **228** |
+| **Total** | | **93** | **118** | **154** | **10** | **219** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -129,6 +129,7 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - `data/npcs.json` calls Mirt "the head of Caelestis".
 - `data/sessions.json`, `quests.json` and `items.json` call OSTEKK-6 an autognome; OSTEKK units are automatons.
 - DM dossiers with no record, though the crew may have met or been told of them: Polly Geim (Casey's brother), Clint Dashforest, Qitru, Quartermaster Halix Verrow, the Crystalline Retrieval Construct, Ezra Ahl-Sier. Each gets a record at first contact; check whether any contact has already happened (section 5).
+- `data/npcs.json` (Winston Ryeback, Voyage 6) says he "was told the beholder had been taken care of, and took it to mean the crew had killed it"; the ruling is that Tumak told him outright that the crew killed it (dossiers/winston-ryeback.html).
 
 ## Still coming in
 
@@ -1507,13 +1508,9 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/boatswain-tarto.html
 
-- **[fix]** Tarto's stat block
-  The page says "Tarto has five superiority dice (d10), regained on a short or long rest", and the run-it notes build on five. Change to: "Tarto has four superiority dice (d10), regained on a short rest." Add **Clear the Deck** as a bonus action. Re-check the run-it notes against four dice. statblocks/index.html carries the same five-dice line.
-  src: chat-cosmic-campaign-structure § Rules and crew, § Superseded
-
-- **[add]** What Tarto knows
-  DM notes: Tarto holds part of the picture of what is stretching Caelestis, and may be withholding some of it.
-  src: chat-astral-sea-worldbuilding § Caelestis structure; memory-canon open-decisions (Voyage 007 intent)
+- **[decide]** What Clear the Deck does *(prep)*
+  Tarto's revised block (four superiority dice on a short rest) adds Clear the Deck as a bonus action, but no source gives its effect. The dossier and statblocks/index.html list it by name only. Write the effect. Touches: dossiers/boatswain-tarto.html, statblocks/index.html.
+  src: chat-cosmic-campaign-structure § Rules and crew (turn 314); section 5 (2026-10-28)
 
 ---
 
@@ -1615,7 +1612,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ---
 
-
 ### dossiers/vecna-lich.html
 
 - **[later]** What Vecna (Lich) knows, and where he stands
@@ -1641,26 +1637,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[decide]** The player record overstates Mirt *(prep)*
   data/npcs.json calls Mirt "the head of Caelestis" and "Leading Caelestis", which contradicts the Academy-only ruling. Flag for the player record; prime gives nothing to data/. Korey to correct the record by hand or leave it as the crew's belief.
   src: memory-canon campaign-canon § Naming (Mirt line); data/npcs.json (Mirt)
-
-- **[fix]** Astra Virex in Polly's voice
-  The page says "why Polly could reach him there". Change to "why Astra Virex, speaking in Polly's voice, could reach him there".
-  src: memory-canon campaign-canon § Casey; dossiers/polly.html
-
-- **[fix]** The wardrobe
-  The page says "Mirt has kept a piece of Astra's network in his bedroom for years". "Network" is retired. Change to "a piece of Astra Virex's reach".
-  src: memory-canon open-decisions (Act 1 retrofit)
-
-- **[add]** The Academy, and only the Academy
-  Add to Who they are (and the role line, which now reads only "Headmaster, Caelestis Academy"): "Mirt runs the Academy, and only the Academy. The Fleet Corps and the Bridge operate outside him. The Academy is the small part of Caelestis, roughly a fifth of the station."
-  src: memory-canon campaign-canon § Naming (Mirt line); chat-astral-sea-worldbuilding § Caelestis structure
-
-- **[add]** Protected and stuck
-  Add to Who they are: "Mirt is a well-known adventurer who knows the Astral Sea, and he has drawn ire over the years. Caelestis protects him and keeps him quiet, so he is also stuck there." (The page has the protection half.)
-  src: memory-canon campaign-canon § Naming (Mirt line)
-
-- **[add]** The H'Catha report
-  Add to Threads: "The H'Catha report came down from Watcher to Hall to Fleet Corps to Academy. Mirt made it a cadet mission."
-  src: chat-astral-sea-worldbuilding § Settled
 
 ---
 
@@ -1727,25 +1703,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ---
 
-### dossiers/saerthe-abizjn.html
-
-- **[fix]** Sapphires at the cuffs
-  The page says "The fitted coat with silver at the cuffs". Write: "He dresses like a noble, in a fitted coat with sapphires set at the cuffs."
-  src: chat-voyage-6-7-planning § The swap and NPCs, § Settled, § Superseded
-
-- **[add]** The squares are visible
-  Add to his air-walking trait: "The translucent squares that form under his steps are visible to others."
-  src: chat-voyage-6-7-planning § The swap and NPCs
-
-- **[add]** The Bellwether Crow
-  Add to The bands: "Saerthe was not aboard the Bellwether Crow when Clint Dashforest went overboard. He carries the guilt of it: 'If I'd been there I could've saved him.'"
-  src: memory-canon campaign-canon § Key NPCs (Saerthe)
-
-- **[add]** What Saerthe knows
-  DM notes: Saerthe holds part of the picture of what is stretching Caelestis, and may be withholding some of it.
-  src: chat-astral-sea-worldbuilding § Caelestis structure; memory-canon open-decisions (Voyage 007 intent)
-
----
 
 ### dossiers/the-runekeeper.html
 
@@ -1819,26 +1776,9 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/winston-ryeback.html
 
-- **[add]** Ryeback lives *(answered)*
-  DM notes: "Ryeback lives. His death belonged to Fire in the Galley, which is cut; Miken's sabotage became a beacon planted for Qitru, and Ryeback came through unhurt. No other death is planned for him." Take any open line about his death off the page.
-  src: chat-organizing-framework § Open; memory-canon campaign-canon (Fire in the Galley not happening)
-  answered: inbox/chat-cosmic-campaign-structure.md § Superseded ("Ryeback's death as open → he lives"; "Fire in the Galley sabotage → Miken plants a beacon; Ryeback unhurt"), § V006 and the arc (Settled)
-
 - **[decide]** His stat block lines *(prep)*
   The note says he has no Musket line "because the musket was stolen"; with the pistol stolen instead, the giff block's lines need re-deriving. Options: keep Musket and rename Pistol to hand cannon; or drop the block note.
   src: memory-canon campaign-canon § Key NPCs (Ryeback); dossiers/winston-ryeback.html
-
-- **[fix]** The stolen weapon is his pistol
-  The page says "The academy thefts took his custom musket out of his quarters" and "the musket was stolen". Write: "The academy thefts took his custom pistol out of his quarters. The hand cannon is his own gun, the sidearm he still has."
-  src: memory-canon campaign-canon § Key NPCs; chat-voyage-6-7-planning § Settled
-
-- **[fix]** Tumak told him
-  The page says "He was told the beholder had been taken care of and took it to mean the crew killed it." Write: "Tumak told him outright that the crew killed the beholder."
-  src: chat-voyage-6-7-planning § Settled
-
-- **[add]** Odds
-  DM notes: Ryeback absorbs every interaction planned for the NPC "Odds", including Casey's Stellar Reading beat. His sign is Feast of the Moon / Sagittarius.
-  src: memory-canon campaign-canon § Key NPCs
 
 ---
 
@@ -1980,6 +1920,7 @@ Items whose source sweep is still partial keep their `(sampled)` or
 - **[add]** Tarto stands up for Sol
   When the C.R.C. arrives, Boatswain Tarto stands up for Sol: he is under the academy's protection. Also add to dossiers/boatswain-tarto.html.
   src: BCS § Sol/C.R.C. and the scry beats
+  done: dossiers/boatswain-tarto.html (section 5); crew/sol.html still needs it.
 
 - **[add]** How Sol reached Caelestis
   The Watcher order broke protocol to recommend that Sol be taken to Caelestis.
@@ -1988,6 +1929,7 @@ Items whose source sweep is still partial keep their `(sampled)` or
 - **[add]** Who knows Sol's background
   Mirt, Tarto and Saerthe know Sol's background and keep it to themselves.
   src: BCS § Sol/C.R.C. and the scry beats
+  done: dossiers/mirt.html, boatswain-tarto.html and saerthe-abizjn.html (section 5); crew/sol.html still needs it.
 
 ### crew/casey.html
 
@@ -2758,10 +2700,6 @@ against the complete Tumak sweep (all 336 turns).
 - **[decide]** Ostekk-10's stat block and Lightning Breath *(prep)*
   Build the stat block. For Lightning Breath, options: the 12d10 line; or the 20-ft. cone the table saw (suggested 4d10, DC 16 Dex).
   src: chat-voyage-6-7-planning § Open
-
-- **[fix]** Tarto's revised block
-  Page says "Five superiority dice (d10), maneuver save DC 16. Seven maneuvers." and "five dice, seven maneuvers". Change to: four superiority dice (d10), regained on a short rest; Clear the Deck is a bonus action. Applies only if the crew picks Tarto as instructor.
-  src: chat-cosmic § Rules and crew, § Superseded; chat-voyage-6-7-planning § Open
 
 - **[fix]** How the crew picks the instructor
   Page says "The players choose the teacher at the V007 rendezvous". Change to: the crew picks Saerthe or Tarto by a Discord reaction vote before V007, so the instructor scenes can be prepped.
