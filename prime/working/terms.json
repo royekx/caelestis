@@ -680,6 +680,30 @@
     {
       "old": "glossary/#hearth\"",
       "new": "glossary/#beacon"
+    },
+    {
+      "old": "order.html#watchers",
+      "new": "factions/watchers.html#ranks"
+    },
+    {
+      "old": "order.html#rogue-watchers",
+      "new": "factions/watchers.html#rogue-watchers"
+    },
+    {
+      "old": "order.html#ezra",
+      "new": "factions/watchers.html#ezra"
+    },
+    {
+      "old": "order.html#nereth-vaul",
+      "new": "factions/watchers.html#nereth-vaul"
+    },
+    {
+      "old": "order.html#aurel-venn",
+      "new": "factions/watchers.html#aurel-venn"
+    },
+    {
+      "old": "order.html#cycles",
+      "new": "factions/keepers.html#beacon"
     }
   ],
   "allow": [

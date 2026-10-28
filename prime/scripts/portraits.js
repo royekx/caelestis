@@ -66,7 +66,7 @@
     'ithvarn':       { name: "Ith'varn",            fileId: '' },
     'khaleth':       { name: 'Khaleth',             fileId: '' },
 
-    // ── Order / Watchers ──
+    // ── The Order of All: Watchers ──
     'ezra':          { name: 'Ezra',                fileId: '' },
 
     // ── Network ──
@@ -149,7 +149,9 @@
     'kurrzot':       { name: 'Kurrzot',             fileId: '' },
     'hcatha-rival':  { name: 'Kurrzot\'s rival',    fileId: '' },
     'nereth-vaul':   { name: 'Nereth Vaul',         fileId: '' },
-    'order':        { name: 'Order of the All-Father', fileId: '' },
+    'order':        { name: 'The Order of All',    fileId: '' },
+    'watchers':     { name: 'Order of the Watchers', fileId: '' },
+    'keepers':      { name: 'Order of the Keepers', fileId: '' },
     'aurel-venn':   { name: 'Aurel Venn',          fileId: '' },
     'fleet':        { name: 'United Intergalactic Fleet', fileId: '' },
     'haymond-rolt': { name: 'Haymond Rolt',        fileId: '' },
@@ -157,7 +159,7 @@
     'ilsevaine-corr': { name: 'Ilsevaine Corr',     fileId: '' },
     'seekers':      { name: 'The Seekers',         fileId: '' },
     'vthorama':     { name: 'The Vth\'orama',      fileId: '' },
-    'restorers':    { name: 'The Restorers',       fileId: '' },
+    'restorers':    { name: 'Order of the Restorers', fileId: '' },
     'runekeepers':  { name: 'The Runekeepers',     fileId: '' },
     'fortuned':     { name: 'The Fortuned',        fileId: '' },
     'vocaths-crew': { name: 'Vocath\'s crew',      fileId: '' },
