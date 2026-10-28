@@ -835,6 +835,57 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
 }
 .dm-content .is-wiki .pill-panel h5 a { color: inherit; }
 
+/* ── Item card ──
+   The rules for an item, after the prose of its Properties section: a
+   name, a type line, labelled property rows, then the working text.
+   Narrower than the article and ruled like a stat block, because it is
+   scanned at the table. Rows stack on a phone. */
+.item-card {
+  max-width: 40rem;
+  margin: 1.1rem 0 1.4rem;
+  padding: 0.95rem 1.2rem 1.05rem;
+  background: rgba(10, 15, 26, 0.5);
+  border: 1px solid var(--gold-rule);
+  border-top: 3px solid var(--accent);
+  border-radius: 2px;
+}
+.item-card-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  color: var(--gold);
+}
+.item-card-type {
+  margin: 0.15rem 0 0.6rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--gold-rule);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+.dm-content .item-card-props {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.3rem 1rem;
+  margin: 0 0 0.7rem;
+}
+.dm-content .item-card-props dt {
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.9;
+  color: var(--gold-light);
+}
+.dm-content .item-card-props dd { margin: 0; min-width: 0; }
+.item-card p { margin: 0.45rem 0 0; }
+.item-card p:first-of-type { margin-top: 0; }
+.item-card table { margin: 0.6rem 0 0.2rem; }
+
 
 /* ═══════════════════════════════════════════════════════════════
    8  TABLES, COLLAPSIBLES, CALLOUTS, TAGS, TILES, STAT BLOCKS
@@ -2115,6 +2166,9 @@ ul.tr-fact-val li { margin-bottom: 0.25rem; color: var(--text); }
   .facet-label { flex: 0 0 100%; }
   .ent-detail { padding-left: 1rem; }
   .dm-embed iframe { height: 60vh; min-height: 360px; }
+  .item-card { padding: 0.85rem 0.95rem 0.95rem; }
+  .dm-content .item-card-props { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .dm-content .item-card-props dd { margin-bottom: 0.4rem; }
 }
 
 @media (max-width: 560px) {
