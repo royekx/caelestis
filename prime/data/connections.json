@@ -840,7 +840,7 @@
       "label": "Tharizdun",
       "type": "entity",
       "scope": "cosmos",
-      "summary": "The imprisoned god of chaos, the Elder Elemental Eye.",
+      "summary": "The imprisoned god of entropy, the Elder Elemental Eye.",
       "facts": [
         {
           "t": "Tharizdun is sealed in a prison with no address in any known cosmology.",
@@ -848,23 +848,23 @@
         },
         {
           "t": "The purple slit-pupiled eye seen in the year 425 is the Elder Elemental Eye, Tharizdun.",
-          "src": "STAGING round 1"
+          "src": "factions/deities.html#tharizdun"
         },
         {
           "t": "Tharizdun is not lucid; she is an opportunist.",
-          "src": "STAGING round 8"
+          "src": "factions/deities.html#tharizdun"
         },
         {
           "t": "Fonains's Monolith is the only one ever to carry Tharizdun's crystal.",
-          "src": "STAGING round 5"
+          "src": "factions/deities.html#tharizdun"
         },
         {
           "t": "Tharizdun wanted nothing from Thessalar but chaos.",
-          "src": "STAGING round 5"
+          "src": "factions/deities.html#tharizdun"
         },
         {
-          "t": "His weakening of reality on Fonains serves Vecna's ends.",
-          "src": "STAGING round 2"
+          "t": "Her weakening of reality on Fonains serves Vecna's ends.",
+          "src": "factions/deities.html#tharizdun"
         }
       ]
     },
@@ -877,11 +877,11 @@
       "facts": [
         {
           "t": "Shothragot was bound to Tharizdun's temple aboard Thessalar's planar craft.",
-          "src": "STAGING round 6"
+          "src": "vessels/thessalars-craft.html#tharizduns-temple"
         },
         {
           "t": "Its true vestige may still lie in that fallen temple.",
-          "src": "STAGING round 6"
+          "src": "vessels/thessalars-craft.html#tharizduns-temple"
         }
       ]
     },
@@ -940,15 +940,15 @@
       "facts": [
         {
           "t": "About twelve thousand years ago the six gods of the Accordance sealed the Princes away, with four forged weapons as the keys.",
-          "src": "STAGING round 7"
+          "src": "factions/deities.html#accordance"
         },
         {
           "t": "The Accordance know little of Vecna.",
-          "src": "STAGING round 5"
+          "src": "factions/deities.html#accordance"
         },
         {
           "t": "The Accordance sent Lola's Boys back to the year 425.",
-          "src": "STAGING round 1"
+          "src": "factions/deities.html#accordance"
         },
         {
           "t": "Its six gods are Lord Primus, Asmodeus, Eldath, Muriel, Ryujin and Futsunushi.",
@@ -1981,15 +1981,15 @@
       "facts": [
         {
           "t": "N'ghathrod's elder brain was separated from him in the crash, and he believed it dead or could not reach it.",
-          "src": "STAGING round 2"
+          "src": "dossiers/nghathrod.html"
         },
         {
           "t": "It lay trapped beneath the Barrier Peaks for about five hundred years, possibly growing a colony of its own.",
-          "src": "STAGING round 2"
+          "src": "dossiers/nghathrod.html"
         },
         {
           "t": "Lola's Boys broke it in Session 27; it was buried in the collapse but teleported out and escaped.",
-          "src": "STAGING round 2"
+          "src": "dossiers/nghathrod.html"
         }
       ]
     },
@@ -2627,15 +2627,15 @@
       "facts": [
         {
           "t": "Clint took A.T.L.A.S.'s sister and left the Crow to draw the boarders off.",
-          "src": "STAGING round 4"
+          "src": "dossiers/clint.html"
         },
         {
           "t": "He steered for a color pool he saw opening and went through it on purpose.",
-          "src": "STAGING round 4"
+          "src": "dossiers/clint.html"
         },
         {
           "t": "The pool carried him through a pocket of another dimension and spat him out on Fonains, apart from the boarders who followed.",
-          "src": "STAGING round 4"
+          "src": "dossiers/clint.html"
         },
         {
           "t": "He reached Fonains before its Monolith appeared.",
@@ -4250,7 +4250,7 @@
       "label": "Fonains",
       "type": "place",
       "scope": "fonains",
-      "summary": "The world of Lola's Boys, whose Monolith is the only one ever destroyed.",
+      "summary": "The world of Lola's Boys, CSC 16423 c in Krynnspace, whose corrupted Monolith Lola's Boys broke.",
       "facts": [
         {
           "t": "Fonains and Krynn share a system in GAL-01.",
@@ -4258,15 +4258,15 @@
         },
         {
           "t": "Caelestis's present sits level with Fonains Session 28, two to three months after its Monolith broke.",
-          "src": "STAGING round 1"
+          "src": "locations/fonains.html"
         },
         {
           "t": "Thessalar's planar craft crashed on Fonains about five hundred years ago.",
-          "src": "STAGING round 1"
+          "src": "locations/fonains.html"
         },
         {
           "t": "The crash is how the Elder Elemental Eye reached Fonains, and Tharizdun's influence spread from the fallen temple.",
-          "src": "STAGING round 6"
+          "src": "locations/fonains.html"
         },
         {
           "t": "Most of Fonains's dragons left to face Takhisis, and Fonains remembers it as a great hunt.",
@@ -4283,7 +4283,7 @@
       "facts": [
         {
           "t": "Fonains's Monolith is the only one recorded as destroyed.",
-          "src": "STAGING round 5"
+          "src": "locations/fonains.html#monolith"
         },
         {
           "t": "It formed corrupted, and Tharizdun's crystal replicated into it as it formed.",
@@ -4291,11 +4291,11 @@
         },
         {
           "t": "When it broke, four great shards fell and many smaller shards came from them.",
-          "src": "STAGING round 8"
+          "src": "locations/fonains.html#monolith"
         },
         {
           "t": "Three hundred and thirty-three of the small shards are black; the rest took colours near their elemental affinities.",
-          "src": "STAGING round 8"
+          "src": "locations/fonains.html#monolith"
         }
       ]
     },
@@ -4376,11 +4376,11 @@
       "label": "The Day of Chaos",
       "type": "event",
       "scope": "fonains",
-      "summary": "When the Princes break the barriers so Tharizdun can leave his prison.",
+      "summary": "When the Princes break the barriers so Tharizdun can leave her prison.",
       "facts": [
         {
-          "t": "The Day of Chaos is when the Princes of Elemental Evil break the barriers so Tharizdun can leave his prison.",
-          "src": "STAGING round 1"
+          "t": "The Day of Chaos is when the Princes of Elemental Evil break the barriers so Tharizdun can leave her prison.",
+          "src": "glossary/#day-of-chaos"
         },
         {
           "t": "The four Princes are to enter Fonains together.",
@@ -4397,15 +4397,15 @@
       "facts": [
         {
           "t": "About twelve thousand years ago the Princes rose on Fonains and the Accordance sealed them away.",
-          "src": "STAGING round 7"
+          "src": "locations/fonains.html#princes"
         },
         {
           "t": "The crew meets the Princes' pressure as strange elemental phenomena on the worlds they visit.",
-          "src": "STAGING round 8"
+          "src": "locations/fonains.html#princes"
         },
         {
           "t": "Tharizdun's cults raised the Princes' four prophets.",
-          "src": "STAGING round 7"
+          "src": "locations/fonains.html#princes"
         }
       ]
     },
@@ -4418,11 +4418,11 @@
       "facts": [
         {
           "t": "About three and a half centuries ago a fire genasi sect tried to summon Imix.",
-          "src": "STAGING round 7"
+          "src": "locations/fonains.html#princes"
         },
         {
           "t": "The price of sealing him again was that Imix be forgotten.",
-          "src": "STAGING round 7"
+          "src": "locations/fonains.html#princes"
         }
       ]
     },
@@ -4474,7 +4474,7 @@
       "facts": [
         {
           "t": "Asmodeus gave Tinderstrike to the few fire genasi who resisted Imix, and bound the key to their blood.",
-          "src": "STAGING round 7"
+          "src": "locations/fonains.html#keys"
         },
         {
           "t": "It is held by the Cre'Tez line in the Eternal Flame temple.",
@@ -4542,11 +4542,11 @@
       "facts": [
         {
           "t": "The fire genasi who became the Cre'Tez have guarded the fire key since the sealing of the Princes.",
-          "src": "STAGING round 7"
+          "src": "factions/cretez.html"
         },
         {
           "t": "Over the generations since Imix was sealed again, the line has turned tiefling.",
-          "src": "STAGING round 7"
+          "src": "factions/cretez.html"
         },
         {
           "t": "A Seeker chapter told Vanifer the secret in the Cre'Tez blood.",
@@ -4567,7 +4567,7 @@
       "facts": [
         {
           "t": "Cenvinzo is barely alive, a shadow of himself, held captive somewhere and bound to Vanifer.",
-          "src": "STAGING round 8"
+          "src": "factions/cretez.html#cenvinzo"
         }
       ]
     },
@@ -4576,19 +4576,27 @@
       "label": "Vanifer",
       "type": "person",
       "scope": "fonains",
-      "summary": "A Cre'Tez sister who uses the name Finerva.",
+      "summary": "The eldest of the Cre'Tez siblings, a half-sister who uses the name Finerva; her dossier is dossiers/vanifer.html.",
       "facts": [
         {
           "t": "Finerva is Vanifer under another name.",
-          "src": "STAGING round 8"
+          "src": "dossiers/vanifer.html"
         },
         {
           "t": "She slowly siphoned Benedetta for the Bloodstone.",
-          "src": "STAGING round 1"
+          "src": "dossiers/vanifer.html"
         },
         {
           "t": "When she tried to make her father concede, he invoked the Alpha and locked them both out.",
           "src": "timeline/timeline.json"
+        },
+        {
+          "t": "Vanifer has a DM dossier: the half-sister who raised the younger Cre'Tez, and her plan for the inheritance.",
+          "src": "dossiers/vanifer.html"
+        },
+        {
+          "t": "She leads the fire cult, which treats Asmodus as its prophet on her orders.",
+          "src": "dossiers/vanifer.html"
         }
       ]
     },
@@ -4601,7 +4609,7 @@
       "facts": [
         {
           "t": "Benedetta fell ill at Rihiri's birth from Vanifer's siphoning and died two years later.",
-          "src": "STAGING round 1"
+          "src": "factions/cretez.html#benedetta"
         }
       ]
     },
@@ -4614,7 +4622,7 @@
       "facts": [
         {
           "t": "Rihiri is a Cre'Tez sister.",
-          "src": "STAGING round 8"
+          "src": "factions/cretez.html#rihiri"
         },
         {
           "t": "Lola's Boys freed Rihiri and Dharra from Elizar Dryflagon's fire cult in Baratol.",
@@ -4631,7 +4639,7 @@
       "facts": [
         {
           "t": "Dharra is a Cre'Tez sister.",
-          "src": "STAGING round 8"
+          "src": "factions/cretez.html#dharra"
         }
       ]
     },
@@ -4657,7 +4665,7 @@
       "facts": [
         {
           "t": "Kevulan first willed his birthright to Asmodus, then rescinded it and willed it to Xero.",
-          "src": "STAGING round 8"
+          "src": "factions/cretez.html#kevulan"
         }
       ]
     },
@@ -4683,7 +4691,7 @@
       "facts": [
         {
           "t": "The Pedra Ardente is a gem.",
-          "src": "STAGING round 8"
+          "src": "dossiers/vanifer.html"
         },
         {
           "t": "Clint's crew recovered it at the Blooming Glass and handed it to Finerva for the eldest brother.",
@@ -4713,11 +4721,11 @@
       "facts": [
         {
           "t": "Sent back by the Accordance, Lola's Boys took the planar craft's gems in the year 425.",
-          "src": "STAGING round 1"
+          "src": "locations/fonains.html#lolas-boys-members"
         },
         {
           "t": "Taking the gems brought down the craft, freed N'ghathrod and landed Tharizdun's foothold on their own world.",
-          "src": "STAGING round 6"
+          "src": "locations/fonains.html#lolas-boys-members"
         },
         {
           "t": "They destroyed the corrupted Fonains Monolith, which forced Vecna to change his plan.",
@@ -4725,7 +4733,7 @@
         },
         {
           "t": "They broke N'ghathrod's elder brain beneath the Barrier Peaks in Session 27.",
-          "src": "STAGING round 2"
+          "src": "locations/fonains.html#lolas-boys-members"
         }
       ]
     },
@@ -4742,7 +4750,7 @@
         },
         {
           "t": "Kevulan's birthright is willed to Xero.",
-          "src": "STAGING round 8"
+          "src": "locations/fonains.html#xero"
         }
       ]
     },
@@ -4755,7 +4763,7 @@
       "facts": [
         {
           "t": "Bahamut's trapped aspect speaks through Eldree's egg.",
-          "src": "STAGING round 1"
+          "src": "locations/fonains.html#eldree"
         }
       ]
     },
@@ -4771,8 +4779,12 @@
           "src": "timeline/timeline.json"
         },
         {
-          "t": "He works at the Hall of Endless Knowledge, within reach of Clint.",
+          "t": "He is within Clint's reach on Fonains, with a gate and a planar device.",
           "src": "dossiers/clint.html"
+        },
+        {
+          "t": "His island laboratory is a broken-off piece of Thessalar's craft, and its cannon split the Fonains Monolith.",
+          "src": "vessels/thessalars-craft.html#kwalish"
         }
       ]
     },
@@ -4785,7 +4797,7 @@
       "facts": [
         {
           "t": "Giorge may be trying to reach Shothragot's true vestige.",
-          "src": "STAGING round 6"
+          "src": "locations/fonains.html#giorge"
         },
         {
           "t": "Giorge attacked Lola's Place for Ziko's sword.",
@@ -4925,56 +4937,39 @@
       "facts": [
         {
           "t": "Thessalar held N'ghathrod prisoner aboard and experimented on him with the Rod's seventh piece.",
-          "src": "STAGING § N'ghathrod"
+          "src": "vessels/thessalars-craft.html"
         },
         {
           "t": "Lola's Boys took its control and defence gems in the year 425; without them it fell, and N'ghathrod escaped in the fall.",
-          "src": "STAGING § Fonains and the planar craft"
+          "src": "vessels/thessalars-craft.html"
         },
         {
           "t": "Its gems formed where Olhydra and Ogrémoch collided, and they are not residue.",
-          "src": "STAGING § Fonains and the planar craft"
+          "src": "vessels/thessalars-craft.html"
         },
         {
           "t": "One of Tharizdun's temples was aboard; the crash is how the Elder Elemental Eye reached Fonains.",
-          "src": "STAGING § Tharizdun"
+          "src": "vessels/thessalars-craft.html"
         },
         {
           "t": "Its main body raised the Barrier Peaks; Daoine Gloine is a broken-off piece, and the Thessalkraken landed in the sea.",
-          "src": "STAGING § Fonains and the planar craft"
+          "src": "vessels/thessalars-craft.html"
         },
         {
           "t": "Thessalar is still inside, with his records and the seventh piece.",
-          "src": "STAGING § Thessalar"
-        }
-      ]
-    },
-    {
-      "id": "planar-craft",
-      "label": "Thessalar's planar craft",
-      "type": "vessel",
-      "scope": "fonains",
-      "summary": "A vast floating city of many tiers, now the Mad Mage's dungeon.",
-      "facts": [
+          "src": "vessels/thessalars-craft.html"
+        },
         {
           "t": "The craft is a megadungeon, the Mad Mage dungeon.",
-          "src": "STAGING round 1"
+          "src": "vessels/thessalars-craft.html#dungeon"
         },
         {
-          "t": "Nobody knows where the planar craft, a vast floating city of many tiers, came from.",
-          "src": "STAGING round 6"
+          "t": "The piece holding Tharizdun's temple came down somewhere other than the Barrier Peaks.",
+          "src": "vessels/thessalars-craft.html#tharizduns-temple"
         },
         {
-          "t": "Lola's Boys took its control and defence gems; without them it fell about five hundred years ago.",
-          "src": "STAGING round 1"
-        },
-        {
-          "t": "It broke apart as it fell: the main body raised the Barrier Peaks, and other pieces landed elsewhere.",
-          "src": "STAGING round 2"
-        },
-        {
-          "t": "One of Tharizdun's temples lay aboard, in a piece that came down away from the Barrier Peaks.",
-          "src": "STAGING round 6"
+          "t": "Kwalish's island, the Monastery of the Distressed Body, is a broken-off piece of the craft.",
+          "src": "vessels/thessalars-craft.html#kwalish"
         }
       ]
     },
@@ -4987,11 +4982,11 @@
       "facts": [
         {
           "t": "The craft's gems formed where Olhydra and Ogrémoch collided, and they are not Reach residue.",
-          "src": "STAGING round 1"
+          "src": "vessels/thessalars-craft.html#gems"
         },
         {
           "t": "The gems carried Tharizdun's touch.",
-          "src": "STAGING round 6"
+          "src": "vessels/thessalars-craft.html#gems"
         },
         {
           "t": "They were a red gem from the cavern lake and the hazy yellow gem from Thessalar's workshop.",
@@ -5008,15 +5003,15 @@
       "facts": [
         {
           "t": "N'ghathrod used the chaos of the fall to escape with his five lieutenants and a few lesser illithids.",
-          "src": "STAGING round 2"
+          "src": "vessels/thessalars-craft.html"
         },
         {
           "t": "He never reached Fonains.",
-          "src": "STAGING round 2"
+          "src": "vessels/thessalars-craft.html"
         },
         {
           "t": "The crash brought Tharizdun's influence to Fonains with the temple aboard.",
-          "src": "STAGING round 7"
+          "src": "vessels/thessalars-craft.html"
         }
       ]
     },
@@ -5029,7 +5024,7 @@
       "facts": [
         {
           "t": "The Thessalkraken landed separately in the sea and is the Drowned God's kraken.",
-          "src": "STAGING round 1"
+          "src": "vessels/thessalars-craft.html#thessalkraken"
         },
         {
           "t": "It guarded the reef where the trident was sealed.",
@@ -5059,7 +5054,7 @@
       "facts": [
         {
           "t": "The planar craft's main body raised the Barrier Peaks.",
-          "src": "STAGING round 2"
+          "src": "locations/fonains.html#barrier-peaks"
         }
       ]
     },
@@ -5072,7 +5067,7 @@
       "facts": [
         {
           "t": "Daoine Gloine is a broken-off piece of the planar craft.",
-          "src": "STAGING round 1"
+          "src": "vessels/thessalars-craft.html#daoine-gloine"
         }
       ]
     },
@@ -5086,6 +5081,44 @@
         {
           "t": "The Temple of Moloch is one layer of the planar craft, with Thessalar's laboratory beneath it.",
           "src": "dossiers/thessalar.html"
+        }
+      ]
+    },
+    {
+      "id": "tarionese",
+      "label": "T'Arionese",
+      "type": "place",
+      "scope": "fonains",
+      "summary": "The northern realm of Fonains's southern continent, where the isthmus lands.",
+      "facts": [
+        {
+          "t": "T'Arionese is one of Fonains's eleven realms, the north of the southern continent.",
+          "src": "locations/fonains.html#geography"
+        },
+        {
+          "t": "Orerius, where the Cre'Tez estate stands, is in T'Arionese.",
+          "src": "locations/fonains.html#orerius"
+        }
+      ]
+    },
+    {
+      "id": "trentara",
+      "label": "The Trentara Forest",
+      "type": "place",
+      "scope": "fonains",
+      "summary": "A forest in the north of Fonains's northern continent, where the remains of the Monolith lie.",
+      "facts": [
+        {
+          "t": "The Trentara Forest lies between Nomnia and the Kingdom of Shaumala.",
+          "src": "locations/fonains.html#trentara"
+        },
+        {
+          "t": "The remains of the Fonains Monolith lie there: the black cyst, with the four great shards turning around it.",
+          "src": "locations/fonains.html#trentara"
+        },
+        {
+          "t": "The eight days of storm fell heaviest there, and the air shard opened onto the Feathergale Spire.",
+          "src": "locations/fonains.html#trentara"
         }
       ]
     },
@@ -5192,7 +5225,7 @@
       "facts": [
         {
           "t": "The six gods of the Accordance helped forge four weapons and sealed the Princes with them as keys.",
-          "src": "STAGING round 7"
+          "src": "locations/fonains.html#princes"
         }
       ]
     },
@@ -5205,7 +5238,7 @@
       "facts": [
         {
           "t": "A fire genasi sect tried to summon Imix, and Asmodeus gave the few who resisted Tinderstrike.",
-          "src": "STAGING round 7"
+          "src": "factions/cretez.html"
         }
       ]
     },
@@ -5670,7 +5703,7 @@
       "s": "vecna",
       "t": "tharizdun",
       "rel": "uses as a contingency",
-      "src": "STAGING round 1"
+      "src": "factions/deities.html#tharizdun"
     },
     {
       "s": "vecna",
@@ -5736,19 +5769,19 @@
       "s": "accordance",
       "t": "vecna",
       "rel": "felt the arrival of",
-      "src": "STAGING round 5"
+      "src": "factions/deities.html#accordance"
     },
     {
       "s": "asmodeus",
       "t": "accordance",
       "rel": "is the face of",
-      "src": "STAGING round 5"
+      "src": "factions/deities.html#accordance"
     },
     {
       "s": "lord-primus",
       "t": "accordance",
       "rel": "is eldest of",
-      "src": "STAGING round 5"
+      "src": "factions/deities.html#accordance"
     },
     {
       "s": "eldath",
@@ -5760,25 +5793,25 @@
       "s": "asmodeus",
       "t": "tinderstrike",
       "rel": "gave",
-      "src": "STAGING round 7"
+      "src": "locations/fonains.html#keys"
     },
     {
       "s": "asmodeus",
       "t": "imix-sealed",
       "rel": "answered",
-      "src": "STAGING round 7"
+      "src": "factions/cretez.html"
     },
     {
       "s": "accordance",
       "t": "princes-sealed",
       "rel": "carried out",
-      "src": "STAGING round 7"
+      "src": "factions/deities.html#accordance"
     },
     {
       "s": "accordance",
       "t": "lolas-boys",
       "rel": "sent back to the year 425",
-      "src": "STAGING round 1"
+      "src": "factions/deities.html#accordance"
     },
     {
       "s": "tymora",
@@ -5814,7 +5847,7 @@
       "s": "bahamut",
       "t": "eldree",
       "rel": "speaks through the egg of",
-      "src": "STAGING round 1"
+      "src": "locations/fonains.html#eldree"
     },
     {
       "s": "takhisis",
@@ -5832,7 +5865,7 @@
       "s": "departed-dragons",
       "t": "fonains",
       "rel": "left",
-      "src": "STAGING round 1"
+      "src": "locations/fonains.html"
     },
     {
       "s": "temple-of-paladine",
@@ -5861,56 +5894,56 @@
     {
       "s": "tharizdun",
       "t": "fonains-monolith",
-      "rel": "corrupted",
-      "src": "timeline/timeline.json"
+      "rel": "fused her crystal into",
+      "src": "locations/fonains.html#monolith"
     },
     {
       "s": "tharizdun",
       "t": "day-of-chaos",
       "rel": "waits for",
-      "src": "STAGING round 1"
+      "src": "factions/deities.html#tharizdun"
     },
     {
       "s": "tharizdun",
       "t": "shothragot",
       "rel": "has as avatar",
-      "src": "STAGING round 6"
+      "src": "factions/deities.html#tharizdun"
     },
     {
       "s": "tharizdun",
       "t": "thessalar",
       "rel": "drove mad",
-      "src": "STAGING round 5"
+      "src": "factions/deities.html#tharizdun"
     },
     {
       "s": "tharizdun",
       "t": "craft-gems",
       "rel": "touched",
-      "src": "STAGING round 6"
+      "src": "factions/deities.html#tharizdun"
     },
     {
       "s": "tharizdun",
       "t": "princes",
       "rel": "is freed by",
-      "src": "STAGING round 1"
+      "src": "factions/deities.html#tharizdun"
     },
     {
       "s": "tharizdun",
       "t": "PC-647haWGJ",
       "rel": "reaches through the shard toward",
-      "src": "STAGING round 8"
+      "src": "factions/deities.html#tharizdun"
     },
     {
       "s": "shothragot",
-      "t": "planar-craft",
+      "t": "thessalars-craft",
       "rel": "bound to the temple aboard",
-      "src": "STAGING round 6"
+      "src": "vessels/thessalars-craft.html#tharizduns-temple"
     },
     {
       "s": "giorge",
       "t": "shothragot",
       "rel": "seeks the vestige of",
-      "src": "STAGING round 6"
+      "src": "locations/fonains.html#giorge"
     },
     {
       "s": "astra-virex",
@@ -6282,13 +6315,13 @@
       "s": "NPC-Zx4Bn7Lq",
       "t": "clint",
       "rel": "lost",
-      "src": "STAGING round 4"
+      "src": "dossiers/clint.html"
     },
     {
       "s": "NPC-9dTp4qWz",
       "t": "clint",
       "rel": "lost",
-      "src": "STAGING round 4"
+      "src": "dossiers/clint.html"
     },
     {
       "s": "NPC-9dTp4qWz",
@@ -6504,7 +6537,7 @@
       "s": "nghathrod",
       "t": "elder-brain",
       "rel": "lost",
-      "src": "STAGING round 2"
+      "src": "dossiers/nghathrod.html"
     },
     {
       "s": "nghathrod",
@@ -6552,7 +6585,7 @@
       "s": "nghathrod",
       "t": "craft-crash",
       "rel": "escaped in",
-      "src": "STAGING round 2"
+      "src": "vessels/thessalars-craft.html"
     },
     {
       "s": "nghathrod",
@@ -6948,25 +6981,25 @@
       "s": "clint",
       "t": "bellwether-crow",
       "rel": "served aboard",
-      "src": "STAGING round 4"
+      "src": "dossiers/clint.html"
     },
     {
       "s": "clint",
       "t": "atlas-sister",
       "rel": "carried",
-      "src": "STAGING round 10"
+      "src": "dossiers/clint.html"
     },
     {
       "s": "clint",
       "t": "color-pools",
       "rel": "went through",
-      "src": "STAGING round 4"
+      "src": "dossiers/clint.html"
     },
     {
       "s": "clint",
       "t": "fonains",
       "rel": "landed on",
-      "src": "STAGING round 4"
+      "src": "dossiers/clint.html"
     },
     {
       "s": "clint",
@@ -7488,7 +7521,7 @@
       "s": "fonains-monolith",
       "t": "fonains",
       "rel": "stood over",
-      "src": "STAGING round 5"
+      "src": "locations/fonains.html#monolith"
     },
     {
       "s": "fonains-shard",
@@ -7530,13 +7563,13 @@
       "s": "lolas-boys",
       "t": "craft-gems",
       "rel": "took",
-      "src": "STAGING round 1"
+      "src": "locations/fonains.html#lolas-boys-members"
     },
     {
       "s": "lolas-boys",
       "t": "elder-brain",
       "rel": "broke",
-      "src": "STAGING round 2"
+      "src": "locations/fonains.html#lolas-boys-members"
     },
     {
       "s": "xero",
@@ -7560,49 +7593,49 @@
       "s": "kevulan",
       "t": "xero",
       "rel": "willed his birthright to",
-      "src": "STAGING round 8"
+      "src": "factions/cretez.html#kevulan"
     },
     {
       "s": "kevulan",
       "t": "asmodus",
       "rel": "rescinded his birthright from",
-      "src": "STAGING round 8"
+      "src": "factions/cretez.html#kevulan"
     },
     {
       "s": "kevulan",
       "t": "cretez",
       "rel": "is one of",
-      "src": "STAGING round 8"
+      "src": "factions/cretez.html#kevulan"
     },
     {
       "s": "cenvinzo",
       "t": "cretez",
       "rel": "heads",
-      "src": "STAGING round 8"
+      "src": "factions/cretez.html#cenvinzo"
     },
     {
       "s": "cenvinzo",
       "t": "vanifer",
       "rel": "is bound to",
-      "src": "STAGING round 8"
+      "src": "factions/cretez.html#cenvinzo"
     },
     {
       "s": "vanifer",
       "t": "cretez",
       "rel": "sister of the line of",
-      "src": "STAGING round 8"
+      "src": "dossiers/vanifer.html"
     },
     {
       "s": "vanifer",
       "t": "benedetta",
       "rel": "siphoned",
-      "src": "STAGING round 1"
+      "src": "dossiers/vanifer.html"
     },
     {
       "s": "vanifer",
       "t": "bloodstone",
       "rel": "filled",
-      "src": "STAGING round 1"
+      "src": "dossiers/vanifer.html"
     },
     {
       "s": "vanifer",
@@ -7620,13 +7653,13 @@
       "s": "rihiri",
       "t": "cretez",
       "rel": "is a sister of",
-      "src": "STAGING round 8"
+      "src": "factions/cretez.html#rihiri"
     },
     {
       "s": "dharra",
       "t": "cretez",
       "rel": "is a sister of",
-      "src": "STAGING round 8"
+      "src": "factions/cretez.html#dharra"
     },
     {
       "s": "asmodus",
@@ -7644,7 +7677,7 @@
       "s": "benedetta",
       "t": "rihiri",
       "rel": "died after the birth of",
-      "src": "STAGING round 1"
+      "src": "factions/cretez.html#benedetta"
     },
     {
       "s": "lolas-boys",
@@ -7656,13 +7689,13 @@
       "s": "cretez",
       "t": "tinderstrike",
       "rel": "guard",
-      "src": "STAGING round 7"
+      "src": "factions/cretez.html"
     },
     {
       "s": "imix-sealed",
       "t": "imix",
       "rel": "sealed",
-      "src": "STAGING round 7"
+      "src": "factions/cretez.html"
     },
     {
       "s": "chloe-chespetes",
@@ -7680,37 +7713,37 @@
       "s": "tinderstrike",
       "t": "imix",
       "rel": "seals",
-      "src": "STAGING round 7"
+      "src": "locations/fonains.html#keys"
     },
     {
       "s": "princes-sealed",
       "t": "princes",
       "rel": "sealed",
-      "src": "STAGING round 7"
+      "src": "locations/fonains.html#princes"
     },
     {
       "s": "imix",
       "t": "princes",
       "rel": "is one of",
-      "src": "STAGING round 7"
+      "src": "locations/fonains.html#princes"
     },
     {
       "s": "olhydra",
       "t": "princes",
       "rel": "is one of",
-      "src": "STAGING round 7"
+      "src": "locations/fonains.html#princes"
     },
     {
       "s": "ogremoch",
       "t": "princes",
       "rel": "is one of",
-      "src": "STAGING round 7"
+      "src": "locations/fonains.html#princes"
     },
     {
       "s": "yan-c-bin",
       "t": "princes",
       "rel": "is one of",
-      "src": "STAGING round 7"
+      "src": "locations/fonains.html#lolas-boys"
     },
     {
       "s": "olhydra",
@@ -7722,31 +7755,31 @@
       "s": "craft-gems",
       "t": "olhydra",
       "rel": "formed in the collision of",
-      "src": "STAGING round 1"
+      "src": "vessels/thessalars-craft.html#gems"
     },
     {
       "s": "war-pick",
       "t": "princes",
       "rel": "is a key to",
-      "src": "STAGING round 7"
+      "src": "locations/fonains.html#princes"
     },
     {
       "s": "air-spear",
       "t": "princes",
       "rel": "is a key to",
-      "src": "STAGING round 7"
+      "src": "locations/fonains.html#princes"
     },
     {
       "s": "trident",
       "t": "princes",
       "rel": "is a key to",
-      "src": "STAGING round 7"
+      "src": "locations/fonains.html#princes"
     },
     {
       "s": "tinderstrike",
       "t": "princes",
       "rel": "is a key to",
-      "src": "STAGING round 7"
+      "src": "locations/fonains.html#keys"
     },
     {
       "s": "sacred-stone",
@@ -7800,37 +7833,37 @@
       "s": "thessalkraken",
       "t": "drowned-god",
       "rel": "serves",
-      "src": "STAGING round 1"
+      "src": "vessels/thessalars-craft.html#thessalkraken"
     },
     {
       "s": "thessalkraken",
-      "t": "planar-craft",
+      "t": "thessalars-craft",
       "rel": "came down with",
-      "src": "STAGING round 1"
+      "src": "vessels/thessalars-craft.html#thessalkraken"
     },
     {
       "s": "princes",
       "t": "fonains",
       "rel": "rose on",
-      "src": "STAGING round 7"
+      "src": "locations/fonains.html#princes"
     },
     {
       "s": "tharizdun",
       "t": "princes",
       "rel": "raised the prophets of",
-      "src": "STAGING round 7"
+      "src": "factions/deities.html#tharizdun"
     },
     {
       "s": "day-of-chaos",
       "t": "fonains",
       "rel": "will come to",
-      "src": "STAGING round 1"
+      "src": "glossary/#day-of-chaos"
     },
     {
       "s": "thessalar",
-      "t": "planar-craft",
+      "t": "thessalars-craft",
       "rel": "dwells in",
-      "src": "STAGING round 5"
+      "src": "vessels/thessalars-craft.html"
     },
     {
       "s": "thessalar",
@@ -7858,43 +7891,43 @@
     },
     {
       "s": "craft-gems",
-      "t": "planar-craft",
+      "t": "thessalars-craft",
       "rel": "controlled",
-      "src": "STAGING round 1"
+      "src": "vessels/thessalars-craft.html#gems"
     },
     {
       "s": "craft-crash",
-      "t": "planar-craft",
+      "t": "thessalars-craft",
       "rel": "brought down",
-      "src": "STAGING round 1"
+      "src": "vessels/thessalars-craft.html"
     },
     {
       "s": "craft-crash",
       "t": "fonains",
       "rel": "struck",
-      "src": "STAGING round 1"
+      "src": "vessels/thessalars-craft.html"
     },
     {
       "s": "craft-crash",
       "t": "tharizdun",
       "rel": "carried to Fonains the influence of",
-      "src": "STAGING round 6"
+      "src": "vessels/thessalars-craft.html"
     },
     {
-      "s": "planar-craft",
+      "s": "thessalars-craft",
       "t": "barrier-peaks",
       "rel": "raised",
-      "src": "STAGING round 2"
+      "src": "vessels/thessalars-craft.html"
     },
     {
       "s": "daoine-gloine",
-      "t": "planar-craft",
+      "t": "thessalars-craft",
       "rel": "broke from",
-      "src": "STAGING round 1"
+      "src": "vessels/thessalars-craft.html#daoine-gloine"
     },
     {
       "s": "temple-of-moloch",
-      "t": "planar-craft",
+      "t": "thessalars-craft",
       "rel": "is a layer of",
       "src": "dossiers/thessalar.html"
     },
@@ -7902,13 +7935,13 @@
       "s": "elder-brain",
       "t": "barrier-peaks",
       "rel": "was trapped beneath",
-      "src": "STAGING round 2"
+      "src": "dossiers/nghathrod.html"
     },
     {
       "s": "barrier-peaks",
       "t": "fonains",
       "rel": "located in",
-      "src": "STAGING round 2"
+      "src": "locations/fonains.html#barrier-peaks"
     },
     {
       "s": "misty-vale",
@@ -7962,7 +7995,7 @@
       "s": "vecna",
       "t": "fonains",
       "rel": "lets Tharizdun weaken reality on",
-      "src": "STAGING round 2"
+      "src": "locations/fonains.html"
     },
     {
       "s": "prime-continuum",
@@ -8040,13 +8073,13 @@
       "s": "thessalar",
       "t": "thessalars-craft",
       "rel": "is still aboard",
-      "src": "STAGING § Thessalar"
+      "src": "vessels/thessalars-craft.html"
     },
     {
       "s": "nghathrod",
       "t": "thessalars-craft",
       "rel": "was held prisoner aboard",
-      "src": "STAGING § N'ghathrod"
+      "src": "vessels/thessalars-craft.html"
     },
     {
       "s": "rod-seventh-piece",
@@ -8058,7 +8091,7 @@
       "s": "tharizdun",
       "t": "thessalars-craft",
       "rel": "had a temple aboard",
-      "src": "STAGING § Tharizdun"
+      "src": "factions/deities.html#tharizdun"
     },
     {
       "s": "NPC-lfleUUeT",
@@ -8101,6 +8134,30 @@
       "t": "dejexic",
       "rel": "shares a species with",
       "src": "factions/order.html"
+    },
+    {
+      "s": "tarionese",
+      "t": "fonains",
+      "rel": "is a realm of",
+      "src": "locations/fonains.html#geography"
+    },
+    {
+      "s": "orerius",
+      "t": "tarionese",
+      "rel": "located in",
+      "src": "locations/fonains.html#orerius"
+    },
+    {
+      "s": "trentara",
+      "t": "fonains",
+      "rel": "located in",
+      "src": "locations/fonains.html#trentara"
+    },
+    {
+      "s": "fonains-monolith",
+      "t": "trentara",
+      "rel": "lies in ruins in",
+      "src": "locations/fonains.html#trentara"
     }
   ]
 }

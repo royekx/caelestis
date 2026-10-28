@@ -30,21 +30,21 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 9 | 12 | 15 | 0 | 3 |
+| Cosmology | cosmology/, glossary/, chart/ | 10 | 12 | 15 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 24 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 4 | 12 | 0 | 0 | 0 |
-| Timeline | the rest of timeline.json | 0 | 1 | 8 | 0 | 0 |
+| Timeline | the rest of timeline.json | 0 | 1 | 0 | 0 | 0 |
 | Factions | factions/ | 3 | 10 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 1 |
-| Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
+| Dossiers | dossiers/ | 18 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 4 | 2 | 24 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** |  | **102** | **142** | **59** | **3** | **54** |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
+| **Total** |  | **104** | **143** | **51** | **3** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -306,6 +306,10 @@ Order under each page: decide, fix, drop, add.
 - **[fix]** "The only Monolith" on Fonains
   cosmology/#corrupted-monoliths says Fonains's is "the only Monolith ever to carry Tharizdun's crystal and the only one recorded as destroyed", and the chart's Fonains note says "the only one ever to carry Tharizdun's crystal". PAGE-GUIDE bars comparative absolutes on setting pages. Describe the Monolith instead: it formed corrupted, with her crystal replicated into it, and Lola's Boys broke it. locations/fonains.html already does.
   src: section 8, 2026-10-28
+
+- **[decide]** A stabilization for a failing Axiom
+  The timeline carried "Convergence stabilizes" (cert canon, t +5): "The Continuum answers a failing Axiom with a stabilization. When it comes, the seat closes permanently. Vecna gets one attempt before it." Its opening event called Convergence "the most stressed Axiom". No finished page has a stabilization, a seat that closes, or a most-stressed Axiom, and section 8 dropped the event and rewrote the other as the Axiom strain. Options: add a stabilization to cosmology/ (#axiom-strain) and restore the event; or leave it retired. Touches cosmology/index.html, opposition/vecna.html, timeline.json.
+  src: timeline.json (before section 8); section 8 (C9)
 
 ### chart/index.html
 
@@ -645,49 +649,11 @@ Order: decide, fix, drop, add.
 
 ### Timeline
 
-- **[fix]** Dangling edges in connections.json
-  Three edges in prime/data/connections.json point at ids that have no node: NPC-Gp8mT4kw (Pffred) → LOC-Rp7kW4vn "fitted the helm of"; NPC-Qp8jL2vR → LOC-Bf3xN6qT "run"; vocath-operation → QST-9dK3wR7n "is behind". Add the missing nodes (Pffred, the other two record ids) or drop the edges.
-  src: section 4 (2026-10-28)
-
-- **[fix]** The Ascension World event *(answered)*
-  Retire the world and the event. Remove "The Ascension World" (cert open, t -250). Oerth is the world where Vecna became a god: his ritual pushed Oerth to its Zenith, the Zenith made him a god, and the Monolith that answered archived his mortal form, Vecna (Lich). That was his first ascension, the Godhood Ascension, and "Vecna rules Oerth and ascends" already carries it. The climb he is making now, to take an Axiom's place, is the Axiomic Ascension.
-  Knock-on (done in section 3: the page is retired into `locations/oerth.html`, the register and chart carry no SYS-05): `realms/ascension-world.html` and its fixes in the Realms section, the SYS-05 entries on `realms/index.html` and the chart, and the Cosmology fix "Every place carries a designation" all assume the separate world.
-  answered: STAGING § Vecna (round 5: "The separate 'Ascension World' is retired; Oerth is that world.")
-  Original item: "The Ascension" now means Vecna's climb to Axiom, and his godhood happened on Oerth. The event "The Ascension World" (cert open, t -250: "He forces a small local threshold on a world in SPH-01. When, and what it cost him, are open.") follows the naming ruling in the Realms section § realms/ascension-world.html. Options: keep it as a separate SPH-01 world under a new name; or retire the world and the event.
-  src: session-rulings #14; vecna § Oerth
-
-- **[fix]** When Thessalar made his eight copies *(answered)*
-  N'ghathrod was Thessalar's first subject, and no copy of Thessalar existed yet. Thessalar experimented on him first, then made eight simulacra of himself, I–VIII. The dossiers are right. "Thessalar's experiments" (t -530 to -500) lists the clone tubes inside a span that starts before N'ghathrod's capture (t -506). Split it: keep the Rod's seventh piece and the Thessalkraken in "Thessalar's experiments", and add the clone tubes as their own event after -506, inside the capture span (for example "Thessalar copies himself": "With N'ghathrod as his first subject, Thessalar turns the Rod's seventh piece on himself and makes eight simulacra, Thessalar I–VIII.").
-  src: dossiers/thessalar.html; dossiers/nghathrod.html; timeline.json
-  answered: inbox/chat-cosmic-campaign-structure.md § Thessalar and Fonains ("He experimented on N'ghathrod first, then made eight simulacra of himself"), § N'ghathrod and the colony ("N'ghathrod was Thessalar's first subject; no copy of Thessalar existed yet"); memory-canon (open-decisions, Rod's seventh piece: "N'ghathrod was a subject in that research")
+done (section 8): the fixes are in timeline.json. The three "dangling" connections.json edges were not dangling: NPC-Gp8mT4kw, LOC-Rp7kW4vn, NPC-Qp8jL2vR, LOC-Bf3xN6qT and QST-9dK3wR7n are record ids, and the Connections view loads the record before the DM layer, so the edges resolve.
 
 - **[later]** When the Glyth Watcher got out
   "The Glyth Watcher gets out" sits at t -3 (cert working). glyth-watcher.md leaves how she got out open. Options: keep about three years ago; or leave the event undated.
   src: glyth-watcher § Open; timeline.json
-
-- **[fix]** N'ghathrod's aging
-  "Captured aboard Thessalar's craft" says the seventh piece made his ceremorphosis paracausal "and his aging stops". His long life comes from the tithe of his taken, and the seventh piece is the root of the taking (STAGING § N'ghathrod; artifacts/rod-of-seven-parts.html). Drop "and his aging stops".
-  src: section 4 (2026-10-28)
-
-- **[fix]** Arcs, not acts
-  Rename the planned crew events to the spine's arc names (the wiki says "Arc", never "Act"):
-  "Act 2: ranked missions" becomes "Arc 2: Driftwardens in the Field".
-  "Act 3: N'ghathrod" becomes "Arc 3: Recognition".
-  "Act 4: the center" becomes "Arc 4: Cast".
-  Keep the descriptions unless the act-structure ruling under `prime/campaign/index.html` changes their content.
-  src: chat § V006 and the arc; campaign/spine.html
-
-- **[fix]** Sol's first C.R.C. encounter
-  "Behold H'Catha" says "Sol's first CRC encounter." Move it: Sol's first C.R.C. encounter happens on Caelestis, at the main entrance, when the crew returns from H'Catha. Give it its own event just after the H'Catha voyage. Also: "a contested seam" in the same event becomes "an occupied, skirmished mining area" (see the Realms section § hcatha.html).
-  src: memory-canon (campaign-canon, Antagonists); chat-crew-boogie-casey-sol § Sol/C.R.C. and the scry beats
-
-- **[fix]** Vecna's ascension is canon
-  "Vecna rules Oerth and ascends" is cert "working". Set it to "canon".
-  src: session-rulings; memory-canon (Vecna/gods 2026-10-25)
-
-- **[fix]** Centuries of worship is canon, and the Seekers are his followers
-  "Centuries of worship" is cert "working"; set it to "canon". Its description says "Separately, a voice teaches chapters a method: the Seekers." The session ruling makes his followers the Seekers. Change to: "He builds faithful across spheres under many names, wide and thin. His followers are the Seekers, in chapters that differ world to world and recognise each other through the account of the voice that taught them how to ask." Matches the glossary fix in the Cosmology section.
-  src: session-rulings #14; memory-canon (Vecna direction 2026-10-24)
 
 # Factions
 
@@ -1039,6 +1005,10 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ---
 
 ### dossiers/vecna.html
+
+- **[decide]** The failsafe and the voice
+  The timeline carried two Vecna events that no finished page supports, and section 8 dropped them: "The failsafe, running" (encoded messages archived into the Citadel through Monolith relays, waiting for someone to come out the wrong way) and "a mage recruited by a voice" in his rise on Oerth. opposition/vecna.html § Contingencies and dossiers/vecna.html carry neither. Options: write either into the dossier and Opposition: Vecna and restore the timeline event; or leave both retired. Touches dossiers/vecna.html, opposition/vecna.html, timeline.json.
+  src: timeline.json (before section 8); section 8 (C9)
 
 - **[decide]** The Book of Vile Darkness
   The retired wiki manual (campaign/index.html) carved the Book out as "the one whole account of the voice that recruited Vecna, and a possible goal for the Seekers and the crew". No finished page has a voice that recruited Vecna: dossiers/vecna.html makes him an archmage of Oerth who rose by his own ritual, and lists the Book only as "an artifact tied to him, in this cosmos", with its whereabouts a Still to decide sentence. Principles keeps only the generic rule for iconic items. Options: (a) the Book is an account of Vecna's own rise, written by him or about him, and a goal for the Seekers and the crew; (b) it is a period piece with no bearing on the working; (c) something else. Touches: dossiers/vecna.html, principles.html (if it becomes an example), plot-hooks.html.
@@ -2138,6 +2108,10 @@ run decide, fix, drop, add.
 - **[add]** Writing rule: no triple short sentences
   Add to the prose rules in CLAUDE.md ("Prose: no stacked negations…") and to working/README.md § Writing staged entries and pages: "No three short sentences in a row for emphasis." Korey asks for AI-isms to be avoided in general; this is the pattern he named alongside stacked negations.
   src: BCS § Sol/Style (turns 866, 870)
+
+- **[later]** connections.json sources outside Fonains
+  About 370 facts and edges in prime/data/connections.json still cite "STAGING round N" or "STAGING § …", entries since distributed and deleted. Section 8 retargeted the Fonains nodes to their finished pages. Retarget the rest, node by node, to the page that now carries each fact.
+  src: section 8, 2026-10-28
 
 ## Record and schema
 

@@ -48,7 +48,7 @@ when a ruling changes; delete it once the page carries it. See
 - The active push to find and open hearts began only in the past few decades.
 - The residue piece Thessalar experimented with was the seventh Rod piece, simulacrum. It is why N'ghathrod's tadpoles make copies of him, and it is the root of the taking.
 - N'ghathrod's long life comes from his taken. A portion of every taken person is tithed upward to him, the way a hive feeds its center, and it extends his life. The more he takes, the longer he lasts.
-- done: the capture, the experiments, the seventh piece and the escape are on artifacts/rod-of-seven-parts.html and vessels/thessalars-craft.html (section 4). dossiers/nghathrod.html carries them (section 5); the timeline and rules/ still need them.
+- done: the capture, the experiments, the seventh piece and the escape are on artifacts/rod-of-seven-parts.html and vessels/thessalars-craft.html (section 4). dossiers/nghathrod.html carries them (section 5); the timeline carries the capture, the copies, the escape, the exile, the taking of Vth'oramu and the push for hearts (section 8). rules/ still needs them.
 - If N'ghathrod's true body dies, the taken do not die. Part of him lives on in each of them. His lieutenants are closest to him; each rung down the colony is further away. Given enough time, one of them could grow toward becoming another N'ghathrod. The taken lose a part of themselves when he dies.
 
 ### Tarroway (restricted/; done on dossiers/tarroway.html, section 5)

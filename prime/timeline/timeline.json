@@ -40,7 +40,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The Reach",
-      "desc": "The people of the First World reach for the Axioms. The cosmos is reconfigured: souls become gods, debris becomes worlds, and every world gets a heart.",
+      "desc": "The people of the Reach world, the only world in an earlier version of reality, reach into Continuity and change it. The cosmos is reconfigured: the people become gods, debris becomes worlds, and every world gets a heart.",
       "t": -50000,
       "tier": 1
     },
@@ -49,7 +49,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The Core and the First Heart",
-      "desc": "The first Monolith appears above the First World during its Zenith and stays when the world is destroyed. The remains are the black hole at the center. The Citadel lives inside the Core; the First Heart lies closed beneath.",
+      "desc": "The first Monolith, the Core Monolith, manifests over the Reach world as Continuity first answers, and stays when the world is destroyed. The Reach world collapses into Rykoe, the black hole at the center of the cosmos, beneath the Core Monolith and the Radiant Citadel. The First Heart lies closed beneath Rykoe.",
       "t": -50000,
       "tier": 1
     },
@@ -67,19 +67,10 @@
       "lane": "cosmos",
       "status": "now",
       "cert": "canon",
-      "title": "Zeniths arriving too often",
-      "desc": "Thresholds are crossing at a rate the Order can't explain. Convergence is the most stressed Axiom.",
-      "t": -20,
+      "title": "The Axiom strain",
+      "desc": "Over the past century Zeniths have come more often, and Monoliths with them. Some of the rise is Vecna's doing; some is worlds reaching their moments. The rise strains the balance of the Axioms, and the Watchers see it.",
+      "t": -100,
       "end": 0,
-      "tier": 1
-    },
-    {
-      "lane": "cosmos",
-      "status": "projected",
-      "cert": "canon",
-      "title": "Convergence stabilizes",
-      "desc": "The Continuum answers a failing Axiom with a stabilization. When it comes, the seat closes permanently. Vecna gets one attempt before it.",
-      "t": 5,
       "tier": 1
     },
     {
@@ -87,7 +78,7 @@
       "status": "past",
       "cert": "canon",
       "title": "Reach-born gods",
-      "desc": "The first gods are the souls of the First World, reshaped. Pantheons cluster in spheres where their worship is densest.",
+      "desc": "The first gods are the people of the Reach world, woven into the cosmos at different depths. Pantheons cluster in the galaxies where their worship is densest.",
       "t": -48000,
       "tier": 2
     },
@@ -103,9 +94,9 @@
     {
       "lane": "vecna",
       "status": "past",
-      "cert": "working",
+      "cert": "canon",
       "title": "Vecna rules Oerth and ascends",
-      "desc": "A mage recruited by a voice, then a lich who rules Oerth and is never stopped. He ascends through a Zenith; the Monolith archives his mortality to the Citadel. Becoming a god gives him the same charge as Oerth's heart, and the world pushes him off.",
+      "desc": "An archmage of Oerth, then a lich who rules it and is never stopped. He ascends through a Zenith; the Monolith archives his mortal form, Vecna (Lich), to the Radiant Citadel. Becoming a god gives him the same charge as Oerth's heart, and the world pushes him off.",
       "t": -900,
       "end": -700,
       "tier": 1
@@ -113,20 +104,11 @@
     {
       "lane": "vecna",
       "status": "past",
-      "cert": "working",
+      "cert": "canon",
       "title": "Centuries of worship",
-      "desc": "He builds faithful across spheres under many names, wide and thin. Separately, a voice teaches chapters a method: the Seekers.",
+      "desc": "He builds faithful across galaxies under many names, wide and thin. His followers are the Seekers, in chapters that differ world to world and recognise each other through the account of the voice that taught them how to ask.",
       "t": -700,
       "end": 0,
-      "tier": 2
-    },
-    {
-      "lane": "vecna",
-      "status": "past",
-      "cert": "open",
-      "title": "The Ascension World",
-      "desc": "He forces a small local threshold on a world in SPH-01. When, and what it cost him, are open.",
-      "t": -250,
       "tier": 2
     },
     {
@@ -137,16 +119,6 @@
       "desc": "It trades her the lost meaning of the Alpha and the secret in the Cre'Tez blood.",
       "t": -12,
       "tier": 1
-    },
-    {
-      "lane": "vecna",
-      "status": "now",
-      "cert": "canon",
-      "title": "The failsafe, running",
-      "desc": "Encoded messages archived into the Citadel through Monolith relays, waiting for someone to come out the wrong way.",
-      "t": -600,
-      "end": 0,
-      "tier": 2
     },
     {
       "lane": "vecna",
@@ -161,8 +133,8 @@
       "lane": "vecna",
       "status": "projected",
       "cert": "canon",
-      "title": "The lattice fills",
-      "desc": "Fifteen opened, linked hearts, three per sphere across five spheres, each with vessels. He builds past the count as surplus.",
+      "title": "The eye's fifteen hearts",
+      "desc": "Vecna's working in GAL-01 is an eye of fifteen heart worlds: ten trace the lids and five the iris, each found, opened and linked, and each linked back to Oerth. When lids and iris are whole, the eye opens and Erevos, the core, wakes.",
       "t": 2,
       "end": 4,
       "tier": 1
@@ -171,8 +143,8 @@
       "lane": "vecna",
       "status": "projected",
       "cert": "canon",
-      "title": "The Cast",
-      "desc": "The lattice's massed Yearning forces the First Heart open. Arriving and opening are one act. If he takes the seat: the Remaking.",
+      "title": "Failure state: GAL-01's core wakes for Vecna",
+      "desc": "If GAL-01 falls, GAL-03, GAL-04 and GAL-05 fall with it, and with GAL-02's core already awake, Rykoe can open. Every linked heart becomes a door to the center, and Vecna's vessels go through toward Continuity.",
       "t": 5,
       "tier": 1
     },
@@ -309,7 +281,7 @@
       "status": "past",
       "cert": "canon",
       "title": "Sol escapes Aethris",
-      "desc": "He flees the ritual before it completes and is recruited by a Watcher. The Fortuned build the CRC to bring him back.",
+      "desc": "He flees the ritual before it completes and is extracted by a Watcher. The Fortuned build the C.R.C. to bring him back.",
       "t": -1.5,
       "tier": 2
     },
@@ -336,10 +308,19 @@
       "status": "planned",
       "cert": "canon",
       "title": "Behold H'Catha",
-      "desc": "Recover the adamantine meteor from a contested seam. Sol's first CRC encounter.",
+      "desc": "Recover the adamantine meteor from an occupied, skirmished mining area on H'Catha.",
       "t": 0.08,
       "end": 0.15,
       "tier": 1
+    },
+    {
+      "lane": "crew",
+      "status": "planned",
+      "cert": "canon",
+      "title": "Sol's first C.R.C. encounter",
+      "desc": "On Caelestis, at the main entrance, when the crew returns from H'Catha.",
+      "t": 0.16,
+      "tier": 2
     },
     {
       "lane": "crew",
@@ -354,8 +335,8 @@
       "lane": "crew",
       "status": "planned",
       "cert": "working",
-      "title": "Act 2: ranked missions",
-      "desc": "Contracts from town to world scale. Seeker chapters met one at a time. Scuffles with N'ghathrod's satellite crews.",
+      "title": "Arc 2: Driftwardens in the Field",
+      "desc": "Contracts as Driftwardens of the Caelestis Sector, out of Ondrel Anchorage under Captain Haymond Rolt. The crew meets the colony's skiffs, earns rank, and recognises the Vth'orama as a coherent enemy before any institution does.",
       "t": 0.3,
       "end": 1.5,
       "tier": 1
@@ -364,8 +345,8 @@
       "lane": "crew",
       "status": "planned",
       "cert": "working",
-      "title": "Act 3: N'ghathrod",
-      "desc": "Vth'oramu and the real N'ghathrod. A real victory that moves Vecna onto his failsafe.",
+      "title": "Arc 3: Recognition",
+      "desc": "The crew acts on what it has learned and tries to stop or redirect the Vth'orama. Vth'oramu becomes a place it can find and enter; the Restorers surface as a third force; the Runekeepers become legible.",
       "t": 1.5,
       "end": 3,
       "tier": 1
@@ -374,8 +355,8 @@
       "lane": "crew",
       "status": "planned",
       "cert": "working",
-      "title": "Act 4: the center",
-      "desc": "The Citadel, where the answers are, or the First Heart, where the ending is.",
+      "title": "Arc 4: Stopping N'ghathrod",
+      "desc": "N'ghathrod's fall, and with it the casting of Vecna's eye. It can carry the crew beyond the Erevos Galaxy.",
       "t": 3,
       "end": 5,
       "tier": 1
@@ -385,7 +366,7 @@
       "status": "past",
       "cert": "canon",
       "title": "Thessalar's experiments",
-      "desc": "About 500 years before Fonains's present. The Rod's seventh piece, the Thessalkraken, clone tubes Thessalar I–VIII.",
+      "desc": "About 500 years before Fonains's present. The Rod's seventh piece and the Thessalkraken.",
       "t": -530,
       "end": -500,
       "tier": 2
@@ -395,7 +376,7 @@
       "status": "past",
       "cert": "canon",
       "title": "Captured aboard Thessalar's craft",
-      "desc": "N'ghathrod's ship clashes with Thessalar's planar craft and loses. Thessalar and the Thessalkraken capture him and some of his illithids, and he is held and experimented on aboard; the Rod's seventh piece makes his ceremorphosis paracausal, so his tadpoles become copies of him and his aging stops. He is still a prisoner when Lola's Boys arrive from the future.",
+      "desc": "N'ghathrod's ship clashes with Thessalar's planar craft and loses. Thessalar and the Thessalkraken capture him and some of his illithids, and he is held and experimented on aboard; the Rod's seventh piece makes his ceremorphosis paracausal, so his tadpoles become copies of him. He is still a prisoner when Lola's Boys arrive from the future.",
       "t": -506,
       "end": -500,
       "tier": 1
@@ -404,9 +385,38 @@
       "lane": "colony",
       "status": "past",
       "cert": "canon",
+      "title": "Thessalar copies himself",
+      "desc": "With N'ghathrod as his first subject, Thessalar turns the Rod's seventh piece on himself and makes eight simulacra, Thessalar I–VIII.",
+      "t": -505,
+      "tier": 2
+    },
+    {
+      "lane": "colony",
+      "status": "past",
+      "cert": "canon",
       "title": "Exile from Glyth",
-      "desc": "Glyth casts out the brainless-raised and he leaves with them. A living astral dreadnought becomes Vth'oramu.",
-      "t": -60,
+      "desc": "After decades of travel back to Glyth, a system away, Glyth casts out the unthinned, and N'ghathrod leaves with them because they are his blood.",
+      "t": -420,
+      "tier": 2
+    },
+    {
+      "lane": "colony",
+      "status": "past",
+      "cert": "canon",
+      "title": "Vth'oramu taken",
+      "desc": "By a long siege, a living Astral Dreadnought becomes Vth'oramu. The taking takes decades, perhaps a century; generations of the colony are born aboard, and many die in the Astral Sea.",
+      "t": -400,
+      "end": -300,
+      "tier": 2
+    },
+    {
+      "lane": "colony",
+      "status": "past",
+      "cert": "canon",
+      "title": "The push for hearts",
+      "desc": "Only in the past few decades does the colony start actively finding and opening hearts.",
+      "t": -30,
+      "end": 0,
       "tier": 2
     },
     {
@@ -414,7 +424,7 @@
       "status": "now",
       "cert": "canon",
       "title": "Saturating worlds",
-      "desc": "Taking key individuals, seeding Zeniths so Monoliths stand where hearts can be opened. Joffrey is on station at Caelestis.",
+      "desc": "Taking key individuals, seeding Zeniths so Monoliths stand where hearts can be linked. Joffrey is on station at Caelestis.",
       "t": -1,
       "end": 0,
       "tier": 2
@@ -453,7 +463,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The Restorers walk into Zeniths",
-      "desc": "For four centuries, trying to reach the Core and the All-Mother. Many arrived.",
+      "desc": "For four centuries Restorers walk into Zeniths on purpose to be archived, trying to reach the source they believe every Monolith answers to. The archiving is bodily, and many of the order's best people are in the Radiant Citadel.",
       "t": -400,
       "end": 0,
       "tier": 2
@@ -472,7 +482,7 @@
       "status": "now",
       "cert": "canon",
       "title": "The Fleet stretched thin",
-      "desc": "More Zeniths, more Watcher requests, an illithid whiff, movements at the sphere's edge. Vocath uses the thinning to stress the Academy.",
+      "desc": "More Zeniths, more Watcher requests, an illithid whiff, movements at Realmspace's edge. Vocath uses the thinning to stress the Academy.",
       "t": -1,
       "end": 0,
       "tier": 2
@@ -1129,7 +1139,7 @@
     }
   ],
   "decisions": [
-    "Caelestis's present sits a few months after the Fonains Monolith broke, about level with Fonains's Session 28. Clint reaches Fonains about a year before Caelestis's present, before the Monolith appears. Boogie's shard came from the broken Monolith through Vocath's line, before V001. This replaces \"Caelestis runs about a year before Fonains.\"",
+    "Caelestis's present sits a few months after the Fonains Monolith broke, about level with Fonains's Session 28. Clint reaches Fonains about a year before Caelestis's present, before the Monolith appears. Boogie's shard came from the broken Monolith through Vocath's line, before V001.",
     "Benedetta fell ill at Rihiri's birth, about twelve years ago, and died about ten years ago. The illness was Vanifer siphoning her soul into the illegitimate Bloodstone, which took about two years.",
     "Thessalar's planar craft fell about 500 years ago. N'ghathrod had already lost a clash with it and was a prisoner aboard, being experimented on. Lola's Boys, sent back by the Accordance, took the craft's control and defense gems; without them it fell, and the crash let N'ghathrod escape. The party unknowingly made their own villain in another campaign. \"Some millennia ago\" in Lola's Boys is rumour.",
     "Session and voyage dates inside a campaign are spaced by feel; their order is canon. Lola's Boys runs from about a month after the Darkest Day to Session 28, two to three months after the Monolith broke.",
@@ -1556,7 +1566,7 @@
       {
         "t": 2,
         "status": "planned",
-        "title": "Act 3: Vth'oramu",
+        "title": "Arc 3: Recognition",
         "who": [
           "The crew",
           "N'ghathrod",
@@ -1566,7 +1576,7 @@
       {
         "t": 5,
         "status": "projected",
-        "title": "The Cast",
+        "title": "Failure state: GAL-01's core wakes for Vecna",
         "who": [
           "Vecna",
           "N'ghathrod",
