@@ -697,6 +697,28 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
 }
 .dm-content .cae-expandable { cursor: zoom-in; }
 
+/* A map or plate inside an entry: full column width, opens in the
+   lightbox (dm-nav.js wires figure.plate), caption below. */
+.dm-content figure.plate {
+  margin: 1rem 0 0.4rem;
+  border: 1px solid var(--rule);
+  background: var(--bg-deep);
+  min-width: 0;
+}
+.dm-content figure.plate img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.dm-content figure.plate figcaption {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+  padding: 0.5rem 0.8rem;
+  border-top: 1px solid var(--rule-soft);
+}
+.dm-content figure.plate + .portrait-label { padding: 0; margin: 0 0 1rem; }
+
 /* ── Tabs ──
    Underlined tabs, the same control as the section strip on reference
    pages; the register pages use pills for filters. */
