@@ -145,7 +145,7 @@ the player side.
 | `realms/sys04.html` | `locations/krynnspace.html` |
 | `realms/aethris.html` (system page) | `locations/aethris.html`, the world page with its system as a section |
 | `campaign/ascension/index.html` | `opposition/vecna.html` (Vecna's working, the eye, Oerth) |
-| `campaign/colony/index.html` | `opposition/colony.html` |
+| `campaign/colony/index.html` | `opposition/vthorama.html` |
 | `campaign/spine.html` | `campaign/index.html` |
 | `factions/academy-fleet.html` | `factions/fleet.html` |
 | `artifacts/runekeepers-fragment.html` | `artifacts/dissolution-fragment.html` |
@@ -190,7 +190,7 @@ because later sections link into earlier ones.
    the Rod, the twins' fragment.
 5. **Dossiers**: Vecna (new), N'ghathrod, Vth'oramu, Thessalar, Clint,
    Tarroway, Rolt, Ilsevaine, Venn, OSTEKK.
-6. **Campaign**: spine (theme, shape, failure state), ascension (Vecna's
+6. **Campaign** (done, branch `campaign`: `campaign/index.html`, `opposition/vthorama.html`, `opposition/vecna.html`, `principles.html`, Plot Hooks with Speculation, Voyages): spine (theme, shape, failure state), ascension (Vecna's
    working, the eye, Oerth), colony (N'ghathrod now), plot hooks, principles.
 7. **Crew**: the five crew items in STAGING, plus the crew backlog.
 8. **Fonains and timeline**: the Fonains page and doc, `timeline.json`.
@@ -292,6 +292,16 @@ Old path → new path, added by each pull request that moves a page.
 | `prime/artifacts/atlas.html#surveyor-depths` | `prime/artifacts/atlas.html#reading-depths` | Artifacts and vessels (artifacts) |
 | `prime/rules/index.html#counter-spore` | `prime/artifacts/faelight-spore.html` | Artifacts and vessels (artifacts) |
 | `prime/campaign/plot-hooks.html#world-surveyor-thread` | `prime/campaign/plot-hooks.html#atlas-thread` | Artifacts and vessels (artifacts) |
+| `prime/campaign/colony/index.html` | `prime/opposition/vthorama.html` | Campaign (campaign) |
+| `prime/campaign/colony/index.html#vocath-op` | `prime/opposition/vthorama.html#caelestis-operation` | Campaign (campaign) |
+| `prime/campaign/colony/index.html#academy-op` | `prime/opposition/vthorama.html#caelestis-operation` | Campaign (campaign) |
+| `prime/campaign/colony/index.html#tetherbreak` | `prime/vessels/bellwether-crow.html` | Campaign (campaign) |
+| `prime/campaign/index.html` (the wiki manual) | `prime/principles.html`; wiki conventions to `docs/PAGE-GUIDE.md` | Campaign (campaign). The path now holds the Campaign page, the approved Story landing page; no inbound link targeted the manual's anchors, and its ids (`structure`, `pages`, `principles`, `hooks`, `conventions`, `building`) are not reused |
+| `prime/campaign/spine.html` | `prime/campaign/index.html` | Campaign (campaign) |
+| `prime/campaign/spine.html#central-question` | `prime/campaign/index.html#theme` | Campaign (campaign) |
+| `prime/campaign/what-if.html` | `prime/campaign/plot-hooks.html#speculation` (section ids `#hearts`, `#reach-speculation`, `#alternate-readers`, `#crew-disposition`, `#colony-and-pcs`, `#restorers-speculation` kept) | Campaign (campaign) |
+| `prime/campaign/plot-hooks.html#abandoned-beholders` | retired, no target (the hook is cut; the id is never reused) | Campaign (campaign) |
+| `prime/campaign/voyages/voyage-briefing-002.html` | `prime/campaign/voyages/index.html#v002` (the full briefing is `#v002-briefing`) | Campaign (campaign) |
 
 ## Stale branches
 
@@ -376,7 +386,7 @@ writing rules are in BACKLOG.md § Repo and process.
 - Status vocabulary is in-world and fixed per set: crew/factions Active; cast Active · Deceased; places Accessible · Simulated; things Held · Lost; threads Open · Complete. A new value is a question for the DM. (SR)
 - Player render surfaces: new `voyages/voyage-NNN.html` from `voyage-template.html` (At a Glance, Brief Account, Full Account, Recording); previous voyage's next link; `voyages/index.html` row + Overview; `bearings/voyage-NNN.html` from the previous one; `bearings/index.html` = copy of latest; `data/bearing.js`; `data/vocabulary.js` (every new proper noun); each changed record's page (new voyage becomes latest block, old moves to Previous Voyages; stat rows, overview, objectives, Connections); each new record's page from a sibling with `data-entity` set; every register index. (SR) *Bearings rows depend on refactor call 3.*
 - Brief Account and At a Glance are taken from the approved Full Account and add nothing it does not say. (SR)
-- DM render surfaces: `prime/campaign/voyages/index.html` (Actual, Delta, clear its flags, player link, Next session block); `spine.html` if an arc beat closed; `plot-hooks.html` for hooks that moved; `prime/dossiers/*` History, in-world, for anyone who acted; `prime/crew/` only if a PC's mechanics changed. (SR)
+- DM render surfaces: `prime/campaign/voyages/index.html` (Actual, Delta, clear its flags, player link, Next session block); `campaign/index.html` if an arc beat closed; `plot-hooks.html` for hooks that moved; `prime/dossiers/*` History, in-world, for anyone who acted; `prime/crew/` only if a PC's mechanics changed. (SR)
 - Check: zero errors before the PR; warnings fixed or named in the PR. Then open the changed pages in a browser once. (SR)
 - What `check` cannot see (the approvals cover it): whether a bullet is true to the session, whether a fact belongs player-side at all, voyage glance/Brief/Full prose, bearing wording, any `prime/` prose, the Crew Logs doc. (SR)
 - Publish: append Full Account to "Voyages" under `Voyage NNN – Title`; one PR per voyage titled `Voyage NNN: Title`, body = the change table + check warnings; Korey merges; deploy publishes on merge. (SR)

@@ -360,7 +360,7 @@ add nothing it does not say.
 | Surface | What changes |
 |---|---|
 | `prime/campaign/voyages/index.html` | this voyage's Actual and Delta; its flags cleared; the link to the player page; the Next session block for the voyage after |
-| `prime/campaign/spine.html` | where the crew stands, if an arc beat closed |
+| `prime/campaign/index.html` | where the crew stands, if an arc beat closed |
 | `prime/campaign/plot-hooks.html` | status of any hook that moved |
 | `prime/dossiers/*.html` | Who they are, in-world, for anyone who acted |
 | `prime/crew/` | only if a PC's mechanics changed |

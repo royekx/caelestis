@@ -10,12 +10,12 @@
  * In-page navigation is handled separately by the right-rail TOC (dm-toc.js)
  * on pages that opt in with class "has-toc".
  *
- * Usage (in <head> with defer):
- *   /prime/index.html:           <script src="../scripts/dm-nav.js" defer></script>
- *   /prime/continuum.html:       <script src="../scripts/dm-nav.js" defer></script>
- *   /prime/campaign.html:        <script src="../scripts/dm-nav.js" defer></script>
- *   /prime/world.html:           <script src="../scripts/dm-nav.js" defer></script>
- *   /prime/voyages/*.html:       <script src="../../scripts/dm-nav.js" defer></script>
+ * Usage (in <head> with defer), by depth under /prime/:
+ *   /prime/principles.html:              <script src="scripts/dm-nav.js" defer></script>
+ *   /prime/<folder>/page.html:           <script src="../scripts/dm-nav.js" defer></script>
+ *   /prime/campaign/voyages/index.html:  <script src="../../scripts/dm-nav.js" defer></script>
+ *
+ * The groups and their pages follow CLAUDE.md § Folder map (DM side target).
  */
 
 (function () {
@@ -77,9 +77,6 @@
   // Internal links — pages inside /prime/.
   // To add, remove, or rename a section: edit this array only.
   //
-  // Order: Campaign (+ Remaking, Voyages nested) / Cosmology / Realms / Factions & Characters.
-  // a divider, then the trackable throughlines (The Remaking / Voyages).
-
   // Five groups, one for each Axiom colour (dm.css). The page takes its
   // group's colour as its accent, and each group label carries its own.
   //
@@ -105,10 +102,8 @@
       axiom: 'consolidation',
       items: [
         { key: 'campaign',  label: 'Campaign',      path: 'campaign/'   },
-        { key: 'spine',     label: 'Spine',         path: 'campaign/spine.html',   indent: true },
-        { key: 'what-if',   label: 'What If',       path: 'campaign/what-if.html', indent: true },
-        { key: 'colony',    label: 'Colony',        path: 'campaign/colony/'    },
-        { key: 'becoming',  label: 'Vecna',         path: 'opposition/vecna.html' },
+        { key: 'vecna',     label: 'Vecna',         path: 'opposition/vecna.html',    indent: true },
+        { key: 'vthorama',  label: "Vth'orama",     path: 'opposition/vthorama.html', indent: true },
         { key: 'timeline',  label: 'Timeline',      path: 'timeline/'   },
       ]
     },
@@ -137,6 +132,7 @@
       axiom: 'dissolution',
       items: [
         { key: 'glossary',  label: 'Glossary',      path: 'glossary/'   },
+        { key: 'principles',label: 'Principles',    path: 'principles.html' },
       ]
     },
   ];
@@ -214,15 +210,15 @@
 
   // ── Active state ──────────────────────────────────────────────────────────
   // Active-state: match each section's full path against the current URL and
-  // pick the MOST SPECIFIC (longest) match, so /campaign/colony/ highlights
-  // The Remaking, not its parent Campaign.
+  // pick the MOST SPECIFIC (longest) match, so /campaign/voyages/ highlights
+  // Voyages, not its parent Campaign.
   (function () {
     var links = Array.prototype.slice.call(
       document.querySelectorAll('.side-nav-link[data-section]')
     );
     var best = null, bestLen = -1;
     links.forEach(function (link) {
-      var p = link.dataset.path;          // e.g. "campaign/colony/"
+      var p = link.dataset.path;          // e.g. "campaign/voyages/"
       if (!p) return;
       // Normalize: strip trailing index.html if present in the URL.
       var here = pathname;

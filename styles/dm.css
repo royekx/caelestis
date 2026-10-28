@@ -1102,6 +1102,7 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
   border-bottom: 1px solid var(--gold-rule);
   padding-bottom: 0.1rem;
 }
+.voyage-grid .voyage-col-link.is-muted { opacity: .4; }
 .voyage-grid .voyage-col-link:hover {
   color: var(--gold);
   border-bottom-color: var(--gold-dim);
@@ -2131,6 +2132,22 @@ ul.tr-fact-val li { margin-bottom: 0.25rem; color: var(--text); }
   display: block; width: 100%; height: 70vh; min-height: 460px;
   border: 0; background: #070a12;
 }
+
+/* An Opposition cell on the Campaign page (prime/scripts/dm-cells.js).
+   Before the script runs, or without it, the cell is a plain link on its
+   own line; afterwards the passage sits in a .dm-embed with the same bar. */
+a.dm-cell {
+  display: block;
+  margin: 1.2rem 0 .4rem;
+  padding: .5rem .8rem;
+  border: 1px dashed var(--rule);
+  border-radius: 2px;
+  font-family: 'Cinzel', serif; font-size: .78rem;
+  letter-spacing: .09em; text-transform: uppercase;
+}
+a.dm-cell::after { content: ' \2192'; }
+.dm-cell-embed .dm-cell-body { padding: .2rem 1rem .4rem; }
+.dm-cell-embed .dm-cell-body > *:last-child { margin-bottom: .8rem; }
 
 
 /* ═══════════════════════════════════════════════════════════════

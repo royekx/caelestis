@@ -85,53 +85,6 @@ when a ruling changes; delete it once the page carries it. See
 - The stations differ with the local ecology of their place: what drifts there, what lives there, what threatens it. Their crews are drawn from the sector that keeps them. Readings from the stations pass between the sectors; this is how a disturbance seen at one edge reaches another.
 - done: factions/fleet.html and the glossary lines for sector, the Caelestis Sector, Corps, Academy, the Bridge and the FIA (section 2); locations/ondrel-anchorage.html, locations/strake-station.html and locations/caelestis.html (section 3). Still waiting: the FIA's account of the Fleet on restricted/.
 
-### Vocath's crew (campaign/colony/; done on factions/vocath-operation.html, section 2)
-- The crates at the Sky Dock carry Vocath's mark, the eye in a wheel.
-- done: Qitru and the A.T.L.A.S. sister line are on factions/vocath-operation.html.
-
-## Campaign
-
-### The theme (campaign/spine.html, hub.html)
-- The campaign has no central question. It has a theme: everyone is missing something and is trying to become whole, to find or make their place in the cosmos.
-- The theme takes a different shape at each level. Vecna wants the answer to the cosmos and what was taken from him. N'ghathrod wants a home for his people. Casey wants his brother. Tumak wants his home. Bartholomew wants the peace within him, his constellation. Boogie wants to belong to something. Astra Virex wants to heal. Gregory and Sol carry it too.
-
-### Campaign shape (campaign/spine.html)
-- N'ghathrod is the main villain of the campaign, and stopping his invasion takes most of it. Vecna stands behind him and beyond the campaign's direct reach; the late campaign is about stopping Vecna's working, not necessarily fighting him. (DM: a confrontation could come with a part of him manifested in the First Heart.)
-- Vecna has contingencies. N'ghathrod is a means to an end: Vecna needs him to open and link hearts so that Vecna's vessels can pass through Atria. Getting N'ghathrod's five lieutenants through would make it certain; many lesser taken, grown over time through the colony's spread, could still get him there. Defeating N'ghathrod does not end the threat. (DM: a victory over him is never undone by fiat.) Other avenues, such as the Restorers' aims, can bring Vecna close again or only delay him.
-- The failure state is GAL-01's core waking for Vecna. It sets the fate of the other galaxies: if GAL-01 falls, GAL-03, GAL-04 and GAL-05 fall with it, and Rykoe can open. Success in GAL-01 holds them, though work remains.
-- An awake core presses on its neighbours. GAL-02's presses on GAL-01's, and late in the campaign it can pull the crew into the eldritch galaxy, where the rules become Call of Cthulhu. What they do there is to get home, or to close what is open.
-- The Radiant Citadel and the Core Monolith are late Arc 3 or Arc 4 destinations. The crew reaches them by a long voyage or through a linked heart, both late-game.
-- The campaign scales outward the way a fantasy campaign grows from town to kingdom to realm: the early levels play at the scale of one system, then neighbouring systems, then the galaxy, and late in the campaign beyond it.
-- Level pacing (DM): level-ups slow down in later arcs, so the crew is not at the top of the level range before the final arc.
-- Arc 1 runs from level 1 to 4, Arc 2 from 5 to 10, Arc 3 from 11 to 15, and Arc 4 begins at 15.
-
-### Vecna's working (cosmology/, glossary/, opposition/vecna.html, chart/)
-- Rykoe opens only when the cores of all five galaxies are awake and joined: each core to its neighbours, and each to Rykoe.
-- Through opened Rykoe lies the way into Continuity itself, into the workings of reality. Whoever reaches it can push and pull the Axioms and remake reality. That is what Vecna seeks, and what the beings working the other galaxies seek.
-- A galaxy's core can be woken, but there is no one way to do it. Vecna, an archmage older than his godhood, does it with spellwork: an inscription, a figure drawn in linked heart worlds across the galaxy. The beings working the other galaxies have their own methods. World hearts link only to worlds in their own galaxy; only a woken core reaches beyond it.
-- Vecna works GAL-01's core. In each of the other galaxies, another being works its own core toward the same end. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and what happens in GAL-01 decides them.
-
-### N'ghathrod now (campaign/colony/, dossiers/nghathrod.html)
-- N'ghathrod is working now on all four parts of his plan: planting the taken in key positions, finding hearts, opening them, and seeking links.
-- Vth'oramu is hunkered down on the periphery, in the dark between systems. It works as a mothership: skiffs go out from it to the worlds in that vicinity, and it stays where no one looks. (done: vessels/vthoramu.html, section 4.)
-- He has a broad set of target worlds in that vicinity. (DM: build each world's specifics as the crew nears it.)
-- By the time the crew graduates, his landed operations have begun to ripple outward at contract scale: taken in small positions, odd disappearances, a station or crew acting strangely. These are the first things the crew meets as Driftwardens. (DM: this is the shape of Arc 1 after graduation and the run into Arc 2.)
-- done: dossiers/nghathrod.html (section 5); campaign/colony/ still needs all four.
-
-### Ilsevaine Corr, Aurel Venn and the strain on the Fleet (campaign/spine.html, NEW: Cosmos texture; done on dossiers/ilsevaine-corr.html and dossiers/aurel-venn.html, section 5)
-- Outside Realmspace, at the edge of a system or between systems, Ilsevaine Corr rules a hidden polity that Caelestis does not know of. She has noticed more traffic than usual near her borders, and once something large brushed the edge of her sight and was gone. She keeps watch for it. Once N'ghathrod grows bolder, she will face Vth'oramu. (DM touchstone: Mara Sov.)
-- Aurel Venn, a Watcher of the Order, saw the same pattern, warned the Order, and was not heeded. He softly defected: he never broke with the Order openly, but he left his post to find the thing himself. The crew hears of him through contradictory accounts long before any meeting. (DM touchstone: Osiris.)
-- The fringe sage of Ascher Mir is the one who tracks the Seekers' pattern across chapters, a separate figure from the rogue Watcher.
-- Together with the rise in Monoliths and the Watchers' calls for help, these strain the Fleet.
-
-### The Princes' pressure (campaign/spine.html)
-- The crew meets the Princes' pressure as strange elemental-plane phenomena on the worlds they visit, not as the Princes themselves.
-
-### Building contracts (DM: a planning page)
-- Contracts fall into three or four categories by how they tie to the larger world: loosely tied, tied to a Seekers chapter, personal to a crew member, and others as they come up. Each contract can be built out from its category.
-- The world is already in motion. A contract surfaces because of the state of the world, and the place around it should feel like it exists without the crew. The crew's choices, or their failure to act, change what was already happening.
-- Contracts take any shape: excavations, politics, hunts. Many quietly lead back to a Seekers chapter, some of them knowingly nefarious and some unwitting.
-
 ## Dossiers
 
 ### N'ghathrod (dossiers/nghathrod.html, factions/vthorama.html, timeline, artifacts/rod-of-seven-parts.html, rules/)
@@ -147,7 +100,7 @@ when a ruling changes; delete it once the page carries it. See
 - done: the capture, the experiments, the seventh piece and the escape are on artifacts/rod-of-seven-parts.html and vessels/thessalars-craft.html (section 4). dossiers/nghathrod.html carries them (section 5); the timeline and rules/ still need them.
 - If N'ghathrod's true body dies, the taken do not die. Part of him lives on in each of them. His lieutenants are closest to him; each rung down the colony is further away. Given enough time, one of them could grow toward becoming another N'ghathrod. The taken lose a part of themselves when he dies.
 
-### Clint Dashforest (campaign/colony/, timeline; done on dossiers/clint.html, section 5, and on factions/fleet.html and factions/vocath-operation.html, section 2, on locations/cairn-station.html, locations/astral-sea.html and the chart, section 3, and on vessels/bellwether-crow.html and artifacts/atlas-sister.html, section 4)
+### Clint Dashforest (timeline; done on dossiers/clint.html, section 5, and on factions/fleet.html and factions/vocath-operation.html, section 2, on locations/cairn-station.html, locations/astral-sea.html and the chart, section 3, and on vessels/bellwether-crow.html and artifacts/atlas-sister.html, section 4)
 - Vocath's crew ambushed the Bellwether Crow for a sister artifact of A.T.L.A.S. that the Crow was carrying. Clint took it and left the ship to draw the boarders off.
 - He steered for a color pool he could see opening, and went through it on purpose. Color pools open and close quickly, and this one carried him through a small pocket of another dimension and spat him out on Fonains, separated from the boarders who followed him in.
 - The Crow's survivors still argue about whether he meant to go through. He did.
@@ -156,9 +109,6 @@ when a ruling changes; delete it once the page carries it. See
 ### Tarroway (restricted/; done on dossiers/tarroway.html, section 5)
 - M. Tarroway is a cartographer on Strake Station. His readings were the first hint that an unknown vessel or structure was disturbing the satellites at the edge of the system.
 - His name turns up here and there, mainly in the Fleet Intelligence Archive. Nothing about him is public. (DM: a thread for the players to piece together, not a figure they meet.)
-
-### Captain Haymond Rolt (campaign/spine.html; done on dossiers/haymond-rolt.html, section 5)
-- Captain Haymond Rolt is the crew's handler in Arc 2. He oversees several Driftwarden crews at once, out of Ondrel Anchorage.
 
 ## Crew
 
@@ -197,12 +147,3 @@ when a ruling changes; delete it once the page carries it. See
 ### Wan, Tu and the fragment (crew/tumak.html, rules/; done on artifacts/dissolution-fragment.html, section 4)
 - The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) factions/runekeepers.html and artifacts/dissolution-fragment.html carry it; dossiers/the-runekeeper.html carries it (section 5); crew/tumak.html still needs it.
 - The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a state neither whole nor broken.
-
-## DM principles
-
-### Prep
-- A world that is named has core facts, even if nothing else is built: what it is like, who lives there. Anything named in play needs work from that point.
-- Prep where the crew is going and one ring out from it: H'Catha and the cantina now. Seekers chapters and other far details get built when they become active in the larger shape, not before.
-
-### Visions
-- Use visions sparingly; there have been many. Polly's voice nudges Casey toward things rather than directing him.

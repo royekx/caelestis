@@ -28,7 +28,7 @@ Do not write to the repo before the first or to the record before the second.
 | Shared | `assets/`, `styles/`, `scripts/` (player and build scripts), `prime/scripts/` (DM scripts) |
 | Process, not deployed | `docs/`, `prime/working/`, `CLAUDE.md` |
 
-**DM side today**: `campaign/` (index, `spine.html`, `voyages/`, `plot-hooks.html`, `what-if.html`, `colony/`), `opposition/` (`vecna.html`), `tracker/`, `timeline/`, `crew/`, `dossiers/`, `factions/`, `statblocks/`, `cosmology/`, `locations/` (`realms/` keeps only `fonains.html` until it moves), `vessels/`, `artifacts/`, `chart/`, `rules/`, `glossary/`, `hub.html`, `search.html`.
+**DM side today**: `campaign/` (index, `voyages/`, `plot-hooks.html`), `opposition/` (`vecna.html`, `vthorama.html`), `tracker/`, `timeline/`, `crew/`, `dossiers/`, `factions/`, `statblocks/`, `cosmology/`, `locations/` (`realms/` keeps only `fonains.html` until it moves), `vessels/`, `artifacts/`, `chart/`, `rules/`, `glossary/`, `principles.html`, `hub.html`, `search.html`.
 
 **DM side target** (approved 2026-10-27; moves land page by page, see
 `prime/working/repo-refactor.md` § 3 and its link catalogue):
@@ -36,7 +36,7 @@ Do not write to the repo before the first or to the record before the second.
 | Nav group | Pages |
 |---|---|
 | Play | Voyages · Tracker · Plot Hooks · Stat Blocks · Rules |
-| Story | Campaign (`campaign/index.html`) · Opposition (`opposition/vecna.html`, `opposition/colony.html`) · Timeline |
+| Story | Campaign (`campaign/index.html`) · Opposition (`opposition/vecna.html`, `opposition/vthorama.html`) · Timeline |
 | People | Crew · Dossiers · Factions (`factions/fleet.html` for the Fleet) |
 | World | Cosmology · Locations (`locations/`, was `realms/`) · Vessels · Artifacts · Chart |
 | Reference | Glossary · Principles (`principles.html`) |
