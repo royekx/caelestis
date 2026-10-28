@@ -34,17 +34,17 @@ staging once Korey has read and accepted them.
 | Locations | locations/ (Fonains stays in its own section) | 21 | 22 | 0 | 0 | 1 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
-| Factions | factions/ | 3 | 9 | 2 | 0 | 2 |
+| Factions | factions/ | 3 | 9 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 15 | 1 | 2 | 0 | 0 |
 | Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
-| Crew | crew/ | 8 | 16 | 4 | 0 | 33 |
+| Crew | crew/ | 8 | 17 | 2 | 0 | 23 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 4 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** |  | **95** | **127** | **82** | **4** | **114** |
+| **Total** |  | **95** | **128** | **79** | **4** | **104** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -132,6 +132,7 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - `data/npcs.json` names Miken "Miken"; the DM dossier and the Fleet row use his full name, Miken Haverstance. Add the surname to the record if Korey agrees.
 - `data/player-characters.json` (Sol Fortuna, Voyage 4) says he "used Misfortune's Favor to draw ill luck onto his own shoulders". Misfortune's Favored is the oath's level-20 capstone and was earlier the working name of his Misfortuned feature; the Voyage 4 use reads as a self-Jinx or a Misfortuned use. crew/sol.html leaves the feature unnamed. Confirm the name and correct the line if Korey agrees.
 - `data/player-characters.json` (Casey Geim) lists the star-etched constellation shirt under Notable Items, but `data/items.json` and Tumak's record have Tumak holding it (Casey passed it to Tumak's bunk in Voyage 1). crew/casey.html and crew/tumak.html follow items.json. Drop it from Casey's Notable Items if Korey agrees.
+- `data/player-characters.json` gives all six cadets "Clearance: Sailor", and Tumak's Voyage 3 bullet has Mirt granting the crew sailor-level clearance; the BACKLOG decide "The Sailor gate at the Sea Dock" (crew/gregory.html) holds that a cadet inherits only Visitor and that part of the Sea Dock needs Sailor. Gregory's Voyage 3 bullet (locked out of a fleet-clearance category by his cadet star) sits between them. Reconcile once the decide is ruled.
 - `data/npcs.json` (Winston Ryeback, Voyage 6) says he "was told the beholder had been taken care of, and took it to mean the crew had killed it"; the ruling is that Tumak told him outright that the crew killed it (dossiers/winston-ryeback.html).
 
 ## Still coming in
@@ -899,14 +900,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   The Fleet lost a force at Glyth during the last approach window (see add). Its name and its commander are unnamed.
   src: chat-cosmic-campaign-structure § Cosmos texture, § Open
 
-- **[fix]** Gregory's origin wording *(answered)*
-  Replace the Seam wording ("Transformation and Boundary overlapped where he stood") on Gregory's row with: "Gregory was woken by the strain on an Axiom. Over the past century Monoliths have formed more often, and the strain that puts on an Axiom ripples outward through the planes and the cosmos, slow and more metaphysical than physical. Gregory's awakening is one result; the Latchling and other oddities are others. The same ripple woke Astra Virex." Carry the same cause to crew/gregory.html and dossiers/astra-virex.html (Astra Virex's wound: the ripple caused collisions between celestial bodies and part of the entity broke off).
-  answered: STAGING § The Axiom strain
-  Prior note: the page calls Gregory a Seam-product ("Transformation and Boundary overlapped where he stood"). Memory canon calls his arc "a Continuity (existence) ripple event" and him a paracausal Reach item like the Lantern. Decide together with Astra Virex's wound (under factions/deities.html). Options: keep the Seam wording, or revert to "Continuity ripple".
-  Why it is still open: Claude declared the three Seam-products "locked" in the cosmic-structure chat and wrote them into the repo; Korey answered "What's next" without confirming. Memory canon, updated later, still holds both Gregory's origin wording and Astra's wound as open. The two readings can also stack (a Seam woke him; that makes him paracausal), so a third option is: keep the Seam as the cause and call him paracausal, dropping "Reach item".
-  src: memory-canon campaign-canon § Gregory, § Antagonists (Lantern line); chat-cosmic-campaign-structure § Cosmology redesign
-  done: factions/fleet.html (section 2, from cosmology § Axiom strain) and dossiers/astra-virex.html (section 5); crew/gregory.html still needs it.
-
 ---
 
 ### factions/order.html
@@ -1390,6 +1383,7 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
 
 - **[decide]** The Sailor gate at the Sea Dock *(prep)*
   (A) He truly needs Sailor clearance, and gets in with an escort via Kip or Pik or a sanctioned reason. (B) He only thinks he does, and a service route exists. (C) Hybrid: Rindle has moved the Latchling and Gregory must recalibrate.
+  Folded in from the add "Sailor clearance": part of the Sea Dock needs Sailor clearance, and a cadet inherits only Visitor, so Gregory needs, or thinks he needs, Sailor access. When ruled, write it into crew/gregory.html § The Latchling (Obstacles) and drop the Still to decide sentence. Conflict: the record gives all six cadets "Clearance: Sailor" and Tumak's Voyage 3 bullet has Mirt granting the crew sailor-level clearance, while Gregory's Voyage 3 bullet has him locked out of a fleet-clearance category by his cadet star (see Player record flags).
   src: TGB § Revising voyage briefings/Open
 
 - **[decide]** What Gregory learns once the Latchling anomaly resolves *(prep)*
@@ -1399,62 +1393,9 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
   Draft: once per long rest, 10 minutes of listening gives direction and rough distance to a paracausal source he has felt before. Through the seated Lantern, once a day, it reaches farther. Options: lock or hold. If locked, it goes here and in the character subsystems on rules/index.html.
   src: chat-voyage-6-7-planning § Open
 
-- **[add]** The Lantern and the anomaly queue
-  Ruled (STAGING round 8). Add to DM notes: "Whether the Lantern becomes Gregory's next anomaly depends on whether he investigates it." Touches crew/gregory.html and artifacts/containment-engine.html.
-  src: Korey, 2026-10-25 (round 8); chat-voyage-6-7-planning § Open
-
-- **[fix]** Origin: Toril
-  Header says "Open: His origin, and what changed him". Record: Gregory is from Toril. He reached Caelestis on a cargo ship, and his origin has no Zenith tied to it. The Lantern's pull toward Toril starts his journey. What changed him stays an open question in the backlog, off the page.
-  updated (triage): what changed him is now settled. Gregory's awakening is a result of the Axiom strain's ripple (STAGING § The Axiom strain); write it on the page.
-  src: memory-canon § Gregory (working decision); memory-canon (open-decisions § Voyage 007); chat-voyage-6-7-planning § PCs and the stars
-
-- **[fix]** The Latchling is at the Sea Dock
-  The Clear clue says "The signal is at the sky dock, in the aligner berths along the mooring struts". Change to: the signal is at the Sea Dock, near cargo and lower dock storage.
-  src: TGB § Revising voyage briefings; memory-canon § Gregory
-
-- **[add]** Calibration thresholds (DM only, under "The roll")
-  At his +2: 1–7 static, 8–12 weak, 13–17 clear, 18+ sharp. Calibration is DM-initiated at fitting moments and stacks narrative clues; a failed roll gives static, never misdirection.
-  src: TGB § Gregory/Calibration; memory-canon § Gregory
-
-- **[add]** Detect Magic and tools near the Latchling
-  Detect Magic (ritual) near the Latchling reads strangely, which is itself a clue. Navigator's tools and tinker's tools add flavour.
-  src: TGB § Gregory/Calibration
-
-- **[add]** Gregory's theme and the anomaly prep framework
-  He knows roughly where to go and has to work out how to get there and through what stands in the way. Anomaly prep runs: Destination / Physical obstacle / Social obstacle / Interpretive obstacle / Payoff.
-  src: TGB § Revising voyage briefings
-
-- **[add]** The Latchling signal track
-  The track describes how clear the obstacles are: (1) bearing: the Sea Dock, near cargo; (2) a muddy signal: something is interfering, something is concealed; (3) the interference has a human shape.
-  src: TGB § Revising voyage briefings
-
-- **[add]** Latchling obstacles
-  Dock interference (metal and noise). Rindle: Gregory has to convince him he is no threat to the Latchling. The Latchling itself, which hides until it trusts him.
-  src: TGB § Revising voyage briefings
-
-- **[add]** Sailor clearance
-  Part of the Sea Dock needs Sailor clearance, and a cadet inherits only Visitor, so Gregory needs, or thinks he needs, Sailor access.
-  src: TGB § Revising voyage briefings
-
-- **[add]** The Latchling's reaction
-  The Latchling goes to Gregory as something familiar, and that visible reaction is what cracks Rindle's secrecy. Also add to dossiers/rindle-gearloft.html.
-  src: TGB § Gregory/Latchling
-  done: dossiers/rindle-gearloft.html (section 5); crew/gregory.html still needs it.
-
-- **[add]** His flaw
-  "I follow orders and trust everyone at their word." That is why Rindle's denials hit hard.
-  src: TGB § Gregory/Calibration
-
-- **[add]** Level 3 Abjurer scene
-  Gregory rereads a journal kept by Gregory Prime, his maker, and an entry reads differently after the last voyage. The entry:
-  > Mended the brass aligner a fourth time tonight — but this time, before it could crack again, I braced the seam from the inside first. Gregory held the casing steady while I worked. Steady hands. He's good at that.
-  >
-  > Funny thing. I've spent my whole life fixing what's already broken. Tonight I caught myself thinking — what if I'd gotten there sooner? Reached the thing before the break did. Then there'd be nothing to mend at all.
-  >
-  > Going to try doing it that way from now on. Get underneath things first.
-
-  Tag: "Gregory has read this page before. After the last voyage, it reads differently." The theme of his abjuration is preventing the break rather than fixing it after.
-  src: TGB § Gregory/Abjurer level-up scene
+- **[later]** Gregory's sheet check
+  His current level and D&D Beyond URL; whether Arcana is still +2 and Built for Success is still on the sheet (crew/gregory.html Mechanics › Build and the Calibration bands depend on both).
+  src: section 7 (2026-10-28)
 
 ### crew/bartholomew.html
 

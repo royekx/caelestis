@@ -119,10 +119,6 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Crew
 
-### Gregory (crew/gregory.html; done on factions/fleet.html, section 2, and locations/toril.html, section 3)
-- Gregory comes from the Cogfast Enclave on Lantan, on Toril. He reached Caelestis on a cargo ship.
-- DM: the Lantern becomes Gregory's next anomaly if he investigates it. (done on artifacts/containment-engine.html, section 4; crew/gregory.html still needs it.)
-
 ### Boogie (crew/boogie.html)
 - Tharizdun wants nothing specific from Boogie. Tharizdun is not lucid; she is an opportunist. What happens through the shard depends on what Boogie does, and things may come through the current. Boogie's plot is reactive.
 - Boogie sometimes feels corruption leaking into him from the shard: a role-playing beat, not a mechanic.
