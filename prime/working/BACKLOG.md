@@ -36,7 +36,7 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 3 | 10 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 1 |
-| Dossiers | dossiers/ | 19 | 15 | 0 | 0 | 1 |
+| Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **105** | **145** | **49** | **2** | **54** |
+| **Total** |  | **106** | **145** | **49** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -987,9 +987,14 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 - **[decide]** Ezra's own hook *(prep)*
   Ezra must arrive with a hook others can latch onto. Options:
-  (a) The eye-in-a-wheel sketch (ties to crossing table entries 4 and 8).
+  (a) The eye-in-a-wheel sketch. The eye in a wheel is now the Vth'orama's mark (Korey, 2026-10-28). Crossing-table entries 4 and 8 now carry Vocath's house mark, the balance scale, so the old tie to them no longer holds.
   (b) The sealed letter: "Watch one thing until it changes."
   src: chat-voyage-6-7-planning § Open; memory-canon open-decisions (Voyage 007 intent)
+
+- **[decide]** Ezra's sketch of the Vth'orama's mark *(before V007)*
+  Ezra's hook on dossiers/ezra.html is the eye-in-a-wheel sketch, and the eye in a wheel is now the Vth'orama's mark. Korey wants it worked out before Voyage 007. Set what the sketch is (drawn by Ezra, copied from something, or handed to him), where he saw the mark, and what the Order of the All-Father knows of it. The Watchers flag some Seekers chapters' work without knowing who stands behind it (factions/order.html), so the Order may hold the mark without knowing it is the colony's.
+  Touches: dossiers/ezra.html, factions/order.html, campaign/voyages/index.html (V007).
+  src: Korey, 2026-10-28 (Ezra's hook ruling)
 
 - **[later]** Emporia and Tharizdun
   Does Emporia read as a Zenith with Tharizdun behind it? Options: yes (a Tharizdun-touched Zenith); no (local trouble only); leave it to the other table.
