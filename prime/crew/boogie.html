@@ -9,95 +9,226 @@
 <link rel="stylesheet" href="../../styles/entity.css">
 <link rel="stylesheet" href="../../styles/dm.css">
 <script src="../scripts/dm-nav.js" defer></script>
+<script src="../scripts/portraits.js" defer></script>
+<script src="../scripts/dm-tabs.js" defer></script>
 </head>
 <body>
 
 <main class="dm-content">
 
   <header class="dm-page-header">
-    <div class="dm-page-eyebrow">Crew<span class="sep">&middot;</span>the Pulse</div>
+    <div class="dm-page-eyebrow">Crew<span class="sep">&middot;</span>Sorcerer, Divine Soul &middot; Medic</div>
     <h1>Boogie</h1>
   </header>
 
-  <div class="voyage-nav-bar"><a class="voyage-nav-link" href="bartholomew.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Bartholomew Grayson</span></a><a class="voyage-nav-center" href="index.html">Realms</a><a class="voyage-nav-link" href="casey.html"><span class="nav-label">Casey Geim</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
+  <div class="voyage-nav-bar"><a class="voyage-nav-link" href="bartholomew.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Bartholomew Grayson</span></a><a class="voyage-nav-center" href="index.html">Crew</a><a class="voyage-nav-link" href="casey.html"><span class="nav-label">Casey Geim</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
 
-  <div class="entry-header">
-    <div class="identity-card">
+  <div class="entry-header is-wiki">
+    <aside class="identity-card" aria-label="Boogie at a glance">
+      <div class="portrait-frame dossier-portrait" data-key="boogie"></div>
       <div class="stat-card">
-        <div class="stat-row"><span class="stat-key">Class</span><span class="stat-val stat-val-long">Plasmoid Divine Soul sorcerer</span></div>
-        <div class="stat-row"><span class="stat-key">Mechanic</span><span class="stat-val stat-val-long">The Pulse</span></div>
-        <div class="stat-row"><span class="stat-key">Where the rules live</span><span class="stat-val stat-val-long">Roleplay only &mdash; nothing to adjudicate yet</span></div>
-        <div class="stat-row"><span class="stat-key">Open</span><span class="stat-val stat-val-long">The milestone where accumulation starts costing him</span></div>
+        <div class="stat-row"><span class="stat-key">Kind</span><span class="stat-val stat-val-long">Player character</span></div>
+        <div class="stat-row"><span class="stat-key">Species</span><span class="stat-val stat-val-long">Plasmoid</span></div>
+        <div class="stat-row"><span class="stat-key">Class</span><span class="stat-val stat-val-long">Sorcerer, Divine Soul</span></div>
+        <div class="stat-row"><span class="stat-key">Station</span><span class="stat-val stat-val-long">Medic; named second in command, subject to a crew vote</span></div>
+        <div class="stat-row"><span class="stat-key">Origin</span><span class="stat-val stat-val-long">A drifter with no family and no lasting home</span></div>
+        <div class="stat-row"><span class="stat-key">Affiliation</span><span class="stat-val stat-val-long">Cadet, <a href="../factions/fleet.html#cadets">Caelestis Spelljammer Academy</a></span></div>
+        <div class="stat-row"><span class="stat-key">Carries</span><span class="stat-val stat-val-long"><a href="../artifacts/fonains-shard.html">Fonains shard</a>, in his nucleus; half a model ship and half of the <em><a href="../vessels/the-derelict.html">Derelict</a></em>'s logbook, in his chest; the Shield of Expression; a light hammer</span></div>
+        <div class="stat-row"><span class="stat-key">Where the rules live</span><span class="stat-val stat-val-long">Role-play only: <a href="#pulse">the Pulse</a></span></div>
+        <div class="stat-row"><span class="stat-key">First voyage</span><span class="stat-val stat-val-long">Voyage 1</span></div>
+        <div class="stat-row"><span class="stat-key">Player page</span><span class="stat-val stat-val-long"><a href="../../crew-manifest/boogie.html">Crew manifest</a></span></div>
       </div>
-    </div>
+    </aside>
+
     <div class="entry-info">
       <div class="entry-name">Boogie</div>
-      <div class="entry-sub">An urge to dance that the player invented, given a source afterward: a shard of the only Monolith ever destroyed.</div>
+      <div class="entry-sub">A plasmoid who keeps the ship alive, with a rhythm in his nucleus and things in his chest he cannot explain.</div>
+
+      <div class="pill-tabs" role="tablist" data-pill-group aria-label="Boogie sections">
+        <button class="pill-tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true">About</button>
+        <button class="pill-tab" role="tab" id="tab-arc" aria-controls="panel-arc" aria-selected="false">Arc</button>
+        <button class="pill-tab" role="tab" id="tab-mech" aria-controls="panel-mech" aria-selected="false">Mechanics</button>
+        <button class="pill-tab" role="tab" id="tab-dm" aria-controls="panel-dm" aria-selected="false">DM notes</button>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-about" aria-labelledby="tab-about">
+        <p>
+          Boogie is a plasmoid Divine Soul sorcerer, a drifter with no family or lasting home, and the crew's medic. A shard of the broken Fonains Monolith sits in his nucleus. It is the source of the Pulse, the inner rhythm that pulls him into dance, and it keeps what it takes: two half-objects now sit inside his chest. Tumak named him second in command, and the crew has yet to vote on it.
+        </p>
+
+        <h4>Appearance</h4>
+        <p>
+          A semi-transparent blue plasmoid with a glittering stone inside him. He carries the Shield of Expression, a gift from his friend Boom-chik so that a plasmoid could emote; its face shows what his own cannot, and it looked mild and content while he slept through his watch. When he dances, his signature move is the Blob Drop.
+        </p>
+
+        <h4>Personality</h4>
+        <p>
+          He instinctively helps and repairs rather than commands: he wants to keep the ship alive, not take the helm. He is calm in a dispute and generous with his own body, spreading his gel over the crew and building a friend a pair of legs out of himself. He commits to himself after a life of drifting, and the Pulse asks the same of him every time it comes. He sometimes says nothing when he should, as when Saerthe described a stolen model ship that matched the one inside him.
+        </p>
+
+        <h4>Biography</h4>
+        <h5>Background</h5>
+        <p>
+          Boogie drifted, with no family and no lasting home. As a child he survived a tribal sacrifice, and he has felt watched ever since. Before his first voyage with the crew he looked into a shipment he should have left alone: <a href="../factions/vocath-operation.html">Vocath's people</a> had chased Clint Dashforest to Fonains and come back through the Cairn Station line with fragments of the broken Monolith as ordinary cargo, and one of them ended up in him.
+        </p>
+        <h5>In the campaign</h5>
+        <ul>
+          <li><strong>Voyage 1.</strong> He rushed to help the wounded Tumak in the <em><a href="../vessels/moonraider.html">Moonraider</a></em> simulation, held a corner bunk calmly when Veena tried to take it, and charmed a light hammer from Mr. Blip. At the Nexus he took instantly to the helm exercise and said he wants to keep the ship alive, not take the helm. He used magic to help Gregory up the last climb of the gym course, shared his lonely drifting past with Tumak and promised the crew would help find Tumak's family, and helped Mirt through his hangover. Then he pulled a tiny, half-missing model spelljamming ship from his own chest.</li>
+          <li><strong>Voyage 2.</strong> He ordered only fruit and was given a silvery starfruit, set the half-ship on the table for the crew to see, spoke for the medical role and quietly insisted Gregory take the helm. When <a href="../dossiers/saerthe-abizjn.html">Saerthe</a> described his own stolen miniature ship, the same model, Boogie said nothing. He tended the bulwark through the storm and took the salvage logbook into his chest, then leapt onto the githyanki ship, saw he was overmatched, and threw himself back.</li>
+          <li><strong>Voyage 3.</strong> He helped the rival crew up in the wrecked simulation chamber, understood the recovered rod as a device built to feed on ambient magic and detonate, and caught the word &ldquo;Vocath&rdquo; between Saerthe and Tarto. He told Mirt of the tribal sacrifice and the sense of being watched. He dreamed of countless other versions of himself in an infinite dark and a presence converging on him, and woke half-dissolved before humming himself back together. The half-ship and the logbook were both still in his chest.</li>
+          <li><strong>Voyage 4.</strong> With Gregory he understood that Ostekk-6's damage was mechanical and past anything magic could mend.</li>
+          <li><strong>Voyage 5.</strong> He gave the legless <a href="../dossiers/ostekk-6.html">Ostekk-6</a> a pair of legs, a small, wrongly built replica of himself that carried him at the waist, and later filled them with a leaping charm and launched him across the Hollow Deck at the behir. He spread his gel over the crew and slowed their fall down the shaft, blessed Casey, Tumak and Bartholomew as the behir woke, and called the retreat when three clockwork horrors answered its screech. He missed the rope and fell, burning a gap through the flowers below with his faith, found the plane where the ship's gravity turns over and called the others down, and recognised the body on the Command Deck as a beholder whose central eye still cancels magic.</li>
+          <li><strong>Voyage 6.</strong> He slept through his watch, asked Ostekk-10 its name, cut down a side flower and pressed a potion on Tumak. Tumak named him second in command and put it to a crew vote.</li>
+        </ul>
+
+        <h4>Relationships</h4>
+        <h5><a href="tumak.html">Tumak Swan</a></h5>
+        <p>
+          The first person he told about his drifting past, and the first to tell him about a search for family. Boogie promised the crew would help, and Tumak named him second in command.
+        </p>
+        <h5><a href="sol.html">Sol Fortuna</a></h5>
+        <p>
+          Sol backed him in the bunk dispute without being asked, and the first misfortune Sol took onto himself was Boogie's.
+        </p>
+        <h5><a href="../dossiers/ostekk-6.html">Ostekk-6</a></h5>
+        <p>
+          Boogie built him legs out of himself and launched him at a behir.
+        </p>
+        <h5>Boom-chik</h5>
+        <p>
+          His friend, who gave him the Shield of Expression.
+        </p>
+
+        <h4>Abilities</h4>
+        <p>
+          A sorcerer of the divine soul: blessings, healing, a slowing charm and a leaping charm, and faith that burns. He takes to a helm by instinct. His gel can coat and carry others, and he can pull himself back together when his form comes apart. Things go into his chest and stay there. Like every carrier of paracausal matter he feels paracausal events nearby.
+        </p>
+
+        <h4>Notable items</h4>
+        <ul>
+          <li><strong><a href="../artifacts/fonains-shard.html">Fonains shard</a>.</strong> In his nucleus. When the Fonains Monolith broke, four great shards fell and many smaller shards came from them; three hundred and thirty-three of the small shards are black, and the rest took colours close to their elemental affinities.</li>
+          <li><strong>The half-ship.</strong> Half of a model spelljamming ship, Saerthe's stolen miniature, drawn from his chest in Voyage 1.</li>
+          <li><strong>The half-logbook.</strong> Half of the <em><a href="../vessels/the-derelict.html">Derelict</a></em>'s logbook, taken into his chest in Voyage 2.</li>
+          <li><strong>The Shield of Expression.</strong> Boom-chik's gift, so a plasmoid could emote.</li>
+          <li><strong>Light hammer.</strong> He charmed it from Mr. Blip in Voyage 1, thinking about repair over command.</li>
+        </ul>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-arc" aria-labelledby="tab-arc" hidden>
+        <h4 id="missing">What he is missing</h4>
+        <p>
+          Something to belong to. The row is on <a href="../campaign/index.html#boogie">Campaign &rarr; Crew</a>.
+        </p>
+
+        <h4 id="heads">Where it heads</h4>
+        <p>
+          Wherever the shard takes him, and it is reactive: what comes through the shard depends on what he does. His arc has no fixed reveal. Gates are planted where they fit and follow the player, and he may never learn the source. The shard escalates rather than repeats, and it is not revealed as a Monolith piece too soon.
+        </p>
+
+        <h4>Gates and escalation</h4>
+        <p>
+          Loosely ordered: passive archiving now; environmental oddities around him; an acolyte encounter; something coming back through the current; understanding what &ldquo;full&rdquo; means.
+        </p>
+        <ul>
+          <li><strong>Reaching for the archive.</strong> He will learn to reach for the archive deliberately. He can offer something during a Pulse; it goes in incomplete and comes back incomplete. The ceiling stays bounded because he is a damaged relay. The gate is his realising that what goes in is going somewhere.</li>
+          <li><strong>The prophet thread.</strong> The shard draws people to him as something holy, and a following may grow around him as a prophet-like figure built on a corrupted signal. It stays player-driven: available to pull on, never pushed.</li>
+          <li><strong>The Lantern.</strong> When the <a href="../artifacts/containment-engine.html">Lantern of Flourishing</a> heals him he briefly loses his form, and near it he feels out of step with his rhythm. The healing rules are on the Lantern's page.</li>
+        </ul>
+
+        <h4 id="next-beat">Next beat</h4>
+        <p>
+          The Lantern's pulse in Voyage 7, on <a href="../campaign/voyages/index.html#v007">Voyages &rarr; V007, Beats owed</a>. On the crossing, a named deckhand item is mentioned several times and then goes missing. Saerthe or Tarto raises it, Boogie learns something is in his chest, and the player decides what to do.
+        </p>
+
+        <h4>Table notes</h4>
+        <ul>
+          <li>The player invented the urge to dance as character texture, and it was given its source afterward. His own reading of himself is already the right emotional reading, which is why the arc needs no enforcement.</li>
+          <li>The corruption leaking in from the shard is a role-play beat, not a mechanic.</li>
+          <li>The healing he received at the end of Voyage 6 came from a potion used while piloting the absent player. It is not a Pulse seed.</li>
+        </ul>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-mech" aria-labelledby="tab-mech" hidden>
+        <h4 id="build">Build</h4>
+        <p>
+          Plasmoid sorcerer, Divine Soul from level 3. The record lists a light hammer and a shield; the shield is the Shield of Expression.
+        </p>
+
+        <h4 id="pulse">The Pulse</h4>
+        <p>
+          No dice touch the Pulse. Describe the sensation, a buzzing in the nucleus, a rhythmic pressure, and the player decides what Boogie does with it. Describing it is the only lever: it puts the timing in your hands and leaves the response his.
+        </p>
+        <div class="dm-table-scroll">
+        <table>
+          <thead><tr><th>He</th><th>Reads as</th><th>Direction</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Embraces it</strong></td><td>Dancing. Being Boogie.</td><td>The archive turns outward. He asserts himself, and the stored material stays stored.</td></tr>
+            <tr><td><strong>Suppresses it</strong></td><td>Shying from who he is in that moment. Being Booger again.</td><td>The archive turns inward. A small regression, and the accumulation gets a little easier.</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <h4 id="archive">The archive</h4>
+        <p>
+          Two archived objects are held inside him by the shard: the half-ship from Voyage 1 and the half-logbook from Voyage 2. The shard is what keeps them there. The logbook came from a simulation drawn on real records, so the rest of it exists somewhere in Caelestis, a dormant hook.
+        </p>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-dm" aria-labelledby="tab-dm" hidden>
+        <h4 id="hidden">What's hidden</h4>
+        <ul>
+          <li><strong>Tharizdun.</strong> The Fonains Monolith formed corrupted, and a corrupted Monolith is a tunnel to Tharizdun's prison, so what the shard takes goes toward Tharizdun. Tharizdun wants nothing specific from Boogie. She is not lucid; she is an opportunist. What happens through the shard depends on what Boogie does, and things may come back through the current. Now and then he feels corruption leaking into him from the shard.</li>
+          <li><strong>His power.</strong> Boogie's Divine Soul power comes from Tharizdun's influence through the shard. He does not know it.</li>
+          <li><strong>The dream.</strong> His Divine Soul woke in a dream. He looked into his nucleus and saw a fractal, pyramidal network of other Boogies, each with a differently shaped shard. A crack ran from him through it, his line connected upward wrongly, and at the apex sat an unnamed source that gives and consumes. This shard made this Boogie, and other shards exist. The dream ended: &ldquo;You wake. Your chest is heavier than it was when you closed your eyes.&rdquo;</li>
+          <li><strong>The logbook.</strong> Boogie holds half of the derelict logbook. The other half was in his chest inside the Monolith.</li>
+        </ul>
+
+        <h4>Threads</h4>
+        <ul>
+          <li>On Fonains, Giorge is searching for pieces of the broken Monolith. His path may cross Boogie's.</li>
+          <li>FR-022 is a different piece of the Fonains Monolith, recovered by the Order and routed to the Fleet. Boogie may find it and consume it.</li>
+          <li>The Lantern pulls toward wholeness and the shard's corruption pulls apart, which is why he is out of step with it.</li>
+          <li>Collecting the shards is never a goal.</li>
+        </ul>
+
+        <h4>Still to decide</h4>
+        <ul>
+          <li>Which deckhand item goes missing on the crossing is not set.</li>
+          <li>How the fragments reached Boogie in time is not set: the Monolith broke two to three months before the present, and how long Vocath's people stayed on Fonains is not fixed against that date.</li>
+        </ul>
+      </div>
     </div>
-  </div>
-
-  <div class="entry-body">
-
-
-      <p>
-        Plasmoid Divine Soul sorcerer. The player invented the urge to dance as character texture; it was given a source afterward. <strong>The urge is the Pulse, and the Pulse is the <a href="../artifacts/fonains-shard.html">Fonains shard</a> in his nucleus</strong> &mdash; a fragment of the only Monolith ever destroyed, Tharizdun-corrupted. He does not know that, and the arc works because his own reading of himself is already the correct emotional reading.
-      </p>
-
-      <div class="dm-callout">
-        <span class="dm-callout-label">No dice touch this</span>
-        The Pulse is adjudicated entirely as fiction. You describe the sensation &mdash; a buzzing in the nucleus, rhythmic pressure &mdash; and he decides what Boogie does with it. Describing it is the only lever you need, because it puts you in control of when the Pulse matters while leaving the response his.
-      </div>
-
-      <h3>The two answers</h3>
-      <table>
-        <thead><tr><th>He</th><th>Reads as</th><th>Direction</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Embraces it</strong></td><td>Dancing. Being Boogie.</td><td>The archive turns <em>outward.</em> He asserts himself and the stored material stays stored.</td></tr>
-          <tr><td><strong>Suppresses it</strong></td><td>Shying from who he is in that moment. Being Booger again.</td><td>The archive turns <em>inward.</em> A small regression, and the accumulation gets a little easier.</td></tr>
-        </tbody>
-      </table>
-
-      <p>
-        His player frames the whole character as finally committing to himself after a life of drifting, which is the same tension the Pulse encodes. That is why the mechanic needs no enforcement: <strong>he is already roleplaying it.</strong>
-      </p>
-
-      <h3>What he is carrying</h3>
-      <table>
-        <thead><tr><th>Object</th><th>From</th><th>Standing</th></tr></thead>
-        <tbody>
-          <tr><td><strong>The Fonains shard</strong></td><td>Before the campaign</td><td>Source of the Pulse. Quietly one of the most consequential objects in play &mdash; the proof that a point can be taken back <em>out</em> of a finished working. <a href="../artifacts/fonains-shard.html">Artifacts</a>.</td></tr>
-          <tr><td><strong>A half-ship</strong></td><td>Voyage 001</td><td>Drawn out of his own chest at the table. Landed as a private question mark and was deliberately left to breathe.</td></tr>
-          <tr><td><strong>A half-logbook</strong></td><td>A simulated wreck</td><td>Pulled from a simulation of a real wreck, which means the original is somewhere in Caelestis with pages missing. Dormant hook.</td></tr>
-        </tbody>
-      </table>
-
-      <div class="dm-callout">
-        <span class="dm-callout-label">He is becoming a container</span>
-        Three archived objects have accumulated inside one living body, and the shard is the reason they stay. The arc question is whether he remains himself as the volume grows &mdash; which is the personal-scale version of what a Monolith does, running inside a PC.
-      </div>
-
-      <p>
-        <strong>The Shield of Expression</strong> was a gift from Boom-chik so that a plasmoid could emote. It is narratively loaded and mechanically idle, and it is waiting for the scene where being read correctly is what matters.
-      </p>
-
-      <p>
-        <strong>V006:</strong> named second in command by Tumak, pending the crew's vote. He slept through his watch, asked Ostekk-10 its name, and cut down a side flower.
-      </p>
-
-      <p>
-        <strong>Open:</strong> the escalation milestone. Effects stay small early by design, and the point at which the accumulation starts costing him is undecided.
-      </p>
   </div>
 
   <div class="divider">&#10022; &#10022; &#10022;</div>
 
   <div class="xref-card">
     <div class="xref-head"><span class="xref-title">Connections</span></div>
-    <div class="xref-cols"><div class="xref-col">
-        <a class="chip chip-npc" href="../campaign/index.html#boogie">Arc shape</a>
-        <a class="chip chip-item" href="../artifacts/fonains-shard.html">Fonains's shard</a>
+    <div class="xref-cols">
+      <div class="xref-col">
+        <div class="xref-col-head">People and factions</div>
+        <a class="chip chip-npc" href="tumak.html">Tumak</a>
+        <a class="chip chip-npc" href="sol.html">Sol</a>
+        <a class="chip chip-npc" href="../dossiers/ostekk-6.html">Ostekk-6</a>
+        <a class="chip chip-npc" href="../dossiers/saerthe-abizjn.html">Saerthe Abizjn</a>
+        <a class="chip chip-npc" href="../factions/vocath-operation.html">Vocath's crew</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Places</div>
         <a class="chip chip-place" href="../realms/fonains.html">Fonains</a>
-    </div></div>
+        <a class="chip chip-place" href="../vessels/the-derelict.html">Derelict</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Items</div>
+        <a class="chip chip-item" href="../artifacts/fonains-shard.html">Fonains shard</a>
+        <a class="chip chip-item" href="../artifacts/containment-engine.html">Lantern of Flourishing</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Campaign</div>
+        <a class="chip chip-quest" href="../campaign/index.html#boogie">Campaign: Boogie</a>
+        <a class="chip chip-quest" href="../campaign/voyages/index.html#v007">Voyage 7</a>
+      </div>
+    </div>
   </div>
 
   <div class="dm-footer">
@@ -105,6 +236,5 @@
   </div>
 
 </main>
-
 </body>
 </html>

@@ -34,17 +34,17 @@ staging once Korey has read and accepted them.
 | Locations | locations/ (Fonains stays in its own section) | 21 | 22 | 0 | 0 | 1 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
-| Factions | factions/ | 3 | 9 | 2 | 0 | 3 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 15 | 1 | 1 | 0 | 0 |
+| Factions | factions/ | 3 | 9 | 1 | 0 | 2 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 0 |
 | Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
-| Crew | crew/ | 9 | 12 | 18 | 0 | 85 |
-| Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
+| Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
+| Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 4 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** |  | **96** | **123** | **95** | **4** | **167** |
+| **Total** |  | **98** | **130** | **78** | **4** | **81** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -130,6 +130,10 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - `data/sessions.json`, `quests.json` and `items.json` call Ostekk-6 an autognome; OSTEKK units are automatons.
 - DM dossiers with no record, though the crew may have met or been told of them: Polly Geim (Casey's brother), Clint Dashforest, Qitru, Quartermaster Halix Verrow, the Crystalline Retrieval Construct, Ezra Ahl-Sier. Each gets a record at first contact; check whether any contact has already happened (section 5).
 - `data/npcs.json` names Miken "Miken"; the DM dossier and the Fleet row use his full name, Miken Haverstance. Add the surname to the record if Korey agrees.
+- `data/player-characters.json` (Sol Fortuna, Voyage 4) says he "used Misfortune's Favor to draw ill luck onto his own shoulders". Misfortune's Favored is the oath's level-20 capstone and was earlier the working name of his Misfortuned feature; the Voyage 4 use reads as a self-Jinx or a Misfortuned use. crew/sol.html leaves the feature unnamed. Confirm the name and correct the line if Korey agrees.
+- `data/player-characters.json` (Casey Geim) lists the star-etched constellation shirt under Notable Items, but `data/items.json` and Tumak's record have Tumak holding it (Casey passed it to Tumak's bunk in Voyage 1). crew/casey.html and crew/tumak.html follow items.json. Drop it from Casey's Notable Items if Korey agrees.
+- `data/player-characters.json` gives all six cadets "Clearance: Sailor", and Tumak's Voyage 3 bullet has Mirt granting the crew sailor-level clearance; the BACKLOG decide "The Sailor gate at the Sea Dock" (crew/gregory.html) holds that a cadet inherits only Visitor and that part of the Sea Dock needs Sailor. Gregory's Voyage 3 bullet (locked out of a fleet-clearance category by his cadet star) sits between them. Reconcile once the decide is ruled.
+- `data/player-characters.json` (Boogie) lists "shield"; the DM page names it the Shield of Expression, a gift from Boom-chik, and it has no item record in `data/items.json`. Add the name or an item record if Korey agrees.
 - `data/npcs.json` (Winston Ryeback, Voyage 6) says he "was told the beholder had been taken care of, and took it to mean the crew had killed it"; the ruling is that Tumak told him outright that the crew killed it (dossiers/winston-ryeback.html).
 
 ## Still coming in
@@ -147,7 +151,7 @@ Order under each page: decide, fix, drop, add.
 - **[fix]** Tharizdun is she
   Tharizdun is female. Pages and drafts that call her he/his/him: cosmology/index.html, realms/fonains.html, realms/index.html, dossiers/thessalar.html, crew/boogie.html, artifacts/fonains-shard.html, factions/academy-fleet.html, chart/index.html, working/tharizdun.md, and the Fonains Canon Reference doc. STAGING and the Connections layer are done.
   src: Korey, 2026-10-27
-  done: cosmology and glossary (distribution section 1, 2026-10-27); factions (section 2); dossiers/thessalar.html (section 5).
+  done: cosmology and glossary (distribution section 1, 2026-10-27); factions (section 2); dossiers/thessalar.html (section 5); crew/boogie.html (section 7).
 
 - **[fix]** Dharra, not Darra
   The Cre'Tez sister is Dharra. Fix the Fonains Canon Reference doc and any page that spells it Darra. STAGING and the Connections layer are done.
@@ -161,7 +165,7 @@ Order under each page: decide, fix, drop, add.
   Ruled (STAGING, Cosmology § The Axioms): the Axioms are Consolidation, Expansion, Dissolution, Distinction and Determination, acting on energy that was always there. The old four map: Convergence → Consolidation (the Rod of Seven Parts is the Consolidation fragment, 7 pieces); Dissolution stays Dissolution, now the mixing of everything into sameness (the twins' fragment, 2); Boundary → Distinction (A.T.L.A.S., its sister and the third piece, 3); Transformation → Expansion (the 5-piece fragment). Determination's fragment is new: 11 pieces, none found. A Zenith is a world at its peak of Distinction, not "Convergence driving a system to maximum expression"; Monoliths are Continuity's response, and the strain from their rise is a byproduct of Vecna's work, not a weight on one Axiom. The Transformation–Boundary seam is cut. Every backlog item that quotes an old Axiom name reads under this mapping.
   Pages: prime/cosmology (the Four Axioms, Continuity, the strain, the seam section to cut), prime/glossary, prime/chart, prime/artifacts/* (index, rod-of-seven-parts, runekeepers-fragment, transformation-fragment → expansion-fragment, containment-engine, fonains-shard), prime/campaign/* (index, ascension, spine, plot-hooks, what-if), prime/crew/index.html and tumak.html, prime/dossiers/nghathrod.html and the-runekeeper.html, prime/factions/* (academy-fleet, deities, runekeepers, vthorama), prime/realms/index.html and wayfinders-homeworld.html (concealment rides on the Dissolution fragment's cycle), prime/rules/index.html, timeline.json, working/vecna.md. Done with the distribution pass. STAGING, the survey and the Connections layer already use the five.
   src: Korey, 2026-10-26
-  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); opposition/vecna.html (pilot); prime/factions (section 2); prime/locations (section 3).
+  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); opposition/vecna.html (pilot); prime/factions (section 2); prime/locations (section 3); prime/crew/tumak.html (section 7).
 
 - **[later]** Place GAL-01's inscription on the chart
   Ruled: GAL-01's inscription is the eye he lost, fifteen heart worlds (ten lids, five iris; Korey 2026-10-27, from sixteen, so the count is a multiple of five); the iris worlds are key (STAGING, Campaign; diagram 2026-10-26). Left for when play needs it: which systems hold which strokes, and whether any known system (Realmspace, Krynnspace, Virenspace) lies on the figure. Greyspace is not on it: Oerth is the retina every eye world links back to (STAGING, Campaign).
@@ -589,7 +593,7 @@ Order under each heading: decide, fix, drop, add.
   src: memory-canon (open-decisions, Locked 2026-10-25); tharizdun § How the Fonains Monolith formed
 
 - **[add]** The Day of Chaos
-  "The Day of Chaos is the day the four Princes of Elemental Evil enter Fonains together and break the barriers between the planes, so Tharizdun can leave his prison. It is still ahead of Fonains's present."
+  "The Day of Chaos is the day the four Princes of Elemental Evil enter Fonains together and break the barriers between the planes, so Tharizdun can leave her prison. It is still ahead of Fonains's present."
   src: session-rulings; tharizdun § The Day of Chaos
 
 - **[add]** Thessalar's planar craft
@@ -769,6 +773,7 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
   Ruled (STAGING round 8). The figure "about 333,333 shards" is retired. Word Timeline S14–S15 and every page that carries the count (artifacts/fonains-shard.html, crew/boogie.html) to match:
   "When the Monolith broke, four great shards fell, each guarded by a Prince-aligned elemental, and many smaller shards came from them. Three hundred and thirty-three of the small shards are black. The rest took colors close to their elemental affinities."
   src: Korey, 2026-10-25 (round 8); timeline.json
+  done: artifacts/fonains-shard.html (section 4); crew/boogie.html (section 7). Timeline S14–S15 still needs it.
 
 - **[fix]** Fonains's present is level with Caelestis
   The clock "Fonains now (S28)" sits at t -0.43 against "Caelestis now" at 0, and the Lola's Boys band ends at -0.43. Shift the Fonains lane so Session 28 sits at about 0. Keep the Monolith break two to three months before it (today the break is at -0.64, which is about 0.21 before S28, so the spacing already holds).
@@ -897,22 +902,9 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   The Fleet lost a force at Glyth during the last approach window (see add). Its name and its commander are unnamed.
   src: chat-cosmic-campaign-structure § Cosmos texture, § Open
 
-- **[fix]** Gregory's origin wording *(answered)*
-  Replace the Seam wording ("Transformation and Boundary overlapped where he stood") on Gregory's row with: "Gregory was woken by the strain on an Axiom. Over the past century Monoliths have formed more often, and the strain that puts on an Axiom ripples outward through the planes and the cosmos, slow and more metaphysical than physical. Gregory's awakening is one result; the Latchling and other oddities are others. The same ripple woke Astra Virex." Carry the same cause to crew/gregory.html and dossiers/astra-virex.html (Astra Virex's wound: the ripple caused collisions between celestial bodies and part of the entity broke off).
-  answered: STAGING § The Axiom strain
-  Prior note: the page calls Gregory a Seam-product ("Transformation and Boundary overlapped where he stood"). Memory canon calls his arc "a Continuity (existence) ripple event" and him a paracausal Reach item like the Lantern. Decide together with Astra Virex's wound (under factions/deities.html). Options: keep the Seam wording, or revert to "Continuity ripple".
-  Why it is still open: Claude declared the three Seam-products "locked" in the cosmic-structure chat and wrote them into the repo; Korey answered "What's next" without confirming. Memory canon, updated later, still holds both Gregory's origin wording and Astra's wound as open. The two readings can also stack (a Seam woke him; that makes him paracausal), so a third option is: keep the Seam as the cause and call him paracausal, dropping "Reach item".
-  src: memory-canon campaign-canon § Gregory, § Antagonists (Lantern line); chat-cosmic-campaign-structure § Cosmology redesign
-  done: factions/fleet.html (section 2, from cosmology § Axiom strain) and dossiers/astra-virex.html (section 5); crew/gregory.html still needs it.
-
 ---
 
 ### factions/order.html
-
-- **[add]** The Sol extraction
-  Add under Watchers: "A Watcher extracted Sol Fortuna from Aethris, against the Order's remit to preserve worlds, not individuals." (Add a matching line on crew/sol.html.)
-  done: factions/order.html (pilot, What's hidden); crew/sol.html still needs its line.
-  src: chat-early-planning § FIA lore content
 
 - **[add]** The Watcher who came back from Glyth
   Add a named-but-unseen row: "A Watcher posted to a region of Glyth got out after years inside the elder brain's range. She still hears it." (Eris Morn pattern.)
@@ -1020,6 +1012,10 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ---
 
+- **[decide]** Which arc reaches the cosmology first
+  Every crew arc was built to touch the cosmology without being about it. Whichever arrives first (Tumak's homecoming and its Zenith, Casey's tethers, Gregory's anomalies, Boogie's shard, Bartholomew's constellation, Sol's Aethris) will reframe the other five for the players in a single session. Choose the first, or let play choose. Moved from the retired Open table on crew/index.html. Touches campaign/index.html (#crew, the arcs) and the crew pages' Arc tabs.
+  src: crew/index.html (retired § Open); section 7 (2026-10-28)
+
 ### opposition/vthorama.html
 
 - **[decide]** What the surface attack at graduation is made of *(prep)*
@@ -1033,6 +1029,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 - **[decide]** Casey's V007 beat *(prep)*
   Options: a Vaelorix chart in Research showing the sky from inside Mirt's wardrobe beside a collecting site past the waystation; or something else. It must give Casey's cooling thread a small nudge back.
+  Merged with the crew decide "Casey's beat for the crossing": the beat is a small nudge from the voice toward something, not a vision (the missed level 3 scene is dropped, STAGING round 10).
   src: chat-voyage-6-7-planning § Open; memory-canon open-decisions (Voyage 007 intent)
 
 - **[decide]** Sol's misfortune piece *(prep)*
@@ -1057,6 +1054,10 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   Options: yes; or no, and the suspicion stays as misdirection from Joffrey.
   Touches: campaign/voyages/index.html, dossiers/miken.html.
   src: chat-voyage-6-7-planning § Open
+
+- **[fix]** V006: Tumak told Ryeback outright
+  V006 Actual says Ryeback "took 'the beholder was taken care of' to mean they killed it". The ruling on dossiers/winston-ryeback.html, now carried on crew/tumak.html, is that Tumak told him outright that the crew had killed it. Reword the V006 line to match. (The record's matching line is already a Player record flag.)
+  src: section 7 (2026-10-28); dossiers/winston-ryeback.html
 
 ---
 
@@ -1304,40 +1305,21 @@ Items whose source sweep is still partial keep their `(sampled)` or
 ### crew/index.html
 
 - **[later]** Where each PC's homeworld sits
-  Placed already: Gregory, W-01 Toril in SYS-01 Realmspace (working decision, see crew/gregory.html). Sol, W-08 Aethris in SYS-03, mid-Zenith. Tumak, the Wayfinders' unnamed homeworld (W-11) in hidden SYS-06 inside SPH-01, concealed by the Dissolution cycle; Lunarfoot is the clan, never the world. Write these three onto crew/index.html.
-  Left: Casey's is the world the 1486 "deliberate" meteor fell on; its system is withheld until surveyed. Bartholomew's comes from a celestial druid tradition and the FIA has no hint of it yet. Boogie's is unplaced.
-  Options for each of the three: place it now, or leave it unplaced until play needs it. Touches crew/index.html, each crew page, realms/index.html.
+  Placed and written on crew/index.html § The crew together (section 7): Gregory, Toril in Realmspace; Sol, Aethris (CSC 56973 b), mid-Zenith; Tumak, the Wayfinders' unnamed homeworld in a hidden system of the Erevos Galaxy, concealed by the Dissolution cycle (Lunarfoot is the clan, never the world).
+  Left: Casey's is the world the 1486 "deliberate" meteor fell on; its system is withheld until surveyed. Bartholomew's comes from a celestial druid tradition and the FIA has no hint of it yet. Boogie's is unplaced. For each: place it now, or leave it unplaced until play needs it. Touches crew/index.html, each crew page, locations/index.html.
   src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Gregory)
-  answered (Gregory, Sol, Tumak): inbox/chat-organizing-framework.md § Designations (SYS-03 Aethris's system, SYS-06 hidden, W-01 Toril, W-08 Aethris, W-11); memory-canon campaign-canon § Cosmology (Lunarfoot line), § Gregory; inbox/chat-cosmic-campaign-structure.md § Rules and crew (Lunarfoot is the clan)
 
 - **[later]** How cadets from worlds without spelljamming reach Caelestis
   The one route Korey has stated is Sol's: the Watcher order broke protocol to recommend he be taken to Caelestis. The FIA already hints at a route for each PC, with no dedicated intake file (Korey chose scattered hints over one file): WM-006 field referral and protective placement (Sol); SA-002 1486 meteor account by a minor referred to intake (Casey); FR-016 inspecting party reassigned to cadet intake (Boogie); SA-002 1491 two arrivals from an uncatalogued system (Wan and Tu). Gregory arrived on a cargo ship. Bartholomew has no hint.
   Left: whether there is a general rule. Options: Watcher referral as the general route; several routes (Watcher referral, Fleet recruiters, walk-ins at stations); or a per-cadet answer with no general rule, as the FIA hints already read. Touches crew/index.html, crew/sol.html, and a new Cadet intake page (see the New pages section).
   src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Watcher recruitment for Sol); BCS § Sol/C.R.C. and the scry beats; framework § FIA records (intake hints), § Superseded (no PF-004 intake file); memory-canon campaign-canon § Gregory (cargo ship)
 
-- **[add]** Each PC's tie to the sky
-  Each crew member relates to the stars differently. Casey connects stars into his own constellation for Astra Virex. Bartholomew fills in a constellation the Circle of Stars already knows. Tumak builds a planetary network of marks to find his way home. Gregory senses paracausal signals. Sol has no star thread. Boogie carries a Tharizdun-tied shard. Add as a crew overview line.
-  src: chat-voyage-6-7-planning § PCs and the stars
-
 ### crew/sol.html
 
-- **[add]** "Am I a person or a function?" (DM)
-  The retired spine gave Sol's arc a thematic question, "Am I a person or a function?", and framed him as living proof of what other worlds are aimed toward. Decide whether it stands beside the theme (what Sol is missing is a decide under campaign/index.html), then write it on the crew page.
-  src: campaign/spine.html (retired, campaign section, conflict C16)
-
-- **[add]** Beshaba's reward is power
-  Ruled (STAGING round 8). Add to this page and dossiers/beshaba.html (DM voice): "Beshaba's reward for the oath is power. To give it shape she has to want something and lay that want on Sol as a quest."
-  The acknowledgment scene ran as planned: the level-3 oath landed before V003's Convening (campaign/voyages/index.html, V003 Actual: "All four level-3 vignettes landed, for Tumak, Sol, Boogie and Gregory").
-  src: Korey, 2026-10-25 (round 8); BCS § Sol/Acknowledgment scene
-  done: dossiers/beshaba.html (section 5); crew/sol.html still needs it.
-
-- **[add]** Beshaba did not arrange Sol's escape
-  Ruled (STAGING round 8). Add to DM notes here and on dossiers/beshaba.html: "Beshaba did not arrange Sol's escape from Aethris."
-  src: Korey, 2026-10-25 (round 8); BCS § Sol/Open
-  done: dossiers/beshaba.html (section 5); crew/sol.html still needs it.
+- *(The question "Am I a person or a function?" from the retired spine waits on the decide "What Gregory and Sol are missing" under campaign/index.html; crew/sol.html carries it as a Still to decide sentence.)*
 
 - **[later]** Misfortuned rebalance (on hold)
-  Korey does not recall this thread; it waits until he returns to it. Until then the locked turn-757 text (the add below) stands. For reference, he paused it at turn 899 ("hold that and I'll come back to it"). His diagnosis then: Sol can change several rolls a combat and Unburden without feeling the cost. The pending draft:
+  Korey does not recall this thread; it waits until he returns to it. Until then the locked turn-757 text on crew/sol.html § Misfortuned stands. For reference, he paused it at turn 899 ("hold that and I'll come back to it"). His diagnosis then: Sol can change several rolls a combat and Unburden without feeling the cost. The pending draft:
   - Burden charges equal his proficiency bonus and come back on a long rest only.
   - Burden adds his Charisma modifier to an ally's roll, after the roll and before the outcome. It no longer turns a failure into a success (Korey compared auto-success to Legendary Resistance).
   - Misfortune level equals Burden charges spent. Each level is a flat −1 to all of Sol's d20 Tests, replacing the d6 ability penalty.
@@ -1345,121 +1327,15 @@ Items whose source sweep is still partial keep their `(sampled)` or
   Exhaustion as the cost was tried and dropped. Sol cannot Burden himself.
   src: BCS § Sol/Open, § Sol/Misfortuned; Korey, 2026-10-25 (backlog pass)
 
-- **[fix]** The C.R.C. is CR 7
-  Page says "CR 8, on an advanced detention drone chassis"; change to "CR 7, on an advanced detention drone chassis". Add Legendary Resistance (2/Day) and the Withdrawal Threshold to the trait list. This matches dossiers/crc.html, statblocks/index.html and the canon block (Medium, CR 7, AC 17, 136 HP, Withdrawal Threshold at 68 HP). The chat's stat block (Large, CR 8, AC 18, 152 HP) is the earlier draft; the dossier is the later version.
-  src: memory-canon § Antagonists (CRC stat block); dossiers/crc.html; BCS § Sol/C.R.C. and the scry beats
+- **[later]** The gloss for the tenet Court Adversity
+  crew/sol.html names the tenets Never Yield, Court Adversity and Risk Is Not Ruin, with glosses for the first and third only. Court Adversity's gloss is in oath-of-misfortune.md in the Sol chat outputs, which is not in the repo. Bring it in and add it to the oath on crew/sol.html.
+  src: section 7 (2026-10-28); inbox/chat-crew-boogie-casey-sol.md § Sol/Oath of Misfortune
 
-- **[fix]** Tenet: Court Adversity
-  Page says "Trial by Fire &mdash; a life without adversity is a life unlived". The tenet is now Court Adversity (Korey, turn 737). Rename it, and take its gloss from oath-of-misfortune.md in the chat outputs. The tenets read Never Yield, Court Adversity, Risk Is Not Ruin.
-  src: BCS § Sol/Oath of Misfortune
-
-- **[fix]** Jinx charges and duration
-  Page says "Charges equal his Charisma modifier, minimum one". Change to "Charges equal 1 + his Charisma modifier, minimum two, all regained on a long rest" (Korey, turn 720). Also: each Jinx option is usable once per turn, and the self-Jinx's shifted thresholds last until the start of his next turn; the page gives neither.
-  src: BCS § Sol/Oath of Misfortune
-
-- **[fix]** Misfortune's Wake is a bonus action
-  Page says "Misfortune's Wake &mdash; a magic action spreading Jinxed". Change to: "Misfortune's Wake &mdash; a bonus action, no Jinx charge. Choose a creature within 30 feet and an ability; it and any others of his choice within 15 feet of it have Disadvantage on d20 Tests with that ability until the start of his next turn. No damage, no save."
-  src: BCS § Sol/Oath of Misfortune
-
-- **[add]** Lucky feat and sheet
-  Sol has the Lucky feat. At the oath his sheet runs CON +4 and CHA +4 (CHA 18).
-  src: BCS § Sol/Identity
-
-- **[add]** Table notes
-  - Sol's player chose Beshaba and wants to lean into her.
-  - He likes complex mechanics; keep them from bogging down the table.
-  - The table struggles with ambiguity, so Augury-style vague answers are out.
-  - The party has no cleric; the oath spells were weighed against that.
-  - Keep small daily misfortunes in play around him (chores landing on him, things falling). The player wants this.
-  - Present something and let him respond; never dictate what he feels or does.
-  src: BCS § Sol/Identity, § Sol/H'Catha transit, § Sol/Acknowledgment scene
-
-- **[add]** Black lightning in V002
-  Add to his arc: "In V002 Sol took Boogie's misfortune onto himself. Black lightning broke from him, and he heard Beshaba laugh for the first time."
-  src: BCS § Sol/Identity
-
-- **[add]** Misfortuned (core rule)
-  New section, listed under "Where the rules live". Misfortuned is Sol's own permanent character feature because he is Misfortuned; the points it tracks are called Misfortune. It is separate from the oath and persists even if he breaks the oath. The personal burden lives here so the oath stays pure upside, like the official oaths. The arc runs Misfortuned → Oath of Misfortune → Misfortune's Favored (the capstone).
-  Locked text (turn 757):
-  - Misfortune caps at his proficiency bonus.
-  - Each point is −1 to one ability modifier, chosen by d6 (1 Str, 2 Dex, 3 Con, 4 Int, 5 Wis, 6 Cha). The penalty carries through to spell save DC and spell attack. Penalties stack. All Misfortune clears on Unburden or at level-up.
-  - **Burden** (reaction): when a friendly creature within 60 ft. fails a roll, after the die is shown and before the outcome is declared, the roll becomes a success and Sol gains 1 Misfortune.
-  - **Unburden** (reaction): at cap, Sol applies plus or minus his total Misfortune to any creature's roll within 60 ft., and all Misfortune clears. A natural 20 stays a critical hit.
-  - Burden and Unburden share his reaction, so only one happens per round.
-  At levels 1–2, before the oath, it ran without a cap or Unburden: penalties persisted until level-up, and the player did not know when they would clear. A rebalance is on hold (later above).
-  src: BCS § Sol/Misfortuned, § Sol/Pre-oath Fortune mechanic
-
-- **[add]** How the player tracks Misfortune
-  The player tracks each point as an item on D&D Beyond named "Misfortune (STR)", "Misfortune (DEX)" and so on, and clears them before processing a level-up. The D&D Beyond text uses plain words (no arrows, dashes or equals signs) and a two-column d6 table.
-  src: BCS § Sol/Misfortuned, § Sol/Pre-oath Fortune mechanic
-
-- **[add]** Beshaba's test (add to "Beshaba's voice")
-  The pre-oath interventions were Beshaba testing Sol. First comes distant laughter only he hears. After two or three interventions she asks: "How long will you bear it?"
-  At the oath scene a full commitment quietly clears his penalties. A hedged answer earns one word: "Finally."
-  src: BCS § Sol/Beshaba's test
-
-- **[add]** Misfortune's Pall (L7)
-  The page names the feature only. Add: "He and allies in his Aura of Protection have Advantage on death saving throws and regain 1 hit point on a 19 or 20. They also have Advantage on saving throws against any effect from a cursed creature, wherever that creature is."
-  src: BCS § Sol/Oath of Misfortune
-
-- **[add]** Misfortune's Reckoning (L15) damage and line
-  Add the Inevitable Strike figure: once per turn, a critical hit on a cursed creature adds psychic damage equal to twice his paladin level. Korey kept the once-per-turn cap rather than add a crit-fail cost. Flavor line: "You no longer endure misfortune. You direct it."
-  src: BCS § Sol/Oath of Misfortune
-
-- **[add]** Misfortune's Favored (L20)
-  The page says "The capstone." only. Add: a bonus action, lasting 10 minutes, once per long rest or by spending a 5th-level slot. Two halves:
-  - **Misfortune.** Any creature that enters the aura or starts its turn there takes necrotic damage equal to his Charisma modifier. Hostile creatures in the aura cannot score critical hits.
-  - **Favor.** Sol is exempt from the damage. Allies in the aura score critical hits on 19–20 and have Advantage on attacks against cursed creatures. His Jinx may pick two abilities.
-  The damage hits allies too: "misfortune does not care who the target is" (Korey; Cloak of Flies is the precedent). Allies trade the damage for the Favor. This settles the old question of whether the capstone can target Sol himself.
-  src: BCS § Sol/Oath of Misfortune; framework § Open
-
-- **[add]** Oath design notes (DM voice)
-  - Subclass features deal necrotic and psychic; Divine Smite stays radiant, as the base class.
-  - He is a bruiser with no defensive level-15 feature; defense comes from the base class and the oath spells. Korey: "Ill Omen isn't about changing what happened but instead about mitigating it entirely or rolling with it."
-  - Oath spells may come from any class list (Ancients, Vengeance and Glory set the precedent).
-  src: BCS § Sol/Oath of Misfortune
-
-- **[add]** Scry 2 timing
-  Scry 2 comes just before the crew leaves H'Catha to return to Caelestis.
-  src: BCS § Sol/C.R.C. and the scry beats
-
-- **[add]** The C.R.C. at the main entrance
-  When the crew returns, the C.R.C. is waiting at the Caelestis main entrance. The crew hears murmurs first, then: "Sol Fortuna. You are required." The encounter is an objective-based escape, not a kill. Also stage this on dossiers/crc.html, where the location is a decide.
-  src: BCS § Sol/C.R.C. and the scry beats; memory-canon § Antagonists (first CRC encounter on Caelestis)
-  done: dossiers/crc.html (section 5); crew/sol.html still needs it.
-
-- **[add]** Tarto stands up for Sol
-  When the C.R.C. arrives, Boatswain Tarto stands up for Sol: he is under the academy's protection. Also add to dossiers/boatswain-tarto.html.
-  src: BCS § Sol/C.R.C. and the scry beats
-  done: dossiers/boatswain-tarto.html (section 5); crew/sol.html still needs it.
-
-- **[add]** How Sol reached Caelestis
-  The Watcher order broke protocol to recommend that Sol be taken to Caelestis.
-  src: BCS § Sol/C.R.C. and the scry beats; memory-canon (open-decisions, how cadets reached Caelestis)
-
-- **[add]** Who knows Sol's background
-  Mirt, Tarto and Saerthe know Sol's background and keep it to themselves.
-  src: BCS § Sol/C.R.C. and the scry beats
-  done: dossiers/mirt.html, boatswain-tarto.html and saerthe-abizjn.html (section 5); crew/sol.html still needs it.
+- **[later]** Sol's sheet
+  His current level and D&D Beyond URL, and whether the sheet's oath spells and Charisma 18 match crew/sol.html Mechanics › Build.
+  src: section 7 (2026-10-28)
 
 ### crew/casey.html
-
-- **[fix]** "Hearer" becomes "Starchild"
-  Astra's warlocks are Starchildren. Replace "hearer" with "Starchild" throughout this page and on `dossiers/astra-virex.html`. Casey's power works through sight; the only voice he hears is Polly's.
-  src: inbox/chat-crew-boogie-casey-sol.md § Casey (turns 101–107)
-  done: dossiers/astra-virex.html (section 5); crew/casey.html still needs it.
-
-- **[add]** Overlapping Starchildren
-  Where several Starchildren gather at one celestial body, Astra holds more tethers there and the change around them speeds up.
-  src: inbox/chat-crew-boogie-casey-sol.md § Casey
-
-- **[add]** The voice is Astra Virex, and it clears with each tether
-  Ruled (STAGING round 8). The page stands: Polly's voice comes through cleaner after each tether. The rare-event suggestion is dropped. Add (DM-only): "The voice Casey hears as Polly is Astra Virex wearing Polly's shape. It grows clearer with each tether."
-  src: Korey, 2026-10-25 (round 8); inbox/chat-crew-boogie-casey-sol.md § Casey
-
-- **[add]** Viren threads on the crossing to H'Catha (DM voice)
-  The two-week crossing to H'Catha is where Viren information gets scattered: rumours and small clues placed in the world for the crew to notice or ignore, not every one a mystical pull or Polly speaking. A list of about sixteen candidate rumours exists in the Casey chat; none is chosen yet.
-  src: inbox/chat-crew-boogie-casey-sol.md § Casey
 
 - **[later]** What the first tether at Viren is
   Options: a dying stellar entity; a Zerathis-connected place or person; stellar-touched inhabitants; a rift onto a missing constellation.
@@ -1470,23 +1346,10 @@ Items whose source sweep is still partial keep their `(sampled)` or
   src: BCS § Casey/Tethering, Open
 
 - **[later]** The other Starchild
-  A living Starchild like Casey will appear (see the add below). Set their shape: further along than Casey, earlier, diverged, or opposing. Set where they are headed.
+  A living Starchild like Casey will appear as pressure, rival or partner, modelled on Avantika (crew/casey.html, Arc; merged from the add "A living hearer"). Set their shape: further along than Casey, earlier, diverged, or opposing. Set where they are headed.
   src: BCS § Casey/Open
 
-- **[decide]** Casey's beat for the crossing to H'Catha *(prep)*
-  Ruled: the missed level 3 scene is dropped, and visions are used sparingly (STAGING round 10). Set Casey's beat for the crossing: a small nudge from the Polly voice toward something, not a vision.
-  src: Korey, 2026-10-25 (round 10)
-
-- **[add]** What Casey wants beyond Polly
-  Ruled (STAGING round 8). Add (DM voice): "Casey is the younger brother who does not know his full identity. He finds it in having an older brother, which is why he clings to Tumak." This replaces the offered "to be chosen the way Polly was chosen", and sits beside his flaw (he relies too heavily on others).
-  src: Korey, 2026-10-25 (round 8); BCS § Casey/Open
-
-- **[add]** How the Toll shows in play *(answered)*
-  The Toll is what Astra takes at each constellation point: the tethered region's paracausal drift, step 2 of "The loop" on this page. It is never named at the table, and the DM tracks it as a hidden meter. Add (DM voice):
-  "The Toll shows only as change at the level of nature, never as a magic effect. A river reflects another sky. The wind holds one direction. Children born there recognise each other. A single tether stays below anyone's notice for a long time; an overlap site does not. The first changed region anyone notices is Virenspace, already tethered by Zerathis. After Casey's first deliberate tether there, something he cared about at Viren is different: not destroyed, changed in its nature, and the change makes it more his."
-  The V005–V006 window is retired.
-  answered: crew/casey.html (The loop, step 2: "Nobody, for a long time"; § Overlap: "A single tether sits below his threshold; an overlap site does not"; "Virenspace is point one and it is already occupied"); inbox/chat-crew-boogie-casey-sol.md § Casey/Point design guardrails (the Toll, never named at the table), § Tethering (nature-level change); Casey chat f7712be1 (the first deliberate tether at Viren; Korey: "right direction")
-  src: BCS § Casey/Open
+- *(Casey's beat for the crossing is one item with Casey's V007 beat, under campaign/voyages/index.html. Ruled already: the missed level 3 scene is dropped and visions are used sparingly; crew/casey.html carries both.)*
 
 - **[later]** The Lantern Node alignment: its bonus, and its name
   Set the bonus. Decide whether to rename it, since "Lantern" collides with the Lantern of Flourishing.
@@ -1500,177 +1363,27 @@ Items whose source sweep is still partial keep their `(sampled)` or
   Page lists it as open. Options: yes (and whether the other Starchild is one), or Casey is the only one.
   src: framework § Open
 
-- **[fix]** First tether point: Virenspace
-  The stat row says "Open: What his first tether point is", while the body already says "Virenspace is point one". Replace the row with "First tether: Virenspace, already partly modified by Zerathis." The open question of what happens at Viren stays in the backlog, not on the page.
-  src: memory-canon § Casey Geim; framework § NPCs and PCs
-
-- **[fix]** The voice at the wardrobe was in Polly's register
-  Astra Virex reached Casey at the wardrobe in Polly's voice; Polly himself is a missing person. Page says "why Polly could reach him there"; change to "why the voice in Polly's register could reach him there". The same line on dossiers/zerathis.html needs the same change.
-  src: memory-canon § Casey Geim (Polly correction)
-  done: dossiers/zerathis.html (section 5); crew/casey.html still needs it.
-
-- **[fix]** "Where the rules live" points at the wrong place
-  The header says "Where the rules live: This page", but the page holds none of the rule text. Stellar Reading's player text lives on `crew-manifest/casey-geim.html` and the chart on `stellar-chart/`. Point the row there, and add the DM summary below.
-  src: BCS § Casey/Stellar Reading, Stellar chart
-
-- **[add]** Stellar Reading (DM summary)
-  Bonus action, costs 1 star. Target: a creature Casey can see and has not yet spoken with. His stars appear over the target, visible only to him. A correct sign gives advantage on Charisma checks against that creature for 1 minute; a wrong sign gives disadvantage. The window closes once the encounter begins. No retries.
-  src: BCS § Casey/Stellar Reading; memory-canon § Casey Geim
-
-- **[add]** Keeper's guidance for Stellar Reading
-  Reveal NPC signs sparingly. Vary sign distribution so archetypes do not give signs away. Leave wrong guesses unconfirmed outside the fiction. No retries.
-  src: BCS § Casey/Stellar Reading
-
-- **[add]** Stellar Reading odds
-  With full chart knowledge, Stellar Reading hits about 50% at 3 stars, 83% at 4, 92% at 5 and 100% at 7. Full chart access is intended; the number of stars over the target is the throttle.
-  src: BCS § Casey/Stellar Reading
-
-- **[add]** The chart's structure
-  The chart is a 10-node grid; each sign is an 8-node constellation. The star cap equals Casey's current star count (3 now, maximum 7). One node is always hidden.
-  src: BCS § Casey/Stellar chart
-
-- **[add]** Keeper's chart notes: ambiguity at 3 stars
-  At 3 stars: {1,2,7} fits Aries, Leo and Taurus; {3,6,8} fits Capricorn, Virgo and Gemini; {4,6,9} fits Cancer and Scorpio; {3,5,10} fits Aquarius and Pisces. Libra {1,7,9} and Sagittarius {1,8,10} are unique. Aries and Leo resolve only at 7 stars.
-  src: BCS § Casey/Stellar chart
-
-- **[add]** Casey's sheet
-  Warlock. CHA 18 (+4) is his main stat. WIS 4 (−3), passive Perception 7: he reads cosmic patterns and misses the obvious. Lucky feat. Background: Wayfarer. Listed faith: Astrology. Flaw: he relies too heavily on others (place beside the Polly bond).
-  src: BCS § Casey/Character sheet
-
-- **[add]** The Gemini brand
-  Casey has a Gemini brand on his left shoulder, the sign he shares with Polly.
-  src: memory-canon § Casey Geim; BCS § Casey/Character sheet
-
-- **[add]** Zodiac spell names
-  His spells carry zodiac names: Ward of the Capricorn; Duplicate (Gemini); Armor of Taurus; Arms of Aquarius; Life of Cancer (False Life via Fiendish Vigor); Disguise of Aries (Mask of Many Faces).
-  src: memory-canon § Casey Geim; BCS § Casey/Character sheet
-
-- **[add]** The Harptos calendar as Casey's zodiac
-  Each Harptos month maps to a sign, and the holidays are rare signs: Midwinter = Aquarius ("bends fate"); Greengrass = Taurus; Midsummer = Leo; Highharvestide = Libra; Feast of the Moon = Sagittarius ("walks unseen; between worlds"). Add here or link the table on `stellar-chart/`.
-  src: BCS § Casey/Astrology quirk
-
-- **[add]** Casey and Tumak: the mechanical contrast
-  Casey is point-driven: he must find constellation points and attune to them. Tumak is time-driven: marks arrive per level and he chooses where they go. Casey's stars are a lens he reads with, continuous and unbounded; Tumak's runes are an apparatus on his body that fires once. Casey never teleports to his constellations.
-  src: BCS § Casey/Mechanical distinction from Tumak
-
-- **[add]** Each constellation point is an adventure
-  Each point is a real adventure for the whole party and a different experience for Casey, modelled on Fjord placing the stones on Uk'otoa's seal.
-  src: BCS § Casey/Mechanical distinction from Tumak
-
-- **[add]** Point design (working)
-  Each point has a **Sign** (the hook), **Subject**, **Work** (the adventure), **Gift** (what he learns) and **Toll** (what Astra takes, never named at the table). Each new point shifts at least three of five axes from the last: scale, subject, tone, engagement, guidance.
-  src: BCS § Casey/Point design guardrails
-
-- **[add]** What an anchored region looks like (add to "The loop")
-  Anchored regions change at the level of nature, not as magic effects. A river reflects another sky. The wind holds one direction. Children born there recognise each other.
-  src: BCS § Casey/Tethering
-
-- **[add]** A living hearer
-  Another living Starchild like Casey will appear as pressure: possibly a rival, possibly a partner, modelled on Avantika.
-  src: BCS § Casey/Tethering
-
-- **[add]** The players never learn the word "Axiom"
-  Casey learns only that specific things are wrong or changed. No mortal knows the Axioms.
-  src: BCS § Casey/Tethering; memory-canon (no mortal knows the Axioms)
-
-- **[add]** The Lantern Node / Viren quest
-  The Lantern Node at Viren is Casey's first named alignment. (Name pending the rename decide above; the add carries whichever name stands.)
-  src: BCS § Casey/Astrology quirk
+- **[later]** Casey's sheet check
+  His current level and D&D Beyond URL, and whether the zodiac spell names, the Wayfarer background and Wisdom 4 on crew/casey.html Mechanics › Build match the sheet.
+  src: section 7 (2026-10-28)
 
 ### crew/tumak.html
 
-- **[fix]** "Three poles" and the Zenith on homecoming
-  The retired spine said that when both twins arrive home "the three poles stall the cycle and the result is a Zenith", and called the runes "a built-in proximity detector". The second is already a fix on this page; check the first against artifacts/dissolution-fragment.html (the fragment rebuilding in two halves) and rules/index.html (Homebound, the Becoming) before carrying it.
-  src: campaign/spine.html (retired, campaign section, conflict C16)
-
 Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; see the Rules section.
-
-- **[fix]** "Open" labels on the page
-  The infobox has an "Open" row ("What happens while the fragment is between bearers", line 30) and the body an "Open:" paragraph (line 79). Status labels stay off pages: write each as a Still to decide sentence in DM notes when the page is rewritten, or drop what the answered item below already settles.
-  src: section 4 cold review (2026-10-28)
-
-- **[add]** What completing the inscription costs Tumak *(answered)*
-  Take both "Open:" lines off crew/tumak.html (the stat row and the closing paragraph), and the matching Open lines on dossiers/the-runekeeper.html and realms/wayfinders-homeworld.html. Write (in-world):
-  "Completing the inscription takes Tumak home, and going home ends the concealment. When Wan and Tu both arrive, the three poles stall the Dissolution cycle and the result is a Zenith; the homeworld splits into a blessing faction and an omen faction, and a Monolith follows. The office he comes home to dims whoever holds it."
-  For the concealment between bearers: "While the fragment is in transit, the concealment rests on the share still leaving the Runekeeper. It weakens as he fades, and the world's protection decays as the cosmos changes around it. The marks Tumak places are the sensors that let it be renewed when he returns."
-  DM: the fade runs on a soft clock (STAGING round 8). The old "key to the First Heart" clause and its level-12 gate are retired; see the Artifacts decide "What a fragment made whole does".
-  answered: crew/tumak.html ("the completed inscription is a key to the First Heart"; "His homeworld stays unfindable while the fragment's oscillation carries the concealment, and the fragment is leaving"); dossiers/the-runekeeper.html ("the act of going home is the act of ending the concealment"; "Dimming is what the office is"); inbox/chat-crew-tumak-gregory-bartholomew.md § Tumak/Leader concept (Korey: "If the Wayfinder never returns, the protection decays as the universe changes"), § Marks (marks as the world's sensors, turn 223); STAGING rounds 2 and 8
-  src: TGB § Tumak/Open; crew/tumak.html
-  done: locations/wayfinders-homeworld.html (section 3) and dossiers/the-runekeeper.html (section 5); crew/tumak.html still needs it.
-
-- **[add]** The Runekeeper's fade is a soft clock
-  Ruled (STAGING round 8). Add to "The fading as pressure" (DM voice): "The Runekeeper's fade runs on a soft clock: rising pressure, no date. Count nothing down."
-  src: Korey, 2026-10-25 (round 8); TGB § Tumak/Open
-  done: dossiers/the-runekeeper.html (section 5); crew/tumak.html still needs it.
 
 - **[later]** How a separated twin plays out at the table
   Settled so far (Korey, turn 227): at the table only the twin with the crew is played, a lower-level one-shot with the separated twin is possible, and the twins reunite through the campaign, through the crew or by other means. Still open for a long separation: off-screen montage, a solo one-shot, or shared visions (turn 143). The reunion mechanics are a separate decide on rules/index.html.
   src: TGB § Tumak/Mishap and separation, Open
 
-- **[fix]** Wayfind opens on the first match
-  The "Wayfinding" row says "The partial mark, and its growth with understanding rather than with level. The full mark is several levels out." Change to: Wayfind opens on the first matched rune and always targets one of his placed marks. The network grows as runes match, with one rune roll per character level, and the reach grows with the matched count (see the reach-gate add on rules/index.html).
-  src: TGB § Tumak/Wayfind, Rune structure, final; rules/index.html
-
-- **[fix]** Runes are not a proximity detector
-  Page says "The runes surface on skin near cosmic threat, which gives the crew a proximity detector". Change to: runes arrive with level-ups, character moments and DM-bestowed story beats, so the player cannot equate a rune with a place. A rune surfacing near something cosmic can stay as an occasional story trigger, not a rule.
-  src: TGB § Tumak/Rune system
-
-- **[fix]** The level-4 roll matched the left sole
-  Page says "Level 4 fires with the seating in the V006.5 interlude, before V007, which brings his per-level rune roll." The roll has happened. Tu's half landed on 08, so the left sole is Tumak's first matched rune (Korey, turn 328). Write it as done and point to Rules → Current state.
-  src: TGB § Tumak/Rune structure, final
-
-- **[fix]** The inscription row: reroll and choose
-  The "Runekeeper inscription" row lists "the choose band". The d20 now reads: 1–16 resolve that position, 17–19 reroll, 20 lets the player choose, a duplicate rerolls. Change "the choose band" to "the reroll and choose results". The full table is a fix on rules/index.html.
-  src: TGB § Tumak/Rune structure, final
-
-- **[add]** Soulknife is the first step of the manifestation
-  Tumak took Rogue 3 (Soulknife) between sessions 2 and 3. Soulknife is the first step of the Runechild manifestation because the twins' souls are bound. The soul knife and the twins' telepathic link first manifested in V004; the player decides how the psychic blade looks.
-  src: TGB § Tumak/Soulknife and the first rune; memory-canon § Tumak Swan
-
-- **[add]** First Sorcerer level at level 4
-  Tumak takes his first Sorcerer level at level 4. His player wants to discover in-world how the abilities work.
-  src: chat-voyage-6-7-planning § PCs and the stars
-
-- **[add]** What the table believes (add to that box)
-  The player sheet reads Variant Human, 5'7" ("long body, shorter arms, smallish head"). CHA 18 with Deception expertise is why the disguise holds.
-  src: TGB § Tumak/Backstory
-
-- **[add]** "Left side" and "right side"
-  At the table Korey addresses the twins as "left side" and "right side", so only the player knows which twin he means.
-  src: TGB § Tumak/Backstory
-
-- **[add]** Why he enrolled, and the note
-  Tumak enrolled at the Academy as the quickest way home. Both twins were sent away with a note reading "come home safe".
-  src: TGB § Tumak/Backstory
-
-- **[add]** One arc in three stages
-  Runechild, Wayfinder, Runekeeper is one continuous story. Tumak was born or chosen a Runechild; his sorcery is the in-world answer to his backstory. He is now a Wayfinder, on the journey. He becomes the Runekeeper when he returns home.
-  src: TGB § Tumak/Arc framing (turn 211)
-
-- **[add]** What the marks are for
-  Each mark Tumak places is a sensor his world puts out into the universe: its patch of information, so it can protect itself. The world needs "enough" marks, and nobody can say how many. The marks give Tumak a goal beyond going home.
-  src: TGB § Tumak/Marks (turn 223)
-
-- **[add]** The fading as pressure
-  The Runekeeper's fading is Tumak's pressure to go home now and to start attempting the journey. It reaches the player through memories of his grandmother and of home: a smell, how the trees look.
-  src: TGB § Tumak/Runekeeper lore and pressure
-
-- **[add]** Inspirations (DM note)
-  Tumak's arc sits between The Giver and Avatar. The two are the tonal reference for the grandmother-and-memory sequences above all (arc doc v3, Pressure section).
-  src: TGB § Tumak/Runekeeper lore and pressure, Arc framing (turns 150–151)
-
-- **[add]** Design intent: a stark trade-off
-  Tumak's powers carry a stark, visible trade-off so the other players do not feel he has too much. Every Rune Set spell past the first cast per long rest costs exhaustion, and so does every Wayfind beyond 100 feet.
-  src: TGB § Tumak/Wayscribe design, Rune sets, Wayfind
-
-- **[add]** V007 beat
-  While resting, Tumak marks a spot without meaning to, then Wayfinds back to it aboard the ship.
-  src: memory-canon (open-decisions § Voyage 007 intent)
+- **[later]** Tumak's sheet
+  His current level, his class split (Rogue 3 and Sorcerer 1 at level 4?) and his D&D Beyond URL. When they arrive they go in Mechanics › Build on crew/tumak.html.
+  src: section 7 (2026-10-28)
 
 ### crew/gregory.html
 
 - **[decide]** The Sailor gate at the Sea Dock *(prep)*
   (A) He truly needs Sailor clearance, and gets in with an escort via Kip or Pik or a sanctioned reason. (B) He only thinks he does, and a service route exists. (C) Hybrid: Rindle has moved the Latchling and Gregory must recalibrate.
+  Folded in from the add "Sailor clearance": part of the Sea Dock needs Sailor clearance, and a cadet inherits only Visitor, so Gregory needs, or thinks he needs, Sailor access. When ruled, write it into crew/gregory.html § The Latchling (Obstacles) and drop the Still to decide sentence. Conflict: the record gives all six cadets "Clearance: Sailor" and Tumak's Voyage 3 bullet has Mirt granting the crew sailor-level clearance, while Gregory's Voyage 3 bullet has him locked out of a fleet-clearance category by his cadet star (see Player record flags).
   src: TGB § Revising voyage briefings/Open
 
 - **[decide]** What Gregory learns once the Latchling anomaly resolves *(prep)*
@@ -1680,68 +1393,11 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
   Draft: once per long rest, 10 minutes of listening gives direction and rough distance to a paracausal source he has felt before. Through the seated Lantern, once a day, it reaches farther. Options: lock or hold. If locked, it goes here and in the character subsystems on rules/index.html.
   src: chat-voyage-6-7-planning § Open
 
-- **[add]** The Lantern and the anomaly queue
-  Ruled (STAGING round 8). Add to DM notes: "Whether the Lantern becomes Gregory's next anomaly depends on whether he investigates it." Touches crew/gregory.html and artifacts/containment-engine.html.
-  src: Korey, 2026-10-25 (round 8); chat-voyage-6-7-planning § Open
-
-- **[fix]** Origin: Toril
-  Header says "Open: His origin, and what changed him". Record: Gregory is from Toril. He reached Caelestis on a cargo ship, and his origin has no Zenith tied to it. The Lantern's pull toward Toril starts his journey. What changed him stays an open question in the backlog, off the page.
-  updated (triage): what changed him is now settled. Gregory's awakening is a result of the Axiom strain's ripple (STAGING § The Axiom strain); write it on the page.
-  src: memory-canon § Gregory (working decision); memory-canon (open-decisions § Voyage 007); chat-voyage-6-7-planning § PCs and the stars
-
-- **[fix]** The Latchling is at the Sea Dock
-  The Clear clue says "The signal is at the sky dock, in the aligner berths along the mooring struts". Change to: the signal is at the Sea Dock, near cargo and lower dock storage.
-  src: TGB § Revising voyage briefings; memory-canon § Gregory
-
-- **[add]** Calibration thresholds (DM only, under "The roll")
-  At his +2: 1–7 static, 8–12 weak, 13–17 clear, 18+ sharp. Calibration is DM-initiated at fitting moments and stacks narrative clues; a failed roll gives static, never misdirection.
-  src: TGB § Gregory/Calibration; memory-canon § Gregory
-
-- **[add]** Detect Magic and tools near the Latchling
-  Detect Magic (ritual) near the Latchling reads strangely, which is itself a clue. Navigator's tools and tinker's tools add flavour.
-  src: TGB § Gregory/Calibration
-
-- **[add]** Gregory's theme and the anomaly prep framework
-  He knows roughly where to go and has to work out how to get there and through what stands in the way. Anomaly prep runs: Destination / Physical obstacle / Social obstacle / Interpretive obstacle / Payoff.
-  src: TGB § Revising voyage briefings
-
-- **[add]** The Latchling signal track
-  The track describes how clear the obstacles are: (1) bearing: the Sea Dock, near cargo; (2) a muddy signal: something is interfering, something is concealed; (3) the interference has a human shape.
-  src: TGB § Revising voyage briefings
-
-- **[add]** Latchling obstacles
-  Dock interference (metal and noise). Rindle: Gregory has to convince him he is no threat to the Latchling. The Latchling itself, which hides until it trusts him.
-  src: TGB § Revising voyage briefings
-
-- **[add]** Sailor clearance
-  Part of the Sea Dock needs Sailor clearance, and a cadet inherits only Visitor, so Gregory needs, or thinks he needs, Sailor access.
-  src: TGB § Revising voyage briefings
-
-- **[add]** The Latchling's reaction
-  The Latchling goes to Gregory as something familiar, and that visible reaction is what cracks Rindle's secrecy. Also add to dossiers/rindle-gearloft.html.
-  src: TGB § Gregory/Latchling
-  done: dossiers/rindle-gearloft.html (section 5); crew/gregory.html still needs it.
-
-- **[add]** His flaw
-  "I follow orders and trust everyone at their word." That is why Rindle's denials hit hard.
-  src: TGB § Gregory/Calibration
-
-- **[add]** Level 3 Abjurer scene
-  Gregory rereads a journal kept by Gregory Prime, his maker, and an entry reads differently after the last voyage. The entry:
-  > Mended the brass aligner a fourth time tonight — but this time, before it could crack again, I braced the seam from the inside first. Gregory held the casing steady while I worked. Steady hands. He's good at that.
-  >
-  > Funny thing. I've spent my whole life fixing what's already broken. Tonight I caught myself thinking — what if I'd gotten there sooner? Reached the thing before the break did. Then there'd be nothing to mend at all.
-  >
-  > Going to try doing it that way from now on. Get underneath things first.
-
-  Tag: "Gregory has read this page before. After the last voyage, it reads differently." The theme of his abjuration is preventing the break rather than fixing it after.
-  src: TGB § Gregory/Abjurer level-up scene
+- **[later]** Gregory's sheet check
+  His current level and D&D Beyond URL; whether Arcana is still +2 and Built for Success is still on the sheet (crew/gregory.html Mechanics › Build and the Calibration bands depend on both).
+  src: section 7 (2026-10-28)
 
 ### crew/bartholomew.html
-
-- **[add]** Observation flags for the Almosts (DM)
-  From the retired spine: creature design is held until observation surfaces it in play. Watch how he uses Beast Sense and Beast Bond, how he treats the star map, and whether he reaches for Starry Form or Wild Shape under pressure. Check against the finished artifact and location pages (CON-312) before writing.
-  src: campaign/spine.html (retired, campaign section, conflict C16)
 
 - **[decide]** Whether Almost-Shift slips still run *(prep)*
   The page's "How a slip runs" has three registers and one weighted slip per scene, with a 3-strain threshold (wrongness and recognition, no anatomy). Options: keep slips running alongside Aspects, or fold slips into Aspects. Rule the 3-strain threshold either way.
@@ -1759,68 +1415,28 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
   Settled: renewing the bloom with a Lantern charge is the crew's active choice. Open: the details (cost, how often, what it restores). Touches crew/bartholomew.html and artifacts/containment-engine.html.
   src: chat-voyage-6-7-planning § Bartholomew: Aspects; memory-canon § Bartholomew
 
-- **[add]** CON-312 and the Almosts *(answered)*
-  Add (DM voice):
-  "CON-312 is the blueprint of the creature Bartholomew is becoming: six stars, one per ability score. It is what lets him hold two natures at once. Every aspect he learns has a star to sit in, so he can take one living piece of a creature into his own pattern and stay himself. Without it he would come apart. Two stars from his childhood fall burn; the rest fill as he studies. When the constellation is complete, its shape is his full Almost form."
-  "'The Almosts' is an old druid name. Druidic tradition hands down whole beast shapes, worked out long ago, and Wild Shape is a clean swap into one. Keeping yourself while taking part of something else is harder, because two natures in one body want to separate. The tradition never taught it, and druids caught partway were warned about as the Almosts."
-  DM: an old druid or a text can one day tell him "they used to call people like you Almosts." The name stands for now; memory notes it may change.
-  answered: Voyage 7 chat 70f0c197 (Korey: "Okay, I see it now. It's utilizing an aspect of that creature while remaining yourself", accepting the Wild Shape and Aspects framing with the Almosts as the old name); inbox/chat-voyage-6-7-planning.md § Bartholomew: Aspects (CON-312 the blueprint, six stars, two burning); crew/bartholomew.html; aspects/index.html
-  src: chat-voyage-6-7-planning § Open
-
 - **[later]** Full Almost template details
   Settled (see the Full Almost form add): physical scores come from the seated creatures with no cap, mental scores stay his own, AC is 10 + Dex unless an armour aspect applies, and the form costs a Wild Shape use and unlocks when the constellation is complete. Dinosaurs are off the aspect menu and must be earned.
   Left: its HP; when each of CON-312's faint stars unlocks (two burn from his childhood fall); and whether dinosaurs join his Wild Shape list, which is separate from the aspect menu.
   src: chat-voyage-6-7-planning § Open, § Bartholomew: Aspects (Settled)
 
-- **[fix]** The Almost: mechanic set, look open
-  Page says "The creature design is deliberately unwritten until play surfaces what it should be." Reframe: the Almost is the creature Bartholomew builds. His constellation is its blueprint: six stars for six ability scores, and each catalogued aspect seats into the matching star. Its look and register are not yet set.
-  src: memory-canon § Bartholomew (Almost mechanic)
+- **[decide]** Aspects without study *(prep)*
+  The earlier ruling (memory canon) says aspects from any beast within his Wild Shape CR cap need no study and only non-beast aspects need study. The player handout on `aspects/` gives him a starting catalogue of ten aspects instead (the four Known plus six of his choice) and learns every new aspect by Track or Glimpse. crew/bartholomew.html follows the handout and carries this as a Still to decide sentence. Rule which holds; if the CR-cap rule stands, the handout needs the change. Also confirm the learning DC: the earlier ruling has a save against a CR-based DC, the handout has Track or Glimpse checks against a DC the DM sets.
+  src: section 7 (2026-10-28); memory-canon § Bartholomew; aspects/index.html
 
-- **[add]** Aspects: what can be learned and how
-  - Aspects are prepared equal to his proficiency bonus. Manifest Aspect is a bonus action and lasts 1 minute. Aspects are seated once per long rest.
-  - Aspects from any beast within his Wild Shape CR cap need no study. Non-beast aspects come only from study, which is where the feature's value lives.
-  - Learning an aspect is a save against a CR-based DC, one success per day. A failure locks that creature out for 24 hours.
-  - Only creatures with a heart, blood and a heartbeat that are not humanoid-shaped can be studied. Humanoids, plants, constructs and elementals are excluded. Gray areas are ruled as they arise.
-  src: memory-canon § Bartholomew; chat-voyage-6-7-planning § Bartholomew: Aspects
+- **[decide]** The burning stars and the seated aspects
+  The CON-312 answer says two stars burn from his childhood fall and the rest fill as he studies. The old crew page said his two bright stars are the seated aspects (ape and spider), and the handout has the two stars burn brighter as the ape and spider answer. Rule whether the two burning stars are the ape's and the spider's seats, or two of his own from the fall with the aspects seated elsewhere. crew/bartholomew.html carries it as a Still to decide sentence.
+  src: section 7 (2026-10-28), conflict C7; aspects/index.html
 
-- **[add]** Full Almost form (DM only)
-  In full Almost form his physical scores are exactly the seated creatures' scores, with no cap. His mental scores stay his own. AC is 10 + Dex unless a seated aspect grants hide or armour. It costs a Wild Shape use and unlocks when the constellation is complete.
-  src: memory-canon § Bartholomew; chat-voyage-6-7-planning § Bartholomew: Aspects
-
-- **[add]** Wild Shape stays separate
-  Wild Shape stays by the book, on its own track, separate from Aspects. Swapping into a known form never feeds the catalogue.
-  src: memory-canon § Bartholomew (Almost refinement); chat-voyage-6-7-planning § Bartholomew: Aspects
-
-- **[add]** The Garden bloom
-  The bloom is consumable: inhaling it restores a Wild Shape use. The Lantern of Flourishing can renew it, and Vaelorix's notes teach more about it. Its parent plant is a carrot. No parent plant is aboard; finding where the flower grows is his adventure. He will think the bloom causes his change, while the ability is innate, and searching for it gives him reason to travel and identify creatures.
-  src: memory-canon § Bartholomew; chat-voyage-6-7-planning § Bartholomew: Aspects
-
-- **[add]** The childhood fall
-  His ad-libbed childhood fall, when he saw a constellation that now shows in his Starry Form, is a direction to weave in. Backstory stays light.
-  src: memory-canon § Bartholomew
-
-- **[add]** Table note: first session
-  Bartholomew missed the first session; "Wilder's training" covered his absence.
-  src: TGB § Bartholomew
-
-- **[add]** His arc and the Vecna pressure
-  His arc crosses the Vecna / ecosystem-strain pressure, indirectly until that plot arrives.
-  src: TGB § Bartholomew
-
-- **[add]** Inspiration
-  The recognition arc draws on Teen Titans, "The Beast Within".
-  src: TGB § Bartholomew
+- **[later]** Bartholomew's sheet check
+  His current level and D&D Beyond URL; whether the sheet carries Wilder and Rashemi (the record has Human, Druid, Specialisation Wilder), and his Wild Shape forms list.
+  src: section 7 (2026-10-28)
 
 ### crew/boogie.html
 
 - **[decide]** Which deckhand item goes missing on the tyrant ship voyage *(prep)*
   Korey names the item (see the "Next beat" add).
   src: BCS § Boogie/Open
-
-- **[add]** Tharizdun, the shard and the current
-  Ruled (STAGING round 8). Add to DM notes: "Tharizdun wants nothing specific from Boogie. Tharizdun is not lucid; it is an opportunist. What happens through the shard depends on what Boogie does, and things may come back through the current. Boogie's plot is reactive. Now and then he feels corruption leaking into him from the shard."
-  DM: the corruption is a role-playing beat, not a mechanic.
-  src: Korey, 2026-10-25 (round 8); BCS § Boogie/Open
 
 - **[later]** Giorge and the shards
   Giorge is the Darkest Day vessel on Fonains (spelling per rulings; a different person from Jorgi Panamop).
@@ -1829,56 +1445,13 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
   Touches crew/boogie.html and artifacts/fonains-shard.html.
   src: BCS § Boogie/The shard and Tharizdun; memory-canon § Naming (Giorge); session-rulings
   answered (shard search): BCS § Boogie/The shard and Tharizdun (Settled); original Boogie chat fa8c4131 (Korey's line quoted above)
+  done: crew/boogie.html carries the settled line (section 7); artifacts/fonains-shard.html carries it too.
   Settled since (Tharizdun tie, part): "Shothragot, Tharizdun's avatar, was bound to the temple aboard the planar craft. Its true vestige may still be there, and Giorge may be trying to reach it." Still open: his surname.
   answered (part): STAGING § Tharizdun and the planar craft
 
-- **[fix]** Two archived objects, not three
-  Page says "Three archived objects have accumulated inside one living body". Change to: two archived objects, the half-ship from Voyage 001 and the half-logbook, are held inside him by the shard. The shard is what keeps them there, not a third archived object.
-  src: memory-canon § Boogie; BCS § Boogie/Archived objects
-
-- **[add]** How the shard reached him
-  The shard came through Vocath's Cairn Station line. Vocath's people chased Clint to Fonains and came back with fragments of the broken Monolith, and before V001 Boogie looked into a shipment he should have left alone. The "What he is carrying" table now says only "Before the campaign"; add the route.
-  src: session-rulings (Timing); timeline.json "Boogie takes the shard"
-
-- **[add]** His Divine Soul power (add to the intro)
-  Boogie's Divine Soul power comes from Tharizdun's influence through the shard. Boogie does not know it.
-  src: BCS § Boogie/The shard and Tharizdun
-
-- **[add]** The scale of the shards
-  When the Fonains Monolith broke, four great shards fell and many smaller shards came from them. Three hundred and thirty-three of the small shards are black; the rest took colors close to their elemental affinities. Collecting them is never a goal.
-  src: Korey, 2026-10-25 (round 8) (replaces "about 333,333"); BCS § Boogie/The shard and Tharizdun
-
-- **[add]** The Blob Drop
-  Boogie has a signature dance move called the Blob Drop.
-  src: BCS § Boogie/Character and the Pulse
-
-- **[add]** The level 3 dream
-  The level 3 Divine Soul unlock was a dream. Boogie looks into the nucleus and sees a fractal, pyramidal network of other Boogies, each with a differently shaped shard. A crack runs from him through the network; his line connects upward wrongly; at the apex sits an unnamed source that gives and consumes. Its meaning: this specific shard made this version of Boogie, and other shards exist out there. The dream ends: "You wake. Your chest is heavier than it was when you closed your eyes." The player chooses whether to check.
-  src: BCS § Boogie/The fractal dream; memory-canon § Boogie
-
-- **[add]** Arc method: no fixed reveal
-  Boogie's arc has no fixed reveal. Gates are planted where relevant and follow the player, and he may never learn the source. Escalation gates, loosely ordered: passive archiving now; environmental oddities around him; an acolyte encounter; something coming back through the current; understanding what "full" means. The shard escalates rather than repeats, and is not revealed as a Monolith piece too soon.
-  src: BCS § Boogie/Arc method; memory-canon (open-decisions § Voyage 007)
-
-- **[add]** The prophet thread
-  The shard draws people to Boogie as something holy. A following may grow around him as a prophet-like figure built on a corrupted signal. This stays player-driven: available to pull on, never pushed. See the New pages section, "Boogie's faith".
-  src: memory-canon (Boogie prophet arc); BCS § Boogie/Arc method
-
-- **[add]** Reaching for the archive
-  Boogie will learn to reach for the archive deliberately. He can offer something during a Pulse; it goes in incomplete and comes back incomplete. The ceiling stays bounded because he is a damaged relay. The gate is his realising that what goes in is going somewhere.
-  src: memory-canon (archive mechanic); BCS § Boogie/Arc method
-
-- **[add]** Boogie and the Lantern
-  When the Lantern of Flourishing is used on Boogie he briefly loses his form, and near it he feels out of step with his rhythm. Rules for the healing are on artifacts/containment-engine.html.
-  src: memory-canon § Naming and canon corrections
-
-- **[add]** Next beat (tyrant ship voyage)
-  A named deckhand item is mentioned several times, then goes missing. Saerthe or Tarto raises it, Boogie learns something is in his chest, and the player decides what to do.
-  src: BCS § Boogie/Next beat
-
-- **[add]** DM note: the end-of-voyage healing
-  The healing Boogie received at the end of the last voyage came from a potion Korey used while piloting the absent player. It is not a Pulse seed.
-  src: BCS § Boogie/Next beat
+- **[later]** Boogie's sheet check
+  His current level and D&D Beyond URL, and whether the Shield of Expression is on the sheet (the record lists "shield").
+  src: section 7 (2026-10-28)
 
 # Artifacts and vessels
 
@@ -1948,6 +1521,12 @@ left here is open.
   Restoring a limb takes a compatible cradle and every charge, daily, for seven days.
   src: chat-voyage-6-7-planning § Lantern of Flourishing
   held (section 4): the source chat marks this an inference, not in the repo. The page leaves it out and says in Still to decide that limb restoration is not set; confirm before it goes on the item card.
+
+### artifacts/fonains-shard.html
+
+- **[fix]** Drop the accumulation milestone
+  Still to decide carries "the milestone where the accumulation starts costing Boogie". Boogie's arc method has no fixed reveal and no milestone (crew/boogie.html, Arc); the milestone question is retired. Keep the first half of the sentence (what a corrupted archive fragment does over years at this scale) if it is still wanted.
+  src: section 7 (2026-10-28), conflict C6
 
 ### artifacts/faelight-spore.html
 
@@ -2158,7 +1737,7 @@ against the complete Tumak sweep (all 336 turns).
   src: memory-canon § Cosmology ("always two entities")
 
 - **[fix]** Sol's oath is written
-  § Open says Sol's oath carries "implied mechanics that live nowhere". The Oath of Misfortune is finalized (Unified Jinx with Jinx charges; Misfortune's Wake and Misfortune's Edge) and lives on crew/sol.html. Point there and remove Sol from that line.
+  § Open says Sol's oath carries "implied mechanics that live nowhere". The Oath of Misfortune is finalized (Unified Jinx with Jinx charges; Misfortune's Wake and Misfortune's Edge) and lives on crew/sol.html. Point there (Jinx is at `crew/sol.html#jinx`, Misfortuned at `#misfortuned`) and remove Sol from that line.
   src: memory-canon § Sol Fortuna
 
 - **[add]** Why gods cannot make the crossing (§ The approach to the Core)

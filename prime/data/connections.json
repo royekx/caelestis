@@ -2642,7 +2642,7 @@
           "src": "timeline/timeline.json"
         },
         {
-          "t": "He works as a bounty hunter out of Osiris, with a crew called the Six Shooters.",
+          "t": "He works as a bounty hunter out of Orerius, with a crew called the Six Shooters.",
           "src": "dossiers/clint.html"
         },
         {
@@ -3823,7 +3823,7 @@
       "label": "Gregory",
       "type": "person",
       "scope": "caelestis",
-      "summary": "An autognome wizard who casts, which no other autognome can.",
+      "summary": "An autognome wizard who casts.",
       "facts": [
         {
           "t": "Gregory's awakening is a result of the Axiom strain's ripple.",
@@ -3865,10 +3865,6 @@
         {
           "t": "He wants to belong to something.",
           "src": "STAGING round 2"
-        },
-        {
-          "t": "The Order's leader Dejexic is a plasmoid, like him.",
-          "src": "dossiers/ezra.html"
         }
       ]
     },
@@ -3877,11 +3873,15 @@
       "label": "Bartholomew Grayson",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A Rashemi Circle of the Stars druid.",
+      "summary": "A Rashemi Circle of the Stars druid and wilder.",
       "facts": [
         {
           "t": "Bartholomew wants the peace within him, his constellation.",
           "src": "STAGING round 2"
+        },
+        {
+          "t": "He is a wilder.",
+          "src": "crew/bartholomew.html"
         },
         {
           "t": "His constellation is CON-312.",
@@ -3909,7 +3909,7 @@
           "src": "STAGING round 5"
         },
         {
-          "t": "He escaped Aethris before the ritual closed and was recruited by a Watcher.",
+          "t": "He left Aethris before the ritual closed: a Watcher of the Order extracted him, and the Order broke protocol to recommend him to Caelestis.",
           "src": "crew/sol.html"
         },
         {
@@ -4551,6 +4551,10 @@
         {
           "t": "A Seeker chapter told Vanifer the secret in the Cre'Tez blood.",
           "src": "timeline/timeline.json"
+        },
+        {
+          "t": "The Cre'Tez estate is in Orerius, in T'Arionese, home of the Cre'Tez siblings.",
+          "src": "dossiers/clint.html"
         }
       ]
     },
@@ -5086,14 +5090,18 @@
       ]
     },
     {
-      "id": "osiris",
-      "label": "Osiris",
+      "id": "orerius",
+      "label": "Orerius",
       "type": "place",
       "scope": "fonains",
-      "summary": "A frontier town of marshals and bounty paper.",
+      "summary": "In T'Arionese, on Fonains, where the Cre'Tez estate stands.",
       "facts": [
         {
-          "t": "Clint works bounties out of Osiris.",
+          "t": "Clint works bounties out of Orerius.",
+          "src": "dossiers/clint.html"
+        },
+        {
+          "t": "The Cre'Tez estate is in Orerius, in T'Arionese; it is the home of the Cre'Tez siblings.",
           "src": "dossiers/clint.html"
         }
       ]
@@ -6962,7 +6970,7 @@
     },
     {
       "s": "clint",
-      "t": "osiris",
+      "t": "orerius",
       "rel": "hunts bounties out of",
       "src": "dossiers/clint.html"
     },
@@ -7369,12 +7377,6 @@
       "src": "vessels/the-derelict.html"
     },
     {
-      "s": "PC-647haWGJ",
-      "t": "dejexic",
-      "rel": "shares a species with",
-      "src": "dossiers/ezra.html"
-    },
-    {
       "s": "PC-Bw9kt3Lq",
       "t": "con-312",
       "rel": "carries in his chest",
@@ -7395,7 +7397,7 @@
     {
       "s": "PC-6rzWlD8Q",
       "t": "watchers",
-      "rel": "was recruited by a Watcher of",
+      "rel": "was extracted by a Watcher of",
       "src": "crew/sol.html"
     },
     {
@@ -7915,7 +7917,7 @@
       "src": "timeline/timeline.json"
     },
     {
-      "s": "osiris",
+      "s": "orerius",
       "t": "fonains",
       "rel": "located in",
       "src": "dossiers/clint.html"
@@ -8087,6 +8089,18 @@
       "t": "hessa-dun",
       "rel": "is the uncle of",
       "src": "dossiers/hessa-dun.html"
+    },
+    {
+      "s": "cretez",
+      "t": "orerius",
+      "rel": "have their estate in",
+      "src": "dossiers/clint.html"
+    },
+    {
+      "s": "PC-647haWGJ",
+      "t": "dejexic",
+      "rel": "shares a species with",
+      "src": "factions/order.html"
     }
   ]
 }

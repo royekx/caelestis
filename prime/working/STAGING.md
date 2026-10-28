@@ -58,6 +58,13 @@ when a ruling changes; delete it once the page carries it. See
 - Finerva is Vanifer under another name. The Pedra Ardente is a gem.
 - Kevulan first willed his birthright to Asmodus (his sibling, not the archdevil), then rescinded it and willed it to Xero.
 
+### Fonains geography (realms/fonains.html, Fonains doc; section 8)
+- T'Arionese is a region of Fonains. Orerius is in T'Arionese. The Cre'Tez estate is in Orerius, and it is the home of the Cre'Tez siblings (Xero, Lusion, Vanifer and the others). Clint works bounties out of Orerius, and Finerva (Vanifer) posted the Blooming Glass bounty there for the Cre'Tez.
+- The remains of the Fonains Monolith lie in the Trentara forest, in the north of the northern continent, between Nomnia and the Kingdom of Shaumala.
+- On Korey's map the Barrier Peaks lie in the south-west of the northern continent, below Gabuk and Selran, near the isthmus that runs down to T'Arionese. They are notable for Thessalar's crashed planar craft: its main body raised the peaks, and Thessalar is still inside (already on vessels/thessalars-craft.html and dossiers/thessalar.html; this line is for placing the peaks on the map).
+- Korey's Fonains map (his own) will be added in section 8 as the page's map; places on Fonains are placed from it.
+- done: dossiers/clint.html and connections.json carry Orerius (section 7 correction). realms/fonains.html, the Fonains doc and the timeline still need these lines.
+
 ## Timeline
 
 ### Timing (timeline, campaign/, realms/fonains)
@@ -110,40 +117,9 @@ when a ruling changes; delete it once the page carries it. See
 - M. Tarroway is a cartographer on Strake Station. His readings were the first hint that an unknown vessel or structure was disturbing the satellites at the edge of the system.
 - His name turns up here and there, mainly in the Fleet Intelligence Archive. Nothing about him is public. (DM: a thread for the players to piece together, not a figure they meet.)
 
-## Crew
-
-### Gregory (crew/gregory.html; done on factions/fleet.html, section 2, and locations/toril.html, section 3)
-- Gregory comes from the Cogfast Enclave on Lantan, on Toril. He reached Caelestis on a cargo ship.
-- DM: the Lantern becomes Gregory's next anomaly if he investigates it. (done on artifacts/containment-engine.html, section 4; crew/gregory.html still needs it.)
-
-### Casey (crew/casey.html, dossiers/polly.html, dossiers/astra-virex.html)
-- The voice Casey hears as Polly is Astra Virex wearing Polly's shape. It grows clearer with each tether.
-- The real Polly was consumed, or is caught between life and death. No one knows which.
-- Casey is the younger brother who does not know his full identity. He finds it in having an older brother, which is why he clings to Tumak.
-- done: dossiers/polly.html and dossiers/astra-virex.html (section 5); crew/casey.html still needs all three.
-
-### Sol (crew/sol.html, dossiers/beshaba.html)
-- Beshaba's reward for the oath is power. She gives it shape through a want of her own, laid on Sol as a quest.
-- Beshaba did not arrange Sol's escape.
-- done: dossiers/beshaba.html (section 5); crew/sol.html still needs both.
-
-### Tumak (crew/tumak.html, dossiers/the-runekeeper.html)
-- The Runekeeper's fade runs on a soft clock: rising pressure, no date.
-- Tumak has his own Heart-rune.
-- Tumak knows of the previous Runekeeper and met him once, briefly. He does not understand what that meeting was.
-- done: dossiers/the-runekeeper.html (section 5); crew/tumak.html still needs all three.
-
-### Boogie (crew/boogie.html)
-- Tharizdun wants nothing specific from Boogie. Tharizdun is not lucid; she is an opportunist. What happens through the shard depends on what Boogie does, and things may come through the current. Boogie's plot is reactive.
-- Boogie sometimes feels corruption leaking into him from the shard: a role-playing beat, not a mechanic.
-- Boogie holds half of the derelict logbook. The other half was in his chest inside the Monolith.
-- done: artifacts/fonains-shard.html and vessels/the-derelict.html (section 4). crew/boogie.html still needs all three.
-
-### The crew's pasts (crew/, DM principles)
-- The PCs remember where they came from. Their pasts get filled in retroactively; nobody arrived with amnesia.
-
 ## Artifacts and vessels
 
 ### Wan, Tu and the fragment (crew/tumak.html, rules/; done on artifacts/dissolution-fragment.html, section 4)
-- The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) factions/runekeepers.html and artifacts/dissolution-fragment.html carry it; dossiers/the-runekeeper.html carries it (section 5); crew/tumak.html still needs it.
+- The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) factions/runekeepers.html and artifacts/dissolution-fragment.html carry it; dossiers/the-runekeeper.html carries it (section 5).
 - The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a state neither whole nor broken.
+- done: crew/tumak.html (section 7); rules/ still needs it.
