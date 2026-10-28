@@ -1253,11 +1253,15 @@
       "label": "Hessa Dun",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A Caelestis contract contact whose uncle collects a lot of things and likes visitors.",
+      "summary": "A third-intake cadet who posts a notice-board job, and whose uncle collects things and likes visitors.",
       "facts": [
         {
-          "t": "Hessa Dun is a Caelestis contract contact the crew works with after graduation.",
-          "src": "factions/seekers.html"
+          "t": "Hessa Dun is a third-intake cadet at the Academy, planted in Arc 1.",
+          "src": "dossiers/hessa-dun.html"
+        },
+        {
+          "t": "She posts a notice-board job: hands and a strong back wanted to move her family's crates.",
+          "src": "dossiers/hessa-dun.html"
         },
         {
           "t": "She mentions that her uncle collects a lot of things and likes visitors.",
@@ -2657,6 +2661,14 @@
         {
           "t": "He is wrestling with guilt rather than hiding malice.",
           "src": "dossiers/miken.html"
+        },
+        {
+          "t": "Miken stays leveraged and complicit, does not flip, and lives.",
+          "src": "dossiers/miken.html"
+        },
+        {
+          "t": "The moneylender behind the Tallow Wren contract holds his fiancé's debts.",
+          "src": "dossiers/miken.html"
         }
       ]
     },
@@ -2893,6 +2905,10 @@
         {
           "t": "Captain Haymond Rolt oversees several Driftwarden crews at once, out of Ondrel Anchorage.",
           "src": "STAGING round 8"
+        },
+        {
+          "t": "He is an homage to Captain Raymond Holt; his look, manner and history are not set.",
+          "src": "dossiers/haymond-rolt.html"
         }
       ]
     },
@@ -3071,6 +3087,10 @@
         },
         {
           "t": "He believes the academy would take the Latchling apart.",
+          "src": "dossiers/rindle-gearloft.html"
+        },
+        {
+          "t": "The Latchling goes to Gregory as something familiar, and that reaction cracks Rindle's secrecy.",
           "src": "dossiers/rindle-gearloft.html"
         }
       ]
@@ -5962,12 +5982,6 @@
     },
     {
       "s": "hessas-uncle",
-      "t": "hessa-dun",
-      "rel": "is secretly one of",
-      "src": "factions/seekers.html"
-    },
-    {
-      "s": "hessas-uncle",
       "t": "seekers",
       "rel": "is secretly one of",
       "src": "factions/seekers.html"
@@ -5975,8 +5989,8 @@
     {
       "s": "hessa-dun",
       "t": "driftwardens",
-      "rel": "is a contract contact of",
-      "src": "factions/seekers.html"
+      "rel": "is a cadet among",
+      "src": "dossiers/hessa-dun.html"
     },
     {
       "s": "order",
@@ -8035,6 +8049,12 @@
       "t": "rykoe",
       "rel": "is drawn around",
       "src": "opposition/vecna.html"
+    },
+    {
+      "s": "hessas-uncle",
+      "t": "hessa-dun",
+      "rel": "is the uncle of",
+      "src": "dossiers/hessa-dun.html"
     }
   ]
 }

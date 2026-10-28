@@ -36,7 +36,7 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 7 | 2 | 0 | 3 |
 | Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 42 | 5 | 36 |
-| Dossiers | dossiers/ | 16 | 12 | 19 | 1 | 11 |
+| Dossiers | dossiers/ | 16 | 12 | 18 | 1 | 10 |
 | Crew | crew/ | 9 | 12 | 17 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 1 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** | | **93** | **118** | **154** | **10** | **219** |
+| **Total** | | **93** | **118** | **153** | **10** | **218** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -129,6 +129,7 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - `data/npcs.json` calls Mirt "the head of Caelestis".
 - `data/sessions.json`, `quests.json` and `items.json` call OSTEKK-6 an autognome; OSTEKK units are automatons.
 - DM dossiers with no record, though the crew may have met or been told of them: Polly Geim (Casey's brother), Clint Dashforest, Qitru, Quartermaster Halix Verrow, the Crystalline Retrieval Construct, Ezra Ahl-Sier. Each gets a record at first contact; check whether any contact has already happened (section 5).
+- `data/npcs.json` names Miken "Miken"; the DM dossier and the Fleet row use his full name, Miken Haverstance. Add the surname to the record if Korey agrees.
 - `data/npcs.json` (Winston Ryeback, Voyage 6) says he "was told the beholder had been taken care of, and took it to mean the crew had killed it"; the ruling is that Tumak told him outright that the crew killed it (dossiers/winston-ryeback.html).
 
 ## Still coming in
@@ -296,7 +297,7 @@ Order under each page: decide, fix, drop, add.
   Keep M. Tarroway as Strake Station's cartographer whose readings first hinted at an unknown vessel disturbing the satellites at the system's edge (STAGING round 4). Cut the "timing tables" and their failure everywhere. Reduce his presence on the ten pages that mention him to passing references; his main home is the Fleet Intelligence Archive (restricted/). Nothing public.
   Touches: dossiers/tarroway.html, dossiers/index.html, dossiers/miken.html, dossiers/vthoramu.html, dossiers/joffrey.html, dossiers/verrow.html, factions/vocath-operation.html, realms/index.html, realms/strake-station.html, chart/index.html, restricted/.
   src: Korey, 2026-10-25 (round 4)
-  done: factions/fleet.html and factions/vocath-operation.html (section 2); locations/strake-station.html, the register and the chart (section 3); dossiers/tarroway.html, vthoramu.html, joffrey.html and verrow.html (section 5). dossiers/miken.html, dossiers/index.html and restricted/ still need it.
+  done: factions/fleet.html and factions/vocath-operation.html (section 2); locations/strake-station.html, the register and the chart (section 3); dossiers/tarroway.html, vthoramu.html, joffrey.html, verrow.html and miken.html (section 5). dossiers/index.html and restricted/ still need it.
 
 ### chart/index.html
 
@@ -966,6 +967,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   "Captain Haymond Rolt is the crew's handler in Arc 2. He oversees several Driftwarden crews at once."
   DM note: an homage to Captain Raymond Holt. He gets a new dossier, `dossiers/haymond-rolt.html`, and a row on dossiers/index.html.
   src: Korey, 2026-10-25 (round 8)
+  done: dossiers/haymond-rolt.html (section 5); campaign/spine.html and the dossier register row still need it.
 
 - **[decide]** Driftwarden ranks *(prep)*
   Ruled: one service, many ranks, the way every police officer is a cop. Set the ladder from the newest graduate up to the organization's head, and where the crew starts.
@@ -1620,17 +1622,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ---
 
-### dossiers/miken.html
-
-- **[fix]** Miken does not flip
-  The page offers "If he redeems himself — tells them more, helps them assemble the mystery, comes around". Miken stays leveraged and complicit and does not flip. Drop the redemption path. Keep the capture or near-death payoff on a complicit Miken.
-  src: memory-canon open-decisions (Seekers line); chat-cosmic-campaign-structure § Act 1 retrofit
-
-- **[add]** The moneylender
-  Add to What's hidden: "The moneylender behind the Tallow Wren repossession contract also holds the debts of Miken's fiancé."
-  src: chat-cosmic-campaign-structure § Graduation board contracts
-
----
 
 ### dossiers/mirt.html
 
@@ -1702,7 +1693,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   src: data/npcs.json (Rindle Gearloft); dossiers/rindle-gearloft.html
 
 ---
-
 
 ### dossiers/the-runekeeper.html
 
@@ -2205,6 +2195,7 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
 - **[add]** The Latchling's reaction
   The Latchling goes to Gregory as something familiar, and that visible reaction is what cracks Rindle's secrecy. Also add to dossiers/rindle-gearloft.html.
   src: TGB § Gregory/Latchling
+  done: dossiers/rindle-gearloft.html (section 5); crew/gregory.html still needs it.
 
 - **[add]** His flaw
   "I follow orders and trust everyone at their word." That is why Rindle's denials hit hard.

@@ -157,7 +157,7 @@ when a ruling changes; delete it once the page carries it. See
 - M. Tarroway is a cartographer on Strake Station. His readings were the first hint that an unknown vessel or structure was disturbing the satellites at the edge of the system.
 - His name turns up here and there, mainly in the Fleet Intelligence Archive. Nothing about him is public. (DM: a thread for the players to piece together, not a figure they meet.)
 
-### Captain Haymond Rolt (NEW: dossier, campaign/spine.html)
+### Captain Haymond Rolt (campaign/spine.html; done on dossiers/haymond-rolt.html, section 5)
 - Captain Haymond Rolt is the crew's handler in Arc 2. He oversees several Driftwarden crews at once, out of Ondrel Anchorage.
 
 ### Ezra Ahl-Sier (dossiers/ezra.html, factions/order.html)

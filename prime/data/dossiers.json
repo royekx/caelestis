@@ -48,6 +48,18 @@
     "records": []
   },
   {
+    "slug": "haymond-rolt",
+    "name": "Captain Haymond Rolt",
+    "path": "dossiers/haymond-rolt.html",
+    "records": []
+  },
+  {
+    "slug": "hessa-dun",
+    "name": "Hessa Dun",
+    "path": "dossiers/hessa-dun.html",
+    "records": []
+  },
+  {
     "slug": "ilsabet-crann",
     "name": "Ilsabet Crann",
     "path": "dossiers/ilsabet-crann.html",

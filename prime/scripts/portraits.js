@@ -153,6 +153,7 @@
     'aurel-venn':   { name: 'Aurel Venn',          fileId: '' },
     'fleet':        { name: 'United Intergalactic Fleet', fileId: '' },
     'haymond-rolt': { name: 'Haymond Rolt',        fileId: '' },
+    'hessa-dun':     { name: 'Hessa Dun',           fileId: '' },
     'seekers':      { name: 'The Seekers',         fileId: '' },
     'vthorama':     { name: 'The Vth\'orama',      fileId: '' },
     'restorers':    { name: 'The Restorers',       fileId: '' },
