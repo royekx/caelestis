@@ -193,7 +193,7 @@ because later sections link into earlier ones.
 6. **Campaign** (done, branch `campaign`: `campaign/index.html`, `opposition/vthorama.html`, `opposition/vecna.html`, `principles.html`, Plot Hooks with Speculation, Voyages): spine (theme, shape, failure state), ascension (Vecna's
    working, the eye, Oerth), colony (N'ghathrod now), plot hooks, principles.
 7. **Crew** (done, branch `crew`: the six crew pages and the register; no moves): the five crew items in STAGING, plus the crew backlog.
-8. **Fonains and timeline**: the Fonains page and doc, `timeline.json`.
+8. **Fonains and timeline** (done, branch `fonains`: `locations/fonains.html` with Korey's map, `factions/cretez.html`, `dossiers/vanifer.html`, Kwalish's laboratory on `vessels/thessalars-craft.html`, `timeline.json`, the Timeline page and `connections.json`; `realms/` retired): the Fonains page and doc, `timeline.json`. The Fonains doc is outside the repo; the wiki is now its canon home.
 9. **The FIA (`restricted/`)**, next after the DM side and before any player
    page. Fourteen files. Bring each in line with the finished DM pages, in the
    FIA's own voice (§ FIA below): new designations, the Fleet and its
@@ -303,6 +303,8 @@ Old path → new path, added by each pull request that moves a page.
 | `prime/campaign/plot-hooks.html#abandoned-beholders` | retired, no target (the hook is cut; the id is never reused) | Campaign (campaign) |
 | `prime/campaign/voyages/voyage-briefing-002.html` | `prime/campaign/voyages/index.html#v002` (the full briefing is `#v002-briefing`) | Campaign (campaign) |
 | `prime/crew/index.html#crew-open` | retired, no target (the Open table is redistributed to the crew pages and a Campaign decide; the id is never reused) | Crew (crew) |
+| `prime/realms/fonains.html` | `prime/locations/fonains.html` | Fonains and timeline (fonains) |
+| `prime/realms/` | retired; every page moved to `prime/locations/`, and the folder name is never reused | Fonains and timeline (fonains) |
 
 ## Stale branches
 

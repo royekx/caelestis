@@ -448,6 +448,11 @@ order, only those with content:
 | Vessel (`vessels/`) | kind, built by, held by or under command of, where, status | Overview · Appearance · Decks and interior (one subsection per deck or space) · History · In the campaign (a recap by voyage) |
 | Player character (`crew/`) | kind, species, class, station (from the record), origin, affiliation, patron, carries (linked), where the rules live, first voyage, player page, plus kind-specific rows (for example First tether, Maker, Specialisation, Constellation) | Overview · Appearance · Personality · Biography (*Background*; *In the campaign*, one entry per voyage, written from the record) · Relationships · Abilities (prose, no numbers) · Notable items · Quotes |
 
+A place with a map opens its Description with it, as a `figure.plate` (an
+`<img>` at the column's width, a caption, and a link to the full-size file);
+`dm-nav.js` wires it to the lightbox, and the files live in `assets/maps/`.
+`locations/fonains.html` is the example.
+
 A player character page has four tabs, not two, because the arc and the
 homebrew are each too large for DM notes:
 

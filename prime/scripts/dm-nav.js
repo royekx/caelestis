@@ -121,7 +121,7 @@
       axiom: 'expansion',
       items: [
         { key: 'cosmology', label: 'Cosmology',     path: 'cosmology/'  },
-        { key: 'realms',    label: 'Locations',     path: 'locations/', also: ['realms/'] },
+        { key: 'locations', label: 'Locations',     path: 'locations/'  },
         { key: 'vessels',   label: 'Vessels',       path: 'vessels/'    },
         { key: 'artifacts', label: 'Artifacts',     path: 'artifacts/'  },
         { key: 'chart',     label: 'Chart',         path: 'chart/'      },
@@ -223,7 +223,7 @@
       // Normalize: strip trailing index.html if present in the URL.
       var here = pathname;
       // The section is current if the URL contains "/<path>" (path already ends in /).
-      // A section can also claim a folder it is moving out of (realms/ keeps Fonains until it moves to locations/).
+      // A section can also claim a folder it is moving out of, through 'also' (none does now).
       var sec = sections.filter(function (s) { return s.path === p; })[0];
       [p].concat((sec && sec.also) || []).forEach(function (q) {
         if (here.indexOf('/' + q) !== -1 && q.length > bestLen) {
@@ -422,8 +422,9 @@
       t.frame.setAttribute('role', 'button');
       t.frame.setAttribute('tabindex', '0');
       t.frame.setAttribute('aria-label', 'Expand ' + (t.img.getAttribute('alt') || 'portrait'));
-      t.frame.addEventListener('click', function () { open(t); });
+      t.frame.addEventListener('click', function (e) { if (e.target.closest('a')) return; open(t); });
       t.frame.addEventListener('keydown', function (e) {
+        if (e.target.closest('a')) return;
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(t); }
       });
 
