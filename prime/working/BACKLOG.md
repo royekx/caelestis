@@ -34,7 +34,7 @@ staging once Korey has read and accepted them.
 | Locations | locations/ (Fonains stays in its own section) | 21 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
-| Factions | factions/ | 9 | 10 | 1 | 0 | 2 |
+| Factions | factions/ | 10 | 10 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 2 | 2 | 0 | 1 |
 | Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **114** | **146** | **50** | **2** | **54** |
+| **Total** |  | **115** | **146** | **50** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -189,7 +189,7 @@ Order under each page: decide, fix, drop, add.
   done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); prime/factions (section 2); prime/locations (section 3).
 
 - **[decide]** Galactic time cycles (GTC): first arm, counts and the Toril ratio
-  Settled (Korey, 2026-10-28): the Order of All made the count so its Watchers had one clock, and its Keepers keep it; Cycle 0 is the Order's founding, and the current cycle is 1491. The Fleet, founded by Caelestis about 250 cycles ago (about Cycle 1240), adopted it; most call it cycles or Fleet time, and ordinary people keep their own world's calendar. The arms are the clock and the cycle is a full turn: Erevos, the heart at the core, turns once a cycle and throws an unseen beam; when it reaches an arm's root, that arm lights from root to tip over a quarter cycle, and the Erevos Galaxy has four arms. The Order's vocabulary is settled (Korey, 2026-10-28, replacing the hearth): the Beacon is the galactic clock, the one god's signal fire kept burning to give direction, named for no aspect (Korey, 2026-10-28), and the Keepers keep it. A beacon is one full turn (most say cycle); a spark is the moment the light strikes an arm's root and that arm's quarter, four to a beacon; a kindling is one marker cluster passed, numbered 1 to 16 through the beacon; an ember is one day-length count on an armillary. Dates read "the 1491st beacon, seventh kindling, twelfth ember", 1491.7.12 in Fleet logs; durations read "fourteen embers to H'Catha". The Fleet and travellers borrow kindling and ember. Each arm's spark has its own character; what each is is not set. FIA records keep writing "Cycle". The quickening (arms lighting early, cycles shortening over the past few centuries) is in-world on factions/keepers.html and fleet.html; its cause stays in the Keepers' What's hidden. The clock principle is on opposition/vecna.html#clock and principles.html#clock.
+  Settled (Korey, 2026-10-28): the Order of All made the count so its Watchers had one clock, and its Discerners keep it; Cycle 0 is the Order's founding, and the current cycle is 1491. The Fleet, founded by Caelestis about 250 cycles ago (about Cycle 1240), adopted it; most call it cycles or Fleet time, and ordinary people keep their own world's calendar. The arms are the clock and the cycle is a full turn: Erevos, the heart at the core, turns once a cycle and throws an unseen beam; when it reaches an arm's root, that arm lights from root to tip over a quarter cycle, and the Erevos Galaxy has four arms. The Order's vocabulary is settled (Korey, 2026-10-28, replacing the hearth): the Beacon is the galactic clock, the one god's signal fire kept burning to give direction, named for no aspect (Korey, 2026-10-28), and the Keepers keep it. A beacon is one full turn (most say cycle); a spark is the moment the light strikes an arm's root and that arm's quarter, four to a beacon; a kindling is one marker cluster passed, numbered 1 to 16 through the beacon; an ember is one day-length count on an armillary. Dates read "the 1491st beacon, seventh kindling, twelfth ember", 1491.7.12 in Fleet logs; durations read "fourteen embers to H'Catha". The Fleet and travellers borrow kindling and ember. Each arm's spark has its own character; what each is is not set. FIA records keep writing "Cycle". The quickening (arms lighting early, cycles shortening over the past few centuries) is in-world on factions/keepers.html and fleet.html; its cause stays in the Keepers' What's hidden. The clock principle is on opposition/vecna.html#clock and principles.html#clock.
   Still open: which arm's spark is first (the one the Order saw at its founding); kindlings per spark (working default four, sixteen a beacon, each about a Toril month); embers per kindling (working default about thirty, each roughly a Toril day); the character of each arm's spark; and the Toril ratio (working default one beacon to about sixteen Toril months, so each spark is about four, the Order was founded about 1,990 Toril years ago and the Fleet about 330; the timeline places both by it). Do not use "reckoning" for the count's name.
   src: Korey, 2026-10-28 (GTC rulings); replaces "The calendar the Cycle counts" (Korey, 2026-10-26; restricted/ orders)
 - **[later]** Spelljammer's own terms
@@ -289,7 +289,7 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-25 (round 5)
 
 - **[later]** The Order of All's headquarters, houses and Vanguards
-  Settled (Korey, 2026-10-28): the Order of All has a main headquarters elsewhere, and houses in the Fleet's sectors, each commanded by a Vanguard who oversees all three orders posted there. The Caelestis Sector house has a wing for each order; the Hall of Sight and Sound is in the Watchers' wing and mainly theirs (STAGING rounds 5–6). Captain-Commander Dejexic, a Watcher, is the Watcher Vanguard and commands it. The other two Vanguards are a Keeper and a Restorer, commanding houses in other sectors. A house's parts are wings. Still open: the main headquarters' name and place; the Caelestis Sector house's name and place (when the crew is headed there); who the Keeper and Restorer Vanguards are and which sectors they hold; whether the fourth sector has a house; whether one figure leads each order across every sector. DM touchstone: Destiny's Vanguard (Dejexic is the Order's Zavala; the orders echo the Guardian classes).
+  Settled (Korey, 2026-10-28): the Order of All has a main headquarters elsewhere, and houses in the Fleet's sectors, each commanded by a Vanguard who oversees all three orders posted there. The Caelestis Sector house has a wing for each order; the Hall of Sight and Sound is in the Watchers' wing and mainly theirs (STAGING rounds 5–6). Captain-Commander Dejexic, a Watcher, is the Watcher Vanguard and commands it. The other two Vanguards are a Discerner and an Averter, commanding houses in other sectors. A house's parts are wings. Still open: the main headquarters' name and place; the Caelestis Sector house's name and place (when the crew is headed there); who the Discerner and Averter Vanguards are and which sectors they hold; whether the fourth sector has a house; whether one figure leads each order across every sector. DM touchstone: Destiny's Vanguard (Dejexic is the Order's Zavala; the orders echo the Guardian classes).
   src: Korey, 2026-10-25 (round 6)
 
 - **[fix]** "The only Monolith" on Fonains
@@ -762,12 +762,12 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ### factions/order.html
 
 - **[decide]** Who leads the Order of All
-  Ruled (Korey, 2026-10-28): the Order of All is three orders serving one god, the All-Father, in three callings: the Watchers watch, the Keepers protect and keep, the Restorers restore (the All-Mother and All-Haven are retired, Korey 2026-10-28); this replaces the Order of the All-Father and its callings (done: factions/order.html, watchers.html, keepers.html, restorers.html, glossary, cosmology § Core Monolith's pressure, connections.json, timeline.json). Still open: who leads the whole Order, or whether it has a single head at all; whether it has a device of its own; and when the one body founded at Cycle 0 split into three orders (Korey, 2026-10-28: it began as one and split as its following grew and like minds drew together). The headquarters, the sector houses and the Vanguards are under Locations, "The Order of All's headquarters, houses and Vanguards". Dejexic leads the Watchers.
+  Ruled (Korey, 2026-10-28): the Order of All is three orders serving one god, the All-Father, in three callings: Watchers gather intel, Discerners interpret and judge it, Averters act on it, and the Vanguard sanctions (the All-Mother and All-Haven are retired; the Keepers are renamed the Discerners; the Averters join; the Restorers become a movement across all three; Korey 2026-10-28); this replaces the Order of the All-Father and its callings (done: factions/order.html, watchers.html, keepers.html, restorers.html, glossary, cosmology § Core Monolith's pressure, connections.json, timeline.json). Still open: who leads the whole Order, or whether it has a single head at all; whether it has a device of its own; and when the one body founded at Cycle 0 split into three orders (Korey, 2026-10-28: it began as one and split as its following grew and like minds drew together). The headquarters, the sector houses and the Vanguards are under Locations, "The Order of All's headquarters, houses and Vanguards". Dejexic leads the Watchers.
   Touches: factions/order.html (Still to decide), connections.json.
   src: Korey, 2026-10-28 (Order of All ruling)
 
 - **[decide]** The name of the team of three
-  For a truly terrible Zenith the Order of All sends one Watcher, one Keeper and one Restorer (Korey, 2026-10-28). Pages call it "a team of three" or "the three". Name it. DM touchstone: Destiny's fireteams; a raid of six is a possible larger team.
+  For a truly terrible Zenith the Order of All sends one Watcher, one Discerner and one Averter (Korey, 2026-10-28). Pages call it "a team of three" or "the three". Name it. DM touchstone: Destiny's fireteams; a raid of six is a possible larger team.
   Touches: factions/order.html#three, watchers.html, keepers.html, restorers.html, glossary (#the-three).
   src: Korey, 2026-10-28 (Order chain ruling)
 
@@ -787,19 +787,26 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   Add a named-but-unseen row: "A Watcher posted to a region of Glyth got out after years inside the elder brain's range. She still hears it." (Eris Morn pattern.)
   src: working/glyth-watcher.md; memory-canon open-decisions (Vecna direction 2026-10-24)
 
-### factions/keepers.html
+### factions/discerners.html (was keepers.html)
 
-- **[decide]** The Keepers' leader, seat, ranks and look
-  The Order of the Keepers is settled in role (Korey, 2026-10-28): it guards the Monoliths, holds the record and the registry of Monoliths (Ortholiths), keeps the Beacon, the count and the armillaries, forecasts from the Watchers' reports, decides who is sent where, and gives out information; its radical edge holds that nothing leaves the record. It has a wing in each of the Order's houses, answers to the Watcher Vanguard in the Caelestis Sector, and a Keeper Vanguard commands a house in another sector (Korey, 2026-10-28). Not set: who leads it as a whole, who the Keeper Vanguard is, its ranks, and how it looks (device, dress). The Beacon's open counts (first arm, kindlings and embers, the spark characters) stay under Cosmology, Galactic time cycles.
-  Touches: factions/keepers.html (Still to decide), glossary, connections.json.
-  src: Korey, 2026-10-28 (Order of All ruling)
+- **[decide]** The Discerners' leader, seat, ranks and look
+  The Keepers are renamed the Discerners (Korey, 2026-10-28). They interpret and judge the Watchers' intel against the Order's record and the sky (the Beacon), weigh what a Zenith means, what intervening would cost and whether to act, and counsel the Vanguard; guarding the Monoliths, keeping the record and the registry (Ortholiths) and keeping the Beacon stay theirs as part of discerning. They have a wing in each of the Order's houses, answer to the Watcher Vanguard in the Caelestis Sector, and a Discerner Vanguard commands a house in another sector. Not set: who leads them as a whole, who the Discerner Vanguard is and which sector, their ranks, and how they look (device, dress). The Beacon's open counts stay under Cosmology, Galactic time cycles.
+  Touches: factions/discerners.html (Still to decide), glossary, connections.json.
+  src: Korey, 2026-10-28 (Order of All ruling; Discerners rename)
+
+### factions/averters.html
+
+- **[decide]** The Averters' open details
+  The Averters are an old, full order (Korey, 2026-10-28): the tip of the spear, who act once the Discerners judge and the Vanguard sanctions, stopping the ritual, person or plan driving a world toward catastrophe, and going to corrupted Monoliths and to broken worlds where people can still be saved. Their calling is to avert. They have a wing in each house and answer to the Watcher Vanguard in the Caelestis Sector; an Averter Vanguard commands a house in another sector. Not set: who leads them as a whole, who the Averter Vanguard is and which sector, their ranks, and how they look (device, dress, magic).
+  Touches: factions/averters.html (Still to decide), glossary, connections.json.
+  src: Korey, 2026-10-28 (Averters ruling)
 
 ### factions/restorers.html
 
-- **[decide]** The Restorers' place in the Order of All
-  The Restorers are one of the Order of All's three orders (Korey, 2026-10-28), and the old heretics and death-cult friction is now an argument inside the one faith. Settled (Korey, 2026-10-28): the Restorers have always been one of the three orders; over the past few centuries their beliefs and ambitions changed and they wanted to do more, and the "four centuries" counts that active era. They have a wing in each of the Order's houses, answer to the Watcher Vanguard in the Caelestis Sector, and a Restorer Vanguard commands a house in another sector. Not set: what changed them four centuries ago; who the Restorer Vanguard is; how they dress and wear the device; the Fifth Readings' names; and which residue pieces they hold.
-  Touches: factions/restorers.html (Still to decide), dossiers/ilsabet-crann.html, timeline.json.
-  src: Korey, 2026-10-28 (Order of All ruling)
+- **[decide]** When the Restorers' movement began, and Ilsabet's order
+  The Restorers are no longer an order (Korey, 2026-10-28): a young, small movement of like-minded people across all three orders, frustrated that the Order acts only at the last minute and accepts its losses. A Restorer can be a Watcher, a Discerner or an Averter; the movement has no wing, no Vanguard and no ranks, and gathers in informal circles. The source, the Return, the Ledger and the crossings stay; the Readings, cells and the four centuries are gone. Not set: when the movement began (the timeline places it at about sixty cycles as a working default); how many Restorers there are and how they find one another; which residue pieces any of them hold; and which order Ilsabet Crann belongs to.
+  Touches: factions/restorers.html, dossiers/ilsabet-crann.html (Still to decide), timeline.json, connections.json.
+  src: Korey, 2026-10-28 (Restorers ruling)
 
 ### Every faction page: tensions
 
@@ -939,7 +946,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   src: inbox/chat-early-planning.md § Campaign Planning (turn 124)
 
 - **[later]** A one-shot as an Order team
-  A one-shot where the players are an Order of All team of three, one Watcher, one Keeper and one Restorer, sent against a terrible Zenith with a Monolith's arrival as the clock; a raid-sized team of six is possible (Korey, 2026-10-28).
+  A one-shot where the players are an Order of All team of three, one Watcher, one Discerner and one Averter, sent against a terrible Zenith with a Monolith's arrival as the clock; a raid-sized team of six is possible (Korey, 2026-10-28).
   src: Korey, 2026-10-28 (Order chain ruling)
 
 # Dossiers
@@ -1061,7 +1068,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ### dossiers/ilsabet-crann.html
 
 - **[later]** What her Ledger shows
-  The Restorers have walked into Zeniths deliberately for four centuries, which sits awkwardly with the page's claim that her Ledger holds the Zenith pattern unrecognised. Options: the Restorers know Zeniths as crossings but miss the rising frequency; or the pattern stays fully unread.
+  The Restorers walk into Zeniths deliberately, which sits awkwardly with the page's claim that her Ledger holds the Zenith pattern unrecognised. Options: the Restorers know Zeniths as crossings but miss the rising frequency; or the pattern stays fully unread.
   src: timeline "The Restorers walk into Zeniths"; dossiers/ilsabet-crann.html § What's hidden
 
 ---
