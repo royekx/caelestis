@@ -80,11 +80,6 @@ when a ruling changes; delete it once the page carries it. See
 - Two of the five lieutenants are properly raised illithids who were captured with N'ghathrod aboard Thessalar's craft. The other three are unthinned: made aboard the craft from bodies Thessalar supplied for his experiments and N'ghathrod's own tadpoles.
 - done: factions/vthorama.html and factions/seekers.html (section 2). Still waiting: dossiers/vthoramu.html and the lieutenants' dossiers.
 
-### The Restorers (factions/restorers.html)
-- The Restorers are trying to reach a heart, and through it the Core Monolith, where they believe everything lost is stored. They compete for residue pieces. Without knowing it, they advance Vecna's plan.
-- Restoring a world, as the Restorers understand it, takes a Monolith, a heart and all five fragments of residue.
-- They follow the Core Monolith's pressure as Vecna does, read through a different mind. Their understanding is theory and vision, little of it concrete. They and the Seekers have clashed over the years, and some on each side believe they walk the same path.
-
 ### Aethris and the sisters (factions/aethris.html, realms/aethris.html, dossiers/beshaba.html, factions/deities.html)
 - The Fortuned are a sect that grew from a temple order of Tymora on Aethris. They are clerics for the most part, and a priest or priestess leads them. They are not the rulers of the whole world.
 - Long ago they cast a generational curse to increase their own fortune: a group of people were made to gather their misfortune. Those people are the Misfortuned.

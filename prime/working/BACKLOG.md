@@ -1036,10 +1036,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   Do people with their own dossiers get thumbnails on the Factions page?
   src: chat-cosmic-campaign-structure § Open
 
-- **[fix]** The Restorers' All-Mother
-  Page says "which their doctrine names the Mother of the Universe". Change to "which their doctrine names the All-Mother".
-  src: chat-cosmic-campaign-structure § Superseded
-
 ---
 
 ### factions/fleet.html (was academy-fleet.html)
@@ -1115,18 +1111,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 - **[add]** Joffrey's row
   Add: "Joffrey was taken slowly. He was himself for months, decorated and top of his class, and only recently finished converting. One clean, confused survivor of the Bellwether Crow noticed he had changed and never reported it." DM: the crew finds that survivor by pulling the Crow's roster.
   src: memory-canon open-decisions (operative resolved)
-
----
-
-### factions/restorers.html
-
-- **[fix]** The All-Mother
-  Page says "which their doctrine names the Mother of the Universe" and the Doctrine stat "The Core is the Mother of the Universe". Change both to the All-Mother.
-  src: chat-cosmic-campaign-structure § Superseded
-
-- **[drop]** "The oldest chapter"
-  The section marked Canon ("The Restorers are a Seeker chapter. They are the first one…") and the reveal sequence ending "Then read the providence entries in order. Then find the first entry." carry the superseded v1 framing (oldest Seeker chapter, fed by Vecna as providence). Restorers v2 has no tie to Vecna. Remove the section and rewrite the reveal bullet without the providence entries.
-  src: chat-cosmic-campaign-structure § Superseded (Restorers v1 → v2); campaign/ascension
 
 ---
 

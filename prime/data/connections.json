@@ -378,23 +378,6 @@
       ]
     },
     {
-      "id": "citadel-restorer",
-      "label": "The Restorer in the Citadel",
-      "type": "person",
-      "scope": "cosmos",
-      "summary": "A Restorer taken long ago, who has reasoned out what restoration would require.",
-      "facts": [
-        {
-          "t": "A Restorer inside the Citadel has had centuries to reason out what restoration would take.",
-          "src": "factions/restorers.html"
-        },
-        {
-          "t": "This Restorer may be the only being in the cosmos who holds the whole requirement: a Monolith, a world's heart, and all four fragments.",
-          "src": "factions/restorers.html"
-        }
-      ]
-    },
-    {
       "id": "first-heart",
       "label": "The First Heart",
       "type": "concept",
@@ -1521,6 +1504,14 @@
         },
         {
           "t": "Their own name for their work is the Return.",
+          "src": "factions/restorers.html"
+        },
+        {
+          "t": "As the Restorers understand it, restoring a world takes a Monolith, a heart and all five fragments of residue.",
+          "src": "factions/restorers.html"
+        },
+        {
+          "t": "The Order and the Restorers treat each other as heretics; the Order calls them a death cult.",
           "src": "factions/restorers.html"
         }
       ]
@@ -5794,24 +5785,6 @@
       "s": "restorers",
       "t": "the-ledger",
       "rel": "keep",
-      "src": "factions/restorers.html"
-    },
-    {
-      "s": "citadel-restorer",
-      "t": "restorers",
-      "rel": "belongs to",
-      "src": "factions/restorers.html"
-    },
-    {
-      "s": "citadel-restorer",
-      "t": "radiant-citadel",
-      "rel": "sits in",
-      "src": "factions/restorers.html"
-    },
-    {
-      "s": "citadel-restorer",
-      "t": "residue-thresholds",
-      "rel": "has reasoned out",
       "src": "factions/restorers.html"
     },
     {
