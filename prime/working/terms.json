@@ -2,7 +2,8 @@
   "about": "Read by scripts/terms.js. 'retired' terms must not appear on DM pages once their section is finished; 'voice' patterns mark decision voice or placeholders on world pages; 'moved' lists old page paths that must not be linked. 'scan' lists the top folders read; 'finished' lists the folders whose hits fail the check; everything else is reported as a warning. 'allow' holds 'path:regex' pairs for legitimate uses.",
   "finished": [
     "prime/cosmology",
-    "prime/glossary"
+    "prime/glossary",
+    "prime/factions"
   ],
   "retired": [
     {

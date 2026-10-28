@@ -30,21 +30,21 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 10 | 12 | 17 | 0 | 5 |
+| Cosmology | cosmology/, glossary/, chart/ | 9 | 12 | 17 | 0 | 5 |
 | Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 23 | 2 | 28 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
-| Factions | factions/ | 3 | 6 | 20 | 3 | 36 |
+| Factions | factions/ | 2 | 6 | 1 | 0 | 4 |
 | Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 39 | 5 | 36 |
-| Dossiers | dossiers/ | 9 | 6 | 43 | 1 | 53 |
+| Dossiers | dossiers/ | 8 | 6 | 44 | 1 | 53 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 7 | 2 | 26 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 21 |
-| New pages | 14 proposed pages, the hub, notes/ | 3 | 17 | 5 | 2 | 35 |
+| New pages | 14 proposed pages, the hub, notes/ | 3 | 17 | 5 | 2 | 34 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 3 | 0 | 1 |
-| **Total** | | **82** | **90** | **239** | **15** | **370** |
+| **Total** | | **79** | **90** | **221** | **12** | **337** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -145,7 +145,7 @@ Order under each page: decide, fix, drop, add.
 - **[fix]** Tharizdun is she
   Tharizdun is female. Pages and drafts that call her he/his/him: cosmology/index.html, realms/fonains.html, realms/index.html, dossiers/thessalar.html, crew/boogie.html, artifacts/fonains-shard.html, campaign/spine.html, factions/academy-fleet.html, chart/index.html, working/tharizdun.md, and the Fonains Canon Reference doc. STAGING and the Connections layer are done.
   src: Korey, 2026-10-27
-  done: cosmology and glossary (distribution section 1, 2026-10-27).
+  done: cosmology and glossary (distribution section 1, 2026-10-27); factions (section 2).
 
 - **[fix]** Dharra, not Darra
   The Cre'Tez sister is Dharra. Fix the Fonains Canon Reference doc and any page that spells it Darra. STAGING and the Connections layer are done.
@@ -159,7 +159,7 @@ Order under each page: decide, fix, drop, add.
   Ruled (STAGING, Cosmology § The Axioms): the Axioms are Consolidation, Expansion, Dissolution, Distinction and Determination, acting on energy that was always there. The old four map: Convergence → Consolidation (the Rod of Seven Parts is the Consolidation fragment, 7 pieces); Dissolution stays Dissolution, now the mixing of everything into sameness (the twins' fragment, 2); Boundary → Distinction (A.T.L.A.S., its sister and the third piece, 3); Transformation → Expansion (the 5-piece fragment). Determination's fragment is new: 11 pieces, none found. A Zenith is a world at its peak of Distinction, not "Convergence driving a system to maximum expression"; Monoliths are Continuity's response, and the strain from their rise is a byproduct of Vecna's work, not a weight on one Axiom. The Transformation–Boundary seam is cut. Every backlog item that quotes an old Axiom name reads under this mapping.
   Pages: prime/cosmology (the Four Axioms, Continuity, the strain, the seam section to cut), prime/glossary, prime/chart, prime/artifacts/* (index, rod-of-seven-parts, runekeepers-fragment, transformation-fragment → expansion-fragment, containment-engine, fonains-shard), prime/campaign/* (index, ascension, spine, plot-hooks, what-if), prime/crew/index.html and tumak.html, prime/dossiers/nghathrod.html and the-runekeeper.html, prime/factions/* (academy-fleet, deities, runekeepers, vthorama), prime/realms/index.html and wayfinders-homeworld.html (concealment rides on the Dissolution fragment's cycle), prime/rules/index.html, timeline.json, working/vecna.md. Done with the distribution pass. STAGING, the survey and the Connections layer already use the five.
   src: Korey, 2026-10-26
-  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); opposition/vecna.html (pilot).
+  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); opposition/vecna.html (pilot); prime/factions (section 2).
 
 - **[later]** Place GAL-01's inscription on the chart
   Ruled: GAL-01's inscription is the eye he lost, sixteen heart worlds (ten lids, six iris); the iris worlds are key (STAGING, Campaign; diagram 2026-10-26). Left for when play needs it: which systems hold which strokes, and whether any known system (Realmspace, Krynnspace, Virenspace) lies on the figure. Greyspace is not on it: Oerth is the retina every eye world links back to (STAGING, Campaign).
@@ -180,7 +180,7 @@ Order under each page: decide, fix, drop, add.
 - **[fix]** Spheres become galaxies, everywhere
   Ruled (STAGING, Cosmology): the cosmos is five galaxies around Erevos; "sphere" as a region of space is retired, and SPH-0n becomes GAL-0n; Oerth moves to GAL-01. Pages: prime/cosmology, prime/chart (labels, the sphere layer, "the godless sphere"), prime/glossary, prime/realms/*, prime/factions/*, prime/campaign/*, timeline.json, working/divine-rules.md, the README naming rule, and the Fonains Canon Reference doc. Every backlog item below that quotes "sphere" reads as "galaxy". Done with the distribution pass. The survey, the Connections DM layer and STAGING already use galaxies.
   src: Korey, 2026-10-26
-  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27).
+  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); prime/factions (section 2).
 
 - **[decide]** The calendar the Cycle counts *(later)*
   Pages date orders by Cycle (1486, 1489, 1490); the survey uses Cycle 1490 as the present for provisional designations. Set what the Cycle counts from, and how Toril's reckoning, Fonains's "year 425" and Krynn's calendar line up against it.
