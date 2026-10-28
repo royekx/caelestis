@@ -35,16 +35,16 @@ staging once Korey has read and accepted them.
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 9 | 1 | 0 | 2 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 0 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 1 |
 | Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
-| New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 4 | 2 | 23 |
+| New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 4 | 2 | 24 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** |  | **98** | **130** | **78** | **4** | **81** |
+| **Total** |  | **98** | **130** | **78** | **4** | **83** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -274,8 +274,8 @@ Order under each page: decide, fix, drop, add.
   In the Erevos Galaxy view, the uncharted systems appear only when the inscription layer is switched on (Korey 2026-10-27). Every system in the survey shows in the base view, charted or not (with the charted tag once it exists); the inscription layer adds only the eye.
   src: chat 2026-10-27
 
-- **[fix]** The chart's eye view is drawn from Oerth's point of view
-  The inscription layer on `prime/chart/` draws the eye over the top-down Erevos Galaxy map, with Oerth as a dot at the bottom and lines fanning up to it. That view doesn't match the systems on the map beneath it. The eye exists only as seen from Oerth: Oerth is the viewer, and the heart worlds line up into the eye only from there (Korey 2026-10-27). With the layer on, the map turns to look at the galaxy edge-on from Oerth, so the heart worlds keep their real positions and the eye forms out of them in that projection. Oerth is the camera, not a point in the picture. Turning from top-down to Oerth's view can be an animated transition.
+- **[fix]** The flat chart's eye view matches the holochart
+  `prime/chart/holo.html` places the fifteen heart worlds in three dimensions so they line up into the eye only from Oerth, and its "Line it up from Oerth" view shows it (Korey 2026-10-27). The flat chart's inscription layer still draws a separate eye over the top-down map, with hearts at positions that don't match the holochart's. Bring them into agreement: plot the holochart's heart positions top-down on the flat chart, and have its "View from Oerth" hand off to the holochart, or drop the flat eye in favour of a link.
 
 - **[add]** Sectors on the chart
   A layer that shades the Fleet's sectors in the Erevos Galaxy view, the Caelestis Sector first, once its systems are decided (see Factions: The Caelestis Sector's systems).
@@ -943,6 +943,9 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 # Campaign
 
 Campaign planning pages under `prime/campaign/`. Items are grouped by page and ordered decide, fix, drop, add. Planning pages speak in DM voice. World facts quoted for a page read in-world.
+
+- **[add]** A map of Vecna's plan, taken from N'ghathrod
+  A possible find: something pulled from N'ghathrod or the colony that shows where the heart worlds lie (Korey 2026-10-28). In play it hands the crew the inscription; on the site it adds the hearts to the record, so the player holochart can show them and the crew can solve the eye by lining it up from Oerth. When and how it is found is not set.
 
 The Remaking is now only the Ascension's fail state. Every page link that says "the Remaking" for the plan or the machinery points to `opposition/vecna.html` (the plan) or `opposition/vthorama.html` (the colony's operations and the Fork) instead.
 
@@ -1849,6 +1852,11 @@ against the complete Tumak sweep (all 336 turns).
   src: TGB § Tumak/Player tracker
 
 # New pages
+
+### NEW: Player holochart
+
+- **[add]** A player version of the 3D holochart
+  The DM holochart (`prime/chart/holo.html`) is built; the players get their own (Korey 2026-10-28). It shows only what the crew knows: charted systems and places with a record, and the crew's route voyage by voyage, read from `data/`. Heart worlds appear only once the record holds them (the repo is public, so unfound positions must never ship in a player file). With the hearts in hand, the crew can set the viewpoint to any known system; from Oerth the eye forms. Players may mark their own waypoints in their browser. Needs a player folder (into the deploy glob and the S.E.A.R.C.H. scope) or a home under `stellar-chart/`, and the in-world framing of the projection.
 
 ### NEW: Languages (reference)
 
