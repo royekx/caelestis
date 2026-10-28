@@ -471,7 +471,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The Order of All",
-      "desc": "One faith of three orders, one god in three callings. The Watchers are posted one per region on worlds approaching a Zenith; the Discerners guard Ortholiths, believing the taken are inside them, and keep the count; the Restorers mend what Zeniths break. Its founding is Cycle 0 of the count the Discerners keep.",
+      "desc": "One faith of three orders, one god in three callings. Watchers gather intel, posted one per region on worlds approaching a Zenith; Discerners interpret and judge it, guard Ortholiths believing the taken are inside them, and keep the count; Averters act on it. Its founding is Cycle 0 of the count the Discerners keep.",
       "t": -1990,
       "end": 0,
       "tier": 2
@@ -479,10 +479,10 @@
     {
       "lane": "order",
       "status": "past",
-      "cert": "canon",
+      "cert": "working",
       "title": "The Restorers walk into Zeniths",
-      "desc": "For four centuries the radical edge of the Order of the Restorers walks into Zeniths on purpose to be archived, trying to reach the source they believe every Monolith answers to. The archiving is bodily, and many of the order's best people are in the Radiant Citadel.",
-      "t": -400,
+      "desc": "The Restorers, a young movement across the Order of All's three orders, take shape, and their most radical members walk into Zeniths on purpose to be archived, trying to reach the source they believe every Monolith answers to. The archiving is bodily, and those who crossed are in the Radiant Citadel. Placed at about sixty cycles as a working default; when the movement began is not set.",
+      "t": -60,
       "end": 0,
       "tier": 2
     },

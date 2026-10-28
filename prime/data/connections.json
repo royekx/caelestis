@@ -1311,14 +1311,14 @@
       "label": "The Order of All",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "One faith of three orders that reveres the Core's pressure as one god, the All-Father, in three callings: to watch, to keep and to restore.",
+      "summary": "One faith of three orders that reveres the Core's pressure as one god, the All-Father, in three callings: to watch, to discern and to avert.",
       "facts": [
         {
-          "t": "The Order of All is made of three orders, the Watchers, the Discerners and the Restorers, each understanding the All-Father's charge differently.",
+          "t": "The Order of All is made of three orders, the Watchers, the Discerners and the Averters, each understanding the All-Father's charge differently; a young movement, the Restorers, runs across all three.",
           "src": "factions/order.html"
         },
         {
-          "t": "The orders form a chain: the Watchers see, the Discerners judge, the Restorers act, and a sector's Vanguard sanctions; the Fleet carries all three.",
+          "t": "Watchers gather intel; Discerners interpret and judge it; Averters act on it; the Vanguard sanctions; the Fleet carries all three.",
           "src": "factions/order.html#together"
         },
         {
@@ -1326,7 +1326,7 @@
           "src": "factions/order.html#beliefs"
         },
         {
-          "t": "The three orders argue inside the one faith: over watching and doing, over keeping and sharing, and over the Restorers' crossings.",
+          "t": "The orders argue inside the one faith: over where the line for intervening falls, over keeping and sharing, and over the Restorers' wish to go back for what was lost.",
           "src": "factions/order.html#arguments"
         },
         {
@@ -1338,8 +1338,12 @@
           "src": "STAGING round 11"
         },
         {
-          "t": "For a truly terrible Zenith it sends a team of three, a Watcher, a Discerner and a Restorer, to stop the ritual, person or plan driving it; a Monolith's arrival is their clock.",
+          "t": "For a truly terrible Zenith it sends a team of three, a Watcher, a Discerner and an Averter, to stop the ritual, person or plan driving it; a Monolith's arrival is their clock.",
           "src": "factions/order.html#three"
+        },
+        {
+          "t": "A calling is a duty, not a whole creed: every order holds a spread of belief, from cautious to radical.",
+          "src": "factions/order.html#beliefs"
         }
       ]
     },
@@ -1397,7 +1401,7 @@
       "label": "The Order of the Discerners",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "The Order of All's order that judges: it weighs the Watchers' reports against the record and counsels the Vanguard, and keeps the Monoliths and the Beacon; its calling is to protect and keep.",
+      "summary": "The Order of All's order that interprets and judges the Watchers' intel against the record and the sky, and counsels the Vanguard; guarding the Monoliths, the record and the Beacon is part of discerning.",
       "facts": [
         {
           "t": "The Discerners guard the Monoliths as though the taken were inside them, when everything taken goes to the Core.",
@@ -1422,6 +1426,27 @@
         {
           "t": "Their radical edge holds that nothing leaves the record and that secrets are safer kept.",
           "src": "factions/discerners.html"
+        }
+      ]
+    },
+    {
+      "id": "averters",
+      "label": "The Order of the Averters",
+      "type": "faction",
+      "scope": "cosmos",
+      "summary": "The Order of All's order that acts, the tip of its spear; its calling is to avert, to turn a catastrophe aside before it lands.",
+      "facts": [
+        {
+          "t": "Once the Discerners judge and the Vanguard sanctions, the Averters form the team and go in to stop the ritual, person or plan driving a world toward catastrophe.",
+          "src": "factions/averters.html"
+        },
+        {
+          "t": "They go to corrupted Monoliths and to broken worlds where people can still be saved.",
+          "src": "factions/averters.html"
+        },
+        {
+          "t": "The Averters are an old order; their leader, ranks and look are not set.",
+          "src": "factions/averters.html"
         }
       ]
     },
@@ -1463,7 +1488,7 @@
       "summary": "The Watcher Vanguard, commanding the Order of All's Caelestis Sector house, and speaker of the All-Father.",
       "facts": [
         {
-          "t": "Dejexic is the Watcher Vanguard of the Caelestis Sector house: he commands it and oversees the Watchers, Discerners and Restorers posted there.",
+          "t": "Dejexic is the Watcher Vanguard of the Caelestis Sector house: he commands it and oversees the Watchers, Discerners and Averters posted there.",
           "src": "factions/order.html#caelestis-house"
         },
         {
@@ -1561,17 +1586,17 @@
     },
     {
       "id": "restorers",
-      "label": "The Order of the Restorers",
+      "label": "The Restorers",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "The Order of All's order that acts, the one willing to step in; its calling is to restore, and it reaches for the Core.",
+      "summary": "A young, small movement across all three orders of the Order of All that asks why the Order cannot go back and save what was lost; it reaches for the source, which is the Core.",
       "facts": [
         {
           "t": "The Restorers are trying to reach a heart, and through it the Core Monolith, where they believe everything lost is stored.",
           "src": "STAGING round 5"
         },
         {
-          "t": "They take the All-Father's charge as a calling to restore, and posit a source where he holds everything taken.",
+          "t": "They posit a source where the All-Father holds everything taken, and mean to reach it and bring things back.",
           "src": "STAGING round 2"
         },
         {
@@ -1583,19 +1608,7 @@
           "src": "STAGING round 2"
         },
         {
-          "t": "For four centuries Restorers have walked into Zeniths on purpose to be archived, and many arrived.",
-          "src": "factions/restorers.html"
-        },
-        {
-          "t": "They work in cells of four to nine, and standing is measured in Readings from a First through a Fifth.",
-          "src": "factions/restorers.html"
-        },
-        {
-          "t": "Four living Fifth Readings hold the work on the approach to the Core.",
-          "src": "factions/restorers.html"
-        },
-        {
-          "t": "Their own name for their work is the Return.",
+          "t": "Their writings call the work the Return.",
           "src": "factions/restorers.html"
         },
         {
@@ -1603,11 +1616,11 @@
           "src": "factions/restorers.html"
         },
         {
-          "t": "The Watchers and the Discerners count the Restorers' crossings foolhardy, and some in both orders have called them a death cult; the argument is inside the one faith.",
-          "src": "factions/watchers.html#arguments"
+          "t": "A Restorer can be a Watcher, a Discerner or an Averter; the movement has no wing, no Vanguard and no ranks, and is a few generations old at most.",
+          "src": "factions/restorers.html"
         },
         {
-          "t": "They go to dead worlds, recover residue, bring survivors out of broken worlds and deal with corrupted Monoliths, and when an intervention is sanctioned it is Restorers who go.",
+          "t": "Walking into Zeniths to be archived is the movement's most radical act; some in every order sympathise, others think it dangerous.",
           "src": "factions/restorers.html"
         }
       ]
@@ -1617,10 +1630,10 @@
       "label": "The Ledger",
       "type": "item",
       "scope": "cosmos",
-      "summary": "The Restorers' record of established losses, held in deliberately partial copies.",
+      "summary": "The Restorers' record of established losses, copied by hand and passed between circles.",
       "facts": [
         {
-          "t": "The Ledger is distributed across Restorer cells so that no one holds all of it.",
+          "t": "The Ledger is copied by hand and passed between Restorer circles, so that no one holds all of it.",
           "src": "factions/restorers.html"
         },
         {
@@ -1634,14 +1647,14 @@
       "label": "Ilsabet Crann",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A hadozee Restorer of the Third Reading, keeping a cell of six on a trade station.",
+      "summary": "A hadozee field historian and Restorer, working with a circle of six on a trade station; her order is not set.",
       "facts": [
         {
           "t": "Ilsabet Crann holds a Ledger segment covering four decades of Realmspace losses.",
           "src": "dossiers/ilsabet-crann.html"
         },
         {
-          "t": "She earned her Third Reading by establishing a lost settlement of eleven hundred people nobody had recorded.",
+          "t": "She made her name establishing a lost settlement of eleven hundred people nobody had recorded.",
           "src": "dossiers/ilsabet-crann.html"
         },
         {
@@ -6219,7 +6232,7 @@
     {
       "s": "ilsabet-crann",
       "t": "restorers",
-      "rel": "keeps a cell of",
+      "rel": "is one of",
       "src": "factions/restorers.html"
     },
     {
@@ -6241,10 +6254,16 @@
       "src": "factions/order.html"
     },
     {
-      "s": "restorers",
+      "s": "averters",
       "t": "order",
       "rel": "is one of the three orders of",
       "src": "factions/order.html"
+    },
+    {
+      "s": "restorers",
+      "t": "order",
+      "rel": "is a movement within",
+      "src": "factions/restorers.html"
     },
     {
       "s": "discerners",
@@ -6260,14 +6279,14 @@
     },
     {
       "s": "discerners",
-      "t": "restorers",
+      "t": "averters",
       "rel": "counsel where to send",
       "src": "factions/order.html#together"
     },
     {
       "s": "higher-organization",
-      "t": "restorers",
-      "rel": "carries to broken places",
+      "t": "averters",
+      "rel": "carries to where they are sent",
       "src": "factions/fleet.html"
     },
     {
