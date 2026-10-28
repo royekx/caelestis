@@ -1423,10 +1423,10 @@
       "label": "The Hall of Sight and Sound",
       "type": "place",
       "scope": "cosmos",
-      "summary": "The great hall in the Watchers' wing of the Order of All's headquarters.",
+      "summary": "The great hall in the Watchers' wing of the Order of All's Caelestis Sector house.",
       "facts": [
         {
-          "t": "The Hall of Sight and Sound is the great hall in the Watchers' wing of the Order of All's headquarters, and mainly theirs.",
+          "t": "The Hall of Sight and Sound is the great hall in the Watchers' wing of the Order of All's Caelestis Sector house, and mainly theirs.",
           "src": "STAGING round 5"
         },
         {
@@ -1440,8 +1440,12 @@
       "label": "Captain-Commander Dejexic",
       "type": "person",
       "scope": "cosmos",
-      "summary": "Leader of the Watchers and speaker of the All-Father.",
+      "summary": "The Watcher Vanguard, commanding the Order of All's Caelestis Sector house, and speaker of the All-Father.",
       "facts": [
+        {
+          "t": "Dejexic is the Watcher Vanguard of the Caelestis Sector house: he commands it and oversees the Watchers, Keepers and Restorers posted there.",
+          "src": "factions/order.html#caelestis-house"
+        },
         {
           "t": "Dejexic is a purplish-blue plasmoid in obsidian armour with galaxies swirling in its reflection.",
           "src": "factions/watchers.html"
@@ -6267,7 +6271,7 @@
     {
       "s": "dejexic",
       "t": "watchers",
-      "rel": "leads",
+      "rel": "is the Watcher Vanguard of",
       "src": "factions/watchers.html"
     },
     {

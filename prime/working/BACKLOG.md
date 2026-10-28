@@ -288,8 +288,8 @@ Order under each page: decide, fix, drop, add.
   Ruled: they echo a hand and an eye without showing them outright (STAGING round 5). The design is open.
   src: Korey, 2026-10-25 (round 5)
 
-- **[later]** The Order of All's headquarters
-  The Order of All has one headquarters, with a wing for each order; the Hall of Sight and Sound is in the Watchers' wing and mainly theirs (Korey, 2026-10-28; STAGING rounds 5–6). Name and place the headquarters when the crew is headed there. Use "wing", never "sector", which is a Fleet word.
+- **[later]** The Order of All's headquarters, houses and Vanguards
+  Settled (Korey, 2026-10-28): the Order of All has a main headquarters elsewhere, and houses in the Fleet's sectors, each commanded by a Vanguard who oversees all three orders posted there. The Caelestis Sector house has a wing for each order; the Hall of Sight and Sound is in the Watchers' wing and mainly theirs (STAGING rounds 5–6). Captain-Commander Dejexic, a Watcher, is the Watcher Vanguard and commands it. The other two Vanguards are a Keeper and a Restorer, commanding houses in other sectors. A house's parts are wings. Still open: the main headquarters' name and place; the Caelestis Sector house's name and place (when the crew is headed there); who the Keeper and Restorer Vanguards are and which sectors they hold; whether the fourth sector has a house; whether one figure leads each order across every sector. DM touchstone: Destiny's Vanguard (Dejexic is the Order's Zavala; the orders echo the Guardian classes).
   src: Korey, 2026-10-25 (round 6)
 
 - **[fix]** "The only Monolith" on Fonains
@@ -750,14 +750,14 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ### factions/order.html
 
 - **[decide]** Who leads the Order of All
-  Ruled (Korey, 2026-10-28): the Order of All is three orders, the Watchers (the All-Father), the Keepers (the All-Haven) and the Restorers (the All-Mother), one god in three aspects; this replaces the Order of the All-Father and its callings (done: factions/order.html, watchers.html, keepers.html, restorers.html, glossary, cosmology § Core Monolith's pressure, connections.json, timeline.json). Still open: who leads the whole Order, or whether it has a single head at all; whether it has a device of its own; and when the one body founded at Cycle 0 split into three orders (Korey, 2026-10-28: it began as one and split as its following grew and like minds drew together). The Order has one headquarters with a wing for each order; its name and location are under Locations, "The Order of All's headquarters". Dejexic leads the Watchers.
+  Ruled (Korey, 2026-10-28): the Order of All is three orders, the Watchers (the All-Father), the Keepers (the All-Haven) and the Restorers (the All-Mother), one god in three aspects; this replaces the Order of the All-Father and its callings (done: factions/order.html, watchers.html, keepers.html, restorers.html, glossary, cosmology § Core Monolith's pressure, connections.json, timeline.json). Still open: who leads the whole Order, or whether it has a single head at all; whether it has a device of its own; and when the one body founded at Cycle 0 split into three orders (Korey, 2026-10-28: it began as one and split as its following grew and like minds drew together). The headquarters, the sector houses and the Vanguards are under Locations, "The Order of All's headquarters, houses and Vanguards". Dejexic leads the Watchers.
   Touches: factions/order.html (Still to decide), connections.json.
   src: Korey, 2026-10-28 (Order of All ruling)
 
 ### factions/watchers.html
 
 - **[decide]** The Watchers' open details
-  The Watchers have a wing at the Order of All's headquarters, and the Hall of Sight and Sound is in it (Korey, 2026-10-28). Whether the Watchers have ranks between Watcher and Captain-Commander is not set. Nereth Vaul's species (it sets the final form of her name) is still open. See also Locations, "The Order of All's headquarters", and New pages, Hall of the Watchers.
+  The Watchers have a wing in each of the Order's houses; the Hall of Sight and Sound is in their wing of the Caelestis Sector house, and Dejexic is the Watcher Vanguard (Korey, 2026-10-28). Whether the Watchers have ranks between Watcher and Captain-Commander is not set. Nereth Vaul's species (it sets the final form of her name) is still open. See also Locations, "The Order of All's headquarters, houses and Vanguards", and New pages, Hall of the Watchers.
   Touches: factions/watchers.html (Still to decide).
   src: Korey, 2026-10-28 (Order of All ruling)
 
@@ -768,14 +768,14 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ### factions/keepers.html
 
 - **[decide]** The Keepers' leader, seat, ranks and look
-  The Order of the Keepers is settled in role (Korey, 2026-10-28): it guards the Monoliths, holds the record and the registry of Monoliths (Ortholiths), keeps the Beacon, the count and the armillaries, forecasts from the Watchers' reports, decides who is sent where, and gives out information; its radical edge holds that nothing leaves the record. It has a wing at the Order's headquarters (Korey, 2026-10-28). Not set: who leads it, anything more about its wing, its ranks, and how it looks (device, dress). The Beacon's open counts (first arm, kindlings and embers, the spark characters) stay under Cosmology, Galactic time cycles.
+  The Order of the Keepers is settled in role (Korey, 2026-10-28): it guards the Monoliths, holds the record and the registry of Monoliths (Ortholiths), keeps the Beacon, the count and the armillaries, forecasts from the Watchers' reports, decides who is sent where, and gives out information; its radical edge holds that nothing leaves the record. It has a wing in each of the Order's houses, answers to the Watcher Vanguard in the Caelestis Sector, and a Keeper Vanguard commands a house in another sector (Korey, 2026-10-28). Not set: who leads it as a whole, who the Keeper Vanguard is, its ranks, and how it looks (device, dress). The Beacon's open counts (first arm, kindlings and embers, the spark characters) stay under Cosmology, Galactic time cycles.
   Touches: factions/keepers.html (Still to decide), glossary, connections.json.
   src: Korey, 2026-10-28 (Order of All ruling)
 
 ### factions/restorers.html
 
 - **[decide]** The Restorers' place in the Order of All
-  The Restorers are one of the Order of All's three orders (Korey, 2026-10-28), and the old heretics and death-cult friction is now an argument inside the one faith. Settled (Korey, 2026-10-28): the Restorers have always been one of the three orders; over the past few centuries their beliefs and ambitions changed and they wanted to do more, and the "four centuries" counts that active era. They have a wing at the Order's headquarters. Not set: what changed them four centuries ago; anything more about their wing; how they dress and wear the device; the Fifth Readings' names; and which residue pieces they hold.
+  The Restorers are one of the Order of All's three orders (Korey, 2026-10-28), and the old heretics and death-cult friction is now an argument inside the one faith. Settled (Korey, 2026-10-28): the Restorers have always been one of the three orders; over the past few centuries their beliefs and ambitions changed and they wanted to do more, and the "four centuries" counts that active era. They have a wing in each of the Order's houses, answer to the Watcher Vanguard in the Caelestis Sector, and a Restorer Vanguard commands a house in another sector. Not set: what changed them four centuries ago; who the Restorer Vanguard is; how they dress and wear the device; the Fifth Readings' names; and which residue pieces they hold.
   Touches: factions/restorers.html (Still to decide), dossiers/ilsabet-crann.html, timeline.json.
   src: Korey, 2026-10-28 (Order of All ruling)
 
