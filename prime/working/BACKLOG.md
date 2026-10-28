@@ -31,7 +31,7 @@ staging once Korey has read and accepted them.
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 9 | 12 | 13 | 0 | 3 |
-| Locations | locations/ (Fonains stays in its own section) | 21 | 20 | 0 | 0 | 1 |
+| Locations | locations/ (Fonains stays in its own section) | 21 | 22 | 0 | 0 | 1 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
 | Factions | factions/ | 3 | 6 | 2 | 0 | 4 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 3 | 0 | 1 |
-| **Total** | | **82** | **105** | **200** | **10** | **308** |
+| **Total** | | **82** | **107** | **200** | **10** | **308** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -336,6 +336,10 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
   Casey's homeworld (a star fell on it and Polly left afterward; possibly the Cycle 1486 "deliberate" meteor event in SA-002) and Bartholomew's (Rashemi, a druidic tradition pointed outward) have no place. Place them when their arcs need it. See also the crew section.
   src: realms/index.html § unplaced (old page)
 
+- **[later]** The register's Standing filter
+  The register sorts places by Been there, Next and Not yet. That is the crew's progress, campaign state on a setting page. Decide whether the register keeps the filter, or moves it to a campaign view.
+  src: Locations review, 2026-10-28
+
 ### locations/realmspace.html
 
 - **[later]** Hollis Post
@@ -464,6 +468,10 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
 - **[later]** Ostrel and the port
   Ostrel lies in a neighbouring system within the Caelestis Sector (Korey 2026-10-28). Which system, what Ostrel orbits, Ostrel's designation, what "neutral" means at Ondrel, and who runs the port are not set.
   src: Korey, 2026-10-28; STAGING § Fleet (round 11)
+
+- **[later]** Who works from Ondrel
+  The page says captains of the Caelestis Corps work from Ondrel, overseeing Driftwarden crews and handing out contracts. STAGING names only Rolt doing so. Confirm that Ondrel holds more than one such handler, or narrow the line to Rolt.
+  src: Locations review, 2026-10-28
 
 ### locations/oerth.html
 
