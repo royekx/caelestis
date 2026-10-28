@@ -16,6 +16,11 @@
   ],
   "retired": [
     {
+      "pattern": "unfinished Zenith|Zenith (is|stands) unfinished|Mid-Zenith",
+      "use": "a Zenith is a moment and does not continue: on Aethris the Zenith came in Cycle 1490, and what stands incomplete is the Fortuned's ritual",
+      "i": true
+    },
+    {
       "pattern": "\\bLich Vecna\\b",
       "use": "Vecna (Lich)"
     },

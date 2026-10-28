@@ -31,7 +31,7 @@ staging once Korey has read and accepted them.
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 10 | 13 | 13 | 0 | 3 |
-| Locations | locations/ (Fonains stays in its own section) | 21 | 24 | 0 | 0 | 1 |
+| Locations | locations/ (Fonains stays in its own section) | 21 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 4 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 3 | 10 | 1 | 0 | 2 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **105** | **144** | **49** | **2** | **54** |
+| **Total** |  | **105** | **145** | **49** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -553,6 +553,10 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
 - **[later]** The hub's identity and name
   Korey liked the carved meteor as a dead god's severed head. Name options: the Crown, Godsrest, the Wanderhead, the Rock. Where it sits on the lane, and who lives there, are not set.
   src: chat-voyage-6-7-planning § Open
+
+- **[later]** A second Zenith on Aethris
+  A Zenith is a moment: it builds, happens, a Monolith answers, and it is over. Aethris's came in Cycle 1490 and the Prism Ascendant answered it; the Fortuned's ritual is what stands incomplete. Whether a world can have a second Zenith, and whether completing the ritual could bring one to Aethris, is not established. Pages say nothing on it until it is ruled.
+  src: Korey, 2026-10-28 (FIA rulings, 4)
 
 # Fonains
 

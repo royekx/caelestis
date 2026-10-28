@@ -122,7 +122,7 @@
           "src": "STAGING, Cosmology"
         },
         {
-          "t": "A Zenith is a world at its peak of Distinction.",
+          "t": "A Zenith is the moment a world reaches its peak of Distinction; it happens, a Monolith answers, and it does not continue.",
           "src": "STAGING, Cosmology"
         },
         {
@@ -4158,18 +4158,18 @@
       "label": "Aethris",
       "type": "place",
       "scope": "caelestis",
-      "summary": "Sol's Tymora-devoted homeworld, mid-Zenith.",
+      "summary": "Sol's Tymora-devoted homeworld, past its Zenith.",
       "facts": [
         {
           "t": "Aethris sorts its people into the Fortuned and the Misfortuned.",
           "src": "locations/aethris.html"
         },
         {
-          "t": "Aethris's Zenith is unfinished because the Fortuned have not completed their ritual.",
+          "t": "Aethris's Zenith came in Cycle 1490; what stands incomplete is the Fortuned's ritual.",
           "src": "STAGING round 8"
         },
         {
-          "t": "Vecna is pushing the Zenith toward completion from outside, and nobody on Aethris knows it.",
+          "t": "Vecna is pushing the Fortuned's ritual toward completion from outside, and nobody on Aethris knows it.",
           "src": "locations/aethris.html"
         }
       ]
@@ -4196,7 +4196,7 @@
       "label": "The Fortuned",
       "type": "faction",
       "scope": "caelestis",
-      "summary": "A sect grown from a temple order of Tymora on Aethris, mostly clerics, whose unfinished ritual began Aethris's Zenith.",
+      "summary": "A sect grown from a temple order of Tymora on Aethris, mostly clerics, whose ritual brought Aethris to its Zenith and stands incomplete.",
       "facts": [
         {
           "t": "The Fortuned want Sol back as a component of their ritual and do not care about him as a person.",
@@ -5742,7 +5742,7 @@
     {
       "s": "vecna",
       "t": "aethris",
-      "rel": "pushes the Zenith of",
+      "rel": "pushes the Fortuned's ritual on",
       "src": "locations/aethris.html"
     },
     {
