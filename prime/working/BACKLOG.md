@@ -34,17 +34,17 @@ staging once Korey has read and accepted them.
 | Locations | locations/ (Fonains stays in its own section) | 21 | 22 | 0 | 0 | 1 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
-| Factions | factions/ | 3 | 9 | 2 | 0 | 3 |
+| Factions | factions/ | 3 | 9 | 2 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 15 | 1 | 2 | 0 | 0 |
 | Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
-| Crew | crew/ | 9 | 13 | 12 | 0 | 72 |
+| Crew | crew/ | 9 | 15 | 8 | 0 | 54 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 4 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** |  | **96** | **124** | **90** | **4** | **154** |
+| **Total** |  | **96** | **126** | **86** | **4** | **135** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -130,6 +130,7 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - `data/sessions.json`, `quests.json` and `items.json` call Ostekk-6 an autognome; OSTEKK units are automatons.
 - DM dossiers with no record, though the crew may have met or been told of them: Polly Geim (Casey's brother), Clint Dashforest, Qitru, Quartermaster Halix Verrow, the Crystalline Retrieval Construct, Ezra Ahl-Sier. Each gets a record at first contact; check whether any contact has already happened (section 5).
 - `data/npcs.json` names Miken "Miken"; the DM dossier and the Fleet row use his full name, Miken Haverstance. Add the surname to the record if Korey agrees.
+- `data/player-characters.json` (Sol Fortuna, Voyage 4) says he "used Misfortune's Favor to draw ill luck onto his own shoulders". Misfortune's Favored is the oath's level-20 capstone and was earlier the working name of his Misfortuned feature; the Voyage 4 use reads as a self-Jinx or a Misfortuned use. crew/sol.html leaves the feature unnamed. Confirm the name and correct the line if Korey agrees.
 - `data/npcs.json` (Winston Ryeback, Voyage 6) says he "was told the beholder had been taken care of, and took it to mean the crew had killed it"; the ruling is that Tumak told him outright that the crew killed it (dossiers/winston-ryeback.html).
 
 ## Still coming in
@@ -909,11 +910,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/order.html
 
-- **[add]** The Sol extraction
-  Add under Watchers: "A Watcher extracted Sol Fortuna from Aethris, against the Order's remit to preserve worlds, not individuals." (Add a matching line on crew/sol.html.)
-  done: factions/order.html (pilot, What's hidden); crew/sol.html still needs its line.
-  src: chat-early-planning § FIA lore content
-
 - **[add]** The Watcher who came back from Glyth
   Add a named-but-unseen row: "A Watcher posted to a region of Glyth got out after years inside the elder brain's range. She still hears it." (Eris Morn pattern.)
   src: working/glyth-watcher.md; memory-canon open-decisions (Vecna direction 2026-10-24)
@@ -1325,23 +1321,10 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 ### crew/sol.html
 
-- **[add]** "Am I a person or a function?" (DM)
-  The retired spine gave Sol's arc a thematic question, "Am I a person or a function?", and framed him as living proof of what other worlds are aimed toward. Decide whether it stands beside the theme (what Sol is missing is a decide under campaign/index.html), then write it on the crew page.
-  src: campaign/spine.html (retired, campaign section, conflict C16)
-
-- **[add]** Beshaba's reward is power
-  Ruled (STAGING round 8). Add to this page and dossiers/beshaba.html (DM voice): "Beshaba's reward for the oath is power. To give it shape she has to want something and lay that want on Sol as a quest."
-  The acknowledgment scene ran as planned: the level-3 oath landed before V003's Convening (campaign/voyages/index.html, V003 Actual: "All four level-3 vignettes landed, for Tumak, Sol, Boogie and Gregory").
-  src: Korey, 2026-10-25 (round 8); BCS § Sol/Acknowledgment scene
-  done: dossiers/beshaba.html (section 5); crew/sol.html still needs it.
-
-- **[add]** Beshaba did not arrange Sol's escape
-  Ruled (STAGING round 8). Add to DM notes here and on dossiers/beshaba.html: "Beshaba did not arrange Sol's escape from Aethris."
-  src: Korey, 2026-10-25 (round 8); BCS § Sol/Open
-  done: dossiers/beshaba.html (section 5); crew/sol.html still needs it.
+- *(The question "Am I a person or a function?" from the retired spine waits on the decide "What Gregory and Sol are missing" under campaign/index.html; crew/sol.html carries it as a Still to decide sentence.)*
 
 - **[later]** Misfortuned rebalance (on hold)
-  Korey does not recall this thread; it waits until he returns to it. Until then the locked turn-757 text (the add below) stands. For reference, he paused it at turn 899 ("hold that and I'll come back to it"). His diagnosis then: Sol can change several rolls a combat and Unburden without feeling the cost. The pending draft:
+  Korey does not recall this thread; it waits until he returns to it. Until then the locked turn-757 text on crew/sol.html § Misfortuned stands. For reference, he paused it at turn 899 ("hold that and I'll come back to it"). His diagnosis then: Sol can change several rolls a combat and Unburden without feeling the cost. The pending draft:
   - Burden charges equal his proficiency bonus and come back on a long rest only.
   - Burden adds his Charisma modifier to an ally's roll, after the roll and before the outcome. It no longer turns a failure into a success (Korey compared auto-success to Legendary Resistance).
   - Misfortune level equals Burden charges spent. Each level is a flat −1 to all of Sol's d20 Tests, replacing the d6 ability penalty.
@@ -1349,102 +1332,13 @@ Items whose source sweep is still partial keep their `(sampled)` or
   Exhaustion as the cost was tried and dropped. Sol cannot Burden himself.
   src: BCS § Sol/Open, § Sol/Misfortuned; Korey, 2026-10-25 (backlog pass)
 
-- **[fix]** The C.R.C. is CR 7
-  Page says "CR 8, on an advanced detention drone chassis"; change to "CR 7, on an advanced detention drone chassis". Add Legendary Resistance (2/Day) and the Withdrawal Threshold to the trait list. This matches dossiers/crc.html, statblocks/index.html and the canon block (Medium, CR 7, AC 17, 136 HP, Withdrawal Threshold at 68 HP). The chat's stat block (Large, CR 8, AC 18, 152 HP) is the earlier draft; the dossier is the later version.
-  src: memory-canon § Antagonists (CRC stat block); dossiers/crc.html; BCS § Sol/C.R.C. and the scry beats
+- **[later]** The gloss for the tenet Court Adversity
+  crew/sol.html names the tenets Never Yield, Court Adversity and Risk Is Not Ruin, with glosses for the first and third only. Court Adversity's gloss is in oath-of-misfortune.md in the Sol chat outputs, which is not in the repo. Bring it in and add it to the oath on crew/sol.html.
+  src: section 7 (2026-10-28); inbox/chat-crew-boogie-casey-sol.md § Sol/Oath of Misfortune
 
-- **[fix]** Tenet: Court Adversity
-  Page says "Trial by Fire &mdash; a life without adversity is a life unlived". The tenet is now Court Adversity (Korey, turn 737). Rename it, and take its gloss from oath-of-misfortune.md in the chat outputs. The tenets read Never Yield, Court Adversity, Risk Is Not Ruin.
-  src: BCS § Sol/Oath of Misfortune
-
-- **[fix]** Jinx charges and duration
-  Page says "Charges equal his Charisma modifier, minimum one". Change to "Charges equal 1 + his Charisma modifier, minimum two, all regained on a long rest" (Korey, turn 720). Also: each Jinx option is usable once per turn, and the self-Jinx's shifted thresholds last until the start of his next turn; the page gives neither.
-  src: BCS § Sol/Oath of Misfortune
-
-- **[fix]** Misfortune's Wake is a bonus action
-  Page says "Misfortune's Wake &mdash; a magic action spreading Jinxed". Change to: "Misfortune's Wake &mdash; a bonus action, no Jinx charge. Choose a creature within 30 feet and an ability; it and any others of his choice within 15 feet of it have Disadvantage on d20 Tests with that ability until the start of his next turn. No damage, no save."
-  src: BCS § Sol/Oath of Misfortune
-
-- **[add]** Lucky feat and sheet
-  Sol has the Lucky feat. At the oath his sheet runs CON +4 and CHA +4 (CHA 18).
-  src: BCS § Sol/Identity
-
-- **[add]** Table notes
-  - Sol's player chose Beshaba and wants to lean into her.
-  - He likes complex mechanics; keep them from bogging down the table.
-  - The table struggles with ambiguity, so Augury-style vague answers are out.
-  - The party has no cleric; the oath spells were weighed against that.
-  - Keep small daily misfortunes in play around him (chores landing on him, things falling). The player wants this.
-  - Present something and let him respond; never dictate what he feels or does.
-  src: BCS § Sol/Identity, § Sol/H'Catha transit, § Sol/Acknowledgment scene
-
-- **[add]** Black lightning in V002
-  Add to his arc: "In V002 Sol took Boogie's misfortune onto himself. Black lightning broke from him, and he heard Beshaba laugh for the first time."
-  src: BCS § Sol/Identity
-
-- **[add]** Misfortuned (core rule)
-  New section, listed under "Where the rules live". Misfortuned is Sol's own permanent character feature because he is Misfortuned; the points it tracks are called Misfortune. It is separate from the oath and persists even if he breaks the oath. The personal burden lives here so the oath stays pure upside, like the official oaths. The arc runs Misfortuned → Oath of Misfortune → Misfortune's Favored (the capstone).
-  Locked text (turn 757):
-  - Misfortune caps at his proficiency bonus.
-  - Each point is −1 to one ability modifier, chosen by d6 (1 Str, 2 Dex, 3 Con, 4 Int, 5 Wis, 6 Cha). The penalty carries through to spell save DC and spell attack. Penalties stack. All Misfortune clears on Unburden or at level-up.
-  - **Burden** (reaction): when a friendly creature within 60 ft. fails a roll, after the die is shown and before the outcome is declared, the roll becomes a success and Sol gains 1 Misfortune.
-  - **Unburden** (reaction): at cap, Sol applies plus or minus his total Misfortune to any creature's roll within 60 ft., and all Misfortune clears. A natural 20 stays a critical hit.
-  - Burden and Unburden share his reaction, so only one happens per round.
-  At levels 1–2, before the oath, it ran without a cap or Unburden: penalties persisted until level-up, and the player did not know when they would clear. A rebalance is on hold (later above).
-  src: BCS § Sol/Misfortuned, § Sol/Pre-oath Fortune mechanic
-
-- **[add]** How the player tracks Misfortune
-  The player tracks each point as an item on D&D Beyond named "Misfortune (STR)", "Misfortune (DEX)" and so on, and clears them before processing a level-up. The D&D Beyond text uses plain words (no arrows, dashes or equals signs) and a two-column d6 table.
-  src: BCS § Sol/Misfortuned, § Sol/Pre-oath Fortune mechanic
-
-- **[add]** Beshaba's test (add to "Beshaba's voice")
-  The pre-oath interventions were Beshaba testing Sol. First comes distant laughter only he hears. After two or three interventions she asks: "How long will you bear it?"
-  At the oath scene a full commitment quietly clears his penalties. A hedged answer earns one word: "Finally."
-  src: BCS § Sol/Beshaba's test
-
-- **[add]** Misfortune's Pall (L7)
-  The page names the feature only. Add: "He and allies in his Aura of Protection have Advantage on death saving throws and regain 1 hit point on a 19 or 20. They also have Advantage on saving throws against any effect from a cursed creature, wherever that creature is."
-  src: BCS § Sol/Oath of Misfortune
-
-- **[add]** Misfortune's Reckoning (L15) damage and line
-  Add the Inevitable Strike figure: once per turn, a critical hit on a cursed creature adds psychic damage equal to twice his paladin level. Korey kept the once-per-turn cap rather than add a crit-fail cost. Flavor line: "You no longer endure misfortune. You direct it."
-  src: BCS § Sol/Oath of Misfortune
-
-- **[add]** Misfortune's Favored (L20)
-  The page says "The capstone." only. Add: a bonus action, lasting 10 minutes, once per long rest or by spending a 5th-level slot. Two halves:
-  - **Misfortune.** Any creature that enters the aura or starts its turn there takes necrotic damage equal to his Charisma modifier. Hostile creatures in the aura cannot score critical hits.
-  - **Favor.** Sol is exempt from the damage. Allies in the aura score critical hits on 19–20 and have Advantage on attacks against cursed creatures. His Jinx may pick two abilities.
-  The damage hits allies too: "misfortune does not care who the target is" (Korey; Cloak of Flies is the precedent). Allies trade the damage for the Favor. This settles the old question of whether the capstone can target Sol himself.
-  src: BCS § Sol/Oath of Misfortune; framework § Open
-
-- **[add]** Oath design notes (DM voice)
-  - Subclass features deal necrotic and psychic; Divine Smite stays radiant, as the base class.
-  - He is a bruiser with no defensive level-15 feature; defense comes from the base class and the oath spells. Korey: "Ill Omen isn't about changing what happened but instead about mitigating it entirely or rolling with it."
-  - Oath spells may come from any class list (Ancients, Vengeance and Glory set the precedent).
-  src: BCS § Sol/Oath of Misfortune
-
-- **[add]** Scry 2 timing
-  Scry 2 comes just before the crew leaves H'Catha to return to Caelestis.
-  src: BCS § Sol/C.R.C. and the scry beats
-
-- **[add]** The C.R.C. at the main entrance
-  When the crew returns, the C.R.C. is waiting at the Caelestis main entrance. The crew hears murmurs first, then: "Sol Fortuna. You are required." The encounter is an objective-based escape, not a kill. Also stage this on dossiers/crc.html, where the location is a decide.
-  src: BCS § Sol/C.R.C. and the scry beats; memory-canon § Antagonists (first CRC encounter on Caelestis)
-  done: dossiers/crc.html (section 5); crew/sol.html still needs it.
-
-- **[add]** Tarto stands up for Sol
-  When the C.R.C. arrives, Boatswain Tarto stands up for Sol: he is under the academy's protection. Also add to dossiers/boatswain-tarto.html.
-  src: BCS § Sol/C.R.C. and the scry beats
-  done: dossiers/boatswain-tarto.html (section 5); crew/sol.html still needs it.
-
-- **[add]** How Sol reached Caelestis
-  The Watcher order broke protocol to recommend that Sol be taken to Caelestis.
-  src: BCS § Sol/C.R.C. and the scry beats; memory-canon (open-decisions, how cadets reached Caelestis)
-
-- **[add]** Who knows Sol's background
-  Mirt, Tarto and Saerthe know Sol's background and keep it to themselves.
-  src: BCS § Sol/C.R.C. and the scry beats
-  done: dossiers/mirt.html, boatswain-tarto.html and saerthe-abizjn.html (section 5); crew/sol.html still needs it.
+- **[later]** Sol's sheet
+  His current level and D&D Beyond URL, and whether the sheet's oath spells and Charisma 18 match crew/sol.html Mechanics › Build.
+  src: section 7 (2026-10-28)
 
 ### crew/casey.html
 

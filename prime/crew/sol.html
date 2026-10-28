@@ -9,105 +9,275 @@
 <link rel="stylesheet" href="../../styles/entity.css">
 <link rel="stylesheet" href="../../styles/dm.css">
 <script src="../scripts/dm-nav.js" defer></script>
+<script src="../scripts/portraits.js" defer></script>
+<script src="../scripts/dm-tabs.js" defer></script>
 </head>
 <body>
 
 <main class="dm-content">
 
   <header class="dm-page-header">
-    <div class="dm-page-eyebrow">Crew<span class="sep">&middot;</span>Oath of Misfortune</div>
+    <div class="dm-page-eyebrow">Crew<span class="sep">&middot;</span>Paladin, Oath of Misfortune &middot; Gunner</div>
     <h1>Sol Fortuna</h1>
   </header>
 
-  <div class="voyage-nav-bar"><a class="voyage-nav-link" href="gregory.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Gregory</span></a><a class="voyage-nav-center" href="index.html">Realms</a><a class="voyage-nav-link" href="tumak.html"><span class="nav-label">Tumak Swan</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
+  <div class="voyage-nav-bar"><a class="voyage-nav-link" href="gregory.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Gregory</span></a><a class="voyage-nav-center" href="index.html">Crew</a><a class="voyage-nav-link" href="tumak.html"><span class="nav-label">Tumak Swan</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
 
-  <div class="entry-header">
-    <div class="identity-card">
+  <div class="entry-header is-wiki">
+    <aside class="identity-card" aria-label="Sol Fortuna at a glance">
+      <div class="portrait-frame dossier-portrait" data-key="sol"></div>
       <div class="stat-card">
-        <div class="stat-row"><span class="stat-key">Class</span><span class="stat-val stat-val-long">Astral elf paladin</span></div>
-        <div class="stat-row"><span class="stat-key">Mechanic</span><span class="stat-val stat-val-long">Oath of Misfortune</span></div>
-        <div class="stat-row"><span class="stat-key">Where the rules live</span><span class="stat-val stat-val-long">The subclass, written out below</span></div>
-        <div class="stat-row"><span class="stat-key">Open</span><span class="stat-val stat-val-long">Whether the Fortuned want him back as a person or a component</span></div>
+        <div class="stat-row"><span class="stat-key">Kind</span><span class="stat-val stat-val-long">Player character</span></div>
+        <div class="stat-row"><span class="stat-key">Species</span><span class="stat-val stat-val-long">Astral elf, born Misfortuned</span></div>
+        <div class="stat-row"><span class="stat-key">Class</span><span class="stat-val stat-val-long">Paladin, Oath of Misfortune</span></div>
+        <div class="stat-row"><span class="stat-key">Station</span><span class="stat-val stat-val-long">Gunner</span></div>
+        <div class="stat-row"><span class="stat-key">Origin</span><span class="stat-val stat-val-long"><a href="../locations/aethris.html">Aethris</a>, CSC 56973 b</span></div>
+        <div class="stat-row"><span class="stat-key">Affiliation</span><span class="stat-val stat-val-long">Cadet, <a href="../factions/fleet.html#cadets">Caelestis Spelljammer Academy</a></span></div>
+        <div class="stat-row"><span class="stat-key">Patron</span><span class="stat-val stat-val-long"><a href="../dossiers/beshaba.html">Beshaba</a></span></div>
+        <div class="stat-row"><span class="stat-key">Carries</span><span class="stat-val stat-val-long">Heavier armament from the quartermaster's stores</span></div>
+        <div class="stat-row"><span class="stat-key">Where the rules live</span><span class="stat-val stat-val-long">This page: <a href="#misfortuned">Misfortuned</a>, <a href="#oath">the oath</a>, <a href="#jinx">Jinx</a></span></div>
+        <div class="stat-row"><span class="stat-key">First voyage</span><span class="stat-val stat-val-long">Voyage 1</span></div>
+        <div class="stat-row"><span class="stat-key">Player page</span><span class="stat-val stat-val-long"><a href="../../crew-manifest/sol-fortuna.html">Crew manifest</a></span></div>
       </div>
-    </div>
+    </aside>
+
     <div class="entry-info">
       <div class="entry-name">Sol Fortuna</div>
-      <div class="entry-sub">A paladin of a homebrew oath, and the one crew member whose homeworld is mid-Zenith.</div>
+      <div class="entry-sub">A Misfortuned astral elf who left Aethris before its ritual closed, and Beshaba's chosen.</div>
+
+      <div class="pill-tabs" role="tablist" data-pill-group aria-label="Sol Fortuna sections">
+        <button class="pill-tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true">About</button>
+        <button class="pill-tab" role="tab" id="tab-arc" aria-controls="panel-arc" aria-selected="false">Arc</button>
+        <button class="pill-tab" role="tab" id="tab-mech" aria-controls="panel-mech" aria-selected="false">Mechanics</button>
+        <button class="pill-tab" role="tab" id="tab-dm" aria-controls="panel-dm" aria-selected="false">DM notes</button>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-about" aria-labelledby="tab-about">
+        <p>
+          Sol Fortuna is an astral elf paladin born Misfortuned on <a href="../locations/aethris.html">Aethris</a>, a world devoted to Tymora whose Zenith stands unfinished because he left before the Fortuned's ritual closed. He bears <a href="../dossiers/beshaba.html">Beshaba</a>'s mark openly and swore her Oath of Misfortune. He is the crew's gunner and front line, and the <a href="../dossiers/crc.html">Crystalline Retrieval Construct</a> the Fortuned built to bring him home is hunting him.
+        </p>
+
+        <h4>Appearance</h4>
+        <p>
+          Tall and pale, with dark hair and white eyes. When misfortune moves through him, black lightning breaks from his body and snaps back, thin as a hair.
+        </p>
+
+        <h4>Personality</h4>
+        <p>
+          He is steady, even after a simulated death, and he anticipates danger before it arrives and puts himself between it and his crew. He backs people without being asked. He believes his life has always turned unlucky, and he wants to spend it exploring. He answers honestly when a god asks him a question. Small misfortunes find him every day, chores landing on him and things falling near him, and he wears them.
+        </p>
+
+        <h4>Biography</h4>
+        <h5>Background</h5>
+        <p>
+          Long ago the Fortuned, a sect grown from Tymora's temple order on Aethris, cast a generational curse to increase their own fortune, and the people made to carry their misfortune have been born Misfortuned ever since. Sol was born one of them. The Fortuned's ritual of perfection at the temple site began Aethris's Zenith, and the Prism Ascendant manifested above the temple in answer. Sol left before the ritual closed and came to Caelestis. The Fortuned built the Crystalline Retrieval Construct after he left, for him alone.
+        </p>
+        <h5>In the campaign</h5>
+        <ul>
+          <li><strong>Voyage 1.</strong> He drove a ballista bolt through an attacker in the <em><a href="../vessels/moonraider.html">Moonraider</a></em> simulation and stepped silently behind Boogie in the bunk dispute. He sought out <a href="../dossiers/joffrey.html">Joffrey</a> to ask what this life truly offered, and talked his way into heavier armament. He fell hard on the gym course and forced himself up to finish when Boogie shouted him on. In Mirt's chambers he noticed the wardrobe opened onto bounded astral night, and he took the last centipede creature alive, sensing it might matter as evidence. He told Boogie his life had always turned unlucky and that he wanted to spend it exploring.</li>
+          <li><strong>Voyage 2.</strong> He asked Ryeback for soup and got the knock-your-mama's-socks-off kind, and took the guns for the crew. Mid-jump on the salvage run he felt misfortune reach for Boogie and took it onto himself, saving Boogie's landing. Black lightning broke from him, and as his strength dropped a woman laughed three times. By the third he knew it was Beshaba.</li>
+          <li><strong>Voyage 3.</strong> He traced the crate at the Sky Dock with Boogie and found it marked with the same symbol as the rod, then worked an elven cargo clerk into saying that shipments route through Mr. Blip, with Toril and H'Catha as destinations. In the night a curious, unhurried voice asked him why he embraced chaos and whether he had truly escaped where he came from. He answered honestly, and he swore the Oath of Misfortune.</li>
+          <li><strong>Voyage 4.</strong> He took the front of both fights aboard the <em><a href="../vessels/tyrant-ship.html">Tyrant Ship</a></em> and drew the enemy onto himself. He swept the wisp bloom with his divine sense, struck the first flower with sacred flame, and caught the weak-limbed wisps in dark tentacles. He drew ill luck onto his own shoulders and made a save through it.</li>
+          <li><strong>Voyage 5.</strong> He stayed in the cargo hold with Ryeback, Pffred and Krik'Lit to guard the helm and the crew.</li>
+          <li><strong>Voyage 6.</strong> He fought clockwork horrors in the cargo hold beside Ryeback, Pffred and Krik'Lit, then spoke for the crew to Ostekk-10 at the garden shaft. He destroyed two side flowers and brought the ceiling flower down with his javelin. Afterward he remembered Ostekk-2, left on the Hollow Deck, and he is still thinking about it.</li>
+        </ul>
+
+        <h4>Relationships</h4>
+        <h5><a href="../dossiers/beshaba.html">Beshaba</a></h5>
+        <p>
+          The goddess of misfortune, who answered someone Aethris threw away. She talks at him in brief, capricious utterances and leaves air for him to answer into. Her reward for his oath is power, and small misfortunes around him now feel attended to.
+        </p>
+        <h5><a href="../factions/aethris.html">The Fortuned</a></h5>
+        <p>
+          The sect that cursed his people. They want him back alive because he is a component of their unfinished ritual, and they do not care about him as a person. Their wanted notice for him travels the lane-marker boards.
+        </p>
+        <h5><a href="../dossiers/crc.html">Crystalline Retrieval Construct</a></h5>
+        <p>
+          The Fortuned's construct, built for one target. Its mask resolves toward his face, and its address to him never changes: &ldquo;Sol Fortuna. You are required.&rdquo;
+        </p>
+        <h5><a href="boogie.html">Boogie</a></h5>
+        <p>
+          Sol backed him in the bunk dispute without a word, Boogie shouted him back onto his feet on the gym course, and the misfortune Sol first took onto himself was Boogie's.
+        </p>
+
+        <h4>Abilities</h4>
+        <p>
+          A paladin of the Oath of Misfortune. He senses the divine and the profane, heals and smites, and his oath's magic is dark: tentacles of shadow, curses and stolen life. He can jinx a creature so its luck fails it, or jinx himself, widening his chance of greatness and of ruin at the same price. He can take an ally's failure onto himself and turn it into a success, and each time he does, misfortune weakens him a little more until he releases it all at once onto someone else's fortune.
+        </p>
+
+        <h4>Notable items</h4>
+        <ul>
+          <li><strong>Heavier armament.</strong> Talked out of the quartermaster's stores in Voyage 1.</li>
+        </ul>
+
+        <h4>Quotes</h4>
+        <ul>
+          <li>Beshaba to Sol, at the oath: &ldquo;Well, you had my curiosity but now, you have my attention&hellip; I must say, it was a bold move leaving your &lsquo;perfect&rsquo; home, but what makes you so sure you escaped? Fate can be a cruel and twisted thing. Wield it wisely. Or not.&rdquo;</li>
+        </ul>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-arc" aria-labelledby="tab-arc" hidden>
+        <h4 id="missing">What he is missing</h4>
+        <p>
+          The theme does not name it yet (Still to decide). The row is on <a href="../campaign/index.html#sol">Campaign &rarr; Crew</a>.
+        </p>
+
+        <h4 id="heads">Where it heads</h4>
+        <p>
+          Back toward Aethris, whose ritual needs him, with the Crystalline Retrieval Construct hunting him and every meeting with it harder than the last. Beshaba's reward for the oath is power, and to give it shape she has to want something and lay that want on Sol as a quest; that quest is the next step of his arc. Mechanically the arc runs Misfortuned, then the Oath of Misfortune, then Misfortune's Favored, the capstone.
+        </p>
+
+        <h4>Gates and escalation</h4>
+        <ul>
+          <li><strong>Beshaba's test.</strong> The pre-oath interventions were Beshaba testing him: first distant laughter only he hears, then, after two or three interventions, &ldquo;How long will you bear it?&rdquo; At the oath scene a full commitment quietly clears his penalties, and a hedged answer earns one word: &ldquo;Finally.&rdquo;</li>
+          <li><strong>The first scry.</strong> Played in Voyage 2's free roam as a Wisdom save with the scry's &minus;5 behind the screen. He feels something either way; the save sets only how clear it is.</li>
+          <li><strong>The second scry.</strong> Just before the crew leaves H'Catha to return to Caelestis.</li>
+          <li><strong>The main entrance.</strong> When the crew returns, the construct is waiting at the Caelestis main entrance. The crew hears murmurs first, then &ldquo;Sol Fortuna. You are required.&rdquo; It runs as an objective-based escape, not a kill; the encounter is on the <a href="../dossiers/crc.html">construct's dossier</a>. When it arrives, <a href="../dossiers/boatswain-tarto.html">Boatswain Tarto</a> stands up for Sol: he is under the Academy's protection.</li>
+        </ul>
+
+        <h4 id="next-beat">Next beat</h4>
+        <p>
+          The Fortuned's wanted notice on the lane-marker board in Voyage 7. The beat is on <a href="../campaign/voyages/index.html#v007">Voyages &rarr; V007, Beats owed</a>.
+        </p>
+
+        <h4>Table notes</h4>
+        <ul>
+          <li>Sol's player chose Beshaba and wants to lean into her.</li>
+          <li>He likes complex mechanics. Keep them from bogging down the table.</li>
+          <li>The table struggles with ambiguity, so vague, Augury-style answers are out.</li>
+          <li>The party has no cleric, and the oath spells were weighed against that.</li>
+          <li>Keep small daily misfortunes in play around him: chores landing on him, things falling. The player wants this.</li>
+          <li>Present something and let him respond. Never dictate what he feels or does.</li>
+        </ul>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-mech" aria-labelledby="tab-mech" hidden>
+        <h4 id="build">Build</h4>
+        <p>
+          Paladin, Oath of Misfortune from level 3, with the Lucky feat. At the oath his sheet runs Constitution +4 and Charisma +4 (Charisma 18). Oath spells: <em>arms of Hadar</em> and <em>hex</em> at 3rd level; <em>detect thoughts</em> and <em>warding bond</em> at 5th; <em>bestow curse</em> and <em>life transference</em> at 9th; <em>death ward</em> and <em>phantasmal killer</em> at 13th; <em>steel wind strike</em> and <em>synaptic static</em> at 17th. Full D&amp;D Beyond snippets are kept outside the wiki.
+        </p>
+
+        <h4 id="misfortuned">Misfortuned</h4>
+        <p>
+          Sol's own permanent character feature, because he is Misfortuned. The points it tracks are called Misfortune. It is separate from the oath and persists if he breaks the oath. The personal burden lives here so the oath stays pure upside, like the official oaths.
+        </p>
+        <ul>
+          <li>Misfortune caps at his proficiency bonus.</li>
+          <li>Each point is &minus;1 to one ability modifier, chosen by d6 (1 Str, 2 Dex, 3 Con, 4 Int, 5 Wis, 6 Cha). The penalty carries through to spell save DC and spell attack. Penalties stack. All Misfortune clears on Unburden or at level-up.</li>
+          <li><strong>Burden</strong> (reaction). When a friendly creature within 60 feet fails a roll, after the die is shown and before the outcome is declared, the roll becomes a success and Sol gains 1 Misfortune.</li>
+          <li><strong>Unburden</strong> (reaction). At cap, Sol applies plus or minus his total Misfortune to any creature's roll within 60 feet, and all Misfortune clears. A natural 20 stays a critical hit.</li>
+          <li>Burden and Unburden share his reaction, so only one happens per round. He cannot Burden himself.</li>
+        </ul>
+        <p>
+          At levels 1 and 2, before the oath, it ran without a cap or Unburden: penalties persisted until level-up, and the player did not know when they would clear.
+        </p>
+        <p>
+          The player tracks each point as an item on D&amp;D Beyond named &ldquo;Misfortune (STR)&rdquo;, &ldquo;Misfortune (DEX)&rdquo; and so on, and clears them before processing a level-up. The D&amp;D Beyond text uses plain words, with no arrows, dashes or equals signs, and a two-column d6 table.
+        </p>
+
+        <h4 id="oath">Oath of Misfortune</h4>
+        <p>
+          Homebrew and complete, written without a named god so it stands on its own. Paladins of Misfortune hold that adversity is the only honest teacher, that comfort breeds weakness, and that hardship endured is strength earned. They face misfortune in understanding rather than fear, and they wear it.
+        </p>
+        <p>
+          Its tenets are Never Yield, Court Adversity and Risk Is Not Ruin. The first holds that only surrender ends anything; the third, that calculated danger is wisdom and malicious harm is not.
+        </p>
+
+        <h4 id="jinx">Jinx</h4>
+        <p>
+          The core resource, at 3rd level. Charges equal 1 + his Charisma modifier, minimum two, all regained on a long rest. Two free options on his turn, each usable once per turn and outside combat:
+        </p>
+        <div class="dm-table-scroll">
+        <table>
+          <thead><tr><th>Option</th><th>Effect</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Jinx a creature</strong></td><td>Spend 1 charge. One creature he can see within 30 feet has Disadvantage on d20 Tests using an ability score he chooses, until the start of his next turn.</td></tr>
+            <tr><td><strong>Jinx himself</strong></td><td>Before a d20 Test, spend any number of charges. Each shifts his critical and failure thresholds by 1 in both directions, until the start of his next turn. On a critical failure he takes 1d4 psychic damage per charge spent.</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>
+          Any jinxed creature, Sol included, counts as cursed, and <em>remove curse</em> or <em>greater restoration</em> ends it. He regains 1 charge on a critical hit, on a critical failure, or on being the target of a critical hit. The self-Jinx is the character in one mechanic: a wider critical range costs a wider failure range at the same price, paid in psychic damage.
+        </p>
+
+        <h4 id="progression">Progression</h4>
+        <div class="dm-table-scroll">
+        <table>
+          <thead><tr><th>Level</th><th>Feature</th></tr></thead>
+          <tbody>
+            <tr><td><strong>3</strong></td><td><strong>Jinx</strong>, and two Channel Divinity options. <em>Misfortune's Wake</em>: a bonus action, no Jinx charge. Choose a creature within 30 feet and an ability; it and any others of his choice within 15 feet of it have Disadvantage on d20 Tests with that ability until the start of his next turn. No damage, no save. <em>Misfortune's Edge</em>: a bonus action lasting 1 minute; his weapon hits deal an extra 1d4 + Charisma modifier necrotic damage, or 1d6 + Charisma modifier against a cursed target.</td></tr>
+            <tr><td><strong>7</strong></td><td><strong>Misfortune's Pall.</strong> He and allies in his Aura of Protection have Advantage on death saving throws and regain 1 hit point on a 19 or 20. They also have Advantage on saving throws against any effect from a cursed creature, wherever that creature is.</td></tr>
+            <tr><td><strong>15</strong></td><td><strong>Misfortune's Reckoning.</strong> <em>Reversal</em>: on his own critical failure, a reaction weapon attack with Advantage against anything in range. <em>Inevitable Strike</em>: once per turn, a critical hit on a cursed creature adds psychic damage equal to twice his paladin level. &ldquo;You no longer endure misfortune. You direct it.&rdquo;</td></tr>
+            <tr><td><strong>20</strong></td><td><strong>Misfortune's Favored.</strong> A bonus action lasting 10 minutes, once per long rest or by spending a 5th-level slot. <em>Misfortune</em>: any creature that enters the aura or starts its turn there takes necrotic damage equal to his Charisma modifier, and hostile creatures in the aura cannot score critical hits. <em>Favor</em>: Sol is exempt from the damage; allies in the aura score critical hits on a 19 or 20 and have Advantage on attacks against cursed creatures; his Jinx may pick two abilities.</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <h4 id="oath-design">Design notes</h4>
+        <ul>
+          <li>Subclass features deal necrotic and psychic damage. Divine Smite stays radiant, as the base class has it.</li>
+          <li>He is a bruiser with no defensive level-15 feature; his defense comes from the base class and the oath spells. In Korey's words: &ldquo;Ill Omen isn't about changing what happened but instead about mitigating it entirely or rolling with it.&rdquo;</li>
+          <li>Oath spells may come from any class list, as Ancients, Vengeance and Glory do.</li>
+          <li>The capstone's damage hits allies too: misfortune does not care who the target is (Cloak of Flies is the precedent). Allies trade the damage for the Favor.</li>
+        </ul>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-dm" aria-labelledby="tab-dm" hidden>
+        <h4 id="hidden">What's hidden</h4>
+        <ul>
+          <li><strong>His escape.</strong> A Watcher of the <a href="../factions/order.html">Order of the All-Father</a> extracted Sol from Aethris, against the Order's remit to preserve worlds, not individuals. The Order then broke protocol to recommend that he be taken to Caelestis.</li>
+          <li><strong>Beshaba's part.</strong> Beshaba did not arrange Sol's escape. Her reward for the oath is power, and she gives it shape through a want of her own, laid on him as a quest.</li>
+          <li><strong>Who knows.</strong> <a href="../dossiers/mirt.html">Mirt</a>, <a href="../dossiers/boatswain-tarto.html">Tarto</a> and <a href="../dossiers/saerthe-abizjn.html">Saerthe</a> know Sol's background and keep it to themselves.</li>
+          <li><strong>Aethris.</strong> Vecna is pushing Aethris's Zenith toward completion from outside, and nobody on Aethris knows he is involved (<a href="../opposition/vecna.html">Opposition: Vecna</a>).</li>
+        </ul>
+
+        <h4>Threads</h4>
+        <ul>
+          <li>The construct hunts Beshaba's chosen for the sect she calls heretical, so every meeting with it is also the sisters' rivalry reaching him.</li>
+          <li><a href="../dossiers/ezra.html">Ezra</a> joins the crew at the swap as a Glimpse of the Order that extracted Sol, and knows nothing of the protocol break.</li>
+          <li>Saerthe stays out of the construct's encounters: his Dematerialize answers the detention orb outright.</li>
+        </ul>
+
+        <h4>Still to decide</h4>
+        <ul>
+          <li>What Sol is missing, in the theme's terms, is not set.</li>
+          <li>Whether his arc carries the question &ldquo;Am I a person or a function?&rdquo; beside the theme is not set.</li>
+          <li>Beshaba's want, and so the quest that shapes his power, is not set.</li>
+          <li>A rebalance of Misfortuned is drafted and on hold; until it is taken up, the rules above stand.</li>
+        </ul>
+      </div>
     </div>
-  </div>
-
-  <div class="entry-body">
-
-
-      <p>
-        Astral elf paladin. The oath is homebrew and complete, written deity-agnostic so it stands on its own: paladins of Misfortune hold that adversity is the only honest teacher, that comfort breeds weakness, and that hardship endured is strength earned. They face misfortune in understanding rather than fear, and they wear it.
-      </p>
-      <p>
-        <strong>Tenets.</strong> <em>Never Yield</em> &mdash; failure is not the end, only surrender is. <em>Trial by Fire</em> &mdash; a life without adversity is a life unlived. <em>Risk Is Not Ruin</em> &mdash; calculated danger is wisdom, malicious harm is not.
-      </p>
-
-      <h3>Jinx</h3>
-      <p>
-        The core resource, at 3rd level. Charges equal his Charisma modifier, minimum one, all regained on a long rest. Two modes, both free actions in play:
-      </p>
-      <table>
-        <thead><tr><th>Mode</th><th>Effect</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Jinx a creature</strong></td><td>Spend 1 charge. One creature he can see within 30 feet gains the <strong>Jinxed</strong> condition &mdash; choose one ability score, and it has Disadvantage on d20 tests using that score until the start of his next turn. Jinxed is a curse and can be removed as one.</td></tr>
-          <tr><td><strong>Jinx himself</strong></td><td>Spend any number of charges before a d20 test. Each shifts his critical and failure thresholds by 1 <em>in both directions.</em> On a critical failure he takes 1d4 psychic per charge spent.</td></tr>
-        </tbody>
-      </table>
-      <div class="dm-callout">
-        <span class="dm-callout-label">The self-Jinx is the character in one mechanic</span>
-        Buying a wider crit means buying a wider failure at the same price, and paying for the failure in psychic damage. <strong>He gets better odds of greatness by accepting worse odds of ruin</strong>, which is the oath stated as arithmetic and is the reason the subclass needs no flavor text at the table.
-      </div>
-      <p>
-        <strong>Regaining charges:</strong> on a critical hit, on a critical failure, or on being the target of a critical hit. The economy rewards the extremes in both directions and keeps him reaching for them.
-      </p>
-
-      <h3>Progression</h3>
-      <table>
-        <thead><tr><th>Level</th><th>Feature</th></tr></thead>
-        <tbody>
-          <tr><td><strong>3</strong></td><td><strong>Jinx</strong>, plus two Channel Divinity options. <em>Misfortune's Wake</em> &mdash; a magic action spreading Jinxed to a creature within 30 feet and others within 15 feet of it. <em>Misfortune's Edge</em> &mdash; a one-minute damage rider, 1d4 + CHA necrotic on a hit and 1d6 + CHA against a cursed target.</td></tr>
-          <tr><td><strong>7</strong></td><td><strong>Misfortune's Pall.</strong> The aura, where the kit's synergy comes online.</td></tr>
-          <tr><td><strong>15</strong></td><td><strong>Misfortune's Reckoning.</strong> <em>Reversal</em> &mdash; on his own critical failure, a reaction weapon attack with Advantage against anything in range. <em>Inevitable Strike</em>. Capped at once per turn.</td></tr>
-          <tr><td><strong>20</strong></td><td><strong>Misfortune's Favored.</strong> The capstone.</td></tr>
-        </tbody>
-      </table>
-      <p>
-        Oath spells run <em>Arms of Hadar</em> and <em>Hex</em> at 3rd, <em>Detect Thoughts</em> and <em>Warding Bond</em> at 5th, <em>Bestow Curse</em> and <em>Life Transference</em> at 9th, <em>Death Ward</em> and <em>Phantasmal Killer</em> at 13th, <em>Steel Wind Strike</em> and <em>Synaptic Static</em> at 17th. Full D&amp;D Beyond snippets exist outside the wiki.
-      </p>
-
-      <h3>Beshaba's voice</h3>
-      <p>
-        Minimal and capricious, and she talks <em>at</em> him rather than to him. <em>&quot;Stand.&quot; &quot;Again.&quot; &quot;Continue.&quot;</em> The acknowledgment scene set the register: <em>&quot;Well, you had my curiosity but now, you have my attention&hellip; I must say, it was a bold move leaving your 'perfect' home, but what makes you so sure you escaped? Fate can be a cruel and twisted thing. Wield it wisely. Or not.&quot;</em> Her lines leave deliberate air for him to answer into.
-      </p>
-
-      <h3>The Crystalline Retrieval Construct</h3>
-      <p>
-        Built by the Fortuned of <a href="../locations/aethris.html#zenith">Aethris</a> after his escape, which makes it bespoke and personal: his leaving was the reason it exists. CR 8, on an advanced detention drone chassis. Traits: <em>Bespoke Target Lock</em>, <em>Regeneration</em> suppressed by thunder damage, <em>Refracting Shielding</em>, <em>Adaptive Reconfiguration</em> at HP thresholds, and <em>Non-Lethal Retrieval.</em>
-      </p>
-      <div class="dm-callout">
-        <span class="dm-callout-label">Run the first encounter as an escape</span>
-        It is built to retrieve rather than to kill, so the first meeting is objective-based and survivable by moving. <strong>Its line is <em>&quot;Sol Fortuna. You are required.&quot;</em></strong> &mdash; and the thunder vulnerability is the kind of thing a crew can find out and use, which is the better version of beating it.
-      </div>
-
-      <p>
-        <strong>Open:</strong> whether the Fortuned want him back as a person or as a component of an unfinished ritual. The answer decides whether his thematic question gets answered by his enemies or by himself.
-      </p>
   </div>
 
   <div class="divider">&#10022; &#10022; &#10022;</div>
 
   <div class="xref-card">
     <div class="xref-head"><span class="xref-title">Connections</span></div>
-    <div class="xref-cols"><div class="xref-col">
-        <a class="chip chip-npc" href="../campaign/index.html#sol">Arc shape</a>
-        <a class="chip chip-place" href="../locations/aethris.html">Aethris</a>
+    <div class="xref-cols">
+      <div class="xref-col">
+        <div class="xref-col-head">People and factions</div>
         <a class="chip chip-npc" href="../dossiers/beshaba.html">Beshaba</a>
-        <a class="chip chip-npc" href="../dossiers/crc.html">The CRC</a>
-    </div></div>
+        <a class="chip chip-npc" href="../factions/aethris.html">The Fortuned</a>
+        <a class="chip chip-npc" href="../dossiers/crc.html">CRC</a>
+        <a class="chip chip-npc" href="../factions/order.html">Order of the All-Father</a>
+        <a class="chip chip-npc" href="../dossiers/boatswain-tarto.html">Boatswain Tarto</a>
+        <a class="chip chip-npc" href="../dossiers/mirt.html">Mirt</a>
+        <a class="chip chip-npc" href="../dossiers/saerthe-abizjn.html">Saerthe Abizjn</a>
+        <a class="chip chip-npc" href="boogie.html">Boogie</a>
+        <a class="chip chip-npc" href="../dossiers/ezra.html">Ezra</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Places</div>
+        <a class="chip chip-place" href="../locations/aethris.html">Aethris</a>
+        <a class="chip chip-place" href="../locations/caelestis.html">Caelestis</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Campaign</div>
+        <a class="chip chip-quest" href="../campaign/index.html#sol">Campaign: Sol</a>
+        <a class="chip chip-quest" href="../campaign/voyages/index.html#v007">Voyage 7</a>
+        <a class="chip chip-quest" href="../opposition/vecna.html">Opposition: Vecna</a>
+      </div>
+    </div>
   </div>
 
   <div class="dm-footer">
@@ -115,6 +285,5 @@
   </div>
 
 </main>
-
 </body>
 </html>

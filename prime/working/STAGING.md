@@ -61,8 +61,9 @@ when a ruling changes; delete it once the page carries it. See
 ### Fonains geography (realms/fonains.html, Fonains doc; section 8)
 - T'Arionese is a region of Fonains. Orerius is in T'Arionese. The Cre'Tez estate is in Orerius, and it is the home of the Cre'Tez siblings (Xero, Lusion, Vanifer and the others). Clint works bounties out of Orerius, and Finerva (Vanifer) posted the Blooming Glass bounty there for the Cre'Tez.
 - The remains of the Fonains Monolith lie in the Trentara forest, in the north of the northern continent, between Nomnia and the Kingdom of Shaumala.
+- On Korey's map the Barrier Peaks lie in the south-west of the northern continent, below Gabuk and Selran, near the isthmus that runs down to T'Arionese. They are notable for Thessalar's crashed planar craft: its main body raised the peaks, and Thessalar is still inside (already on vessels/thessalars-craft.html and dossiers/thessalar.html; this line is for placing the peaks on the map).
 - Korey's Fonains map (his own) will be added in section 8 as the page's map; places on Fonains are placed from it.
-- done: dossiers/clint.html and connections.json carry Orerius (section 7 correction). realms/fonains.html, the Fonains doc and the timeline still need all three.
+- done: dossiers/clint.html and connections.json carry Orerius (section 7 correction). realms/fonains.html, the Fonains doc and the timeline still need these lines.
 
 ## Timeline
 
@@ -127,11 +128,6 @@ when a ruling changes; delete it once the page carries it. See
 - The real Polly was consumed, or is caught between life and death. No one knows which.
 - Casey is the younger brother who does not know his full identity. He finds it in having an older brother, which is why he clings to Tumak.
 - done: dossiers/polly.html and dossiers/astra-virex.html (section 5); crew/casey.html still needs all three.
-
-### Sol (crew/sol.html, dossiers/beshaba.html)
-- Beshaba's reward for the oath is power. She gives it shape through a want of her own, laid on Sol as a quest.
-- Beshaba did not arrange Sol's escape.
-- done: dossiers/beshaba.html (section 5); crew/sol.html still needs both.
 
 ### Boogie (crew/boogie.html)
 - Tharizdun wants nothing specific from Boogie. Tharizdun is not lucid; she is an opportunist. What happens through the shard depends on what Boogie does, and things may come through the current. Boogie's plot is reactive.
