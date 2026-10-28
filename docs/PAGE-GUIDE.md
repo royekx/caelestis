@@ -446,7 +446,7 @@ order, only those with content:
 | Item (`artifacts/`) | kind, made by, made of, held by, where, status | Overview · Appearance · Properties (what it does, in prose, then the rules as an item card) · History · In the campaign (a recap by voyage) |
 | Place (`locations/`) | kind, designation, system, galaxy, ruled by, peoples, status | Overview · Description (look, climate, terrain) · History · Peoples and culture · Notable people · Points of interest (one subsection each) · In the campaign (a recap by voyage) |
 | Vessel (`vessels/`) | kind, built by, held by or under command of, where, status | Overview · Appearance · Decks and interior (one subsection per deck or space) · History · In the campaign (a recap by voyage) |
-| Player character (`crew/`) | kind, species, class, station (from the record), origin, affiliation, patron, carries (linked), where the rules live, first voyage, player page | Overview · Appearance · Personality · Biography (*Background*; *In the campaign*, one entry per voyage, written from the record) · Relationships · Abilities (prose, no numbers) · Notable items · Quotes |
+| Player character (`crew/`) | kind, species, class, station (from the record), origin, affiliation, patron, carries (linked), where the rules live, first voyage, player page, plus kind-specific rows (for example First tether, Maker, Specialisation, Constellation) | Overview · Appearance · Personality · Biography (*Background*; *In the campaign*, one entry per voyage, written from the record) · Relationships · Abilities (prose, no numbers) · Notable items · Quotes |
 
 A player character page has four tabs, not two, because the arc and the
 homebrew are each too large for DM notes:

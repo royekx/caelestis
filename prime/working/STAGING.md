@@ -116,3 +116,10 @@ when a ruling changes; delete it once the page carries it. See
 ### Tarroway (restricted/; done on dossiers/tarroway.html, section 5)
 - M. Tarroway is a cartographer on Strake Station. His readings were the first hint that an unknown vessel or structure was disturbing the satellites at the edge of the system.
 - His name turns up here and there, mainly in the Fleet Intelligence Archive. Nothing about him is public. (DM: a thread for the players to piece together, not a figure they meet.)
+
+## Artifacts and vessels
+
+### Wan, Tu and the fragment (crew/tumak.html, rules/; done on artifacts/dissolution-fragment.html, section 4)
+- The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) factions/runekeepers.html and artifacts/dissolution-fragment.html carry it; dossiers/the-runekeeper.html carries it (section 5).
+- The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a state neither whole nor broken.
+- done: crew/tumak.html (section 7); rules/ still needs it.

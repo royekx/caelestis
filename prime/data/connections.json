@@ -5094,7 +5094,7 @@
       "label": "Orerius",
       "type": "place",
       "scope": "fonains",
-      "summary": "A place in T'Arionese, on Fonains, where the Cre'Tez estate stands.",
+      "summary": "In T'Arionese, on Fonains, where the Cre'Tez estate stands.",
       "facts": [
         {
           "t": "Clint works bounties out of Orerius.",
@@ -8095,6 +8095,12 @@
       "t": "orerius",
       "rel": "have their estate in",
       "src": "dossiers/clint.html"
+    },
+    {
+      "s": "PC-647haWGJ",
+      "t": "dejexic",
+      "rel": "shares a species with",
+      "src": "factions/order.html"
     }
   ]
 }

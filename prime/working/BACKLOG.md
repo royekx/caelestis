@@ -38,13 +38,13 @@ staging once Korey has read and accepted them.
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 0 |
 | Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
-| Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 4 | 0 | 1 |
+| Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 4 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** |  | **98** | **130** | **79** | **4** | **81** |
+| **Total** |  | **98** | **130** | **78** | **4** | **81** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -593,7 +593,7 @@ Order under each heading: decide, fix, drop, add.
   src: memory-canon (open-decisions, Locked 2026-10-25); tharizdun § How the Fonains Monolith formed
 
 - **[add]** The Day of Chaos
-  "The Day of Chaos is the day the four Princes of Elemental Evil enter Fonains together and break the barriers between the planes, so Tharizdun can leave his prison. It is still ahead of Fonains's present."
+  "The Day of Chaos is the day the four Princes of Elemental Evil enter Fonains together and break the barriers between the planes, so Tharizdun can leave her prison. It is still ahead of Fonains's present."
   src: session-rulings; tharizdun § The Day of Chaos
 
 - **[add]** Thessalar's planar craft
@@ -1523,10 +1523,6 @@ left here is open.
   held (section 4): the source chat marks this an inference, not in the repo. The page leaves it out and says in Still to decide that limb restoration is not set; confirm before it goes on the item card.
 
 ### artifacts/fonains-shard.html
-
-- **[fix]** Trentara, not Trintara
-  § History says the great shards turn "around a black cyst in the Trintara Forest". Korey spells it Trentara (STAGING § Fonains geography): the Monolith's remains lie in the Trentara forest.
-  src: Korey 2026-10-28 (via section 7)
 
 - **[fix]** Drop the accumulation milestone
   Still to decide carries "the milestone where the accumulation starts costing Boogie". Boogie's arc method has no fixed reveal and no milestone (crew/boogie.html, Arc); the milestone question is retired. Keep the first half of the sentence (what a corrupted archive fragment does over years at this scale) if it is still wanted.
