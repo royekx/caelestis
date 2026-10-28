@@ -73,7 +73,7 @@
           "habitability": "livable",
           "life": "none",
           "inhabitants": "settlement",
-          "notes": "The academy station, in orbit around Toril."
+          "notes": "Fleet station in orbit around Toril; home of the Caelestis Corps and the Caelestis Spelljammer Academy."
         },
         {
           "designation": null,
@@ -95,7 +95,7 @@
           "habitability": "livable",
           "life": "benign",
           "inhabitants": "settlement",
-          "notes": "A water world, three days out, above the common lanes."
+          "notes": "A water world, three days from the sun, above the common lanes."
         },
         {
           "designation": null,
@@ -119,7 +119,7 @@
           "habitability": "livable with protection",
           "life": "hostile",
           "inhabitants": "civilization",
-          "notes": "Ringed and remote, ten days out. The illithids' world that exiled the unthinned."
+          "notes": "Ringed and remote, ten days from the sun. The illithids' world that exiled the unthinned."
         },
         {
           "designation": null,
@@ -144,7 +144,7 @@
           "habitability": "livable",
           "life": "hostile",
           "inhabitants": "civilization",
-          "notes": "The beholders' world, fourteen days out."
+          "notes": "The beholders' world, sixteen days from the sun and fourteen days' sail from Toril."
         }
       ],
       "notes": "Home system. Its bodies are known by name, not by letter."
@@ -295,11 +295,11 @@
   "galaxies": [
     {
       "id": "GAL-01",
-      "name": "Rykoe Galaxy",
+      "name": "Erevos Galaxy",
       "home": true,
       "game": "D&D 5e",
       "core": "One link, between two worlds in one system (the little-charted planet).",
-      "core_name": "Rykoe"
+      "core_name": "Erevos"
     },
     {
       "id": "GAL-02",

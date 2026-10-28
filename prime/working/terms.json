@@ -3,7 +3,8 @@
   "finished": [
     "prime/cosmology",
     "prime/glossary",
-    "prime/factions"
+    "prime/factions",
+    "prime/locations"
   ],
   "retired": [
     {
@@ -113,8 +114,53 @@
       "i": true
     },
     {
+      "pattern": "\\bTetherbreak sector\\b",
+      "use": "the perimeter watch at Realmspace's edge (locations/realmspace.html#perimeter-watch); the Tetherbreak is the bearing, and a sector is a Fleet branch"
+    },
+    {
+      "pattern": "\\bUntethered\\b",
+      "use": "the place's galaxy and system (every place lies in a galaxy)"
+    },
+    {
+      "pattern": "\\bthe Flow\\b",
+      "use": "the Astral Sea, which fills the dark between systems and between galaxies"
+    },
+    {
+      "pattern": "Cosmos Chart",
+      "use": "the Chart"
+    },
+    {
+      "pattern": "\\bchild hearts?\\b",
+      "use": "heart; every heart pulls toward the First Heart",
+      "i": true
+    },
+    {
+      "pattern": "Astra(&rsquo;|'|\u2019)s network",
+      "use": "Astra Virex's reach",
+      "i": true
+    },
+    {
+      "pattern": "\\b(beholder|rival) hives\\b",
+      "use": "ten solitary beholder rulers under the Sovereign Eye",
+      "i": true
+    },
+    {
+      "pattern": "\\beight domains\\b",
+      "use": "ten domains, one ruler each",
+      "i": true
+    },
+    {
+      "pattern": "Sigil event",
+      "use": "Vecna ascended on Oerth",
+      "i": true
+    },
+    {
+      "pattern": "\\bRykoe Galaxy\\b",
+      "use": "the Erevos Galaxy (GAL-01 is named for its core, Erevos; Rykoe is the centre of the cosmos)"
+    },
+    {
       "pattern": "\\bFirst World\\b",
-      "use": "the Reach world, now Erevos"
+      "use": "the Reach world, now Rykoe"
     },
     {
       "pattern": "Mother of the Universe",
@@ -205,6 +251,82 @@
   ],
   "moved": [
     {
+      "old": "realms/index.html",
+      "new": "locations/index.html"
+    },
+    {
+      "old": "realms/realmspace.html",
+      "new": "locations/realmspace.html"
+    },
+    {
+      "old": "realms/caelestis.html",
+      "new": "locations/caelestis.html"
+    },
+    {
+      "old": "realms/toril.html",
+      "new": "locations/toril.html"
+    },
+    {
+      "old": "realms/glyth.html",
+      "new": "locations/glyth.html"
+    },
+    {
+      "old": "realms/strake-station.html",
+      "new": "locations/strake-station.html"
+    },
+    {
+      "old": "realms/cairn-station.html",
+      "new": "locations/cairn-station.html"
+    },
+    {
+      "old": "realms/aethris.html",
+      "new": "locations/aethris.html"
+    },
+    {
+      "old": "realms/virenspace.html",
+      "new": "locations/virenspace.html"
+    },
+    {
+      "old": "realms/wayfinders-homeworld.html",
+      "new": "locations/wayfinders-homeworld.html"
+    },
+    {
+      "old": "realms/astral-sea.html",
+      "new": "locations/astral-sea.html"
+    },
+    {
+      "old": "realms/waystation.html",
+      "new": "locations/waystation.html"
+    },
+    {
+      "old": "realms/cantina.html",
+      "new": "locations/cantina.html"
+    },
+    {
+      "old": "realms/meteor-hub.html",
+      "new": "locations/meteor-hub.html"
+    },
+    {
+      "old": "realms/krynn.html",
+      "new": "locations/krynn.html"
+    },
+    {
+      "old": "realms/sys04.html",
+      "new": "locations/krynnspace.html"
+    },
+    {
+      "old": "realms/first-world.html",
+      "new": "locations/rykoe.html"
+    },
+    {
+      "old": "realms/ascension-world.html",
+      "new": "locations/oerth.html"
+    },
+    {
+      "old": "realms/tetherbreak.html",
+      "new": "locations/realmspace.html#perimeter-watch"
+    },
+    {
       "old": "realms/hcatha.html",
       "new": "locations/hcatha.html"
     },
@@ -226,7 +348,8 @@
     }
   ],
   "allow": [
-    "prime/cosmology/:outcomes were undecided|new undecided things"
+    "prime/cosmology/:outcomes were undecided|new undecided things",
+    "prime/locations/:Kesh Hollow"
   ],
   "scan": [
     "prime",

@@ -118,7 +118,7 @@
       axiom: 'expansion',
       items: [
         { key: 'cosmology', label: 'Cosmology',     path: 'cosmology/'  },
-        { key: 'realms',    label: 'Locations',     path: 'realms/', also: ['locations/'] },
+        { key: 'realms',    label: 'Locations',     path: 'locations/', also: ['realms/'] },
         { key: 'vessels',   label: 'Vessels',       path: 'vessels/'    },
         { key: 'artifacts', label: 'Artifacts',     path: 'artifacts/'  },
         { key: 'chart',     label: 'Chart',         path: 'chart/'      },
@@ -219,7 +219,7 @@
       // Normalize: strip trailing index.html if present in the URL.
       var here = pathname;
       // The section is current if the URL contains "/<path>" (path already ends in /).
-      // A section can also claim folders it is moving into (realms/ → locations/).
+      // A section can also claim a folder it is moving out of (realms/ keeps Fonains until it moves to locations/).
       var sec = sections.filter(function (s) { return s.path === p; })[0];
       [p].concat((sec && sec.also) || []).forEach(function (q) {
         if (here.indexOf('/' + q) !== -1 && q.length > bestLen) {

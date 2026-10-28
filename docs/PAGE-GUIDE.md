@@ -44,7 +44,7 @@ in `CLAUDE.md` § Folder map.
   `failure-state`. Anchors are part of the public contract. Rename one only
   with a sweep of every reference and a passing `check`.
 - Cross-references are relative paths. From `prime/artifacts/index.html` to the
-  Brig: `<a href="../realms/caelestis.html#brig">the Brig</a>`.
+  Brig: `<a href="../locations/caelestis.html#brig">the Brig</a>`.
 - External links: `<a href="…" target="_blank" rel="noopener" class="dm-link-external">…</a>`.
 
 ### Markup and layout
