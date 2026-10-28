@@ -456,7 +456,15 @@ body::before {
   transition: border-color 0.25s, background 0.25s;
   overflow: hidden;
 }
-.file-row.has-cols { grid-template-columns: 100px minmax(0, 1fr) 6.5rem 5.5rem auto; }
+.file-row.has-cols {
+  grid-template-columns: 100px minmax(0, 1fr) 6.5rem 6rem auto;
+  grid-template-areas: "tab body origin cycle class";
+}
+.file-row.has-cols .file-tab { grid-area: tab; }
+.file-row.has-cols .file-body { grid-area: body; }
+.file-row.has-cols .file-origin { grid-area: origin; }
+.file-row.has-cols .file-cycle { grid-area: cycle; }
+.file-row.has-cols .file-class { grid-area: class; }
 .file-row:hover { border-color: rgba(201,153,58,0.35); background: rgba(201,153,58,0.04); }
 .file-tab {
   background: rgba(201,153,58,0.04);
@@ -672,20 +680,25 @@ body::before {
   .chart-table, .world-table { display: block; overflow-x: auto; }
   .entry-nav { grid-template-columns: 1fr 1fr; }
   .entry-nav .nav-center { grid-column: 1 / -1; grid-row: 1; }
-  .file-row, .file-row.has-cols { grid-template-columns: 76px minmax(0, 1fr) auto; }
-  .file-tab { padding: 0.9rem 0.4rem; }
-  .file-body { padding: 0.9rem 0.9rem 0.4rem; }
-  .file-row.has-cols .file-body { grid-column: 2 / 3; }
-  .file-row.has-cols .file-class { grid-column: 3; grid-row: 1 / span 2; }
-  .file-row.has-cols .file-tab { grid-row: 1 / span 2; }
-  .file-row.has-cols .file-meta-cols {
-    grid-column: 2;
+  .file-row.has-cols {
+    grid-template-columns: 76px minmax(0, 1fr) auto;
+    grid-template-areas:
+      "tab body class"
+      "tab origin class"
+      "tab cycle class";
   }
+  .file-tab { padding: 0.9rem 0.4rem; }
+  .file-case-num { font-size: 0.9rem; }
+  .file-body { padding: 0.9rem 0.9rem 0.5rem; }
+  .file-class { padding: 0.9rem 0.6rem; }
   .file-origin, .file-cycle {
     border-left: none;
-    padding: 0 0.9rem 0.8rem;
+    padding: 0 0.9rem 0.2rem;
     flex-direction: row;
-    gap: 0.4rem;
+    justify-content: flex-start;
+    gap: 0.45rem;
     align-items: baseline;
+    font-size: 0.86rem;
   }
+  .file-cycle { padding-bottom: 0.9rem; }
 }
