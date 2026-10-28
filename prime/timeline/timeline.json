@@ -452,7 +452,7 @@
       "status": "projected",
       "cert": "canon",
       "title": "Hearts opened and linked",
-      "desc": "The Passage gains a circle per linked world. Linked worlds bleed into each other.",
+      "desc": "Linked worlds bleed into each other.",
       "t": 1.5,
       "end": 4,
       "tier": 1

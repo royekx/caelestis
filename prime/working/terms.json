@@ -17,6 +17,10 @@
   ],
   "retired": [
     {
+      "pattern": "\\b[Tt]he Passage\\b",
+      "use": "the eye in a wheel, the Vth'orama's mark; the Passage is retired"
+    },
+    {
       "pattern": "A\\.T\\.L\\.A\\.S\\.('|&rsquo;|’)s sister",
       "use": "the second Distinction piece (or the second piece where the context is clear)"
     },
@@ -365,7 +369,7 @@
     },
     {
       "pattern": "\\bPassage marks?\\b",
-      "use": "Vocath's house mark (the crates); the Passage is the colony's field mark"
+      "use": "Vocath's house mark (the crates); the colony's mark is the eye in a wheel"
     },
     {
       "pattern": "(?<=[a-z,;:] )Mercane\\b",
@@ -656,6 +660,10 @@
     {
       "old": "atlas-sister.html",
       "new": "artifacts/second-distinction-piece.html"
+    },
+    {
+      "old": "glossary/#passage",
+      "new": "glossary/#eye-in-a-wheel"
     }
   ],
   "allow": [
