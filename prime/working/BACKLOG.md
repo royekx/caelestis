@@ -32,7 +32,7 @@ staging once Korey has read and accepted them.
 |---|---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 9 | 12 | 15 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 24 | 0 | 0 | 1 |
-| Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 3 | 9 | 9 | 0 | 17 |
+| Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 3 | 9 | 9 | 0 | 14 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 9 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 1 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** |  | **101** | **136** | **69** | **3** | **71** |
+| **Total** |  | **101** | **136** | **69** | **3** | **68** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -593,7 +593,7 @@ Order under each heading: decide, fix, drop, add.
 
 ### Fonains doc
 
-The doc is current on names, the four keys, the cults, the party table, Krynn and the dragons, and Takhisis being Tiamat. Items below cover what is stale or missing. done (section 8): the world-level items (timing, the divine gate as polarity, Vecna as a god, the keys and cults, the Haunted Keeps, Bastian, the neothelid hook, the time device, the table spellings) are on locations/fonains.html; the doc itself still needs a refresh (the later under # New pages).
+The doc is current on names, the four keys, the cults, the party table, Krynn and the dragons, and Takhisis being Tiamat. Items below cover what is stale or missing. done (section 8): the world-level items (timing, the divine gate as polarity, Vecna as a god, the keys and cults, the Haunted Keeps, Bastian, the neothelid hook, the time device, the table spellings) are on locations/fonains.html; the doc itself still needs a refresh (the later under # New pages). Kwalish's laboratory, Daoine Gloine and the teleportation fields are on vessels/thessalars-craft.html (section 8).
 
 - **[fix]** The Cre'Tez father is Cenvinzo
   Ruled (STAGING round 8). Use "Cenvinzo" everywhere; the foundry notes' "Vinbenzo" (§ Reveal) is a slip. Write:
@@ -695,18 +695,6 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
 - **[add]** Vanifer's plan (DM)
   DM voice: Vanifer waits to see who becomes heir so she can make them concede to her. With a unanimous vote she enters the Eternal Flame temple at night, rested. If she has to force a contested Beta, she flees into the temple at once.
   src: cretez-foundry-notes § Timey Wimey Fudging
-
-- **[add]** Kwalish's lab
-  "The Grand Master is Kwalish's war-machine exoskeleton, piloted by the quasit Whazzit. The real bone devil is a brain in a jar in the treasury. Kwalish's brains in jars form a hive mind; he calls them his 'brain friends'. West Wind, the Grand Master's bodyguard, carries a blade of the medusa, the likely source of Hayden's Medusa sword (inference). Ctenmiir is a dwarf vampire sealed as penance in an iron coffin on golem legs. Anaxi Zephries, the Cartophile, is Kwalish's nephew."
-  src: module-sweep-fonains § Lost Laboratory of Kwalish, § Homebrew divergences
-
-- **[add]** Daoine Gloine
-  "Daoine Gloine is a glass city sealed under one huge ooze, a piece that broke off Thessalar's craft. Its baubles are crystal pocket dimensions inside the glass statuary; one bauble holds the arena of shadow duplicates from Session 10."
-  src: module-sweep-fonains § Lost Laboratory of Kwalish; session-rulings
-
-- **[add]** Kwalish's teleportation fields
-  "Kwalish's teleportation-field devices work only in the monastery and in Daoine Gloine. The six recall bracelets are this technology."
-  src: module-sweep-fonains § Lost Laboratory of Kwalish
 
 ### Timeline (Fonains lane)
 
