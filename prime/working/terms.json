@@ -365,7 +365,7 @@
     },
     {
       "pattern": "\\bPassage marks?\\b",
-      "use": "Vocath's mark, the eye in a wheel (the crates); the Passage is the colony's device"
+      "use": "Vocath's house mark (the crates); the Passage is the colony's field mark"
     },
     {
       "pattern": "(?<=[a-z,;:] )Mercane\\b",

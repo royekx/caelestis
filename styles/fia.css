@@ -159,10 +159,16 @@ body::before {
   margin-bottom: 1rem;
 }
 .doc-seal {
+  display: block;
   width: 48px;
   height: 48px;
   color: rgba(26,18,8,0.4);
   flex-shrink: 0;
+  /* The FIA seal: an eight-pointed star in a double ring, one SVG shared
+     with the gate (restricted/index.html) and used as a mask. */
+  background-color: currentColor;
+  -webkit-mask: url('../assets/fia-seal.svg') center / contain no-repeat;
+  mask: url('../assets/fia-seal.svg') center / contain no-repeat;
 }
 .doc-header-text { flex: 1; min-width: 0; text-align: center; padding: 0 1rem; }
 .doc-classification-stamp {
@@ -297,17 +303,6 @@ body::before {
   margin: 0.35rem 0;
   user-select: none;
 }
-.rx-block.tall { height: 2.3rem; }
-/* Imperfect redaction: text barely shows through */
-.rx-partial {
-  display: inline-block;
-  background: #1a1208;
-  color: rgba(240,234,216,0.18);
-  border-radius: 1px;
-  padding: 0 3px 1px;
-  vertical-align: middle;
-  cursor: default;
-}
 
 .doc-quote {
   border-left: 2px solid rgba(26,18,8,0.2);
@@ -347,26 +342,15 @@ body::before {
 }
 .handling-note strong { color: #8a0000; font-style: normal; font-weight: 600; }
 
-.secondary-note {
-  border: 1px solid rgba(26,18,8,0.15);
-  border-left: 3px solid rgba(26,18,8,0.3);
-  background: rgba(26,18,8,0.03);
-  padding: 0.6rem 0.8rem;
-  font-size: 0.92rem;
-  font-style: italic;
-  color: rgba(26,18,8,0.6);
-  margin: 0.8rem 0;
-  line-height: 1.6;
-}
 
 /* Record tables */
-.chart-table, .world-table {
+.world-table {
   width: 100%;
   border-collapse: collapse;
   margin: 0.8rem 0;
   font-size: 0.963rem;
 }
-.chart-table th, .world-table th {
+.world-table th {
   font-family: 'Cinzel', serif;
   font-size: 0.708rem;
   letter-spacing: 0.18em;
@@ -377,22 +361,22 @@ body::before {
   border-bottom: 1.5px solid rgba(26,18,8,0.2);
   border-top: 1px solid rgba(26,18,8,0.12);
 }
-.chart-table td, .world-table td {
+.world-table td {
   padding: 0.4rem 0.5rem;
   border-bottom: 1px solid rgba(26,18,8,0.07);
   color: #1a1208;
   vertical-align: top;
 }
 .world-table td { padding: 0.45rem 0.5rem; font-size: 0.963rem; }
-.chart-table tr:last-child td, .world-table tr:last-child td { border-bottom: none; }
-.chart-table .stolen, .pri-high {
+.world-table tr:last-child td { border-bottom: none; }
+.pri-high {
   font-family: 'Cinzel', serif;
   font-size: 0.835rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #8a0000;
 }
-.chart-table .unverified, .pri-med {
+.pri-med {
   font-family: 'Cinzel', serif;
   font-size: 0.835rem;
   letter-spacing: 0.1em;
@@ -401,6 +385,53 @@ body::before {
 }
 .pri-high, .pri-med { font-size: 0.812rem; }
 .pri-med { color: rgba(26,18,8,0.45); }
+.registry-table { margin-top: 0.6rem; }
+.registry-table .col-cycle { width: 9%; }
+.registry-table .col-system { width: 38%; }
+.registry-table .col-status { width: 14%; }
+.world-table td.table-note {
+  font-style: italic;
+  color: rgba(26,18,8,0.45);
+  font-size: 0.86rem;
+}
+.world-table td.table-note.is-centered { text-align: center; padding: 0.7rem; }
+
+/* Record-specific blocks */
+.doc-section p.ledger-line {
+  text-align: center;
+  padding: 0.7rem 0;
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+}
+.memorial-roll {
+  font-family: 'Cinzel', serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  line-height: 2.1;
+  padding: 0.6rem 0;
+  color: rgba(26,18,8,0.85);
+}
+.doc-section p.memorial-note {
+  font-size: 0.86rem;
+  color: rgba(26,18,8,0.55);
+  font-style: italic;
+}
+.sigil-plate {
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0.8rem;
+  border: 1px solid rgba(26,18,8,0.12);
+}
+.rx-block.sigil-redaction { width: 90px; height: 90px; margin: 0 auto 0.5rem; }
+.sigil-caption {
+  font-family: 'Cinzel', serif;
+  font-size: 0.54rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(26,18,8,0.4);
+  margin-top: 0.3rem;
+}
 
 /* ── Register (files.html) ── */
 .archive-header {
@@ -572,6 +603,7 @@ body::before {
   text-orientation: mixed;
   transform: rotate(180deg);
 }
+.class-badge.gold { border-color: rgba(201,153,58,0.5); color: rgba(220,180,100,0.9); }
 .class-badge.above { border-color: rgba(180,40,40,0.6); color: rgba(200,50,50,0.9); }
 .file-legend {
   margin-top: 1.2rem;
@@ -708,7 +740,7 @@ body::before {
   .doc-header-top { flex-wrap: wrap; justify-content: center; gap: 0.6rem; }
   .doc-header-text { order: 3; flex-basis: 100%; padding: 0; }
   .doc-meta-row { grid-template-columns: 1fr; gap: 0.2rem; }
-  .chart-table, .world-table { display: block; overflow-x: auto; }
+  .world-table { display: block; overflow-x: auto; }
   .entry-nav { grid-template-columns: 1fr 1fr; }
   .entry-nav .nav-center { grid-column: 1 / -1; grid-row: 1; }
   .file-row.has-cols {

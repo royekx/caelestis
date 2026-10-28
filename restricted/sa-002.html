@@ -30,29 +30,7 @@ if (sessionStorage.getItem('caelestis_restricted_v1') !== '1') window.location.h
     <span data-pagefind-filter="origin:Caelestis" hidden></span>
     <div class="doc-header">
       <div class="doc-header-top">
-        <svg class="doc-seal" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-linecap="round">
-        <circle cx="28" cy="28" r="21" stroke-width="1.1"/>
-        <circle cx="28" cy="28" r="7.5" stroke-width="0.9"/>
-        <line x1="35.3" y1="28" x2="48.8" y2="28" stroke-width="0.8"/>
-        <line x1="33.1" y1="33.1" x2="42.9" y2="42.9" stroke-width="0.8"/>
-        <line x1="28" y1="35.3" x2="28" y2="48.8" stroke-width="0.8"/>
-        <line x1="22.9" y1="33.1" x2="13.1" y2="42.9" stroke-width="0.8"/>
-        <line x1="20.7" y1="28" x2="7.2" y2="28" stroke-width="0.8"/>
-        <line x1="22.9" y1="22.9" x2="13.1" y2="13.1" stroke-width="0.8"/>
-        <line x1="28" y1="20.7" x2="28" y2="7.2" stroke-width="0.8"/>
-        <line x1="33.1" y1="22.9" x2="42.9" y2="13.1" stroke-width="0.8"/>
-        <circle cx="51.5" cy="28" r="2.2" stroke-width="0.8"/>
-        <circle cx="44.9" cy="44.9" r="2.2" stroke-width="0.8"/>
-        <circle cx="28" cy="51.5" r="2.2" stroke-width="0.8"/>
-        <circle cx="11.1" cy="44.9" r="2.2" stroke-width="0.8"/>
-        <circle cx="4.5" cy="28" r="2.2" stroke-width="0.8"/>
-        <circle cx="11.1" cy="11.1" r="2.2" stroke-width="0.8"/>
-        <circle cx="28" cy="4.5" r="2.2" stroke-width="0.8"/>
-        <circle cx="44.9" cy="11.1" r="2.2" stroke-width="0.8"/>
-        <path d="M21 28 Q28 22.5 35 28 Q28 33.5 21 28 Z" stroke-width="0.9"/>
-        <circle cx="28" cy="28" r="3.8" stroke-width="0.8"/>
-        <circle cx="28" cy="28" r="1.5" fill="currentColor" stroke="none"/>
-      </svg>
+        <span class="doc-seal" aria-hidden="true"></span>
         <div class="doc-header-text">
           <div class="doc-institution">Caelestis Sector · Fleet Intelligence Archive</div>
           <div class="doc-division">Above Bridge — Eyes Only</div>
@@ -96,13 +74,13 @@ if (sessionStorage.getItem('caelestis_restricted_v1') !== '1') window.location.h
     <div class="doc-section">
       <div class="doc-section-label">Selected Entries</div>
 
-      <table class="world-table" style="margin-top:0.6rem;">
+      <table class="world-table registry-table">
         <thead>
           <tr>
-            <th style="width:9%;">Cycle</th>
-            <th style="width:38%;">System / Location</th>
+            <th class="col-cycle">Cycle</th>
+            <th class="col-system">System / Location</th>
             <th>Observed Phenomenon</th>
-            <th style="width:14%;">Status</th>
+            <th class="col-status">Status</th>
           </tr>
         </thead>
         <tbody>
@@ -143,7 +121,7 @@ if (sessionStorage.getItem('caelestis_restricted_v1') !== '1') window.location.h
             <td><span class="pri-med">Monitoring</span></td>
           </tr>
           <tr>
-            <td colspan="4" style="font-style:italic;color:rgba(26,18,8,0.35);font-size: 0.86rem;text-align:center;padding:0.7rem;">
+            <td colspan="4" class="table-note is-centered">
               Further entries — Above Bridge restricted. Not included in this distribution.
             </td>
           </tr>
