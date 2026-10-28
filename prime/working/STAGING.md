@@ -119,11 +119,5 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Crew
 
-### Boogie (crew/boogie.html)
-- Tharizdun wants nothing specific from Boogie. Tharizdun is not lucid; she is an opportunist. What happens through the shard depends on what Boogie does, and things may come through the current. Boogie's plot is reactive.
-- Boogie sometimes feels corruption leaking into him from the shard: a role-playing beat, not a mechanic.
-- Boogie holds half of the derelict logbook. The other half was in his chest inside the Monolith.
-- done: artifacts/fonains-shard.html and vessels/the-derelict.html (section 4). crew/boogie.html still needs all three.
-
 ### The crew's pasts (crew/, DM principles)
 - The PCs remember where they came from. Their pasts get filled in retroactively; nobody arrived with amnesia.

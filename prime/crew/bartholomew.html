@@ -9,108 +9,272 @@
 <link rel="stylesheet" href="../../styles/entity.css">
 <link rel="stylesheet" href="../../styles/dm.css">
 <script src="../scripts/dm-nav.js" defer></script>
+<script src="../scripts/portraits.js" defer></script>
+<script src="../scripts/dm-tabs.js" defer></script>
 </head>
 <body>
 
 <main class="dm-content">
 
   <header class="dm-page-header">
-    <div class="dm-page-eyebrow">Crew<span class="sep">&middot;</span>the Almost-Shift</div>
+    <div class="dm-page-eyebrow">Crew<span class="sep">&middot;</span>Druid, Circle of the Stars &middot; Spelljammer</div>
     <h1>Bartholomew Grayson</h1>
   </header>
 
-  <div class="voyage-nav-bar"><a class="voyage-nav-link" href="index.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">The Crew</span></a><a class="voyage-nav-center" href="index.html">Realms</a><a class="voyage-nav-link" href="boogie.html"><span class="nav-label">Boogie</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
+  <div class="voyage-nav-bar"><span class="voyage-nav-link is-empty"></span><a class="voyage-nav-center" href="index.html">Crew</a><a class="voyage-nav-link" href="boogie.html"><span class="nav-label">Boogie</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
 
-  <div class="entry-header">
-    <div class="identity-card">
+  <div class="entry-header is-wiki">
+    <aside class="identity-card" aria-label="Bartholomew Grayson at a glance">
+      <div class="portrait-frame dossier-portrait" data-key="bartholomew"></div>
       <div class="stat-card">
-        <div class="stat-row"><span class="stat-key">Class</span><span class="stat-val stat-val-long">Circle of the Stars druid, Rashemi</span></div>
-        <div class="stat-row"><span class="stat-key">Mechanic</span><span class="stat-val stat-val-long">The Almost-Shift</span></div>
-        <div class="stat-row"><span class="stat-key">Where the rules live</span><span class="stat-val stat-val-long">This page</span></div>
-        <div class="stat-row"><span class="stat-key">Open</span><span class="stat-val stat-val-long">What the Almost is, and which creature carries the recognition</span></div>
+        <div class="stat-row"><span class="stat-key">Kind</span><span class="stat-val stat-val-long">Player character</span></div>
+        <div class="stat-row"><span class="stat-key">Species</span><span class="stat-val stat-val-long">Human, Rashemi</span></div>
+        <div class="stat-row"><span class="stat-key">Class</span><span class="stat-val stat-val-long">Druid, Circle of the Stars</span></div>
+        <div class="stat-row"><span class="stat-key">Specialisation</span><span class="stat-val stat-val-long">Wilder</span></div>
+        <div class="stat-row"><span class="stat-key">Station</span><span class="stat-val stat-val-long">Spelljammer</span></div>
+        <div class="stat-row"><span class="stat-key">Affiliation</span><span class="stat-val stat-val-long">Cadet, <a href="../factions/fleet.html#cadets">Caelestis Spelljammer Academy</a>; joined after the cohort formed</span></div>
+        <div class="stat-row"><span class="stat-key">Constellation</span><span class="stat-val stat-val-long"><a href="../locations/index.html#constellations">CON-312</a>, in his chest</span></div>
+        <div class="stat-row"><span class="stat-key">Carries</span><span class="stat-val stat-val-long">A sealed garden bloom; a star map; a family staff</span></div>
+        <div class="stat-row"><span class="stat-key">Where the rules live</span><span class="stat-val stat-val-long">Player text: <a href="../../aspects/">Aspects</a>; DM rules: <a href="#aspects">this page</a></span></div>
+        <div class="stat-row"><span class="stat-key">First voyage</span><span class="stat-val stat-val-long">Voyage 2</span></div>
+        <div class="stat-row"><span class="stat-key">Player page</span><span class="stat-val stat-val-long"><a href="../../crew-manifest/bartholomew-grayson.html">Crew manifest</a> &middot; <a href="../../aspects/">Aspects</a></span></div>
       </div>
-    </div>
+    </aside>
+
     <div class="entry-info">
       <div class="entry-name">Bartholomew Grayson</div>
-      <div class="entry-sub">A druid whose body answers before his reasoning does, and a shift that never finishes.</div>
-    </div>
-  </div>
+      <div class="entry-sub">A druid of the stars whose body answers before his reasoning does, carrying a constellation he has not finished.</div>
 
-  <div class="entry-body">
-
-
-      <p>
-        Circle of the Stars druid, Rashemi, WIS 18 against an unremarkable INT. He reads a situation by feel before his reasoning catches up, and the Almost-Shift is built to fire in that same order: the body answers first.
-      </p>
-      <p>
-        His tradition was pointed outward before he ever reached the Academy. His spellcasting focus is a star map, a family staff worn smooth and held together with tape, and his subclass draws power from stellar patterns. <strong>He did not come to Caelestis in spite of being a nature druid. He came because his practice was already about the sky.</strong>
-      </p>
-
-      <h3>How a slip runs</h3>
-      <p>
-        An Almost-Shift is a partial, involuntary slippage toward a shape he has not taken. It is flavor by default &mdash; a hand that holds wrong for a moment, a gait that is briefly another animal's. The rule that keeps it from becoming noise is a budget: <strong>one slip per scene carries mechanical weight</strong>, and the rest are texture.
-      </p>
-
-      <table>
-        <thead><tr><th>Register</th><th>What it resembles</th><th>Reading</th></tr></thead>
-        <tbody>
-          <tr><td><strong>First</strong></td><td>Ape, Boar, Giant Wolf Spider, Wolf</td><td>His own four Wild Shape forms. The baseline, and the thing that makes a departure legible.</td></tr>
-          <tr><td><strong>Second</strong></td><td>Starry Form</td><td>Constellation-light. Reads as his subclass surfacing, and is a cover for the third.</td></tr>
-          <tr><td><strong>Third</strong></td><td>Neither</td><td>The breadcrumb. Luminescent, between-worlds, matching no form he has and no constellation he knows.</td></tr>
-        </tbody>
-      </table>
-
-      <div class="dm-callout">
-        <span class="dm-callout-label">The third register is the whole mechanic</span>
-        His four shapes and his Starry Form exist so that a slip belonging to neither has somewhere to be noticed from. Third-register slips are how the Almost is seeded, and they should arrive attached to something &mdash; a creature studied, a biome in collapse, a place where living systems are being rewritten. The strain of a slip is the breadcrumb; there is no separate clue track.
+      <div class="pill-tabs" role="tablist" data-pill-group aria-label="Bartholomew Grayson sections">
+        <button class="pill-tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true">About</button>
+        <button class="pill-tab" role="tab" id="tab-arc" aria-controls="panel-arc" aria-selected="false">Arc</button>
+        <button class="pill-tab" role="tab" id="tab-mech" aria-controls="panel-mech" aria-selected="false">Mechanics</button>
+        <button class="pill-tab" role="tab" id="tab-dm" aria-controls="panel-dm" aria-selected="false">DM notes</button>
       </div>
 
-      <h3>Recognition, not search</h3>
-      <p>
-        The Almost is already present in him and he has been avoiding it. That makes the arc a recognition and keeps it off a fetch-quest footing: there is no creature to hunt down, and the climax is whether he can understand the shape well enough to hold it. <strong>The creature design is deliberately unwritten until play surfaces what it should be.</strong>
-      </p>
+      <div class="pill-panel" role="tabpanel" id="panel-about" aria-labelledby="tab-about">
+        <p>
+          Bartholomew Grayson is a human druid of the Circle of the Stars and a wilder, a cadet at Caelestis with an uncanny natural gift for the helm. He reads the night sky as the working tool of his practice. A two-starred constellation, <a href="../locations/index.html#constellations">CON-312</a>, surfaces when he takes his starry form, the shape he saw during a fall as a child, and since Voyage 6 he can take single traits of the creatures he knows without taking their forms. He is the crew's spelljammer.
+        </p>
 
-      <h4>Observational flags</h4>
-      <table>
-        <thead><tr><th>Watch</th><th>What it tells you</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Beast Sense and Beast Bond</strong></td><td>Whether he treats animals as subjects or as kin. Decides whether the Almost is a creature or a condition.</td></tr>
-          <tr><td><strong>How he handles the star map</strong></td><td>It is heirloom, instrument and focus at once. Carelessness and reverence point at different shapes.</td></tr>
-          <tr><td><strong>Starry Form or Wild Shape under pressure</strong></td><td>Same resource, instinctive choice. Says where his identity currently sits.</td></tr>
-        </tbody>
-      </table>
+        <h4>Appearance</h4>
+        <p>
+          He carries a family staff worn smooth and held together with tape, and a star map that is heirloom, instrument and spellcasting focus at once. In his starry form he becomes a figure of light bearing two stars. When an aspect takes him, only that part of the creature comes: an ape's shoulders thickening, a spider's grip on a human hand.
+        </p>
 
-      <h3>The alien ladder</h3>
-      <p>
-        Every form he learns should teach his body something the Almost already knows, so that the recognition reads as inevitable rather than granted.
-      </p>
-      <table>
-        <thead><tr><th>Tier</th><th>Where</th><th>What they are</th></tr></thead>
-        <tbody>
-          <tr><td><strong>1 &mdash; Strange analogs</strong></td><td>Academy</td><td>Earth-beast ecological roles built wrong. A pack predator that hunts by barometric pressure; a grazer that sleeps through stellar events. Recognizable and slightly off, in ways only he remarks on.</td></tr>
-          <tr><td><strong>2 &mdash; Alien biology</strong></td><td>Open wildspace</td><td>No analog at all. Locomotion that makes sense only once you have the gravity, communication by chemistry or vibration. These are the first to trigger slips his four shapes cannot account for.</td></tr>
-          <tr><td><strong>3 &mdash; Threshold creatures</strong></td><td>Late</td><td>Things living at the edges of living systems &mdash; deep void fauna, phlogiston organisms, creatures tied to dying and recovering worlds. Each one narrows the Almost.</td></tr>
-        </tbody>
-      </table>
+        <h4>Personality</h4>
+        <p>
+          Quiet and untroubled, he slipped into a crew that had already formed and settled there. He reads a situation by feel before his reasoning catches up, and his body answers first. He is watchful in a practical way: he strings noisemakers around a shaft and drops a lit match down a dark one to see what rises. He came to Caelestis because his practice was already about the sky.
+        </p>
 
-      <h3>Aspects &mdash; V006</h3>
-      <p>
-        In Vaelorix's garden he breathed a newly bloomed flower and his body wanted to become something it had never been. The pull faded, and the <strong>Aspects</strong> feature woke: as a Bonus Action he manifests one trait of a creature he knows without taking its form, proficiency-bonus uses per long rest, prepared aspects equal to his proficiency bonus, one per ability score. His constellation's two bright stars are the seated aspects (ape and spider so far); the faint ones wait to fill. He carries the bloom sealed, and the flower is accelerant, not key. The handout and full rules are the player page at <a href="../../aspects/index.html">Aspects</a>; V007 owes him his first chosen aspect.
-      </p>
+        <h4>Biography</h4>
+        <h5>Background</h5>
+        <p>
+          His tradition pointed outward before he ever reached the Academy: his circle draws power from stellar patterns, and his staff and star map came to him through his family. As a child he fell, and during the fall he saw a constellation, the two-starred shape that now shows in his starry form. He arrived at Caelestis after the other cadets of his cohort had formed a crew, and missed their first voyage for a wilder's training.
+        </p>
+        <h5>In the campaign</h5>
+        <ul>
+          <li><strong>Voyage 2.</strong> <a href="../dossiers/boatswain-tarto.html">Boatswain Tarto</a> oriented him and told him being a wilder changed nothing once he was aboard a crew. He found a seat at the Weeping Goddess beside <a href="../dossiers/miken.html">Miken</a>, ordered the dragon scale pizza Tarto had recommended, and joined the gathering crew. In a Nexus practice he took instantly to the helm and settled the open spelljammer's seat. He flew the hammerhead through an electrical storm and led the salvage race, called a fog cloud over the hull, and slowed the ship during the githyanki attack to give Boogie a way back aboard.</li>
+          <li><strong>Voyage 3.</strong> He helped the rival crew up in the wrecked simulation chamber.</li>
+          <li><strong>Voyage 4.</strong> He shifted into a starry form of light bearing two stars and recognised it as the shape he saw during his childhood fall. He dropped a lit match down the bottomless quarters shaft and watched wisps rise toward the light, and took a full shock in the wisp fight in the choked shafts.</li>
+          <li><strong>Voyage 5.</strong> He lit his staff for the descent, loosed frost at the behir and soaked it with a jet of water that scattered the lightning in its mouth. He went down in its jaws and came back on Tumak's potion, then threw back a clockwork horror with a wave of thunder during the retreat. On the Command Deck his magic would not answer and he drank a potion instead, touched a wisp and was drained, and learned to slap them off.</li>
+          <li><strong>Voyage 6.</strong> On the first watch he strung noisemakers around the garden shaft and caught Miken speaking into a sending stone. In Vaelorix's garden he breathed a newly bloomed flower that made his body want to become something it had never been, and sealed it in a vial. As an ape he tore the great flower from the beholder's body, and he struck the expulsion that put Ostekk-10 out of the ship.</li>
+        </ul>
 
-      <p>
-        <strong>Open:</strong> what the Almost is. Held until the table answers it.
-      </p>
+        <h4>Relationships</h4>
+        <h5><a href="../dossiers/boatswain-tarto.html">Boatswain Tarto</a></h5>
+        <p>
+          She assigned him to the crew and told him being a wilder changed nothing once he was aboard one.
+        </p>
+        <h5><a href="../dossiers/miken.html">Miken Haverstance</a></h5>
+        <p>
+          The first cadet he sat with at Caelestis. In Voyage 6 Bartholomew caught him reporting through a sending stone.
+        </p>
+        <h5><a href="casey.html">Casey Geim</a></h5>
+        <p>
+          Casey glimpsed the two-starred constellation rising in him in Voyage 3, before Bartholomew recognised it himself.
+        </p>
+
+        <h4>Abilities</h4>
+        <p>
+          A druid of the stars: frost, water, thunder and fog, a light on his staff, and a starry form of constellation-light. He takes the shapes of an ape, a boar, a giant wolf spider and a wolf. He can also take one trait of a creature he has studied without taking its form, an ape's strength or a spider's climb, and each trait settles into a star of his constellation. At the helm he has a natural affinity, and Saerthe keeps a note of it on his desk.
+        </p>
+
+        <h4>Notable items</h4>
+        <ul>
+          <li><strong>The garden bloom.</strong> A flower from Vaelorix's garden, sealed in a glass vial. Its scent made his body want to change.</li>
+          <li><strong>His star map.</strong> Heirloom, instrument and spellcasting focus.</li>
+          <li><strong>His staff.</strong> A family staff, worn smooth and taped.</li>
+        </ul>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-arc" aria-labelledby="tab-arc" hidden>
+        <h4 id="missing">What he is missing</h4>
+        <p>
+          The peace within him, his constellation. The row is on <a href="../campaign/index.html#bartholomew">Campaign &rarr; Crew</a>.
+        </p>
+
+        <h4 id="heads">Where it heads</h4>
+        <p>
+          Recognition, not search. The Almost is already present in him and he has been circling it, so there is no creature to hunt down: the climax is whether he understands the shape well enough to hold it. The Almost is the creature Bartholomew builds. His constellation is its blueprint, six stars for six ability scores, and each aspect he catalogues seats into the matching star. When the constellation is complete, its shape is his full Almost form. The bloom from Vaelorix's garden is the catalyst, and finding where its parent plant grows is his adventure.
+        </p>
+
+        <h4>Gates and escalation</h4>
+        <ul>
+          <li><strong>The bloom.</strong> He will think the bloom causes his change. Searching for where it grows gives him reason to travel and to identify creatures, and Vaelorix's notes teach more about it.</li>
+          <li><strong>The alien ladder.</strong> Every form and aspect he learns should teach his body something the Almost already knows, so the recognition reads as inevitable rather than granted (<a href="#ladder">the ladder</a>).</li>
+          <li><strong>The name.</strong> An old druid or a text can one day tell him, &ldquo;They used to call people like you Almosts.&rdquo;</li>
+          <li><strong>Vecna's working.</strong> His arc crosses the strain <a href="../opposition/vecna.html">Vecna's working</a> puts on living systems, indirectly until that plot arrives.</li>
+        </ul>
+
+        <h4>Observation flags</h4>
+        <p>
+          Watch these in play. They inform the Almost's look and register; its mechanics are set.
+        </p>
+        <div class="dm-table-scroll">
+        <table>
+          <thead><tr><th>Watch</th><th>What it tells you</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Beast Sense and Beast Bond</strong></td><td>Whether he treats animals as subjects or as kin.</td></tr>
+            <tr><td><strong>How he handles the star map</strong></td><td>Heirloom, instrument and focus at once. Carelessness and reverence point at different looks.</td></tr>
+            <tr><td><strong>Starry form or Wild Shape under pressure</strong></td><td>Same resource, instinctive choice. It says where his identity sits now.</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <h4 id="next-beat">Next beat</h4>
+        <p>
+          His first chosen aspect, sent ahead as a handout, and the chance to use it in Voyage 7. The beat is on <a href="../campaign/voyages/index.html#v007">Voyages &rarr; V007, Beats owed</a>.
+        </p>
+
+        <h4>Table notes</h4>
+        <ul>
+          <li>He missed the first session; &ldquo;wilder's training&rdquo; covered his absence, which is why the record has no Voyage 1 entry for him.</li>
+          <li>His childhood fall was ad-libbed at the table. Weave it in, and keep the rest of his backstory light.</li>
+        </ul>
+
+        <h4>Inspirations</h4>
+        <p>
+          The recognition arc draws on <em>Teen Titans</em>, &ldquo;The Beast Within&rdquo;.
+        </p>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-mech" aria-labelledby="tab-mech" hidden>
+        <h4 id="build">Build</h4>
+        <p>
+          Druid, Circle of the Stars, with the Wilder specialisation. Wisdom 18 against an unremarkable Intelligence. His spellcasting focus is the star map. Wild Shape forms: ape, boar, giant wolf spider, wolf. Aspects woke in Voyage 6.
+        </p>
+
+        <h4 id="aspects">Aspects</h4>
+        <p>
+          The player text, catalogue and handout are on <a href="../../aspects/">Aspects</a>. In summary:
+        </p>
+        <ul>
+          <li><strong>Manifest Aspect.</strong> A bonus action; the aspect lasts 1 minute. Uses equal his proficiency bonus, regained on a long rest. He cannot manifest an aspect in a Wild Shape form.</li>
+          <li><strong>Prepared aspects.</strong> Equal to his proficiency bonus, seated once per long rest, at most one per ability score.</li>
+          <li><strong>What can be learned.</strong> Only creatures with a heart, blood and a heartbeat that are not humanoid in shape. Humanoids, plants, constructs and elementals are excluded, and the handout adds oozes and undead. Rule gray areas as they arise.</li>
+          <li><strong>Learning.</strong> One success per day, against a DC you set from the creature's CR. A failure locks that creature out for 24 hours. Non-beast aspects come only from study, which is where the feature's value lives.</li>
+          <li><strong>Wild Shape stays separate.</strong> Wild Shape runs by the book on its own track. Swapping into a known form never feeds the catalogue.</li>
+        </ul>
+
+        <h4 id="almost">Full Almost form</h4>
+        <p>
+          Unlocks when the constellation is complete, and costs a Wild Shape use. His physical scores become exactly the seated creatures' scores, with no cap; his mental scores stay his own. AC is 10 + Dexterity unless a seated aspect grants hide or armour. Dinosaurs are off the aspect menu and must be earned.
+        </p>
+
+        <h4 id="bloom">The bloom</h4>
+        <p>
+          Consumable: inhaling it restores a Wild Shape use. The <a href="../artifacts/containment-engine.html">Lantern of Flourishing</a> can renew it, and renewing it with a Lantern charge is the crew's active choice. Its parent plant is a carrot, and no parent plant is aboard.
+        </p>
+
+        <h4 id="slips">Slips</h4>
+        <p>
+          A slip is a partial, involuntary slippage toward a shape he has not taken. It is flavour by default: a hand that holds wrong for a moment, a gait that is briefly another animal's. One slip per scene carries mechanical weight, and the rest are texture.
+        </p>
+        <div class="dm-table-scroll">
+        <table>
+          <thead><tr><th>Register</th><th>What it resembles</th><th>Reading</th></tr></thead>
+          <tbody>
+            <tr><td><strong>First</strong></td><td>Ape, boar, giant wolf spider, wolf</td><td>His own four Wild Shape forms. The baseline, and the thing that makes a departure legible.</td></tr>
+            <tr><td><strong>Second</strong></td><td>Starry form</td><td>Constellation-light. Reads as his circle surfacing, and covers the third.</td></tr>
+            <tr><td><strong>Third</strong></td><td>Neither</td><td>The breadcrumb: luminescent, between worlds, matching no form he has and no constellation he knows.</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>
+          His four shapes and his starry form exist so that a slip belonging to neither has somewhere to be noticed from. Third-register slips seed the Almost, and they arrive attached to something: a creature studied, a biome in collapse, a place where living systems are being rewritten. The strain of a slip is the breadcrumb, with no separate clue track.
+        </p>
+
+        <h4 id="ladder">The alien ladder</h4>
+        <div class="dm-table-scroll">
+        <table>
+          <thead><tr><th>Tier</th><th>Where</th><th>What they are</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1. Strange analogues</strong></td><td>The Academy</td><td>Earth-beast ecological roles built wrong: a pack predator that hunts by barometric pressure, a grazer that sleeps through stellar events. Recognisable and slightly off, in ways only he remarks on.</td></tr>
+            <tr><td><strong>2. Alien biology</strong></td><td>Open wildspace</td><td>No analogue at all: locomotion that makes sense only once you have the gravity, communication by chemistry or vibration. The first to trigger slips his four shapes cannot account for.</td></tr>
+            <tr><td><strong>3. Threshold creatures</strong></td><td>Late</td><td>Things living at the edges of living systems: deep void fauna, organisms of the Astral Sea, creatures tied to dying and recovering worlds. Each one narrows the Almost.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-dm" aria-labelledby="tab-dm" hidden>
+        <h4 id="hidden">What's hidden</h4>
+        <ul>
+          <li><strong>CON-312.</strong> CON-312 is the blueprint of the creature Bartholomew is becoming: six stars, one per ability score. It is what lets him hold two natures at once. Every aspect he learns has a star to sit in, so he can take one living piece of a creature into his own pattern and stay himself; without it he would come apart. Two stars from his childhood fall burn, and the rest fill as he studies. When the constellation is complete, its shape is his full Almost form.</li>
+          <li><strong>The Almosts.</strong> &ldquo;The Almosts&rdquo; is an old druid name. Druidic tradition hands down whole beast shapes, worked out long ago, and Wild Shape is a clean swap into one. Keeping yourself while taking part of something else is harder, because two natures in one body want to separate. The tradition never taught it, and druids caught partway were warned about as the Almosts.</li>
+          <li><strong>The bloom.</strong> The ability is innate. The bloom feeds it and does not cause it.</li>
+        </ul>
+
+        <h4>Threads</h4>
+        <ul>
+          <li>Casey saw CON-312 rising in him before he recognised it, so two crew members have independently seen the constellation.</li>
+          <li>Renewing the bloom spends a charge of the Lantern of Flourishing, which the crew also uses to heal.</li>
+          <li>He caught Miken at the sending stone; what Miken reported is on <a href="../dossiers/miken.html">Miken's dossier</a>.</li>
+        </ul>
+
+        <h4>Still to decide</h4>
+        <ul>
+          <li>Whether Almost-Shift slips keep running beside Aspects or fold into them is not set, and neither is the threshold of three strains.</li>
+          <li>The three or four tier 1 creatures for the Academy, echoing his beast forms and his star-mapping, are not designed.</li>
+          <li>The bloom's name is not set: Kinbloom, Mantlewort or Otherlily.</li>
+          <li>What a Lantern charge costs to renew the bloom, how often it can, and what it restores are not set.</li>
+          <li>Whether the two stars that burn from his childhood fall are the stars his first aspects, ape and spider, are seated in is not set.</li>
+          <li>Whether beasts within his Wild Shape CR cap give aspects with no study is not set; the handout gives him a starting catalogue instead.</li>
+          <li>The Almost's look and register are not set.</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <div class="divider">&#10022; &#10022; &#10022;</div>
 
   <div class="xref-card">
     <div class="xref-head"><span class="xref-title">Connections</span></div>
-    <div class="xref-cols"><div class="xref-col">
-        <a class="chip chip-npc" href="../campaign/index.html#bartholomew">Arc shape</a>
+    <div class="xref-cols">
+      <div class="xref-col">
+        <div class="xref-col-head">People and factions</div>
+        <a class="chip chip-npc" href="../dossiers/boatswain-tarto.html">Boatswain Tarto</a>
+        <a class="chip chip-npc" href="../dossiers/miken.html">Miken</a>
+        <a class="chip chip-npc" href="casey.html">Casey</a>
+        <a class="chip chip-npc" href="../dossiers/vaelorix.html">Vaelorix</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Places</div>
         <a class="chip chip-place" href="../locations/index.html#constellations">CON-312</a>
-    </div></div>
+        <a class="chip chip-place" href="../vessels/tyrant-ship.html">Tyrant Ship</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Items</div>
+        <a class="chip chip-item" href="../artifacts/containment-engine.html">Lantern of Flourishing</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Campaign</div>
+        <a class="chip chip-quest" href="../campaign/index.html#bartholomew">Campaign: Bartholomew</a>
+        <a class="chip chip-quest" href="../campaign/voyages/index.html#v007">Voyage 7</a>
+        <a class="chip chip-quest" href="../opposition/vecna.html">Opposition: Vecna</a>
+      </div>
+    </div>
   </div>
 
   <div class="dm-footer">
@@ -118,6 +282,5 @@
   </div>
 
 </main>
-
 </body>
 </html>

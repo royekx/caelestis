@@ -37,14 +37,14 @@ staging once Korey has read and accepted them.
 | Factions | factions/ | 3 | 9 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 15 | 1 | 2 | 0 | 0 |
 | Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
-| Crew | crew/ | 8 | 17 | 2 | 0 | 23 |
-| Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
+| Crew | crew/ | 10 | 19 | 0 | 0 | 1 |
+| Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 4 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 4 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** |  | **95** | **128** | **79** | **4** | **104** |
+| **Total** |  | **97** | **130** | **79** | **4** | **82** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -133,6 +133,7 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - `data/player-characters.json` (Sol Fortuna, Voyage 4) says he "used Misfortune's Favor to draw ill luck onto his own shoulders". Misfortune's Favored is the oath's level-20 capstone and was earlier the working name of his Misfortuned feature; the Voyage 4 use reads as a self-Jinx or a Misfortuned use. crew/sol.html leaves the feature unnamed. Confirm the name and correct the line if Korey agrees.
 - `data/player-characters.json` (Casey Geim) lists the star-etched constellation shirt under Notable Items, but `data/items.json` and Tumak's record have Tumak holding it (Casey passed it to Tumak's bunk in Voyage 1). crew/casey.html and crew/tumak.html follow items.json. Drop it from Casey's Notable Items if Korey agrees.
 - `data/player-characters.json` gives all six cadets "Clearance: Sailor", and Tumak's Voyage 3 bullet has Mirt granting the crew sailor-level clearance; the BACKLOG decide "The Sailor gate at the Sea Dock" (crew/gregory.html) holds that a cadet inherits only Visitor and that part of the Sea Dock needs Sailor. Gregory's Voyage 3 bullet (locked out of a fleet-clearance category by his cadet star) sits between them. Reconcile once the decide is ruled.
+- `data/player-characters.json` (Boogie) lists "shield"; the DM page names it the Shield of Expression, a gift from Boom-chik, and it has no item record in `data/items.json`. Add the name or an item record if Korey agrees.
 - `data/npcs.json` (Winston Ryeback, Voyage 6) says he "was told the beholder had been taken care of, and took it to mean the crew had killed it"; the ruling is that Tumak told him outright that the crew killed it (dossiers/winston-ryeback.html).
 
 ## Still coming in
@@ -150,7 +151,7 @@ Order under each page: decide, fix, drop, add.
 - **[fix]** Tharizdun is she
   Tharizdun is female. Pages and drafts that call her he/his/him: cosmology/index.html, realms/fonains.html, realms/index.html, dossiers/thessalar.html, crew/boogie.html, artifacts/fonains-shard.html, factions/academy-fleet.html, chart/index.html, working/tharizdun.md, and the Fonains Canon Reference doc. STAGING and the Connections layer are done.
   src: Korey, 2026-10-27
-  done: cosmology and glossary (distribution section 1, 2026-10-27); factions (section 2); dossiers/thessalar.html (section 5).
+  done: cosmology and glossary (distribution section 1, 2026-10-27); factions (section 2); dossiers/thessalar.html (section 5); crew/boogie.html (section 7).
 
 - **[fix]** Dharra, not Darra
   The Cre'Tez sister is Dharra. Fix the Fonains Canon Reference doc and any page that spells it Darra. STAGING and the Connections layer are done.
@@ -772,6 +773,7 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
   Ruled (STAGING round 8). The figure "about 333,333 shards" is retired. Word Timeline S14–S15 and every page that carries the count (artifacts/fonains-shard.html, crew/boogie.html) to match:
   "When the Monolith broke, four great shards fell, each guarded by a Prince-aligned elemental, and many smaller shards came from them. Three hundred and thirty-three of the small shards are black. The rest took colors close to their elemental affinities."
   src: Korey, 2026-10-25 (round 8); timeline.json
+  done: artifacts/fonains-shard.html (section 4); crew/boogie.html (section 7). Timeline S14–S15 still needs it.
 
 - **[fix]** Fonains's present is level with Caelestis
   The clock "Fonains now (S28)" sits at t -0.43 against "Caelestis now" at 0, and the Lola's Boys band ends at -0.43. Shift the Fonains lane so Session 28 sits at about 0. Keep the Monolith break two to three months before it (today the break is at -0.64, which is about 0.21 before S28, so the spacing already holds).
@@ -1399,10 +1401,6 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
 
 ### crew/bartholomew.html
 
-- **[add]** Observation flags for the Almosts (DM)
-  From the retired spine: creature design is held until observation surfaces it in play. Watch how he uses Beast Sense and Beast Bond, how he treats the star map, and whether he reaches for Starry Form or Wild Shape under pressure. Check against the finished artifact and location pages (CON-312) before writing.
-  src: campaign/spine.html (retired, campaign section, conflict C16)
-
 - **[decide]** Whether Almost-Shift slips still run *(prep)*
   The page's "How a slip runs" has three registers and one weighted slip per scene, with a 3-strain threshold (wrongness and recognition, no anatomy). Options: keep slips running alongside Aspects, or fold slips into Aspects. Rule the 3-strain threshold either way.
   src: TGB § Bartholomew; crew/bartholomew.html "How a slip runs"
@@ -1419,68 +1417,28 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
   Settled: renewing the bloom with a Lantern charge is the crew's active choice. Open: the details (cost, how often, what it restores). Touches crew/bartholomew.html and artifacts/containment-engine.html.
   src: chat-voyage-6-7-planning § Bartholomew: Aspects; memory-canon § Bartholomew
 
-- **[add]** CON-312 and the Almosts *(answered)*
-  Add (DM voice):
-  "CON-312 is the blueprint of the creature Bartholomew is becoming: six stars, one per ability score. It is what lets him hold two natures at once. Every aspect he learns has a star to sit in, so he can take one living piece of a creature into his own pattern and stay himself. Without it he would come apart. Two stars from his childhood fall burn; the rest fill as he studies. When the constellation is complete, its shape is his full Almost form."
-  "'The Almosts' is an old druid name. Druidic tradition hands down whole beast shapes, worked out long ago, and Wild Shape is a clean swap into one. Keeping yourself while taking part of something else is harder, because two natures in one body want to separate. The tradition never taught it, and druids caught partway were warned about as the Almosts."
-  DM: an old druid or a text can one day tell him "they used to call people like you Almosts." The name stands for now; memory notes it may change.
-  answered: Voyage 7 chat 70f0c197 (Korey: "Okay, I see it now. It's utilizing an aspect of that creature while remaining yourself", accepting the Wild Shape and Aspects framing with the Almosts as the old name); inbox/chat-voyage-6-7-planning.md § Bartholomew: Aspects (CON-312 the blueprint, six stars, two burning); crew/bartholomew.html; aspects/index.html
-  src: chat-voyage-6-7-planning § Open
-
 - **[later]** Full Almost template details
   Settled (see the Full Almost form add): physical scores come from the seated creatures with no cap, mental scores stay his own, AC is 10 + Dex unless an armour aspect applies, and the form costs a Wild Shape use and unlocks when the constellation is complete. Dinosaurs are off the aspect menu and must be earned.
   Left: its HP; when each of CON-312's faint stars unlocks (two burn from his childhood fall); and whether dinosaurs join his Wild Shape list, which is separate from the aspect menu.
   src: chat-voyage-6-7-planning § Open, § Bartholomew: Aspects (Settled)
 
-- **[fix]** The Almost: mechanic set, look open
-  Page says "The creature design is deliberately unwritten until play surfaces what it should be." Reframe: the Almost is the creature Bartholomew builds. His constellation is its blueprint: six stars for six ability scores, and each catalogued aspect seats into the matching star. Its look and register are not yet set.
-  src: memory-canon § Bartholomew (Almost mechanic)
+- **[decide]** Aspects without study *(prep)*
+  The earlier ruling (memory canon) says aspects from any beast within his Wild Shape CR cap need no study and only non-beast aspects need study. The player handout on `aspects/` gives him a starting catalogue of ten aspects instead (the four Known plus six of his choice) and learns every new aspect by Track or Glimpse. crew/bartholomew.html follows the handout and carries this as a Still to decide sentence. Rule which holds; if the CR-cap rule stands, the handout needs the change. Also confirm the learning DC: the earlier ruling has a save against a CR-based DC, the handout has Track or Glimpse checks against a DC the DM sets.
+  src: section 7 (2026-10-28); memory-canon § Bartholomew; aspects/index.html
 
-- **[add]** Aspects: what can be learned and how
-  - Aspects are prepared equal to his proficiency bonus. Manifest Aspect is a bonus action and lasts 1 minute. Aspects are seated once per long rest.
-  - Aspects from any beast within his Wild Shape CR cap need no study. Non-beast aspects come only from study, which is where the feature's value lives.
-  - Learning an aspect is a save against a CR-based DC, one success per day. A failure locks that creature out for 24 hours.
-  - Only creatures with a heart, blood and a heartbeat that are not humanoid-shaped can be studied. Humanoids, plants, constructs and elementals are excluded. Gray areas are ruled as they arise.
-  src: memory-canon § Bartholomew; chat-voyage-6-7-planning § Bartholomew: Aspects
+- **[decide]** The burning stars and the seated aspects
+  The CON-312 answer says two stars burn from his childhood fall and the rest fill as he studies. The old crew page said his two bright stars are the seated aspects (ape and spider), and the handout has the two stars burn brighter as the ape and spider answer. Rule whether the two burning stars are the ape's and the spider's seats, or two of his own from the fall with the aspects seated elsewhere. crew/bartholomew.html carries it as a Still to decide sentence.
+  src: section 7 (2026-10-28), conflict C7; aspects/index.html
 
-- **[add]** Full Almost form (DM only)
-  In full Almost form his physical scores are exactly the seated creatures' scores, with no cap. His mental scores stay his own. AC is 10 + Dex unless a seated aspect grants hide or armour. It costs a Wild Shape use and unlocks when the constellation is complete.
-  src: memory-canon § Bartholomew; chat-voyage-6-7-planning § Bartholomew: Aspects
-
-- **[add]** Wild Shape stays separate
-  Wild Shape stays by the book, on its own track, separate from Aspects. Swapping into a known form never feeds the catalogue.
-  src: memory-canon § Bartholomew (Almost refinement); chat-voyage-6-7-planning § Bartholomew: Aspects
-
-- **[add]** The Garden bloom
-  The bloom is consumable: inhaling it restores a Wild Shape use. The Lantern of Flourishing can renew it, and Vaelorix's notes teach more about it. Its parent plant is a carrot. No parent plant is aboard; finding where the flower grows is his adventure. He will think the bloom causes his change, while the ability is innate, and searching for it gives him reason to travel and identify creatures.
-  src: memory-canon § Bartholomew; chat-voyage-6-7-planning § Bartholomew: Aspects
-
-- **[add]** The childhood fall
-  His ad-libbed childhood fall, when he saw a constellation that now shows in his Starry Form, is a direction to weave in. Backstory stays light.
-  src: memory-canon § Bartholomew
-
-- **[add]** Table note: first session
-  Bartholomew missed the first session; "Wilder's training" covered his absence.
-  src: TGB § Bartholomew
-
-- **[add]** His arc and the Vecna pressure
-  His arc crosses the Vecna / ecosystem-strain pressure, indirectly until that plot arrives.
-  src: TGB § Bartholomew
-
-- **[add]** Inspiration
-  The recognition arc draws on Teen Titans, "The Beast Within".
-  src: TGB § Bartholomew
+- **[later]** Bartholomew's sheet check
+  His current level and D&D Beyond URL; whether the sheet carries Wilder and Rashemi (the record has Human, Druid, Specialisation Wilder), and his Wild Shape forms list.
+  src: section 7 (2026-10-28)
 
 ### crew/boogie.html
 
 - **[decide]** Which deckhand item goes missing on the tyrant ship voyage *(prep)*
   Korey names the item (see the "Next beat" add).
   src: BCS § Boogie/Open
-
-- **[add]** Tharizdun, the shard and the current
-  Ruled (STAGING round 8). Add to DM notes: "Tharizdun wants nothing specific from Boogie. Tharizdun is not lucid; it is an opportunist. What happens through the shard depends on what Boogie does, and things may come back through the current. Boogie's plot is reactive. Now and then he feels corruption leaking into him from the shard."
-  DM: the corruption is a role-playing beat, not a mechanic.
-  src: Korey, 2026-10-25 (round 8); BCS § Boogie/Open
 
 - **[later]** Giorge and the shards
   Giorge is the Darkest Day vessel on Fonains (spelling per rulings; a different person from Jorgi Panamop).
@@ -1489,56 +1447,13 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
   Touches crew/boogie.html and artifacts/fonains-shard.html.
   src: BCS § Boogie/The shard and Tharizdun; memory-canon § Naming (Giorge); session-rulings
   answered (shard search): BCS § Boogie/The shard and Tharizdun (Settled); original Boogie chat fa8c4131 (Korey's line quoted above)
+  done: crew/boogie.html carries the settled line (section 7); artifacts/fonains-shard.html carries it too.
   Settled since (Tharizdun tie, part): "Shothragot, Tharizdun's avatar, was bound to the temple aboard the planar craft. Its true vestige may still be there, and Giorge may be trying to reach it." Still open: his surname.
   answered (part): STAGING § Tharizdun and the planar craft
 
-- **[fix]** Two archived objects, not three
-  Page says "Three archived objects have accumulated inside one living body". Change to: two archived objects, the half-ship from Voyage 001 and the half-logbook, are held inside him by the shard. The shard is what keeps them there, not a third archived object.
-  src: memory-canon § Boogie; BCS § Boogie/Archived objects
-
-- **[add]** How the shard reached him
-  The shard came through Vocath's Cairn Station line. Vocath's people chased Clint to Fonains and came back with fragments of the broken Monolith, and before V001 Boogie looked into a shipment he should have left alone. The "What he is carrying" table now says only "Before the campaign"; add the route.
-  src: session-rulings (Timing); timeline.json "Boogie takes the shard"
-
-- **[add]** His Divine Soul power (add to the intro)
-  Boogie's Divine Soul power comes from Tharizdun's influence through the shard. Boogie does not know it.
-  src: BCS § Boogie/The shard and Tharizdun
-
-- **[add]** The scale of the shards
-  When the Fonains Monolith broke, four great shards fell and many smaller shards came from them. Three hundred and thirty-three of the small shards are black; the rest took colors close to their elemental affinities. Collecting them is never a goal.
-  src: Korey, 2026-10-25 (round 8) (replaces "about 333,333"); BCS § Boogie/The shard and Tharizdun
-
-- **[add]** The Blob Drop
-  Boogie has a signature dance move called the Blob Drop.
-  src: BCS § Boogie/Character and the Pulse
-
-- **[add]** The level 3 dream
-  The level 3 Divine Soul unlock was a dream. Boogie looks into the nucleus and sees a fractal, pyramidal network of other Boogies, each with a differently shaped shard. A crack runs from him through the network; his line connects upward wrongly; at the apex sits an unnamed source that gives and consumes. Its meaning: this specific shard made this version of Boogie, and other shards exist out there. The dream ends: "You wake. Your chest is heavier than it was when you closed your eyes." The player chooses whether to check.
-  src: BCS § Boogie/The fractal dream; memory-canon § Boogie
-
-- **[add]** Arc method: no fixed reveal
-  Boogie's arc has no fixed reveal. Gates are planted where relevant and follow the player, and he may never learn the source. Escalation gates, loosely ordered: passive archiving now; environmental oddities around him; an acolyte encounter; something coming back through the current; understanding what "full" means. The shard escalates rather than repeats, and is not revealed as a Monolith piece too soon.
-  src: BCS § Boogie/Arc method; memory-canon (open-decisions § Voyage 007)
-
-- **[add]** The prophet thread
-  The shard draws people to Boogie as something holy. A following may grow around him as a prophet-like figure built on a corrupted signal. This stays player-driven: available to pull on, never pushed. See the New pages section, "Boogie's faith".
-  src: memory-canon (Boogie prophet arc); BCS § Boogie/Arc method
-
-- **[add]** Reaching for the archive
-  Boogie will learn to reach for the archive deliberately. He can offer something during a Pulse; it goes in incomplete and comes back incomplete. The ceiling stays bounded because he is a damaged relay. The gate is his realising that what goes in is going somewhere.
-  src: memory-canon (archive mechanic); BCS § Boogie/Arc method
-
-- **[add]** Boogie and the Lantern
-  When the Lantern of Flourishing is used on Boogie he briefly loses his form, and near it he feels out of step with his rhythm. Rules for the healing are on artifacts/containment-engine.html.
-  src: memory-canon § Naming and canon corrections
-
-- **[add]** Next beat (tyrant ship voyage)
-  A named deckhand item is mentioned several times, then goes missing. Saerthe or Tarto raises it, Boogie learns something is in his chest, and the player decides what to do.
-  src: BCS § Boogie/Next beat
-
-- **[add]** DM note: the end-of-voyage healing
-  The healing Boogie received at the end of the last voyage came from a potion Korey used while piloting the absent player. It is not a Pulse seed.
-  src: BCS § Boogie/Next beat
+- **[later]** Boogie's sheet check
+  His current level and D&D Beyond URL, and whether the Shield of Expression is on the sheet (the record lists "shield").
+  src: section 7 (2026-10-28)
 
 # Artifacts and vessels
 
@@ -1608,6 +1523,16 @@ left here is open.
   Restoring a limb takes a compatible cradle and every charge, daily, for seven days.
   src: chat-voyage-6-7-planning § Lantern of Flourishing
   held (section 4): the source chat marks this an inference, not in the repo. The page leaves it out and says in Still to decide that limb restoration is not set; confirm before it goes on the item card.
+
+### artifacts/fonains-shard.html
+
+- **[fix]** Trentara, not Trintara
+  § History says the great shards turn "around a black cyst in the Trintara Forest". Korey spells it Trentara (STAGING § Fonains geography): the Monolith's remains lie in the Trentara forest.
+  src: Korey 2026-10-28 (via section 7)
+
+- **[fix]** Drop the accumulation milestone
+  Still to decide carries "the milestone where the accumulation starts costing Boogie". Boogie's arc method has no fixed reveal and no milestone (crew/boogie.html, Arc); the milestone question is retired. Keep the first half of the sentence (what a corrupted archive fragment does over years at this scale) if it is still wanted.
+  src: section 7 (2026-10-28), conflict C6
 
 ### artifacts/faelight-spore.html
 
