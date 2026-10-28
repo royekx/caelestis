@@ -80,6 +80,11 @@ footer i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-righ
 .lbl.gold{color:var(--gold);text-shadow:0 0 6px rgba(212,162,86,.6)}
 .lbl.below{transform:translateY(14px)}
 .lbl.sector{font-size:10px;letter-spacing:.32em;text-transform:uppercase;opacity:.5;text-shadow:none;transform:none}
+.lbl.ghost{color:#b6a6dc;text-shadow:none}
+#gtc{position:fixed;left:1rem;right:1rem;bottom:2.6rem;z-index:5;padding:.5rem .7rem;background:rgba(9,12,20,.82);border:1px solid var(--holo-f);border-radius:6px;backdrop-filter:blur(6px)}
+@media (max-width:640px){#gtc{left:.5rem;right:.5rem;bottom:2.3rem;padding:.4rem .5rem}}
+body:not(.embed) #caption{bottom:8.5rem}
+@media (max-width:640px){body:not(.embed) footer{display:none} body:not(.embed) #gtc{bottom:.5rem} body:not(.embed) #panel{bottom:11.5rem;max-height:34vh} body:not(.embed) #caption{bottom:11.5rem}}
 .lbl.heart{font-family:var(--serif);font-style:italic;font-size:11px;letter-spacing:0;color:#e6eef8;text-shadow:0 0 3px #080b12}
 .hide-labels .lbl{display:none}
 /* Inside the Chart page (index.html), which carries the title and the clock. */
@@ -120,11 +125,13 @@ try { if (window.self !== window.top) document.body.classList.add('embed'); } ca
     <button type="button" id="tLanes" aria-pressed="true">Lanes</button>
     <button type="button" id="tLabels" aria-pressed="true">Labels</button>
     <button type="button" id="tSpin" aria-pressed="true">Drift</button>
+    <button type="button" id="tBeacon" aria-pressed="true">Beacon</button>
     <button type="button" class="go" id="goOerth">Line it up from Oerth</button>
   </div>
 </header>
 
 <aside id="panel" hidden></aside>
+<div id="gtc"></div>
 <div id="caption">The eye, as it lands on Oerth</div>
 
 <footer>
@@ -139,6 +146,7 @@ try { if (window.self !== window.top) document.body.classList.add('embed'); } ca
 <div id="fail">The holochart needs WebGL and could not start in this browser. The <a href="index.html" style="color:#8fb0e6">flat chart</a> holds the same places.</div>
 
 <script src="galaxy.js"></script>
+<script src="gtc.js"></script>
 <script type="module">
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -279,6 +287,7 @@ const RING = (() => {
 })();
 
 // Stars: four arms, a bulge and a thin halo.
+var starGeo, baseCol; const armOf = [], tOf = [];   // per arm star: its arm and how far out, for the kindling
 (function stars(){
   const R = rng(9113), pos = [], col = [];
   const tones = C.stars.map(c => new THREE.Color(c));
@@ -287,7 +296,7 @@ const RING = (() => {
     const arm = Math.min(3, Math.floor(R()*4)), t = Math.pow(R(), .85) * 3.3;
     const p = armPt(arm, t, gauss(R)*90*(.4+t/3), gauss(R)*.16);
     const v = toV(p); const thick = 2.2 + 3.5*Math.exp(-t*1.2);
-    push(v.x, gauss(R)*thick, v.z, .45 + R()*.6);
+    push(v.x, gauss(R)*thick, v.z, .45 + R()*.6); armOf.push(arm); tOf.push(t);
   }
   for (let i = 0; i < 7000; i++) {             // bulge
     const r = Math.abs(gauss(R))*11, a = R()*Math.PI*2;
@@ -303,7 +312,7 @@ const RING = (() => {
   // Fixed pixel size: stars stay pinpoints however close the camera comes.
   const m = new THREE.PointsMaterial({ size:2.2*Math.min(window.devicePixelRatio,2), map:DOT, vertexColors:true, transparent:true, opacity:.9,
     depthWrite:false, blending:THREE.AdditiveBlending, sizeAttenuation:false });
-  starMat = m;
+  starMat = m; starGeo = g; baseCol = Float32Array.from(col);
   galaxy.add(new THREE.Points(g, m));
 })();
 var starMat;
@@ -475,6 +484,97 @@ const toOerth = [];                         // hidden while the eye stands at Oe
   });
 })();
 
+// ── The Beacon (gtc.js) ────────────────────────────────────────────
+// Erevos turns once a cycle; a faint sweep marks where its unseen beam
+// points. The kindled arm glows behind a wave of light running root to tip,
+// and the arm's four marker clusters light as the wave passes. With the
+// quickening on (DM), a ghost shows where the old tables put the beam.
+const G = window.GTC;
+const beacon = new THREE.Group(); galaxy.add(beacon);
+const dirOf = a => new THREE.Vector3(Math.cos(a), 0, Math.sin(a)*.9).normalize();
+const sweep = (() => {                       // a thin wedge along +x, turned to the beam
+  const g = new THREE.BufferGeometry(), L = 112, w = .05;
+  g.setAttribute('position', new THREE.Float32BufferAttribute([0,0,0, L,0,-L*w, L,0,L*w], 3));
+  g.setAttribute('color', new THREE.Float32BufferAttribute([1,1,1, 0,0,0, 0,0,0], 3));
+  const m = new THREE.Mesh(g, new THREE.MeshBasicMaterial({ color:C.holoHi, vertexColors:true, transparent:true, opacity:.2, side:THREE.DoubleSide, depthWrite:false, blending:THREE.AdditiveBlending }));
+  m.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(2.4,0,0), new THREE.Vector3(L,0,0)]),
+    new THREE.LineBasicMaterial({ color:C.holoHi, transparent:true, opacity:.35 })));
+  beacon.add(m); return m;
+})();
+const ghost = new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(2.4,0,0), new THREE.Vector3(112,0,0)]),
+  new THREE.LineDashedMaterial({ color:C.cone, dashSize:2, gapSize:1.6, transparent:true, opacity:.8 }));
+ghost.computeLineDistances(); beacon.add(ghost);
+const ghostFront = glowSprite(C.cone, 3.2, .9); beacon.add(ghostFront);
+const ghostLbl = new THREE.Object3D(); ghostFront.add(ghostLbl); label('old tables', ghostLbl, 'lbl sm ghost');
+// The side of the heart that throws the beam.
+const lip = glowSprite(C.holoHi, 3.2, .8); core.add(lip);
+// The wave: a glow along the arm from its root to the front, and the crest.
+const WAVE_N = 90;
+const wave = new THREE.Line(new THREE.BufferGeometry(), new THREE.LineBasicMaterial({ color:C.holoHi, transparent:true, opacity:.55, blending:THREE.AdditiveBlending, depthWrite:false }));
+wave.geometry.setAttribute('position', new THREE.Float32BufferAttribute(new Float32Array(WAVE_N*3), 3));
+beacon.add(wave);
+const crest = glowSprite(C.star, 9, .85); beacon.add(crest);
+const GLOW_N = 36, glows = [];               // soft light along the lit part of the arm
+for (let i = 0; i < GLOW_N; i++) { const g = glowSprite(C.holoHi, 7, .16); beacon.add(g); glows.push(g); }
+// Sixteen marker clusters, four to an arm: a few stars each, and a ring.
+const clusters = E.MARKERS.map(mk => {
+  const grp = new THREE.Group(); grp.position.copy(toV(mk.pos, 0));
+  const R = rng(700 + mk.arm*4 + mk.j), pts = [];
+  for (let i = 0; i < 7; i++) pts.push(gauss(R)*.9, gauss(R)*.35, gauss(R)*.9);
+  const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
+  const dots = new THREE.Points(g, new THREE.PointsMaterial({ size:4*Math.min(window.devicePixelRatio,2), map:DOT, color:C.holo, transparent:true, opacity:.5, depthWrite:false, sizeAttenuation:false, blending:THREE.AdditiveBlending }));
+  const halo = glowSprite(C.holoHi, 7, 0);
+  grp.add(dots, halo); beacon.add(grp);
+  return { mk, dots, halo };
+});
+const _accent = new THREE.Color(C.holoHi);
+let gtcT = null, gtcQuick = false;
+function applyGTC(T, quick){
+  gtcT = T; gtcQuick = quick;
+  const q = G.parts(T), a = G.beamAngle(T), d = dirOf(a);
+  sweep.rotation.y = Math.atan2(-d.z, d.x);
+  lip.position.copy(d).multiplyScalar(2.1);
+  // the wave along the kindled arm
+  const front = Math.min(q.front, E.TIP + .2), arr = wave.geometry.attributes.position.array;
+  for (let i = 0; i < WAVE_N; i++) { const v = toV(armPt(q.arm, front*i/(WAVE_N-1)), .05); arr[i*3] = v.x; arr[i*3+1] = v.y; arr[i*3+2] = v.z; }
+  wave.geometry.attributes.position.needsUpdate = true; wave.geometry.computeBoundingSphere();
+  crest.position.copy(toV(armPt(q.arm, front), .1));
+  glows.forEach((g, i) => { const t = front*(i+.5)/GLOW_N; g.position.copy(toV(armPt(q.arm, t), .05));
+    g.material.opacity = .1 + .22*Math.exp(-(front - t)/.5); });
+  // the arm's stars brighten behind the front, most at the crest; the last arm fades
+  const col = starGeo.attributes.color.array, prev = (q.arm + 3) % 4, fade = Math.max(0, 1 - q.p/.12);
+  for (let i = 0; i < armOf.length; i++) {
+    let b = 0;
+    if (armOf[i] === q.arm) { const dd = front - tOf[i]; if (dd >= 0) b = .22 + 1.0*Math.exp(-dd/.22); }
+    else if (armOf[i] === prev && fade > 0) b = .22*fade;
+    col[i*3] = baseCol[i*3] + _accent.r*b; col[i*3+1] = baseCol[i*3+1] + _accent.g*b; col[i*3+2] = baseCol[i*3+2] + _accent.b*b;
+  }
+  starGeo.attributes.color.needsUpdate = true;
+  clusters.forEach(m => {
+    const lit = m.mk.arm === q.arm && m.mk.t <= q.front, now = lit && m.mk.j === q.marker;
+    m.dots.material.opacity = lit ? 1 : .35; m.dots.material.color.setHex(lit ? C.star : C.holo);
+    m.halo.material.opacity = now ? .7 : lit ? .3 : 0;
+  });
+  ghost.visible = ghostFront.visible = quick;
+  if (quick) {
+    const gq = G.parts(T - G.QUICK), gd = dirOf(G.beamAngle(T - G.QUICK));
+    ghost.rotation.y = Math.atan2(-gd.z, gd.x);
+    ghostFront.position.copy(toV(armPt(gq.arm, Math.min(gq.front, E.TIP + .2)), .3));
+  }
+}
+const tBeacon = document.getElementById('tBeacon');
+tBeacon.addEventListener('click', () => { const on = tBeacon.getAttribute('aria-pressed') !== 'true'; setPressed('tBeacon', on); beacon.visible = lip.visible = on;
+  if (!on) { col0(); } else if (gtcT != null) applyGTC(gtcT, gtcQuick); });
+function col0(){ starGeo.attributes.color.array.set(baseCol); starGeo.attributes.color.needsUpdate = true; }
+// Standing alone, the page carries its own clock; inside the Chart page the
+// page's clock drives it by message.
+if (!document.body.classList.contains('embed')) {
+  G.mount(document.getElementById('gtc'), { onTime: st => { if (beacon.visible) applyGTC(st.T, st.quick); } });
+} else {
+  document.getElementById('gtc').remove();
+  applyGTC(G.NOW, false);
+}
+
 // ── Viewpoints and the reveal ──────────────────────────────────────
 const caption = document.getElementById('caption');
 let tween = null, atOerth = false;
@@ -604,6 +704,7 @@ addEventListener('message', e => {
   if (d.cmd === 'resume' && !running) { running = true; clock.getDelta(); requestAnimationFrame(frame); }
   if (d.cmd === 'oerth') revealFromOerth();
   if (d.cmd === 'free') standAt('free');
+  if (d.gtc && beacon.visible) applyGTC(d.gtc.T, !!d.gtc.quick);
 });
 </script>
 </body>

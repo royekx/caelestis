@@ -182,6 +182,7 @@ html.is-framed .chart-shell, html.is-framed .chart-shell.is-3d { height:100vh; }
 </main>
 
 <script src="galaxy.js"></script>
+<script src="gtc.js"></script>
 <script>
 /* The record for systems and galaxies is prime/data/survey.json, kept with
    scripts/survey.js. This page reads it and adds only what a chart needs:
@@ -578,6 +579,7 @@ function renderGalaxy(gid){
   o += `<g id="gbase">`;
   o += `<circle cx="${GX.cx}" cy="${GX.cy}" r="${GX.R*.55}" fill="url(#g-bulge)"/>`;
   o += spiralDust(GX.cx, GX.cy, GX.R, g.spin||0, 300+g.ang, home?3600:1500, home?"#bcd6f0":g.core==="awake"?"#f0b0a8":"#c9b3ea", home?.6:.4, 4.6, home?4:2);
+  if(home) o += `<g class="gtc-layer" id="gtc-layer" aria-hidden="true"></g>`;
   o += `<text class="lbl-sub" x="${W/2}" y="${H-90}" text-anchor="middle" font-size="56">${esc(g.label)}${home?" · Caelestis's galaxy":""}</text>`;
   const coreN = { id:gid+"-core", name:(g.record && g.record.core_name) ? g.record.core_name : gid+" core", kind:"Galactic core, a black hole", core:g.core, galaxy:gid };
   o += `<g ${reg(coreN.id, coreN)}><circle cx="${GX.cx}" cy="${GX.cy}" r="110" fill="transparent"/>${coreGlyph(GX.cx,GX.cy,48,g.core)}<circle class="sel" cx="${GX.cx}" cy="${GX.cy}" r="48" fill="none" stroke="none"/>
@@ -603,7 +605,7 @@ function renderGalaxy(gid){
   o += `</g>`;
   if(home) o += `<g class="ins-layer" id="ins"></g>`;
   svg.innerHTML = o;
-  if(home) drawInscription();
+  if(home){ drawInscription(); drawBeacon(); }
   galaxyLegend();
   crumbs([["Cosmos","cosmos"],[g.label,null]]); controls(); tray(home); fit();
 }
@@ -621,6 +623,9 @@ function galaxyLegend(){
   } else {
     h += Object.values(LANE).map(s=>`<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="${s.stroke}" stroke-width="2.2" stroke-dasharray="${s.dash?s.dash.split(" ").map(v=>Math.max(1.5,v/4)).join(" "):""}" stroke-linecap="round"/></svg>${s.label}</span>`).join("");
     h += `<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="#9cc0e0" fill-opacity=".55" stroke="#9cc0e0"/></svg>Sighted star</span>`;
+    if(pressed("toggleBeacon")) h += `<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="#a8c2ec" stroke-width="5" stroke-opacity=".6"/></svg>Kindled arm</span>
+      <span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="#a8c2ec"/></svg>Marker cluster, lit</span>
+      <span><svg viewBox="0 0 34 12" aria-hidden="true"><path d="M2 6 L32 2 L32 10 Z" fill="#6E95D4" fill-opacity=".35"/></svg>Where the beam points</span>`;
     h += `<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="none" stroke="#9cc0e0" stroke-dasharray="2 2"/></svg>Uncharted star</span>`;
   }
   legend(h);
@@ -664,6 +669,40 @@ function drawInscription(){
   }
   host.innerHTML = o;
   if(selected) mark(selected);
+}
+
+/* ---------- the Beacon (gtc.js) ---------- */
+/* The beam from Erevos, the kindled arm with its wave of light, and the
+   sixteen marker clusters, four to an arm, lit as the wave passes. */
+function drawBeacon(){
+  const host = document.getElementById("gtc-layer"); if(!host || !window.chartTime) return;
+  const st = window.chartTime.state, q = GTC.parts(st.T), f2 = n => n.toFixed(0);
+  const ray = (a, r) => [GX.cx + r*Math.cos(a), GX.cy + r*Math.sin(a)*.9];
+  const a = GTC.beamAngle(st.T); let o = "";
+  const w1 = ray(a-.045, 1800), w2 = ray(a+.045, 1800), tip = ray(a, 1800);
+  o += `<path d="M${GX.cx} ${GX.cy} L${f2(w1[0])} ${f2(w1[1])} L${f2(w2[0])} ${f2(w2[1])} Z" fill="#6E95D4" fill-opacity=".12"/>`;
+  o += `<line x1="${GX.cx}" y1="${GX.cy}" x2="${f2(tip[0])}" y2="${f2(tip[1])}" stroke="#a8c2ec" stroke-opacity=".4" stroke-width="3"/>`;
+  const armPath = (arm, t0, t1) => { let d = ""; for(let t=t0; t<=t1+1e-6; t+=.04){ const p = armPt(arm, Math.min(t,t1)); d += (d?"L":"M") + f2(p[0]) + " " + f2(p[1]); } return d; };
+  const front = Math.min(q.front, window.EREVOS.TIP + .2);
+  if(q.p < .12){ const prev = (q.arm+3)%4, k = 1 - q.p/.12;
+    o += `<path d="${armPath(prev, 0, window.EREVOS.TIP+.15)}" fill="none" stroke="#a8c2ec" stroke-opacity="${(.12*k).toFixed(3)}" stroke-width="60" stroke-linecap="round"/>`; }
+  o += `<path d="${armPath(q.arm, 0, front)}" fill="none" stroke="#a8c2ec" stroke-opacity=".1" stroke-width="80" stroke-linecap="round"/>`;
+  o += `<path d="${armPath(q.arm, 0, front)}" fill="none" stroke="#a8c2ec" stroke-opacity=".22" stroke-width="20" stroke-linecap="round"/>`;
+  o += `<path d="${armPath(q.arm, Math.max(0, front-.35), front)}" fill="none" stroke="#e6eef8" stroke-opacity=".5" stroke-width="30" stroke-linecap="round"/>`;
+  const fp = armPt(q.arm, front);
+  o += `<circle cx="${f2(fp[0])}" cy="${f2(fp[1])}" r="90" fill="#a8c2ec" fill-opacity=".14"/><circle cx="${f2(fp[0])}" cy="${f2(fp[1])}" r="34" fill="#e6eef8" fill-opacity=".45"/>`;
+  window.EREVOS.MARKERS.forEach(m => {
+    const lit = m.arm===q.arm && m.t <= q.front, now = lit && m.j===q.marker, [x,y] = m.pos.map(f2);
+    o += lit ? `<circle cx="${x}" cy="${y}" r="${now?70:52}" fill="#a8c2ec" fill-opacity="${now?.22:.12}"/><circle cx="${x}" cy="${y}" r="20" fill="#a8c2ec" fill-opacity=".9"/>`
+             : `<circle cx="${x}" cy="${y}" r="20" fill="none" stroke="#6E95D4" stroke-opacity=".45" stroke-width="3" stroke-dasharray="5 6"/>`;
+    if(now) o += `<text class="lbl-sub" x="${x}" y="${+y-84}" text-anchor="middle" font-size="40" fill="#a8c2ec">kindling ${q.kindling}</text>`;
+  });
+  if(st.quick){
+    const g = GTC.parts(st.T - GTC.QUICK), ga = GTC.beamAngle(st.T - GTC.QUICK), gt = ray(ga, 1800), gp = armPt(g.arm, Math.min(g.front, window.EREVOS.TIP+.2));
+    o += `<line x1="${GX.cx}" y1="${GX.cy}" x2="${f2(gt[0])}" y2="${f2(gt[1])}" stroke="#9683c4" stroke-opacity=".7" stroke-width="3" stroke-dasharray="14 12"/>`;
+    o += `<circle cx="${f2(gp[0])}" cy="${f2(gp[1])}" r="30" fill="none" stroke="#9683c4" stroke-width="4" stroke-dasharray="6 6"/><text class="lbl-sub" x="${f2(gp[0])}" y="${f2(gp[1]+76)}" text-anchor="middle" font-size="38" fill="#b6a6dc">old tables</text>`;
+  }
+  host.innerHTML = o;
 }
 
 /* ---------- system ---------- */
@@ -753,7 +792,7 @@ function crumbs(parts){ document.getElementById("crumbs").innerHTML = parts.map(
 function tray(on){ document.getElementById("tray").hidden = !on; }
 function controls(){
   const home = view.level==="galaxy" && view.galaxy==="GAL-01";
-  ["toggleIns","toggleOerth","toggleCon"].forEach(id => document.getElementById(id).hidden = !home);
+  ["toggleIns","toggleOerth","toggleCon","toggleBeacon"].forEach(id => document.getElementById(id).hidden = !home);
   document.getElementById("toggleHidden").hidden = !(home || (view.level==="system" && view.galaxy==="GAL-01"));
 }
 
@@ -905,6 +944,7 @@ document.getElementById("toggleHidden").addEventListener("click", e=>{ const on 
   if(!on){ const hid = n => n && (n.hidden || (n.parent && n.parent.hidden));
     if(view.level==="system" && sysById(view.id).hidden){ selected = null; renderGalaxy("GAL-01"); intro(); }
     else if(hid(registry[selected])){ selected = null; mark(null); intro(); } } });
+document.getElementById("toggleBeacon").addEventListener("click", e=>{ const on = !pressed("toggleBeacon"); toggle(e.currentTarget, "Beacon", on); document.querySelector(".chart").classList.toggle("beacon-off", !on); galaxyLegend(); });
 document.getElementById("toggleCon").addEventListener("click", e=>{ const on = !pressed("toggleCon"); toggle(e.currentTarget, "Constellations", on); document.querySelector(".chart").classList.toggle("con-off", !on); });
 document.getElementById("toggleIns").addEventListener("click", e=>{ const on = !insOn(); toggle(e.currentTarget, "Inscription", on); document.querySelector(".chart").classList.toggle("ins-off", !on);
   if(!on && HEARTS.some(h=>h.id===selected)){ selected = null; mark(null); intro(); }
@@ -916,6 +956,18 @@ document.getElementById("toggleIns").addEventListener("click", e=>{ const on = !
 const shell = document.getElementById("chart"), holo = document.getElementById("holo");
 let current = "2d", holoReady = false;
 function holoSend(msg){ if(holoReady && holo.contentWindow) holo.contentWindow.postMessage(msg, location.origin); }
+/* ---------- the clock ---------- */
+/* One clock for both views: it redraws the flat chart's Beacon and hands
+   the time to the holochart in its frame. */
+window.chartTime = (() => {
+  let ctl = null;
+  const push = () => { if(ctl) holoSend({ gtc:{ T:ctl.state.T, quick:ctl.state.quick } }); };
+  const api = { get state(){ return ctl.state; }, push, view(){ push(); } };
+  window.chartTime = api;
+  ctl = GTC.mount(document.getElementById("gtc"), { onTime(){ if(current==="2d") drawBeacon(); else push(); } });
+  return api;
+})();
+
 function showView(v, at){
   current = v;
   document.querySelectorAll(".view-switch [role=tab]").forEach(t => t.setAttribute("aria-selected", String(t.dataset.view===v)));
