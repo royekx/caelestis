@@ -35,12 +35,12 @@ staging once Korey has read and accepted them.
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 7 | 2 | 0 | 3 |
-| Campaign | campaign/: spine, voyages, plot hooks; opposition/; principles.html | 13 | 1 | 36 | 5 | 27 |
-| Dossiers | dossiers/ | 16 | 15 | 0 | 0 | 1 |
+| Campaign | campaign/: spine, voyages, plot hooks; opposition/; principles.html | 13 | 1 | 34 | 5 | 26 |
+| Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 9 | 12 | 17 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
-| New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 5 | 2 | 32 |
+| New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 5 | 2 | 24 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
@@ -1161,14 +1161,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   Page says strain rises "because of the Remaking", iconic items "are not part of The Remaking", custody "can reference Remaking", and "Remaking is one level deeper than it". Change each to the Ascension or Colony Operations as fits.
   src: chat-cosmic-campaign-structure § Superseded
 
-- **[fix]** The Book of Vile Darkness is a goal
-  The page lists the Book of Vile Darkness among period pieces that "would not help anyone advance or stop it". Carve it out: the Book of Vile Darkness is the one whole account of the voice that recruited Vecna, and a possible goal for the Seekers and the crew.
-  src: memory-canon open-decisions ("Locked this pass")
-
-- **[fix]** Vecna works through vessels because of polarity
-  Page says "Vecna himself can't teleport to monoliths — he must reach them patiently, through agents". Restate: gods cannot reach worlds or the center because of polarity, so Vecna works through vessels. The teleport-seal stays as a Fleet installation rule, separate from Vecna.
-  src: session-rulings (polarity)
-
 - **[fix]** A.T.L.A.S. anchor
   The example path uses "../../artifacts/#world-surveyor". "World Surveyor" is retired; the artifact is A.T.L.A.S. Change the example anchor.
   src: memory-canon campaign-canon § Cosmology (A.T.L.A.S. line)
@@ -1274,10 +1266,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 - **[add]** Vaelorix's Quarters
   Add to the ship sweep note: Vaelorix's Quarters, still unvisited, hold a treasury of coin alongside what is already there.
   src: memory-canon campaign-canon § Naming (Vaelorix's Quarters)
-
-- **[add]** Table practice for crawl sessions
-  Add as standing guidance: push non-combat use of abilities; say yes to the clever thing and charge a resource rather than a roll; name non-combat uses out loud; keep ship chatter going so the ship never feels empty. (From a V004/V005 addendum that never reached the repo.)
-  src: chat-organizing-framework § Tyrant ship and V004 prep
 
 ---
 
@@ -1484,6 +1472,14 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[later]** What her Ledger shows
   The Restorers have walked into Zeniths deliberately for four centuries, which sits awkwardly with the page's claim that her Ledger holds the Zenith pattern unrecognised. Options: the Restorers know Zeniths as crossings but miss the rising frequency; or the pattern stays fully unread.
   src: timeline "The Restorers walk into Zeniths"; dossiers/ilsabet-crann.html § What's hidden
+
+---
+
+### dossiers/vecna.html
+
+- **[decide]** The Book of Vile Darkness
+  The retired wiki manual (campaign/index.html) carved the Book out as "the one whole account of the voice that recruited Vecna, and a possible goal for the Seekers and the crew". No finished page has a voice that recruited Vecna: dossiers/vecna.html makes him an archmage of Oerth who rose by his own ritual, and lists the Book only as "an artifact tied to him, in this cosmos", with its whereabouts a Still to decide sentence. Principles keeps only the generic rule for iconic items. Options: (a) the Book is an account of Vecna's own rise, written by him or about him, and a goal for the Seekers and the crew; (b) it is a period piece with no bearing on the working; (c) something else. Touches: dossiers/vecna.html, principles.html (if it becomes an example), plot-hooks.html.
+  src: BACKLOG campaign/index.html item (memory-canon open-decisions, "Locked this pass"); campaign section, conflict C8
 
 ---
 
@@ -2759,10 +2755,6 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   The background tone is cosmic horror. Each world keeps its own genre: Realmspace is traditional fantasy, the spelljamming lanes bend toward sci-fi, and horror lives in the deep Astral and at the edges.
   src: astral § Cosmos and campaign shape; memory-canon (open-decisions, Direction 2026-10-21)
 
-- **[add]** New worlds come from published settings
-  Where possible, new worlds come from published settings: Azeroth as a possible one-shot, Exandria without its Critical Role events, Drakkenheim.
-  src: astral § Cosmos and campaign shape; memory-canon (open-decisions)
-
 ### NEW: Cosmos texture
 
 **Purpose.** The recurring patterns that make the cosmos feel lived-in and larger than the crew: things they keep running into across worlds. Suggested path: `prime/cosmology/texture.html`.
@@ -2786,54 +2778,13 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   - A delving culture of ruin exploration exists, like post-Aeor in Critical Role.
   src: chat-cosmic § Cosmos texture; memory-canon
 
-### NEW: DM principles
+### principles.html
+
+The page exists (`prime/principles.html`, Reference). Contracts are built on Campaign § Arc 2; this decide names their categories there.
 
 - **[decide]** Contract categories *(prep)*
   Ruled: three or four categories by how a contract ties to the world (loose, Seekers-tied, personal, more as needed), and contracts surface from a world already in motion (STAGING round 4). Name the categories and set how many of each the board offers at a time.
   src: Korey, 2026-10-25 (round 4)
-
-- **[add]** Situations, not scripts
-  Put situations into the world and let the characters respond, or do nothing. Threads are not scripted toward an outcome.
-  src: inbox/chat-crew-boogie-casey-sol.md § Casey (turns 101–107)
-
-**Purpose.** How Korey runs this table: the story, pacing and reveal rules learned so far, in one place. Merges the "Running principles" and "DM principles" proposals. Suggested: its own page, or a section of `prime/campaign/spine.html`.
-
-**Voice.** DM.
-
-- **[add]** Canon and scope
-  - Caelestis cosmology conforms to Fonains: Lola's Boys came first and everything builds off it.
-  - Some factions are Vecna's and many are not. Some trouble is a Zenith and much is local politics.
-  src: chat-cosmic § Thessalar and Fonains, § Act 1 retrofit; memory-canon (Fonains canon 2026-10-25)
-
-- **[add]** Story shape
-  - A mission is a nudge: the crew arrives mid-chapter into a situation already running, which continues if they leave.
-  - Story is portable: a few key worlds carry fixed story, and floating situations move to wherever the crew goes.
-  - Villain planning runs at three resolutions: a fixed end, fixed major steps, and one detailed next step. "A is the plan, B happened, C is the response, they still have to reach D."
-  - Railroading is acceptable only inside a situation the crew chose, until it ends: scenes have walls.
-  - The party goes in thinking it is one thing, and it turns out to be another, without leaving the path.
-  - The party always knows its goal. How they reach it is theirs; the DM supplies tools.
-  src: chat-early-planning § Method; chat-voyage-6-7-planning § Table and story principles
-
-- **[add]** The players
-  - Sol's and Bartholomew's players want direct hooks and a push. Casey's and Tumak's pull on mystery unprompted. Gregory's sits between.
-  - Reveal a mechanic by player: set up a situation where it fires for discovery players (Tumak); give it up front to Bartholomew; keep Casey vague; give Sol, Gregory and Boogie concrete material.
-  - Give a player a mechanic in full and hold back its meaning.
-  - Each PC keeps a distinct bespoke thread. Beats are things players interact with, never long narration or "you have a dream".
-  src: chat-voyage-6-7-planning § Table and story principles, § Bartholomew: Aspects
-
-- **[add]** NPCs and connections
-  - Every new NPC arrives with a hook of their own. Pffred and Krik'Lit were "just another person".
-  - Subtlety only goes so far: put a connection in front of the players twice, or have an NPC remark on it.
-  src: chat-voyage-6-7-planning § Table and story principles; chat-cosmic § Vecna's following; memory-canon (Ezra hook)
-
-- **[add]** Set pieces
-  - Keep set-piece mechanics simple, and keep NPCs from solving puzzles for the players. The V006 Command Deck fight was a slog for an online table.
-  - Ship exploration runs theatre of mind, with detailed per-level notes and no map.
-  src: chat-voyage-6-7-planning § Retro lessons, § Table and story principles
-
-- **[add]** Handing an ally's block to the players
-  An ally's stat block is worth publishing once the crew has earned it. Knowing that Tarto can spend her reaction to swap places with a cadet, or that anyone who casts mending can repair Saerthe's cubes, turns an NPC from a passenger into something the party can plan around. The block is written once on the DM dossier; publishing it means adding the same tab to that character's public page. Start with whichever NPC the crew has bonded with, and treat it as a reward, not a reference release.
-  src: dossiers/index.html (retired section, 2026-10-28)
 
 ---
 

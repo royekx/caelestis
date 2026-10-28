@@ -180,12 +180,3 @@ when a ruling changes; delete it once the page carries it. See
 ### Wan, Tu and the fragment (crew/tumak.html, rules/; done on artifacts/dissolution-fragment.html, section 4)
 - The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) factions/runekeepers.html and artifacts/dissolution-fragment.html carry it; dossiers/the-runekeeper.html carries it (section 5); crew/tumak.html still needs it.
 - The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a state neither whole nor broken.
-
-## DM principles
-
-### Prep
-- A world that is named has core facts, even if nothing else is built: what it is like, who lives there. Anything named in play needs work from that point.
-- Prep where the crew is going and one ring out from it: H'Catha and the cantina now. Seekers chapters and other far details get built when they become active in the larger shape, not before.
-
-### Visions
-- Use visions sparingly; there have been many. Polly's voice nudges Casey toward things rather than directing him.

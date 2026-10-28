@@ -129,6 +129,7 @@
       axiom: 'dissolution',
       items: [
         { key: 'glossary',  label: 'Glossary',      path: 'glossary/'   },
+        { key: 'principles',label: 'Principles',    path: 'principles.html' },
       ]
     },
   ];
