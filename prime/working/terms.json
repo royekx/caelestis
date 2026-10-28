@@ -477,6 +477,14 @@
       "new": "campaign/index.html"
     },
     {
+      "old": "campaign/what-if.html",
+      "new": "campaign/plot-hooks.html#speculation"
+    },
+    {
+      "old": "#abandoned-beholders",
+      "new": "cut: Vaelorix was alone; the anchor is retired"
+    },
+    {
       "old": "world-surveyor-thread",
       "new": "campaign/plot-hooks.html#atlas-thread"
     }

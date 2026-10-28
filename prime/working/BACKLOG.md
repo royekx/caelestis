@@ -35,7 +35,7 @@ staging once Korey has read and accepted them.
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 7 | 2 | 0 | 3 |
-| Campaign | campaign/: spine, voyages, plot hooks; opposition/; principles.html | 17 | 1 | 15 | 4 | 13 |
+| Campaign | campaign/: spine, voyages, plot hooks; opposition/; principles.html | 17 | 1 | 8 | 1 | 10 |
 | Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 9 | 12 | 18 | 0 | 85 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
@@ -1144,71 +1144,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   src: memory-canon campaign-canon § Key NPCs (Ryeback)
 
 ---
-
-### campaign/plot-hooks.html
-
-- **[add]** What the behir was wrapped around *(answered)*
-  Manifest entry 048 is quietly dropped unless a player asks about it. Add no hook row. Add one DM-only line to the tyrant ship's Hollow Deck notes: "The soft light Casey saw under the behir came from a freestanding object in the open space of the Hollow Deck, apart from the repair bay. It is unexplained. If a player asks, it is manifest entry 048; define it then."
-  src: memory-canon open-decisions (behir soft light line)
-  answered: inbox/chat-voyage-6-7-planning.md § Voyage 7 / The Lantern and the ship (Settled: "Manifest 048 is quietly dropped unless someone asks"); § Voyage six / The soft light and 048
-
-- **[fix]** The meteor's strike point
-  Page says "Adamantine that struck the Spire on H'Catha" (twice). The meteor struck at the Pupil, the innermost band beside the Spindle, on a seam between two domains. (The player record's lowercase "spire" can stay generic.)
-  src: chat-astral-sea-worldbuilding § Superseded; memory-canon campaign-canon § Antagonists (H'Catha layout)
-
-- **[fix]** Why the tyrant ship approach
-  Page says "Foundling can't survive H'Catha's beholder patrols". There are no orbital patrols; arrival risk is crossing watched domain borders. Restate: the tyrant ship reads as native traffic because every beholder ship is carved stone, and a scuttle ship carries the landing party down unnoticed.
-  src: memory-canon campaign-canon § Antagonists (H'Catha layout), § Naming (approach to H'Catha)
-
-- **[fix]** The Fork lives on Colony Operations
-  Page says "see Remaking → Fork" and "See the Remaking: two thieves in the same chaos". Repoint both to `opposition/vthorama.html#fork`.
-  src: chat-cosmic-campaign-structure § Superseded
-
-- **[fix]** Thread status lives in the record
-  Page says "Where each thread stands with the crew is on the Tracker". Point to the `data/*.json` record and the Voyages board.
-  src: memory-canon site-and-automation § Automation pipeline
-
-- **[fix]** The A.T.L.A.S. hook still carries the old name in its ids
-  The hook row's anchor is `world-surveyor-thread` and its portrait key is `world-surveyor`. "World Surveyor" is retired. Rename the anchor to `atlas-thread` and the key to `atlas`, and update the spine's link (`plot-hooks.html#world-surveyor-thread`, under Arc 1 threads) and the key in `prime/scripts/portraits.js`.
-  Touches: campaign/plot-hooks.html, campaign/spine.html, prime/scripts/portraits.js.
-  src: memory-canon (A.T.L.A.S. naming); chat-early-planning § Campaign Planning, Artifacts, the Brig and the Reach
-
-- **[drop]** Abandoned Beholders
-  The hook says "The tyrant ship had beholder crew. They left." Vaelorix was alone; his crew were the nine OSTEKK units; crewed tyrant ships are rejected 2e lore. Drop the hook. (Also listed under Arc 2 threads on the spine and in the V003 briefing.)
-  src: memory-canon campaign-canon § Antagonists (beholders follow 5e; no thralls aboard); chat-voyage-6-7-planning § Open
-
-- **[add]** Hook rows still missing
-  Add rows for:
-  - **Ostekk.** A ruling beholder of H'Catha whose stolen Lantern and OSTEKK units the crew now carries.
-  - **The Lantern of Flourishing.** It can pull the crew toward the Fifth Rod piece, and its pull toward Toril can start Gregory's journey.
-  - **Miken.** Leveraged and complicit; his beacon feeds Qitru.
-  - **Hessa Dun's uncle.** The crew's first Seeker contact, planted in Arc 1 (a living uncle, formerly a grandmother).
-  - **The Crow survivor.** The Bellwether Crow survivor who noticed Joffrey change and never reported it, found by pulling the roster.
-  - **Bartholomew's bloom.** A catalyst, not the cause; the parent plant is his to find, and Vaelorix's notes say how to get more.
-  src: chat-voyage-6-7-planning § Open; memory-canon open-decisions ("Locked this pass", operative resolved, Voyage 007 intent); campaign-canon § Antagonists (Lantern item), § Bartholomew (bloom lines); factions/seekers.html
-
-- **[add]** Boogie's following
-  Add to the Boogie hook's "If pulled": the Fonains shard draws people to Boogie as something holy — arrival, a promise of more. A genuine following built on a corrupted signal (the Angel of Irons pattern). Followers may read Tharizdun's "bring everything here" as ascending to something better. Available to pull, never pushed.
-  src: memory-canon campaign-canon § Cosmology (Boogie prophet arc)
-
----
-
-### campaign/what-if.html
-
-- **[fix]** Heart-links are permanent
-  The page asks "What if a link has to be severed?" and says "Nothing in canon yet says a link can be severed at all." Heart-links are permanent and run both ways. Reframe the item as living with a permanent link (a merged pair whose people have families on the far side), or drop it.
-  src: memory-canon open-decisions (world-heart framework)
-
-- **[fix]** Heart entrance term
-  The page uses "Atria"/"Atrium" in several items. Apply the ruling under opposition/vecna.html.
-
-- **[drop]** "What if Vecna is from the Reach civilization?"
-  Vecna is a mortal mage of Oerth who became a god later. Drop the item.
-  src: session-rulings (Vecna); working/vecna.md § History
-
-- **[drop]** "What if the lattice reaches the Core?"
-  Its premise ("he has no solution for the approach") contradicts the Ascension page: the massed Yearning forces the First Heart open, and the opening is his arrival. Drop the item.
-  src: campaign/ascension § The Cast; timeline "The Cast"
 
 ### opposition/vecna.html (early planning)
 
