@@ -9,7 +9,8 @@
  *
  * The lists live in prime/working/terms.json:
  *   retired  terms that must not appear (pattern → what to use instead); matched on the
- *            line with tags removed; "i": true makes a pattern case-insensitive
+ *            line with tags removed, or on the raw line when "raw": true (for markup such
+ *            as a retired attribute name); "i": true makes a pattern case-insensitive
  *   voice    decision voice and placeholders ("ruled", "pending", "TBD", "unresolved");
  *            matched on the text with tags stripped, or on the raw line when "raw": true
  *            (for markup such as a bare "Open" label or an is-open class)
@@ -69,7 +70,7 @@ for (const f of files) {
     if (allowed(line)) return;
     const at = (kind, m, note) => hits.push({ f, n: i + 1, kind, term: m, note, finished: FINISHED.some(p => f.startsWith(p)) });
     const bare = stripTags(line);
-    for (const t of RETIRED) for (const m of bare.matchAll(t.re)) at('retired', m[0], t.use);
+    for (const t of RETIRED) for (const m of (t.raw ? line : bare).matchAll(t.re)) at('retired', m[0], t.use);
     for (const t of MOVED) for (const m of line.matchAll(t.re)) at('moved', m[0], t.new);
     if (VOICE) { const tx = textOnly(line); for (const t of VOICES) for (const m of (t.raw ? line : tx).matchAll(t.re)) at('voice', m[0].trim(), t.note); }
   });
