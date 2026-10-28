@@ -2506,7 +2506,7 @@
       "summary": "A decorated Fleet officer, taken by the colony; its only operative on Caelestis.",
       "facts": [
         {
-          "t": "Joffrey was taken in the second boarding of the Bellwether Crow by one of N'ghathrod's tadpoles.",
+          "t": "Joffrey was taken in the second boarding of the Bellwether Crow, the colony's backup to Vocath's ambush, by one of N'ghathrod's tadpoles.",
           "src": "dossiers/joffrey.html"
         },
         {
@@ -2580,7 +2580,7 @@
           "src": "STAGING round 4"
         },
         {
-          "t": "The second boarding killed the senior deck officers and most of the complement.",
+          "t": "A second boarding, by a different party, killed the senior deck officers and most of the complement.",
           "src": "vessels/bellwether-crow.html"
         },
         {
@@ -2613,7 +2613,7 @@
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "Joffrey was taken in the second action.",
+          "t": "The second action was N'ghathrod's colony, shadowing Vocath's ambush as a backup; with the device gone, it took Joffrey instead.",
           "src": "opposition/vthorama.html"
         },
         {
