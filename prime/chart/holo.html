@@ -82,6 +82,8 @@ footer i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-righ
 .lbl.sector{font-size:10px;letter-spacing:.32em;text-transform:uppercase;opacity:.5;text-shadow:none;transform:none}
 .lbl.heart{font-family:var(--serif);font-style:italic;font-size:11px;letter-spacing:0;color:#e6eef8;text-shadow:0 0 3px #080b12}
 .hide-labels .lbl{display:none}
+/* Inside the Chart page (index.html), which carries the title and the clock. */
+body.embed .back, body.embed h1{display:none}
 #fail{position:fixed;inset:0;display:none;place-items:center;text-align:center;padding:2rem;z-index:9;color:var(--muted)}
 @media (max-width:640px){
   header{padding:.5rem .6rem}
@@ -99,11 +101,15 @@ footer i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-righ
 </script>
 </head>
 <body>
+<script>
+/* Inside the Chart page? It holds the title, the way back and the clock. */
+try { if (window.self !== window.top) document.body.classList.add('embed'); } catch (e) {}
+</script>
 <div id="stage"></div>
 <div class="scan"></div><div class="vig"></div>
 
 <header>
-  <a class="back" href="index.html">&larr; DM chart</a>
+  <a class="back" href="index.html">&larr; Chart</a>
   <h1>Erevos Galaxy &middot; Holochart</h1>
   <div class="ctl">
     <select id="view" aria-label="Viewpoint">
@@ -555,7 +561,9 @@ addEventListener('resize', () => {
 
 // ── Frame loop ─────────────────────────────────────────────────────
 const clock = new THREE.Clock();
+let running = true;
 function frame(now){
+  if (!running) return;
   const dt = clock.getDelta();
   if (tween) {
     const k = Math.min(1, (now - tween.t0)/tween.ms), e = ease(k);
@@ -587,6 +595,16 @@ requestAnimationFrame(frame);
 
 // A hash opens on a viewpoint: holo.html#oerth plays the reveal.
 if (location.hash === '#oerth') setTimeout(revealFromOerth, 400);
+
+// Messages from the Chart page that frames this one.
+addEventListener('message', e => {
+  if (e.origin !== location.origin || !e.data) return;
+  const d = e.data;
+  if (d.cmd === 'pause') running = false;
+  if (d.cmd === 'resume' && !running) { running = true; clock.getDelta(); requestAnimationFrame(frame); }
+  if (d.cmd === 'oerth') revealFromOerth();
+  if (d.cmd === 'free') standAt('free');
+});
 </script>
 </body>
 </html>

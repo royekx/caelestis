@@ -1,135 +1,185 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
+<title>Chart · Caelestis · DM</title>
 <script>
-/* DM gate. Every page under /prime/ sends an unauthenticated visitor back to
-   the gate. Inline rather than a shared file: this page carries its own styles
-   and does not load dm-nav.js, and a boundary check that can fail to load is
-   not a boundary check. Mirrors the guard in scripts/dm-nav.js. */
-(function () {
-  var pn = window.location.pathname;
-  var i = pn.indexOf('/prime/');
-  if (i === -1) return;
-  var authed = false;
-  try { authed = sessionStorage.getItem('caelestis_continuum_auth') === '1'; } catch (err) { authed = false; }
-  if (authed) return;
-  var depth = (pn.slice(i + 7).match(/\//g) || []).length;
-  window.location.replace((depth > 0 ? new Array(depth + 1).join('../') : './') + 'index.html');
-})();
+/* Embedded in another page (Locations embeds the Chart)? Say so before
+   anything paints, so the stylesheet drops the DM nav and the title. */
+try { if (window.self !== window.top) document.documentElement.classList.add('is-framed'); } catch (e) {}
 </script>
-<title>Caelestis Cosmos — DM Chart</title>
+<link rel="stylesheet" href="../../styles/caelestis.css">
+<link rel="stylesheet" href="../../styles/dm.css">
+<script src="../scripts/dm-nav.js" defer></script>
 <style>
-:root{
-  --bg:#0a0e17; --panel:#141c2b; --raised:#1c2638; --rule:rgba(130,168,210,.18);
-  --text:#e4ebf5; --soft:#c6d2e2; --muted:#8797ad;
-  --gold:#c08652; --gold-l:#e2ae7e; --ice:#6f9ec9; --ice-l:#9cc0e0; --violet:#9678bd; --red:#b04a4a;
+/* The Chart: one DM page with two views, the flat chart (2D) and the
+   holochart (3D, holo.html in a frame, loaded when first opened). The page
+   fills the content area under the nav. Everything is scoped to
+   .chart-shell and its tokens carry a ch- prefix, so nothing here reaches
+   the DM nav or the shared sheets. */
+html { overflow-x: clip; }
+.chart-shell {
+  --ch-map:#070a12; --ch-panel:rgba(14,19,31,.92); --ch-raised:rgba(28,36,52,.9); --ch-rule:rgba(196,212,232,.14);
+  --ch-text:#dfe6f0; --ch-soft:#c6d2e2; --ch-muted:#8c9cb2;
+  --ch-gold:#D4A256; --ch-gold-l:#e2ae7e; --ch-ice:#6f9ec9; --ch-ice-l:#9cc0e0; --ch-violet:#9683c4; --ch-violet-l:#b6a6dc; --ch-red:#b04a4a;
+  --ch-teal:#56B4A6; --ch-accent:var(--accent, #6E95D4);
   --serif:"Crimson Pro",Georgia,"Times New Roman",serif; --display:"Cinzel","Trajan Pro",Georgia,serif;
+  position:relative; z-index:1; box-sizing:border-box;
+  display:flex; flex-direction:column; gap:.55rem;
+  height:100vh; height:100dvh; padding:.75rem clamp(.75rem,1.6vw,1.4rem);
+  color:var(--ch-text); font-family:var(--serif); font-size:17px; line-height:1.5;
 }
-@media (prefers-color-scheme: light){
-  :root:not([data-theme="dark"]){ --bg:#e9edf3; --panel:#f7f9fc; --raised:#e3e8f0; --rule:rgba(40,60,90,.18); --text:#18202e; --soft:#2c3748; --muted:#566377; --gold:#9a6230; --gold-l:#7d4d22; --ice:#35658f; --ice-l:#27506f; --violet:#6a5289; --red:#8e3434; }
+.chart-shell *, .chart-shell *::before, .chart-shell *::after { box-sizing:border-box; }
+.chart-shell [hidden] { display:none !important; }
+
+/* Title row: name, the view switch, the clock */
+.chart-head { display:flex; flex-wrap:wrap; align-items:center; gap:.5rem 1.1rem; min-width:0; }
+.chart-title { display:flex; align-items:baseline; gap:.7rem; }
+.chart-eyebrow { font-family:var(--display); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--ch-accent); }
+.chart-head h1 { margin:0; font-family:var(--display); font-weight:600; font-size:22px; letter-spacing:.1em; color:#e6eef8; }
+.view-switch { display:inline-flex; border:1px solid var(--ch-rule); border-radius:4px; overflow:hidden; background:rgba(9,12,20,.6); }
+.view-switch button { font-family:var(--display); font-size:12px; letter-spacing:.14em; text-transform:uppercase; min-height:38px; padding:0 1rem;
+  background:transparent; color:var(--ch-muted); border:0; cursor:pointer; }
+.view-switch button + button { border-left:1px solid var(--ch-rule); }
+.view-switch button[aria-selected="true"] { background:rgba(110,149,212,.16); color:#e6eef8; box-shadow:inset 0 -2px 0 var(--ch-accent); }
+.view-switch button:focus-visible { outline:2px solid var(--ch-accent); outline-offset:-2px; }
+.gtc-host { flex:1 1 560px; min-width:0; }
+
+.view { flex:1 1 auto; min-height:0; display:flex; flex-direction:column; gap:.55rem; }
+
+/* 2D toolbar */
+.toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:.45rem .7rem; }
+.crumbs { flex:1 1 14rem; min-width:0; color:var(--ch-muted); font-size:16px; }
+.crumbs button { font:inherit; color:var(--ch-ice-l); background:none; border:0; padding:0; cursor:pointer; text-decoration:underline; text-underline-offset:3px; }
+.chart-shell .btn { font-family:var(--serif); font-size:15px; color:var(--ch-text); background:var(--ch-raised); border:1px solid var(--ch-rule); border-radius:4px;
+  padding:.3rem .7rem; cursor:pointer; min-height:36px; }
+.chart-shell .btn[aria-pressed="true"] { border-color:var(--ch-accent); box-shadow:inset 0 0 0 1px var(--ch-accent); }
+.chart-shell .btn.go { border-color:rgba(212,162,86,.6); color:var(--ch-gold-l); }
+.chart-shell .btn:focus-visible, .chart-shell .node:focus-visible, .chart-shell .chip:focus-visible { outline:2px solid var(--ch-gold-l); outline-offset:3px; }
+
+.layout { flex:1 1 auto; min-height:0; display:grid; gap:.8rem; }
+@media (min-width:980px) { .layout { grid-template-columns:minmax(0,1fr) 360px; } }
+.chart { position:relative; display:flex; flex-direction:column; min-height:0; min-width:0; background:var(--ch-map); border:1px solid var(--ch-rule); border-radius:6px; overflow:hidden; }
+#map { display:block; width:100%; flex:1 1 auto; min-height:0; touch-action:none; cursor:grab; user-select:none; -webkit-user-select:none; }
+#map.dragging { cursor:grabbing; }
+.zoom { position:absolute; top:.6rem; right:.6rem; display:flex; flex-direction:column; gap:.35rem; }
+.zoom .btn { background:rgba(20,28,43,.9); min-width:42px; min-height:42px; font-size:19px; padding:0 .6rem; }
+.zoom .btn.fit { font-size:14px; }
+.legend { display:flex; flex-wrap:wrap; gap:.3rem 1.1rem; padding:.5rem .9rem; border-top:1px solid var(--ch-rule); font-size:14px; color:#b3c1d5; background:#0b1019; }
+.legend span { display:inline-flex; align-items:center; gap:.45rem; }
+.legend svg { width:34px; height:12px; }
+
+.side { min-height:0; min-width:0; display:flex; flex-direction:column; gap:.8rem; overflow:auto; }
+.panel { background:var(--ch-panel); border:1px solid var(--ch-rule); border-radius:6px; padding:1rem 1.1rem 1.2rem; }
+.panel h2 { font-family:var(--display); font-weight:600; font-size:20px; letter-spacing:.04em; margin:.1rem 0 .35rem; color:#e6eef8; border:0; padding:0; }
+.panel .kind { color:var(--ch-muted); font-size:16px; margin:0 0 .6rem; }
+.badge { display:inline-block; font-size:14px; border-radius:3px; padding:.05rem .5rem; margin:0 .35rem .35rem 0; border:1px solid var(--ch-rule); }
+.b-canon { color:var(--ch-ice-l); border-color:var(--ch-ice); }
+.b-gold { color:var(--ch-gold-l); border-color:var(--ch-gold); }
+.b-red { color:#e08a8a; border-color:var(--ch-red); }
+.b-teal { color:#8fd4c8; border-color:var(--ch-teal); }
+.b-hidden { color:var(--ch-violet-l); border-color:var(--ch-violet); }
+.panel h3 { font-weight:500; font-size:16px; color:var(--ch-gold-l); margin:1rem 0 .25rem; font-family:var(--serif); letter-spacing:0; text-transform:none; }
+.panel p { margin:.2rem 0 .5rem; color:var(--ch-soft); }
+.panel ul { margin:.2rem 0 .4rem; padding-left:1.1rem; color:var(--ch-soft); }
+.panel li { margin:.15rem 0; }
+.panel a { color:var(--ch-ice-l); }
+.panel .act { margin-top:.8rem; width:100%; border-color:var(--ch-gold); color:var(--ch-gold-l); font-size:16px; }
+.facts { display:grid; grid-template-columns:max-content 1fr; gap:.1rem .9rem; margin:.4rem 0 .6rem; font-size:15px; }
+.facts dt { color:var(--ch-muted); margin:0; font:inherit; letter-spacing:0; text-transform:none; }
+.facts dd { margin:0; color:var(--ch-soft); }
+.hint { color:var(--ch-muted); font-style:italic; }
+.dmbox { border:1px solid var(--ch-violet); border-left-width:3px; background:rgba(150,131,196,.09); padding:.5rem .8rem .2rem; margin:1rem 0; border-radius:3px; }
+.dmbox h3 { color:var(--ch-violet-l); margin-top:.3rem; }
+.tray h2 { font-family:var(--display); font-weight:500; font-size:14px; letter-spacing:.06em; color:var(--ch-muted); margin:0 0 .5rem; border:0; }
+.chips { display:flex; flex-wrap:wrap; gap:.45rem; }
+.chart-shell .chip { font-family:var(--serif); font-size:15px; background:var(--ch-raised); color:var(--ch-soft); border:1px dashed var(--ch-rule); border-radius:999px; padding:.3rem .8rem; cursor:pointer; min-height:36px; }
+.chart-shell .chip.is-selected { border-style:solid; border-color:var(--ch-gold); color:var(--ch-text); }
+
+/* SVG */
+.node { cursor:pointer; }
+.lbl { font-family:var(--display); font-weight:500; fill:#c6d2e2; letter-spacing:.03em; paint-order:stroke; stroke:#070a12; stroke-width:6px; stroke-linejoin:round; }
+.lbl-sub { font-family:var(--serif); font-style:italic; fill:#8797ad; paint-order:stroke; stroke:#070a12; stroke-width:6px; stroke-linejoin:round; }
+.node:hover .lbl, .node.is-selected .lbl { fill:#e2ae7e; }
+.node.is-selected .sel { stroke:#e2ae7e; stroke-opacity:1; stroke-width:4; }
+.hidden-layer, .con-layer, .ins-layer, .gtc-layer { transition:opacity .35s; }
+.hidden-off .hidden-layer { opacity:0; pointer-events:none; }
+.con-off .con-layer { opacity:0; pointer-events:none; }
+.ins-off .ins-layer { opacity:0; pointer-events:none; }
+.beacon-off .gtc-layer { opacity:0; }
+@media (prefers-reduced-motion: reduce) { .hidden-layer, .con-layer, .ins-layer, .gtc-layer { transition:none; } }
+
+/* 3D */
+.view-3d { position:relative; }
+.view-3d iframe { flex:1 1 auto; display:block; width:100%; min-height:0; border:1px solid var(--ch-rule); border-radius:6px; background:#080b12; }
+
+/* Phone and narrow: the nav is a 44px bar and the body is padded 52px. */
+@media (max-width:979px) {
+  .chart-shell { height:auto; }
+  #map { flex:none; height:62vh; height:62dvh; min-height:340px; }
+  .side { overflow:visible; }
+  .chart-shell.is-3d { height:100vh; height:100dvh; }
 }
-:root[data-theme="light"]{ --bg:#e9edf3; --panel:#f7f9fc; --raised:#e3e8f0; --rule:rgba(40,60,90,.18); --text:#18202e; --soft:#2c3748; --muted:#566377; --gold:#9a6230; --gold-l:#7d4d22; --ice:#35658f; --ice-l:#27506f; --violet:#6a5289; --red:#8e3434; }
-:root[data-theme="dark"]{ --bg:#0a0e17; --panel:#141c2b; --raised:#1c2638; --rule:rgba(130,168,210,.18); --text:#e4ebf5; --soft:#c6d2e2; --muted:#8797ad; --gold:#c08652; --gold-l:#e2ae7e; --ice:#6f9ec9; --ice-l:#9cc0e0; --violet:#9678bd; --red:#b04a4a; }
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:var(--serif);font-size:18px;line-height:1.5}
-header{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;padding:1rem 1rem .6rem;max-width:1400px;margin:0 auto}
-h1{font-family:var(--display);font-weight:600;font-size:1.35rem;letter-spacing:.06em;margin:0;color:var(--gold-l)}
-.sub-h{flex:1 1 auto;color:var(--muted);font-size:1rem;min-width:10rem}
-.btn{font-family:var(--serif);font-size:.95rem;color:var(--text);background:var(--raised);border:1px solid var(--rule);border-radius:4px;padding:.35rem .75rem;cursor:pointer;min-height:38px}
-.btn[aria-pressed="true"]{border-color:var(--violet);box-shadow:inset 0 0 0 1px var(--violet)}
-.btn[hidden]{display:none}
-.btn:focus-visible,.node:focus-visible,.chip:focus-visible{outline:2px solid var(--gold-l);outline-offset:3px}
-.layout{display:grid;gap:1rem;padding:0 1rem 2rem;max-width:1400px;margin:0 auto}
-@media (min-width:980px){.layout{grid-template-columns:minmax(0,1fr) 380px;align-items:start}.panel{position:sticky;top:1rem;max-height:92vh;overflow:auto}}
-.chart{position:relative;background:#070a12;border:1px solid rgba(130,168,210,.18);border-radius:6px;overflow:hidden}
-#map{display:block;width:100%;height:78vh;min-height:520px;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none}
-#map.dragging{cursor:grabbing}
-@media (min-width:980px){#map{height:88vh}}
-.zoom{position:absolute;top:.6rem;right:.6rem;display:flex;flex-direction:column;gap:.35rem}
-.zoom .btn{background:rgba(20,28,43,.9);color:#e4ebf5;border-color:rgba(130,168,210,.3);min-width:42px;min-height:42px;font-size:1.15rem;padding:0 .6rem}
-.zoom .btn.fit{font-size:.85rem}
-.legend{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;padding:.6rem .9rem;border-top:1px solid rgba(130,168,210,.18);font-size:.9rem;color:#b3c1d5;background:#0b1019}
-.legend span{display:inline-flex;align-items:center;gap:.45rem}
-.legend svg{width:34px;height:12px}
-.panel{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:1rem 1.1rem 1.2rem}
-.panel h2{font-family:var(--display);font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:.1rem 0 .35rem}
-.kind{color:var(--muted);font-size:1rem;margin:0 0 .6rem}
-.badge{display:inline-block;font-size:.85rem;border-radius:3px;padding:.05rem .5rem;margin:0 .35rem .35rem 0;border:1px solid var(--rule)}
-.b-canon{color:var(--ice-l);border-color:var(--ice)}
-.b-gold{color:var(--gold-l);border-color:var(--gold)}
-.b-red{color:#e08a8a;border-color:var(--red)}
-.b-teal{color:#8fe8df;border-color:#3fb7b0}
-.b-hidden{color:var(--violet);border-color:var(--violet)}
-.panel h3{font-weight:500;font-size:1rem;color:var(--gold-l);margin:1rem 0 .25rem}
-.panel p{margin:.2rem 0 .5rem;color:var(--soft)}
-.panel ul{margin:.2rem 0 .4rem;padding-left:1.1rem;color:var(--soft)}
-.panel li{margin:.15rem 0}
-.panel a{color:var(--ice-l)}
-.panel .act{margin-top:.8rem;width:100%;border-color:var(--gold);color:var(--gold-l);font-size:1rem}
-.facts{display:grid;grid-template-columns:max-content 1fr;gap:.1rem .9rem;margin:.4rem 0 .6rem;font-size:.95rem}
-.facts dt{color:var(--muted)}
-.facts dd{margin:0;color:var(--soft)}
-.hint{color:var(--muted);font-style:italic}
-.tray{max-width:1400px;margin:0 auto;padding:0 1rem 2.5rem}
-.tray h2{font-family:var(--display);font-weight:500;font-size:1rem;letter-spacing:.05em;color:var(--muted);margin:0 0 .5rem}
-.chips{display:flex;flex-wrap:wrap;gap:.45rem}
-.chip{font-family:var(--serif);font-size:.95rem;background:var(--raised);color:var(--soft);border:1px dashed var(--rule);border-radius:999px;padding:.3rem .8rem;cursor:pointer;min-height:38px}
-.chip.is-selected{border-style:solid;border-color:var(--gold);color:var(--text)}
-.node{cursor:pointer}
-.lbl{font-family:var(--display);font-weight:500;fill:#c6d2e2;letter-spacing:.03em;paint-order:stroke;stroke:#070a12;stroke-width:6px;stroke-linejoin:round}
-.lbl-sub{font-family:var(--serif);font-style:italic;fill:#8797ad;paint-order:stroke;stroke:#070a12;stroke-width:6px;stroke-linejoin:round}
-.node:hover .lbl,.node.is-selected .lbl{fill:#e2ae7e}
-.node.is-selected .sel{stroke:#e2ae7e;stroke-opacity:1;stroke-width:4}
-.hidden-layer,.con-layer,.ins-layer,#gbase{transition:opacity .35s}
-.hidden-off .hidden-layer{opacity:0;pointer-events:none}
-.con-off .con-layer{opacity:0;pointer-events:none}
-.ins-off .ins-layer{opacity:0;pointer-events:none}
-@media (prefers-reduced-motion: reduce){.hidden-layer,.con-layer,.ins-layer,#gbase{transition:none}}
-.crumbs button{font:inherit;color:var(--ice-l);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
-.dmbox{border:1px solid var(--violet);border-left-width:3px;background:rgba(150,120,189,.09);padding:.5rem .8rem .2rem;margin:1rem 0;border-radius:3px}
-.dmbox h3{color:var(--violet);margin-top:.3rem}
-/* Embedded: the host page supplies the title and the way out, so drop the
-   masthead and keep the controls. */
-body.is-framed header>p,body.is-framed header>h1,body.is-framed header>.sub-h{display:none}
-body.is-framed header{padding-top:.6rem}
+@media (max-width:768px) {
+  .chart-shell { padding:.5rem 16px 1rem; }
+  .chart-shell.is-3d { height:calc(100vh - 52px); height:calc(100dvh - 52px); }
+  .chart-head h1 { font-size:19px; }
+  .legend { font-size:13px; }
+}
+
+/* Embedded (Locations): the host page has the nav and the title. */
+html.is-framed .side-nav, html.is-framed .side-nav-toggle { display:none !important; }
+html.is-framed body.with-sidebar { padding:0 !important; }
+html.is-framed .chart-title { display:none; }
+html.is-framed .chart-shell, html.is-framed .chart-shell.is-3d { height:100vh; }
 </style>
 </head>
 <body>
-<script>
-/* Embedded in another page? Say so, so the stylesheet can drop the masthead. */
-try { if (window.self !== window.top) document.body.className = 'is-framed'; } catch (e) {}
-</script>
-<header>
-  <p style="margin:0 0 .4rem"><a href="../hub.html" style="font-family:var(--display);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none">&larr; DM Hub</a></p>
-  <h1>Caelestis Cosmos</h1>
-  <nav class="sub-h crumbs" id="crumbs" aria-label="Map level"></nav>
-  <button class="btn" id="toggleIns" aria-pressed="false" type="button" hidden>Inscription: off</button>
-  <button class="btn" id="toggleOerth" type="button" hidden>See it from Oerth</button>
-  <button class="btn" id="toggleCon" aria-pressed="true" type="button" hidden>Constellations: on</button>
-  <a class="btn" href="holo.html" style="text-decoration:none">3D holochart</a>
-  <button class="btn" id="toggleHidden" aria-pressed="false" type="button" hidden>Hidden layer: off</button>
-</header>
-
-<main class="layout">
-  <section class="chart hidden-off ins-off" aria-label="Chart">
-    <svg id="map" role="img" aria-label="Chart"></svg>
-    <div class="zoom">
-      <button class="btn" type="button" id="zin" aria-label="Zoom in">+</button>
-      <button class="btn" type="button" id="zout" aria-label="Zoom out">&minus;</button>
-      <button class="btn fit" type="button" id="zfit">Fit</button>
+<main class="chart-shell" id="chart" data-listen-skip>
+  <header class="chart-head">
+    <div class="chart-title"><span class="chart-eyebrow">World</span><h1>Chart</h1></div>
+    <div class="view-switch" role="tablist" aria-label="View">
+      <button type="button" role="tab" id="tab-2d" aria-controls="view-2d" aria-selected="true" data-view="2d">Chart</button>
+      <button type="button" role="tab" id="tab-3d" aria-controls="view-3d" aria-selected="false" data-view="3d">3D</button>
     </div>
-    <div class="legend" id="legend"></div>
-  </section>
-  <aside class="panel" id="panel" aria-live="polite"></aside>
-</main>
+    <div class="gtc-host" id="gtc"></div>
+  </header>
 
-<section class="tray" id="tray" hidden>
-  <h2>Known worlds without a place on the chart</h2>
-  <div class="chips" id="chips"></div>
-</section>
+  <section class="view view-2d" id="view-2d" role="tabpanel" aria-labelledby="tab-2d">
+    <div class="toolbar">
+      <nav class="crumbs" id="crumbs" aria-label="Map level"></nav>
+      <button class="btn" id="toggleIns" aria-pressed="false" type="button" hidden>Inscription: off</button>
+      <button class="btn go" id="toggleOerth" type="button" hidden>See it from Oerth</button>
+      <button class="btn" id="toggleBeacon" aria-pressed="true" type="button" hidden>Beacon: on</button>
+      <button class="btn" id="toggleCon" aria-pressed="true" type="button" hidden>Constellations: on</button>
+      <button class="btn" id="toggleHidden" aria-pressed="false" type="button" hidden>Hidden layer: off</button>
+    </div>
+    <div class="layout">
+      <section class="chart hidden-off ins-off" aria-label="Chart">
+        <svg id="map" role="img" aria-label="Chart"></svg>
+        <div class="zoom">
+          <button class="btn" type="button" id="zin" aria-label="Zoom in">+</button>
+          <button class="btn" type="button" id="zout" aria-label="Zoom out">&minus;</button>
+          <button class="btn fit" type="button" id="zfit">Fit</button>
+        </div>
+        <div class="legend" id="legend"></div>
+      </section>
+      <div class="side">
+        <aside class="panel" id="panel" aria-live="polite"></aside>
+        <section class="tray" id="tray" hidden>
+          <h2>Known worlds without a place on the chart</h2>
+          <div class="chips" id="chips"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="view view-3d" id="view-3d" role="tabpanel" aria-labelledby="tab-3d" hidden>
+    <iframe id="holo" title="The Erevos Galaxy in three dimensions" allow="fullscreen"></iframe>
+  </section>
+</main>
 
 <script src="galaxy.js"></script>
 <script>
@@ -711,7 +761,8 @@ let vb = {x:0,y:0,w:1000,h:1000};
 function aspect(){ const r = svg.getBoundingClientRect(); return r.height/r.width || 1; }
 function apply(){ vb.h = vb.w*aspect(); svg.setAttribute("viewBox", `${vb.x} ${vb.y} ${vb.w} ${vb.h}`); }
 function frame(cx,cy,w){ const h = w*aspect(); vb = {x:cx-w/2,y:cy-h/2,w,h}; apply(); }
-function fit(){ const a = aspect(), pad = view.level==="system" ? 180 : 60; let w = canvas.W+pad*2, h = w*a; if(h < canvas.H+pad*2){ h = canvas.H+pad*2; w = h/a; } frame(canvas.W/2, canvas.H/2, w); }
+let pendingFit = false;
+function fit(){ if(!svg.getBoundingClientRect().width){ pendingFit = true; return; } pendingFit = false; const a = aspect(), pad = view.level==="system" ? 180 : 60; let w = canvas.W+pad*2, h = w*a; if(h < canvas.H+pad*2){ h = canvas.H+pad*2; w = h/a; } frame(canvas.W/2, canvas.H/2, w); }
 function zoomAt(f,px,py){ const nw = Math.min(Math.max(vb.w*f, canvas.W*.08), canvas.W*2.4), k = nw/vb.w; vb.x = px-(px-vb.x)*k; vb.y = py-(py-vb.y)*k; vb.w = nw; apply(); }
 function toUnits(x,y){ const r = svg.getBoundingClientRect(); return [vb.x+(x-r.left)/r.width*vb.w, vb.y+(y-r.top)/r.height*vb.h]; }
 const pointers = new Map(); let moved = 0, pinch0 = null;
@@ -858,7 +909,36 @@ document.getElementById("toggleCon").addEventListener("click", e=>{ const on = !
 document.getElementById("toggleIns").addEventListener("click", e=>{ const on = !insOn(); toggle(e.currentTarget, "Inscription", on); document.querySelector(".chart").classList.toggle("ins-off", !on);
   if(!on && HEARTS.some(h=>h.id===selected)){ selected = null; mark(null); intro(); }
   galaxyLegend(); });
-document.getElementById("toggleOerth").addEventListener("click", () => { location.href = "holo.html#oerth"; });
+/* ---------- the two views ---------- */
+/* The 3D view is holo.html in a frame, loaded the first time it is opened
+   and paused while the flat chart is showing. Deep links: index.html#3d
+   opens it, index.html#3d-oerth plays the view from Oerth. */
+const shell = document.getElementById("chart"), holo = document.getElementById("holo");
+let current = "2d", holoReady = false;
+function holoSend(msg){ if(holoReady && holo.contentWindow) holo.contentWindow.postMessage(msg, location.origin); }
+function showView(v, at){
+  current = v;
+  document.querySelectorAll(".view-switch [role=tab]").forEach(t => t.setAttribute("aria-selected", String(t.dataset.view===v)));
+  document.getElementById("view-2d").hidden = v!=="2d";
+  document.getElementById("view-3d").hidden = v!=="3d";
+  shell.classList.toggle("is-3d", v==="3d");
+  if(v==="3d"){
+    if(!holo.getAttribute("src")) holo.setAttribute("src", "holo.html" + (at ? "#" + at : ""));
+    else { holoSend({ cmd:"resume" }); if(at) holoSend({ cmd:at }); }
+  } else { holoSend({ cmd:"pause" }); if(pendingFit) fit(); else apply(); }
+  const hash = v==="3d" ? (at ? "#3d-" + at : "#3d") : "";
+  try { history.replaceState(null, "", location.pathname + location.search + hash); } catch(e) {}
+  if(window.chartTime) window.chartTime.view(v);
+}
+holo.addEventListener("load", () => { holoReady = true; if(window.chartTime) window.chartTime.push(); });
+document.querySelector(".view-switch").addEventListener("click", e => { const t = e.target.closest("[data-view]"); if(t && t.dataset.view!==current) showView(t.dataset.view); });
+document.querySelector(".view-switch").addEventListener("keydown", e => {
+  if(e.key!=="ArrowLeft" && e.key!=="ArrowRight") return;
+  const v = current==="2d" ? "3d" : "2d"; showView(v); document.getElementById("tab-"+v).focus(); });
+document.getElementById("toggleOerth").addEventListener("click", () => showView("3d", "oerth"));
+function fromHash(){ const m = /^#3d(?:-(oerth))?$/.exec(location.hash); if(m) showView("3d", m[1]); }
+window.addEventListener("hashchange", fromHash);
+fromHash();
 const chips = document.getElementById("chips");
 chips.innerHTML = UNPLACED.map(u=>`<button type="button" class="chip" data-chip="${u.id}">${esc(u.name)}</button>`).join("");
 chips.addEventListener("click", e=>{ const c = e.target.closest(".chip"); if(!c) return; const u = UNPLACED.find(x=>x.id===c.dataset.chip); mark(u.id);
