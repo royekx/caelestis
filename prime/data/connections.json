@@ -2321,10 +2321,10 @@
     },
     {
       "id": "vocath-operation",
-      "label": "Vocath's operation",
+      "label": "Vocath's crew",
       "type": "faction",
       "scope": "caelestis",
-      "summary": "A mercane trading house running a private grudge, with a second principal it knows nothing of.",
+      "summary": "A mercane trading house running a private grudge against Mirt, with a second principal it knows nothing of.",
       "facts": [
         {
           "t": "The thefts, the sabotage plates, the leverage on Miken and the marked crates at the Sky Dock are Vocath's work.",
@@ -2341,6 +2341,14 @@
         {
           "t": "Vocath's people chased Clint to Fonains, never found him, and came back with fragments of the broken Monolith.",
           "src": "timeline/timeline.json"
+        },
+        {
+          "t": "Someone from Vocath's crew followed Clint to Fonains, learned about the gems there, and Vocath now trades in them.",
+          "src": "factions/vocath-operation.html"
+        },
+        {
+          "t": "Qitru serves Vocath and does not care who stands above him.",
+          "src": "factions/vocath-operation.html"
         }
       ]
     },

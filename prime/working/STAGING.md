@@ -102,10 +102,9 @@ when a ruling changes; delete it once the page carries it. See
 - The stations differ with the local ecology of their place: what drifts there, what lives there, what threatens it. Their crews are drawn from the sector that keeps them. Readings from the stations pass between the sectors; this is how a disturbance seen at one edge reaches another.
 - done: factions/fleet.html (section 2). Still waiting: Ondrel Anchorage and Strake Station on locations/, and the FIA's account of the Fleet on restricted/.
 
-### Vocath's crew (factions/vocath-operation.html, campaign/colony/)
+### Vocath's crew (campaign/colony/; done on factions/vocath-operation.html, section 2)
 - The crates at the Sky Dock carry Vocath's mark, the eye in a wheel.
-- Qitru serves Vocath. She does not care who stands above him; for her, the top is Vocath.
-- Vocath's crew wanted A.T.L.A.S.'s sister. Someone from Vocath's crew goes looking for it, follows Clint Dashforest to Fonains, learns about the gems there, and Vocath starts trading in them.
+- done: Qitru and the A.T.L.A.S. sister line are on factions/vocath-operation.html.
 
 ## Campaign
 
@@ -180,7 +179,7 @@ when a ruling changes; delete it once the page carries it. See
 ### Thessalar (dossiers/thessalar.html)
 - Thessalar is Halaster Blackcloak, and he is still in the planar craft. His records of the work on N'ghathrod are there too.
 
-### Clint Dashforest (dossiers/clint.html, factions/vocath-operation.html, campaign/colony/, chart/, timeline)
+### Clint Dashforest (dossiers/clint.html, campaign/colony/, chart/, timeline; done on factions/fleet.html and factions/vocath-operation.html, section 2)
 - Vocath's crew ambushed the Bellwether Crow for a sister artifact of A.T.L.A.S. that the Crow was carrying. Clint took it and left the ship to draw the boarders off.
 - He steered for a color pool he could see opening, and went through it on purpose. Color pools open and close quickly, and this one carried him through a small pocket of another dimension and spat him out on Fonains, separated from the boarders who followed him in.
 - The Crow's survivors still argue about whether he meant to go through. He did.

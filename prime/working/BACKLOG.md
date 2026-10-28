@@ -1089,31 +1089,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ---
 
-### factions/vocath-operation.html
-
-- **[fix]** Clint went overboard, and the wind carried him
-  Page says "When the first boarding came, he seized the boarders' own craft and broke away with it" and "How he crossed is undecided." Canon: Clint Dashforest went overboard in the Bellwether Crow ambush, and a psychic wind carried him to Fonains. Rewrite both lines.
-  src: memory-canon campaign-canon § Cosmology (Clint line), § Naming (Astral Sea travel); open-decisions (operative resolved); timeline "The Bellwether Crow ambushed"
-  check (resolve pass): two sweeps record the reverse. chat-organizing-framework § Superseded: "Clint Dashforest 'went overboard' → he seized the boarders' craft and broke away with it; a psychic wind carried him to SYS-04." chat-cosmic-campaign-structure § Tetherbreak (final canon, turns 238–241): "Clint seized the boarders' craft and broke away; a psychic wind carried him out of system." The page's "How he crossed is undecided" is stale either way (the psychic wind is agreed). Confirm overboard vs seized craft with Korey.
-  updated (round 4): superseded. Clint went through a color pool on purpose, drawing the boarders off; write it from STAGING § Clint Dashforest and the Bellwether Crow.
-
-- **[fix]** What Tarroway's tables track
-  Page says "He has no idea the patrol his tables track was a ship under command rather than an animal keeping a rhythm, or that it stopped keeping the patrol because it left." Canon: the psychic wind is the explanation for Tarroway's failing timing tables. Rewrite: his tables fail because the psychic wind does not keep a rhythm.
-  Touches: dossiers/tarroway.html, dossiers/vthoramu.html.
-  src: memory-canon campaign-canon § Naming (Astral Sea travel); chat-cosmic-campaign-structure § Superseded
-  check (resolve pass): the cited Superseded line runs the other way: "Tarroway's cause as the psychic wind → the dreadnought" (turns 238–241), and § Tetherbreak (final canon) says "The 'patrol' Tarroway's tables track is the Vth'oramu itself." The page matches that sweep. Confirm with Korey which is newer before applying.
-  updated (round 4): superseded. The timing tables are cut; Tarroway stays as a thread (see "Trim Tarroway to a thread").
-
-- **[fix]** The account lives on Colony Operations
-  Page says "Full account in the Remaking" and links "The Remaking" in Connections. Link `campaign/colony/`.
-  src: chat-cosmic-campaign-structure § Superseded
-
-- **[add]** Joffrey's row
-  Add: "Joffrey was taken slowly. He was himself for months, decorated and top of his class, and only recently finished converting. One clean, confused survivor of the Bellwether Crow noticed he had changed and never reported it." DM: the crew finds that survivor by pulling the Crow's roster.
-  src: memory-canon open-decisions (operative resolved)
-
----
-
 ### factions/aethris.html
 
 - **[add]** The Prism Ascendant
