@@ -363,6 +363,7 @@ Order under each page: decide, fix, drop, add.
   Still open: which English name the pages lead with for the people. Options: (a) "the unthinned" as their own word, with "unculled" kept as the insult Glyth threw and they wear; (b) "unculled" everywhere, with Vth'ulhan glossed in the lexicon only. glyth-watcher.md's "pure-born" for illithids raised under an elder brain can stand either way. Touches the W-07 entry here ("The illithid world that refused the unthinned"), `realms/glyth.html`, `dossiers/nghathrod.html`, glyth-watcher.md.
   Merged here: the realms/glyth.html decide "Name for illithids raised without an elder brain" asked the same question (unthinned, brainless-raised, unculled); that page uses "the unthinned, raised without an elder brain".
   Related, settled since: the colony's chapter name is Vth'orama, the Seekers of a New Home (STAGING round 3). That names the chapter, not the people Glyth refused, so this stays open.
+  done (Korey, 2026-10-27): the pages lead with "the unthinned"; "unculled" is not used. factions/vthorama.html (section 2) carries it; the realm pages follow in section 3.
   src: memory-canon (open-decisions, N'ghathrod settled; still-open list); chat-cosmic-campaign-structure § N'ghathrod; memory-canon; glyth-watcher; realms/glyth.html
   settled part: inbox/chat-cosmic-campaign-structure.md § N'ghathrod origin ("unculled"), § N'ghathrod and the colony ("Vth'ulhan = the unthinned"), § Superseded; glyth-watcher
 
@@ -1037,12 +1038,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/index.html
 
-- **[fix]** The colony's word for its brainless-raised *(answered)*
-  The brainless-raised are the Vth'ulhan, "the unthinned". They took Glyth's insult for themselves. factions/index.html already says "unthinned" and needs no change. factions/vthorama.html also says "unculled" in three places ("The unculled are an obscenity", "most of the colony is unculled", "The contradiction about the unculled"); change each to "unthinned". Timeline lines that say "brainless-raised" describe them and can stay.
-  src: memory-canon open-decisions (operative-resolved open list); chat-cosmic-campaign-structure § N'ghathrod origin, § N'ghathrod and the colony
-  answered: inbox/chat-cosmic-campaign-structure.md § N'ghathrod and the colony (Settled: "Vth'ulhan = the unthinned") and § Superseded ("Vth'ulhan kept as 'the unthinned'"). Korey used it himself in the taxonomy turn ("the Vithulan who are of the ship and unthinned"), which comes after the memory open-list line. STAGING § N'ghathrod's history uses "unthinned" as well.
-  merged: the factions/vthorama.html item "Brainless-raised term" ("Follows the decide under factions/index.html; this page uses both 'unculled' and 'unthinned'") is folded in here; the vthorama changes are listed above.
-
 - **[later]** Thumbnails for people with pages
   Do people with their own dossiers get thumbnails on the Factions page?
   src: chat-cosmic-campaign-structure § Open
@@ -1079,15 +1074,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 - **[add]** The Watcher who came back from Glyth
   Add a named-but-unseen row: "A Watcher posted to a region of Glyth got out after years inside the elder brain's range. She still hears it." (Eris Morn pattern.)
   src: working/glyth-watcher.md; memory-canon open-decisions (Vecna direction 2026-10-24)
-
----
-
-### factions/seekers.html
-
-- **[add]** The colony and the Monoliths
-  Add to Who they are: "Every heart N'ghathrod opens is worthless until it is linked, and a link needs a Monolith on both worlds. So the colony goes where Monoliths stand, and where they don't, it waits." Whether the colony counts as a Seekers chapter is a decide (see factions/seekers.html).
-  updated (triage): settled. The colony is a Seekers chapter, the Seekers of a New Home (STAGING § The Seekers and the colony). Note that opening a heart needs no Monolith; only linking does (STAGING § Hearts, Atria and Monoliths).
-  src: Korey, 2026-10-25 (round 2)
 
 ---
 
@@ -1176,59 +1162,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 - **[add]** Fortune needs misfortune
   Add to the Tymora and Beshaba entries: "Fortune cannot exist without misfortune. Tymora and Beshaba need each other." Also add to The twin reading on dossiers/beshaba.html.
   src: BCS § Sol/Aethris and the gods (turn 862)
-
----
-
-### factions/vthorama.html
-
-- **[fix]** "kesh" is retired *(answered)*
-  The page says "Many of the kesh were offered it and accepted — the outcast, the discarded, the ones with nothing… The colony's word for them is a kinship term." "Kesh n'ghathu" ("the many of him") was a Claude lexicon draft for the taken outside the five. Korey retired it: the rest of the taken need no term of their own and are simply Vth'ghathu. Change "Many of the kesh were offered it" to "Many of the taken were offered it", and remove "The colony's word for them is a kinship term."
-  src: (inference) factions/vthorama.html
-  answered: Korey in the cosmic-structure chat, taxonomy turn ("Kesh Vithkathu doesn't mean anything because that would just be Vithkathu"); Claude's revised lexicon in reply: "No term is needed for the rest; they are simply Vth'ghathu." (chat f2f5d29e, § N'ghathrod and the colony)
-
-- **[fix]** When the five enna received their Holds *(answered)*
-  This page says "Five illithids, taken a century ago" and "a century of grievance". Change the first to: "Five illithids, changed alongside N'ghathrod by Thessalar's experiments aboard the planar craft about five hundred years ago, each carrying a Hold." The bearers' "a century of grievance" becomes "four centuries of grievance": the unthinned were exiled from Glyth roughly four to four and a half centuries ago.
-  The split (STAGING round 8): two of the five are bearers, properly raised illithids captured with N'ghathrod aboard Thessalar's craft. The other three are unthinned, made aboard the craft from bodies Thessalar supplied and N'ghathrod's own tadpoles. The page's three-and-two split stands; write the origins to match.
-  answered: STAGING § N'ghathrod's history
-  Originally followed the five-centuries decide under dossiers/nghathrod.html.
-
-- **[fix]** N'ghathrod's age
-  Page says "A mind flayer roughly a century into his second life". Write: "A mind flayer more than five centuries into his second life. He was captured aboard Thessalar's planar craft about 506 years ago and escaped with his lieutenants when it fell, about 500 years ago. The ceremorphosis the Rod altered also stopped his aging."
-  src: session-rulings (Thessalar); memory-canon open-decisions (Locked 2026-10-25); timeline "Captured aboard Thessalar's craft", "The craft falls"
-  updated (triage): the last sentence is superseded. His long life comes from his taken: a portion of every taken person is tithed upward to him (STAGING § N'ghathrod's long life).
-
-- **[fix]** The ship's name
-  The lexicon gives "Vth'oramu — The whole of the going-home." The dreadnought's name is locked: Vth'oramu, shortened to Oramu, means "the passage to a new home". Change the lexicon line. Vth'orama ("the whole of the passage", the people named for the ship) can stay.
-  src: memory-canon open-decisions (dreadnought name locked); chat-cosmic-campaign-structure § N'ghathrod and the colony
-  check (resolve pass): the cosmic-structure sweep records "Vth'oramu means 'the whole of the going-home' (turn 413)" as Settled, and turn 413 is later than the memory line. Confirm with Korey which gloss stands before applying.
-  updated (triage): resolved. "Vth'oramu means 'the passage to a new home'" (STAGING § The Seekers and the colony). Vth'orama is now glossed as "all who go toward home", the Seekers of a New Home, so the "whole of the passage" gloss for Vth'orama also changes.
-
-- **[fix]** The plan lives on the Ascension
-  Page says "Full plan in the Remaking". Link `opposition/vecna.html`.
-  src: chat-cosmic-campaign-structure § Superseded
-
-- **[fix]** Heart entrance term
-  Page says "the Atria research" and "the hunt for Atria". Apply the ruling under opposition/vecna.html.
-
-- **[add]** The Passage
-  Add a Mark entry to the header or Terms: "N'ghathrod's mark is the Passage: a circle with a tail ending in another circle. It gains a circle for every linked world, so it doubles as a count."
-  src: memory-canon open-decisions ("Locked this pass")
-
-- **[add]** The taking
-  Add under The taking:
-  - "Each copy drifts from the original over time."
-  - "N'ghathrod can assert himself over ordinary taken. Through the enna he can only speak."
-  - "Tadpoles are aware before implantation. They learn, can be primed with a directive, and know Vth'oramu as home."
-  - "The taken say 'Oramu', or a phrase built on it, when they die."
-  src: chat-cosmic-campaign-structure § N'ghathrod and the colony; memory-canon open-decisions (Seekers line; operative resolved)
-
-- **[add]** Objectives
-  Add a short Objectives section: "N'ghathrod takes key individuals who can rise into positions of control, never crowds, and installs them as figures on worlds to prepare for when he holds the artifacts."
-  src: memory-canon open-decisions (constraints line; Taken King line); chat-cosmic-campaign-structure § Succession and taking as missions
-
-- **[add]** His death
-  Add to N'ghathrod's section (DM-only): killing him has later repercussions, possibly in another campaign.
-  src: memory-canon open-decisions (Taken King line)
 
 ---
 

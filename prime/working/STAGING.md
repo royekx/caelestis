@@ -109,6 +109,7 @@ when a ruling changes; delete it once the page carries it. See
 - In their own tongue the chapter's name is their people's name, Vth'orama. The roots are vth- "the whole of", or- "toward", amu "home", with -a marking a people: all who go toward home. Rendered in Common, the Seekers of a New Home.
 - Their ship carries the same roots. Vth'oramu means "the passage to a new home". The founders say it as a promise; those born aboard say it as "here".
 - Two of the five lieutenants are properly raised illithids who were captured with N'ghathrod aboard Thessalar's craft. The other three are unthinned: made aboard the craft from bodies Thessalar supplied for his experiments and N'ghathrod's own tadpoles.
+- done: factions/vthorama.html and factions/seekers.html (section 2). Still waiting: dossiers/vthoramu.html and the lieutenants' dossiers.
 
 ### The Restorers (factions/restorers.html)
 - The Restorers are trying to reach a heart, and through it the Core Monolith, where they believe everything lost is stored. They compete for residue pieces. Without knowing it, they advance Vecna's plan.

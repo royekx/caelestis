@@ -1980,6 +1980,18 @@
         {
           "t": "Qualith is the only writing the colony counts as real.",
           "src": "factions/vthorama.html"
+        },
+        {
+          "t": "The colony works on four things at once: planting the taken, finding hearts, opening them and seeking links.",
+          "src": "factions/vthorama.html"
+        },
+        {
+          "t": "Vth'oramu keeps to the dark between systems and works as a mothership for skiffs.",
+          "src": "factions/vthorama.html"
+        },
+        {
+          "t": "The colony takes key people who can rise into control, never crowds.",
+          "src": "factions/vthorama.html"
         }
       ]
     },
@@ -2057,7 +2069,7 @@
           "src": "factions/vthorama.html"
         },
         {
-          "t": "They never leave Vth'oramu.",
+          "t": "Osskhal and Khaleth, two of the enna, are bearers captured with N'ghathrod aboard Thessalar's craft.",
           "src": "factions/vthorama.html"
         }
       ]
