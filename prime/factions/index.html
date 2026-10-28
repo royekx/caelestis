@@ -16,10 +16,10 @@
 <main class="dm-content">
 
   <header class="dm-page-header">
-    <div class="dm-page-eyebrow">Cast<span class="sep">&middot;</span>Register</div>
+    <div class="dm-page-eyebrow">People<span class="sep">&middot;</span>Register</div>
     <h1>Factions</h1>
     <p class="dm-page-lede">
-      Every organized interest with a stake in the campaign. Each one has a page carrying its doctrine, its structure, and the people who belong to it; a named person there expands in place for a quick read, and links on to their <a href="../dossiers/">dossier</a>.
+      Every organized interest with a stake in the campaign. Each has an entry carrying its beliefs, its structure and the people who belong to it; a named person there expands in place for a quick read and links on to their <a href="../dossiers/">dossier</a>. The gods are on <a href="deities.html">Deities</a>; what the gods are, and the Core Monolith's pressure that the Order and the Restorers read, are on <a href="../cosmology/">Cosmology</a>. Merchants, ports and governments are under Other powers, below the list.
     </p>
   </header>
 
@@ -31,8 +31,8 @@
     <div class="facet">
       <span class="facet-label">Reach</span>
       <div class="facet-pills">
-        <button class="filter-tag" type="button" data-reach="local">Local</button>
-        <button class="filter-tag" type="button" data-reach="interworld">Interworld</button>
+        <button class="filter-tag" type="button" data-reach="world">World</button>
+        <button class="filter-tag" type="button" data-reach="galaxy">Rykoe Galaxy</button>
         <button class="filter-tag" type="button" data-reach="cosmic">Cosmic</button>
       </div>
     </div>
@@ -42,7 +42,6 @@
         <button class="filter-tag" type="button" data-posture="allied">Allied</button>
         <button class="filter-tag" type="button" data-posture="opposed">Opposed</button>
         <button class="filter-tag" type="button" data-posture="mixed">Mixed</button>
-        <button class="filter-tag" type="button" data-posture="indifferent">Indifferent</button>
       </div>
     </div>
   </div>
@@ -54,135 +53,111 @@
 
   <div class="register">
 
-    <div class="ent" data-reach="local" data-posture="allied">
-      <a class="ent-row" href="academy-fleet.html">
-        <span class="ent-face"><span class="face-mono">AF</span></span>
-        <span class="ent-name">Caelestis Academy &amp; Fleet<span class="ent-sub">Home &middot; one station in Realmspace</span></span>
+    <div class="ent" data-reach="galaxy" data-posture="allied">
+      <a class="ent-row" href="fleet.html">
+        <span class="ent-face"><span class="face-mono">UF</span></span>
+        <span class="ent-name">United Intergalactic Fleet<span class="ent-sub">Four or five sector branches; Caelestis is one</span></span>
         <span class="ent-state">Home</span>
       </a>
       <div class="ent-detail">
-        <p>The Academy trains, the Fleet takes the contracts, and graduation is a walk from one wing to the other. Authority is self-bestowed by reputation rather than granted by any council of worlds. It holds <a href="../artifacts/atlas.html">A.T.L.A.S.</a> and does not know what that makes it.</p>
-        <div class="ent-links"><a class="chip chip-npc" href="academy-fleet.html">The faction</a></div>
+        <p>The sector branches that carry, guard and contract across the Rykoe Galaxy, under a council of admirals. The Caelestis Sector is the crew's own: the Caelestis Corps, the Caelestis Spelljammer Academy, and the Bridge.</p>
+        <div class="ent-links"><a class="chip chip-npc" href="fleet.html">The faction</a></div>
       </div>
     </div>
 
-    <div class="ent" data-reach="interworld" data-posture="allied">
+    <div class="ent" data-reach="galaxy" data-posture="allied">
       <a class="ent-row" href="order.html">
         <span class="ent-face"><span class="face-mono">OA</span></span>
-        <span class="ent-name">Order of the All-Father<span class="ent-sub">Interprets the All-Father, preserves Continuity</span></span>
+        <span class="ent-name">Order of the All-Father<span class="ent-sub">The Watchers, sworn to keep things as they are</span></span>
         <span class="ent-state">Allied</span>
       </a>
       <div class="ent-detail">
-        <p>Recruits across many worlds and runs two field arms: the sanctioned Watchers, and the ones who left. <a href="../dossiers/ezra.html">Ezra</a> is a Watcher cadet finishing his field training with the crew.</p>
+        <p>Reads the Core Monolith's pressure as the All-Father and posts Watchers across the Rykoe Galaxy to watch worlds nearing a Zenith. <a href="../dossiers/ezra.html">Ezra</a> is a Glimpse finishing his training with the crew.</p>
         <div class="ent-links"><a class="chip chip-npc" href="order.html">The faction</a></div>
       </div>
     </div>
 
-    <div class="ent" data-reach="interworld" data-posture="allied">
+    <div class="ent" data-reach="world" data-posture="allied">
       <a class="ent-row" href="runekeepers.html">
         <span class="ent-face"><span class="face-mono">RK</span></span>
-        <span class="ent-name">Runekeepers<span class="ent-sub">Runic transit, on an unfindable world</span></span>
+        <span class="ent-name">The Runekeepers<span class="ent-sub">Wayfinders of a world that keeps itself unfindable</span></span>
         <span class="ent-state">Allied</span>
       </a>
       <div class="ent-detail">
-        <p>A small hidden order whose existence is rumour at best. Their homeworld defends itself by being unfindable, and the ritual that does it is carried in one living practitioner&rsquo;s body.</p>
+        <p>A small, hidden order whose Runekeeper carries the ritual that hides their homeworld. Wan and Tu, two of its Wayfinders, are cadets at Caelestis as one person.</p>
         <div class="ent-links"><a class="chip chip-npc" href="runekeepers.html">The faction</a></div>
       </div>
     </div>
 
-    <div class="ent" data-reach="interworld" data-posture="mixed">
+    <div class="ent" data-reach="galaxy" data-posture="mixed">
       <a class="ent-row" href="seekers.html">
         <span class="ent-face"><span class="face-mono">SK</span></span>
-        <span class="ent-name">The Seekers<span class="ent-sub">Chapters after a secret each believes was kept from it</span></span>
+        <span class="ent-name">The Seekers<span class="ent-sub">Vecna's faith, in chapters named for what they seek</span></span>
         <span class="ent-state">Chapter by chapter</span>
       </a>
       <div class="ent-detail">
-        <p>No chapter calls itself this and no two share a name, a symbol, a practice or a god. What they share is an origin shape, which is why they can be dropped on any world the campaign needs one.</p>
+        <p>Chapters on many worlds, each serving Vecna under another name and each unaware of the rest. The Fracture Cult and the Archivists are chapters.</p>
         <div class="ent-links"><a class="chip chip-npc" href="seekers.html">The faction</a></div>
       </div>
     </div>
 
-    <div class="ent" data-reach="interworld" data-posture="mixed">
-      <a class="ent-row" href="spectrum.html">
-        <span class="ent-face"><span class="face-mono">SP</span></span>
-        <span class="ent-name">Spectrum<span class="ent-sub">Mid-tier ideological and operational forces</span></span>
-        <span class="ent-state">Varies</span>
-      </a>
-      <div class="ent-detail">
-        <p>Independent powers with their own histories &mdash; Concordance, Fracture Cult, Archivists, Syndicate. Some of their cells began as Seeker chapters that grew in that direction.</p>
-        <div class="ent-links"><a class="chip chip-npc" href="spectrum.html">The faction</a></div>
-      </div>
-    </div>
-
-    <div class="ent" data-reach="interworld" data-posture="mixed">
-      <a class="ent-row" href="restorers.html">
-        <span class="ent-face"><span class="face-mono">RS</span></span>
-        <span class="ent-name">Restorers<span class="ent-sub">Recovering what the cosmos has lost</span></span>
-        <span class="ent-state">Not hostile</span>
-      </a>
-      <div class="ent-detail">
-        <p>They keep archives of vanished civilizations, survey dead worlds, and trace a pathway toward the Core &mdash; which their doctrine names the Mother of the Universe. They are not hostile and they are aimed at the single most dangerous place in the cosmology.</p>
-        <div class="ent-links"><a class="chip chip-npc" href="restorers.html">The faction</a></div>
-      </div>
-    </div>
-
-    <div class="ent" data-reach="interworld" data-posture="opposed">
+    <div class="ent" data-reach="galaxy" data-posture="opposed">
       <a class="ent-row" href="vthorama.html">
         <span class="ent-face"><span class="face-mono">VO</span></span>
-        <span class="ent-name">The Vth&rsquo;orama<span class="ent-sub">An illithid colony aboard a taken dreadnought</span></span>
+        <span class="ent-name">The Vth&rsquo;orama<span class="ent-sub">N'ghathrod's illithid colony aboard a living dreadnought</span></span>
         <span class="ent-state">Opposed</span>
       </a>
       <div class="ent-detail">
-        <p>Named for the ship, because the ship is what they are. <a href="../dossiers/nghathrod.html">N&rsquo;ghathrod</a> is fused into it, the bearers and the unthinned live aboard, and the whole of it is a society going about an ordinary day.</p>
+        <p>All who go toward home: the Seekers of a New Home. They open and link hearts in search of a home, and plant the taken in key positions on the worlds they reach.</p>
         <div class="ent-links"><a class="chip chip-npc" href="vthorama.html">The faction</a></div>
       </div>
     </div>
 
-    <div class="ent" data-reach="local" data-posture="opposed">
+    <div class="ent" data-reach="galaxy" data-posture="mixed">
+      <a class="ent-row" href="restorers.html">
+        <span class="ent-face"><span class="face-mono">RS</span></span>
+        <span class="ent-name">The Restorers<span class="ent-sub">Scholars reaching for the Core Monolith to bring back what was lost</span></span>
+        <span class="ent-state">Not hostile</span>
+      </a>
+      <div class="ent-detail">
+        <p>Cells of scholars who keep the Ledger of losses, survey dead worlds, and walk into Zeniths on purpose. Their doctrine names the Core Monolith's pressure the All-Mother.</p>
+        <div class="ent-links"><a class="chip chip-npc" href="restorers.html">The faction</a></div>
+      </div>
+    </div>
+
+    <div class="ent" data-reach="galaxy" data-posture="opposed">
       <a class="ent-row" href="vocath-operation.html">
         <span class="ent-face"><span class="face-mono">VC</span></span>
-        <span class="ent-name">Vocath&rsquo;s Operation<span class="ent-sub">A trading house running a private grudge</span></span>
+        <span class="ent-name">Vocath&rsquo;s crew<span class="ent-sub">A mercane trading house with a grudge against Mirt</span></span>
         <span class="ent-state">Opposed</span>
       </a>
       <div class="ent-detail">
-        <p>A merchant who believes his quarrel with Mirt is the whole of it, and is wrong about that. His eye-in-a-wheel mark turns up on the recovered rod, the Sky Dock crate, and the Crow&rsquo;s last transmission.</p>
+        <p>Vocath's house runs his feud with Mirt and his trade along the lanes around Realmspace, and now as far as Fonains. His eye-in-a-wheel mark turned up on the recovered rod, the Sky Dock crate and the Bellwether Crow's last transmission.</p>
         <div class="ent-links"><a class="chip chip-npc" href="vocath-operation.html">The faction</a></div>
       </div>
     </div>
 
-    <div class="ent" data-reach="local" data-posture="opposed">
+    <div class="ent" data-reach="world" data-posture="opposed">
       <a class="ent-row" href="aethris.html">
-        <span class="ent-face"><span class="face-mono">AE</span></span>
-        <span class="ent-name">The Aethris powers<span class="ent-sub">A world mid-Zenith that wants its ritual finished</span></span>
+        <span class="ent-face"><span class="face-mono">FO</span></span>
+        <span class="ent-name">The Fortuned<span class="ent-sub">Tymora's clerics on Aethris, mid-ritual</span></span>
         <span class="ent-state">Opposed</span>
       </a>
       <div class="ent-detail">
-        <p>The Fortuned need <a href="../crew/sol.html">Sol</a> back so the ritual of perfection can close. They do not know a third party is pushing the same event from outside.</p>
+        <p>A sect grown from a temple order of Tymora, whose unfinished ritual began Aethris's Zenith. They want <a href="../crew/sol.html">Sol</a> back to finish it, and sent the Crystalline Retrieval Construct after him.</p>
         <div class="ent-links"><a class="chip chip-npc" href="aethris.html">The faction</a></div>
       </div>
     </div>
 
     <div class="ent" data-reach="cosmic" data-posture="mixed">
       <a class="ent-row" href="deities.html">
-        <span class="ent-face"><span class="face-mono">DP</span></span>
-        <span class="ent-name">Deities &amp; Cosmic Powers<span class="ent-sub">Gods, and the powers that function like them</span></span>
+        <span class="ent-face"><span class="face-mono">DE</span></span>
+        <span class="ent-name">Deities<span class="ent-sub">The gods and the powers that act like them</span></span>
         <span class="ent-state">Varies</span>
       </a>
       <div class="ent-detail">
-        <p>The divine and the cosmic-but-not-divine. What a god is in this cosmology, and the bounds of what one can know, are set out in <a href="../cosmology/#gods">Cosmology</a>.</p>
+        <p>Vecna, Tharizdun, Tymora, Beshaba, Takhisis, Bahamut and Astra Virex, and the Accordance, the six gods who sealed the Princes of Elemental Evil.</p>
         <div class="ent-links"><a class="chip chip-npc" href="deities.html">The faction</a></div>
-      </div>
-    </div>
-
-    <div class="ent" data-reach="local" data-posture="indifferent">
-      <a class="ent-row" href="external.html">
-        <span class="ent-face"><span class="face-mono">EX</span></span>
-        <span class="ent-name">External Powers<span class="ent-sub">Merchants, ports, captains and local authorities</span></span>
-        <span class="ent-state">Indifferent</span>
-      </a>
-      <div class="ent-detail">
-        <p>The Rock of Bral, mercane traders, private captains and world governments. They control lanes, supplies, politics and access &mdash; the practical things that decide whether an operation happens &mdash; and understand none of the structural ones.</p>
-        <div class="ent-links"><a class="chip chip-npc" href="external.html">The faction</a></div>
       </div>
     </div>
 
@@ -190,8 +165,17 @@
 
   </div>
 
+  <details class="dm-collapse-section" id="other-powers">
+    <summary><h2>Other powers</h2></summary>
+    <div class="dm-collapse-section-body">
+      <p>
+        The Rock of Bral, merchant powers, mercane traders, private captains, local governments and world authorities. Few of them know much of how the cosmos works. They control lanes, supplies, politics, cover stories, contracts, rumour and access: practical powers that often decide whether an operation can be run at all. A power among them earns an entry here when the crew has to deal with it by name.
+      </p>
+    </div>
+  </details>
+
   <div class="dm-footer">
-    Factions &middot; Cast &middot; Caelestis DM
+    Factions &middot; People &middot; Caelestis DM
   </div>
 
 </main>

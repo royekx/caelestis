@@ -65,72 +65,42 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Factions
 
-### Vecna (opposition/vecna.html, realms/oerth, factions/, factions/deities.html, factions/seekers.html)
+### Vecna (realms/oerth; done on opposition/vecna.html, dossiers/vecna.html, factions/seekers.html and factions/deities.html)
 - Vecna's godhood is complete. He ascended on Oerth, his homeworld, a darkest-timeline world where his hold is strongest; its Monolith is a holy site.
-- Ascension charged Vecna to Oerth's heart and pushed him off the world, so he works through vessels.
-- Vecna is an open god with a following under many names. His followers are the Seekers.
-- Vecna uses Tharizdun as a contingency. It is use, not alliance.
-- Vecna is a god of secrets, knowledge, manipulation and trickery, with a hold over death and the undead. He thrives on what others do not know.
-- He keeps his own name and origin a close secret, because there is power in knowing who he was and where he came from. Most of his worshippers know him by other names. The name "Vecna" surfaces late, through lore: a figure missing his left eye and his left hand.
-- On Oerth his worship is large and public. Elsewhere it lives in small, hidden pockets. The same holds for other gods: a god can be known on a world and have almost no following there.
-- He ascended at least a few centuries ago. His legacy is hidden temples, secret texts and artifacts kept for his worship, not ruined ziggurats lost to time.
-- Not every worshipper is a cultist. Some lean into necromancy. Some sincerely believe in an idea of him, the breaking of the cycle of death, more than in the god himself.
-- Vecna wants to understand the cosmos and become part of it: where everything came from, what the Reach was, what was taken. Breaking reality is not his goal; he believes he could repair whatever breaks.
-- Vecna and Tharizdun distrust each other. Tharizdun's weakening of reality on Fonains serves Vecna's ends, and Vecna lets it run.
-- Lich Vecna, the mortal form the Core Monolith archived when Vecna ascended, sits in the Radiant Citadel. He has had centuries to conclude he was wrong, and he is calm, almost redeemed. Meeting him unsettles everything the crew thinks they know.
-- Vecna's domains are Knowledge, Death and Trickery.
-- His symbol is an eye in the palm of a left hand. Chapters read it their own way. Some take the eye for sight and revelation. Some glorify it in green, for light, nourishment and the life of the body. The same symbol means different things across his faith.
-- Vecna's realm is Cavitius.
 - The Hand of Vecna, the Eye of Vecna and the Book of Vile Darkness exist in this cosmos. (DM: where each is, and whether any has reached Caelestis or the Rykoe Galaxy, is still to decide.)
 - Oerth is the world where Vecna became a god. His ritual to become a god pushed Oerth to its Zenith, and the Zenith made him one; the Monolith that answered archived his mortal form, Lich Vecna. That was his first ascension, the Godhood Ascension. The climb he is making now, into Continuity itself, is the Axiomic Ascension. Oerth is the Ascension World.
-- His grievance: something was taken from him and hidden from him. He believes the cosmos and every being in it are owed an answer, and he means to find it.
-- DM: the campaign is not a war of the gods.
 
-### Asmodeus and the Accordance (factions/deities.html, Fonains doc)
-- Asmodeus and Lord Primus are the eldest gods of the Accordance. Asmodeus is its face, though not its ruler or its leader.
-- Asmodeus was among the first to understand what the gods had become. He began as a good-natured god. The Reach let loose good and evil alike, demons among them, and he took up the fight against them while the other gods sat in their comfort. He was betrayed, and he became the lord of the Nine Hells. He is called evil because someone has to do this work, and he does it.
-- The Accordance know little of Vecna. A few centuries ago they felt something change: a new entity like them, where there had been none. Asmodeus likely knows something is wrong, and Lord Primus may.
-
-### The Seekers (factions/seekers.html, campaign/, factions/spectrum.html, opposition/vecna.html)
-- The Seekers are Vecna's faith. Seeking is the faith itself; what a chapter seeks is what names it. The Seekers of Secrets are one chapter. Others seek knowledge, a cure for death, or a home.
-- Every chapter worships Vecna, often under another name or in the belief that he is something else. Chapters do not know about each other; each serves on its own. Their mutual ignorance is itself a secret Vecna keeps and feeds on.
-- Each chapter's name is in its own people's language, and every one of them carries the word for "seekers". A crew that translates enough chapter names, by magic or by study, will notice the pattern.
-- Chapters seek many things: hearts, lost knowledge, a cure for death, a home. Vecna needs them hungry for something, and their seeking ripples outward through the worlds they work on.
-- The Watchers flag some chapters' work as a danger to a world's Zenith and track it, without knowing who stands behind it.
-- The Fracture Cult and the Archivists are Seekers chapters. The Fracture Cult seeks to bring worlds to their Zenith. The Archivists seek what the Monoliths record.
-- The first chapter the crew meets is a benevolent church that shows Vecna's hand and eye openly. It is good and docile, with something a little odd about it: not evil, but easy to misread. The crew first hears of it through Hessa Dun, a Caelestis contract contact whose uncle tells strange stories. The meeting itself comes well after graduation.
-- DM: the players will recognise the symbol and expect villainy; the characters know nothing of it. The church's goodness should sit wrong with the players without giving them anything to act on.
+### Asmodeus and the Accordance (Fonains doc; done on factions/deities.html, section 2)
+- done: the members, Nalsa, Asmodeus's history and every appearance are on factions/deities.html § The Accordance. The Fonains doc still needs them.
 
 ### The Vth'orama (factions/seekers.html, factions/vthorama.html, dossiers/vthoramu.html, the lieutenants' dossiers)
 - N'ghathrod's colony is a chapter of the Seekers: the Seekers of a New Home. They serve the same hidden god as every other chapter, believing they answer to an elder brain, and Vecna feeds them the few secrets they need.
 - In their own tongue the chapter's name is their people's name, Vth'orama. The roots are vth- "the whole of", or- "toward", amu "home", with -a marking a people: all who go toward home. Rendered in Common, the Seekers of a New Home.
 - Their ship carries the same roots. Vth'oramu means "the passage to a new home". The founders say it as a promise; those born aboard say it as "here".
 - Two of the five lieutenants are properly raised illithids who were captured with N'ghathrod aboard Thessalar's craft. The other three are unthinned: made aboard the craft from bodies Thessalar supplied for his experiments and N'ghathrod's own tadpoles.
+- done: factions/vthorama.html and factions/seekers.html (section 2). Still waiting: dossiers/vthoramu.html and the lieutenants' dossiers.
 
-### The Restorers (factions/restorers.html)
-- The Restorers are trying to reach a heart, and through it the Core Monolith, where they believe everything lost is stored. They compete for residue pieces. Without knowing it, they advance Vecna's plan.
-- They follow the Core Monolith's pressure as Vecna does, read through a different mind. Their understanding is theory and vision, little of it concrete. They and the Seekers have clashed over the years, and some on each side believe they walk the same path.
-
-### Aethris and the sisters (factions/aethris.html, realms/aethris.html, dossiers/beshaba.html, factions/deities.html)
-- The Fortuned want Sol back alive because he is a component of their unfinished ritual. They do not care about him as a person.
+### Aethris and the sisters (dossiers/beshaba.html; done on factions/aethris.html and factions/deities.html, section 2)
 - Beshaba finds the Fortuned heretical, a spit in her face. She thinks Tymora is fuelling them, and blames her sister for it. On Aethris Beshaba is the lesser of the two, because people favour luck over misfortune, and she calls what the Fortuned do unnatural.
 - Neither sister knows what both of them need: each other. Luck and misfortune are two sides of one coin.
 
-### Caelestis, the Driftwardens and the United Intergalactic Fleet (factions/academy-fleet.html, factions/index.html, cosmology/, realms/, glossary/)
-- The Astral Sea fills the dark between systems and between galaxies. The Fleet calls it the drift.
-- Caelestis belongs to the United Intergalactic Fleet, which everyone calls the Fleet.
-- Everyone in the Fleet's service is a Driftwarden. Driftwardens hold ranks, from the newest graduate up through officers and commanders, but every one of them is a Driftwarden.
-- Caelestis is the academy. It trains cadets to become Driftwardens; it is a school.
-- Fleet operations for Caelestis's cluster run out of Ondrel Anchorage on the moon Ostrel, a neutral port away from Toril. Captain Haymond Rolt works out of Ondrel, and the crew takes its Arc 2 contracts from there.
-- Caelestis, Ondrel and the sister institutions in other system clusters are all affiliates of the Fleet. The sister institutions do similar work under their own names and governance. The Fleet works like a united nations: its affiliates share information across the galaxy, and each mostly runs itself.
-- The Order's Watchers are more organized than these affiliates. They keep to the Rykoe Galaxy, as the Fleet does, more densely in some places than others.
-- Each institution keeps the satellites and stations at the edge of its own system cluster. Strake Station and its sister satellites are Caelestis's.
-- The stations differ with the local ecology of their edge: what drifts there, what lives there, what threatens it. Their crews are drawn from the institution that keeps them.
-- Readings from the edge stations pass between the institutions. This is how a disturbance seen at one edge reaches another.
+### Caelestis, the Driftwardens and the United Intergalactic Fleet (factions/fleet.html, factions/index.html, cosmology/, locations/, glossary/, restricted/)
+- The United Intergalactic Fleet, which everyone calls the Fleet, is made of a handful of sector branches, four or five. Each branch oversees one sector of the Rykoe Galaxy, a cluster of several systems, and keeps sites in its systems, near them, or between them. The branches work together and together make the Fleet.
+- Caelestis is one of these sectors: the Caelestis Sector, which includes the system where Toril lies. It has two parts. The Caelestis Corps is the sector's branch of the Fleet and oversees the sector. The Caelestis Spelljammer Academy trains cadets to become Driftwardens; there are only a handful of spelljammer academies in the galaxy.
+- Everyone in the Fleet's service is a Driftwarden, assigned to a sector. Driftwardens hold ranks, from the newest graduate up through officers and commanders. A Driftwarden reports to the commander of their station; station commanders answer to the sector's command, and the sectors to the Fleet.
+- Each sector has stations at its systems or between them, each with a commander, and smaller satellites and waystations around them. Strake Station and its sister satellites belong to the Caelestis Sector. Fleet operations for the Caelestis Sector run out of Ondrel Anchorage on the moon Ostrel, a neutral port away from Toril. Captain Haymond Rolt works out of Ondrel, and the crew takes its Arc 2 contracts from there.
+- The Bridge is the Caelestis Sector's name for its command. The sectors began as separate institutions and came together over time, so each keeps its own ways and its own names; another sector's command is called something else.
+- Above the sectors sits a council of the Fleet's highest officers, a few admirals, not a single leader. (DM touchstone: One Piece's Marine admirals.)
+- The sectors differ in character. Some are disciplined and naval; others take any work for the coin. The Fleet is not the law of the cosmos. It keeps a self-imposed order, and much of its work is mercantile because it holds the easiest routes: shipments, protection, carrying passengers, and transport for the Watchers.
+- Rank shows in gems or pins. Driftwardens otherwise wear what they like; seated officers at a station wear something closer to a uniform.
+- The sectors share information, but not all of it. Each keeps a good deal to itself, the way rival departments do. The Fleet Intelligence Archive is the Caelestis Sector's archive: it holds what Caelestis knows of its own sector and only some of what the others share.
+- The Order's Watchers are more organized than the sector branches. They keep to the Rykoe Galaxy, as the Fleet does, more densely in some places than others.
+- The stations differ with the local ecology of their place: what drifts there, what lives there, what threatens it. Their crews are drawn from the sector that keeps them. Readings from the stations pass between the sectors; this is how a disturbance seen at one edge reaches another.
+- done: factions/fleet.html and the glossary lines for sector, the Caelestis Sector, Corps, Academy, the Bridge and the FIA (section 2). Still waiting: Ondrel Anchorage and Strake Station on locations/, and the FIA's account of the Fleet on restricted/.
 
-### Vocath's crew (factions/vocath-operation.html, campaign/colony/)
+### Vocath's crew (campaign/colony/; done on factions/vocath-operation.html, section 2)
 - The crates at the Sky Dock carry Vocath's mark, the eye in a wheel.
-- Qitru serves Vocath. She does not care who stands above him; for her, the top is Vocath.
+- done: Qitru and the A.T.L.A.S. sister line are on factions/vocath-operation.html.
 
 ## Campaign
 
@@ -205,7 +175,7 @@ when a ruling changes; delete it once the page carries it. See
 ### Thessalar (dossiers/thessalar.html)
 - Thessalar is Halaster Blackcloak, and he is still in the planar craft. His records of the work on N'ghathrod are there too.
 
-### Clint Dashforest (dossiers/clint.html, factions/vocath-operation.html, campaign/colony/, chart/, timeline)
+### Clint Dashforest (dossiers/clint.html, campaign/colony/, chart/, timeline; done on factions/fleet.html and factions/vocath-operation.html, section 2)
 - Vocath's crew ambushed the Bellwether Crow for a sister artifact of A.T.L.A.S. that the Crow was carrying. Clint took it and left the ship to draw the boarders off.
 - He steered for a color pool he could see opening, and went through it on purpose. Color pools open and close quickly, and this one carried him through a small pocket of another dimension and spat him out on Fonains, separated from the boarders who followed him in.
 - The Crow's survivors still argue about whether he meant to go through. He did.
@@ -236,7 +206,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Crew
 
-### Gregory (crew/gregory.html, realms/toril.html, factions/academy-fleet.html)
+### Gregory (crew/gregory.html, realms/toril.html; done on factions/fleet.html, section 2)
 - Gregory comes from the Cogfast Enclave on Lantan, on Toril. He reached Caelestis on a cargo ship.
 - DM: the Lantern becomes Gregory's next anomaly if he investigates it.
 
@@ -271,6 +241,7 @@ when a ruling changes; delete it once the page carries it. See
 - The third Distinction piece is unknown. It finds something too.
 
 ### Wan, Tu and the fragment (artifacts/runekeepers-fragment.html, rules/)
+- The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) Homes: artifacts/runekeepers-fragment.html, crew/tumak.html, dossiers/the-runekeeper.html; factions/runekeepers.html carries it already.
 - The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a state neither whole nor broken. The twins are not a key to the First Heart until enough of the stone has rebuilt between them through resolved runes: not before about level 12, early in Arc 3.
 
 ## DM principles

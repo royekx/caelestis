@@ -378,23 +378,6 @@
       ]
     },
     {
-      "id": "citadel-restorer",
-      "label": "The Restorer in the Citadel",
-      "type": "person",
-      "scope": "cosmos",
-      "summary": "A Restorer taken long ago, who has reasoned out what restoration would require.",
-      "facts": [
-        {
-          "t": "A Restorer inside the Citadel has had centuries to reason out what restoration would take.",
-          "src": "factions/restorers.html"
-        },
-        {
-          "t": "This Restorer may be the only being in the cosmos who holds the whole requirement: a Monolith, a world's heart, and all four fragments.",
-          "src": "factions/restorers.html"
-        }
-      ]
-    },
-    {
       "id": "first-heart",
       "label": "The First Heart",
       "type": "concept",
@@ -985,8 +968,16 @@
           "src": "STAGING round 1"
         },
         {
-          "t": "Eldath is one of the six.",
-          "src": "timeline/timeline.json"
+          "t": "Its six gods are Lord Primus, Asmodeus, Eldath, Muriel, Ryujin and Futsunushi.",
+          "src": "factions/deities.html"
+        },
+        {
+          "t": "Its emissary is Nalsa, an androsphinx.",
+          "src": "factions/deities.html"
+        },
+        {
+          "t": "Asmodeus is its face, though not its ruler or leader; he and Lord Primus are its eldest.",
+          "src": "factions/deities.html"
         }
       ]
     },
@@ -1177,11 +1168,23 @@
           "src": "STAGING round 10"
         },
         {
-          "t": "Each chapter's mark depicts what it seeks with the subject left as an empty space.",
+          "t": "Vecna plants one idea in every chapter: seek what you are missing, what you yearn for, what was taken from you.",
           "src": "factions/seekers.html"
         },
         {
-          "t": "A chapter answers a question only in exchange for one.",
+          "t": "Vecna gives the faithful knowledge, the means of seeking and power; his clerics and wizards draw on him.",
+          "src": "factions/seekers.html"
+        },
+        {
+          "t": "Chapters mostly use the eye from his symbol, rarely the hand; green eye-slit gems, neck eye tattoos and black candles burning green are common marks.",
+          "src": "factions/seekers.html"
+        },
+        {
+          "t": "Only on Oerth is he worshipped openly as Vecna; elsewhere his faithful use other names, the First Seeker among them.",
+          "src": "factions/seekers.html"
+        },
+        {
+          "t": "Chapters spread by seeding, by travellers, across the planes and by being found in ruins.",
           "src": "factions/seekers.html"
         }
       ]
@@ -1212,7 +1215,7 @@
         },
         {
           "t": "It accelerates worlds toward Zenith through engineered crises and symbolic acts.",
-          "src": "factions/spectrum.html"
+          "src": "factions/seekers.html"
         }
       ]
     },
@@ -1229,24 +1232,7 @@
         },
         {
           "t": "They are drawn to Monolith sites, incomplete archives and corrupted records.",
-          "src": "factions/spectrum.html"
-        }
-      ]
-    },
-    {
-      "id": "spectrum",
-      "label": "The Spectrum",
-      "type": "faction",
-      "scope": "cosmos",
-      "summary": "Mid-tier ideological and operational forces across the cosmos.",
-      "facts": [
-        {
-          "t": "The Spectrum's forces include the Concordance, which enforces metaphysical orthodoxy, and the Syndicate, a criminal network that profits where order weakens.",
-          "src": "factions/spectrum.html"
-        },
-        {
-          "t": "The overlap between Spectrum cells and Seekers chapters hides the larger picture from every institution.",
-          "src": "factions/spectrum.html"
+          "src": "factions/seekers.html"
         }
       ]
     },
@@ -1272,18 +1258,14 @@
       "label": "Hessa Dun",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A Caelestis cadet and contract contact whose uncle tells strange stories.",
+      "summary": "A Caelestis contract contact whose uncle collects a lot of things and likes visitors.",
       "facts": [
         {
-          "t": "Hessa Dun is the crew's first thread to the church of the hand and eye.",
-          "src": "STAGING round 5"
-        },
-        {
-          "t": "Her uncle's crates hold decades of letters between strangers on other worlds about what each is looking into.",
+          "t": "Hessa Dun is a Caelestis contract contact the crew works with after graduation.",
           "src": "factions/seekers.html"
         },
         {
-          "t": "She learned a way of asking about things from her uncle as a child.",
+          "t": "She mentions that her uncle collects a lot of things and likes visitors.",
           "src": "factions/seekers.html"
         }
       ]
@@ -1293,15 +1275,15 @@
       "label": "Hessa Dun's uncle",
       "type": "person",
       "scope": "cosmos",
-      "summary": "A travelling, odd relative who corresponds with strangers across worlds.",
+      "summary": "A collector who likes visitors; not openly a Seeker.",
       "facts": [
         {
-          "t": "He has written for decades to people on other worlds about what each of them is looking into.",
+          "t": "He collects a lot of things and likes visitors.",
           "src": "factions/seekers.html"
         },
         {
-          "t": "He tells strange stories that nobody in his family takes seriously.",
-          "src": "STAGING round 5"
+          "t": "He is not openly a Seeker.",
+          "src": "factions/seekers.html"
         }
       ]
     },
@@ -1523,6 +1505,14 @@
         {
           "t": "Their own name for their work is the Return.",
           "src": "factions/restorers.html"
+        },
+        {
+          "t": "As the Restorers understand it, restoring a world takes a Monolith, a heart and all five fragments of residue.",
+          "src": "factions/restorers.html"
+        },
+        {
+          "t": "The Order and the Restorers treat each other as heretics; the Order calls them a death cult.",
+          "src": "factions/restorers.html"
         }
       ]
     },
@@ -1625,22 +1615,30 @@
     },
     {
       "id": "higher-organization",
-      "label": "The higher organization",
+      "label": "The United Intergalactic Fleet",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "The body Caelestis, the Driftwardens and their sister institutions all belong to.",
+      "summary": "Four or five sector branches across the Rykoe Galaxy, under a council of admirals. Caelestis is one of its sectors.",
       "facts": [
         {
-          "t": "Caelestis and the Driftwarden body are both affiliates of a higher organization.",
-          "src": "STAGING round 11"
+          "t": "The Fleet is made of four or five sector branches, each overseeing a cluster of systems in the Rykoe Galaxy.",
+          "src": "factions/fleet.html"
         },
         {
-          "t": "Its affiliates share information across the galaxy, and each mostly runs itself.",
-          "src": "STAGING round 11"
+          "t": "Above the sectors sits a council of a few admirals, not a single leader.",
+          "src": "factions/fleet.html"
         },
         {
-          "t": "Sister institutions in other clusters and galaxies do similar work under their own names, each with its own star catalogue.",
-          "src": "STAGING round 11"
+          "t": "The sectors began as separate institutions; each keeps its own ways and names, and they share information but not all of it.",
+          "src": "factions/fleet.html"
+        },
+        {
+          "t": "The Fleet keeps a self-imposed order, and much of its work is mercantile: shipments, protection, passengers and transport for the Watchers.",
+          "src": "factions/fleet.html"
+        },
+        {
+          "t": "The Fleet lost a force at Glyth, and Glyth is closed to Fleet traffic.",
+          "src": "factions/fleet.html"
         }
       ]
     },
@@ -1981,6 +1979,18 @@
         {
           "t": "Qualith is the only writing the colony counts as real.",
           "src": "factions/vthorama.html"
+        },
+        {
+          "t": "The colony works on four things at once: planting the taken, finding hearts, opening them and seeking links.",
+          "src": "factions/vthorama.html"
+        },
+        {
+          "t": "Vth'oramu keeps to the dark between systems and works as a mothership for skiffs.",
+          "src": "factions/vthorama.html"
+        },
+        {
+          "t": "The colony takes key people who can rise into control, never crowds.",
+          "src": "factions/vthorama.html"
         }
       ]
     },
@@ -2058,7 +2068,7 @@
           "src": "factions/vthorama.html"
         },
         {
-          "t": "They never leave Vth'oramu.",
+          "t": "Osskhal and Khaleth, two of the enna, are bearers captured with N'ghathrod aboard Thessalar's craft.",
           "src": "factions/vthorama.html"
         }
       ]
@@ -2311,10 +2321,10 @@
     },
     {
       "id": "vocath-operation",
-      "label": "Vocath's operation",
+      "label": "Vocath's crew",
       "type": "faction",
       "scope": "caelestis",
-      "summary": "A mercane trading house running a private grudge, with a second principal it knows nothing of.",
+      "summary": "A mercane trading house running a private grudge against Mirt, with a second principal it knows nothing of.",
       "facts": [
         {
           "t": "The thefts, the sabotage plates, the leverage on Miken and the marked crates at the Sky Dock are Vocath's work.",
@@ -2331,6 +2341,14 @@
         {
           "t": "Vocath's people chased Clint to Fonains, never found him, and came back with fragments of the broken Monolith.",
           "src": "timeline/timeline.json"
+        },
+        {
+          "t": "Someone from Vocath's crew followed Clint to Fonains, learned about the gems there, and Vocath now trades in them.",
+          "src": "factions/vocath-operation.html"
+        },
+        {
+          "t": "Qitru serves Vocath and does not care who stands above him.",
+          "src": "factions/vocath-operation.html"
         }
       ]
     },
@@ -2707,11 +2725,15 @@
       "label": "Caelestis Academy",
       "type": "faction",
       "scope": "caelestis",
-      "summary": "The Spelljammer academy at Caelestis: a school that trains cadets.",
+      "summary": "The Caelestis Spelljammer Academy: the school of the Caelestis Sector, which trains cadets to become Driftwardens.",
       "facts": [
         {
-          "t": "Caelestis is a school that trains cadets; Driftwarden operations are a separate body.",
-          "src": "STAGING round 11"
+          "t": "The Caelestis Spelljammer Academy trains cadets to become Driftwardens; there are only a handful of spelljammer academies in the galaxy.",
+          "src": "factions/fleet.html"
+        },
+        {
+          "t": "Mirt runs the Academy only; the Corps and the Bridge operate outside him.",
+          "src": "factions/fleet.html"
         },
         {
           "t": "Caelestis is thin partly because it answers the Watchers' calls for help.",
@@ -2722,10 +2744,6 @@
           "src": "STAGING round 10"
         },
         {
-          "t": "Its authority is self-bestowed by reputation rather than granted by any council of worlds.",
-          "src": "factions/academy-fleet.html"
-        },
-        {
           "t": "Its surveyors keep the Caelestis Survey Catalogue, which gives every charted star a number.",
           "src": "STAGING round 12"
         }
@@ -2733,22 +2751,26 @@
     },
     {
       "id": "driftwardens",
-      "label": "Driftwarden operations",
+      "label": "The Caelestis Corps",
       "type": "faction",
       "scope": "caelestis",
-      "summary": "The body that takes the contracts, based at Ondrel Anchorage.",
+      "summary": "The Caelestis Sector's branch of the Fleet. It oversees the sector; its operations run out of Ondrel Anchorage.",
       "facts": [
         {
-          "t": "Driftwarden operations are a separate body from Caelestis, based at Ondrel Anchorage.",
-          "src": "STAGING round 11"
+          "t": "The Caelestis Corps is the Caelestis Sector's branch of the Fleet and oversees the sector.",
+          "src": "factions/fleet.html"
+        },
+        {
+          "t": "Fleet operations for the Caelestis Sector run out of Ondrel Anchorage, on the moon Ostrel.",
+          "src": "factions/fleet.html"
         },
         {
           "t": "Contracts surface because of the state of the world, and many quietly lead back to a Seekers chapter.",
-          "src": "STAGING round 4"
+          "src": "factions/fleet.html"
         },
         {
           "t": "By the crew's graduation the colony's work ripples outward at contract scale: taken in small positions, disappearances, a station acting strangely.",
-          "src": "STAGING round 10"
+          "src": "campaign/colony/index.html"
         }
       ]
     },
@@ -3178,7 +3200,7 @@
       "facts": [
         {
           "t": "Half of Saerthe's miniature ship is inside Boogie.",
-          "src": "factions/academy-fleet.html"
+          "src": "factions/fleet.html"
         }
       ]
     },
@@ -3801,10 +3823,10 @@
       "label": "The Runekeepers",
       "type": "faction",
       "scope": "caelestis",
-      "summary": "A hidden order of runic transit on an unfindable world.",
+      "summary": "A hidden order of Wayfinders on an unfindable world.",
       "facts": [
         {
-          "t": "The Runekeepers of the Lunarfoot clan practise runic transit, attuning to celestial bodies and through them to their hearts.",
+          "t": "The Runekeepers practise Wayfinding, attuning to places and through them to their hearts; the Lunarfoot clan is among them.",
           "src": "factions/runekeepers.html"
         },
         {
@@ -3949,7 +3971,7 @@
       "label": "The Fortuned",
       "type": "faction",
       "scope": "caelestis",
-      "summary": "Aethris's elite, born marked by Tymora's favour.",
+      "summary": "A sect grown from a temple order of Tymora on Aethris, mostly clerics, whose unfinished ritual began Aethris's Zenith.",
       "facts": [
         {
           "t": "The Fortuned want Sol back as a component of their ritual and do not care about him as a person.",
@@ -3958,6 +3980,18 @@
         {
           "t": "The Fortuned commissioned the Crystalline Retrieval Construct after Sol's escape.",
           "src": "dossiers/crc.html"
+        },
+        {
+          "t": "Long ago the Fortuned cast a generational curse that made a group of people gather their misfortune: the Misfortuned.",
+          "src": "factions/aethris.html"
+        },
+        {
+          "t": "They are led by a priest or priestess and are not the rulers of the whole world.",
+          "src": "factions/aethris.html"
+        },
+        {
+          "t": "They dress in pristine robes of white and gold.",
+          "src": "factions/aethris.html"
         }
       ]
     },
@@ -5447,7 +5481,7 @@
       "s": "eldath",
       "t": "accordance",
       "rel": "is one of",
-      "src": "timeline/timeline.json"
+      "src": "factions/deities.html"
     },
     {
       "s": "asmodeus",
@@ -5696,18 +5730,6 @@
       "src": "STAGING round 6"
     },
     {
-      "s": "spectrum",
-      "t": "fracture-cult",
-      "rel": "overlaps with",
-      "src": "factions/spectrum.html"
-    },
-    {
-      "s": "spectrum",
-      "t": "archivists",
-      "rel": "overlaps with",
-      "src": "factions/spectrum.html"
-    },
-    {
       "s": "seekers",
       "t": "residue",
       "rel": "hunt",
@@ -5728,19 +5750,19 @@
     {
       "s": "hessas-uncle",
       "t": "hessa-dun",
-      "rel": "uncle of",
-      "src": "STAGING round 5"
+      "rel": "is secretly one of",
+      "src": "factions/seekers.html"
     },
     {
       "s": "hessas-uncle",
       "t": "seekers",
-      "rel": "belongs to",
+      "rel": "is secretly one of",
       "src": "factions/seekers.html"
     },
     {
       "s": "hessa-dun",
-      "t": "FAO-Lx7kR2vN",
-      "rel": "is a cadet of",
+      "t": "driftwardens",
+      "rel": "is a contract contact of",
       "src": "factions/seekers.html"
     },
     {
@@ -5783,24 +5805,6 @@
       "s": "restorers",
       "t": "the-ledger",
       "rel": "keep",
-      "src": "factions/restorers.html"
-    },
-    {
-      "s": "citadel-restorer",
-      "t": "restorers",
-      "rel": "belongs to",
-      "src": "factions/restorers.html"
-    },
-    {
-      "s": "citadel-restorer",
-      "t": "radiant-citadel",
-      "rel": "sits in",
-      "src": "factions/restorers.html"
-    },
-    {
-      "s": "citadel-restorer",
-      "t": "residue-thresholds",
-      "rel": "has reasoned out",
       "src": "factions/restorers.html"
     },
     {
@@ -5938,14 +5942,14 @@
     {
       "s": "FAO-Lx7kR2vN",
       "t": "higher-organization",
-      "rel": "is an affiliate of",
-      "src": "STAGING round 11"
+      "rel": "is part of the Caelestis Sector of",
+      "src": "factions/fleet.html"
     },
     {
       "s": "driftwardens",
       "t": "higher-organization",
-      "rel": "is an affiliate of",
-      "src": "STAGING round 11"
+      "rel": "is the Caelestis Sector branch of",
+      "src": "factions/fleet.html"
     },
     {
       "s": "driftwardens",
@@ -5972,28 +5976,28 @@
       "src": "realms/caelestis.html"
     },
     {
-      "s": "FAO-Lx7kR2vN",
+      "s": "driftwardens",
       "t": "strake-station",
       "rel": "keeps",
-      "src": "STAGING round 11"
+      "src": "factions/fleet.html"
     },
     {
       "s": "NPC-Wc9fT2nJ",
       "t": "FAO-Lx7kR2vN",
       "rel": "headmaster of",
-      "src": "factions/academy-fleet.html"
+      "src": "factions/fleet.html"
     },
     {
       "s": "NPC-9dTp4qWz",
       "t": "FAO-Lx7kR2vN",
       "rel": "instructs at",
-      "src": "factions/academy-fleet.html"
+      "src": "factions/fleet.html"
     },
     {
       "s": "NPC-Zx4Bn7Lq",
       "t": "FAO-Lx7kR2vN",
       "rel": "instructs at",
-      "src": "factions/academy-fleet.html"
+      "src": "factions/fleet.html"
     },
     {
       "s": "NPC-Zx4Bn7Lq",
@@ -6029,7 +6033,7 @@
       "s": "NPC-9dTp4qWz",
       "t": "LOC-9mB4kW7n",
       "rel": "runs",
-      "src": "factions/academy-fleet.html"
+      "src": "factions/fleet.html"
     },
     {
       "s": "NPC-Zx4Bn7Lq",
@@ -6137,7 +6141,7 @@
       "s": "NPC-Qp8jL2vR",
       "t": "LOC-Bf3xN6qT",
       "rel": "run",
-      "src": "factions/academy-fleet.html"
+      "src": "factions/fleet.html"
     },
     {
       "s": "LOC-Tn4bK9wR",
@@ -7097,7 +7101,7 @@
       "s": "ITM-8pC4kW2n",
       "t": "ITM-2pQ7vHm9",
       "rel": "is the same model as",
-      "src": "factions/academy-fleet.html"
+      "src": "factions/fleet.html"
     },
     {
       "s": "ITM-Dk4nW7pv",
@@ -7156,8 +7160,8 @@
     {
       "s": "fortuned",
       "t": "aethris",
-      "rel": "rule",
-      "src": "realms/aethris.html"
+      "rel": "keep their Temple on",
+      "src": "factions/aethris.html"
     },
     {
       "s": "prism-ascendant",
@@ -7740,6 +7744,18 @@
       "t": "LOC-Sk4mW8vn",
       "rel": "rules a domain of",
       "src": "locations/hcatha.html"
+    },
+    {
+      "s": "order",
+      "t": "higher-organization",
+      "rel": "is carried by",
+      "src": "factions/fleet.html"
+    },
+    {
+      "s": "higher-organization",
+      "t": "glyth",
+      "rel": "lost a force at",
+      "src": "factions/fleet.html"
     }
   ]
 }

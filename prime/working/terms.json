@@ -2,7 +2,8 @@
   "about": "Read by scripts/terms.js. 'retired' terms must not appear on DM pages once their section is finished; 'voice' patterns mark decision voice or placeholders on world pages; 'moved' lists old page paths that must not be linked. 'scan' lists the top folders read; 'finished' lists the folders whose hits fail the check; everything else is reported as a warning. 'allow' holds 'path:regex' pairs for legitimate uses.",
   "finished": [
     "prime/cosmology",
-    "prime/glossary"
+    "prime/glossary",
+    "prime/factions"
   ],
   "retired": [
     {
@@ -23,26 +24,30 @@
     },
     {
       "pattern": "\\bgodless\\b",
-      "use": "GAL-02, the galaxy of the eldritch gods"
+      "use": "GAL-02, the galaxy of the eldritch gods",
+      "i": true
     },
     {
       "pattern": "\\bphlogiston\\b",
-      "use": "the Astral Sea (the Fleet calls it the drift)"
+      "use": "the Astral Sea (the Fleet calls it the drift)",
+      "i": true
     },
     {
       "pattern": "World Surveyor",
-      "use": "A.T.L.A.S."
+      "use": "A.T.L.A.S.",
+      "i": true
     },
     {
       "pattern": "Circle of Fifteenths",
-      "use": "the Circle of Fifths"
+      "use": "the Circle of Fifths",
+      "i": true
     },
     {
       "pattern": "\\b(four|Four) Axioms\\b",
       "use": "five Axioms"
     },
     {
-      "pattern": "\\b(Boundary|Transformation|Convergence) (fragment|piece|pieces|Axiom|seat)\\b",
+      "pattern": "\\b(Boundary|Transformation|Convergence) (fragment|piece|pieces|Axiom|seat|residue)\\b",
       "use": "Distinction / Expansion / Consolidation (fragment); the Axioms are Consolidation, Expansion, Dissolution, Distinction, Determination"
     },
     {
@@ -51,23 +56,28 @@
     },
     {
       "pattern": "downward tithe",
-      "use": "the tithe runs upward, to N'ghathrod"
+      "use": "the tithe runs upward, to N'ghathrod",
+      "i": true
     },
     {
       "pattern": "psychic wind",
-      "use": "Clint went through a color pool on purpose"
+      "use": "Clint went through a color pool on purpose",
+      "i": true
     },
     {
       "pattern": "\\b(claimed|primed) (node|nodes|heart|hearts)\\b",
-      "use": "found / opened / linked"
+      "use": "found / opened / linked",
+      "i": true
     },
     {
       "pattern": "333,333",
-      "use": "four great shards; 333 small black shards"
+      "use": "four great shards; 333 small black shards",
+      "i": true
     },
     {
       "pattern": "\\bKnowhere\\b",
-      "use": "Nowhere"
+      "use": "Nowhere",
+      "i": true
     },
     {
       "pattern": "\\bAscension world\\b",
@@ -75,11 +85,86 @@
     },
     {
       "pattern": "\\bHakatha\\b",
-      "use": "H'Catha"
+      "use": "H'Catha",
+      "i": true
     },
     {
       "pattern": "\\bDarra\\b",
-      "use": "Dharra"
+      "use": "Dharra",
+      "i": true
+    },
+    {
+      "pattern": "\\bSeam(s|-product)?\\b",
+      "use": "the Axiom strain (cosmology § Axiom strain); the Seam is retired"
+    },
+    {
+      "pattern": "\\bthe Remaking\\b",
+      "use": "Vecna's working (opposition/vecna.html) or Colony Operations (campaign/colony/)",
+      "i": true
+    },
+    {
+      "pattern": "\\b[Uu]nculled\\b",
+      "use": "the unthinned (Vth'ulhan)",
+      "i": true
+    },
+    {
+      "pattern": "\\bkesh\\b",
+      "use": "the taken (Vth'ghathu)",
+      "i": true
+    },
+    {
+      "pattern": "\\bFirst World\\b",
+      "use": "the Reach world, now Erevos"
+    },
+    {
+      "pattern": "Mother of the Universe",
+      "use": "the All-Mother",
+      "i": true
+    },
+    {
+      "pattern": "\\brunic transit\\b",
+      "use": "Wayfinding",
+      "i": true
+    },
+    {
+      "pattern": "\\bLunarfoot order\\b",
+      "use": "the Runekeepers, Lunarfoot clan",
+      "i": true
+    },
+    {
+      "pattern": "Vecna(&rsquo;|'|’)s figure",
+      "use": "the eye inscription",
+      "i": true
+    },
+    {
+      "pattern": "\\bWatcher cadet\\b",
+      "use": "Glimpse",
+      "i": true
+    },
+    {
+      "pattern": "\\b(eldest|oldest) chapter\\b",
+      "use": "the Restorers are not a Seekers chapter",
+      "i": true
+    },
+    {
+      "pattern": "\\btiming tables?\\b",
+      "use": "cut: Tarroway is a thread, his readings first hinted at the vessel",
+      "i": true
+    },
+    {
+      "pattern": "Caelestis Academy (&amp;|&) Fleet",
+      "use": "the United Intergalactic Fleet (factions/fleet.html); the Caelestis Sector",
+      "i": true
+    },
+    {
+      "pattern": "\\bAethris powers\\b",
+      "use": "the Fortuned",
+      "i": true
+    },
+    {
+      "pattern": "Vocath(&rsquo;|'|’)s Operation",
+      "use": "Vocath's crew",
+      "i": true
     }
   ],
   "voice": [
@@ -104,8 +189,18 @@
       "note": "status label: move to a DM notes tab or planning page"
     },
     {
-      "pattern": ">\\s*Open\\s*<|\\bis-open\\b",
-      "note": "no 'Open' sections or tags: write what is undecided as a sentence in a DM notes tab or planning page"
+      "pattern": "\\bundecided\\b",
+      "note": "placeholder: write what is undecided as a sentence in a DM notes tab"
+    },
+    {
+      "pattern": ">\\s*Open(:|\\s*<)|^\\s*Open:?\\s*$",
+      "raw": true,
+      "note": "no 'Open' labels, rows or sections: write what is undecided as a sentence in a DM notes tab or planning page"
+    },
+    {
+      "pattern": "class=\"[^\"]*\\bis-open\\b",
+      "raw": true,
+      "note": "no 'open' tag: write what is undecided as a sentence in a DM notes tab or planning page"
     }
   ],
   "moved": [
@@ -116,9 +211,23 @@
     {
       "old": "campaign/ascension/",
       "new": "opposition/vecna.html"
+    },
+    {
+      "old": "factions/academy-fleet.html",
+      "new": "factions/fleet.html"
+    },
+    {
+      "old": "factions/spectrum.html",
+      "new": "factions/seekers.html"
+    },
+    {
+      "old": "factions/external.html",
+      "new": "factions/index.html#other-powers"
     }
   ],
-  "allow": [],
+  "allow": [
+    "prime/cosmology/:outcomes were undecided|new undecided things"
+  ],
   "scan": [
     "prime",
     "restricted"
