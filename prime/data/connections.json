@@ -1294,11 +1294,11 @@
       "summary": "An interworld order that preserves Continuity and reads the Core's pressure as the All-Father.",
       "facts": [
         {
-          "t": "The Order made Galactic time cycles, tied to no planet: a cycle is one full turn of Erevos, its unseen beam lighting the four spiral arms in order; Cycle 0 is the Order's founding and the current cycle is 1491.",
+          "t": "The Order made Galactic time cycles and calls the count the Hearth: a hearthfire (cycle) is one full turn of Erevos, its four kindlings lighting the arms in order, divided into embers and sparks; Cycle 0 is the Order's founding and the current cycle is 1491.",
           "src": "factions/order.html#cycles"
         },
         {
-          "t": "Over the past few centuries the arms have lit slightly early and the cycles have grown slightly shorter, and Watchers record them as irregular.",
+          "t": "Over the past few centuries the arms have kindled slightly early and the hearthfires have grown slightly shorter, and Watchers record them as irregular.",
           "src": "factions/order.html#cycles"
         },
         {
