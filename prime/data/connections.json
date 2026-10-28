@@ -1400,10 +1400,10 @@
       "label": "Ezra Ahl-Sier",
       "type": "person",
       "scope": "cosmos",
-      "summary": "A Watcher cadet, an elf paladin of the All-Father, joining the crew for his field training.",
+      "summary": "An astral elf Glimpse of the Order, travelling with a Caelestis crew to finish his training on H'Catha.",
       "facts": [
         {
-          "t": "Ezra is an elf paladin of the All-Father near the end of about a century of training.",
+          "t": "Ezra is an astral elf paladin of the Oath of the Watchers near the end of about a century of training.",
           "src": "dossiers/ezra.html"
         },
         {
@@ -1420,6 +1420,14 @@
         },
         {
           "t": "His Channel Divinity guards allies against being reached into.",
+          "src": "dossiers/ezra.html"
+        },
+        {
+          "t": "Caelestis is his prequel; his knighting, his posting to Emporia and his allies come after the crew leaves him on H'Catha.",
+          "src": "dossiers/ezra.html"
+        },
+        {
+          "t": "A Caelestis crew later carries him from H'Catha to the Hall, the last troop he travels with.",
           "src": "dossiers/ezra.html"
         }
       ]
@@ -1575,6 +1583,10 @@
         {
           "t": "She is the one who will one day face Vth'oramu.",
           "src": "STAGING round 10"
+        },
+        {
+          "t": "Once N'ghathrod grows bolder, she will face Vth'oramu.",
+          "src": "dossiers/ilsevaine-corr.html"
         }
       ]
     },

@@ -36,7 +36,7 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 7 | 2 | 0 | 3 |
 | Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 42 | 5 | 36 |
-| Dossiers | dossiers/ | 16 | 12 | 12 | 1 | 7 |
+| Dossiers | dossiers/ | 16 | 12 | 7 | 1 | 4 |
 | Crew | crew/ | 9 | 12 | 17 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** | | **93** | **118** | **148** | **10** | **215** |
+| **Total** | | **93** | **118** | **143** | **10** | **212** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1568,39 +1568,9 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   (b) The sealed letter: "Watch one thing until it changes."
   src: chat-voyage-6-7-planning § Open; memory-canon open-decisions (Voyage 007 intent)
 
-- **[fix]** The Hall transport is the crew's last stint with Ezra *(answered)*
-  The page's order of operations ends "assigned to Emporia → optional ferry". Drop the optional Emporia ferry. Write: "The Watcher Transport, from H'Catha to the Hall of the Watchers, is the last time a Caelestis crew travels with Ezra. His training is finished, and it is his last leg before his journey begins. The Hall is where he departs from." Emporia stays as his posting, which he reaches without the crew.
-  src: memory-canon campaign-canon § Key NPCs; dossiers/ezra.html; chat-cosmic-campaign-structure § Graduation board contracts
-  answered: memory-canon campaign-canon § Key NPCs ("the last troop he travels with before his journey begins"); original chat f2f5d29e, Korey: "Them being the last sort of troop that interacts with Ezra before he starts his journey"; the graduation board row ("This is his last leg before his journey starts")
-
 - **[later]** Emporia and Tharizdun
   Does Emporia read as a Zenith with Tharizdun behind it? Options: yes (a Tharizdun-touched Zenith); no (local trouble only); leave it to the other table.
   src: chat-cosmic-campaign-structure § Open
-
-- **[fix]** The Hall's name *(answered)*
-  The page says "the Hall of Sight and Sound", and it stands: "The Hall of Sight and Sound is the great hall within the Order's seat." Where the page uses the name for the Order's seat as a whole, rewrite so the Hall is the great hall inside it.
-  answered: STAGING § The Order
-  Originally followed a decide under factions/order.html.
-
-- **[fix]** Watchers are posted to regions of worlds
-  The page says "Postings are to planes rather than to worlds — the elemental planes, overlapping…". Write: "Watchers are posted to a region of a world. A large world may hold several."
-  src: memory-canon campaign-canon § Key NPCs (Watcher ruling corrected); timeline "The Order of the All-Father"
-
-- **[fix]** His instructor and Ondessa
-  The page says "His instructor is at the rim fog with an enlightened beholder exile" and asks about "the beholder his instructor is living with". Write: "His instructor is H'Catha's Watcher, posted at the rim fog. She trades intelligence and protection with Ondessa, a beholder ruler whom the other rulers want dead."
-  src: chat-astral-sea-worldbuilding § Ondessa, § Superseded; memory-canon campaign-canon § Antagonists (H'Catha)
-
-- **[add]** The Watcher Transport
-  Add to the order of operations, between "They leave him there" and his knighting: "A Caelestis crew collects Ezra at H'Catha and carries him to the Hall (the Watcher Transport contract, Grade IV, on their graduation board). They are the last troop he travels with before his journey begins."
-  src: memory-canon campaign-canon § Key NPCs; chat-cosmic-campaign-structure § Graduation board contracts
-
-- **[add]** What a trainee does not know
-  Add: "As a trainee, Ezra knows nothing of the Order's break with protocol over Sol Fortuna."
-  src: chat-crew-boogie-casey-sol § Sol/C.R.C. and the scry beats
-
-- **[add]** Whose character he is
-  DM notes: Ezra Ahl-Sier is Korey's own PC in a friend's campaign, run by one of the Caelestis players. Caelestis shows him earlier, before that campaign begins, and treats him as transit: the crew never visits his homeworld. The Hall transport mirrors the other table.
-  src: memory-canon campaign-canon § Key NPCs; chat-crew-boogie-casey-sol § Sol/C.R.C.; chat-cosmic-campaign-structure § Graduation board contracts
 
 ---
 
@@ -1609,10 +1579,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[later]** What her Ledger shows
   The Restorers have walked into Zeniths deliberately for four centuries, which sits awkwardly with the page's claim that her Ledger holds the Zenith pattern unrecognised. Options: the Restorers know Zeniths as crossings but miss the rising frequency; or the pattern stays fully unread.
   src: timeline "The Restorers walk into Zeniths"; dossiers/ilsabet-crann.html § What's hidden
-
-- **[fix]** She is a Restorer
-  The header and Connections say "The Order", and the Ledger note says "the Order reads it as history". Third Reading, the Ledger and cells are Restorer vocabulary. Change to: "Ilsabet Crann, Restorer · Third Reading, in a cell of six", and "the Restorers read it as history". Connections link factions/restorers.html.
-  src: chat-cosmic-campaign-structure § Cosmology redesign; factions/restorers.html
 
 ---
 
@@ -1658,7 +1624,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/ostekk-6.html
 
-
 ### dossiers/rindle-gearloft.html
 
 - **[decide]** Dock master or dock worker *(prep)*
@@ -1697,7 +1662,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ---
 
-
 ### dossiers/veena-derek.html
 
 - **[decide]** Their reading *(prep)*
@@ -1705,7 +1669,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   src: chat-cosmic-campaign-structure § Open
 
 ---
-
 
 ### dossiers/vthoramu.html
 

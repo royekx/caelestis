@@ -6,6 +6,12 @@
     "records": []
   },
   {
+    "slug": "aurel-venn",
+    "name": "Aurel Venn",
+    "path": "dossiers/aurel-venn.html",
+    "records": []
+  },
+  {
     "slug": "beshaba",
     "name": "Beshaba",
     "path": "dossiers/beshaba.html",
@@ -43,7 +49,7 @@
   },
   {
     "slug": "ezra",
-    "name": "Ezra",
+    "name": "Ezra Ahl-Sier",
     "path": "dossiers/ezra.html",
     "records": []
   },
@@ -63,6 +69,12 @@
     "slug": "ilsabet-crann",
     "name": "Ilsabet Crann",
     "path": "dossiers/ilsabet-crann.html",
+    "records": []
+  },
+  {
+    "slug": "ilsevaine-corr",
+    "name": "Ilsevaine Corr",
+    "path": "dossiers/ilsevaine-corr.html",
     "records": []
   },
   {

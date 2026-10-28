@@ -118,7 +118,7 @@ when a ruling changes; delete it once the page carries it. See
 - By the time the crew graduates, his landed operations have begun to ripple outward at contract scale: taken in small positions, odd disappearances, a station or crew acting strangely. These are the first things the crew meets as Driftwardens. (DM: this is the shape of Arc 1 after graduation and the run into Arc 2.)
 - done: dossiers/nghathrod.html (section 5); campaign/colony/ still needs all four.
 
-### Ilsevaine Corr, Aurel Venn and the strain on the Fleet (campaign/spine.html, NEW: Cosmos texture)
+### Ilsevaine Corr, Aurel Venn and the strain on the Fleet (campaign/spine.html, NEW: Cosmos texture; done on dossiers/ilsevaine-corr.html and dossiers/aurel-venn.html, section 5)
 - Outside Realmspace, at the edge of a system or between systems, Ilsevaine Corr rules a hidden polity that Caelestis does not know of. She has noticed more traffic than usual near her borders, and once something large brushed the edge of her sight and was gone. She keeps watch for it. Once N'ghathrod grows bolder, she will face Vth'oramu. (DM touchstone: Mara Sov.)
 - Aurel Venn, a Watcher of the Order, saw the same pattern, warned the Order, and was not heeded. He softly defected: he never broke with the Order openly, but he left his post to find the thing himself. The crew hears of him through contradictory accounts long before any meeting. (DM touchstone: Osiris.)
 - The fringe sage of Ascher Mir is the one who tracks the Seekers' pattern across chapters, a separate figure from the rogue Watcher.
@@ -159,19 +159,6 @@ when a ruling changes; delete it once the page carries it. See
 
 ### Captain Haymond Rolt (campaign/spine.html; done on dossiers/haymond-rolt.html, section 5)
 - Captain Haymond Rolt is the crew's handler in Arc 2. He oversees several Driftwarden crews at once, out of Ondrel Anchorage.
-
-### Ezra Ahl-Sier (dossiers/ezra.html, factions/order.html)
-- Ezra is a Glimpse: the Order of the All-Father's title for a trainee who has not yet been knighted and christened a Watcher. A Glimpse has seen part of what the All-Father sees; knighting makes him a Watcher. Replaces "cadet" and "Watcher in training" on dossiers/ezra.html and factions/order.html.
-- Ezra Ahl-Sier is an astral elf, his eyes like the Astral Sea. He speaks Celestial, Common and Deep Speech. He has trained for about a century in the Hall of Sight and Sound and is among the youngest batch of Glimpses in the Order of the All-Father, a paladin of the Oath of the Watchers.
-- He has a wanderlust that pulls him toward a posting and away from home, and a lesson for every situation, drawn from watching nature. He holds the natural world above everything built by civilization. The enemy of his enemy is, to him, a temporary ally. He will not save those who cannot save themselves: it is nature's way that the strong thrive.
-- Captain-Commander Dejexic, leader of the Watchers and speaker of the All-Father, is a purplish-blue plasmoid in obsidian armour that reflects tiny swirling galaxies.
-- Stat block: Paladin 3 (Oath of the Watchers), Outlander. AC 18 (chain mail and shield), 35 hp, speed 30 ft. Str 16, Dex 14, Con 15, Int 10, Wis 14, Cha 16; proficiency +2; saves Wis +4, Cha +5. Skills: Athletics +5, Insight +4, Intimidation +5, Medicine +2, Nature +2, Perception +4, Survival +4. Blindsight 10 ft (Blind Fighting), darkvision 60 ft; immune to disease and magical sleep; advantage against being charmed. Divine Sense (4/long rest), Lay on Hands (15), Divine Smite, Channel Divinity 1/short rest (Watcher's Will, Abjure the Extraplanar), Harness Divine Power, Starlight Step (teleport 30 ft as a bonus action, 2/long rest), Astral Trance. Spell save DC 13, attack +5. Shortsword +5 (1d6+3 piercing), dagger +5 (1d4+3 piercing). Outlander background.
-- DM notes tab:
-  - Caelestis is Ezra's prequel. His knighting, his posting and his allies come after the crew leaves him on H'Catha, in the campaign set on Emporia.
-  - His knighting in the Hall of Sight and Sound, where Dejexic gives him the "birds" advice, is the scene in Korey's backstory document "Ezra Ahl-Sier".
-  - His posting is Emporia, the world he was hoping to be spared. The [CJ's world] in the backstory document is Emporia.
-  - On Emporia his allies are Valance, Irohden and Borgor. None of them has met him during this campaign.
-  - His stat block is his Emporia sheet as it stands. Korey marks the younger Ezra with a changed appearance and roleplay.
 
 ## Crew
 
