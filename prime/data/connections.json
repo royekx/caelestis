@@ -2569,7 +2569,7 @@
       "label": "Bellwether Crow",
       "type": "vessel",
       "scope": "caelestis",
-      "summary": "The Fleet relief vessel ambushed on the Cairn approach a year ago.",
+      "summary": "A Caelestis light corvette, the relief vessel ambushed on the Cairn approach a year ago.",
       "facts": [
         {
           "t": "Bellwether Crow was sent to learn why Cairn Station had stopped answering.",
@@ -2605,16 +2605,20 @@
           "src": "timeline/timeline.json"
         },
         {
-          "t": "Clint took the sister artifact and left the ship to draw the boarders off.",
-          "src": "STAGING round 4"
+          "t": "Clint took the sister artifact and left the ship in one of the boarders' craft to draw them off.",
+          "src": "vessels/bellwether-crow.html"
+        },
+        {
+          "t": "Some of the boarders went after him and some stayed, and enough went that the crew fended off the rest.",
+          "src": "vessels/bellwether-crow.html"
         },
         {
           "t": "Joffrey was taken in the second action.",
           "src": "opposition/vthorama.html"
         },
         {
-          "t": "In the Fleet, a crew member who leaves the ship to fight for it and does not come back has gone overboard.",
-          "src": "STAGING round 4"
+          "t": "In the Fleet, a crew member who leaves the ship, willingly or not, and does not come back has gone overboard.",
+          "src": "factions/fleet.html"
         }
       ]
     },
@@ -2626,7 +2630,7 @@
       "summary": "A Caelestis crewmate of the Bellwether Crow who went through a color pool and landed on Fonains.",
       "facts": [
         {
-          "t": "Clint took A.T.L.A.S.'s sister and left the Crow to draw the boarders off.",
+          "t": "Clint took A.T.L.A.S.'s sister and left the Crow in one of the boarders' craft to draw them off.",
           "src": "dossiers/clint.html"
         },
         {

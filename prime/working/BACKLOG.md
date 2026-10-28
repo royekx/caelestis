@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 10 | 12 | 15 | 0 | 3 |
+| Cosmology | cosmology/, glossary/, chart/ | 10 | 12 | 14 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 24 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 4 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
@@ -40,11 +40,11 @@ staging once Korey has read and accepted them.
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
-| New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 4 | 2 | 24 |
+| New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 4 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
-| Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
+| Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **104** | **143** | **52** | **3** | **54** |
+| **Total** |  | **104** | **143** | **50** | **2** | **53** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -296,12 +296,6 @@ Order under each page: decide, fix, drop, add.
 - **[later]** The Order's seat
   The Hall of Sight and Sound is its great hall (STAGING rounds 5–6). Name and place the seat itself when the crew is headed there.
   src: Korey, 2026-10-25 (round 6)
-
-- **[fix]** Trim Tarroway to a thread
-  Keep M. Tarroway as Strake Station's cartographer whose readings first hinted at an unknown vessel disturbing the satellites at the system's edge (STAGING round 4). Cut the "timing tables" and their failure everywhere. Reduce his presence on the ten pages that mention him to passing references; his main home is the Fleet Intelligence Archive (restricted/). Nothing public.
-  Touches: dossiers/tarroway.html, dossiers/index.html, dossiers/miken.html, dossiers/vthoramu.html, dossiers/joffrey.html, dossiers/verrow.html, factions/vocath-operation.html, locations/index.html, locations/strake-station.html, chart/index.html, restricted/.
-  src: Korey, 2026-10-25 (round 4)
-  done: factions/fleet.html and factions/vocath-operation.html (section 2); locations/strake-station.html, the register and the chart (section 3); every dossier and the dossier register (section 5). restricted/ still needs it.
 
 - **[fix]** "The only Monolith" on Fonains
   cosmology/#corrupted-monoliths says Fonains's is "the only Monolith ever to carry Tharizdun's crystal and the only one recorded as destroyed", and the chart's Fonains note says "the only one ever to carry Tharizdun's crystal". PAGE-GUIDE bars comparative absolutes on setting pages. Describe the Monolith instead: it formed corrupted, with her crystal replicated into it, and Lola's Boys broke it. locations/fonains.html already does.
@@ -1383,7 +1377,7 @@ left here is open.
 ### vessels/bellwether-crow.html
 
 - **[later]** The Crow after the ambush
-  The Crow made Strake under damage (locations/cairn-station.html). Whether it went back into service, its class, its captain, and the clean survivor's name wait until the crew pulls the roster.
+  The Crow made Strake under damage (locations/cairn-station.html). Its class is set: a light corvette (restricted/wm-002.html, vessels/bellwether-crow.html). Whether it went back into service, its captain, and the clean survivor's name wait until the crew pulls the roster.
   src: section 4
 
 ### vessels/moonraider.html
@@ -1991,12 +1985,6 @@ The page exists (`prime/principles.html`, Reference). Contracts are built on Cam
   Line 59 says "the World Surveyor". Change to A.T.L.A.S.
   src: framework § A.T.L.A.S.
 
-#### restricted/sa-005.html (FIA, player-readable)
-
-- **[add]** Why Tarroway's name is withheld
-  The memorial withholds the cartographer's name (SJN-2405) with no stated reason. Add: SA-005 keeps Tarroway's name "at Bridge direction pending resolution." Fleet never redacts a name stated plainly elsewhere, so the note explains the exception. (The quoted phrase is in-world FIA record language.)
-  src: framework § FIA records
-
 #### voyages/voyage-005.html (player site, outside prime)
 
 - **[fix]** Ryeback is a giff
@@ -2151,18 +2139,5 @@ run decide, fix, drop, add.
 
 Fixes to player-facing pages, including the Fleet Intelligence Archive (`restricted/`). These pages hold only what the crew could know; corrections must keep that boundary.
 
-### restricted/wm-002.html
-
-- **[fix]** The Bellwether Crow did not come home
-  The archive has the Crow limping home by way of Strake. Canon: most of the crew did not return; Joffrey and a few survivors were let go. Rewrite the entry so the Crow is lost with most hands, in the archive's clipped voice, with nothing the crew couldn't know.
-  src: inbox/chat-early-planning.md § Campaign Planning; memory canon (Bellwether Crow)
-
 ### restricted/sa-002.html
 
-### restricted/sa-005.html
-
-- **[drop]** The out-of-sequence SJN-2417 entry *(answered)*
-  Nothing to change. sa-005 carries no SJN-2417 entry: its memorial lists SJN-2401 to SJN-2408 in sequence, each name redacted, with the cartographer at SJN-2405 (line 419). The out-of-sequence entry was removed when Strake and Cairn swapped roles and Tarroway became alive on Strake. The remaining sa-005 item (why Tarroway's name is withheld) lives in the New pages section under restricted/sa-005.html.
-  Touches: nothing.
-  src: inbox/chat-early-planning.md § Campaign Planning
-  answered: restricted/sa-005.html lines 415–422 (checked 2026-10-25); inbox/chat-early-planning.md § New campaign idea development, Superseded ("sa-005 lists SJN-2401 to 2408 with no 2417")

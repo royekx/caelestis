@@ -255,6 +255,7 @@ body::before {
   line-height: 1.4;
 }
 .rx-sm  { min-width: 30px; }
+.rx-md  { min-width: 70px; }
 .rx-lg  { min-width: 90px; }
 .rx-xl  { min-width: 130px; }
 .rx-block {
