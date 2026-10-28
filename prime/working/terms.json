@@ -24,19 +24,23 @@
     },
     {
       "pattern": "\\bgodless\\b",
-      "use": "GAL-02, the galaxy of the eldritch gods"
+      "use": "GAL-02, the galaxy of the eldritch gods",
+      "i": true
     },
     {
       "pattern": "\\bphlogiston\\b",
-      "use": "the Astral Sea (the Fleet calls it the drift)"
+      "use": "the Astral Sea (the Fleet calls it the drift)",
+      "i": true
     },
     {
       "pattern": "World Surveyor",
-      "use": "A.T.L.A.S."
+      "use": "A.T.L.A.S.",
+      "i": true
     },
     {
       "pattern": "Circle of Fifteenths",
-      "use": "the Circle of Fifths"
+      "use": "the Circle of Fifths",
+      "i": true
     },
     {
       "pattern": "\\b(four|Four) Axioms\\b",
@@ -52,23 +56,28 @@
     },
     {
       "pattern": "downward tithe",
-      "use": "the tithe runs upward, to N'ghathrod"
+      "use": "the tithe runs upward, to N'ghathrod",
+      "i": true
     },
     {
       "pattern": "psychic wind",
-      "use": "Clint went through a color pool on purpose"
+      "use": "Clint went through a color pool on purpose",
+      "i": true
     },
     {
       "pattern": "\\b(claimed|primed) (node|nodes|heart|hearts)\\b",
-      "use": "found / opened / linked"
+      "use": "found / opened / linked",
+      "i": true
     },
     {
       "pattern": "333,333",
-      "use": "four great shards; 333 small black shards"
+      "use": "four great shards; 333 small black shards",
+      "i": true
     },
     {
       "pattern": "\\bKnowhere\\b",
-      "use": "Nowhere"
+      "use": "Nowhere",
+      "i": true
     },
     {
       "pattern": "\\bAscension world\\b",
@@ -76,11 +85,13 @@
     },
     {
       "pattern": "\\bHakatha\\b",
-      "use": "H'Catha"
+      "use": "H'Catha",
+      "i": true
     },
     {
       "pattern": "\\bDarra\\b",
-      "use": "Dharra"
+      "use": "Dharra",
+      "i": true
     },
     {
       "pattern": "\\bSeam(s|-product)?\\b",
@@ -88,15 +99,18 @@
     },
     {
       "pattern": "\\bthe Remaking\\b",
-      "use": "Vecna's working (opposition/vecna.html) or Colony Operations (campaign/colony/)"
+      "use": "Vecna's working (opposition/vecna.html) or Colony Operations (campaign/colony/)",
+      "i": true
     },
     {
       "pattern": "\\b[Uu]nculled\\b",
-      "use": "the unthinned (Vth'ulhan)"
+      "use": "the unthinned (Vth'ulhan)",
+      "i": true
     },
     {
       "pattern": "\\bkesh\\b",
-      "use": "the taken (Vth'ghathu)"
+      "use": "the taken (Vth'ghathu)",
+      "i": true
     },
     {
       "pattern": "\\bFirst World\\b",
@@ -104,43 +118,53 @@
     },
     {
       "pattern": "Mother of the Universe",
-      "use": "the All-Mother"
+      "use": "the All-Mother",
+      "i": true
     },
     {
       "pattern": "\\brunic transit\\b",
-      "use": "Wayfinding"
+      "use": "Wayfinding",
+      "i": true
     },
     {
       "pattern": "\\bLunarfoot order\\b",
-      "use": "the Runekeepers, Lunarfoot clan"
+      "use": "the Runekeepers, Lunarfoot clan",
+      "i": true
     },
     {
-      "pattern": "Vecna(&rsquo;|')s figure",
-      "use": "the eye inscription"
+      "pattern": "Vecna(&rsquo;|'|’)s figure",
+      "use": "the eye inscription",
+      "i": true
     },
     {
       "pattern": "\\bWatcher cadet\\b",
-      "use": "Glimpse"
+      "use": "Glimpse",
+      "i": true
     },
     {
       "pattern": "\\b(eldest|oldest) chapter\\b",
-      "use": "the Restorers are not a Seekers chapter"
+      "use": "the Restorers are not a Seekers chapter",
+      "i": true
     },
     {
       "pattern": "\\btiming tables?\\b",
-      "use": "cut: Tarroway is a thread, his readings first hinted at the vessel"
+      "use": "cut: Tarroway is a thread, his readings first hinted at the vessel",
+      "i": true
     },
     {
       "pattern": "Caelestis Academy (&amp;|&) Fleet",
-      "use": "the United Intergalactic Fleet (factions/fleet.html); the Caelestis Sector"
+      "use": "the United Intergalactic Fleet (factions/fleet.html); the Caelestis Sector",
+      "i": true
     },
     {
       "pattern": "\\bAethris powers\\b",
-      "use": "the Fortuned"
+      "use": "the Fortuned",
+      "i": true
     },
     {
-      "pattern": "Vocath(&rsquo;|')s Operation",
-      "use": "Vocath's crew"
+      "pattern": "Vocath(&rsquo;|'|’)s Operation",
+      "use": "Vocath's crew",
+      "i": true
     }
   ],
   "voice": [

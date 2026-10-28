@@ -8,7 +8,8 @@
  *   node scripts/terms.js PATH...    only these files or folders
  *
  * The lists live in prime/working/terms.json:
- *   retired  terms that must not appear (pattern → what to use instead)
+ *   retired  terms that must not appear (pattern → what to use instead); matched on the
+ *            line with tags removed; "i": true makes a pattern case-insensitive
  *   voice    decision voice and placeholders ("ruled", "pending", "TBD", "unresolved");
  *            matched on the text with tags stripped, or on the raw line when "raw": true
  *            (for markup such as a bare "Open" label or an is-open class)
@@ -34,7 +35,7 @@ const VOICE = args.includes('--voice');
 const only = args.filter(a => !a.startsWith('--')).map(a => path.resolve(ROOT, a));
 
 const conf = JSON.parse(fs.readFileSync(CONF, 'utf8'));
-const rx = list => list.map(t => Object.assign({}, t, { re: new RegExp(t.pattern, 'g') }));
+const rx = list => list.map(t => Object.assign({}, t, { re: new RegExp(t.pattern, t.i ? 'gi' : 'g') }));
 const RETIRED = rx(conf.retired || []);
 const VOICES = rx(conf.voice || []);
 const MOVED = (conf.moved || []).map(m => Object.assign({}, m, { re: new RegExp(m.old.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g') }));
@@ -57,6 +58,8 @@ if (only.length) files = files.filter(f => only.some(o => path.join(ROOT, f).sta
 const blank = s => s.replace(/<style[\s\S]*?<\/style>|<!--[\s\S]*?-->/g, m => m.replace(/[^\n]/g, ' '));
 // For voice checks, read text only: drop tags and attribute values.
 const textOnly = line => line.replace(/<[^>]*>/g, ' ');
+// For retired terms, remove tags outright, so markup inside a term ("<strong>Convergence</strong> fragment") cannot split it.
+const stripTags = line => line.replace(/<[^>]*>/g, '');
 
 const hits = [];
 for (const f of files) {
@@ -65,7 +68,8 @@ for (const f of files) {
   lines.forEach((line, i) => {
     if (allowed(line)) return;
     const at = (kind, m, note) => hits.push({ f, n: i + 1, kind, term: m, note, finished: FINISHED.some(p => f.startsWith(p)) });
-    for (const t of RETIRED) for (const m of line.matchAll(t.re)) at('retired', m[0], t.use);
+    const bare = stripTags(line);
+    for (const t of RETIRED) for (const m of bare.matchAll(t.re)) at('retired', m[0], t.use);
     for (const t of MOVED) for (const m of line.matchAll(t.re)) at('moved', m[0], t.new);
     if (VOICE) { const tx = textOnly(line); for (const t of VOICES) for (const m of (t.raw ? line : tx).matchAll(t.re)) at('voice', m[0].trim(), t.note); }
   });

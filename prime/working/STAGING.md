@@ -96,7 +96,7 @@ when a ruling changes; delete it once the page carries it. See
 - The sectors share information, but not all of it. Each keeps a good deal to itself, the way rival departments do. The Fleet Intelligence Archive is the Caelestis Sector's archive: it holds what Caelestis knows of its own sector and only some of what the others share.
 - The Order's Watchers are more organized than the sector branches. They keep to the Rykoe Galaxy, as the Fleet does, more densely in some places than others.
 - The stations differ with the local ecology of their place: what drifts there, what lives there, what threatens it. Their crews are drawn from the sector that keeps them. Readings from the stations pass between the sectors; this is how a disturbance seen at one edge reaches another.
-- done: factions/fleet.html (section 2). Still waiting: Ondrel Anchorage and Strake Station on locations/, and the FIA's account of the Fleet on restricted/.
+- done: factions/fleet.html and the glossary lines for sector, the Caelestis Sector, Corps, Academy, the Bridge and the FIA (section 2). Still waiting: Ondrel Anchorage and Strake Station on locations/, and the FIA's account of the Fleet on restricted/.
 
 ### Vocath's crew (campaign/colony/; done on factions/vocath-operation.html, section 2)
 - The crates at the Sky Dock carry Vocath's mark, the eye in a wheel.
