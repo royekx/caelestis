@@ -2388,6 +2388,14 @@
         {
           "t": "He used the Fleet's thinning to put stress on the Academy.",
           "src": "timeline/timeline.json"
+        },
+        {
+          "t": "His price to N'ghathrod's side was captives from a Caelestis crew, read as ordinary thrall work.",
+          "src": "dossiers/vocath.html"
+        },
+        {
+          "t": "He sees the Fleet stretched thin and uses it to press the Academy.",
+          "src": "dossiers/vocath.html"
         }
       ]
     },
@@ -2454,7 +2462,7 @@
       "label": "Qitru",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A githyanki intermediary in Vocath's operation, following the crew.",
+      "summary": "A githyanki intermediary of Vocath's crew, following the crew by Miken's beacon.",
       "facts": [
         {
           "t": "Qitru serves Vocath and does not care who stands above him.",
@@ -2470,6 +2478,10 @@
         },
         {
           "t": "Miken's report that the crew killed a beholder has reached her.",
+          "src": "dossiers/qitru.html"
+        },
+        {
+          "t": "She pursues Vocath's aim, to make the cadet mission fail; Miken is her channel.",
           "src": "dossiers/qitru.html"
         }
       ]
@@ -2644,7 +2656,7 @@
       "label": "Miken Haverstance",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A cadet friend of the crew, leveraged by Vocath's operation.",
+      "summary": "A cadet friend of the crew, leveraged by Vocath's crew; he does not flip.",
       "facts": [
         {
           "t": "A mercane recruited Miken by paying his fiancé's debts.",
@@ -3122,6 +3134,10 @@
         {
           "t": "Krik'Lit translated the crew's parley with Ostekk-10, because Ostekk's clockwork horrors speak thri-kreen.",
           "src": "dossiers/krik-lit.html"
+        },
+        {
+          "t": "He and Pffred were relieved at the V006 rendezvous and returned with the Flighty Foundling.",
+          "src": "dossiers/krik-lit.html"
         }
       ]
     },
@@ -3408,7 +3424,7 @@
       "label": "Ostekk",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A beholder builder who made the Containment Engine and the OSTEKK units.",
+      "summary": "A ruling beholder of H'Catha and a builder, who made the Containment Engine and the OSTEKK units.",
       "facts": [
         {
           "t": "Ostekk built the Containment Engine around the Rod's fourth piece without knowing it was Reach residue.",
@@ -3420,6 +3436,10 @@
         },
         {
           "t": "He now has reason to come for the Engine himself: the crew took it and lied to his machine.",
+          "src": "dossiers/ostekk.html"
+        },
+        {
+          "t": "He rules one of H'Catha's ten domains like a workshop; he wants his property back.",
           "src": "dossiers/ostekk.html"
         }
       ]

@@ -36,15 +36,15 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 7 | 2 | 0 | 3 |
 | Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 42 | 5 | 36 |
-| Dossiers | dossiers/ | 16 | 12 | 18 | 1 | 10 |
+| Dossiers | dossiers/ | 16 | 12 | 12 | 1 | 7 |
 | Crew | crew/ | 9 | 12 | 17 | 0 | 83 |
-| Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 1 | 0 | 1 |
+| Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 5 | 2 | 31 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** | | **93** | **118** | **153** | **10** | **218** |
+| **Total** | | **93** | **118** | **148** | **10** | **215** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -129,6 +129,7 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - `data/npcs.json` calls Mirt "the head of Caelestis".
 - `data/sessions.json`, `quests.json` and `items.json` call OSTEKK-6 an autognome; OSTEKK units are automatons.
 - DM dossiers with no record, though the crew may have met or been told of them: Polly Geim (Casey's brother), Clint Dashforest, Qitru, Quartermaster Halix Verrow, the Crystalline Retrieval Construct, Ezra Ahl-Sier. Each gets a record at first contact; check whether any contact has already happened (section 5).
+- `data/npcs.json` spells the automatons Ostekk-6 and Ostekk-2 (CLAUDE.md lists Ostekk-6 as settled); the DM pages, the vessel page and STAGING write OSTEKK-6 and OSTEKK-2, and the behir Ostekk-10. Settle one spelling for the units.
 - `data/npcs.json` names Miken "Miken"; the DM dossier and the Fleet row use his full name, Miken Haverstance. Add the surname to the record if Korey agrees.
 - `data/npcs.json` (Winston Ryeback, Voyage 6) says he "was told the beholder had been taken care of, and took it to mean the crew had killed it"; the ruling is that Tumak told him outright that the crew killed it (dossiers/winston-ryeback.html).
 
@@ -1465,6 +1466,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   The Krik'Lit dossier says he leaves "At the V007 swap" (dossiers/ostekk.html has the same "at the V007 swap"). Change both to "at the V006 swap". The index's "The window shuts at the V006 swap" already matches. Write: "Krik'Lit and Pffred were relieved at the V006 rendezvous, in the Make Ready interlude, when the Flighty Foundling came alongside the Tyrant Ship. They returned with the Foundling." This matches data/npcs.json. The behir's parley window shut when the Foundling arrived.
   src: dossiers/krik-lit.html; data/npcs.json (Krik'Lit)
   answered: inbox/chat-voyage-6-7-planning.md § Voyage 7 (Settled: The swap and NPCs; Make Ready interlude; Superseded "you're relieved"); inbox/chat-cosmic-campaign-structure.md § Superseded (window closes when the Foundling arrives)
+  done: dossiers/krik-lit.html and dossiers/ostekk.html (section 5); the register still needs it.
 
 - **[fix]** The H'Catha cast
   The page names "Kurrzot, the Rival, the exile, and the Watcher at the rim fog", and "Still to build" lists "the exile". The enlightened exile is retired. The H'Catha cast is Kurrzot, Ostekk, Ondessa, the Rival and the Watcher at the rim fog. Replace "the exile" with Ondessa in both places and list Ostekk.
@@ -1622,7 +1624,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ---
 
-
 ### dossiers/mirt.html
 
 - **[decide]** The player record overstates Mirt *(prep)*
@@ -1653,38 +1654,10 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   The theft of the Lantern and the nine OSTEKK units is canon. Was it to escape a debt to Ostekk? The debt is an unreviewed draft, along with a Fallmouth porter mentioning "Ostekk's machines" and OSTEKK-6 freezing at the words.
   src: chat-astral-sea-worldbuilding § Open; memory-canon campaign-canon § Naming (OSTEKK units)
 
-- **[fix]** Ostekk rules a domain of H'Catha
-  The page says "Location Unplaced Your call", "the only one in this arc who builds rather than rules", "He does not collect, rule, or scheme for territory", and proposes the Spindle under "Open — Where to put him". Rewrite:
-  - Infobox: "Location: H'Catha, ruler of one of the ten domains."
-  - Lead: "Ostekk is a ruling beholder of H'Catha, and a builder. He made the Containment Engine, Fourth Series, and the nine OSTEKK units, and both were stolen from him."
-  - Replace "He does not collect, rule, or scheme for territory" with "He rules his domain like a workshop. What he wants is his property back."
-  - Drop the Spindle option and the Open section.
-  DM-only: the crew hearing his name soon after landing is the payoff.
-  src: memory-canon campaign-canon § Naming (H'Catha decisions); chat-astral-sea-worldbuilding § Meteorite and mission, § H'Catha
-
-- **[fix]** The behir and the field
-  The page says the behir was "stranded by a field that unmakes constructs". Write: "stranded by a field it could not enter". (In that field the OSTEKK units stuttered and slowed, and the clockwork horrors froze.)
-  src: chat-voyage-6-7-planning § The field and constructs, § Settled; dossiers/ostekk-6.html
-
 ---
 
 ### dossiers/ostekk-6.html
 
-### dossiers/qitru.html
-
-- **[fix]** What she wants
-  The infobox says "Wants Miken" and What they want says "She wants Miken because he is leverage…". Write: "Qitru pursues Vocath's aim: to embarrass Mirt by making the cadet mission fail. Miken is her channel." Infobox: "Wants: the cadet mission to fail."
-  src: memory-canon campaign-canon § Key NPCs (Vocath's aim)
-
-- **[fix]** Ten domains
-  The page says "On that world the reputation reads eight different ways". H'Catha has ten domains, each with one ruler, under the Sovereign Eye. Change to ten.
-  src: memory-canon campaign-canon § Antagonists (H'Catha direction supersedes eight domains)
-
-- **[fix]** Ondessa, not the exile
-  The page says "The exile, hunted by every beholder there, wants them very much indeed" and links "The exile" under Places. Write: "Ondessa, the beholder ruler the others want dead, wants them very much indeed." Replace the link.
-  src: chat-astral-sea-worldbuilding § Ondessa, § Superseded; memory-canon campaign-canon § Antagonists (sovereign line)
-
----
 
 ### dossiers/rindle-gearloft.html
 
@@ -1724,13 +1697,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ---
 
-### dossiers/vaelorix.html
-
-- **[fix]** The field
-  The page says "the field that unmakes constructs came off it until the crew cut the flowers down in V006". Write: "the field came off it — the field that froze the clockwork horrors, slowed the OSTEKK units and kept the behir out — until the crew cut the flowers down in V006."
-  src: chat-voyage-6-7-planning § The field and constructs, § Settled
-
----
 
 ### dossiers/veena-derek.html
 
@@ -1740,21 +1706,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ---
 
-### dossiers/vocath.html
-
-- **[add]** Cairn Station
-  Add to Who they are: "Vocath was at Cairn Station transiting goods. The corrupted Monolith fragments that reached Boogie came through that line." DM-only: this is the crew's first thread to him, and he can point them toward N'ghathrod.
-  src: memory-canon open-decisions (Act 1 retrofit); timeline "Boogie takes the shard"
-
-- **[add]** His price
-  Add to the three-things table: "Vocath's price to N'ghathrod's side was captives from a Caelestis crew. He read the arrangement as ordinary illithid thrall work and asked nothing more."
-  src: memory-canon open-decisions (operative resolved)
-
-- **[add]** The thinning
-  Add under what he wants: "Vocath sees the Fleet stretched thin and uses it to put pressure on the Academy."
-  src: chat-astral-sea-worldbuilding § Caelestis structure; memory-canon open-decisions (Voyage 007 intent)
-
----
 
 ### dossiers/vthoramu.html
 
@@ -2441,6 +2392,10 @@ left here is open.
 - **[later]** The lingering Lantern wisps
   Settled: the choice is the crew's, keep the wisps or eradicate them. Nothing for Korey to rule; this waits on play. Record the crew's choice when it is made, and until then the page states that the wisps linger in the ship.
   src: chat-voyage-6-7-planning § The Lantern and the ship
+
+- **[fix]** "Unmade constructs"
+  vessels/tyrant-ship.html (§ History) and artifacts/containment-engine.html (§ History) say the bloom's field "killed magic and unmade constructs". The ruling is that the field froze the clockwork horrors, slowed the OSTEKK units and kept the behir out, a field it could not enter (dossiers/vaelorix.html, dossiers/ostekk.html). Change both lines.
+  src: chat-voyage-6-7-planning § The field and constructs; section 5 (2026-10-28)
 
 ### vessels/bellwether-crow.html
 

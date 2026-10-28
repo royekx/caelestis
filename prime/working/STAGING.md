@@ -173,10 +173,6 @@ when a ruling changes; delete it once the page carries it. See
   - On Emporia his allies are Valance, Irohden and Borgor. None of them has met him during this campaign.
   - His stat block is his Emporia sheet as it stands. Korey marks the younger Ezra with a changed appearance and roleplay.
 
-### OSTEKK-2 (dossiers/ostekk-6.html, vessels/tyrant-ship.html)
-- OSTEKK-6 is the only active survivor of Vaelorix's nine units. OSTEKK-2 lies inert on the Hollow Deck. The crew could heal it back to function if they return for it, for example with the Lantern of Flourishing they have kept hidden.
-- done: vessels/tyrant-ship.html and artifacts/containment-engine.html (section 4). Still waiting: dossiers/ostekk-6.html.
-
 ## Crew
 
 ### Gregory (crew/gregory.html; done on factions/fleet.html, section 2, and locations/toril.html, section 3)
