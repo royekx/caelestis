@@ -123,12 +123,6 @@ when a ruling changes; delete it once the page carries it. See
 - Gregory comes from the Cogfast Enclave on Lantan, on Toril. He reached Caelestis on a cargo ship.
 - DM: the Lantern becomes Gregory's next anomaly if he investigates it. (done on artifacts/containment-engine.html, section 4; crew/gregory.html still needs it.)
 
-### Casey (crew/casey.html, dossiers/polly.html, dossiers/astra-virex.html)
-- The voice Casey hears as Polly is Astra Virex wearing Polly's shape. It grows clearer with each tether.
-- The real Polly was consumed, or is caught between life and death. No one knows which.
-- Casey is the younger brother who does not know his full identity. He finds it in having an older brother, which is why he clings to Tumak.
-- done: dossiers/polly.html and dossiers/astra-virex.html (section 5); crew/casey.html still needs all three.
-
 ### Boogie (crew/boogie.html)
 - Tharizdun wants nothing specific from Boogie. Tharizdun is not lucid; she is an opportunist. What happens through the shard depends on what Boogie does, and things may come through the current. Boogie's plot is reactive.
 - Boogie sometimes feels corruption leaking into him from the shard: a role-playing beat, not a mechanic.

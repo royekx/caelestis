@@ -37,14 +37,14 @@ staging once Korey has read and accepted them.
 | Factions | factions/ | 3 | 9 | 2 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 15 | 1 | 2 | 0 | 0 |
 | Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
-| Crew | crew/ | 9 | 15 | 8 | 0 | 54 |
+| Crew | crew/ | 8 | 16 | 4 | 0 | 33 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 4 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** |  | **96** | **126** | **86** | **4** | **135** |
+| **Total** |  | **95** | **127** | **82** | **4** | **114** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -131,6 +131,7 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - DM dossiers with no record, though the crew may have met or been told of them: Polly Geim (Casey's brother), Clint Dashforest, Qitru, Quartermaster Halix Verrow, the Crystalline Retrieval Construct, Ezra Ahl-Sier. Each gets a record at first contact; check whether any contact has already happened (section 5).
 - `data/npcs.json` names Miken "Miken"; the DM dossier and the Fleet row use his full name, Miken Haverstance. Add the surname to the record if Korey agrees.
 - `data/player-characters.json` (Sol Fortuna, Voyage 4) says he "used Misfortune's Favor to draw ill luck onto his own shoulders". Misfortune's Favored is the oath's level-20 capstone and was earlier the working name of his Misfortuned feature; the Voyage 4 use reads as a self-Jinx or a Misfortuned use. crew/sol.html leaves the feature unnamed. Confirm the name and correct the line if Korey agrees.
+- `data/player-characters.json` (Casey Geim) lists the star-etched constellation shirt under Notable Items, but `data/items.json` and Tumak's record have Tumak holding it (Casey passed it to Tumak's bunk in Voyage 1). crew/casey.html and crew/tumak.html follow items.json. Drop it from Casey's Notable Items if Korey agrees.
 - `data/npcs.json` (Winston Ryeback, Voyage 6) says he "was told the beholder had been taken care of, and took it to mean the crew had killed it"; the ruling is that Tumak told him outright that the crew killed it (dossiers/winston-ryeback.html).
 
 ## Still coming in
@@ -1029,6 +1030,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 - **[decide]** Casey's V007 beat *(prep)*
   Options: a Vaelorix chart in Research showing the sky from inside Mirt's wardrobe beside a collecting site past the waystation; or something else. It must give Casey's cooling thread a small nudge back.
+  Merged with the crew decide "Casey's beat for the crossing": the beat is a small nudge from the voice toward something, not a vision (the missed level 3 scene is dropped, STAGING round 10).
   src: chat-voyage-6-7-planning § Open; memory-canon open-decisions (Voyage 007 intent)
 
 - **[decide]** Sol's misfortune piece *(prep)*
@@ -1342,23 +1344,6 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 ### crew/casey.html
 
-- **[fix]** "Hearer" becomes "Starchild"
-  Astra's warlocks are Starchildren. Replace "hearer" with "Starchild" throughout this page and on `dossiers/astra-virex.html`. Casey's power works through sight; the only voice he hears is Polly's.
-  src: inbox/chat-crew-boogie-casey-sol.md § Casey (turns 101–107)
-  done: dossiers/astra-virex.html (section 5); crew/casey.html still needs it.
-
-- **[add]** Overlapping Starchildren
-  Where several Starchildren gather at one celestial body, Astra holds more tethers there and the change around them speeds up.
-  src: inbox/chat-crew-boogie-casey-sol.md § Casey
-
-- **[add]** The voice is Astra Virex, and it clears with each tether
-  Ruled (STAGING round 8). The page stands: Polly's voice comes through cleaner after each tether. The rare-event suggestion is dropped. Add (DM-only): "The voice Casey hears as Polly is Astra Virex wearing Polly's shape. It grows clearer with each tether."
-  src: Korey, 2026-10-25 (round 8); inbox/chat-crew-boogie-casey-sol.md § Casey
-
-- **[add]** Viren threads on the crossing to H'Catha (DM voice)
-  The two-week crossing to H'Catha is where Viren information gets scattered: rumours and small clues placed in the world for the crew to notice or ignore, not every one a mystical pull or Polly speaking. A list of about sixteen candidate rumours exists in the Casey chat; none is chosen yet.
-  src: inbox/chat-crew-boogie-casey-sol.md § Casey
-
 - **[later]** What the first tether at Viren is
   Options: a dying stellar entity; a Zerathis-connected place or person; stellar-touched inhabitants; a rift onto a missing constellation.
   src: BCS § Casey/Open
@@ -1368,23 +1353,10 @@ Items whose source sweep is still partial keep their `(sampled)` or
   src: BCS § Casey/Tethering, Open
 
 - **[later]** The other Starchild
-  A living Starchild like Casey will appear (see the add below). Set their shape: further along than Casey, earlier, diverged, or opposing. Set where they are headed.
+  A living Starchild like Casey will appear as pressure, rival or partner, modelled on Avantika (crew/casey.html, Arc; merged from the add "A living hearer"). Set their shape: further along than Casey, earlier, diverged, or opposing. Set where they are headed.
   src: BCS § Casey/Open
 
-- **[decide]** Casey's beat for the crossing to H'Catha *(prep)*
-  Ruled: the missed level 3 scene is dropped, and visions are used sparingly (STAGING round 10). Set Casey's beat for the crossing: a small nudge from the Polly voice toward something, not a vision.
-  src: Korey, 2026-10-25 (round 10)
-
-- **[add]** What Casey wants beyond Polly
-  Ruled (STAGING round 8). Add (DM voice): "Casey is the younger brother who does not know his full identity. He finds it in having an older brother, which is why he clings to Tumak." This replaces the offered "to be chosen the way Polly was chosen", and sits beside his flaw (he relies too heavily on others).
-  src: Korey, 2026-10-25 (round 8); BCS § Casey/Open
-
-- **[add]** How the Toll shows in play *(answered)*
-  The Toll is what Astra takes at each constellation point: the tethered region's paracausal drift, step 2 of "The loop" on this page. It is never named at the table, and the DM tracks it as a hidden meter. Add (DM voice):
-  "The Toll shows only as change at the level of nature, never as a magic effect. A river reflects another sky. The wind holds one direction. Children born there recognise each other. A single tether stays below anyone's notice for a long time; an overlap site does not. The first changed region anyone notices is Virenspace, already tethered by Zerathis. After Casey's first deliberate tether there, something he cared about at Viren is different: not destroyed, changed in its nature, and the change makes it more his."
-  The V005–V006 window is retired.
-  answered: crew/casey.html (The loop, step 2: "Nobody, for a long time"; § Overlap: "A single tether sits below his threshold; an overlap site does not"; "Virenspace is point one and it is already occupied"); inbox/chat-crew-boogie-casey-sol.md § Casey/Point design guardrails (the Toll, never named at the table), § Tethering (nature-level change); Casey chat f7712be1 (the first deliberate tether at Viren; Korey: "right direction")
-  src: BCS § Casey/Open
+- *(Casey's beat for the crossing is one item with Casey's V007 beat, under campaign/voyages/index.html. Ruled already: the missed level 3 scene is dropped and visions are used sparingly; crew/casey.html carries both.)*
 
 - **[later]** The Lantern Node alignment: its bonus, and its name
   Set the bonus. Decide whether to rename it, since "Lantern" collides with the Lantern of Flourishing.
@@ -1398,82 +1370,9 @@ Items whose source sweep is still partial keep their `(sampled)` or
   Page lists it as open. Options: yes (and whether the other Starchild is one), or Casey is the only one.
   src: framework § Open
 
-- **[fix]** First tether point: Virenspace
-  The stat row says "Open: What his first tether point is", while the body already says "Virenspace is point one". Replace the row with "First tether: Virenspace, already partly modified by Zerathis." The open question of what happens at Viren stays in the backlog, not on the page.
-  src: memory-canon § Casey Geim; framework § NPCs and PCs
-
-- **[fix]** The voice at the wardrobe was in Polly's register
-  Astra Virex reached Casey at the wardrobe in Polly's voice; Polly himself is a missing person. Page says "why Polly could reach him there"; change to "why the voice in Polly's register could reach him there". The same line on dossiers/zerathis.html needs the same change.
-  src: memory-canon § Casey Geim (Polly correction)
-  done: dossiers/zerathis.html (section 5); crew/casey.html still needs it.
-
-- **[fix]** "Where the rules live" points at the wrong place
-  The header says "Where the rules live: This page", but the page holds none of the rule text. Stellar Reading's player text lives on `crew-manifest/casey-geim.html` and the chart on `stellar-chart/`. Point the row there, and add the DM summary below.
-  src: BCS § Casey/Stellar Reading, Stellar chart
-
-- **[add]** Stellar Reading (DM summary)
-  Bonus action, costs 1 star. Target: a creature Casey can see and has not yet spoken with. His stars appear over the target, visible only to him. A correct sign gives advantage on Charisma checks against that creature for 1 minute; a wrong sign gives disadvantage. The window closes once the encounter begins. No retries.
-  src: BCS § Casey/Stellar Reading; memory-canon § Casey Geim
-
-- **[add]** Keeper's guidance for Stellar Reading
-  Reveal NPC signs sparingly. Vary sign distribution so archetypes do not give signs away. Leave wrong guesses unconfirmed outside the fiction. No retries.
-  src: BCS § Casey/Stellar Reading
-
-- **[add]** Stellar Reading odds
-  With full chart knowledge, Stellar Reading hits about 50% at 3 stars, 83% at 4, 92% at 5 and 100% at 7. Full chart access is intended; the number of stars over the target is the throttle.
-  src: BCS § Casey/Stellar Reading
-
-- **[add]** The chart's structure
-  The chart is a 10-node grid; each sign is an 8-node constellation. The star cap equals Casey's current star count (3 now, maximum 7). One node is always hidden.
-  src: BCS § Casey/Stellar chart
-
-- **[add]** Keeper's chart notes: ambiguity at 3 stars
-  At 3 stars: {1,2,7} fits Aries, Leo and Taurus; {3,6,8} fits Capricorn, Virgo and Gemini; {4,6,9} fits Cancer and Scorpio; {3,5,10} fits Aquarius and Pisces. Libra {1,7,9} and Sagittarius {1,8,10} are unique. Aries and Leo resolve only at 7 stars.
-  src: BCS § Casey/Stellar chart
-
-- **[add]** Casey's sheet
-  Warlock. CHA 18 (+4) is his main stat. WIS 4 (−3), passive Perception 7: he reads cosmic patterns and misses the obvious. Lucky feat. Background: Wayfarer. Listed faith: Astrology. Flaw: he relies too heavily on others (place beside the Polly bond).
-  src: BCS § Casey/Character sheet
-
-- **[add]** The Gemini brand
-  Casey has a Gemini brand on his left shoulder, the sign he shares with Polly.
-  src: memory-canon § Casey Geim; BCS § Casey/Character sheet
-
-- **[add]** Zodiac spell names
-  His spells carry zodiac names: Ward of the Capricorn; Duplicate (Gemini); Armor of Taurus; Arms of Aquarius; Life of Cancer (False Life via Fiendish Vigor); Disguise of Aries (Mask of Many Faces).
-  src: memory-canon § Casey Geim; BCS § Casey/Character sheet
-
-- **[add]** The Harptos calendar as Casey's zodiac
-  Each Harptos month maps to a sign, and the holidays are rare signs: Midwinter = Aquarius ("bends fate"); Greengrass = Taurus; Midsummer = Leo; Highharvestide = Libra; Feast of the Moon = Sagittarius ("walks unseen; between worlds"). Add here or link the table on `stellar-chart/`.
-  src: BCS § Casey/Astrology quirk
-
-- **[add]** Casey and Tumak: the mechanical contrast
-  Casey is point-driven: he must find constellation points and attune to them. Tumak is time-driven: marks arrive per level and he chooses where they go. Casey's stars are a lens he reads with, continuous and unbounded; Tumak's runes are an apparatus on his body that fires once. Casey never teleports to his constellations.
-  src: BCS § Casey/Mechanical distinction from Tumak
-
-- **[add]** Each constellation point is an adventure
-  Each point is a real adventure for the whole party and a different experience for Casey, modelled on Fjord placing the stones on Uk'otoa's seal.
-  src: BCS § Casey/Mechanical distinction from Tumak
-
-- **[add]** Point design (working)
-  Each point has a **Sign** (the hook), **Subject**, **Work** (the adventure), **Gift** (what he learns) and **Toll** (what Astra takes, never named at the table). Each new point shifts at least three of five axes from the last: scale, subject, tone, engagement, guidance.
-  src: BCS § Casey/Point design guardrails
-
-- **[add]** What an anchored region looks like (add to "The loop")
-  Anchored regions change at the level of nature, not as magic effects. A river reflects another sky. The wind holds one direction. Children born there recognise each other.
-  src: BCS § Casey/Tethering
-
-- **[add]** A living hearer
-  Another living Starchild like Casey will appear as pressure: possibly a rival, possibly a partner, modelled on Avantika.
-  src: BCS § Casey/Tethering
-
-- **[add]** The players never learn the word "Axiom"
-  Casey learns only that specific things are wrong or changed. No mortal knows the Axioms.
-  src: BCS § Casey/Tethering; memory-canon (no mortal knows the Axioms)
-
-- **[add]** The Lantern Node / Viren quest
-  The Lantern Node at Viren is Casey's first named alignment. (Name pending the rename decide above; the add carries whichever name stands.)
-  src: BCS § Casey/Astrology quirk
+- **[later]** Casey's sheet check
+  His current level and D&D Beyond URL, and whether the zodiac spell names, the Wayfarer background and Wisdom 4 on crew/casey.html Mechanics › Build match the sheet.
+  src: section 7 (2026-10-28)
 
 ### crew/tumak.html
 
