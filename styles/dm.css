@@ -131,6 +131,11 @@ body { overflow-x: clip; }
   color: var(--text);
 }
 
+/* Anchor targets (headings, <details>, dossier rows) land clear of the top
+   edge, and of the fixed 44px header on a phone. */
+.dm-content [id] { scroll-margin-top: 1rem; }
+@media (max-width: 768px) { .dm-content [id] { scroll-margin-top: 3.75rem; } }
+
 .dm-footer {
   margin-top: 4rem;
   padding-top: 1.5rem;
@@ -1646,7 +1651,6 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
 }
 .tr-empty { color: var(--text-muted); font-size: 0.95rem; margin: 0.5rem 0 1.5rem; }
 .tr-list { margin-top: 0; }
-.tr-list .dossier-row { scroll-margin-top: 4rem; }   /* clears the fixed nav bar on a phone */
 
 .tr-list .dossier-row > summary {
   grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1.5fr) 7.2rem 0.85rem;

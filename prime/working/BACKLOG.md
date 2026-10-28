@@ -1741,7 +1741,7 @@ against the complete Tumak sweep (all 336 turns).
   src: memory-canon § Cosmology ("always two entities")
 
 - **[fix]** Sol's oath is written
-  § Open says Sol's oath carries "implied mechanics that live nowhere". The Oath of Misfortune is finalized (Unified Jinx with Jinx charges; Misfortune's Wake and Misfortune's Edge) and lives on crew/sol.html. Point there and remove Sol from that line.
+  § Open says Sol's oath carries "implied mechanics that live nowhere". The Oath of Misfortune is finalized (Unified Jinx with Jinx charges; Misfortune's Wake and Misfortune's Edge) and lives on crew/sol.html. Point there (Jinx is at `crew/sol.html#jinx`, Misfortuned at `#misfortuned`) and remove Sol from that line.
   src: memory-canon § Sol Fortuna
 
 - **[add]** Why gods cannot make the crossing (§ The approach to the Core)

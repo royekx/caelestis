@@ -192,7 +192,7 @@ because later sections link into earlier ones.
    Tarroway, Rolt, Ilsevaine, Venn, OSTEKK.
 6. **Campaign** (done, branch `campaign`: `campaign/index.html`, `opposition/vthorama.html`, `opposition/vecna.html`, `principles.html`, Plot Hooks with Speculation, Voyages): spine (theme, shape, failure state), ascension (Vecna's
    working, the eye, Oerth), colony (N'ghathrod now), plot hooks, principles.
-7. **Crew**: the five crew items in STAGING, plus the crew backlog.
+7. **Crew** (done, branch `crew`: the six crew pages and the register; no moves): the five crew items in STAGING, plus the crew backlog.
 8. **Fonains and timeline**: the Fonains page and doc, `timeline.json`.
 9. **The FIA (`restricted/`)**, next after the DM side and before any player
    page. Fourteen files. Bring each in line with the finished DM pages, in the
@@ -302,6 +302,7 @@ Old path → new path, added by each pull request that moves a page.
 | `prime/campaign/what-if.html` | `prime/campaign/plot-hooks.html#speculation` (section ids `#hearts`, `#reach-speculation`, `#alternate-readers`, `#crew-disposition`, `#colony-and-pcs`, `#restorers-speculation` kept) | Campaign (campaign) |
 | `prime/campaign/plot-hooks.html#abandoned-beholders` | retired, no target (the hook is cut; the id is never reused) | Campaign (campaign) |
 | `prime/campaign/voyages/voyage-briefing-002.html` | `prime/campaign/voyages/index.html#v002` (the full briefing is `#v002-briefing`) | Campaign (campaign) |
+| `prime/crew/index.html#crew-open` | retired, no target (the Open table is redistributed to the crew pages and a Campaign decide; the id is never reused) | Crew (crew) |
 
 ## Stale branches
 
