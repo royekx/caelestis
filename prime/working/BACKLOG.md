@@ -36,7 +36,7 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
 | Factions | factions/ | 2 | 6 | 1 | 0 | 4 |
 | Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 39 | 5 | 36 |
-| Dossiers | dossiers/ | 8 | 6 | 44 | 1 | 53 |
+| Dossiers | dossiers/ | 8 | 6 | 44 | 1 | 54 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 7 | 2 | 26 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 21 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 3 | 0 | 1 |
-| **Total** | | **79** | **90** | **221** | **12** | **337** |
+| **Total** | | **79** | **90** | **221** | **12** | **338** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1600,6 +1600,10 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ---
 
 ### dossiers/index.html
+
+- **[add]** The dossier index: alphabetical, with better filtering and grouping
+  Index pages keep the dossier-index format (a filterable register), and the dossier index itself needs work: rows in alphabetical order, and clearer filters and grouping (by side, kind and standing, or by group). Apply the same register shape to every DM index.
+  src: chat 2026-10-27 (Korey: "Index pages should keep the same format as the dossier… the dossier index also needs to be updated")
 
 - **[drop]** "What the DM page adds"
   The collapsible table on dossiers/index.html comparing each DM page with its public page (with its subsections "Who deliberately has no DM page", "Still to build", "Inbound from other tables", "Handing an ally's block to the players"). Remove it when the index is rewritten; move anything still needed to a dossier's DM notes or BACKLOG.

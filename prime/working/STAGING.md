@@ -241,6 +241,7 @@ when a ruling changes; delete it once the page carries it. See
 - The third Distinction piece is unknown. It finds something too.
 
 ### Wan, Tu and the fragment (artifacts/runekeepers-fragment.html, rules/)
+- The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) Homes: artifacts/runekeepers-fragment.html, crew/tumak.html, dossiers/the-runekeeper.html; factions/runekeepers.html carries it already.
 - The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a state neither whole nor broken. The twins are not a key to the First Heart until enough of the stone has rebuilt between them through resolved runes: not before about level 12, early in Arc 3.
 
 ## DM principles
