@@ -478,6 +478,10 @@
     {
       "pattern": "All-Haven",
       "use": "the All-Father (the Keepers' calling is to protect and keep)"
+    },
+    {
+      "pattern": "\\bKeepers?\\b(?!'s guidance| of Tinderstrike| of the Misty Vale)",
+      "use": "the Discerners (the Order of All's order that interprets and judges); a Discerner"
     }
   ],
   "voice": [
@@ -725,6 +729,22 @@
     {
       "old": "glossary/#all-haven",
       "new": "glossary/#all-father"
+    },
+    {
+      "old": "\"keepers.html",
+      "new": "discerners.html"
+    },
+    {
+      "old": "/keepers.html",
+      "new": "factions/discerners.html"
+    },
+    {
+      "old": "glossary/#keepers",
+      "new": "glossary/#discerners"
+    },
+    {
+      "old": "glossary/#keeper\"",
+      "new": "glossary/#discerner"
     }
   ],
   "allow": [

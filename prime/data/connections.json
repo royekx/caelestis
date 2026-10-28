@@ -493,7 +493,7 @@
           "src": "cosmology/index.html"
         },
         {
-          "t": "The Order of All calls a Monolith an Ortholith, after the Keepers' registries.",
+          "t": "The Order of All calls a Monolith an Ortholith, after the Discerners' registries.",
           "src": "glossary/index.html"
         },
         {
@@ -1314,11 +1314,11 @@
       "summary": "One faith of three orders that reveres the Core's pressure as one god, the All-Father, in three callings: to watch, to keep and to restore.",
       "facts": [
         {
-          "t": "The Order of All is made of three orders, the Watchers, the Keepers and the Restorers, each understanding the All-Father's charge differently.",
+          "t": "The Order of All is made of three orders, the Watchers, the Discerners and the Restorers, each understanding the All-Father's charge differently.",
           "src": "factions/order.html"
         },
         {
-          "t": "The orders form a chain: the Watchers see, the Keepers judge, the Restorers act, and a sector's Vanguard sanctions; the Fleet carries all three.",
+          "t": "The orders form a chain: the Watchers see, the Discerners judge, the Restorers act, and a sector's Vanguard sanctions; the Fleet carries all three.",
           "src": "factions/order.html#together"
         },
         {
@@ -1338,7 +1338,7 @@
           "src": "STAGING round 11"
         },
         {
-          "t": "For a truly terrible Zenith it sends a team of three, a Watcher, a Keeper and a Restorer, to stop the ritual, person or plan driving it; a Monolith's arrival is their clock.",
+          "t": "For a truly terrible Zenith it sends a team of three, a Watcher, a Discerner and a Restorer, to stop the ritual, person or plan driving it; a Monolith's arrival is their clock.",
           "src": "factions/order.html#three"
         }
       ]
@@ -1393,35 +1393,35 @@
       ]
     },
     {
-      "id": "keepers",
-      "label": "The Order of the Keepers",
+      "id": "discerners",
+      "label": "The Order of the Discerners",
       "type": "faction",
       "scope": "cosmos",
       "summary": "The Order of All's order that judges: it weighs the Watchers' reports against the record and counsels the Vanguard, and keeps the Monoliths and the Beacon; its calling is to protect and keep.",
       "facts": [
         {
-          "t": "The Keepers guard the Monoliths as though the taken were inside them, when everything taken goes to the Core.",
-          "src": "factions/keepers.html#monoliths"
+          "t": "The Discerners guard the Monoliths as though the taken were inside them, when everything taken goes to the Core.",
+          "src": "factions/discerners.html#monoliths"
         },
         {
           "t": "They hold the Order's record and its registry of Monoliths, in which a Monolith is an Ortholith.",
-          "src": "factions/keepers.html#registry"
+          "src": "factions/discerners.html#registry"
         },
         {
           "t": "From the Watchers' reports they forecast which worlds come next, decide who is sent where, and give out what the Order knows.",
-          "src": "factions/keepers.html#dispatch"
+          "src": "factions/discerners.html#dispatch"
         },
         {
-          "t": "The Keepers keep the Beacon, the galactic clock and the one god's fire, the count of Galactic time cycles: a beacon (cycle) is one full turn of Erevos, its four sparks lighting the arms in order, divided into kindlings and embers; Cycle 0 is the Order's founding and the current cycle is 1491.",
-          "src": "factions/keepers.html#beacon"
+          "t": "The Discerners keep the Beacon, the galactic clock and the one god's fire, the count of Galactic time cycles: a beacon (cycle) is one full turn of Erevos, its four sparks lighting the arms in order, divided into kindlings and embers; Cycle 0 is the Order's founding and the current cycle is 1491.",
+          "src": "factions/discerners.html#beacon"
         },
         {
-          "t": "Over the past few centuries the arms have lit slightly early and the beacons have grown slightly shorter, and the Keepers' tables record them as irregular.",
-          "src": "factions/keepers.html#beacon"
+          "t": "Over the past few centuries the arms have lit slightly early and the beacons have grown slightly shorter, and the Discerners' tables record them as irregular.",
+          "src": "factions/discerners.html#beacon"
         },
         {
           "t": "Their radical edge holds that nothing leaves the record and that secrets are safer kept.",
-          "src": "factions/keepers.html"
+          "src": "factions/discerners.html"
         }
       ]
     },
@@ -1463,7 +1463,7 @@
       "summary": "The Watcher Vanguard, commanding the Order of All's Caelestis Sector house, and speaker of the All-Father.",
       "facts": [
         {
-          "t": "Dejexic is the Watcher Vanguard of the Caelestis Sector house: he commands it and oversees the Watchers, Keepers and Restorers posted there.",
+          "t": "Dejexic is the Watcher Vanguard of the Caelestis Sector house: he commands it and oversees the Watchers, Discerners and Restorers posted there.",
           "src": "factions/order.html#caelestis-house"
         },
         {
@@ -1603,7 +1603,7 @@
           "src": "factions/restorers.html"
         },
         {
-          "t": "The Watchers and the Keepers count the Restorers' crossings foolhardy, and some in both orders have called them a death cult; the argument is inside the one faith.",
+          "t": "The Watchers and the Discerners count the Restorers' crossings foolhardy, and some in both orders have called them a death cult; the argument is inside the one faith.",
           "src": "factions/watchers.html#arguments"
         },
         {
@@ -6235,7 +6235,7 @@
       "src": "factions/order.html"
     },
     {
-      "s": "keepers",
+      "s": "discerners",
       "t": "order",
       "rel": "is one of the three orders of",
       "src": "factions/order.html"
@@ -6247,19 +6247,19 @@
       "src": "factions/order.html"
     },
     {
-      "s": "keepers",
+      "s": "discerners",
       "t": "monoliths",
       "rel": "guard",
-      "src": "factions/keepers.html#monoliths"
+      "src": "factions/discerners.html#monoliths"
     },
     {
       "s": "watchers",
-      "t": "keepers",
+      "t": "discerners",
       "rel": "report to",
       "src": "factions/order.html#together"
     },
     {
-      "s": "keepers",
+      "s": "discerners",
       "t": "restorers",
       "rel": "counsel where to send",
       "src": "factions/order.html#together"
@@ -8306,7 +8306,7 @@
     },
     {
       "s": "dejexic",
-      "t": "keepers",
+      "t": "discerners",
       "rel": "sanctions interventions on the counsel of",
       "src": "factions/order.html#together"
     }

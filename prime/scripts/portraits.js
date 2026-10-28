@@ -151,7 +151,7 @@
     'nereth-vaul':   { name: 'Nereth Vaul',         fileId: '' },
     'order':        { name: 'Order of All',        fileId: '' },
     'watchers':     { name: 'Order of the Watchers', fileId: '' },
-    'keepers':      { name: 'Order of the Keepers', fileId: '' },
+    'discerners':   { name: 'Order of the Discerners', fileId: '' },
     'aurel-venn':   { name: 'Aurel Venn',          fileId: '' },
     'fleet':        { name: 'United Intergalactic Fleet', fileId: '' },
     'haymond-rolt': { name: 'Haymond Rolt',        fileId: '' },

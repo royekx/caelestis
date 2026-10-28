@@ -462,7 +462,7 @@
       "status": "past",
       "cert": "working",
       "title": "The Order of All is founded",
-      "desc": "Cycle 0. The Order of All begins counting the turns of Erevos, from the arm it sees lit, so that its Watchers, posted across the galaxy, have one clock to compare their reports; its Keepers keep the count. Placed by the working default of one cycle to about sixteen Toril months.",
+      "desc": "Cycle 0. The Order of All begins counting the turns of Erevos, from the arm it sees lit, so that its Watchers, posted across the galaxy, have one clock to compare their reports; its Discerners keep the count. Placed by the working default of one cycle to about sixteen Toril months.",
       "t": -1990,
       "tier": 1
     },
@@ -471,7 +471,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The Order of All",
-      "desc": "One faith of three orders, one god in three callings. The Watchers are posted one per region on worlds approaching a Zenith; the Keepers guard Ortholiths, believing the taken are inside them, and keep the count; the Restorers mend what Zeniths break. Its founding is Cycle 0 of the count the Keepers keep.",
+      "desc": "One faith of three orders, one god in three callings. The Watchers are posted one per region on worlds approaching a Zenith; the Discerners guard Ortholiths, believing the taken are inside them, and keep the count; the Restorers mend what Zeniths break. Its founding is Cycle 0 of the count the Discerners keep.",
       "t": -1990,
       "end": 0,
       "tier": 2
