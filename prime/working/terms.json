@@ -366,6 +366,10 @@
     {
       "pattern": "\\bOSTEKK-[0-9]",
       "use": "Ostekk-n (the record's spelling: Ostekk-6, Ostekk-2, Ostekk-10)"
+    },
+    {
+      "pattern": "out of Osiris|town of Osiris",
+      "use": "Orerius, in T'Arionese, on Fonains (Osiris is only the Destiny touchstone for Zerathis and Aurel Venn)"
     }
   ],
   "voice": [

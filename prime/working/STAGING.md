@@ -58,6 +58,12 @@ when a ruling changes; delete it once the page carries it. See
 - Finerva is Vanifer under another name. The Pedra Ardente is a gem.
 - Kevulan first willed his birthright to Asmodus (his sibling, not the archdevil), then rescinded it and willed it to Xero.
 
+### Fonains geography (realms/fonains.html, Fonains doc; section 8)
+- T'Arionese is a region of Fonains. Orerius is in T'Arionese. The Cre'Tez estate is in Orerius, and it is the home of the Cre'Tez siblings (Xero, Lusion, Vanifer and the others). Clint works bounties out of Orerius, and Finerva (Vanifer) posted the Blooming Glass bounty there for the Cre'Tez.
+- The remains of the Fonains Monolith lie in the Trentara forest, in the north of the northern continent, between Nomnia and the Kingdom of Shaumala.
+- Korey's Fonains map (his own) will be added in section 8 as the page's map; places on Fonains are placed from it.
+- done: dossiers/clint.html and connections.json carry Orerius (section 7 correction). realms/fonains.html, the Fonains doc and the timeline still need all three.
+
 ## Timeline
 
 ### Timing (timeline, campaign/, realms/fonains)

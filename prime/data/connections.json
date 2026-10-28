@@ -2642,7 +2642,7 @@
           "src": "timeline/timeline.json"
         },
         {
-          "t": "He works as a bounty hunter out of Osiris, with a crew called the Six Shooters.",
+          "t": "He works as a bounty hunter out of Orerius, with a crew called the Six Shooters.",
           "src": "dossiers/clint.html"
         },
         {
@@ -4551,6 +4551,10 @@
         {
           "t": "A Seeker chapter told Vanifer the secret in the Cre'Tez blood.",
           "src": "timeline/timeline.json"
+        },
+        {
+          "t": "The Cre'Tez estate is in Orerius, in T'Arionese, home of the Cre'Tez siblings.",
+          "src": "dossiers/clint.html"
         }
       ]
     },
@@ -5086,14 +5090,18 @@
       ]
     },
     {
-      "id": "osiris",
-      "label": "Osiris",
+      "id": "orerius",
+      "label": "Orerius",
       "type": "place",
       "scope": "fonains",
-      "summary": "A frontier town of marshals and bounty paper.",
+      "summary": "A place in T'Arionese, on Fonains, where the Cre'Tez estate stands.",
       "facts": [
         {
-          "t": "Clint works bounties out of Osiris.",
+          "t": "Clint works bounties out of Orerius.",
+          "src": "dossiers/clint.html"
+        },
+        {
+          "t": "The Cre'Tez estate is in Orerius, in T'Arionese; it is the home of the Cre'Tez siblings.",
           "src": "dossiers/clint.html"
         }
       ]
@@ -6962,7 +6970,7 @@
     },
     {
       "s": "clint",
-      "t": "osiris",
+      "t": "orerius",
       "rel": "hunts bounties out of",
       "src": "dossiers/clint.html"
     },
@@ -7915,7 +7923,7 @@
       "src": "timeline/timeline.json"
     },
     {
-      "s": "osiris",
+      "s": "orerius",
       "t": "fonains",
       "rel": "located in",
       "src": "dossiers/clint.html"
@@ -8087,6 +8095,12 @@
       "t": "hessa-dun",
       "rel": "is the uncle of",
       "src": "dossiers/hessa-dun.html"
+    },
+    {
+      "s": "cretez",
+      "t": "orerius",
+      "rel": "have their estate in",
+      "src": "dossiers/clint.html"
     }
   ]
 }
