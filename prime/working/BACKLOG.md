@@ -35,7 +35,7 @@ staging once Korey has read and accepted them.
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 7 | 2 | 0 | 3 |
-| Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 42 | 5 | 36 |
+| Campaign | campaign/: spine, voyages, plot hooks; opposition/; principles.html | 13 | 1 | 37 | 5 | 27 |
 | Dossiers | dossiers/ | 16 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 9 | 12 | 17 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
@@ -843,7 +843,7 @@ Order: decide, fix, drop, add.
 
 Faction pages under `prime/factions/`. Items are grouped by page and ordered decide, fix, drop, add. Proposed page text reads in-world, like a fan wiki; DM-only lines are marked.
 
-The Remaking is now only the Ascension's fail state. Links that say "the Remaking" for Vecna's plan point to `opposition/vecna.html`; links for the colony's or Vocath's operations point to `campaign/colony/`.
+The Remaking is now only the Ascension's fail state. Links that say "the Remaking" for Vecna's plan point to `opposition/vecna.html`; links for the colony's or Vocath's operations point to `opposition/vthorama.html`.
 
 ---
 
@@ -942,7 +942,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 Campaign planning pages under `prime/campaign/`. Items are grouped by page and ordered decide, fix, drop, add. Planning pages speak in DM voice. World facts quoted for a page read in-world.
 
-The Remaking is now only the Ascension's fail state. Every page link that says "the Remaking" for the plan or the machinery points to `opposition/vecna.html` (the plan) or `campaign/colony/` (the colony's operations and the Fork) instead.
+The Remaking is now only the Ascension's fail state. Every page link that says "the Remaking" for the plan or the machinery points to `opposition/vecna.html` (the plan) or `opposition/vthorama.html` (the colony's operations and the Fork) instead.
 
 ---
 
@@ -1025,7 +1025,8 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   (b) His standing suffers: an inquiry that clouds Arc 2.
   (c) Ambiguous: limited damage, Mirt shaken, his future uncertain.
   The Fork state (A.T.L.A.S. gone or returned) may feed the answer.
-  Touches: campaign/spine.html (Arc 1 close), campaign/colony/index.html (the Fork), dossiers/mirt.html, factions/vocath-operation.html (whether Vocath's grudge is served).
+  Narrowed (campaign section): the Fork states on opposition/vthorama.html keep their per-state lines as direction (State A: his standing takes a real hit; B1: it rises). What stays open is what the attack itself does to him, apart from the heist.
+  Touches: campaign/index.html (Arc 1 close), opposition/vthorama.html (the Fork), dossiers/mirt.html, factions/vocath-operation.html (whether Vocath's grudge is served).
   src: chat-early-planning § Campaign Planning, Open (turn 300)
 
 - **[fix]** Lowest Driftwarden rank is Grade IV
@@ -1128,21 +1129,9 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   Add under Arc 2 "The board": after the graduation board, each board carries two or three contracts at the crew's rank plus one reach. Contracts below rank open only after promotion. Surfaces feel nearly mundane; the story is found on arrival.
   src: chat-cosmic-campaign-structure § Contract board; memory-canon open-decisions (Act 2 plan, Mission board lines)
 
-- **[add]** How Arc 2 meets the opposition
-  Add to Arc 2 Shape: Seeker chapters are met one at a time, each on its own world. The crew scuffles with the crews of N'ghathrod's skiffs, sent out from Vth'oramu, not with him (STAGING round 11). Zeniths visibly become more frequent across the crew's contracts.
-  src: timeline "Act 2: ranked missions"; memory-canon open-decisions (antagonist structure line)
-
-- **[add]** Linked worlds bleed
-  Add to Arc 2 or Arc 3 possibilities: linked worlds bleed into each other over time, one gaining what the other loses. This is a planned mission: strange things on two worlds, go investigate. Astra Virex can show up mid-merge.
-  src: memory-canon open-decisions (N'ghathrod's plan accepted direction)
-
 - **[add]** Arc 1's close
   Add to Arc 1's goal and critical beats: Arc 1 closes around sessions 8–10 with the attack on Caelestis and graduation, with the party at level 4. The Brig thief thread comes forward before graduation so the crew can engage with it and possibly learn who the thief is (Joffrey).
   src: memory-canon open-decisions (Planned line); timeline "Attack on Caelestis and graduation"
-
-- **[add]** N'ghathrod's death has consequences
-  Add to the frame: killing N'ghathrod has later repercussions, possibly in another campaign. (Which one is a decide above.)
-  src: memory-canon open-decisions (Taken King line)
 
 ---
 
@@ -1150,63 +1139,19 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 - **[fix]** Heart entrance term is Atrium *(answered)*
   A heart's one hidden entrance is the Atrium (plural Atria). Every page already says Atrium/Atria, so nothing changes there; the pointer items under colony, what-if and vthorama are satisfied as written. New text uses Atrium too, including the hidden-entrance line on factions/runekeepers.html. Memory canon's "Aperture" is the older working name.
-  Touches: opposition/vecna.html, campaign/colony/index.html, campaign/what-if.html, factions/vthorama.html, factions/runekeepers.html, dossiers/ulhrek.html, dossiers/khaleth.html.
+  Touches: opposition/vecna.html, opposition/vthorama.html, campaign/what-if.html, factions/vthorama.html, factions/runekeepers.html, dossiers/ulhrek.html, dossiers/khaleth.html.
   src: memory-canon open-decisions (world-heart framework; "Locked this pass"); chat-cosmic-campaign-structure § Superseded
   answered: inbox/chat-cosmic-campaign-structure.md § Superseded ("'Aperture' as the heart's entrance → 'Atrium' (turn 278)"). The memory lines that say "Aperture" come from earlier in the same chat (the Seekers pass, turns 108–151), and Korey used the new word himself afterward ("using a reach residue as the key into an atrium makes sense").
   done: opposition/vecna.html (pilot)
 
-- **[add]** The lattice is a body
-  Add to The Figure: N'ghathrod's lattice of linked worlds is a body. Linked worlds are its organs, links its nerves, colonies its cells. It is deliberately the same shape as Vecna's own aim: a mind with the cosmos for a body.
-  src: memory-canon open-decisions (N'ghathrod's plan accepted direction); chat-cosmic-campaign-structure § World-hearts
-
 ---
 
-### campaign/colony/index.html
-
-- **[fix]** The Tetherbreak engagement *(Locations knock-on)*
-  The section heading and its text still call it "The Tetherbreak engagement" and say Clint "seized the boarders' craft" and "a psychic wind carried him out of the system". Tetherbreak is now only the bearing; the engagement was on the edge run past Strake, at the perimeter watch (locations/realmspace.html#perimeter-watch), and Clint took the device and went through a color pool on purpose (locations/cairn-station.html, factions/fleet.html). Rename the section and its anchor (sweep the links) and rewrite the text when the page is rewritten.
-  src: Korey, 2026-10-28 (Tetherbreak folds into Realmspace); STAGING § Clint Dashforest
-
-- **[fix]** The Sky Dock crates carry Vocath's mark
-  Ruled (STAGING round 8). This page lists "the Passage marks on the Sky Dock crates" as colony work. Change to: "The crates at the Sky Dock carry Vocath's mark, the eye in a wheel." factions/vocath-operation.html and dossiers/vocath.html already say so and stand.
-  src: Korey, 2026-10-25 (round 8); factions/vocath-operation.html
+### opposition/vthorama.html
 
 - **[decide]** What the surface attack at graduation is made of *(prep)*
   The page has "security diverted by the surface operation" while Joffrey runs the Brig, and names nothing in that operation. The early plan collapsed the module's two finale events into one: the attack hits during the ceremony, a battle across the school. It ported these module pieces: Mustaf Shultz and his giff mercenaries, a decapitation threat, Miken at 2 HP, Wizpop's return (now Ostekk-6), and the transmutation sigil as Vocath's eye-in-a-wheel. Qitru and her githyanki have since moved to H'Catha. Vocath is a merchant, no fighter, and stays out of the siege himself (settled: chat-cosmic-campaign-structure § Act 1 retrofit), so whoever leads the surface operation is hired or his crew. Pick which pieces stay, and write the surface operation into the Brig run section.
-  Touches: campaign/colony/index.html (the Brig run), campaign/spine.html (Arc 1 close), factions/vocath-operation.html, dossiers/miken.html.
+  Touches: opposition/vthorama.html (the run, the Fork; the page names "the surface attack" and nothing more), campaign/spine.html (Arc 1 close), factions/vocath-operation.html, dossiers/miken.html.
   src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300); dossiers/qitru.html
-
-- **[fix]** World-status table: opening and linking
-  The table makes an entrance-found world without a Monolith "enterable and unlinkable". That matches the ruling (any heart can be opened; linking needs a Monolith on both worlds). Keep it, and align the wording with STAGING § Hearts, Atria and Monoliths.
-  src: Korey, 2026-10-25 (round 2)
-- **[fix]** Clint went overboard
-  Page says "Clint seized the boarders' craft and broke away with it to pull the pursuit off the Crow". Canon: Clint Dashforest went overboard in the Bellwether Crow ambush, and the psychic wind carried him to Fonains. Rewrite the line.
-  src: memory-canon open-decisions (operative resolved); campaign-canon § Naming (Astral Sea travel); timeline "The Bellwether Crow ambushed"
-  check (resolve pass): chat-organizing-framework § Superseded and chat-cosmic-campaign-structure § Tetherbreak (final canon) both record "went overboard → seized the boarders' craft". Confirm with Korey (same check as on factions/vocath-operation.html).
-  updated (round 4): superseded. Clint went through a color pool on purpose, drawing the boarders off; write it from STAGING § Clint Dashforest and the Bellwether Crow.
-
-- **[fix]** Heart entrance term
-  Page says "Atrium"/"Atria" throughout How they work, World status, State A and The race. Apply the Aperture/Atrium ruling under opposition/vecna.html.
-
-- **[add]** Succession: taking the doorkeepers
-  Add to How they work: N'ghathrod's parallel objective is taking key individuals who control access to a heart, so the doors are already open when the residue arrives. He takes people who can rise into positions of control, never crowds, and installs them as figures on worlds to prepare for when he holds the artifacts. Denying him the artifacts is a setback, not a shutdown.
-  src: memory-canon open-decisions (constraints line; Taken King line); chat-cosmic-campaign-structure § Succession and taking as missions
-
-- **[add]** Takings surface as mundane missions
-  Add as mission seeds: a missing person who comes back fine but wrong; someone who never takes off their gloves; three officials who all arrived the same year.
-  src: chat-cosmic-campaign-structure § Succession and taking as missions
-
-- **[add]** Who the colony is
-  Add: he takes people of position; the outcast and the downtrodden form the colony's body.
-  src: chat-cosmic-campaign-structure § The taking
-
-- **[add]** Steered toward Seekers
-  Add: N'ghathrod is steered toward Seeker chapter members who got close to heart information. His taking them is their ascension.
-  src: chat-cosmic-campaign-structure § Vecna's following; factions/seekers.html (fourth dial)
-
-- **[add]** The Crow survivor who noticed
-  Add to The Tetherbreak engagement, qualifying "The survivors believe every word of it": one clean, confused survivor noticed Joffrey change and never reported it. The crew finds that survivor by pulling the Crow's roster.
-  src: memory-canon open-decisions (operative resolved)
 
 ---
 
@@ -1379,7 +1324,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   src: memory-canon campaign-canon § Antagonists (H'Catha layout), § Naming (approach to H'Catha)
 
 - **[fix]** The Fork lives on Colony Operations
-  Page says "see Remaking → Fork" and "See the Remaking: two thieves in the same chaos". Repoint both to `campaign/colony/`.
+  Page says "see Remaking → Fork" and "See the Remaking: two thieves in the same chaos". Repoint both to `opposition/vthorama.html#fork`.
   src: chat-cosmic-campaign-structure § Superseded
 
 - **[fix]** Thread status lives in the record
@@ -2651,7 +2596,7 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 - **[add]** Dry Well, Anadia (Grade IV)
   The settlements of Dunmarrow and Kesh Hollow share a water compact four generations old. Elder Tobb Ashlow of Dunmarrow took payment from surveyors to deepen the well; Neth Kesh speaks for Kesh Hollow. Below the well is a chamber holding the eye-in-a-wheel and the bodies of four missing labourers. The surveyors were a tall, quiet woman and a talkative man; a child's drawing of them has their eyes wrong; they went inland toward the ranges.
-  DM: the chamber is a failed survey for the heart's Atrium, and Tumak's runes surface there. Link to Colony Ops "How they search" (colony/index.html, Anadia well). locations/realmspace.html names Dunmarrow and Kesh Hollow on Anadia, and Lane Marker 14 on the Toril–Garden lane (section 3).
+  DM: the chamber is a failed survey for the heart's Atrium, and Tumak's runes surface there. Link to Opposition: the Vth'orama "How they search" (opposition/vthorama.html#search, Anadia well). locations/realmspace.html names Dunmarrow and Kesh Hollow on Anadia, and Lane Marker 14 on the Toril–Garden lane (section 3).
   src: chat-cosmic § Graduation board contracts; colony/index.html (Anadia well)
 
 - **[add]** Repossession (Grade IV)

@@ -145,7 +145,7 @@ the player side.
 | `realms/sys04.html` | `locations/krynnspace.html` |
 | `realms/aethris.html` (system page) | `locations/aethris.html`, the world page with its system as a section |
 | `campaign/ascension/index.html` | `opposition/vecna.html` (Vecna's working, the eye, Oerth) |
-| `campaign/colony/index.html` | `opposition/colony.html` |
+| `campaign/colony/index.html` | `opposition/vthorama.html` |
 | `campaign/spine.html` | `campaign/index.html` |
 | `factions/academy-fleet.html` | `factions/fleet.html` |
 | `artifacts/runekeepers-fragment.html` | `artifacts/dissolution-fragment.html` |
@@ -292,6 +292,10 @@ Old path → new path, added by each pull request that moves a page.
 | `prime/artifacts/atlas.html#surveyor-depths` | `prime/artifacts/atlas.html#reading-depths` | Artifacts and vessels (artifacts) |
 | `prime/rules/index.html#counter-spore` | `prime/artifacts/faelight-spore.html` | Artifacts and vessels (artifacts) |
 | `prime/campaign/plot-hooks.html#world-surveyor-thread` | `prime/campaign/plot-hooks.html#atlas-thread` | Artifacts and vessels (artifacts) |
+| `prime/campaign/colony/index.html` | `prime/opposition/vthorama.html` | Campaign (campaign) |
+| `prime/campaign/colony/index.html#vocath-op` | `prime/opposition/vthorama.html#caelestis-operation` | Campaign (campaign) |
+| `prime/campaign/colony/index.html#academy-op` | `prime/opposition/vthorama.html#caelestis-operation` | Campaign (campaign) |
+| `prime/campaign/colony/index.html#tetherbreak` | `prime/vessels/bellwether-crow.html` | Campaign (campaign) |
 
 ## Stale branches
 

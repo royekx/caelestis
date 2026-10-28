@@ -85,10 +85,6 @@ when a ruling changes; delete it once the page carries it. See
 - The stations differ with the local ecology of their place: what drifts there, what lives there, what threatens it. Their crews are drawn from the sector that keeps them. Readings from the stations pass between the sectors; this is how a disturbance seen at one edge reaches another.
 - done: factions/fleet.html and the glossary lines for sector, the Caelestis Sector, Corps, Academy, the Bridge and the FIA (section 2); locations/ondrel-anchorage.html, locations/strake-station.html and locations/caelestis.html (section 3). Still waiting: the FIA's account of the Fleet on restricted/.
 
-### Vocath's crew (campaign/colony/; done on factions/vocath-operation.html, section 2)
-- The crates at the Sky Dock carry Vocath's mark, the eye in a wheel.
-- done: Qitru and the A.T.L.A.S. sister line are on factions/vocath-operation.html.
-
 ## Campaign
 
 ### The theme (campaign/spine.html, hub.html)
@@ -110,13 +106,6 @@ when a ruling changes; delete it once the page carries it. See
 - Through opened Rykoe lies the way into Continuity itself, into the workings of reality. Whoever reaches it can push and pull the Axioms and remake reality. That is what Vecna seeks, and what the beings working the other galaxies seek.
 - A galaxy's core can be woken, but there is no one way to do it. Vecna, an archmage older than his godhood, does it with spellwork: an inscription, a figure drawn in linked heart worlds across the galaxy. The beings working the other galaxies have their own methods. World hearts link only to worlds in their own galaxy; only a woken core reaches beyond it.
 - Vecna works GAL-01's core. In each of the other galaxies, another being works its own core toward the same end. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and what happens in GAL-01 decides them.
-
-### N'ghathrod now (campaign/colony/, dossiers/nghathrod.html)
-- N'ghathrod is working now on all four parts of his plan: planting the taken in key positions, finding hearts, opening them, and seeking links.
-- Vth'oramu is hunkered down on the periphery, in the dark between systems. It works as a mothership: skiffs go out from it to the worlds in that vicinity, and it stays where no one looks. (done: vessels/vthoramu.html, section 4.)
-- He has a broad set of target worlds in that vicinity. (DM: build each world's specifics as the crew nears it.)
-- By the time the crew graduates, his landed operations have begun to ripple outward at contract scale: taken in small positions, odd disappearances, a station or crew acting strangely. These are the first things the crew meets as Driftwardens. (DM: this is the shape of Arc 1 after graduation and the run into Arc 2.)
-- done: dossiers/nghathrod.html (section 5); campaign/colony/ still needs all four.
 
 ### Ilsevaine Corr, Aurel Venn and the strain on the Fleet (campaign/spine.html, NEW: Cosmos texture; done on dossiers/ilsevaine-corr.html and dossiers/aurel-venn.html, section 5)
 - Outside Realmspace, at the edge of a system or between systems, Ilsevaine Corr rules a hidden polity that Caelestis does not know of. She has noticed more traffic than usual near her borders, and once something large brushed the edge of her sight and was gone. She keeps watch for it. Once N'ghathrod grows bolder, she will face Vth'oramu. (DM touchstone: Mara Sov.)
@@ -147,7 +136,7 @@ when a ruling changes; delete it once the page carries it. See
 - done: the capture, the experiments, the seventh piece and the escape are on artifacts/rod-of-seven-parts.html and vessels/thessalars-craft.html (section 4). dossiers/nghathrod.html carries them (section 5); the timeline and rules/ still need them.
 - If N'ghathrod's true body dies, the taken do not die. Part of him lives on in each of them. His lieutenants are closest to him; each rung down the colony is further away. Given enough time, one of them could grow toward becoming another N'ghathrod. The taken lose a part of themselves when he dies.
 
-### Clint Dashforest (campaign/colony/, timeline; done on dossiers/clint.html, section 5, and on factions/fleet.html and factions/vocath-operation.html, section 2, on locations/cairn-station.html, locations/astral-sea.html and the chart, section 3, and on vessels/bellwether-crow.html and artifacts/atlas-sister.html, section 4)
+### Clint Dashforest (timeline; done on dossiers/clint.html, section 5, and on factions/fleet.html and factions/vocath-operation.html, section 2, on locations/cairn-station.html, locations/astral-sea.html and the chart, section 3, and on vessels/bellwether-crow.html and artifacts/atlas-sister.html, section 4)
 - Vocath's crew ambushed the Bellwether Crow for a sister artifact of A.T.L.A.S. that the Crow was carrying. Clint took it and left the ship to draw the boarders off.
 - He steered for a color pool he could see opening, and went through it on purpose. Color pools open and close quickly, and this one carried him through a small pocket of another dimension and spat him out on Fonains, separated from the boarders who followed him in.
 - The Crow's survivors still argue about whether he meant to go through. He did.

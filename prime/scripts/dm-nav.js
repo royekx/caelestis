@@ -99,8 +99,8 @@
         { key: 'campaign',  label: 'Campaign',      path: 'campaign/'   },
         { key: 'spine',     label: 'Spine',         path: 'campaign/spine.html',   indent: true },
         { key: 'what-if',   label: 'What If',       path: 'campaign/what-if.html', indent: true },
-        { key: 'colony',    label: 'Colony',        path: 'campaign/colony/'    },
-        { key: 'becoming',  label: 'Vecna',         path: 'opposition/vecna.html' },
+        { key: 'vecna',     label: 'Vecna',         path: 'opposition/vecna.html',    indent: true },
+        { key: 'vthorama',  label: "Vth'orama",     path: 'opposition/vthorama.html', indent: true },
         { key: 'timeline',  label: 'Timeline',      path: 'timeline/'   },
       ]
     },
@@ -206,15 +206,15 @@
 
   // ── Active state ──────────────────────────────────────────────────────────
   // Active-state: match each section's full path against the current URL and
-  // pick the MOST SPECIFIC (longest) match, so /campaign/colony/ highlights
-  // The Remaking, not its parent Campaign.
+  // pick the MOST SPECIFIC (longest) match, so /campaign/voyages/ highlights
+  // Voyages, not its parent Campaign.
   (function () {
     var links = Array.prototype.slice.call(
       document.querySelectorAll('.side-nav-link[data-section]')
     );
     var best = null, bestLen = -1;
     links.forEach(function (link) {
-      var p = link.dataset.path;          // e.g. "campaign/colony/"
+      var p = link.dataset.path;          // e.g. "campaign/voyages/"
       if (!p) return;
       // Normalize: strip trailing index.html if present in the URL.
       var here = pathname;

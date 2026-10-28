@@ -136,7 +136,7 @@
     },
     {
       "pattern": "\\bthe Remaking\\b",
-      "use": "Vecna's working (opposition/vecna.html) or Colony Operations (campaign/colony/)",
+      "use": "Vecna's working (opposition/vecna.html) or the Vth'orama's operations (opposition/vthorama.html)",
       "i": true
     },
     {
@@ -305,6 +305,11 @@
       "use": "Starchild (Astra Virex's warlocks are Starchildren)"
     },
     {
+      "pattern": "Colony Operations",
+      "use": "Opposition: the Vth'orama (opposition/vthorama.html)",
+      "i": true
+    },
+    {
       "pattern": "\\bOSTEKK-[0-9]",
       "use": "Ostekk-n (the record's spelling: Ostekk-6, Ostekk-2, Ostekk-10)"
     }
@@ -462,6 +467,10 @@
     {
       "old": "#counter-spore",
       "new": "artifacts/faelight-spore.html"
+    },
+    {
+      "old": "campaign/colony/",
+      "new": "opposition/vthorama.html"
     },
     {
       "old": "world-surveyor-thread",

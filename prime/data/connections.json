@@ -2022,7 +2022,7 @@
         },
         {
           "t": "Tadpoles pay for everything the colony does, and a crate destroyed in transit costs months of placements.",
-          "src": "campaign/colony/index.html"
+          "src": "opposition/vthorama.html"
         },
         {
           "t": "Qualith is the only writing the colony counts as real.",
@@ -2205,7 +2205,7 @@
         },
         {
           "t": "She made the arrangement with Vocath about a year before the crew's first voyage.",
-          "src": "campaign/colony/index.html"
+          "src": "opposition/vthorama.html"
         },
         {
           "t": "Joffrey is her instrument on Caelestis.",
@@ -2420,7 +2420,7 @@
       "facts": [
         {
           "t": "The thefts, the sabotage plates, the leverage on Miken and the marked crates at the Sky Dock are Vocath's work.",
-          "src": "campaign/colony/index.html"
+          "src": "opposition/vthorama.html"
         },
         {
           "t": "Vocath's crew took Cairn Station after it went dark and waited for the relief run.",
@@ -2519,15 +2519,15 @@
         },
         {
           "t": "His reports to Vocath have never contained a lie; he withholds only that A.T.L.A.S. is the point.",
-          "src": "campaign/colony/index.html"
+          "src": "opposition/vthorama.html"
         },
         {
           "t": "He found the Brig and told Vocath it was there.",
-          "src": "campaign/colony/index.html"
+          "src": "opposition/vthorama.html"
         },
         {
           "t": "He means to take A.T.L.A.S. from the Brig under cover of the graduation chaos.",
-          "src": "campaign/colony/index.html"
+          "src": "opposition/vthorama.html"
         },
         {
           "t": "He was top of his class and is named the present-day great spelljammer of Caelestis.",
@@ -2573,7 +2573,7 @@
       "facts": [
         {
           "t": "The Bellwether Crow was sent to learn why Cairn Station had stopped answering.",
-          "src": "campaign/colony/index.html"
+          "src": "opposition/vthorama.html"
         },
         {
           "t": "It was carrying A.T.L.A.S.'s sister when Vocath's crew ambushed it.",
@@ -2581,7 +2581,7 @@
         },
         {
           "t": "The second boarding killed the senior deck officers and most of the complement.",
-          "src": "campaign/colony/index.html"
+          "src": "opposition/vthorama.html"
         },
         {
           "t": "Its survivors still argue about whether Clint meant to go through the color pool.",
@@ -2610,7 +2610,7 @@
         },
         {
           "t": "Joffrey was taken in the second action.",
-          "src": "campaign/colony/index.html"
+          "src": "opposition/vthorama.html"
         },
         {
           "t": "In the Fleet, a crew member who leaves the ship to fight for it and does not come back has gone overboard.",
@@ -2844,7 +2844,7 @@
       "facts": [
         {
           "t": "The archive records the Cairn silence and the Crow's ambush and connects neither.",
-          "src": "campaign/colony/index.html"
+          "src": "locations/cairn-station.html"
         }
       ]
     },
@@ -2898,7 +2898,7 @@
         },
         {
           "t": "By the crew's graduation the colony's work ripples outward at contract scale: taken in small positions, disappearances, a station acting strangely.",
-          "src": "campaign/colony/index.html"
+          "src": "opposition/vthorama.html"
         }
       ]
     },
@@ -3132,7 +3132,7 @@
         },
         {
           "t": "He is uninvolved in the run on the Brig.",
-          "src": "campaign/colony/index.html"
+          "src": "opposition/vthorama.html"
         }
       ]
     },
@@ -6652,7 +6652,7 @@
       "s": "zhauveth",
       "t": "NPC-Mw6kT2vn",
       "rel": "made the arrangement with",
-      "src": "campaign/colony/index.html"
+      "src": "opposition/vthorama.html"
     },
     {
       "s": "zhauveth",
@@ -6772,7 +6772,7 @@
       "s": "NPC-Mw6kT2vn",
       "t": "the-brig",
       "rel": "targets",
-      "src": "campaign/colony/index.html"
+      "src": "opposition/vthorama.html"
     },
     {
       "s": "qitru",
@@ -6838,7 +6838,7 @@
       "s": "NPC-Hs6cW9pM",
       "t": "atlas",
       "rel": "means to steal",
-      "src": "campaign/colony/index.html"
+      "src": "opposition/vthorama.html"
     },
     {
       "s": "NPC-Hs6cW9pM",
@@ -6898,7 +6898,7 @@
       "s": "vocath-operation",
       "t": "QST-9dK3wR7n",
       "rel": "is behind",
-      "src": "campaign/colony/index.html"
+      "src": "opposition/vthorama.html"
     },
     {
       "s": "vocath-operation",
@@ -6928,7 +6928,7 @@
       "s": "crow-ambush",
       "t": "bellwether-crow",
       "rel": "struck",
-      "src": "campaign/colony/index.html"
+      "src": "opposition/vthorama.html"
     },
     {
       "s": "crow-ambush",
@@ -6988,7 +6988,7 @@
       "s": "bellwether-crow",
       "t": "strake-station",
       "rel": "called at",
-      "src": "campaign/colony/index.html"
+      "src": "opposition/vthorama.html"
     },
     {
       "s": "tarroway",
@@ -7042,7 +7042,7 @@
       "s": "fia",
       "t": "crow-ambush",
       "rel": "records",
-      "src": "campaign/colony/index.html"
+      "src": "opposition/vthorama.html"
     },
     {
       "s": "LOC-Bf3xN6qT",
