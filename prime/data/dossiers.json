@@ -229,6 +229,12 @@
     ]
   },
   {
+    "slug": "vanifer",
+    "name": "Vanifer",
+    "path": "dossiers/vanifer.html",
+    "records": []
+  },
+  {
     "slug": "vecna-lich",
     "name": "Vecna (Lich)",
     "path": "dossiers/vecna-lich.html",

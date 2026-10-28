@@ -168,6 +168,13 @@
 
     // ── Fonains ──
     'aerisi':        { name: 'Aerisi Kalinoth',     fileId: '' },
+    'asmodus':       { name: 'Asmodus',             fileId: '' },
+    'benedetta':     { name: 'Benedetta',           fileId: '' },
+    'cenvinzo':      { name: 'Cenvinzo',            fileId: '' },
+    'dharra':        { name: 'Dharra',              fileId: '' },
+    'kevulan':       { name: 'Kevulan',             fileId: '' },
+    'rihiri':        { name: 'Rihiri',              fileId: '' },
+    'vanifer':       { name: 'Vanifer',             fileId: '' },
     'bastian-thermandar': { name: 'Bastian Thermandar', fileId: '' },
     'chloe-chespetes': { name: 'Chloe Chespetes',   fileId: '' },
     'cretez':        { name: "The Cre'Tez",         fileId: '' },

@@ -32,19 +32,19 @@ staging once Korey has read and accepted them.
 |---|---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 9 | 12 | 15 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 24 | 0 | 0 | 1 |
-| Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 3 | 9 | 9 | 0 | 14 |
+| Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 3 | 12 | 5 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
-| Factions | factions/ | 3 | 9 | 1 | 0 | 2 |
+| Factions | factions/ | 3 | 10 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 1 |
 | Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
-| New pages | 12 proposed pages, the hub, notes/ | 3 | 17 | 4 | 2 | 24 |
+| New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 4 | 2 | 24 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** |  | **101** | **136** | **69** | **3** | **68** |
+| **Total** |  | **101** | **142** | **65** | **3** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -587,32 +587,9 @@ Order under each heading: decide, fix, drop, add.
   The timeline's S16 has Granny take in "the Trintar refugees". Whether Trintar is Trentara (refugees from the Monolith's ruins) or another place is not set; the page keeps the table's word.
   src: timeline.json S16; section 8 (C11)
 
-- **[add]** The voice that reached Vanifer
-  "A Seeker chapter was the voice that reached Vanifer. It traded her the lost meaning of the Alpha and the secret in the Cre'Tez blood."
-  src: memory-canon (open-decisions, Locked 2026-10-25); vecna § On Fonains; timeline "A Seeker chapter reaches Vanifer"
-
 ### Fonains doc
 
-The doc is current on names, the four keys, the cults, the party table, Krynn and the dragons, and Takhisis being Tiamat. Items below cover what is stale or missing. done (section 8): the world-level items (timing, the divine gate as polarity, Vecna as a god, the keys and cults, the Haunted Keeps, Bastian, the neothelid hook, the time device, the table spellings) are on locations/fonains.html; the doc itself still needs a refresh (the later under # New pages). Kwalish's laboratory, Daoine Gloine and the teleportation fields are on vessels/thessalars-craft.html (section 8).
-
-- **[fix]** The Cre'Tez father is Cenvinzo
-  Ruled (STAGING round 8). Use "Cenvinzo" everywhere; the foundry notes' "Vinbenzo" (§ Reveal) is a slip. Write:
-  "Cenvinzo, head of the Cre'Tez, is barely alive, a shadow of himself. He is held captive somewhere, bound to Vanifer."
-  This also settles the old question of whether Vanifer killed her father: she did not.
-  src: Korey, 2026-10-25 (round 8); cretez-foundry-notes § Parents, § Reveal
-
-- **[fix]** Rihiri is a sister
-  Ruled (STAGING round 8). The notes' "Rihiri (12M)" is a slip. Write Rihiri as a sister throughout the doc.
-  src: Korey, 2026-10-25 (round 8); cretez-foundry-notes § Siblings
-
-- **[fix]** Darra
-  Ruled (STAGING round 8): the spelling is Darra, and she is a sister. Change the notes' "Dharra" and the timeline's "Dara" everywhere: the doc, the S18 event ("Dara and Rahiri freed" becomes "Darra and Rihiri freed"), and the adds below.
-  src: Korey, 2026-10-25 (round 8); cretez-foundry-notes § Siblings; timeline.json
-
-- **[fix]** Kevulan's birthright
-  Ruled (STAGING round 8). Replace the notes' "subject to change" with:
-  "Kevulan first willed his birthright to Asmodus, then rescinded it and willed it to Xero."
-  src: Korey, 2026-10-25 (round 8); cretez-foundry-notes § Reveal
+The doc is current on names, the four keys, the cults, the party table, Krynn and the dragons, and Takhisis being Tiamat. Items below cover what is stale or missing. done (section 8): the world-level items (timing, the divine gate as polarity, Vecna as a god, the keys and cults, the Haunted Keeps, Bastian, the neothelid hook, the time device, the table spellings) are on locations/fonains.html; the doc itself still needs a refresh (the later under # New pages). Kwalish's laboratory, Daoine Gloine and the teleportation fields are on vessels/thessalars-craft.html, and the Cre'Tez fixes and adds (Cenvinzo, Rihiri and Dharra as sisters, Kevulan's birthright, Benedetta, the siblings, the crest, the Bloodstones and inheritances, Vanifer's secrets and plan, the voice) are on factions/cretez.html and dossiers/vanifer.html (section 8). The spelling is Dharra, as in the foundry notes, STAGING and terms.json; round 8's "Darra" was a slip.
 
 - **[later]** Seldra's gem-thief boss
   Options: keep Makedon; or Mack Francache, a wererat sent by Moghadam (the module).
@@ -642,59 +619,21 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
   Ruled (STAGING round 8): the Pedra Ardente is a gem, and Finerva is Vanifer under another name. The place was already answered as the Blooming Glass (see dossiers/clint.html). Use these spellings everywhere (doc, dossier, timeline): the Blooming Glass; the Pedra Ardente; Finerva. Change the timeline's "Pedra Ardante" and "Fernerva" and the dossier's "Fenerba". Write in the doc:
   "Vanifer posted the Blooming Glass bounty under the name Finerva, for the eldest Cre'Tez brother. The Pedra Ardente, the gem Clint's crew recovered there, went to her."
   src: Korey, 2026-10-25 (round 8); dossiers/clint.html; timeline.json; memory-canon (Fonains canon 2026-10-25)
-  done: dossiers/clint.html (section 5); the timeline and the Fonains doc still need it (terms.json now flags "Pedra Ardante" and "Fernerva").
+  done: dossiers/clint.html (section 5); factions/cretez.html and dossiers/vanifer.html (section 8). The timeline and the Fonains doc still need it (terms.json now flags "Pedra Ardante" and "Fernerva").
 
-- **[add]** Benedetta
-  "Benedetta was Cenvinzo's wife and the mother of the younger Cre'Tez siblings. She fell ill at Rihiri's birth, about twelve years ago, and died two years later, about ten years ago."
-  src: cretez-foundry-notes § Parents; session-rulings; timeline decisions
+### factions/cretez.html, dossiers/vanifer.html
 
-- **[add]** The Cre'Tez siblings
-  Eldest first: Vanifer (35, a half-sister by the same father), Asmodus (31), Kevulan (22), Xero (18), Lusion (16), Darra (14), Rihiri (12). Vanifer raised most of the younger ones after Benedetta died. Kevulan follows Asmodus like a lackey and carries a regal air.
-  src: cretez-foundry-notes § Siblings
+- **[later]** Where Cenvinzo is held
+  He is barely alive, held captive somewhere and bound to Vanifer. Where is not set; both pages carry it as a Still to decide sentence.
+  src: STAGING § The Cre'Tez (round 8)
 
-- **[add]** The crest
-  The Cre'Tez crest combines the symbols of Asmodeus and the eternal flame.
-  src: cretez-foundry-notes § Clues
+- **[later]** Vanifer's mother, and the Pedra Ardente in her plan
+  Vanifer's mother is not named, and what the Pedra Ardente does for her (the bounty was "for the eldest brother") is not set.
+  src: cretez-foundry-notes; dossiers/clint.html; section 8
 
-- **[add]** Bloodstones
-  "Each Cre'Tez heir receives a Bloodstone at birth. It is bound to the heir's soul, imprinted with the souls of mother and father, and proves the birthright."
-  src: cretez-foundry-notes § Inheritance, § Reveal
-
-- **[add]** The Alpha Inheritance
-  "The Alpha is a battle royale between the heirs. The winner inherits the birthright of each heir defeated. The Bloodstones judge when a soul truly concedes, which usually happens only at death."
-  src: cretez-foundry-notes § Inheritance
-
-- **[add]** The Beta Inheritance
-  "For five generations the family has used the Beta instead: heirs concede their birthrights to one designee. It can be contested if the heirs are not unanimous or the head objects, and then any heir may invoke the Alpha, which runs until every birthright has conceded."
-  src: cretez-foundry-notes § Inheritance
-
-- **[add]** Who invokes
-  "Only the head of the family can invoke an inheritance, except through the head's own objection. If the head dies first, both rituals invoke at once."
-  src: cretez-foundry-notes § Inheritance
-
-- **[add]** Vanifer's secret (hidden)
-  "Vanifer has no birthright, because her mother was not Benedetta. She made an illegitimate Bloodstone by slowly siphoning Benedetta's soul, and the siphoning killed Benedetta."
-  src: cretez-foundry-notes § Reveal; session-rulings
-
-- **[add]** Asmodus's memory (hidden)
-  "Asmodus learned that Vanifer killed their mother. She modified his memory so he believes the younger siblings' births wore Benedetta out, which turned him against them. Kevulan witnessed part of their fight."
-  src: cretez-foundry-notes § Reveal
-
-- **[add]** The Alpha is invoked (hidden)
-  "Vanifer tried to make her father concede to her. He invoked the Alpha instead, locking them both out of the inheritance."
-  src: cretez-foundry-notes § Reveal; timeline "The Alpha is invoked"
-
-- **[add]** The phoenix dreams (hidden)
-  "Vanifer sends Asmodus dreams in Benedetta's likeness, promising that the inheritance will release a phoenix and raise his mother. She leads the fire cult, which plays along and treats him as a prophet. The voice told Vanifer that Imix, a phoenix, would cleanse the world of transgressors like her father. Imix's true goal is to burn everything."
-  src: cretez-foundry-notes § Reveal
-
-- **[add]** Rihiri and Kevulan
-  "Asmodus stabbed Rihiri. She survived, and Darra got her out. Kevulan fled, then tracked Lola's Boys after hearing of the heroes of the Monolith."
-  src: cretez-foundry-notes § Reveal; timeline "The Alpha is invoked"
-
-- **[add]** Vanifer's plan (DM)
-  DM voice: Vanifer waits to see who becomes heir so she can make them concede to her. With a unanimous vote she enters the Eternal Flame temple at night, rested. If she has to force a contested Beta, she flees into the temple at once.
-  src: cretez-foundry-notes § Timey Wimey Fudging
+- **[later]** Where the Eternal Flame temple stands
+  The temple that keeps Tinderstrike has no place on Fonains yet.
+  src: cretez-foundry-notes; timeline "Tinderstrike under guard"
 
 ### Timeline (Fonains lane)
 
@@ -715,7 +654,7 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
   src: memory-canon (open-decisions, Locked 2026-10-25)
 
 - **[fix]** Rihiri's spelling
-  The S18 event "Dara and Rahiri freed" spells "Rahiri". Change to "Rihiri", and "Dara" to "Darra" (see the fix above).
+  The S18 event "Dara and Rahiri freed" spells "Rahiri". Change to "Rihiri", and "Dara" to "Dharra" (the spelling in the foundry notes, STAGING and terms.json; round 8's "Darra" was a slip).
   src: session-rulings
 
 # Timeline
@@ -814,6 +753,10 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   src: chat-cosmic-campaign-structure § Open
 
 ---
+
+- **[later]** Register order
+  The Factions register is not in A–Z order (Fleet, Order, Runekeepers, Seekers, Vth'orama, Restorers, Vocath's crew, the Fortuned, then Deities), and PAGE-GUIDE § Registers asks for strict A–Z with the prev/next bars following. The Cre'Tez went in after the Fortuned, before Deities, to follow the page as it stands. Reorder the rows and rewire the chain, or write the page's order into PAGE-GUIDE.
+  src: section 8, 2026-10-28
 
 ### factions/fleet.html (was academy-fleet.html)
 
@@ -1787,6 +1730,18 @@ against the complete Tumak sweep (all 336 turns).
 - **[later]** Refresh or retire the Fonains doc
   Since section 8 the wiki carries Fonains: locations/fonains.html, factions/cretez.html, dossiers/vanifer.html and vessels/thessalars-craft.html. The doc's open fix and add items (# Fonains § Fonains doc) were written against it. In a chat session, either refresh the doc from the wiki pages or retire it and point to them.
   src: section 8 (Q1), 2026-10-28
+
+### NEW: Asmodus (dossier, later)
+
+- **[later]** A dossier for Asmodus Cre'Tez
+  He is a row on factions/cretez.html. He has a motive, a withheld truth (his modified memory) and a way he reacts to being pushed, so he earns a dossier when Fonains comes into play for the crew.
+  src: section 8 plan § 4
+
+### NEW: Lola's Boys (faction, later)
+
+- **[later]** A faction page for Lola's Boys
+  The party is a set of rows on locations/fonains.html. Give it a faction page when it acts in Caelestis, or when the rows outgrow the Fonains page.
+  src: section 8 plan § 4
 
 ### NEW: Player holochart
 

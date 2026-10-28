@@ -13,19 +13,12 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Fonains
 
-### Fonains and the planar craft (locations/fonains.html, Fonains doc)
-- N'ghathrod was already a prisoner aboard Thessalar's craft. Lola's Boys, sent back in time by the Accordance, took its control and defense gems; without them it fell, and in the fall he escaped. Their year 425 is the year of the crash, about five hundred years before now.
-- The craft is a megadungeon (the Mad Mage dungeon). Daoine Gloine is a broken-off piece of it. The Thessalkraken landed separately in the sea and is the Drowned God's kraken.
-- The craft's gems formed where Olhydra and Ogrémoch collided. They are not Reach residue.
-- Benedetta fell ill at Rihiri's birth, from Vanifer's slow siphoning for the Bloodstone, and died two years later.
-- done: vessels/thessalars-craft.html (section 4); dossiers/thessalar.html (section 5); locations/fonains.html (section 8). The Benedetta line still needs factions/cretez.html.
-
 ### The Princes (timeline, locations/fonains.html, Fonains doc, the Cre'Tez line)
 - Long ago, about twelve thousand years before now, the Princes of Elemental Evil rose on Fonains. The six gods of the Accordance stepped in, helped forge the four weapons, and sealed the Princes away with the weapons as their keys.
 - The fire genasi who became the Cre'Tez have guarded the fire key since that sealing.
 - About three and a half centuries ago a sect of the fire genasi tried to summon Imix. Asmodeus gave the few who resisted Tinderstrike to seal him again, and bound the key to their blood; the price was that Imix be forgotten. Over the generations since, the line has turned tiefling.
 - About five hundred years ago Thessalar's planar craft crashed on Fonains, and Tharizdun's influence arrived with the temple aboard it. It spread slowly through the world and into new cults. Those cults raised the four prophets, and in recent years everything has begun to move.
-- done: locations/fonains.html (section 8). The Cre'Tez line still needs factions/cretez.html, and the timeline its Princes lane.
+- done: locations/fonains.html and factions/cretez.html (section 8). The timeline still needs its Princes lane.
 
 ### The elder brain (locations/fonains.html, timeline, dossiers/nghathrod.html)
 - N'ghathrod's elder brain was separated from him in the crash. He believed it dead, or could not reach it. It lay trapped beneath the Barrier Peaks for about five hundred years, possibly growing a colony of its own, until Lola's Boys broke it in Session 27. It was buried in the collapse, but it teleported out and escaped.
@@ -34,12 +27,6 @@ when a ruling changes; delete it once the page carries it. See
 ### The Fonains shards (locations/fonains.html, artifacts/fonains-shard.html, timeline)
 - When the Monolith broke, four great shards fell, and many smaller shards came from them. Three hundred and thirty-three of the small shards are black. The rest took colors close to their elemental affinities.
 - done: artifacts/fonains-shard.html (section 4); locations/fonains.html (section 8). The timeline still needs it.
-
-### The Cre'Tez (factions/cretez.html, dossiers/vanifer.html, Fonains doc)
-- The Cre'Tez father is Cenvinzo. He is barely alive, a shadow of himself, held captive somewhere and bound to Vanifer.
-- Rihiri and Dharra are sisters.
-- Finerva is Vanifer under another name. The Pedra Ardente is a gem.
-- Kevulan first willed his birthright to Asmodus (his sibling, not the archdevil), then rescinded it and willed it to Xero.
 
 ### Fonains geography (locations/fonains.html, Fonains doc; section 8)
 - T'Arionese is a region of Fonains. Orerius is in T'Arionese. The Cre'Tez estate is in Orerius, and it is the home of the Cre'Tez siblings (Xero, Lusion, Vanifer and the others). Clint works bounties out of Orerius, and Finerva (Vanifer) posted the Blooming Glass bounty there for the Cre'Tez.
