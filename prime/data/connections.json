@@ -2410,7 +2410,7 @@
           "src": "dossiers/vocath.html"
         },
         {
-          "t": "His mark is a private house mark.",
+          "t": "His mark is a private house mark: a balance scale, coins against cargo.",
           "src": "STAGING round 8"
         },
         {
@@ -2468,7 +2468,7 @@
       "summary": "Vocath's private house mark.",
       "facts": [
         {
-          "t": "Vocath's house mark is his own merchant mark, so the Fleet registry has no entry for it.",
+          "t": "Vocath's house mark is a balance scale with coins on one pan and cargo on the other; it is his own merchant mark, so the Fleet registry has no entry for it.",
           "src": "factions/vocath-operation.html"
         },
         {

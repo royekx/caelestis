@@ -294,15 +294,6 @@ body::before {
 .rx-md  { min-width: 70px; }
 .rx-lg  { min-width: 90px; }
 .rx-xl  { min-width: 130px; }
-.rx-block {
-  display: block;
-  background: #1a1208;
-  color: #1a1208;
-  height: 1.1rem;
-  border-radius: 1px;
-  margin: 0.35rem 0;
-  user-select: none;
-}
 
 .doc-quote {
   border-left: 2px solid rgba(26,18,8,0.2);
@@ -423,7 +414,7 @@ body::before {
   padding: 0.8rem;
   border: 1px solid rgba(26,18,8,0.12);
 }
-.rx-block.sigil-redaction { width: 90px; height: 90px; margin: 0 auto 0.5rem; }
+.sigil-drawing { display: block; margin: 0 auto 0.4rem; }
 .sigil-caption {
   font-family: 'Cinzel', serif;
   font-size: 0.54rem;
