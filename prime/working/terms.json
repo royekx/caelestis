@@ -113,8 +113,12 @@
       "i": true
     },
     {
+      "pattern": "\\bRykoe Galaxy\\b",
+      "use": "the Erevos Galaxy (GAL-01 is named for its core, Erevos; Rykoe is the centre of the cosmos)"
+    },
+    {
       "pattern": "\\bFirst World\\b",
-      "use": "the Reach world, now Erevos"
+      "use": "the Reach world, now Rykoe"
     },
     {
       "pattern": "Mother of the Universe",

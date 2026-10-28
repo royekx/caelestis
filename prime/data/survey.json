@@ -295,11 +295,11 @@
   "galaxies": [
     {
       "id": "GAL-01",
-      "name": "Rykoe Galaxy",
+      "name": "Erevos Galaxy",
       "home": true,
       "game": "D&D 5e",
       "core": "One link, between two worlds in one system (the little-charted planet).",
-      "core_name": "Rykoe"
+      "core_name": "Erevos"
     },
     {
       "id": "GAL-02",

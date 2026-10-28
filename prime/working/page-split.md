@@ -24,7 +24,7 @@ links to the others for the rest.
 
 | Page | Job | Vecna there |
 |---|---|---|
-| **Cosmology** (finished) | how the cosmos works | how cores wake, inscriptions, Erevos, the eye as a working |
+| **Cosmology** (finished) | how the cosmos works | how cores wake, inscriptions, Rykoe, the eye as a working |
 | **Vecna's dossier** | the person | who he is, what he wants, what's hidden, how to run him |
 | **Opposition: Vecna** | his lane through this campaign | where the working stands, his contingencies, the reveal ladder, the failure state |
 | **Campaign** | the whole story, all forces | the theme, the shape, the arcs; one or two sentences on Vecna, linked |
@@ -77,8 +77,8 @@ cells and arcs the subject appears in, as links.
 - To understand the cosmos and become part of it: where everything came from,
   what the Reach was, what was taken. His grievance: something was taken from
   him and hidden from him. He believes he could repair whatever breaks.
-- His aim is the Axiomic Ascension: through opened Erevos, into Continuity.
-  His method is the eye inscription across the Rykoe Galaxy, which he calls the
+- His aim is the Axiomic Ascension: through opened Rykoe, into Continuity.
+  His method is the eye inscription across the Erevos Galaxy, which he calls the
   Circle of Fifths. Two or three sentences here, linking to Cosmology § Vecna's
   working for how it works.
 
@@ -114,7 +114,7 @@ cells and arcs the subject appears in, as links.
   name Vecna surfaces through lore (a figure missing his left eye and left
   hand) → Lich Vecna in the Citadel.
 - **Failure state:** GAL-01's core wakes for him; GAL-03 to GAL-05 fall;
-  Erevos can open, and every linked heart becomes a door.
+  Rykoe can open, and every linked heart becomes a door.
 - **DM notes:** what is still to decide about his lane.
 
 ### Campaign (`campaign/index.html`)

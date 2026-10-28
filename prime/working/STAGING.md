@@ -6,6 +6,11 @@ facts are written in-world; rules and play notes in DM voice. Rewrite an entry
 when a ruling changes; delete it once the page carries it. See
 [README.md](README.md) for the flow and the writing rules.
 
+## Cosmology
+
+### Naming: Rykoe and Erevos (cosmology/, glossary/, chart/, survey; done everywhere)
+- Rykoe is the centre of the cosmos: the remains of the Reach world, the black hole beneath the Core Monolith and the Radiant Citadel, around which the five galaxies lie, and which opens only when all five cores wake. The First Heart lies beneath Rykoe. Erevos is the black hole at the core of GAL-01, and the galaxy is named for it: the Erevos Galaxy. (Korey 2026-10-28: the two names swapped. done: every page, the survey, the chart, connections.json; "Rykoe Galaxy" is a retired term.)
+
 ## Realms
 
 ### Oerth (realms/oerth, cosmology/, chart/)
@@ -67,7 +72,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ### Vecna (realms/oerth; done on opposition/vecna.html, dossiers/vecna.html, factions/seekers.html and factions/deities.html)
 - Vecna's godhood is complete. He ascended on Oerth, his homeworld, a darkest-timeline world where his hold is strongest; its Monolith is a holy site.
-- The Hand of Vecna, the Eye of Vecna and the Book of Vile Darkness exist in this cosmos. (DM: where each is, and whether any has reached Caelestis or the Rykoe Galaxy, is still to decide.)
+- The Hand of Vecna, the Eye of Vecna and the Book of Vile Darkness exist in this cosmos. (DM: where each is, and whether any has reached Caelestis or the Erevos Galaxy, is still to decide.)
 - Oerth is the world where Vecna became a god. His ritual to become a god pushed Oerth to its Zenith, and the Zenith made him one; the Monolith that answered archived his mortal form, Lich Vecna. That was his first ascension, the Godhood Ascension. The climb he is making now, into Continuity itself, is the Axiomic Ascension. Oerth is the Ascension World.
 
 ### Asmodeus and the Accordance (Fonains doc; done on factions/deities.html, section 2)
@@ -85,7 +90,7 @@ when a ruling changes; delete it once the page carries it. See
 - Neither sister knows what both of them need: each other. Luck and misfortune are two sides of one coin.
 
 ### Caelestis, the Driftwardens and the United Intergalactic Fleet (factions/fleet.html, factions/index.html, cosmology/, locations/, glossary/, restricted/)
-- The United Intergalactic Fleet, which everyone calls the Fleet, is made of a handful of sector branches, four or five. Each branch oversees one sector of the Rykoe Galaxy, a cluster of several systems, and keeps sites in its systems, near them, or between them. The branches work together and together make the Fleet.
+- The United Intergalactic Fleet, which everyone calls the Fleet, is made of a handful of sector branches, four or five. Each branch oversees one sector of the Erevos Galaxy, a cluster of several systems, and keeps sites in its systems, near them, or between them. The branches work together and together make the Fleet.
 - Caelestis is one of these sectors: the Caelestis Sector, which includes the system where Toril lies. It has two parts. The Caelestis Corps is the sector's branch of the Fleet and oversees the sector. The Caelestis Spelljammer Academy trains cadets to become Driftwardens; there are only a handful of spelljammer academies in the galaxy.
 - Everyone in the Fleet's service is a Driftwarden, assigned to a sector. Driftwardens hold ranks, from the newest graduate up through officers and commanders. A Driftwarden reports to the commander of their station; station commanders answer to the sector's command, and the sectors to the Fleet.
 - Each sector has stations at its systems or between them, each with a commander, and smaller satellites and waystations around them. Strake Station and its sister satellites belong to the Caelestis Sector. Fleet operations for the Caelestis Sector run out of Ondrel Anchorage on the moon Ostrel, a neutral port away from Toril. Captain Haymond Rolt works out of Ondrel, and the crew takes its Arc 2 contracts from there.
@@ -94,7 +99,7 @@ when a ruling changes; delete it once the page carries it. See
 - The sectors differ in character. Some are disciplined and naval; others take any work for the coin. The Fleet is not the law of the cosmos. It keeps a self-imposed order, and much of its work is mercantile because it holds the easiest routes: shipments, protection, carrying passengers, and transport for the Watchers.
 - Rank shows in gems or pins. Driftwardens otherwise wear what they like; seated officers at a station wear something closer to a uniform.
 - The sectors share information, but not all of it. Each keeps a good deal to itself, the way rival departments do. The Fleet Intelligence Archive is the Caelestis Sector's archive: it holds what Caelestis knows of its own sector and only some of what the others share.
-- The Order's Watchers are more organized than the sector branches. They keep to the Rykoe Galaxy, as the Fleet does, more densely in some places than others.
+- The Order's Watchers are more organized than the sector branches. They keep to the Erevos Galaxy, as the Fleet does, more densely in some places than others.
 - The stations differ with the local ecology of their place: what drifts there, what lives there, what threatens it. Their crews are drawn from the sector that keeps them. Readings from the stations pass between the sectors; this is how a disturbance seen at one edge reaches another.
 - done: factions/fleet.html and the glossary lines for sector, the Caelestis Sector, Corps, Academy, the Bridge and the FIA (section 2). Still waiting: Ondrel Anchorage and Strake Station on locations/, and the FIA's account of the Fleet on restricted/.
 
@@ -111,7 +116,7 @@ when a ruling changes; delete it once the page carries it. See
 ### Campaign shape (campaign/spine.html)
 - N'ghathrod is the main villain of the campaign, and stopping his invasion takes most of it. Vecna stands behind him and beyond the campaign's direct reach; the late campaign is about stopping Vecna's working, not necessarily fighting him. (DM: a confrontation could come with a part of him manifested in the First Heart.)
 - Vecna has contingencies. N'ghathrod is a means to an end: Vecna needs him to open and link hearts so that Vecna's vessels can pass through Atria. Getting N'ghathrod's five lieutenants through would make it certain; many lesser taken, grown over time through the colony's spread, could still get him there. Defeating N'ghathrod does not end the threat. (DM: a victory over him is never undone by fiat.) Other avenues, such as the Restorers' aims, can bring Vecna close again or only delay him.
-- The failure state is GAL-01's core waking for Vecna. It sets the fate of the other galaxies: if GAL-01 falls, GAL-03, GAL-04 and GAL-05 fall with it, and Erevos can open. Success in GAL-01 holds them, though work remains.
+- The failure state is GAL-01's core waking for Vecna. It sets the fate of the other galaxies: if GAL-01 falls, GAL-03, GAL-04 and GAL-05 fall with it, and Rykoe can open. Success in GAL-01 holds them, though work remains.
 - An awake core presses on its neighbours. GAL-02's presses on GAL-01's, and late in the campaign it can pull the crew into the eldritch galaxy, where the rules become Call of Cthulhu. What they do there is to get home, or to close what is open.
 - The Radiant Citadel and the Core Monolith are late Arc 3 or Arc 4 destinations. The crew reaches them by a long voyage or through a linked heart, both late-game.
 - The campaign scales outward the way a fantasy campaign grows from town to kingdom to realm: the early levels play at the scale of one system, then neighbouring systems, then the galaxy, and late in the campaign beyond it.
@@ -119,8 +124,8 @@ when a ruling changes; delete it once the page carries it. See
 - Arc 1 runs from level 1 to 4, Arc 2 from 5 to 10, Arc 3 from 11 to 15, and Arc 4 begins at 15.
 
 ### Vecna's working (cosmology/, glossary/, opposition/vecna.html, chart/)
-- Erevos opens only when the cores of all five galaxies are awake and joined: each core to its neighbours, and each to Erevos.
-- Through opened Erevos lies the way into Continuity itself, into the workings of reality. Whoever reaches it can push and pull the Axioms and remake reality. That is what Vecna seeks, and what the beings working the other galaxies seek.
+- Rykoe opens only when the cores of all five galaxies are awake and joined: each core to its neighbours, and each to Rykoe.
+- Through opened Rykoe lies the way into Continuity itself, into the workings of reality. Whoever reaches it can push and pull the Axioms and remake reality. That is what Vecna seeks, and what the beings working the other galaxies seek.
 - A galaxy's core can be woken, but there is no one way to do it. Vecna, an archmage older than his godhood, does it with spellwork: an inscription, a figure drawn in linked heart worlds across the galaxy. The beings working the other galaxies have their own methods. World hearts link only to worlds in their own galaxy; only a woken core reaches beyond it.
 - Vecna works GAL-01's core. In each of the other galaxies, another being works its own core toward the same end. GAL-02's core is awake. GAL-03, GAL-04 and GAL-05 are partway, and what happens in GAL-01 decides them.
 

@@ -6,7 +6,7 @@
       "label": "The Prime Continuum",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "All of existence, one thing with Continuity: every galaxy, the Astral Sea between, and Erevos at the center.",
+      "summary": "All of existence, one thing with Continuity: every galaxy, the Astral Sea between, and Rykoe at the center.",
       "facts": [
         {
           "t": "Continuity and the Prime Continuum are one thing: all of existence.",
@@ -17,7 +17,7 @@
           "src": "cosmology/index.html"
         },
         {
-          "t": "The cosmos is a collective of five galaxies arranged around Erevos at its center.",
+          "t": "The cosmos is a collective of five galaxies arranged around Rykoe at its center.",
           "src": "cosmology/index.html"
         }
       ]
@@ -274,14 +274,14 @@
       ]
     },
     {
-      "id": "erevos",
-      "label": "Erevos",
+      "id": "rykoe",
+      "label": "Rykoe",
       "type": "place",
       "scope": "cosmos",
       "summary": "The center of the cosmos: the remains of the Reach world, a black hole beneath the Core Monolith.",
       "facts": [
         {
-          "t": "Erevos is the remains of the Reach world, a black hole beneath the Core Monolith and the Radiant Citadel.",
+          "t": "Rykoe is the remains of the Reach world, a black hole beneath the Core Monolith and the Radiant Citadel.",
           "src": "STAGING round 9"
         },
         {
@@ -592,13 +592,13 @@
     },
     {
       "id": "gal-01",
-      "label": "The Rykoe Galaxy (GAL-01)",
+      "label": "The Erevos Galaxy (GAL-01)",
       "type": "place",
       "scope": "cosmos",
       "summary": "Caelestis's galaxy, home to Realmspace, Fonains and Krynn.",
       "facts": [
         {
-          "t": "The Rykoe Galaxy is named for Rykoe, the black hole at its core: the pupil of Vecna's eye.",
+          "t": "The Erevos Galaxy is named for Erevos, the black hole at its core: the pupil of Vecna's eye.",
           "src": "STAGING, Cosmology"
         },
         {
@@ -1618,10 +1618,10 @@
       "label": "The United Intergalactic Fleet",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "Four or five sector branches across the Rykoe Galaxy, under a council of admirals. Caelestis is one of its sectors.",
+      "summary": "Four or five sector branches across the Erevos Galaxy, under a council of admirals. Caelestis is one of its sectors.",
       "facts": [
         {
-          "t": "The Fleet is made of four or five sector branches, each overseeing a cluster of systems in the Rykoe Galaxy.",
+          "t": "The Fleet is made of four or five sector branches, each overseeing a cluster of systems in the Erevos Galaxy.",
           "src": "factions/fleet.html"
         },
         {
@@ -5095,13 +5095,13 @@
     },
     {
       "s": "first-world",
-      "t": "erevos",
+      "t": "rykoe",
       "rel": "remains as",
       "src": "STAGING round 9"
     },
     {
       "s": "core-monolith",
-      "t": "erevos",
+      "t": "rykoe",
       "rel": "stands above",
       "src": "STAGING round 9"
     },
@@ -5113,7 +5113,7 @@
     },
     {
       "s": "first-heart",
-      "t": "erevos",
+      "t": "rykoe",
       "rel": "lies beneath",
       "src": "cosmology/index.html"
     },
@@ -5155,7 +5155,7 @@
     },
     {
       "s": "polarity",
-      "t": "erevos",
+      "t": "rykoe",
       "rel": "keeps gods from",
       "src": "STAGING round 1"
     },

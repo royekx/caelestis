@@ -156,23 +156,23 @@ function armPt(arm, t, jr, ja, spin){
 
 /* ---------- the cosmos ---------- */
 const COSMOS = {
-  erevos: { id:"erevos", name:"Erevos", kind:"Center of the cosmos",
-    summary:`The remains of the Reach world: a black hole, with the Core Monolith and the Radiant Citadel above it. Every galaxy's core is to its galaxy what Erevos is to the cosmos.`,
+  rykoe: { id:"rykoe", name:"Rykoe", kind:"Center of the cosmos",
+    summary:`The remains of the Reach world: a black hole, with the Core Monolith and the Radiant Citadel above it. Every galaxy's core is to its galaxy what Rykoe is to the cosmos.`,
     there:[`<strong>Core Monolith</strong>: the first Monolith, standing where Continuity first answered, when the people of the Reach reached into it and their world was destroyed. It has a degree of sentience and presses an idea outward through the cosmos. Those who dwell in it call it Aurath.`,
       `<strong>Radiant Citadel</strong>: the civilization around the Core Monolith.`,
       `<strong>Black hole</strong>: what is left of the Reach world, beneath the Monolith. Its remains spread across the cosmos.`],
     travel:`Scholars of Caelestis know their galaxy is one part of something larger, with something at its center. No one they know has reached it.`,
-    dm:[`Erevos opens only when the cores of all five galaxies are awake and joined: each core to its neighbours, and each to Erevos. Through it lies Continuity, where whoever reaches it can push and pull the Axioms and remake reality.`,
+    dm:[`Rykoe opens only when the cores of all five galaxies are awake and joined: each core to its neighbours, and each to Rykoe. Through it lies Continuity, where whoever reaches it can push and pull the Axioms and remake reality.`,
       `Lich Vecna, the mortal form archived when Vecna ascended, sits in the Radiant Citadel.`,
       `The Radiant Citadel and the Core Monolith are late Arc 3 or Arc 4 destinations, reached by a long voyage or through a linked heart.`] },
   fifths: { id:"fifths", name:"Circle of Fifths", kind:"Vecna's working, across the cosmos",
     summary:`Five galaxies, each a fifth of what Vecna needs, around the center where the Axioms meet. The name is his alone, taken from the circle of fifths in music.`,
-    there:[`<strong>Spokes</strong>: each galaxy's core joined to Erevos.`,`<strong>Rim</strong>: each core joined to its two neighbours.`],
+    there:[`<strong>Spokes</strong>: each galaxy's core joined to Rykoe.`,`<strong>Rim</strong>: each core joined to its two neighbours.`],
     dm:[`Vecna works GAL-01's core with spellwork, an inscription drawn in linked heart worlds. In each other galaxy another being works its core by its own method.`,
       `No one else knows what he is building: the Seekers, the Order and most gods have no name for it. A few on the fringes sense something wrong in the cosmos, and no one believes them.`,
-      `The failure state is GAL-01's core waking for Vecna. If GAL-01 falls, GAL-03, GAL-04 and GAL-05 fall with it, and Erevos can open. Success in GAL-01 holds them, though work remains.`] }
+      `The failure state is GAL-01's core waking for Vecna. If GAL-01 falls, GAL-03, GAL-04 and GAL-05 fall with it, and Rykoe can open. Success in GAL-01 holds them, though work remains.`] }
 };
-/* Pentagon around Erevos, GAL-01 at the top, clockwise. */
+/* Pentagon around Rykoe, GAL-01 at the top, clockwise. */
 const GAL_DRAW = {
   "GAL-01": { ang:-90, tone:"#e2ae7e", core:"asleep", spin:0.0,
     line1:"Caelestis · D&D 5e", line2:"core asleep · three links",
@@ -449,16 +449,16 @@ function renderCosmos(){
   });
   const p3 = pos["GAL-03"], p4 = pos["GAL-04"];
   o += `<g ${reg("fifths",COSMOS.fifths)}>${hit}${lines}<text class="lbl-sub" x="${(p3[0]+p4[0])/2}" y="${p3[1]+250}" text-anchor="middle" font-size="44" fill="#b9a5d8">Circle of Fifths</text></g>`;
-  /* Erevos */
-  const c = COSMOS.erevos;
-  o += `<g ${reg("erevos",c)}><circle cx="${CEN.x}" cy="${CEN.y}" r="230" fill="transparent"/>
+  /* Rykoe */
+  const c = COSMOS.rykoe;
+  o += `<g ${reg("rykoe",c)}><circle cx="${CEN.x}" cy="${CEN.y}" r="230" fill="transparent"/>
     <circle cx="${CEN.x}" cy="${CEN.y+20}" r="230" fill="#c05aa0" fill-opacity=".18" filter="url(#softer)"/>
     <circle class="sel" cx="${CEN.x}" cy="${CEN.y+20}" r="120" fill="url(#g-hole)"/>
     <circle cx="${CEN.x}" cy="${CEN.y+20}" r="58" fill="#000" filter="url(#soft)"/>
     <circle cx="${CEN.x}" cy="${CEN.y-130}" r="90" fill="url(#g-core)"/>
     <path d="M${CEN.x-16} ${CEN.y-70} L${CEN.x-13} ${CEN.y-172} L${CEN.x} ${CEN.y-196} L${CEN.x+13} ${CEN.y-172} L${CEN.x+16} ${CEN.y-70} Z" fill="#fff6e6" fill-opacity=".92" stroke="#ffd9a8" stroke-width="2"/>
     <line x1="${CEN.x}" y1="${CEN.y-168}" x2="${CEN.x}" y2="${CEN.y-84}" stroke="#c08652" stroke-opacity=".55" stroke-width="2"/>
-    <text class="lbl" x="${CEN.x}" y="${CEN.y+205}" text-anchor="middle" font-size="62">Erevos</text>
+    <text class="lbl" x="${CEN.x}" y="${CEN.y+205}" text-anchor="middle" font-size="62">Rykoe</text>
     <text class="lbl-sub" x="${CEN.x}" y="${CEN.y+255}" text-anchor="middle" font-size="34">Core Monolith · Radiant Citadel</text></g>`;
   /* galaxies */
   for(const g of GALAXIES){
@@ -473,7 +473,7 @@ function renderCosmos(){
       <text class="lbl-sub" x="${x}" y="${ly+100}" text-anchor="middle" font-size="40" fill="${CORE_TONE[g.core]}">${esc(g.line2||"")}</text></g>`;
   }
   svg.innerHTML = o;
-  legend(`<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="#9678bd" stroke-width="3"/></svg>Spoke: core to Erevos</span>
+  legend(`<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="#9678bd" stroke-width="3"/></svg>Spoke: core to Rykoe</span>
     <span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="#9678bd" stroke-width="2" stroke-dasharray="5 4"/></svg>Rim: core to neighbouring core</span>`
     + Object.entries(CORE_WORD).map(([k,v])=>`<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="#000" stroke="${CORE_TONE[k]}" stroke-width="2"/></svg>${v}</span>`).join(""));
   crumbs([["Cosmos",null]]); controls(); tray(false); fit();
@@ -810,7 +810,7 @@ function corePanel(n){
   const t = { asleep:`A black hole at the galaxy's center, where Consolidation and Dissolution win outright. It sleeps.`,
     awake:`A black hole at the galaxy's center, where Consolidation and Dissolution win outright. It is awake, and it presses on its neighbours.`,
     partway:`A black hole at the galaxy's center, where Consolidation and Dissolution win outright. Something is working it awake, and it is partway there.` }[n.core];
-  const dm = home ? [`The inscription's pupil. When lids and iris are whole, the eye opens and the core wakes, and what lands on Oerth is sight: a view into Continuity itself.`,`Its waking for Vecna is the failure state. It sets the fate of GAL-03, GAL-04 and GAL-05.`,`Once Erevos opens, every linked heart becomes a door: through its Atrium to this core, and through the core to the center.`]
+  const dm = home ? [`The inscription's pupil. When lids and iris are whole, the eye opens and the core wakes, and what lands on Oerth is sight: a view into Continuity itself.`,`Its waking for Vecna is the failure state. It sets the fate of GAL-03, GAL-04 and GAL-05.`,`Once Rykoe opens, every linked heart becomes a door: through its Atrium to this core, and through the core to the center.`]
     : n.galaxy==="GAL-02" ? [`Its pressure on GAL-01's core is how the crew can be pulled into this galaxy late in the campaign.`] : [`Its fate turns on GAL-01.`];
   panel.innerHTML = `<h2>${esc(n.name)}</h2><p class="kind">${esc(n.kind)}</p><span class="badge" style="color:${CORE_TONE[n.core]};border-color:${CORE_TONE[n.core]}">${CORE_WORD[n.core]}</span><p>${t}</p>${dmlist(dm)}`;
 }
@@ -864,9 +864,9 @@ function intro(){
   }
   if(lv==="galaxy"){ const g = GALAXIES.find(x=>x.id===view.galaxy); galaxyPanel(g,false); return; }
   panel.innerHTML = `<h2>Caelestis cosmos</h2><p class="kind">DM chart</p>
-    <p>Five galaxies around Erevos. Each galaxy's core is joined to Erevos by a spoke and to its two neighbours by the rim. The Fleet and its sectors chart only their own galaxy; few expeditions have tried to leave it, and many believe there is nothing beyond.</p>
+    <p>Five galaxies around Rykoe. Each galaxy's core is joined to Rykoe by a spoke and to its two neighbours by the rim. The Fleet and its sectors chart only their own galaxy; few expeditions have tried to leave it, and many believe there is nothing beyond.</p>
     <p class="hint">Tap anything for details. Tap a galaxy twice to open it, then a system.</p>
-    ${dmlist([`Pictured, the five Axioms make the same figure as the five galaxies around Erevos, with Continuity at the heart. It is a mirror for meaning, not a map: no galaxy belongs to an Axiom.`,`A galaxy's contents stay unbuilt until play reaches it. Systems kept from a roll live in the survey, prime/data/survey.json.`,`Places with a situation attached have entries in <a href="../realms/">Realms</a>.`])}`;
+    ${dmlist([`Pictured, the five Axioms make the same figure as the five galaxies around Rykoe, with Continuity at the heart. It is a mirror for meaning, not a map: no galaxy belongs to an Axiom.`,`A galaxy's contents stay unbuilt until play reaches it. Systems kept from a roll live in the survey, prime/data/survey.json.`,`Places with a situation attached have entries in <a href="../realms/">Realms</a>.`])}`;
 }
 
 function activate(g){

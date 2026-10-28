@@ -140,7 +140,7 @@ the player side.
 | Now | Becomes |
 |---|---|
 | `realms/` (whole folder) | `locations/` |
-| `realms/first-world.html` | `locations/erevos.html` |
+| `realms/first-world.html` | `locations/rykoe.html` |
 | `realms/ascension-world.html` | `locations/oerth.html` (Greyspace as a section) |
 | `realms/sys04.html` | `locations/krynnspace.html` |
 | `realms/aethris.html` (system page) | `locations/aethris.html`, the world page with its system as a section |
@@ -179,12 +179,12 @@ the terms check's moved list.
 One pull request per section, each reviewed and merged before the next starts,
 because later sections link into earlier ones.
 
-1. **Cosmology and glossary**: the Axioms, galaxies and cores, Erevos and the
+1. **Cosmology and glossary**: the Axioms, galaxies and cores, Rykoe and the
    First Heart, the Reach, the gods, hearts and links, residue, designations,
    most of space is empty. Chart is done; recheck it against this pass.
 2. **Factions**: deities and the Accordance, the Fleet and Caelestis, the Order,
    the Seekers, the Vth'orama, the Restorers, Aethris, Vocath's crew.
-3. **Realms**: Oerth and Greyspace, Krynnspace, Erevos, H'Catha, Aethris,
+3. **Realms**: Oerth and Greyspace, Krynnspace, Rykoe, H'Catha, Aethris,
    Krynn, Nowhere, Ondrel, the retirements above.
 4. **Artifacts and vessels**: the five fragments, A.T.L.A.S. and its sister,
    the Rod, the twins' fragment.
