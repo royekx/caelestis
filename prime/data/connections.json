@@ -1294,11 +1294,11 @@
       "summary": "An interworld order that preserves Continuity and reads the Core's pressure as the All-Father.",
       "facts": [
         {
-          "t": "The Order made Galactic time cycles, tied to no planet: a cycle is one great flare of Erevos to the next, divided by lesser flares that instruments count; Cycle 0 is the Order's founding and the current cycle is 1491.",
+          "t": "The Order made Galactic time cycles, tied to no planet: a cycle is one full turn of Erevos, its unseen beam lighting the four spiral arms in order; Cycle 0 is the Order's founding and the current cycle is 1491.",
           "src": "factions/order.html#cycles"
         },
         {
-          "t": "Over the past few centuries the cycles have grown slightly shorter, and Watchers record them as irregular.",
+          "t": "Over the past few centuries the arms have lit slightly early and the cycles have grown slightly shorter, and Watchers record them as irregular.",
           "src": "factions/order.html#cycles"
         },
         {
@@ -1637,10 +1637,10 @@
       "label": "The United Intergalactic Fleet",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "Four sector branches, two on each arm of the Erevos Galaxy, under a council of admirals. Caelestis founded it and is one of its sectors.",
+      "summary": "Four sector branches, one on each arm of the Erevos Galaxy, under a council of admirals. Caelestis founded it and is one of its sectors.",
       "facts": [
         {
-          "t": "The Fleet is made of four sector branches, two along each of the Erevos Galaxy's spiral arms, each overseeing a cluster of systems.",
+          "t": "The Fleet is made of four sector branches, one along each of the Erevos Galaxy's four spiral arms, each overseeing a cluster of systems.",
           "src": "factions/fleet.html"
         },
         {

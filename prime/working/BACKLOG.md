@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 10 | 13 | 13 | 0 | 3 |
+| Cosmology | cosmology/, glossary/, chart/ | 10 | 13 | 14 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 4 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **106** | **145** | **49** | **2** | **54** |
+| **Total** |  | **106** | **145** | **50** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -188,11 +188,10 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-26
   done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); prime/factions (section 2); prime/locations (section 3).
 
-- **[decide]** Galactic time cycles (GTC): the cycle in Toril years
-  Settled (Korey, 2026-10-28): the Order of the All-Father made the count so its Watchers, posted across the galaxy, had one clock to compare their reports. Cycle 0 is the Order's founding, and the current cycle is 1491. One cycle is one pulse of Erevos: the core flares on a steady beat, brightening for a few nights until the centre outshines the stars, seen from every world in the galaxy. The Fleet, founded by Caelestis about 250 cycles ago (about Cycle 1240), adopted it from its partner, and others picked it up through the Fleet; most call it cycles or Fleet time. Pages: factions/order.html#cycles, factions/fleet.html#gtc, the glossary, cosmology § Erevos Galaxy, timeline.json, connections.json; prime/data/survey.json treats 1491 as now.
-  Settled too: every unit comes from Erevos, tied to no planet. A cycle runs from one great flare to the next; lesser flares, too faint for the eye and counted by instruments (Order lenses, Fleet chronometers, navigators), divide it, and Fleet and Order dates read as a cycle plus a count of lesser flares. Ordinary people keep local calendars, and travellers convert. Over the past few centuries the cycles have grown slightly shorter, and Watchers and Fleet record-keepers find them irregular; the cause (a sleeping core's beat quickening as the eye's moment nears) is DM-only, on factions/order.html What's hidden.
-  Still open: the lesser flares' names and how many fall in a cycle. Still a working default: one cycle is about sixteen Toril months, roughly one and a third Toril years, so the Order was founded about 1,990 Toril years ago and the Fleet about 330. The timeline places both by it. Change the ratio here and move the two timeline events with it. Still to set: the Order's own name for the count. Do not use "reckoning".
-  src: Korey, 2026-10-28 (GTC revision); replaces "The calendar the Cycle counts" (Korey, 2026-10-26; restricted/ orders)
+- **[decide]** Galactic time cycles (GTC): first arm, markers and the Toril ratio
+  Settled (Korey, 2026-10-28): the Order of the All-Father made the count so its Watchers had one clock; Cycle 0 is the Order's founding, and the current cycle is 1491. The Fleet, founded by Caelestis about 250 cycles ago (about Cycle 1240), adopted it; most call it cycles or Fleet time, and ordinary people keep their own world's calendar. The arms are the clock and the cycle is a full turn: Erevos, the heart at the core, turns once a cycle and throws an unseen beam; when it reaches an arm's root, that arm lights from root to tip over a quarter cycle, and the Erevos Galaxy has four arms. Marker clusters along each arm give the finer step, and dates read as a cycle plus the step. The quickening (arms lighting early, cycles shortening over the past few centuries) is in-world on factions/order.html and fleet.html; its cause stays in the Order's What's hidden. The clock principle is on opposition/vecna.html#clock and principles.html#clock.
+  Still open: which arm the Order counts from (the one it saw lit at its founding); marker clusters per arm (working default four, sixteen steps a cycle, each about a Toril month); and the Toril ratio (working default one cycle to about sixteen Toril months, so each lighting is about four, the Order was founded about 1,990 Toril years ago and the Fleet about 330; the timeline places both by it). Also open: the Order's own name for the count. Do not use "reckoning".
+  src: Korey, 2026-10-28 (GTC rulings); replaces "The calendar the Cycle counts" (Korey, 2026-10-26; restricted/ orders)
 - **[later]** Spelljammer's own terms
   Korey wants to wear down the Spelljammer barriers ("spelljamming" means nothing for a ship); spheres have become galaxies. Review the remaining genre terms (spelljammer, spelljamming helm, wildspace, Astral Sea, phlogiston) for plainer replacements during the overhaul.
   src: Korey, 2026-10-26
@@ -323,6 +322,10 @@ Order under each page: decide, fix, drop, add.
 - **[later]** CSC 31758, the 1491 entry in SA-002
   SA-002 carries the Cycle 1491 auroral discharge at CSC 31758, outer fringe (the old SYS-05). The number is new: it is not in the survey or on the chart, and it collides with nothing in either. The entry stays as filed: two arrivals from an uncatalogued system entered Academy intake. Place the star in the survey, or leave it as a catalogue number only. It is not tied to Greyspace.
   src: Korey, 2026-10-28 (FIA rulings, 10)
+
+- **[fix]** Redraw the charts and the Fleet seal with four arms
+  The Erevos Galaxy has four spiral arms (Korey, 2026-10-28), and the Fleet has one sector on each. Redraw the flat chart (chart/index.html), the holochart (chart/holo.html) and the Fleet seal (assets/fleet-device.svg) with four arms and one sector star per arm, keeping every system where it is. Follows PR #104; the text already says four.
+  src: Korey, 2026-10-28 (GTC model)
 
 # Locations
 
@@ -677,7 +680,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   src: Factions review, 2026-10-28
 
 - **[decide]** The Caelestis Sector's systems, and the other sectors
-  The Fleet is four sector branches, two on each spiral arm of the Erevos Galaxy, and Caelestis founded it (Korey 2026-10-28). The Caelestis Sector lies on Realmspace's arm and covers several systems, including Toril's. Which systems it covers, which of the two sectors on Realmspace's arm it is, and the other three sectors' names and characters are not set. Feeds the chart's sector layer and factions/fleet.html.
+  The Fleet is four sector branches, one along each of the Erevos Galaxy's four spiral arms, and Caelestis founded it (Korey 2026-10-28). The Caelestis Sector is the one on Realmspace's arm and covers several systems, including Toril's. Which systems it covers, and the other three sectors' names and characters, are not set. Feeds the chart's sector layer and factions/fleet.html.
   src: chat 2026-10-27
 
 - **[decide]** Realmspace's name
