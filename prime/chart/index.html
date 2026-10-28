@@ -181,7 +181,7 @@ const GAL_DRAW = {
       `Realmspace, Caelestis's home system, and the sister institutions of the higher organization across the galaxy.`,
       `Oerth, in Greyspace, where Vecna became a god.`],
     dm:[`Runs as D&D 5e. The keystone: what happens here decides GAL-03, GAL-04 and GAL-05.`,
-      `Two worlds in one system on the upper lid are linked to each other, and each is linked to Oerth: three links. One more heart, Nowhere's on the lower lid, is found and not opened. The rest of the sixteen are unknown.`,
+      `Two worlds in one system on the upper lid are linked to each other, and each is linked to Oerth: three links. One more heart, Nowhere's on the lower lid, is found and not opened. The rest of the fifteen are unknown.`,
       `GAL-02's awake core presses on this one. Late in the campaign it can pull the crew into the eldritch galaxy.`] },
   "GAL-02": { ang:-18, tone:"#d07070", core:"awake", spin:1.3,
     line1:"eldritch gods · Call of Cthulhu", line2:"core awake · overrun",
@@ -319,8 +319,8 @@ const UNPLACED = [
 ];
 
 /* ---------- the inscription: GAL-01's eye ---------- */
-/* Fifteen nodes hold sixteen hearts: one upper-lid node is a system with two
-   linked hearts. Ten lid worlds, six iris worlds. None is assigned to a named
+/* Fourteen nodes hold fifteen hearts: one upper-lid node is a system with two
+   linked hearts. Ten lid worlds, five iris worlds. None is assigned to a named
    system. state: linked | found | unknown. */
 const EYE = { cx:GX.cx, cy:GX.cy, L:1500, h:560, R:360, oerth:[GX.cx, GX.cy+1380] };
 const HEARTS = (() => {
@@ -328,7 +328,7 @@ const HEARTS = (() => {
   const j = (p,s) => [p[0] + (E()-.5)*2*s, p[1] + (E()-.5)*2*s];
   const up = [-1,-.5,0,.5,1].map(u => ["upper", j([EYE.cx+EYE.L*u, EYE.cy-EYE.h*(1-u*u)], 30)]);
   const lo = [.6,.2,-.2,-.6].map(u => ["lower", j([EYE.cx+EYE.L*u, EYE.cy+EYE.h*(1-u*u)], 30)]);
-  const ir = [0,1,2,3,4,5].map(k => ["iris", j([EYE.cx+EYE.R*Math.cos(2*Math.PI*k/6-Math.PI/2+.3), EYE.cy+EYE.R*Math.sin(2*Math.PI*k/6-Math.PI/2+.3)], 14)]);
+  const ir = [0,1,2,3,4].map(k => ["iris", j([EYE.cx+EYE.R*Math.cos(2*Math.PI*k/5-Math.PI/2), EYE.cy+EYE.R*Math.sin(2*Math.PI*k/5-Math.PI/2)], 14)]);
   const all = up.concat(lo, ir);
   const avoid = Object.values(SYS_CHART).map(s=>s.pos);
   const oerth = SYS_CHART["Greyspace"].pos;
@@ -344,7 +344,7 @@ const HEARTS = (() => {
   return out;
 })();
 const LID_LOOP = ["h01","h02","h03","h04","h05","h06","h07","h08","h09"];
-const IRIS_LOOP = ["h10","h11","h12","h13","h14","h15"];
+const IRIS_LOOP = ["h10","h11","h12","h13","h14"];
 const HSTATE = {
   linked:{ col:"#8fe8df", label:"Opened and linked", badge:"b-teal" },
   found:{ col:"#e2ae7e", label:"Found, not opened", badge:"b-gold" },
@@ -801,7 +801,7 @@ function galaxyPanel(g, offer){
   panel.innerHTML = `<h2>${esc(g.label)}</h2><p class="kind">Galaxy${home?", Caelestis's own":""}</p>
     <span class="badge" style="color:${CORE_TONE[g.core]};border-color:${CORE_TONE[g.core]}">${CORE_WORD[g.core]}</span>
     <p>${g.summary}</p>${list("What's there", g.there)}
-    ${home ? `<h3>The inscription</h3><p>Sixteen heart worlds: ten on the lids, six in the iris. ${c.found} hearts found, ${c.opened} opened, ${c.links} link standing.</p>` : `<p class="hint">GAL-0n is the DM's label. Whoever first charts a world here is the one who designates it.</p>`}
+    ${home ? `<h3>The inscription</h3><p>Fifteen heart worlds: ten on the lids, five in the iris. ${c.found} hearts found, ${c.opened} opened, ${c.links} link standing.</p>` : `<p class="hint">GAL-0n is the DM's label. Whoever first charts a world here is the one who designates it.</p>`}
     <dl class="facts"><dt>Game system</dt><dd>${esc(rec.game || "Assigned before play goes there")}</dd><dt>Core</dt><dd>${esc(rec.core || "")}</dd></dl>
     ${dmlist(g.dm)}${offer?`<button class="btn act" type="button" data-go="gal:${g.id}">Open ${esc(g.label)}</button>`:""}`;
 }
@@ -840,7 +840,7 @@ function genericPanel(n){
 function oerthPanel(){
   panel.innerHTML = `<h2>Oerth</h2><p class="kind">Greyspace · the eye's retina</p><span class="badge b-gold">Monolith</span>
     <p>The point where the eye's image lands. Every heart world in the figure links back to Oerth's heart, so the links run in a cone from the eye to Oerth, the way light runs from an eye to the back of it. Oerth's heart has been Vecna's since his ascension charged him into it.</p>
-    <p>Vecna chose the sixteen worlds for how they look from here. From above, their links make no shape at all; from Oerth they line up into the eye he lost. When the core opens, what lands on Oerth is sight.</p>
+    <p>Vecna chose the fifteen worlds for how they look from here. From above, their links make no shape at all; from Oerth they line up into the eye he lost. When the core opens, what lands on Oerth is sight.</p>
     ${dmlist([`The first thing anyone can notice is that every opened heart is linked back to the same world, in Greyspace. Why they all lead to Oerth is the question that opens the rest.`,`The clue the crew needs is the vantage: plot the hearts from Oerth, and someone who knows Vecna's mark can recognize it.`,`Oerth is the one world Vecna cannot lose.`])}
     ${pageLink("oerth.html")}<button class="btn act" type="button" data-go="Greyspace">Open Greyspace</button>`;
 }
@@ -859,7 +859,7 @@ function intro(){
     panel.innerHTML = `<h2>GAL-01</h2><p class="kind">Caelestis's galaxy</p>
       <p>Star systems lie unevenly through the galaxy. All of them circle the core at different speeds; they crowd along the spiral arms, gather in clusters, and leave long empty reaches between. Most bodies have no one living on them, and an inhabited world is rare.</p>
       <p>Saved systems carry their names and CSC numbers. The scatter of small stars is what Caelestis has sighted and what it has only on paper.</p>
-      <p class="hint">Tap anything for details. Tap a system twice to open it. <strong>Inscription</strong> shows the sixteen heart worlds; <strong>View from Oerth</strong> lines them up.</p>`;
+      <p class="hint">Tap anything for details. Tap a system twice to open it. <strong>Inscription</strong> shows the fifteen heart worlds; <strong>View from Oerth</strong> lines them up.</p>`;
     return;
   }
   if(lv==="galaxy"){ const g = GALAXIES.find(x=>x.id===view.galaxy); galaxyPanel(g,false); return; }
