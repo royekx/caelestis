@@ -305,6 +305,7 @@ Old path → new path, added by each pull request that moves a page.
 | `prime/crew/index.html#crew-open` | retired, no target (the Open table is redistributed to the crew pages and a Campaign decide; the id is never reused) | Crew (crew) |
 | `prime/realms/fonains.html` | `prime/locations/fonains.html` | Fonains and timeline (fonains) |
 | `prime/realms/` | retired; every page moved to `prime/locations/`, and the folder name is never reused | Fonains and timeline (fonains) |
+| `restricted/init.md` | retired, an empty placeholder; the path is never reused | The FIA (fia) |
 
 ## Stale branches
 

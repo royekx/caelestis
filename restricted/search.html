@@ -4,96 +4,129 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Fleet Intelligence — Archive Search</title>
-<link rel="stylesheet" href="../styles/caelestis.css">
+<title>Search · Fleet Intelligence Archive</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/fia.css">
 <script>
-// Gate guard — restricted clearance required this session.
-if (sessionStorage.getItem('caelestis_restricted_v1') !== '1') {
-  window.location.href = 'index.html';
-}
+// Gate guard: FIA clearance required this session.
+if (sessionStorage.getItem('caelestis_restricted_v1') !== '1') window.location.href = 'index.html';
 </script>
-<script src="../scripts/nav.js" defer></script>
 </head>
-<body>
+<body class="fia-search">
+<nav class="fia-bar" aria-label="Fleet Intelligence Archive">
+  <span class="fia-bar-name">Fleet Intelligence Archive</span>
+  <a href="files.html">Files</a>
+  <a href="search.html" aria-current="page">Search</a>
+  <a href="../spelljammer-nexus/index.html">Return to the Nexus</a>
+</nav>
+<div class="page">
 
-<div class="terminal-wrap">
-
-  <div class="terminal-head">
-    <div class="terminal-eyebrow">Fleet Intelligence · Gold-Tier Clearance</div>
-    <h1 class="terminal-title">Intelligence Archive Search</h1>
-    <p class="terminal-sub">Full-text search across all filed intelligence — field reports, world monitoring, strategic assessments.</p>
+  <div class="search-head">
+    <div class="search-eyebrow">Caelestis Sector · Fleet Intelligence Archive</div>
+    <h1 class="search-title">Archive Search</h1>
+    <p class="search-sub">Full-text search across filed case records.</p>
   </div>
 
   <div class="search-console">
-    <div class="search-console-label">Query</div>
-    <div class="search-row">
-      <div class="search-field">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
-        <input class="search-input" id="q" type="text" placeholder="Search intelligence files…" autocomplete="off" autofocus>
-      </div>
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      <input class="search-input" id="q" type="search" placeholder="Search case records…" autocomplete="off" aria-label="Search case records" autofocus>
     </div>
-    <div class="scope-hint">Searching filed intelligence only. Cross-referencing is the analyst's task.</div>
+    <div class="search-facets" id="facets"></div>
+    <div class="scope-hint">Searching filed case records only. Cross-referencing is the analyst's task.</div>
   </div>
 
-  <div id="resultsMeta" class="results-meta" style="display:none;">
+  <div id="resultsMeta" class="results-meta" hidden>
     <div class="results-count"><span id="count">0</span> · <span class="results-term" id="termEcho"></span></div>
   </div>
 
   <div id="results"></div>
-  <div id="state" class="search-state">Enter a designation, name, or event to search the archive.</div>
+  <div id="state" class="search-state">Enter a designation, name or event to search the archive.</div>
 
 </div>
 
 <script type="module">
-const STOPWORDS=new Set(['a','an','the','of','to','in','on','at','by','for','and','or','but','is','was','it','as','with','from','that','this','his','her','their','they','them','he','she']);
-function cleanExcerpt(h){return h.replace(/<mark>(.*?)<\/mark>/g,(m,w)=>STOPWORDS.has(w.trim().toLowerCase())?w:m);}
+const STOPWORDS = new Set(['a','an','the','of','to','in','on','at','by','for','and','or','but','is','was','it','as','with','from','that','this','his','her','their','they','them','he','she']);
+const FACETS = [['type', 'Type'], ['origin', 'Origin']];
+const active = {};
+function cleanExcerpt(h) { return h.replace(/<mark>(.*?)<\/mark>/g, (m, w) => STOPWORDS.has(w.trim().toLowerCase()) ? w : m); }
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+
 let pagefind = null;
 async function loadPagefind() {
   if (pagefind) return pagefind;
   try {
     pagefind = await import('./pagefind/pagefind.js');
-    // FIA index is scoped to /restricted/. Result URLs are relative to that
-    // site root, which is this page's own directory.
+    // The FIA index is built with restricted/ as its site root, which is
+    // this page's own directory, so result URLs resolve from here.
     const siteRoot = location.pathname.replace(/search\.html$/, '');
     await pagefind.options({ excerptLength: 30, baseUrl: siteRoot });
     await pagefind.init();
   } catch (e) {
-    document.getElementById('state').textContent = 'Archive index not yet available. It builds on deploy.';
+    pagefind = null;
+    stateEl.textContent = 'Archive index not available. It builds on deploy.';
     console.error(e);
   }
   return pagefind;
 }
+
 const qEl = document.getElementById('q'), resultsEl = document.getElementById('results'),
       stateEl = document.getElementById('state'), metaEl = document.getElementById('resultsMeta'),
-      countEl = document.getElementById('count'), termEcho = document.getElementById('termEcho');
-let debounce;
+      countEl = document.getElementById('count'), termEcho = document.getElementById('termEcho'),
+      facetsEl = document.getElementById('facets');
+
+async function buildFacets() {
+  const pf = await loadPagefind(); if (!pf) return;
+  const all = await pf.filters();
+  facetsEl.innerHTML = FACETS.filter(([k]) => all[k]).map(([k, label]) =>
+    `<div class="search-facet"><span class="search-facet-label">${label}<\/span>` +
+    Object.keys(all[k]).sort().map(v =>
+      `<button type="button" class="search-pill" data-axis="${k}" data-value="${esc(v)}" aria-pressed="false">${esc(v)}<\/button>`
+    ).join('') + `<\/div>`).join('');
+}
+facetsEl.addEventListener('click', e => {
+  const b = e.target.closest('.search-pill'); if (!b) return;
+  const axis = b.dataset.axis, v = b.dataset.value;
+  active[axis] = active[axis] === v ? undefined : v;
+  facetsEl.querySelectorAll(`.search-pill[data-axis="${axis}"]`).forEach(p =>
+    p.setAttribute('aria-pressed', String(p.dataset.value === active[axis])));
+  run();
+});
+
+function showState(text) { resultsEl.innerHTML = ''; metaEl.hidden = true; stateEl.style.display = 'block'; stateEl.textContent = text; }
+
 async function run() {
   const term = qEl.value.trim();
-  if (!term) { resultsEl.innerHTML=''; metaEl.style.display='none'; stateEl.style.display='block'; stateEl.textContent='Enter a designation, name, or event to search the archive.'; return; }
+  const filters = {};
+  for (const [k] of FACETS) if (active[k]) filters[k] = active[k];
+  const filtered = Object.keys(filters).length > 0;
+  if (!term && !filtered) { showState('Enter a designation, name or event to search the archive.'); return; }
   const pf = await loadPagefind(); if (!pf) return;
-  const search = await pf.search(term);
-  if (!search.results.length) { resultsEl.innerHTML=''; metaEl.style.display='none'; stateEl.style.display='block'; stateEl.textContent='No files match "'+term+'".'; return; }
-  stateEl.style.display='none'; metaEl.style.display='flex';
-  countEl.textContent = search.results.length + (search.results.length===1?' file':' files');
-  termEcho.textContent = '"'+term+'"';
-  const rawData = await Promise.all(search.results.slice(0,30).map(r=>r.data()));
-  const qT = term.toLowerCase().split(/\s+/).filter(Boolean);
-  const mQ = qT.filter(w=>!STOPWORDS.has(w));
-  const data = rawData.filter(d=>{
-    if(!mQ.length) return true;
-    const marks=(d.excerpt.match(/<mark>(.*?)<\/mark>/g)||[]).map(m=>m.replace(/<\/?mark>/g,'').trim().toLowerCase());
-    if(marks.some(w=>!STOPWORDS.has(w))) return true;
-    const plain=d.excerpt.replace(/<\/?mark>/g,'').toLowerCase();
-    return mQ.some(w=>plain.includes(w));
+  const search = await pf.search(term || null, { filters });
+  if (!search.results.length) { showState(term ? 'No records match "' + term + '".' : 'No records match these filters.'); return; }
+  const rawData = await Promise.all(search.results.slice(0, 30).map(r => r.data()));
+  const mQ = term.toLowerCase().split(/\s+/).filter(w => w && !STOPWORDS.has(w));
+  const data = rawData.filter(d => {
+    if (!mQ.length) return true;
+    const marks = (d.excerpt.match(/<mark>(.*?)<\/mark>/g) || []).map(m => m.replace(/<\/?mark>/g, '').trim().toLowerCase());
+    if (marks.some(w => !STOPWORDS.has(w))) return true;
+    const plain = d.excerpt.replace(/<\/?mark>/g, '').toLowerCase();
+    return mQ.some(w => plain.includes(w));
   });
-  if(!data.length){resultsEl.innerHTML='';metaEl.style.display='none';stateEl.style.display='block';stateEl.textContent='No records for "'+term+'".';return;}
-  resultsEl.innerHTML = data.map(d=>{
-    const title = (d.meta&&d.meta.title)?d.meta.title:d.url;
-    const path = d.url.replace(/^\//,'').replace(/\.html$/,'').toUpperCase();
-    return `<a class="result" href="${d.url}"><div class="result-head"><div class="result-title">${title}</div><div class="result-path">${path}</div></div><div class="result-snippet">${cleanExcerpt(d.excerpt)}</div></a>`;
+  if (!data.length) { showState('No records match "' + term + '".'); return; }
+  stateEl.style.display = 'none'; metaEl.hidden = false;
+  countEl.textContent = data.length + (data.length === 1 ? ' record' : ' records');
+  termEcho.textContent = term ? '"' + term + '"' : Object.values(filters).join(' · ');
+  resultsEl.innerHTML = data.map(d => {
+    const title = (d.meta && d.meta.title) ? d.meta.title.replace(/ · Fleet Intelligence Archive$/, '') : d.url;
+    const path = d.url.split('/').pop().replace(/\.html$/, '').toUpperCase();
+    return `<a class="result" href="${d.url}"><div class="result-head"><div class="result-title">${esc(title)}<\/div><div class="result-path">${path}<\/div><\/div><div class="result-snippet">${cleanExcerpt(d.excerpt)}<\/div><\/a>`;
   }).join('');
 }
-qEl.addEventListener('input', ()=>{clearTimeout(debounce);debounce=setTimeout(run,180);});
+
+let debounce;
+qEl.addEventListener('input', () => { clearTimeout(debounce); debounce = setTimeout(run, 180); });
+buildFacets();
 </script>
 
 </body>

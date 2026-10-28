@@ -2135,7 +2135,7 @@ run decide, fix, drop, add.
   src: .github/workflows/deploy.yml
 
 - **[later]** Leftover UI calls from the migration notes
-  Still open in FIXES-DEMO-MIGRATION.md: the FIA bearing strip, merging the survey chart, the navigation-records clip at 1024px, the clickable blurb overlay, and missing links on voyage briefings 001, 003 and 004. Keep any of these, or drop them with the notes.
+  Still open in FIXES-DEMO-MIGRATION.md: merging the survey chart, the navigation-records clip at 1024px, the clickable blurb overlay, and missing links on voyage briefings 001, 003 and 004. Keep any of these, or drop them with the notes.
   src: notes/FIXES-DEMO-MIGRATION.md, notes/RESTRUCTURE-NOTES.md
 
 - **[later]** Crew Notes, now that search has shipped

@@ -638,6 +638,10 @@
     {
       "old": "world-surveyor-thread",
       "new": "campaign/plot-hooks.html#atlas-thread"
+    },
+    {
+      "old": "restricted/init.md",
+      "new": "retired (empty placeholder)"
     }
   ],
   "allow": [
