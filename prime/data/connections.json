@@ -985,8 +985,16 @@
           "src": "STAGING round 1"
         },
         {
-          "t": "Eldath is one of the six.",
-          "src": "timeline/timeline.json"
+          "t": "Its six gods are Lord Primus, Asmodeus, Eldath, Muriel, Ryujin and Futsunushi.",
+          "src": "factions/deities.html"
+        },
+        {
+          "t": "Its emissary is Nalsa, an androsphinx.",
+          "src": "factions/deities.html"
+        },
+        {
+          "t": "Asmodeus is its face, though not its ruler or leader; he and Lord Primus are its eldest.",
+          "src": "factions/deities.html"
         }
       ]
     },
@@ -5462,7 +5470,7 @@
       "s": "eldath",
       "t": "accordance",
       "rel": "is one of",
-      "src": "timeline/timeline.json"
+      "src": "factions/deities.html"
     },
     {
       "s": "asmodeus",

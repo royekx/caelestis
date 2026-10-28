@@ -140,12 +140,6 @@ Items for `cosmology/index.html`, `glossary/index.html` and `chart/index.html`.
 Order under each page: decide, fix, drop, add.
 
 
-### How gods look
-
-- **[decide]** What gods look like
-  Gods could keep humanoid forms, as Critical Role's do, or appear as concepts more than bodies. Korey leans humanoid as the workable choice and wanted concepts. Decides how every god's Appearance is written, Vecna's included.
-  src: chat 2026-10-27
-
 ### cosmology/index.html
 
 - **[fix]** Tharizdun is she
@@ -1085,83 +1079,17 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   Still open: whether Tymora notices herself thinning on Aethris as the ritual removes the risk her luck needs, and whether she acts on it. Beshaba's want is its own decide under dossiers/beshaba.html.
   answered (part): inbox/chat-crew-boogie-casey-sol.md § Sol / Aethris and the gods (Settled)
   src: BCS § Sol/Aethris and the gods (turn 860), § Sol/Open
-
-- **[fix]** Zerathis is he
-  The Zerathis entry says "where she now exists" and "Her allegiance was to Astra Virex". Change to he/his.
-  src: memory-canon campaign-canon § Casey ("he is not a member"); chat-cosmic-campaign-structure § Superseded
-
-- **[fix]** Who knows his name
-  The Vecna entry says "His chapters have never heard the name, the colony has never heard the name". Rewrite: "His followers know him under many names, and some use his own. The colony has never heard the name." Follow the Seekers decide for anything further.
-  src: session-rulings (Vecna); factions/seekers.html
-
-- **[fix]** Open worship
-  Keep "worshipped in the usual places, catalogued in the usual registries" and add: "His faithful are spread wide and thin across the spheres, and some use his own name. What nobody attributes to him is his work."
-  src: working/vecna.md § intro; session-rulings (Vecna)
-
-- **[add]** Why he can cross nothing
-  The entry says "he can still cross nothing at all" without a reason. Add: "Gods cannot walk on worlds or reach the center. The cause is polarity, a same-charge push: a god can press toward a world's heart or toward residue, but the resistance grows until it is unbearable. Ascending gave Vecna the same polarity as Oerth's heart, and the world pushed him off. He works through vessels." Link Cosmology.
-  src: session-rulings (polarity); working/divine-rules.md § Polarity; working/vecna.md § History
-
-- **[add]** Vecna's history
-  Add to the Vecna entry: "Vecna was a mage of Oerth, recruited as a boy by a voice whose source is unknown. He became a lich, built a following, and was never stopped. He became a god through a Zenith; the Monolith that answered it archived his mortality. On ascending he was pushed off Oerth, and he has spent centuries since building worship across the cosmos." His godhood is a known fact of the world; his plan is what is hidden.
-  src: working/vecna.md § History; memory-canon open-decisions ("Locked this pass": the layer above him is parked; Vecna direction 2026-10-24)
-
-- **[add]** Oerth
-  updated (triage): Oerth lies in SPH-05, the sphere farthest from Caelestis's (STAGING § Oerth, round 3).
-  Add: "Oerth, Vecna's homeworld, lies in its own sphere. It is a darkest-timeline world where the heroes failed, and his hold there is strongest. The Monolith of his ascension still stands, and his faithful treat it as their holiest site." DM: visiting should be horrible.
-  src: session-rulings (Vecna); memory-canon open-decisions (Vecna/gods 2026-10-25); working/vecna.md § Oerth
-
-- **[add]** What the faithful believe
-  Add: "His faithful read him as the god of secrets: knowledge kept and knowledge lost. Most worship the safe face of it — memory, discretion, preservation. Some read him as benevolent."
-  src: working/vecna.md § What the faithful believe; memory-canon open-decisions (Vecna direction 2026-10-24)
-
-- **[add]** Names and readings
-  Add the table: the Keeper, or the One Who Remembers (archivists, mourners); the Whispered One (spies, the persecuted); Vecna the returning god (fringe cults, such as the Darkest Day cult); Vecna the scholar's god (a respectable church that names him openly).
-  src: working/vecna.md § Names and readings
-
-- **[add]** Iconography
-  Add: "The hand and the eye. Green eye-slit gems used as tokens, compasses and keys; eye tattoos on the neck; black candles burning green."
-  src: working/vecna.md § Iconography
-
-- **[add]** His realm
-  Add: "Vecna's divine realm is anchored to Oerth's sphere, and he can reach it." (Name per the decide above.)
-  updated (triage): the realm is Cavitius (STAGING § Vecna, round 5).
-  src: working/vecna.md § Realm; memory-canon open-decisions (Vecna/Tharizdun 2026-10-25)
-
-- **[add]** What the gods think of him
-  Add: "The gods know Vecna ascended and know what he is god of. They regard him as new, small and strange. They do not know his plan."
-  src: working/vecna.md § What the gods think of him
-
-- **[add]** The voice above him
-  Add one line to the Vecna entry: "The voice that recruited him as a boy has never been identified." (DM: the layer above him is parked.)
-  src: memory-canon open-decisions ("Locked this pass"); chat-cosmic-campaign-structure § The Seekers
-
-- **[add]** Tharizdun (new entry)
-  Add a Tharizdun entry; the page has none:
-  - "Tharizdun is an imprisoned god of entropy. His prison has no address in any known cosmology: a shadow realm of jagged rocks, rubble and laughter. His creed is 'If I can't get out, I'll bring everything here.'"
-  - "Corrupted Monoliths are tunnels to his prison. Instead of archiving toward the Core, a corrupted Monolith sends existence to him. The Vanished of Fonains went there."
-  - "His marks are spirals, a fanged eye in a split black crystal, and the words 'feed, consume, devour'. The purple slit-pupiled eye seen over Fonains is the Elder Elemental Eye."
-  - "His avatar is Shothragot, who speaks of the Day of Chaos: the day the four Princes of Elemental Evil enter Fonains and break the barriers so Tharizdun can leave his prison."
-  - "Vecna uses Tharizdun, and Tharizdun uses Vecna. There is no alliance. Tharizdun sees a door-opener who nudges Zeniths; Vecna sees a battering ram against the barriers, and plans his own exit before Tharizdun gets out."
-  - "Vecna knew the Fonains Zenith would be ridden. The affront was that Tharizdun took the Vanished and a Monolith that should have been usable. When Lola's Boys broke that Monolith, both gods were hurt."
-  Cross-link from the Vecna entry.
-  src: session-rulings (Tharizdun; Elder Elemental Eye); memory-canon campaign-canon § Cosmology (Tharizdun lines), open-decisions (Vecna/Tharizdun 2026-10-25); working/tharizdun.md
-
-- **[add]** The Accordance (new entry)
-  Add an entry (a full page is deferred): "The Accordance is the six gods who sealed the Princes of Elemental Evil long ago. They appeared in The Darkest Day, speak through visions, and chose Lola's Boys as their champions, because every one of the party is tied to the Elemental Evil. They sent the party back in time to the year 425."
-  src: memory-canon open-decisions (Fonains canon 2026-10-25); campaign-canon § Naming (Fonains Elemental Evil ties); timeline "The Accordance seals the Princes", "Lola's Boys in the year 425"; working/divine-rules.md § Polarity
-
-- **[add]** The bounds of the gods
-  Add under the lead: "Worship gives every god its power, influence and reach, which is why pantheons gather in particular spheres. One god carries many names across worlds: Takhisis is Tiamat, and Paladine is Bahamut."
-  src: session-rulings (worship; one god many names); working/divine-rules.md
+  done (settled part): factions/deities.html (section 2) carries the misread tenet, fortune needs misfortune, and Aethris's other faiths; the open question is in its Still to decide. realms/aethris.html still needs the Aethris line.
 
 - **[add]** Tymora's misread tenet
   Add to the Tymora entry: "Tymora's tenet is 'fortune favors the bold.' Her followers on Aethris misread it. They pushed luck until it stopped being luck, and in perfecting fortune they removed the risk that luck needs." Also add to W-08 on realms/aethris.html.
   src: BCS § Sol/Aethris and the gods (turn 862)
+  done: factions/deities.html and factions/aethris.html (section 2); realms/aethris.html still needs it.
 
 - **[add]** Fortune needs misfortune
   Add to the Tymora and Beshaba entries: "Fortune cannot exist without misfortune. Tymora and Beshaba need each other." Also add to The twin reading on dossiers/beshaba.html.
   src: BCS § Sol/Aethris and the gods (turn 862)
+  done: factions/deities.html (section 2); dossiers/beshaba.html still needs it.
 
 ---
 
@@ -2284,6 +2212,11 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ---
 
 ### dossiers/zerathis.html
+
+- **[fix]** Zerathis is he
+  Zerathis is he. The old Deities row (removed in section 2) called him she; check this dossier and every page that mentions him for she/her.
+  src: memory-canon campaign-canon § Casey ("he is not a member"); chat-cosmic-campaign-structure § Superseded
+
 
 - **[fix]** The wardrobe is a piece of Astra Virex's reach
   The heading says "Mirt has been keeping a piece of the network in his bedroom". "The network" is retired. Change to "Mirt has been keeping a piece of Astra Virex's reach in his bedroom".
@@ -3654,16 +3587,6 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 - **[add]** How the crew meets her (DM)
   She is one of the named-but-unseen figures: the crew hears of her in contradictory accounts before they meet her.
   src: glyth-watcher § Where she fits
-
-### NEW: The Accordance (faction)
-
-**Purpose.** The gathering of gods behind the Fonains campaign's backstory. Only thessalar.html and clint.html mention it now. A page lets both campaigns point at one definition. Suggested path: `prime/factions/accordance.html`.
-
-**Voice.** In-world.
-
-- **[add]** The Accordance
-  The Accordance is the gathering of gods who sealed the Princes of Elemental Evil. Its members include Asmodeus, Eldath and Primus, among others. The Accordance chose Lola's Boys as its champions and sent them back to Thessalar's planar craft, where they took the craft's control and defence gems.
-  src: chat-cosmic § Fonains background, § Open; memory-canon (Fonains canon); session-rulings
 
 ### NEW: Boogie's faith (name to be chosen)
 

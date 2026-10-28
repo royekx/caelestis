@@ -65,44 +65,13 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Factions
 
-### Vecna (opposition/vecna.html, realms/oerth, factions/, factions/deities.html, factions/seekers.html)
+### Vecna (realms/oerth; done on opposition/vecna.html, dossiers/vecna.html, factions/seekers.html and factions/deities.html)
 - Vecna's godhood is complete. He ascended on Oerth, his homeworld, a darkest-timeline world where his hold is strongest; its Monolith is a holy site.
-- Ascension charged Vecna to Oerth's heart and pushed him off the world, so he works through vessels.
-- Vecna is an open god with a following under many names. His followers are the Seekers.
-- Vecna uses Tharizdun as a contingency. It is use, not alliance.
-- Vecna is a god of secrets, knowledge, manipulation and trickery, with a hold over death and the undead. He thrives on what others do not know.
-- He keeps his own name and origin a close secret, because there is power in knowing who he was and where he came from. Only on Oerth is he worshipped openly as Vecna. Everywhere else his faithful call him by other names; "the First Seeker" is one of them. The name "Vecna" surfaces late, through lore: a figure missing his left eye and his left hand.
-- On Oerth his worship is large and public. Elsewhere it lives in small, hidden pockets. The same holds for other gods: a god can be known on a world and have almost no following there.
-- He ascended at least a few centuries ago. His legacy is hidden temples, secret texts and artifacts kept for his worship, not ruined ziggurats lost to time.
-- Not every worshipper is a cultist. Some lean into necromancy. Some sincerely believe in an idea of him, the breaking of the cycle of death, more than in the god himself.
-- Vecna wants to understand the cosmos and become part of it: where everything came from, what the Reach was, what was taken. Breaking reality is not his goal; he believes he could repair whatever breaks.
-- Vecna and Tharizdun distrust each other. Tharizdun's weakening of reality on Fonains serves Vecna's ends, and Vecna lets it run.
-- Lich Vecna, the mortal form the Core Monolith archived when Vecna ascended, sits in the Radiant Citadel. He has had centuries to conclude he was wrong, and he is calm, almost redeemed. Meeting him unsettles everything the crew thinks they know.
-- Vecna's domains are Knowledge, Death and Trickery.
-- His symbol is an eye in the palm of a left hand. Chapters read it their own way. Some take the eye for sight and revelation. Some glorify it in green, for light, nourishment and the life of the body. The same symbol means different things across his faith.
-- Vecna's realm is Cavitius.
 - The Hand of Vecna, the Eye of Vecna and the Book of Vile Darkness exist in this cosmos. (DM: where each is, and whether any has reached Caelestis or the Rykoe Galaxy, is still to decide.)
 - Oerth is the world where Vecna became a god. His ritual to become a god pushed Oerth to its Zenith, and the Zenith made him one; the Monolith that answered archived his mortal form, Lich Vecna. That was his first ascension, the Godhood Ascension. The climb he is making now, into Continuity itself, is the Axiomic Ascension. Oerth is the Ascension World.
-- His grievance: something was taken from him and hidden from him. He believes the cosmos and every being in it are owed an answer, and he means to find it.
-- DM: the campaign is not a war of the gods.
 
-### How gods look (cosmology/, factions/deities.html, dossiers/vecna.html)
-- Gods have bodies, and each god's body expresses what it is. Some are humanoid, some are beasts, some are constructs, and some are partly living landscape.
-
-### Asmodeus and the Accordance (factions/deities.html, Fonains doc)
-- The Accordance is a section of the Deities page, kept short: its story belongs mostly to Fonains. Its members are Lord Primus, Asmodeus, Eldath, Muriel, Ryujin and Futsunushi.
-- Muriel is a humanoid crab. Ryujin is a serpent, from Japanese lore. Futsunushi, also from Japanese lore, is a god of smithing and weapons. Lord Primus, like Muriel, is the cosmos's own.
-- The Accordance has an emissary, Nalsa, an androsphinx. (DM touchstone: Aslan, from the Chronicles of Narnia.)
-- Asmodeus and Lord Primus are the eldest gods of the Accordance. Asmodeus is its face, though not its ruler or its leader.
-- Asmodeus was among the first to understand what the gods had become. He began as a good-natured god. The Reach let loose good and evil alike, demons among them, and he took up the fight against them while the other gods sat in their comfort. He was betrayed, and he became the lord of the Nine Hells. He is called evil because someone has to do this work, and he does it.
-- The Accordance know little of Vecna. A few centuries ago they felt something change: a new entity like them, where there had been none. Asmodeus likely knows something is wrong, and Lord Primus may.
-- Asmodeus is a tall, red-skinned devil with long swept-back horns ringed with metal bands and hung with fine chains, a crown of red flame between them, a narrow bearded face and a pointed tail. He wears high-collared black robes and a heavy mantle edged in red, rings on his clawed hands, and walks with a long black staff.
-- Eldath is a woman whose body becomes living wood below the shoulders: bark for skin, limbs that run into roots and branches, and a crown of antler-like branches where flowers grow and bluebirds perch. Her hair is long and auburn; a small pale light rests in her open palm.
-- Futsunushi is a many-armed, hooded figure seated cross-legged in the air, his arms bound in white wrappings, his face hidden by a long-nosed grey mask with curved horns. A ring of swords, spears and blades hangs around him; he wears dark robes with a green sash.
-- Muriel is a humanoid crab: pale-skinned, armoured in copper shell plates with great claw-like gauntlets, a smooth shell helm crowned with a ring, and a teal sash. Incense smoke rises from a small censer in her hand.
-- Ryujin is a vast sea serpent-dragon with teal-green scales, a crown of long curved horns that sweep into a halo, a beaked, spined face and trailing whisker-tendrils; a cold teal light rises behind him.
-- Lord Primus is a towering construct in dark armour with a golden mask, a breathing apparatus at the mouth, a red gem on the brow and a red hexagonal core glowing in the chest. Cables trail from him, and a halo of red script turns behind him.
-- Nalsa, the Accordance's emissary, is an androsphinx: a tawny lion with a great pale mane and a braided beard, wings that shade from tan to violet at the tips, blue markings on the face, white eyes, and a collar set with blue stones.
+### Asmodeus and the Accordance (Fonains doc; done on factions/deities.html, section 2)
+- done: the members, Nalsa, Asmodeus's history and every appearance are on factions/deities.html § The Accordance. The Fonains doc still needs them.
 
 ### The Vth'orama (factions/seekers.html, factions/vthorama.html, dossiers/vthoramu.html, the lieutenants' dossiers)
 - N'ghathrod's colony is a chapter of the Seekers: the Seekers of a New Home. They serve the same hidden god as every other chapter, believing they answer to an elder brain, and Vecna feeds them the few secrets they need.
