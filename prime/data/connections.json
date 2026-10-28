@@ -1629,10 +1629,18 @@
       "label": "The United Intergalactic Fleet",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "Four or five sector branches across the Erevos Galaxy, under a council of admirals. Caelestis is one of its sectors.",
+      "summary": "Four sector branches, two on each arm of the Erevos Galaxy, under a council of admirals. Caelestis founded it and is one of its sectors.",
       "facts": [
         {
-          "t": "The Fleet is made of four or five sector branches, each overseeing a cluster of systems in the Erevos Galaxy.",
+          "t": "The Fleet is made of four sector branches, two along each of the Erevos Galaxy's spiral arms, each overseeing a cluster of systems.",
+          "src": "factions/fleet.html"
+        },
+        {
+          "t": "Caelestis founded the Fleet: it proposed a combined fleet, and the Caelestis Sector lies on Realmspace's arm.",
+          "src": "factions/fleet.html"
+        },
+        {
+          "t": "Not every spelljammer belongs to the Fleet; independents, other factions and smaller mercantile houses, Vocath's crew among them, work outside it.",
           "src": "factions/fleet.html"
         },
         {

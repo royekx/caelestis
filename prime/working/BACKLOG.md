@@ -675,7 +675,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   src: Factions review, 2026-10-28
 
 - **[decide]** The Caelestis Sector's systems, and the other sectors
-  The Fleet is four or five sector branches; Caelestis is one sector of several systems, including Toril's (Korey 2026-10-27). Which systems the Caelestis Sector covers, how many sectors there are, and their names and characters are not set. Feeds the chart's sector layer and factions/fleet.html.
+  The Fleet is four sector branches, two on each spiral arm of the Erevos Galaxy, and Caelestis founded it (Korey 2026-10-28). The Caelestis Sector lies on Realmspace's arm and covers several systems, including Toril's. Which systems it covers, which of the two sectors on Realmspace's arm it is, and the other three sectors' names and characters are not set. Feeds the chart's sector layer and factions/fleet.html.
   src: chat 2026-10-27
 
 - **[decide]** Realmspace's name
@@ -712,7 +712,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 - **[later]** Names of the sister institutions
   Ruled: sister institutions in other system clusters, under other names and governance (STAGING, Factions). Name the one or two the crew is likely to hear of first; the rest wait.
   src: Korey, 2026-10-25 (rounds 10–11)
-  Moved from the campaign section: the Fleet is four or five sector branches, each keeping its own names (factions/fleet.html), which answers the shape. Naming the one or two the crew hears of first waits until play needs it.
+  Moved from the campaign section: the Fleet is four sector branches, each keeping its own names (factions/fleet.html), which answers the shape. Naming the one or two the crew hears of first waits until play needs it.
 
 - **[later]** The Glyth loss
   The Fleet lost a force at Glyth during the last approach window (see add). Its name and its commander are unnamed.
