@@ -11,7 +11,8 @@
     "prime/campaign",
     "prime/opposition",
     "prime/principles.html",
-    "prime/crew"
+    "prime/crew",
+    "prime/timeline"
   ],
   "retired": [
     {
@@ -395,6 +396,57 @@
     {
       "pattern": "\\baligner berths\\b",
       "use": "the Sea Dock, near cargo and lower dock storage"
+    },
+    {
+      "pattern": "\\bRahiri\\b",
+      "use": "Rihiri"
+    },
+    {
+      "pattern": "\\bDara\\b",
+      "use": "Dharra"
+    },
+    {
+      "pattern": "Vinbenzo",
+      "use": "Cenvinzo"
+    },
+    {
+      "pattern": "brainless-raised",
+      "use": "the unthinned (Vth'ulhan)",
+      "i": true
+    },
+    {
+      "pattern": "\\b(leave|from|in) his prison\\b",
+      "use": "her prison (Tharizdun is she)"
+    },
+    {
+      "pattern": "piggyback",
+      "use": "the Monolith formed corrupted: Tharizdun's crystal replicated into it as it formed",
+      "i": true
+    },
+    {
+      "pattern": "\\blattice fills\\b",
+      "use": "the eye's fifteen hearts (opposition/vecna.html)",
+      "i": true
+    },
+    {
+      "pattern": "Zero Cre|Kretez|Kritez",
+      "use": "Xero Cre'Tez / the Cre'Tez"
+    },
+    {
+      "pattern": "\\bGeorgie\\b",
+      "use": "Jorgi (Giorge is another person)"
+    },
+    {
+      "pattern": "Qalish|Quallish|Koalish|Wazit",
+      "use": "Kwalish / Whazzit"
+    },
+    {
+      "pattern": "\\bAir Spire\\b",
+      "use": "the Feathergale Spire"
+    },
+    {
+      "pattern": "Riverguard Keep",
+      "use": "Rivergard Keep"
     }
   ],
   "voice": [

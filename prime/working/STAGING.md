@@ -11,15 +11,6 @@ when a ruling changes; delete it once the page carries it. See
 ### Naming: Rykoe and Erevos (cosmology/, glossary/, chart/, survey; done everywhere)
 - Rykoe is the centre of the cosmos: the remains of the Reach world, the black hole beneath the Core Monolith and the Radiant Citadel, around which the five galaxies lie, and which opens only when all five cores wake. The First Heart lies beneath Rykoe. Erevos is the black hole at the core of GAL-01, and the galaxy is named for it: the Erevos Galaxy. (Korey 2026-10-28: the two names swapped. done: every page, the survey, the chart, connections.json; "Rykoe Galaxy" is a retired term.)
 
-## Fonains
-
-### Fonains geography (locations/fonains.html, Fonains doc; section 8)
-- T'Arionese is a region of Fonains. Orerius is in T'Arionese. The Cre'Tez estate is in Orerius, and it is the home of the Cre'Tez siblings (Xero, Lusion, Vanifer and the others). Clint works bounties out of Orerius, and Finerva (Vanifer) posted the Blooming Glass bounty there for the Cre'Tez.
-- The remains of the Fonains Monolith lie in the Trentara forest, in the north of the northern continent, between Nomnia and the Kingdom of Shaumala.
-- On Korey's map the Barrier Peaks lie in the south-west of the northern continent, below Gabuk and Selran, near the isthmus that runs down to T'Arionese. They are notable for Thessalar's crashed planar craft: its main body raised the peaks, and Thessalar is still inside (already on vessels/thessalars-craft.html and dossiers/thessalar.html; this line is for placing the peaks on the map).
-- Korey's Fonains map (his own) is the page's map (`assets/maps/fonains.webp`); places on Fonains are placed from it.
-- done: dossiers/clint.html and connections.json carry Orerius (section 7 correction); locations/fonains.html carries them and the map (section 8). Still waiting: Trentara and T'Arionese as nodes in connections.json.
-
 ## Factions
 
 ### Caelestis, the Driftwardens and the United Intergalactic Fleet (factions/fleet.html, factions/index.html, cosmology/, locations/, glossary/, restricted/)
