@@ -2743,7 +2743,7 @@
       "label": "Strake Station",
       "type": "place",
       "scope": "caelestis",
-      "summary": "The Caelestis Sector's station at the edge of Realmspace, the last open deck before the closed run to Cairn.",
+      "summary": "The Caelestis Sector's waystation at the edge of Realmspace, with a small Fleet presence watching the edge; the last open deck before the closed run to Cairn.",
       "facts": [
         {
           "t": "Strake Station and its sister satellites are Caelestis's to keep.",
