@@ -1640,6 +1640,10 @@
           "src": "factions/fleet.html"
         },
         {
+          "t": "The Fleet keeps Galactic time cycles (GTC); Cycle 0 is its founding at Caelestis, and the current cycle is 1491.",
+          "src": "factions/fleet.html#gtc"
+        },
+        {
           "t": "Not every spelljammer belongs to the Fleet; independents, other factions and smaller mercantile houses, Vocath's crew among them, work outside it.",
           "src": "factions/fleet.html"
         },

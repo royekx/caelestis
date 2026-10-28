@@ -188,8 +188,8 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-26
   done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); prime/factions (section 2); prime/locations (section 3).
 
-- **[decide]** Galactic time cycles (GTC)
-  The Fleet keeps one standard galactic time, modelled on UTC: a single reference everyone converts to. The FIA's "Cycle 1490" and "Cycle 1491" are GTC cycles, and the current cycle is 1491. Still to set: the epoch (what Cycle 0 is), and a cycle's length against local years, so local spans convert (500 years on Fonains is not 500 cycles) and loose timelines can be drawn. Toril's years, Fonains's "year 425" and Krynn's calendar each convert to GTC. Do not use "reckoning" for any of this.
+- **[decide]** Galactic time cycles (GTC): a cycle's length
+  The Fleet keeps one standard galactic time, modelled on UTC: a single reference everyone converts to. The FIA's "Cycle 1490" and "Cycle 1491" are GTC cycles, and the current cycle is 1491. Settled: Cycle 0 is the founding of the Fleet at Caelestis (factions/fleet.html#gtc, glossary, timeline; prime/data/survey.json now treats 1491 as the present). Still to set: a cycle's length against local years. The working default is one cycle to one Toril year, Caelestis's world, and the timeline places the founding at about t = −1491 by it. The length is needed so local spans convert (500 years on Fonains is not 500 cycles) and loose timelines can be drawn. Toril's years, Fonains's "year 425" and Krynn's calendar each convert to GTC. Do not use "reckoning" for any of this.
   src: Korey, 2026-10-28 (dates ruling); replaces "The calendar the Cycle counts" (Korey, 2026-10-26; restricted/ orders)
 - **[later]** Spelljammer's own terms
   Korey wants to wear down the Spelljammer barriers ("spelljamming" means nothing for a ship); spheres have become galaxies. Review the remaining genre terms (spelljammer, spelljamming helm, wildspace, Astral Sea, phlogiston) for plainer replacements during the overhaul.
