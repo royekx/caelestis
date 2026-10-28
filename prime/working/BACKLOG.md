@@ -35,7 +35,7 @@ staging once Korey has read and accepted them.
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 7 | 2 | 0 | 3 |
-| Campaign | campaign/: spine, voyages, plot hooks; opposition/; principles.html | 17 | 1 | 8 | 1 | 10 |
+| Campaign | campaign/: spine, voyages, plot hooks; opposition/; principles.html | 17 | 1 | 1 | 0 | 0 |
 | Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 9 | 12 | 18 | 0 | 85 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
@@ -1029,17 +1029,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ### campaign/voyages/index.html
 
-- **[add]** Tyrant ship weapons: four eyes at stations *(answered)*
-  Four stations, not three cannons. Add to vessels/tyrant-ship.html (in-world): "Vaelorix worked the great eyes with his own gaze. Pffred and Krik'Lit rigged a crew station for each eye around the helm on the Command Deck. Four of the ten answer; the rest need repairs." The voyages page already reads four and needs no change. Gunners in the Meditation Deck pods are retired. Which four eyes work, and what each does, is a separate open item (draft candidates: Fear, Telekinesis, Slowing).
-  Touches: campaign/voyages/index.html, vessels/tyrant-ship.html.
-  src: memory-canon campaign-canon § Naming (tyrant ship reconciliation); chat-voyage-6-7-planning § Superseded
-  answered: inbox/chat-voyage-6-7-planning.md § Voyage 7 / The Lantern and the ship (Settled: "Four of the ten respond… Korey recalled nine eyes; ten stands") and § Superseded ("Three eyestalks wired as cannons with gunners in Meditation pods → four of ten eyes answer at stations around the helm"), chat updated 2026-10-25
-
-- **[fix]** Sol's vignette ran in V006; the mimic is retired *(answered)*
-  Nothing moves to V007. Sol's vignette ran in V006 as narration: three clockwork horrors attacked the Cargo Deck, Ryeback fired his hand cannon, Krik'Lit said "its mother is calling for them", and Miken went down the rope. The horrors replaced the mimic as the ambush, so the mimic is retired. Wherever the voyages page or V007 plan still lists Sol's vignette or the mimic as owed, remove it.
-  src: chat-cosmic-campaign-structure § Open; memory-canon campaign-canon (Voyage 006 outcome)
-  answered: inbox/chat-voyage-6-7-planning.md § Voyage six / What happened in Voyage 6 (Settled: the vignette as run) and § Superseded ("Mimic as the vignette ambush → horrors")
-
 - **[decide]** Casey's V007 beat *(prep)*
   Options: a Vaelorix chart in Research showing the sky from inside Mirt's wardrobe beside a collecting site past the waystation; or something else. It must give Casey's cooling thread a small nudge back.
   src: chat-voyage-6-7-planning § Open; memory-canon open-decisions (Voyage 007 intent)
@@ -1066,82 +1055,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   Options: yes; or no, and the suspicion stays as misdirection from Joffrey.
   Touches: campaign/voyages/index.html, dossiers/miken.html.
   src: chat-voyage-6-7-planning § Open
-
-- **[fix]** The Command Deck field did not unmake constructs
-  The V005 entry says "the Command Deck is an anti-magic field that unmakes constructs". In the field the clockwork horrors froze, the OSTEKK units stuttered and slowed but kept running, and the behir could not enter. Gregory went sluggish, as narration only, with no mechanical effect; the construct table's "Gregory … Unaffected" changes to that.
-  src: chat-voyage-6-7-planning § The field and constructs; memory-canon campaign-canon § Key NPCs (Ostekk-6)
-
-- **[fix]** Ostekk-6 is an automaton
-  V004 Actual and Delta say "gave the autognome its name", "the autognome warned", "Keep the autognome unrepaired", and the V004 plan says "a broken autognome". Ostekk-6 is an automaton; Gregory is the autognome. Change each. Flag only (do not fix): data/sessions.json, data/quests.json and data/items.json also call him an autognome.
-  src: memory-canon campaign-canon § Key NPCs (Ostekk-6)
-
-- **[fix]** No patrol at H'Catha
-  The V007 plan lists "the H'Catha approach, the patrol, the landing". Change "the patrol" to "the border crossing".
-  src: memory-canon campaign-canon § Antagonists (H'Catha layout)
-
-- **[drop]** "The network"
-  V001 Delta says "Everything the network does afterward". The network is retired. Change to "Everything Vocath's operation and the colony do afterward".
-  src: memory-canon open-decisions (Act 1 retrofit)
-
-- **[add]** Voyage 007 shape
-  Add to the V007 briefing: V007 is a cool-down, RP-heavy session so the party meshes as a crew. Every player gets one beat after leveling, spread across the days rather than back to back. "Shakedown" is reserved as the title, explained at the table. Downtime aboard is one thing per day for three days, each with a real benefit set once the players pick. Bartholomew gets the Aspects mechanic before the session; his beat is the chance to use it.
-  src: memory-canon open-decisions (Voyage 007 intent); chat-voyage-6-7-planning § Interlude and downtime
-
-- **[add]** Beats owed in V007
-  Add to Beats owed:
-  - **Tumak.** Resting in his quarters he feels something settle that he can't name; he has inadvertently marked the spot. Later, needing to escape within 100 ft of his quarters, his Wayfind fires and lands him back there. His first rune match.
-  - **Sol.** On the day-7 lane-marker board, a wanted notice from Aethris seeks an astral elf marked by misfortune: "RETURN REQUESTED", reward on return to Aethris, no reward for remains. It describes him and names no one. Aethris can post this far out, and the C.R.C. already proves its reach. Whoever engages the board finds it (Tumak asking for a bounty board, for example). If nobody does, Sol or the highest passive Perception notices it, or notices someone watching. Recognising Sol needs no roll. Someone in the room saw the notice, then saw a person matching it walk in (how the watcher engages is a decide above). The C.R.C. itself stays near Caelestis (see dossiers/crc.html).
-  - **Gregory.** In Toril orbit his pull points straight down at his home world, then falls behind as the ship leaves, and he chooses whether to speak. (Joins the existing "louder in the bay" note.)
-  - **Boogie.** He alone feels out of step with the Lantern's pulse. If the Lantern heals him he regains the hit points, then is a loose puddle until the end of his next turn (Speed 10 ft., drops what he holds, can't cast), with only the stone keeping its shape. The shard escalates without revealing it is a Monolith piece.
-  - **Casey.** His thread needs a small nudge back (beat in the decide above).
-  - **Ezra.** He arrives with his own hook that others can latch onto, so he is more than another person aboard (the Pffred and Krik'Lit problem). Hook options are a decide under dossiers/ezra.html.
-  src: memory-canon open-decisions (Voyage 007 intent); campaign-canon § Naming (Boogie near the Lantern); chat-voyage-6-7-planning § V007 player beats, § Settled; BCS § Sol/H'Catha transit
-
-- **[add]** Crew nights on the crossing
-  Add to the V007 briefing: Ryeback cooks from the Garden and dares someone to eat first. Ezra spars and shares a line of the Watcher creed. Miken sits alone by the intake. Ostekk-6 asks Gregory what a plan is.
-  src: chat-voyage-6-7-planning § Crossing and H'Catha
-
-- **[add]** The lane marker
-  Add: the lane marker is a crystal beacon on a tethered rock, ringed with mooring posts, with a board for notices, trades and warnings. Ships stop here, which is why encounters can happen here and not at speed.
-  src: chat-voyage-6-7-planning § Crossing and H'Catha; memory-canon campaign-canon § Naming (crossing encounters)
-
-- **[add]** Crossing table
-  Add: each day roll a d6; on a 1, roll the d8.
-  1 psychic wind · 2 dohwar salvager · 3 colour pool · 4 lost cargo pod (its ledger stamped with the eye in a wheel) · 5 shadow ship (run it by day 12 if unrolled) · 6 kindori calf · 7 the Fear eye waking · 8 mercane trader, moored at a lane marker.
-  (Numbering partly inferred from the sweep.)
-  src: chat-voyage-6-7-planning § Crossing and H'Catha
-
-- **[add]** The mercane trader
-  Add: the mercane trader sold specimens to Vaelorix for the foreign coin found in the Quarters and knows the hull. He changes that coin at 90%. One line of his manifest is stamped with the eye in a wheel. He carries word of the crew to H'Catha ahead of them.
-  src: chat-voyage-6-7-planning § Crossing and H'Catha
-
-- **[add]** Crossing distance
-  Add beside the 14 days: Toril sits 3,000 million miles from the system's edge and H'Catha 1,600 million (Spelljammer Academy Appendix A). At 100 million miles a day the crossing is 14 days, longer when the worlds are on opposite sides of the sun.
-  src: chat-voyage-6-7-planning § Crossing and H'Catha
-
-- **[add]** V006 standing rulings
-  Add to the V006 record (or statblocks/index.html): clockwork horror HP 30; two cones give +3 cover; hollowed wisps AC 11, DC 12 Con save, 1d4 necrotic, latch on a failure.
-  src: chat-voyage-6-7-planning § The field and constructs
-
-- **[add]** Vaelorix's Quarters
-  Add to the ship sweep note: Vaelorix's Quarters, still unvisited, hold a treasury of coin alongside what is already there.
-  src: memory-canon campaign-canon § Naming (Vaelorix's Quarters)
-
----
-
-### campaign/voyages/voyage-briefing-002.html
-
-- **[fix]** Sagittarius points
-  Page says "Three points light over Ryeback: {5, 7, 8} — uniquely Sagittarius" and "Stars {5, 7, 8}". On the published chart, at 3 stars Sagittarius lights {1, 8, 10}, revealed in the order 10, 1, 8. Change both.
-  src: chat-crew-boogie-casey-sol § Casey/Stellar chart; stellar-chart/index.html
-
-- **[fix]** Sol feels the scry either way
-  Page says "The pressure passes on a success and remembers him on a failure". Sol feels the first scry either way. The Wisdom save (with the scry's −5 rolled behind the screen) sets only how clearly: on a success it stays vague.
-  src: chat-crew-boogie-casey-sol § Sol/C.R.C. and the scry beats
-
-- **[fix]** Ryeback's stolen weapon is a pistol
-  Beat 1 says "his stolen custom musket". Change to "his stolen custom pistol".
-  src: memory-canon campaign-canon § Key NPCs (Ryeback)
 
 ---
 

@@ -301,6 +301,7 @@ Old path → new path, added by each pull request that moves a page.
 | `prime/campaign/spine.html#central-question` | `prime/campaign/index.html#theme` | Campaign (campaign) |
 | `prime/campaign/what-if.html` | `prime/campaign/plot-hooks.html#speculation` (section ids `#hearts`, `#reach-speculation`, `#alternate-readers`, `#crew-disposition`, `#colony-and-pcs`, `#restorers-speculation` kept) | Campaign (campaign) |
 | `prime/campaign/plot-hooks.html#abandoned-beholders` | retired, no target (the hook is cut; the id is never reused) | Campaign (campaign) |
+| `prime/campaign/voyages/voyage-briefing-002.html` | `prime/campaign/voyages/index.html#v002` (the full briefing is `#v002-briefing`) | Campaign (campaign) |
 
 ## Stale branches
 

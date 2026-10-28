@@ -485,13 +485,18 @@
       "new": "cut: Vaelorix was alone; the anchor is retired"
     },
     {
+      "old": "voyage-briefing-002",
+      "new": "campaign/voyages/index.html#v002"
+    },
+    {
       "old": "world-surveyor-thread",
       "new": "campaign/plot-hooks.html#atlas-thread"
     }
   ],
   "allow": [
     "prime/cosmology/:outcomes were undecided|new undecided things",
-    "prime/locations/:Kesh Hollow"
+    "prime/locations/:Kesh Hollow",
+    "prime/campaign/voyages/index.html:<td>1</td><td>Psychic wind</td>"
   ],
   "scan": [
     "prime",
