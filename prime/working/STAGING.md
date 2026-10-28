@@ -86,6 +86,9 @@ when a ruling changes; delete it once the page carries it. See
 - His grievance: something was taken from him and hidden from him. He believes the cosmos and every being in it are owed an answer, and he means to find it.
 - DM: the campaign is not a war of the gods.
 
+### How gods look (cosmology/, factions/deities.html, dossiers/vecna.html)
+- Gods have bodies, and each god's body expresses what it is. Some are humanoid, some are beasts, some are constructs, and some are partly living landscape.
+
 ### Asmodeus and the Accordance (factions/deities.html, Fonains doc)
 - The Accordance is a section of the Deities page, kept short: its story belongs mostly to Fonains. Its members are Lord Primus, Asmodeus, Eldath, Muriel, Ryujin and Futsunushi.
 - Muriel is a humanoid crab. Ryujin is a serpent, from Japanese lore. Futsunushi, also from Japanese lore, is a god of smithing and weapons. Lord Primus, like Muriel, is the cosmos's own.
@@ -93,6 +96,13 @@ when a ruling changes; delete it once the page carries it. See
 - Asmodeus and Lord Primus are the eldest gods of the Accordance. Asmodeus is its face, though not its ruler or its leader.
 - Asmodeus was among the first to understand what the gods had become. He began as a good-natured god. The Reach let loose good and evil alike, demons among them, and he took up the fight against them while the other gods sat in their comfort. He was betrayed, and he became the lord of the Nine Hells. He is called evil because someone has to do this work, and he does it.
 - The Accordance know little of Vecna. A few centuries ago they felt something change: a new entity like them, where there had been none. Asmodeus likely knows something is wrong, and Lord Primus may.
+- Asmodeus is a tall, red-skinned devil with long swept-back horns ringed with metal bands and hung with fine chains, a crown of red flame between them, a narrow bearded face and a pointed tail. He wears high-collared black robes and a heavy mantle edged in red, rings on his clawed hands, and walks with a long black staff.
+- Eldath is a woman whose body becomes living wood below the shoulders: bark for skin, limbs that run into roots and branches, and a crown of antler-like branches where flowers grow and bluebirds perch. Her hair is long and auburn; a small pale light rests in her open palm.
+- Futsunushi is a many-armed, hooded figure seated cross-legged in the air, his arms bound in white wrappings, his face hidden by a long-nosed grey mask with curved horns. A ring of swords, spears and blades hangs around him; he wears dark robes with a green sash.
+- Muriel is a humanoid crab: pale-skinned, armoured in copper shell plates with great claw-like gauntlets, a smooth shell helm crowned with a ring, and a teal sash. Incense smoke rises from a small censer in her hand.
+- Ryujin is a vast sea serpent-dragon with teal-green scales, a crown of long curved horns that sweep into a halo, a beaked, spined face and trailing whisker-tendrils; a cold teal light rises behind him.
+- Lord Primus is a towering construct in dark armour with a golden mask, a breathing apparatus at the mouth, a red gem on the brow and a red hexagonal core glowing in the chest. Cables trail from him, and a halo of red script turns behind him.
+- Nalsa, the Accordance's emissary, is an androsphinx: a tawny lion with a great pale mane and a braided beard, wings that shade from tan to violet at the tips, blue markings on the face, white eyes, and a collar set with blue stones.
 
 ### The Seekers (factions/seekers.html, campaign/, factions/spectrum.html, opposition/vecna.html)
 - The Seekers are Vecna's faith. Seeking is the faith itself; what a chapter seeks is what names it. The Seekers of Secrets are one chapter. Others seek knowledge, a cure for death, or a home.
