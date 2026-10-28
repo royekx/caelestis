@@ -4,7 +4,9 @@
     "prime/cosmology",
     "prime/glossary",
     "prime/factions",
-    "prime/locations"
+    "prime/locations",
+    "prime/artifacts",
+    "prime/vessels"
   ],
   "retired": [
     {
@@ -48,8 +50,37 @@
       "use": "five Axioms"
     },
     {
-      "pattern": "\\b(Boundary|Transformation|Convergence) (fragment|piece|pieces|Axiom|seat|residue)\\b",
-      "use": "Distinction / Expansion / Consolidation (fragment); the Axioms are Consolidation, Expansion, Dissolution, Distinction, Determination"
+      "pattern": "\\b(Boundary|Transformation|Convergence)\\b",
+      "use": "Distinction / Expansion / Consolidation; the Axioms and their fragments are Consolidation, Expansion, Dissolution, Distinction, Determination"
+    },
+    {
+      "pattern": "\\b(four|Four) fragments\\b|\\bseventeen (residue )?pieces\\b",
+      "use": "five fragments, twenty-eight pieces: Dissolution 2, Distinction 3, Expansion 5, Consolidation 7, Determination 11",
+      "i": true
+    },
+    {
+      "pattern": "\\bfirst[- ]key\\b|\\bsecond key\\b|\\bkey to the First Heart\\b|\\bopens the First Heart\\b",
+      "use": "a whole fragment does not open the First Heart; what assembling one does is not set (a Still to decide sentence)",
+      "i": true
+    },
+    {
+      "pattern": "\\btwo thresholds\\b",
+      "use": "retired: a whole fragment does not open a door, and what all five do is not set",
+      "i": true
+    },
+    {
+      "pattern": "one person in two bodies",
+      "use": "Wan and Tu, two hosts sharing one persona",
+      "i": true
+    },
+    {
+      "pattern": "\\bThe (Tyrant Ship|Tyrant|Moonraider|Flighty Foundling|Bellwether Crow)\\b",
+      "use": "the name alone: Tyrant Ship, Moonraider, Flighty Foundling, Bellwether Crow (ship names carry no article)"
+    },
+    {
+      "pattern": "data-sphere",
+      "use": "data-where (the vessels register's Where axis)",
+      "raw": true
     },
     {
       "pattern": "\\b(Negentropy|Possibility fragment|Gravity fragment|Entropy fragment)\\b",
@@ -244,6 +275,11 @@
       "note": "no 'Open' labels, rows or sections: write what is undecided as a sentence in a DM notes tab or planning page"
     },
     {
+      "pattern": "^\\s*Open:\\s",
+      "raw": true,
+      "note": "no 'Open:' lines in running text: write what is undecided as a sentence in a DM notes tab or planning page"
+    },
+    {
       "pattern": "class=\"[^\"]*\\bis-open\\b",
       "raw": true,
       "note": "no 'open' tag: write what is undecided as a sentence in a DM notes tab or planning page"
@@ -345,6 +381,26 @@
     {
       "old": "factions/external.html",
       "new": "factions/index.html#other-powers"
+    },
+    {
+      "old": "artifacts/runekeepers-fragment.html",
+      "new": "artifacts/dissolution-fragment.html"
+    },
+    {
+      "old": "artifacts/transformation-fragment.html",
+      "new": "artifacts/expansion-fragment.html"
+    },
+    {
+      "old": "surveyor-depths",
+      "new": "artifacts/atlas.html#reading-depths"
+    },
+    {
+      "old": "#counter-spore",
+      "new": "artifacts/faelight-spore.html"
+    },
+    {
+      "old": "world-surveyor-thread",
+      "new": "campaign/plot-hooks.html#atlas-thread"
     }
   ],
   "allow": [

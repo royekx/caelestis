@@ -28,7 +28,7 @@
     'ilsabet':       { name: 'Ilsabet Crann',        fileId: '' },
     'vecna':         { name: 'Vecna',                fileId: '' },
     'rod':           { name: 'Rod of Seven Parts',   fileId: '' },
-    'dissolution-fragment': { name: 'Dissolution Fragment', fileId: '' },
+    'dissolution-fragment': { name: 'Dissolution fragment', fileId: '' },
     "krik-lit": { name: "Krik'Lit", fileId: '' },
     "captain-sardax": { name: "Captain Sardax", fileId: '' },
     "veena": { name: "Veena", fileId: '' },
@@ -91,8 +91,13 @@
     'verrow':        { name: 'Quartermaster Halix Verrow', fileId: '' },
 
     // ── Artifacts (treated as portrait-like for dossier consistency) ──
-    'world-surveyor': { name: 'A.T.L.A.S.', fileId: '1PszrX48t8qd24acEGVLa87ir5AXlLJeR' },
-    'containment-engine': { name: 'The Lantern of Flourishing', fileId: '1xiThO5QYp74A5SSAmvt49NQXs1yWbeLT' },
+    'atlas':         { name: 'A.T.L.A.S.', fileId: '1PszrX48t8qd24acEGVLa87ir5AXlLJeR' },
+    'atlas-sister':  { name: "A.T.L.A.S.'s sister", fileId: '' },
+    'containment-engine': { name: 'Lantern of Flourishing', fileId: '1xiThO5QYp74A5SSAmvt49NQXs1yWbeLT' },
+    'distinction-fragment': { name: 'Distinction fragment', fileId: '' },
+    'expansion-fragment':   { name: 'Expansion fragment',   fileId: '' },
+    'determination-fragment': { name: 'Determination fragment', fileId: '' },
+    'faelight-spore': { name: 'Faelight spore',     fileId: '' },
 
     // ── Places ──
     'realmspace':    { name: 'Realmspace',          fileId: '1kI7fIgdRRyDrNaoauZBw_QsKadJmgHf8' },
@@ -130,9 +135,12 @@
     'cairn-station': { name: 'Cairn Station',       fileId: '' },
 
     // ── Ships & vehicles ──
-    'foundling':     { name: 'The Foundling',       fileId: '' },
-    'moonraider':    { name: 'The Moonraider',      fileId: '' },
-    'tyrant-ship':   { name: 'Tyrant ship',         fileId: '' },
+    'flighty-foundling': { name: 'Flighty Foundling', fileId: '' },
+    'moonraider':    { name: 'Moonraider',          fileId: '' },
+    'tyrant-ship':   { name: 'Tyrant Ship',         fileId: '' },
+    'derelict':      { name: 'Derelict',            fileId: '' },
+    'bellwether-crow': { name: 'Bellwether Crow',   fileId: '' },
+    'thessalars-craft': { name: "Thessalar's planar craft", fileId: '' },
 
     // ── Threads, hooks, named objects (sketches/icons) ──
     'hcatha-meteor': { name: 'H\'Catha Meteor',     fileId: '' },

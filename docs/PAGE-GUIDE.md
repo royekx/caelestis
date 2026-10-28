@@ -247,7 +247,8 @@ on a page: no separate status table, no table plus a notes section.
 </div>
 ```
 
-For artifacts and places (wider portraits), use `dossier-list dossier-artifacts`.
+For artifacts and places, use `dossier-list dossier-artifacts`; it takes the
+same rows.
 
 ## 4. DM page anatomy
 
@@ -417,9 +418,23 @@ order, only those with content:
 | Faction (`factions/`) | kind, what it serves, leader, seat, reach, ranks, device, standing with Caelestis | Overview · Beliefs (public aim; a secret aim goes in *What's hidden*) · Structure and ranks · History · Operations · How they look (device, dress, magic) · Seats and branches (one subsection each, with its known members) · Members · Relationships |
 | Item (`artifacts/`) | kind, made by, made of, held by, where, status | Overview · Appearance · Properties (what it does, in prose, then the rules as an item card) · History · In the campaign (a recap by voyage) |
 | Place (`locations/`) | kind, designation, system, galaxy, ruled by, peoples, status | Overview · Description (look, climate, terrain) · History · Peoples and culture · Notable people · Points of interest (one subsection each) · In the campaign (a recap by voyage) |
+| Vessel (`vessels/`) | kind, built by, held by or under command of, where, status | Overview · Appearance · Decks and interior (one subsection per deck or space) · History · In the campaign (a recap by voyage) |
 
-The DM item page holds the full rules; the player inventory entry holds what
-the crew has learned of them.
+A residue item adds a **fragment** row to its infobox. The DM item page holds
+the full rules; the player inventory entry holds what the crew has learned of
+them. The rules sit in an item card (`styles/dm.css`, § Entries) after the
+Properties prose:
+
+```html
+<div class="item-card" id="item-card">
+  <div class="item-card-name">Item name</div>
+  <div class="item-card-type">Wondrous item, uncommon</div>
+  <dl class="item-card-props">
+    <dt>Charges</dt><dd>3, regained at dawn</dd>
+  </dl>
+  <p>What it does, in rules terms.</p>
+</div>
+```
 
 ### Connections
 

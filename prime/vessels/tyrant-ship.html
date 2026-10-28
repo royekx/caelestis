@@ -4,45 +4,136 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>The Tyrant · Caelestis · DM</title>
+<title>Tyrant Ship &middot; Caelestis &middot; DM</title>
 <link rel="stylesheet" href="../../styles/caelestis.css">
 <link rel="stylesheet" href="../../styles/entity.css">
 <link rel="stylesheet" href="../../styles/dm.css">
 <script src="../scripts/dm-nav.js" defer></script>
+<script src="../scripts/portraits.js" defer></script>
+<script src="../scripts/dm-tabs.js" defer></script>
 </head>
 <body>
 
 <main class="dm-content">
 
   <header class="dm-page-header">
-    <div class="dm-page-eyebrow">Vessel<span class="sep">&middot;</span>Vaelorix's ship, boarded</div>
-    <h1>The Tyrant</h1>
+    <div class="dm-page-eyebrow">Vessel<span class="sep">&middot;</span>Tyrant ship</div>
+    <h1>Tyrant Ship</h1>
   </header>
 
-  <div class="voyage-nav-bar"><a class="voyage-nav-link" href="index.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Vessels</span></a><a class="voyage-nav-center" href="index.html">Vessels</a><a class="voyage-nav-link" href="flighty-foundling.html"><span class="nav-label">The Flighty Foundling</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
+  <div class="voyage-nav-bar"><a class="voyage-nav-link" href="vthoramu.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Vth'oramu</span></a><a class="voyage-nav-center" href="index.html">Vessels</a><a class="voyage-nav-link" href="flighty-foundling.html"><span class="nav-label">Flighty Foundling</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
 
-  <div class="entry-header">
-    <div class="identity-card">
+  <div class="entry-header is-wiki">
+    <aside class="identity-card" aria-label="Tyrant Ship at a glance">
+      <div class="portrait-frame dossier-portrait" data-key="tyrant-ship"></div>
       <div class="stat-card">
-        <div class="stat-row"><span class="stat-key">Kind</span><span class="stat-val stat-val-long">Tyrant ship</span></div>
-        <div class="stat-row"><span class="stat-key">Where</span><span class="stat-val stat-val-long">Realmspace, Toril orbit</span></div>
-        <div class="stat-row"><span class="stat-key">Standing</span><span class="stat-val stat-val-long">Taken, and flying since the V006.5 interlude.</span></div>
-        <div class="stat-row"><span class="stat-key">Depth</span><span class="stat-val stat-val-long">Entry</span></div>
+        <div class="stat-row"><span class="stat-key">Kind</span><span class="stat-val stat-val-long">A tyrant ship: a beholder vessel of carved stone</span></div>
+        <div class="stat-row"><span class="stat-key">Held by</span><span class="stat-val stat-val-long">The Caelestis crew; formerly <a href="../dossiers/vaelorix.html">Vaelorix</a></span></div>
+        <div class="stat-row"><span class="stat-key">Helm</span><span class="stat-val stat-val-long">Vaelorix's dais, with the Academy's chair-helm installed into it</span></div>
+        <div class="stat-row"><span class="stat-key">Where</span><span class="stat-val stat-val-long">Orbit around <a href="../locations/toril.html">Toril</a>, in <a href="../locations/realmspace.html">Realmspace</a></span></div>
+        <div class="stat-row"><span class="stat-key">Status</span><span class="stat-val stat-val-long">Flying; four of its ten great eyes answer</span></div>
       </div>
-    </div>
+    </aside>
+
     <div class="entry-info">
-      <div class="entry-name">The Tyrant</div>
-      <div class="entry-sub">A tyrant ship in Toril orbit, taken by the crew in V006.</div>
-      <div class="entry-body">
+      <div class="entry-name">Tyrant Ship</div>
+      <div class="entry-sub">Vaelorix's carved-stone beholder ship, taken by the Caelestis crew in Toril orbit.</div>
+
+      <div class="pill-tabs" role="tablist" data-pill-group aria-label="Tyrant Ship sections">
+        <button class="pill-tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true">About</button>
+        <button class="pill-tab" role="tab" id="tab-dm" aria-controls="panel-dm" aria-selected="false">DM notes</button>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-about" aria-labelledby="tab-about">
         <p>
-          <strong>Vaelorix&rsquo;s ship, and he is dead.</strong> The crew found his body in V005. Nobody on H&rsquo;Catha knows it &mdash; he was H&rsquo;Cathan and landless, so the ship arriving reads as a claimant returning rather than as a trader.
+          <em>Tyrant Ship</em> is a beholder vessel of carved stone, once the ship of <a href="../dossiers/vaelorix.html">Vaelorix</a> the Cultivant, a beholder of <a href="../locations/hcatha.html">H'Catha</a> who held no domain and collected living things. He died aboard it, and it drifted in orbit around Toril for years. The Caelestis crew took it and fly it now. Four of its ten great eyes answer at crew stations, and it carries Vaelorix's specimen garden, his quarters and his study.
+        </p>
+
+        <h4>Appearance</h4>
+        <p>
+          Carved stone throughout, with no windows, and ten great eyes along the hull, each on its eyestalk. Inside, the floors are stone, the light is dim, and the air smells old. Its decks are joined by shafts once served by a small propulsion system for its units, which no longer works. Circling Toril, its hours run close to the Academy's.
+        </p>
+        <p id="pact">
+          Every beholder ship is carved stone, so at H'Catha the ship reads as native traffic; a few such ships in orbit are normal, and a tyrant ship draws less concern at the domain borders than an ordinary spelljammer. It carries some beholder essence, so it obeys <a href="../locations/hcatha.html#pact">the Pact</a>: the eyestalk matching the hour's shut eye goes dead, and in an eclipse the whole ship goes dark.
+        </p>
+
+        <h4>Decks and interior</h4>
+        <h5 id="gravity-plane">The gravity plane</h5>
+        <p>
+          The ship's gravity turns over at a plane through its middle, almost level with the Command Deck floor. The Cargo Deck and the Hollow Deck lie on one side of it. The Command Deck lies on the other, and past it, at the top of the ship, the Meditation nodes: the Garden, the Quarters and Research, each at the end of its own shaft.
+        </p>
+        <h5 id="cargo">Cargo Deck</h5>
+        <p>
+          The ship's entry, and the crew's base camp aboard. Most things leave the ship through its intake, and the expulsion is worked from the Command Deck. A small craft can dock in the intake and carry a party down to a world.
+        </p>
+        <h5 id="hollow">Hollow Deck</h5>
+        <p>
+          A round room shaped like a pit, reached from the shaft through a side opening carved and scored as if cut through the ship one pass at a time. Its walls are lined with machinery: it was the ship's deck for repairs and maintenance, with a repair bay on its far side. Above the bay's pod sits the empty cradle of the <a href="../artifacts/containment-engine.html">Lantern of Flourishing</a>. The floor is strewn with the remains of the ship's automaton units and wrecked clockwork horrors, and a few dormant horrors stand where the behir used to lie. OSTEKK-2 lies inert here.
+        </p>
+        <h5 id="command-deck">Command Deck</h5>
+        <p>
+          Reached through a carved opening just past the gravity plane. Vaelorix lies dead on the dais, his central eye dried open. The dais is the ship's helm, an interface only a beholder could work; Vaelorix never installed a spelljamming helm. The Academy's chair-helm is installed into the dais now, with a crew station for each great eye rigged around it, and the controls for the expulsion are here.
+        </p>
+        <h5 id="garden">Garden</h5>
+        <p>
+          Vaelorix's specimen garden lies at the foot of its shaft: a lavish greenhouse of cultivated flowers along the walls, a bed of grass at its centre, and research tables laid out with instruments and dissected flowers. A thick stalk of unopened velvet-blue buds stands at its heart, and a single whole wisp drifts in the air. The bloom that woke Bartholomew's Aspects came from here.
+        </p>
+        <h5 id="quarters">Quarters</h5>
+        <p>
+          Vaelorix's personal quarters hold a treasury of coin from his deals.
+        </p>
+        <h5 id="research">Research</h5>
+        <p>
+          His study: notes, and star charts of the worlds he collected plants from.
+        </p>
+        <h5 id="wisps">The wisps</h5>
+        <p>
+          Lantern-wisps still linger in the ship. Nothing aboard puts out a fire.
+        </p>
+
+        <h4>History</h4>
+        <p>
+          Vaelorix stole the Containment Engine, Fourth Series, from <a href="../dossiers/ostekk.html">Ostekk</a>, along with the nine OSTEKK automatons built to depend on it. Aboard this ship he pointed the Engine's regenerative working at a wisp-lotus symbiosis and got a paracausal eruption instead of a specimen. The bloom overran the ship. Its flowers made the wisps, which drain the living, and a field around the Command Deck that killed magic and unmade constructs. Vaelorix died on his dais with a plant grown out of his body.
         </p>
         <p>
-          It held the <a href="../artifacts/containment-engine.html">Containment Engine, Fourth Series</a>, built by <a href="../dossiers/ostekk.html">Ostekk</a> around a piece of the Rod. Gregory took it from between the eyestalks in V006 and it rides in Tumak&rsquo;s bag of holding; its cradle sits empty above the repair-bay pod on the Hollow Deck. The garden at the foot of the garden shaft holds Vaelorix&rsquo;s research specimens, including the bloom that woke <a href="../crew/bartholomew.html">Bartholomew&rsquo;s</a> Aspects. Everything the crew has fought aboard is Ostekk&rsquo;s: the clockwork horrors, the automatons, and Ostekk-10, the behir, which they ejected through Cargo.
+          Ostekk's clockwork behir, Ostekk-10, came for the Engine and was stranded aboard, unable to enter the field, and clockwork horrors fed on the broken units in the hold. Nobody on H'Catha learned what became of Vaelorix, and the ship drifted in orbit around Toril for years.
         </p>
+
+        <h4>In the campaign</h4>
+        <ul>
+          <li><strong>Voyage 3.</strong> <a href="../dossiers/boatswain-tarto.html">Boatswain Tarto</a> sent the crew to install a helm and fly the ship through H'Cathan space unchallenged. <em><a href="flighty-foundling.html">Flighty Foundling</a></em> dropped them into its Cargo Deck, where clockwork horrors were feeding on <a href="../dossiers/ostekk-6.html">OSTEKK-6</a>.</li>
+          <li><strong>Voyage 4.</strong> The crew destroyed the horrors and cleared the bloom from the garden shaft, though the wisps persisted. The Collection Manifest gave OSTEKK-6 his name.</li>
+          <li><strong>Voyage 5.</strong> On the Hollow Deck the crew fought the behir and retreated; Gregory jolted OSTEKK-2 awake long enough for it to name the behir's sender, "the original Ostekk". Boogie found the gravity plane, and the crew reached the Command Deck and the dead beholder.</li>
+          <li><strong>Voyage 6.</strong> The crew found the Garden, cut down the flowers and tore the great one from Vaelorix's body, and magic returned. Gregory found the Lantern; the crew lied to Ostekk-10 and ejected it through Cargo. The helm went to the Command Deck for fitting. In the days after, it was seated, four of the ten eyes answered, and the <em>Flighty Foundling</em> came alongside.</li>
+        </ul>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-dm" aria-labelledby="tab-dm" hidden>
+        <h4>What's hidden</h4>
+        <ul>
+          <li><strong>Not the crew's to keep.</strong> The ship goes into the Caelestis inventory after the mission; see <a href="../factions/fleet.html">the Fleet</a>.</li>
+          <li><strong>Vaelorix's debts.</strong> Nobody on H'Catha knows Vaelorix is dead. Something between him and Kurrzot was left unsettled, and it lands on whoever flies his ship.</li>
+        </ul>
+
+        <h4>How to run it</h4>
         <p>
-          Done. The field is down: the crew cut the flowers and tore the great one off the corpse. Pffred and Krik'Lit fitted the helm and rigged a crew station for each great eye; it seated in the V006.5 interlude, and four of the ten eyes answer. OSTEKK-2 still lies on the Hollow Deck. Most things leave through Cargo, with the expulsion worked from the Command Deck, and there is still no fire suppression aboard.
+          Run the ship in the theatre of the mind. Someone able to cast must stay aboard to hold the helm: Saerthe at the helm and Ryeback commanding the deck, or Miken left aboard alone as the high-tension option. A scuttle ship from the <em>Flighty Foundling</em> docks in the Cargo intake and carries the landing party; the approach is on <a href="../locations/hcatha.html">H'Catha</a> and <a href="../campaign/spine.html#hcatha-arc">the H'Catha arc</a>. Manifest entry 048 stays unused unless a player asks, and the soft light Casey saw under the behir is left undefined.
         </p>
+
+        <h4>Threads</h4>
+        <ul>
+          <li><strong>OSTEKK-2.</strong> The crew could heal it back to function if they return for it, with the Lantern of Flourishing for one.</li>
+          <li><strong>The wisps.</strong> Keeping them or eradicating them is the crew's choice, made in play.</li>
+          <li><strong>The Rod.</strong> The ship ties to the <a href="../artifacts/rod-of-seven-parts.html">Rod of Seven Parts</a> through the Lantern it carried.</li>
+          <li><strong><a href="../dossiers/ostekk.html">Ostekk</a>.</strong> He wants his Engine back, and the crew lied to his machine.</li>
+        </ul>
+
+        <h4>Still to decide</h4>
+        <ul>
+          <li>Which four eyes answer, and what each does, is not set. The candidates are Fear (waking on crossing entry 7), Telekinesis (an easy first unlock) and Slowing (later); the fourth is unnamed. The player ship sheet follows from it.</li>
+          <li>Which shaft letter Research gets is not set: B or D. The Garden is A and the Quarters C.</li>
+          <li>The crew has not settled on a name for the ship.</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -53,19 +144,37 @@
     <div class="xref-head"><span class="xref-title">Connections</span></div>
     <div class="xref-cols">
       <div class="xref-col">
-        <a class="chip chip chip-place" href="../../navigation-records/the-tyrant-ship.html">Player record</a>
-        <a class="chip chip chip-npc" href="../dossiers/ostekk.html">Ostekk</a>
-        <a class="chip chip chip-npc" href="../dossiers/ostekk-6.html">OSTEKK-6</a>
-        <a class="chip chip chip-quest" href="../campaign/voyages/">Voyage 006</a>
+        <div class="xref-col-head">People and factions</div>
+        <a class="chip chip-npc" href="../dossiers/vaelorix.html">Vaelorix</a>
+        <a class="chip chip-npc" href="../dossiers/ostekk.html">Ostekk</a>
+        <a class="chip chip-npc" href="../dossiers/ostekk-6.html">OSTEKK-6</a>
+        <a class="chip chip-npc" href="../dossiers/winston-ryeback.html">Winston Ryeback</a>
+        <a class="chip chip-npc" href="../dossiers/saerthe-abizjn.html">Saerthe Abizjn</a>
+        <a class="chip chip-npc" href="../dossiers/krik-lit.html">Krik'Lit</a>
+        <a class="chip chip-npc" href="../factions/fleet.html">Caelestis and the Fleet</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Places</div>
+        <a class="chip chip-place" href="../locations/toril.html">Toril</a>
+        <a class="chip chip-place" href="../locations/hcatha.html">H'Catha</a>
+        <a class="chip chip-place" href="flighty-foundling.html">Flighty Foundling</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Items</div>
+        <a class="chip chip-item" href="../artifacts/containment-engine.html">Lantern of Flourishing</a>
+        <a class="chip chip-item" href="../artifacts/faelight-spore.html">Faelight spore</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Campaign</div>
+        <a class="chip chip-quest" href="../campaign/voyages/">Voyages</a>
+        <a class="chip chip-quest" href="../campaign/spine.html#hcatha-arc">The H'Catha arc</a>
       </div>
     </div>
   </div>
-
   <div class="dm-footer">
-    The Tyrant &middot; Vessels &middot; Caelestis DM
+    Tyrant Ship &middot; Vessels &middot; Caelestis DM
   </div>
 
 </main>
-
 </body>
 </html>

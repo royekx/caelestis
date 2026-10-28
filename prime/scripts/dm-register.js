@@ -26,10 +26,10 @@
          .ent-detail               shown by the row's own disclosure
 
    Axes are discovered from the pills, so a page adds a filter by adding
-   a pill group. Nothing here knows what a sphere or a kind is.
+   a pill group. Nothing here knows what a system or a kind is.
 
-   Filtering is AND across axes, OR within one: picking two spheres
-   widens, picking a sphere and a status narrows. That is what people
+   Filtering is AND across axes, OR within one: picking two systems
+   widens, picking a system and a status narrows. That is what people
    expect from facets and it is worth the extra few lines.
    ════════════════════════════════════════════════════════════════ */
 (function () {

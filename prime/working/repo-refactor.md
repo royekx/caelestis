@@ -287,6 +287,11 @@ Old path → new path, added by each pull request that moves a page.
 | `prime/realms/first-world.html` | `prime/locations/rykoe.html` | Locations (locations) |
 | `prime/realms/ascension-world.html` | `prime/locations/oerth.html` | Locations (locations) |
 | `prime/realms/tetherbreak.html` | `prime/locations/realmspace.html#perimeter-watch` | Locations (locations) |
+| `prime/artifacts/runekeepers-fragment.html` | `prime/artifacts/dissolution-fragment.html` | Artifacts and vessels (artifacts) |
+| `prime/artifacts/transformation-fragment.html` | `prime/artifacts/expansion-fragment.html` | Artifacts and vessels (artifacts) |
+| `prime/artifacts/atlas.html#surveyor-depths` | `prime/artifacts/atlas.html#reading-depths` | Artifacts and vessels (artifacts) |
+| `prime/rules/index.html#counter-spore` | `prime/artifacts/faelight-spore.html` | Artifacts and vessels (artifacts) |
+| `prime/campaign/plot-hooks.html#world-surveyor-thread` | `prime/campaign/plot-hooks.html#atlas-thread` | Artifacts and vessels (artifacts) |
 
 ## Stale branches
 
