@@ -507,7 +507,7 @@
         },
         {
           "t": "Zeniths are arriving more often than the Order can explain.",
-          "src": "campaign/spine.html"
+          "src": "campaign/index.html"
         }
       ]
     },
@@ -3597,7 +3597,7 @@
       "facts": [
         {
           "t": "The bloom is an accelerant for Bartholomew's Almost, not its key.",
-          "src": "campaign/spine.html"
+          "src": "campaign/index.html"
         }
       ]
     },
@@ -3736,7 +3736,7 @@
       "facts": [
         {
           "t": "The meteor is adamantine and hums on the same frequency as Boogie's shard and Gregory's core.",
-          "src": "campaign/spine.html"
+          "src": "campaign/index.html"
         },
         {
           "t": "It struck the Pupil, on the seam between Kurrzot's domain and his rival's, and is mined as a vein in an occupied, skirmished area.",
@@ -3918,7 +3918,7 @@
         },
         {
           "t": "Aethris shows what other worlds are being aimed toward, and Sol is the one who walked out of it.",
-          "src": "campaign/spine.html"
+          "src": "campaign/index.html"
         }
       ]
     },
@@ -7234,13 +7234,13 @@
       "s": "hcatha-meteor",
       "t": "LOC-Sk4mW8vn",
       "rel": "struck",
-      "src": "campaign/spine.html"
+      "src": "campaign/index.html"
     },
     {
       "s": "hcatha-meteor",
       "t": "fonains-shard",
       "rel": "hums with",
-      "src": "campaign/spine.html"
+      "src": "campaign/index.html"
     },
     {
       "s": "LOC-Sk4mW8vn",

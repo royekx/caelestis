@@ -296,6 +296,9 @@ Old path → new path, added by each pull request that moves a page.
 | `prime/campaign/colony/index.html#vocath-op` | `prime/opposition/vthorama.html#caelestis-operation` | Campaign (campaign) |
 | `prime/campaign/colony/index.html#academy-op` | `prime/opposition/vthorama.html#caelestis-operation` | Campaign (campaign) |
 | `prime/campaign/colony/index.html#tetherbreak` | `prime/vessels/bellwether-crow.html` | Campaign (campaign) |
+| `prime/campaign/index.html` (the wiki manual) | `prime/principles.html`; wiki conventions to `docs/PAGE-GUIDE.md` | Campaign (campaign). The path now holds the Campaign page, the approved Story landing page; no inbound link targeted the manual's anchors, and its ids (`structure`, `pages`, `principles`, `hooks`, `conventions`, `building`) are not reused |
+| `prime/campaign/spine.html` | `prime/campaign/index.html` | Campaign (campaign) |
+| `prime/campaign/spine.html#central-question` | `prime/campaign/index.html#theme` | Campaign (campaign) |
 
 ## Stale branches
 

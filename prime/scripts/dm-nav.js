@@ -97,7 +97,6 @@
       axiom: 'consolidation',
       items: [
         { key: 'campaign',  label: 'Campaign',      path: 'campaign/'   },
-        { key: 'spine',     label: 'Spine',         path: 'campaign/spine.html',   indent: true },
         { key: 'what-if',   label: 'What If',       path: 'campaign/what-if.html', indent: true },
         { key: 'vecna',     label: 'Vecna',         path: 'opposition/vecna.html',    indent: true },
         { key: 'vthorama',  label: "Vth'orama",     path: 'opposition/vthorama.html', indent: true },

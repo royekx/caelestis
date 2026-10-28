@@ -35,12 +35,12 @@ staging once Korey has read and accepted them.
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 7 | 2 | 0 | 3 |
-| Campaign | campaign/: spine, voyages, plot hooks; opposition/; principles.html | 13 | 1 | 34 | 5 | 26 |
+| Campaign | campaign/: spine, voyages, plot hooks; opposition/; principles.html | 17 | 1 | 15 | 4 | 13 |
 | Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
-| Crew | crew/ | 9 | 12 | 17 | 0 | 83 |
+| Crew | crew/ | 9 | 12 | 18 | 0 | 85 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
-| New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 5 | 2 | 24 |
+| New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 4 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
@@ -946,29 +946,29 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ---
 
-### campaign/spine.html
+### campaign/index.html
 
-- **[fix]** Vth'oramu: Arc 2 site or Arc 3 discovery
-  factions/vthorama.html and dossiers/vthoramu.html call Vth'oramu "the Arc 2 site"; the spine lists "Vth'oramu is located" among the Arc 3 possibilities. Settle which arc.
-  src: Factions review, 2026-10-28
+- **[decide]** Arc 1's close and the length of H'Catha *(prep)*
+  Campaign § Arc 1 says Arc 1 closes around sessions 8 to 10 with the attack on Caelestis and graduation, at level 4. The H'Catha mission begins at V007 and may run several voyages, and the crew is already level 4. Options: (a) H'Catha runs V007–V008 and graduation lands at V009–V010 as written; (b) Arc 1 runs longer and the session range moves; (c) the attack and graduation compress into one voyage. Touches: campaign/index.html (Arc 1, the close), campaign/voyages/index.html.
+  src: memory-canon open-decisions (Planned line); campaign section, conflict C17
+
+- **[decide]** Who goes ashore at H'Catha and who holds the helm *(prep)*
+  Two sources disagree. The spine's add had Saerthe at the helm with Ryeback commanding the deck; V006's "How a table of ten gets run" puts Ryeback and Miken with the ship and the chosen teacher ashore with Ezra. Campaign § the H'Catha mission states both as conditional on the instructor pick (Saerthe can take the helm; otherwise the teacher goes ashore). Rule which holds, or keep it conditional. Touches: campaign/index.html (#hcatha-arc), campaign/voyages/index.html (V006 swap, V007).
+  src: memory-canon open-decisions (Voyage 007 intent); voyages V006; campaign section, conflict C13
+
+- **[decide]** Arc 2's second system
+  Arc 2 stays in Realmspace plus at most one other system (Campaign § Arc 2). Which second system, and why the Fleet works there, is not chosen. Touches: campaign/index.html (#arc-2), locations/.
+  src: carried from the spine's "Arc 2's range" item (chat-early-planning § Cosmology and setting)
+
+- **[decide]** What Gregory and Sol are missing
+  STAGING § The theme named what Vecna, N'ghathrod, Astra Virex, Casey, Tumak, Bartholomew and Boogie each want, and said only that "Gregory and Sol carry it too". Campaign § Theme and § Crew say so and stop. Name each one's want in the theme's terms. Touches: campaign/index.html (#theme, #crew), crew/gregory.html, crew/sol.html.
+  src: STAGING § The theme (round 2)
 
 - **[fix]** "Arc", never "Act" *(answered)*
   The wiki says "Arc". The timeline events say "Act 2: ranked missions", "Act 3: N'ghathrod", "Act 4: the center" and "Act 3: Vth'oramu"; change each to "Arc". Sweep colony and ascension for any "Act 1–4" left. Memory canon's "Act" wording is Korey's spoken shorthand and does not need to match.
   src: chat-cosmic-campaign-structure § Superseded; timeline; memory-canon open-decisions
   answered: inbox/chat-early-planning.md § Wiki structure (Settled: "Acts became Arcs"); inbox/chat-cosmic-campaign-structure.md § V006 and the arc (Settled: "The wiki says 'Arc', never 'Act'"; Korey: "the spine governs")
-
-- **[add]** Arc 2's range *(answered)*
-  Both options were settled, and they fit together. Add to Arc 2 Shape (DM voice): "Arc 2 stays in Realmspace plus at most one other system. Crews start leashed to a system and range grows with rank: contracts are graded by scale, from Grade V (station, lane, ship) through IV (settlement), III (region, moon, nation) and II (world) to I (system, sphere)."
-  Which second system, and why the Fleet works there, is still undecided; keep it off the page until chosen.
-  src: chat-early-planning § Campaign Planning, § Institutions; memory-canon open-decisions (Act 2 plan line)
-  answered: inbox/chat-early-planning.md § Cosmology and setting (Settled: "Arc II stays in Toril's Wildspace (Realmspace) plus at most one other system") and § Institutions (Settled: "Early crews are leashed to a system, and range grows with rank"); inbox/chat-cosmic-campaign-structure.md § Contract board (grade ladder); memory-canon Act 2 plan line ("town → region → world and beyond")
-
-- **[add]** Captain Haymond Rolt, the Arc 2 handler
-  Ruled (STAGING round 8). The spine says "The handler is unnamed." Write:
-  "Captain Haymond Rolt is the crew's handler in Arc 2. He oversees several Driftwarden crews at once."
-  DM note: an homage to Captain Raymond Holt. He gets a new dossier, `dossiers/haymond-rolt.html`, and a row on dossiers/index.html.
-  src: Korey, 2026-10-25 (round 8)
-  done: dossiers/haymond-rolt.html and its register row (section 5); campaign/spine.html still needs it.
+  done: the campaign and opposition pages (campaign section); timeline.json still needs it (section 8).
 
 - **[decide]** Driftwarden ranks *(prep)*
   Ruled: one service, many ranks, the way every police officer is a cop. Set the ladder from the newest graduate up to the organization's head, and where the crew starts.
@@ -977,10 +977,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 - **[decide]** Names of the sister institutions *(prep)*
   Ruled: sister institutions in other system clusters, under other names and governance (STAGING, Factions). Name the one or two the crew is likely to hear of first; the rest wait.
   src: Korey, 2026-10-25 (rounds 10–11)
-
-- **[add]** The Princes' pressure reaches the crew as phenomena
-  Ruled (STAGING round 8). Add to Cosmological Pressures (DM voice): "The crew meets the Princes of Elemental Evil's pressure as strange elemental-plane phenomena on the worlds they visit, never as the Princes themselves."
-  src: Korey, 2026-10-25 (round 8); chat-organizing-framework § Open
 
 - **[decide]** What the meteor is and why Caelestis wants it *(prep)*
   Fixed points: the meteor is adamantine, large, mined in an occupied area, and matters locally, to Caelestis and to the Order; working to obtain it is a form of treason on H'Catha; memory canon says "adamantine's value still needs something more". Options:
@@ -994,15 +990,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   answered (part): inbox/chat-organizing-framework.md § Tyrant ship and Voyage 004 prep (Settled: containment, cadet cover); inbox/chat-astral-sea-worldbuilding.md § Superseded ("Adamantine now matters because the Eye cannot see through it"), § H'Catha: the meteorite and mission ("valuable to both Caelestis and the Order")
   Touches: campaign/spine.html (H'Catha arc), campaign/plot-hooks.html (meteorite hook), realms H'Catha page.
   src: memory-canon campaign-canon § Antagonists (H'Catha direction, H'Catha decisions); chat-organizing-framework § Settled, § Open; chat-astral-sea-worldbuilding § Superseded; chat-cosmic-campaign-structure § Open
-
-- **[fix]** Ondessa holds her seat; her citadel is occupied *(answered)*
-  The spine's approach table calls the northeast "Fallen domain — No ruler, no port, an unwatched coast". That domain is Ondessa's, and she still rules it. Rewrite the row and carry the same facts to the other touched pages (in-world voice):
-  "Ondessa still holds her seat. At the last eclipse she was struck down through betrayal inside her own court. Her central eye was destroyed: she cannot see out of it or use it to cancel magic. Her citadel is occupied, and she hides in the light of her own Lashline. The other rulers want her dead; most of the populace does not know she lives. She is better than her neighbours without being good, and she keeps a beholder's paranoias. She and H'Catha's Watcher protect each other and trade information, and her domain's port feeds intelligence through the Watcher to the Order and to Caelestis."
-  DM-only: the crew may protect her through the eclipse or help her retake her citadel; held in reserve, she may be immune to the eclipse sleep and does not know it. Who betrayed her and who backs the occupiers is still open (lean: a neighbour). The H'Catha Ground Level drafts (the Unwaking holding her citadel through a mercane steward) are unreviewed and are not canon.
-  Touches: campaign/spine.html (Beat 2 approach table, Beat 4 avenues), dossiers/ezra.html, dossiers/qitru.html, factions/order.html (Watcher row), realms H'Catha page.
-  src: memory-canon campaign-canon § Antagonists (H'Catha leaning, eclipse, sovereign lines); chat-astral-sea-worldbuilding § Superseded
-  answered: inbox/chat-astral-sea-worldbuilding.md § H'Catha: Ondessa and the Watcher (Settled: "Ondessa still holds her seat", "Her citadel is occupied", the eye, the trade, reinstatement as an optional goal) and § Superseded ("Ondessa hides in the light, in her own Lashline"; "The fallen northeast domain is Ondessa's"). This chat (2026-10-21) settles memory's "leaning" and replaces its earlier "deposed ruler" line.
-  done: locations/hcatha.html (pilot)
 
 - **[decide]** The Rival's name *(prep)*
   The second claimant to the meteor is "the Rival" on the page. The sweep proposes Oszrax. Confirm Oszrax or name him.
@@ -1029,110 +1016,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   Touches: campaign/index.html (Arc 1 close), opposition/vthorama.html (the Fork), dossiers/mirt.html, factions/vocath-operation.html (whether Vocath's grudge is served).
   src: chat-early-planning § Campaign Planning, Open (turn 300)
 
-- **[fix]** Lowest Driftwarden rank is Grade IV
-  The grade table puts Grade V (station, lane, ship; levels 4–5) at the bottom and says the crew graduates at the lowest rank. The graduation board is all Grade IV (Lane Marker 14 and Repossession moved to Grade IV), and memory canon says every graduation contract is at rank. So the lowest Driftwarden rank matches Grade IV. Change the table note: Grade V work is never posted to Driftwardens.
-  src: memory-canon open-decisions (Mission board line); chat-cosmic-campaign-structure § Contract board, § Superseded
-
-- **[fix]** Repoint every Remaking link
-  Page says "Spine, Remaking, Voyages", "The Remaking is the machinery of the opposition", "work the Remaking when deciding what moves against it", Arc 1 "See the Remaking", "the most visible symptom of the Remaking", and "see Remaking → Failure state". Change to:
-  - The machinery of the opposition lives on the Ascension (the plan) and Colony Operations (the colony's work). The header line reads "Spine, Ascension, Colony Operations, Voyages".
-  - "Zeniths arriving too often are the most visible symptom of the Ascension."
-  - The failure state lives on Opposition: Vecna: link `opposition/vecna.html#failure-state`.
-  src: chat-cosmic-campaign-structure § Superseded
-
-- **[fix]** Arc 4 is the Cast
-  Page says "The inscription completes or fails" and "The Convergence rule says he gets one cast". The Convergence rule is retired; the inscription is current again, as the eye (STAGING, Campaign § Vecna's working). Rewrite Arc 4 to that: the eye opens or fails to.
-  src: campaign/ascension § The Cast; Korey, 2026-10-26 (the eye)
-  done: opposition/vecna.html (pilot)
-
-- **[fix]** Tracker links point to the record
-  The page links "Tracker", "Character Arc Tracker" and "Wildspace Tracker" and says current-state tracking "lives in the Character Arc Tracker". The Google Sheet trackers are retired. Point to the hand-kept record in `data/*.json` and the Voyages board.
-  src: memory-canon site-and-automation § Automation pipeline; chat-cosmic-campaign-structure § Superseded
-
-- **[fix]** H'Catha has ten domains
-  Page says "the Spindle, the eight domains" and "that reputation is read eight different ways". H'Catha has ten domains, one per eyestalk, each with one ruler, plus the Sovereign Eye at the Spindle. Change both to ten.
-  src: memory-canon campaign-canon § Antagonists (H'Catha direction supersedes eight domains; H'Catha sovereign)
-
-- **[fix]** The crossing is a rolled trek, and mercane is lowercase
-  Beat 1 says "One encounter earns its place: an Mercane merchant ship. It introduces the Mercane…". A ship at spelljamming speed cannot be hailed, so there is no fixed encounter at speed. Replace with: each day of the 14-day crossing, roll a d6; on a 1, roll on the crossing d8 table (see Voyages). The mercane trader is entry 8, moored at a lane marker. Lowercase "mercane" everywhere on the page (Beats 1–3).
-  src: memory-canon campaign-canon § Naming (mercane line, crossing encounters line); chat-voyage-6-7-planning § Crossing and H'Catha
-
-- **[fix]** Where the meteor struck and how it sits
-  Page says the meteorite "struck the Spindle", "Impact, on the seam between Kurrzot and the Rival", and "Week 1 Kurrzot's ogre drags the meteorite into a seam cave". Rewrite:
-  - The meteor struck at the Pupil, the innermost band nearest the Spindle, on the seam between Kurrzot's domain and the Rival's.
-  - It is large (an ogre cannot drag 60 tons) and is a vein being mined in an occupied, skirmished area. The crew retrieves a worthwhile load, not the whole stone. The module's 500-lb chunk sits in the ogre's cave as one prize among the diggings.
-  - Common Law holds everywhere in daylight (no killing, wounding, stealing or taking anyone against their will), so any seizure or press-gang beat in the timeline happens at night.
-  src: chat-astral-sea-worldbuilding § Meteorite and mission, § Superseded, § Open; memory-canon campaign-canon § Antagonists, § Naming (H'Catha decisions)
-
-- **[fix]** Ostekk rules a domain on H'Catha
-  Page says "Ostekk is unplaced", "Your call Ostekk on H'Catha, or elsewhere", lists "whether Ostekk is here" under Open, and Weeks 2–3 says "Ostekk's automatons come ashore at the rim and tunnel inland". Write: Ostekk is a current ruling beholder of H'Catha. The crew hearing his name soon after landing is the payoff. His automatons are his searchers, working Ondessa's sea-caves on legs. Remove the Open entry.
-  src: memory-canon campaign-canon § Naming (H'Catha decisions); chat-astral-sea-worldbuilding § Meteorite and mission, § Superseded
-
-- **[fix]** Ondessa replaces the exile
-  Beat 4 offers "Local help — a seam guide, the Watcher, or the exile. The exile wants passage off the world", and Open lists "the exile's name". The enlightened exile is retired. Ondessa, a beholder ruler, fills that role, and the Watcher is a separate person. Replace the avenue with "Local help — a seam guide, the Watcher, or Ondessa through the Watcher", and drop "the exile's name" from Open.
-  src: memory-canon campaign-canon § Antagonists (Ondessa lines); chat-astral-sea-worldbuilding § Ondessa, § Superseded
-
-- **[fix]** The tyrant ship reads as native traffic
-  Beat 2 says the ship "reads as a claimant returning, and the domain it enters decides whether that is a homecoming, a grudge, or an opportunity". Canon: every beholder ship is carved stone, so the tyrant ship reads as native and a few ships in orbit is normal traffic. A Caelestis scuttle ship docks in the Cargo Deck intake and carries the landing party down unnoticed. Rewrite Beat 2 around that.
-  src: memory-canon campaign-canon § Naming (approach to H'Catha)
-
-- **[fix]** No orbital patrols at H'Catha
-  Beat 5 lists "Tyrant-ship patrols — To identify the ship hovering at their mountain… someone hails it". Arrival tension comes from crossing watched domain borders on the ground. Drop the patrol row.
-  src: memory-canon campaign-canon § Antagonists (H'Catha layout), § Naming (approach to H'Catha)
-
-- **[fix]** Heart-links are permanent
-  Arc 3 says the crew may "decide whether to sever one". Heart-links are permanent and run both ways. Reword to living with a link: the crew decides what to do about a linked pair whose worlds are bleeding into each other.
-  src: memory-canon open-decisions (world-heart framework line)
-
-- **[drop]** Abandoned Beholders
-  "Threads planted for Arc 2" lists "Abandoned Beholders". The tyrant ship had one beholder, Vaelorix, alone and dead aboard; his crew were the nine OSTEKK units. Remove the thread.
-  src: chat-voyage-6-7-planning § Open; memory-canon campaign-canon § Antagonists (beholders solitary; no thralls aboard)
-
-- **[add]** The theme: belonging
-  updated (triage): the campaign has no central question, and "Who decides what's real?" is retired. Write the theme from STAGING § The theme (everyone is missing something and is trying to become whole) and set the line below against it.
-  Add beside the Central Question: "Everything in this setting is separated from what it belongs to and trying to get back — every PC, N'ghathrod and his people, Astra Virex, Vecna, the Seekers, the world-hearts and the residue pieces. New material should want to belong somewhere. The campaign asks whether a home can be made or only returned to, and what making one out of what was taken costs."
-  src: memory-canon open-decisions (stated campaign theme line); chat-cosmic-campaign-structure § Act 1 retrofit
-
-- **[add]** Tone and structure references
-  Add to the spine intro and frame (DM-only):
-  - Destiny's The Taken King is the tone and structure blueprint. N'ghathrod is its Oryx; Vecna is its Witness.
-  - Story architecture follows Legend of Vox Machina: each job plants small hints that tug up toward bigger threads, so exploration always reaches a larger story.
-  - The world runs Mighty Nein–style, as a living world. The vibe is Destiny, Star Wars and Guardians of the Galaxy.
-  - Found family is an explicit emotional pillar.
-  src: memory-canon open-decisions (Taken King line; Direction 2026-10-21); chat-early-planning § Campaign identity; chat-astral-sea-worldbuilding § Settled
-
-- **[add]** Genre by world
-  Add under Cosmological Pressures: cosmic horror runs in the background of the whole campaign, and each world anchors its own genre. Realmspace is traditional D&D fantasy; spelljamming bends a little sci-fi; H'Catha is a spy thriller where subterfuge, stealth, information and a silver tongue are worth most, and violence is always an option with consequences.
-  src: memory-canon open-decisions (Direction 2026-10-21)
-
-- **[add]** The Fleet is stretched thin
-  Add to Cosmological Pressures (and the H'Catha arc's "why cadets"): several pressures are building at once. More Zeniths. More Watcher requests for Fleet Corps help. A whiff of an illithid sect (N'ghathrod and his affiliates, unnamed to the Corps). Worlds where something is happening that Watchers respond to. Astral-level events. Something kept under wraps at the sphere's edge. Strain from Vecna and the Axioms. Vocath sees the thinning and uses it to stress the Academy. This is why cadets get the H'Catha mission.
-  src: memory-canon open-decisions (Voyage 007 intent); timeline "The Fleet stretched thin"; chat-astral-sea-worldbuilding § Caelestis structure
-
-- **[add]** How the H'Catha report reached the cadets
-  Add to the H'Catha arc timeline: H'Catha's Watcher saw factions moving on the meteorite and reported it as a precaution against escalation (no Zenith on H'Catha). The report went Watcher → the Hall → Fleet Corps → Academy, and Mirt made it a cadet mission. The report is also why backup (Ezra) is sent.
-  src: chat-astral-sea-worldbuilding § Caelestis structure; memory-canon campaign-canon § Key NPCs (Watcher ruling)
-
-- **[add]** The eclipse is the H'Catha clock
-  Add to the H'Catha insert: the coming eclipse is the arc's clock. When it comes, the Sovereign Eye shuts and every beholder sleeps at once. Eclipses are short (well under a day) and rare (months apart, maybe yearly), so plotting spans the whole gap, and the next one is close. The crew chooses whether to stay through it to protect or reinstate Ondessa (a huge ally, higher stakes) or call the mission done.
-  src: memory-canon campaign-canon § Antagonists (eclipse, sovereign lines)
-
-- **[add]** Landing is hard
-  Add to Beat 3: landing is hard for everyone. Other parties have been there two weeks or more. The crew arrives about three weeks after impact. The Watcher is near the rim, a trek away, and expected seasoned sailors, not cadets, which strains things with the instructor and shows that Caelestis is spread thin.
-  src: memory-canon campaign-canon § Antagonists (H'Catha refinement), § Key NPCs, § Naming (H'Catha decisions)
-
-- **[add]** Who goes down and who holds the helm
-  Add to the H'Catha insert: before the session the crew picks Saerthe or Tarto as the instructor for H'Catha; each handles talk of the missing things differently. Someone able to cast stays aboard to hold the helm (Saerthe at the helm, Ryeback commanding the deck). Leaving Miken aboard alone is the high-tension option.
-  src: memory-canon open-decisions (Voyage 007 intent); campaign-canon § Naming (approach to H'Catha)
-
-- **[add]** Contract board cadence
-  Add under Arc 2 "The board": after the graduation board, each board carries two or three contracts at the crew's rank plus one reach. Contracts below rank open only after promotion. Surfaces feel nearly mundane; the story is found on arrival.
-  src: chat-cosmic-campaign-structure § Contract board; memory-canon open-decisions (Act 2 plan, Mission board lines)
-
-- **[add]** Arc 1's close
-  Add to Arc 1's goal and critical beats: Arc 1 closes around sessions 8–10 with the attack on Caelestis and graduation, with the party at level 4. The Brig thief thread comes forward before graduation so the crew can engage with it and possibly learn who the thief is (Joffrey).
-  src: memory-canon open-decisions (Planned line); timeline "Attack on Caelestis and graduation"
-
 ---
 
 ### opposition/vthorama.html
@@ -1141,29 +1024,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   The page has "security diverted by the surface operation" while Joffrey runs the Brig, and names nothing in that operation. The early plan collapsed the module's two finale events into one: the attack hits during the ceremony, a battle across the school. It ported these module pieces: Mustaf Shultz and his giff mercenaries, a decapitation threat, Miken at 2 HP, Wizpop's return (now Ostekk-6), and the transmutation sigil as Vocath's eye-in-a-wheel. Qitru and her githyanki have since moved to H'Catha. Vocath is a merchant, no fighter, and stays out of the siege himself (settled: chat-cosmic-campaign-structure § Act 1 retrofit), so whoever leads the surface operation is hired or his crew. Pick which pieces stay, and write the surface operation into the Brig run section.
   Touches: opposition/vthorama.html (the run, the Fork; the page names "the surface attack" and nothing more), campaign/spine.html (Arc 1 close), factions/vocath-operation.html, dossiers/miken.html.
   src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300); dossiers/qitru.html
-
----
-
-### campaign/index.html
-
-- **[fix]** The old designation prefixes
-  The page still explains sphere, system and world numbers ("Sphere, system and world numbers are catalogue order") and the SPH-, SYS- and W- prefixes. Designations now follow Cosmology § Names and designations (CSC numbers, star-and-letter, names; GAL-0n for galaxies). Rewrite or cut when the page is merged into principles.html.
-  src: locations pass, 2026-10-28
-
-- **[fix]** Spheres are not crystal shells
-  Designations say "SPH for a crystal sphere". A sphere is a region of the Astral Sea holding several systems. Change to "SPH for a sphere".
-  src: chat-organizing-framework § Cosmic structure; memory-canon campaign-canon § Cosmology (cosmic model)
-
-- **[fix]** Constellation designations
-  Constellation designations are catalogue numbers that read as long established, tied to their system and near random, never low or sequential. The bearing scheme (CON-312) fits and stays; drop memory's ordinal CON-01, CON-02 rule. State the rule on this page.
-  src: Korey, 2026-10-25 (round 2)
-- **[fix]** Repoint every Remaking reference
-  Page says strain rises "because of the Remaking", iconic items "are not part of The Remaking", custody "can reference Remaking", and "Remaking is one level deeper than it". Change each to the Ascension or Colony Operations as fits.
-  src: chat-cosmic-campaign-structure § Superseded
-
-- **[fix]** A.T.L.A.S. anchor
-  The example path uses "../../artifacts/#world-surveyor". "World Surveyor" is retired; the artifact is A.T.L.A.S. Change the example anchor.
-  src: memory-canon campaign-canon § Cosmology (A.T.L.A.S. line)
 
 ---
 
@@ -1611,6 +1471,10 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 ### crew/sol.html
 
+- **[add]** "Am I a person or a function?" (DM)
+  The retired spine gave Sol's arc a thematic question, "Am I a person or a function?", and framed him as living proof of what other worlds are aimed toward. Decide whether it stands beside the theme (what Sol is missing is a decide under campaign/index.html), then write it on the crew page.
+  src: campaign/spine.html (retired, campaign section, conflict C16)
+
 - **[add]** Beshaba's reward is power
   Ruled (STAGING round 8). Add to this page and dossiers/beshaba.html (DM voice): "Beshaba's reward for the oath is power. To give it shape she has to want something and lay that want on Sol as a quest."
   The acknowledgment scene ran as planned: the level-3 oath landed before V003's Convening (campaign/voyages/index.html, V003 Actual: "All four level-3 vignettes landed, for Tumak, Sol, Boogie and Gregory").
@@ -1865,6 +1729,10 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 ### crew/tumak.html
 
+- **[fix]** "Three poles" and the Zenith on homecoming
+  The retired spine said that when both twins arrive home "the three poles stall the cycle and the result is a Zenith", and called the runes "a built-in proximity detector". The second is already a fix on this page; check the first against artifacts/dissolution-fragment.html (the fragment rebuilding in two halves) and rules/index.html (Homebound, the Becoming) before carrying it.
+  src: campaign/spine.html (retired, campaign section, conflict C16)
+
 Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; see the Rules section.
 
 - **[fix]** "Open" labels on the page
@@ -2020,6 +1888,10 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
   src: TGB § Gregory/Abjurer level-up scene
 
 ### crew/bartholomew.html
+
+- **[add]** Observation flags for the Almosts (DM)
+  From the retired spine: creature design is held until observation surfaces it in play. Watch how he uses Beast Sense and Beast Bond, how he treats the star map, and whether he reaches for Starry Form or Wild Shape under pressure. Check against the finished artifact and location pages (CON-312) before writing.
+  src: campaign/spine.html (retired, campaign section, conflict C16)
 
 - **[decide]** Whether Almost-Shift slips still run *(prep)*
   The page's "How a slip runs" has three registers and one weighted slip per scene, with a 3-strain threshold (wrongness and recognition, no anatomy). Options: keep slips running alongside Aspects, or fold slips into Aspects. Rule the 3-strain threshold either way.
@@ -2751,10 +2623,6 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 **Voice.** DM.
 
-- **[add]** Tone by place
-  The background tone is cosmic horror. Each world keeps its own genre: Realmspace is traditional fantasy, the spelljamming lanes bend toward sci-fi, and horror lives in the deep Astral and at the edges.
-  src: astral § Cosmos and campaign shape; memory-canon (open-decisions, Direction 2026-10-21)
-
 ### NEW: Cosmos texture
 
 **Purpose.** The recurring patterns that make the cosmos feel lived-in and larger than the crew: things they keep running into across worlds. Suggested path: `prime/cosmology/texture.html`.
@@ -2789,11 +2657,6 @@ The page exists (`prime/principles.html`, Reference). Contracts are built on Cam
 ---
 
 ### hub.html
-
-- **[fix]** The hub states the theme, not a question *(answered)*
-  Remove "Who decides what's real?" from the hub; it is retired. The campaign has no central question. It has a theme: everyone is missing something and is trying to become whole, to find or make their place in the cosmos. The theme takes a different shape at each level: Vecna wants the answer to the cosmos and what was taken from him; N'ghathrod wants a home for his people; Casey wants his brother; Tumak wants his home; Bartholomew wants the peace within him, his constellation; Boogie wants to belong to something; Astra Virex wants to heal. Where the hub carried the tagline, it carries the theme line. (Earlier wording: the hub asks "Who decides what's real?"; memory's stated theme was that everything is separated from what it belongs to and trying to get back, with the question of whether a home can be made or only returned to. Both are superseded; update memory.)
-  src: memory-canon § Deferred ("Stated campaign theme"); chat-cosmic § Open
-  answered: STAGING § The theme (round 2)
 
 - **[later]** Which Lore Bible is current
   The hub's "Wildspace Lore Bible" tile opens "Caelestis Wildspaces Lore Bible" (doc `1XjOAGPAWvDivwI2ThihwCG84ACk2eF_HKtzbxgbVTMQ`, about 3 KB). The project's synced Lore Bible is "Caelestis Campaign Lore Bible" (doc `1SLoMt7h9DboUQQlXZA61HukmnQBkjHKUNtLH2Qt4IMQ`, about 13 KB). Drive shows both created and last edited on 2026-04-12, untouched since. The Campaign Planning chat folded the Lore Bible into the DM wiki (turn 56), so neither is the live source now. Options: point the tile at the Campaign Lore Bible and relabel it; or retire the tile, since prime/ replaced both.

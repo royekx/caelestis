@@ -473,6 +473,10 @@
       "new": "opposition/vthorama.html"
     },
     {
+      "old": "campaign/spine.html",
+      "new": "campaign/index.html"
+    },
+    {
       "old": "world-surveyor-thread",
       "new": "campaign/plot-hooks.html#atlas-thread"
     }
