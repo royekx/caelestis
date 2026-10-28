@@ -298,6 +298,7 @@ Order under each page: decide, fix, drop, add.
   Keep M. Tarroway as Strake Station's cartographer whose readings first hinted at an unknown vessel disturbing the satellites at the system's edge (STAGING round 4). Cut the "timing tables" and their failure everywhere. Reduce his presence on the ten pages that mention him to passing references; his main home is the Fleet Intelligence Archive (restricted/). Nothing public.
   Touches: dossiers/tarroway.html, dossiers/index.html, dossiers/miken.html, dossiers/vthoramu.html, dossiers/joffrey.html, dossiers/verrow.html, factions/vocath-operation.html, realms/index.html, realms/strake-station.html, chart/index.html, restricted/.
   src: Korey, 2026-10-25 (round 4)
+  done: factions/fleet.html and factions/vocath-operation.html (section 2).
 
 ### chart/index.html
 
@@ -1056,15 +1057,11 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ---
 
-### factions/academy-fleet.html
+### factions/fleet.html (was academy-fleet.html)
 
 - **[later]** The Glyth loss
   The Fleet lost a force at Glyth during the last approach window (see add). Its name and its commander are unnamed.
   src: chat-cosmic-campaign-structure § Cosmos texture, § Open
-
-- **[decide]** Sor'Kur or Sor'Kor *(prep)*
-  The repo spells it Sor'Kur everywhere (this page, dossiers/sor-kur.html, data/dossiers.json); the sweep raises Sor'Kor. Confirm Sor'Kur.
-  src: chat-cosmic-campaign-structure § Open
 
 - **[fix]** Gregory's origin wording *(answered)*
   Replace the Seam wording ("Transformation and Boundary overlapped where he stood") on Gregory's row with: "Gregory was woken by the strain on an Axiom. Over the past century Monoliths have formed more often, and the strain that puts on an Axiom ripples outward through the planes and the cosmos, slow and more metaphysical than physical. Gregory's awakening is one result; the Latchling and other oddities are others. The same ripple woke Astra Virex." Carry the same cause to crew/gregory.html and dossiers/astra-virex.html (Astra Virex's wound: the ripple caused collisions between celestial bodies and part of the entity broke off).
@@ -1072,38 +1069,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   Prior note: the page calls Gregory a Seam-product ("Transformation and Boundary overlapped where he stood"). Memory canon calls his arc "a Continuity (existence) ripple event" and him a paracausal Reach item like the Lantern. Decide together with Astra Virex's wound (under factions/deities.html). Options: keep the Seam wording, or revert to "Continuity ripple".
   Why it is still open: Claude declared the three Seam-products "locked" in the cosmic-structure chat and wrote them into the repo; Korey answered "What's next" without confirming. Memory canon, updated later, still holds both Gregory's origin wording and Astra's wound as open. The two readings can also stack (a Seam woke him; that makes him paracausal), so a third option is: keep the Seam as the cause and call him paracausal, dropping "Reach item".
   src: memory-canon campaign-canon § Gregory, § Antagonists (Lantern line); chat-cosmic-campaign-structure § Cosmology redesign
-
-- **[fix]** Flighty Foundling, and the swap has happened
-  Page says "Travel together on Academy assignments aboard the Foundling", a Vessels row "The Foundling", and that its errand "includes collecting Ezra". Ship names carry no article: write "Flighty Foundling". The crew now flies the tyrant ship. Flighty Foundling delivered them and came back alongside for the swap at the tyrant ship, where Krik'Lit and Pffred left and Ezra and the chosen instructor came aboard. Update the crew row and the Vessels row to that.
-  src: memory-canon campaign-canon § Naming (no article), § Antagonists (V006 outcome); timeline "Now: the helm seated"
-
-- **[fix]** Which worlds know about space
-  Page says "Most worlds do not know that Wildspace exists". Replace with: "Some worlds know about spelljamming and some do not. Low-grade contracts sit on space-aware worlds; later work includes covert jobs on unaware worlds, blending in — retrieving an interplanetary fugitive, for one. Ship-shaped spelljammers exist so a crew can land covertly in water and come in through a port."
-  src: memory-canon campaign-canon § Key NPCs (world awareness); chat-cosmic-campaign-structure § World awareness and travel
-
-- **[fix]** Lunarfoot is the clan
-  Page says "partial Wayfinders of the Lunarfoot order". Change to "partial Wayfinders of the Runekeepers, Lunarfoot clan".
-  src: chat-cosmic-campaign-structure § Rules and crew
-
-- **[add]** The shape of Caelestis
-  Add to the faction lead: "The Academy is the small part of Caelestis, roughly a fifth of it. The Fleet Corps is most of the rest, a part of the station cadets rarely see. A remaining sliver is kept secret." (DM-only: what the sliver is has not been set.)
-  src: memory-canon campaign-canon § Naming (Mirt line); chat-astral-sea-worldbuilding § Caelestis structure
-
-- **[add]** Mirt's reach
-  Add to Mirt's row: "Mirt runs the Academy only. The Fleet Corps and the Bridge operate outside him. Caelestis protects him and keeps him quiet, so he is also stuck there."
-  src: memory-canon campaign-canon § Naming (Mirt line)
-
-- **[add]** The Glyth loss
-  Add under the Bridge as Fleet history: "The Fleet lost a force at Glyth during the last approach window. Glyth is closed to Fleet traffic." (Glyth is kept unreachable: outer orbit and approach window, Fleet ban, its own defences.)
-  src: chat-cosmic-campaign-structure § Cosmos texture; memory-canon open-decisions (Taken King line)
-
-- **[add]** Gregory came from Toril
-  Add to Gregory's row: "From Toril. He arrived at Caelestis on a cargo ship." (DM-only: no Zenith is tied to his origin; working decision.)
-  src: memory-canon campaign-canon § Gregory
-
-- **[add]** The tyrant ship in the Vessels table
-  Add a Vessels row: "Tyrant Ship. Vaelorix's carved-stone tyrant ship, taken by the crew in V006. Its dais is a beholder-only helm; the Academy's chair-helm is installed into it." DM-only: after the H'Catha mission it goes into Caelestis's inventory; the players do not know.
-  src: memory-canon campaign-canon § Antagonists (tyrant ship systems; Vaelorix helm)
+  done: factions/fleet.html (section 2, from cosmology § Axiom strain); crew/gregory.html and dossiers/astra-virex.html still need it.
 
 ---
 
@@ -2249,13 +2215,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[add]** What Saerthe knows
   DM notes: Saerthe holds part of the picture of what is stretching Caelestis, and may be withholding some of it.
   src: chat-astral-sea-worldbuilding § Caelestis structure; memory-canon open-decisions (Voyage 007 intent)
-
----
-
-### dossiers/sor-kur.html
-
-- **[decide]** Spelling *(prep)*
-  Follows the Sor'Kur / Sor'Kor decide under factions/academy-fleet.html.
 
 ---
 

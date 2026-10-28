@@ -186,9 +186,15 @@
     {
       "old": "campaign/ascension/",
       "new": "opposition/vecna.html"
+    },
+    {
+      "old": "factions/academy-fleet.html",
+      "new": "factions/fleet.html"
     }
   ],
-  "allow": [],
+  "allow": [
+    "prime/cosmology/:outcomes were undecided|new undecided things"
+  ],
   "scan": [
     "prime",
     "restricted"

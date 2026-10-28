@@ -1625,22 +1625,30 @@
     },
     {
       "id": "higher-organization",
-      "label": "The higher organization",
+      "label": "The United Intergalactic Fleet",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "The body Caelestis, the Driftwardens and their sister institutions all belong to.",
+      "summary": "Four or five sector branches across the Rykoe Galaxy, under a council of admirals. Caelestis is one of its sectors.",
       "facts": [
         {
-          "t": "Caelestis and the Driftwarden body are both affiliates of a higher organization.",
-          "src": "STAGING round 11"
+          "t": "The Fleet is made of four or five sector branches, each overseeing a cluster of systems in the Rykoe Galaxy.",
+          "src": "factions/fleet.html"
         },
         {
-          "t": "Its affiliates share information across the galaxy, and each mostly runs itself.",
-          "src": "STAGING round 11"
+          "t": "Above the sectors sits a council of a few admirals, not a single leader.",
+          "src": "factions/fleet.html"
         },
         {
-          "t": "Sister institutions in other clusters and galaxies do similar work under their own names, each with its own star catalogue.",
-          "src": "STAGING round 11"
+          "t": "The sectors began as separate institutions; each keeps its own ways and names, and they share information but not all of it.",
+          "src": "factions/fleet.html"
+        },
+        {
+          "t": "The Fleet keeps a self-imposed order, and much of its work is mercantile: shipments, protection, passengers and transport for the Watchers.",
+          "src": "factions/fleet.html"
+        },
+        {
+          "t": "The Fleet lost a force at Glyth, and Glyth is closed to Fleet traffic.",
+          "src": "factions/fleet.html"
         }
       ]
     },
@@ -2707,11 +2715,15 @@
       "label": "Caelestis Academy",
       "type": "faction",
       "scope": "caelestis",
-      "summary": "The Spelljammer academy at Caelestis: a school that trains cadets.",
+      "summary": "The Caelestis Spelljammer Academy: the school of the Caelestis Sector, which trains cadets to become Driftwardens.",
       "facts": [
         {
-          "t": "Caelestis is a school that trains cadets; Driftwarden operations are a separate body.",
-          "src": "STAGING round 11"
+          "t": "The Caelestis Spelljammer Academy trains cadets to become Driftwardens; there are only a handful of spelljammer academies in the galaxy.",
+          "src": "factions/fleet.html"
+        },
+        {
+          "t": "Mirt runs the Academy only; the Corps and the Bridge operate outside him.",
+          "src": "factions/fleet.html"
         },
         {
           "t": "Caelestis is thin partly because it answers the Watchers' calls for help.",
@@ -2722,10 +2734,6 @@
           "src": "STAGING round 10"
         },
         {
-          "t": "Its authority is self-bestowed by reputation rather than granted by any council of worlds.",
-          "src": "factions/academy-fleet.html"
-        },
-        {
           "t": "Its surveyors keep the Caelestis Survey Catalogue, which gives every charted star a number.",
           "src": "STAGING round 12"
         }
@@ -2733,22 +2741,26 @@
     },
     {
       "id": "driftwardens",
-      "label": "Driftwarden operations",
+      "label": "The Caelestis Corps",
       "type": "faction",
       "scope": "caelestis",
-      "summary": "The body that takes the contracts, based at Ondrel Anchorage.",
+      "summary": "The Caelestis Sector's branch of the Fleet. It oversees the sector; its operations run out of Ondrel Anchorage.",
       "facts": [
         {
-          "t": "Driftwarden operations are a separate body from Caelestis, based at Ondrel Anchorage.",
-          "src": "STAGING round 11"
+          "t": "The Caelestis Corps is the Caelestis Sector's branch of the Fleet and oversees the sector.",
+          "src": "factions/fleet.html"
+        },
+        {
+          "t": "Fleet operations for the Caelestis Sector run out of Ondrel Anchorage, on the moon Ostrel.",
+          "src": "factions/fleet.html"
         },
         {
           "t": "Contracts surface because of the state of the world, and many quietly lead back to a Seekers chapter.",
-          "src": "STAGING round 4"
+          "src": "factions/fleet.html"
         },
         {
           "t": "By the crew's graduation the colony's work ripples outward at contract scale: taken in small positions, disappearances, a station acting strangely.",
-          "src": "STAGING round 10"
+          "src": "campaign/colony/index.html"
         }
       ]
     },
@@ -3178,7 +3190,7 @@
       "facts": [
         {
           "t": "Half of Saerthe's miniature ship is inside Boogie.",
-          "src": "factions/academy-fleet.html"
+          "src": "factions/fleet.html"
         }
       ]
     },
@@ -5938,14 +5950,14 @@
     {
       "s": "FAO-Lx7kR2vN",
       "t": "higher-organization",
-      "rel": "is an affiliate of",
-      "src": "STAGING round 11"
+      "rel": "is part of the Caelestis Sector of",
+      "src": "factions/fleet.html"
     },
     {
       "s": "driftwardens",
       "t": "higher-organization",
-      "rel": "is an affiliate of",
-      "src": "STAGING round 11"
+      "rel": "is the Caelestis Sector branch of",
+      "src": "factions/fleet.html"
     },
     {
       "s": "driftwardens",
@@ -5972,28 +5984,28 @@
       "src": "realms/caelestis.html"
     },
     {
-      "s": "FAO-Lx7kR2vN",
+      "s": "driftwardens",
       "t": "strake-station",
       "rel": "keeps",
-      "src": "STAGING round 11"
+      "src": "factions/fleet.html"
     },
     {
       "s": "NPC-Wc9fT2nJ",
       "t": "FAO-Lx7kR2vN",
       "rel": "headmaster of",
-      "src": "factions/academy-fleet.html"
+      "src": "factions/fleet.html"
     },
     {
       "s": "NPC-9dTp4qWz",
       "t": "FAO-Lx7kR2vN",
       "rel": "instructs at",
-      "src": "factions/academy-fleet.html"
+      "src": "factions/fleet.html"
     },
     {
       "s": "NPC-Zx4Bn7Lq",
       "t": "FAO-Lx7kR2vN",
       "rel": "instructs at",
-      "src": "factions/academy-fleet.html"
+      "src": "factions/fleet.html"
     },
     {
       "s": "NPC-Zx4Bn7Lq",
@@ -6029,7 +6041,7 @@
       "s": "NPC-9dTp4qWz",
       "t": "LOC-9mB4kW7n",
       "rel": "runs",
-      "src": "factions/academy-fleet.html"
+      "src": "factions/fleet.html"
     },
     {
       "s": "NPC-Zx4Bn7Lq",
@@ -6137,7 +6149,7 @@
       "s": "NPC-Qp8jL2vR",
       "t": "LOC-Bf3xN6qT",
       "rel": "run",
-      "src": "factions/academy-fleet.html"
+      "src": "factions/fleet.html"
     },
     {
       "s": "LOC-Tn4bK9wR",
@@ -7097,7 +7109,7 @@
       "s": "ITM-8pC4kW2n",
       "t": "ITM-2pQ7vHm9",
       "rel": "is the same model as",
-      "src": "factions/academy-fleet.html"
+      "src": "factions/fleet.html"
     },
     {
       "s": "ITM-Dk4nW7pv",
@@ -7740,6 +7752,18 @@
       "t": "LOC-Sk4mW8vn",
       "rel": "rules a domain of",
       "src": "locations/hcatha.html"
+    },
+    {
+      "s": "order",
+      "t": "higher-organization",
+      "rel": "is carried by",
+      "src": "factions/fleet.html"
+    },
+    {
+      "s": "higher-organization",
+      "t": "glyth",
+      "rel": "lost a force at",
+      "src": "factions/fleet.html"
     }
   ]
 }

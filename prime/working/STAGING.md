@@ -138,7 +138,6 @@ when a ruling changes; delete it once the page carries it. See
 - Neither sister knows what both of them need: each other. Luck and misfortune are two sides of one coin.
 
 ### Caelestis, the Driftwardens and the United Intergalactic Fleet (factions/fleet.html, factions/index.html, cosmology/, locations/, glossary/, restricted/)
-- The Astral Sea fills the dark between systems and between galaxies. The Fleet calls it the drift.
 - The United Intergalactic Fleet, which everyone calls the Fleet, is made of a handful of sector branches, four or five. Each branch oversees one sector of the Rykoe Galaxy, a cluster of several systems, and keeps sites in its systems, near them, or between them. The branches work together and together make the Fleet.
 - Caelestis is one of these sectors: the Caelestis Sector, which includes the system where Toril lies. It has two parts. The Caelestis Corps is the sector's branch of the Fleet and oversees the sector. The Caelestis Spelljammer Academy trains cadets to become Driftwardens; there are only a handful of spelljammer academies in the galaxy.
 - Everyone in the Fleet's service is a Driftwarden, assigned to a sector. Driftwardens hold ranks, from the newest graduate up through officers and commanders. A Driftwarden reports to the commander of their station; station commanders answer to the sector's command, and the sectors to the Fleet.
@@ -150,6 +149,7 @@ when a ruling changes; delete it once the page carries it. See
 - The sectors share information, but not all of it. Each keeps a good deal to itself, the way rival departments do. The Fleet Intelligence Archive is the Caelestis Sector's archive: it holds what Caelestis knows of its own sector and only some of what the others share.
 - The Order's Watchers are more organized than the sector branches. They keep to the Rykoe Galaxy, as the Fleet does, more densely in some places than others.
 - The stations differ with the local ecology of their place: what drifts there, what lives there, what threatens it. Their crews are drawn from the sector that keeps them. Readings from the stations pass between the sectors; this is how a disturbance seen at one edge reaches another.
+- done: factions/fleet.html (section 2). Still waiting: Ondrel Anchorage and Strake Station on locations/, and the FIA's account of the Fleet on restricted/.
 
 ### Vocath's crew (factions/vocath-operation.html, campaign/colony/)
 - The crates at the Sky Dock carry Vocath's mark, the eye in a wheel.
@@ -260,7 +260,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Crew
 
-### Gregory (crew/gregory.html, realms/toril.html, factions/academy-fleet.html)
+### Gregory (crew/gregory.html, realms/toril.html; done on factions/fleet.html, section 2)
 - Gregory comes from the Cogfast Enclave on Lantan, on Toril. He reached Caelestis on a cargo ship.
 - DM: the Lantern becomes Gregory's next anomaly if he investigates it.
 
