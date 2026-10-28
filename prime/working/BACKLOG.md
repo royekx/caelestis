@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 9 | 12 | 13 | 0 | 3 |
+| Cosmology | cosmology/, glossary/, chart/ | 9 | 12 | 14 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 22 | 0 | 0 | 1 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 3 | 0 | 1 |
-| **Total** | | **82** | **107** | **200** | **10** | **308** |
+| **Total** | | **82** | **107** | **201** | **10** | **308** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -267,6 +267,9 @@ Order under each page: decide, fix, drop, add.
 - **[fix]** The chart shows systems only with the inscription layer on
   In the Erevos Galaxy view, the uncharted systems appear only when the inscription layer is switched on (Korey 2026-10-27). Every system in the survey shows in the base view, charted or not (with the charted tag once it exists); the inscription layer adds only the eye.
   src: chat 2026-10-27
+
+- **[fix]** The chart's eye view is drawn from Oerth's point of view
+  The inscription layer on `prime/chart/` draws the eye over the top-down Erevos Galaxy map, with Oerth as a dot at the bottom and lines fanning up to it. That view doesn't match the systems on the map beneath it. The eye exists only as seen from Oerth: Oerth is the viewer, and the heart worlds line up into the eye only from there (Korey 2026-10-27). With the layer on, the map turns to look at the galaxy edge-on from Oerth, so the heart worlds keep their real positions and the eye forms out of them in that projection. Oerth is the camera, not a point in the picture. Turning from top-down to Oerth's view can be an animated transition.
 
 - **[add]** Sectors on the chart
   A layer that shades the Fleet's sectors in the Erevos Galaxy view, the Caelestis Sector first, once its systems are decided (see Factions: The Caelestis Sector's systems).
