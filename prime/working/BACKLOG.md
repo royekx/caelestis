@@ -34,17 +34,17 @@ staging once Korey has read and accepted them.
 | Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 23 | 2 | 28 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
-| Factions | factions/ | 2 | 6 | 1 | 0 | 4 |
-| Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 39 | 5 | 36 |
-| Dossiers | dossiers/ | 8 | 6 | 44 | 1 | 54 |
+| Factions | factions/ | 3 | 6 | 2 | 0 | 4 |
+| Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 40 | 5 | 36 |
+| Dossiers | dossiers/ | 8 | 6 | 46 | 1 | 54 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 7 | 2 | 26 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 21 |
 | New pages | 14 proposed pages, the hub, notes/ | 3 | 17 | 5 | 2 | 34 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 6 | 3 | 0 | 1 |
-| **Total** | | **79** | **90** | **221** | **12** | **338** |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 3 | 0 | 1 |
+| **Total** | | **80** | **93** | **225** | **12** | **338** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1014,6 +1014,14 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### Every faction page
 
+- **[decide]** Tymora and the Fortuned's ritual
+  factions/aethris.html (What's hidden) says Tymora likely would not want the Fortuned's Zenith ritual finished. The line comes from older notes, not from the 2026-10-27 rulings. Keep or cut.
+  src: Factions review, 2026-10-28
+
+- **[fix]** "Academy" links that should land on the Caelestis section
+  The Moonraider, Tarto and Clint links that say "Academy" point at factions/fleet.html, not fleet.html#caelestis. Repoint when those pages are rewritten.
+  src: Factions review, 2026-10-28
+
 - **[decide]** The Caelestis Sector's systems, and the other sectors
   The Fleet is four or five sector branches; Caelestis is one sector of several systems, including Toril's (Korey 2026-10-27). Which systems the Caelestis Sector covers, how many sectors there are, and their names and characters are not set. Feeds the chart's sector layer and factions/fleet.html.
   src: chat 2026-10-27
@@ -1106,6 +1114,10 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 ---
 
 ### campaign/spine.html
+
+- **[fix]** Vth'oramu: Arc 2 site or Arc 3 discovery
+  factions/vthorama.html and dossiers/vthoramu.html call Vth'oramu "the Arc 2 site"; the spine lists "Vth'oramu is located" among the Arc 3 possibilities. Settle which arc.
+  src: Factions review, 2026-10-28
 
 - **[fix]** "Arc", never "Act" *(answered)*
   The wiki says "Arc". The timeline events say "Act 2: ranked missions", "Act 3: N'ghathrod", "Act 4: the center" and "Act 3: Vth'oramu"; change each to "Arc". Sweep colony and ascension for any "Act 1–4" left. Memory canon's "Act" wording is Korey's spoken shorthand and does not need to match.
@@ -1600,6 +1612,14 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ---
 
 ### dossiers/index.html
+
+- **[fix]** N'ghathrod's fusion date
+  dossiers/nghathrod.html and dossiers/vthoramu.html say he has been fused into Vth'oramu for forty or fifty years; STAGING has the dreadnought taken over decades, perhaps a century, and the active push only in the past few decades. Reconcile the dates (factions/vthorama.html notes it in Still to decide).
+  src: Factions review, 2026-10-28
+
+- **[fix]** Joffrey's account of Clint
+  dossiers/joffrey.html says Clint went "over the side with the boarders' craft"; its link lands on factions/fleet.html's colour-pool account. Make the two agree.
+  src: Factions review, 2026-10-28
 
 - **[add]** The dossier index: alphabetical, with better filtering and grouping
   Index pages keep the dossier-index format (a filterable register), and the dossier index itself needs work: rows in alphabetical order, and clearer filters and grouping (by side, kind and standing, or by group). Apply the same register shape to every DM index.
@@ -3848,6 +3868,18 @@ run decide, fix, drop, add.
 
 
 # Repo and process
+
+- **[later]** terms.js warnings that can misfire
+  The raw-line "Open" pattern and the word "undecided" are voice warnings that can flag legitimate table cells and prose (Cosmology's Determination text has an allow entry). Tune them if they start producing noise.
+  src: Factions review, 2026-10-28
+
+- **[later]** "done:" lines in STAGING
+  STAGING entries with several homes keep a "done:" note listing the pages that already carry them, though the README says an entry is deleted once its page carries it. Settle the rule: delete per home, or keep the note until the last home is written.
+  src: Factions review, 2026-10-28
+
+- **[later]** Bold labels inside What's hidden items
+  Some What's hidden items open with a bolded name mid-sentence ("**Lich Vecna** has had…") rather than a separate label. Standardise to a short label followed by the sentence, or plain text, when the pages are next touched.
+  src: Factions review, 2026-10-28
 
 ## Page conventions
 
