@@ -194,6 +194,10 @@
     {
       "old": "factions/spectrum.html",
       "new": "factions/seekers.html"
+    },
+    {
+      "old": "factions/external.html",
+      "new": "factions/index.html#other-powers"
     }
   ],
   "allow": [
