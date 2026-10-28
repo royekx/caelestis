@@ -308,6 +308,7 @@ Add only the scripts the page uses:
 | `dm-tabs.js` | a dossier (its tab set) |
 | `dm-sections.js` and `dm-toc.js` | every long page (sections in `<details>`); `<main class="dm-content has-toc">` |
 | `dm-register.js` | a register page |
+| `dm-cells.js` | Campaign (arc cells); see § 3, Campaign and Opposition |
 
 `dm-nav.js` renders only under `/prime/`. DM scripts never load on a player
 page; the player site uses `scripts/nav.js`.

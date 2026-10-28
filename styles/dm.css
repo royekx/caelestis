@@ -1092,6 +1092,7 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
   border-bottom: 1px solid var(--gold-rule);
   padding-bottom: 0.1rem;
 }
+.voyage-grid .voyage-col-link.is-muted { opacity: .4; }
 .voyage-grid .voyage-col-link:hover {
   color: var(--gold);
   border-bottom-color: var(--gold-dim);

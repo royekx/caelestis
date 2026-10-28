@@ -17,6 +17,7 @@
      - ids inside the cell are dropped, so the host page keeps unique ids
        and its rail (dm-toc.js) is untouched
      - each page is fetched once, however many cells it feeds
+     - once every cell is in, a deep link (#arc-3) is scrolled to again
 
    Without this script, or if the fetch fails, the reader keeps the link,
    and `node scripts/data.js check` validates it like any other link. The
@@ -47,10 +48,10 @@
   function embed(link) {
     var target = new URL(link.getAttribute('href'), location.href);
     var id = decodeURIComponent(target.hash.slice(1));
-    if (!id) return;
+    if (!id) return Promise.resolve();
     var pageUrl = target.href.split('#')[0];
 
-    page(pageUrl).then(function (doc) {
+    return page(pageUrl).then(function (doc) {
       var section = doc.getElementById(id);
       var body = section && section.querySelector(':scope > .dm-collapse-section-body');
       if (!body) return;
@@ -88,6 +89,14 @@
 
   ready(function () {
     var links = document.querySelectorAll('main a.dm-cell[href*="#"]');
-    for (var i = 0; i < links.length; i++) embed(links[i]);
+    if (!links.length) return;
+    var done = [];
+    for (var i = 0; i < links.length; i++) done.push(embed(links[i]));
+    // The cells grow the page above a deep link's target after dm-sections.js
+    // has already scrolled to it, so land on the hash again once all are in.
+    Promise.all(done).then(function () {
+      var t = location.hash.length > 1 && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (t) t.scrollIntoView({ block: 'start' });
+    });
   });
 })();

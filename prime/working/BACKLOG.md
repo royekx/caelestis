@@ -145,7 +145,7 @@ Order under each page: decide, fix, drop, add.
 ### cosmology/index.html
 
 - **[fix]** Tharizdun is she
-  Tharizdun is female. Pages and drafts that call her he/his/him: cosmology/index.html, realms/fonains.html, realms/index.html, dossiers/thessalar.html, crew/boogie.html, artifacts/fonains-shard.html, campaign/spine.html, factions/academy-fleet.html, chart/index.html, working/tharizdun.md, and the Fonains Canon Reference doc. STAGING and the Connections layer are done.
+  Tharizdun is female. Pages and drafts that call her he/his/him: cosmology/index.html, realms/fonains.html, realms/index.html, dossiers/thessalar.html, crew/boogie.html, artifacts/fonains-shard.html, factions/academy-fleet.html, chart/index.html, working/tharizdun.md, and the Fonains Canon Reference doc. STAGING and the Connections layer are done.
   src: Korey, 2026-10-27
   done: cosmology and glossary (distribution section 1, 2026-10-27); factions (section 2); dossiers/thessalar.html (section 5).
 
@@ -824,7 +824,7 @@ Order: decide, fix, drop, add.
   "Act 2: ranked missions" becomes "Arc 2: Driftwardens in the Field".
   "Act 3: N'ghathrod" becomes "Arc 3: Recognition".
   "Act 4: the center" becomes "Arc 4: Cast".
-  Keep the descriptions unless the act-structure ruling under `prime/campaign/spine.html` changes their content.
+  Keep the descriptions unless the act-structure ruling under `prime/campaign/index.html` changes their content.
   src: chat § V006 and the arc; campaign/spine.html
 
 - **[fix]** Sol's first C.R.C. encounter
@@ -990,13 +990,13 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   Settled since, which is option (d): for Caelestis, containment. Adamantine survives disintegration, so the Fleet wants it for a vault, cradle or plating, and a cadet salvage crew is the cover; Tarto says only that it is rare, theirs by claim, and wanted first. For H'Catha, sight: the Sovereign Eye cannot see through adamantine, which replaced the dropped Spindle foothold war. The ore matters to both Caelestis and the Order.
   Still open: (1) whether the spine's deeper layers stay under that — an Ortholith fragment, shed or aimed, and the strike as bait (the glossary already calls the meteor a Monolith fragment, but the cosmic-structure sweep lists it as open); (2) whether the Academy wanted this meteor or any adamantine, and what made it urgent now.
   answered (part): inbox/chat-organizing-framework.md § Tyrant ship and Voyage 004 prep (Settled: containment, cadet cover); inbox/chat-astral-sea-worldbuilding.md § Superseded ("Adamantine now matters because the Eye cannot see through it"), § H'Catha: the meteorite and mission ("valuable to both Caelestis and the Order")
-  Touches: campaign/spine.html (H'Catha arc), campaign/plot-hooks.html (meteorite hook), realms H'Catha page.
+  Touches: campaign/index.html (H'Catha arc), campaign/plot-hooks.html (meteorite hook), realms H'Catha page.
   src: memory-canon campaign-canon § Antagonists (H'Catha direction, H'Catha decisions); chat-organizing-framework § Settled, § Open; chat-astral-sea-worldbuilding § Superseded; chat-cosmic-campaign-structure § Open
 
 - **[decide]** The Rival's name *(prep)*
   The second claimant to the meteor is "the Rival" on the page. The sweep proposes Oszrax. Confirm Oszrax or name him.
   Note: "Oszrax" appears in the astral-sea sweep's Superseded line ("the seam between Kurrzot and Oszrax") and in the proposed Edict table ("no covered faces"), but that sweep also says every ruler name except Kurrzot, Ondessa and Ostekk is a proposal. Confirming Oszrax would also settle his Edict as a candidate.
-  Touches: campaign/spine.html (timeline, approach table, forces table), dossiers/index.html.
+  Touches: campaign/index.html (timeline, approach table, forces table), dossiers/index.html.
   src: chat-astral-sea-worldbuilding § Superseded
 
 - **[decide]** Who signs the order that keeps the crew together *(prep)*
@@ -1005,7 +1005,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   (b) A Watcher or the Order: fated, cosmic.
   (c) Saerthe: personal, a mentor's call.
   (d) The Fleet, as routine paperwork with the real reason hidden, so "who signed this order?" becomes a thread the crew can investigate.
-  Touches: campaign/spine.html (Arc 1 close, Arc 2 shape), dossiers/mirt.html or dossiers/saerthe-abizjn.html if either signs.
+  Touches: campaign/index.html (Arc 1 close, Arc 2 shape), dossiers/mirt.html or dossiers/saerthe-abizjn.html if either signs.
   src: chat-early-planning § Campaign Planning, Open (turn 300)
 
 - **[decide]** Mirt's standing after the graduation attack *(prep)*
@@ -1024,7 +1024,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 - **[decide]** What the surface attack at graduation is made of *(prep)*
   The page has "security diverted by the surface operation" while Joffrey runs the Brig, and names nothing in that operation. The early plan collapsed the module's two finale events into one: the attack hits during the ceremony, a battle across the school. It ported these module pieces: Mustaf Shultz and his giff mercenaries, a decapitation threat, Miken at 2 HP, Wizpop's return (now Ostekk-6), and the transmutation sigil as Vocath's eye-in-a-wheel. Qitru and her githyanki have since moved to H'Catha. Vocath is a merchant, no fighter, and stays out of the siege himself (settled: chat-cosmic-campaign-structure § Act 1 retrofit), so whoever leads the surface operation is hired or his crew. Pick which pieces stay, and write the surface operation into the Brig run section.
-  Touches: opposition/vthorama.html (the run, the Fork; the page names "the surface attack" and nothing more), campaign/spine.html (Arc 1 close), factions/vocath-operation.html, dossiers/miken.html.
+  Touches: opposition/vthorama.html (the run, the Fork; the page names "the surface attack" and nothing more), campaign/index.html (Arc 1 close), factions/vocath-operation.html, dossiers/miken.html.
   src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300); dossiers/qitru.html
 
 ---
@@ -1276,7 +1276,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ### dossiers/vthoramu.html
 
 - **[decide]** Does the ship die with N'ghathrod?
-  A draft line: "N'ghathrod and the ship are joined: if his true body dies, the ship dies, and the colony loses its home." It is held back from the page. STAGING rules that the taken outlive him, each keeping part of him; it says nothing of the ship. Rule whether the dreadnought dies with his true body. Touches: dossiers/vthoramu.html, dossiers/nghathrod.html, vessels/vthoramu.html, campaign/colony/.
+  A draft line: "N'ghathrod and the ship are joined: if his true body dies, the ship dies, and the colony loses its home." It is held back from the page. STAGING rules that the taken outlive him, each keeping part of him; it says nothing of the ship. Rule whether the dreadnought dies with his true body. Touches: dossiers/vthoramu.html, dossiers/nghathrod.html, vessels/vthoramu.html, opposition/vthorama.html.
   src: chat-cosmic-campaign-structure § N'ghathrod and the colony; section 5 (2026-10-28)
 
 ---
@@ -2485,7 +2485,7 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 - **[add]** The edge mystery
   Ruled (STAGING round 8). Add (DM voice): "A mystery lies at the edge, outside Realmspace, in another system or between systems. It will cross paths with Vth'oramu once N'ghathrod grows bolder." Planning layer: it needs an introduction before that.
-  The sovereign and the Osiris-style figure ride with the brainstorm item under campaign/spine.html ("The Fleet's strain in broad strokes").
+  The sovereign and the Osiris-style figure ride with the brainstorm item under campaign/index.html ("The Fleet's strain in broad strokes").
   src: Korey, 2026-10-25 (round 8); chat-cosmic § Open
 
 - **[add]** The patterns
