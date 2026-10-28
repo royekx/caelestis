@@ -16,6 +16,10 @@
   ],
   "retired": [
     {
+      "pattern": "A\\.T\\.L\\.A\\.S\\.('|&rsquo;|’)s sister",
+      "use": "the second Distinction piece (or the second piece where the context is clear)"
+    },
+    {
       "pattern": "unfinished Zenith|Zenith (is|stands) unfinished|Mid-Zenith",
       "use": "a Zenith is a moment and does not continue: on Aethris the Zenith came in Cycle 1490, and what stands incomplete is the Fortuned's ritual",
       "i": true
@@ -647,6 +651,10 @@
     {
       "old": "restricted/init.md",
       "new": "retired (empty placeholder)"
+    },
+    {
+      "old": "atlas-sister.html",
+      "new": "artifacts/second-distinction-piece.html"
     }
   ],
   "allow": [

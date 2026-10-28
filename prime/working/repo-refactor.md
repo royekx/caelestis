@@ -306,6 +306,7 @@ Old path → new path, added by each pull request that moves a page.
 | `prime/realms/fonains.html` | `prime/locations/fonains.html` | Fonains and timeline (fonains) |
 | `prime/realms/` | retired; every page moved to `prime/locations/`, and the folder name is never reused | Fonains and timeline (fonains) |
 | `restricted/init.md` | retired, an empty placeholder; the path is never reused | The FIA (fia) |
+| `prime/artifacts/atlas-sister.html` | `prime/artifacts/second-distinction-piece.html` (portrait key `atlas-sister` → `second-distinction-piece`; the old path is never reused) | The FIA (fia) |
 
 ## Stale branches
 

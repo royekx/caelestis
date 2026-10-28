@@ -1307,13 +1307,13 @@ left here is open.
 ### artifacts/distinction-fragment.html
 
 - **[later]** The third Distinction piece
-  Ruled: the Distinction fragment is three pieces, each a finder; A.T.L.A.S. and its sister are two (STAGING rounds 10–11). What the third finds, and where it is, waits until play needs it. (Moved from the Timeline section.)
+  Ruled: the Distinction fragment is three pieces, each a finder; A.T.L.A.S. and the second Distinction piece are two (STAGING rounds 10–11). What the third finds, and where it is, waits until play needs it. (Moved from the Timeline section.)
   src: Korey, 2026-10-25 (round 10)
 
-### artifacts/atlas-sister.html
+### artifacts/second-distinction-piece.html
 
-- **[later]** The sister's name
-  On the page it is "A.T.L.A.S.'s sister". Name it, and say whether the Fleet catalogued it under a name of its own as it did A.T.L.A.S. (Astral Topographic Lithic Augury System). Its look, its maker, how it shows what it finds, why the Bellwether Crow was carrying it, and whether Clint still has it are on the page as Still to decide.
+- **[later]** The second Distinction piece's catalogue name
+  Named the second Distinction piece (Korey, 2026-10-28; the page moved from artifacts/atlas-sister.html). Say whether the Fleet catalogued it under a name of its own as it did A.T.L.A.S. (Astral Topographic Lithic Augury System). Its look, its maker, how it shows what it finds, why the Bellwether Crow was carrying it, and whether Clint still has it are on the page as Still to decide.
   src: section 4 plan
 
 ### artifacts/expansion-fragment.html, artifacts/determination-fragment.html

@@ -93,7 +93,7 @@
 
     // ── Artifacts (treated as portrait-like for dossier consistency) ──
     'atlas':         { name: 'A.T.L.A.S.', fileId: '1PszrX48t8qd24acEGVLa87ir5AXlLJeR' },
-    'atlas-sister':  { name: "A.T.L.A.S.'s sister", fileId: '' },
+    'second-distinction-piece': { name: 'Second Distinction piece', fileId: '' },
     'containment-engine': { name: 'Lantern of Flourishing', fileId: '1xiThO5QYp74A5SSAmvt49NQXs1yWbeLT' },
     'distinction-fragment': { name: 'Distinction fragment', fileId: '' },
     'expansion-fragment':   { name: 'Expansion fragment',   fileId: '' },
