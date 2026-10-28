@@ -466,11 +466,19 @@
       "label": "Monoliths",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "Continuity's response to a Zenith that strains it past tolerance.",
+      "summary": "Continuity's response to a coming drastic change, appearing in the run-up to a Zenith.",
       "facts": [
         {
-          "t": "A Monolith archives a world bodily before an irreversible change and relays what it takes to the Core.",
+          "t": "A Monolith appears in the run-up to a Zenith, begins archiving as it appears, and relays what it takes to the Core.",
           "src": "cosmology/index.html"
+        },
+        {
+          "t": "Its lead time varies with each Zenith: moments, minutes, days. Its arrival is a warning and does not seal a world's fate.",
+          "src": "cosmology/index.html#monoliths"
+        },
+        {
+          "t": "It is the cosmos's self-preservation, like an immune system; a Monolith does not go away.",
+          "src": "cosmology/index.html#monoliths"
         },
         {
           "t": "A Monolith is what makes a heart-link possible: two opened hearts link only where both worlds have one.",
@@ -485,7 +493,7 @@
           "src": "cosmology/index.html"
         },
         {
-          "t": "The Order calls a Monolith an Ortholith in its records.",
+          "t": "The Order of All calls a Monolith an Ortholith, after the Keepers' registries.",
           "src": "glossary/index.html"
         }
       ]
@@ -500,6 +508,14 @@
         {
           "t": "A Zenith is a hinge rather than a disaster, and its outcome is unknown while it happens.",
           "src": "cosmology/index.html"
+        },
+        {
+          "t": "Slow change, even harmful change, is a world's own process; a Zenith comes with drastic, immediate change, a moment from which outcomes diverge sharply.",
+          "src": "cosmology/index.html#zeniths"
+        },
+        {
+          "t": "A Zenith decides what follows, catastrophic, beneficial or between; the cosmos does not judge it.",
+          "src": "cosmology/index.html#zeniths"
         },
         {
           "t": "Zeniths are natural and constant, and mortals seeking power produce the most unstable ones.",

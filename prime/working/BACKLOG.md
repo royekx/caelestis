@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 10 | 13 | 14 | 0 | 3 |
+| Cosmology | cosmology/, glossary/, chart/ | 11 | 14 | 14 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 4 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **110** | **145** | **50** | **2** | **54** |
+| **Total** |  | **111** | **146** | **50** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -326,6 +326,16 @@ Order under each page: decide, fix, drop, add.
 - **[fix]** Redraw the charts and the Fleet seal with four arms
   The Erevos Galaxy has four spiral arms (Korey, 2026-10-28), and the Fleet has one sector on each. Redraw the flat chart (chart/index.html), the holochart (chart/holo.html) and the Fleet seal (assets/fleet-device.svg) with four arms and one sector star per arm, keeping every system where it is. Follows PR #104; the text already says four.
   src: Korey, 2026-10-28 (GTC model)
+
+### cosmology/index.html: Zeniths and Monoliths
+
+- **[decide]** How Determination relates to a Zenith's divergence
+  Ruled (Korey, 2026-10-28): a Monolith appears in the run-up to a Zenith, as the cosmos responds to the potential for drastic, immediate change, a coming moment from which outcomes diverge sharply; slow change, even harmful, is a world's own process. Cosmology frames Determination as every outcome having to be decided, not as divergence, so the page phrases this as Continuity registering a moment of divergence and names no Axiom. Decide whether the divergence is Determination's doing (a large undecided outcome about to be decided), and if so, say it on cosmology § Zeniths and § Monoliths and in the glossary.
+  src: Korey, 2026-10-28 (Monolith timing ruling)
+
+- **[later]** Whether a Monolith can fade on a stable world
+  Monoliths do not go away (Korey, 2026-10-28). Left open: whether a Monolith could fade if its world passes its Zenith and then holds steady for a long time, years to centuries.
+  src: Korey, 2026-10-28 (Monolith timing ruling)
 
 # Locations
 
