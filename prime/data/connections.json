@@ -1310,7 +1310,7 @@
           "src": "factions/order.html#arguments"
         },
         {
-          "t": "Its founding is Cycle 0 of the count its Keepers keep.",
+          "t": "It was founded as one body at Cycle 0 and split into three orders as its following grew and like minds drew together.",
           "src": "factions/order.html"
         },
         {
@@ -1388,7 +1388,7 @@
           "src": "factions/keepers.html#dispatch"
         },
         {
-          "t": "The Keepers keep the Beacon, the count of Galactic time cycles, after the All-Father's beacon at the core: a beacon (cycle) is one full turn of Erevos, its four sparks lighting the arms in order, divided into kindlings and embers; Cycle 0 is the Order's founding and the current cycle is 1491.",
+          "t": "The Keepers keep the Beacon, the galactic clock and the one god's fire, the count of Galactic time cycles: a beacon (cycle) is one full turn of Erevos, its four sparks lighting the arms in order, divided into kindlings and embers; Cycle 0 is the Order's founding and the current cycle is 1491.",
           "src": "factions/keepers.html#beacon"
         },
         {
@@ -1423,10 +1423,10 @@
       "label": "The Hall of Sight and Sound",
       "type": "place",
       "scope": "cosmos",
-      "summary": "The great hall within the Watchers' seat.",
+      "summary": "The great hall in the Watchers' wing of the Order of All's headquarters.",
       "facts": [
         {
-          "t": "The Hall of Sight and Sound is the great hall within the Watchers' seat.",
+          "t": "The Hall of Sight and Sound is the great hall in the Watchers' wing of the Order of All's headquarters, and mainly theirs.",
           "src": "STAGING round 5"
         },
         {

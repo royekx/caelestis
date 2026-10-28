@@ -34,7 +34,7 @@ staging once Korey has read and accepted them.
 | Locations | locations/ (Fonains stays in its own section) | 21 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 4 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
-| Factions | factions/ | 7 | 9 | 1 | 0 | 2 |
+| Factions | factions/ | 7 | 10 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 1 |
 | Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **110** | **144** | **50** | **2** | **54** |
+| **Total** |  | **110** | **145** | **50** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -189,7 +189,7 @@ Order under each page: decide, fix, drop, add.
   done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); prime/factions (section 2); prime/locations (section 3).
 
 - **[decide]** Galactic time cycles (GTC): first arm, counts and the Toril ratio
-  Settled (Korey, 2026-10-28): the Order of All made the count so its Watchers had one clock, and its Keepers keep it; Cycle 0 is the Order's founding, and the current cycle is 1491. The Fleet, founded by Caelestis about 250 cycles ago (about Cycle 1240), adopted it; most call it cycles or Fleet time, and ordinary people keep their own world's calendar. The arms are the clock and the cycle is a full turn: Erevos, the heart at the core, turns once a cycle and throws an unseen beam; when it reaches an arm's root, that arm lights from root to tip over a quarter cycle, and the Erevos Galaxy has four arms. The Order's vocabulary is settled (Korey, 2026-10-28, replacing the hearth): the core is the All-Father's beacon, a signal fire kept burning to give direction, and the count is the Beacon, which the Keepers keep. A beacon is one full turn (most say cycle); a spark is the moment the light strikes an arm's root and that arm's quarter, four to a beacon; a kindling is one marker cluster passed, numbered 1 to 16 through the beacon; an ember is one day-length count on an armillary. Dates read "the 1491st beacon, seventh kindling, twelfth ember", 1491.7.12 in Fleet logs; durations read "fourteen embers to H'Catha". The Fleet and travellers borrow kindling and ember. Each arm's spark has its own character; what each is is not set. FIA records keep writing "Cycle". The quickening (arms lighting early, cycles shortening over the past few centuries) is in-world on factions/keepers.html and fleet.html; its cause stays in the Keepers' What's hidden. The clock principle is on opposition/vecna.html#clock and principles.html#clock.
+  Settled (Korey, 2026-10-28): the Order of All made the count so its Watchers had one clock, and its Keepers keep it; Cycle 0 is the Order's founding, and the current cycle is 1491. The Fleet, founded by Caelestis about 250 cycles ago (about Cycle 1240), adopted it; most call it cycles or Fleet time, and ordinary people keep their own world's calendar. The arms are the clock and the cycle is a full turn: Erevos, the heart at the core, turns once a cycle and throws an unseen beam; when it reaches an arm's root, that arm lights from root to tip over a quarter cycle, and the Erevos Galaxy has four arms. The Order's vocabulary is settled (Korey, 2026-10-28, replacing the hearth): the Beacon is the galactic clock, the one god's signal fire kept burning to give direction, named for no aspect (Korey, 2026-10-28), and the Keepers keep it. A beacon is one full turn (most say cycle); a spark is the moment the light strikes an arm's root and that arm's quarter, four to a beacon; a kindling is one marker cluster passed, numbered 1 to 16 through the beacon; an ember is one day-length count on an armillary. Dates read "the 1491st beacon, seventh kindling, twelfth ember", 1491.7.12 in Fleet logs; durations read "fourteen embers to H'Catha". The Fleet and travellers borrow kindling and ember. Each arm's spark has its own character; what each is is not set. FIA records keep writing "Cycle". The quickening (arms lighting early, cycles shortening over the past few centuries) is in-world on factions/keepers.html and fleet.html; its cause stays in the Keepers' What's hidden. The clock principle is on opposition/vecna.html#clock and principles.html#clock.
   Still open: which arm's spark is first (the one the Order saw at its founding); kindlings per spark (working default four, sixteen a beacon, each about a Toril month); embers per kindling (working default about thirty, each roughly a Toril day); the character of each arm's spark; and the Toril ratio (working default one beacon to about sixteen Toril months, so each spark is about four, the Order was founded about 1,990 Toril years ago and the Fleet about 330; the timeline places both by it). Do not use "reckoning" for the count's name.
   src: Korey, 2026-10-28 (GTC rulings); replaces "The calendar the Cycle counts" (Korey, 2026-10-26; restricted/ orders)
 - **[later]** Spelljammer's own terms
@@ -288,8 +288,8 @@ Order under each page: decide, fix, drop, add.
   Ruled: they echo a hand and an eye without showing them outright (STAGING round 5). The design is open.
   src: Korey, 2026-10-25 (round 5)
 
-- **[later]** The Watchers' seat
-  The Hall of Sight and Sound is its great hall (STAGING rounds 5–6; the seat is the Watchers' since the Order of All ruling, 2026-10-28). Name and place the seat itself when the crew is headed there.
+- **[later]** The Order of All's headquarters
+  The Order of All has one headquarters, with a wing for each order; the Hall of Sight and Sound is in the Watchers' wing and mainly theirs (Korey, 2026-10-28; STAGING rounds 5–6). Name and place the headquarters when the crew is headed there. Use "wing", never "sector", which is a Fleet word.
   src: Korey, 2026-10-25 (round 6)
 
 - **[fix]** "The only Monolith" on Fonains
@@ -750,14 +750,14 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ### factions/order.html
 
 - **[decide]** Who leads the Order of All
-  Ruled (Korey, 2026-10-28): the Order of All is three orders, the Watchers (the All-Father), the Keepers (the All-Haven) and the Restorers (the All-Mother), one god in three aspects; this replaces the Order of the All-Father and its callings (done: factions/order.html, watchers.html, keepers.html, restorers.html, glossary, cosmology § Core Monolith's pressure, connections.json, timeline.json). Still open: who leads the whole Order, or whether it has a single head at all; whether it has a seat and a device of its own, apart from its orders'; and whether all three orders date from the founding at Cycle 0. Dejexic leads the Watchers.
+  Ruled (Korey, 2026-10-28): the Order of All is three orders, the Watchers (the All-Father), the Keepers (the All-Haven) and the Restorers (the All-Mother), one god in three aspects; this replaces the Order of the All-Father and its callings (done: factions/order.html, watchers.html, keepers.html, restorers.html, glossary, cosmology § Core Monolith's pressure, connections.json, timeline.json). Still open: who leads the whole Order, or whether it has a single head at all; whether it has a device of its own; and when the one body founded at Cycle 0 split into three orders (Korey, 2026-10-28: it began as one and split as its following grew and like minds drew together). The Order has one headquarters with a wing for each order; its name and location are under Locations, "The Order of All's headquarters". Dejexic leads the Watchers.
   Touches: factions/order.html (Still to decide), connections.json.
   src: Korey, 2026-10-28 (Order of All ruling)
 
 ### factions/watchers.html
 
 - **[decide]** The Watchers' open details
-  The Watchers' seat is unnamed and unplaced; its great hall is the Hall of Sight and Sound. Whether that seat is also the seat of the whole Order of All, and whether the Watchers have ranks between Watcher and Captain-Commander, are not set. Nereth Vaul's species (it sets the final form of her name) is still open. See also Locations, "The Watchers' seat", and New pages, Hall of the Watchers.
+  The Watchers have a wing at the Order of All's headquarters, and the Hall of Sight and Sound is in it (Korey, 2026-10-28). Whether the Watchers have ranks between Watcher and Captain-Commander is not set. Nereth Vaul's species (it sets the final form of her name) is still open. See also Locations, "The Order of All's headquarters", and New pages, Hall of the Watchers.
   Touches: factions/watchers.html (Still to decide).
   src: Korey, 2026-10-28 (Order of All ruling)
 
@@ -768,16 +768,23 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ### factions/keepers.html
 
 - **[decide]** The Keepers' leader, seat, ranks and look
-  The Order of the Keepers is settled in role (Korey, 2026-10-28): it guards the Monoliths, holds the record and the registry of Monoliths (Ortholiths), keeps the Beacon, the count and the armillaries, forecasts from the Watchers' reports, decides who is sent where, and gives out information; its radical edge holds that nothing leaves the record. Not set: who leads it, its seat, its ranks, and how it looks (device, dress). The Beacon's open counts (first arm, kindlings and embers, the spark characters) stay under Cosmology, Galactic time cycles.
+  The Order of the Keepers is settled in role (Korey, 2026-10-28): it guards the Monoliths, holds the record and the registry of Monoliths (Ortholiths), keeps the Beacon, the count and the armillaries, forecasts from the Watchers' reports, decides who is sent where, and gives out information; its radical edge holds that nothing leaves the record. It has a wing at the Order's headquarters (Korey, 2026-10-28). Not set: who leads it, anything more about its wing, its ranks, and how it looks (device, dress). The Beacon's open counts (first arm, kindlings and embers, the spark characters) stay under Cosmology, Galactic time cycles.
   Touches: factions/keepers.html (Still to decide), glossary, connections.json.
   src: Korey, 2026-10-28 (Order of All ruling)
 
 ### factions/restorers.html
 
 - **[decide]** The Restorers' place in the Order of All
-  The Restorers are one of the Order of All's three orders (Korey, 2026-10-28), and the old heretics and death-cult friction is now an argument inside the one faith. The page's "four centuries" of crossings and the Fleet's catalogue name are kept. Not set: how and when the Restorers began, and when they took their place among the three orders (they may predate the crossings' four centuries, or come into the Order with them); how they dress and wear the device; the Fifth Readings' names; and which residue pieces they hold.
+  The Restorers are one of the Order of All's three orders (Korey, 2026-10-28), and the old heretics and death-cult friction is now an argument inside the one faith. Settled (Korey, 2026-10-28): the Restorers have always been one of the three orders; over the past few centuries their beliefs and ambitions changed and they wanted to do more, and the "four centuries" counts that active era. They have a wing at the Order's headquarters. Not set: what changed them four centuries ago; anything more about their wing; how they dress and wear the device; the Fifth Readings' names; and which residue pieces they hold.
   Touches: factions/restorers.html (Still to decide), dossiers/ilsabet-crann.html, timeline.json.
   src: Korey, 2026-10-28 (Order of All ruling)
+
+### Every faction page: tensions
+
+- **[later]** Tensions inside the Order of All and the Fleet
+  The orders and the Fleet's branches will have tensions between them. They are mortals, which means people are open to corruption, to being taken, and to forces working against them. No organization is untouchable, and not everyone is as benevolent as they would like to believe. Not to be decided now.
+  Touches: factions/order.html, watchers.html, keepers.html, restorers.html, fleet.html.
+  src: Korey, 2026-10-28
 
 # Campaign
 
