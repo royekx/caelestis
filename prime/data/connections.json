@@ -1294,7 +1294,11 @@
       "summary": "An interworld order that preserves Continuity and reads the Core's pressure as the All-Father.",
       "facts": [
         {
-          "t": "The Order made Galactic time cycles: it counts the pulses of Erevos from its founding, Cycle 0, so its Watchers have one clock to compare reports; the current cycle is 1491.",
+          "t": "The Order made Galactic time cycles, tied to no planet: a cycle is one great flare of Erevos to the next, divided by lesser flares that instruments count; Cycle 0 is the Order's founding and the current cycle is 1491.",
+          "src": "factions/order.html#cycles"
+        },
+        {
+          "t": "Over the past few centuries the cycles have grown slightly shorter, and Watchers record them as irregular.",
           "src": "factions/order.html#cycles"
         },
         {
