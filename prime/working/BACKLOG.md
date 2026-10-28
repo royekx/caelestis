@@ -36,15 +36,15 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 7 | 2 | 0 | 3 |
 | Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 42 | 5 | 36 |
-| Dossiers | dossiers/ | 11 | 9 | 41 | 1 | 41 |
+| Dossiers | dossiers/ | 13 | 10 | 35 | 1 | 32 |
 | Crew | crew/ | 9 | 12 | 17 | 0 | 83 |
-| Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
+| Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 1 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 21 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 5 | 2 | 31 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** | | **88** | **115** | **178** | **10** | **249** |
+| **Total** | | **90** | **116** | **171** | **10** | **240** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1450,10 +1450,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/index.html
 
-- **[fix]** N'ghathrod's fusion date
-  dossiers/nghathrod.html and dossiers/vthoramu.html say he has been fused into Vth'oramu for forty or fifty years; STAGING has the dreadnought taken over decades, perhaps a century, and the active push only in the past few decades. Reconcile the dates (factions/vthorama.html notes it in Still to decide).
-  src: Factions review, 2026-10-28
-
 - **[fix]** Joffrey's account of Clint
   dossiers/joffrey.html says Clint went "over the side with the boarders' craft"; its link lands on factions/fleet.html's colour-pool account. Make the two agree.
   src: Factions review, 2026-10-28
@@ -1666,12 +1662,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ---
 
-### dossiers/khaleth.html, ithvarn.html, osskhal.html, ulhrek.html, zhauveth.html
-
-- **[fix]** Heart entrance term
-  Ulh'rek and Khaleth say "Atria". Apply the ruling under opposition/vecna.html.
-
----
 
 ### dossiers/vecna-lich.html
 
@@ -1727,35 +1717,13 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   He saved a mouse during the escape and it travels with him. Its quirk and what it means to him are open.
   src: Korey, 2026-10-25 (round 2)
 
-- **[fix]** His age
-  The infobox says "Age ~1 century into his second life" and the body says "A mind flayer roughly a century into his second life". Write: "A mind flayer more than five centuries into his second life, and a spacefaring elf before that." Infobox: "Age: more than five centuries since the experiment."
-  src: session-rulings (Thessalar); timeline "Captured aboard Thessalar's craft", "The craft falls"
+- **[decide]** How long N'ghathrod has been fused into Vth'oramu
+  The dossiers said forty or fifty years; STAGING has the dreadnought taken over decades, perhaps a century, after an exile four to four and a half centuries ago, and the active push for hearts only in the past few decades. dossiers/nghathrod.html and dossiers/vthoramu.html now say only that he has been joined to the ship since its taking. Set a figure, or leave it unnumbered. Touches: dossiers/nghathrod.html, dossiers/vthoramu.html, vessels/vthoramu.html, factions/vthorama.html, the timeline.
+  src: Factions review, 2026-10-28; section 4 plan; section 5 (2026-10-28)
 
-- **[add]** The craft and the escape
-  Add to the history list ("Escaped as the craft went down"): "N'ghathrod's ship clashed with Thessalar's planar craft about 506 years ago and lost. Thessalar and the Thessalkraken captured him and some of his illithids, and he was held and experimented on aboard. About 500 years ago Lola's Boys, sent back in time by the Accordance, took the craft's control and defence gems. Without them the craft fell, and in the crash N'ghathrod escaped with his lieutenants and the tadpoles he could carry."
-  src: session-rulings (Thessalar); timeline "Captured aboard Thessalar's craft", "Lola's Boys in the year 425", "The craft falls"
-
-- **[add]** What the experiment did
-  Add to What the experiment actually did: "The Rod's seventh piece made his ceremorphosis paracausal. It also stopped his aging."
-  updated (triage): "stopped his aging" is superseded. The seventh piece is simulacrum, the root of the taking; his long life comes from the tithe of his taken (STAGING § N'ghathrod's long life).
-  src: memory-canon open-decisions (Locked 2026-10-25); timeline "Captured aboard Thessalar's craft"
-
-- **[add]** Bound to the ship
-  Add to "He is the ship": "His join with Vth'oramu is permanent. Only a wish or an artifact could break it."
-  src: chat-cosmic-campaign-structure § N'ghathrod and the colony
-
-- **[add]** The largest chapter
-  Add to Who they are: "N'ghathrod's colony is the largest Seeker chapter and the only one that travels. It coordinates with planet-bound chapters. A heart can only be opened where a Monolith stands, so he saturates worlds with Monoliths and waits."
-  updated (triage): conflicts with STAGING. Opening needs no Monolith; linking needs one on both worlds (§ Hearts, Atria and Monoliths). Chapters do not know about each other (§ The Seekers). The colony is the Seekers of a New Home (§ The Seekers and the colony). Rewrite before applying.
-  src: memory-canon open-decisions ("Locked this pass")
-
-- **[add]** His mark
-  Add: "His field mark is the Passage: a circle with a tail ending in another circle, gaining a circle for every linked world."
-  src: memory-canon open-decisions ("Locked this pass")
-
-- **[add]** What he knows of the Watchers
-  Add: "N'ghathrod knows the Watchers exist, likely through the Watcher who was posted to Glyth." DM-only, under threads: a taken Watcher is a possible future goal for him; none exists now.
-  src: chat-astral-sea-worldbuilding § Cosmos and campaign shape; working/glyth-watcher.md; memory-canon open-decisions (Direction 2026-10-21)
+- **[later]** N'ghathrod's stat block
+  One block, at the ceiling, never scaled: an exit condition tied to his objective, non-lethal takedowns, and enough action economy for six PCs. The CRC's Withdrawal Threshold and Legendary Resistance are the precedents. The enna's blocks (CR 12 to 16, lopsided) are unbuilt too.
+  src: dossiers/nghathrod.html; section 5 (2026-10-28)
 
 ---
 
@@ -1933,30 +1901,9 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/vthoramu.html
 
-- **[fix]** The name
-  The infobox says "Name: The whole of the going-home", and the body says the name "restates the promise". The name is locked: Vth'oramu, shortened to Oramu, means "the passage to a new home". Change the infobox. The body's line "The passage to a home they were promised and have yet to be given" already fits.
-  src: memory-canon open-decisions (dreadnought name locked); chat-cosmic-campaign-structure turn 413
-
-- **[fix]** When it was taken
-  The infobox says "Taken: A little over fifty years ago, after a long siege". The timeline puts the exile from Glyth, when the dreadnought became Vth'oramu, about 60 years ago. Align to about sixty years (or follow the five-centuries decide under dossiers/nghathrod.html if the exile moves).
-  updated (triage): the exile moved. The exile from Glyth was roughly four to four and a half centuries ago, and taking the dreadnought took decades, perhaps a century, after that (STAGING § N'ghathrod's history). The "about sixty years" alignment no longer holds; date the taking from STAGING.
-  src: timeline "Exile from Glyth"
-
-- **[add]** The hull
-  Add to the description: "The body lies elongated and contorted, its plating carved for docking, berths and observation, and braced with scaffolding. The eye serves as observation; the mouth and the physical tail remain, the tail ending in the astral cord."
-  src: chat-cosmic-campaign-structure § The dreadnought; memory-canon open-decisions (N'ghathrod settled)
-
-- **[add]** The transit keepers
-  Add: "Illithid arcanists from N'ghathrod's own crew keep the plane-shift transit points."
-  src: chat-cosmic-campaign-structure § The dreadnought, § Superseded (outside wizards rejected)
-
-- **[add]** What's hidden
-  Add to What's hidden: "The earliest copies of N'ghathrod are in the dreadnought's walls. N'ghathrod and the ship are joined: if his true body dies, the ship dies, and the colony loses its home."
-  src: chat-cosmic-campaign-structure § N'ghathrod and the colony
-
-- **[fix]** The ship as a place lives on vessels/vthoramu.html
-  Section 4 wrote vessels/vthoramu.html: the eye as bridge, the mouth, the demiplane and its transit points, the tadpole pools, the colony's quarters, the skiffs, the pulse, the tail and the astral cord, the siege and the move off the Cairn bearing. The dossier keeps the creature and its command and summarises the interior in a line with a link. While rewriting, also fix "Tarroway's timing tables fail" (retired), "Last placed: On Cairn's bearing, closing slowly" (it has moved; it keeps to the dark between systems), and "The colony moved aboard and took the ship's name for its own" (the people's name and the ship's share roots: Vth'orama, Vth'oramu).
-  src: section 4 (2026-10-28); STAGING § Vth'oramu, § The Vth'orama
+- **[decide]** Does the ship die with N'ghathrod?
+  A draft line: "N'ghathrod and the ship are joined: if his true body dies, the ship dies, and the colony loses its home." It is held back from the page. STAGING rules that the taken outlive him, each keeping part of him; it says nothing of the ship. Rule whether the dreadnought dies with his true body. Touches: dossiers/vthoramu.html, dossiers/nghathrod.html, vessels/vthoramu.html, campaign/colony/.
+  src: chat-cosmic-campaign-structure § N'ghathrod and the colony; section 5 (2026-10-28)
 
 ---
 
@@ -2637,10 +2584,6 @@ left here is open.
   src: section 4 (2026-10-28); rules/index.html#counter-spore as it stood
 
 ### vessels/vthoramu.html
-
-- **[fix]** When N'ghathrod fused into the ship
-  The vessel page gives no date. dossiers/vthoramu.html says "fused for forty or fifty years" and "taken a little over fifty years ago", against STAGING: the taking took decades, perhaps a century, after an exile four to four and a half centuries ago. Settle it with the dossier rewrite in section 5 (see dossiers/vthoramu.html).
-  src: section 4 plan; factions/vthorama.html § Still to decide
 
 ### vessels/tyrant-ship.html
 

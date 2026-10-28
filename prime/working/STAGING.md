@@ -46,6 +46,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ### The elder brain (realms/fonains.html, timeline, dossiers/nghathrod.html)
 - N'ghathrod's elder brain was separated from him in the crash. He believed it dead, or could not reach it. It lay trapped beneath the Barrier Peaks for about five hundred years, possibly growing a colony of its own, until Lola's Boys broke it in Session 27. It was buried in the collapse, but it teleported out and escaped.
+- done: dossiers/nghathrod.html (section 5); realms/fonains.html and the timeline still need it.
 
 ### The Fonains shards (realms/fonains.html, artifacts/fonains-shard.html, timeline)
 - When the Monolith broke, four great shards fell, and many smaller shards came from them. Three hundred and thirty-three of the small shards are black. The rest took colors close to their elemental affinities.
@@ -69,13 +70,6 @@ when a ruling changes; delete it once the page carries it. See
 
 ### Asmodeus and the Accordance (Fonains doc; done on factions/deities.html, section 2)
 - done: the members, Nalsa, Asmodeus's history and every appearance are on factions/deities.html § The Accordance. The Fonains doc still needs them.
-
-### The Vth'orama (factions/seekers.html, factions/vthorama.html, dossiers/vthoramu.html, the lieutenants' dossiers)
-- N'ghathrod's colony is a chapter of the Seekers: the Seekers of a New Home. They serve the same hidden god as every other chapter, believing they answer to an elder brain, and Vecna feeds them the few secrets they need.
-- In their own tongue the chapter's name is their people's name, Vth'orama. The roots are vth- "the whole of", or- "toward", amu "home", with -a marking a people: all who go toward home. Rendered in Common, the Seekers of a New Home.
-- Their ship carries the same roots. Vth'oramu means "the passage to a new home". The founders say it as a promise; those born aboard say it as "here".
-- Two of the five lieutenants are properly raised illithids who were captured with N'ghathrod aboard Thessalar's craft. The other three are unthinned: made aboard the craft from bodies Thessalar supplied for his experiments and N'ghathrod's own tadpoles.
-- done: factions/vthorama.html and factions/seekers.html (section 2). Still waiting: dossiers/vthoramu.html and the lieutenants' dossiers.
 
 ### Caelestis, the Driftwardens and the United Intergalactic Fleet (factions/fleet.html, factions/index.html, cosmology/, locations/, glossary/, restricted/)
 - The United Intergalactic Fleet, which everyone calls the Fleet, is made of a handful of sector branches, four or five. Each branch oversees one sector of the Erevos Galaxy, a cluster of several systems, and keeps sites in its systems, near them, or between them. The branches work together and together make the Fleet.
@@ -122,6 +116,7 @@ when a ruling changes; delete it once the page carries it. See
 - Vth'oramu is hunkered down on the periphery, in the dark between systems. It works as a mothership: skiffs go out from it to the worlds in that vicinity, and it stays where no one looks. (done: vessels/vthoramu.html, section 4.)
 - He has a broad set of target worlds in that vicinity. (DM: build each world's specifics as the crew nears it.)
 - By the time the crew graduates, his landed operations have begun to ripple outward at contract scale: taken in small positions, odd disappearances, a station or crew acting strangely. These are the first things the crew meets as Driftwardens. (DM: this is the shape of Arc 1 after graduation and the run into Arc 2.)
+- done: dossiers/nghathrod.html (section 5); campaign/colony/ still needs all four.
 
 ### Ilsevaine Corr, Aurel Venn and the strain on the Fleet (campaign/spine.html, NEW: Cosmos texture)
 - Outside Realmspace, at the edge of a system or between systems, Ilsevaine Corr rules a hidden polity that Caelestis does not know of. She has noticed more traffic than usual near her borders, and once something large brushed the edge of her sight and was gone. She keeps watch for it. Once N'ghathrod grows bolder, she will face Vth'oramu. (DM touchstone: Mara Sov.)
@@ -149,17 +144,8 @@ when a ruling changes; delete it once the page carries it. See
 - The active push to find and open hearts began only in the past few decades.
 - The residue piece Thessalar experimented with was the seventh Rod piece, simulacrum. It is why N'ghathrod's tadpoles make copies of him, and it is the root of the taking.
 - N'ghathrod's long life comes from his taken. A portion of every taken person is tithed upward to him, the way a hive feeds its center, and it extends his life. The more he takes, the longer he lasts.
-- done: the capture, the experiments, the seventh piece and the escape are on artifacts/rod-of-seven-parts.html and vessels/thessalars-craft.html (section 4). dossiers/nghathrod.html, the timeline and rules/ still need them.
+- done: the capture, the experiments, the seventh piece and the escape are on artifacts/rod-of-seven-parts.html and vessels/thessalars-craft.html (section 4). dossiers/nghathrod.html carries them (section 5); the timeline and rules/ still need them.
 - If N'ghathrod's true body dies, the taken do not die. Part of him lives on in each of them. His lieutenants are closest to him; each rung down the colony is further away. Given enough time, one of them could grow toward becoming another N'ghathrod. The taken lose a part of themselves when he dies.
-
-### Vth'oramu (dossiers/vthoramu.html, factions/vthorama.html)
-- Vth'oramu has moved since it sat on the Cairn bearing a year ago. It can enter a system, but a vessel that size near a world's planets would almost certainly be seen, so it keeps to the dark between systems. The unidentified mass Strake Station reported was Vth'oramu.
-- The dreadnought bore no wound before the siege. N'ghathrod saw an opportunity and took it. He knew a dreadnought's physiology, and a whisper from Vecna told him it was the best way to keep a colony on its passage home. The fight lasted a long time, and controlling the creature took a great many tadpoles.
-- The colony's arms echo a hand and an eye without showing either outright.
-- The tithe runs one way. Every taken person comes from N'ghathrod's tadpoles. As each grows, a portion of it passes up through the rungs of the taken, and all of it ends with N'ghathrod. The flow is paracausal, not physical.
-- The dreadnought's tether is an astral cord, a silver line running off to somewhere unknown. Its physical tail is immensely long, which is part of why it could never hide inside a system.
-- Its mouth draws things in, the way an astral dreadnought's mouth opens on its inner demiplane. Its great weapon is the reverse: a pulse pressed outward from every side of its body, and everything within range is teleported away. It takes a long time to charge and is rarely used.
-- done: vessels/vthoramu.html carries the ship as a place, the move off the Cairn bearing, the siege, the tail and cord, the mouth and the pulse (section 4). Still waiting: dossiers/vthoramu.html (section 5).
 
 ### Thessalar (dossiers/thessalar.html)
 - Thessalar is Halaster Blackcloak, and he is still in the planar craft. His records of the work on N'ghathrod are there too. (done: vessels/thessalars-craft.html, section 4.)

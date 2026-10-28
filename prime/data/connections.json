@@ -1907,6 +1907,18 @@
         {
           "t": "He is working on all four parts of his plan now: placing the taken, finding hearts, opening them and seeking links.",
           "src": "STAGING round 10"
+        },
+        {
+          "t": "His join with Vth'oramu is permanent; only a wish or an artifact could break it.",
+          "src": "dossiers/nghathrod.html"
+        },
+        {
+          "t": "His field mark is the Passage, gaining a circle for every linked world.",
+          "src": "dossiers/nghathrod.html"
+        },
+        {
+          "t": "He knows the Order's Watchers exist, likely through the Watcher posted to Glyth.",
+          "src": "dossiers/nghathrod.html"
         }
       ]
     },
@@ -2132,6 +2144,10 @@
         {
           "t": "He is the one who argues with N'ghathrod in front of others.",
           "src": "dossiers/osskhal.html"
+        },
+        {
+          "t": "Properly raised and captured with N'ghathrod aboard Thessalar's craft; Thessalar's experiments gave him a greatly extended lifespan.",
+          "src": "dossiers/osskhal.html"
         }
       ]
     },
@@ -2152,6 +2168,10 @@
         },
         {
           "t": "He is the best source in the cosmos on where Atria are.",
+          "src": "dossiers/ulhrek.html"
+        },
+        {
+          "t": "Unthinned and made aboard Thessalar's craft; Thessalar's experiments gave him a greatly extended lifespan.",
           "src": "dossiers/ulhrek.html"
         }
       ]
@@ -2178,6 +2198,10 @@
         {
           "t": "People who meet her remember the conversation fondly and cannot reconstruct what was said.",
           "src": "dossiers/zhauveth.html"
+        },
+        {
+          "t": "Unthinned and made aboard Thessalar's craft; Thessalar's experiments gave her a greatly extended lifespan.",
+          "src": "dossiers/zhauveth.html"
         }
       ]
     },
@@ -2199,6 +2223,10 @@
         {
           "t": "He has not left Vth'oramu in thirty years.",
           "src": "dossiers/ithvarn.html"
+        },
+        {
+          "t": "Unthinned and made aboard Thessalar's craft; Thessalar's experiments gave him a greatly extended lifespan.",
+          "src": "dossiers/ithvarn.html"
         }
       ]
     },
@@ -2219,6 +2247,10 @@
         },
         {
           "t": "Of the five he is the most likely to leave a fight rather than finish it.",
+          "src": "dossiers/khaleth.html"
+        },
+        {
+          "t": "Properly raised and captured with N'ghathrod aboard Thessalar's craft; Thessalar's experiments gave him a greatly extended lifespan.",
           "src": "dossiers/khaleth.html"
         }
       ]
@@ -2265,6 +2297,14 @@
         {
           "t": "Its eye is the bridge; its mouth is the only way in, onto a demiplane crossed by fixed plane-shift transit points.",
           "src": "vessels/vthoramu.html"
+        },
+        {
+          "t": "The earliest copies of N'ghathrod are in the dreadnought's walls.",
+          "src": "dossiers/vthoramu.html"
+        },
+        {
+          "t": "Illithid arcanists from N'ghathrod's own crew keep its plane-shift transit points.",
+          "src": "dossiers/vthoramu.html"
         }
       ]
     },
