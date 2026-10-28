@@ -541,27 +541,27 @@
       ]
     },
     {
-      "id": "circle-of-fifteenths",
+      "id": "circle-of-fifths",
       "label": "The Circle of Fifths",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "Vecna's working: fifteen opened, linked hearts drawn as a spellcasting circle across the cosmos.",
+      "summary": "Vecna's name for his working: five galaxies, each a fifth of what he needs, around Rykoe. GAL-01's fifth is the eye inscription.",
       "facts": [
         {
-          "t": "Vecna needs fifteen opened, linked hearts, three in each of the five galaxies.",
-          "src": "STAGING round 2"
+          "t": "He named it after the circle of fifths in music: five galaxies, each a fifth of what he needs, around Rykoe. The name is his alone.",
+          "src": "opposition/vecna.html"
         },
         {
-          "t": "In each galaxy one heart links to the galaxy on each side and one to the First Heart.",
-          "src": "STAGING round 2"
+          "t": "In GAL-01 the working is the eye inscription: sixteen heart worlds, ten on the lids and six in the iris, which line up into an eye only as seen from Oerth.",
+          "src": "opposition/vecna.html"
         },
         {
-          "t": "He named it after the circle of fifths in music, and the name is his alone.",
-          "src": "STAGING round 4"
+          "t": "Oerth is not one of the sixteen; every heart world in the figure links back to Oerth's heart.",
+          "src": "opposition/vecna.html"
         },
         {
-          "t": "Almost none of the circle stands today: a handful of hearts may have been found in recent decades, and a couple at most are linked.",
-          "src": "STAGING round 2"
+          "t": "Three of the sixteen hearts are found and two opened and linked, each also linked to Oerth; Nowhere's heart is found and not opened.",
+          "src": "opposition/vecna.html"
         },
         {
           "t": "Only Vecna knows what he is building; the Seekers and the Order do not.",
@@ -3453,7 +3453,7 @@
       "summary": "A fungus from Vaelorix's collection that throws a cloud of faerie light when fed a spell slot.",
       "facts": [
         {
-          "t": "Fed a spell slot, it makes a persistent faerie fire cloud for a minute, 10, 20 or 30 feet across by slot, with no concentration and no save.",
+          "t": "Fed a spell slot, it makes a persistent faerie fire cloud for a minute, with a radius of 10, 20 or 30 feet by slot, with no concentration and no save.",
           "src": "artifacts/faelight-spore.html"
         },
         {
@@ -3461,7 +3461,7 @@
           "src": "artifacts/faelight-spore.html"
         },
         {
-          "t": "It grows in the Tyrant Ship's Garden; the Collection Manifest lists it as entry 051, from the outer Kellis Belt.",
+          "t": "The Tyrant Ship's Collection Manifest lists it as entry 051, from the outer Kellis Belt: intake, unprocessed.",
           "src": "artifacts/faelight-spore.html"
         }
       ]
@@ -5402,20 +5402,14 @@
     },
     {
       "s": "vecna",
-      "t": "circle-of-fifteenths",
+      "t": "circle-of-fifths",
       "rel": "is building",
       "src": "STAGING round 4"
     },
     {
-      "s": "circle-of-fifteenths",
+      "s": "circle-of-fifths",
       "t": "hearts",
       "rel": "is drawn from",
-      "src": "STAGING round 2"
-    },
-    {
-      "s": "circle-of-fifteenths",
-      "t": "first-heart",
-      "rel": "links to",
       "src": "STAGING round 2"
     },
     {
@@ -7879,16 +7873,28 @@
       "src": "STAGING § Tharizdun"
     },
     {
-      "s": "faelight-spore",
-      "t": "LOC-0zVUE8xF",
-      "rel": "grows in",
-      "src": "vessels/tyrant-ship.html"
-    },
-    {
       "s": "NPC-lfleUUeT",
       "t": "faelight-spore",
       "rel": "collected",
       "src": "artifacts/faelight-spore.html"
+    },
+    {
+      "s": "faelight-spore",
+      "t": "LOC-Rp7kW4vn",
+      "rel": "is aboard",
+      "src": "inventory/items/collection-manifest.html"
+    },
+    {
+      "s": "circle-of-fifths",
+      "t": "oerth",
+      "rel": "is seen from",
+      "src": "opposition/vecna.html"
+    },
+    {
+      "s": "circle-of-fifths",
+      "t": "rykoe",
+      "rel": "is drawn around",
+      "src": "opposition/vecna.html"
     }
   ]
 }

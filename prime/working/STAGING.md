@@ -235,7 +235,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ### Wan, Tu and the fragment (crew/tumak.html, dossiers/the-runekeeper.html, rules/; done on artifacts/dissolution-fragment.html, section 4)
 - The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) factions/runekeepers.html and artifacts/dissolution-fragment.html carry it; crew/tumak.html and dossiers/the-runekeeper.html still need it.
-- The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a state neither whole nor broken. (A whole fragment does not open the First Heart; the old gate, "not a key to the First Heart before about level 12, early in Arc 3", lost its object and went to the BACKLOG decide "What a fragment made whole does".)
+- The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a state neither whole nor broken.
 
 ## DM principles
 

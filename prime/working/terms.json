@@ -74,8 +74,8 @@
       "i": true
     },
     {
-      "pattern": "\\bThe Tyrant\\b(?! Ship)",
-      "use": "Tyrant Ship (ship names carry no article)"
+      "pattern": "\\bThe (Tyrant Ship|Tyrant|Moonraider|Flighty Foundling|Bellwether Crow)\\b",
+      "use": "the name alone: Tyrant Ship, Moonraider, Flighty Foundling, Bellwether Crow (ship names carry no article)"
     },
     {
       "pattern": "data-sphere",
@@ -397,6 +397,10 @@
     {
       "old": "#counter-spore",
       "new": "artifacts/faelight-spore.html"
+    },
+    {
+      "old": "world-surveyor-thread",
+      "new": "campaign/plot-hooks.html#atlas-thread"
     }
   ],
   "allow": [

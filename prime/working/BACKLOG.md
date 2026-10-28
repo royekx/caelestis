@@ -33,18 +33,18 @@ staging once Korey has read and accepted them.
 | Cosmology | cosmology/, glossary/, chart/ | 9 | 12 | 14 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 22 | 0 | 0 | 1 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
-| Timeline | the rest of timeline.json | 0 | 1 | 8 | 0 | 0 |
+| Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 7 | 2 | 0 | 4 |
 | Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 42 | 5 | 36 |
 | Dossiers | dossiers/ | 8 | 6 | 47 | 1 | 54 |
-| Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
-| Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 1 | 0 | 1 |
-| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
+| Crew | crew/ | 9 | 12 | 17 | 0 | 83 |
+| Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
+| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 21 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 5 | 2 | 31 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 3 | 0 | 1 |
-| **Total** | | **85** | **112** | **179** | **10** | **263** |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
+| **Total** | | **85** | **112** | **184** | **10** | **263** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -787,6 +787,10 @@ Items for `prime/timeline/timeline.json` outside the Fonains lane (see the Fonai
 Order: decide, fix, drop, add.
 
 ### Timeline
+
+- **[fix]** Dangling edges in connections.json
+  Three edges in prime/data/connections.json point at ids that have no node: NPC-Gp8mT4kw (Pffred) → LOC-Rp7kW4vn "fitted the helm of"; NPC-Qp8jL2vR → LOC-Bf3xN6qT "run"; vocath-operation → QST-9dK3wR7n "is behind". Add the missing nodes (Pffred, the other two record ids) or drop the edges.
+  src: section 4 (2026-10-28)
 
 - **[fix]** The Ascension World event *(answered)*
   Retire the world and the event. Remove "The Ascension World" (cert open, t -250). Oerth is the world where Vecna became a god: his ritual pushed Oerth to its Zenith, the Zenith made him a god, and the Monolith that answered archived his mortal form, Lich Vecna. That was his first ascension, the Godhood Ascension, and "Vecna rules Oerth and ascends" already carries it. The climb he is making now, to take an Axiom's place, is the Axiomic Ascension.
@@ -2324,6 +2328,10 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; see the Rules section.
 
+- **[fix]** "Open" labels on the page
+  The infobox has an "Open" row ("What happens while the fragment is between bearers", line 30) and the body an "Open:" paragraph (line 79). Status labels stay off pages: write each as a Still to decide sentence in DM notes when the page is rewritten, or drop what the answered item below already settles.
+  src: section 4 cold review (2026-10-28)
+
 - **[add]** What completing the inscription costs Tumak *(answered)*
   Take both "Open:" lines off crew/tumak.html (the stat row and the closing paragraph), and the matching Open lines on dossiers/the-runekeeper.html and realms/wayfinders-homeworld.html. Write (in-world):
   "Completing the inscription takes Tumak home, and going home ends the concealment. When Wan and Tu both arrive, the three poles stall the Dissolution cycle and the result is a Zenith; the homeworld splits into a blessing faction and an omen faction, and a Monolith follows. The office he comes home to dims whoever holds it."
@@ -2681,7 +2689,7 @@ left here is open.
 ### artifacts/faelight-spore.html
 
 - **[decide]** The Faelight spore's slot rules *(prep)*
-  The page reconciles the old rules/index.html#counter-spore section (removed in section 4) with the BACKLOG radius steps: the slot sets the radius only (10/20/30 ft for a 1st/2nd/3rd-level slot), the cloud lasts 1 minute whatever the slot, and there is no level cap. The Rules page had capped a 3rd-level caster at a 2nd-level slot and said slot level scaled area and duration; both were dropped as Rules-page additions with no ruling behind them. Confirm, or restore the cap or the duration scaling. Also open on the page: whether a slot above 3rd widens the cloud, whether a coated creature stays coated after leaving the cloud, and whether the spore can be carried off the ship.
+  The page reconciles the old rules/index.html#counter-spore section (removed in section 4) with the BACKLOG radius steps: the slot sets the radius only (10/20/30 ft for a 1st/2nd/3rd-level slot), the cloud lasts 1 minute whatever the slot, and there is no level cap. The Rules page had capped a 3rd-level caster at a 2nd-level slot and said slot level scaled area and duration; both were dropped as Rules-page additions with no ruling behind them. Confirm, or restore the cap or the duration scaling. Also open: where the spore is now. The player Collection Manifest (entry 051) lists it as "Intake · unprocessed"; the voyage 6–7 planning chat moved it from the Cargo Deck to the Garden (§ Superseded). The page follows the manifest and names the Garden as unconfirmed. Also open on the page: whether a slot above 3rd widens the cloud, whether a coated creature stays coated after leaving the cloud, and whether the spore can be carried off the ship.
   src: section 4 (2026-10-28); rules/index.html#counter-spore as it stood
 
 ### vessels/vthoramu.html
@@ -2718,6 +2726,10 @@ left here is open.
 
 ### vessels/the-derelict.html
 
+- **[fix]** The record's logbook copies
+  data/items.json still says Casey and Gregory bound duplicates, "so three identical copies exist"; the settled account is two halves, one held by Boogie (STAGING § Boogie; Player record flags above). Correct the record in a session run or a record edit, run derive, and match the player inventory entry.
+  src: section 4 cold review (2026-10-28)
+
 - **[later]** The Derelict's name, and records for the other salvage-race ships
   Settled for the other ships: every ship the crew encounters gets a record, and ships known only in simulation sit under the Simulation Deck with Status Simulated, so the salvage race's hammerhead and githyanki ship each get a simulated record and a register row, as the Moonraider and the Derelict did. Still open: the Derelict's name. Options: "Salvage Race Derelict", or keep "Derelict". Touches this page and vessels/the-derelict.html.
   src: chat-voyage-6-7-planning § Open; § The swap and NPCs (Moonraider and Derelict as simulated records); § Table and story principles ("Every ship the crew encounters gets a record"); memory-canon § Naming ("Ships the crew encounters get cataloged")
@@ -2730,6 +2742,10 @@ under each page run decide, fix, drop, add. The Tumak items are checked
 against the complete Tumak sweep (all 336 turns).
 
 ### rules/index.html
+
+- **[fix]** "Open" sections on the page
+  The page carries an "Open" h3 (line 384) and an "Open" h2 with an is-open "Unresolved" tag (line 427). Rewrite them as Still to decide sentences when the Rules section is done.
+  src: section 4 cold review (2026-10-28)
 
 #### Cosmology rules
 
@@ -3475,6 +3491,10 @@ run decide, fix, drop, add.
   src: notes/SESSION-RUN.md; working/repo-refactor.md; chat-voyage-6-7-planning § Table and story principles; chat-cosmic § Wiki structure rules ("Vessels are a register of their own")
 
 ## Fixes
+
+- **[fix]** "Answered from the sources" names items that are gone
+  The review list near the top of this file still names items section 4 consumed and deleted (among them "Artifacts of Convergence" is retired, What the letters stand for, The ship reads as native traffic, Tyrant ship weapons). Prune the list, or mark those entries done, when the list is next reviewed.
+  src: section 4 cold review (2026-10-28)
 
 
 
