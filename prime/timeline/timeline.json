@@ -272,8 +272,8 @@
       "status": "past",
       "cert": "working",
       "title": "The Fleet is founded at Caelestis",
-      "desc": "Caelestis proposes a combined fleet, and the separate institutions come together around it. This is Cycle 0 of Galactic time cycles (GTC). Placed by the working default of one cycle to one Toril year; a cycle's length is not set.",
-      "t": -1491,
+      "desc": "About Cycle 1240, some 250 cycles ago. Caelestis proposes a combined fleet, the separate institutions come together around it, and the Fleet adopts the Order's count of cycles. Placed by the working default of one cycle to about sixteen Toril months.",
+      "t": -330,
       "tier": 1
     },
     {
@@ -460,10 +460,19 @@
     {
       "lane": "order",
       "status": "past",
+      "cert": "working",
+      "title": "The Order of the All-Father is founded",
+      "desc": "Cycle 0. The Order begins counting the pulses of Erevos so that its Watchers, posted across the galaxy, have one clock to compare their reports. Placed by the working default of one cycle to about sixteen Toril months.",
+      "t": -1990,
+      "tier": 1
+    },
+    {
+      "lane": "order",
+      "status": "past",
       "cert": "canon",
       "title": "The Order of the All-Father",
-      "desc": "Guards Ortholiths, believing the taken are inside them. Watchers posted one per region.",
-      "t": -30000,
+      "desc": "Guards Ortholiths, believing the taken are inside them. Watchers posted one per region. Its founding is Cycle 0 of the count it keeps.",
+      "t": -1990,
       "end": 0,
       "tier": 2
     },

@@ -1294,6 +1294,10 @@
       "summary": "An interworld order that preserves Continuity and reads the Core's pressure as the All-Father.",
       "facts": [
         {
+          "t": "The Order made Galactic time cycles: it counts the pulses of Erevos from its founding, Cycle 0, so its Watchers have one clock to compare reports; the current cycle is 1491.",
+          "src": "factions/order.html#cycles"
+        },
+        {
           "t": "The Order takes the Core Monolith's pressure as a charge to maintain things as they are, though some within it doubt that reading.",
           "src": "STAGING round 2"
         },
@@ -1640,7 +1644,7 @@
           "src": "factions/fleet.html"
         },
         {
-          "t": "The Fleet keeps Galactic time cycles (GTC); Cycle 0 is its founding at Caelestis, and the current cycle is 1491.",
+          "t": "The Fleet dates by Galactic time cycles (GTC), the Order's count, adopted when the Fleet formed about 250 cycles ago; the current cycle is 1491.",
           "src": "factions/fleet.html#gtc"
         },
         {
