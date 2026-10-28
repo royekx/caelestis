@@ -19,14 +19,14 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Fonains
 
-### Fonains and the planar craft (realms/fonains, dossiers/thessalar, Fonains doc)
+### Fonains and the planar craft (realms/fonains, Fonains doc)
 - N'ghathrod was already a prisoner aboard Thessalar's craft. Lola's Boys, sent back in time by the Accordance, took its control and defense gems; without them it fell, and in the fall he escaped. Their year 425 is the year of the crash, about five hundred years before now.
 - The craft is a megadungeon (the Mad Mage dungeon). Daoine Gloine is a broken-off piece of it. The Thessalkraken landed separately in the sea and is the Drowned God's kraken.
 - The craft's gems formed where Olhydra and Ogrémoch collided. They are not Reach residue.
 - Benedetta fell ill at Rihiri's birth, from Vanifer's slow siphoning for the Bloodstone, and died two years later.
-- done: the craft, its gems, the fall, Daoine Gloine and the Thessalkraken are on vessels/thessalars-craft.html (section 4). realms/fonains.html, dossiers/thessalar.html and the Fonains doc still need them.
+- done: the craft, its gems, the fall, Daoine Gloine and the Thessalkraken are on vessels/thessalars-craft.html (section 4). dossiers/thessalar.html carries them (section 5). realms/fonains.html and the Fonains doc still need them.
 
-### Tharizdun (working/tharizdun.md, realms/fonains.html, dossiers/thessalar.html, Fonains doc)
+### Tharizdun (working/tharizdun.md, realms/fonains.html, Fonains doc)
 - The Day of Chaos is when the Princes of Elemental Evil break the barriers so Tharizdun can leave her prison.
 - The purple slit-pupiled eye the party saw in the year 425 is the Elder Elemental Eye, Tharizdun.
 - Fonains's Monolith is the only one ever to carry Tharizdun's crystal, and the only one recorded as destroyed.
@@ -36,7 +36,7 @@ when a ruling changes; delete it once the page carries it. See
 - Shothragot, her avatar, was bound to that temple. Its true vestige may still be there, and Giorge may be trying to reach it.
 - Lola's Boys, by taking the gems in the year 425, brought down the craft. In doing so they freed N'ghathrod and landed Tharizdun's foothold on their own world.
 - The planar craft was a vast floating city of many tiers. Where it came from is unknown.
-- done: the temple aboard, the gems, the crash and the Eye's arrival are on vessels/thessalars-craft.html (section 4).
+- done: the temple aboard, the gems, the crash and the Eye's arrival are on vessels/thessalars-craft.html (section 4); Tharizdun and Thessalar are on dossiers/thessalar.html (section 5).
 
 ### The Princes (timeline, realms/fonains.html, Fonains doc, the Cre'Tez line)
 - Long ago, about twelve thousand years before now, the Princes of Elemental Evil rose on Fonains. The six gods of the Accordance stepped in, helped forge the four weapons, and sealed the Princes away with the weapons as their keys.
@@ -46,6 +46,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ### The elder brain (realms/fonains.html, timeline, dossiers/nghathrod.html)
 - N'ghathrod's elder brain was separated from him in the crash. He believed it dead, or could not reach it. It lay trapped beneath the Barrier Peaks for about five hundred years, possibly growing a colony of its own, until Lola's Boys broke it in Session 27. It was buried in the collapse, but it teleported out and escaped.
+- done: dossiers/nghathrod.html (section 5); realms/fonains.html and the timeline still need it.
 
 ### The Fonains shards (realms/fonains.html, artifacts/fonains-shard.html, timeline)
 - When the Monolith broke, four great shards fell, and many smaller shards came from them. Three hundred and thirty-three of the small shards are black. The rest took colors close to their elemental affinities.
@@ -69,17 +70,6 @@ when a ruling changes; delete it once the page carries it. See
 
 ### Asmodeus and the Accordance (Fonains doc; done on factions/deities.html, section 2)
 - done: the members, Nalsa, Asmodeus's history and every appearance are on factions/deities.html § The Accordance. The Fonains doc still needs them.
-
-### The Vth'orama (factions/seekers.html, factions/vthorama.html, dossiers/vthoramu.html, the lieutenants' dossiers)
-- N'ghathrod's colony is a chapter of the Seekers: the Seekers of a New Home. They serve the same hidden god as every other chapter, believing they answer to an elder brain, and Vecna feeds them the few secrets they need.
-- In their own tongue the chapter's name is their people's name, Vth'orama. The roots are vth- "the whole of", or- "toward", amu "home", with -a marking a people: all who go toward home. Rendered in Common, the Seekers of a New Home.
-- Their ship carries the same roots. Vth'oramu means "the passage to a new home". The founders say it as a promise; those born aboard say it as "here".
-- Two of the five lieutenants are properly raised illithids who were captured with N'ghathrod aboard Thessalar's craft. The other three are unthinned: made aboard the craft from bodies Thessalar supplied for his experiments and N'ghathrod's own tadpoles.
-- done: factions/vthorama.html and factions/seekers.html (section 2). Still waiting: dossiers/vthoramu.html and the lieutenants' dossiers.
-
-### Aethris and the sisters (dossiers/beshaba.html; done on factions/aethris.html and factions/deities.html, section 2)
-- Beshaba finds the Fortuned heretical, a spit in her face. She thinks Tymora is fuelling them, and blames her sister for it. On Aethris Beshaba is the lesser of the two, because people favour luck over misfortune, and she calls what the Fortuned do unnatural.
-- Neither sister knows what both of them need: each other. Luck and misfortune are two sides of one coin.
 
 ### Caelestis, the Driftwardens and the United Intergalactic Fleet (factions/fleet.html, factions/index.html, cosmology/, locations/, glossary/, restricted/)
 - The United Intergalactic Fleet, which everyone calls the Fleet, is made of a handful of sector branches, four or five. Each branch oversees one sector of the Erevos Galaxy, a cluster of several systems, and keeps sites in its systems, near them, or between them. The branches work together and together make the Fleet.
@@ -126,8 +116,9 @@ when a ruling changes; delete it once the page carries it. See
 - Vth'oramu is hunkered down on the periphery, in the dark between systems. It works as a mothership: skiffs go out from it to the worlds in that vicinity, and it stays where no one looks. (done: vessels/vthoramu.html, section 4.)
 - He has a broad set of target worlds in that vicinity. (DM: build each world's specifics as the crew nears it.)
 - By the time the crew graduates, his landed operations have begun to ripple outward at contract scale: taken in small positions, odd disappearances, a station or crew acting strangely. These are the first things the crew meets as Driftwardens. (DM: this is the shape of Arc 1 after graduation and the run into Arc 2.)
+- done: dossiers/nghathrod.html (section 5); campaign/colony/ still needs all four.
 
-### Ilsevaine Corr, Aurel Venn and the strain on the Fleet (campaign/spine.html, NEW: Cosmos texture)
+### Ilsevaine Corr, Aurel Venn and the strain on the Fleet (campaign/spine.html, NEW: Cosmos texture; done on dossiers/ilsevaine-corr.html and dossiers/aurel-venn.html, section 5)
 - Outside Realmspace, at the edge of a system or between systems, Ilsevaine Corr rules a hidden polity that Caelestis does not know of. She has noticed more traffic than usual near her borders, and once something large brushed the edge of her sight and was gone. She keeps watch for it. Once N'ghathrod grows bolder, she will face Vth'oramu. (DM touchstone: Mara Sov.)
 - Aurel Venn, a Watcher of the Order, saw the same pattern, warned the Order, and was not heeded. He softly defected: he never broke with the Order openly, but he left his post to find the thing himself. The crew hears of him through contradictory accounts long before any meeting. (DM touchstone: Osiris.)
 - The fringe sage of Ascher Mir is the one who tracks the Seekers' pattern across chapters, a separate figure from the rogue Watcher.
@@ -153,50 +144,21 @@ when a ruling changes; delete it once the page carries it. See
 - The active push to find and open hearts began only in the past few decades.
 - The residue piece Thessalar experimented with was the seventh Rod piece, simulacrum. It is why N'ghathrod's tadpoles make copies of him, and it is the root of the taking.
 - N'ghathrod's long life comes from his taken. A portion of every taken person is tithed upward to him, the way a hive feeds its center, and it extends his life. The more he takes, the longer he lasts.
-- done: the capture, the experiments, the seventh piece and the escape are on artifacts/rod-of-seven-parts.html and vessels/thessalars-craft.html (section 4). dossiers/nghathrod.html, the timeline and rules/ still need them.
+- done: the capture, the experiments, the seventh piece and the escape are on artifacts/rod-of-seven-parts.html and vessels/thessalars-craft.html (section 4). dossiers/nghathrod.html carries them (section 5); the timeline and rules/ still need them.
 - If N'ghathrod's true body dies, the taken do not die. Part of him lives on in each of them. His lieutenants are closest to him; each rung down the colony is further away. Given enough time, one of them could grow toward becoming another N'ghathrod. The taken lose a part of themselves when he dies.
 
-### Vth'oramu (dossiers/vthoramu.html, factions/vthorama.html)
-- Vth'oramu has moved since it sat on the Cairn bearing a year ago. It can enter a system, but a vessel that size near a world's planets would almost certainly be seen, so it keeps to the dark between systems. The unidentified mass Strake Station reported was Vth'oramu.
-- The dreadnought bore no wound before the siege. N'ghathrod saw an opportunity and took it. He knew a dreadnought's physiology, and a whisper from Vecna told him it was the best way to keep a colony on its passage home. The fight lasted a long time, and controlling the creature took a great many tadpoles.
-- The colony's arms echo a hand and an eye without showing either outright.
-- The tithe runs one way. Every taken person comes from N'ghathrod's tadpoles. As each grows, a portion of it passes up through the rungs of the taken, and all of it ends with N'ghathrod. The flow is paracausal, not physical.
-- The dreadnought's tether is an astral cord, a silver line running off to somewhere unknown. Its physical tail is immensely long, which is part of why it could never hide inside a system.
-- Its mouth draws things in, the way an astral dreadnought's mouth opens on its inner demiplane. Its great weapon is the reverse: a pulse pressed outward from every side of its body, and everything within range is teleported away. It takes a long time to charge and is rarely used.
-- done: vessels/vthoramu.html carries the ship as a place, the move off the Cairn bearing, the siege, the tail and cord, the mouth and the pulse (section 4). Still waiting: dossiers/vthoramu.html (section 5).
-
-### Thessalar (dossiers/thessalar.html)
-- Thessalar is Halaster Blackcloak, and he is still in the planar craft. His records of the work on N'ghathrod are there too. (done: vessels/thessalars-craft.html, section 4.)
-
-### Clint Dashforest (dossiers/clint.html, campaign/colony/, timeline; done on factions/fleet.html and factions/vocath-operation.html, section 2, on locations/cairn-station.html, locations/astral-sea.html and the chart, section 3, and on vessels/bellwether-crow.html and artifacts/atlas-sister.html, section 4)
+### Clint Dashforest (campaign/colony/, timeline; done on dossiers/clint.html, section 5, and on factions/fleet.html and factions/vocath-operation.html, section 2, on locations/cairn-station.html, locations/astral-sea.html and the chart, section 3, and on vessels/bellwether-crow.html and artifacts/atlas-sister.html, section 4)
 - Vocath's crew ambushed the Bellwether Crow for a sister artifact of A.T.L.A.S. that the Crow was carrying. Clint took it and left the ship to draw the boarders off.
 - He steered for a color pool he could see opening, and went through it on purpose. Color pools open and close quickly, and this one carried him through a small pocket of another dimension and spat him out on Fonains, separated from the boarders who followed him in.
 - The Crow's survivors still argue about whether he meant to go through. He did.
 - In the Fleet, "went overboard" means more than falling from a ship. A crew member who leaves the ship to fight for it and does not come back has gone overboard. It is a softer way of saying killed in action. Tarto and Saerthe both feel they could have done something.
 
-### Tarroway (dossiers/tarroway.html, restricted/)
+### Tarroway (restricted/; done on dossiers/tarroway.html, section 5)
 - M. Tarroway is a cartographer on Strake Station. His readings were the first hint that an unknown vessel or structure was disturbing the satellites at the edge of the system.
 - His name turns up here and there, mainly in the Fleet Intelligence Archive. Nothing about him is public. (DM: a thread for the players to piece together, not a figure they meet.)
 
-### Captain Haymond Rolt (NEW: dossier, campaign/spine.html)
+### Captain Haymond Rolt (campaign/spine.html; done on dossiers/haymond-rolt.html, section 5)
 - Captain Haymond Rolt is the crew's handler in Arc 2. He oversees several Driftwarden crews at once, out of Ondrel Anchorage.
-
-### Ezra Ahl-Sier (dossiers/ezra.html, factions/order.html)
-- Ezra is a Glimpse: the Order of the All-Father's title for a trainee who has not yet been knighted and christened a Watcher. A Glimpse has seen part of what the All-Father sees; knighting makes him a Watcher. Replaces "cadet" and "Watcher in training" on dossiers/ezra.html and factions/order.html.
-- Ezra Ahl-Sier is an astral elf, his eyes like the Astral Sea. He speaks Celestial, Common and Deep Speech. He has trained for about a century in the Hall of Sight and Sound and is among the youngest batch of Glimpses in the Order of the All-Father, a paladin of the Oath of the Watchers.
-- He has a wanderlust that pulls him toward a posting and away from home, and a lesson for every situation, drawn from watching nature. He holds the natural world above everything built by civilization. The enemy of his enemy is, to him, a temporary ally. He will not save those who cannot save themselves: it is nature's way that the strong thrive.
-- Captain-Commander Dejexic, leader of the Watchers and speaker of the All-Father, is a purplish-blue plasmoid in obsidian armour that reflects tiny swirling galaxies.
-- Stat block: Paladin 3 (Oath of the Watchers), Outlander. AC 18 (chain mail and shield), 35 hp, speed 30 ft. Str 16, Dex 14, Con 15, Int 10, Wis 14, Cha 16; proficiency +2; saves Wis +4, Cha +5. Skills: Athletics +5, Insight +4, Intimidation +5, Medicine +2, Nature +2, Perception +4, Survival +4. Blindsight 10 ft (Blind Fighting), darkvision 60 ft; immune to disease and magical sleep; advantage against being charmed. Divine Sense (4/long rest), Lay on Hands (15), Divine Smite, Channel Divinity 1/short rest (Watcher's Will, Abjure the Extraplanar), Harness Divine Power, Starlight Step (teleport 30 ft as a bonus action, 2/long rest), Astral Trance. Spell save DC 13, attack +5. Shortsword +5 (1d6+3 piercing), dagger +5 (1d4+3 piercing). Outlander background.
-- DM notes tab:
-  - Caelestis is Ezra's prequel. His knighting, his posting and his allies come after the crew leaves him on H'Catha, in the campaign set on Emporia.
-  - His knighting in the Hall of Sight and Sound, where Dejexic gives him the "birds" advice, is the scene in Korey's backstory document "Ezra Ahl-Sier".
-  - His posting is Emporia, the world he was hoping to be spared. The [CJ's world] in the backstory document is Emporia.
-  - On Emporia his allies are Valance, Irohden and Borgor. None of them has met him during this campaign.
-  - His stat block is his Emporia sheet as it stands. Korey marks the younger Ezra with a changed appearance and roleplay.
-
-### OSTEKK-2 (dossiers/ostekk-6.html, vessels/tyrant-ship.html)
-- OSTEKK-6 is the only active survivor of Vaelorix's nine units. OSTEKK-2 lies inert on the Hollow Deck. The crew could heal it back to function if they return for it, for example with the Lantern of Flourishing they have kept hidden.
-- done: vessels/tyrant-ship.html and artifacts/containment-engine.html (section 4). Still waiting: dossiers/ostekk-6.html.
 
 ## Crew
 
@@ -208,15 +170,18 @@ when a ruling changes; delete it once the page carries it. See
 - The voice Casey hears as Polly is Astra Virex wearing Polly's shape. It grows clearer with each tether.
 - The real Polly was consumed, or is caught between life and death. No one knows which.
 - Casey is the younger brother who does not know his full identity. He finds it in having an older brother, which is why he clings to Tumak.
+- done: dossiers/polly.html and dossiers/astra-virex.html (section 5); crew/casey.html still needs all three.
 
 ### Sol (crew/sol.html, dossiers/beshaba.html)
 - Beshaba's reward for the oath is power. She gives it shape through a want of her own, laid on Sol as a quest.
 - Beshaba did not arrange Sol's escape.
+- done: dossiers/beshaba.html (section 5); crew/sol.html still needs both.
 
 ### Tumak (crew/tumak.html, dossiers/the-runekeeper.html)
 - The Runekeeper's fade runs on a soft clock: rising pressure, no date.
 - Tumak has his own Heart-rune.
 - Tumak knows of the previous Runekeeper and met him once, briefly. He does not understand what that meeting was.
+- done: dossiers/the-runekeeper.html (section 5); crew/tumak.html still needs all three.
 
 ### Boogie (crew/boogie.html)
 - Tharizdun wants nothing specific from Boogie. Tharizdun is not lucid; she is an opportunist. What happens through the shard depends on what Boogie does, and things may come through the current. Boogie's plot is reactive.
@@ -229,12 +194,8 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Artifacts and vessels
 
-### A.T.L.A.S.'s sister (dossiers/clint.html; done on artifacts/, section 4)
-- A.T.L.A.S.'s sister houses another Distinction piece. Caelestis held it as a device, and like every housing it hides what it really does. On the surface it finds magic items, a lesser kind of item-finder, because every enchanted thing carries a faint trace of the Reach. Its true use is finding Reach artifacts. This is what Vocath's crew ambushed the Bellwether Crow to take. Clint carried it through the color pool; it is somewhere on Fonains.
-- done: artifacts/distinction-fragment.html, artifacts/atlas.html, artifacts/atlas-sister.html and the register (section 4). Still waiting: dossiers/clint.html.
-
-### Wan, Tu and the fragment (crew/tumak.html, dossiers/the-runekeeper.html, rules/; done on artifacts/dissolution-fragment.html, section 4)
-- The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) factions/runekeepers.html and artifacts/dissolution-fragment.html carry it; crew/tumak.html and dossiers/the-runekeeper.html still need it.
+### Wan, Tu and the fragment (crew/tumak.html, rules/; done on artifacts/dissolution-fragment.html, section 4)
+- The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) factions/runekeepers.html and artifacts/dissolution-fragment.html carry it; dossiers/the-runekeeper.html carries it (section 5); crew/tumak.html still needs it.
 - The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a state neither whole nor broken.
 
 ## DM principles

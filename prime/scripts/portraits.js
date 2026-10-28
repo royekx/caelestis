@@ -27,6 +27,7 @@
   var PORTRAITS = {
     'ilsabet':       { name: 'Ilsabet Crann',        fileId: '' },
     'vecna':         { name: 'Vecna',                fileId: '' },
+    'vecna-lich':    { name: 'Vecna (Lich)',           fileId: '' },
     'rod':           { name: 'Rod of Seven Parts',   fileId: '' },
     'dissolution-fragment': { name: 'Dissolution fragment', fileId: '' },
     "krik-lit": { name: "Krik'Lit", fileId: '' },
@@ -152,6 +153,8 @@
     'aurel-venn':   { name: 'Aurel Venn',          fileId: '' },
     'fleet':        { name: 'United Intergalactic Fleet', fileId: '' },
     'haymond-rolt': { name: 'Haymond Rolt',        fileId: '' },
+    'hessa-dun':     { name: 'Hessa Dun',           fileId: '' },
+    'ilsevaine-corr': { name: 'Ilsevaine Corr',     fileId: '' },
     'seekers':      { name: 'The Seekers',         fileId: '' },
     'vthorama':     { name: 'The Vth\'orama',      fileId: '' },
     'restorers':    { name: 'The Restorers',       fileId: '' },

@@ -353,15 +353,15 @@
       ]
     },
     {
-      "id": "lich-vecna",
-      "label": "Lich Vecna",
+      "id": "vecna-lich",
+      "label": "Vecna (Lich)",
       "type": "person",
       "scope": "cosmos",
       "summary": "Vecna's mortal form, archived by Oerth's Monolith when he became a god.",
       "facts": [
         {
-          "t": "Lich Vecna is the mortal form the Core Monolith archived when Vecna ascended, and he sits in the Radiant Citadel.",
-          "src": "STAGING round 2"
+          "t": "Vecna (Lich) is the mortal form Oerth's Monolith archived when Vecna ascended and relayed to the Core Monolith; he sits in the Radiant Citadel.",
+          "src": "dossiers/vecna-lich.html"
         },
         {
           "t": "He has had centuries to conclude he was wrong, and he is calm, almost redeemed.",
@@ -370,6 +370,10 @@
         {
           "t": "He holds the shape of Vecna's ambition and none of its method.",
           "src": "glossary/index.html"
+        },
+        {
+          "t": "He is a separate character from Vecna, with his own dossier.",
+          "src": "dossiers/vecna-lich.html"
         }
       ]
     },
@@ -692,10 +696,10 @@
     },
     {
       "id": "vecna",
-      "label": "Vecna",
+      "label": "Vecna (Deity)",
       "type": "entity",
       "scope": "cosmos",
-      "summary": "God of secrets, knowledge, manipulation and trickery, climbing toward an Axiom's seat.",
+      "summary": "God of secrets, knowledge, manipulation and trickery, working to wake the Erevos Galaxy's core and reach Continuity.",
       "facts": [
         {
           "t": "Vecna is a later god who ascended on Oerth, his homeworld, at least a few centuries ago.",
@@ -714,10 +718,6 @@
           "src": "STAGING round 2"
         },
         {
-          "t": "Weakening an Axiom so he can take its place is part of his plan.",
-          "src": "STAGING round 2"
-        },
-        {
           "t": "Ascension charged him to Oerth's heart and pushed him off the world, so he works through vessels.",
           "src": "STAGING round 1"
         },
@@ -728,6 +728,10 @@
         {
           "t": "He believes he could repair whatever breaks, and breaking reality is not his goal.",
           "src": "STAGING round 2"
+        },
+        {
+          "t": "Only on Oerth is he worshipped openly as Vecna; elsewhere his faithful call him by other names, the First Seeker among them.",
+          "src": "dossiers/vecna.html"
         }
       ]
     },
@@ -743,7 +747,7 @@
           "src": "STAGING round 5"
         },
         {
-          "t": "The Monolith that answered archived his mortal form, Lich Vecna.",
+          "t": "The Monolith that answered archived his mortal form, Vecna (Lich).",
           "src": "STAGING round 5"
         },
         {
@@ -813,7 +817,7 @@
           "src": "STAGING, Campaign"
         },
         {
-          "t": "Oerth's Monolith archived Vecna's mortal form, Lich Vecna, and relayed it to the Core Monolith.",
+          "t": "Oerth's Monolith archived Vecna's mortal form, Vecna (Lich), and relayed it to the Core Monolith.",
           "src": "cosmology/index.html"
         }
       ]
@@ -1024,6 +1028,14 @@
         {
           "t": "Aethris invented the Misfortuned through Tymora's worship; Beshaba did nothing to that world.",
           "src": "dossiers/beshaba.html"
+        },
+        {
+          "t": "Beshaba's reward for Sol's oath is power, given shape by a want she lays on him as a quest.",
+          "src": "dossiers/beshaba.html"
+        },
+        {
+          "t": "She is strongest on Aethris, where she is the lesser of the two sisters.",
+          "src": "dossiers/beshaba.html"
         }
       ]
     },
@@ -1056,6 +1068,10 @@
         },
         {
           "t": "It runs parallel to Vecna's working and has no part in it.",
+          "src": "dossiers/astra-virex.html"
+        },
+        {
+          "t": "Its missions read as grief: disappearances and people changed.",
           "src": "dossiers/astra-virex.html"
         }
       ]
@@ -1237,11 +1253,15 @@
       "label": "Hessa Dun",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A Caelestis contract contact whose uncle collects a lot of things and likes visitors.",
+      "summary": "A third-intake cadet who posts a notice-board job, and whose uncle collects things and likes visitors.",
       "facts": [
         {
-          "t": "Hessa Dun is a Caelestis contract contact the crew works with after graduation.",
-          "src": "factions/seekers.html"
+          "t": "Hessa Dun is a third-intake cadet at the Academy, planted in Arc 1.",
+          "src": "dossiers/hessa-dun.html"
+        },
+        {
+          "t": "She posts a notice-board job: hands and a strong back wanted to move her family's crates.",
+          "src": "dossiers/hessa-dun.html"
         },
         {
           "t": "She mentions that her uncle collects a lot of things and likes visitors.",
@@ -1380,10 +1400,10 @@
       "label": "Ezra Ahl-Sier",
       "type": "person",
       "scope": "cosmos",
-      "summary": "A Watcher cadet, an elf paladin of the All-Father, joining the crew for his field training.",
+      "summary": "An astral elf Glimpse of the Order, travelling with a Caelestis crew to finish his training on H'Catha.",
       "facts": [
         {
-          "t": "Ezra is an elf paladin of the All-Father near the end of about a century of training.",
+          "t": "Ezra is an astral elf paladin of the Oath of the Watchers near the end of about a century of training.",
           "src": "dossiers/ezra.html"
         },
         {
@@ -1400,6 +1420,14 @@
         },
         {
           "t": "His Channel Divinity guards allies against being reached into.",
+          "src": "dossiers/ezra.html"
+        },
+        {
+          "t": "Caelestis is his prequel; his knighting, his posting to Emporia and his allies come after the crew leaves him on H'Catha.",
+          "src": "dossiers/ezra.html"
+        },
+        {
+          "t": "A Caelestis crew later carries him from H'Catha to the Hall, the last troop he travels with.",
           "src": "dossiers/ezra.html"
         }
       ]
@@ -1555,6 +1583,10 @@
         {
           "t": "She is the one who will one day face Vth'oramu.",
           "src": "STAGING round 10"
+        },
+        {
+          "t": "Once N'ghathrod grows bolder, she will face Vth'oramu.",
+          "src": "dossiers/ilsevaine-corr.html"
         }
       ]
     },
@@ -1891,6 +1923,18 @@
         {
           "t": "He is working on all four parts of his plan now: placing the taken, finding hearts, opening them and seeking links.",
           "src": "STAGING round 10"
+        },
+        {
+          "t": "His join with Vth'oramu is permanent; only a wish or an artifact could break it.",
+          "src": "dossiers/nghathrod.html"
+        },
+        {
+          "t": "His field mark is the Passage, gaining a circle for every linked world.",
+          "src": "dossiers/nghathrod.html"
+        },
+        {
+          "t": "He knows the Order's Watchers exist, through the Watchers posted to Glyth.",
+          "src": "dossiers/nghathrod.html"
         }
       ]
     },
@@ -2116,6 +2160,10 @@
         {
           "t": "He is the one who argues with N'ghathrod in front of others.",
           "src": "dossiers/osskhal.html"
+        },
+        {
+          "t": "Properly raised and captured with N'ghathrod aboard Thessalar's craft; Thessalar's experiments gave him a greatly extended lifespan.",
+          "src": "dossiers/osskhal.html"
         }
       ]
     },
@@ -2136,6 +2184,10 @@
         },
         {
           "t": "He is the best source in the cosmos on where Atria are.",
+          "src": "dossiers/ulhrek.html"
+        },
+        {
+          "t": "Unthinned and made aboard Thessalar's craft; Thessalar's experiments gave him a greatly extended lifespan.",
           "src": "dossiers/ulhrek.html"
         }
       ]
@@ -2162,6 +2214,10 @@
         {
           "t": "People who meet her remember the conversation fondly and cannot reconstruct what was said.",
           "src": "dossiers/zhauveth.html"
+        },
+        {
+          "t": "Unthinned and made aboard Thessalar's craft; Thessalar's experiments gave her a greatly extended lifespan.",
+          "src": "dossiers/zhauveth.html"
         }
       ]
     },
@@ -2183,6 +2239,10 @@
         {
           "t": "He has not left Vth'oramu in thirty years.",
           "src": "dossiers/ithvarn.html"
+        },
+        {
+          "t": "Unthinned and made aboard Thessalar's craft; Thessalar's experiments gave him a greatly extended lifespan.",
+          "src": "dossiers/ithvarn.html"
         }
       ]
     },
@@ -2203,6 +2263,10 @@
         },
         {
           "t": "Of the five he is the most likely to leave a fight rather than finish it.",
+          "src": "dossiers/khaleth.html"
+        },
+        {
+          "t": "Properly raised and captured with N'ghathrod aboard Thessalar's craft; Thessalar's experiments gave him a greatly extended lifespan.",
           "src": "dossiers/khaleth.html"
         }
       ]
@@ -2249,6 +2313,14 @@
         {
           "t": "Its eye is the bridge; its mouth is the only way in, onto a demiplane crossed by fixed plane-shift transit points.",
           "src": "vessels/vthoramu.html"
+        },
+        {
+          "t": "The earliest copies of N'ghathrod are in the dreadnought's walls.",
+          "src": "dossiers/vthoramu.html"
+        },
+        {
+          "t": "Illithid arcanists from N'ghathrod's own crew keep its plane-shift transit points.",
+          "src": "dossiers/vthoramu.html"
         }
       ]
     },
@@ -2328,6 +2400,14 @@
         {
           "t": "He used the Fleet's thinning to put stress on the Academy.",
           "src": "timeline/timeline.json"
+        },
+        {
+          "t": "His price to N'ghathrod's side was captives from a Caelestis crew, read as ordinary thrall work.",
+          "src": "dossiers/vocath.html"
+        },
+        {
+          "t": "He sees the Fleet stretched thin and uses it to press the Academy.",
+          "src": "dossiers/vocath.html"
         }
       ]
     },
@@ -2394,7 +2474,7 @@
       "label": "Qitru",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A githyanki intermediary in Vocath's operation, following the crew.",
+      "summary": "A githyanki intermediary of Vocath's crew, following the crew by Miken's beacon.",
       "facts": [
         {
           "t": "Qitru serves Vocath and does not care who stands above him.",
@@ -2410,6 +2490,10 @@
         },
         {
           "t": "Miken's report that the crew killed a beholder has reached her.",
+          "src": "dossiers/qitru.html"
+        },
+        {
+          "t": "She pursues Vocath's aim, to make the cadet mission fail; Miken is her channel.",
           "src": "dossiers/qitru.html"
         }
       ]
@@ -2444,6 +2528,18 @@
         {
           "t": "He means to take A.T.L.A.S. from the Brig under cover of the graduation chaos.",
           "src": "campaign/colony/index.html"
+        },
+        {
+          "t": "He was top of his class and is named the present-day great spelljammer of Caelestis.",
+          "src": "dossiers/joffrey.html"
+        },
+        {
+          "t": "He was taken slowly: for months he was himself, and he finished converting only recently.",
+          "src": "dossiers/joffrey.html"
+        },
+        {
+          "t": "One survivor of the Crow noticed he had changed and never reported it.",
+          "src": "dossiers/joffrey.html"
         }
       ]
     },
@@ -2556,6 +2652,14 @@
         {
           "t": "Saerthe and Tarto have worn a matched pair of bands of the lost and found since he was lost.",
           "src": "dossiers/clint.html"
+        },
+        {
+          "t": "He landed about a year before the present and was on Fonains when its Monolith appeared.",
+          "src": "dossiers/clint.html"
+        },
+        {
+          "t": "On the Blooming Glass job his crew freed Chloe Chespetes and handed the Pedra Ardente to Finerva.",
+          "src": "dossiers/clint.html"
         }
       ]
     },
@@ -2564,7 +2668,7 @@
       "label": "Miken Haverstance",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A cadet friend of the crew, leveraged by Vocath's operation.",
+      "summary": "A cadet friend of the crew, leveraged by Vocath's crew; he does not flip.",
       "facts": [
         {
           "t": "A mercane recruited Miken by paying his fiancé's debts.",
@@ -2580,6 +2684,14 @@
         },
         {
           "t": "He is wrestling with guilt rather than hiding malice.",
+          "src": "dossiers/miken.html"
+        },
+        {
+          "t": "Miken stays leveraged and complicit, does not flip, and lives.",
+          "src": "dossiers/miken.html"
+        },
+        {
+          "t": "The moneylender behind the Tallow Wren contract holds his fiancé's debts.",
           "src": "dossiers/miken.html"
         }
       ]
@@ -2707,7 +2819,7 @@
       "label": "Quartermaster Halix Verrow",
       "type": "person",
       "scope": "caelestis",
-      "summary": "Strake's quartermaster, who counter-signs everything that moves on the Cairn bearing.",
+      "summary": "Strake's quartermaster, who counter-signs everything that moves on the edge run to Cairn.",
       "facts": [
         {
           "t": "Verrow enforces the standing order closing the run past Strake.",
@@ -2817,6 +2929,10 @@
         {
           "t": "Captain Haymond Rolt oversees several Driftwarden crews at once, out of Ondrel Anchorage.",
           "src": "STAGING round 8"
+        },
+        {
+          "t": "He is an homage to Captain Raymond Holt; his look, manner and history are not set.",
+          "src": "dossiers/haymond-rolt.html"
         }
       ]
     },
@@ -2867,6 +2983,14 @@
         {
           "t": "He does not know his wardrobe is one of Zerathis's tethers.",
           "src": "dossiers/mirt.html"
+        },
+        {
+          "t": "Mirt runs the Academy only; the Caelestis Corps and the Bridge operate outside him.",
+          "src": "dossiers/mirt.html"
+        },
+        {
+          "t": "Caelestis protects him and keeps him quiet, so he is also stuck there.",
+          "src": "dossiers/mirt.html"
         }
       ]
     },
@@ -2892,6 +3016,14 @@
         {
           "t": "One wing flap was torn away long ago, and she has not glided since.",
           "src": "dossiers/boatswain-tarto.html"
+        },
+        {
+          "t": "She has four superiority dice, regained on a short rest.",
+          "src": "dossiers/boatswain-tarto.html"
+        },
+        {
+          "t": "When the CRC comes for Sol, she stands up for him.",
+          "src": "dossiers/boatswain-tarto.html"
         }
       ]
     },
@@ -2916,6 +3048,10 @@
         },
         {
           "t": "Half of his missing miniature ship is inside Boogie.",
+          "src": "dossiers/saerthe-abizjn.html"
+        },
+        {
+          "t": "He was not aboard the Bellwether Crow when Clint went overboard, and carries the guilt of it.",
           "src": "dossiers/saerthe-abizjn.html"
         }
       ]
@@ -2951,6 +3087,14 @@
         {
           "t": "He wants the cadets fed and alive, and treats both as the same job.",
           "src": "dossiers/winston-ryeback.html"
+        },
+        {
+          "t": "The Academy thefts took his custom pistol; the hand cannon is his own gun.",
+          "src": "dossiers/winston-ryeback.html"
+        },
+        {
+          "t": "Ryeback lives; no death is planned for him.",
+          "src": "dossiers/winston-ryeback.html"
         }
       ]
     },
@@ -2967,6 +3111,10 @@
         },
         {
           "t": "He believes the academy would take the Latchling apart.",
+          "src": "dossiers/rindle-gearloft.html"
+        },
+        {
+          "t": "The Latchling goes to Gregory as something familiar, and that reaction cracks Rindle's secrecy.",
           "src": "dossiers/rindle-gearloft.html"
         }
       ]
@@ -2997,6 +3145,10 @@
       "facts": [
         {
           "t": "Krik'Lit translated the crew's parley with Ostekk-10, because Ostekk's clockwork horrors speak thri-kreen.",
+          "src": "dossiers/krik-lit.html"
+        },
+        {
+          "t": "He and Pffred are relieved at the V006 swap and leave aboard the Flighty Foundling.",
           "src": "dossiers/krik-lit.html"
         }
       ]
@@ -3284,7 +3436,7 @@
       "label": "Ostekk",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A beholder builder who made the Containment Engine and the OSTEKK units.",
+      "summary": "A ruling beholder of H'Catha and a builder, who made the Containment Engine and the OSTEKK units.",
       "facts": [
         {
           "t": "Ostekk built the Containment Engine around the Rod's fourth piece without knowing it was Reach residue.",
@@ -3297,6 +3449,10 @@
         {
           "t": "He now has reason to come for the Engine himself: the crew took it and lied to his machine.",
           "src": "dossiers/ostekk.html"
+        },
+        {
+          "t": "He rules one of H'Catha's ten domains like a workshop; he wants his property back.",
+          "src": "dossiers/ostekk.html"
         }
       ]
     },
@@ -3308,7 +3464,7 @@
       "summary": "An OSTEKK automaton travelling with the crew.",
       "facts": [
         {
-          "t": "OSTEKK-6 is the only active survivor of the nine OSTEKK units.",
+          "t": "Ostekk-6 is the only active survivor of the nine OSTEKK units.",
           "src": "STAGING round 2"
         },
         {
@@ -3329,11 +3485,11 @@
       "summary": "An OSTEKK automaton lying inert on the Hollow Deck.",
       "facts": [
         {
-          "t": "OSTEKK-2 lies inert on the Hollow Deck.",
+          "t": "Ostekk-2 lies inert on the Hollow Deck.",
           "src": "STAGING round 2"
         },
         {
-          "t": "The crew could heal OSTEKK-2 back to function with the Lantern of Flourishing.",
+          "t": "The crew could heal Ostekk-2 back to function with the Lantern of Flourishing.",
           "src": "STAGING round 2"
         }
       ]
@@ -3801,6 +3957,14 @@
         {
           "t": "Astra Virex wears Polly's voice to reach Casey.",
           "src": "STAGING round 8"
+        },
+        {
+          "t": "The real Polly was consumed, or is caught between life and death; no one knows which.",
+          "src": "dossiers/polly.html"
+        },
+        {
+          "t": "The voice Casey hears as Polly is Astra Virex wearing his shape.",
+          "src": "dossiers/polly.html"
         }
       ]
     },
@@ -3821,6 +3985,10 @@
         },
         {
           "t": "The wardrobe he gave Mirt is one of his tethers.",
+          "src": "dossiers/zerathis.html"
+        },
+        {
+          "t": "Zerathis followed Astra Virex and was no part of Vecna's following.",
           "src": "dossiers/zerathis.html"
         }
       ]
@@ -3909,6 +4077,14 @@
         },
         {
           "t": "Neither he nor the order knows the fragment is Reach residue.",
+          "src": "dossiers/the-runekeeper.html"
+        },
+        {
+          "t": "He is the only permitted way into and out of the homeworld, and he sent Wan and Tu out himself.",
+          "src": "dossiers/the-runekeeper.html"
+        },
+        {
+          "t": "A Runekeeper's death is celebrated: “We do not mourn this. We sing.”",
           "src": "dossiers/the-runekeeper.html"
         }
       ]
@@ -4057,6 +4233,14 @@
         },
         {
           "t": "It is built to retrieve rather than kill, and it remembers the damage that hurt it.",
+          "src": "dossiers/crc.html"
+        },
+        {
+          "t": "Its first encounter with the crew is at the Caelestis main entrance, on their return from H'Catha.",
+          "src": "dossiers/crc.html"
+        },
+        {
+          "t": "It tracks Sol by resonance and cannot keep pace with a spelljammer in transit.",
           "src": "dossiers/crc.html"
         }
       ]
@@ -4717,6 +4901,14 @@
         {
           "t": "He powers his work off the hazy yellow gem.",
           "src": "timeline/timeline.json"
+        },
+        {
+          "t": "He was a high priest of Moloch and an artificer, and he pursues lichdom.",
+          "src": "dossiers/thessalar.html"
+        },
+        {
+          "t": "Lola's Boys took the red gem from the cavern lake and the hazy yellow gem from his workshop.",
+          "src": "dossiers/thessalar.html"
         }
       ]
     },
@@ -5432,18 +5624,18 @@
     },
     {
       "s": "godhood-ascension",
-      "t": "lich-vecna",
+      "t": "vecna-lich",
       "rel": "archived",
       "src": "STAGING round 5"
     },
     {
-      "s": "lich-vecna",
+      "s": "vecna-lich",
       "t": "radiant-citadel",
       "rel": "sits in",
       "src": "STAGING round 2"
     },
     {
-      "s": "lich-vecna",
+      "s": "vecna-lich",
       "t": "vecna",
       "rel": "is the mortal form of",
       "src": "STAGING round 2"
@@ -5822,12 +6014,6 @@
     },
     {
       "s": "hessas-uncle",
-      "t": "hessa-dun",
-      "rel": "is secretly one of",
-      "src": "factions/seekers.html"
-    },
-    {
-      "s": "hessas-uncle",
       "t": "seekers",
       "rel": "is secretly one of",
       "src": "factions/seekers.html"
@@ -5835,8 +6021,8 @@
     {
       "s": "hessa-dun",
       "t": "driftwardens",
-      "rel": "is a contract contact of",
-      "src": "factions/seekers.html"
+      "rel": "is a cadet among",
+      "src": "dossiers/hessa-dun.html"
     },
     {
       "s": "order",
@@ -7895,6 +8081,12 @@
       "t": "rykoe",
       "rel": "is drawn around",
       "src": "opposition/vecna.html"
+    },
+    {
+      "s": "hessas-uncle",
+      "t": "hessa-dun",
+      "rel": "is the uncle of",
+      "src": "dossiers/hessa-dun.html"
     }
   ]
 }
