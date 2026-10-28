@@ -87,7 +87,6 @@ h1{font-family:var(--display);font-weight:600;font-size:1.35rem;letter-spacing:.
 .hidden-off .hidden-layer{opacity:0;pointer-events:none}
 .con-off .con-layer{opacity:0;pointer-events:none}
 .ins-off .ins-layer{opacity:0;pointer-events:none}
-.oerth-on #gbase{opacity:.08;pointer-events:none}
 @media (prefers-reduced-motion: reduce){.hidden-layer,.con-layer,.ins-layer,#gbase{transition:none}}
 .crumbs button{font:inherit;color:var(--ice-l);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .dmbox{border:1px solid var(--violet);border-left-width:3px;background:rgba(150,120,189,.09);padding:.5rem .8rem .2rem;margin:1rem 0;border-radius:3px}
@@ -108,7 +107,7 @@ try { if (window.self !== window.top) document.body.className = 'is-framed'; } c
   <h1>Caelestis Cosmos</h1>
   <nav class="sub-h crumbs" id="crumbs" aria-label="Map level"></nav>
   <button class="btn" id="toggleIns" aria-pressed="false" type="button" hidden>Inscription: off</button>
-  <button class="btn" id="toggleOerth" aria-pressed="false" type="button" hidden>View from Oerth: off</button>
+  <button class="btn" id="toggleOerth" type="button" hidden>See it from Oerth</button>
   <button class="btn" id="toggleCon" aria-pressed="true" type="button" hidden>Constellations: on</button>
   <a class="btn" href="holo.html" style="text-decoration:none">3D holochart</a>
   <button class="btn" id="toggleHidden" aria-pressed="false" type="button" hidden>Hidden layer: off</button>
@@ -176,7 +175,7 @@ const GAL_DRAW = {
       `Realmspace, Caelestis's home system, and the sister institutions of the higher organization across the galaxy.`,
       `Oerth, in Greyspace, where Vecna became a god.`],
     dm:[`Runs as D&D 5e. The keystone: what happens here decides GAL-03, GAL-04 and GAL-05.`,
-      `Two worlds in one system on the upper lid are linked to each other, and each is linked to Oerth: three links. One more heart, Nowhere's on the lower lid, is found and not opened. The rest of the fifteen are unknown.`,
+      `Two hearts in neighbouring systems on the upper lid are opened and linked to each other, and each is linked to Oerth: three links. One more heart, Nowhere's on the lower lid, is found and not opened. The rest of the fifteen are unknown.`,
       `GAL-02's awake core presses on this one. Late in the campaign it can pull the crew into the eldritch galaxy.`] },
   "GAL-02": { ang:-18, tone:"#d07070", core:"awake", spin:1.3,
     line1:"eldritch gods · Call of Cthulhu", line2:"core awake · overrun",
@@ -314,47 +313,30 @@ const UNPLACED = [
 ];
 
 /* ---------- the inscription: GAL-01's eye ---------- */
-/* Fourteen nodes hold fifteen hearts: one upper-lid node is a system with two
-   linked hearts. Ten lid worlds, five iris worlds. None is assigned to a named
-   system. state: linked | found | unknown. */
-const EYE = { cx:GX.cx, cy:GX.cy, L:1500, h:560, R:360, oerth:[GX.cx, GX.cy+1380] };
-const HEARTS = (() => {
-  const out = [], J = rng(4127), E = rng(77);
-  const j = (p,s) => [p[0] + (E()-.5)*2*s, p[1] + (E()-.5)*2*s];
-  const up = [-1,-.5,0,.5,1].map(u => ["upper", j([EYE.cx+EYE.L*u, EYE.cy-EYE.h*(1-u*u)], 30)]);
-  const lo = [.6,.2,-.2,-.6].map(u => ["lower", j([EYE.cx+EYE.L*u, EYE.cy+EYE.h*(1-u*u)], 30)]);
-  const ir = [0,1,2,3,4].map(k => ["iris", j([EYE.cx+EYE.R*Math.cos(2*Math.PI*k/5-Math.PI/2), EYE.cy+EYE.R*Math.sin(2*Math.PI*k/5-Math.PI/2)], 14)]);
-  const all = up.concat(lo, ir);
-  const avoid = Object.values(SYS_CHART).map(s=>s.pos);
-  const oerth = SYS_CHART["Greyspace"].pos;
-  all.forEach(([part, eye], i) => {
-    let p, tries = 0;
-    do { p = armPt(J()<.5?0:1, .45 + J()*2.75, gauss(J)*40, gauss(J)*.1); tries++; }
-    while (tries < 400 && (Math.hypot(p[0]-GX.cx,p[1]-GX.cy) < 330 || avoid.some(q=>Math.hypot(p[0]-q[0],p[1]-q[1]) < 260)
-           || Math.hypot(p[0]-RS[0],p[1]-RS[1]) < 980
-           || Math.hypot(p[0]-oerth[0],p[1]-oerth[1]) < 300 || out.some(h=>Math.hypot(p[0]-h.above[0],p[1]-h.above[1]) < 260)));
-    out.push({ id:"h"+String(i+1).padStart(2,"0"), n:i+1, part, eye, above:p, z:(J()*2-1),
-      pair: i===2, state: i===2 ? "linked" : i===6 ? "found" : "unknown" });
-  });
-  return out;
-})();
-const LID_LOOP = ["h01","h02","h03","h04","h05","h06","h07","h08","h09"];
-const IRIS_LOOP = ["h10","h11","h12","h13","h14"];
+/* Fifteen heart worlds, each in its own system: ten on the lids, five in the
+   iris. Their places come from galaxy.js, the same as the 3D view's, plotted
+   here from above; height above or below the plane is drawn as a stem. Two
+   neighbouring upper-lid systems hold the opened, linked hearts.
+   state: linked | found | unknown. */
+const HEARTS = window.EREVOS.HEARTS.map(h => { const [x, y] = window.EREVOS.toChart(h.v);
+  return { id:"h"+String(h.n).padStart(2,"0"), n:h.n, part:h.part, x, y, height:h.v[1], state:h.state }; });
+const LID_LOOP = window.EREVOS.LID.map(i => HEARTS[i].id);
+const IRIS_LOOP = window.EREVOS.IRIS.map(i => HEARTS[i].id);
+const PAIR_IDS = window.EREVOS.PAIR.map(i => HEARTS[i].id);
 const HSTATE = {
-  linked:{ col:"#8fe8df", label:"Opened and linked", badge:"b-teal" },
-  found:{ col:"#e2ae7e", label:"Found, not opened", badge:"b-gold" },
+  linked:{ col:"#56B4A6", label:"Opened and linked", badge:"b-teal" },
+  found:{ col:"#D4A256", label:"Found, not opened", badge:"b-gold" },
   unknown:{ col:"#8797ad", label:"Not yet known", badge:"" }
 };
 
 /* ---------- state ---------- */
 const svg = document.getElementById("map"), panel = document.getElementById("panel");
 let SURVEY = null, SYSTEMS = [], GALAXIES = [], UNNAMED = [];
-let registry = {}, view = {level:"cosmos"}, selected = null, canvas = LV.cosmos, oerthK = 0, anim = null;
+let registry = {}, view = {level:"cosmos"}, selected = null, canvas = LV.cosmos;
 const title = n => n.label || n.name;
 const pressed = id => document.getElementById(id).getAttribute("aria-pressed")==="true";
 const hiddenOn = () => pressed("toggleHidden");
 const insOn = () => pressed("toggleIns");
-const oerthOn = () => pressed("toggleOerth");
 const sysById = id => SYSTEMS.find(s=>s.id===id);
 const siteById = id => SITES.find(s=>s.id===id);
 const galNode = id => sysById(id) || siteById(id);
@@ -580,11 +562,12 @@ function galaxyLegend(){
   if(view.galaxy!=="GAL-01"){ legend(`<span>Caelestis knows almost nothing of this galaxy. Its contents are built when play reaches it.</span>`); return; }
   let h = "";
   if(insOn()){
-    h += `<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#e2ae7e" stroke-width="2"/></svg>Lid world</span>`;
-    h += `<span><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="4" fill="none" stroke="#b9a5d8" stroke-width="2"/><circle cx="8" cy="8" r="7" fill="none" stroke="#d0605a" stroke-width="1.2"/></svg>Iris world, key</span>`;
+    h += `<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#9fb4d0" stroke-width="2"/></svg>Lid world</span>`;
+    h += `<span><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="4" fill="none" stroke="#D45F78" stroke-width="2"/><circle cx="8" cy="8" r="7" fill="none" stroke="#D45F78" stroke-width="1.2"/></svg>Iris world, key</span>`;
     h += Object.values(HSTATE).map(s=>`<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="${s.col}"/></svg>${s.label}</span>`).join("");
-    h += `<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="#9678bd" stroke-width="1.6" stroke-dasharray="2 4"/></svg>Link to Oerth</span>`;
-    h += oerthOn() ? `<span>Seen from Oerth, the worlds line up into the eye.</span>` : `<span>Stems show height above or below the plane.</span>`;
+    h += `<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="#9683c4" stroke-width="1.6" stroke-dasharray="2 4"/></svg>Line back to Oerth</span>`;
+    h += `<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="#56B4A6" stroke-width="3"/></svg>Link standing</span>`;
+    h += `<span>Stems show height above or below the plane. From Oerth the hearts line up into the eye: see it in 3D.</span>`;
   } else {
     h += Object.values(LANE).map(s=>`<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="${s.stroke}" stroke-width="2.2" stroke-dasharray="${s.dash?s.dash.split(" ").map(v=>Math.max(1.5,v/4)).join(" "):""}" stroke-linecap="round"/></svg>${s.label}</span>`).join("");
     h += `<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="#9cc0e0" fill-opacity=".55" stroke="#9cc0e0"/></svg>Sighted star</span>`;
@@ -593,62 +576,44 @@ function galaxyLegend(){
   legend(h);
 }
 
-/* The inscription, drawn at k = 0 (from above) through k = 1 (from Oerth). */
-const ease = k => k<.5 ? 2*k*k : 1-Math.pow(-2*k+2,2)/2;
+/* The inscription from above. From Oerth the hearts line up into the eye;
+   that view is the 3D one (See it from Oerth). */
 function drawInscription(){
   const host = document.getElementById("ins"); if(!host) return;
-  const k = ease(oerthK), lerp = (a,b) => [a[0]+(b[0]-a[0])*k, a[1]+(b[1]-a[1])*k];
-  const P = Object.fromEntries(HEARTS.map(h=>[h.id, lerp(h.above, h.eye)]));
-  const oer = lerp(SYS_CHART["Greyspace"].pos, EYE.oerth);
+  const K = 1/window.EREVOS.S;                         /* scene height to chart units */
+  const P = Object.fromEntries(HEARTS.map(h=>[h.id, [h.x, h.y - h.height*K]]));
+  const oer = SYS_CHART["Greyspace"].pos;
   let o = "";
-  if(k > .02) o += `<text class="lbl-sub" x="${GX.cx}" y="${(GX.cy-EYE.h-300).toFixed(0)}" text-anchor="middle" font-size="62" opacity="${k.toFixed(2)}" fill="#e2ae7e">The eye, as it lands on Oerth</text>`;
-  /* cone: every heart back to Oerth */
-  for(const h of HEARTS){ const p = P[h.id];
-    o += `<line x1="${p[0].toFixed(0)}" y1="${p[1].toFixed(0)}" x2="${oer[0].toFixed(0)}" y2="${oer[1].toFixed(0)}" stroke="#a98be0" stroke-opacity="${(.34+.12*k).toFixed(2)}" stroke-width="3.5" stroke-dasharray="4 12"/>`; }
+  /* every heart's link back to Oerth, the cone; the three standing links are solid */
+  for(const h of HEARTS){ if(PAIR_IDS.includes(h.id)) continue; const p = P[h.id];
+    o += `<line x1="${p[0].toFixed(0)}" y1="${p[1].toFixed(0)}" x2="${oer[0].toFixed(0)}" y2="${oer[1].toFixed(0)}" stroke="#9683c4" stroke-opacity=".38" stroke-width="3" stroke-dasharray="4 12"/>`; }
   const loop = (ids, col, w, dash, op) => ids.map((id,i)=>{ const p = P[id], q = P[ids[(i+1)%ids.length]];
     return `<line x1="${p[0].toFixed(0)}" y1="${p[1].toFixed(0)}" x2="${q[0].toFixed(0)}" y2="${q[1].toFixed(0)}" stroke="${col}" stroke-opacity="${op}" stroke-width="${w}" stroke-dasharray="${dash}"/>`; }).join("");
-  o += loop(LID_LOOP, "#e2ae7e", 5, "18 14", (.5+.35*k).toFixed(2));
-  o += loop(IRIS_LOOP, "#b9a5d8", 6, "12 10", (.55+.4*k).toFixed(2));
-  /* the pupil, drawn over the core when seen from Oerth */
-  if(k > .02) o += `<circle cx="${GX.cx}" cy="${GX.cy}" r="${(70+50*k).toFixed(0)}" fill="none" stroke="#e2ae7e" stroke-opacity="${(.6*k).toFixed(2)}" stroke-width="4"/>
-    <text class="lbl-sub" x="${GX.cx}" y="${GX.cy-150}" text-anchor="middle" font-size="44" opacity="${k.toFixed(2)}">the pupil</text>`;
+  o += loop(LID_LOOP, "#9fb4d0", 4, "18 14", .5);
+  o += loop(IRIS_LOOP, "#D45F78", 4, "12 10", .55);
+  const [a, b] = PAIR_IDS.map(id => P[id]);
+  [[a,b],[a,oer],[b,oer]].forEach(([p,q]) => { o += `<line x1="${p[0].toFixed(0)}" y1="${p[1].toFixed(0)}" x2="${q[0].toFixed(0)}" y2="${q[1].toFixed(0)}" stroke="#56B4A6" stroke-opacity=".9" stroke-width="6"/>`; });
   /* Oerth: the retina */
   const oN = { id:"oerth-ins", name:"Oerth", kind:"Greyspace · the eye's retina" };
   o += `<g ${reg(oN.id,oN)}><circle cx="${oer[0].toFixed(0)}" cy="${oer[1].toFixed(0)}" r="60" fill="transparent"/>
-    <circle cx="${oer[0].toFixed(0)}" cy="${oer[1].toFixed(0)}" r="60" fill="#e2ae7e" fill-opacity=".14"/>
-    <circle class="sel" cx="${oer[0].toFixed(0)}" cy="${oer[1].toFixed(0)}" r="26" fill="#e2ae7e" stroke="#fff1d6" stroke-width="3"/>
-    <text class="lbl" x="${oer[0].toFixed(0)}" y="${(oer[1]+92).toFixed(0)}" text-anchor="middle" font-size="56" fill="#e2ae7e">Oerth</text>
+    <circle cx="${oer[0].toFixed(0)}" cy="${oer[1].toFixed(0)}" r="60" fill="#D4A256" fill-opacity=".14"/>
+    <circle class="sel" cx="${oer[0].toFixed(0)}" cy="${oer[1].toFixed(0)}" r="26" fill="#D4A256" stroke="#fff1d6" stroke-width="3"/>
+    <text class="lbl" x="${oer[0].toFixed(0)}" y="${(oer[1]+92).toFixed(0)}" text-anchor="middle" font-size="56" fill="#D4A256">Oerth</text>
     <text class="lbl-sub" x="${oer[0].toFixed(0)}" y="${(oer[1]+142).toFixed(0)}" text-anchor="middle" font-size="40">the retina</text></g>`;
-  /* the hearts */
+  /* the hearts, each in its own system */
   for(const h of HEARTS){
-    const p = P[h.id], st = HSTATE[h.state], iris = h.part==="iris", ring = iris ? "#b9a5d8" : "#e2ae7e";
-    const stem = (1-k)*h.z*150, base = [p[0], p[1]+stem];
-    let g = `<circle cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="58" fill="transparent"/>`;
-    if(Math.abs(stem) > 2) g += `<line x1="${p[0].toFixed(0)}" y1="${p[1].toFixed(0)}" x2="${base[0].toFixed(0)}" y2="${base[1].toFixed(0)}" stroke="${ring}" stroke-opacity=".5" stroke-width="3"/><circle cx="${base[0].toFixed(0)}" cy="${base[1].toFixed(0)}" r="6" fill="${ring}" fill-opacity=".45"/>`;
-    if(iris) g += `<circle cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="44" fill="none" stroke="#d0605a" stroke-opacity=".85" stroke-width="3"/>`;
-    if(h.pair){
-      g += `<circle class="sel" cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="40" fill="#0b1019" stroke="${ring}" stroke-width="4.5"/>
-        <line x1="${(p[0]-15).toFixed(0)}" y1="${p[1].toFixed(0)}" x2="${(p[0]+15).toFixed(0)}" y2="${p[1].toFixed(0)}" stroke="${st.col}" stroke-width="6"/>
-        <circle cx="${(p[0]-16).toFixed(0)}" cy="${p[1].toFixed(0)}" r="11" fill="${st.col}"/><circle cx="${(p[0]+16).toFixed(0)}" cy="${p[1].toFixed(0)}" r="11" fill="${st.col}"/>`;
-    } else {
-      g += `<circle class="sel" cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="28" fill="#0b1019" stroke="${ring}" stroke-width="4.5" stroke-dasharray="${h.state==="unknown"?"8 6":""}"/>`;
-      if(h.state!=="unknown") g += `<circle cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="13" fill="${st.col}"/>`;
-    }
-    g += `<text class="lbl-sub" x="${(p[0]+(h.pair?46:40)).toFixed(0)}" y="${(p[1]-30).toFixed(0)}" font-size="40">${h.pair ? h.n+"–"+(h.n+1) : h.n + (h.n>3?1:0)}</text>`;
+    const p = P[h.id], st = HSTATE[h.state], iris = h.part==="iris", ring = iris ? "#D45F78" : "#9fb4d0";
+    let g = `<circle cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="52" fill="transparent"/>`;
+    if(Math.abs(h.height*K) > 4) g += `<line x1="${p[0].toFixed(0)}" y1="${p[1].toFixed(0)}" x2="${h.x.toFixed(0)}" y2="${h.y.toFixed(0)}" stroke="${ring}" stroke-opacity=".5" stroke-width="3"/><circle cx="${h.x.toFixed(0)}" cy="${h.y.toFixed(0)}" r="6" fill="${ring}" fill-opacity=".45"/>`;
+    g += `<circle cx="${(p[0]+30).toFixed(0)}" cy="${(p[1]-4).toFixed(0)}" r="7" fill="#ffe3b8" fill-opacity=".85"/>`;
+    if(iris) g += `<circle cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="40" fill="none" stroke="#D45F78" stroke-opacity=".85" stroke-width="3"/>`;
+    g += `<circle class="sel" cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="24" fill="#0b1019" stroke="${ring}" stroke-width="4" stroke-dasharray="${h.state==="unknown"?"8 6":""}"/>`;
+    if(h.state!=="unknown") g += `<circle cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="12" fill="${st.col}"/>`;
+    g += `<text class="lbl-sub" x="${(p[0]-36).toFixed(0)}" y="${(p[1]-28).toFixed(0)}" text-anchor="end" font-size="40">${h.n}</text>`;
     o += `<g ${reg(h.id,h)}>${g}</g>`;
   }
   host.innerHTML = o;
   if(selected) mark(selected);
-}
-function setOerth(on){
-  const target = on ? 1 : 0;
-  document.querySelector(".chart").classList.toggle("oerth-on", on);
-  if(anim) cancelAnimationFrame(anim);
-  const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if(reduce || view.level!=="galaxy" || view.galaxy!=="GAL-01"){ oerthK = target; drawInscription(); return; }
-  const from = oerthK, t0 = performance.now(), dur = 1100;
-  const step = now => { const f = Math.min(1,(now-t0)/dur); oerthK = from + (target-from)*f; drawInscription(); if(f<1) anim = requestAnimationFrame(step); else anim = null; };
-  anim = requestAnimationFrame(step);
 }
 
 /* ---------- system ---------- */
@@ -771,35 +736,33 @@ const dmlist = items => items && items.length ? `<div class="dmbox"><h3>At the t
 const pageLink = p => p ? `<p><a href="${p.includes("/") ? p : "../locations/" + p}">Locations entry &rarr;</a></p>` : "";
 function mark(id){ selected = id; svg.querySelectorAll(".node").forEach(g=>g.classList.toggle("is-selected", g.dataset.id===id)); document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("is-selected", c.dataset.chip===id)); }
 function heartsCount(){
-  const worlds = HEARTS.reduce((a,h)=>a+(h.pair?2:1),0);
-  const found = HEARTS.filter(h=>h.state!=="unknown").reduce((a,h)=>a+(h.pair?2:1),0);
-  const opened = HEARTS.filter(h=>h.state==="linked").reduce((a,h)=>a+(h.pair?2:1),0);
-  return {worlds, found, opened, links:1};
+  const found = HEARTS.filter(h=>h.state!=="unknown").length, opened = HEARTS.filter(h=>h.state==="linked").length;
+  return {worlds:HEARTS.length, found, opened, links: opened ? opened + 1 : 0};
 }
 function showHeart(h){
   const st = HSTATE[h.state], iris = h.part==="iris";
   const partName = { upper:"Upper lid", lower:"Lower lid", iris:"Iris" }[h.part];
   const role = iris ? `An iris world. The iris closes the binding circle around the core, and its worlds are key: lose one and the iris must be redrawn, a real setback but not the end.`
                     : `A lid world. Lid worlds can be replaced: a lost stroke can be redrawn through another Monolith world near it, at a cost of years.`;
-  const stateText = { linked:`Two worlds in one system, each with a Monolith. Both hearts are opened and linked, Atrium to Atrium. It is the only link standing in the galaxy.`,
+  const stateText = { linked:`One of two neighbouring systems on the upper lid, each with a Monolith world. The two hearts are opened and linked to each other, Atrium to Atrium, and each is linked to Oerth's.`,
     found:`Nowhere. A lesser god forced its way into this system and down onto the world, and the push destroyed both. A Monolith answered. The world's heart lies exposed in the wreck: found, and not yet opened.`,
     unknown:`A Monolith world, chosen from thousands for how it looks from Oerth. Nothing is known of its heart.` }[h.state];
-  const height = h.z > .15 ? "above the galaxy's plane" : h.z < -.15 ? "below the galaxy's plane" : "close to the galaxy's plane";
+  const height = h.height > 1 ? "a little above the galaxy's plane" : h.height < -1 ? "a little below the galaxy's plane" : "close to the galaxy's plane";
   const dm = [];
-  if(h.pair) dm.push(`One of the two is a little-charted planet the crew learns of late in the campaign.`);
+  if(h.state==="linked") dm.push(`One of the two opened worlds is a little-charted planet the crew learns of late in the campaign.`);
   if(h.state==="found") dm.push(`Its exposed heart is the easiest in the galaxy to open, which is why Vecna chose it.`);
   else dm.push(`Which world this is gets decided when it matters. Vecna's progress here is tracked as counts: hearts found, opened and linked.`);
   dm.push(`Like every heart in the figure, it links back to Oerth's heart as well as to its neighbours in the ${iris?"iris":"lid"}.`);
-  panel.innerHTML = `<h2>${h.pair?"Two heart worlds":(h.state==="found"?"Nowhere":"Heart world")}</h2><p class="kind">Inscription · ${partName}</p>
+  panel.innerHTML = `<h2>${h.state==="found"?"Nowhere":"Heart world"}</h2><p class="kind">Inscription · ${partName} · ${h.n}</p>
     ${st.badge ? `<span class="badge ${st.badge}">${st.label}</span>` : `<span class="badge">${st.label}</span>`}${iris?`<span class="badge b-red">Key</span>`:`<span class="badge">Replaceable</span>`}
-    <p>${stateText}</p><p>${role}</p><p class="hint">It lies ${height}, wherever the arm carries it.</p>${dmlist(dm)}`;
+    <p>${stateText}</p><p>${role}</p><p class="hint">Its system lies ${height}, inside the disc.</p>${dmlist(dm)}`;
 }
 function galaxyPanel(g, offer){
   const rec = g.record || {}, home = g.id==="GAL-01", c = heartsCount();
   panel.innerHTML = `<h2>${esc(g.label)}</h2><p class="kind">Galaxy${home?", Caelestis's own":""}</p>
     <span class="badge" style="color:${CORE_TONE[g.core]};border-color:${CORE_TONE[g.core]}">${CORE_WORD[g.core]}</span>
     <p>${g.summary}</p>${list("What's there", g.there)}
-    ${home ? `<h3>The inscription</h3><p>Fifteen heart worlds: ten on the lids, five in the iris. ${c.found} hearts found, ${c.opened} opened, ${c.links} link standing.</p>` : `<p class="hint">GAL-0n is the DM's label. Whoever first charts a world here is the one who designates it.</p>`}
+    ${home ? `<h3>The inscription</h3><p>Fifteen heart worlds: ten on the lids, five in the iris. ${c.found} hearts found, ${c.opened} opened, ${c.links} links standing.</p>` : `<p class="hint">GAL-0n is the DM's label. Whoever first charts a world here is the one who designates it.</p>`}
     <dl class="facts"><dt>Game system</dt><dd>${esc(rec.game || "Assigned before play goes there")}</dd><dt>Core</dt><dd>${esc(rec.core || "")}</dd></dl>
     ${dmlist(g.dm)}${offer?`<button class="btn act" type="button" data-go="gal:${g.id}">Open ${esc(g.label)}</button>`:""}`;
 }
@@ -857,7 +820,7 @@ function intro(){
     panel.innerHTML = `<h2>GAL-01</h2><p class="kind">Caelestis's galaxy</p>
       <p>Star systems lie unevenly through the galaxy. All of them circle the core at different speeds; they crowd along the spiral arms, gather in clusters, and leave long empty reaches between. Most bodies have no one living on them, and an inhabited world is rare.</p>
       <p>Saved systems carry their names and CSC numbers. The scatter of small stars is what Caelestis has sighted and what it has only on paper.</p>
-      <p class="hint">Tap anything for details. Tap a system twice to open it. <strong>Inscription</strong> shows the fifteen heart worlds; <strong>View from Oerth</strong> lines them up.</p>`;
+      <p class="hint">Tap anything for details. Tap a system twice to open it. <strong>Inscription</strong> shows the fifteen heart systems from above; <strong>See it from Oerth</strong> opens the 3D view, where they line up into the eye.</p>`;
     return;
   }
   if(lv==="galaxy"){ const g = GALAXIES.find(x=>x.id===view.galaxy); galaxyPanel(g,false); return; }
@@ -893,12 +856,9 @@ document.getElementById("toggleHidden").addEventListener("click", e=>{ const on 
     else if(hid(registry[selected])){ selected = null; mark(null); intro(); } } });
 document.getElementById("toggleCon").addEventListener("click", e=>{ const on = !pressed("toggleCon"); toggle(e.currentTarget, "Constellations", on); document.querySelector(".chart").classList.toggle("con-off", !on); });
 document.getElementById("toggleIns").addEventListener("click", e=>{ const on = !insOn(); toggle(e.currentTarget, "Inscription", on); document.querySelector(".chart").classList.toggle("ins-off", !on);
-  if(!on && oerthOn()){ toggle(document.getElementById("toggleOerth"), "View from Oerth", false); setOerth(false); }
   if(!on && HEARTS.some(h=>h.id===selected)){ selected = null; mark(null); intro(); }
   galaxyLegend(); });
-document.getElementById("toggleOerth").addEventListener("click", e=>{ const on = !oerthOn(); toggle(e.currentTarget, "View from Oerth", on);
-  if(on && !insOn()){ toggle(document.getElementById("toggleIns"), "Inscription", true); document.querySelector(".chart").classList.remove("ins-off"); }
-  setOerth(on); galaxyLegend(); });
+document.getElementById("toggleOerth").addEventListener("click", () => { location.href = "holo.html#oerth"; });
 const chips = document.getElementById("chips");
 chips.innerHTML = UNPLACED.map(u=>`<button type="button" class="chip" data-chip="${u.id}">${esc(u.name)}</button>`).join("");
 chips.addEventListener("click", e=>{ const c = e.target.closest(".chip"); if(!c) return; const u = UNPLACED.find(x=>x.id===c.dataset.chip); mark(u.id);

@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 11 | 13 | 14 | 0 | 3 |
+| Cosmology | cosmology/, glossary/, chart/ | 11 | 13 | 12 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
@@ -269,9 +269,6 @@ Order under each page: decide, fix, drop, add.
   In the Erevos Galaxy view, the uncharted systems appear only when the inscription layer is switched on (Korey 2026-10-27). Every system in the survey shows in the base view, charted or not (with the charted tag once it exists); the inscription layer adds only the eye.
   src: chat 2026-10-27
 
-- **[fix]** The flat chart's eye view matches the holochart
-  `prime/chart/holo.html` places the fifteen heart worlds in three dimensions so they line up into the eye only from Oerth, and its "Line it up from Oerth" view shows it (Korey 2026-10-27). The flat chart's inscription layer still draws a separate eye over the top-down map, with hearts at positions that don't match the holochart's. Bring them into agreement: plot the holochart's heart positions top-down on the flat chart, and have its "View from Oerth" hand off to the holochart, or drop the flat eye in favour of a link.
-
 - **[add]** Sectors on the chart
   A layer that shades the Fleet's sectors in the Erevos Galaxy view, the Caelestis Sector first, once its systems are decided (see Factions: The Caelestis Sector's systems).
   src: chat 2026-10-27
@@ -322,10 +319,6 @@ Order under each page: decide, fix, drop, add.
 - **[later]** CSC 31758, the 1491 entry in SA-002
   SA-002 carries the Cycle 1491 auroral discharge at CSC 31758, outer fringe (the old SYS-05). The number is new: it is not in the survey or on the chart, and it collides with nothing in either. The entry stays as filed: two arrivals from an uncatalogued system entered Academy intake. Place the star in the survey, or leave it as a catalogue number only. It is not tied to Greyspace.
   src: Korey, 2026-10-28 (FIA rulings, 10)
-
-- **[fix]** Redraw the charts and the Fleet seal with four arms
-  The Erevos Galaxy has four spiral arms (Korey, 2026-10-28), and the Fleet has one sector on each. Redraw the flat chart (chart/index.html), the holochart (chart/holo.html) and the Fleet seal (assets/fleet-device.svg) with four arms and one sector star per arm, keeping every system where it is. Follows PR #104; the text already says four.
-  src: Korey, 2026-10-28 (GTC model)
 
 ### cosmology/index.html: Zeniths and Monoliths
 
