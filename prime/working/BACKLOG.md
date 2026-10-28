@@ -34,7 +34,7 @@ staging once Korey has read and accepted them.
 | Locations | locations/ (Fonains stays in its own section) | 21 | 22 | 0 | 0 | 1 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 1 | 8 | 0 | 0 |
-| Factions | factions/ | 3 | 6 | 2 | 0 | 4 |
+| Factions | factions/ | 3 | 7 | 2 | 0 | 4 |
 | Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 42 | 5 | 36 |
 | Dossiers | dossiers/ | 8 | 6 | 47 | 1 | 54 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 3 | 0 | 1 |
-| **Total** | | **85** | **111** | **179** | **10** | **263** |
+| **Total** | | **85** | **112** | **179** | **10** | **263** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -905,6 +905,9 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ---
 
 ### factions/deities.html
+
+- **[later]** The All-Father and the All-Mother on Deities
+  The Order counts the All-Father a god like any other, and the Restorers posit the All-Mother as the source of the Monoliths; both are the Core Monolith's pressure, and that the Core Monolith exists is among the scarcest knowledge in the cosmos (Korey 2026-10-27; on order, restorers, cosmology § Core Monolith's pressure, glossary). Whether Deities lists the All-Father among the gods as the Order worships it, and who else in the cosmos knows of the Core Monolith (Vecna, the Citadel, the Accordance), are not set.
 
 - **[later]** How far to develop Tymora
   Korey wants to develop Tymora and the Beshaba/Tymora interplay.
