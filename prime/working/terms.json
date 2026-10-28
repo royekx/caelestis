@@ -10,6 +10,10 @@
   ],
   "retired": [
     {
+      "pattern": "\\bLich Vecna\\b",
+      "use": "Vecna (Lich)"
+    },
+    {
       "pattern": "\\b(crystal )?spheres?\\b",
       "use": "galaxy / galaxies (a region of space); keep 'sphere' only for a shape"
     },

@@ -27,6 +27,7 @@
   var PORTRAITS = {
     'ilsabet':       { name: 'Ilsabet Crann',        fileId: '' },
     'vecna':         { name: 'Vecna',                fileId: '' },
+    'vecna-lich':    { name: 'Vecna (Lich)',           fileId: '' },
     'rod':           { name: 'Rod of Seven Parts',   fileId: '' },
     'dissolution-fragment': { name: 'Dissolution fragment', fileId: '' },
     "krik-lit": { name: "Krik'Lit", fileId: '' },

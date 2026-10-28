@@ -353,15 +353,15 @@
       ]
     },
     {
-      "id": "lich-vecna",
-      "label": "Lich Vecna",
+      "id": "vecna-lich",
+      "label": "Vecna (Lich)",
       "type": "person",
       "scope": "cosmos",
       "summary": "Vecna's mortal form, archived by Oerth's Monolith when he became a god.",
       "facts": [
         {
-          "t": "Lich Vecna is the mortal form the Core Monolith archived when Vecna ascended, and he sits in the Radiant Citadel.",
-          "src": "STAGING round 2"
+          "t": "Vecna (Lich) is the mortal form Oerth's Monolith archived when Vecna ascended and relayed to the Core Monolith; he sits in the Radiant Citadel.",
+          "src": "dossiers/vecna-lich.html"
         },
         {
           "t": "He has had centuries to conclude he was wrong, and he is calm, almost redeemed.",
@@ -370,6 +370,10 @@
         {
           "t": "He holds the shape of Vecna's ambition and none of its method.",
           "src": "glossary/index.html"
+        },
+        {
+          "t": "He is a separate character from Vecna, with his own dossier.",
+          "src": "dossiers/vecna-lich.html"
         }
       ]
     },
@@ -692,10 +696,10 @@
     },
     {
       "id": "vecna",
-      "label": "Vecna",
+      "label": "Vecna (Deity)",
       "type": "entity",
       "scope": "cosmos",
-      "summary": "God of secrets, knowledge, manipulation and trickery, climbing toward an Axiom's seat.",
+      "summary": "God of secrets, knowledge, manipulation and trickery, working to wake the Erevos Galaxy's core and reach Continuity.",
       "facts": [
         {
           "t": "Vecna is a later god who ascended on Oerth, his homeworld, at least a few centuries ago.",
@@ -714,10 +718,6 @@
           "src": "STAGING round 2"
         },
         {
-          "t": "Weakening an Axiom so he can take its place is part of his plan.",
-          "src": "STAGING round 2"
-        },
-        {
           "t": "Ascension charged him to Oerth's heart and pushed him off the world, so he works through vessels.",
           "src": "STAGING round 1"
         },
@@ -728,6 +728,10 @@
         {
           "t": "He believes he could repair whatever breaks, and breaking reality is not his goal.",
           "src": "STAGING round 2"
+        },
+        {
+          "t": "Only on Oerth is he worshipped openly as Vecna; elsewhere his faithful call him by other names, the First Seeker among them.",
+          "src": "dossiers/vecna.html"
         }
       ]
     },
@@ -743,7 +747,7 @@
           "src": "STAGING round 5"
         },
         {
-          "t": "The Monolith that answered archived his mortal form, Lich Vecna.",
+          "t": "The Monolith that answered archived his mortal form, Vecna (Lich).",
           "src": "STAGING round 5"
         },
         {
@@ -813,7 +817,7 @@
           "src": "STAGING, Campaign"
         },
         {
-          "t": "Oerth's Monolith archived Vecna's mortal form, Lich Vecna, and relayed it to the Core Monolith.",
+          "t": "Oerth's Monolith archived Vecna's mortal form, Vecna (Lich), and relayed it to the Core Monolith.",
           "src": "cosmology/index.html"
         }
       ]
@@ -1024,6 +1028,14 @@
         {
           "t": "Aethris invented the Misfortuned through Tymora's worship; Beshaba did nothing to that world.",
           "src": "dossiers/beshaba.html"
+        },
+        {
+          "t": "Beshaba's reward for Sol's oath is power, given shape by a want she lays on him as a quest.",
+          "src": "dossiers/beshaba.html"
+        },
+        {
+          "t": "She is strongest on Aethris, where she is the lesser of the two sisters.",
+          "src": "dossiers/beshaba.html"
         }
       ]
     },
@@ -1056,6 +1068,10 @@
         },
         {
           "t": "It runs parallel to Vecna's working and has no part in it.",
+          "src": "dossiers/astra-virex.html"
+        },
+        {
+          "t": "Its missions read as grief: disappearances and people changed.",
           "src": "dossiers/astra-virex.html"
         }
       ]
@@ -3801,6 +3817,14 @@
         {
           "t": "Astra Virex wears Polly's voice to reach Casey.",
           "src": "STAGING round 8"
+        },
+        {
+          "t": "The real Polly was consumed, or is caught between life and death; no one knows which.",
+          "src": "dossiers/polly.html"
+        },
+        {
+          "t": "The voice Casey hears as Polly is Astra Virex wearing his shape.",
+          "src": "dossiers/polly.html"
         }
       ]
     },
@@ -3821,6 +3845,10 @@
         },
         {
           "t": "The wardrobe he gave Mirt is one of his tethers.",
+          "src": "dossiers/zerathis.html"
+        },
+        {
+          "t": "Zerathis followed Astra Virex and was no part of Vecna's following.",
           "src": "dossiers/zerathis.html"
         }
       ]
@@ -3909,6 +3937,14 @@
         },
         {
           "t": "Neither he nor the order knows the fragment is Reach residue.",
+          "src": "dossiers/the-runekeeper.html"
+        },
+        {
+          "t": "He is the only permitted way into and out of the homeworld, and he sent Wan and Tu out himself.",
+          "src": "dossiers/the-runekeeper.html"
+        },
+        {
+          "t": "A Runekeeper's death is celebrated: “We do not mourn this. We sing.”",
           "src": "dossiers/the-runekeeper.html"
         }
       ]
@@ -4057,6 +4093,14 @@
         },
         {
           "t": "It is built to retrieve rather than kill, and it remembers the damage that hurt it.",
+          "src": "dossiers/crc.html"
+        },
+        {
+          "t": "Its first encounter with the crew is at the Caelestis main entrance, on their return from H'Catha.",
+          "src": "dossiers/crc.html"
+        },
+        {
+          "t": "It tracks Sol by resonance and cannot keep pace with a spelljammer in transit.",
           "src": "dossiers/crc.html"
         }
       ]
@@ -5432,18 +5476,18 @@
     },
     {
       "s": "godhood-ascension",
-      "t": "lich-vecna",
+      "t": "vecna-lich",
       "rel": "archived",
       "src": "STAGING round 5"
     },
     {
-      "s": "lich-vecna",
+      "s": "vecna-lich",
       "t": "radiant-citadel",
       "rel": "sits in",
       "src": "STAGING round 2"
     },
     {
-      "s": "lich-vecna",
+      "s": "vecna-lich",
       "t": "vecna",
       "rel": "is the mortal form of",
       "src": "STAGING round 2"

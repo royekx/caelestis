@@ -77,10 +77,6 @@ when a ruling changes; delete it once the page carries it. See
 - Two of the five lieutenants are properly raised illithids who were captured with N'ghathrod aboard Thessalar's craft. The other three are unthinned: made aboard the craft from bodies Thessalar supplied for his experiments and N'ghathrod's own tadpoles.
 - done: factions/vthorama.html and factions/seekers.html (section 2). Still waiting: dossiers/vthoramu.html and the lieutenants' dossiers.
 
-### Aethris and the sisters (dossiers/beshaba.html; done on factions/aethris.html and factions/deities.html, section 2)
-- Beshaba finds the Fortuned heretical, a spit in her face. She thinks Tymora is fuelling them, and blames her sister for it. On Aethris Beshaba is the lesser of the two, because people favour luck over misfortune, and she calls what the Fortuned do unnatural.
-- Neither sister knows what both of them need: each other. Luck and misfortune are two sides of one coin.
-
 ### Caelestis, the Driftwardens and the United Intergalactic Fleet (factions/fleet.html, factions/index.html, cosmology/, locations/, glossary/, restricted/)
 - The United Intergalactic Fleet, which everyone calls the Fleet, is made of a handful of sector branches, four or five. Each branch oversees one sector of the Erevos Galaxy, a cluster of several systems, and keeps sites in its systems, near them, or between them. The branches work together and together make the Fleet.
 - Caelestis is one of these sectors: the Caelestis Sector, which includes the system where Toril lies. It has two parts. The Caelestis Corps is the sector's branch of the Fleet and oversees the sector. The Caelestis Spelljammer Academy trains cadets to become Driftwardens; there are only a handful of spelljammer academies in the galaxy.
@@ -208,15 +204,18 @@ when a ruling changes; delete it once the page carries it. See
 - The voice Casey hears as Polly is Astra Virex wearing Polly's shape. It grows clearer with each tether.
 - The real Polly was consumed, or is caught between life and death. No one knows which.
 - Casey is the younger brother who does not know his full identity. He finds it in having an older brother, which is why he clings to Tumak.
+- done: dossiers/polly.html and dossiers/astra-virex.html (section 5); crew/casey.html still needs all three.
 
 ### Sol (crew/sol.html, dossiers/beshaba.html)
 - Beshaba's reward for the oath is power. She gives it shape through a want of her own, laid on Sol as a quest.
 - Beshaba did not arrange Sol's escape.
+- done: dossiers/beshaba.html (section 5); crew/sol.html still needs both.
 
 ### Tumak (crew/tumak.html, dossiers/the-runekeeper.html)
 - The Runekeeper's fade runs on a soft clock: rising pressure, no date.
 - Tumak has his own Heart-rune.
 - Tumak knows of the previous Runekeeper and met him once, briefly. He does not understand what that meeting was.
+- done: dossiers/the-runekeeper.html (section 5); crew/tumak.html still needs all three.
 
 ### Boogie (crew/boogie.html)
 - Tharizdun wants nothing specific from Boogie. Tharizdun is not lucid; she is an opportunist. What happens through the shard depends on what Boogie does, and things may come through the current. Boogie's plot is reactive.
@@ -233,8 +232,8 @@ when a ruling changes; delete it once the page carries it. See
 - A.T.L.A.S.'s sister houses another Distinction piece. Caelestis held it as a device, and like every housing it hides what it really does. On the surface it finds magic items, a lesser kind of item-finder, because every enchanted thing carries a faint trace of the Reach. Its true use is finding Reach artifacts. This is what Vocath's crew ambushed the Bellwether Crow to take. Clint carried it through the color pool; it is somewhere on Fonains.
 - done: artifacts/distinction-fragment.html, artifacts/atlas.html, artifacts/atlas-sister.html and the register (section 4). Still waiting: dossiers/clint.html.
 
-### Wan, Tu and the fragment (crew/tumak.html, dossiers/the-runekeeper.html, rules/; done on artifacts/dissolution-fragment.html, section 4)
-- The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) factions/runekeepers.html and artifacts/dissolution-fragment.html carry it; crew/tumak.html and dossiers/the-runekeeper.html still need it.
+### Wan, Tu and the fragment (crew/tumak.html, rules/; done on artifacts/dissolution-fragment.html, section 4)
+- The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) factions/runekeepers.html and artifacts/dissolution-fragment.html carry it; dossiers/the-runekeeper.html carries it (section 5); crew/tumak.html still needs it.
 - The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a state neither whole nor broken.
 
 ## DM principles

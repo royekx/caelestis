@@ -204,8 +204,14 @@
     ]
   },
   {
+    "slug": "vecna-lich",
+    "name": "Vecna (Lich)",
+    "path": "dossiers/vecna-lich.html",
+    "records": []
+  },
+  {
     "slug": "vecna",
-    "name": "Vecna",
+    "name": "Vecna (Deity)",
     "path": "dossiers/vecna.html",
     "records": []
   },

@@ -34,9 +34,9 @@ staging once Korey has read and accepted them.
 | Locations | locations/ (Fonains stays in its own section) | 21 | 22 | 0 | 0 | 1 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
-| Factions | factions/ | 3 | 7 | 2 | 0 | 4 |
+| Factions | factions/ | 3 | 7 | 2 | 0 | 3 |
 | Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 42 | 5 | 36 |
-| Dossiers | dossiers/ | 8 | 6 | 47 | 1 | 54 |
+| Dossiers | dossiers/ | 11 | 9 | 41 | 1 | 41 |
 | Crew | crew/ | 9 | 12 | 17 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 21 | 0 | 20 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** | | **85** | **112** | **184** | **10** | **263** |
+| **Total** | | **88** | **115** | **178** | **10** | **249** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -128,6 +128,7 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - `data/items.json` has Boogie holding the whole derelict logbook; the settled version is half.
 - `data/npcs.json` calls Mirt "the head of Caelestis".
 - `data/sessions.json`, `quests.json` and `items.json` call OSTEKK-6 an autognome; OSTEKK units are automatons.
+- DM dossiers with no record, though the crew may have met or been told of them: Polly Geim (Casey's brother), Clint Dashforest, Qitru, Quartermaster Halix Verrow, the Crystalline Retrieval Construct, Ezra Ahl-Sier. Each gets a record at first contact; check whether any contact has already happened (section 5).
 
 ## Still coming in
 
@@ -138,7 +139,6 @@ read to its end (turn 416) and merged on 2026-10-25.
 
 Items for `cosmology/index.html`, `glossary/index.html` and `chart/index.html`.
 Order under each page: decide, fix, drop, add.
-
 
 ### cosmology/index.html
 
@@ -793,7 +793,7 @@ Order: decide, fix, drop, add.
   src: section 4 (2026-10-28)
 
 - **[fix]** The Ascension World event *(answered)*
-  Retire the world and the event. Remove "The Ascension World" (cert open, t -250). Oerth is the world where Vecna became a god: his ritual pushed Oerth to its Zenith, the Zenith made him a god, and the Monolith that answered archived his mortal form, Lich Vecna. That was his first ascension, the Godhood Ascension, and "Vecna rules Oerth and ascends" already carries it. The climb he is making now, to take an Axiom's place, is the Axiomic Ascension.
+  Retire the world and the event. Remove "The Ascension World" (cert open, t -250). Oerth is the world where Vecna became a god: his ritual pushed Oerth to its Zenith, the Zenith made him a god, and the Monolith that answered archived his mortal form, Vecna (Lich). That was his first ascension, the Godhood Ascension, and "Vecna rules Oerth and ascends" already carries it. The climb he is making now, to take an Axiom's place, is the Axiomic Ascension.
   Knock-on (done in section 3: the page is retired into `locations/oerth.html`, the register and chart carry no SYS-05): `realms/ascension-world.html` and its fixes in the Realms section, the SYS-05 entries on `realms/index.html` and the chart, and the Cosmology fix "Every place carries a designation" all assume the separate world.
   answered: STAGING § Vecna (round 5: "The separate 'Ascension World' is retired; Oerth is that world.")
   Original item: "The Ascension" now means Vecna's climb to Axiom, and his godhood happened on Oerth. The event "The Ascension World" (cert open, t -250: "He forces a small local threshold on a world in SPH-01. When, and what it cost him, are open.") follows the naming ruling in the Realms section § realms/ascension-world.html. Options: keep it as a separate SPH-01 world under a new name; or retire the world and the event.
@@ -844,7 +844,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ---
 
-
 ### Every faction page
 
 - **[decide]** Tymora and the Fortuned's ritual
@@ -891,7 +890,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   Prior note: the page calls Gregory a Seam-product ("Transformation and Boundary overlapped where he stood"). Memory canon calls his arc "a Continuity (existence) ripple event" and him a paracausal Reach item like the Lantern. Decide together with Astra Virex's wound (under factions/deities.html). Options: keep the Seam wording, or revert to "Continuity ripple".
   Why it is still open: Claude declared the three Seam-products "locked" in the cosmic-structure chat and wrote them into the repo; Korey answered "What's next" without confirming. Memory canon, updated later, still holds both Gregory's origin wording and Astra's wound as open. The two readings can also stack (a Seam woke him; that makes him paracausal), so a third option is: keep the Seam as the cause and call him paracausal, dropping "Reach item".
   src: memory-canon campaign-canon § Gregory, § Antagonists (Lantern line); chat-cosmic-campaign-structure § Cosmology redesign
-  done: factions/fleet.html (section 2, from cosmology § Axiom strain); crew/gregory.html and dossiers/astra-virex.html still need it.
+  done: factions/fleet.html (section 2, from cosmology § Axiom strain) and dossiers/astra-virex.html (section 5); crew/gregory.html still needs it.
 
 ---
 
@@ -916,7 +915,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 - **[later]** How far to develop Tymora
   Korey wants to develop Tymora and the Beshaba/Tymora interplay.
   Settled (Korey, turns 860–862): the misread tenet and "fortune needs misfortune" (both adds below); the sisters' conflict stays indirect, because gods give direction that never shows the whole of what they want; Aethris is a whole planet where not everyone follows Tymora, with a lesser Beshaba following and other fortune gods, major and minor. Add that last point to the Tymora entry and realms/aethris.html: "Not all of Aethris follows Tymora. Beshaba keeps a smaller following there, and other gods of fortune, major and minor, are worshipped too."
-  Still open: whether Tymora notices herself thinning on Aethris as the ritual removes the risk her luck needs, and whether she acts on it. Beshaba's want is its own decide under dossiers/beshaba.html.
+  Still open: whether Tymora notices herself thinning on Aethris as the ritual removes the risk her luck needs, and whether she acts on it. Beshaba's want is its own decide under dossiers/beshaba.html (added in section 5).
   answered (part): inbox/chat-crew-boogie-casey-sol.md § Sol / Aethris and the gods (Settled)
   src: BCS § Sol/Aethris and the gods (turn 860), § Sol/Open
   done (settled part): factions/deities.html (section 2) carries the misread tenet, fortune needs misfortune, and Aethris's other faiths; the open question is in its Still to decide. locations/aethris.html carries the Aethris line (section 3).
@@ -925,11 +924,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   Add to the Tymora entry: "Tymora's tenet is 'fortune favors the bold.' Her followers on Aethris misread it. They pushed luck until it stopped being luck, and in perfecting fortune they removed the risk that luck needs." Also add to W-08 on realms/aethris.html.
   src: BCS § Sol/Aethris and the gods (turn 862)
   done: factions/deities.html and factions/aethris.html (section 2); locations/aethris.html carries it (section 3).
-
-- **[add]** Fortune needs misfortune
-  Add to the Tymora and Beshaba entries: "Fortune cannot exist without misfortune. Tymora and Beshaba need each other." Also add to The twin reading on dossiers/beshaba.html.
-  src: BCS § Sol/Aethris and the gods (turn 862)
-  done: factions/deities.html (section 2); dossiers/beshaba.html still needs it.
 
 ---
 
@@ -1241,7 +1235,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   The example path uses "../../artifacts/#world-surveyor". "World Surveyor" is retired; the artifact is A.T.L.A.S. Change the example anchor.
   src: memory-canon campaign-canon § Cosmology (A.T.L.A.S. line)
 
-
 ---
 
 ### campaign/voyages/index.html
@@ -1502,25 +1495,21 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/astra-virex.html
 
-- **[add]** Where it is
-  Add to the infobox: "Location: SPH-01, Caelestis's sphere."
-  src: memory-canon campaign-canon § Cosmology
+- **[decide]** Why Astra Virex wears Polly's shape
+  The voice Casey hears as Polly is Astra Virex wearing Polly's shape (STAGING). Why is not set: a deliberate deception, a convenience, or its only channel to Casey. The three answers lead to different endgames. Touches: dossiers/astra-virex.html, dossiers/polly.html, crew/casey.html.
+  src: dossiers/astra-virex.html (old What's hidden); section 5 (2026-10-28)
 
-- **[add]** Look and feel
-  DM notes: Astra Virex's look and feel is a twisted Howl's Moving Castle, with falling stars.
-  src: chat-cosmic-campaign-structure § Virex, Casey, Polly; memory-canon campaign-canon § Casey (Polly correction)
-
-- **[add]** How to run it
-  Add to How to run: Astra Virex missions read as grief — disappearances, not infrastructure.
-  src: chat-cosmic-campaign-structure § Virex, Casey, Polly
+- **[decide]** The fallen star and Astra Virex's broken part
+  A star fell on the Geims' homeworld, changed Polly, and sent him looking for where it came from: Astra Virex. The Axiom strain's ripple broke part of Astra Virex away in a collision. Whether the fallen star is that broken part is not set. Touches: dossiers/astra-virex.html, dossiers/polly.html, crew/casey.html.
+  src: dossiers/polly.html; factions/deities.html § Astra Virex; section 5 (2026-10-28)
 
 ---
 
 ### dossiers/beshaba.html
 
-- **[add]** Where she is strongest
-  Add to The twin reading: "Tymora and Beshaba are strongest on Aethris, where their worship is most concentrated."
-  src: working/divine-rules.md § Concentration and reach; memory-canon open-decisions (Vecna/Tharizdun 2026-10-25)
+- **[decide]** Beshaba's want *(prep)*
+  Beshaba's reward for the oath is power, and to give it shape she lays a want of her own on Sol as a quest (STAGING § Sol). What she wants, and so the quest, is not set. Touches: dossiers/beshaba.html, crew/sol.html.
+  src: STAGING § Sol; factions/deities.html later "How far to develop Tymora"
 
 ---
 
@@ -1582,8 +1571,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ### dossiers/crc.html
 
 - **[decide]** The stored spell *(prep)*
-  Settled: the first encounter is at the Caelestis main entrance when the crew returns from H'Catha. The crew hears murmurs first, then "Sol Fortuna. You are required." It is an objective-based escape. Rewrite this page's Open, which leans toward the Sky Dock, to the main entrance (see the main-entrance add under crew/sol.html and the Timeline fix "Sol's first C.R.C. encounter").
-  Left: the stored spell. Options: Locate Creature (the page) or Hold Person.
+  The stored spell. Options: Locate Creature or Hold Person. (The first encounter at the Caelestis main entrance is on dossiers/crc.html, section 5.)
   Touches: this page, crew/sol.html, timeline.json.
   src: BCS § Sol/Open, § Sol/C.R.C. and the scry beats; dossiers/crc.html
   answered (location): BCS § Sol/C.R.C. and the scry beats (Settled); memory-canon campaign-canon § Antagonists (first CRC encounter on Caelestis); chat-early-planning § Arc 1 close (C.R.C. waits at Caelestis on return)
@@ -1599,18 +1587,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   Provenance: the line appears in Claude's master source doc (§14.5, tone calibrations) beside "Stand." "Again." "Continue."; no Korey statement adopting it was found. Since then Korey's own acknowledgment text has Beshaba talk capriciously, past three words, so the line would need to fit that register too.
   Touches: dossiers/crc.html, dossiers/beshaba.html (register examples), crew/sol.html.
   src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300); original chat 0852f52d (§14.5); BCS § Sol/Acknowledgment scene
-
-- **[add]** Its look
-  Add to Who they are: "A faceted crystalline humanoid. Constellation points glow across its chest, its mask is polished and featureless, and its eyes burn white. Over time the mask resolves toward Sol's face." The face line is already on the page; the rest is not.
-  src: BCS § Sol/C.R.C. and the scry beats
-
-- **[add]** How it tracks Sol (DM voice)
-  Add to How to run them: it tracks Sol by resonance, strongest where he has been. It cannot keep pace with a spelljammer in transit, and it has no handler from Aethris (a handler would diminish it). During the crossing to H'Catha it stays near Caelestis, Sol's strongest recent trail; an appearance on the trail is low probability only.
-  src: BCS § Sol/C.R.C. and the scry beats
-
-- **[add]** Retrieval protocols
-  Add as its voice lines: "Resistance has been accounted for." "Interference is inefficient." "Your absence has created imbalance." "Adjustment required." "Retrieval delayed. Not abandoned."
-  src: BCS § Sol/C.R.C. and the scry beats (Claude drafts; Korey did not object)
 
 ---
 
@@ -1697,6 +1673,14 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ---
 
+### dossiers/vecna-lich.html
+
+- **[later]** What Vecna (Lich) knows, and where he stands
+  Vecna (Lich) has his own dossier (Korey, 2026-10-28). What he knows of Vecna's working, whether he would help the crew against it, where he sits in the Citadel and how the forgetting has touched him are not set. They wait until the crew heads for Rykoe.
+  src: section 5 (2026-10-28)
+
+---
+
 ### dossiers/miken.html
 
 - **[fix]** Miken does not flip
@@ -1742,7 +1726,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[later]** N'ghathrod's mouse
   He saved a mouse during the escape and it travels with him. Its quirk and what it means to him are open.
   src: Korey, 2026-10-25 (round 2)
-
 
 - **[fix]** His age
   The infobox says "Age ~1 century into his second life" and the body says "A mind flayer roughly a century into his second life". Write: "A mind flayer more than five centuries into his second life, and a spacefaring elf before that." Infobox: "Age: more than five centuries since the experiment."
@@ -1798,15 +1781,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ---
 
 ### dossiers/ostekk-6.html
-
-### dossiers/polly.html
-
-- **[fix]** What became of the real Polly
-  Ruled (STAGING round 8). The DM line "What actually became of him — alive, consumed, or something between. Worth leaving open until a scene needs the answer." becomes:
-  "What became of the real Polly is one of two things: he was consumed, or he is caught between life and death. The voice Casey hears as Polly is Astra Virex wearing his shape, and it grows clearer with each tether."
-  src: Korey, 2026-10-25 (round 8); dossiers/polly.html
-
----
 
 ### dossiers/qitru.html
 
@@ -1872,26 +1846,11 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   Ruled (STAGING round 8). Add to DM notes here and on crew/tumak.html, hidden from the table until revealed:
   "Tumak has his own Heart-rune. He knows of the previous Runekeeper and met him once, briefly. He does not understand what that meeting was."
   src: Korey, 2026-10-25 (round 8); chat-crew-tumak-gregory-bartholomew § Tumak/Open
+  done: dossiers/the-runekeeper.html (section 5); crew/tumak.html still needs it.
 
-- **[fix]** The fragment is dividing
-  The infobox says "Carries: The whole Dissolution fragment, for now". The fragment is now forming in both twins as well, so its fixed mass divides three ways between the Runekeeper, Wan and Tu; nobody reaches peak, and the cycle stalls mid-motion. Write: "Carries: the share of the Dissolution fragment still leaving him."
-  src: memory-canon campaign-canon § Cosmology (Zenith of the three poles)
-
-- **[add]** The door of the world
-  Add: "The Runekeeper is the only permitted way into and out of the homeworld. Leaving is rare, and only for set reasons; the Becoming is one of them."
-  src: chat-crew-tumak-gregory-bartholomew § Tumak/Runekeeper lore and pressure
-
-- **[add]** He sent Tumak away
-  Add to Who they are: "The current Runekeeper personally sent Tumak out, because the fragment had begun forming in him." (Dimming stays the fragment leaving the Runekeeper, not age.)
-  src: chat-crew-tumak-gregory-bartholomew § Tumak/Runekeeper lore and pressure; memory-canon campaign-canon § Cosmology
-
-- **[add]** When a Runekeeper dies
-  Add: "A Runekeeper's death is celebrated. 'We do not mourn this. We sing.'"
-  src: chat-crew-tumak-gregory-bartholomew § Tumak/Leader concept
-
-- **[add]** Where the homeworld lies
-  Add to What holds the concealment up: "The Wayfinders' homeworld lies in a hidden system inside Caelestis's sphere. It must share the sphere with what it hides from, so its Wayfinders can map those threats and renew its protection."
-  src: memory-canon campaign-canon § Cosmology (Lunarfoot line)
+- **[later]** A Runekeeper's leaving and the Becoming
+  The Runekeeper is the only permitted way into and out of the homeworld, and leaving is allowed only for set reasons, the Becoming among them (dossiers/the-runekeeper.html). The other set reasons are not named.
+  src: chat-crew-tumak-gregory-bartholomew § Tumak/Runekeeper lore and pressure; section 5 (2026-10-28)
 
 ---
 
@@ -2028,30 +1987,9 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/zerathis.html
 
-- **[fix]** Zerathis is he
-  Zerathis is he. The old Deities row (removed in section 2) called him she; check this dossier and every page that mentions him for she/her.
-  src: memory-canon campaign-canon § Casey ("he is not a member"); chat-cosmic-campaign-structure § Superseded
-
-
-- **[fix]** The wardrobe is a piece of Astra Virex's reach
-  The heading says "Mirt has been keeping a piece of the network in his bedroom". "The network" is retired. Change to "Mirt has been keeping a piece of Astra Virex's reach in his bedroom".
-  src: memory-canon open-decisions (Act 1 retrofit)
-
-- **[fix]** Astra Virex is "it"
-  The page says "went further toward whatever was calling her than Casey has". Astra Virex is "it", and Zerathis is he. Change to "went further toward what was calling him than Casey has".
-  src: dossiers/astra-virex.html; memory-canon campaign-canon § Casey
-
-- **[fix]** Polly's voice
-  The page says "why Polly could reach him there". Change to "why Astra Virex, in Polly's voice, could reach him there".
-  src: memory-canon campaign-canon § Casey
-
-- **[add]** Whom he follows
-  Add to Who they are: "Zerathis follows Astra Virex. He is no part of Vecna's following."
-  src: memory-canon campaign-canon § Casey; chat-cosmic-campaign-structure § Superseded
-
-- **[add]** A name in circulation
-  Add to How to run them: Zerathis is a name the crew hears long before they meet what remains of him, and the sources disagree about him (the Osiris pattern from Destiny).
-  src: chat-cosmic-campaign-structure § Cosmos texture; memory-canon open-decisions (Taken King line)
+- **[later]** The accounts of Zerathis
+  Zerathis is a name the crew hears long before they meet what remains of him, and the accounts disagree (the Osiris pattern). The accounts themselves are not written; each is set when it is used. His species and look in life are not set either.
+  src: section 5 (2026-10-28)
 
 # Crew
 
@@ -2083,10 +2021,12 @@ Items whose source sweep is still partial keep their `(sampled)` or
   Ruled (STAGING round 8). Add to this page and dossiers/beshaba.html (DM voice): "Beshaba's reward for the oath is power. To give it shape she has to want something and lay that want on Sol as a quest."
   The acknowledgment scene ran as planned: the level-3 oath landed before V003's Convening (campaign/voyages/index.html, V003 Actual: "All four level-3 vignettes landed, for Tumak, Sol, Boogie and Gregory").
   src: Korey, 2026-10-25 (round 8); BCS § Sol/Acknowledgment scene
+  done: dossiers/beshaba.html (section 5); crew/sol.html still needs it.
 
 - **[add]** Beshaba did not arrange Sol's escape
   Ruled (STAGING round 8). Add to DM notes here and on dossiers/beshaba.html: "Beshaba did not arrange Sol's escape from Aethris."
   src: Korey, 2026-10-25 (round 8); BCS § Sol/Open
+  done: dossiers/beshaba.html (section 5); crew/sol.html still needs it.
 
 - **[later]** Misfortuned rebalance (on hold)
   Korey does not recall this thread; it waits until he returns to it. Until then the locked turn-757 text (the add below) stands. For reference, he paused it at turn 899 ("hold that and I'll come back to it"). His diagnosis then: Sol can change several rolls a combat and Unburden without feeling the cost. The pending draft:
@@ -2178,6 +2118,7 @@ Items whose source sweep is still partial keep their `(sampled)` or
 - **[add]** The C.R.C. at the main entrance
   When the crew returns, the C.R.C. is waiting at the Caelestis main entrance. The crew hears murmurs first, then: "Sol Fortuna. You are required." The encounter is an objective-based escape, not a kill. Also stage this on dossiers/crc.html, where the location is a decide.
   src: BCS § Sol/C.R.C. and the scry beats; memory-canon § Antagonists (first CRC encounter on Caelestis)
+  done: dossiers/crc.html (section 5); crew/sol.html still needs it.
 
 - **[add]** Tarto stands up for Sol
   When the C.R.C. arrives, Boatswain Tarto stands up for Sol: he is under the academy's protection. Also add to dossiers/boatswain-tarto.html.
@@ -2196,6 +2137,7 @@ Items whose source sweep is still partial keep their `(sampled)` or
 - **[fix]** "Hearer" becomes "Starchild"
   Astra's warlocks are Starchildren. Replace "hearer" with "Starchild" throughout this page and on `dossiers/astra-virex.html`. Casey's power works through sight; the only voice he hears is Polly's.
   src: inbox/chat-crew-boogie-casey-sol.md § Casey (turns 101–107)
+  done: dossiers/astra-virex.html (section 5); crew/casey.html still needs it.
 
 - **[add]** Overlapping Starchildren
   Where several Starchildren gather at one celestial body, Astra holds more tethers there and the change around them speeds up.
@@ -2255,6 +2197,7 @@ Items whose source sweep is still partial keep their `(sampled)` or
 - **[fix]** The voice at the wardrobe was in Polly's register
   Astra Virex reached Casey at the wardrobe in Polly's voice; Polly himself is a missing person. Page says "why Polly could reach him there"; change to "why the voice in Polly's register could reach him there". The same line on dossiers/zerathis.html needs the same change.
   src: memory-canon § Casey Geim (Polly correction)
+  done: dossiers/zerathis.html (section 5); crew/casey.html still needs it.
 
 - **[fix]** "Where the rules live" points at the wrong place
   The header says "Where the rules live: This page", but the page holds none of the rule text. Stellar Reading's player text lives on `crew-manifest/casey-geim.html` and the chart on `stellar-chart/`. Point the row there, and add the DM summary below.
@@ -2339,11 +2282,12 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
   DM: the fade runs on a soft clock (STAGING round 8). The old "key to the First Heart" clause and its level-12 gate are retired; see the Artifacts decide "What a fragment made whole does".
   answered: crew/tumak.html ("the completed inscription is a key to the First Heart"; "His homeworld stays unfindable while the fragment's oscillation carries the concealment, and the fragment is leaving"); dossiers/the-runekeeper.html ("the act of going home is the act of ending the concealment"; "Dimming is what the office is"); inbox/chat-crew-tumak-gregory-bartholomew.md § Tumak/Leader concept (Korey: "If the Wayfinder never returns, the protection decays as the universe changes"), § Marks (marks as the world's sensors, turn 223); STAGING rounds 2 and 8
   src: TGB § Tumak/Open; crew/tumak.html
-  done: locations/wayfinders-homeworld.html (section 3); crew/tumak.html and dossiers/the-runekeeper.html still need it.
+  done: locations/wayfinders-homeworld.html (section 3) and dossiers/the-runekeeper.html (section 5); crew/tumak.html still needs it.
 
 - **[add]** The Runekeeper's fade is a soft clock
   Ruled (STAGING round 8). Add to "The fading as pressure" (DM voice): "The Runekeeper's fade runs on a soft clock: rising pressure, no date. Count nothing down."
   src: Korey, 2026-10-25 (round 8); TGB § Tumak/Open
+  done: dossiers/the-runekeeper.html (section 5); crew/tumak.html still needs it.
 
 - **[later]** How a separated twin plays out at the table
   Settled so far (Korey, turn 227): at the table only the twin with the crew is played, a lower-level one-shot with the separated twin is possible, and the twins reunite through the campaign, through the crew or by other means. Still open for a long separation: off-screen montage, a solo one-shot, or shared visions (turn 143). The reunion mechanics are a separate decide on rules/index.html.
@@ -3024,7 +2968,6 @@ against the complete Tumak sweep (all 336 turns).
   A fringe figure who senses that something is wrong in the cosmos and has his own name for it, but no one believes him, in the vein of Ascher Mir. Who, where, and what he calls it can wait.
   src: Korey, 2026-10-25 (round 4)
 
-
 Each proposed new page has a purpose, a voice, and its content items. Paths are
 suggestions for the overhaul. Items run decide, fix, drop, add.
 
@@ -3252,7 +3195,6 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   Ruled: three or four categories by how a contract ties to the world (loose, Seekers-tied, personal, more as needed), and contracts surface from a world already in motion (STAGING round 4). Name the categories and set how many of each the board offers at a time.
   src: Korey, 2026-10-25 (round 4)
 
-
 - **[add]** Situations, not scripts
   Put situations into the world and let the characters respond, or do nothing. Threads are not scripted toward an outcome.
   src: inbox/chat-crew-boogie-casey-sol.md § Casey (turns 101–107)
@@ -3326,7 +3268,6 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 #### notes/PAGE-SHAPE.md
 
-
 - **[later]** A motivation rubric for "What they want"
   The early master source doc gave every NPC four lines: **Wants** (specific, never "a happy life"), **Will do to get it** (the tools they will actually use), **Won't cross** (the line they keep), and **Current pressure** (what makes it urgent now, or nothing). Options: adopt it as the shape of the "What they want" tab (or its successor), keep it as a writing check only, or leave it out.
   Touches: PAGE-SHAPE.md, every prime dossier if adopted.
@@ -3346,7 +3287,6 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 - **[fix]** A.T.L.A.S., not "the World Surveyor"
   Lines 45, 63–64, 490 and 525 say "the World Surveyor". Change each to A.T.L.A.S.
   src: framework § A.T.L.A.S.; memory-canon (campaign-canon)
-
 
 - **[drop]** "The network" as a faction term
   Line 48 says "who Vecna's current network is". "The network" is retired; reword to N'ghathrod's colony and the Seekers.
@@ -3439,7 +3379,6 @@ run decide, fix, drop, add.
   src: automation § Open; memory-canon § Key NPCs (OSTEKK-6)
   answered: inbox/chat-automation.md § Voyage 5 runbook, Method (Settled: "Earlier voyages keep 'autognome' as history"). PR #61 asked "Say if you want them swept" and PR #62 repeated the default; Korey merged both without asking for a sweep.
 
-
 # Repo and process
 
 - **[later]** terms.js warnings that can misfire
@@ -3451,7 +3390,7 @@ run decide, fix, drop, add.
   src: Factions review, 2026-10-28
 
 - **[later]** Bold labels inside What's hidden items
-  Some What's hidden items open with a bolded name mid-sentence ("**Lich Vecna** has had…") rather than a separate label. Standardise to a short label followed by the sentence, or plain text, when the pages are next touched.
+  Some What's hidden items open with a bolded name mid-sentence ("**Vecna (Lich)** has had…") rather than a separate label. Standardise to a short label followed by the sentence, or plain text, when the pages are next touched.
   src: Factions review, 2026-10-28
 
 ## Page conventions
@@ -3459,7 +3398,6 @@ run decide, fix, drop, add.
 - **[later]** Where the chart lives
   The chart is its own page off to the side. Embed it where it is used (the realms register, or a cosmos map on the cosmology page) as part of the refactor. Also retire its "claimed" and "primed" node states (staged).
   src: Korey, 2026-10-25 (round 2)
-
 
 - **[fix]** Dossier tab names: keep the four tabs *(answered)*
   No change. The 36 live prime dossiers and PAGE-SHAPE.md use *Who they are / What they want / DM notes / Stat block*, and that is the current rule. Turn 460's five-tab set (*What it is / What it wants / What's hidden / Running it / Stat block*) is not the later ruling: it predates PR #77 ("the four-tab dossier shape"), which Korey merged on 2026-10-18. The PAGE-SHAPE principles hold: one set everywhere, labels never inflect, a page carries only the tabs it has content for. Same answer as the PAGE-SHAPE item in the New pages section.
@@ -3478,7 +3416,6 @@ run decide, fix, drop, add.
   WIKI-PAGE-GUIDE.md: "The Reach's name is not known… phrase gaps as such." The new rule: an entry says what is known and stops. Suggested split: an in-world gap ("the Fleet does not know the Reach's name") is a world fact and may stay; a DM gap ("name not yet decided") is a backlog item.
   src: notes/WIKI-PAGE-GUIDE.md; working/README.md
 
-
 - **[add]** Writing rule: no triple short sentences
   Add to the prose rules in CLAUDE.md ("Prose: no stacked negations…") and to working/README.md § Writing staged entries and pages: "No three short sentences in a row for emphasis." Korey asks for AI-isms to be avoided in general; this is the pattern he named alongside stacked negations.
   src: BCS § Sol/Style (turns 866, 870)
@@ -3495,8 +3432,6 @@ run decide, fix, drop, add.
 - **[fix]** "Answered from the sources" names items that are gone
   The review list near the top of this file still names items section 4 consumed and deleted (among them "Artifacts of Convergence" is retired, What the letters stand for, The ship reads as native traffic, Tyrant ship weapons). Prune the list, or mark those entries done, when the list is next reviewed.
   src: section 4 cold review (2026-10-28)
-
-
 
 - **[fix]** `vessels/` missing from the player search index
   The player Pagefind glob lists every player folder except `vessels/`. Add `vessels/**/*.html` (and update the glob again when the refactor renames folders).
