@@ -290,6 +290,7 @@ Old path → new path, added by each pull request that moves a page.
 | `prime/artifacts/runekeepers-fragment.html` | `prime/artifacts/dissolution-fragment.html` | Artifacts and vessels (artifacts) |
 | `prime/artifacts/transformation-fragment.html` | `prime/artifacts/expansion-fragment.html` | Artifacts and vessels (artifacts) |
 | `prime/artifacts/atlas.html#surveyor-depths` | `prime/artifacts/atlas.html#reading-depths` | Artifacts and vessels (artifacts) |
+| `prime/rules/index.html#counter-spore` | `prime/artifacts/faelight-spore.html` | Artifacts and vessels (artifacts) |
 
 ## Stale branches
 

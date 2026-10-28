@@ -357,6 +357,10 @@
     {
       "old": "surveyor-depths",
       "new": "artifacts/atlas.html#reading-depths"
+    },
+    {
+      "old": "#counter-spore",
+      "new": "artifacts/faelight-spore.html"
     }
   ],
   "allow": [
