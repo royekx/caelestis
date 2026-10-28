@@ -35,16 +35,16 @@ staging once Korey has read and accepted them.
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 9 | 1 | 0 | 2 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 15 | 1 | 2 | 0 | 0 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 0 |
 | Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
-| Crew | crew/ | 10 | 19 | 0 | 0 | 1 |
+| Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 4 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 4 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** |  | **97** | **130** | **79** | **4** | **82** |
+| **Total** |  | **98** | **130** | **79** | **4** | **81** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1012,6 +1012,10 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ---
 
+- **[decide]** Which arc reaches the cosmology first
+  Every crew arc was built to touch the cosmology without being about it. Whichever arrives first (Tumak's homecoming and its Zenith, Casey's tethers, Gregory's anomalies, Boogie's shard, Bartholomew's constellation, Sol's Aethris) will reframe the other five for the players in a single session. Choose the first, or let play choose. Moved from the retired Open table on crew/index.html. Touches campaign/index.html (#crew, the arcs) and the crew pages' Arc tabs.
+  src: crew/index.html (retired § Open); section 7 (2026-10-28)
+
 ### opposition/vthorama.html
 
 - **[decide]** What the surface attack at graduation is made of *(prep)*
@@ -1301,20 +1305,14 @@ Items whose source sweep is still partial keep their `(sampled)` or
 ### crew/index.html
 
 - **[later]** Where each PC's homeworld sits
-  Placed already: Gregory, W-01 Toril in SYS-01 Realmspace (working decision, see crew/gregory.html). Sol, W-08 Aethris in SYS-03, mid-Zenith. Tumak, the Wayfinders' unnamed homeworld (W-11) in hidden SYS-06 inside SPH-01, concealed by the Dissolution cycle; Lunarfoot is the clan, never the world. Write these three onto crew/index.html.
-  Left: Casey's is the world the 1486 "deliberate" meteor fell on; its system is withheld until surveyed. Bartholomew's comes from a celestial druid tradition and the FIA has no hint of it yet. Boogie's is unplaced.
-  Options for each of the three: place it now, or leave it unplaced until play needs it. Touches crew/index.html, each crew page, realms/index.html.
+  Placed and written on crew/index.html § The crew together (section 7): Gregory, Toril in Realmspace; Sol, Aethris (CSC 56973 b), mid-Zenith; Tumak, the Wayfinders' unnamed homeworld in a hidden system of the Erevos Galaxy, concealed by the Dissolution cycle (Lunarfoot is the clan, never the world).
+  Left: Casey's is the world the 1486 "deliberate" meteor fell on; its system is withheld until surveyed. Bartholomew's comes from a celestial druid tradition and the FIA has no hint of it yet. Boogie's is unplaced. For each: place it now, or leave it unplaced until play needs it. Touches crew/index.html, each crew page, locations/index.html.
   src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Gregory)
-  answered (Gregory, Sol, Tumak): inbox/chat-organizing-framework.md § Designations (SYS-03 Aethris's system, SYS-06 hidden, W-01 Toril, W-08 Aethris, W-11); memory-canon campaign-canon § Cosmology (Lunarfoot line), § Gregory; inbox/chat-cosmic-campaign-structure.md § Rules and crew (Lunarfoot is the clan)
 
 - **[later]** How cadets from worlds without spelljamming reach Caelestis
   The one route Korey has stated is Sol's: the Watcher order broke protocol to recommend he be taken to Caelestis. The FIA already hints at a route for each PC, with no dedicated intake file (Korey chose scattered hints over one file): WM-006 field referral and protective placement (Sol); SA-002 1486 meteor account by a minor referred to intake (Casey); FR-016 inspecting party reassigned to cadet intake (Boogie); SA-002 1491 two arrivals from an uncatalogued system (Wan and Tu). Gregory arrived on a cargo ship. Bartholomew has no hint.
   Left: whether there is a general rule. Options: Watcher referral as the general route; several routes (Watcher referral, Fleet recruiters, walk-ins at stations); or a per-cadet answer with no general rule, as the FIA hints already read. Touches crew/index.html, crew/sol.html, and a new Cadet intake page (see the New pages section).
   src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Watcher recruitment for Sol); BCS § Sol/C.R.C. and the scry beats; framework § FIA records (intake hints), § Superseded (no PF-004 intake file); memory-canon campaign-canon § Gregory (cargo ship)
-
-- **[add]** Each PC's tie to the sky
-  Each crew member relates to the stars differently. Casey connects stars into his own constellation for Astra Virex. Bartholomew fills in a constellation the Circle of Stars already knows. Tumak builds a planetary network of marks to find his way home. Gregory senses paracausal signals. Sol has no star thread. Boogie carries a Tharizdun-tied shard. Add as a crew overview line.
-  src: chat-voyage-6-7-planning § PCs and the stars
 
 ### crew/sol.html
 

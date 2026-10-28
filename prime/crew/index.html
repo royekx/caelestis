@@ -4,47 +4,38 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>The Crew &middot; Caelestis &middot; DM</title>
+<title>Crew &middot; Caelestis &middot; DM</title>
 <link rel="stylesheet" href="../../styles/caelestis.css">
 <link rel="stylesheet" href="../../styles/entity.css">
 <link rel="stylesheet" href="../../styles/dm.css">
 <script src="../scripts/dm-nav.js" defer></script>
 <script src="../scripts/dm-register.js" defer></script>
+<script src="../scripts/portraits.js" defer></script>
 </head>
 <body>
 
 <main class="dm-content">
 
   <header class="dm-page-header">
-    <div class="dm-page-eyebrow">Cast<span class="sep">&middot;</span>Register</div>
-    <h1>The Crew</h1>
+    <div class="dm-page-eyebrow">People<span class="sep">&middot;</span>Register</div>
+    <h1>Crew</h1>
     <p class="dm-page-lede">
-      One page per player character, holding the homebrew each of them runs on &mdash; the thing you have to adjudicate at the table when it fires. Triggers, thresholds, costs, and what the player is allowed to know.
+      The six player characters. Each page holds the character in-world, the arc, and the homebrew they run on. What each of them is missing is on <a href="../campaign/index.html#crew">Campaign &rarr; Crew</a>, and Tumak's dice rules are on <a href="../rules/index.html#runekeeper">Rules</a>. The player text lives on <a href="../../crew-manifest/">the crew manifest</a>, <a href="../../aspects/">Aspects</a>, <a href="../../stellar-chart/">the stellar chart</a> and <a href="../../wayfinder-path/">A Wayfinder's Path</a>; where each character stands now is on the <a href="../tracker/">Tracker</a>. The crew's other members, Krik'Lit until the swap and Ezra after it, are on <a href="../dossiers/">Dossiers</a>. Rows run A to Z by name.
     </p>
   </header>
 
-<p><strong>Where each kind of thing lives.</strong></p>
-  <table>
-    <tbody>
-      <tr><td><strong>This page</strong></td><td>The mechanics. How a bespoke system is triggered, rolled, failed and paid for.</td></tr>
-      <tr><td><strong><a href="../campaign/index.html#crew">Campaign &rarr; Crew</a></strong></td><td>Arc shape. What each arc is about and where it is moving.</td></tr>
-      <tr><td><strong><a href="https://docs.google.com/spreadsheets/d/1UbXgV-SDR_gMit1qTJl9tqrBxZVr__Ef7W1MHQ1dYew/edit" target="_blank" rel="noopener" class="dm-link-external">Character Arc Tracker</a></strong></td><td>Current state. Which beats have landed, which clues are held, what is owed.</td></tr>
-      <tr><td><strong><a href="../cosmology/">Cosmology</a> &middot; <a href="../opposition/vecna.html">Opposition: Vecna</a></strong></td><td>Why any of it works. The cosmological substrate each arc is cut from.</td></tr>
-    </tbody>
-  </table>
-
   <div class="dm-register-bar">
-    <input class="dm-register-search" type="search" placeholder="Filter by name, class, mechanic&hellip;" aria-label="Filter crew">
+    <input class="dm-register-search" type="search" placeholder="Filter by name, class, homeworld&hellip;" aria-label="Filter crew">
   </div>
 
   <div class="facets">
     <div class="facet">
       <span class="facet-label">Where the rules live</span>
       <div class="facet-pills">
-        <button class="filter-tag" type="button" data-mech="page">On their page</button>
-        <button class="filter-tag" type="button" data-mech="rules">Rules page</button>
-        <button class="filter-tag" type="button" data-mech="subclass">A subclass</button>
-        <button class="filter-tag" type="button" data-mech="rp">Roleplay only</button>
+        <button class="filter-tag" type="button" data-rules="page">On their page</button>
+        <button class="filter-tag" type="button" data-rules="rules">Rules page</button>
+        <button class="filter-tag" type="button" data-rules="player">A player page</button>
+        <button class="filter-tag" type="button" data-rules="rp">Role-play only</button>
       </div>
     </div>
   </div>
@@ -56,93 +47,75 @@
 
   <div class="register">
 
-    <div class="ent" data-mech="page">
+    <div class="ent" data-rules="page player">
       <a class="ent-row" href="bartholomew.html">
-        <span class="ent-face"><span class="face-mono">BG</span></span>
-        <span class="ent-name">Bartholomew Grayson<span class="ent-sub">The Almost-Shift &middot; Circle of the Stars druid</span></span>
-        <span class="ent-state">On this page</span>
+        <span class="ent-face dossier-portrait" data-key="bartholomew"></span>
+        <span class="ent-name">Bartholomew Grayson<span class="ent-sub">Druid, Circle of the Stars &middot; wilder</span></span>
+        <span class="ent-state">Spelljammer</span>
       </a>
       <div class="ent-detail">
-        <p>His tradition was already pointed outward, and the shift is built to fire the way he reads a room: the body answers first. The constellation in his chest is the loosest thread in the campaign.</p>
-        <div class="ent-links">
-          <a class="chip chip-npc" href="bartholomew.html">Mechanics</a>
-          <a class="chip chip-quest" href="../campaign/index.html#bartholomew">Arc shape</a>
-        </div>
+        <p>A druid whose body answers before his reasoning does. CON-312 burns two stars in his chest, and since Voyage 6 he takes single traits of the creatures he knows.</p>
+        <div class="ent-links"><a class="chip chip-npc" href="bartholomew.html">Crew page</a><a class="chip chip-quest" href="../campaign/index.html#bartholomew">Campaign</a><a class="chip chip-place" href="../../aspects/">Aspects</a></div>
       </div>
     </div>
 
-    <div class="ent" data-mech="rp">
+    <div class="ent" data-rules="rp">
       <a class="ent-row" href="boogie.html">
-        <span class="ent-face"><span class="face-mono">B</span></span>
-        <span class="ent-name">Boogie<span class="ent-sub">The Pulse &middot; Plasmoid Divine Soul sorcerer</span></span>
-        <span class="ent-state">Roleplay only</span>
+        <span class="ent-face dossier-portrait" data-key="boogie"></span>
+        <span class="ent-name">Boogie<span class="ent-sub">Plasmoid sorcerer, Divine Soul</span></span>
+        <span class="ent-state">Medic</span>
       </a>
       <div class="ent-detail">
-        <p>The urge to dance was character texture the player invented; the source came afterward. It is the Fonains shard in his nucleus, a fragment of the only Monolith ever destroyed, and he does not know that.</p>
-        <div class="ent-links">
-          <a class="chip chip-npc" href="boogie.html">Mechanics</a>
-          <a class="chip chip-quest" href="../campaign/index.html#boogie">Arc shape</a>
-        </div>
+        <p>A drifter with a Fonains shard in his nucleus and two half-objects in his chest. The Pulse is played as fiction, with no dice.</p>
+        <div class="ent-links"><a class="chip chip-npc" href="boogie.html">Crew page</a><a class="chip chip-quest" href="../campaign/index.html#boogie">Campaign</a><a class="chip chip-place" href="../../crew-manifest/boogie.html">Manifest</a></div>
       </div>
     </div>
 
-    <div class="ent" data-mech="page">
+    <div class="ent" data-rules="page player">
       <a class="ent-row" href="casey.html">
-        <span class="ent-face"><span class="face-mono">CG</span></span>
-        <span class="ent-name">Casey Geim<span class="ent-sub">Tethering &middot; Hadozee warlock of The Many</span></span>
-        <span class="ent-state">On this page</span>
+        <span class="ent-face dossier-portrait" data-key="casey"></span>
+        <span class="ent-name">Casey Geim<span class="ent-sub">Hadozee warlock, The Many</span></span>
+        <span class="ent-state">Bosun</span>
       </a>
       <div class="ent-detail">
-        <p>Every constellation point he attunes to becomes a tether. His patron is his brother Polly, and at the table that is exactly what it is.</p>
-        <div class="ent-links">
-          <a class="chip chip-npc" href="casey.html">Mechanics</a>
-          <a class="chip chip-quest" href="../campaign/index.html#casey">Arc shape</a>
-        </div>
+        <p>A Starchild who sees constellations nobody else can and follows a voice he knows as his brother's. Every point he attunes to becomes a tether.</p>
+        <div class="ent-links"><a class="chip chip-npc" href="casey.html">Crew page</a><a class="chip chip-quest" href="../campaign/index.html#casey">Campaign</a><a class="chip chip-place" href="../../stellar-chart/">Stellar chart</a></div>
       </div>
     </div>
 
-    <div class="ent" data-mech="page">
+    <div class="ent" data-rules="page">
       <a class="ent-row" href="gregory.html">
-        <span class="ent-face"><span class="face-mono">G</span></span>
-        <span class="ent-name">Gregory<span class="ent-sub">Calibration &middot; autognome abjurer</span></span>
-        <span class="ent-state">On this page</span>
+        <span class="ent-face dossier-portrait" data-key="gregory"></span>
+        <span class="ent-name">Gregory<span class="ent-sub">Autognome wizard, abjurer &middot; Toril</span></span>
+        <span class="ent-state">Navigator</span>
       </a>
       <div class="ent-detail">
-        <p>His paracausality is that he casts at all. Calibration is downstream of whatever changed him rather than the definition of it, and that distinction matters when the arc reaches his origin.</p>
-        <div class="ent-links">
-          <a class="chip chip-npc" href="gregory.html">Mechanics</a>
-          <a class="chip chip-quest" href="../campaign/index.html#gregory">Arc shape</a>
-        </div>
+        <p>An autognome who casts, woken by the Axiom strain. Calibration reads the pull in his core, and the Latchling is his first anomaly.</p>
+        <div class="ent-links"><a class="chip chip-npc" href="gregory.html">Crew page</a><a class="chip chip-quest" href="../campaign/index.html#gregory">Campaign</a><a class="chip chip-place" href="../../crew-manifest/gregory.html">Manifest</a></div>
       </div>
     </div>
 
-    <div class="ent" data-mech="subclass">
+    <div class="ent" data-rules="page">
       <a class="ent-row" href="sol.html">
-        <span class="ent-face"><span class="face-mono">SF</span></span>
-        <span class="ent-name">Sol Fortuna<span class="ent-sub">Oath of Misfortune &middot; astral elf paladin</span></span>
-        <span class="ent-state">A subclass</span>
+        <span class="ent-face dossier-portrait" data-key="sol"></span>
+        <span class="ent-name">Sol Fortuna<span class="ent-sub">Astral elf paladin, Oath of Misfortune &middot; Aethris</span></span>
+        <span class="ent-state">Gunner</span>
       </a>
       <div class="ent-detail">
-        <p>The oath is homebrew, complete, and written deity-agnostic so it stands on its own. His homeworld is mid-Zenith and three parties want the ritual he escaped finished.</p>
-        <div class="ent-links">
-          <a class="chip chip-npc" href="sol.html">Mechanics</a>
-          <a class="chip chip-quest" href="../campaign/index.html#sol">Arc shape</a>
-        </div>
+        <p>Born Misfortuned on Aethris, Beshaba's chosen, and hunted by the construct the Fortuned built for him. His oath and Misfortuned are written out on his page.</p>
+        <div class="ent-links"><a class="chip chip-npc" href="sol.html">Crew page</a><a class="chip chip-quest" href="../campaign/index.html#sol">Campaign</a><a class="chip chip-place" href="../../crew-manifest/sol-fortuna.html">Manifest</a></div>
       </div>
     </div>
 
-    <div class="ent" data-mech="rules">
+    <div class="ent" data-rules="rules player">
       <a class="ent-row" href="tumak.html">
-        <span class="ent-face"><span class="face-mono">TS</span></span>
-        <span class="ent-name">Tumak Swan<span class="ent-sub">Wan and Tu &middot; halfling Wayfinders</span></span>
-        <span class="ent-state">Rules page</span>
+        <span class="ent-face dossier-portrait" data-key="tumak"></span>
+        <span class="ent-name">Tumak Swan<span class="ent-sub">Twin halflings, rogue and sorcerer &middot; the Wayfinders' homeworld</span></span>
+        <span class="ent-state">Captain</span>
       </a>
       <div class="ent-detail">
-        <p>Two halflings passing as one person, both partial Wayfinders, with one whole Dissolution fragment arriving between them. The most mechanically formal character at the table.</p>
-        <div class="ent-links">
-          <a class="chip chip-npc" href="tumak.html">Mechanics</a>
-          <a class="chip chip-quest" href="../campaign/index.html#tumak">Arc shape</a>
-        </div>
+        <p>Wan and Tu, two partial Wayfinders passing as one human cadet, with the Dissolution fragment rebuilding in them in two halves.</p>
+        <div class="ent-links"><a class="chip chip-npc" href="tumak.html">Crew page</a><a class="chip chip-quest" href="../campaign/index.html#tumak">Campaign</a><a class="chip chip-place" href="../../wayfinder-path/">A Wayfinder's Path</a></div>
       </div>
     </div>
 
@@ -150,62 +123,61 @@
 
   </div>
 
-  <details class="dm-collapse-section" id="sheets">
-    <summary><h2>Character sheets <span class="dm-tag is-open">Links needed</span></h2></summary>
+  <details class="dm-collapse-section" id="together">
+    <summary><h2>The crew together</h2></summary>
     <div class="dm-collapse-section-body">
-
-
       <p>
-        One place for the live sheets, so looking up a modifier mid-session takes one click rather than a search. <strong>Paste the D&amp;D Beyond URLs and these become links.</strong>
+        Each of them relates to the stars differently. Casey connects stars into his own constellation. Bartholomew fills in a constellation the Circle of the Stars already knows, CON-312. Tumak builds a planetary web of marks to find his way home, and Gregory senses paracausal signals. Sol has no star thread, while Boogie carries a shard of a corrupted Monolith in his nucleus.
       </p>
-
-      <table>
-        <thead><tr><th>Character</th><th>Build</th><th>Sheet</th></tr></thead>
-        <tbody>
-          <tr><td><strong><a href="bartholomew.html">Bartholomew Grayson</a></strong></td><td>Circle of the Stars druid</td><td><span class="dm-tag is-open">URL needed</span></td></tr>
-          <tr><td><strong><a href="boogie.html">Boogie</a></strong></td><td>Plasmoid Divine Soul sorcerer</td><td><span class="dm-tag is-open">URL needed</span></td></tr>
-          <tr><td><strong><a href="casey.html">Casey Geim</a></strong></td><td>Hadozee warlock, The Many</td><td><span class="dm-tag is-open">URL needed</span></td></tr>
-          <tr><td><strong><a href="gregory.html">Gregory</a></strong></td><td>Autognome abjurer wizard</td><td><span class="dm-tag is-open">URL needed</span></td></tr>
-          <tr><td><strong><a href="sol.html">Sol Fortuna</a></strong></td><td>Astral elf paladin, Oath of Misfortune</td><td><span class="dm-tag is-open">URL needed</span></td></tr>
-          <tr><td><strong><a href="tumak.html">Tumak Swan</a></strong></td><td>Twin halflings &mdash; Wayfinder and Runechild</td><td><span class="dm-tag is-open">URL needed</span></td></tr>
-        </tbody>
-      </table>
-
       <p>
-        The player-facing versions are in <a href="../../crew-manifest/">the crew manifest</a>. These are the sheets rather than the manifest &mdash; what the numbers currently are, not what the character is.
+        Three homeworlds are placed:
+      </p>
+      <ul>
+        <li><strong>Gregory.</strong> <a href="../locations/toril.html">Toril</a>, in <a href="../locations/realmspace.html">Realmspace</a>: the Cogfast Enclave on Lantan.</li>
+        <li><strong>Sol.</strong> <a href="../locations/aethris.html">Aethris</a>, CSC 56973 b, mid-Zenith.</li>
+        <li><strong>Tumak.</strong> <a href="../locations/wayfinders-homeworld.html">The Wayfinders' homeworld</a>, in a hidden system of the Erevos Galaxy, concealed by the Dissolution fragment's cycle. Lunarfoot is his clan, not the world.</li>
+      </ul>
+      <p>
+        Casey's homeworld is the world the star fell on, and its system is uncharted. Bartholomew comes from a celestial druid tradition with no world named. Boogie drifted, and his origin is unplaced.
       </p>
     </div>
   </details>
 
-  <details class="dm-collapse-section" id="crew-open">
-    <summary><h2>Open <span class="dm-tag is-open">Design</span></h2></summary>
+  <details class="dm-collapse-section" id="pasts">
+    <summary><h2>Pasts</h2></summary>
     <div class="dm-collapse-section-body">
+      <p>
+        The player characters remember where they came from. Nobody arrived with amnesia; their pasts get filled in retroactively, as play needs them, and each new detail is written onto the character's page when it lands.
+      </p>
+    </div>
+  </details>
 
-
+  <details class="dm-collapse-section" id="sheets">
+    <summary><h2>Sheets</h2></summary>
+    <div class="dm-collapse-section-body">
+      <p>
+        The build each sheet carries, as the crew pages record it. The full build is under Mechanics on each page; the player-facing versions are on <a href="../../crew-manifest/">the crew manifest</a>.
+      </p>
+      <div class="dm-table-scroll">
       <table>
-        <thead><tr><th>Question</th><th>Who it blocks</th></tr></thead>
+        <thead><tr><th>Character</th><th>Build</th></tr></thead>
         <tbody>
-          <tr><td>What the Almost is, and which tier-3 creature carries the recognition.</td><td>Bartholomew. Held deliberately until play answers it.</td></tr>
-          <tr><td>The milestone where Boogie's accumulation starts costing him.</td><td>Boogie. Nothing else waits on it, and the late arc does.</td></tr>
-          <tr><td>Whether Casey has heard <em>Starchild</em> before, and how many tethers Viren holds.</td><td>Casey. Decides how loud his first overlap reads.</td></tr>
-          <tr><td>The anomaly queue past the Latchling.</td><td>Gregory. His arc is a sequence and currently has one entry.</td></tr>
-          <tr><td>What the Fortuned want Sol <em>for.</em></td><td>Sol. The CRC can run without the answer once.</td></tr>
-          <tr><td>What completing the inscription costs Tumak.</td><td>Tumak, and the largest open question attached to any character.</td></tr>
+          <tr><td><a href="bartholomew.html#build">Bartholomew Grayson</a></td><td>Human druid, Circle of the Stars, wilder; Wisdom 18</td></tr>
+          <tr><td><a href="boogie.html#build">Boogie</a></td><td>Plasmoid sorcerer, Divine Soul</td></tr>
+          <tr><td><a href="casey.html#build">Casey Geim</a></td><td>Hadozee warlock, The Many; Charisma 18, Wisdom 4, Lucky</td></tr>
+          <tr><td><a href="gregory.html#build">Gregory</a></td><td>Autognome wizard, abjurer; Arcana +2, Built for Success</td></tr>
+          <tr><td><a href="sol.html#build">Sol Fortuna</a></td><td>Astral elf paladin, Oath of Misfortune; Charisma 18, Lucky</td></tr>
+          <tr><td><a href="tumak.html#build">Tumak Swan</a></td><td>Rogue 3 (Soulknife), then sorcerer at level 4; Charisma 18, Deception expertise</td></tr>
         </tbody>
       </table>
-
-      <div class="dm-callout">
-        <span class="dm-callout-label">The one that is not a character question</span>
-        Every arc here was built to touch the cosmology without being about it. <strong>The decision still outstanding is which arc arrives at the cosmology first</strong>, because whichever one does will reframe the other five for the players in a single session.
       </div>
     </div>
   </details>
 
   <div class="dm-footer">
-    The Crew &middot; Cast &middot; Caelestis DM
+    Crew &middot; People &middot; Caelestis DM
   </div>
 
 </main>
-
 </body>
 </html>
