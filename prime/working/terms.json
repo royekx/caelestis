@@ -223,7 +223,7 @@
     },
     {
       "pattern": "Mother of the Universe",
-      "use": "the All-Mother",
+      "use": "the source (the Restorers' doctrine) or the All-Father",
       "i": true
     },
     {
@@ -470,6 +470,14 @@
       "pattern": "Order of the All-Father",
       "use": "the Order of the Watchers, or the Order of All for the whole",
       "i": true
+    },
+    {
+      "pattern": "All-Mother",
+      "use": "the All-Father (the Restorers' calling is to restore), or \"the source\" where the All-Father holds what is taken"
+    },
+    {
+      "pattern": "All-Haven",
+      "use": "the All-Father (the Keepers' calling is to protect and keep)"
     }
   ],
   "voice": [
@@ -709,6 +717,14 @@
     {
       "old": "order.html#cycles",
       "new": "factions/keepers.html#beacon"
+    },
+    {
+      "old": "glossary/#all-mother",
+      "new": "glossary/#all-father (the Restorers' source: glossary/#restorers)"
+    },
+    {
+      "old": "glossary/#all-haven",
+      "new": "glossary/#all-father"
     }
   ],
   "allow": [

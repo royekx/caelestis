@@ -736,8 +736,8 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/deities.html
 
-- **[later]** The All-Father and the All-Mother on Deities
-  The Order of All counts its god a god like any other, in three aspects: the Watchers' All-Father, the Keepers' All-Haven and the Restorers' All-Mother, whom the Restorers posit as the source of the Monoliths; all three are the Core Monolith's pressure, and that the Core Monolith exists is among the scarcest knowledge in the cosmos (Korey 2026-10-27; on order, restorers, cosmology § Core Monolith's pressure, glossary). Whether Deities lists the All-Father among the gods as the Order worships it, and who else in the cosmos knows of the Core Monolith (Vecna, the Citadel, the Accordance), are not set.
+- **[later]** The All-Father on Deities
+  The Order of All counts its one god, the All-Father, a god like any other, and its three orders serve him in three callings; the Restorers posit a source where he holds what is taken. He is the Core Monolith's pressure, and that the Core Monolith exists is among the scarcest knowledge in the cosmos (Korey 2026-10-27; on order, restorers, cosmology § Core Monolith's pressure, glossary). Whether Deities lists the All-Father among the gods as the Order worships it, and who else in the cosmos knows of the Core Monolith (Vecna, the Citadel, the Accordance), are not set.
 
 - **[later]** How far to develop Tymora
   Korey wants to develop Tymora and the Beshaba/Tymora interplay.
@@ -765,7 +765,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ### factions/order.html
 
 - **[decide]** Who leads the Order of All
-  Ruled (Korey, 2026-10-28): the Order of All is three orders, the Watchers (the All-Father), the Keepers (the All-Haven) and the Restorers (the All-Mother), one god in three aspects; this replaces the Order of the All-Father and its callings (done: factions/order.html, watchers.html, keepers.html, restorers.html, glossary, cosmology § Core Monolith's pressure, connections.json, timeline.json). Still open: who leads the whole Order, or whether it has a single head at all; whether it has a device of its own; and when the one body founded at Cycle 0 split into three orders (Korey, 2026-10-28: it began as one and split as its following grew and like minds drew together). The headquarters, the sector houses and the Vanguards are under Locations, "The Order of All's headquarters, houses and Vanguards". Dejexic leads the Watchers.
+  Ruled (Korey, 2026-10-28): the Order of All is three orders serving one god, the All-Father, in three callings: the Watchers watch, the Keepers protect and keep, the Restorers restore (the All-Mother and All-Haven are retired, Korey 2026-10-28); this replaces the Order of the All-Father and its callings (done: factions/order.html, watchers.html, keepers.html, restorers.html, glossary, cosmology § Core Monolith's pressure, connections.json, timeline.json). Still open: who leads the whole Order, or whether it has a single head at all; whether it has a device of its own; and when the one body founded at Cycle 0 split into three orders (Korey, 2026-10-28: it began as one and split as its following grew and like minds drew together). The headquarters, the sector houses and the Vanguards are under Locations, "The Order of All's headquarters, houses and Vanguards". Dejexic leads the Watchers.
   Touches: factions/order.html (Still to decide), connections.json.
   src: Korey, 2026-10-28 (Order of All ruling)
 
