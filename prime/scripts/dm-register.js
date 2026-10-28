@@ -31,6 +31,14 @@
    Filtering is AND across axes, OR within one: picking two systems
    widens, picking a system and a status narrows. That is what people
    expect from facets and it is worth the extra few lines.
+
+   Grouping. A register may carry data-group-axis="<axis>" and a
+   .register-view with two .view-btn buttons (data-view="az" and
+   data-view="group"). In group view the rows are reordered by the first
+   value each row holds on that axis, in the order of that axis's pills,
+   and a .register-group-head is inserted before each group, labelled
+   from the pill's text. A to Z order inside a group is the page's own
+   order. A group head hides when every row under it is filtered out.
    ════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -97,6 +105,14 @@
       // An empty result is a dead end unless the page says so.
       var empty = register.querySelector('.register-empty');
       if (empty) empty.hidden = shown !== 0;
+      // A group head shows only while a row under it does.
+      Array.prototype.forEach.call(register.querySelectorAll('.register-group-head'), function (h) {
+        var any = false;
+        for (var n = h.nextElementSibling; n && !n.classList.contains('register-group-head'); n = n.nextElementSibling) {
+          if (n.classList.contains('ent') && !n.hidden) { any = true; break; }
+        }
+        h.hidden = !any;
+      });
     }
 
     pills.forEach(function (p) {
@@ -147,6 +163,60 @@
       });
       row.parentNode.insertBefore(toggle, row.nextSibling);
     });
+
+    // Grouping by one axis, when the page asks for it.
+    var groupAxis = register.getAttribute('data-group-axis');
+    var viewBtns = Array.prototype.slice.call(document.querySelectorAll('.view-btn'));
+    var heads = [];
+    var original = ents.slice();
+    var empty = register.querySelector('.register-empty');
+
+    function groupOf(e) {
+      return ((e.dataset[groupAxis] || '').split(/\s+/).filter(Boolean)[0]) || '';
+    }
+
+    function setView(view) {
+      heads.forEach(function (h) { h.parentNode.removeChild(h); });
+      heads = [];
+      var order = original.slice();
+      if (view === 'group' && groupAxis) {
+        var axisPills = pills.filter(function (p) { return p.dataset[groupAxis] !== undefined; });
+        var values = axisPills.map(function (p) { return p.dataset[groupAxis]; });
+        var rank = function (e) { var i = values.indexOf(groupOf(e)); return i < 0 ? values.length : i; };
+        order = original.map(function (e, i) { return { e: e, i: i }; })
+          .sort(function (a, b) { return (rank(a.e) - rank(b.e)) || (a.i - b.i); })
+          .map(function (x) { return x.e; });
+        var last = null;
+        order.forEach(function (e) {
+          var g = groupOf(e);
+          if (g !== last) {
+            var head = document.createElement('div');
+            head.className = 'register-group-head';
+            head.setAttribute('data-group', g);
+            var pill = axisPills[values.indexOf(g)];
+            head.textContent = pill ? pill.textContent : g;
+            register.insertBefore(head, empty || null);
+            heads.push(head);
+            last = g;
+          }
+          register.insertBefore(e, empty || null);
+        });
+      } else {
+        order.forEach(function (e) { register.insertBefore(e, empty || null); });
+      }
+      viewBtns.forEach(function (b) {
+        var on = b.getAttribute('data-view') === view;
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      apply();
+    }
+
+    if (groupAxis && viewBtns.length) {
+      viewBtns.forEach(function (b) {
+        b.addEventListener('click', function () { setView(b.getAttribute('data-view')); });
+      });
+    }
 
     apply();
   });

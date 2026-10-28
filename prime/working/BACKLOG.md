@@ -36,15 +36,15 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 7 | 2 | 0 | 3 |
 | Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 42 | 5 | 36 |
-| Dossiers | dossiers/ | 16 | 12 | 7 | 1 | 4 |
+| Dossiers | dossiers/ | 16 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 9 | 12 | 17 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 2 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
-| New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 5 | 2 | 31 |
+| New pages | 12 proposed pages, the hub, notes/ | 3 | 16 | 5 | 2 | 32 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** | | **93** | **118** | **143** | **10** | **212** |
+| **Total** | | **93** | **121** | **136** | **9** | **210** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -298,7 +298,7 @@ Order under each page: decide, fix, drop, add.
   Keep M. Tarroway as Strake Station's cartographer whose readings first hinted at an unknown vessel disturbing the satellites at the system's edge (STAGING round 4). Cut the "timing tables" and their failure everywhere. Reduce his presence on the ten pages that mention him to passing references; his main home is the Fleet Intelligence Archive (restricted/). Nothing public.
   Touches: dossiers/tarroway.html, dossiers/index.html, dossiers/miken.html, dossiers/vthoramu.html, dossiers/joffrey.html, dossiers/verrow.html, factions/vocath-operation.html, realms/index.html, realms/strake-station.html, chart/index.html, restricted/.
   src: Korey, 2026-10-25 (round 4)
-  done: factions/fleet.html and factions/vocath-operation.html (section 2); locations/strake-station.html, the register and the chart (section 3); dossiers/tarroway.html, vthoramu.html, joffrey.html, verrow.html and miken.html (section 5). dossiers/index.html and restricted/ still need it.
+  done: factions/fleet.html and factions/vocath-operation.html (section 2); locations/strake-station.html, the register and the chart (section 3); every dossier and the dossier register (section 5). restricted/ still needs it.
 
 ### chart/index.html
 
@@ -652,6 +652,7 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
   Ruled (STAGING round 8): the Pedra Ardente is a gem, and Finerva is Vanifer under another name. The place was already answered as the Blooming Glass (see dossiers/clint.html). Use these spellings everywhere (doc, dossier, timeline): the Blooming Glass; the Pedra Ardente; Finerva. Change the timeline's "Pedra Ardante" and "Fernerva" and the dossier's "Fenerba". Write in the doc:
   "Vanifer posted the Blooming Glass bounty under the name Finerva, for the eldest Cre'Tez brother. The Pedra Ardente, the gem Clint's crew recovered there, went to her."
   src: Korey, 2026-10-25 (round 8); dossiers/clint.html; timeline.json; memory-canon (Fonains canon 2026-10-25)
+  done: dossiers/clint.html (section 5); the timeline and the Fonains doc still need it (terms.json now flags "Pedra Ardante" and "Fernerva").
 
 - **[fix]** "Where the campaign stands"
   Says "roughly two months after the Monolith broke". Change to "two to three months after the Monolith broke".
@@ -968,7 +969,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   "Captain Haymond Rolt is the crew's handler in Arc 2. He oversees several Driftwarden crews at once."
   DM note: an homage to Captain Raymond Holt. He gets a new dossier, `dossiers/haymond-rolt.html`, and a row on dossiers/index.html.
   src: Korey, 2026-10-25 (round 8)
-  done: dossiers/haymond-rolt.html (section 5); campaign/spine.html and the dossier register row still need it.
+  done: dossiers/haymond-rolt.html and its register row (section 5); campaign/spine.html still needs it.
 
 - **[decide]** Driftwarden ranks *(prep)*
   Ruled: one service, many ranks, the way every police officer is a cop. Set the ladder from the newest graduate up to the organization's head, and where the crew starts.
@@ -1442,51 +1443,25 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### Every dossier
 
-- **[add]** An appearance for every dossier
-  Every dossier gets an Appearance section. Where nothing is set, write a general sketch from the subject's species and what is known about them, and Korey confirms or changes it (Korey 2026-10-27). Vecna's is sketched.
-  src: chat 2026-10-27
-
 - **[add]** Portraits for every dossier
   Dossiers without a portrait show a monogram. Each one needs an image for its infobox and its row on dossiers/index.html (prime/scripts/portraits.js).
   src: chat 2026-10-27
+
+- **[later]** Appearance sketches to confirm
+  Every dossier now has an Appearance section, or a Still to decide sentence where the species is unknown (Polly Geim, Captain Haymond Rolt, Hessa Dun, Ilsevaine Corr, Aurel Venn). Sketches written from species and record wait for confirmation: Vecna (Deity), Vecna (Lich), N'ghathrod, the five enna, Thessalar, Mirt, Joffrey, Jeffrey, Tarroway, Verrow, Ostekk, Vocath, Qitru, Ryeback, Sor'Kur, Ilsabet Crann, Astra Virex. Each page's Still to decide names it.
+  src: section 5 (2026-10-28)
+
+- **[later]** Dossiers still to build
+  The old register's "Still to build" list: Ostekk-10, the behir; H'Catha's cast, Kurrzot, his Rival and Ondessa (rows on locations/hcatha.html for now); Captain-Commander Dejexic (factions/order.html for now). Kip & Pik, Pffred and Mr. Blip have public pages and earn a DM dossier on contact, when a scene needs a person where they stand.
+  src: dossiers/index.html (retired section, 2026-10-28)
 
 ---
 
 ### dossiers/index.html
 
-- **[add]** The dossier index: alphabetical, with better filtering and grouping
-  Index pages keep the dossier-index format (a filterable register), and the dossier index itself needs work: rows in alphabetical order, and clearer filters and grouping (by side, kind and standing, or by group). Apply the same register shape to every DM index.
-  src: chat 2026-10-27 (Korey: "Index pages should keep the same format as the dossier… the dossier index also needs to be updated")
-
-- **[drop]** "What the DM page adds"
-  The collapsible table on dossiers/index.html comparing each DM page with its public page (with its subsections "Who deliberately has no DM page", "Still to build", "Inbound from other tables", "Handing an ally's block to the players"). Remove it when the index is rewritten; move anything still needed to a dossier's DM notes or BACKLOG.
-  src: chat 2026-10-27 (Korey: "No clue what this section is supposed to do but it should go")
-
-- **[fix]** The Krik'Lit swap is the V006 swap *(answered)*
-  The Krik'Lit dossier says he leaves "At the V007 swap" (dossiers/ostekk.html has the same "at the V007 swap"). Change both to "at the V006 swap". The index's "The window shuts at the V006 swap" already matches. Write: "Krik'Lit and Pffred were relieved at the V006 rendezvous, in the Make Ready interlude, when the Flighty Foundling came alongside the Tyrant Ship. They returned with the Foundling." This matches data/npcs.json. The behir's parley window shut when the Foundling arrived.
-  src: dossiers/krik-lit.html; data/npcs.json (Krik'Lit)
-  answered: inbox/chat-voyage-6-7-planning.md § Voyage 7 (Settled: The swap and NPCs; Make Ready interlude; Superseded "you're relieved"); inbox/chat-cosmic-campaign-structure.md § Superseded (window closes when the Foundling arrives)
-  done: dossiers/krik-lit.html and dossiers/ostekk.html (section 5); the register still needs it.
-
-- **[fix]** The H'Catha cast
-  The page names "Kurrzot, the Rival, the exile, and the Watcher at the rim fog", and "Still to build" lists "the exile". The enlightened exile is retired. The H'Catha cast is Kurrzot, Ostekk, Ondessa, the Rival and the Watcher at the rim fog. Replace "the exile" with Ondessa in both places and list Ostekk.
-  src: chat-astral-sea-worldbuilding § Ondessa, § Superseded; memory-canon campaign-canon § Antagonists (H'Catha)
-
-- **[fix]** Ostekk's card
-  The card says "Unplaced · the builder" and the table says "the placement decision that reshapes H'Catha". Change to "H'Catha · ruler and builder" and drop the placement line.
-  src: memory-canon campaign-canon § Naming (H'Catha decisions); chat-astral-sea-worldbuilding § H'Catha
-
-- **[fix]** Captain Sardax is a woman
-  The page says "The campaign opened inside his last fight" and "Who recorded his death". Change to her. (data/npcs.json already records Gender Female.)
-  src: memory-canon; chat-cosmic-campaign-structure § Superseded (Sardax he → she); data/npcs.json
-
-- **[fix]** Clint's row
-  The table says "what his rescue dragged home". Change to "what Vocath's pursuit dragged home".
-  src: memory-canon open-decisions (Act 1 retrofit); timeline "Boogie takes the shard"
-
-- **[fix]** Ilsabet Crann is a Restorer
-  The card and side filter file her under "The Order · Third Reading". Move her to the Restorers.
-  src: chat-cosmic-campaign-structure § Cosmology redesign; factions/restorers.html
+- **[later]** Grouping on every DM register
+  dossiers/index.html groups its rows by side through dm-register.js (a data-group-axis on .register and an A–Z / By side toggle). Opt the other DM registers in where a grouping helps: locations/ by system, factions/ by reach, vessels/ by where, artifacts/ by fragment.
+  src: section 5 (2026-10-28); Korey 2026-10-27 ("the same register shape to every DM index")
 
 ---
 
@@ -1523,10 +1498,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[later]** What information Clint is buying
   The one-shot gives only Clint's own answer: he wants "money… for some information that you need to get." Nothing names the information. Set it, or leave it as Fonains business (Clint's present stays on Fonains).
   src: chat-cosmic-campaign-structure § Open; scratchpad fonains_notes/12.md § Oneshot 03 (NPCs)
-
-- **[fix]** Pedra Ardente
-  Ruled (STAGING round 8): the spelling is Pedra Ardente, a gem. The page is right. The timeline's "Pedra Ardante" (event "Pedra Ardante reaches Vanifer") changes to Pedra Ardente.
-  src: Korey, 2026-10-25 (round 8); timeline "Pedra Ardante reaches Vanifer"
 
 - **[decide]** How the Monolith fragments reached Boogie in time
   Vocath's people chased Clint to Fonains, never found him, and came back with fragments of the broken Monolith through Vocath's line; one ended up in Boogie before his first voyage with the crew (artifacts/fonains-shard.html). Clint landed about a year before the present, before the Monolith appeared; the Monolith broke two to three months before the present (STAGING § Timing). Rule how long Vocath's people stayed on Fonains and how they came back, or move a date. Touches: dossiers/clint.html, artifacts/fonains-shard.html, factions/vocath-operation.html, crew/boogie.html, the timeline.
@@ -1622,8 +1593,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ---
 
-### dossiers/ostekk-6.html
-
 ### dossiers/rindle-gearloft.html
 
 - **[decide]** Dock master or dock worker *(prep)*
@@ -1637,12 +1606,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[later]** The Runekeeper's name
   The page has "Name open". Name him.
   src: chat-cosmic-campaign-structure § Open; chat-crew-tumak-gregory-bartholomew § Tumak/Open
-
-- **[add]** Tumak's Heart-rune and the previous Runekeeper
-  Ruled (STAGING round 8). Add to DM notes here and on crew/tumak.html, hidden from the table until revealed:
-  "Tumak has his own Heart-rune. He knows of the previous Runekeeper and met him once, briefly. He does not understand what that meeting was."
-  src: Korey, 2026-10-25 (round 8); chat-crew-tumak-gregory-bartholomew § Tumak/Open
-  done: dossiers/the-runekeeper.html (section 5); crew/tumak.html still needs it.
 
 - **[later]** A Runekeeper's leaving and the Becoming
   The Runekeeper is the only permitted way into and out of the homeworld, and leaving is allowed only for set reasons, the Becoming among them (dossiers/the-runekeeper.html). The other set reasons are not named.
@@ -2933,6 +2896,10 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   - Keep set-piece mechanics simple, and keep NPCs from solving puzzles for the players. The V006 Command Deck fight was a slog for an online table.
   - Ship exploration runs theatre of mind, with detailed per-level notes and no map.
   src: chat-voyage-6-7-planning § Retro lessons, § Table and story principles
+
+- **[add]** Handing an ally's block to the players
+  An ally's stat block is worth publishing once the crew has earned it. Knowing that Tarto can spend her reaction to swap places with a cadet, or that anyone who casts mending can repair Saerthe's cubes, turns an NPC from a passenger into something the party can plan around. The block is written once on the DM dossier; publishing it means adding the same tab to that character's public page. Start with whichever NPC the crew has bonded with, and treat it as a reward, not a reference release.
+  src: dossiers/index.html (retired section, 2026-10-28)
 
 ---
 

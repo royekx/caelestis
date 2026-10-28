@@ -6,7 +6,8 @@
     "prime/factions",
     "prime/locations",
     "prime/artifacts",
-    "prime/vessels"
+    "prime/vessels",
+    "prime/dossiers"
   ],
   "retired": [
     {
@@ -170,7 +171,7 @@
       "i": true
     },
     {
-      "pattern": "Astra(&rsquo;|'|\u2019)s network",
+      "pattern": "Astra(&rsquo;|'|’)s network",
       "use": "Astra Virex's reach",
       "i": true
     },
@@ -246,6 +247,62 @@
       "pattern": "Vocath(&rsquo;|'|’)s Operation",
       "use": "Vocath's crew",
       "i": true
+    },
+    {
+      "pattern": "\\bWatcher in training\\b|\\bGlimpse cadet\\b",
+      "use": "Glimpse"
+    },
+    {
+      "pattern": "\\bthe exile\\b",
+      "use": "Ondessa (H'Catha's enlightened exile is retired)"
+    },
+    {
+      "pattern": "Chispitez",
+      "use": "Chloe Chespetes"
+    },
+    {
+      "pattern": "Fenerba|Fernerva",
+      "use": "Finerva"
+    },
+    {
+      "pattern": "Cortez family",
+      "use": "the Cre'Tez"
+    },
+    {
+      "pattern": "Pedra Ardante",
+      "use": "Pedra Ardente"
+    },
+    {
+      "pattern": "\\bthe Elder Eye\\b",
+      "use": "the Elder Elemental Eye"
+    },
+    {
+      "pattern": "Blooming Grove",
+      "use": "the Blooming Glass"
+    },
+    {
+      "pattern": "unmakes constructs",
+      "use": "a field it could not enter (the field froze the horrors and slowed the OSTEKK units)"
+    },
+    {
+      "pattern": "V007 swap",
+      "use": "the V006 swap"
+    },
+    {
+      "pattern": "whole of the going-home",
+      "use": "the passage to a new home"
+    },
+    {
+      "pattern": "Crossing open",
+      "use": "cut"
+    },
+    {
+      "pattern": "\\bAct (1|2|3|4|I|II|III|IV)\\b",
+      "use": "Arc"
+    },
+    {
+      "pattern": "\\bhearers?\\b",
+      "use": "Starchild (Astra Virex's warlocks are Starchildren)"
     }
   ],
   "voice": [

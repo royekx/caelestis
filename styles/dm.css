@@ -1524,6 +1524,26 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
   padding: 1.4rem .7rem; color: var(--text-muted); font-style: italic;
 }
 
+/* Grouping: an A–Z / by-side toggle, and a label above each group.
+   Driven by dm-register.js when .register carries data-group-axis. */
+.register-view { display: inline-flex; flex: none; border: 1px solid var(--rule); border-radius: 999px; overflow: hidden; }
+.view-btn {
+  font-family: 'Cinzel', serif; font-size: .64rem; letter-spacing: .1em;
+  text-transform: uppercase; cursor: pointer;
+  background: none; color: var(--text-dim); border: none;
+  padding: .3rem .75rem; transition: color .13s, background .13s;
+}
+.view-btn + .view-btn { border-left: 1px solid var(--rule); }
+.view-btn:hover { color: var(--text); }
+.view-btn.is-active { color: var(--gold-light); background: var(--gold-faint); }
+.view-btn:focus-visible { outline: 2px solid var(--ice); outline-offset: -2px; }
+.register-group-head {
+  font-family: 'Cinzel', serif; font-size: .66rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--gold-dim);
+  padding: 1.1rem .7rem .35rem; border-bottom: 1px solid var(--gold-rule);
+}
+.register-group-head[hidden] { display: none; }
+
 
 /* ═══════════════════════════════════════════════════════════════
    10  BOARDS: TRACKER AND VOYAGE BOARD
