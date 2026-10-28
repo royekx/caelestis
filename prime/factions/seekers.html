@@ -10,167 +10,206 @@
 <link rel="stylesheet" href="../../styles/dm.css">
 <script src="../scripts/dm-nav.js" defer></script>
 <script src="../scripts/portraits.js" defer></script>
+<script src="../scripts/dm-tabs.js" defer></script>
 </head>
 <body>
 
 <main class="dm-content">
 
   <header class="dm-page-header">
-    <div class="dm-page-eyebrow">Faction<span class="sep">&middot;</span>Interworld</div>
+    <div class="dm-page-eyebrow">Faction<span class="sep">&middot;</span>The Rykoe Galaxy</div>
     <h1>The Seekers</h1>
   </header>
 
-  <div class="voyage-nav-bar"><a class="voyage-nav-link" href="runekeepers.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">Runekeepers</span></a><a class="voyage-nav-center" href="index.html">Realms</a><a class="voyage-nav-link" href="spectrum.html"><span class="nav-label">Spectrum</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
+  <div class="voyage-nav-bar"><a class="voyage-nav-link" href="runekeepers.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> <span class="nav-label">The Runekeepers</span></a><a class="voyage-nav-center" href="index.html">Factions</a><a class="voyage-nav-link" href="vthorama.html"><span class="nav-label">The Vth'orama</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a></div>
 
-  <div class="entry-header">
-    <div class="identity-card">
+  <div class="entry-header is-wiki">
+    <aside class="identity-card" aria-label="The Seekers at a glance">
+      <div class="portrait-frame dossier-portrait" data-key="seekers"></div>
       <div class="stat-card">
-        <div class="stat-row"><span class="stat-key">Reach</span><span class="stat-val stat-val-long">Dozens of worlds</span></div>
-        <div class="stat-row"><span class="stat-key">Posture</span><span class="stat-val stat-val-long">Chapter by chapter</span></div>
-        <div class="stat-row"><span class="stat-key">Shared</span><span class="stat-val stat-val-long">An origin shape, not a name or a god</span></div>
-        <div class="stat-row"><span class="stat-key">Open</span><span class="stat-val stat-val-long">Which chapters the crew will meet</span></div>
+        <div class="stat-row"><span class="stat-key">Kind</span><span class="stat-val stat-val-long">A faith of separate chapters</span></div>
+        <div class="stat-row"><span class="stat-key">Serves</span><span class="stat-val stat-val-long"><a href="../dossiers/vecna.html">Vecna</a>, under many names; away from Oerth most often <a href="../glossary/#first-seeker">the First Seeker</a></span></div>
+        <div class="stat-row"><span class="stat-key">Leader</span><span class="stat-val stat-val-long">None above the chapters</span></div>
+        <div class="stat-row"><span class="stat-key">Seat</span><span class="stat-val stat-val-long">None; Oerth's Monolith is a holy site</span></div>
+        <div class="stat-row"><span class="stat-key">Reach</span><span class="stat-val stat-val-long">Oerth, and small hidden pockets on many worlds of the <a href="../cosmology/#rykoe-galaxy">Rykoe Galaxy</a></span></div>
+        <div class="stat-row"><span class="stat-key">Ranks</span><span class="stat-val stat-val-long">Each chapter its own</span></div>
+        <div class="stat-row"><span class="stat-key">Device</span><span class="stat-val stat-val-long">An eye in the palm of a left hand; most chapters show only the eye</span></div>
+        <div class="stat-row"><span class="stat-key">To Caelestis</span><span class="stat-val stat-val-long">Unknown to it</span></div>
       </div>
-    </div>
+    </aside>
+
     <div class="entry-info">
       <div class="entry-name">The Seekers</div>
-      <div class="entry-sub">Chapters on dozens of worlds, each after a secret it believes was kept from it. No chapter calls itself this.</div>
+      <div class="entry-sub">Vecna's faith: chapters on many worlds, each named for what it seeks, each unaware of the rest.</div>
+
+      <div class="pill-tabs" role="tablist" data-pill-group aria-label="The Seekers sections">
+        <button class="pill-tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true">About</button>
+        <button class="pill-tab" role="tab" id="tab-dm" aria-controls="panel-dm" aria-selected="false">DM notes</button>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-about" aria-labelledby="tab-about">
+        <p>
+          The Seekers are the faith of <a href="../dossiers/vecna.html">Vecna</a>. Seeking is the faith itself, and what a chapter seeks is what names it: the Seekers of Secrets are one chapter, and others seek knowledge, a cure for death, or a home. Only on Oerth is he worshipped openly as Vecna. Everywhere else his faithful call him by other names, and the commonest is the First Seeker.
+        </p>
+
+        <h4>Beliefs</h4>
+        <p>
+          At the root of every chapter is one simple idea: seek what you are missing, what you yearn for, what was taken from you. It is Vecna's own grievance, that something was hidden from him and from everyone, made into a creed.
+        </p>
+        <p>
+          Worship runs both ways, and blind faith only goes so far. Vecna gives his faithful something real, and they spread the faith for it: bits of knowledge, the means of seeking, and power. His clerics and his wizards draw on him. Some chapters believe in an idea of him, the breaking of the cycle of death, more than in the god himself. Not every worshipper is a cultist; some lean into necromancy, and many do neither.
+        </p>
+
+        <h4>Structure and ranks</h4>
+        <p>
+          The faith has no hierarchy above its chapters. Each chapter serves on its own, keeps its own ranks and rites, and takes whatever shape its world allows: a scholarly order inside a respected institution, a mourning tradition, a state faith, a persecuted heresy, or a custom whose meaning was lost generations ago. Some are benign and do real work. Some are dangerous for reasons of their own.
+        </p>
+        <p>
+          Each chapter's name is in its own people's language, and every one of them carries that language's word for &ldquo;seekers&rdquo;.
+        </p>
+
+        <h4>History</h4>
+        <p>
+          Vecna's worship began on Oerth, where he rose to godhood at least a few centuries ago, and it is large and public there still. Elsewhere it lives in small, hidden pockets. His legacy is hidden temples, secret texts and artifacts kept for his worship. Chapters spread by direct seeding, by travellers who carry the faith from world to world, across the planes, and by being found again in ruins.
+        </p>
+
+        <h4>Operations</h4>
+        <p>
+          Chapters seek many things: hearts, lost knowledge, a cure for death, a home. Many hunt <a href="../cosmology/#reach-artifacts">residue</a>, believing it will lead them to what they seek, or that it is what they seek. Their seeking ripples outward through the worlds they work on.
+        </p>
+
+        <h4>How they look</h4>
+        <p>
+          The faith's symbol is Vecna's: an eye in the palm of a left hand. Chapters mostly use the eye and rarely the hand, and they read it their own way. Some take the eye for sight and revelation. Some glorify it in green, for light, nourishment and the life of the body. Dress follows each chapter's locale; the eye is what they share. Green eye-slit gems, eye tattoos on the neck and black candles that burn green are common marks.
+        </p>
+
+        <h4 id="chapters">Chapters</h4>
+        <h5 id="oerth">On Oerth</h5>
+        <p>
+          On Oerth, Vecna's homeworld, his worship is open, large and public, under his own name. The <a href="../cosmology/#monoliths">Monolith</a> that answered his ascension stands there, and his faithful hold it as a holy site.
+        </p>
+        <h5 id="church">The church of the hand and eye</h5>
+        <p>
+          A church that shows Vecna's hand and eye openly. It is good and docile, with something a little odd about it: not evil, but easy to misread.
+        </p>
+        <h5 id="secrets">The Seekers of Secrets</h5>
+        <p>
+          A chapter named for what it seeks: secrets.
+        </p>
+        <h5 id="new-home">The Seekers of a New Home</h5>
+        <p>
+          N'ghathrod's illithid colony, the <a href="vthorama.html">Vth'orama</a>, whose name in their own tongue means all who go toward home. They believe they answer to an elder brain.
+        </p>
+        <h5 id="fracture-cult">The Fracture Cult</h5>
+        <p>
+          It seeks to bring worlds to their <a href="../cosmology/#zeniths">Zenith</a>. Its members hold that rupture, catastrophe, concentrated will and symbolic climax can break a stagnant world open, and they push worlds toward Zenith through engineered crises and symbolic acts.
+        </p>
+        <h5 id="archivists">The Archivists</h5>
+        <p>
+          They seek what the <a href="../cosmology/#monoliths">Monoliths</a> record. They are drawn to Monolith sites, incomplete archives and corrupted records. Depending on the cell, members treat a Monolith as a sacred text, an instrument, a treasure, or a mechanism to control before anyone else can reach it.
+        </p>
+        <h5 id="vanifer">The voice that reached Vanifer</h5>
+        <p>
+          A chapter reached Vanifer on <a href="../realms/fonains.html">Fonains</a>. It traded her the lost meaning of the Alpha and the secret in the Cre'Tez blood. She believes the bargain was fair.
+        </p>
+
+        <h4>Relationships</h4>
+        <h5><a href="order.html">Order of the All-Father</a></h5>
+        <p>
+          The Watchers flag some chapters' work as a danger to a world's Zenith and track it, chapter by chapter, without knowing who stands behind it.
+        </p>
+        <h5><a href="restorers.html">The Restorers</a></h5>
+        <p>
+          A separate order that follows the same pressure from the Core Monolith. The two have clashed over the years, and some on each side believe they walk the same path.
+        </p>
+        <h5><a href="../dossiers/vecna.html">Vecna</a></h5>
+        <p>
+          Their god. He keeps his own name and origin a close secret, because there is power in knowing who he was and where he came from.
+        </p>
+      </div>
+
+      <div class="pill-panel" role="tabpanel" id="panel-dm" aria-labelledby="tab-dm" hidden>
+        <h4>What's hidden</h4>
+        <ul>
+          <li><strong>One god.</strong> Every chapter worships Vecna, often under another name or in the belief that he is something else. Chapters do not know about each other, and their mutual ignorance is itself a secret Vecna keeps and feeds on.</li>
+          <li><strong>Residue.</strong> Vecna steers the chapters through residue: he lets each believe that finding these artifacts will lead it to what it seeks, or that the artifacts are what it seeks. He needs them hungry for something.</li>
+          <li><strong>The colony.</strong> Vecna feeds the Vth'orama the few secrets they need. <a href="../dossiers/nghathrod.html">N'ghathrod</a> is steered toward chapter members who got close to knowledge of hearts, and his taking them is their ascension.</li>
+          <li id="hessa"><strong>Hessa Dun</strong> is a Caelestis contract contact. She mentions, lightly, that her uncle collects a lot of things, and that if the crew are ever on his world they should say hello, because he likes visitors. He is not openly a Seeker.</li>
+          <li><strong>Contracts.</strong> Many Fleet contracts quietly lead back to a chapter, some knowingly nefarious and some unwitting.</li>
+        </ul>
+
+        <h4>How to run them</h4>
+        <p>
+          Build a chapter when it becomes active in the larger shape, not before. Pick what it seeks first; the name and the reading of the eye follow from it. Then set its dials:
+        </p>
+        <table>
+          <thead><tr><th>Dial</th><th>Range</th></tr></thead>
+          <tbody>
+            <tr><td>Visibility</td><td>Secret cell, tolerated minority, established public faith, the state itself</td></tr>
+            <tr><td>Practice</td><td>Archives and scholarship, care for the dead, divination, necromancy</td></tr>
+            <tr><td>Who it draws</td><td>The dispossessed, scholars and clergy, the powerful, everyone</td></tr>
+          </tbody>
+        </table>
+        <p>
+          The players will recognise the symbol and expect villainy; the characters know nothing of it. Let a good chapter's goodness sit wrong with the players without giving them anything to act on. A crew that translates enough chapter names, by magic or by study, will notice that every one carries the word for &ldquo;seekers&rdquo;.
+        </p>
+
+        <h4>Their arc</h4>
+        <p>
+          The first chapter the crew meets is the church of the hand and eye, well after graduation. In Arc 2 many contracts out of Ondrel quietly lead back to chapters, met one at a time, each on its own world; the cells are on <a href="../opposition/vecna.html#arc-2">Opposition: Vecna</a>. A late beat is held in reserve: a chapter that found what it was missing.
+        </p>
+
+        <h4>Threads</h4>
+        <ul>
+          <li>Hessa Dun is a soft plant inside Caelestis's own business; the crew may think nothing of her uncle.</li>
+          <li>The fringe sage of Ascher Mir tracks the Seekers' pattern across chapters.</li>
+          <li>The Vanifer chapter ties the faith to the Fonains campaign and the Cre'Tez line.</li>
+        </ul>
+
+        <h4>Still to decide</h4>
+        <ul>
+          <li>Whether paladins draw on Vecna, and whether he takes warlocks, is not set.</li>
+          <li>The names chapters give Vecna, beyond the First Seeker, are set per chapter as each is built.</li>
+          <li>What the Seekers of Secrets look like and where they are is not set.</li>
+          <li>Hessa Dun's uncle's world and what he collects are not set.</li>
+          <li>Whether the chapters want the Book of Vile Darkness, and where it is, are not set.</li>
+        </ul>
+      </div>
     </div>
-  </div>
-
-  <div class="entry-body">
-
-
-      <p>
-        Chapters on dozens of worlds, each pursuing a secret it believes was kept from it. <strong>&quot;Seekers&quot; is this document's convenience.</strong> No chapter calls itself that, and no two chapters share a name, a symbol, a practice or a god. No institution in the cosmos recognizes them as one thing, and neither do they.
-      </p>
-
-      <p>
-        What they share is an origin. Each was taught, once, by a voice — <em>how to look</em>, never what would be found. That voice was Vecna. Structural detail on <a href="../opposition/vecna.html#seekers">Opposition: Vecna</a>.
-      </p>
-
-      <h3>What a chapter usually is</h3>
-      <p>
-        A chapter is whatever its world allows: a scholarly order inside a legitimate institution, a mourning tradition, an established state faith, a persecuted heresy, a reform movement with a forgotten phrase in its charter, or a custom whose meaning was lost generations ago. Some are benign and doing real work. Some are dangerous for reasons that have nothing to do with Vecna. <strong>The first chapter the crew meets should be a good one.</strong>
-      </p>
-
-      <details class="dm-collapse" id="seeker-identity">
-        <summary>What every chapter holds</summary>
-
-          <ol>
-            <li>Something was taken from us. There was a time when more was known.</li>
-            <li>It can be recovered. Not invented — recovered. The knowledge still exists somewhere.</li>
-            <li>Recovery requires giving something up. Comfort, a name, a body, a self.</li>
-            <li><strong>The voice is proof.</strong> Someone among us heard something, and that is how we know we are right.</li>
-          </ol>
-
-          <h4>The founding story</h4>
-          <p>
-            Structurally identical across worlds that have never touched. Someone was reaching. Something answered. What it gave them was a method rather than an answer. A saint who received a discipline; a scholar who dreamed a procedure; an ancestor who came back and taught the family how to listen; a text found in a ruin, written as instruction rather than doctrine.
-          </p>
-
-          <p>
-            No chapter's founding story includes being <em>given</em> what they were searching for.
-          </p>
-
-          <h4>The voice</h4>
-          <p>
-            Anyone who has heard it describes the same thing: quiet, close, as though the speaker were beside them. It said one thing. It did not repeat itself and it did not answer a follow-up. <em>This is what connects the chapters</em> — the account of the voice, rather than any symbol, name or rite they hold in common. A party with three accounts has the pattern.
-          </p>
-
-          <h4>What they call him</h4>
-          <p>
-            Each world coins its own: the Unasked, the Unanswered, the One Taught Before Us, the Elder Student, the One Who Was Told First. The most widespread is <strong>the First Seeker</strong> — read as modesty, meaning only that he asked before any of them did. It is literally true. No chapter knows the name Vecna.
-          </p>
-
-          <h4>The eldest chapter</h4>
-          <p>
-            The <a href="restorers.html">Restorers</a> are the first of these, and the only one that outgrew its own world and became an order in its own right. They hold the four claims, carry the founding account as history, and cut their mark by the same technique. Their reading of the resemblance is that the other chapters are imitations of their work.
-          </p>
-
-      </details>
-
-      <details class="dm-collapse" id="seeker-method">
-        <summary>Practice</summary>
-
-          <ul>
-            <li>Nothing is held whole. Records are deliberately partial and distributed. No one person holds all of anything.</li>
-            <li><strong>Knowledge is traded, never given.</strong> A chapter answers a question only in exchange for one. This is the most reliable way to deal with them and the most expensive.</li>
-            <li>Cells. Members know their immediate contacts and little else. Two chapters on the same world can exist without knowing about each other.</li>
-            <li>Failures are recorded. Unusual enough to be a tell; most traditions record successes.</li>
-          </ul>
-
-          <h4>Marks</h4>
-          <p>
-            Each chapter's mark depicts the thing it is looking for, drawn so that the subject is absent and only its surroundings are rendered — the subject is the hole in the middle. The water and the seabed with the tower blank. A line of text with one character's space untouched. A crest's border and field with the device missing. Carved as a cut through the stone, inked as the one patch of bare page, woven as a gap in the pattern, cast as a pierced disc.
-          </p>
-
-          <p>
-            The marks share no shape. <strong>They share a technique.</strong>
-          </p>
-
-      </details>
-
-      <details class="dm-collapse" id="seeker-dials">
-        <summary>Building a chapter <span class="dm-tag is-open">Set per world</span></summary>
-
-          <p>
-            Pick the secret first and the symbol writes itself. Then set four dials.
-          </p>
-
-          <table>
-            <thead><tr><th>Dial</th><th>Range</th></tr></thead>
-            <tbody>
-              <tr><td>Visibility</td><td>Secret cell → tolerated minority → established public faith → the state itself</td></tr>
-              <tr><td>Practice</td><td>Archival and scholarship → preservation of the dead → divination → necromancy</td></tr>
-              <tr><td>Who it draws</td><td>The dispossessed → scholars and clergy → the powerful → everyone</td></tr>
-              <tr><td>Relationship to the <a href="vthorama.html">Vth'orama</a></td><td>Never met one → the inner circle knows → a taken high seat is the faith's open reward</td></tr>
-            </tbody>
-          </table>
-
-          <p>
-            That last dial produces the worst rooms in the campaign: a public faith whose congregation knows exactly what their high seat is, and is glad their world was chosen.
-          </p>
-
-      </details>
-
-      <details class="dm-collapse" id="hessa">
-        <summary>Hessa Dun's uncle &mdash; planted in Arc 1</summary>
-
-          <p>
-            A cadet, third intake, with four crates of family effects arriving at the Sea Dock and nowhere to put them. The crates belong to an uncle — alive, travelling, odd, and the sort of relative nobody in the family takes seriously. Books, ledgers, and bundles of correspondence.
-          </p>
-
-          <p>
-            The letters are between the uncle and people on other worlds, carried by whatever ships would take them, going back decades. The correspondents are strangers who write to each other about what they are each looking into.
-          </p>
-
-          <p>
-            Hessa explains it as a family habit: her uncle has <em>a way of asking about things</em> that he was taught, and that he taught her as a child. She has been meaning to write back to one of the correspondents and has not.
-          </p>
-
-          <div class="dm-callout">
-            <span class="dm-callout-label">The point of it</span>
-            The crew's first contact with the Seekers should be a half-day of moving crates for a decent person, with nothing at stake and nothing offered. What they can take away is the letters, freely given, because Hessa thinks they are family papers. If they skip it, the crates still get moved and the uncle still exists.
-          </div>
-
-      </details>
   </div>
 
   <div class="divider">&#10022; &#10022; &#10022;</div>
 
   <div class="xref-card">
     <div class="xref-head"><span class="xref-title">Connections</span></div>
-    <div class="xref-cols"><div class="xref-col">
-        <a class="chip chip-npc" href="#hessa">Hessa&rsquo;s uncle</a>
-        <a class="chip chip-quest" href="../campaign/plot-hooks.html">Plot hooks</a>
-    </div></div>
+    <div class="xref-cols">
+      <div class="xref-col">
+        <div class="xref-col-head">People and factions</div>
+        <a class="chip chip-npc" href="../dossiers/vecna.html">Vecna</a>
+        <a class="chip chip-npc" href="vthorama.html">The Vth'orama</a>
+        <a class="chip chip-npc" href="../dossiers/nghathrod.html">N'ghathrod</a>
+        <a class="chip chip-npc" href="order.html">Order of the All-Father</a>
+        <a class="chip chip-npc" href="restorers.html">The Restorers</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Places</div>
+        <a class="chip chip-place" href="../realms/fonains.html">Fonains</a>
+        <a class="chip chip-place" href="../cosmology/#monoliths">Monoliths</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Items</div>
+        <a class="chip chip-item" href="../cosmology/#reach-artifacts">Residue</a>
+      </div>
+      <div class="xref-col">
+        <div class="xref-col-head">Campaign</div>
+        <a class="chip chip-quest" href="../opposition/vecna.html#seekers">Opposition: Vecna</a>
+      </div>
+    </div>
   </div>
-
   <div class="dm-footer">
     The Seekers &middot; Factions &middot; Caelestis DM
   </div>
 
 </main>
-
 </body>
 </html>

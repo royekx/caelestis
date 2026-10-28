@@ -104,20 +104,6 @@ when a ruling changes; delete it once the page carries it. See
 - Lord Primus is a towering construct in dark armour with a golden mask, a breathing apparatus at the mouth, a red gem on the brow and a red hexagonal core glowing in the chest. Cables trail from him, and a halo of red script turns behind him.
 - Nalsa, the Accordance's emissary, is an androsphinx: a tawny lion with a great pale mane and a braided beard, wings that shade from tan to violet at the tips, blue markings on the face, white eyes, and a collar set with blue stones.
 
-### The Seekers (factions/seekers.html, campaign/, factions/spectrum.html, opposition/vecna.html)
-- The Seekers are Vecna's faith. Seeking is the faith itself; what a chapter seeks is what names it. The Seekers of Secrets are one chapter. Others seek knowledge, a cure for death, or a home.
-- Vecna plants one simple idea and lets it take root: seek what you are missing, what you yearn for, what was taken from you. It is his own grievance, that something was hidden from him and from everyone, made into a creed. (DM touchstone: the planted idea in Inception.)
-- Worship runs both ways, and blind faith only goes so far. Vecna gives the faithful something real so that they spread the faith: bits of knowledge, the means of seeking, and power. His clerics and his wizards draw on him; some paladins may too.
-- Chapters mostly use the eye from his symbol, rarely the hand. Their dress follows their locale; the eye is what they share. Green eye-slit gems, eye tattoos on the neck and black candles that burn green are common marks.
-- Every chapter worships Vecna, often under another name or in the belief that he is something else. Chapters do not know about each other; each serves on its own. Their mutual ignorance is itself a secret Vecna keeps and feeds on.
-- Each chapter's name is in its own people's language, and every one of them carries the word for "seekers". A crew that translates enough chapter names, by magic or by study, will notice the pattern.
-- Chapters seek many things: hearts, lost knowledge, a cure for death, a home. Vecna needs them hungry for something, and their seeking ripples outward through the worlds they work on.
-- The Watchers flag some chapters' work as a danger to a world's Zenith and track it, without knowing who stands behind it.
-- The Fracture Cult and the Archivists are Seekers chapters. The Fracture Cult seeks to bring worlds to their Zenith. The Archivists seek what the Monoliths record.
-- The first chapter the crew meets is a benevolent church that shows Vecna's hand and eye openly. It is good and docile, with something a little odd about it: not evil, but easy to misread. The meeting itself comes well after graduation.
-- Hessa Dun is a Caelestis contract contact the crew works with after graduation. She mentions, lightly, that her uncle collects a lot of things, and if the crew are ever on his world they should say hello, because he likes visitors. He is not openly a Seeker. (DM: a soft plant inside Caelestis's own business; the crew may think nothing of it.)
-- DM: the players will recognise the symbol and expect villainy; the characters know nothing of it. The church's goodness should sit wrong with the players without giving them anything to act on.
-
 ### The Vth'orama (factions/seekers.html, factions/vthorama.html, dossiers/vthoramu.html, the lieutenants' dossiers)
 - N'ghathrod's colony is a chapter of the Seekers: the Seekers of a New Home. They serve the same hidden god as every other chapter, believing they answer to an elder brain, and Vecna feeds them the few secrets they need.
 - In their own tongue the chapter's name is their people's name, Vth'orama. The roots are vth- "the whole of", or- "toward", amu "home", with -a marking a people: all who go toward home. Rendered in Common, the Seekers of a New Home.

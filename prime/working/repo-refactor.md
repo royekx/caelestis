@@ -266,6 +266,7 @@ Old path → new path, added by each pull request that moves a page.
 | `crew-logs/detailed/voyage-detailed-004.html` | `voyages/voyage-004.html` | Removed redirect stub (pass-0) |
 | `crew-notes/index.html` | `logs/index.html` | Removed redirect stub (pass-0) |
 | `prime/factions/academy-fleet.html` | `prime/factions/fleet.html` | Factions (factions) |
+| `prime/factions/spectrum.html` | `prime/factions/seekers.html` | Factions (factions) |
 
 ## Stale branches
 

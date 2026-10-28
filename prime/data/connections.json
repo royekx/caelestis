@@ -1177,11 +1177,23 @@
           "src": "STAGING round 10"
         },
         {
-          "t": "Each chapter's mark depicts what it seeks with the subject left as an empty space.",
+          "t": "Vecna plants one idea in every chapter: seek what you are missing, what you yearn for, what was taken from you.",
           "src": "factions/seekers.html"
         },
         {
-          "t": "A chapter answers a question only in exchange for one.",
+          "t": "Vecna gives the faithful knowledge, the means of seeking and power; his clerics and wizards draw on him.",
+          "src": "factions/seekers.html"
+        },
+        {
+          "t": "Chapters mostly use the eye from his symbol, rarely the hand; green eye-slit gems, neck eye tattoos and black candles burning green are common marks.",
+          "src": "factions/seekers.html"
+        },
+        {
+          "t": "Only on Oerth is he worshipped openly as Vecna; elsewhere \"the First Seeker\" is his commonest name.",
+          "src": "factions/seekers.html"
+        },
+        {
+          "t": "Chapters spread by seeding, by travellers, across the planes and by being found in ruins.",
           "src": "factions/seekers.html"
         }
       ]
@@ -1212,7 +1224,7 @@
         },
         {
           "t": "It accelerates worlds toward Zenith through engineered crises and symbolic acts.",
-          "src": "factions/spectrum.html"
+          "src": "factions/seekers.html"
         }
       ]
     },
@@ -1229,24 +1241,7 @@
         },
         {
           "t": "They are drawn to Monolith sites, incomplete archives and corrupted records.",
-          "src": "factions/spectrum.html"
-        }
-      ]
-    },
-    {
-      "id": "spectrum",
-      "label": "The Spectrum",
-      "type": "faction",
-      "scope": "cosmos",
-      "summary": "Mid-tier ideological and operational forces across the cosmos.",
-      "facts": [
-        {
-          "t": "The Spectrum's forces include the Concordance, which enforces metaphysical orthodoxy, and the Syndicate, a criminal network that profits where order weakens.",
-          "src": "factions/spectrum.html"
-        },
-        {
-          "t": "The overlap between Spectrum cells and Seekers chapters hides the larger picture from every institution.",
-          "src": "factions/spectrum.html"
+          "src": "factions/seekers.html"
         }
       ]
     },
@@ -1272,18 +1267,14 @@
       "label": "Hessa Dun",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A Caelestis cadet and contract contact whose uncle tells strange stories.",
+      "summary": "A Caelestis contract contact whose uncle collects a lot of things and likes visitors.",
       "facts": [
         {
-          "t": "Hessa Dun is the crew's first thread to the church of the hand and eye.",
-          "src": "STAGING round 5"
-        },
-        {
-          "t": "Her uncle's crates hold decades of letters between strangers on other worlds about what each is looking into.",
+          "t": "Hessa Dun is a Caelestis contract contact the crew works with after graduation.",
           "src": "factions/seekers.html"
         },
         {
-          "t": "She learned a way of asking about things from her uncle as a child.",
+          "t": "She mentions that her uncle collects a lot of things and likes visitors.",
           "src": "factions/seekers.html"
         }
       ]
@@ -1293,15 +1284,15 @@
       "label": "Hessa Dun's uncle",
       "type": "person",
       "scope": "cosmos",
-      "summary": "A travelling, odd relative who corresponds with strangers across worlds.",
+      "summary": "A collector who likes visitors; not openly a Seeker.",
       "facts": [
         {
-          "t": "He has written for decades to people on other worlds about what each of them is looking into.",
+          "t": "He collects a lot of things and likes visitors.",
           "src": "factions/seekers.html"
         },
         {
-          "t": "He tells strange stories that nobody in his family takes seriously.",
-          "src": "STAGING round 5"
+          "t": "He is not openly a Seeker.",
+          "src": "factions/seekers.html"
         }
       ]
     },
@@ -5708,18 +5699,6 @@
       "src": "STAGING round 6"
     },
     {
-      "s": "spectrum",
-      "t": "fracture-cult",
-      "rel": "overlaps with",
-      "src": "factions/spectrum.html"
-    },
-    {
-      "s": "spectrum",
-      "t": "archivists",
-      "rel": "overlaps with",
-      "src": "factions/spectrum.html"
-    },
-    {
       "s": "seekers",
       "t": "residue",
       "rel": "hunt",
@@ -5740,19 +5719,19 @@
     {
       "s": "hessas-uncle",
       "t": "hessa-dun",
-      "rel": "uncle of",
-      "src": "STAGING round 5"
+      "rel": "is secretly one of",
+      "src": "factions/seekers.html"
     },
     {
       "s": "hessas-uncle",
       "t": "seekers",
-      "rel": "belongs to",
+      "rel": "is secretly one of",
       "src": "factions/seekers.html"
     },
     {
       "s": "hessa-dun",
-      "t": "FAO-Lx7kR2vN",
-      "rel": "is a cadet of",
+      "t": "driftwardens",
+      "rel": "is a contract contact of",
       "src": "factions/seekers.html"
     },
     {

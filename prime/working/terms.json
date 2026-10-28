@@ -190,6 +190,10 @@
     {
       "old": "factions/academy-fleet.html",
       "new": "factions/fleet.html"
+    },
+    {
+      "old": "factions/spectrum.html",
+      "new": "factions/seekers.html"
     }
   ],
   "allow": [

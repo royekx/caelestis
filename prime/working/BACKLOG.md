@@ -1035,10 +1035,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   Clerics and wizards draw on him, perhaps paladins (Korey 2026-10-27). Check published sources for Vecna's clerics (Knowledge, Death, Trickery), wizards and any warlock or paladin patrons, and settle which this cosmos uses.
   src: chat 2026-10-27
 
-- **[drop]** The Concordance and the Syndicate
-  Leftovers of factions/spectrum.html with no surviving purpose (Korey: "No clue what that was supposed to be"). Retire them when spectrum.html folds into seekers.html.
-  src: chat 2026-10-27
-
 ### factions/index.html
 
 - **[fix]** The colony's word for its brainless-raised *(answered)*
@@ -1088,42 +1084,10 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/seekers.html
 
-- **[fix]** Chapters know him under many names
-  The intro says "No chapter knows the name Vecna." Rewrite: "Chapters know him by many names. Some use his own." Shape the rest per the decide above.
-  src: session-rulings (Vecna)
-
-- **[drop]** The Restorers as eldest chapter
-  The section "The eldest chapter" says "The Restorers are the first of these, and the only one that outgrew its own world". That is Restorers v1, superseded by v2, which has no tie to Seekers or Vecna. Remove the section. (Same drop on factions/restorers.html.)
-  src: chat-cosmic-campaign-structure § Superseded (Restorers v1 → v2); campaign/ascension ("The Restorers appear in no part of this")
-
-- **[add]** The founding story
-  Add to The founding story: chapters share no glyph. They connect through the same account of the voice, the information-for-information trade rule, and the founding phrase "We were taught how to ask." Each chapter's symbol depicts its own secret, drawn so the subject is the void and only its surroundings show.
-  src: memory-canon open-decisions ("Locked this pass")
-  updated (triage): conflicts with STAGING § Vecna's domains and symbol (one symbol, an eye in the palm of a left hand, read differently by each chapter) and § The Seekers (chapters do not know about each other). Rewrite from STAGING before applying.
-
 - **[add]** The colony and the Monoliths
   Add to Who they are: "Every heart N'ghathrod opens is worthless until it is linked, and a link needs a Monolith on both worlds. So the colony goes where Monoliths stand, and where they don't, it waits." Whether the colony counts as a Seekers chapter is a decide (see factions/seekers.html).
   updated (triage): settled. The colony is a Seekers chapter, the Seekers of a New Home (STAGING § The Seekers and the colony). Note that opening a heart needs no Monolith; only linking does (STAGING § Hearts, Atria and Monoliths).
   src: Korey, 2026-10-25 (round 2)
-- **[add]** Steered toward those who got close
-  Add to the Vth'orama dial notes: N'ghathrod is steered toward chapter members who got close to heart information. His taking them is their ascension.
-  src: chat-cosmic-campaign-structure § Vecna's following
-
-- **[add]** How chapters spread
-  Add: chapters spread by direct seeding, by travellers, across the planes, and by being found in ruins.
-  src: chat-cosmic-campaign-structure § Vecna's following
-
-- **[add]** The chapter that reached Vanifer
-  Add as a known chapter: "A Seeker chapter was the voice that reached Vanifer on Fonains. It traded her the lost meaning of the Alpha and the secret in the Cre'Tez blood. She believes the bargain was fair."
-  src: memory-canon open-decisions (Locked 2026-10-25); working/vecna.md § On Fonains; timeline "A Seeker chapter reaches Vanifer"
-
-- **[add]** The Book of Vile Darkness
-  Add a short section: "The Book of Vile Darkness is the one whole account of the voice. Every chapter wants it."
-  src: memory-canon open-decisions ("Locked this pass")
-
-- **[add]** A reserved late beat
-  DM-only, under Marks or as a reserved beat: a chapter that filled its hole.
-  src: chat-cosmic-campaign-structure § The Seekers
 
 ---
 
@@ -1328,8 +1292,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   src: memory-canon open-decisions (Runekeepers line)
 
 ---
-
-### factions/spectrum.html
 
 # Campaign
 
