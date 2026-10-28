@@ -2500,6 +2500,18 @@
         {
           "t": "He means to take A.T.L.A.S. from the Brig under cover of the graduation chaos.",
           "src": "campaign/colony/index.html"
+        },
+        {
+          "t": "He was top of his class and is named the present-day great spelljammer of Caelestis.",
+          "src": "dossiers/joffrey.html"
+        },
+        {
+          "t": "He was taken slowly: for months he was himself, and he finished converting only recently.",
+          "src": "dossiers/joffrey.html"
+        },
+        {
+          "t": "One survivor of the Crow noticed he had changed and never reported it.",
+          "src": "dossiers/joffrey.html"
         }
       ]
     },
@@ -2611,6 +2623,14 @@
         },
         {
           "t": "Saerthe and Tarto have worn a matched pair of bands of the lost and found since he was lost.",
+          "src": "dossiers/clint.html"
+        },
+        {
+          "t": "He landed about a year before the present and was on Fonains when its Monolith appeared.",
+          "src": "dossiers/clint.html"
+        },
+        {
+          "t": "On the Blooming Glass job his crew freed Chloe Chespetes and handed the Pedra Ardente to Finerva.",
           "src": "dossiers/clint.html"
         }
       ]
@@ -2763,7 +2783,7 @@
       "label": "Quartermaster Halix Verrow",
       "type": "person",
       "scope": "caelestis",
-      "summary": "Strake's quartermaster, who counter-signs everything that moves on the Cairn bearing.",
+      "summary": "Strake's quartermaster, who counter-signs everything that moves on the edge run to Cairn.",
       "facts": [
         {
           "t": "Verrow enforces the standing order closing the run past Strake.",
@@ -4801,6 +4821,14 @@
         {
           "t": "He powers his work off the hazy yellow gem.",
           "src": "timeline/timeline.json"
+        },
+        {
+          "t": "He was a high priest of Moloch and an artificer, and he pursues lichdom.",
+          "src": "dossiers/thessalar.html"
+        },
+        {
+          "t": "Lola's Boys took the red gem from the cavern lake and the hazy yellow gem from his workshop.",
+          "src": "dossiers/thessalar.html"
         }
       ]
     },

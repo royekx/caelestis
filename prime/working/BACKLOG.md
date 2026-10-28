@@ -36,7 +36,7 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
 | Factions | factions/ | 3 | 7 | 2 | 0 | 3 |
 | Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 42 | 5 | 36 |
-| Dossiers | dossiers/ | 13 | 10 | 35 | 1 | 32 |
+| Dossiers | dossiers/ | 15 | 12 | 25 | 1 | 20 |
 | Crew | crew/ | 9 | 12 | 17 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 1 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 21 | 0 | 20 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** | | **90** | **116** | **171** | **10** | **240** |
+| **Total** | | **92** | **118** | **161** | **10** | **228** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -145,7 +145,7 @@ Order under each page: decide, fix, drop, add.
 - **[fix]** Tharizdun is she
   Tharizdun is female. Pages and drafts that call her he/his/him: cosmology/index.html, realms/fonains.html, realms/index.html, dossiers/thessalar.html, crew/boogie.html, artifacts/fonains-shard.html, campaign/spine.html, factions/academy-fleet.html, chart/index.html, working/tharizdun.md, and the Fonains Canon Reference doc. STAGING and the Connections layer are done.
   src: Korey, 2026-10-27
-  done: cosmology and glossary (distribution section 1, 2026-10-27); factions (section 2).
+  done: cosmology and glossary (distribution section 1, 2026-10-27); factions (section 2); dossiers/thessalar.html (section 5).
 
 - **[fix]** Dharra, not Darra
   The Cre'Tez sister is Dharra. Fix the Fonains Canon Reference doc and any page that spells it Darra. STAGING and the Connections layer are done.
@@ -295,7 +295,7 @@ Order under each page: decide, fix, drop, add.
   Keep M. Tarroway as Strake Station's cartographer whose readings first hinted at an unknown vessel disturbing the satellites at the system's edge (STAGING round 4). Cut the "timing tables" and their failure everywhere. Reduce his presence on the ten pages that mention him to passing references; his main home is the Fleet Intelligence Archive (restricted/). Nothing public.
   Touches: dossiers/tarroway.html, dossiers/index.html, dossiers/miken.html, dossiers/vthoramu.html, dossiers/joffrey.html, dossiers/verrow.html, factions/vocath-operation.html, realms/index.html, realms/strake-station.html, chart/index.html, restricted/.
   src: Korey, 2026-10-25 (round 4)
-  done: factions/fleet.html and factions/vocath-operation.html (section 2); locations/strake-station.html, the register and the chart (section 3).
+  done: factions/fleet.html and factions/vocath-operation.html (section 2); locations/strake-station.html, the register and the chart (section 3); dossiers/tarroway.html, vthoramu.html, joffrey.html and verrow.html (section 5). dossiers/miken.html, dossiers/index.html and restricted/ still need it.
 
 ### chart/index.html
 
@@ -1450,10 +1450,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/index.html
 
-- **[fix]** Joffrey's account of Clint
-  dossiers/joffrey.html says Clint went "over the side with the boarders' craft"; its link lands on factions/fleet.html's colour-pool account. Make the two agree.
-  src: Factions review, 2026-10-28
-
 - **[add]** The dossier index: alphabetical, with better filtering and grouping
   Index pages keep the dossier-index format (a filterable register), and the dossier index itself needs work: rows in alphabetical order, and clearer filters and grouping (by side, kind and standing, or by group). Apply the same register shape to every DM index.
   src: chat 2026-10-27 (Korey: "Index pages should keep the same format as the dossier… the dossier index also needs to be updated")
@@ -1527,40 +1523,17 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   The one-shot gives only Clint's own answer: he wants "money… for some information that you need to get." Nothing names the information. Set it, or leave it as Fonains business (Clint's present stays on Fonains).
   src: chat-cosmic-campaign-structure § Open; scratchpad fonains_notes/12.md § Oneshot 03 (NPCs)
 
-- **[fix]** The elemental woman is Chloe Chespetes *(answered)*
-  The page says "The elemental was a woman, Mary Chispitez, fused to an ancient crystal called the Pedra Ardente". Write: "The elemental was a woman, Chloe Chespetes, with the Pedra Ardente fused into her hand. Centuries earlier a sect of her own clan tried to use the gem to open a portal and release Imix. Her clan and the Cre'Tez fought them, and Chloe flooded the laboratory with lava to stop them. She was infused with the Plane of Fire and trapped in the elemental until Clint's crew freed her." She is the same Chloe Chespetes the timeline traps in the lab during the fire genasi war over Imix.
-  src: dossiers/clint.html; timeline "The fire genasi war over Imix"
-  answered: scratchpad fonains_txt/Oneshot_03_Search_for_the_Blooming_Glass.txt ("My name is Chloe. Chloe Chespetes."); scratchpad fonains_notes/12.md § Oneshot 03; session-rulings (transcripts are canon)
-
-- **[add]** The Blooming Glass *(answered)*
-  The one-shot is "Search for the Blooming Glass", and the Blooming Glass is the place. "Blooming Grove" in memory canon is a slip. Add to the Blooming Glass row: "The Blooming Glass stands in the Wandering Sands at the end of the Shattered Path: a petal-layered construct of Rubicon, a gem close to diamond, throwing prismatic light. A research facility lies buried beneath it, built to study the Pedra Ardente." The page and the timeline already use "Blooming Glass"; keep it everywhere.
-  src: timeline "Pedra Ardante reaches Vanifer"; memory-canon open-decisions (Fonains canon 2026-10-25); scratchpad fonains_notes
-  answered: scratchpad fonains_txt/Oneshot_03_Search_for_the_Blooming_Glass.txt (opening line: "it's called Search for the Blooming Glass"); scratchpad fonains_notes/12.md § Oneshot 03 (Items and places); session-rulings (transcripts are canon)
-
-- **[fix]** Clint went overboard
-  The page says "When the first boarding came, he seized the boarders' own craft and broke away with it", the table says "Took the boarders' craft…", and the infobox says "Crossing open". Write: "Clint Dashforest went overboard in the Bellwether Crow ambush near Cairn Station. A psychic wind carried him across the Astral Sea to Fonains." Remove "Crossing open".
-  src: memory-canon open-decisions (operative resolved), campaign-canon § Naming (Astral Sea travel); timeline "The Bellwether Crow ambushed"
-  updated (round 4): superseded. Clint went through a color pool on purpose, drawing the boarders off; write it from STAGING § Clint Dashforest and the Bellwether Crow.
-
-- **[fix]** Vocath's people chased him
-  The page says "A crew went looking for him", "a rescue crew went out", and "What his rescue attempt dragged home". Write: "Vocath's people chased Clint because he had something they wanted. They never found him. They came back from Fonains with fragments of the broken Monolith, moved through Vocath's Cairn Station line, and one of those fragments ended up inside Boogie."
-  src: memory-canon open-decisions (Act 1 retrofit); timeline "Boogie takes the shard"
-
-- **[fix]** Who placed the bounty
-  The page says "placed by a broker named Fenerba for the Cortez family". Write: "posted by Finerva — Vanifer under another name — for the Cre'Tez, 'for the eldest brother'." (Spelling ruled in round 8; see the Fonains doc fix.)
-  src: timeline "Pedra Ardante reaches Vanifer"; session-rulings (Cre'Tez spelling); scratchpad fonains_notes/12.md
-
 - **[fix]** Pedra Ardente
   Ruled (STAGING round 8): the spelling is Pedra Ardente, a gem. The page is right. The timeline's "Pedra Ardante" (event "Pedra Ardante reaches Vanifer") changes to Pedra Ardente.
   src: Korey, 2026-10-25 (round 8); timeline "Pedra Ardante reaches Vanifer"
 
-- **[add]** Where the gem went
-  Add to the Blooming Glass row: "Clint's crew rescued the archaeologists and handed the Pedra Ardente, the fire-plane gem, to Finerva. The job fed the Cre'Tez line's fire-key plot without anyone aboard knowing it."
-  src: timeline "Pedra Ardante reaches Vanifer", "Tinderstrike under guard"
+- **[decide]** How the Monolith fragments reached Boogie in time
+  Vocath's people chased Clint to Fonains, never found him, and came back with fragments of the broken Monolith through Vocath's line; one ended up in Boogie before his first voyage with the crew (artifacts/fonains-shard.html). Clint landed about a year before the present, before the Monolith appeared; the Monolith broke two to three months before the present (STAGING § Timing). Rule how long Vocath's people stayed on Fonains and how they came back, or move a date. Touches: dossiers/clint.html, artifacts/fonains-shard.html, factions/vocath-operation.html, crew/boogie.html, the timeline.
+  src: section 5 (2026-10-28); STAGING § Timing; artifacts/fonains-shard.html
 
-- **[add]** When he landed
-  Add to the Then/What happened table: "Clint landed on Fonains about a year before the present, before the Monolith appeared, and was on Fonains when it did."
-  src: session-rulings (Timing); timeline decisions, "Clint lands on Fonains"
+- **[later]** Clint's species, his finger, and whether he is trying to get back
+  His species is not set; neither is how he lost his ring finger or whether he is trying to return to Caelestis. These wait until a meeting is wanted; his present stays Fonains business.
+  src: dossiers/clint.html; section 5 (2026-10-28)
 
 ---
 
@@ -1639,26 +1612,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[fix]** She is a Restorer
   The header and Connections say "The Order", and the Ledger note says "the Order reads it as history". Third Reading, the Ledger and cells are Restorer vocabulary. Change to: "Ilsabet Crann, Restorer · Third Reading, in a cell of six", and "the Restorers read it as history". Connections link factions/restorers.html.
   src: chat-cosmic-campaign-structure § Cosmology redesign; factions/restorers.html
-
----
-
-### dossiers/joffrey.html
-
-- **[fix]** Clint went overboard
-  The page says "Clint Dashforest gone over the side with the boarders' craft". Drop "with the boarders' craft".
-  src: timeline "The Bellwether Crow ambushed"; memory-canon open-decisions (operative resolved)
-
-- **[fix]** One survivor noticed
-  The table row "Asking the Crow's survivors — Unanimous praise, sincerely meant. Nothing." Change the row to "Pulling the Crow's roster — one clean, confused survivor who noticed he changed and never said so." Add to What's hidden: "One survivor of the Bellwether Crow noticed that Joffrey had changed, and never reported it."
-  src: memory-canon open-decisions (operative resolved)
-
-- **[add]** Who he is
-  Add to Who they are: "Joffrey was top of his class and is named the present-day great spelljammer of Caelestis. He was taken slowly: for months after the Crow he was himself, decorated, and he only recently finished converting. He reports to Vocath as agreed. His allegiance is N'ghathrod's."
-  src: data/npcs.json (Joffrey); memory-canon open-decisions (operative resolved)
-
-- **[add]** The price
-  Add to Threads beside the Vocath arrangement: "N'ghathrod offered Vocath an asset inside sealed Caelestis. His price was captives, taken in the Crow ambush."
-  src: memory-canon open-decisions (operative resolved)
 
 ---
 
@@ -1794,16 +1747,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ---
 
-### dossiers/tarroway.html
-
-- **[fix]** What his tables track
-  The page says "The patrol his tables track is the Vth'oramu — a hunting animal under command" and that he keeps "a schedule for an object that left the sector a year ago". Canon: the psychic wind is why Tarroway's patrol timing tables fail. Rewrite: "Tarroway's timing tables fail because the psychic wind keeps no rhythm. He has not worked that out, and will explain his tables to anyone who asks."
-  Touches: factions/vocath-operation.html, dossiers/vthoramu.html.
-  src: memory-canon campaign-canon § Naming (Astral Sea travel); chat-cosmic-campaign-structure § Tetherbreak, § Superseded
-
----
-  updated (round 4): superseded. The timing tables are cut; Tarroway stays as a thread (see "Trim Tarroway to a thread").
-
 ### dossiers/the-runekeeper.html
 
 - **[later]** The Runekeeper's name
@@ -1824,46 +1767,13 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/thessalar.html
 
-- **[fix]** The Elder Elemental Eye
-  The page says "the Elder Eye" twice. Change to "the Elder Elemental Eye".
-  src: session-rulings (Elder Elemental Eye)
+- **[decide]** The craft's control gems: two, or a system of seven
+  vessels/thessalars-craft.html (finished) says two gems controlled and defended the craft, the red gem in the cavern lake and the hazy yellow gem in the workshop. The module sweep lists a control and defence system built of gems: speckled amber, cloudy orange, three emerald green, light purple and hazy yellow. Rule whether the system holds more gems than the two Lola's Boys took. Touches: vessels/thessalars-craft.html, dossiers/thessalar.html, the Fonains doc.
+  src: module-sweep-fonains § Temple of Moloch; section 5 (2026-10-28)
 
-- **[fix]** The hazy yellow gem
-  The page says "He powers his work off an object out of another cosmology." Write: "He powers his work off the hazy yellow gem, one of the craft's control and defence gems, formed where Olhydra and Ogrémoch collided." The gems are the craft's components, not Reach residue.
-  src: session-rulings (gems not residue); working/STAGING.md § Fonains; module-sweep-fonains § Temple of Moloch
-
-- **[add]** Who he was
-  Add to Who they are: "Thessalar was a high priest of Moloch and an artificer. He killed the other priests and turned the temple into his laboratory. He made the thessalhydra, an owlbear and beasts like them, and he pursues lichdom."
-  src: module-sweep-fonains § Temple of Moloch
-
-- **[add]** The temple and the rift
-  Add to the temple description: "The temple stands over caverns where Olhydra and Ogrémoch fought and tore a rift between the Planes of Water and Earth. The stream there carries huge gems, rubies most of all."
-  src: module-sweep-fonains § Temple of Moloch
-
-- **[add]** Rooms of the temple
-  Add to the room table:
-  - "Moloch's statue has for eyes the two largest rubies ever taken from the lake, wired with silver to every control panel in the laboratory. Moloch is an exiled archdevil whose worship has faded."
-  - "The craft's control and defence system is built of gems: speckled amber, cloudy orange, three emerald green, light purple and hazy yellow." (The page names only the hazy yellow gem.)
-  - "The mechanical heart the party called 'the chicken' is the thessalheart construct. It powers the thessalhydra and reports to Thessalar."
-  - "In a private chapel the Thessalkraken is worshipped as the temple's living demigod, before a statue of Moloch reworked with tentacles and needle teeth."
-  - "An incomplete apparatus of Kwalish stands in the temple. The apparatus already existed in Thessalar's time."
-  src: module-sweep-fonains § Temple of Moloch
-
-- **[add]** What Lola's Boys took
-  Add to the paragraph that says they "took what they came for": "What Lola's Boys took were the craft's control and defence gems: the red gem from the cavern lake and the hazy yellow gem from Thessalar's workshop. The Accordance had sent them back to the year 425. Without the gems the craft fell, about 500 years ago, and the crash let N'ghathrod escape."
-  src: session-rulings (Thessalar); timeline "Lola's Boys in the year 425", "The craft falls"
-
-- **[add]** When the craft came down
-  Add to When the craft came down: "The craft was a megadungeon, and it broke up as it fell. The main body raised the Barrier Peaks; its unexplored levels are the Mad Mage's dungeon. A broken-off section became Daoine Gloine, and the floating monastery island is what remains of the main body. The Thessalkraken landed separately in the sea and became the Drowned God's kraken, guarding the trident's reef." (The page has the Thessalkraken only in the flooded temple.)
-  src: session-rulings (Thessalar); timeline "The craft falls"; module-sweep-fonains § Lost Laboratory of Kwalish
-
-- **[add]** Andras and Stolos
-  Add: "Andras and Stolos were once one man, Andrastolos." Fill out from the Fonains doc.
-  src: module-sweep-fonains § Spellings applied, § Promotes to; session-rulings (names)
-
-- **[add]** Tied to Tharizdun
-  Add to "Something was watching the work": "Thessalar is tied to Tharizdun through the Elder Elemental Eye."
-  src: memory-canon open-decisions (Fonains lore tie-in)
+- **[later]** Thessalar's copies and the dungeon's tiers
+  Which of the eight copies, if any, are loose outside the wreck, and how many tiers of the dungeon are worth mapping, wait until the crew heads for the wreck. His appearance is a sketch.
+  src: dossiers/thessalar.html; section 5 (2026-10-28)
 
 ---
 

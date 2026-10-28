@@ -19,14 +19,14 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Fonains
 
-### Fonains and the planar craft (realms/fonains, dossiers/thessalar, Fonains doc)
+### Fonains and the planar craft (realms/fonains, Fonains doc)
 - N'ghathrod was already a prisoner aboard Thessalar's craft. Lola's Boys, sent back in time by the Accordance, took its control and defense gems; without them it fell, and in the fall he escaped. Their year 425 is the year of the crash, about five hundred years before now.
 - The craft is a megadungeon (the Mad Mage dungeon). Daoine Gloine is a broken-off piece of it. The Thessalkraken landed separately in the sea and is the Drowned God's kraken.
 - The craft's gems formed where Olhydra and Ogrémoch collided. They are not Reach residue.
 - Benedetta fell ill at Rihiri's birth, from Vanifer's slow siphoning for the Bloodstone, and died two years later.
-- done: the craft, its gems, the fall, Daoine Gloine and the Thessalkraken are on vessels/thessalars-craft.html (section 4). realms/fonains.html, dossiers/thessalar.html and the Fonains doc still need them.
+- done: the craft, its gems, the fall, Daoine Gloine and the Thessalkraken are on vessels/thessalars-craft.html (section 4). dossiers/thessalar.html carries them (section 5). realms/fonains.html and the Fonains doc still need them.
 
-### Tharizdun (working/tharizdun.md, realms/fonains.html, dossiers/thessalar.html, Fonains doc)
+### Tharizdun (working/tharizdun.md, realms/fonains.html, Fonains doc)
 - The Day of Chaos is when the Princes of Elemental Evil break the barriers so Tharizdun can leave her prison.
 - The purple slit-pupiled eye the party saw in the year 425 is the Elder Elemental Eye, Tharizdun.
 - Fonains's Monolith is the only one ever to carry Tharizdun's crystal, and the only one recorded as destroyed.
@@ -36,7 +36,7 @@ when a ruling changes; delete it once the page carries it. See
 - Shothragot, her avatar, was bound to that temple. Its true vestige may still be there, and Giorge may be trying to reach it.
 - Lola's Boys, by taking the gems in the year 425, brought down the craft. In doing so they freed N'ghathrod and landed Tharizdun's foothold on their own world.
 - The planar craft was a vast floating city of many tiers. Where it came from is unknown.
-- done: the temple aboard, the gems, the crash and the Eye's arrival are on vessels/thessalars-craft.html (section 4).
+- done: the temple aboard, the gems, the crash and the Eye's arrival are on vessels/thessalars-craft.html (section 4); Tharizdun and Thessalar are on dossiers/thessalar.html (section 5).
 
 ### The Princes (timeline, realms/fonains.html, Fonains doc, the Cre'Tez line)
 - Long ago, about twelve thousand years before now, the Princes of Elemental Evil rose on Fonains. The six gods of the Accordance stepped in, helped forge the four weapons, and sealed the Princes away with the weapons as their keys.
@@ -147,16 +147,13 @@ when a ruling changes; delete it once the page carries it. See
 - done: the capture, the experiments, the seventh piece and the escape are on artifacts/rod-of-seven-parts.html and vessels/thessalars-craft.html (section 4). dossiers/nghathrod.html carries them (section 5); the timeline and rules/ still need them.
 - If N'ghathrod's true body dies, the taken do not die. Part of him lives on in each of them. His lieutenants are closest to him; each rung down the colony is further away. Given enough time, one of them could grow toward becoming another N'ghathrod. The taken lose a part of themselves when he dies.
 
-### Thessalar (dossiers/thessalar.html)
-- Thessalar is Halaster Blackcloak, and he is still in the planar craft. His records of the work on N'ghathrod are there too. (done: vessels/thessalars-craft.html, section 4.)
-
-### Clint Dashforest (dossiers/clint.html, campaign/colony/, timeline; done on factions/fleet.html and factions/vocath-operation.html, section 2, on locations/cairn-station.html, locations/astral-sea.html and the chart, section 3, and on vessels/bellwether-crow.html and artifacts/atlas-sister.html, section 4)
+### Clint Dashforest (campaign/colony/, timeline; done on dossiers/clint.html, section 5, and on factions/fleet.html and factions/vocath-operation.html, section 2, on locations/cairn-station.html, locations/astral-sea.html and the chart, section 3, and on vessels/bellwether-crow.html and artifacts/atlas-sister.html, section 4)
 - Vocath's crew ambushed the Bellwether Crow for a sister artifact of A.T.L.A.S. that the Crow was carrying. Clint took it and left the ship to draw the boarders off.
 - He steered for a color pool he could see opening, and went through it on purpose. Color pools open and close quickly, and this one carried him through a small pocket of another dimension and spat him out on Fonains, separated from the boarders who followed him in.
 - The Crow's survivors still argue about whether he meant to go through. He did.
 - In the Fleet, "went overboard" means more than falling from a ship. A crew member who leaves the ship to fight for it and does not come back has gone overboard. It is a softer way of saying killed in action. Tarto and Saerthe both feel they could have done something.
 
-### Tarroway (dossiers/tarroway.html, restricted/)
+### Tarroway (restricted/; done on dossiers/tarroway.html, section 5)
 - M. Tarroway is a cartographer on Strake Station. His readings were the first hint that an unknown vessel or structure was disturbing the satellites at the edge of the system.
 - His name turns up here and there, mainly in the Fleet Intelligence Archive. Nothing about him is public. (DM: a thread for the players to piece together, not a figure they meet.)
 
@@ -213,10 +210,6 @@ when a ruling changes; delete it once the page carries it. See
 - The PCs remember where they came from. Their pasts get filled in retroactively; nobody arrived with amnesia.
 
 ## Artifacts and vessels
-
-### A.T.L.A.S.'s sister (dossiers/clint.html; done on artifacts/, section 4)
-- A.T.L.A.S.'s sister houses another Distinction piece. Caelestis held it as a device, and like every housing it hides what it really does. On the surface it finds magic items, a lesser kind of item-finder, because every enchanted thing carries a faint trace of the Reach. Its true use is finding Reach artifacts. This is what Vocath's crew ambushed the Bellwether Crow to take. Clint carried it through the color pool; it is somewhere on Fonains.
-- done: artifacts/distinction-fragment.html, artifacts/atlas.html, artifacts/atlas-sister.html and the register (section 4). Still waiting: dossiers/clint.html.
 
 ### Wan, Tu and the fragment (crew/tumak.html, rules/; done on artifacts/dissolution-fragment.html, section 4)
 - The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) factions/runekeepers.html and artifacts/dissolution-fragment.html carry it; dossiers/the-runekeeper.html carries it (section 5); crew/tumak.html still needs it.
