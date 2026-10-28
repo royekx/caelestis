@@ -96,7 +96,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The Accordance seals the Princes",
-      "desc": "Six gods, Asmodeus, Eldath, Muriel and Ryujin among them, seal the four Princes of Elemental Evil and hide the keys.",
+      "desc": "Six gods, Asmodeus, Eldath, Muriel and Ryujin among them, help forge four weapons and seal the four Princes of Elemental Evil on Fonains, with the weapons as their keys. The fire genasi who become the Cre'Tez guard the fire key from then on.",
       "t": -12000,
       "tier": 1
     },
@@ -132,7 +132,7 @@
     {
       "lane": "vecna",
       "status": "past",
-      "cert": "working",
+      "cert": "canon",
       "title": "A Seeker chapter reaches Vanifer",
       "desc": "It trades her the lost meaning of the Alpha and the secret in the Cre'Tez blood.",
       "t": -12,
@@ -181,7 +181,7 @@
       "status": "past",
       "cert": "canon",
       "title": "Tharizdun imprisoned",
-      "desc": "Sealed in a prison with no address. If he can't get out, he will bring everything to him.",
+      "desc": "Sealed in a prison with no address in any known cosmology. If she cannot get out, she will bring everything to her.",
       "t": -30000,
       "tier": 1
     },
@@ -206,10 +206,10 @@
     {
       "lane": "princes",
       "status": "past",
-      "cert": "working",
+      "cert": "canon",
       "title": "The five-person ritual",
-      "desc": "Four cultists channel the Princes; the fifth holds pieces of a Tharizdun artifact. It is the Zenith, nudged by Vecna. The Monolith that answers is corrupted as it forms.",
-      "t": -0.92,
+      "desc": "Four cultists channel the Princes; the fifth holds pieces of Tharizdun's black crystal. It is the Zenith, nudged by Vecna, who knows it will be ridden. Tharizdun's black crystal replicates into the Monolith as it forms.",
+      "t": -0.49,
       "tier": 1
     },
     {
@@ -217,7 +217,7 @@
       "status": "projected",
       "cert": "canon",
       "title": "The Day of Chaos",
-      "desc": "The four Princes enter Fonains together, the barriers break, and Tharizdun gets his chance to leave. Yan-C-Bin is already manifest at Session 28.",
+      "desc": "The four Princes enter Fonains together, the barriers break, and Tharizdun gets her chance to leave her prison. Yan-C-Bin is already manifest at Session 28.",
       "t": 0.6,
       "tier": 1
     },
@@ -244,8 +244,8 @@
       "lane": "fonains",
       "status": "past",
       "cert": "canon",
-      "title": "Kwalish loses the craft",
-      "desc": "His party dies to the Sphinx; he puts their brains in tubes, opens a gate to the Nine Hells, and a bone devil drives him out.",
+      "title": "Kwalish loses his island",
+      "desc": "His party dies to the Sphinx; he puts their brains in jars, opens a gate to the Nine Hells, and a bone devil drives him from his island laboratory, a broken-off piece of Thessalar's craft.",
       "t": -30,
       "tier": 2
     },
@@ -282,7 +282,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The Alpha is invoked",
-      "desc": "Vanifer tries to make her father concede to her; he invokes the Alpha instead, locking them both out. Asmodus, dreaming of his mother, starts hunting; Rihiri is stabbed and survives.",
+      "desc": "Vanifer tries to make her father concede to her; he invokes the Alpha instead, locking them both out. Asmodus, dreaming of his mother, starts hunting; Rihiri is stabbed and survives, and Dharra gets her out. Kevulan wills his birthright to Asmodus, rescinds it, wills it to Xero, and flees.",
       "t": -2,
       "tier": 1
     },
@@ -292,7 +292,7 @@
       "cert": "canon",
       "title": "The Darkest Day",
       "desc": "Vecna's cult works a ritual on Giorge at the eclipse, as bait. The Monolith erupts over the cemetery. The first Accordance champions die fighting it.",
-      "t": -0.9,
+      "t": -0.47,
       "tier": 1
     },
     {
@@ -317,8 +317,8 @@
       "lane": "crew",
       "status": "past",
       "cert": "canon",
-      "title": "The Bellwether Crow ambushed",
-      "desc": "About a year before now, near Cairn Station. N'ghathrod takes Joffrey and lets him go; most of the crew doesn't return. Clint Dashforest goes overboard and the psychic wind carries him to Fonains.",
+      "title": "Bellwether Crow ambushed",
+      "desc": "About a year before now, near Cairn Station. Vocath's crew boards for A.T.L.A.S.'s sister. N'ghathrod takes Joffrey and lets him go; most of the crew doesn't return. Clint Dashforest takes the device, leaves the ship to draw the boarders off, and goes through a color pool on purpose. The Crow makes Strake under damage.",
       "t": -1.1,
       "tier": 1
     },
@@ -512,12 +512,12 @@
       "status": "past",
       "cert": "canon",
       "title": "Clint lands on Fonains",
-      "desc": "Carried by the psychic wind after the Bellwether Crow. He arrives before the Monolith and is on Fonains when it appears.",
+      "desc": "The color pool carries him through a small pocket of another dimension and out onto Fonains, apart from the boarders who followed him in. He arrives before the Monolith and is on Fonains when it appears.",
       "tier": 2
     },
     {
       "lane": "crew",
-      "t": -0.5,
+      "t": -0.19,
       "status": "past",
       "cert": "canon",
       "title": "Boogie takes the shard",
@@ -539,12 +539,12 @@
       "status": "past",
       "cert": "canon",
       "title": "The craft falls; N'ghathrod escapes",
-      "desc": "Stripped of its gems, the craft comes down. N'ghathrod escapes in the crash with his lieutenants and the tadpoles he can carry. The craft is a megadungeon whose unexplored levels become the Mad Mage dungeon, and it breaks up as it falls: the main body raises the Barrier Peaks, a broken-off section becomes Daoine Gloine, and the Thessalkraken lands separately in the sea, where it later guards the trident's reef. The elder brain is carried on to Fonains; when N'ghathrod reaches for it, Vecna answers.",
+      "desc": "Stripped of its gems, the craft comes down. N'ghathrod escapes in the crash with his lieutenants and the tadpoles he can carry, and never reaches Fonains. The craft is a megadungeon whose unexplored levels become the Mad Mage dungeon, and it breaks up as it falls: the main body raises the Barrier Peaks, broken-off pieces become Daoine Gloine and Kwalish's island, and the Thessalkraken lands separately in the sea, where it later guards the trident's reef. The elder brain is separated from him and lies trapped beneath the Barrier Peaks; when N'ghathrod reaches for it, Vecna answers.",
       "tier": 1
     },
     {
       "lane": "vecna",
-      "t": -0.75,
+      "t": -0.32,
       "tier": 1,
       "status": "past",
       "cert": "canon",
@@ -553,52 +553,52 @@
     },
     {
       "lane": "fonains",
-      "t": -0.64,
+      "t": -0.21,
       "tier": 1,
       "status": "past",
       "cert": "canon",
       "title": "The Monolith breaks",
-      "desc": "Kwalish's cannon splits it into four shards, each guarded by a Prince-aligned elemental. The cyst drops Ziko, his blade now black. Tharizdun: \"Wait for the day of chaos.\""
+      "desc": "Kwalish's cannon splits it. Four great shards fall, each guarded by a Prince-aligned elemental, and many smaller shards come from them; 333 of the small shards are black. The cyst drops Ziko, his blade now black. Shothragot, Tharizdun's avatar: \"Wait for the day of chaos.\""
     },
     {
       "lane": "princes",
-      "t": -0.5,
+      "t": -0.07,
       "tier": 1,
       "status": "past",
       "cert": "canon",
-      "title": "Aerisi takes the air spear",
-      "desc": "Aerisi Kalinoth, Yan-C-Bin's prophet, splits Eldath's tree in the Misty Vale and takes the spear while the Green Lady, cut off from Eldath, is trapped in dragon form. A black spiral spreads on the altar."
+      "title": "Aerisi takes Windvane",
+      "desc": "Aerisi Kalinoth, Yan-C-Bin's prophet, splits Eldath's tree in the Misty Vale and takes Windvane while the Green Lady, cut off from Eldath, is trapped in dragon form. A black spiral spreads on the altar."
     },
     {
       "lane": "princes",
-      "t": -0.55,
+      "t": -0.12,
       "tier": 1,
       "status": "past",
       "cert": "canon",
-      "title": "Pedra Ardante reaches Vanifer",
-      "desc": "Clint's crew rescues the archaeologists from the Blooming Glass and hands the fire-plane ruby to Fernerva, \"for the eldest brother.\""
+      "title": "The Pedra Ardente reaches Vanifer",
+      "desc": "Clint's crew rescues the archaeologists from the Blooming Glass and hands the Pedra Ardente, a fire-plane ruby, to Finerva, who is Vanifer, \"for the eldest brother.\""
     },
     {
       "lane": "princes",
-      "t": -0.46,
+      "t": -0.03,
       "tier": 1,
       "status": "past",
       "cert": "canon",
-      "title": "The Sacred Stone takes the war pick",
-      "desc": "Lola's Boys open the dwarven vault under the Martyr Dome at the Tournament of Masters. Marlos petrifies Jorgi and leaves with the pick."
+      "title": "The Sacred Stone takes Ironfang",
+      "desc": "Lola's Boys open the dwarven vault under the Martyr Dome at the Tournament of Masters. Marlos petrifies Jorgi and leaves with Ironfang."
     },
     {
       "lane": "princes",
-      "t": -0.43,
+      "t": 0,
       "tier": 1,
       "status": "now",
       "cert": "canon",
       "title": "Yan-C-Bin summoned",
-      "desc": "On the floating island above the Feathergale Spire, Aerisi Kalinoth, the winged elf queen, raises the spear: \"With this key, I call forth my lord and master.\" The Prince of Air manifests."
+      "desc": "On the floating island above the Feathergale Spire, Aerisi Kalinoth, the winged elf queen, raises Windvane: \"With this key, I call forth my lord and master.\" The Prince of Air manifests."
     },
     {
       "lane": "princes",
-      "t": -1.0,
+      "t": -1,
       "tier": 2,
       "status": "past",
       "cert": "canon",
@@ -607,18 +607,18 @@
     },
     {
       "lane": "fonains",
-      "t": -0.82,
+      "t": -0.39,
       "tier": 1,
       "status": "now",
       "cert": "canon",
       "title": "Lola's Boys",
       "desc": "From the hunt for Kwalish's lost laboratory to the air Prince's rising. The campaign everything on Fonains builds from.",
-      "end": -0.43,
+      "end": 0,
       "kind": "campaign"
     },
     {
       "lane": "crew",
-      "t": -0.4,
+      "t": -0.185,
       "tier": 1,
       "status": "now",
       "cert": "canon",
@@ -629,103 +629,103 @@
     },
     {
       "lane": "fonains",
-      "t": -0.82,
+      "t": -0.39,
       "tier": 2,
       "status": "past",
       "cert": "canon",
       "title": "The hunt for Kwalish's lost laboratory",
       "desc": "Across the Jaded Forest and the Barrier Peaks to the Monastery of the Distressed Body, then down into Daoine Gloine, where Kwalish is found and the Accordance chooses its champions.",
-      "end": -0.75,
+      "end": -0.32,
       "kind": "arc",
       "session": "S1–S10"
     },
     {
       "lane": "fonains",
-      "t": -0.74,
+      "t": -0.31,
       "tier": 2,
       "status": "past",
       "cert": "canon",
       "title": "Back to the Temple of Moloch",
       "desc": "Sent 500 years back to take the craft's lost gems from Thessalar's temple. Lusion joins.",
-      "end": -0.73,
+      "end": -0.3,
       "kind": "arc",
       "session": "S11–S12"
     },
     {
       "lane": "fonains",
-      "t": -0.7,
+      "t": -0.27,
       "tier": 2,
       "status": "past",
       "cert": "canon",
       "title": "Breaking the Monolith",
       "desc": "The craft rises on the stolen gems, and its cannon splits the Monolith into four elemental shards.",
-      "end": -0.64,
+      "end": -0.21,
       "kind": "arc",
       "session": "S13–S15"
     },
     {
       "lane": "fonains",
-      "t": -0.64,
+      "t": -0.21,
       "tier": 2,
       "status": "past",
       "cert": "canon",
       "title": "Downtime and the fire cult",
-      "desc": "A month at Lola's Place, then the road to Baratol to free Dara and Rahiri from Elizar Dryflagon's fire cult.",
-      "end": -0.49,
+      "desc": "A month at Lola's Place, then the road to Baratol to free Dharra and Rihiri from Elizar Dryflagon's fire cult.",
+      "end": -0.06,
       "kind": "arc",
       "session": "S16–S19"
     },
     {
       "lane": "fonains",
-      "t": -0.485,
+      "t": -0.055,
       "tier": 2,
       "status": "past",
       "cert": "canon",
       "title": "The Tournament of Masters",
       "desc": "Jorgi questions Cobra Kai's creed; the Sacred Stone seizes the dojos and the party must win them back at Zonlilimer.",
-      "end": -0.46,
+      "end": -0.03,
       "kind": "arc",
       "session": "S20–S23"
     },
     {
       "lane": "fonains",
-      "t": -0.455,
+      "t": -0.025,
       "tier": 2,
       "status": "past",
       "cert": "canon",
       "title": "Sibling Rivalries",
       "desc": "Xero answers a phoenix's summons to Gransby and faces Bastian's devastation orb.",
-      "end": -0.45,
+      "end": -0.02,
       "kind": "arc",
       "session": "S24–S25"
     },
     {
       "lane": "fonains",
-      "t": -0.445,
+      "t": -0.015,
       "tier": 2,
       "status": "past",
       "cert": "canon",
       "title": "One's strange message",
       "desc": "Pulled back to the planar craft and on to the elder brain's lair under the Barrier Peaks.",
-      "end": -0.44,
+      "end": -0.01,
       "kind": "arc",
       "session": "S26–S27"
     },
     {
       "lane": "fonains",
-      "t": -0.435,
+      "t": -0.005,
       "tier": 2,
       "status": "now",
       "cert": "canon",
       "title": "Weathering the storm",
       "desc": "Eight days of storm, heaviest at the Monolith ruins. The air shard opens.",
-      "end": -0.43,
+      "end": 0,
       "kind": "arc",
       "session": "S28"
     },
     {
       "lane": "fonains",
-      "t": -0.82,
+      "t": -0.39,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -736,7 +736,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.81,
+      "t": -0.38,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -747,7 +747,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.8,
+      "t": -0.37,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -758,7 +758,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.79,
+      "t": -0.36,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -769,7 +769,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.785,
+      "t": -0.355,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -780,7 +780,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.78,
+      "t": -0.35,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -791,7 +791,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.775,
+      "t": -0.345,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -802,7 +802,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.77,
+      "t": -0.34,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -813,7 +813,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.76,
+      "t": -0.33,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -824,7 +824,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.75,
+      "t": -0.32,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -835,7 +835,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.74,
+      "t": -0.31,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -846,7 +846,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.73,
+      "t": -0.3,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -857,7 +857,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.7,
+      "t": -0.27,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -868,18 +868,18 @@
     },
     {
       "lane": "fonains",
-      "t": -0.65,
+      "t": -0.22,
       "tier": 3,
       "status": "past",
       "cert": "canon",
       "title": "Kwalish's cannon splits the Monolith",
-      "desc": "Four shards turn around a black cyst in the Trentara Forest.",
+      "desc": "Four great shards turn around a black cyst in the Trentara Forest, and many smaller shards come from them; 333 of the small shards are black.",
       "kind": "session",
       "session": "S14"
     },
     {
       "lane": "fonains",
-      "t": -0.64,
+      "t": -0.21,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -890,7 +890,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.6,
+      "t": -0.17,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -901,7 +901,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.55,
+      "t": -0.12,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -912,18 +912,18 @@
     },
     {
       "lane": "fonains",
-      "t": -0.52,
+      "t": -0.09,
       "tier": 3,
       "status": "past",
       "cert": "canon",
-      "title": "Dara and Rahiri freed",
+      "title": "Dharra and Rihiri freed",
       "desc": "The tower fight in Baratol, Asmodus's letter, and word that Lola's Place was attacked.",
       "kind": "session",
       "session": "S18"
     },
     {
       "lane": "fonains",
-      "t": -0.505,
+      "t": -0.075,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -934,7 +934,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.485,
+      "t": -0.055,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -945,7 +945,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.48,
+      "t": -0.05,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -956,7 +956,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.47,
+      "t": -0.04,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -967,18 +967,18 @@
     },
     {
       "lane": "fonains",
-      "t": -0.46,
+      "t": -0.03,
       "tier": 3,
       "status": "past",
       "cert": "canon",
       "title": "The Tournament of Masters",
-      "desc": "The war pick under the Martyr Dome. Marlos petrifies Jorgi and leaves with it.",
+      "desc": "Ironfang under the Martyr Dome. Marlos petrifies Jorgi and leaves with it.",
       "kind": "session",
       "session": "S23"
     },
     {
       "lane": "fonains",
-      "t": -0.455,
+      "t": -0.025,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -989,7 +989,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.45,
+      "t": -0.02,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1000,7 +1000,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.445,
+      "t": -0.015,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1011,18 +1011,18 @@
     },
     {
       "lane": "fonains",
-      "t": -0.44,
+      "t": -0.01,
       "tier": 3,
       "status": "past",
       "cert": "canon",
       "title": "The elder brain",
-      "desc": "Duran wakes from his loop, Jorgi burns the mind flayer, and the elder brain is buried.",
+      "desc": "Duran wakes from his loop, Jorgi burns the mind flayer, and the elder brain is broken and buried in the collapse. It teleports out and escapes.",
       "kind": "session",
       "session": "S27"
     },
     {
       "lane": "fonains",
-      "t": -0.43,
+      "t": 0,
       "tier": 3,
       "status": "now",
       "cert": "canon",
@@ -1033,7 +1033,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.36,
+      "t": -0.18,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1044,7 +1044,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.292,
+      "t": -0.148,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1055,7 +1055,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.224,
+      "t": -0.116,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1066,7 +1066,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.156,
+      "t": -0.084,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1077,7 +1077,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.088,
+      "t": -0.052,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1123,13 +1123,13 @@
       "kind": "primary"
     },
     {
-      "t": -0.43,
+      "t": 0,
       "label": "Fonains now (S28)",
       "kind": "secondary"
     }
   ],
   "decisions": [
-    "Caelestis's present sits a few months after the Fonains Monolith broke, shortly after Fonains's Session 28. Clint reaches Fonains about a year before Caelestis's present, before the Monolith appears. Boogie's shard came from the broken Monolith through Vocath's line, before V001. This replaces \"Caelestis runs about a year before Fonains.\"",
+    "Caelestis's present sits a few months after the Fonains Monolith broke, about level with Fonains's Session 28. Clint reaches Fonains about a year before Caelestis's present, before the Monolith appears. Boogie's shard came from the broken Monolith through Vocath's line, before V001. This replaces \"Caelestis runs about a year before Fonains.\"",
     "Benedetta fell ill at Rihiri's birth, about twelve years ago, and died about ten years ago. The illness was Vanifer siphoning her soul into the illegitimate Bloodstone, which took about two years.",
     "Thessalar's planar craft fell about 500 years ago. N'ghathrod had already lost a clash with it and was a prisoner aboard, being experimented on. Lola's Boys, sent back by the Accordance, took the craft's control and defense gems; without them it fell, and the crash let N'ghathrod escape. The party unknowingly made their own villain in another campaign. \"Some millennia ago\" in Lola's Boys is rumour.",
     "Session and voyage dates inside a campaign are spaced by feel; their order is canon. Lola's Boys runs from about a month after the Darkest Day to Session 28, two to three months after the Monolith broke.",
@@ -1198,19 +1198,19 @@
         "group": "Keys"
       },
       {
-        "name": "The war pick",
+        "name": "Ironfang",
         "group": "Keys"
       },
       {
-        "name": "The spear",
+        "name": "Windvane",
         "group": "Keys"
       },
       {
-        "name": "The trident",
+        "name": "Drown",
         "group": "Keys"
       },
       {
-        "name": "Pedra Ardante",
+        "name": "The Pedra Ardente",
         "group": "Artifacts"
       },
       {
@@ -1240,9 +1240,9 @@
       "The four keys": [
         "Tharizdun and the Princes",
         "Tinderstrike",
-        "The war pick",
-        "The spear",
-        "The trident",
+        "Ironfang",
+        "Windvane",
+        "Drown",
         "Vanifer",
         "Aerisi",
         "Lola's Boys"
@@ -1269,7 +1269,7 @@
         "Vanifer",
         "Asmodus",
         "Lola's Boys",
-        "Pedra Ardante",
+        "The Pedra Ardente",
         "Vecna"
       ],
       "Caelestis": [
@@ -1286,24 +1286,14 @@
       {
         "t": -12000,
         "status": "past",
-        "title": "The Accordance seals the four Princes and hides the keys",
+        "title": "The Accordance seals the four Princes with the four keys",
         "who": [
           "The Accordance",
           "Tharizdun and the Princes",
           "Tinderstrike",
-          "The war pick",
-          "The spear",
-          "The trident"
-        ]
-      },
-      {
-        "t": -350,
-        "status": "past",
-        "title": "Asmodeus gives the fire genasi Tinderstrike to seal Imix; the Cre'Tez line begins",
-        "who": [
-          "The Accordance",
-          "Tharizdun and the Princes",
-          "Tinderstrike"
+          "Ironfang",
+          "Windvane",
+          "Drown"
         ]
       },
       {
@@ -1339,15 +1329,25 @@
         ]
       },
       {
-        "t": -150,
+        "t": -350,
         "status": "past",
-        "title": "The Green Lady flees to the Misty Vale, where she will guard the spear",
+        "title": "Asmodeus gives the fire genasi Tinderstrike to seal Imix; the Cre'Tez line begins",
         "who": [
-          "The spear"
+          "The Accordance",
+          "Tharizdun and the Princes",
+          "Tinderstrike"
         ]
       },
       {
-        "t": -13,
+        "t": -150,
+        "status": "past",
+        "title": "The Green Lady flees to the Misty Vale, where she will guard Windvane",
+        "who": [
+          "Windvane"
+        ]
+      },
+      {
+        "t": -12,
         "status": "past",
         "title": "A Seeker chapter tells Vanifer the secret in the Cre'Tez blood",
         "who": [
@@ -1359,9 +1359,9 @@
       {
         "t": -6,
         "status": "past",
-        "title": "The Drowned God: the Silver Wave Bandits take the trident",
+        "title": "The Drowned God: the Silver Wave Bandits take Drown",
         "who": [
-          "The trident"
+          "Drown"
         ]
       },
       {
@@ -1377,7 +1377,7 @@
       {
         "t": -1.1,
         "status": "past",
-        "title": "The Bellwether Crow ambushed: Joffrey taken, Clint overboard",
+        "title": "Bellwether Crow ambushed: Joffrey taken, Clint through a color pool",
         "who": [
           "N'ghathrod",
           "Joffrey",
@@ -1394,7 +1394,7 @@
         ]
       },
       {
-        "t": -0.9,
+        "t": -0.47,
         "status": "past",
         "title": "The Darkest Day: Vecna's bait ritual on Giorge; the corrupted Monolith rises",
         "who": [
@@ -1405,9 +1405,9 @@
         ]
       },
       {
-        "t": -0.7,
+        "t": -0.27,
         "status": "past",
-        "title": "The craft restarted with the stolen gems; the Accordance names its champions",
+        "title": "Kwalish's island raised on the stolen gems; the Accordance names its champions",
         "who": [
           "Lola's Boys",
           "The Accordance",
@@ -1415,7 +1415,7 @@
         ]
       },
       {
-        "t": -0.64,
+        "t": -0.21,
         "status": "past",
         "title": "The Monolith breaks; Ziko's blade turns black; the shards scatter",
         "who": [
@@ -1426,7 +1426,7 @@
         ]
       },
       {
-        "t": -0.56,
+        "t": -0.2,
         "status": "past",
         "title": "Vocath's people leave Fonains with fragments",
         "who": [
@@ -1435,17 +1435,38 @@
         ]
       },
       {
-        "t": -0.55,
+        "t": -0.19,
         "status": "past",
-        "title": "The Blooming Glass: Clint's crew hands Pedra Ardante to Vanifer",
+        "title": "Boogie takes the shard from a shipment",
         "who": [
-          "Clint",
-          "Vanifer",
-          "Pedra Ardante"
+          "The Fonains shard",
+          "The crew",
+          "Vocath"
         ]
       },
       {
-        "t": -0.52,
+        "t": -0.12,
+        "status": "past",
+        "title": "The Blooming Glass: Clint's crew hands the Pedra Ardente to Vanifer",
+        "who": [
+          "Clint",
+          "Vanifer",
+          "The Pedra Ardente"
+        ]
+      },
+      {
+        "t": -0.1,
+        "status": "past",
+        "title": "V001–V006: thefts, the neogi, the tyrant ship",
+        "who": [
+          "The crew",
+          "Vocath",
+          "Joffrey",
+          "The Fonains shard"
+        ]
+      },
+      {
+        "t": -0.09,
         "status": "past",
         "title": "Ziko leaves his sword under the bed at Lola's Place",
         "who": [
@@ -1454,20 +1475,17 @@
         ]
       },
       {
-        "t": -0.5,
+        "t": -0.07,
         "status": "past",
-        "title": "Aerisi takes the spear from the Misty Vale; Boogie takes the shard from a shipment",
+        "title": "Aerisi takes Windvane from the Misty Vale",
         "who": [
-          "The spear",
+          "Windvane",
           "Tharizdun and the Princes",
-          "The Fonains shard",
-          "The crew",
-          "Vocath",
           "Aerisi"
         ]
       },
       {
-        "t": -0.48,
+        "t": -0.05,
         "status": "past",
         "title": "Giorge attacks Lola's Place for the sword",
         "who": [
@@ -1477,17 +1495,17 @@
         ]
       },
       {
-        "t": -0.46,
+        "t": -0.03,
         "status": "past",
-        "title": "The Sacred Stone takes the war pick from under the Martyr Dome",
+        "title": "The Sacred Stone takes Ironfang from under the Martyr Dome",
         "who": [
           "Lola's Boys",
-          "The war pick",
+          "Ironfang",
           "Tharizdun and the Princes"
         ]
       },
       {
-        "t": -0.45,
+        "t": -0.02,
         "status": "past",
         "title": "Bastian falls; Kevulan bound to Xero; \"the fire witch will avenge\"",
         "who": [
@@ -1497,25 +1515,14 @@
         ]
       },
       {
-        "t": -0.43,
+        "t": 0,
         "status": "now",
-        "title": "Fonains now: the spear summons Yan-C-Bin",
+        "title": "Fonains now: Windvane summons Yan-C-Bin",
         "who": [
           "Lola's Boys",
           "Tharizdun and the Princes",
-          "The spear",
+          "Windvane",
           "Aerisi"
-        ]
-      },
-      {
-        "t": -0.2,
-        "status": "past",
-        "title": "V001–V006: thefts, the neogi, the tyrant ship",
-        "who": [
-          "The crew",
-          "Vocath",
-          "Joffrey",
-          "The Fonains shard"
         ]
       },
       {
@@ -1535,14 +1542,14 @@
         "who": [
           "Tharizdun and the Princes",
           "Tinderstrike",
-          "The war pick",
-          "The spear",
-          "The trident",
+          "Ironfang",
+          "Windvane",
+          "Drown",
           "Lola's Boys",
           "Vanifer",
           "Asmodus",
           "Vecna",
-          "Pedra Ardante",
+          "The Pedra Ardente",
           "Aerisi"
         ]
       },
@@ -1575,7 +1582,7 @@
       "lanes": [
         "crew"
       ],
-      "from": -0.45,
+      "from": -0.2,
       "to": 0.3
     },
     {
@@ -1584,8 +1591,8 @@
       "lanes": [
         "fonains"
       ],
-      "from": -0.95,
-      "to": -0.4
+      "from": -0.52,
+      "to": 0
     },
     {
       "id": "krynn",

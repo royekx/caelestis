@@ -13,36 +13,12 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Fonains
 
-### The Princes (timeline, locations/fonains.html, Fonains doc, the Cre'Tez line)
-- Long ago, about twelve thousand years before now, the Princes of Elemental Evil rose on Fonains. The six gods of the Accordance stepped in, helped forge the four weapons, and sealed the Princes away with the weapons as their keys.
-- The fire genasi who became the Cre'Tez have guarded the fire key since that sealing.
-- About three and a half centuries ago a sect of the fire genasi tried to summon Imix. Asmodeus gave the few who resisted Tinderstrike to seal him again, and bound the key to their blood; the price was that Imix be forgotten. Over the generations since, the line has turned tiefling.
-- About five hundred years ago Thessalar's planar craft crashed on Fonains, and Tharizdun's influence arrived with the temple aboard it. It spread slowly through the world and into new cults. Those cults raised the four prophets, and in recent years everything has begun to move.
-- done: locations/fonains.html and factions/cretez.html (section 8). The timeline still needs its Princes lane.
-
-### The elder brain (locations/fonains.html, timeline, dossiers/nghathrod.html)
-- N'ghathrod's elder brain was separated from him in the crash. He believed it dead, or could not reach it. It lay trapped beneath the Barrier Peaks for about five hundred years, possibly growing a colony of its own, until Lola's Boys broke it in Session 27. It was buried in the collapse, but it teleported out and escaped.
-- done: dossiers/nghathrod.html (section 5); locations/fonains.html (section 8). The timeline still needs it.
-
-### The Fonains shards (locations/fonains.html, artifacts/fonains-shard.html, timeline)
-- When the Monolith broke, four great shards fell, and many smaller shards came from them. Three hundred and thirty-three of the small shards are black. The rest took colors close to their elemental affinities.
-- done: artifacts/fonains-shard.html (section 4); locations/fonains.html (section 8). The timeline still needs it.
-
 ### Fonains geography (locations/fonains.html, Fonains doc; section 8)
 - T'Arionese is a region of Fonains. Orerius is in T'Arionese. The Cre'Tez estate is in Orerius, and it is the home of the Cre'Tez siblings (Xero, Lusion, Vanifer and the others). Clint works bounties out of Orerius, and Finerva (Vanifer) posted the Blooming Glass bounty there for the Cre'Tez.
 - The remains of the Fonains Monolith lie in the Trentara forest, in the north of the northern continent, between Nomnia and the Kingdom of Shaumala.
 - On Korey's map the Barrier Peaks lie in the south-west of the northern continent, below Gabuk and Selran, near the isthmus that runs down to T'Arionese. They are notable for Thessalar's crashed planar craft: its main body raised the peaks, and Thessalar is still inside (already on vessels/thessalars-craft.html and dossiers/thessalar.html; this line is for placing the peaks on the map).
 - Korey's Fonains map (his own) is the page's map (`assets/maps/fonains.webp`); places on Fonains are placed from it.
 - done: dossiers/clint.html and connections.json carry Orerius (section 7 correction); locations/fonains.html carries them and the map (section 8). Still waiting: Trentara and T'Arionese as nodes in connections.json.
-
-## Timeline
-
-### Timing (timeline, campaign/, locations/fonains.html)
-- Caelestis's present sits a few months after the Fonains Monolith broke, level with Fonains Session 28.
-- Session 28 is two to three months after the Monolith broke.
-- Krynn's present is level with Caelestis's.
-- Thessalar's planar craft fell about 500 years ago.
-- done: locations/fonains.html DM notes (section 8). The timeline still needs the shift.
 
 ## Factions
 
@@ -74,12 +50,6 @@ when a ruling changes; delete it once the page carries it. See
 - N'ghathrod's long life comes from his taken. A portion of every taken person is tithed upward to him, the way a hive feeds its center, and it extends his life. The more he takes, the longer he lasts.
 - done: the capture, the experiments, the seventh piece and the escape are on artifacts/rod-of-seven-parts.html and vessels/thessalars-craft.html (section 4). dossiers/nghathrod.html carries them (section 5); the timeline and rules/ still need them.
 - If N'ghathrod's true body dies, the taken do not die. Part of him lives on in each of them. His lieutenants are closest to him; each rung down the colony is further away. Given enough time, one of them could grow toward becoming another N'ghathrod. The taken lose a part of themselves when he dies.
-
-### Clint Dashforest (timeline; done on dossiers/clint.html, section 5, and on factions/fleet.html and factions/vocath-operation.html, section 2, on locations/cairn-station.html, locations/astral-sea.html and the chart, section 3, and on vessels/bellwether-crow.html and artifacts/atlas-sister.html, section 4)
-- Vocath's crew ambushed the Bellwether Crow for a sister artifact of A.T.L.A.S. that the Crow was carrying. Clint took it and left the ship to draw the boarders off.
-- He steered for a color pool he could see opening, and went through it on purpose. Color pools open and close quickly, and this one carried him through a small pocket of another dimension and spat him out on Fonains, separated from the boarders who followed him in.
-- The Crow's survivors still argue about whether he meant to go through. He did.
-- In the Fleet, "went overboard" means more than falling from a ship. A crew member who leaves the ship to fight for it and does not come back has gone overboard. It is a softer way of saying killed in action. Tarto and Saerthe both feel they could have done something.
 
 ### Tarroway (restricted/; done on dossiers/tarroway.html, section 5)
 - M. Tarroway is a cartographer on Strake Station. His readings were the first hint that an unknown vessel or structure was disturbing the satellites at the edge of the system.

@@ -32,8 +32,8 @@ staging once Korey has read and accepted them.
 |---|---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 9 | 12 | 15 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 24 | 0 | 0 | 1 |
-| Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 3 | 12 | 5 | 0 | 0 |
-| Timeline | the rest of timeline.json | 0 | 1 | 9 | 0 | 0 |
+| Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 4 | 12 | 0 | 0 | 0 |
+| Timeline | the rest of timeline.json | 0 | 1 | 8 | 0 | 0 |
 | Factions | factions/ | 3 | 10 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 1 |
 | Dossiers | dossiers/ | 17 | 15 | 0 | 0 | 1 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 4 | 0 | 1 |
-| **Total** |  | **101** | **142** | **65** | **3** | **54** |
+| **Total** |  | **102** | **142** | **59** | **3** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -615,12 +615,6 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
   Whether his crab-claw prosthetic echoes Hayden's prosthetic and one-armed father (inference). Options: tie them; leave it coincidental.
   src: module-sweep-fonains § Usable mechanics
 
-- **[fix]** The Pedra Ardente quest: one spelling each
-  Ruled (STAGING round 8): the Pedra Ardente is a gem, and Finerva is Vanifer under another name. The place was already answered as the Blooming Glass (see dossiers/clint.html). Use these spellings everywhere (doc, dossier, timeline): the Blooming Glass; the Pedra Ardente; Finerva. Change the timeline's "Pedra Ardante" and "Fernerva" and the dossier's "Fenerba". Write in the doc:
-  "Vanifer posted the Blooming Glass bounty under the name Finerva, for the eldest Cre'Tez brother. The Pedra Ardente, the gem Clint's crew recovered there, went to her."
-  src: Korey, 2026-10-25 (round 8); dossiers/clint.html; timeline.json; memory-canon (Fonains canon 2026-10-25)
-  done: dossiers/clint.html (section 5); factions/cretez.html and dossiers/vanifer.html (section 8). The timeline and the Fonains doc still need it (terms.json now flags "Pedra Ardante" and "Fernerva").
-
 ### factions/cretez.html, dossiers/vanifer.html
 
 - **[later]** Where Cenvinzo is held
@@ -637,25 +631,12 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
 
 ### Timeline (Fonains lane)
 
-- **[fix]** The shards: four great, many small, 333 black
-  Ruled (STAGING round 8). The figure "about 333,333 shards" is retired. Word Timeline S14–S15 and every page that carries the count (artifacts/fonains-shard.html, crew/boogie.html) to match:
-  "When the Monolith broke, four great shards fell, each guarded by a Prince-aligned elemental, and many smaller shards came from them. Three hundred and thirty-three of the small shards are black. The rest took colors close to their elemental affinities."
-  src: Korey, 2026-10-25 (round 8); timeline.json
-  done: artifacts/fonains-shard.html (section 4); crew/boogie.html (section 7). Timeline S14–S15 still needs it.
+done (section 8): the shift (Session 28 at 0, the break at -0.21, the shard at -0.19, V001-V006 between -0.18 and -0.02), the shards, the five-person ritual, the Pedra Ardente and Finerva, Dharra and Rihiri, and Clint's color pool.
 
-- **[fix]** Fonains's present is level with Caelestis
-  The clock "Fonains now (S28)" sits at t -0.43 against "Caelestis now" at 0, and the Lola's Boys band ends at -0.43. Shift the Fonains lane so Session 28 sits at about 0. Keep the Monolith break two to three months before it (today the break is at -0.64, which is about 0.21 before S28, so the spacing already holds).
-  Knock-on: "Boogie takes the shard" sits at t -0.5. After the shift the break lands near -0.21, so the shard event must move to between the break and Voyage 001. "Clint lands on Fonains" (-1.05) still precedes the Monolith's appearance and can stay.
-  Also reword the first `decisions` line, "shortly after Fonains's Session 28", to "about level with Fonains's Session 28".
-  src: session-rulings (timing); memory-canon (Timing, supersedes "a year before")
+- **[decide]** Nelson or Nalsa
+  The timeline has "Nelson" show the Accordance's champions their gods and name them (S10, "The Accordance chooses Lola's Boys"); factions/deities.html names the Accordance's emissary Nalsa, an androsphinx. Same figure under a table spelling, or two? If the same, the timeline takes Nalsa.
+  src: timeline.json; factions/deities.html#nalsa; section 8
 
-- **[fix]** The five-person ritual is canon
-  Event "The five-person ritual" is cert "working". Set it to "canon".
-  src: memory-canon (open-decisions, Locked 2026-10-25)
-
-- **[fix]** Rihiri's spelling
-  The S18 event "Dara and Rahiri freed" spells "Rahiri". Change to "Rihiri", and "Dara" to "Dharra" (the spelling in the foundry notes, STAGING and terms.json; round 8's "Darra" was a slip).
-  src: session-rulings
 
 # Timeline
 
@@ -683,10 +664,6 @@ Order: decide, fix, drop, add.
 - **[later]** When the Glyth Watcher got out
   "The Glyth Watcher gets out" sits at t -3 (cert working). glyth-watcher.md leaves how she got out open. Options: keep about three years ago; or leave the event undated.
   src: glyth-watcher § Open; timeline.json
-
-- **[fix]** Clint and the psychic wind
-  "The Bellwether Crow ambushed" says "Clint Dashforest goes overboard and the psychic wind carries him to Fonains", and "Clint lands on Fonains" says "Carried by the psychic wind after the Bellwether Crow". Psychic wind is retired: Clint took A.T.L.A.S.'s sister and went through a color pool on purpose, which carried him through a pocket of another dimension to Fonains (STAGING § Clint; vessels/bellwether-crow.html). The Crow made Strake under damage.
-  src: section 4 (2026-10-28)
 
 - **[fix]** N'ghathrod's aging
   "Captured aboard Thessalar's craft" says the seventh piece made his ceremorphosis paracausal "and his aging stops". His long life comes from the tithe of his taken, and the seventh piece is the root of the taking (STAGING § N'ghathrod; artifacts/rod-of-seven-parts.html). Drop "and his aging stops".
