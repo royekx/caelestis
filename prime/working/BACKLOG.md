@@ -188,10 +188,9 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-26
   done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); prime/factions (section 2); prime/locations (section 3).
 
-- **[decide]** The calendar the Cycle counts *(later)*
-  Pages date orders by Cycle (1486, 1489, 1490); the survey uses Cycle 1490 as the present for provisional designations. Set what the Cycle counts from, and how Toril's reckoning, Fonains's "year 425" and Krynn's calendar line up against it.
-  src: Korey, 2026-10-26; restricted/ orders
-
+- **[decide]** Galactic time cycles (GTC)
+  The Fleet keeps one standard galactic time, modelled on UTC: a single reference everyone converts to. The FIA's "Cycle 1490" and "Cycle 1491" are GTC cycles, and the current cycle is 1491. Still to set: the epoch (what Cycle 0 is), and a cycle's length against local years, so local spans convert (500 years on Fonains is not 500 cycles) and loose timelines can be drawn. Toril's years, Fonains's "year 425" and Krynn's calendar each convert to GTC. Do not use "reckoning" for any of this.
+  src: Korey, 2026-10-28 (dates ruling); replaces "The calendar the Cycle counts" (Korey, 2026-10-26; restricted/ orders)
 - **[later]** Spelljammer's own terms
   Korey wants to wear down the Spelljammer barriers ("spelljamming" means nothing for a ship); spheres have become galaxies. Review the remaining genre terms (spelljammer, spelljamming helm, wildspace, Astral Sea, phlogiston) for plainer replacements during the overhaul.
   src: Korey, 2026-10-26
