@@ -13,7 +13,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Factions
 
-### Caelestis, the Driftwardens and the United Intergalactic Fleet (factions/fleet.html, factions/index.html, cosmology/, locations/, glossary/, restricted/)
+### Caelestis, the Driftwardens and the United Intergalactic Fleet (factions/fleet.html, factions/index.html, cosmology/, locations/, glossary/, spelljammer-nexus/)
 - The United Intergalactic Fleet, which everyone calls the Fleet, is made of a handful of sector branches, four or five. Each branch oversees one sector of the Erevos Galaxy, a cluster of several systems, and keeps sites in its systems, near them, or between them. The branches work together and together make the Fleet.
 - Caelestis is one of these sectors: the Caelestis Sector, which includes the system where Toril lies. It has two parts. The Caelestis Corps is the sector's branch of the Fleet and oversees the sector. The Caelestis Spelljammer Academy trains cadets to become Driftwardens; there are only a handful of spelljammer academies in the galaxy.
 - Everyone in the Fleet's service is a Driftwarden, assigned to a sector. Driftwardens hold ranks, from the newest graduate up through officers and commanders. A Driftwarden reports to the commander of their station; station commanders answer to the sector's command, and the sectors to the Fleet.
@@ -25,7 +25,7 @@ when a ruling changes; delete it once the page carries it. See
 - The sectors share information, but not all of it. Each keeps a good deal to itself, the way rival departments do. The Fleet Intelligence Archive is the Caelestis Sector's archive: it holds what Caelestis knows of its own sector and only some of what the others share.
 - The Order's Watchers are more organized than the sector branches. They keep to the Erevos Galaxy, as the Fleet does, more densely in some places than others.
 - The stations differ with the local ecology of their place: what drifts there, what lives there, what threatens it. Their crews are drawn from the sector that keeps them. Readings from the stations pass between the sectors; this is how a disturbance seen at one edge reaches another.
-- done: factions/fleet.html and the glossary lines for sector, the Caelestis Sector, Corps, Academy, the Bridge and the FIA (section 2); locations/ondrel-anchorage.html, locations/strake-station.html and locations/caelestis.html (section 3). Still waiting: the FIA's account of the Fleet on restricted/.
+- done: factions/fleet.html and the glossary lines for sector, the Caelestis Sector, Corps, Academy, the Bridge and the FIA (section 2); locations/ondrel-anchorage.html, locations/strake-station.html and locations/caelestis.html (section 3). Still waiting: the Fleet's organisation as a player Spelljammer Nexus record (section 10; BACKLOG # Player pages).
 
 ## Dossiers
 

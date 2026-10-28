@@ -30,21 +30,21 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 10 | 12 | 14 | 0 | 3 |
+| Cosmology | cosmology/, glossary/, chart/ | 10 | 13 | 13 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 24 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 4 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 3 | 10 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 1 |
-| Dossiers | dossiers/ | 18 | 15 | 0 | 0 | 1 |
+| Dossiers | dossiers/ | 19 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 4 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
-| Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 0 |
+| Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **104** | **143** | **50** | **2** | **53** |
+| **Total** |  | **105** | **144** | **49** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -196,11 +196,6 @@ Order under each page: decide, fix, drop, add.
   Korey wants to wear down the Spelljammer barriers ("spelljamming" means nothing for a ship); spheres have become galaxies. Review the remaining genre terms (spelljammer, spelljamming helm, wildspace, Astral Sea, phlogiston) for plainer replacements during the overhaul.
   src: Korey, 2026-10-26
 
-- **[fix]** Replace the W-, SYS- registers with the CSC scheme
-  Ruled (STAGING round 12): designations follow real astronomy; nothing has reached the players. Retire every W-0n and SYS-0n designation and replace it with a CSC number, a star-and-letter designation, or the body's proper name. Pages: prime/chart, prime/cosmology, prime/locations/* (realmspace, toril, hcatha, aethris, glyth, fonains, krynn, virenspace, sys04, tetherbreak, wayfinders-homeworld, ascension-world, caelestis, strake-station, cairn-station, meteor-hub, astral-sea), prime/campaign/index.html, prime/timeline/timeline.json, and restricted/ (fr-005, sa-002, wm-003, wm-006). Fonains's W-021 and Aethris's W-008 go with them. Do this with the distribution pass, and save the known systems (Realmspace, Virenspace, Aethris's system, Krynnspace, Glyth's) into the survey first so the new designations have one source.
-  src: Korey, 2026-10-25 (round 12)
-  done: prime/cosmology (distribution section 1, 2026-10-27); prime/locations and the chart's page links (section 3).
-
 - **[later]** Game systems for GAL-03, GAL-04 and GAL-05
   Ruled: assigned ahead of time (STAGING round 12). Set when a campaign heads there.
   src: Korey, 2026-10-25 (round 12)
@@ -323,6 +318,11 @@ Order under each page: decide, fix, drop, add.
   The center's open list has "Why the approach harms Reach-born gods." Answer it in the note: polarity; a god and a heart carry the same charge, and the First Heart pushes hardest. Remove that open line. (Why Reach-born gods suffer more stays a decide; see cosmology.)
   src: session-rulings; divine-rules § Polarity
 
+
+- **[later]** CSC 31758, the 1491 entry in SA-002
+  SA-002 carries the Cycle 1491 auroral discharge at CSC 31758, outer fringe (the old SYS-05). The number is new: it is not in the survey or on the chart, and it collides with nothing in either. The entry stays as filed: two arrivals from an uncatalogued system entered Academy intake. Place the star in the survey, or leave it as a catalogue number only. It is not tied to Greyspace.
+  src: Korey, 2026-10-28 (FIA rulings, 10)
+
 # Locations
 
 Items for `locations/` pages. Fonains's items are in the Fonains section.
@@ -340,7 +340,7 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
   src: realms/index.html § Constellations (old page)
 
 - **[later]** The unplaced registry worlds: W-34, Vetharra and Kaldris
-  The old register carried three FIA registry entries without a position: W-34 (an Ortholith established and recording over a natural Zenith, high priority, drafted into Virenspace), W-47 Vetharra (sole standing structure, surface population zero) and W-52 Kaldris (sole standing structure, a Zenith collapse variant labelled "control case"). Re-designate them in the survey and place them, or drop them. The chart still lists all three.
+  The old register carried three FIA registry entries without a position: W-34 (an Ortholith established and recording over a natural Zenith, high priority, drafted into Virenspace), W-47 Vetharra (sole standing structure, surface population zero) and W-52 Kaldris (sole standing structure, a Zenith collapse variant labelled "control case"). The FIA (restricted/wm-003.html) now carries all three as not cross-referenced, with the registry's own reference numbers redacted. Re-designate them in the survey and place them, or drop them. The chart still lists all three.
   src: framework § Open; realms/index.html, realms/virenspace.html (old pages)
 
 - **[later]** The crew's unplaced homeworlds
@@ -1115,6 +1115,11 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[later]** The accounts of Zerathis
   Zerathis is a name the crew hears long before they meet what remains of him, and the accounts disagree (the Osiris pattern). The accounts themselves are not written; each is set when it is used. His species and look in life are not set either.
   src: section 5 (2026-10-28)
+
+
+- **[decide]** Whose registry WM-003 is
+  The recovered monitoring registry in restricted/wm-003.html bears the eye-in-a-wheel marking catalogued in FR-016 and uses the Order's registry terms, Zenith and Ortholith. Decide whose registry it is, and why it carries the mark. No finished DM page lists the mark on a registry.
+  src: Korey, 2026-10-28 (FIA rulings, 8)
 
 # Crew
 
@@ -2139,5 +2144,9 @@ run decide, fix, drop, add.
 
 Fixes to player-facing pages, including the Fleet Intelligence Archive (`restricted/`). These pages hold only what the crew could know; corrections must keep that boundary.
 
-### restricted/sa-002.html
+### spelljammer-nexus/
+
+- **[add]** The Fleet's organisation, as a Nexus record
+  The Fleet's organisation is not classified; cadets know who runs it. Write it as a player Spelljammer Nexus record (distribution section 10), from factions/fleet.html § Structure and ranks and the STAGING Fleet entry: a handful of sector branches, each overseeing a cluster of systems; the Caelestis Sector's two parts, the Corps and the Academy; the reporting chain from Driftwarden to station commander to sector command to a council of admirals; rank shown by gem or pin; and the Fleet's mercantile work. Only what a cadet would be taught.
+  src: Korey, 2026-10-28 (FIA rulings, 12; SA-001 dropped)
 

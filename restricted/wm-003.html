@@ -27,7 +27,7 @@ if (sessionStorage.getItem('caelestis_restricted_v1') !== '1') window.location.h
   </nav>
   <div class="doc-paper" data-pagefind-body>
     <span data-pagefind-filter="type:World Monitoring" hidden></span>
-    <span data-pagefind-filter="origin:Caelestis" hidden></span>
+    <span data-pagefind-filter="origin:Exchange" hidden></span>
     <div class="doc-header">
       <div class="doc-header-top">
         <svg class="doc-seal" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-linecap="round">
@@ -62,63 +62,71 @@ if (sessionStorage.getItem('caelestis_restricted_v1') !== '1') window.location.h
         <div class="doc-classification-stamp">Above Bridge</div>
       </div>
       <div class="doc-meta-row">
-        <div class="doc-meta-item">Date Filed: <strong>[Redacted]</strong></div>
-        <div class="doc-meta-item">Filed By: <strong>[Redacted]</strong></div>
+        <div class="doc-meta-item">Date Filed: <strong>[Withheld by originating sector]</strong></div>
+        <div class="doc-meta-item">Filed By: <strong>[Withheld by originating sector]</strong></div>
         <div class="doc-meta-item">Distribution: <strong>Bridge Command Only</strong></div>
         <div class="doc-meta-item">Clearance: <strong>Above Bridge</strong></div>
+        <div class="doc-meta-item doc-meta-wide">Origin: <strong>Inter-sector exchange · originating command not named in this copy</strong></div>
       </div>
+    </div>
+
+    <div class="exchange-banner">
+      <div class="exchange-banner-label">Inter-sector exchange</div>
+      Received through inter-sector exchange. Detail retained by the originating
+      sector. Request for full copy lodged Cycle <span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span>;
+      no reply on file.
     </div>
 
     <div class="handling-note">
       <strong>Above Bridge.</strong> Recovered document, retrieved from
-      <span class="rx rx-xl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>.
+      <span class="rx-withheld">[Withheld by originating sector]</span>.
       This registry is the monitoring framework of an unidentified party; its pages bear the
-      eye-in-wheel marking catalogued in Case #FR-016. It uses the Above Bridge designations
-      <em>Zenith, Threshold, Ortholith</em> without Fleet authorisation. How the originating party
-      obtained these designations is under review.
-      <strong>These documents were not produced by Fleet Intelligence. Their origin is unconfirmed.</strong>
+      eye-in-wheel marking catalogued in Case #FR-016. It uses the registry terms
+      <em>Zenith</em> and <em>Ortholith</em>, which are the Order's and were adopted in
+      Fleet usage at Above Bridge. These documents were not produced by Fleet
+      Intelligence, and their origin is unconfirmed.
     </div>
 
     <div class="doc-section">
       <div class="doc-section-label">Active Monitoring — World Registry</div>
       <table class="world-table">
         <thead>
-          <tr><th>Ref.</th><th>World / System</th><th>Ortholith / Threshold Status</th><th>Monitoring Priority</th></tr>
+          <tr><th>Ref.</th><th>World / System</th><th>Ortholith / Zenith Status</th><th>Monitoring Priority</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>W-08</strong></td>
-            <td>AETHRIS &middot; SYS-03</td>
-            <td>ESTABLISHED · THE PRISM ASCENDANT · Still recording · Threshold event — Cycle 1490</td>
+            <td><span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+            <td>AETHRIS &middot; CSC 56973 b</td>
+            <td>ESTABLISHED · THE PRISM ASCENDANT · Still recording · Zenith occurred — Cycle 1490</td>
             <td><span class="pri-high">HIGH</span></td>
           </tr>
           <tr>
-            <td><strong>W-21</strong></td>
-            <td><em>[illegible]</em> &middot; SYS-04</td>
+            <td><span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+            <td><em>[illegible]</em> &middot; Krynnspace (CSC 16423)</td>
             <td><span class="pri-high">DESTROYED — UNPRECEDENTED</span></td>
             <td>Fragment retained — see Case #FR-022</td>
           </tr>
           <tr>
-            <td><strong>W-34</strong></td>
+            <td><span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
             <td><em>not cross-referenced</em></td>
-            <td>ESTABLISHED · Recording — Zenith type: Natural convergence</td>
+            <td>ESTABLISHED · Recording — Zenith type: Natural</td>
             <td><span class="pri-high">HIGH</span></td>
           </tr>
           <tr>
-            <td><strong>W-47</strong></td>
+            <td><span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
             <td>VETHARRA &middot; <em>not cross-referenced</em></td>
             <td><span class="pri-high">SOLE STANDING STRUCTURE — Surface population: 0</span></td>
             <td><span class="pri-med">ARCHIVE — Monitoring only</span></td>
           </tr>
           <tr>
-            <td><strong>W-52</strong></td>
+            <td><span class="rx rx-sm">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
             <td>KALDRIS &middot; <em>not cross-referenced</em></td>
             <td><span class="pri-high">SOLE STANDING STRUCTURE — Zenith collapse variant</span></td>
             <td><span class="pri-med">ARCHIVE — Monitoring only · Labelled "control case"</span></td>
           </tr>
           <tr>
-            <td><strong>[additional entries]</strong></td>
-            <td colspan="3" style="font-style:italic;color:rgba(26,18,8,0.35);font-size: 0.86rem;">Further registry entries — Above Bridge restricted. Not included in this distribution.</td>
+            <td>[additional entries]</td>
+            <td colspan="3" style="font-style:italic;color:rgba(26,18,8,0.45);font-size: 0.86rem;"><span class="rx-withheld">[Withheld by originating sector]</span></td>
           </tr>
         </tbody>
       </table>
@@ -126,12 +134,13 @@ if (sessionStorage.getItem('caelestis_restricted_v1') !== '1') window.location.h
 
     <div class="doc-section">
       <div class="doc-section-label">Cross-Reference Notes</div>
-      <p>World designation W-08 (Aethris) corresponds to material referenced in
-      Case <strong>#WM-006</strong>. World W-21 is identified in the recovered
-      registry by status (DESTROYED — UNPRECEDENTED) but the world's name is
-      not legible in any copy of the document available to Fleet Intelligence;
-      cross-reference is held under separate cover. Fragment of W-21 Ortholith
-      material is the subject of Case <strong>#FR-022</strong>.</p>
+      <p>The registry's own reference numbers are redacted in this copy. The
+      entry for Aethris corresponds to material referenced in Case #WM-006. A
+      second entry is identified by status (DESTROYED — UNPRECEDENTED) and by
+      system, Krynnspace, but the world's name is not legible in any copy of the
+      document available to Fleet Intelligence; cross-reference is held under
+      separate cover. Ortholith material from that world is the subject of
+      Case #FR-022.</p>
     </div>
 
     <div class="doc-footer">

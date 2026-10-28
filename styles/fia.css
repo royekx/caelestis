@@ -220,6 +220,36 @@ body::before {
 }
 .doc-meta-item { font-size: 0.92rem; color: rgba(26,18,8,0.55); min-width: 0; }
 .doc-meta-item strong { color: rgba(26,18,8,0.7); font-weight: 600; }
+.doc-meta-wide { grid-column: 1 / -1; }
+
+/* Inter-sector exchange: banner and the originating sector's redaction */
+.exchange-banner {
+  border: 1px dashed rgba(26,18,8,0.35);
+  background: rgba(26,18,8,0.05);
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: rgba(26,18,8,0.75);
+  font-style: italic;
+}
+.exchange-banner-label {
+  font-family: 'Cinzel', serif;
+  font-style: normal;
+  font-size: 0.66rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(26,18,8,0.55);
+  margin-bottom: 0.25rem;
+}
+.rx-withheld {
+  font-family: 'Cinzel', serif;
+  font-style: normal;
+  font-size: 0.8em;
+  letter-spacing: 0.06em;
+  color: rgba(26,18,8,0.6);
+  white-space: normal;
+}
 
 .doc-section { margin-bottom: 1.4rem; position: relative; }
 .doc-section-label {
