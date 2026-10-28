@@ -1294,6 +1294,10 @@
       "summary": "An interworld order that preserves Continuity and reads the Core's pressure as the All-Father.",
       "facts": [
         {
+          "t": "The Order is made up of several callings; the Watchers are its field calling, and specialists come in for particular work. Dejexic leads the Watchers.",
+          "src": "factions/order.html"
+        },
+        {
           "t": "The Order made Galactic time cycles and calls the count the Beacon, after the All-Father's beacon at the core: a beacon (cycle) is one full turn of Erevos, its four sparks lighting the arms in order, divided into kindlings and embers; Cycle 0 is the Order's founding and the current cycle is 1491.",
           "src": "factions/order.html#cycles"
         },

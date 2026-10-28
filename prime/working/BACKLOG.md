@@ -34,7 +34,7 @@ staging once Korey has read and accepted them.
 | Locations | locations/ (Fonains stays in its own section) | 21 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 4 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
-| Factions | factions/ | 3 | 10 | 1 | 0 | 2 |
+| Factions | factions/ | 4 | 10 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 1 |
 | Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **106** | **145** | **50** | **2** | **54** |
+| **Total** |  | **107** | **145** | **50** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -760,6 +760,11 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   src: memory-canon open-decisions (Runekeepers line)
 
 ---
+
+- **[decide]** The Order's callings beyond the Watchers, and who leads it
+  Not everyone in the Order of the All-Father is a Watcher (Korey, 2026-10-28). The Watchers are its field calling, the Fleet its partner and hands for travel, and specialists come in for particular work. Name the other callings and what the specialists do, and say who leads the whole Order; Dejexic leads the Watchers and speaks for the All-Father.
+  Touches: factions/order.html (Still to decide), glossary, connections.json.
+  src: Korey, 2026-10-28 (Order callings ruling)
 
 # Campaign
 
