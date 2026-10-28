@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Locations &middot; Caelestis &middot; DM</title>
+<link rel="stylesheet" href="../../styles/caelestis.css">
+<link rel="stylesheet" href="../../styles/entity.css">
+<link rel="stylesheet" href="../../styles/dm.css">
+<script src="../scripts/dm-nav.js" defer></script>
+<script src="../scripts/dm-register.js" defer></script>
+<script src="../scripts/portraits.js" defer></script>
+</head>
+<body>
+
+<main class="dm-content">
+
+  <header class="dm-page-header">
+    <div class="dm-page-eyebrow">World<span class="sep">&middot;</span>Register</div>
+    <h1>Locations</h1>
+    <p class="dm-page-lede">
+      Every system, world, station, region and stop on a lane, grouped by system. Each entry says what is there and what happens when the crew goes inside. Ships, and what is inside them, are in <a href="../vessels/">Vessels</a>; how systems and bodies are designated is in <a href="../cosmology/#designations">Cosmology</a>; the map is the <a href="../chart/">Chart</a>. Constellations, what worlds know of space travel, and the Chart itself are below the list.
+    </p>
+  </header>
+
+  <div class="dm-register-bar">
+    <input class="dm-register-search" type="search" placeholder="Filter by name, designation, who is there&hellip;" aria-label="Filter locations">
+  </div>
+
+  <div class="facets">
+    <div class="facet">
+      <span class="facet-label">System</span>
+      <div class="facet-pills">
+        <button class="filter-tag" type="button" data-system="realmspace">Realmspace</button>
+        <button class="filter-tag" type="button" data-system="greyspace">Greyspace</button>
+        <button class="filter-tag" type="button" data-system="krynnspace">Krynnspace</button>
+        <button class="filter-tag" type="button" data-system="virenspace">Virenspace</button>
+        <button class="filter-tag" type="button" data-system="csc-56973">CSC 56973</button>
+        <button class="filter-tag" type="button" data-system="hidden">Hidden system</button>
+        <button class="filter-tag" type="button" data-system="other">Other systems</button>
+        <button class="filter-tag" type="button" data-system="drift">The drift</button>
+        <button class="filter-tag" type="button" data-system="centre">Rykoe</button>
+      </div>
+    </div>
+    <div class="facet">
+      <span class="facet-label">Kind</span>
+      <div class="facet-pills">
+        <button class="filter-tag" type="button" data-kind="system">System</button>
+        <button class="filter-tag" type="button" data-kind="world">World</button>
+        <button class="filter-tag" type="button" data-kind="station">Station</button>
+        <button class="filter-tag" type="button" data-kind="region">Region</button>
+        <button class="filter-tag" type="button" data-kind="stop">Stop on a lane</button>
+        <button class="filter-tag" type="button" data-kind="wreck">Wreck</button>
+      </div>
+    </div>
+    <div class="facet">
+      <span class="facet-label">Standing</span>
+      <div class="facet-pills">
+        <button class="filter-tag" type="button" data-standing="been">Been there</button>
+        <button class="filter-tag" type="button" data-standing="next">Next</button>
+        <button class="filter-tag" type="button" data-standing="notyet">Not yet</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="result-line">
+    <span class="result-count"></span>
+    <button class="clear-btn" type="button" hidden>Clear</button>
+  </div>
+
+  <div class="register">
+
+    <div class="ent" data-system="realmspace" data-kind="system" data-standing="been">
+      <a class="ent-row" href="realmspace.html">
+        <span class="ent-face dossier-portrait" data-key="realmspace"></span>
+        <span class="ent-name">Realmspace<span class="ent-sub">Caelestis's home system, named for Toril</span></span>
+        <span class="ent-state">Been there</span>
+      </a>
+      <div class="ent-detail">
+        <p>Nine charted bodies around a yellow sun, known by name, with the Caelestis Sector's watch on its edge.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="caelestis.html">Caelestis</a>
+          <a class="chip chip-place" href="toril.html">Toril</a>
+          <a class="chip chip-place" href="hcatha.html">H'Catha</a>
+          <a class="chip chip-place" href="realmspace.html#perimeter-watch">The perimeter watch</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="realmspace" data-kind="station" data-standing="been">
+      <a class="ent-row" href="caelestis.html">
+        <span class="ent-face dossier-portrait" data-key="caelestis"></span>
+        <span class="ent-name">Caelestis<span class="ent-sub">Fleet station in Toril orbit</span></span>
+        <span class="ent-state">Been there</span>
+      </a>
+      <div class="ent-detail">
+        <p>Houses the Caelestis Corps and the Caelestis Spelljammer Academy under permanent <em>Forbiddance</em>, and holds <a href="../artifacts/atlas.html">A.T.L.A.S.</a> in the Brig. Since his conversion finished, Joffrey has been mapping routes to it from inside the Corps.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../factions/fleet.html#caelestis">Caelestis Sector</a>
+          <a class="chip chip-place" href="caelestis.html#brig">The Brig</a>
+          <a class="chip chip-place" href="caelestis.html#security">Security</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="realmspace" data-kind="world" data-standing="been">
+      <a class="ent-row" href="toril.html">
+        <span class="ent-face dossier-portrait" data-key="toril"></span>
+        <span class="ent-name">Toril<span class="ent-sub">The system's namesake world, two days out</span></span>
+        <span class="ent-state">Been there</span>
+      </a>
+      <div class="ent-detail">
+        <p>The principal world of Realmspace, with Caelestis in its orbit. <a href="../crew/gregory.html">Gregory</a> comes from the Cogfast Enclave on Lantan.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../crew/gregory.html">Gregory</a>
+          <a class="chip chip-place" href="caelestis.html">Caelestis</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="realmspace" data-kind="world" data-standing="next">
+      <a class="ent-row" href="hcatha.html">
+        <span class="ent-face dossier-portrait" data-key="hcatha"></span>
+        <span class="ent-name">H'Catha<span class="ent-sub">Beholder toroid of ten domains under the Sovereign Eye</span></span>
+        <span class="ent-state">Next</span>
+      </a>
+      <div class="ent-detail">
+        <p>A disk of sea around the Spindle, split among ten beholder rulers bound under the Sovereign Eye they dreamt together. Ports across the world take traders and set them a time to leave. An adamantine meteor struck the Pupil, and it is mined in an occupied, skirmished stretch of seam.</p>
+        <div class="ent-links">
+          <a class="chip chip-quest" href="../campaign/spine.html#hcatha-arc">The H'Catha arc</a>
+          <a class="chip chip-place" href="hcatha.html#domains">Domains and seams</a>
+          <a class="chip chip-place" href="hcatha.html#terrain">Terrain at the table</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="realmspace" data-kind="world" data-standing="notyet">
+      <a class="ent-row" href="glyth.html">
+        <span class="ent-face dossier-portrait" data-key="glyth"></span>
+        <span class="ent-name">Glyth<span class="ent-sub">The illithid world that cast out the unthinned</span></span>
+        <span class="ent-state">Not yet</span>
+      </a>
+      <div class="ent-detail">
+        <p>Ringed and remote, ten days out, on a long orbit with a rare approach window. <a href="../dossiers/nghathrod.html">N'ghathrod</a> brought the unthinned home and Glyth exiled them. It is closed to the Fleet.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../dossiers/nghathrod.html">N'ghathrod</a>
+          <a class="chip chip-npc" href="../factions/vthorama.html">The Vth'orama</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="realmspace" data-kind="station" data-standing="notyet">
+      <a class="ent-row" href="strake-station.html">
+        <span class="ent-face dossier-portrait" data-key="strake-station"></span>
+        <span class="ent-name">Strake Station<span class="ent-sub">The watch's station at Realmspace's edge</span></span>
+        <span class="ent-state">Not yet</span>
+      </a>
+      <div class="ent-detail">
+        <p>The last open deck before the closed run to Cairn. Its cartographer, <a href="../dossiers/tarroway.html">Tarroway</a>, read the first hint of something disturbing the satellites.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../dossiers/tarroway.html">Tarroway</a>
+          <a class="chip chip-npc" href="../dossiers/verrow.html">Verrow</a>
+          <a class="chip chip-place" href="cairn-station.html">Cairn Station</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="realmspace" data-kind="station" data-standing="notyet">
+      <a class="ent-row" href="cairn-station.html">
+        <span class="ent-face dossier-portrait" data-key="cairn-station"></span>
+        <span class="ent-name">Cairn Station<span class="ent-sub">Silent for a year</span></span>
+        <span class="ent-state">Not yet</span>
+      </a>
+      <div class="ent-detail">
+        <p>The far satellite of the watch, past standing order SA-005. <a href="../factions/vocath-operation.html">Vocath's crew</a> took it after it went dark, ambushed the <em>Bellwether Crow</em> from it, and left something behind.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../dossiers/vthoramu.html">Vth'oramu</a>
+          <a class="chip chip-npc" href="../dossiers/joffrey.html">Joffrey</a>
+          <a class="chip chip-npc" href="../dossiers/clint.html">Clint</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="other" data-kind="station" data-standing="notyet">
+      <a class="ent-row" href="ondrel-anchorage.html">
+        <span class="ent-face dossier-portrait" data-key="ondrel-anchorage"></span>
+        <span class="ent-name">Ondrel Anchorage<span class="ent-sub">A neutral port on the moon Ostrel</span></span>
+        <span class="ent-state">Not yet</span>
+      </a>
+      <div class="ent-detail">
+        <p>In a system neighbouring Realmspace, within the Caelestis Sector. The sector's Fleet operations run from here, and Captain Haymond Rolt hands out contracts.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../factions/fleet.html#rolt">Haymond Rolt</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="greyspace" data-kind="world" data-standing="notyet">
+      <a class="ent-row" href="oerth.html">
+        <span class="ent-face dossier-portrait" data-key="oerth"></span>
+        <span class="ent-name">Oerth<span class="ent-sub">Vecna's homeworld, in Greyspace</span></span>
+        <span class="ent-state">Not yet</span>
+      </a>
+      <div class="ent-detail">
+        <p>The world where Vecna became a god and where his hold is strongest; his faithful keep its Monolith as their holiest site. Every link in his eye runs back to it.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../dossiers/vecna.html">Vecna</a>
+          <a class="chip chip-quest" href="../opposition/vecna.html">Opposition: Vecna</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="krynnspace" data-kind="system" data-standing="notyet">
+      <a class="ent-row" href="krynnspace.html">
+        <span class="ent-face dossier-portrait" data-key="krynnspace"></span>
+        <span class="ent-name">Krynnspace<span class="ent-sub">CSC 16423, two known worlds</span></span>
+        <span class="ent-state">Not yet</span>
+      </a>
+      <div class="ent-detail">
+        <p>Krynn and Fonains, reached from Realmspace on an uncharted route.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="krynn.html">Krynn</a>
+          <a class="chip chip-place" href="../realms/fonains.html">Fonains</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="krynnspace" data-kind="world" data-standing="notyet">
+      <a class="ent-row" href="krynn.html">
+        <span class="ent-face dossier-portrait" data-key="krynn"></span>
+        <span class="ent-name">Krynn<span class="ent-sub">CSC 16423 b, the Dragon Queen's world</span></span>
+        <span class="ent-state">Not yet</span>
+      </a>
+      <div class="ent-detail">
+        <p>Takhisis holds an aspect of Bahamut in the ruined temple of Paladine. Krynn's present is level with Caelestis's, on the eve of the War of the Lance.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="../realms/fonains.html">Fonains</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="krynnspace" data-kind="world" data-standing="notyet">
+      <a class="ent-row" href="../realms/fonains.html">
+        <span class="ent-face dossier-portrait" data-key="fonains"></span>
+        <span class="ent-name">Fonains<span class="ent-sub">CSC 16423 c, its Monolith destroyed</span></span>
+        <span class="ent-state">Not yet</span>
+      </a>
+      <div class="ent-detail">
+        <p>Vecna nudged the Zenith knowing it would be ridden; Tharizdun's crystal fused into the Monolith as it formed. Lola's Boys destroyed it, and a shard of it sits in <a href="../crew/boogie.html">Boogie</a>.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../crew/boogie.html">Boogie</a>
+          <a class="chip chip-item" href="../artifacts/fonains-shard.html">The Fonains shard</a>
+          <a class="chip chip-place" href="../cosmology/#corrupted-monoliths">Corrupted Monoliths</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="csc-56973" data-kind="world" data-standing="notyet">
+      <a class="ent-row" href="aethris.html">
+        <span class="ent-face dossier-portrait" data-key="aethris"></span>
+        <span class="ent-name">Aethris<span class="ent-sub">CSC 56973 b, Sol's homeworld</span></span>
+        <span class="ent-state">Not yet</span>
+      </a>
+      <div class="ent-detail">
+        <p>Tymora's world, mid-Zenith. The Fortuned's ritual is unfinished, and the Prism Ascendant above the temple has archived what it can and does nothing.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../crew/sol.html">Sol</a>
+          <a class="chip chip-npc" href="../factions/aethris.html">The Fortuned</a>
+          <a class="chip chip-place" href="aethris.html#zenith">The Zenith</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="virenspace" data-kind="system" data-standing="notyet">
+      <a class="ent-row" href="virenspace.html">
+        <span class="ent-face dossier-portrait" data-key="virenspace"></span>
+        <span class="ent-name">Virenspace<span class="ent-sub">CSC 69387, an overlap site</span></span>
+        <span class="ent-state">Not yet</span>
+      </a>
+      <div class="ent-detail">
+        <p>Holds the feature Mirt's wardrobe replicates. What is there now is part Zerathis, part Astra Virex's reach and part the site, and Casey can feel it on arrival.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../crew/casey.html">Casey</a>
+          <a class="chip chip-npc" href="../dossiers/zerathis.html">Zerathis</a>
+          <a class="chip chip-npc" href="../dossiers/mirt.html">Mirt</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="hidden" data-kind="world" data-standing="notyet">
+      <a class="ent-row" href="wayfinders-homeworld.html">
+        <span class="ent-face dossier-portrait" data-key="tumak-homeworld"></span>
+        <span class="ent-name">The Wayfinders' homeworld<span class="ent-sub">Hidden by a living ritual; it has no name</span></span>
+        <span class="ent-state">Not yet</span>
+      </a>
+      <div class="ent-detail">
+        <p>A halfling world whose concealment rides on the Dissolution fragment's cycle. The fragment is leaving the Runekeeper and rebuilding in Wan and Tu.</p>
+        <div class="ent-links">
+          <a class="chip chip-npc" href="../crew/tumak.html">Tumak</a>
+          <a class="chip chip-npc" href="../dossiers/the-runekeeper.html">The Runekeeper</a>
+          <a class="chip chip-item" href="../artifacts/runekeepers-fragment.html">The fragment</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="other" data-kind="wreck" data-standing="notyet">
+      <a class="ent-row" href="nowhere.html">
+        <span class="ent-face dossier-portrait" data-key="nowhere"></span>
+        <span class="ent-name">Nowhere<span class="ent-sub">Where a god died on a world</span></span>
+        <span class="ent-state">Not yet</span>
+      </a>
+      <div class="ent-detail">
+        <p>The charts mark a world there, and there is none. A Monolith stands over the wreck, and its heart lies exposed.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="../cosmology/#nowhere">Cosmology</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="centre" data-kind="region" data-standing="notyet">
+      <a class="ent-row" href="rykoe.html">
+        <span class="ent-face dossier-portrait" data-key="rykoe"></span>
+        <span class="ent-name">Rykoe<span class="ent-sub">The centre of the cosmos</span></span>
+        <span class="ent-state">Not yet</span>
+      </a>
+      <div class="ent-detail">
+        <p>The Reach world's remains, beneath the Core Monolith and the Radiant Citadel. It opens only when all five galaxy cores wake.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="rykoe.html#citadel">Radiant Citadel</a>
+          <a class="chip chip-place" href="../cosmology/#rykoe">Cosmology</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="drift" data-kind="region" data-standing="been">
+      <a class="ent-row" href="astral-sea.html">
+        <span class="ent-face dossier-portrait" data-key="astral-sea"></span>
+        <span class="ent-name">The Astral Sea<span class="ent-sub">The drift, between systems and galaxies</span></span>
+        <span class="ent-state">Been there</span>
+      </a>
+      <div class="ent-detail">
+        <p>Currents, color pools and dead gods. The lanes and their tiers are in its DM notes.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="astral-sea.html#color-pools">Color pools</a>
+          <a class="chip chip-place" href="astral-sea.html#lanes">Lanes</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="drift" data-kind="stop" data-standing="notyet">
+      <a class="ent-row" href="waystation.html">
+        <span class="ent-face dossier-portrait" data-key="waystation"></span>
+        <span class="ent-name">The Astral waystation<span class="ent-sub">Where the lane to Virenspace splits</span></span>
+        <span class="ent-state">Not yet</span>
+      </a>
+      <div class="ent-detail">
+        <p>The last reliable resupply before the long haul onward.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="virenspace.html">Virenspace</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="drift" data-kind="stop" data-standing="notyet">
+      <a class="ent-row" href="cantina.html">
+        <span class="ent-face dossier-portrait" data-key="cantina"></span>
+        <span class="ent-name">The travelling cantina<span class="ent-sub">Works a circuit of the lanes</span></span>
+        <span class="ent-state">Not yet</span>
+      </a>
+      <div class="ent-detail">
+        <p>A cantina that moves along the charted lanes, so a crew can meet it twice in different places.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="astral-sea.html">The Astral Sea</a>
+        </div>
+      </div>
+    </div>
+    <div class="ent" data-system="drift" data-kind="stop" data-standing="notyet">
+      <a class="ent-row" href="meteor-hub.html">
+        <span class="ent-face dossier-portrait" data-key="meteor-hub"></span>
+        <span class="ent-name">The carved-meteor hub<span class="ent-sub">A hollowed meteor on the long haul to CSC 56973</span></span>
+        <span class="ent-state">Not yet</span>
+      </a>
+      <div class="ent-detail">
+        <p>A gathering place, not a Fleet installation, between Realmspace and Aethris.</p>
+        <div class="ent-links">
+          <a class="chip chip-place" href="aethris.html">Aethris</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="register-empty" hidden>Nothing matches those filters.</div>
+
+  </div>
+
+  <details class="dm-collapse-section" id="constellations">
+    <summary><h2>Constellations</h2></summary>
+    <div class="dm-collapse-section-body">
+      <p>
+        A <a href="../glossary/#constellation">constellation</a> is a region of Caelestis's sky, belonging to no world and seen from many. Each is numbered by its bearing in degrees; how the catalogue works is in <a href="../cosmology/#designation-forms">Cosmology</a>. Four are catalogued.
+      </p>
+      <table>
+        <thead><tr><th>Designation</th><th>Bearing</th><th>Visible from</th><th>Where it has appeared</th></tr></thead>
+        <tbody>
+          <tr><td>CON-025</td><td>025&deg;</td><td><a href="realmspace.html">Realmspace</a> and <a href="aethris.html#csc-56973">CSC 56973</a></td><td>&mdash;</td></tr>
+          <tr><td>CON-055</td><td>055&deg;</td><td><a href="virenspace.html">Virenspace</a></td><td>The sky inside Mirt's wardrobe, which corresponds to a stellar location in Virenspace.</td></tr>
+          <tr><td>CON-091</td><td>091&deg;</td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr><td>CON-312</td><td>312&deg;</td><td>&mdash;</td><td>The constellation in <a href="../crew/bartholomew.html">Bartholomew</a>'s chest.</td></tr>
+        </tbody>
+      </table>
+      <p>
+        <a href="../crew/casey.html">Casey</a>'s tethers are constellation points, not whole constellations, and his chart is the record of which ones he has bound.
+      </p>
+    </div>
+  </details>
+
+  <details class="dm-collapse-section" id="world-awareness">
+    <summary><h2>World awareness</h2></summary>
+    <div class="dm-collapse-section-body">
+      <p>
+        Every world is Aware, Read-in or Unaware of space travel. Low-grade contracts sit on Aware worlds. Work on Unaware worlds is covert: ship-shaped hulls land at sea and come in through ports, and a fugitive is retrieved without the world noticing. Watchers issue contracts and tips to head off trouble before it reaches a Zenith.
+      </p>
+      <p>
+        Hostile worlds can be navigated when they are divided. <a href="hcatha.html">H'Catha</a> can be entered because its beholders are divided; <a href="glyth.html">Glyth</a> is closed because it is one civilization.
+      </p>
+      <h3>A world's record</h3>
+      <p>
+        In DM terms, each world's base record holds its name; a one-line physical description; its peoples; how it works; its awareness (Aware, Read-in or Unaware); who speaks for it; a fact the crew can learn; a rumour; a rabbit hole; and hooks. A fugitive retrieval on an Unaware world runs in the Men in Black style.
+      </p>
+    </div>
+  </details>
+
+  <details class="dm-collapse-section" id="chart">
+    <summary><h2>Chart</h2></summary>
+    <div class="dm-collapse-section-body">
+      <div class="dm-embed">
+        <div class="dm-embed-bar">
+          <span class="dm-embed-title">Chart</span>
+          <a class="dm-embed-out" href="../chart/">Open full &rarr;</a>
+        </div>
+        <iframe src="../chart/index.html" title="Chart" loading="lazy"></iframe>
+      </div>
+    </div>
+  </details>
+
+  <div class="dm-footer">
+    Locations &middot; World &middot; Caelestis DM
+  </div>
+
+</main>
+
+</body>
+</html>

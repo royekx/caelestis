@@ -232,18 +232,14 @@
       "label": "The Reach",
       "type": "event",
       "scope": "cosmos",
-      "summary": "The First World's attempt to touch the Axioms directly; the birth of this cosmos.",
+      "summary": "The act of the people of the first world, who reached into Continuity and changed it; their world was destroyed.",
       "facts": [
         {
-          "t": "A civilization on the First World reached for the Axioms themselves, and no civilization has tried it since.",
+          "t": "The people of the first world, the only world in an earlier version of reality, reached into Continuity and changed it.",
           "src": "cosmology/index.html"
         },
         {
-          "t": "The Reach was a Zenith of extraordinary magnitude that ended with the First World's destruction.",
-          "src": "cosmology/index.html"
-        },
-        {
-          "t": "Its debris formed the worlds, and every world's heart originates there.",
+          "t": "It was the first time Continuity had to answer, and the Core Monolith stands where it answered.",
           "src": "cosmology/index.html"
         },
         {
@@ -254,22 +250,22 @@
     },
     {
       "id": "first-world",
-      "label": "The First World",
+      "label": "The Reach world",
       "type": "place",
       "scope": "cosmos",
-      "summary": "The world where the Reach happened; destroyed and nameless on every record.",
+      "summary": "The first world, where the Reach happened; it collapsed into Rykoe.",
       "facts": [
         {
-          "t": "The First World was destroyed by its own Zenith, and every world formed from its debris.",
-          "src": "glossary/index.html"
-        },
-        {
-          "t": "Some of its people were sequestered into the Core, some were destroyed, and the rest became the first gods.",
+          "t": "The Reach world was destroyed by the Reach, and its fragments spread across the cosmos as residue.",
           "src": "cosmology/index.html"
         },
         {
-          "t": "Its own name for itself went into the Core with its people.",
-          "src": "realms/first-world.html"
+          "t": "Its people became woven into the cosmos, and over time they became the gods.",
+          "src": "cosmology/index.html"
+        },
+        {
+          "t": "Its people's own name for their world went into the Core Monolith with them.",
+          "src": "locations/rykoe.html"
         }
       ]
     },
@@ -282,19 +278,19 @@
       "facts": [
         {
           "t": "Rykoe is the remains of the Reach world, a black hole beneath the Core Monolith and the Radiant Citadel.",
-          "src": "STAGING round 9"
-        },
-        {
-          "t": "What every chart marks as a black hole is the Core's intake, a permanent draw into an archive that never stops receiving.",
           "src": "cosmology/index.html"
         },
         {
-          "t": "Mortals can cross the approach to the center; gods cannot.",
+          "t": "Rykoe opens only when the cores of all five galaxies are awake and joined.",
           "src": "cosmology/index.html"
         },
         {
-          "t": "The center is not a plane, so reaching it is travel rather than planar transit.",
-          "src": "cosmology/index.html"
+          "t": "Mortals can cross the approach; it harms gods without destroying them.",
+          "src": "locations/rykoe.html"
+        },
+        {
+          "t": "Rykoe is not a plane, so reaching it is travel rather than planar transit.",
+          "src": "locations/rykoe.html"
         }
       ]
     },
@@ -306,7 +302,7 @@
       "summary": "The first Monolith, at the center of the cosmos; every Monolith relays to it.",
       "facts": [
         {
-          "t": "The Core manifested above the First World during its Zenith and remained after the world was destroyed.",
+          "t": "The Core manifested above the Reach world during its Zenith and remained after the world was destroyed.",
           "src": "cosmology/index.html"
         },
         {
@@ -339,7 +335,7 @@
       "summary": "The city the archived built inside the Core.",
       "facts": [
         {
-          "t": "The Citadel holds everything the Monoliths have ever taken, beginning with the people of the First World.",
+          "t": "The Citadel holds everything the Monoliths have ever taken, beginning with the people of the Reach world.",
           "src": "cosmology/index.html"
         },
         {
@@ -382,14 +378,14 @@
       "label": "The First Heart",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "The First World's heart, the deepest in the cosmos and the one way into the Axiom layer.",
+      "summary": "The Reach world's heart, the deepest in the cosmos and the one way into the Axiom layer.",
       "facts": [
         {
           "t": "The First Heart is the one point from which the Axiom layer can be reached.",
           "src": "cosmology/index.html"
         },
         {
-          "t": "It has been closed since the First World ended.",
+          "t": "It has been closed since the Reach world ended.",
           "src": "cosmology/index.html"
         },
         {
@@ -520,7 +516,7 @@
       "label": "Residue",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "The pieces of the Reach fragments: First World matter, paracausal by origin.",
+      "summary": "The pieces of the Reach fragments: Reach world matter, paracausal by origin.",
       "facts": [
         {
           "t": "Residue is the only matter that can act on an Atrium, and a piece is not consumed by opening one.",
@@ -652,20 +648,16 @@
       "summary": "The material medium between worlds, systems and galaxies.",
       "facts": [
         {
-          "t": "Wildspace is the Astral Sea between systems, and the Flow fills the space between galaxies.",
-          "src": "realms/astral-sea.html"
-        },
-        {
-          "t": "Divine spells fail in the Flow, because a god's realm is anchored to its own galaxy.",
+          "t": "The Astral Sea fills the dark between systems and between galaxies; the Fleet calls it the drift.",
           "src": "cosmology/index.html"
         },
         {
           "t": "The corpses of gods drift through it, worked by salvagers, hermits and githyanki.",
-          "src": "realms/astral-sea.html"
+          "src": "locations/astral-sea.html"
         },
         {
-          "t": "A psychic wind can throw a vessel far off its heading and late.",
-          "src": "realms/astral-sea.html"
+          "t": "Color pools open and close quickly; the Fleet charts them and sails around them.",
+          "src": "locations/astral-sea.html"
         },
         {
           "t": "Most bodies in space are uninhabited, and an inhabited world is rare.",
@@ -811,7 +803,7 @@
       "label": "Oerth",
       "type": "place",
       "scope": "cosmos",
-      "summary": "Vecna's homeworld, where he became a god: the Ascension World.",
+      "summary": "Vecna's homeworld in Greyspace, where he became a god: the Ascension World.",
       "facts": [
         {
           "t": "Oerth is a darkest-timeline world where Vecna's hold is strongest.",
@@ -826,8 +818,8 @@
           "src": "STAGING round 2"
         },
         {
-          "t": "Oerth lies in GAL-05.",
-          "src": "STAGING round 3"
+          "t": "Oerth lies in Greyspace, in GAL-01, the Erevos Galaxy.",
+          "src": "STAGING, Realms"
         },
         {
           "t": "Oerth is the retina of the eye drawn across GAL-01: every heart world in the figure links back to it.",
@@ -836,6 +828,10 @@
         {
           "t": "Oerth is the one world Vecna cannot lose.",
           "src": "STAGING, Campaign"
+        },
+        {
+          "t": "Oerth's Monolith archived Vecna's mortal form, Lich Vecna, and relayed it to the Core Monolith.",
+          "src": "cosmology/index.html"
         }
       ]
     },
@@ -2261,7 +2257,11 @@
         },
         {
           "t": "Glyth is a settled illithid world with elder brains and thrall populations.",
-          "src": "realms/glyth.html"
+          "src": "locations/glyth.html"
+        },
+        {
+          "t": "Glyth is hard to reach, on a long orbit with a rare approach window, and closed to Fleet traffic.",
+          "src": "locations/glyth.html"
         }
       ]
     },
@@ -2332,7 +2332,7 @@
         },
         {
           "t": "Vocath's crew took Cairn Station after it went dark and waited for the relief run.",
-          "src": "realms/cairn-station.html"
+          "src": "locations/cairn-station.html"
         },
         {
           "t": "Vocath's crew ambushed the Bellwether Crow for A.T.L.A.S.'s sister.",
@@ -2415,7 +2415,7 @@
         },
         {
           "t": "The few survivors were let go so that he would come home a hero, and they believe every word of their account.",
-          "src": "realms/cairn-station.html"
+          "src": "locations/cairn-station.html"
         },
         {
           "t": "He is the colony's only operative on the station, and his allegiance runs to N'ghathrod.",
@@ -2577,32 +2577,32 @@
       "facts": [
         {
           "t": "The Brig holds objects whose cosmological character is unknown, unstable or inconvenient to discuss.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         },
         {
           "t": "Its location and access routes are classified, and teleportation fails in and out of it.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         },
         {
           "t": "Only a handful at Bridge level know its full inventory.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         }
       ]
     },
     {
       "id": "tetherbreak",
-      "label": "The Tetherbreak sector",
+      "label": "The perimeter watch",
       "type": "place",
       "scope": "caelestis",
-      "summary": "A perimeter ring on the edge of GAL-01 under elevated monitoring.",
+      "summary": "Strake Station and its sister satellites, Hollis Post and Cairn Station, watching the edge of Realmspace for the Caelestis Sector.",
       "facts": [
         {
-          "t": "The Fleet keeps a ring of posts on the edge of GAL-01 to watch traffic entering from the Flow.",
-          "src": "realms/tetherbreak.html"
+          "t": "The Caelestis Sector watches the edge of Realmspace from Strake Station and its two sister satellites, Hollis Post and Cairn Station.",
+          "src": "locations/realmspace.html#perimeter-watch"
         },
         {
-          "t": "Everything past Strake Station is closed without Bridge authorization.",
-          "src": "realms/tetherbreak.html"
+          "t": "Strake stands on the bearing called the Tetherbreak; everything past it is closed without Bridge authorization.",
+          "src": "locations/realmspace.html#perimeter-watch"
         }
       ]
     },
@@ -2611,7 +2611,7 @@
       "label": "Strake Station",
       "type": "place",
       "scope": "caelestis",
-      "summary": "The Fleet relay at the authorized limit of the Cairn bearing.",
+      "summary": "The Caelestis Sector's station at the edge of Realmspace, the last open deck before the closed run to Cairn.",
       "facts": [
         {
           "t": "Strake Station and its sister satellites are Caelestis's to keep.",
@@ -2636,7 +2636,7 @@
       "label": "Cairn Station",
       "type": "place",
       "scope": "caelestis",
-      "summary": "The far post on the perimeter ring, silent for a year.",
+      "summary": "The far satellite of the watch at Realmspace's edge, silent for a year.",
       "facts": [
         {
           "t": "A year ago Vth'oramu sat on the Cairn bearing.",
@@ -2644,11 +2644,11 @@
         },
         {
           "t": "Cairn went silent after reporting a mass that matched no vessel profile.",
-          "src": "realms/cairn-station.html"
+          "src": "locations/cairn-station.html"
         },
         {
           "t": "Vocath's people withdrew after the ambush and left something behind at Cairn.",
-          "src": "realms/cairn-station.html"
+          "src": "locations/cairn-station.html"
         }
       ]
     },
@@ -2657,11 +2657,11 @@
       "label": "Hollis Post",
       "type": "place",
       "scope": "caelestis",
-      "summary": "The western post on the perimeter ring, filing normally.",
+      "summary": "The western satellite of the watch at Realmspace's edge, filing normally.",
       "facts": [
         {
           "t": "Hollis Post does the same job as Strake and Cairn, and nothing has happened to it.",
-          "src": "realms/tetherbreak.html"
+          "src": "locations/realmspace.html#perimeter-watch"
         }
       ]
     },
@@ -2779,11 +2779,15 @@
       "label": "Ondrel Anchorage",
       "type": "place",
       "scope": "caelestis",
-      "summary": "A neutral port on the moon Ostrel, away from Toril.",
+      "summary": "A neutral port on the moon Ostrel, in a system neighbouring Realmspace within the Caelestis Sector.",
       "facts": [
         {
           "t": "Ondrel Anchorage is a neutral port on the moon Ostrel, away from Toril.",
           "src": "STAGING round 11"
+        },
+        {
+          "t": "Fleet operations for the Caelestis Sector run out of Ondrel Anchorage.",
+          "src": "locations/ondrel-anchorage.html"
         }
       ]
     },
@@ -2809,11 +2813,11 @@
       "facts": [
         {
           "t": "Caelestis is under permanent Forbiddance, maintained by Saerthe.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         },
         {
           "t": "Authorized internal transit uses bound Teleportation Circle sigils between a few fixed points, the Brig among them.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         },
         {
           "t": "Caelestis has no echo in the Feywild or the Shadowfell.",
@@ -2821,7 +2825,7 @@
         },
         {
           "t": "The thefts, the sabotage and Vocath's grudge are noise over one objective: A.T.L.A.S. in the Brig.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         }
       ]
     },
@@ -2960,7 +2964,7 @@
       "facts": [
         {
           "t": "Mr. Blip is an autognome with ordinary personhood who cannot cast.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         },
         {
           "t": "He is uninvolved in the run on the Brig.",
@@ -3033,7 +3037,7 @@
       "facts": [
         {
           "t": "The sabotage on the Simulation Deck left metallic plates and a jagged sigil in the chamber walls.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         }
       ]
     },
@@ -3046,11 +3050,11 @@
       "facts": [
         {
           "t": "The bribed seam in the station's inventory handling is at the Sky Dock.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         },
         {
           "t": "Colony material moves in and out of Caelestis through the Sky Dock.",
-          "src": "realms/caelestis.html"
+          "src": "locations/caelestis.html"
         }
       ]
     },
@@ -3568,7 +3572,7 @@
         },
         {
           "t": "When both twins arrive home, the stalled cycle brings a Zenith and ends the concealment.",
-          "src": "realms/wayfinders-homeworld.html"
+          "src": "locations/wayfinders-homeworld.html"
         },
         {
           "t": "Tumak has his own Heart-rune.",
@@ -3684,7 +3688,7 @@
         },
         {
           "t": "His constellation is CON-312.",
-          "src": "realms/index.html"
+          "src": "locations/index.html"
         },
         {
           "t": "He is circling a shape he has not taken, the Almost, and his slips toward it match none of his beast forms or his Starry Form.",
@@ -3797,7 +3801,7 @@
         },
         {
           "t": "The sky inside it is CON-055, as seen from Virenspace.",
-          "src": "realms/index.html"
+          "src": "locations/index.html"
         }
       ]
     },
@@ -3810,11 +3814,11 @@
       "facts": [
         {
           "t": "Virenspace is an overlap site where paracausal change runs faster than a single tether would make it.",
-          "src": "realms/virenspace.html"
+          "src": "locations/virenspace.html"
         },
         {
           "t": "What is at Viren now is part Zerathis, part Astra's reach and part the site.",
-          "src": "realms/virenspace.html"
+          "src": "locations/virenspace.html"
         }
       ]
     },
@@ -3877,7 +3881,7 @@
       "facts": [
         {
           "t": "The world sits where it has always sat, and finding it means knowing the way back rather than the coordinates.",
-          "src": "realms/wayfinders-homeworld.html"
+          "src": "locations/wayfinders-homeworld.html"
         },
         {
           "t": "It shares a galaxy with the threats its Wayfinders map.",
@@ -3885,7 +3889,7 @@
         },
         {
           "t": "Lunarfoot is the clan, not the world.",
-          "src": "realms/wayfinders-homeworld.html"
+          "src": "locations/wayfinders-homeworld.html"
         }
       ]
     },
@@ -3911,7 +3915,7 @@
       "facts": [
         {
           "t": "Toril gives Realmspace its name.",
-          "src": "realms/toril.html"
+          "src": "locations/toril.html"
         }
       ]
     },
@@ -3924,7 +3928,7 @@
       "facts": [
         {
           "t": "Realmspace lies in GAL-01, and Caelestis orbits Toril there.",
-          "src": "realms/realmspace.html"
+          "src": "locations/realmspace.html"
         }
       ]
     },
@@ -3937,7 +3941,7 @@
       "facts": [
         {
           "t": "Aethris sorts its people into the Fortuned and the Misfortuned.",
-          "src": "realms/aethris.html"
+          "src": "locations/aethris.html"
         },
         {
           "t": "Aethris's Zenith is unfinished because the Fortuned have not completed their ritual.",
@@ -3945,7 +3949,7 @@
         },
         {
           "t": "Vecna is pushing the Zenith toward completion from outside, and nobody on Aethris knows it.",
-          "src": "realms/aethris.html"
+          "src": "locations/aethris.html"
         }
       ]
     },
@@ -3962,7 +3966,7 @@
         },
         {
           "t": "Aethris holds that the Prism Ascendant is Tymora's answer to the ritual.",
-          "src": "realms/aethris.html"
+          "src": "locations/aethris.html"
         }
       ]
     },
@@ -4964,6 +4968,19 @@
           "src": "STAGING, Campaign"
         }
       ]
+    },
+    {
+      "id": "krynnspace",
+      "label": "Krynnspace (CSC 16423)",
+      "type": "place",
+      "scope": "krynn",
+      "summary": "A star system of two known worlds, Krynn and Fonains, reached from Realmspace on an uncharted route.",
+      "facts": [
+        {
+          "t": "Krynnspace, CSC 16423, holds Krynn (CSC 16423 b) and Fonains (CSC 16423 c).",
+          "src": "locations/krynnspace.html"
+        }
+      ]
     }
   ],
   "edges": [
@@ -5433,7 +5450,7 @@
       "s": "vecna",
       "t": "aethris",
       "rel": "pushes the Zenith of",
-      "src": "realms/aethris.html"
+      "src": "locations/aethris.html"
     },
     {
       "s": "vecna",
@@ -5523,7 +5540,7 @@
       "s": "tymora",
       "t": "aethris",
       "rel": "is worshipped on",
-      "src": "realms/aethris.html"
+      "src": "locations/aethris.html"
     },
     {
       "s": "takhisis",
@@ -5569,15 +5586,15 @@
     },
     {
       "s": "krynn",
-      "t": "gal-01",
+      "t": "krynnspace",
       "rel": "located in",
-      "src": "cosmology/index.html"
+      "src": "locations/krynnspace.html"
     },
     {
       "s": "fonains",
-      "t": "gal-01",
+      "t": "krynnspace",
       "rel": "located in",
-      "src": "cosmology/index.html"
+      "src": "locations/krynnspace.html"
     },
     {
       "s": "krynn",
@@ -5973,7 +5990,7 @@
       "s": "FAO-Lx7kR2vN",
       "t": "LOC-Tn4bK9wR",
       "rel": "is housed at",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "driftwardens",
@@ -6003,7 +6020,7 @@
       "s": "NPC-Zx4Bn7Lq",
       "t": "LOC-Tn4bK9wR",
       "rel": "maintains the Forbiddance of",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "NPC-Zx4Bn7Lq",
@@ -6069,7 +6086,7 @@
       "s": "NPC-Mb3vK8dW",
       "t": "PC-BGCfmbF3",
       "rel": "is the control case for",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "NPC-4tR8kW2n",
@@ -6147,19 +6164,19 @@
       "s": "LOC-Tn4bK9wR",
       "t": "the-brig",
       "rel": "contains",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "LOC-Tn4bK9wR",
       "t": "LOC-Tv6kW3mn",
       "rel": "orbits",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "LOC-Tv6kW3mn",
       "t": "LOC-Sp4hR9nk",
       "rel": "located in",
-      "src": "realms/realmspace.html"
+      "src": "locations/realmspace.html"
     },
     {
       "s": "LOC-Sp4hR9nk",
@@ -6465,7 +6482,7 @@
       "s": "vthoramu",
       "t": "tetherbreak",
       "rel": "passed through",
-      "src": "realms/tetherbreak.html"
+      "src": "locations/realmspace.html#perimeter-watch"
     },
     {
       "s": "exile-from-glyth",
@@ -6477,7 +6494,7 @@
       "s": "glyth",
       "t": "LOC-Sp4hR9nk",
       "rel": "located in",
-      "src": "realms/glyth.html"
+      "src": "locations/glyth.html"
     },
     {
       "s": "vecna",
@@ -6573,7 +6590,7 @@
       "s": "NPC-Hs6cW9pM",
       "t": "the-brig",
       "rel": "is mapping routes to",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "NPC-Hs6cW9pM",
@@ -6759,25 +6776,25 @@
       "s": "strake-station",
       "t": "tetherbreak",
       "rel": "located in",
-      "src": "realms/tetherbreak.html"
+      "src": "locations/realmspace.html#perimeter-watch"
     },
     {
       "s": "cairn-station",
       "t": "tetherbreak",
       "rel": "located in",
-      "src": "realms/tetherbreak.html"
+      "src": "locations/realmspace.html#perimeter-watch"
     },
     {
       "s": "hollis-post",
       "t": "tetherbreak",
       "rel": "located in",
-      "src": "realms/tetherbreak.html"
+      "src": "locations/realmspace.html#perimeter-watch"
     },
     {
       "s": "tetherbreak",
-      "t": "gal-01",
-      "rel": "lies on the edge of",
-      "src": "realms/tetherbreak.html"
+      "t": "LOC-Sp4hR9nk",
+      "rel": "watches the edge of",
+      "src": "locations/realmspace.html#perimeter-watch"
     },
     {
       "s": "fia",
@@ -6789,19 +6806,19 @@
       "s": "LOC-Bf3xN6qT",
       "t": "LOC-Tn4bK9wR",
       "rel": "located in",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "LOC-3kW8mB2v",
       "t": "LOC-Tn4bK9wR",
       "rel": "located in",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "LOC-9mB4kW7n",
       "t": "LOC-Tn4bK9wR",
       "rel": "located in",
-      "src": "realms/caelestis.html"
+      "src": "locations/caelestis.html"
     },
     {
       "s": "NPC-lfleUUeT",
@@ -7119,7 +7136,7 @@
       "s": "PC-Bw9kt3Lq",
       "t": "con-312",
       "rel": "carries in his chest",
-      "src": "realms/index.html"
+      "src": "locations/index.html"
     },
     {
       "s": "PC-6rzWlD8Q",
@@ -7209,7 +7226,7 @@
       "s": "dissolution-fragment",
       "t": "wayfinders-homeworld",
       "rel": "conceals",
-      "src": "realms/wayfinders-homeworld.html"
+      "src": "locations/wayfinders-homeworld.html"
     },
     {
       "s": "wayfinders-homeworld",
@@ -7756,6 +7773,12 @@
       "t": "glyth",
       "rel": "lost a force at",
       "src": "factions/fleet.html"
+    },
+    {
+      "s": "krynnspace",
+      "t": "gal-01",
+      "rel": "located in",
+      "src": "cosmology/index.html"
     }
   ]
 }

@@ -11,15 +11,9 @@ when a ruling changes; delete it once the page carries it. See
 ### Naming: Rykoe and Erevos (cosmology/, glossary/, chart/, survey; done everywhere)
 - Rykoe is the centre of the cosmos: the remains of the Reach world, the black hole beneath the Core Monolith and the Radiant Citadel, around which the five galaxies lie, and which opens only when all five cores wake. The First Heart lies beneath Rykoe. Erevos is the black hole at the core of GAL-01, and the galaxy is named for it: the Erevos Galaxy. (Korey 2026-10-28: the two names swapped. done: every page, the survey, the chart, connections.json; "Rykoe Galaxy" is a retired term.)
 
-## Realms
+## Locations
 
-### Oerth (realms/oerth, cosmology/, chart/)
-- Oerth lies in GAL-01, Caelestis's own galaxy, in the system of Greyspace.
-
-### Aethris (realms/aethris.html)
-- Aethris's Zenith is unfinished, because the Fortuned have not completed their ritual. The Prism Ascendant is the Monolith that answered it. It has archived what it can and stays where it is. It does nothing.
-
-### Krynn and the dragons (realms/krynn.html, realms/fonains.html)
+### Krynn and the dragons (realms/fonains.html; done on locations/krynn.html, section 3)
 - The dragons that left Fonains and most worlds set out to face Takhisis and have not reached Krynn. Their own politics hold them.
 - An aspect of Bahamut is trapped by Takhisis in the ruined temple of Paladine on Krynn. It speaks through Eldree's egg on Fonains.
 
@@ -70,11 +64,6 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Factions
 
-### Vecna (realms/oerth; done on opposition/vecna.html, dossiers/vecna.html, factions/seekers.html and factions/deities.html)
-- Vecna's godhood is complete. He ascended on Oerth, his homeworld, a darkest-timeline world where his hold is strongest; its Monolith is a holy site.
-- The Hand of Vecna, the Eye of Vecna and the Book of Vile Darkness exist in this cosmos. (DM: where each is, and whether any has reached Caelestis or the Erevos Galaxy, is still to decide.)
-- Oerth is the world where Vecna became a god. His ritual to become a god pushed Oerth to its Zenith, and the Zenith made him one; the Monolith that answered archived his mortal form, Lich Vecna. That was his first ascension, the Godhood Ascension. The climb he is making now, into Continuity itself, is the Axiomic Ascension. Oerth is the Ascension World.
-
 ### Asmodeus and the Accordance (Fonains doc; done on factions/deities.html, section 2)
 - done: the members, Nalsa, Asmodeus's history and every appearance are on factions/deities.html § The Accordance. The Fonains doc still needs them.
 
@@ -101,7 +90,7 @@ when a ruling changes; delete it once the page carries it. See
 - The sectors share information, but not all of it. Each keeps a good deal to itself, the way rival departments do. The Fleet Intelligence Archive is the Caelestis Sector's archive: it holds what Caelestis knows of its own sector and only some of what the others share.
 - The Order's Watchers are more organized than the sector branches. They keep to the Erevos Galaxy, as the Fleet does, more densely in some places than others.
 - The stations differ with the local ecology of their place: what drifts there, what lives there, what threatens it. Their crews are drawn from the sector that keeps them. Readings from the stations pass between the sectors; this is how a disturbance seen at one edge reaches another.
-- done: factions/fleet.html and the glossary lines for sector, the Caelestis Sector, Corps, Academy, the Bridge and the FIA (section 2). Still waiting: Ondrel Anchorage and Strake Station on locations/, and the FIA's account of the Fleet on restricted/.
+- done: factions/fleet.html and the glossary lines for sector, the Caelestis Sector, Corps, Academy, the Bridge and the FIA (section 2); locations/ondrel-anchorage.html, locations/strake-station.html and locations/caelestis.html (section 3). Still waiting: the FIA's account of the Fleet on restricted/.
 
 ### Vocath's crew (campaign/colony/; done on factions/vocath-operation.html, section 2)
 - The crates at the Sky Dock carry Vocath's mark, the eye in a wheel.
@@ -180,7 +169,7 @@ when a ruling changes; delete it once the page carries it. See
 ### Thessalar (dossiers/thessalar.html)
 - Thessalar is Halaster Blackcloak, and he is still in the planar craft. His records of the work on N'ghathrod are there too.
 
-### Clint Dashforest (dossiers/clint.html, campaign/colony/, chart/, timeline; done on factions/fleet.html and factions/vocath-operation.html, section 2)
+### Clint Dashforest (dossiers/clint.html, campaign/colony/, timeline; done on factions/fleet.html and factions/vocath-operation.html, section 2, and on locations/cairn-station.html, locations/astral-sea.html and the chart, section 3)
 - Vocath's crew ambushed the Bellwether Crow for a sister artifact of A.T.L.A.S. that the Crow was carrying. Clint took it and left the ship to draw the boarders off.
 - He steered for a color pool he could see opening, and went through it on purpose. Color pools open and close quickly, and this one carried him through a small pocket of another dimension and spat him out on Fonains, separated from the boarders who followed him in.
 - The Crow's survivors still argue about whether he meant to go through. He did.
@@ -211,7 +200,7 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Crew
 
-### Gregory (crew/gregory.html, realms/toril.html; done on factions/fleet.html, section 2)
+### Gregory (crew/gregory.html; done on factions/fleet.html, section 2, and locations/toril.html, section 3)
 - Gregory comes from the Cogfast Enclave on Lantan, on Toril. He reached Caelestis on a cargo ship.
 - DM: the Lantern becomes Gregory's next anomaly if he investigates it.
 

@@ -30,21 +30,21 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 9 | 12 | 17 | 0 | 5 |
-| Realms | realms/ except Fonains; a new Oerth page | 19 | 7 | 23 | 2 | 28 |
+| Cosmology | cosmology/, glossary/, chart/ | 9 | 12 | 13 | 0 | 3 |
+| Locations | locations/ (Fonains stays in its own section) | 21 | 20 | 0 | 0 | 1 |
 | Fonains | realms/fonains.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 0 | 6 | 19 | 1 | 29 |
 | Timeline | the rest of timeline.json | 0 | 2 | 6 | 0 | 0 |
 | Factions | factions/ | 3 | 6 | 2 | 0 | 4 |
-| Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 40 | 5 | 36 |
+| Campaign | campaign/: spine, colony, voyages, plot hooks; opposition/vecna.html | 13 | 1 | 42 | 5 | 36 |
 | Dossiers | dossiers/ | 8 | 6 | 46 | 1 | 54 |
 | Crew | crew/ | 9 | 12 | 16 | 0 | 83 |
 | Artifacts and vessels | artifacts/, vessels/ | 7 | 2 | 26 | 0 | 43 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 21 |
-| New pages | 14 proposed pages, the hub, notes/ | 3 | 17 | 5 | 2 | 34 |
+| New pages | 14 proposed pages, the hub, notes/ | 3 | 16 | 5 | 2 | 33 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 1 | 1 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 9 | 3 | 0 | 1 |
-| **Total** | | **80** | **93** | **225** | **12** | **338** |
+| **Total** | | **82** | **105** | **200** | **10** | **308** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -159,7 +159,7 @@ Order under each page: decide, fix, drop, add.
   Ruled (STAGING, Cosmology § The Axioms): the Axioms are Consolidation, Expansion, Dissolution, Distinction and Determination, acting on energy that was always there. The old four map: Convergence → Consolidation (the Rod of Seven Parts is the Consolidation fragment, 7 pieces); Dissolution stays Dissolution, now the mixing of everything into sameness (the twins' fragment, 2); Boundary → Distinction (A.T.L.A.S., its sister and the third piece, 3); Transformation → Expansion (the 5-piece fragment). Determination's fragment is new: 11 pieces, none found. A Zenith is a world at its peak of Distinction, not "Convergence driving a system to maximum expression"; Monoliths are Continuity's response, and the strain from their rise is a byproduct of Vecna's work, not a weight on one Axiom. The Transformation–Boundary seam is cut. Every backlog item that quotes an old Axiom name reads under this mapping.
   Pages: prime/cosmology (the Four Axioms, Continuity, the strain, the seam section to cut), prime/glossary, prime/chart, prime/artifacts/* (index, rod-of-seven-parts, runekeepers-fragment, transformation-fragment → expansion-fragment, containment-engine, fonains-shard), prime/campaign/* (index, ascension, spine, plot-hooks, what-if), prime/crew/index.html and tumak.html, prime/dossiers/nghathrod.html and the-runekeeper.html, prime/factions/* (academy-fleet, deities, runekeepers, vthorama), prime/realms/index.html and wayfinders-homeworld.html (concealment rides on the Dissolution fragment's cycle), prime/rules/index.html, timeline.json, working/vecna.md. Done with the distribution pass. STAGING, the survey and the Connections layer already use the five.
   src: Korey, 2026-10-26
-  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); opposition/vecna.html (pilot); prime/factions (section 2).
+  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); opposition/vecna.html (pilot); prime/factions (section 2); prime/locations (section 3).
 
 - **[later]** Place GAL-01's inscription on the chart
   Ruled: GAL-01's inscription is the eye he lost, sixteen heart worlds (ten lids, six iris); the iris worlds are key (STAGING, Campaign; diagram 2026-10-26). Left for when play needs it: which systems hold which strokes, and whether any known system (Realmspace, Krynnspace, Virenspace) lies on the figure. Greyspace is not on it: Oerth is the retina every eye world links back to (STAGING, Campaign).
@@ -180,7 +180,7 @@ Order under each page: decide, fix, drop, add.
 - **[fix]** Spheres become galaxies, everywhere
   Ruled (STAGING, Cosmology): the cosmos is five galaxies around Rykoe; "sphere" as a region of space is retired, and SPH-0n becomes GAL-0n; Oerth moves to GAL-01. Pages: prime/cosmology, prime/chart (labels, the sphere layer, "the godless sphere"), prime/glossary, prime/realms/*, prime/factions/*, prime/campaign/*, timeline.json, working/divine-rules.md, the README naming rule, and the Fonains Canon Reference doc. Every backlog item below that quotes "sphere" reads as "galaxy". Done with the distribution pass. The survey, the Connections DM layer and STAGING already use galaxies.
   src: Korey, 2026-10-26
-  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); prime/factions (section 2).
+  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); prime/factions (section 2); prime/locations (section 3).
 
 - **[decide]** The calendar the Cycle counts *(later)*
   Pages date orders by Cycle (1486, 1489, 1490); the survey uses Cycle 1490 as the present for provisional designations. Set what the Cycle counts from, and how Toril's reckoning, Fonains's "year 425" and Krynn's calendar line up against it.
@@ -193,7 +193,7 @@ Order under each page: decide, fix, drop, add.
 - **[fix]** Replace the W-, SYS- registers with the CSC scheme
   Ruled (STAGING round 12): designations follow real astronomy; nothing has reached the players. Retire every W-0n and SYS-0n designation and replace it with a CSC number, a star-and-letter designation, or the body's proper name. Pages: prime/chart, prime/cosmology, prime/realms/* (realmspace, toril, hcatha, aethris, glyth, fonains, krynn, virenspace, sys04, tetherbreak, wayfinders-homeworld, ascension-world, caelestis, strake-station, cairn-station, meteor-hub, astral-sea), prime/campaign/index.html, prime/timeline/timeline.json, and restricted/ (fr-005, sa-002, wm-003, wm-006). Fonains's W-021 and Aethris's W-008 go with them. Do this with the distribution pass, and save the known systems (Realmspace, Virenspace, Aethris's system, Krynnspace, Glyth's) into the survey first so the new designations have one source.
   src: Korey, 2026-10-25 (round 12)
-  done: prime/cosmology (distribution section 1, 2026-10-27).
+  done: prime/cosmology (distribution section 1, 2026-10-27); prime/locations and the chart's page links (section 3).
 
 - **[later]** Game systems for GAL-03, GAL-04 and GAL-05
   Ruled: assigned ahead of time (STAGING round 12). Set when a campaign heads there.
@@ -218,12 +218,12 @@ Order under each page: decide, fix, drop, add.
   In-world line for the table intro: "The Dissolution fragment lies in two pieces, the Transformation fragment in three, the Boundary fragment in five, and the Convergence fragment, the Rod of Seven Parts, in seven."
   src: memory-canon (campaign-canon, prime-number counts; the Zenith "three poles"); chat-cosmic-campaign-structure § Cosmology redesign
   answered: memory-canon (campaign-canon, prime-number counts, locked); inbox/chat-organizing-framework.md § Residue (Settled). The Boundary-2 order in chat-cosmic-campaign-structure appears only in Claude's rewritten page text; a check of that chat found no Korey statement making the change, so memory stands.
-  done: the cosmology residue table and the glossary (distribution section 1, 2026-10-27).
+  done: the cosmology residue table and the glossary (distribution section 1, 2026-10-27); locations/wayfinders-homeworld.html (section 3).
 
 - **[fix]** The center is Rykoe
   Replace "the center" (as a name) with Rykoe across this page, the glossary, the chart and every page that names it. The Core Monolith keeps its name; those who dwell in it call it Aurath. Plain phrases like "toward the center" may stay where they are directions, not names.
   src: Korey, 2026-10-25 (round 9)
-  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27).
+  done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); prime/locations, the centre now named Rykoe (section 3).
 
 - **[later]** Names for the spheres and designated systems
   SPH-01 included. Listed in the page's § Open.
@@ -292,17 +292,13 @@ Order under each page: decide, fix, drop, add.
   Keep M. Tarroway as Strake Station's cartographer whose readings first hinted at an unknown vessel disturbing the satellites at the system's edge (STAGING round 4). Cut the "timing tables" and their failure everywhere. Reduce his presence on the ten pages that mention him to passing references; his main home is the Fleet Intelligence Archive (restricted/). Nothing public.
   Touches: dossiers/tarroway.html, dossiers/index.html, dossiers/miken.html, dossiers/vthoramu.html, dossiers/joffrey.html, dossiers/verrow.html, factions/vocath-operation.html, realms/index.html, realms/strake-station.html, chart/index.html, restricted/.
   src: Korey, 2026-10-25 (round 4)
-  done: factions/fleet.html and factions/vocath-operation.html (section 2).
+  done: factions/fleet.html and factions/vocath-operation.html (section 2); locations/strake-station.html, the register and the chart (section 3).
 
 ### chart/index.html
 
 - **[fix]** Fonains note: Vecna knew
   Note says "Tharizdun corrupted the Monolith without Vecna's knowledge." Replace: "Vecna nudged its Zenith knowing it would be ridden. Tharizdun's crystal fused into the Monolith as it formed. Lola's Boys destroyed it." Keep the dragons line, which is already right.
   src: session-rulings; tharizdun § How the Fonains Monolith formed
-
-- **[fix]** Krynn note: Eldree's egg
-  Note says the aspect of Bahamut "reaches out through Eldree, a silver pseudodragon on Fonains." Change to "speaks through Eldree's egg on Fonains."
-  src: session-rulings; realms/krynn.html
 
 - **[fix]** H'Catha note
   Note says "Beholder toroid ruled by rival hives. The Spire took an adamantine meteor strike." Change to: "Beholder toroid ruled by ten solitary beholder rulers under the Sovereign Eye. An adamantine meteor struck the Spindle. Fourteen days out." Beholders follow 5e (solitary, paranoid); the 2e hive lore is rejected.
@@ -312,183 +308,65 @@ Order under each page: decide, fix, drop, add.
   Kind says "Derelict, Toril orbit"; note says it "Holds the Containment Engine". Update: the crew holds the tyrant ship. The Containment Engine, Fourth Series (Vaelorix's Lantern of Flourishing), is out of Vaelorix's body and seated in the repair bay, and the ship is making the fourteen-day crossing to H'Catha.
   src: memory-canon (campaign-canon, Voyage 006 outcome; Lantern seated)
 
-- **[fix]** Caelestis kind
-  Kind says "Academy station, Toril orbit." Change to "Fleet station, Toril orbit." The Academy is about a fifth of Caelestis.
-  src: memory-canon (campaign-canon, Mirt)
-
-- **[fix]** How Clint reached Fonains
-  The Crow site says "How he crossed is undecided" and lists "How Clint Dashforest reached Fonains" as open. State it: after the Bellwether Crow ambush, a psychic wind carried Clint Dashforest to SYS-04, and he reached W-21 Fonains before its Monolith appeared. Close the open line. (Whether he went overboard or took a craft is a separate decide in the Timeline section.)
-  src: memory-canon (campaign-canon, Astral Sea travel features); timeline "Clint lands on Fonains"
-  updated (round 4): superseded. Clint went through a color pool on purpose, drawing the boarders off; write it from STAGING § Clint Dashforest and the Bellwether Crow.
-
-- **[fix]** Realmspace travel line
-  Says "Closed lane to the Tetherbreak sector." Change to "Charted lane to Strake Station; closed beyond it." Only Strake–Cairn is closed (the Tetherbreak entry already says so).
-  src: chart lanes; realms/index.html lane table
-
 - **[fix]** Center: why the approach harms gods
   The center's open list has "Why the approach harms Reach-born gods." Answer it in the note: polarity; a god and a heart carry the same charge, and the First Heart pushes hardest. Remove that open line. (Why Reach-born gods suffer more stays a decide; see cosmology.)
   src: session-rulings; divine-rules § Polarity
 
-- **[add]** Glyth is hard to reach
-  Note says only "Ringed and remote. Ten days out." Add: an outer world on a long orbit with a rare approach window; the Fleet bans approach.
-  src: memory-canon (open-decisions, Taken King line)
+# Locations
 
-- **[add]** Oerth
-  No chart entry exists. Add Oerth, Vecna's homeworld, in SPH-05, once the sphere is ruled (see the Realms section § NEW: Oerth).
-  src: session-rulings; vecna § Oerth
-
-# Realms
-
-Items for `realms/` pages except `realms/fonains.html` (see the Fonains section).
+Items for `locations/` pages. Fonains stays at `realms/fonains.html` until section 8; its items are in the Fonains section.
 Order under each page: decide, fix, drop, add.
+done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what was written is gone from this section, and each page's Still to decide carries the open items below.
 
-### realms/index.html
-
-- **[later]** Where Vetharra (W-47) and Kaldris (W-52) sit
-  Options: SYS-07 or SYS-08 (both draft candidates); or Kaldris near SYS-03 as the "control case".
-  src: framework § Open
+### locations/index.html
 
 - **[decide]** Names for CON-055, CON-312, the Astral waystation and the cantina *(prep)*
-  All four carry designations or placeholders only. Touches this page, `realms/waystation.html`, `realms/cantina.html`, chart.
+  All four carry designations or placeholders only. The cantina is in the current prep ring. Touches this page, `locations/waystation.html`, `locations/cantina.html`, chart.
   src: chat § Open
 
-- **[later]** The English name of N'ghathrod's people
-  Settled in chat-cosmic-campaign-structure, later than memory's still-open list: the illithid word Vth'ulhan translates as "the unthinned", and "unculled" is the Glyth insult they took as their own name (both already on `factions/vthorama.html`). "Brainless-raised" is memory's working description, not a name.
-  Still open: which English name the pages lead with for the people. Options: (a) "the unthinned" as their own word, with "unculled" kept as the insult Glyth threw and they wear; (b) "unculled" everywhere, with Vth'ulhan glossed in the lexicon only. glyth-watcher.md's "pure-born" for illithids raised under an elder brain can stand either way. Touches the W-07 entry here ("The illithid world that refused the unthinned"), `realms/glyth.html`, `dossiers/nghathrod.html`, glyth-watcher.md.
-  Merged here: the realms/glyth.html decide "Name for illithids raised without an elder brain" asked the same question (unthinned, brainless-raised, unculled); that page uses "the unthinned, raised without an elder brain".
-  Related, settled since: the colony's chapter name is Vth'orama, the Seekers of a New Home (STAGING round 3). That names the chapter, not the people Glyth refused, so this stays open.
-  done (Korey, 2026-10-27): the pages lead with "the unthinned"; "unculled" is not used. factions/vthorama.html (section 2) carries it; the realm pages follow in section 3.
-  src: memory-canon (open-decisions, N'ghathrod settled; still-open list); chat-cosmic-campaign-structure § N'ghathrod; memory-canon; glyth-watcher; realms/glyth.html
-  settled part: inbox/chat-cosmic-campaign-structure.md § N'ghathrod origin ("unculled"), § N'ghathrod and the colony ("Vth'ulhan = the unthinned"), § Superseded; glyth-watcher
+- **[later]** Where the constellations are visible from
+  The register's catalogue gives "visible from" for CON-025 (Realmspace and CSC 56973) and CON-055 (Virenspace) only. CON-091 was visible from SYS-05, SYS-07 and SYS-08, which no longer exist; CON-312's Realmspace was a draft. Set both, and what any of the four mean, and whether the wardrobe's sky is CON-055 seen from the tether point or from elsewhere.
+  src: realms/index.html § Constellations (old page)
 
-- **[fix]** Spheres are regions, not shells
-  Page says "Five crystal spheres are designated." Change to "Five spheres are designated." Spheres are regions of the Astral Sea.
-  src: framework § Cosmic structure; memory-canon (campaign-canon, cosmic model)
+- **[later]** The unplaced registry worlds: W-34, Vetharra and Kaldris
+  The old register carried three FIA registry entries without a position: W-34 (an Ortholith established and recording over a natural Zenith, high priority, drafted into Virenspace), W-47 Vetharra (sole standing structure, surface population zero) and W-52 Kaldris (sole standing structure, a Zenith collapse variant labelled "control case"). Re-designate them in the survey and place them, or drop them. The chart still lists all three.
+  src: framework § Open; realms/index.html, realms/virenspace.html (old pages)
 
-- **[fix]** Toril names the system
-  W-01 says "The sphere's namesake world, two days out." Change to "The system's namesake world, two days out." Toril gives Realmspace its name; SPH-01 has no name yet.
-  src: memory-canon (campaign-canon, cosmic model; SPH-01 name open)
+- **[later]** The crew's unplaced homeworlds
+  Casey's homeworld (a star fell on it and Polly left afterward; possibly the Cycle 1486 "deliberate" meteor event in SA-002) and Bartholomew's (Rashemi, a druidic tradition pointed outward) have no place. Place them when their arcs need it. See also the crew section.
+  src: realms/index.html § unplaced (old page)
 
-- **[fix]** Joffrey's mapping is recent
-  The Caelestis card says "Joffrey has spent a year mapping routes to it from inside operations." Joffrey was taken in the Bellwether Crow ambush about a year ago, stayed himself for months while the taking worked, and only recently finished converting. Change to: "Since his conversion finished, Joffrey has been mapping routes to it from inside operations."
-  src: memory-canon (open-decisions, "Operative resolved")
+### locations/realmspace.html
 
-- **[fix]** H'Catha card
-  Card says "Beholder toroid; eight rival domains and an adamantine meteor", "Six of the eight domains hold a port at the Spindle's base", and "landed on a seam, which is why it is still there". Rewrite to match the hcatha.html fixes below: ten domains, one ruler each, bound under the Sovereign Eye they dreamt together; ports spread across the world; the meteor mined in an occupied, skirmished area.
-  src: memory-canon (campaign-canon, H'Catha supersedes eight domains; refinement; decisions)
+- **[later]** Hollis Post
+  Its complement and commander, and whether its readings on the Cairn bearing a year ago caught the mass, are not set. Strake's commander has no name either.
+  src: realms/tetherbreak.html (old page)
 
-- **[fix]** Glyth card
-  Card ends "by colony reckoning it is not an enemy — only a door that closed", framing a visit as open. Glyth cast N'ghathrod's people out and is kept unreachable. Align with the glyth.html fixes below.
-  src: timeline.json ("Exile from Glyth"); memory-canon (open-decisions, Taken King line)
+- **[later]** Two Gardens
+  Realmspace's Garden (the asteroid chain bound by one plant) and the tyrant ship's Garden (the greenhouse deck) share a name. Rename one, or let the context carry it.
+  src: locations pass, 2026-10-28
 
-- **[fix]** Fonains card: Vecna knew
-  Card says "Vecna encouraged the Zenith, Tharizdun corrupted the Monolith that answered it". Change to: "Vecna nudged the Zenith knowing it would be ridden; Tharizdun's crystal fused into the Monolith as it formed."
-  src: session-rulings; tharizdun § How the Fonains Monolith formed
+### locations/caelestis.html
 
-- **[fix]** SYS-05 and SYS-06 belong to SPH-01
-  The Ascension World (SYS-05) and the Wayfinders' homeworld (SYS-06) both sit under the "Untethered" filter. Move both under SPH-01. The Wayfinders' entry stays marked hidden.
-  src: vecna § Oerth; memory-canon (campaign-canon, Lunarfoot in Caelestis's sphere)
-
-- **[fix]** Fonains and Krynn are ongoing
-  Spheres table says "The Fonains and Krynn campaigns both took place here." Change to "take place here." Krynn's present is level with Caelestis now, and Lola's Boys continues.
-  src: session-rulings
-
-- **[drop]** Odds
-  Page says "Odds is the plasmoid bartender a crew is likely to meet on it." "Odds" is retired: Ryeback absorbed every interaction planned for Odds, and the name is on the spelling list as a mishearing. Remove the line; the bartender question is a decide under cantina.html.
-  src: memory-canon (campaign-canon, Key NPCs; spelling list)
-
-- **[add]** World awareness
-  Add to the worlds register: "Every world is Aware, Read-in or Unaware of space travel. Low-grade contracts sit on Aware worlds. Work on Unaware worlds is covert: ship-shaped hulls land at sea and come in through ports, and fugitive retrievals run in the Men in Black style. Watchers issue contracts and tips to head off trouble before it reaches a Zenith."
-  src: chat § World awareness; memory-canon (World awareness)
-
-- **[add]** World-record template
-  DM voice. Each world's base record holds: name; one-line physical description; peoples; how it works; awareness (Aware, Read-in, Unaware); who speaks for it; an open fact; a rumour; a rabbit hole; hooks.
-  src: chat § Cosmos texture; spine.html Open development
-
-- **[add]** Hostile but navigable
-  "Hostile worlds can be navigated; unified ones cannot. H'Catha is enterable because its beholders are divided. Glyth is closed because it is one civilisation." Fits here and on glyth.html.
-  src: chat § Cosmos texture; memory-canon (Taken King line)
-
-- **[add]** Exandria
-  Add a registry line: "Exandria. A world with none of the Vecna history Critical Role gave it, before Vox Machina and the Mighty Nein." Sphere and system unassigned.
-  src: memory-canon (open-decisions, Vecna/Tharizdun 2026-10-25); vecna § Oerth
-
-- **[add]** Oerth card
-  See § NEW: Oerth below.
-
-### NEW: Oerth
-
-No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms/index.html`, and an entry on the chart.
-
-- **[add]** Oerth
-  "Oerth is Vecna's homeworld, in SPH-05. It is a darkest-timeline world: the heroes failed, Vecna ruled as a lich and was never stopped, and his hold there is the strongest anywhere. He ascended on Oerth through a Zenith, and its Monolith archived his mortality; his followers keep that Monolith as their holiest site. Vecna's divine realm is anchored to Oerth's sphere. Becoming a god gave him the same charge as Oerth's heart, and the world pushed him off; he has not stood on it since."
-  DM note: Oerth is reachable, and a visit should be horrible.
-  src: session-rulings; vecna § Oerth; memory-canon (Vecna/gods 2026-10-25)
-
-### realms/realmspace.html
-
-- **[fix]** Toril names the system
-  W-01 row says "The sphere's namesake world." Change to "The system's namesake world."
-  src: memory-canon (campaign-canon)
-
-- **[fix]** H'Catha row
-  Row says "Beholder toroid ruled by rival hives." Change to "Beholder toroid; ten rival beholder rulers under the Sovereign Eye." Beholders are solitary and paranoid; the 2e hive lore is rejected.
-  src: memory-canon (campaign-canon, beholders follow 5e)
-
-- **[add]** Garden (W-09)
-  Row says only "A cluster of linked bodies turning as a set." Expand: "An asteroid chain bound together by one vast plant. Vine-bridges run between the rocks; claim-families hold them and trade by barter; there is no government. The Fleet keeps nine beacons there."
-  src: chat § Graduation board contracts
-
-### realms/toril.html
-
-- **[fix]** Gregory's anchor: the Cogfast Enclave on Lantan
-  Ruled (STAGING round 8). The page offers only the Cogfast lead. Write: "Gregory comes from the Cogfast Enclave on Lantan." On `crew/gregory.html` the origin reads "the Cogfast Enclave, Lantan, Toril". `restricted/sa-002.html` ("Cogfast Enclave — SYS-01") already agrees and stands.
-  Touches: this page, crew/gregory.html.
-  src: Korey, 2026-10-25 (round 8); chat-voyage-6-7-planning § Open
-
-- **[fix]** Toril names the system
-  Page says "The sphere's namesake world" (subtitle) and "the sphere's namesake" (body). Change both to "the system's namesake".
-  src: memory-canon (campaign-canon)
-
-- **[add]** Gregory is from Toril
-  The page offers only the Cogfast lead. Add: "Gregory is from Toril. He reached Caelestis on a cargo ship, and no Zenith is tied to his origin." (Working decision in memory.)
-  src: memory-canon (campaign-canon, Gregory); chat-voyage-6-7-planning
-
-- **[add]** The Lantern's pull
-  "The Lantern of Flourishing pulls Gregory toward Toril. In Toril orbit the pull points straight down at the world."
-  src: memory-canon (open-decisions, Voyage 007 intent); chat-voyage-6-7-planning
-
-### realms/caelestis.html
-
-- **[decide]** What the secret sliver of Caelestis is *(prep)*
-  Seeds: the office that decides what goes into the Brig; an Order liaison; what the station was before it was a school.
+- **[decide]** What the secret part of Caelestis is *(prep)*
+  Seeds: the office that decides what goes into the Brig; an Order liaison; what the station was before it was a school. Also on factions/fleet.html Still to decide.
   src: astral § Open; memory-canon (campaign-canon, Mirt)
 
 - **[decide]** Who renews the Forbiddance while Saerthe is away *(prep)*
   Saerthe renews the Forbiddance nightly on a 30-day cycle, and he also holds the tyrant ship's helm at H'Catha and casts for the Flighty Foundling (inference: he cannot do both). Options: a deputy renews the ward while he is away; or another caster holds the Forbiddance.
   src: memory-canon (campaign-canon, approach to H'Catha; Flighty Foundling); realms/caelestis.html
 
-- **[fix]** Mirt runs the Academy only
-  Page says "Staffed and run by the Caelestis Academy & Fleet. Mirt is its headmaster." Change to: "Mirt is headmaster of the Academy. The Fleet Corps and the Bridge operate outside him." Mirt is a well-known adventurer who knows the Astral Sea and has drawn ire over the years; Caelestis protects him and keeps him quiet, so he is also stuck there.
+- **[decide]** The station's proportions
+  Memory gives them: the Academy about a fifth of Caelestis, the Fleet Corps about three-quarters (a part the crew has not seen yet), the remaining sliver secret. Neither STAGING nor an answered item states them, so the page says only that a part is kept secret. Confirm before the page carries the numbers.
   src: memory-canon (campaign-canon, Mirt); astral § Caelestis structure
 
-- **[fix]** The station's proportions
-  Page describes "two functional wings". Add the proportions: the Academy is about a fifth of Caelestis, the Fleet Corps about three-quarters (a part the crew has not seen yet), and the remaining sliver is secret.
-  src: memory-canon (campaign-canon, Mirt); astral § Caelestis structure
+### locations/toril.html
 
-- **[fix]** Joffrey's window
-  Page says Joffrey "has been mapping routes to it from inside the operations wing for a year." Change to a recent window: he was himself for months after the Bellwether Crow and only recently finished converting.
-  src: memory-canon (open-decisions, "Operative resolved")
+- **[later]** Where the Lantern points
+  In Toril orbit the Lantern of Flourishing's pull points straight down at the world. What lies there is not set.
+  src: memory-canon (open-decisions, Voyage 007 intent)
 
-- **[fix]** The wardrobe and the voice
-  Page says "why Polly could reach him there" and "Mirt has been keeping a piece of Astra's network in his bedroom". Change to "why Astra Virex, in Polly's voice, could reach him there" and "a piece of Astra Virex's reach". The wardrobe is one of Zerathis's tethers. ("Network" is a retired word.)
-  src: memory-canon (campaign-canon, Casey Geim)
-
-- **[add]** Caelestis stretched thin
-  Add as the station's current pressure: "Caelestis is stretched thin. There are more Zeniths, more Watcher requests for Fleet help, a whiff of an illithid sect, and movements at the sphere's edge. Vocath sees the thinning and uses it to stress the Academy."
-  src: timeline "The Fleet stretched thin"; memory-canon (open-decisions, Voyage 007 intent)
-
-### realms/hcatha.html
+### locations/hcatha.html
 
 - **[decide]** What the rulers can see *(prep)*
   (a) The Sovereign Eye lets every ruler see all, so none can act openly against another (memory, "H'Catha sovereign", which supersedes earlier options).
@@ -557,161 +435,97 @@ No page or card exists. It lands on a new `realms/oerth.html`, a card on `realms
   "Brighteyes live in the always-lit band; Shades live near the Spindle. They are told apart by behaviour and by their eyes, not by skin tone." (A lean in memory.)
   src: memory-canon (H'Catha later pass); astral § Names
 
-### realms/glyth.html
+### locations/glyth.html
 
-- **[fix]** Glyth is kept unreachable
-  Page says "A crew that reaches Glyth can learn the colony's history from the only party with a reason to tell it". Replace: Glyth is kept unreachable, so the source is someone who has come out of Glyth: the Watcher (see add below). Also soften "only a door that closed" to match: Glyth cast N'ghathrod's people out.
-  src: memory-canon (open-decisions, Taken King line); chat-cosmic-campaign-structure (Glyth hard to reach)
+- **[decide]** One purebred stayed
+  The add "When N'ghathrod left with the people Glyth refused, one properly raised illithid among his lieutenants chose to stay on Glyth" conflicts with STAGING: N'ghathrod has five lieutenants, two of them properly raised, and all five are with him. Not written. Rule whether a sixth, properly raised illithid stayed (not a lieutenant), or cut the line.
+  src: memory-canon (open-decisions, N'ghathrod settled); glyth-watcher; STAGING § The Vth'orama
 
-- **[add]** Hard to reach
-  "Glyth is an outer world on a long orbit with three moons. Its approach window is rare. Its own defenses guard it, and the Fleet bans approach."
-  src: chat § Cosmos texture; memory-canon (Taken King line); glyth-watcher § What she knows
+- **[later]** Glyth and the colony
+  Whether Glyth knows the colony still exists, and what it would do if told what it is building, are not set. The Watcher who came out of Glyth has no name yet, and where she is now is not set; she is sketched in working/glyth-watcher.md.
+  src: realms/glyth.html (old page); glyth-watcher § Sketch
 
-- **[add]** Hostile but closed
-  "H'Catha is enterable because its beholders are divided. Glyth is closed because it is one civilisation."
-  src: chat § Cosmos texture; memory-canon
+### locations/strake-station.html
 
-- **[add]** One purebred stayed
-  "When N'ghathrod left with the people Glyth refused, one properly raised illithid among his lieutenants chose to stay on Glyth."
-  src: memory-canon (open-decisions, N'ghathrod settled); glyth-watcher
+- **[later]** What is in Strake's secure storage, and whether Verrow can be moved
+  Whether Verrow can be moved by authorization, persuasion or something worse rides with it.
+  src: chat § Open; framework § Open; realms/strake-station.html (old page)
 
-- **[add]** The Watchers of Glyth
-  "The Order posted Watchers to Glyth, one per region. One lived in the elder brain's range for years and came out alone; she still hears it. The others posted there did not come back." Link the new dossier from glyth-watcher.md once it has a page; her name is still to come.
-  src: glyth-watcher § Sketch
-
-- **[add]** The Fleet's loss at Glyth
-  "The Fleet lost a vessel at Glyth during the last approach window." Vessel name and commander to come.
-  src: chat-cosmic-campaign-structure (Fleet priors)
-
-### realms/aethris.html
-
-- **[add]** What the Prism Ascendant does
-  Ruled (STAGING round 8). Remove the page's Open line ("whether the Fortuned want him back as a person or as a component, and what the Prism Ascendant has been doing above an unfinished Zenith for all this time"). Its first half is answered too: the Fortuned want Sol as a component (STAGING round 5). Write:
-  "Aethris's Zenith is unfinished, because the Fortuned have not completed their ritual. The Prism Ascendant is the Monolith that answered it. It has archived what it can and stays where it is. It does nothing."
-  src: Korey, 2026-10-25 (round 8); realms/aethris.html
-
-- **[add]** The Prism Ascendant is a Monolith
-  "The Prism Ascendant is a Monolith, reality's own response to Aethris's Zenith. The Temple holds that it is Tymora's answer to the ritual of perfection; it is not. Neither Tymora nor Beshaba owns or controls it, and their rivalry plays out beneath it. It is the first Monolith Aethris has had, though the Misfortuned have been born there for generations."
-  src: BCS § Sol/Aethris and the gods (turns 858, 864); memory-canon (Prism Ascendant is a Monolith)
-
-- **[add]** Other faiths on Aethris
-  "Aethris is a whole world, and not everyone on it follows Tymora. Other faiths hold ground there, among them a lesser following of Beshaba."
-  src: BCS § Sol/Aethris and the gods (turn 860)
-
-- **[add]** Concentrated worship
-  "Tymora and Beshaba are strongest on Aethris. Worship concentrated on one world buys them force there that they have nowhere else."
-  src: memory-canon (open-decisions, Vecna/Tharizdun 2026-10-25); divine-rules § Concentration and reach
-
-- **[add]** Sol on W-08
-  Add one line to W-08: "Sol was born Misfortuned on Aethris, escaped the Zenith ritual before it completed, marked by Beshaba, and was recruited by a Watcher. The Fortuned built the C.R.C. to bring him back."
-  src: memory-canon (campaign-canon, Sol Fortuna); timeline "Sol escapes Aethris"
-
-### realms/virenspace.html
-
-- **[later]** Virenspace's location and route
-  Memory names Virenspace's location and its route from Realmspace as an unresolved gap. The page fixes it beyond H'Catha, on a charted lane that splits at the Astral waystation. Options: confirm the page's placement as canon; or mark it a draft. Also open: Ortholith standing in Casey's home system.
-  src: memory-canon (open-decisions, unresolved gaps); chat § Open
-
-- **[add]** Astra Virex
-  The page mentions "Astra's reach" only. Add: "Astra Virex is Casey's true patron and calls him in his brother Polly's voice. It wants to be whole and strong and never to be wounded again, and its method is calling people to it. It is oriented toward constellations and does not know world-hearts exist."
-  src: memory-canon (campaign-canon, Casey Geim)
-
-- **[add]** Zerathis and the wardrobe
-  "Zerathis followed Astra Virex, not Vecna. He gave Mirt the wardrobe."
-  src: memory-canon (campaign-canon, Casey); chat-organizing-framework
-
-### realms/strake-station.html
-
-- **[later]** What is in Strake's secure storage
-  src: chat § Open; framework § Open
-
-### realms/cairn-station.html
+### locations/cairn-station.html
 
 - **[later]** What is at Cairn Station
-  Settled: Cairn went silent about a year ago after reporting readings of the dreadnought. Vocath's people took the station after it went dark and waited there for the relief run, which is how the Bellwether Crow ambush was set.
-  Still open: what is at Cairn now (Claude's draft: something left behind that watches, and what it reports to), and where Tarroway is. The payoff should open onto something larger.
+  Settled: Cairn went silent about a year ago after reporting readings of Vth'oramu. Vocath's people took the station after it went dark and waited there for the relief run, which is how the Bellwether Crow ambush was set, and they left something behind when they withdrew.
+  Still open: what was left (a taken creature, a construct, a brine cache with something growing in it, or a person); what remains of the station, what became of its complement, who built onto it, and whether any of Cairn's own instrument record survives. The payoff should open onto something larger. The page holds this in its Still to decide, and factions/vocath-operation.html points there.
   src: framework § Open; memory-canon (campaign-canon, Cairn)
   settled part: inbox/chat-cosmic-campaign-structure.md § Tetherbreak (final canon, turns 238–241)
-  settled since: Tarroway is a cartographer on Strake Station (STAGING § Tarroway, round 4), so "where Tarroway is" is closed.
 
-- **[fix]** The dreadnought on the Cairn bearing *(answered)*
-  "The dreadnought the Fleet read on the Cairn bearing a year ago was Vth'oramu. It has moved since. It keeps outside Realmspace, in the dark between systems, because a vessel that size near a world's planets would raise alarms. Where it lies now follows from what N'ghathrod is doing."
-  Correct any page that treats the Cairn dreadnought as a separate creature. Check Claude's Tetherbreak line "The dreadnought whose territory this is was taken a little over fifty years ago" against STAGING round 2 (taking it took decades, perhaps a century) and round 5 (it bore no wound before the siege; N'ghathrod saw an opportunity and took it).
-  The earlier sub-question, why the dreadnought held that bearing before he took it (options: drawn there; from the next sphere; always there; disrupting transit between spheres), rides with the shape decide "What N'ghathrod is doing now" (Cosmology § glossary). Not yet in the FIA.
-  Earlier settled part: Cairn is tied to the dreadnought, and the Vth'oramu is a living astral dreadnought N'ghathrod wore down and took, harboured outside Realmspace.
-  answered: STAGING § Vth'oramu and the colony (round 5: "Vth'oramu has moved since it sat on the Cairn bearing a year ago")
-  src: framework § Open; memory-canon (open-decisions, Vth'oramu)
-  settled part: inbox/chat-cosmic-campaign-structure.md § The dreadnought, § Tetherbreak
+### locations/ondrel-anchorage.html
 
-- **[fix]** Most of the complement died
-  Page says "The rest of the complement was let go on purpose." Change to: "The second boarding killed the senior deck officers and most of the complement. The few survivors were let go on purpose, so that Joffrey would come home a hero."
-  src: memory-canon (open-decisions, "most didn't"); chart Crow site
+- **[later]** Ostrel and the port
+  Ostrel lies in a neighbouring system within the Caelestis Sector (Korey 2026-10-28). Which system, what Ostrel orbits, Ostrel's designation, what "neutral" means at Ondrel, and who runs the port are not set.
+  src: Korey, 2026-10-28; STAGING § Fleet (round 11)
 
-- **[add]** The deal
-  The page says only that Vocath's people "took what they had agreed to take". Name it: "Vocath and N'ghathrod struck a deal. N'ghathrod would put an asset inside sealed Caelestis, and in exchange Vocath's line would supply captives. Vocath read it as ordinary illithid thrall work and asked no more. Joffrey was taken during the second boarding." (That N'ghathrod's own people made the second boarding is an inference; confirm before the page says it.)
-  src: memory-canon (open-decisions, "Operative resolved")
+### locations/oerth.html
 
-- **[add]** What the line carried
-  "Vocath's people chased Clint Dashforest to SYS-04 and never found him. They came back from Fonains with fragments of the broken Monolith and sold them on through the Cairn line. Boogie's shard is one."
-  src: timeline "Boogie takes the shard"; session-rulings (timing)
+- **[later]** How the crew could reach Oerth, and how late
+  Known: Oerth lies in Greyspace, far across the Erevos Galaxy on the opposite arm from Realmspace, and no lane on Caelestis's charts reaches it. The Radiant Citadel and the Core Monolith are late Arc 3 or Arc 4 destinations, reached by a long voyage or through a linked heart. What Oerth looks like and how a visit plays (it should be horrible) are not set either.
+  src: working/vecna.md § Open; Korey (Oerth is reachable, and a visit should be horrible)
 
-### realms/cantina.html
+- **[later]** Greyspace's CSC number and Oerth's designation
+  The survey says Greyspace's designation waits for the charting pass.
+  src: prime/data/survey.json
 
-- **[decide]** Who tends bar on the cantina *(prep)*
-  The page names Odds the plasmoid, but "Odds" is retired (see drop). Options: Glim the plasmoid, of a cantina called the Long Pour (unreviewed Crossing Companion proposal); or leave the bartender unnamed.
-  src: astral § Open; memory-canon (campaign-canon, Ryeback absorbs Odds); chat-crew-boogie-casey-sol
+### locations/krynnspace.html
 
-- **[drop]** Odds
-  Page says "Odds is the plasmoid bartender a crew is likely to meet on it, and has drifted through wildspace for decades." Remove the name. Ryeback absorbed every interaction planned for Odds.
-  src: memory-canon (campaign-canon, Key NPCs; spelling list)
+- **[later]** Krynnspace's position and route
+  Its position in the galaxy and the uncharted route from Realmspace are not set. Whether it lies on Vecna's eye is under Cosmology § Place GAL-01's inscription.
+  src: realms/sys04.html (old page)
 
-### realms/meteor-hub.html
+### locations/krynn.html
 
-- **[later]** The hub's identity and name
-  Korey liked the carved meteor as a dead god's severed head. Name options: the Crown, Godsrest, the Wanderhead, the Rock.
-  src: chat-voyage-6-7-planning § Open
+- **[later]** The dragons' politics
+  The dragons that left Fonains and most worlds have not reached Krynn, because their own politics hold them (STAGING). What those politics are is not set.
+  src: STAGING § Krynn and the dragons
 
-### realms/wayfinders-homeworld.html
+### locations/virenspace.html
 
-- **[fix]** What "Lunarfoot" names *(answered)*
-  "Lunarfoot" names the clan only. The Wayfinders' homeworld stays unnamed by doctrine. This page is right. Correct anything that names the world or its system Lunarfoot: the register entry "W-11 Lunarfoot" (becomes "W-11", the Wayfinders' homeworld), "SYS-06 is Lunarfoot's system" (becomes "SYS-06, the Wayfinders' homeworld's system"), and memory's line "Lunarfoot is in a hidden system", which should read "the Wayfinders' homeworld is in a hidden system". Remove any homeworld name that reaches the player side; "Lunarfoot" as the clan is fine there.
-  src: memory-canon (campaign-canon, Cosmology); realms/wayfinders-homeworld.html
-  answered: inbox/chat-cosmic-campaign-structure.md § Rules and crew ("Lunarfoot is the clan; the Wayfinders' homeworld stays unnamed by doctrine", turn 399), § Superseded; PR #58 "Lunarfoot is the clan, not the world" (merged); inbox/chat-voyage-6-7-planning.md § Interlude and downtime (leaks)
+- **[later]** Casey's tether point, and the depth of the overlap
+  What Casey's first tether point is, and how many tethers Viren already holds, are not set. The lane is written as a charted lane to the Astral waystation and a long haul onward, matching the survey and the chart. Also open: whether an Ortholith stands in Casey's home system (the old W-34 entry is under the register's unplaced worlds).
+  src: memory-canon (open-decisions, unresolved gaps); chat § Open; realms/virenspace.html (old page)
 
-- **[fix]** SPH-01, hidden
-  Page says "Sphere uncatalogued". Change to: "SPH-01, in a hidden system (SYS-06)." The Wayfinders go out to map what their world must be protected against, so it shares the sphere with those threats.
-  src: memory-canon (campaign-canon, Lunarfoot); cosmology/index.html § Caelestis's sphere
+### locations/wayfinders-homeworld.html
 
-- **[add]** The Runekeepers
-  "The Runekeepers are an order of this world alone. They hid their own world's Atrium." (Memory says "Aperture"; the later chat renamed it Atrium.)
-  src: memory-canon (open-decisions, Runekeepers stay specific)
-
-- **[add]** Sensory anchors
-  "A luminous haze, like light beneath water. Tall pale trunks with smooth, glasslike bark, spiralling toward one unseen point. The smell of warm earth after rain, and of sap touched by lightning. People who move with certainty." The planet's full look is still to be worked out.
+- **[later]** The homeworld's full look
+  The sensory anchors are on the page. The planet's full look is still to be worked out.
   src: chat-crew-tumak-gregory-bartholomew § Tumak/Runekeeper lore and pressure
 
-- **[add]** The twins' return
-  Add to the Zenith section: "When the twins come home, the homeworld splits into a blessing faction and an omen faction." Their arrival is itself a Zenith, and a Monolith follows any Zenith.
-  src: chat-crew-tumak-gregory-bartholomew § Tumak/Leader concept; memory-canon (the Zenith, twins)
+### locations/nowhere.html
 
-### realms/ascension-world.html
+- **[later]** Nowhere's system, designation and remains
+  Its system and its designation (the charts mark a world there, so it is charted), what physically remains at the wreck, and which god died there are not set.
+  src: cosmology § Nowhere; locations pass, 2026-10-28
 
-- **[fix]** A local threshold, distinct from Oerth
-  Page says "a small, personal ascension distinct from the canonical Sigil event". Change to: "a small, local threshold he forced through agents, distinct from his ascension on Oerth." His godhood came first, on Oerth; this was later and smaller.
-  src: session-rulings; vecna § Oerth
-  updated (round 5): likely superseded. The separate Ascension World is retired and Oerth is that world (STAGING § Vecna, round 5); see the Timeline section's answered item "The Ascension World event".
+### locations/rykoe.html
 
-- **[fix]** SPH-01
-  Page says "Sphere uncatalogued" (twice). Change to SPH-01, system SYS-05.
-  src: vecna § Oerth ("a world in SPH-01"); chart (SYS-05 inside SPH-01); timeline "The Ascension World"
-  updated (round 5): likely superseded. The separate Ascension World is retired and Oerth is that world (STAGING § Vecna, round 5); see the Timeline section's answered item "The Ascension World event".
+- **[later]** The Reach world's name
+  Its people's own name for their world went into the Core Monolith with them, and their descendants in the Citadel carry it. What it was is not set.
+  src: realms/first-world.html (old page)
 
-### realms/krynn.html
+### locations/cantina.html
 
-- **[later]** The "First World and dragons" thread
-  The infobox ("Dragons, and the First World") and the closing line name a thread with no source in memory, drafts or sweeps. "The First World" is the glossary's name for the Reach world, so as written the line makes a cosmology claim about Krynn's dragons that nothing supports.
-  Options: (a) remove it and keep the settled dragon facts (they left to face Takhisis and have not reached Krynn; their own politics hold them); (b) move it to the planning layer as an open thread and take "First World" off the realm page.
-  src: realms/krynn.html
+- **[decide]** Who tends bar on the cantina *(prep)*
+  "Odds" is retired. Options: Glim the plasmoid, of a cantina called the Long Pour (unreviewed Crossing Companion proposal); or leave the bartender unnamed.
+  src: astral § Open; memory-canon (campaign-canon, Ryeback absorbs Odds); chat-crew-boogie-casey-sol
+
+- **[later]** The cantina: a place or a ship
+  It is a Locations entry for now (Korey 2026-10-28). If it is a ship, it moves to Vessels. Its name, owner and circuit are under the names decide on the register.
+  src: Korey, 2026-10-28
+
+### locations/meteor-hub.html
+
+- **[later]** The hub's identity and name
+  Korey liked the carved meteor as a dead god's severed head. Name options: the Crown, Godsrest, the Wanderhead, the Rock. Where it sits on the lane, and who lives there, are not set.
+  src: chat-voyage-6-7-planning § Open
 
 # Fonains
 
@@ -965,7 +779,7 @@ Order: decide, fix, drop, add.
 
 - **[fix]** The Ascension World event *(answered)*
   Retire the world and the event. Remove "The Ascension World" (cert open, t -250). Oerth is the world where Vecna became a god: his ritual pushed Oerth to its Zenith, the Zenith made him a god, and the Monolith that answered archived his mortal form, Lich Vecna. That was his first ascension, the Godhood Ascension, and "Vecna rules Oerth and ascends" already carries it. The climb he is making now, to take an Axiom's place, is the Axiomic Ascension.
-  Knock-on: `realms/ascension-world.html` and its fixes in the Realms section, the SYS-05 entries on `realms/index.html` and the chart, and the Cosmology fix "Every place carries a designation" all assume the separate world.
+  Knock-on (done in section 3: the page is retired into `locations/oerth.html`, the register and chart carry no SYS-05): `realms/ascension-world.html` and its fixes in the Realms section, the SYS-05 entries on `realms/index.html` and the chart, and the Cosmology fix "Every place carries a designation" all assume the separate world.
   answered: STAGING § Vecna (round 5: "The separate 'Ascension World' is retired; Oerth is that world.")
   Original item: "The Ascension" now means Vecna's climb to Axiom, and his godhood happened on Oerth. The event "The Ascension World" (cert open, t -250: "He forces a small local threshold on a world in SPH-01. When, and what it cost him, are open.") follows the naming ruling in the Realms section § realms/ascension-world.html. Options: keep it as a separate SPH-01 world under a new name; or retire the world and the event.
   src: session-rulings #14; vecna § Oerth
@@ -1083,12 +897,12 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   Still open: whether Tymora notices herself thinning on Aethris as the ritual removes the risk her luck needs, and whether she acts on it. Beshaba's want is its own decide under dossiers/beshaba.html.
   answered (part): inbox/chat-crew-boogie-casey-sol.md § Sol / Aethris and the gods (Settled)
   src: BCS § Sol/Aethris and the gods (turn 860), § Sol/Open
-  done (settled part): factions/deities.html (section 2) carries the misread tenet, fortune needs misfortune, and Aethris's other faiths; the open question is in its Still to decide. realms/aethris.html still needs the Aethris line.
+  done (settled part): factions/deities.html (section 2) carries the misread tenet, fortune needs misfortune, and Aethris's other faiths; the open question is in its Still to decide. locations/aethris.html carries the Aethris line (section 3).
 
 - **[add]** Tymora's misread tenet
   Add to the Tymora entry: "Tymora's tenet is 'fortune favors the bold.' Her followers on Aethris misread it. They pushed luck until it stopped being luck, and in perfecting fortune they removed the risk that luck needs." Also add to W-08 on realms/aethris.html.
   src: BCS § Sol/Aethris and the gods (turn 862)
-  done: factions/deities.html and factions/aethris.html (section 2); realms/aethris.html still needs it.
+  done: factions/deities.html and factions/aethris.html (section 2); locations/aethris.html carries it (section 3).
 
 - **[add]** Fortune needs misfortune
   Add to the Tymora and Beshaba entries: "Fortune cannot exist without misfortune. Tymora and Beshaba need each other." Also add to The twin reading on dossiers/beshaba.html.
@@ -1329,6 +1143,10 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ### campaign/colony/index.html
 
+- **[fix]** The Tetherbreak engagement *(Locations knock-on)*
+  The section heading and its text still call it "The Tetherbreak engagement" and say Clint "seized the boarders' craft" and "a psychic wind carried him out of the system". Tetherbreak is now only the bearing; the engagement was on the edge run past Strake, at the perimeter watch (locations/realmspace.html#perimeter-watch), and Clint took the device and went through a color pool on purpose (locations/cairn-station.html, factions/fleet.html). Rename the section and its anchor (sweep the links) and rewrite the text when the page is rewritten.
+  src: Korey, 2026-10-28 (Tetherbreak folds into Realmspace); STAGING § Clint Dashforest
+
 - **[fix]** The Sky Dock crates carry Vocath's mark
   Ruled (STAGING round 8). This page lists "the Passage marks on the Sky Dock crates" as colony work. Change to: "The crates at the Sky Dock carry Vocath's mark, the eye in a wheel." factions/vocath-operation.html and dossiers/vocath.html already say so and stand.
   src: Korey, 2026-10-25 (round 8); factions/vocath-operation.html
@@ -1373,6 +1191,10 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 ---
 
 ### campaign/index.html
+
+- **[fix]** The old designation prefixes
+  The page still explains sphere, system and world numbers ("Sphere, system and world numbers are catalogue order") and the SPH-, SYS- and W- prefixes. Designations now follow Cosmology § Names and designations (CSC numbers, star-and-letter, names; GAL-0n for galaxies). Rewrite or cut when the page is merged into principles.html.
+  src: locations pass, 2026-10-28
 
 - **[fix]** Spheres are not crystal shells
   Designations say "SPH for a crystal sphere". A sphere is a region of the Astral Sea holding several systems. Change to "SPH for a sphere".
@@ -2487,6 +2309,7 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
   DM: the fade runs on a soft clock (STAGING round 8). The twins are not a key before about level 12 (STAGING round 2).
   answered: crew/tumak.html ("the completed inscription is a key to the First Heart"; "His homeworld stays unfindable while the fragment's oscillation carries the concealment, and the fragment is leaving"); dossiers/the-runekeeper.html ("the act of going home is the act of ending the concealment"; "Dimming is what the office is"); inbox/chat-crew-tumak-gregory-bartholomew.md § Tumak/Leader concept (Korey: "If the Wayfinder never returns, the protection decays as the universe changes"), § Marks (marks as the world's sensors, turn 223); STAGING rounds 2 and 8
   src: TGB § Tumak/Open; crew/tumak.html
+  done: locations/wayfinders-homeworld.html (section 3); crew/tumak.html and dossiers/the-runekeeper.html still need it.
 
 - **[add]** The Runekeeper's fade is a soft clock
   Ruled (STAGING round 8). Add to "The fading as pressure" (DM voice): "The Runekeeper's fade runs on a soft clock: rising pressure, no date. Count nothing down."
@@ -3438,7 +3261,7 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 - **[add]** Dry Well, Anadia (Grade IV)
   The settlements of Dunmarrow and Kesh Hollow share a water compact four generations old. Elder Tobb Ashlow of Dunmarrow took payment from surveyors to deepen the well; Neth Kesh speaks for Kesh Hollow. Below the well is a chamber holding the eye-in-a-wheel and the bodies of four missing labourers. The surveyors were a tall, quiet woman and a talkative man; a child's drawing of them has their eyes wrong; they went inland toward the ranges.
-  DM: the chamber is a failed survey for the heart's Atrium, and Tumak's runes surface there. Link to Colony Ops "How they search" (colony/index.html, Anadia well). Dunmarrow appears on no realms page yet.
+  DM: the chamber is a failed survey for the heart's Atrium, and Tumak's runes surface there. Link to Colony Ops "How they search" (colony/index.html, Anadia well). locations/realmspace.html names Dunmarrow and Kesh Hollow on Anadia, and Lane Marker 14 on the Toril–Garden lane (section 3).
   src: chat-cosmic § Graduation board contracts; colony/index.html (Anadia well)
 
 - **[add]** Repossession (Grade IV)
@@ -3473,23 +3296,9 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   The doc still names the Watcher "Ondessa Vael" and carries Ilvathe. Both names are dead; remove them before anything is lifted from the doc.
   src: astral § Open
 
-### NEW: Oerth (realm stub)
-
-**Purpose.** Vecna's homeworld, where his godhood was won and his hold is strongest. A late-game destination and the anchor of his realm. STAGING lists it, and working/vecna.md names it under "Promotes to". Suggested path: `prime/realms/oerth.html`.
-
-**Voice.** In-world.
-
-- **[later]** How the crew could reach Oerth's sphere, and how late
-  Known from STAGING: Oerth lies in SPH-05, the sphere farthest from Caelestis's; the Radiant Citadel and the Core Monolith are late Arc 3 or Arc 4 destinations, reached by a long voyage or through a linked heart.
-  src: working/vecna.md § Open
-
-- **[add]** Oerth
-  Oerth is Vecna's homeworld, in SPH-05, the sphere farthest from Caelestis's. He achieved godhood there. It is the centre of his worship, the anchor of his realm (published name Cavitius), and the place where his hold is strongest. The Monolith from his ascension still stands on Oerth, and his faithful treat it as the holiest site in the cosmos. Oerth is the darkest timeline in miniature: a world where heroes rose against him and failed. It can be reached, and visiting it is horrible.
-  src: session-rulings; working/vecna.md § Oerth, § Realm; memory-canon (open-decisions, Vecna/gods 2026-10-25)
-
 ### NEW: Exandria (realm stub or registry line)
 
-**Purpose.** Records Exandria as a world in the cosmos, borrowed from a published setting, so it can be used without importing its history. Suggested: a line on `prime/realms/index.html` beside Oerth, or a stub.
+**Purpose.** Records Exandria as a world in the cosmos, borrowed from a published setting, so it can be used without importing its history. Suggested: a line on `prime/locations/index.html`, or a stub.
 
 **Voice.** In-world for the stub; DM for the borrowing note.
 
@@ -3504,7 +3313,7 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 ### NEW: Hall of the Watchers (location)
 
-**Purpose.** The Watcher order's seat. The crew delivers Ezra there on a graduation contract, and it is a candidate home for the Watcher who came back from Glyth. No realms page exists. Suggested path: `prime/realms/hall-of-the-watchers.html` (or under factions if it is not a world).
+**Purpose.** The Watcher order's seat. The crew delivers Ezra there on a graduation contract, and it is a candidate home for the Watcher who came back from Glyth. No realms page exists. Suggested path: `prime/locations/hall-of-the-watchers.html` (or under factions if it is not a world).
 
 **Voice.** In-world.
 

@@ -268,6 +268,25 @@ Old path → new path, added by each pull request that moves a page.
 | `prime/factions/academy-fleet.html` | `prime/factions/fleet.html` | Factions (factions) |
 | `prime/factions/spectrum.html` | `prime/factions/seekers.html` | Factions (factions) |
 | `prime/factions/external.html` | `prime/factions/index.html#other-powers` | Factions (factions) |
+| `prime/realms/index.html` | `prime/locations/index.html` | Locations (locations) |
+| `prime/realms/realmspace.html` | `prime/locations/realmspace.html` | Locations (locations) |
+| `prime/realms/caelestis.html` | `prime/locations/caelestis.html` | Locations (locations) |
+| `prime/realms/toril.html` | `prime/locations/toril.html` | Locations (locations) |
+| `prime/realms/glyth.html` | `prime/locations/glyth.html` | Locations (locations) |
+| `prime/realms/strake-station.html` | `prime/locations/strake-station.html` | Locations (locations) |
+| `prime/realms/cairn-station.html` | `prime/locations/cairn-station.html` | Locations (locations) |
+| `prime/realms/aethris.html` | `prime/locations/aethris.html` | Locations (locations) |
+| `prime/realms/krynn.html` | `prime/locations/krynn.html` | Locations (locations) |
+| `prime/realms/virenspace.html` | `prime/locations/virenspace.html` | Locations (locations) |
+| `prime/realms/wayfinders-homeworld.html` | `prime/locations/wayfinders-homeworld.html` | Locations (locations) |
+| `prime/realms/astral-sea.html` | `prime/locations/astral-sea.html` | Locations (locations) |
+| `prime/realms/waystation.html` | `prime/locations/waystation.html` | Locations (locations) |
+| `prime/realms/cantina.html` | `prime/locations/cantina.html` | Locations (locations) |
+| `prime/realms/meteor-hub.html` | `prime/locations/meteor-hub.html` | Locations (locations) |
+| `prime/realms/sys04.html` | `prime/locations/krynnspace.html` | Locations (locations) |
+| `prime/realms/first-world.html` | `prime/locations/rykoe.html` | Locations (locations) |
+| `prime/realms/ascension-world.html` | `prime/locations/oerth.html` | Locations (locations) |
+| `prime/realms/tetherbreak.html` | `prime/locations/realmspace.html#perimeter-watch` | Locations (locations) |
 
 ## Stale branches
 

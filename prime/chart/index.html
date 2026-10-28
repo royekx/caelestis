@@ -156,7 +156,7 @@ function armPt(arm, t, jr, ja, spin){
 
 /* ---------- the cosmos ---------- */
 const COSMOS = {
-  rykoe: { id:"rykoe", name:"Rykoe", kind:"Center of the cosmos",
+  rykoe: { id:"rykoe", name:"Rykoe", kind:"Center of the cosmos", page:"rykoe.html",
     summary:`The remains of the Reach world: a black hole, with the Core Monolith and the Radiant Citadel above it. Every galaxy's core is to its galaxy what Rykoe is to the cosmos.`,
     there:[`<strong>Core Monolith</strong>: the first Monolith, standing where Continuity first answered, when the people of the Reach reached into it and their world was destroyed. It has a degree of sentience and presses an idea outward through the cosmos. Those who dwell in it call it Aurath.`,
       `<strong>Radiant Citadel</strong>: the civilization around the Core Monolith.`,
@@ -211,14 +211,14 @@ const CLUSTER = { x:RS[0], y:RS[1], rx:880, ry:600, rot:Math.atan2(TAN[1],TAN[0]
 /* Chart-only facts about each saved system: position, tone, page, routes. */
 const SYS_CHART = {
   "Realmspace": { pos:RS, tone:"#9cc0e0", page:"realmspace.html",
-    travel:`Charted lane to the Astral waystation and on to Virenspace. Charted lanes to Strake Station and Hollis Post at the cluster's edge. Long haul to CSC 56973. Uncharted route to Krynnspace.` },
+    travel:`Charted lane to the Astral waystation and on to Virenspace. Charted lanes to Strake Station and Hollis Post, the watch at the system's edge; closed beyond Strake. Long haul to CSC 56973. Uncharted route to Krynnspace.` },
   "CSC 69387": { pos:at(RS, -40, 760), tone:"#c9b3ea", page:"virenspace.html", haze:true,
     travel:`Long haul onward from the Astral waystation. Long haul to CSC 56973.` },
   "CSC 56973": { pos:at(RS, -120, -720), tone:"#e2ae7e", page:"aethris.html",
     travel:`Long haul from Realmspace, passing the carved-meteor hub. Long haul to Virenspace.` },
-  "CSC 16423": { pos:armPt(0, 1.2, 30), tone:"#9fe1cb", page:"sys04.html",
-    travel:`Uncharted route from Realmspace, far beyond the cluster's edge.` },
-  "Greyspace": { pos:armPt(1, 2.7, -20), tone:"#e2ae7e",
+  "CSC 16423": { pos:armPt(0, 1.2, 30), tone:"#9fe1cb", page:"krynnspace.html",
+    travel:`Uncharted route from Realmspace, far beyond the watch at Realmspace's edge.` },
+  "Greyspace": { pos:armPt(1, 2.7, -20), tone:"#e2ae7e", page:"oerth.html#greyspace",
     travel:`Far across the galaxy, on the opposite arm from Realmspace. No lane on Caelestis's charts reaches it.` },
   "GAL-01-hidden": { pos:[3250, 950], tone:"#c9b3ea", page:"wayfinders-homeworld.html", hidden:true, veiled:true,
     travel:`No route. Wayfinders leave with no map and no name, and must re-recognize home.`,
@@ -228,46 +228,46 @@ const SYS_CHART = {
    (Realmspace only); orbit: fraction of the system edge; a: angle in degrees. */
 const BODY_CHART = {
   "Anadia":{d:50,a:205,size:10}, "Coliar":{d:100,a:318,size:14}, "Toril":{d:200,a:24,size:16,page:"toril.html"},
-  "Karpri":{d:300,a:140,size:12}, "Chandos":{d:400,a:252,size:12}, "Glyth":{d:1000,a:78,size:12,ring:true,page:"glyth.html"},
+  "Karpri":{d:300,a:140,size:12}, "Chandos":{d:400,a:252,size:12}, "Glyth":{d:1000,a:78,size:12,ring:true,page:"glyth.html", note:`An outer world on a long orbit, with three moons and a rare approach window. The Fleet bans approach.`},
   "Garden":{d:1200,a:172,size:13}, "H'Catha":{d:1600,a:292,size:14,page:"../locations/hcatha.html"},
   "Caelestis":{of:"Toril",dx:46,dy:-56,shape:"diamond",page:"caelestis.html"}, "Tyrant ship":{of:"Toril",dx:66,dy:42,shape:"square"},
   "Selûne":{of:"Toril",dx:-44,dy:30,shape:"moon"},
-  "Oerth":{orbit:.5,a:140,size:16,mono:"holy", note:`Oerth's heart has been Vecna's since his ascension charged him into it. Every heart in the inscription links back to it.`},
+  "Oerth":{orbit:.5,a:140,size:16,mono:"holy",page:"oerth.html", note:`Oerth's heart has been Vecna's since his ascension charged him into it. Every heart in the inscription links back to it.`},
   "Aethris":{orbit:.5,a:32,size:18,prism:true,page:"aethris.html", note:`The Prism Ascendant is the Monolith that answered Aethris's Zenith. The Zenith is unfinished, because the Fortuned have not completed their ritual. The Prism has archived what it can and stays where it is.`},
-  "Krynn":{orbit:.72,a:20,size:17,page:"krynn.html"},
-  "Fonains":{orbit:.42,a:210,size:16,mono:"broken",page:"fonains.html", note:`Its Monolith is the only one ever to carry Tharizdun's crystal.`},
+  "Krynn":{orbit:.72,a:20,size:17,page:"krynn.html", note:`The aspect of Bahamut trapped there speaks through Eldree's egg on Fonains.`},
+  "Fonains":{orbit:.42,a:210,size:16,mono:"broken",page:"../realms/fonains.html", note:`Its Monolith is the only one ever to carry Tharizdun's crystal.`},
   "The feature Mirt's wardrobe replicates":{orbit:.55,a:-50,size:14,star:true}
 };
 const HIDDEN_BODY = {orbit:.45,a:300,size:16,veiled:true};
 
 /* Lanes and sites inside Caelestis's cluster. Positions follow the systems. */
 const SITES = [
-  { id:"waystation", name:"Astral waystation", icon:"waystation", onLane:["Realmspace","CSC 69387"], t:.55, kind:"Wildspace site, trade post", page:"waystation.html",
+  { id:"waystation", name:"Astral waystation", icon:"waystation", onLane:["Realmspace","CSC 69387"], t:.55, kind:"Stop on a lane, trade post", page:"waystation.html",
     summary:`The well-known stop between Realmspace and Virenspace. Last reliable resupply before the long haul.`,
     travel:`Charted lane from Realmspace; long haul onward to Virenspace.` },
-  { id:"cantina", name:"Traveling cantina", icon:"cantina", onLane:["Realmspace","CSC 69387"], t:.3, kind:"Wildspace site, moving", page:"cantina.html",
-    summary:`A cantina that works a circuit of charted lanes.`, dm:[`Drop it wherever the crew is traveling.`] },
-  { id:"meteorhub", name:"Carved-meteor hub", icon:"meteor", onLane:["Realmspace","CSC 56973"], t:.5, kind:"Wildspace site, social hub", page:"meteor-hub.html",
+  { id:"cantina", name:"Travelling cantina", icon:"cantina", onLane:["Realmspace","CSC 69387"], t:.3, kind:"Stop on a lane, moving", page:"cantina.html",
+    summary:`A cantina that works a circuit of charted lanes.`, dm:[`Drop it wherever the crew is travelling.`] },
+  { id:"meteorhub", name:"Carved-meteor hub", icon:"meteor", onLane:["Realmspace","CSC 56973"], t:.5, kind:"Stop on a lane, social hub", page:"meteor-hub.html",
     summary:`A hollowed meteor turned into a gathering place, on the long haul between Realmspace and CSC 56973.` },
-  { id:"tetherbreak", name:"Tetherbreak sector", icon:"region", r:380, kind:"Wildspace region, restricted", page:"tetherbreak.html",
-    summary:`Fleet sector under elevated monitoring. The run past Strake Station is closed by standing order SA-005.`,
-    travel:`The Tetherbreak approach lane runs from Realmspace to Strake Station at the cluster's edge, and is open. Everything beyond Strake is closed without Bridge authorization.`,
-    there:[`Strake Station: operational, crewed, and the authorized limit of the bearing. It holds the only staged copies of the Cairn approach packet.`,`Cairn Station: silent for a year, after reporting a mass signature that read differently on every sweep. Nobody has been back.`,`The Bellwether Crow: relief vessel, mauled on the edge run past Strake and turned back short of Cairn.`,`M. Tarroway: Strake's station cartographer, who keeps the approach packet and is still revising it.`],
-    dm:[`Vth'oramu was at Cairn. That is the signature in Cairn's final transmission, and the readings made no sense because the thing on the scope was not a vessel. It has since moved, and keeps to the dark between systems.`,`Vocath's crew took Cairn after it went dark and waited there, because a silent Fleet station guarantees a relief run on a single predictable bearing.`,`Tarroway's timing tables have been failing for cycles. He has been revising a patrol table for something that was never keeping a patrol.`] },
-  { id:"strake", name:"Strake Station", icon:"waystation", kind:"Fleet relay, Tetherbreak sector", page:"strake-station.html",
-    summary:`Fleet perimeter post directly out from Realmspace, the middle of the three posts on the watch ring at the edge of Caelestis's cluster, and the last relay on the Cairn approach. Crewed and operating normally.`,
-    travel:`The Tetherbreak approach lane runs from Realmspace to Strake and is open. The edge run continues from Strake to Cairn Station and is closed by standing order SA-005.`,
-    there:[`The staged Cairn approach packet: charts, survey material and timing tables. The only copies in the sector.`,`Quartermaster Halix Verrow, who counter-signs everything that moves on this bearing.`,`M. Tarroway, station cartographer, who has revised the approach packet three times in a cycle because the readings behind it keep moving.`,`A secure-storage item held indefinitely, its contents classified above the filing's clearance.`],
+  { id:"tetherbreak", name:"The perimeter watch", icon:"region", r:380, kind:"Fleet watch at Realmspace's edge, on the Tetherbreak bearing", page:"realmspace.html#perimeter-watch",
+    summary:`Strake Station and its sister satellites, Hollis Post and Cairn Station, watch the edge of Realmspace for the Caelestis Sector. The edge run past Strake is closed by standing order SA-005.`,
+    travel:`A charted lane runs from Toril's part of the system out along the Tetherbreak bearing to Strake Station, and is open. Everything beyond Strake is closed without Bridge authorization.`,
+    there:[`Strake Station: crewed, with a commander, and the last open deck on the run to Cairn. It keeps the staged Cairn approach packet.`,`Cairn Station: silent for a year, after reporting a mass signature that read differently on every sweep. Nobody has been back.`,`The Bellwether Crow: relief vessel, ambushed on the edge run past Strake and turned back short of Cairn.`,`M. Tarroway: Strake's cartographer, whose readings were the first hint of something disturbing the satellites.`],
+    dm:[`Vth'oramu was at Cairn. That is the signature in Cairn's final transmission, and the readings made no sense because the thing on the scope was not a vessel. It has since moved, and keeps to the dark between systems.`,`Vocath's crew took Cairn after it went dark and waited there, because a silent Fleet station guarantees a relief run on a single predictable bearing.`] },
+  { id:"strake", name:"Strake Station", icon:"waystation", kind:"Fleet station, the perimeter watch", page:"strake-station.html",
+    summary:`The Caelestis Sector's station at the edge of Realmspace, directly out on the Tetherbreak bearing, with two sister satellites. The last open deck on the run to Cairn. Crewed and operating normally.`,
+    travel:`A charted lane runs from Toril's part of the system to Strake and is open. The edge run continues from Strake to Cairn Station and is closed by standing order SA-005.`,
+    there:[`The staged Cairn approach packet: charts and survey material.`,`Quartermaster Halix Verrow, who counter-signs everything that moves on this bearing.`,`M. Tarroway, station cartographer, whose readings first hinted at something disturbing the satellites.`,`A secure-storage item held indefinitely, its contents classified above the filing's clearance.`],
     dm:[`Strake is the crew's natural staging point and the last friendly deck before anything happens. Everyone who went out went through here.`,`The unidentified mass Strake reported was Vth'oramu.`,`Tarroway is a thread for the players to piece together rather than a figure they meet; his name surfaces mainly in the Fleet Intelligence Archive.`] },
-  { id:"hollis", name:"Hollis Post", icon:"waystation", kind:"Fleet perimeter post",
-    summary:`Perimeter post on the edge of Caelestis's cluster, on the side that faces the galaxy's core. Watches for traffic entering the cluster.`,
-    travel:`Charted lane from Realmspace.`, there:[`Files instrument and transit readings on the perimeter rotation, as recorded in FR-005.`] },
-  { id:"cairn", name:"Cairn Station", icon:"waystation", kind:"Station, beyond the sector limit", page:"cairn-station.html",
-    summary:`The far station on the perimeter ring, beyond the sector limit, between the Realmspace and Krynnspace bearings. Small standing complement, filing through Strake. Silent for a year, after reporting something on the long scope whose readings made no sense.`,
-    travel:`The far point of the perimeter ring, reached along the edge run from Strake Station. Closed by SA-005. Nobody has reached it since the Crow turned back.`,
+  { id:"hollis", name:"Hollis Post", icon:"waystation", kind:"Fleet satellite, the perimeter watch", page:"realmspace.html#hollis-post",
+    summary:`The western satellite of the watch at Realmspace's edge. Crewed, filing normally, and untouched.`,
+    travel:`Charted lane from Toril's part of the system.`, there:[`Files instrument and transit readings on the perimeter rotation, as recorded in FR-005.`] },
+  { id:"cairn", name:"Cairn Station", icon:"waystation", kind:"Fleet satellite, beyond the standing order", page:"cairn-station.html",
+    summary:`The far satellite of the watch at Realmspace's edge, between the Realmspace and Krynnspace bearings. Small standing complement, filing through Strake. Silent for a year, after reporting something on the long scope whose readings made no sense.`,
+    travel:`Reached along the edge run from Strake Station. Closed by SA-005. Nobody has reached it since the Crow turned back.`,
     there:[`The station's complement, carried as lost on the evidence of its silence alone.`,`Whatever the Crow was sent to find and never reached.`],
-    dm:[`The sequence: Vth'oramu arrived and sat on the bearing for days, which is the signature Cairn reported. Cairn went dark. Vocath's crew came in afterward and took the station.`,`They held it and waited for the relief run, intercepted the Crow short of arrival, took what they came for, and let the rest go home.`,`Vocath's crew withdrew after the ambush and left something behind. Build what it is when the crew gets there; the station is not empty.`,`SA-005 still reads as a sensible order about an unexplained hazard, because no one who came back has confirmed anything about the colony.`] },
-  { id:"crow", name:"Bellwether Crow engagement", icon:"incident", onLane:["strake","cairn"], t:.72, kind:"Incident site, Tetherbreak approach",
+    dm:[`The sequence: Vth'oramu sat on the bearing for days, which is the signature Cairn reported. Cairn went dark. Vocath's crew came in afterward and took the station.`,`They held it and waited for the relief run, and ambushed the Crow short of arrival for A.T.L.A.S.'s sister. Clint carried the device off through a color pool; a few survivors were let go home.`,`Vocath's crew withdrew after the ambush and left something behind. Build what it is when the crew gets there; the station is not empty.`,`SA-005 still reads as a sensible order about an unexplained hazard, because no one who came back has confirmed anything about the colony.`] },
+  { id:"crow", name:"Bellwether Crow engagement", icon:"incident", onLane:["strake","cairn"], t:.72, kind:"Incident site, the edge run",
     summary:`The relief vessel Bellwether Crow was engaged here, on the edge run from Strake Station toward Cairn, by a small, fast craft marked with an eye inside a wheel. Crewmate Clint Dashforest took what the boarders came for and left the ship to draw them off.`,
     there:[`Clint steered for a color pool he could see opening and went through it. It carried him through a small pocket of another dimension and out onto Fonains, in Krynnspace, apart from the boarders who followed him in.`,`A second boarding action followed. The senior deck officers and most of the complement were lost. The Crow broke off under damage, made Strake Station and reached Fleet anchorage days behind schedule.`,`Crewmate Joffrey held the survivors together through the withdrawal and brought them off the deck alive. He was decorated on their unanimous account and posted to Caelestis.`,`The survivors still argue about whether Clint meant to go through. In the Fleet, he went overboard.`],
     dm:[`Vocath's crew wanted A.T.L.A.S.'s sister, which the Crow was carrying. Clint has it, somewhere on Fonains.`,`Clint went through the pool on purpose.`,`Joffrey was taken in the second action. The survivors believe every word of his decoration: they were allowed to live so that there would be a story, and he was made its hero.`] }
@@ -770,7 +770,7 @@ window.addEventListener("resize", apply);
 /* ---------- side panel ---------- */
 const list = (t,items) => items && items.length ? `<h3>${t}</h3><ul>${items.map(i=>`<li>${i}</li>`).join("")}</ul>` : "";
 const dmlist = items => items && items.length ? `<div class="dmbox"><h3>At the table</h3><ul>${items.map(i=>`<li>${i}</li>`).join("")}</ul></div>` : "";
-const pageLink = p => p ? `<p><a href="${p.includes("/") ? p : "../realms/" + p}">Realms entry &rarr;</a></p>` : "";
+const pageLink = p => p ? `<p><a href="${p.includes("/") ? p : "../locations/" + p}">Locations entry &rarr;</a></p>` : "";
 function mark(id){ selected = id; svg.querySelectorAll(".node").forEach(g=>g.classList.toggle("is-selected", g.dataset.id===id)); document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("is-selected", c.dataset.chip===id)); }
 function heartsCount(){
   const worlds = HEARTS.reduce((a,h)=>a+(h.pair?2:1),0);
@@ -842,7 +842,7 @@ function oerthPanel(){
     <p>The point where the eye's image lands. Every heart world in the figure links back to Oerth's heart, so the links run in a cone from the eye to Oerth, the way light runs from an eye to the back of it. Oerth's heart has been Vecna's since his ascension charged him into it.</p>
     <p>Vecna chose the sixteen worlds for how they look from here. From above, their links make no shape at all; from Oerth they line up into the eye he lost. When the core opens, what lands on Oerth is sight.</p>
     ${dmlist([`The first thing anyone can notice is that every opened heart is linked back to the same world, in Greyspace. Why they all lead to Oerth is the question that opens the rest.`,`The clue the crew needs is the vantage: plot the hearts from Oerth, and someone who knows Vecna's mark can recognize it.`,`Oerth is the one world Vecna cannot lose.`])}
-    <button class="btn act" type="button" data-go="Greyspace">Open Greyspace</button>`;
+    ${pageLink("oerth.html")}<button class="btn act" type="button" data-go="Greyspace">Open Greyspace</button>`;
 }
 function showNode(n, offer){
   if(GALAXIES.includes(n)) return galaxyPanel(n, offer);
@@ -866,7 +866,7 @@ function intro(){
   panel.innerHTML = `<h2>Caelestis cosmos</h2><p class="kind">DM chart</p>
     <p>Five galaxies around Rykoe. Each galaxy's core is joined to Rykoe by a spoke and to its two neighbours by the rim. The Fleet and its sectors chart only their own galaxy; few expeditions have tried to leave it, and many believe there is nothing beyond.</p>
     <p class="hint">Tap anything for details. Tap a galaxy twice to open it, then a system.</p>
-    ${dmlist([`Pictured, the five Axioms make the same figure as the five galaxies around Rykoe, with Continuity at the heart. It is a mirror for meaning, not a map: no galaxy belongs to an Axiom.`,`A galaxy's contents stay unbuilt until play reaches it. Systems kept from a roll live in the survey, prime/data/survey.json.`,`Places with a situation attached have entries in <a href="../realms/">Realms</a>.`])}`;
+    ${dmlist([`Pictured, the five Axioms make the same figure as the five galaxies around Rykoe, with Continuity at the heart. It is a mirror for meaning, not a map: no galaxy belongs to an Axiom.`,`A galaxy's contents stay unbuilt until play reaches it. Systems kept from a roll live in the survey, prime/data/survey.json.`,`Places with a situation attached have entries in <a href="../locations/">Realms</a>.`])}`;
 }
 
 function activate(g){
