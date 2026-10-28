@@ -1314,11 +1314,11 @@
           "src": "factions/order.html"
         },
         {
-          "t": "The Watchers see, the Keepers keep and decide, and the Restorers act; the Fleet carries all three.",
+          "t": "The orders form a chain: the Watchers see, the Keepers judge, the Restorers act, and a sector's Vanguard sanctions; the Fleet carries all three.",
           "src": "factions/order.html#together"
         },
         {
-          "t": "It acts to preserve Continuity and accepts a Zenith as part of the order of things; none of its orders tries to stop one.",
+          "t": "It accepts a Zenith as the natural order; if a Zenith's outcome would spill beyond its world, it acts or tries, and where that line falls is its oldest argument.",
           "src": "factions/order.html#beliefs"
         },
         {
@@ -1332,6 +1332,10 @@
         {
           "t": "The Order spans the galaxies and is more organized than Caelestis and its affiliates.",
           "src": "STAGING round 11"
+        },
+        {
+          "t": "For a truly terrible Zenith it sends a team of three, a Watcher, a Keeper and a Restorer, to stop the ritual, person or plan driving it; a Monolith's arrival is their clock.",
+          "src": "factions/order.html#three"
         }
       ]
     },
@@ -1340,7 +1344,7 @@
       "label": "The Order of the Watchers",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "The Order of All's order in the field, before a Zenith; its aspect is the All-Father, who oversees.",
+      "summary": "The Order of All's order that sees: posted on worlds approaching a Zenith, it watches and reports and mostly does not act; its aspect is the All-Father.",
       "facts": [
         {
           "t": "Watchers are posted across the Erevos Galaxy on worlds approaching a Zenith; they watch, note and report, and step in where they must.",
@@ -1389,7 +1393,7 @@
       "label": "The Order of the Keepers",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "The Order of All's custodians and logistics, at and after a Zenith; its aspect is the All-Haven, where everything is kept.",
+      "summary": "The Order of All's order that judges: it weighs the Watchers' reports against the record and counsels the Vanguard, and keeps the Monoliths and the Beacon; its aspect is the All-Haven.",
       "facts": [
         {
           "t": "The Keepers guard the Monoliths as though the taken were inside them, when everything taken goes to the Core.",
@@ -1560,7 +1564,7 @@
       "label": "The Order of the Restorers",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "The Order of All's menders, after a Zenith and wherever something breaks; its aspect is the All-Mother, and it reaches for the Core.",
+      "summary": "The Order of All's order that acts, the one willing to step in; its aspect is the All-Mother, and it reaches for the Core.",
       "facts": [
         {
           "t": "The Restorers are trying to reach a heart, and through it the Core Monolith, where they believe everything lost is stored.",
@@ -1603,7 +1607,7 @@
           "src": "factions/watchers.html#arguments"
         },
         {
-          "t": "They go to dead worlds, recover residue, bring survivors out of broken worlds and deal with corrupted Monoliths; they do not try to stop a Zenith.",
+          "t": "They go to dead worlds, recover residue, bring survivors out of broken worlds and deal with corrupted Monoliths, and when an intervention is sanctioned it is Restorers who go.",
           "src": "factions/restorers.html"
         }
       ]
@@ -6269,7 +6273,7 @@
     {
       "s": "keepers",
       "t": "restorers",
-      "rel": "send",
+      "rel": "counsel where to send",
       "src": "factions/order.html#together"
     },
     {
@@ -8311,6 +8315,12 @@
       "t": "trentara",
       "rel": "lies in ruins in",
       "src": "locations/fonains.html#trentara"
+    },
+    {
+      "s": "dejexic",
+      "t": "keepers",
+      "rel": "sanctions interventions on the counsel of",
+      "src": "factions/order.html#together"
     }
   ]
 }

@@ -32,10 +32,10 @@ staging once Korey has read and accepted them.
 |---|---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 11 | 14 | 14 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 25 | 0 | 0 | 1 |
-| Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 4 | 12 | 0 | 0 | 0 |
+| Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
-| Factions | factions/ | 7 | 10 | 1 | 0 | 2 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 1 | 2 | 0 | 1 |
+| Factions | factions/ | 9 | 10 | 1 | 0 | 2 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 2 | 2 | 0 | 1 |
 | Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **111** | **146** | **50** | **2** | **54** |
+| **Total** |  | **114** | **147** | **50** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -654,6 +654,11 @@ done (section 8): the shift (Session 28 at 0, the break at -0.21, the shard at -
   src: timeline.json; factions/deities.html#nalsa; section 8
 
 
+- **[decide]** Was a team of three sent to Fonains?
+  Idea (Korey, 2026-10-28): while Lola's Boys were drawn into Vecna's part of the Darkest Day, an Order team of three went for the true elemental ritual, and perhaps failed. Decide whether a team was sent, what it went for, and what became of it.
+  Touches: locations/fonains.html, factions/order.html, the Fonains lane of timeline.json.
+  src: Korey, 2026-10-28 (Order chain ruling)
+
 # Timeline
 
 Items for `prime/timeline/timeline.json` outside the Fonains lane (see the Fonains section for that lane).
@@ -764,12 +769,22 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   Touches: factions/order.html (Still to decide), connections.json.
   src: Korey, 2026-10-28 (Order of All ruling)
 
+- **[decide]** The name of the team of three
+  For a truly terrible Zenith the Order of All sends one Watcher, one Keeper and one Restorer (Korey, 2026-10-28). Pages call it "a team of three" or "the three". Name it. DM touchstone: Destiny's fireteams; a raid of six is a possible larger team.
+  Touches: factions/order.html#three, watchers.html, keepers.html, restorers.html, glossary (#the-three).
+  src: Korey, 2026-10-28 (Order chain ruling)
+
 ### factions/watchers.html
 
 - **[decide]** The Watchers' open details
   The Watchers have a wing in each of the Order's houses; the Hall of Sight and Sound is in their wing of the Caelestis Sector house, and Dejexic is the Watcher Vanguard (Korey, 2026-10-28). Whether the Watchers have ranks between Watcher and Captain-Commander is not set. Nereth Vaul's species (it sets the final form of her name) is still open. See also Locations, "The Order of All's headquarters, houses and Vanguards", and New pages, Hall of the Watchers.
   Touches: factions/watchers.html (Still to decide).
   src: Korey, 2026-10-28 (Order of All ruling)
+
+- **[decide]** Was a Watcher on Aethris during the ritual?
+  Aethris is a large civilization, the kind of world the Order posts Watchers to. Decide whether a Watcher was posted there while the Fortuned's ritual drove it toward its Zenith, and whether some of the Misfortuned were archived by the Prism Ascendant. Canon to keep: a Watcher extracted Sol, against the order's remit to preserve worlds, not individuals, and the Order then broke protocol to recommend him to Caelestis; it still reads right under the chain (Watchers mostly do not act, so the extraction was a Watcher acting outside doctrine).
+  Touches: factions/watchers.html, locations/aethris.html, factions/aethris.html, crew/sol.html.
+  src: Korey, 2026-10-28 (Order chain ruling)
 
 - **[add]** The Watcher who came back from Glyth
   Add a named-but-unseen row: "A Watcher posted to a region of Glyth got out after years inside the elder brain's range. She still hears it." (Eris Morn pattern.)
@@ -925,6 +940,10 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 - **[later]** A node log for player impact
   An early plan kept a Remaking Node Log tracking how the players have changed Vecna's plan. Bring it back as a planning table on Opposition: Vecna, or let the timeline carry it.
   src: inbox/chat-early-planning.md § Campaign Planning (turn 124)
+
+- **[later]** A one-shot as an Order team
+  A one-shot where the players are an Order of All team of three, one Watcher, one Keeper and one Restorer, sent against a terrible Zenith with a Monolith's arrival as the clock; a raid-sized team of six is possible (Korey, 2026-10-28).
+  src: Korey, 2026-10-28 (Order chain ruling)
 
 # Dossiers
 
