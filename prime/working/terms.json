@@ -42,7 +42,7 @@
       "use": "five Axioms"
     },
     {
-      "pattern": "\\b(Boundary|Transformation|Convergence) (fragment|piece|pieces|Axiom|seat)\\b",
+      "pattern": "\\b(Boundary|Transformation|Convergence) (fragment|piece|pieces|Axiom|seat|residue)\\b",
       "use": "Distinction / Expansion / Consolidation (fragment); the Axioms are Consolidation, Expansion, Dissolution, Distinction, Determination"
     },
     {
@@ -80,6 +80,66 @@
     {
       "pattern": "\\bDarra\\b",
       "use": "Dharra"
+    },
+    {
+      "pattern": "\\bSeam(s|-product)?\\b",
+      "use": "the Axiom strain (cosmology § Axiom strain); the Seam is retired"
+    },
+    {
+      "pattern": "\\bthe Remaking\\b",
+      "use": "Vecna's working (opposition/vecna.html) or Colony Operations (campaign/colony/)"
+    },
+    {
+      "pattern": "\\b[Uu]nculled\\b",
+      "use": "the unthinned (Vth'ulhan)"
+    },
+    {
+      "pattern": "\\bkesh\\b",
+      "use": "the taken (Vth'ghathu)"
+    },
+    {
+      "pattern": "\\bFirst World\\b",
+      "use": "the Reach world, now Erevos"
+    },
+    {
+      "pattern": "Mother of the Universe",
+      "use": "the All-Mother"
+    },
+    {
+      "pattern": "\\brunic transit\\b",
+      "use": "Wayfinding"
+    },
+    {
+      "pattern": "\\bLunarfoot order\\b",
+      "use": "the Runekeepers, Lunarfoot clan"
+    },
+    {
+      "pattern": "Vecna(&rsquo;|')s figure",
+      "use": "the eye inscription"
+    },
+    {
+      "pattern": "\\bWatcher cadet\\b",
+      "use": "Glimpse"
+    },
+    {
+      "pattern": "\\b(eldest|oldest) chapter\\b",
+      "use": "the Restorers are not a Seekers chapter"
+    },
+    {
+      "pattern": "\\btiming tables?\\b",
+      "use": "cut: Tarroway is a thread, his readings first hinted at the vessel"
+    },
+    {
+      "pattern": "Caelestis Academy (&amp;|&) Fleet",
+      "use": "the United Intergalactic Fleet (factions/fleet.html); the Caelestis Sector"
+    },
+    {
+      "pattern": "\\bAethris powers\\b",
+      "use": "the Fortuned"
+    },
+    {
+      "pattern": "Vocath(&rsquo;|')s Operation",
+      "use": "Vocath's crew"
     }
   ],
   "voice": [
@@ -104,8 +164,18 @@
       "note": "status label: move to a DM notes tab or planning page"
     },
     {
-      "pattern": ">\\s*Open\\s*<|\\bis-open\\b",
-      "note": "no 'Open' sections or tags: write what is undecided as a sentence in a DM notes tab or planning page"
+      "pattern": "\\bundecided\\b",
+      "note": "placeholder: write what is undecided as a sentence in a DM notes tab"
+    },
+    {
+      "pattern": ">\\s*Open(:|\\s*<)|^\\s*Open:?\\s*$",
+      "raw": true,
+      "note": "no 'Open' labels, rows or sections: write what is undecided as a sentence in a DM notes tab or planning page"
+    },
+    {
+      "pattern": "class=\"[^\"]*\\bis-open\\b",
+      "raw": true,
+      "note": "no 'open' tag: write what is undecided as a sentence in a DM notes tab or planning page"
     }
   ],
   "moved": [
