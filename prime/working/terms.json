@@ -223,7 +223,7 @@
     },
     {
       "pattern": "Mother of the Universe",
-      "use": "the All-Mother",
+      "use": "the source (the Restorers' doctrine) or the All-Father",
       "i": true
     },
     {
@@ -465,6 +465,23 @@
     {
       "pattern": "Riverguard Keep",
       "use": "Rivergard Keep"
+    },
+    {
+      "pattern": "Order of the All-Father",
+      "use": "the Order of the Watchers, or the Order of All for the whole",
+      "i": true
+    },
+    {
+      "pattern": "All-Mother",
+      "use": "the All-Father (the Restorers' calling is to restore), or \"the source\" where the All-Father holds what is taken"
+    },
+    {
+      "pattern": "All-Haven",
+      "use": "the All-Father (the Keepers' calling is to protect and keep)"
+    },
+    {
+      "pattern": "\\bKeepers?\\b(?!'s guidance| of Tinderstrike| of the Misty Vale)",
+      "use": "the Discerners (the Order of All's order that interprets and judges); a Discerner"
     }
   ],
   "voice": [
@@ -680,6 +697,54 @@
     {
       "old": "glossary/#hearth\"",
       "new": "glossary/#beacon"
+    },
+    {
+      "old": "order.html#watchers",
+      "new": "factions/watchers.html#ranks"
+    },
+    {
+      "old": "order.html#rogue-watchers",
+      "new": "factions/watchers.html#rogue-watchers"
+    },
+    {
+      "old": "order.html#ezra",
+      "new": "factions/watchers.html#ezra"
+    },
+    {
+      "old": "order.html#nereth-vaul",
+      "new": "factions/watchers.html#nereth-vaul"
+    },
+    {
+      "old": "order.html#aurel-venn",
+      "new": "factions/watchers.html#aurel-venn"
+    },
+    {
+      "old": "order.html#cycles",
+      "new": "factions/keepers.html#beacon"
+    },
+    {
+      "old": "glossary/#all-mother",
+      "new": "glossary/#all-father (the Restorers' source: glossary/#restorers)"
+    },
+    {
+      "old": "glossary/#all-haven",
+      "new": "glossary/#all-father"
+    },
+    {
+      "old": "\"keepers.html",
+      "new": "discerners.html"
+    },
+    {
+      "old": "/keepers.html",
+      "new": "factions/discerners.html"
+    },
+    {
+      "old": "glossary/#keepers",
+      "new": "glossary/#discerners"
+    },
+    {
+      "old": "glossary/#keeper\"",
+      "new": "glossary/#discerner"
     }
   ],
   "allow": [

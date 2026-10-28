@@ -318,7 +318,7 @@
           "src": "STAGING round 2"
         },
         {
-          "t": "The presence in the Core has never issued a directive; the Order reads it as the All-Father and the Restorers as the All-Mother.",
+          "t": "The presence in the Core has never issued a directive; the Order of All reads it as one god, the All-Father, whom its three orders serve in three callings.",
           "src": "cosmology/index.html"
         },
         {
@@ -466,11 +466,19 @@
       "label": "Monoliths",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "Continuity's response to a Zenith that strains it past tolerance.",
+      "summary": "Continuity's response to a coming drastic change, appearing in the run-up to a Zenith.",
       "facts": [
         {
-          "t": "A Monolith archives a world bodily before an irreversible change and relays what it takes to the Core.",
+          "t": "A Monolith appears in the run-up to a Zenith, begins archiving as it appears, and relays what it takes to the Core.",
           "src": "cosmology/index.html"
+        },
+        {
+          "t": "Its lead time varies with each Zenith: moments, minutes, days. Its arrival is a warning and does not seal a world's fate.",
+          "src": "cosmology/index.html#monoliths"
+        },
+        {
+          "t": "It is the cosmos's self-preservation, like an immune system. A Monolith fades some time after its Zenith; a later Zenith on the same world brings a new Monolith where that Zenith happens.",
+          "src": "cosmology/index.html#monoliths"
         },
         {
           "t": "A Monolith is what makes a heart-link possible: two opened hearts link only where both worlds have one.",
@@ -485,8 +493,12 @@
           "src": "cosmology/index.html"
         },
         {
-          "t": "The Order calls a Monolith an Ortholith in its records.",
+          "t": "The Order of All calls a Monolith an Ortholith, after the Discerners' registries.",
           "src": "glossary/index.html"
+        },
+        {
+          "t": "Continuity responds when a sharp spread of possible outcomes is about to open; its response leans on Determination, though Determination is not the only Axiom at work.",
+          "src": "cosmology/index.html#monoliths"
         }
       ]
     },
@@ -500,6 +512,14 @@
         {
           "t": "A Zenith is a hinge rather than a disaster, and its outcome is unknown while it happens.",
           "src": "cosmology/index.html"
+        },
+        {
+          "t": "Slow change, even harmful change, is a world's own process; a Zenith comes with drastic, immediate change, a moment from which outcomes diverge sharply.",
+          "src": "cosmology/index.html#zeniths"
+        },
+        {
+          "t": "A Zenith decides what follows, catastrophic, beneficial or between; the cosmos does not judge it.",
+          "src": "cosmology/index.html#zeniths"
         },
         {
           "t": "Zeniths are natural and constant, and mortals seeking power produce the most unstable ones.",
@@ -1288,52 +1308,64 @@
     },
     {
       "id": "order",
-      "label": "The Order of the All-Father",
+      "label": "The Order of All",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "An interworld order that preserves Continuity and reads the Core's pressure as the All-Father.",
+      "summary": "One faith of three orders that reveres the Core's pressure as one god, the All-Father, in three callings: to watch, to discern and to avert.",
       "facts": [
         {
-          "t": "The Order is made up of several callings; the Watchers are its field calling, and specialists come in for particular work. Dejexic leads the Watchers.",
+          "t": "The Order of All is made of three orders, the Watchers, the Discerners and the Averters, each understanding the All-Father's charge differently; a young movement, the Restorers, runs across all three.",
           "src": "factions/order.html"
         },
         {
-          "t": "The Order made Galactic time cycles and calls the count the Beacon, after the All-Father's beacon at the core: a beacon (cycle) is one full turn of Erevos, its four sparks lighting the arms in order, divided into kindlings and embers; Cycle 0 is the Order's founding and the current cycle is 1491.",
-          "src": "factions/order.html#cycles"
+          "t": "Watchers gather intel; Discerners interpret and judge it; Averters act on it; the Vanguard sanctions; the Fleet carries all three.",
+          "src": "factions/order.html#together"
         },
         {
-          "t": "Over the past few centuries the arms have lit slightly early and the beacons have grown slightly shorter, and Watchers record them as irregular.",
-          "src": "factions/order.html#cycles"
+          "t": "It accepts a Zenith as the natural order; if a Zenith's outcome would spill beyond its world, it acts or tries, and where that line falls is its oldest argument.",
+          "src": "factions/order.html#beliefs"
         },
         {
-          "t": "The Order takes the Core Monolith's pressure as a charge to maintain things as they are, though some within it doubt that reading.",
-          "src": "STAGING round 2"
+          "t": "The orders argue inside the one faith: over where the line for intervening falls, over keeping and sharing, and over the Restorers' wish to go back for what was lost.",
+          "src": "factions/order.html#arguments"
         },
         {
-          "t": "The Order guards Monoliths believing the taken are inside them, when everything taken goes to the Core.",
-          "src": "cosmology/index.html"
+          "t": "It was founded as one body at Cycle 0 and split into three orders as its following grew and like minds drew together.",
+          "src": "factions/order.html"
         },
         {
           "t": "The Order spans the galaxies and is more organized than Caelestis and its affiliates.",
           "src": "STAGING round 11"
         },
         {
-          "t": "Its device is a white spire crowned with a blue-violet light, and its members' magic shows as violet light and cosmic dust.",
-          "src": "factions/order.html"
+          "t": "For a truly terrible Zenith it sends a team of three, a Watcher, a Discerner and an Averter, to stop the ritual, person or plan driving it; a Monolith's arrival is their clock.",
+          "src": "factions/order.html#three"
         },
         {
-          "t": "Its leadership instructs in aphorisms, which juniors sometimes take as literal orders.",
-          "src": "factions/order.html"
+          "t": "A calling is a duty, not a whole creed: every order holds a spread of belief, from cautious to radical.",
+          "src": "factions/order.html#beliefs"
         }
       ]
     },
     {
       "id": "watchers",
-      "label": "The Watchers",
+      "label": "The Order of the Watchers",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "The Order's sanctioned field arm.",
+      "summary": "The Order of All's order that sees: posted on worlds approaching a Zenith, it watches and reports and mostly does not act; its calling is to watch.",
       "facts": [
+        {
+          "t": "Watchers are posted across the Erevos Galaxy on worlds approaching a Zenith; they watch, note and report, and step in where they must.",
+          "src": "factions/watchers.html"
+        },
+        {
+          "t": "The Watchers take the All-Father's pressure as a charge to maintain things as they are, though some within the order doubt that reading.",
+          "src": "STAGING round 2"
+        },
+        {
+          "t": "Their oldest argument is whether watching should ever become doing; their radical edge holds that watching is enough and a Watcher should never interfere.",
+          "src": "factions/watchers.html"
+        },
         {
           "t": "Over the past century the Watchers have seen Monoliths rise more often, and it worries them; some want to act.",
           "src": "STAGING round 5"
@@ -1348,11 +1380,73 @@
         },
         {
           "t": "Trainees spend about a century in the Hall of Sight and Sound before they are knighted as Watchers.",
-          "src": "factions/order.html"
+          "src": "factions/watchers.html"
         },
         {
           "t": "The Watchers rely on the Fleet for transport and reach.",
-          "src": "factions/order.html"
+          "src": "factions/watchers.html"
+        },
+        {
+          "t": "Its device is a white spire crowned with a blue-violet light, and its members' magic shows as violet light and cosmic dust.",
+          "src": "factions/watchers.html"
+        },
+        {
+          "t": "Its leadership instructs in aphorisms, which juniors sometimes take as literal orders.",
+          "src": "factions/watchers.html"
+        }
+      ]
+    },
+    {
+      "id": "discerners",
+      "label": "The Order of the Discerners",
+      "type": "faction",
+      "scope": "cosmos",
+      "summary": "The Order of All's order that interprets and judges the Watchers' intel against the record and the sky, and counsels the Vanguard; guarding the Monoliths, the record and the Beacon is part of discerning.",
+      "facts": [
+        {
+          "t": "The Discerners guard the Monoliths as though the taken were inside them, when everything taken goes to the Core.",
+          "src": "factions/discerners.html#monoliths"
+        },
+        {
+          "t": "They hold the Order's record and its registry of Monoliths, in which a Monolith is an Ortholith.",
+          "src": "factions/discerners.html#registry"
+        },
+        {
+          "t": "From the Watchers' reports they forecast which worlds come next, decide who is sent where, and give out what the Order knows.",
+          "src": "factions/discerners.html#dispatch"
+        },
+        {
+          "t": "The Discerners keep the Beacon, the galactic clock and the one god's fire, the count of Galactic time cycles: a beacon (cycle) is one full turn of Erevos, its four sparks lighting the arms in order, divided into kindlings and embers; Cycle 0 is the Order's founding and the current cycle is 1491.",
+          "src": "factions/discerners.html#beacon"
+        },
+        {
+          "t": "Over the past few centuries the arms have lit slightly early and the beacons have grown slightly shorter, and the Discerners' tables record them as irregular.",
+          "src": "factions/discerners.html#beacon"
+        },
+        {
+          "t": "Their radical edge holds that nothing leaves the record and that secrets are safer kept.",
+          "src": "factions/discerners.html"
+        }
+      ]
+    },
+    {
+      "id": "averters",
+      "label": "The Order of the Averters",
+      "type": "faction",
+      "scope": "cosmos",
+      "summary": "The Order of All's order that acts, the tip of its spear; its calling is to avert, to turn a catastrophe aside before it lands.",
+      "facts": [
+        {
+          "t": "Once the Discerners judge and the Vanguard sanctions, the Averters form the team and go in to stop the ritual, person or plan driving a world toward catastrophe.",
+          "src": "factions/averters.html"
+        },
+        {
+          "t": "They go to corrupted Monoliths and to broken worlds where people can still be saved.",
+          "src": "factions/averters.html"
+        },
+        {
+          "t": "The Averters are an old order; their leader, ranks and look are not set.",
+          "src": "factions/averters.html"
         }
       ]
     },
@@ -1361,11 +1455,11 @@
       "label": "The Rogue Watchers",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "Watchers who act on their own judgment outside the Order's protocols.",
+      "summary": "Watchers who act on their own judgment outside the Watchers' protocols.",
       "facts": [
         {
           "t": "Rogue Watchers range from near-sanctioned to openly heterodox, and most worlds cannot tell them from sanctioned Watchers.",
-          "src": "factions/order.html"
+          "src": "factions/watchers.html#rogue-watchers"
         }
       ]
     },
@@ -1374,15 +1468,15 @@
       "label": "The Hall of Sight and Sound",
       "type": "place",
       "scope": "cosmos",
-      "summary": "The great hall within the Order's seat.",
+      "summary": "The great hall in the Watchers' wing of the Order of All's Caelestis Sector house.",
       "facts": [
         {
-          "t": "The Hall of Sight and Sound is the great hall within the Order's seat.",
+          "t": "The Hall of Sight and Sound is the great hall in the Watchers' wing of the Order of All's Caelestis Sector house, and mainly theirs.",
           "src": "STAGING round 5"
         },
         {
           "t": "Trainees are knighted and christened Watchers there.",
-          "src": "factions/order.html"
+          "src": "factions/watchers.html"
         }
       ]
     },
@@ -1391,11 +1485,15 @@
       "label": "Captain-Commander Dejexic",
       "type": "person",
       "scope": "cosmos",
-      "summary": "Leader of the Watchers and speaker of the All-Father.",
+      "summary": "The Watcher Vanguard, commanding the Order of All's Caelestis Sector house, and speaker of the All-Father.",
       "facts": [
         {
+          "t": "Dejexic is the Watcher Vanguard of the Caelestis Sector house: he commands it and oversees the Watchers, Discerners and Averters posted there.",
+          "src": "factions/order.html#caelestis-house"
+        },
+        {
           "t": "Dejexic is a purplish-blue plasmoid in obsidian armour with galaxies swirling in its reflection.",
-          "src": "factions/order.html"
+          "src": "factions/watchers.html"
         },
         {
           "t": "He floats, barely raises his voice, and silences a hall by entering it.",
@@ -1491,14 +1589,14 @@
       "label": "The Restorers",
       "type": "faction",
       "scope": "cosmos",
-      "summary": "An order of scholars working to recover what the cosmos has lost, aimed at the Core.",
+      "summary": "A young, small movement across all three orders of the Order of All that asks why the Order cannot go back and save what was lost; it reaches for the source, which is the Core.",
       "facts": [
         {
           "t": "The Restorers are trying to reach a heart, and through it the Core Monolith, where they believe everything lost is stored.",
           "src": "STAGING round 5"
         },
         {
-          "t": "They take the Core's pressure as a call to bring back what was lost, and they read its presence as the All-Mother.",
+          "t": "They posit a source where the All-Father holds everything taken, and mean to reach it and bring things back.",
           "src": "STAGING round 2"
         },
         {
@@ -1510,19 +1608,7 @@
           "src": "STAGING round 2"
         },
         {
-          "t": "For four centuries Restorers have walked into Zeniths on purpose to be archived, and many arrived.",
-          "src": "factions/restorers.html"
-        },
-        {
-          "t": "They work in cells of four to nine, and standing is measured in Readings from a First through a Fifth.",
-          "src": "factions/restorers.html"
-        },
-        {
-          "t": "Four living Fifth Readings hold the work on the approach to the Core.",
-          "src": "factions/restorers.html"
-        },
-        {
-          "t": "Their own name for their work is the Return.",
+          "t": "Their writings call the work the Return.",
           "src": "factions/restorers.html"
         },
         {
@@ -1530,7 +1616,11 @@
           "src": "factions/restorers.html"
         },
         {
-          "t": "The Order and the Restorers treat each other as heretics; the Order calls them a death cult.",
+          "t": "A Restorer can be a Watcher, a Discerner or an Averter; the movement has no wing, no Vanguard and no ranks, and is a few generations old at most.",
+          "src": "factions/restorers.html"
+        },
+        {
+          "t": "Walking into Zeniths to be archived is the movement's most radical act; some in every order sympathise, others think it dangerous.",
           "src": "factions/restorers.html"
         }
       ]
@@ -1540,10 +1630,10 @@
       "label": "The Ledger",
       "type": "item",
       "scope": "cosmos",
-      "summary": "The Restorers' record of established losses, held in deliberately partial copies.",
+      "summary": "The Restorers' record of established losses, copied by hand and passed between circles.",
       "facts": [
         {
-          "t": "The Ledger is distributed across Restorer cells so that no one holds all of it.",
+          "t": "The Ledger is copied by hand and passed between Restorer circles, so that no one holds all of it.",
           "src": "factions/restorers.html"
         },
         {
@@ -1557,14 +1647,14 @@
       "label": "Ilsabet Crann",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A hadozee Restorer of the Third Reading, keeping a cell of six on a trade station.",
+      "summary": "A hadozee field historian and Restorer, working with a circle of six on a trade station; her order is not set.",
       "facts": [
         {
           "t": "Ilsabet Crann holds a Ledger segment covering four decades of Realmspace losses.",
           "src": "dossiers/ilsabet-crann.html"
         },
         {
-          "t": "She earned her Third Reading by establishing a lost settlement of eleven hundred people nobody had recorded.",
+          "t": "She made her name establishing a lost settlement of eleven hundred people nobody had recorded.",
           "src": "dossiers/ilsabet-crann.html"
         },
         {
@@ -6100,13 +6190,13 @@
     {
       "s": "order",
       "t": "core-monolith",
-      "rel": "reads as the All-Father",
-      "src": "STAGING round 2"
+      "rel": "reveres as the All-Father",
+      "src": "cosmology/index.html#core-pressure"
     },
     {
       "s": "restorers",
       "t": "core-monolith",
-      "rel": "read as the All-Mother",
+      "rel": "posit as the source of what is taken",
       "src": "STAGING round 2"
     },
     {
@@ -6142,7 +6232,7 @@
     {
       "s": "ilsabet-crann",
       "t": "restorers",
-      "rel": "keeps a cell of",
+      "rel": "is one of",
       "src": "factions/restorers.html"
     },
     {
@@ -6154,24 +6244,66 @@
     {
       "s": "watchers",
       "t": "order",
-      "rel": "sanctioned field arm of",
+      "rel": "is one of the three orders of",
       "src": "factions/order.html"
     },
     {
-      "s": "rogue-watchers",
+      "s": "discerners",
       "t": "order",
-      "rel": "heterodox arm of",
+      "rel": "is one of the three orders of",
       "src": "factions/order.html"
+    },
+    {
+      "s": "averters",
+      "t": "order",
+      "rel": "is one of the three orders of",
+      "src": "factions/order.html"
+    },
+    {
+      "s": "restorers",
+      "t": "order",
+      "rel": "is a movement within",
+      "src": "factions/restorers.html"
+    },
+    {
+      "s": "discerners",
+      "t": "monoliths",
+      "rel": "guard",
+      "src": "factions/discerners.html#monoliths"
+    },
+    {
+      "s": "watchers",
+      "t": "discerners",
+      "rel": "report to",
+      "src": "factions/order.html#together"
+    },
+    {
+      "s": "discerners",
+      "t": "averters",
+      "rel": "counsel where to send",
+      "src": "factions/order.html#together"
+    },
+    {
+      "s": "higher-organization",
+      "t": "averters",
+      "rel": "carries to where they are sent",
+      "src": "factions/fleet.html"
+    },
+    {
+      "s": "rogue-watchers",
+      "t": "watchers",
+      "rel": "heterodox arm of",
+      "src": "factions/watchers.html#rogue-watchers"
     },
     {
       "s": "dejexic",
       "t": "watchers",
-      "rel": "leads",
-      "src": "factions/order.html"
+      "rel": "is the Watcher Vanguard of",
+      "src": "factions/watchers.html"
     },
     {
       "s": "hall-of-sight-and-sound",
-      "t": "order",
+      "t": "watchers",
       "rel": "is the great hall of",
       "src": "STAGING round 5"
     },
@@ -8165,7 +8297,7 @@
       "s": "PC-647haWGJ",
       "t": "dejexic",
       "rel": "shares a species with",
-      "src": "factions/order.html"
+      "src": "factions/watchers.html"
     },
     {
       "s": "tarionese",
@@ -8190,6 +8322,12 @@
       "t": "trentara",
       "rel": "lies in ruins in",
       "src": "locations/fonains.html#trentara"
+    },
+    {
+      "s": "dejexic",
+      "t": "discerners",
+      "rel": "sanctions interventions on the counsel of",
+      "src": "factions/order.html#together"
     }
   ]
 }

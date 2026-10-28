@@ -307,6 +307,13 @@ Old path → new path, added by each pull request that moves a page.
 | `prime/realms/` | retired; every page moved to `prime/locations/`, and the folder name is never reused | Fonains and timeline (fonains) |
 | `restricted/init.md` | retired, an empty placeholder; the path is never reused | The FIA (fia) |
 | `prime/artifacts/atlas-sister.html` | `prime/artifacts/second-distinction-piece.html` (portrait key `atlas-sister` → `second-distinction-piece`; the old path is never reused) | The FIA (fia) |
+| `prime/factions/order.html#watchers` | `prime/factions/watchers.html#ranks` (the path `order.html` now holds the Order of All; the old ids are never reused) | The Order of All (orders) |
+| `prime/factions/order.html#rogue-watchers` | `prime/factions/watchers.html#rogue-watchers` (the path `order.html` now holds the Order of All; the old ids are never reused) | The Order of All (orders) |
+| `prime/factions/order.html#ezra` | `prime/factions/watchers.html#ezra` (the path `order.html` now holds the Order of All; the old ids are never reused) | The Order of All (orders) |
+| `prime/factions/order.html#nereth-vaul` | `prime/factions/watchers.html#nereth-vaul` (the path `order.html` now holds the Order of All; the old ids are never reused) | The Order of All (orders) |
+| `prime/factions/order.html#aurel-venn` | `prime/factions/watchers.html#aurel-venn` (the path `order.html` now holds the Order of All; the old ids are never reused) | The Order of All (orders) |
+| `prime/factions/order.html#cycles` | `prime/factions/keepers.html#beacon`, since moved to `prime/factions/discerners.html#beacon` (the path `order.html` now holds the Order of All; the old ids are never reused) | The Order of All (orders) |
+| `prime/factions/keepers.html` | `prime/factions/discerners.html`, every anchor kept (`#beacon`, `#registry`, `#monoliths`, `#counsel`, `#dispatch`); the Keepers are renamed the Discerners; portrait key `keepers` → `discerners`; glossary `#keepers` → `#discerners`, `#keeper` → `#discerner`; the old path is never reused | The Order of All (orders) |
 
 ## Stale branches
 
