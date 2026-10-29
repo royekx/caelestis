@@ -323,6 +323,7 @@ Old path → new path, added by each pull request that moves a page.
 | `stellar-chart/init.md` | retired, an empty placeholder; the path is never reused | Player side (player) |
 | `spelljammer-nexus/crystal-spheres.html` | `spelljammer-nexus/galaxy.html`, "The Erevos Galaxy and the Astral Sea"; the old path is never reused | Player side (player) |
 | `data/nexus.js` | retired; the Nexus index (`spelljammer-nexus/index.html`) holds static rows, and the path is never reused | Player side (player) |
+| `spelljammer-nexus/factions.html` | `spelljammer-nexus/peoples.html`, "Peoples of the Drift"; the old path is never reused | Player side (player) |
 
 ## Stale branches
 

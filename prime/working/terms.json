@@ -811,6 +811,10 @@
     {
       "old": "data/nexus.js",
       "new": "retired: the Nexus index holds static rows"
+    },
+    {
+      "old": "factions.html",
+      "new": "spelljammer-nexus/peoples.html"
     }
   ],
   "allow": [
