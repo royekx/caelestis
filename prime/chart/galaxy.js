@@ -70,7 +70,11 @@
   const discSigma = r => { const t = Math.max(0, (r / 100 - 0.09) * 3.6); return 2.2 + 3.5 * Math.exp(-t * 1.2); };
   const HALO_SIGMA = 14;
 
-  const SYS_Y = { wayfinders: 3 };
+  /* Heights above the disc. Greyspace, with Oerth, lies high above the
+     galaxy's plane: far enough that the axis from Oerth through Erevos
+     rises AXIS_TILT from the plane, so the eye is a tilted superimposition. */
+  const AXIS_TILT = 35 * Math.PI / 180;
+  const SYS_Y = { wayfinders: 3, greyspace: Math.hypot(POS.greyspace[0] - GX.cx, POS.greyspace[1] - GX.cy) * S * Math.tan(AXIS_TILT) };
   const sysScene = id => toScene(POS[id], SYS_Y[id] != null ? SYS_Y[id] : 0.4);
 
   /* ── The inscription ─────────────────────────────────────────── */
@@ -95,7 +99,7 @@
      coordinates x and y become offsets across and up from the axis, in scene
      units: EYE_W wide so the lids span most of the galaxy's breadth, EYE_H
      high so the lids' peaks stay inside the halo (a flatter, wider eye). */
-  const EYE_W = 82, EYE_H = 34;
+  const EYE_W = 80, EYE_H = 44;
   const eyeBase = (x, y) => v3.add(v3.add(CORE, v3.mul(RT, x * EYE_W)), v3.mul(UP, y * EYE_H));
   const D = v3.dist(OERTH, CORE);
 
@@ -116,7 +120,7 @@
      core), with no two systems crowded and none crowding Oerth. The search is deterministic, so the
      same layout comes up on every visit. The two opened hearts are
      neighbours in the eye; from above they can lie far apart. */
-  const HEART_LAYOUT = {};
+  const HEART_LAYOUT = {}, HALO_LIMIT = 2 * HALO_SIGMA;
   const HEARTS = (() => {
     const avoid = Object.keys(POS).map(sysScene), oerthFlat = [OERTH[0], OERTH[2]];
     const edges = [];
@@ -132,8 +136,8 @@
         const e = EYE2D[i], base = eyeBase(e.x, e.y);
         let got = null;
         for (let k = 0; k < 300 && !got; k++) {
-          const t = -130 + R() * 260, p = v3.add(base, v3.mul(F, t)), r = Math.hypot(p[0], p[2]);
-          if (r > 100 || r < 10) continue;
+          const t = -170 + R() * 340, p = v3.add(base, v3.mul(F, t)), r = Math.hypot(p[0], p[2]);
+          if (r > 100 || r < 10 || Math.abs(p[1]) > HALO_LIMIT) continue;   // inside the disc or the halo
           if (avoid.some(q => v3.dist(p, q) < 9) || Math.hypot(p[0] - oerthFlat[0], p[2] - oerthFlat[1]) < 20) continue;
           if (out.some(h => Math.hypot(p[0] - h.v[0], p[2] - h.v[2]) < 14)) continue;
           got = { v: p, depth: t };
@@ -151,11 +155,12 @@
       const oct = new Set(flat.map(f => Math.floor((Math.atan2(f[1], f[0]) + Math.PI) / (Math.PI / 4)) % 8));
       let gap = Infinity;
       flat.forEach((a, m) => flat.forEach((b, n) => { if (m < n) gap = Math.min(gap, Math.hypot(a[0] - b[0], a[1] - b[1])); }));
-      return { out, score: crossings + 4 * oct.size + 0.5 * gap, crossings, octants: oct.size, gap };
+      const inDisc = out.filter(h => Math.abs(h.v[1]) <= 1.5 * discSigma(Math.hypot(h.v[0], h.v[2]))).length;
+      return { out, score: crossings + 4 * oct.size + 0.5 * gap + 1 * inDisc, crossings, octants: oct.size, gap, inDisc };
     }
     let best = null;
     for (let s = 0; s < 300; s++) { const L = layout(4127 + s); if (L && (!best || L.score > best.score)) best = L; }
-    HEART_LAYOUT.crossings = best.crossings; HEART_LAYOUT.octants = best.octants; HEART_LAYOUT.gap = best.gap;
+    HEART_LAYOUT.crossings = best.crossings; HEART_LAYOUT.octants = best.octants; HEART_LAYOUT.gap = best.gap; HEART_LAYOUT.inDisc = best.inDisc;
     return best.out.map((c, i) => {
       const e = EYE2D[i], r = Math.hypot(c.v[0], c.v[2]);
       return { i, n: i + 1, part: e.part, eye: [e.x, e.y], v: c.v, depth: c.depth, inDisc: Math.abs(c.v[1]) <= 1.5 * discSigma(r),
@@ -220,7 +225,7 @@
   window.EREVOS = {
     GX, ARMS, TIP, rng, gauss, armAngle, armPt, RS, OUT, TAN, at, POS,
     SECTORS, MARKER_T, MARKERS, frontAt,
-    S, toScene, toChart, discSigma, HALO_SIGMA, sysScene,
+    S, toScene, toChart, discSigma, HALO_SIGMA, sysScene, SYS_Y, AXIS_TILT,
     OERTH, F, RT, UP, EYE_W, EYE_H, eyeBase, HEART_LAYOUT, D, EYE2D, HEARTS, LID, IRIS, PAIR, FOUND,
     FILLERS, rollSystems
   };
