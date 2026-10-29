@@ -171,20 +171,31 @@
      system clicked on the chart reads as `node scripts/survey.js roll
      --seed N` prints it, and `--save` keeps it. */
   const FILLER_SEED0 = 200000, HEART_SEED0 = 300000;
+  /* About two thirds follow the arms and a third fill the space between
+     them; no eighth of the disc (an octant around the core) takes more than
+     its share, so no quarter of the galaxy sits empty. */
   const FILLERS = (() => {
-    const R = rng(5113), out = [];
+    const R = rng(5113), out = [], N = 340, CAP = Math.ceil(N / 8 * 1.2), oct = new Array(8).fill(0);
     const named = Object.values(POS), hearts = HEARTS.map(h => toChart(h.v));
-    for (let tries = 0; tries < 6000 && out.length < 380; tries++) {
-      const arm = Math.floor(R() * ARMS) % ARMS, t = 0.3 + Math.pow(R(), 0.8) * 3.0;
-      const p = armPt(arm, t, gauss(R) * 120 * (0.5 + t / 3), gauss(R) * 0.12);
+    for (let tries = 0; tries < 20000 && out.length < N; tries++) {
+      let p;
+      if (R() < 0.66) {
+        const arm = Math.floor(R() * ARMS) % ARMS, t = 0.3 + Math.pow(R(), 0.85) * 3.0;
+        p = armPt(arm, t, gauss(R) * 120 * (0.5 + t / 3), gauss(R) * 0.12);
+      } else {
+        const rr = GX.R * (0.2 + 0.85 * Math.sqrt(R())), a = R() * Math.PI * 2;
+        p = [GX.cx + rr * Math.cos(a), GX.cy + rr * Math.sin(a) * 0.9];
+      }
       const rc = Math.hypot(p[0] - GX.cx, p[1] - GX.cy), y = gauss(R);
       if (rc < 300 || rc > GX.R * 1.08) continue;
-      if (Math.hypot(p[0] - RS[0], p[1] - RS[1]) < 940) continue;      // Caelestis's cluster keeps its saved places clear
+      const o = Math.floor((Math.atan2(p[1] - GX.cy, p[0] - GX.cx) + Math.PI) / (Math.PI / 4)) % 8;
+      if (oct[o] >= CAP) continue;
+      if (Math.hypot(p[0] - RS[0], p[1] - RS[1]) < 560) continue;      // Caelestis's cluster keeps its saved places clear
       if (named.some(q => Math.hypot(p[0] - q[0], p[1] - q[1]) < 200)) continue;
       if (hearts.some(q => Math.hypot(p[0] - q[0], p[1] - q[1]) < 110)) continue;
       if (out.some(f => Math.hypot(p[0] - f.pos[0], p[1] - f.pos[1]) < 105)) continue;
-      const v = toScene(p, y * discSigma(rc * S));
-      out.push({ i: out.length, pos: p, v });
+      oct[o]++;
+      out.push({ i: out.length, pos: p, v: toScene(p, y * discSigma(rc * S)) });
     }
     return out;
   })();
