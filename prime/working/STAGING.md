@@ -17,7 +17,7 @@ when a ruling changes; delete it once the page carries it. See
 - The eye forms through the links, not through light. Nothing between a heart and Oerth blocks it, and no observer's eyes see it.
 - A stroke is everything that lands on one point of the eye: a line through the galaxy parallel to the Oerth–Erevos line, with a margin of width around it. Any world on or near a stroke can carry that point.
 - A mark is the heart actually chosen on a stroke. Vecna chooses marks for practical reasons: a Monolith stands there, the heart has been found, a Zenith is coming. Marks sit at different distances and heights along their strokes, so on a top-down chart they zigzag across the galaxy and their links cross at random. Only on the inscription plane do they form the eye.
-- A mark is a whole system. Every world in it, destroyed worlds included, must have its heart found, opened and linked, and each link needs a Monolith on that world. Vecna therefore favours systems with few worlds, and a mark takes years of work.
+- A mark is a whole system. Every planet in it, destroyed planets included, must have its heart found, opened and linked, and each link needs a Monolith on that world. A moon is part of its planet and shares its heart. Vecna therefore favours systems with few planets, and a mark takes years of work.
 - Inside a mark, the system's hearts link to each other, and one of them links back to Oerth. Any heart in a mark can also link out to a heart in another system. The links form one network: every heart in it reaches every other, node by node, and anyone travelling it passes through the hearts between.
 - The plan can change. A lost mark is replaced by another system on the same stroke.
 - Vecna also has N'ghathrod open and link hearts the figure does not need, as backups and to muddy the pattern. N'ghathrod goes where he is told and cannot tell the needed hearts from the rest.
@@ -27,6 +27,7 @@ when a ruling changes; delete it once the page carries it. See
 - A world's heart is, in every sense that matters, the world's centre: its metaphysical core.
 - A heart is a large interior, but it holds no civilization. A crew and its cargo pass through a link; a ship does not, and Vth'oramu never can.
 - Linked worlds bleed into each other, and inside a linked heart the linked world bleeds into the descent: its sky carries images of the other world, like clouds that form pictures of it.
+- A heart can be closed. Closing a heart ends every link that runs through it: nothing passes between it and the hearts it was linked to. The First Heart, closed since the Reach, is the oldest closed heart. Replaces "A link cannot be undone": a link stands until one of its hearts is closed.
 - Polarity keeps gods out of hearts as it keeps them off worlds. Vecna is the one exception, and only for Oerth's heart: his ascension charged him into it. Every other heart pushes him back. He cannot go to the hearts he needs, so he makes them report back to the one he holds.
 
 ## Campaign

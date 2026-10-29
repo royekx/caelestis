@@ -35,7 +35,7 @@ staging once Korey has read and accepted them.
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 2 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 18 | 2 | 2 | 0 | 1 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 20 | 2 | 2 | 0 | 1 |
 | Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 0 | 1 | 0 | 2 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **128** | **150** | **46** | **2** | **55** |
+| **Total** |  | **130** | **150** | **46** | **2** | **55** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -980,8 +980,16 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ### opposition/vecna.html (early planning)
 
+- **[decide]** How a heart is closed *(shape)*
+  Ruled: a closed heart ends its links (STAGING). Open: what closing takes (residue, as opening does? the Atrium? a Monolith?), who can do it, whether a closed heart can be opened again, and what closing costs the world. The First Heart is the precedent.
+  src: Korey, 2026-10-29
+
+- **[decide]** The shape of the network *(shape)*
+  Proposal: the links trace the figure. Each mark links to its two neighbours in the eye, so the ten lid marks form one ring and the five iris marks another, and each mark links once to Oerth. Every mark then carries three links out (two neighbours and Oerth), and the network is symmetric even though the marks zigzag on a chart: the eye's lines are its links. This already matches the two upper-lid systems, linked to each other and each to Oerth. The rings meet only through Oerth, and spare links add noise on top. Options: adopt it; or each mark links only to Oerth and one neighbour.
+  src: Korey, 2026-10-29
+
 - **[decide]** What follows from whole-system marks *(shape)*
-  Ruled: a mark needs every world in its system (STAGING § The inscription plane). Ruled too: a system's hearts link to each other and one links to Oerth (STAGING). Open: whether moons count as worlds with hearts of their own; how the current count is restated (the two upper-lid systems partway done, Nowhere found); and the refit, which should score marks toward systems with few worlds, using the survey's rolls.
+  Ruled: a mark needs every world in its system (STAGING § The inscription plane). Ruled too: a system's hearts link to each other and one links to Oerth (STAGING). Ruled too: only planets count; a moon shares its planet's heart. Open: how the current count is restated (the two upper-lid systems partway done, Nowhere found); and the refit, which should score marks toward systems with few worlds, using the survey's rolls.
   src: Korey, 2026-10-29
 
 - **[later]** A node log for player impact
