@@ -162,13 +162,13 @@ import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer
    x and z, scaled so the galaxy's radius is 100 units; y is height above
    the disc.
 
-   The inscription. Vecna chose the fifteen heart worlds for how they look
-   from Oerth. Each point of the eye (ten on the lids, five in the iris)
-   is set along the line of sight from Oerth through that point, at a
-   seeded distance. From Oerth, looking at the core, the hearts and their
-   links fold into the eye with the core as its pupil; from anywhere else
-   they scatter. The seed fixes the positions, so they are the same on
-   every visit.
+   The inscription is a superimposition. Each point of the eye (ten on the
+   lids, five in the iris) is a line parallel to the axis from Oerth through
+   the core, and its heart system lies somewhere along it (galaxy.js).
+   Viewed along that axis, orthographically, the hearts and their links
+   form the eye with the core as its pupil; viewed any other way they
+   scatter. The seed fixes the positions, so they are the same on every
+   visit.
    ════════════════════════════════════════════════════════════════ */
 
 // ── Shared with the flat chart (galaxy.js) ─────────────────────────
@@ -485,7 +485,7 @@ surveyReady.then(sv => {
 
 // Oerth, the retina.
 const oerthNode = node(C.oerth, 1.3, { name:'Oerth', kind:'Greyspace · the eye\'s retina', page:'oerth.html',
-  summary:'Oerth, in Greyspace, where Vecna became a god.', dm:'Oerth\'s heart has been Vecna\'s since his ascension. Every heart in the inscription links back to it. From here, and only from here, the hearts line up into the eye he lost.' });
+  summary:'Oerth, in Greyspace, where Vecna became a god.', dm:'Oerth\'s heart has been Vecna\'s since his ascension. Every heart in the inscription links back to it. The eye's axis runs from Oerth through the core; laid flat along it, the hearts form the eye he lost.' });
 oerthNode.position.copy(OERTH).add(new THREE.Vector3(0, 1.6, 0));
 label('Oerth', oerthNode, 'lbl gold below'); galaxy.add(oerthNode);
 
