@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Chart · Caelestis · DM</title>
+<title>The Rykoe Cosmos · Caelestis · DM</title>
 <script>
 /* Embedded in another page (Locations embeds the Chart)? Say so before
    anything paints, so the stylesheet drops the DM nav and the title. */
@@ -109,6 +109,7 @@ html { overflow-x: clip; }
 .con-off .con-layer { opacity:0; pointer-events:none; }
 .ins-off .ins-layer { opacity:0; pointer-events:none; }
 .beacon-off .gtc-layer { opacity:0; }
+.labels-off .ann, .mono-off .monolith-icon { display:none; }
 @media (prefers-reduced-motion: reduce) { .hidden-layer, .con-layer, .ins-layer, .gtc-layer { transition:none; } }
 
 /* 3D */
@@ -139,9 +140,9 @@ html.is-framed .chart-shell, html.is-framed .chart-shell.is-3d { height:100vh; }
 <body>
 <main class="chart-shell" id="chart" data-listen-skip>
   <header class="chart-head">
-    <div class="chart-title"><span class="chart-eyebrow">World</span><h1>Chart</h1></div>
+    <div class="chart-title"><span class="chart-eyebrow">World</span><h1>The Rykoe Cosmos</h1></div>
     <div class="view-switch" role="tablist" aria-label="View">
-      <button type="button" role="tab" id="tab-2d" aria-controls="view-2d" aria-selected="true" data-view="2d">Chart</button>
+      <button type="button" role="tab" id="tab-2d" aria-controls="view-2d" aria-selected="true" data-view="2d">Map</button>
       <button type="button" role="tab" id="tab-3d" aria-controls="view-3d" aria-selected="false" data-view="3d">3D</button>
     </div>
     <div class="gtc-host" id="gtc"></div>
@@ -155,6 +156,8 @@ html.is-framed .chart-shell, html.is-framed .chart-shell.is-3d { height:100vh; }
       <button class="btn" id="toggleBeacon" aria-pressed="true" type="button" hidden>Beacon: on</button>
       <button class="btn" id="toggleCon" aria-pressed="true" type="button" hidden>Constellations: on</button>
       <button class="btn" id="toggleHidden" aria-pressed="false" type="button" hidden>Hidden layer: off</button>
+      <button class="btn" id="toggleLabels" aria-pressed="true" type="button" hidden>Labels: on</button>
+      <button class="btn" id="toggleMono" aria-pressed="true" type="button" hidden>Monolith: on</button>
     </div>
     <div class="layout">
       <section class="chart hidden-off ins-off" aria-label="Chart">
@@ -181,6 +184,7 @@ html.is-framed .chart-shell, html.is-framed .chart-shell.is-3d { height:100vh; }
   </section>
 </main>
 
+<script src="survey-core.js"></script>
 <script src="galaxy.js"></script>
 <script src="gtc.js"></script>
 <script>
@@ -263,6 +267,8 @@ const SYS_CHART = {
     travel:`Long haul from Realmspace, passing the carved-meteor hub. Long haul to Virenspace.` },
   "CSC 16423": { pos:armPt(0, 1.2, 30), tone:"#9fe1cb", page:"krynnspace.html",
     travel:`Uncharted route from Realmspace, far beyond the watch at Realmspace's edge.` },
+  "CSC 50743": { pos:window.EREVOS.POS.fonains.map(Math.round), tone:"#9fe1cb", page:"fonains.html",
+    travel:`Neighbours Krynnspace, at the far end of the uncharted route from Realmspace. Clint Dashforest reached Fonains through a color pool.` },
   "Greyspace": { pos:armPt(2, 2.7, -20), tone:"#e2ae7e", page:"oerth.html#greyspace",
     travel:`Far across the galaxy, on the opposite arm from Realmspace. No lane on Caelestis's charts reaches it.` },
   "GAL-01-hidden": { pos:[3250, 950], tone:"#c9b3ea", page:"wayfinders-homeworld.html", hidden:true, veiled:true,
@@ -370,7 +376,7 @@ const UNPLACED = [
    neighbouring upper-lid systems hold the opened, linked hearts.
    state: linked | found | unknown. */
 const HEARTS = window.EREVOS.HEARTS.map(h => { const [x, y] = window.EREVOS.toChart(h.v);
-  return { id:"h"+String(h.n).padStart(2,"0"), n:h.n, part:h.part, x, y, height:h.v[1], state:h.state }; });
+  return { id:"h"+String(h.n).padStart(2,"0"), n:h.n, part:h.part, x, y, height:h.v[1], state:h.state, src:h }; });
 const LID_LOOP = window.EREVOS.LID.map(i => HEARTS[i].id);
 const IRIS_LOOP = window.EREVOS.IRIS.map(i => HEARTS[i].id);
 const PAIR_IDS = window.EREVOS.PAIR.map(i => HEARTS[i].id);
@@ -400,29 +406,16 @@ function buildFromSurvey(sv){
     const c = SYS_CHART[s.id], named = s.name || (s.catalogue ? "CSC " + s.catalogue : null);
     return Object.assign({ id:s.id, galaxy:s.galaxy, record:s,
       label: s.home || !s.catalogue ? (named || (s.id==="GAL-01-hidden" ? "Wayfinders' system" : s.id)) : (s.name || s.id),
-      sub: s.name && s.catalogue ? "CSC " + s.catalogue : (s.home ? "home system" : ""),
+      sub: s.name && s.catalogue ? "CSC " + s.catalogue + (s.home ? " · home system" : "") : (s.home ? "home system" : ""),
       x:c.pos[0], y:c.pos[1] }, c);
   });
-  /* unnamed systems on paper: clustered along the arms, empty reaches between */
-  const r = rng(90210), out = [];
-  const clumps = [[0,.7,5],[0,1.0,6],[0,1.45,4],[0,2.75,6],[0,3.0,5],[0,3.25,4],[2,.6,4],[2,.95,6],[2,1.3,7],[2,1.65,5],[2,2.0,7],[2,2.3,4],[2,2.55,3],[2,2.95,6],[2,3.2,4],[0,.45,3],[2,.4,3],
-    [1,.55,4],[1,.9,5],[1,1.35,6],[1,1.8,5],[1,2.25,6],[1,2.7,4],[1,3.1,5],[3,.5,3],[3,.85,5],[3,1.3,6],[3,1.75,6],[3,2.2,5],[3,2.65,5],[3,3.05,4]];
-  const avoid = SYSTEMS.map(s=>[s.x,s.y]).concat(SITES.filter(s=>s.x).map(s=>[s.x,s.y]));
-  for(const [arm,t,n] of clumps){
-    const c = armPt(arm, t, gauss(r)*20, 0);
-    for(let i=0;i<n;i++){
-      const p = [c[0]+gauss(r)*130, c[1]+gauss(r)*130];
-      if(Math.hypot(p[0]-GX.cx,p[1]-GX.cy) < 300) continue;
-      if(Math.hypot(p[0]-RS[0],p[1]-RS[1]) < 940) continue;
-      if(avoid.concat(out.map(u=>[u.x,u.y])).some(q=>Math.hypot(p[0]-q[0],p[1]-q[1]) < 120)) continue;
-      const near = Math.hypot(p[0]-RS[0],p[1]-RS[1]) < 1700;
-      out.push({ id:"u"+out.length, x:Math.round(p[0]), y:Math.round(p[1]), status: near && r()<.6 ? "sighted" : "uncharted" });
-    }
-  }
-  UNNAMED = out.map(u => Object.assign(u, { name: u.status==="sighted" ? "Sighted star" : "Uncharted star",
-    kind: "Star system, unnamed",
-    summary: u.status==="sighted" ? `A star sighted on Caelestis's long scopes. No survey on record, and no one has charted its worlds.` : `A star on the far charts with nothing known of it. Caelestis has given it no designation.`,
-    dm:[`Roll it with scripts/survey.js when the crew turns toward it, and save it if it stays.`] }));
+  /* Unnamed systems: survey.js rolls, by seed, placed along the arms by
+     galaxy.js. Each reads as `node scripts/survey.js roll --seed N` would
+     print it; the survey keeps only the systems someone saves. */
+  window.EREVOS.rollSystems(sv);
+  UNNAMED = window.EREVOS.FILLERS.map(f => ({ id:"u"+f.i, x:Math.round(f.pos[0]), y:Math.round(f.pos[1]), status:f.sys.status,
+    name:f.sys.id, kind:"Star system" + (f.sys.bayer ? " · " + f.sys.bayer : ""), summary:f.summary,
+    dm:[`A survey.js roll, seed ${f.sys.seed}. Keep it with <code>node scripts/survey.js roll --seed ${f.sys.seed} --save</code>, and give it a place on the chart when the crew turns toward it.`] }));
 }
 
 /* ---------- backdrop ---------- */
@@ -462,11 +455,20 @@ function spiralDust(cx,cy,R,spin,seed,n,col,op,dot,arms){
 }
 
 /* ---------- cosmos ---------- */
+/* The Core Monolith, drawn above Rykoe's black hole. Its own element, so
+   the Monolith toggle can hide it and the drawing can be swapped here. */
+function monolithIcon(cx, cy){
+  const CEN = {x:cx, y:cy};
+  return `<g class="monolith-icon">
+    <circle cx="${CEN.x}" cy="${CEN.y-130}" r="90" fill="url(#g-core)"/>
+    <path d="M${CEN.x-16} ${CEN.y-70} L${CEN.x-13} ${CEN.y-172} L${CEN.x} ${CEN.y-196} L${CEN.x+13} ${CEN.y-172} L${CEN.x+16} ${CEN.y-70} Z" fill="#fff6e6" fill-opacity=".92" stroke="#ffd9a8" stroke-width="2"/>
+    <line x1="${CEN.x}" y1="${CEN.y-168}" x2="${CEN.x}" y2="${CEN.y-84}" stroke="#c08652" stroke-opacity=".55" stroke-width="2"/></g>`;
+}
 function galPos(g){ const R = 1050; return [Math.round(CEN.x + R*Math.cos(rad(g.ang))), Math.round(CEN.y + R*Math.sin(rad(g.ang)))]; }
 function renderCosmos(){
   view = {level:"cosmos"}; canvas = LV.cosmos; registry = {};
   let o = backdrop(canvas.W, canvas.H, 5, 500);
-  o += `<text class="lbl-sub" x="110" y="150" font-size="46">the Astral Sea, where the greater gods dwell</text>`;
+  o += `<text class="lbl-sub ann" x="110" y="150" font-size="46">the Astral Sea, where the greater gods dwell</text>`;
   const pos = Object.fromEntries(GALAXIES.map(g=>[g.id, galPos(g)]));
   /* Circle of Fifths: spokes and rim */
   let lines = "", hit = "";
@@ -477,18 +479,16 @@ function renderCosmos(){
     hit += `<line x1="${q[0]}" y1="${q[1]}" x2="${p[0]}" y2="${p[1]}" stroke="transparent" stroke-width="60"/><line x1="${p[0]}" y1="${p[1]}" x2="${CEN.x}" y2="${CEN.y}" stroke="transparent" stroke-width="60"/>`;
   });
   const p3 = pos["GAL-03"], p4 = pos["GAL-04"];
-  o += `<g ${reg("fifths",COSMOS.fifths)}>${hit}${lines}<text class="lbl-sub" x="${(p3[0]+p4[0])/2}" y="${p3[1]+250}" text-anchor="middle" font-size="44" fill="#b9a5d8">Circle of Fifths</text></g>`;
+  o += `<g ${reg("fifths",COSMOS.fifths)}>${hit}${lines}<text class="lbl-sub ann" x="${(p3[0]+p4[0])/2}" y="${p3[1]+250}" text-anchor="middle" font-size="44" fill="#b9a5d8">Circle of Fifths</text></g>`;
   /* Rykoe */
   const c = COSMOS.rykoe;
   o += `<g ${reg("rykoe",c)}><circle cx="${CEN.x}" cy="${CEN.y}" r="230" fill="transparent"/>
     <circle cx="${CEN.x}" cy="${CEN.y+20}" r="230" fill="#c05aa0" fill-opacity=".18" filter="url(#softer)"/>
     <circle class="sel" cx="${CEN.x}" cy="${CEN.y+20}" r="120" fill="url(#g-hole)"/>
     <circle cx="${CEN.x}" cy="${CEN.y+20}" r="58" fill="#000" filter="url(#soft)"/>
-    <circle cx="${CEN.x}" cy="${CEN.y-130}" r="90" fill="url(#g-core)"/>
-    <path d="M${CEN.x-16} ${CEN.y-70} L${CEN.x-13} ${CEN.y-172} L${CEN.x} ${CEN.y-196} L${CEN.x+13} ${CEN.y-172} L${CEN.x+16} ${CEN.y-70} Z" fill="#fff6e6" fill-opacity=".92" stroke="#ffd9a8" stroke-width="2"/>
-    <line x1="${CEN.x}" y1="${CEN.y-168}" x2="${CEN.x}" y2="${CEN.y-84}" stroke="#c08652" stroke-opacity=".55" stroke-width="2"/>
+    ${monolithIcon(CEN.x, CEN.y)}
     <text class="lbl" x="${CEN.x}" y="${CEN.y+205}" text-anchor="middle" font-size="62">Rykoe</text>
-    <text class="lbl-sub" x="${CEN.x}" y="${CEN.y+255}" text-anchor="middle" font-size="34">Core Monolith · Radiant Citadel</text></g>`;
+    <text class="lbl-sub ann" x="${CEN.x}" y="${CEN.y+255}" text-anchor="middle" font-size="34">Core Monolith · Radiant Citadel</text></g>`;
   /* galaxies */
   for(const g of GALAXIES){
     const [x,y] = pos[g.id], home = g.id==="GAL-01", R = home ? 270 : 220;
@@ -498,14 +498,14 @@ function renderCosmos(){
       ${spiralDust(x,y,R*.95,g.spin,11+g.ang,home?620:420, home?"#bcd6f0":g.core==="awake"?"#f0b0a8":"#c9b3ea", home?.9:.7, 3.4, home?4:2)}
       ${coreGlyph(x,y,home?26:22,g.core)}
       <text class="lbl" x="${x}" y="${ly}" text-anchor="middle" font-size="${home?60:52}" fill="${home?"#e2ae7e":"#c6d2e2"}">${esc(g.label)}</text>
-      <text class="lbl-sub" x="${x}" y="${ly+52}" text-anchor="middle" font-size="40">${esc(g.line1||"")}</text>
-      <text class="lbl-sub" x="${x}" y="${ly+100}" text-anchor="middle" font-size="40" fill="${CORE_TONE[g.core]}">${esc(g.line2||"")}</text></g>`;
+      <text class="lbl-sub ann" x="${x}" y="${ly+52}" text-anchor="middle" font-size="40">${esc(g.line1||"")}</text>
+      <text class="lbl-sub ann" x="${x}" y="${ly+100}" text-anchor="middle" font-size="40" fill="${CORE_TONE[g.core]}">${esc(g.line2||"")}</text></g>`;
   }
   svg.innerHTML = o;
   legend(`<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="#9678bd" stroke-width="3"/></svg>Spoke: core to Rykoe</span>
     <span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="#9678bd" stroke-width="2" stroke-dasharray="5 4"/></svg>Rim: core to neighbouring core</span>`
     + Object.entries(CORE_WORD).map(([k,v])=>`<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="#000" stroke="${CORE_TONE[k]}" stroke-width="2"/></svg>${v}</span>`).join(""));
-  crumbs([["Cosmos",null]]); controls(); tray(false); fit();
+  crumbs([["Rykoe Cosmos",null]]); controls(); tray(false); fit();
 }
 
 /* ---------- galaxy ---------- */
@@ -517,7 +517,7 @@ function systemGlyph(s){
   g += `<circle cx="${x}" cy="${y}" r="30" fill="#e2ae7e" fill-opacity=".2"/><circle cx="${x}" cy="${y}" r="12" fill="#ffe3b8"/>`;
   if(s.haze) g += `<circle cx="${x}" cy="${y}" r="${SR*.75}" fill="none" stroke="#9678bd" stroke-opacity=".5" stroke-width="2" stroke-dasharray="3 7"/>`;
   g += `<text class="lbl" x="${x}" y="${y-SR-24}" text-anchor="middle" font-size="64">${esc(s.label)}</text>`;
-  if(s.sub) g += `<text class="lbl-sub" x="${x}" y="${y+SR+56}" text-anchor="middle" font-size="44">${esc(s.sub)}</text>`;
+  if(s.sub) g += `<text class="lbl-sub ann" x="${x}" y="${y+SR+56}" text-anchor="middle" font-size="44">${esc(s.sub)}</text>`;
   return `<g ${reg(s.id,s)}><circle cx="${x}" cy="${y}" r="${SR+24}" fill="transparent"/>${g}</g>`;
 }
 function siteGlyph(n){
@@ -566,7 +566,7 @@ function constellationGlyph(c){
     <g ${reg(c.id,c)}><rect x="${Math.min(...xs)-30}" y="${Math.min(...ys)-30}" width="${Math.max(...xs)-Math.min(...xs)+60}" height="${Math.max(...ys)-Math.min(...ys)+60}" fill="transparent"/>${lines}${stars}<text class="lbl" x="${(Math.min(...xs)+Math.max(...xs))/2}" y="${Math.max(...ys)+62}" text-anchor="middle" font-size="46" fill="#ffe3b8">${esc(c.label)}</text></g>`;
 }
 function unnamedGlyph(u){
-  const sighted = u.status==="sighted";
+  const sighted = u.status!=="sighted";   /* charted or surveyed: drawn solid; only sighted: an outline */
   return `<g ${reg(u.id,u)}><circle cx="${u.x}" cy="${u.y}" r="36" fill="transparent"/>
     <circle class="sel" cx="${u.x}" cy="${u.y}" r="${sighted?15:14}" fill="${sighted?"#9cc0e0":"none"}" fill-opacity="${sighted?.55:0}" stroke="#9cc0e0" stroke-opacity="${sighted?.85:.55}" stroke-width="3" stroke-dasharray="${sighted?"":"5 5"}"/></g>`;
 }
@@ -580,17 +580,17 @@ function renderGalaxy(gid){
   o += `<circle cx="${GX.cx}" cy="${GX.cy}" r="${GX.R*.55}" fill="url(#g-bulge)"/>`;
   o += spiralDust(GX.cx, GX.cy, GX.R, g.spin||0, 300+g.ang, home?3600:1500, home?"#bcd6f0":g.core==="awake"?"#f0b0a8":"#c9b3ea", home?.6:.4, 4.6, home?4:2);
   if(home) o += `<g class="gtc-layer" id="gtc-layer" aria-hidden="true"></g>`;
-  o += `<text class="lbl-sub" x="${W/2}" y="${H-90}" text-anchor="middle" font-size="56">${esc(g.label)}${home?" · Caelestis's galaxy":""}</text>`;
+  o += `<text class="lbl-sub ann" x="${W/2}" y="${H-90}" text-anchor="middle" font-size="56">${esc(g.label)}${home?" · Caelestis's galaxy":""}</text>`;
   const coreN = { id:gid+"-core", name:(g.record && g.record.core_name) ? g.record.core_name : gid+" core", kind:"Galactic core, a black hole", core:g.core, galaxy:gid };
   o += `<g ${reg(coreN.id, coreN)}><circle cx="${GX.cx}" cy="${GX.cy}" r="110" fill="transparent"/>${coreGlyph(GX.cx,GX.cy,48,g.core)}<circle class="sel" cx="${GX.cx}" cy="${GX.cy}" r="48" fill="none" stroke="none"/>
     <text class="lbl" x="${GX.cx}" y="${GX.cy+130}" text-anchor="middle" font-size="56">${esc(coreN.name)}</text>
-    <text class="lbl-sub" x="${GX.cx}" y="${GX.cy+180}" text-anchor="middle" font-size="42" fill="${CORE_TONE[g.core]}">${esc(CORE_WORD[g.core].toLowerCase())}</text></g>`;
+    <text class="lbl-sub ann" x="${GX.cx}" y="${GX.cy+180}" text-anchor="middle" font-size="42" fill="${CORE_TONE[g.core]}">${esc(CORE_WORD[g.core].toLowerCase())}</text></g>`;
   if(home){
     o += `<ellipse cx="${CLUSTER.x}" cy="${CLUSTER.y}" rx="${CLUSTER.rx}" ry="${CLUSTER.ry}" transform="rotate(${CLUSTER.rot.toFixed(1)} ${CLUSTER.x} ${CLUSTER.y})" fill="#7fe3da" fill-opacity=".03" stroke="#7fe3da" stroke-opacity=".35" stroke-width="3" stroke-dasharray="3 16" stroke-linecap="round"/>`;
     const cl = at(RS, CLUSTER.ry+40, CLUSTER.rx*.55);
-    o += `<text class="lbl-sub" x="${cl[0]}" y="${cl[1]}" text-anchor="middle" font-size="48" fill="#8fe8df">Caelestis's cluster</text>`;
+    o += `<text class="lbl-sub ann" x="${cl[0]}" y="${cl[1]}" text-anchor="middle" font-size="48" fill="#8fe8df">Caelestis's cluster</text>`;
     /* The Fleet's four sectors, one along each arm. Only the Caelestis Sector has a name. */
-    o += window.EREVOS.SECTORS.map(sc => `<text class="lbl-sub" x="${sc.pos[0].toFixed(0)}" y="${sc.pos[1].toFixed(0)}" text-anchor="middle" font-size="54" fill="#6E95D4" opacity=".75" letter-spacing="8">${esc(sc.name)}</text>`).join("");
+    o += window.EREVOS.SECTORS.map(sc => `<text class="lbl-sub ann" x="${sc.pos[0].toFixed(0)}" y="${sc.pos[1].toFixed(0)}" text-anchor="middle" font-size="54" fill="#6E95D4" opacity=".75" letter-spacing="8">${esc(sc.name)}</text>`).join("");
     o += UNNAMED.map(unnamedGlyph).join("");
     o += `<g class="con-layer">${CONSTELLATIONS.map(constellationGlyph).join("")}</g>`;
     placeLaneSites();
@@ -607,7 +607,7 @@ function renderGalaxy(gid){
   svg.innerHTML = o;
   if(home){ drawInscription(); drawBeacon(); }
   galaxyLegend();
-  crumbs([["Cosmos","cosmos"],[g.label,null]]); controls(); tray(home); fit();
+  crumbs([["Rykoe Cosmos","cosmos"],[g.label,null]]); controls(); tray(home); fit();
 }
 function galaxyLegend(){
   if(view.level!=="galaxy") return;
@@ -622,11 +622,11 @@ function galaxyLegend(){
     h += `<span>Stems show height above or below the plane. From Oerth the hearts line up into the eye: see it in 3D.</span>`;
   } else {
     h += Object.values(LANE).map(s=>`<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="${s.stroke}" stroke-width="2.2" stroke-dasharray="${s.dash?s.dash.split(" ").map(v=>Math.max(1.5,v/4)).join(" "):""}" stroke-linecap="round"/></svg>${s.label}</span>`).join("");
-    h += `<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="#9cc0e0" fill-opacity=".55" stroke="#9cc0e0"/></svg>Sighted star</span>`;
+    h += `<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="#9cc0e0" fill-opacity=".55" stroke="#9cc0e0"/></svg>Charted or surveyed system</span>`;
     if(pressed("toggleBeacon")) h += `<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="#a8c2ec" stroke-width="5" stroke-opacity=".6"/></svg>Kindled arm</span>
       <span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="#a8c2ec"/></svg>Marker cluster, lit</span>
       <span><svg viewBox="0 0 34 12" aria-hidden="true"><path d="M2 6 L32 2 L32 10 Z" fill="#6E95D4" fill-opacity=".35"/></svg>Where the beam points</span>`;
-    h += `<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="none" stroke="#9cc0e0" stroke-dasharray="2 2"/></svg>Uncharted star</span>`;
+    h += `<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="none" stroke="#9cc0e0" stroke-dasharray="2 2"/></svg>Sighted system</span>`;
   }
   legend(h);
 }
@@ -658,13 +658,13 @@ function drawInscription(){
   /* the hearts, each in its own system */
   for(const h of HEARTS){
     const p = P[h.id], st = HSTATE[h.state], iris = h.part==="iris", ring = iris ? "#D45F78" : "#9fb4d0";
-    let g = `<circle cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="52" fill="transparent"/>`;
+    let g = `<circle cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="70" fill="transparent"/>`;
     if(Math.abs(h.height*K) > 4) g += `<line x1="${p[0].toFixed(0)}" y1="${p[1].toFixed(0)}" x2="${h.x.toFixed(0)}" y2="${h.y.toFixed(0)}" stroke="${ring}" stroke-opacity=".5" stroke-width="3"/><circle cx="${h.x.toFixed(0)}" cy="${h.y.toFixed(0)}" r="6" fill="${ring}" fill-opacity=".45"/>`;
-    g += `<circle cx="${(p[0]+30).toFixed(0)}" cy="${(p[1]-4).toFixed(0)}" r="7" fill="#ffe3b8" fill-opacity=".85"/>`;
-    if(iris) g += `<circle cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="40" fill="none" stroke="#D45F78" stroke-opacity=".85" stroke-width="3"/>`;
-    g += `<circle class="sel" cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="24" fill="#0b1019" stroke="${ring}" stroke-width="4" stroke-dasharray="${h.state==="unknown"?"8 6":""}"/>`;
-    if(h.state!=="unknown") g += `<circle cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="12" fill="${st.col}"/>`;
-    g += `<text class="lbl-sub" x="${(p[0]-36).toFixed(0)}" y="${(p[1]-28).toFixed(0)}" text-anchor="end" font-size="40">${h.n}</text>`;
+    g += `<circle cx="${(p[0]-50).toFixed(0)}" cy="${p[1].toFixed(0)}" r="22" fill="#ffe3b8" fill-opacity=".18"/><circle cx="${(p[0]-50).toFixed(0)}" cy="${p[1].toFixed(0)}" r="10" fill="#fff1d6"/>`;
+    if(iris) g += `<circle cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="54" fill="none" stroke="#D45F78" stroke-opacity=".9" stroke-width="5"/>`;
+    g += `<circle class="sel" cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="34" fill="#0b1019" stroke="${ring}" stroke-width="5"/>`;
+    g += `<circle cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="22" fill="${st.col}"/>`;
+    g += `<text class="lbl-sub" x="${(p[0]+44).toFixed(0)}" y="${(p[1]-34).toFixed(0)}" font-size="50" fill="#dfe6f0">${h.n}</text>`;
     o += `<g ${reg(h.id,h)}>${g}</g>`;
   }
   host.innerHTML = o;
@@ -782,7 +782,7 @@ function renderSystem(id){
   legend(`<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="#33405c" stroke="#9cc0e0" stroke-width="1.5"/></svg>Someone lives here</span>
     <span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="#1c2434" stroke="#4a6079" stroke-width="1.5"/></svg>No one lives here</span>
     <span>Chevrons on the edge mark where routes leave the system.</span>`);
-  crumbs([["Cosmos","cosmos"],[sys.galaxy,"galaxy"],[sys.label,null]]); controls(); tray(false); fit();
+  crumbs([["Rykoe Cosmos","cosmos"],[sys.galaxy,"galaxy"],[sys.label,null]]); controls(); tray(false); fit();
   showNode(sys,false);
 }
 
@@ -794,6 +794,8 @@ function controls(){
   const home = view.level==="galaxy" && view.galaxy==="GAL-01";
   ["toggleIns","toggleOerth","toggleCon","toggleBeacon"].forEach(id => document.getElementById(id).hidden = !home);
   document.getElementById("toggleHidden").hidden = !(home || (view.level==="system" && view.galaxy==="GAL-01"));
+  document.getElementById("toggleLabels").hidden = view.level==="system";
+  document.getElementById("toggleMono").hidden = view.level!=="cosmos";
 }
 
 let vb = {x:0,y:0,w:1000,h:1000};
@@ -839,13 +841,15 @@ function showHeart(h){
     unknown:`A Monolith world, chosen from thousands for how it looks from Oerth. Nothing is known of its heart.` }[h.state];
   const height = h.height > 1 ? "a little above the galaxy's plane" : h.height < -1 ? "a little below the galaxy's plane" : "close to the galaxy's plane";
   const dm = [];
+  if(h.src.sys) dm.push(`Its system is a survey.js roll, seed ${h.src.sys.seed}; keep it with <code>node scripts/survey.js roll --seed ${h.src.sys.seed} --save</code> when it matters.`);
   if(h.state==="linked") dm.push(`One of the two opened worlds is a little-charted planet the crew learns of late in the campaign.`);
   if(h.state==="found") dm.push(`Its exposed heart is the easiest in the galaxy to open, which is why Vecna chose it.`);
   else dm.push(`Which world this is gets decided when it matters. Vecna's progress here is tracked as counts: hearts found, opened and linked.`);
   dm.push(`Like every heart in the figure, it links back to Oerth's heart as well as to its neighbours in the ${iris?"iris":"lid"}.`);
-  panel.innerHTML = `<h2>${h.state==="found"?"Nowhere":"Heart world"}</h2><p class="kind">Inscription · ${partName} · ${h.n}</p>
+  const sys = h.src.sys;
+  panel.innerHTML = `<h2>${h.state==="found"?"Nowhere":"Heart world"}</h2><p class="kind">Inscription · ${partName} · ${h.n}${sys ? " · " + esc(sys.id) : ""}</p>
     ${st.badge ? `<span class="badge ${st.badge}">${st.label}</span>` : `<span class="badge">${st.label}</span>`}${iris?`<span class="badge b-red">Key</span>`:`<span class="badge">Replaceable</span>`}
-    <p>${stateText}</p><p>${role}</p><p class="hint">Its system lies ${height}, inside the disc.</p>${dmlist(dm)}`;
+    <p>${stateText}</p>${sys && h.state==="unknown" ? `<p>${esc(h.src.summary)}</p>` : ""}<p>${role}</p><p class="hint">Its system lies ${height}, inside the disc.</p>${dmlist(dm)}`;
 }
 function galaxyPanel(g, offer){
   const rec = g.record || {}, home = g.id==="GAL-01", c = heartsCount();
@@ -914,7 +918,7 @@ function intro(){
     return;
   }
   if(lv==="galaxy"){ const g = GALAXIES.find(x=>x.id===view.galaxy); galaxyPanel(g,false); return; }
-  panel.innerHTML = `<h2>Caelestis cosmos</h2><p class="kind">DM chart</p>
+  panel.innerHTML = `<h2>The Rykoe Cosmos</h2><p class="kind">Cosmos level</p>
     <p>Five galaxies around Rykoe. Each galaxy's core is joined to Rykoe by a spoke and to its two neighbours by the rim. The Fleet and its sectors chart only their own galaxy; few expeditions have tried to leave it, and many believe there is nothing beyond.</p>
     <p class="hint">Tap anything for details. Tap a galaxy twice to open it, then a system.</p>
     ${dmlist([`Pictured, the five Axioms make the same figure as the five galaxies around Rykoe, with Continuity at the heart. It is a mirror for meaning, not a map: no galaxy belongs to an Axiom.`,`A galaxy's contents stay unbuilt until play reaches it. Systems kept from a roll live in the survey, prime/data/survey.json.`,`Places with a situation attached have entries in <a href="../locations/">Locations</a>.`])}`;
@@ -944,6 +948,15 @@ document.getElementById("toggleHidden").addEventListener("click", e=>{ const on 
   if(!on){ const hid = n => n && (n.hidden || (n.parent && n.parent.hidden));
     if(view.level==="system" && sysById(view.id).hidden){ selected = null; renderGalaxy("GAL-01"); intro(); }
     else if(hid(registry[selected])){ selected = null; mark(null); intro(); } } });
+/* Labels and the Monolith icon: shown by default, remembered per browser. */
+const PREF = { get(k){ try { return localStorage.getItem("caelestis_chart_" + k); } catch(e) { return null; } },
+               set(k, v){ try { localStorage.setItem("caelestis_chart_" + k, v); } catch(e) {} } };
+[["toggleLabels","Labels","labels-off","labels"],["toggleMono","Monolith","mono-off","monolith"]].forEach(([id, word, cls, key]) => {
+  const btn = document.getElementById(id), chart = document.querySelector(".chart");
+  const set = on => { toggle(btn, word, on); chart.classList.toggle(cls, !on); };
+  set(PREF.get(key) !== "off");
+  btn.addEventListener("click", () => { const on = !pressed(id); set(on); PREF.set(key, on ? "on" : "off"); });
+});
 document.getElementById("toggleBeacon").addEventListener("click", e=>{ const on = !pressed("toggleBeacon"); toggle(e.currentTarget, "Beacon", on); document.querySelector(".chart").classList.toggle("beacon-off", !on); galaxyLegend(); });
 document.getElementById("toggleCon").addEventListener("click", e=>{ const on = !pressed("toggleCon"); toggle(e.currentTarget, "Constellations", on); document.querySelector(".chart").classList.toggle("con-off", !on); });
 document.getElementById("toggleIns").addEventListener("click", e=>{ const on = !insOn(); toggle(e.currentTarget, "Inscription", on); document.querySelector(".chart").classList.toggle("ins-off", !on);
@@ -998,7 +1011,7 @@ chips.addEventListener("click", e=>{ const c = e.target.closest(".chip"); if(!c)
 
 fetch(SURVEY_URL).then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
   .then(sv => { buildFromSurvey(sv); renderCosmos(); intro(); })
-  .catch(() => { panel.innerHTML = `<h2>Caelestis cosmos</h2><p>The survey (prime/data/survey.json) could not be read, so the chart has nothing to draw. Open this page through the site rather than from a file.</p>`; });
+  .catch(() => { panel.innerHTML = `<h2>The Rykoe Cosmos</h2><p>The survey (prime/data/survey.json) could not be read, so the chart has nothing to draw. Open this page through the site rather than from a file.</p>`; });
 </script>
 </body>
 </html>

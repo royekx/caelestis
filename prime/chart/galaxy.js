@@ -35,7 +35,8 @@
   }
 
   /* The named systems. Realmspace and Krynnspace lie on arm 0, Greyspace on
-     arm 2, across the core; the rest are set from Realmspace. */
+     arm 2, across the core; Fonains's system, CSC 50743, sits beside
+     Krynnspace; the rest are set from Realmspace. */
   const RS = armPt(0, 2.1);
   const OUT = (() => { const dx = RS[0] - GX.cx, dy = RS[1] - GX.cy, l = Math.hypot(dx, dy); return [dx / l, dy / l]; })();
   const TAN = [-OUT[1], OUT[0]];
@@ -45,6 +46,7 @@
     virenspace: at(RS, -40, 760),
     aethris: at(RS, -120, -720),
     krynnspace: armPt(0, 1.2, 30),
+    fonains: [armPt(0, 1.2, 30)[0] - 260, armPt(0, 1.2, 30)[1] + 260],   // CSC 50743, Fonains's system, beside Krynnspace
     greyspace: armPt(2, 2.7, -20),
     wayfinders: [3250, 950]
   };
@@ -86,7 +88,13 @@
   const F = v3.norm(v3.sub(CORE, OERTH));               // Oerth's line of sight
   const RT = v3.norm(v3.cross(F, [0, 1, 0]));
   const UP = v3.norm(v3.cross(RT, F));
-  const HALF = 0.43;                                    // the eye's half-width, as a tangent
+  /* The eye is drawn large: its lid corners sit 65 degrees either side of
+     Oerth's line to the core, so the lids sweep much of Oerth's sky. Eye
+     coordinates are angles: x across, y up, in units of EYE_ANGLE. */
+  const EYE_ANGLE = 65 * Math.PI / 180;
+  const HALF = Math.tan(EYE_ANGLE);                     // kept for callers that think in tangents
+  const eyeDir = (x, y) => { const az = x * EYE_ANGLE, el = y * EYE_ANGLE;
+    return v3.norm(v3.add(v3.mul(v3.add(v3.mul(F, Math.cos(az)), v3.mul(RT, Math.sin(az))), Math.cos(el)), v3.mul(UP, Math.sin(el)))); };
   const D = v3.dist(OERTH, CORE);
 
   /* The eye in Oerth's view: lid width 1, lid height .373, iris radius .24.
@@ -99,36 +107,94 @@
   const PAIR = [2, 3];                                  // two neighbouring upper-lid systems, opened and linked
   const FOUND = 6;                                      // Nowhere, on the lower lid
 
+  /* Each heart's depth along its sightline is seeded. Of the depths that
+     keep it inside the disc (or, failing that, the halo), clear of the named
+     systems, it takes the one farthest, from above, from the hearts already
+     placed and from Oerth, so the fifteen spread across the galaxy: near
+     arms and far, on both sides of the core. A point high in the eye can
+     only lie near Oerth; a point near the eye's level line can lie far past
+     the core. The second opened heart stays near the first: they are
+     neighbouring systems. */
+  const HALO_LIMIT = 1.6 * HALO_SIGMA;
   const HEARTS = (() => {
     const HR = rng(4127), out = [];
     const avoid = Object.keys(POS).map(sysScene);
+    const flat = v => [v[0], v[2]];
+    const placedFlat = () => out.map(h => flat(h.v)).concat([flat(OERTH)]);
     EYE2D.forEach((e, i) => {
-      const dir = v3.norm(v3.add(v3.add(F, v3.mul(RT, e.x * HALF)), v3.mul(UP, e.y * HALF)));
+      const dir = eyeDir(e.x, e.y);
       const partner = i === PAIR[1] ? out[PAIR[0]] : null;
-      let disc = null, halo = null;
-      for (let tries = 0; tries < 600 && !disc; tries++) {
-        const depth = partner ? partner.depth * (0.75 + HR() * 0.5) : D * (0.2 + HR() * 1.35);
+      const cands = [];
+      for (let k = 0; k < 160; k++) {
+        const depth = partner ? partner.depth * (0.8 + HR() * 0.45) : 14 + HR() * 190;
         const p = v3.add(OERTH, v3.mul(dir, depth)), r = Math.hypot(p[0], p[2]);
-        if (r > 104 || r < 12 || v3.dist(p, OERTH) < 14) continue;
+        if (r > 102 || r < 10 || v3.dist(p, OERTH) < 14) continue;
         if (avoid.some(q => v3.dist(p, q) < 9)) continue;
-        if (out.some(h => v3.dist(p, h.v) < (partner && h === partner ? 4 : 5))) continue;
-        const c = { v: p, depth };
-        if (Math.abs(p[1]) <= 1.5 * discSigma(r)) disc = c;
-        else if (!halo && Math.abs(p[1]) <= HALO_SIGMA) halo = c;
+        if (out.some(h => v3.dist(p, h.v) < 6)) continue;
+        const disc = Math.abs(p[1]) <= 1.5 * discSigma(r);
+        if (!disc && Math.abs(p[1]) > HALO_LIMIT) continue;
+        const pf = flat(p), gap = Math.min(...placedFlat().map(q => Math.hypot(pf[0] - q[0], pf[1] - q[1])));
+        const over = Math.max(0, Math.abs(p[1]) - 1.5 * discSigma(r));   // how far above the disc, into the halo
+        cands.push({ v: p, depth, disc, gap, score: gap - 0.6 * over });
       }
-      const c = disc || halo;
+      const c = partner ? cands.sort((a, b) => Math.abs(a.depth - partner.depth) - Math.abs(b.depth - partner.depth))[0]
+                        : cands.sort((a, b) => b.score - a.score)[0];
       out.push({
-        i, n: i + 1, part: e.part, eye: [e.x, e.y], v: c.v, depth: c.depth, inDisc: !!disc,
+        i, n: i + 1, part: e.part, eye: [e.x, e.y], v: c.v, depth: c.depth, inDisc: c.disc,
         state: PAIR.includes(i) ? 'linked' : i === FOUND ? 'found' : 'unknown'
       });
     });
     return out;
   })();
 
+  /* ── Generated systems ─────────────────────────────────────────
+     Everything on the chart that is not a named system is a survey.js roll:
+     the unnamed systems that fill the arms and the fifteen heart systems.
+     Positions are seeded here; what each system is comes from
+     survey-core.js by seed, once the survey is loaded (rollSystems), so a
+     system clicked on the chart reads as `node scripts/survey.js roll
+     --seed N` prints it, and `--save` keeps it. */
+  const FILLER_SEED0 = 200000, HEART_SEED0 = 300000;
+  const FILLERS = (() => {
+    const R = rng(5113), out = [];
+    const named = Object.values(POS), hearts = HEARTS.map(h => toChart(h.v));
+    for (let tries = 0; tries < 6000 && out.length < 380; tries++) {
+      const arm = Math.floor(R() * ARMS) % ARMS, t = 0.3 + Math.pow(R(), 0.8) * 3.0;
+      const p = armPt(arm, t, gauss(R) * 120 * (0.5 + t / 3), gauss(R) * 0.12);
+      const rc = Math.hypot(p[0] - GX.cx, p[1] - GX.cy), y = gauss(R);
+      if (rc < 300 || rc > GX.R * 1.08) continue;
+      if (Math.hypot(p[0] - RS[0], p[1] - RS[1]) < 940) continue;      // Caelestis's cluster keeps its saved places clear
+      if (named.some(q => Math.hypot(p[0] - q[0], p[1] - q[1]) < 200)) continue;
+      if (hearts.some(q => Math.hypot(p[0] - q[0], p[1] - q[1]) < 110)) continue;
+      if (out.some(f => Math.hypot(p[0] - f.pos[0], p[1] - f.pos[1]) < 105)) continue;
+      const v = toScene(p, y * discSigma(rc * S));
+      out.push({ i: out.length, pos: p, v });
+    }
+    return out;
+  })();
+  /* Roll every generated system against the survey. A seed whose number or
+     Bayer name is already taken, by the survey or by an earlier system on
+     the chart, passes to the next seed, so each system's roll matches the
+     command line exactly. */
+  function rollSystems(survey) {
+    const core = window.SURVEY_CORE; if (!core || !survey) return false;
+    const taken = { nums: new Set(), bayer: new Set() };
+    survey.systems.forEach(x => { if (x.catalogue) taken.nums.add(x.catalogue); if (x.bayer) taken.bayer.add(x.bayer); });
+    let seed;
+    const next = () => { for (;;) { const sys = core.roll(survey, { seed: seed++ });
+      if (taken.nums.has(sys.catalogue) || (sys.bayer && taken.bayer.has(sys.bayer))) continue;
+      taken.nums.add(sys.catalogue); if (sys.bayer) taken.bayer.add(sys.bayer);
+      return { sys, summary: core.summary(sys) }; } };
+    seed = HEART_SEED0; HEARTS.forEach(h => Object.assign(h, next()));
+    seed = FILLER_SEED0; FILLERS.forEach(f => Object.assign(f, next()));
+    return true;
+  }
+
   window.EREVOS = {
     GX, ARMS, TIP, rng, gauss, armAngle, armPt, RS, OUT, TAN, at, POS,
     SECTORS, MARKER_T, MARKERS, frontAt,
     S, toScene, toChart, discSigma, HALO_SIGMA, sysScene,
-    OERTH, F, RT, UP, HALF, D, EYE2D, HEARTS, LID, IRIS, PAIR, FOUND
+    OERTH, F, RT, UP, HALF, EYE_ANGLE, eyeDir, D, EYE2D, HEARTS, LID, IRIS, PAIR, FOUND,
+    FILLERS, rollSystems
   };
 })();

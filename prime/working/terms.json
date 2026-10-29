@@ -186,7 +186,7 @@
     },
     {
       "pattern": "Cosmos Chart",
-      "use": "the Chart"
+      "use": "the Rykoe Cosmos"
     },
     {
       "pattern": "\\bchild hearts?\\b",
@@ -482,6 +482,11 @@
     {
       "pattern": "\\bKeepers?\\b(?!'s guidance| of Tinderstrike| of the Misty Vale)",
       "use": "the Discerners (the Order of All's order that interprets and judges); a Discerner"
+    },
+    {
+      "pattern": "Caelestis Cosmos",
+      "use": "the Rykoe Cosmos",
+      "i": true
     }
   ],
   "voice": [

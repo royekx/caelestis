@@ -4372,10 +4372,10 @@
       "label": "Fonains",
       "type": "place",
       "scope": "fonains",
-      "summary": "The world of Lola's Boys, CSC 16423 c in Krynnspace, whose corrupted Monolith Lola's Boys broke.",
+      "summary": "The world of Lola's Boys, CSC 50743 c, in the system neighbouring Krynnspace, whose corrupted Monolith Lola's Boys broke.",
       "facts": [
         {
-          "t": "Fonains and Krynn share a system in GAL-01.",
+          "t": "Fonains lies in CSC 50743, the system neighbouring Krynn's, in GAL-01.",
           "src": "cosmology/index.html"
         },
         {
@@ -5290,7 +5290,7 @@
           "src": "timeline/timeline.json"
         },
         {
-          "t": "Krynn shares a system with Fonains.",
+          "t": "Krynn and Fonains lie in neighbouring systems.",
           "src": "cosmology/index.html"
         }
       ]
@@ -5403,10 +5403,10 @@
       "label": "Krynnspace (CSC 16423)",
       "type": "place",
       "scope": "krynn",
-      "summary": "A star system of two known worlds, Krynn and Fonains, reached from Realmspace on an uncharted route.",
+      "summary": "Krynn's star system, reached from Realmspace on an uncharted route. Fonains lies in the neighbouring system.",
       "facts": [
         {
-          "t": "Krynnspace, CSC 16423, holds Krynn (CSC 16423 b) and Fonains (CSC 16423 c).",
+          "t": "Krynnspace, CSC 16423, holds Krynn (CSC 16423 b). Fonains (CSC 50743 c) lies in the neighbouring system, CSC 50743.",
           "src": "locations/krynnspace.html"
         }
       ]
@@ -6004,13 +6004,13 @@
     {
       "s": "fonains",
       "t": "krynnspace",
-      "rel": "located in",
+      "rel": "lies in the system next to",
       "src": "locations/krynnspace.html"
     },
     {
       "s": "krynn",
       "t": "fonains",
-      "rel": "shares a system with",
+      "rel": "neighbours",
       "src": "cosmology/index.html"
     },
     {

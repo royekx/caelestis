@@ -18,7 +18,7 @@
   window.location.replace((depth > 0 ? new Array(depth + 1).join('../') : './') + 'index.html');
 })();
 </script>
-<title>Erevos Galaxy · Holochart · Caelestis DM</title>
+<title>The Rykoe Cosmos · 3D · Caelestis DM</title>
 <style>
 :root{
   /* The DM palette (styles/dm.css). The hologram takes the World group's
@@ -85,7 +85,7 @@ footer i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-righ
 @media (max-width:640px){#gtc{left:.5rem;right:.5rem;bottom:2.3rem;padding:.4rem .5rem}}
 body:not(.embed) #caption{bottom:8.5rem}
 @media (max-width:640px){body:not(.embed) footer{display:none} body:not(.embed) #gtc{bottom:.5rem} body:not(.embed) #panel{bottom:11.5rem;max-height:34vh} body:not(.embed) #caption{bottom:11.5rem}}
-.lbl.heart{font-family:var(--serif);font-style:italic;font-size:11px;letter-spacing:0;color:#e6eef8;text-shadow:0 0 3px #080b12}
+.lbl.heart{font-family:var(--serif);font-style:italic;font-size:11px;letter-spacing:0;color:#e6eef8;text-shadow:0 0 3px #080b12,0 0 3px #080b12;transform:translate(14px,-15px)}
 .hide-labels .lbl{display:none}
 /* Inside the Chart page (index.html), which carries the title and the clock. */
 body.embed .back, body.embed h1{display:none}
@@ -114,7 +114,7 @@ try { if (window.self !== window.top) document.body.classList.add('embed'); } ca
 <div class="scan"></div><div class="vig"></div>
 
 <header>
-  <a class="back" href="index.html">&larr; Chart</a>
+  <a class="back" href="index.html">&larr; Rykoe Cosmos</a>
   <h1>Erevos Galaxy &middot; Holochart</h1>
   <div class="ctl">
     <select id="view" aria-label="Viewpoint">
@@ -139,12 +139,13 @@ try { if (window.self !== window.top) document.body.classList.add('embed'); } ca
   <span><i style="background:none;border:1px solid #a9bdd8"></i>Unnamed system</span>
   <span><i style="background:#56B4A6;box-shadow:0 0 6px #56B4A6"></i>Heart opened and linked</span>
   <span><i style="background:#D4A256"></i>Heart found</span>
-  <span><i style="background:#7c8696"></i>Heart not yet known</span>
+  <span><i style="background:#8797ad"></i>Heart not yet known</span>
   <span><i style="background:none;border:1px solid #D45F78"></i>Iris world</span>
   <span>Drag to turn &middot; scroll or pinch to zoom &middot; tap anything</span>
 </footer>
 <div id="fail">The holochart needs WebGL and could not start in this browser. The <a href="index.html" style="color:#8fb0e6">flat chart</a> holds the same places.</div>
 
+<script src="survey-core.js"></script>
 <script src="galaxy.js"></script>
 <script src="gtc.js"></script>
 <script type="module">
@@ -185,7 +186,7 @@ const C = {
   bg:0x080b12, holo:0x6E95D4, holoHi:0xa8c2ec,
   stars:[0xdfe6f0, 0xcbd8e8, 0xa9bdd8, 0x8fa6c6, 0xb9c2cc],
   star:0xe6eef8, system:0xc6d4e8, site:0x9fb4d0, core:0xD4A256,
-  linked:0x56B4A6, found:0xD4A256, unknown:0x7c8696, iris:0xD45F78, oerth:0xD4A256,
+  linked:0x56B4A6, found:0xD4A256, unknown:0x8797ad, iris:0xD45F78, oerth:0xD4A256,
   lid:0x9fb4d0, cone:0x9683c4, lane:0x8fe8df, closed:0xd07070
 };
 
@@ -198,13 +199,21 @@ const SYSTEMS = [
   { id:'aethris', name:'CSC 56973', pos:POS.aethris, page:'aethris.html', kind:'Star system',
     summary:'Aethris\'s system, where the Prism Ascendant stands. A long haul from Realmspace past the carved-meteor hub.' },
   { id:'krynnspace', name:'Krynnspace', des:'CSC 16423', pos:POS.krynnspace, page:'krynnspace.html', kind:'Star system',
-    summary:'Krynn and Fonains. An uncharted route from Realmspace, far beyond the watch at Realmspace\'s edge.' },
+    summary:'Krynn\'s system. An uncharted route from Realmspace, far beyond the watch at Realmspace\'s edge. Fonains lies in the neighbouring system.' },
+  { id:'fonains', name:'CSC 50743', pos:POS.fonains, page:'fonains.html', kind:'Star system',
+    summary:'Fonains\'s system, which goes by its designation. It neighbours Krynnspace; Clint Dashforest reached Fonains through a color pool.' },
   { id:'greyspace', name:'Greyspace', pos:POS.greyspace, page:'oerth.html#greyspace', kind:'Star system',
     summary:'Far across the galaxy, on the opposite arm from Realmspace. No lane on Caelestis\'s charts reaches it. Oerth is here.' },
   { id:'wayfinders', name:'The Wayfinders\' homeworld', pos:POS.wayfinders, page:'wayfinders-homeworld.html', kind:'Hidden system',
     summary:'Hidden by a living ritual. Wayfinders leave with no map and no name, and must re-recognize home.', dm:'Its position here is symbolic.' }
 ];
 const sysPos = id => SYSTEMS.find(s => s.id === id).pos;
+// Designations come from the survey (prime/data/survey.json, kept by scripts/survey.js).
+const SURVEY_ID = { realmspace:'Realmspace', virenspace:'CSC 69387', aethris:'CSC 56973', krynnspace:'CSC 16423', fonains:'CSC 50743', greyspace:'Greyspace', wayfinders:'GAL-01-hidden' };
+const surveyReady = fetch('../data/survey.json').then(r => r.ok ? r.json() : null).catch(() => null).then(sv => {
+  if (sv) SYSTEMS.forEach(s => { const rec = sv.systems.find(x => x.id === SURVEY_ID[s.id]); if (rec && rec.catalogue && rec.name) s.des = 'CSC ' + rec.catalogue; });
+  return sv;
+});
 
 const SITES = (() => {
   const toK = (() => { const k = sysPos('krynnspace'), dx = k[0]-RS[0], dy = k[1]-RS[1], l = Math.hypot(dx,dy); return [dx/l, dy/l]; })();
@@ -333,8 +342,11 @@ var starMat;
 // Picking and labels.
 const pickables = [], markers = [];
 const _w = new THREE.Vector3();
+// CSS2DRenderer sets each label element's own transform to place it, so
+// the offset that lifts a label clear of its marker goes on an inner element.
 function label(text, obj, cls='lbl'){
-  const d = document.createElement('div'); d.className = cls; d.textContent = text;
+  const d = document.createElement('div'), t = document.createElement('div');
+  t.className = cls; t.textContent = text; d.appendChild(t);
   const o = new CSS2DObject(d); obj.add(o); return o;
 }
 function glowSprite(color, size, opacity=1){
@@ -395,20 +407,15 @@ const sectors = new THREE.Group(); galaxy.add(sectors);
 E.SECTORS.forEach(sc => { const o = new THREE.Object3D(); o.position.copy(toV(sc.pos, 0)); label(sc.name, o, 'lbl sector'); sectors.add(o); });
 
 // ── Unnamed systems ────────────────────────────────────────────────
-// A few hundred star systems, seeded, scattered along the arms at the
-// disc's height, so the inscription's systems hide among many.
-(function systems(){
-  const R = rng(5113), pos = [];
-  for (let i = 0; i < 420; i++) {
-    const arm = Math.floor(R()*4) % 4, t = .25 + Math.pow(R(), .8)*3.05;
-    const p = armPt(arm, t, gauss(R)*120*(.5+t/3), gauss(R)*.12), v = toV(p);
-    const r = Math.hypot(v.x, v.z); if (r < 10 || r > 108) continue;
-    pos.push(v.x, gauss(R)*E.discSigma(r), v.z);
-  }
+// The survey.js rolls galaxy.js places along the arms, at the disc's
+// height, so the inscription's systems hide among many. Tap one to read
+// its roll.
+const fillerPts = (function systems(){
+  const pos = []; E.FILLERS.forEach(f => pos.push(f.v[0], f.v[1], f.v[2]));
   const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
   const m = new THREE.PointsMaterial({ size:7*Math.min(window.devicePixelRatio,2), map:RING, color:0xa9bdd8, transparent:true, opacity:.5,
     depthWrite:false, sizeAttenuation:false });
-  galaxy.add(new THREE.Points(g, m));
+  const pts = new THREE.Points(g, m); galaxy.add(pts); return pts;
 })();
 
 // ── The inscription ────────────────────────────────────────────────
@@ -421,6 +428,32 @@ const HALF = E.HALF;
 const HEARTS = E.HEARTS.map(h => Object.assign({}, h, { v: new THREE.Vector3(...h.v) }));
 const HSTATE = { linked:{ c:C.linked, word:'Opened and linked' }, found:{ c:C.found, word:'Found, not opened' }, unknown:{ c:C.unknown, word:'Not yet known' } };
 const PART = { iris:'Iris', upper:'Upper lid', lower:'Lower lid' };
+
+// A heart system: a small star with its heart world beside it, in the
+// heart's state colour, on a dark backing so it reads over the bright bulge.
+// Drawn on top of the starfield (no depth test, no fog) and scaled with the
+// other markers, so it holds a steady size on screen at every zoom.
+function onTop(mat){ mat.depthTest = false; mat.depthWrite = false; mat.fog = false; mat.transparent = true; return mat; }
+function heartSystem(color, iris, info){
+  const g = new THREE.Group();
+  const sprite = (c, size, op, add) => { const s = new THREE.Sprite(onTop(new THREE.SpriteMaterial({ map:DOT, color:c, opacity:op,
+    blending: add ? THREE.AdditiveBlending : THREE.NormalBlending }))); s.scale.set(size, size, 1); s.renderOrder = 20; return s; };
+  const back = sprite(C.bg, 4.6, .85, false); back.renderOrder = 19; g.add(back);
+  // the heart world, at the heart's own point, so the eye stays exact
+  const world = new THREE.Mesh(new THREE.SphereGeometry(.8, 20, 12), onTop(new THREE.MeshBasicMaterial({ color })));
+  world.renderOrder = 21; g.add(world);
+  const halo = sprite(color, 3.2, .6, true); g.add(halo);
+  // its star, just beside it
+  const star = sprite(C.star, 1.1, 1, false); star.renderOrder = 21; star.position.copy(Rt).multiplyScalar(-1.45); g.add(star);
+  const starGlow = sprite(C.star, 2.4, .5, true); starGlow.position.copy(star.position); g.add(starGlow);
+  if (iris) {
+    const ring = new THREE.Mesh(new THREE.RingGeometry(1.3, 1.5, 40), onTop(new THREE.MeshBasicMaterial({ color:C.iris, side:THREE.DoubleSide, opacity:.95 })));
+    ring.renderOrder = 21; g.add(ring); g.userData.ring = ring;
+  }
+  const hit = new THREE.Mesh(new THREE.SphereGeometry(2.2, 10, 8), new THREE.MeshBasicMaterial({ visible:false }));
+  hit.userData.info = info; g.add(hit); pickables.push(hit);
+  markers.push(g); return g;
+}
 
 const ins = new THREE.Group(); galaxy.add(ins);
 HEARTS.forEach(h => {
@@ -436,16 +469,19 @@ HEARTS.forEach(h => {
         + 'Like every heart in the figure, it links back to Oerth\'s heart.',
     page: h.state === 'found' ? 'nowhere.html' : '../opposition/vecna.html'
   };
-  const n = node(st.c, iris ? .8 : .7, info);
+  const n = heartSystem(st.c, iris, info);
   n.position.copy(h.v);
-  // The system's star, beside its heart world.
-  const star = glowSprite(C.star, 1.5, .95); star.position.copy(Rt).multiplyScalar(1.5); n.add(star);
-  if (iris) {
-    const ring = new THREE.Mesh(new THREE.RingGeometry(1.25, 1.45, 32), new THREE.MeshBasicMaterial({ color:C.iris, side:THREE.DoubleSide, transparent:true, opacity:.85 }));
-    n.add(ring); n.userData.ring = ring;
-  }
   label(String(h.n), n, 'lbl heart');
-  ins.add(n); h.mesh = n;
+  ins.add(n); h.mesh = n; h.info = info;
+});
+
+// Each heart system is a survey.js roll too; its designation joins its panel.
+surveyReady.then(sv => {
+  if (!E.rollSystems(sv)) return;
+  HEARTS.forEach(h => { const src = E.HEARTS[h.i];
+    h.info.kind += ' · ' + src.sys.id;
+    if (h.state === 'unknown') h.info.summary += ' ' + src.summary;
+    h.info.dm += ` Its system is a survey.js roll, seed ${src.sys.seed}.`; });
 });
 
 // Oerth, the retina.
@@ -587,9 +623,11 @@ function flyTo(pos, target, fov, ms, done){
   controls.enabled = false;
 }
 function eyeFov(){
-  // Fit the eye's width, with a margin, to the screen.
-  const hHalf = Math.atan(HALF*1.25), vHalf = Math.atan(Math.tan(hHalf)/camera.aspect);
-  return Math.max(30, Math.min(105, THREE.MathUtils.radToDeg(vHalf*2)));
+  // Fit the whole eye, with a margin, to the screen: its width (the lid
+  // corners, E.EYE_ANGLE either side) and its height (the lids' peaks).
+  const m = THREE.MathUtils.degToRad(4), hHalf = E.EYE_ANGLE + m, vNeed = E.EYE_ANGLE*.373 + m;
+  const vHalf = Math.max(Math.atan(Math.tan(hHalf)/camera.aspect), vNeed);
+  return Math.max(30, Math.min(170, THREE.MathUtils.radToDeg(vHalf*2)));
 }
 function standAt(id){
   stopSpin();
@@ -648,8 +686,14 @@ renderer.domElement.addEventListener('pointerup', e => {
   if (!down || Math.hypot(e.clientX-down[0], e.clientY-down[1]) > 6) return;
   ptr.set(e.clientX/innerWidth*2 - 1, -(e.clientY/innerHeight)*2 + 1);
   ray.setFromCamera(ptr, camera);
-  const hit = ray.intersectObjects(pickables.filter(m => m.visible && (ins.visible || !ins.children.includes(m))), false)[0];
-  if (hit) showInfo(hit.object.userData.info);
+  const shown = o => { for (; o; o = o.parent) if (!o.visible) return false; return true; };
+  const hit = ray.intersectObjects(pickables.filter(shown), false)[0];
+  if (hit) { showInfo(hit.object.userData.info); return; }
+  // otherwise the nearest unnamed system under the pointer
+  ray.params.Points.threshold = Math.max(.6, camera.position.length()/160);
+  const f = ray.intersectObject(fillerPts, false)[0], sys = f && E.FILLERS[f.index].sys;
+  if (sys) showInfo({ name:sys.id, kind:'Star system' + (sys.bayer ? ' · ' + sys.bayer : '') + ' · ' + sys.status, summary:E.FILLERS[f.index].summary,
+    dm:`A survey.js roll, seed ${sys.seed}. Keep it with <code>node scripts/survey.js roll --seed ${sys.seed} --save</code>.` });
 });
 
 addEventListener('resize', () => {

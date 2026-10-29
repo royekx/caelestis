@@ -6,8 +6,8 @@
     {
       "id": "Realmspace",
       "galaxy": "GAL-01",
-      "seed": null,
-      "catalogue": null,
+      "seed": 1491,
+      "catalogue": 67759,
       "bayer": null,
       "bearing": null,
       "name": "Realmspace",
@@ -249,22 +249,9 @@
           "life": "benign",
           "inhabitants": "civilization",
           "notes": "Takhisis holds an aspect of Bahamut in the ruined temple of Paladine."
-        },
-        {
-          "designation": "CSC 16423 c",
-          "name": "Fonains",
-          "kind": "planet",
-          "status": "charted",
-          "letter": "c",
-          "composition": "earth",
-          "size": "medium",
-          "habitability": "livable",
-          "life": "benign",
-          "inhabitants": "civilization",
-          "notes": "Site of the only Monolith on record to be destroyed."
         }
       ],
-      "notes": "Two known worlds."
+      "notes": "One known world. Fonains lies in the neighbouring system, CSC 50743."
     },
     {
       "id": "GAL-01-hidden",
@@ -289,6 +276,69 @@
         }
       ],
       "notes": "Hidden. No route; Wayfinders leave with no map and must re-recognize home."
+    },
+    {
+      "id": "CSC 50743",
+      "galaxy": "GAL-01",
+      "seed": 16534,
+      "catalogue": 50743,
+      "bayer": "Mu CON-183",
+      "bearing": 183,
+      "name": null,
+      "primary": "yellow star",
+      "status": "sighted",
+      "bodies": [
+        {
+          "designation": "CSC 50743 c",
+          "name": "Fonains",
+          "kind": "planet",
+          "status": "charted",
+          "composition": "earth",
+          "size": "medium",
+          "habitability": "livable",
+          "life": "benign",
+          "inhabitants": "civilization",
+          "notes": "Site of the only Monolith on record to be destroyed.",
+          "shape": "sphere",
+          "letter": "c"
+        },
+        {
+          "designation": "CSC 50743 b",
+          "name": null,
+          "kind": "giant of air",
+          "status": "surveyed",
+          "shape": "sphere",
+          "composition": "air",
+          "size": "huge",
+          "habitability": "livable with protection",
+          "life": "benign",
+          "inhabitants": "none",
+          "oddity": "a wreck in orbit",
+          "letter": "b"
+        },
+        {
+          "designation": "P/1491 C3",
+          "name": null,
+          "kind": "comet",
+          "status": "surveyed",
+          "life": "infestation",
+          "inhabitants": "none",
+          "returns": true,
+          "hazard": "unstable orbit"
+        },
+        {
+          "designation": "P/1491 D4",
+          "name": null,
+          "kind": "comet",
+          "status": "surveyed",
+          "life": "none",
+          "inhabitants": "none",
+          "returns": true,
+          "hazard": "color pools nearby",
+          "oddity": "ruins older than anyone can date"
+        }
+      ],
+      "notes": "Fonains's system. Its name is not set; it goes by its designation. Neighbours Krynnspace (CSC 16423)."
     }
   ],
   "yearNote": "Cycle 1491, the current Galactic time cycle (GTC). Cycle 0 is the founding of the Order of All; one cycle is one full turn of Erevos's heart, read in its four sparks, and its length in Toril years is a working default (BACKLOG, Galactic time cycles).",

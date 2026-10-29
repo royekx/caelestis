@@ -32,7 +32,7 @@ staging once Korey has read and accepted them.
 |---|---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 11 | 13 | 12 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 25 | 0 | 0 | 1 |
-| Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 12 | 0 | 0 | 0 |
+| Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 10 | 10 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 2 | 2 | 0 | 1 |
@@ -568,6 +568,10 @@ Items for `locations/fonains.html`, `factions/cretez.html`, `dossiers/vanifer.ht
 Order under each heading: decide, fix, drop, add.
 
 ### locations/fonains.html
+
+- **[decide]** A name for Fonains's system
+  Fonains moved out of Krynnspace into a system of its own, neighbouring it (Korey, 2026-10-29). survey.js rolled it as CSC 50743 (seed 16534), and Fonains was charted there as CSC 50743 c. The system has no name and goes by its designation on the chart and the pages ("Fonains's system, CSC 50743"). Name it, or keep the designation. Touches locations/fonains.html, locations/krynnspace.html, locations/index.html, cosmology/index.html, connections.json, the survey and the chart; the FIA (FR-022, WM-003) keeps the designation either way.
+  src: Korey, 2026-10-29
 
 - **[decide]** Tinderstrike: kept since the sealing, or given 350 years ago
   STAGING § The Princes says the fire genasi have guarded the fire key since the sealing, about twelve thousand years ago, and also that Asmodeus gave Tinderstrike to the few who resisted Imix about three and a half centuries ago (so do the foundry notes and factions/deities.html). The page writes both. Options: the genasi lost the key and Asmodeus returned it; the genasi kept a different charge until Asmodeus gave them the weapon; one of the two is wrong. Touches locations/fonains.html, factions/cretez.html, factions/deities.html#asmodeus, the timeline.
