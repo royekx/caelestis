@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Chart · Caelestis · DM</title>
+<title>The Rykoe Cosmos · Caelestis · DM</title>
 <script>
 /* Embedded in another page (Locations embeds the Chart)? Say so before
    anything paints, so the stylesheet drops the DM nav and the title. */
@@ -139,9 +139,9 @@ html.is-framed .chart-shell, html.is-framed .chart-shell.is-3d { height:100vh; }
 <body>
 <main class="chart-shell" id="chart" data-listen-skip>
   <header class="chart-head">
-    <div class="chart-title"><span class="chart-eyebrow">World</span><h1>Chart</h1></div>
+    <div class="chart-title"><span class="chart-eyebrow">World</span><h1>The Rykoe Cosmos</h1></div>
     <div class="view-switch" role="tablist" aria-label="View">
-      <button type="button" role="tab" id="tab-2d" aria-controls="view-2d" aria-selected="true" data-view="2d">Chart</button>
+      <button type="button" role="tab" id="tab-2d" aria-controls="view-2d" aria-selected="true" data-view="2d">Map</button>
       <button type="button" role="tab" id="tab-3d" aria-controls="view-3d" aria-selected="false" data-view="3d">3D</button>
     </div>
     <div class="gtc-host" id="gtc"></div>
@@ -495,7 +495,7 @@ function renderCosmos(){
   legend(`<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="#9678bd" stroke-width="3"/></svg>Spoke: core to Rykoe</span>
     <span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="#9678bd" stroke-width="2" stroke-dasharray="5 4"/></svg>Rim: core to neighbouring core</span>`
     + Object.entries(CORE_WORD).map(([k,v])=>`<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="#000" stroke="${CORE_TONE[k]}" stroke-width="2"/></svg>${v}</span>`).join(""));
-  crumbs([["Cosmos",null]]); controls(); tray(false); fit();
+  crumbs([["Rykoe Cosmos",null]]); controls(); tray(false); fit();
 }
 
 /* ---------- galaxy ---------- */
@@ -597,7 +597,7 @@ function renderGalaxy(gid){
   svg.innerHTML = o;
   if(home){ drawInscription(); drawBeacon(); }
   galaxyLegend();
-  crumbs([["Cosmos","cosmos"],[g.label,null]]); controls(); tray(home); fit();
+  crumbs([["Rykoe Cosmos","cosmos"],[g.label,null]]); controls(); tray(home); fit();
 }
 function galaxyLegend(){
   if(view.level!=="galaxy") return;
@@ -772,7 +772,7 @@ function renderSystem(id){
   legend(`<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="#33405c" stroke="#9cc0e0" stroke-width="1.5"/></svg>Someone lives here</span>
     <span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="#1c2434" stroke="#4a6079" stroke-width="1.5"/></svg>No one lives here</span>
     <span>Chevrons on the edge mark where routes leave the system.</span>`);
-  crumbs([["Cosmos","cosmos"],[sys.galaxy,"galaxy"],[sys.label,null]]); controls(); tray(false); fit();
+  crumbs([["Rykoe Cosmos","cosmos"],[sys.galaxy,"galaxy"],[sys.label,null]]); controls(); tray(false); fit();
   showNode(sys,false);
 }
 
@@ -906,7 +906,7 @@ function intro(){
     return;
   }
   if(lv==="galaxy"){ const g = GALAXIES.find(x=>x.id===view.galaxy); galaxyPanel(g,false); return; }
-  panel.innerHTML = `<h2>Caelestis cosmos</h2><p class="kind">DM chart</p>
+  panel.innerHTML = `<h2>The Rykoe Cosmos</h2><p class="kind">Cosmos level</p>
     <p>Five galaxies around Rykoe. Each galaxy's core is joined to Rykoe by a spoke and to its two neighbours by the rim. The Fleet and its sectors chart only their own galaxy; few expeditions have tried to leave it, and many believe there is nothing beyond.</p>
     <p class="hint">Tap anything for details. Tap a galaxy twice to open it, then a system.</p>
     ${dmlist([`Pictured, the five Axioms make the same figure as the five galaxies around Rykoe, with Continuity at the heart. It is a mirror for meaning, not a map: no galaxy belongs to an Axiom.`,`A galaxy's contents stay unbuilt until play reaches it. Systems kept from a roll live in the survey, prime/data/survey.json.`,`Places with a situation attached have entries in <a href="../locations/">Locations</a>.`])}`;
@@ -990,7 +990,7 @@ chips.addEventListener("click", e=>{ const c = e.target.closest(".chip"); if(!c)
 
 fetch(SURVEY_URL).then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
   .then(sv => { buildFromSurvey(sv); renderCosmos(); intro(); })
-  .catch(() => { panel.innerHTML = `<h2>Caelestis cosmos</h2><p>The survey (prime/data/survey.json) could not be read, so the chart has nothing to draw. Open this page through the site rather than from a file.</p>`; });
+  .catch(() => { panel.innerHTML = `<h2>The Rykoe Cosmos</h2><p>The survey (prime/data/survey.json) could not be read, so the chart has nothing to draw. Open this page through the site rather than from a file.</p>`; });
 </script>
 </body>
 </html>

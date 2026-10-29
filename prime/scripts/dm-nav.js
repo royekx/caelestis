@@ -124,7 +124,7 @@
         { key: 'locations', label: 'Locations',     path: 'locations/'  },
         { key: 'vessels',   label: 'Vessels',       path: 'vessels/'    },
         { key: 'artifacts', label: 'Artifacts',     path: 'artifacts/'  },
-        { key: 'chart',     label: 'Chart',         path: 'chart/'      },
+        { key: 'chart',     label: 'Rykoe Cosmos',  path: 'chart/'      },
       ]
     },
     {
