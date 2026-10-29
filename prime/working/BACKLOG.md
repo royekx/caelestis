@@ -321,7 +321,7 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-28 (FIA rulings, 10)
 
 - **[later]** The eye's alignment turns with the galaxy
-  For the eye to hold along the axis from Oerth through Erevos, the rotations of Erevos, of Greyspace (high above the galaxy's plane) and of the fifteen heart systems would all need to stay lined up (Korey, 2026-10-29). A flavour detail, and a possible clock for later: the alignment drifting, or coming due. Ties to the decide on how the inscription is worked. Planning only; it does not go on pages.
+  For the eye to hold along the axis from Oerth through Erevos, the rotations of Erevos, of Greyspace (above the galaxy's plane) and of the fifteen heart systems would all need to stay lined up (Korey, 2026-10-29). A flavour detail, and a possible clock for later: the alignment drifting, or coming due. Ties to the decide on how the inscription is worked. Planning only; it does not go on pages.
   src: Korey, 2026-10-29
 
 ### cosmology/index.html: Zeniths and Monoliths

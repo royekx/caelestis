@@ -70,11 +70,14 @@
   const discSigma = r => { const t = Math.max(0, (r / 100 - 0.09) * 3.6); return 2.2 + 3.5 * Math.exp(-t * 1.2); };
   const HALO_SIGMA = 14;
 
-  /* Heights above the disc. Greyspace, with Oerth, lies high above the
+  /* Heights above the disc. Greyspace, with Oerth, lies above the
      galaxy's plane: far enough that the axis from Oerth through Erevos
      rises AXIS_TILT from the plane, so the eye is a tilted superimposition. */
-  const AXIS_TILT = 35 * Math.PI / 180;
-  const SYS_Y = { wayfinders: 3, greyspace: Math.hypot(POS.greyspace[0] - GX.cx, POS.greyspace[1] - GX.cy) * S * Math.tan(AXIS_TILT) };
+  const AXIS_TILT = 18 * Math.PI / 180;
+  const GREY_Y = Math.hypot(POS.greyspace[0] - GX.cx, POS.greyspace[1] - GX.cy) * S * Math.tan(AXIS_TILT);
+  /* The other named systems sit a little above or below the disc's middle,
+     so the disc is not flat; Realmspace's cluster stays near it. */
+  const SYS_Y = { realmspace: 0.3, virenspace: 1.7, aethris: -1.3, krynnspace: 2.1, fonains: -1.8, wayfinders: 1.5, greyspace: GREY_Y };
   const sysScene = id => toScene(POS[id], SYS_Y[id] != null ? SYS_Y[id] : 0.4);
 
   /* ── The inscription ─────────────────────────────────────────── */
@@ -99,7 +102,7 @@
      coordinates x and y become offsets across and up from the axis, in scene
      units: EYE_W wide so the lids span most of the galaxy's breadth, EYE_H
      high so the lids' peaks stay inside the halo (a flatter, wider eye). */
-  const EYE_W = 80, EYE_H = 44;
+  const EYE_W = 80, EYE_H = 28;
   const eyeBase = (x, y) => v3.add(v3.add(CORE, v3.mul(RT, x * EYE_W)), v3.mul(UP, y * EYE_H));
   const D = v3.dist(OERTH, CORE);
 
@@ -120,7 +123,9 @@
      core), with no two systems crowded and none crowding Oerth. The search is deterministic, so the
      same layout comes up on every visit. The two opened hearts are
      neighbours in the eye; from above they can lie far apart. */
-  const HEART_LAYOUT = {}, HALO_LIMIT = 2 * HALO_SIGMA;
+  /* Hearts stay in the disc or the thick disc where the eye allows (a
+     bonus for each), within the halo's spread (HALO_LIMIT) at most. */
+  const HEART_LAYOUT = {}, THICK_LIMIT = 9, HALO_LIMIT = 1.3 * HALO_SIGMA;
   const HEARTS = (() => {
     const avoid = Object.keys(POS).map(sysScene), oerthFlat = [OERTH[0], OERTH[2]];
     const edges = [];
@@ -156,11 +161,12 @@
       let gap = Infinity;
       flat.forEach((a, m) => flat.forEach((b, n) => { if (m < n) gap = Math.min(gap, Math.hypot(a[0] - b[0], a[1] - b[1])); }));
       const inDisc = out.filter(h => Math.abs(h.v[1]) <= 1.5 * discSigma(Math.hypot(h.v[0], h.v[2]))).length;
-      return { out, score: crossings + 4 * oct.size + 0.5 * gap + 1 * inDisc, crossings, octants: oct.size, gap, inDisc };
+      const inThick = out.filter(h => Math.abs(h.v[1]) <= THICK_LIMIT).length;
+      return { out, score: crossings + 4 * oct.size + 0.5 * gap + 0.3 * inDisc + 0.5 * inThick, crossings, octants: oct.size, gap, inDisc, inThick };
     }
     let best = null;
     for (let s = 0; s < 300; s++) { const L = layout(4127 + s); if (L && (!best || L.score > best.score)) best = L; }
-    HEART_LAYOUT.crossings = best.crossings; HEART_LAYOUT.octants = best.octants; HEART_LAYOUT.gap = best.gap; HEART_LAYOUT.inDisc = best.inDisc;
+    HEART_LAYOUT.crossings = best.crossings; HEART_LAYOUT.octants = best.octants; HEART_LAYOUT.gap = best.gap; HEART_LAYOUT.inDisc = best.inDisc; HEART_LAYOUT.inThick = best.inThick;
     return best.out.map((c, i) => {
       const e = EYE2D[i], r = Math.hypot(c.v[0], c.v[2]);
       return { i, n: i + 1, part: e.part, eye: [e.x, e.y], v: c.v, depth: c.depth, inDisc: Math.abs(c.v[1]) <= 1.5 * discSigma(r),
@@ -200,8 +206,21 @@
       if (hearts.some(q => Math.hypot(p[0] - q[0], p[1] - q[1]) < 110)) continue;
       if (out.some(f => Math.hypot(p[0] - f.pos[0], p[1] - f.pos[1]) < 105)) continue;
       oct[o]++;
-      out.push({ i: out.length, pos: p, v: toScene(p, y * discSigma(rc * S)) });
+      out.push({ i: out.length, pos: p, rc });
     }
+    /* Heights, from their own seed so the map positions stay put: most in
+       the disc, a good share in the halo above and below it, and a scattered
+       few notably higher on both sides. A spiral's thin disc is very flat,
+       about a fiftieth of its radius; the chart keeps that feel. */
+    const H = rng(7171);
+    out.forEach(f => {
+      const roll = H(), side = H() < 0.5 ? -1 : 1, g = gauss(H);
+      let y, band;
+      if (roll < 0.74) { y = Math.max(-3, Math.min(3, g * 1.2)); band = 'disc'; }            // the thin disc, with a little bob
+      else if (roll < 0.95) { y = side * Math.min(9, 3 + Math.abs(g) * 2.5); band = 'thick'; } // the thick disc
+      else { y = side * (11 + H() * 7); band = 'high'; }                                       // a handful, at most 18
+      f.v = toScene(f.pos, y); f.band = band; delete f.rc;
+    });
     return out;
   })();
   /* Roll every generated system against the survey. A seed whose number or

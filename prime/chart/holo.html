@@ -87,6 +87,7 @@ body:not(.embed) #caption{bottom:8.5rem}
 @media (max-width:640px){body:not(.embed) footer{display:none} body:not(.embed) #gtc{bottom:.5rem} body:not(.embed) #panel{bottom:11.5rem;max-height:34vh} body:not(.embed) #caption{bottom:11.5rem}}
 .lbl.heart{font-family:var(--serif);font-style:italic;font-size:11px;letter-spacing:0;color:#e6eef8;text-shadow:0 0 3px #080b12,0 0 3px #080b12;transform:translate(14px,-15px)}
 .hide-labels .lbl{display:none}
+.hide-ins .lbl.heart,.hide-ins .lbl.ghost-ins{display:none}
 /* Inside the Chart page (index.html), which carries the title and the clock. */
 body.embed .back, body.embed h1{display:none}
 #fail{position:fixed;inset:0;display:none;place-items:center;text-align:center;padding:2rem;z-index:9;color:var(--muted)}
@@ -126,6 +127,7 @@ try { if (window.self !== window.top) document.body.classList.add('embed'); } ca
     <button type="button" id="tLabels" aria-pressed="true">Labels</button>
     <button type="button" id="tSpin" aria-pressed="true">Drift</button>
     <button type="button" id="tBeacon" aria-pressed="true">Beacon</button>
+    <button type="button" id="tSystems" aria-pressed="true">Systems</button>
     <button type="button" class="go" id="goOerth">Line it up from Oerth</button>
   </div>
 </header>
@@ -203,7 +205,7 @@ const SYSTEMS = [
   { id:'fonains', name:'CSC 50743', pos:POS.fonains, page:'fonains.html', kind:'Star system',
     summary:'Fonains\'s system, which goes by its designation. It neighbours Krynnspace; Clint Dashforest reached Fonains through a color pool.' },
   { id:'greyspace', name:'Greyspace', pos:POS.greyspace, page:'oerth.html#greyspace', kind:'Star system',
-    summary:'Far across the galaxy and high above its plane, over the opposite arm from Realmspace. No lane on Caelestis\'s charts reaches it. Oerth is here.' },
+    summary:'Far across the galaxy and above its plane, over the opposite arm from Realmspace. No lane on Caelestis\'s charts reaches it. Oerth is here.' },
   { id:'wayfinders', name:'The Wayfinders\' homeworld', pos:POS.wayfinders, page:'wayfinders-homeworld.html', kind:'Hidden system',
     summary:'Hidden by a living ritual. Wayfinders leave with no map and no name, and must re-recognize home.', dm:'Its position here is symbolic.' }
 ];
@@ -379,7 +381,7 @@ const viewSel = document.getElementById('view');
 SYSTEMS.forEach(s => {
   const n = node(s.id === 'greyspace' ? C.oerth : C.system, s.id === 'wayfinders' ? .7 : 1.05, s);
   n.position.copy(toV(s.pos, E.SYS_Y[s.id] != null ? E.SYS_Y[s.id] : 0.4));
-  if (s.id === 'greyspace') {               // high above the plane: a stem down to where it lies on the map
+  if (s.id === 'greyspace') {               // above the plane: a stem down to where it lies on the map
     const stem = new THREE.Line(new THREE.BufferGeometry().setFromPoints([toV(s.pos, 0), n.position.clone()]),
       new THREE.LineDashedMaterial({ color:C.oerth, dashSize:1.6, gapSize:1.2, transparent:true, opacity:.45 }));
     stem.computeLineDistances(); galaxy.add(stem);
@@ -398,7 +400,8 @@ SITES.forEach(s => {
 // Lanes.
 const lanes = new THREE.Group(); galaxy.add(lanes);
 LANES.forEach(l => {
-  const st = LANE_STYLE[l.tier], a = toV(placePos(l.a), .35), b = toV(placePos(l.b), .35);
+  const yOf = id => E.SYS_Y[id] != null ? E.SYS_Y[id] : .35;      // lanes meet each system at its height
+  const st = LANE_STYLE[l.tier], a = toV(placePos(l.a), yOf(l.a)), b = toV(placePos(l.b), yOf(l.b));
   const mid = a.clone().add(b).multiplyScalar(.5); mid.y += a.distanceTo(b)*.06;
   const pts = new THREE.QuadraticBezierCurve3(a, mid, b).getPoints(40);
   const g = new THREE.BufferGeometry().setFromPoints(pts);
@@ -418,9 +421,16 @@ E.SECTORS.forEach(sc => { const o = new THREE.Object3D(); o.position.copy(toV(sc
 const fillerPts = (function systems(){
   const pos = []; E.FILLERS.forEach(f => pos.push(f.v[0], f.v[1], f.v[2]));
   const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
-  const m = new THREE.PointsMaterial({ size:7*Math.min(window.devicePixelRatio,2), map:RING, color:0xa9bdd8, transparent:true, opacity:.5,
+  const m = new THREE.PointsMaterial({ size:9*Math.min(window.devicePixelRatio,2), map:RING, color:0xc6d4e8, transparent:true, opacity:.85,
     depthWrite:false, sizeAttenuation:false });
-  const pts = new THREE.Points(g, m); galaxy.add(pts); return pts;
+  const pts = new THREE.Points(g, m);
+  // The few notably off the plane stand on faint stems down to it.
+  E.FILLERS.filter(f => f.band === 'high').forEach(f => {
+    const v = new THREE.Vector3(...f.v);
+    pts.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([v, new THREE.Vector3(v.x, 0, v.z)]),
+      new THREE.LineBasicMaterial({ color:0xa9bdd8, transparent:true, opacity:.18, depthWrite:false })));
+  });
+  galaxy.add(pts); return pts;
 })();
 
 // ── The inscription ────────────────────────────────────────────────
@@ -490,7 +500,7 @@ surveyReady.then(sv => {
 
 // Oerth, the retina.
 const oerthNode = node(C.oerth, 1.3, { name:'Oerth', kind:'Greyspace · the eye\'s retina', page:'oerth.html',
-  summary:'Oerth, in Greyspace, where Vecna became a god.', dm:'Oerth\'s heart has been Vecna\'s since his ascension. Every heart in the inscription links back to it. Greyspace lies high above the galaxy\'s plane, so the eye\'s axis runs down from Oerth through the core at a slant; laid flat along it, the hearts form the eye he lost. From the far side the eye is mirrored.' });
+  summary:'Oerth, in Greyspace, where Vecna became a god.', dm:'Oerth\'s heart has been Vecna\'s since his ascension. Every heart in the inscription links back to it. Greyspace lies above the galaxy\'s plane, so the eye\'s axis runs down from Oerth through the core at a gentle slant; laid flat along it, the hearts form the eye he lost. From the far side the eye is mirrored.' });
 oerthNode.position.copy(OERTH).add(new THREE.Vector3(0, 1.6, 0));
 label('Oerth', oerthNode, 'lbl gold below'); galaxy.add(oerthNode);
 
@@ -662,7 +672,7 @@ function standAt(id){
   flyTo(p.add(new THREE.Vector3(0, .6, 0)), CORE, eyeFov(), 2200);
 }
 function revealFromOerth(){
-  stopSpin(); setPressed('tIns', true); ins.visible = true;
+  stopSpin(); setPressed('tIns', true); setIns(true);
   viewSel.value = 'greyspace';
   if (view === ortho) { frameOrtho(); return; }
   // fly out along the axis behind Oerth, then let depth fall away
@@ -677,7 +687,10 @@ function toggle(id, fn){
   const b = document.getElementById(id);
   b.addEventListener('click', () => { const on = b.getAttribute('aria-pressed') !== 'true'; setPressed(id, on); fn(on); });
 }
-toggle('tIns', on => { ins.visible = on; if (!on) caption.classList.remove('on'); });
+// The label renderer ignores a hidden parent, so the heart numbers hide by class.
+function setIns(on){ ins.visible = on; document.body.classList.toggle('hide-ins', !on); }
+toggle('tIns', on => { setIns(on); if (!on) caption.classList.remove('on'); });
+toggle('tSystems', on => { fillerPts.visible = on; });
 toggle('tCone', on => { cone.visible = on; });
 toggle('tLanes', on => { lanes.visible = on; });
 toggle('tLabels', on => { document.body.classList.toggle('hide-labels', !on); });
@@ -719,7 +732,8 @@ renderer.domElement.addEventListener('pointerup', e => {
   // otherwise the nearest unnamed system under the pointer
   ray.params.Points.threshold = view === ortho ? ortho.top/60 : Math.max(.6, camera.position.length()/160);
   const f = ray.intersectObject(fillerPts, false)[0], sys = f && E.FILLERS[f.index].sys;
-  if (sys) showInfo({ name:sys.id, kind:'Star system' + (sys.bayer ? ' · ' + sys.bayer : '') + ' · ' + sys.status, summary:E.FILLERS[f.index].summary,
+  const band = sys && E.FILLERS[f.index].band === 'high' ? (E.FILLERS[f.index].v[1] > 0 ? ' · above the plane' : ' · below the plane') : '';
+  if (sys) showInfo({ name:sys.id, kind:'Star system' + (sys.bayer ? ' · ' + sys.bayer : '') + ' · ' + sys.status + band, summary:E.FILLERS[f.index].summary,
     dm:`A survey.js roll, seed ${sys.seed}. Keep it with <code>node scripts/survey.js roll --seed ${sys.seed} --save</code>.` });
 });
 
