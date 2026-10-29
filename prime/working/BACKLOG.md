@@ -42,9 +42,9 @@ staging once Korey has read and accepted them.
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 19 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
-| Player pages | restricted/ and other player pages | 1 | 0 | 0 | 0 | 0 |
+| Player pages | restricted/ and other player pages | 2 | 0 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **117** | **148** | **47** | **2** | **53** |
+| **Total** |  | **118** | **148** | **47** | **2** | **53** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2221,3 +2221,7 @@ Fixes to player-facing pages, including the Fleet Intelligence Archive (`restric
 - **[decide]** Nexus field guide: facts held back from Peoples and Perils of the Drift
   Peoples and Perils of the Drift are written (2026-10-29), with published 5e Spelljammer and core lore as cadet canon unless a DM page says otherwise (PAGE-GUIDE § 8). A short list of published facts stayed off the pages because the sources disagree or touch a DM thread: the giff's magic resistance (Wildjammer gives it, the official books do not), the sharchinid (follows a ship at spelljamming speed), renegade mind flayers free of an elder brain, and the space clown. Each is in the draft's Open list with the reason. Rule on each: add, keep off, or change.
   src: prime/working/nexus-field-guide.md
+
+- **[decide]** Spectators on H'Catha: what they are bound to, and the vanish rule
+  The published spectator is summoned to guard one thing for 101 years and vanishes if that thing is stolen or destroyed before its term ends. Greelob and Orlob guard the meteor by their own choice (SJA), and the diggings plan has them arguing over who guards them. Rule what the two are bound to, and whether the vanish rule is table knowledge. Perils of the Drift leaves the rule off until then.
+  src: Nexus cold review (2026-10-29); prime/locations/hcatha.html; prime/working/nexus-field-guide.md

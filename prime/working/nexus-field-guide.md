@@ -20,7 +20,7 @@ Defaults that stand: beholder dream-birth omitted, psychic wind off, star lancer
 | *Monster Manual*, *Monsters of the Multiverse* | same mirror (`bestiary-mm.json`, `bestiary-mpmm.json` and fluff) | beholder, mind flayer, elder brain, umber hulk, shadow, spectator, gazer, astral dreadnought, githyanki knight, neogi |
 | *Astral Adventurer's Guide* species | same mirror (`races.json`) | astral elf, autognome, giff, hadozee, plasmoid, thri-kreen traits |
 | *Wildjammer* | `wildjammer.txt` in the session scratchpad | dohwar (price-calling, telepathy, thought-skimming), dracon, giff (codes, will not fire on giff), hadozee (language, forest rearing, elven friendship), oortling, scro, xixchil, astereater, air stages and envelope merging, overboard bobbing |
-| DM pages | `prime/cosmology` (Most of space is empty; anti-magic and spell slots), `prime/locations/astral-sea.html` (color pools, dead gods), `prime/statblocks/` | lethal worlds, dead magic, color pools, dead gods |
+| DM pages | `prime/cosmology` (Most of space is empty), `prime/locations/astral-sea.html` (color pools, dead gods), `prime/statblocks/` | lethal worlds, dead magic, color pools, dead gods |
 
 The *Astral Adventurer's Guide* text, *Light of Xaryxis* and the BAM book itself were not available. Where a fact needed one of them and the data mirror did not carry it, the fact stayed off.
 
@@ -33,7 +33,7 @@ The *Astral Adventurer's Guide* text, *Light of Xaryxis* and the BAM book itself
 | Plan said | Source says | Page uses |
 |---|---|---|
 | Spectator: four rays | Four ray types; it fires up to two per turn, out to 90 ft | up to two different rays, about ninety feet |
-| Spectator: destroy what it guards and it goes free | If the item is stolen or destroyed early, it vanishes | it vanishes |
+| Spectator: destroy what it guards and it goes free | If the item is stolen or destroyed early, it vanishes | left off after the cold review (contradicts the meteor diggings, invites an exploit); BACKLOG [decide] |
 | Beholder: ten random rays at 120 ft | Ten ray types; three at random per turn, plus legendary rays | three each turn, more between turns |
 | Space eels: schools that throw lightning (BAM) | BAM's space eel bites, latches and has a paralysing tail spine; the lightning is SJA's giant space eels | both, kept apart |
 | Mind flayer, beholder etc. "verify in BAM" | Not BAM creatures; MM and MPMM | MM and MPMM |
@@ -89,6 +89,10 @@ DM-sensitive material, from the plan's § 4 and the rulings above.
 - **Kindori.** A kindori skeleton fitted with a helm (helm power). The V007 calf and Bartholomew's tracking beat.
 - **Off both pages.** Clockwork horrors, will-o'-wisps and the hollowed wisps, the behir, crystalline constructs, the shadow ship, psychic wind, liches, Vecna, deities, the Seekers, the Order, Monoliths, Zeniths, residue, Starchildren, dragon numbers and migration, Takhisis, Tiamat, Bahamut, Greelob and Orlob, Clint, where pools lead, a colour key, Nowhere, Sardax and who attacked the *Moonraider*.
 
+## Cold review (2026-10-29)
+
+A fresh reviewer read both pages against `prime/`. Fixes applied: the beholder's partial sleep cut (the Pact mechanism); the githyanki mercenary line cut (points at Qitru); silver swords as a mark of githyanki rank; the mercane grudge line cut; "most of their kin are smaller" (the astereater is huge); the spectator's fight-to-the-death and vanish-on-theft lines cut; dead magic reduced to "spells fail" (the spell-slot ruling stays in DM notes); "astral reaver" defined and raiders graded Dangerous; the dreadnought's "head to tail" dropped; resistances the fixed key implied were absent added (dwarves poison, air genasi lightning, goliaths cold, shadar-kai necrotic, dohwar cold, fire, frost and storm giants); stacked negations on the psurlon and the dragons rewritten; legendary resistance worded as "shrugs off the first few effects it would otherwise fail to resist"; giff aim, mind flayer once-a-day spells and the astral elf's cantrip choice made exact.
+
 ## Promotes to
 
 Nothing further; the pages are written. Rulings on the Open list go straight to the pages.
@@ -99,4 +103,5 @@ Nothing further; the pages are written. Rulings on the Open list go straight to 
 - **Sharchinid.** *Wildjammer*'s ship-hunting shark senses helms through the drift and links to a helm to follow a ship at spelljamming speed. The DM rule is that nothing is met at speed (V007 crossing). Left off.
 - **Renegade mind flayers.** *Wildjammer* has illithids freed from an elder brain who no longer need brains to live. It sits next to "colonies without a brain" on the § 4 list. Left off.
 - **Space clown.** A BAM fiend; left off for tone. Add to Boarders if wanted.
+- **Meteor spectators.** What Greelob and Orlob are bound to, and whether the published rule (a summoned spectator vanishes if its charge is stolen or destroyed early) is table knowledge. Off the page until ruled.
 - **Kindori calves.** No published calf block or calf behaviour. If the crew should learn something about calves before V007, it needs a ruling.
