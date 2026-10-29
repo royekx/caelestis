@@ -42,9 +42,9 @@ staging once Korey has read and accepted them.
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 19 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
-| Player pages | restricted/ and other player pages | 1 | 1 | 0 | 0 | 0 |
+| Player pages | restricted/ and other player pages | 1 | 0 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **117** | **149** | **47** | **2** | **53** |
+| **Total** |  | **117** | **148** | **47** | **2** | **53** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2218,8 +2218,6 @@ Fixes to player-facing pages, including the Fleet Intelligence Archive (`restric
 
 ### spelljammer-nexus/
 
-- **[later]** Nexus: factions.html becomes Peoples of the drift; new Perils and creatures page (follow-up PR).
-
-- **[decide]** Standard Spelljammer material on the Nexus, as canon
-  Kept on the Nexus as published Spelljammer that contradicts nothing, with superlatives and Fleet-specific claims stripped, and with no DM page behind it: the hammerhead, squid ship and galleon (spelljamming.html); mercane selling helms, giff mercenaries and their codes, githyanki raiders, pirates and the neogi (factions.html, until it becomes Peoples of the drift); air envelopes merging on contact (wildspace.html). Confirm these as Caelestis canon, or name any to cut or change. The giff homeworld debate was cut.
-  src: section 10 cold review (2026-10-29)
+- **[decide]** Nexus field guide: facts held back from Peoples and Perils of the Drift
+  Peoples and Perils of the Drift are written (2026-10-29), with published 5e Spelljammer and core lore as cadet canon unless a DM page says otherwise (PAGE-GUIDE § 8). A short list of published facts stayed off the pages because the sources disagree or touch a DM thread: the giff's magic resistance (Wildjammer gives it, the official books do not), the sharchinid (follows a ship at spelljamming speed), renegade mind flayers free of an elder brain, and the space clown. Each is in the draft's Open list with the reason. Rule on each: add, keep off, or change.
+  src: prime/working/nexus-field-guide.md
