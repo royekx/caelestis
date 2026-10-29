@@ -73,7 +73,7 @@
   /* Heights above the disc. Greyspace, with Oerth, lies above the
      galaxy's plane: far enough that the axis from Oerth through Erevos
      rises AXIS_TILT from the plane, so the eye is a tilted superimposition. */
-  const AXIS_TILT = 25 * Math.PI / 180;
+  const AXIS_TILT = 18 * Math.PI / 180;
   const GREY_Y = Math.hypot(POS.greyspace[0] - GX.cx, POS.greyspace[1] - GX.cy) * S * Math.tan(AXIS_TILT);
   /* The other named systems sit a little above or below the disc's middle,
      so the disc is not flat; Realmspace's cluster stays near it. */
