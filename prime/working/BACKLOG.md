@@ -43,8 +43,8 @@ staging once Korey has read and accepted them.
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **115** | **146** | **48** | **2** | **54** |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 3 | 0 | 1 |
+| **Total** |  | **115** | **146** | **47** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2184,10 +2184,6 @@ run decide, fix, drop, add.
 - **[fix]** "Answered from the sources" names items that are gone
   The review list near the top of this file still names items section 4 consumed and deleted (among them "Artifacts of Convergence" is retired, What the letters stand for, The ship reads as native traffic, Tyrant ship weapons). Prune the list, or mark those entries done, when the list is next reviewed.
   src: section 4 cold review (2026-10-28)
-
-- **[fix]** `vessels/` missing from the player search index
-  The player Pagefind glob lists every player folder except `vessels/`. Add `vessels/**/*.html` (and update the glob again when the refactor renames folders).
-  src: .github/workflows/deploy.yml
 
 - **[later]** Leftover UI calls from the migration notes
   Still open in FIXES-DEMO-MIGRATION.md: merging the survey chart, the navigation-records clip at 1024px, the clickable blurb overlay, and missing links on voyage briefings 001, 003 and 004. Keep any of these, or drop them with the notes.

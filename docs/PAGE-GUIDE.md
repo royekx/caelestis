@@ -591,7 +591,12 @@ attributes are in `CLAUDE.md` § Deploy and search.
   `prime/scripts/portraits.js` and a frame with `data-key`.
 - **Companion pages** (`wayfinder-path/`, `stellar-chart/`, `aspects/`) keep
   their own skin and carry a return link to their crew page. Crew pages link
-  out through a `.companion-card`.
+  out through a `.companion-card`. They sit outside the player search index
+  and carry no section filter.
+- **Companion DM modes stay.** A companion page's password-protected DM mode
+  (the Stellar Chart's Keeper's Chart, its reveal table and password) stays on
+  the player page. Players do not read the source; it is mutual trust. Do not
+  move these modes to `prime/` or flag them; `terms.json` allows their terms.
 - **Navigation.** The player home is `hub.html`; the sidebar logo points
   there, and the gate (`index.html`) is linked only from the hub footer. The
   sidebar groups in `scripts/nav.js` match the hub's bands.

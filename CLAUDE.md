@@ -95,6 +95,9 @@ url links parent giver children within items progress`, plus `data/index.json`,
 - The schema tests the key, not the sentence. A DM fact typed into a player
   field passes every check; the two session-run approvals catch it.
 - Nothing from `prime/` reaches `data/` or a player page.
+  The one exception: a companion page (`aspects/`, `wayfinder-path/`,
+  `stellar-chart/`) keeps its password-protected DM mode on the player page,
+  by mutual trust with the players. Leave those modes where they are.
 - The Tracker (`prime/tracker/`) and the Voyages board read both layers. They
   are views; nothing is entered in them.
 - `prime/` and the DM and FIA search indexes are gated in the browser and
@@ -169,7 +172,7 @@ state what is. Rules: `prime/working/README.md`.
   `/restricted/pagefind/`), runs `guard`, prunes process files, publishes. The
   index is never committed.
 - The player glob in `deploy.yml` is the security boundary: it names only
-  player folders. A new player top-level folder goes into the glob and into the
+  player folders. The companion pages and `search/` stay out of it. A new player top-level folder goes into the glob and into the
   S.E.A.R.C.H. scope selector (`search/index.html`), or it is unsearchable.
 - Pagefind indexes static HTML only. To debug, read the Action's `--verbose`
   log. To test locally, run the Action's `npx -y pagefind --site . --glob "{…}"

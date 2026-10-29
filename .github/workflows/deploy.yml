@@ -39,13 +39,14 @@ jobs:
 
       # -- Player index -> /pagefind/ --
       # Indexes only the player-facing directories via an explicit glob.
-      # prime/, restricted/, wayfinder-path/, stellar-chart/, scripts/,
-      # data/, styles/ and *-template.html are simply never matched.
+      # prime/, restricted/, the companion pages (aspects/, wayfinder-path/,
+      # stellar-chart/), search/, scripts/, data/, styles/ and *-template.html
+      # are simply never matched.
       - name: Build player index
         run: |
           npx -y pagefind \
             --site . \
-            --glob "{index.html,hub.html,voyages/*.html,bearings/*.html,logs/*.html,crew-manifest/**/*.html,dossiers/**/*.html,factions/**/*.html,quests/**/*.html,spelljammer-nexus/**/*.html,inventory/**/*.html,handouts/**/*.html,navigation-records/**/*.html}" \
+            --glob "{index.html,hub.html,voyages/*.html,bearings/*.html,logs/*.html,crew-manifest/**/*.html,dossiers/**/*.html,factions/**/*.html,quests/**/*.html,spelljammer-nexus/**/*.html,inventory/**/*.html,handouts/**/*.html,navigation-records/**/*.html,vessels/**/*.html}" \
             --exclude-selectors "[data-pagefind-ignore], nav, .site-nav, footer" \
             --verbose
 

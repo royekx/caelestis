@@ -31,12 +31,14 @@
         <select id="scope">
           <option value="">All Records</option>
           <option value="voyages">Crew Voyages</option>
+          <option value="bearings">Current Bearing</option>
           <option value="logs">Crew Logs</option>
           <option value="crew-manifest">Crew Manifest</option>
           <option value="dossiers">Dossiers</option>
           <option value="quests">Quest Board</option>
           <option value="factions">Factions</option>
           <option value="navigation-records">Navigation Records</option>
+          <option value="vessels">Vessels</option>
           <option value="spelljammer-nexus">Spelljammer Nexus</option>
           <option value="inventory">Crew Inventory</option>
           <option value="handouts">Corps Protocols</option>
@@ -65,12 +67,14 @@
 const SCOPE_LABELS = {
   '': 'all records',
   'voyages': 'Crew Voyages',
+  'bearings': 'Current Bearing',
   'logs': 'Crew Logs',
   'crew-manifest': 'Crew Manifest',
   'dossiers': 'Dossiers',
   'quests': 'Quest Board',
   'factions': 'Factions',
   'navigation-records': 'Navigation Records',
+  'vessels': 'Vessels',
   'spelljammer-nexus': 'Spelljammer Nexus',
   'inventory': 'Crew Inventory',
   'handouts': 'Corps Protocols'
@@ -88,8 +92,8 @@ function cleanExcerpt(html) {
 
 function sectionFromUrl(url) {
   const map = {
-    'voyages': 'Crew Voyages', 'logs': 'Crew Logs', 'crew-manifest': 'Crew Manifest', 'dossiers': 'Dossiers',
-    'navigation-records': 'Navigation Records', 'spelljammer-nexus': 'Spelljammer Nexus',
+    'voyages': 'Crew Voyages', 'bearings': 'Current Bearing', 'logs': 'Crew Logs', 'crew-manifest': 'Crew Manifest', 'dossiers': 'Dossiers',
+    'quests': 'Quest Board', 'factions': 'Factions', 'navigation-records': 'Navigation Records', 'vessels': 'Vessels', 'spelljammer-nexus': 'Spelljammer Nexus',
     'inventory': 'Crew Inventory', 'handouts': 'Corps Protocols'
   };
   // Find whichever path segment is a known section — robust to any subpath prefix.
