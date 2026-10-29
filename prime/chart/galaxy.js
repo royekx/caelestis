@@ -74,8 +74,14 @@
      galaxy's plane: far enough that the axis from Oerth through Erevos
      rises AXIS_TILT from the plane, so the eye is a tilted superimposition. */
   const AXIS_TILT = 35 * Math.PI / 180;
-  const SYS_Y = { wayfinders: 3, greyspace: Math.hypot(POS.greyspace[0] - GX.cx, POS.greyspace[1] - GX.cy) * S * Math.tan(AXIS_TILT) };
+  const GREY_Y = Math.hypot(POS.greyspace[0] - GX.cx, POS.greyspace[1] - GX.cy) * S * Math.tan(AXIS_TILT);
+  /* The other named systems sit a little above or below the disc's middle,
+     so the disc is not flat; Realmspace's cluster stays near it. */
+  const SYS_Y = { realmspace: 0.6, virenspace: 3.4, aethris: -2.6, krynnspace: 4.1, fonains: -3.5, wayfinders: 3, greyspace: GREY_Y };
   const sysScene = id => toScene(POS[id], SYS_Y[id] != null ? SYS_Y[id] : 0.4);
+  // The heart layout was solved with these heights; it keeps them, so it does not move.
+  const LAYOUT_Y = { wayfinders: 3, greyspace: GREY_Y };
+  const layoutScene = id => toScene(POS[id], LAYOUT_Y[id] != null ? LAYOUT_Y[id] : 0.4);
 
   /* ── The inscription ─────────────────────────────────────────── */
   const v3 = {
@@ -122,7 +128,7 @@
      neighbours in the eye; from above they can lie far apart. */
   const HEART_LAYOUT = {}, HALO_LIMIT = 2 * HALO_SIGMA;
   const HEARTS = (() => {
-    const avoid = Object.keys(POS).map(sysScene), oerthFlat = [OERTH[0], OERTH[2]];
+    const avoid = Object.keys(POS).map(layoutScene), oerthFlat = [OERTH[0], OERTH[2]];
     const edges = [];
     LID.forEach((a, k) => edges.push([a, LID[(k + 1) % LID.length]]));
     IRIS.forEach((a, k) => edges.push([a, IRIS[(k + 1) % IRIS.length]]));
@@ -200,8 +206,20 @@
       if (hearts.some(q => Math.hypot(p[0] - q[0], p[1] - q[1]) < 110)) continue;
       if (out.some(f => Math.hypot(p[0] - f.pos[0], p[1] - f.pos[1]) < 105)) continue;
       oct[o]++;
-      out.push({ i: out.length, pos: p, v: toScene(p, y * discSigma(rc * S)) });
+      out.push({ i: out.length, pos: p, rc });
     }
+    /* Heights, from their own seed so the map positions stay put: most in
+       the disc, a good share in the halo above and below it, and a scattered
+       few high off the plane on both sides, as high as Greyspace. */
+    const H = rng(7171);
+    out.forEach(f => {
+      const roll = H(), side = H() < 0.5 ? -1 : 1, g = gauss(H);
+      let y, band;
+      if (roll < 0.66) { y = g * discSigma(f.rc * S); band = 'disc'; }
+      else if (roll < 0.94) { y = side * (1.5 * discSigma(f.rc * S) + Math.abs(g) * HALO_SIGMA * 0.8); y = Math.max(-2 * HALO_SIGMA, Math.min(2 * HALO_SIGMA, y)); band = 'halo'; }
+      else { y = side * GREY_Y * (0.6 + H() * 0.65); band = 'high'; }
+      f.v = toScene(f.pos, y); f.band = band; delete f.rc;
+    });
     return out;
   })();
   /* Roll every generated system against the survey. A seed whose number or

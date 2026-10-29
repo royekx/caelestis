@@ -420,7 +420,8 @@ function buildFromSurvey(sv){
      print it; the survey keeps only the systems someone saves. */
   window.EREVOS.rollSystems(sv);
   UNNAMED = window.EREVOS.FILLERS.map(f => ({ id:"u"+f.i, x:Math.round(f.pos[0]), y:Math.round(f.pos[1]), status:f.sys.status,
-    name:f.sys.id, kind:"Star system" + (f.sys.bayer ? " · " + f.sys.bayer : ""), summary:f.summary,
+    lift: f.band==="high" ? Math.round(f.v[1] * STEM_K) : 0, high: f.band==="high",
+    name:f.sys.id, kind:"Star system" + (f.sys.bayer ? " · " + f.sys.bayer : "") + (f.band==="high" ? (f.v[1] > 0 ? " · high above the plane" : " · far below the plane") : ""), summary:f.summary,
     dm:[`A survey.js roll, seed ${f.sys.seed}. Keep it with <code>node scripts/survey.js roll --seed ${f.sys.seed} --save</code>, and give it a place on the chart when the crew turns toward it.`] }));
 }
 
@@ -575,8 +576,11 @@ function constellationGlyph(c){
 }
 function unnamedGlyph(u){
   const sighted = u.status!=="sighted";   /* charted or surveyed: drawn solid; only sighted: an outline */
-  return `<g ${reg(u.id,u)}><circle cx="${u.x}" cy="${u.y}" r="36" fill="transparent"/>
-    <circle class="sel" cx="${u.x}" cy="${u.y}" r="${sighted?15:14}" fill="${sighted?"#9cc0e0":"none"}" fill-opacity="${sighted?.55:0}" stroke="#9cc0e0" stroke-opacity="${sighted?.85:.55}" stroke-width="3" stroke-dasharray="${sighted?"":"5 5"}"/></g>`;
+  /* only the systems high off the plane get a stem, at the map's one-third scale */
+  const y = u.y - (u.lift || 0);
+  const stem = u.lift ? `<line x1="${u.x}" y1="${u.y}" x2="${u.x}" y2="${y + (u.lift > 0 ? 16 : -16)}" stroke="#9cc0e0" stroke-opacity=".45" stroke-width="2.5" stroke-dasharray="6 6"/><circle cx="${u.x}" cy="${u.y}" r="5" fill="#9cc0e0" fill-opacity=".5"/>` : "";
+  return `<g ${reg(u.id,u)}>${stem}<circle cx="${u.x}" cy="${y}" r="36" fill="transparent"/>
+    <circle class="sel" cx="${u.x}" cy="${y}" r="${sighted?15:14}" fill="${sighted?"#9cc0e0":"none"}" fill-opacity="${sighted?.55:0}" stroke="#9cc0e0" stroke-opacity="${sighted?.85:.55}" stroke-width="3" stroke-dasharray="${sighted?"":"5 5"}"/></g>`;
 }
 function renderGalaxy(gid){
   gid = gid || "GAL-01";

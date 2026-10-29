@@ -400,7 +400,8 @@ SITES.forEach(s => {
 // Lanes.
 const lanes = new THREE.Group(); galaxy.add(lanes);
 LANES.forEach(l => {
-  const st = LANE_STYLE[l.tier], a = toV(placePos(l.a), .35), b = toV(placePos(l.b), .35);
+  const yOf = id => E.SYS_Y[id] != null ? E.SYS_Y[id] : .35;      // lanes meet each system at its height
+  const st = LANE_STYLE[l.tier], a = toV(placePos(l.a), yOf(l.a)), b = toV(placePos(l.b), yOf(l.b));
   const mid = a.clone().add(b).multiplyScalar(.5); mid.y += a.distanceTo(b)*.06;
   const pts = new THREE.QuadraticBezierCurve3(a, mid, b).getPoints(40);
   const g = new THREE.BufferGeometry().setFromPoints(pts);
@@ -422,7 +423,14 @@ const fillerPts = (function systems(){
   const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
   const m = new THREE.PointsMaterial({ size:9*Math.min(window.devicePixelRatio,2), map:RING, color:0xc6d4e8, transparent:true, opacity:.85,
     depthWrite:false, sizeAttenuation:false });
-  const pts = new THREE.Points(g, m); galaxy.add(pts); return pts;
+  const pts = new THREE.Points(g, m);
+  // The few high off the plane stand on faint stems down to it.
+  E.FILLERS.filter(f => f.band === 'high').forEach(f => {
+    const v = new THREE.Vector3(...f.v);
+    pts.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([v, new THREE.Vector3(v.x, 0, v.z)]),
+      new THREE.LineBasicMaterial({ color:0xa9bdd8, transparent:true, opacity:.18, depthWrite:false })));
+  });
+  galaxy.add(pts); return pts;
 })();
 
 // ── The inscription ────────────────────────────────────────────────
@@ -724,7 +732,8 @@ renderer.domElement.addEventListener('pointerup', e => {
   // otherwise the nearest unnamed system under the pointer
   ray.params.Points.threshold = view === ortho ? ortho.top/60 : Math.max(.6, camera.position.length()/160);
   const f = ray.intersectObject(fillerPts, false)[0], sys = f && E.FILLERS[f.index].sys;
-  if (sys) showInfo({ name:sys.id, kind:'Star system' + (sys.bayer ? ' · ' + sys.bayer : '') + ' · ' + sys.status, summary:E.FILLERS[f.index].summary,
+  const band = sys && E.FILLERS[f.index].band === 'high' ? (E.FILLERS[f.index].v[1] > 0 ? ' · high above the plane' : ' · far below the plane') : '';
+  if (sys) showInfo({ name:sys.id, kind:'Star system' + (sys.bayer ? ' · ' + sys.bayer : '') + ' · ' + sys.status + band, summary:E.FILLERS[f.index].summary,
     dm:`A survey.js roll, seed ${sys.seed}. Keep it with <code>node scripts/survey.js roll --seed ${sys.seed} --save</code>.` });
 });
 
