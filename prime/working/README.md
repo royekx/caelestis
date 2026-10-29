@@ -64,3 +64,4 @@ staging is distributed page by page.
 | [divine-rules.md](divine-rules.md) | Worship, galaxies, polarity, realms, one god many names | Draft |
 | [tharizdun.md](tharizdun.md) | The prison, the Day of Chaos, how Vecna uses him | Draft |
 | [glyth-watcher.md](glyth-watcher.md) | The Watcher who came back from Glyth | Sketch |
+| [nexus-field-guide.md](nexus-field-guide.md) | Sources, omissions and stat cross-checks for Peoples and Perils of the Drift | Draft |

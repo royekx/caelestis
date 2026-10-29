@@ -601,9 +601,18 @@ attributes are in `CLAUDE.md` § Deploy and search.
   `check` holds them to the record.
 - **The Spelljammer Nexus** is cadet curriculum: in-world reference manuals
   (the Academy, the Fleet, Fleet time, the Erevos Galaxy and the Astral Sea,
-  Wildspace, spelljamming, factions). It holds only cadet knowledge Korey has
-  ruled, each claim traceable to a finished DM page's About section; nothing
-  from a DM notes tab. The galaxy is taught by name and basics only, with no
+  Wildspace, spelljamming, peoples of the drift, perils of the drift). It
+  holds only cadet knowledge. Published 5e Spelljammer and core D&D lore
+  (the *Spelljammer* books, the *Spelljammer Academy* adventures, the core
+  rulebooks and *Monsters of the Multiverse*, and *Wildjammer*, the table's
+  ship rules and extra species) is cadet canon unless a DM page says
+  otherwise. Any other claim traces to a finished DM page's About section,
+  and nothing comes from a DM notes tab. Stat facts are taught through the
+  fixed key (shrugs off half, unharmed by, takes double) with no AC, HP, CR
+  or DC; Korey's stat blocks in `prime/statblocks/` and on dossiers outrank
+  the book where they overlap. Published lore that would reveal a DM secret
+  stays off; `prime/working/nexus-field-guide.md` lists what was left out
+  and why. The galaxy is taught by name and basics only, with no
   galaxy map and no other galaxies: the crew learns the cosmos by exploring
   it. The index rows are static HTML inside a `data-pagefind-ignore` list, in
   the same order as the pages' prev/next chain; the FIA row is the only link
