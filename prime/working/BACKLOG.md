@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 11 | 14 | 12 | 0 | 3 |
+| Cosmology | cosmology/, glossary/, chart/ | 12 | 15 | 12 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **115** | **146** | **50** | **2** | **54** |
+| **Total** |  | **116** | **147** | **50** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -321,8 +321,16 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-28 (FIA rulings, 10)
 
 - **[later]** The eye's alignment turns with the galaxy
-  For the eye to hold along the axis from Oerth through Erevos, the rotations of Erevos, of Greyspace (above the galaxy's plane) and of the fifteen heart systems would all need to stay lined up (Korey, 2026-10-29). A flavour detail, and a possible clock for later: the alignment drifting, or coming due. Ties to the decide on how the inscription is worked. Planning only; it does not go on pages.
+  For the eye to hold as seen from Oerth, Greyspace and the fifteen heart systems would all need to keep their places in Oerth's sky as they circle Erevos at different speeds (Korey, 2026-10-29, restated for the view from Oerth's heart). A flavour detail, and a possible clock for later: the alignment drifting, or coming due. Ties to the decide on how the inscription is worked. Planning only; it does not go on pages.
   src: Korey, 2026-10-29
+
+- **[decide]** How wide the eye is, and how high its upper lid stands
+  The chart's eye is 90 degrees wide in Oerth's sky (EYE_FOV in prime/chart/galaxy.js). Greyspace stands 24 units above the plane, so Oerth looks down on Erevos about 18 degrees below its horizon, and the upper lid has little sky to rise into before its sight lines leave the galaxy. At 90 degrees, four of the six upper-lid hearts sit in the halo, 15 to 18 units up; at 80 degrees two do, with fewer link crossings from above (7 against 10); at 100 degrees two upper-lid sight lines find no place at 18 units or lower. Options: keep 90; narrow the eye; let the upper lid stand higher than the catalogue's highest systems; or squash the template's lid height. Pages say "ninety degrees" (opposition/vecna.html, chart/index.html).
+  src: chart refit for the view from Oerth's heart, 2026-10-29
+
+- **[later]** An Oerth sky chart as the clue
+  An Oerth astronomer's sky chart with the heart systems marked is one route to the eye (opposition/vecna.html § DM notes). Who made it, where the crew finds it, and whether it is a handout, are open, and tie to how the crew learns the eye is seen from Oerth.
+  src: chart refit for the view from Oerth's heart, 2026-10-29
 
 ### cosmology/index.html: Zeniths and Monoliths
 
