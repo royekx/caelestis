@@ -631,7 +631,7 @@ function galaxyLegend(){
     h += Object.values(HSTATE).map(s=>`<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="${s.col}"/></svg>${s.label}</span>`).join("");
     h += `<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="#9683c4" stroke-width="1.6" stroke-dasharray="2 4"/></svg>Line back to Oerth</span>`;
     h += `<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="#56B4A6" stroke-width="3"/></svg>Link standing</span>`;
-    h += `<span>Stems show height above or below the plane. Laid flat along the axis from Oerth through the core, they form the eye: see it in 3D.</span>`;
+    h += `<span>Stems show height above or below the plane. Seen from Oerth, they form the eye: see it in 3D.</span>`;
   } else {
     h += Object.values(LANE).map(s=>`<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="${s.stroke}" stroke-width="2.2" stroke-dasharray="${s.dash?s.dash.split(" ").map(v=>Math.max(1.5,v/4)).join(" "):""}" stroke-linecap="round"/></svg>${s.label}</span>`).join("");
     h += `<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="#9cc0e0" fill-opacity=".55" stroke="#9cc0e0"/></svg>Charted or surveyed system</span>`;
@@ -643,9 +643,8 @@ function galaxyLegend(){
   legend(h);
 }
 
-/* The inscription from above, where it reads as a scatter. Laid flat along
-   the axis from Oerth through the core it forms the eye; that view is the
-   3D one (See it from Oerth). */
+/* The inscription from above, where it reads as a scatter. Seen from Oerth
+   it forms the eye; that view is the 3D one (See it from Oerth). */
 function drawInscription(){
   const host = document.getElementById("ins"); if(!host) return;
   const K = STEM_K;                                    /* height drawn as a short stem, so the map keeps true positions */
@@ -851,8 +850,9 @@ function showHeart(h){
                     : `A lid world. Lid worlds can be replaced: a lost stroke can be redrawn through another Monolith world near it, at a cost of years.`;
   const stateText = { linked:`One of two neighbouring systems on the upper lid, each with a Monolith world. The two hearts are opened and linked to each other, Atrium to Atrium, and each is linked to Oerth's.`,
     found:`Nowhere. A lesser god forced its way into this system and down onto the world, and the push destroyed both. A Monolith answered. The world's heart lies exposed in the wreck: found, and not yet opened.`,
-    unknown:`A Monolith world, chosen from thousands for where it falls along the axis from Oerth through the core. Nothing is known of its heart.` }[h.state];
-  const height = h.height > 1 ? "a little above the galaxy's plane" : h.height < -1 ? "a little below the galaxy's plane" : "close to the galaxy's plane";
+    unknown:`A Monolith world, chosen from thousands for where it falls in Oerth's sky. Nothing is known of its heart.` }[h.state];
+  const side = h.height > 0 ? "above" : "below", band = h.src.band;
+  const height = band==="disc" ? "in the disc, close to the galaxy's plane" : band==="thick" ? `in the thick disc, a little ${side} the galaxy's plane` : `in the halo, well ${side} the galaxy's plane`;
   const dm = [];
   if(h.src.sys) dm.push(`Its system is a survey.js roll, seed ${h.src.sys.seed}; keep it with <code>node scripts/survey.js roll --seed ${h.src.sys.seed} --save</code> when it matters.`);
   if(h.state==="linked") dm.push(`One of the two opened worlds is a little-charted planet the crew learns of late in the campaign.`);
@@ -862,7 +862,7 @@ function showHeart(h){
   const sys = h.src.sys;
   panel.innerHTML = `<h2>${h.state==="found"?"Nowhere":"Heart world"}</h2><p class="kind">Inscription · ${partName} · ${h.n}${sys ? " · " + esc(sys.id) : ""}</p>
     ${st.badge ? `<span class="badge ${st.badge}">${st.label}</span>` : `<span class="badge">${st.label}</span>`}${iris?`<span class="badge b-red">Key</span>`:`<span class="badge">Replaceable</span>`}
-    <p>${stateText}</p>${sys && h.state==="unknown" ? `<p>${esc(h.src.summary)}</p>` : ""}<p>${role}</p><p class="hint">Its system lies ${height}, inside the disc.</p>${dmlist(dm)}`;
+    <p>${stateText}</p>${sys ? `<p>${esc(h.src.summary)}</p>` : ""}<p>${role}</p><p class="hint">Its system lies ${height}.</p>${dmlist(dm)}`;
 }
 function galaxyPanel(g, offer){
   const rec = g.record || {}, home = g.id==="GAL-01", c = heartsCount();
@@ -907,9 +907,9 @@ function genericPanel(n){
 }
 function oerthPanel(){
   panel.innerHTML = `<h2>Oerth</h2><p class="kind">Greyspace · the eye's retina</p><span class="badge b-gold">Monolith</span>
-    <p>Where the eye's axis starts and its image lands. Every heart world in the figure links back to Oerth's heart, so the links run in a cone from the eye to Oerth, the way light runs from an eye to the back of it. Oerth's heart has been Vecna's since his ascension charged him into it.</p>
-    <p>The eye is a superimposition. Laid flat along the axis from Oerth through Erevos, the fifteen heart worlds form the eye he lost; viewed any other way they are scattered across the galaxy, their links crossing it at random. Vecna, a god, sees at that scale. When the core opens, what lands on Oerth is sight.</p>
-    ${dmlist([`The first thing anyone can notice is that every opened heart is linked back to the same world, in Greyspace. Why they all lead to Oerth is the question that opens the rest.`,`The clue the crew needs is the axis: plot the hearts along the line from Oerth through the core, and someone who knows Vecna's mark can recognize it.`,`The eye lies in the plane perpendicular to the axis. Seen along the axis from the far side, beyond the core, it is mirrored.`,`Greyspace stands above the galaxy's plane, so the axis is tilted: the stem shows its height.`,`Oerth is the one world Vecna cannot lose.`])}
+    <p>Where Vecna sits and looks out through the eye. Oerth's heart has been his since his ascension charged him into it. Every heart world in the figure links back to Oerth's heart, so the links run in a cone from the hearts to Oerth, the way light runs through an eye to the retina at the back of it.</p>
+    <p>Seen from Oerth, the fifteen heart worlds frame Erevos as lids and iris frame a pupil: the eye he lost, a hundred and thirty degrees across Oerth's sky. Seen from anywhere else they are scattered across the galaxy, their links crossing it at random. Vecna, a god, sees at that scale. When the core opens, what lands on Oerth is sight.</p>
+    ${dmlist([`The first thing anyone can notice is that every opened heart is linked back to the same world, in Greyspace. Why they all lead to Oerth is the question that opens the rest.`,`The clue the crew needs is the vantage: plot the heart systems on a sky chart drawn from Oerth, and someone who knows Vecna's mark can recognize the eye. An Oerth astronomer's sky chart is one way to see it.`,`From anywhere else, including the far side of the core and straight above the galaxy, the hearts look random.`,`Greyspace stands among the highest systems of the halo, so Oerth looks down on the core about 13 degrees below its horizon: the stem shows its height.`,`Oerth is the one world Vecna cannot lose.`])}
     ${pageLink("oerth.html")}<button class="btn act" type="button" data-go="Greyspace">Open Greyspace</button>`;
 }
 function showNode(n, offer){
@@ -927,7 +927,8 @@ function intro(){
     panel.innerHTML = `<h2>GAL-01</h2><p class="kind">Caelestis's galaxy</p>
       <p>Star systems lie unevenly through the galaxy. All of them circle the core at different speeds; they crowd along the spiral arms, gather in clusters, and leave long empty reaches between. Most bodies have no one living on them, and an inhabited world is rare.</p>
       <p>Saved systems carry their names and CSC numbers. The scatter of small stars is what Caelestis has sighted and what it has only on paper.</p>
-      <p class="hint">Tap anything for details. Tap a system twice to open it. <strong>Inscription</strong> shows the fifteen heart systems from above; <strong>See it from Oerth</strong> opens the 3D view, laid flat along the axis from Oerth, where they form the eye.</p>`;
+      <p>The chart shows the Fleet's catalogue, about 340 systems: a small sample of the galaxy's, which number in the hundreds of billions.</p>
+      <p class="hint">Tap anything for details. Tap a system twice to open it. <strong>Inscription</strong> shows the fifteen heart systems from above; <strong>See it from Oerth</strong> opens the 3D view from Oerth, where they form the eye.</p>`;
     return;
   }
   if(lv==="galaxy"){ const g = GALAXIES.find(x=>x.id===view.galaxy); galaxyPanel(g,false); return; }
