@@ -35,7 +35,7 @@ staging once Korey has read and accepted them.
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 2 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 17 | 2 | 2 | 0 | 1 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 18 | 2 | 2 | 0 | 1 |
 | Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 0 | 1 | 0 | 2 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **127** | **150** | **46** | **2** | **55** |
+| **Total** |  | **128** | **150** | **46** | **2** | **55** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -979,6 +979,12 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 ---
 
 ### opposition/vecna.html (early planning)
+
+- **[decide]** How many hearts a mark needs *(shape)*
+  Problem: if a mark needs only one heart, Vecna can open another world's heart in a system he already holds, and the rest of the stroke never matters. Fix under consideration: a mark is a system, and it needs several of its worlds' hearts opened and linked, each with its own Monolith. That multiplies the conditions and is why the eye takes so long. The one residue piece the colony carries from world to world becomes the bottleneck and the crew's best target; a stroke matters again, because replacing a lost mark means a whole new system on it.
+  Options: (a) every world in the system, destroyed worlds included (slowest, cleanest); (b) a set number for every mark, for example three; (c) most of the system's worlds.
+  Sub-questions: does every heart in a mark link to Oerth, or the system's hearts to each other and one of them to Oerth? How the current count is restated (the two opened hearts in two neighbouring upper-lid systems; Nowhere found).
+  src: Korey, 2026-10-29
 
 - **[later]** A node log for player impact
   An early plan kept a Remaking Node Log tracking how the players have changed Vecna's plan. Bring it back as a planning table on Opposition: Vecna, or let the timeline carry it.
