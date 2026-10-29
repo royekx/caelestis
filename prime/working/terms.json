@@ -487,6 +487,15 @@
       "pattern": "Caelestis Cosmos",
       "use": "the Rykoe Cosmos",
       "i": true
+    },
+    {
+      "pattern": "prior-keys\">S\\d",
+      "use": "V00n (Previous Voyages keys name voyages: V001 · V002)",
+      "raw": true
+    },
+    {
+      "pattern": "Viren System\\b",
+      "use": "Viren Star System"
     }
   ],
   "voice": [
@@ -750,6 +759,18 @@
     {
       "old": "glossary/#keeper\"",
       "new": "glossary/#discerner"
+    },
+    {
+      "old": "handouts/README.md",
+      "new": "retired (empty placeholder)"
+    },
+    {
+      "old": "wayfinder-path/init.md",
+      "new": "retired (empty placeholder)"
+    },
+    {
+      "old": "stellar-chart/init.md",
+      "new": "retired (empty placeholder)"
     }
   ],
   "allow": [

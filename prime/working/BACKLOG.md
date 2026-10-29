@@ -39,12 +39,12 @@ staging once Korey has read and accepted them.
 | Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
-| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
-| New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 4 | 2 | 23 |
+| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 19 | 0 | 20 |
+| New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **115** | **146** | **50** | **2** | **54** |
+| **Total** |  | **115** | **146** | **48** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1737,10 +1737,6 @@ against the complete Tumak sweep (all 336 turns).
 
 ### wayfinder-path/index.html (player site, outside prime)
 
-- **[fix]** ACTIVE_HALVES: Tu's half at 08
-  The player tracker's ACTIVE_HALVES lists Wan's 08 and Tu's 16 only. Add `{ num: 8, bearer: 2 }`, Tu's half of the left sole, so 08 shows as matched. Tumak knows this match, so it belongs on the player page. (The DM copy, rules/wayfinder-path-dm.html, already shows every rune matched and needs no change.)
-  src: TGB § Tumak/Rune structure, final (turn 328); wayfinder-path/index.html
-
 - **[add]** Who gets the tracker link (DM note, kept in prime)
   Korey sends the tracker link only to Tumak's player, or puts it on the character sheet marked player-only (turn 162). Record this with the rules page's tracker links.
   src: TGB § Tumak/Player tracker
@@ -2061,12 +2057,6 @@ The page exists (`prime/principles.html`, Reference). Contracts are built on Cam
 - **[fix]** A.T.L.A.S., not "the World Surveyor"
   Line 59 says "the World Surveyor". Change to A.T.L.A.S.
   src: framework § A.T.L.A.S.
-
-#### voyages/voyage-005.html (player site, outside prime)
-
-- **[fix]** Ryeback is a giff
-  Page says "Ryeback, the hippogriff", a voice-to-text garble of "a giff". Change to "Ryeback, the giff" (he carries a hand cannon). data/vocabulary.js carries the same garble; flag it for the player side. data/npcs.json is already correct.
-  src: automation § Voyage 005 canon; chat-voyage-6-7-planning § Naming and corrections; memory-canon (Key NPCs)
 
 # Automation and tracker
 

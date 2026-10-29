@@ -472,6 +472,11 @@ function checkPage(r, err) {
   const list = a => a.map(v => pad(v.number)).join(', ') || 'none';
   if (list(latest) !== list(rec.slice(0, 1))) err(`${at}: latest voyage block is ${list(latest)}, record's latest is ${list(rec.slice(0, 1))}`);
   if (list(prior) !== list(rec.slice(1))) err(`${at}: Previous Voyages holds ${list(prior)}, record gives ${list(rec.slice(1))}`);
+  // The Previous Voyages summary names its voyages, oldest first: "V001 · V002".
+  const keys = /<span class="prior-keys">([\s\S]*?)<\/span>/.exec(region(src, 'priorVoyages') || '');
+  const wantKeys = rec.slice(1).map(v => 'V' + pad(v.number)).reverse().join(' · ');
+  if (keys && text(keys[1]) !== wantKeys) err(`${at}: Previous Voyages keys read "${text(keys[1])}", record gives "${wantKeys}"`);
+  if (!keys && wantKeys) err(`${at}: Previous Voyages has no prior-keys label; it should read "${wantKeys}"`);
   latest.concat(prior).forEach(p => {
     const v = rec.find(x => x.number === p.number);
     if (!v) return;
