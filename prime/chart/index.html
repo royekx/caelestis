@@ -275,8 +275,8 @@ const SYS_CHART = {
   "CSC 50743": { pos:window.EREVOS.POS.fonains.map(Math.round), tone:"#9fe1cb", page:"fonains.html",
     travel:`Neighbours Krynnspace, at the far end of the uncharted route from Realmspace. Clint Dashforest reached Fonains through a color pool.` },
   "Greyspace": { pos:armPt(2, 2.7, -20), tone:"#e2ae7e", page:"oerth.html#greyspace",
-    lift: Math.round(window.EREVOS.SYS_Y.greyspace * STEM_K),   /* high above the plane: drawn up a stem, as the hearts are */
-    travel:`Far across the galaxy and high above its plane, over the opposite arm from Realmspace. No lane on Caelestis's charts reaches it.` },
+    lift: Math.round(window.EREVOS.SYS_Y.greyspace * STEM_K),   /* above the plane: drawn up a stem, as the hearts are */
+    travel:`Far across the galaxy and above its plane, over the opposite arm from Realmspace. No lane on Caelestis's charts reaches it.` },
   "GAL-01-hidden": { pos:[3250, 950], tone:"#c9b3ea", page:"wayfinders-homeworld.html", hidden:true, veiled:true,
     travel:`No route. Wayfinders leave with no map and no name, and must re-recognize home.`,
     dm:[`Its position on this chart is symbolic.`,`The Runekeepers' fragment is rebuilding in two halves, in Wan and Tu.`] }
@@ -421,7 +421,7 @@ function buildFromSurvey(sv){
   window.EREVOS.rollSystems(sv);
   UNNAMED = window.EREVOS.FILLERS.map(f => ({ id:"u"+f.i, x:Math.round(f.pos[0]), y:Math.round(f.pos[1]), status:f.sys.status,
     lift: f.band==="high" ? Math.round(f.v[1] * STEM_K) : 0, high: f.band==="high",
-    name:f.sys.id, kind:"Star system" + (f.sys.bayer ? " · " + f.sys.bayer : "") + (f.band==="high" ? (f.v[1] > 0 ? " · high above the plane" : " · far below the plane") : ""), summary:f.summary,
+    name:f.sys.id, kind:"Star system" + (f.sys.bayer ? " · " + f.sys.bayer : "") + (f.band==="high" ? (f.v[1] > 0 ? " · above the plane" : " · below the plane") : ""), summary:f.summary,
     dm:[`A survey.js roll, seed ${f.sys.seed}. Keep it with <code>node scripts/survey.js roll --seed ${f.sys.seed} --save</code>, and give it a place on the chart when the crew turns toward it.`] }));
 }
 
@@ -576,7 +576,7 @@ function constellationGlyph(c){
 }
 function unnamedGlyph(u){
   const sighted = u.status!=="sighted";   /* charted or surveyed: drawn solid; only sighted: an outline */
-  /* only the systems high off the plane get a stem, at the map's one-third scale */
+  /* only the systems notably off the plane get a stem, at the map's one-third scale */
   const y = u.y - (u.lift || 0);
   const stem = u.lift ? `<line x1="${u.x}" y1="${u.y}" x2="${u.x}" y2="${y + (u.lift > 0 ? 16 : -16)}" stroke="#9cc0e0" stroke-opacity=".45" stroke-width="2.5" stroke-dasharray="6 6"/><circle cx="${u.x}" cy="${u.y}" r="5" fill="#9cc0e0" fill-opacity=".5"/>` : "";
   return `<g ${reg(u.id,u)}>${stem}<circle cx="${u.x}" cy="${y}" r="36" fill="transparent"/>
@@ -909,7 +909,7 @@ function oerthPanel(){
   panel.innerHTML = `<h2>Oerth</h2><p class="kind">Greyspace · the eye's retina</p><span class="badge b-gold">Monolith</span>
     <p>Where the eye's axis starts and its image lands. Every heart world in the figure links back to Oerth's heart, so the links run in a cone from the eye to Oerth, the way light runs from an eye to the back of it. Oerth's heart has been Vecna's since his ascension charged him into it.</p>
     <p>The eye is a superimposition. Laid flat along the axis from Oerth through Erevos, the fifteen heart worlds form the eye he lost; viewed any other way they are scattered across the galaxy, their links crossing it at random. Vecna, a god, sees at that scale. When the core opens, what lands on Oerth is sight.</p>
-    ${dmlist([`The first thing anyone can notice is that every opened heart is linked back to the same world, in Greyspace. Why they all lead to Oerth is the question that opens the rest.`,`The clue the crew needs is the axis: plot the hearts along the line from Oerth through the core, and someone who knows Vecna's mark can recognize it.`,`The eye lies in the plane perpendicular to the axis. Seen along the axis from the far side, beyond the core, it is mirrored.`,`Greyspace stands high above the galaxy's plane, so the axis is tilted: the stem shows its height.`,`Oerth is the one world Vecna cannot lose.`])}
+    ${dmlist([`The first thing anyone can notice is that every opened heart is linked back to the same world, in Greyspace. Why they all lead to Oerth is the question that opens the rest.`,`The clue the crew needs is the axis: plot the hearts along the line from Oerth through the core, and someone who knows Vecna's mark can recognize it.`,`The eye lies in the plane perpendicular to the axis. Seen along the axis from the far side, beyond the core, it is mirrored.`,`Greyspace stands above the galaxy's plane, so the axis is tilted: the stem shows its height.`,`Oerth is the one world Vecna cannot lose.`])}
     ${pageLink("oerth.html")}<button class="btn act" type="button" data-go="Greyspace">Open Greyspace</button>`;
 }
 function showNode(n, offer){
