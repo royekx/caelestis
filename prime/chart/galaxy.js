@@ -12,10 +12,9 @@
    beam reaches them (gtc.js).
 
    The inscription. Each of the fifteen heart worlds sits in its own
-   system, a catalogue system on the line through its point of the eye,
-   parallel to the axis from Oerth through the core. Laid flat along that
-   axis, the hearts fold into the eye with the core as its pupil; from
-   anywhere else they scatter.
+   system, a catalogue system on the sight line from Oerth through its
+   point of the eye. Seen from Oerth, the hearts frame the core as lids and
+   iris frame a pupil; seen from anywhere else they scatter.
    ════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -71,8 +70,8 @@
   const HALO_SIGMA = 14;
 
   /* Heights above the disc. Greyspace, with Oerth, lies above the
-     galaxy's plane: far enough that the axis from Oerth through Erevos
-     rises AXIS_TILT from the plane, so the eye is a tilted superimposition. */
+     galaxy's plane: far enough that the line of sight from Oerth to Erevos
+     falls AXIS_TILT below Oerth's horizon. */
   const AXIS_TILT = 18 * Math.PI / 180;
   const GREY_Y = Math.hypot(POS.greyspace[0] - GX.cx, POS.greyspace[1] - GX.cy) * S * Math.tan(AXIS_TILT);
   /* The other named systems sit a little above or below the disc's middle,
@@ -93,20 +92,23 @@
   };
   const OERTH = sysScene('greyspace');
   const CORE = [0, 0, 0];
-  const F = v3.norm(v3.sub(CORE, OERTH));               // Oerth's line of sight
-  const RT = v3.norm(v3.cross(F, [0, 1, 0]));
-  const UP = v3.norm(v3.cross(RT, F));
-  /* Seen from Oerth is a superimposition: Vecna sees at the scale of a
-     galaxy. The eye is an orthographic projection along the axis from Oerth
-     through the core. Each point of the eye is a line parallel to that axis,
-     and its heart system can lie anywhere along it, near side or far. Eye
-     coordinates x and y become offsets across and up from the axis, in scene
-     units: EYE_W wide so the lids span most of the galaxy's breadth, EYE_H
-     high so the lids open wide. These proportions are the template; the
-     hearts are fitted to them, never the other way round. */
-  const EYE_W = 80, EYE_H = 55;
-  const eyeBase = (x, y) => v3.add(v3.add(CORE, v3.mul(RT, x * EYE_W)), v3.mul(UP, y * EYE_H));
+  const F = v3.norm(v3.sub(CORE, OERTH));               // Oerth's line of sight to the core
+  const RT = v3.norm(v3.cross(F, [0, 1, 0]));           // across Oerth's view, level with the plane
+  const UP = v3.norm(v3.cross(RT, F));                  // up in Oerth's view
   const D = v3.dist(OERTH, CORE);
+  /* Oerth's heart is the eye's retina: Vecna looks out through the eye from
+     within it. The eye is a point projection from Oerth, as a pinhole
+     camera sees: each point of the eye is a sight line from Oerth, and its
+     heart system lies somewhere along that line, near or far. The
+     projection is rectilinear, so a perspective camera standing at Oerth
+     and looking at the core sees the eye exactly. EYE_FOV is the eye's
+     width across Oerth's sky, lid corner to lid corner; EYE_ASPECT squeezes
+     the eye's height against its width. These proportions are the
+     template; the hearts are fitted to them, never the other way round. */
+  const EYE_FOV = 90, EYE_ASPECT = 55 / 80;
+  const EYE_K = Math.tan(EYE_FOV / 2 * Math.PI / 180);  // half the eye's width on a picture plane one unit from Oerth
+  /* Oerth's view of an eye point (x, y): its place on that picture plane. */
+  const eyeView = (x, y) => [x * EYE_K, y * EYE_ASPECT * EYE_K];
 
   /* The eye in Oerth's view: lid width 1, lid height .373, iris radius .24.
      Upper lid six points, lower lid four, iris five: fifteen hearts. */
@@ -117,6 +119,10 @@
   const LID = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], IRIS = [10, 11, 12, 13, 14];
   const PAIR = [2, 3];                                  // two neighbouring upper-lid systems, opened and linked
   const FOUND = 6;                                      // Nowhere, on the lower lid
+  /* The sight line from Oerth through eye point i, and the point s units
+     out along it. */
+  const eyeDir = i => { const e = EYE2D[i], p = eyeView(e.x, e.y); return v3.norm(v3.add(v3.add(F, v3.mul(RT, p[0])), v3.mul(UP, p[1]))); };
+  const eyeRay = (i, s) => v3.add(OERTH, v3.mul(eyeDir(i), s));
 
   /* ── Generated systems ─────────────────────────────────────────
      Everything on the chart that is not a named system is a survey.js roll:
@@ -173,50 +179,48 @@
     return out;
   })();
   /* ── The inscription, fitted to the catalogue ──────────────────
-     The eye's shape is fixed: EYE_W by EYE_H, two lids and a pentagon iris
-     around the core. Each eye point is a line parallel to the axis from
-     Oerth through the core (eyeLine), and its heart system lies on that line
-     at depth t: the point's place in the eye plane, plus t along F. Each
-     heart is a catalogue system. Most were already near their line and are
-     nudged onto it, the shortest move; some are moved further along the line
-     to a better height; a few are new catalogue systems placed on the line
+     The eye's shape is fixed: EYE_FOV wide, two lids and a pentagon iris
+     around the core. Each eye point is a sight line from Oerth (eyeRay), and
+     its heart system lies on that line s units from Oerth. Each heart is a
+     catalogue system. Most were already near their line and are nudged
+     onto it, the shortest move; some are moved further along the line to a
+     better height; a few may be new catalogue systems placed on the line
      (rolled after the rest, so no other system's seed changes).
      HEART_FIT holds the choice for each eye point, in EYE2D order:
-     [catalogue index, t], or ['new', t]. scripts/eye-fit.js searches seeded
-     layouts for it and writes it here: the exact eye along the axis first;
-     then gibberish from above (many crossings, all eight wedges around the
-     core, no eye-like figure); then heights in the disc, the thick disc or
-     the halo; then the smallest moves. */
+     [catalogue index, s], or ['new', s]. scripts/eye-fit.js searches seeded
+     layouts for it and writes it here: the exact eye from Oerth first; then
+     gibberish from above (many crossings, all eight wedges around the core,
+     no eye-like figure); then heights in the disc, the thick disc or the
+     halo; then the smallest moves. */
   const THICK_LIMIT = 9, HALO_LIMIT = 2 * HALO_SIGMA;
-  const eyeLine = (i, t) => { const e = EYE2D[i]; return v3.add(eyeBase(e.x, e.y), v3.mul(F, t)); };
   const bandOf = y => Math.abs(y) <= 3 ? 'disc' : Math.abs(y) <= THICK_LIMIT ? 'thick' : 'halo';
   /* HEART_FIT: written by scripts/eye-fit.js */
   const HEART_FIT = [
-    [5, -7.43],
-    [132, -2.8],
-    [226, -12],
-    [331, 69.72],
-    [177, 43.23],
-    [26, 6.4],
-    [198, -34.4],
-    [263, -51],
-    [295, 21],
-    [338, -46.85],
-    [2, -48],
-    [192, 39],
-    [288, -30.34],
-    [228, -27],
-    [30, 11.4]
+    [201, 118.94],
+    [226, 54],
+    [295, 108],
+    [200, 131.21],
+    [283, 51],
+    [208, 101.01],
+    [63, 66],
+    [252, 46.46],
+    [55, 66],
+    [106, 72],
+    [210, 159],
+    [95, 100.6],
+    [258, 51],
+    [172, 62.78],
+    [105, 114]
   ];
   /* /HEART_FIT */
   const HEARTS = HEART_FIT.map(([ref, t], i) => {
-    const e = EYE2D[i], v = eyeLine(i, t);
+    const e = EYE2D[i], v = eyeRay(i, t);
     let f, move = 0, how;
     if (ref === 'new') {
       f = { i: FILLERS.length, added: true }; FILLERS.push(f); how = 'new';
     } else {
       f = FILLERS[ref]; move = v3.dist(f.v, v);
-      const tStar = v3.dot(v3.sub(f.v, eyeBase(e.x, e.y)), F);
+      const tStar = v3.dot(v3.sub(f.v, OERTH), eyeDir(i));
       how = Math.abs(t - tStar) < 0.05 ? 'nudged' : 'moved';
       f.from = f.v;
     }
@@ -252,7 +256,7 @@
     GX, ARMS, TIP, rng, gauss, armAngle, armPt, RS, OUT, TAN, at, POS,
     SECTORS, MARKER_T, MARKERS, frontAt,
     S, toScene, toChart, discSigma, HALO_SIGMA, sysScene, SYS_Y, AXIS_TILT,
-    OERTH, F, RT, UP, EYE_W, EYE_H, eyeBase, eyeLine, bandOf, THICK_LIMIT, HALO_LIMIT, HEART_FIT, D, EYE2D, HEARTS, LID, IRIS, PAIR, FOUND,
+    OERTH, F, RT, UP, D, EYE_FOV, EYE_ASPECT, EYE_K, eyeView, eyeDir, eyeRay, bandOf, THICK_LIMIT, HALO_LIMIT, HEART_FIT, EYE2D, HEARTS, LID, IRIS, PAIR, FOUND,
     FILLERS, rollSystems
   };
 })();

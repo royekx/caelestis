@@ -3,23 +3,25 @@
    eye-fit.js: fits the inscription's fifteen heart systems to the
    Fleet's catalogue on the Chart (prime/chart/galaxy.js).
 
-   The eye's shape is fixed in galaxy.js (EYE2D, EYE_W, EYE_H). Each eye
-   point is a line parallel to the axis from Oerth through the core; any
-   system on that line lands exactly on its point when the hearts are laid
-   flat along the axis. For each point the fit may take:
+   The eye's shape is fixed in galaxy.js (EYE2D, EYE_FOV, EYE_ASPECT).
+   Oerth's heart is the eye's retina: each eye point is a sight line from
+   Oerth, and any system on that line lands exactly on its point in Oerth's
+   view. For each point the fit may take:
      - a catalogue system near the line, nudged onto it (the shortest move)
      - a catalogue system moved further, to anywhere on its line
      - a new catalogue system placed on the line
    It searches many seeded layouts and scores each, in priority order:
-     (a) the exact eye along the axis: every candidate is on its line
+     (a) the exact eye from Oerth: every candidate is on its line
      (b) gibberish from above: lid and iris links crossing, hearts in all
-         eight wedges around the core, no affine copy of the eye
-     (c) heights in the disc, the thick disc or the halo
+         eight wedges around the core, no affine copy of the eye, no clumps
+     (c) heights in the disc, the thick disc or the halo, iris hearts low
      (d) small moves
    The search is seeded, so it gives the same layout on every run.
 
    node scripts/eye-fit.js           report the best layout
    node scripts/eye-fit.js --write   and write it to HEART_FIT in galaxy.js
+   node scripts/eye-fit.js --fov N   try an eye N degrees wide (with --write,
+                                     EYE_FOV in galaxy.js becomes N)
    ════════════════════════════════════════════════════════════════ */
 'use strict';
 const fs = require('fs'), path = require('path'), vm = require('vm');
@@ -29,12 +31,15 @@ const OPEN = '  /* HEART_FIT: written by scripts/eye-fit.js */', CLOSE = '  /* /
 const src = fs.readFileSync(FILE, 'utf8');
 const a = src.indexOf(OPEN), b = src.indexOf(CLOSE);
 if (a < 0 || b < 0) throw new Error('HEART_FIT markers not found in galaxy.js');
-const blank = src.slice(0, a) + OPEN + '\n  const HEART_FIT = [];\n' + src.slice(b);
+const fovArg = process.argv.indexOf('--fov'), FOV = fovArg > 0 ? +process.argv[fovArg + 1] : null;
+const FOV_RE = /const EYE_FOV = [\d.]+/;
+const withFov = t => FOV ? t.replace(FOV_RE, 'const EYE_FOV = ' + FOV) : t;
+const blank = withFov(src.slice(0, a) + OPEN + '\n  const HEART_FIT = [];\n' + src.slice(b));
 
 // galaxy.js with no hearts fitted: the catalogue as drawn
 const ctx = { window: {}, Math }; vm.createContext(ctx); vm.runInContext(blank, ctx);
 const E = ctx.window.EREVOS;
-const { F, RT, UP, EYE2D, EYE_W, EYE_H, LID, IRIS, OERTH, POS, RS, S, GX, HALO_LIMIT, THICK_LIMIT } = E;
+const { EYE2D, EYE_FOV, LID, IRIS, OERTH, POS, RS, S, THICK_LIMIT, eyeDir } = E;
 const FILLERS = E.FILLERS;
 
 const add = (p, q) => [p[0] + q[0], p[1] + q[1], p[2] + q[2]];
@@ -45,44 +50,48 @@ const dist = (p, q) => Math.hypot(p[0] - q[0], p[1] - q[1], p[2] - q[2]);
 const flatD = (p, q) => Math.hypot(p[0] - q[0], p[2] - q[2]);
 
 // ── where a heart may stand ─────────────────────────────────────
+// No heart higher than the catalogue's own highest systems (18 units).
+const Y_CAP = 18;
 const named = Object.keys(POS).map(E.sysScene);
 const rsScene = E.toScene(RS, 0), CLUSTER = 560 * S;   // Caelestis's cluster, kept clear as the catalogue keeps it
 function valid(v) {
   const r = Math.hypot(v[0], v[2]);
-  if (r < 12 || r > 100 || Math.abs(v[1]) > HALO_LIMIT) return false;
+  if (r < 12 || r > 100 || Math.abs(v[1]) > Y_CAP) return false;
   if (named.some(q => dist(v, q) < 9) || flatD(v, OERTH) < 20 || flatD(v, rsScene) < CLUSTER) return false;
   return true;
 }
 // a heart standing over another catalogue system would hide it on the flat map
 const clearOf = (v, self) => FILLERS.every(f => f === self || flatD(v, f.v) >= 4);
 
-const NEW_COST = 4, MOVE_W = 0.15, CAP = 40;
-function heightCost(y, wasHigh) {
+const NEW_COST = 4, MOVE_W = 0.15, CAP = 40, MIN_S = 25;   // MIN_S: no heart within 25 units of Oerth
+function heightCost(y, wasHigh, iris) {
   const h = Math.abs(y);
   if (h <= 3) return 0;
-  if (h <= THICK_LIMIT) return 1;
-  return (wasHigh ? 1 : 3) + 0.15 * (h - THICK_LIMIT);
+  if (h <= THICK_LIMIT) return iris ? 3 : 1;
+  return (wasHigh ? 1 : 3) + 0.15 * (h - THICK_LIMIT) + (iris ? 6 : 0);
 }
 
 // ── candidates for each eye point ───────────────────────────────
 const cands = EYE2D.map((e, i) => {
-  const base = add(mul(RT, e.x * EYE_W), mul(UP, e.y * EYE_H)), line = t => add(base, mul(F, t)), out = [];
+  const dir = eyeDir(i), line = t => add(OERTH, mul(dir, t)), out = [], iris = e.part === 'iris';
   for (const f of FILLERS) {
-    const tStar = dot(sub(f.v, base), F), nudge = dist(f.v, line(tStar));
-    if (nudge > CAP) continue;
+    const tStar = dot(sub(f.v, OERTH), dir), nudge = dist(f.v, line(tStar));
+    if (tStar <= 0 || nudge > CAP) continue;
     const t0 = Math.round(tStar * 100) / 100, ts = new Set([t0]);
     for (let t = Math.ceil((tStar - CAP) / 3) * 3; t <= tStar + CAP; t += 3) ts.add(t);
     for (const t of ts) {
+      if (t < MIN_S) continue;
       const v = line(t), move = dist(f.v, v);
       if (move > CAP || !valid(v) || !clearOf(v, f)) continue;
-      out.push({ i, ref: f.i, t, v, move, how: t === t0 ? 'nudged' : 'moved', cost: MOVE_W * move + heightCost(v[1], f.band === 'high') });
+      out.push({ i, ref: f.i, t, v, move, how: t === t0 ? 'nudged' : 'moved', cost: MOVE_W * move + heightCost(v[1], f.band === 'high', iris) });
     }
   }
-  for (let t = -200; t <= 200; t += 2) {
+  for (let t = MIN_S; t <= 300; t += 2) {
     const v = line(t);
     if (!valid(v) || FILLERS.some(f => flatD(v, f.v) < 105 * S)) continue;
-    out.push({ i, ref: 'new', t, v, move: 0, how: 'new', cost: NEW_COST + heightCost(v[1], false) });
+    out.push({ i, ref: 'new', t, v, move: 0, how: 'new', cost: NEW_COST + heightCost(v[1], false, iris) });
   }
+  if (!out.length) throw new Error(`eye point ${i + 1} has nowhere to stand at EYE_FOV ${EYE_FOV}`);
   return out.sort((p, q) => p.cost - q.cost);
 });
 
@@ -132,7 +141,7 @@ function search(seed) {
     if (c.ref === 'new' || !used.has(c.ref) || used.get(c.ref) === i) return c; } return null; };
   for (let i = 0; i < 15; i++) { const c = draw(i); if (!c) return null; take(i, c); }
   let cur = measure(pick), best = { score: cur.score, pick: pick.slice(), m: cur };
-  const STEPS = 6000;
+  const STEPS = 12000;
   for (let k = 0; k < STEPS; k++) {
     const T = 6 * (1 - k / STEPS) + 0.05, i = Math.floor(R() * 15), c = draw(i);
     if (!c || c === pick[i]) continue;
@@ -143,13 +152,14 @@ function search(seed) {
   return best;
 }
 let best = null;
-for (let s = 0; s < 60; s++) { const L = search(9001 + s * 7919); if (L && (!best || L.score > best.score)) best = L; }
+for (let s = 0; s < 160; s++) { const L = search(9001 + s * 7919); if (L && (!best || L.score > best.score)) best = L; }
 
 // ── report ──────────────────────────────────────────────────────
 const band = y => Math.abs(y) <= 3 ? 'disc' : Math.abs(y) <= THICK_LIMIT ? 'thick' : 'halo';
 const rows = best.pick.map((c, i) => {
-  return { n: i + 1, part: EYE2D[i].part, how: c.how, ref: c.ref, move: +c.move.toFixed(1), y: +c.v[1].toFixed(1), band: band(c.v[1]), wedge: wedge([c.v[0], c.v[2]]) };
+  return { n: i + 1, part: EYE2D[i].part, how: c.how, ref: c.ref, move: +c.move.toFixed(1), s: +c.t.toFixed(1), y: +c.v[1].toFixed(1), band: band(c.v[1]), r: +Math.hypot(c.v[0], c.v[2]).toFixed(0), wedge: wedge([c.v[0], c.v[2]]) };
 });
+console.log(`EYE_FOV ${EYE_FOV} degrees`);
 console.table(rows);
 const moves = rows.filter(r => r.how !== 'new').map(r => r.move);
 console.log(`crossings ${best.m.crossings}, wedges ${best.m.wedges}/8, smallest gap ${best.m.gap.toFixed(1)}, eye residual ${best.m.resid.toFixed(2)}`);
@@ -158,6 +168,6 @@ console.log(`bands: ${['disc', 'thick', 'halo'].map(k => k + ' ' + rows.filter(r
 
 const lit = '  const HEART_FIT = [\n' + best.pick.map((c, i) => `    [${c.ref === 'new' ? "'new'" : c.ref}, ${+c.t.toFixed(2)}]`).join(',\n') + '\n  ];\n';
 if (process.argv.includes('--write')) {
-  fs.writeFileSync(FILE, src.slice(0, a) + OPEN + '\n' + lit + src.slice(b));
+  fs.writeFileSync(FILE, withFov(src.slice(0, a) + OPEN + '\n' + lit + src.slice(b)));
   console.log('HEART_FIT written to prime/chart/galaxy.js');
 } else process.stdout.write(lit);
