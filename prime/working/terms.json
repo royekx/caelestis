@@ -496,6 +496,11 @@
     {
       "pattern": "Viren System\\b",
       "use": "Viren Star System"
+    },
+    {
+      "pattern": "divine silence",
+      "use": "cut: the Astral Sea does not sever a god from its worshippers",
+      "i": true
     }
   ],
   "voice": [
@@ -771,6 +776,14 @@
     {
       "old": "stellar-chart/init.md",
       "new": "retired (empty placeholder)"
+    },
+    {
+      "old": "crystal-spheres.html",
+      "new": "spelljammer-nexus/galaxy.html"
+    },
+    {
+      "old": "data/nexus.js",
+      "new": "retired: the Nexus index holds static rows"
     }
   ],
   "allow": [

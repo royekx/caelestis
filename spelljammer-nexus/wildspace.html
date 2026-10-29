@@ -10,17 +10,6 @@
 <link rel="stylesheet" href="../styles/register.css">
 <script src="../data/bearing.js" defer></script>
 <script src="../scripts/nav.js" defer></script>
-<style>
-  .doc-source {
-    font-family: 'Cinzel', serif; font-size: 0.696rem;
-    letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--text-muted); border: 1px solid var(--gold-rule);
-    padding: 0.5rem 0.8rem; margin-bottom: 1.6rem;
-    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.3rem 1rem;
-    /* Both halves wrap on a phone instead of running off the page. */
-  }
-  .doc-source-title { color: var(--gold-dim); }
-</style>
 </head>
 <body class="with-sidebar" data-pagefind-filter="section:spelljammer-nexus">
 <div class="page-content">
@@ -39,11 +28,11 @@
   </div>
 
   <div class="content">
-    <div class="entry-header">
+    <div class="entry-header" data-pagefind-ignore>
       <div class="nav-bar">
-        <a class="nav-prev" href="spelljammer-academy.html">← Spelljammer Academy</a>
+        <a class="nav-prev" href="galaxy.html">← The Erevos Galaxy and the Astral Sea</a>
         <a class="nav-center" href="index.html">Spelljammer Nexus</a>
-        <a class="nav-next" href="crystal-spheres.html">Spheres &amp; the Flow →</a>
+        <a class="nav-next" href="spelljamming.html">Spelljamming →</a>
       </div>
     </div>
 
@@ -53,37 +42,58 @@
     </div>
 
     <div class="section-label">What Wildspace Is</div>
-    <p>Wildspace is the stretch of the Astral Sea that spelljamming vessels cross when travelling from one system to another. It is not empty. A diffuse magical energy permeates the Astral Sea, enabling spelljammer helm operation and sustaining the air envelopes that keep crews alive. Vessels that lose their air envelope in Wildspace do not survive for long. The manual section covering air envelope maintenance and emergency procedures should be reviewed before any void operation.</p>
+    <p>Wildspace is the Astral Sea between systems: the stretch a spelljamming vessel crosses when it leaves one system for another. Within a system the same Sea goes by the system's name, as Realmspace does around Toril. The Fleet calls all of it the drift. The <a href="galaxy.html">cosmography manual</a> covers systems, the Erevos Galaxy and the Sea as a whole; this manual covers the crossing.</p>
+
+    <div class="divider"></div>
+
+    <div class="section-label">Lanes</div>
+    <p>Vessels cross Wildspace along lanes, and the Fleet grades every lane by how well it is known. A charted lane is surveyed, logged and routinely sailed, and a crossing on one is quiet more often than not. A long haul is charted but far, and supplies decide whether a crew arrives in good order. An uncharted route is sailed rarely and recorded badly; conditions change along it, and both the arrival time and the arrival point are uncertain. Some lanes are closed by standing order. A closed lane can be sailed, and the Fleet forbids it; a crew caught on one answers to the Fleet.</p>
+    <p>Current lane data is held in <a href="../navigation-records/index.html">Navigation Records</a>.</p>
+
+    <div class="divider"></div>
+
+    <div class="section-label">Currents</div>
+    <p>The drift has currents, and the charted lanes run with them. Off the lanes the currents run uncharted. Some carry a vessel inward toward a system, some hold it in place, and some carry it out along a bearing nobody has surveyed. A helm can fight a current for a while, and a crew that leaves the lane should know which kind it has entered before it decides to.</p>
+
+    <div class="divider"></div>
+
+    <div class="section-label">Color Pools</div>
+    <p>Color pools are portals adrift in the Astral Sea, each opening onto another plane. They open and close quickly. The Fleet charts them where it can and sails around them, and Fleet doctrine treats a pool on the course as an obstacle to clear by a wide margin.</p>
+
+    <div class="divider"></div>
+
+    <div class="section-label">Dead Gods and Drifting Matter</div>
+    <p>The corpses of dead gods drift through the Astral Sea, with wreckage, debris and abandoned works collected around them. On a crossing that is otherwise featureless they serve as landmarks. They are rarely empty: salvage crews, hermits and githyanki all work them, and a crew approaching one should expect company.</p>
 
     <div class="divider"></div>
 
     <div class="section-label">Gravity</div>
-    <p>Gravity in Wildspace does not behave as it does at a planetary surface. Planetary bodies generate gravity fields that function normally within a limited radius. Beyond those fields — which is to say, for most of the time a vessel spends in transit — gravity runs parallel to the hull, pulling crew toward the nearest large flat surface at roughly the same strength as surface gravity.</p>
-    <p>In practice: a crew member on the upper deck and one on the lower deck are both standing "down" relative to their surface. Objects released over the side of a vessel fall away from the ship. The midpoint of small vessels experiences negligible gravity; loose items will float. Secure your equipment. Capsized cargo in the void cannot be retrieved conveniently.</p>
+    <p>Gravity in the Astral Sea does not behave as it does at a planetary surface. Planetary bodies generate gravity fields that function normally within a limited radius. Beyond those fields, which is to say for most of the time a vessel spends in transit, gravity runs parallel to the hull and pulls crew toward the nearest large flat surface at roughly the strength of surface gravity.</p>
+    <p>In practice, a crew member on the upper deck and one on the lower deck both stand "down" relative to their own surface. Objects released over the side of a vessel fall away from the ship. The midpoint of a small vessel has negligible gravity, and loose items float there. Secure your equipment, because cargo lost over the side in the drift cannot be retrieved conveniently.</p>
 
     <div class="divider"></div>
 
     <div class="section-label">Air Envelopes</div>
-    <p>Every mass of sufficient size in Wildspace sustains an air envelope — a bubble of breathable atmosphere extending from its surface. A spelljamming vessel's envelope is proportional to the ship's mass and refreshes itself as the vessel moves through the void. Stationary vessels in Wildspace will find their envelope degrading over time. Keep the ship moving on long holds.</p>
-    <p>When two ships make physical contact, their envelopes merge. This is not incidental: it is the mechanism by which boarding actions occur. Contact = merged atmosphere = traversable gap. Crews should treat any approaching vessel's intent as unknown until positively established. Allowing contact with an unidentified vessel is allowing a potential boarding action to begin.</p>
+    <p>Every mass of sufficient size in the Astral Sea holds an air envelope, a bubble of breathable atmosphere extending from its surface. A spelljamming vessel's envelope is proportional to the ship's mass and refreshes itself as the vessel moves. A vessel that holds still for long finds its envelope degrading, so keep the ship moving on long holds. A vessel that loses its envelope does not keep its crew alive for long; review the manual section on envelope maintenance and emergency procedure before any crossing.</p>
+    <p>When two ships make physical contact, their envelopes merge into one traversable gap of air, and that is how boarding actions begin. Treat any approaching vessel's intent as unknown until it is positively established, because allowing contact with an unidentified vessel allows a boarding action to begin.</p>
 
     <div class="divider"></div>
 
     <div class="section-label">Navigation</div>
-    <p>The spelljammer at the helm has an intuitive sense of the system's geometry — a broad directional feel for the space around the vessel. This supplements rather than replaces conventional navigation. Fine positioning, rendezvous calculations, and approach to specific destinations require charts, direct observation, and crew navigation skills. A helm is not a map.</p>
-    <p>Realmspace charts maintained by the Fleet cover inner system bodies with reasonable accuracy. Outer Realmspace coverage is less consistent. Regions beyond Realmspace require consultation with the Navigation Records, independent surveys, or firsthand scouting. Do not rely on inner-system chart quality when operating in outer or extra-system regions.</p>
+    <p>The spelljammer at the helm has an intuitive sense of the system's geometry, a broad directional feel for the space around the vessel. It supplements conventional navigation and does not replace it. Fine positioning, rendezvous calculations and the approach to a specific destination require charts, direct observation and a crew's navigation skill. A helm is not a map.</p>
+    <p>Fleet charts of Realmspace cover the inner system with reasonable accuracy, and the outer system less consistently. Beyond Realmspace a crew relies on Navigation Records, independent surveys or its own scouting. Do not trust inner-system chart quality in the outer system or in Wildspace.</p>
 
     <div class="divider"></div>
 
     <div class="section-label">Conditions</div>
-    <p>Wildspace is not uniform. Asteroid fields, gravitational anomalies, debris clouds, void-adapted fauna, and the occupants of other vessels all create conditions that require response. Temperature beyond an envelope is extreme in both directions depending on proximity to the local primary. Radiation levels vary by position.</p>
-    <p>The most consistent operational hazard is other ships. Pirates, raiders, and hostile entities operate throughout Wildspace. Fleet doctrine for unknown vessel contact: establish identification at distance, maintain separation, assume nothing. Most void encounters are resolved before weapons are drawn. The ones that are not require a crew that knows what it is doing before the contact happens.</p>
+    <p>Asteroid fields, gravitational anomalies, debris clouds, void-adapted creatures and the occupants of other vessels all create conditions a crew must answer. Temperature beyond an envelope runs to extremes in both directions, depending on how near the vessel is to a star, and radiation varies with position.</p>
+    <p>The most consistent hazard is other ships. Pirates, raiders and hostile creatures work throughout Wildspace. Fleet doctrine for an unknown vessel is to establish identification at distance, keep separation and assume nothing. Most encounters in the drift end before weapons are drawn, and the rest need a crew that knew its work before the contact began.</p>
 
-    <div class="entry-header" style="margin-top:2rem;">
+    <div class="entry-header" style="margin-top:2rem;" data-pagefind-ignore>
       <div class="nav-bar">
-        <a class="nav-prev" href="spelljammer-academy.html">← Spelljammer Academy</a>
+        <a class="nav-prev" href="galaxy.html">← The Erevos Galaxy and the Astral Sea</a>
         <a class="nav-center" href="index.html">Spelljammer Nexus</a>
-        <a class="nav-next" href="crystal-spheres.html">Spheres &amp; the Flow →</a>
+        <a class="nav-next" href="spelljamming.html">Spelljamming →</a>
       </div>
     </div>
   </div>
