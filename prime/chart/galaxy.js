@@ -73,7 +73,7 @@
   /* Heights above the disc. Greyspace, with Oerth, lies above the
      galaxy's plane: far enough that the axis from Oerth through Erevos
      rises AXIS_TILT from the plane, so the eye is a tilted superimposition. */
-  const AXIS_TILT = 18 * Math.PI / 180;
+  const AXIS_TILT = 25 * Math.PI / 180;
   const GREY_Y = Math.hypot(POS.greyspace[0] - GX.cx, POS.greyspace[1] - GX.cy) * S * Math.tan(AXIS_TILT);
   /* The other named systems sit a little above or below the disc's middle,
      so the disc is not flat; Realmspace's cluster stays near it. */
@@ -101,8 +101,8 @@
      and its heart system can lie anywhere along it, near side or far. Eye
      coordinates x and y become offsets across and up from the axis, in scene
      units: EYE_W wide so the lids span most of the galaxy's breadth, EYE_H
-     high so the lids' peaks stay inside the halo (a flatter, wider eye). */
-  const EYE_W = 80, EYE_H = 28;
+     high so the lids open wide; the hearts at their peaks and troughs sit in the halo. */
+  const EYE_W = 80, EYE_H = 55;
   const eyeBase = (x, y) => v3.add(v3.add(CORE, v3.mul(RT, x * EYE_W)), v3.mul(UP, y * EYE_H));
   const D = v3.dist(OERTH, CORE);
 
@@ -125,7 +125,7 @@
      neighbours in the eye; from above they can lie far apart. */
   /* Hearts stay in the disc or the thick disc where the eye allows (a
      bonus for each), within the halo's spread (HALO_LIMIT) at most. */
-  const HEART_LAYOUT = {}, THICK_LIMIT = 9, HALO_LIMIT = 1.3 * HALO_SIGMA;
+  const HEART_LAYOUT = {}, THICK_LIMIT = 9, HALO_LIMIT = 2 * HALO_SIGMA;
   const HEARTS = (() => {
     const avoid = Object.keys(POS).map(sysScene), oerthFlat = [OERTH[0], OERTH[2]];
     const edges = [];
@@ -162,7 +162,7 @@
       flat.forEach((a, m) => flat.forEach((b, n) => { if (m < n) gap = Math.min(gap, Math.hypot(a[0] - b[0], a[1] - b[1])); }));
       const inDisc = out.filter(h => Math.abs(h.v[1]) <= 1.5 * discSigma(Math.hypot(h.v[0], h.v[2]))).length;
       const inThick = out.filter(h => Math.abs(h.v[1]) <= THICK_LIMIT).length;
-      return { out, score: crossings + 4 * oct.size + 0.5 * gap + 0.3 * inDisc + 0.5 * inThick, crossings, octants: oct.size, gap, inDisc, inThick };
+      return { out, score: crossings + 4 * oct.size + 0.5 * gap + 0.3 * inDisc + 0.3 * inThick, crossings, octants: oct.size, gap, inDisc, inThick };
     }
     let best = null;
     for (let s = 0; s < 300; s++) { const L = layout(4127 + s); if (L && (!best || L.score > best.score)) best = L; }
