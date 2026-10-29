@@ -13,7 +13,8 @@
    It searches many seeded layouts and scores each, in priority order:
      (a) the exact eye from Oerth: every candidate is on its line
      (b) gibberish from above: lid and iris links crossing, hearts in all
-         eight wedges around the core, no affine copy of the eye, no clumps
+         eight wedges around the core, no affine copy of the eye, few
+         hearts within 20 units of each other
      (c) heights as common as the catalogue's: no more hearts high up than
          chance would put there, iris hearts low
      (d) small moves
@@ -23,6 +24,7 @@
    node scripts/eye-fit.js --write   and write it to HEART_FIT in galaxy.js
    node scripts/eye-fit.js --fov N   try an eye N degrees wide (with --write,
                                      EYE_FOV in galaxy.js becomes N)
+   node scripts/eye-fit.js --tilt T  tip the picture plane T degrees (EYE_TILT)
    ════════════════════════════════════════════════════════════════ */
 'use strict';
 const fs = require('fs'), path = require('path'), vm = require('vm');
@@ -33,8 +35,9 @@ const src = fs.readFileSync(FILE, 'utf8');
 const a = src.indexOf(OPEN), b = src.indexOf(CLOSE);
 if (a < 0 || b < 0) throw new Error('HEART_FIT markers not found in galaxy.js');
 const fovArg = process.argv.indexOf('--fov'), FOV = fovArg > 0 ? +process.argv[fovArg + 1] : null;
-const FOV_RE = /const EYE_FOV = [\d.]+/;
-const withFov = t => FOV ? t.replace(FOV_RE, 'const EYE_FOV = ' + FOV) : t;
+const tiltArg = process.argv.indexOf('--tilt'), TILT = tiltArg > 0 ? +process.argv[tiltArg + 1] : null;
+const FOV_RE = /const EYE_FOV = [\d.]+/, TILT_RE = /EYE_TILT = [\d.]+/;
+const withFov = t => { if (FOV) t = t.replace(FOV_RE, 'const EYE_FOV = ' + FOV); if (TILT != null) t = t.replace(TILT_RE, 'EYE_TILT = ' + TILT); return t; };
 const blank = withFov(src.slice(0, a) + OPEN + '\n  const HEART_FIT = [];\n' + src.slice(b));
 
 // galaxy.js with no hearts fitted: the catalogue as drawn
@@ -52,7 +55,7 @@ const flatD = (p, q) => Math.hypot(p[0] - q[0], p[2] - q[2]);
 
 // ── where a heart may stand ─────────────────────────────────────
 // No heart higher than the catalogue's own highest systems (18 units).
-const Y_CAP = 18;
+const Y_CAP = 18, IRIS_CAP = 6;   // the iris keeps to the disc and the low thick disc
 const named = Object.keys(POS).map(E.sysScene);
 const rsScene = E.toScene(RS, 0), CLUSTER = 560 * S;   // Caelestis's cluster, kept clear as the catalogue keeps it
 function valid(v) {
@@ -95,13 +98,13 @@ const cands = EYE2D.map((e, i) => {
     for (const t of ts) {
       if (t < MIN_S) continue;
       const v = line(t), move = dist(f.v, v);
-      if (move > CAP || !valid(v) || !clearOf(v, f)) continue;
+      if (move > CAP || !valid(v) || !clearOf(v, f) || (iris && Math.abs(v[1]) > IRIS_CAP)) continue;
       out.push({ i, ref: f.i, t, v, move, how: t === t0 ? 'nudged' : 'moved', cost: MOVE_W * move + heightCost(v[1], f.band === 'high', iris) });
     }
   }
   for (let t = MIN_S; t <= 300; t += 2) {
     const v = line(t);
-    if (!valid(v) || FILLERS.some(f => flatD(v, f.v) < 105 * S)) continue;
+    if (!valid(v) || (iris && Math.abs(v[1]) > IRIS_CAP) || FILLERS.some(f => flatD(v, f.v) < 105 * S)) continue;
     out.push({ i, ref: 'new', t, v, move: 0, how: 'new', cost: NEW_COST + heightCost(v[1], false, iris) });
   }
   if (!out.length) throw new Error(`eye point ${i + 1} has nowhere to stand at EYE_FOV ${EYE_FOV}`);
@@ -140,12 +143,13 @@ function measure(pick) {
   }
   const wedges = new Set(flat.map(wedge)).size;
   let gap = Infinity;
-  for (let m = 0; m < 15; m++) for (let n = m + 1; n < 15; n++) gap = Math.min(gap, Math.hypot(flat[m][0] - flat[n][0], flat[m][1] - flat[n][1]));
+  let crowd = 0;                                      // pairs of hearts closer than 20 units: a clump from above
+  for (let m = 0; m < 15; m++) for (let n = m + 1; n < 15; n++) { const g = Math.hypot(flat[m][0] - flat[n][0], flat[m][1] - flat[n][1]); gap = Math.min(gap, g); if (g < 20) crowd++; }
   const resid = eyeLikeness(flat), cost = pick.reduce((s, c) => s + c.cost, 0);
   const n10 = pick.filter(c => Math.abs(c.v[1]) > 10).length, n14 = pick.filter(c => Math.abs(c.v[1]) > 14).length;
   const excess = 6 * Math.max(0, n10 - Math.ceil(EXPECT10)) + 10 * Math.max(0, n14 - Math.ceil(EXPECT14));
-  const score = 5.5 * crossings - 40 * (8 - wedges) + 25 * resid + 0.3 * Math.min(gap, 25) - (gap < 10 ? 30 : 0) - cost - excess;
-  return { score, crossings, wedges, gap, resid, cost, n10, n14 };
+  const score = 5.5 * crossings - 40 * (8 - wedges) + 25 * resid + 0.3 * Math.min(gap, 25) - (gap < 10 ? 30 : 0) - 4 * crowd - cost - excess;
+  return { score, crossings, wedges, gap, resid, cost, n10, n14, crowd };
 }
 
 // ── the search: seeded restarts, each annealed ──────────────────
@@ -174,10 +178,10 @@ const band = y => Math.abs(y) <= 3 ? 'disc' : Math.abs(y) <= THICK_LIMIT ? 'thic
 const rows = best.pick.map((c, i) => {
   return { n: i + 1, part: EYE2D[i].part, how: c.how, ref: c.ref, move: +c.move.toFixed(1), s: +c.t.toFixed(1), y: +c.v[1].toFixed(1), band: band(c.v[1]), r: +Math.hypot(c.v[0], c.v[2]).toFixed(0), wedge: wedge([c.v[0], c.v[2]]) };
 });
-console.log(`EYE_FOV ${EYE_FOV} degrees`);
+console.log(`EYE_FOV ${EYE_FOV} degrees, EYE_TILT ${E.EYE_TILT} degrees`);
 console.table(rows);
 const moves = rows.filter(r => r.how !== 'new').map(r => r.move);
-console.log(`crossings ${best.m.crossings}, wedges ${best.m.wedges}/8, smallest gap ${best.m.gap.toFixed(1)}, eye residual ${best.m.resid.toFixed(2)}`);
+console.log(`crossings ${best.m.crossings}, wedges ${best.m.wedges}/8, smallest gap ${best.m.gap.toFixed(1)}, pairs within 20 ${best.m.crowd}, eye residual ${best.m.resid.toFixed(2)}`);
 console.log(`move max ${Math.max(...moves).toFixed(1)}, mean ${(moves.reduce((s, x) => s + x, 0) / moves.length).toFixed(1)} over ${moves.length} catalogue systems`);
 console.log(`hearts above 10: ${best.m.n10} (chance ${EXPECT10.toFixed(1)}), above 14: ${best.m.n14} (chance ${EXPECT14.toFixed(1)})`);
 console.log(`bands: ${['disc', 'thick', 'halo'].map(k => k + ' ' + rows.filter(r => r.band === k).length).join(', ')}`);

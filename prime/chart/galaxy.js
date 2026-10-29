@@ -69,11 +69,11 @@
   const discSigma = r => { const t = Math.max(0, (r / 100 - 0.09) * 3.6); return 2.2 + 3.5 * Math.exp(-t * 1.2); };
   const HALO_SIGMA = 14;
 
-  /* Heights above the disc. Greyspace, with Oerth, lies above the
-     galaxy's plane: far enough that the line of sight from Oerth to Erevos
-     falls AXIS_TILT below Oerth's horizon. */
-  const AXIS_TILT = 18 * Math.PI / 180;
-  const GREY_Y = Math.hypot(POS.greyspace[0] - GX.cx, POS.greyspace[1] - GX.cy) * S * Math.tan(AXIS_TILT);
+  /* Heights above the disc. Greyspace, with Oerth, lies GREY_Y above the
+     galaxy's plane, among the highest systems of the halo, so the line of
+     sight from Oerth to Erevos falls AXIS_TILT below Oerth's horizon. */
+  const GREY_Y = 17.5;
+  const AXIS_TILT = Math.atan2(GREY_Y, Math.hypot(POS.greyspace[0] - GX.cx, POS.greyspace[1] - GX.cy) * S);
   /* The other named systems sit a little above or below the disc's middle,
      so the disc is not flat; Realmspace's cluster stays near it. */
   const SYS_Y = { realmspace: 0.3, virenspace: 1.7, aethris: -1.3, krynnspace: 2.1, fonains: -1.8, wayfinders: 1.5, greyspace: GREY_Y };
@@ -100,15 +100,25 @@
      within it. The eye is a point projection from Oerth, as a pinhole
      camera sees: each point of the eye is a sight line from Oerth, and its
      heart system lies somewhere along that line, near or far. The
-     projection is rectilinear, so a perspective camera standing at Oerth
-     and looking at the core sees the eye exactly. EYE_FOV is the eye's
+     projection is rectilinear onto a picture plane, so a perspective
+     camera standing at Oerth and facing that plane, its lens shifted to
+     centre on the core, sees the eye exactly (holo.html). EYE_FOV is the eye's
      width across Oerth's sky, lid corner to lid corner; EYE_ASPECT squeezes
      the eye's height against its width. These proportions are the
      template; the hearts are fitted to them, never the other way round. */
-  const EYE_FOV = 90, EYE_ASPECT = 55 / 80;
-  const EYE_K = Math.tan(EYE_FOV / 2 * Math.PI / 180);  // half the eye's width on a picture plane one unit from Oerth
+  const EYE_FOV = 130, EYE_ASPECT = 55 / 80, EYE_TILT = 75;
+  /* The picture plane faces PLANE_N: Oerth's line of sight to the core,
+     tipped EYE_TILT degrees further down towards the disc, so it faces
+     almost straight beneath Oerth. The eye keeps its template shape on
+     that plane, and its upper lid stays below Oerth's horizon, among the
+     galaxy's systems, while the eye grows wide. */
+  const tilt = EYE_TILT * Math.PI / 180;
+  const PLANE_N = v3.norm(v3.sub(v3.mul(F, Math.cos(tilt)), v3.mul(UP, Math.sin(tilt))));
+  const PLANE_UP = v3.norm(v3.add(v3.mul(UP, Math.cos(tilt)), v3.mul(F, Math.sin(tilt))));
+  const EYE_K = Math.tan(EYE_FOV / 2 * Math.PI / 180) / Math.cos(tilt);  // half the eye's width on the picture plane, one unit from Oerth
+  const EYE_C = Math.tan(tilt);                                          // where the core falls on that plane, above its centre
   /* Oerth's view of an eye point (x, y): its place on that picture plane. */
-  const eyeView = (x, y) => [x * EYE_K, y * EYE_ASPECT * EYE_K];
+  const eyeView = (x, y) => [x * EYE_K, EYE_C + y * EYE_ASPECT * EYE_K];
 
   /* The eye in Oerth's view: lid width 1, lid height .373, iris radius .24.
      Upper lid six points, lower lid four, iris five: fifteen hearts. */
@@ -121,7 +131,7 @@
   const FOUND = 6;                                      // Nowhere, on the lower lid
   /* The sight line from Oerth through eye point i, and the point s units
      out along it. */
-  const eyeDir = i => { const e = EYE2D[i], p = eyeView(e.x, e.y); return v3.norm(v3.add(v3.add(F, v3.mul(RT, p[0])), v3.mul(UP, p[1]))); };
+  const eyeDir = i => { const e = EYE2D[i], p = eyeView(e.x, e.y); return v3.norm(v3.add(v3.add(PLANE_N, v3.mul(RT, p[0])), v3.mul(PLANE_UP, p[1]))); };
   const eyeRay = (i, s) => v3.add(OERTH, v3.mul(eyeDir(i), s));
 
   /* ── Generated systems ─────────────────────────────────────────
@@ -180,7 +190,7 @@
     /* A few systems stand high in the halo where the upper lid's hearts
        rise, so a heart up there keeps company like any other halo system:
        catalogue index and height. */
-    const COMPANY = { 91: 15.1, 140: 15.1, 110: 10.5, 141: 11.2, 159: 17.8, 185: -11.2, 214: 12.8, 303: 10.5, 317: -16.8 };
+    const COMPANY = { 51: 11.4, 54: -13.1, 91: 15.1, 110: 10.5, 140: 15.1, 141: 11.2, 159: 17.8, 185: -11.2, 214: 12.8, 257: 12.3, 258: -11.8, 283: 10.7, 303: 10.5, 317: 10.5 };
     Object.entries(COMPANY).forEach(([i, y]) => { const f = out[i]; f.v = toScene(f.pos, y); f.band = 'high'; });
     return out;
   })();
@@ -202,21 +212,21 @@
   const bandOf = y => Math.abs(y) <= 3 ? 'disc' : Math.abs(y) <= THICK_LIMIT ? 'thick' : 'halo';
   /* HEART_FIT: written by scripts/eye-fit.js */
   const HEART_FIT = [
-    [201, 118.84],
-    [159, 51],
-    [300, 170.66],
-    [266, 172.21],
-    [102, 111],
-    [208, 102],
-    [63, 64.77],
-    [252, 44.43],
-    [55, 66],
-    [106, 73.8],
-    [290, 169.77],
-    [337, 96],
-    [258, 51],
-    [163, 54.46],
-    [30, 90.69]
+    [73, 27],
+    [137, 135],
+    [288, 45],
+    [334, 147],
+    [51, 36],
+    [284, 100.64],
+    [126, 73.55],
+    [27, 72],
+    [31, 72],
+    [146, 99],
+    [282, 109.42],
+    [339, 90.39],
+    [226, 54.69],
+    [89, 62.32],
+    [150, 84.88]
   ];
   /* /HEART_FIT */
   const HEARTS = HEART_FIT.map(([ref, t], i) => {
@@ -262,7 +272,7 @@
     GX, ARMS, TIP, rng, gauss, armAngle, armPt, RS, OUT, TAN, at, POS,
     SECTORS, MARKER_T, MARKERS, frontAt,
     S, toScene, toChart, discSigma, HALO_SIGMA, sysScene, SYS_Y, AXIS_TILT,
-    OERTH, F, RT, UP, D, EYE_FOV, EYE_ASPECT, EYE_K, eyeView, eyeDir, eyeRay, bandOf, THICK_LIMIT, HALO_LIMIT, HEART_FIT, EYE2D, HEARTS, LID, IRIS, PAIR, FOUND,
+    OERTH, F, RT, UP, D, EYE_FOV, EYE_ASPECT, EYE_TILT, PLANE_N, PLANE_UP, EYE_K, EYE_C, eyeView, eyeDir, eyeRay, bandOf, THICK_LIMIT, HALO_LIMIT, HEART_FIT, EYE2D, HEARTS, LID, IRIS, PAIR, FOUND,
     FILLERS, rollSystems
   };
 })();
