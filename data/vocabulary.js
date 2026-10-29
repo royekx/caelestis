@@ -58,7 +58,6 @@ var CAELESTIS_VOCAB = [
   "Half",
   "Halfling",
   "Hammerhead",
-  "Hippogriff",
   "Holding",
   "Hollow",
   "Infirmary",

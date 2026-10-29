@@ -591,7 +591,27 @@ attributes are in `CLAUDE.md` § Deploy and search.
   `prime/scripts/portraits.js` and a frame with `data-key`.
 - **Companion pages** (`wayfinder-path/`, `stellar-chart/`, `aspects/`) keep
   their own skin and carry a return link to their crew page. Crew pages link
-  out through a `.companion-card`.
+  out through a `.companion-card`. They sit outside the player search index
+  and carry no section filter.
+- **Companion DM modes stay.** A companion page's password-protected DM mode
+  (the Stellar Chart's Keeper's Chart, its reveal table and password) stays on
+  the player page. Players do not read the source; it is mutual trust. Do not
+  move these modes to `prime/` or flag them; `terms.json` allows their terms.
+- **Previous Voyages keys** name voyages, oldest first: `V001 · V002`.
+  `check` holds them to the record.
+- **The Spelljammer Nexus** is cadet curriculum: in-world reference manuals
+  (the Academy, the Fleet, Fleet time, the Erevos Galaxy and the Astral Sea,
+  Wildspace, spelljamming, factions). It holds only cadet knowledge Korey has
+  ruled, each claim traceable to a finished DM page's About section; nothing
+  from a DM notes tab. The galaxy is taught by name and basics only, with no
+  galaxy map and no other galaxies: the crew learns the cosmos by exploring
+  it. The index rows are static HTML inside a `data-pagefind-ignore` list, in
+  the same order as the pages' prev/next chain; the FIA row is the only link
+  from the player site into `restricted/`.
+- **Fleet dates.** A voyage's rough in-game date lives in the record
+  (`sessions.json` `date`, cycle.kindling.ember). The voyage page header shows
+  it; the command bar, the current bearing and the Fleet Time page show where
+  the latest voyage ends.
 - **Navigation.** The player home is `hub.html`; the sidebar logo points
   there, and the gate (`index.html`) is linked only from the hub footer. The
   sidebar groups in `scripts/nav.js` match the hub's bands.

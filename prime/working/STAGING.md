@@ -11,22 +11,6 @@ when a ruling changes; delete it once the page carries it. See
 ### Naming: Rykoe and Erevos (cosmology/, glossary/, chart/, survey; done everywhere)
 - Rykoe is the centre of the cosmos: the remains of the Reach world, the black hole beneath the Core Monolith and the Radiant Citadel, around which the five galaxies lie, and which opens only when all five cores wake. The First Heart lies beneath Rykoe. Erevos is the black hole at the core of GAL-01, and the galaxy is named for it: the Erevos Galaxy. (Korey 2026-10-28: the two names swapped. done: every page, the survey, the chart, connections.json; "Rykoe Galaxy" is a retired term.)
 
-## Factions
-
-### Caelestis, the Driftwardens and the United Intergalactic Fleet (factions/fleet.html, factions/index.html, cosmology/, locations/, glossary/, spelljammer-nexus/)
-- The United Intergalactic Fleet, which everyone calls the Fleet, is made of four sector branches, one along each of the Erevos Galaxy's four spiral arms. Caelestis founded it, and the Caelestis Sector lies on Realmspace's arm. Each branch oversees one sector of the Erevos Galaxy, a cluster of several systems, and keeps sites in its systems, near them, or between them. The branches work together and together make the Fleet.
-- Caelestis is one of these sectors: the Caelestis Sector, which includes the system where Toril lies. It has two parts. The Caelestis Corps is the sector's branch of the Fleet and oversees the sector. The Caelestis Spelljammer Academy trains cadets to become Driftwardens; there are only a handful of spelljammer academies in the galaxy.
-- Everyone in the Fleet's service is a Driftwarden, assigned to a sector. Driftwardens hold ranks, from the newest graduate up through officers and commanders. A Driftwarden reports to the commander of their station; station commanders answer to the sector's command, and the sectors to the Fleet.
-- Each sector has stations at its systems or between them, each with a commander, and smaller satellites and waystations around them. Strake Station, a waystation with a small Fleet presence watching Realmspace's edge, and its sister satellites belong to the Caelestis Sector. Fleet operations for the Caelestis Sector run out of Ondrel Anchorage on the moon Ostrel, a neutral port away from Toril. Captain Haymond Rolt works out of Ondrel, and the crew takes its Arc 2 contracts from there.
-- The Bridge is the Caelestis Sector's name for its command. The sectors began as separate institutions and came together over time, so each keeps its own ways and its own names; another sector's command is called something else.
-- Above the sectors sits a council of the Fleet's highest officers, a few admirals, not a single leader. (DM touchstone: One Piece's Marine admirals.)
-- The sectors differ in character. Some are disciplined and naval; others take any work for the coin. The Fleet is not the law of the cosmos. It keeps a self-imposed order, and much of its work is mercantile because it holds the easiest routes: shipments, protection, carrying passengers, and transport for the Watchers.
-- Rank shows in gems or pins. Driftwardens otherwise wear what they like; seated officers at a station wear something closer to a uniform.
-- The sectors share information, but not all of it. Each keeps a good deal to itself, the way rival departments do. The Fleet Intelligence Archive is the Caelestis Sector's archive: it holds what Caelestis knows of its own sector and only some of what the others share.
-- The Order's Watchers are more organized than the sector branches. They keep to the Erevos Galaxy, as the Fleet does, more densely in some places than others.
-- The stations differ with the local ecology of their place: what drifts there, what lives there, what threatens it. Their crews are drawn from the sector that keeps them. Readings from the stations pass between the sectors; this is how a disturbance seen at one edge reaches another.
-- done: factions/fleet.html and the glossary lines for sector, the Caelestis Sector, Corps, Academy, the Bridge and the FIA (section 2); locations/ondrel-anchorage.html, locations/strake-station.html and locations/caelestis.html (section 3). Still waiting: the Fleet's organisation as a player Spelljammer Nexus record (section 10; BACKLOG # Player pages).
-
 ## Dossiers
 
 ### N'ghathrod (dossiers/nghathrod.html, factions/vthorama.html, timeline, artifacts/rod-of-seven-parts.html, rules/)

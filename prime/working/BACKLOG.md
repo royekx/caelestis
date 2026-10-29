@@ -39,12 +39,12 @@ staging once Korey has read and accepted them.
 | Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
-| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 20 | 0 | 20 |
-| New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 4 | 2 | 23 |
+| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 19 | 0 | 20 |
+| New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
-| Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 4 | 0 | 1 |
-| **Total** |  | **116** | **147** | **50** | **2** | **54** |
+| Player pages | restricted/ and other player pages | 1 | 1 | 0 | 0 | 0 |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
+| **Total** |  | **119** | **151** | **45** | **2** | **53** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -134,6 +134,8 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - `data/player-characters.json` (Casey Geim) lists the star-etched constellation shirt under Notable Items, but `data/items.json` and Tumak's record have Tumak holding it (Casey passed it to Tumak's bunk in Voyage 1). crew/casey.html and crew/tumak.html follow items.json. Drop it from Casey's Notable Items if Korey agrees.
 - `data/player-characters.json` gives all six cadets "Clearance: Sailor", and Tumak's Voyage 3 bullet has Mirt granting the crew sailor-level clearance; the BACKLOG decide "The Sailor gate at the Sea Dock" (crew/gregory.html) holds that a cadet inherits only Visitor and that part of the Sea Dock needs Sailor. Gregory's Voyage 3 bullet (locked out of a fleet-clearance category by his cadet star) sits between them. Reconcile once the decide is ruled.
 - `data/player-characters.json` (Boogie) lists "shield"; the DM page names it the Shield of Expression, a gift from Boom-chik, and it has no item record in `data/items.json`. Add the name or an item record if Korey agrees.
+- `data/npcs.json` (Saerthe Abizjn) and the V006 page say "a Watcher cadet"; the settled term for a Watcher trainee is a Glimpse. The crew has not been told the word, so the record keeps Saerthe's phrasing, and `terms.json` allows it on voyage-006. Change the record if Korey wants Saerthe to say "Glimpse".
+- `data/locations.json` overviews open "The Flighty Foundling is…" and "The Moonraider was…", and the quest is named "The Tyrant Ship and the H'Catha Meteor"; ship names carry no article. `terms.json` allows these record strings on the player pages. Rewrite them in a record edit if Korey agrees, then drop the allow entries.
 - `data/npcs.json` (Winston Ryeback, Voyage 6) says he "was told the beholder had been taken care of, and took it to mean the crew had killed it"; the ruling is that Tumak told him outright that the crew killed it (dossiers/winston-ryeback.html).
 
 ## Still coming in
@@ -1745,10 +1747,6 @@ against the complete Tumak sweep (all 336 turns).
 
 ### wayfinder-path/index.html (player site, outside prime)
 
-- **[fix]** ACTIVE_HALVES: Tu's half at 08
-  The player tracker's ACTIVE_HALVES lists Wan's 08 and Tu's 16 only. Add `{ num: 8, bearer: 2 }`, Tu's half of the left sole, so 08 shows as matched. Tumak knows this match, so it belongs on the player page. (The DM copy, rules/wayfinder-path-dm.html, already shows every rune matched and needs no change.)
-  src: TGB § Tumak/Rune structure, final (turn 328); wayfinder-path/index.html
-
 - **[add]** Who gets the tracker link (DM note, kept in prime)
   Korey sends the tracker link only to Tumak's player, or puts it on the character sheet marked player-only (turn 162). Record this with the rules page's tracker links.
   src: TGB § Tumak/Player tracker
@@ -2070,12 +2068,6 @@ The page exists (`prime/principles.html`, Reference). Contracts are built on Cam
   Line 59 says "the World Surveyor". Change to A.T.L.A.S.
   src: framework § A.T.L.A.S.
 
-#### voyages/voyage-005.html (player site, outside prime)
-
-- **[fix]** Ryeback is a giff
-  Page says "Ryeback, the hippogriff", a voice-to-text garble of "a giff". Change to "Ryeback, the giff" (he carries a hand cannon). data/vocabulary.js carries the same garble; flag it for the player side. data/npcs.json is already correct.
-  src: automation § Voyage 005 canon; chat-voyage-6-7-planning § Naming and corrections; memory-canon (Key NPCs)
-
 # Automation and tracker
 
 Korey is revisiting the pipeline and tracker alternatives during the prime
@@ -2192,6 +2184,10 @@ run decide, fix, drop, add.
 
 ## Record and schema
 
+- **[decide]** The voyages' Fleet dates *(prep)*
+  `data/sessions.json` now carries a rough Fleet date per voyage (the new `date` field), set from the chart's default Now, 1491.7.12, as where the crew stands after V006, and counted back from the accounts. Only the end point and the V003 span ("attacked twice in three days", then "some days passed") have any footing; the rest are guesses. V001 1491.6.21–1491.6.22 (one day of orientation and its night; guess). V002 1491.6.23–1491.6.25 (arrival, a night, the salvage simulation next morning; the gap after V001 is a guess). V003 1491.6.26–1491.7.5 (about ten embers; rough). V004 1491.7.5–1491.7.6 and V005 1491.7.6–1491.7.7 (a day or so aboard each; guess). V006 1491.7.7–1491.7.12 ("the next few days learning the ship"). Confirm or correct: how long after V001 Bartholomew arrived, how many days V003's "some days passed" covers, and whether 1491.7.12 is where V006 ends. The crossing to H'Catha is fourteen embers, so V007 would run from about 1491.7.13 to 1491.7.26 or later. prime/chart/gtc.js still says the current kindling and ember are not set; align it with the record when the chart is next touched.
+  src: Korey, 2026-10-29 (Fleet time ruling); voyages/voyage-001.html to voyage-006.html
+
 - **[later]** Ships in the record
   SESSION-RUN.md files a ship as a place with Type `Vessel`, parented to where it was last seen, and parks simulated ships under the Simulation Deck with Status `Simulated`. That rule is the latest one Korey accepted for the record (Voyage 7 chat, 2026-10-25, Settled: "Every ship the crew encounters gets a record"). "Vessels are vessels" was ruled earlier, in the cosmic chat, for the DM wiki: vessels are their own register with entry pages, not realms and not artifacts. So the two do not yet conflict; the question is whether the refactor should carry the register split down into the record. Options: (a) keep ships as Vessel-type places in `data/locations.json` and split only the pages (`navigation-records/` ships move to `vessels/`); (b) give the record a vessel set or a `kind` field, a status vocabulary without "Simulated" on places, and a choice of whether a ship's whereabouts is a field or a parent link.
   Touches: scripts/data.js schema, data/locations.json, SESSION-RUN.md, navigation-records/, vessels/.
@@ -2199,13 +2195,17 @@ run decide, fix, drop, add.
 
 ## Fixes
 
+- **[later]** Shared CSS, second pass
+  Section 10 removed the dead rules and the copies that a later sheet already overrode, and normalised the load order of the Nexus and Corps Protocols indexes. Still to do: about 80 selectors repeated across caelestis, entity, board, register and bearing with different declarations (board + register 24, caelestis + register 17, entity + register 12, caelestis + board 9, bearing + register 9, caelestis + entity 8, bearing + entity 4), which need the winning declarations merged by hand and a zero visual diff; the 39 player-only classes in caelestis.css (`s-card`, `log-*`, `account-*` and others) could move to a player sheet; and the rarity colours in register.css (`.r-rare` to `.r-artifact`), unused until an item carries one.
+  src: section 10 plan § 4
+
+- **[later]** `scripts/search.js` is loaded by no page
+  The per-section search box (a scoped Pagefind query under the page header) is wired to nothing. Load it on the section indexes, or delete it.
+  src: section 10
+
 - **[fix]** "Answered from the sources" names items that are gone
   The review list near the top of this file still names items section 4 consumed and deleted (among them "Artifacts of Convergence" is retired, What the letters stand for, The ship reads as native traffic, Tyrant ship weapons). Prune the list, or mark those entries done, when the list is next reviewed.
   src: section 4 cold review (2026-10-28)
-
-- **[fix]** `vessels/` missing from the player search index
-  The player Pagefind glob lists every player folder except `vessels/`. Add `vessels/**/*.html` (and update the glob again when the refactor renames folders).
-  src: .github/workflows/deploy.yml
 
 - **[later]** Leftover UI calls from the migration notes
   Still open in FIXES-DEMO-MIGRATION.md: merging the survey chart, the navigation-records clip at 1024px, the clickable blurb overlay, and missing links on voyage briefings 001, 003 and 004. Keep any of these, or drop them with the notes.
@@ -2226,7 +2226,8 @@ Fixes to player-facing pages, including the Fleet Intelligence Archive (`restric
 
 ### spelljammer-nexus/
 
-- **[add]** The Fleet's organisation, as a Nexus record
-  The Fleet's organisation is not classified; cadets know who runs it. Write it as a player Spelljammer Nexus record (distribution section 10), from factions/fleet.html § Structure and ranks and the STAGING Fleet entry: a handful of sector branches, each overseeing a cluster of systems; the Caelestis Sector's two parts, the Corps and the Academy; the reporting chain from Driftwarden to station commander to sector command to a council of admirals; rank shown by gem or pin; and the Fleet's mercantile work. Only what a cadet would be taught.
-  src: Korey, 2026-10-28 (FIA rulings, 12; SA-001 dropped)
+- **[later]** Nexus: factions.html becomes Peoples of the drift; new Perils and creatures page (follow-up PR).
 
+- **[decide]** Standard Spelljammer material on the Nexus, as canon
+  Kept on the Nexus as published Spelljammer that contradicts nothing, with superlatives and Fleet-specific claims stripped, and with no DM page behind it: the hammerhead, squid ship and galleon (spelljamming.html); mercane selling helms, giff mercenaries and their codes, githyanki raiders, pirates and the neogi (factions.html, until it becomes Peoples of the drift); air envelopes merging on contact (wildspace.html). Confirm these as Caelestis canon, or name any to cut or change. The giff homeworld debate was cut.
+  src: section 10 cold review (2026-10-29)

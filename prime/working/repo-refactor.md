@@ -200,8 +200,12 @@ because later sections link into earlier ones.
    structure, Clint, Tarroway, Strake's readings. The FIA only knows what Fleet
    Intelligence would: no Vecna, no Reach, no A.T.L.A.S. by name until the
    crew has made them readable. The terms check already reads `restricted/`.
-10. **Player side**: only what the record already carries. Nothing from prime/
-   crosses.
+10. **Player side** (done, branch `player`: terms and check read the player
+   site; V00n keys and label fixes; the search boundary; the Nexus as cadet
+   curriculum with `galaxy.html`, `fleet.html` and `fleet-time.html`; Fleet
+   dates on the record; shared CSS trimmed): only what the record already
+   carries, plus the cadet curriculum Korey has ruled. Nothing else from
+   prime/ crosses.
 
 ### 5. Per-page procedure
 1. Gather: the page's STAGING entries (by home), its BACKLOG items, the current
@@ -314,6 +318,11 @@ Old path → new path, added by each pull request that moves a page.
 | `prime/factions/order.html#aurel-venn` | `prime/factions/watchers.html#aurel-venn` (the path `order.html` now holds the Order of All; the old ids are never reused) | The Order of All (orders) |
 | `prime/factions/order.html#cycles` | `prime/factions/keepers.html#beacon`, since moved to `prime/factions/discerners.html#beacon` (the path `order.html` now holds the Order of All; the old ids are never reused) | The Order of All (orders) |
 | `prime/factions/keepers.html` | `prime/factions/discerners.html`, every anchor kept (`#beacon`, `#registry`, `#monoliths`, `#counsel`, `#dispatch`); the Keepers are renamed the Discerners; portrait key `keepers` → `discerners`; glossary `#keepers` → `#discerners`, `#keeper` → `#discerner`; the old path is never reused | The Order of All (orders) |
+| `handouts/README.md` | retired, an empty placeholder; the path is never reused | Player side (player) |
+| `wayfinder-path/init.md` | retired, an empty placeholder; the path is never reused | Player side (player) |
+| `stellar-chart/init.md` | retired, an empty placeholder; the path is never reused | Player side (player) |
+| `spelljammer-nexus/crystal-spheres.html` | `spelljammer-nexus/galaxy.html`, "The Erevos Galaxy and the Astral Sea"; the old path is never reused | Player side (player) |
+| `data/nexus.js` | retired; the Nexus index (`spelljammer-nexus/index.html`) holds static rows, and the path is never reused | Player side (player) |
 
 ## Stale branches
 

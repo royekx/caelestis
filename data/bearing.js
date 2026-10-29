@@ -8,6 +8,7 @@
 window.CAELESTIS_BEARING = {
   voyage:   6,
   title:    'What Is Here Has Not Left',
+  date:     '1491.7.12',
   position: 'Tyrant Ship',
   posNote:  'Toril orbit',
   outstanding: 'Choose the instructor who joins the crew, and cross to H\u2019Catha',

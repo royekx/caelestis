@@ -127,14 +127,11 @@ body::after {
   background-repeat: no-repeat;
 }
 
-
-
 /* ── PAGE WRAPPER ── */
 .page-content {
   position: relative;
   z-index: 1;
 }
-
 
 /* ── CONTENT SCRIM ──
    The nebula runs bright in places, and pages whose content sits directly
@@ -161,7 +158,6 @@ body::after {
 @media (max-width: 620px) {
   .content::before { inset: -0.75rem -0.9rem; }
 }
-
 
 /* ── SURFACES ──
    The backdrop does the work. Blocks that used to carry their own fill now
@@ -198,7 +194,6 @@ body::after {
 .log-entry { background: var(--bg-card); }
 .log-entry:hover { background: var(--bg-raised); }
 
-
 /* ── ENTRY PAGES: a panel, not a scrim ──
    List pages read well flat — the rows carry their own surface. Detail
    pages do not: a stat block, prose, and voyage sections sitting loose on
@@ -206,7 +201,7 @@ body::after {
 
    So any page with an entry header gets a real panel behind its content:
    the blue fill, a rule, a hard edge. :has() picks them up without a class
-   on the markup; .content.is-panel forces it where the header is absent. */
+   on the markup. */
 /* On an entity page the scrim is not a scrim — it is the panel the record
    sits on, and it is visible. It used to bleed 2rem past .content on each
    side, which made it wider than the command bar above it. The bar carries
@@ -215,9 +210,7 @@ body::after {
    Horizontal inset is 0 now: the panel is the column, the same width as the
    bar and as the listing panels on every other page. .content's own 2.5rem
    padding keeps the record off the panel edge, so nothing moves inward. */
-body:has(.entry-header) .content::before,
-body:has(.doc-paper) .content::before,
-.content.is-panel::before {
+body:has(.entry-header) .content::before {
   background: var(--bg-card);
   border: 1px solid var(--rule);
   border-radius: 0;
@@ -225,10 +218,8 @@ body:has(.doc-paper) .content::before,
   inset: -1.75rem 0;
 }
 @media (max-width: 620px) {
-  body:has(.entry-header) .content::before,
-  .content.is-panel::before { inset: -0.9rem 0; }
+  body:has(.entry-header) .content::before { inset: -0.9rem 0; }
 }
-
 
 /* ── ROUNDED: PILLS AND TABS ONLY ──
    With the softer palette, square containers hold an edge better than
@@ -695,10 +686,6 @@ body.with-sidebar .page-header {
   text-align: center; padding: 2.5rem 1rem; color: var(--text-muted);
   font-style: italic; font-size: 1.04rem;
 }
-.search-footnote {
-  margin-top: 2.5rem; text-align: center; font-size: 0.92rem;
-  color: var(--text-muted); font-style: italic; line-height: 1.7;
-}
 
 /* ── Per-section inline search box (compact) ── */
 .section-search {
@@ -728,14 +715,12 @@ body.with-sidebar .page-header {
 .section-search-results .search-state { padding: 1.4rem 1rem; }
 
 /* ── Search entry card on the landing grid ── */
-.s-card.search-card .s-icon { color: var(--gold); }
 
 @media (max-width: 640px) {
   .search-row { flex-direction: column; }
   .scope-select select { width: 100%; }
   .terminal-title { font-size: 1.6rem; }
 }
-
 
 /* ── SIDE NAV: GROUP LABELS + HUB LINK ── */
 .side-nav-group-label {
@@ -761,7 +746,6 @@ body.with-sidebar .page-header {
   transition: color 0.2s;
 }
 .side-nav-hub:hover { color: var(--gold-dim); }
-
 
 /* ══════════════════════════════════════════════════════════════
    PORTRAIT TREATMENT — detail pages only
@@ -812,7 +796,6 @@ body.with-sidebar .page-header {
   .portrait-frame:has(img) img,
   .portrait-frame:has(img):hover img { transition: none; transform: none; }
 }
-
 
 /* ══════════════════════════════════════════════════════════════
    PORTRAIT LIGHTBOX — wired by scripts/nav.js

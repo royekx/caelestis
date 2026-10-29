@@ -80,7 +80,7 @@ It holds only what the crew knows and is published with the site.
 
 Urgency and Next Planned Beat live in the overlay, never in `data/`.
 
-**Fields.** Authored (edit): `id slug name number kind parentId giverId fields
+**Fields.** Authored (edit): `id slug name number date kind parentId giverId fields
 objectives rewards voyages seen mentioned linked`. Derived (never edit): `type
 url links parent giver children within items progress`, plus `data/index.json`,
 `data/voyage.js`, `prime/data/dossiers.json`.
@@ -95,6 +95,9 @@ url links parent giver children within items progress`, plus `data/index.json`,
 - The schema tests the key, not the sentence. A DM fact typed into a player
   field passes every check; the two session-run approvals catch it.
 - Nothing from `prime/` reaches `data/` or a player page.
+  The one exception: a companion page (`aspects/`, `wayfinder-path/`,
+  `stellar-chart/`) keeps its password-protected DM mode on the player page,
+  by mutual trust with the players. Leave those modes where they are.
 - The Tracker (`prime/tracker/`) and the Voyages board read both layers. They
   are views; nothing is entered in them.
 - `prime/` and the DM and FIA search indexes are gated in the browser and
@@ -106,8 +109,8 @@ url links parent giver children within items progress`, plus `data/index.json`,
 
 ```bash
 node scripts/data.js derive   # after editing the record: fills derived fields
-node scripts/data.js check    # record, DM layer and pages agree, every local link and anchor resolves; 0 errors before a pull request
-node scripts/terms.js         # retired terms, decision voice, moved paths on prime/ and restricted/; rules in prime/working/terms.json
+node scripts/data.js check    # record, DM layer and pages agree, every local link and anchor resolves, player pages keep the boundary; 0 errors before a pull request
+node scripts/terms.js         # retired terms, decision voice, moved paths on prime/, restricted/ and the player site; rules in prime/working/terms.json
 node scripts/visual.js capture <dir> [--player] / diff <before> <after>   # screenshots and pixel diff; usage in its header
 ```
 
@@ -169,7 +172,7 @@ state what is. Rules: `prime/working/README.md`.
   `/restricted/pagefind/`), runs `guard`, prunes process files, publishes. The
   index is never committed.
 - The player glob in `deploy.yml` is the security boundary: it names only
-  player folders. A new player top-level folder goes into the glob and into the
+  player folders. The companion pages and `search/` stay out of it. A new player top-level folder goes into the glob and into the
   S.E.A.R.C.H. scope selector (`search/index.html`), or it is unsearchable.
 - Pagefind indexes static HTML only. To debug, read the Action's `--verbose`
   log. To test locally, run the Action's `npx -y pagefind --site . --glob "{…}"

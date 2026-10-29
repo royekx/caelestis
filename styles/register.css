@@ -77,7 +77,7 @@
   .board-body { border: 1px solid var(--ice-dim); border-radius: 0 12px 12px 12px; background: var(--bg-card); padding: 1.3rem; }
 
   .register { border: 1px solid var(--rule); }
-  .ent + .ent { border-top: 1px solid var(--rule); }
+
   .ent[hidden] { display: none; }
   .ent-row {
     width: 100%; display: grid; grid-template-columns: 34px 1fr auto auto auto;
@@ -120,7 +120,7 @@
   .stub-desc { font-size: 0.95rem; line-height: 1.6; color: var(--text-dim); margin: 0; }
   .det-sites { display: flex; align-items: baseline; gap: 0.8rem; flex-wrap: wrap; }
   .det-label { font-family: 'Cinzel', serif; font-size: 0.671rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
-  .stub-open { align-self: flex-start; font-family: 'Cinzel', serif; font-size: 0.696rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ice-dim); text-decoration: none; }
+  .stub-open { align-self: flex-start; font-family: 'Cinzel', serif; font-size: 0.696rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ice-dim); }
   .stub-open:hover { color: var(--ice); }
   .result-line { font-family: 'Cinzel', serif; font-size: 0.708rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.6rem; display: flex; align-items: baseline; gap: 0.9rem; }
   .clear-btn { margin-left: auto; font-family: 'Cinzel', serif; font-size: 0.708rem; letter-spacing: 0.13em; text-transform: uppercase; border: 1px solid var(--rule); border-radius: 999px; background: transparent; color: var(--ice-dim); padding: 0.22rem 0.75rem; cursor: pointer; }
@@ -412,6 +412,78 @@ a.ent-row:hover .ent-name { color: var(--gold-light); }
 .ent-face img {
   width: 100%; height: 100%; object-fit: cover; display: block;
 }
+
+/* ─────────────────────────────────────────────────────────────────
+   SECTION 7b — THE SPELLJAMMER NEXUS
+   The Nexus index rows and the cadet manuals' source strip, faction
+   briefs and vessel entries. These lived inline on each Nexus page.
+   ───────────────────────────────────────────────────────────────── */
+.nexus-list { display: flex; flex-direction: column; }
+.nexus-entry {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--gold-rule);
+  text-decoration: none;
+  transition: padding-left 0.18s;
+}
+.nexus-entry:first-child { border-top: 1px solid var(--gold-rule); }
+.nexus-entry:hover { padding-left: 0.4rem; }
+.nexus-entry-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.01rem; font-weight: 600;
+  color: var(--gold); margin-bottom: 0.2rem;
+  transition: color 0.18s;
+}
+.nexus-entry:hover .nexus-entry-name { color: #e8c87a; }
+.nexus-entry-sub { font-size: 0.963rem; color: var(--text-dim); font-style: italic; }
+.nexus-badge {
+  font-family: 'Cinzel', serif;
+  font-size: 0.671rem; letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--gold-rule);
+  color: var(--text-muted);
+  white-space: nowrap; flex-shrink: 0;
+}
+.nexus-entry.restricted .nexus-entry-name { color: rgba(201,153,58,0.6); }
+.nexus-entry.restricted:hover .nexus-entry-name { color: rgba(201,153,58,0.85); }
+.nexus-entry.restricted { border-top: 1px solid rgba(139,32,32,0.2) !important; }
+.nexus-badge.restricted { border-color: rgba(139,32,32,0.4); color: rgba(180,60,60,0.8); }
+
+/* The source strip: both halves wrap on a phone instead of running off the page. */
+.doc-source {
+  font-family: 'Cinzel', serif; font-size: 0.696rem;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--text-muted); border: 1px solid var(--gold-rule);
+  padding: 0.5rem 0.8rem; margin-bottom: 1.6rem;
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.3rem 1rem;
+}
+.doc-source-title { color: var(--gold-dim); }
+.faction-entry { padding: 0.8rem 0; border-bottom: 1px solid rgba(201,153,58,0.07); }
+.faction-entry:last-child { border-bottom: none; }
+.faction-header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.7rem; margin-bottom: 0.35rem; }
+.faction-name { font-family: 'Cinzel', serif; font-size: 0.97rem; font-weight: 600; color: var(--gold); }
+.faction-disposition {
+  font-family: 'Cinzel', serif; font-size: 0.647rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--text-muted); border: 1px solid var(--gold-rule);
+  padding: 0.12rem 0.35rem;
+}
+.faction-disposition.hostile { color: rgba(180,40,40,0.7); border-color: rgba(139,32,32,0.3); }
+.faction-disposition.neutral { color: rgba(201,153,58,0.5); }
+.faction-disposition.variable { color: rgba(180,120,40,0.7); border-color: rgba(150,100,30,0.3); }
+.vessel-entry { padding: 0.65rem 0; border-bottom: 1px solid rgba(201,153,58,0.07); }
+.vessel-entry:last-child { border-bottom: none; }
+.vessel-name { font-family: 'Cinzel', serif; font-size: 0.963rem; color: var(--gold); margin-bottom: 0.25rem; }
+/* Manual prose: paragraphs breathe, and a link reads as a link. */
+.content > .doc-source ~ p + p { margin-top: 0.85rem; }
+.content > .doc-source ~ p a {
+  color: var(--ice); text-decoration: underline;
+  text-decoration-color: var(--ice-dim); text-underline-offset: 0.15em;
+}
+.content > .doc-source ~ p a:hover { color: var(--gold-light); }
 
 /* ─────────────────────────────────────────────────────────────────
    SECTION 8 — THE REFERENCE LISTS

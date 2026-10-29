@@ -13,7 +13,7 @@
  * proves that the record is consistent with itself, with the DM layer under
  * prime/data/, and with the pages that display it.
  *
- * AUTHORED  id slug name number kind parentId giverId fields objectives
+ * AUTHORED  id slug name number date kind parentId giverId fields objectives
  *           rewards voyages seen mentioned linked
  * DERIVED   type url links parent giver children within items progress
  *           data/index.json  data/voyage.js  prime/data/dossiers.json
@@ -62,19 +62,34 @@ const SETS = [
     fields: ['Type', 'Related Character(s)', 'Current State', 'Overview (Player)', 'Status'] }
 ];
 
-const AUTHORED = ['id', 'slug', 'name', 'number', 'kind', 'parentId', 'giverId', 'fields',
+const AUTHORED = ['id', 'slug', 'name', 'number', 'date', 'kind', 'parentId', 'giverId', 'fields',
   'objectives', 'rewards', 'voyages', 'seen', 'mentioned', 'linked'];
 const DERIVED = ['type', 'url', 'links', 'parent', 'giver', 'children', 'within', 'items', 'progress'];
 // The order keys are written in. Authored first, derived last, so a diff of a
 // session run reads top-down as "what was entered" then "what followed".
-const KEY_ORDER = ['id', 'type', 'slug', 'name', 'number', 'kind', 'parentId', 'giverId',
+const KEY_ORDER = ['id', 'type', 'slug', 'name', 'number', 'date', 'kind', 'parentId', 'giverId',
   'fields', 'objectives', 'rewards', 'voyages', 'seen', 'mentioned', 'linked',
   'url', 'links', 'parent', 'giver', 'children', 'within', 'items', 'progress'];
 // Which sets may carry which of the optional authored keys.
-const ONLY = { number: ['session'], kind: ['location', 'quest'], parentId: ['location', 'quest'],
+const ONLY = { number: ['session'], date: ['session'], kind: ['location', 'quest'], parentId: ['location', 'quest'],
   giverId: ['quest'], objectives: ['quest'], rewards: ['quest'] };
 // What a giver may be.
 const GIVERS = ['npc', 'pc', 'faction'];
+// A voyage's rough in-game date in Fleet time: cycle.kindling.ember, or a span
+// of two such dates joined by an en dash ("1491.7.3–1491.7.12"). Sixteen
+// kindlings to a cycle, about thirty embers to a kindling.
+const FLEET_DATE = /^(\d{1,4})\.(\d{1,2})\.(\d{1,2})$/;
+function fleetDate(s) {
+  const parts = String(s).split('–');
+  if (parts.length > 2) return null;
+  const ds = parts.map(p => FLEET_DATE.exec(p));
+  if (ds.some(m => !m)) return null;
+  const n = ds.map(m => [+m[1], +m[2], +m[3]]);
+  if (n.some(([, k, e]) => k < 1 || k > 16 || e < 1 || e > 31)) return null;
+  const key = ([c, k, e]) => (c * 16 + k) * 32 + e;
+  if (n.length === 2 && key(n[1]) <= key(n[0])) return null;
+  return { from: n[0], to: n[n.length - 1], key, text: d => d.join('.') };
+}
 
 const VOYAGE_STATES = ['played', 'next', 'planned'];
 const VOYAGE_KEYS = ['number', 'title', 'working', 'state', 'source', 'playerRecord', 'crewLog', 'anchor'];
@@ -130,6 +145,8 @@ function shape(sets, err) {
         if (typeof r[k] !== 'string' || !r[k].trim()) err(`${at}: ${k} is missing`);
       });
       if (s.type === 'session' && !Number.isInteger(r.number)) err(`${at}: a voyage needs a whole number`);
+      if (r.date !== undefined && (typeof r.date !== 'string' || !fleetDate(r.date)))
+        err(`${at}: date "${r.date}" is not a Fleet date: cycle.kindling.ember (kindling 1–16, ember 1–31), or an ascending span joined by an en dash`);
       if (!isObj(r.fields)) err(`${at}: fields is missing`);
       else Object.keys(r.fields).forEach(k => {
         if (!s.fields.includes(k)) err(`${at}: "${k}" is not a field ${s.key} have`);
@@ -390,6 +407,9 @@ function checkPage(r, err) {
     const eyebrow = /class="page-eyebrow"[^>]*>([\s\S]*?)<\/div>/.exec(src);
     if (!title || text(title[1]) !== plain(r.name)) err(`${at}: page title reads "${title ? text(title[1]) : 'nothing'}", record says "${r.name}"`);
     if (!eyebrow || text(eyebrow[1]) !== `Voyage ${pad(r.number)}`) err(`${at}: eyebrow reads "${eyebrow ? text(eyebrow[1]) : 'nothing'}", expected "Voyage ${pad(r.number)}"`);
+    const date = region(src, 'date');
+    if (r.date && date == null) err(`${at}: no date region; the record gives ${r.date}`);
+    else if (date != null && text(date) !== plain(r.date || '')) err(`${at}: date reads "${text(date)}", record gives "${r.date || 'none'}"`);
     return;
   }
 
@@ -472,6 +492,11 @@ function checkPage(r, err) {
   const list = a => a.map(v => pad(v.number)).join(', ') || 'none';
   if (list(latest) !== list(rec.slice(0, 1))) err(`${at}: latest voyage block is ${list(latest)}, record's latest is ${list(rec.slice(0, 1))}`);
   if (list(prior) !== list(rec.slice(1))) err(`${at}: Previous Voyages holds ${list(prior)}, record gives ${list(rec.slice(1))}`);
+  // The Previous Voyages summary names its voyages, oldest first: "V001 · V002".
+  const keys = /<span class="prior-keys">([\s\S]*?)<\/span>/.exec(region(src, 'priorVoyages') || '');
+  const wantKeys = rec.slice(1).map(v => 'V' + pad(v.number)).reverse().join(' · ');
+  if (keys && text(keys[1]) !== wantKeys) err(`${at}: Previous Voyages keys read "${text(keys[1])}", record gives "${wantKeys}"`);
+  if (!keys && wantKeys) err(`${at}: Previous Voyages has no prior-keys label; it should read "${wantKeys}"`);
   latest.concat(prior).forEach(p => {
     const v = rec.find(x => x.number === p.number);
     if (!v) return;
@@ -651,6 +676,58 @@ function checkLinks(err) {
   });
 }
 
+// ── player boundary ────────────────────────────────────────────────────────
+// The player index is built from the glob in deploy.yml, so that glob is what
+// "a player page" means here. Every page it matches carries one bare
+// section:<top dir> filter on <body> (a root page uses its own name, and the
+// gate is "home"), or S.E.A.R.C.H. cannot scope it. And no player page links
+// into the DM wiki, or into the FIA except from the Nexus index, which holds
+// the FIA's door.
+function globRe(g) {
+  let re = '';
+  for (let i = 0; i < g.length; i++) {
+    const c = g[i];
+    if (c === '*') {
+      if (g[i + 1] === '*') { i++; if (g[i + 1] === '/') { i++; re += '(?:.*/)?'; } else re += '.*'; }
+      else re += '[^/]*';
+    } else re += c.replace(/[.+?^$()|[\]\\]/g, '\\$&');
+  }
+  return new RegExp('^' + re + '$');
+}
+function playerGlob() {
+  const y = fs.readFileSync(path.join(ROOT, '.github', 'workflows', 'deploy.yml'), 'utf8');
+  const m = /--site \.\s*\\\s*--glob "\{([^}"]*)\}"/.exec(y);
+  if (!m) throw new Error('no player --glob found in .github/workflows/deploy.yml');
+  return m[1].split(',').map(globRe);
+}
+function checkPlayer(err) {
+  const globs = playerGlob();
+  const pages = [];
+  (function walk(dir) {
+    fs.readdirSync(path.join(ROOT, dir || '.')).forEach(f => {
+      const rel = dir ? `${dir}/${f}` : f;
+      if (/^(\.|node_modules$|prime$|restricted$|docs$|scripts$|styles$|assets$|data$|pagefind$)/.test(rel)) return;
+      if (fs.statSync(path.join(ROOT, rel)).isDirectory()) return walk(rel);
+      if (f.endsWith('.html') && !f.endsWith('-template.html')) pages.push(rel);
+    });
+  })('');
+  pages.forEach(rel => {
+    const src = fs.readFileSync(path.join(ROOT, rel), 'utf8');
+    if (globs.some(re => re.test(rel))) {
+      const top = rel.includes('/') ? rel.split('/')[0] : rel === 'index.html' ? 'home' : rel.replace(/\.html$/, '');
+      const body = /<body\b[^>]*>/.exec(src);
+      const f = body && /data-pagefind-filter="([^"]*)"/.exec(body[0]);
+      if (!f) err(`${rel}: <body> carries no data-pagefind-filter; it should read section:${top}`);
+      else if (f[1] !== `section:${top}`) err(`${rel}: <body> filter reads "${f[1]}", it should read section:${top}`);
+    }
+    matches(/["'`]((?:\.{1,2}\/)*(prime|restricted)\/[^"'`]*)["'`]/g, src).forEach(m => {
+      const t = path.posix.normalize(path.posix.join(path.posix.dirname(rel), m[1]));
+      if (t.startsWith('prime/')) err(`${rel}: links ${m[1]}; no player page links into prime/`);
+      else if (t.startsWith('restricted/') && rel !== 'spelljammer-nexus/index.html') err(`${rel}: links ${m[1]}; only the Nexus index links into restricted/`);
+    });
+  });
+}
+
 // ── prose ──────────────────────────────────────────────────────────────────
 // CLAUDE.md § Writing: three or more negations in one sentence is a rewrite.
 const NEG = /\b(no|not|never|nothing|none|without|nor|neither|nobody|nowhere)\b|n't\b/gi;
@@ -714,7 +791,14 @@ function check() {
   const latest = played.length ? played[played.length - 1] : 0;
   sets.sessions.forEach(s => {
     if (s.slug !== `voyage-${pad(s.number)}`) err(`${s.id}: slug should be voyage-${pad(s.number)}`);
+    if (!s.date) err(`${s.id}: Voyage ${pad(s.number)} has no date; give its rough Fleet date (cycle.kindling.ember)`);
   });
+  // Fleet dates run forward: no voyage starts before the one before it ends.
+  sets.sessions.slice().sort((a, b) => a.number - b.number).reduce((prev, s) => {
+    const d = s.date && fleetDate(s.date);
+    if (prev && d && d.key(d.from) < prev.key(prev.to)) err(`${s.id}: Voyage ${pad(s.number)} starts ${d.text(d.from)}, before Voyage ${pad(s.number - 1)} ends ${prev.text(prev.to)}`);
+    return d || prev;
+  }, null);
 
   // 3. references and voyage numbers
   recs.forEach(r => {
@@ -771,6 +855,7 @@ function check() {
   SETS.forEach(s => guarded(s.index, () => checkIndex(s, fresh[s.key], err)));
   guarded('links', () => checkLinks(err));
   guarded('styles', () => checkStyles(err));
+  guarded('player pages', () => checkPlayer(err));
 
   // 6. the command bar and the current bearing
   guarded('data/bearing.js', () => {
@@ -784,6 +869,19 @@ function check() {
     if (!v || parseInt(v[1], 10) !== latest) err(`data/bearing.js: voyage is ${v ? v[1] : 'missing'}, the record's latest is ${latest}`);
     if (cur && plain(str('title')) !== plain(cur.name)) err(`data/bearing.js: title is "${str('title')}", the record's latest voyage is "${cur.name}"`);
     matches(/'([^']+\.html)'/g, b).forEach(m => { if (!exists(m[1])) err(`data/bearing.js: ${m[1]} does not exist`); });
+    // The current Fleet date is where the latest voyage ends.
+    const cd = cur && cur.date && fleetDate(cur.date);
+    const now = cd ? cd.text(cd.to) : null;
+    if (now && str('date') !== now) err(`data/bearing.js: date is ${str('date') || 'missing'}, the latest voyage ends ${now}`);
+    if (now) {
+      const pages = ['spelljammer-nexus/fleet-time.html', `bearings/voyage-${pad(latest)}.html`, 'bearings/index.html'];
+      pages.forEach(pg => {
+        if (!exists(pg)) return;
+        const shown = regions(fs.readFileSync(path.join(ROOT, pg), 'utf8'), 'current-date').map(text);
+        if (!shown.length) err(`${pg}: no current-date region; it should read ${now}`);
+        shown.forEach(t => { if (t !== now) err(`${pg}: current date reads "${t}", the latest voyage ends ${now}`); });
+      });
+    }
     const page = `voyages/voyage-${pad(latest)}.html`;
     if (latest && !new RegExp("voyage:\\s*'" + page.replace(/[.]/g, '\\.') + "'").test(b)) err(`data/bearing.js: links.voyage should be ${page}`);
     // The bar quotes each quest's name and progress, and a quoted number is a
