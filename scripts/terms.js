@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * terms.js — keep retired terms, decision voice and moved paths off the DM wiki and the FIA.
+ * terms.js — keep retired terms, decision voice and moved paths off the DM wiki, the FIA and the player site.
  *
  *   node scripts/terms.js            summary by folder; exit 1 if a finished folder has a retired hit
  *   node scripts/terms.js --list     every hit, file:line, with what to use instead
@@ -15,12 +15,14 @@
  *            matched on the text with tags stripped, or on the raw line when "raw": true
  *            (for markup such as a bare "Open" label or an is-open class)
  *   moved    old page paths that must not be linked (old → new)
- *   scan     top folders to read (prime, restricted)
+ *   scan     what to read: top folders (prime, restricted, the player folders) and single
+ *            root pages by their .html path (hub.html, index.html)
  *   finished folders (or single pages, by their .html path) whose retired-term and moved-path hits fail the check
  *   allow    "path:regex" pairs for legitimate uses (a quoted archive line, say)
  *
- * Scans the folders in terms.json 'scan' (the DM wiki prime/ and the FIA's restricted/):
- * every .html file and prime/timeline/timeline.json, skipping prime/working/ and prime/data/. Text inside <style> is skipped; everything else, including
+ * Scans the entries in terms.json 'scan' (the DM wiki prime/, the FIA's restricted/, the
+ * player folders and the player root pages): every .html file and prime/timeline/timeline.json,
+ * skipping prime/working/, prime/data/ and any pagefind/ index. Text inside <style> is skipped; everything else, including
  * inline page data, is read, because that is what the reader sees. Pruned from
  * deploy like data.js.
  */
@@ -48,12 +50,17 @@ function walk(dir, out) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     const p = path.join(dir, e.name);
     const rel = path.relative(ROOT, p).split(path.sep).join('/');
-    if (e.isDirectory()) { if (!/^prime\/(working|data)$/.test(rel)) walk(p, out); }
+    if (e.isDirectory()) { if (!/^prime\/(working|data)$|(^|\/)pagefind$/.test(rel)) walk(p, out); }
     else if (/\.html$/.test(e.name) || rel === 'prime/timeline/timeline.json') out.push(rel);
   }
   return out;
 }
-let files = (conf.scan || ['prime']).reduce((acc, d) => fs.existsSync(path.join(ROOT, d)) ? walk(path.join(ROOT, d), acc) : acc, []);
+// A scan entry is a folder (walked) or a single page (hub.html, index.html at the root).
+let files = (conf.scan || ['prime']).reduce((acc, d) => {
+  const p = path.join(ROOT, d);
+  if (!fs.existsSync(p)) return acc;
+  return fs.statSync(p).isDirectory() ? walk(p, acc) : acc.concat(d);
+}, []);
 if (only.length) files = files.filter(f => only.some(o => path.join(ROOT, f).startsWith(o)));
 
 // Blank out <style> blocks and HTML comments, keeping line numbers.
@@ -82,7 +89,7 @@ if (LIST) {
   for (const h of hits) console.log(`${h.finished && h.kind !== 'voice' ? 'error' : 'warn '}  ${h.f}:${h.n}  [${h.kind}] "${h.term}" → ${h.note}`);
 } else {
   const by = {};
-  for (const h of hits) { const k = h.f.split('/').slice(0, 2).join('/'); (by[k] = by[k] || { retired: 0, moved: 0 }); by[k][h.kind] = (by[k][h.kind] || 0) + 1; }
+  for (const h of hits) { const seg = h.f.split('/'); const k = /^(prime|restricted)$/.test(seg[0]) ? seg.slice(0, 2).join('/') : seg[0]; (by[k] = by[k] || { retired: 0, moved: 0 }); by[k][h.kind] = (by[k][h.kind] || 0) + 1; }
   Object.keys(by).sort().forEach(k => console.log(`${k.padEnd(22)} ${String(by[k].retired).padStart(4)} retired  ${String(by[k].moved).padStart(3)} moved${FINISHED.some(p => (k + '/').startsWith(p)) ? '  (finished)' : ''}`));
   console.log(`${files.length} files · ${hits.length} hits · ${hard.length} errors in finished folders. Run with --list for each hit, --voice for decision voice.`);
 }

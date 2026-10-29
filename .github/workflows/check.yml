@@ -31,5 +31,5 @@ jobs:
       - name: Check the record against the pages
         run: node scripts/data.js check
 
-      - name: Check DM pages for retired terms and moved paths
+      - name: Check pages for retired terms and moved paths
         run: node scripts/terms.js

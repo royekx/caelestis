@@ -106,8 +106,8 @@ url links parent giver children within items progress`, plus `data/index.json`,
 
 ```bash
 node scripts/data.js derive   # after editing the record: fills derived fields
-node scripts/data.js check    # record, DM layer and pages agree, every local link and anchor resolves; 0 errors before a pull request
-node scripts/terms.js         # retired terms, decision voice, moved paths on prime/ and restricted/; rules in prime/working/terms.json
+node scripts/data.js check    # record, DM layer and pages agree, every local link and anchor resolves, player pages keep the boundary; 0 errors before a pull request
+node scripts/terms.js         # retired terms, decision voice, moved paths on prime/, restricted/ and the player site; rules in prime/working/terms.json
 node scripts/visual.js capture <dir> [--player] / diff <before> <after>   # screenshots and pixel diff; usage in its header
 ```
 

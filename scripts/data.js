@@ -651,6 +651,58 @@ function checkLinks(err) {
   });
 }
 
+// ── player boundary ────────────────────────────────────────────────────────
+// The player index is built from the glob in deploy.yml, so that glob is what
+// "a player page" means here. Every page it matches carries one bare
+// section:<top dir> filter on <body> (a root page uses its own name, and the
+// gate is "home"), or S.E.A.R.C.H. cannot scope it. And no player page links
+// into the DM wiki, or into the FIA except from the Nexus index, which holds
+// the FIA's door.
+function globRe(g) {
+  let re = '';
+  for (let i = 0; i < g.length; i++) {
+    const c = g[i];
+    if (c === '*') {
+      if (g[i + 1] === '*') { i++; if (g[i + 1] === '/') { i++; re += '(?:.*/)?'; } else re += '.*'; }
+      else re += '[^/]*';
+    } else re += c.replace(/[.+?^$()|[\]\\]/g, '\\$&');
+  }
+  return new RegExp('^' + re + '$');
+}
+function playerGlob() {
+  const y = fs.readFileSync(path.join(ROOT, '.github', 'workflows', 'deploy.yml'), 'utf8');
+  const m = /--site \.\s*\\\s*--glob "\{([^}"]*)\}"/.exec(y);
+  if (!m) throw new Error('no player --glob found in .github/workflows/deploy.yml');
+  return m[1].split(',').map(globRe);
+}
+function checkPlayer(err) {
+  const globs = playerGlob();
+  const pages = [];
+  (function walk(dir) {
+    fs.readdirSync(path.join(ROOT, dir || '.')).forEach(f => {
+      const rel = dir ? `${dir}/${f}` : f;
+      if (/^(\.|node_modules$|prime$|restricted$|docs$|scripts$|styles$|assets$|data$|pagefind$)/.test(rel)) return;
+      if (fs.statSync(path.join(ROOT, rel)).isDirectory()) return walk(rel);
+      if (f.endsWith('.html') && !f.endsWith('-template.html')) pages.push(rel);
+    });
+  })('');
+  pages.forEach(rel => {
+    const src = fs.readFileSync(path.join(ROOT, rel), 'utf8');
+    if (globs.some(re => re.test(rel))) {
+      const top = rel.includes('/') ? rel.split('/')[0] : rel === 'index.html' ? 'home' : rel.replace(/\.html$/, '');
+      const body = /<body\b[^>]*>/.exec(src);
+      const f = body && /data-pagefind-filter="([^"]*)"/.exec(body[0]);
+      if (!f) err(`${rel}: <body> carries no data-pagefind-filter; it should read section:${top}`);
+      else if (f[1] !== `section:${top}`) err(`${rel}: <body> filter reads "${f[1]}", it should read section:${top}`);
+    }
+    matches(/["'`]((?:\.{1,2}\/)*(prime|restricted)\/[^"'`]*)["'`]/g, src).forEach(m => {
+      const t = path.posix.normalize(path.posix.join(path.posix.dirname(rel), m[1]));
+      if (t.startsWith('prime/')) err(`${rel}: links ${m[1]}; no player page links into prime/`);
+      else if (t.startsWith('restricted/') && rel !== 'spelljammer-nexus/index.html') err(`${rel}: links ${m[1]}; only the Nexus index links into restricted/`);
+    });
+  });
+}
+
 // ── prose ──────────────────────────────────────────────────────────────────
 // CLAUDE.md § Writing: three or more negations in one sentence is a rewrite.
 const NEG = /\b(no|not|never|nothing|none|without|nor|neither|nobody|nowhere)\b|n't\b/gi;
@@ -771,6 +823,7 @@ function check() {
   SETS.forEach(s => guarded(s.index, () => checkIndex(s, fresh[s.key], err)));
   guarded('links', () => checkLinks(err));
   guarded('styles', () => checkStyles(err));
+  guarded('player pages', () => checkPlayer(err));
 
   // 6. the command bar and the current bearing
   guarded('data/bearing.js', () => {
