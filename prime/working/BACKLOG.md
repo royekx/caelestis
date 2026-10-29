@@ -980,10 +980,8 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ### opposition/vecna.html (early planning)
 
-- **[decide]** How many hearts a mark needs *(shape)*
-  Problem: if a mark needs only one heart, Vecna can open another world's heart in a system he already holds, and the rest of the stroke never matters. Fix under consideration: a mark is a system, and it needs several of its worlds' hearts opened and linked, each with its own Monolith. That multiplies the conditions and is why the eye takes so long. The one residue piece the colony carries from world to world becomes the bottleneck and the crew's best target; a stroke matters again, because replacing a lost mark means a whole new system on it.
-  Options: (a) every world in the system, destroyed worlds included (slowest, cleanest); (b) a set number for every mark, for example three; (c) most of the system's worlds.
-  Sub-questions: does every heart in a mark link to Oerth, or the system's hearts to each other and one of them to Oerth? How the current count is restated (the two opened hearts in two neighbouring upper-lid systems; Nowhere found).
+- **[decide]** What follows from whole-system marks *(shape)*
+  Ruled: a mark needs every world in its system (STAGING § The inscription plane). Open: whether moons count as worlds with hearts of their own; whether every heart in a mark links to Oerth, or the system's hearts link to each other and one links out; how the current count is restated (the two upper-lid systems partway done, Nowhere found); and the refit, which should score marks toward systems with few worlds, using the survey's rolls.
   src: Korey, 2026-10-29
 
 - **[later]** A node log for player impact

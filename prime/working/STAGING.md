@@ -17,7 +17,8 @@ when a ruling changes; delete it once the page carries it. See
 - The eye forms through the links, not through light. Nothing between a heart and Oerth blocks it, and no observer's eyes see it.
 - A stroke is everything that lands on one point of the eye: a line through the galaxy parallel to the Oerth–Erevos line, with a margin of width around it. Any world on or near a stroke can carry that point.
 - A mark is the heart actually chosen on a stroke. Vecna chooses marks for practical reasons: a Monolith stands there, the heart has been found, a Zenith is coming. Marks sit at different distances and heights along their strokes, so on a top-down chart they zigzag across the galaxy and their links cross at random. Only on the inscription plane do they form the eye.
-- The plan can change. A lost mark is replaced by another world on the same stroke.
+- A mark is a whole system. Every world in it, destroyed worlds included, must have its heart found, opened and linked, and each link needs a Monolith on that world. Vecna therefore favours systems with few worlds, and a mark takes years of work.
+- The plan can change. A lost mark is replaced by another system on the same stroke.
 - Vecna also has N'ghathrod open and link hearts the figure does not need, as backups and to muddy the pattern. N'ghathrod goes where he is told and cannot tell the needed hearts from the rest.
 - Play (DM voice): the crew can reach the eye three ways, all kept open. N'ghathrod's top-down chart of marks done and planned looks haphazard, but the marks share one alignment seen from the right angle. Oerth's heart shows the eye in its sky. Lore about Vecna sends them back to the chart. This is late Arc 3 or Arc 4 material; plant seeds earlier.
 
