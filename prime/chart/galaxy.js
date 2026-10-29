@@ -163,19 +163,25 @@
       oct[o]++;
       out.push({ i: out.length, pos: p, rc });
     }
-    /* Heights, from their own seed so the map positions stay put: most in
-       the disc, a good share in the halo above and below it, and a scattered
-       few notably higher on both sides. A spiral's thin disc is very flat,
-       about a fiftieth of its radius; the chart keeps that feel. */
+    /* Heights, from their own seed so the map positions stay put. Two
+       thirds lie in the thin disc, with a little bob; the rest thin out
+       steadily through the thick disc into the halo, above and below the
+       plane alike, up to 18. A spiral's thin disc is very flat, about a
+       fiftieth of its radius; the chart keeps that feel, and the halo has
+       no floor or layer of its own, so a high system is unremarkable
+       anywhere. */
     const H = rng(7171);
     out.forEach(f => {
-      const roll = H(), side = H() < 0.5 ? -1 : 1, g = gauss(H);
-      let y, band;
-      if (roll < 0.74) { y = Math.max(-3, Math.min(3, g * 1.2)); band = 'disc'; }            // the thin disc, with a little bob
-      else if (roll < 0.95) { y = side * Math.min(9, 3 + Math.abs(g) * 2.5); band = 'thick'; } // the thick disc
-      else { y = side * (11 + H() * 7); band = 'high'; }                                       // a handful, at most 18
-      f.v = toScene(f.pos, y); f.band = band; delete f.rc;
+      const roll = H(), side = H() < 0.5 ? -1 : 1, g = gauss(H), u = H();
+      const y = roll < 0.66 ? Math.max(-3, Math.min(3, g * 1.2))       // the thin disc
+        : side * (3 + 15 * (1 - Math.pow(u, 1 / 1.5)));                 // tapering from 3 to 18
+      f.v = toScene(f.pos, y); f.band = Math.abs(y) <= 3 ? 'disc' : Math.abs(y) <= 9 ? 'thick' : 'high'; delete f.rc;
     });
+    /* A few systems stand high in the halo where the upper lid's hearts
+       rise, so a heart up there keeps company like any other halo system:
+       catalogue index and height. */
+    const COMPANY = { 91: 15.1, 140: 15.1, 110: 10.5, 141: 11.2, 159: 17.8, 185: -11.2, 214: 12.8, 303: 10.5, 317: -16.8 };
+    Object.entries(COMPANY).forEach(([i, y]) => { const f = out[i]; f.v = toScene(f.pos, y); f.band = 'high'; });
     return out;
   })();
   /* ── The inscription, fitted to the catalogue ──────────────────
@@ -196,21 +202,21 @@
   const bandOf = y => Math.abs(y) <= 3 ? 'disc' : Math.abs(y) <= THICK_LIMIT ? 'thick' : 'halo';
   /* HEART_FIT: written by scripts/eye-fit.js */
   const HEART_FIT = [
-    [201, 118.94],
-    [226, 54],
-    [295, 108],
-    [200, 131.21],
-    [283, 51],
-    [208, 101.01],
-    [63, 66],
-    [252, 46.46],
+    [201, 118.84],
+    [159, 51],
+    [300, 170.66],
+    [266, 172.21],
+    [102, 111],
+    [208, 102],
+    [63, 64.77],
+    [252, 44.43],
     [55, 66],
-    [106, 72],
-    [210, 159],
-    [95, 100.6],
+    [106, 73.8],
+    [290, 169.77],
+    [337, 96],
     [258, 51],
-    [172, 62.78],
-    [105, 114]
+    [163, 54.46],
+    [30, 90.69]
   ];
   /* /HEART_FIT */
   const HEARTS = HEART_FIT.map(([ref, t], i) => {

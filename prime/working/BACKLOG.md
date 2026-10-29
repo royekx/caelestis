@@ -325,7 +325,7 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-29
 
 - **[decide]** How wide the eye is, and how high its upper lid stands
-  The chart's eye is 90 degrees wide in Oerth's sky (EYE_FOV in prime/chart/galaxy.js). Greyspace stands 24 units above the plane, so Oerth looks down on Erevos about 18 degrees below its horizon, and the upper lid has little sky to rise into before its sight lines leave the galaxy. At 90 degrees, four of the six upper-lid hearts sit in the halo, 15 to 18 units up; at 80 degrees two do, with fewer link crossings from above (7 against 10); at 100 degrees two upper-lid sight lines find no place at 18 units or lower. Options: keep 90; narrow the eye; let the upper lid stand higher than the catalogue's highest systems; or squash the template's lid height. Pages say "ninety degrees" (opposition/vecna.html, chart/index.html).
+  Ruled (Korey, 2026-10-29): the eye stays 90 degrees wide in Oerth's sky (EYE_FOV in prime/chart/galaxy.js), and the high upper-lid hearts must read as ordinary halo systems. Greyspace stands 24 units above the plane, so Oerth looks down on Erevos about 18 degrees below its horizon, and the upper lid has little sky to rise into. Four of the six upper-lid hearts sit 10 to 18 units up; the catalogue's halo thins steadily from 3 to 18 units with systems at those heights across the galaxy and beside each high heart, and the fit holds the hearts to as many high systems as chance would give fifteen catalogue systems. Still open: whether to stage this, since nothing on a page depends on it beyond "ninety degrees" (opposition/vecna.html, chart/index.html).
   src: chart refit for the view from Oerth's heart, 2026-10-29
 
 - **[later]** An Oerth sky chart as the clue

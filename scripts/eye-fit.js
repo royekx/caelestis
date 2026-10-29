@@ -14,7 +14,8 @@
      (a) the exact eye from Oerth: every candidate is on its line
      (b) gibberish from above: lid and iris links crossing, hearts in all
          eight wedges around the core, no affine copy of the eye, no clumps
-     (c) heights in the disc, the thick disc or the halo, iris hearts low
+     (c) heights as common as the catalogue's: no more hearts high up than
+         chance would put there, iris hearts low
      (d) small moves
    The search is seeded, so it gives the same layout on every run.
 
@@ -64,12 +65,24 @@ function valid(v) {
 const clearOf = (v, self) => FILLERS.every(f => f === self || flatD(v, f.v) >= 4);
 
 const NEW_COST = 4, MOVE_W = 0.15, CAP = 40, MIN_S = 25;   // MIN_S: no heart within 25 units of Oerth
+/* A heart's height costs what that height is rare in the catalogue: the
+   log of how much less common it is than the thin disc, read from the
+   catalogue's own heights (two-unit bins, lightly smoothed). Iris hearts
+   pay four times over, so the iris keeps low. */
+const BIN = 2, NB = Math.ceil(Y_CAP / BIN) + 1;
+const counts = new Array(NB).fill(0);
+FILLERS.forEach(f => { counts[Math.min(NB - 1, Math.floor(Math.abs(f.v[1]) / BIN))]++; });
+const dens = counts.map((c, k) => ((counts[k - 1] || c) + 2 * c + (counts[k + 1] || c)) / 4 + 0.5);
+const rarity = h => Math.log(dens[0] / dens[Math.min(NB - 1, Math.floor(h / BIN))]);
 function heightCost(y, wasHigh, iris) {
   const h = Math.abs(y);
   if (h <= 3) return 0;
-  if (h <= THICK_LIMIT) return iris ? 3 : 1;
-  return (wasHigh ? 1 : 3) + 0.15 * (h - THICK_LIMIT) + (iris ? 6 : 0);
+  return 0.8 * rarity(h) * (iris ? 4 : 1);
 }
+/* The hearts as a set should sit no higher than chance: as many above 10,
+   and above 14, as fifteen catalogue systems would. */
+const share = t => FILLERS.filter(f => Math.abs(f.v[1]) > t).length / FILLERS.length;
+const EXPECT10 = 15 * share(10), EXPECT14 = 15 * share(14);
 
 // ── candidates for each eye point ───────────────────────────────
 const cands = EYE2D.map((e, i) => {
@@ -129,8 +142,10 @@ function measure(pick) {
   let gap = Infinity;
   for (let m = 0; m < 15; m++) for (let n = m + 1; n < 15; n++) gap = Math.min(gap, Math.hypot(flat[m][0] - flat[n][0], flat[m][1] - flat[n][1]));
   const resid = eyeLikeness(flat), cost = pick.reduce((s, c) => s + c.cost, 0);
-  const score = 3 * crossings - 40 * (8 - wedges) + 25 * resid + 0.3 * Math.min(gap, 25) - (gap < 10 ? 30 : 0) - cost;
-  return { score, crossings, wedges, gap, resid, cost };
+  const n10 = pick.filter(c => Math.abs(c.v[1]) > 10).length, n14 = pick.filter(c => Math.abs(c.v[1]) > 14).length;
+  const excess = 6 * Math.max(0, n10 - Math.ceil(EXPECT10)) + 10 * Math.max(0, n14 - Math.ceil(EXPECT14));
+  const score = 5.5 * crossings - 40 * (8 - wedges) + 25 * resid + 0.3 * Math.min(gap, 25) - (gap < 10 ? 30 : 0) - cost - excess;
+  return { score, crossings, wedges, gap, resid, cost, n10, n14 };
 }
 
 // ── the search: seeded restarts, each annealed ──────────────────
@@ -164,6 +179,7 @@ console.table(rows);
 const moves = rows.filter(r => r.how !== 'new').map(r => r.move);
 console.log(`crossings ${best.m.crossings}, wedges ${best.m.wedges}/8, smallest gap ${best.m.gap.toFixed(1)}, eye residual ${best.m.resid.toFixed(2)}`);
 console.log(`move max ${Math.max(...moves).toFixed(1)}, mean ${(moves.reduce((s, x) => s + x, 0) / moves.length).toFixed(1)} over ${moves.length} catalogue systems`);
+console.log(`hearts above 10: ${best.m.n10} (chance ${EXPECT10.toFixed(1)}), above 14: ${best.m.n14} (chance ${EXPECT14.toFixed(1)})`);
 console.log(`bands: ${['disc', 'thick', 'halo'].map(k => k + ' ' + rows.filter(r => r.band === k).length).join(', ')}`);
 
 const lit = '  const HEART_FIT = [\n' + best.pick.map((c, i) => `    [${c.ref === 'new' ? "'new'" : c.ref}, ${+c.t.toFixed(2)}]`).join(',\n') + '\n  ];\n';

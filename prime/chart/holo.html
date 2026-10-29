@@ -121,6 +121,7 @@ try { if (window.self !== window.top) document.body.classList.add('embed'); } ca
     <select id="view" aria-label="Viewpoint">
       <option value="free">Free view</option>
       <option value="above">From above</option>
+      <option value="edge">Edge-on</option>
     </select>
     <button type="button" id="tIns" aria-pressed="true">Inscription</button>
     <button type="button" id="tCone" aria-pressed="false">Links to Oerth</button>
@@ -658,6 +659,7 @@ function oerthFov(){
 function standAt(id){
   stopSpin(); caption.classList.remove('on');
   if (id === 'free') { flyTo(HOME_POS, CORE, HOME_FOV, 1800); return; }
+  if (id === 'edge') { flyTo(new THREE.Vector3(0, .5, 235), CORE, HOME_FOV, 1800); return; }   // in the plane, so heights show
   if (id === 'above') { flyTo(new THREE.Vector3(0, 250, .01), CORE, HOME_FOV, 1800); return; }   // straight down on the disc
   if (id === 'greyspace') { revealFromOerth(); return; }
   const s = SYSTEMS.find(x => x.id === id);
