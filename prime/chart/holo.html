@@ -435,8 +435,8 @@ const fillerPts = (function systems(){
 })();
 
 // ── The inscription ────────────────────────────────────────────────
-// Fifteen heart worlds, each in its own system, placed by galaxy.js along
-// Oerth's lines of sight at depths that keep them inside the disc.
+// Fifteen heart worlds, each in a catalogue system that galaxy.js fits onto
+// its eye point's line, parallel to the axis from Oerth through the core.
 const OERTH = new THREE.Vector3(...E.OERTH);
 const CORE = new THREE.Vector3(0, 0, 0);
 const F = new THREE.Vector3(...E.F), Rt = new THREE.Vector3(...E.RT), Up = new THREE.Vector3(...E.UP);
@@ -495,7 +495,7 @@ surveyReady.then(sv => {
   if (!E.rollSystems(sv)) return;
   HEARTS.forEach(h => { const src = E.HEARTS[h.i];
     h.info.kind += ' · ' + src.sys.id;
-    if (h.state === 'unknown') h.info.summary += ' ' + src.summary;
+    h.info.summary += ' Its system: ' + src.summary.charAt(0).toLowerCase() + src.summary.slice(1);
     h.info.dm += ` Its system is a survey.js roll, seed ${src.sys.seed}.`; });
 });
 

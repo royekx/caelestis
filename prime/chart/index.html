@@ -852,7 +852,8 @@ function showHeart(h){
   const stateText = { linked:`One of two neighbouring systems on the upper lid, each with a Monolith world. The two hearts are opened and linked to each other, Atrium to Atrium, and each is linked to Oerth's.`,
     found:`Nowhere. A lesser god forced its way into this system and down onto the world, and the push destroyed both. A Monolith answered. The world's heart lies exposed in the wreck: found, and not yet opened.`,
     unknown:`A Monolith world, chosen from thousands for where it falls along the axis from Oerth through the core. Nothing is known of its heart.` }[h.state];
-  const height = h.height > 1 ? "a little above the galaxy's plane" : h.height < -1 ? "a little below the galaxy's plane" : "close to the galaxy's plane";
+  const side = h.height > 0 ? "above" : "below", band = h.src.band;
+  const height = band==="disc" ? "in the disc, close to the galaxy's plane" : band==="thick" ? `in the thick disc, a little ${side} the galaxy's plane` : `in the halo, well ${side} the galaxy's plane`;
   const dm = [];
   if(h.src.sys) dm.push(`Its system is a survey.js roll, seed ${h.src.sys.seed}; keep it with <code>node scripts/survey.js roll --seed ${h.src.sys.seed} --save</code> when it matters.`);
   if(h.state==="linked") dm.push(`One of the two opened worlds is a little-charted planet the crew learns of late in the campaign.`);
@@ -862,7 +863,7 @@ function showHeart(h){
   const sys = h.src.sys;
   panel.innerHTML = `<h2>${h.state==="found"?"Nowhere":"Heart world"}</h2><p class="kind">Inscription · ${partName} · ${h.n}${sys ? " · " + esc(sys.id) : ""}</p>
     ${st.badge ? `<span class="badge ${st.badge}">${st.label}</span>` : `<span class="badge">${st.label}</span>`}${iris?`<span class="badge b-red">Key</span>`:`<span class="badge">Replaceable</span>`}
-    <p>${stateText}</p>${sys && h.state==="unknown" ? `<p>${esc(h.src.summary)}</p>` : ""}<p>${role}</p><p class="hint">Its system lies ${height}, inside the disc.</p>${dmlist(dm)}`;
+    <p>${stateText}</p>${sys ? `<p>${esc(h.src.summary)}</p>` : ""}<p>${role}</p><p class="hint">Its system lies ${height}.</p>${dmlist(dm)}`;
 }
 function galaxyPanel(g, offer){
   const rec = g.record || {}, home = g.id==="GAL-01", c = heartsCount();
