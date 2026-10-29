@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 11 | 13 | 12 | 0 | 3 |
+| Cosmology | cosmology/, glossary/, chart/ | 11 | 14 | 12 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 21 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
@@ -319,6 +319,10 @@ Order under each page: decide, fix, drop, add.
 - **[later]** CSC 31758, the 1491 entry in SA-002
   SA-002 carries the Cycle 1491 auroral discharge at CSC 31758, outer fringe (the old SYS-05). The number is new: it is not in the survey or on the chart, and it collides with nothing in either. The entry stays as filed: two arrivals from an uncatalogued system entered Academy intake. Place the star in the survey, or leave it as a catalogue number only. It is not tied to Greyspace.
   src: Korey, 2026-10-28 (FIA rulings, 10)
+
+- **[later]** The eye's alignment turns with the galaxy
+  For the eye to hold along the axis from Oerth through Erevos, the rotations of Erevos, of Greyspace (high above the galaxy's plane) and of the fifteen heart systems would all need to stay lined up (Korey, 2026-10-29). A flavour detail, and a possible clock for later: the alignment drifting, or coming due. Ties to the decide on how the inscription is worked. Planning only; it does not go on pages.
+  src: Korey, 2026-10-29
 
 ### cosmology/index.html: Zeniths and Monoliths
 

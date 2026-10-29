@@ -198,6 +198,9 @@ const GX = {cx:2200, cy:1900, R:1650};
 
 /* ---------- seeded dice and the galaxy's geometry (galaxy.js) ---------- */
 const { rng, gauss, armPt } = window.EREVOS;
+/* Heights above or below the plane are drawn as stems, at a third of their
+   true scale, so every glyph stays near where it lies on the map. */
+const STEM_K = 0.35 / window.EREVOS.S;
 const rad = d => d*Math.PI/180;
 const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");
 const cap = s => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
@@ -270,7 +273,8 @@ const SYS_CHART = {
   "CSC 50743": { pos:window.EREVOS.POS.fonains.map(Math.round), tone:"#9fe1cb", page:"fonains.html",
     travel:`Neighbours Krynnspace, at the far end of the uncharted route from Realmspace. Clint Dashforest reached Fonains through a color pool.` },
   "Greyspace": { pos:armPt(2, 2.7, -20), tone:"#e2ae7e", page:"oerth.html#greyspace",
-    travel:`Far across the galaxy, on the opposite arm from Realmspace. No lane on Caelestis's charts reaches it.` },
+    lift: Math.round(window.EREVOS.SYS_Y.greyspace * STEM_K),   /* high above the plane: drawn up a stem, as the hearts are */
+    travel:`Far across the galaxy and high above its plane, over the opposite arm from Realmspace. No lane on Caelestis's charts reaches it.` },
   "GAL-01-hidden": { pos:[3250, 950], tone:"#c9b3ea", page:"wayfinders-homeworld.html", hidden:true, veiled:true,
     travel:`No route. Wayfinders leave with no map and no name, and must re-recognize home.`,
     dm:[`Its position on this chart is symbolic.`,`The Runekeepers' fragment is rebuilding in two halves, in Wan and Tu.`] }
@@ -511,7 +515,9 @@ function renderCosmos(){
 /* ---------- galaxy ---------- */
 const SR = 70;
 function systemGlyph(s){
-  const {x,y,tone} = s; let g = "";
+  const {x,tone} = s, lift = s.lift || 0, y = s.y - lift; let g = "";
+  /* a system above or below the plane stands on a stem from where it lies on the map */
+  if(lift) g += `<line x1="${x}" y1="${s.y}" x2="${x}" y2="${y + SR}" stroke="${tone}" stroke-opacity=".5" stroke-width="4" stroke-dasharray="10 8"/><circle cx="${x}" cy="${s.y}" r="10" fill="${tone}" fill-opacity=".55"/>`;
   g += `<circle cx="${x}" cy="${y}" r="${SR}" fill="${tone}" fill-opacity="${s.veiled?.04:.08}"/>`;
   g += `<circle class="sel" cx="${x}" cy="${y}" r="${SR}" fill="none" stroke="${tone}" stroke-opacity=".75" stroke-width="3" stroke-dasharray="${s.veiled?"6 9":"12 8"}"/>`;
   g += `<circle cx="${x}" cy="${y}" r="30" fill="#e2ae7e" fill-opacity=".2"/><circle cx="${x}" cy="${y}" r="12" fill="#ffe3b8"/>`;
@@ -619,7 +625,7 @@ function galaxyLegend(){
     h += Object.values(HSTATE).map(s=>`<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="${s.col}"/></svg>${s.label}</span>`).join("");
     h += `<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="#9683c4" stroke-width="1.6" stroke-dasharray="2 4"/></svg>Line back to Oerth</span>`;
     h += `<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="#56B4A6" stroke-width="3"/></svg>Link standing</span>`;
-    h += `<span>Stems show height above or below the plane. From Oerth the hearts line up into the eye: see it in 3D.</span>`;
+    h += `<span>Stems show height above or below the plane. Laid flat along the axis from Oerth through the core, they form the eye: see it in 3D.</span>`;
   } else {
     h += Object.values(LANE).map(s=>`<span><svg viewBox="0 0 34 12" aria-hidden="true"><line x1="2" y1="6" x2="32" y2="6" stroke="${s.stroke}" stroke-width="2.2" stroke-dasharray="${s.dash?s.dash.split(" ").map(v=>Math.max(1.5,v/4)).join(" "):""}" stroke-linecap="round"/></svg>${s.label}</span>`).join("");
     h += `<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="#9cc0e0" fill-opacity=".55" stroke="#9cc0e0"/></svg>Charted or surveyed system</span>`;
@@ -631,13 +637,14 @@ function galaxyLegend(){
   legend(h);
 }
 
-/* The inscription from above. From Oerth the hearts line up into the eye;
-   that view is the 3D one (See it from Oerth). */
+/* The inscription from above, where it reads as a scatter. Laid flat along
+   the axis from Oerth through the core it forms the eye; that view is the
+   3D one (See it from Oerth). */
 function drawInscription(){
   const host = document.getElementById("ins"); if(!host) return;
-  const K = 1/window.EREVOS.S;                         /* scene height to chart units */
+  const K = STEM_K;                                    /* height drawn as a short stem, so the map keeps true positions */
   const P = Object.fromEntries(HEARTS.map(h=>[h.id, [h.x, h.y - h.height*K]]));
-  const oer = SYS_CHART["Greyspace"].pos;
+  const oer = [SYS_CHART["Greyspace"].pos[0], SYS_CHART["Greyspace"].pos[1] - (SYS_CHART["Greyspace"].lift || 0)];
   let o = "";
   /* every heart's link back to Oerth, the cone; the three standing links are solid */
   for(const h of HEARTS){ if(PAIR_IDS.includes(h.id)) continue; const p = P[h.id];
@@ -838,7 +845,7 @@ function showHeart(h){
                     : `A lid world. Lid worlds can be replaced: a lost stroke can be redrawn through another Monolith world near it, at a cost of years.`;
   const stateText = { linked:`One of two neighbouring systems on the upper lid, each with a Monolith world. The two hearts are opened and linked to each other, Atrium to Atrium, and each is linked to Oerth's.`,
     found:`Nowhere. A lesser god forced its way into this system and down onto the world, and the push destroyed both. A Monolith answered. The world's heart lies exposed in the wreck: found, and not yet opened.`,
-    unknown:`A Monolith world, chosen from thousands for how it looks from Oerth. Nothing is known of its heart.` }[h.state];
+    unknown:`A Monolith world, chosen from thousands for where it falls along the axis from Oerth through the core. Nothing is known of its heart.` }[h.state];
   const height = h.height > 1 ? "a little above the galaxy's plane" : h.height < -1 ? "a little below the galaxy's plane" : "close to the galaxy's plane";
   const dm = [];
   if(h.src.sys) dm.push(`Its system is a survey.js roll, seed ${h.src.sys.seed}; keep it with <code>node scripts/survey.js roll --seed ${h.src.sys.seed} --save</code> when it matters.`);
@@ -894,9 +901,9 @@ function genericPanel(n){
 }
 function oerthPanel(){
   panel.innerHTML = `<h2>Oerth</h2><p class="kind">Greyspace · the eye's retina</p><span class="badge b-gold">Monolith</span>
-    <p>The point where the eye's image lands. Every heart world in the figure links back to Oerth's heart, so the links run in a cone from the eye to Oerth, the way light runs from an eye to the back of it. Oerth's heart has been Vecna's since his ascension charged him into it.</p>
-    <p>Vecna chose the fifteen worlds for how they look from here. From above, their links make no shape at all; from Oerth they line up into the eye he lost. When the core opens, what lands on Oerth is sight.</p>
-    ${dmlist([`The first thing anyone can notice is that every opened heart is linked back to the same world, in Greyspace. Why they all lead to Oerth is the question that opens the rest.`,`The clue the crew needs is the vantage: plot the hearts from Oerth, and someone who knows Vecna's mark can recognize it.`,`Oerth is the one world Vecna cannot lose.`])}
+    <p>Where the eye's axis starts and its image lands. Every heart world in the figure links back to Oerth's heart, so the links run in a cone from the eye to Oerth, the way light runs from an eye to the back of it. Oerth's heart has been Vecna's since his ascension charged him into it.</p>
+    <p>The eye is a superimposition. Laid flat along the axis from Oerth through Erevos, the fifteen heart worlds form the eye he lost; viewed any other way they are scattered across the galaxy, their links crossing it at random. Vecna, a god, sees at that scale. When the core opens, what lands on Oerth is sight.</p>
+    ${dmlist([`The first thing anyone can notice is that every opened heart is linked back to the same world, in Greyspace. Why they all lead to Oerth is the question that opens the rest.`,`The clue the crew needs is the axis: plot the hearts along the line from Oerth through the core, and someone who knows Vecna's mark can recognize it.`,`The eye lies in the plane perpendicular to the axis. Seen along the axis from the far side, beyond the core, it is mirrored.`,`Greyspace stands high above the galaxy's plane, so the axis is tilted: the stem shows its height.`,`Oerth is the one world Vecna cannot lose.`])}
     ${pageLink("oerth.html")}<button class="btn act" type="button" data-go="Greyspace">Open Greyspace</button>`;
 }
 function showNode(n, offer){
@@ -914,7 +921,7 @@ function intro(){
     panel.innerHTML = `<h2>GAL-01</h2><p class="kind">Caelestis's galaxy</p>
       <p>Star systems lie unevenly through the galaxy. All of them circle the core at different speeds; they crowd along the spiral arms, gather in clusters, and leave long empty reaches between. Most bodies have no one living on them, and an inhabited world is rare.</p>
       <p>Saved systems carry their names and CSC numbers. The scatter of small stars is what Caelestis has sighted and what it has only on paper.</p>
-      <p class="hint">Tap anything for details. Tap a system twice to open it. <strong>Inscription</strong> shows the fifteen heart systems from above; <strong>See it from Oerth</strong> opens the 3D view, where they line up into the eye.</p>`;
+      <p class="hint">Tap anything for details. Tap a system twice to open it. <strong>Inscription</strong> shows the fifteen heart systems from above; <strong>See it from Oerth</strong> opens the 3D view, laid flat along the axis from Oerth, where they form the eye.</p>`;
     return;
   }
   if(lv==="galaxy"){ const g = GALAXIES.find(x=>x.id===view.galaxy); galaxyPanel(g,false); return; }

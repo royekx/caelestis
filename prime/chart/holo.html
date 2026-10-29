@@ -162,13 +162,13 @@ import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer
    x and z, scaled so the galaxy's radius is 100 units; y is height above
    the disc.
 
-   The inscription. Vecna chose the fifteen heart worlds for how they look
-   from Oerth. Each point of the eye (ten on the lids, five in the iris)
-   is set along the line of sight from Oerth through that point, at a
-   seeded distance. From Oerth, looking at the core, the hearts and their
-   links fold into the eye with the core as its pupil; from anywhere else
-   they scatter. The seed fixes the positions, so they are the same on
-   every visit.
+   The inscription is a superimposition. Each point of the eye (ten on the
+   lids, five in the iris) is a line parallel to the axis from Oerth through
+   the core, and its heart system lies somewhere along it (galaxy.js).
+   Viewed along that axis, orthographically, the hearts and their links
+   form the eye with the core as its pupil; viewed any other way they
+   scatter. The seed fixes the positions, so they are the same on every
+   visit.
    ════════════════════════════════════════════════════════════════ */
 
 // ── Shared with the flat chart (galaxy.js) ─────────────────────────
@@ -203,7 +203,7 @@ const SYSTEMS = [
   { id:'fonains', name:'CSC 50743', pos:POS.fonains, page:'fonains.html', kind:'Star system',
     summary:'Fonains\'s system, which goes by its designation. It neighbours Krynnspace; Clint Dashforest reached Fonains through a color pool.' },
   { id:'greyspace', name:'Greyspace', pos:POS.greyspace, page:'oerth.html#greyspace', kind:'Star system',
-    summary:'Far across the galaxy, on the opposite arm from Realmspace. No lane on Caelestis\'s charts reaches it. Oerth is here.' },
+    summary:'Far across the galaxy and high above its plane, over the opposite arm from Realmspace. No lane on Caelestis\'s charts reaches it. Oerth is here.' },
   { id:'wayfinders', name:'The Wayfinders\' homeworld', pos:POS.wayfinders, page:'wayfinders-homeworld.html', kind:'Hidden system',
     summary:'Hidden by a living ritual. Wayfinders leave with no map and no name, and must re-recognize home.', dm:'Its position here is symbolic.' }
 ];
@@ -260,7 +260,7 @@ Object.assign(labels.domElement.style, { position:'absolute', top:'0', left:'0',
 stage.appendChild(labels.domElement);
 
 const scene = new THREE.Scene();
-scene.fog = new THREE.FogExp2(C.bg, 0.0022);
+const FOG = new THREE.FogExp2(C.bg, 0.0022); scene.fog = FOG;
 const camera = new THREE.PerspectiveCamera(50, innerWidth/innerHeight, 0.1, 3000);
 const HOME_POS = new THREE.Vector3(0, 120, 175);
 camera.position.copy(HOME_POS);
@@ -378,7 +378,12 @@ galaxy.add(core);
 const viewSel = document.getElementById('view');
 SYSTEMS.forEach(s => {
   const n = node(s.id === 'greyspace' ? C.oerth : C.system, s.id === 'wayfinders' ? .7 : 1.05, s);
-  n.position.copy(toV(s.pos, s.id === 'wayfinders' ? 3 : 0.4));
+  n.position.copy(toV(s.pos, E.SYS_Y[s.id] != null ? E.SYS_Y[s.id] : 0.4));
+  if (s.id === 'greyspace') {               // high above the plane: a stem down to where it lies on the map
+    const stem = new THREE.Line(new THREE.BufferGeometry().setFromPoints([toV(s.pos, 0), n.position.clone()]),
+      new THREE.LineDashedMaterial({ color:C.oerth, dashSize:1.6, gapSize:1.2, transparent:true, opacity:.45 }));
+    stem.computeLineDistances(); galaxy.add(stem);
+  }
   s.v = n.position.clone();
   label(s.name, n, s.id === 'greyspace' ? 'lbl gold' : 'lbl');
   galaxy.add(n);
@@ -424,7 +429,6 @@ const fillerPts = (function systems(){
 const OERTH = new THREE.Vector3(...E.OERTH);
 const CORE = new THREE.Vector3(0, 0, 0);
 const F = new THREE.Vector3(...E.F), Rt = new THREE.Vector3(...E.RT), Up = new THREE.Vector3(...E.UP);
-const HALF = E.HALF;
 const HEARTS = E.HEARTS.map(h => Object.assign({}, h, { v: new THREE.Vector3(...h.v) }));
 const HSTATE = { linked:{ c:C.linked, word:'Opened and linked' }, found:{ c:C.found, word:'Found, not opened' }, unknown:{ c:C.unknown, word:'Not yet known' } };
 const PART = { iris:'Iris', upper:'Upper lid', lower:'Lower lid' };
@@ -486,7 +490,7 @@ surveyReady.then(sv => {
 
 // Oerth, the retina.
 const oerthNode = node(C.oerth, 1.3, { name:'Oerth', kind:'Greyspace · the eye\'s retina', page:'oerth.html',
-  summary:'Oerth, in Greyspace, where Vecna became a god.', dm:'Oerth\'s heart has been Vecna\'s since his ascension. Every heart in the inscription links back to it. From here, and only from here, the hearts line up into the eye he lost.' });
+  summary:'Oerth, in Greyspace, where Vecna became a god.', dm:'Oerth\'s heart has been Vecna\'s since his ascension. Every heart in the inscription links back to it. Greyspace lies high above the galaxy\'s plane, so the eye\'s axis runs down from Oerth through the core at a slant; laid flat along it, the hearts form the eye he lost. From the far side the eye is mirrored.' });
 oerthNode.position.copy(OERTH).add(new THREE.Vector3(0, 1.6, 0));
 label('Oerth', oerthNode, 'lbl gold below'); galaxy.add(oerthNode);
 
@@ -622,16 +626,35 @@ function flyTo(pos, target, fov, ms, done){
             g0: controls.target.clone(), g1: target.clone(), f0: camera.fov, f1: fov, done };
   controls.enabled = false;
 }
-function eyeFov(){
-  // Fit the whole eye, with a margin, to the screen: its width (the lid
-  // corners, E.EYE_ANGLE either side) and its height (the lids' peaks).
-  const m = THREE.MathUtils.degToRad(4), hHalf = E.EYE_ANGLE + m, vNeed = E.EYE_ANGLE*.373 + m;
-  const vHalf = Math.max(Math.atan(Math.tan(hHalf)/camera.aspect), vNeed);
-  return Math.max(30, Math.min(170, THREE.MathUtils.radToDeg(vHalf*2)));
+function eyeFov(){ return 70; }   // looking at the core from another system
+
+// ── The view from Oerth: a superimposition ───────────────────────────
+// Vecna sees at the scale of a galaxy. Lining the eye up is an orthographic
+// view along the axis from Oerth through the core: every heart lies on a
+// line parallel to that axis, so depth drops away and the eye appears, the
+// core its pupil. Oerth is the retina, where the axis starts.
+const ortho = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 2000);
+let view = camera;                           // the camera that renders: camera, or ortho from Oerth
+function frameOrtho(){
+  const aspect = innerWidth/innerHeight, needW = E.EYE_W*1.1, needH = E.EYE_H*.373*1.9;
+  const hh = Math.max(needW/aspect, needH), hw = hh*aspect;
+  Object.assign(ortho, { left:-hw, right:hw, top:hh, bottom:-hh }); ortho.updateProjectionMatrix();
+}
+function enterOrtho(){
+  galaxy.rotation.y = 0;
+  ortho.position.copy(CORE).addScaledVector(F, -300); ortho.up.copy(Up); ortho.lookAt(CORE);
+  frameOrtho(); view = ortho; controls.enabled = false; oerthNode.visible = false; scene.fog = null;
+  atOerth = true; caption.classList.add('on'); revealPulse = performance.now();
+}
+function exitOrtho(){
+  if (view !== ortho) return;
+  view = camera; oerthNode.visible = true; atOerth = false; caption.classList.remove('on'); scene.fog = FOG;
+  camera.position.copy(CORE).addScaledVector(F, -170).add(new THREE.Vector3(0, 25, 0));
+  camera.fov = 50; camera.updateProjectionMatrix(); controls.target.copy(CORE); controls.enabled = true; controls.update();
 }
 function standAt(id){
   stopSpin();
-  caption.classList.remove('on'); atOerth = false;
+  exitOrtho(); caption.classList.remove('on'); atOerth = false;
   if (id === 'free') { flyTo(HOME_POS, CORE, 50, 1800); return; }
   const s = SYSTEMS.find(x => x.id === id);
   const p = s.v.clone().addScaledVector(F.clone().copy(CORE).sub(s.v).normalize(), -0.01);
@@ -641,10 +664,9 @@ function standAt(id){
 function revealFromOerth(){
   stopSpin(); setPressed('tIns', true); ins.visible = true;
   viewSel.value = 'greyspace';
-  flyTo(OERTH.clone(), CORE, eyeFov(), 2600, () => {
-    atOerth = true; caption.classList.add('on');
-    revealPulse = performance.now();
-  });
+  if (view === ortho) { frameOrtho(); return; }
+  // fly out along the axis behind Oerth, then let depth fall away
+  flyTo(CORE.clone().addScaledVector(F, -190).addScaledVector(Up, .01), CORE, 50, 2400, enterOrtho);
 }
 let revealPulse = 0;
 function stopSpin(){ controls.autoRotate = false; setPressed('tSpin', false); }
@@ -682,15 +704,20 @@ function showInfo(info){
 const ray = new THREE.Raycaster(), ptr = new THREE.Vector2();
 let down = null;
 renderer.domElement.addEventListener('pointerdown', e => { down = [e.clientX, e.clientY]; });
+// Dragging or zooming in the view from Oerth hands back to the free camera.
+renderer.domElement.addEventListener('pointermove', e => {
+  if (view === ortho && down && e.buttons && Math.hypot(e.clientX-down[0], e.clientY-down[1]) > 6) exitOrtho();
+});
+renderer.domElement.addEventListener('wheel', () => exitOrtho(), { passive:true });
 renderer.domElement.addEventListener('pointerup', e => {
   if (!down || Math.hypot(e.clientX-down[0], e.clientY-down[1]) > 6) return;
   ptr.set(e.clientX/innerWidth*2 - 1, -(e.clientY/innerHeight)*2 + 1);
-  ray.setFromCamera(ptr, camera);
+  ray.setFromCamera(ptr, view);
   const shown = o => { for (; o; o = o.parent) if (!o.visible) return false; return true; };
   const hit = ray.intersectObjects(pickables.filter(shown), false)[0];
   if (hit) { showInfo(hit.object.userData.info); return; }
   // otherwise the nearest unnamed system under the pointer
-  ray.params.Points.threshold = Math.max(.6, camera.position.length()/160);
+  ray.params.Points.threshold = view === ortho ? ortho.top/60 : Math.max(.6, camera.position.length()/160);
   const f = ray.intersectObject(fillerPts, false)[0], sys = f && E.FILLERS[f.index].sys;
   if (sys) showInfo({ name:sys.id, kind:'Star system' + (sys.bayer ? ' · ' + sys.bayer : '') + ' · ' + sys.status, summary:E.FILLERS[f.index].summary,
     dm:`A survey.js roll, seed ${sys.seed}. Keep it with <code>node scripts/survey.js roll --seed ${sys.seed} --save</code>.` });
@@ -698,8 +725,7 @@ renderer.domElement.addEventListener('pointerup', e => {
 
 addEventListener('resize', () => {
   camera.aspect = innerWidth/innerHeight;
-  if (atOerth) camera.fov = eyeFov();
-  camera.updateProjectionMatrix();
+  camera.updateProjectionMatrix(); if (view === ortho) frameOrtho();
   renderer.setSize(innerWidth, innerHeight); labels.setSize(innerWidth, innerHeight);
 });
 
@@ -720,19 +746,19 @@ function frame(now){
     controls.update();
   }
   // Markers keep a steady size on screen, near or far.
-  markers.forEach(m => { m.getWorldPosition(_w); const k = THREE.MathUtils.clamp(camera.position.distanceTo(_w)/70, .25, 3.2); m.scale.setScalar(k); });
+  markers.forEach(m => { m.getWorldPosition(_w); const k = THREE.MathUtils.clamp((view === ortho ? ortho.top*2.15 : camera.position.distanceTo(_w))/70, .25, 3.2); m.scale.setScalar(k); });
   // Hologram life: the core breathes, the iris rings face the viewer.
   const s = 1 + Math.sin(now*.0018)*.08; coreGlow.scale.set(22*s, 22*s, 1);
   coreRing.rotation.z += dt*.2;
-  HEARTS.forEach(h => { if (h.mesh.userData.ring) h.mesh.userData.ring.lookAt(camera.position); });
-  const nearOerth = camera.position.distanceTo(_w.copy(OERTH).applyMatrix4(galaxy.matrixWorld)) < 6;
+  HEARTS.forEach(h => { if (h.mesh.userData.ring) h.mesh.userData.ring.lookAt(view.position); });
+  const nearOerth = view === camera && camera.position.distanceTo(_w.copy(OERTH).applyMatrix4(galaxy.matrixWorld)) < 6;
   toOerth.forEach(l => { l.visible = !nearOerth; });
   if (starMat) starMat.opacity = .85 + Math.sin(now*.004)*.03 + (Math.random() < .01 ? -.12 : 0);
   // The reveal: the eye's lines brighten, then settle.
   const r = revealPulse ? Math.max(0, 1 - (now - revealPulse)/3500) : 0;
   eyeLines.children.forEach(l => { l.material.opacity = atOerth ? .75 + .25*Math.sin(Math.min(1, r)*Math.PI) : .7; });
   coreGlow.material.opacity = .9 + r*.1; if (r > 0) coreGlow.scale.multiplyScalar(1 + r*.6);
-  renderer.render(scene, camera); labels.render(scene, camera);
+  renderer.render(scene, view); labels.render(scene, view);
   requestAnimationFrame(frame);
 }
 requestAnimationFrame(frame);
