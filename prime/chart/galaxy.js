@@ -127,10 +127,54 @@
     return out;
   })();
 
+  /* ── Generated systems ─────────────────────────────────────────
+     Everything on the chart that is not a named system is a survey.js roll:
+     the unnamed systems that fill the arms and the fifteen heart systems.
+     Positions are seeded here; what each system is comes from
+     survey-core.js by seed, once the survey is loaded (rollSystems), so a
+     system clicked on the chart reads as `node scripts/survey.js roll
+     --seed N` prints it, and `--save` keeps it. */
+  const FILLER_SEED0 = 200000, HEART_SEED0 = 300000;
+  const FILLERS = (() => {
+    const R = rng(5113), out = [];
+    const named = Object.values(POS), hearts = HEARTS.map(h => toChart(h.v));
+    for (let tries = 0; tries < 6000 && out.length < 380; tries++) {
+      const arm = Math.floor(R() * ARMS) % ARMS, t = 0.3 + Math.pow(R(), 0.8) * 3.0;
+      const p = armPt(arm, t, gauss(R) * 120 * (0.5 + t / 3), gauss(R) * 0.12);
+      const rc = Math.hypot(p[0] - GX.cx, p[1] - GX.cy), y = gauss(R);
+      if (rc < 300 || rc > GX.R * 1.08) continue;
+      if (Math.hypot(p[0] - RS[0], p[1] - RS[1]) < 940) continue;      // Caelestis's cluster keeps its saved places clear
+      if (named.some(q => Math.hypot(p[0] - q[0], p[1] - q[1]) < 200)) continue;
+      if (hearts.some(q => Math.hypot(p[0] - q[0], p[1] - q[1]) < 110)) continue;
+      if (out.some(f => Math.hypot(p[0] - f.pos[0], p[1] - f.pos[1]) < 105)) continue;
+      const v = toScene(p, y * discSigma(rc * S));
+      out.push({ i: out.length, pos: p, v });
+    }
+    return out;
+  })();
+  /* Roll every generated system against the survey. A seed whose number or
+     Bayer name is already taken, by the survey or by an earlier system on
+     the chart, passes to the next seed, so each system's roll matches the
+     command line exactly. */
+  function rollSystems(survey) {
+    const core = window.SURVEY_CORE; if (!core || !survey) return false;
+    const taken = { nums: new Set(), bayer: new Set() };
+    survey.systems.forEach(x => { if (x.catalogue) taken.nums.add(x.catalogue); if (x.bayer) taken.bayer.add(x.bayer); });
+    let seed;
+    const next = () => { for (;;) { const sys = core.roll(survey, { seed: seed++ });
+      if (taken.nums.has(sys.catalogue) || (sys.bayer && taken.bayer.has(sys.bayer))) continue;
+      taken.nums.add(sys.catalogue); if (sys.bayer) taken.bayer.add(sys.bayer);
+      return { sys, summary: core.summary(sys) }; } };
+    seed = HEART_SEED0; HEARTS.forEach(h => Object.assign(h, next()));
+    seed = FILLER_SEED0; FILLERS.forEach(f => Object.assign(f, next()));
+    return true;
+  }
+
   window.EREVOS = {
     GX, ARMS, TIP, rng, gauss, armAngle, armPt, RS, OUT, TAN, at, POS,
     SECTORS, MARKER_T, MARKERS, frontAt,
     S, toScene, toChart, discSigma, HALO_SIGMA, sysScene,
-    OERTH, F, RT, UP, HALF, D, EYE2D, HEARTS, LID, IRIS, PAIR, FOUND
+    OERTH, F, RT, UP, HALF, D, EYE2D, HEARTS, LID, IRIS, PAIR, FOUND,
+    FILLERS, rollSystems
   };
 })();

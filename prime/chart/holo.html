@@ -145,6 +145,7 @@ try { if (window.self !== window.top) document.body.classList.add('embed'); } ca
 </footer>
 <div id="fail">The holochart needs WebGL and could not start in this browser. The <a href="index.html" style="color:#8fb0e6">flat chart</a> holds the same places.</div>
 
+<script src="survey-core.js"></script>
 <script src="galaxy.js"></script>
 <script src="gtc.js"></script>
 <script type="module">
@@ -406,20 +407,15 @@ const sectors = new THREE.Group(); galaxy.add(sectors);
 E.SECTORS.forEach(sc => { const o = new THREE.Object3D(); o.position.copy(toV(sc.pos, 0)); label(sc.name, o, 'lbl sector'); sectors.add(o); });
 
 // ── Unnamed systems ────────────────────────────────────────────────
-// A few hundred star systems, seeded, scattered along the arms at the
-// disc's height, so the inscription's systems hide among many.
-(function systems(){
-  const R = rng(5113), pos = [];
-  for (let i = 0; i < 420; i++) {
-    const arm = Math.floor(R()*4) % 4, t = .25 + Math.pow(R(), .8)*3.05;
-    const p = armPt(arm, t, gauss(R)*120*(.5+t/3), gauss(R)*.12), v = toV(p);
-    const r = Math.hypot(v.x, v.z); if (r < 10 || r > 108) continue;
-    pos.push(v.x, gauss(R)*E.discSigma(r), v.z);
-  }
+// The survey.js rolls galaxy.js places along the arms, at the disc's
+// height, so the inscription's systems hide among many. Tap one to read
+// its roll.
+const fillerPts = (function systems(){
+  const pos = []; E.FILLERS.forEach(f => pos.push(f.v[0], f.v[1], f.v[2]));
   const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
   const m = new THREE.PointsMaterial({ size:7*Math.min(window.devicePixelRatio,2), map:RING, color:0xa9bdd8, transparent:true, opacity:.5,
     depthWrite:false, sizeAttenuation:false });
-  galaxy.add(new THREE.Points(g, m));
+  const pts = new THREE.Points(g, m); galaxy.add(pts); return pts;
 })();
 
 // ── The inscription ────────────────────────────────────────────────
@@ -476,7 +472,16 @@ HEARTS.forEach(h => {
   const n = heartSystem(st.c, iris, info);
   n.position.copy(h.v);
   label(String(h.n), n, 'lbl heart');
-  ins.add(n); h.mesh = n;
+  ins.add(n); h.mesh = n; h.info = info;
+});
+
+// Each heart system is a survey.js roll too; its designation joins its panel.
+surveyReady.then(sv => {
+  if (!E.rollSystems(sv)) return;
+  HEARTS.forEach(h => { const src = E.HEARTS[h.i];
+    h.info.kind += ' · ' + src.sys.id;
+    if (h.state === 'unknown') h.info.summary += ' ' + src.summary;
+    h.info.dm += ` Its system is a survey.js roll, seed ${src.sys.seed}.`; });
 });
 
 // Oerth, the retina.
@@ -681,7 +686,12 @@ renderer.domElement.addEventListener('pointerup', e => {
   ray.setFromCamera(ptr, camera);
   const shown = o => { for (; o; o = o.parent) if (!o.visible) return false; return true; };
   const hit = ray.intersectObjects(pickables.filter(shown), false)[0];
-  if (hit) showInfo(hit.object.userData.info);
+  if (hit) { showInfo(hit.object.userData.info); return; }
+  // otherwise the nearest unnamed system under the pointer
+  ray.params.Points.threshold = Math.max(.6, camera.position.length()/160);
+  const f = ray.intersectObject(fillerPts, false)[0], sys = f && E.FILLERS[f.index].sys;
+  if (sys) showInfo({ name:sys.id, kind:'Star system' + (sys.bayer ? ' · ' + sys.bayer : '') + ' · ' + sys.status, summary:E.FILLERS[f.index].summary,
+    dm:`A survey.js roll, seed ${sys.seed}. Keep it with <code>node scripts/survey.js roll --seed ${sys.seed} --save</code>.` });
 });
 
 addEventListener('resize', () => {
