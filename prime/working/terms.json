@@ -501,6 +501,15 @@
       "pattern": "divine silence",
       "use": "cut: the Astral Sea does not sever a god from its worshippers",
       "i": true
+    },
+    {
+      "pattern": "Spelljammer Corps",
+      "use": "the Caelestis Corps (the Caelestis Sector is the Corps and the Caelestis Spelljammer Academy)"
+    },
+    {
+      "pattern": "graduates? as sailors",
+      "use": "cadets graduate as Driftwardens; clearance (an access star) is separate from rank",
+      "i": true
     }
   ],
   "voice": [

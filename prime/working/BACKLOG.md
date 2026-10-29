@@ -42,9 +42,9 @@ staging once Korey has read and accepted them.
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 19 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
-| Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 1 |
+| Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 3 | 0 | 1 |
-| **Total** |  | **115** | **146** | **47** | **2** | **54** |
+| **Total** |  | **115** | **146** | **47** | **2** | **53** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1430,6 +1430,777 @@ left here is open.
 - **[decide]** The Faelight spore's slot rules *(prep)*
   The page reconciles the old rules/index.html#counter-spore section (removed in section 4) with the BACKLOG radius steps: the slot sets the radius only (10/20/30 ft for a 1st/2nd/3rd-level slot), the cloud lasts 1 minute whatever the slot, and there is no level cap. The Rules page had capped a 3rd-level caster at a 2nd-level slot and said slot level scaled area and duration; both were dropped as Rules-page additions with no ruling behind them. Confirm, or restore the cap or the duration scaling. Also open: where the spore is now. The player Collection Manifest (entry 051) lists it as "Intake · unprocessed"; the voyage 6–7 planning chat moved it from the Cargo Deck to the Garden (§ Superseded). The page follows the manifest and names the Garden as unconfirmed. Also open on the page: whether a slot above 3rd widens the cloud, whether a coated creature stays coated after leaving the cloud, and whether the spore can be carried off the ship.
   src: section 4 (2026-10-28); rules/index.html#counter-spore as it stood
+
+### vessels/vthoramu.html
+
+### vessels/tyrant-ship.html
+
+- **[decide]** Which four eyes work, and the player ship sheet *(prep)*
+  Settled: Vaelorix worked the great eyes with his own gaze; Pffred and Krik'Lit rigged a crew station for each eye around the helm on the Command Deck; four of the ten respond, and the rest need repairs. This replaces memory's "three stalks wired as cannons, gunners in the Meditation pods" (update memory). Also settled: the stalk matching the hour's eye goes dead on H'Catha under the Pact. Still open: which four respond and what each does. Draft candidates: Fear (wakes on crossing entry 7), Telekinesis (an easy first unlock), Slowing (later); the fourth is unnamed. Then the player ship sheet the players were promised. The V007 runsheet still has three cannons with two active.
+  src: chat-voyage-6-7-planning § Open, § The Lantern and the ship, § Superseded (three cannons → four of ten eyes); astral § The meteorite and mission
+
+- **[decide]** Which shaft letter Research gets *(prep)*
+  The table set A as the Garden and C as the Quarters. Options: B or D.
+  src: chat-voyage-6-7-planning § Open
+
+- **[later]** The lingering Lantern wisps
+  Settled: the choice is the crew's, keep the wisps or eradicate them. Nothing for Korey to rule; this waits on play. Record the crew's choice when it is made, and until then the page states that the wisps linger in the ship.
+  src: chat-voyage-6-7-planning § The Lantern and the ship
+
+- **[fix]** "Unmade constructs"
+  vessels/tyrant-ship.html (§ History) and artifacts/containment-engine.html (§ History) say the bloom's field "killed magic and unmade constructs". The ruling is that the field froze the clockwork horrors, slowed the OSTEKK units and kept the behir out, a field it could not enter (dossiers/vaelorix.html, dossiers/ostekk.html). Change both lines.
+  src: chat-voyage-6-7-planning § The field and constructs; section 5 (2026-10-28)
+
+### vessels/bellwether-crow.html
+
+- **[later]** The Crow after the ambush
+  The Crow made Strake under damage (locations/cairn-station.html). Its class is set: a light corvette (restricted/wm-002.html, vessels/bellwether-crow.html). Whether it went back into service, its captain, and the clean survivor's name wait until the crew pulls the roster.
+  src: section 4
+
+### vessels/moonraider.html
+
+- **[decide]** What the Moonraider simulation is drawn from
+  Saerthe's simulation of the Derelict draws on real records (vessels/the-derelict.html). The same rule would answer the Moonraider's source, and captain-sardax.html poses the question ("either someone survived to describe it, or…"). Confirm that it applies, or set another source.
+  src: section 4 plan (inference)
+
+### vessels/the-derelict.html
+
+- **[fix]** The record's logbook copies
+  data/items.json still says Casey and Gregory bound duplicates, "so three identical copies exist"; the settled account is two halves, one held by Boogie (STAGING § Boogie; Player record flags above). Correct the record in a session run or a record edit, run derive, and match the player inventory entry.
+  src: section 4 cold review (2026-10-28)
+
+- **[later]** The Derelict's name, and records for the other salvage-race ships
+  Settled for the other ships: every ship the crew encounters gets a record, and ships known only in simulation sit under the Simulation Deck with Status Simulated, so the salvage race's hammerhead and githyanki ship each get a simulated record and a register row, as the Moonraider and the Derelict did. Still open: the Derelict's name. Options: "Salvage Race Derelict", or keep "Derelict". Touches this page and vessels/the-derelict.html.
+  src: chat-voyage-6-7-planning § Open; § The swap and NPCs (Moonraider and Derelict as simulated records); § Table and story principles ("Every ship the crew encounters gets a record"); memory-canon § Naming ("Ships the crew encounters get cataloged")
+
+# Rules
+
+Pages under `prime/rules/`, `prime/statblocks/` and `prime/tracker/` (whose DM
+layer is `prime/data/overlay.json`), plus one player-site rules page. Items
+under each page run decide, fix, drop, add. The Tumak items are checked
+against the complete Tumak sweep (all 336 turns).
+
+### rules/index.html
+
+- **[fix]** "Open" sections on the page
+  The page carries an "Open" h3 (line 384) and an "Open" h2 with an is-open "Unresolved" tag (line 427). Rewrite them as Still to decide sentences when the Rules section is done.
+  src: section 4 cold review (2026-10-28)
+
+#### Cosmology rules
+
+- **[fix]** Residue housings are dampened in anti-magic, not switched off *(answered)*
+  Page says paracausal objects are "Unsuppressed … an instrument built around a piece works inside an anti-magic field". Change to: inside an anti-magic field an instrument built around a residue piece is suppressed in part. Its pull is muted and its working stutters, but it is not switched off. On the tyrant ship the Command Deck field suppressed the Lantern of Flourishing and muted Gregory's tug toward it; the OSTEKK units, built with the Lantern's fragment, stuttered and slowed and kept running, while the clockwork horrors froze and the behir could not enter. Gregory's own sluggishness there was narrative only. When the field lifts, the pull returns in full. The same wording goes on artifacts/containment-engine.html (§ Where it is, the anti-magic add) and the OSTEKK dossiers.
+  src: memory-canon § Antagonists ("The anti-magic field has been suppressing the Lantern"), § Key NPCs (Ostekk-6), § Cosmology (Weave ruling)
+  answered: memory-canon § Antagonists ("The anti-magic field has been suppressing the Lantern, muting Gregory's tug … When the field lifts, Gregory can commune with it"), § Key NPCs ("in the anti-magic field they stutter but keep running"); inbox/chat-voyage-6-7-planning.md § The field and constructs (Settled). Memory outranks the page.
+
+#### Tumak: runes, Rune Sets, Wayfind
+
+- **[decide]** Runes 17–19 as Anchors: what they grant *(shape)*
+  Settled idea (Korey, turn 326): runes 17, 18 and 19 become Anchors, fixed places Tumak goes to, so the arc leans into navigation and working with Gregory. The redo (turns 330–335) settled reach, bands, mishaps and cost around them (see the adds below) and left the Anchors open. Real gaps:
+  1. What an Anchor grants: whether a Wayfind to an Anchor bypasses the reach gate, and whether it pays full cost, one band less, or nothing (the last of turn 335's three questions).
+  2. Whether one Anchor is pre-set at campaign start.
+  3. How a place becomes an Anchor, and how Gregory takes part.
+  4. Which Rune Set each Anchor counts toward. Claude suggested at least one be Soul, since only 09 (Forehead) and 10 (Tongue) are rollable Soul positions (turns 258, 268).
+  Offered and never accepted, so not the default: the names Hearth, Threshold and Horizon; a loop where Gregory's Calibration finds anchorable sites; Anchors bypassing the reach gate (turns 327, 333). The page still reads "Unassigned (bestowed)" and "bestowed at story moments", and § The safety valve leans on the three bestowed positions. Touches rules/index.html (position table, § The safety valve, § Open), rules/wayfinder-path-dm.html, crew/gregory.html.
+  src: TGB § Tumak/Rune structure, final (turn 326), Open; memory-canon (open-decisions § Pending; campaign-canon § Tumak Swan); framework § Open
+
+- **[decide]** Which two runes are active now *(shape)*
+  Still undefined, and the redo does not touch it. Set them. The left sole (08) is now matched; see the Tu's-half fix below.
+  src: chat-voyage-6-7-planning § Open; framework § Open
+
+- **[later]** Rune Set spellcasting ability
+  Proposed at turns 329 and 331, no reply: Rune Set spells use Charisma, with save DC 8 + proficiency bonus + CHA modifier, cast at the set's tier with no upcasting. Accept or reject, then add to § The four Wayscribes.
+  src: TGB § Tumak/Open
+
+- **[add]** Wayfind reach gated by matched runes *(answered)*
+  Add to § Wayfind as a reach table, and rewrite "grows with the inscription" (§ Wayfind) and "the range grows with the inscription" (§ Running it) to point at it:
+  | Matched runes | Reach |
+  |---|---|
+  | 1–3 | Touch: within 100 feet |
+  | 4–6 | Local: within 10 miles |
+  | 7–9 | Planetary: anywhere on the same world |
+  | 10–12 | System: any world in the same wildspace system |
+  | 13–15 | Near wildspace: an adjacent system |
+  | 16 | Deep wildspace: any of his marks |
+  "A Wayfind to a mark beyond his reach fails without cost: no roll, no exhaustion. The mark stays where it is, waiting. He can place marks at any distance; only the journey is gated."
+  answered: the Wayfind redo, turns 330–335 of the Tumak chat (fa2979bd), which Korey says is his latest system; turn 333 (Korey's H'Catha example: "Something has to scale the way find distance"); he moved straight to cost (turn 334) and did not revisit it.
+  src: TGB § Tumak/Open, Superseded (Wayfind range)
+
+- **[fix]** Distance bands *(answered)*
+  The page's six mishap percentages ("0% · 20% · 40% · 60% · 75% · 90%, rising with range") get the reach-gate bands behind them: Touch 0%, Local 20%, Planetary 40%, System 60%, Near wildspace 75%, Deep wildspace 90%. The four-distance exhaustion rule (within 100 ft. / same planet / same system / cross-system) is retired with the turn-267 cost (see the cost add).
+  answered: the Wayfind redo, turns 330–335 of the Tumak chat (fa2979bd), which Korey says is his latest system; turns 331 and 333
+  src: TGB § Tumak/Open; framework § Open
+
+- **[add]** Tiered mishap consequences *(answered)*
+  Replace the single mishap result with a consequence for each band:
+  | Band | Mishap | What a mishap does |
+  |---|---|---|
+  | Touch | 0% | Nothing; no roll. |
+  | Local | 20% | Fizzle. The Wayfind does not happen; 1 exhaustion; he stays put. |
+  | Planetary | 40% | Overshoot. Both twins arrive safely, 1d10 miles off target in a random direction. |
+  | System | 60% | Short separation. The twins land at different points on the destination world; the Compass points them together; reunion in hours. |
+  | Near wildspace | 75% | Standard mishap. The active twin and the party land at a Runekeeper sanctuary; the other twin stays at the origin; reunion in days. |
+  | Deep wildspace | 90% | Full mishap. The twins land safe at different sanctuaries; reunion is a multi-session arc. |
+  Network bonuses and the floor still apply to the roll. This is the latest form; the Near-wildspace row brings back "twin at origin", which Korey had replaced at turns 251–252, and the redo supersedes that.
+  answered: the Wayfind redo, turns 330–335 of the Tumak chat (fa2979bd), which Korey says is his latest system; turn 331 (Korey, turn 330: a mishap at level 4 "would be really bad"); "Mishap tiers" locked in the turn-331 pre-launch list, unchallenged after
+  src: TGB § Tumak/Open
+
+- **[add]** Wayfind cost by band *(answered)*
+  Replace the cost row: "The first Wayfind per long rest is free, in any band. Touch jumps (within 100 feet) are always free. Each further Wayfind costs exhaustion equal to its band: 1 for Local, 2 for Planetary, 3 for System, 4 for Near wildspace, 5 for Deep wildspace. Homebound is always free: no exhaustion, no mishap, no reach gate."
+  Turn 335's first two questions are answered by its own rule text (the daily free applies in every band; Homebound is fully free). The third, what Anchors pay, stays with the Anchor decide above.
+  answered: the Wayfind redo, turns 330–335 of the Tumak chat (fa2979bd), which Korey says is his latest system; turn 335 clean rule text
+  src: TGB § Tumak/Open, Superseded (Wayfind cost)
+
+- **[fix]** Network modifiers apply only when Tumak stands at a mark *(answered)*
+  Page: "−10% if the mark was placed by a rune from another set; −25% if from the same set", with no standing condition. Change § Wayfind → Network modifiers to: the network helps only when Tumak is standing at one of his own placed marks as he casts. If the destination mark is from the same set, add 25 to the d100 roll; if from a different set, add 10. Cast from anywhere else, the Wayfind is allowed at full risk with no bonus. The network buys safety, never energy: exhaustion is the same either way. (The d100 bands themselves are the Wayfind-odds fix below.)
+  src: TGB § Tumak/Wayfind, Open
+  answered: inbox/chat-crew-tumak-gregory-bartholomew.md § Tumak/Wayfind (Settled, turns 241–247, 262). Confirmed in the chat: Korey, "he can use a marked rune to [hop] to another marked rune from the same set and mitigate the mishap chance"; the +25/+10 numbers are from the mechanics spec wayfinder-runekeeper-mechanics.md (turn 268), § Set network mechanic.
+
+- **[decide]** The early-home door *(shape)*
+  Keep or drop: a natural 20 on a d20, rolled before declaring a target, then a confirmation roll to reach home ahead of the arc.
+  Missing from the sources: the redo never mentions it. Under the reach gate home is out of reach until the Heart awakens at 16, so keeping the door makes it an explicit exception to the gate.
+  src: TGB § Tumak/Open; framework § Open
+
+- **[later]** Does Sending work between separated twins?
+  An open proposal, never confirmed. Accept and add beside the Twin Bond Compass, or reject.
+  src: TGB § Tumak/Open
+
+- **[decide]** How resources split when the twins separate *(shape)*
+  Korey's working position (turn 257): the separated twins split resources about in half (spell slots, sorcery points, Runechild charges, psionic dice), and both keep the full spell list. Earlier he floated half HP, half spell slots and maybe half skills (turn 140). Missing from the sources: the redo does not address it. Still to rule: HP, death, consumables, and the exact split. Then add to § Wayfind → While separated.
+  src: TGB § Tumak/Separation and attempts, Mishap and separation, Open
+
+- **[add]** How separated twins reunite *(answered)*
+  Add to § Wayfind → While separated: "The twins reunite by travel, through the crew, or by following the Twin Bond Compass. Wayfind stays locked until they do. A System mishap reunites them within hours, a Near-wildspace mishap within days, and a Deep-wildspace mishap over several sessions." The return-Wayfind proposal (turn 329) is not adopted, so the "Wayfind locks until the twins reunite" row stands.
+  answered: the Wayfind redo, turns 330–335 of the Tumak chat (fa2979bd), which Korey says is his latest system (turn 331 tier table: reunion in hours, days, a multi-session arc; "Twin Bond Compass points them together"); Korey, turn 227 (reunion through the campaign, the crew or other means)
+  src: TGB § Tumak/Mishap and separation, Open
+
+- **[decide]** Mark lifecycle and Perceive details *(shape)*
+  Proposed at turn 329, no reply, and the redo left it open (turn 331: "still needs the one-page ruleset on duration, concurrency, creatures, anti-magic"). Marks: whether a mark can sit on an object or a willing creature, what anti-magic does to one, and what happens to a mark inside a Bag of Holding. Perceive: sight and hearing only, with Tumak's own senses blinded while he perceives. Rule each, then add to the Marks row.
+  src: TGB § Tumak/Open
+
+- **[decide]** 2014 or 2024 exhaustion rules *(shape)*
+  Pick one; Rune Set spells and Wayfind both cost exhaustion. Missing from the sources: Korey never picked. The redo's worked examples read the 2014 table (level 1 disadvantage on ability checks, level 2 speed halved), but that is Claude's framing, not a ruling.
+  src: TGB § Tumak/Open (turn 145)
+
+- **[decide]** The retroactive backfill: when the two runes land *(prep)*
+  Settled: two more rune-halves per twin backfill levels 1–2 (turn 134; restated "give him two runes as well" at turn 259), and they are DM-placed, not rolled: the backfill pair counts among the up-to-four runes at DM discretion (turns 259–260; see the safety-valve add). Still open: when they land, since the planned window (between V3 and V5) has passed (options: at V007's quiet stretch, or at the next level-up), and which positions they take (place them to steer toward a first complete set, or to match existing halves). Then update the position table and "Current state".
+  src: TGB § Tumak/Open, Rune structure, final ("Up to four runes are at DM discretion: two to backfill levels 1–2")
+
+- **[later]** An optional spell-inscription track
+  A spell-inscription track separate from the runes. Keep or drop.
+  src: TGB § Tumak/Open (turn 137)
+
+- **[fix]** Matched runes carry marks; the per-rune boons are gone
+  Page says "Matched runes carry the per-rune boons, power the four Wayscribes, and at the top end carry Wayfind and Homebound." Change to: "Matched runes carry marks. A completed set grants its spell. At the top end the runes carry Wayfind and Homebound." The per-rune +1 boons are removed (Korey, turns 215, 221), and runes are no longer spent and recharged.
+  src: TGB § Tumak/Rune sets and per-rune boons, Superseded; framework § Tumak, § Superseded
+
+- **[fix]** One spell per Rune Set; the recharge dice are gone
+  The Standing mechanics rows say "Wayscribe cost: First casting per Wayscribe is free; each further casting adds a level of exhaustion" and "Wayscribe recharge: At dawn: d2 (Soul), d4 (Maker), d4 (Walker), d10 (Vessel)." Settled (Korey, turns 330–331): when a set completes, Tumak picks one spell from its menu. The first cast of it per long rest is free; each further cast costs 1 level of exhaustion. Rewrite the cost row with "per long rest" and delete the recharge row.
+  src: TGB § Tumak/Rune sets and per-rune boons, Superseded (set rewards)
+
+- **[fix]** "Rune Sets", not "Wayscribes"
+  Korey dropped both "Waypost" and "Wayscribe" for the player page (turns 164–180). The groups are Soul Runes, Maker Runes, Walker Runes and Vessel Runes, with no leading "The", and the player tally counts them as "Rune Sets". Page heads its section "The four Wayscribes", labels table columns "Wayscribe", and says "Wayscribe" in the Pacing Rule and § Current state. Change to "Rune Sets" / "Set" so the DM page uses the player's terms. The player tracker's code still names its constant WAYSCRIBES; that is internal and can stay.
+  src: TGB § Tumak/Rune sets and per-rune boons, Superseded (group names, tally labels)
+
+- **[fix]** The d20 table: 17–19 reroll, 20 chooses
+  Page says "17–20 The player chooses any position still unresolved for that twin" and "A position already resolved for that twin: Treated as a choose result." Change to: 1–16 resolve that position; 17, 18 and 19 reroll; 20 lets the player choose any unresolved position; a position already resolved rerolls. Also reword the line above the table so 17–19 stay off the roll ("bestowed by the DM", or Anchors once that decide lands).
+  src: TGB § Tumak/Rune structure, final (turns 257–260)
+
+- **[fix]** Tu's half landed on 08: the left sole is matched
+  At the level-4 roll Tu's half landed on 08, so the left sole is Tumak's first matched rune (Korey, turn 328). Page "Current state" says "Wan took the left sole (08), Tu took the right shoulder (16). Two unmatched halves; no rune complete", and position 08 shows only Wan's half. Update the position table and "Current state". Wayfind is now open. The player tracker needs the same change (see wayfinder-path/index.html below); the DM copy already shows every rune matched.
+  src: TGB § Tumak/Rune structure, final; memory-canon (open-decisions § Voyage 007, first rune match)
+
+- **[fix]** Wayfind cost: exhaustion by distance
+  Page says "First Wayfind per long rest is free. Each further one adds a level of exhaustion." Locked at turn 267 (Korey's "Interpretation A"): each Wayfind costs exhaustion by distance: within 100 ft. 0, same planet 1, same system 2, cross-system 3. The network buys safety, not energy, so marks lower the mishap and never the exhaustion.
+  updated (backlog pass): superseded by the redo. Write the cost from "Wayfind cost by band" above; the network still buys safety, never energy.
+  src: TGB § Tumak/Wayfind, Superseded (Wayfind cost)
+
+- **[fix]** Wayfind odds: three outcomes, rare mishaps
+  updated (backlog pass): the redo keeps one mishap percentage per band and tiers the consequence (see "Tiered mishap consequences") instead of a separate failure band. The floor (1% in-network, 5% cross-system) and the network bonus stand; write the bands from the reach-gate and distance-band items.
+  Page gives one mishap percentage per band and "Floor 5% during the arc, except within 100 feet and for the Heart once it awakens." Settled: mishaps are rare, and each band carries a chance of plain failure (Korey, turn 253). The roll is a d100 with three outcomes: mishap, failure, success (turns 254, 268). The floor is 1% in-network at most ranges and 5% cross-system (turns 258, 268), and a mishap stays possible in-network (turn 257). Replace the single percentages with the three-outcome bands from the mechanics spec `wayfinder-runekeeper-mechanics.md`. That file is not in the repo, so copy the numbers from the chat output.
+  src: TGB § Tumak/Wayfind, Mishap and separation; TGB § Tumak/Documents produced
+
+- **[fix]** Mishap result: two sanctuaries
+  Page says "The twins separate, and the traveler arrives at a previous Wayfinder's resting place. On a group jump the party lands at that sanctuary with one twin; the other stays at the origin." Change to: the twins separate, and each lands safe at a different previous Runekeeper's resting place. Never home. On a group jump the party goes with the active twin. Korey replaced "the other stays at the origin" at turns 251–252. Use "Runekeeper", not "Wayfinder", for the resting places.
+  updated (backlog pass): this is now the Deep-wildspace row of "Tiered mishap consequences"; write the mishap result as that table.
+  src: TGB § Tumak/Mishap and separation, Superseded
+
+- **[fix]** Perceive through a mark needs concentration
+  The Marks row says "perceive through any of your marks (1 per long rest, one minute at one mark)". Add concentration (Korey, turn 259).
+  src: TGB § Tumak/Marks
+
+- **[fix]** Wan and Tu are two hosts
+  § One in two says "Tumak is one person occupying two bodies" and calls the twins "a whole Dissolution fragment walking around in two pieces, which is a paradox the cosmology does not otherwise permit". The same section already says "two separate hosts sharing one persona". Restate as two hosts throughout. The fragment wording follows the canon counts (Dissolution has two pieces) and the decide "What a fragment made whole does" (Artifacts, Every fragment). The § "The consequence of one-in-two" paragraph ("a second key to the First Heart") was cut in section 4.
+  src: memory-canon § Cosmology ("always two entities")
+
+- **[fix]** Sol's oath is written
+  § Open says Sol's oath carries "implied mechanics that live nowhere". The Oath of Misfortune is finalized (Unified Jinx with Jinx charges; Misfortune's Wake and Misfortune's Edge) and lives on crew/sol.html. Point there (Jinx is at `crew/sol.html#jinx`, Misfortuned at `#misfortuned`) and remove Sol from that line.
+  src: memory-canon § Sol Fortuna
+
+- **[add]** Why gods cannot make the crossing (§ The approach to the Core)
+  Page says only "Gods cannot make the crossing at all". Add the reason: polarity. A god and a heart carry the same charge, so as a god pushes toward a world or the centre the resistance grows until it is unbearable. The centre has ill effects on a god without destroying it. There is no "divine gate".
+  src: session-rulings (polarity); working/divine-rules.md § Polarity
+
+- **[add]** Two layers, one inscription
+  In the fiction the Runechild essence runes and the Wayfinder runes are one inscription on Tumak's body. Mechanically they are two layers that share the fiction and never share resources. Tumak tracks three resources on three timescales: sorcery points, Runechild charged runes, and Wayfinder progression. There is no separate Wayfinder spend pool.
+  src: TGB § Tumak/Arc framing (turns 211–220)
+
+- **[add]** Rune Set menus: what qualifies
+  Add to the menus section: a lower-level spell qualifies for a menu only if upcasting it to that set's tier gives a real benefit.
+  src: TGB § Tumak/Wayscribe design (turn 132)
+
+- **[add]** Why Mind Spike and Misty Step
+  Augury and Longstrider overlap the Runechild's Runic Spells, so the Soul menu takes Mind Spike and the Walker menu takes Misty Step in their places.
+  src: TGB § Tumak/Rune sets and per-rune boons (turn 212)
+
+- **[add]** How the Rune Sets are offered
+  When a set completes, offer its spell menu out of game; the menus are not on the player tracker (Korey, turns 187, 207). Design note: the sets are built around what a Runekeeper needs, not what a Wayfinder needs (Korey, turn 231).
+  src: TGB § Tumak/Player tracker, Rune sets and per-rune boons
+
+- **[add]** The safety valve: when the DM places a rune
+  Add to § The safety valve: the DM places runes for player moments and engagement, for the two backfill runes for levels 1–2, and as a pacing nudge if Tumak has no complete set by level 5–6 (turns 259–260).
+  src: TGB § Tumak/Rune structure, final
+
+- **[add]** Many marks on one world
+  Add to the Marks row: marking many places on one world is allowed and carries no penalty (Korey, turn 223).
+  src: TGB § Tumak/Marks
+
+- **[add]** Failed attempts and mishaps
+  Add to Wayfind: a failed attempt keeps the twins inside Wildspace. Mishaps are never time-related.
+  src: TGB § Tumak/Separation and attempts (turn 140)
+
+- **[add]** The Twin Bond Compass
+  The compass gives direction without distance, and it sharpens with proximity.
+  src: TGB § Tumak/Separation and attempts (turns 142–143)
+
+- **[add]** The sanctuaries, and a stock of them
+  Lore for § Wayfind → Mishap result: the sanctuaries are where past Runekeepers went after passing on their runes. Each found a piece of home off-world and made one last Wayfind to it, a rite so that two Runekeepers never share the homeworld. A sanctuary is always safe, so a split twin is never in danger (Korey, turn 227). Prep: keep a stock of 5–10 previous Runekeepers' resting places.
+  src: TGB § Tumak/Mishap and separation, Open
+
+#### Character subsystems
+
+- **[add]** Gregory's Calibration (pointer)
+  Calibration is DM-initiated at fitting moments and stacks narrative clues; a failed roll gives static, never misdirection. Thresholds and prep live on crew/gregory.html (see the Crew section). The draft Bearing feature is a decide in the Crew section.
+  src: memory-canon § Gregory
+
+- **[add]** Bartholomew's Aspects (pointer)
+  The Almost mechanic is a character subsystem: aspects prepared equal to proficiency bonus; Manifest Aspect as a bonus action for 1 minute. Point to the player page `aspects/` and to crew/bartholomew.html.
+  src: memory-canon § Bartholomew; chat-voyage-6-7-planning § Bartholomew: Aspects
+
+- *(The tyrant ship's standing combat rulings are listed under statblocks/index.html.)*
+
+### rules/wayfinder-path-dm.html
+
+- **[decide]** The floating runes 17–19 *(shape)*
+  The page lists runes 17, 18 and 19 as "Floating (DM-bestowed)" placeholders. Update when the Anchor decide on rules/index.html lands.
+  src: memory-canon (open-decisions § Pending)
+
+### statblocks/index.html
+
+- **[decide]** Ostekk-10's stat block and Lightning Breath *(prep)*
+  Build the stat block. For Lightning Breath, options: the 12d10 line; or the 20-ft. cone the table saw (suggested 4d10, DC 16 Dex).
+  src: chat-voyage-6-7-planning § Open
+
+- **[fix]** How the crew picks the instructor
+  Page says "The players choose the teacher at the V007 rendezvous". Change to: the crew picks Saerthe or Tarto by a Discord reaction vote before V007, so the instructor scenes can be prepped.
+  src: chat-voyage-6-7-planning § Interlude and downtime; memory-canon (open-decisions § Voyage 007 intent)
+
+- **[add]** What the choice decides
+  Add to § What the choice actually decides: Saerthe leans toward exploring ("go look"). Tarto leans toward the mission ("keep going, your mission, your failure"). Each handles talk of the missing things differently.
+  src: chat-voyage-6-7-planning § The swap and NPCs; memory-canon (open-decisions § Voyage 007 intent)
+
+- **[add]** Tyrant ship retunes (new rows; the page names these as next candidates)
+  - Clockwork horror: HP 30.
+  - Hollowed wisps: AC 11; DC 12 Con save; 1d4 necrotic; they latch on on a failed save.
+  - Standing ruling: two cones give +3 cover.
+  src: chat-voyage-6-7-planning § The field and constructs
+
+- **[add]** Design note: N'ghathrod's block
+  N'ghathrod runs as one flat, high-powered block: run on sight, never scaled down (Otohan Thull style). His block and the five lieutenants' blocks are deferred.
+  src: memory-canon § Deferred; chat-cosmic § Open
+
+### tracker/index.html (DM layer: prime/data/overlay.json)
+
+- **[fix]** The seated Lantern is a one-person pod
+  overlay.json says "Seated, it turns the ship into a safehouse." Change to: seated in the bay, the Lantern is a one-person rejuvenation pod (one creature, one hour, all three charges, a long rest even if it already had one that day).
+  src: chat-voyage-6-7-planning § Superseded
+
+- **[fix]** Ostekk-6's repair objective is closed
+  overlay.json "next" says "Seat the Lantern in the repair bay so Ostekk-6 finishes rebuilding." A Lantern charge repaired him instead of the bay. Close the objective, or replace it with his current next step.
+  src: chat-voyage-6-7-planning § The Lantern and the ship
+
+- **[fix]** What the Command Deck field does to constructs
+  overlay.json says "The Command Deck's field unmakes constructs". Change to: the field froze the clockwork horrors, slowed the OSTEKK units and kept the behir out.
+  src: chat-voyage-6-7-planning § The field and constructs
+
+- *(The Ostekk-2 "wake it for good" line in overlay.json is a decide (prep) under artifacts/containment-engine.html in the Artifacts and vessels section.)*
+
+### wayfinder-path/index.html (player site, outside prime)
+
+- **[add]** Who gets the tracker link (DM note, kept in prime)
+  Korey sends the tracker link only to Tumak's player, or puts it on the character sheet marked player-only (turn 162). Record this with the rules page's tracker links.
+  src: TGB § Tumak/Player tracker
+
+# New pages
+
+### Fonains Canon Reference (Claude doc, outside the repo)
+
+- **[later]** Refresh or retire the Fonains doc
+  Since section 8 the wiki carries Fonains: locations/fonains.html, factions/cretez.html, dossiers/vanifer.html and vessels/thessalars-craft.html. The doc's open fix and add items (# Fonains § Fonains doc) were written against it. In a chat session, either refresh the doc from the wiki pages or retire it and point to them.
+  src: section 8 (Q1), 2026-10-28
+
+### NEW: Asmodus (dossier, later)
+
+- **[later]** A dossier for Asmodus Cre'Tez
+  He is a row on factions/cretez.html. He has a motive, a withheld truth (his modified memory) and a way he reacts to being pushed, so he earns a dossier when Fonains comes into play for the crew.
+  src: section 8 plan § 4
+
+### NEW: Lola's Boys (faction, later)
+
+- **[later]** A faction page for Lola's Boys
+  The party is a set of rows on locations/fonains.html. Give it a faction page when it acts in Caelestis, or when the rows outgrow the Fonains page.
+  src: section 8 plan § 4
+
+### NEW: Player holochart
+
+- **[add]** A player version of the 3D holochart
+  The DM holochart (`prime/chart/holo.html`) is built; the players get their own (Korey 2026-10-28). It shows only what the crew knows: charted systems and places with a record, and the crew's route voyage by voyage, read from `data/`. Heart worlds appear only once the record holds them (the repo is public, so unfound positions must never ship in a player file). With the hearts in hand, the crew can set the viewpoint to any known system; from Oerth the eye forms. Players may mark their own waypoints in their browser. Needs a player folder (into the deploy glob and the S.E.A.R.C.H. scope) or a home under `stellar-chart/`, and the in-world framing of the projection.
+
+### NEW: Languages (reference)
+
+- **[add]** A home for invented languages
+  Purpose: one DM reference for every made-up language in the cosmos, so names stay consistent. Voice: DM. First entry: the Vth'orama tongue, with its roots (vth- the whole of; ghath to hold and keep hold; n'- one who, one that is; -rod unbroken, that does not release; ulh the cull; -an negation; mer- to bear; enna near, inner; or- toward; amu home; -a a people), and the glossed words (Vth'orama, Vth'oramu, Vth'ghathu, Vth'ulhan, Vth'merru, n'ghathu, Enna Vth'ghathu, N'ghathrod). Add a section per language as others appear (Githyanki, chapter names for the Seekers).
+  src: Korey, 2026-10-25 (round 4); factions/vthorama.html § Roots
+
+### NEW: Fringe watcher of the cosmos (dossier, later)
+
+- **[later]** The sage who sees it coming
+  A fringe figure who senses that something is wrong in the cosmos and has his own name for it, but no one believes him, in the vein of Ascher Mir. Who, where, and what he calls it can wait.
+  src: Korey, 2026-10-25 (round 4)
+
+Each proposed new page has a purpose, a voice, and its content items. Paths are
+suggestions for the overhaul. Items run decide, fix, drop, add.
+
+Voice key: **in-world** reads like a fan wiki about things that exist;
+**DM** speaks to the DM about how it is run.
+
+---
+
+### NEW: Contract board (graduation board)
+
+**Purpose.** The graduation board's contracts, one entry each: the Grade, where it is, who is involved, what is really going on, and how it ties to the larger campaign. These are the jobs the crew can take at graduation, and each one plants a thread (the resonance-crystal supply line, the heart surveys, the Fork, the Watchers). Suggested path: `prime/campaign/contracts.html`.
+
+**Voice.** In-world for each contract's facts (people, places, what happened); DM for the "what's really going on" and tie-in notes.
+
+- **[add]** Lane Marker 14 (Grade IV, Toril–Garden lane)
+  The lane beacon at Marker 14 is dark. Crystal thieves took it to pay for care for a sick child: the Ardenne family, with Mella Ardenne speaking for them. Their buyer is Sefn Tolur, a human who flies with a hadozee pilot and pays through a broker on Toril's orbital market. Tolur feeds the resonance-crystal supply line, which needs crystal that is beacon-cut and bought from at least four systems. Gregory hums when near it.
+  src: chat-cosmic § Graduation board contracts
+
+- **[add]** Dry Well, Anadia (Grade IV)
+  The settlements of Dunmarrow and Kesh Hollow share a water compact four generations old. Elder Tobb Ashlow of Dunmarrow took payment from surveyors to deepen the well; Neth Kesh speaks for Kesh Hollow. Below the well is a chamber holding the eye-in-a-wheel and the bodies of four missing labourers. The surveyors were a tall, quiet woman and a talkative man; a child's drawing of them has their eyes wrong; they went inland toward the ranges.
+  DM: the chamber is a failed survey for the heart's Atrium, and Tumak's runes surface there. Link to Opposition: the Vth'orama "How they search" (opposition/vthorama.html#search, Anadia well). locations/realmspace.html names Dunmarrow and Kesh Hollow on Anadia, and Lane Marker 14 on the Toril–Garden lane (section 3).
+  src: chat-cosmic § Graduation board contracts; colony/index.html (Anadia well)
+
+- **[add]** Repossession (Grade IV)
+  Recover the skiff *Tallow Wren* at Toril's orbital market. The moneylender who wants it back also holds the debts of Miken's fiancé. The skiff's log ties to the Fork.
+  src: chat-cosmic § Graduation board contracts, § Superseded
+
+- **[add]** Watcher Transport
+  Collect Ezra at H'Catha and take him to the Hall of the Watchers. The crew is the last troop he travels with before his own journey begins. (Ezra is Korey's PC in another campaign; Caelestis does not visit his homeworld, and his role here is transitory.) dossiers/ezra.html instead has the crew leave him on H'Catha, with an optional ferry to Emporia after his knighting; bring that page in line with this contract (Emporia can stay as his later assignment).
+  src: memory-canon § Key NPCs (Ezra plan); chat-cosmic § Graduation board contracts
+
+### NEW: Encounter Log
+
+**Purpose.** The companion to every random encounter table (Astral first). Each table row points to a Log entry, so a roll at the table always lands on something prepared. spine.html records both the Astral encounter table and this log as unwritten. Suggested path: `prime/campaign/encounters.html`.
+
+**Voice.** DM.
+
+- **[add]** Entry format
+  Every random-table row points to an Encounter Log entry with: code, read-aloud, truth, wants, three outcomes, stats, payoff and plant. A one-line entry with nothing behind it is not allowed.
+  src: chat-cosmic § Encounter tables; campaign/spine.html
+
+### NEW: Crossing table (Crossing Companion calls)
+
+**Purpose.** The ruled content of the Crossing Companion doc (its Calls table): the d20 crossing entries and the ships, people and history they introduce. Today it lives only in a Google Doc with unreviewed proposals. Suggested path: `prime/campaign/crossing.html`.
+
+**Voice.** DM for the table; in-world for each ship, person and history entry.
+
+- **[decide]** Lock or change each Crossing Companion proposal *(prep)*
+  Unreviewed: d20 crossing entries 9–20; the *Hollow Bell* and Corrow (a world mid-Zenith); the *Fennick* plate; Oswin Pell and the Listeners of the Low Bell (the first account of the voice); Kith'rak Aznuil and the two-circle Passage mark; the *Steady Hand*, Warden Oru Basz and the *Marrow Gull* buoy; Thistlewhit's letter to Mirt; the frozen autognome ("Hold until called"); the creed lines; Watcher history (the Quiet of Seln, Aubrin's Hand, the Ferry Arrangement, the Neogi Winter, the Ashfall contract, where Tarto lost her wing flap); Driftwarden grades IV–I shown by collar knots.
+  src: astral § Open
+
+- **[drop]** Dead names in the Crossing Companion doc
+  The doc still names the Watcher "Ondessa Vael" and carries Ilvathe. Both names are dead; remove them before anything is lifted from the doc.
+  src: astral § Open
+
+### NEW: Exandria (realm stub or registry line)
+
+**Purpose.** Records Exandria as a world in the cosmos, borrowed from a published setting, so it can be used without importing its history. Suggested: a line on `prime/locations/index.html`, or a stub.
+
+**Voice.** In-world for the stub; DM for the borrowing note.
+
+- **[later]** Exandria's sphere
+  Place it, or leave it unplaced.
+  src: memory-canon (open-decisions)
+
+- **[add]** Exandria
+  Exandria is a world in the cosmos. None of Vecna's history there happened in this cosmos; it plays as a pre-Vox Machina world.
+  DM: it is a borrowed setting, like the Azeroth one-shot Korey's players have floated.
+  src: working/vecna.md § Oerth; memory-canon (open-decisions, Vecna/Tharizdun 2026-10-25; Direction 2026-10-21)
+
+### NEW: Hall of the Watchers (location)
+
+**Purpose.** The Watcher order's seat. The crew delivers Ezra there on a graduation contract, and it is a candidate home for the Watcher who came back from Glyth. No realms page exists. Suggested path: `prime/locations/hall-of-the-watchers.html` (or under factions if it is not a world).
+
+**Voice.** In-world.
+
+- **[decide]** Where the Hall is *(prep)*
+  Partly settled by STAGING § The Order (round 5): the Hall of Sight and Sound is the great hall within the Order's seat, so the Crossing Companion's identity question is answered. Still open: where the seat is. Its world, station or sphere is not set. Known around it: the H'Catha report ran Watcher → Hall → Fleet Corps → Academy, so the Hall is in reach of Caelestis's channels; Ezra trained about a century in the Hall of Sight and Sound (dossiers/ezra.html). Unreviewed: the Crossing Companion proposes that the Hall of Sight and Sound is the Hall of the Watchers. Rule that identity first, then place it: inside SPH-01 (the Watcher Transport contract is a graduation-grade job, so it should be reachable from Realmspace), or farther out.
+  src: memory-canon § Key NPCs (Ezra); working/glyth-watcher.md § Where she fits; astral § Caelestis structure, § Open (Crossing Companion proposals); chat-cosmic § Rules and crew (Hall of Sight and Sound)
+
+- **[add]** The Hall of the Watchers
+  The Hall of the Watchers is the seat of the Watcher order. Watchers serve one per region, so a world may have several, depending on its size and who lives there.
+  src: memory-canon § Key NPCs (Ezra; Watcher ruling corrected)
+
+### NEW: Glyth Watcher (dossier)
+
+**Purpose.** The Watcher who lived years on Glyth and came back. She is the only outside source on the elder brain and N'ghathrod's origins, and one of the named-but-unseen figures the crew hears of before meeting. Promotes from working/glyth-watcher.md. Suggested path: `prime/dossiers/<name>.html`.
+
+**Voice.** In-world.
+
+- **[later]** Her name
+  src: glyth-watcher § Open
+
+- **[later]** Her tell
+  Options: her ears; her mouth; skin that ripples under the surface.
+  src: glyth-watcher § Sketch
+
+- **[later]** How she got out, and what it cost
+  src: glyth-watcher § Open
+
+- **[later]** What she wants now
+  Options: revenge; a cure; to go back.
+  src: glyth-watcher § Open
+
+- **[later]** Whether the Order trusts her
+  src: glyth-watcher § Open
+
+- **[later]** Where she lives
+  Options: the Hall of the Watchers; Caelestis's undecided secret sliver.
+  src: glyth-watcher § Where she fits
+
+- **[add]** Who she is
+  She is a Watcher who lived for years on Glyth, inside the elder brain's psychic range, without taking a tadpole. She got out alone and still hears the brain. She is the only person outside Glyth who knows what the brain is thinking, and the hearing is slowly costing her.
+  src: glyth-watcher § Sketch; memory-canon (open-decisions, Vecna direction 2026-10-24)
+
+- **[add]** What she knows
+  Glyth's colonies; the elder brain and the pure-born; N'ghathrod's exile with the brainless-raised; the purebred lieutenant who stayed; why the Fleet bans approach to Glyth.
+  src: glyth-watcher § What she knows
+
+- **[add]** How the crew meets her (DM)
+  She is one of the named-but-unseen figures: the crew hears of her in contradictory accounts before they meet her.
+  src: glyth-watcher § Where she fits
+
+### NEW: Boogie's faith (name to be chosen)
+
+**Purpose.** The small faith that may come to see Boogie as a prophet. It sets up a pilgrimage and gives the shard's "holy" pull a human face. It must stay distinct from the Seekers. Suggested path: `prime/factions/<name>.html`, or a section on factions/index.html.
+
+**Voice.** In-world; DM for the seed.
+
+- **[later]** The faith's name
+  Options: The Willing and Taken; The Hollow Faithful; The Willing Departed; The Welcomed Home. "The Following" is retired and unavailable.
+  src: BCS § Boogie/Open
+
+- **[later]** Which planets hold the faith
+  src: BCS § Boogie/Open
+
+- **[add]** The faith
+  A small faith with a few followers across many worlds, and one or two older sites where it has a bigger presence. It predates the corruption of the Fonains Monolith: it formed around a felt call and holds no prophecy about any specific person. Its doctrine: something vast and full is calling, and being gathered there is completion. Its followers read "bring everything here" as ascent. Its practices are voluntary release, listening, and treating disappearances as signs. Its oldest term for the awaited one is "the one who has already partially arrived."
+  src: BCS § Boogie/The faith; memory-canon (Boogie prophet arc)
+
+- **[add]** Seed (DM): the holiest site
+  The faith's holiest site may be a misread Temple of Elemental Evil, a containment site, and a few insiders know the lie.
+  src: BCS § Boogie/The faith
+
+### NEW: The Becoming (player handout)
+
+**Purpose.** The tale the twins' grandmother told them as children, given to Tumak's player as an in-world handout. It carries the Lunarfoot belief about the runes, which is wrong about the mechanism. Player side: `handouts/the-becoming.html` (from the chat output the-becoming.html), with the DM note kept in prime.
+
+**Voice.** In-world (the tale itself); one DM note in prime.
+
+- **[later]** "The Unfolding"
+  The tale's inherited name for the hiding is "the Unfolding", which collides with the glossary's heart-opening sense of "unfolding". Options: keep both; rename the tale's term; or rename the glossary sense.
+  src: TGB § Tumak/"The Becoming" handout; glossary/
+
+- **[add]** The tale
+  It opens: "Long ago, my hearts — before my mother's mother's mother". In it the thing that came looking is "a star with too many mouths" or "a name written wrong", and the world folds itself around its people and bestows runes on them as gifts. It closes: "The two of you have always been one to me." / "When the time comes — come home safe."
+  DM note (prime only): this is Lunarfoot belief. The runes come from the Dissolution fragment, not from a gift.
+  src: TGB § Tumak/"The Becoming" handout; memory-canon (Dissolution fragment model)
+
+- **[add]** The Lunarfoot seal
+  A crescent moon cradling a footprint, with two four-point stars for the twins. Also usable on the-runekeeper.html.
+  src: TGB § Tumak/"The Becoming" handout
+
+### NEW: Cadet intake
+
+**Purpose.** How cadets reach Caelestis, especially from worlds without spelljamming. No page covers recruitment.
+
+**Voice.** In-world.
+
+- *(The decide lives in the Crew section under crew/index.html. Known so far: the Watcher order broke protocol to recommend Sol.)*
+
+### NEW: Campaign board
+
+**Purpose.** The DM's at-a-glance view of the run: planned against actual per voyage, each crew member's contribution, the arcs, the off-screen powers, and the ripples into Arc 2. It exists today only as claude.ai artifacts. Whether it becomes `prime/timeline/` or a separate page is an automation decide (see the Automation and tracker section).
+
+**Voice.** DM.
+
+- **[later]** Whether the board's forward columns are editable
+  src: chat-cosmic § Open
+
+- **[add]** What the board shows
+  Planned against actual per voyage; each crew member's contribution; the arcs; the off-screen powers; ripples into Arc 2.
+  src: chat-cosmic § Wiki structure rules (turn 439); memory-canon (DM views at a glance)
+
+### NEW: Campaign shape
+
+**Purpose.** The tone and source rules for the cosmos as a whole. Suggested: a section of `prime/campaign/index.html`, or its own page.
+
+**Voice.** DM.
+
+### NEW: Cosmos texture
+
+**Purpose.** The recurring patterns that make the cosmos feel lived-in and larger than the crew: things they keep running into across worlds. Suggested path: `prime/cosmology/texture.html`.
+
+**Voice.** DM.
+
+- **[later]** The ensemble of legendary figures
+  Who the named-but-unseen figures are. spine.html lists it under Open development.
+  src: chat-cosmic § Open; campaign/spine.html
+
+- **[add]** The edge mystery
+  Ruled (STAGING round 8). Add (DM voice): "A mystery lies at the edge, outside Realmspace, in another system or between systems. It will cross paths with Vth'oramu once N'ghathrod grows bolder." Planning layer: it needs an introduction before that.
+  The sovereign and the Osiris-style figure ride with the brainstorm item under campaign/index.html ("The Fleet's strain in broad strokes").
+  src: Korey, 2026-10-25 (round 8); chat-cosmic § Open
+
+- **[add]** The patterns
+  - Worlds state true facts they never explain (the Destiny's Reef effect).
+  - Illithids are the campaign's Hive: the crew keeps finding signs that "they're here too" across worlds.
+  - A modron march is the cosmos's Vex: a cross-world process whose sign is perfect geometry.
+  - Names circulate before they are met (the Osiris pattern), told by sources that disagree. Zerathis is the first.
+  - A delving culture of ruin exploration exists, like post-Aeor in Critical Role.
+  src: chat-cosmic § Cosmos texture; memory-canon
+
+### principles.html
+
+The page exists (`prime/principles.html`, Reference). Contracts are built on Campaign § Arc 2; this decide names their categories there.
+
+- **[decide]** Contract categories *(prep)*
+  Ruled: three or four categories by how a contract ties to the world (loose, Seekers-tied, personal, more as needed), and contracts surface from a world already in motion (STAGING round 4). Name the categories and set how many of each the board offers at a time.
+  src: Korey, 2026-10-25 (round 4)
+
+---
+
+### hub.html
+
+- **[later]** Which Lore Bible is current
+  The hub's "Wildspace Lore Bible" tile opens "Caelestis Wildspaces Lore Bible" (doc `1XjOAGPAWvDivwI2ThihwCG84ACk2eF_HKtzbxgbVTMQ`, about 3 KB). The project's synced Lore Bible is "Caelestis Campaign Lore Bible" (doc `1SLoMt7h9DboUQQlXZA61HukmnQBkjHKUNtLH2Qt4IMQ`, about 13 KB). Drive shows both created and last edited on 2026-04-12, untouched since. The Campaign Planning chat folded the Lore Bible into the DM wiki (turn 56), so neither is the live source now. Options: point the tile at the Campaign Lore Bible and relabel it; or retire the tile, since prime/ replaced both.
+  src: hub.html; project synced sources; Drive metadata (checked 2026-10-25); chat-early-planning § DM wiki and naming (turn 56)
+
+- **[fix]** The hub's Drive Root is right; memory's folder id is the rune images folder *(answered)*
+  No page change. The hub's Drive Root tile opens `1suJFIN_LYDmRrkzjk3PkVv2pOmbJxE8r`, which Drive names "Caelestis". Memory's `1KuFCCLYKM2LuW6Hd4NEDq9GIsHL2L3Y5` is a folder named "runes" (created 2026-06-18), where Tumak's rune images live. Update memory's site-and-automation line: the Caelestis folder is `1suJFIN_LYDmRrkzjk3PkVv2pOmbJxE8r`, and `1KuFCC…` is the runes folder.
+  src: hub.html; memory-canon § Tools and gotchas
+  answered: Drive metadata for both ids (checked 2026-10-25); inbox/chat-crew-tumak-gregory-bartholomew.md § Tumak/Documents produced (rune images in folder 1KuFCC…)
+
+- **[later]** The Trackers band
+  It says "The Tracker reads the record; the sheets beside it are edited in place." The Google Sheet tracker is frozen, and tracker alternatives are under review. Options: keep the Character Arc Tracker and Wildspace Tracker cards, or retire them. Follows the sheet decide in the Automation and tracker section.
+  src: memory-canon § Automation pipeline; memory-canon (open-decisions, Plan 2026-10-25)
+
+- **[add]** A Vessels card under Setting
+  The DM nav has Setting → Vessels, but the hub has no Vessels card. PR #71 added Factions and Vessels cards on the player side.
+  src: prime/scripts/dm-nav.js; chat-voyage-6-7-planning § Documents produced
+
+- **[add]** A Timeline card under Campaign
+  The DM nav has Run → Timeline, but the hub has no Timeline card.
+  src: prime/scripts/dm-nav.js
+
+### Other pages outside the assigned folders
+
+#### notes/PAGE-SHAPE.md
+
+- **[later]** A motivation rubric for "What they want"
+  The early master source doc gave every NPC four lines: **Wants** (specific, never "a happy life"), **Will do to get it** (the tools they will actually use), **Won't cross** (the line they keep), and **Current pressure** (what makes it urgent now, or nothing). Options: adopt it as the shape of the "What they want" tab (or its successor), keep it as a writing check only, or leave it out.
+  Touches: PAGE-SHAPE.md, every prime dossier if adopted.
+  src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300)
+
+- **[add]** Concept backlinks
+  Concept backlinks deep-link to the section, not the page.
+  src: chat-cosmic § Wiki structure rules
+
+- **[add]** Canon rules for § Prose
+  - At DM level the world never contradicts itself. At player level contradictions are allowed (lies, bad information), and not everything has to connect.
+  - Canon never mentions a concept that does not exist (for example, "there is no Existence Axiom"). Contrasts that explain how something works are fine. Place beside "Canon voice, not changelog voice".
+  src: framework § Working rules; memory-canon (campaign-canon, Axioms line)
+
+#### notes/WIKI-PAGE-GUIDE.md
+
+- **[fix]** A.T.L.A.S., not "the World Surveyor"
+  Lines 45, 63–64, 490 and 525 say "the World Surveyor". Change each to A.T.L.A.S.
+  src: framework § A.T.L.A.S.; memory-canon (campaign-canon)
+
+- **[drop]** "The network" as a faction term
+  Line 48 says "who Vecna's current network is". "The network" is retired; reword to N'ghathrod's colony and the Seekers.
+  src: framework § Open; memory-canon (open-decisions, Act 1 retrofit; Seekers line)
+
+#### notes/FIA-BREADCRUMBS.md
+
+- **[fix]** A.T.L.A.S., not "the World Surveyor"
+  Line 59 says "the World Surveyor". Change to A.T.L.A.S.
+  src: framework § A.T.L.A.S.
+
+# Automation and tracker
+
+Korey is revisiting the pipeline and tracker alternatives during the prime
+overhaul. This file sets out the current state, then the open choices. Items
+run decide, fix, drop, add.
+
+### Current state (checked against the repo, 2026-10-25)
+
+- **Session ingest.** n8n is dropped. A session runs in chat against the repo, following `prime/notes/SESSION-RUN.md`: Open → Read → Chronicle (**approval 1**) → Extract (**approval 2**) → Record → Render → Check → Publish. Nothing is written to the repo before approval 1, and nothing to the record before approval 2. A run goes up as one pull request; a run that stops halfway is picked up from its branch. The source is the Drive file `Caelestis _ The Spelljamming Academy _ Voyage NNN.txt` (transcript or dictation).
+- **The record.** `data/*.json` is the player-facing campaign record, kept by hand: sessions, npcs, locations, items, factions, quests, player-characters (plus derived `index.json`, `voyage.js`). `prime/data/*.json` is the DM layer over it, keyed by the same ids (`overlay.json`, `voyages.json`, derived `dossiers.json`). The schema is closed and listed at the top of `scripts/data.js`; a DM fact has no key to sit under, which keeps `data/` player-safe. Records already carry `parentId` (16 locations use it).
+- **Verbs.** `node scripts/data.js derive` fills derived fields; `check` verifies record, DM layer and pages (must report 0 errors before a PR); `guard` is the deploy test.
+- **CI.** `check.yml` runs `data.js check`. `deploy.yml` builds three Pagefind indexes (player, DM, FIA), runs `data.js guard`, prunes, and deploys to GitHub Pages. There is no build step.
+- **Retired scripts.** `build-pages.js` (the template-entity scaffolder) was deleted in Pass 0. `build-data.js` and `transform.js` were retired with the Google Sheet.
+- **The Google Sheet tracker** ("Caelestis Campaign Tracker") is frozen. `prime/tracker/` shows the repo record plus the DM overlay.
+- **Unmigrated sheets.** "Caelestis Character Arc Tracker" and "Caelestis Wildspace Tracker" still exist as synced Google Sheets; the hub still links them.
+- **Timeline.** `prime/timeline/timeline.json` is hand-edited JSON with four lanes and a clocks list; `prime/timeline/index.html` fetches it in the browser.
+- **Crew Logs.** Step 7 of the runbook still appends the Full Account to the Crew Logs Google Doc ("Voyages"), embedded on the player site at `logs/`.
+
+### Pipeline and tracker
+
+- **[later]** Session ingest
+  Current: the in-chat runbook above, with two approvals and a PR. Options: (a) keep the in-chat runbook as is; (b) keep it and trim steps (for example, drop the Crew Logs append, see below); (c) adopt an alternative pipeline. Whatever is chosen, SESSION-RUN.md and CLAUDE.md change together.
+  src: automation § Voyage 5 Method; memory-canon (open-decisions, Plan 2026-10-25; site-and-automation)
+
+- **[later]** The tracker
+  Current: the repo JSON record (`data/` plus `prime/data/`), checked in CI and shown on `prime/tracker/`; the Sheet is frozen. Options: (a) keep the repo record as the tracker; (b) move to a tracker alternative, which would need its own player/DM boundary to replace what the closed schema gives now. Touches hub.html (Trackers band), prime/tracker/, SESSION-RUN.md, DATA-BOUNDARY.md.
+  src: automation § Voyage 5 Method; memory-canon (site-and-automation; open-decisions, Plan 2026-10-25)
+
+- **[later]** The Character Arc Tracker and Wildspace Tracker sheets
+  Both are unmigrated. Options: fold them into the record (arcs into the DM layer, wildspace into locations); keep them as sheets; or retire them. The hub's Trackers band follows (see the New pages section, hub.html).
+  src: automation § Open (both chats)
+
+- **[later]** The Crew Logs Google Doc
+  Korey calls it unused, yet the V005 run appended to it, the runbook's step 7 still does, and the voyage pages carry the same text. Options: retire it (drop step 7's append and the `logs/` embed); or keep appending.
+  src: automation § Open; prime/notes/SESSION-RUN.md step 7
+
+- **[later]** Deploy and search
+  Current: deploy.yml builds the three Pagefind indexes and guards the record; the transform and scaffold steps are gone, and the scaffolder was deleted in Pass 0. Options: keep as is, or revise during the overhaul.
+  src: automation § Documents produced; memory-canon (site-and-automation)
+
+### DM views
+
+- **[later]** The Campaign Board and a Chronicle view
+  The Campaign Board is an arc timeline with a "where are we" marker and parallel tracks; a Chronicle view was also planned. `prime/timeline/` exists (timeline.json with lanes and clocks); neither view is built under those names, and the Board exists only as claude.ai artifacts. Korey's latest steer: the timeline view should be a linear event timeline, not a list of bearings (bearings/timeline.html stays an unlinked draft), and for the cosmic timeline he is open to formats beyond the chapter-flow layout. Options: treat `prime/timeline/` as the Campaign Board and extend it with planned-against-actual per voyage; or build the Board and Chronicle as separate pages. See the New pages section, NEW: Campaign board.
+  src: framework § Open; memory-canon (open-decisions, DM views; Locked 2026-10-25, timeline formats); chat-voyage-6-7-planning § Open ("Korey wants a linear event timeline"), § Superseded (timeline page unlinked)
+
+- **[later]** Where the weather of reality is tracked
+  Settled: it is tracked on the campaign view (canon: "rarely seen early but must be tracked on the campaign view"), so a tracker row is out; the tracker shows the player record plus the DM overlay. timeline.json has no clock or lane for it yet. Still open: a timeline clock (one escalating meter, fits "escalating, ownerless pressure") or a timeline lane (dated events, fits strain that shows up as incidents). The weather of reality is the DM's name for the Axiom strain at the table (cosmology/#weather-of-reality); the name may change.
+  src: framework § Open; memory-canon (campaign-canon, "weather of reality")
+
+- **[later]** The prep brief
+  A brief generated from open threads plus act structure was planned; there is no sign it was built. Options: build it from the record and timeline; or drop it.
+  src: automation § Open
+
+- **[later]** Locale-level places
+  Merchants, shipyards and taverns with a parent world or station, so the register can filter by them. This was proposed for the Sheet's Locations tab, which is frozen. The record's locations already carry `parentId` (16 do). Options: use `parentId` for locales and add filtering to the register; or drop the idea.
+  src: framework § Open; scripts/data.js schema
+
+### Housekeeping
+
+- **[later]** The SotDQ tracker cleanup
+  Deferred. Schedule it or drop it.
+  src: automation § Open
+
+- **[fix]** "Autognome" in V003 and V004 stays as history *(answered)*
+  No sweep. V003 and V004 bullets and accounts keep "the broken autognome", because that is what the crew believed then; Ostekk-6 states he is an automaton in V005, and every dossier and current page says automaton. State the rule in SESSION-RUN.md so it is not re-asked: earlier voyages keep the crew's belief at the time; correct the record and current pages only.
+  src: automation § Open; memory-canon § Key NPCs (Ostekk-6)
+  answered: inbox/chat-automation.md § Voyage 5 runbook, Method (Settled: "Earlier voyages keep 'autognome' as history"). PR #61 asked "Say if you want them swept" and PR #62 repeated the default; Korey merged both without asking for a sweep.
+
+# Repo and process
+
+- **[later]** terms.js warnings that can misfire
+  The raw-line "Open" pattern and the word "undecided" are voice warnings that can flag legitimate table cells and prose (Cosmology's Determination text has an allow entry). Tune them if they start producing noise.
+  src: Factions review, 2026-10-28
+
+- **[later]** "done:" lines in STAGING
+  STAGING entries with several homes keep a "done:" note listing the pages that already carry them, though the README says an entry is deleted once its page carries it. Settle the rule: delete per home, or keep the note until the last home is written.
+  src: Factions review, 2026-10-28
+
+- **[later]** Bold labels inside What's hidden items
+  Some What's hidden items open with a bolded name mid-sentence ("**Vecna (Lich)** has had…") rather than a separate label. Standardise to a short label followed by the sentence, or plain text, when the pages are next touched.
+  src: Factions review, 2026-10-28
+
+## Page conventions
+
+- **[later]** Where the chart lives
+  The chart is its own page off to the side. Embed it where it is used (the Locations register, or a cosmos map on the cosmology page) as part of the refactor. Also retire its "claimed" and "primed" node states (staged).
+  src: Korey, 2026-10-25 (round 2)
+
+- **[fix]** Dossier tab names: keep the four tabs *(answered)*
+  No change. The 36 live prime dossiers and PAGE-SHAPE.md use *Who they are / What they want / DM notes / Stat block*, and that is the current rule. Turn 460's five-tab set (*What it is / What it wants / What's hidden / Running it / Stat block*) is not the later ruling: it predates PR #77 ("the four-tab dossier shape"), which Korey merged on 2026-10-18. The PAGE-SHAPE principles hold: one set everywhere, labels never inflect, a page carries only the tabs it has content for. Same answer as the PAGE-SHAPE item in the New pages section.
+  Touches: nothing.
+  src: notes/PAGE-SHAPE.md; inbox/chat-cosmic-campaign-structure.md
+  answered: repo history (PR #77, merged 2026-10-18, after the cosmic chat's page-shape PRs #60 on 2026-10-07 and #63 on 2026-10-11)
+
+- **[fix]** "Open" subsections move off entry pages *(answered)*
+  Option (b). Open questions stay on the planning layer: the backlog, drafts and planning pages (Spine, Plot Hooks, Voyages, What If) hold what is undecided, and `is-open` survives only there. A dossier, item or location entry never carries "pending", "TBD" or "decision needed"; if a detail is unknown, the entry says what is known and stops. Move each entry page's *Open* subsection into BACKLOG.md and update PAGE-SHAPE.md to match.
+  answered: working/README.md § Writing staged entries and pages ("Open questions stay on the planning layer"); not in STAGING.md
+  Original item: PAGE-SHAPE.md puts an *Open* subsection with `is-open` tags inside a dossier's DM notes; 35 prime pages carry one. The new writing rule keeps open questions on the planning layer only. Options: (a) DM notes count as planning, so *Open* stays on DM pages but never on player pages; (b) *Open* moves off every entry page into BACKLOG.md, and `is-open` survives only on planning pages (Spine, Plot Hooks, Voyages, What If).
+  Touches: 35 prime pages, the page guide.
+  src: notes/PAGE-SHAPE.md; working/README.md
+
+- **[later]** How a page states an unknown
+  WIKI-PAGE-GUIDE.md: "The Reach's name is not known… phrase gaps as such." The new rule: an entry says what is known and stops. Suggested split: an in-world gap ("the Fleet does not know the Reach's name") is a world fact and may stay; a DM gap ("name not yet decided") is a backlog item.
+  src: notes/WIKI-PAGE-GUIDE.md; working/README.md
+
+- **[add]** Writing rule: no triple short sentences
+  Add to the prose rules in CLAUDE.md ("Prose: no stacked negations…") and to working/README.md § Writing staged entries and pages: "No three short sentences in a row for emphasis." Korey asks for AI-isms to be avoided in general; this is the pattern he named alongside stacked negations.
+  src: BCS § Sol/Style (turns 866, 870)
+
+- **[later]** connections.json sources outside Fonains
+  About 370 facts and edges in prime/data/connections.json still cite "STAGING round N" or "STAGING § …", entries since distributed and deleted. Section 8 retargeted the Fonains nodes to their finished pages. Retarget the rest, node by node, to the page that now carries each fact.
+  src: section 8, 2026-10-28
+
+## Record and schema
+
+- **[later]** Ships in the record
+  SESSION-RUN.md files a ship as a place with Type `Vessel`, parented to where it was last seen, and parks simulated ships under the Simulation Deck with Status `Simulated`. That rule is the latest one Korey accepted for the record (Voyage 7 chat, 2026-10-25, Settled: "Every ship the crew encounters gets a record"). "Vessels are vessels" was ruled earlier, in the cosmic chat, for the DM wiki: vessels are their own register with entry pages, not realms and not artifacts. So the two do not yet conflict; the question is whether the refactor should carry the register split down into the record. Options: (a) keep ships as Vessel-type places in `data/locations.json` and split only the pages (`navigation-records/` ships move to `vessels/`); (b) give the record a vessel set or a `kind` field, a status vocabulary without "Simulated" on places, and a choice of whether a ship's whereabouts is a field or a parent link.
+  Touches: scripts/data.js schema, data/locations.json, SESSION-RUN.md, navigation-records/, vessels/.
+  src: notes/SESSION-RUN.md; working/repo-refactor.md; chat-voyage-6-7-planning § Table and story principles; chat-cosmic § Wiki structure rules ("Vessels are a register of their own")
+
+## Fixes
+
+- **[fix]** "Answered from the sources" names items that are gone
+  The review list near the top of this file still names items section 4 consumed and deleted (among them "Artifacts of Convergence" is retired, What the letters stand for, The ship reads as native traffic, Tyrant ship weapons). Prune the list, or mark those entries done, when the list is next reviewed.
+  src: section 4 cold review (2026-10-28)
+
+- **[later]** Leftover UI calls from the migration notes
+  Still open in FIXES-DEMO-MIGRATION.md: merging the survey chart, the navigation-records clip at 1024px, the clickable blurb overlay, and missing links on voyage briefings 001, 003 and 004. Keep any of these, or drop them with the notes.
+  src: notes/FIXES-DEMO-MIGRATION.md, notes/RESTRUCTURE-NOTES.md
+
+- **[later]** Crew Notes, now that search has shipped
+  A shared space where players write their own notes (an Etherpad or a Google Doc linked from the site) was deferred until S.E.A.R.C.H. shipped, then to be weighed on its own. S.E.A.R.C.H. is live. The old `crew-notes/` redirect is gone; Crew Logs lives at `logs/`. Options: build it (and pick the tool), or drop it.
+  Touches: the player nav (scripts/nav.js), a new player page or external link.
+  src: chat-early-planning § Campaign Planning, Open; memory-canon (Crew Notes deferred)
+
+- **[later]** Revisit generating record fields on pages
+  The retired scripts/_benched/build-pages.js scaffolded player entity pages from data/*.json and rewrote marked fields (role, affiliation, status, last seen) on every build; it was deleted in Pass 0 (still in git history). The idea — filling record-derived fields so pages cannot drift from the record — is worth revisiting once the site is stable. It would change the CLAUDE.md rule that pages are written by hand, and would need to respect the session-run approvals and the current record and page shapes; the old script's known bugs are in its README in history.
+  src: chat 2026-10-27 (Korey: "delete it for now. add a note to the backlog to revisit the idea when the site is stable")
+
+# Player pages
+
+Fixes to player-facing pages, including the Fleet Intelligence Archive (`restricted/`). These pages hold only what the crew could know; corrections must keep that boundary.
 
 ### vessels/vthoramu.html
 
