@@ -88,13 +88,15 @@
   const F = v3.norm(v3.sub(CORE, OERTH));               // Oerth's line of sight
   const RT = v3.norm(v3.cross(F, [0, 1, 0]));
   const UP = v3.norm(v3.cross(RT, F));
-  /* The eye is drawn large: its lid corners sit 65 degrees either side of
-     Oerth's line to the core, so the lids sweep much of Oerth's sky. Eye
-     coordinates are angles: x across, y up, in units of EYE_ANGLE. */
-  const EYE_ANGLE = 65 * Math.PI / 180;
-  const HALF = Math.tan(EYE_ANGLE);                     // kept for callers that think in tangents
-  const eyeDir = (x, y) => { const az = x * EYE_ANGLE, el = y * EYE_ANGLE;
-    return v3.norm(v3.add(v3.mul(v3.add(v3.mul(F, Math.cos(az)), v3.mul(RT, Math.sin(az))), Math.cos(el)), v3.mul(UP, Math.sin(el)))); };
+  /* Seen from Oerth is a superimposition: Vecna sees at the scale of a
+     galaxy. The eye is an orthographic projection along the axis from Oerth
+     through the core. Each point of the eye is a line parallel to that axis,
+     and its heart system can lie anywhere along it, near side or far. Eye
+     coordinates x and y become offsets across and up from the axis, in scene
+     units: EYE_W wide so the lids span most of the galaxy's breadth, EYE_H
+     high so the lids' peaks stay inside the halo (a flatter, wider eye). */
+  const EYE_W = 82, EYE_H = 34;
+  const eyeBase = (x, y) => v3.add(v3.add(CORE, v3.mul(RT, x * EYE_W)), v3.mul(UP, y * EYE_H));
   const D = v3.dist(OERTH, CORE);
 
   /* The eye in Oerth's view: lid width 1, lid height .373, iris radius .24.
@@ -107,44 +109,58 @@
   const PAIR = [2, 3];                                  // two neighbouring upper-lid systems, opened and linked
   const FOUND = 6;                                      // Nowhere, on the lower lid
 
-  /* Each heart's depth along its sightline is seeded. Of the depths that
-     keep it inside the disc (or, failing that, the halo), clear of the named
-     systems, it takes the one farthest, from above, from the hearts already
-     placed and from Oerth, so the fifteen spread across the galaxy: near
-     arms and far, on both sides of the core. A point high in the eye can
-     only lie near Oerth; a point near the eye's level line can lie far past
-     the core. The second opened heart stays near the first: they are
-     neighbouring systems. */
-  const HALO_LIMIT = 1.6 * HALO_SIGMA;
+  /* From above the inscription must read as gibberish. Each heart's depth
+     along its line is seeded; a layout is drawn for each of a few hundred
+     seeds, and the chart keeps the one whose strokes, seen from above, cross
+     each other most and reach most of the disc (all eight octants around the
+     core), with no two systems crowded and none crowding Oerth. The search is deterministic, so the
+     same layout comes up on every visit. The two opened hearts are
+     neighbours in the eye; from above they can lie far apart. */
+  const HEART_LAYOUT = {};
   const HEARTS = (() => {
-    const HR = rng(4127), out = [];
-    const avoid = Object.keys(POS).map(sysScene);
-    const flat = v => [v[0], v[2]];
-    const placedFlat = () => out.map(h => flat(h.v)).concat([flat(OERTH)]);
-    EYE2D.forEach((e, i) => {
-      const dir = eyeDir(e.x, e.y);
-      const partner = i === PAIR[1] ? out[PAIR[0]] : null;
-      const cands = [];
-      for (let k = 0; k < 160; k++) {
-        const depth = partner ? partner.depth * (0.8 + HR() * 0.45) : 14 + HR() * 190;
-        const p = v3.add(OERTH, v3.mul(dir, depth)), r = Math.hypot(p[0], p[2]);
-        if (r > 102 || r < 10 || v3.dist(p, OERTH) < 14) continue;
-        if (avoid.some(q => v3.dist(p, q) < 9)) continue;
-        if (out.some(h => v3.dist(p, h.v) < 6)) continue;
-        const disc = Math.abs(p[1]) <= 1.5 * discSigma(r);
-        if (!disc && Math.abs(p[1]) > HALO_LIMIT) continue;
-        const pf = flat(p), gap = Math.min(...placedFlat().map(q => Math.hypot(pf[0] - q[0], pf[1] - q[1])));
-        const over = Math.max(0, Math.abs(p[1]) - 1.5 * discSigma(r));   // how far above the disc, into the halo
-        cands.push({ v: p, depth, disc, gap, score: gap - 0.6 * over });
+    const avoid = Object.keys(POS).map(sysScene), oerthFlat = [OERTH[0], OERTH[2]];
+    const edges = [];
+    LID.forEach((a, k) => edges.push([a, LID[(k + 1) % LID.length]]));
+    IRIS.forEach((a, k) => edges.push([a, IRIS[(k + 1) % IRIS.length]]));
+    const cross2 = (p1, p2, p3, p4) => {
+      const d = (a, b, c) => (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0]);
+      return d(p1, p2, p3) * d(p1, p2, p4) < 0 && d(p3, p4, p1) * d(p3, p4, p2) < 0;
+    };
+    function layout(seed) {
+      const R = rng(seed), out = [];
+      for (let i = 0; i < EYE2D.length; i++) {
+        const e = EYE2D[i], base = eyeBase(e.x, e.y);
+        let got = null;
+        for (let k = 0; k < 300 && !got; k++) {
+          const t = -130 + R() * 260, p = v3.add(base, v3.mul(F, t)), r = Math.hypot(p[0], p[2]);
+          if (r > 100 || r < 10) continue;
+          if (avoid.some(q => v3.dist(p, q) < 9) || Math.hypot(p[0] - oerthFlat[0], p[2] - oerthFlat[1]) < 20) continue;
+          if (out.some(h => Math.hypot(p[0] - h.v[0], p[2] - h.v[2]) < 14)) continue;
+          got = { v: p, depth: t };
+        }
+        if (!got) return null;
+        out.push(got);
       }
-      const c = partner ? cands.sort((a, b) => Math.abs(a.depth - partner.depth) - Math.abs(b.depth - partner.depth))[0]
-                        : cands.sort((a, b) => b.score - a.score)[0];
-      out.push({
-        i, n: i + 1, part: e.part, eye: [e.x, e.y], v: c.v, depth: c.depth, inDisc: c.disc,
-        state: PAIR.includes(i) ? 'linked' : i === FOUND ? 'found' : 'unknown'
-      });
+      const flat = out.map(h => [h.v[0], h.v[2]]);
+      let crossings = 0;
+      for (let m = 0; m < edges.length; m++) for (let n = m + 1; n < edges.length; n++) {
+        const [a, b] = edges[m], [c, d] = edges[n];
+        if (a === c || a === d || b === c || b === d) continue;
+        if (cross2(flat[a], flat[b], flat[c], flat[d])) crossings++;
+      }
+      const oct = new Set(flat.map(f => Math.floor((Math.atan2(f[1], f[0]) + Math.PI) / (Math.PI / 4)) % 8));
+      let gap = Infinity;
+      flat.forEach((a, m) => flat.forEach((b, n) => { if (m < n) gap = Math.min(gap, Math.hypot(a[0] - b[0], a[1] - b[1])); }));
+      return { out, score: crossings + 4 * oct.size + 0.5 * gap, crossings, octants: oct.size, gap };
+    }
+    let best = null;
+    for (let s = 0; s < 300; s++) { const L = layout(4127 + s); if (L && (!best || L.score > best.score)) best = L; }
+    HEART_LAYOUT.crossings = best.crossings; HEART_LAYOUT.octants = best.octants; HEART_LAYOUT.gap = best.gap;
+    return best.out.map((c, i) => {
+      const e = EYE2D[i], r = Math.hypot(c.v[0], c.v[2]);
+      return { i, n: i + 1, part: e.part, eye: [e.x, e.y], v: c.v, depth: c.depth, inDisc: Math.abs(c.v[1]) <= 1.5 * discSigma(r),
+        state: PAIR.includes(i) ? 'linked' : i === FOUND ? 'found' : 'unknown' };
     });
-    return out;
   })();
 
   /* ── Generated systems ─────────────────────────────────────────
@@ -194,7 +210,7 @@
     GX, ARMS, TIP, rng, gauss, armAngle, armPt, RS, OUT, TAN, at, POS,
     SECTORS, MARKER_T, MARKERS, frontAt,
     S, toScene, toChart, discSigma, HALO_SIGMA, sysScene,
-    OERTH, F, RT, UP, HALF, EYE_ANGLE, eyeDir, D, EYE2D, HEARTS, LID, IRIS, PAIR, FOUND,
+    OERTH, F, RT, UP, EYE_W, EYE_H, eyeBase, HEART_LAYOUT, D, EYE2D, HEARTS, LID, IRIS, PAIR, FOUND,
     FILLERS, rollSystems
   };
 })();
