@@ -80,7 +80,7 @@ It holds only what the crew knows and is published with the site.
 
 Urgency and Next Planned Beat live in the overlay, never in `data/`.
 
-**Fields.** Authored (edit): `id slug name number kind parentId giverId fields
+**Fields.** Authored (edit): `id slug name number date kind parentId giverId fields
 objectives rewards voyages seen mentioned linked`. Derived (never edit): `type
 url links parent giver children within items progress`, plus `data/index.json`,
 `data/voyage.js`, `prime/data/dossiers.json`.

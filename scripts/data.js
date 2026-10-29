@@ -13,7 +13,7 @@
  * proves that the record is consistent with itself, with the DM layer under
  * prime/data/, and with the pages that display it.
  *
- * AUTHORED  id slug name number kind parentId giverId fields objectives
+ * AUTHORED  id slug name number date kind parentId giverId fields objectives
  *           rewards voyages seen mentioned linked
  * DERIVED   type url links parent giver children within items progress
  *           data/index.json  data/voyage.js  prime/data/dossiers.json
@@ -62,19 +62,34 @@ const SETS = [
     fields: ['Type', 'Related Character(s)', 'Current State', 'Overview (Player)', 'Status'] }
 ];
 
-const AUTHORED = ['id', 'slug', 'name', 'number', 'kind', 'parentId', 'giverId', 'fields',
+const AUTHORED = ['id', 'slug', 'name', 'number', 'date', 'kind', 'parentId', 'giverId', 'fields',
   'objectives', 'rewards', 'voyages', 'seen', 'mentioned', 'linked'];
 const DERIVED = ['type', 'url', 'links', 'parent', 'giver', 'children', 'within', 'items', 'progress'];
 // The order keys are written in. Authored first, derived last, so a diff of a
 // session run reads top-down as "what was entered" then "what followed".
-const KEY_ORDER = ['id', 'type', 'slug', 'name', 'number', 'kind', 'parentId', 'giverId',
+const KEY_ORDER = ['id', 'type', 'slug', 'name', 'number', 'date', 'kind', 'parentId', 'giverId',
   'fields', 'objectives', 'rewards', 'voyages', 'seen', 'mentioned', 'linked',
   'url', 'links', 'parent', 'giver', 'children', 'within', 'items', 'progress'];
 // Which sets may carry which of the optional authored keys.
-const ONLY = { number: ['session'], kind: ['location', 'quest'], parentId: ['location', 'quest'],
+const ONLY = { number: ['session'], date: ['session'], kind: ['location', 'quest'], parentId: ['location', 'quest'],
   giverId: ['quest'], objectives: ['quest'], rewards: ['quest'] };
 // What a giver may be.
 const GIVERS = ['npc', 'pc', 'faction'];
+// A voyage's rough in-game date in Fleet time: cycle.kindling.ember, or a span
+// of two such dates joined by an en dash ("1491.7.3–1491.7.12"). Sixteen
+// kindlings to a cycle, about thirty embers to a kindling.
+const FLEET_DATE = /^(\d{1,4})\.(\d{1,2})\.(\d{1,2})$/;
+function fleetDate(s) {
+  const parts = String(s).split('–');
+  if (parts.length > 2) return null;
+  const ds = parts.map(p => FLEET_DATE.exec(p));
+  if (ds.some(m => !m)) return null;
+  const n = ds.map(m => [+m[1], +m[2], +m[3]]);
+  if (n.some(([, k, e]) => k < 1 || k > 16 || e < 1 || e > 31)) return null;
+  const key = ([c, k, e]) => (c * 16 + k) * 32 + e;
+  if (n.length === 2 && key(n[1]) <= key(n[0])) return null;
+  return { from: n[0], to: n[n.length - 1], key, text: d => d.join('.') };
+}
 
 const VOYAGE_STATES = ['played', 'next', 'planned'];
 const VOYAGE_KEYS = ['number', 'title', 'working', 'state', 'source', 'playerRecord', 'crewLog', 'anchor'];
@@ -130,6 +145,8 @@ function shape(sets, err) {
         if (typeof r[k] !== 'string' || !r[k].trim()) err(`${at}: ${k} is missing`);
       });
       if (s.type === 'session' && !Number.isInteger(r.number)) err(`${at}: a voyage needs a whole number`);
+      if (r.date !== undefined && (typeof r.date !== 'string' || !fleetDate(r.date)))
+        err(`${at}: date "${r.date}" is not a Fleet date: cycle.kindling.ember (kindling 1–16, ember 1–31), or an ascending span joined by an en dash`);
       if (!isObj(r.fields)) err(`${at}: fields is missing`);
       else Object.keys(r.fields).forEach(k => {
         if (!s.fields.includes(k)) err(`${at}: "${k}" is not a field ${s.key} have`);
