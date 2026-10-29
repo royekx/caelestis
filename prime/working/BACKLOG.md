@@ -30,21 +30,21 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 12 | 15 | 12 | 0 | 3 |
-| Locations | locations/ (Fonains stays in its own section) | 21 | 25 | 0 | 0 | 1 |
+| Cosmology | cosmology/, glossary/, chart/ | 14 | 15 | 12 | 0 | 3 |
+| Locations | locations/ (Fonains stays in its own section) | 23 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
-| Factions | factions/ | 10 | 10 | 1 | 0 | 2 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 2 | 2 | 0 | 1 |
+| Factions | factions/ | 12 | 10 | 1 | 0 | 2 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 17 | 2 | 2 | 0 | 1 |
 | Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 19 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
-| Player pages | restricted/ and other player pages | 2 | 0 | 0 | 0 | 0 |
+| Player pages | restricted/ and other player pages | 2 | 0 | 1 | 0 | 2 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **120** | **150** | **45** | **2** | **53** |
+| **Total** |  | **127** | **150** | **46** | **2** | **55** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -336,6 +336,14 @@ Order under each page: decide, fix, drop, add.
 
 ### cosmology/index.html: Zeniths and Monoliths
 
+- **[decide]** What destroying a Monolith does *(shape)*
+  Never ruled. Fonains is a special case, because its Monolith was corrupted. For others: what happens to the world, its archive, and any link that runs through it. Ties to Oerth's Monolith (opposition/vecna.html) and to a crossover where the Fonains party's means of destroying a Monolith, and the planar craft, reach the Caelestis crew.
+  src: Korey, 2026-10-29
+
+- **[decide]** Oerth's Monolith after centuries *(shape)*
+  Monoliths fade some time after their Zenith, yet Oerth's still stands as the faithful's holiest site, centuries after Vecna's ascension, and links need a Monolith at both ends. Options: Oerth's Monolith is an exception (why), or it has faded and existing links stand because a link cannot be undone. Korey's lean: Vecna no longer needs it; if it were destroyed he would have to drive Oerth to another Zenith to raise a new one before new links to Oerth, which takes time.
+  src: Korey, 2026-10-29; cosmology § Zeniths and Monoliths, § Found, opened, linked
+
 - **[decide]** How long a Monolith stands before it fades
   Ruled (Korey, 2026-10-28): a Monolith fades some time after its Zenith; a later Zenith on the same world brings a new Monolith where that Zenith happens, and two Zeniths on one world within one Monolith's span are possible but rare (cosmology § Monoliths). Determination is settled the same day: Continuity responds when a sharp spread of outcomes is about to open, and its response leans on Determination without being Determination's alone (cosmology § Monoliths). Still open: how long a Monolith stands before it fades, and whether the span varies by Zenith.
   Pages whose meaning assumes an old Monolith still stands, for Korey to rule on: Oerth's Monolith from Vecna's ascension, kept as his faithful's holiest site (locations/oerth.html, cosmology § Archiving, factions/seekers.html, locations/index.html); Nowhere's Monolith over the wreck (locations/nowhere.html, locations/index.html); heart links, possible only where both worlds have a Monolith, which ties Vecna's linked worlds and the colony's Ready state to a Monolith's span (cosmology § hearts table, glossary #link, opposition/vthorama.html, opposition/vecna.html inscription); the FIA's Vetharra and Kaldris "sole standing structure" stays as filed, and chart/index.html mirrors it.
@@ -511,6 +519,14 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
   src: Locations review, 2026-10-28
 
 ### locations/oerth.html
+
+- **[decide]** Who rules Oerth, and how they see N'ghathrod
+  Ruled: wizards who follow Vecna openly. Open: their name and order, and whether they work with N'ghathrod or see him as a prophet of Vecna.
+  src: Korey, 2026-10-29
+
+- **[decide]** Oerth's heart and Cavitius
+  Whether Oerth's heart is part of Cavitius, Vecna's divine realm, or separate from it.
+  src: 2026-10-29 review
 
 - **[later]** How the crew could reach Oerth, and how late
   Known: Oerth lies in Greyspace, far across the Erevos Galaxy on the opposite arm from Realmspace, and no lane on Caelestis's charts reaches it. The Radiant Citadel and the Core Monolith are late Arc 3 or Arc 4 destinations, reached by a long voyage or through a linked heart. What Oerth looks like and how a visit plays (it should be horrible) are not set either.
@@ -744,6 +760,14 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/deities.html
 
+- **[decide]** How the gods keep order among themselves *(shape)*
+  Greater gods against lesser, and how a lesser god like Vecna is checked. Polarity already keeps every god off worlds and out of hearts, and god conflicts stay indirect. Needed because the crew's threads run to Beshaba and Tharizdun, and the crew may take an interest in the gods.
+  src: Korey, 2026-10-29
+
+- **[decide]** What the gods felt at Vecna's ascension, and what each thinks of him *(shape)*
+  Ruled that they knew and sent champions (STAGING § The gods and Vecna's ascension). Open: what reached their realms, and the stance of the gods that matter to the crew (Beshaba, Tymora, Tharizdun, Asmodeus, Lord Primus).
+  src: Korey, 2026-10-29
+
 - **[later]** The All-Father on Deities
   The Order of All counts its one god, the All-Father, a god like any other, and its three orders serve him in three callings; the Restorers posit a source where he holds what is taken. He is the Core Monolith's pressure, and that the Core Monolith exists is among the scarcest knowledge in the cosmos (Korey 2026-10-27; on order, restorers, cosmology § Core Monolith's pressure, glossary). Whether Deities lists the All-Father among the gods as the Order worships it, and who else in the cosmos knows of the Core Monolith (Vecna, the Citadel, the Accordance), are not set.
 
@@ -906,6 +930,10 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   src: crew/index.html (retired § Open); section 7 (2026-10-28)
 
 ### opposition/vthorama.html
+
+- **[decide]** The network's defences
+  Once the crew learns of the links, Vecna and N'ghathrod guard the hearts that carry several links, and Oerth's heart above all. What the safeguards are.
+  src: Korey, 2026-10-29
 
 - **[decide]** What the surface attack at graduation is made of *(prep)*
   The page has "security diverted by the surface operation" while Joffrey runs the Brig, and names nothing in that operation. The early plan collapsed the module's two finale events into one: the attack hits during the ceremony, a battle across the school. It ported these module pieces: Mustaf Shultz and his giff mercenaries, a decapitation threat, Miken at 2 HP, Wizpop's return (now Ostekk-6), and the transmutation sigil as Vocath's house mark. Qitru and her githyanki have since moved to H'Catha. Vocath is a merchant, no fighter, and stays out of the siege himself (settled: chat-cosmic-campaign-structure § Act 1 retrofit), so whoever leads the surface operation is hired or his crew. Pick which pieces stay, and write the surface operation into the Brig run section.
@@ -2221,6 +2249,20 @@ run decide, fix, drop, add.
   src: chat 2026-10-27 (Korey: "delete it for now. add a note to the backlog to revisit the idea when the site is stable")
 
 # Player pages
+
+### Section 11: the player wiki overhaul
+
+- **[add]** Every player entry type gets the wiki treatment
+  Dossiers, navigation records, vessels, factions, inventory and quests each get an infobox laid out like the DM side's.
+  src: Korey, 2026-10-29
+
+- **[add]** First seen, last seen and all appearances
+  On player dossiers, "Met" becomes "First seen" and "Last seen", with a fly-out listing every voyage where the entity was seen or mentioned, from the record's `seen` and `mentioned` fields. Decide: the list is written by hand and `check` verifies it against the record, or this one list is filled by script (CLAUDE.md says nothing generates pages).
+  src: Korey, 2026-10-29
+
+- **[fix]** "By side" on the dossier index
+  Rename the sort to "By affiliation".
+  src: Korey, 2026-10-29
 
 Fixes to player-facing pages, including the Fleet Intelligence Archive (`restricted/`). These pages hold only what the crew could know; corrections must keep that boundary.
 
