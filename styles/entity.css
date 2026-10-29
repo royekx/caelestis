@@ -186,12 +186,6 @@ html { overflow-x: clip; }
 }
 .giver-name { font-family: 'Cinzel', serif; font-size: 0.95rem; font-weight: 700; color: var(--text); text-decoration: none; }
 .giver-name:hover { color: var(--ice); }
-.giver-state {
-  margin-left: auto; text-align: right; white-space: nowrap;
-  font-family: 'Cinzel', serif; font-size: 0.719rem; letter-spacing: 0.13em;
-  text-transform: uppercase; color: var(--text-muted);
-}
-.giver-state b { display: block; color: var(--gold); font-size: 0.835rem; letter-spacing: 0.14em; }
 
 .brief-grid { display: grid; grid-template-columns: 1fr 340px; gap: 1.1rem; align-items: start; margin-bottom: 1.6rem; }
 .panel {
@@ -211,7 +205,7 @@ html { overflow-x: clip; }
 .quest-desc p { margin-bottom: 0.85rem; }
 .quest-desc p:last-child { margin-bottom: 0; }
 
-.obj-list, .rew-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.55rem; }
+.obj-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.55rem; }
 .obj-item { display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.97rem; line-height: 1.5; }
 .obj-box {
   flex-shrink: 0; width: 15px; height: 15px; margin-top: 0.2rem;
@@ -256,11 +250,7 @@ html { overflow-x: clip; }
 }
 .obj-text { color: var(--text); }
 
-.rew-item { display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.97rem; line-height: 1.5; color: var(--text); }
-.rew-icon { flex-shrink: 0; width: 15px; margin-top: 0.16rem; color: var(--gold-dim); display: flex; }
-.rew-icon svg { width: 100%; }
 /* An unspecified reward is still a reward — present, acknowledged. */
-.rew-item.is-unknown .rew-text { color: var(--text-muted); font-style: italic; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 860px) { .brief-grid { grid-template-columns: 1fr; } }
@@ -285,8 +275,7 @@ html { overflow-x: clip; }
   background: var(--bg-card);
   border: 1px solid var(--rule);
   border-radius: 10px;
-  padding: 0.95rem 1.1rem 0.85rem;
-  min-height: 0; min-width: 0;
+  padding: 0.95rem 1.1rem 0.85rem; min-width: 0;
   display: flex; flex-direction: column; gap: 0.4rem;
   text-decoration: none;
   transition: border-color .2s, background .2s;
@@ -307,8 +296,8 @@ html { overflow-x: clip; }
 
 .s-desc {
   font-size: 0.931rem; line-height: 1.5; color: var(--text-dim); text-align: left;
-  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
-  overflow: hidden; max-height: 3em; flex: none;
+  display: -webkit-box;
+  overflow: hidden; flex: none;
 }
 
 .s-links {
@@ -323,7 +312,7 @@ html { overflow-x: clip; }
   transition: color .18s;
 }
 .s-link:hover { color: var(--gold-light); }
-.s-link-all { margin-top: 0; padding-top: 0; border-top: none; color: var(--text-muted); }
+.s-link-all { margin-top: 0; padding-top: 0; color: var(--text-muted); }
 .s-link-all:hover { color: var(--gold-dim); }
 
 @media (max-width: 900px) {
@@ -344,18 +333,3 @@ html { overflow-x: clip; }
   margin-top: 0.1rem;
 }
 
-/* Pages scaffolded by the retired page generator carry `prior-voyages`
-   where the stylesheet expects `prior`. Aliased rather than rewritten so an
-   old page picks the chrome up without being regenerated. */
-.prior-voyages { margin-top: 1.1rem; }
-.prior-voyages > summary { list-style: none; cursor: pointer;
-  display: flex; align-items: center; gap: 0.6rem;
-  padding: 0.8rem 1.2rem; background: var(--bg-raised);
-  border: 1px solid var(--rule); border-radius: 999px;
-  font-family: 'Cinzel', serif; font-size: 0.789rem; letter-spacing: 0.15em;
-  text-transform: uppercase; color: var(--text-muted); }
-.prior-voyages > summary::-webkit-details-marker { display: none; }
-.prior-voyages > summary::before { content: '\25B8'; color: var(--ice-dim);
-  transition: transform .18s; display: inline-block; }
-.prior-voyages[open] > summary::before { transform: rotate(90deg); }
-.prior-voyages[open] .prior-keys { opacity: 0.4; }

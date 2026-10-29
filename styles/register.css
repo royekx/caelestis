@@ -77,7 +77,7 @@
   .board-body { border: 1px solid var(--ice-dim); border-radius: 0 12px 12px 12px; background: var(--bg-card); padding: 1.3rem; }
 
   .register { border: 1px solid var(--rule); }
-  .ent + .ent { border-top: 1px solid var(--rule); }
+
   .ent[hidden] { display: none; }
   .ent-row {
     width: 100%; display: grid; grid-template-columns: 34px 1fr auto auto auto;
@@ -120,7 +120,7 @@
   .stub-desc { font-size: 0.95rem; line-height: 1.6; color: var(--text-dim); margin: 0; }
   .det-sites { display: flex; align-items: baseline; gap: 0.8rem; flex-wrap: wrap; }
   .det-label { font-family: 'Cinzel', serif; font-size: 0.671rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
-  .stub-open { align-self: flex-start; font-family: 'Cinzel', serif; font-size: 0.696rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ice-dim); text-decoration: none; }
+  .stub-open { align-self: flex-start; font-family: 'Cinzel', serif; font-size: 0.696rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ice-dim); }
   .stub-open:hover { color: var(--ice); }
   .result-line { font-family: 'Cinzel', serif; font-size: 0.708rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.6rem; display: flex; align-items: baseline; gap: 0.9rem; }
   .clear-btn { margin-left: auto; font-family: 'Cinzel', serif; font-size: 0.708rem; letter-spacing: 0.13em; text-transform: uppercase; border: 1px solid var(--rule); border-radius: 999px; background: transparent; color: var(--ice-dim); padding: 0.22rem 0.75rem; cursor: pointer; }
