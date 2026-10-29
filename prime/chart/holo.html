@@ -623,9 +623,11 @@ function flyTo(pos, target, fov, ms, done){
   controls.enabled = false;
 }
 function eyeFov(){
-  // Fit the eye's width, with a margin, to the screen.
-  const hHalf = Math.atan(HALF*1.25), vHalf = Math.atan(Math.tan(hHalf)/camera.aspect);
-  return Math.max(30, Math.min(105, THREE.MathUtils.radToDeg(vHalf*2)));
+  // Fit the whole eye, with a margin, to the screen: its width (the lid
+  // corners, E.EYE_ANGLE either side) and its height (the lids' peaks).
+  const m = THREE.MathUtils.degToRad(4), hHalf = E.EYE_ANGLE + m, vNeed = E.EYE_ANGLE*.373 + m;
+  const vHalf = Math.max(Math.atan(Math.tan(hHalf)/camera.aspect), vNeed);
+  return Math.max(30, Math.min(170, THREE.MathUtils.radToDeg(vHalf*2)));
 }
 function standAt(id){
   stopSpin();
