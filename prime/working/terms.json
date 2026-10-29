@@ -13,7 +13,25 @@
     "prime/principles.html",
     "prime/crew",
     "prime/timeline",
-    "restricted"
+    "restricted",
+    "hub.html",
+    "index.html",
+    "voyages",
+    "bearings",
+    "logs",
+    "crew-manifest",
+    "dossiers",
+    "factions",
+    "navigation-records",
+    "vessels",
+    "quests",
+    "inventory",
+    "handouts",
+    "spelljammer-nexus",
+    "search",
+    "aspects",
+    "wayfinder-path",
+    "stellar-chart"
   ],
   "retired": [
     {

@@ -200,8 +200,12 @@ because later sections link into earlier ones.
    structure, Clint, Tarroway, Strake's readings. The FIA only knows what Fleet
    Intelligence would: no Vecna, no Reach, no A.T.L.A.S. by name until the
    crew has made them readable. The terms check already reads `restricted/`.
-10. **Player side**: only what the record already carries. Nothing from prime/
-   crosses.
+10. **Player side** (done, branch `player`: terms and check read the player
+   site; V00n keys and label fixes; the search boundary; the Nexus as cadet
+   curriculum with `galaxy.html`, `fleet.html` and `fleet-time.html`; Fleet
+   dates on the record; shared CSS trimmed): only what the record already
+   carries, plus the cadet curriculum Korey has ruled. Nothing else from
+   prime/ crosses.
 
 ### 5. Per-page procedure
 1. Gather: the page's STAGING entries (by home), its BACKLOG items, the current
