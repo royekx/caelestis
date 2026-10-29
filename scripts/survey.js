@@ -7,6 +7,9 @@
  *   node scripts/survey.js list                 every saved system
  *   node scripts/survey.js show <designation>   one saved system in full
  *   node scripts/survey.js chart <body>         chart a saved body: give it its letter or numeral
+ *   node scripts/survey.js catalogue <system> --seed N
+ *                                               give a saved system with no CSC number one, as
+ *                                               `roll --seed N` would roll it (its bodies stay)
  *   node scripts/survey.js check                verify the survey file
  *
  * Roll options:
@@ -14,6 +17,9 @@
  *   --galaxy ID     GAL-01 (default) … GAL-05; other galaxies roll uncharted
  *   --name TEXT     a proper name for the primary, if someone has named it
  *   --bodies N      how many bodies orbit the primary (default 3 to 9)
+ *
+ * The tables and rolls are in prime/chart/survey-core.js, shared with the
+ * Chart, which rolls its unnamed systems by seed the same way.
  *
  * The survey lives in prime/data/survey.json. It is DM material and never
  * reaches data/ or a player page. A saved system is the record: edit it by hand
@@ -33,51 +39,8 @@ const path = require('path');
 
 const FILE = path.resolve(__dirname, '..', 'prime', 'data', 'survey.json');
 
-// ── tables ─────────────────────────────────────────────────────────────────
-// [weight, value]. Edit freely; a weight of 0 removes an entry.
-const T = {
-  primary: [[28, 'yellow star'], [20, 'red dwarf'], [10, 'white star'], [8, 'red giant'], [5, 'blue giant'],
-    [10, 'binary pair'], [7, 'white dwarf, a cinder of a star'], [5, 'elemental fire body'],
-    [3, 'a world at the centre, the star circling it'], [2, 'black hole'], [2, 'something that should not shine']],
-  kind: [[56, 'planet'], [12, 'asteroid belt'], [8, 'cluster of floating bodies'], [6, 'comet'],
-    [6, 'nebula or cloud'], [5, 'giant of air'], [4, 'wreck large enough to chart'], [3, 'titanic remains']],
-  shape: [[70, 'sphere'], [6, 'disk'], [6, 'shards'], [4, 'torus'], [4, 'hollow sphere'], [3, 'ribbon'],
-    [3, 'irregular'], [2, 'cube or other solid'], [2, 'a shape that changes']],
-  composition: [[40, 'earth'], [15, 'air'], [15, 'water'], [12, 'fire'], [8, 'life'], [10, 'mixed']],
-  size: [[15, 'tiny'], [30, 'small'], [30, 'medium'], [18, 'large'], [7, 'huge']],
-  habitability: [[20, 'livable'], [30, 'livable with protection'], [50, 'hostile']],
-  life: [[45, 'none'], [25, 'benign'], [18, 'hostile'], [12, 'infestation']],
-  inhabitants: {
-    'livable': [[58, 'none'], [12, 'ruins'], [10, 'outpost'], [12, 'settlement'], [8, 'civilization']],
-    'livable with protection': [[80, 'none'], [10, 'ruins'], [8, 'outpost'], [2, 'settlement']],
-    'hostile': [[90, 'none'], [7, 'ruins'], [3, 'outpost']]
-  },
-  hazard: [[50, null], [5, 'aether storms'], [5, 'gravity shear'], [5, 'crushing atmosphere'],
-    [5, 'elemental storms'], [4, 'wild magic'], [3, 'dead magic'], [4, 'psychic static'],
-    [4, 'sargasso of debris'], [4, 'unstable orbit'], [4, 'corrosive air'], [3, 'color pools nearby']],
-  oddity: [[70, null], [4, 'a wreck in orbit'], [3, 'an abandoned station'], [3, 'a signal on repeat'],
-    [3, 'crystalline growth'], [3, 'a petrified leviathan'], [2, 'gravity runs the wrong way'],
-    [3, 'a storm that never ends'], [2, 'time slips near it'], [2, 'it sings'], [2, 'old bones of something vast'],
-    [3, 'ruins older than anyone can date']],
-  status: {
-    near: [[25, 'charted'], [30, 'surveyed'], [35, 'sighted'], [10, 'uncharted']],
-    far: [[100, 'uncharted']]
-  }
-};
-const STATUSES = ['uncharted', 'sighted', 'surveyed', 'charted'];
-const GREEK = ['Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa',
-  'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'];
-const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
-
-// ── dice ───────────────────────────────────────────────────────────────────
-function rng(seed) { // mulberry32: same seed, same system
-  let a = seed >>> 0;
-  return () => { a = (a + 0x6D2B79F5) >>> 0; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1);
-    t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
-}
-const pick = (r, table) => { const sum = table.reduce((s, [w]) => s + w, 0); let n = r() * sum;
-  for (const [w, v] of table) { if ((n -= w) < 0) return v; } return table[table.length - 1][1]; };
-const int = (r, lo, hi) => lo + Math.floor(r() * (hi - lo + 1));
+// ── tables, dice and rolls: shared with the Chart (prime/chart/survey-core.js) ──
+const { T, STATUSES, rng, roll, designate } = require('../prime/chart/survey-core.js');
 
 // ── the survey file ────────────────────────────────────────────────────────
 function load() {
@@ -85,100 +48,6 @@ function load() {
   return JSON.parse(fs.readFileSync(FILE, 'utf8'));
 }
 function save(s) { fs.writeFileSync(FILE, JSON.stringify(s, null, 2) + '\n'); }
-
-// ── rolling ────────────────────────────────────────────────────────────────
-function rollBody(r, near) {
-  const kind = pick(r, T.kind);
-  const b = { designation: null, name: null, kind, status: pick(r, near ? T.status.near : T.status.far) };
-  if (kind === 'planet' || kind === 'cluster of floating bodies' || kind === 'giant of air') {
-    b.shape = kind === 'planet' ? pick(r, T.shape) : kind === 'giant of air' ? 'sphere' : 'cluster';
-    b.composition = kind === 'giant of air' ? 'air' : pick(r, T.composition);
-    b.size = kind === 'giant of air' ? pick(r, [[1, 'large'], [1, 'huge']]) : pick(r, T.size);
-    let hab = pick(r, T.habitability);
-    if (b.composition === 'fire' && hab !== 'hostile') hab = pick(r, [[3, 'hostile'], [1, hab]]);
-    if (b.size === 'tiny' && hab === 'livable') hab = 'livable with protection';
-    b.habitability = hab;
-    b.life = hab === 'hostile' ? pick(r, [[70, 'none'], [10, 'benign'], [12, 'hostile'], [8, 'infestation']]) : pick(r, T.life);
-    b.inhabitants = pick(r, T.inhabitants[hab]);
-  } else {
-    b.life = pick(r, [[85, 'none'], [5, 'benign'], [5, 'hostile'], [5, 'infestation']]);
-    b.inhabitants = pick(r, [[90, 'none'], [6, 'ruins'], [4, 'outpost']]);
-  }
-  if (kind === 'comet') b.returns = r() < 0.5;
-  b.hazard = pick(r, T.hazard);
-  b.oddity = pick(r, T.oddity);
-  const moons = kind !== 'planet' ? 0 : b.size === 'huge' ? int(r, 1, 5) : b.size === 'large' ? int(r, 0, 3) : b.size === 'medium' ? int(r, 0, 2) : 0;
-  b.moons = [];
-  for (let i = 0; i < moons; i++) {
-    const m = { designation: null, name: null, kind: 'moon', status: b.status === 'uncharted' ? 'uncharted' : pick(r, near ? T.status.near : T.status.far),
-      composition: pick(r, T.composition), size: pick(r, [[50, 'tiny'], [35, 'small'], [15, 'medium']]) };
-    m.habitability = pick(r, [[8, 'livable'], [27, 'livable with protection'], [65, 'hostile']]);
-    m.life = m.habitability === 'hostile' ? pick(r, [[80, 'none'], [10, 'hostile'], [10, 'infestation']]) : pick(r, T.life);
-    m.inhabitants = pick(r, T.inhabitants[m.habitability]);
-    m.hazard = pick(r, T.hazard);
-    b.moons.push(m);
-  }
-  if (!b.moons.length) delete b.moons;
-  ['hazard', 'oddity'].forEach(k => { if (b[k] == null) delete b[k]; });
-  return b;
-}
-
-function used(survey) {
-  const nums = new Set(), bayer = new Set();
-  survey.systems.forEach(s => { if (s.catalogue) nums.add(s.catalogue); if (s.bayer) bayer.add(s.bayer); });
-  return { nums, bayer };
-}
-
-function roll(survey, opts) {
-  const seed = opts.seed != null ? Number(opts.seed) : Math.floor(Math.random() * 2 ** 31);
-  const r = rng(seed);
-  const galaxy = (opts.galaxy || 'GAL-01').toUpperCase();
-  const gal = survey.galaxies.find(s => s.id === galaxy);
-  if (!gal) throw new Error(`unknown galaxy ${galaxy}`);
-  const near = gal.home === true;
-  const { nums, bayer } = used(survey);
-  const sys = { id: null, galaxy, seed, catalogue: null, bayer: null, bearing: null, name: opts.name || null,
-    primary: pick(r, T.primary), status: near ? pick(r, [[30, 'charted'], [40, 'surveyed'], [30, 'sighted']]) : 'uncharted',
-    bodies: [], notes: '' };
-  if (near) { // Caelestis catalogues what it can see; other galaxies it barely knows
-    let n; do { n = int(r, 1000, 99999); } while (nums.has(n));
-    sys.catalogue = n;
-    sys.bearing = int(r, 0, 359);
-    const con = `CON-${String(sys.bearing).padStart(3, '0')}`;
-    const free = GREEK.filter(g => !bayer.has(`${g} ${con}`));
-    if (free.length) sys.bayer = `${free[Math.min(free.length - 1, Math.floor(r() * r() * free.length))]} ${con}`;
-  }
-  const count = opts.bodies != null ? Number(opts.bodies) : int(r, 1, 4) + int(r, 1, 4) + 1;
-  for (let i = 0; i < count; i++) sys.bodies.push(rollBody(r, near));
-  sys.id = sys.catalogue ? `CSC ${sys.catalogue}` : `${galaxy}-U${seed}`;
-  designate(sys, survey.year);
-  return sys;
-}
-
-// Letters go to bodies in the order Caelestis charted them, which need not be
-// the order they orbit. A roll letters what it charts; `chart` letters the rest
-// as play reaches them, so later letters can sit anywhere in the orbit.
-function designate(sys, year) {
-  const base = sys.starName || sys.id; // a named star lends its name; otherwise its catalogue number
-  const letters = 'bcdefghijklmnopqrstuvwxyz';
-  const takenL = new Set(sys.bodies.map(b => b.letter).filter(Boolean));
-  sys.bodies.forEach((b, i) => {
-    if (b.status === 'uncharted' || b.letter) return;
-    if (b.kind === 'comet') {
-      b.designation = b.designation || `${b.returns ? 'P' : 'C'}/${year} ${'ABCDEFGHJKLMNOPQRSTUVWXY'[i % 24]}${i + 1}`;
-      return;
-    }
-    const l = [...letters].find(c => !takenL.has(c)); takenL.add(l); b.letter = l;
-  });
-  sys.bodies.forEach(b => {
-    if (b.letter) b.designation = `${base} ${b.letter}`;
-    (b.moons || []).forEach((m, i) => {
-      if (m.status === 'uncharted' || !b.letter) return;
-      if (!m.numeral) m.numeral = ROMAN[(b.moons.filter(x => x.numeral).length)] || String(i + 1);
-      m.designation = `${base} ${b.letter} ${m.numeral}`;
-    });
-  });
-}
 
 // ── printing ───────────────────────────────────────────────────────────────
 function line(b, indent) {
@@ -257,13 +126,25 @@ function main() {
     const target = o._[3] ? (b.moons || [])[Number(o._[3]) - 1] : b; if (!target) throw new Error('no such moon');
     target.status = 'charted'; designate(s, survey.year); save(survey);
     console.log(`charted: ${target.designation}`);
+  } else if (cmd === 'catalogue') { // catalogue <system> --seed N
+    const s = find(survey, o._.slice(1).join(' '));
+    if (!s) throw new Error('usage: catalogue "<system>" --seed N');
+    if (s.catalogue) throw new Error(`${s.name || s.id} already has CSC ${s.catalogue}`);
+    if (o.seed == null) throw new Error('give a --seed, so the number can be rolled again');
+    const r = roll(survey, { seed: o.seed, galaxy: s.galaxy, name: s.name });
+    if (!r.catalogue) throw new Error(`${s.galaxy} rolls no catalogue number`);
+    // Bearings and Bayer names are read from Realmspace, so the home system takes neither.
+    Object.assign(s, { seed: r.seed, catalogue: r.catalogue });
+    if (!s.home) Object.assign(s, { bayer: s.bayer || r.bayer, bearing: s.bearing != null ? s.bearing : r.bearing });
+    save(survey);
+    console.log(`${s.name || s.id}: CSC ${s.catalogue}${s.bayer ? ' · ' + s.bayer : ''} (seed ${s.seed})`);
   } else if (cmd === 'check') {
     const errs = check(survey);
     errs.forEach(e => console.log('error: ' + e));
     console.log(`${survey.systems.length} systems · ${errs.length} errors`);
     process.exitCode = errs.length ? 1 : 0;
   } else {
-    console.log(fs.readFileSync(__filename, 'utf8').split('\n').slice(2, 18).map(l => l.replace(/^ \*\s?/, '')).join('\n'));
+    console.log(fs.readFileSync(__filename, 'utf8').split('\n').slice(2, 21).map(l => l.replace(/^ \*\s?/, '')).join('\n'));
   }
 }
 try { main(); } catch (e) { console.error('survey: ' + e.message); process.exitCode = 1; }

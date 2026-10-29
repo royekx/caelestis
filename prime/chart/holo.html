@@ -205,6 +205,12 @@ const SYSTEMS = [
     summary:'Hidden by a living ritual. Wayfinders leave with no map and no name, and must re-recognize home.', dm:'Its position here is symbolic.' }
 ];
 const sysPos = id => SYSTEMS.find(s => s.id === id).pos;
+// Designations come from the survey (prime/data/survey.json, kept by scripts/survey.js).
+const SURVEY_ID = { realmspace:'Realmspace', virenspace:'CSC 69387', aethris:'CSC 56973', krynnspace:'CSC 16423', greyspace:'Greyspace', wayfinders:'GAL-01-hidden' };
+const surveyReady = fetch('../data/survey.json').then(r => r.ok ? r.json() : null).catch(() => null).then(sv => {
+  if (sv) SYSTEMS.forEach(s => { const rec = sv.systems.find(x => x.id === SURVEY_ID[s.id]); if (rec && rec.catalogue && rec.name) s.des = 'CSC ' + rec.catalogue; });
+  return sv;
+});
 
 const SITES = (() => {
   const toK = (() => { const k = sysPos('krynnspace'), dx = k[0]-RS[0], dy = k[1]-RS[1], l = Math.hypot(dx,dy); return [dx/l, dy/l]; })();

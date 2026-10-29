@@ -400,7 +400,7 @@ function buildFromSurvey(sv){
     const c = SYS_CHART[s.id], named = s.name || (s.catalogue ? "CSC " + s.catalogue : null);
     return Object.assign({ id:s.id, galaxy:s.galaxy, record:s,
       label: s.home || !s.catalogue ? (named || (s.id==="GAL-01-hidden" ? "Wayfinders' system" : s.id)) : (s.name || s.id),
-      sub: s.name && s.catalogue ? "CSC " + s.catalogue : (s.home ? "home system" : ""),
+      sub: s.name && s.catalogue ? "CSC " + s.catalogue + (s.home ? " · home system" : "") : (s.home ? "home system" : ""),
       x:c.pos[0], y:c.pos[1] }, c);
   });
   /* unnamed systems on paper: clustered along the arms, empty reaches between */

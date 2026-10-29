@@ -6,8 +6,8 @@
     {
       "id": "Realmspace",
       "galaxy": "GAL-01",
-      "seed": null,
-      "catalogue": null,
+      "seed": 1491,
+      "catalogue": 67759,
       "bayer": null,
       "bearing": null,
       "name": "Realmspace",
