@@ -407,6 +407,9 @@ function checkPage(r, err) {
     const eyebrow = /class="page-eyebrow"[^>]*>([\s\S]*?)<\/div>/.exec(src);
     if (!title || text(title[1]) !== plain(r.name)) err(`${at}: page title reads "${title ? text(title[1]) : 'nothing'}", record says "${r.name}"`);
     if (!eyebrow || text(eyebrow[1]) !== `Voyage ${pad(r.number)}`) err(`${at}: eyebrow reads "${eyebrow ? text(eyebrow[1]) : 'nothing'}", expected "Voyage ${pad(r.number)}"`);
+    const date = region(src, 'date');
+    if (r.date && date == null) err(`${at}: no date region; the record gives ${r.date}`);
+    else if (date != null && text(date) !== plain(r.date || '')) err(`${at}: date reads "${text(date)}", record gives "${r.date || 'none'}"`);
     return;
   }
 
@@ -788,7 +791,14 @@ function check() {
   const latest = played.length ? played[played.length - 1] : 0;
   sets.sessions.forEach(s => {
     if (s.slug !== `voyage-${pad(s.number)}`) err(`${s.id}: slug should be voyage-${pad(s.number)}`);
+    if (!s.date) err(`${s.id}: Voyage ${pad(s.number)} has no date; give its rough Fleet date (cycle.kindling.ember)`);
   });
+  // Fleet dates run forward: no voyage starts before the one before it ends.
+  sets.sessions.slice().sort((a, b) => a.number - b.number).reduce((prev, s) => {
+    const d = s.date && fleetDate(s.date);
+    if (prev && d && d.key(d.from) < prev.key(prev.to)) err(`${s.id}: Voyage ${pad(s.number)} starts ${d.text(d.from)}, before Voyage ${pad(s.number - 1)} ends ${prev.text(prev.to)}`);
+    return d || prev;
+  }, null);
 
   // 3. references and voyage numbers
   recs.forEach(r => {
@@ -859,6 +869,19 @@ function check() {
     if (!v || parseInt(v[1], 10) !== latest) err(`data/bearing.js: voyage is ${v ? v[1] : 'missing'}, the record's latest is ${latest}`);
     if (cur && plain(str('title')) !== plain(cur.name)) err(`data/bearing.js: title is "${str('title')}", the record's latest voyage is "${cur.name}"`);
     matches(/'([^']+\.html)'/g, b).forEach(m => { if (!exists(m[1])) err(`data/bearing.js: ${m[1]} does not exist`); });
+    // The current Fleet date is where the latest voyage ends.
+    const cd = cur && cur.date && fleetDate(cur.date);
+    const now = cd ? cd.text(cd.to) : null;
+    if (now && str('date') !== now) err(`data/bearing.js: date is ${str('date') || 'missing'}, the latest voyage ends ${now}`);
+    if (now) {
+      const pages = ['spelljammer-nexus/fleet-time.html', `bearings/voyage-${pad(latest)}.html`, 'bearings/index.html'];
+      pages.forEach(pg => {
+        if (!exists(pg)) return;
+        const shown = regions(fs.readFileSync(path.join(ROOT, pg), 'utf8'), 'current-date').map(text);
+        if (!shown.length) err(`${pg}: no current-date region; it should read ${now}`);
+        shown.forEach(t => { if (t !== now) err(`${pg}: current date reads "${t}", the latest voyage ends ${now}`); });
+      });
+    }
     const page = `voyages/voyage-${pad(latest)}.html`;
     if (latest && !new RegExp("voyage:\\s*'" + page.replace(/[.]/g, '\\.') + "'").test(b)) err(`data/bearing.js: links.voyage should be ${page}`);
     // The bar quotes each quest's name and progress, and a quoted number is a

@@ -134,7 +134,8 @@
             '<span class="cb-val">' + b.position +
             (b.posNote ? ' <span class="cb-note">' + b.posNote + '</span>' : '') + '</span></span>' +
           '<span class="cb-cell"><span class="cb-key">Last Voyage</span>' +
-            '<span class="cb-val">' + pad(b.voyage) + ' \u00b7 ' + b.title + '</span></span>' +
+            '<span class="cb-val">' + pad(b.voyage) + ' \u00b7 ' + b.title +
+            (b.date ? ' <span class="cb-note">' + b.date + '</span>' : '') + '</span></span>' +
           '<span class="cb-cell"><span class="cb-key">Outstanding</span>' +
             '<span class="cb-val">' + b.outstanding + '</span></span>' +
         '</a>' +

@@ -279,6 +279,11 @@ give it to the DM.
 - **Every record has a page.** A new record is finished only when its page and
   its register row exist.
 - **The voyage** gets a record in `sessions.json` with its six summary fields.
+  Its `date` is the voyage's rough Fleet date, cycle.kindling.ember, or a
+  span joined by an en dash (`1491.7.7–1491.7.12`), counted on from the
+  previous voyage's end by the embers the account gives. Its end is the
+  current date: the voyage page's header, `data/bearing.js` `date`, the
+  bearing page's subtitle and the Fleet Time page all show it.
 - **Ships the crew encounters** get a record in `locations.json`: Type
   `Vessel`, parented to where it was last seen, with whoever the crew met
   aboard in Key NPCs / Factions. A ship met only in simulation is parented to
@@ -346,7 +351,7 @@ node scripts/data.js derive
 | `voyages/index.html` | a row and its Overview |
 | `bearings/voyage-NNN.html` | new, from the previous bearing page |
 | `bearings/index.html` | a copy of the new bearing page |
-| `data/bearing.js` | voyage, title, position, outstanding, consequence, quests, met, links |
+| `data/bearing.js` | voyage, title, date, position, outstanding, consequence, quests, met, links |
 | `data/vocabulary.js` | every new proper noun |
 | each changed record's page | the new voyage becomes the latest block and the old one moves into Previous Voyages; stat rows; overview; objectives; Connections |
 | each new record's page | new, from a sibling page of the same kind, with `data-entity` set to its id |

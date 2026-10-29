@@ -43,8 +43,8 @@ staging once Korey has read and accepted them.
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 0 | 0 | 0 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 0 | 10 | 3 | 0 | 1 |
-| **Total** |  | **115** | **146** | **47** | **2** | **53** |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 10 | 3 | 0 | 1 |
+| **Total** |  | **116** | **146** | **47** | **2** | **53** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2173,6 +2173,10 @@ run decide, fix, drop, add.
   src: section 8, 2026-10-28
 
 ## Record and schema
+
+- **[decide]** The voyages' Fleet dates *(prep)*
+  `data/sessions.json` now carries a rough Fleet date per voyage (the new `date` field), set from the chart's default Now, 1491.7.12, as where the crew stands after V006, and counted back from the accounts. Only the end point and the V003 span ("attacked twice in three days", then "some days passed") have any footing; the rest are guesses. V001 1491.6.21–1491.6.22 (one day of orientation and its night; guess). V002 1491.6.23–1491.6.25 (arrival, a night, the salvage simulation next morning; the gap after V001 is a guess). V003 1491.6.26–1491.7.5 (about ten embers; rough). V004 1491.7.5–1491.7.6 and V005 1491.7.6–1491.7.7 (a day or so aboard each; guess). V006 1491.7.7–1491.7.12 ("the next few days learning the ship"). Confirm or correct: how long after V001 Bartholomew arrived, how many days V003's "some days passed" covers, and whether 1491.7.12 is where V006 ends. The crossing to H'Catha is fourteen embers, so V007 would run from about 1491.7.13 to 1491.7.26 or later. prime/chart/gtc.js still says the current kindling and ember are not set; align it with the record when the chart is next touched.
+  src: Korey, 2026-10-29 (Fleet time ruling); voyages/voyage-001.html to voyage-006.html
 
 - **[later]** Ships in the record
   SESSION-RUN.md files a ship as a place with Type `Vessel`, parented to where it was last seen, and parks simulated ships under the Simulation Deck with Status `Simulated`. That rule is the latest one Korey accepted for the record (Voyage 7 chat, 2026-10-25, Settled: "Every ship the crew encounters gets a record"). "Vessels are vessels" was ruled earlier, in the cosmic chat, for the DM wiki: vessels are their own register with entry pages, not realms and not artifacts. So the two do not yet conflict; the question is whether the refactor should carry the register split down into the record. Options: (a) keep ships as Vessel-type places in `data/locations.json` and split only the pages (`navigation-records/` ships move to `vessels/`); (b) give the record a vessel set or a `kind` field, a status vocabulary without "Simulated" on places, and a choice of whether a ship's whereabouts is a field or a parent link.
