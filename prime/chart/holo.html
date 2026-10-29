@@ -198,7 +198,9 @@ const SYSTEMS = [
   { id:'aethris', name:'CSC 56973', pos:POS.aethris, page:'aethris.html', kind:'Star system',
     summary:'Aethris\'s system, where the Prism Ascendant stands. A long haul from Realmspace past the carved-meteor hub.' },
   { id:'krynnspace', name:'Krynnspace', des:'CSC 16423', pos:POS.krynnspace, page:'krynnspace.html', kind:'Star system',
-    summary:'Krynn and Fonains. An uncharted route from Realmspace, far beyond the watch at Realmspace\'s edge.' },
+    summary:'Krynn\'s system. An uncharted route from Realmspace, far beyond the watch at Realmspace\'s edge. Fonains lies in the neighbouring system.' },
+  { id:'fonains', name:'CSC 50743', pos:POS.fonains, page:'fonains.html', kind:'Star system',
+    summary:'Fonains\'s system, which goes by its designation. It neighbours Krynnspace; Clint Dashforest reached Fonains through a color pool.' },
   { id:'greyspace', name:'Greyspace', pos:POS.greyspace, page:'oerth.html#greyspace', kind:'Star system',
     summary:'Far across the galaxy, on the opposite arm from Realmspace. No lane on Caelestis\'s charts reaches it. Oerth is here.' },
   { id:'wayfinders', name:'The Wayfinders\' homeworld', pos:POS.wayfinders, page:'wayfinders-homeworld.html', kind:'Hidden system',
@@ -206,7 +208,7 @@ const SYSTEMS = [
 ];
 const sysPos = id => SYSTEMS.find(s => s.id === id).pos;
 // Designations come from the survey (prime/data/survey.json, kept by scripts/survey.js).
-const SURVEY_ID = { realmspace:'Realmspace', virenspace:'CSC 69387', aethris:'CSC 56973', krynnspace:'CSC 16423', greyspace:'Greyspace', wayfinders:'GAL-01-hidden' };
+const SURVEY_ID = { realmspace:'Realmspace', virenspace:'CSC 69387', aethris:'CSC 56973', krynnspace:'CSC 16423', fonains:'CSC 50743', greyspace:'Greyspace', wayfinders:'GAL-01-hidden' };
 const surveyReady = fetch('../data/survey.json').then(r => r.ok ? r.json() : null).catch(() => null).then(sv => {
   if (sv) SYSTEMS.forEach(s => { const rec = sv.systems.find(x => x.id === SURVEY_ID[s.id]); if (rec && rec.catalogue && rec.name) s.des = 'CSC ' + rec.catalogue; });
   return sv;

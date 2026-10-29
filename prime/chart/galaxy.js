@@ -35,7 +35,8 @@
   }
 
   /* The named systems. Realmspace and Krynnspace lie on arm 0, Greyspace on
-     arm 2, across the core; the rest are set from Realmspace. */
+     arm 2, across the core; Fonains's system, CSC 50743, sits beside
+     Krynnspace; the rest are set from Realmspace. */
   const RS = armPt(0, 2.1);
   const OUT = (() => { const dx = RS[0] - GX.cx, dy = RS[1] - GX.cy, l = Math.hypot(dx, dy); return [dx / l, dy / l]; })();
   const TAN = [-OUT[1], OUT[0]];
@@ -45,6 +46,7 @@
     virenspace: at(RS, -40, 760),
     aethris: at(RS, -120, -720),
     krynnspace: armPt(0, 1.2, 30),
+    fonains: [armPt(0, 1.2, 30)[0] - 260, armPt(0, 1.2, 30)[1] + 260],   // CSC 50743, Fonains's system, beside Krynnspace
     greyspace: armPt(2, 2.7, -20),
     wayfinders: [3250, 950]
   };
