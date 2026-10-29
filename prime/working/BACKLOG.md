@@ -981,7 +981,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 ### opposition/vecna.html (early planning)
 
 - **[decide]** What follows from whole-system marks *(shape)*
-  Ruled: a mark needs every world in its system (STAGING § The inscription plane). Open: whether moons count as worlds with hearts of their own; whether every heart in a mark links to Oerth, or the system's hearts link to each other and one links out; how the current count is restated (the two upper-lid systems partway done, Nowhere found); and the refit, which should score marks toward systems with few worlds, using the survey's rolls.
+  Ruled: a mark needs every world in its system (STAGING § The inscription plane). Ruled too: a system's hearts link to each other and one links to Oerth (STAGING). Open: whether moons count as worlds with hearts of their own; how the current count is restated (the two upper-lid systems partway done, Nowhere found); and the refit, which should score marks toward systems with few worlds, using the survey's rolls.
   src: Korey, 2026-10-29
 
 - **[later]** A node log for player impact
