@@ -35,16 +35,16 @@ staging once Korey has read and accepted them.
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 10 | 10 | 1 | 0 | 2 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 2 | 2 | 0 | 1 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 16 | 2 | 3 | 0 | 1 |
 | Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
-| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 3 | 19 | 0 | 20 |
+| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 4 | 19 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 23 |
-| Automation and tracker | the session pipeline and tracker alternatives | 0 | 10 | 1 | 0 | 0 |
+| Automation and tracker | the session pipeline and tracker alternatives | 0 | 11 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 0 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **120** | **150** | **45** | **2** | **53** |
+| **Total** |  | **120** | **152** | **47** | **2** | **53** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -916,6 +916,10 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ### campaign/voyages/index.html
 
+- **[fix]** A board table spills past its panel
+  On the Voyages board one of the tracker tables overflows its container at the side. Contain it (wrap or scroll inside the panel) at desktop and phone widths.
+  src: Korey, 2026-10-29
+
 - **[decide]** Casey's V007 beat *(prep)*
   Options: a Vaelorix chart in Research showing the sky from inside Mirt's wardrobe beside a collecting site past the waystation; or something else. It must give Casey's cooling thread a small nudge back.
   Merged with the crew decide "Casey's beat for the crossing": the beat is a small nudge from the voice toward something, not a vision (the missed level 3 scene is dropped, STAGING round 10).
@@ -1731,6 +1735,10 @@ against the complete Tumak sweep (all 336 turns).
 
 ### tracker/index.html (DM layer: prime/data/overlay.json)
 
+- **[later]** Bring the Tracker up to date
+  The Tracker's system stays as it is; its content and views need updating to match the restructure (voyages, overlay entries, lanes). Korey will work out the details later.
+  src: Korey, 2026-10-29
+
 - **[fix]** The seated Lantern is a one-person pod
   overlay.json says "Seated, it turns the ship into a safehouse." Change to: seated in the bay, the Lantern is a one-person rejuvenation pod (one creature, one hour, all three charges, a long rest even if it already had one that day).
   src: chat-voyage-6-7-planning § Superseded
@@ -2127,6 +2135,14 @@ run decide, fix, drop, add.
   src: framework § Open; scripts/data.js schema
 
 ### Housekeeping
+
+- **[fix]** Read-aloud works per section
+  Some sections across pages have no read-aloud control, and a control reads from its top-level section onward instead of stopping at the end of its own section. Give every readable section its own control, and stop reading at that section's end (prime/scripts/dm-listen.js).
+  src: Korey, 2026-10-29
+
+- **[later]** Sweep for pages not updated during the restructure
+  Lines that predate later rulings (sections 1–10, the chart, the Nexus). Korey will scan as he goes; a full sweep can follow.
+  src: Korey, 2026-10-29
 
 - **[later]** The SotDQ tracker cleanup
   Deferred. Schedule it or drop it.
