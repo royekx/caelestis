@@ -30,12 +30,12 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 14 | 15 | 12 | 0 | 3 |
-| Locations | locations/ (Fonains stays in its own section) | 23 | 25 | 0 | 0 | 1 |
+| Cosmology | cosmology/, glossary/, chart/ | 15 | 15 | 12 | 0 | 3 |
+| Locations | locations/ (Fonains stays in its own section) | 22 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 2 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 20 | 2 | 3 | 0 | 1 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 19 | 2 | 3 | 0 | 1 |
 | Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 11 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 0 | 1 | 0 | 2 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **130** | **152** | **48** | **2** | **55** |
+| **Total** |  | **129** | **152** | **48** | **2** | **55** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -336,13 +336,17 @@ Order under each page: decide, fix, drop, add.
 
 ### cosmology/index.html: Zeniths and Monoliths
 
+- **[decide]** How Vecna's ascension changed Oerth's Monolith
+  Ruled: it became the anchor between Oerth's heart and Cavitius, and it never faded (STAGING). Open: how it works, and what destroying it would do to Vecna, his realm and the links into Oerth.
+  src: Korey, 2026-10-31
+
+- **[decide]** Whether Vecna uses lifeless systems
+  Most charted systems are lifeless, uninhabited or volatile. Every planet has a heart, but a Monolith answers a Zenith, and a lifeless world rarely nears one. Does Vecna avoid them, or use the few that qualify?
+  src: Korey, 2026-10-31
+
 - **[decide]** What destroying a Monolith does *(shape)*
   Never ruled. Fonains is a special case, because its Monolith was corrupted. For others: what happens to the world, its archive, and any link that runs through it. Ties to Oerth's Monolith (opposition/vecna.html) and to a crossover where the Fonains party's means of destroying a Monolith, and the planar craft, reach the Caelestis crew.
   src: Korey, 2026-10-29
-
-- **[decide]** Oerth's Monolith after centuries *(shape)*
-  Monoliths fade some time after their Zenith, yet Oerth's still stands as the faithful's holiest site, centuries after Vecna's ascension, and links need a Monolith at both ends. Options: Oerth's Monolith is an exception (why), or it has faded and existing links stand because a link cannot be undone. Korey's lean: Vecna no longer needs it; if it were destroyed he would have to drive Oerth to another Zenith to raise a new one before new links to Oerth, which takes time.
-  src: Korey, 2026-10-29; cosmology § Zeniths and Monoliths, § Found, opened, linked
 
 - **[decide]** How long a Monolith stands before it fades
   Ruled (Korey, 2026-10-28): a Monolith fades some time after its Zenith; a later Zenith on the same world brings a new Monolith where that Zenith happens, and two Zeniths on one world within one Monolith's span are possible but rare (cosmology § Monoliths). Determination is settled the same day: Continuity responds when a sharp spread of outcomes is about to open, and its response leans on Determination without being Determination's alone (cosmology § Monoliths). Still open: how long a Monolith stands before it fades, and whether the span varies by Zenith.
@@ -523,10 +527,6 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
 - **[decide]** Who rules Oerth, and how they see N'ghathrod
   Ruled: wizards who follow Vecna openly. Open: their name and order, and whether they work with N'ghathrod or see him as a prophet of Vecna.
   src: Korey, 2026-10-29
-
-- **[decide]** Oerth's heart and Cavitius
-  Whether Oerth's heart is part of Cavitius, Vecna's divine realm, or separate from it.
-  src: 2026-10-29 review
 
 - **[later]** How the crew could reach Oerth, and how late
   Known: Oerth lies in Greyspace, far across the Erevos Galaxy on the opposite arm from Realmspace, and no lane on Caelestis's charts reaches it. The Radiant Citadel and the Core Monolith are late Arc 3 or Arc 4 destinations, reached by a long voyage or through a linked heart. What Oerth looks like and how a visit plays (it should be horrible) are not set either.
@@ -761,7 +761,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ### factions/deities.html
 
 - **[decide]** How the gods keep order among themselves *(shape)*
-  Greater gods against lesser, and how a lesser god like Vecna is checked. Polarity already keeps every god off worlds and out of hearts, and god conflicts stay indirect. Needed because the crew's threads run to Beshaba and Tharizdun, and the crew may take an interest in the gods.
+  Greater gods against lesser, and how a lesser god like Vecna is checked. Look to myth and fiction for how gods answer one of their own who is scheming. Polarity already keeps every god off worlds and out of hearts, and god conflicts stay indirect. Needed because the crew's threads run to Beshaba and Tharizdun, and the crew may take an interest in the gods.
   src: Korey, 2026-10-29
 
 - **[decide]** What the gods felt at Vecna's ascension, and what each thinks of him *(shape)*
@@ -984,16 +984,12 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ### opposition/vecna.html (early planning)
 
-- **[decide]** How a heart is closed *(shape)*
-  Ruled: a closed heart ends its links (STAGING). Open: what closing takes (residue, as opening does? the Atrium? a Monolith?), who can do it, whether a closed heart can be opened again, and what closing costs the world. The First Heart is the precedent.
-  src: Korey, 2026-10-29
-
-- **[decide]** The shape of the network *(shape)*
-  Proposal: the links trace the figure. Each mark links to its two neighbours in the eye, so the ten lid marks form one ring and the five iris marks another, and each mark links once to Oerth. Every mark then carries three links out (two neighbours and Oerth), and the network is symmetric even though the marks zigzag on a chart: the eye's lines are its links. This already matches the two upper-lid systems, linked to each other and each to Oerth. The rings meet only through Oerth, and spare links add noise on top. Options: adopt it; or each mark links only to Oerth and one neighbour.
+- **[decide]** How a heart is opened and held open, and how it is closed *(shape)*
+  Ruled: a closed heart ends its links (STAGING). Closing waits on how an opened heart stays open, which is not concrete yet. Open: what closing takes (residue, as opening does? the Atrium? a Monolith?), who can do it, whether a closed heart can be opened again, and what closing costs the world. The First Heart is the precedent.
   src: Korey, 2026-10-29
 
 - **[decide]** What follows from whole-system marks *(shape)*
-  Ruled: a mark needs every world in its system (STAGING § The inscription plane). Ruled too: a system's hearts link to each other and one links to Oerth (STAGING). Ruled too: only planets count; a moon shares its planet's heart. Open: how the current count is restated (the two upper-lid systems partway done, Nowhere found); and the refit, which should score marks toward systems with few worlds, using the survey's rolls.
+  Ruled: a mark needs every world in its system (STAGING § The inscription plane). Ruled too: a system's hearts link to each other and one links to Oerth (STAGING). Ruled too: only planets count; a moon shares its planet's heart. Open: and the refit, which should score marks toward systems with few worlds, using the survey's rolls.
   src: Korey, 2026-10-29
 
 - **[later]** A node log for player impact

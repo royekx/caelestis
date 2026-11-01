@@ -20,6 +20,8 @@ when a ruling changes; delete it once the page carries it. See
 - A mark is a whole system. Every planet in it, destroyed planets included, must have its heart found, opened and linked, and each link needs a Monolith on that world. A moon is part of its planet and shares its heart. Vecna therefore favours systems with few planets, and a mark takes years of work.
 - Inside a mark, the system's hearts link to each other, and one of them links back to Oerth. Any heart in a mark can also link out to a heart in another system. The links form one network: every heart in it reaches every other, node by node, and anyone travelling it passes through the hearts between.
 - The plan can change. A lost mark is replaced by another system on the same stroke.
+- The links trace the drawing. Each mark links to the two marks beside it in the figure, so the ten lid marks form one ring and the five iris marks another, and each mark links once to Oerth. The two rings meet only through Oerth. Spare links sit on top as backups and cover.
+- The eye is well along. Most of its marks are complete or close, and the colony is near the end of the work. Play (DM voice): progress is one measure the DM sets as the story needs, starting at about two-thirds of the figure whole; individual marks are named only when the crew draws near the truth. The two upper-lid systems and Nowhere stay as the known marks. Hints come first, through the illithids and through worlds where something is plainly wrong.
 - Vecna also has N'ghathrod open and link hearts the figure does not need, as backups and to muddy the pattern. N'ghathrod goes where he is told and cannot tell the needed hearts from the rest.
 - Play (DM voice): the crew can reach the eye three ways, all kept open. N'ghathrod's top-down chart of marks done and planned looks haphazard, but the marks share one alignment seen from the right angle. Oerth's heart shows the eye in its sky. Lore about Vecna sends them back to the chart. This is late Arc 3 or Arc 4 material; plant seeds earlier.
 
@@ -38,6 +40,12 @@ when a ruling changes; delete it once the page carries it. See
 - N'ghathrod uses Oerth's heart as the hub of his network, moving small teams between linked hearts through it; Vth'oramu stays out in the drift. Somewhere in the long plan he stopped asking whether the voice he follows is his elder brain. It showed him enough that he no longer cared, and he chose to trust it.
 - Oerth is the world where the heroes lost. Most of it is not evil, but it is ruled by wizards who follow Vecna openly.
 - Play (DM voice): the crew's road to Oerth's heart runs through the network, not across the drift. A linked heart the figure does not need can be their way in. Flying to Oerth risks Vth'oramu waiting there. Arc 4.
+
+### Oerth's Monolith and Cavitius (opposition/vecna.html, locations/oerth.html, cosmology/index.html, factions/deities.html)
+- Oerth's Monolith never faded. Vecna's ascension changed it, as Tharizdun's influence changed the Monolith on Fonains, but in its own way: it became the anchor between Oerth's heart and Cavitius, Vecna's divine realm. It stands centuries after his Zenith because his realm holds it.
+
+### The charted systems (cosmology/index.html, locations/index.html, chart/)
+- Most of the systems Caelestis has charted are lifeless, uninhabited or too volatile to work. They are charted and marked, and the Fleet rarely goes to them. Play (DM voice): the crew goes where contracts send them; most systems stay entries on the chart.
 
 ### The gods and Vecna's ascension (factions/deities.html, dossiers/vecna.html, cosmology/index.html)
 - The gods knew Vecna was climbing. They sent champions against him on Oerth, the heroes who rose and failed, and when he ascended they felt it reach their realms. Every god who matters to the crew has an opinion of him. Replaces "The Accordance know little of him" and "none knows his plan": the gods know what he did on Oerth, and none knows what he is building now.
