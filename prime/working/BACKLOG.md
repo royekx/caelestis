@@ -30,21 +30,21 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 15 | 15 | 12 | 0 | 3 |
-| Locations | locations/ (Fonains stays in its own section) | 22 | 25 | 0 | 0 | 1 |
+| Cosmology | cosmology/, glossary/, chart/ | 13 | 14 | 12 | 0 | 3 |
+| Locations | locations/ (Fonains stays in its own section) | 22 | 26 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 2 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 19 | 2 | 3 | 0 | 1 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 19 | 3 | 3 | 0 | 1 |
 | Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 4 | 19 | 0 | 20 |
-| New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 23 |
+| New pages | 12 proposed pages, the hub, notes/ | 3 | 20 | 3 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 11 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 0 | 1 | 0 | 2 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **129** | **152** | **48** | **2** | **55** |
+| **Total** |  | **127** | **154** | **48** | **2** | **55** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -168,10 +168,6 @@ Order under each page: decide, fix, drop, add.
   Pages: prime/cosmology (the Four Axioms, Continuity, the strain, the seam section to cut), prime/glossary, prime/chart, prime/artifacts/* (index, rod-of-seven-parts, runekeepers-fragment, transformation-fragment → expansion-fragment, containment-engine, fonains-shard), prime/campaign/* (index, ascension, spine, plot-hooks, what-if), prime/crew/index.html and tumak.html, prime/dossiers/nghathrod.html and the-runekeeper.html, prime/factions/* (academy-fleet, deities, runekeepers, vthorama), prime/locations/index.html and wayfinders-homeworld.html (concealment rides on the Dissolution fragment's cycle), prime/rules/index.html, timeline.json, working/vecna.md. Done with the distribution pass. STAGING, the survey and the Connections layer already use the five.
   src: Korey, 2026-10-26
   done: prime/cosmology and prime/glossary (distribution section 1, 2026-10-27); opposition/vecna.html (pilot); prime/factions (section 2); prime/locations (section 3); prime/crew/tumak.html (section 7).
-
-- **[later]** Place GAL-01's inscription on the chart
-  Ruled: GAL-01's inscription is the eye he lost, fifteen heart worlds (ten lids, five iris; Korey 2026-10-27, from sixteen, so the count is a multiple of five); the iris worlds are key (STAGING, Campaign; diagram 2026-10-26). Left for when play needs it: which systems hold which strokes, and whether any known system (Realmspace, Krynnspace, Virenspace) lies on the figure. Greyspace is not on it: Oerth is the retina every eye world links back to (STAGING, Campaign).
-  src: Korey, 2026-10-26
 
 - **[decide]** Who works the other galaxies' cores *(later)*
   Ruled: in each galaxy another being works its own core, as Vecna works GAL-01's (STAGING, Campaign). Left: who they are (lesser gods like Vecna, or other things), and whether they know of each other, cooperate or race for the center. Only matters when play crosses a galaxy.
@@ -323,25 +319,17 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-28 (FIA rulings, 10)
 
 - **[later]** The eye's alignment turns with the galaxy
-  For the eye to hold as seen from Oerth, Greyspace and the fifteen heart systems would all need to keep their places in Oerth's sky as they circle Erevos at different speeds (Korey, 2026-10-29, restated for the view from Oerth's heart). A flavour detail, and a possible clock for later: the alignment drifting, or coming due. Ties to the decide on how the inscription is worked. Planning only; it does not go on pages.
+  For the eye to hold, the fifteen marks must stay on their strokes while Greyspace and the marks circle Erevos at different speeds, which turns the axis. A flavour detail, and a possible clock for later: the alignment drifting, or coming due. Ties to the decide on how the inscription is worked. Planning only; it does not go on pages.
   src: Korey, 2026-10-29
-
-- **[decide]** How wide the eye is, and how high its upper lid stands
-  Ruled (Korey, 2026-10-29): the eye can be as wide as a magical eye likes, short of looking behind itself; Greyspace comes down to about 17.5 units, among the highest halo systems, so Oerth looks down on Erevos about 13 degrees below its horizon. The chart's eye is 130 degrees wide (EYE_FOV in prime/chart/galaxy.js), drawn on a picture plane tipped 75 degrees towards the disc (EYE_TILT), almost straight beneath Oerth, so the upper lid stays among the galaxy's systems. Widths from 90 to 130 keep every goal; at 140 and beyond the top-down view starts to show the iris as a ring, or too many hearts stand high, and at 170 the fit fails. The high hearts keep company: the catalogue's halo thins steadily from 3 to 18 units, and the fit holds the hearts to as many high systems as chance would give fifteen. Still open: whether to stage this, since nothing on a page depends on it beyond "a hundred and thirty degrees" and "about 13 degrees" (opposition/vecna.html, chart/index.html).
-  src: chart refit for the view from Oerth's heart, 2026-10-29
-
-- **[later]** An Oerth sky chart as the clue
-  An Oerth astronomer's sky chart with the heart systems marked is one route to the eye (opposition/vecna.html § DM notes). Who made it, where the crew finds it, and whether it is a handout, are open, and tie to how the crew learns the eye is seen from Oerth.
-  src: chart refit for the view from Oerth's heart, 2026-10-29
 
 ### cosmology/index.html: Zeniths and Monoliths
 
-- **[decide]** How Vecna's ascension changed Oerth's Monolith
-  Ruled: it became the anchor between Oerth's heart and Cavitius, and it never faded (STAGING). Open: how it works, and what destroying it would do to Vecna, his realm and the links into Oerth.
-  src: Korey, 2026-10-31
+- **[later]** Ritual and natural Zeniths
+  Every Zenith played so far was ritual: a people did something that pushed their world. Whether a world can reach a Zenith naturally, and what that would look like, is open. The chart counts any life on every planet as enough for a mark (28 catalogue systems); if Zeniths need people, the bar rises to "every planet living and at least one inhabited" (12 systems) and the marks are refit.
+  src: Korey, 2026-11-01
 
-- **[decide]** Whether Vecna uses lifeless systems
-  Most charted systems are lifeless, uninhabited or volatile. Every planet has a heart, but a Monolith answers a Zenith, and a lifeless world rarely nears one. Does Vecna avoid them, or use the few that qualify?
+- **[decide]** How Vecna's ascension changed Oerth's Monolith
+  Ruled: it became the anchor between Oerth's heart and Cavitius, and it never faded (cosmology § Monoliths, locations/oerth.html). Open: how it works, and what destroying it would do to Vecna, his realm and the links into Oerth.
   src: Korey, 2026-10-31
 
 - **[decide]** What destroying a Monolith does *(shape)*
@@ -539,10 +527,14 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
 ### locations/krynnspace.html
 
 - **[later]** Krynnspace's position and route
-  Its position in the galaxy and the uncharted route from Realmspace are not set. Whether it lies on Vecna's eye is under Cosmology § Place GAL-01's inscription.
+  Its position in the galaxy and the uncharted route from Realmspace are not set. Whether it lies on a stroke of Vecna's eye is in opposition/vecna.html § Still to decide.
   src: realms/sys04.html (old page)
 
 ### locations/krynn.html
+
+- **[later]** A Zenith on Krynn in the Shadow of the Dragon Queen campaign
+  Korey's other table could see a Zenith build, or a Monolith appear, as a quiet nod. Those players know nothing of Caelestis, so it means nothing to them yet; it seeds the later crossover where several parties face parts of Vecna's working.
+  src: Korey, 2026-11-01
 
 - **[later]** The dragons' politics
   The dragons that left Fonains and most worlds have not reached Krynn, because their own politics hold them (STAGING). What those politics are is not set.
@@ -765,7 +757,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
   src: Korey, 2026-10-29
 
 - **[decide]** What the gods felt at Vecna's ascension, and what each thinks of him *(shape)*
-  Ruled that they knew and sent champions (STAGING § The gods and Vecna's ascension). Open: what reached their realms, and the stance of the gods that matter to the crew (Beshaba, Tymora, Tharizdun, Asmodeus, Lord Primus).
+  Ruled that they knew and sent champions (factions/deities.html, dossiers/vecna.html, cosmology § What the gods know). Open: what reached their realms, and the stance of the gods that matter to the crew (Beshaba, Tymora, Tharizdun, Asmodeus, Lord Primus).
   src: Korey, 2026-10-29
 
 - **[later]** The All-Father on Deities
@@ -984,12 +976,16 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ### opposition/vecna.html (early planning)
 
-- **[decide]** How a heart is opened and held open, and how it is closed *(shape)*
-  Ruled: a closed heart ends its links (STAGING). Closing waits on how an opened heart stays open, which is not concrete yet. Open: what closing takes (residue, as opening does? the Atrium? a Monolith?), who can do it, whether a closed heart can be opened again, and what closing costs the world. The First Heart is the precedent.
-  src: Korey, 2026-10-29
+- **[decide]** How the eye's clock advances *(prep)*
+  Ruled: a hidden narrative clock tied to the invasion, escalating toward the end of Arc 4 (STAGING). Open: whether a roll or milestones drive it, any level ceiling, and the starting value (the chart has 67%; 10 of 15 marks, about 9 planets left).
+  src: Korey, 2026-11-01
 
-- **[decide]** What follows from whole-system marks *(shape)*
-  Ruled: a mark needs every world in its system (STAGING § The inscription plane). Ruled too: a system's hearts link to each other and one links to Oerth (STAGING). Ruled too: only planets count; a moon shares its planet's heart. Open: and the refit, which should score marks toward systems with few worlds, using the survey's rolls.
+- **[later]** Does Erevos turn faster?
+  Korey recalls Erevos "spinning faster" alongside Monoliths appearing more often. With the quickening retired, decide whether a faster turn exists, and if so whether it is atmosphere or a clue.
+  src: Korey, 2026-11-01
+
+- **[decide]** How a heart is opened and held open, and how it is closed *(shape)*
+  Ruled: a closed heart ends its links (cosmology § Closing a heart). Closing waits on how an opened heart stays open, which is not concrete yet. Open: what closing takes (residue, as opening does? the Atrium? a Monolith?), who can do it, whether a closed heart can be opened again, and what closing costs the world. The First Heart is the precedent.
   src: Korey, 2026-10-29
 
 - **[later]** A node log for player impact
@@ -2017,6 +2013,10 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   src: chat-cosmic § Wiki structure rules (turn 439); memory-canon (DM views at a glance)
 
 ### NEW: Campaign shape
+
+- **[later]** Build the middle of the campaign
+  After graduation the campaign is Korey's own, not a module. The arcs exist; what stitches them together (missions between, how one thread leads to the next) does not yet. Study how long campaigns are built: published adventure paths, Critical Role and Dimension 20, and campaign design writing (node-based scenarios, fronts and clocks, the three-clue rule). Feeds the contract categories decide.
+  src: Korey, 2026-11-01
 
 **Purpose.** The tone and source rules for the cosmos as a whole. Suggested: a section of `prime/campaign/index.html`, or its own page.
 
