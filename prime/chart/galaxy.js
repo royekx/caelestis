@@ -155,7 +155,7 @@
      survey-core.js by seed, once the survey is loaded (rollSystems), so a
      system clicked on the chart reads as `node scripts/survey.js roll
      --seed N` prints it, and `--save` keeps it. */
-  const FILLER_SEED0 = 200000, RETIRED_SEED0 = 300000;
+  const FILLER_SEED0 = 200000, RETIRED_SEED0 = 300000, NEW_SEED0 = 400000;
   /* About two thirds follow the arms and a third fill the space between
      them; no eighth of the disc (an octant around the core) takes more than
      its share, so no quarter of the galaxy sits empty. The catalogue was
@@ -215,7 +215,7 @@
      stroke sets where it lies in the galaxy and how high, and leaves its
      place in the eye alone.
      MARK_FIT holds the choice for each stroke, in EYE2D order:
-     [catalogue index, depth], or ['new', depth]. scripts/eye-fit.js
+     [catalogue index, depth], or ['new', depth, seed]. scripts/eye-fit.js
      searches seeded layouts for it and writes it here: marks in front of
      Oerth and inside the galaxy first; then a zigzag from above (many
      crossings, all eight wedges around the core, no eye-like figure); then
@@ -225,28 +225,28 @@
   const bandOf = y => Math.abs(y) <= 3 ? 'disc' : Math.abs(y) <= THICK_LIMIT ? 'thick' : 'halo';
   /* MARK_FIT: written by scripts/eye-fit.js */
   const MARK_FIT = [
-    [253, 66],
-    [14, 156.07],
-    [24, 126],
-    [141, 171],
-    [181, 135.34],
-    [187, 108],
-    [279, 6.12],
-    [99, 48],
-    [236, 6],
-    [336, 51],
-    [35, 153],
-    [337, 94.96],
-    [47, 27],
-    [332, 17.94],
-    [163, 60]
+    [135, 66],
+    ['new', 160, 400034],
+    [281, 126],
+    [290, 171],
+    [101, 87],
+    [1, 57],
+    [305, 12],
+    ['new', 44, 400082],
+    ['new', 6, 400090],
+    [324, 6],
+    [110, 153],
+    [165, 99],
+    [256, 12],
+    ['new', 22, 400248],
+    [168, 138]
   ];
   /* /MARK_FIT */
-  const MARKS = MARK_FIT.map(([ref, s], i) => {
+  const MARKS = MARK_FIT.map(([ref, s, seed], i) => {
     const e = EYE2D[i], v = strokeAt(i, s);
     let f, move = 0, how;
     if (ref === 'new') {
-      f = { i: FILLERS.length, added: true }; FILLERS.push(f); how = 'new';
+      f = { i: FILLERS.length, added: true, seed }; FILLERS.push(f); how = 'new';
     } else {
       f = FILLERS[ref]; move = v3.dist(f.v, v);
       const sStar = v3.dot(v3.sub(f.v, strokeAt(i, 0)), AXIS);
@@ -264,11 +264,20 @@
      the chart, passes to the next seed, so each system's roll matches the
      command line exactly. */
   /* A mark needs every planet in its system; a moon shares its planet's
-     heart. Giants of air are planets, and so is a charted wreck: a
-     destroyed planet still has its heart. Asteroid belts and titanic
-     remains do not count. */
-  const PLANET_KINDS = ['planet', 'giant of air', 'wreck large enough to chart'];
+     heart, and giants of air are planets. A link needs a Monolith on each
+     world, and a Monolith answers a Zenith, which comes only to a world
+     with life on it. So a system qualifies as a mark only if every planet
+     in it carries life. Asteroid belts and titanic remains are not
+     planets. A destroyed world keeps its heart but raises no Monolith, so
+     a charted wreck rules its system out, unless the world was destroyed
+     by its own Zenith and a Monolith answered: Nowhere, on its stroke. */
+  const PLANET_KINDS = ['planet', 'giant of air'], WRECK = 'wreck large enough to chart';
+  const LIVED = ['outpost', 'settlement', 'civilization'];
+  const alive = b => b.life !== 'none' || LIVED.includes(b.inhabitants);
   const planetsOf = sys => sys.bodies.filter(b => PLANET_KINDS.includes(b.kind)).length;
+  const wrecksOf = sys => sys.bodies.filter(b => b.kind === WRECK).length;
+  const qualifies = (sys, nowhere) => { const pl = sys.bodies.filter(b => PLANET_KINDS.includes(b.kind));
+    return pl.length > 0 && pl.every(alive) && (nowhere ? wrecksOf(sys) > 0 : wrecksOf(sys) === 0); };
   function rollSystems(survey) {
     const core = window.SURVEY_CORE; if (!core || !survey) return false;
     const taken = { nums: new Set(), bayer: new Set() };
@@ -282,8 +291,12 @@
        fitted to the catalogue; their numbers stay given out, so every
        catalogue system keeps the roll it had. */
     seed = RETIRED_SEED0; for (let k = 0; k < 15; k++) next();
-    seed = FILLER_SEED0; FILLERS.forEach(f => Object.assign(f, next()));
-    MARKS.forEach(m => { m.sys = m.filler.sys; m.summary = m.filler.summary; m.planets = planetsOf(m.sys); });   // a mark is its catalogue system
+    seed = FILLER_SEED0; FILLERS.forEach(f => { if (!f.added) Object.assign(f, next()); });
+    /* A new mark carries its own seed (from scripts/eye-fit.js, which
+       picks seeds from NEW_SEED0 up that roll a qualifying system with a
+       free number), so its roll matches `survey.js roll --seed N`. */
+    FILLERS.forEach(f => { if (f.added) { seed = f.seed; Object.assign(f, next()); } });
+    MARKS.forEach(m => { m.sys = m.filler.sys; m.summary = m.filler.summary; m.planets = planetsOf(m.sys) + (m.i === NOWHERE ? wrecksOf(m.sys) : 0); });   // a mark is its catalogue system
     return true;
   }
 
@@ -292,7 +305,7 @@
     SECTORS, MARKER_T, MARKERS, frontAt,
     S, toScene, toChart, discSigma, HALO_SIGMA, sysScene, SYS_Y, AXIS_TILT,
     v3, OERTH, AXIS, RT, UP, D, EYE_HALF, STROKE_TOL, EYE_PROGRESS, eyeOffset, strokeAt, toPlane,
-    bandOf, THICK_LIMIT, HALO_LIMIT, MARK_FIT, EYE2D, MARKS, LID, IRIS, LINKS, PAIR, NOWHERE, PLANET_KINDS, planetsOf,
-    FILLERS, rollSystems
+    bandOf, THICK_LIMIT, HALO_LIMIT, MARK_FIT, EYE2D, MARKS, LID, IRIS, LINKS, PAIR, NOWHERE, PLANET_KINDS, WRECK, alive, planetsOf, wrecksOf, qualifies,
+    FILLERS, NEW_SEED0, rollSystems
   };
 })();

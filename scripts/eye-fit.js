@@ -14,8 +14,10 @@
    A mark is a whole system, and every planet in it must be opened and
    linked, so the fit reads each system's planets from its survey roll
    (survey-core.js, as the Chart rolls it) and prefers systems with few
-   planets. Life is not weighed: whether Vecna uses lifeless systems is
-   not ruled.
+   planets. Only systems whose every planet carries life qualify (a Zenith,
+   and the Monolith a link needs, comes only to a world with life); a
+   charted wreck rules a system out, except on Nowhere's stroke, where the
+   wreck is Nowhere and its Monolith answered.
    It searches many seeded layouts and scores each, in priority order:
      (a) every mark in front of Oerth, inside the galaxy, no higher than 18
      (b) a zigzag from above: lid and iris links crossing, marks in all
@@ -68,10 +70,26 @@ function fit(h, quiet) {
   FILLERS.forEach(f => {
     const pl = f.sys.bodies.filter(x => PLANET_KINDS.includes(x.kind));
     f.planets = pl.length;
-    f.living = pl.some(x => x.life !== 'none' || LIVED.includes(x.inhabitants));
     f.lived = pl.some(x => LIVED.includes(x.inhabitants));
+    f.ok = E.qualifies(f.sys, false); f.okNowhere = E.qualifies(f.sys, true);
   });
 
+  /* Seeds for new marks: from NEW_SEED0 up, each rolling a qualifying
+     system whose number is free, fewest planets first. */
+  // a pool seed must keep its roll when the Chart rolls it: its number and
+  // Bayer name free of the survey, the catalogue and the other pool seeds
+  const taken = new Set(), bayer = new Set();
+  SURVEY.systems.forEach(x => { if (x.catalogue) taken.add(x.catalogue); if (x.bayer) bayer.add(x.bayer); });
+  FILLERS.forEach(f => { taken.add(f.sys.catalogue); if (f.sys.bayer) bayer.add(f.sys.bayer); });
+  const POOL = [];
+  for (let sd = E.NEW_SEED0; POOL.length < 40 && sd < E.NEW_SEED0 + 20000; sd++) {
+    const r = CORE_LIB.roll(SURVEY, { seed: sd });
+    if (taken.has(r.catalogue) || (r.bayer && bayer.has(r.bayer)) || !E.qualifies(r, false)) continue;
+    taken.add(r.catalogue); if (r.bayer) bayer.add(r.bayer);
+    POOL.push({ seed: sd, sys: r, planets: E.planetsOf(r) });
+  }
+  POOL.sort((p, q) => p.planets - q.planets || p.seed - q.seed);
+  const QUAL = FILLERS.filter(f => f.ok).length, QUAL_N = FILLERS.filter(f => f.okNowhere).length;
   // ── where a mark may stand ──────────────────────────────────────
   const Y_CAP = 18, MIN_S = 6;
   const named = Object.keys(POS).filter(k => k !== 'greyspace').map(E.sysScene);
@@ -96,14 +114,14 @@ function fit(h, quiet) {
   const highOnes = FILLERS.filter(f => Math.abs(f.v[1]) > THICK_LIMIT);
 
   /* Few planets: every planet in a mark must be found, opened and linked. */
-  const PLANET_W = 2.2, MOVE_W = 0.18, NEW_COST = 6, CAP = 22;
+  const PLANET_W = 2.2, MOVE_W = 0.18, NEW_COST = +(arg("--new") || 12), CAP = +(arg("--cap") || 22);
   const sysCost = f => PLANET_W * (f.planets - 1);
 
   // ── candidates for each stroke ──────────────────────────────────
   const cands = EYE2D.map((e, i) => {
     const base = strokeAt(i, 0), out = [];
     for (const f of FILLERS) {
-      if (f.planets < 1) continue;
+      if (i === E.NOWHERE ? !f.okNowhere : !f.ok) continue;
       const sStar = dot(sub(f.v, base), AXIS), nudge = dist(f.v, strokeAt(i, sStar));
       if (nudge > CAP) continue;
       const s0 = Math.round(sStar * 100) / 100, ss = new Set([s0]);
@@ -115,10 +133,10 @@ function fit(h, quiet) {
           cost: MOVE_W * Math.max(0, move - STROKE_TOL) + heightCost(v[1]) + sysCost(f) });
       }
     }
-    for (let s = MIN_S; s <= 260; s += 2) {
+    for (let s = MIN_S; s <= 260 && i !== E.NOWHERE; s += 2) {
       const v = strokeAt(i, s);
-      if (!valid(v, s) || FILLERS.some(f => flatD(v, f.v) < 105 * S)) continue;
-      out.push({ i, ref: 'new', s, v, move: 0, how: 'new', cost: NEW_COST + heightCost(v[1]) + PLANET_W * 2.7 });
+      if (!valid(v, s) || !clearOf(v, null)) continue;
+      out.push({ i, ref: 'new', s, v, move: 0, how: 'new', cost: NEW_COST + heightCost(v[1]) + PLANET_W * (POOL[0].planets - 1) });
     }
     if (!out.length) return null;
     return out.sort((p, q) => p.cost - q.cost);
@@ -217,18 +235,19 @@ function fit(h, quiet) {
   let best = null;
   const RESTARTS = +(arg('--restarts') || 80);
   for (let k = 0; k < RESTARTS; k++) { const L = search(9001 + k * 7919); if (L && (!best || L.score > best.score)) best = L; }
-  best.h = h; best.E = E; best.EXPECT = EXPECT; best.wedge = wedge;
+  best.h = h; best.E = E; best.POOL = POOL; best.QUAL = QUAL; best.QUAL_N = QUAL_N; best.cat = cands.map(L => L.filter(c => c.ref !== 'new').length); best.EXPECT = EXPECT; best.wedge = wedge;
   return best;
 }
 
 function report(best) {
   const { E, EXPECT, wedge } = best;
   const rows = best.pick.map((c, i) => ({
-    n: i + 1, part: E.EYE2D[i].part, sys: c.ref === 'new' ? 'new' : c.f.sys.id, idx: c.ref, planets: c.ref === 'new' ? '?' : c.f.planets,
-    life: c.ref === 'new' ? '?' : c.f.lived ? 'inhabited' : c.f.living ? 'living' : 'lifeless', how: c.how, move: +c.move.toFixed(1),
+    n: i + 1, part: E.EYE2D[i].part, sys: c.ref === 'new' ? (c.pool ? c.pool.sys.id + ' (new)' : 'new') : c.f.sys.id, idx: c.ref === 'new' && c.pool ? 'seed ' + c.pool.seed : c.ref, planets: c.ref === 'new' ? (c.pool ? c.pool.planets : '?') : c.f.planets + (i === E.NOWHERE ? E.wrecksOf(c.f.sys) : 0),
+    life: (c.ref === 'new' ? (c.pool && c.pool.sys.bodies.some(x => LIVED.includes(x.inhabitants))) : c.f.lived) ? 'inhabited' : 'living', how: c.how, move: +c.move.toFixed(1),
     depth: +c.s.toFixed(1), y: +c.v[1].toFixed(1), band: E.bandOf(c.v[1]), r: +Math.hypot(c.v[0], c.v[2]).toFixed(0), wedge: wedge([c.v[0], c.v[2]])
   }));
   console.log(`EYE_HALF ${best.h}: eye ${2 * best.h} units wide (${(2 * best.h / 200 * 100).toFixed(0)}% of the galaxy's diameter), ${(0.746 * best.h).toFixed(1)} high`);
+  console.log(`qualifying catalogue systems: ${best.QUAL} of ${E.FILLERS.length} (every planet living, no wreck), and ${best.QUAL_N} with a wreck that could be Nowhere's; catalogue candidates per stroke: ${best.cat.join(' ')}`);
   console.table(rows);
   const moves = rows.filter(r => r.how !== 'new').map(r => r.move);
   console.log(`ring crossings from above ${best.m.crossings}, with the links to Oerth ${best.m.crossings + best.m.spokes}, wedges ${best.m.wedges}/8, smallest gap ${best.m.gap.toFixed(1)}, pairs within 15 ${best.m.crowd}, eye residual from above ${best.m.resid.toFixed(2)}, lid fills ${(100 * best.m.fill).toFixed(0)}% of its hull, iris marks inside the lid ${best.m.irisIn}/5`);
@@ -250,8 +269,9 @@ if (process.argv.includes('--scan')) {
   const h = arg('--half') ? +arg('--half') : null;
   const best = fit(h || load(null).EYE_HALF);
   if (best.fail) { console.log(`strokes ${best.fail.join(', ')} have nowhere to stand`); process.exit(1); }
+  let k = 0; best.pick.forEach(c => { if (c.ref === 'new') { c.pool = best.POOL[k++]; } });
   report(best);
-  const lit = '  const MARK_FIT = [\n' + best.pick.map(c => `    [${c.ref === 'new' ? "'new'" : c.ref}, ${+c.s.toFixed(2)}]`).join(',\n') + '\n  ];\n';
+  const lit = '  const MARK_FIT = [\n' + best.pick.map(c => c.ref === 'new' ? `    ['new', ${+c.s.toFixed(2)}, ${c.pool.seed}]` : `    [${c.ref}, ${+c.s.toFixed(2)}]`).join(',\n') + '\n  ];\n';
   if (process.argv.includes('--write')) {
     fs.writeFileSync(FILE, withHalf(src.slice(0, a) + OPEN + '\n' + lit + src.slice(b), h));
     console.log('MARK_FIT written to prime/chart/galaxy.js');

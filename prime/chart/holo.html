@@ -536,8 +536,8 @@ MARKS.forEach(m => {
     name: m.known === 'nowhere' ? 'Nowhere' : m.known === 'linked' ? 'Upper-lid mark' : 'Mark',
     kind: `Inscription · ${PART[m.part]} · stroke ${m.n}`,
     summary: (m.known === 'linked' ? 'One of two neighbouring systems on the upper lid. Every planet in it has its heart opened and linked; it links to its neighbour on the lid, and to Oerth\'s heart.'
-           : m.known === 'nowhere' ? 'A lesser god forced its way into this system and down onto a world, and the push destroyed both. A Monolith answered, and the world\'s heart lies exposed in the wreck.'
-           : 'A system on its stroke, chosen for where it lands in the eye. A mark is a whole system: every planet in it needs its heart found, opened and linked.')
+           : m.known === 'nowhere' ? 'A lesser god forced its way into this system and down onto a world, and the push destroyed both. A Monolith answered, so the wreck\'s exposed heart can still be linked. The system\'s other planets carry life.'
+           : 'A system on its stroke, chosen for where it lands in the eye. A mark is a whole system: every planet in it carries life, and needs its heart found, opened and linked.')
       + ` It lies ${m.s.toFixed(0)} units along the axis from the inscription plane, ${BAND[m.band]}${m.band === 'disc' ? '' : ', ' + side + ' the plane'}.`,
     dm: (iris ? 'An iris mark: key. Lose one and the iris must be redrawn through another system on the same stroke. ' : 'A lid mark: a lost one is replaced by another system on the same stroke, at a cost of years. ')
         + (m.known === 'linked' ? 'One of the two is a little-charted planet the crew learns of late in the campaign. ' : '')
