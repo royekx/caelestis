@@ -435,7 +435,7 @@
           "src": "STAGING round 2"
         },
         {
-          "t": "Two linked hearts form a permanent two-way passage, and linked worlds bleed into each other.",
+          "t": "Two linked hearts form a two-way passage that stands until one of its hearts is closed, and linked worlds bleed into each other.",
           "src": "cosmology/index.html"
         }
       ]
@@ -576,15 +576,15 @@
           "src": "opposition/vecna.html"
         },
         {
-          "t": "In GAL-01 the working is the eye inscription: fifteen heart worlds, ten on the lids and five in the iris, which form an eye only as seen from Oerth, framing Erevos as its pupil; seen from anywhere else they are scattered across the galaxy.",
+          "t": "In GAL-01 the working is the eye inscription: fifteen marks, whole systems chosen on fifteen strokes, ten on the lids and five in the iris. Projected along the axis from Oerth through Erevos onto the inscription plane, they form the eye with Erevos as its pupil; from above they zigzag across the galaxy.",
           "src": "opposition/vecna.html"
         },
         {
-          "t": "Oerth is not one of the fifteen; every heart world in the figure links back to Oerth's heart.",
+          "t": "Oerth carries no mark; every mark links once to Oerth's heart, the retina, where the eye forms in its sky.",
           "src": "opposition/vecna.html"
         },
         {
-          "t": "Three of the fifteen hearts are found and two opened and linked, each also linked to Oerth; Nowhere's heart is found and not opened.",
+          "t": "The eye is well along, at about two-thirds whole as the DM sets it. The known marks are two neighbouring upper-lid systems, linked to each other and to Oerth, and Nowhere on the lower lid.",
           "src": "opposition/vecna.html"
         },
         {
@@ -694,7 +694,7 @@
       "label": "Nowhere",
       "type": "place",
       "scope": "cosmos",
-      "summary": "A world destroyed when a lesser god forced its way onto it; a lid world of Vecna's eye, its heart exposed.",
+      "summary": "A world destroyed when a lesser god forced its way onto it; its system is a lower-lid mark of Vecna's eye, its heart exposed.",
       "facts": [
         {
           "t": "A lesser god forced its way into a system and down onto a world; the push destroyed them both.",
@@ -705,7 +705,7 @@
           "src": "STAGING, Cosmology"
         },
         {
-          "t": "Its heart lies exposed in the wreck, found and not yet opened: a lid world of GAL-01's eye.",
+          "t": "Its heart lies exposed in the wreck, and its system is a lower-lid mark of GAL-01's eye.",
           "src": "STAGING, Campaign"
         },
         {
@@ -738,7 +738,7 @@
           "src": "STAGING round 2"
         },
         {
-          "t": "Ascension charged him to Oerth's heart and pushed him off the world, so he works through vessels.",
+          "t": "Ascension charged him into Oerth's heart and pushed him off the world, so he works through vessels.",
           "src": "STAGING round 1"
         },
         {
@@ -829,11 +829,11 @@
           "src": "STAGING, Realms"
         },
         {
-          "t": "Oerth is the retina of the eye drawn across GAL-01: every heart world in the figure links back to it.",
+          "t": "Oerth's heart is the retina of the eye drawn across GAL-01: every mark links back to it.",
           "src": "STAGING, Campaign"
         },
         {
-          "t": "Oerth is the one world Vecna cannot lose.",
+          "t": "Oerth's heart is the most valuable thing Vecna has and the most vulnerable: breaking it would cut every link in the figure at once.",
           "src": "STAGING, Campaign"
         },
         {

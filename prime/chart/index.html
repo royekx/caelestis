@@ -854,13 +854,13 @@ function showMark(m){
                     : `A lid mark. A lost lid mark is replaced by another system on the same stroke, at a cost of years.`;
   const text = { linked:`One of two neighbouring systems on the upper lid. Every planet in it has its heart opened and linked; it links to its neighbour on the lid, and to Oerth's heart.`,
     nowhere:`Nowhere. A lesser god forced its way into this system and down onto a world, and the push destroyed both. A Monolith answered, and the world's heart lies exposed in the wreck.`,
-    other:`A system on its stroke, chosen for where it lands in the eye. A mark is a whole system: every planet in it needs its heart found, opened and linked, and a Monolith on its world.` }[m.known || "other"];
+    other:`A system on its stroke, chosen for where it lands in the eye. A mark is a whole system: every planet in it needs its heart found, opened and linked, and a Monolith on each of its worlds.` }[m.known || "other"];
   const side = m.height > 0 ? "above" : "below", band = m.src.band;
   const height = band==="disc" ? "in the thin disc, close to the galaxy's plane" : band==="thick" ? `in the thick disc, ${side} the galaxy's plane` : `high in the halo, ${side} the galaxy's plane`;
   const dm = [];
   if(m.src.sys) dm.push(`Its system is a survey.js roll, seed ${m.src.sys.seed}; keep it with <code>node scripts/survey.js roll --seed ${m.src.sys.seed} --save</code> when it matters.`);
   if(m.known==="linked") dm.push(`One of the two is a little-charted planet the crew learns of late in the campaign.`);
-  if(m.known==="nowhere") dm.push(`Its exposed heart is the easiest in the galaxy to find and open, which is why Vecna chose it.`);
+  if(m.known==="nowhere") dm.push(`Vecna chose it because its heart lies exposed.`);
   if(!m.known) dm.push(`Which marks are done is left open. The eye as a whole is about ${Math.round(PROGRESS*100)}% whole (EYE_PROGRESS in galaxy.js); a mark is named only when the crew draws near the truth.`);
   dm.push(`It links to its two neighbours in the ${iris?"iris":"lid"} and once to Oerth.`);
   const sys = m.src.sys;
@@ -912,8 +912,8 @@ function genericPanel(n){
 function oerthPanel(){
   panel.innerHTML = `<h2>Oerth</h2><p class="kind">Greyspace · the eye's retina</p><span class="badge b-gold">Monolith</span>
     <p>Vecna's seat. Oerth's heart has been his since his ascension charged him into it. Every mark in the figure links back to Oerth's heart, so its sky is full of the marked worlds bleeding through, and together they form the eye, with gaps where marks are not yet linked.</p>
-    <p>The eye is drawn on the inscription plane, the plane through Oerth square to the axis from Oerth through Erevos, by straight projection along that axis. From above, the marks zigzag across the galaxy and their links cross at random.</p>
-    ${dmlist([`The crew can reach the eye three ways: N'ghathrod's top-down chart of marks done and planned, which looks haphazard until it is lined up; Oerth's heart, which shows the eye in its sky; and lore about Vecna, which sends them back to the chart.`,`Greyspace stands among the highest systems of the halo, so the axis dips about 13 degrees below Oerth's horizon: the stem shows its height.`,`Breaking Oerth's heart would be the greatest setback Vecna could suffer.`])}
+    <p>The eye is drawn on the inscription plane, the plane through Oerth square to the axis from Oerth through Erevos, by straight projection along that axis. From above, the marks zigzag across the galaxy and read at most as a jagged, stretched ring, never as the eye.</p>
+    ${dmlist([`The crew can reach the eye three ways: N'ghathrod's top-down chart of marks done and planned, which looks haphazard until it is lined up; Oerth's heart, which shows the eye in its sky; and lore about Vecna, which sends them back to the chart.`,`Greyspace stands among the highest systems of the halo, so the axis slopes about 13 degrees to the galaxy's plane: the stem shows its height.`,`Breaking Oerth's heart would cut every link in the figure at once.`])}
     ${pageLink("oerth.html")}<button class="btn act" type="button" data-go="Greyspace">Open Greyspace</button>`;
 }
 function showNode(n, offer){

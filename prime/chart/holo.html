@@ -759,7 +759,7 @@ function eyeFov(){ return 70; }   // looking at the core from another system
 // over. The marks slide into the eye as the perspective drains away.
 function eyeHalfHeight(){                                    // the half-height of view that frames the eye
   const aspect = innerWidth/innerHeight, h = E.EYE_HALF;
-  return Math.max(h*.78, h*(aspect < 1 ? 1.06 : 1.14)/aspect);
+  return Math.max(h*.78, h*(aspect < 1 ? 1.15 : 1.14)/aspect);
 }
 const DOLLY_FAR = 3000;
 function revealFromOerth(){

@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 14 | 13 | 12 | 0 | 3 |
+| Cosmology | cosmology/, glossary/, chart/ | 16 | 13 | 12 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 22 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 11 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 0 | 1 | 0 | 2 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **126** | **150** | **48** | **2** | **55** |
+| **Total** |  | **129** | **150** | **48** | **2** | **55** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -319,8 +319,16 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-28 (FIA rulings, 10)
 
 - **[later]** The eye's alignment turns with the galaxy
-  For the eye to hold as seen from Oerth, Greyspace and the fifteen heart systems would all need to keep their places in Oerth's sky as they circle Erevos at different speeds (Korey, 2026-10-29, restated for the view from Oerth's heart). A flavour detail, and a possible clock for later: the alignment drifting, or coming due. Ties to the decide on how the inscription is worked. Planning only; it does not go on pages.
+  For the eye to hold, the fifteen marks must stay on their strokes while Greyspace and the marks circle Erevos at different speeds, which turns the axis. A flavour detail, and a possible clock for later: the alignment drifting, or coming due. Ties to the decide on how the inscription is worked. Planning only; it does not go on pages.
   src: Korey, 2026-10-29
+
+- **[decide]** The eye's roll on the inscription plane
+  The eye sits level on the plane: its across direction is level with the galaxy's plane, so from above every mark keeps its sideways place and the marks read at most as a jagged, stretched ring (chart refit, PR #115). Rolling the eye on the plane would scramble the lids from above, at the cost of a smaller eye. Korey's call.
+  src: chart refit, 2026-11-01
+
+- **[decide]** Whether asteroid belts count as destroyed planets
+  A mark needs every planet in its system, destroyed planets included. The Chart counts planets, giants of air and charted wrecks (a destroyed world such as Nowhere's); asteroid belts and titanic remains do not count. Rule whether a belt is a destroyed planet whose heart must be opened.
+  src: chart refit, 2026-11-01
 
 ### cosmology/index.html: Zeniths and Monoliths
 

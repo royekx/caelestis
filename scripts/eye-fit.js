@@ -14,7 +14,8 @@
    A mark is a whole system, and every planet in it must be opened and
    linked, so the fit reads each system's planets from its survey roll
    (survey-core.js, as the Chart rolls it) and prefers systems with few
-   planets, and systems where something lives.
+   planets. Life is not weighed: whether Vecna uses lifeless systems is
+   not ruled.
    It searches many seeded layouts and scores each, in priority order:
      (a) every mark in front of Oerth, inside the galaxy, no higher than 18
      (b) a zigzag from above: lid and iris links crossing, marks in all
@@ -23,7 +24,7 @@
      (c) heights as common as the catalogue's: no more marks in the thick
          disc or the halo than chance would put there, and high marks
          apart from each other and in company
-     (d) few planets, and life
+     (d) few planets
      (e) small moves
    The search is seeded, so it gives the same layout on every run.
 
@@ -94,11 +95,9 @@ function fit(h, quiet) {
   const EXPECT = { thick: 15 * (share(3) - share(THICK_LIMIT)), halo: 15 * share(THICK_LIMIT), over14: 15 * share(14) };
   const highOnes = FILLERS.filter(f => Math.abs(f.v[1]) > THICK_LIMIT);
 
-  /* Few planets: every planet in a mark must be found, opened and linked.
-     Life: a Zenith, and the Monolith that answers it, comes to a world
-     where someone lives far more often than to a dead one. */
-  const PLANET_W = 2.2, LIFELESS_W = 1.2, UNLIVED_W = 0.4, MOVE_W = 0.18, NEW_COST = 6, CAP = 22;
-  const sysCost = f => PLANET_W * (f.planets - 1) + (f.living ? 0 : LIFELESS_W) + (f.lived ? 0 : UNLIVED_W);
+  /* Few planets: every planet in a mark must be found, opened and linked. */
+  const PLANET_W = 2.2, MOVE_W = 0.18, NEW_COST = 6, CAP = 22;
+  const sysCost = f => PLANET_W * (f.planets - 1);
 
   // ── candidates for each stroke ──────────────────────────────────
   const cands = EYE2D.map((e, i) => {

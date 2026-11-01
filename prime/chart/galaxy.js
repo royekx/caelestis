@@ -73,7 +73,7 @@
 
   /* Heights above the disc. Greyspace, with Oerth, lies GREY_Y above the
      galaxy's plane, among the highest systems of the halo, so the axis
-     from Oerth through Erevos dips AXIS_TILT below Oerth's horizon. */
+     from Oerth through Erevos slopes AXIS_TILT to the galaxy's plane. */
   const GREY_Y = 17.5;
   const AXIS_TILT = Math.atan2(GREY_Y, Math.hypot(POS.greyspace[0] - GX.cx, POS.greyspace[1] - GX.cy) * S);
   /* The other named systems sit a little above or below the disc's middle,
@@ -219,26 +219,26 @@
      searches seeded layouts for it and writes it here: marks in front of
      Oerth and inside the galaxy first; then a zigzag from above (many
      crossings, all eight wedges around the core, no eye-like figure); then
-     heights as common as the catalogue's; then systems with few planets,
-     and with life; then the smallest moves. */
+     heights as common as the catalogue's; then systems with few planets;
+     then the smallest moves. */
   const THICK_LIMIT = 9, HALO_LIMIT = 2 * HALO_SIGMA;
   const bandOf = y => Math.abs(y) <= 3 ? 'disc' : Math.abs(y) <= THICK_LIMIT ? 'thick' : 'halo';
   /* MARK_FIT: written by scripts/eye-fit.js */
   const MARK_FIT = [
-    [135, 66],
-    [14, 159],
+    [253, 66],
+    [14, 156.07],
     [24, 126],
     [141, 171],
     [181, 135.34],
-    [1, 69],
-    [305, 12],
+    [187, 108],
+    [279, 6.12],
     [99, 48],
     [236, 6],
-    [169, 18],
-    [290, 165],
+    [336, 51],
+    [35, 153],
     [337, 94.96],
     [47, 27],
-    [33, 10.47],
+    [332, 17.94],
     [163, 60]
   ];
   /* /MARK_FIT */
@@ -264,8 +264,10 @@
      the chart, passes to the next seed, so each system's roll matches the
      command line exactly. */
   /* A mark needs every planet in its system; a moon shares its planet's
-     heart. Giants of air are planets. */
-  const PLANET_KINDS = ['planet', 'giant of air'];
+     heart. Giants of air are planets, and so is a charted wreck: a
+     destroyed planet still has its heart. Asteroid belts and titanic
+     remains do not count. */
+  const PLANET_KINDS = ['planet', 'giant of air', 'wreck large enough to chart'];
   const planetsOf = sys => sys.bodies.filter(b => PLANET_KINDS.includes(b.kind)).length;
   function rollSystems(survey) {
     const core = window.SURVEY_CORE; if (!core || !survey) return false;
