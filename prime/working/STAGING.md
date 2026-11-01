@@ -20,6 +20,11 @@ when a ruling changes; delete it once the page carries it. See
 - Stopping N'ghathrod stops the illithid invasion, the campaign's central threat. It does not stop Vecna, who keeps backup plans. Replaces "N'ghathrod's fall stops the casting".
 - Play (DM voice): the eye's progress is the DM's hidden narrative clock. It runs with the invasion and escalates toward the end of Arc 4. Dial it up or back as the story needs, as long as each step has a cause in the world: a conquest, a Zenith, a heart linked. The crew may never learn of the inscription in this campaign. If they do, it can be a late reveal or the seed of a later, high-level story. Replaces "The eye's moment has no date until the crew takes up the inscription … the clock stands still".
 
+### Vecna's place in the campaign (opposition/vecna.html, campaign/index.html, principles.html)
+- N'ghathrod and his invasion are the campaign-level threat. Vecna's eye is an undercurrent: something unnerving the crew may learn of, never a rival main plot. Reframe the Vecna pages from that perspective; the facts stand, the emphasis moves.
+- The eye completing is not this campaign's failure state. Its outcome depends on what the crew does and learns. It may resolve in this campaign, or carry on as a later story. The Seekers and the smaller traces of Vecna's work can still spread through the campaign. Replaces the Vecna page's "Failure state" framing.
+- Play (DM voice): the larger idea, Vecna trying to rewrite the cosmos, can become a crossover where Korey's campaign parties, each tied to their own gods and threats, take on separate parts of one threat at their own levels and stakes. An idea for later, not a plan.
+
 ### The quickening is retired (cosmology/index.html, factions/discerners.html, opposition/vecna.html, chart/gtc.js, chart/holo.html)
 - "The quickening" is retired as a term and a concept. What remains is the Watchers' observation that Monoliths have appeared more often across the galaxy over the past century. Remove the chart's Quickening toggle and the early-kindling ghost, the Discerners' "quickening" line, and the Vecna page's quickening line.
 
