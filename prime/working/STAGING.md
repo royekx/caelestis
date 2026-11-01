@@ -14,6 +14,16 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Campaign
 
+### The invasion and the eye are two plans (opposition/vecna.html, opposition/vthorama.html, campaign/index.html, dossiers/nghathrod.html)
+- N'ghathrod's invasion and Vecna's eye are separate plans. Vecna strings them together: the worlds he steers the colony toward are worlds the eye needs, so each conquest opens and links hearts for the figure. N'ghathrod wants worlds for his people and a home; Vecna wants the figure.
+- When the crew puts pressure on N'ghathrod, he stops following the list. He takes the worlds he can get, whether the eye needs them or not, and from there the invasion and the eye diverge.
+- Stopping N'ghathrod stops the illithid invasion, the campaign's central threat. It does not stop Vecna, who keeps backup plans. Replaces "N'ghathrod's fall stops the casting".
+- Play (DM voice): the eye's progress is the DM's hidden narrative clock. It runs with the invasion and escalates toward the end of Arc 4. Dial it up or back as the story needs, as long as each step has a cause in the world: a conquest, a Zenith, a heart linked. The crew may never learn of the inscription in this campaign. If they do, it can be a late reveal or the seed of a later, high-level story. Replaces "The eye's moment has no date until the crew takes up the inscription … the clock stands still".
+
+### The quickening is retired (cosmology/index.html, factions/discerners.html, opposition/vecna.html, chart/gtc.js, chart/holo.html)
+- "The quickening" is retired as a term and a concept. What remains is the Watchers' observation that Monoliths have appeared more often across the galaxy over the past century. Remove the chart's Quickening toggle and the early-kindling ghost, the Discerners' "quickening" line, and the Vecna page's quickening line.
+
+
 ### N'ghathrod (dossiers/nghathrod.html, factions/vthorama.html, timeline, artifacts/rod-of-seven-parts.html, rules/)
 - About five hundred years ago, Thessalar captured N'ghathrod and experimented on him aboard his planar craft, using a residue piece Thessalar had obtained. The experiments changed N'ghathrod and the five who became his lieutenants: two properly raised illithids captured with him, and three unthinned, made aboard the craft. All six gained a greatly extended lifespan. They are not immortal.
 - When the craft lost its gems and fell toward Fonains, N'ghathrod used the fall to escape with his five lieutenants and a few lesser illithids. He never reached Fonains. The craft broke apart as it fell: the main body raised the Barrier Peaks, the Thessalkraken came down in the sea, and other pieces may lie elsewhere.

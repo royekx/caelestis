@@ -35,7 +35,7 @@ staging once Korey has read and accepted them.
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 2 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 18 | 2 | 3 | 0 | 1 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 20 | 3 | 3 | 0 | 1 |
 | Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 11 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 0 | 1 | 0 | 2 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **126** | **151** | **48** | **2** | **55** |
+| **Total** |  | **128** | **152** | **48** | **2** | **55** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -971,6 +971,18 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 ---
 
 ### opposition/vecna.html (early planning)
+
+- **[decide]** What the eye completing means for this campaign *(shape)*
+  The Vecna page calls GAL-01's core waking for Vecna the failure state. Korey's lean (2026-11-01): the inscription is a bonus story; stopping N'ghathrod's invasion is the campaign, and the eye can continue past it as a later, high-level story. Decide whether completion stays a failure state, becomes a continuation hook, or depends on what the crew has learned.
+  src: Korey, 2026-11-01
+
+- **[decide]** How the eye's clock advances *(prep)*
+  Ruled: a hidden narrative clock tied to the invasion, escalating toward the end of Arc 4 (STAGING). Open: whether a roll or milestones drive it, any level ceiling, and the starting value (the chart has 67%; 10 of 15 marks, about 9 planets left).
+  src: Korey, 2026-11-01
+
+- **[later]** Does Erevos turn faster?
+  Korey recalls Erevos "spinning faster" alongside Monoliths appearing more often. With the quickening retired, decide whether a faster turn exists, and if so whether it is atmosphere or a clue.
+  src: Korey, 2026-11-01
 
 - **[decide]** How a heart is opened and held open, and how it is closed *(shape)*
   Ruled: a closed heart ends its links (cosmology § Closing a heart). Closing waits on how an opened heart stays open, which is not concrete yet. Open: what closing takes (residue, as opening does? the Atrium? a Monolith?), who can do it, whether a closed heart can be opened again, and what closing costs the world. The First Heart is the precedent.
