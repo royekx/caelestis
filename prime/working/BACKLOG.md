@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 13 | 13 | 12 | 0 | 3 |
+| Cosmology | cosmology/, glossary/, chart/ | 13 | 14 | 12 | 0 | 3 |
 | Locations | locations/ (Fonains stays in its own section) | 22 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 11 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 0 | 1 | 0 | 2 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **126** | **150** | **48** | **2** | **55** |
+| **Total** |  | **126** | **151** | **48** | **2** | **55** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -323,6 +323,10 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-29
 
 ### cosmology/index.html: Zeniths and Monoliths
+
+- **[later]** Ritual and natural Zeniths
+  Every Zenith played so far was ritual: a people did something that pushed their world. Whether a world can reach a Zenith naturally, and what that would look like, is open. The chart counts any life on every planet as enough for a mark (28 catalogue systems); if Zeniths need people, the bar rises to "every planet living and at least one inhabited" (12 systems) and the marks are refit.
+  src: Korey, 2026-11-01
 
 - **[decide]** How Vecna's ascension changed Oerth's Monolith
   Ruled: it became the anchor between Oerth's heart and Cavitius, and it never faded (cosmology § Monoliths, locations/oerth.html). Open: how it works, and what destroying it would do to Vecna, his realm and the links into Oerth.
