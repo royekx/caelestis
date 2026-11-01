@@ -11,10 +11,12 @@
    the Caelestis Sector's; the arms are numbered in the order the Beacon's
    beam reaches them (gtc.js).
 
-   The inscription. Each of the fifteen heart worlds sits in its own
-   system, a catalogue system on the sight line from Oerth through its
-   point of the eye. Seen from Oerth, the hearts frame the core as lids and
-   iris frame a pupil; seen from anywhere else they scatter.
+   The inscription. The eye is drawn on the inscription plane, through
+   Oerth and square to the axis from Oerth through Erevos, by straight
+   projection along that axis. Each of its fifteen points is a stroke, a
+   line through the galaxy parallel to the axis; each stroke's mark is a
+   whole catalogue system on it. Projected onto the plane, the marks form
+   the eye around Erevos; from above they zigzag across the galaxy.
    ════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -70,8 +72,8 @@
   const HALO_SIGMA = 14;
 
   /* Heights above the disc. Greyspace, with Oerth, lies GREY_Y above the
-     galaxy's plane, among the highest systems of the halo, so the line of
-     sight from Oerth to Erevos falls AXIS_TILT below Oerth's horizon. */
+     galaxy's plane, among the highest systems of the halo, so the axis
+     from Oerth through Erevos dips AXIS_TILT below Oerth's horizon. */
   const GREY_Y = 17.5;
   const AXIS_TILT = Math.atan2(GREY_Y, Math.hypot(POS.greyspace[0] - GX.cx, POS.greyspace[1] - GX.cy) * S);
   /* The other named systems sit a little above or below the disc's middle,
@@ -79,7 +81,14 @@
   const SYS_Y = { realmspace: 0.3, virenspace: 1.7, aethris: -1.3, krynnspace: 2.1, fonains: -1.8, wayfinders: 1.5, greyspace: GREY_Y };
   const sysScene = id => toScene(POS[id], SYS_Y[id] != null ? SYS_Y[id] : 0.4);
 
-  /* ── The inscription ─────────────────────────────────────────── */
+  /* ── The inscription ───────────────────────────────────────────
+     The eye is drawn on the inscription plane: the plane through Oerth,
+     perpendicular to the axis, the line from Oerth through Erevos. Erevos
+     is the eye's centre, its pupil. The image is a straight projection
+     along the axis, with no perspective: a system's place in the eye is
+     its offset from the axis (RT across, UP up), and its depth along the
+     axis does not count. Every mark lies in front of Oerth, on Erevos's
+     side of the plane. */
   const v3 = {
     add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
     sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -92,52 +101,56 @@
   };
   const OERTH = sysScene('greyspace');
   const CORE = [0, 0, 0];
-  const F = v3.norm(v3.sub(CORE, OERTH));               // Oerth's line of sight to the core
-  const RT = v3.norm(v3.cross(F, [0, 1, 0]));           // across Oerth's view, level with the plane
-  const UP = v3.norm(v3.cross(RT, F));                  // up in Oerth's view
+  const AXIS = v3.norm(v3.sub(CORE, OERTH));            // from Oerth through Erevos
+  const RT = v3.norm(v3.cross(AXIS, [0, 1, 0]));        // across the eye, level with the galaxy's plane
+  const UP = v3.norm(v3.cross(RT, AXIS));               // up the eye: mostly up, tipped toward Erevos
   const D = v3.dist(OERTH, CORE);
-  /* Oerth's heart is the eye's retina: Vecna looks out through the eye from
-     within it. The eye is a point projection from Oerth, as a pinhole
-     camera sees: each point of the eye is a sight line from Oerth, and its
-     heart system lies somewhere along that line, near or far. The
-     projection is rectilinear onto a picture plane, so a perspective
-     camera standing at Oerth and facing that plane, its lens shifted to
-     centre on the core, sees the eye exactly (holo.html). EYE_FOV is the eye's
-     width across Oerth's sky, lid corner to lid corner; EYE_ASPECT squeezes
-     the eye's height against its width. These proportions are the
-     template; the hearts are fitted to them, never the other way round. */
-  const EYE_FOV = 130, EYE_ASPECT = 55 / 80, EYE_TILT = 75;
-  /* The picture plane faces PLANE_N: Oerth's line of sight to the core,
-     tipped EYE_TILT degrees further down towards the disc, so it faces
-     almost straight beneath Oerth. The eye keeps its template shape on
-     that plane, and its upper lid stays below Oerth's horizon, among the
-     galaxy's systems, while the eye grows wide. */
-  const tilt = EYE_TILT * Math.PI / 180;
-  const PLANE_N = v3.norm(v3.sub(v3.mul(F, Math.cos(tilt)), v3.mul(UP, Math.sin(tilt))));
-  const PLANE_UP = v3.norm(v3.add(v3.mul(UP, Math.cos(tilt)), v3.mul(F, Math.sin(tilt))));
-  const EYE_K = Math.tan(EYE_FOV / 2 * Math.PI / 180) / Math.cos(tilt);  // half the eye's width on the picture plane, one unit from Oerth
-  const EYE_C = Math.tan(tilt);                                          // where the core falls on that plane, above its centre
-  /* Oerth's view of an eye point (x, y): its place on that picture plane. */
-  const eyeView = (x, y) => [x * EYE_K, EYE_C + y * EYE_ASPECT * EYE_K];
+  /* EYE_HALF is half the eye's width, lid corner to lid corner, in scene
+     units (the galaxy's radius is 100); its height is .373 of its width.
+     scripts/eye-fit.js sets it, as large as the galaxy holds. */
+  /* EYE_HALF: written by scripts/eye-fit.js */
+  const EYE_HALF = 70;
+  /* /EYE_HALF */
+  /* STROKE_TOL: how far from a stroke's centre line a system still lands
+     on its point of the eye, in scene units. */
+  const STROKE_TOL = 2.5;
+  /* How far along the eye is: the share of the figure that is whole. The
+     DM sets it here, as the story needs; the chart shows it and dims the
+     rest of the figure to match. Individual marks stay unnamed until the
+     crew draws near the truth. */
+  const EYE_PROGRESS = 0.67;
 
-  /* The eye in Oerth's view: lid width 1, lid height .373, iris radius .24.
-     Upper lid six points, lower lid four, iris five: fifteen hearts. */
+  /* The eye on the plane: lid width 1 (from -1 to 1), lid height .373,
+     iris radius .24. Upper lid six points, lower lid four, iris five:
+     fifteen strokes. */
   const EYE2D = [];
   [-1, -0.6, -0.2, 0.2, 0.6, 1].forEach(u => EYE2D.push({ part: 'upper', x: u, y: 0.373 * (1 - u * u) }));
   [0.6, 0.2, -0.2, -0.6].forEach(u => EYE2D.push({ part: 'lower', x: u, y: -0.373 * (1 - u * u) }));
   for (let k = 0; k < 5; k++) EYE2D.push({ part: 'iris', x: -0.24 * Math.cos(2 * Math.PI * k / 5 - Math.PI / 2), y: 0.24 * Math.sin(-2 * Math.PI * k / 5 + Math.PI / 2) });
   const LID = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], IRIS = [10, 11, 12, 13, 14];
-  const PAIR = [2, 3];                                  // two neighbouring upper-lid systems, opened and linked
-  const FOUND = 6;                                      // Nowhere, on the lower lid
-  /* The sight line from Oerth through eye point i, and the point s units
-     out along it. */
-  const eyeDir = i => { const e = EYE2D[i], p = eyeView(e.x, e.y); return v3.norm(v3.add(v3.add(PLANE_N, v3.mul(RT, p[0])), v3.mul(PLANE_UP, p[1]))); };
-  const eyeRay = (i, s) => v3.add(OERTH, v3.mul(eyeDir(i), s));
+  const PAIR = [2, 3];                                  // two neighbouring upper-lid marks, opened and linked
+  const NOWHERE = 6;                                    // Nowhere, on the lower lid
+  /* The links trace the drawing: each lid mark to its two lid neighbours
+     (a ring of ten), each iris mark to its two iris neighbours (a ring of
+     five), and each mark once to Oerth ('oerth'). The rings meet only
+     through Oerth. */
+  const LINKS = [];
+  LID.forEach((p, k) => LINKS.push([p, LID[(k + 1) % LID.length]]));
+  IRIS.forEach((p, k) => LINKS.push([p, IRIS[(k + 1) % IRIS.length]]));
+  for (let i = 0; i < 15; i++) LINKS.push([i, 'oerth']);
+  /* A stroke: the line through the galaxy parallel to the axis, through
+     eye point i. strokeAt(i, s) is the point s units along it from the
+     plane; a system there lands exactly on point i. */
+  const eyeOffset = (x, y) => v3.add(v3.mul(RT, x * EYE_HALF), v3.mul(UP, y * EYE_HALF));
+  const strokeAt = (i, s) => v3.add(v3.add(OERTH, eyeOffset(EYE2D[i].x, EYE2D[i].y)), v3.mul(AXIS, s));
+  /* Where a point in the galaxy lands on the plane: [x, y] in eye units and
+     its depth along the axis. */
+  const toPlane = v => { const d = v3.sub(v, OERTH); return [v3.dot(d, RT) / EYE_HALF, v3.dot(d, UP) / EYE_HALF, v3.dot(d, AXIS)]; };
 
   /* ── Generated systems ─────────────────────────────────────────
      Everything on the chart that is not a named system is a survey.js roll:
-     the Fleet's catalogue of unnamed systems, fifteen of which hold the
-     inscription's heart worlds.
+     the Fleet's catalogue of unnamed systems, fifteen of which are the
+     inscription's marks.
      Positions are seeded here; what each system is comes from
      survey-core.js by seed, once the survey is loaded (rollSystems), so a
      system clicked on the chart reads as `node scripts/survey.js roll
@@ -187,69 +200,73 @@
         : side * (3 + 15 * (1 - Math.pow(u, 1 / 1.5)));                 // tapering from 3 to 18
       f.v = toScene(f.pos, y); f.band = Math.abs(y) <= 3 ? 'disc' : Math.abs(y) <= 9 ? 'thick' : 'high'; delete f.rc;
     });
-    /* A few systems stand high in the halo where the upper lid's hearts
-       rise, so a heart up there keeps company like any other halo system:
-       catalogue index and height. */
+    /* A few systems stand high in the halo, so a high mark keeps company
+       like any other halo system: catalogue index and height. */
     const COMPANY = { 51: 11.4, 54: -13.1, 91: 15.1, 110: 10.5, 140: 15.1, 141: 11.2, 159: 17.8, 185: -11.2, 214: 12.8, 257: 12.3, 258: -11.8, 283: 10.7, 303: 10.5, 317: 10.5 };
     Object.entries(COMPANY).forEach(([i, y]) => { const f = out[i]; f.v = toScene(f.pos, y); f.band = 'high'; });
     return out;
   })();
-  /* ── The inscription, fitted to the catalogue ──────────────────
-     The eye's shape is fixed: EYE_FOV wide, two lids and a pentagon iris
-     around the core. Each eye point is a sight line from Oerth (eyeRay), and
-     its heart system lies on that line s units from Oerth. Each heart is a
-     catalogue system. Most were already near their line and are nudged
-     onto it, the shortest move; some are moved further along the line to a
-     better height; a few may be new catalogue systems placed on the line
-     (rolled after the rest, so no other system's seed changes).
-     HEART_FIT holds the choice for each eye point, in EYE2D order:
-     [catalogue index, s], or ['new', s]. scripts/eye-fit.js searches seeded
-     layouts for it and writes it here: the exact eye from Oerth first; then
-     gibberish from above (many crossings, all eight wedges around the core,
-     no eye-like figure); then heights in the disc, the thick disc or the
-     halo; then the smallest moves. */
+  /* ── The marks, fitted to the catalogue ────────────────────────
+     A mark is the system chosen on a stroke. Each is a catalogue system:
+     most lay within reach of their stroke and are nudged onto its centre
+     line, the shortest move; some are moved along the stroke to a better
+     depth; a new catalogue system may be placed on a stroke (rolled after
+     the rest, so no other system's seed changes). A mark's depth along its
+     stroke sets where it lies in the galaxy and how high, and leaves its
+     place in the eye alone.
+     MARK_FIT holds the choice for each stroke, in EYE2D order:
+     [catalogue index, depth], or ['new', depth]. scripts/eye-fit.js
+     searches seeded layouts for it and writes it here: marks in front of
+     Oerth and inside the galaxy first; then a zigzag from above (many
+     crossings, all eight wedges around the core, no eye-like figure); then
+     heights as common as the catalogue's; then systems with few planets,
+     and with life; then the smallest moves. */
   const THICK_LIMIT = 9, HALO_LIMIT = 2 * HALO_SIGMA;
   const bandOf = y => Math.abs(y) <= 3 ? 'disc' : Math.abs(y) <= THICK_LIMIT ? 'thick' : 'halo';
-  /* HEART_FIT: written by scripts/eye-fit.js */
-  const HEART_FIT = [
-    [73, 27],
-    [137, 135],
-    [288, 45],
-    [334, 147],
-    [51, 36],
-    [284, 100.64],
-    [126, 73.55],
-    [27, 72],
-    [31, 72],
-    [146, 99],
-    [282, 109.42],
-    [339, 90.39],
-    [226, 54.69],
-    [89, 62.32],
-    [150, 84.88]
+  /* MARK_FIT: written by scripts/eye-fit.js */
+  const MARK_FIT = [
+    [135, 66],
+    [14, 159],
+    [24, 126],
+    [141, 171],
+    [181, 135.34],
+    [1, 69],
+    [305, 12],
+    [99, 48],
+    [236, 6],
+    [169, 18],
+    [290, 165],
+    [337, 94.96],
+    [47, 27],
+    [33, 10.47],
+    [163, 60]
   ];
-  /* /HEART_FIT */
-  const HEARTS = HEART_FIT.map(([ref, t], i) => {
-    const e = EYE2D[i], v = eyeRay(i, t);
+  /* /MARK_FIT */
+  const MARKS = MARK_FIT.map(([ref, s], i) => {
+    const e = EYE2D[i], v = strokeAt(i, s);
     let f, move = 0, how;
     if (ref === 'new') {
       f = { i: FILLERS.length, added: true }; FILLERS.push(f); how = 'new';
     } else {
       f = FILLERS[ref]; move = v3.dist(f.v, v);
-      const tStar = v3.dot(v3.sub(f.v, OERTH), eyeDir(i));
-      how = Math.abs(t - tStar) < 0.05 ? 'nudged' : 'moved';
+      const sStar = v3.dot(v3.sub(f.v, strokeAt(i, 0)), AXIS);
+      how = move <= STROKE_TOL ? 'on its stroke' : Math.abs(s - sStar) < 0.05 ? 'nudged' : 'moved';
       f.from = f.v;
     }
-    f.v = v; f.pos = toChart(v); f.heart = i;
+    f.v = v; f.pos = toChart(v); f.mark = i;
     f.band = Math.abs(v[1]) > THICK_LIMIT ? 'high' : Math.abs(v[1]) > 3 ? 'thick' : 'disc';
-    return { i, n: i + 1, part: e.part, eye: [e.x, e.y], v, t, filler: f, how, move, band: bandOf(v[1]),
-      state: PAIR.includes(i) ? 'linked' : i === FOUND ? 'found' : 'unknown' };
+    return { i, n: i + 1, part: e.part, eye: [e.x, e.y], v, s, filler: f, how, move, band: bandOf(v[1]),
+      known: PAIR.includes(i) ? 'linked' : i === NOWHERE ? 'nowhere' : null };
   });
 
   /* Roll every generated system against the survey. A seed whose number or
      Bayer name is already taken, by the survey or by an earlier system on
      the chart, passes to the next seed, so each system's roll matches the
      command line exactly. */
+  /* A mark needs every planet in its system; a moon shares its planet's
+     heart. Giants of air are planets. */
+  const PLANET_KINDS = ['planet', 'giant of air'];
+  const planetsOf = sys => sys.bodies.filter(b => PLANET_KINDS.includes(b.kind)).length;
   function rollSystems(survey) {
     const core = window.SURVEY_CORE; if (!core || !survey) return false;
     const taken = { nums: new Set(), bayer: new Set() };
@@ -264,7 +281,7 @@
        catalogue system keeps the roll it had. */
     seed = RETIRED_SEED0; for (let k = 0; k < 15; k++) next();
     seed = FILLER_SEED0; FILLERS.forEach(f => Object.assign(f, next()));
-    HEARTS.forEach(h => { h.sys = h.filler.sys; h.summary = h.filler.summary; });   // a heart is its catalogue system
+    MARKS.forEach(m => { m.sys = m.filler.sys; m.summary = m.filler.summary; m.planets = planetsOf(m.sys); });   // a mark is its catalogue system
     return true;
   }
 
@@ -272,7 +289,8 @@
     GX, ARMS, TIP, rng, gauss, armAngle, armPt, RS, OUT, TAN, at, POS,
     SECTORS, MARKER_T, MARKERS, frontAt,
     S, toScene, toChart, discSigma, HALO_SIGMA, sysScene, SYS_Y, AXIS_TILT,
-    OERTH, F, RT, UP, D, EYE_FOV, EYE_ASPECT, EYE_TILT, PLANE_N, PLANE_UP, EYE_K, EYE_C, eyeView, eyeDir, eyeRay, bandOf, THICK_LIMIT, HALO_LIMIT, HEART_FIT, EYE2D, HEARTS, LID, IRIS, PAIR, FOUND,
+    v3, OERTH, AXIS, RT, UP, D, EYE_HALF, STROKE_TOL, EYE_PROGRESS, eyeOffset, strokeAt, toPlane,
+    bandOf, THICK_LIMIT, HALO_LIMIT, MARK_FIT, EYE2D, MARKS, LID, IRIS, LINKS, PAIR, NOWHERE, PLANET_KINDS, planetsOf,
     FILLERS, rollSystems
   };
 })();

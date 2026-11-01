@@ -22,7 +22,7 @@
 <style>
 :root{
   /* The DM palette (styles/dm.css). The hologram takes the World group's
-     axiom colour, Expansion; heart states take the flat chart's. */
+     axiom colour, Expansion; the marks take the flat chart's colours. */
   --bg:#080b12; --holo:#8fb0e6; --holo-d:rgba(110,149,212,.6); --holo-f:rgba(110,149,212,.2);
   --gold:#D4A256; --teal:#56B4A6; --rose:#D45F78; --grey:#7c8696; --text:#dfe6f0; --muted:#8c9cb2;
   --serif:"Crimson Pro",Georgia,"Times New Roman",serif; --display:"Cinzel","Trajan Pro",Georgia,serif;
@@ -84,14 +84,29 @@ footer i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-righ
 #gtc{position:fixed;left:1rem;right:1rem;bottom:2.6rem;z-index:5;padding:.5rem .7rem;background:rgba(9,12,20,.82);border:1px solid var(--holo-f);border-radius:6px;backdrop-filter:blur(6px)}
 @media (max-width:640px){#gtc{left:.5rem;right:.5rem;bottom:2.3rem;padding:.4rem .5rem}}
 body:not(.embed) #caption{bottom:8.5rem}
-@media (max-width:640px){body:not(.embed) footer{display:none} body:not(.embed) #gtc{bottom:.5rem} body:not(.embed) #panel{bottom:11.5rem;max-height:34vh} body:not(.embed) #caption{bottom:11.5rem}}
+@media (max-width:640px){body:not(.embed) footer{display:none} body:not(.embed) #gtc{bottom:.5rem} body:not(.embed) #panel{bottom:11.5rem;max-height:34vh} body:not(.embed) #caption{bottom:14.6rem}}
 .lbl.heart{font-family:var(--serif);font-style:italic;font-size:11px;letter-spacing:0;color:#e6eef8;text-shadow:0 0 3px #080b12,0 0 3px #080b12;transform:translate(14px,-15px)}
 .hide-labels .lbl{display:none}
-/* Standing at Oerth, only Erevos and the heart numbers keep their labels. */
+/* Lined up from Oerth, only Erevos and the mark numbers keep their labels. */
 .at-oerth .lbl:not(.heart):not(.gold){display:none}
 .hide-ins .lbl.heart,.hide-ins .lbl.ghost-ins{display:none}
 /* Inside the Chart page (index.html), which carries the title and the clock. */
 body.embed .back, body.embed h1{display:none}
+#prog{position:fixed;left:1rem;top:4.2rem;z-index:5;width:min(240px,calc(100vw - 2rem));padding:.5rem .7rem;font-size:.82rem;color:var(--muted);
+  background:rgba(9,12,20,.82);border:1px solid var(--holo-f);border-radius:6px;backdrop-filter:blur(6px)}
+#prog b{display:block;font-family:var(--display);font-size:.7rem;letter-spacing:.14em;color:var(--holo);font-weight:600;margin-bottom:.25rem}
+#prog .bar{height:6px;border-radius:3px;background:rgba(110,149,212,.18);margin:.35rem 0 .2rem;overflow:hidden}
+#prog .bar i{display:block;height:100%;background:linear-gradient(90deg,#56B4A6,#8fb0e6)}
+#prog[hidden]{display:none}
+#plane{position:fixed;inset:4rem 1rem 3.2rem;z-index:6;display:flex;flex-direction:column;padding:.8rem 1rem;
+  background:rgba(8,11,18,.985);border:1px solid var(--holo-f);border-top:2px solid var(--holo-d);border-radius:6px}
+#plane[hidden]{display:none}
+#plane h2{margin:0;font-family:var(--display);font-size:1rem;letter-spacing:.08em;color:var(--holo)}
+#plane .kind{margin:.1rem 0 .4rem;color:var(--muted);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase}
+#plane svg{flex:1;min-height:0;width:100%}
+#plane .note{margin:.3rem 0 0;color:var(--muted);font-size:.85rem}
+#plane .x{position:absolute;right:.6rem;top:.4rem;background:none;border:0;color:var(--muted);font-size:1.3rem;cursor:pointer}
+body.embed #plane{inset:3.4rem .6rem .6rem}
 #fail{position:fixed;inset:0;display:none;place-items:center;text-align:center;padding:2rem;z-index:9;color:var(--muted)}
 @media (max-width:640px){
   header{padding:.5rem .6rem}
@@ -99,6 +114,10 @@ body.embed .back, body.embed h1{display:none}
   .ctl button,.ctl select{font-size:.78rem;padding:.25rem .45rem}
   #panel{top:auto;bottom:3.2rem;right:.5rem;left:.5rem;width:auto;max-height:42vh}
   footer{font-size:.72rem}
+  #prog{top:auto;bottom:3rem;left:.5rem;width:auto;max-width:62vw;font-size:.72rem;padding:.35rem .5rem}
+  body:not(.embed) #prog{bottom:10.6rem}
+  #prog .note{display:none}
+  #plane{inset:3.6rem .4rem .4rem;padding:.6rem}
 }
 </style>
 <script type="importmap">
@@ -126,7 +145,9 @@ try { if (window.self !== window.top) document.body.classList.add('embed'); } ca
       <option value="edge">Edge-on</option>
     </select>
     <button type="button" id="tIns" aria-pressed="true">Inscription</button>
-    <button type="button" id="tCone" aria-pressed="false">Links to Oerth</button>
+    <button type="button" id="tCone" aria-pressed="true">Links to Oerth</button>
+    <button type="button" id="tProg" aria-pressed="true">Progress</button>
+    <button type="button" id="tPlane" aria-pressed="false">Inscription plane</button>
     <button type="button" id="tLanes" aria-pressed="true">Lanes</button>
     <button type="button" id="tLabels" aria-pressed="true">Labels</button>
     <button type="button" id="tSpin" aria-pressed="true">Drift</button>
@@ -138,15 +159,23 @@ try { if (window.self !== window.top) document.body.classList.add('embed'); } ca
 
 <aside id="panel" hidden></aside>
 <div id="gtc"></div>
-<div id="caption">The eye, seen from Oerth's heart</div>
+<div id="caption">The eye, lined up from Oerth</div>
+<div id="prog" aria-live="polite"></div>
+<div id="plane" hidden>
+  <button class="x" type="button" aria-label="Close the inscription plane">&times;</button>
+  <h2>Inscription plane</h2>
+  <p class="kind">Straight projection along the axis from Oerth through Erevos</p>
+  <svg id="planeSvg" role="img" aria-label="The eye on the inscription plane"></svg>
+  <p class="note" id="planeNote"></p>
+</div>
 
 <footer>
   <span><i style="background:#c6d4e8"></i>System</span>
   <span><i style="background:none;border:1px solid #a9bdd8"></i>Unnamed system (the Fleet's catalogue: a small sample of the galaxy's hundreds of billions)</span>
-  <span><i style="background:#56B4A6;box-shadow:0 0 6px #56B4A6"></i>Heart opened and linked</span>
-  <span><i style="background:#D4A256"></i>Heart found</span>
-  <span><i style="background:#8797ad"></i>Heart not yet known</span>
-  <span><i style="background:none;border:1px solid #D45F78"></i>Iris world</span>
+  <span><i style="background:#56B4A6;box-shadow:0 0 6px #56B4A6"></i>Known mark, opened and linked</span>
+  <span><i style="background:#D4A256"></i>Nowhere</span>
+  <span><i style="background:#8797ad"></i>Mark</span>
+  <span><i style="background:none;border:1px solid #D45F78"></i>Iris mark</span>
   <span>Drag to turn &middot; scroll or pinch to zoom &middot; tap anything</span>
 </footer>
 <div id="fail">The holochart needs WebGL and could not start in this browser. The <a href="index.html" style="color:#8fb0e6">flat chart</a> holds the same places.</div>
@@ -168,13 +197,13 @@ import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer
    x and z, scaled so the galaxy's radius is 100 units; y is height above
    the disc.
 
-   The inscription is seen from Oerth. Each point of the eye (ten on the
-   lids, five in the iris) is a sight line from Oerth, and its heart system
-   lies somewhere along it, near or far (galaxy.js). A camera standing at
-   Oerth, looking at the core with a field as wide as the eye, sees the
-   hearts and their links form the eye with the core as its pupil; from
-   anywhere else they scatter. The seed fixes the positions, so they are the
-   same on every visit.
+   The inscription is drawn on the inscription plane, through Oerth and
+   square to the axis from Oerth through Erevos. Each point of the eye (ten
+   on the lids, five in the iris) is a stroke parallel to the axis, and its
+   mark is a system somewhere along it (galaxy.js). Lined up from Oerth, an
+   orthographic camera looks straight along the axis and the marks form the
+   eye with Erevos as its pupil; from anywhere else they zigzag. The seed
+   fixes the positions, so they are the same on every visit.
    ════════════════════════════════════════════════════════════════ */
 
 // ── Shared with the flat chart (galaxy.js) ─────────────────────────
@@ -185,9 +214,9 @@ const LOC = '../locations/';
 
 // ── Palette: the DM wiki's (styles/dm.css) ─────────────────────────
 // Deep navy, stars in soft white and blue-grey, the World group's axiom
-// colour (Expansion) as the hologram accent. Heart states follow the flat
-// chart: linked Distinction teal, found Consolidation gold, unknown grey,
-// the iris ring Determination rose, Oerth gold.
+// colour (Expansion) as the hologram accent. Marks follow the flat chart:
+// the linked pair Distinction teal, Nowhere Consolidation gold, the rest
+// grey, the iris ring Determination rose, Oerth gold.
 const C = {
   bg:0x080b12, holo:0x6E95D4, holoHi:0xa8c2ec,
   stars:[0xdfe6f0, 0xcbd8e8, 0xa9bdd8, 0x8fa6c6, 0xb9c2cc],
@@ -460,26 +489,29 @@ const fillerPts = (function systems(){
 })();
 
 // ── The inscription ────────────────────────────────────────────────
-// Fifteen heart worlds, each in a catalogue system that galaxy.js fits onto
-// its eye point's sight line from Oerth.
+// Fifteen marks, each a catalogue system that galaxy.js fits onto its
+// stroke: the line through the galaxy parallel to the axis from Oerth
+// through Erevos, through its point of the eye. Projected straight along
+// the axis onto the inscription plane, they form the eye around Erevos.
 const OERTH = new THREE.Vector3(...E.OERTH);
 const CORE = new THREE.Vector3(0, 0, 0);
-const F = new THREE.Vector3(...E.F), Rt = new THREE.Vector3(...E.RT);
-const HEARTS = E.HEARTS.map(h => Object.assign({}, h, { v: new THREE.Vector3(...h.v) }));
-const HSTATE = { linked:{ c:C.linked, word:'Opened and linked' }, found:{ c:C.found, word:'Found, not opened' }, unknown:{ c:C.unknown, word:'Not yet known' } };
+const AXIS = new THREE.Vector3(...E.AXIS), Rt = new THREE.Vector3(...E.RT);
+const MARKS = E.MARKS.map(m => Object.assign({}, m, { v: new THREE.Vector3(...m.v) }));
 const PART = { iris:'Iris', upper:'Upper lid', lower:'Lower lid' };
+const KNOWN = { linked:{ c:C.linked, word:'Opened and linked' }, nowhere:{ c:C.found, word:'Nowhere' } };
+const BAND = { disc:'in the thin disc, close to the galaxy\'s plane', thick:'in the thick disc', halo:'high in the halo' };
+let progressOn = true;
 
-// A heart system: a small star with its heart world beside it, in the
-// heart's state colour, on a dark backing so it reads over the bright bulge.
-// Drawn on top of the starfield (no depth test, no fog) and scaled with the
-// other markers, so it holds a steady size on screen at every zoom.
+// A mark: a small star with its system's world beside it, on a dark
+// backing so it reads over the bright bulge. Drawn on top of the
+// starfield (no depth test, no fog) and scaled with the other markers.
 function onTop(mat){ mat.depthTest = false; mat.depthWrite = false; mat.fog = false; mat.transparent = true; return mat; }
-function heartSystem(color, iris, info){
+function markSystem(color, iris, info){
   const g = new THREE.Group();
   const sprite = (c, size, op, add) => { const s = new THREE.Sprite(onTop(new THREE.SpriteMaterial({ map:DOT, color:c, opacity:op,
     blending: add ? THREE.AdditiveBlending : THREE.NormalBlending }))); s.scale.set(size, size, 1); s.renderOrder = 20; return s; };
   const back = sprite(C.bg, 4.6, .85, false); back.renderOrder = 19; g.add(back);
-  // the heart world, at the heart's own point, so the eye stays exact
+  // the marked world, at the mark's own point, so the eye stays exact
   const world = new THREE.Sprite(onTop(new THREE.SpriteMaterial({ map:DISC, color })));
   world.scale.set(1.6, 1.6, 1);
   world.renderOrder = 21; g.add(world);
@@ -497,69 +529,110 @@ function heartSystem(color, iris, info){
 }
 
 const ins = new THREE.Group(); galaxy.add(ins);
-HEARTS.forEach(h => {
-  const st = HSTATE[h.state], iris = h.part === 'iris';
+MARKS.forEach(m => {
+  const k = m.known && KNOWN[m.known], iris = m.part === 'iris';
+  const side = m.v.y > 0 ? 'above' : 'below';
   const info = {
-    name: h.state === 'found' ? 'Nowhere' : 'Heart world',
-    kind: `Inscription · ${PART[h.part]} · ${h.n}`,
-    summary: h.state === 'linked' ? 'One of two neighbouring systems on the upper lid. Its world\'s heart is opened and linked to its neighbour\'s, and to Oerth\'s.'
-           : h.state === 'found' ? 'A lesser god forced its way into this system and down onto the world, and the push destroyed both. A Monolith answered. The world\'s heart lies exposed in the wreck.'
-           : 'A heart world in the figure, in a system of its own. Which world it is has not been chosen.',
-    dm: (iris ? 'An iris world: key. Lose one and the iris must be redrawn. ' : 'A lid world: replaceable, at a cost of years. ')
-        + (h.state === 'linked' ? 'One of the two opened worlds is a little-charted planet the crew learns of late in the campaign. ' : '')
-        + 'Like every heart in the figure, it links back to Oerth\'s heart.',
-    page: h.state === 'found' ? 'nowhere.html' : '../opposition/vecna.html'
+    name: m.known === 'nowhere' ? 'Nowhere' : m.known === 'linked' ? 'Upper-lid mark' : 'Mark',
+    kind: `Inscription · ${PART[m.part]} · stroke ${m.n}`,
+    summary: (m.known === 'linked' ? 'One of two neighbouring systems on the upper lid. Every planet in it has its heart opened and linked; it links to its neighbour on the lid, and to Oerth\'s heart.'
+           : m.known === 'nowhere' ? 'A lesser god forced its way into this system and down onto a world, and the push destroyed both. A Monolith answered, and the world\'s heart lies exposed in the wreck.'
+           : 'A system on its stroke, chosen for where it lands in the eye. A mark is a whole system: every planet in it needs its heart found, opened and linked.')
+      + ` It lies ${m.s.toFixed(0)} units along the axis from the inscription plane, ${BAND[m.band]}${m.band === 'disc' ? '' : ', ' + side + ' the plane'}.`,
+    dm: (iris ? 'An iris mark: key. Lose one and the iris must be redrawn through another system on the same stroke. ' : 'A lid mark: a lost one is replaced by another system on the same stroke, at a cost of years. ')
+        + (m.known === 'linked' ? 'One of the two is a little-charted planet the crew learns of late in the campaign. ' : '')
+        + (m.known ? '' : `Which marks are done is left open: the eye as a whole is about ${Math.round(E.EYE_PROGRESS*100)}% whole (EYE_PROGRESS in galaxy.js). `)
+        + 'It links to its two neighbours in the ' + (iris ? 'iris' : 'lid') + ' and once to Oerth.',
+    page: m.known === 'nowhere' ? 'nowhere.html' : '../opposition/vecna.html#marks'
   };
-  const n = heartSystem(st.c, iris, info);
-  n.position.copy(h.v);
-  label(String(h.n), n, 'lbl heart');
-  ins.add(n); h.mesh = n; h.info = info;
+  const n = markSystem(k ? k.c : C.unknown, iris, info);
+  n.position.copy(m.v);
+  label(String(m.n), n, 'lbl heart');
+  ins.add(n); m.mesh = n; m.info = info;
 });
 
-// Each heart system is a survey.js roll too; its designation joins its panel.
+// Each mark is a survey.js roll too; its designation and planets join its panel.
 surveyReady.then(sv => {
   if (!E.rollSystems(sv)) return;
-  HEARTS.forEach(h => { const src = E.HEARTS[h.i];
-    h.info.kind += ' · ' + src.sys.id;
-    h.info.summary += ' Its system: ' + src.summary.charAt(0).toLowerCase() + src.summary.slice(1);
-    h.info.dm += ` Its system is a survey.js roll, seed ${src.sys.seed}.`; });
+  MARKS.forEach(m => { const src = E.MARKS[m.i];
+    m.info.kind += ' · ' + src.sys.id;
+    m.info.summary += ` Its system: ${src.summary.charAt(0).toLowerCase() + src.summary.slice(1)} Planets to open and link: ${src.planets}.`;
+    m.info.dm += ` Its system is a survey.js roll, seed ${src.sys.seed}.`; });
+  drawPlane();
 });
 
 // Oerth, the retina.
 const oerthNode = node(C.oerth, 1.3, { name:'Oerth', kind:'Greyspace · the eye\'s retina', page:'oerth.html',
-  summary:'Oerth, in Greyspace, where Vecna became a god.', dm:'Oerth\'s heart has been Vecna\'s since his ascension, and he sits in it and looks out through the eye. Every heart in the inscription links back to it, so the links run in a cone from the hearts to Oerth. Seen from Oerth, the hearts frame the core as lids and iris frame a pupil; from anywhere else they scatter. Line it up from Oerth to see it.' });
+  summary:'Oerth, in Greyspace, where Vecna became a god.', dm:'Oerth\'s heart has been Vecna\'s since his ascension charged him into it. Every mark links back to it, and the marked worlds bleed through into its sky, where together they form the eye. The inscription plane passes through Oerth, square to the axis to Erevos. Line it up from Oerth to see the eye form.' });
 oerthNode.position.copy(OERTH).add(new THREE.Vector3(0, 1.6, 0));
 nearOerthParts.push(oerthNode, label('Oerth', oerthNode, 'lbl gold below')); galaxy.add(oerthNode);
 
-// The figure: around the lids and around the iris. Every heart's link back
-// to Oerth is the cone, off by default. The three links that stand are
-// drawn solid: the two upper-lid hearts to each other, and each to Oerth.
-function loop(ids, color, dash, closed){
-  const pts = ids.map(i => HEARTS[i].v); if (closed) pts.push(HEARTS[ids[0]].v);
-  const g = new THREE.BufferGeometry().setFromPoints(pts);
-  const m = new THREE.LineDashedMaterial({ color, dashSize:dash, gapSize:dash*.7, transparent:true, opacity:.6 });
-  const l = new THREE.Line(g, m); l.computeLineDistances(); return l;
-}
-const eyeLines = new THREE.Group(); ins.add(eyeLines);
-eyeLines.add(loop(E.LID, C.lid, 1.4, true));
-eyeLines.add(loop(E.IRIS, C.iris, 1.0, true));
-const cone = new THREE.Group(); ins.add(cone);
-HEARTS.forEach(h => {
-  if (h.state === 'linked') return;
-  const g = new THREE.BufferGeometry().setFromPoints([h.v, OERTH]);
-  const l = new THREE.Line(g, new THREE.LineDashedMaterial({ color:C.cone, dashSize:.5, gapSize:1.4, transparent:true, opacity:.3 }));
-  l.computeLineDistances(); cone.add(l);
+// The links trace the drawing: the lid ring, the iris ring, and each mark
+// once to Oerth (E.LINKS). The two known upper-lid marks, their link to
+// each other and their links to Oerth are drawn solid; the rest of the
+// figure dims to the progress measure.
+const linkLines = new THREE.Group(); ins.add(linkLines);
+const eyeLines = [], spokes = [], toOerth = [];
+const known = i => E.PAIR.includes(i);
+E.LINKS.forEach(([i, j]) => {
+  const p = MARKS[i].v, q = j === 'oerth' ? OERTH : MARKS[j].v;
+  const solid = j === 'oerth' ? known(i) : known(i) && known(j);
+  const iris = MARKS[i].part === 'iris';
+  const color = solid ? C.linked : j === 'oerth' ? C.cone : iris ? C.iris : C.lid;
+  const m = solid ? new THREE.LineBasicMaterial({ color, transparent:true, opacity:.9 })
+    : new THREE.LineDashedMaterial({ color, dashSize: j === 'oerth' ? .5 : iris ? 1 : 1.4, gapSize: j === 'oerth' ? 1.4 : iris ? .7 : 1, transparent:true, opacity:.6 });
+  const l = new THREE.Line(new THREE.BufferGeometry().setFromPoints([p, q]), m);
+  if (!solid) l.computeLineDistances();
+  l.userData = { solid, base: j === 'oerth' ? .35 : .7 };
+  linkLines.add(l);
+  if (j === 'oerth') { spokes.push(l); toOerth.push(l); } else eyeLines.push(l);
 });
-cone.visible = false;
-const links = new THREE.Group(); ins.add(links);
-const toOerth = [];                         // hidden while the camera stands at Oerth, where they run into the lens
-(function standing(){
-  const [a, b] = E.PAIR.map(i => HEARTS[i].v);
-  [[a, b], [a, OERTH], [b, OERTH]].forEach(([p, q], k) => {
-    const l = new THREE.Line(new THREE.BufferGeometry().setFromPoints([p, q]), new THREE.LineBasicMaterial({ color:C.linked, transparent:true, opacity:.85 }));
-    links.add(l); if (k) toOerth.push(l);
+// The strokes, faintly, while lined up: each a line parallel to the axis.
+const strokes = new THREE.Group(); ins.add(strokes); strokes.visible = false;
+E.EYE2D.forEach((e, i) => {
+  const a = new THREE.Vector3(...E.strokeAt(i, 0)), b = new THREE.Vector3(...E.strokeAt(i, 200));
+  strokes.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([a, b]), new THREE.LineBasicMaterial({ color:C.holo, transparent:true, opacity:.12, depthWrite:false })));
+});
+function applyProgress(){
+  const P = E.EYE_PROGRESS;
+  linkLines.children.forEach(l => { l.material.opacity = l.userData.solid ? .9 : progressOn ? l.userData.base*(.25 + .75*P) * .8 : l.userData.base; });
+  MARKS.forEach(m => { if (!m.known) m.mesh.children[1].material.opacity = progressOn ? .55 + .4*P : .95; });
+  const box = document.getElementById('prog');
+  box.hidden = !progressOn;
+  box.innerHTML = `<b>The eye</b>About ${Math.round(P*100)}% of the figure whole.<div class="bar"><i style="width:${(P*100).toFixed(0)}%"></i></div><span class="note">Known: the two upper-lid marks, linked, and Nowhere. The rest of the figure is drawn dimmer.</span>`;
+}
+
+// ── The inscription plane, flat ────────────────────────────────────
+// The eye as it lies on the plane: each mark at its offset from the axis,
+// Erevos at the centre. Oerth lies behind the pupil on this plane, so the
+// links to Oerth are not drawn here.
+function drawPlane(){
+  const svg = document.getElementById('planeSvg'), h = E.EYE_HALF, P = E.EYE_PROGRESS;
+  const pts = E.MARKS.map(m => { const q = E.toPlane(m.v); return [q[0]*h, -q[1]*h]; });
+  // the galaxy's rim and the disc, projected onto the plane
+  const rim = []; for (let k = 0; k <= 96; k++) { const t = k/96*Math.PI*2, q = E.toPlane([100*Math.cos(t), 0, 100*Math.sin(t)]); rim.push(`${(q[0]*h).toFixed(1)},${(-q[1]*h).toFixed(1)}`); }
+  const W = Math.max(1.22*h, 106), H = Math.max(.62*h, W*.36), f = n => n.toFixed(1), dim = progressOn ? (.25 + .75*P) : 1;
+  let o = `<rect x="${-W}" y="${-H}" width="${2*W}" height="${2*H}" fill="none"/>`;
+  o += `<polygon points="${rim.join(' ')}" fill="#6E95D4" fill-opacity=".05" stroke="#6E95D4" stroke-opacity=".35" stroke-width=".4" stroke-dasharray="1.5 2"/>`;
+  o += `<text x="${f(-W+3)}" y="${f(H-4)}" font-size="2.3" fill="#8c9cb2" font-family="Crimson Pro,Georgia,serif">The galaxy's rim, seen along the axis: the disc lies almost edge-on</text>`;
+  const line = (a, b, col, w, op, dash) => `<line x1="${f(a[0])}" y1="${f(a[1])}" x2="${f(b[0])}" y2="${f(b[1])}" stroke="${col}" stroke-width="${w}" stroke-opacity="${op}" ${dash ? `stroke-dasharray="${dash}"` : ''} stroke-linecap="round"/>`;
+  E.LINKS.forEach(([i, j]) => { if (j === 'oerth') return;
+    const solid = known(i) && known(j), iris = E.MARKS[i].part === 'iris';
+    o += solid ? line(pts[i], pts[j], '#56B4A6', 1.3, .95) : line(pts[i], pts[j], iris ? '#D45F78' : '#9fb4d0', .9, .85*dim, iris ? '2.2 1.6' : '3 2'); });
+  // Erevos, the pupil
+  o += `<circle cx="0" cy="0" r="6" fill="#D4A256" fill-opacity=".18"/><circle cx="0" cy="0" r="2.6" fill="#000" stroke="#D4A256" stroke-width=".6"/>`;
+  o += `<text x="0" y="6.6" text-anchor="middle" font-size="2.2" fill="#D4A256" font-family="Cinzel,Georgia,serif" letter-spacing=".4">EREVOS</text>`;
+  E.MARKS.forEach((m, i) => {
+    const col = m.known === 'linked' ? '#56B4A6' : m.known === 'nowhere' ? '#D4A256' : '#8797ad', op = m.known ? 1 : .55 + .45*dim, p = pts[i];
+    if (m.part === 'iris') o += `<circle cx="${f(p[0])}" cy="${f(p[1])}" r="3" fill="none" stroke="#D45F78" stroke-width=".6" stroke-opacity="${op}"/>`;
+    o += `<circle cx="${f(p[0])}" cy="${f(p[1])}" r="1.9" fill="${col}" fill-opacity="${op}" stroke="#080b12" stroke-width=".4"/>`;
+    o += `<text x="${f(p[0]+2.6)}" y="${f(p[1]-2.4)}" font-size="2.8" fill="#dfe6f0" font-family="Crimson Pro,Georgia,serif" font-style="italic">${m.n}${m.known === 'nowhere' ? ' · Nowhere' : ''}</text>`;
   });
-})();
+  svg.setAttribute('viewBox', `${-W} ${-H} ${2*W} ${2*H}`);
+  svg.innerHTML = o;
+  document.getElementById('planeNote').textContent = `The eye is ${2*h} units across (the galaxy is 200) and ${(0.746*h).toFixed(0)} high. Each mark sits at its offset from the axis; how far along the axis it lies does not count. Every mark also links once to Oerth, which lies behind the pupil on this plane.`
+    + (progressOn ? ` About ${Math.round(P*100)}% of the figure is whole; the two linked upper-lid marks and their link are drawn bright, and the rest of the figure dimmer.` : '');
+}
 
 // ── The Beacon (gtc.js) ────────────────────────────────────────────
 // Erevos turns once a cycle; a faint sweep marks where its unseen beam
@@ -654,49 +727,82 @@ if (!document.body.classList.contains('embed')) {
 
 // ── Viewpoints and the reveal ──────────────────────────────────────
 const caption = document.getElementById('caption');
-let tween = null, atOerth = false;   // atOerth: the camera stands at Oerth looking at the core, and the eye has formed
+let tween = null, lined = false;   // lined: the orthographic camera looks straight along the axis, and the eye has formed
+let lineMix = 0;                   // 0 in an ordinary view, 1 lined up: the starfield and catalogue dim behind the eye
 const ease = t => t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3)/2;
 const HOME_FOV = 50;
 const halfOf = (d, fov) => d*Math.tan(THREE.MathUtils.degToRad(fov/2));   // half the height of view at distance d
 
-function flyTo(pos, target, fov, ms, done, mix = 0){
+// Two cameras: the perspective camera for every ordinary view, and an
+// orthographic camera for the eye lined up from Oerth, which looks
+// straight along the axis so the projection is exact.
+const persp = camera;
+const ortho = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 4000);
+let cam = persp;
+function useCamera(c){ cam = c; controls.object = c; scene.fog = c === ortho ? null : FOG; }
+
+function flyTo(pos, target, fov, ms, done, mix){
+  if (cam === ortho) return leaveLineup(() => flyTo(pos, target, fov, ms, done, mix));
   galaxy.rotation.y = 0;                                     // views are set in galaxy space
-  tween = { t0: performance.now(), ms, p0: camera.position.clone(), p1: pos.clone(),
-            g0: controls.target.clone(), g1: target.clone(), f0: camera.fov, f1: fov, m0: eyeMix, m1: mix, done };
+  tween = { t0: performance.now(), ms, p0: persp.position.clone(), p1: pos.clone(),
+            g0: controls.target.clone(), g1: target.clone(), f0: persp.fov, f1: fov, m0: lineMix, m1: mix || 0, done };
   controls.enabled = false;
 }
 function eyeFov(){ return 70; }   // looking at the core from another system
 
-// ── The view from Oerth ────────────────────────────────────────────
-// Vecna looks out through the eye from within Oerth's heart. galaxy.js
-// sets the eye as a rectilinear projection from Oerth onto a picture plane
-// that faces E.PLANE_N, Oerth's line of sight tipped down towards the disc,
-// with the core E.EYE_C above the plane's centre. A perspective camera at
-// Oerth, facing PLANE_N, with its frustum shifted up to centre on the core
-// (a shifted lens, as an architect's camera has), sees the eye exactly.
-// eyeMix blends the camera's ordinary frustum into that shifted one.
-const PLANE_N = new THREE.Vector3(...E.PLANE_N);
-const EYE_TARGET = OERTH.clone().addScaledVector(PLANE_N, E.D*Math.cos(E.EYE_TILT*Math.PI/180));   // orbit about this point from Oerth
-let eyeMix = 0, eyeMixGoal = null;
-function eyeFrustum(){
-  // Half-width and half-height on the picture plane, one unit out: a little
-  // wider than the eye, so the lid corners clear the screen's edge.
-  const aspect = innerWidth/innerHeight, hw0 = E.EYE_K*(aspect < 1 ? 1.05 : 1.12);   // a narrow screen gives the eye its whole width
-  const hh = Math.max(hw0/aspect, .373*E.EYE_ASPECT*E.EYE_K*1.9), hw = hh*aspect;
-  return { l:-hw, r:hw, b:E.EYE_C - hh, t:E.EYE_C + hh };
+// ── Lined up from Oerth ────────────────────────────────────────────
+// The eye is a straight projection along the axis onto the inscription
+// plane, so it forms exactly for a camera looking along the axis with no
+// perspective. The reveal flies to the axis behind Oerth, then dollies
+// back while the field narrows, holding the eye's width on screen, until
+// the view is all but orthographic; then the orthographic camera takes
+// over. The marks slide into the eye as the perspective drains away.
+function eyeHalfHeight(){                                    // the half-height of view that frames the eye
+  const aspect = innerWidth/innerHeight, h = E.EYE_HALF;
+  return Math.max(h*.78, h*(aspect < 1 ? 1.06 : 1.14)/aspect);
 }
-function frustum(){
-  const t = Math.tan(THREE.MathUtils.degToRad(camera.fov/2)), a = camera.aspect;
-  const f0 = { l:-t*a, r:t*a, b:-t, t:t };
-  if (eyeMix <= 0) return f0;
-  const f1 = eyeFrustum(), m = eyeMix, L = (p, q) => p + (q - p)*m;
-  return { l:L(f0.l, f1.l), r:L(f0.r, f1.r), b:L(f0.b, f1.b), t:L(f0.t, f1.t) };
+const DOLLY_FAR = 3000;
+function revealFromOerth(){
+  stopSpin(); setPressed('tIns', true); setIns(true);
+  viewSel.value = 'greyspace';
+  if (cam === ortho) { lineupOrtho(); return; }
+  const H = eyeHalfHeight(), d1 = H/Math.tan(THREE.MathUtils.degToRad(HOME_FOV/2));
+  const start = CORE.clone().addScaledVector(AXIS, -d1);
+  flyTo(start, CORE, HOME_FOV, 2200, () => {
+    // the dolly: back along the axis, the field narrowing so the eye keeps its size
+    tween = { t0: performance.now(), ms: 2600, done: lineupOrtho, step: e => {
+      const d = d1*Math.pow(DOLLY_FAR/d1, e);
+      persp.position.copy(CORE).addScaledVector(AXIS, -d);
+      persp.fov = 2*THREE.MathUtils.radToDeg(Math.atan(H/d));
+      lineMix = .5 + .5*e;
+    } };
+    controls.enabled = false;
+  }, .5);
 }
-camera.updateProjectionMatrix = function(){
-  const f = frustum(), n = this.near;
-  this.projectionMatrix.makePerspective(f.l*n, f.r*n, f.t*n, f.b*n, n, this.far);
-  this.projectionMatrixInverse.copy(this.projectionMatrix).invert();
-};
+function lineupOrtho(){
+  const H = eyeHalfHeight(), aspect = innerWidth/innerHeight;
+  Object.assign(ortho, { left:-H*aspect, right:H*aspect, top:H, bottom:-H, zoom:1, near:0.1, far:4000 });
+  ortho.position.copy(CORE).addScaledVector(AXIS, -900);
+  ortho.up.set(0, 1, 0); controls.target.copy(CORE); ortho.lookAt(CORE); ortho.updateProjectionMatrix();
+  useCamera(ortho); controls.enabled = true; controls.update();
+  lineMix = 1; revealPulse = performance.now();
+}
+// Out of the lined-up view: the perspective camera takes back the
+// orthographic camera's view from far off, then dollies in.
+function leaveLineup(next){
+  const dir = ortho.position.clone().sub(controls.target).normalize();
+  const H = (ortho.top - ortho.bottom)/2/ortho.zoom, tgt = controls.target.clone();
+  persp.position.copy(tgt).addScaledVector(dir, DOLLY_FAR); persp.fov = 2*THREE.MathUtils.radToDeg(Math.atan(H/DOLLY_FAR));
+  persp.up.set(0, 1, 0); persp.lookAt(tgt); persp.updateProjectionMatrix(); useCamera(persp);
+  const d1 = H/Math.tan(THREE.MathUtils.degToRad(HOME_FOV/2));
+  tween = { t0: performance.now(), ms: 1400, done: next, step: e => {
+    const d = DOLLY_FAR*Math.pow(d1/DOLLY_FAR, e);
+    persp.position.copy(tgt).addScaledVector(dir, d);
+    persp.fov = 2*THREE.MathUtils.radToDeg(Math.atan(H/d));
+    lineMix = 1 - .5*e;
+  } };
+  controls.enabled = false;
+}
 function standAt(id){
   stopSpin(); caption.classList.remove('on');
   if (id === 'free') { flyTo(HOME_POS, CORE, HOME_FOV, 1800); return; }
@@ -707,11 +813,6 @@ function standAt(id){
   const p = s.v.clone().addScaledVector(CORE.clone().sub(s.v).normalize(), -0.01);
   flyTo(p.add(new THREE.Vector3(0, .6, 0)), CORE, eyeFov(), 2200);
 }
-function revealFromOerth(){
-  stopSpin(); setPressed('tIns', true); setIns(true);
-  viewSel.value = 'greyspace';
-  flyTo(OERTH, EYE_TARGET, HOME_FOV, 3200, () => { revealPulse = performance.now(); }, 1);
-}
 let revealPulse = 0;
 function stopSpin(){ controls.autoRotate = false; setPressed('tSpin', false); }
 
@@ -721,17 +822,23 @@ function toggle(id, fn){
   const b = document.getElementById(id);
   b.addEventListener('click', () => { const on = b.getAttribute('aria-pressed') !== 'true'; setPressed(id, on); fn(on); });
 }
-// The label renderer ignores a hidden parent, so the heart numbers hide by class.
+// The label renderer ignores a hidden parent, so the mark numbers hide by class.
 function setIns(on){ ins.visible = on; document.body.classList.toggle('hide-ins', !on); }
 toggle('tIns', on => { setIns(on); if (!on) caption.classList.remove('on'); });
 toggle('tSystems', on => { fillerPts.visible = on; });
-toggle('tCone', on => { cone.visible = on; });
+toggle('tCone', on => { spokes.forEach(l => { l.userData.off = !on; }); });
+toggle('tProg', on => { progressOn = on; applyProgress(); drawPlane(); });
+const planeBox = document.getElementById('plane');
+function showPlane(on){ setPressed('tPlane', on); planeBox.hidden = !on; if (on) drawPlane(); }
+toggle('tPlane', showPlane);
+planeBox.querySelector('.x').addEventListener('click', () => showPlane(false));
 toggle('tLanes', on => { lanes.visible = on; });
 toggle('tLabels', on => { document.body.classList.toggle('hide-labels', !on); });
 toggle('tSpin', on => { controls.autoRotate = on; });
 document.getElementById('goOerth').addEventListener('click', revealFromOerth);
 viewSel.addEventListener('change', () => standAt(viewSel.value));
-controls.addEventListener('start', () => { if (controls.autoRotate) stopSpin(); if (eyeMix > 0) eyeMixGoal = 0; });   // turning away from Oerth: the shifted lens relaxes
+controls.addEventListener('start', () => { if (controls.autoRotate) stopSpin(); });
+applyProgress(); drawPlane();
 
 // Panel.
 const panel = document.getElementById('panel');
@@ -751,12 +858,12 @@ renderer.domElement.addEventListener('pointerdown', e => { down = [e.clientX, e.
 renderer.domElement.addEventListener('pointerup', e => {
   if (!down || Math.hypot(e.clientX-down[0], e.clientY-down[1]) > 6) return;
   ptr.set(e.clientX/innerWidth*2 - 1, -(e.clientY/innerHeight)*2 + 1);
-  ray.setFromCamera(ptr, camera);
+  ray.setFromCamera(ptr, cam);
   const shown = o => { for (; o; o = o.parent) if (!o.visible) return false; return true; };
   const hit = ray.intersectObjects(pickables.filter(shown), false)[0];
   if (hit) { showInfo(hit.object.userData.info); return; }
   // otherwise the nearest unnamed system under the pointer
-  ray.params.Points.threshold = Math.max(.6, halfOf(camera.position.distanceTo(controls.target), camera.fov)/60);
+  ray.params.Points.threshold = Math.max(.6, (cam === ortho ? (ortho.top - ortho.bottom)/2/ortho.zoom : halfOf(persp.position.distanceTo(controls.target), persp.fov))/60);
   const f = ray.intersectObject(fillerPts, false)[0], sys = f && E.FILLERS[f.index].sys;
   const band = sys && E.FILLERS[f.index].band === 'high' ? (E.FILLERS[f.index].v[1] > 0 ? ' · above the plane' : ' · below the plane') : '';
   if (sys) showInfo({ name:sys.id, kind:'Star system' + (sys.bayer ? ' · ' + sys.bayer : '') + ' · ' + sys.status + band, summary:E.FILLERS[f.index].summary,
@@ -764,14 +871,18 @@ renderer.domElement.addEventListener('pointerup', e => {
 });
 
 addEventListener('resize', () => {
-  camera.aspect = innerWidth/innerHeight;
-  camera.updateProjectionMatrix();                            // the shifted lens keeps the eye framed as the window changes
+  persp.aspect = innerWidth/innerHeight; persp.updateProjectionMatrix();
+  if (cam === ortho) {                                        // the lined-up view keeps the eye framed as the window changes
+    const H = eyeHalfHeight(), aspect = innerWidth/innerHeight;
+    Object.assign(ortho, { left:-H*aspect, right:H*aspect, top:H, bottom:-H }); ortho.updateProjectionMatrix();
+  }
   renderer.setSize(innerWidth, innerHeight); labels.setSize(innerWidth, innerHeight);
 });
 
 // ── Frame loop ─────────────────────────────────────────────────────
 const clock = new THREE.Clock();
 let running = true;
+const TAN_HOME = Math.tan(THREE.MathUtils.degToRad(HOME_FOV/2));
 function frame(now){
   if (!running) return;
   const dt = clock.getDelta();
@@ -779,60 +890,64 @@ function frame(now){
     const k = Math.min(1, (now - tween.t0)/tween.ms), e = ease(k);
     if (tween.step) tween.step(e);
     else {
-      camera.position.lerpVectors(tween.p0, tween.p1, e);
+      persp.position.lerpVectors(tween.p0, tween.p1, e);
       controls.target.lerpVectors(tween.g0, tween.g1, e);
-      camera.fov = tween.f0 + (tween.f1 - tween.f0)*e;
-      eyeMix = tween.m0 + (tween.m1 - tween.m0)*e;
+      persp.fov = tween.f0 + (tween.f1 - tween.f0)*e;
+      lineMix = tween.m0 + (tween.m1 - tween.m0)*e;
     }
-    camera.updateProjectionMatrix();
-    camera.lookAt(controls.target);
+    persp.updateProjectionMatrix();
+    persp.lookAt(controls.target);
     if (k >= 1) { const d = tween.done; tween = null; controls.enabled = true; controls.update(); if (d) d(); }
-  } else {
-    controls.update();
-    if (eyeMixGoal != null) {                                  // the lens eases back to ordinary over about half a second
-      eyeMix = Math.max(eyeMixGoal, eyeMix - dt*2); if (eyeMix === eyeMixGoal) eyeMixGoal = null;
-      camera.updateProjectionMatrix();
-    }
-  }
+  } else controls.update();
   // Markers keep a steady size on screen, near or far, wide field or narrow:
-  // scale by the height of view at the marker's depth along the camera's axis.
-  // On a tall, narrow screen the width sets the scale, so markers keep in proportion to what fits across.
-  const fr = frustum(), tanHalf = Math.min((fr.t - fr.b)/2, (fr.r - fr.l)/2) / Math.tan(THREE.MathUtils.degToRad(HOME_FOV/2));
-  camera.getWorldDirection(_dir);
-  markers.forEach(m => { m.getWorldPosition(_w); const depth = Math.max(.5, _w.sub(camera.position).dot(_dir));
-    const k = THREE.MathUtils.clamp(depth*tanHalf/70, .25, 3.2); m.scale.setScalar(k); });
+  // scale by the height of view at the marker's depth along the camera's
+  // axis (in the orthographic view, by the height of view itself). On a
+  // tall, narrow screen the width sets the scale.
+  const aspect = innerWidth/innerHeight;
+  if (cam === ortho) {
+    const half = Math.min(ortho.top, ortho.right)/ortho.zoom, k = THREE.MathUtils.clamp(half/TAN_HOME/70, .25, 3.2);
+    markers.forEach(m => m.scale.setScalar(k));
+  } else {
+    const t = Math.tan(THREE.MathUtils.degToRad(persp.fov/2)), tanHalf = Math.min(t, t*aspect)/TAN_HOME;
+    persp.getWorldDirection(_dir);
+    markers.forEach(m => { m.getWorldPosition(_w); const depth = Math.max(.5, _w.sub(persp.position).dot(_dir));
+      m.scale.setScalar(THREE.MathUtils.clamp(depth*tanHalf/70, .25, 3.2)); });
+  }
   // Far out, fog would swallow everything: thin it with distance. Keep the near plane in proportion.
-  const camD = camera.position.distanceTo(controls.target);
+  const camD = cam.position.distanceTo(controls.target);
   FOG.density = 0.0022*Math.min(1, 220/camD);
-  const nearWant = Math.max(.1, camD*.002); if (Math.abs(camera.near - nearWant) > nearWant*.2) { camera.near = nearWant; camera.updateProjectionMatrix(); }
-  // Standing at Oerth: Greyspace's own marker and the links into Oerth would
-  // sit on the lens, so they hide. Standing there looking at the core, the
-  // eye has formed and the caption shows.
-  const oerthW = _w.copy(OERTH).applyMatrix4(galaxy.matrixWorld), fromOerth = camera.position.distanceTo(oerthW);
-  const nearOerth = fromOerth < 8;
-  nearOerthParts.forEach(o => { o.visible = !nearOerth; });
-  toOerth.forEach(l => { l.visible = !nearOerth; });
-  const look = controls.target.clone().sub(camera.position).normalize();
-  const aligned = !tween && eyeMix > .999 && fromOerth < .8 && THREE.MathUtils.radToDeg(look.angleTo(PLANE_N)) < 1;
-  if (aligned !== atOerth) { atOerth = aligned; caption.classList.toggle('on', aligned); if (aligned) revealPulse = performance.now(); }
-  document.body.classList.toggle('at-oerth', eyeMix > .5);
-  fillerPts.material.opacity = .85 - .45*eyeMix;              // the catalogue dims behind the eye
+  if (cam === persp) { const nearWant = Math.max(.1, camD*.002); if (Math.abs(persp.near - nearWant) > nearWant*.2) { persp.near = nearWant; persp.updateProjectionMatrix(); } }
+  // Lined up, Oerth sits exactly behind the pupil and its links run into
+  // it, so Greyspace's marker, its stem and the links to Oerth hide; the
+  // strokes show faintly instead. Looking straight along the axis, the eye
+  // has formed and the caption shows.
+  _dir.set(0, 0, -1).applyQuaternion(cam.quaternion);
+  const aligned = !tween && cam === ortho && THREE.MathUtils.radToDeg(_dir.angleTo(AXIS)) < .5;
+  const along = lineMix > .5;
+  nearOerthParts.forEach(o => { o.visible = !along; });
+  spokes.forEach(l => { l.visible = !along && !l.userData.off; });
+  strokes.visible = aligned;
+  if (aligned !== lined) { lined = aligned; caption.classList.toggle('on', aligned); if (aligned) revealPulse = performance.now(); }
+  document.body.classList.toggle('at-oerth', along);
+  fillerPts.material.opacity = .85 - .45*lineMix;             // the catalogue dims behind the eye
   // Hologram life: the core breathes, the iris rings face the viewer.
   const s = 1 + Math.sin(now*.0018)*.08; coreGlow.scale.set(22*s, 22*s, 1);
   coreRing.rotation.z += dt*.2;
-  HEARTS.forEach(h => { if (h.mesh.userData.ring) h.mesh.userData.ring.quaternion.copy(camera.quaternion); });   // parallel to the screen, so they stay round
-  if (starMat) starMat.opacity = (.85 + Math.sin(now*.004)*.03 + (Math.random() < .01 ? -.12 : 0)) * (1 - .35*eyeMix);   // the stars soften behind the eye
+  MARKS.forEach(m => { if (m.mesh.userData.ring) m.mesh.userData.ring.quaternion.copy(cam.quaternion); });   // parallel to the screen, so they stay round
+  if (starMat) starMat.opacity = (.85 + Math.sin(now*.004)*.03 + (Math.random() < .01 ? -.12 : 0)) * (1 - .35*lineMix);   // the stars soften behind the eye
   // The reveal: the eye's lines brighten, then settle.
   const r = revealPulse ? Math.max(0, 1 - (now - revealPulse)/3500) : 0;
-  eyeLines.children.forEach(l => { l.material.opacity = atOerth ? .75 + .25*Math.sin(Math.min(1, r)*Math.PI) : .7; });
+  if (r > 0) eyeLines.forEach(l => { if (!l.userData.solid) l.material.opacity = Math.min(1, (progressOn ? l.userData.base*(.25 + .75*E.EYE_PROGRESS)*.8 : l.userData.base) + .3*Math.sin(r*Math.PI)); });
   coreGlow.material.opacity = .9 + r*.1; if (r > 0) coreGlow.scale.multiplyScalar(1 + r*.6);
-  renderer.render(scene, camera); labels.render(scene, camera);
+  renderer.render(scene, cam); labels.render(scene, cam);
   requestAnimationFrame(frame);
 }
 requestAnimationFrame(frame);
 
-// A hash opens on a viewpoint: holo.html#oerth plays the reveal.
+// A hash opens on a viewpoint: holo.html#oerth plays the reveal, #plane
+// opens the inscription plane.
 if (location.hash === '#oerth') setTimeout(revealFromOerth, 400);
+if (location.hash === '#plane') showPlane(true);
 
 // Messages from the Chart page that frames this one.
 addEventListener('message', e => {
@@ -841,6 +956,7 @@ addEventListener('message', e => {
   if (d.cmd === 'pause') running = false;
   if (d.cmd === 'resume' && !running) { running = true; clock.getDelta(); requestAnimationFrame(frame); }
   if (d.cmd === 'oerth') revealFromOerth();
+  if (d.cmd === 'plane') showPlane(true);
   if (d.cmd === 'free') standAt('free');
   if (d.gtc && beacon.visible) applyGTC(d.gtc.T, !!d.gtc.quick);
 });
