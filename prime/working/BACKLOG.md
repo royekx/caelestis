@@ -2051,8 +2051,11 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 ### principles.html
 
-- **[add]** Follow what the players expect to find
-  When the players go looking for something and the roll succeeds, give them something. "You see nothing" because nothing was prepared is the dull answer. Let the story bend toward what they expect, and keep a route back to the larger shape. Joffrey began as an improvised character; the players wanted something shady there, rolled well, and he became a piece they are invested in.
+- **[add]** Asking for a roll means something is there
+  When the players are interested in something and the DM calls for a roll, there is something to find, whatever the result. The roll sets how much they get and how fast, not whether they get anything. A low roll shows that something is there: two people talking in hushed tones, words out of earshot. A high roll gives more at once: twenty gold changing hands, and a look around to check no one saw. From there, getting more is the players' choice, and it becomes a run of hurdles (sneak closer, talk to them, a Persuasion check), each with its own consequences. Joffrey is the example: an improvised character the players suspected, who became a piece they are invested in.
+  Context still matters. A check for a specific thing can simply fail; a search for a secret door may find no door. A check for whether something feels off always finds that something does.
+  The other half: when nothing is there, don't call for a roll. A roll means there is a chance for something to happen. If a path will reward neither the players' time nor the DM's, don't entertain it.
+  And put needed things in the crew's way. When something matters for the story, set it where they will meet it instead of hoping they look. Lean less on "what do you want to do?": players are not always sure, so offer the nudge that something is here, and that there is something in it for them if they go for it.
   src: Korey, 2026-11-01
 
 The page exists (`prime/principles.html`, Reference). Contracts are built on Campaign § Arc 2; this decide names their categories there.
