@@ -31,7 +31,7 @@ staging once Korey has read and accepted them.
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 13 | 14 | 12 | 0 | 3 |
-| Locations | locations/ (Fonains stays in its own section) | 22 | 25 | 0 | 0 | 1 |
+| Locations | locations/ (Fonains stays in its own section) | 22 | 26 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 2 |
@@ -44,7 +44,7 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 11 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 0 | 1 | 0 | 2 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **127** | **153** | **48** | **2** | **55** |
+| **Total** |  | **127** | **154** | **48** | **2** | **55** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -531,6 +531,10 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
   src: realms/sys04.html (old page)
 
 ### locations/krynn.html
+
+- **[later]** A Zenith on Krynn in the Shadow of the Dragon Queen campaign
+  Korey's other table could see a Zenith build, or a Monolith appear, as a quiet nod. Those players know nothing of Caelestis, so it means nothing to them yet; it seeds the later crossover where several parties face parts of Vecna's working.
+  src: Korey, 2026-11-01
 
 - **[later]** The dragons' politics
   The dragons that left Fonains and most worlds have not reached Krynn, because their own politics hold them (STAGING). What those politics are is not set.
