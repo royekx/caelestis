@@ -1,5 +1,7 @@
 # Draft: building the middle of the campaign
 
+"The church" in this draft means the first Seekers chapter the crew meets: a benign-seeming congregation that shows Vecna's hand and eye openly, with its temple on its own world (Campaign § Arc 2). It never means the Seekers as a whole.
+
 Rungs, fronts and contracts: a framework for the post-graduation middle, from research into campaign design and fitted to current canon. Proposals are marked. Builds on the STAGING rulings "The invasion and the eye are two plans" and "Vecna's place in the campaign" (PR #115).
 
 ## 1. The core idea

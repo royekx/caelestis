@@ -36,15 +36,15 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 19 | 3 | 3 | 0 | 1 |
-| Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
+| Dossiers | dossiers/ | 20 | 16 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 4 | 19 | 0 | 20 |
-| New pages | 12 proposed pages, the hub, notes/ | 3 | 20 | 3 | 2 | 23 |
+| New pages | 12 proposed pages, the hub, notes/ | 3 | 20 | 3 | 2 | 24 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 11 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 0 | 1 | 0 | 2 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **127** | **154** | **48** | **2** | **55** |
+| **Total** |  | **127** | **155** | **48** | **2** | **56** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1134,6 +1134,10 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/vecna-lich.html
 
+- **[later]** Reaching Vecna (Lich) by being taken at a Zenith
+  Korey wants it possible for player characters to be taken by a Monolith at a Zenith, and so arrive at the Radiant Citadel and meet Vecna (Lich), the mortal form archived at Vecna's ascension, now calm and close to redeemed. Conditions: decided by dice when the moment comes; only at a high enough level for the separation to be survivable; never one character alone, the taken go as a group. What he can give: how his own plan to become a god worked, which may hint at what the god is doing now, though he does not know the god's present plan. A switch-up the crew could come back to later. Ties to the Citadel's way out (locations/rykoe.html) and to the crew researching Monoliths.
+  src: Korey, 2026-11-01
+
 - **[later]** What Vecna (Lich) knows, and where he stands
   Vecna (Lich) has his own dossier (Korey, 2026-10-28). What he knows of Vecna's working, whether he would help the crew against it, where he sits in the Citadel and how the forgetting has touched him are not set. They wait until the crew heads for Rykoe.
   src: section 5 (2026-10-28)
@@ -2046,6 +2050,10 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   src: chat-cosmic § Cosmos texture; memory-canon
 
 ### principles.html
+
+- **[add]** Follow what the players expect to find
+  When the players go looking for something and the roll succeeds, give them something. "You see nothing" because nothing was prepared is the dull answer. Let the story bend toward what they expect, and keep a route back to the larger shape. Joffrey began as an improvised character; the players wanted something shady there, rolled well, and he became a piece they are invested in.
+  src: Korey, 2026-11-01
 
 The page exists (`prime/principles.html`, Reference). Contracts are built on Campaign § Arc 2; this decide names their categories there.
 
