@@ -65,3 +65,4 @@ staging is distributed page by page.
 | [tharizdun.md](tharizdun.md) | The prison, the Day of Chaos, how Vecna uses him | Draft |
 | [glyth-watcher.md](glyth-watcher.md) | The Watcher who came back from Glyth | Sketch |
 | [nexus-field-guide.md](nexus-field-guide.md) | Sources, omissions and stat cross-checks for Peoples and Perils of the Drift | Draft |
+| [ship-roles.md](ship-roles.md) | Review of the ship mechanics run so far, and revised ship roles for the tyrant ship and typical ships | Draft |
