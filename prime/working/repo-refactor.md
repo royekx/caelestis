@@ -324,6 +324,7 @@ Old path → new path, added by each pull request that moves a page.
 | `spelljammer-nexus/crystal-spheres.html` | `spelljammer-nexus/galaxy.html`, "The Erevos Galaxy and the Astral Sea"; the old path is never reused | Player side (player) |
 | `data/nexus.js` | retired; the Nexus index (`spelljammer-nexus/index.html`) holds static rows, and the path is never reused | Player side (player) |
 | `spelljammer-nexus/factions.html` | `spelljammer-nexus/peoples.html`, "Peoples of the Drift"; the old path is never reused | Player side (player) |
+| `handouts/ship-sheets.html` | the Ship sheet tab on each vessel record: `navigation-records/the-tyrant-ship.html#ship-sheet` (was `#tyrant-ship`) and `navigation-records/the-flighty-foundling.html#ship-sheet` (was `#flighty-foundling`); the old path is never reused | Ship roles (ship-roles) |
 
 ## Stale branches
 

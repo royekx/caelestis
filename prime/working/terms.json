@@ -815,6 +815,10 @@
     {
       "old": "factions.html",
       "new": "spelljammer-nexus/peoples.html"
+    },
+    {
+      "old": "ship-sheets.html",
+      "new": "the Ship sheet tab on each vessel record (navigation-records/the-tyrant-ship.html#ship-sheet, navigation-records/the-flighty-foundling.html#ship-sheet)"
     }
   ],
   "allow": [

@@ -505,8 +505,9 @@ function checkPage(r, err) {
   });
 
   // Connections: the chips on the page are the record's links, no more, no
-  // fewer, each under the linked record's own name.
-  const card = /<div class="xref-card">\s*<div class="xref-head"><span class="xref-title">Connections<\/span>[\s\S]*?(?=<div class="divider">|<div data-field|\n\s*<\/div>\s*<\/div>\s*<\/body>)/.exec(src);
+  // fewer, each under the linked record's own name. On a tabbed record the
+  // card ends its panel, so the next .rec-panel also ends it.
+  const card = /<div class="xref-card">\s*<div class="xref-head"><span class="xref-title">Connections<\/span>[\s\S]*?(?=<div class="divider">|<div data-field|<div class="rec-panel|\n\s*<\/div>\s*<\/div>\s*<\/body>)/.exec(src);
   const chips = card ? matches(/<a[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g, card[0])
     .map(m => ({ url: resolveFrom(at, m[1]), label: text(m[2]) })) : [];
   const wantLinks = (r.links || []).filter(l => l.url);
