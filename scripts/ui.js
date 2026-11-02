@@ -50,6 +50,59 @@
   initTabs('.account-tab', '.account-panel');
   initTabs('.board-tab', '.board-panel');
 
+  /* ── Record tabs ──
+     A vessel record's Record and Ship sheet panels: a [role=tablist].rec-tabs
+     of .rec-tab buttons, each naming its .rec-panel by aria-controls. Arrow
+     keys, Home and End move between tabs. A hash naming a panel, or any
+     element inside one (the-tyrant-ship.html#ship-sheet), opens that panel. */
+  var recLists = document.querySelectorAll('.rec-tabs[role="tablist"]');
+  if (recLists.length) {
+    document.documentElement.classList.add('js-rec-tabs');
+    recLists.forEach(function (list) {
+      var tabs = Array.prototype.slice.call(list.querySelectorAll('.rec-tab'));
+      function panelOf(t) { return document.getElementById(t.getAttribute('aria-controls')); }
+
+      function select(tab, focus, push) {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+          t.tabIndex = on ? 0 : -1;
+          var p = panelOf(t);
+          if (p) p.classList.toggle('is-active', on);
+        });
+        if (focus) tab.focus();
+        if (push && history.replaceState) history.replaceState(null, '', '#' + panelOf(tab).id);
+      }
+
+      tabs.forEach(function (t, i) {
+        t.addEventListener('click', function () { select(t, false, true); });
+        t.addEventListener('keydown', function (e) {
+          var n = null;
+          if (e.key === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
+          else if (e.key === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+          else if (e.key === 'Home') n = tabs[0];
+          else if (e.key === 'End') n = tabs[tabs.length - 1];
+          if (n) { e.preventDefault(); select(n, true, true); }
+        });
+      });
+
+      function fromHash(scroll) {
+        var id = decodeURIComponent(location.hash.slice(1));
+        var target = id && document.getElementById(id);
+        var panel = target && target.closest('.rec-panel');
+        var tab = panel && tabs.filter(function (t) { return panelOf(t) === panel; })[0];
+        if (!tab) { select(tabs[0], false, false); return; }
+        select(tab, false, false);
+        // A hash naming the panel itself lands on the tab strip, so the
+        // reader sees which tab is open; a deeper anchor lands on itself.
+        if (scroll) (target === panel ? list : target).scrollIntoView();
+      }
+      fromHash(false);
+      window.addEventListener('load', function () { if (location.hash) fromHash(true); });
+      window.addEventListener('hashchange', function () { fromHash(true); });
+    });
+  }
+
   /* ── Expandable rows ──
      A button with aria-controls toggles the element it names. Used by
      the voyage index, the quest board, and the location register. */

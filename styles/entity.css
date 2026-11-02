@@ -333,3 +333,129 @@ html { overflow-x: clip; }
   margin-top: 0.1rem;
 }
 
+
+/* ════════════════════════════════════════════════════════════════
+   RECORD TABS
+   The player version of the DM wiki's underlined tab strip, in the
+   player palette. Used by vessel records that carry a ship sheet:
+   a "Record" panel and a "Ship sheet" panel, driven by scripts/ui.js.
+   Without JS the strip stays hidden and both panels render stacked,
+   which is also what Pagefind reads.
+   ════════════════════════════════════════════════════════════════ */
+.rec-tabs { display: none; }
+.js-rec-tabs .rec-tabs {
+  display: flex; flex-wrap: wrap; gap: 0.15rem;
+  margin: 0 0 1.4rem;
+  border-bottom: 1px solid var(--gold-rule);
+}
+.rec-tab {
+  appearance: none; cursor: pointer; flex: 0 0 auto;
+  font-family: 'Cinzel', serif; font-size: 0.76rem; font-weight: 600;
+  letter-spacing: 0.085em; text-transform: uppercase;
+  color: var(--text-muted); background: transparent;
+  border: none; border-bottom: 2px solid transparent; border-radius: 0;
+  padding: 0.55rem 0.7rem; margin-bottom: -1px; white-space: nowrap;
+  transition: color .15s ease, border-color .15s ease, background .15s ease;
+}
+.rec-tab:first-child { padding-left: 0; }
+.rec-tab:hover { color: var(--gold-light); background: var(--gold-faint); }
+.rec-tab[aria-selected="true"] { color: var(--gold); border-bottom-color: var(--gold); }
+.rec-tab:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
+.js-rec-tabs .rec-panel:not(.is-active) { display: none; }
+.rec-panel:focus-visible { outline: 1px dotted var(--ice-dim); outline-offset: 4px; }
+@media (max-width: 560px) {
+  .js-rec-tabs .rec-tabs { gap: 0; }
+  .rec-tab { flex: 1 1 auto; text-align: center; padding: 0.5rem; font-size: 0.7rem; letter-spacing: 0.08em; }
+  .rec-tab:first-child { padding-left: 0.5rem; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   SHIP SHEET
+   A ship's numbers, stations, zones and parts, on its vessel record's
+   "Ship sheet" tab. Scoped to .ship-sheet: .stat-key also names the
+   identity card's rows.
+   ════════════════════════════════════════════════════════════════ */
+.ship-sheet .callout { margin: 0 0 2.2rem; }
+.ship-sheet .callout a, .ship-sheet .entry a {
+  color: var(--ice); text-decoration: underline;
+  text-decoration-color: var(--ice-dim); text-underline-offset: 0.15em;
+}
+.ship-sheet .callout a:hover, .ship-sheet .entry a:hover { color: var(--gold-light); }
+
+.ship-sheet .ship-head {
+  display: flex; align-items: baseline; gap: 0.8rem; flex-wrap: wrap;
+  margin-bottom: 0.4rem; padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--gold-rule);
+}
+.ship-sheet .ship-name {
+  font-family: 'Cinzel', serif; font-size: 1.35rem;
+  font-weight: 700; letter-spacing: 0.04em; color: var(--text);
+}
+.ship-sheet .ship-kind { font-size: 0.942rem; font-style: italic; color: var(--text-dim); }
+.ship-sheet .ship-lede { font-size: 0.99rem; line-height: 1.55; color: var(--text-dim); margin: 0.3rem 0 1rem; }
+
+.ship-sheet .stat-strip {
+  display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.5rem; margin-bottom: 1.2rem;
+}
+.ship-sheet .stat-cell {
+  background: var(--gold-faint);
+  border: 1px solid var(--gold-rule);
+  border-top: 3px solid var(--gold-dim);
+  padding: 0.5rem 0.6rem; text-align: center; min-width: 0;
+}
+.ship-sheet .stat-key {
+  font-family: 'Cinzel', serif; font-size: 0.7rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold); display: block; white-space: normal;
+}
+.ship-sheet .stat-num {
+  font-family: 'Cinzel', serif; font-size: 1.35rem; font-weight: 700;
+  color: var(--text); line-height: 1.2; display: block;
+}
+.ship-sheet .sub-label {
+  font-family: 'Cinzel', serif; font-size: 0.72rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold); margin: 1.3rem 0 0.5rem;
+}
+
+.ship-sheet .table-scroll { overflow-x: auto; max-width: 100%; margin-bottom: 0.9rem; }
+.ship-sheet .sheet-table { width: 100%; border-collapse: collapse; font-size: 0.96rem; line-height: 1.45; }
+.ship-sheet .sheet-table th {
+  font-family: 'Cinzel', serif; font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold); text-align: left;
+  padding: 0.45rem 0.55rem; border-bottom: 1px solid var(--gold-rule);
+}
+.ship-sheet .sheet-table td {
+  padding: 0.5rem 0.55rem; vertical-align: top; color: var(--text);
+  border-bottom: 1px solid var(--rule);
+}
+.ship-sheet .sheet-table td.name { color: var(--gold-light); white-space: nowrap; }
+.ship-sheet .sheet-table td.num { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.ship-sheet .sheet-table th.mark, .ship-sheet .sheet-table td.mark { text-align: center; width: 5.5rem; }
+.ship-sheet .box {
+  display: inline-block; width: 1rem; height: 1rem;
+  border: 1px solid var(--gold-dim); vertical-align: middle;
+}
+
+@media (max-width: 700px) {
+  .ship-sheet .stat-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .ship-sheet .stat-num { font-size: 1.15rem; }
+  .ship-sheet .sheet-table, .ship-sheet .sheet-table tbody, .ship-sheet .sheet-table tr, .ship-sheet .sheet-table td { display: block; width: auto; }
+  .ship-sheet .sheet-table thead { display: none; }
+  .ship-sheet .sheet-table tr { padding: 0.55rem 0; border-bottom: 1px solid var(--rule); }
+  .ship-sheet .sheet-table td { border: none; padding: 0.15rem 0; white-space: normal; }
+  .ship-sheet .sheet-table td.name { font-family: 'Cinzel', serif; font-size: 0.95rem; padding-bottom: 0.25rem; }
+  .ship-sheet .sheet-table td:not(.name):not(.mark)::before {
+    content: attr(data-label) ": "; color: var(--gold); font-size: 0.85rem;
+  }
+  .ship-sheet .sheet-table td.mark { display: inline-flex; align-items: center; gap: 0.3rem; width: auto; margin-right: 0.55rem; text-align: left; }
+  .ship-sheet .sheet-table td.mark::before { content: attr(data-label); color: var(--text-dim); font-size: 0.85rem; }
+}
+@media print {
+  .ship-sheet .box { border-color: #000; }
+  .rec-tabs { display: none !important; }
+}
