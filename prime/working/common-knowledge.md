@@ -54,6 +54,11 @@ bullet under that voyage and leaves this list.
 
 Sorted by name, a rank title skipped (PAGE-GUIDE § 3, Registers).
 
+### Barret
+Gender: Male (already set).
+
+No common knowledge beyond the record: a cadet on Veena's squad, met in V002.
+
 ### Beshaba
 Gender: Female (already set).
 
@@ -113,8 +118,7 @@ Gender: Male (record has none).
 | Posted to Caelestis after the *Crow*, and risen on merit since; cadets know him and instructors trust him. | dossier/joffrey, fleet | High |
 | The *Crow* had gone out to learn why Cairn Station stopped answering. | dossier/joffrey (Background), fleet | Hold: Cairn is a live thread. |
 
-The record's `Affiliation(s)` reads "Caelestis Academy"; on this list it
-would read "Caelestis Corps". Korey to rule.
+The record's `Affiliation(s)` stays "Caelestis Academy", the place he is posted (Korey, 2026-11-02); the first row carries the Corps.
 
 ### Kip and Pik
 Gender: not set in canon.
@@ -189,17 +193,12 @@ Gender: Male (already set).
 | Works the docks by the Sea Dock and knows every berth and strut there. | dossier/rindle-gearloft | High |
 | Guarded about the lower dock storage. | dossier/rindle-gearloft (Appearance) | Hold: points at the Latchling. |
 
-The DM pages place him two ways: "works a dock near the Sea Dock" (his
-dossier) and "of the Sea Dock" (Caelestis, Fleet). Korey to settle before
-this entry is written.
-
 ### The Runekeeper
 No common knowledge. The order and its homeworld are hidden, and Tumak heard
 the voice alone.
 
 ### Saerthe Abizjn
-Gender: Male (record has none; "he" in every account and on the DM page).
-Korey's note of 2026-11-02 says "her"; confirm before the field is filled.
+Gender: Male (record has none; "he" in every account and on the DM page; confirmed by Korey 2026-11-02).
 
 | Fact | Source | Confidence |
 |---|---|---|
@@ -214,8 +213,7 @@ Korey's note of 2026-11-02 says "her"; confirm before the field is filled.
 | His miniature spelljamming ship is missing from the Nexus. | dossier/saerthe-abizjn, fleet | High (the crew saw him lose his composure over it; already a bullet) |
 
 ### Sor'Kur
-Gender: open. The record's overview says "she"; the Fleet page says "his";
-the DM dossier avoids a pronoun.
+Gender: Female (record has none; ruled by Korey 2026-11-02).
 
 | Fact | Source | Confidence |
 |---|---|---|
@@ -272,11 +270,6 @@ Gender: Male (already set).
 - Option A, B or C, above.
 - Each entity: approve, cut or correct its rows. Every *Hold* row stays out
   unless Korey keeps it.
-- Saerthe's pronoun: "he" in the accounts, the record and the DM page; "her"
-  in Korey's note.
-- Sor'Kur's pronoun: "she" in the record, "his" on the Fleet page.
-- Joffrey's affiliation in the record: Caelestis Academy, or Caelestis Corps.
-- Rindle's post: the Sea Dock itself, or a dock beside it.
 - Whether the same field reaches `factions`, `locations` and `items` later
   (the Academy, the Weeping Goddess, the Sky Dock all have staff-profile
   facts of their own).
