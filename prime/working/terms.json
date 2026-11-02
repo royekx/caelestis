@@ -24,10 +24,7 @@
     "inventory",
     "protocols",
     "spelljammer-nexus",
-    "search",
-    "aspects",
-    "wayfinder-path",
-    "stellar-chart"
+    "search"
   ],
   "retired": [
     {
@@ -844,6 +841,21 @@
       "old": "factions/",
       "new": "registry/factions/ (every page keeps its name); the root folder is never reused",
       "link": true
+    },
+    {
+      "old": "aspects/",
+      "new": "the Aspects tab on Bartholomew's crew page, registry/crew-manifest/bartholomew-grayson.html#aspects; the folder is never reused",
+      "link": true
+    },
+    {
+      "old": "stellar-chart/",
+      "new": "the Stellar Chart tab on Casey's crew page, registry/crew-manifest/casey-geim.html#stellar-chart; the folder is never reused",
+      "link": true
+    },
+    {
+      "old": "wayfinder-path/",
+      "new": "the Wayfinder's Path tab on Tumak's crew page, registry/crew-manifest/tumak-swan.html#wayfinder-path; the folder is never reused",
+      "link": true
     }
   ],
   "allow": [
@@ -857,7 +869,7 @@
     "quests/:The Tyrant Ship and the H(’|&rsquo;)Catha",
     "voyages/voyage-006.html:Watcher cadet",
     "voyages/voyage-003.html:running through the network",
-    "stellar-chart/index.html:Keeper(&rsquo;|'|’)s (Chart|Password|password)"
+    "registry/crew-manifest/casey-geim.html:Keeper(&rsquo;|'|’)s (Chart|Password|password)"
   ],
   "scan": [
     "prime",
@@ -872,9 +884,6 @@
     "inventory",
     "protocols",
     "spelljammer-nexus",
-    "search",
-    "aspects",
-    "wayfinder-path",
-    "stellar-chart"
+    "search"
   ]
 }

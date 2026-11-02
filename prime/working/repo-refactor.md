@@ -335,6 +335,9 @@ Old path → new path, added by each pull request that moves a page.
 | `crew-manifest/` (index and the six crew pages) | `registry/crew-manifest/`, every page keeping its name; record urls derive from `tools/data.js`; the root folder `crew-manifest/` is never reused | Player side condensed (repo-tidy) |
 | `dossiers/` (index and 26 dossiers) | `registry/dossiers/`, every page keeping its name; the root folder `dossiers/` is never reused | Player side condensed (repo-tidy) |
 | `factions/` (index and `caelestis-academy.html`) | `registry/factions/`, every page keeping its name; the root folder `factions/` is never reused | Player side condensed (repo-tidy) |
+| `aspects/index.html` | `registry/crew-manifest/bartholomew-grayson.html#aspects`, the Aspects tab; the folder `aspects/` is never reused | Player side condensed (repo-tidy) |
+| `stellar-chart/index.html` | `registry/crew-manifest/casey-geim.html#stellar-chart`, the Stellar Chart tab (Keeper's Chart and its password kept); the folder `stellar-chart/` is never reused | Player side condensed (repo-tidy) |
+| `wayfinder-path/index.html` | `registry/crew-manifest/tumak-swan.html#wayfinder-path`, the Wayfinder's Path tab; the folder `wayfinder-path/` is never reused | Player side condensed (repo-tidy) |
 
 ## Stale branches
 

@@ -21,7 +21,7 @@ Do not write to the repo before the first or to the record before the second.
 
 | Side | Folders |
 |---|---|
-| Player (root) | `index.html` (the gate), `hub.html` (the terminal, the player home), `voyages/` (voyage pages; `bearings/`, the current bearing, per-voyage bearings and the timeline; `logs/`, the Crew Logs), `registry/` (the people sections, each with its own index, nav entry and section filter: `crew-manifest/`, `dossiers/`, `factions/`), `navigation-records/`, `vessels/`, `quests/`, `inventory/` (`entries/`, `items/`), `protocols/` (Fleet Protocols: manuals for how things are done), `spelljammer-nexus/`, `search/`; companion pages `aspects/`, `wayfinder-path/`, `stellar-chart/` |
+| Player (root) | `index.html` (the gate), `hub.html` (the terminal, the player home), `voyages/` (voyage pages; `bearings/`, the current bearing, per-voyage bearings and the timeline; `logs/`, the Crew Logs), `registry/` (the people sections, each with its own index, nav entry and section filter: `crew-manifest/`, `dossiers/`, `factions/`), `navigation-records/`, `vessels/`, `quests/`, `inventory/` (`entries/`, `items/`), `protocols/` (Fleet Protocols: manuals for how things are done), `spelljammer-nexus/`, `search/`. The crew companions are tabs on their crew pages (`#aspects`, `#stellar-chart`, `#wayfinder-path`) |
 | FIA | `restricted/`: the Fleet Intelligence Archive, gated, its own chrome and index |
 | DM | `prime/`: the DM wiki, gated |
 | Record | `data/` (player-safe), `prime/data/` (DM layer) |
@@ -95,9 +95,10 @@ url links parent giver children within items progress`, plus `data/index.json`,
 - The schema tests the key, not the sentence. A DM fact typed into a player
   field passes every check; the two session-run approvals catch it.
 - Nothing from `prime/` reaches `data/` or a player page.
-  The one exception: a companion page (`aspects/`, `wayfinder-path/`,
-  `stellar-chart/`) keeps its password-protected DM mode on the player page,
-  by mutual trust with the players. Leave those modes where they are.
+  The one exception: a companion tab on a crew page (Aspects on
+  Bartholomew's, the Stellar Chart on Casey's, the Wayfinder's Path on
+  Tumak's) keeps its password-protected DM mode on the player page, by
+  mutual trust with the players. Leave those modes where they are.
 - The Tracker (`prime/tracker/`) and the Voyages board read both layers. They
   are views; nothing is entered in them.
 - `prime/` and the DM and FIA search indexes are gated in the browser and
@@ -172,7 +173,8 @@ state what is. Rules: `prime/working/README.md`.
   `/restricted/pagefind/`), runs `guard`, prunes process files, publishes. The
   index is never committed.
 - The player glob in `deploy.yml` is the security boundary: it names only
-  player folders. The companion pages and `search/` stay out of it. A new player top-level folder goes into the glob and into the
+  player folders. `search/` stays out of it, and the companion tabs carry
+  `data-pagefind-ignore`. A new player top-level folder goes into the glob and into the
   S.E.A.R.C.H. scope selector (`search/index.html`), or it is unsearchable.
 - Pagefind indexes static HTML only. To debug, read the Action's `--verbose`
   log. To test locally, run the Action's `npx -y pagefind --site . --glob "{…}"

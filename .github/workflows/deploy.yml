@@ -39,9 +39,10 @@ jobs:
 
       # -- Player index -> /pagefind/ --
       # Indexes only the player-facing directories via an explicit glob.
-      # prime/, restricted/, the companion pages (aspects/, wayfinder-path/,
-      # stellar-chart/), search/, scripts/, tools/, data/, styles/ and *-template.html
-      # are simply never matched.
+      # prime/, restricted/, search/, scripts/, tools/, data/, styles/ and
+      # *-template.html are simply never matched. The companion tabs on the
+      # crew pages (Aspects, Stellar Chart, Wayfinder's Path) carry
+      # data-pagefind-ignore, so their text stays out of the index.
       - name: Build player index
         run: |
           npx -y pagefind \

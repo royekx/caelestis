@@ -630,7 +630,8 @@ A session run adds the new voyage here on every record it touches.
 Itself, Within, a quest's briefing, objectives, rewards and notable items)
 and Voyage log (`#voyage-log`: the latest voyage block and Previous Voyages).
 A vessel with a ship sheet adds Ship sheet (`#ship-sheet`, a
-`.rec-panel.ship-sheet.is-wide`, which hides the infobox while open). A page
+`.rec-panel.ship-sheet.is-wide`, which hides the infobox while open); a crew
+page with a companion adds its companion tab, also `.is-wide`. A page
 with no voyage log yet has one panel and no strip. Panels stay static HTML;
 without JS they stack, which is also what Pagefind reads.
 
@@ -651,11 +652,24 @@ without JS they stack, which is also what Pagefind reads.
   `scripts/portraits-player.js` and its `<img>` baked into the page's portrait
   frame and register row. A new face on a DM page gets a line in
   `prime/scripts/portraits.js` and a frame with `data-key`.
-- **Companion pages** (`wayfinder-path/`, `stellar-chart/`, `aspects/`) keep
-  their own skin and carry a return link to their crew page. Crew pages link
-  out through a `.companion-card`. They sit outside the player search index
-  and carry no section filter.
-- **Companion DM modes stay.** A companion page's password-protected DM mode
+- **Companion tabs.** A cadet's companion is a wide record tab on the crew
+  page, after Voyage log: Aspects (`#aspects`, Bartholomew), Stellar Chart
+  (`#stellar-chart`, Casey), Wayfinder's Path (`#wayfinder-path`, Tumak).
+  The `.companion-card` in the Record tab introduces it and links to the tab.
+  Aspects and the Wayfinder's Path keep their own skin inside a declarative
+  shadow root (`.companion-host > template[shadowrootmode]`), so their styles
+  and the site's stay apart and their scripts query the shadow root; the
+  Stellar Chart is in the player palette and sits in the page. The panel
+  carries `data-pagefind-ignore`: companion text stays out of the search
+  index.
+- **The classified veil.** Each companion tab opens behind a `.classified`
+  veil: "Classified · Personnel file: name · Access restricted to the named
+  cadet" and one button, "I am first name · Open file". It is an in-world
+  courtesy, not a lock; there is no password. `scripts/ui.js` remembers the
+  choice per tab in sessionStorage (`caelestis_file_<tab>`). Without JS the
+  veil stays hidden and the companion shows; with storage blocked the button
+  still lifts the veil, for that page view.
+- **Companion DM modes stay.** A companion's password-protected DM mode
   (the Stellar Chart's Keeper's Chart, its reveal table and password) stays on
   the player page. Players do not read the source; it is mutual trust. Do not
   move these modes to `prime/` or flag them; `terms.json` allows their terms.

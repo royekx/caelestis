@@ -104,6 +104,26 @@
     });
   }
 
+  /* ── Classified veil ──
+     A companion tab on a crew page opens behind a .classified veil
+     naming its cadet. It is a courtesy, not a lock: one button lifts it,
+     and sessionStorage remembers the choice per tab for the session. */
+  document.querySelectorAll('.classified[data-veil]').forEach(function (v) {
+    var panel = v.closest('.companion-panel');
+    var key = 'caelestis_file_' + v.dataset.veil;
+    var open = false;
+    try { open = sessionStorage.getItem(key) === 'open'; } catch (e) { /* storage blocked */ }
+    if (open || !panel) return;
+    v.hidden = false;
+    panel.classList.add('is-veiled');
+    v.querySelector('.classified-open').addEventListener('click', function () {
+      try { sessionStorage.setItem(key, 'open'); } catch (e) { /* storage blocked */ }
+      v.hidden = true;
+      panel.classList.remove('is-veiled');
+      panel.focus({ preventScroll: true });
+    });
+  });
+
   /* ── Expandable rows ──
      A button with aria-controls toggles the element it names. Used by
      the voyage index, the quest board, and the location register. */
