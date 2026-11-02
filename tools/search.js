@@ -1,5 +1,12 @@
 /* ═══════════════════════════════════════════════════════════
    search.js — per-section S.E.A.R.C.H. box
+
+   KEPT FOR REFERENCE. No page loads it, which is why it lives in
+   tools/ and is pruned from the deploy. To use it, move it back to
+   scripts/ (pages cannot reach tools/ once deployed), check the
+   section map below against the S.E.A.R.C.H. selector in
+   search/index.html, and include it as shown.
+
    Injects a compact, pre-scoped search box into a section's
    index page. Auto-detects which section it's in from the URL,
    filters the player Pagefind index to that section, and shows
@@ -7,7 +14,7 @@
    S.E.A.R.C.H. terminal, carrying the query + scope.
 
    Include on a section index page with:
-     <script src="../tools/search.js" defer></script>
+     <script src="../scripts/search.js" defer></script>
    Optionally place an explicit mount point where the box should
    appear:  <div id="section-search-mount"></div>
    If no mount point exists, the box injects after the page header.

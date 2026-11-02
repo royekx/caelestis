@@ -349,6 +349,7 @@ Old path → new path, added by each pull request that moves a page.
 | `aspects/index.html` | `registry/crew-manifest/bartholomew-grayson.html#aspects`, the Aspects tab; the folder `aspects/` is never reused | Player side condensed (repo-tidy) |
 | `stellar-chart/index.html` | `registry/crew-manifest/casey-geim.html#stellar-chart`, the Stellar Chart tab (Keeper's Chart and its password kept); the folder `stellar-chart/` is never reused | Player side condensed (repo-tidy) |
 | `wayfinder-path/index.html` | `registry/crew-manifest/tumak-swan.html#wayfinder-path`, the Wayfinder's Path tab; the folder `wayfinder-path/` is never reused | Player side condensed (repo-tidy) |
+| `scripts/data.js`, `scripts/terms.js`, `scripts/visual.js`, `scripts/survey.js`, `scripts/eye-fit.js`, `scripts/search.js` | `tools/data.js`, `tools/terms.js`, `tools/visual.js`, `tools/survey.js`, `tools/eye-fit.js`, `tools/search.js` (kept for reference; no page loads it); `tools/` is pruned from deploy, and terms.js reads CLAUDE.md, `docs/` and the workflows for the old paths | Player side condensed (repo-tidy) |
 
 ## Stale branches
 

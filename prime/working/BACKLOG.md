@@ -1970,7 +1970,7 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 ### NEW: The Becoming (player handout)
 
-**Purpose.** The tale the twins' grandmother told them as children, given to Tumak's player as an in-world handout. It carries the Lunarfoot belief about the runes, which is wrong about the mechanism. Player side: `handouts/the-becoming.html` (from the chat output the-becoming.html), with the DM note kept in prime.
+**Purpose.** The tale the twins' grandmother told them as children, given to Tumak's player as an in-world handout. It carries the Lunarfoot belief about the runes, which is wrong about the mechanism. Player side, by default (for Korey to confirm): a section on Tumak's crew page, `registry/crew-manifest/tumak-swan.html`, inside his passphrase-veiled Wayfinder's Path tab (`#wayfinder-path`), or its own veiled tab beside it; `handouts/` is retired and the Fleet Protocols (`protocols/`) hold manuals, not personal handouts. Source: the chat output the-becoming.html. The DM note stays in prime. Not built yet.
 
 **Voice.** In-world (the tale itself); one DM note in prime.
 

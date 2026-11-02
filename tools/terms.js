@@ -23,6 +23,8 @@
  *            root pages by their .html path (hub.html, index.html)
  *   finished folders (or single pages, by their .html path) whose retired-term and moved-path hits fail the check
  *   allow    "path:regex" pairs for legitimate uses (a quoted archive line, say)
+ *   docs     process docs (CLAUDE.md, docs/, .github/workflows/) read only for moved
+ *            entries marked "docs": true; a hit there fails
  *
  * Scans the entries in terms.json 'scan' (the DM wiki prime/, the FIA's restricted/, the
  * player folders and the player root pages): every .html file and prime/timeline/timeline.json,
@@ -95,6 +97,24 @@ for (const f of files) {
     if (VOICE) { const tx = textOnly(line); for (const t of VOICES) for (const m of (t.raw ? line : tx).matchAll(t.re)) at('voice', m[0].trim(), t.note); }
   });
 }
+
+// The process docs (terms.json 'docs': CLAUDE.md, docs/, the workflows) are read for
+// moved entries marked "docs": true only, such as a build script that moved to tools/.
+// Retired terms and voice are not checked there: the docs name them on purpose. A hit
+// in a doc fails the check.
+const DOCMOVED = MOVED.filter(m => m.docs);
+const docFiles = (conf.docs || []).reduce((acc, d) => {
+  const p = path.join(ROOT, d);
+  if (!fs.existsSync(p)) return acc;
+  if (!fs.statSync(p).isDirectory()) return acc.concat(d);
+  return acc.concat(fs.readdirSync(p).filter(n => /\.(md|ya?ml)$/.test(n)).map(n => d.replace(/\/$/, '') + '/' + n));
+}, []).filter(f => !only.length || only.some(o => path.join(ROOT, f).startsWith(o)));
+for (const f of docFiles) {
+  fs.readFileSync(path.join(ROOT, f), 'utf8').split('\n').forEach((line, i) => {
+    for (const t of DOCMOVED) for (const m of line.matchAll(t.re)) hits.push({ f, n: i + 1, kind: 'moved', term: m[0], note: t.new, finished: true });
+  });
+}
+files = files.concat(docFiles);
 
 const hard = hits.filter(h => h.finished && h.kind !== 'voice');
 if (LIST) {
