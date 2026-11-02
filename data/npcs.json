@@ -48,7 +48,7 @@
       "Affiliation(s)": "Caelestis Academy",
       "Party Relationship": "Instructor overseeing the cadets",
       "Role (as known)": "Boatswain and instructor at Caelestis",
-      "Current State": "Aboard the Flighty Foundling alongside the tyrant ship, relieving Pffred and Krik'Lit and sending a Watcher cadet to join the crew.",
+      "Current State": "Aboard the Flighty Foundling alongside the tyrant ship, relieving Pffred and Krik'Lit.",
       "Overview (Player)": "Boatswain Tarto is an instructor at Caelestis who oversees the cadets' testing and orientation. Once counted among the academy's great spelljammers, she reads the shape of a forming crew keenly.",
       "Category": "Command & Staff",
       "Status": "Active"
@@ -76,7 +76,7 @@
         "number": 3,
         "bullets": [
           "Moved through the wreckage of the simulation chamber ushering the injured out, and received the recovered rod from Gregory",
-          "Conferred with Saerthe over the rod and its marking, Vocath",
+          "Conferred with Saerthe in low voices over the rod",
           "Met the cadets at the bridge and walked them in to Mirt",
           "Woke the cadets at four in the morning banging metal, and briefed them over breakfast on the H’Catha meteor recovery aboard a tyrant ship"
         ]
@@ -313,7 +313,7 @@
       "Affiliation(s)": "Caelestis Academy (Spelljammer Nexus)",
       "Party Relationship": "Instructor at the Nexus",
       "Role (as known)": "Helm instructor at the Spelljammer Nexus",
-      "Current State": "Alongside the tyrant ship on the Flighty Foundling. One instructor, Saerthe or Tarto, will join the crew's mission; the choice is theirs.",
+      "Current State": "Alongside the tyrant ship on the Flighty Foundling, sending a Watcher cadet to join the crew. One instructor, Saerthe or Tarto, will join the crew's mission; the choice is theirs.",
       "Overview (Player)": "Saerthe Abizjn is a helm instructor at Caelestis's Spelljammer Nexus who runs the cadets' first true helm exercise over the Astral Sea. He reads each cadet's approach sharply, naming their difficulties as they arise.",
       "Category": "Command & Staff",
       "Status": "Active"
@@ -340,7 +340,7 @@
         "bullets": [
           "Helped usher the injured from the wrecked simulation chamber alongside Tarto",
           "Took the recovered rod, drew it back before Boogie could examine it, and said he simply did not yet know what it was",
-          "Conferred with Tarto over a marking on the rod: Vocath",
+          "Conferred with Tarto in low voices over the rod",
           "At the bridge, produced an illusion of the rod for Mirt and named the marking Vocath"
         ]
       },
@@ -505,7 +505,9 @@
       1,
       3
     ],
-    "mentioned": [],
+    "mentioned": [
+      2
+    ],
     "linked": [
       "ITM-4kD8vRt2"
     ],

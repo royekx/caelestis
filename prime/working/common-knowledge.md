@@ -220,7 +220,7 @@ the DM dossier avoids a pronoun.
 | Fact | Source | Confidence |
 |---|---|---|
 | Runs Academy administration: paperwork, vouchers and access stars, and the raising of a star when a cadet's work requires it. | dossier/sor-kur; spelljammer-nexus/spelljammer-academy.html | High |
-| Keeps the station's access record: who was issued access to what, and when. | dossier/sor-kur (Abilities) | Medium: true of any administration desk, but it is also the thread to Joffrey's route. |
+| Keeps the station's access record: who was issued access to what, and when. | dossier/sor-kur (Abilities) | Hold: it points at the live Joffrey thread. |
 
 ### Veena
 Gender: Female (already set).

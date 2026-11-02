@@ -592,7 +592,7 @@
           "A stone-carved beholder vessel drifting in orbit above Toril, believed abandoned",
           "The crew was to install a spelljamming helm on its command deck and use its appearance to move through H’Cathan space unchallenged",
           "Its interior is stone-floored, dim, and smells old",
-          "Clockwork horrors were found feeding on the broken automaton Ostekk-6 in the cargo hold"
+          "Clockwork horrors were found feeding on a broken autognome in the cargo hold"
         ]
       },
       {
@@ -806,7 +806,7 @@
       {
         "number": 6,
         "bullets": [
-          "The only deadline on the mission, where others would be after the adamantine"
+          "The only clock anyone could name on the mission, where others would be after the adamantine"
         ]
       }
     ],
