@@ -718,12 +718,40 @@ without JS they stack, which is also what Pagefind reads.
   and Who you met, and the link to the full account), Next time on the
   right (Before you sail, then the Quest Board). Each voyage has its own
   bearing page (`voyage-NNN.html`) with its Last time column and its own
-  Before you sailed list, ticked as later voyages settle it; it carries no
-  Quest Board and is otherwise left as written. On the Current Bearing a
-  voyage in the strip swaps the Last time column in place
-  (`scripts/bearing.js`). Before you sail holds only what the crew knows
-  it faces: never what a character may be doing out of sight. The command
-  bar stays off these pages (`data-no-command-bar` on `<body>`).
+  Before you sailed list; it carries no Quest Board. On the Current
+  Bearing a voyage in the strip swaps the Last time column in place
+  (`scripts/bearing.js`). The command bar stays off these pages
+  (`data-no-command-bar` on `<body>`).
+- **Before you sail.** The crew plays once a month or less, so the list is
+  a memory aid: curated, a few items to a group, with the detail left to
+  the voyage page. Three groups, each shown only when it has items:
+  - *To do*: what the crew set out to do. Settled with how it ended.
+  - *To decide*: open choices. Settled with what was chosen.
+  - *Note to crew* (a provisional heading, set once in the page source):
+    the DM's by-the-way nudges, a few at most, chosen fresh each voyage:
+    a hazard still aboard, what they hold and what it does, a promise, who
+    is with them, what they did that may come back. Notes are never ticked
+    or carried forward; a note the crew lets pass drops off the next list
+    unless the DM repeats it. An old voyage page shows its notes as they
+    were.
+
+  Personal threads stay on the Quest Board, in every group. Teasers and
+  predictions stay off ("something is waiting below", "Ostekk may want his engine back").
+  Every item is written as the crew knows it, in plain in-world voice; an
+  occasional table item (a level-up, a downtime pick) is phrased as said at
+  the table. Each item opens with a short bold label and carries a
+  `data-item` key that names it across pages.
+
+  To do and To decide stay on their own voyage page and are settled there
+  once, by the voyages that follow: a ticked item (`is-done`) gets its
+  outcome and the voyage that settled it ("Chose Saerthe · Voyage 007"); an
+  unsettled item is marked carried forward (`is-carried`). The Current
+  Bearing's list is the latest voyage's To do and To decide plus every item
+  carried forward, each once, and the latest voyage's notes; an item that a
+  newer one covers shares its key (`data-item="fly-to-hcatha meteor"`).
+  Each group carries `data-group` (`todo`, `decide`, `note`). `check`
+  holds the pages to this. The markup is in `styles/bearing.css` § Before
+  you sail.
 - **Navigation.** The player home is the Current Bearing
   (`voyages/bearings/index.html`): the gate (`index.html`) enters there and
   the sidebar logo points there. The sidebar in `scripts/nav.js` is the one

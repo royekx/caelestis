@@ -860,10 +860,21 @@ function checkBearings(fresh, latest, err) {
   const sailItems = (rel, src) => {
     const r = region(src, 'before-you-sail');
     if (r === null) { err(`${rel}: no Before you sail list (data-field="before-you-sail")`); return []; }
+    // Groups: todo and decide are settled or carried; note is the DM's
+    // nudges for one voyage, never ticked and never carried.
+    const groups = elements(r, 'div', hasClass('sail-group'));
+    groups.forEach(g => { const m = /\bdata-group="([^"]*)"/.exec(g.open); if (!m || !['todo', 'decide', 'note'].includes(m[1])) err(`${rel}: a Before you sail group should carry data-group="todo", "decide" or "note"`); });
+    const groupOf = li => { const g = groups.find(x => x.inner.includes(li.outer)); const m = g && /\bdata-group="([^"]*)"/.exec(g.open); return m ? m[1] : ''; };
     return elements(r, 'li', hasClass('sail-item')).map(li => {
-      const b = /<b>([\s\S]*?)<\/b>/.exec(li.inner);
+      const k = /\bdata-item="([^"]+)"/.exec(li.open);
       const o = elements(li.inner, 'span', hasClass('sail-outcome'))[0];
-      return { lead: b ? text(b[1]) : '', done: hasClass('is-done')(li.open), carried: hasClass('is-carried')(li.open), outcome: o ? text(o.inner) : '' };
+      const it = { keys: k ? k[1].split(/\s+/) : [], text: text(li.inner.replace(/<span class="sail-outcome">[\s\S]*?<\/span>/, '')),
+        group: groupOf(li), done: hasClass('is-done')(li.open), carried: hasClass('is-carried')(li.open), outcome: o ? text(o.inner) : '' };
+      if (it.group === 'note' && (it.done || it.carried || o)) err(`${rel}: "${it.text}" is a note to the crew; notes are never ticked or carried forward`);
+      if (!it.keys.length) err(`${rel}: Before you sail item "${it.text}" has no data-item key`);
+      if ((it.done || it.carried) && !it.outcome) err(`${rel}: "${it.text}" is ${it.done ? 'ticked' : 'carried'} with no outcome`);
+      if (it.done && !/· Voyage \d{3}$/.test(it.outcome)) err(`${rel}: "${it.text}" is ticked; its outcome should end with the voyage that settled it ("· Voyage NNN")`);
+      return it;
     });
   };
 
@@ -935,16 +946,28 @@ function checkBearings(fresh, latest, err) {
   if (icol && latestCol && icol.outer !== latestCol.outer)
     err(`${irel}: its Last time column differs from ${DIR}/voyage-${pad(latest)}.html; copy the column across`);
 
-  // Before you sail. An item carried forward on a voyage page stays on the
-  // Current Bearing's list; an item ticked on a voyage page and still shown
-  // there is ticked the same way.
+  // Before you sail, matched across pages by data-item. Every To do or To
+  // decide item carried forward on a voyage page is on the Current Bearing's
+  // list, once; every
+  // item on the latest voyage page is there too; an item ticked on a voyage
+  // page and still shown there is ticked the same way.
   const here = sails[irel] || [];
-  Object.keys(sails).filter(r => r !== irel).forEach(r => sails[r].forEach(it => {
-    const on = here.find(x => x.lead === it.lead);
-    if (it.carried && !on) err(`${r}: "${it.lead}" is carried forward but is not on the Current Bearing's Before you sail`);
+  const onIndex = k => here.find(x => x.keys.includes(k));
+  const seenKeys = new Set();
+  here.forEach(x => x.keys.forEach(k => { if (seenKeys.has(k)) err(`${irel}: Before you sail lists "${k}" twice`); seenKeys.add(k); }));
+  Object.keys(sails).filter(r => r !== irel).forEach(r => sails[r].forEach(it => it.keys.forEach(k => {
+    const on = onIndex(k);
+    if (it.carried && !on) err(`${r}: "${it.text}" is carried forward but is not on the Current Bearing's Before you sail`);
     if (it.done && on && (!on.done || on.outcome !== it.outcome))
-      err(`${irel}: "${it.lead}" is ticked on ${r} ("${it.outcome}") and shown differently here`);
+      err(`${irel}: "${it.text}" is ticked on ${r} ("${it.outcome}") and shown differently here`);
+  })));
+  (sails[`${DIR}/voyage-${pad(latest)}.html`] || []).forEach(it => it.keys.forEach(k => {
+    if (!onIndex(k)) err(`${irel}: Before you sail is missing "${it.text}" from Voyage ${pad(latest)}'s list`);
   }));
+  // The notes on the Current Bearing are the latest voyage's, and only those.
+  const notes = l => (l || []).filter(x => x.group === 'note').map(x => x.keys.join(' ')).join('|');
+  if (notes(here) !== notes(sails[`${DIR}/voyage-${pad(latest)}.html`]))
+    err(`${irel}: the notes to the crew should be Voyage ${pad(latest)}'s, in its order`);
 
   // The Quest Board: open quests, most recently active first, each with its
   // progress, its next objective and its open threads; then the loose threads.

@@ -159,13 +159,21 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 }
 .bearing-more:hover { color: var(--gold-light); }
 
-/* ── Before you sail ── a display-only checklist on the raised band. */
+/* ── Before you sail ──
+   A display-only checklist on the raised band, in up to three labelled
+   groups: To do, To decide, Worth remembering. */
 .bearing-sail {
-  list-style: none; margin: 0 -2rem; padding: 1.1rem 2rem 1.2rem;
+  margin: 0 -2rem; padding: 1.1rem 2rem 1.25rem;
   background: var(--bg-raised);
   border-top: 1px solid var(--gold-rule); border-bottom: 1px solid var(--gold-rule);
-  display: flex; flex-direction: column; gap: 0.6rem;
 }
+.sail-group + .sail-group { margin-top: 1rem; }
+.sail-label {
+  margin: 0 0 0.5rem; font-weight: 400;
+  font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.sail-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.55rem; }
 .sail-item { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 1.05rem; line-height: 1.5; color: var(--text); }
 .sail-item b { color: var(--gold); font-weight: 600; }
 .check-box {
@@ -177,9 +185,11 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
    (.obj-item.is-done in entity.css): the box fills and takes a drawn
    check, the text warms, and nothing is struck through. The outcome
    follows in a few words, with the voyage that settled it:
-   <li class="sail-item is-done">…<span class="sail-outcome">Chose Saerthe · Voyage 007</span></li>
+   <li class="sail-item is-done" data-item="instructor">…<span class="sail-outcome">Chose Saerthe · Voyage 007</span></li>
    Still open after the next voyage: is-carried, with the outcome
-   "Carried forward", and the item stays on the Current Bearing. */
+   "Carried forward", and the item stays on the Current Bearing.
+   data-item names the item across pages; an item that also covers an
+   earlier one lists both keys ("fly-to-hcatha meteor"). */
 .sail-item.is-done .check-box {
   border-color: var(--gold); background: var(--gold-faint);
   box-shadow: 0 0 0 2px var(--gold-faint);
@@ -190,18 +200,17 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
   transform: rotate(45deg);
 }
 .sail-item.is-done .sail-text, .sail-item.is-done b { color: var(--gold-light); }
+/* Notes to the crew are nudges, never ticked: a small mark, no box. */
+.sail-group[data-group="note"] .check-box {
+  flex-basis: 13px; height: 13px; border: 0; position: relative;
+}
+.sail-group[data-group="note"] .check-box::before {
+  content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--gold-dim);
+}
 /* Carried forward: still open, said so in words. The box stays empty. */
 .sail-item.is-carried .check-box { border-style: dashed; }
 .sail-outcome { font-style: italic; color: var(--text-dim); }
 .sail-outcome::before { content: ' \2014  '; font-style: normal; color: var(--text-muted); }
-
-/* A voyage page whose list is still to be written: the list is empty
-   (an HTML comment only), the right column is hidden, and the panel and
-   strip narrow to one column until the list is filled. */
-.bearing:has(.bearing-sail:empty) { grid-template-columns: minmax(0, 1fr); max-width: 760px; margin: 0 auto; }
-.bearing:has(.bearing-sail:empty) .bearing-next { display: none; }
-.content:has(.bearing-sail:empty) .bearing-strip,
-.content:has(.bearing-sail:empty) .bearing-onward { max-width: 760px; margin-left: auto; margin-right: auto; }
 
 /* ── Quest Board ── */
 .bearing-sub {

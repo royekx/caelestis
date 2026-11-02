@@ -354,7 +354,7 @@ node tools/data.js derive
 | `voyages/voyage-(NNN-1).html` | its "next voyage" link |
 | `voyages/index.html` | a row and its Overview |
 | `voyages/bearings/voyage-(NNN-1).html` | its Before you sailed list, resolved (below) |
-| `voyages/bearings/voyage-NNN.html` | new, from the previous bearing page: a strip that ends at Voyage NNN, the Last time column (three bullets from Consequences and Major Events; the folds What each of you did, What you learned and Who you met), the Fleet date where the voyage ends, and Before you sailed, written from Next Session Pressure: the decisions and actions the crew knows it faces, never what someone does off-screen |
+| `voyages/bearings/voyage-NNN.html` | new, from the previous bearing page: a strip that ends at Voyage NNN, the Last time column (three bullets from Consequences and Major Events; the folds What each of you did, What you learned and Who you met), the Fleet date where the voyage ends, and Before you sailed in its three groups, written from Next Session Pressure and Consequences (`docs/PAGE-GUIDE.md` § 8) |
 | `voyages/bearings/index.html` | the strip gains Voyage NNN and the next voyage; the Last time column copied from the new bearing page; Before you sail is the new list plus every item carried forward; the Quest Board redone from `data/quests.json`; the subtitle and current date |
 | `data/bearing.js` | voyage, title, date, position, outstanding, consequence, quests, met, links |
 | `data/vocabulary.js` | every new proper noun |
@@ -366,10 +366,15 @@ The Brief Account and At a Glance are taken from the approved Full Account and
 add nothing it does not say.
 
 Resolve the last Before you sail on its own voyage page: tick each settled
-item with a few words and the voyage that settled it; mark the rest carried
-forward and keep them on the Current Bearing. The markup is in
-`styles/bearing.css` § Before you sail. Older voyage pages are left as they
-are; `scripts/bearing.js` extends their strips.
+To do and To decide item with a few words and the voyage that settled it;
+mark the rest carried forward and keep them on the Current Bearing. An item
+carried forward from an older voyage page is settled there too, the same
+way, when a voyage settles it. Notes to the crew are left as they were.
+Then write the new voyage's Before you sail from Next Session Pressure and
+Consequences: To do, To decide, and a few notes to the crew chosen fresh,
+never threads or predictions (`docs/PAGE-GUIDE.md` § 8, Before you sail). Older
+voyage pages are otherwise left as they are; `scripts/bearing.js` extends
+their strips.
 
 ### DM side
 
