@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelestis — Ship Sheets</title>
+<link rel="stylesheet" href="../styles/caelestis.css">
+<style>
+  /* ── LINKS ── */
+  .callout a, .note-list a, .entry a {
+    color: var(--ice); text-decoration: underline;
+    text-decoration-color: var(--ice-dim); text-underline-offset: 0.15em;
+  }
+  .callout a:hover, .note-list a:hover, .entry a:hover { color: var(--gold-light); }
+
+  /* ── SHIP HEADER ── */
+  .ship-head {
+    display: flex; align-items: baseline; gap: 0.8rem; flex-wrap: wrap;
+    margin-bottom: 0.4rem; padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--gold-rule);
+  }
+  .ship-name {
+    font-family: 'Cinzel', serif; font-size: 1.35rem;
+    font-weight: 700; letter-spacing: 0.04em; color: var(--text);
+  }
+  .ship-kind { font-size: 0.942rem; font-style: italic; color: var(--text-dim); }
+  .ship-lede { font-size: 0.99rem; line-height: 1.55; color: var(--text-dim); margin: 0.3rem 0 1rem; }
+
+  /* ── STAT STRIP ── */
+  .stat-strip {
+    display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.5rem; margin-bottom: 1.2rem;
+  }
+  .stat-cell {
+    background: var(--gold-faint);
+    border: 1px solid var(--gold-rule);
+    border-top: 3px solid var(--gold-dim);
+    padding: 0.5rem 0.6rem; text-align: center; min-width: 0;
+  }
+  .stat-key {
+    font-family: 'Cinzel', serif; font-size: 0.7rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); display: block;
+  }
+  .stat-num {
+    font-family: 'Cinzel', serif; font-size: 1.35rem; font-weight: 700;
+    color: var(--text); line-height: 1.2; display: block;
+  }
+
+  .sub-label {
+    font-family: 'Cinzel', serif; font-size: 0.72rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); margin: 1.3rem 0 0.5rem;
+  }
+
+  /* ── TABLES ── */
+  .table-scroll { overflow-x: auto; max-width: 100%; margin-bottom: 0.9rem; }
+  .sheet-table { width: 100%; border-collapse: collapse; font-size: 0.96rem; line-height: 1.45; }
+  .sheet-table th {
+    font-family: 'Cinzel', serif; font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold); text-align: left;
+    padding: 0.45rem 0.55rem; border-bottom: 1px solid var(--gold-rule);
+  }
+  .sheet-table td {
+    padding: 0.5rem 0.55rem; vertical-align: top; color: var(--text);
+    border-bottom: 1px solid var(--rule);
+  }
+  .sheet-table td.name { color: var(--gold-light); white-space: nowrap; }
+  .sheet-table td.num { white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .sheet-table th.mark, .sheet-table td.mark { text-align: center; width: 5.5rem; }
+  .box {
+    display: inline-block; width: 1rem; height: 1rem;
+    border: 1px solid var(--gold-dim); vertical-align: middle;
+  }
+
+  @media(max-width:700px){
+    .stat-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  @media(max-width:640px){
+    .sheet-table td.name { white-space: normal; }
+    .sheet-table th.mark, .sheet-table td.mark { width: auto; }
+    .stat-num { font-size: 1.15rem; }
+  }
+
+  @media(max-width:640px){
+    .sheet-table, .sheet-table tbody, .sheet-table tr, .sheet-table td { display: block; width: auto; }
+    .sheet-table thead { display: none; }
+    .sheet-table tr { padding: 0.55rem 0; border-bottom: 1px solid var(--rule); }
+    .sheet-table td { border: none; padding: 0.15rem 0; white-space: normal; }
+    .sheet-table td.name { font-family: 'Cinzel', serif; font-size: 0.95rem; padding-bottom: 0.25rem; }
+    .sheet-table td:not(.name):not(.mark)::before {
+      content: attr(data-label) ": "; color: var(--gold); font-size: 0.85rem;
+    }
+    .sheet-table td.mark { display: inline-flex; align-items: center; gap: 0.3rem; width: auto; margin-right: 0.55rem; text-align: left; }
+    .sheet-table td.mark::before { content: attr(data-label); color: var(--text-dim); font-size: 0.85rem; }
+  }
+  @media print {
+    .box { border-color: #000; }
+  }
+</style>
+  <script src="../data/bearing.js" defer></script>
+  <script src="../scripts/nav.js" defer></script>
+</head>
+<body data-pagefind-filter="section:handouts">
+<div class="page-content">
+  <div class="page-header">
+    <div class="page-eyebrow">Player Reference</div>
+    <div class="page-title" data-pagefind-meta="title">Ship Sheets</div>
+    <div class="page-subtitle">The crew's two ships: numbers, stations, zones and parts.</div>
+  </div>
+
+  <div class="content">
+
+    <div class="callout" style="margin:0 0 2.2rem;">
+      <span class="callout-label">Using a sheet</span>
+      Mark each part as working, disabled or destroyed as the fight goes. The rules behind every number are on <a href="ship-mechanics.html">Ship Mechanics</a>, and each role's abilities on <a href="crew-roles.html">Bridge Crew Roles</a>.
+    </div>
+
+    <!-- ══ TYRANT SHIP ══ -->
+    <div class="section-block" id="tyrant-ship">
+      <div class="ship-head">
+        <span class="ship-name">Tyrant Ship</span>
+        <span class="ship-kind">Carved-stone beholder vessel · held by the crew</span>
+      </div>
+      <div class="ship-lede">
+        Four of its ten great eyes answer, each at a crew station around the helm on the Command Deck, and all four work from the start. It has no crew weapon: the eyes are its guns, and they need no crew to keep them firing.
+      </div>
+
+      <div class="stat-strip">
+        <div class="stat-cell"><span class="stat-key">AC</span><span class="stat-num">17</span></div>
+        <div class="stat-cell"><span class="stat-key">Hull</span><span class="stat-num">300</span></div>
+        <div class="stat-cell"><span class="stat-key">Bulwark</span><span class="stat-num">40</span></div>
+        <div class="stat-cell"><span class="stat-key">Speed</span><span class="stat-num">40 ft</span></div>
+        <div class="stat-cell"><span class="stat-key">Mishap</span><span class="stat-num">20</span></div>
+        <div class="stat-cell"><span class="stat-key">Eyes</span><span class="stat-num">4 / 10</span></div>
+      </div>
+
+      <div class="sub-label">The four eyes</div>
+      <div class="table-scroll">
+        <table class="sheet-table">
+          <thead><tr><th>Eye</th><th>Station</th><th>Effect</th><th>DC / attack</th><th>Recharge</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="name" data-label="Eye">Disintegration</td>
+              <td data-label="Station">Gunner (Sol)</td>
+              <td data-label="Effect">A ship weapon: 120/480 ft, 5d10 force, plus the Gunner's modifier. A Called Shot through it destroys the part it hits. A creature it drops to 0 turns to dust.</td>
+              <td class="num" data-label="DC / attack">+6 to hit, 5d10 + 4</td>
+              <td class="num" data-label="Recharge">5–6</td>
+            </tr>
+            <tr>
+              <td class="name" data-label="Eye">Telekinesis</td>
+              <td data-label="Station">Boatswain (Casey)</td>
+              <td data-label="Effect">Ends a grapple or seizes a grappling line. Or moves one creature (Str save) or an object up to 300 lb up to 30 ft.</td>
+              <td class="num" data-label="DC / attack">DC 13</td>
+              <td class="num" data-label="Recharge">At will</td>
+            </tr>
+            <tr>
+              <td class="name" data-label="Eye">Fear</td>
+              <td data-label="Station">Captain (Tumak)</td>
+              <td data-label="Effect">Against a crew: they make one Wis save at +4, and on a failure 1d4 + PB crew are frightened until the end of their next turn and cannot work guns. Against an officer: a Wis save, or frightened for 1 minute, repeating the save each turn.</td>
+              <td class="num" data-label="DC / attack">DC 14</td>
+              <td class="num" data-label="Recharge">4–6</td>
+            </tr>
+            <tr>
+              <td class="name" data-label="Eye">Slowing</td>
+              <td data-label="Station">Navigator (Gregory)</td>
+              <td data-label="Effect">One ship's Spelljammer makes a Wis save. On a failure, until the end of its next turn that ship moves at half speed, cannot shift the band, and cannot Jink or Burn. Your escape checks against a slowed ship have advantage.</td>
+              <td class="num" data-label="DC / attack">DC 14</td>
+              <td class="num" data-label="Recharge">4–6</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="entry-list">
+        <div class="entry"><b>Holding a station.</b> You see through your eye and may cast your spells through it. Using the eye takes your action.</div>
+        <div class="entry"><b>Numbers.</b> Save DCs are 8 + PB + the holder's modifier, and Disintegration's attack is PB + the Gunner's spellcasting ability. The figures above are at level 4.</div>
+        <div class="entry"><b>Reach.</b> The eyes reach 120 ft. Disintegration also reaches Long range, at disadvantage.</div>
+        <div class="entry"><b>Recharge.</b> Every eye starts a fight charged. Roll each spent eye's recharge at the start of your side's turn.</div>
+        <div class="entry"><b>Empty stations.</b> The Medic and the Spelljammer hold no eye. An NPC can hold an empty station (+4 to hit, DC 12). If you leave your station, its eye falls silent unless an NPC takes it.</div>
+        <div class="entry"><b>The other six eyes</b> do not answer.</div>
+      </div>
+
+      <div class="sub-label">Zones</div>
+      <div class="entry-list">
+        <div class="entry"><b>Command Deck.</b> The helm and all four eye stations. Everyone starts here.</div>
+        <div class="entry"><b>Shaft and gravity plane.</b> Crossing it takes a DC 12 Dex (Acrobatics) check, or you fall prone.</div>
+        <div class="entry"><b>Hollow Deck.</b> The repair deck, and Below on the mishap table. Breaches and fires land here, and the Boatswain's Shore Up happens here.</div>
+        <div class="entry"><b>Cargo Deck.</b> The intake, and the only way in. The Boatswain's Expel blows boarders out through it once a fight.</div>
+        <div class="entry"><b>Distances.</b> The Hollow Deck and the Cargo Deck are each two zones from the Command Deck. A Torn Rigging mishap lands on an eye station.</div>
+      </div>
+
+      <div class="sub-label">Parts</div>
+      <div class="table-scroll">
+        <table class="sheet-table">
+          <thead><tr><th>Part</th><th>Zone</th><th class="mark">Working</th><th class="mark">Disabled</th><th class="mark">Destroyed</th></tr></thead>
+          <tbody>
+            <tr><td class="name" data-label="Part">Helm</td><td data-label="Zone">Command Deck</td><td class="mark" data-label="Working"><span class="box"></span></td><td class="mark" data-label="Disabled"><span class="box"></span></td><td class="mark" data-label="Destroyed"><span class="box"></span></td></tr>
+            <tr><td class="name" data-label="Part">Disintegration eye</td><td data-label="Zone">Command Deck</td><td class="mark" data-label="Working"><span class="box"></span></td><td class="mark" data-label="Disabled"><span class="box"></span></td><td class="mark" data-label="Destroyed"><span class="box"></span></td></tr>
+            <tr><td class="name" data-label="Part">Telekinesis eye</td><td data-label="Zone">Command Deck</td><td class="mark" data-label="Working"><span class="box"></span></td><td class="mark" data-label="Disabled"><span class="box"></span></td><td class="mark" data-label="Destroyed"><span class="box"></span></td></tr>
+            <tr><td class="name" data-label="Part">Fear eye</td><td data-label="Zone">Command Deck</td><td class="mark" data-label="Working"><span class="box"></span></td><td class="mark" data-label="Disabled"><span class="box"></span></td><td class="mark" data-label="Destroyed"><span class="box"></span></td></tr>
+            <tr><td class="name" data-label="Part">Slowing eye</td><td data-label="Zone">Command Deck</td><td class="mark" data-label="Working"><span class="box"></span></td><td class="mark" data-label="Disabled"><span class="box"></span></td><td class="mark" data-label="Destroyed"><span class="box"></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="entry-list">
+        <div class="entry"><b>Repairs.</b> A destroyed helm or eye needs a port, and for this ship that means beholder craft.</div>
+        <div class="entry"><b>Fire.</b> Nothing aboard puts out a fire, so a Fire mishap burns until someone reaches the Hollow Deck and fixes it.</div>
+      </div>
+
+      <div class="sub-label">Scuttle ship</div>
+      <div class="entry-list">
+        <div class="entry"><b>Docked in the Cargo intake</b> for the crossing: one scuttle ship, seating six. It carries a landing party down to a world, and it is the way off if the ship is lost.</div>
+      </div>
+    </div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <!-- ══ FLIGHTY FOUNDLING ══ -->
+    <div class="section-block" id="flighty-foundling">
+      <div class="ship-head">
+        <span class="ship-name"><em>Flighty Foundling</em></span>
+        <span class="ship-kind">Caelestis hammerhead</span>
+      </div>
+      <div class="ship-lede">
+        A typical open-deck ship. Its crew keeps all three weapons loaded and fires one of them each round, and you fire the other two.
+      </div>
+
+      <div class="stat-strip">
+        <div class="stat-cell"><span class="stat-key">AC</span><span class="stat-num">15</span></div>
+        <div class="stat-cell"><span class="stat-key">Hull</span><span class="stat-num">400</span></div>
+        <div class="stat-cell"><span class="stat-key">Bulwark</span><span class="stat-num">30</span></div>
+        <div class="stat-cell"><span class="stat-key">Speed</span><span class="stat-num">35 ft</span></div>
+        <div class="stat-cell"><span class="stat-key">Crew</span><span class="stat-num">15</span></div>
+        <div class="stat-cell"><span class="stat-key">Mishap</span><span class="stat-num">15</span></div>
+      </div>
+
+      <div class="sub-label">Weapons</div>
+      <div class="table-scroll">
+        <table class="sheet-table">
+          <thead><tr><th>Weapon</th><th>Range</th><th>Damage</th><th>Crew</th></tr></thead>
+          <tbody>
+            <tr><td class="name" data-label="Weapon">Ballista</td><td data-label="Range">120/480 ft</td><td class="num" data-label="Damage">3d10 piercing</td><td class="num" data-label="Crew">3</td></tr>
+            <tr><td class="name" data-label="Weapon">Mangonel (port)</td><td data-label="Range">200/800 ft; cannot hit within 60 ft</td><td class="num" data-label="Damage">5d10 bludgeoning</td><td class="num" data-label="Crew">5</td></tr>
+            <tr><td class="name" data-label="Weapon">Mangonel (starboard)</td><td data-label="Range">200/800 ft; cannot hit within 60 ft</td><td class="num" data-label="Damage">5d10 bludgeoning</td><td class="num" data-label="Crew">5</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="entry-list">
+        <div class="entry"><b>Crew.</b> All three weapons need 13 crew to stay loaded. Losing crew to boarders or area spells silences guns.</div>
+      </div>
+
+      <div class="sub-label">Zones</div>
+      <div class="entry-list">
+        <div class="entry"><b>Helm, Weapon Deck, Below and Rigging.</b> The Spelljammer starts at the Helm and everyone else on the Weapon Deck.</div>
+      </div>
+
+      <div class="sub-label">Parts</div>
+      <div class="table-scroll">
+        <table class="sheet-table">
+          <thead><tr><th>Part</th><th>Zone</th><th class="mark">Working</th><th class="mark">Disabled</th><th class="mark">Destroyed</th></tr></thead>
+          <tbody>
+            <tr><td class="name" data-label="Part">Helm</td><td data-label="Zone">Helm</td><td class="mark" data-label="Working"><span class="box"></span></td><td class="mark" data-label="Disabled"><span class="box"></span></td><td class="mark" data-label="Destroyed"><span class="box"></span></td></tr>
+            <tr><td class="name" data-label="Part">Ballista</td><td data-label="Zone">Weapon Deck</td><td class="mark" data-label="Working"><span class="box"></span></td><td class="mark" data-label="Disabled"><span class="box"></span></td><td class="mark" data-label="Destroyed"><span class="box"></span></td></tr>
+            <tr><td class="name" data-label="Part">Mangonel (port)</td><td data-label="Zone">Weapon Deck</td><td class="mark" data-label="Working"><span class="box"></span></td><td class="mark" data-label="Disabled"><span class="box"></span></td><td class="mark" data-label="Destroyed"><span class="box"></span></td></tr>
+            <tr><td class="name" data-label="Part">Mangonel (starboard)</td><td data-label="Zone">Weapon Deck</td><td class="mark" data-label="Working"><span class="box"></span></td><td class="mark" data-label="Disabled"><span class="box"></span></td><td class="mark" data-label="Destroyed"><span class="box"></span></td></tr>
+            <tr><td class="name" data-label="Part">Rigging</td><td data-label="Zone">Rigging</td><td class="mark" data-label="Working"><span class="box"></span></td><td class="mark" data-label="Disabled"><span class="box"></span></td><td class="mark" data-label="Destroyed"><span class="box"></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="entry-list">
+        <div class="entry"><b>Repairs.</b> A destroyed weapon or the rigging comes back over repair days. A destroyed helm needs a port.</div>
+        <div class="entry"><b>Scuttle ship.</b> It carries one.</div>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /page-content -->
+
+
+
+</body>
+</html>
