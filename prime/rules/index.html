@@ -19,7 +19,7 @@
     <div class="dm-page-eyebrow">Table<span class="sep">&middot;</span>Mechanics Reference</div>
     <h1>Rules</h1>
     <p class="dm-page-lede">
-      Two halves. Setting mechanics are rulings the cosmology implies and the system has no answer for &mdash; what happens when a player acts on a heart, an Atrium, a Monolith or a taken creature. Character subsystems are the bespoke mechanics attached to particular characters. Every ruling here is one a DM will need mid-session with a player waiting; the terms are defined in the <a href="../glossary/">Glossary</a>. The inscription tracker comes in two copies: <a href="wayfinder-path-dm.html">the unlocked DM version</a>, with every rune matched, and the <a href="../../wayfinder-path/index.html">player-facing one</a>.
+      Two halves. Setting mechanics are rulings the cosmology implies and the system has no answer for &mdash; what happens when a player acts on a heart, an Atrium, a Monolith or a taken creature. Character subsystems are the bespoke mechanics attached to particular characters, and Ship &amp; crew holds the ship combat rules. Every ruling here is one a DM will need mid-session with a player waiting; the terms are defined in the <a href="../glossary/">Glossary</a>. The inscription tracker comes in two copies: <a href="wayfinder-path-dm.html">the unlocked DM version</a>, with every rune matched, and the <a href="../../wayfinder-path/index.html">player-facing one</a>.
     </p>
   </header>
 
@@ -381,10 +381,12 @@
     <li>Homebound is <strong>the Becoming</strong>: sixteen matched, the Heart awakens, Tumak goes home, and the Zenith fires. See <a href="../campaign/index.html#tumak">Campaign &rarr; Tumak</a>.</li>
   </ul>
 
-  <h3>Open</h3>
-  <p>
-    Runes 17, 18 and 19 are unassigned and bestowed at story moments. The distance bands behind the mishap percentages are undecided, and so is the early-home door (a natural 20 on a d20 before declaring a target, then a confirmation roll to reach home ahead of the arc).
-  </p>
+  <h3>Still to decide</h3>
+  <ul>
+    <li>Runes 17, 18 and 19 are unassigned; they are bestowed at story moments, and what each one becomes is not set.</li>
+    <li>The distance bands behind the mishap percentages are not set.</li>
+    <li>The early-home door is not set: a natural 20 on a d20 before declaring a target, then a confirmation roll to reach home ahead of the arc.</li>
+  </ul>
     </div>
   </details>
 
@@ -393,51 +395,317 @@
        SHIP & CREW
        ════════════════════════════════════════════════════════════════ -->
   <details class="dm-collapse-section" id="ship-crew">
-    <summary><h2>Ship &amp; crew <span class="dm-tag is-open">To build</span></h2></summary>
+    <summary><h2>Ship &amp; crew</h2></summary>
     <div class="dm-collapse-section-body">
 
   <p>
-    What the table has actually been running, recorded here so it stops living in a session briefing. <strong>Nothing in this section is settled.</strong>
+    How ship combat runs at this table. The players hold the same rules on <a href="../../handouts/ship-mechanics.html">Ship Mechanics</a>, their roles on <a href="../../handouts/crew-roles.html">Bridge Crew Roles</a>, and their two ships on <a href="../../handouts/ship-sheets.html">Ship Sheets</a>. This section adds what only the DM needs: enemy budgets, when an enemy ship breaks, what to do when the crew loses its ship, and the numbers to say aloud between rounds.
   </p>
+  <ul>
+    <li><strong>Ship stats.</strong> Use the official Spelljammer Academy (SJA) stat blocks. Hull is the stat block's hit points. Bulwark is twice the old damage threshold, and the mishap threshold is that damage threshold again (half the Bulwark maximum).</li>
+    <li><strong>Encounter budget.</strong> Build enemy ships at about 1.5 times SJA's strength. A level-4 fight should last 3&ndash;4 rounds, cost the crew 20&ndash;50 Hull and roll 1&ndash;2 mishaps.</li>
+    <li><strong>Sources.</strong> Bulwark, Hull and the bridge roles come from <em>Wildjammer: More Adventures in Space</em>; the mishap table and crew rules from <em>Spelljammer Combat Expanded</em> (SCE); the stat blocks and weapon ranges from SJA. Where this section differs from them, this section holds.</li>
+  </ul>
 
+  <h3 id="ship-turns">Turns</h3>
+  <ul>
+    <li><strong>Side initiative.</strong> The Captain rolls d20 + Cha or Wis for the crew's side. The enemy leader rolls for the other side.</li>
+    <li><strong>The party picks its order</strong> within its side's turn. The usual pattern is the Spelljammer first, setting the range, and then everyone else.</li>
+    <li><strong>Every character keeps a full turn:</strong> action, bonus action, movement and reaction. A role adds to that turn. It gives one passive, a menu of bonus actions, and at most one reaction.</li>
+    <li><strong>Roles are optional.</strong> Passives always work. A character may spend the bonus action on their own features instead of the role's.</li>
+    <li><strong>Roles are fixed for the fight.</strong> If a role's holder goes down, anyone may take the seat as an action.</li>
+  </ul>
+
+  <h3 id="ship-range">Range bands</h3>
+  <div class="dm-table-scroll">
   <table>
-    <thead><tr><th>Element</th><th>As run</th></tr></thead>
+    <thead><tr><th>Band</th><th>Rough distance</th><th>What it allows</th></tr></thead>
     <tbody>
-      <tr><td>Hull system</td><td>Wildjammer bulwark mechanics. Bulwark points absorb first, then Hull.</td></tr>
-      <tr><td>Bulwark recovery</td><td>The Boatswain restores BP at the start of their turn.</td></tr>
-      <tr><td>Takeoff</td><td>DC 13 spellcasting ability check. A second attempt succeeds automatically.</td></tr>
-      <tr><td>Crew roles</td><td>Captain (Wis/Cha), Shipmate and Gunner (Str/Dex), Spelljammer (Int/Wis).</td></tr>
-      <tr><td>Role challenges</td><td>DC 12. A half success passes.</td></tr>
+      <tr><td>Close</td><td>up to 60 ft</td><td>Grapple and boarding are possible. Ballistae and eyes fire normally. Mangonels cannot fire. Most character attacks reach.</td></tr>
+      <tr><td>Medium</td><td>60&ndash;200 ft</td><td>Every ship weapon fires normally. Only attacks and spells with a range of 120 ft or more reach.</td></tr>
+      <tr><td>Long</td><td>200&ndash;800 ft</td><td>Ballistae and eyes fire at disadvantage. Mangonels fire normally. Escape is possible.</td></tr>
     </tbody>
   </table>
-
-  <div class="dm-callout">
-    <span class="dm-callout-label">What the rebuild has to answer</span>
-    How a four-person crew keeps everyone acting every round, what a boarding action does to the role structure, and how damage persists between voyages. No ship action is expected for several sessions, so there is room.
   </div>
+  <ul>
+    <li><strong>Each helm shifts the range on its own turn,</strong> for free: it closes one band, holds, or opens one band.</li>
+    <li><strong>Burn</strong> shifts one band further.</li>
+    <li><strong>Penalties.</strong> A slowed ship cannot shift the band or Burn. A Crippled ship cannot Burn.</li>
+    <li><strong>Weapon reach.</strong> A ballista reaches 120/480 ft. A mangonel reaches 200/800 ft and cannot hit anything within 60 ft.</li>
+  </ul>
+
+  <h3 id="ship-zones">Zones</h3>
+  <ul>
+    <li><strong>A typical ship has four zones:</strong> Helm, Weapon Deck, Below and Rigging. The tyrant ship's zones are in <a href="#tyrant-ship-rules">The tyrant ship</a>, below.</li>
+    <li><strong>Positions are abstract by default.</strong> The Spelljammer is at the Helm, and everyone else is on the Weapon Deck. Nobody tracks zones until something marks one.</li>
+    <li><strong>An event marks a zone.</strong> A mishap marks one, and so do boarders at the rail. Fixing a marked zone needs someone in it.</li>
+    <li><strong>Moving costs the turn.</strong> One zone uses a character's movement. Two zones use the movement and the action (Dash).</li>
+    <li><strong>Patching Bulwark works from any zone.</strong></li>
+  </ul>
+
+  <h3 id="ship-weapons">Weapons</h3>
+  <ul>
+    <li><strong>The crew keeps every weapon loaded and aimed.</strong> This replaces SJA's separate load, aim and fire actions. A weapon's crew number is the crew it needs to stay loaded, and a weapon short of crew cannot fire.</li>
+    <li><strong>Firing is an action anyone can take.</strong> The attack is d20 + proficiency bonus + Str or Dex; at an eye, the firer may use their spellcasting ability instead. Damage is the weapon's dice, and the Gunner adds a modifier.</li>
+    <li><strong>Each weapon fires once a round,</strong> unless it is hot loaded (Working together, below).</li>
+    <li><strong>The NPC crew fires one weapon a round.</strong> The PCs fire the rest.</li>
+  </ul>
+
+  <h3 id="ship-together">Working together</h3>
+  <ul>
+    <li><strong>Help.</strong> One PC uses the Help action to give another advantage on a role check or a ship weapon attack. Role checks are Quick Fix, Find Cover, the repair check and escape checks. The helper must be in the same zone or at the same eye station. This advantage does not stack with Read the Line.</li>
+    <li><strong>Hot load.</strong> A weapon that has already fired this round can fire once more: one PC spends their action loading it (two actions for a mangonel), and another spends their action firing it. Each weapon fires at most twice a round, and the Gunner's Quick Load counts as that second shot. The eyes carry no ammunition and cannot be hot loaded.</li>
+    <li><strong>Stand in as crew.</strong> A PC can spend their action working a gun as crew. They count as two crew members this round, which can bring a short-crewed weapon back into action.</li>
+  </ul>
+
+  <h3 id="ship-damage">Damage</h3>
+  <ul>
+    <li><strong>Ship weapons hit Bulwark first, then Hull.</strong></li>
+    <li><strong>Character attacks and spells barely dent a hull.</strong> They are better spent on crew and officers. SCE's area table sets how many crew an area spell hits.</li>
+    <li><strong>Ships are immune to poison and psychic damage.</strong></li>
+    <li><strong>A heavy hit rolls a mishap.</strong> A single hit that deals Hull damage of at least the ship's mishap threshold rolls on the mishap table. The threshold is half the Bulwark maximum: 15 for a hammerhead or a squid ship, 20 for the tyrant ship.</li>
+    <li><strong>A critical hit always rolls a mishap,</strong> and doubles its dice.</li>
+    <li><strong>Expect 1&ndash;2 mishaps a fight.</strong> A level-4 fight lands 2&ndash;3 hits on Hull over its 3&ndash;4 rounds, about half of them clear the threshold, and the occasional crit adds one.</li>
+    <li><strong>Crippled.</strong> At half Hull or less, the ship's speed is halved and it cannot Burn.</li>
+    <li><strong>Zero Hull.</strong> See <a href="#ship-zero">The ship at 0 Hull</a>.</li>
+  </ul>
+
+  <h3 id="ship-mishaps">Mishaps</h3>
+  <div class="dm-table-scroll">
+  <table>
+    <thead><tr><th>d6</th><th>Mishap</th><th>Effect until fixed</th><th>Zone</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Locked Steering</td><td>The helm cannot shift the band.</td><td>Helm</td></tr>
+      <tr><td>2</td><td>Helm Disconnection</td><td>The ship cannot move, shift the band or Burn.</td><td>Helm</td></tr>
+      <tr><td>3</td><td>Jammed Weapon</td><td>One weapon is disabled.</td><td>Weapon Deck</td></tr>
+      <tr><td>4</td><td>Hull Breach</td><td>Bulwark cannot be Patched above half.</td><td>Below</td></tr>
+      <tr><td>5</td><td>Fire</td><td>1d10 Hull damage at the end of each round.</td><td>Below</td></tr>
+      <tr><td>6</td><td>Torn Rigging</td><td>The ship cannot Jink or Burn.</td><td>Rigging</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <ul>
+    <li><strong>A Quick Fix in the zone ends a mishap.</strong></li>
+    <li><strong>On the tyrant ship,</strong> Below is the Hollow Deck, and Rigging becomes an eye station.</li>
+  </ul>
+
+  <h3 id="ship-parts">Parts</h3>
+  <ul>
+    <li><strong>The ship sheet lists every part:</strong> each weapon or eye, the helm, and the rigging or fins.</li>
+    <li><strong>Each part is working, disabled or destroyed.</strong> A disabled part can be fixed in combat with a Quick Fix. A destroyed part cannot be fixed in combat; it takes repair days, and a destroyed helm or eye takes a port.</li>
+    <li><strong>Bulwark can still be Patched</strong> whatever state the parts are in.</li>
+  </ul>
+
+  <h3 id="ship-fight-ends">How a fight ends</h3>
+  <ul>
+    <li><strong>An NPC ship breaks</strong> when any one of these happens: its Hull drops to half or less, two of its parts are disabled or destroyed, or its leader falls.</li>
+    <li><strong>A broken ship</strong> flees, surrenders, or makes a desperate attempt to board.</li>
+    <li><strong>Either side can always try to escape</strong> (<a href="#ship-escape">Escape</a>, below).</li>
+  </ul>
+
+  <h3 id="ship-boarding">Boarding</h3>
+  <ul>
+    <li><strong>Boarding needs Close range,</strong> or a grapple.</li>
+    <li><strong>Side turns continue.</strong> Boarders cross as a group on their side's turn, as part of their movement, and act when they land. Defenders answer on their own side's turn. A lone boarder acts before the defenders can swarm it, and a whole boarding party lands before the defenders' turn comes.</li>
+    <li><strong>What boarding does to roles.</strong> A PC who boards the enemy ship leaves their role until they come back. A boarded ship fires only its crew weapon, as in SJA.</li>
+    <li><strong>Big brawls.</strong> If a boarding fight grows large, switch to individual initiative. Ship actions then happen on the Spelljammer's turn.</li>
+  </ul>
+
+  <h3 id="ship-roles">Roles</h3>
+  <p>
+    Role numbers tie to proficiency bonus (PB): +2 at level 4, +4 at level 10 and +5 at level 15. Each role steps up at levels 5, 10 and 15. The level-10 figures below assume ability modifiers that are estimates. The ship rolls that Rally can boost are a ship weapon attack, a role check, a Grapple, an escape check, or a save against a ship effect.
+  </p>
+
+  <h4 id="role-captain">Captain (Tumak; Cha or Wis)</h4>
+  <p>Controls the order and lifts the crew.</p>
+  <ul>
+    <li><strong>Command (passive).</strong> Rolls the side's initiative. Allies who can hear the Captain have advantage on saves against being frightened.</li>
+    <li><strong>Rally (bonus action).</strong> One ally gets a Command die to add to one ship roll before the Captain's next turn.</li>
+    <li><strong>Order (bonus action).</strong> One ally uses their reaction to take one of their role's bonus actions.</li>
+    <li><strong>Grapple (action, Close only).</strong> A Cha (Intimidation or Persuasion) check contested by the enemy captain, or against DC 12 if there is none. On a success the ships lock together and move at half speed.</li>
+    <li><strong>Level 4:</strong> Command die d6; Fear eye DC 14. <strong>Level 10:</strong> Command die d10; Fear eye DC 17.</li>
+    <li><strong>Steps:</strong> d8 at level 5, d10 at level 10, and d12 at level 15, when Rally also reaches two allies.</li>
+    <li><strong>Against its holder's own options:</strong> Rally competes with Cunning Action and the Soulknife's bonus-action blade. At range Rally usually wins; in a deck fight Tumak's own bonus action does.</li>
+  </ul>
+
+  <h4 id="role-spelljammer">Spelljammer (Bartholomew; spellcasting ability)</h4>
+  <p>Chooses the range, and with it what the fight looks like.</p>
+  <ul>
+    <li><strong>Helm (passive).</strong> Moves the ship and shifts the band for free, and senses everything on and around the ship. Can cast their own spells at anything they can see on or around the ship. Takeoff is a DC 13 spellcasting check.</li>
+    <li><strong>Shields Up (bonus action, spend a spell slot).</strong> +3 AC, plus 1 per slot level above 1st, until the Spelljammer's next turn.</li>
+    <li><strong>Jink (bonus action).</strong> The first ship weapon attack against the ship before the Spelljammer's next turn has disadvantage.</li>
+    <li><strong>Burn (bonus action).</strong> Shift the band one more step.</li>
+    <li><strong>Onboard Defense (bonus action).</strong> A creature aboard makes a Wis save. On a failure it takes psychic damage and has disadvantage on its next roll.</li>
+    <li><strong>Level 4:</strong> DC 12; Onboard Defense 1d6; Jink covers 1 attack. <strong>Level 10:</strong> DC 17; Onboard Defense 3d6; Jink covers 2 attacks.</li>
+    <li><strong>Steps:</strong> Onboard Defense gains 1d6 at levels 5, 10 and 15. Jink covers 2 attacks from level 10. From level 15, one Shields Up a fight costs no slot.</li>
+    <li><strong>Against its holder's own options:</strong> Starry Form. Waking it before initiative softens the cost.</li>
+  </ul>
+
+  <h4 id="role-navigator">Navigator (Gregory; Int or Wis)</h4>
+  <p>Reads the fight so everyone else's rolls land.</p>
+  <ul>
+    <li><strong>Plot (passive).</strong> Once per hazard, reroll one failed check.</li>
+    <li><strong>Read the Line (bonus action).</strong> The side's ship weapon attacks against one target have advantage until the Navigator's next turn.</li>
+    <li><strong>Find Cover (bonus action).</strong> d20 + PB + Int or Wis against DC 13. On a success the ship has +2 AC against one ship until the end of the Navigator's next turn.</li>
+    <li><strong>Find the Gap (bonus action).</strong> The side's next escape check has advantage.</li>
+    <li><strong>Level 4:</strong> Find Cover +6; Slowing eye DC 14. <strong>Level 10:</strong> Find Cover +9; Slowing eye DC 17; Read the Line also crits on 19&ndash;20.</li>
+    <li><strong>Steps:</strong> at level 5 Find Cover needs no check; at level 10 Read the Line crits on 19&ndash;20; at level 15 it covers two targets.</li>
+    <li><strong>Against its holder's own options:</strong> very little. Gregory has few bonus actions of his own.</li>
+  </ul>
+
+  <h4 id="role-gunner">Gunner (Sol; Str or Dex, Cha at an eye)</h4>
+  <p>Takes the enemy ship apart.</p>
+  <ul>
+    <li><strong>Gun Captain (passive).</strong> Adds his modifier to ship weapon damage. Class features that apply to weapon attacks apply to ship weapons, and Extra Attack lets him fire a second weapon.</li>
+    <li><strong>Aim (bonus action).</strong> Advantage on his next ship weapon attack this turn.</li>
+    <li><strong>Called Shot (bonus action, added to a shot).</strong> A hit deals half damage and adds one effect: a weapon is disabled; or the rigging is hit, so the target cannot Jink or Burn; or, on an open deck, 1d4 + PB crew drop. Through the Disintegration eye, the part is destroyed.</li>
+    <li><strong>Quick Load (bonus action, PB uses per long rest).</strong> Fire the same weapon once more. It does not work on an eye.</li>
+    <li><strong>Level 4:</strong> a ballista at +5 for 3d10 + 3; Quick Load 2 per long rest. <strong>Level 10:</strong> +8 with two shots; Quick Load 4 per long rest; Called Shot deals full damage.</li>
+    <li><strong>Steps:</strong> none at level 5, when Extra Attack arrives. At level 10 Called Shot deals full damage. At level 15 ship weapons crit on 19&ndash;20.</li>
+    <li><strong>Against its holder's own options:</strong> Divine Smite. For bonus-action spells such as Divine Smite, the table uses whatever edition it already uses for Sol.</li>
+  </ul>
+
+  <h4 id="role-boatswain">Boatswain (Casey; Str, Dex, or Int with tools)</h4>
+  <p>Keeps the ship in the fight.</p>
+  <ul>
+    <li><strong>Patch dice.</strong> PB + 2 Patch dice (d10s), refreshed on a long rest.</li>
+    <li><strong>Upkeep (passive).</strong> Runs the repair days (below). Only the Boatswain repairs Hull.</li>
+    <li><strong>Patch (bonus action, from any zone).</strong> Restore 1d10 + PB Bulwark, adding any Patch dice spent. Patch never repairs Hull.</li>
+    <li><strong>Quick Fix (bonus action, in the zone).</strong> DC 13 to end a mishap or fix a disabled part. Anyone else can try it as an action.</li>
+    <li><strong>Brace (reaction).</strong> Spend a Patch die to reduce the damage of one hit by the roll + PB.</li>
+    <li><strong>Shore Up (action, Below, once per fight).</strong> Restore 2d10 + PB Hull.</li>
+    <li><strong>Expel (action, tyrant ship, once per fight).</strong> Creatures in the Cargo Deck make a DC 13 Str save or are blown out through the intake.</li>
+    <li><strong>Level 4:</strong> Patch about 7.5; 4 Patch dice; Brace about 7.5; Shore Up about 13. <strong>Level 10:</strong> Patch 3d10 + 4, about 20.5; 6 Patch dice; Brace about 9.5; Shore Up about 15.</li>
+    <li><strong>Steps:</strong> Patch rolls one more d10 at levels 5, 10 and 15.</li>
+    <li><strong>Against its holder's own options:</strong> <em>hex</em> and <em>misty step</em>. Brace still works whatever his bonus action did. Heavy hits start fires and breaches, so in most fights the Boatswain goes Below once.</li>
+  </ul>
+
+  <h4 id="role-medic">Medic (Boogie; Wis or Cha)</h4>
+  <p>Keeps officers and crew working.</p>
+  <ul>
+    <li><strong>Medical dice.</strong> PB + 2 medical dice (d8s), refreshed on a long rest.</li>
+    <li><strong>Vigil (passive).</strong> Creatures within 30 ft add 1d4 to death saves.</li>
+    <li><strong>Triage (bonus action).</strong> Spend a medical die on a creature within 5 ft. It regains the roll + PB + the Medic's modifier, and one condition ends: poisoned, frightened, or a latched wisp.</li>
+    <li><strong>Muster (bonus action, in the zone).</strong> 1d4 + PB downed crew stand up.</li>
+    <li><strong>Level 4:</strong> Triage about 9.5; 4 medical dice. <strong>Level 10:</strong> Triage 2d8 + 8, about 17; 6 medical dice.</li>
+    <li><strong>Steps:</strong> one more die at level 5; Triage heals 2d8 at level 10; at level 15 Triage heals two creatures.</li>
+    <li><strong>Against its holder's own options:</strong> <em>healing word</em> and Quickened Spell. Triage saves his slots and sorcery points, and the Medic is often the one free to Help or to follow the Boatswain Below.</li>
+  </ul>
+
+  <h4 id="role-caps">Caps across roles</h4>
+  <ul>
+    <li><strong>AC.</strong> Role bonuses to the ship's AC (Shields Up, Find Cover) add up to +5 at most.</li>
+    <li><strong>Once per fight.</strong> Shore Up and Expel.</li>
+  </ul>
+
+  <h3 id="ship-repair">Repair</h3>
+  <ul>
+    <li><strong>Bulwark</strong> refills 10 minutes after a fight.</li>
+    <li><strong>Hull takes repair days,</strong> worked out of combat with the ship stopped. Work them out once: Hull missing &divide; (10 &times; PB), rounded up, which is 20 Hull a day at level 4 and 40 a day at level 10. Add 1d4 days for each destroyed part that can be field-repaired, which is every part except the helm and the eyes. Disabled parts are fixed along the way at no extra time.</li>
+    <li><strong>The Boatswain's check.</strong> When repairs start, the Boatswain makes one DC 15 check (Str, Dex, or Int with tools). A success takes 1 day off, to a minimum of 1; a failure adds 1 day. Help gives advantage.</li>
+    <li><strong>Underway, only Bulwark recovers.</strong> The crew chooses: stop and spend the days, or push on damaged.</li>
+    <li><strong>Spells.</strong> A repair spell of 3rd level or higher (<em>fabricate</em>, <em>stone shape</em> on the tyrant ship, <em>Wildjammer</em>'s <em>repair hull</em>) cast during repair days counts as one extra day of repair, once a day. <em>Mending</em> fixes one disabled part out of combat.</li>
+    <li><strong>Supplies and a repair cap are not used.</strong> The time cost does that job.</li>
+    <li><strong>Ports</strong> repair 50 Hull a day at 10 gp a point. They are the only place to replace a destroyed helm or eye, and they do full overhauls.</li>
+    <li><strong>What a fight costs at level 4:</strong> about 20&ndash;50 Hull, so 1&ndash;3 days, plus 1d4 days for each destroyed part.</li>
+  </ul>
+
+  <h3 id="ship-zero">The ship at 0 Hull</h3>
+  <p>Plan for it as a turn in the story.</p>
+  <ul>
+    <li><strong>Dead in space.</strong> At 0 Hull the ship cannot move, shift the band or Burn. Its weapons and eyes go quiet, and Bulwark is gone. Enemies grapple it automatically. Its air envelope holds, so the crew aboard can breathe. Once it regains 1 Hull through repair days, it moves again.</li>
+    <li><strong>Destroyed outright.</strong> One of three things destroys it: further damage equal to half its maximum Hull; scuttling, which takes 10 minutes aboard; or a Fire left burning for 10 minutes. As in <em>Wildjammer</em>, destroying a ship takes a focused effort.</li>
+    <li><strong>Abandoning ship.</strong> <em>Flighty Foundling</em> carries a scuttle ship, and so does the tyrant ship on the crossing: one, docked in the Cargo intake, seating six. Spells such as <em>fly</em> and teleportation work, and a boarded enemy ship is another way off.</li>
+    <li><strong>Cut loose in space.</strong> <em>Wildjammer</em>'s air rule: 1 minute of fresh air, then 1 minute of fouled air with disadvantage on checks, then the creature holds its breath for minutes equal to its Con modifier (minimum 30 seconds) before it suffocates. That gives roughly 2&ndash;4 minutes, or 20&ndash;40 rounds, to rescue someone.</li>
+    <li><strong>Outcomes.</strong> Capture, towing, rescue by the Fleet, or limping to a rock to repair. Each one leads somewhere.</li>
+  </ul>
+  <div class="dm-callout"><span class="dm-callout-label">Losing the ship</span> Losing the ship changes the conditions, not the game. A destroyed ship does not mean a dead crew. Step in and keep it real, without cushioning or punishing: a captured crew is usually worth more to an enemy than a dead one. The enemy takes the stragglers aboard, and the players' options change to finding a way off, revolt, ransom or sale, or a bargain, which is where a story forms.</div>
+
+  <h3 id="ship-escape">Escape</h3>
+  <ul>
+    <li><strong>Only from Long range.</strong> The Spelljammer spends their action on a spellcasting check contested by the pursuing Spelljammer.</li>
+    <li><strong>Speed.</strong> +2 for every 5 ft the fleeing ship is faster, and &minus;2 for every 5 ft it is slower.</li>
+    <li><strong>Advantage</strong> comes from Find the Gap, or from a pursuer that is slowed or Crippled.</li>
+    <li><strong>Two wins and the ship is gone.</strong> Wins are kept if the range closes, but no check can be made until the ship is back at Long.</li>
+    <li><strong>Broken NPC ships</strong> use the same rule.</li>
+  </ul>
+
+  <h3 id="fight-or-flee">Fight or flee</h3>
+  <p>Keep these in view on the ship sheet every round:</p>
+  <ul>
+    <li><strong>Hull now,</strong> and the repair days it already costs.</li>
+    <li><strong>Destroyed parts,</strong> each worth 1d4 more days. Note which of them need a port.</li>
+    <li><strong>The clock:</strong> days to the destination, who is pursuing, and how deep in hostile space the ship is.</li>
+    <li><strong>Escape odds:</strong> the current band, and the speed modifier against this enemy.</li>
+    <li><strong>The enemy's state:</strong> how close it is to breaking (Hull at half, two parts down, its leader dropped).</li>
+  </ul>
+  <p>
+    Say the price aloud: &ldquo;Another round like that is two more days stopped.&rdquo; The crew then weighs the fight against the clock.
+  </p>
+
+  <h3 id="tyrant-ship-rules">The tyrant ship</h3>
+  <p>
+    The exception to the typical ship; its decks are on <a href="../vessels/tyrant-ship.html">its vessel entry</a>. AC 17, Hull 300, Bulwark 40, speed 40, mishap threshold 20.
+  </p>
+  <ul>
+    <li><strong>No crew weapon.</strong> The ship has no NPC-crewed weapon, and the eyes need no crew.</li>
+    <li><strong>Stations.</strong> Four of the ten great eyes answer, each at a station around the helm on the Command Deck, and all four work from the start. A station holder sees through their eye and may cast spells through it. Using an eye takes the holder's action. An NPC can hold an empty station (+4 to hit, DC 12).</li>
+    <li><strong>DCs</strong> are 8 + PB + the holder's modifier. The eyes reach 120 ft; Disintegration also reaches Long, at disadvantage.</li>
+    <li><strong>Recharge.</strong> Roll each spent eye's recharge at the start of the party's turn. Every eye starts a fight charged.</li>
+    <li><strong>The Medic and the Spelljammer hold no eye.</strong></li>
+    <li><strong>The Pact.</strong> At <a href="../locations/hcatha.html#pact">H'Catha</a> the eye matching the hour's shut eye goes dead. Its station holder keeps their role.</li>
+    <li><strong>Repairs.</strong> A destroyed eye or helm needs a port, which for this ship means beholder craft: a possible hook at H'Catha.</li>
+  </ul>
+  <div class="dm-table-scroll">
+  <table>
+    <thead><tr><th>Eye</th><th>Station</th><th>Recharge</th><th>Effect (level 4)</th></tr></thead>
+    <tbody>
+      <tr><td>Disintegration</td><td>Gunner</td><td>5&ndash;6</td><td>A ship weapon: 120/480 ft, 5d10 force, plus the Gunner's modifier. A Called Shot through it destroys the part. A creature it drops to 0 turns to dust, as flavour. Sol at +6 deals 5d10 + 4, about 31.5 on a hit.</td></tr>
+      <tr><td>Telekinesis</td><td>Boatswain</td><td>At will</td><td>Ends a grapple or seizes a grappling line; or moves one creature (Str save, DC 13) or an object up to 300 lb up to 30 ft. Defence and utility only.</td></tr>
+      <tr><td>Fear</td><td>Captain</td><td>4&ndash;6</td><td>Against a crew: one Wis save at +4; on a failure 1d4 + PB crew are frightened until the end of their next turn and cannot work guns. Against an officer: Wis save or frightened for 1 minute, repeating the save each turn. DC 14.</td></tr>
+      <tr><td>Slowing</td><td>Navigator</td><td>4&ndash;6</td><td>One ship's Spelljammer makes a Wis save. On a failure, until the end of its next turn the ship moves at half speed, cannot shift the band, and cannot Jink or Burn. The side's escape checks against a slowed ship have advantage. DC 14.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>
+    Against AC 15, Disintegration lands about 19 damage per shot and fires about twice in a four-round fight, once at the start and once more on recharge: about 9.5 a round. A crewed ballista (+6, 3d10) averages about 9.9 a round. The eye matches a ballista over a fight, in rare, heavy shots that can destroy parts.
+  </p>
+  <ul>
+    <li><strong>Command Deck:</strong> the helm and all four stations. Everyone starts here.</li>
+    <li><strong>Shaft and gravity plane:</strong> crossing takes a DC 12 Dex (Acrobatics) check, or the character falls prone.</li>
+    <li><strong>Hollow Deck:</strong> the repair deck. Breaches and fires land here, and Shore Up happens here.</li>
+    <li><strong>Cargo Deck:</strong> the intake, and the only way in.</li>
+    <li><strong>Distances.</strong> The Hollow Deck and the Cargo Deck are each two zones from the Command Deck.</li>
+    <li><strong>Boarding it.</strong> Boarders must reach Close range and come in through the Cargo intake, then climb the shaft and cross the gravity plane. Expel clears the Cargo Deck once a fight. Wisps, if the crew kept them, harass everyone aboard. A PC who leaves a station silences its eye unless an NPC takes it.</li>
+  </ul>
+
+  <h3 id="foundling-rules"><em>Flighty Foundling</em></h3>
+  <p>
+    The typical ship; see <a href="../vessels/flighty-foundling.html">its vessel entry</a>. AC 15, Hull 400, Bulwark 30, speed 35, crew 15, mishap threshold 15.
+  </p>
+  <ul>
+    <li><strong>Weapons:</strong> a ballista and two mangonels. The crew fires one, and the PCs fire the other two.</li>
+    <li><strong>Zones:</strong> Helm, Weapon Deck, Below and Rigging.</li>
+    <li><strong>Boarding</strong> happens at Close range. Losing crew silences guns.</li>
+  </ul>
 
     </div>
   </details>
 
 
   <!-- ════════════════════════════════════════════════════════════════
-       OPEN
+       STILL TO DECIDE
        ════════════════════════════════════════════════════════════════ -->
   <details class="dm-collapse-section" id="rules-open">
-    <summary><h2>Open <span class="dm-tag is-open">Unresolved</span></h2></summary>
+    <summary><h2>Still to decide</h2></summary>
     <div class="dm-collapse-section-body">
 
-    <dl>
-    <dt>Trial by Fire scoring</dt>
-    <dd>Referenced on Campaign and in voyage briefings as a running assessment with first-try bonuses; the scale and what the score buys are unwritten.</dd>
-    <dt>What N'ghathrod's death does to the taken</dt>
-    <dd>Named as the only release and left unresolved.</dd>
-    <dt>The Core approach in numbers</dt>
-    <dd>The three bands are set; the distances and the check sequence per band are not.</dd>
-    <dt>Bespoke subsystems for the rest of the crew</dt>
-    <dd>Boogie's Monolith fragment, Sol's Oath of Misfortune and black lightning, and Gregory's calibration sites each carry implied mechanics that live nowhere.</dd>
-  </dl>
-
+  <ul>
+    <li>How Trial by Fire is scored is not written: Campaign and the voyage briefings call it a running assessment with first-try bonuses, and its scale and what the score buys are unset.</li>
+    <li>What N'ghathrod's death does to the taken is not written; it is named as the only release.</li>
+    <li>The Core approach has its three bands, and the distances and the check sequence for each band are not set.</li>
+    <li>Boogie's Monolith fragment, Sol's Oath of Misfortune and black lightning, and Gregory's calibration sites each imply mechanics that are not yet written as character subsystems.</li>
+  </ul>
 
     </div>
   </details>
