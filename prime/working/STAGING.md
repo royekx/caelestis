@@ -14,6 +14,11 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Campaign
 
+### Bartholomew's Wilder certification (factions/order.html, crew/bartholomew.html)
+- The Order of All certified Bartholomew as a Wilder before he reached Caelestis. It held him for most of a month and taught him to read the first signs of danger in a place: a grove gone silent, a herd moving the wrong way, wildspace that prickles on the skin. A Wilder speaks before others step where they should not.
+- The Wilder certification is joint training between the Order and the Academy. The Order values druids for their natural connection to the world and trains them to read it as an early warning.
+- His intro calls it "the Order" and nothing more. Player pages keep that wording and never name the Order of All.
+
 ### The invasion and the eye are two plans (opposition/vecna.html, opposition/vthorama.html, campaign/index.html, dossiers/nghathrod.html)
 - N'ghathrod's invasion and Vecna's eye are separate plans. Vecna strings them together: the worlds he steers the colony toward are worlds the eye needs, so each conquest opens and links hearts for the figure. N'ghathrod wants worlds for his people and a home; Vecna wants the figure.
 - When the crew puts pressure on N'ghathrod, he stops following the list. He takes the worlds he can get, whether the eye needs them or not, and from there the invasion and the eye diverge.
