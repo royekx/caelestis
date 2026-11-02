@@ -108,9 +108,10 @@
      A companion tab on a crew page opens behind a .classified veil that
      asks for its cadet's passphrase. The page holds only the SHA-256 of
      the passphrase (data-hash, lowercase and trimmed before hashing);
-     the input is hashed the same way and compared. A match lifts the
-     veil and sessionStorage remembers it per tab for the session. The
-     panel ships veiled, so without JS the companion stays hidden. */
+     the input is hashed the same way and compared. Every veil on a crew
+     page names its cadet (data-veil) and shares one passphrase: a match
+     lifts them all, and sessionStorage remembers it for the session. The
+     panels ship veiled, so without JS they stay hidden. */
   function sha256hex(str) {
     return crypto.subtle.digest('SHA-256', new TextEncoder().encode(str)).then(function (buf) {
       return Array.prototype.map.call(new Uint8Array(buf), function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
@@ -123,7 +124,13 @@
     var form = v.querySelector('.classified-form');
     var input = v.querySelector('.classified-input');
     var deny = v.querySelector('.classified-deny');
-    function lift() { v.hidden = true; panel.classList.remove('is-veiled'); }
+    function lift() {
+      document.querySelectorAll('.classified[data-veil="' + v.dataset.veil + '"]').forEach(function (o) {
+        o.hidden = true;
+        var pn = o.closest('.companion-panel');
+        if (pn) pn.classList.remove('is-veiled');
+      });
+    }
     var open = false;
     try { open = sessionStorage.getItem(key) === v.dataset.hash; } catch (e) { /* storage blocked */ }
     if (open) { lift(); return; }

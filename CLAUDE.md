@@ -98,9 +98,10 @@ url links parent giver children within items progress`, plus `data/index.json`,
   The one exception: the Keeper's Chart, a DM mode behind its own password
   inside the Stellar Chart tab on Casey's crew page, kept there by mutual
   trust with the players. Leave it where it is.
-- The companion tabs on the crew pages (Aspects on Bartholomew's, the
-  Stellar Chart on Casey's, the Wayfinder's Path on Tumak's) each sit behind
-  a veil that asks for that cadet's passphrase. The page holds only the
+- Every crew page's Personnel file tab (origin and arrival orders), and the
+  companion tabs (Aspects on Bartholomew's, the Stellar Chart on Casey's, the
+  Wayfinder's Path on Tumak's), sit behind a veil that asks for that cadet's
+  passphrase; one unlock opens every veil on the page. The page holds only the
   passphrase's SHA-256 hash; no passphrase is written anywhere in the
   repository.
 - The Tracker (`prime/tracker/`) and the Voyages board read both layers. They

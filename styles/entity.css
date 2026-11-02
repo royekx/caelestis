@@ -370,10 +370,11 @@ html { overflow-x: clip; }
 }
 
 /* ── Companion tabs ──
-   A crew page carries its cadet's companion (Aspects, the Stellar Chart,
-   the Wayfinder's Path) as a wide record tab. Each opens behind a
-   classified veil that asks for the cadet's passphrase (scripts/ui.js).
-   The panel ships veiled, so without JS the companion stays hidden. */
+   Every crew page carries a Personnel file tab, and three carry their
+   cadet's companion (Aspects, the Stellar Chart, the Wayfinder's Path),
+   all wide record tabs. Each opens behind a classified veil that asks for
+   the cadet's passphrase; one passphrase opens every veil on the page
+   (scripts/ui.js). The panels ship veiled, so without JS they stay hidden. */
 .companion-title {
   font-family: 'Cinzel', serif; font-size: 1.35rem; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--gold-light); text-align: center;
@@ -382,6 +383,43 @@ html { overflow-x: clip; }
   font-style: italic; color: var(--text-dim); text-align: center; margin: 0.3rem 0 1.4rem;
 }
 .companion-panel.is-veiled .classified-body { display: none; }
+/* The Personnel file: Origin rows, the cadet's arrival orders as handed
+   to them, and a Notes section. */
+.personnel-file { max-width: 46rem; margin: 0 auto; }
+.file-section { margin: 0 0 2.2rem; }
+.file-head {
+  display: flex; align-items: center; gap: 0.8rem; margin: 0 0 1rem;
+  font-family: 'Cinzel', serif; font-size: 0.82rem; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+}
+.file-head::after { content: ''; flex: 1; height: 1px; background: var(--gold-rule); }
+.file-rows { margin: 0; display: grid; gap: 0; }
+.file-row {
+  display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 1rem;
+  padding: 0.7rem 0; border-bottom: 1px solid var(--rule);
+}
+.file-row:last-child { border-bottom: none; }
+.file-row dt {
+  font-family: 'Cinzel', serif; font-size: 0.74rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold-dim); padding-top: 0.2rem;
+}
+.file-row dd { margin: 0; color: var(--text-soft); line-height: 1.6; }
+.file-row dd a { color: var(--gold-light); }
+.file-title {
+  margin: 0 0 1rem; font-family: 'Cinzel', serif; font-size: 1.05rem;
+  letter-spacing: 0.08em; color: var(--gold-light); font-weight: 600;
+}
+.file-orders {
+  padding: 1.3rem 1.5rem; background: var(--bg-card);
+  border-left: 2px solid var(--gold-dim);
+}
+.file-orders p { margin: 0 0 1rem; line-height: 1.7; color: var(--text-soft); }
+.file-orders p:last-child { margin-bottom: 0; }
+.file-orders .file-break { text-align: center; color: var(--gold-dim); letter-spacing: 0.3em; margin: 1.2rem 0; }
+@media (max-width: 560px) {
+  .file-row { grid-template-columns: minmax(0, 1fr); gap: 0.25rem; }
+  .file-orders { padding: 1rem; }
+}
 .classified {
   position: relative; overflow: hidden;
   max-width: 34rem; margin: 1.5rem auto 2rem; padding: 2.4rem 1.6rem 2rem;
