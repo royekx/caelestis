@@ -666,26 +666,52 @@ function checkIndex(set, recs, err) {
   // A board with panels files each row under one of them. The row's own text
   // agreeing with the record is not enough: a finished quest left sitting in
   // the open panel reads as unfinished, and every check above it passes. So
-  // the panel a row sits in, and the count on its tab, are tested too.
-  if (/class="board-panel/.test(src)) {
-    const panelOf = r => r.fields.Status === 'Complete' ? 'closed'
-                       : (r.kind === 'Thread' && !r.parent) ? 'threads' : 'quests';
-    const seen = {};
+  // the panel a row sits in, the nesting, and the count on each tab are tested.
+  //   quests   every open quest, one top row each; under it, as .is-child rows,
+  //            every open thread that is part of it. The tab counts quests.
+  //   threads  every open thread once, a thread that is part of a quest saying
+  //            so ("Part of <quest>"). The tab counts threads.
+  //   closed   every complete record. The tab counts its rows.
+  if (set.key === 'quests' && /class="board-panel/.test(src)) {
+    const open = recs.filter(r => r.fields.Status !== 'Complete');
+    const want = {
+      quests: open.filter(r => r.kind !== 'Thread'),
+      threads: open.filter(r => r.kind === 'Thread'),
+      closed: recs.filter(r => r.fields.Status === 'Complete')
+    };
+    const counted = {};
     matches(/<section class="board-panel[^"]*" id="([^"]+)"[^>]*>([\s\S]*?)<\/section>/g, src).forEach(m => {
       const id = m[1];
-      seen[id] = 0;
-      matches(/<a class="log-row-link" href="([^"]+)">/g, m[2]).forEach(a => {
-        seen[id]++;
-        const r = resolve(a[1]);
-        if (!r) return;
-        const want = panelOf(r);
-        if (want !== id) err(`${p}: ${r.slug} is on the ${id} panel, record puts it on ${want}`);
+      const rows = matches(/<div class="log-entry q-entry([^"]*)"[^>]*>\s*<div class="log-row">\s*<a class="log-row-link" href="([^"]+)">([\s\S]*?)<\/a>/g, m[2])
+        .map(x => ({ child: /\bis-child\b/.test(x[1]), r: resolve(x[2]), href: x[2], body: x[3] }));
+      rows.filter(x => !x.r).forEach(x => err(`${p}: the ${id} panel links ${x.href}, which is not a quest in the record`));
+      const top = rows.filter(x => x.r && !x.child), kids = rows.filter(x => x.r && x.child);
+      const exp = want[id];
+      if (!exp) return err(`${p}: a board panel "${id}" the check does not know`);
+      const slugs = a => a.map(r => r.slug).sort().join(', ');
+      if (slugs(top.map(x => x.r)) !== slugs(exp)) err(`${p}: the ${id} panel lists ${slugs(top.map(x => x.r)) || 'nothing'}; the record gives ${slugs(exp) || 'nothing'}`);
+      counted[id] = top.length;
+      if (id === 'quests') {
+        let parent = null;
+        rows.forEach(x => {
+          if (!x.r) return;
+          if (!x.child) { parent = x.r; return; }
+          if (!parent || !x.r.parent || x.r.parent.slug !== parent.slug) err(`${p}: ${x.r.slug} is nested under ${parent ? parent.slug : 'nothing'}; the record makes it part of ${x.r.parent ? x.r.parent.slug : 'no quest'}`);
+        });
+        const nestWant = want.threads.filter(t => t.parent && exp.some(q => q.slug === t.parent.slug));
+        if (slugs(kids.map(x => x.r)) !== slugs(nestWant)) err(`${p}: the quests panel nests ${slugs(kids.map(x => x.r)) || 'nothing'}; the record gives ${slugs(nestWant) || 'nothing'}`);
+      } else if (kids.length) err(`${p}: the ${id} panel nests rows; only the quests panel does`);
+      if (id === 'threads') top.forEach(x => {
+        const sub = /class="row-sub">([\s\S]*?)<\/span>/.exec(x.body);
+        const shown = sub ? text(sub[1]) : '';
+        const wantSub = x.r.parent ? 'Part of ' + plain(x.r.parent.name) : '';
+        if (shown !== wantSub) err(`${p}: the threads row for ${x.r.slug} reads "${shown}", record gives "${wantSub}"`);
       });
     });
     matches(/data-panel="([^"]+)"[^>]*>[^<]*<span class="board-count">(\d+)<\/span>/g, src).forEach(m => {
       const [, id, n] = m;
-      if (seen[id] === undefined) return;
-      if (Number(n) !== seen[id]) err(`${p}: the ${id} tab counts ${n}, the panel holds ${seen[id]}`);
+      if (counted[id] === undefined) return;
+      if (Number(n) !== counted[id]) err(`${p}: the ${id} tab counts ${n}, the panel lists ${counted[id]}`);
     });
   }
 
