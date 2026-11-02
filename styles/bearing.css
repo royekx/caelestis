@@ -200,7 +200,7 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
   transform: rotate(45deg);
 }
 .sail-item.is-done .sail-text, .sail-item.is-done b { color: var(--gold-light); }
-/* Notes to the crew are nudges, never ticked: a small mark, no box. */
+/* Weather Eye items are nudges, never ticked: a small mark, no box. */
 .sail-group[data-group="note"] .check-box {
   flex-basis: 13px; height: 13px; border: 0; position: relative;
 }

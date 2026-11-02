@@ -369,9 +369,9 @@ Resolve the last Before you sail on its own voyage page: tick each settled
 To do and To decide item with a few words and the voyage that settled it;
 mark the rest carried forward and keep them on the Current Bearing. An item
 carried forward from an older voyage page is settled there too, the same
-way, when a voyage settles it. Notes to the crew are left as they were.
+way, when a voyage settles it. The Weather Eye is left as it was.
 Then write the new voyage's Before you sail from Next Session Pressure and
-Consequences: To do, To decide, and a few notes to the crew chosen fresh,
+Consequences: To do, To decide, and a few Weather Eye nudges chosen fresh,
 never threads or predictions (`docs/PAGE-GUIDE.md` § 8, Before you sail). Older
 voyage pages are otherwise left as they are; `scripts/bearing.js` extends
 their strips.

@@ -727,13 +727,12 @@ without JS they stack, which is also what Pagefind reads.
   the voyage page. Three groups, each shown only when it has items:
   - *To do*: what the crew set out to do. Settled with how it ended.
   - *To decide*: open choices. Settled with what was chosen.
-  - *Note to crew* (a provisional heading, set once in the page source):
-    the DM's by-the-way nudges, a few at most, chosen fresh each voyage:
-    a hazard still aboard, what they hold and what it does, a promise, who
-    is with them, what they did that may come back. Notes are never ticked
-    or carried forward; a note the crew lets pass drops off the next list
-    unless the DM repeats it. An old voyage page shows its notes as they
-    were.
+  - *Weather Eye*: the DM's by-the-way nudges, a few at most, chosen
+    fresh each voyage: a hazard still aboard, what they hold and what it does, a promise, who
+    is with them, what they did that may come back. They are never ticked
+    or carried forward; a nudge the crew lets pass drops off the next list
+    unless the DM repeats it. An old voyage page shows its Weather Eye as
+    it was.
 
   Personal threads stay on the Quest Board, in every group. Teasers and
   predictions stay off ("something is waiting below", "Ostekk may want his engine back").
@@ -747,8 +746,8 @@ without JS they stack, which is also what Pagefind reads.
   outcome and the voyage that settled it ("Chose Saerthe · Voyage 007"); an
   unsettled item is marked carried forward (`is-carried`). The Current
   Bearing's list is the latest voyage's To do and To decide plus every item
-  carried forward, each once, and the latest voyage's notes; an item that a
-  newer one covers shares its key (`data-item="fly-to-hcatha meteor"`).
+  carried forward, each once, and the latest voyage's Weather Eye; an
+  item that a newer one covers shares its key (`data-item="fly-to-hcatha meteor"`).
   Each group carries `data-group` (`todo`, `decide`, `note`). `check`
   holds the pages to this. The markup is in `styles/bearing.css` § Before
   you sail.

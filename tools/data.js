@@ -860,8 +860,8 @@ function checkBearings(fresh, latest, err) {
   const sailItems = (rel, src) => {
     const r = region(src, 'before-you-sail');
     if (r === null) { err(`${rel}: no Before you sail list (data-field="before-you-sail")`); return []; }
-    // Groups: todo and decide are settled or carried; note is the DM's
-    // nudges for one voyage, never ticked and never carried.
+    // Groups: todo and decide are settled or carried; note (the Weather Eye)
+    // is the DM's nudges for one voyage, never ticked and never carried.
     const groups = elements(r, 'div', hasClass('sail-group'));
     groups.forEach(g => { const m = /\bdata-group="([^"]*)"/.exec(g.open); if (!m || !['todo', 'decide', 'note'].includes(m[1])) err(`${rel}: a Before you sail group should carry data-group="todo", "decide" or "note"`); });
     const groupOf = li => { const g = groups.find(x => x.inner.includes(li.outer)); const m = g && /\bdata-group="([^"]*)"/.exec(g.open); return m ? m[1] : ''; };
@@ -870,7 +870,7 @@ function checkBearings(fresh, latest, err) {
       const o = elements(li.inner, 'span', hasClass('sail-outcome'))[0];
       const it = { keys: k ? k[1].split(/\s+/) : [], text: text(li.inner.replace(/<span class="sail-outcome">[\s\S]*?<\/span>/, '')),
         group: groupOf(li), done: hasClass('is-done')(li.open), carried: hasClass('is-carried')(li.open), outcome: o ? text(o.inner) : '' };
-      if (it.group === 'note' && (it.done || it.carried || o)) err(`${rel}: "${it.text}" is a note to the crew; notes are never ticked or carried forward`);
+      if (it.group === 'note' && (it.done || it.carried || o)) err(`${rel}: "${it.text}" is on the Weather Eye; those are never ticked or carried forward`);
       if (!it.keys.length) err(`${rel}: Before you sail item "${it.text}" has no data-item key`);
       if ((it.done || it.carried) && !it.outcome) err(`${rel}: "${it.text}" is ${it.done ? 'ticked' : 'carried'} with no outcome`);
       if (it.done && !/· Voyage \d{3}$/.test(it.outcome)) err(`${rel}: "${it.text}" is ticked; its outcome should end with the voyage that settled it ("· Voyage NNN")`);
@@ -964,10 +964,10 @@ function checkBearings(fresh, latest, err) {
   (sails[`${DIR}/voyage-${pad(latest)}.html`] || []).forEach(it => it.keys.forEach(k => {
     if (!onIndex(k)) err(`${irel}: Before you sail is missing "${it.text}" from Voyage ${pad(latest)}'s list`);
   }));
-  // The notes on the Current Bearing are the latest voyage's, and only those.
+  // The Current Bearing's Weather Eye is the latest voyage's, and only that.
   const notes = l => (l || []).filter(x => x.group === 'note').map(x => x.keys.join(' ')).join('|');
   if (notes(here) !== notes(sails[`${DIR}/voyage-${pad(latest)}.html`]))
-    err(`${irel}: the notes to the crew should be Voyage ${pad(latest)}'s, in its order`);
+    err(`${irel}: the Weather Eye should be Voyage ${pad(latest)}'s, in its order`);
 
   // The Quest Board: open quests, most recently active first, each with its
   // progress, its next objective and its open threads; then the loose threads.
