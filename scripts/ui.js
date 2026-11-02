@@ -105,22 +105,48 @@
   }
 
   /* ── Classified veil ──
-     A companion tab on a crew page opens behind a .classified veil
-     naming its cadet. It is a courtesy, not a lock: one button lifts it,
-     and sessionStorage remembers the choice per tab for the session. */
+     A companion tab on a crew page opens behind a .classified veil that
+     asks for its cadet's passphrase. The page holds only the SHA-256 of
+     the passphrase (data-hash, lowercase and trimmed before hashing);
+     the input is hashed the same way and compared. A match lifts the
+     veil and sessionStorage remembers it per tab for the session. The
+     panel ships veiled, so without JS the companion stays hidden. */
+  function sha256hex(str) {
+    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(str)).then(function (buf) {
+      return Array.prototype.map.call(new Uint8Array(buf), function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
+    });
+  }
   document.querySelectorAll('.classified[data-veil]').forEach(function (v) {
     var panel = v.closest('.companion-panel');
+    if (!panel) return;
     var key = 'caelestis_file_' + v.dataset.veil;
+    var form = v.querySelector('.classified-form');
+    var input = v.querySelector('.classified-input');
+    var deny = v.querySelector('.classified-deny');
+    function lift() { v.hidden = true; panel.classList.remove('is-veiled'); }
     var open = false;
-    try { open = sessionStorage.getItem(key) === 'open'; } catch (e) { /* storage blocked */ }
-    if (open || !panel) return;
-    v.hidden = false;
-    panel.classList.add('is-veiled');
-    v.querySelector('.classified-open').addEventListener('click', function () {
-      try { sessionStorage.setItem(key, 'open'); } catch (e) { /* storage blocked */ }
-      v.hidden = true;
-      panel.classList.remove('is-veiled');
-      panel.focus({ preventScroll: true });
+    try { open = sessionStorage.getItem(key) === v.dataset.hash; } catch (e) { /* storage blocked */ }
+    if (open) { lift(); return; }
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      deny.hidden = true;
+      if (!(window.crypto && crypto.subtle)) {
+        deny.textContent = 'This terminal cannot read a passphrase. Open the archive over a secure line.';
+        deny.hidden = false;
+        return;
+      }
+      sha256hex(input.value.trim().toLowerCase()).then(function (h) {
+        if (h === v.dataset.hash) {
+          try { sessionStorage.setItem(key, h); } catch (e2) { /* storage blocked */ }
+          input.value = '';
+          lift();
+          panel.focus({ preventScroll: true });
+        } else {
+          deny.hidden = false;
+          input.select();
+        }
+      });
     });
   });
 

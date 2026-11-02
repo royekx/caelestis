@@ -663,14 +663,20 @@ without JS they stack, which is also what Pagefind reads.
   carries `data-pagefind-ignore`: companion text stays out of the search
   index.
 - **The classified veil.** Each companion tab opens behind a `.classified`
-  veil: "Classified · Personnel file: name · Access restricted to the named
-  cadet" and one button, "I am first name · Open file". It is an in-world
-  courtesy, not a lock; there is no password. `scripts/ui.js` remembers the
-  choice per tab in sessionStorage (`caelestis_file_<tab>`). Without JS the
-  veil stays hidden and the companion shows; with storage blocked the button
-  still lifts the veil, for that page view.
+  veil: "Classified · Personnel file · name · Access restricted to the named
+  cadet", a passphrase field and an Open file button. Each cadet has their
+  own passphrase, given to the player at the table. The page holds only its
+  SHA-256 hash (`data-hash` on the veil); `scripts/ui.js` trims and
+  lowercases the input, hashes it with `crypto.subtle` and compares. A wrong
+  passphrase gets an in-world refusal and the veil stays; the right one lifts
+  it and sessionStorage (`caelestis_file_<tab>`) keeps it lifted for the
+  session. The panel ships with `is-veiled`, so without JS the companion
+  stays hidden. A passphrase never appears in the repository: to change one,
+  replace the hash. It is a courtesy between players who can read the
+  source, not security.
 - **Companion DM modes stay.** A companion's password-protected DM mode
-  (the Stellar Chart's Keeper's Chart, its reveal table and password) stays on
+  (the Stellar Chart's Keeper's Chart, its reveal table and password, separate
+  from Casey's veil) stays on
   the player page. Players do not read the source; it is mutual trust. Do not
   move these modes to `prime/` or flag them; `terms.json` allows their terms.
 - **Previous Voyages keys** name voyages, oldest first: `V001 · V002`.

@@ -95,10 +95,14 @@ url links parent giver children within items progress`, plus `data/index.json`,
 - The schema tests the key, not the sentence. A DM fact typed into a player
   field passes every check; the two session-run approvals catch it.
 - Nothing from `prime/` reaches `data/` or a player page.
-  The one exception: a companion tab on a crew page (Aspects on
-  Bartholomew's, the Stellar Chart on Casey's, the Wayfinder's Path on
-  Tumak's) keeps its password-protected DM mode on the player page, by
-  mutual trust with the players. Leave those modes where they are.
+  The one exception: the Keeper's Chart, a DM mode behind its own password
+  inside the Stellar Chart tab on Casey's crew page, kept there by mutual
+  trust with the players. Leave it where it is.
+- The companion tabs on the crew pages (Aspects on Bartholomew's, the
+  Stellar Chart on Casey's, the Wayfinder's Path on Tumak's) each sit behind
+  a veil that asks for that cadet's passphrase. The page holds only the
+  passphrase's SHA-256 hash; no passphrase is written anywhere in the
+  repository.
 - The Tracker (`prime/tracker/`) and the Voyages board read both layers. They
   are views; nothing is entered in them.
 - `prime/` and the DM and FIA search indexes are gated in the browser and

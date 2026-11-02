@@ -372,9 +372,8 @@ html { overflow-x: clip; }
 /* ── Companion tabs ──
    A crew page carries its cadet's companion (Aspects, the Stellar Chart,
    the Wayfinder's Path) as a wide record tab. Each opens behind a
-   classified veil, an in-world courtesy to the named cadet: one button
-   lifts it, and the choice holds for the browser session (scripts/ui.js).
-   Without JS the veil stays hidden and the companion shows. */
+   classified veil that asks for the cadet's passphrase (scripts/ui.js).
+   The panel ships veiled, so without JS the companion stays hidden. */
 .companion-title {
   font-family: 'Cinzel', serif; font-size: 1.35rem; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--gold-light); text-align: center;
@@ -415,6 +414,21 @@ html { overflow-x: clip; }
 }
 .classified-file .sep { margin: 0 0.5em; color: var(--gold-dim); }
 .classified-note { font-style: italic; color: var(--text-dim); margin: 0.6rem 0 1.4rem; }
+.classified-form { position: relative; z-index: 1; }
+.classified-label {
+  display: block; margin-bottom: 0.5rem;
+  font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gold-dim);
+}
+.classified-row { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+.classified-input {
+  width: 13rem; max-width: 100%;
+  background: rgba(5, 6, 12, 0.6); border: 1px solid var(--gold-rule); border-radius: 0;
+  color: var(--text); font-family: inherit; font-size: 1rem; letter-spacing: 0.08em;
+  padding: 0.55rem 0.8rem;
+}
+.classified-input:focus { outline: none; border-color: var(--gold-dim); }
+.classified-deny { margin: 0.9rem 0 0; color: var(--cadet); font-style: italic; }
 .classified-open {
   appearance: none; cursor: pointer;
   font-family: 'Cinzel', serif; font-size: 0.78rem; font-weight: 600;
