@@ -1022,7 +1022,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ### dossiers/index.html
 
 - **[later]** Grouping on every DM register
-  dossiers/index.html groups its rows by side through dm-register.js (a data-group-axis on .register and an A–Z / By side toggle). Opt the other DM registers in where a grouping helps: locations/ by system, factions/ by reach, vessels/ by where, artifacts/ by fragment.
+  dossiers/index.html groups its rows by affiliation through dm-register.js (a data-group-axis on .register and an A–Z / By affiliation toggle). Opt the other DM registers in where a grouping helps: locations/ by system, factions/ by reach, vessels/ by where, artifacts/ by fragment.
   src: section 5 (2026-10-28); Korey 2026-10-27 ("the same register shape to every DM index")
 
 ---

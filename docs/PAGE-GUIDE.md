@@ -241,7 +241,7 @@ tool the page needs is embedded in a `.dm-embed` with **Open full**.
 | Register | Holds | Axes |
 |---|---|---|
 | `locations/` | places, grouped by system | system, kind, standing |
-| `dossiers/` | anything with a will | side, kind, standing |
+| `dossiers/` | anything with a will | affiliation, kind, standing |
 | `factions/` | organized interests | reach, posture |
 | `crew/` | the player characters | where the rules live (on their page, Rules page, a player page, role-play only; a row may hold several) |
 | `vessels/` | ships | where, standing, depth |
