@@ -283,7 +283,8 @@ give it to the DM.
   span joined by an en dash (`1491.7.7–1491.7.12`), counted on from the
   previous voyage's end by the embers the account gives. Its end is the
   current date: the voyage page's header, `data/bearing.js` `date`, the
-  bearing page's subtitle and the Fleet Time page all show it.
+  Current Bearing's subtitle and the Fleet Time page all show it, and the new
+  bearing page's subtitle gives it as that voyage's date.
 - **Ships the crew encounters** get a record in `locations.json`: Type
   `Vessel`, parented to where it was last seen, with whoever the crew met
   aboard in Key NPCs / Factions. A ship met only in simulation is parented to
@@ -352,8 +353,9 @@ node tools/data.js derive
 | `voyages/voyage-NNN.html` | new, from `voyage-template.html`: At a Glance, Brief Account, Full Account (the approved account), Recording |
 | `voyages/voyage-(NNN-1).html` | its "next voyage" link |
 | `voyages/index.html` | a row and its Overview |
-| `voyages/bearings/voyage-NNN.html` | new, from the previous bearing page |
-| `voyages/bearings/index.html` | a copy of the new bearing page |
+| `voyages/bearings/voyage-(NNN-1).html` | its Before you sailed list, resolved (below) |
+| `voyages/bearings/voyage-NNN.html` | new, from the previous bearing page: a strip that ends at Voyage NNN, the Last time column (three bullets from Consequences and Major Events; the folds What each of you did, What you learned and Who you met), the Fleet date where the voyage ends, and Before you sailed, written from Next Session Pressure: the decisions and actions the crew knows it faces, never what someone does off-screen |
+| `voyages/bearings/index.html` | the strip gains Voyage NNN and the next voyage; the Last time column copied from the new bearing page; Before you sail is the new list plus every item carried forward; the Quest Board redone from `data/quests.json`; the subtitle and current date |
 | `data/bearing.js` | voyage, title, date, position, outstanding, consequence, quests, met, links |
 | `data/vocabulary.js` | every new proper noun |
 | each changed record's page | on the Voyage log tab, the new voyage becomes the latest block and the old one moves into Previous Voyages; the infobox rows, First seen and Last seen (or First and Last voyage) among them; the new voyage in All appearances; overview; objectives; Connections. Layout in `docs/PAGE-GUIDE.md` § 8, Record pages |
@@ -362,6 +364,12 @@ node tools/data.js derive
 
 The Brief Account and At a Glance are taken from the approved Full Account and
 add nothing it does not say.
+
+Resolve the last Before you sail on its own voyage page: tick each settled
+item with a few words and the voyage that settled it; mark the rest carried
+forward and keep them on the Current Bearing. The markup is in
+`styles/bearing.css` § Before you sail. Older voyage pages are left as they
+are; `scripts/bearing.js` extends their strips.
 
 ### DM side
 
@@ -396,7 +404,7 @@ pull request. Then open the changed pages in a browser once.
 | each register row shows its record's name, overview, sub-line, state and progress | the bar's position, outstanding and consequence lines |
 | each voyage page carries its number and title | the prose of any page under `prime/` |
 | the command bar's voyage, title, quest names and progress | the Crew Logs document |
-| `voyages/bearings/index.html` is the latest bearing page | |
+| each bearing page's strip, Fleet date, title, crew and Who you met; the Current Bearing's Last time is the latest bearing page's; its Quest Board is the record's open quests, progress, next objectives and threads; every carried-forward item is on its Before you sail | |
 | every local link and anchor on the site resolves | |
 | the DM layer agrees with the record | |
 

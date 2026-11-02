@@ -3,16 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Caelestis — Current Bearing</title>
+<title>Caelestis — Bearing, Voyage 002</title>
 <link rel="stylesheet" href="../../styles/caelestis.css">
-<link rel="stylesheet" href="../../styles/entity.css">
-<link rel="stylesheet" href="../../styles/board.css">
 <link rel="stylesheet" href="../../styles/bearing.css">
 <script src="../../data/bearing.js" defer></script>
+<script src="../../data/voyage.js" defer></script>
 <script src="../../scripts/nav.js" defer></script>
-<script src="../../scripts/ui.js" defer></script>
+<script src="../../scripts/bearing.js" defer></script>
 </head>
-<body data-pagefind-filter="section:bearings">
+<body data-pagefind-filter="section:bearings" data-no-command-bar>
 <div class="page-content">
   <div class="page-header">
     <div class="page-emblem" data-pagefind-ignore>
@@ -32,59 +31,62 @@
         <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
       </svg>
     </div>
-    <div class="page-title" data-pagefind-meta="title">Current Bearing</div>
-    <div class="page-subtitle">As of Voyage 002 — What the Crew Offers</div>
+    <div class="page-title" data-pagefind-meta="title">Bearing · Voyage 002</div>
+    <div class="page-subtitle">Simulation Deck, Caelestis · Fleet date <span data-field="voyage-date">1491.6.26</span></div>
   </div>
   <div class="content">
-    <div class="bearing">
-      <div class="bearing-main">
-
-        <div class="here">
-          <span class="here-label">Position</span>
-          <a class="here-name" href="#">Simulation Deck</a>
-          <span class="here-sub">The Simulation Deck is the chamber at Caelestis where cadets enter pods to run immersive exercises. Here both cadet crews were briefed and set against each other in a salvage race </span>
-        </div>
-
-        <div class="panel">
-          <div class="panel-head">
-            <span class="panel-title">Last Voyage</span>
-            <a class="panel-more" href="../voyage-002.html">Read the account ›</a>
-          </div>
-          <div class="last-title">Voyage 002 — What the Crew Offers</div>
-          <p class="last-text">Bartholomew is settled as the crew&#x27;s spelljammer. The stolen-ship revelation links Boogie&#x27;s mystery object to the burglaries. Sol carries a new, named awareness of Beshaba. Casey earned coin and confirmed the presence follows him beyond the wardrobe. The crew recovered the simulated logbook and won the race.</p>
-          <div class="chip-row"><span class="chip-label">Met</span><div class="chips"><a class="chip" href="../../registry/dossiers/boatswain-tarto.html">Boatswain Tarto</a><a class="chip" href="../../registry/dossiers/veena.html">Veena</a><a class="chip" href="../../registry/dossiers/saerthe-abizjn.html">Saerthe Abizjn</a><a class="chip" href="../../registry/dossiers/winston-ryeback.html">Winston Ryeback</a><a class="chip" href="../../registry/dossiers/miken.html">Miken</a><a class="chip" href="../../registry/dossiers/rindle-gearloft.html">Rindle Gearloft</a></div></div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-head">
-            <span class="panel-title">Quest Board</span>
-            <a class="panel-more" href="../../quests/index.html">All quests ›</a>
-          </div>
-          <div class="q-grid"><a class="q-card" href="../../quests/the-caelestis-burglaries.html"><span class="q-top"><span class="q-name">The Caelestis Burglaries</span><span class="q-prog">1/3</span></span><span class="q-bar"><span class="q-fill" style="width:33%"></span></span><span class="q-next"><span class="q-next-label">Next</span> Look into Joffrey and the man named Jeffrey</span></a><a class="q-card" href="../../quests/the-path-to-viren.html"><span class="q-top"><span class="q-name">The Path to Viren</span><span class="q-prog">1/3</span></span><span class="q-bar"><span class="q-fill" style="width:33%"></span></span><span class="q-next"><span class="q-next-label">Next</span> Find Zerathis, or charts and word of him</span></a><a class="q-card" href="../../quests/tumaks-search-for-family.html"><span class="q-top"><span class="q-name">Tumak&#x27;s Search for Family</span><span class="q-prog">0/1</span></span><span class="q-bar"><span class="q-fill" style="width:0%"></span></span><span class="q-next"><span class="q-next-label">Next</span> Find a way home</span></a><a class="q-card" href="../../quests/the-tyrant-ship-and-the-hcatha-meteor.html"><span class="q-top"><span class="q-name">The Tyrant Ship and the H’Catha Meteor</span><span class="q-prog">1/5</span></span><span class="q-bar"><span class="q-fill" style="width:20%"></span></span><span class="q-next"><span class="q-next-label">Next</span> Commandeer the tyrant ship</span></a></div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-head">
-            <span class="panel-title">The Crew</span>
-            <a class="panel-more" href="../../registry/crew-manifest/index.html">Manifest ›</a>
-          </div>
-          <div class="crew-grid"><a class="crew-card" href="../../registry/crew-manifest/boogie.html"><span class="crew-name">Boogie</span><span class="crew-line">Ordered only fruit and was given a silvery starfruit at the Weeping Goddess</span></a><a class="crew-card" href="../../registry/crew-manifest/casey-geim.html"><span class="crew-name">Casey</span><span class="crew-line">Pulled a Sea Dock cargo notice from the refectory board without explaining why</span></a><a class="crew-card" href="../../registry/crew-manifest/gregory.html"><span class="crew-name">Gregory</span><span class="crew-line">Accepted a set of spare utensils from Ryeback, taking the kindly-meant gesture as it was offered</span></a><a class="crew-card" href="../../registry/crew-manifest/sol-fortuna.html"><span class="crew-name">Sol</span><span class="crew-line">Asked Ryeback for soup and was given knock-your-mama&#x27;s-socks-off soup</span></a><a class="crew-card" href="../../registry/crew-manifest/tumak-swan.html"><span class="crew-name">Tumak</span><span class="crew-line">Studied the refectory notice board for anything familiar from home and found nothing</span></a><a class="crew-card" href="../../registry/crew-manifest/bartholomew-grayson.html"><span class="crew-name">Bartholomew</span><span class="crew-line">Oriented by Boatswain Tarto, who told him being a wilder changed nothing once he was aboard a crew</span></a></div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-head">
-            <span class="panel-title">Still Unanswered</span>
-            <a class="panel-more" href="../../quests/index.html#threads">All threads ›</a>
-          </div>
-          <div class="chips"><a class="chip" href="../../quests/gregorys-pull.html">Gregory&#x27;s Pull</a><a class="chip" href="../../quests/the-unfinished-ship-within-boogie.html">The Unfinished Ship Within Boogie</a><a class="chip" href="../../quests/the-laughter-of-beshaba.html">The Laughter of Beshaba</a></div>
-        </div>
-
+    <nav class="bearing-strip" aria-label="Voyages" data-pagefind-ignore>
+      <button class="bs-arrow" type="button" data-step="-1" aria-label="Earlier voyages"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 2L4 7l5 5"/></svg></button>
+      <div class="bs-track">
+        <ol class="bs-list" data-field="voyage-strip">
+          <li><a class="bs-stop" href="voyage-001.html"><span class="bs-num">001</span><span class="bs-title">The Shape of a Crew</span></a></li>
+          <li><a class="bs-stop" href="voyage-002.html" aria-current="page"><span class="bs-num">002</span><span class="bs-title">What the Crew Offers</span></a></li>
+        </ol>
       </div>
-      <nav class="timeline" data-pagefind-ignore>
-        <div class="tl-head">Bearings</div>
-        <div class="tl-stops"><a class="tl-stop" href="voyage-006.html"><span class="tl-dot"></span><span class="tl-num">006</span><span class="tl-title">What Is Here Has Not Left</span></a><a class="tl-stop" href="voyage-005.html"><span class="tl-dot"></span><span class="tl-num">005</span><span class="tl-title">Retreat Is Always an Option</span></a><a class="tl-stop" href="voyage-004.html"><span class="tl-dot"></span><span class="tl-num">004</span><span class="tl-title">All Things Find Their Way Home</span></a><a class="tl-stop" href="voyage-003.html"><span class="tl-dot"></span><span class="tl-num">003</span><span class="tl-title">The Weight of What&#x27;s Real</span></a><a class="tl-stop is-now" href="voyage-002.html"><span class="tl-dot"></span><span class="tl-num">002</span><span class="tl-title">What the Crew Offers</span></a><a class="tl-stop" href="voyage-001.html"><span class="tl-dot"></span><span class="tl-num">001</span><span class="tl-title">The Shape of a Crew</span></a></div>
-      </nav>
+      <button class="bs-arrow" type="button" data-step="1" aria-label="Later voyages"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg></button>
+    </nav>
+    <div class="bearing">
+      <section class="bearing-col bearing-then" id="last-time" data-voyage="002">
+        <div class="bearing-kicker">Last time · Voyage 002</div>
+        <h2 class="bearing-title">What the Crew Offers</h2>
+        <ul class="bearing-bullets">
+          <li>Bartholomew joined the crew and took the spelljammer’s seat. Over a meal at the <a href="../../navigation-records/the-weeping-goddess.html">Weeping Goddess</a> the cadets settled their shipboard roles.</li>
+          <li><a href="../../registry/dossiers/saerthe-abizjn.html">Saerthe</a>’s <a href="../../inventory/entries/saerthes-miniature-ship.html">miniature spelljamming ship</a> has been stolen, and it is the model that came out of Boogie’s chest the night before.</li>
+          <li>In a simulated salvage race through an asteroid field the crew recovered the logbook, fended off a githyanki vessel and came back first.</li>
+        </ul>
+        <details class="bearing-fold">
+          <summary>What each of you did</summary>
+          <ul class="bearing-crew" data-field="crew">
+            <li><a class="crew-tag" href="../../registry/crew-manifest/boogie.html">Boogie</a> set the model ship on the table for the crew, then leapt onto the enemy ship and had to be brought back</li>
+            <li><a class="crew-tag" href="../../registry/crew-manifest/casey-geim.html">Casey</a> drew Ryeback’s private life out of him, worked a cargo shift at Rindle Gearloft’s dock and duplicated the logbook</li>
+            <li><a class="crew-tag" href="../../registry/crew-manifest/gregory.html">Gregory</a> plotted the course for the race and named the targets</li>
+            <li><a class="crew-tag" href="../../registry/crew-manifest/sol-fortuna.html">Sol</a> took a stroke of misfortune onto himself to save Boogie’s jump, and heard Beshaba laugh</li>
+            <li><a class="crew-tag" href="../../registry/crew-manifest/tumak-swan.html">Tumak</a> took the captain’s chair and warned the crew that things going missing might matter</li>
+            <li><a class="crew-tag" href="../../registry/crew-manifest/bartholomew-grayson.html">Bartholomew</a> took to the helm as if born to it and slowed the ship to bring Boogie back aboard</li>
+          </ul>
+        </details>
+        <details class="bearing-fold">
+          <summary>What you learned</summary>
+          <ul class="bearing-learned">
+            <li>Saerthe’s own miniature ship was stolen, the same model that came out of Boogie’s chest.</li>
+            <li>The presence dogging Sol’s luck is Beshaba.</li>
+            <li>The presence that spoke from Mirt’s wardrobe found Casey again at the Sky Dock.</li>
+            <li>Ryeback mentioned a cadet named Barret talking about a hadozee who could read birthdays.</li>
+          </ul>
+        </details>
+        <details class="bearing-fold">
+          <summary>Who you met</summary>
+          <p class="bearing-met" data-field="met"><a href="../../registry/dossiers/boatswain-tarto.html">Boatswain Tarto</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/veena.html">Veena</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/saerthe-abizjn.html">Saerthe Abizjn</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/winston-ryeback.html">Winston Ryeback</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/miken.html">Miken</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/rindle-gearloft.html">Rindle Gearloft</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/barret.html">Barret</a></p>
+        </details>
+        <a class="bearing-more" href="../voyage-002.html">Read the full account ›</a>
+      </section>
+      <section class="bearing-col bearing-next">
+        <div class="bearing-kicker">After Voyage 002</div>
+        <h2 class="bearing-title">Before you sailed</h2>
+        <ul class="bearing-sail" data-field="before-you-sail"><!-- Before you sail: pending Korey's ruling --></ul>
+      </section>
     </div>
+    <p class="bearing-onward">What comes next is on the <a href="index.html">Current Bearing ›</a></p>
   </div>
 </div>
 </body>

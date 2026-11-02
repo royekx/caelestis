@@ -3,16 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Caelestis — Current Bearing</title>
+<title>Caelestis — Bearing, Voyage 001</title>
 <link rel="stylesheet" href="../../styles/caelestis.css">
-<link rel="stylesheet" href="../../styles/entity.css">
-<link rel="stylesheet" href="../../styles/board.css">
 <link rel="stylesheet" href="../../styles/bearing.css">
 <script src="../../data/bearing.js" defer></script>
+<script src="../../data/voyage.js" defer></script>
 <script src="../../scripts/nav.js" defer></script>
-<script src="../../scripts/ui.js" defer></script>
+<script src="../../scripts/bearing.js" defer></script>
 </head>
-<body data-pagefind-filter="section:bearings">
+<body data-pagefind-filter="section:bearings" data-no-command-bar>
 <div class="page-content">
   <div class="page-header">
     <div class="page-emblem" data-pagefind-ignore>
@@ -32,59 +31,61 @@
         <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
       </svg>
     </div>
-    <div class="page-title" data-pagefind-meta="title">Current Bearing</div>
-    <div class="page-subtitle">As of Voyage 001 — The Shape of a Crew</div>
+    <div class="page-title" data-pagefind-meta="title">Bearing · Voyage 001</div>
+    <div class="page-subtitle">Mirt’s quarters, Caelestis · Fleet date <span data-field="voyage-date">1491.6.25</span></div>
   </div>
   <div class="content">
-    <div class="bearing">
-      <div class="bearing-main">
-
-        <div class="here">
-          <span class="here-label">Position</span>
-          <a class="here-name" href="#">Mirt&#x27;s Quarters</a>
-          <span class="here-sub">Mirt&#x27;s quarters are the cluttered, excess-strewn chambers of Caelestis&#x27;s head, home to a fishbowl of octopi and an impossible wardrobe that opens onto bounded astral night — a magi</span>
-        </div>
-
-        <div class="panel">
-          <div class="panel-head">
-            <span class="panel-title">Last Voyage</span>
-            <a class="panel-more" href="../voyage-001.html">Read the account ›</a>
-          </div>
-          <div class="last-title">Voyage 001 — The Shape of a Crew</div>
-          <p class="last-text">A live centipede creature was preserved as evidence in the crate. Casey now has a direction toward Viren. Small loyalties formed among the crew. Tumak hides stolen items behind his bunk curtains.</p>
-          <div class="chip-row"><span class="chip-label">Met</span><div class="chips"><a class="chip" href="../../registry/dossiers/captain-sardax.html">Captain Sardax</a><a class="chip" href="../../registry/dossiers/boatswain-tarto.html">Boatswain Tarto</a><a class="chip" href="../../registry/dossiers/sor-kur.html">Sor&#x27;Kur</a><a class="chip" href="../../registry/dossiers/veena.html">Veena</a><a class="chip" href="../../registry/dossiers/kip-and-pik.html">Kip and Pik</a><a class="chip" href="../../registry/dossiers/joffrey.html">Joffrey</a><a class="chip" href="../../registry/dossiers/saerthe-abizjn.html">Saerthe Abizjn</a><a class="chip" href="../../registry/dossiers/mr-blip.html">Mr. Blip</a><a class="chip" href="../../registry/dossiers/mirt.html">Mirt</a></div></div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-head">
-            <span class="panel-title">Quest Board</span>
-            <a class="panel-more" href="../../quests/index.html">All quests ›</a>
-          </div>
-          <div class="q-grid"><a class="q-card" href="../../quests/the-caelestis-burglaries.html"><span class="q-top"><span class="q-name">The Caelestis Burglaries</span><span class="q-prog">1/3</span></span><span class="q-bar"><span class="q-fill" style="width:33%"></span></span><span class="q-next"><span class="q-next-label">Next</span> Look into Joffrey and the man named Jeffrey</span></a><a class="q-card" href="../../quests/the-path-to-viren.html"><span class="q-top"><span class="q-name">The Path to Viren</span><span class="q-prog">1/3</span></span><span class="q-bar"><span class="q-fill" style="width:33%"></span></span><span class="q-next"><span class="q-next-label">Next</span> Find Zerathis, or charts and word of him</span></a><a class="q-card" href="../../quests/tumaks-search-for-family.html"><span class="q-top"><span class="q-name">Tumak&#x27;s Search for Family</span><span class="q-prog">0/1</span></span><span class="q-bar"><span class="q-fill" style="width:0%"></span></span><span class="q-next"><span class="q-next-label">Next</span> Find a way home</span></a><a class="q-card" href="../../quests/the-tyrant-ship-and-the-hcatha-meteor.html"><span class="q-top"><span class="q-name">The Tyrant Ship and the H’Catha Meteor</span><span class="q-prog">1/5</span></span><span class="q-bar"><span class="q-fill" style="width:20%"></span></span><span class="q-next"><span class="q-next-label">Next</span> Commandeer the tyrant ship</span></a></div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-head">
-            <span class="panel-title">The Crew</span>
-            <a class="panel-more" href="../../registry/crew-manifest/index.html">Manifest ›</a>
-          </div>
-          <div class="crew-grid"><a class="crew-card" href="../../registry/crew-manifest/boogie.html"><span class="crew-name">Boogie</span><span class="crew-line">Rushed to help wounded Tumak during the Moonraider simulation rather than seek glory</span></a><a class="crew-card" href="../../registry/crew-manifest/casey-geim.html"><span class="crew-name">Casey</span><span class="crew-line">Fought with speed and cold, star-bright magic aboard the Moonraider simulation</span></a><a class="crew-card" href="../../registry/crew-manifest/gregory.html"><span class="crew-name">Gregory</span><span class="crew-line">Used clever spellwork to spoil a deadly strike during the Moonraider simulation</span></a><a class="crew-card" href="../../registry/crew-manifest/sol-fortuna.html"><span class="crew-name">Sol</span><span class="crew-line">Drove a ballista bolt through an attacker during the Moonraider simulation</span></a><a class="crew-card" href="../../registry/crew-manifest/tumak-swan.html"><span class="crew-name">Tumak</span><span class="crew-line">Answered the Moonraider chaos with a crossbow shot, then took a brutal blast to the shoulder</span></a><a class="crew-card" href="../../registry/crew-manifest/bartholomew-grayson.html"><span class="crew-name">Bartholomew</span><span class="crew-line">Aboard an abandoned tyrant ship as the crew&#x27;s spelljammer, his childhood two-starred vision surfacing in his o</span></a></div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-head">
-            <span class="panel-title">Still Unanswered</span>
-            <a class="panel-more" href="../../quests/index.html#threads">All threads ›</a>
-          </div>
-          <div class="chips"><a class="chip" href="../../quests/gregorys-pull.html">Gregory&#x27;s Pull</a><a class="chip" href="../../quests/the-unfinished-ship-within-boogie.html">The Unfinished Ship Within Boogie</a><a class="chip" href="../../quests/the-laughter-of-beshaba.html">The Laughter of Beshaba</a></div>
-        </div>
-
+    <nav class="bearing-strip" aria-label="Voyages" data-pagefind-ignore>
+      <button class="bs-arrow" type="button" data-step="-1" aria-label="Earlier voyages"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 2L4 7l5 5"/></svg></button>
+      <div class="bs-track">
+        <ol class="bs-list" data-field="voyage-strip">
+          <li><a class="bs-stop" href="voyage-001.html" aria-current="page"><span class="bs-num">001</span><span class="bs-title">The Shape of a Crew</span></a></li>
+        </ol>
       </div>
-      <nav class="timeline" data-pagefind-ignore>
-        <div class="tl-head">Bearings</div>
-        <div class="tl-stops"><a class="tl-stop" href="voyage-006.html"><span class="tl-dot"></span><span class="tl-num">006</span><span class="tl-title">What Is Here Has Not Left</span></a><a class="tl-stop" href="voyage-005.html"><span class="tl-dot"></span><span class="tl-num">005</span><span class="tl-title">Retreat Is Always an Option</span></a><a class="tl-stop" href="voyage-004.html"><span class="tl-dot"></span><span class="tl-num">004</span><span class="tl-title">All Things Find Their Way Home</span></a><a class="tl-stop" href="voyage-003.html"><span class="tl-dot"></span><span class="tl-num">003</span><span class="tl-title">The Weight of What&#x27;s Real</span></a><a class="tl-stop" href="voyage-002.html"><span class="tl-dot"></span><span class="tl-num">002</span><span class="tl-title">What the Crew Offers</span></a><a class="tl-stop is-now" href="voyage-001.html"><span class="tl-dot"></span><span class="tl-num">001</span><span class="tl-title">The Shape of a Crew</span></a></div>
-      </nav>
+      <button class="bs-arrow" type="button" data-step="1" aria-label="Later voyages"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg></button>
+    </nav>
+    <div class="bearing">
+      <section class="bearing-col bearing-then" id="last-time" data-voyage="001">
+        <div class="bearing-kicker">Last time · Voyage 001</div>
+        <h2 class="bearing-title">The Shape of a Crew</h2>
+        <ul class="bearing-bullets">
+          <li>Five cadets woke into a losing battle aboard the <a href="../../navigation-records/the-moonraider.html"><em>Moonraider</em></a>. It was a simulation of <a href="../../registry/dossiers/captain-sardax.html">Captain Sardax</a>’s last stand, a test never meant to be won.</li>
+          <li>They ran orientation across Caelestis, from the quartermaster’s stores to a helm exercise at the <a href="../../navigation-records/spelljammer-nexus.html">Spelljammer Nexus</a> and the gymnasium assault course.</li>
+          <li>A crate delivered to <a href="../../registry/dossiers/mirt.html">Mirt</a> burst open with <a href="../../inventory/entries/crated-centipede-creature.html">centipede creatures</a>. Sol took the last one alive, and more burglaries struck the Academy at the same time.</li>
+        </ul>
+        <details class="bearing-fold">
+          <summary>What each of you did</summary>
+          <ul class="bearing-crew" data-field="crew">
+            <li><a class="crew-tag" href="../../registry/crew-manifest/boogie.html">Boogie</a> chose to keep the ship alive over taking the helm, and promised Tumak the crew would help find his family</li>
+            <li><a class="crew-tag" href="../../registry/crew-manifest/casey-geim.html">Casey</a> slipped into Mirt’s wardrobe, stole a shirt and etched the constellations he saw</li>
+            <li><a class="crew-tag" href="../../registry/crew-manifest/gregory.html">Gregory</a> saw through the gymnasium’s first illusion and felt a new pull in his core</li>
+            <li><a class="crew-tag" href="../../registry/crew-manifest/sol-fortuna.html">Sol</a> stood silently behind Boogie in a bunk dispute and took a creature alive as evidence</li>
+            <li><a class="crew-tag" href="../../registry/crew-manifest/tumak-swan.html">Tumak</a> claimed a crimson bag of holding and made a hidden corner of his bunk</li>
+          </ul>
+        </details>
+        <details class="bearing-fold">
+          <summary>What you learned</summary>
+          <ul class="bearing-learned">
+            <li>Sardax’s battle aboard the <em>Moonraider</em> was a simulation of his final defeat.</li>
+            <li>Mirt’s wardrobe is a magical replica of a place beyond H’Catha in the Viren system, a gift from a spellcaster named Zerathis.</li>
+            <li>A voice from the wardrobe told Casey to “Go there.”</li>
+            <li>The attack on Mirt was likely a diversion: other burglaries struck the Academy at the same time.</li>
+            <li>Boogie carries an incomplete model spelljamming ship that formed inside him.</li>
+          </ul>
+        </details>
+        <details class="bearing-fold">
+          <summary>Who you met</summary>
+          <p class="bearing-met" data-field="met"><a href="../../registry/dossiers/captain-sardax.html">Captain Sardax</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/boatswain-tarto.html">Boatswain Tarto</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/sor-kur.html">Sor’Kur</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/veena.html">Veena</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/kip-and-pik.html">Kip and Pik</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/joffrey.html">Joffrey</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/saerthe-abizjn.html">Saerthe Abizjn</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/mr-blip.html">Mr. Blip</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/mirt.html">Mirt</a></p>
+        </details>
+        <a class="bearing-more" href="../voyage-001.html">Read the full account ›</a>
+      </section>
+      <section class="bearing-col bearing-next">
+        <div class="bearing-kicker">After Voyage 001</div>
+        <h2 class="bearing-title">Before you sailed</h2>
+        <ul class="bearing-sail" data-field="before-you-sail"><!-- Before you sail: pending Korey's ruling --></ul>
+      </section>
     </div>
+    <p class="bearing-onward">What comes next is on the <a href="index.html">Current Bearing ›</a></p>
   </div>
 </div>
 </body>

@@ -23,12 +23,15 @@ window.CAELESTIS_BEARING = {
       { name: 'Tumak\u2019s Search for Family',               progress: '0/1', href: 'quests/tumaks-search-for-family.html' }
     ],
     met: [
-      { name: 'Ostekk-10',        href: 'registry/dossiers/the-behir.html' },
-      { name: 'Ostekk-6',         href: 'registry/dossiers/ostekk-6.html' },
-      { name: 'Miken',            href: 'registry/dossiers/miken.html' },
+      { name: 'Boatswain Tarto',  href: 'registry/dossiers/boatswain-tarto.html' },
+      { name: 'Saerthe Abizjn',   href: 'registry/dossiers/saerthe-abizjn.html' },
       { name: 'Winston Ryeback',  href: 'registry/dossiers/winston-ryeback.html' },
+      { name: 'Miken',            href: 'registry/dossiers/miken.html' },
       { name: 'Krik\u2019Lit',    href: 'registry/dossiers/krik-lit.html' },
-      { name: 'Pffred',           href: 'registry/dossiers/pffred.html' }
+      { name: 'Pffred',           href: 'registry/dossiers/pffred.html' },
+      { name: 'Ostekk-6',         href: 'registry/dossiers/ostekk-6.html' },
+      { name: 'Vaelorix',         href: 'registry/dossiers/vaelorix.html' },
+      { name: 'Ostekk-10',        href: 'registry/dossiers/the-behir.html' }
     ]
   },
 

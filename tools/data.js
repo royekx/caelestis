@@ -827,6 +827,171 @@ function checkPlayer(err) {
   });
 }
 
+// ── bearing pages ──────────────────────────────────────────────────────────
+// Every element <tag …> whose opening tag passes `test`, with depth counting,
+// as { open, inner, outer }, in page order.
+function elements(src, tag, test) {
+  const out = [], openRe = new RegExp('<' + tag + '\\b[^>]*>', 'g');
+  let open;
+  while ((open = openRe.exec(src))) {
+    if (!test(open[0])) continue;
+    const start = open.index + open[0].length, re = new RegExp('<(/?)' + tag + '\\b[^>]*>', 'g');
+    re.lastIndex = start;
+    let depth = 1, m;
+    while ((m = re.exec(src))) {
+      depth += m[1] ? -1 : 1;
+      if (depth === 0) { out.push({ open: open[0], inner: src.slice(start, m.index), outer: src.slice(open.index, m.index + m[0].length) }); break; }
+    }
+  }
+  return out;
+}
+const hasClass = c => o => new RegExp('\\bclass="[^"]*\\b' + c + '\\b').test(o);
+const links = h => matches(/<a\b[^>]*\bhref="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g, h).map(m => ({ href: m[1], text: text(m[2]), tag: m[0] }));
+
+// The Current Bearing and the per-voyage bearing pages. Each page's Last time
+// column, its strip and its Before you sail list are held to the record; the
+// Current Bearing's Last time column is the latest voyage page's, byte for
+// byte, and its Quest Board is the record's open quests and threads.
+function checkBearings(fresh, latest, err) {
+  const DIR = 'voyages/bearings';
+  const read = f => fs.readFileSync(path.join(ROOT, DIR, f), 'utf8');
+  const lastTime = src => elements(src, 'section', o => /\bid="last-time"/.test(o))[0];
+  const sails = {};
+  const sailItems = (rel, src) => {
+    const r = region(src, 'before-you-sail');
+    if (r === null) { err(`${rel}: no Before you sail list (data-field="before-you-sail")`); return []; }
+    return elements(r, 'li', hasClass('sail-item')).map(li => {
+      const b = /<b>([\s\S]*?)<\/b>/.exec(li.inner);
+      const o = elements(li.inner, 'span', hasClass('sail-outcome'))[0];
+      return { lead: b ? text(b[1]) : '', done: hasClass('is-done')(li.open), carried: hasClass('is-carried')(li.open), outcome: o ? text(o.inner) : '' };
+    });
+  };
+
+  function page(rel, src, n, isIndex) {
+    const s = fresh.sessions.find(x => x.number === n);
+    // the strip
+    const st = region(src, 'voyage-strip');
+    if (st === null) err(`${rel}: no voyage strip (data-field="voyage-strip")`);
+    else {
+      const want = fresh.sessions.filter(x => isIndex || x.number <= n).sort((a, b) => a.number - b.number);
+      const got = links(st);
+      if (got.map(a => a.href).join() !== want.map(x => `voyage-${pad(x.number)}.html`).join())
+        err(`${rel}: the strip links ${got.map(a => a.href.replace(/\D/g, '')).join(' ') || 'nothing'}; it should link ${want.map(x => pad(x.number)).join(' ')}`);
+      got.forEach(a => {
+        const x = want.find(w => a.href === `voyage-${pad(w.number)}.html`);
+        const t = /class="bs-title">([\s\S]*?)<\/span>/.exec(a.tag), num = /class="bs-num">([\s\S]*?)<\/span>/.exec(a.tag);
+        if (x && (!t || !num || text(t[1]) !== plain(x.name) || text(num[1]) !== pad(x.number)))
+          err(`${rel}: the strip reads "${a.text}" for Voyage ${pad(x.number)}, the record says "${x.name}"`);
+        const cur = /\baria-current="page"/.test(a.tag);
+        if (x && cur !== (x.number === n)) err(`${rel}: Voyage ${pad(x.number)} ${cur ? 'carries' : 'lacks'} aria-current in the strip`);
+      });
+      const nx = elements(st, 'li', hasClass('is-next'));
+      if (isIndex && (nx.length !== 1 || !text(nx[0].inner).startsWith(pad(latest + 1)))) err(`${rel}: the strip should end with "${pad(latest + 1)} Next voyage"`);
+      if (!isIndex && nx.length) err(`${rel}: a voyage page's strip stops at its own voyage; bearing.js adds the rest`);
+    }
+    // the date
+    if (!isIndex) {
+      const d = fleetDate(s.date), end = d ? d.text(d.to) : null;
+      const shown = regions(src, 'voyage-date').map(text);
+      if (shown.length !== 1 || shown[0] !== end) err(`${rel}: Fleet date reads "${shown.join(', ')}", Voyage ${pad(n)} ends ${end}`);
+    }
+    // Last time
+    const col = lastTime(src);
+    if (!col) return err(`${rel}: no Last time column (section#last-time)`);
+    if (!new RegExp(`\\bdata-voyage="${pad(n)}"`).test(col.open)) err(`${rel}: section#last-time should carry data-voyage="${pad(n)}"`);
+    const k = elements(col.inner, 'div', hasClass('bearing-kicker'))[0];
+    if (!k || text(k.inner) !== `Last time · Voyage ${pad(n)}`) err(`${rel}: the kicker should read "Last time · Voyage ${pad(n)}"`);
+    const h = elements(col.inner, 'h2', hasClass('bearing-title'))[0];
+    if (!h || text(h.inner) !== plain(s.name)) err(`${rel}: the title reads "${h ? text(h.inner) : ''}", the record says "${s.name}"`);
+    const people = (name, want, label) => {
+      const r = region(col.inner, name);
+      if (r === null) return err(`${rel}: no ${name} list in Last time`);
+      const got = links(r).map(a => ({ url: resolveFrom(`${DIR}/x.html`, a.href), text: a.text }));
+      const gu = got.map(a => a.url).sort().join(), wu = want.map(x => x.url).sort().join();
+      if (gu !== wu) err(`${rel}: ${label} lists ${got.map(a => a.text).join(', ')}; the record has ${want.map(x => x.name).join(', ')}`);
+      got.forEach(a => { const x = want.find(w => w.url === a.url); if (x && a.text !== label2(x)) err(`${rel}: ${label} names ${x.name} "${a.text}"; it should read "${label2(x)}"`); });
+    };
+    const label2 = x => x.id.startsWith('PC-') ? plain(x.name.split(' ')[0]) : plain(x.name);
+    people('crew', fresh.pcs.filter(p => (p.voyages || []).some(v => v.number === n)), 'What each of you did');
+    people('met', fresh.npcs.filter(x => (x.seen || []).includes(n)), 'Who you met');
+    if (!col.inner.includes(`href="../voyage-${pad(n)}.html"`)) err(`${rel}: Last time should link the full account, ../voyage-${pad(n)}.html`);
+    sails[rel] = sailItems(rel, src);
+    return col;
+  }
+
+  const files = fs.readdirSync(path.join(ROOT, DIR)).filter(f => /^voyage-\d{3}\.html$/.test(f));
+  fresh.sessions.forEach(x => { if (!files.includes(`voyage-${pad(x.number)}.html`)) err(`${DIR}/voyage-${pad(x.number)}.html does not exist`); });
+  let latestCol = null;
+  files.forEach(f => {
+    const n = parseInt(f.replace(/\D/g, ''), 10);
+    if (!fresh.sessions.some(x => x.number === n)) return err(`${DIR}/${f}: Voyage ${pad(n)} is not on record`);
+    const c = page(`${DIR}/${f}`, read(f), n, false);
+    if (n === latest) latestCol = c;
+  });
+  if (!exists(`${DIR}/index.html`)) return err(`${DIR}/index.html does not exist`);
+  const isrc = read('index.html'), irel = `${DIR}/index.html`;
+  const icol = page(irel, isrc, latest, true);
+  // The Current Bearing's Last time is the latest voyage page's, byte for byte.
+  if (icol && latestCol && icol.outer !== latestCol.outer)
+    err(`${irel}: its Last time column differs from ${DIR}/voyage-${pad(latest)}.html; copy the column across`);
+
+  // Before you sail. An item carried forward on a voyage page stays on the
+  // Current Bearing's list; an item ticked on a voyage page and still shown
+  // there is ticked the same way.
+  const here = sails[irel] || [];
+  Object.keys(sails).filter(r => r !== irel).forEach(r => sails[r].forEach(it => {
+    const on = here.find(x => x.lead === it.lead);
+    if (it.carried && !on) err(`${r}: "${it.lead}" is carried forward but is not on the Current Bearing's Before you sail`);
+    if (it.done && on && (!on.done || on.outcome !== it.outcome))
+      err(`${irel}: "${it.lead}" is ticked on ${r} ("${it.outcome}") and shown differently here`);
+  }));
+
+  // The Quest Board: open quests, most recently active first, each with its
+  // progress, its next objective and its open threads; then the loose threads.
+  const qb = region(isrc, 'quest-board');
+  if (qb === null) return err(`${irel}: no Quest Board (data-field="quest-board")`);
+  if (!/href="\.\.\/\.\.\/quests\/index\.html"/.test(qb)) err(`${irel}: the Quest Board heading should link ../../quests/index.html`);
+  const open = q => q.fields.Status === 'Open';
+  const last = q => Math.max(0, ...(q.voyages || []).map(v => v.number));
+  const want = fresh.quests.map((q, i) => [q, i]).filter(([q]) => q.kind === 'Quest' && open(q))
+    .sort((a, b) => last(b[0]) - last(a[0]) || a[1] - b[1]).map(x => x[0]);
+  const rows = elements(qb, 'li', hasClass('bq'));
+  const url = h => resolveFrom(irel, h);
+  const rowQ = rows.map(r => { const a = links(r.inner)[0]; return a ? fresh.quests.find(q => q.url === url(a.href)) : null; });
+  if (rowQ.map(q => q ? q.slug : '?').join() !== want.map(q => q.slug).join())
+    err(`${irel}: the Quest Board shows ${rowQ.map(q => q ? q.name : '?').join(', ')}; the record's open quests, most recent first, are ${want.map(q => q.name).join(', ')}`);
+  rows.forEach((r, i) => {
+    const q = rowQ[i];
+    if (!q) return;
+    const name = links(r.inner)[0];
+    if (name.text !== plain(q.name)) err(`${irel}: the Quest Board names ${q.slug} "${name.text}", the record says "${q.name}"`);
+    const p = q.progress || { done: 0, total: 0 };
+    const prog = elements(r.inner, 'span', hasClass('bq-prog'))[0];
+    if (!prog || text(prog.inner) !== `${p.done}/${p.total}`) err(`${irel}: ${q.slug} shows ${prog ? text(prog.inner) : 'no progress'}, the record gives ${p.done}/${p.total}`);
+    const w = /width:\s*(\d+)%/.exec(r.inner), pct = p.total ? Math.round(100 * p.done / p.total) : 0;
+    if (!w || +w[1] !== pct) err(`${irel}: ${q.slug}'s bar is ${w ? w[1] : '?'}%, it should be ${pct}%`);
+    const nx = elements(r.inner, 'span', hasClass('bq-next'))[0];
+    const first = (q.objectives || []).find(o => !o.done);
+    const shown = nx ? text(nx.inner).replace(/^Next\s*/, '') : '';
+    if (shown !== (first ? plain(first.text) : '')) err(`${irel}: ${q.slug} Next reads "${shown}", its first open objective is "${first ? first.text : 'none'}"`);
+    const th = fresh.quests.filter(t => t.kind === 'Thread' && t.parentId === q.id && open(t));
+    const tl = elements(r.inner, 'ul', hasClass('bq-threads'))[0];
+    const got = tl ? links(tl.inner) : [];
+    if (got.map(a => url(a.href)).join() !== th.map(t => t.url).join())
+      err(`${irel}: ${q.slug} lists threads ${got.map(a => a.text).join(', ') || 'none'}; the record has ${th.map(t => t.name).join(', ') || 'none'}`);
+    got.forEach(a => { const t = th.find(x => x.url === url(a.href)); if (t && a.text !== plain(t.name)) err(`${irel}: thread "${a.text}" should read "${t.name}"`); });
+  });
+  const loose = fresh.quests.filter(t => t.kind === 'Thread' && !t.parentId && open(t));
+  const fold = elements(qb, 'details', () => true).find(d => /Loose threads/.test(d.inner));
+  if (!fold) return err(`${irel}: no Loose threads fold on the Quest Board`);
+  const sum = /<summary>([\s\S]*?)<\/summary>/.exec(fold.inner);
+  if (!sum || text(sum[1]) !== `Loose threads (${loose.length})`) err(`${irel}: the fold reads "${sum ? text(sum[1]) : ''}"; the record has ${loose.length} loose threads`);
+  const lg = links(fold.inner.replace(/<summary>[\s\S]*?<\/summary>/, ''));
+  if (lg.map(a => url(a.href)).join() !== loose.map(t => t.url).join())
+    err(`${irel}: Loose threads lists ${lg.map(a => a.text).join(', ')}; the record has ${loose.map(t => t.name).join(', ')}`);
+  lg.forEach(a => { const t = loose.find(x => x.url === url(a.href)); if (t && a.text !== plain(t.name)) err(`${irel}: loose thread "${a.text}" should read "${t.name}"`); });
+}
+
 // ── prose ──────────────────────────────────────────────────────────────────
 // CLAUDE.md § Writing: three or more negations in one sentence is a rewrite.
 const NEG = /\b(no|not|never|nothing|none|without|nor|neither|nobody|nowhere)\b|n't\b/gi;
@@ -980,7 +1145,7 @@ function check() {
     const now = cd ? cd.text(cd.to) : null;
     if (now && str('date') !== now) err(`data/bearing.js: date is ${str('date') || 'missing'}, the latest voyage ends ${now}`);
     if (now) {
-      const pages = ['spelljammer-nexus/fleet-time.html', `voyages/bearings/voyage-${pad(latest)}.html`, 'voyages/bearings/index.html'];
+      const pages = ['spelljammer-nexus/fleet-time.html', 'voyages/bearings/index.html'];
       pages.forEach(pg => {
         if (!exists(pg)) return;
         const shown = regions(fs.readFileSync(path.join(ROOT, pg), 'utf8'), 'current-date').map(text);
@@ -1001,12 +1166,13 @@ function check() {
       if (get('progress') !== want) err(`data/bearing.js: ${q.slug} shows ${get('progress')}, record gives ${want || 'no objectives'}`);
       if (plain(get('name')) !== plain(q.name)) err(`data/bearing.js: ${q.slug} is named "${get('name')}", record says "${q.name}"`);
     });
-    const bi = path.join(ROOT, 'voyages/bearings/index.html'), bl = path.join(ROOT, `voyages/bearings/voyage-${pad(latest)}.html`);
-    if (!fs.existsSync(bl)) err(`voyages/bearings/voyage-${pad(latest)}.html does not exist`);
-    // The current bearing is the latest voyage's bearing page, byte for byte.
-    else if (!fs.existsSync(bi) || fs.readFileSync(bi, 'utf8') !== fs.readFileSync(bl, 'utf8'))
-      err(`voyages/bearings/index.html is not a copy of voyages/bearings/voyage-${pad(latest)}.html`);
+    // The bar's Met list is the people seen in the latest voyage.
+    const metBlock = /met:\s*\[([\s\S]*?)\]/.exec(b);
+    const metShown = matches(/href:\s*'([^']+)'/g, metBlock ? metBlock[1] : '').map(m => m[1]).sort();
+    const metWant = fresh.npcs.filter(n => (n.seen || []).includes(latest)).map(n => n.url).sort();
+    if (metShown.join() !== metWant.join()) err(`data/bearing.js: met lists ${metShown.length} people, the record has ${metWant.length} seen in Voyage ${pad(latest)}`);
   });
+  guarded('voyages/bearings/', () => checkBearings(fresh, latest, err));
 
   // 7. the DM layer
   const dv = dm.voyages.slice().sort((a, b) => a.number - b.number);

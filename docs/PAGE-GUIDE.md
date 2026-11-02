@@ -712,6 +712,18 @@ without JS they stack, which is also what Pagefind reads.
   (`sessions.json` `date`, cycle.kindling.ember). The voyage page header shows
   it; the command bar, the current bearing and the Fleet Time page show where
   the latest voyage ends.
+- **Bearing pages.** The Current Bearing (`voyages/bearings/index.html`)
+  is the voyage strip and one panel: Last time on the left (the latest
+  voyage, three bullets, the folds What each of you did, What you learned
+  and Who you met, and the link to the full account), Next time on the
+  right (Before you sail, then the Quest Board). Each voyage has its own
+  bearing page (`voyage-NNN.html`) with its Last time column and its own
+  Before you sailed list, ticked as later voyages settle it; it carries no
+  Quest Board and is otherwise left as written. On the Current Bearing a
+  voyage in the strip swaps the Last time column in place
+  (`scripts/bearing.js`). Before you sail holds only what the crew knows
+  it faces: never what a character may be doing out of sight. The command
+  bar stays off these pages (`data-no-command-bar` on `<body>`).
 - **Navigation.** The player home is the Current Bearing
   (`voyages/bearings/index.html`): the gate (`index.html`) enters there and
   the sidebar logo points there. The sidebar in `scripts/nav.js` is the one
