@@ -21,6 +21,8 @@ var CAELESTIS_VOCAB = [
   "Automaton",
   "Barret",
   "Bartholomew",
+  "Glimpse",
+  "Watchers",
   "Behir",
   "Beholder",
   "Beshaba",
