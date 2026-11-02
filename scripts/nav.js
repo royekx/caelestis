@@ -16,8 +16,8 @@
   // Derives a relative base path from the current page's URL depth.
   // Works for GitHub Pages at royekx.github.io/caelestis/
   //
-  //   /caelestis/dossiers/mirt.html         → 3 slashes → depth 1 → ../
-  //   /caelestis/voyages/voyage-001.html     → 3 slashes → depth 1 → ../
+  //   /caelestis/voyages/voyage-001.html          → 3 slashes → depth 1 → ../
+  //   /caelestis/registry/dossiers/mirt.html      → 4 slashes → depth 2 → ../../
 
   var pathname = window.location.pathname;
   var slashes  = (pathname.match(/\//g) || []).length;
@@ -51,7 +51,7 @@
     {
       label: 'Crew Operations',
       items: [
-        { key: 'bearings',      label: 'Current Bearing', path: 'bearings/index.html'                },
+        { key: 'bearings',      label: 'Current Bearing', path: 'voyages/bearings/index.html'        },
         { label: 'Plot the Next Voyage', href: 'https://rallly.co/invite/B8uUYlcm4oKB' },
         { label: 'Take the Helm',        href: 'https://royek.foundryserver.com/game'  }
       ]
@@ -61,20 +61,20 @@
       items: [
         { key: 'voyages',            label: 'Voyages',            path: 'voyages/index.html'            },
         { key: 'quests',             label: 'Quest Board',        path: 'quests/index.html'             },
-        { key: 'crew-manifest',      label: 'Manifest',           path: 'crew-manifest/index.html'      },
-        { key: 'dossiers',           label: 'Dossiers',           path: 'dossiers/index.html'           },
-        { key: 'factions',           label: 'Factions',           path: 'factions/index.html'           },
+        { key: 'crew-manifest',      label: 'Manifest',           path: 'registry/crew-manifest/index.html' },
+        { key: 'dossiers',           label: 'Dossiers',           path: 'registry/dossiers/index.html'  },
+        { key: 'factions',           label: 'Factions',           path: 'registry/factions/index.html'  },
         { key: 'navigation-records', label: 'Navigation Records', path: 'navigation-records/index.html' },
         { key: 'vessels',            label: 'Vessels',            path: 'vessels/index.html'            },
         { key: 'inventory',          label: 'Inventory',          path: 'inventory/index.html'          },
-        { key: 'logs',               label: 'Logs',               path: 'logs/index.html'               }
+        { key: 'logs',               label: 'Logs',               path: 'voyages/logs/index.html'       }
       ]
     },
     {
       label: 'Fleet Records',
       items: [
         { key: 'spelljammer-nexus',  label: 'Spelljammer Nexus',  path: 'spelljammer-nexus/index.html'  },
-        { key: 'handouts',           label: 'Corps Protocols',    path: 'handouts/index.html'           },
+        { key: 'protocols',          label: 'Fleet Protocols',    path: 'protocols/index.html'          },
         { key: 'search',             label: 'S.E.A.R.C.H.',       path: 'search/index.html'             }
       ]
     }
@@ -128,7 +128,7 @@
     var pad = function (n) { return ('00' + n).slice(-3); };
     var strip =
       '<div class="cb-strip">' +
-        '<a class="cb-face" href="' + base + (L.bearing || 'bearings/index.html') + '">' +
+        '<a class="cb-face" href="' + base + (L.bearing || 'voyages/bearings/index.html') + '">' +
           '<span class="cb-label">Current Bearing</span>' +
           '<span class="cb-cell"><span class="cb-key">Position</span>' +
             '<span class="cb-val">' + b.position +
@@ -157,7 +157,7 @@
         (d.consequence ? '<p class="cb-conseq">' + d.consequence + '</p>' : '') +
         (quests ? '<div class="cb-row"><span class="cb-key">Quests</span><div class="cb-quests">' + quests + '</div></div>' : '') +
         (met ? '<div class="cb-row"><span class="cb-key">Met</span><div class="cb-chips">' + met + '</div></div>' : '') +
-        '<a class="cb-more" href="' + base + (L.bearing || 'bearings/index.html') + '">Full bearing and timeline \u203a</a>' +
+        '<a class="cb-more" href="' + base + (L.bearing || 'voyages/bearings/index.html') + '">Full bearing and timeline \u203a</a>' +
       '</div>';
 
     return '<div class="command-bar">' + search + ops + strip + detail + '</div>';
@@ -268,11 +268,17 @@
 
   // ── Active state ──────────────────────────────────────────────────────────
 
+  // A section's folder is its path less the file. Sections nest
+  // (voyages/bearings/ inside voyages/), so the longest folder in the
+  // page's path wins.
+  var activeLink = null, activeLen = 0;
   document.querySelectorAll('.side-nav-link[data-section]').forEach(function (link) {
-    if (pathname.indexOf('/' + link.dataset.section + '/') !== -1) {
-      link.classList.add('active');
-    }
+    var s = groups.reduce(function (a, g) { return a.concat(g.items || []); }, [])
+      .filter(function (x) { return x.key === link.dataset.section; })[0];
+    var dir = '/' + (s && s.path ? s.path.replace(/[^\/]*$/, '') : link.dataset.section + '/');
+    if (pathname.indexOf(dir) !== -1 && dir.length > activeLen) { activeLink = link; activeLen = dir.length; }
   });
+  if (activeLink) activeLink.classList.add('active');
 
   // ── Mobile toggle ─────────────────────────────────────────────────────────
 

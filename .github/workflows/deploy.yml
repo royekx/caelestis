@@ -39,14 +39,17 @@ jobs:
 
       # -- Player index -> /pagefind/ --
       # Indexes only the player-facing directories via an explicit glob.
-      # prime/, restricted/, the companion pages (aspects/, wayfinder-path/,
-      # stellar-chart/), search/, scripts/, data/, styles/ and *-template.html
-      # are simply never matched.
+      # prime/, restricted/, search/, scripts/, tools/, data/ and styles/
+      # are never matched. The *-template.html pages sit inside matched
+      # folders and carry data-pagefind-ignore on <body> (the deploy also
+      # deletes them, after the index is built). The companion tabs on the
+      # crew pages (Aspects, Stellar Chart, Wayfinder's Path) carry
+      # data-pagefind-ignore, so their text stays out of the index.
       - name: Build player index
         run: |
           npx -y pagefind \
             --site . \
-            --glob "{index.html,hub.html,voyages/*.html,bearings/*.html,logs/*.html,crew-manifest/**/*.html,dossiers/**/*.html,factions/**/*.html,quests/**/*.html,spelljammer-nexus/**/*.html,inventory/**/*.html,handouts/**/*.html,navigation-records/**/*.html,vessels/**/*.html}" \
+            --glob "{index.html,hub.html,voyages/*.html,voyages/bearings/*.html,voyages/logs/*.html,registry/crew-manifest/*.html,registry/dossiers/**/*.html,registry/factions/**/*.html,quests/**/*.html,spelljammer-nexus/**/*.html,inventory/**/*.html,protocols/**/*.html,navigation-records/**/*.html,vessels/**/*.html}" \
             --exclude-selectors "[data-pagefind-ignore], nav, .site-nav, footer" \
             --verbose
 
@@ -83,15 +86,15 @@ jobs:
       # request by .github/workflows/check.yml, not here. A typo fixed on one
       # page should not be able to take the site down.
       - name: Guard the record
-        run: node scripts/data.js guard
+        run: node tools/data.js guard
 
       - name: Prune what the site does not serve
         run: |
           set -e
-          rm -f  scripts/data.js scripts/survey.js scripts/terms.js scripts/visual.js CLAUDE.md
-          rm -rf prime/working docs
+          rm -f  CLAUDE.md
+          rm -rf tools prime/working docs
           find . -name '*-template.html' -not -path './.git/*' -delete
-          echo "pruned: scripts/data.js, scripts/survey.js, scripts/terms.js, scripts/visual.js, CLAUDE.md, prime/working, docs, *-template.html"
+          echo "pruned: tools/, CLAUDE.md, prime/working, docs, *-template.html"
 
       # -- Publish the whole site (with all three index bundles) --
       - name: Setup Pages

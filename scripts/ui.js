@@ -104,6 +104,59 @@
     });
   }
 
+  /* ── Classified veil ──
+     A companion tab on a crew page opens behind a .classified veil that
+     asks for its cadet's passphrase. The page holds only the SHA-256 of
+     the passphrase (data-hash, lowercase and trimmed before hashing);
+     the input is hashed the same way and compared. Every veil on a crew
+     page names its cadet (data-veil) and shares one passphrase: a match
+     lifts them all, and sessionStorage remembers it for the session. The
+     panels ship veiled, so without JS they stay hidden. */
+  function sha256hex(str) {
+    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(str)).then(function (buf) {
+      return Array.prototype.map.call(new Uint8Array(buf), function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
+    });
+  }
+  document.querySelectorAll('.classified[data-veil]').forEach(function (v) {
+    var panel = v.closest('.companion-panel');
+    if (!panel) return;
+    var key = 'caelestis_file_' + v.dataset.veil;
+    var form = v.querySelector('.classified-form');
+    var input = v.querySelector('.classified-input');
+    var deny = v.querySelector('.classified-deny');
+    function lift() {
+      document.querySelectorAll('.classified[data-veil="' + v.dataset.veil + '"]').forEach(function (o) {
+        o.hidden = true;
+        var pn = o.closest('.companion-panel');
+        if (pn) pn.classList.remove('is-veiled');
+      });
+    }
+    var open = false;
+    try { open = sessionStorage.getItem(key) === v.dataset.hash; } catch (e) { /* storage blocked */ }
+    if (open) { lift(); return; }
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      deny.hidden = true;
+      if (!(window.crypto && crypto.subtle)) {
+        deny.textContent = 'This terminal cannot read a passphrase. Open the archive over a secure line.';
+        deny.hidden = false;
+        return;
+      }
+      sha256hex(input.value.trim().toLowerCase()).then(function (h) {
+        if (h === v.dataset.hash) {
+          try { sessionStorage.setItem(key, h); } catch (e2) { /* storage blocked */ }
+          input.value = '';
+          lift();
+          panel.focus({ preventScroll: true });
+        } else {
+          deny.hidden = false;
+          input.select();
+        }
+      });
+    });
+  });
+
   /* ── Expandable rows ──
      A button with aria-controls toggles the element it names. Used by
      the voyage index, the quest board, and the location register. */

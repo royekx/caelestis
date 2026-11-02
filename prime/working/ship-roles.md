@@ -37,7 +37,7 @@ From this draft, heavy Hull hits also start mishaps, not only crits. That keeps 
 **Sources.**
 - **Repo:**
   - `prime/rules/index.html` § Ship & crew.
-  - `handouts/crew-roles.html` and `handouts/ship-mechanics.html`, the rules as run.
+  - `protocols/crew-roles.html` and `protocols/ship-mechanics.html`, the rules as run.
   - `prime/vessels/tyrant-ship.html` and `prime/vessels/flighty-foundling.html`.
   - `prime/working/BACKLOG.md` § vessels/tyrant-ship.html.
   - `voyages/voyage-001/002/006.html` and `prime/campaign/voyages/index.html`.
@@ -515,8 +515,8 @@ Only the new proposals in this draft remain open.
 6. **Scuttle ship on the crossing.** Does the tyrant ship carry one docked in the intake? *Default: yes, one, which seats six.*
 
 **Pages to update once ruled:**
-- `handouts/crew-roles.html`
-- `handouts/ship-mechanics.html`
+- `protocols/crew-roles.html`
+- `protocols/ship-mechanics.html`
 - `prime/rules/index.html` § Ship & crew
 - `prime/vessels/tyrant-ship.html` § Still to decide
 - the V007 runsheet, which still lists three cannons
@@ -532,7 +532,7 @@ Only the new proposals in this draft remain open.
 ## Promotes to
 
 - prime/rules/index.html § Ship & crew.
-- handouts/crew-roles.html and handouts/ship-mechanics.html (player rules sheets), and a player ship sheet.
+- protocols/crew-roles.html and protocols/ship-mechanics.html (player rules sheets), and a player ship sheet.
 - prime/vessels/tyrant-ship.html (the four eyes) and prime/vessels/flighty-foundling.html.
 - The V007 runsheet.
 

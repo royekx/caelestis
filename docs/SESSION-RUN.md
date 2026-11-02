@@ -49,7 +49,7 @@ written to the record before the second.
 
 ```bash
 git fetch origin main && git checkout -b claude/voyage-NNN origin/main
-node scripts/data.js check
+node tools/data.js check
 ```
 
 The check must pass before anything changes. If it fails, fix what it reports
@@ -338,7 +338,7 @@ DM-side twin of a bullet.
 Edit the JSON by hand, authored fields only, then:
 
 ```bash
-node scripts/data.js derive
+node tools/data.js derive
 ```
 
 `derive` and `check` reject any key or field the schema does not list.
@@ -352,13 +352,13 @@ node scripts/data.js derive
 | `voyages/voyage-NNN.html` | new, from `voyage-template.html`: At a Glance, Brief Account, Full Account (the approved account), Recording |
 | `voyages/voyage-(NNN-1).html` | its "next voyage" link |
 | `voyages/index.html` | a row and its Overview |
-| `bearings/voyage-NNN.html` | new, from the previous bearing page |
-| `bearings/index.html` | a copy of the new bearing page |
+| `voyages/bearings/voyage-NNN.html` | new, from the previous bearing page |
+| `voyages/bearings/index.html` | a copy of the new bearing page |
 | `data/bearing.js` | voyage, title, date, position, outstanding, consequence, quests, met, links |
 | `data/vocabulary.js` | every new proper noun |
 | each changed record's page | on the Voyage log tab, the new voyage becomes the latest block and the old one moves into Previous Voyages; the infobox rows, First seen and Last seen (or First and Last voyage) among them; the new voyage in All appearances; overview; objectives; Connections. Layout in `docs/PAGE-GUIDE.md` § 8, Record pages |
 | each new record's page | new, from a sibling page of the same kind (`inventory/entries/entry-template.html` for an item), with `data-entity` set to its id |
-| each register | `crew-manifest/` `dossiers/` `factions/` `navigation-records/` `vessels/` `inventory/` `quests/` index pages: rows, overview text, progress, counts |
+| each register | `registry/crew-manifest/` `registry/dossiers/` `registry/factions/` `navigation-records/` `vessels/` `inventory/` `quests/` index pages: rows, overview text, progress, counts |
 
 The Brief Account and At a Glance are taken from the approved Full Account and
 add nothing it does not say.
@@ -380,8 +380,8 @@ Voyages board read the record and need no edit.
 ## 6 · Check
 
 ```bash
-node scripts/data.js check
-node scripts/terms.js
+node tools/data.js check
+node tools/terms.js
 ```
 
 Zero errors before the pull request opens. Warnings are fixed or named in the
@@ -396,7 +396,7 @@ pull request. Then open the changed pages in a browser once.
 | each register row shows its record's name, overview, sub-line, state and progress | the bar's position, outstanding and consequence lines |
 | each voyage page carries its number and title | the prose of any page under `prime/` |
 | the command bar's voyage, title, quest names and progress | the Crew Logs document |
-| `bearings/index.html` is the latest bearing page | |
+| `voyages/bearings/index.html` is the latest bearing page | |
 | every local link and anchor on the site resolves | |
 | the DM layer agrees with the record | |
 

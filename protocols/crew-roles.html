@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelestis — Bridge Crew Roles</title>
+<link rel="stylesheet" href="../styles/caelestis.css">
+<style>
+  /* ── LINKS ── */
+  .callout a, .note-list a, .entry a {
+    color: var(--ice); text-decoration: underline;
+    text-decoration-color: var(--ice-dim); text-underline-offset: 0.15em;
+  }
+  .callout a:hover, .note-list a:hover, .entry a:hover { color: var(--gold-light); }
+
+  /* ── GENERAL NOTE ── */
+  .general-note {
+    background: var(--gold-faint);
+    border-left: 3px solid var(--gold);
+    padding: 0.7rem 1rem;
+    font-size: 0.99rem; line-height: 1.55;
+    margin-bottom: 1rem; color: var(--text);
+  }
+  .note-list { margin: 0 0 2.2rem; padding-left: 1.1rem; font-size: 0.98rem; line-height: 1.5; color: var(--text); }
+  .note-list li { margin-bottom: 0.35rem; }
+  .note-list b { font-weight: 600; }
+
+  /* ── ROLE CARD ── */
+  .role { margin-bottom: 2.8rem; }
+
+  .role-header {
+    display: flex; align-items: baseline; gap: 0.8rem; flex-wrap: wrap;
+    margin-bottom: 0.4rem; padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--gold-rule);
+  }
+  .role-name {
+    font-family: 'Cinzel', serif; font-size: 1.25rem;
+    font-weight: 700; letter-spacing: 0.04em; color: var(--text);
+  }
+  .role-tag { font-size: 0.942rem; font-style: italic; color: var(--text-dim); }
+  .role-job { font-size: 0.99rem; line-height: 1.5; color: var(--text-dim); margin: 0.2rem 0 0.8rem; }
+
+  /* ── PASSIVE ── */
+  .passive {
+    background: var(--gold-faint);
+    border-left: 3px solid var(--gold);
+    padding: 0.55rem 0.9rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.99rem; line-height: 1.5; color: var(--text);
+  }
+  .passive-label {
+    font-family: 'Cinzel', serif; font-size: 0.835rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold); display: block; margin-bottom: 0.2rem;
+  }
+
+  /* ── ABILITIES ── */
+  .abilities { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 0.85rem; }
+  .ability {
+    font-size: 0.97rem; line-height: 1.45; color: var(--text);
+    padding-left: 0.9rem; border-left: 2px solid var(--gold-rule);
+  }
+  .ability b { font-weight: 600; color: var(--text); }
+  .ability em { color: var(--text-dim); }
+
+  /* ── SCALING ── */
+  .scaling { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.6rem; }
+  .scale {
+    background: rgba(111, 158, 201, 0.08);
+    border: 1px solid var(--rule);
+    padding: 0.55rem 0.75rem; min-width: 0;
+    font-size: 0.93rem; line-height: 1.4; color: var(--text);
+  }
+  .scale-label {
+    font-family: 'Cinzel', serif; font-size: 0.75rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ice-light); display: block; margin-bottom: 0.25rem;
+  }
+
+  @media(max-width:640px){
+    .scaling { grid-template-columns: minmax(0, 1fr); }
+    .page-title { font-size: 1.6rem; }
+  }
+</style>
+  <script src="../data/bearing.js" defer></script>
+  <script src="../scripts/nav.js" defer></script>
+</head>
+<body data-pagefind-filter="section:protocols">
+<div class="page-content">
+  <div class="page-header">
+    <div class="page-eyebrow">Player Reference</div>
+    <div class="page-title" data-pagefind-meta="title">Bridge Crew Roles</div>
+    <div class="page-subtitle">Your role adds to what you can do aboard a spelljamming vessel.</div>
+  </div>
+
+  <div class="content">
+
+    <div class="general-note">
+      Your role adds to your turn. You still take your action, bonus action, movement and reaction as normal, and every role gives you three things on top: a passive that always works, a menu of bonus actions, and at most one reaction.
+    </div>
+    <ul class="note-list">
+      <li><b>Optional.</b> You can spend your bonus action on your own features instead of your role's.</li>
+      <li><b>Fixed for the fight.</b> If someone goes down, anyone can take their seat as an action.</li>
+      <li><b>Growing with you.</b> Role numbers use your proficiency bonus (PB), and each role steps up at levels 5, 10 and 15.</li>
+      <li><b>Ship rolls.</b> A ship weapon attack, a role check, a Grapple, an escape check, or a save against a ship effect.</li>
+      <li><b>AC cap.</b> Role bonuses to the ship's AC add up to +5 at most.</li>
+      <li><b>The ship rules</b> are on <a href="ship-mechanics.html">Ship Mechanics</a>, and the eye stations on the tyrant ship's <a href="../navigation-records/the-tyrant-ship.html#ship-sheet">ship sheet</a>.</li>
+    </ul>
+
+    <!-- ══ CAPTAIN ══ -->
+    <div class="role" id="captain">
+      <div class="role-header">
+        <span class="role-name">Captain</span>
+        <span class="role-tag">Command · Cha or Wis · Tumak</span>
+      </div>
+      <div class="role-job">Controls the order and lifts the crew.</div>
+      <div class="passive">
+        <span class="passive-label">Passive — Command</span>
+        You roll your side's initiative. Allies who can hear you have advantage on saves against being frightened.
+      </div>
+      <div class="abilities">
+        <div class="ability"><b>Rally.</b> <em>Bonus action.</em> One ally gets a Command die to add to one ship roll before your next turn.</div>
+        <div class="ability"><b>Order.</b> <em>Bonus action.</em> One ally uses their reaction to take one of their role's bonus actions.</div>
+        <div class="ability"><b>Grapple.</b> <em>Action, Close range only.</em> Make a Cha (Intimidation or Persuasion) check contested by the enemy captain, or against DC 12 if there is none. On a success the ships lock together and move at half speed.</div>
+        <div class="ability"><b>Fear eye.</b> On the tyrant ship, your station holds the Fear eye.</div>
+      </div>
+      <div class="scaling">
+        <div class="scale"><span class="scale-label">Level 4</span>Command die d6. Fear eye DC 14.</div>
+        <div class="scale"><span class="scale-label">Level 10</span>Command die d10. Fear eye DC 17.</div>
+        <div class="scale"><span class="scale-label">Steps</span>d8 at level 5, d10 at level 10, d12 at level 15, when Rally also reaches two allies.</div>
+      </div>
+    </div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <!-- ══ SPELLJAMMER ══ -->
+    <div class="role" id="spelljammer">
+      <div class="role-header">
+        <span class="role-name">Spelljammer</span>
+        <span class="role-tag">Pilot · spellcasting ability · Bartholomew</span>
+      </div>
+      <div class="role-job">Chooses the range, and with it what the fight looks like.</div>
+      <div class="passive">
+        <span class="passive-label">Passive — Helm</span>
+        You move the ship and shift the range band for free, and you sense everything on and around the ship. You can cast your own spells at anything you can see on or around the ship. Takeoff is a DC 13 spellcasting check.
+      </div>
+      <div class="abilities">
+        <div class="ability"><b>Shields Up.</b> <em>Bonus action, spend a spell slot.</em> The ship gains +3 AC, plus 1 per slot level above 1st, until your next turn.</div>
+        <div class="ability"><b>Jink.</b> <em>Bonus action.</em> The first ship weapon attack against the ship before your next turn has disadvantage.</div>
+        <div class="ability"><b>Burn.</b> <em>Bonus action.</em> Shift the range band one more step.</div>
+        <div class="ability"><b>Onboard Defense.</b> <em>Bonus action.</em> A creature aboard makes a Wis save. On a failure it takes psychic damage and has disadvantage on its next roll.</div>
+        <div class="ability"><b>Escape.</b> <em>Action, Long range only.</em> Make the escape check (Ship Mechanics, Escape).</div>
+      </div>
+      <div class="scaling">
+        <div class="scale"><span class="scale-label">Level 4</span>DC 14. Onboard Defense 1d6. Jink covers 1 attack.</div>
+        <div class="scale"><span class="scale-label">Level 10</span>DC 17. Onboard Defense 3d6. Jink covers 2 attacks.</div>
+        <div class="scale"><span class="scale-label">Steps</span>Onboard Defense gains 1d6 at levels 5, 10 and 15. Jink covers 2 attacks from level 10. From level 15, one Shields Up a fight costs no slot.</div>
+      </div>
+    </div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <!-- ══ NAVIGATOR ══ -->
+    <div class="role" id="navigator">
+      <div class="role-header">
+        <span class="role-name">Navigator</span>
+        <span class="role-tag">Coordination &amp; hazards · Int or Wis · Gregory</span>
+      </div>
+      <div class="role-job">Reads the fight so everyone else's rolls land.</div>
+      <div class="passive">
+        <span class="passive-label">Passive — Plot</span>
+        Once per hazard, reroll one failed check.
+      </div>
+      <div class="abilities">
+        <div class="ability"><b>Read the Line.</b> <em>Bonus action.</em> Your side's ship weapon attacks against one target have advantage until your next turn.</div>
+        <div class="ability"><b>Find Cover.</b> <em>Bonus action.</em> Roll d20 + PB + Int or Wis against DC 13. On a success the ship has +2 AC against one ship until the end of your next turn.</div>
+        <div class="ability"><b>Find the Gap.</b> <em>Bonus action.</em> Your side's next escape check has advantage.</div>
+        <div class="ability"><b>Slowing eye.</b> On the tyrant ship, your station holds the Slowing eye.</div>
+      </div>
+      <div class="scaling">
+        <div class="scale"><span class="scale-label">Level 4</span>Find Cover +6. Slowing eye DC 14.</div>
+        <div class="scale"><span class="scale-label">Level 10</span>Find Cover +9. Slowing eye DC 17. Read the Line also crits on 19–20.</div>
+        <div class="scale"><span class="scale-label">Steps</span>At level 5, Find Cover needs no check. At level 10, Read the Line crits on 19–20. At level 15, it covers two targets.</div>
+      </div>
+    </div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <!-- ══ GUNNER ══ -->
+    <div class="role" id="gunner">
+      <div class="role-header">
+        <span class="role-name">Gunner</span>
+        <span class="role-tag">Artillery · Str or Dex, Cha at an eye · Sol</span>
+      </div>
+      <div class="role-job">Takes the enemy ship apart.</div>
+      <div class="passive">
+        <span class="passive-label">Passive — Gun Captain</span>
+        You add your modifier to ship weapon damage. Class features that apply to weapon attacks apply to ship weapons, and Extra Attack lets you fire a second weapon.
+      </div>
+      <div class="abilities">
+        <div class="ability"><b>Aim.</b> <em>Bonus action.</em> Advantage on your next ship weapon attack this turn.</div>
+        <div class="ability"><b>Called Shot.</b> <em>Bonus action, added to a shot.</em> A hit deals half damage and adds one effect: a weapon is disabled; or the rigging is hit, so the target cannot Jink or Burn; or, on an open deck, 1d4 + PB crew drop. Through the Disintegration eye, the part is destroyed.</div>
+        <div class="ability"><b>Quick Load.</b> <em>Bonus action, PB uses per long rest.</em> Fire the same weapon once more. It does not work on an eye.</div>
+        <div class="ability"><b>Disintegration eye.</b> On the tyrant ship, your station holds the Disintegration eye.</div>
+      </div>
+      <div class="scaling">
+        <div class="scale"><span class="scale-label">Level 4</span>A ballista at +5 for 3d10 + 3. Quick Load 2 per long rest.</div>
+        <div class="scale"><span class="scale-label">Level 10</span>+8 with two shots. Quick Load 4 per long rest. Called Shot deals full damage.</div>
+        <div class="scale"><span class="scale-label">Steps</span>Level 5 brings Extra Attack instead. At level 10, Called Shot deals full damage. At level 15, ship weapons crit on 19–20.</div>
+      </div>
+    </div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <!-- ══ BOATSWAIN ══ -->
+    <div class="role" id="boatswain">
+      <div class="role-header">
+        <span class="role-name">Boatswain</span>
+        <span class="role-tag">Ship operations · also called Bosun · Str, Dex, or Int with tools · Casey</span>
+      </div>
+      <div class="role-job">Keeps the ship in the fight.</div>
+      <div class="passive">
+        <span class="passive-label">Passive — Upkeep</span>
+        You run the repair days, and only you repair Hull. You carry PB + 2 Patch dice (d10s), refreshed on a long rest.
+      </div>
+      <div class="abilities">
+        <div class="ability"><b>Patch.</b> <em>Bonus action, from any zone.</em> Restore 1d10 + PB Bulwark, adding any Patch dice you spend. Patch never repairs Hull.</div>
+        <div class="ability"><b>Quick Fix.</b> <em>Bonus action, in the zone.</em> DC 13 to end a mishap or fix a disabled part. Anyone else can try it as an action.</div>
+        <div class="ability"><b>Brace.</b> <em>Reaction.</em> Spend a Patch die to reduce the damage of one hit by the roll + PB.</div>
+        <div class="ability"><b>Shore Up.</b> <em>Action, Below, once per fight.</em> Restore 2d10 + PB Hull.</div>
+        <div class="ability"><b>Expel.</b> <em>Action, tyrant ship, once per fight.</em> Creatures in the Cargo Deck make a DC 13 Str save or are blown out through the intake.</div>
+        <div class="ability"><b>Telekinesis eye.</b> On the tyrant ship, your station holds the Telekinesis eye.</div>
+      </div>
+      <div class="scaling">
+        <div class="scale"><span class="scale-label">Level 4</span>Patch about 7.5. 4 Patch dice. Brace about 7.5. Shore Up about 13.</div>
+        <div class="scale"><span class="scale-label">Level 10</span>Patch 3d10 + 4, about 20.5. 6 Patch dice. Brace about 9.5. Shore Up about 15.</div>
+        <div class="scale"><span class="scale-label">Steps</span>Patch rolls one more d10 at levels 5, 10 and 15.</div>
+      </div>
+    </div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <!-- ══ MEDIC ══ -->
+    <div class="role" id="medic">
+      <div class="role-header">
+        <span class="role-name">Medic</span>
+        <span class="role-tag">Triage &amp; recovery · Wis or Cha · Boogie</span>
+      </div>
+      <div class="role-job">Keeps officers and crew working.</div>
+      <div class="passive">
+        <span class="passive-label">Passive — Vigil</span>
+        Creatures within 30 ft of you add 1d4 to death saves. You carry PB + 2 medical dice (d8s), refreshed on a long rest.
+      </div>
+      <div class="abilities">
+        <div class="ability"><b>Triage.</b> <em>Bonus action.</em> Spend a medical die on a creature within 5 ft. It regains the roll + PB + your modifier, and one condition ends: poisoned, frightened, or a latched wisp.</div>
+        <div class="ability"><b>Muster.</b> <em>Bonus action, in the zone.</em> 1d4 + PB downed crew stand up.</div>
+      </div>
+      <div class="scaling">
+        <div class="scale"><span class="scale-label">Level 4</span>Triage about 9.5. 4 medical dice.</div>
+        <div class="scale"><span class="scale-label">Level 10</span>Triage 2d8 + 8, about 17. 6 medical dice.</div>
+        <div class="scale"><span class="scale-label">Steps</span>One more die at level 5. Triage heals 2d8 at level 10. At level 15, Triage heals two creatures.</div>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /page-content -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <!-- The Watchers' emblem: a tall white spire with a curved, pointed crown and a
+       sweeping base, rising out of cloud with two floating stones beside it. A channel
+       of light runs up the shaft into the crown, where the blue-violet light glows, with
+       two faint halos around it. Used as a CSS mask, so each page sets its colour:
+       styles/dm.css (.emblem-mark.emblem-watchers on factions/watchers.html and
+       dossiers/ezra.html); the Nexus page spelljammer-nexus/watchers.html inlines it. -->
+  <circle cx="28" cy="13.5" r="7" stroke-width="0.55" stroke-opacity="0.5"/>
+  <circle cx="28" cy="13.5" r="10" stroke-width="0.4" stroke-opacity="0.3"/>
+  <path d="M16,47.5 C22.80,44.5 23.4,37.5 23.4,30 L23.65,18 C23.80,10.5 26.8,6.0 28,4.5 C29.2,6.0 32.2,10.5 32.35,18 L32.6,30 C32.6,37.5 33.2,44.5 40,47.5 Z M27.45,42.5 L27.45,19 L28.55,19 L28.55,42.5 Z M28,9.5 C29.9,12.5 29.9,15 28,17.4 C26.1,15 26.1,12.5 28,9.5 Z M26.4,47.5 L26.4,44.9 Q28,43.1 29.6,44.9 L29.6,47.5 Z" fill="#000" fill-rule="evenodd" stroke="none"/>
+  <path d="M5,48.4 Q11,46.4 17.5,48 M38.5,48 Q45,46.4 51,48.4" stroke-width="0.9" stroke-opacity="0.75"/>
+  <path d="M9,51.6 Q18.5,49.8 28,51.4 Q37.5,49.8 47,51.6" stroke-width="0.6" stroke-opacity="0.45"/>
+  <path d="M8.5,30 L12.5,28.6 L13.4,31 L10,32.4 Z M44,33 L47.6,32 L47,34.8 L44.4,35.2 Z" fill="#000" stroke="none" fill-opacity="0.7"/>
+</svg>

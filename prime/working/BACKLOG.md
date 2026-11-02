@@ -199,7 +199,7 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-25 (round 12)
 
 - **[later]** The survey becomes part of the record
-  prime/data/survey.json is checked by scripts/survey.js, not scripts/data.js. Fold it into the record's checks, and decide how the chart reads it, during the repo refactor.
+  prime/data/survey.json is checked by tools/survey.js, not tools/data.js. Fold it into the record's checks, and decide how the chart reads it, during the repo refactor.
   src: Korey, 2026-10-25 (round 12)
 
 - **[decide]** A different game system in each galaxy *(shape)*
@@ -260,7 +260,7 @@ Order under each page: decide, fix, drop, add.
   src: chat 2026-10-27
 
 - **[add]** A charted flag in the survey, with a tag and a view toggle
-  Add `charted` (true/false) to systems and bodies in prime/data/survey.json and to scripts/survey.js's check. The Chart shows an "uncharted" tag on uncharted places and a toggle between the full survey and Caelestis's charts only. In-world pages give a designation only to charted places.
+  Add `charted` (true/false) to systems and bodies in prime/data/survey.json and to tools/survey.js's check. The Chart shows an "uncharted" tag on uncharted places and a toggle between the full survey and Caelestis's charts only. In-world pages give a designation only to charted places.
   src: chat 2026-10-27
 
 - **[fix]** The chart shows systems only with the inscription layer on
@@ -789,7 +789,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ### factions/order.html
 
 - **[decide]** Who leads the Order of All
-  Ruled (Korey, 2026-10-28): the Order of All is three orders serving one god, the All-Father, in three callings: Watchers gather intel, Discerners interpret and judge it, Averters act on it, and the Vanguard sanctions (the All-Mother and All-Haven are retired; the Keepers are renamed the Discerners; the Averters join; the Restorers become a movement across all three; Korey 2026-10-28); this replaces the Order of the All-Father and its callings (done: factions/order.html, watchers.html, keepers.html, restorers.html, glossary, cosmology § Core Monolith's pressure, connections.json, timeline.json). Still open: who leads the whole Order, or whether it has a single head at all; whether it has a device of its own; and when the one body founded at Cycle 0 split into three orders (Korey, 2026-10-28: it began as one and split as its following grew and like minds drew together). The headquarters, the sector houses and the Vanguards are under Locations, "The Order of All's headquarters, houses and Vanguards". Dejexic leads the Watchers.
+  Ruled (Korey, 2026-10-28): the Order of All is three orders serving one god, the All-Father, in three callings: Watchers gather intel, Discerners interpret and judge it, Averters act on it, and the Vanguard sanctions (the All-Mother and All-Haven are retired; the Keepers are renamed the Discerners; the Averters join; the Restorers become a movement across all three; Korey 2026-10-28); this replaces the Order of the All-Father and its callings (done: factions/order.html, watchers.html, keepers.html, restorers.html, glossary, cosmology § Core Monolith's pressure, connections.json, timeline.json). Still open: who leads the whole Order, or whether it has a single head at all; whether it has an emblem of its own; and when the one body founded at Cycle 0 split into three orders (Korey, 2026-10-28: it began as one and split as its following grew and like minds drew together). The headquarters, the sector houses and the Vanguards are under Locations, "The Order of All's headquarters, houses and Vanguards". Dejexic leads the Watchers.
   Touches: factions/order.html (Still to decide), connections.json.
   src: Korey, 2026-10-28 (Order of All ruling)
 
@@ -817,7 +817,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ### factions/discerners.html (was keepers.html)
 
 - **[decide]** The Discerners' leader, seat, ranks and look
-  The Keepers are renamed the Discerners (Korey, 2026-10-28). They interpret and judge the Watchers' intel against the Order's record and the sky (the Beacon), weigh what a Zenith means, what intervening would cost and whether to act, and counsel the Vanguard; guarding the Monoliths, keeping the record and the registry (Ortholiths) and keeping the Beacon stay theirs as part of discerning. They have a wing in each of the Order's houses, answer to the Watcher Vanguard in the Caelestis Sector, and a Discerner Vanguard commands a house in another sector. Not set: who leads them as a whole, who the Discerner Vanguard is and which sector, their ranks, and how they look (device, dress). The Beacon's open counts stay under Cosmology, Galactic time cycles.
+  The Keepers are renamed the Discerners (Korey, 2026-10-28). They interpret and judge the Watchers' intel against the Order's record and the sky (the Beacon), weigh what a Zenith means, what intervening would cost and whether to act, and counsel the Vanguard; guarding the Monoliths, keeping the record and the registry (Ortholiths) and keeping the Beacon stay theirs as part of discerning. They have a wing in each of the Order's houses, answer to the Watcher Vanguard in the Caelestis Sector, and a Discerner Vanguard commands a house in another sector. Not set: who leads them as a whole, who the Discerner Vanguard is and which sector, their ranks, and how they look (emblem, dress). The Beacon's open counts stay under Cosmology, Galactic time cycles.
   Touches: factions/discerners.html (Still to decide), glossary, connections.json.
   src: Korey, 2026-10-28 (Order of All ruling; Discerners rename)
 
@@ -1970,7 +1970,7 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 ### NEW: The Becoming (player handout)
 
-**Purpose.** The tale the twins' grandmother told them as children, given to Tumak's player as an in-world handout. It carries the Lunarfoot belief about the runes, which is wrong about the mechanism. Player side: `handouts/the-becoming.html` (from the chat output the-becoming.html), with the DM note kept in prime.
+**Purpose.** The tale the twins' grandmother told them as children, given to Tumak's player as an in-world handout. It carries the Lunarfoot belief about the runes, which is wrong about the mechanism. Player side, by default (for Korey to confirm): a section on Tumak's crew page, `registry/crew-manifest/tumak-swan.html`, inside his passphrase-veiled Wayfinder's Path tab (`#wayfinder-path`), or its own veiled tab beside it; `handouts/` is retired and the Fleet Protocols (`protocols/`) hold manuals, not personal handouts. Source: the chat output the-becoming.html. The DM note stays in prime. Not built yet.
 
 **Voice.** In-world (the tale itself); one DM note in prime.
 
@@ -2124,8 +2124,8 @@ run decide, fix, drop, add.
 ### Current state (checked against the repo, 2026-10-25)
 
 - **Session ingest.** n8n is dropped. A session runs in chat against the repo, following `prime/notes/SESSION-RUN.md`: Open → Read → Chronicle (**approval 1**) → Extract (**approval 2**) → Record → Render → Check → Publish. Nothing is written to the repo before approval 1, and nothing to the record before approval 2. A run goes up as one pull request; a run that stops halfway is picked up from its branch. The source is the Drive file `Caelestis _ The Spelljamming Academy _ Voyage NNN.txt` (transcript or dictation).
-- **The record.** `data/*.json` is the player-facing campaign record, kept by hand: sessions, npcs, locations, items, factions, quests, player-characters (plus derived `index.json`, `voyage.js`). `prime/data/*.json` is the DM layer over it, keyed by the same ids (`overlay.json`, `voyages.json`, derived `dossiers.json`). The schema is closed and listed at the top of `scripts/data.js`; a DM fact has no key to sit under, which keeps `data/` player-safe. Records already carry `parentId` (16 locations use it).
-- **Verbs.** `node scripts/data.js derive` fills derived fields; `check` verifies record, DM layer and pages (must report 0 errors before a PR); `guard` is the deploy test.
+- **The record.** `data/*.json` is the player-facing campaign record, kept by hand: sessions, npcs, locations, items, factions, quests, player-characters (plus derived `index.json`, `voyage.js`). `prime/data/*.json` is the DM layer over it, keyed by the same ids (`overlay.json`, `voyages.json`, derived `dossiers.json`). The schema is closed and listed at the top of `tools/data.js`; a DM fact has no key to sit under, which keeps `data/` player-safe. Records already carry `parentId` (16 locations use it).
+- **Verbs.** `node tools/data.js derive` fills derived fields; `check` verifies record, DM layer and pages (must report 0 errors before a PR); `guard` is the deploy test.
 - **CI.** `check.yml` runs `data.js check`. `deploy.yml` builds three Pagefind indexes (player, DM, FIA), runs `data.js guard`, prunes, and deploys to GitHub Pages. There is no build step.
 - **Retired scripts.** `build-pages.js` (the template-entity scaffolder) was deleted in Pass 0. `build-data.js` and `transform.js` were retired with the Google Sheet.
 - **The Google Sheet tracker** ("Caelestis Campaign Tracker") is frozen. `prime/tracker/` shows the repo record plus the DM overlay.
@@ -2171,7 +2171,7 @@ run decide, fix, drop, add.
 
 - **[later]** Locale-level places
   Merchants, shipyards and taverns with a parent world or station, so the register can filter by them. This was proposed for the Sheet's Locations tab, which is frozen. The record's locations already carry `parentId` (16 do). Options: use `parentId` for locales and add filtering to the register; or drop the idea.
-  src: framework § Open; scripts/data.js schema
+  src: framework § Open; tools/data.js schema
 
 ### Housekeeping
 
@@ -2245,7 +2245,7 @@ run decide, fix, drop, add.
 
 - **[later]** Ships in the record
   SESSION-RUN.md files a ship as a place with Type `Vessel`, parented to where it was last seen, and parks simulated ships under the Simulation Deck with Status `Simulated`. That rule is the latest one Korey accepted for the record (Voyage 7 chat, 2026-10-25, Settled: "Every ship the crew encounters gets a record"). "Vessels are vessels" was ruled earlier, in the cosmic chat, for the DM wiki: vessels are their own register with entry pages, not realms and not artifacts. So the two do not yet conflict; the question is whether the refactor should carry the register split down into the record. Options: (a) keep ships as Vessel-type places in `data/locations.json` and split only the pages (`navigation-records/` ships move to `vessels/`); (b) give the record a vessel set or a `kind` field, a status vocabulary without "Simulated" on places, and a choice of whether a ship's whereabouts is a field or a parent link.
-  Touches: scripts/data.js schema, data/locations.json, SESSION-RUN.md, navigation-records/, vessels/.
+  Touches: tools/data.js schema, data/locations.json, SESSION-RUN.md, navigation-records/, vessels/.
   src: notes/SESSION-RUN.md; working/repo-refactor.md; chat-voyage-6-7-planning § Table and story principles; chat-cosmic § Wiki structure rules ("Vessels are a register of their own")
 
 ## Fixes
@@ -2254,7 +2254,7 @@ run decide, fix, drop, add.
   Section 10 removed the dead rules and the copies that a later sheet already overrode, and normalised the load order of the Nexus and Corps Protocols indexes. Still to do: about 80 selectors repeated across caelestis, entity, board, register and bearing with different declarations (board + register 24, caelestis + register 17, entity + register 12, caelestis + board 9, bearing + register 9, caelestis + entity 8, bearing + entity 4), which need the winning declarations merged by hand and a zero visual diff; the 39 player-only classes in caelestis.css (`s-card`, `log-*`, `account-*` and others) could move to a player sheet; and the rarity colours in register.css (`.r-rare` to `.r-artifact`), unused until an item carries one.
   src: section 10 plan § 4
 
-- **[later]** `scripts/search.js` is loaded by no page
+- **[later]** `tools/search.js` is loaded by no page
   The per-section search box (a scoped Pagefind query under the page header) is wired to nothing. Load it on the section indexes, or delete it.
   src: section 10
 

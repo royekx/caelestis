@@ -1,5 +1,5 @@
 {
-  "about": "Read by scripts/terms.js. 'retired' terms must not appear on DM pages once their section is finished; 'voice' patterns mark decision voice or placeholders on world pages; 'moved' lists old page paths that must not be linked. 'scan' lists the top folders and root pages read; 'finished' lists the folders whose hits fail the check; everything else is reported as a warning. 'allow' holds 'path:regex' pairs for legitimate uses.",
+  "about": "Read by tools/terms.js. 'retired' terms must not appear on DM pages once their section is finished; 'voice' patterns mark decision voice or placeholders on world pages; 'moved' lists old page paths that must not be linked. 'scan' lists the top folders and root pages read; 'finished' lists the folders whose hits fail the check; everything else is reported as a warning. 'allow' holds 'path:regex' pairs for legitimate uses. 'docs' lists process docs read only for moved entries marked \"docs\": true.",
   "finished": [
     "prime/cosmology",
     "prime/glossary",
@@ -17,21 +17,14 @@
     "hub.html",
     "index.html",
     "voyages",
-    "bearings",
-    "logs",
-    "crew-manifest",
-    "dossiers",
-    "factions",
+    "registry",
     "navigation-records",
     "vessels",
     "quests",
     "inventory",
-    "handouts",
+    "protocols",
     "spelljammer-nexus",
-    "search",
-    "aspects",
-    "wayfinder-path",
-    "stellar-chart"
+    "search"
   ],
   "retired": [
     {
@@ -528,6 +521,10 @@
       "pattern": "graduates? as sailors",
       "use": "cadets graduate as Driftwardens; clearance (an access star) is separate from rank",
       "i": true
+    },
+    {
+      "pattern": "stat-key\">Device<|\\b(?:Fleet|Watchers|order|Order|faction)(?:'s|'|&rsquo;s|&rsquo;) device\\b|\\b[Tt]heir device\\b|\\b[Ii]ts device\\b",
+      "use": "emblem (a faction's coat of arms or insignia)"
     }
   ],
   "voice": [
@@ -819,6 +816,85 @@
     {
       "old": "ship-sheets.html",
       "new": "the Ship sheet tab on each vessel record (navigation-records/the-tyrant-ship.html#ship-sheet, navigation-records/the-flighty-foundling.html#ship-sheet)"
+    },
+    {
+      "old": "handouts/",
+      "new": "protocols/, Fleet Protocols (index.html, crew-roles.html, ship-mechanics.html keep their names); the folder name is never reused"
+    },
+    {
+      "old": "bearings/",
+      "new": "voyages/bearings/ (index.html, timeline.html, voyage-NNN.html keep their names); the root folder is never reused",
+      "link": true
+    },
+    {
+      "old": "logs/",
+      "new": "voyages/logs/index.html; the root folder is never reused",
+      "link": true
+    },
+    {
+      "old": "crew-manifest/",
+      "new": "registry/crew-manifest/ (every page keeps its name); the root folder is never reused",
+      "link": true
+    },
+    {
+      "old": "dossiers/",
+      "new": "registry/dossiers/ (every page keeps its name); the root folder is never reused",
+      "link": true
+    },
+    {
+      "old": "factions/",
+      "new": "registry/factions/ (every page keeps its name); the root folder is never reused",
+      "link": true
+    },
+    {
+      "old": "aspects/",
+      "new": "the Aspects tab on Bartholomew's crew page, registry/crew-manifest/bartholomew-grayson.html#aspects; the folder is never reused",
+      "link": true
+    },
+    {
+      "old": "stellar-chart/",
+      "new": "the Stellar Chart tab on Casey's crew page, registry/crew-manifest/casey-geim.html#stellar-chart; the folder is never reused",
+      "link": true
+    },
+    {
+      "old": "wayfinder-path/",
+      "new": "the Wayfinder's Path tab on Tumak's crew page, registry/crew-manifest/tumak-swan.html#wayfinder-path; the folder is never reused",
+      "link": true
+    },
+    {
+      "old": "scripts/data.js",
+      "new": "tools/data.js (the build and check scripts live in tools/, pruned from deploy)",
+      "docs": true
+    },
+    {
+      "old": "scripts/terms.js",
+      "new": "tools/terms.js (the build and check scripts live in tools/, pruned from deploy)",
+      "docs": true
+    },
+    {
+      "old": "scripts/visual.js",
+      "new": "tools/visual.js (the build and check scripts live in tools/, pruned from deploy)",
+      "docs": true
+    },
+    {
+      "old": "scripts/survey.js",
+      "new": "tools/survey.js (the build and check scripts live in tools/, pruned from deploy)",
+      "docs": true
+    },
+    {
+      "old": "scripts/eye-fit.js",
+      "new": "tools/eye-fit.js (the build and check scripts live in tools/, pruned from deploy)",
+      "docs": true
+    },
+    {
+      "old": "scripts/search.js",
+      "new": "tools/search.js (the build and check scripts live in tools/, pruned from deploy)",
+      "docs": true
+    },
+    {
+      "old": "assets/fleet-device.svg",
+      "new": "assets/fleet-emblem.svg",
+      "link": true
     }
   ],
   "allow": [
@@ -832,7 +908,7 @@
     "quests/:The Tyrant Ship and the H(’|&rsquo;)Catha",
     "voyages/voyage-006.html:Watcher cadet",
     "voyages/voyage-003.html:running through the network",
-    "stellar-chart/index.html:Keeper(&rsquo;|'|’)s (Chart|Password|password)"
+    "registry/crew-manifest/casey-geim.html:Keeper(&rsquo;|'|’)s (Chart|Password|password)"
   ],
   "scan": [
     "prime",
@@ -840,20 +916,19 @@
     "hub.html",
     "index.html",
     "voyages",
-    "bearings",
-    "logs",
-    "crew-manifest",
-    "dossiers",
-    "factions",
+    "registry",
     "navigation-records",
     "vessels",
     "quests",
     "inventory",
-    "handouts",
+    "protocols",
     "spelljammer-nexus",
-    "search",
-    "aspects",
-    "wayfinder-path",
-    "stellar-chart"
+    "search"
+  ],
+  "docs": [
+    "CLAUDE.md",
+    "docs",
+    ".github/workflows",
+    "prime/working/README.md"
   ]
 }

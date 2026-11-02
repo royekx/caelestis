@@ -243,7 +243,7 @@ const SYSTEMS = [
     summary:'Hidden by a living ritual. Wayfinders leave with no map and no name, and must re-recognize home.', dm:'Its position here is symbolic.' }
 ];
 const sysPos = id => SYSTEMS.find(s => s.id === id).pos;
-// Designations come from the survey (prime/data/survey.json, kept by scripts/survey.js).
+// Designations come from the survey (prime/data/survey.json, kept by tools/survey.js).
 const SURVEY_ID = { realmspace:'Realmspace', virenspace:'CSC 69387', aethris:'CSC 56973', krynnspace:'CSC 16423', fonains:'CSC 50743', greyspace:'Greyspace', wayfinders:'GAL-01-hidden' };
 const surveyReady = fetch('../data/survey.json').then(r => r.ok ? r.json() : null).catch(() => null).then(sv => {
   if (sv) SYSTEMS.forEach(s => { const rec = sv.systems.find(x => x.id === SURVEY_ID[s.id]); if (rec && rec.catalogue && rec.name) s.des = 'CSC ' + rec.catalogue; });
@@ -867,7 +867,7 @@ renderer.domElement.addEventListener('pointerup', e => {
   const f = ray.intersectObject(fillerPts, false)[0], sys = f && E.FILLERS[f.index].sys;
   const band = sys && E.FILLERS[f.index].band === 'high' ? (E.FILLERS[f.index].v[1] > 0 ? ' · above the plane' : ' · below the plane') : '';
   if (sys) showInfo({ name:sys.id, kind:'Star system' + (sys.bayer ? ' · ' + sys.bayer : '') + ' · ' + sys.status + band, summary:E.FILLERS[f.index].summary,
-    dm:`A survey.js roll, seed ${sys.seed}. Keep it with <code>node scripts/survey.js roll --seed ${sys.seed} --save</code>.` });
+    dm:`A survey.js roll, seed ${sys.seed}. Keep it with <code>node tools/survey.js roll --seed ${sys.seed} --save</code>.` });
 });
 
 addEventListener('resize', () => {

@@ -34,7 +34,7 @@ entity is approved, cut or corrected by Korey before anything moves.
 
 The NPC record's authored fields are `Gender`, `Affiliation(s)`, `Party
 Relationship`, `Role (as known)`, `Current State`, `Overview (Player)`,
-`Category` and `Status` (`scripts/data.js`, SETS). None of them holds a list
+`Category` and `Status` (`tools/data.js`, SETS). None of them holds a list
 of standing facts. Three ways to carry this:
 
 | Option | What changes | For | Against |
@@ -255,7 +255,7 @@ Gender: Male (already set).
 
 ## Promotes to
 
-- `scripts/data.js`: `Common Knowledge` (and `Species`, if chosen) added to
+- `tools/data.js`: `Common Knowledge` (and `Species`, if chosen) added to
   the `npcs` fields, in its own commit named in the pull request, with the
   `check` rule that holds the page list to the record.
 - `data/npcs.json`: each approved entity's facts, and `Gender` where filled.

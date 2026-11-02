@@ -442,7 +442,7 @@ order, only those with content:
 
 | Kind | Infobox rows | About sections |
 |---|---|---|
-| Faction (`factions/`) | kind, what it serves, leader, seat, reach, ranks, device, standing with Caelestis | Overview · Beliefs (public aim; a secret aim goes in *What's hidden*) · Structure and ranks · History · Operations · How they look (device, dress, magic) · Seats and branches (one subsection each, with its known members) · Members · Relationships |
+| Faction (`factions/`) | kind, what it serves, leader, seat, reach, ranks, emblem, standing with Caelestis | Overview · Beliefs (public aim; a secret aim goes in *What's hidden*) · Structure and ranks · History · Operations · How they look (emblem, dress, magic) · Seats and branches (one subsection each, with its known members) · Members · Relationships |
 | Item (`artifacts/`) | kind, made by, made of, held by, where, status | Overview · Appearance · Properties (what it does, in prose, then the rules as an item card) · History · In the campaign (a recap by voyage) |
 | Place (`locations/`) | kind, designation, system, galaxy, ruled by, peoples, status | Overview · Description (look, climate, terrain) · History · Peoples and culture · Notable people · Points of interest (one subsection each) · In the campaign (a recap by voyage) |
 | Vessel (`vessels/`) | kind, built by, held by or under command of, where, status | Overview · Appearance · Decks and interior (one subsection per deck or space) · History · In the campaign (a recap by voyage) |
@@ -574,8 +574,9 @@ attributes are in `CLAUDE.md` § Deploy and search.
 
 ### Record pages
 
-Every player record page (`dossiers/`, `crew-manifest/`, `navigation-records/`
-and the vessels in it, `factions/`, `inventory/entries/`, `quests/`) reads like
+Every player record page (`registry/dossiers/`, `registry/crew-manifest/`,
+`navigation-records/` and the vessels in it, `registry/factions/`,
+`inventory/entries/`, `quests/`) reads like
 a DM entry in the player palette: the article on the left, the infobox on the
 right, the record tabs in the article column, Connections below. It is written
 by hand from the record; `check` holds every `data-field` region to it. The
@@ -629,11 +630,12 @@ A session run adds the new voyage here on every record it touches.
 Itself, Within, a quest's briefing, objectives, rewards and notable items)
 and Voyage log (`#voyage-log`: the latest voyage block and Previous Voyages).
 A vessel with a ship sheet adds Ship sheet (`#ship-sheet`, a
-`.rec-panel.ship-sheet.is-wide`, which hides the infobox while open). A page
+`.rec-panel.ship-sheet.is-wide`, which hides the infobox while open); a crew
+page with a companion adds its companion tab, also `.is-wide`. A page
 with no voyage log yet has one panel and no strip. Panels stay static HTML;
 without JS they stack, which is also what Pagefind reads.
 
-- **Player dossiers.** A named presence gets a page under `dossiers/`: met,
+- **Player dossiers.** A named presence gets a page under `registry/dossiers/`: met,
   mentioned, or only heard (Beshaba from laughter, the Runekeeper from a
   voice). It carries only what the table has, sourced to the voyage, with
   "named only" in First seen and Last seen when that is all. The player
@@ -650,12 +652,40 @@ without JS they stack, which is also what Pagefind reads.
   `scripts/portraits-player.js` and its `<img>` baked into the page's portrait
   frame and register row. A new face on a DM page gets a line in
   `prime/scripts/portraits.js` and a frame with `data-key`.
-- **Companion pages** (`wayfinder-path/`, `stellar-chart/`, `aspects/`) keep
-  their own skin and carry a return link to their crew page. Crew pages link
-  out through a `.companion-card`. They sit outside the player search index
-  and carry no section filter.
-- **Companion DM modes stay.** A companion page's password-protected DM mode
-  (the Stellar Chart's Keeper's Chart, its reveal table and password) stays on
+- **Companion tabs.** A cadet's companion is a wide record tab on the crew
+  page, after Voyage log: Aspects (`#aspects`, Bartholomew), Stellar Chart
+  (`#stellar-chart`, Casey), Wayfinder's Path (`#wayfinder-path`, Tumak).
+  The `.companion-card` in the Record tab introduces it and links to the tab.
+  Aspects and the Wayfinder's Path keep their own skin inside a declarative
+  shadow root (`.companion-host > template[shadowrootmode]`), so their styles
+  and the site's stay apart and their scripts query the shadow root; the
+  Stellar Chart is in the player palette and sits in the page. The panel
+  carries `data-pagefind-ignore`: companion text stays out of the search
+  index.
+- **Personnel file.** Every crew page carries a veiled Personnel file tab
+  after its public tabs (and before any companion tab), in three sections:
+  Origin (labelled rows: Home world, People, Family, Before the Academy),
+  Arrival orders (the cadet's intro handout, verbatim, its title as a subhead,
+  its ornament breaks and emphasis kept), and Notes. Origin comes only from
+  the intro and the record, in cadet-file voice; a row with no source is left
+  out and marked with an HTML comment (`<!-- Korey: home world -->`), never
+  "Unknown". The Wayfinders' homeworld is described, not named.
+- **The classified veil.** Each Personnel file and companion tab opens behind a `.classified`
+  veil: "Classified · Personnel file · name · Access restricted to the named
+  cadet", a passphrase field and an Open file button. Each cadet has their
+  own passphrase, given to the player at the table; every veil on a crew page
+  names that cadet (`data-veil`) and one unlock opens them all. The page holds only its
+  SHA-256 hash (`data-hash` on the veil); `scripts/ui.js` trims and
+  lowercases the input, hashes it with `crypto.subtle` and compares. A wrong
+  passphrase gets an in-world refusal and the veil stays; the right one lifts
+  it and sessionStorage (`caelestis_file_<cadet>`) keeps it lifted for the
+  session. The panel ships with `is-veiled`, so without JS the companion
+  stays hidden. A passphrase never appears in the repository: to change one,
+  replace the hash. It is a courtesy between players who can read the
+  source, not security.
+- **Companion DM modes stay.** A companion's password-protected DM mode
+  (the Stellar Chart's Keeper's Chart, its reveal table and password, separate
+  from Casey's veil) stays on
   the player page. Players do not read the source; it is mutual trust. Do not
   move these modes to `prime/` or flag them; `terms.json` allows their terms.
 - **Previous Voyages keys** name voyages, oldest first: `V001 · V002`.

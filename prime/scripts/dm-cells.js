@@ -20,7 +20,7 @@
      - once every cell is in, a deep link (#arc-3) is scrolled to again
 
    Without this script, or if the fetch fails, the reader keeps the link,
-   and `node scripts/data.js check` validates it like any other link. The
+   and `node tools/data.js check` validates it like any other link. The
    inserted text is not in the static HTML, so Pagefind does not index
    the same passage twice.
    ════════════════════════════════════════════════════════════════ */

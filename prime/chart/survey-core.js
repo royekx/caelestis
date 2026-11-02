@@ -1,11 +1,11 @@
 /* ════════════════════════════════════════════════════════════════
    survey-core.js: the survey's tables and rolls, shared by
-   scripts/survey.js (node) and the Chart (prime/chart/, in the browser).
+   tools/survey.js (node) and the Chart (prime/chart/, in the browser).
 
    One seed, one system: the Chart's unnamed systems and heart systems are
-   rolled here by seed, the same way `node scripts/survey.js roll --seed N`
+   rolled here by seed, the same way `node tools/survey.js roll --seed N`
    rolls them, so a system clicked on the Chart can be kept with
-   `node scripts/survey.js roll --seed N --save`. Only systems someone has
+   `node tools/survey.js roll --seed N --save`. Only systems someone has
    kept live in prime/data/survey.json.
 
    roll(survey, opts) takes opts.taken = { nums:Set, bayer:Set } for numbers

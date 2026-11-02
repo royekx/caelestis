@@ -21,12 +21,12 @@ Do not write to the repo before the first or to the record before the second.
 
 | Side | Folders |
 |---|---|
-| Player (root) | `index.html` (the gate), `hub.html` (the terminal, the player home), `voyages/`, `bearings/`, `logs/`, `crew-manifest/`, `dossiers/`, `factions/`, `navigation-records/`, `vessels/`, `quests/`, `inventory/` (`entries/`, `items/`), `handouts/`, `spelljammer-nexus/`, `search/`; companion pages `aspects/`, `wayfinder-path/`, `stellar-chart/` |
+| Player (root) | `index.html` (the gate), `hub.html` (the terminal, the player home), `voyages/` (voyage pages; `bearings/`, the current bearing, per-voyage bearings and the timeline; `logs/`, the Crew Logs), `registry/` (the people sections, each with its own index, nav entry and section filter: `crew-manifest/`, `dossiers/`, `factions/`), `navigation-records/`, `vessels/`, `quests/`, `inventory/` (`entries/`, `items/`), `protocols/` (Fleet Protocols: manuals for how things are done), `spelljammer-nexus/`, `search/`. The crew companions are tabs on their crew pages (`#aspects`, `#stellar-chart`, `#wayfinder-path`) |
 | FIA | `restricted/`: the Fleet Intelligence Archive, gated, its own chrome and index |
 | DM | `prime/`: the DM wiki, gated |
 | Record | `data/` (player-safe), `prime/data/` (DM layer) |
-| Shared | `assets/`, `styles/`, `scripts/` (player and build scripts), `prime/scripts/` (DM scripts) |
-| Process, not deployed | `docs/`, `prime/working/`, `CLAUDE.md` |
+| Shared | `assets/`, `styles/`, `scripts/` (what player pages load), `prime/scripts/` (DM scripts) |
+| Process, not deployed | `tools/` (build and check scripts: `data.js`, `terms.js`, `visual.js`, `survey.js`, `eye-fit.js`; `search.js`, a per-section search box no page loads), `docs/`, `prime/working/`, `CLAUDE.md` |
 
 **DM side today**: `campaign/` (index, `voyages/`, `plot-hooks.html`), `opposition/` (`vecna.html`, `vthorama.html`), `tracker/`, `timeline/`, `crew/`, `dossiers/`, `factions/`, `statblocks/`, `cosmology/`, `locations/`, `vessels/`, `artifacts/`, `chart/`, `rules/`, `glossary/`, `principles.html`, `hub.html`, `search.html`.
 
@@ -42,7 +42,7 @@ Do not write to the repo before the first or to the record before the second.
 | Reference | Glossary · Principles (`principles.html`) |
 
 DM folders and pages use plain, functional names. Player folders use in-world
-names that are functional and distinct (`dossiers/`, `inventory/`).
+names that are functional and distinct (`registry/dossiers/`, `inventory/`).
 
 **Two versions of the same subjects.** A dossier, location, vessel or item can
 have a player page and a DM page. The DM page almost always holds more; the
@@ -76,7 +76,7 @@ It holds only what the crew knows and is published with the site.
 | `overlay.json` | `entities`: per record `urgency`, `next`, `note`, `dossier`, `voyages[n].beats`; `lanes`: powers the crew has never met |
 | `dossiers.json` | derived: which DM dossiers exist and which record each belongs to |
 | `connections.json` | the Connections view on `prime/timeline/` |
-| `survey.json` | the DM's survey of systems, kept by `scripts/survey.js` |
+| `survey.json` | the DM's survey of systems, kept by `tools/survey.js` |
 
 Urgency and Next Planned Beat live in the overlay, never in `data/`.
 
@@ -90,14 +90,20 @@ url links parent giver children within items progress`, plus `data/index.json`,
 - A fact is entered in the record and nowhere else. Pages are written by hand
   from it; nothing generates them. To correct a page, correct the record, run
   `derive`, and edit the page to match.
-- The schema is closed and listed at the top of `scripts/data.js`. A new field
+- The schema is closed and listed at the top of `tools/data.js`. A new field
   is a change to that list, made in its own commit and named in the pull request.
 - The schema tests the key, not the sentence. A DM fact typed into a player
   field passes every check; the two session-run approvals catch it.
 - Nothing from `prime/` reaches `data/` or a player page.
-  The one exception: a companion page (`aspects/`, `wayfinder-path/`,
-  `stellar-chart/`) keeps its password-protected DM mode on the player page,
-  by mutual trust with the players. Leave those modes where they are.
+  The one exception: the Keeper's Chart, a DM mode behind its own password
+  inside the Stellar Chart tab on Casey's crew page, kept there by mutual
+  trust with the players. Leave it where it is.
+- Every crew page's Personnel file tab (origin and arrival orders), and the
+  companion tabs (Aspects on Bartholomew's, the Stellar Chart on Casey's, the
+  Wayfinder's Path on Tumak's), sit behind a veil that asks for that cadet's
+  passphrase; one unlock opens every veil on the page. The page holds only the
+  passphrase's SHA-256 hash; no passphrase is written anywhere in the
+  repository.
 - The Tracker (`prime/tracker/`) and the Voyages board read both layers. They
   are views; nothing is entered in them.
 - `prime/` and the DM and FIA search indexes are gated in the browser and
@@ -108,13 +114,13 @@ url links parent giver children within items progress`, plus `data/index.json`,
 ## Commands
 
 ```bash
-node scripts/data.js derive   # after editing the record: fills derived fields
-node scripts/data.js check    # record, DM layer and pages agree, every local link and anchor resolves, player pages keep the boundary; 0 errors before a pull request
-node scripts/terms.js         # retired terms, decision voice, moved paths on prime/, restricted/ and the player site; rules in prime/working/terms.json
-node scripts/visual.js capture <dir> [--player] / diff <before> <after>   # screenshots and pixel diff; usage in its header
+node tools/data.js derive   # after editing the record: fills derived fields
+node tools/data.js check    # record, DM layer and pages agree, every local link and anchor resolves, player pages keep the boundary; 0 errors before a pull request
+node tools/terms.js         # retired terms, decision voice, moved paths on prime/, restricted/ and the player site, and moved script paths in the process docs; rules in prime/working/terms.json
+node tools/visual.js capture <dir> [--player] / diff <before> <after>   # screenshots and pixel diff; usage in its header
 ```
 
-`node scripts/data.js guard` runs in the deploy and asks only whether `data/`
+`node tools/data.js guard` runs in the deploy and asks only whether `data/`
 is fit to publish. Both `check` and `terms.js` run on every pull request.
 `terms.js --list` gives each hit; a folder listed as finished in `terms.json`
 fails on any hit.
@@ -172,13 +178,16 @@ state what is. Rules: `prime/working/README.md`.
   `/restricted/pagefind/`), runs `guard`, prunes process files, publishes. The
   index is never committed.
 - The player glob in `deploy.yml` is the security boundary: it names only
-  player folders. The companion pages and `search/` stay out of it. A new player top-level folder goes into the glob and into the
+  player folders. `search/` stays out of it, and the companion tabs carry
+  `data-pagefind-ignore`. A new player top-level folder goes into the glob and into the
   S.E.A.R.C.H. scope selector (`search/index.html`), or it is unsearchable.
 - Pagefind indexes static HTML only. To debug, read the Action's `--verbose`
   log. To test locally, run the Action's `npx -y pagefind --site . --glob "{…}"
   --exclude-selectors "[data-pagefind-ignore], nav, .site-nav, footer"`.
 - Every player page carries `data-pagefind-filter="section:<top-level dir>"` on
-  `<body>`, one bare value. A further facet needs its own element.
+  `<body>`, one bare value. A page in a subfolder of `voyages/` or `registry/`
+  takes the subfolder's name (`bearings`, `logs`, `crew-manifest`, `dossiers`,
+  `factions`). A further facet needs its own element.
 - Navigation chrome and listing containers that only repeat their target pages
   carry `data-pagefind-ignore` (prev/next bars, portrait labels, filter rows,
   `.crew-list`, `.dossier-list`, `.item-grid`, voyage overview panels). Named

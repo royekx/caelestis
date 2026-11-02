@@ -105,7 +105,7 @@ below closes those three gaps.
 The calls at the end of this section. Nothing below starts until they are made.
 
 ### 1. Tooling
-- Built 2026-10-27, reading `prime/` and `restricted/`: `scripts/terms.js` and a terms list in `prime/working/terms.json`: retired
+- Built 2026-10-27, reading `prime/` and `restricted/`: `tools/terms.js` and a terms list in `prime/working/terms.json`: retired
   term → replacement, with an allow-list for legitimate uses (FIA history,
   quoted in-world speech). Run in `check.yml` as a warning; promoted to an error
   per finished section. Pruned from deploy like `data.js`.
@@ -113,7 +113,7 @@ The calls at the end of this section. Nothing below starts until they are made.
   "pending", "TBD", "to be decided", "not yet set" on pages under prime/.
 - Baseline, 2026-10-27: 308 retired-term hits across 109 DM files (realms 173,
   cosmology 64, campaign 18, artifacts 17, dossiers 8, vessels 8, timeline 8,
-  glossary 6, factions 4, crew 1, hub 1); chart 0. `node scripts/terms.js --list`
+  glossary 6, factions 4, crew 1, hub 1); chart 0. `node tools/terms.js --list`
   gives each one. The FIA adds 22 hits across 6 of its 14 files.
 
 ### 2. Rules in one place
@@ -227,6 +227,17 @@ keep their own files, moved under `voyages/` as subfolders. No redirects: every
 moved path goes into the link catalogue so links already shared with players can
 be reissued.
 
+Done (branch `repo-tidy`, Korey's rulings of 2026-11-02):
+
+| Now | Holds |
+|---|---|
+| `voyages/` | voyage pages; `voyages/bearings/` (current bearing, per-voyage bearings, timeline); `voyages/logs/` (Crew Logs) |
+| `registry/` | `crew-manifest/`, `dossiers/`, `factions/`, each with its own index, sidebar entry and section filter |
+| `registry/crew-manifest/` | the companions as classified tabs: `bartholomew-grayson.html#aspects`, `casey-geim.html#stellar-chart`, `tumak-swan.html#wayfinder-path` |
+| `protocols/` | Fleet Protocols (was Corps Protocols, `handouts/`): manuals for how things are done |
+| `vessels/`, `navigation-records/`, `quests/`, `inventory/`, `spelljammer-nexus/`, `search/` | unchanged |
+| `tools/` | the build and check scripts, pruned from deploy; `scripts/` keeps only what pages load |
+
 ### 7. Done means
 STAGING holds only undistributed future material; BACKLOG holds no fix or add
 item for a finished section; the terms check runs as an error across prime/;
@@ -325,6 +336,21 @@ Old path → new path, added by each pull request that moves a page.
 | `data/nexus.js` | retired; the Nexus index (`spelljammer-nexus/index.html`) holds static rows, and the path is never reused | Player side (player) |
 | `spelljammer-nexus/factions.html` | `spelljammer-nexus/peoples.html`, "Peoples of the Drift"; the old path is never reused | Player side (player) |
 | `handouts/ship-sheets.html` | the Ship sheet tab on each vessel record: `navigation-records/the-tyrant-ship.html#ship-sheet` (was `#tyrant-ship`) and `navigation-records/the-flighty-foundling.html#ship-sheet` (was `#flighty-foundling`); the old path is never reused | Ship roles (ship-roles) |
+| `handouts/index.html` | `protocols/index.html`, retitled Fleet Protocols (was Corps Protocols); the folder name `handouts/` is never reused | Player side condensed (repo-tidy) |
+| `handouts/crew-roles.html` | `protocols/crew-roles.html` | Player side condensed (repo-tidy) |
+| `handouts/ship-mechanics.html` | `protocols/ship-mechanics.html` | Player side condensed (repo-tidy) |
+| `bearings/index.html` | `voyages/bearings/index.html`; the root folder `bearings/` is never reused | Player side condensed (repo-tidy) |
+| `bearings/timeline.html` | `voyages/bearings/timeline.html` | Player side condensed (repo-tidy) |
+| `bearings/voyage-001.html` … `bearings/voyage-006.html` | `voyages/bearings/voyage-001.html` … `voyages/bearings/voyage-006.html` | Player side condensed (repo-tidy) |
+| `logs/index.html` | `voyages/logs/index.html`; the root folder `logs/` is never reused | Player side condensed (repo-tidy) |
+| `crew-manifest/` (index and the six crew pages) | `registry/crew-manifest/`, every page keeping its name; record urls derive from `tools/data.js`; the root folder `crew-manifest/` is never reused | Player side condensed (repo-tidy) |
+| `dossiers/` (index and 26 dossiers) | `registry/dossiers/`, every page keeping its name; the root folder `dossiers/` is never reused | Player side condensed (repo-tidy) |
+| `factions/` (index and `caelestis-academy.html`) | `registry/factions/`, every page keeping its name; the root folder `factions/` is never reused | Player side condensed (repo-tidy) |
+| `aspects/index.html` | `registry/crew-manifest/bartholomew-grayson.html#aspects`, the Aspects tab; the folder `aspects/` is never reused | Player side condensed (repo-tidy) |
+| `stellar-chart/index.html` | `registry/crew-manifest/casey-geim.html#stellar-chart`, the Stellar Chart tab (Keeper's Chart and its password kept); the folder `stellar-chart/` is never reused | Player side condensed (repo-tidy) |
+| `wayfinder-path/index.html` | `registry/crew-manifest/tumak-swan.html#wayfinder-path`, the Wayfinder's Path tab; the folder `wayfinder-path/` is never reused | Player side condensed (repo-tidy) |
+| `scripts/data.js`, `scripts/terms.js`, `scripts/visual.js`, `scripts/survey.js`, `scripts/eye-fit.js`, `scripts/search.js` | `tools/data.js`, `tools/terms.js`, `tools/visual.js`, `tools/survey.js`, `tools/eye-fit.js`, `tools/search.js` (kept for reference; no page loads it); `tools/` is pruned from deploy, and terms.js reads CLAUDE.md, `docs/` and the workflows for the old paths | Player side condensed (repo-tidy) |
+| `assets/fleet-device.svg` | `assets/fleet-emblem.svg`; "device" is retired for a faction's emblem | Emblem rename (repo-tidy) |
 
 ## Stale branches
 
@@ -343,7 +369,7 @@ from deploy.
 | `docs/SESSION-RUN.md` | the session run, with CHRONICLE merged in as step 2; sets and statuses named by record file |
 | `docs/PAGE-GUIDE.md` | one page guide for player, DM and FIA pages: page rules, setting voice, DM structure and registers, page anatomy, dossiers, tags, the Voyages page, player pages, FIA voice |
 
-References updated: `CLAUDE.md`, `scripts/data.js`, `data/bearing.js`,
+References updated: `CLAUDE.md`, `tools/data.js`, `data/bearing.js`,
 `.github/workflows/check.yml` and `deploy.yml`, `prime/tracker/index.html`,
 `prime/campaign/index.html`, `prime/scripts/dm-tracker.js`.
 
@@ -381,7 +407,7 @@ writing rules are in BACKLOG.md § Repo and process.
 - Where each kind of fact lives: a met entity → a record in `data/*.json`; DM truth about it → `prime/data/overlay.json` under the same id, plus its dossier in `prime/dossiers/`; an unmet entity → `prime/` only; a power moving off-screen → a lane in `overlay.json` with its own `DM-` id. (DB, SR)
 - The record is the only place a fact is entered. Pages are its rendering, written by hand. To correct a page, correct the record, run `derive`, edit the page to match. (DB, SR, PS; already in CLAUDE.md)
 - `derive` fills mechanical fields; `check` runs on every PR and proves record, DM layer and pages agree, including every local link and anchor; `guard` runs in the deploy and asks only whether `data/` is fit to publish. (DB)
-- The schema is closed and listed at the top of `scripts/data.js`. A new field is a change to that list, made in its own commit and named in the PR. (SR, DB)
+- The schema is closed and listed at the top of `tools/data.js`. A new field is a change to that list, made in its own commit and named in the PR. (SR, DB)
 - Authored fields (edit): `id slug name number kind parentId giverId fields objectives rewards voyages seen mentioned linked`. Derived (never edit): `type url links parent giver children within items progress`, plus `data/index.json`, `data/voyage.js`, `prime/data/dossiers.json`. (SR; matches data.js)
 - The schema tests the key, not the sentence. A DM fact typed into a player field passes every check. That is what the two session-run approvals are for. (DB)
 - `prime/` is gated in the browser and disallowed to crawlers, but it is published and the repo is public: out of the players' way, not secret. Anything that must stay private stays out of the repository. Same for the DM and FIA search indexes. (DB, SRCH)
@@ -501,7 +527,7 @@ writing rules are in BACKLOG.md § Repo and process.
 
 ## Promotes to
 
-CLAUDE.md (folder map and rules), `scripts/nav.js`, `.github/workflows/deploy.yml` (search globs, prune list), `scripts/data.js` (record URLs).
+CLAUDE.md (folder map and rules), `scripts/nav.js`, `.github/workflows/deploy.yml` (search globs, prune list), `tools/data.js` (record URLs).
 
 ## Open
 
