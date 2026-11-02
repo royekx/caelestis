@@ -328,6 +328,10 @@ Old path → new path, added by each pull request that moves a page.
 | `handouts/index.html` | `protocols/index.html`, retitled Fleet Protocols (was Corps Protocols); the folder name `handouts/` is never reused | Player side condensed (repo-tidy) |
 | `handouts/crew-roles.html` | `protocols/crew-roles.html` | Player side condensed (repo-tidy) |
 | `handouts/ship-mechanics.html` | `protocols/ship-mechanics.html` | Player side condensed (repo-tidy) |
+| `bearings/index.html` | `voyages/bearings/index.html`; the root folder `bearings/` is never reused | Player side condensed (repo-tidy) |
+| `bearings/timeline.html` | `voyages/bearings/timeline.html` | Player side condensed (repo-tidy) |
+| `bearings/voyage-001.html` … `bearings/voyage-006.html` | `voyages/bearings/voyage-001.html` … `voyages/bearings/voyage-006.html` | Player side condensed (repo-tidy) |
+| `logs/index.html` | `voyages/logs/index.html`; the root folder `logs/` is never reused | Player side condensed (repo-tidy) |
 
 ## Stale branches
 

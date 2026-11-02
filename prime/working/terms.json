@@ -17,8 +17,6 @@
     "hub.html",
     "index.html",
     "voyages",
-    "bearings",
-    "logs",
     "crew-manifest",
     "dossiers",
     "factions",
@@ -823,6 +821,16 @@
     {
       "old": "handouts/",
       "new": "protocols/, Fleet Protocols (index.html, crew-roles.html, ship-mechanics.html keep their names); the folder name is never reused"
+    },
+    {
+      "old": "bearings/",
+      "new": "voyages/bearings/ (index.html, timeline.html, voyage-NNN.html keep their names); the root folder is never reused",
+      "link": true
+    },
+    {
+      "old": "logs/",
+      "new": "voyages/logs/index.html; the root folder is never reused",
+      "link": true
     }
   ],
   "allow": [
@@ -844,8 +852,6 @@
     "hub.html",
     "index.html",
     "voyages",
-    "bearings",
-    "logs",
     "crew-manifest",
     "dossiers",
     "factions",

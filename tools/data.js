@@ -745,8 +745,9 @@ function checkLinks(err) {
 // ── player boundary ────────────────────────────────────────────────────────
 // The player index is built from the glob in deploy.yml, so that glob is what
 // "a player page" means here. Every page it matches carries one bare
-// section:<top dir> filter on <body> (a root page uses its own name, and the
-// gate is "home"), or S.E.A.R.C.H. cannot scope it. And no player page links
+// section:<top dir> filter on <body> (a root page uses its own name, the
+// gate is "home", and a grouped subfolder uses its own name), or S.E.A.R.C.H.
+// cannot scope it. And no player page links
 // into the DM wiki, or into the FIA except from the Nexus index, which holds
 // the FIA's door.
 function globRe(g) {
@@ -766,6 +767,10 @@ function playerGlob() {
   if (!m) throw new Error('no player --glob found in .github/workflows/deploy.yml');
   return m[1].split(',').map(globRe);
 }
+// A page in a subfolder of a grouping folder takes the subfolder's name as
+// its section: voyages/bearings/ is "bearings", registry/dossiers/ is
+// "dossiers". A page directly in voyages/ is "voyages".
+const GROUPED = ['voyages', 'registry'];
 function checkPlayer(err) {
   const globs = playerGlob();
   const pages = [];
@@ -780,7 +785,9 @@ function checkPlayer(err) {
   pages.forEach(rel => {
     const src = fs.readFileSync(path.join(ROOT, rel), 'utf8');
     if (globs.some(re => re.test(rel))) {
-      const top = rel.includes('/') ? rel.split('/')[0] : rel === 'index.html' ? 'home' : rel.replace(/\.html$/, '');
+      const seg = rel.split('/');
+      const top = seg.length > 2 && GROUPED.includes(seg[0]) ? seg[1]
+        : seg.length > 1 ? seg[0] : rel === 'index.html' ? 'home' : rel.replace(/\.html$/, '');
       const body = /<body\b[^>]*>/.exec(src);
       const f = body && /data-pagefind-filter="([^"]*)"/.exec(body[0]);
       if (!f) err(`${rel}: <body> carries no data-pagefind-filter; it should read section:${top}`);
@@ -947,7 +954,7 @@ function check() {
     const now = cd ? cd.text(cd.to) : null;
     if (now && str('date') !== now) err(`data/bearing.js: date is ${str('date') || 'missing'}, the latest voyage ends ${now}`);
     if (now) {
-      const pages = ['spelljammer-nexus/fleet-time.html', `bearings/voyage-${pad(latest)}.html`, 'bearings/index.html'];
+      const pages = ['spelljammer-nexus/fleet-time.html', `voyages/bearings/voyage-${pad(latest)}.html`, 'voyages/bearings/index.html'];
       pages.forEach(pg => {
         if (!exists(pg)) return;
         const shown = regions(fs.readFileSync(path.join(ROOT, pg), 'utf8'), 'current-date').map(text);
@@ -968,11 +975,11 @@ function check() {
       if (get('progress') !== want) err(`data/bearing.js: ${q.slug} shows ${get('progress')}, record gives ${want || 'no objectives'}`);
       if (plain(get('name')) !== plain(q.name)) err(`data/bearing.js: ${q.slug} is named "${get('name')}", record says "${q.name}"`);
     });
-    const bi = path.join(ROOT, 'bearings/index.html'), bl = path.join(ROOT, `bearings/voyage-${pad(latest)}.html`);
-    if (!fs.existsSync(bl)) err(`bearings/voyage-${pad(latest)}.html does not exist`);
+    const bi = path.join(ROOT, 'voyages/bearings/index.html'), bl = path.join(ROOT, `voyages/bearings/voyage-${pad(latest)}.html`);
+    if (!fs.existsSync(bl)) err(`voyages/bearings/voyage-${pad(latest)}.html does not exist`);
     // The current bearing is the latest voyage's bearing page, byte for byte.
     else if (!fs.existsSync(bi) || fs.readFileSync(bi, 'utf8') !== fs.readFileSync(bl, 'utf8'))
-      err(`bearings/index.html is not a copy of bearings/voyage-${pad(latest)}.html`);
+      err(`voyages/bearings/index.html is not a copy of voyages/bearings/voyage-${pad(latest)}.html`);
   });
 
   // 7. the DM layer

@@ -33,7 +33,7 @@ window.CAELESTIS_BEARING = {
   },
 
   links: {
-    bearing:   'bearings/index.html',
+    bearing:   'voyages/bearings/index.html',
     voyage:    'voyages/voyage-006.html',
     helm:      'https://royek.foundryserver.com/game',
     scheduler: 'https://rallly.co/invite/B8uUYlcm4oKB'

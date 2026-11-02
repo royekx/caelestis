@@ -21,7 +21,7 @@ Do not write to the repo before the first or to the record before the second.
 
 | Side | Folders |
 |---|---|
-| Player (root) | `index.html` (the gate), `hub.html` (the terminal, the player home), `voyages/`, `bearings/`, `logs/`, `crew-manifest/`, `dossiers/`, `factions/`, `navigation-records/`, `vessels/`, `quests/`, `inventory/` (`entries/`, `items/`), `protocols/` (Fleet Protocols: manuals for how things are done), `spelljammer-nexus/`, `search/`; companion pages `aspects/`, `wayfinder-path/`, `stellar-chart/` |
+| Player (root) | `index.html` (the gate), `hub.html` (the terminal, the player home), `voyages/` (voyage pages; `bearings/`, the current bearing, per-voyage bearings and the timeline; `logs/`, the Crew Logs), `crew-manifest/`, `dossiers/`, `factions/`, `navigation-records/`, `vessels/`, `quests/`, `inventory/` (`entries/`, `items/`), `protocols/` (Fleet Protocols: manuals for how things are done), `spelljammer-nexus/`, `search/`; companion pages `aspects/`, `wayfinder-path/`, `stellar-chart/` |
 | FIA | `restricted/`: the Fleet Intelligence Archive, gated, its own chrome and index |
 | DM | `prime/`: the DM wiki, gated |
 | Record | `data/` (player-safe), `prime/data/` (DM layer) |

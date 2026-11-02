@@ -96,10 +96,11 @@ function sectionFromUrl(url) {
     'quests': 'Quest Board', 'factions': 'Factions', 'navigation-records': 'Navigation Records', 'vessels': 'Vessels', 'spelljammer-nexus': 'Spelljammer Nexus',
     'inventory': 'Crew Inventory', 'protocols': 'Fleet Protocols'
   };
-  // Find whichever path segment is a known section — robust to any subpath prefix.
+  // The deepest path segment that is a known section names it: voyages/bearings/
+  // is the Current Bearing, registry/dossiers/ the Dossiers.
   const segs = url.replace(/^\//, '').split('/');
   let label = 'Records';
-  for (const s of segs) { if (map[s]) { label = map[s]; break; } }
+  for (const s of segs) { if (map[s]) label = map[s]; }
   const m = url.match(/voyage-\w+-(\d+)/);
   if (m) label += ' · Voyage ' + m[1];
   return label;
