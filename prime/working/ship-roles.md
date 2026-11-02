@@ -2,7 +2,7 @@
 
 This is a review of the ship rules the table has run, and a proposal for revised roles. It covers the trek to H'Catha aboard the tyrant ship (V007) and later fights on the *Flighty Foundling*. It is designed from the typical, open-deck ship first; the tyrant ship is the exception. Fourth draft.
 
-**Ruled (Korey, on drafts one to three):**
+**Ruled (Korey):** everything in this draft, including the defaults in section 9 (approved 2026-11-01). Earlier rulings:
 - **Ship stats.** Use the official SJA stats. Hull is the stat block's hit points, and Bulwark is 2 × the old damage threshold.
 - **Roles add to a turn.** A role adds to a character's full turn: a passive, a bonus-action menu, and at most one reaction.
 - **Weapons.**
@@ -378,6 +378,7 @@ Plan for it as a story turn, not a dead end.
 
   That's roughly 2–4 minutes, or 20–40 rounds, to rescue someone.
 - **Outcomes.** Capture, towing, rescue by the Fleet, or limping to a rock to repair. Each leads somewhere.
+- **Losing the ship changes the conditions, not the game (DM voice).** A destroyed ship doesn't mean a dead crew. The DM can step in and keep it real, neither cushioning nor punishing: a captured crew is usually worth more to an enemy than a dead one. The enemy takes the stragglers aboard, and the players' options change. They can find a way off, revolt, be ransomed or sold, or bargain. That is where a story forms.
 
 ### Escape (always available)
 - **Only from Long range.** The Spelljammer spends their action on a contested spellcasting check against the pursuing Spelljammer.
