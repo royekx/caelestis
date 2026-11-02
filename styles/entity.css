@@ -459,3 +459,147 @@ html { overflow-x: clip; }
   .ship-sheet .box { border-color: #000; }
   .rec-tabs { display: none !important; }
 }
+
+/* ════════════════════════════════════════════════════════════════
+   WIKI ENTRY
+   Every player record page (dossiers, crew manifest, navigation
+   records and vessels, factions, inventory entries, quests) reads like
+   the DM wiki's entries in the player palette: the article on the left,
+   the infobox on the right, the record tabs in the article column and
+   Connections below. Markup:
+
+     <div class="entry-header is-wiki">
+       <aside class="identity-card">portrait · stat-card · .appear</aside>
+       <div class="entry-info">name · sub · .rec-tabs · .rec-panel…</div>
+     </div>
+
+   The selectors are long on purpose: register.css stacks and re-stacks
+   the old left-hand card, and these rules must outrank all of it.
+   ════════════════════════════════════════════════════════════════ */
+.content .entry-header.is-wiki {
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 2.6rem;
+}
+.entry-header.is-wiki > .entry-info { order: 1; min-width: 0; }
+.entry-header.is-wiki > .identity-card {
+  order: 2;
+  display: block;
+  border-top: 2px solid var(--gold);
+  max-width: none;
+}
+/* The page title names the subject; the article opens on the tagline. */
+.entry-header.is-wiki .entry-name { display: none; }
+.entry-header.is-wiki .entry-sub { font-size: 1.12rem; line-height: 1.5; margin-bottom: 0.6rem; }
+.entry-header.is-wiki .entry-body { margin-top: 0; }
+
+/* Portrait: a monogram sits in a 4:3 frame; an image shows whole. */
+.entry-header.is-wiki .identity-card .portrait-frame {
+  aspect-ratio: 4 / 3; max-width: none; margin: 0;
+  background: var(--gold-faint);
+}
+.entry-header.is-wiki .identity-card .portrait-frame:has(img) { aspect-ratio: auto; }
+.entry-header.is-wiki .identity-card .portrait-frame img {
+  height: auto; max-height: 30rem; object-fit: contain;
+}
+
+/* Rows: key and value side by side, as on the DM infobox. */
+.entry-header.is-wiki .identity-card .stat-card { padding: 0.45rem 1.05rem 0.6rem; }
+.entry-header.is-wiki .identity-card .stat-card .stat-row {
+  display: grid; grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 0.7rem; align-items: baseline; padding: 0.45rem 0;
+}
+.entry-header.is-wiki .identity-card .stat-card .stat-key {
+  display: block; margin: 0; white-space: normal; line-height: 1.35; letter-spacing: 0.1em;
+}
+.entry-header.is-wiki .identity-card .stat-card .stat-val,
+.entry-header.is-wiki .identity-card .stat-card .stat-val.stat-val-long {
+  display: block; text-align: left; white-space: normal;
+  overflow-wrap: break-word; hyphens: manual; font-size: 0.92rem; line-height: 1.45;
+}
+/* A quest's giver keeps the row's type, not the old giver strip's. */
+.entry-header.is-wiki .identity-card .stat-val .giver-name { font: inherit; letter-spacing: 0; }
+.entry-header.is-wiki .identity-card .stat-val a {
+  color: var(--ice-light); text-decoration: underline;
+  text-decoration-color: var(--ice-dim); text-underline-offset: 0.15em;
+}
+.entry-header.is-wiki .identity-card .stat-val a:hover { color: var(--gold-light); }
+.entry-header.is-wiki .identity-card .stat-val .named { color: var(--text-muted); font-style: italic; }
+
+/* ── All appearances ──
+   The fly-out under First seen and Last seen: every voyage the record
+   puts the subject in, oldest first, written by hand and held to the
+   record by `check`. */
+.appear { border-top: 1px solid var(--rule); }
+.appear > summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: baseline; gap: 0.6rem;
+  padding: 0.7rem 1.05rem;
+  font-family: 'Cinzel', serif; font-size: 0.719rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--text-muted);
+  transition: color .18s, background .18s;
+}
+.appear > summary::-webkit-details-marker { display: none; }
+.appear > summary::before {
+  content: '\25B8'; color: var(--ice-dim); display: inline-block; transition: transform .18s;
+}
+.appear[open] > summary::before { transform: rotate(90deg); }
+.appear > summary:hover { color: var(--ice); background: var(--ice-faint); }
+.appear > summary:focus-visible { outline: 2px solid var(--ice); outline-offset: -2px; }
+.appear-count { margin-left: auto; color: var(--ice-dim); letter-spacing: 0.08em; }
+.appear-list {
+  list-style: none; margin: 0; padding: 0 1.05rem 0.8rem;
+  display: flex; flex-direction: column; gap: 0.45rem;
+}
+.appear-list li {
+  display: grid; grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.1rem 0.6rem; align-items: baseline;
+  font-size: 0.9rem; line-height: 1.4;
+}
+.appear-list a {
+  font-family: 'Cinzel', serif; font-size: 0.74rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gold); text-decoration: none; white-space: nowrap;
+}
+.appear-list a:hover { color: var(--gold-light); }
+.appear-title { color: var(--text-dim); min-width: 0; }
+.appear-tag {
+  grid-column: 2; justify-self: start;
+  font-size: 0.8rem; font-style: italic; color: var(--text-muted);
+}
+
+/* ── Inside the article column ── */
+.entry-header.is-wiki .rec-tabs { margin-top: 0.2rem; }
+.entry-header.is-wiki .rec-panel > :first-child { margin-top: 0; }
+.entry-header.is-wiki .rec-panel .record-block:last-child { margin-bottom: 0; }
+.entry-header.is-wiki .carry-row { margin: 1.2rem 0 0; }
+.entry-header.is-wiki .xref-card { margin-top: 1.4rem; }
+.entry-header.is-wiki .brief-grid { grid-template-columns: minmax(0, 1fr); margin-bottom: 0; }
+.entry-header.is-wiki .companion-card { margin-top: 1.4rem; }
+
+/* A wide panel (a ship's sheet) takes the whole column while it is open. */
+.js-rec-tabs .content .entry-header.is-wiki:has(.rec-panel.is-wide.is-active) { grid-template-columns: minmax(0, 1fr); }
+.js-rec-tabs .entry-header.is-wiki:has(.rec-panel.is-wide.is-active) > .identity-card { display: none; }
+
+/* Under 860px the infobox comes first and the article runs under it. */
+@media (max-width: 860px) {
+  .content .entry-header.is-wiki { grid-template-columns: minmax(0, 1fr); gap: 1.6rem; }
+  .entry-header.is-wiki > .identity-card { order: 0; }
+  .entry-header.is-wiki .identity-card .portrait-frame { aspect-ratio: 16 / 9; }
+  .entry-header.is-wiki .identity-card .portrait-frame img { max-height: 70vh; }
+  /* A monogram needs no 16:9 frame: a short band keeps the rows in view. */
+  .entry-header.is-wiki .identity-card .portrait-frame:not(:has(img)) { aspect-ratio: auto; height: 5.5rem; }
+  .entry-header.is-wiki .identity-card .portrait-frame .monogram { font-size: 2.4rem; }
+}
+@media (max-width: 620px) {
+  .entry-header.is-wiki > .identity-card { display: block; }
+}
+
+/* A long chip name wraps inside its Connections column instead of running
+   past the card on a phone (register.css sets chips nowrap). */
+.xref-card .xref-col > .chip { white-space: normal; box-sizing: border-box; max-width: 100%; }
+
+/* nav.js adds a "Tap to Expand" caption under a portrait it can enlarge. */
+.entry-header.is-wiki .identity-card .portrait-label {
+  font-family: 'Cinzel', serif; font-size: 0.66rem; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--text-faint); text-align: center;
+  padding: 0.35rem 1rem; border-bottom: 1px solid var(--rule);
+}

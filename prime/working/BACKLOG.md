@@ -42,9 +42,9 @@ staging once Korey has read and accepted them.
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 4 | 18 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 20 | 3 | 2 | 24 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 11 | 2 | 0 | 0 |
-| Player pages | restricted/ and other player pages | 2 | 0 | 1 | 0 | 2 |
+| Player pages | restricted/ and other player pages | 2 | 0 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **126** | **155** | **47** | **2** | **56** |
+| **Total** |  | **126** | **155** | **46** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1022,7 +1022,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ### dossiers/index.html
 
 - **[later]** Grouping on every DM register
-  dossiers/index.html groups its rows by side through dm-register.js (a data-group-axis on .register and an A–Z / By side toggle). Opt the other DM registers in where a grouping helps: locations/ by system, factions/ by reach, vessels/ by where, artifacts/ by fragment.
+  dossiers/index.html groups its rows by affiliation through dm-register.js (a data-group-axis on .register and an A–Z / By affiliation toggle). Opt the other DM registers in where a grouping helps: locations/ by system, factions/ by reach, vessels/ by where, artifacts/ by fragment.
   src: section 5 (2026-10-28); Korey 2026-10-27 ("the same register shape to every DM index")
 
 ---
@@ -2276,20 +2276,6 @@ run decide, fix, drop, add.
   src: chat 2026-10-27 (Korey: "delete it for now. add a note to the backlog to revisit the idea when the site is stable")
 
 # Player pages
-
-### Section 11: the player wiki overhaul
-
-- **[add]** Every player entry type gets the wiki treatment
-  Dossiers, navigation records, vessels, factions, inventory and quests each get an infobox laid out like the DM side's.
-  src: Korey, 2026-10-29
-
-- **[add]** First seen, last seen and all appearances
-  On player dossiers, "Met" becomes "First seen" and "Last seen", with a fly-out listing every voyage where the entity was seen or mentioned, from the record's `seen` and `mentioned` fields. Decide: the list is written by hand and `check` verifies it against the record, or this one list is filled by script (CLAUDE.md says nothing generates pages).
-  src: Korey, 2026-10-29
-
-- **[fix]** "By side" on the dossier index
-  Rename the sort to "By affiliation".
-  src: Korey, 2026-10-29
 
 Fixes to player-facing pages, including the Fleet Intelligence Archive (`restricted/`). These pages hold only what the crew could know; corrections must keep that boundary.
 

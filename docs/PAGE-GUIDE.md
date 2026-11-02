@@ -241,7 +241,7 @@ tool the page needs is embedded in a `.dm-embed` with **Open full**.
 | Register | Holds | Axes |
 |---|---|---|
 | `locations/` | places, grouped by system | system, kind, standing |
-| `dossiers/` | anything with a will | side, kind, standing |
+| `dossiers/` | anything with a will | affiliation, kind, standing |
 | `factions/` | organized interests | reach, posture |
 | `crew/` | the player characters | where the rules live (on their page, Rules page, a player page, role-play only; a row may hold several) |
 | `vessels/` | ships | where, standing, depth |
@@ -572,10 +572,71 @@ The player site and the DM wiki hold two versions of the same subjects: dossiers
 Player pages hold only what the crew could know, drawn from the record. Search
 attributes are in `CLAUDE.md` § Deploy and search.
 
+### Record pages
+
+Every player record page (`dossiers/`, `crew-manifest/`, `navigation-records/`
+and the vessels in it, `factions/`, `inventory/entries/`, `quests/`) reads like
+a DM entry in the player palette: the article on the left, the infobox on the
+right, the record tabs in the article column, Connections below. It is written
+by hand from the record; `check` holds every `data-field` region to it. The
+shared component is § WIKI ENTRY in `styles/entity.css`;
+`inventory/entries/entry-template.html` shows the markup.
+
+```
+page header (title) · prev/next bar
+.entry-header.is-wiki
+  aside.identity-card     portrait · stat-card (data-field="stats") · All appearances
+  .entry-info             entry-name (hidden) · entry-sub · .rec-tabs · .rec-panel…
+                          (a quest has no entry-name or entry-sub)
+divider · Connections
+```
+
+**The infobox** holds only what the record holds, in this order. A row marked
+? is left out when the record has no value. A value that names a record links
+the name to its page (in "Caelestis Academy (cadet)" the link is Caelestis
+Academy). An infobox link never goes to a quest, and a row that names people
+(Crew, Given by, Involves, Known figures, Known aboard) links only to a dossier,
+a crew page or a faction; `check` enforces both.
+
+| Page | Rows |
+|---|---|
+| Dossier | Role · Crew · Affiliation? · Gender? · Status · First seen · Last seen |
+| Crew manifest | Species · Class · Specialisation? · Station · Clearance · Status · First voyage · Last voyage |
+| Faction | Type · Relationship · Status · First seen · Last seen |
+| Navigation record | Type · Located in? · Known figures? (Known aboard, on a vessel) · Status · First seen · Last seen |
+| Inventory entry | Type · Class · Item type · Rarity? · Held by? · Origin · Status · First seen · Last seen |
+| Quest | Kind · Type · Given by? (`data-field="giver"`, an `a.giver-name`) · Involves · Progress? · Status · First voyage · Last voyage |
+
+A quest has no portrait; its infobox is rows only.
+
+**First seen and Last seen** come from the record's `seen` and `mentioned`.
+First seen is the earliest voyage in either, with "· named only" when the crew
+only heard of the subject then. Last seen is the latest voyage the crew saw
+it in person, or failing that the latest mention, "· named only". A crew
+member or a quest has neither field and shows First voyage and Last voyage
+from its voyage log.
+
+**All appearances** sits under the rows: a `details.appear` with
+`data-field="appearances"` and `data-pagefind-ignore`, its summary reading
+"All appearances" and the count. It lists every voyage in `seen` and
+`mentioned` (or the voyage log, for crew and quests), oldest first, one `<li>`
+each: a link to the voyage page reading "Voyage NNN", the voyage's title in
+`.appear-title`, and `.appear-tag` "named only" where the voyage was a mention.
+A session run adds the new voyage here on every record it touches.
+
+**Tabs.** A page with a voyage log carries two `.rec-tab` tabs, Record
+(`#record`: overview, pursuit, notable items, companion card, The Object
+Itself, Within, a quest's briefing, objectives, rewards and notable items)
+and Voyage log (`#voyage-log`: the latest voyage block and Previous Voyages).
+A vessel with a ship sheet adds Ship sheet (`#ship-sheet`, a
+`.rec-panel.ship-sheet.is-wide`, which hides the infobox while open). A page
+with no voyage log yet has one panel and no strip. Panels stay static HTML;
+without JS they stack, which is also what Pagefind reads.
+
 - **Player dossiers.** A named presence gets a page under `dossiers/`: met,
   mentioned, or only heard (Beshaba from laughter, the Runekeeper from a
   voice). It carries only what the table has, sourced to the voyage, with
-  "named only" or "laughter only" in Last Seen when that is all. The player
+  "named only" in First seen and Last seen when that is all. The player
   and DM dossiers never mirror each other.
 - **Inventory.** An entry (`inventory/entries/`) is the ledger record: what it
   is, who holds it, what happened to it. An item (`inventory/items/`) is the

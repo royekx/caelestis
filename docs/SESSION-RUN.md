@@ -353,8 +353,8 @@ node scripts/data.js derive
 | `bearings/index.html` | a copy of the new bearing page |
 | `data/bearing.js` | voyage, title, date, position, outstanding, consequence, quests, met, links |
 | `data/vocabulary.js` | every new proper noun |
-| each changed record's page | the new voyage becomes the latest block and the old one moves into Previous Voyages; stat rows; overview; objectives; Connections |
-| each new record's page | new, from a sibling page of the same kind, with `data-entity` set to its id |
+| each changed record's page | on the Voyage log tab, the new voyage becomes the latest block and the old one moves into Previous Voyages; the infobox rows, First seen and Last seen (or First and Last voyage) among them; the new voyage in All appearances; overview; objectives; Connections. Layout in `docs/PAGE-GUIDE.md` § 8, Record pages |
+| each new record's page | new, from a sibling page of the same kind (`inventory/entries/entry-template.html` for an item), with `data-entity` set to its id |
 | each register | `crew-manifest/` `dossiers/` `factions/` `navigation-records/` `vessels/` `inventory/` `quests/` index pages: rows, overview text, progress, counts |
 
 The Brief Account and At a Glance are taken from the approved Full Account and
@@ -389,7 +389,7 @@ pull request. Then open the changed pages in a browser once.
 | `data/` holds only keys the record has | whether a bullet is true to the session |
 | ids, slugs and references are sound | whether a fact belongs on the player side at all |
 | derived fields are current | a voyage page's glance, Brief and Full Account |
-| each record's page shows its name, subtitle, overview, stat rows, pursuit, carried items, bullets under the right voyage, objectives, rewards, giver, parent and Connections | the wording of the bearing pages |
+| each record's page shows its name, subtitle, overview, infobox rows, All appearances, pursuit, carried items, bullets under the right voyage, objectives, rewards, giver, parent and Connections | the wording of the bearing pages |
 | each register row shows its record's name, overview, sub-line, state and progress | the bar's position, outstanding and consequence lines |
 | each voyage page carries its number and title | the prose of any page under `prime/` |
 | the command bar's voyage, title, quest names and progress | the Crew Logs document |

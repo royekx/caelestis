@@ -369,10 +369,10 @@ function regions(src, name) {
 const region = (src, name) => { const r = regions(src, name); return r.length ? r[0] : null; };
 const resolveFrom = (pageUrl, href) => path.posix.normalize(path.posix.join(path.posix.dirname(pageUrl), href));
 
-// The stat rows each kind of page carries, in order, and where each value
+// The infobox rows each kind of page carries, in order, and where each value
 // comes from. A function is a derived value; a string is a field.
-// What a page prints beside Last Seen / Last Visited. Present in person beats
-// named in passing: an entity the crew has only heard of reads "named only".
+// What a page prints beside Last seen. Present in person beats named in
+// passing: an entity the crew has only heard of reads "named only".
 function lastSeenLabel(r) {
   const max = a => Math.max(...a);
   if (r.seen && r.seen.length) return `Voyage ${pad(max(r.seen))}`;
@@ -380,21 +380,46 @@ function lastSeenLabel(r) {
   if (r.voyages && r.voyages.length) return `Voyage ${pad(max(r.voyages.map(v => v.number)))}`;
   return null;
 }
+// Every voyage the record puts an entity in, oldest first: seen or mentioned,
+// seen winning when it is both. A crew member or a quest has neither field and
+// appears in the voyages its log holds.
+function appearances(r) {
+  const seen = r.seen || [], named = r.mentioned || [];
+  if (seen.length || named.length)
+    return uniqSorted(seen.concat(named)).map(n => ({ number: n, named: !seen.includes(n) }));
+  return uniqSorted((r.voyages || []).map(v => v.number)).map(n => ({ number: n, named: false }));
+}
+// First seen: the earliest appearance of any kind, marked when it was a name only.
+function firstSeenLabel(r) {
+  const a = appearances(r)[0];
+  return a ? `Voyage ${pad(a.number)}${a.named ? ' · named only' : ''}` : null;
+}
+const voyageEnd = end => r => {
+  const a = (r.voyages || []).map(v => v.number);
+  return a.length ? `Voyage ${pad(end === 'first' ? Math.min(...a) : Math.max(...a))}` : null;
+};
 const STATS = {
   pc: [['Species', 'Species'], ['Class', 'Class'], ['Specialisation', 'Specialisation', 'optional'],
-    ['Station', 'Station'], ['Clearance', 'Clearance'], ['Last Seen', lastSeenLabel], ['Status', 'Status']],
+    ['Station', 'Station'], ['Clearance', 'Clearance'], ['Status', 'Status'],
+    ['First voyage', voyageEnd('first')], ['Last voyage', voyageEnd('last')]],
   npc: [['Role', 'Role (as known)'], ['Crew', 'Party Relationship'], ['Affiliation', 'Affiliation(s)', 'optional'],
-    ['Last Seen', lastSeenLabel], ['Status', 'Status']],
-  faction: [['Type', 'Type'], ['Relationship', 'Party Relationship'], ['Last Seen', lastSeenLabel], ['Status', 'Status']],
-  location: [['Type', 'Type'], ['Parent', r => r.parent ? r.parent.name : null, 'optional'],
-    ['Last Visited', lastSeenLabel], ['Status', 'Status']],
-  item: [['Type', 'Type'], ['Held By', 'Held By', 'optional'], ['Origin', 'Origin'],
-    ['Last Seen', lastSeenLabel], ['Status', 'Status']]
+    ['Gender', 'Gender', 'optional'], ['Status', 'Status'], ['First seen', firstSeenLabel], ['Last seen', lastSeenLabel]],
+  faction: [['Type', 'Type'], ['Relationship', 'Party Relationship'], ['Status', 'Status'],
+    ['First seen', firstSeenLabel], ['Last seen', lastSeenLabel]],
+  location: [['Type', 'Type'], ['Located in', r => r.parent ? r.parent.name : null, 'optional'],
+    [r => r.kind === 'Vessel' ? 'Known aboard' : 'Known figures', 'Key NPCs / Factions', 'optional'],
+    ['Status', 'Status'], ['First seen', firstSeenLabel], ['Last seen', lastSeenLabel]],
+  item: [['Type', 'Type'], ['Class', 'Class'], ['Item type', 'Item Type'], ['Rarity', 'Rarity', 'optional'],
+    ['Held by', 'Held By', 'optional'], ['Origin', 'Origin'], ['Status', 'Status'],
+    ['First seen', firstSeenLabel], ['Last seen', lastSeenLabel]],
+  quest: [['Kind', r => r.kind], ['Type', 'Type'], ['Given by', r => r.giver ? r.giver.name : null, 'optional'],
+    ['Involves', 'Related Character(s)'], ['Progress', r => r.progress ? `${r.progress.done} of ${r.progress.total}` : null, 'optional'],
+    ['Status', 'Status'], ['First voyage', voyageEnd('first')], ['Last voyage', voyageEnd('last')]]
 };
 const SUBTITLE = { pc: 'Player Concept (as known)', npc: 'Role (as known)',
   faction: 'Type', location: 'Type', item: 'Type' };
 
-function checkPage(r, err) {
+function checkPage(r, err, voyages) {
   const at = r.url;
   if (!exists(at)) return err(`${r.id} ${r.name}: page ${at} does not exist`);
   const src = fs.readFileSync(path.join(ROOT, at), 'utf8');
@@ -451,13 +476,53 @@ function checkPage(r, err) {
     else {
       const shown = matches(/class="stat-key"[^>]*>([\s\S]*?)<\/span>\s*<span class="stat-val[^"]*"[^>]*>([\s\S]*?)<\/span>/g, stats)
         .map(m => [text(m[1]), text(m[2])]);
-      const want = STATS[r.type].map(([label, from, optional]) => {
+      const want = STATS[r.type].map(([key, from, optional]) => {
+        const label = typeof key === 'function' ? key(r) : key;
         const v = typeof from === 'function' ? from(r) : r.fields[from];
         return (v == null || v === '') ? (optional ? null : [label, '']) : [label, plain(v)];
       }).filter(Boolean);
       const keys = a => a.map(x => x[0]).join(' · ');
       if (keys(shown) !== keys(want)) err(`${at}: stat rows are "${keys(shown)}", record gives "${keys(want)}"`);
       else shown.forEach(([k, v], i) => { if (v !== want[i][1]) err(`${at}: ${k} reads "${v}", record gives "${want[i][1]}"`); });
+      // A link in an infobox row names a record, never a quest; a row that
+      // names people links only to dossiers, the crew manifest or factions.
+      const PEOPLE = ['Crew', 'Given by', 'Involves', 'Known figures', 'Known aboard'];
+      matches(/class="stat-key"[^>]*>([\s\S]*?)<\/span>\s*<span class="stat-val[^"]*"[^>]*>([\s\S]*?)<\/span>\s*<\/div>/g, stats).forEach(m => {
+        const key = text(m[1]);
+        matches(/href="([^"]+)"/g, m[2]).forEach(h => {
+          const to = resolveFrom(at, h[1]);
+          if (to.startsWith('quests/')) err(`${at}: the ${key} row links ${h[1]}, a quest; infobox links name records`);
+          else if (PEOPLE.includes(key) && !/^(dossiers|crew-manifest|factions)\//.test(to)) err(`${at}: the ${key} row links ${h[1]}; it names people, so it links a dossier, a crew page or a faction`);
+        });
+      });
+    }
+  }
+
+  // All appearances: the infobox fly-out lists every voyage the record puts
+  // the entity in, oldest first, each linked to its voyage page under that
+  // voyage's title, with "named only" where the crew only heard of it.
+  {
+    const want = appearances(r);
+    const box = region(src, 'appearances');
+    if (box == null) { if (want.length) err(`${at}: no appearances region; the record gives ${want.map(a => 'V' + pad(a.number)).join(' · ')}`); }
+    else {
+      const shown = matches(/<li[^>]*>([\s\S]*?)<\/li>/g, box).map(m => {
+        const a = /<a[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/.exec(m[1]);
+        const t = /class="appear-title"[^>]*>([\s\S]*?)<\/span>/.exec(m[1]);
+        const tag = /class="appear-tag"[^>]*>([\s\S]*?)<\/span>/.exec(m[1]);
+        return { href: a ? resolveFrom(at, a[1]) : null, label: a ? text(a[2]) : '', title: t ? text(t[1]) : '', tag: tag ? text(tag[1]) : '' };
+      });
+      const list = x => x.map(v => v.label).join(', ') || 'none';
+      const wantShown = want.map(a => ({ label: `Voyage ${pad(a.number)}`, a }));
+      if (list(shown) !== list(wantShown)) err(`${at}: appearances list ${list(shown)}, record gives ${list(wantShown)}`);
+      else shown.forEach((s, i) => {
+        const a = want[i], v = voyages.get(a.number);
+        if (v && s.href !== v.url) err(`${at}: appearance ${s.label} links ${s.href}, record gives ${v.url}`);
+        if (v && s.title !== plain(v.name)) err(`${at}: appearance ${s.label} is titled "${s.title}", record says "${v.name}"`);
+        if (s.tag !== (a.named ? 'named only' : '')) err(`${at}: appearance ${s.label} is tagged "${s.tag || 'nothing'}", record gives "${a.named ? 'named only' : 'nothing'}"`);
+      });
+      const count = /class="appear-count"[^>]*>([\s\S]*?)<\/span>/.exec(box);
+      if (!count || text(count[1]) !== String(want.length)) err(`${at}: appearances count reads "${count ? text(count[1]) : 'nothing'}", record gives ${want.length}`);
     }
   }
 
@@ -852,7 +917,8 @@ function check() {
 
   // 5. pages and registers show what the record says
   const guarded = (what, fn) => { try { fn(); } catch (e) { err(`${what}: could not be checked — ${e.message}`); } };
-  all(fresh).forEach(r => guarded(r.url, () => checkPage(r, err)));
+  const voyages = new Map(fresh.sessions.map(v => [v.number, v]));
+  all(fresh).forEach(r => guarded(r.url, () => checkPage(r, err, voyages)));
   SETS.forEach(s => guarded(s.index, () => checkIndex(s, fresh[s.key], err)));
   guarded('links', () => checkLinks(err));
   guarded('styles', () => checkStyles(err));
