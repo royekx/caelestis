@@ -26,7 +26,7 @@
     "vessels",
     "quests",
     "inventory",
-    "handouts",
+    "protocols",
     "spelljammer-nexus",
     "search",
     "aspects",
@@ -819,6 +819,10 @@
     {
       "old": "ship-sheets.html",
       "new": "the Ship sheet tab on each vessel record (navigation-records/the-tyrant-ship.html#ship-sheet, navigation-records/the-flighty-foundling.html#ship-sheet)"
+    },
+    {
+      "old": "handouts/",
+      "new": "protocols/, Fleet Protocols (index.html, crew-roles.html, ship-mechanics.html keep their names); the folder name is never reused"
     }
   ],
   "allow": [
@@ -849,7 +853,7 @@
     "vessels",
     "quests",
     "inventory",
-    "handouts",
+    "protocols",
     "spelljammer-nexus",
     "search",
     "aspects",

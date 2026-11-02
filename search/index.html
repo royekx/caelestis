@@ -41,7 +41,7 @@
           <option value="vessels">Vessels</option>
           <option value="spelljammer-nexus">Spelljammer Nexus</option>
           <option value="inventory">Crew Inventory</option>
-          <option value="handouts">Corps Protocols</option>
+          <option value="protocols">Fleet Protocols</option>
         </select>
       </div>
     </div>
@@ -77,7 +77,7 @@ const SCOPE_LABELS = {
   'vessels': 'Vessels',
   'spelljammer-nexus': 'Spelljammer Nexus',
   'inventory': 'Crew Inventory',
-  'handouts': 'Corps Protocols'
+  'protocols': 'Fleet Protocols'
 };
 
 // Human-readable section label from a result URL, for the right-hand path tag.
@@ -94,7 +94,7 @@ function sectionFromUrl(url) {
   const map = {
     'voyages': 'Crew Voyages', 'bearings': 'Current Bearing', 'logs': 'Crew Logs', 'crew-manifest': 'Crew Manifest', 'dossiers': 'Dossiers',
     'quests': 'Quest Board', 'factions': 'Factions', 'navigation-records': 'Navigation Records', 'vessels': 'Vessels', 'spelljammer-nexus': 'Spelljammer Nexus',
-    'inventory': 'Crew Inventory', 'handouts': 'Corps Protocols'
+    'inventory': 'Crew Inventory', 'protocols': 'Fleet Protocols'
   };
   // Find whichever path segment is a known section — robust to any subpath prefix.
   const segs = url.replace(/^\//, '').split('/');

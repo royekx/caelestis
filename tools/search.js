@@ -31,7 +31,7 @@
     'navigation-records': 'Navigation Records',
     'spelljammer-nexus': 'Spelljammer Nexus',
     'inventory': 'Crew Inventory',
-    'handouts': 'Corps Protocols'
+    'protocols': 'Fleet Protocols'
   };
 
   // Detect the section from the URL path.

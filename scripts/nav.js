@@ -74,7 +74,7 @@
       label: 'Fleet Records',
       items: [
         { key: 'spelljammer-nexus',  label: 'Spelljammer Nexus',  path: 'spelljammer-nexus/index.html'  },
-        { key: 'handouts',           label: 'Corps Protocols',    path: 'handouts/index.html'           },
+        { key: 'protocols',          label: 'Fleet Protocols',    path: 'protocols/index.html'          },
         { key: 'search',             label: 'S.E.A.R.C.H.',       path: 'search/index.html'             }
       ]
     }

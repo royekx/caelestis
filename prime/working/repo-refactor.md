@@ -325,6 +325,9 @@ Old path → new path, added by each pull request that moves a page.
 | `data/nexus.js` | retired; the Nexus index (`spelljammer-nexus/index.html`) holds static rows, and the path is never reused | Player side (player) |
 | `spelljammer-nexus/factions.html` | `spelljammer-nexus/peoples.html`, "Peoples of the Drift"; the old path is never reused | Player side (player) |
 | `handouts/ship-sheets.html` | the Ship sheet tab on each vessel record: `navigation-records/the-tyrant-ship.html#ship-sheet` (was `#tyrant-ship`) and `navigation-records/the-flighty-foundling.html#ship-sheet` (was `#flighty-foundling`); the old path is never reused | Ship roles (ship-roles) |
+| `handouts/index.html` | `protocols/index.html`, retitled Fleet Protocols (was Corps Protocols); the folder name `handouts/` is never reused | Player side condensed (repo-tidy) |
+| `handouts/crew-roles.html` | `protocols/crew-roles.html` | Player side condensed (repo-tidy) |
+| `handouts/ship-mechanics.html` | `protocols/ship-mechanics.html` | Player side condensed (repo-tidy) |
 
 ## Stale branches
 
