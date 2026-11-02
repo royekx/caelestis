@@ -59,15 +59,15 @@
     {
       label: 'Crew Intel',
       items: [
-        { key: 'quests',             label: 'Quest Board',        path: 'quests/index.html'             },
         { key: 'voyages',            label: 'Voyages',            path: 'voyages/index.html'            },
+        { key: 'quests',             label: 'Quest Board',        path: 'quests/index.html'             },
         { key: 'logs',               label: 'Logs',               path: 'voyages/logs/index.html'       },
-        { key: 'inventory',          label: 'Inventory',          path: 'inventory/index.html'          },
         { key: 'crew-manifest',      label: 'Manifest',           path: 'registry/crew-manifest/index.html' },
         { key: 'dossiers',           label: 'Dossiers',           path: 'registry/dossiers/index.html'  },
+        { key: 'factions',           label: 'Factions',           path: 'registry/factions/index.html'  },
+        { key: 'inventory',          label: 'Inventory',          path: 'inventory/index.html'          },
         { key: 'vessels',            label: 'Vessels',            path: 'vessels/index.html'            },
-        { key: 'navigation-records', label: 'Navigation Records', path: 'navigation-records/index.html' },
-        { key: 'factions',           label: 'Factions',           path: 'registry/factions/index.html'  }
+        { key: 'navigation-records', label: 'Navigation Records', path: 'navigation-records/index.html' }
       ]
     },
     {
