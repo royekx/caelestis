@@ -35,7 +35,10 @@
       2,
       3
     ],
-    "mentioned": [],
+    "mentioned": [
+      5,
+      6
+    ],
     "linked": [
       "FAO-Lx7kR2vN"
     ],
@@ -336,6 +339,12 @@
     },
     "voyages": [
       {
+        "number": 1,
+        "bullets": [
+          "Named by Boatswain Tarto as where the cadets would go for lunch once Mirt's crate was delivered"
+        ]
+      },
+      {
         "number": 2,
         "bullets": [
           "Caelestis's crowded refectory, packed with cadets of every wildspace people beneath blue-glowing orbs",
@@ -344,12 +353,21 @@
           "Along the back wall runs a board of handwritten notices — well-wishes, odd jobs, dock requests, and missing-item notices",
           "Where the crew first gathered as a table and sorted out their shipboard roles"
         ]
+      },
+      {
+        "number": 3,
+        "bullets": [
+          "Quieter than usual the evening after the simulation blast, Ryeback serving without his usual bellow"
+        ]
       }
     ],
     "seen": [
-      2
+      2,
+      3
     ],
-    "mentioned": [],
+    "mentioned": [
+      1
+    ],
     "linked": [],
     "url": "navigation-records/the-weeping-goddess.html",
     "links": [],
@@ -411,15 +429,29 @@
     },
     "voyages": [
       {
+        "number": 1,
+        "bullets": [
+          "The cadets woke here when the Moonraider simulation froze and peeled away"
+        ]
+      },
+      {
         "number": 2,
         "bullets": [
           "Where both cadet crews were summoned and briefed by Saerthe and Tarto for a salvage race",
           "Cadets entered pods here to run the simulation of a hammerhead recovering a logbook from a derelict in an asteroid field"
         ]
+      },
+      {
+        "number": 3,
+        "bullets": [
+          "An arcane rod jammed into its wall discharged as the salvage simulation ended, leaving the pods smoking and the rival crew hurt"
+        ]
       }
     ],
     "seen": [
-      2
+      1,
+      2,
+      3
     ],
     "mentioned": [],
     "linked": [],
@@ -769,11 +801,19 @@
           "Struck by an adamantine meteor that hit its spire, which the crew was sent to recover",
           "Named by a Sky Dock cargo clerk as a secondary destination for certain shipments"
         ]
+      },
+      {
+        "number": 6,
+        "bullets": [
+          "The only deadline on the mission, where others would be after the adamantine"
+        ]
       }
     ],
     "seen": [],
     "mentioned": [
-      3
+      1,
+      3,
+      6
     ],
     "linked": [],
     "url": "navigation-records/hcatha.html",
@@ -813,11 +853,18 @@
           "Named by a Sky Dock cargo clerk as the nearest destination on most shipping routes",
           "The world above which the abandoned tyrant ship drifts in orbit"
         ]
+      },
+      {
+        "number": 5,
+        "bullets": [
+          "The tyrant ship hangs in its orbit, a long way off from Caelestis but circling the same world"
+        ]
       }
     ],
     "seen": [],
     "mentioned": [
-      3
+      3,
+      5
     ],
     "linked": [],
     "url": "navigation-records/toril.html",
@@ -979,6 +1026,18 @@
     },
     "voyages": [
       {
+        "number": 3,
+        "bullets": [
+          "Named as the deck where the crew was to install the spelljamming helm and fly the tyrant ship"
+        ]
+      },
+      {
+        "number": 4,
+        "bullets": [
+          "Ostekk-6 confirmed the way to it runs through the access shafts, choked by the bloom"
+        ]
+      },
+      {
         "number": 5,
         "bullets": [
           "Reached through a carved opening just past the plane where the ship's gravity turns over",
@@ -1003,7 +1062,10 @@
       5,
       6
     ],
-    "mentioned": [],
+    "mentioned": [
+      3,
+      4
+    ],
     "linked": [
       "NPC-lfleUUeT"
     ],

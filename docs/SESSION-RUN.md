@@ -292,7 +292,10 @@ give it to the DM.
 - **Bullets** go under `voyages[n].bullets`: one fact each, past tense, in the
   account's own wording, only what the crew knows.
 - **`seen` or `mentioned`**: add the voyage number to `seen` if the entity was
-  present, to `mentioned` if it was only named.
+  present, to `mentioned` if it was only named. This holds for every record
+  the account names, including one named only in passing that gets no bullet
+  (Ryeback naming Saerthe and Tarto in V006). All appearances, First seen and
+  Last seen read these two lists and nothing else.
 - **"Now" fields are overwritten**, never kept as a history: Current State,
   What They Last Learned, Status, Held By.
 - **Overview** changes only when what the crew understands the thing to *be*

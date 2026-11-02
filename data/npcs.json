@@ -80,12 +80,20 @@
           "Met the cadets at the bridge and walked them in to Mirt",
           "Woke the cadets at four in the morning banging metal, and briefed them over breakfast on the H’Catha meteor recovery aboard a tyrant ship"
         ]
+      },
+      {
+        "number": 6,
+        "bullets": [
+          "Named by Ryeback, with Saerthe, as the instructors he would call if the crew could not finish the mission",
+          "Crossed from the Flighty Foundling to the tyrant ship hand over hand along the mooring line, asked for status, and relieved Pffred and Krik'Lit"
+        ]
       }
     ],
     "seen": [
       1,
       2,
-      3
+      3,
+      6
     ],
     "mentioned": [],
     "linked": [],
@@ -335,12 +343,21 @@
           "Conferred with Tarto over a marking on the rod: Vocath",
           "At the bridge, produced an illusion of the rod for Mirt and named the marking Vocath"
         ]
+      },
+      {
+        "number": 6,
+        "bullets": [
+          "Named by Ryeback, with Tarto, as the instructors he would call if the crew could not finish the mission",
+          "Came alongside on the Flighty Foundling and walked down to the tyrant ship's hatch on translucent squares that formed under each step",
+          "Told the crew that a cadet on a first field mission and one instructor would join them, and that the choice of instructor was theirs"
+        ]
       }
     ],
     "seen": [
       1,
       2,
-      3
+      3,
+      6
     ],
     "mentioned": [],
     "linked": [],
@@ -416,12 +433,20 @@
           "Named Boatswain and Joffrey as great spelljammers of Caelestis, with older absences hanging over the stories",
           "Arrived with officers in Mirt's chambers and confirmed the attack was likely a diversion amid a wave of burglaries"
         ]
+      },
+      {
+        "number": 3,
+        "bullets": [
+          "Named by a Sky Dock cargo clerk as the one who processes incoming shipments as well as outgoing stock, the marked crate's contents among them"
+        ]
       }
     ],
     "seen": [
       1
     ],
-    "mentioned": [],
+    "mentioned": [
+      3
+    ],
     "linked": [],
     "url": "dossiers/mr-blip.html",
     "links": [
