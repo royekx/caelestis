@@ -38,13 +38,13 @@ staging once Korey has read and accepted them.
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 19 | 3 | 3 | 0 | 1 |
 | Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
-| Artifacts and vessels | artifacts/, vessels/ | 10 | 7 | 3 | 0 | 1 |
-| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 4 | 19 | 0 | 20 |
+| Artifacts and vessels | artifacts/, vessels/ | 9 | 7 | 3 | 0 | 1 |
+| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 4 | 18 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 20 | 3 | 2 | 23 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 11 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 0 | 1 | 0 | 2 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **127** | **154** | **48** | **2** | **55** |
+| **Total** |  | **126** | **154** | **47** | **2** | **55** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1481,10 +1481,6 @@ left here is open.
 
 ### vessels/tyrant-ship.html
 
-- **[decide]** Which four eyes work, and the player ship sheet *(prep)*
-  Settled: Vaelorix worked the great eyes with his own gaze; Pffred and Krik'Lit rigged a crew station for each eye around the helm on the Command Deck; four of the ten respond, and the rest need repairs. This replaces memory's "three stalks wired as cannons, gunners in the Meditation pods" (update memory). Also settled: the stalk matching the hour's eye goes dead on H'Catha under the Pact. Still open: which four respond and what each does. Draft candidates: Fear (wakes on crossing entry 7), Telekinesis (an easy first unlock), Slowing (later); the fourth is unnamed. Then the player ship sheet the players were promised. The V007 runsheet still has three cannons with two active.
-  src: chat-voyage-6-7-planning § Open, § The Lantern and the ship, § Superseded (three cannons → four of ten eyes); astral § The meteorite and mission
-
 - **[decide]** Which shaft letter Research gets *(prep)*
   The table set A as the Garden and C as the Quarters. Options: B or D.
   src: chat-voyage-6-7-planning § Open
@@ -1528,10 +1524,6 @@ against the complete Tumak sweep (all 336 turns).
 
 ### rules/index.html
 
-- **[fix]** "Open" sections on the page
-  The page carries an "Open" h3 (line 384) and an "Open" h2 with an is-open "Unresolved" tag (line 427). Rewrite them as Still to decide sentences when the Rules section is done.
-  src: section 4 cold review (2026-10-28)
-
 #### Cosmology rules
 
 - **[fix]** Residue housings are dampened in anti-magic, not switched off *(answered)*
@@ -1547,7 +1539,7 @@ against the complete Tumak sweep (all 336 turns).
   2. Whether one Anchor is pre-set at campaign start.
   3. How a place becomes an Anchor, and how Gregory takes part.
   4. Which Rune Set each Anchor counts toward. Claude suggested at least one be Soul, since only 09 (Forehead) and 10 (Tongue) are rollable Soul positions (turns 258, 268).
-  Offered and never accepted, so not the default: the names Hearth, Threshold and Horizon; a loop where Gregory's Calibration finds anchorable sites; Anchors bypassing the reach gate (turns 327, 333). The page still reads "Unassigned (bestowed)" and "bestowed at story moments", and § The safety valve leans on the three bestowed positions. Touches rules/index.html (position table, § The safety valve, § Open), rules/wayfinder-path-dm.html, crew/gregory.html.
+  Offered and never accepted, so not the default: the names Hearth, Threshold and Horizon; a loop where Gregory's Calibration finds anchorable sites; Anchors bypassing the reach gate (turns 327, 333). The page still reads "Unassigned (bestowed)" and "bestowed at story moments", and § The safety valve leans on the three bestowed positions. Touches rules/index.html (position table, § The safety valve, § Still to decide under Tumak), rules/wayfinder-path-dm.html, crew/gregory.html.
   src: TGB § Tumak/Rune structure, final (turn 326), Open; memory-canon (open-decisions § Pending; campaign-canon § Tumak Swan); framework § Open
 
 - **[decide]** Which two runes are active now *(shape)*

@@ -538,4 +538,4 @@ Only the new proposals in this draft remain open.
 
 ## Open
 
-- The six questions in section 9.
+- None. Section 9 was ruled with every default (2026-11-01), and the draft was promoted on 2026-11-02.
