@@ -28,11 +28,18 @@
           "Boogie set it on the table for the crew; Tumak remarked that things had been going missing all over the academy",
           "Revealed to be the same model as the miniature spelljamming ship stolen from Saerthe"
         ]
+      },
+      {
+        "number": 3,
+        "bullets": [
+          "Still in Boogie's chest beside the derelict logbook when he woke from his dream"
+        ]
       }
     ],
     "seen": [
       1,
-      2
+      2,
+      3
     ],
     "mentioned": [],
     "linked": [
@@ -181,12 +188,20 @@
           "Casey saw unfamiliar constellations and a flickering point inside, and a familiar voice told him 'Go there'",
           "Revealed by Mirt to be a magical replica of a place beyond H’Catha in the Viren star system, gifted by the spellcaster Zerathis"
         ]
+      },
+      {
+        "number": 2,
+        "bullets": [
+          "The familiar presence that had spoken to Casey inside it settled beside him at the Sky Dock rail"
+        ]
       }
     ],
     "seen": [
       1
     ],
-    "mentioned": [],
+    "mentioned": [
+      2
+    ],
     "linked": [
       "LOC-Cw8kM4vB"
     ],
@@ -468,11 +483,18 @@
         "bullets": [
           "Called up a second time against the behir: one blade flickered loose, the other sank in and drove a pulse of force into it"
         ]
+      },
+      {
+        "number": 6,
+        "bullets": [
+          "Its blades still answered on the Command Deck when spells did not; Tumak threw them into a side flower and the ceiling flower"
+        ]
       }
     ],
     "seen": [
       4,
-      5
+      5,
+      6
     ],
     "mentioned": [],
     "linked": [

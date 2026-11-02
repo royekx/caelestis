@@ -711,7 +711,7 @@
           "Boatswain Tarto woke the crew at four in the morning to recover an adamantine meteor that struck the spire on H’Catha",
           "The plan: crew an abandoned beholder tyrant ship, install the helm on the command deck, and use its appearance to move through H’Cathan space unchallenged",
           "The Flighty Foundling dropped the crew into the tyrant ship's cargo deck and departed",
-          "The crew found and saved the broken autognome Ostekk-6, learning of a mimic aboard, a wisp bloom, and more clockwork horrors"
+          "In the cargo hold the crew found clockwork horrors feeding on a broken autognome, and Gregory cast to save it"
         ]
       },
       {
@@ -863,7 +863,7 @@
     "objectives": [
       {
         "done": true,
-        "text": "Repair Ostekk-6 at the Hollow Deck repair bay"
+        "text": "Repair Ostekk-6"
       }
     ],
     "voyages": [

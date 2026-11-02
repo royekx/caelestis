@@ -48,7 +48,7 @@
       "Affiliation(s)": "Caelestis Academy",
       "Party Relationship": "Instructor overseeing the cadets",
       "Role (as known)": "Boatswain and instructor at Caelestis",
-      "Current State": "Aboard the Flighty Foundling alongside the tyrant ship, relieving Pffred and Krik'Lit and sending a Watcher cadet to join the crew.",
+      "Current State": "Aboard the Flighty Foundling alongside the tyrant ship, relieving Pffred and Krik'Lit.",
       "Overview (Player)": "Boatswain Tarto is an instructor at Caelestis who oversees the cadets' testing and orientation. Once counted among the academy's great spelljammers, she reads the shape of a forming crew keenly.",
       "Category": "Command & Staff",
       "Status": "Active"
@@ -76,16 +76,24 @@
         "number": 3,
         "bullets": [
           "Moved through the wreckage of the simulation chamber ushering the injured out, and received the recovered rod from Gregory",
-          "Conferred with Saerthe over the rod and its marking, Vocath",
+          "Conferred with Saerthe in low voices over the rod",
           "Met the cadets at the bridge and walked them in to Mirt",
           "Woke the cadets at four in the morning banging metal, and briefed them over breakfast on the H’Catha meteor recovery aboard a tyrant ship"
+        ]
+      },
+      {
+        "number": 6,
+        "bullets": [
+          "Named by Ryeback, with Saerthe, as the instructors he would call if the crew could not finish the mission",
+          "Crossed from the Flighty Foundling to the tyrant ship hand over hand along the mooring line, asked for status, and relieved Pffred and Krik'Lit"
         ]
       }
     ],
     "seen": [
       1,
       2,
-      3
+      3,
+      6
     ],
     "mentioned": [],
     "linked": [],
@@ -305,7 +313,7 @@
       "Affiliation(s)": "Caelestis Academy (Spelljammer Nexus)",
       "Party Relationship": "Instructor at the Nexus",
       "Role (as known)": "Helm instructor at the Spelljammer Nexus",
-      "Current State": "Alongside the tyrant ship on the Flighty Foundling. One instructor, Saerthe or Tarto, will join the crew's mission; the choice is theirs.",
+      "Current State": "Alongside the tyrant ship on the Flighty Foundling, sending a Watcher cadet to join the crew. One instructor, Saerthe or Tarto, will join the crew's mission; the choice is theirs.",
       "Overview (Player)": "Saerthe Abizjn is a helm instructor at Caelestis's Spelljammer Nexus who runs the cadets' first true helm exercise over the Astral Sea. He reads each cadet's approach sharply, naming their difficulties as they arise.",
       "Category": "Command & Staff",
       "Status": "Active"
@@ -332,15 +340,24 @@
         "bullets": [
           "Helped usher the injured from the wrecked simulation chamber alongside Tarto",
           "Took the recovered rod, drew it back before Boogie could examine it, and said he simply did not yet know what it was",
-          "Conferred with Tarto over a marking on the rod: Vocath",
+          "Conferred with Tarto in low voices over the rod",
           "At the bridge, produced an illusion of the rod for Mirt and named the marking Vocath"
+        ]
+      },
+      {
+        "number": 6,
+        "bullets": [
+          "Named by Ryeback, with Tarto, as the instructors he would call if the crew could not finish the mission",
+          "Came alongside on the Flighty Foundling and walked down to the tyrant ship's hatch on translucent squares that formed under each step",
+          "Told the crew that a cadet on a first field mission and one instructor would join them, and that the choice of instructor was theirs"
         ]
       }
     ],
     "seen": [
       1,
       2,
-      3
+      3,
+      6
     ],
     "mentioned": [],
     "linked": [],
@@ -416,12 +433,20 @@
           "Named Boatswain and Joffrey as great spelljammers of Caelestis, with older absences hanging over the stories",
           "Arrived with officers in Mirt's chambers and confirmed the attack was likely a diversion amid a wave of burglaries"
         ]
+      },
+      {
+        "number": 3,
+        "bullets": [
+          "Named by a Sky Dock cargo clerk as the one who processes incoming shipments as well as outgoing stock, the marked crate's contents among them"
+        ]
       }
     ],
     "seen": [
       1
     ],
-    "mentioned": [],
+    "mentioned": [
+      3
+    ],
     "linked": [],
     "url": "dossiers/mr-blip.html",
     "links": [
@@ -480,7 +505,9 @@
       1,
       3
     ],
-    "mentioned": [],
+    "mentioned": [
+      2
+    ],
     "linked": [
       "ITM-4kD8vRt2"
     ],
@@ -658,8 +685,7 @@
         "number": 3,
         "bullets": [
           "Knelt over a fallen crewmate in the wrecked simulation chamber, working to bring them back",
-          "Sat unhurt but shaken in the infirmary beside his injured crewmates, hiding a wince, and asked to stay with them, calling them his crew",
-          "Was among the crew aboard the tyrant ship, present as they settled and took stock"
+          "Sat unhurt but shaken in the infirmary beside his injured crewmates, hiding a wince, and asked to stay with them, calling them his crew"
         ]
       },
       {
@@ -1021,7 +1047,7 @@
       {
         "number": 4,
         "bullets": [
-          "Spoke again as Tumak's first soul-knife throw went wide, saying quietly that all things find their way home, and the blade bent around true to strike the last wisp"
+          "Spoke as Tumak's first soul-knife throw went wide, saying quietly that all things find their way home, and the blade bent around true to strike the last wisp"
         ]
       }
     ],
@@ -1108,7 +1134,7 @@
       {
         "number": 3,
         "bullets": [
-          "A marking found on the arcane rod recovered from the wrecked simulation chamber; neither Saerthe nor Tarto recognized the word",
+          "A word Boogie glimpsed inscribed on the arcane rod from the wrecked simulation chamber, before Saerthe drew it back",
           "Named by Mirt as one who had long borne him a grudge, making anyone connected to Mirt a potential target"
         ]
       }
@@ -1513,5 +1539,37 @@
         "url": "quests/the-laughter-of-beshaba.html"
       }
     ]
+  },
+  {
+    "id": "NPC-9UjUZPPM",
+    "type": "npc",
+    "slug": "barret",
+    "name": "Barret",
+    "fields": {
+      "Gender": "Male",
+      "Affiliation(s)": "Caelestis Academy (cadet)",
+      "Party Relationship": "Cadet on the rival crew",
+      "Role (as known)": "Fellow cadet on the rival crew",
+      "Current State": "A cadet on the rival crew at Caelestis.",
+      "Overview (Player)": "Barret is a cadet at Caelestis on the crew that races opposite the party, alongside Miken and Veena. Ryeback heard him at the Weeping Goddess counter talking about a hadozee who could read birthdays.",
+      "Category": "Cadet Corps",
+      "Status": "Active"
+    },
+    "voyages": [
+      {
+        "number": 2,
+        "bullets": [
+          "Named by Ryeback as the cadet who had been at the counter the night before, running his mouth about a hadozee who could read birthdays",
+          "Assigned with Miken, Veena and the rest of their squad to the salvage race from the opposite chamber"
+        ]
+      }
+    ],
+    "seen": [
+      2
+    ],
+    "mentioned": [],
+    "linked": [],
+    "url": "dossiers/barret.html",
+    "links": []
   }
 ]

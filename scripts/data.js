@@ -893,6 +893,12 @@ function check() {
     [].concat(r.seen || [], r.mentioned || []).forEach(n => {
       if (!played.includes(n)) err(`${r.id} ${r.name}: seen/mentioned in Voyage ${n}, which is not on record`);
     });
+    // A record that keeps seen and mentioned lists every voyage its bullets
+    // are filed under, or All appearances and First seen leave that voyage out.
+    if (/^(NPC|FAO|LOC|ITM)-/.test(r.id)) (r.voyages || []).forEach(v => {
+      if (!(r.seen || []).includes(v.number) && !(r.mentioned || []).includes(v.number))
+        err(`${r.id} ${r.name}: bullets filed under Voyage ${v.number}, which is in neither seen nor mentioned`);
+    });
     Object.keys(r.fields).forEach(k => {
       if (typeof r.fields[k] === 'string') stacked(r.fields[k]).forEach(s => warn(`${r.id} ${r.name} [${k}]: stacked negation — "${s.slice(0, 90)}"`));
     });
