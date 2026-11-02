@@ -16,24 +16,23 @@
   /* ── Chart frame ─────────────────────────────────────────── */
   .chart-wrap { max-width: 720px; margin: 0 auto; }
 
-  /* Tabs */
+  /* Tabs: the record tabs' look (.rec-tab), one strip across the top */
   .chart-tabs {
-    display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;
-    border-bottom: 1px solid var(--gold-rule); padding-bottom: 1.5rem;
+    display: flex; flex-wrap: wrap; gap: 0.15rem; margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gold-rule);
   }
   .chart-tab {
-    font-family: 'Cinzel', serif; font-size: 0.858rem;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--gold-dim); background: transparent;
-    border: 1px solid var(--gold-rule);
-    padding: 0.55rem 1.1rem; cursor: pointer;
-    transition: color 0.2s, border-color 0.2s, background 0.2s;
+    appearance: none; cursor: pointer;
+    font-family: 'Cinzel', serif; font-size: 0.76rem; font-weight: 600;
+    letter-spacing: 0.085em; text-transform: uppercase;
+    color: var(--text-muted); background: transparent;
+    border: none; border-bottom: 2px solid transparent; border-radius: 0;
+    padding: 0.55rem 0.7rem; margin-bottom: -1px; white-space: nowrap;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
   }
-  .chart-tab:hover { color: var(--gold-light); border-color: var(--gold-dim); }
-  .chart-tab.active {
-    color: var(--gold); border-color: var(--gold);
-    background: rgba(201,153,58,0.06);
-  }
+  .chart-tab:first-child { padding-left: 0; }
+  .chart-tab:hover { color: var(--gold-light); background: var(--gold-faint); }
+  .chart-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
   .chart-tab.locked::after {
     content: ' ✦'; opacity: 0.45; font-size: 0.7em;
   }
@@ -251,8 +250,9 @@
   }
 
   @media(max-width: 640px) {
-    .chart-tabs { gap: 0.3rem; }
-    .chart-tab { padding: 0.45rem 0.7rem; font-size: 0.766rem; }
+    .chart-tabs { gap: 0; }
+    .chart-tab { flex: 1 1 auto; text-align: center; padding: 0.5rem; font-size: 0.7rem; letter-spacing: 0.08em; }
+    .chart-tab:first-child { padding-left: 0.5rem; }
     .sky { padding: 0.6rem; }
   }
 </style>
