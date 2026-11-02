@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
-  <!-- The Fleet's device: the Erevos Galaxy seen from above, tilted about 20 degrees,
+  <!-- The Fleet's emblem: the Erevos Galaxy seen from above, tilted about 20 degrees,
        its four spiral arms around a black hole and its thin ring, inside a double ring.
        One eight-pointed star on each arm marks one of the Fleet's four sectors; faint
        lines run from each star in to the centre. Generated from four arms a quarter turn
        apart. Used as a CSS mask, so each page sets its colour: the FIA seal
-       (styles/fia.css, restricted/index.html) and the Fleet's device on the DM side
+       (styles/fia.css, restricted/index.html) and the Fleet's emblem on the DM side
        (styles/dm.css, prime/factions/fleet.html). -->
   <circle cx="28" cy="28" r="25" stroke-width="1.1"/>
   <circle cx="28" cy="28" r="21.6" stroke-width="0.8"/>

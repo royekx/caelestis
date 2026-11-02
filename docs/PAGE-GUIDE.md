@@ -442,7 +442,7 @@ order, only those with content:
 
 | Kind | Infobox rows | About sections |
 |---|---|---|
-| Faction (`factions/`) | kind, what it serves, leader, seat, reach, ranks, device, standing with Caelestis | Overview · Beliefs (public aim; a secret aim goes in *What's hidden*) · Structure and ranks · History · Operations · How they look (device, dress, magic) · Seats and branches (one subsection each, with its known members) · Members · Relationships |
+| Faction (`factions/`) | kind, what it serves, leader, seat, reach, ranks, emblem, standing with Caelestis | Overview · Beliefs (public aim; a secret aim goes in *What's hidden*) · Structure and ranks · History · Operations · How they look (emblem, dress, magic) · Seats and branches (one subsection each, with its known members) · Members · Relationships |
 | Item (`artifacts/`) | kind, made by, made of, held by, where, status | Overview · Appearance · Properties (what it does, in prose, then the rules as an item card) · History · In the campaign (a recap by voyage) |
 | Place (`locations/`) | kind, designation, system, galaxy, ruled by, peoples, status | Overview · Description (look, climate, terrain) · History · Peoples and culture · Notable people · Points of interest (one subsection each) · In the campaign (a recap by voyage) |
 | Vessel (`vessels/`) | kind, built by, held by or under command of, where, status | Overview · Appearance · Decks and interior (one subsection per deck or space) · History · In the campaign (a recap by voyage) |

@@ -521,6 +521,10 @@
       "pattern": "graduates? as sailors",
       "use": "cadets graduate as Driftwardens; clearance (an access star) is separate from rank",
       "i": true
+    },
+    {
+      "pattern": "stat-key\">Device<|\\b(?:Fleet|Watchers|order|Order|faction)(?:'s|'|&rsquo;s|&rsquo;) device\\b|\\b[Tt]heir device\\b|\\b[Ii]ts device\\b",
+      "use": "emblem (a faction's coat of arms or insignia)"
     }
   ],
   "voice": [
@@ -886,6 +890,11 @@
       "old": "scripts/search.js",
       "new": "tools/search.js (the build and check scripts live in tools/, pruned from deploy)",
       "docs": true
+    },
+    {
+      "old": "assets/fleet-device.svg",
+      "new": "assets/fleet-emblem.svg",
+      "link": true
     }
   ],
   "allow": [
