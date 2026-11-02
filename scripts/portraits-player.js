@@ -31,6 +31,7 @@
     'boogie':        { name: 'Boogie',              fileId: '1_ZhT9rX4PrCKjegHu3Fc8gPnubg27Dqu' },
     "captain-sardax": { name: "Captain Sardax", fileId: '' },
     'casey':         { name: 'Casey Geim',          fileId: '1XLFP2beF16GU12VCcwInFzpfTv3mjhaO' },
+    "barret": { name: "Barret", fileId: '' },
     "derek": { name: "Derek", fileId: '' },
     'gregory':       { name: 'Gregory',             fileId: '1fzRY-WITl425-WA_HCThclBYYsRH4tun' },
     'jeffrey':       { name: 'Jeffrey',             fileId: '' },

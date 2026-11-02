@@ -1539,5 +1539,37 @@
         "url": "quests/the-laughter-of-beshaba.html"
       }
     ]
+  },
+  {
+    "id": "NPC-9UjUZPPM",
+    "type": "npc",
+    "slug": "barret",
+    "name": "Barret",
+    "fields": {
+      "Gender": "Male",
+      "Affiliation(s)": "Caelestis Academy (cadet)",
+      "Party Relationship": "Cadet on the rival crew",
+      "Role (as known)": "Fellow cadet on the rival crew",
+      "Current State": "A cadet on the rival crew at Caelestis.",
+      "Overview (Player)": "Barret is a cadet at Caelestis on the crew that races opposite the party, alongside Miken and Veena. Ryeback heard him at the Weeping Goddess counter talking about a hadozee who could read birthdays.",
+      "Category": "Cadet Corps",
+      "Status": "Active"
+    },
+    "voyages": [
+      {
+        "number": 2,
+        "bullets": [
+          "Named by Ryeback as the cadet who had been at the counter the night before, running his mouth about a hadozee who could read birthdays",
+          "Assigned with Miken, Veena and the rest of their squad to the salvage race from the opposite chamber"
+        ]
+      }
+    ],
+    "seen": [
+      2
+    ],
+    "mentioned": [],
+    "linked": [],
+    "url": "dossiers/barret.html",
+    "links": []
   }
 ]
