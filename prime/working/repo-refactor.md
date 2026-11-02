@@ -227,6 +227,17 @@ keep their own files, moved under `voyages/` as subfolders. No redirects: every
 moved path goes into the link catalogue so links already shared with players can
 be reissued.
 
+Done (branch `repo-tidy`, Korey's rulings of 2026-11-02):
+
+| Now | Holds |
+|---|---|
+| `voyages/` | voyage pages; `voyages/bearings/` (current bearing, per-voyage bearings, timeline); `voyages/logs/` (Crew Logs) |
+| `registry/` | `crew-manifest/`, `dossiers/`, `factions/`, each with its own index, sidebar entry and section filter |
+| `registry/crew-manifest/` | the companions as classified tabs: `bartholomew-grayson.html#aspects`, `casey-geim.html#stellar-chart`, `tumak-swan.html#wayfinder-path` |
+| `protocols/` | Fleet Protocols (was Corps Protocols, `handouts/`): manuals for how things are done |
+| `vessels/`, `navigation-records/`, `quests/`, `inventory/`, `spelljammer-nexus/`, `search/` | unchanged |
+| `tools/` | the build and check scripts, pruned from deploy; `scripts/` keeps only what pages load |
+
 ### 7. Done means
 STAGING holds only undistributed future material; BACKLOG holds no fix or add
 item for a finished section; the terms check runs as an error across prime/;
