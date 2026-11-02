@@ -574,8 +574,9 @@ attributes are in `CLAUDE.md` § Deploy and search.
 
 ### Record pages
 
-Every player record page (`dossiers/`, `crew-manifest/`, `navigation-records/`
-and the vessels in it, `factions/`, `inventory/entries/`, `quests/`) reads like
+Every player record page (`registry/dossiers/`, `registry/crew-manifest/`,
+`navigation-records/` and the vessels in it, `registry/factions/`,
+`inventory/entries/`, `quests/`) reads like
 a DM entry in the player palette: the article on the left, the infobox on the
 right, the record tabs in the article column, Connections below. It is written
 by hand from the record; `check` holds every `data-field` region to it. The
@@ -633,7 +634,7 @@ A vessel with a ship sheet adds Ship sheet (`#ship-sheet`, a
 with no voyage log yet has one panel and no strip. Panels stay static HTML;
 without JS they stack, which is also what Pagefind reads.
 
-- **Player dossiers.** A named presence gets a page under `dossiers/`: met,
+- **Player dossiers.** A named presence gets a page under `registry/dossiers/`: met,
   mentioned, or only heard (Beshaba from laughter, the Runekeeper from a
   voice). It carries only what the table has, sourced to the voyage, with
   "named only" in First seen and Last seen when that is all. The player

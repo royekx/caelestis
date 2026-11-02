@@ -17,9 +17,7 @@
     "hub.html",
     "index.html",
     "voyages",
-    "crew-manifest",
-    "dossiers",
-    "factions",
+    "registry",
     "navigation-records",
     "vessels",
     "quests",
@@ -831,6 +829,21 @@
       "old": "logs/",
       "new": "voyages/logs/index.html; the root folder is never reused",
       "link": true
+    },
+    {
+      "old": "crew-manifest/",
+      "new": "registry/crew-manifest/ (every page keeps its name); the root folder is never reused",
+      "link": true
+    },
+    {
+      "old": "dossiers/",
+      "new": "registry/dossiers/ (every page keeps its name); the root folder is never reused",
+      "link": true
+    },
+    {
+      "old": "factions/",
+      "new": "registry/factions/ (every page keeps its name); the root folder is never reused",
+      "link": true
     }
   ],
   "allow": [
@@ -852,9 +865,7 @@
     "hub.html",
     "index.html",
     "voyages",
-    "crew-manifest",
-    "dossiers",
-    "factions",
+    "registry",
     "navigation-records",
     "vessels",
     "quests",

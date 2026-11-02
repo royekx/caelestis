@@ -110,49 +110,49 @@
         "name": "Jeffrey",
         "type": "npc",
         "slug": "jeffrey",
-        "url": "dossiers/jeffrey.html"
+        "url": "registry/dossiers/jeffrey.html"
       },
       {
         "id": "NPC-Hs6cW9pM",
         "name": "Joffrey",
         "type": "npc",
         "slug": "joffrey",
-        "url": "dossiers/joffrey.html"
+        "url": "registry/dossiers/joffrey.html"
       },
       {
         "id": "NPC-Wc9fT2nJ",
         "name": "Mirt",
         "type": "npc",
         "slug": "mirt",
-        "url": "dossiers/mirt.html"
+        "url": "registry/dossiers/mirt.html"
       },
       {
         "id": "NPC-Mb3vK8dW",
         "name": "Mr. Blip",
         "type": "npc",
         "slug": "mr-blip",
-        "url": "dossiers/mr-blip.html"
+        "url": "registry/dossiers/mr-blip.html"
       },
       {
         "id": "NPC-Zx4Bn7Lq",
         "name": "Saerthe Abizjn",
         "type": "npc",
         "slug": "saerthe-abizjn",
-        "url": "dossiers/saerthe-abizjn.html"
+        "url": "registry/dossiers/saerthe-abizjn.html"
       },
       {
         "id": "NPC-Mw6kT2vn",
         "name": "Vocath",
         "type": "npc",
         "slug": "vocath",
-        "url": "dossiers/vocath.html"
+        "url": "registry/dossiers/vocath.html"
       }
     ],
     "parent": null,
     "giver": {
       "name": "Mirt",
       "slug": "mirt",
-      "url": "dossiers/mirt.html"
+      "url": "registry/dossiers/mirt.html"
     },
     "children": [
       {
@@ -298,14 +298,14 @@
         "name": "Zerathis",
         "type": "npc",
         "slug": "zerathis",
-        "url": "dossiers/zerathis.html"
+        "url": "registry/dossiers/zerathis.html"
       },
       {
         "id": "PC-t0jvvcOZ",
         "name": "Casey Geim",
         "type": "pc",
         "slug": "casey-geim",
-        "url": "crew-manifest/casey-geim.html"
+        "url": "registry/crew-manifest/casey-geim.html"
       }
     ],
     "parent": null,
@@ -372,14 +372,14 @@
         "name": "Vaelorix",
         "type": "npc",
         "slug": "vaelorix",
-        "url": "dossiers/vaelorix.html"
+        "url": "registry/dossiers/vaelorix.html"
       },
       {
         "id": "PC-BGCfmbF3",
         "name": "Gregory",
         "type": "pc",
         "slug": "gregory",
-        "url": "crew-manifest/gregory.html"
+        "url": "registry/crew-manifest/gregory.html"
       }
     ],
     "parent": null,
@@ -451,14 +451,14 @@
         "name": "Saerthe Abizjn",
         "type": "npc",
         "slug": "saerthe-abizjn",
-        "url": "dossiers/saerthe-abizjn.html"
+        "url": "registry/dossiers/saerthe-abizjn.html"
       },
       {
         "id": "PC-647haWGJ",
         "name": "Boogie",
         "type": "pc",
         "slug": "boogie",
-        "url": "crew-manifest/boogie.html"
+        "url": "registry/crew-manifest/boogie.html"
       }
     ],
     "parent": null,
@@ -505,7 +505,7 @@
         "name": "Tumak Swan",
         "type": "pc",
         "slug": "tumak-swan",
-        "url": "crew-manifest/tumak-swan.html"
+        "url": "registry/crew-manifest/tumak-swan.html"
       }
     ],
     "parent": null,
@@ -566,14 +566,14 @@
         "name": "Beshaba",
         "type": "npc",
         "slug": "beshaba",
-        "url": "dossiers/beshaba.html"
+        "url": "registry/dossiers/beshaba.html"
       },
       {
         "id": "PC-6rzWlD8Q",
         "name": "Sol Fortuna",
         "type": "pc",
         "slug": "sol-fortuna",
-        "url": "crew-manifest/sol-fortuna.html"
+        "url": "registry/crew-manifest/sol-fortuna.html"
       }
     ],
     "parent": null,
@@ -644,14 +644,14 @@
         "name": "The Runekeeper",
         "type": "npc",
         "slug": "the-rune-keeper",
-        "url": "dossiers/the-rune-keeper.html"
+        "url": "registry/dossiers/the-rune-keeper.html"
       },
       {
         "id": "PC-wI087olT",
         "name": "Tumak Swan",
         "type": "pc",
         "slug": "tumak-swan",
-        "url": "crew-manifest/tumak-swan.html"
+        "url": "registry/crew-manifest/tumak-swan.html"
       }
     ],
     "parent": {
@@ -785,14 +785,14 @@
         "name": "Ostekk-6",
         "type": "npc",
         "slug": "ostekk-6",
-        "url": "dossiers/ostekk-6.html"
+        "url": "registry/dossiers/ostekk-6.html"
       }
     ],
     "parent": null,
     "giver": {
       "name": "Boatswain Tarto",
       "slug": "boatswain-tarto",
-      "url": "dossiers/boatswain-tarto.html"
+      "url": "registry/dossiers/boatswain-tarto.html"
     },
     "children": [
       {
@@ -928,14 +928,14 @@
         "name": "Ostekk-2",
         "type": "npc",
         "slug": "ostekk-2",
-        "url": "dossiers/ostekk-2.html"
+        "url": "registry/dossiers/ostekk-2.html"
       },
       {
         "id": "NPC-Hn4kW9vm",
         "name": "Ostekk-6",
         "type": "npc",
         "slug": "ostekk-6",
-        "url": "dossiers/ostekk-6.html"
+        "url": "registry/dossiers/ostekk-6.html"
       }
     ],
     "parent": {
@@ -1026,42 +1026,42 @@
         "name": "Boatswain Tarto",
         "type": "npc",
         "slug": "boatswain-tarto",
-        "url": "dossiers/boatswain-tarto.html"
+        "url": "registry/dossiers/boatswain-tarto.html"
       },
       {
         "id": "NPC-Mb3vK8dW",
         "name": "Mr. Blip",
         "type": "npc",
         "slug": "mr-blip",
-        "url": "dossiers/mr-blip.html"
+        "url": "registry/dossiers/mr-blip.html"
       },
       {
         "id": "NPC-Zx4Bn7Lq",
         "name": "Saerthe Abizjn",
         "type": "npc",
         "slug": "saerthe-abizjn",
-        "url": "dossiers/saerthe-abizjn.html"
+        "url": "registry/dossiers/saerthe-abizjn.html"
       },
       {
         "id": "NPC-Kf2mNb8x",
         "name": "Sor'Kur",
         "type": "npc",
         "slug": "sor-kur",
-        "url": "dossiers/sor-kur.html"
+        "url": "registry/dossiers/sor-kur.html"
       },
       {
         "id": "NPC-Vn5wYh3k",
         "name": "Veena",
         "type": "npc",
         "slug": "veena",
-        "url": "dossiers/veena.html"
+        "url": "registry/dossiers/veena.html"
       }
     ],
     "parent": null,
     "giver": {
       "name": "Boatswain Tarto",
       "slug": "boatswain-tarto",
-      "url": "dossiers/boatswain-tarto.html"
+      "url": "registry/dossiers/boatswain-tarto.html"
     },
     "children": [],
     "progress": {

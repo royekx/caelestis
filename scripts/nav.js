@@ -16,8 +16,8 @@
   // Derives a relative base path from the current page's URL depth.
   // Works for GitHub Pages at royekx.github.io/caelestis/
   //
-  //   /caelestis/dossiers/mirt.html         → 3 slashes → depth 1 → ../
-  //   /caelestis/voyages/voyage-001.html     → 3 slashes → depth 1 → ../
+  //   /caelestis/voyages/voyage-001.html          → 3 slashes → depth 1 → ../
+  //   /caelestis/registry/dossiers/mirt.html      → 4 slashes → depth 2 → ../../
 
   var pathname = window.location.pathname;
   var slashes  = (pathname.match(/\//g) || []).length;
@@ -61,9 +61,9 @@
       items: [
         { key: 'voyages',            label: 'Voyages',            path: 'voyages/index.html'            },
         { key: 'quests',             label: 'Quest Board',        path: 'quests/index.html'             },
-        { key: 'crew-manifest',      label: 'Manifest',           path: 'crew-manifest/index.html'      },
-        { key: 'dossiers',           label: 'Dossiers',           path: 'dossiers/index.html'           },
-        { key: 'factions',           label: 'Factions',           path: 'factions/index.html'           },
+        { key: 'crew-manifest',      label: 'Manifest',           path: 'registry/crew-manifest/index.html' },
+        { key: 'dossiers',           label: 'Dossiers',           path: 'registry/dossiers/index.html'  },
+        { key: 'factions',           label: 'Factions',           path: 'registry/factions/index.html'  },
         { key: 'navigation-records', label: 'Navigation Records', path: 'navigation-records/index.html' },
         { key: 'vessels',            label: 'Vessels',            path: 'vessels/index.html'            },
         { key: 'inventory',          label: 'Inventory',          path: 'inventory/index.html'          },

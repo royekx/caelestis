@@ -21,7 +21,7 @@ Do not write to the repo before the first or to the record before the second.
 
 | Side | Folders |
 |---|---|
-| Player (root) | `index.html` (the gate), `hub.html` (the terminal, the player home), `voyages/` (voyage pages; `bearings/`, the current bearing, per-voyage bearings and the timeline; `logs/`, the Crew Logs), `crew-manifest/`, `dossiers/`, `factions/`, `navigation-records/`, `vessels/`, `quests/`, `inventory/` (`entries/`, `items/`), `protocols/` (Fleet Protocols: manuals for how things are done), `spelljammer-nexus/`, `search/`; companion pages `aspects/`, `wayfinder-path/`, `stellar-chart/` |
+| Player (root) | `index.html` (the gate), `hub.html` (the terminal, the player home), `voyages/` (voyage pages; `bearings/`, the current bearing, per-voyage bearings and the timeline; `logs/`, the Crew Logs), `registry/` (the people sections, each with its own index, nav entry and section filter: `crew-manifest/`, `dossiers/`, `factions/`), `navigation-records/`, `vessels/`, `quests/`, `inventory/` (`entries/`, `items/`), `protocols/` (Fleet Protocols: manuals for how things are done), `spelljammer-nexus/`, `search/`; companion pages `aspects/`, `wayfinder-path/`, `stellar-chart/` |
 | FIA | `restricted/`: the Fleet Intelligence Archive, gated, its own chrome and index |
 | DM | `prime/`: the DM wiki, gated |
 | Record | `data/` (player-safe), `prime/data/` (DM layer) |
@@ -42,7 +42,7 @@ Do not write to the repo before the first or to the record before the second.
 | Reference | Glossary · Principles (`principles.html`) |
 
 DM folders and pages use plain, functional names. Player folders use in-world
-names that are functional and distinct (`dossiers/`, `inventory/`).
+names that are functional and distinct (`registry/dossiers/`, `inventory/`).
 
 **Two versions of the same subjects.** A dossier, location, vessel or item can
 have a player page and a DM page. The DM page almost always holds more; the
@@ -178,7 +178,9 @@ state what is. Rules: `prime/working/README.md`.
   log. To test locally, run the Action's `npx -y pagefind --site . --glob "{…}"
   --exclude-selectors "[data-pagefind-ignore], nav, .site-nav, footer"`.
 - Every player page carries `data-pagefind-filter="section:<top-level dir>"` on
-  `<body>`, one bare value. A further facet needs its own element.
+  `<body>`, one bare value. A page in a subfolder of `voyages/` or `registry/`
+  takes the subfolder's name (`bearings`, `logs`, `crew-manifest`, `dossiers`,
+  `factions`). A further facet needs its own element.
 - Navigation chrome and listing containers that only repeat their target pages
   carry `data-pagefind-ignore` (prev/next bars, portrait labels, filter rows,
   `.crew-list`, `.dossier-list`, `.item-grid`, voyage overview panels). Named

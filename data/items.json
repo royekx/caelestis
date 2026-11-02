@@ -59,7 +59,7 @@
         "name": "Boogie",
         "type": "pc",
         "slug": "boogie",
-        "url": "crew-manifest/boogie.html"
+        "url": "registry/crew-manifest/boogie.html"
       },
       {
         "id": "QST-9dK3wR7n",
@@ -161,7 +161,7 @@
         "name": "Tumak Swan",
         "type": "pc",
         "slug": "tumak-swan",
-        "url": "crew-manifest/tumak-swan.html"
+        "url": "registry/crew-manifest/tumak-swan.html"
       }
     ]
   },
@@ -226,7 +226,7 @@
         "name": "Mirt",
         "type": "npc",
         "slug": "mirt",
-        "url": "dossiers/mirt.html"
+        "url": "registry/dossiers/mirt.html"
       },
       {
         "id": "QST-3mW8kP5v",
@@ -334,7 +334,7 @@
         "name": "Saerthe Abizjn",
         "type": "npc",
         "slug": "saerthe-abizjn",
-        "url": "dossiers/saerthe-abizjn.html"
+        "url": "registry/dossiers/saerthe-abizjn.html"
       },
       {
         "id": "QST-9dK3wR7n",
@@ -393,7 +393,7 @@
         "name": "Vocath",
         "type": "npc",
         "slug": "vocath",
-        "url": "dossiers/vocath.html"
+        "url": "registry/dossiers/vocath.html"
       },
       {
         "id": "QST-9dK3wR7n",
@@ -443,7 +443,7 @@
         "name": "Vocath",
         "type": "npc",
         "slug": "vocath",
-        "url": "dossiers/vocath.html"
+        "url": "registry/dossiers/vocath.html"
       },
       {
         "id": "QST-9dK3wR7n",
@@ -507,7 +507,7 @@
         "name": "Tumak Swan",
         "type": "pc",
         "slug": "tumak-swan",
-        "url": "crew-manifest/tumak-swan.html"
+        "url": "registry/crew-manifest/tumak-swan.html"
       },
       {
         "id": "QST-Zk6mW3vn",
@@ -657,35 +657,35 @@
         "name": "Ostekk",
         "type": "npc",
         "slug": "ostekk",
-        "url": "dossiers/ostekk.html"
+        "url": "registry/dossiers/ostekk.html"
       },
       {
         "id": "NPC-MZZkLc0g",
         "name": "Ostekk-10",
         "type": "npc",
         "slug": "the-behir",
-        "url": "dossiers/the-behir.html"
+        "url": "registry/dossiers/the-behir.html"
       },
       {
         "id": "NPC-Hn4kW9vm",
         "name": "Ostekk-6",
         "type": "npc",
         "slug": "ostekk-6",
-        "url": "dossiers/ostekk-6.html"
+        "url": "registry/dossiers/ostekk-6.html"
       },
       {
         "id": "NPC-lfleUUeT",
         "name": "Vaelorix",
         "type": "npc",
         "slug": "vaelorix",
-        "url": "dossiers/vaelorix.html"
+        "url": "registry/dossiers/vaelorix.html"
       },
       {
         "id": "PC-wI087olT",
         "name": "Tumak Swan",
         "type": "pc",
         "slug": "tumak-swan",
-        "url": "crew-manifest/tumak-swan.html"
+        "url": "registry/crew-manifest/tumak-swan.html"
       },
       {
         "id": "QST-6bC9wN4k",
@@ -749,7 +749,7 @@
         "name": "Bartholomew Grayson",
         "type": "pc",
         "slug": "bartholomew-grayson",
-        "url": "crew-manifest/bartholomew-grayson.html"
+        "url": "registry/crew-manifest/bartholomew-grayson.html"
       }
     ]
   },
@@ -791,7 +791,7 @@
         "name": "Miken",
         "type": "npc",
         "slug": "miken",
-        "url": "dossiers/miken.html"
+        "url": "registry/dossiers/miken.html"
       }
     ]
   }

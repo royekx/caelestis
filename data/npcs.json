@@ -27,7 +27,7 @@
     ],
     "mentioned": [],
     "linked": [],
-    "url": "dossiers/captain-sardax.html",
+    "url": "registry/dossiers/captain-sardax.html",
     "links": [
       {
         "id": "LOC-I7jHhD0b",
@@ -97,7 +97,7 @@
     ],
     "mentioned": [],
     "linked": [],
-    "url": "dossiers/boatswain-tarto.html",
+    "url": "registry/dossiers/boatswain-tarto.html",
     "links": [
       {
         "id": "LOC-yAV2JeVr",
@@ -144,7 +144,7 @@
     ],
     "mentioned": [],
     "linked": [],
-    "url": "dossiers/sor-kur.html",
+    "url": "registry/dossiers/sor-kur.html",
     "links": [
       {
         "id": "QST-Or1nT4ks",
@@ -205,7 +205,7 @@
       6
     ],
     "linked": [],
-    "url": "dossiers/veena.html",
+    "url": "registry/dossiers/veena.html",
     "links": [
       {
         "id": "QST-Or1nT4ks",
@@ -245,7 +245,7 @@
     ],
     "mentioned": [],
     "linked": [],
-    "url": "dossiers/kip-and-pik.html",
+    "url": "registry/dossiers/kip-and-pik.html",
     "links": []
   },
   {
@@ -292,7 +292,7 @@
       3
     ],
     "linked": [],
-    "url": "dossiers/joffrey.html",
+    "url": "registry/dossiers/joffrey.html",
     "links": [
       {
         "id": "QST-9dK3wR7n",
@@ -361,7 +361,7 @@
     ],
     "mentioned": [],
     "linked": [],
-    "url": "dossiers/saerthe-abizjn.html",
+    "url": "registry/dossiers/saerthe-abizjn.html",
     "links": [
       {
         "id": "ITM-8pC4kW2n",
@@ -448,7 +448,7 @@
       3
     ],
     "linked": [],
-    "url": "dossiers/mr-blip.html",
+    "url": "registry/dossiers/mr-blip.html",
     "links": [
       {
         "id": "QST-Or1nT4ks",
@@ -511,7 +511,7 @@
     "linked": [
       "ITM-4kD8vRt2"
     ],
-    "url": "dossiers/mirt.html",
+    "url": "registry/dossiers/mirt.html",
     "links": [
       {
         "id": "ITM-4kD8vRt2",
@@ -525,7 +525,7 @@
         "name": "Vocath",
         "type": "npc",
         "slug": "vocath",
-        "url": "dossiers/vocath.html"
+        "url": "registry/dossiers/vocath.html"
       },
       {
         "id": "QST-9dK3wR7n",
@@ -564,7 +564,7 @@
       1
     ],
     "linked": [],
-    "url": "dossiers/zerathis.html",
+    "url": "registry/dossiers/zerathis.html",
     "links": [
       {
         "id": "QST-3mW8kP5v",
@@ -644,7 +644,7 @@
     "linked": [
       "LOC-Rp7kW4vn"
     ],
-    "url": "dossiers/winston-ryeback.html",
+    "url": "registry/dossiers/winston-ryeback.html",
     "links": [
       {
         "id": "LOC-Rp7kW4vn",
@@ -721,7 +721,7 @@
     ],
     "mentioned": [],
     "linked": [],
-    "url": "dossiers/miken.html",
+    "url": "registry/dossiers/miken.html",
     "links": [
       {
         "id": "ITM-1pRB4oz6",
@@ -771,7 +771,7 @@
     ],
     "mentioned": [],
     "linked": [],
-    "url": "dossiers/rindle-gearloft.html",
+    "url": "registry/dossiers/rindle-gearloft.html",
     "links": []
   },
   {
@@ -802,7 +802,7 @@
     ],
     "mentioned": [],
     "linked": [],
-    "url": "dossiers/derek.html",
+    "url": "registry/dossiers/derek.html",
     "links": []
   },
   {
@@ -850,7 +850,7 @@
     ],
     "mentioned": [],
     "linked": [],
-    "url": "dossiers/krik-lit.html",
+    "url": "registry/dossiers/krik-lit.html",
     "links": [
       {
         "id": "LOC-yAV2JeVr",
@@ -911,7 +911,7 @@
     ],
     "mentioned": [],
     "linked": [],
-    "url": "dossiers/pffred.html",
+    "url": "registry/dossiers/pffred.html",
     "links": [
       {
         "id": "LOC-yAV2JeVr",
@@ -989,7 +989,7 @@
     "linked": [
       "NPC-lfleUUeT"
     ],
-    "url": "dossiers/ostekk-6.html",
+    "url": "registry/dossiers/ostekk-6.html",
     "links": [
       {
         "id": "ITM-Z1eGrfAb",
@@ -1003,14 +1003,14 @@
         "name": "Ostekk-2",
         "type": "npc",
         "slug": "ostekk-2",
-        "url": "dossiers/ostekk-2.html"
+        "url": "registry/dossiers/ostekk-2.html"
       },
       {
         "id": "NPC-lfleUUeT",
         "name": "Vaelorix",
         "type": "npc",
         "slug": "vaelorix",
-        "url": "dossiers/vaelorix.html"
+        "url": "registry/dossiers/vaelorix.html"
       },
       {
         "id": "QST-Ok5mB8tz",
@@ -1058,14 +1058,14 @@
     "linked": [
       "PC-wI087olT"
     ],
-    "url": "dossiers/the-rune-keeper.html",
+    "url": "registry/dossiers/the-rune-keeper.html",
     "links": [
       {
         "id": "PC-wI087olT",
         "name": "Tumak Swan",
         "type": "pc",
         "slug": "tumak-swan",
-        "url": "crew-manifest/tumak-swan.html"
+        "url": "registry/crew-manifest/tumak-swan.html"
       },
       {
         "id": "QST-Zk6mW3vn",
@@ -1104,7 +1104,7 @@
       3
     ],
     "linked": [],
-    "url": "dossiers/jeffrey.html",
+    "url": "registry/dossiers/jeffrey.html",
     "links": [
       {
         "id": "QST-9dK3wR7n",
@@ -1146,7 +1146,7 @@
     "linked": [
       "NPC-Wc9fT2nJ"
     ],
-    "url": "dossiers/vocath.html",
+    "url": "registry/dossiers/vocath.html",
     "links": [
       {
         "id": "ITM-Xn7kW2vm",
@@ -1167,7 +1167,7 @@
         "name": "Mirt",
         "type": "npc",
         "slug": "mirt",
-        "url": "dossiers/mirt.html"
+        "url": "registry/dossiers/mirt.html"
       },
       {
         "id": "QST-9dK3wR7n",
@@ -1221,7 +1221,7 @@
       "NPC-ijDm41rn",
       "NPC-MZZkLc0g"
     ],
-    "url": "dossiers/ostekk-2.html",
+    "url": "registry/dossiers/ostekk-2.html",
     "links": [
       {
         "id": "LOC-p6GYEwKt",
@@ -1235,21 +1235,21 @@
         "name": "Ostekk",
         "type": "npc",
         "slug": "ostekk",
-        "url": "dossiers/ostekk.html"
+        "url": "registry/dossiers/ostekk.html"
       },
       {
         "id": "NPC-MZZkLc0g",
         "name": "Ostekk-10",
         "type": "npc",
         "slug": "the-behir",
-        "url": "dossiers/the-behir.html"
+        "url": "registry/dossiers/the-behir.html"
       },
       {
         "id": "NPC-Hn4kW9vm",
         "name": "Ostekk-6",
         "type": "npc",
         "slug": "ostekk-6",
-        "url": "dossiers/ostekk-6.html"
+        "url": "registry/dossiers/ostekk-6.html"
       },
       {
         "id": "QST-Ok5mB8tz",
@@ -1302,7 +1302,7 @@
     "linked": [
       "NPC-Hn4kW9vm"
     ],
-    "url": "dossiers/vaelorix.html",
+    "url": "registry/dossiers/vaelorix.html",
     "links": [
       {
         "id": "ITM-Z1eGrfAb",
@@ -1330,7 +1330,7 @@
         "name": "Ostekk-6",
         "type": "npc",
         "slug": "ostekk-6",
-        "url": "dossiers/ostekk-6.html"
+        "url": "registry/dossiers/ostekk-6.html"
       },
       {
         "id": "QST-6bC9wN4k",
@@ -1385,7 +1385,7 @@
     "linked": [
       "LOC-p6GYEwKt"
     ],
-    "url": "dossiers/the-behir.html",
+    "url": "registry/dossiers/the-behir.html",
     "links": [
       {
         "id": "ITM-Z1eGrfAb",
@@ -1406,14 +1406,14 @@
         "name": "Ostekk",
         "type": "npc",
         "slug": "ostekk",
-        "url": "dossiers/ostekk.html"
+        "url": "registry/dossiers/ostekk.html"
       },
       {
         "id": "NPC-nmdnCFvr",
         "name": "Ostekk-2",
         "type": "npc",
         "slug": "ostekk-2",
-        "url": "dossiers/ostekk-2.html"
+        "url": "registry/dossiers/ostekk-2.html"
       }
     ]
   },
@@ -1457,7 +1457,7 @@
     "linked": [
       "NPC-MZZkLc0g"
     ],
-    "url": "dossiers/ostekk.html",
+    "url": "registry/dossiers/ostekk.html",
     "links": [
       {
         "id": "ITM-Z1eGrfAb",
@@ -1471,14 +1471,14 @@
         "name": "Ostekk-10",
         "type": "npc",
         "slug": "the-behir",
-        "url": "dossiers/the-behir.html"
+        "url": "registry/dossiers/the-behir.html"
       },
       {
         "id": "NPC-nmdnCFvr",
         "name": "Ostekk-2",
         "type": "npc",
         "slug": "ostekk-2",
-        "url": "dossiers/ostekk-2.html"
+        "url": "registry/dossiers/ostekk-2.html"
       }
     ]
   },
@@ -1522,14 +1522,14 @@
     "linked": [
       "PC-6rzWlD8Q"
     ],
-    "url": "dossiers/beshaba.html",
+    "url": "registry/dossiers/beshaba.html",
     "links": [
       {
         "id": "PC-6rzWlD8Q",
         "name": "Sol Fortuna",
         "type": "pc",
         "slug": "sol-fortuna",
-        "url": "crew-manifest/sol-fortuna.html"
+        "url": "registry/crew-manifest/sol-fortuna.html"
       },
       {
         "id": "QST-4wN8kB2v",
@@ -1569,7 +1569,7 @@
     ],
     "mentioned": [],
     "linked": [],
-    "url": "dossiers/barret.html",
+    "url": "registry/dossiers/barret.html",
     "links": []
   }
 ]

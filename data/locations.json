@@ -49,7 +49,7 @@
         "name": "Caelestis Academy",
         "type": "faction",
         "slug": "caelestis-academy",
-        "url": "factions/caelestis-academy.html"
+        "url": "registry/factions/caelestis-academy.html"
       },
       {
         "id": "QST-Or1nT4ks",
@@ -514,7 +514,7 @@
         "name": "Captain Sardax",
         "type": "npc",
         "slug": "captain-sardax",
-        "url": "dossiers/captain-sardax.html"
+        "url": "registry/dossiers/captain-sardax.html"
       }
     ],
     "parent": {
@@ -644,7 +644,7 @@
         "name": "Winston Ryeback",
         "type": "npc",
         "slug": "winston-ryeback",
-        "url": "dossiers/winston-ryeback.html"
+        "url": "registry/dossiers/winston-ryeback.html"
       },
       {
         "id": "QST-Xr4mW8vn",
@@ -744,28 +744,28 @@
         "name": "Boatswain Tarto",
         "type": "npc",
         "slug": "boatswain-tarto",
-        "url": "dossiers/boatswain-tarto.html"
+        "url": "registry/dossiers/boatswain-tarto.html"
       },
       {
         "id": "NPC-Fq6kW2vn",
         "name": "Krik'Lit",
         "type": "npc",
         "slug": "krik-lit",
-        "url": "dossiers/krik-lit.html"
+        "url": "registry/dossiers/krik-lit.html"
       },
       {
         "id": "NPC-Gp8mT4kw",
         "name": "Pffred",
         "type": "npc",
         "slug": "pffred",
-        "url": "dossiers/pffred.html"
+        "url": "registry/dossiers/pffred.html"
       },
       {
         "id": "NPC-Zx4Bn7Lq",
         "name": "Saerthe Abizjn",
         "type": "npc",
         "slug": "saerthe-abizjn",
-        "url": "dossiers/saerthe-abizjn.html"
+        "url": "registry/dossiers/saerthe-abizjn.html"
       }
     ],
     "parent": {
@@ -988,14 +988,14 @@
         "name": "Ostekk-10",
         "type": "npc",
         "slug": "the-behir",
-        "url": "dossiers/the-behir.html"
+        "url": "registry/dossiers/the-behir.html"
       },
       {
         "id": "NPC-nmdnCFvr",
         "name": "Ostekk-2",
         "type": "npc",
         "slug": "ostekk-2",
-        "url": "dossiers/ostekk-2.html"
+        "url": "registry/dossiers/ostekk-2.html"
       },
       {
         "id": "QST-Ok5mB8tz",
@@ -1084,7 +1084,7 @@
         "name": "Vaelorix",
         "type": "npc",
         "slug": "vaelorix",
-        "url": "dossiers/vaelorix.html"
+        "url": "registry/dossiers/vaelorix.html"
       },
       {
         "id": "QST-Xr4mW8vn",
@@ -1146,7 +1146,7 @@
         "name": "Vaelorix",
         "type": "npc",
         "slug": "vaelorix",
-        "url": "dossiers/vaelorix.html"
+        "url": "registry/dossiers/vaelorix.html"
       }
     ],
     "parent": {

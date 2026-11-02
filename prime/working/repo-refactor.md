@@ -332,6 +332,9 @@ Old path → new path, added by each pull request that moves a page.
 | `bearings/timeline.html` | `voyages/bearings/timeline.html` | Player side condensed (repo-tidy) |
 | `bearings/voyage-001.html` … `bearings/voyage-006.html` | `voyages/bearings/voyage-001.html` … `voyages/bearings/voyage-006.html` | Player side condensed (repo-tidy) |
 | `logs/index.html` | `voyages/logs/index.html`; the root folder `logs/` is never reused | Player side condensed (repo-tidy) |
+| `crew-manifest/` (index and the six crew pages) | `registry/crew-manifest/`, every page keeping its name; record urls derive from `tools/data.js`; the root folder `crew-manifest/` is never reused | Player side condensed (repo-tidy) |
+| `dossiers/` (index and 26 dossiers) | `registry/dossiers/`, every page keeping its name; the root folder `dossiers/` is never reused | Player side condensed (repo-tidy) |
+| `factions/` (index and `caelestis-academy.html`) | `registry/factions/`, every page keeping its name; the root folder `factions/` is never reused | Player side condensed (repo-tidy) |
 
 ## Stale branches
 

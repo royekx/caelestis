@@ -39,17 +39,17 @@ const SETS = [
     index: 'voyages/index.html',
     fields: ['Major Events', 'Character Beats', 'New Clues / Reveals', 'NPC / Faction Movement',
       'Consequences', 'Next Session Pressure'] },
-  { key: 'pcs',       file: 'player-characters.json', type: 'pc',       prefix: 'PC',  dir: 'crew-manifest',
-    index: 'crew-manifest/index.html',
+  { key: 'pcs',       file: 'player-characters.json', type: 'pc',       prefix: 'PC',  dir: 'registry/crew-manifest',
+    index: 'registry/crew-manifest/index.html',
     fields: ['Species', 'Class', 'Specialisation', 'Station', 'Clearance', 'Player Concept (as known)',
       'Affiliation(s)', 'Personal Thread', 'Current State', 'What They Last Learned', 'Notable Items',
       'Overview (Player)', 'Status'] },
-  { key: 'npcs',      file: 'npcs.json',              type: 'npc',      prefix: 'NPC', dir: 'dossiers',
-    index: 'dossiers/index.html',
+  { key: 'npcs',      file: 'npcs.json',              type: 'npc',      prefix: 'NPC', dir: 'registry/dossiers',
+    index: 'registry/dossiers/index.html',
     fields: ['Gender', 'Affiliation(s)', 'Party Relationship', 'Role (as known)', 'Current State',
       'Overview (Player)', 'Category', 'Status'] },
-  { key: 'factions',  file: 'factions.json',          type: 'faction',  prefix: 'FAO', dir: 'factions',
-    index: 'factions/index.html',
+  { key: 'factions',  file: 'factions.json',          type: 'faction',  prefix: 'FAO', dir: 'registry/factions',
+    index: 'registry/factions/index.html',
     fields: ['Type', 'Party Relationship', 'Current State', 'Overview (Player)', 'Status'] },
   { key: 'locations', file: 'locations.json',         type: 'location', prefix: 'LOC', dir: 'navigation-records',
     index: 'navigation-records/index.html',
@@ -492,7 +492,7 @@ function checkPage(r, err, voyages) {
         matches(/href="([^"]+)"/g, m[2]).forEach(h => {
           const to = resolveFrom(at, h[1]);
           if (to.startsWith('quests/')) err(`${at}: the ${key} row links ${h[1]}, a quest; infobox links name records`);
-          else if (PEOPLE.includes(key) && !/^(dossiers|crew-manifest|factions)\//.test(to)) err(`${at}: the ${key} row links ${h[1]}; it names people, so it links a dossier, a crew page or a faction`);
+          else if (PEOPLE.includes(key) && !/^registry\/(dossiers|crew-manifest|factions)\//.test(to)) err(`${at}: the ${key} row links ${h[1]}; it names people, so it links a dossier, a crew page or a faction`);
         });
       });
     }
