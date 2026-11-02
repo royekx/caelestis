@@ -484,6 +484,17 @@ function checkPage(r, err, voyages) {
       const keys = a => a.map(x => x[0]).join(' · ');
       if (keys(shown) !== keys(want)) err(`${at}: stat rows are "${keys(shown)}", record gives "${keys(want)}"`);
       else shown.forEach(([k, v], i) => { if (v !== want[i][1]) err(`${at}: ${k} reads "${v}", record gives "${want[i][1]}"`); });
+      // A link in an infobox row names a record, never a quest; a row that
+      // names people links only to dossiers, the crew manifest or factions.
+      const PEOPLE = ['Crew', 'Given by', 'Involves', 'Known figures', 'Known aboard'];
+      matches(/class="stat-key"[^>]*>([\s\S]*?)<\/span>\s*<span class="stat-val[^"]*"[^>]*>([\s\S]*?)<\/span>\s*<\/div>/g, stats).forEach(m => {
+        const key = text(m[1]);
+        matches(/href="([^"]+)"/g, m[2]).forEach(h => {
+          const to = resolveFrom(at, h[1]);
+          if (to.startsWith('quests/')) err(`${at}: the ${key} row links ${h[1]}, a quest; infobox links name records`);
+          else if (PEOPLE.includes(key) && !/^(dossiers|crew-manifest|factions)\//.test(to)) err(`${at}: the ${key} row links ${h[1]}; it names people, so it links a dossier, a crew page or a faction`);
+        });
+      });
     }
   }
 

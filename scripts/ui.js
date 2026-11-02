@@ -51,8 +51,9 @@
   initTabs('.board-tab', '.board-panel');
 
   /* ── Record tabs ──
-     A vessel record's Record and Ship sheet panels: a [role=tablist].rec-tabs
-     of .rec-tab buttons, each naming its .rec-panel by aria-controls. Arrow
+     A record page's Record, Voyage log and, on a vessel, Ship sheet
+     panels: a [role=tablist].rec-tabs of .rec-tab buttons, each naming
+     its .rec-panel by aria-controls. Arrow
      keys, Home and End move between tabs. A hash naming a panel, or any
      element inside one (the-tyrant-ship.html#ship-sheet), opens that panel. */
   var recLists = document.querySelectorAll('.rec-tabs[role="tablist"]');

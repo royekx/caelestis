@@ -587,12 +587,16 @@ page header (title) · prev/next bar
 .entry-header.is-wiki
   aside.identity-card     portrait · stat-card (data-field="stats") · All appearances
   .entry-info             entry-name (hidden) · entry-sub · .rec-tabs · .rec-panel…
+                          (a quest has no entry-name or entry-sub)
 divider · Connections
 ```
 
 **The infobox** holds only what the record holds, in this order. A row marked
-? is left out when the record has no value; a value that names a record links
-to its page.
+? is left out when the record has no value. A value that names a record links
+the name to its page (in "Caelestis Academy (cadet)" the link is Caelestis
+Academy). An infobox link never goes to a quest, and a row that names people
+(Crew, Given by, Involves, Known figures, Known aboard) links only to a dossier,
+a crew page or a faction; `check` enforces both.
 
 | Page | Rows |
 |---|---|
