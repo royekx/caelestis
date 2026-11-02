@@ -259,7 +259,7 @@ Role numbers tie to proficiency bonus (PB): +2 at level 4, +4 at level 10, and +
 - **Burn (bonus action).** Shift the band one more step.
 - **Onboard Defense (bonus action).** A creature aboard makes a Wis save. On a failure it takes psychic damage and has disadvantage on its next roll.
 - **Numbers:**
-  - Level 4: DC 12. Onboard Defense 1d6. Jink covers 1 attack.
+  - Level 4: DC 14. Onboard Defense 1d6. Jink covers 1 attack.
   - Level 10: DC 17. Onboard Defense 3d6. Jink covers 2 attacks.
 - **Steps:** Onboard Defense gains +1d6 at levels 5, 10 and 15. Jink covers 2 attacks from level 10. From level 15, one Shields Up per fight costs no slot.
 - **What it competes with:** Starry Form. Waking it before initiative softens the cost.
