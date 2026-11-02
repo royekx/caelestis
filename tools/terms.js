@@ -14,7 +14,11 @@
  *   voice    decision voice and placeholders ("ruled", "pending", "TBD", "unresolved");
  *            matched on the text with tags stripped, or on the raw line when "raw": true
  *            (for markup such as a bare "Open" label or an is-open class)
- *   moved    old page paths that must not be linked (old → new)
+ *   moved    old page paths that must not be linked (old → new); matched as a substring of
+ *            the raw line, or, with "link": true, against every relative link on the line
+ *            resolved from the page's own folder (old is then a site path: a page, or a
+ *            folder ending in /), for an old folder whose name lives on inside a new path
+ *            (bearings/ → voyages/bearings/)
  *   scan     what to read: top folders (prime, restricted, the player folders) and single
  *            root pages by their .html path (hub.html, index.html)
  *   finished folders (or single pages, by their .html path) whose retired-term and moved-path hits fail the check
@@ -41,7 +45,12 @@ const conf = JSON.parse(fs.readFileSync(CONF, 'utf8'));
 const rx = list => list.map(t => Object.assign({}, t, { re: new RegExp(t.pattern, t.i ? 'gi' : 'g') }));
 const RETIRED = rx(conf.retired || []);
 const VOICES = rx(conf.voice || []);
-const MOVED = (conf.moved || []).map(m => Object.assign({}, m, { re: new RegExp(m.old.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g') }));
+const MOVED = (conf.moved || []).filter(m => !m.link).map(m => Object.assign({}, m, { re: new RegExp(m.old.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g') }));
+const LINKED = (conf.moved || []).filter(m => m.link);
+// Relative paths on a line (in quotes, or in url()), resolved from the page's folder.
+const PATHS = /["'`(]((?:\.{1,2}\/)*[A-Za-z0-9_][A-Za-z0-9_.\-\/]*)(?:[?#][^"'`)\s]*)?["'`)]/g;
+const linked = (f, line) => [...line.matchAll(PATHS)].map(m => m[1]).filter(v => v.includes('/') || /\.html$/.test(v))
+  .map(v => ({ v, to: path.posix.normalize(path.posix.join(path.posix.dirname(f), v)) }));
 const ALLOW = (conf.allow || []).map(a => { const i = a.indexOf(':'); return { file: a.slice(0, i), re: new RegExp(a.slice(i + 1)) }; });
 // A folder entry gets a trailing slash so prime/campaign does not also claim prime/campaign-x; a page entry (prime/principles.html) is matched as written.
 const FINISHED = (conf.finished || []).map(f => /\.html$/.test(f) ? f : f.replace(/\/?$/, '/'));
@@ -80,6 +89,9 @@ for (const f of files) {
     const bare = stripTags(line);
     for (const t of RETIRED) for (const m of (t.raw ? line : bare).matchAll(t.re)) at('retired', m[0], t.use);
     for (const t of MOVED) for (const m of line.matchAll(t.re)) at('moved', m[0], t.new);
+    if (LINKED.length) for (const l of linked(f, line)) for (const t of LINKED) {
+      if (t.old.endsWith('/') ? (l.to + '/').startsWith(t.old) : l.to === t.old) at('moved', l.v, t.new);
+    }
     if (VOICE) { const tx = textOnly(line); for (const t of VOICES) for (const m of (t.raw ? line : tx).matchAll(t.re)) at('voice', m[0].trim(), t.note); }
   });
 }
