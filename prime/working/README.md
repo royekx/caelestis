@@ -65,3 +65,4 @@ staging is distributed page by page.
 | [tharizdun.md](tharizdun.md) | The prison, the Day of Chaos, how Vecna uses him | Draft |
 | [glyth-watcher.md](glyth-watcher.md) | The Watcher who came back from Glyth | Sketch |
 | [nexus-field-guide.md](nexus-field-guide.md) | Sources, omissions and stat cross-checks for Peoples and Perils of the Drift | Draft |
+| [campaign-middle.md](campaign-middle.md) | Building the post-graduation middle: the invasion ladder, fronts, contracts as nodes, cadence | Draft |
