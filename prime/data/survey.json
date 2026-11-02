@@ -1,5 +1,5 @@
 {
-  "about": "The DM's survey of the cosmos, kept by scripts/survey.js and by hand. DM material: never copied to data/ or a player page. Designations follow prime/working/STAGING.md § Designations.",
+  "about": "The DM's survey of the cosmos, kept by tools/survey.js and by hand. DM material: never copied to data/ or a player page. Designations follow prime/working/STAGING.md § Designations.",
   "catalogue": "CSC",
   "year": 1491,
   "systems": [

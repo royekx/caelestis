@@ -3,7 +3,7 @@
  * ───────────────────────────
  * Powers the command bar that nav.js injects at the top of every page.
  * Written during a session run (docs/SESSION-RUN.md) and checked
- * against the record by `node scripts/data.js check`.
+ * against the record by `node tools/data.js check`.
  */
 window.CAELESTIS_BEARING = {
   voyage:   6,

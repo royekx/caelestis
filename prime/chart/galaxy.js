@@ -107,8 +107,8 @@
   const D = v3.dist(OERTH, CORE);
   /* EYE_HALF is half the eye's width, lid corner to lid corner, in scene
      units (the galaxy's radius is 100); its height is .373 of its width.
-     scripts/eye-fit.js sets it, as large as the galaxy holds. */
-  /* EYE_HALF: written by scripts/eye-fit.js */
+     tools/eye-fit.js sets it, as large as the galaxy holds. */
+  /* EYE_HALF: written by tools/eye-fit.js */
   const EYE_HALF = 70;
   /* /EYE_HALF */
   /* STROKE_TOL: how far from a stroke's centre line a system still lands
@@ -153,7 +153,7 @@
      inscription's marks.
      Positions are seeded here; what each system is comes from
      survey-core.js by seed, once the survey is loaded (rollSystems), so a
-     system clicked on the chart reads as `node scripts/survey.js roll
+     system clicked on the chart reads as `node tools/survey.js roll
      --seed N` prints it, and `--save` keeps it. */
   const FILLER_SEED0 = 200000, RETIRED_SEED0 = 300000, NEW_SEED0 = 400000;
   /* About two thirds follow the arms and a third fill the space between
@@ -215,7 +215,7 @@
      stroke sets where it lies in the galaxy and how high, and leaves its
      place in the eye alone.
      MARK_FIT holds the choice for each stroke, in EYE2D order:
-     [catalogue index, depth], or ['new', depth, seed]. scripts/eye-fit.js
+     [catalogue index, depth], or ['new', depth, seed]. tools/eye-fit.js
      searches seeded layouts for it and writes it here: marks in front of
      Oerth and inside the galaxy first; then a zigzag from above (many
      crossings, all eight wedges around the core, no eye-like figure); then
@@ -223,7 +223,7 @@
      then the smallest moves. */
   const THICK_LIMIT = 9, HALO_LIMIT = 2 * HALO_SIGMA;
   const bandOf = y => Math.abs(y) <= 3 ? 'disc' : Math.abs(y) <= THICK_LIMIT ? 'thick' : 'halo';
-  /* MARK_FIT: written by scripts/eye-fit.js */
+  /* MARK_FIT: written by tools/eye-fit.js */
   const MARK_FIT = [
     [135, 66],
     ['new', 160, 400034],
@@ -292,7 +292,7 @@
        catalogue system keeps the roll it had. */
     seed = RETIRED_SEED0; for (let k = 0; k < 15; k++) next();
     seed = FILLER_SEED0; FILLERS.forEach(f => { if (!f.added) Object.assign(f, next()); });
-    /* A new mark carries its own seed (from scripts/eye-fit.js, which
+    /* A new mark carries its own seed (from tools/eye-fit.js, which
        picks seeds from NEW_SEED0 up that roll a qualifying system with a
        free number), so its roll matches `survey.js roll --seed N`. */
     FILLERS.forEach(f => { if (f.added) { seed = f.seed; Object.assign(f, next()); } });

@@ -4,8 +4,8 @@ name: Check the record
 # itself, with the DM layer in prime/data/, and with every page that displays
 # it. A session run is not finished until this passes.
 #
-#   node scripts/data.js check
-#   node scripts/terms.js     (retired terms on DM pages; fails only for finished folders)
+#   node tools/data.js check
+#   node tools/terms.js     (retired terms on DM pages; fails only for finished folders)
 #
 # The same command runs locally; see docs/SESSION-RUN.md.
 
@@ -29,7 +29,7 @@ jobs:
           node-version: 24
 
       - name: Check the record against the pages
-        run: node scripts/data.js check
+        run: node tools/data.js check
 
       - name: Check pages for retired terms and moved paths
-        run: node scripts/terms.js
+        run: node tools/terms.js

@@ -2,9 +2,9 @@
 /**
  * data.js — the campaign record's three verbs.
  *
- *   node scripts/data.js derive    recompute every derived field, in place
- *   node scripts/data.js check     verify the record, the DM layer and the pages
- *   node scripts/data.js guard     the deploy's test: is data/ fit to publish
+ *   node tools/data.js derive    recompute every derived field, in place
+ *   node tools/data.js check     verify the record, the DM layer and the pages
+ *   node tools/data.js guard     the deploy's test: is data/ fit to publish
  *
  * The record is data/*.json. It is written by hand during a session run (see
  * docs/SESSION-RUN.md) and it is the only place a fact is entered.
@@ -284,7 +284,7 @@ function voyageRegistry(sets) {
     ' * ────────────────────────────',
     ' * Every voyage on record. The hub\'s Voyages card points at the last entry.',
     ' *',
-    ' * Written by `node scripts/data.js derive` from data/sessions.json.',
+    ' * Written by `node tools/data.js derive` from data/sessions.json.',
     ' * To add a voyage, add its session record there and run derive.',
     ' */',
     '',
@@ -772,7 +772,7 @@ function checkPlayer(err) {
   (function walk(dir) {
     fs.readdirSync(path.join(ROOT, dir || '.')).forEach(f => {
       const rel = dir ? `${dir}/${f}` : f;
-      if (/^(\.|node_modules$|prime$|restricted$|docs$|scripts$|styles$|assets$|data$|pagefind$)/.test(rel)) return;
+      if (/^(\.|node_modules$|prime$|restricted$|docs$|scripts$|tools$|styles$|assets$|data$|pagefind$)/.test(rel)) return;
       if (fs.statSync(path.join(ROOT, rel)).isDirectory()) return walk(rel);
       if (f.endsWith('.html') && !f.endsWith('-template.html')) pages.push(rel);
     });
@@ -914,9 +914,9 @@ function check() {
   const fresh = derive(JSON.parse(JSON.stringify(sets)));
   SETS.forEach(s => {
     if (serialise(fresh[s.key]) !== fs.readFileSync(path.join(DATA, s.file), 'utf8'))
-      err(`data/${s.file} is stale or hand-edited in a derived field — run: node scripts/data.js derive`);
+      err(`data/${s.file} is stale or hand-edited in a derived field — run: node tools/data.js derive`);
   });
-  const current = (p, want) => { if (!fs.existsSync(p) || fs.readFileSync(p, 'utf8') !== want) err(`${path.relative(ROOT, p)} is stale — run: node scripts/data.js derive`); };
+  const current = (p, want) => { if (!fs.existsSync(p) || fs.readFileSync(p, 'utf8') !== want) err(`${path.relative(ROOT, p)} is stale — run: node tools/data.js derive`); };
   current(path.join(DATA, 'index.json'), serialise(indexFile(fresh)));
   current(path.join(DATA, 'voyage.js'), voyageRegistry(fresh));
   current(path.join(DM, 'dossiers.json'), serialise(dossierIndex(fresh, dm)));
@@ -1044,4 +1044,4 @@ const verb = process.argv[2];
 if (verb === 'derive') runDerive();
 else if (verb === 'check') check();
 else if (verb === 'guard') guard();
-else { console.log('usage: node scripts/data.js derive | check | guard'); process.exit(2); }
+else { console.log('usage: node tools/data.js derive | check | guard'); process.exit(2); }

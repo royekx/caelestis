@@ -4,10 +4,10 @@
    ----------------------------------------------------------------
    Proves a CSS or markup change looks the same before and after.
 
-     node scripts/visual.js capture <outdir> [--pages=<glob>] [--player]
+     node tools/visual.js capture <outdir> [--pages=<glob>] [--player]
                                     [--root=<dir>] [--fonts=<dir>]
                                     [--widths=1440,390] [--jobs=4]
-     node scripts/visual.js diff <beforedir> <afterdir>
+     node tools/visual.js diff <beforedir> <afterdir>
                                  [--out=<dir>] [--noise=0.0005]
 
    capture
@@ -38,9 +38,9 @@
 
    Before-and-after on a branch:
      git worktree add /tmp/base origin/main
-     node scripts/visual.js capture /tmp/shots/before --root=/tmp/base
-     node scripts/visual.js capture /tmp/shots/after
-     node scripts/visual.js diff /tmp/shots/before /tmp/shots/after
+     node tools/visual.js capture /tmp/shots/before --root=/tmp/base
+     node tools/visual.js capture /tmp/shots/after
+     node tools/visual.js diff /tmp/shots/before /tmp/shots/after
 
    The 'Tap to Expand' portrait label is hidden in every shot: it is added
    on a timer that races portraits.js. Known noise, which differs between
@@ -283,7 +283,7 @@ async function capturePage(browser, origin, rel, widths, out, fontsDir) {
 
 async function capture(args) {
   const out = args[0];
-  if (!out || out.startsWith('--')) die('usage: node scripts/visual.js capture <outdir> [--pages=<glob>] [--player] [--root=<dir>] [--fonts=<dir>]');
+  if (!out || out.startsWith('--')) die('usage: node tools/visual.js capture <outdir> [--pages=<glob>] [--player] [--root=<dir>] [--fonts=<dir>]');
   const root = path.resolve(flag(args, 'root', REPO));
   const fontsDir = fontsourceDir(flag(args, 'fonts', process.env.CAELESTIS_FONTS));
   const widths = String(flag(args, 'widths', '1440,390')).split(',').map(Number);
@@ -411,7 +411,7 @@ function compare(fb, fa, outFile) {
 
 function diff(args) {
   const [B, A] = args;
-  if (!B || !A || B.startsWith('--') || A.startsWith('--')) die('usage: node scripts/visual.js diff <beforedir> <afterdir> [--out=<dir>] [--noise=0.0005]');
+  if (!B || !A || B.startsWith('--') || A.startsWith('--')) die('usage: node tools/visual.js diff <beforedir> <afterdir> [--out=<dir>] [--noise=0.0005]');
   const noiseAt = +flag(args, 'noise', 0.0005);
   const outDir = flag(args, 'out', null);
   if (outDir) fs.mkdirSync(outDir, { recursive: true });
@@ -452,4 +452,4 @@ function diff(args) {
 const [cmd, ...rest] = process.argv.slice(2);
 if (cmd === 'capture') capture(rest).catch((e) => { console.error(e); process.exit(2); });
 else if (cmd === 'diff') diff(rest);
-else die('usage: node scripts/visual.js capture <outdir> [options] | diff <beforedir> <afterdir> [options]\nSee the header of scripts/visual.js.');
+else die('usage: node tools/visual.js capture <outdir> [options] | diff <beforedir> <afterdir> [options]\nSee the header of tools/visual.js.');

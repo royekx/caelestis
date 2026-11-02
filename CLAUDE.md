@@ -25,8 +25,8 @@ Do not write to the repo before the first or to the record before the second.
 | FIA | `restricted/`: the Fleet Intelligence Archive, gated, its own chrome and index |
 | DM | `prime/`: the DM wiki, gated |
 | Record | `data/` (player-safe), `prime/data/` (DM layer) |
-| Shared | `assets/`, `styles/`, `scripts/` (player and build scripts), `prime/scripts/` (DM scripts) |
-| Process, not deployed | `docs/`, `prime/working/`, `CLAUDE.md` |
+| Shared | `assets/`, `styles/`, `scripts/` (what player pages load), `prime/scripts/` (DM scripts) |
+| Process, not deployed | `tools/` (build and check scripts: `data.js`, `terms.js`, `visual.js`, `survey.js`, `eye-fit.js`; `search.js`, a per-section search box no page loads), `docs/`, `prime/working/`, `CLAUDE.md` |
 
 **DM side today**: `campaign/` (index, `voyages/`, `plot-hooks.html`), `opposition/` (`vecna.html`, `vthorama.html`), `tracker/`, `timeline/`, `crew/`, `dossiers/`, `factions/`, `statblocks/`, `cosmology/`, `locations/`, `vessels/`, `artifacts/`, `chart/`, `rules/`, `glossary/`, `principles.html`, `hub.html`, `search.html`.
 
@@ -76,7 +76,7 @@ It holds only what the crew knows and is published with the site.
 | `overlay.json` | `entities`: per record `urgency`, `next`, `note`, `dossier`, `voyages[n].beats`; `lanes`: powers the crew has never met |
 | `dossiers.json` | derived: which DM dossiers exist and which record each belongs to |
 | `connections.json` | the Connections view on `prime/timeline/` |
-| `survey.json` | the DM's survey of systems, kept by `scripts/survey.js` |
+| `survey.json` | the DM's survey of systems, kept by `tools/survey.js` |
 
 Urgency and Next Planned Beat live in the overlay, never in `data/`.
 
@@ -90,7 +90,7 @@ url links parent giver children within items progress`, plus `data/index.json`,
 - A fact is entered in the record and nowhere else. Pages are written by hand
   from it; nothing generates them. To correct a page, correct the record, run
   `derive`, and edit the page to match.
-- The schema is closed and listed at the top of `scripts/data.js`. A new field
+- The schema is closed and listed at the top of `tools/data.js`. A new field
   is a change to that list, made in its own commit and named in the pull request.
 - The schema tests the key, not the sentence. A DM fact typed into a player
   field passes every check; the two session-run approvals catch it.
@@ -108,13 +108,13 @@ url links parent giver children within items progress`, plus `data/index.json`,
 ## Commands
 
 ```bash
-node scripts/data.js derive   # after editing the record: fills derived fields
-node scripts/data.js check    # record, DM layer and pages agree, every local link and anchor resolves, player pages keep the boundary; 0 errors before a pull request
-node scripts/terms.js         # retired terms, decision voice, moved paths on prime/, restricted/ and the player site; rules in prime/working/terms.json
-node scripts/visual.js capture <dir> [--player] / diff <before> <after>   # screenshots and pixel diff; usage in its header
+node tools/data.js derive   # after editing the record: fills derived fields
+node tools/data.js check    # record, DM layer and pages agree, every local link and anchor resolves, player pages keep the boundary; 0 errors before a pull request
+node tools/terms.js         # retired terms, decision voice, moved paths on prime/, restricted/ and the player site; rules in prime/working/terms.json
+node tools/visual.js capture <dir> [--player] / diff <before> <after>   # screenshots and pixel diff; usage in its header
 ```
 
-`node scripts/data.js guard` runs in the deploy and asks only whether `data/`
+`node tools/data.js guard` runs in the deploy and asks only whether `data/`
 is fit to publish. Both `check` and `terms.js` run on every pull request.
 `terms.js --list` gives each hit; a folder listed as finished in `terms.json`
 fails on any hit.

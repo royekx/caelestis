@@ -2,15 +2,15 @@
 /**
  * survey.js — roll star systems for the DM's chart, and keep the ones you keep.
  *
- *   node scripts/survey.js roll [options]       roll a system and print it (nothing saved)
- *   node scripts/survey.js roll --save [opts]   roll it and save it to the survey
- *   node scripts/survey.js list                 every saved system
- *   node scripts/survey.js show <designation>   one saved system in full
- *   node scripts/survey.js chart <body>         chart a saved body: give it its letter or numeral
- *   node scripts/survey.js catalogue <system> --seed N
+ *   node tools/survey.js roll [options]       roll a system and print it (nothing saved)
+ *   node tools/survey.js roll --save [opts]   roll it and save it to the survey
+ *   node tools/survey.js list                 every saved system
+ *   node tools/survey.js show <designation>   one saved system in full
+ *   node tools/survey.js chart <body>         chart a saved body: give it its letter or numeral
+ *   node tools/survey.js catalogue <system> --seed N
  *                                               give a saved system with no CSC number one, as
  *                                               `roll --seed N` would roll it (its bodies stay)
- *   node scripts/survey.js check                verify the survey file
+ *   node tools/survey.js check                verify the survey file
  *
  * Roll options:
  *   --seed N        roll the same system again (every roll prints its seed)

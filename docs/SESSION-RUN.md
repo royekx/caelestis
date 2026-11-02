@@ -49,7 +49,7 @@ written to the record before the second.
 
 ```bash
 git fetch origin main && git checkout -b claude/voyage-NNN origin/main
-node scripts/data.js check
+node tools/data.js check
 ```
 
 The check must pass before anything changes. If it fails, fix what it reports
@@ -338,7 +338,7 @@ DM-side twin of a bullet.
 Edit the JSON by hand, authored fields only, then:
 
 ```bash
-node scripts/data.js derive
+node tools/data.js derive
 ```
 
 `derive` and `check` reject any key or field the schema does not list.
@@ -380,8 +380,8 @@ Voyages board read the record and need no edit.
 ## 6 · Check
 
 ```bash
-node scripts/data.js check
-node scripts/terms.js
+node tools/data.js check
+node tools/terms.js
 ```
 
 Zero errors before the pull request opens. Warnings are fixed or named in the

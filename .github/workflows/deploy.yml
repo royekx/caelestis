@@ -40,7 +40,7 @@ jobs:
       # -- Player index -> /pagefind/ --
       # Indexes only the player-facing directories via an explicit glob.
       # prime/, restricted/, the companion pages (aspects/, wayfinder-path/,
-      # stellar-chart/), search/, scripts/, data/, styles/ and *-template.html
+      # stellar-chart/), search/, scripts/, tools/, data/, styles/ and *-template.html
       # are simply never matched.
       - name: Build player index
         run: |
@@ -83,15 +83,15 @@ jobs:
       # request by .github/workflows/check.yml, not here. A typo fixed on one
       # page should not be able to take the site down.
       - name: Guard the record
-        run: node scripts/data.js guard
+        run: node tools/data.js guard
 
       - name: Prune what the site does not serve
         run: |
           set -e
-          rm -f  scripts/data.js scripts/survey.js scripts/terms.js scripts/visual.js CLAUDE.md
-          rm -rf prime/working docs
+          rm -f  CLAUDE.md
+          rm -rf tools prime/working docs
           find . -name '*-template.html' -not -path './.git/*' -delete
-          echo "pruned: scripts/data.js, scripts/survey.js, scripts/terms.js, scripts/visual.js, CLAUDE.md, prime/working, docs, *-template.html"
+          echo "pruned: tools/, CLAUDE.md, prime/working, docs, *-template.html"
 
       # -- Publish the whole site (with all three index bundles) --
       - name: Setup Pages

@@ -2,10 +2,10 @@
 /**
  * terms.js — keep retired terms, decision voice and moved paths off the DM wiki, the FIA and the player site.
  *
- *   node scripts/terms.js            summary by folder; exit 1 if a finished folder has a retired hit
- *   node scripts/terms.js --list     every hit, file:line, with what to use instead
- *   node scripts/terms.js --voice    include decision-voice and placeholder warnings in the list
- *   node scripts/terms.js PATH...    only these files or folders
+ *   node tools/terms.js            summary by folder; exit 1 if a finished folder has a retired hit
+ *   node tools/terms.js --list     every hit, file:line, with what to use instead
+ *   node tools/terms.js --voice    include decision-voice and placeholder warnings in the list
+ *   node tools/terms.js PATH...    only these files or folders
  *
  * The lists live in prime/working/terms.json:
  *   retired  terms that must not appear (pattern → what to use instead); matched on the

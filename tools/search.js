@@ -7,7 +7,7 @@
    S.E.A.R.C.H. terminal, carrying the query + scope.
 
    Include on a section index page with:
-     <script src="../scripts/search.js" defer></script>
+     <script src="../tools/search.js" defer></script>
    Optionally place an explicit mount point where the box should
    appear:  <div id="section-search-mount"></div>
    If no mount point exists, the box injects after the page header.

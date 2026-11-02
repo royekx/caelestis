@@ -30,10 +30,10 @@
      (e) small moves
    The search is seeded, so it gives the same layout on every run.
 
-   node scripts/eye-fit.js             report the best layout at EYE_HALF
-   node scripts/eye-fit.js --half H    fit an eye H units in half-width
-   node scripts/eye-fit.js --scan      fit a range of sizes and compare
-   node scripts/eye-fit.js --write     write the layout (and --half) to
+   node tools/eye-fit.js             report the best layout at EYE_HALF
+   node tools/eye-fit.js --half H    fit an eye H units in half-width
+   node tools/eye-fit.js --scan      fit a range of sizes and compare
+   node tools/eye-fit.js --write     write the layout (and --half) to
                                        galaxy.js
    ════════════════════════════════════════════════════════════════ */
 'use strict';
@@ -42,8 +42,8 @@ const fs = require('fs'), path = require('path'), vm = require('vm');
 const FILE = path.join(__dirname, '..', 'prime', 'chart', 'galaxy.js');
 const SURVEY = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'prime', 'data', 'survey.json'), 'utf8'));
 const CORE_LIB = require('../prime/chart/survey-core.js');
-const OPEN = '  /* MARK_FIT: written by scripts/eye-fit.js */', CLOSE = '  /* /MARK_FIT */';
-const HALF_RE = /(\/\* EYE_HALF: written by scripts\/eye-fit\.js \*\/\n  const EYE_HALF = )[\d.]+;/;
+const OPEN = '  /* MARK_FIT: written by tools/eye-fit.js */', CLOSE = '  /* /MARK_FIT */';
+const HALF_RE = /(\/\* EYE_HALF: written by tools\/eye-fit\.js \*\/\n  const EYE_HALF = )[\d.]+;/;
 const src = fs.readFileSync(FILE, 'utf8');
 const a = src.indexOf(OPEN), b = src.indexOf(CLOSE);
 if (a < 0 || b < 0 || !HALF_RE.test(src)) throw new Error('MARK_FIT or EYE_HALF markers not found in galaxy.js');

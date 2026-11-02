@@ -193,7 +193,7 @@ html.is-framed .chart-shell, html.is-framed .chart-shell.is-3d { height:100vh; }
 <script src="gtc.js"></script>
 <script>
 /* The record for systems and galaxies is prime/data/survey.json, kept with
-   scripts/survey.js. This page reads it and adds only what a chart needs:
+   tools/survey.js. This page reads it and adds only what a chart needs:
    where things sit, how they are drawn, and the inscription. */
 const SURVEY_URL = "../data/survey.json";
 const LV = { cosmos:{W:3200,H:3000}, galaxy:{W:4400,H:3800}, system:{W:1400,H:1400,cx:700,cy:700,R:560} };
@@ -420,13 +420,13 @@ function buildFromSurvey(sv){
       x:c.pos[0], y:c.pos[1] }, c);
   });
   /* Unnamed systems: survey.js rolls, by seed, placed along the arms by
-     galaxy.js. Each reads as `node scripts/survey.js roll --seed N` would
+     galaxy.js. Each reads as `node tools/survey.js roll --seed N` would
      print it; the survey keeps only the systems someone saves. */
   window.EREVOS.rollSystems(sv);
   UNNAMED = window.EREVOS.FILLERS.map(f => ({ id:"u"+f.i, x:Math.round(f.pos[0]), y:Math.round(f.pos[1]), status:f.sys.status,
     lift: f.band==="high" ? Math.round(f.v[1] * STEM_K) : 0, high: f.band==="high",
     name:f.sys.id, kind:"Star system" + (f.sys.bayer ? " · " + f.sys.bayer : "") + (f.band==="high" ? (f.v[1] > 0 ? " · above the plane" : " · below the plane") : ""), summary:f.summary,
-    dm:[`A survey.js roll, seed ${f.sys.seed}. Keep it with <code>node scripts/survey.js roll --seed ${f.sys.seed} --save</code>, and give it a place on the chart when the crew turns toward it.`] }));
+    dm:[`A survey.js roll, seed ${f.sys.seed}. Keep it with <code>node tools/survey.js roll --seed ${f.sys.seed} --save</code>, and give it a place on the chart when the crew turns toward it.`] }));
 }
 
 /* ---------- backdrop ---------- */
@@ -858,7 +858,7 @@ function showMark(m){
   const side = m.height > 0 ? "above" : "below", band = m.src.band;
   const height = band==="disc" ? "in the thin disc, close to the galaxy's plane" : band==="thick" ? `in the thick disc, ${side} the galaxy's plane` : `high in the halo, ${side} the galaxy's plane`;
   const dm = [];
-  if(m.src.sys) dm.push(`Its system is a survey.js roll, seed ${m.src.sys.seed}; keep it with <code>node scripts/survey.js roll --seed ${m.src.sys.seed} --save</code> when it matters.`);
+  if(m.src.sys) dm.push(`Its system is a survey.js roll, seed ${m.src.sys.seed}; keep it with <code>node tools/survey.js roll --seed ${m.src.sys.seed} --save</code> when it matters.`);
   if(m.known==="linked") dm.push(`One of the two is a little-charted planet the crew learns of late in the campaign.`);
   if(m.known==="nowhere") dm.push(`Vecna chose it because its heart lies exposed.`);
   if(!m.known) dm.push(`Which marks are done is left open. The eye as a whole is about ${Math.round(PROGRESS*100)}% whole (EYE_PROGRESS in galaxy.js); a mark is named only when the crew draws near the truth.`);

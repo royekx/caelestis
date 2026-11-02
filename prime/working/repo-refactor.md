@@ -105,7 +105,7 @@ below closes those three gaps.
 The calls at the end of this section. Nothing below starts until they are made.
 
 ### 1. Tooling
-- Built 2026-10-27, reading `prime/` and `restricted/`: `scripts/terms.js` and a terms list in `prime/working/terms.json`: retired
+- Built 2026-10-27, reading `prime/` and `restricted/`: `tools/terms.js` and a terms list in `prime/working/terms.json`: retired
   term → replacement, with an allow-list for legitimate uses (FIA history,
   quoted in-world speech). Run in `check.yml` as a warning; promoted to an error
   per finished section. Pruned from deploy like `data.js`.
@@ -113,7 +113,7 @@ The calls at the end of this section. Nothing below starts until they are made.
   "pending", "TBD", "to be decided", "not yet set" on pages under prime/.
 - Baseline, 2026-10-27: 308 retired-term hits across 109 DM files (realms 173,
   cosmology 64, campaign 18, artifacts 17, dossiers 8, vessels 8, timeline 8,
-  glossary 6, factions 4, crew 1, hub 1); chart 0. `node scripts/terms.js --list`
+  glossary 6, factions 4, crew 1, hub 1); chart 0. `node tools/terms.js --list`
   gives each one. The FIA adds 22 hits across 6 of its 14 files.
 
 ### 2. Rules in one place
@@ -343,7 +343,7 @@ from deploy.
 | `docs/SESSION-RUN.md` | the session run, with CHRONICLE merged in as step 2; sets and statuses named by record file |
 | `docs/PAGE-GUIDE.md` | one page guide for player, DM and FIA pages: page rules, setting voice, DM structure and registers, page anatomy, dossiers, tags, the Voyages page, player pages, FIA voice |
 
-References updated: `CLAUDE.md`, `scripts/data.js`, `data/bearing.js`,
+References updated: `CLAUDE.md`, `tools/data.js`, `data/bearing.js`,
 `.github/workflows/check.yml` and `deploy.yml`, `prime/tracker/index.html`,
 `prime/campaign/index.html`, `prime/scripts/dm-tracker.js`.
 
@@ -381,7 +381,7 @@ writing rules are in BACKLOG.md § Repo and process.
 - Where each kind of fact lives: a met entity → a record in `data/*.json`; DM truth about it → `prime/data/overlay.json` under the same id, plus its dossier in `prime/dossiers/`; an unmet entity → `prime/` only; a power moving off-screen → a lane in `overlay.json` with its own `DM-` id. (DB, SR)
 - The record is the only place a fact is entered. Pages are its rendering, written by hand. To correct a page, correct the record, run `derive`, edit the page to match. (DB, SR, PS; already in CLAUDE.md)
 - `derive` fills mechanical fields; `check` runs on every PR and proves record, DM layer and pages agree, including every local link and anchor; `guard` runs in the deploy and asks only whether `data/` is fit to publish. (DB)
-- The schema is closed and listed at the top of `scripts/data.js`. A new field is a change to that list, made in its own commit and named in the PR. (SR, DB)
+- The schema is closed and listed at the top of `tools/data.js`. A new field is a change to that list, made in its own commit and named in the PR. (SR, DB)
 - Authored fields (edit): `id slug name number kind parentId giverId fields objectives rewards voyages seen mentioned linked`. Derived (never edit): `type url links parent giver children within items progress`, plus `data/index.json`, `data/voyage.js`, `prime/data/dossiers.json`. (SR; matches data.js)
 - The schema tests the key, not the sentence. A DM fact typed into a player field passes every check. That is what the two session-run approvals are for. (DB)
 - `prime/` is gated in the browser and disallowed to crawlers, but it is published and the repo is public: out of the players' way, not secret. Anything that must stay private stays out of the repository. Same for the DM and FIA search indexes. (DB, SRCH)
@@ -501,7 +501,7 @@ writing rules are in BACKLOG.md § Repo and process.
 
 ## Promotes to
 
-CLAUDE.md (folder map and rules), `scripts/nav.js`, `.github/workflows/deploy.yml` (search globs, prune list), `scripts/data.js` (record URLs).
+CLAUDE.md (folder map and rules), `scripts/nav.js`, `.github/workflows/deploy.yml` (search globs, prune list), `tools/data.js` (record URLs).
 
 ## Open
 

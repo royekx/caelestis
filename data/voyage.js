@@ -3,7 +3,7 @@
  * ────────────────────────────
  * Every voyage on record. The hub's Voyages card points at the last entry.
  *
- * Written by `node scripts/data.js derive` from data/sessions.json.
+ * Written by `node tools/data.js derive` from data/sessions.json.
  * To add a voyage, add its session record there and run derive.
  */
 
