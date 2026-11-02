@@ -20,7 +20,7 @@
  *            folder ending in /), for an old folder whose name lives on inside a new path
  *            (bearings/ → voyages/bearings/)
  *   scan     what to read: top folders (prime, restricted, the player folders) and single
- *            root pages by their .html path (hub.html, index.html)
+ *            root pages by their .html path (index.html)
  *   finished folders (or single pages, by their .html path) whose retired-term and moved-path hits fail the check
  *   allow    "path:regex" pairs for legitimate uses (a quoted archive line, say)
  *   docs     process docs (CLAUDE.md, docs/, .github/workflows/) read only for moved
@@ -66,7 +66,7 @@ function walk(dir, out) {
   }
   return out;
 }
-// A scan entry is a folder (walked) or a single page (hub.html, index.html at the root).
+// A scan entry is a folder (walked) or a single page (index.html at the root).
 let files = (conf.scan || ['prime']).reduce((acc, d) => {
   const p = path.join(ROOT, d);
   if (!fs.existsSync(p)) return acc;
