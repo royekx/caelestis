@@ -26,7 +26,7 @@
         "bullets": [
           "An arcane device detonated in its simulation chamber, nearly killing a room of cadets",
           "Holds a bridge where Mirt keeps his fishbowl, and an infirmary where the injured recover",
-          "Governs a fleet-intelligence archive locked behind clearance beyond a cadet's star"
+          "Its Nexus terminals lock a fleet-intelligence archive category behind clearance beyond a cadet's star"
         ]
       }
     ],
@@ -591,13 +591,14 @@
         "bullets": [
           "A stone-carved beholder vessel drifting in orbit above Toril, believed abandoned",
           "The crew was to install a spelljamming helm on its command deck and use its appearance to move through H’Cathan space unchallenged",
-          "Its interior is stone-floored, dim, and smells old; a lantern-wisp bloom has overrun much of it",
+          "Its interior is stone-floored, dim, and smells old",
           "Clockwork horrors were found feeding on the broken automaton Ostekk-6 in the cargo hold"
         ]
       },
       {
         "number": 4,
         "bullets": [
+          "Ostekk-6 warned that a bloom had overrun much of it, that a shape-taking mimic waited among its contents, and that more clockwork horrors were aboard",
           "The crew dispatched the clockwork horrors in the cargo hold and cleared the lantern-wisp bloom choking the garden shaft, but found the wisps persisted by some unknown cause",
           "A deck below waits reachable only by rope; the crew held to rest before descending, sensing something waiting there"
         ]
