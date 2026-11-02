@@ -52,22 +52,22 @@
       label: 'Crew Operations',
       items: [
         { key: 'bearings',      label: 'Current Bearing', path: 'voyages/bearings/index.html'        },
-        { label: 'Plot the Next Voyage', href: 'https://rallly.co/invite/B8uUYlcm4oKB' },
-        { label: 'Take the Helm',        href: 'https://royek.foundryserver.com/game'  }
+        { label: 'Take the Helm',        href: 'https://royek.foundryserver.com/game'  },
+        { label: 'Plot the Next Voyage', href: 'https://rallly.co/invite/B8uUYlcm4oKB' }
       ]
     },
     {
       label: 'Crew Intel',
       items: [
-        { key: 'voyages',            label: 'Voyages',            path: 'voyages/index.html'            },
         { key: 'quests',             label: 'Quest Board',        path: 'quests/index.html'             },
+        { key: 'voyages',            label: 'Voyages',            path: 'voyages/index.html'            },
+        { key: 'logs',               label: 'Logs',               path: 'voyages/logs/index.html'       },
+        { key: 'inventory',          label: 'Inventory',          path: 'inventory/index.html'          },
         { key: 'crew-manifest',      label: 'Manifest',           path: 'registry/crew-manifest/index.html' },
         { key: 'dossiers',           label: 'Dossiers',           path: 'registry/dossiers/index.html'  },
-        { key: 'factions',           label: 'Factions',           path: 'registry/factions/index.html'  },
-        { key: 'navigation-records', label: 'Navigation Records', path: 'navigation-records/index.html' },
         { key: 'vessels',            label: 'Vessels',            path: 'vessels/index.html'            },
-        { key: 'inventory',          label: 'Inventory',          path: 'inventory/index.html'          },
-        { key: 'logs',               label: 'Logs',               path: 'voyages/logs/index.html'       }
+        { key: 'navigation-records', label: 'Navigation Records', path: 'navigation-records/index.html' },
+        { key: 'factions',           label: 'Factions',           path: 'registry/factions/index.html'  }
       ]
     },
     {
