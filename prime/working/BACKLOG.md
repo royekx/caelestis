@@ -36,15 +36,15 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 19 | 3 | 3 | 0 | 1 |
-| Dossiers | dossiers/ | 20 | 15 | 0 | 0 | 1 |
+| Dossiers | dossiers/ | 20 | 16 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 9 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 4 | 18 | 0 | 20 |
-| New pages | 12 proposed pages, the hub, notes/ | 3 | 20 | 3 | 2 | 23 |
+| New pages | 12 proposed pages, the hub, notes/ | 3 | 20 | 3 | 2 | 24 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 11 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 0 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **126** | **154** | **46** | **2** | **53** |
+| **Total** |  | **126** | **155** | **46** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1134,6 +1134,10 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/vecna-lich.html
 
+- **[later]** Reaching Vecna (Lich) by being taken at a Zenith
+  Korey wants it possible for player characters to be taken by a Monolith at a Zenith, and so arrive at the Radiant Citadel and meet Vecna (Lich), the mortal form archived at Vecna's ascension, now calm and close to redeemed. Conditions: decided by dice when the moment comes; only at a high enough level for the separation to be survivable; never one character alone, the taken go as a group. What he can give: how his own plan to become a god worked, which may hint at what the god is doing now, though he does not know the god's present plan. A switch-up the crew could come back to later. Ties to the Citadel's way out (locations/rykoe.html) and to the crew researching Monoliths.
+  src: Korey, 2026-11-01
+
 - **[later]** What Vecna (Lich) knows, and where he stands
   Vecna (Lich) has his own dossier (Korey, 2026-10-28). What he knows of Vecna's working, whether he would help the crew against it, where he sits in the Citadel and how the forgetting has touched him are not set. They wait until the crew heads for Rykoe.
   src: section 5 (2026-10-28)
@@ -2038,6 +2042,13 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   src: chat-cosmic § Cosmos texture; memory-canon
 
 ### principles.html
+
+- **[add]** Asking for a roll means something is there
+  When the players are interested in something and the DM calls for a roll, there is something to find, whatever the result. The roll sets how much they get and how fast, not whether they get anything. A low roll shows that something is there: two people talking in hushed tones, words out of earshot. A high roll gives more at once: twenty gold changing hands, and a look around to check no one saw. From there, getting more is the players' choice, and it becomes a run of hurdles (sneak closer, talk to them, a Persuasion check), each with its own consequences. Joffrey is the example: an improvised character the players suspected, who became a piece they are invested in.
+  Context still matters. A check for a specific thing can simply fail; a search for a secret door may find no door. A check for whether something feels off always finds that something does.
+  The other half: when nothing is there, don't call for a roll. A roll means there is a chance for something to happen. If a path will reward neither the players' time nor the DM's, don't entertain it.
+  And put needed things in the crew's way. When something matters for the story, set it where they will meet it instead of hoping they look. Lean less on "what do you want to do?": players are not always sure, so offer the nudge that something is here, and that there is something in it for them if they go for it.
+  src: Korey, 2026-11-01
 
 The page exists (`prime/principles.html`, Reference). Contracts are built on Campaign § Arc 2; this decide names their categories there.
 
