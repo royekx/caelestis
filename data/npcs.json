@@ -166,7 +166,7 @@
       "Party Relationship": "Rival cadet",
       "Role (as known)": "Fellow cadet",
       "Current State": "Recovering unconscious in the infirmary after the simulation blast.",
-      "Overview (Player)": "Veena is a fellow cadet at Caelestis on the crew that races opposite the party. She contested Boogie's corner bunk on the first day before backing down, and was badly hurt in the arcane blast that wrecked the simulation chamber — she now recovers, unconscious but breathing, in the infirmary.",
+      "Overview (Player)": "Veena is a fellow cadet at Caelestis on the crew that races opposite theirs. She contested Boogie's corner bunk on the first day before backing down, and was badly hurt in the arcane blast that wrecked the simulation chamber — she now recovers, unconscious but breathing, in the infirmary.",
       "Category": "Cadet Corps",
       "Status": "Active"
     },
@@ -431,7 +431,7 @@
           "Outfitted the cadets at the quartermaster's stores; unsettled Gregory by looking unnervingly like him",
           "Charmed by Boogie into giving up a light hammer",
           "Named Boatswain and Joffrey as great spelljammers of Caelestis, with older absences hanging over the stories",
-          "Arrived with officers in Mirt's chambers and confirmed the attack was likely a diversion amid a wave of burglaries"
+          "Arrived with officers in Mirt's chambers and confirmed that more burglaries struck the academy while Mirt was attacked"
         ]
       },
       {
@@ -474,10 +474,10 @@
     "fields": {
       "Gender": null,
       "Affiliation(s)": "Caelestis Academy",
-      "Party Relationship": "Head of the academy the cadets served",
+      "Party Relationship": "Head of the academy where the cadets train",
       "Role (as known)": "Headmaster, Caelestis Academy",
       "Current State": "Leading Caelestis and directing the cadets against Vocath, an old enemy who bears him a grudge.",
-      "Overview (Player)": "Mirt is the head of Caelestis, occupying cluttered chambers full of status and excess, including an impossible wardrobe that opens onto astral night. He rewarded the cadets and let slip the wardrobe's origin in the Viren system.",
+      "Overview (Player)": "Mirt is the head of Caelestis, who keeps cluttered chambers full of finery and curiosities, including an impossible wardrobe that opens onto astral night. He rewarded the cadets and let slip the wardrobe's origin in the Viren system.",
       "Category": "Command & Staff",
       "Status": "Active"
     },
@@ -497,7 +497,7 @@
           "Went still when Saerthe named the rod's marking, and revealed that Vocath had long borne him a grudge, making anyone connected to him a target",
           "Told the cadets to keep it to themselves, check the teaching rooms for similar devices, and look cautiously into Joffrey and a man named Jeffrey",
           "Rewarded the cadets for the simulation win and paid extra for their discretion, then granted them sailor-level clearance",
-          "Left the phrase 'fleet intelligence archive' visible on his notepad beside the fishbowl"
+          "Had the phrase 'fleet intelligence archive' on his notepad beside the fishbowl, where Tumak read it"
         ]
       }
     ],
@@ -666,7 +666,7 @@
       "Party Relationship": "Friendly cadet from the rival crew",
       "Role (as known)": "Fellow cadet on the rival crew",
       "Current State": "Aboard the tyrant ship with the crew.",
-      "Overview (Player)": "Miken is a slight, nervous cadet at Caelestis on the crew that races opposite the party. Easy company and quick to understand, he showed a command of magic that seems to run ahead of his year. On the tyrant ship Bartholomew caught him in the night speaking into a sending stone; he said he was saying hello to his family.",
+      "Overview (Player)": "Miken is a slight, nervous cadet at Caelestis on the crew that races opposite theirs. Easy company and quick to understand, he is a capable caster. On the tyrant ship Bartholomew caught him in the night speaking into a sending stone; he said he was saying hello to his family.",
       "Category": "Cadet Corps",
       "Status": "Active"
     },
@@ -677,7 +677,7 @@
           "Shared his table at the Weeping Goddess with Bartholomew and the gathering crew",
           "Nervous and talkative about the simulation, glancing repeatedly at an empty chair no one named",
           "Left graciously when Boogie signaled the crew had matters to discuss",
-          "Silenced Tumak's strange snoring with an incantation beyond a cadet of his year",
+          "Silenced Tumak's strange snoring with an incantation",
           "Assigned with Veena, Barret, and the rest of his squad to the same salvage exercise from the opposite chamber"
         ]
       },
@@ -707,8 +707,7 @@
         "bullets": [
           "Went down the shaft after the crew and charmed their fall on the way to the garden",
           "Caught on the first watch by Bartholomew, speaking into a sending stone in the hallway by the garden shaft",
-          "Said he was only saying hello to his family, grew sharp when pressed, then apologized",
-          "Is the only one of Veena's crew who was not badly hurt"
+          "Said he was only saying hello to his family, grew sharp when pressed, then apologized"
         ]
       }
     ],
@@ -930,7 +929,7 @@
     "fields": {
       "Gender": null,
       "Affiliation(s)": "Vaelorix (the tyrant ship's master)",
-      "Party Relationship": "A broken automaton the crew saved aboard the tyrant ship",
+      "Party Relationship": "An automaton the crew saved aboard the tyrant ship, rebuilding",
       "Role (as known)": "Automaton unit of the tyrant ship, one of nine that served Vaelorix",
       "Current State": "Guiding the crew through the tyrant ship's decks while his body rebuilds.",
       "Overview (Player)": "Ostekk-6 is an automaton, one of nine units that served the tyrant ship's beholder master, Vaelorix, found broken in the cargo hold with his lower half gone. Gregory spent a charge of the containment engine on him and his body began to rebuild itself. He knows the ship, has no reservations about the crew taking it, and will travel with them if they wish. He calls himself a servant, not capable of making plans.",
@@ -950,9 +949,8 @@
           "Named on the cargo manifest as Ostekk-6; its arcane core intact but its mechanical body beyond magical repair",
           "Pulled to safety by Gregory's Vortex Warp during the fight",
           "Communicated through a telepathic link Tumak opened, warning of a shape-shifting mimic aboard, a bloom overrunning the ship, and more clockwork horrors",
-          "Explained that the way to the command deck runs through the access shafts, and that killing the flowers does not unmake the wisps already loose",
-          "Confirmed the way to the command deck runs through the choked access shafts, which are not passable while the bloom holds",
-          "Explained through the link that the flower produces the wisps, but killing it does not unmake the ones already loose — something else keeps them present"
+          "Explained that the way to the command deck runs through the access shafts, impassable while the bloom holds",
+          "Explained that the flower produces the wisps, but killing it does not unmake the ones already loose; something else keeps them present"
         ]
       },
       {
@@ -1566,7 +1564,7 @@
       "Party Relationship": "Cadet on the rival crew",
       "Role (as known)": "Fellow cadet on the rival crew",
       "Current State": "A cadet on the rival crew at Caelestis.",
-      "Overview (Player)": "Barret is a cadet at Caelestis on the crew that races opposite the party, alongside Miken and Veena. Ryeback heard him at the Weeping Goddess counter talking about a hadozee who could read birthdays.",
+      "Overview (Player)": "Barret is a cadet at Caelestis on the crew that races opposite theirs, alongside Miken and Veena. Ryeback heard him at the Weeping Goddess counter talking about a hadozee who could read birthdays.",
       "Category": "Cadet Corps",
       "Status": "Active"
     },

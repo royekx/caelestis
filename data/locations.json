@@ -582,7 +582,7 @@
     "fields": {
       "Type": "Vessel",
       "Key NPCs / Factions": "Ostekk-6, Winston Ryeback, Ostekk-2, Vaelorix",
-      "Overview (Player)": "The tyrant ship is a stone-carved beholder vessel in Toril's orbit, once the vessel of the beholder Vaelorix, who lies dead on its Command Deck. The crew holds it now. They burned the bloom off the Command Deck, put the mechanical behir out through the cargo hold, and seated a helm in the platform so they can fly it through H'Cathan space unnoticed. It flies, though only four of its ten great eyes answer at the crew stations. It has no fire suppression; most things leave it through the cargo hold.",
+      "Overview (Player)": "The tyrant ship is a stone-carved beholder vessel in Toril's orbit, once the vessel of the beholder Vaelorix, who lies dead on its Command Deck. The crew holds it now. They cut the bloom off the Command Deck, ejected the mechanical behir through the cargo hold, and seated a helm in the platform so they can fly it through H'Cathan space unnoticed. It flies, though only four of its ten great eyes answer at the crew stations. It has no fire suppression; most things leave it through the cargo hold.",
       "Status": "Accessible"
     },
     "voyages": [
@@ -806,7 +806,7 @@
       {
         "number": 6,
         "bullets": [
-          "The only clock anyone could name on the mission, where others would be after the adamantine"
+          "Named by Tumak as the mission's only deadline: others will be after the adamantine"
         ]
       }
     ],
