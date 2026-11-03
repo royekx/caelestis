@@ -340,6 +340,11 @@ body { overflow-x: clip; }
   padding-left: 1rem;
   border-left: 1px solid var(--accent-rule);
 }
+/* The shared scrollbar rule (caelestis.css) takes the DM accent. */
+:root {
+  --scroll-thumb: var(--accent-rule, rgba(185,194,204,0.38));
+  --scroll-thumb-hover: var(--accent, #B9C2CC);
+}
 /* Scrollbars: thin, in the page's accent, on a clear track. Firefox reads
    scrollbar-*; Chrome, Edge and Safari read the ::-webkit-scrollbar rules. */
 html, .dm-toc, .side-nav {

@@ -1118,3 +1118,22 @@ body.with-sidebar .page-header {
 /* Any image that expands (scripts/lightbox.js). */
 img.cae-zoomable { cursor: zoom-in; }
 img.cae-zoomable:focus-visible { outline: 1px solid var(--gold); outline-offset: 3px; }
+
+/* ── Scrollbars ──
+   Thin, in the page's accent, on a clear track, wherever something scrolls:
+   the page, the sidebar, a voyage's account, a record's tab. Firefox reads
+   scrollbar-*; Chrome, Edge and Safari read ::-webkit-scrollbar. The DM side
+   sets --scroll-thumb to its own accent (dm.css); the FIA does the same. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-thumb, var(--gold-dim)) transparent;
+}
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb, var(--gold-dim));
+  border-radius: 8px; border: 2px solid transparent; background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover, var(--gold)); background-clip: padding-box;
+}
