@@ -280,8 +280,8 @@
   // A page opts out with data-no-command-bar on <body>. The bearing pages
   // (data-command-bar="search") take the search row alone: the Current
   // Bearing's banner is its command bar, and a voyage's bearing page is a
-  // record of that voyage. It sits under the banner, or above the voyage
-  // strip on a page with no banner.
+  // record of that voyage. It is the banner's last row, as search is the
+  // bar's, or sits above the voyage strip on a page with no banner.
   var head = document.querySelector('.hub-head');
   var col = document.querySelector('.content');
   var term = document.querySelector('.terminal-wrap');   // S.E.A.R.C.H. names its column differently
@@ -289,7 +289,7 @@
   var noBar = document.body.hasAttribute('data-no-command-bar');
   if (document.body.getAttribute('data-command-bar') === 'search') {
     var strip = document.querySelector('.bearing-strip');
-    if (banner) banner.insertAdjacentHTML('afterend', buildCommandBar(true));
+    if (banner) banner.insertAdjacentHTML('beforeend', buildCommandBar(true));
     else if (strip) strip.insertAdjacentHTML('beforebegin', buildCommandBar(true));
   } else if (noBar) {
     // no command bar on this page
@@ -303,6 +303,15 @@
     document.body.insertAdjacentHTML('afterbegin', buildCommandBar());
   }
 
+  // The bar's height, for anything that has to fit under it (a voyage's
+  // account panel scrolls inside the space the bar leaves).
+  function cbHeight() {
+    var bar = document.querySelector('.command-bar:not(.cb-search-only)');
+    document.documentElement.style.setProperty('--cb-h', (bar ? bar.offsetHeight : 0) + 'px');
+  }
+  cbHeight();
+  window.addEventListener('resize', cbHeight);
+
   var cbBtn = document.getElementById('js-cb-expand');
   if (cbBtn) {
     cbBtn.addEventListener('click', function () {
@@ -312,6 +321,7 @@
       panel.hidden = open;
       // On a phone the operations fold away with the detail.
       cbBtn.closest('.command-bar').classList.toggle('cb-open', !open);
+      cbHeight();
     });
   }
 

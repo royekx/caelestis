@@ -29,22 +29,13 @@
   .video-link a { color: var(--gold-dim); text-decoration: none; }
   .video-link a:hover { color: var(--gold); }
 
-  /* ── LOG META ── */
-  .log-meta {
-    display: flex; align-items: center; gap: 1rem;
-    margin-bottom: 1.6rem; flex-wrap: wrap;
+  /* ── WHEN ── the Fleet dates the voyage spans, under the nav bar */
+  .voyage-when {
+    margin: -0.6rem 0 1.4rem; font-size: 0.98rem; color: var(--text-dim);
   }
-  .log-badge {
-    font-family: 'Cinzel', serif; font-size: 0.835rem;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    background: var(--gold-faint); border: 1px solid var(--gold-rule);
-    color: var(--gold-dim); padding: 0.25rem 0.6rem;
-  }
-  .log-type-badge {
-    font-family: 'Cinzel', serif; font-size: 0.812rem;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--text-muted); border: 1px solid var(--gold-rule);
-    padding: 0.25rem 0.6rem;
+  .voyage-when-label {
+    margin-right: 0.6rem; font-family: 'Cinzel', serif; font-size: 0.72rem;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted);
   }
 
   /* ── AT A GLANCE ── */
@@ -195,7 +186,6 @@
 
   .voyage-glance { border-radius: 12px; }
   .chip { border-radius: 999px; }
-  .log-badge, .log-type-badge { border-radius: 999px; }
   .video-container { border-radius: 10px; }
   .voyage-nav-bar, .voyage-nav-bottom { border-radius: 999px; }
 </style>
@@ -228,17 +218,13 @@
 
   <div class="content">
 
-    <div class="log-meta">
-      <span class="log-badge">Voyage 003</span>
-      <span class="log-type-badge">Crew Log</span>
-      <span class="log-type-badge">Fleet date <span data-field="date">1491.6.26–1491.7.5</span></span>
-    </div>
 
     <div class="voyage-nav-bar" data-pagefind-ignore>
       <a class="voyage-nav-link" href="voyage-002.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg> Previous Voyage</a>
       <a class="voyage-nav-center" href="index.html">All Voyages</a>
       <a class="voyage-nav-link" href="voyage-004.html">Next Voyage <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></a>
     </div>
+    <p class="voyage-when"><span class="voyage-when-label">Fleet date</span><span data-field="date">1491.6.26–1491.7.5</span></p>
 
     <!-- AT A GLANCE -->
     <div class="voyage-glance">
