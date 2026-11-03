@@ -892,3 +892,6 @@ img { max-width: 100%; }
 .q-details .glance-row { grid-template-columns: 110px 1fr; }
 .q-details .glance-synopsis:has(+ .overview-foot) { border-bottom: 0; padding-bottom: 0; }
 @media (max-width: 640px) { .q-details .glance-row { grid-template-columns: 1fr; } }
+
+/* A cadet's feature card, at the head of their veiled companion tab. */
+.companion-panel .classified-body > .companion-card { margin: 0 0 2rem; }
