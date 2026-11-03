@@ -749,7 +749,7 @@ without JS they stack, which is also what Pagefind reads.
     the poll") and Take the Helm ("Enter Foundry · the game table").
     The All Hands line (`a.bb-hands`, `href="#sail"`, `data-field="all-hands"`)
     names the open All Hands items by their bold lead words, shortened:
-    "All hands: choose the instructor · Ostekk-2 · second in command". It
+    "Decide: the instructor · Ostekk-2 · second in command". It
     carries each item's `data-item` in `data-items`, opens the Heading tab,
     and is left out when All Hands is empty. Each value is written by hand
     from `data/bearing.js` (`goal`, `goalQuest`, `date`, `passage`, `level`,

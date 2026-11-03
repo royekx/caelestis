@@ -23,7 +23,7 @@ window.CAELESTIS_BEARING = {
   level:    4,
   levelUp:  true,   // the crew levelled at the last voyage; shows 'Level up to <level> before you sail' until the next write-up
   passage:  { embers: 14, to: 'H\u2019Catha' },
-  allHands: ['choose the instructor', 'Ostekk-2', 'second in command'],   // the All Hands line, as the banner shows it; [] when All Hands is empty
+  allHands: ['the instructor', 'Ostekk-2', 'second in command'],   // the All Hands line, as the banner shows it; [] when All Hands is empty
   nextSession: '',
 
   links: {

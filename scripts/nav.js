@@ -169,7 +169,7 @@
     var detail =
       '<div class="cb-detail" id="js-cb-detail" hidden>' +
         (b.levelUp ? '<p class="cb-level">Level up to ' + b.level + ' before you sail</p>' : '') +
-        (hands ? '<a class="cb-hands" href="' + bearing + '#sail"><span class="cb-key">All hands</span>' +
+        (hands ? '<a class="cb-hands" href="' + bearing + '#sail"><span class="cb-key">Decide</span>' +
           '<span class="cb-hands-list">' + hands + '</span></a>' : '') +
         '<a class="cb-more" href="' + bearing + '">Full bearing ›</a>' +
       '</div>';
