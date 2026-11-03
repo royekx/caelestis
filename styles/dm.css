@@ -711,7 +711,7 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
   margin: 0.55rem 0 0.1rem;
   padding: 0 1.05rem;
 }
-.dm-content .cae-expandable { cursor: zoom-in; }
+.dm-content .cae-expandable { cursor: zoom-in; }  /* scripts/lightbox.js */
 
 /* A map or plate inside an entry: full column width, opens in the
    lightbox (dm-nav.js wires figure.plate), caption below. */
