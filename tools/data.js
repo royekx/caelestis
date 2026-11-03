@@ -1348,6 +1348,12 @@ function check() {
       const lv = /\blevel:\s*(\d+)/.exec(b);
       if (!lv) err('data/bearing.js: level is missing');
       else if (one('crew-level') !== lv[1]) err(`${at}'s crew level reads "${one('crew-level')}", data/bearing.js level is ${lv[1]}`);
+      // The level-up reminder shows only while levelUp is true.
+      const lu = /\blevelUp:\s*(true|false)/.exec(b);
+      const shown = /data-field="level-up"/.test(src);
+      if (!lu) err('data/bearing.js: levelUp is missing (true while the crew has a level-up waiting, false otherwise)');
+      else if ((lu[1] === 'true') !== shown) err(`${at} ${shown ? 'shows' : 'lacks'} the level-up reminder, but data/bearing.js levelUp is ${lu[1]}`);
+      else if (shown && one('level-up') !== 'Level up before you sail') err(`${at}'s level-up reminder should read "Level up before you sail"`);
       const ps = /passage:\s*\{([^}]*)\}/.exec(b);
       const em = ps && /embers:\s*(\d+)/.exec(ps[1]);
       const to = ps && /to:\s*(['"])((?:\\.|(?!\1).)*)\1/.exec(ps[1]);

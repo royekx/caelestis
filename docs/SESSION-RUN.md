@@ -357,7 +357,7 @@ node tools/data.js derive
 | `voyages/bearings/voyage-NNN.html` | new, from the previous bearing page: a strip that ends at Voyage NNN, the Last time column (three bullets from Consequences and Major Events; the folds What each of you did, What you learned and Who you met), the Fleet date where the voyage ends, and Heading in its three groups, written from Next Session Pressure and Consequences (`docs/PAGE-GUIDE.md` § 8) |
 | `voyages/bearings/index.html` | the strip gains Voyage NNN and the next voyage; the Last time panel copied from the new bearing page; Heading is the new list plus every item carried forward; the Quest Board redone from `data/quests.json`; the three tab subtitles (the voyage, the Heading counts, the quest and loose-thread counts); the banner: headline, Fleet date, passage ahead, crew level and next voyage date, from `data/bearing.js` |
 | `voyages/bearings/voyage-NNN.html` tabs | Last time "Voyage NNN · Title"; Heading "After Voyage NNN" |
-| `data/bearing.js` | voyage, title, date, position, outstanding, next, level, passage, nextSession, consequence, quests, met, links (below) |
+| `data/bearing.js` | voyage, title, date, position, outstanding, next, level, levelUp, passage, nextSession, consequence, quests, met, links (below) |
 | `data/vocabulary.js` | every new proper noun |
 | each changed record's page | on the Voyage log tab, the new voyage becomes the latest block and the old one moves into Previous Voyages; the infobox rows, First seen and Last seen (or First and Last voyage) among them; the new voyage in All appearances; overview; objectives; Connections. Layout in `docs/PAGE-GUIDE.md` § 8, Record pages |
 | each new record's page | new, from a sibling page of the same kind (`inventory/entries/entry-template.html` for an item), with `data-entity` set to its id |
@@ -389,6 +389,7 @@ their strips.
 | `date` | where the latest voyage ends | Fleet date |
 | `passage` | `{ embers: 14, to: 'H\u2019Catha' }`: the next passage in Fleet days, to a location on record | "Fourteen embers to H'Catha" |
 | `level` | the crew's level after the voyage | Crew level |
+| `levelUp` | true when the voyage brought a level-up, false otherwise | "Level up before you sail" under the level, only when true |
 | `nextSession` | the next voyage's real-world date, `'YYYY-MM-DD'` or `'YYYY-MM-DD HH:MM'`, or `''` | "Saturday, November 21 · 7 pm", or "Date not set · answer the poll" |
 
 Set `level` when the crew levels up, and `passage` when the crew sets a

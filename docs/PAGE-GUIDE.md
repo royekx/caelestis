@@ -721,7 +721,7 @@ without JS they stack, which is also what Pagefind reads.
     the next step as a headline (`data-field="bearing-next"`), the Fleet
     date (`current-date`), the passage ahead ("Fourteen embers to
     H'Catha", `passage`; embers are Fleet days), the crew's level
-    (`crew-level`) with "Level up before you sail, if you haven't", and
+    (`crew-level`), with "Level up before you sail" (`level-up`) only while `levelUp` is true, and
     two actions: Plot the Next Voyage (the scheduler poll, with the next
     voyage's real-world date in `next-session`, or "Date not set · answer
     the poll") and Take the Helm (Foundry). Each value is written by hand
