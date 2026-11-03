@@ -881,7 +881,17 @@ function checkBearings(fresh, latest, err) {
     return elements(r, 'li', hasClass('sail-item')).map(li => {
       const k = /\bdata-item="([^"]+)"/.exec(li.open);
       const o = elements(li.inner, 'span', hasClass('sail-outcome'))[0];
-      const it = { keys: k ? k[1].split(/\s+/) : [], text: text(li.inner.replace(/<span class="sail-outcome">[\s\S]*?<\/span>/, '')),
+      // A To do item that is a quest's next step links that quest:
+      // <a class="sail-quest" href="../../quests/…">Quest name</a>, after the item's words.
+      const ql = /<a class="sail-quest" href="([^"]+)">([\s\S]*?)<\/a>/.exec(li.inner);
+      if (ql) {
+        const q = fresh.quests.find(x => x.url === path.posix.normalize(path.posix.join(DIR, ql[1])));
+        const gi = groups.find(x => x.inner.includes(li.outer));
+        if (!gi || !/data-group="todo"/.test(gi.open)) err(`${rel}: a quest link sits outside To do; only To do items link a quest`);
+        if (!q) err(`${rel}: a To do item links ${ql[1]}, which is not a quest or thread on record`);
+        else if (text(ql[2]) !== plain(q.name)) err(`${rel}: a To do item's quest link reads "${text(ql[2])}", the record says "${q.name}"`);
+      }
+      const it = { keys: k ? k[1].split(/\s+/) : [], text: text(li.inner.replace(/<span class="sail-outcome">[\s\S]*?<\/span>/, '').replace(/<a class="sail-quest"[\s\S]*?<\/a>/, '')),
         group: groupOf(li), done: hasClass('is-done')(li.open), carried: hasClass('is-carried')(li.open), aside: hasClass('is-aside')(li.open),
         outcome: o ? text(o.inner) : '', page: rel, n };
       const states = ['done', 'carried', 'aside'].filter(x => it[x]);

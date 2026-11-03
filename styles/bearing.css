@@ -357,3 +357,10 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 @media (max-width: 700px) {
   .sail-group { grid-template-columns: minmax(0, 1fr); gap: 0.45rem; }
 }
+/* A To do item that is a quest's next step names the quest after it. */
+.sail-quest {
+  margin-left: 0.6rem; font-size: 0.86rem; font-style: italic;
+  color: var(--text-dim); text-decoration: none; border-bottom: 1px solid var(--gold-rule);
+}
+.sail-quest::before { content: '· '; color: var(--text-muted); }
+.sail-quest:hover { color: var(--gold-light); border-bottom-color: var(--gold-dim); }

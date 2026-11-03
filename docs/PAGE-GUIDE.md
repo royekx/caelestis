@@ -732,6 +732,11 @@ without JS they stack, which is also what Pagefind reads.
   a memory aid: curated, a few items to a group, with the detail left to
   the voyage page. Three groups, each shown only when it has items:
   - *To do*: what the crew can do next, from where they are now.
+    When the item is a quest's next step, it names that quest after its
+    words, as a link (`<a class="sail-quest">`, the quest's record name).
+    Many To do items belong to no quest (repair the hull, rest and
+    resupply, deal with a stowaway); those stand alone. The Quest Board
+    holds the long game; To do is only what is in reach next voyage.
   - *To decide*: choices open to the crew now, from where they are.
   - *Weather Eye*: the DM's by-the-way nudges, a few at most, chosen
     fresh each voyage: a hazard still aboard, what they hold and what it does, a promise, who
