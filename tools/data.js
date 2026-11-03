@@ -708,6 +708,31 @@ function checkIndex(set, recs, err) {
         if (shown !== wantSub) err(`${p}: the threads row for ${x.r.slug} reads "${shown}", record gives "${wantSub}"`);
       });
     });
+    // Each row's Details panel repeats its record: the player overview, the
+    // objectives in order with their done marks, the rewards, and a link to
+    // the quest's page. A panel is opened by the row's own toggle.
+    matches(/<a class="log-row-link" href="([^"]+)">[\s\S]*?<\/a>\s*<button class="log-toggle"[^>]*aria-controls="([^"]+)"[^>]*>[\s\S]*?<\/button>\s*<\/div>\s*<div class="log-overview q-details" id="([^"]+)" hidden>([\s\S]*?)<div class="overview-foot"><a class="overview-link" href="([^"]+)"/g, src).forEach(m => {
+      const [, href, ctl, id, body, foot] = m;
+      const r = resolve(href);
+      if (!r) return;
+      const at = `${p}: the details for ${r.slug}`;
+      if (ctl !== id) err(`${at}: its toggle opens #${ctl}, the panel is #${id}`);
+      if (foot !== href) err(`${at}: link to ${foot}, the row links ${href}`);
+      const syn = /class="glance-synopsis">([\s\S]*?)<\/div>/.exec(body);
+      const wantSyn = plain(r.fields['Overview (Player)'] || '');
+      if (!syn || text(syn[1]) !== wantSyn) err(`${at}: overview differs from the record`);
+      const objs = matches(/<li class="obj-item([^"]*)"[\s\S]*?class="obj-text"[^>]*>([\s\S]*?)<\/span>/g, body)
+        .map(o => ({ done: /is-done/.test(o[1]), text: text(o[2]) }));
+      const wantO = (r.objectives || []).map(o => ({ done: !!o.done, text: plain(o.text) }));
+      if (JSON.stringify(objs) !== JSON.stringify(wantO)) err(`${at}: objectives differ from the record`);
+      const rw = matches(/<li class="loot-item is-reward">\s*<span class="loot-name">([\s\S]*?)<\/span>\s*(?:<span class="loot-note">([\s\S]*?)<\/span>)?/g, body)
+        .map(o => ({ name: text(o[1]), note: text(o[2]) }));
+      const wantR = (r.rewards || []).map(o => ({ name: plain(o.name), note: plain(o.note) }));
+      if (JSON.stringify(rw) !== JSON.stringify(wantR)) err(`${at}: rewards differ from the record`);
+    });
+    const rowsAll = matches(/<div class="log-entry q-entry/g, src).length;
+    const detailsAll = matches(/class="log-overview q-details"/g, src).length;
+    if (detailsAll !== rowsAll) err(`${p}: ${rowsAll} rows, ${detailsAll} details panels; every row has one`);
     matches(/data-panel="([^"]+)"[^>]*>[^<]*<span class="board-count">(\d+)<\/span>/g, src).forEach(m => {
       const [, id, n] = m;
       if (counted[id] === undefined) return;

@@ -885,3 +885,10 @@ img { max-width: 100%; }
 /* Thread pages have no objectives column, so their panels sit on their own
    full-width row rather than beside something. */
 .brief-grid-solo { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
+
+/* Quest board: a row's Details panel. The label column is wider than the
+   voyage index's, to fit "Objectives"; a thread with only an overview drops
+   the rule under it, so the foot's rule stands alone. */
+.q-details .glance-row { grid-template-columns: 110px 1fr; }
+.q-details .glance-synopsis:has(+ .overview-foot) { border-bottom: 0; padding-bottom: 0; }
+@media (max-width: 640px) { .q-details .glance-row { grid-template-columns: 1fr; } }
