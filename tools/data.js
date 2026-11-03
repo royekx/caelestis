@@ -13,8 +13,8 @@
  * proves that the record is consistent with itself, with the DM layer under
  * prime/data/, and with the pages that display it.
  *
- * AUTHORED  id slug name number date kind parentId giverId fields objectives
- *           rewards voyages seen mentioned linked
+ * AUTHORED  id slug name number date kind parentId giverId homeId fields
+ *           objectives rewards voyages seen mentioned linked
  * DERIVED   type url links parent giver children within items progress
  *           data/index.json  data/voyage.js  prime/data/dossiers.json
  *
@@ -62,17 +62,17 @@ const SETS = [
     fields: ['Type', 'Related Character(s)', 'Current State', 'Overview (Player)', 'Status'] }
 ];
 
-const AUTHORED = ['id', 'slug', 'name', 'number', 'date', 'kind', 'parentId', 'giverId', 'fields',
+const AUTHORED = ['id', 'slug', 'name', 'number', 'date', 'kind', 'parentId', 'giverId', 'homeId', 'fields',
   'objectives', 'rewards', 'voyages', 'seen', 'mentioned', 'linked'];
 const DERIVED = ['type', 'url', 'links', 'parent', 'giver', 'children', 'within', 'items', 'progress'];
 // The order keys are written in. Authored first, derived last, so a diff of a
 // session run reads top-down as "what was entered" then "what followed".
-const KEY_ORDER = ['id', 'type', 'slug', 'name', 'number', 'date', 'kind', 'parentId', 'giverId',
+const KEY_ORDER = ['id', 'type', 'slug', 'name', 'number', 'date', 'kind', 'parentId', 'giverId', 'homeId',
   'fields', 'objectives', 'rewards', 'voyages', 'seen', 'mentioned', 'linked',
   'url', 'links', 'parent', 'giver', 'children', 'within', 'items', 'progress'];
 // Which sets may carry which of the optional authored keys.
 const ONLY = { number: ['session'], date: ['session'], kind: ['location', 'quest'], parentId: ['location', 'quest'],
-  giverId: ['quest'], objectives: ['quest'], rewards: ['quest'] };
+  giverId: ['quest'], homeId: ['item'], objectives: ['quest'], rewards: ['quest'] };
 // What a giver may be.
 const GIVERS = ['npc', 'pc', 'faction'];
 // A voyage's rough in-game date in Fleet time: cycle.kindling.ember, or a span
@@ -155,6 +155,7 @@ function shape(sets, err) {
       ['seen', 'mentioned'].forEach(k => {
         if (r[k] !== undefined && !(Array.isArray(r[k]) && r[k].every(Number.isInteger))) err(`${at}: ${k} must be a list of voyage numbers`);
       });
+      if (r.homeId !== undefined && (typeof r.homeId !== 'string' || !r.homeId.trim())) err(`${at}: homeId must be a record id`);
       if (r.linked !== undefined && !(Array.isArray(r.linked) && r.linked.every(x => typeof x === 'string'))) err(`${at}: linked must be a list of ids`);
       if (r.voyages !== undefined) {
         if (!Array.isArray(r.voyages)) err(`${at}: voyages must be a list`);
@@ -223,6 +224,13 @@ function derive(sets) {
     r.links = [];
     byId.set(r.id, r);
   }));
+  // An item the crew does not hold has no page of its own. Its homeId names
+  // the record whose page carries it as a notable item, and its url is that
+  // page with the item's slug as the anchor.
+  sets.items.forEach(i => {
+    const h = i.homeId ? byId.get(i.homeId) : null;
+    if (h && h.type !== 'item') i.url = `${h.url}#${i.slug}`;
+  });
 
   // Links are entered once, on either end, and shown on both.
   all(sets).forEach(r => r.linked.forEach(tid => {
