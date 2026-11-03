@@ -874,11 +874,11 @@ const hasClass = c => o => new RegExp('\\bclass="[^"]*\\b' + c + '\\b').test(o);
 const links = h => matches(/<a\b[^>]*\bhref="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g, h).map(m => ({ href: m[1], text: text(m[2]), tag: m[0] }));
 
 // The Current Bearing and the per-voyage bearing pages. Each page's Last time
-// panel, its strip, its tabs and its Before you sail list are held to the
+// panel, its strip, its tabs and its Heading list are held to the
 // record; the Current Bearing's Last time panel is the latest voyage page's,
 // byte for byte, and its Quest Board is the record's open quests and threads.
 // The banner is checked with data/bearing.js, in check § 6.
-// The Before you sail groups: their data-group keys and their labels.
+// The Heading groups: their data-group keys and their labels.
 const GROUP_LABEL = { todo: 'Standing Orders', decide: 'All Hands', note: 'Weather Eye' };
 // A count in words for the banner's passage: "Fourteen embers".
 const NUMBER_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
@@ -904,7 +904,7 @@ function checkBearings(fresh, latest, err) {
   const read = f => fs.readFileSync(path.join(ROOT, DIR, f), 'utf8');
   const lastTime = src => elements(src, 'section', o => /\bid="last-time"/.test(o))[0];
   const sails = {};
-  // Before you sail on one page. Standing Orders (todo) and All Hands (decide) hold only what the crew
+  // Heading on one page. Standing Orders (todo) and All Hands (decide) hold only what the crew
   // can act on from where they are. Once a later voyage is written up, each
   // item on its own voyage page ends one of three ways: settled (is-done, an
   // outcome, and "· Voyage NNN" when a record pins the voyage), carried
@@ -914,18 +914,18 @@ function checkBearings(fresh, latest, err) {
   const questNames = new Set(fresh.quests.map(q => plain(q.name)));
   const sailItems = (rel, src, n, isIndex) => {
     const sec = elements(src, 'section', o => /\bid="sail"/.test(o))[0];
-    if (!sec) err(`${rel}: no Before you sail section (section#sail)`);
+    if (!sec) err(`${rel}: no Heading section (section#sail)`);
     else {
       const kk = elements(sec.inner, 'span', hasClass('bearing-kicker'))[0], hh = elements(sec.inner, 'h2', hasClass('bearing-title'))[0];
-      const want = isIndex ? ['Next time', 'Before you sail'] : [`After Voyage ${pad(n)}`, 'Before you sailed'];
-      if (!kk || !hh || text(kk.inner) !== want[0] || text(hh.inner) !== want[1]) err(`${rel}: the Before you sail header should read "${want.join(' · ')}"`);
+      const want = isIndex ? ['Next time', 'Heading'] : [`After Voyage ${pad(n)}`, 'Heading'];
+      if (!kk || !hh || text(kk.inner) !== want[0] || text(hh.inner) !== want[1]) err(`${rel}: the Heading header should read "${want.join(' · ')}"`);
     }
     const r = region(src, 'before-you-sail');
-    if (r === null) { err(`${rel}: no Before you sail list (data-field="before-you-sail")`); return []; }
+    if (r === null) { err(`${rel}: no Heading list (data-field="before-you-sail")`); return []; }
     const groups = elements(r, 'div', hasClass('sail-group'));
     groups.forEach(g => {
       const m = /\bdata-group="([^"]*)"/.exec(g.open);
-      if (!m || !GROUP_LABEL[m[1]]) return err(`${rel}: a Before you sail group should carry data-group="todo", "decide" or "note"`);
+      if (!m || !GROUP_LABEL[m[1]]) return err(`${rel}: a Heading group should carry data-group="todo", "decide" or "note"`);
       const l = elements(g.inner, 'h3', hasClass('sail-label'))[0];
       if (!l || text(l.inner) !== GROUP_LABEL[m[1]]) err(`${rel}: the ${m[1]} group's label reads "${l ? text(l.inner) : ''}"; it should read "${GROUP_LABEL[m[1]]}"`);
     });
@@ -947,7 +947,7 @@ function checkBearings(fresh, latest, err) {
         group: groupOf(li), done: hasClass('is-done')(li.open), carried: hasClass('is-carried')(li.open), aside: hasClass('is-aside')(li.open),
         outcome: o ? text(o.inner) : '', page: rel, n };
       const states = ['done', 'carried', 'aside'].filter(x => it[x]);
-      if (!it.keys.length) err(`${rel}: Before you sail item "${it.text}" has no data-item key`);
+      if (!it.keys.length) err(`${rel}: Heading item "${it.text}" has no data-item key`);
       if (states.length > 1) err(`${rel}: "${it.text}" is ${states.join(' and ')}; an item ends one way only`);
       if (it.group === 'note') {
         if (states.length || o) err(`${rel}: "${it.text}" is on the Weather Eye; those are never ticked, carried or set aside`);
@@ -1041,7 +1041,7 @@ function checkBearings(fresh, latest, err) {
         count('decide') && `${count('decide')} for all hands`, count('note') && `${count('note')} to watch`].filter(Boolean).join(' · ');
       const label = {
         'last-time': ['Last time', `Voyage ${pad(n)} · ${plain(s.name)}`],
-        sail: isIndex ? ['Before you sail', sailSub] : ['Before you sailed', `After Voyage ${pad(n)}`],
+        sail: isIndex ? ['Heading', sailSub] : ['Heading', `After Voyage ${pad(n)}`],
       };
       got.forEach(t => {
         const w = label[key(t)];
@@ -1070,19 +1070,19 @@ function checkBearings(fresh, latest, err) {
   if (icol && latestCol && icol.outer !== latestCol.outer)
     err(`${irel}: its Last time column differs from ${DIR}/voyage-${pad(latest)}.html; copy the column across`);
 
-  // Before you sail, matched across pages by data-item. The Current
+  // Heading, matched across pages by data-item. The Current
   // Bearing's Standing Orders and All Hands are the latest voyage's items plus every
   // item carried forward, each once. A settled or set-aside item is never
   // there; one that still matters is on the Quest Board. A key ends one way.
   const here = sails[irel] || [];
   const onIndex = k => here.find(x => x.keys.includes(k));
   const seenKeys = new Set();
-  here.forEach(x => x.keys.forEach(k => { if (seenKeys.has(k)) err(`${irel}: Before you sail lists "${k}" twice`); seenKeys.add(k); }));
+  here.forEach(x => x.keys.forEach(k => { if (seenKeys.has(k)) err(`${irel}: Heading lists "${k}" twice`); seenKeys.add(k); }));
   const past = Object.keys(sails).filter(r => r !== irel).reduce((a, r) => a.concat(sails[r]), []);
   const ends = {};
   past.forEach(it => it.keys.forEach(k => {
     const on = onIndex(k);
-    if (it.carried && !on) err(`${it.page}: "${it.text}" is carried forward but is not on the Current Bearing's Before you sail`);
+    if (it.carried && !on) err(`${it.page}: "${it.text}" is carried forward but is not on the Current Bearing's Heading`);
     if ((it.done || it.aside) && on) err(`${irel}: "${on.text}" is ${it.done ? 'settled' : 'set aside'} on ${it.page}; only open items carried forward belong here`);
     const e = it.done ? 'settled' : it.aside ? 'set aside' : it.carried ? 'carried forward' : '';
     if (e) {
@@ -1092,7 +1092,7 @@ function checkBearings(fresh, latest, err) {
   }));
   const latestItems = sails[`${DIR}/voyage-${pad(latest)}.html`] || [];
   latestItems.forEach(it => it.keys.forEach(k => {
-    if (!onIndex(k)) err(`${irel}: Before you sail is missing "${it.text}" from Voyage ${pad(latest)}'s list`);
+    if (!onIndex(k)) err(`${irel}: Heading is missing "${it.text}" from Voyage ${pad(latest)}'s list`);
   }));
   here.filter(x => x.group !== 'note').forEach(x => x.keys.forEach(k => {
     if (!latestItems.some(it => it.keys.includes(k)) && !past.some(it => it.carried && it.keys.includes(k)))

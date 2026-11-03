@@ -353,10 +353,10 @@ node tools/data.js derive
 | `voyages/voyage-NNN.html` | new, from `voyage-template.html`: At a Glance, Brief Account, Full Account (the approved account), Recording |
 | `voyages/voyage-(NNN-1).html` | its "next voyage" link |
 | `voyages/index.html` | a row and its Overview |
-| `voyages/bearings/voyage-(NNN-1).html` | its Before you sailed list, resolved (below) |
-| `voyages/bearings/voyage-NNN.html` | new, from the previous bearing page: a strip that ends at Voyage NNN, the Last time column (three bullets from Consequences and Major Events; the folds What each of you did, What you learned and Who you met), the Fleet date where the voyage ends, and Before you sailed in its three groups, written from Next Session Pressure and Consequences (`docs/PAGE-GUIDE.md` § 8) |
-| `voyages/bearings/index.html` | the strip gains Voyage NNN and the next voyage; the Last time panel copied from the new bearing page; Before you sail is the new list plus every item carried forward; the Quest Board redone from `data/quests.json`; the three tab subtitles (the voyage, the Before you sail counts, the quest and loose-thread counts); the banner: headline, Fleet date, passage ahead, crew level and next voyage date, from `data/bearing.js` |
-| `voyages/bearings/voyage-NNN.html` tabs | Last time "Voyage NNN · Title"; Before you sailed "After Voyage NNN" |
+| `voyages/bearings/voyage-(NNN-1).html` | its Heading list, resolved (below) |
+| `voyages/bearings/voyage-NNN.html` | new, from the previous bearing page: a strip that ends at Voyage NNN, the Last time column (three bullets from Consequences and Major Events; the folds What each of you did, What you learned and Who you met), the Fleet date where the voyage ends, and Heading in its three groups, written from Next Session Pressure and Consequences (`docs/PAGE-GUIDE.md` § 8) |
+| `voyages/bearings/index.html` | the strip gains Voyage NNN and the next voyage; the Last time panel copied from the new bearing page; Heading is the new list plus every item carried forward; the Quest Board redone from `data/quests.json`; the three tab subtitles (the voyage, the Heading counts, the quest and loose-thread counts); the banner: headline, Fleet date, passage ahead, crew level and next voyage date, from `data/bearing.js` |
+| `voyages/bearings/voyage-NNN.html` tabs | Last time "Voyage NNN · Title"; Heading "After Voyage NNN" |
 | `data/bearing.js` | voyage, title, date, position, outstanding, next, level, passage, nextSession, consequence, quests, met, links (below) |
 | `data/vocabulary.js` | every new proper noun |
 | each changed record's page | on the Voyage log tab, the new voyage becomes the latest block and the old one moves into Previous Voyages; the infobox rows, First seen and Last seen (or First and Last voyage) among them; the new voyage in All appearances; overview; objectives; Connections. Layout in `docs/PAGE-GUIDE.md` § 8, Record pages |
@@ -366,7 +366,7 @@ node tools/data.js derive
 The Brief Account and At a Glance are taken from the approved Full Account and
 add nothing it does not say.
 
-Resolve the last Before you sail on its own voyage page. Each Standing
+Resolve the last Heading on its own voyage page. Each Standing
 Orders and All Hands item ends one of three ways: settled (ticked, a few words and the
 voyage that settled it, the voyage left off when the record does not pin
 it), carried forward (still open and within reach from where the crew is
@@ -374,10 +374,10 @@ now; it stays on the Current Bearing), or set aside (out of reach, or the
 crew moved on; muted, off the Current Bearing, with "on the Quest Board:
 <quest or thread>" when it still matters, since the Quest Board holds it). An item carried forward from an older voyage
 page is resolved there too, the same way. The Weather Eye is left as it was.
-Then write the new voyage's Before you sail from Next Session Pressure and
+Then write the new voyage's Heading from Next Session Pressure and
 Consequences: Standing Orders and All Hands hold only what the crew can act on next
 from where they are; add a few Weather Eye nudges chosen fresh,
-never threads or predictions (`docs/PAGE-GUIDE.md` § 8, Before you sail). Older
+never threads or predictions (`docs/PAGE-GUIDE.md` § 8, Heading). Older
 voyage pages are otherwise left as they are; `scripts/bearing.js` extends
 their strips.
 
@@ -435,7 +435,7 @@ pull request. Then open the changed pages in a browser once.
 | each register row shows its record's name, overview, sub-line, state and progress | the bar's position, outstanding and consequence lines |
 | each voyage page carries its number and title | the prose of any page under `prime/` |
 | the command bar's voyage, title, quest names and progress | the Crew Logs document |
-| each bearing page's strip, Fleet date, title, crew and Who you met; the Current Bearing's Last time is the latest bearing page's; its Quest Board is the record's open quests, progress, next objectives and threads; the banner shows `data/bearing.js` next, date, passage, level, nextSession and links, and next is the first Standing Orders item; the tab subtitles match the lists and the record; every past Standing Orders and All Hands item is settled, carried forward or set aside, one way only; carried items are on the Current Bearing's Before you sail, settled and set-aside ones are not | |
+| each bearing page's strip, Fleet date, title, crew and Who you met; the Current Bearing's Last time is the latest bearing page's; its Quest Board is the record's open quests, progress, next objectives and threads; the banner shows `data/bearing.js` next, date, passage, level, nextSession and links, and next is the first Standing Orders item; the tab subtitles match the lists and the record; every past Standing Orders and All Hands item is settled, carried forward or set aside, one way only; carried items are on the Current Bearing's Heading, settled and set-aside ones are not | |
 | every local link and anchor on the site resolves | |
 | the DM layer agrees with the record | |
 

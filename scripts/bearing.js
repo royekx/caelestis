@@ -15,7 +15,7 @@
    plain links and the panels stack.
 
    On the Current Bearing (<body data-bearing-current>) a voyage in the
-   strip swaps Last time and Before you sail in place, for the ones on
+   strip swaps Last time and Heading in place, for the ones on
    voyages/bearings/voyage-NNN.html, tabs and all; the Quest Board stays
    current. The URL becomes index.html?voyage=NNN, Back and Forward
    follow, and a line at the top of the panel leads back to the current
@@ -170,8 +170,8 @@
   }
 
   // ── Past voyages, in place (the Current Bearing only) ──
-  // A voyage in the strip swaps Last time and Before you sail for that
-  // voyage page's own: its Last time, and its Before you sailed as the
+  // A voyage in the strip swaps Last time and Heading for that
+  // voyage page's own: its Last time, and its Heading as the
   // voyages after it settled it. The Quest Board stays current.
   var live = document.body.hasAttribute('data-bearing-current');
   var parts = ['last-time', 'sail'];

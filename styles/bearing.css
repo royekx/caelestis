@@ -5,7 +5,7 @@
    The Current Bearing is the banner (the next step, the Fleet date, the
    passage ahead, the crew's level and the two actions), the voyage
    strip, then three tabs over one --bg-card panel: Last time (the
-   voyage, its bullets and three folds), Before you sail (three groups as
+   voyage, its bullets and three folds), Heading (three groups as
    rows on the --bg-raised band) and the Quest Board (a two-column grid).
    A voyage page has no banner and two tabs: Last time and its own Before
    you sailed, ticked as later voyages settle it. scripts/bearing.js
@@ -194,7 +194,7 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 .bearing.is-tabbed .panel-head { display: none; }
 .bearing.is-tabbed .bearing-sec + .bearing-sec { border-top: 0; }
 .bearing.is-tabbed .bearing-sec { padding-top: 1.6rem; }
-/* Before you sail is a panel like the others; the band is for the stack. */
+/* Heading is a panel like the others; the band is for the stack. */
 .bearing.is-tabbed .is-sail { padding: 0; }
 .bearing.is-tabbed .bearing-sail { margin: 0; border-top: 0; padding: 0.6rem 2rem 0.8rem; background: none; }
 
@@ -278,7 +278,7 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 }
 .bearing-more:hover { color: var(--gold-light); }
 
-/* ── Before you sail ──
+/* ── Heading ──
    A display-only checklist on the raised band, in up to three labelled
    groups: Standing Orders (data-group="todo"), All Hands ("decide") and
    Weather Eye ("note"). */
@@ -447,7 +447,7 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
   .bq-bar { grid-column: 1 / -1; grid-row: 2; }
 }
 
-/* ── Before you sail as rows ──
+/* ── Heading as rows ──
    Each group is a row: its label on the left, its items full width on the
    right, one line each where the width allows. */
 .bearing-sail { flex-direction: column; gap: 0; padding-top: 0.4rem; padding-bottom: 0.5rem; }

@@ -733,14 +733,14 @@ without JS they stack, which is also what Pagefind reads.
   - *The tabs* (`div.bearing-tabs`, `data-field="bearing-tabs"`) are
     links to their panels (`a.bt-tab`, `href="#id"`, `id="tab-id"`), each
     with a name and a short subtitle: Last time ("Voyage 006 · What Is
-    Here Has Not Left"), Before you sail (its counts: "1 standing order ·
+    Here Has Not Left"), Heading (its counts: "1 standing order ·
     3 for all hands · 5 to watch", a group with no items left out; the
     words in `span.bt-long` drop on phones) and Quest Board ("4 quests ·
     3 loose threads"). `check` holds the subtitles to the lists and the
     record.
   - *The panels* are Last time (`#last-time`: the latest voyage, its
     bullets, the folds What each of you did, What you learned and Who you
-    met, and the link to the full account), Before you sail (`#sail`) and
+    met, and the link to the full account), Heading (`#sail`) and
     the Quest Board (`#quest-board`: the open quests in two columns, each
     with its threads, the Loose threads fold, and the link to the board).
     Each panel opens with a `header.panel-head` (its kicker and title),
@@ -753,15 +753,15 @@ without JS they stack, which is also what Pagefind reads.
   stack under their own headers. On a phone the tabs stack.
 
   Each voyage has its own bearing page (`voyage-NNN.html`): the strip and
-  two tabs, Last time and Before you sailed ("After Voyage NNN"), with
+  two tabs, Last time and Heading ("After Voyage NNN"), with
   its own list ticked as later voyages settle it. It carries no banner
   and no Quest Board, and ends with "What comes next is on the Current
   Bearing ›". On the Current Bearing a voyage in the strip swaps the
-  Last time and Before you sail panels, and their tabs, in place for that
+  Last time and Heading panels, and their tabs, in place for that
   voyage page's, with a line leading back to the current bearing; the
   Quest Board stays current. The command bar stays off these pages
   (`data-no-command-bar` on `<body>`).
-- **Before you sail.** The crew plays once a month or less, so the list is
+- **Heading.** The crew plays once a month or less, so the list is
   a memory aid: curated, a few items to a group, with the detail left to
   the voyage page. Three groups, each shown only when it has items:
   - *Standing Orders* (`data-group="todo"`): what the crew can do next,
