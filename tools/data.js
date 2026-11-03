@@ -1505,6 +1505,10 @@ function check() {
     });
   });
   guarded('voyages/bearings/', () => checkBearings(fresh, latest, err));
+  // On a record page, the first prose mention of another record links to it
+  // (tools/link-names.js; --fix adds the links).
+  guarded('names in prose', () => require('./link-names').run(false).forEach(f =>
+    err(`${f.rel}: "${f.name}" is named in the prose without a link to ${f.url}; node tools/link-names.js --fix`)));
 
   // 7. the DM layer
   const dv = dm.voyages.slice().sort((a, b) => a.number - b.number);

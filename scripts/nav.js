@@ -325,6 +325,9 @@
     var s = groups.reduce(function (a, g) { return a.concat(g.items || []); }, [])
       .filter(function (x) { return x.key === link.dataset.section; })[0];
     var dir = '/' + (s && s.path ? s.path.replace(/[^\/]*$/, '') : link.dataset.section + '/');
+    // Current Bearing marks only the Current Bearing. A voyage's bearing page
+    // and the timeline share its folder but belong under Voyages.
+    if (link.dataset.section === 'bearings' && !/\/voyages\/bearings\/(index\.html)?$/.test(pathname)) return;
     if (pathname.indexOf(dir) !== -1 && dir.length > activeLen) { activeLink = link; activeLen = dir.length; }
   });
   if (activeLink) activeLink.classList.add('active');
