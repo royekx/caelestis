@@ -43,8 +43,8 @@ staging once Korey has read and accepted them.
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 20 | 3 | 2 | 24 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 11 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **126** | **156** | **46** | **2** | **54** |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 3 | 0 | 1 |
+| **Total** |  | **126** | **157** | **46** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2274,6 +2274,14 @@ run decide, fix, drop, add.
 - **[later]** Revisit generating record fields on pages
   The retired scripts/_benched/build-pages.js scaffolded player entity pages from data/*.json and rewrote marked fields (role, affiliation, status, last seen) on every build; it was deleted in Pass 0 (still in git history). The idea — filling record-derived fields so pages cannot drift from the record — is worth revisiting once the site is stable. It would change the CLAUDE.md rule that pages are written by hand, and would need to respect the session-run approvals and the current record and page shapes; the old script's known bugs are in its README in history.
   src: chat 2026-10-27 (Korey: "delete it for now. add a note to the backlog to revisit the idea when the site is stable")
+
+- **[later]** Move hosting to Cloudflare and make the repo private
+  Korey (2026-11-03): not now. Move the site from GitHub Pages to Cloudflare Pages, so the repository can go private and the site gets a friendlier address. Notes for when it starts:
+  - **The root path.** `scripts/nav.js` finds the site root by counting folders and subtracting one for `/caelestis/` (and `prime/scripts/dm-nav.js` likely does the same). At a domain root every sidebar link would point one folder too high. Fix first: derive the root from the script's own URL. That is harmless on GitHub Pages too.
+  - **Deploy.** Keep `deploy.yml` (three Pagefind indexes, `guard`, prune) and swap only its last step for Cloudflare's deploy action with an API token held as a repo secret. `check.yml` is unchanged. A private repo has 2,000 free Actions minutes a month.
+  - **Privacy.** A private repo hides the source, but the published site still serves `prime/` and `restricted/` behind a browser-side gate. Cloudflare Access (free Zero Trust tier) can put a real login on `/prime/*` and `/restricted/*`.
+  - **Order.** Root-path fix → Cloudflare project and token (Korey) → deploy step and the deploy notes in CLAUDE.md → check the new address → repo private, GitHub Pages off → optionally Access.
+  - **Open.** The address: a `pages.dev` name or a domain Korey owns.
 
 # Player pages
 
