@@ -58,11 +58,14 @@ html { overflow-x: clip; }
 .entry-body { font-size: 1.04rem; line-height: 1.78; color: var(--text); margin-top: 0.5rem; }
 .entry-body p { margin-bottom: 0.85rem; }
 .entry-body p:last-child { margin-bottom: 0; }
-/* A name in the prose that has its own page links to it, as on the bearing. */
+/* A name in the prose that has its own page links to it, as on the bearing
+   (tools/link-names.js adds the links: plain <a>, no class). */
+.rec-panel :is(p, li, dd, td, blockquote) a:not([class]),
 .entry-body a {
   color: var(--ice); text-decoration: underline;
   text-decoration-color: var(--ice-dim); text-underline-offset: 0.15em;
 }
+.rec-panel :is(p, li, dd, td, blockquote) a:not([class]):hover,
 .entry-body a:hover { color: var(--gold-light); }
 
 /* ── RECORD ──
@@ -369,6 +372,17 @@ html { overflow-x: clip; }
 .rec-tab:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 .js-rec-tabs .rec-panel:not(.is-active) { display: none; }
 .rec-panel:focus-visible { outline: 1px dotted var(--ice-dim); outline-offset: 4px; }
+/* On a wide screen a long tab scrolls inside its panel, so the tabs stay in
+   view under the command bar (--cb-h, set by nav.js), as a voyage's account
+   does. Wide panels (a ship sheet, the companions) keep the page's scroll.
+   A phone scrolls the page. */
+@media (min-width: 900px) {
+  .js-rec-tabs .rec-panel:not(.is-wide) {
+    max-height: max(22rem, calc(100vh - var(--cb-h, 10rem) - 6.5rem));
+    overflow-y: auto; overscroll-behavior: contain;
+    padding-right: 0.9rem; scrollbar-gutter: stable;
+  }
+}
 @media (max-width: 560px) {
   .js-rec-tabs .rec-tabs { gap: 0; }
   .rec-tab { flex: 1 1 auto; text-align: center; padding: 0.5rem; font-size: 0.7rem; letter-spacing: 0.08em; }
