@@ -266,16 +266,20 @@
   // On the hub the column is .hub and the title lives inside it, so the bar
   // goes under the title as before.
   //
-  // A page opts out with data-no-command-bar on <body>. The per-voyage
-  // bearing pages do. The Current Bearing (data-command-bar="search") takes
-  // the search row alone, under its banner: the banner is its command bar.
+  // A page opts out with data-no-command-bar on <body>. The bearing pages
+  // (data-command-bar="search") take the search row alone: the Current
+  // Bearing's banner is its command bar, and a voyage's bearing page is a
+  // record of that voyage. It sits under the banner, or above the voyage
+  // strip on a page with no banner.
   var head = document.querySelector('.hub-head');
   var col = document.querySelector('.content');
   var term = document.querySelector('.terminal-wrap');   // S.E.A.R.C.H. names its column differently
   var banner = document.querySelector('.bearing-banner');
   var noBar = document.body.hasAttribute('data-no-command-bar');
   if (document.body.getAttribute('data-command-bar') === 'search') {
+    var strip = document.querySelector('.bearing-strip');
     if (banner) banner.insertAdjacentHTML('afterend', buildCommandBar(true));
+    else if (strip) strip.insertAdjacentHTML('beforebegin', buildCommandBar(true));
   } else if (noBar) {
     // no command bar on this page
   } else if (head) {

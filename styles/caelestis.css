@@ -950,7 +950,8 @@ body.with-sidebar .page-header {
   padding: 0.6rem 1.1rem; border-top: 1px solid var(--gold-rule);
 }
 /* The Current Bearing takes the search row alone, under its banner. */
-.command-bar.cb-search-only { position: static; margin: -0.6rem 0 1.6rem; }
+.command-bar.cb-search-only { position: static; margin: 0 0 1.6rem; }
+.bearing-banner + .cb-search-only { margin-top: -0.6rem; }
 .cb-search-only .cb-search { border-top: none; }
 /* Both the glyph and the tag submit the form. */
 .cb-search-go {
