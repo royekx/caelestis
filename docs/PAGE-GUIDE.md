@@ -596,12 +596,12 @@ divider · Connections
 ? is left out when the record has no value. A value that names a record links
 the name to its page (in "Caelestis Academy (cadet)" the link is Caelestis
 Academy). An infobox link never goes to a quest, and a row that names people
-(Crew, Given by, Involves, Known figures, Known aboard) links only to a dossier,
+(To the crew, Given by, Involves, Known figures, Known aboard) links only to a dossier,
 a crew page or a faction; `check` enforces both.
 
 | Page | Rows |
 |---|---|
-| Dossier | Role · Crew · Affiliation? · Gender? · Status · First seen · Last seen |
+| Dossier | Role · To the crew · Affiliation? · Gender? · Status · First seen · Last seen |
 | Crew manifest | Species · Class · Specialisation? · Station · Clearance · Status · First voyage · Last voyage |
 | Faction | Type · Relationship · Status · First seen · Last seen |
 | Navigation record | Type · Located in? · Known figures? (Known aboard, on a vessel) · Status · First seen · Last seen |
