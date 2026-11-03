@@ -1060,10 +1060,9 @@ body.with-sidebar .page-header {
 @media (max-width: 860px) {
   .cb-ops { grid-template-columns: 1fr; }
   .cb-op + .cb-op { border-left: none; border-top: 1px solid var(--rule-soft); }
-  .cb-op-note { display: none; }
-  /* The date, or the poll nudge, drops to its own line under the name, whole. */
+  /* Each note drops to its own line under the name, whole. */
   .cb-op { flex-wrap: wrap; }
-  .cb-op-note.cb-op-date, .cb-op-note.cb-op-poll { display: block; order: 3; flex: 1 0 100%; white-space: normal; }
+  .cb-op-note { display: block; order: 3; flex: 1 0 100%; white-space: normal; }
   .cb-label { display: none; }
   .cb-face { grid-template-columns: minmax(0, 1fr) auto; }
   .cb-val { white-space: normal; }
