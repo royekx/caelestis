@@ -75,7 +75,7 @@
         "name": "Crated Centipede Creature",
         "type": "item",
         "slug": "crated-centipede-creature",
-        "url": "inventory/entries/crated-centipede-creature.html"
+        "url": "quests/the-caelestis-burglaries.html#crated-centipede-creature"
       },
       {
         "id": "ITM-2pQ7vHm9",
@@ -89,21 +89,21 @@
         "name": "Marked Crate at the Sky Dock",
         "type": "item",
         "slug": "marked-crate",
-        "url": "inventory/entries/marked-crate.html"
+        "url": "quests/the-caelestis-burglaries.html#marked-crate"
       },
       {
         "id": "ITM-8pC4kW2n",
         "name": "Saerthe's Miniature Spelljamming Ship",
         "type": "item",
         "slug": "saerthes-miniature-ship",
-        "url": "inventory/entries/saerthes-miniature-ship.html"
+        "url": "registry/dossiers/saerthe-abizjn.html#saerthes-miniature-ship"
       },
       {
         "id": "ITM-Wp4kT8vn",
         "name": "Vocath Arcane Rod",
         "type": "item",
         "slug": "vocath-arcane-rod",
-        "url": "inventory/entries/vocath-arcane-rod.html"
+        "url": "quests/the-caelestis-burglaries.html#vocath-arcane-rod"
       },
       {
         "id": "NPC-Lp3kW8vn",
@@ -209,7 +209,7 @@
         "name": "Crated Centipede Creature",
         "type": "item",
         "slug": "crated-centipede-creature",
-        "url": "inventory/entries/crated-centipede-creature.html"
+        "url": "quests/the-caelestis-burglaries.html#crated-centipede-creature"
       }
     ],
     "parent": {
@@ -284,7 +284,7 @@
         "name": "Mirt's Wardrobe",
         "type": "item",
         "slug": "mirts-wardrobe",
-        "url": "inventory/entries/mirts-wardrobe.html"
+        "url": "navigation-records/mirts-quarters.html#mirts-wardrobe"
       },
       {
         "id": "LOC-Cw8kM4vB",
@@ -444,7 +444,7 @@
         "name": "Saerthe's Miniature Spelljamming Ship",
         "type": "item",
         "slug": "saerthes-miniature-ship",
-        "url": "inventory/entries/saerthes-miniature-ship.html"
+        "url": "registry/dossiers/saerthe-abizjn.html#saerthes-miniature-ship"
       },
       {
         "id": "NPC-Zx4Bn7Lq",

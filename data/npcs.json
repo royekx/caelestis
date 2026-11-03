@@ -368,7 +368,7 @@
         "name": "Saerthe's Miniature Spelljamming Ship",
         "type": "item",
         "slug": "saerthes-miniature-ship",
-        "url": "inventory/entries/saerthes-miniature-ship.html"
+        "url": "registry/dossiers/saerthe-abizjn.html#saerthes-miniature-ship"
       },
       {
         "id": "LOC-yAV2JeVr",
@@ -405,7 +405,7 @@
         "name": "Vocath Arcane Rod",
         "type": "item",
         "slug": "vocath-arcane-rod",
-        "url": "inventory/entries/vocath-arcane-rod.html"
+        "url": "quests/the-caelestis-burglaries.html#vocath-arcane-rod"
       }
     ]
   },
@@ -518,7 +518,7 @@
         "name": "Mirt's Wardrobe",
         "type": "item",
         "slug": "mirts-wardrobe",
-        "url": "inventory/entries/mirts-wardrobe.html"
+        "url": "navigation-records/mirts-quarters.html#mirts-wardrobe"
       },
       {
         "id": "NPC-Mw6kT2vn",
@@ -728,7 +728,7 @@
         "name": "Miken's Sending Stone",
         "type": "item",
         "slug": "mikens-sending-stone",
-        "url": "inventory/entries/mikens-sending-stone.html"
+        "url": "registry/dossiers/miken.html#mikens-sending-stone"
       }
     ],
     "items": [
@@ -737,7 +737,7 @@
         "name": "Miken's Sending Stone",
         "type": "item",
         "slug": "mikens-sending-stone",
-        "url": "inventory/entries/mikens-sending-stone.html"
+        "url": "registry/dossiers/miken.html#mikens-sending-stone"
       }
     ]
   },
@@ -1153,14 +1153,14 @@
         "name": "Marked Crate at the Sky Dock",
         "type": "item",
         "slug": "marked-crate",
-        "url": "inventory/entries/marked-crate.html"
+        "url": "quests/the-caelestis-burglaries.html#marked-crate"
       },
       {
         "id": "ITM-Wp4kT8vn",
         "name": "Vocath Arcane Rod",
         "type": "item",
         "slug": "vocath-arcane-rod",
-        "url": "inventory/entries/vocath-arcane-rod.html"
+        "url": "quests/the-caelestis-burglaries.html#vocath-arcane-rod"
       },
       {
         "id": "NPC-Wc9fT2nJ",

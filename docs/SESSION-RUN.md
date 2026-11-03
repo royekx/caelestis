@@ -299,6 +299,12 @@ give it to the DM.
   Last seen read these two lists and nothing else.
 - **"Now" fields are overwritten**, never kept as a history: Current State,
   What They Last Learned, Status, Held By.
+- **An item the crew does not own** (Held By names someone other than a
+  cadet or the crew's ship, or nobody) gets a `homeId`: the character,
+  place, faction or quest whose page carries it as a notable item. Its url
+  derives from that. An item that changes hands moves with it: into
+  Inventory when the crew takes it (drop `homeId`, give it an entry page),
+  out of it when they give it up.
 - **Overview** changes only when what the crew understands the thing to *be*
   has changed.
 - **Objectives** hold what the party knows it must do next: decided, told, or
@@ -359,7 +365,7 @@ node tools/data.js derive
 | `data/bearing.js` | voyage, title, date, position, outstanding, consequence, quests, met, links |
 | `data/vocabulary.js` | every new proper noun |
 | each changed record's page | on the Voyage log tab, the new voyage becomes the latest block and the old one moves into Previous Voyages; the infobox rows, First seen and Last seen (or First and Last voyage) among them; the new voyage in All appearances; overview; objectives; Connections. Layout in `docs/PAGE-GUIDE.md` § 8, Record pages |
-| each new record's page | new, from a sibling page of the same kind (`inventory/entries/entry-template.html` for an item), with `data-entity` set to its id |
+| each new record's page | new, from a sibling page of the same kind (`inventory/entries/entry-template.html` for an item the crew owns), with `data-entity` set to its id; an item with a `homeId` gets a Notable Items entry on its home's page instead (`docs/PAGE-GUIDE.md` § 8, Inventory) |
 | each register | `registry/crew-manifest/` `registry/dossiers/` `registry/factions/` `navigation-records/` `vessels/` `inventory/` `quests/` index pages: rows, overview text, progress, counts |
 
 The Brief Account and At a Glance are taken from the approved Full Account and

@@ -192,7 +192,7 @@
         "name": "Mirt's Wardrobe",
         "type": "item",
         "slug": "mirts-wardrobe",
-        "url": "inventory/entries/mirts-wardrobe.html"
+        "url": "navigation-records/mirts-quarters.html#mirts-wardrobe"
       }
     ],
     "parent": {
@@ -207,14 +207,14 @@
         "name": "Mirt's Wardrobe",
         "type": "item",
         "slug": "mirts-wardrobe",
-        "url": "inventory/entries/mirts-wardrobe.html"
+        "url": "navigation-records/mirts-quarters.html#mirts-wardrobe"
       },
       {
         "id": "ITM-5nB7wK9x",
         "name": "Crated Centipede Creature",
         "type": "item",
         "slug": "crated-centipede-creature",
-        "url": "inventory/entries/crated-centipede-creature.html"
+        "url": "quests/the-caelestis-burglaries.html#crated-centipede-creature"
       }
     ]
   },
@@ -275,7 +275,7 @@
         "name": "Marked Crate at the Sky Dock",
         "type": "item",
         "slug": "marked-crate",
-        "url": "inventory/entries/marked-crate.html"
+        "url": "quests/the-caelestis-burglaries.html#marked-crate"
       }
     ]
   },
@@ -311,7 +311,7 @@
         "name": "Mirt's Wardrobe",
         "type": "item",
         "slug": "mirts-wardrobe",
-        "url": "inventory/entries/mirts-wardrobe.html"
+        "url": "navigation-records/mirts-quarters.html#mirts-wardrobe"
       },
       {
         "id": "QST-3mW8kP5v",

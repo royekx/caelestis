@@ -576,7 +576,7 @@ attributes are in `CLAUDE.md` § Deploy and search.
 
 Every player record page (`registry/dossiers/`, `registry/crew-manifest/`,
 `navigation-records/` and the vessels in it, `registry/factions/`,
-`inventory/entries/`, `quests/`) reads like
+`inventory/entries/` for what the crew owns, `quests/`) reads like
 a DM entry in the player palette: the article on the left, the infobox on the
 right, the record tabs in the article column, Connections below. It is written
 by hand from the record; `check` holds every `data-field` region to it. The
@@ -626,8 +626,9 @@ each: a link to the voyage page reading "Voyage NNN", the voyage's title in
 A session run adds the new voyage here on every record it touches.
 
 **Tabs.** A page with a voyage log carries two `.rec-tab` tabs, Record
-(`#record`: overview, pursuit, notable items, companion card, The Object
-Itself, Within, a quest's briefing, objectives, rewards and notable items)
+(`#record`: overview, pursuit, notable items (carried, on a crew page; the
+Notable Items panel elsewhere), companion card, The Object Itself, Within, a
+quest's briefing, objectives, rewards and notable items)
 and Voyage log (`#voyage-log`: the latest voyage block and Previous Voyages).
 A vessel with a ship sheet adds Ship sheet (`#ship-sheet`, a
 `.rec-panel.ship-sheet.is-wide`, which hides the infobox while open); a crew
@@ -640,11 +641,29 @@ without JS they stack, which is also what Pagefind reads.
   voice). It carries only what the table has, sourced to the voyage, with
   "named only" in First seen and Last seen when that is all. The player
   and DM dossiers never mirror each other.
-- **Inventory.** An entry (`inventory/entries/`) is the ledger record: what it
-  is, who holds it, what happened to it. An item (`inventory/items/`) is the
+- **Inventory.** Inventory is what the crew owns: items held by one of the
+  six cadets or by the crew's ship, the tyrant ship. `check` holds the index
+  to exactly those. An entry (`inventory/entries/`) is the ledger record: what
+  it is, who holds it, what happened to it. An item (`inventory/items/`) is the
   readable object, where one exists. An entry with an object carries "The
   Object Itself" linking through; its ledger row gets a **Readable** badge; the
   item links back. New entries start from `entry-template.html`.
+- **Notable items.** Something the crew encountered and someone else holds
+  (Miken's sending stone, the marked crate at the Sky Dock) keeps its record
+  in `data/items.json` but has no page of its own. Its `homeId` names the
+  dossier, place, faction or quest it belongs with, and its entry sits in
+  that page's Notable Items panel (`data-field="notable"`): an
+  `li.loot-item.is-notable` with the item's slug as its `id` and
+  `data-record` set to its id, holding the name, the Type, the player
+  overview, and "First seen" linking the voyage. Its url is that page plus
+  the anchor. Every other item the page's record touches (on a quest, the
+  items it links; elsewhere, the items its Held By names) is a one-line
+  linked row in the same panel, and the count is the rows. On a dossier or a
+  place the panel follows the overview in the Record tab; on a quest it sits
+  with the objectives, or full width under the briefing once it holds
+  entries. `check` holds the panel to the record.
+- **Learned of, not met.** Something pertinent the crew only learns of (a
+  residue piece, say) is decided case by case when it comes up.
 - **Crew manifest.** Each cadet reads species · class · station. Specialisation
   (Bartholomew's Wilder) is its own row, never the class. Station is the
   current assignment and moves.

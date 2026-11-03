@@ -899,6 +899,36 @@
       "old": "hub.html",
       "new": "retired: the player home is the Current Bearing, voyages/bearings/index.html; the path is never reused",
       "link": true
+    },
+    {
+      "old": "inventory/entries/mikens-sending-stone.html",
+      "new": "registry/dossiers/miken.html#mikens-sending-stone",
+      "link": true
+    },
+    {
+      "old": "inventory/entries/mirts-wardrobe.html",
+      "new": "navigation-records/mirts-quarters.html#mirts-wardrobe",
+      "link": true
+    },
+    {
+      "old": "inventory/entries/crated-centipede-creature.html",
+      "new": "quests/the-caelestis-burglaries.html#crated-centipede-creature",
+      "link": true
+    },
+    {
+      "old": "inventory/entries/marked-crate.html",
+      "new": "quests/the-caelestis-burglaries.html#marked-crate",
+      "link": true
+    },
+    {
+      "old": "inventory/entries/vocath-arcane-rod.html",
+      "new": "quests/the-caelestis-burglaries.html#vocath-arcane-rod",
+      "link": true
+    },
+    {
+      "old": "inventory/entries/saerthes-miniature-ship.html",
+      "new": "registry/dossiers/saerthe-abizjn.html#saerthes-miniature-ship",
+      "link": true
     }
   ],
   "allow": [

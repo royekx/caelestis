@@ -854,8 +854,12 @@ img { max-width: 100%; }
 /* ─────────────────────────────────────────────────────────────────
    SECTION 17 — NOTABLE ITEMS & REWARDS
    Two more panels in the quest's right-hand column, under Objectives.
-   Items are links into the ledger; rewards are not, because a reward
-   is a promise rather than a record until it is collected.
+   An item row links to where the item is kept: the crew's own items to
+   their Inventory entry, anyone else's to its entry on its owner's page.
+   That entry (.is-notable) is the item's only page: name, type, what the
+   crew knows, and the voyage they first saw it. Rewards are not links,
+   because a reward is a promise rather than a record until it is
+   collected.
    ───────────────────────────────────────────────────────────────── */
 .loot-list { list-style: none; margin: 0; padding: 0; }
 .loot-item {
@@ -876,6 +880,18 @@ img { max-width: 100%; }
   font-size: 0.86rem; font-style: italic; color: var(--text-muted);
 }
 
+/* A notable item kept on this page: the full entry, and the anchor its
+   record's url names. */
+.loot-item.is-notable { padding: 0.75rem 0; scroll-margin-top: 5rem; }
+.loot-item.is-notable .loot-name { font-family: 'Cinzel', serif; font-size: 0.95rem; letter-spacing: 0.03em; color: var(--gold-light); }
+.loot-desc { margin: 0.4rem 0 0.35rem; font-size: 0.95rem; line-height: 1.6; color: var(--text); max-width: 72ch; }
+.loot-seen { display: block; font-size: 0.8rem; letter-spacing: 0.04em; color: var(--text-muted); }
+.loot-seen a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 2px; }
+.loot-seen a:hover { color: var(--gold-light); }
+.loot-item.is-notable:target { background: linear-gradient(90deg, var(--gold-faint), transparent 70%); }
+/* On a dossier or a place the panel follows the overview. */
+.notable-panel { margin-top: 1.4rem; }
+
 /* A reward reads as a prize, not an inventory line. */
 .loot-item.is-reward .loot-name {
   color: var(--gold-light);
@@ -892,3 +908,4 @@ img { max-width: 100%; }
 .q-details .glance-row { grid-template-columns: 110px 1fr; }
 .q-details .glance-synopsis:has(+ .overview-foot) { border-bottom: 0; padding-bottom: 0; }
 @media (max-width: 640px) { .q-details .glance-row { grid-template-columns: 1fr; } }
+

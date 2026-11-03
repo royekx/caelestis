@@ -352,6 +352,12 @@ Old path → new path, added by each pull request that moves a page.
 | `scripts/data.js`, `scripts/terms.js`, `scripts/visual.js`, `scripts/survey.js`, `scripts/eye-fit.js`, `scripts/search.js` | `tools/data.js`, `tools/terms.js`, `tools/visual.js`, `tools/survey.js`, `tools/eye-fit.js`, `tools/search.js` (kept for reference; no page loads it); `tools/` is pruned from deploy, and terms.js reads CLAUDE.md, `docs/` and the workflows for the old paths | Player side condensed (repo-tidy) |
 | `assets/fleet-device.svg` | `assets/fleet-emblem.svg`; "device" is retired for a faction's emblem | Emblem rename (repo-tidy) |
 | `hub.html` | retired; the gate and the sidebar logo go to `voyages/bearings/index.html`, the Current Bearing, which is the player home | Navigation (nav-order) |
+| `inventory/entries/mikens-sending-stone.html` | `registry/dossiers/miken.html#mikens-sending-stone`, its Notable Items entry on Miken's dossier; Inventory holds only what the crew owns, and the old path is never reused | Inventory owned (inventory-owned) |
+| `inventory/entries/mirts-wardrobe.html` | `navigation-records/mirts-quarters.html#mirts-wardrobe`, its Notable Items entry on Mirt's Quarters; Inventory holds only what the crew owns, and the old path is never reused | Inventory owned (inventory-owned) |
+| `inventory/entries/crated-centipede-creature.html` | `quests/the-caelestis-burglaries.html#crated-centipede-creature`, its Notable Items entry on The Caelestis Burglaries; Inventory holds only what the crew owns, and the old path is never reused | Inventory owned (inventory-owned) |
+| `inventory/entries/marked-crate.html` | `quests/the-caelestis-burglaries.html#marked-crate`, its Notable Items entry on The Caelestis Burglaries; Inventory holds only what the crew owns, and the old path is never reused | Inventory owned (inventory-owned) |
+| `inventory/entries/vocath-arcane-rod.html` | `quests/the-caelestis-burglaries.html#vocath-arcane-rod`, its Notable Items entry on The Caelestis Burglaries; Inventory holds only what the crew owns, and the old path is never reused | Inventory owned (inventory-owned) |
+| `inventory/entries/saerthes-miniature-ship.html` | `registry/dossiers/saerthe-abizjn.html#saerthes-miniature-ship`, its Notable Items entry on Saerthe Abizjn's dossier; Inventory holds only what the crew owns, and the old path is never reused | Inventory owned (inventory-owned) |
 
 ## Stale branches
 
