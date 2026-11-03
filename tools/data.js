@@ -1319,17 +1319,6 @@ function check() {
     }
     const page = `voyages/voyage-${pad(latest)}.html`;
     if (latest && !new RegExp("voyage:\\s*'" + page.replace(/[.]/g, '\\.') + "'").test(b)) err(`data/bearing.js: links.voyage should be ${page}`);
-    // The bar quotes each quest's name and progress, and a quoted number is a
-    // number that drifts. Every entry is read, whatever order its keys are in.
-    const block = /quests:\s*\[([\s\S]*?)\]/.exec(b);
-    matches(/\{([^{}]*)\}/g, block ? block[1] : '').forEach(m => {
-      const get = k => { const x = new RegExp(k + ":\\s*(['\"])((?:\\\\.|(?!\\1).)*)\\1").exec(m[1]); return x ? unq(x[2]) : null; };
-      const q = fresh.quests.find(x => x.url === get('href'));
-      if (!q) return err(`data/bearing.js: ${get('href')} is not a quest in the record`);
-      const want = q.progress ? `${q.progress.done}/${q.progress.total}` : null;
-      if (get('progress') !== want) err(`data/bearing.js: ${q.slug} shows ${get('progress')}, record gives ${want || 'no objectives'}`);
-      if (plain(get('name')) !== plain(q.name)) err(`data/bearing.js: ${q.slug} is named "${get('name')}", record says "${q.name}"`);
-    });
     // The Current Bearing's banner shows next, the date, passage, level and
     // nextSession as data/bearing.js gives them, and its two actions are
     // links.scheduler and links.helm. next is the first Standing Orders item.
@@ -1376,6 +1365,15 @@ function check() {
         const ls = elements(d.inner, 'span', hasClass('bb-hands-list'))[0];
         if (!ls || !text(ls.inner)) err(`${at}'s All Hands line has no text (span.bb-hands-list)`);
       }
+      // The command bar repeats the All Hands line from data/bearing.js allHands.
+      const al = /allHands:\s*\[([^\]]*)\]/.exec(b);
+      if (!al) err('data/bearing.js: allHands is missing ([] when All Hands is empty)');
+      else {
+        const want = matches(/(['"])((?:\\.|(?!\1).)*)\1/g, al[1]).map(m => plain(unq(m[2])));
+        const ls = dg[0] && elements(dg[0].inner, 'span', hasClass('bb-hands-list'))[0];
+        const got = ls ? elements(ls.inner, 'span', () => true).map(x => text(x.inner)) : [];
+        if (want.join(' · ') !== got.join(' · ')) err(`data/bearing.js: allHands is "${want.join(' · ')}", the banner's All Hands line reads "${got.join(' · ')}"`);
+      }
       const ps = /passage:\s*\{([^}]*)\}/.exec(b);
       const em = ps && /embers:\s*(\d+)/.exec(ps[1]);
       const to = ps && /to:\s*(['"])((?:\\.|(?!\1).)*)\1/.exec(ps[1]);
@@ -1405,11 +1403,6 @@ function check() {
         if (!a || !href || href[1] !== want) err(`${at}'s ${k} link is ${href ? href[1] : 'missing'}; data/bearing.js links.${k} is ${want}`);
       });
     });
-    // The bar's Met list is the people seen in the latest voyage.
-    const metBlock = /met:\s*\[([\s\S]*?)\]/.exec(b);
-    const metShown = matches(/href:\s*'([^']+)'/g, metBlock ? metBlock[1] : '').map(m => m[1]).sort();
-    const metWant = fresh.npcs.filter(n => (n.seen || []).includes(latest)).map(n => n.url).sort();
-    if (metShown.join() !== metWant.join()) err(`data/bearing.js: met lists ${metShown.length} people, the record has ${metWant.length} seen in Voyage ${pad(latest)}`);
   });
   guarded('voyages/bearings/', () => checkBearings(fresh, latest, err));
 

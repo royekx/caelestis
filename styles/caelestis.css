@@ -915,9 +915,10 @@ body.with-sidebar .page-header {
 
 /* ══════════════════════════════════════════════════════════════════
    COMMAND BAR
-   Injected by nav.js at the top of every page. Two operations and the
-   crew's current bearing, stuck to the top so it is always in reach.
-   The strip trims with ellipsis on purpose; the caret opens what it cut.
+   Injected by nav.js at the top of every page: the two operations, the
+   arc's goal with the Fleet date, and search at the foot, stuck to the top
+   so it is always in reach. The caret opens the level-up reminder and the
+   All Hands line; on a phone it opens the operations too.
    ══════════════════════════════════════════════════════════════════ */
 .command-bar {
   /* Sticky, as in the hub demo: it travels down the column with the page and
@@ -945,8 +946,11 @@ body.with-sidebar .page-header {
 /* ── Global search ── */
 .cb-search {
   display: flex; align-items: center; gap: 0.7rem;
-  padding: 0.6rem 1.1rem; border-bottom: 1px solid var(--gold-rule);
+  padding: 0.6rem 1.1rem; border-top: 1px solid var(--gold-rule);
 }
+/* The Current Bearing takes the search row alone, under its banner. */
+.command-bar.cb-search-only { position: static; margin: -0.6rem 0 1.6rem; }
+.cb-search-only .cb-search { border-top: none; }
 /* Both the glyph and the tag submit the form. */
 .cb-search-go {
   background: none; border: none; padding: 0; margin: 0;
@@ -992,13 +996,15 @@ body.with-sidebar .page-header {
 .cb-op:hover .cb-op-note, .cb-op:hover svg { color: var(--gold-dim); }
 /* The next voyage's date, once the poll settles: read, not muted. */
 .cb-op-note.cb-op-date { color: var(--text); font-style: normal; }
+/* Until the poll settles: a nudge, in gold. */
+.cb-op-note.cb-op-poll { color: var(--gold-light); }
 .cb-op:hover .cb-op-note.cb-op-date { color: var(--gold-light); }
 
 /* ── Bearing strip ── */
 .cb-strip { display: flex; align-items: stretch; min-width: 0; }
 .cb-face {
   flex: 1; min-width: 0; display: grid;
-  grid-template-columns: auto 1fr 1.2fr 1.6fr;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center; gap: 1.1rem;
   padding: 0.65rem 1.1rem; text-decoration: none;
   transition: background .18s;
@@ -1031,46 +1037,46 @@ body.with-sidebar .page-header {
 
 /* ── Expanded detail ── */
 .cb-detail {
-  padding: 0.9rem 1.1rem 1rem; border-top: 1px solid var(--gold-rule);
-  display: flex; flex-direction: column; gap: 0.75rem;
+  padding: 0.75rem 1.1rem 0.85rem; border-top: 1px solid var(--gold-rule);
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 2rem;
 }
 .cb-detail[hidden] { display: none; }
-.cb-conseq { font-size: 0.93rem; line-height: 1.65; color: var(--text-dim); margin: 0; max-width: 80ch; }
-.cb-row { display: flex; align-items: baseline; gap: 0.9rem; flex-wrap: wrap; }
-.cb-quests, .cb-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-.cb-quest, .cb-chip {
-  display: inline-flex; align-items: baseline; gap: 0.45rem;
-  font-size: 0.909rem; padding: 0.16rem 0.68rem; border-radius: 999px;
-  border: 1px solid var(--gold-rule); background: rgba(192, 134, 82, 0.07);
-  color: var(--text-dim); text-decoration: none; transition: border-color .18s, color .18s;
+.cb-level { margin: 0; font-size: 0.98rem; color: var(--text); }
+.cb-hands { display: flex; align-items: baseline; gap: 0.8rem; text-decoration: none; min-width: 0; }
+.cb-hands-list {
+  font-size: 0.98rem; color: var(--gold-light);
+  text-decoration: underline; text-decoration-color: var(--gold-rule); text-underline-offset: 0.15em;
 }
-.cb-quest:hover, .cb-chip:hover { border-color: var(--ice-dim); color: var(--ice); }
-.cb-prog { font-family: 'Cinzel', serif; font-size: 0.719rem; color: var(--gold); }
+.cb-hands-list > span { white-space: nowrap; }
+.cb-hands:hover .cb-hands-list { text-decoration-color: var(--gold); }
 .cb-more {
-  align-self: flex-start; font-family: 'Cinzel', serif; font-size: 0.708rem;
-  letter-spacing: 0.15em; text-transform: uppercase; color: var(--ice-dim); text-decoration: none;
+  margin-left: auto; font-family: 'Cinzel', serif; font-size: 0.708rem;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-dim); text-decoration: none;
 }
-.cb-more:hover { color: var(--ice); }
+.cb-more:hover { color: var(--gold-light); }
 
 @media (max-width: 860px) {
   .cb-ops { grid-template-columns: 1fr; }
   .cb-op + .cb-op { border-left: none; border-top: 1px solid var(--rule-soft); }
   .cb-op-note { display: none; }
-  /* The date drops to its own line under the name, whole. */
+  /* The date, or the poll nudge, drops to its own line under the name, whole. */
   .cb-op { flex-wrap: wrap; }
-  .cb-op-note.cb-op-date { display: block; order: 3; flex: 1 0 100%; white-space: normal; }
-  .cb-face { grid-template-columns: 1fr 1fr; gap: 0.6rem 1.2rem; }
+  .cb-op-note.cb-op-date, .cb-op-note.cb-op-poll { display: block; order: 3; flex: 1 0 100%; white-space: normal; }
   .cb-label { display: none; }
-  .cb-face > .cb-cell:last-child { grid-column: 1 / -1; }
+  .cb-face { grid-template-columns: minmax(0, 1fr) auto; }
   .cb-val { white-space: normal; }
 }
 
 /* Two columns of bearing values are still two words wide on a phone.
    Stack them. This lived in register.css, which the bearings pages and
    the hub do not load, so the strip rendered differently there. */
+/* A phone keeps the goal and search; the caret opens the operations,
+   the detail and the Fleet date. */
 @media (max-width: 620px) {
+  .command-bar:not(.cb-open) .cb-ops { display: none; }
+  .command-bar .cb-ops { border-bottom: 1px solid var(--gold-rule); }
   .cb-face { grid-template-columns: minmax(0, 1fr); }
-  .cb-face > .cb-cell:last-child { grid-column: auto; }
+  .command-bar:not(.cb-open) .cb-date { display: none; }
 }
 
 /* Cards sit in a uniform grid, so a two-line link row on one card must not

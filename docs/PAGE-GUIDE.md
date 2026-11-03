@@ -778,8 +778,9 @@ without JS they stack, which is also what Pagefind reads.
   Bearing ›". On the Current Bearing a voyage in the strip swaps the
   Last time and Heading panels, and their tabs, in place for that
   voyage page's, with a line leading back to the current bearing; the
-  Quest Board stays current. The command bar stays off these pages
-  (`data-no-command-bar` on `<body>`).
+  Quest Board stays current. The command bar stays off the voyage
+  bearing pages (`data-no-command-bar` on `<body>`). The Current Bearing
+  takes only its search row, under the banner (`data-command-bar="search"`).
 - **Heading.** The crew plays once a month or less, so the list is
   a memory aid: curated, a few items to a group, with the detail left to
   the voyage page. Three groups, each shown only when it has items:

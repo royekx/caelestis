@@ -109,7 +109,12 @@
     return out;
   }
 
-  function buildCommandBar() {
+  // The bar, top to bottom: the two operations, the arc's goal (linking the
+  // Current Bearing) with the Fleet date, a drop-down with the level-up
+  // reminder and the All Hands line, and site-wide search at the foot.
+  // searchOnly gives the search row alone, for the Current Bearing, whose
+  // banner already carries everything else.
+  function buildCommandBar(searchOnly) {
     var b = window.CAELESTIS_BEARING;
     var L = (b && b.links) || {};
 
@@ -119,12 +124,14 @@
       '<form class="cb-search" id="js-cb-search" role="search" autocomplete="off">' +
         '<button type="submit" class="cb-search-go" aria-label="Search">' + SEARCH_ICON + '</button>' +
         '<input type="text" id="js-cb-search-input" ' +
-          'placeholder="Query the archive \u2014 a name, a place, a thing you half remember\u2026" ' +
+          'placeholder="Query the archive — a name, a place, a thing you half remember…" ' +
           'aria-label="Search all records">' +
         // Was a <span>, so only Enter ran the search. Both the glyph and the
         // tag are submit buttons now — the form's own handler does the rest.
         '<button type="submit" class="cb-search-tag">S.E.A.R.C.H.</button>' +
       '</form>';
+    if (searchOnly) return '<div class="command-bar cb-search-only">' + search + '</div>';
+
     var helm = L.helm || 'https://royek.foundryserver.com/game';
     var sched = L.scheduler || 'https://rallly.co/invite/B8uUYlcm4oKB';
     var when = sessionText(b && b.nextSession);
@@ -133,53 +140,41 @@
       '<div class="cb-ops">' +
         '<a class="cb-op" href="' + helm + '" target="_blank" rel="noopener">' +
           '<span class="cb-op-name">Take the Helm</span>' +
-          '<span class="cb-op-note">Enter Foundry</span>' + EXT_ICON +
+          '<span class="cb-op-note">Enter Foundry · the game table</span>' + EXT_ICON +
         '</a>' +
         '<a class="cb-op" href="' + sched + '" target="_blank" rel="noopener">' +
           '<span class="cb-op-name">Plot the Next Voyage</span>' +
           (when ? '<span class="cb-op-note cb-op-date">' + when + '</span>'
-                : '<span class="cb-op-note">Open Scheduler</span>') + EXT_ICON +
+                : '<span class="cb-op-note cb-op-poll">Date not set · answer the poll</span>') + EXT_ICON +
         '</a>' +
       '</div>';
 
-    if (!b) return '<div class="command-bar">' + search + ops + '</div>';
+    if (!b) return '<div class="command-bar">' + ops + search + '</div>';
 
-    var pad = function (n) { return ('00' + n).slice(-3); };
+    var bearing = base + (L.bearing || 'voyages/bearings/index.html');
     var strip =
       '<div class="cb-strip">' +
-        '<a class="cb-face" href="' + base + (L.bearing || 'voyages/bearings/index.html') + '">' +
+        '<a class="cb-face" href="' + bearing + '">' +
           '<span class="cb-label">Current Bearing</span>' +
-          '<span class="cb-cell"><span class="cb-key">Position</span>' +
-            '<span class="cb-val">' + b.position +
-            (b.posNote ? ' <span class="cb-note">' + b.posNote + '</span>' : '') + '</span></span>' +
-          '<span class="cb-cell"><span class="cb-key">Last Voyage</span>' +
-            '<span class="cb-val">' + pad(b.voyage) + ' \u00b7 ' + b.title +
-            (b.date ? ' <span class="cb-note">' + b.date + '</span>' : '') + '</span></span>' +
-          '<span class="cb-cell"><span class="cb-key">Outstanding</span>' +
-            '<span class="cb-val">' + b.outstanding + '</span></span>' +
+          '<span class="cb-cell cb-goal"><span class="cb-key">Goal</span>' +
+            '<span class="cb-val">' + b.goal + '</span></span>' +
+          (b.date ? '<span class="cb-cell cb-date"><span class="cb-key">Fleet date</span>' +
+            '<span class="cb-val">' + b.date + '</span></span>' : '') +
         '</a>' +
-        '<button class="cb-expand" id="js-cb-expand" aria-expanded="false" aria-controls="js-cb-detail" aria-label="More detail">' +
+        '<button class="cb-expand" id="js-cb-expand" aria-expanded="false" aria-controls="js-cb-detail" aria-label="More">' +
           CARET + '</button>' +
       '</div>';
 
-    var d = b.detail || {};
-    var quests = (d.quests || []).map(function (q) {
-      return '<a class="cb-quest" href="' + base + q.href + '">' + q.name +
-             '<span class="cb-prog">' + q.progress + '</span></a>';
-    }).join('');
-    var met = (d.met || []).map(function (m) {
-      return '<a class="cb-chip" href="' + base + m.href + '">' + m.name + '</a>';
-    }).join('');
-
+    var hands = (b.allHands || []).map(function (h) { return '<span>' + h + '</span>'; }).join(' · ');
     var detail =
       '<div class="cb-detail" id="js-cb-detail" hidden>' +
-        (d.consequence ? '<p class="cb-conseq">' + d.consequence + '</p>' : '') +
-        (quests ? '<div class="cb-row"><span class="cb-key">Quests</span><div class="cb-quests">' + quests + '</div></div>' : '') +
-        (met ? '<div class="cb-row"><span class="cb-key">Met</span><div class="cb-chips">' + met + '</div></div>' : '') +
-        '<a class="cb-more" href="' + base + (L.bearing || 'voyages/bearings/index.html') + '">Full bearing \u203a</a>' +
+        (b.levelUp ? '<p class="cb-level">Level up to ' + b.level + ' before you sail</p>' : '') +
+        (hands ? '<a class="cb-hands" href="' + bearing + '#sail"><span class="cb-key">All hands</span>' +
+          '<span class="cb-hands-list">' + hands + '</span></a>' : '') +
+        '<a class="cb-more" href="' + bearing + '">Full bearing ›</a>' +
       '</div>';
 
-    return '<div class="command-bar">' + search + ops + strip + detail + '</div>';
+    return '<div class="command-bar">' + ops + strip + detail + search + '</div>';
   }
 
   // ── Inject critical positioning CSS (self-contained — doesn't depend on caelestis.css load order) ──
@@ -270,14 +265,17 @@
   // On the hub the column is .hub and the title lives inside it, so the bar
   // goes under the title as before.
   //
-  // A page opts out with data-no-command-bar on <body>. The bearing pages
-  // do: the bar's strip is a summary of the Current Bearing, so on the
-  // bearing itself it only repeats what the page shows in full.
+  // A page opts out with data-no-command-bar on <body>. The per-voyage
+  // bearing pages do. The Current Bearing (data-command-bar="search") takes
+  // the search row alone, under its banner: the banner is its command bar.
   var head = document.querySelector('.hub-head');
   var col = document.querySelector('.content');
   var term = document.querySelector('.terminal-wrap');   // S.E.A.R.C.H. names its column differently
+  var banner = document.querySelector('.bearing-banner');
   var noBar = document.body.hasAttribute('data-no-command-bar');
-  if (noBar) {
+  if (document.body.getAttribute('data-command-bar') === 'search') {
+    if (banner) banner.insertAdjacentHTML('afterend', buildCommandBar(true));
+  } else if (noBar) {
     // no command bar on this page
   } else if (head) {
     head.insertAdjacentHTML('afterend', buildCommandBar());
@@ -296,6 +294,8 @@
       var open = cbBtn.getAttribute('aria-expanded') === 'true';
       cbBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
       panel.hidden = open;
+      // On a phone the operations fold away with the detail.
+      cbBtn.closest('.command-bar').classList.toggle('cb-open', !open);
     });
   }
 
