@@ -1,9 +1,17 @@
 /**
  * Caelestis — Current Bearing
  * ───────────────────────────
- * Powers the command bar that nav.js injects at the top of every page.
- * Written during a session run (docs/SESSION-RUN.md) and checked
- * against the record by `node tools/data.js check`.
+ * Powers the command bar that nav.js injects at the top of every page,
+ * and holds the values the Current Bearing's banner shows. Written during
+ * a session run (docs/SESSION-RUN.md) and checked against the record and
+ * the banner by `node tools/data.js check`.
+ *
+ *   next         the banner's headline: the first Standing Orders item
+ *   level        the crew's level
+ *   passage      the next passage: embers (Fleet days) and where to
+ *   nextSession  the next voyage's real-world date, 'YYYY-MM-DD' or
+ *                'YYYY-MM-DD HH:MM' (24-hour), set when the scheduler poll
+ *                settles and cleared to '' after the voyage is played
  */
 window.CAELESTIS_BEARING = {
   voyage:   6,
@@ -12,6 +20,11 @@ window.CAELESTIS_BEARING = {
   position: 'Tyrant Ship',
   posNote:  'Toril orbit',
   outstanding: 'Choose the instructor who joins the crew, and cross to H\u2019Catha',
+  next:     'Fly the tyrant ship to H\u2019Catha',
+  level:    4,
+  levelUp:  true,   // the crew levelled at the last voyage; shows 'Level up before you sail' until the next write-up
+  passage:  { embers: 14, to: 'H\u2019Catha' },
+  nextSession: '',
 
   /* Revealed when the bar is expanded — the detail the strip has to trim. */
   detail: {

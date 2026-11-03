@@ -66,6 +66,12 @@
   --officer:     #8a63b8;
   --bridge:      #c08652;
 
+  /* ── Brass: the command bar and the Current Bearing's banner ──
+     A dark ember ground, a deep shadow, and a faint glow of --gold. */
+  --brass:        linear-gradient(180deg, rgba(26, 18, 9, 0.97), rgba(18, 13, 7, 0.97));
+  --brass-shadow: 0 14px 34px rgba(3, 5, 10, 0.45);
+  --gold-glow:    rgba(192, 134, 82, 0.35);
+
   /* ── Misc ── */
   --radius:      0;
 }
@@ -924,7 +930,7 @@ body.with-sidebar .page-header {
   /* Brass, not a second blue. The registers and panels below it are all
      ice-toned; when the bar was too, it read as another panel rather than as
      the thing that sits above them. */
-  background: linear-gradient(180deg, rgba(26, 18, 9, 0.97), rgba(18, 13, 7, 0.97));
+  background: var(--brass);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--gold-rule);
   border-left: 3px solid var(--gold);
@@ -933,7 +939,7 @@ body.with-sidebar .page-header {
      which starts 1.5rem above the content box. */
   max-width: var(--column); min-width: 0; overflow: hidden;
   margin: 0 auto 2.2rem; width: 100%;
-  box-shadow: 0 14px 34px rgba(3, 5, 10, 0.45);
+  box-shadow: var(--brass-shadow);
 }
 
 /* ── Global search ── */
@@ -984,6 +990,9 @@ body.with-sidebar .page-header {
 }
 .cb-op svg { width: 9px; margin-left: auto; color: var(--text-muted); flex-shrink: 0; align-self: center; }
 .cb-op:hover .cb-op-note, .cb-op:hover svg { color: var(--gold-dim); }
+/* The next voyage's date, once the poll settles: read, not muted. */
+.cb-op-note.cb-op-date { color: var(--text); font-style: normal; }
+.cb-op:hover .cb-op-note.cb-op-date { color: var(--gold-light); }
 
 /* ── Bearing strip ── */
 .cb-strip { display: flex; align-items: stretch; min-width: 0; }
@@ -1047,6 +1056,9 @@ body.with-sidebar .page-header {
   .cb-ops { grid-template-columns: 1fr; }
   .cb-op + .cb-op { border-left: none; border-top: 1px solid var(--rule-soft); }
   .cb-op-note { display: none; }
+  /* The date drops to its own line under the name, whole. */
+  .cb-op { flex-wrap: wrap; }
+  .cb-op-note.cb-op-date { display: block; order: 3; flex: 1 0 100%; white-space: normal; }
   .cb-face { grid-template-columns: 1fr 1fr; gap: 0.6rem 1.2rem; }
   .cb-label { display: none; }
   .cb-face > .cb-cell:last-child { grid-column: 1 / -1; }

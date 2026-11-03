@@ -964,15 +964,37 @@ const hasClass = c => o => new RegExp('\\bclass="[^"]*\\b' + c + '\\b').test(o);
 const links = h => matches(/<a\b[^>]*\bhref="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g, h).map(m => ({ href: m[1], text: text(m[2]), tag: m[0] }));
 
 // The Current Bearing and the per-voyage bearing pages. Each page's Last time
-// column, its strip and its Before you sail list are held to the record; the
-// Current Bearing's Last time column is the latest voyage page's, byte for
-// byte, and its Quest Board is the record's open quests and threads.
+// panel, its strip, its tabs and its Heading list are held to the
+// record; the Current Bearing's Last time panel is the latest voyage page's,
+// byte for byte, and its Quest Board is the record's open quests and threads.
+// The banner is checked with data/bearing.js, in check § 6.
+// The Heading groups: their data-group keys and their labels.
+const GROUP_LABEL = { todo: 'Standing Orders', decide: 'All Hands', note: 'Weather Eye' };
+// A count in words for the banner's passage: "Fourteen embers".
+const NUMBER_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
+  'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
+const inWords = n => NUMBER_WORDS[n] || String(n);
+const counted = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+// The next voyage's real-world date as scripts/nav.js writes it:
+// '2026-11-21 19:00' reads "Saturday, November 21 · 7 pm".
+function sessionText(v) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{2}):(\d{2}))?$/.exec(v || '');
+  if (!m) return null;
+  const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
+  if (d.getUTCMonth() !== +m[2] - 1) return null;
+  let out = `${DAYS[d.getUTCDay()]}, ${MONTHS[+m[2] - 1]} ${+m[3]}`;
+  if (m[4]) { const h = +m[4]; out += ` · ${h % 12 || 12}${m[5] !== '00' ? ':' + m[5] : ''} ${h < 12 ? 'am' : 'pm'}`; }
+  return out;
+}
+
 function checkBearings(fresh, latest, err) {
   const DIR = 'voyages/bearings';
   const read = f => fs.readFileSync(path.join(ROOT, DIR, f), 'utf8');
   const lastTime = src => elements(src, 'section', o => /\bid="last-time"/.test(o))[0];
   const sails = {};
-  // Before you sail on one page. To do and To decide hold only what the crew
+  // Heading on one page. Standing Orders (todo) and All Hands (decide) hold only what the crew
   // can act on from where they are. Once a later voyage is written up, each
   // item on its own voyage page ends one of three ways: settled (is-done, an
   // outcome, and "· Voyage NNN" when a record pins the voyage), carried
@@ -982,35 +1004,40 @@ function checkBearings(fresh, latest, err) {
   const questNames = new Set(fresh.quests.map(q => plain(q.name)));
   const sailItems = (rel, src, n, isIndex) => {
     const sec = elements(src, 'section', o => /\bid="sail"/.test(o))[0];
-    if (!sec) err(`${rel}: no Before you sail section (section#sail)`);
+    if (!sec) err(`${rel}: no Heading section (section#sail)`);
     else {
       const kk = elements(sec.inner, 'span', hasClass('bearing-kicker'))[0], hh = elements(sec.inner, 'h2', hasClass('bearing-title'))[0];
-      const want = isIndex ? ['Next time', 'Before you sail'] : [`After Voyage ${pad(n)}`, 'Before you sailed'];
-      if (!kk || !hh || text(kk.inner) !== want[0] || text(hh.inner) !== want[1]) err(`${rel}: the Before you sail header should read "${want.join(' · ')}"`);
+      const want = isIndex ? ['Next time', 'Heading'] : [`After Voyage ${pad(n)}`, 'Heading'];
+      if (!kk || !hh || text(kk.inner) !== want[0] || text(hh.inner) !== want[1]) err(`${rel}: the Heading header should read "${want.join(' · ')}"`);
     }
     const r = region(src, 'before-you-sail');
-    if (r === null) { err(`${rel}: no Before you sail list (data-field="before-you-sail")`); return []; }
+    if (r === null) { err(`${rel}: no Heading list (data-field="before-you-sail")`); return []; }
     const groups = elements(r, 'div', hasClass('sail-group'));
-    groups.forEach(g => { const m = /\bdata-group="([^"]*)"/.exec(g.open); if (!m || !['todo', 'decide', 'note'].includes(m[1])) err(`${rel}: a Before you sail group should carry data-group="todo", "decide" or "note"`); });
+    groups.forEach(g => {
+      const m = /\bdata-group="([^"]*)"/.exec(g.open);
+      if (!m || !GROUP_LABEL[m[1]]) return err(`${rel}: a Heading group should carry data-group="todo", "decide" or "note"`);
+      const l = elements(g.inner, 'h3', hasClass('sail-label'))[0];
+      if (!l || text(l.inner) !== GROUP_LABEL[m[1]]) err(`${rel}: the ${m[1]} group's label reads "${l ? text(l.inner) : ''}"; it should read "${GROUP_LABEL[m[1]]}"`);
+    });
     const groupOf = li => { const g = groups.find(x => x.inner.includes(li.outer)); const m = g && /\bdata-group="([^"]*)"/.exec(g.open); return m ? m[1] : ''; };
     return elements(r, 'li', hasClass('sail-item')).map(li => {
       const k = /\bdata-item="([^"]+)"/.exec(li.open);
       const o = elements(li.inner, 'span', hasClass('sail-outcome'))[0];
-      // A To do item that is a quest's next step links that quest:
+      // A Standing Orders item that is a quest's next step links that quest:
       // <a class="sail-quest" href="../../quests/…">Quest name</a>, after the item's words.
       const ql = /<a class="sail-quest" href="([^"]+)">([\s\S]*?)<\/a>/.exec(li.inner);
       if (ql) {
         const q = fresh.quests.find(x => x.url === path.posix.normalize(path.posix.join(DIR, ql[1])));
         const gi = groups.find(x => x.inner.includes(li.outer));
-        if (!gi || !/data-group="todo"/.test(gi.open)) err(`${rel}: a quest link sits outside To do; only To do items link a quest`);
-        if (!q) err(`${rel}: a To do item links ${ql[1]}, which is not a quest or thread on record`);
-        else if (text(ql[2]) !== plain(q.name)) err(`${rel}: a To do item's quest link reads "${text(ql[2])}", the record says "${q.name}"`);
+        if (!gi || !/data-group="todo"/.test(gi.open)) err(`${rel}: a quest link sits outside Standing Orders; only Standing Orders items link a quest`);
+        if (!q) err(`${rel}: a Standing Orders item links ${ql[1]}, which is not a quest or thread on record`);
+        else if (text(ql[2]) !== plain(q.name)) err(`${rel}: a Standing Orders item's quest link reads "${text(ql[2])}", the record says "${q.name}"`);
       }
       const it = { keys: k ? k[1].split(/\s+/) : [], text: text(li.inner.replace(/<span class="sail-outcome">[\s\S]*?<\/span>/, '').replace(/<a class="sail-quest"[\s\S]*?<\/a>/, '')),
         group: groupOf(li), done: hasClass('is-done')(li.open), carried: hasClass('is-carried')(li.open), aside: hasClass('is-aside')(li.open),
         outcome: o ? text(o.inner) : '', page: rel, n };
       const states = ['done', 'carried', 'aside'].filter(x => it[x]);
-      if (!it.keys.length) err(`${rel}: Before you sail item "${it.text}" has no data-item key`);
+      if (!it.keys.length) err(`${rel}: Heading item "${it.text}" has no data-item key`);
       if (states.length > 1) err(`${rel}: "${it.text}" is ${states.join(' and ')}; an item ends one way only`);
       if (it.group === 'note') {
         if (states.length || o) err(`${rel}: "${it.text}" is on the Weather Eye; those are never ticked, carried or set aside`);
@@ -1020,7 +1047,7 @@ function checkBearings(fresh, latest, err) {
         if (states.length || o) err(`${rel}: "${it.text}" is marked ${states.join(' ') || 'with an outcome'}; this list is still open, nothing on it is settled yet`);
         return it;
       }
-      if (!states.length) err(`${rel}: "${it.text}" is still open; once Voyage ${pad(n + 1)} is written up, each To do and To decide item is settled, carried forward or set aside`);
+      if (!states.length) err(`${rel}: "${it.text}" is still open; once Voyage ${pad(n + 1)} is written up, each Standing Orders and All Hands item is settled, carried forward or set aside`);
       if (states.length && !it.outcome) err(`${rel}: "${it.text}" is ${states[0]} with no outcome`);
       if (it.carried && it.outcome !== 'Carried forward') err(`${rel}: "${it.text}" is carried; its outcome should read "Carried forward"`);
       if (it.aside) {
@@ -1087,6 +1114,33 @@ function checkBearings(fresh, latest, err) {
     people('met', fresh.npcs.filter(x => (x.seen || []).includes(n)), 'Who you met');
     if (!col.inner.includes(`href="../voyage-${pad(n)}.html"`)) err(`${rel}: Last time should link the full account, ../voyage-${pad(n)}.html`);
     sails[rel] = sailItems(rel, src, n, isIndex);
+    // the tabs: a link per panel, each with its name and a short subtitle
+    const tb = region(src, 'bearing-tabs');
+    if (tb === null) err(`${rel}: no tabs (data-field="bearing-tabs")`);
+    else {
+      const want = isIndex ? ['last-time', 'sail', 'quest-board'] : ['last-time', 'sail'];
+      const got = elements(tb, 'a', hasClass('bt-tab'));
+      const key = t => { const m = /\bdata-tab="([^"]*)"/.exec(t.open); return m ? m[1] : ''; };
+      if (got.map(key).join() !== want.join()) err(`${rel}: the tabs are ${got.map(key).join(', ') || 'none'}; they should be ${want.join(', ')}`);
+      got.forEach(t => {
+        const k = key(t);
+        if (!new RegExp(`\\bhref="#${k}"`).test(t.open) || !new RegExp(`\\bid="tab-${k}"`).test(t.open)) err(`${rel}: the ${k} tab should carry href="#${k}" and id="tab-${k}"`);
+      });
+      const items = sails[rel] || [], count = g => items.filter(x => x.group === g).length;
+      const sailSub = [count('todo') && counted(count('todo'), 'standing order', 'standing orders'),
+        count('decide') && `${count('decide')} for all hands`, count('note') && `${count('note')} to watch`].filter(Boolean).join(' · ');
+      const label = {
+        'last-time': ['Last time', `Voyage ${pad(n)} · ${plain(s.name)}`],
+        sail: isIndex ? ['Heading', sailSub] : ['Heading', `After Voyage ${pad(n)}`],
+      };
+      got.forEach(t => {
+        const w = label[key(t)];
+        if (!w) return;
+        const nm = elements(t.inner, 'span', hasClass('bt-name'))[0], sb = elements(t.inner, 'span', hasClass('bt-sub'))[0];
+        const shown = [nm ? text(nm.inner) : '', sb ? text(sb.inner) : ''];
+        if (shown.join(' / ') !== w.join(' / ')) err(`${rel}: the ${key(t)} tab reads "${shown.join(' / ')}"; it should read "${w.join(' / ')}"`);
+      });
+    }
     return col;
   }
 
@@ -1106,19 +1160,19 @@ function checkBearings(fresh, latest, err) {
   if (icol && latestCol && icol.outer !== latestCol.outer)
     err(`${irel}: its Last time column differs from ${DIR}/voyage-${pad(latest)}.html; copy the column across`);
 
-  // Before you sail, matched across pages by data-item. The Current
-  // Bearing's To do and To decide are the latest voyage's items plus every
+  // Heading, matched across pages by data-item. The Current
+  // Bearing's Standing Orders and All Hands are the latest voyage's items plus every
   // item carried forward, each once. A settled or set-aside item is never
   // there; one that still matters is on the Quest Board. A key ends one way.
   const here = sails[irel] || [];
   const onIndex = k => here.find(x => x.keys.includes(k));
   const seenKeys = new Set();
-  here.forEach(x => x.keys.forEach(k => { if (seenKeys.has(k)) err(`${irel}: Before you sail lists "${k}" twice`); seenKeys.add(k); }));
+  here.forEach(x => x.keys.forEach(k => { if (seenKeys.has(k)) err(`${irel}: Heading lists "${k}" twice`); seenKeys.add(k); }));
   const past = Object.keys(sails).filter(r => r !== irel).reduce((a, r) => a.concat(sails[r]), []);
   const ends = {};
   past.forEach(it => it.keys.forEach(k => {
     const on = onIndex(k);
-    if (it.carried && !on) err(`${it.page}: "${it.text}" is carried forward but is not on the Current Bearing's Before you sail`);
+    if (it.carried && !on) err(`${it.page}: "${it.text}" is carried forward but is not on the Current Bearing's Heading`);
     if ((it.done || it.aside) && on) err(`${irel}: "${on.text}" is ${it.done ? 'settled' : 'set aside'} on ${it.page}; only open items carried forward belong here`);
     const e = it.done ? 'settled' : it.aside ? 'set aside' : it.carried ? 'carried forward' : '';
     if (e) {
@@ -1128,7 +1182,7 @@ function checkBearings(fresh, latest, err) {
   }));
   const latestItems = sails[`${DIR}/voyage-${pad(latest)}.html`] || [];
   latestItems.forEach(it => it.keys.forEach(k => {
-    if (!onIndex(k)) err(`${irel}: Before you sail is missing "${it.text}" from Voyage ${pad(latest)}'s list`);
+    if (!onIndex(k)) err(`${irel}: Heading is missing "${it.text}" from Voyage ${pad(latest)}'s list`);
   }));
   here.filter(x => x.group !== 'note').forEach(x => x.keys.forEach(k => {
     if (!latestItems.some(it => it.keys.includes(k)) && !past.some(it => it.carried && it.keys.includes(k)))
@@ -1175,6 +1229,10 @@ function checkBearings(fresh, latest, err) {
     got.forEach(a => { const t = th.find(x => x.url === url(a.href)); if (t && a.text !== plain(t.name)) err(`${irel}: thread "${a.text}" should read "${t.name}"`); });
   });
   const loose = fresh.quests.filter(t => t.kind === 'Thread' && !t.parentId && open(t));
+  const qt = elements(region(isrc, 'bearing-tabs') || '', 'a', o => /\bdata-tab="quest-board"/.test(o))[0];
+  const qsub = qt && elements(qt.inner, 'span', hasClass('bt-sub'))[0];
+  const qwant = `${counted(want.length, 'quest', 'quests')} · ${counted(loose.length, 'loose thread', 'loose threads')}`;
+  if (qt && (!qsub || text(qsub.inner) !== qwant)) err(`${irel}: the Quest Board tab reads "${qsub ? text(qsub.inner) : ''}"; the record gives "${qwant}"`);
   const fold = elements(qb, 'details', hasClass('bearing-fold')).find(d => /Loose threads/.test(d.inner));
   if (!fold) return err(`${irel}: no Loose threads fold on the Quest Board`);
   const sum = /<summary>([\s\S]*?)<\/summary>/.exec(fold.inner);
@@ -1368,6 +1426,57 @@ function check() {
       const want = q.progress ? `${q.progress.done}/${q.progress.total}` : null;
       if (get('progress') !== want) err(`data/bearing.js: ${q.slug} shows ${get('progress')}, record gives ${want || 'no objectives'}`);
       if (plain(get('name')) !== plain(q.name)) err(`data/bearing.js: ${q.slug} is named "${get('name')}", record says "${q.name}"`);
+    });
+    // The Current Bearing's banner shows next, the date, passage, level and
+    // nextSession as data/bearing.js gives them, and its two actions are
+    // links.scheduler and links.helm. next is the first Standing Orders item.
+    guarded('voyages/bearings/index.html banner', () => {
+      const pg = 'voyages/bearings/index.html', at = `${pg}: the banner`;
+      if (!exists(pg)) return;
+      const src = fs.readFileSync(path.join(ROOT, pg), 'utf8');
+      const ban = elements(src, 'section', hasClass('bearing-banner'))[0];
+      if (!ban) return err(`${pg}: no banner (section.bearing-banner)`);
+      const one = name => { const r = regions(ban.inner, name); return r.length === 1 ? text(r[0]) : null; };
+      const next = str('next');
+      if (!next) err('data/bearing.js: next is missing; it is the banner\'s headline');
+      else if (one('bearing-next') !== plain(next)) err(`${at} reads "${one('bearing-next')}", data/bearing.js next is "${next}"`);
+      const so = elements(region(src, 'before-you-sail') || '', 'div', o => /\bdata-group="todo"/.test(o))[0];
+      const first = so && elements(so.inner, 'li', hasClass('sail-item'))[0];
+      const firstText = first ? text(first.inner.replace(/<a class="sail-quest"[\s\S]*?<\/a>/, '')) : null;
+      if (next && firstText !== plain(next)) err(`data/bearing.js: next is "${next}"; the Current Bearing's first Standing Orders item reads "${firstText || 'nothing'}"`);
+      if (now && one('current-date') !== now) err(`${at}'s Fleet date reads "${one('current-date')}", the latest voyage ends ${now}`);
+      const lv = /\blevel:\s*(\d+)/.exec(b);
+      if (!lv) err('data/bearing.js: level is missing');
+      else if (one('crew-level') !== lv[1]) err(`${at}'s crew level reads "${one('crew-level')}", data/bearing.js level is ${lv[1]}`);
+      // The level-up reminder shows only while levelUp is true.
+      const lu = /\blevelUp:\s*(true|false)/.exec(b);
+      const shown = /data-field="level-up"/.test(src);
+      if (!lu) err('data/bearing.js: levelUp is missing (true while the crew has a level-up waiting, false otherwise)');
+      else if ((lu[1] === 'true') !== shown) err(`${at} ${shown ? 'shows' : 'lacks'} the level-up reminder, but data/bearing.js levelUp is ${lu[1]}`);
+      else if (shown && one('level-up') !== 'Level up before you sail') err(`${at}'s level-up reminder should read "Level up before you sail"`);
+      const ps = /passage:\s*\{([^}]*)\}/.exec(b);
+      const em = ps && /embers:\s*(\d+)/.exec(ps[1]);
+      const to = ps && /to:\s*(['"])((?:\\.|(?!\1).)*)\1/.exec(ps[1]);
+      if (!em || !to) err('data/bearing.js: passage should read { embers: N, to: \'place\' }');
+      else {
+        const place = unq(to[2]);
+        if (!fresh.locations.some(l => plain(l.name) === plain(place))) err(`data/bearing.js: passage.to is "${place}", which is not a location on record`);
+        const w = inWords(+em[1]);
+        const pw = `${w[0].toUpperCase()}${w.slice(1)} ${+em[1] === 1 ? 'ember' : 'embers'} to ${plain(place)}`;
+        if (one('passage') !== pw) err(`${at}'s passage reads "${one('passage')}"; data/bearing.js gives "${pw}"`);
+      }
+      const ns = str('nextSession');
+      if (ns === null) err('data/bearing.js: nextSession is missing; it is \'\' until the poll settles');
+      else {
+        const nw = ns === '' ? 'Date not set · answer the poll' : sessionText(ns);
+        if (nw === null) err(`data/bearing.js: nextSession is "${ns}"; write it 'YYYY-MM-DD' or 'YYYY-MM-DD HH:MM'`);
+        else if (one('next-session') !== nw) err(`${at}'s next voyage reads "${one('next-session')}"; data/bearing.js gives "${nw}"`);
+      }
+      ['scheduler', 'helm'].forEach(k => {
+        const a = elements(ban.inner, 'a', o => new RegExp(`\\bdata-link="${k}"`).test(o))[0];
+        const want = str(k), href = a && /\bhref="([^"]*)"/.exec(a.open);
+        if (!a || !href || href[1] !== want) err(`${at}'s ${k} link is ${href ? href[1] : 'missing'}; data/bearing.js links.${k} is ${want}`);
+      });
     });
     // The bar's Met list is the people seen in the latest voyage.
     const metBlock = /met:\s*\[([\s\S]*?)\]/.exec(b);

@@ -8,15 +8,18 @@
    at its own voyage; the strip is completed here from data/voyage.js,
    so an old page needs no upkeep.
 
-   Each section (<details class="sec">) remembers whether the viewer left
-   it open or closed, in localStorage when it is there.
+   The tabs (.bearing-tabs) show one panel at a time: Last time, Before
+   you sail and, on the Current Bearing, the Quest Board. The open tab is
+   kept in the URL hash (#last-time, #sail, #quest-board) and, per viewer,
+   in localStorage when it is there. Without this script the tabs are
+   plain links and the panels stack.
 
    On the Current Bearing (<body data-bearing-current>) a voyage in the
-   strip swaps Last time and Before you sail in place, for the ones on
-   voyages/bearings/voyage-NNN.html; the Quest Board stays current. The
-   URL becomes index.html?voyage=NNN, Back and Forward follow, and a line
-   at the top of the panel leads back to the current bearing. If a fetch
-   fails, the link is followed as a plain link.
+   strip swaps Last time and Heading in place, for the ones on
+   voyages/bearings/voyage-NNN.html, tabs and all; the Quest Board stays
+   current. The URL becomes index.html?voyage=NNN, Back and Forward
+   follow, and a line at the top of the panel leads back to the current
+   bearing. If a fetch fails, the link is followed as a plain link.
    ════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -94,35 +97,83 @@
   track.addEventListener('scroll', edges, { passive: true });
   window.addEventListener('resize', edges);
 
-  // ── Open and closed sections, remembered per viewer ──
-  // Each section is a <details class="sec" data-sec="…" open>. The state is
-  // kept in localStorage when it is there; the page works the same without it.
-  var KEY = 'caelestis.bearing.sections';
-  function stored() {
-    try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; }
+  // ── Tabs ──
+  // Each .bt-tab links its panel (href="#id"). The open tab comes from the
+  // hash, else the viewer's last choice, else Last time.
+  var panel = document.querySelector('.bearing');
+  var tabBar = document.querySelector('.bearing-tabs');
+  var TAB_KEY = 'caelestis.bearing.tab';
+  var tabs = function () { return tabBar ? Array.prototype.slice.call(tabBar.querySelectorAll('.bt-tab')) : []; };
+  var ids = tabs().map(function (t) { return t.getAttribute('data-tab'); });
+  var openTab = null;
+  function remembered() {
+    try { return localStorage.getItem(TAB_KEY); } catch (e) { return null; }
   }
-  function applyOpen(root) {
-    var st = stored();
-    Array.prototype.forEach.call(root.querySelectorAll('details.sec[data-sec]'), function (d) {
-      var k = d.getAttribute('data-sec');
-      if (Object.prototype.hasOwnProperty.call(st, k)) d.open = !!st[k];
+  function fromHash() {
+    var h = location.hash.replace(/^#/, '');
+    return ids.indexOf(h) >= 0 ? h : null;
+  }
+  function select(id, opts) {
+    opts = opts || {};
+    if (ids.indexOf(id) < 0) id = ids[0];
+    openTab = id;
+    tabs().forEach(function (t) {
+      var on = t.getAttribute('data-tab') === id;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.setAttribute('tabindex', on ? '0' : '-1');
+      if (on && opts.focus) t.focus();
     });
+    ids.forEach(function (x) {
+      var p = document.getElementById(x);
+      if (!p) return;
+      p.setAttribute('role', 'tabpanel');
+      p.setAttribute('aria-labelledby', 'tab-' + x);
+      p.hidden = x !== id;
+    });
+    if (opts.remember) { try { localStorage.setItem(TAB_KEY, id); } catch (e) { /* storage blocked */ } }
+    if (opts.hash) {
+      var url = location.pathname + location.search + '#' + id;
+      try { history.replaceState(history.state, '', url); } catch (e) { /* file: or sandboxed */ }
+    }
   }
-  document.addEventListener('toggle', function (e) {
-    var d = e.target;
-    if (!d.matches || !d.matches('details.sec[data-sec]')) return;
-    var st = stored();
-    st[d.getAttribute('data-sec')] = d.open;
-    try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (err) { /* storage blocked */ }
-  }, true);
-  applyOpen(document);
+  if (tabBar && panel && ids.length) {
+    tabBar.setAttribute('role', 'tablist');
+    tabBar.setAttribute('aria-label', 'Bearing');
+    tabs().forEach(function (t) {
+      t.setAttribute('role', 'tab');
+      t.setAttribute('aria-controls', t.getAttribute('data-tab'));
+    });
+    panel.classList.add('is-tabbed');
+    tabBar.addEventListener('click', function (e) {
+      var t = e.target.closest && e.target.closest('.bt-tab');
+      if (!t || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return;
+      e.preventDefault();
+      select(t.getAttribute('data-tab'), { remember: true, hash: true });
+    });
+    tabBar.addEventListener('keydown', function (e) {
+      var all = tabs(), i = all.indexOf(document.activeElement);
+      if (i < 0) return;
+      var to = { ArrowRight: i + 1, ArrowDown: i + 1, ArrowLeft: i - 1, ArrowUp: i - 1, Home: 0, End: all.length - 1 }[e.key];
+      if (to === undefined) return;
+      e.preventDefault();
+      to = (to + all.length) % all.length;
+      select(all[to].getAttribute('data-tab'), { remember: true, hash: true, focus: true });
+    });
+    window.addEventListener('hashchange', function () {
+      var h = fromHash();
+      if (h && h !== openTab) select(h, { remember: true });
+    });
+    var first = fromHash();
+    select(first || remembered());
+    // A link to #sail or #quest-board lands at the tabs, not part-way down.
+    if (first) requestAnimationFrame(function () { tabBar.scrollIntoView({ block: 'start' }); });
+  }
 
   // ── Past voyages, in place (the Current Bearing only) ──
-  // A voyage in the strip swaps Last time and Before you sail for that
-  // voyage page's own: its Last time, and its Before you sailed as the
+  // A voyage in the strip swaps Last time and Heading for that
+  // voyage page's own: its Last time, and its Heading as the
   // voyages after it settled it. The Quest Board stays current.
   var live = document.body.hasAttribute('data-bearing-current');
-  var panel = document.querySelector('.bearing');
   var parts = ['last-time', 'sail'];
   var cur = function (id) { return document.getElementById(id); };
   if (!live || !panel || !cur('last-time') || !cur('sail') || !window.fetch || !window.DOMParser || !history.pushState) {
@@ -132,7 +183,12 @@
 
   var home = cur('last-time').getAttribute('data-voyage');   // the voyage the page was written with
   var cache = {}, pending = {};
-  cache[home] = Promise.resolve(parts.map(function (id) { return cur(id).cloneNode(true); }));
+  // A voyage's parts: its two panels, then its two tabs' contents.
+  var tabOf = function (root, id) { return root.querySelector('.bt-tab[data-tab="' + id + '"]'); };
+  var snapshot = function (root, get) {
+    return parts.map(get).concat(parts.map(function (id) { var t = tabOf(root, id); return t ? t.innerHTML : null; }));
+  };
+  cache[home] = Promise.resolve(snapshot(document, function (id) { return cur(id).cloneNode(true); }));
 
   function load(num) {
     if (cache[num]) return cache[num];
@@ -141,7 +197,7 @@
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
       .then(function (html) {
         var doc = new DOMParser().parseFromString(html, 'text/html');
-        var found = parts.map(function (id) { return doc.getElementById(id); });
+        var found = snapshot(doc, function (id) { return doc.getElementById(id); });
         if (!found[0] || !found[1]) throw new Error('no sections');
         cache[num] = Promise.resolve(found);
         return found;
@@ -179,17 +235,21 @@
       parts.forEach(function (id, i) {
         var old = cur(id);
         old.parentNode.replaceChild(document.importNode(found[i], true), old);
+        var t = tabOf(document, id);
+        if (t && found[parts.length + i] !== null) t.innerHTML = found[parts.length + i];
       });
-      applyOpen(panel);
+      if (ids.length) select(fromHash() || openTab);
       mark(num);
       flag(num);
       window.scrollTo(0, y);
       scrollToCurrent(true);
     });
   }
-  function urlFor(num) { return num === home ? 'index.html' : 'index.html?voyage=' + num; }
+  function urlFor(num) { return (num === home ? 'index.html' : 'index.html?voyage=' + num) + location.hash; }
   function go(num, href) {
     if (num === cur('last-time').getAttribute('data-voyage')) return;
+    // A past voyage has no Quest Board of its own: open its Last time.
+    if (openTab === 'quest-board' && num !== home) select('last-time', { hash: true });
     show(num).then(function () {
       history.pushState({ voyage: num }, '', urlFor(num));
     }, function () { location.href = href; });

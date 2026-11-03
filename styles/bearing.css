@@ -2,15 +2,74 @@
    bearing.css — the Current Bearing (voyages/bearings/index.html) and
    the per-voyage bearing pages (voyage-NNN.html).
 
-   The page is the voyage strip, then one --bg-card panel of stacked,
-   full-width sections, each a <details class="sec" open> whose summary
-   is its header: Last time (the voyage, its bullets and three folds),
-   Before you sail (three groups side by side on the --bg-raised band),
-   and, on the Current Bearing only, the Quest Board (a two-column grid).
-   A voyage page's Before you sail reads "Before you sailed" and is
-   ticked as later voyages settle it. scripts/bearing.js drives the
-   strip, the in-place swap and the remembered open state.
+   The Current Bearing is the banner (the next step, the Fleet date, the
+   passage ahead, the crew's level and the two actions), the voyage
+   strip, then three tabs over one --bg-card panel: Last time (the
+   voyage, its bullets and three folds), Heading (three groups as
+   rows on the --bg-raised band) and the Quest Board (a two-column grid).
+   A voyage page has no banner and two tabs: Last time and its own Before
+   you sailed, ticked as later voyages settle it. scripts/bearing.js
+   drives the strip, the tabs and the in-place swap. Without the script
+   the panels stack, each under its own header.
    ════════════════════════════════════════════════════════════════ */
+
+/* ── The banner ──
+   The Current Bearing's own command bar, in the bar's brass: the next
+   step as a headline, three facts under it, the two actions beside. */
+.bearing-banner {
+  display: grid; grid-template-columns: minmax(0, 1fr) 16.5rem;
+  gap: 1.1rem 2rem; align-items: end;
+  margin: 0 0 1.6rem; padding: 1.5rem 1.8rem 1.6rem;
+  background: var(--brass);
+  border: 1px solid var(--gold-rule); border-left: 3px solid var(--gold);
+  box-shadow: var(--brass-shadow), 0 0 40px var(--gold-faint);
+}
+.bb-main { display: contents; }
+.bb-next {
+  grid-column: 1 / -1; margin: 0;
+  font-family: 'Cinzel', serif; font-size: 1.9rem; font-weight: 700; line-height: 1.2;
+  color: var(--gold-light); text-shadow: 0 0 18px var(--gold-glow);
+}
+.bb-facts {
+  margin: 0; display: flex; flex-wrap: wrap; align-items: flex-start;
+  gap: 0.9rem 2.2rem;
+}
+.bb-fact { min-width: 0; }
+.bb-fact dt {
+  margin-bottom: 0.2rem;
+  font-family: 'Cinzel', serif; font-size: 0.66rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.bb-fact dd { margin: 0; font-size: 1.12rem; line-height: 1.35; color: var(--text); }
+.bb-fact dd a {
+  color: inherit; text-decoration: underline;
+  text-decoration-color: var(--gold-rule); text-underline-offset: 0.15em;
+}
+.bb-fact dd a:hover { color: var(--gold-light); text-decoration-color: var(--gold); }
+.bb-fact .bb-big {
+  font-family: 'Cinzel', serif; font-size: 1.35rem; font-weight: 700; letter-spacing: 0.04em;
+  color: var(--gold-light);
+}
+.bb-aside { margin-left: 0.4rem; font-size: 0.95rem; font-style: italic; color: var(--text-dim); }
+
+.bb-actions { display: flex; flex-direction: column; gap: 0.6rem; }
+.bb-act {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.15rem 0.9rem;
+  align-items: center;
+  padding: 0.75rem 1.1rem;
+  background: var(--gold-faint); border: 1px solid var(--gold-rule);
+  text-decoration: none; transition: background .18s, border-color .18s;
+}
+.bb-act:hover { border-color: var(--gold); }
+.bb-act:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
+.bb-act-name {
+  font-family: 'Cinzel', serif; font-size: 0.84rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold-light); white-space: nowrap;
+}
+.bb-act-note { grid-column: 1; font-size: 0.98rem; font-style: italic; color: var(--text-dim); }
+.bb-act-note.is-set { font-style: normal; color: var(--text); }
+.bb-ext { grid-column: 2; grid-row: 1 / span 2; width: 11px; color: var(--gold-dim); }
+.bb-act:hover .bb-ext { color: var(--gold-light); }
 
 /* ── Voyage strip ──
    One line, oldest voyage on the left, a dot per voyage with its number
@@ -89,6 +148,37 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 .is-next .bs-stop { color: var(--text-muted); font-style: italic; }
 .is-next .bs-stop::before { border-style: dashed; }
 
+/* ── Tabs ──
+   Each tab is a link to its panel, with a name and a short subtitle.
+   scripts/bearing.js gives them their tab roles and shows one panel at a
+   time; without it they are plain links and every panel shows. */
+.bearing-tabs {
+  scroll-margin-top: 4.5rem;
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr);
+  border: 1px solid var(--rule); border-bottom: 0;
+}
+.bt-tab {
+  display: flex; flex-direction: column; gap: 0.2rem; min-width: 0;
+  padding: 0.95rem 1.2rem 0.9rem;
+  background: var(--veil-edge); text-decoration: none;
+  border-top: 2px solid transparent;
+  transition: background .18s, border-color .18s;
+}
+.bt-tab + .bt-tab { border-left: 1px solid var(--rule); }
+.bt-name {
+  font-family: 'Cinzel', serif; font-size: 1.12rem; font-weight: 700; line-height: 1.25;
+  color: var(--text-soft);
+}
+.bt-sub { font-size: 0.92rem; font-style: italic; line-height: 1.35; color: var(--text-muted); }
+.bt-tab:hover .bt-name { color: var(--ice-light); }
+.bt-tab:focus-visible { outline: 2px solid var(--ice); outline-offset: -2px; }
+.bt-tab[aria-selected="true"] {
+  background: var(--bg-card); border-top-color: var(--gold);
+  backdrop-filter: blur(9px); -webkit-backdrop-filter: blur(9px);
+}
+.bt-tab[aria-selected="true"] .bt-name { color: var(--gold-light); }
+.bt-tab[aria-selected="true"] .bt-sub { color: var(--text-dim); }
+
 /* ── The panel ── */
 .bearing {
   background: var(--bg-card);
@@ -97,25 +187,16 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 }
 .bearing-sec { min-width: 0; padding: 1.4rem 2rem 1.6rem; }
 .bearing-sec + .bearing-sec { border-top: 1px solid var(--rule); }
-/* A closed section is its header line only. */
-.bearing-sec:has(> .sec:not([open])) { padding-bottom: 1.4rem; }
-
-/* A section's header is its toggle, with a chevron on the right. */
-.sec > .sec-head {
-  list-style: none; cursor: pointer; position: relative;
-  display: block; padding-right: 2.2rem;
-}
-.sec > .sec-head::-webkit-details-marker { display: none; }
-.sec > .sec-head::after {
-  content: ''; position: absolute; right: 0.3rem; top: 0.55rem;
-  width: 8px; height: 8px;
-  border: solid var(--gold-dim); border-width: 0 1.5px 1.5px 0;
-  transform: rotate(45deg); transition: transform .18s, border-color .18s;
-}
-.sec:not([open]) > .sec-head::after { transform: rotate(-45deg); }
-.sec > .sec-head:hover::after { border-color: var(--gold-light); }
-.sec > .sec-head:focus-visible { outline: 2px solid var(--ice); outline-offset: 4px; }
-.sec[open] > .sec-head { margin-bottom: 1rem; }
+.bearing-sec[hidden] { display: none; }
+/* Each panel's own header shows when the panels stack (no script); the
+   tabs carry it otherwise. */
+.panel-head { display: block; margin-bottom: 1rem; }
+.bearing.is-tabbed .panel-head { display: none; }
+.bearing.is-tabbed .bearing-sec + .bearing-sec { border-top: 0; }
+.bearing.is-tabbed .bearing-sec { padding-top: 1.6rem; }
+/* Heading is a panel like the others; the band is for the stack. */
+.bearing.is-tabbed .is-sail { padding: 0; }
+.bearing.is-tabbed .bearing-sail { margin: 0; border-top: 0; padding: 0.6rem 2rem 0.8rem; background: none; }
 
 .bearing-kicker {
   display: block;
@@ -197,9 +278,10 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 }
 .bearing-more:hover { color: var(--gold-light); }
 
-/* ── Before you sail ──
+/* ── Heading ──
    A display-only checklist on the raised band, in up to three labelled
-   groups, side by side where there is room: To do, To decide, Weather Eye. */
+   groups: Standing Orders (data-group="todo"), All Hands ("decide") and
+   Weather Eye ("note"). */
 .bearing-sail {
   margin: 0 -2rem -1.6rem; padding: 1.1rem 2rem 1.3rem;
   background: var(--bg-raised);
@@ -324,7 +406,30 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
   .bearing-quests { grid-template-columns: minmax(0, 1fr); }
   .bq:nth-child(2) { border-top: 1px solid var(--rule-soft); padding-top: 0.75rem; }
 }
+@media (max-width: 900px) {
+  .bearing-banner { grid-template-columns: minmax(0, 1fr); }
+  .bb-actions { flex-direction: row; flex-wrap: wrap; }
+  .bb-act { flex: 1 1 14rem; }
+}
 @media (max-width: 620px) {
+  .bearing-banner { padding: 1.15rem 1.15rem 1.25rem; margin-bottom: 1.2rem; gap: 0.9rem; }
+  .bb-next { font-size: 1.5rem; }
+  .bb-facts { gap: 0.75rem 1.6rem; }
+  .bb-fact .bb-big { font-size: 1.2rem; }
+  .bb-aside { display: block; margin: 0.15rem 0 0; }
+  .bb-act { flex-basis: 100%; }
+  /* The tabs stack: one row each, the open one marked on its left. */
+  .bearing-tabs { grid-auto-flow: row; grid-auto-columns: auto; }
+  .bt-tab { padding: 0.65rem 1.15rem 0.6rem; border-top: 0; border-left: 3px solid transparent; }
+  .bt-tab + .bt-tab { border-left: 3px solid transparent; border-top: 1px solid var(--rule); }
+  .bt-tab[aria-selected="true"] { border-left-color: var(--gold); }
+  .bt-name { font-size: 1rem; }
+  .bt-sub { font-size: 0.86rem; }
+  /* The counts drop their longer words: "1 order · 3 all hands · 5 to watch". */
+  .bt-long { display: none; }
+  .bb-act { padding: 0.7rem 0.95rem; }
+  .bb-act-name { font-size: 0.8rem; letter-spacing: 0.1em; white-space: normal; }
+  .bearing.is-tabbed .bearing-sail { padding: 0.5rem 1.15rem 0.7rem; }
   .bearing-strip { gap: 0.4rem; margin-bottom: 1rem; }
   .bs-arrow { flex-basis: 28px; height: 28px; }
   .bs-list > li { flex-basis: 104px; }
@@ -342,13 +447,13 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
   .bq-bar { grid-column: 1 / -1; grid-row: 2; }
 }
 
-/* ── Before you sail as rows ──
+/* ── Heading as rows ──
    Each group is a row: its label on the left, its items full width on the
    right, one line each where the width allows. */
 .bearing-sail { flex-direction: column; gap: 0; padding-top: 0.4rem; padding-bottom: 0.5rem; }
 .sail-group {
   width: 100%; min-width: 0;
-  display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0 1rem;
+  display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 0 1rem;
   align-items: baseline; padding: 0.75rem 0;
 }
 .sail-group + .sail-group { border-top: 1px solid var(--gold-rule); }
@@ -357,7 +462,7 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 @media (max-width: 700px) {
   .sail-group { grid-template-columns: minmax(0, 1fr); gap: 0.45rem; }
 }
-/* A To do item that is a quest's next step names the quest after it. */
+/* A Standing Orders item that is a quest's next step names the quest after it. */
 .sail-quest {
   margin-left: 0.6rem; font-size: 0.86rem; font-style: italic;
   color: var(--text-dim); text-decoration: none; border-bottom: 1px solid var(--gold-rule);

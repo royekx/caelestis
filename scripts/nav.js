@@ -92,6 +92,23 @@
 
   var CARET = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l4 4 4-4"/></svg>';
 
+  // The next voyage's real-world date, from data/bearing.js nextSession
+  // ('YYYY-MM-DD' or 'YYYY-MM-DD HH:MM'), as "Saturday, November 21 · 7 pm".
+  // tools/data.js holds the Current Bearing's banner to the same wording.
+  function sessionText(v) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{2}):(\d{2}))?$/.exec(v || '');
+    if (!m) return '';
+    var DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
+    var out = DAYS[d.getUTCDay()] + ', ' + MONTHS[+m[2] - 1] + ' ' + (+m[3]);
+    if (m[4]) {
+      var h = +m[4], min = m[5];
+      out += ' \u00b7 ' + (h % 12 || 12) + (min !== '00' ? ':' + min : '') + (h < 12 ? ' am' : ' pm');
+    }
+    return out;
+  }
+
   function buildCommandBar() {
     var b = window.CAELESTIS_BEARING;
     var L = (b && b.links) || {};
@@ -110,6 +127,7 @@
       '</form>';
     var helm = L.helm || 'https://royek.foundryserver.com/game';
     var sched = L.scheduler || 'https://rallly.co/invite/B8uUYlcm4oKB';
+    var when = sessionText(b && b.nextSession);
 
     var ops =
       '<div class="cb-ops">' +
@@ -119,7 +137,8 @@
         '</a>' +
         '<a class="cb-op" href="' + sched + '" target="_blank" rel="noopener">' +
           '<span class="cb-op-name">Plot the Next Voyage</span>' +
-          '<span class="cb-op-note">Open Scheduler</span>' + EXT_ICON +
+          (when ? '<span class="cb-op-note cb-op-date">' + when + '</span>'
+                : '<span class="cb-op-note">Open Scheduler</span>') + EXT_ICON +
         '</a>' +
       '</div>';
 
