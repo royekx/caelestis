@@ -1072,7 +1072,7 @@ function checkBearings(fresh, latest, err) {
     if (st === null) err(`${rel}: no voyage strip (data-field="voyage-strip")`);
     else {
       const want = fresh.sessions.filter(x => isIndex || x.number <= n).sort((a, b) => a.number - b.number);
-      const got = links(st);
+      const got = links(st).filter(a => !/^https?:/.test(a.href));   // the next voyage's poll link is the banner's
       if (got.map(a => a.href).join() !== want.map(x => `voyage-${pad(x.number)}.html`).join())
         err(`${rel}: the strip links ${got.map(a => a.href.replace(/\D/g, '')).join(' ') || 'nothing'}; it should link ${want.map(x => pad(x.number)).join(' ')}`);
       got.forEach(a => {
@@ -1110,6 +1110,9 @@ function checkBearings(fresh, latest, err) {
       got.forEach(a => { const x = want.find(w => w.url === a.url); if (x && a.text !== label2(x)) err(`${rel}: ${label} names ${x.name} "${a.text}"; it should read "${label2(x)}"`); });
     };
     const label2 = x => x.id.startsWith('PC-') ? plain(x.name.split(' ')[0]) : plain(x.name);
+    // What each of you did opens by default; the other folds start closed.
+    const crewFold = elements(col.inner, 'details', hasClass('bearing-fold')).find(d => /<summary>What each of you did<\/summary>/.test(d.inner));
+    if (!crewFold || !/\sopen\b/.test(crewFold.open)) err(`${rel}: the What each of you did fold should open by default (<details class="bearing-fold" open>)`);
     people('crew', fresh.pcs.filter(p => (p.voyages || []).some(v => v.number === n)), 'What each of you did');
     people('met', fresh.npcs.filter(x => (x.seen || []).includes(n)), 'Who you met');
     if (!col.inner.includes(`href="../voyage-${pad(n)}.html"`)) err(`${rel}: Last time should link the full account, ../voyage-${pad(n)}.html`);
@@ -1437,13 +1440,17 @@ function check() {
       const ban = elements(src, 'section', hasClass('bearing-banner'))[0];
       if (!ban) return err(`${pg}: no banner (section.bearing-banner)`);
       const one = name => { const r = regions(ban.inner, name); return r.length === 1 ? text(r[0]) : null; };
-      const next = str('next');
-      if (!next) err('data/bearing.js: next is missing; it is the banner\'s headline');
-      else if (one('bearing-next') !== plain(next)) err(`${at} reads "${one('bearing-next')}", data/bearing.js next is "${next}"`);
-      const so = elements(region(src, 'before-you-sail') || '', 'div', o => /\bdata-group="todo"/.test(o))[0];
-      const first = so && elements(so.inner, 'li', hasClass('sail-item'))[0];
-      const firstText = first ? text(first.inner.replace(/<a class="sail-quest"[\s\S]*?<\/a>/, '')) : null;
-      if (next && firstText !== plain(next)) err(`data/bearing.js: next is "${next}"; the Current Bearing's first Standing Orders item reads "${firstText || 'nothing'}"`);
+      // The headline is the arc's goal (goal), linked to its quest (goalQuest).
+      const goal = str('goal'), gq = str('goalQuest');
+      if (!goal) err('data/bearing.js: goal is missing; it is the banner\'s headline');
+      else if (one('bearing-next') !== plain(goal)) err(`${at} reads "${one('bearing-next')}", data/bearing.js goal is "${goal}"`);
+      if (gq) {
+        const q = fresh.quests.find(x => x.url === gq);
+        if (!q) err(`data/bearing.js: goalQuest ${gq} is not a quest on record`);
+        else if (q.fields.Status === 'Complete') err(`data/bearing.js: goalQuest ${gq} is complete; the headline should name the open goal`);
+        const ha = /<p class="bb-next"[^>]*>\s*<a href="([^"]+)"/.exec(ban.inner);
+        if (!ha || path.posix.normalize(path.posix.join('voyages/bearings', ha[1])) !== gq) err(`${at}'s headline should link ${gq}`);
+      }
       if (now && one('current-date') !== now) err(`${at}'s Fleet date reads "${one('current-date')}", the latest voyage ends ${now}`);
       const lv = /\blevel:\s*(\d+)/.exec(b);
       if (!lv) err('data/bearing.js: level is missing');
@@ -1453,7 +1460,22 @@ function check() {
       const shown = /data-field="level-up"/.test(src);
       if (!lu) err('data/bearing.js: levelUp is missing (true while the crew has a level-up waiting, false otherwise)');
       else if ((lu[1] === 'true') !== shown) err(`${at} ${shown ? 'shows' : 'lacks'} the level-up reminder, but data/bearing.js levelUp is ${lu[1]}`);
-      else if (shown && one('level-up') !== 'Level up before you sail') err(`${at}'s level-up reminder should read "Level up before you sail"`);
+      else if (shown && lv && one('level-up') !== `Level up to ${lv[1]} before you sail`) err(`${at}'s level-up reminder reads "${one('level-up')}"; it should read "Level up to ${lv[1]} before you sail"`);
+      // The All Hands line names each open All Hands item, by data-item, and
+      // nothing else, and opens Heading. It is absent when All Hands is empty.
+      const ah = elements(region(src, 'before-you-sail') || '', 'div', o => /\bdata-group="decide"/.test(o))[0];
+      const ahKeys = ah ? elements(ah.inner, 'li', hasClass('sail-item')).map(li => (/\bdata-item="([^"]+)"/.exec(li.open) || [, ''])[1]).sort() : [];
+      const dg = elements(ban.inner, 'a', hasClass('bb-hands'));
+      if (!ahKeys.length && dg.length) err(`${at} carries an All Hands line, but Heading has no All Hands items`);
+      if (ahKeys.length && dg.length !== 1) err(`${at} should carry one All Hands line (a.bb-hands) naming ${ahKeys.join(', ')}`);
+      if (ahKeys.length && dg.length === 1) {
+        const d = dg[0], di = /\bdata-items="([^"]*)"/.exec(d.open);
+        const got = di ? di[1].split(/\s+/).filter(Boolean).sort() : [];
+        if (got.join(' ') !== ahKeys.join(' ')) err(`${at}'s All Hands line names ${got.join(', ') || 'nothing'} (data-items); Heading's All Hands items are ${ahKeys.join(', ')}`);
+        if (!/\bhref="#sail"/.test(d.open)) err(`${at}'s All Hands line should link #sail`);
+        const ls = elements(d.inner, 'span', hasClass('bb-hands-list'))[0];
+        if (!ls || !text(ls.inner)) err(`${at}'s All Hands line has no text (span.bb-hands-list)`);
+      }
       const ps = /passage:\s*\{([^}]*)\}/.exec(b);
       const em = ps && /embers:\s*(\d+)/.exec(ps[1]);
       const to = ps && /to:\s*(['"])((?:\\.|(?!\1).)*)\1/.exec(ps[1]);
@@ -1471,6 +1493,11 @@ function check() {
         const nw = ns === '' ? 'Date not set · answer the poll' : sessionText(ns);
         if (nw === null) err(`data/bearing.js: nextSession is "${ns}"; write it 'YYYY-MM-DD' or 'YYYY-MM-DD HH:MM'`);
         else if (one('next-session') !== nw) err(`${at}'s next voyage reads "${one('next-session')}"; data/bearing.js gives "${nw}"`);
+        // The strip's next-voyage stop shows the same line, linking the poll.
+        const sw = regions(src, 'strip-session'), sa = /<a\b[^>]*\bdata-field="strip-session"[^>]*>/.exec(src);
+        const sh = sa && /\bhref="([^"]*)"/.exec(sa[0]);
+        if (nw !== null && (sw.length !== 1 || text(sw[0]) !== nw)) err(`${pg}: the strip's next voyage reads "${sw.map(text).join(', ')}"; data/bearing.js gives "${nw}"`);
+        if (!sh || sh[1] !== str('scheduler')) err(`${pg}: the strip's next voyage should link data/bearing.js links.scheduler`);
       }
       ['scheduler', 'helm'].forEach(k => {
         const a = elements(ban.inner, 'a', o => new RegExp(`\\bdata-link="${k}"`).test(o))[0];

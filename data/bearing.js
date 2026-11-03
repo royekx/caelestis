@@ -20,9 +20,10 @@ window.CAELESTIS_BEARING = {
   position: 'Tyrant Ship',
   posNote:  'Toril orbit',
   outstanding: 'Choose the instructor who joins the crew, and cross to H\u2019Catha',
-  next:     'Fly the tyrant ship to H\u2019Catha',
+  goal:     'Retrieve the adamantine from H\u2019Catha',   // the arc's goal, the banner headline
+  goalQuest: 'quests/the-tyrant-ship-and-the-hcatha-meteor.html',
   level:    4,
-  levelUp:  true,   // the crew levelled at the last voyage; shows 'Level up before you sail' until the next write-up
+  levelUp:  true,   // the crew levelled at the last voyage; shows 'Level up to <level> before you sail' until the next write-up
   passage:  { embers: 14, to: 'H\u2019Catha' },
   nextSession: '',
 

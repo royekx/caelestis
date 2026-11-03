@@ -26,7 +26,7 @@
 }
 .bb-main { display: contents; }
 .bb-next {
-  grid-column: 1 / -1; margin: 0;
+  grid-column: 1; margin: 0;
   font-family: 'Cinzel', serif; font-size: 1.9rem; font-weight: 700; line-height: 1.2;
   color: var(--gold-light); text-shadow: 0 0 18px var(--gold-glow);
 }
@@ -51,8 +51,42 @@
   color: var(--gold-light);
 }
 .bb-aside { margin-left: 0.4rem; font-size: 0.95rem; font-style: italic; color: var(--text-dim); }
+/* A quiet gloss on a word players may not know ("(Fleet days)"). */
+.bb-hint { margin-left: 0.2rem; font-size: 0.88rem; font-style: italic; color: var(--text-muted); }
 
-.bb-actions { display: flex; flex-direction: column; gap: 0.6rem; }
+/* The open All Hands decisions, by their lead words, in one line under the
+   facts. It links the Heading tab (#sail); scripts/bearing.js opens it.
+   data-items lists each item's data-item key. Absent when All Hands is empty. */
+.bb-hands {
+  grid-column: 1; grid-row: 3;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.8rem;
+  padding-top: 0.85rem; border-top: 1px solid var(--gold-rule);
+  text-decoration: none; color: var(--text);
+}
+.bb-hands-label {
+  font-family: 'Cinzel', serif; font-size: 0.66rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.bb-hands-list {
+  font-size: 1.05rem; line-height: 1.4; color: var(--gold-light);
+  text-decoration: underline; text-decoration-color: var(--gold-rule); text-underline-offset: 0.18em;
+}
+.bb-hands-list > span:last-child::after { content: ' \203A'; color: var(--gold-dim); text-decoration: none; display: inline-block; white-space: pre; }
+.bb-hands-list > span { white-space: nowrap; }   /* each item whole: "Ostekk-2" never breaks */
+.bb-hands:hover .bb-hands-list { text-decoration-color: var(--gold); }
+.bb-hands:focus-visible { outline: 2px solid var(--ice); outline-offset: 3px; }
+
+.bb-next a { color: inherit; text-decoration: none; }
+.bb-next a:hover { text-decoration: underline; text-decoration-color: var(--gold-rule); text-underline-offset: 0.15em; }
+/* The Fleet's emblem fills the corner above the two actions. */
+.bb-emblem {
+  grid-column: 2; grid-row: 1; align-self: center; justify-self: center;
+  width: 5.5rem; height: 5.5rem; background-color: var(--gold); opacity: 0.85;
+  -webkit-mask: url('../assets/fleet-emblem.svg') center / contain no-repeat;
+  mask: url('../assets/fleet-emblem.svg') center / contain no-repeat;
+  filter: drop-shadow(0 0 10px var(--gold-glow));
+}
+.bb-actions { grid-column: 2; grid-row: 2 / span 2; align-self: end; display: flex; flex-direction: column; gap: 0.6rem; }
 .bb-act {
   display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.15rem 0.9rem;
   align-items: center;
@@ -147,6 +181,14 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 }
 .is-next .bs-stop { color: var(--text-muted); font-style: italic; }
 .is-next .bs-stop::before { border-style: dashed; }
+/* The Current Bearing's next voyage: its date, or the poll, under the label. */
+.bs-when {
+  display: block; margin-top: 0.2rem;
+  font-size: 0.84rem; line-height: 1.3; font-style: normal; color: var(--gold);
+  text-decoration: underline; text-decoration-color: var(--gold-rule); text-underline-offset: 0.15em;
+}
+.bs-when:hover { color: var(--gold-light); text-decoration-color: var(--gold); }
+.bs-when:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 
 /* ── Tabs ──
    Each tab is a link to its panel, with a name and a short subtitle.
@@ -238,24 +280,29 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 }
 .bearing-bullets li + li { margin-top: 0.35rem; }
 
-/* ── Folds ── the site's ▸ disclosure, one rule above each. */
-.bearing-fold { border-top: 1px solid var(--rule); }
-.bearing-fold:last-of-type { border-bottom: 1px solid var(--rule); }
+/* ── Folds ── each a framed bar with the ▸ disclosure, its contents inside
+   the frame. What each of you did opens by default (<details open>). */
+.bearing-fold { border: 1px solid var(--gold-rule); }
+.bearing-fold + .bearing-fold { margin-top: 0.6rem; }
 .bearing-fold > summary {
   list-style: none; cursor: pointer;
-  display: flex; align-items: baseline; gap: 0.6rem;
-  padding: 0.7rem 0;
-  font-family: 'Cinzel', serif; font-size: 0.76rem; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--text-muted);
-  transition: color .18s;
+  display: flex; align-items: baseline; gap: 0.65rem;
+  padding: 0.7rem 1.1rem;
+  background: var(--gold-faint);
+  font-family: 'Cinzel', serif; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold-light);
+  transition: background .18s, color .18s;
 }
 .bearing-fold > summary::-webkit-details-marker { display: none; }
 .bearing-fold > summary::before {
-  content: '\25B8'; color: var(--ice-dim); display: inline-block; transition: transform .18s;
+  content: '\25B8'; color: var(--gold); display: inline-block; transition: transform .18s;
 }
+.bearing-fold[open] > summary { border-bottom: 1px solid var(--gold-rule); }
 .bearing-fold[open] > summary::before { transform: rotate(90deg); }
-.bearing-fold > summary:hover { color: var(--ice); }
+.bearing-fold > summary:hover { background: var(--bg-raised); }
 .bearing-fold > summary:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
+.bearing-fold > ul, .bearing-fold > p { margin: 0; padding: 0.85rem 1.1rem 0.95rem; }
+.bearing-fold > .bearing-learned { padding-left: 2.2rem; }
 
 .bearing-crew, .bearing-learned, .bearing-loose {
   margin: 0 0 0.9rem; font-size: 0.98rem; line-height: 1.5; color: var(--text-dim);
@@ -322,6 +369,15 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
   transform: rotate(45deg);
 }
 .sail-item.is-done .sail-text, .sail-item.is-done b { color: var(--gold-light); }
+/* Open Standing Orders and All Hands items are read, not ticked: a small
+   hollow diamond in the group's gold, no box. The box comes with a state. */
+.sail-group[data-group="todo"] .sail-item:not(.is-done):not(.is-carried):not(.is-aside) .check-box,
+.sail-group[data-group="decide"] .sail-item:not(.is-done):not(.is-carried):not(.is-aside) .check-box { border: 0; }
+.sail-group[data-group="todo"] .sail-item:not(.is-done):not(.is-carried):not(.is-aside) .check-box::before,
+.sail-group[data-group="decide"] .sail-item:not(.is-done):not(.is-carried):not(.is-aside) .check-box::before {
+  content: ''; width: 7px; height: 7px; box-sizing: border-box;
+  border: 1.5px solid var(--gold); transform: rotate(45deg);
+}
 /* Weather Eye items are nudges, never ticked: a small mark, no box. */
 .sail-group[data-group="note"] .check-box {
   flex-basis: 13px; height: 13px; border: 0; position: relative;
@@ -408,7 +464,9 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 }
 @media (max-width: 900px) {
   .bearing-banner { grid-template-columns: minmax(0, 1fr); }
-  .bb-actions { flex-direction: row; flex-wrap: wrap; }
+  .bb-actions { grid-column: auto; grid-row: auto; flex-direction: row; flex-wrap: wrap; }
+  .bb-emblem { display: none; }
+  .bb-hands { grid-column: auto; grid-row: auto; }
   .bb-act { flex: 1 1 14rem; }
 }
 @media (max-width: 620px) {
@@ -435,6 +493,7 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
   .bs-list > li { flex-basis: 104px; }
   .bs-stop { padding-right: 0.7rem; }
   .bs-title { font-size: 0.86rem; }
+  .bs-when { font-size: 0.8rem; }
   .bs-track.fade-l { --fade-l: 1.25rem; }
   .bs-track.fade-r { --fade-r: 1.25rem; }
   .bearing-sec { padding: 1.2rem 1.15rem 1.4rem; }

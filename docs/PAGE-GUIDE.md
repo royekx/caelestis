@@ -737,18 +737,33 @@ without JS they stack, which is also what Pagefind reads.
   - *The banner* (`section.bearing-banner`) is the page's own command bar,
     in its brass (`--brass`, `--brass-shadow`, the 3px `--gold` left
     border, a faint glow). It mixes the world and the table on purpose:
-    the next step as a headline (`data-field="bearing-next"`), the Fleet
+    the arc's goal as a headline (`data-field="bearing-next"`), linked to its quest, with the Fleet's emblem in the corner beside it, the Fleet
     date (`current-date`), the passage ahead ("Fourteen embers to
-    H'Catha", `passage`; embers are Fleet days), the crew's level
-    (`crew-level`), with "Level up before you sail" (`level-up`) only while `levelUp` is true, and
+    H'Catha", `passage`, followed by a quiet "(Fleet days)" in
+    `span.bb-hint`; embers are Fleet days), the crew's level
+    ("Crew level 4", `crew-level`), with "Level up to 4 before you sail"
+    (`level-up`, the current level's number) only while `levelUp` is true,
+    the All Hands line, and
     two actions: Plot the Next Voyage (the scheduler poll, with the next
     voyage's real-world date in `next-session`, or "Date not set · answer
-    the poll") and Take the Helm (Foundry). Each value is written by hand
-    from `data/bearing.js` (`next`, `date`, `passage`, `level`,
-    `nextSession`, `links`), and `check` holds them together. `next` is
-    the first Standing Orders item, word for word. A set date reads
+    the poll") and Take the Helm ("Enter Foundry · the game table").
+    The All Hands line (`a.bb-hands`, `href="#sail"`, `data-field="all-hands"`)
+    names the open All Hands items by their bold lead words, shortened:
+    "All hands: choose the instructor · Ostekk-2 · second in command". It
+    carries each item's `data-item` in `data-items`, opens the Heading tab,
+    and is left out when All Hands is empty. Each value is written by hand
+    from `data/bearing.js` (`goal`, `goalQuest`, `date`, `passage`, `level`,
+    `nextSession`, `links`), and `check` holds them together. `goal` is the
+    arc's aim ("Retrieve the adamantine from H'Catha"); the next concrete
+    step stays in Standing Orders, so the two do not repeat. A set date reads
     "Saturday, November 21 · 7 pm". The banner carries no counts and no
     position line.
+  - *The strip* ends with the next voyage, and on the Current Bearing that
+    stop shows the next voyage's date, or "Date not set · answer the poll",
+    under its label (`a.bs-when`, `data-field="strip-session"`), linking
+    the scheduler poll in a new tab, as the banner's `next-session` does.
+    On a voyage page `scripts/bearing.js` adds the next stop with its label
+    only.
   - *The tabs* (`div.bearing-tabs`, `data-field="bearing-tabs"`) are
     links to their panels (`a.bt-tab`, `href="#id"`, `id="tab-id"`), each
     with a name and a short subtitle: Last time ("Voyage 006 · What Is
@@ -764,6 +779,10 @@ without JS they stack, which is also what Pagefind reads.
     with its threads, the Loose threads fold, and the link to the board).
     Each panel opens with a `header.panel-head` (its kicker and title),
     which shows only when the panels stack.
+  - *The folds* are framed bars with the ▸ disclosure. What each of you
+    did opens by default (`<details class="bearing-fold" open>`) on every
+    bearing page, so a voyage swapped in place opens the same way; What you
+    learned and Who you met start closed.
 
   `scripts/bearing.js` gives the tabs their tab roles and shows one panel
   at a time, Last time first. The open tab is kept in the hash
@@ -805,7 +824,16 @@ without JS they stack, which is also what Pagefind reads.
   Every item is written as the crew knows it, in plain in-world voice; an
   occasional table item (a level-up, a downtime pick) is phrased as said at
   the table. Each item opens with a short bold label and carries a
-  `data-item` key that names it across pages.
+  `data-item` key that names it across pages. A name a player may mix up
+  (the Ostekk units, two instructors) carries a few words from its record's
+  Role (as known), Party Relationship or overview: "Saerthe (helm
+  instructor) or Tarto (the Boatswain)", "Ostekk-10, the mechanical
+  behir". Other names stand alone, and each line stays short.
+
+  An open Standing Orders or All Hands item carries a small hollow diamond
+  in gold. The box appears once an item has a state: ticked when settled,
+  dashed when carried forward, with a dash when set aside. The Weather Eye
+  carries a dot.
 
   Standing Orders and All Hands hold only what the crew can act on now, from their
   current position; anything further off is a quest or a thread on the
@@ -826,8 +854,7 @@ without JS they stack, which is also what Pagefind reads.
   plus every item carried forward, each once, and the latest voyage's
   Weather Eye. An item a newer one covers is set aside, so nothing shows
   twice. Each group carries `data-group` (`todo`, `decide`, `note`). `check`
-  holds the pages to this. The markup is in `styles/bearing.css` § Before
-  you sail.
+  holds the pages to this. The markup is in `styles/bearing.css` § Heading.
 - **Navigation.** The player home is the Current Bearing
   (`voyages/bearings/index.html`): the gate (`index.html`) enters there and
   the sidebar logo points there. The sidebar in `scripts/nav.js` is the one
