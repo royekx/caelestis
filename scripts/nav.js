@@ -256,33 +256,14 @@
   window.addEventListener('resize', sideNavMore);
   sideNavMore();
 
-  // The bar goes INSIDE the page column, at its top.
-  //
-  // It used to be inserted after .page-header, which made it a sibling of
-  // .content rather than a child. .content is max-width:900px centred;
-  // .page-content has no max-width at all. So on every sub-page the bar
-  // rendered the full width of the viewport while the page under it sat in a
-  // 900px column — wider than its own page, and a different width on the hub
-  // (which nests inside .hub at 1040px) than anywhere else. One insertion
-  // point fixes both the overflow and the inconsistency.
-  // Where the bar goes.
-  //
-  // .content carries a scrim (.content::before) that sits behind the page's
-  // own material. The bar is not page material — it is the terminal chrome,
-  // the same on every page — so it belongs outside that scrim, sitting on the
-  // backdrop the way it does on the hub, which has no scrim at all.
-  //
-  // So on a normal page it is inserted BEFORE .content rather than inside it,
-  // and given the column width itself (see .command-bar in caelestis.css).
-  // On the hub the column is .hub and the title lives inside it, so the bar
-  // goes under the title as before.
+  // Where the bar goes: before .content, outside its scrim, at the column's
+  // width (.command-bar in caelestis.css); on S.E.A.R.C.H. under its heading.
   //
   // A page opts out with data-no-command-bar on <body>. The bearing pages
   // (data-command-bar="search") take the search row alone: the Current
   // Bearing's banner is its command bar, and a voyage's bearing page is a
   // record of that voyage. It is the banner's last row, as search is the
   // bar's, or sits above the voyage strip on a page with no banner.
-  var head = document.querySelector('.hub-head');
   var col = document.querySelector('.content');
   var term = document.querySelector('.terminal-wrap');   // S.E.A.R.C.H. names its column differently
   var banner = document.querySelector('.bearing-banner');
@@ -293,12 +274,13 @@
     else if (strip) strip.insertAdjacentHTML('beforebegin', buildCommandBar(true));
   } else if (noBar) {
     // no command bar on this page
-  } else if (head) {
-    head.insertAdjacentHTML('afterend', buildCommandBar());
   } else if (col) {
     col.insertAdjacentHTML('beforebegin', buildCommandBar());
   } else if (term) {
-    term.insertAdjacentHTML('afterbegin', buildCommandBar());
+    // S.E.A.R.C.H.: under its heading, as on every other page.
+    var termHead = term.querySelector('.terminal-head');
+    if (termHead) termHead.insertAdjacentHTML('afterend', buildCommandBar());
+    else term.insertAdjacentHTML('afterbegin', buildCommandBar());
   } else {
     document.body.insertAdjacentHTML('afterbegin', buildCommandBar());
   }
