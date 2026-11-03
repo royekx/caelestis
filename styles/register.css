@@ -624,6 +624,8 @@ img { max-width: 100%; }
   padding: 1.3rem 1.5rem 1.4rem;
   margin: 1.6rem 0 0;
 }
+/* A cadet's feature card, at the head of their veiled companion tab. */
+.companion-panel .classified-body > .companion-card { margin: 0 0 2rem; }
 .companion-head {
   display: flex; align-items: baseline; gap: 0.9rem;
   padding-bottom: 0.7rem; margin-bottom: 0.9rem;
@@ -892,6 +894,3 @@ img { max-width: 100%; }
 .q-details .glance-row { grid-template-columns: 110px 1fr; }
 .q-details .glance-synopsis:has(+ .overview-foot) { border-bottom: 0; padding-bottom: 0; }
 @media (max-width: 640px) { .q-details .glance-row { grid-template-columns: 1fr; } }
-
-/* A cadet's feature card, at the head of their veiled companion tab. */
-.companion-panel .classified-body > .companion-card { margin: 0 0 2rem; }
