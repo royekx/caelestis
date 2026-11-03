@@ -713,32 +713,68 @@ without JS they stack, which is also what Pagefind reads.
   it; the command bar, the current bearing and the Fleet Time page show where
   the latest voyage ends.
 - **Bearing pages.** The Current Bearing (`voyages/bearings/index.html`)
-  is the voyage strip and one panel of three stacked, full-width
-  sections: Last time (the latest voyage, three bullets, the folds What
-  each of you did, What you learned and Who you met, and the link to the
-  full account), Before you sail (its groups side by side on wide screens,
-  on the `--bg-raised` band) and the Quest Board (its heading links the
-  board; the open quests in two columns, each with its threads; then the
-  Loose threads fold). Each section is a `<details class="sec" open>`
-  whose `<summary class="sec-head">` is its header; the viewer's open or
-  closed choice is kept in localStorage. Each voyage has its own bearing
-  page (`voyage-NNN.html`) with its Last time and its own Before you
-  sailed list; it carries no Quest Board. On the Current Bearing a voyage
-  in the strip swaps Last time and Before you sail in place for that
+  is, under its title and a one-line subtitle on what the page is, the
+  banner, the voyage strip, and three tabs over one panel.
+  - *The banner* (`section.bearing-banner`) is the page's own command bar,
+    in its brass (`--brass`, `--brass-shadow`, the 3px `--gold` left
+    border, a faint glow). It mixes the world and the table on purpose:
+    the next step as a headline (`data-field="bearing-next"`), the Fleet
+    date (`current-date`), the passage ahead ("Fourteen embers to
+    H'Catha", `passage`; embers are Fleet days), the crew's level
+    (`crew-level`) with "Level up before you sail, if you haven't", and
+    two actions: Plot the Next Voyage (the scheduler poll, with the next
+    voyage's real-world date in `next-session`, or "Date not set · answer
+    the poll") and Take the Helm (Foundry). Each value is written by hand
+    from `data/bearing.js` (`next`, `date`, `passage`, `level`,
+    `nextSession`, `links`), and `check` holds them together. `next` is
+    the first Standing Orders item, word for word. A set date reads
+    "Saturday, November 21 · 7 pm". The banner carries no counts and no
+    position line.
+  - *The tabs* (`div.bearing-tabs`, `data-field="bearing-tabs"`) are
+    links to their panels (`a.bt-tab`, `href="#id"`, `id="tab-id"`), each
+    with a name and a short subtitle: Last time ("Voyage 006 · What Is
+    Here Has Not Left"), Before you sail (its counts: "1 standing order ·
+    3 for all hands · 5 to watch", a group with no items left out; the
+    words in `span.bt-long` drop on phones) and Quest Board ("4 quests ·
+    3 loose threads"). `check` holds the subtitles to the lists and the
+    record.
+  - *The panels* are Last time (`#last-time`: the latest voyage, its
+    bullets, the folds What each of you did, What you learned and Who you
+    met, and the link to the full account), Before you sail (`#sail`) and
+    the Quest Board (`#quest-board`: the open quests in two columns, each
+    with its threads, the Loose threads fold, and the link to the board).
+    Each panel opens with a `header.panel-head` (its kicker and title),
+    which shows only when the panels stack.
+
+  `scripts/bearing.js` gives the tabs their tab roles and shows one panel
+  at a time, Last time first. The open tab is kept in the hash
+  (`#last-time`, `#sail`, `#quest-board`) and, per viewer, in
+  localStorage. Without the script the tabs are plain links and the panels
+  stack under their own headers. On a phone the tabs stack.
+
+  Each voyage has its own bearing page (`voyage-NNN.html`): the strip and
+  two tabs, Last time and Before you sailed ("After Voyage NNN"), with
+  its own list ticked as later voyages settle it. It carries no banner
+  and no Quest Board, and ends with "What comes next is on the Current
+  Bearing ›". On the Current Bearing a voyage in the strip swaps the
+  Last time and Before you sail panels, and their tabs, in place for that
   voyage page's, with a line leading back to the current bearing; the
-  Quest Board stays current (`scripts/bearing.js`). The command bar stays
-  off these pages (`data-no-command-bar` on `<body>`).
+  Quest Board stays current. The command bar stays off these pages
+  (`data-no-command-bar` on `<body>`).
 - **Before you sail.** The crew plays once a month or less, so the list is
   a memory aid: curated, a few items to a group, with the detail left to
   the voyage page. Three groups, each shown only when it has items:
-  - *To do*: what the crew can do next, from where they are now.
+  - *Standing Orders* (`data-group="todo"`): what the crew can do next,
+    from where they are now.
     When the item is a quest's next step, it names that quest after its
     words, as a link (`<a class="sail-quest">`, the quest's record name).
-    Many To do items belong to no quest (repair the hull, rest and
+    Many Standing Orders belong to no quest (repair the hull, rest and
     resupply, deal with a stowaway); those stand alone. The Quest Board
-    holds the long game; To do is only what is in reach next voyage.
-  - *To decide*: choices open to the crew now, from where they are.
-  - *Weather Eye*: the DM's by-the-way nudges, a few at most, chosen
+    holds the long game; Standing Orders hold only what is in reach next
+    voyage. The first one is the banner's headline.
+  - *All Hands* (`data-group="decide"`): real open decisions, choices open
+    to the crew now, from where they are.
+  - *Weather Eye* (`data-group="note"`): the DM's by-the-way nudges, a few at most, chosen
     fresh each voyage: a hazard still aboard, what they hold and what it does, a promise, who
     is with them, what they did that may come back. They are never ticked
     or carried forward; a nudge the crew lets pass drops off the next list
@@ -752,7 +788,7 @@ without JS they stack, which is also what Pagefind reads.
   the table. Each item opens with a short bold label and carries a
   `data-item` key that names it across pages.
 
-  To do and To decide hold only what the crew can act on now, from their
+  Standing Orders and All Hands hold only what the crew can act on now, from their
   current position; anything further off is a quest or a thread on the
   Quest Board. Each item stays on its own voyage page and, once the next
   voyage is written up, ends there one of three ways:
@@ -767,7 +803,7 @@ without JS they stack, which is also what Pagefind reads.
     Board: The Living Clue in the Crate". It is never on the Current
     Bearing.
 
-  The Current Bearing's list is the latest voyage's To do and To decide
+  The Current Bearing's list is the latest voyage's Standing Orders and All Hands
   plus every item carried forward, each once, and the latest voyage's
   Weather Eye. An item a newer one covers is set aside, so nothing shows
   twice. Each group carries `data-group` (`todo`, `decide`, `note`). `check`

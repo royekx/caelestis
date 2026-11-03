@@ -32,9 +32,23 @@
       </svg>
     </div>
     <div class="page-title" data-pagefind-meta="title">Current Bearing</div>
-    <div class="page-subtitle">Aboard the tyrant ship, Toril orbit · Fleet date <span data-field="current-date">1491.7.12</span></div>
+    <div class="page-subtitle">Where the last voyage left the crew, and what waits on the next.</div>
   </div>
   <div class="content">
+    <section class="bearing-banner" aria-labelledby="bearing-next">
+      <div class="bb-main">
+        <p class="bb-next" id="bearing-next" data-field="bearing-next">Fly the tyrant ship to H’Catha</p>
+        <dl class="bb-facts">
+          <div class="bb-fact"><dt>Fleet date</dt><dd class="bb-big" data-field="current-date">1491.7.12</dd></div>
+          <div class="bb-fact"><dt>Passage ahead</dt><dd data-field="passage">Fourteen embers to <a href="../../navigation-records/hcatha.html">H’Catha</a></dd></div>
+          <div class="bb-fact"><dt>Crew level</dt><dd><span class="bb-big" data-field="crew-level">4</span> <span class="bb-aside">Level up before you sail, if you haven’t</span></dd></div>
+        </dl>
+      </div>
+      <div class="bb-actions" data-pagefind-ignore>
+        <a class="bb-act" data-link="scheduler" href="https://rallly.co/invite/B8uUYlcm4oKB" target="_blank" rel="noopener"><span class="bb-act-name">Plot the Next Voyage</span><span class="bb-act-note" data-field="next-session">Date not set · answer the poll</span><svg class="bb-ext" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 2h3v3M10 2L5.5 6.5M9 7v3H2V3h3"/></svg></a>
+        <a class="bb-act" data-link="helm" href="https://royek.foundryserver.com/game" target="_blank" rel="noopener"><span class="bb-act-name">Take the Helm</span><span class="bb-act-note">Enter Foundry</span><svg class="bb-ext" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 2h3v3M10 2L5.5 6.5M9 7v3H2V3h3"/></svg></a>
+      </div>
+    </section>
     <nav class="bearing-strip" aria-label="Voyages" data-pagefind-ignore>
       <button class="bs-arrow" type="button" data-step="-1" aria-label="Earlier voyages"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 2L4 7l5 5"/></svg></button>
       <div class="bs-track">
@@ -50,10 +64,14 @@
       </div>
       <button class="bs-arrow" type="button" data-step="1" aria-label="Later voyages"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg></button>
     </nav>
+    <div class="bearing-tabs" data-field="bearing-tabs" data-pagefind-ignore>
+      <a class="bt-tab" id="tab-last-time" href="#last-time" data-tab="last-time"><span class="bt-name">Last time</span><span class="bt-sub">Voyage 006 · What Is Here Has Not Left</span></a>
+      <a class="bt-tab" id="tab-sail" href="#sail" data-tab="sail"><span class="bt-name">Before you sail</span><span class="bt-sub">1 <span class="bt-long">standing </span>order · 3 <span class="bt-long">for </span>all hands · 5 to watch</span></a>
+      <a class="bt-tab" id="tab-quest-board" href="#quest-board" data-tab="quest-board"><span class="bt-name">Quest Board</span><span class="bt-sub">4 quests · 3 loose threads</span></a>
+    </div>
     <div class="bearing">
       <section class="bearing-sec" id="last-time" data-voyage="006">
-        <details class="sec" data-sec="last" open>
-        <summary class="sec-head"><span class="bearing-kicker">Last time · Voyage 006</span><h2 class="bearing-title">What Is Here Has Not Left</h2></summary>
+        <header class="panel-head"><span class="bearing-kicker">Last time · Voyage 006</span><h2 class="bearing-title">What Is Here Has Not Left</h2></header>
         <ul class="bearing-bullets">
           <li>The crew held the <a href="../../navigation-records/the-tyrant-ship.html">tyrant ship</a>. Sol, <a href="../../registry/dossiers/winston-ryeback.html">Ryeback</a>, <a href="../../registry/dossiers/pffred.html">Pffred</a> and <a href="../../registry/dossiers/krik-lit.html">Krik’Lit</a> fought off clockwork horrors in the cargo hold, and the crew told Ryeback they would finish the mission themselves.</li>
           <li>On the last watch the mechanical behir came up the garden shaft. Speaking through Krik’Lit, it named itself <a href="../../registry/dossiers/the-behir.html">Ostekk-10</a> and asked for a device on the Command Deck, the containment engine, promising to leave once it had it.</li>
@@ -87,20 +105,18 @@
           <p class="bearing-met" data-field="met"><a href="../../registry/dossiers/boatswain-tarto.html">Boatswain Tarto</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/saerthe-abizjn.html">Saerthe Abizjn</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/winston-ryeback.html">Winston Ryeback</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/miken.html">Miken</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/krik-lit.html">Krik’Lit</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/pffred.html">Pffred</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/ostekk-6.html">Ostekk-6</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/vaelorix.html">Vaelorix</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/the-behir.html">Ostekk-10</a></p>
         </details>
         <a class="bearing-more" href="../voyage-006.html">Read the full account ›</a>
-        </details>
       </section>
       <section class="bearing-sec is-sail" id="sail">
-        <details class="sec" data-sec="sail" open>
-        <summary class="sec-head"><span class="bearing-kicker">Next time</span><h2 class="bearing-title">Before you sail</h2></summary>
+        <header class="panel-head"><span class="bearing-kicker">Next time</span><h2 class="bearing-title">Before you sail</h2></header>
         <div class="bearing-sail" data-field="before-you-sail">
           <div class="sail-group" data-group="todo">
-            <h3 class="sail-label">To do</h3>
+            <h3 class="sail-label">Standing Orders</h3>
             <ul class="sail-list">
-              <li class="sail-item" data-item="fly-to-hcatha"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b>Fly the ship</b> to H’Catha<a class="sail-quest" href="../../quests/the-tyrant-ship-and-the-hcatha-meteor.html">The Tyrant Ship and the H’Catha Meteor</a></span></li>
+              <li class="sail-item" data-item="fly-to-hcatha"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b>Fly the tyrant ship</b> to H’Catha<a class="sail-quest" href="../../quests/the-tyrant-ship-and-the-hcatha-meteor.html">The Tyrant Ship and the H’Catha Meteor</a></span></li>
             </ul>
           </div>
           <div class="sail-group" data-group="decide">
-            <h3 class="sail-label">To decide</h3>
+            <h3 class="sail-label">All Hands</h3>
             <ul class="sail-list">
               <li class="sail-item" data-item="instructor"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b>Choose the instructor</b> who joins the crew: Saerthe or Tarto</span></li>
               <li class="sail-item" data-item="ostekk-2"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b>What to do with <a href="../../registry/dossiers/ostekk-2.html">Ostekk-2</a></b>, lying inert on the Hollow Deck</span></li>
@@ -118,11 +134,9 @@
             </ul>
           </div>
         </div>
-        </details>
       </section>
       <section class="bearing-sec" id="quest-board" data-field="quest-board">
-        <details class="sec" data-sec="quests" open>
-        <summary class="sec-head"><h2 class="bearing-title"><a href="../../quests/index.html">Quest Board <span aria-hidden="true">›</span></a></h2></summary>
+        <header class="panel-head"><h2 class="bearing-title"><a href="../../quests/index.html">Quest Board <span aria-hidden="true">›</span></a></h2></header>
           <ul class="bearing-quests">
             <li class="bq">
               <a class="bq-name" href="../../quests/the-tyrant-ship-and-the-hcatha-meteor.html">The Tyrant Ship and the H’Catha Meteor</a>
@@ -167,7 +181,7 @@
               <li><a class="bl-name" href="../../quests/the-laughter-of-beshaba.html">The Laughter of Beshaba</a> <span class="bl-state">A new, curious voice speaks to Sol of fate.</span></li>
             </ul>
           </details>
-        </details>
+          <a class="bearing-more" href="../../quests/index.html">Open the Quest Board ›</a>
       </section>
     </div>
   </div>
