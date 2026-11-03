@@ -356,7 +356,7 @@ node tools/data.js derive
 
 | Surface | What changes |
 |---|---|
-| `voyages/voyage-NNN.html` | new, from `voyage-template.html`: At a Glance, Brief Account, Full Account (the approved account), Recording |
+| `voyages/voyage-NNN.html` | new, from `voyage-template.html`: the Fleet date line under the nav bar, At a Glance, Brief Account, Full Account (the approved account), Recording (the YouTube embed and link, once posted) |
 | `voyages/voyage-(NNN-1).html` | its "next voyage" link |
 | `voyages/index.html` | a row and its Overview |
 | `voyages/bearings/voyage-(NNN-1).html` | its Heading list, resolved (below) |

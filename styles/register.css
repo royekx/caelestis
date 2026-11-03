@@ -786,6 +786,14 @@ img { max-width: 100%; }
 .railed > .account-tabs > .account-tab .account-tab-note { display: none; }
 .railed > .panels { min-width: 0; }
 .railed > .panels, .railed > .panels > * { border-radius: 12px; }
+/* A voyage's account scrolls inside its panel, so its tabs stay in view.
+   --cb-h is the command bar's height (nav.js). A phone scrolls the page. */
+@media (min-width: 900px) {
+  .railed > .account-panels > .account-panel {
+    max-height: max(22rem, calc(100vh - var(--cb-h, 10rem) - 6.5rem));
+    overflow-y: auto; overscroll-behavior: contain;
+  }
+}
 
 @media (max-width: 560px) {
   .railed > .tabrail { gap: 0; }
