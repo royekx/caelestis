@@ -101,7 +101,6 @@
   text-transform: uppercase; color: var(--gold-light); white-space: nowrap;
 }
 .bb-act-note { grid-column: 1; font-size: 0.98rem; font-style: italic; color: var(--text-dim); }
-.bb-act-note.is-set { font-style: normal; color: var(--text); }
 .bb-ext { grid-column: 2; grid-row: 1 / span 2; width: 11px; color: var(--gold-dim); }
 .bb-act:hover .bb-ext { color: var(--gold-light); }
 

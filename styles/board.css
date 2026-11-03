@@ -242,7 +242,7 @@ html { overflow-x: clip; }
 
 /* ── SOFTENED EDGES ── */
 .voyage-glance { border-radius: 0; }
-.chip, .log-badge, .log-type-badge { border-radius: 999px; }
+.chip { border-radius: 999px; }
 .video-container { border-radius: 0; }
 .voyage-nav-bar, .voyage-nav-bottom { border-radius: 999px; }
 .log-entry:first-child { border-radius: 0; }

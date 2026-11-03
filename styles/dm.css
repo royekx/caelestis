@@ -218,11 +218,6 @@ body { overflow-x: clip; }
   color: #fff;
   border-bottom-color: var(--accent);
 }
-.dm-content a.dm-link-external::after {
-  content: ' ↗';
-  font-size: 0.8em;
-  color: var(--text-muted);
-}
 
 .dm-content ul, .dm-content ol { padding-left: 1.4rem; margin: 0.75rem 0; }
 .dm-content li { margin: 0.3rem 0; }
@@ -452,23 +447,6 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
 }
 
 /* Ops links: a quiet row of links under the header, on a hairline. */
-.dm-ops-links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.15rem 1.4rem;
-  margin: -0.4rem 0 2.2rem;
-  padding: 0 0 0.9rem;
-  border-bottom: 1px solid var(--rule-soft);
-}
-.dm-ops-links a {
-  font-family: 'Cinzel', serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  padding: 0.2rem 0;
-  transition: color 0.18s;
-}
 
 /* Page navigation (dm-nav.js): the eyebrow's first part links back to the index,
    and prev/next at the foot of the page as a plain row of two links. */
@@ -979,46 +957,6 @@ html::-webkit-scrollbar-thumb:hover, .dm-toc::-webkit-scrollbar-thumb:hover,
 }
 .dm-content tbody tr:last-child td { border-bottom: none; }
 .dm-content tbody tr:hover td { background: var(--dm-elev-2); }
-
-/* ── Detail collapsibles ──
-   <details class="dm-collapse">: a small chevron summary on a left rule,
-   for prose that expands under a list or a row. */
-.dm-collapse {
-  border-top: 1px solid rgba(201, 153, 58, 0.14);
-  border-left: 2px solid var(--gold-rule);
-  margin: 0.6rem 0 0.4rem;
-  padding-left: 1rem;
-}
-.dm-collapse > summary {
-  cursor: pointer;
-  padding: 0.4rem 0;
-  font-family: 'Cinzel', serif;
-  font-size: 0.92rem;
-  color: var(--gold-dim);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  user-select: none;
-}
-.dm-collapse > summary::-webkit-details-marker { display: none; }
-.dm-collapse > summary::before {
-  content: '▸';
-  color: var(--gold-dim);
-  font-size: 0.899rem;
-  transition: transform 0.18s;
-  display: inline-block;
-  width: 0.8em;
-}
-.dm-collapse[open] > summary::before { transform: rotate(90deg); }
-.dm-collapse > summary:hover { color: var(--gold); }
-.dm-collapse[open] > summary {
-  color: var(--gold);
-  margin-bottom: 0.4rem;
-}
-.dm-collapse > *:not(summary) { padding-bottom: 1.25rem; font-size: 1.02rem; }
 
 /* ── Callout ──
    One treatment for every variant: a hairline rule and space, not a box,
@@ -2288,6 +2226,4 @@ a.dm-cell::after { content: ' \2192'; }
   .dm-content h1, .dm-content h2, .dm-content h3, .dm-content h4 { color: black; }
   .dm-callout { background: #f8f6ef; }
   /* Collapsibles print open, so nothing is hidden. */
-  .dm-collapse[open] { break-inside: avoid; }
-  .dm-collapse:not([open]) > *:not(summary) { display: block !important; }
 }
