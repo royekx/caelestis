@@ -798,8 +798,8 @@ body.with-sidebar .page-header {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   PORTRAIT LIGHTBOX — wired by scripts/nav.js
-   Any .portrait-frame holding an image becomes click-to-expand.
+   IMAGE LIGHTBOX — scripts/lightbox.js (player, FIA and DM pages)
+   Every image can be clicked to view full size; frames also get a label.
    ══════════════════════════════════════════════════════════════ */
 .portrait-frame.cae-expandable {
   cursor: pointer;
@@ -1074,3 +1074,7 @@ body.with-sidebar .page-header {
   color: var(--text); pointer-events: none;
 }
 .nav-tip[hidden] { display: none; }
+
+/* Any image that expands (scripts/lightbox.js). */
+img.cae-zoomable { cursor: zoom-in; }
+img.cae-zoomable:focus-visible { outline: 1px solid var(--gold); outline-offset: 3px; }
