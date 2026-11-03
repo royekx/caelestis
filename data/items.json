@@ -52,7 +52,7 @@
         "name": "Saerthe's Miniature Spelljamming Ship",
         "type": "item",
         "slug": "saerthes-miniature-ship",
-        "url": "inventory/entries/saerthes-miniature-ship.html"
+        "url": "registry/dossiers/saerthe-abizjn.html#saerthes-miniature-ship"
       },
       {
         "id": "PC-647haWGJ",
@@ -170,6 +170,7 @@
     "type": "item",
     "slug": "mirts-wardrobe",
     "name": "Mirt's Wardrobe",
+    "homeId": "LOC-Jd5cW7nK",
     "fields": {
       "Type": "Magical portal object",
       "Held By": "Mirt's Quarters",
@@ -205,7 +206,7 @@
     "linked": [
       "LOC-Cw8kM4vB"
     ],
-    "url": "inventory/entries/mirts-wardrobe.html",
+    "url": "navigation-records/mirts-quarters.html#mirts-wardrobe",
     "links": [
       {
         "id": "LOC-Jd5cW7nK",
@@ -242,6 +243,7 @@
     "type": "item",
     "slug": "crated-centipede-creature",
     "name": "Crated Centipede Creature",
+    "homeId": "QST-9dK3wR7n",
     "fields": {
       "Type": "Living clue / evidence",
       "Held By": "Mirt's Quarters",
@@ -269,7 +271,7 @@
     "linked": [
       "QST-7hN4kV2m"
     ],
-    "url": "inventory/entries/crated-centipede-creature.html",
+    "url": "quests/the-caelestis-burglaries.html#crated-centipede-creature",
     "links": [
       {
         "id": "QST-9dK3wR7n",
@@ -292,6 +294,7 @@
     "type": "item",
     "slug": "saerthes-miniature-ship",
     "name": "Saerthe's Miniature Spelljamming Ship",
+    "homeId": "NPC-Zx4Bn7Lq",
     "fields": {
       "Type": "Miniature vessel",
       "Held By": null,
@@ -320,7 +323,7 @@
       "NPC-Zx4Bn7Lq",
       "ITM-2pQ7vHm9"
     ],
-    "url": "inventory/entries/saerthes-miniature-ship.html",
+    "url": "registry/dossiers/saerthe-abizjn.html#saerthes-miniature-ship",
     "links": [
       {
         "id": "ITM-2pQ7vHm9",
@@ -357,6 +360,7 @@
     "type": "item",
     "slug": "vocath-arcane-rod",
     "name": "Vocath Arcane Rod",
+    "homeId": "QST-9dK3wR7n",
     "fields": {
       "Type": "Arcane device",
       "Held By": "Saerthe Abizjn",
@@ -386,7 +390,7 @@
     "linked": [
       "NPC-Mw6kT2vn"
     ],
-    "url": "inventory/entries/vocath-arcane-rod.html",
+    "url": "quests/the-caelestis-burglaries.html#vocath-arcane-rod",
     "links": [
       {
         "id": "NPC-Mw6kT2vn",
@@ -409,6 +413,7 @@
     "type": "item",
     "slug": "marked-crate",
     "name": "Marked Crate at the Sky Dock",
+    "homeId": "QST-9dK3wR7n",
     "fields": {
       "Type": "Suspicious cargo",
       "Held By": "Sky Dock",
@@ -436,7 +441,7 @@
     "linked": [
       "NPC-Mw6kT2vn"
     ],
-    "url": "inventory/entries/marked-crate.html",
+    "url": "quests/the-caelestis-burglaries.html#marked-crate",
     "links": [
       {
         "id": "NPC-Mw6kT2vn",
@@ -758,6 +763,7 @@
     "type": "item",
     "slug": "mikens-sending-stone",
     "name": "Miken's Sending Stone",
+    "homeId": "NPC-7wK4mB9x",
     "fields": {
       "Type": "Sending stone",
       "Held By": "Miken",
@@ -784,7 +790,7 @@
     "linked": [
       "NPC-7wK4mB9x"
     ],
-    "url": "inventory/entries/mikens-sending-stone.html",
+    "url": "registry/dossiers/miken.html#mikens-sending-stone",
     "links": [
       {
         "id": "NPC-7wK4mB9x",

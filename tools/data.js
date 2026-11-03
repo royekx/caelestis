@@ -75,6 +75,17 @@ const ONLY = { number: ['session'], date: ['session'], kind: ['location', 'quest
   giverId: ['quest'], homeId: ['item'], objectives: ['quest'], rewards: ['quest'] };
 // What a giver may be.
 const GIVERS = ['npc', 'pc', 'faction'];
+// Inventory is what the crew owns: an item held by one of the six cadets or
+// by the crew's ship. Anything else is a notable item on the page of the
+// record its homeId names, which may be any of these.
+const CREW_SHIP = 'LOC-Rp7kW4vn';   // the tyrant ship
+const HOMES = ['npc', 'faction', 'location', 'quest'];
+function crewHeld(item, sets) {
+  const h = (item.fields['Held By'] || '').toLowerCase();
+  if (!h) return false;
+  const ship = sets.locations.find(l => l.id === CREW_SHIP);
+  return sets.pcs.some(p => p.name.toLowerCase() === h) || !!(ship && ship.name.toLowerCase() === h);
+}
 // A voyage's rough in-game date in Fleet time: cycle.kindling.ember, or a span
 // of two such dates joined by an en dash ("1491.7.3–1491.7.12"). Sixteen
 // kindlings to a cycle, about thirty embers to a kindling.
@@ -427,8 +438,15 @@ const STATS = {
 const SUBTITLE = { pc: 'Player Concept (as known)', npc: 'Role (as known)',
   faction: 'Type', location: 'Type', item: 'Type' };
 
-function checkPage(r, err, voyages) {
+function checkPage(r, err, voyages, items) {
   const at = r.url;
+  // A notable item lives on its home's page; checkNotable reads it there.
+  // Its retired ledger page stays gone and the path is never reused.
+  if (r.type === 'item' && r.homeId) {
+    const old = `${SETS.find(s => s.type === 'item').dir}/${r.slug}.html`;
+    if (exists(old)) err(`${old}: ${r.name} is a notable item on ${at.split('#')[0]}; its ledger page is retired`);
+    return;
+  }
   if (!exists(at)) return err(`${r.id} ${r.name}: page ${at} does not exist`);
   const src = fs.readFileSync(path.join(ROOT, at), 'utf8');
   const differs = (what, shown, want) => { if (shown !== want) err(`${at}: ${what} differs — ${diffAt(shown, want)}`); };
@@ -546,6 +564,8 @@ function checkPage(r, err, voyages) {
     if (shown.join() !== want.join()) err(`${at}: carried items are [${shown.join(', ')}], record gives [${want.join(', ')}]`);
   }
 
+  if (HOMES.includes(r.type)) checkNotable(r, src, at, items, voyages, err);
+
   if (r.type === 'location' && r.within && r.within.length) {
     const w = region(src, 'within');
     const shown = w ? matches(/class="stub-chip"[^>]*>([\s\S]*?)<\/(?:a|span)>/g, w).map(x => text(x[1])) : [];
@@ -614,6 +634,56 @@ function checkPage(r, err, voyages) {
   }
 }
 
+// Notable Items: the panel (data-field="notable") on a dossier, place,
+// faction or quest page. Every item whose homeId names the record has its
+// entry here: li.loot-item.is-notable, id = the item's slug, data-record = its
+// id, then its name, its Type, its player overview and the voyage the crew
+// first saw it. Alongside, one linked row each for the other items the
+// record touches: on a quest the items it links, elsewhere the items its
+// Held By names. A record with neither has no panel.
+function checkNotable(r, src, at, items, voyages, err) {
+  const homed = items.filter(i => i.homeId === r.id);
+  const touched = r.type === 'quest' ? (r.links || []).filter(l => l.type === 'item').map(l => items.find(i => i.id === l.id))
+    : (r.items || []).map(s => items.find(i => i.id === s.id));
+  // The crew's own items (the ship's included) are Inventory's, never a row here.
+  const others = touched.filter(i => i && i.homeId !== r.id && (r.type === 'quest' || i.homeId));
+  const panel = elements(src, 'div', o => /\bdata-field="notable"/.test(o))[0];
+  if (!panel) { if (homed.length || others.length) err(`${at}: no Notable Items panel (data-field="notable"); the record gives ${homed.concat(others).map(i => i.name).join(', ')}`); return; }
+  const rows = elements(panel.inner, 'li', hasClass('loot-item'));
+  const full = rows.filter(x => hasClass('is-notable')(x.open)), linked = rows.filter(x => !hasClass('is-notable')(x.open));
+  const count = /class="panel-count"[^>]*>([\s\S]*?)<\/span>/.exec(panel.inner);
+  if (!count || text(count[1]) !== String(rows.length)) err(`${at}: Notable Items counts ${count ? text(count[1]) : 'nothing'}, the panel lists ${rows.length}`);
+  const ids = full.map(x => (/\bid="([^"]+)"/.exec(x.open) || [])[1] || '?');
+  const slugs = a => a.slice().sort().join(', ') || 'none';
+  if (slugs(ids) !== slugs(homed.map(i => i.slug))) err(`${at}: Notable Items holds entries for ${slugs(ids)}; the record homes ${slugs(homed.map(i => i.slug))} here`);
+  full.forEach((x, n) => {
+    const i = homed.find(h => h.slug === ids[n]);
+    if (!i) return;
+    const where = `${at}: the ${i.slug} entry`;
+    const rec = /\bdata-record="([^"]+)"/.exec(x.open);
+    if (!rec || rec[1] !== i.id) err(`${where}: data-record is ${rec ? rec[1] : 'missing'}, the record is ${i.id}`);
+    const part = cls => { const e = elements(x.inner, cls === 'loot-desc' ? 'p' : 'span', hasClass(cls))[0]; return e ? e.inner : null; };
+    if (text(part('loot-name') || '') !== plain(i.name)) err(`${where}: name reads "${text(part('loot-name') || '')}", record says "${i.name}"`);
+    if (text(part('loot-note') || '') !== plain(i.fields.Type || '')) err(`${where}: note reads "${text(part('loot-note') || '')}", record Type is "${i.fields.Type}"`);
+    const desc = text(part('loot-desc') || ''), want = plain(i.fields['Overview (Player)'] || '');
+    if (desc !== want) err(`${where}: overview differs — ${diffAt(desc, want)}`);
+    const seen = part('loot-seen'), first = appearances(i)[0];
+    const wantSeen = first ? `First seen ${firstSeenLabel(i)}` : '';
+    if (text(seen || '') !== wantSeen) err(`${where}: reads "${text(seen || '')}", record gives "${wantSeen}"`);
+    const a = seen && /href="([^"]+)"/.exec(seen), v = first && voyages.get(first.number);
+    if (v && (!a || resolveFrom(at, a[1]) !== v.url)) err(`${where}: First seen should link ${v.url}`);
+  });
+  const hrefs = linked.map(x => { const a = /<a[^>]*class="loot-link"[^>]*href="([^"]+)"/.exec(x.inner); return a ? resolveFrom(at, a[1]) : '?'; });
+  if (slugs(hrefs) !== slugs(others.map(i => i.url))) err(`${at}: Notable Items links ${slugs(hrefs)}; the record gives ${slugs(others.map(i => i.url))}`);
+  linked.forEach((x, n) => {
+    const i = others.find(o => o.url === hrefs[n]);
+    if (!i) return;
+    const nm = /class="loot-name"[^>]*>([\s\S]*?)<\/span>/.exec(x.inner), nt = /class="loot-note"[^>]*>([\s\S]*?)<\/span>/.exec(x.inner);
+    if (!nm || text(nm[1]) !== plain(i.name)) err(`${at}: the Notable Items row for ${i.slug} reads "${nm ? text(nm[1]) : ''}", record says "${i.name}"`);
+    if (!nt || text(nt[1]) !== plain(i.fields.Type || '')) err(`${at}: the Notable Items row for ${i.slug} notes "${nt ? text(nt[1]) : ''}", record Type is "${i.fields.Type}"`);
+  });
+}
+
 // ── registers ──────────────────────────────────────────────────────────────
 // Each index page repeats a little of every record. A detail page corrected
 // without its register row is the commonest way the site contradicts itself.
@@ -663,6 +733,18 @@ function checkIndex(set, recs, err) {
       if (shown !== want) err(`${p}: ${r.slug} shows progress ${shown}, record gives ${want}`);
     }
   });
+
+  // Inventory lists what the crew owns and nothing else, every item of it,
+  // and its counts say so. recs is already the crew's items.
+  if (set.key === 'items') {
+    matches(/<a class="ent-row" href="([^"]+)">/g, src).forEach(m => {
+      if (!resolve(m[1])) err(`${p}: lists ${m[1]}, which is not an item the crew holds`);
+    });
+    const all = /data-class="all">[^<]*<span class="board-count">(\d+)<\/span>/.exec(src);
+    if (!all || Number(all[1]) !== recs.length) err(`${p}: All Items counts ${all ? all[1] : 'nothing'}, the crew holds ${recs.length}`);
+    const rc = /class="result-count">(\d+) on record</.exec(src);
+    if (!rc || Number(rc[1]) !== recs.length) err(`${p}: the result line reads ${rc ? rc[1] : 'nothing'}, the crew holds ${recs.length}`);
+  }
 
   recs.forEach(r => {
     const rel = path.posix.relative(dir, r.url);
@@ -1211,6 +1293,15 @@ function check() {
     Object.keys(r.fields).forEach(k => {
       if (typeof r.fields[k] === 'string') stacked(r.fields[k]).forEach(s => warn(`${r.id} ${r.name} [${k}]: stacked negation — "${s.slice(0, 90)}"`));
     });
+    if (r.id.startsWith('ITM-')) {
+      const own = crewHeld(r, sets), h = r.homeId ? byId.get(r.homeId) : null;
+      if (own && r.homeId) err(`${r.id} ${r.name}: held by ${r.fields['Held By']}, so it is the crew's and belongs in Inventory; drop its homeId`);
+      if (!own && !r.homeId) err(`${r.id} ${r.name}: the crew does not hold it, so it needs a homeId naming the page that carries it`);
+      if (r.homeId && !h) err(`${r.id} ${r.name}: homeId ${r.homeId} does not exist`);
+      else if (h && !HOMES.includes(h.type)) err(`${r.id} ${r.name}: home ${h.id} is a ${h.type}; a home is a character, faction, place or quest`);
+      else if (h && !(r.linked || []).includes(h.id) && !(h.linked || []).includes(r.id) && (r.fields['Held By'] || '').toLowerCase() !== h.name.toLowerCase())
+        err(`${r.id} ${r.name}: home ${h.name} neither holds it nor links it`);
+    }
     if (r.id.startsWith('ITM-') && r.fields['Held By']) {
       const h = r.fields['Held By'].toLowerCase();
       if (!recs.some(x => /^(PC|NPC|LOC)-/.test(x.id) && x.name.toLowerCase() === h))
@@ -1233,8 +1324,9 @@ function check() {
   // 5. pages and registers show what the record says
   const guarded = (what, fn) => { try { fn(); } catch (e) { err(`${what}: could not be checked — ${e.message}`); } };
   const voyages = new Map(fresh.sessions.map(v => [v.number, v]));
-  all(fresh).forEach(r => guarded(r.url, () => checkPage(r, err, voyages)));
-  SETS.forEach(s => guarded(s.index, () => checkIndex(s, fresh[s.key], err)));
+  all(fresh).forEach(r => guarded(r.url, () => checkPage(r, err, voyages, fresh.items)));
+  SETS.forEach(s => guarded(s.index, () => checkIndex(s,
+    s.key === 'items' ? fresh.items.filter(i => crewHeld(i, fresh)) : fresh[s.key], err)));
   guarded('links', () => checkLinks(err));
   guarded('styles', () => checkStyles(err));
   guarded('player pages', () => checkPlayer(err));
