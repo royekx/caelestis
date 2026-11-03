@@ -14,7 +14,6 @@
     "prime/crew",
     "prime/timeline",
     "restricted",
-    "hub.html",
     "index.html",
     "voyages",
     "registry",
@@ -895,6 +894,11 @@
       "old": "assets/fleet-device.svg",
       "new": "assets/fleet-emblem.svg",
       "link": true
+    },
+    {
+      "old": "hub.html",
+      "new": "retired: the player home is the Current Bearing, voyages/bearings/index.html; the path is never reused",
+      "link": true
     }
   ],
   "allow": [
@@ -913,7 +917,6 @@
   "scan": [
     "prime",
     "restricted",
-    "hub.html",
     "index.html",
     "voyages",
     "registry",

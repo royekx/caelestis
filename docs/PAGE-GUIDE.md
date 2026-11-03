@@ -712,9 +712,10 @@ without JS they stack, which is also what Pagefind reads.
   (`sessions.json` `date`, cycle.kindling.ember). The voyage page header shows
   it; the command bar, the current bearing and the Fleet Time page show where
   the latest voyage ends.
-- **Navigation.** The player home is `hub.html`; the sidebar logo points
-  there, and the gate (`index.html`) is linked only from the hub footer. The
-  sidebar groups in `scripts/nav.js` match the hub's bands.
+- **Navigation.** The player home is the Current Bearing
+  (`voyages/bearings/index.html`): the gate (`index.html`) enters there and
+  the sidebar logo points there. The sidebar in `scripts/nav.js` is the one
+  list of sections, ordered by how often the crew reaches for each.
 
 ## 9. The FIA (`restricted/`)
 

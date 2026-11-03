@@ -51,31 +51,31 @@
     {
       label: 'Crew Operations',
       items: [
-        { key: 'bearings',      label: 'Current Bearing', path: 'voyages/bearings/index.html'        },
-        { label: 'Plot the Next Voyage', href: 'https://rallly.co/invite/B8uUYlcm4oKB' },
-        { label: 'Take the Helm',        href: 'https://royek.foundryserver.com/game'  }
+        { key: 'bearings',      label: 'Current Bearing', path: 'voyages/bearings/index.html', tip: 'Where the crew stands, what happened last, and what comes next.'        },
+        { label: 'Take the Helm',        href: 'https://royek.foundryserver.com/game', tip: 'Join the game table in Foundry.'  },
+        { label: 'Plot the Next Voyage', href: 'https://rallly.co/invite/B8uUYlcm4oKB', tip: 'Mark the days you can play next.' }
       ]
     },
     {
       label: 'Crew Intel',
       items: [
-        { key: 'voyages',            label: 'Voyages',            path: 'voyages/index.html'            },
-        { key: 'quests',             label: 'Quest Board',        path: 'quests/index.html'             },
-        { key: 'crew-manifest',      label: 'Manifest',           path: 'registry/crew-manifest/index.html' },
-        { key: 'dossiers',           label: 'Dossiers',           path: 'registry/dossiers/index.html'  },
-        { key: 'factions',           label: 'Factions',           path: 'registry/factions/index.html'  },
-        { key: 'navigation-records', label: 'Navigation Records', path: 'navigation-records/index.html' },
-        { key: 'vessels',            label: 'Vessels',            path: 'vessels/index.html'            },
-        { key: 'inventory',          label: 'Inventory',          path: 'inventory/index.html'          },
-        { key: 'logs',               label: 'Logs',               path: 'voyages/logs/index.html'       }
+        { key: 'voyages',            label: 'Voyages',            path: 'voyages/index.html', tip: 'Every voyage on record: the recording, a quick account and the whole story.'            },
+        { key: 'quests',             label: 'Quest Board',        path: 'quests/index.html', tip: 'Open quests and threads, and the next step on each.'             },
+        { key: 'logs',               label: 'Logs',               path: 'voyages/logs/index.html', tip: 'The crew\u2019s own notes and running theories.'       },
+        { key: 'crew-manifest',      label: 'Manifest',           path: 'registry/crew-manifest/index.html', tip: 'The crew\u2019s personnel files, with each cadet\u2019s private tabs.' },
+        { key: 'dossiers',           label: 'Dossiers',           path: 'registry/dossiers/index.html', tip: 'Everyone the crew has met or heard named.'  },
+        { key: 'factions',           label: 'Factions',           path: 'registry/factions/index.html', tip: 'The powers and organizations the crew has dealt with.'  },
+        { key: 'inventory',          label: 'Inventory',          path: 'inventory/index.html', tip: 'What the crew carries, found or was given.'          },
+        { key: 'vessels',            label: 'Vessels',            path: 'vessels/index.html', tip: 'Ships the crew has crewed, boarded or flown, with ship sheets.'            },
+        { key: 'navigation-records', label: 'Navigation Records', path: 'navigation-records/index.html', tip: 'Charted systems and the places the crew has been.' }
       ]
     },
     {
       label: 'Fleet Records',
       items: [
-        { key: 'spelljammer-nexus',  label: 'Spelljammer Nexus',  path: 'spelljammer-nexus/index.html'  },
-        { key: 'protocols',          label: 'Fleet Protocols',    path: 'protocols/index.html'          },
-        { key: 'search',             label: 'S.E.A.R.C.H.',       path: 'search/index.html'             }
+        { key: 'spelljammer-nexus',  label: 'Spelljammer Nexus',  path: 'spelljammer-nexus/index.html', tip: 'The Academy\u2019s library on the Fleet, the drift and how ships sail it.'  },
+        { key: 'protocols',          label: 'Fleet Protocols',    path: 'protocols/index.html', tip: 'Manuals for how things are done aboard: ship rules and crew roles.'          },
+        { key: 'search',             label: 'S.E.A.R.C.H.',       path: 'search/index.html', tip: 'Search every record the crew holds.'             }
       ]
     }
   ];
@@ -189,13 +189,20 @@
 
   // ── Build HTML ────────────────────────────────────────────────────────────
 
+  // A section's one-line description rides on its link as data-tip and shows
+  // as a tooltip on hover or keyboard focus (wired below, after the nav is in
+  // the page). The sidebar scrolls, so the tip is one fixed element on <body>.
+  function tipAttr(s) {
+    return s.tip ? ' data-tip="' + s.tip.replace(/"/g, '&quot;') + '"' : '';
+  }
+
   var sectionLinks = groups.map(function (g) {
     var links = g.items.map(function (s) {
       if (s.href) {
-        return '<a class="side-nav-ext-link" href="' + s.href + '" target="_blank" rel="noopener">' +
+        return '<a class="side-nav-ext-link" href="' + s.href + '" target="_blank" rel="noopener"' + tipAttr(s) + '>' +
                s.label + ' ' + EXT_ICON + '</a>';
       }
-      return '<a class="side-nav-link" href="' + base + s.path + '" data-section="' + s.key + '">' +
+      return '<a class="side-nav-link" href="' + base + s.path + '" data-section="' + s.key + '"' + tipAttr(s) + '>' +
              s.label + '</a>';
     }).join('');
     return '<div class="side-nav-group-label">' + g.label + '</div>' + links;
@@ -209,8 +216,8 @@
     '</button>',
     '<nav class="side-nav" id="js-side-nav">',
     '  <div class="side-nav-head">',
-    '    <a class="side-nav-logo" href="' + base + 'hub.html">Caelestis</a>',
-    '    <a class="side-nav-hub" href="' + base + 'hub.html">Terminal Hub</a>',
+    '    <a class="side-nav-logo" href="' + base + 'voyages/bearings/index.html">Caelestis</a>',
+    '    <a class="side-nav-hub" href="' + base + 'voyages/bearings/index.html">Fleet Terminal</a>',
     '  </div>',
     '  <div class="side-nav-body">',
     sectionLinks,
@@ -279,6 +286,45 @@
     if (pathname.indexOf(dir) !== -1 && dir.length > activeLen) { activeLink = link; activeLen = dir.length; }
   });
   if (activeLink) activeLink.classList.add('active');
+
+  // ── Section tooltips ──────────────────────────────────────────────────────
+  // Hover (after a short pause) or keyboard focus on a sidebar link shows its
+  // data-tip beside it. Touch screens skip it: a tap navigates.
+  var tipEl = document.createElement('div');
+  tipEl.className = 'nav-tip';
+  tipEl.id = 'js-nav-tip';
+  tipEl.setAttribute('role', 'tooltip');
+  tipEl.hidden = true;
+  document.body.appendChild(tipEl);
+  var tipTimer = null;
+  function showTip(link) {
+    var r = link.getBoundingClientRect();
+    tipEl.textContent = link.dataset.tip;
+    tipEl.hidden = false;
+    tipEl.style.left = (r.right + 10) + 'px';
+    tipEl.style.top = Math.max(8, Math.min(r.top + r.height / 2 - tipEl.offsetHeight / 2,
+      window.innerHeight - tipEl.offsetHeight - 8)) + 'px';
+    link.setAttribute('aria-describedby', 'js-nav-tip');
+  }
+  function hideTip(link) {
+    clearTimeout(tipTimer);
+    tipEl.hidden = true;
+    if (link) link.removeAttribute('aria-describedby');
+  }
+  var canHover = window.matchMedia && window.matchMedia('(hover: hover)').matches;
+  document.querySelectorAll('.side-nav [data-tip]').forEach(function (link) {
+    if (canHover) {
+      link.addEventListener('mouseenter', function () {
+        clearTimeout(tipTimer);
+        tipTimer = setTimeout(function () { showTip(link); }, 350);
+      });
+      link.addEventListener('mouseleave', function () { hideTip(link); });
+    }
+    link.addEventListener('focus', function () { showTip(link); });
+    link.addEventListener('blur', function () { hideTip(link); });
+  });
+  if (nav0()) nav0().addEventListener('scroll', function () { hideTip(); });
+  function nav0() { return document.getElementById('js-side-nav'); }
 
   // ── Mobile toggle ─────────────────────────────────────────────────────────
 

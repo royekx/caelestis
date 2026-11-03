@@ -21,7 +21,7 @@ Do not write to the repo before the first or to the record before the second.
 
 | Side | Folders |
 |---|---|
-| Player (root) | `index.html` (the gate), `hub.html` (the terminal, the player home), `voyages/` (voyage pages; `bearings/`, the current bearing, per-voyage bearings and the timeline; `logs/`, the Crew Logs), `registry/` (the people sections, each with its own index, nav entry and section filter: `crew-manifest/`, `dossiers/`, `factions/`), `navigation-records/`, `vessels/`, `quests/`, `inventory/` (`entries/`, `items/`), `protocols/` (Fleet Protocols: manuals for how things are done), `spelljammer-nexus/`, `search/`. The crew companions are tabs on their crew pages (`#aspects`, `#stellar-chart`, `#wayfinder-path`) |
+| Player (root) | `index.html` (the gate, which enters at the Current Bearing), `voyages/` (voyage pages; `bearings/`, the Current Bearing and player home, per-voyage bearings and the timeline; `logs/`, the Crew Logs), `registry/` (the people sections, each with its own index, nav entry and section filter: `crew-manifest/`, `dossiers/`, `factions/`), `navigation-records/`, `vessels/`, `quests/`, `inventory/` (`entries/`, `items/`), `protocols/` (Fleet Protocols: manuals for how things are done), `spelljammer-nexus/`, `search/`. The crew companions are tabs on their crew pages (`#aspects`, `#stellar-chart`, `#wayfinder-path`) |
 | FIA | `restricted/`: the Fleet Intelligence Archive, gated, its own chrome and index |
 | DM | `prime/`: the DM wiki, gated |
 | Record | `data/` (player-safe), `prime/data/` (DM layer) |

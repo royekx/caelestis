@@ -1062,3 +1062,15 @@ body.with-sidebar .page-header {
   .cb-search-tag { display: none; }
   .cb-search input { font-size: 0.963rem; }
 }
+
+/* Sidebar tooltip: one line on what a section holds (scripts/nav.js). */
+.nav-tip {
+  position: fixed; z-index: 400; max-width: 260px;
+  padding: 0.5rem 0.75rem;
+  background: #0b0916;
+  border: 1px solid var(--gold-rule); border-left: 2px solid var(--gold-dim);
+  border-radius: 2px; box-shadow: 0 6px 24px rgba(0,0,0,0.55);
+  font-family: 'Crimson Pro', serif; font-size: 0.95rem; line-height: 1.4;
+  color: var(--text); pointer-events: none;
+}
+.nav-tip[hidden] { display: none; }
