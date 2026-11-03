@@ -596,12 +596,19 @@ divider · Connections
 ? is left out when the record has no value. A value that names a record links
 the name to its page (in "Caelestis Academy (cadet)" the link is Caelestis
 Academy). An infobox link never goes to a quest, and a row that names people
-(Crew, Given by, Involves, Known figures, Known aboard) links only to a dossier,
+(To the crew, Given by, Involves, Known figures, Known aboard) links only to a dossier,
 a crew page or a faction; `check` enforces both.
+
+**Names in the prose link.** On a record page, the first time the prose (the
+overview, the voyage log, the wiki sections) names another record with a page,
+the name links to it, once per page. A crew member is named by first name
+("Tumak"), and the short forms in `tools/link-names.js` count ("Ryeback").
+"Caelestis" alone stays plain: it names the ship, the academy and the sector.
+`node tools/link-names.js --fix` adds the links; `check` lists any missing.
 
 | Page | Rows |
 |---|---|
-| Dossier | Role · Crew · Affiliation? · Gender? · Status · First seen · Last seen |
+| Dossier | Role · To the crew · Affiliation? · Gender? · Status · First seen · Last seen |
 | Crew manifest | Species · Class · Specialisation? · Station · Clearance · Status · First voyage · Last voyage |
 | Faction | Type · Relationship · Status · First seen · Last seen |
 | Navigation record | Type · Located in? · Known figures? (Known aboard, on a vessel) · Status · First seen · Last seen |

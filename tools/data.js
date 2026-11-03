@@ -421,7 +421,7 @@ const STATS = {
   pc: [['Species', 'Species'], ['Class', 'Class'], ['Specialisation', 'Specialisation', 'optional'],
     ['Station', 'Station'], ['Clearance', 'Clearance'], ['Status', 'Status'],
     ['First voyage', voyageEnd('first')], ['Last voyage', voyageEnd('last')]],
-  npc: [['Role', 'Role (as known)'], ['Crew', 'Party Relationship'], ['Affiliation', 'Affiliation(s)', 'optional'],
+  npc: [['Role', 'Role (as known)'], ['To the crew', 'Party Relationship'], ['Affiliation', 'Affiliation(s)', 'optional'],
     ['Gender', 'Gender', 'optional'], ['Status', 'Status'], ['First seen', firstSeenLabel], ['Last seen', lastSeenLabel]],
   faction: [['Type', 'Type'], ['Relationship', 'Party Relationship'], ['Status', 'Status'],
     ['First seen', firstSeenLabel], ['Last seen', lastSeenLabel]],
@@ -512,7 +512,7 @@ function checkPage(r, err, voyages, items) {
       else shown.forEach(([k, v], i) => { if (v !== want[i][1]) err(`${at}: ${k} reads "${v}", record gives "${want[i][1]}"`); });
       // A link in an infobox row names a record, never a quest; a row that
       // names people links only to dossiers, the crew manifest or factions.
-      const PEOPLE = ['Crew', 'Given by', 'Involves', 'Known figures', 'Known aboard'];
+      const PEOPLE = ['To the crew', 'Given by', 'Involves', 'Known figures', 'Known aboard'];
       matches(/class="stat-key"[^>]*>([\s\S]*?)<\/span>\s*<span class="stat-val[^"]*"[^>]*>([\s\S]*?)<\/span>\s*<\/div>/g, stats).forEach(m => {
         const key = text(m[1]);
         matches(/href="([^"]+)"/g, m[2]).forEach(h => {
@@ -1505,6 +1505,10 @@ function check() {
     });
   });
   guarded('voyages/bearings/', () => checkBearings(fresh, latest, err));
+  // On a record page, the first prose mention of another record links to it
+  // (tools/link-names.js; --fix adds the links).
+  guarded('names in prose', () => require('./link-names').run(false).forEach(f =>
+    err(`${f.rel}: "${f.name}" is named in the prose without a link to ${f.url}; node tools/link-names.js --fix`)));
 
   // 7. the DM layer
   const dv = dm.voyages.slice().sort((a, b) => a.number - b.number);

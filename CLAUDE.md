@@ -26,7 +26,7 @@ Do not write to the repo before the first or to the record before the second.
 | DM | `prime/`: the DM wiki, gated |
 | Record | `data/` (player-safe), `prime/data/` (DM layer) |
 | Shared | `assets/`, `styles/`, `scripts/` (what player pages load), `prime/scripts/` (DM scripts) |
-| Process, not deployed | `tools/` (build and check scripts: `data.js`, `terms.js`, `visual.js`, `survey.js`, `eye-fit.js`; `search.js`, a per-section search box no page loads), `docs/`, `prime/working/`, `CLAUDE.md` |
+| Process, not deployed | `tools/` (build and check scripts: `data.js`, `terms.js`, `link-names.js`, `visual.js`, `survey.js`, `eye-fit.js`; `search.js`, a per-section search box no page loads), `docs/`, `prime/working/`, `CLAUDE.md` |
 
 **DM side today**: `campaign/` (index, `voyages/`, `plot-hooks.html`), `opposition/` (`vecna.html`, `vthorama.html`), `tracker/`, `timeline/`, `crew/`, `dossiers/`, `factions/`, `statblocks/`, `cosmology/`, `locations/`, `vessels/`, `artifacts/`, `chart/`, `rules/`, `glossary/`, `principles.html`, `hub.html`, `search.html`.
 
@@ -116,6 +116,7 @@ url links parent giver children within items progress`, plus `data/index.json`,
 ```bash
 node tools/data.js derive   # after editing the record: fills derived fields
 node tools/data.js check    # record, DM layer and pages agree, every local link and anchor resolves, player pages keep the boundary; 0 errors before a pull request
+node tools/link-names.js    # record pages: the first prose mention of a record links to it; --fix adds the links (check runs it)
 node tools/terms.js         # retired terms, decision voice, moved paths on prime/, restricted/ and the player site, and moved script paths in the process docs; rules in prime/working/terms.json
 node tools/visual.js capture <dir> [--player] / diff <before> <after>   # screenshots and pixel diff; usage in its header
 ```

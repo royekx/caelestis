@@ -58,6 +58,12 @@ html { overflow-x: clip; }
 .entry-body { font-size: 1.04rem; line-height: 1.78; color: var(--text); margin-top: 0.5rem; }
 .entry-body p { margin-bottom: 0.85rem; }
 .entry-body p:last-child { margin-bottom: 0; }
+/* A name in the prose that has its own page links to it, as on the bearing. */
+.entry-body a {
+  color: var(--ice); text-decoration: underline;
+  text-decoration-color: var(--ice-dim); text-underline-offset: 0.15em;
+}
+.entry-body a:hover { color: var(--gold-light); }
 
 /* ── RECORD ──
    One card per voyage. The latest sits open; earlier ones collapse and
