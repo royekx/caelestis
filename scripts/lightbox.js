@@ -42,7 +42,10 @@
     box.className = 'cae-lightbox';
     box.setAttribute('role', 'dialog');
     box.setAttribute('aria-modal', 'true');
-    box.innerHTML = '<button class="cae-lightbox-close" type="button" aria-label="Close">Close ✕</button><img alt="">';
+    // The image sits in a frame with a small close button on its corner.
+    // The X, a click outside the image, or Escape all close it.
+    box.innerHTML = '<div class="cae-lightbox-frame"><img alt="">' +
+      '<button class="cae-lightbox-close" type="button" aria-label="Close image">\u2715</button></div>';
     document.body.appendChild(box);
     boxImg = box.querySelector('img');
     box.addEventListener('click', function (e) { if (e.target !== boxImg) close(); });
