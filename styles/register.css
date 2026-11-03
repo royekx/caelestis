@@ -786,6 +786,36 @@ img { max-width: 100%; }
 .railed > .account-tabs > .account-tab .account-tab-note { display: none; }
 .railed > .panels { min-width: 0; }
 .railed > .panels, .railed > .panels > * { border-radius: 12px; }
+/* A voyage's account by section (scripts/account-toc.js). The text sits
+   centred in its column; where the panel has the width, a Sections list
+   stands beside it and stays put while the text scrolls. */
+.account-panel { container-type: inline-size; }
+.account-main .narrative { margin-inline: auto; }
+.account-toc { display: none; }
+@container (min-width: 46rem) {
+  .account-body.has-toc {
+    display: grid; grid-template-columns: minmax(0, 1fr) 11rem;
+    gap: 0 2.2rem; align-items: start;
+  }
+  .account-toc {
+    display: block; position: sticky; top: 1.4rem;
+    padding-left: 1.2rem; border-left: 1px solid var(--gold-rule);
+  }
+}
+.account-toc-label {
+  margin-bottom: 0.6rem; font-family: 'Cinzel', serif; font-size: 0.7rem;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold);
+}
+.account-toc ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.15rem; }
+.account-toc a {
+  display: block; padding: 0.3rem 0 0.3rem 0.7rem; margin-left: calc(-0.7rem - 1px);
+  border-left: 2px solid transparent;
+  font-size: 0.93rem; line-height: 1.35; color: var(--text-muted); text-decoration: none;
+  transition: color .15s, border-color .15s;
+}
+.account-toc a:hover { color: var(--gold-light); }
+.account-toc a.is-current { color: var(--gold); border-left-color: var(--gold); }
+
 /* A voyage's account scrolls inside its panel, so its tabs stay in view.
    --cb-h is the command bar's height (nav.js). A phone scrolls the page. */
 @media (min-width: 900px) {
