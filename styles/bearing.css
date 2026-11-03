@@ -341,3 +341,19 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
   .bq { grid-template-columns: minmax(0, 1fr) auto; }
   .bq-bar { grid-column: 1 / -1; grid-row: 2; }
 }
+
+/* ── Before you sail as rows ──
+   Each group is a row: its label on the left, its items full width on the
+   right, one line each where the width allows. */
+.bearing-sail { flex-direction: column; gap: 0; padding-top: 0.4rem; padding-bottom: 0.5rem; }
+.sail-group {
+  width: 100%; min-width: 0;
+  display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0 1rem;
+  align-items: baseline; padding: 0.75rem 0;
+}
+.sail-group + .sail-group { border-top: 1px solid var(--gold-rule); }
+.sail-label { margin: 0; color: var(--gold); font-size: 0.74rem; letter-spacing: 0.16em; }
+.sail-list { gap: 0.35rem; }
+@media (max-width: 700px) {
+  .sail-group { grid-template-columns: minmax(0, 1fr); gap: 0.45rem; }
+}
