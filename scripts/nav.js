@@ -157,7 +157,7 @@
         (d.consequence ? '<p class="cb-conseq">' + d.consequence + '</p>' : '') +
         (quests ? '<div class="cb-row"><span class="cb-key">Quests</span><div class="cb-quests">' + quests + '</div></div>' : '') +
         (met ? '<div class="cb-row"><span class="cb-key">Met</span><div class="cb-chips">' + met + '</div></div>' : '') +
-        '<a class="cb-more" href="' + base + (L.bearing || 'voyages/bearings/index.html') + '">Full bearing and timeline \u203a</a>' +
+        '<a class="cb-more" href="' + base + (L.bearing || 'voyages/bearings/index.html') + '">Full bearing \u203a</a>' +
       '</div>';
 
     return '<div class="command-bar">' + search + ops + strip + detail + '</div>';
@@ -250,10 +250,17 @@
   // and given the column width itself (see .command-bar in caelestis.css).
   // On the hub the column is .hub and the title lives inside it, so the bar
   // goes under the title as before.
+  //
+  // A page opts out with data-no-command-bar on <body>. The bearing pages
+  // do: the bar's strip is a summary of the Current Bearing, so on the
+  // bearing itself it only repeats what the page shows in full.
   var head = document.querySelector('.hub-head');
   var col = document.querySelector('.content');
   var term = document.querySelector('.terminal-wrap');   // S.E.A.R.C.H. names its column differently
-  if (head) {
+  var noBar = document.body.hasAttribute('data-no-command-bar');
+  if (noBar) {
+    // no command bar on this page
+  } else if (head) {
     head.insertAdjacentHTML('afterend', buildCommandBar());
   } else if (col) {
     col.insertAdjacentHTML('beforebegin', buildCommandBar());

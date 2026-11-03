@@ -42,9 +42,9 @@ staging once Korey has read and accepted them.
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 4 | 18 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 20 | 3 | 2 | 24 |
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 11 | 2 | 0 | 0 |
-| Player pages | restricted/ and other player pages | 2 | 0 | 0 | 0 | 0 |
+| Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 12 | 3 | 0 | 1 |
-| **Total** |  | **126** | **155** | **46** | **2** | **54** |
+| **Total** |  | **126** | **156** | **46** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2278,6 +2278,12 @@ run decide, fix, drop, add.
 # Player pages
 
 Fixes to player-facing pages, including the Fleet Intelligence Archive (`restricted/`). These pages hold only what the crew could know; corrections must keep that boundary.
+
+### voyages/bearings/
+
+- **[later]** A player-side in-world timeline of key events
+  voyages/bearings/timeline.html is the seed: an unlinked page of key events by era. Not now.
+  src: Korey, 2026-11-02 (Current Bearing redesign)
 
 ### spelljammer-nexus/
 

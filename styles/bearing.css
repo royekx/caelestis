@@ -1,159 +1,382 @@
 /* ════════════════════════════════════════════════════════════════
-   bearing.css — the Current Bearing page.
+   bearing.css — the Current Bearing (voyages/bearings/index.html) and
+   the per-voyage bearing pages (voyage-NNN.html).
 
-   This CSS only ever existed inline in a one-off demo and was never
-   migrated when bearings/*.html shipped, so every bearing page
-   rendered as unstyled text. This is that migration, plus the fixes
-   the demo never got: minmax(0,1fr) tracks, min-width:0 on cards, and
-   the same overflow guards used everywhere else on the site.
+   The page is the voyage strip, then one --bg-card panel of stacked,
+   full-width sections, each a <details class="sec" open> whose summary
+   is its header: Last time (the voyage, its bullets and three folds),
+   Before you sail (three groups side by side on the --bg-raised band),
+   and, on the Current Bearing only, the Quest Board (a two-column grid).
+   A voyage page's Before you sail reads "Before you sailed" and is
+   ticked as later voyages settle it. scripts/bearing.js drives the
+   strip, the in-place swap and the remembered open state.
    ════════════════════════════════════════════════════════════════ */
 
+/* ── Voyage strip ──
+   One line, oldest voyage on the left, a dot per voyage with its number
+   and title beneath, and a dashed marker for the next voyage. It scrolls
+   sideways; the arrows step it, and the edges fade where stops are cut. */
+.bearing-strip {
+  display: flex; align-items: center; gap: 0.75rem;
+  margin: 0 0 1.4rem;
+}
+.bs-arrow {
+  flex: 0 0 32px; height: 32px; padding: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg-card); color: var(--gold-dim);
+  border: 1px solid var(--rule); border-radius: 0; cursor: pointer;
+  transition: color .18s, border-color .18s;
+}
+.bs-arrow svg { width: 12px; height: 12px; }
+.bs-arrow:hover:not([disabled]) { color: var(--gold-light); border-color: var(--gold-dim); }
+.bs-arrow:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
+.bs-arrow[disabled] { opacity: 0.35; cursor: default; }
+/* Without the script the arrows do nothing, so they stay hidden. */
+.bearing-strip:not(.is-live) .bs-arrow { visibility: hidden; }
+
+.bs-track {
+  flex: 1 1 auto; min-width: 0;
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  --fade-l: 0px; --fade-r: 0px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 var(--fade-l), #000 calc(100% - var(--fade-r)), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 var(--fade-l), #000 calc(100% - var(--fade-r)), transparent 100%);
+}
+.bs-track::-webkit-scrollbar { display: none; }
+.bs-track.fade-l { --fade-l: 2.5rem; }
+.bs-track.fade-r { --fade-r: 2.5rem; }
+
+.bs-list {
+  list-style: none; margin: 0; padding: 0.35rem 0 0.3rem;
+  display: flex; width: max-content; min-width: 100%;
+}
+.bs-list > li { flex: 0 0 170px; position: relative; }
+/* The line runs from each dot to the next one. */
+.bs-list > li::after {
+  content: ''; position: absolute; z-index: 0;
+  left: 4px; width: 100%; top: calc(0.35rem + 4px);
+  border-top: 1px solid var(--gold-rule);
+}
+.bs-list > li:last-child::after { display: none; }
+.bs-list > li:has(+ .is-next)::after { border-top-style: dashed; }
+
+.bs-stop {
+  display: block; position: relative; z-index: 1;
+  padding: 1.25rem 1rem 0.2rem 0;
+  text-decoration: none; color: var(--text-dim);
+}
+.bs-stop::before {
+  content: ''; position: absolute; left: 0; top: 0.35rem;
+  width: 9px; height: 9px; box-sizing: border-box; border-radius: 50%;
+  background: var(--bg-deep); border: 1px solid var(--text-muted);
+  transition: border-color .18s, background .18s;
+}
+.bs-num {
+  display: block; margin-bottom: 0.15rem;
+  font-family: 'Cinzel', serif; font-size: 0.68rem; letter-spacing: 0.14em;
+  color: var(--text-muted);
+}
+.bs-title { display: block; font-size: 0.95rem; line-height: 1.3; }
+a.bs-stop:not([aria-current]):hover .bs-title { color: var(--ice); }
+a.bs-stop:not([aria-current]):hover::before { border-color: var(--ice); }
+a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
+.bs-stop[aria-current] .bs-title { color: var(--text); font-weight: 700; }
+.bs-stop[aria-current] .bs-num { color: var(--gold); }
+.bs-stop[aria-current]::before {
+  background: var(--gold); border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-faint);
+}
+.is-next .bs-stop { color: var(--text-muted); font-style: italic; }
+.is-next .bs-stop::before { border-style: dashed; }
+
+/* ── The panel ── */
 .bearing {
-  display: grid; grid-template-columns: 1fr 215px; gap: 1.8rem; align-items: start;
+  background: var(--bg-card);
+  backdrop-filter: blur(9px); -webkit-backdrop-filter: blur(9px);
+  border: 1px solid var(--rule); border-radius: 0;
 }
-/* A grid item's automatic minimum is its min-content width, so one wide
-   child sizes the track rather than the track sizing the child. */
-.bearing > * { min-width: 0; }
-.panel {
-  background: var(--bg-card); border: 1px solid var(--rule);
-  border-radius: 12px; padding: 1.15rem 1.35rem 1.25rem; margin-bottom: 0.9rem;
-  min-width: 0;
-}
-.panel-head { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.9rem; }
-.panel-title {
-  font-family: 'Cinzel', serif; font-size: 0.812rem; letter-spacing: 0.18em;
-  text-transform: uppercase; color: var(--text-dim); white-space: nowrap;
-}
-.panel-head::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
-.panel-more {
-  font-family: 'Cinzel', serif; font-size: 0.695rem; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--ice-dim); text-decoration: none; white-space: nowrap;
-}
-.panel-more:hover { color: var(--ice); }
+.bearing-sec { min-width: 0; padding: 1.4rem 2rem 1.6rem; }
+.bearing-sec + .bearing-sec { border-top: 1px solid var(--rule); }
+/* A closed section is its header line only. */
+.bearing-sec:has(> .sec:not([open])) { padding-bottom: 1.4rem; }
 
-.here {
-  display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap;
-  padding: 1.15rem 1.35rem; margin-bottom: 0.9rem;
-  background: var(--bg-raised); border: 1px solid var(--rule); border-left: 3px solid var(--gold);
-  border-radius: 12px;
+/* A section's header is its toggle, with a chevron on the right. */
+.sec > .sec-head {
+  list-style: none; cursor: pointer; position: relative;
+  display: block; padding-right: 2.2rem;
 }
-.here-label {
-  font-family: 'Cinzel', serif; font-size: 0.695rem; letter-spacing: 0.16em;
-  text-transform: uppercase; color: var(--text-muted); white-space: nowrap;
+.sec > .sec-head::-webkit-details-marker { display: none; }
+.sec > .sec-head::after {
+  content: ''; position: absolute; right: 0.3rem; top: 0.55rem;
+  width: 8px; height: 8px;
+  border: solid var(--gold-dim); border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg); transition: transform .18s, border-color .18s;
 }
-.here-name {
-  font-family: 'Cinzel', serif; font-size: 1.28rem; font-weight: 700;
-  color: var(--text); letter-spacing: 0.02em; text-decoration: none;
-}
-.here-name:hover { color: var(--gold-light); }
-.here-sub { font-style: italic; color: var(--text-dim); font-size: 0.94rem; flex-basis: 100%; line-height: 1.55; }
+.sec:not([open]) > .sec-head::after { transform: rotate(-45deg); }
+.sec > .sec-head:hover::after { border-color: var(--gold-light); }
+.sec > .sec-head:focus-visible { outline: 2px solid var(--ice); outline-offset: 4px; }
+.sec[open] > .sec-head { margin-bottom: 1rem; }
 
-.last-title { font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
-.last-text { font-size: 0.97rem; line-height: 1.68; color: var(--text-dim); margin: 0 0 0.85rem; }
+.bearing-kicker {
+  display: block;
+  font-family: 'Cinzel', serif; font-size: 0.74rem; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--gold-dim); margin-bottom: 0.35rem;
+}
+.bearing-title {
+  font-family: 'Cinzel', serif; font-size: 1.35rem; font-weight: 700; line-height: 1.3;
+  color: var(--text); margin: 0;
+}
+.bearing-title a { color: inherit; text-decoration: none; }
+.bearing-title a:hover { color: var(--gold-light); }
+.bearing-title a span { color: var(--gold-dim); }
 
-.chip-row { display: flex; align-items: baseline; gap: 0.8rem; flex-wrap: wrap; }
-.chip-label {
-  font-family: 'Cinzel', serif; font-size: 0.671rem; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--text-muted); white-space: nowrap;
+/* On the Current Bearing, while a past voyage is showing: one line at the
+   top of the panel, with the way back. Added by scripts/bearing.js. */
+.bearing-showing {
+  display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; align-items: baseline;
+  padding: 0.6rem 2rem;
+  background: var(--bg-raised); border-bottom: 1px solid var(--gold-rule);
+  font-size: 0.95rem; font-style: italic; color: var(--text-dim);
 }
-.chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.bearing-return {
+  font-family: 'Cinzel', serif; font-style: normal; font-size: 0.74rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold); text-decoration: none;
+}
+.bearing-return:hover { color: var(--gold-light); }
 
-.q-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.6rem; }
-.q-card {
-  display: flex; flex-direction: column; gap: 0.4rem; min-width: 0;
-  padding: 0.85rem 1rem 0.9rem; text-decoration: none;
-  background: var(--bg-raised); border: 1px solid var(--rule); border-radius: 10px;
-  transition: border-color .18s;
+/* Links inside the column's prose. */
+.bearing-bullets a, .bearing-met a, .bearing-onward a {
+  color: var(--ice); text-decoration: underline;
+  text-decoration-color: var(--ice-dim); text-underline-offset: 0.15em;
 }
-.q-card:hover { border-color: var(--ice-dim); }
-.q-top { display: flex; align-items: baseline; gap: 0.7rem; }
-.q-name { font-family: 'Cinzel', serif; font-size: 0.92rem; font-weight: 700; color: var(--text); line-height: 1.3; }
-.q-card:hover .q-name { color: var(--ice); }
-.q-prog { margin-left: auto; font-family: 'Cinzel', serif; font-size: 0.766rem; color: var(--gold); white-space: nowrap; }
-.q-bar { height: 3px; border-radius: 999px; background: var(--rule); overflow: hidden; }
-.q-fill { display: block; height: 100%; background: var(--gold); }
-.q-next { font-size: 0.92rem; color: var(--text-dim); line-height: 1.4; }
-.q-next-label {
-  font-family: 'Cinzel', serif; font-size: 0.634rem; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--text-muted); margin-right: 0.35rem;
-}
+.bearing-bullets a:hover, .bearing-met a:hover, .bearing-onward a:hover { color: var(--gold-light); }
 
-.crew-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.6rem; }
-.crew-card {
-  display: flex; flex-direction: column; gap: 0.25rem; min-width: 0;
-  padding: 0.8rem 1rem 0.85rem; text-decoration: none;
-  background: var(--bg-raised); border: 1px solid var(--rule); border-radius: 10px;
-  transition: border-color .18s;
+.bearing-bullets {
+  margin: 0 0 1.2rem; padding-left: 1.1rem;
+  font-size: 1.05rem; line-height: 1.65; color: var(--text);
 }
-.crew-card:hover { border-color: var(--ice-dim); }
-.crew-name {
-  font-family: 'Cinzel', serif; font-size: 0.835rem; font-weight: 700;
-  letter-spacing: 0.11em; text-transform: uppercase; color: var(--ice-dim);
-}
-.crew-card:hover .crew-name { color: var(--ice); }
-.crew-line { font-size: 0.952rem; line-height: 1.45; color: var(--text-dim); }
+.bearing-bullets li + li { margin-top: 0.35rem; }
 
-/* ── Timeline rail ── */
-.timeline { position: sticky; top: 1.5rem; min-width: 0; }
-.tl-head {
-  font-family: 'Cinzel', serif; font-size: 0.696rem; letter-spacing: 0.18em;
+/* ── Folds ── the site's ▸ disclosure, one rule above each. */
+.bearing-fold { border-top: 1px solid var(--rule); }
+.bearing-fold:last-of-type { border-bottom: 1px solid var(--rule); }
+.bearing-fold > summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: baseline; gap: 0.6rem;
+  padding: 0.7rem 0;
+  font-family: 'Cinzel', serif; font-size: 0.76rem; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--text-muted);
-  padding-bottom: 0.7rem; margin-bottom: 0.3rem; border-bottom: 1px solid var(--rule);
+  transition: color .18s;
 }
-.tl-stop {
-  display: grid; grid-template-columns: 16px 1fr; grid-template-rows: auto auto;
-  column-gap: 0.55rem; padding: 0.6rem 0 0.65rem;
-  text-decoration: none; position: relative;
+.bearing-fold > summary::-webkit-details-marker { display: none; }
+.bearing-fold > summary::before {
+  content: '\25B8'; color: var(--ice-dim); display: inline-block; transition: transform .18s;
 }
-.tl-stop::before { content: ''; position: absolute; left: 7px; top: 0; bottom: 0; width: 1px; background: var(--rule); }
-.tl-stop:first-of-type::before { top: 50%; }
-.tl-stop:last-of-type::before { bottom: 50%; }
-.tl-dot {
-  grid-row: 1 / span 2; align-self: start; margin-top: 0.3rem; z-index: 1;
-  width: 9px; height: 9px; border-radius: 50%; margin-left: 3px;
-  background: var(--bg); border: 1px solid var(--text-muted); transition: all .18s;
-}
-.tl-num { font-family: 'Cinzel', serif; font-size: 0.719rem; letter-spacing: 0.14em; color: var(--text-muted); transition: color .18s; }
-.tl-title { font-size: 0.92rem; line-height: 1.35; color: var(--text-dim); transition: color .18s; }
-.tl-stop:hover .tl-dot { border-color: var(--ice); }
-.tl-stop:hover .tl-title { color: var(--ice); }
-.tl-stop.is-now .tl-dot { background: var(--gold); border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-faint); }
-.tl-stop.is-now .tl-num { color: var(--gold); }
-.tl-stop.is-now .tl-title { color: var(--text); font-weight: 600; }
+.bearing-fold[open] > summary::before { transform: rotate(90deg); }
+.bearing-fold > summary:hover { color: var(--ice); }
+.bearing-fold > summary:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 
-/* ════════════════════════════════════════════════════════════════
-   PHONES
+.bearing-crew, .bearing-learned, .bearing-loose {
+  margin: 0 0 0.9rem; font-size: 0.98rem; line-height: 1.5; color: var(--text-dim);
+}
+.bearing-crew, .bearing-loose { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.bearing-learned { padding-left: 1.1rem; }
+.bearing-learned li + li { margin-top: 0.3rem; }
+.crew-tag {
+  font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ice); text-decoration: none; margin-right: 0.3rem;
+}
+.crew-tag:hover { color: var(--gold-light); }
+.bearing-met { margin: 0 0 0.9rem; font-size: 0.98rem; line-height: 1.7; color: var(--text-dim); }
+.bearing-met .sep { color: var(--text-muted); margin: 0 0.15rem; }
 
-   This block used to sit at the top of the file, above the rules it
-   overrides. Equal specificity, and a media query adds none, so the
-   later plain rules won every time: the timeline stayed sticky, the
-   stops kept their 16px number column, and the connector line and
-   dots stayed drawn. It belongs at the end, after everything it is
-   meant to replace.
-   ════════════════════════════════════════════════════════════════ */
-@media (max-width: 880px) {
-  .bearing { grid-template-columns: minmax(0, 1fr); }
-  .timeline { position: static; order: -1; margin-bottom: 1.2rem; }
-  .tl-stops { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.4rem; }
-  .tl-stop {
-    flex: 0 0 auto; grid-template-columns: minmax(0, 1fr); min-width: 150px;
-    background: var(--bg-card); border: 1px solid var(--rule);
-    border-radius: 10px; padding: 0.6rem 0.8rem;
-  }
-  .tl-stop::before { display: none; }
-  .tl-dot { display: none; }
+.bearing-more {
+  display: inline-block; margin-top: 1.2rem;
+  font-family: 'Cinzel', serif; font-size: 0.76rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold-dim); text-decoration: none;
+}
+.bearing-more:hover { color: var(--gold-light); }
+
+/* ── Before you sail ──
+   A display-only checklist on the raised band, in up to three labelled
+   groups, side by side where there is room: To do, To decide, Weather Eye. */
+.bearing-sail {
+  margin: 0 -2rem -1.6rem; padding: 1.1rem 2rem 1.3rem;
+  background: var(--bg-raised);
+  border-top: 1px solid var(--gold-rule);
+  display: flex; gap: 1.1rem 2.2rem; align-items: flex-start;
+}
+/* Side by side, each group as wide as its longest line asks, so the
+   wordier group takes the room and the band stays short. */
+.sail-group { flex: 1 1 auto; min-width: min(15rem, 100%); }
+.sail-label {
+  margin: 0 0 0.5rem; font-weight: 400;
+  font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.sail-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.55rem; }
+.sail-item { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 1.05rem; line-height: 1.5; color: var(--text); }
+.sail-item b { color: var(--gold); font-weight: 600; }
+.check-box {
+  flex: 0 0 13px; height: 13px; margin-top: 0.4rem; box-sizing: border-box;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--gold-dim); border-radius: 0;
+}
+/* Settled by a later voyage (the voyage is left off when no record pins it). Modelled on a finished quest objective
+   (.obj-item.is-done in entity.css): the box fills and takes a drawn
+   check, the text warms, and nothing is struck through. The outcome
+   follows in a few words, with the voyage that settled it:
+   <li class="sail-item is-done" data-item="instructor">…<span class="sail-outcome">Chose Saerthe · Voyage 007</span></li>
+   Still open after the next voyage: is-carried, with the outcome
+   "Carried forward", and the item stays on the Current Bearing.
+   data-item names the item across pages. */
+.sail-item.is-done .check-box {
+  border-color: var(--gold); background: var(--gold-faint);
+  box-shadow: 0 0 0 2px var(--gold-faint);
+}
+.sail-item.is-done .check-box::after {
+  content: ''; width: 3px; height: 7px; margin-top: -2px;
+  border: solid var(--gold-light); border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.sail-item.is-done .sail-text, .sail-item.is-done b { color: var(--gold-light); }
+/* Weather Eye items are nudges, never ticked: a small mark, no box. */
+.sail-group[data-group="note"] .check-box {
+  flex-basis: 13px; height: 13px; border: 0; position: relative;
+}
+.sail-group[data-group="note"] .check-box::before {
+  content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--gold-dim);
+}
+/* Carried forward: still open and within reach, said so in words, and
+   also on the Current Bearing. The box stays empty. */
+.sail-item.is-carried .check-box { border-style: dashed; }
+/* Set aside: out of reach now, or the crew moved on. Muted, a hollow box
+   with a dash, and where it still matters a pointer to the Quest Board:
+   <span class="sail-outcome">Set aside · on the Quest Board: <a …>…</a></span>
+   Never on the Current Bearing. */
+.sail-item.is-aside, .sail-item.is-aside b, .sail-item.is-aside .sail-outcome { color: var(--text-muted); }
+.sail-item.is-aside .check-box { border-color: var(--text-muted); }
+.sail-item.is-aside .check-box::after {
+  content: ""; width: 7px; height: 0; border-top: 1.5px solid var(--text-muted);
+}
+.sail-outcome a {
+  color: inherit; text-decoration: underline;
+  text-decoration-color: var(--gold-rule); text-underline-offset: 0.15em;
+}
+.sail-outcome a:hover { color: var(--gold-light); }
+.sail-outcome { font-style: italic; color: var(--text-dim); }
+.sail-outcome::before { content: ' \2014  '; font-style: normal; color: var(--text-muted); }
+
+/* ── Quest Board ── two columns of quests, each with its threads. */
+.bearing-quests {
+  list-style: none; margin: 0 0 0.8rem; padding: 0;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2.5rem;
+}
+.bq {
+  display: grid; grid-template-columns: minmax(0, 1fr) 72px auto;
+  gap: 0.3rem 0.9rem; align-items: baseline; align-content: start;
+  padding: 0.75rem 0; border-top: 1px solid var(--rule-soft);
+}
+.bq:nth-child(-n+2) { border-top: 0; padding-top: 0; }
+.bq-name {
+  font-family: 'Cinzel', serif; font-size: 0.95rem; font-weight: 700; line-height: 1.3;
+  color: var(--text); text-decoration: none;
+}
+.bq-name:hover { color: var(--ice); }
+.bq-bar { align-self: center; height: 3px; background: var(--rule); overflow: hidden; }
+.bq-fill { display: block; height: 100%; background: var(--gold); }
+.bq-prog {
+  font-family: 'Cinzel', serif; font-size: 0.8rem; color: var(--gold);
+  text-align: right; white-space: nowrap; min-width: 2.2rem;
+}
+.bq-next { grid-column: 1 / -1; font-size: 0.98rem; line-height: 1.45; color: var(--text-dim); }
+.bq-next-label, .bq-thread-label {
+  font-family: 'Cinzel', serif; font-size: 0.66rem; letter-spacing: 0.14em;
+  text-transform: uppercase; margin-right: 0.35rem;
+}
+.bq-next-label { color: var(--text-muted); }
+.bq-threads {
+  grid-column: 1 / -1; list-style: none; margin: 0.15rem 0 0; padding: 0 0 0 0.85rem;
+  border-left: 1px solid var(--gold-rule);
+  display: flex; flex-direction: column; gap: 0.2rem;
+  font-size: 0.92rem; line-height: 1.4;
+}
+.bq-thread-label { color: var(--ice-dim); }
+.bq-threads a { color: var(--text-dim); text-decoration: none; }
+.bq-threads a:hover { color: var(--ice); }
+
+.bl-name {
+  font-family: 'Cinzel', serif; font-size: 0.88rem; font-weight: 700;
+  color: var(--text); text-decoration: none; margin-right: 0.3rem;
+}
+.bl-name:hover { color: var(--ice); }
+
+/* A voyage page: one quiet line under the panel. */
+.bearing-onward {
+  margin: 1rem 0 0;
+  font-size: 0.98rem; font-style: italic; color: var(--text-muted);
 }
 
+/* ── Narrow ── the quests stack. */
+@media (max-width: 900px) {
+  .bearing-sail { flex-direction: column; }
+  .sail-group { width: 100%; }
+  .bearing-quests { grid-template-columns: minmax(0, 1fr); }
+  .bq:nth-child(2) { border-top: 1px solid var(--rule-soft); padding-top: 0.75rem; }
+}
 @media (max-width: 620px) {
-  /* The two labels either side of a panel head are both nowrap, so the
-     head reported a min-content width of ~400px and dragged the whole
-     column — and with it the page — past the screen. Let the second
-     label drop to its own line instead. */
-  .panel-head { flex-wrap: wrap; row-gap: 0.35rem; }
-  .panel-title, .panel-more { white-space: normal; }
-
-  /* A fixed track minimum still overflows once the column is narrower
-     than the minimum itself. min() caps it at the space available. */
-  .q-grid { grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr)); }
-  .crew-grid { grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); }
+  .bearing-strip { gap: 0.4rem; margin-bottom: 1rem; }
+  .bs-arrow { flex-basis: 28px; height: 28px; }
+  .bs-list > li { flex-basis: 104px; }
+  .bs-stop { padding-right: 0.7rem; }
+  .bs-title { font-size: 0.86rem; }
+  .bs-track.fade-l { --fade-l: 1.25rem; }
+  .bs-track.fade-r { --fade-r: 1.25rem; }
+  .bearing-sec { padding: 1.2rem 1.15rem 1.4rem; }
+  .bearing-sail { margin: 0 -1.15rem -1.4rem; padding: 1rem 1.15rem 1.2rem; }
+  .bearing-showing { padding: 0.6rem 1.15rem; }
+  .bearing-title { font-size: 1.2rem; }
+  .bearing-bullets, .sail-item { font-size: 1rem; }
+  /* The bar takes its own line under the name. */
+  .bq { grid-template-columns: minmax(0, 1fr) auto; }
+  .bq-bar { grid-column: 1 / -1; grid-row: 2; }
 }
+
+/* ── Before you sail as rows ──
+   Each group is a row: its label on the left, its items full width on the
+   right, one line each where the width allows. */
+.bearing-sail { flex-direction: column; gap: 0; padding-top: 0.4rem; padding-bottom: 0.5rem; }
+.sail-group {
+  width: 100%; min-width: 0;
+  display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0 1rem;
+  align-items: baseline; padding: 0.75rem 0;
+}
+.sail-group + .sail-group { border-top: 1px solid var(--gold-rule); }
+.sail-label { margin: 0; color: var(--gold); font-size: 0.74rem; letter-spacing: 0.16em; }
+.sail-list { gap: 0.35rem; }
+@media (max-width: 700px) {
+  .sail-group { grid-template-columns: minmax(0, 1fr); gap: 0.45rem; }
+}
+/* A To do item that is a quest's next step names the quest after it. */
+.sail-quest {
+  margin-left: 0.6rem; font-size: 0.86rem; font-style: italic;
+  color: var(--text-dim); text-decoration: none; border-bottom: 1px solid var(--gold-rule);
+}
+.sail-quest::before { content: '· '; color: var(--text-muted); }
+.sail-quest:hover { color: var(--gold-light); border-bottom-color: var(--gold-dim); }
+
+/* One colour per line. Lead words are bold in the line's own colour; a
+   name with a page is underlined, not recoloured; the quest link and the
+   outcome read in the same face as the item. */
+.sail-item b { color: inherit; }
+.sail-item a, .sail-quest, .sail-outcome a {
+  color: inherit; font-style: normal; font-size: inherit;
+  text-decoration: underline; text-decoration-color: var(--gold-rule);
+  text-underline-offset: 0.15em; border-bottom: 0;
+}
+.sail-item a:hover, .sail-quest:hover { color: inherit; text-decoration-color: var(--gold); }
+.sail-quest { margin-left: 0; }
+.sail-quest::before { content: ' \00B7  '; color: inherit; text-decoration: none; display: inline-block; white-space: pre; }
+.sail-outcome { font-style: normal; color: inherit; }
+.sail-outcome::before { color: inherit; }
+.sail-item.is-done .sail-text, .sail-item.is-done b { color: var(--text); }

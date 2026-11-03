@@ -3,16 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Caelestis — Current Bearing</title>
+<title>Caelestis — Bearing, Voyage 006</title>
 <link rel="stylesheet" href="../../styles/caelestis.css">
-<link rel="stylesheet" href="../../styles/entity.css">
-<link rel="stylesheet" href="../../styles/board.css">
 <link rel="stylesheet" href="../../styles/bearing.css">
 <script src="../../data/bearing.js" defer></script>
+<script src="../../data/voyage.js" defer></script>
 <script src="../../scripts/nav.js" defer></script>
-<script src="../../scripts/ui.js" defer></script>
+<script src="../../scripts/bearing.js" defer></script>
 </head>
-<body data-pagefind-filter="section:bearings">
+<body data-pagefind-filter="section:bearings" data-no-command-bar>
 <div class="page-content">
   <div class="page-header">
     <div class="page-emblem" data-pagefind-ignore>
@@ -32,59 +31,94 @@
         <line x1="78" y1="20" x2="120" y2="20" stroke-width="0.6" opacity="0.4"/>
       </svg>
     </div>
-    <div class="page-title" data-pagefind-meta="title">Current Bearing</div>
-    <div class="page-subtitle">As of Voyage 006 — What Is Here Has Not Left · Fleet date <span data-field="current-date">1491.7.12</span></div>
+    <div class="page-title" data-pagefind-meta="title">Bearing · Voyage 006</div>
+    <div class="page-subtitle">Aboard the tyrant ship, Toril orbit · Fleet date <span data-field="voyage-date">1491.7.12</span></div>
   </div>
   <div class="content">
-    <div class="bearing">
-      <div class="bearing-main">
-
-        <div class="here">
-          <span class="here-label">Position</span>
-          <a class="here-name" href="../../navigation-records/the-tyrant-ship.html">Tyrant Ship</a>
-          <span class="here-sub">The tyrant ship is a stone-carved beholder vessel in Toril's orbit, once the vessel of the beholder Vaelorix, who lies dead on its Command Deck. The crew holds it now.</span>
-        </div>
-
-        <div class="panel">
-          <div class="panel-head">
-            <span class="panel-title">Last Voyage</span>
-            <a class="panel-more" href="../voyage-006.html">Read the account ›</a>
-          </div>
-          <div class="last-title">Voyage 006 — What Is Here Has Not Left</div>
-          <p class="last-text">The crew held the ship, burned the bloom off the Command Deck and tore the great flower from the dead beholder. Beneath it Gregory found the Lantern of Flourishing, the device the mechanical behir, Ostekk-10, had asked for. They told it nothing was found and put it out through the cargo hold, still searching. Bartholomew caught Miken speaking into a sending stone.</p>
-          <div class="chip-row"><span class="chip-label">Met</span><div class="chips"><a class="chip" href="../../registry/dossiers/the-behir.html">Ostekk-10</a><a class="chip" href="../../registry/dossiers/ostekk-6.html">Ostekk-6</a><a class="chip" href="../../registry/dossiers/miken.html">Miken</a><a class="chip" href="../../registry/dossiers/winston-ryeback.html">Winston Ryeback</a><a class="chip" href="../../registry/dossiers/krik-lit.html">Krik&#x27;Lit</a><a class="chip" href="../../registry/dossiers/pffred.html">Pffred</a></div></div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-head">
-            <span class="panel-title">Quest Board</span>
-            <a class="panel-more" href="../../quests/index.html">All quests ›</a>
-          </div>
-          <div class="q-grid"><a class="q-card" href="../../quests/the-caelestis-burglaries.html"><span class="q-top"><span class="q-name">The Caelestis Burglaries</span><span class="q-prog">1/3</span></span><span class="q-bar"><span class="q-fill" style="width:33%"></span></span><span class="q-next"><span class="q-next-label">Next</span> Look into Joffrey and the man named Jeffrey</span></a><a class="q-card" href="../../quests/the-path-to-viren.html"><span class="q-top"><span class="q-name">The Path to Viren</span><span class="q-prog">1/3</span></span><span class="q-bar"><span class="q-fill" style="width:33%"></span></span><span class="q-next"><span class="q-next-label">Next</span> Find Zerathis, or charts and word of him</span></a><a class="q-card" href="../../quests/tumaks-search-for-family.html"><span class="q-top"><span class="q-name">Tumak&#x27;s Search for Family</span><span class="q-prog">0/1</span></span><span class="q-bar"><span class="q-fill" style="width:0%"></span></span><span class="q-next"><span class="q-next-label">Next</span> Find a way home</span></a><a class="q-card" href="../../quests/the-tyrant-ship-and-the-hcatha-meteor.html"><span class="q-top"><span class="q-name">The Tyrant Ship and the H’Catha Meteor</span><span class="q-prog">3/5</span></span><span class="q-bar"><span class="q-fill" style="width:60%"></span></span><span class="q-next"><span class="q-next-label">Next</span> Fly to H’Catha</span></a></div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-head">
-            <span class="panel-title">The Crew</span>
-            <a class="panel-more" href="../../registry/crew-manifest/index.html">Manifest ›</a>
-          </div>
-          <div class="crew-grid"><a class="crew-card" href="../../registry/crew-manifest/boogie.html"><span class="crew-name">Boogie</span><span class="crew-line">Slept through his watch, his shield&#x27;s face mild and content</span></a><a class="crew-card" href="../../registry/crew-manifest/casey-geim.html"><span class="crew-name">Casey</span><span class="crew-line">Climbed head down into the garden with no rope and anchored it for the others</span></a><a class="crew-card" href="../../registry/crew-manifest/gregory.html"><span class="crew-name">Gregory</span><span class="crew-line">Held the last watch alone and saw Ostekk-10 come up the garden shaft</span></a><a class="crew-card" href="../../registry/crew-manifest/sol-fortuna.html"><span class="crew-name">Sol</span><span class="crew-line">Fought clockwork horrors in the cargo hold beside Ryeback, Pffred and Krik&#x27;Lit</span></a><a class="crew-card" href="../../registry/crew-manifest/tumak-swan.html"><span class="crew-name">Tumak</span><span class="crew-line">Told Ryeback the crew was fully capable, and that the beholder had been taken care of</span></a><a class="crew-card" href="../../registry/crew-manifest/bartholomew-grayson.html"><span class="crew-name">Bartholomew</span><span class="crew-line">Strung noisemakers around the garden shaft and caught Miken speaking into a sending stone on the first watch</span></a></div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-head">
-            <span class="panel-title">Still Unanswered</span>
-            <a class="panel-more" href="../../quests/index.html#threads">All threads ›</a>
-          </div>
-          <div class="chips"><a class="chip" href="../../quests/gregorys-pull.html">Gregory&#x27;s Pull</a><a class="chip" href="../../quests/the-unfinished-ship-within-boogie.html">The Unfinished Ship Within Boogie</a><a class="chip" href="../../quests/the-laughter-of-beshaba.html">The Laughter of Beshaba</a></div>
-        </div>
-
+    <nav class="bearing-strip" aria-label="Voyages" data-pagefind-ignore>
+      <button class="bs-arrow" type="button" data-step="-1" aria-label="Earlier voyages"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 2L4 7l5 5"/></svg></button>
+      <div class="bs-track">
+        <ol class="bs-list" data-field="voyage-strip">
+          <li><a class="bs-stop" href="voyage-001.html"><span class="bs-num">001</span><span class="bs-title">The Shape of a Crew</span></a></li>
+          <li><a class="bs-stop" href="voyage-002.html"><span class="bs-num">002</span><span class="bs-title">What the Crew Offers</span></a></li>
+          <li><a class="bs-stop" href="voyage-003.html"><span class="bs-num">003</span><span class="bs-title">The Weight of What’s Real</span></a></li>
+          <li><a class="bs-stop" href="voyage-004.html"><span class="bs-num">004</span><span class="bs-title">All Things Find Their Way Home</span></a></li>
+          <li><a class="bs-stop" href="voyage-005.html"><span class="bs-num">005</span><span class="bs-title">Retreat Is Always an Option</span></a></li>
+          <li><a class="bs-stop" href="voyage-006.html" aria-current="page"><span class="bs-num">006</span><span class="bs-title">What Is Here Has Not Left</span></a></li>
+        </ol>
       </div>
-      <nav class="timeline" data-pagefind-ignore>
-        <div class="tl-head">Bearings</div>
-        <div class="tl-stops"><a class="tl-stop is-now" href="voyage-006.html"><span class="tl-dot"></span><span class="tl-num">006</span><span class="tl-title">What Is Here Has Not Left</span></a><a class="tl-stop" href="voyage-005.html"><span class="tl-dot"></span><span class="tl-num">005</span><span class="tl-title">Retreat Is Always an Option</span></a><a class="tl-stop" href="voyage-004.html"><span class="tl-dot"></span><span class="tl-num">004</span><span class="tl-title">All Things Find Their Way Home</span></a><a class="tl-stop" href="voyage-003.html"><span class="tl-dot"></span><span class="tl-num">003</span><span class="tl-title">The Weight of What&#x27;s Real</span></a><a class="tl-stop" href="voyage-002.html"><span class="tl-dot"></span><span class="tl-num">002</span><span class="tl-title">What the Crew Offers</span></a><a class="tl-stop" href="voyage-001.html"><span class="tl-dot"></span><span class="tl-num">001</span><span class="tl-title">The Shape of a Crew</span></a></div>
-      </nav>
+      <button class="bs-arrow" type="button" data-step="1" aria-label="Later voyages"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg></button>
+    </nav>
+    <div class="bearing">
+      <section class="bearing-sec" id="last-time" data-voyage="006">
+        <details class="sec" data-sec="last" open>
+        <summary class="sec-head"><span class="bearing-kicker">Last time · Voyage 006</span><h2 class="bearing-title">What Is Here Has Not Left</h2></summary>
+        <ul class="bearing-bullets">
+          <li>The crew held the <a href="../../navigation-records/the-tyrant-ship.html">tyrant ship</a> and burned the bloom off the Command Deck.</li>
+          <li>Beneath the great flower Gregory found the <a href="../../inventory/entries/lantern-of-flourishing.html">Lantern of Flourishing</a>, the device <a href="../../registry/dossiers/the-behir.html">Ostekk-10</a> had asked for. They told it nothing was found and put it out through the cargo hold.</li>
+          <li>Bartholomew caught <a href="../../registry/dossiers/miken.html">Miken</a> speaking into a <a href="../../inventory/entries/mikens-sending-stone.html">sending stone</a>.</li>
+        </ul>
+        <details class="bearing-fold">
+          <summary>What each of you did</summary>
+          <ul class="bearing-crew" data-field="crew">
+            <li><a class="crew-tag" href="../../registry/crew-manifest/boogie.html">Boogie</a> slept through his watch, and asked Ostekk-10 its name</li>
+            <li><a class="crew-tag" href="../../registry/crew-manifest/casey-geim.html">Casey</a> climbed head down into the garden and anchored the rope</li>
+            <li><a class="crew-tag" href="../../registry/crew-manifest/gregory.html">Gregory</a> held the last watch and followed his pull to the engine</li>
+            <li><a class="crew-tag" href="../../registry/crew-manifest/sol-fortuna.html">Sol</a> fought clockwork horrors in the hold beside Ryeback, Pffred and Krik’Lit</li>
+            <li><a class="crew-tag" href="../../registry/crew-manifest/tumak-swan.html">Tumak</a> told the lie in the crew’s minds, and named Boogie second in command</li>
+            <li><a class="crew-tag" href="../../registry/crew-manifest/bartholomew-grayson.html">Bartholomew</a> caught Miken with a sending stone, and tore the great flower free as an ape</li>
+          </ul>
+        </details>
+        <details class="bearing-fold">
+          <summary>What you learned</summary>
+          <ul class="bearing-learned">
+            <li>The mechanical behir is Ostekk-10, sent by Ostekk, a beholder who made the ship’s units and the engine.</li>
+            <li>The engine is a small iron lamp with an iris shutter and green light: three charges a day, each mending a body.</li>
+            <li>The Command Deck flowers made both the wisps and the field that killed magic.</li>
+            <li>Most things leave the ship through the cargo hold, and nothing aboard puts out a fire.</li>
+            <li>Miken carries a sending stone.</li>
+          </ul>
+        </details>
+        <details class="bearing-fold">
+          <summary>Who you met</summary>
+          <p class="bearing-met" data-field="met"><a href="../../registry/dossiers/boatswain-tarto.html">Boatswain Tarto</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/saerthe-abizjn.html">Saerthe Abizjn</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/winston-ryeback.html">Winston Ryeback</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/miken.html">Miken</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/krik-lit.html">Krik’Lit</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/pffred.html">Pffred</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/ostekk-6.html">Ostekk-6</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/vaelorix.html">Vaelorix</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/the-behir.html">Ostekk-10</a></p>
+        </details>
+        <a class="bearing-more" href="../voyage-006.html">Read the full account ›</a>
+        </details>
+      </section>
+      <section class="bearing-sec is-sail" id="sail">
+        <details class="sec" data-sec="sail" open>
+        <summary class="sec-head"><span class="bearing-kicker">After Voyage 006</span><h2 class="bearing-title">Before you sailed</h2></summary>
+        <div class="bearing-sail" data-field="before-you-sail">
+          <div class="sail-group" data-group="todo">
+            <h3 class="sail-label">To do</h3>
+            <ul class="sail-list">
+              <li class="sail-item" data-item="fly-to-hcatha"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b>Fly the ship</b> to H’Catha<a class="sail-quest" href="../../quests/the-tyrant-ship-and-the-hcatha-meteor.html">The Tyrant Ship and the H’Catha Meteor</a></span></li>
+            </ul>
+          </div>
+          <div class="sail-group" data-group="decide">
+            <h3 class="sail-label">To decide</h3>
+            <ul class="sail-list">
+              <li class="sail-item" data-item="instructor"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b>Choose the instructor</b> who joins the crew: Saerthe or Tarto</span></li>
+              <li class="sail-item" data-item="sending-stone"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b><a href="../../inventory/entries/mikens-sending-stone.html">Miken’s sending stone</a></b></span></li>
+              <li class="sail-item" data-item="ostekk-2"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b><a href="../../registry/dossiers/ostekk-2.html">Ostekk-2</a></b>, still on the Hollow Deck</span></li>
+              <li class="sail-item" data-item="second-in-command"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b>The second in command:</b> Tumak named Boogie, and the crew votes</span></li>
+            </ul>
+          </div>
+          <div class="sail-group" data-group="note">
+            <h3 class="sail-label">Weather Eye</h3>
+            <ul class="sail-list">
+              <li class="sail-item" data-item="mimic"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b>A mimic</b> still hides aboard, unfound since Ostekk-6 warned of it in Voyage 004.</span></li>
+              <li class="sail-item" data-item="lantern"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b><a href="../../inventory/entries/lantern-of-flourishing.html">The Lantern of Flourishing</a></b> mends a body three times a day, constructs best of all.</span></li>
+              <li class="sail-item" data-item="ostekk-10"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b><a href="../../registry/dossiers/the-behir.html">Ostekk-10</a></b> was told nothing was found, and put out through the cargo hold.</span></li>
+              <li class="sail-item" data-item="ostekk-6"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b><a href="../../registry/dossiers/ostekk-6.html">Ostekk-6</a></b> is rebuilding and travels with the crew.</span></li>
+            </ul>
+          </div>
+        </div>
+        </details>
+      </section>
     </div>
+    <p class="bearing-onward">What comes next is on the <a href="index.html">Current Bearing ›</a></p>
   </div>
 </div>
 </body>
