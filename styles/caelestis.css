@@ -798,8 +798,8 @@ body.with-sidebar .page-header {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   PORTRAIT LIGHTBOX — wired by scripts/nav.js
-   Any .portrait-frame holding an image becomes click-to-expand.
+   IMAGE LIGHTBOX — scripts/lightbox.js (player, FIA and DM pages)
+   Every image can be clicked to view full size; frames also get a label.
    ══════════════════════════════════════════════════════════════ */
 .portrait-frame.cae-expandable {
   cursor: pointer;
@@ -817,29 +817,40 @@ body.with-sidebar .page-header {
   padding: 2.5rem;
 }
 .cae-lightbox.open { display: flex; animation: caeFade 0.2s ease both; }
-.cae-lightbox img {
+.cae-lightbox-frame {
+  position: relative; display: inline-flex;
   max-width: 92%; max-height: 88%;
+}
+.cae-lightbox img {
+  max-width: 100%; max-height: 88vh;
   object-fit: contain;
   border: 1px solid var(--rule);
   box-shadow: 0 20px 80px rgba(0, 0, 0, 0.7);
   cursor: default;
 }
+/* A small round X on the image's top-right corner. */
 .cae-lightbox-close {
-  position: absolute; top: 1.2rem; right: 1.5rem;
-  font-family: 'Cinzel', serif; font-size: 0.835rem;
-  letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--gold-dim); background: none;
-  border: 1px solid var(--rule);
-  padding: 0.45rem 1rem; cursor: pointer;
-  transition: color 0.2s, border-color 0.2s;
+  position: absolute; top: -14px; right: -14px;
+  width: 32px; height: 32px; padding: 0; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: system-ui, sans-serif; font-size: 0.95rem; line-height: 1;
+  color: var(--text); background: var(--bg-deep);
+  border: 1px solid var(--gold-dim);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  cursor: pointer; transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
-.cae-lightbox-close:hover { color: var(--text); border-color: var(--gold-dim); }
+.cae-lightbox-close:hover, .cae-lightbox-close:focus-visible {
+  color: var(--gold-light); border-color: var(--gold); background: var(--bg-card);
+  outline: none;
+}
 
 @keyframes caeFade { from { opacity: 0; } to { opacity: 1; } }
 
 @media (max-width: 560px) {
   .cae-lightbox { padding: 1rem; }
-  .cae-lightbox img { max-width: 100%; max-height: 82%; }
+  .cae-lightbox-frame { max-width: 100%; }
+  .cae-lightbox img { max-height: 80vh; }
+  .cae-lightbox-close { top: -12px; right: -6px; }
 }
 
 /* ── SEARCH: spelling correction notice ── */
@@ -1074,3 +1085,7 @@ body.with-sidebar .page-header {
   color: var(--text); pointer-events: none;
 }
 .nav-tip[hidden] { display: none; }
+
+/* Any image that expands (scripts/lightbox.js). */
+img.cae-zoomable { cursor: zoom-in; }
+img.cae-zoomable:focus-visible { outline: 1px solid var(--gold); outline-offset: 3px; }
