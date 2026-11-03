@@ -26,7 +26,7 @@
 }
 .bb-main { display: contents; }
 .bb-next {
-  grid-column: 1 / -1; margin: 0;
+  grid-column: 1; margin: 0;
   font-family: 'Cinzel', serif; font-size: 1.9rem; font-weight: 700; line-height: 1.2;
   color: var(--gold-light); text-shadow: 0 0 18px var(--gold-glow);
 }
@@ -76,6 +76,16 @@
 .bb-hands:hover .bb-hands-list { text-decoration-color: var(--gold); }
 .bb-hands:focus-visible { outline: 2px solid var(--ice); outline-offset: 3px; }
 
+.bb-next a { color: inherit; text-decoration: none; }
+.bb-next a:hover { text-decoration: underline; text-decoration-color: var(--gold-rule); text-underline-offset: 0.15em; }
+/* The Fleet's emblem fills the corner above the two actions. */
+.bb-emblem {
+  grid-column: 2; grid-row: 1; align-self: center; justify-self: center;
+  width: 5.5rem; height: 5.5rem; background-color: var(--gold); opacity: 0.85;
+  -webkit-mask: url('../assets/fleet-emblem.svg') center / contain no-repeat;
+  mask: url('../assets/fleet-emblem.svg') center / contain no-repeat;
+  filter: drop-shadow(0 0 10px var(--gold-glow));
+}
 .bb-actions { grid-column: 2; grid-row: 2 / span 2; align-self: end; display: flex; flex-direction: column; gap: 0.6rem; }
 .bb-act {
   display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.15rem 0.9rem;
@@ -455,6 +465,7 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 @media (max-width: 900px) {
   .bearing-banner { grid-template-columns: minmax(0, 1fr); }
   .bb-actions { grid-column: auto; grid-row: auto; flex-direction: row; flex-wrap: wrap; }
+  .bb-emblem { display: none; }
   .bb-hands { grid-column: auto; grid-row: auto; }
   .bb-act { flex: 1 1 14rem; }
 }

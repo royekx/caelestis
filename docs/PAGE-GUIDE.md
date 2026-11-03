@@ -718,7 +718,7 @@ without JS they stack, which is also what Pagefind reads.
   - *The banner* (`section.bearing-banner`) is the page's own command bar,
     in its brass (`--brass`, `--brass-shadow`, the 3px `--gold` left
     border, a faint glow). It mixes the world and the table on purpose:
-    the next step as a headline (`data-field="bearing-next"`), the Fleet
+    the arc's goal as a headline (`data-field="bearing-next"`), linked to its quest, with the Fleet's emblem in the corner beside it, the Fleet
     date (`current-date`), the passage ahead ("Fourteen embers to
     H'Catha", `passage`, followed by a quiet "(Fleet days)" in
     `span.bb-hint`; embers are Fleet days), the crew's level
@@ -733,9 +733,10 @@ without JS they stack, which is also what Pagefind reads.
     "All hands: choose the instructor · Ostekk-2 · second in command". It
     carries each item's `data-item` in `data-items`, opens the Heading tab,
     and is left out when All Hands is empty. Each value is written by hand
-    from `data/bearing.js` (`next`, `date`, `passage`, `level`,
-    `nextSession`, `links`), and `check` holds them together. `next` is
-    the first Standing Orders item, word for word. A set date reads
+    from `data/bearing.js` (`goal`, `goalQuest`, `date`, `passage`, `level`,
+    `nextSession`, `links`), and `check` holds them together. `goal` is the
+    arc's aim ("Retrieve the adamantine from H'Catha"); the next concrete
+    step stays in Standing Orders, so the two do not repeat. A set date reads
     "Saturday, November 21 · 7 pm". The banner carries no counts and no
     position line.
   - *The strip* ends with the next voyage, and on the Current Bearing that

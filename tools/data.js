@@ -1340,13 +1340,17 @@ function check() {
       const ban = elements(src, 'section', hasClass('bearing-banner'))[0];
       if (!ban) return err(`${pg}: no banner (section.bearing-banner)`);
       const one = name => { const r = regions(ban.inner, name); return r.length === 1 ? text(r[0]) : null; };
-      const next = str('next');
-      if (!next) err('data/bearing.js: next is missing; it is the banner\'s headline');
-      else if (one('bearing-next') !== plain(next)) err(`${at} reads "${one('bearing-next')}", data/bearing.js next is "${next}"`);
-      const so = elements(region(src, 'before-you-sail') || '', 'div', o => /\bdata-group="todo"/.test(o))[0];
-      const first = so && elements(so.inner, 'li', hasClass('sail-item'))[0];
-      const firstText = first ? text(first.inner.replace(/<a class="sail-quest"[\s\S]*?<\/a>/, '')) : null;
-      if (next && firstText !== plain(next)) err(`data/bearing.js: next is "${next}"; the Current Bearing's first Standing Orders item reads "${firstText || 'nothing'}"`);
+      // The headline is the arc's goal (goal), linked to its quest (goalQuest).
+      const goal = str('goal'), gq = str('goalQuest');
+      if (!goal) err('data/bearing.js: goal is missing; it is the banner\'s headline');
+      else if (one('bearing-next') !== plain(goal)) err(`${at} reads "${one('bearing-next')}", data/bearing.js goal is "${goal}"`);
+      if (gq) {
+        const q = fresh.quests.find(x => x.url === gq);
+        if (!q) err(`data/bearing.js: goalQuest ${gq} is not a quest on record`);
+        else if (q.fields.Status === 'Complete') err(`data/bearing.js: goalQuest ${gq} is complete; the headline should name the open goal`);
+        const ha = /<p class="bb-next"[^>]*>\s*<a href="([^"]+)"/.exec(ban.inner);
+        if (!ha || path.posix.normalize(path.posix.join('voyages/bearings', ha[1])) !== gq) err(`${at}'s headline should link ${gq}`);
+      }
       if (now && one('current-date') !== now) err(`${at}'s Fleet date reads "${one('current-date')}", the latest voyage ends ${now}`);
       const lv = /\blevel:\s*(\d+)/.exec(b);
       if (!lv) err('data/bearing.js: level is missing');

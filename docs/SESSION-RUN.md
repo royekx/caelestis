@@ -357,7 +357,7 @@ node tools/data.js derive
 | `voyages/bearings/voyage-NNN.html` | new, from the previous bearing page: a strip that ends at Voyage NNN, the Last time column (three bullets from Consequences and Major Events; the folds What each of you did, What you learned and Who you met), the Fleet date where the voyage ends, and Heading in its three groups, written from Next Session Pressure and Consequences (`docs/PAGE-GUIDE.md` § 8) |
 | `voyages/bearings/index.html` | the strip gains Voyage NNN and the next voyage; the Last time panel copied from the new bearing page; Heading is the new list plus every item carried forward; the Quest Board redone from `data/quests.json`; the three tab subtitles (the voyage, the Heading counts, the quest and loose-thread counts); the banner: headline, Fleet date, passage ahead, crew level, the All Hands line (one shortened lead phrase per All Hands item, their `data-item` keys in `data-items`; left out when All Hands is empty) and next voyage date, from `data/bearing.js`; the strip's next-voyage stop shows the same date line |
 | `voyages/bearings/voyage-NNN.html` tabs | Last time "Voyage NNN · Title"; Heading "After Voyage NNN" |
-| `data/bearing.js` | voyage, title, date, position, outstanding, next, level, levelUp, passage, nextSession, consequence, quests, met, links (below) |
+| `data/bearing.js` | voyage, title, date, position, outstanding, goal, goalQuest, level, levelUp, passage, nextSession, consequence, quests, met, links (below) |
 | `data/vocabulary.js` | every new proper noun |
 | each changed record's page | on the Voyage log tab, the new voyage becomes the latest block and the old one moves into Previous Voyages; the infobox rows, First seen and Last seen (or First and Last voyage) among them; the new voyage in All appearances; overview; objectives; Connections. Layout in `docs/PAGE-GUIDE.md` § 8, Record pages |
 | each new record's page | new, from a sibling page of the same kind (`inventory/entries/entry-template.html` for an item), with `data-entity` set to its id |
@@ -385,7 +385,8 @@ their strips.
 
 | Field | Holds | Shown as |
 |---|---|---|
-| `next` | the first Standing Orders item, word for word | the headline |
+| `goal` | the arc's aim, e.g. "Retrieve the adamantine from H'Catha"; never the same words as a Standing Order | the headline |
+| `goalQuest` | the open quest the goal belongs to | the headline's link |
 | `date` | where the latest voyage ends | Fleet date |
 | `passage` | `{ embers: 14, to: 'H\u2019Catha' }`: the next passage in Fleet days, to a location on record | "Fourteen embers to H'Catha" |
 | `level` | the crew's level after the voyage | "Crew level 4" |
@@ -436,7 +437,7 @@ pull request. Then open the changed pages in a browser once.
 | each register row shows its record's name, overview, sub-line, state and progress | the bar's position, outstanding and consequence lines |
 | each voyage page carries its number and title | the prose of any page under `prime/` |
 | the command bar's voyage, title, quest names and progress | the Crew Logs document |
-| each bearing page's strip, Fleet date, title, crew and Who you met; the Current Bearing's Last time is the latest bearing page's; its Quest Board is the record's open quests, progress, next objectives and threads; the banner shows `data/bearing.js` next, date, passage, level, nextSession and links, the level-up line reads "Level up to N before you sail", the All Hands line names each open All Hands item and nothing else, the strip's next voyage shows nextSession and the poll, and next is the first Standing Orders item; What each of you did opens by default; the tab subtitles match the lists and the record; every past Standing Orders and All Hands item is settled, carried forward or set aside, one way only; carried items are on the Current Bearing's Heading, settled and set-aside ones are not | |
+| each bearing page's strip, Fleet date, title, crew and Who you met; the Current Bearing's Last time is the latest bearing page's; its Quest Board is the record's open quests, progress, next objectives and threads; the banner shows `data/bearing.js` goal (linked to goalQuest, an open quest), date, passage, level, nextSession and links, the level-up line reads "Level up to N before you sail", the All Hands line names each open All Hands item and nothing else, the strip's next voyage shows nextSession and the poll; What each of you did opens by default; the tab subtitles match the lists and the record; every past Standing Orders and All Hands item is settled, carried forward or set aside, one way only; carried items are on the Current Bearing's Heading, settled and set-aside ones are not | |
 | every local link and anchor on the site resolves | |
 | the DM layer agrees with the record | |
 
