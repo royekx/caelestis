@@ -8,11 +8,12 @@
    at its own voyage; the strip is completed here from data/voyage.js,
    so an old page needs no upkeep.
 
-   The tabs (.bearing-tabs) show one panel at a time: Last time, Before
-   you sail and, on the Current Bearing, the Quest Board. The open tab is
+   The tabs (.bearing-tabs) show one panel at a time: Last time, Heading
+   and, on the Current Bearing, the Quest Board. The open tab is
    kept in the URL hash (#last-time, #sail, #quest-board) and, per viewer,
    in localStorage when it is there. Without this script the tabs are
-   plain links and the panels stack.
+   plain links and the panels stack. The banner's All Hands line
+   (.bb-hands) opens Heading, at the current voyage.
 
    On the Current Bearing (<body data-bearing-current>) a voyage in the
    strip swaps Last time and Heading in place, for the ones on
@@ -169,6 +170,22 @@
     if (first) requestAnimationFrame(function () { tabBar.scrollIntoView({ block: 'start' }); });
   }
 
+  // ── The banner's All Hands line opens Heading ──
+  // While a past voyage is showing in place, it returns to the current one first.
+  var toCurrent = null;
+  var hands = document.querySelector('.bb-hands');
+  if (hands && tabBar && ids.indexOf('sail') >= 0) {
+    hands.addEventListener('click', function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return;
+      e.preventDefault();
+      var opened = function () {
+        select('sail', { remember: true, hash: true });
+        tabBar.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      };
+      if (toCurrent) toCurrent().then(opened, opened); else opened();
+    });
+  }
+
   // ── Past voyages, in place (the Current Bearing only) ──
   // A voyage in the strip swaps Last time and Heading for that
   // voyage page's own: its Last time, and its Heading as the
@@ -245,6 +262,10 @@
       scrollToCurrent(true);
     });
   }
+  toCurrent = function () {
+    if (cur('last-time').getAttribute('data-voyage') === home) return Promise.resolve();
+    return show(home).then(function () { history.pushState({ voyage: home }, '', urlFor(home)); });
+  };
   function urlFor(num) { return (num === home ? 'index.html' : 'index.html?voyage=' + num) + location.hash; }
   function go(num, href) {
     if (num === cur('last-time').getAttribute('data-voyage')) return;
