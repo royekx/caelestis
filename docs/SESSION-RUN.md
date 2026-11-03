@@ -365,13 +365,17 @@ node tools/data.js derive
 The Brief Account and At a Glance are taken from the approved Full Account and
 add nothing it does not say.
 
-Resolve the last Before you sail on its own voyage page: tick each settled
-To do and To decide item with a few words and the voyage that settled it;
-mark the rest carried forward and keep them on the Current Bearing. An item
-carried forward from an older voyage page is settled there too, the same
-way, when a voyage settles it. The Weather Eye is left as it was.
+Resolve the last Before you sail on its own voyage page. Each To do and To
+decide item ends one of three ways: settled (ticked, a few words and the
+voyage that settled it, the voyage left off when the record does not pin
+it), carried forward (still open and within reach from where the crew is
+now; it stays on the Current Bearing), or set aside (out of reach, or the
+crew moved on; muted, off the Current Bearing, with "on the Quest Board:
+<quest or thread>" when it still matters, since the Quest Board holds it). An item carried forward from an older voyage
+page is resolved there too, the same way. The Weather Eye is left as it was.
 Then write the new voyage's Before you sail from Next Session Pressure and
-Consequences: To do, To decide, and a few Weather Eye nudges chosen fresh,
+Consequences: To do and To decide hold only what the crew can act on next
+from where they are; add a few Weather Eye nudges chosen fresh,
 never threads or predictions (`docs/PAGE-GUIDE.md` § 8, Before you sail). Older
 voyage pages are otherwise left as they are; `scripts/bearing.js` extends
 their strips.
@@ -409,7 +413,7 @@ pull request. Then open the changed pages in a browser once.
 | each register row shows its record's name, overview, sub-line, state and progress | the bar's position, outstanding and consequence lines |
 | each voyage page carries its number and title | the prose of any page under `prime/` |
 | the command bar's voyage, title, quest names and progress | the Crew Logs document |
-| each bearing page's strip, Fleet date, title, crew and Who you met; the Current Bearing's Last time is the latest bearing page's; its Quest Board is the record's open quests, progress, next objectives and threads; every carried-forward item is on its Before you sail | |
+| each bearing page's strip, Fleet date, title, crew and Who you met; the Current Bearing's Last time is the latest bearing page's; its Quest Board is the record's open quests, progress, next objectives and threads; every past To do and To decide item is settled, carried forward or set aside, one way only; carried items are on the Current Bearing's Before you sail, settled and set-aside ones are not | |
 | every local link and anchor on the site resolves | |
 | the DM layer agrees with the record | |
 

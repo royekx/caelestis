@@ -51,9 +51,9 @@
       <button class="bs-arrow" type="button" data-step="1" aria-label="Later voyages"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg></button>
     </nav>
     <div class="bearing">
-      <section class="bearing-col bearing-then" id="last-time" data-voyage="006">
-        <div class="bearing-kicker">Last time · Voyage 006</div>
-        <h2 class="bearing-title">What Is Here Has Not Left</h2>
+      <section class="bearing-sec" id="last-time" data-voyage="006">
+        <details class="sec" data-sec="last" open>
+        <summary class="sec-head"><span class="bearing-kicker">Last time · Voyage 006</span><h2 class="bearing-title">What Is Here Has Not Left</h2></summary>
         <ul class="bearing-bullets">
           <li>The crew held the <a href="../../navigation-records/the-tyrant-ship.html">tyrant ship</a> and burned the bloom off the Command Deck.</li>
           <li>Beneath the great flower Gregory found the <a href="../../inventory/entries/lantern-of-flourishing.html">Lantern of Flourishing</a>, the device <a href="../../registry/dossiers/the-behir.html">Ostekk-10</a> had asked for. They told it nothing was found and put it out through the cargo hold.</li>
@@ -85,15 +85,16 @@
           <p class="bearing-met" data-field="met"><a href="../../registry/dossiers/boatswain-tarto.html">Boatswain Tarto</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/saerthe-abizjn.html">Saerthe Abizjn</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/winston-ryeback.html">Winston Ryeback</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/miken.html">Miken</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/krik-lit.html">Krik’Lit</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/pffred.html">Pffred</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/ostekk-6.html">Ostekk-6</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/vaelorix.html">Vaelorix</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/the-behir.html">Ostekk-10</a></p>
         </details>
         <a class="bearing-more" href="../voyage-006.html">Read the full account ›</a>
+        </details>
       </section>
-      <section class="bearing-col bearing-next" id="next-time">
-        <div class="bearing-kicker">Next time</div>
-        <h2 class="bearing-title">Before you sail</h2>
+      <section class="bearing-sec is-sail" id="sail">
+        <details class="sec" data-sec="sail" open>
+        <summary class="sec-head"><span class="bearing-kicker">Next time</span><h2 class="bearing-title">Before you sail</h2></summary>
         <div class="bearing-sail" data-field="before-you-sail">
           <div class="sail-group" data-group="todo">
             <h3 class="sail-label">To do</h3>
             <ul class="sail-list">
-              <li class="sail-item" data-item="fly-to-hcatha meteor"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b>Seat the helm</b> and fly the ship to H’Catha</span></li>
+              <li class="sail-item" data-item="fly-to-hcatha"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b>Seat the helm</b> and fly the ship to H’Catha</span></li>
             </ul>
           </div>
           <div class="sail-group" data-group="decide">
@@ -115,8 +116,11 @@
             </ul>
           </div>
         </div>
-        <div class="bearing-board" data-field="quest-board">
-          <h3 class="bearing-sub"><a href="../../quests/index.html">Quest Board <span aria-hidden="true">›</span></a></h3>
+        </details>
+      </section>
+      <section class="bearing-sec" id="quest-board" data-field="quest-board">
+        <details class="sec" data-sec="quests" open>
+        <summary class="sec-head"><h2 class="bearing-title"><a href="../../quests/index.html">Quest Board <span aria-hidden="true">›</span></a></h2></summary>
           <ul class="bearing-quests">
             <li class="bq">
               <a class="bq-name" href="../../quests/the-tyrant-ship-and-the-hcatha-meteor.html">The Tyrant Ship and the H’Catha Meteor</a>
@@ -161,7 +165,7 @@
               <li><a class="bl-name" href="../../quests/the-laughter-of-beshaba.html">The Laughter of Beshaba</a> <span class="bl-state">A new, curious voice speaks to Sol of fate.</span></li>
             </ul>
           </details>
-        </div>
+        </details>
       </section>
     </div>
   </div>

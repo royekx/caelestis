@@ -47,9 +47,9 @@
       <button class="bs-arrow" type="button" data-step="1" aria-label="Later voyages"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg></button>
     </nav>
     <div class="bearing">
-      <section class="bearing-col bearing-then" id="last-time" data-voyage="003">
-        <div class="bearing-kicker">Last time · Voyage 003</div>
-        <h2 class="bearing-title">The Weight of What’s Real</h2>
+      <section class="bearing-sec" id="last-time" data-voyage="003">
+        <details class="sec" data-sec="last" open>
+        <summary class="sec-head"><span class="bearing-kicker">Last time · Voyage 003</span><h2 class="bearing-title">The Weight of What’s Real</h2></summary>
         <ul class="bearing-bullets">
           <li>The salvage simulation ended in a real blast. Gregory pried a spent <a href="../../inventory/entries/vocath-arcane-rod.html">arcane rod</a> from the wall, and Boogie glimpsed the word Vocath on it.</li>
           <li>Mirt named <a href="../../registry/dossiers/vocath.html">Vocath</a> an old enemy, asked the crew to look into <a href="../../registry/dossiers/joffrey.html">Joffrey</a> and a man named <a href="../../registry/dossiers/jeffrey.html">Jeffrey</a>, paid them and raised them to sailor-level clearance.</li>
@@ -81,16 +81,17 @@
           <p class="bearing-met" data-field="met"><a href="../../registry/dossiers/boatswain-tarto.html">Boatswain Tarto</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/veena.html">Veena</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/saerthe-abizjn.html">Saerthe Abizjn</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/mirt.html">Mirt</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/winston-ryeback.html">Winston Ryeback</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/miken.html">Miken</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/derek.html">Derek</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/krik-lit.html">Krik’Lit</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/pffred.html">Pffred</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/ostekk-6.html">Ostekk-6</a></p>
         </details>
         <a class="bearing-more" href="../voyage-003.html">Read the full account ›</a>
+        </details>
       </section>
-      <section class="bearing-col bearing-next">
-        <div class="bearing-kicker">After Voyage 003</div>
-        <h2 class="bearing-title">Before you sailed</h2>
+      <section class="bearing-sec is-sail" id="sail">
+        <details class="sec" data-sec="sail" open>
+        <summary class="sec-head"><span class="bearing-kicker">After Voyage 003</span><h2 class="bearing-title">Before you sailed</h2></summary>
         <div class="bearing-sail" data-field="before-you-sail">
           <div class="sail-group" data-group="todo">
             <h3 class="sail-label">To do</h3>
             <ul class="sail-list">
-              <li class="sail-item is-done" data-item="install-helm"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b>Install the helm</b> on the Command Deck<span class="sail-outcome">Carried to the Command Deck and being fitted · Voyage 006</span></span></li>
-              <li class="sail-item is-carried" data-item="meteor"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b>Recover the meteor</b> on H’Catha<span class="sail-outcome">Carried forward</span></span></li>
+              <li class="sail-item is-done" data-item="install-helm"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b>Install the helm</b> on the Command Deck<span class="sail-outcome">On the Command Deck, its fitting begun · Voyage 006</span></span></li>
+              <li class="sail-item is-aside" data-item="meteor"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b>Recover the meteor</b> on H’Catha<span class="sail-outcome">Set aside · on the Quest Board: <a href="../../quests/the-tyrant-ship-and-the-hcatha-meteor.html">The Tyrant Ship and the H’Catha Meteor</a></span></span></li>
             </ul>
           </div>
           <div class="sail-group" data-group="note">
@@ -100,6 +101,7 @@
             </ul>
           </div>
         </div>
+        </details>
       </section>
     </div>
     <p class="bearing-onward">What comes next is on the <a href="index.html">Current Bearing ›</a></p>

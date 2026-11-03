@@ -2,12 +2,14 @@
    bearing.css — the Current Bearing (voyages/bearings/index.html) and
    the per-voyage bearing pages (voyage-NNN.html).
 
-   The page is the voyage strip, then one --bg-card panel in two
-   columns. Left, Last time: the voyage, its bullets and three folds.
-   Right, on the Current Bearing: Before you sail and the Quest Board.
-   Right, on a voyage page: that voyage's own Before you sail list
-   ("Before you sailed"), ticked as later voyages settle it.
-   scripts/bearing.js drives the strip and the in-place swap.
+   The page is the voyage strip, then one --bg-card panel of stacked,
+   full-width sections, each a <details class="sec" open> whose summary
+   is its header: Last time (the voyage, its bullets and three folds),
+   Before you sail (three groups side by side on the --bg-raised band),
+   and, on the Current Bearing only, the Quest Board (a two-column grid).
+   A voyage page's Before you sail reads "Before you sailed" and is
+   ticked as later voyages settle it. scripts/bearing.js drives the
+   strip, the in-place swap and the remembered open state.
    ════════════════════════════════════════════════════════════════ */
 
 /* ── Voyage strip ──
@@ -89,22 +91,58 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 
 /* ── The panel ── */
 .bearing {
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   background: var(--bg-card);
   backdrop-filter: blur(9px); -webkit-backdrop-filter: blur(9px);
   border: 1px solid var(--rule); border-radius: 0;
 }
-.bearing-col { min-width: 0; padding: 1.6rem 2rem 1.8rem; }
-.bearing-next { border-left: 1px solid var(--rule); }
+.bearing-sec { min-width: 0; padding: 1.4rem 2rem 1.6rem; }
+.bearing-sec + .bearing-sec { border-top: 1px solid var(--rule); }
+/* A closed section is its header line only. */
+.bearing-sec:has(> .sec:not([open])) { padding-bottom: 1.4rem; }
+
+/* A section's header is its toggle, with a chevron on the right. */
+.sec > .sec-head {
+  list-style: none; cursor: pointer; position: relative;
+  display: block; padding-right: 2.2rem;
+}
+.sec > .sec-head::-webkit-details-marker { display: none; }
+.sec > .sec-head::after {
+  content: ''; position: absolute; right: 0.3rem; top: 0.55rem;
+  width: 8px; height: 8px;
+  border: solid var(--gold-dim); border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg); transition: transform .18s, border-color .18s;
+}
+.sec:not([open]) > .sec-head::after { transform: rotate(-45deg); }
+.sec > .sec-head:hover::after { border-color: var(--gold-light); }
+.sec > .sec-head:focus-visible { outline: 2px solid var(--ice); outline-offset: 4px; }
+.sec[open] > .sec-head { margin-bottom: 1rem; }
 
 .bearing-kicker {
+  display: block;
   font-family: 'Cinzel', serif; font-size: 0.74rem; letter-spacing: 0.22em;
   text-transform: uppercase; color: var(--gold-dim); margin-bottom: 0.35rem;
 }
 .bearing-title {
   font-family: 'Cinzel', serif; font-size: 1.35rem; font-weight: 700; line-height: 1.3;
-  color: var(--text); margin: 0 0 1rem;
+  color: var(--text); margin: 0;
 }
+.bearing-title a { color: inherit; text-decoration: none; }
+.bearing-title a:hover { color: var(--gold-light); }
+.bearing-title a span { color: var(--gold-dim); }
+
+/* On the Current Bearing, while a past voyage is showing: one line at the
+   top of the panel, with the way back. Added by scripts/bearing.js. */
+.bearing-showing {
+  display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; align-items: baseline;
+  padding: 0.6rem 2rem;
+  background: var(--bg-raised); border-bottom: 1px solid var(--gold-rule);
+  font-size: 0.95rem; font-style: italic; color: var(--text-dim);
+}
+.bearing-return {
+  font-family: 'Cinzel', serif; font-style: normal; font-size: 0.74rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold); text-decoration: none;
+}
+.bearing-return:hover { color: var(--gold-light); }
 
 /* Links inside the column's prose. */
 .bearing-bullets a, .bearing-met a, .bearing-onward a {
@@ -161,13 +199,16 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 
 /* ── Before you sail ──
    A display-only checklist on the raised band, in up to three labelled
-   groups: To do, To decide, Worth remembering. */
+   groups, side by side where there is room: To do, To decide, Weather Eye. */
 .bearing-sail {
-  margin: 0 -2rem; padding: 1.1rem 2rem 1.25rem;
+  margin: 0 -2rem -1.6rem; padding: 1.1rem 2rem 1.3rem;
   background: var(--bg-raised);
-  border-top: 1px solid var(--gold-rule); border-bottom: 1px solid var(--gold-rule);
+  border-top: 1px solid var(--gold-rule);
+  display: flex; gap: 1.1rem 2.2rem; align-items: flex-start;
 }
-.sail-group + .sail-group { margin-top: 1rem; }
+/* Side by side, each group as wide as its longest line asks, so the
+   wordier group takes the room and the band stays short. */
+.sail-group { flex: 1 1 auto; min-width: min(15rem, 100%); }
 .sail-label {
   margin: 0 0 0.5rem; font-weight: 400;
   font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.16em;
@@ -181,15 +222,14 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
   display: flex; align-items: center; justify-content: center;
   border: 1px solid var(--gold-dim); border-radius: 0;
 }
-/* Settled by a later voyage. Modelled on a finished quest objective
+/* Settled by a later voyage (the voyage is left off when no record pins it). Modelled on a finished quest objective
    (.obj-item.is-done in entity.css): the box fills and takes a drawn
    check, the text warms, and nothing is struck through. The outcome
    follows in a few words, with the voyage that settled it:
    <li class="sail-item is-done" data-item="instructor">…<span class="sail-outcome">Chose Saerthe · Voyage 007</span></li>
    Still open after the next voyage: is-carried, with the outcome
    "Carried forward", and the item stays on the Current Bearing.
-   data-item names the item across pages; an item that also covers an
-   earlier one lists both keys ("fly-to-hcatha meteor"). */
+   data-item names the item across pages. */
 .sail-item.is-done .check-box {
   border-color: var(--gold); background: var(--gold-faint);
   box-shadow: 0 0 0 2px var(--gold-faint);
@@ -207,26 +247,37 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
 .sail-group[data-group="note"] .check-box::before {
   content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--gold-dim);
 }
-/* Carried forward: still open, said so in words. The box stays empty. */
+/* Carried forward: still open and within reach, said so in words, and
+   also on the Current Bearing. The box stays empty. */
 .sail-item.is-carried .check-box { border-style: dashed; }
+/* Set aside: out of reach now, or the crew moved on. Muted, a hollow box
+   with a dash, and where it still matters a pointer to the Quest Board:
+   <span class="sail-outcome">Set aside · on the Quest Board: <a …>…</a></span>
+   Never on the Current Bearing. */
+.sail-item.is-aside, .sail-item.is-aside b, .sail-item.is-aside .sail-outcome { color: var(--text-muted); }
+.sail-item.is-aside .check-box { border-color: var(--text-muted); }
+.sail-item.is-aside .check-box::after {
+  content: ""; width: 7px; height: 0; border-top: 1.5px solid var(--text-muted);
+}
+.sail-outcome a {
+  color: inherit; text-decoration: underline;
+  text-decoration-color: var(--gold-rule); text-underline-offset: 0.15em;
+}
+.sail-outcome a:hover { color: var(--gold-light); }
 .sail-outcome { font-style: italic; color: var(--text-dim); }
 .sail-outcome::before { content: ' \2014  '; font-style: normal; color: var(--text-muted); }
 
-/* ── Quest Board ── */
-.bearing-sub {
-  margin: 1.5rem 0 0.4rem; font-weight: 400;
-  font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
+/* ── Quest Board ── two columns of quests, each with its threads. */
+.bearing-quests {
+  list-style: none; margin: 0 0 0.8rem; padding: 0;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2.5rem;
 }
-.bearing-sub a { color: var(--gold-dim); text-decoration: none; }
-.bearing-sub a:hover { color: var(--gold-light); }
-
-.bearing-quests { list-style: none; margin: 0 0 0.6rem; padding: 0; }
 .bq {
   display: grid; grid-template-columns: minmax(0, 1fr) 72px auto;
-  gap: 0.3rem 0.9rem; align-items: baseline;
-  padding: 0.7rem 0; border-bottom: 1px solid var(--rule-soft);
+  gap: 0.3rem 0.9rem; align-items: baseline; align-content: start;
+  padding: 0.75rem 0; border-top: 1px solid var(--rule-soft);
 }
-.bq:last-child { border-bottom: 0; }
+.bq:nth-child(-n+2) { border-top: 0; padding-top: 0; }
 .bq-name {
   font-family: 'Cinzel', serif; font-size: 0.95rem; font-weight: 700; line-height: 1.3;
   color: var(--text); text-decoration: none;
@@ -266,10 +317,12 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
   font-size: 0.98rem; font-style: italic; color: var(--text-muted);
 }
 
-/* ── Narrow ── the columns stack. */
-@media (max-width: 1080px) {
-  .bearing { grid-template-columns: minmax(0, 1fr); }
-  .bearing-next { border-left: 0; border-top: 1px solid var(--rule); }
+/* ── Narrow ── the quests stack. */
+@media (max-width: 900px) {
+  .bearing-sail { flex-direction: column; }
+  .sail-group { width: 100%; }
+  .bearing-quests { grid-template-columns: minmax(0, 1fr); }
+  .bq:nth-child(2) { border-top: 1px solid var(--rule-soft); padding-top: 0.75rem; }
 }
 @media (max-width: 620px) {
   .bearing-strip { gap: 0.4rem; margin-bottom: 1rem; }
@@ -279,8 +332,9 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
   .bs-title { font-size: 0.86rem; }
   .bs-track.fade-l { --fade-l: 1.25rem; }
   .bs-track.fade-r { --fade-r: 1.25rem; }
-  .bearing-col { padding: 1.3rem 1.15rem 1.5rem; }
-  .bearing-sail { margin: 0 -1.15rem; padding: 1rem 1.15rem 1.1rem; }
+  .bearing-sec { padding: 1.2rem 1.15rem 1.4rem; }
+  .bearing-sail { margin: 0 -1.15rem -1.4rem; padding: 1rem 1.15rem 1.2rem; }
+  .bearing-showing { padding: 0.6rem 1.15rem; }
   .bearing-title { font-size: 1.2rem; }
   .bearing-bullets, .sail-item { font-size: 1rem; }
   /* The bar takes its own line under the name. */

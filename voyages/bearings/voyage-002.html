@@ -46,9 +46,9 @@
       <button class="bs-arrow" type="button" data-step="1" aria-label="Later voyages"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg></button>
     </nav>
     <div class="bearing">
-      <section class="bearing-col bearing-then" id="last-time" data-voyage="002">
-        <div class="bearing-kicker">Last time · Voyage 002</div>
-        <h2 class="bearing-title">What the Crew Offers</h2>
+      <section class="bearing-sec" id="last-time" data-voyage="002">
+        <details class="sec" data-sec="last" open>
+        <summary class="sec-head"><span class="bearing-kicker">Last time · Voyage 002</span><h2 class="bearing-title">What the Crew Offers</h2></summary>
         <ul class="bearing-bullets">
           <li>Bartholomew joined the crew and took the spelljammer’s seat. Over a meal at the <a href="../../navigation-records/the-weeping-goddess.html">Weeping Goddess</a> the cadets settled their shipboard roles.</li>
           <li><a href="../../registry/dossiers/saerthe-abizjn.html">Saerthe</a>’s <a href="../../inventory/entries/saerthes-miniature-ship.html">miniature spelljamming ship</a> has been stolen, and it is the model that came out of Boogie’s chest the night before.</li>
@@ -79,18 +79,20 @@
           <p class="bearing-met" data-field="met"><a href="../../registry/dossiers/boatswain-tarto.html">Boatswain Tarto</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/veena.html">Veena</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/saerthe-abizjn.html">Saerthe Abizjn</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/winston-ryeback.html">Winston Ryeback</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/miken.html">Miken</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/rindle-gearloft.html">Rindle Gearloft</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/barret.html">Barret</a></p>
         </details>
         <a class="bearing-more" href="../voyage-002.html">Read the full account ›</a>
+        </details>
       </section>
-      <section class="bearing-col bearing-next">
-        <div class="bearing-kicker">After Voyage 002</div>
-        <h2 class="bearing-title">Before you sailed</h2>
+      <section class="bearing-sec is-sail" id="sail">
+        <details class="sec" data-sec="sail" open>
+        <summary class="sec-head"><span class="bearing-kicker">After Voyage 002</span><h2 class="bearing-title">Before you sailed</h2></summary>
         <div class="bearing-sail" data-field="before-you-sail">
           <div class="sail-group" data-group="decide">
             <h3 class="sail-label">To decide</h3>
             <ul class="sail-list">
-              <li class="sail-item" data-item="model-ship"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b>Tell the crew about the model ship</b> (Boogie’s call)</span></li>
+              <li class="sail-item is-done" data-item="model-ship"><span class="check-box" aria-hidden="true"></span><span class="sail-text"><b>Tell the crew about the model ship</b> (Boogie’s call)<span class="sail-outcome">Boogie laid it all out for the crew</span></span></li>
             </ul>
           </div>
         </div>
+        </details>
       </section>
     </div>
     <p class="bearing-onward">What comes next is on the <a href="index.html">Current Bearing ›</a></p>

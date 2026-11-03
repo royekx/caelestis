@@ -48,9 +48,9 @@
       <button class="bs-arrow" type="button" data-step="1" aria-label="Later voyages"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 2l5 5-5 5"/></svg></button>
     </nav>
     <div class="bearing">
-      <section class="bearing-col bearing-then" id="last-time" data-voyage="004">
-        <div class="bearing-kicker">Last time · Voyage 004</div>
-        <h2 class="bearing-title">All Things Find Their Way Home</h2>
+      <section class="bearing-sec" id="last-time" data-voyage="004">
+        <details class="sec" data-sec="last" open>
+        <summary class="sec-head"><span class="bearing-kicker">Last time · Voyage 004</span><h2 class="bearing-title">All Things Find Their Way Home</h2></summary>
         <ul class="bearing-bullets">
           <li>The crew put down three clockwork horrors in the cargo hold and saved the broken autognome, <a href="../../registry/dossiers/ostekk-6.html">Ostekk-6</a>.</li>
           <li>Through a telepathic link Tumak opened, Ostekk-6 warned of a mimic among the ship’s contents, a lantern-wisp bloom, and more horrors aboard.</li>
@@ -82,10 +82,11 @@
           <p class="bearing-met" data-field="met"><a href="../../registry/dossiers/winston-ryeback.html">Winston Ryeback</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/miken.html">Miken</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/pffred.html">Pffred</a>&nbsp;<span class="sep">·</span> <a href="../../registry/dossiers/ostekk-6.html">Ostekk-6</a></p>
         </details>
         <a class="bearing-more" href="../voyage-004.html">Read the full account ›</a>
+        </details>
       </section>
-      <section class="bearing-col bearing-next">
-        <div class="bearing-kicker">After Voyage 004</div>
-        <h2 class="bearing-title">Before you sailed</h2>
+      <section class="bearing-sec is-sail" id="sail">
+        <details class="sec" data-sec="sail" open>
+        <summary class="sec-head"><span class="bearing-kicker">After Voyage 004</span><h2 class="bearing-title">Before you sailed</h2></summary>
         <div class="bearing-sail" data-field="before-you-sail">
           <div class="sail-group" data-group="todo">
             <h3 class="sail-label">To do</h3>
@@ -107,6 +108,7 @@
             </ul>
           </div>
         </div>
+        </details>
       </section>
     </div>
     <p class="bearing-onward">What comes next is on the <a href="index.html">Current Bearing ›</a></p>

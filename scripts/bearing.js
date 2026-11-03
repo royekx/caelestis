@@ -8,11 +8,15 @@
    at its own voyage; the strip is completed here from data/voyage.js,
    so an old page needs no upkeep.
 
+   Each section (<details class="sec">) remembers whether the viewer left
+   it open or closed, in localStorage when it is there.
+
    On the Current Bearing (<body data-bearing-current>) a voyage in the
-   strip swaps only the Last time column, in place: the column is taken
-   from voyages/bearings/voyage-NNN.html, the URL becomes
-   index.html?voyage=NNN, and Back and Forward follow. Next time stays
-   current. If a fetch fails, the link is followed as a plain link.
+   strip swaps Last time and Before you sail in place, for the ones on
+   voyages/bearings/voyage-NNN.html; the Quest Board stays current. The
+   URL becomes index.html?voyage=NNN, Back and Forward follow, and a line
+   at the top of the panel leads back to the current bearing. If a fetch
+   fails, the link is followed as a plain link.
    ════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -90,17 +94,45 @@
   track.addEventListener('scroll', edges, { passive: true });
   window.addEventListener('resize', edges);
 
+  // ── Open and closed sections, remembered per viewer ──
+  // Each section is a <details class="sec" data-sec="…" open>. The state is
+  // kept in localStorage when it is there; the page works the same without it.
+  var KEY = 'caelestis.bearing.sections';
+  function stored() {
+    try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; }
+  }
+  function applyOpen(root) {
+    var st = stored();
+    Array.prototype.forEach.call(root.querySelectorAll('details.sec[data-sec]'), function (d) {
+      var k = d.getAttribute('data-sec');
+      if (Object.prototype.hasOwnProperty.call(st, k)) d.open = !!st[k];
+    });
+  }
+  document.addEventListener('toggle', function (e) {
+    var d = e.target;
+    if (!d.matches || !d.matches('details.sec[data-sec]')) return;
+    var st = stored();
+    st[d.getAttribute('data-sec')] = d.open;
+    try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (err) { /* storage blocked */ }
+  }, true);
+  applyOpen(document);
+
   // ── Past voyages, in place (the Current Bearing only) ──
+  // A voyage in the strip swaps Last time and Before you sail for that
+  // voyage page's own: its Last time, and its Before you sailed as the
+  // voyages after it settled it. The Quest Board stays current.
   var live = document.body.hasAttribute('data-bearing-current');
-  var col = document.getElementById('last-time');
-  if (!live || !col || !window.fetch || !window.DOMParser || !history.pushState) {
+  var panel = document.querySelector('.bearing');
+  var parts = ['last-time', 'sail'];
+  var cur = function (id) { return document.getElementById(id); };
+  if (!live || !panel || !cur('last-time') || !cur('sail') || !window.fetch || !window.DOMParser || !history.pushState) {
     scrollToCurrent(false); edges();
     return;
   }
 
-  var home = col.getAttribute('data-voyage');   // the voyage the page was written with
+  var home = cur('last-time').getAttribute('data-voyage');   // the voyage the page was written with
   var cache = {}, pending = {};
-  cache[home] = Promise.resolve(col.cloneNode(true));
+  cache[home] = Promise.resolve(parts.map(function (id) { return cur(id).cloneNode(true); }));
 
   function load(num) {
     if (cache[num]) return cache[num];
@@ -108,8 +140,9 @@
     pending[num] = fetch('voyage-' + num + '.html', { credentials: 'same-origin' })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
       .then(function (html) {
-        var found = new DOMParser().parseFromString(html, 'text/html').getElementById('last-time');
-        if (!found) throw new Error('no column');
+        var doc = new DOMParser().parseFromString(html, 'text/html');
+        var found = parts.map(function (id) { return doc.getElementById(id); });
+        if (!found[0] || !found[1]) throw new Error('no sections');
         cache[num] = Promise.resolve(found);
         return found;
       });
@@ -122,28 +155,51 @@
       else a.removeAttribute('aria-current');
     });
   }
+  // The line at the top of the panel while a past voyage is showing.
+  var banner = null;
+  function flag(num) {
+    if (num === home) { if (banner) { banner.parentNode.removeChild(banner); banner = null; } return; }
+    if (!banner) {
+      banner = document.createElement('div');
+      banner.className = 'bearing-showing';
+      banner.setAttribute('data-pagefind-ignore', '');
+      banner.innerHTML = '<span></span><a class="bearing-return" href="index.html">Back to the current bearing</a>';
+      banner.lastChild.addEventListener('click', function (e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return;
+        e.preventDefault();
+        go(home, 'index.html');
+      });
+      panel.insertBefore(banner, panel.firstChild);
+    }
+    banner.firstChild.textContent = 'Voyage ' + num + ', as it stood';
+  }
   function show(num) {
     return load(num).then(function (found) {
       var y = window.scrollY;
-      var fresh = document.importNode(found, true);
-      col.parentNode.replaceChild(fresh, col);
-      col = fresh;
+      parts.forEach(function (id, i) {
+        var old = cur(id);
+        old.parentNode.replaceChild(document.importNode(found[i], true), old);
+      });
+      applyOpen(panel);
       mark(num);
+      flag(num);
       window.scrollTo(0, y);
       scrollToCurrent(true);
     });
   }
   function urlFor(num) { return num === home ? 'index.html' : 'index.html?voyage=' + num; }
+  function go(num, href) {
+    if (num === cur('last-time').getAttribute('data-voyage')) return;
+    show(num).then(function () {
+      history.pushState({ voyage: num }, '', urlFor(num));
+    }, function () { location.href = href; });
+  }
 
   list.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a.bs-stop');
     if (!a || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return;
     e.preventDefault();
-    var num = numOf(a);
-    if (num === col.getAttribute('data-voyage')) return;
-    show(num).then(function () {
-      history.pushState({ voyage: num }, '', urlFor(num));
-    }, function () { location.href = a.href; });
+    go(numOf(a), a.href);
   });
   var warm = function (e) {
     var a = e.target.closest && e.target.closest('a.bs-stop');
@@ -156,7 +212,7 @@
     var num = (e.state && e.state.voyage) || wanted() || home;
     show(num).catch(function () { location.reload(); });
   });
-  history.replaceState({ voyage: col.getAttribute('data-voyage') }, '');
+  history.replaceState({ voyage: home }, '');
 
   function wanted() {
     var m = /[?&]voyage=(\d{1,3})\b/.exec(location.search);
