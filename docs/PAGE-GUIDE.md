@@ -749,7 +749,7 @@ without JS they stack, which is also what Pagefind reads.
     the poll") and Take the Helm ("Enter Foundry · the game table").
     The All Hands line (`a.bb-hands`, `href="#sail"`, `data-field="all-hands"`)
     names the open All Hands items by their bold lead words, shortened:
-    "All hands: choose the instructor · Ostekk-2 · second in command". It
+    "Decide: the instructor · Ostekk-2 · second in command". It
     carries each item's `data-item` in `data-items`, opens the Heading tab,
     and is left out when All Hands is empty. Each value is written by hand
     from `data/bearing.js` (`goal`, `goalQuest`, `date`, `passage`, `level`,
@@ -797,8 +797,9 @@ without JS they stack, which is also what Pagefind reads.
   Bearing ›". On the Current Bearing a voyage in the strip swaps the
   Last time and Heading panels, and their tabs, in place for that
   voyage page's, with a line leading back to the current bearing; the
-  Quest Board stays current. The command bar stays off these pages
-  (`data-no-command-bar` on `<body>`).
+  Quest Board stays current. The bearing pages take only the command
+  bar's search row (`data-command-bar="search"` on `<body>`): under the
+  banner on the Current Bearing, above the strip on a voyage's page.
 - **Heading.** The crew plays once a month or less, so the list is
   a memory aid: curated, a few items to a group, with the detail left to
   the voyage page. Three groups, each shown only when it has items:

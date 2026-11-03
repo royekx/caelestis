@@ -497,6 +497,10 @@ a.bs-stop:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
   .bs-track.fade-l { --fade-l: 1.25rem; }
   .bs-track.fade-r { --fade-r: 1.25rem; }
   .bearing-sec { padding: 1.2rem 1.15rem 1.4rem; }
+  /* On a phone the panels take the column's full width: the column's own
+     side padding and the bullets' indent left four or five words a line. */
+  .content { padding-left: 0; padding-right: 0; }
+  .bearing-bullets { padding-left: 1.1rem; }
   .bearing-sail { margin: 0 -1.15rem -1.4rem; padding: 1rem 1.15rem 1.2rem; }
   .bearing-showing { padding: 0.6rem 1.15rem; }
   .bearing-title { font-size: 1.2rem; }
