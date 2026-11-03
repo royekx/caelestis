@@ -153,7 +153,8 @@
     'body.with-sidebar{padding-left:220px;}',
     '@media(max-width:768px){',
     'body.with-sidebar{padding-left:0!important;padding-top:52px!important;}',
-    '.side-nav{transform:translateX(-100%);transition:transform .28s ease;}',
+    /* The drawer opens below the toggle bar, which stays on top as its close control. */
+    '.side-nav{top:44px;transform:translateX(-100%);transition:transform .28s ease;}',
     '.side-nav.open{transform:translateX(0);}',
     '.side-nav-toggle{display:flex!important;top:0;left:0;right:0;height:44px;}',
     '}'
