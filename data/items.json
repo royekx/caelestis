@@ -639,7 +639,8 @@
       "NPC-Hn4kW9vm",
       "QST-6bC9wN4k",
       "LOC-4wNvxXYk",
-      "PC-wI087olT"
+      "PC-wI087olT",
+      "PC-BGCfmbF3"
     ],
     "url": "inventory/entries/lantern-of-flourishing.html",
     "links": [
@@ -684,6 +685,13 @@
         "type": "npc",
         "slug": "vaelorix",
         "url": "registry/dossiers/vaelorix.html"
+      },
+      {
+        "id": "PC-BGCfmbF3",
+        "name": "Gregory",
+        "type": "pc",
+        "slug": "gregory",
+        "url": "registry/crew-manifest/gregory.html"
       },
       {
         "id": "PC-wI087olT",

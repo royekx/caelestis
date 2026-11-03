@@ -275,6 +275,17 @@ body:has(.entry-header) .content::before {
 }
 .side-nav-logo:hover { color: var(--gold-light); }
 .side-nav-body { padding: 1.2rem 0; flex: 1; }
+/* Links below the sidebar's fold: a fade and a caret at its foot (nav.js). */
+.side-nav-more {
+  position: sticky; bottom: 0; flex: none; height: 2.6rem; margin-top: -2.6rem;
+  pointer-events: none; opacity: 0; transition: opacity .2s;
+  background: linear-gradient(rgba(6,4,14,0), rgba(6,4,14,0.98) 70%);
+}
+.side-nav-more::after {
+  content: ''; position: absolute; left: 50%; bottom: 0.55rem; width: 7px; height: 7px; margin-left: -4px;
+  border-right: 1.5px solid var(--gold-dim); border-bottom: 1.5px solid var(--gold-dim); transform: rotate(45deg);
+}
+.side-nav.more-below .side-nav-more { opacity: 1; }
 /* Global search field at the top of the sidebar */
 .side-nav-search {
   position: relative; display: flex; align-items: center;

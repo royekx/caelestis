@@ -298,6 +298,13 @@
     "url": "registry/crew-manifest/gregory.html",
     "links": [
       {
+        "id": "ITM-Z1eGrfAb",
+        "name": "Lantern of Flourishing",
+        "type": "item",
+        "slug": "lantern-of-flourishing",
+        "url": "inventory/entries/lantern-of-flourishing.html"
+      },
+      {
         "id": "QST-6bC9wN4k",
         "name": "Gregory's Pull",
         "type": "quest",

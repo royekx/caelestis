@@ -1326,6 +1326,13 @@
         "url": "navigation-records/the-garden.html"
       },
       {
+        "id": "NPC-ijDm41rn",
+        "name": "Ostekk",
+        "type": "npc",
+        "slug": "ostekk",
+        "url": "registry/dossiers/ostekk.html"
+      },
+      {
         "id": "NPC-Hn4kW9vm",
         "name": "Ostekk-6",
         "type": "npc",
@@ -1455,7 +1462,8 @@
       6
     ],
     "linked": [
-      "NPC-MZZkLc0g"
+      "NPC-MZZkLc0g",
+      "NPC-lfleUUeT"
     ],
     "url": "registry/dossiers/ostekk.html",
     "links": [
@@ -1479,6 +1487,13 @@
         "type": "npc",
         "slug": "ostekk-2",
         "url": "registry/dossiers/ostekk-2.html"
+      },
+      {
+        "id": "NPC-lfleUUeT",
+        "name": "Vaelorix",
+        "type": "npc",
+        "slug": "vaelorix",
+        "url": "registry/dossiers/vaelorix.html"
       }
     ]
   },

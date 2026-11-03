@@ -237,6 +237,7 @@
     '  <div class="side-nav-body">',
     sectionLinks,
     '  </div>',
+    '  <div class="side-nav-more" aria-hidden="true"></div>',
     '</nav>',
   ].join('');
 
@@ -244,6 +245,16 @@
 
   document.body.insertAdjacentHTML('afterbegin', html);
   document.body.classList.add('with-sidebar');
+
+  // The sidebar scrolls on its own. While links sit below its fold, a fade
+  // and a caret at its foot say so.
+  var sideNav = document.getElementById('js-side-nav');
+  function sideNavMore() {
+    sideNav.classList.toggle('more-below', sideNav.scrollTop + sideNav.clientHeight < sideNav.scrollHeight - 4);
+  }
+  sideNav.addEventListener('scroll', sideNavMore, { passive: true });
+  window.addEventListener('resize', sideNavMore);
+  sideNavMore();
 
   // The bar goes INSIDE the page column, at its top.
   //
