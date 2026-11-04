@@ -330,7 +330,7 @@ record id.
 
 | File | A run changes |
 |---|---|
-| `voyages.json` | this voyage: `title`, `playerRecord: true`, `crewLog: true`; adds the next voyage as `next` |
+| `voyages.json` | this voyage: `title`, `state: "played"`, `source` (`kind`: `transcript` or `dictation`, `file`: the Drive file name), `playerRecord: true`, `crewLog: true`; adds the next voyage with `number`, `title: null`, `working` (a few words on where it is headed), `state: "next"`, `playerRecord: false`, `crewLog: false` and `anchor` (`vNNN`) |
 | `overlay.json` → `entities` | `urgency` and `next` for every quest touched; DM beats for this voyage under `voyages[n].beats` |
 | `overlay.json` → `lanes` | beats for anything that moved off-screen |
 
@@ -356,12 +356,14 @@ node tools/data.js derive
 
 | Surface | What changes |
 |---|---|
-| `voyages/voyage-NNN.html` | new, from `voyage-template.html`: the Fleet date line under the nav bar, At a Glance, Brief Account, Full Account (the approved account), Recording (the YouTube embed and link, once posted) |
+| `voyages/voyage-NNN.html` | new, copied from `voyages/voyage-(NNN-1).html` (`voyage-template.html` still has the old folding layout; do not use it): the Fleet date line under the nav bar, At a Glance, and the account tabs Brief Account, Full Account (the approved account) and Recording (the YouTube embed and link, once posted). Drop any Interlude tab the copy carries |
 | `voyages/voyage-(NNN-1).html` | its "next voyage" link |
 | `voyages/index.html` | a row and its Overview |
 | `voyages/bearings/voyage-(NNN-1).html` | its Heading list, resolved (below) |
 | `voyages/bearings/voyage-NNN.html` | new, from the previous bearing page: a strip that ends at Voyage NNN, the Last time column (three bullets from Consequences and Major Events; the folds What each of you did, What you learned and Who you met), the Fleet date where the voyage ends, and Heading in its three groups, written from Next Session Pressure and Consequences (`docs/PAGE-GUIDE.md` § 8) |
 | `voyages/bearings/index.html` | the strip gains Voyage NNN and the next voyage; the Last time panel copied from the new bearing page; Heading is the new list plus every item carried forward; the Quest Board redone from `data/quests.json`; the three tab subtitles (the voyage, the Heading counts, the quest and loose-thread counts); the banner: headline, Fleet date, passage ahead, crew level, the All Hands line (one shortened lead phrase per All Hands item, their `data-item` keys in `data-items`; left out when All Hands is empty) and next voyage date, from `data/bearing.js`; the strip's next-voyage stop shows the same date line |
+| `voyages/bearings/timeline.html` | a `tlx-voyage` row for Voyage NNN linking its page, then two to five `tlx-item` beats from the Full Account; a `tlx-mark` for a turning point (an arrival, a departure, an arc closing). A new place starts a new `tlx-era`. Clear the Between Voyages era of the interlude this voyage followed, and rewrite the Ahead mark to the next goal |
+| `spelljammer-nexus/fleet-time.html` | its `current-date` region: the new Fleet date |
 | `voyages/bearings/voyage-NNN.html` tabs | Last time "Voyage NNN · Title"; Heading "After Voyage NNN" |
 | `data/bearing.js` | voyage, title, date, goal, goalQuest, level, levelUp, passage, allHands (the banner's All Hands phrases), nextSession, links (below) |
 | `data/vocabulary.js` | every new proper noun |
@@ -398,6 +400,9 @@ their strips.
 | `level` | the crew's level after the voyage | "Crew level 4" |
 | `levelUp` | true when the voyage brought a level-up, false otherwise | "Level up to 4 before you sail" (the `level` number) beside the level, only when true |
 | `nextSession` | the next voyage's real-world date, `'YYYY-MM-DD'` or `'YYYY-MM-DD HH:MM'`, or `''` | "Saturday, November 21 · 7 pm", or "Date not set · answer the poll" |
+| `voyage`, `title` | the latest voyage's number and title | the command bar and the strip |
+| `allHands` | one short phrase per open All Hands item, `[]` when there are none | the All Hands line |
+| `links` | `bearing` (the Current Bearing), `voyage` (set to the new voyage page), `helm` (Foundry) and `scheduler` (the Rallly poll) | the command bar's buttons |
 
 Set `level` when the crew levels up, and `passage` when the crew sets a
 new course. Write the banner by hand to match; `check` holds it to the
@@ -409,6 +414,37 @@ other page shows it beside Plot the Next Voyage. After the voyage is
 played, clear `nextSession` to `''` and put "Date not set · answer the
 poll" back on the banner and the strip. This needs no session run: a small pull request
 of its own.
+
+**Interludes.** The group meets about once a month, so the downtime between
+two voyages is played off the table as an interlude, Voyage NNN.5, which sets
+the state the next voyage opens on. An interlude is not a voyage: it gets no
+record in `sessions.json` and no run of its own. It is its own small pull
+request, with the DM's approval of the text first.
+
+| Surface | What changes |
+|---|---|
+| `voyages/voyage-NNN.html` | an Interlude tab after Full Account (`data-panel="interlude"`, note "Voyage NNN.5 · the interlude"), holding the interlude narrative in second person and the interlude card |
+| `assets/voyage-NNN-5-<slug>.png` | the interlude card |
+| `voyages/bearings/timeline.html` | a `tlx-mark` "Voyage NNN.5 · Title" in the Between Voyages era |
+| `prime/campaign/voyages/index.html` | the next voyage's block links `../../../voyages/voyage-NNN.html#interlude` |
+
+The Discord post that goes out with it, as sent for Voyage 006.5:
+
+- Header `Voyage NNN.5 · Title ✦`, then "Ahoy, cadets!" and one line on why:
+  the table meets about once a month, the interlude buys table time, and it
+  lets the DM prep for what the players want.
+- "(downtime)" after "interlude", so the players know nothing happens to them.
+- "Attached is a narrative covering the next few days", and the site link.
+- A level and character-sheet reminder.
+- "Things to decide": bullets, choices as numbered options, "Vote with a
+  reaction".
+- A days-aboard ask: one thing each cadet wants to do each day, with open
+  examples, never a menu and never a promised reward. It plays out at the
+  table as a vignette.
+- The scheduling ask with the Rallly link. Sign off "Until then, cadets."
+
+Keep it tight; the players already have the narrative to read. Queue any
+per-player messages (a handout for one cadet) to go out with it.
 
 ### DM side
 

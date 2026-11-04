@@ -40,11 +40,12 @@ staging once Korey has read and accepted them.
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 9 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 4 | 18 | 0 | 20 |
-| New pages | 12 proposed pages, the hub, notes/ | 3 | 20 | 3 | 2 | 24 |
-| Automation and tracker | the session pipeline and tracker alternatives | 0 | 11 | 2 | 0 | 0 |
+| New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 24 |
+| Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 3 | 0 | 1 |
-| **Total** |  | **126** | **157** | **46** | **2** | **54** |
+| Memory cleanup | open items left in Claude's memory notes, 2026-11-04 | 9 | 13 | 2 | 0 | 0 |
+| **Total** |  | **135** | **166** | **48** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -67,7 +68,7 @@ Each settles items on several pages at once. Rule these first.
 13. ~~**Can a taken person be released?**~~ *Ruled: the taken outlive N'ghathrod, each keeping part of him.*
 14. ~~**Fonains–Caelestis offset.**~~ *Ruled: Caelestis's present is level with Fonains Session 28, two to three months after the Monolith broke (STAGING § Timing; locations/fonains.html DM notes).*
 15. ~~**Ostekk-6 as sole survivor.**~~ *Ruled: the only active survivor; Ostekk-2 is inert and can be healed.*
-16. **The tracker and session ingest.** Keep the repo JSON record and in-chat runbook, or move to an alternative. See the Automation and tracker section.
+16. ~~**The tracker and session ingest.**~~ *Ruled: the repo record is the tracker and sessions run in chat per docs/SESSION-RUN.md; n8n and the Google Sheet trackers are retired (archived in Drive).*
 17. **Dossier tab names and "Open" subsections.** *Tab names answered: the four tabs stand. Open: whether "Open" subsections may stay in DM notes.*
 18. ~~**How Clint left the Bellwether Crow.**~~ *Ruled: a deliberate dive through a color pool with a sister artifact of A.T.L.A.S.* *Answered (section 4): the artifact is A.T.L.A.S.'s sister, a Distinction housing (STAGING); its name is a later item under artifacts/atlas-sister.html.*
 19. ~~**Keep or cut Tarroway.**~~ *Ruled: keep him as a thread, mainly in the archive; cut the timing tables.*
@@ -2069,10 +2070,6 @@ The page exists (`prime/principles.html`, Reference). Contracts are built on Cam
   src: hub.html; memory-canon § Tools and gotchas
   answered: Drive metadata for both ids (checked 2026-10-25); inbox/chat-crew-tumak-gregory-bartholomew.md § Tumak/Documents produced (rune images in folder 1KuFCC…)
 
-- **[later]** The Trackers band
-  It says "The Tracker reads the record; the sheets beside it are edited in place." The Google Sheet tracker is frozen, and tracker alternatives are under review. Options: keep the Character Arc Tracker and Wildspace Tracker cards, or retire them. Follows the sheet decide in the Automation and tracker section.
-  src: memory-canon § Automation pipeline; memory-canon (open-decisions, Plan 2026-10-25)
-
 - **[add]** A Vessels card under Setting
   The DM nav has Setting → Vessels, but the hub has no Vessels card. PR #71 added Factions and Vessels cards on the player side.
   src: prime/scripts/dm-nav.js; chat-voyage-6-7-planning § Documents produced
@@ -2117,43 +2114,21 @@ The page exists (`prime/principles.html`, Reference). Contracts are built on Cam
 
 # Automation and tracker
 
-Korey is revisiting the pipeline and tracker alternatives during the prime
-overhaul. This file sets out the current state, then the open choices. Items
-run decide, fix, drop, add.
+Settled: n8n and the Google Sheet trackers are retired. The repo record
+(`data/` plus `prime/data/`) is the tracker, shown on `prime/tracker/`, and a
+session runs in chat against the repo per `docs/SESSION-RUN.md`. The three
+Sheets (Campaign Tracker, Character Arc Tracker, Wildspace Tracker) are
+archived in Drive, not deleted. What stays open here is below.
 
-### Current state (checked against the repo, 2026-10-25)
+### Pipeline
 
-- **Session ingest.** n8n is dropped. A session runs in chat against the repo, following `prime/notes/SESSION-RUN.md`: Open → Read → Chronicle (**approval 1**) → Extract (**approval 2**) → Record → Render → Check → Publish. Nothing is written to the repo before approval 1, and nothing to the record before approval 2. A run goes up as one pull request; a run that stops halfway is picked up from its branch. The source is the Drive file `Caelestis _ The Spelljamming Academy _ Voyage NNN.txt` (transcript or dictation).
-- **The record.** `data/*.json` is the player-facing campaign record, kept by hand: sessions, npcs, locations, items, factions, quests, player-characters (plus derived `index.json`, `voyage.js`). `prime/data/*.json` is the DM layer over it, keyed by the same ids (`overlay.json`, `voyages.json`, derived `dossiers.json`). The schema is closed and listed at the top of `tools/data.js`; a DM fact has no key to sit under, which keeps `data/` player-safe. Records already carry `parentId` (16 locations use it).
-- **Verbs.** `node tools/data.js derive` fills derived fields; `check` verifies record, DM layer and pages (must report 0 errors before a PR); `guard` is the deploy test.
-- **CI.** `check.yml` runs `data.js check`. `deploy.yml` builds three Pagefind indexes (player, DM, FIA), runs `data.js guard`, prunes, and deploys to GitHub Pages. There is no build step.
-- **Retired scripts.** `build-pages.js` (the template-entity scaffolder) was deleted in Pass 0. `build-data.js` and `transform.js` were retired with the Google Sheet.
-- **The Google Sheet tracker** ("Caelestis Campaign Tracker") is frozen. `prime/tracker/` shows the repo record plus the DM overlay.
-- **Unmigrated sheets.** "Caelestis Character Arc Tracker" and "Caelestis Wildspace Tracker" still exist as synced Google Sheets; the hub still links them.
-- **Timeline.** `prime/timeline/timeline.json` is hand-edited JSON with four lanes and a clocks list; `prime/timeline/index.html` fetches it in the browser.
-- **Crew Logs.** Step 7 of the runbook still appends the Full Account to the Crew Logs Google Doc ("Voyages"), embedded on the player site at `logs/`.
-
-### Pipeline and tracker
-
-- **[later]** Session ingest
-  Current: the in-chat runbook above, with two approvals and a PR. Options: (a) keep the in-chat runbook as is; (b) keep it and trim steps (for example, drop the Crew Logs append, see below); (c) adopt an alternative pipeline. Whatever is chosen, SESSION-RUN.md and CLAUDE.md change together.
-  src: automation § Voyage 5 Method; memory-canon (open-decisions, Plan 2026-10-25; site-and-automation)
-
-- **[later]** The tracker
-  Current: the repo JSON record (`data/` plus `prime/data/`), checked in CI and shown on `prime/tracker/`; the Sheet is frozen. Options: (a) keep the repo record as the tracker; (b) move to a tracker alternative, which would need its own player/DM boundary to replace what the closed schema gives now. Touches hub.html (Trackers band), prime/tracker/, SESSION-RUN.md, DATA-BOUNDARY.md.
-  src: automation § Voyage 5 Method; memory-canon (site-and-automation; open-decisions, Plan 2026-10-25)
-
-- **[later]** The Character Arc Tracker and Wildspace Tracker sheets
-  Both are unmigrated. Options: fold them into the record (arcs into the DM layer, wildspace into locations); keep them as sheets; or retire them. The hub's Trackers band follows (see the New pages section, hub.html).
-  src: automation § Open (both chats)
+- **[later]** Anything in the retired Sheets still missing from the repo
+  The Character Arc Tracker and Wildspace Tracker were never migrated. Check them once against the record, the crew pages and locations/, and stage what is missing; then they stay archived.
+  src: automation § Open (both chats); Korey 2026-11-04 (trackers retired)
 
 - **[later]** The Crew Logs Google Doc
   Korey calls it unused, yet the V005 run appended to it, the runbook's step 7 still does, and the voyage pages carry the same text. Options: retire it (drop step 7's append and the `logs/` embed); or keep appending.
-  src: automation § Open; prime/notes/SESSION-RUN.md step 7
-
-- **[later]** Deploy and search
-  Current: deploy.yml builds the three Pagefind indexes and guards the record; the transform and scaffold steps are gone, and the scaffolder was deleted in Pass 0. Options: keep as is, or revise during the overhaul.
-  src: automation § Documents produced; memory-canon (site-and-automation)
+  src: automation § Open; docs/SESSION-RUN.md step 7
 
 ### DM views
 
@@ -2302,3 +2277,41 @@ Fixes to player-facing pages, including the Fleet Intelligence Archive (`restric
 - **[decide]** Spectators on H'Catha: what they are bound to, and the vanish rule
   The published spectator is summoned to guard one thing for 101 years and vanishes if that thing is stolen or destroyed before its term ends. Greelob and Orlob guard the meteor by their own choice (SJA), and the diggings plan has them arguing over who guards them. Rule what the two are bound to, and whether the vanish rule is table knowledge. Perils of the Drift leaves the rule off until then.
   src: Nexus cold review (2026-10-29); prime/locations/hcatha.html; prime/working/nexus-field-guide.md
+
+## Memory cleanup
+
+Open items left in Claude's memory notes on 2026-11-04, once the settled
+rulings went to STAGING. Each lists the pages it touches.
+
+### Conflicts and memory-only facts
+
+- **decide** Miken's beacon. STAGING (Voyage 007 rulings) says Miken has not placed Qitru's beacon; dossiers/miken.html, dossiers/qitru.html and campaign/index.html say he planted it.
+- **decide** Arc 2. STAGING makes Arc 2 the H'Catha arc inside Act 1; campaign/index.html titles "Arc 2: Driftwardens in the Field", and the Answered list still holds "'Arc', never 'Act'".
+- **decide** Casey's Stellar Reading. Once he spends the star, must he name a sign (no declining)? registry/crew-manifest/casey-geim.html says he "may attempt to name the constellation". crew/casey.html.
+- **decide** Tumak's Runechild sorcery. Is the subclass on his sheet now, at his first Sorcerer level, or from Sorcerer 3 like the rest of the table? crew/tumak.html, rules/index.html § Standing mechanics.
+- **decide** The loose Rod pieces and beholders. Do the pieces stay clear of beholders, Xanathar's piece the one exception? artifacts/rod-of-seven-parts.html lists it under "Still to decide".
+- **decide** Three Fonains facts backed only by memory: the Green Lady's dragon form is a wild shape of the dragon she faced in Korvalatel's Clutch, and she is the Bacon Bunch's Green Lady (the page has her trapped in that form after Aerisi split Eldath's tree); Giorge is a branded member of the Verdant Vigilance; every member of Lola's Boys is tied to the Princes of Elemental Evil, which is why the Accordance chose them. locations/fonains.html, factions/deities.html, timeline.
+- **decide** Fragment counts and the Reach. Does the number of pieces a fragment broke into still mark its distance from the Reach under the five Axioms? If so, Dissolution (2) lay closest and Determination (11) farthest. cosmology/index.html § Residue.
+- **decide** Reach debris and worlds. Draft divine-rules.md says worlds and their hearts formed from the Reach's debris; cosmology/index.html § Origins says worlds formed by Consolidation and the debris became residue. Reconcile before divine-rules § Polarity is promoted.
+- **decide** Did Lola's Boys breaking the Fonains Monolith force Vecna to change his plan? Draft tharizdun.md says only that it hurt both of them. opposition/vecna.html.
+
+### Later
+
+- **later** The scale of the galaxies and the cosmos. chart/, cosmology/index.html.
+- **later** How the Rod of Seven Parts could be used against Vecna. artifacts/rod-of-seven-parts.html.
+- **later** Why Caelestis holds records on Fonains. restricted/, locations/fonains.html.
+- **later** Does the Spindle's shadow grow in some seasons to cover about two domains, and do two eyes then shut at once under the Pact? locations/hcatha.html (with the decide "Measures").
+- **later** The Sovereign Eye's attention as a mechanic: what it notices first. locations/hcatha.html, rules/.
+- **later** How often partial sleep leaks a sleepborn on H'Catha: a variant rule for frequency. locations/hcatha.html, rules/.
+- **later** What brought Saerthe from Nimbral to Caelestis. dossiers/saerthe-abizjn.html.
+- **later** The Fleet's institutional history of named enemies and defeats. factions/fleet.html.
+- **later** Does a Seekers chapter plant a notice on the graduation board, and what does it say? NEW: Contract board.
+- **later** How Vocath's crew knew the Bellwether Crow carried the second Distinction piece. vessels/bellwether-crow.html.
+- **later** Did Mirt and Caelestis learn the piece was the target, and is that why security tightened and A.T.L.A.S. went into the Brig? artifacts/atlas.html, dossiers/mirt.html.
+- **later** The Fonains dragons' departure as a prequel one-shot. locations/fonains.html.
+- **later** Companion tabs for Boogie, Gregory and Sol, like the other three crew pages. registry/crew-manifest/.
+
+### Fixes
+
+- **fix** The later item "How the Flow works" still anchors realms to spheres; cosmology/index.html anchors them to galaxies.
+- **fix** voyages/voyage-template.html still has the old folding account layout; every voyage page uses tabs. Update it to match voyage-006.html or retire it (docs/SESSION-RUN.md now copies the previous voyage page).

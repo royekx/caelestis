@@ -199,6 +199,44 @@ state what is. Rules: `prime/working/README.md`.
 - Gated search pages check their section's sessionStorage flag: DM
   `caelestis_continuum_auth`, FIA `caelestis_restricted_v1`.
 
+## Git and pull requests
+
+Each of these has gone wrong at least once.
+
+- **Branch.** Name it `claude/<topic>`, cut fresh from `origin/main`:
+  `git fetch origin main && git checkout -b claude/<topic> origin/main`.
+  One job, one branch, one pull request.
+- **Before every push, confirm the pull request is still open.**
+  `gh api "repos/royekx/caelestis/pulls?head=royekx:<branch>&state=all" --jq '.[]|"#\(.number) \(.state) merged=\(.merged_at!=null)"'`.
+  If it merged or closed, stop pushing to that branch: cut a new
+  `claude/*` branch from `origin/main`, cherry-pick the unmerged commits
+  (`git log origin/main..HEAD`), and open a new pull request. Commits pushed to
+  a merged branch are stranded and never reach the site.
+- **Catch up with `main` before pushing.** `git fetch origin main`, then
+  rebase (no pull request yet) or merge `origin/main` (pull request open).
+  Pushing a stale shallow branch can also fail with HTTP 413.
+- **The usual conflicts** are files every job appends to. `STAGING.md`: two
+  new sections side by side; keep both. `BACKLOG.md` section table: keep every
+  row, then recount the Total row from the rows. The end of `styles/dm.css`:
+  two appended blocks; keep both, in either order. Run `check` and `terms.js`
+  after resolving.
+- **Tracking in a shallow clone.** The clone's fetch refspec covers only
+  `main`, so after the first push `git status` and the stop hook report the
+  branch as unpushed when it is not. Fix it once per branch:
+  `git config --add remote.origin.fetch '+refs/heads/<b>:refs/remotes/origin/<b>' && git fetch -q origin && git branch -u origin/<b>`.
+  Confirm a push with `git ls-remote --heads origin <b>`.
+- **Opening and editing pull requests.** `gh pr create` and GraphQL fail here.
+  Use REST: `gh api repos/royekx/caelestis/pulls -f title=… -f head=<b> -f base=main -F body=@pr.md`,
+  and `-X PATCH …/pulls/<n>` to edit. Write the body to a file; heredoc bodies
+  break on quotes.
+- **Several open pull requests** that touch `STAGING.md` or `BACKLOG.md` will
+  conflict in turn. Say so in each pull request body. When one merges, catch
+  the others up with `main` before Korey reaches them.
+- **Deleting remote branches** is refused from a session. Write the
+  `git push origin --delete …` list as a script and hand it to Korey.
+- **One clone.** Clone `--depth 1` once, with a long timeout; a second clone or
+  fetch running alongside it gets HTTP 429.
+
 ## Rules
 
 - Changes go up as a pull request for review. Do not push to `main`.
