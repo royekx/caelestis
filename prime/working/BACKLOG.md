@@ -43,9 +43,9 @@ staging once Korey has read and accepted them.
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 24 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 3 | 0 | 1 |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 14 | 3 | 0 | 1 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 13 | 13 | 2 | 0 | 1 |
-| **Total** |  | **139** | **166** | **48** | **2** | **55** |
+| **Total** |  | **139** | **167** | **48** | **2** | **55** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2168,6 +2168,10 @@ archived in Drive, not deleted. What stays open here is below.
   answered: inbox/chat-automation.md § Voyage 5 runbook, Method (Settled: "Earlier voyages keep 'autognome' as history"). PR #61 asked "Say if you want them swept" and PR #62 repeated the default; Korey merged both without asking for a sweep.
 
 # Repo and process
+
+- **[later]** Redefine the inbox
+  Chat sweeps are temporary working material, used in chat to clear chats for archiving; they need not persist in the repo. Decide what `prime/working/inbox/` is for (raw dumps only, or nothing kept once ruled), and whether finished sweeps are deleted or kept as history.
+  src: Korey, 2026-11-04
 
 - **[later]** terms.js warnings that can misfire
   The raw-line "Open" pattern and the word "undecided" are voice warnings that can flag legitimate table cells and prose (Cosmology's Determination text has an allow entry). Tune them if they start producing noise.
