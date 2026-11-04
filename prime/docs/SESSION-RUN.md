@@ -28,7 +28,7 @@ written to the record before the second.
 
 | | Where |
 |---|---|
-| The session source | Drive, named `Caelestis _ The Spelljamming Academy _ Voyage NNN.txt`: a transcript, or a dictation saved under the same name |
+| The session source | Drive, Caelestis/Transcripts, named `Caelestis _ Voyage NNN.txt`: a transcript, or a dictation saved under the same name |
 | The repo | `royekx/caelestis`, with push access |
 | The Crew Logs document | Google Doc titled "Voyages" |
 | The voyage number | from the file name |
