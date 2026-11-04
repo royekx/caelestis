@@ -24,3 +24,5 @@ all of it.
 - module-sweep-fonains.md: Princes of the Apocalypse, Lost Laboratory of Kwalish
   and Temple of Moloch checked against the transcripts.
 - cretez-foundry-notes.md: the Cre'Tez family notes, exported from Foundry.
+- drive-virenspace.md: the Virenspace Google Doc (Viren's seven worlds, the
+  Ward of No Walls, the Lantern Node), moved from Drive.
