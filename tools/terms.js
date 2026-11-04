@@ -18,12 +18,14 @@
  *            the raw line, or, with "link": true, against every relative link on the line
  *            resolved from the page's own folder (old is then a site path: a page, or a
  *            folder ending in /), for an old folder whose name lives on inside a new path
+ *            With "whole": true the old path must not follow a letter or a slash, for an
+ *            old path that lives on inside its new one (docs/ inside prime/docs/)
  *            (bearings/ → voyages/bearings/)
  *   scan     what to read: top folders (prime, restricted, the player folders) and single
  *            root pages by their .html path (index.html)
  *   finished folders (or single pages, by their .html path) whose retired-term and moved-path hits fail the check
  *   allow    "path:regex" pairs for legitimate uses (a quoted archive line, say)
- *   docs     process docs (CLAUDE.md, docs/, .github/workflows/) read only for moved
+ *   docs     process docs (CLAUDE.md, prime/docs/, .github/workflows/) read only for moved
  *            entries marked "docs": true; a hit there fails
  *
  * Scans the entries in terms.json 'scan' (the DM wiki prime/, the FIA's restricted/, the
@@ -47,7 +49,7 @@ const conf = JSON.parse(fs.readFileSync(CONF, 'utf8'));
 const rx = list => list.map(t => Object.assign({}, t, { re: new RegExp(t.pattern, t.i ? 'gi' : 'g') }));
 const RETIRED = rx(conf.retired || []);
 const VOICES = rx(conf.voice || []);
-const MOVED = (conf.moved || []).filter(m => !m.link).map(m => Object.assign({}, m, { re: new RegExp(m.old.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g') }));
+const MOVED = (conf.moved || []).filter(m => !m.link).map(m => Object.assign({}, m, { re: new RegExp((m.whole ? '(?<![\\w/])' : '') + m.old.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g') }));
 const LINKED = (conf.moved || []).filter(m => m.link);
 // Relative paths on a line (in quotes, or in url()), resolved from the page's folder.
 const PATHS = /["'`(]((?:\.{1,2}\/)*[A-Za-z0-9_][A-Za-z0-9_.\-\/]*)(?:[?#][^"'`)\s]*)?["'`)]/g;
@@ -98,7 +100,7 @@ for (const f of files) {
   });
 }
 
-// The process docs (terms.json 'docs': CLAUDE.md, docs/, the workflows) are read for
+// The process docs (terms.json 'docs': CLAUDE.md, prime/docs/, the workflows) are read for
 // moved entries marked "docs": true only, such as a build script that moved to tools/.
 // Retired terms and voice are not checked there: the docs name them on purpose. A hit
 // in a doc fails the check.

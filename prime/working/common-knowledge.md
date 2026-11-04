@@ -261,8 +261,8 @@ Gender: Male (already set).
 - `data/npcs.json`: each approved entity's facts, and `Gender` where filled.
 - `dossiers/*.html`: a "Common knowledge" list in the Record tab, and the
   `Species` row; `dossiers/index.html` unchanged unless Species joins the row.
-- `docs/PAGE-GUIDE.md` § 8 (Record pages, dossier rows) and
-  `docs/SESSION-RUN.md` step 3 (a fact the crew learns on screen leaves the
+- `prime/docs/PAGE-GUIDE.md` § 8 (Record pages, dossier rows) and
+  `prime/docs/SESSION-RUN.md` step 3 (a fact the crew learns on screen leaves the
   list and becomes a bullet).
 
 ## Open

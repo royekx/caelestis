@@ -92,9 +92,9 @@ jobs:
         run: |
           set -e
           rm -f  CLAUDE.md
-          rm -rf tools prime/working docs
+          rm -rf tools prime/working prime/docs
           find . -name '*-template.html' -not -path './.git/*' -delete
-          echo "pruned: tools/, CLAUDE.md, prime/working, docs, *-template.html"
+          echo "pruned: tools/, CLAUDE.md, prime/working, prime/docs, *-template.html"
 
       # -- Publish the whole site (with all three index bundles) --
       - name: Setup Pages
