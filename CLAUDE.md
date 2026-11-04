@@ -207,8 +207,11 @@ Each of these has gone wrong at least once.
   `git fetch origin main && git checkout -b claude/<topic> origin/main`.
   One job, one branch, one pull request.
 - **Before every push, confirm the pull request is still open.**
-  `gh api "repos/royekx/caelestis/pulls?head=royekx:<branch>&state=all" --jq '.[]|"#\(.number) \(.state) merged=\(.merged_at!=null)"'`.
-  If it merged or closed, stop pushing to that branch: cut a new
+  Gate the push on it, so a merged pull request stops the command:
+  `[ "$(gh api "repos/royekx/caelestis/pulls?head=royekx:<branch>&state=all" --jq '.[0].state')" = open ] && git push`.
+  (Before the pull request exists, the query returns nothing; push the first
+  time without the gate.) Printing the state and pushing in the same `&&`
+  chain does not gate anything. If it merged or closed, stop pushing to that branch: cut a new
   `claude/*` branch from `origin/main`, cherry-pick the unmerged commits
   (`git log origin/main..HEAD`), and open a new pull request. Commits pushed to
   a merged branch are stranded and never reach the site.
