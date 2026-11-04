@@ -50,6 +50,16 @@ body::after {
   position: relative;
   z-index: 1;
 }
+/* A dark field behind the text block, so the lattice lines fade out
+   under the lettering and stay visible around it. */
+.gate::before {
+  content: '';
+  position: absolute;
+  inset: -3rem -5rem;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(closest-side, rgba(3,2,8,0.9) 0%, rgba(3,2,8,0.82) 65%, rgba(3,2,8,0) 100%);
+}
 
 .gate-back {
   display: inline-block; margin-top: 1.8rem;
@@ -73,9 +83,9 @@ body::after {
 .institution {
   font-family: 'Cinzel', serif;
   font-size: 0.766rem;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(201,153,58,0.55);
+  color: rgba(201,153,58,0.75);
   margin-bottom: 0.6rem;
 }
 
@@ -92,16 +102,15 @@ body::after {
 .subtitle {
   font-family: 'Cinzel', serif;
   font-size: 0.696rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(201,153,58,0.35);
+  color: rgba(201,153,58,0.75);
   margin-bottom: 2.2rem;
 }
 
 .auth-note {
   font-size: 1.01rem;
-  color: rgba(201,153,58,0.55);
-  font-style: italic;
+  color: rgba(201,153,58,0.85);
   margin-bottom: 1.6rem;
   line-height: 1.7;
 }
@@ -125,7 +134,7 @@ body::after {
   transition: border-color 0.2s, background 0.2s;
 }
 .passcode-input::placeholder {
-  color: rgba(201,153,58,0.3);
+  color: rgba(201,153,58,0.6);
   font-style: italic;
 }
 .passcode-input:focus {
@@ -139,7 +148,7 @@ body::after {
   color: rgba(201,153,58,0.85);
   font-family: 'Cinzel', serif;
   font-size: 0.858rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   padding: 0.75rem 1.5rem;
   cursor: pointer;
@@ -153,7 +162,7 @@ body::after {
 
 .hint {
   font-size: 0.888rem;
-  color: rgba(201,153,58,0.3);
+  color: rgba(201,153,58,0.7);
   font-style: italic;
   margin-bottom: 2.2rem;
   letter-spacing: 0.04em;
@@ -162,7 +171,7 @@ body::after {
 .warning {
   border: 1px solid rgba(180,40,40,0.3);
   border-left: 3px solid rgba(180,40,40,0.6);
-  background: rgba(30,4,4,0.4);
+  background: rgba(30,4,4,0.7);
   padding: 0.9rem 1.1rem;
   margin-top: 1rem;
   text-align: left;
@@ -170,20 +179,18 @@ body::after {
 .warning-label {
   font-family: 'Cinzel', serif;
   font-size: 0.696rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(180,40,40,0.7);
+  color: #d6524a;
   margin-bottom: 0.4rem;
 }
 .warning-text {
   font-size: 0.92rem;
-  color: rgba(201,153,58,0.55);
-  font-style: italic;
+  color: rgba(201,153,58,0.85);
   line-height: 1.7;
 }
 .warning-text strong {
-  color: rgba(201,153,58,0.8);
-  font-style: normal;
+  color: #e2c48e;
 }
 
 @media (max-width: 480px) {

@@ -37,7 +37,6 @@ body::before {
   position: relative;
   z-index: 1;
 }
-.fia-files .page { max-width: calc(760px + 3rem); }
 
 /* ── FIA bar ── */
 .fia-bar {
@@ -57,12 +56,12 @@ body::before {
   text-transform: uppercase;
 }
 .fia-bar-name {
-  color: rgba(201,153,58,0.75);
-  letter-spacing: 0.22em;
+  color: rgba(201,153,58,0.8);
+  letter-spacing: 0.16em;
   margin-right: auto;
 }
 .fia-bar a {
-  color: rgba(201,153,58,0.5);
+  color: rgba(201,153,58,0.7);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -84,7 +83,7 @@ body::before {
   font-size: 0.766rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(201,153,58,0.4);
+  color: rgba(201,153,58,0.7);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -99,9 +98,9 @@ body::before {
   font-size: 0.719rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(201,153,58,0.5);
+  color: rgba(201,153,58,0.7);
   text-decoration: none;
-  border: 1px solid rgba(201,153,58,0.2);
+  border: 1px solid rgba(201,153,58,0.3);
   padding: 0.3rem 0.9rem;
   text-align: center;
   white-space: nowrap;
@@ -111,7 +110,7 @@ body::before {
 
 /* ── Parchment record ── */
 .doc-paper {
-  background: #f0ead8;
+  background: #e4dcc6;
   color: #1a1208;
   padding: 3.5rem 4rem;
   position: relative;
@@ -139,11 +138,22 @@ body::before {
   font-size: 4rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  color: rgba(160,20,20,0.07);
+  color: rgba(160,20,20,0.045);
   white-space: nowrap;
   pointer-events: none;
   user-select: none;
+  z-index: 0;
 }
+/* Every block of the sheet sits above the CLASSIFIED watermark. */
+.doc-paper > * { position: relative; z-index: 1; }
+.doc-paper a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(26,18,8,0.55);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+.doc-paper a:hover { color: #8a0000; text-decoration-color: #8a0000; }
 
 .doc-header {
   text-align: center;
@@ -175,7 +185,7 @@ body::before {
 .doc-classification-stamp {
   font-family: 'Cinzel', serif;
   font-size: 0.696rem;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #8a0000;
   border: 1.5px solid #8a0000;
@@ -186,25 +196,25 @@ body::before {
 .doc-institution {
   font-family: 'Cinzel', serif;
   font-size: 0.766rem;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(26,18,8,0.5);
+  color: rgba(26,18,8,0.7);
   margin-bottom: 0.2rem;
 }
 .doc-institution + .doc-case { margin-top: 0.6rem; }
 .doc-division {
   font-family: 'Cinzel', serif;
   font-size: 0.719rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(26,18,8,0.4);
+  color: rgba(26,18,8,0.7);
   margin-bottom: 0.8rem;
 }
 .doc-case {
   font-family: 'Cinzel', serif;
   font-size: 0.899rem;
   letter-spacing: 0.1em;
-  color: rgba(26,18,8,0.5);
+  color: rgba(26,18,8,0.7);
   margin-bottom: 0.3rem;
 }
 .doc-title {
@@ -225,8 +235,8 @@ body::before {
   background: rgba(26,18,8,0.04);
   border: 1px solid rgba(26,18,8,0.08);
 }
-.doc-meta-item { font-size: 0.92rem; color: rgba(26,18,8,0.55); min-width: 0; }
-.doc-meta-item strong { color: rgba(26,18,8,0.7); font-weight: 600; }
+.doc-meta-item { font-size: 0.92rem; color: rgba(26,18,8,0.7); min-width: 0; }
+.doc-meta-item strong { color: rgba(26,18,8,0.88); font-weight: 600; }
 .doc-meta-wide { grid-column: 1 / -1; }
 
 /* Inter-sector exchange: banner and the originating sector's redaction */
@@ -237,16 +247,15 @@ body::before {
   margin-bottom: 1.2rem;
   font-size: 0.92rem;
   line-height: 1.65;
-  color: rgba(26,18,8,0.75);
-  font-style: italic;
+  color: rgba(26,18,8,0.8);
 }
 .exchange-banner-label {
   font-family: 'Cinzel', serif;
   font-style: normal;
   font-size: 0.66rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(26,18,8,0.55);
+  color: rgba(26,18,8,0.7);
   margin-bottom: 0.25rem;
 }
 .rx-withheld {
@@ -254,7 +263,7 @@ body::before {
   font-style: normal;
   font-size: 0.8em;
   letter-spacing: 0.06em;
-  color: rgba(26,18,8,0.6);
+  color: rgba(26,18,8,0.7);
   white-space: normal;
 }
 
@@ -262,9 +271,9 @@ body::before {
 .doc-section-label {
   font-family: 'Cinzel', serif;
   font-size: 0.696rem;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(26,18,8,0.45);
+  color: rgba(26,18,8,0.7);
   margin-bottom: 0.5rem;
   border-bottom: 1px solid rgba(26,18,8,0.12);
   padding-bottom: 0.25rem;
@@ -313,10 +322,10 @@ body::before {
   display: flex;
   justify-content: space-between;
   font-family: 'Cinzel', serif;
-  font-size: 0.61rem;
+  font-size: 0.66rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(26,18,8,0.3);
+  color: rgba(26,18,8,0.65);
   flex-wrap: wrap;
   gap: 0.3rem;
 }
@@ -329,10 +338,9 @@ body::before {
   margin-bottom: 1.2rem;
   font-size: 0.92rem;
   line-height: 1.65;
-  color: rgba(26,18,8,0.7);
-  font-style: italic;
+  color: rgba(26,18,8,0.8);
 }
-.handling-note strong { color: #8a0000; font-style: normal; font-weight: 600; }
+.handling-note strong { color: #8a0000; font-weight: 600; }
 
 
 /* Record tables */
@@ -345,45 +353,42 @@ body::before {
 .world-table th {
   font-family: 'Cinzel', serif;
   font-size: 0.708rem;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(26,18,8,0.5);
+  color: rgba(26,18,8,0.7);
   text-align: left;
   padding: 0.35rem 0.5rem;
   border-bottom: 1.5px solid rgba(26,18,8,0.2);
   border-top: 1px solid rgba(26,18,8,0.12);
 }
 .world-table td {
-  padding: 0.4rem 0.5rem;
-  border-bottom: 1px solid rgba(26,18,8,0.07);
+  padding: 0.45rem 0.5rem;
+  border-bottom: 1px solid rgba(26,18,8,0.12);
   color: #1a1208;
   vertical-align: top;
 }
-.world-table td { padding: 0.45rem 0.5rem; font-size: 0.963rem; }
 .world-table tr:last-child td { border-bottom: none; }
 .pri-high {
   font-family: 'Cinzel', serif;
-  font-size: 0.835rem;
+  font-size: 0.812rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #8a0000;
 }
 .pri-med {
   font-family: 'Cinzel', serif;
-  font-size: 0.835rem;
+  font-size: 0.812rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(26,18,8,0.4);
+  color: rgba(26,18,8,0.7);
 }
-.pri-high, .pri-med { font-size: 0.812rem; }
-.pri-med { color: rgba(26,18,8,0.45); }
-.registry-table { margin-top: 0.6rem; }
-.registry-table .col-cycle { width: 9%; }
-.registry-table .col-system { width: 38%; }
-.registry-table .col-status { width: 14%; }
+.registry-table { margin-top: 0.6rem; table-layout: fixed; }
+.registry-table .col-cycle { width: 10%; }
+.registry-table .col-system { width: 25%; }
+.registry-table .col-status { width: 21%; }
 .world-table td.table-note {
   font-style: italic;
-  color: rgba(26,18,8,0.45);
+  color: rgba(26,18,8,0.7);
   font-size: 0.86rem;
 }
 .world-table td.table-note.is-centered { text-align: center; padding: 0.7rem; }
@@ -406,7 +411,7 @@ body::before {
 }
 .doc-section p.memorial-note {
   font-size: 0.86rem;
-  color: rgba(26,18,8,0.55);
+  color: rgba(26,18,8,0.7);
   font-style: italic;
 }
 .sigil-plate {
@@ -418,10 +423,10 @@ body::before {
 .sigil-drawing { display: block; margin: 0 auto 0.4rem; }
 .sigil-caption {
   font-family: 'Cinzel', serif;
-  font-size: 0.54rem;
-  letter-spacing: 0.15em;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(26,18,8,0.4);
+  color: rgba(26,18,8,0.7);
   margin-top: 0.3rem;
 }
 
@@ -435,9 +440,9 @@ body::before {
 .archive-institution {
   font-family: 'Cinzel', serif;
   font-size: 0.719rem;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(201,153,58,0.4);
+  color: rgba(201,153,58,0.7);
   margin-bottom: 0.25rem;
 }
 .archive-title {
@@ -450,16 +455,15 @@ body::before {
 }
 .archive-sub {
   font-size: 0.963rem;
-  color: rgba(201,153,58,0.4);
-  font-style: italic;
+  color: rgba(201,153,58,0.8);
 }
 .class-banner {
   font-family: 'Cinzel', serif;
   font-size: 0.719rem;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(180,40,40,0.7);
-  border: 1px solid rgba(140,30,30,0.3);
+  color: #d6524a;
+  border: 1px solid rgba(180,40,40,0.5);
   padding: 0.4rem 1rem;
   text-align: center;
   margin-bottom: 2.5rem;
@@ -474,16 +478,15 @@ body::before {
 }
 .holdings-note-label {
   font-family: 'Cinzel', serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(201,153,58,0.55);
+  color: rgba(201,153,58,0.75);
   margin-bottom: 0.4rem;
 }
 .holdings-note p {
-  font-size: 0.9rem;
-  color: rgba(201,153,58,0.6);
-  font-style: italic;
+  font-size: 0.963rem;
+  color: rgba(201,153,58,0.85);
   line-height: 1.7;
 }
 .file-list { display: flex; flex-direction: column; gap: 0.5rem; }
@@ -492,11 +495,11 @@ body::before {
   font-family: 'Cinzel', serif;
   font-size: 0.708rem;
   font-weight: 400;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(201,153,58,0.4);
+  color: rgba(201,153,58,0.75);
   padding: 1.2rem 0 0.4rem;
-  border-bottom: 1px solid rgba(201,153,58,0.1);
+  border-bottom: 1px solid rgba(201,153,58,0.2);
   margin-bottom: 0.3rem;
 }
 .file-row {
@@ -511,7 +514,7 @@ body::before {
   overflow: hidden;
 }
 .file-row.has-cols {
-  grid-template-columns: 100px minmax(0, 1fr) 6.5rem 6rem auto;
+  grid-template-columns: 100px minmax(0, 1fr) 6.5rem 6rem 6.6rem;
   grid-template-areas: "tab body origin cycle class";
 }
 .file-row.has-cols .file-tab { grid-area: tab; }
@@ -534,10 +537,10 @@ body::before {
 .file-row:hover .file-tab { background: rgba(201,153,58,0.07); }
 .file-case-label {
   font-family: 'Cinzel', serif;
-  font-size: 0.61rem;
-  letter-spacing: 0.15em;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(201,153,58,0.4);
+  color: rgba(201,153,58,0.7);
   margin-bottom: 0.2rem;
 }
 .file-case-num {
@@ -555,9 +558,9 @@ body::before {
   line-height: 1.3;
 }
 .file-meta {
-  font-size: 0.888rem;
-  color: rgba(201,153,58,0.4);
-  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: rgba(201,153,58,0.8);
 }
 .file-origin, .file-cycle {
   padding: 1.1rem 0.6rem;
@@ -565,15 +568,15 @@ body::before {
   flex-direction: column;
   justify-content: center;
   font-size: 0.9rem;
-  color: rgba(201,153,58,0.65);
-  border-left: 1px solid rgba(201,153,58,0.08);
+  color: rgba(201,153,58,0.85);
+  border-left: 1px solid rgba(201,153,58,0.12);
 }
 .file-col-label {
   font-family: 'Cinzel', serif;
-  font-size: 0.56rem;
-  letter-spacing: 0.15em;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(201,153,58,0.35);
+  color: rgba(201,153,58,0.7);
   margin-bottom: 0.15rem;
 }
 .file-class {
@@ -584,31 +587,27 @@ body::before {
 }
 .class-badge {
   font-family: 'Cinzel', serif;
-  font-size: 0.61rem;
-  letter-spacing: 0.12em;
+  font-size: 0.68rem;
+  line-height: 1.3;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.2rem 0.5rem;
-  border: 1px solid rgba(180,40,40,0.35);
-  color: rgba(180,40,40,0.7);
-  white-space: nowrap;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
+  text-align: center;
+  padding: 0.25rem 0.45rem;
+  border: 1px solid rgba(180,40,40,0.6);
+  color: #d6524a;
+  max-width: 5.2rem;
 }
-.class-badge.gold { border-color: rgba(201,153,58,0.5); color: rgba(220,180,100,0.9); }
-.class-badge.above { border-color: rgba(180,40,40,0.6); color: rgba(200,50,50,0.9); }
+.class-badge.gold { border-color: rgba(201,153,58,0.6); color: #dcb464; }
 .file-legend {
   margin-top: 1.2rem;
-  font-size: 0.86rem;
-  color: rgba(201,153,58,0.4);
-  font-style: italic;
+  font-size: 0.9rem;
+  color: rgba(201,153,58,0.8);
 }
 .archive-note {
   margin-top: 2.5rem;
   text-align: center;
-  font-size: 0.888rem;
-  color: rgba(201,153,58,0.25);
-  font-style: italic;
+  font-size: 0.9rem;
+  color: rgba(201,153,58,0.75);
   line-height: 1.7;
 }
 
@@ -617,9 +616,9 @@ body::before {
 .search-eyebrow {
   font-family: 'Cinzel', serif;
   font-size: 0.719rem;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(201,153,58,0.4);
+  color: rgba(201,153,58,0.7);
   margin-bottom: 0.25rem;
 }
 .search-title {
@@ -630,7 +629,7 @@ body::before {
   letter-spacing: 0.06em;
   margin-bottom: 0.3rem;
 }
-.search-sub { font-size: 0.963rem; color: rgba(201,153,58,0.4); font-style: italic; }
+.search-sub { font-size: 0.963rem; color: rgba(201,153,58,0.8); }
 .search-console {
   border: 1px solid rgba(201,153,58,0.15);
   background: rgba(201,153,58,0.02);
@@ -652,26 +651,26 @@ body::before {
   outline: none;
   transition: border-color 0.2s;
 }
-.search-input::placeholder { color: rgba(201,153,58,0.3); font-style: italic; }
+.search-input::placeholder { color: rgba(201,153,58,0.6); font-style: italic; }
 .search-input:focus { border-color: rgba(201,153,58,0.65); }
 .search-facets { margin-top: 0.9rem; display: flex; flex-direction: column; gap: 0.5rem; }
 .search-facet { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 0.5rem; }
 .search-facet-label {
   font-family: 'Cinzel', serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.18em;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(201,153,58,0.4);
+  color: rgba(201,153,58,0.7);
   min-width: 3.6rem;
 }
 .search-pill {
   font-family: 'Cinzel', serif;
-  font-size: 0.62rem;
+  font-size: 0.66rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   background: transparent;
-  border: 1px solid rgba(201,153,58,0.22);
-  color: rgba(201,153,58,0.55);
+  border: 1px solid rgba(201,153,58,0.3);
+  color: rgba(201,153,58,0.75);
   padding: 0.25rem 0.6rem;
   cursor: pointer;
 }
@@ -681,7 +680,7 @@ body::before {
   color: #e2c48e;
   background: rgba(201,153,58,0.08);
 }
-.scope-hint { margin-top: 0.8rem; font-size: 0.9rem; color: rgba(201,153,58,0.35); font-style: italic; }
+.scope-hint { margin-top: 0.8rem; font-size: 0.9rem; color: rgba(201,153,58,0.75); font-style: italic; }
 .results-meta {
   margin: 1.8rem 0 0.8rem;
   padding-bottom: 0.5rem;
@@ -692,7 +691,7 @@ body::before {
   font-size: 0.8rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(201,153,58,0.5);
+  color: rgba(201,153,58,0.75);
 }
 .results-term { color: #c9a96e; }
 .result {
@@ -713,12 +712,12 @@ body::before {
 .result-title { font-family: 'Cinzel', serif; font-size: 0.95rem; color: #c9a96e; min-width: 0; }
 .result-path {
   font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.14em;
-  text-transform: uppercase; color: rgba(201,153,58,0.4); white-space: nowrap;
+  text-transform: uppercase; color: rgba(201,153,58,0.7); white-space: nowrap;
 }
-.result-snippet { font-size: 0.98rem; color: rgba(201,153,58,0.6); line-height: 1.55; }
+.result-snippet { font-size: 0.98rem; color: rgba(201,153,58,0.85); line-height: 1.55; }
 .result-snippet mark { background: rgba(201,153,58,0.14); color: #e2c48e; padding: 0 2px; }
 .search-state {
-  text-align: center; padding: 2.2rem 1rem; color: rgba(201,153,58,0.4);
+  text-align: center; padding: 2.2rem 1rem; color: rgba(201,153,58,0.75);
   font-style: italic; font-size: 1rem;
 }
 
@@ -732,20 +731,45 @@ body::before {
   .doc-header-top { flex-wrap: wrap; justify-content: center; gap: 0.6rem; }
   .doc-header-text { order: 3; flex-basis: 100%; padding: 0; }
   .doc-meta-row { grid-template-columns: 1fr; gap: 0.2rem; }
-  .world-table { display: block; overflow-x: auto; }
+  /* Record tables reflow: one block per row, each cell under its column's
+     label (data-label on the cell); the header row is kept for screen readers. */
+  .world-table, .world-table tbody, .world-table tr, .world-table td { display: block; width: auto; }
+  .world-table thead {
+    position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+  }
+  .world-table tr { padding: 0.55rem 0; border-bottom: 1px solid rgba(26,18,8,0.15); }
+  .world-table tbody tr:first-child { border-top: 1.5px solid rgba(26,18,8,0.2); }
+  .world-table td { padding: 0.15rem 0; border-bottom: none; }
+  .world-table td[data-label] { display: flow-root; padding-left: 6.3rem; }
+  .world-table td[data-label]::before {
+    content: attr(data-label);
+    float: left;
+    margin-left: -6.3rem;
+    width: 5.6rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    line-height: 1.35;
+    text-transform: uppercase;
+    color: rgba(26,18,8,0.7);
+    padding-top: 0.2em;
+  }
+  .world-table td.table-note.is-centered { padding: 0.3rem 0; }
   .entry-nav { grid-template-columns: 1fr 1fr; }
   .entry-nav .nav-center { grid-column: 1 / -1; grid-row: 1; }
   .file-row.has-cols {
-    grid-template-columns: 76px minmax(0, 1fr) auto;
+    grid-template-columns: 76px minmax(0, 1fr);
     grid-template-areas:
-      "tab body class"
-      "tab origin class"
-      "tab cycle class";
+      "tab body"
+      "tab origin"
+      "tab cycle"
+      "tab class";
   }
   .file-tab { padding: 0.9rem 0.4rem; }
   .file-case-num { font-size: 0.9rem; }
   .file-body { padding: 0.9rem 0.9rem 0.5rem; }
-  .file-class { padding: 0.9rem 0.6rem; }
+  .file-class { padding: 0.2rem 0.9rem 0.9rem; justify-content: flex-start; }
+  .class-badge { max-width: none; }
   .file-origin, .file-cycle {
     border-left: none;
     padding: 0 0.9rem 0.2rem;
@@ -755,7 +779,6 @@ body::before {
     align-items: baseline;
     font-size: 0.86rem;
   }
-  .file-cycle { padding-bottom: 0.9rem; }
 }
 
 /* Scrollbars: thin, in the archive's gold, on a clear track. */

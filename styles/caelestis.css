@@ -219,24 +219,22 @@ body::after {
 body:has(.entry-header) .content::before {
   background: var(--bg-card);
   border: 1px solid var(--rule);
-  border-radius: 0;
+  border-radius: 12px;
   box-shadow: 0 18px 50px rgba(3, 5, 10, 0.45);
-  inset: -1.75rem 0;
+  /* The panel ends 2rem under the record, not at the foot of .content's
+     6rem padding: that left an empty band below every short record. */
+  inset: -1.75rem 0 4rem;
 }
 @media (max-width: 620px) {
-  body:has(.entry-header) .content::before { inset: -0.9rem 0; }
+  body:has(.entry-header) .content::before { inset: -0.9rem 0 2.5rem; }
 }
 
-/* ── ROUNDED: PILLS AND TABS ONLY ──
-   With the softer palette, square containers hold an edge better than
-   rounded ones. Radius is now reserved for the two things that read as
-   controls rather than surfaces: pills, and tabs.
-
-   Tabs round only their top corners and the panel rounds only the three
-   corners the active tab does not meet, so the pair still reads as one
-   continuous surface. */
-.chip, .filter-tag, .q-kind, .prior > summary,
-.log-badge, .log-type-badge, .stub-chip,
+/* ── ROUNDED ──
+   Pills (chips, filter tags, nav bars) are fully round. Panels and cards
+   take a 12px corner: the record panel above, index cards, the voyage
+   panels, the bearing. Tabs round only their top corners and the panel
+   only the three corners the active tab does not meet. */
+.chip, .filter-tag, .q-kind, .prior > summary, .stub-chip,
 .voyage-nav-bar, .voyage-nav-bottom, .clear-btn,
 .obj-progress, .board-count {
   border-radius: 999px;
@@ -436,7 +434,6 @@ body.with-sidebar .page-header {
   margin-bottom: 2rem;
   gap: 0.8rem;
 }
-.voyage-nav-bar + .log-meta { margin-top: 0; }
 .voyage-nav-link {
   font-family: 'Cinzel', serif; font-size: 0.835rem;
   letter-spacing: 0.1em; text-transform: uppercase;
@@ -606,7 +603,10 @@ body.with-sidebar .page-header {
    ═══════════════════════════════════════════════════════════ */
 
 /* ── Terminal page shell ── */
-.terminal-wrap { max-width: 780px; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+.terminal-wrap { max-width: var(--column); margin: 0 auto; padding: 3.5rem 2.5rem 5rem; }
+/* The command bar takes the column's width; the terminal's own blocks keep
+   their reading width under it. */
+.terminal-wrap > :not(.command-bar) { max-width: 780px; margin-left: auto; margin-right: auto; }
 .terminal-head { text-align: center; margin-bottom: 2.5rem; }
 .terminal-eyebrow {
   font-family: 'Cinzel', serif; font-size: 0.858rem; letter-spacing: 0.35em;
@@ -895,30 +895,8 @@ body.with-sidebar .page-header {
    drops to its own line instead of splitting down the middle.
    Higher specificity than the per-page rules it corrects.
    ══════════════════════════════════════════════════════════════ */
-.stat-list .stat-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 0.15rem 0.9rem;
-}
-.stat-list .stat-key {
-  white-space: nowrap;
-  flex: 0 0 auto;
-}
-.stat-list .stat-val {
-  white-space: nowrap;
-  flex: 1 1 auto;
-  text-align: right;
-  min-width: 0;
-}
 /* A handful of values are longer than the column at any width. These wrap
    normally — on their own line, so they still never collide with a label. */
-.stat-list .stat-val.stat-val-long {
-  white-space: normal;
-  overflow-wrap: break-word;
-  flex: 1 1 100%;
-}
 
 /* A little more room for the portrait column, which also helps the images */
 @media (min-width: 561px) {
@@ -1035,7 +1013,6 @@ body.with-sidebar .page-header {
   font-size: 0.963rem; color: var(--text); line-height: 1.3;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
-.cb-note { color: var(--text-muted); font-style: italic; font-size: 0.877rem; }
 .cb-face:hover .cb-val { color: var(--gold-light); }
 
 .cb-expand {
@@ -1090,13 +1067,6 @@ body.with-sidebar .page-header {
   .command-bar:not(.cb-open) .cb-date { display: none; }
 }
 
-/* Cards sit in a uniform grid, so a two-line link row on one card must not
-   stretch its neighbours. Descriptions clamp and links stay on one line. */
-.s-card { min-height: 0; }
-.s-desc { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; max-height: 3em; flex: none; }
-.s-links { flex-wrap: wrap; min-width: 0; }
-.s-link { display: inline-block; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.s-link-all { margin-top: 0; padding-top: 0; border-top: none; }
 
 @media (max-width: 620px) {
   .cb-search-tag { display: none; }
