@@ -40,12 +40,12 @@ staging once Korey has read and accepted them.
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 9 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 4 | 18 | 0 | 20 |
-| New pages | 12 proposed pages, the hub, notes/ | 3 | 20 | 3 | 2 | 24 |
-| Automation and tracker | the session pipeline and tracker alternatives | 0 | 11 | 2 | 0 | 0 |
+| New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 24 |
+| Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 3 | 0 | 1 |
 | Memory cleanup | open items left in Claude's memory notes, 2026-11-04 | 9 | 13 | 2 | 0 | 0 |
-| **Total** |  | **135** | **170** | **48** | **2** | **54** |
+| **Total** |  | **135** | **166** | **48** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -68,7 +68,7 @@ Each settles items on several pages at once. Rule these first.
 13. ~~**Can a taken person be released?**~~ *Ruled: the taken outlive N'ghathrod, each keeping part of him.*
 14. ~~**Fonains–Caelestis offset.**~~ *Ruled: Caelestis's present is level with Fonains Session 28, two to three months after the Monolith broke (STAGING § Timing; locations/fonains.html DM notes).*
 15. ~~**Ostekk-6 as sole survivor.**~~ *Ruled: the only active survivor; Ostekk-2 is inert and can be healed.*
-16. **The tracker and session ingest.** Keep the repo JSON record and in-chat runbook, or move to an alternative. See the Automation and tracker section.
+16. ~~**The tracker and session ingest.**~~ *Ruled: the repo record is the tracker and sessions run in chat per docs/SESSION-RUN.md; n8n and the Google Sheet trackers are retired (archived in Drive).*
 17. **Dossier tab names and "Open" subsections.** *Tab names answered: the four tabs stand. Open: whether "Open" subsections may stay in DM notes.*
 18. ~~**How Clint left the Bellwether Crow.**~~ *Ruled: a deliberate dive through a color pool with a sister artifact of A.T.L.A.S.* *Answered (section 4): the artifact is A.T.L.A.S.'s sister, a Distinction housing (STAGING); its name is a later item under artifacts/atlas-sister.html.*
 19. ~~**Keep or cut Tarroway.**~~ *Ruled: keep him as a thread, mainly in the archive; cut the timing tables.*
@@ -2070,10 +2070,6 @@ The page exists (`prime/principles.html`, Reference). Contracts are built on Cam
   src: hub.html; memory-canon § Tools and gotchas
   answered: Drive metadata for both ids (checked 2026-10-25); inbox/chat-crew-tumak-gregory-bartholomew.md § Tumak/Documents produced (rune images in folder 1KuFCC…)
 
-- **[later]** The Trackers band
-  It says "The Tracker reads the record; the sheets beside it are edited in place." The Google Sheet tracker is frozen, and tracker alternatives are under review. Options: keep the Character Arc Tracker and Wildspace Tracker cards, or retire them. Follows the sheet decide in the Automation and tracker section.
-  src: memory-canon § Automation pipeline; memory-canon (open-decisions, Plan 2026-10-25)
-
 - **[add]** A Vessels card under Setting
   The DM nav has Setting → Vessels, but the hub has no Vessels card. PR #71 added Factions and Vessels cards on the player side.
   src: prime/scripts/dm-nav.js; chat-voyage-6-7-planning § Documents produced
@@ -2118,43 +2114,21 @@ The page exists (`prime/principles.html`, Reference). Contracts are built on Cam
 
 # Automation and tracker
 
-Korey is revisiting the pipeline and tracker alternatives during the prime
-overhaul. This file sets out the current state, then the open choices. Items
-run decide, fix, drop, add.
+Settled: n8n and the Google Sheet trackers are retired. The repo record
+(`data/` plus `prime/data/`) is the tracker, shown on `prime/tracker/`, and a
+session runs in chat against the repo per `docs/SESSION-RUN.md`. The three
+Sheets (Campaign Tracker, Character Arc Tracker, Wildspace Tracker) are
+archived in Drive, not deleted. What stays open here is below.
 
-### Current state (checked against the repo, 2026-10-25)
+### Pipeline
 
-- **Session ingest.** n8n is dropped. A session runs in chat against the repo, following `prime/notes/SESSION-RUN.md`: Open → Read → Chronicle (**approval 1**) → Extract (**approval 2**) → Record → Render → Check → Publish. Nothing is written to the repo before approval 1, and nothing to the record before approval 2. A run goes up as one pull request; a run that stops halfway is picked up from its branch. The source is the Drive file `Caelestis _ The Spelljamming Academy _ Voyage NNN.txt` (transcript or dictation).
-- **The record.** `data/*.json` is the player-facing campaign record, kept by hand: sessions, npcs, locations, items, factions, quests, player-characters (plus derived `index.json`, `voyage.js`). `prime/data/*.json` is the DM layer over it, keyed by the same ids (`overlay.json`, `voyages.json`, derived `dossiers.json`). The schema is closed and listed at the top of `tools/data.js`; a DM fact has no key to sit under, which keeps `data/` player-safe. Records already carry `parentId` (16 locations use it).
-- **Verbs.** `node tools/data.js derive` fills derived fields; `check` verifies record, DM layer and pages (must report 0 errors before a PR); `guard` is the deploy test.
-- **CI.** `check.yml` runs `data.js check`. `deploy.yml` builds three Pagefind indexes (player, DM, FIA), runs `data.js guard`, prunes, and deploys to GitHub Pages. There is no build step.
-- **Retired scripts.** `build-pages.js` (the template-entity scaffolder) was deleted in Pass 0. `build-data.js` and `transform.js` were retired with the Google Sheet.
-- **The Google Sheet tracker** ("Caelestis Campaign Tracker") is frozen. `prime/tracker/` shows the repo record plus the DM overlay.
-- **Unmigrated sheets.** "Caelestis Character Arc Tracker" and "Caelestis Wildspace Tracker" still exist as synced Google Sheets; the hub still links them.
-- **Timeline.** `prime/timeline/timeline.json` is hand-edited JSON with four lanes and a clocks list; `prime/timeline/index.html` fetches it in the browser.
-- **Crew Logs.** Step 7 of the runbook still appends the Full Account to the Crew Logs Google Doc ("Voyages"), embedded on the player site at `logs/`.
-
-### Pipeline and tracker
-
-- **[later]** Session ingest
-  Current: the in-chat runbook above, with two approvals and a PR. Options: (a) keep the in-chat runbook as is; (b) keep it and trim steps (for example, drop the Crew Logs append, see below); (c) adopt an alternative pipeline. Whatever is chosen, SESSION-RUN.md and CLAUDE.md change together.
-  src: automation § Voyage 5 Method; memory-canon (open-decisions, Plan 2026-10-25; site-and-automation)
-
-- **[later]** The tracker
-  Current: the repo JSON record (`data/` plus `prime/data/`), checked in CI and shown on `prime/tracker/`; the Sheet is frozen. Options: (a) keep the repo record as the tracker; (b) move to a tracker alternative, which would need its own player/DM boundary to replace what the closed schema gives now. Touches hub.html (Trackers band), prime/tracker/, SESSION-RUN.md, DATA-BOUNDARY.md.
-  src: automation § Voyage 5 Method; memory-canon (site-and-automation; open-decisions, Plan 2026-10-25)
-
-- **[later]** The Character Arc Tracker and Wildspace Tracker sheets
-  Both are unmigrated. Options: fold them into the record (arcs into the DM layer, wildspace into locations); keep them as sheets; or retire them. The hub's Trackers band follows (see the New pages section, hub.html).
-  src: automation § Open (both chats)
+- **[later]** Anything in the retired Sheets still missing from the repo
+  The Character Arc Tracker and Wildspace Tracker were never migrated. Check them once against the record, the crew pages and locations/, and stage what is missing; then they stay archived.
+  src: automation § Open (both chats); Korey 2026-11-04 (trackers retired)
 
 - **[later]** The Crew Logs Google Doc
   Korey calls it unused, yet the V005 run appended to it, the runbook's step 7 still does, and the voyage pages carry the same text. Options: retire it (drop step 7's append and the `logs/` embed); or keep appending.
-  src: automation § Open; prime/notes/SESSION-RUN.md step 7
-
-- **[later]** Deploy and search
-  Current: deploy.yml builds the three Pagefind indexes and guards the record; the transform and scaffold steps are gone, and the scaffolder was deleted in Pass 0. Options: keep as is, or revise during the overhaul.
-  src: automation § Documents produced; memory-canon (site-and-automation)
+  src: automation § Open; docs/SESSION-RUN.md step 7
 
 ### DM views
 
