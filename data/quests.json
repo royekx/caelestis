@@ -672,7 +672,7 @@
     "fields": {
       "Type": "Mission",
       "Related Character(s)": "Bartholomew Grayson, Gregory, Tumak Swan, Sol Fortuna, Casey Geim, Boogie",
-      "Current State": "The crew holds the tyrant ship. The Command Deck is clear, the behir is gone, and the helm is being fitted into the platform.",
+      "Current State": "The crew holds the tyrant ship. The Command Deck is clear, the behir is gone, and the helm is installed in the platform.",
       "Overview (Player)": "Boatswain Tarto has sent the crew to recover an adamantine meteor that struck the spire on H’Catha, a world of beholders. Arriving as themselves is not an option. An abandoned tyrant ship drifts in Toril’s orbit: commandeer it, install a spelljamming helm on its command deck, and fly it through H’Cathan space as one of their own — the vessel itself the disguise. Reach the spire under that cover and bring the meteor back.",
       "Status": "Open"
     },
@@ -737,7 +737,7 @@
         "bullets": [
           "The crew cut the bloom from the Command Deck and tore the great flower from the beholder's body",
           "They lied to Ostekk-10 about the containment engine and ejected it through the cargo hold",
-          "The helm was carried to the Command Deck and its fitting begun"
+          "The helm was carried to the Command Deck and installed"
         ]
       }
     ],
