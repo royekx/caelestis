@@ -12,6 +12,9 @@ when a ruling changes; delete it once the page carries it. See
 - Rykoe is the centre of the cosmos: the remains of the Reach world, the black hole beneath the Core Monolith and the Radiant Citadel, around which the five galaxies lie, and which opens only when all five cores wake. The First Heart lies beneath Rykoe. Erevos is the black hole at the core of GAL-01, and the galaxy is named for it: the Erevos Galaxy. (Korey 2026-10-28: the two names swapped. done: every page, the survey, the chart, connections.json; "Rykoe Galaxy" is a retired term.)
 
 
+### Residue: scale (cosmology/index.html § Residue, artifacts/index.html § Holdings)
+- Residue is aligned to an Axiom. It is never an Axiom. An Axiom is a law that all energy in the cosmos follows, and a piece of residue is a speck beside it. A fragment gathered whole, or all five gathered together, would still come nowhere near an Axiom.
+
 ## Campaign
 
 ### Bartholomew's Wilder certification (factions/order.html, crew/bartholomew.html)
@@ -59,9 +62,45 @@ when a ruling changes; delete it once the page carries it. See
 - done: the capture, the experiments, the seventh piece and the escape are on artifacts/rod-of-seven-parts.html and vessels/thessalars-craft.html (section 4). dossiers/nghathrod.html carries them (section 5); the timeline carries the capture, the copies, the escape, the exile, the taking of Vth'oramu and the push for hearts (section 8). rules/ still needs them.
 - If N'ghathrod's true body dies, the taken do not die. Part of him lives on in each of them. His lieutenants are closest to him; each rung down the colony is further away. Given enough time, one of them could grow toward becoming another N'ghathrod. The taken lose a part of themselves when he dies.
 
+### The Academy thefts (factions/vocath-operation.html, campaign/plot-hooks.html)
+- The thefts at Caelestis took small things: station property, personal effects and Saerthe's miniature spelljamming ship. They never reached a working vessel.
+
+### Voyage 006: the great flower and the lie (campaign/voyages/index.html § V006 Actual, crew/bartholomew.html, crew/tumak.html)
+- The great flower on Vaelorix's body took no damage from any attack, but it could be moved. A smaller flower covered its roots. Once that flower was broken, fire took the roots, and Bartholomew, as an ape, pulled the great flower free.
+- Tumak's lie to Ostekk-10 was backed by Enhance Ability and Guidance from the crew, and it rolled very well.
+
 ## Artifacts and vessels
 
 ### Wan, Tu and the fragment (crew/tumak.html, rules/; done on artifacts/dissolution-fragment.html, section 4)
 - The Dissolution fragment is physically visible in its bearers: it forms and re-forms in the chest of the Runekeeper and of the Wayfinders who carry it. (Korey 2026-10-27.) factions/runekeepers.html and artifacts/dissolution-fragment.html carry it; dossiers/the-runekeeper.html carries it (section 5).
 - The Runekeepers' fragment cycles between whole and broken across Runekeepers. In Tumak it is rebuilding in two halves at once, a state neither whole nor broken.
 - done: crew/tumak.html (section 7); rules/ still needs it.
+
+### Residue: housings (artifacts/index.html § Why they are scattered and hidden)
+- The pieces belong together by where they came from, never by design. Each housing is its finder's own work, built with the skills and materials of one place and age. Housings of the same fragment look nothing alike, and nothing about a housing marks it as residue.
+
+### Tyrant ship: how it was cut, and its helm (vessels/tyrant-ship.html, dossiers/vaelorix.html)
+- Beholders cut their ships from stone with their disintegration rays. Every tyrant ship is carved this way, and the scored walls of the Hollow Deck's side opening are the marks of that cutting.
+- Vaelorix had his ship before he stole the Containment Engine from Ostekk. The Engine never drove the ship. He flew it from his dais with his own gaze, and he used the Engine to repair his units and in his experiments.
+- Play (DM voice): the module's rule that a spelljamming helm works anywhere aboard is not used. The chair-helm works only installed into Vaelorix's dais, which is why the cadets were sent with Pffred and Krik'Lit to install it.
+
+### Lantern of Flourishing: Mend and the pod (artifacts/containment-engine.html, rules/index.html § character subsystems)
+- Rules (DM voice): Mend takes an action. Spend 1 charge; the target regains 1d8 hit points, or 2d8 if it is a construct or plant.
+- Play (DM voice): the pod's look draws on the healing tanks in Dragon Ball Z. One body rests in a lit tube for the hour. Add to the DM notes beside "The pod".
+
+## Crew and dossiers
+
+### Bartholomew: Aspects inspirations (crew/bartholomew.html)
+- Play (DM voice): Aspects also draws on Beast Boy's partial changes in Teen Titans and Tony Chopper's Rumble Ball in One Piece. The model is one part of a creature, taken briefly, on a body that stays his own. Add both to § Inspirations beside "The Beast Within".
+
+### Crystalline Retrieval Construct touchstones (dossiers/crc.html)
+- Play (DM voice): the touchstones for the CRC are the T-1000, Amazo and Cell. Run it as a cosmic construct that learns, copies and keeps coming. Its face resolving into Sol's is the Amazo and Cell note.
+
+### Saerthe Abizjn: touchstone and the fleet call (dossiers/saerthe-abizjn.html § How to run him)
+- Play (DM voice): Saerthe's touchstone is Kekkaishi. He is a barrier master, and his fights are about where the walls go.
+- Play (DM voice): the crew learns of the fleet call only through rumour aboard Caelestis: a cadet's story, a dockhand's half-memory, an instructor who changes the subject. It is never demonstrated or explained to them.
+
+## Rules
+
+### Paracausality and the Weave: the well (rules/index.html § Paracausality & the Weave)
+- Play (DM voice): to explain the anti-magic ruling at the table, use the well. Energy is groundwater: it is always there, under everything. The Weave is the well that mortals draw from to cast. An anti-magic field caps the well, and the water stays where it was. A spell slot is water already drawn, so it persists in the field and cannot be poured into a spell. The Faelight spore is a root: it pulls on the water through its own channel, apart from the well, and it holds no water of its own, so it needs a caster's slot to run.
