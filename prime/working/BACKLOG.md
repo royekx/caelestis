@@ -44,8 +44,8 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 14 | 3 | 0 | 1 |
-| Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 13 | 13 | 2 | 0 | 1 |
-| **Total** |  | **139** | **167** | **48** | **2** | **55** |
+| Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 13 | 13 | 2 | 0 | 8 |
+| **Total** |  | **139** | **167** | **48** | **2** | **62** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1478,9 +1478,10 @@ left here is open.
 
 ### artifacts/faelight-spore.html
 
-- **[decide]** The Faelight spore's slot rules *(prep)*
+- **[decide]** The Faelight spore's slot rules *(prep)* *(answered)*
   The page reconciles the old rules/index.html#counter-spore section (removed in section 4) with the BACKLOG radius steps: the slot sets the radius only (10/20/30 ft for a 1st/2nd/3rd-level slot), the cloud lasts 1 minute whatever the slot, and there is no level cap. The Rules page had capped a 3rd-level caster at a 2nd-level slot and said slot level scaled area and duration; both were dropped as Rules-page additions with no ruling behind them. Confirm, or restore the cap or the duration scaling. Also open: where the spore is now. The player Collection Manifest (entry 051) lists it as "Intake · unprocessed"; the voyage 6–7 planning chat moved it from the Cargo Deck to the Garden (§ Superseded). The page follows the manifest and names the Garden as unconfirmed. Also open on the page: whether a slot above 3rd widens the cloud, whether a coated creature stays coated after leaving the cloud, and whether the spore can be carried off the ship.
   src: section 4 (2026-10-28); rules/index.html#counter-spore as it stood
+  answered: Tyrant ship mechanics reference, turn 40 (reversing turn 38): the slot sets the radius and the cloud always lasts 1 minute. Confirm the page as it stands. inbox/chat-tyrant-ship.md.
 
 ### vessels/vthoramu.html
 
@@ -2327,3 +2328,10 @@ rulings went to STAGING. Each lists the pages it touches.
 - **decide** Ryeback's stolen weapon. The staff-NPC chat ruled the custom musket was stolen and his pistol is the hand cannon; dossiers/winston-ryeback.html says the custom pistol was stolen. Settles the Musket line question. inbox/chat-staff-npcs.md.
 - **decide** Saerthe's Barrier: a full action (Korey's words in the chat) or one attack of his Multiattack (the block in the repo)? dossiers/saerthe-abizjn.html. inbox/chat-staff-npcs.md.
 - **add** Why Vaelorix took the Engine from Ostekk. He heard of a tinkerer whose machines needed no charming and came for them as gardeners. He took the Engine because it kept them running, without knowing a Rod piece was inside, face to face, and left Ostekk alive. Answers the decide on dossiers/vaelorix.html and dossiers/ostekk.html. inbox/chat-tyrant-ship.md.
+- **add** A creature the Faelight spore coats stays coated until the cloud ends, even after it leaves the cloud. The spore can be fed another slot and reused. artifacts/faelight-spore.html. inbox/chat-tyrant-ship.md.
+- **add** The spore was moved to the Garden. artifacts/faelight-spore.html, vessels/tyrant-ship.html. inbox/chat-tyrant-ship.md.
+- **add** Helm attunement passes with an action, so any crew member who can cast can hold position, drift and answer hails while the cadets are ashore. vessels/tyrant-ship.html (How to run), rules/index.html § Ship & crew. inbox/chat-tyrant-ship.md.
+- **add** Threat guardrail for H'Catha (DM voice): creatures the crew fights stay around CR 3 or lower, single hits average about 10, and danger comes from numbers and position. campaign/index.html § H'Catha arc. inbox/chat-tyrant-ship.md.
+- **add** Ostekk wants the meteor's adamantine and sends automatons after it. dossiers/ostekk.html. inbox/chat-tyrant-ship.md.
+- **add** When a suppressed paracausal source is released, Gregory takes a sudden surge, close to a feedback loop. A.T.L.A.S. is the same: muted while sealed in the Brig, it would surge if unsealed. crew/gregory.html, artifacts/atlas.html. inbox/chat-tyrant-ship.md.
+- **add** Gregory's pull stays one-way for now ("hold off on the two-way"). crew/gregory.html. inbox/chat-tyrant-ship.md.

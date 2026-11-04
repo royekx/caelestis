@@ -15,7 +15,7 @@ settled decision as **in repo**, **not in repo** or **conflicts**.
 | chat-crew-boogie-casey-sol.md | Boogie; Casey Geim; Sol Fortuna | Full | 112 | 10 | — |
 | chat-crew-tumak-gregory-bartholomew.md | Tumak Swan; Tumak's tracker; Gregory; Bartholomew; Gregory's anomaly arc | Full (Tumak Swan to turn 339) | 70 | 20 | — |
 | chat-staff-npcs.md | Speccing staff wizard subclass | Full | 5 | 2 | — |
-| chat-tyrant-ship.md | Evaluating the tyrant ship dungeon; Tyrant ship mechanics reference | PARTIAL: 0–264 of 344; 0–12 of 96 | 31 | 2 | t265; t13 |
+| chat-tyrant-ship.md | Evaluating the tyrant ship dungeon; Tyrant ship mechanics reference | PARTIAL: 0–264 of 344 (chat no longer reachable); full | 38 | 1 | t265; — |
 | chat-vecna-godhood.md | Vecna's godhood and worshippers | PARTIAL: 0–233 of 964 | 2 | 0 | t234 |
 | chat-early-planning.md | Campaign Planning; Campaign organization; D&D module where evil won; New campaign idea | Full | 31 | 9 | — |
 
