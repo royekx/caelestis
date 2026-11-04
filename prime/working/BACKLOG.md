@@ -44,8 +44,8 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 3 | 0 | 1 |
-| Memory cleanup | open items left in Claude's memory notes, 2026-11-04 | 9 | 13 | 2 | 0 | 0 |
-| **Total** |  | **135** | **166** | **48** | **2** | **54** |
+| Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 13 | 13 | 2 | 0 | 1 |
+| **Total** |  | **139** | **166** | **48** | **2** | **55** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2315,3 +2315,11 @@ rulings went to STAGING. Each lists the pages it touches.
 
 - **fix** The later item "How the Flow works" still anchors realms to spheres; cosmology/index.html anchors them to galaxies.
 - **fix** voyages/voyage-template.html still has the old folding account layout; every voyage page uses tabs. Update it to match voyage-006.html or retire it (docs/SESSION-RUN.md now copies the previous voyage page).
+
+### From the chat sweeps of 2026-11-04
+
+- **decide** Homebound. In the Tumak Swan chat (turn 336, the latest source) Korey ruled that the Heart taking Tumak home is "a disservice to the player": Tumak weaves the Anchors to protect his home, the Anchors being set places or the previous Runekeepers' havens (open which), on the model of Noctis seeking his ancestors' tombs. rules/index.html ("Homebound is a Wayfind to the Heart", "Homebound is the Becoming"), the Wayfind-cost item ("Homebound is always free"), and the homeworld, Runekeeper and Dissolution fragment pages ("Completing the inscription takes Tumak home") still say otherwise. Story first: what the world hides from, and why hiding. inbox/chat-crew-tumak-gregory-bartholomew.md § Tumak Swan, turns after 2026-10-25.
+- **decide** Tarto's stat block. The staff-NPC chat's final block (after Korey said Clear the Deck repeated Multiattack) has five d10 superiority dice and no Clear the Deck; dossiers/boatswain-tarto.html has four dice and Clear the Deck as a bonus action. Settles the item "What Clear the Deck does". inbox/chat-staff-npcs.md.
+- **decide** Ryeback's stolen weapon. The staff-NPC chat ruled the custom musket was stolen and his pistol is the hand cannon; dossiers/winston-ryeback.html says the custom pistol was stolen. Settles the Musket line question. inbox/chat-staff-npcs.md.
+- **decide** Saerthe's Barrier: a full action (Korey's words in the chat) or one attack of his Multiattack (the block in the repo)? dossiers/saerthe-abizjn.html. inbox/chat-staff-npcs.md.
+- **add** Why Vaelorix took the Engine from Ostekk. He heard of a tinkerer whose machines needed no charming and came for them as gardeners. He took the Engine because it kept them running, without knowing a Rod piece was inside, face to face, and left Ostekk alive. Answers the decide on dossiers/vaelorix.html and dossiers/ostekk.html. inbox/chat-tyrant-ship.md.

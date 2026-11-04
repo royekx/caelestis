@@ -13,10 +13,13 @@ settled decision as **in repo**, **not in repo** or **conflicts**.
 | chat-voyage-6-7-planning.md | Voyage six session planning; Voyage 7 prep | Full | 45 | 3 | — |
 | chat-automation.md | Automating with n8n; Voyage 5 runbook | V5 full; n8n mostly | 0 | 2 | — |
 | chat-crew-boogie-casey-sol.md | Boogie; Casey Geim; Sol Fortuna | Full | 112 | 10 | — |
-| chat-crew-tumak-gregory-bartholomew.md | Tumak Swan; Tumak's tracker; Gregory; Bartholomew; Gregory's anomaly arc | Full | 62 | 19 | — |
+| chat-crew-tumak-gregory-bartholomew.md | Tumak Swan; Tumak's tracker; Gregory; Bartholomew; Gregory's anomaly arc | Full (Tumak Swan to turn 339) | 70 | 20 | — |
+| chat-staff-npcs.md | Speccing staff wizard subclass | Full | 5 | 2 | — |
+| chat-tyrant-ship.md | Evaluating the tyrant ship dungeon; Tyrant ship mechanics reference | PARTIAL: 0–264 of 344; 0–12 of 96 | 31 | 2 | t265; t13 |
+| chat-vecna-godhood.md | Vecna's godhood and worshippers | PARTIAL: 0–233 of 964 | 2 | 0 | t234 |
 | chat-early-planning.md | Campaign Planning; Campaign organization; D&D module where evil won; New campaign idea | Full | 31 | 9 | — |
 
-All sweeps are finished. chat-automation.md covers most of the n8n chat, not
+Sweeps marked PARTIAL resume at the turn given once the chat-reading limit resets. chat-automation.md covers most of the n8n chat, not
 all of it.
 
 ## Other
