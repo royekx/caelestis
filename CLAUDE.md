@@ -5,15 +5,15 @@ the DM wiki under `prime/`. Static HTML on GitHub Pages at `/caelestis/`.
 
 ## When given a session transcript or a dictation
 
-Follow `docs/SESSION-RUN.md` from step 0. It has two approval points.
+Follow `prime/docs/SESSION-RUN.md` from step 0. It has two approval points.
 Do not write to the repo before the first or to the record before the second.
 
 ## Read before editing
 
 | For | Read |
 |---|---|
-| a session run | `docs/SESSION-RUN.md` |
-| any page: player, DM (`prime/`) or FIA (`restricted/`) | `docs/PAGE-GUIDE.md` |
+| a session run | `prime/docs/SESSION-RUN.md` |
+| any page: player, DM (`prime/`) or FIA (`restricted/`) | `prime/docs/PAGE-GUIDE.md` |
 | drafts, BACKLOG, STAGING | `prime/working/README.md` |
 | the record or the DM layer | § The record, below |
 
@@ -26,7 +26,7 @@ Do not write to the repo before the first or to the record before the second.
 | DM | `prime/`: the DM wiki, gated |
 | Record | `data/` (player-safe), `prime/data/` (DM layer) |
 | Shared | `assets/`, `styles/`, `scripts/` (what player pages load), `prime/scripts/` (DM scripts) |
-| Process, not deployed | `tools/` (build and check scripts: `data.js`, `terms.js`, `link-names.js`, `visual.js`, `survey.js`, `eye-fit.js`; `search.js`, a per-section search box no page loads), `docs/`, `prime/working/`, `CLAUDE.md` |
+| Process, not deployed | `tools/` (build and check scripts: `data.js`, `terms.js`, `link-names.js`, `visual.js`, `survey.js`, `eye-fit.js`; `search.js`, a per-section search box no page loads), `prime/docs/` (the session run and the page guide), `prime/working/`, `CLAUDE.md` |
 
 **DM side today**: `campaign/` (index, `voyages/`, `plot-hooks.html`), `opposition/` (`vecna.html`, `vthorama.html`), `tracker/`, `timeline/`, `crew/`, `dossiers/`, `factions/`, `statblocks/`, `cosmology/`, `locations/`, `vessels/`, `artifacts/`, `chart/`, `rules/`, `glossary/`, `principles.html`, `hub.html`, `search.html`.
 
@@ -129,7 +129,7 @@ fails on any hit.
 ## Writing
 
 These hold on every page, staged entry and doc. Page-level rules are in
-`docs/PAGE-GUIDE.md`.
+`prime/docs/PAGE-GUIDE.md`.
 
 - **Specific over sparse.** Write the detail out. A long, exact entry beats a
   generic line.

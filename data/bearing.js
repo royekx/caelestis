@@ -3,7 +3,7 @@
  * ───────────────────────────
  * Powers the command bar that nav.js injects at the top of every page,
  * and holds the values the Current Bearing's banner shows. Written during
- * a session run (docs/SESSION-RUN.md) and checked against the record and
+ * a session run (prime/docs/SESSION-RUN.md) and checked against the record and
  * the banner by `node tools/data.js check`.
  *
  *   goal         the arc's goal: the banner's headline and the bar's line

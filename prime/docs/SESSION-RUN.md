@@ -360,15 +360,15 @@ node tools/data.js derive
 | `voyages/voyage-(NNN-1).html` | its "next voyage" link |
 | `voyages/index.html` | a row and its Overview |
 | `voyages/bearings/voyage-(NNN-1).html` | its Heading list, resolved (below) |
-| `voyages/bearings/voyage-NNN.html` | new, from the previous bearing page: a strip that ends at Voyage NNN, the Last time column (three bullets from Consequences and Major Events; the folds What each of you did, What you learned and Who you met), the Fleet date where the voyage ends, and Heading in its three groups, written from Next Session Pressure and Consequences (`docs/PAGE-GUIDE.md` § 8) |
+| `voyages/bearings/voyage-NNN.html` | new, from the previous bearing page: a strip that ends at Voyage NNN, the Last time column (three bullets from Consequences and Major Events; the folds What each of you did, What you learned and Who you met), the Fleet date where the voyage ends, and Heading in its three groups, written from Next Session Pressure and Consequences (`prime/docs/PAGE-GUIDE.md` § 8) |
 | `voyages/bearings/index.html` | the strip gains Voyage NNN and the next voyage; the Last time panel copied from the new bearing page; Heading is the new list plus every item carried forward; the Quest Board redone from `data/quests.json`; the three tab subtitles (the voyage, the Heading counts, the quest and loose-thread counts); the banner: headline, Fleet date, passage ahead, crew level, the All Hands line (one shortened lead phrase per All Hands item, their `data-item` keys in `data-items`; left out when All Hands is empty) and next voyage date, from `data/bearing.js`; the strip's next-voyage stop shows the same date line |
 | `voyages/bearings/timeline.html` | a `tlx-voyage` row for Voyage NNN linking its page, then two to five `tlx-item` beats from the Full Account; a `tlx-mark` for a turning point (an arrival, a departure, an arc closing). A new place starts a new `tlx-era`. Clear the Between Voyages era of the interlude this voyage followed, and rewrite the Ahead mark to the next goal |
 | `spelljammer-nexus/fleet-time.html` | its `current-date` region: the new Fleet date |
 | `voyages/bearings/voyage-NNN.html` tabs | Last time "Voyage NNN · Title"; Heading "After Voyage NNN" |
 | `data/bearing.js` | voyage, title, date, goal, goalQuest, level, levelUp, passage, allHands (the banner's All Hands phrases), nextSession, links (below) |
 | `data/vocabulary.js` | every new proper noun |
-| each changed record's page | on the Voyage log tab, the new voyage becomes the latest block and the old one moves into Previous Voyages; the infobox rows, First seen and Last seen (or First and Last voyage) among them; the new voyage in All appearances; overview; objectives; Connections. Layout in `docs/PAGE-GUIDE.md` § 8, Record pages |
-| each new record's page | new, from a sibling page of the same kind (`inventory/entries/entry-template.html` for an item the crew owns), with `data-entity` set to its id; an item with a `homeId` gets a Notable Items entry on its home's page instead (`docs/PAGE-GUIDE.md` § 8, Inventory) |
+| each changed record's page | on the Voyage log tab, the new voyage becomes the latest block and the old one moves into Previous Voyages; the infobox rows, First seen and Last seen (or First and Last voyage) among them; the new voyage in All appearances; overview; objectives; Connections. Layout in `prime/docs/PAGE-GUIDE.md` § 8, Record pages |
+| each new record's page | new, from a sibling page of the same kind (`inventory/entries/entry-template.html` for an item the crew owns), with `data-entity` set to its id; an item with a `homeId` gets a Notable Items entry on its home's page instead (`prime/docs/PAGE-GUIDE.md` § 8, Inventory) |
 | each register | `registry/crew-manifest/` `registry/dossiers/` `registry/factions/` `navigation-records/` `vessels/` `inventory/` `quests/` index pages: rows, overview text, progress, counts |
 
 The Brief Account and At a Glance are taken from the approved Full Account and
@@ -385,7 +385,7 @@ page is resolved there too, the same way. The Weather Eye is left as it was.
 Then write the new voyage's Heading from Next Session Pressure and
 Consequences: Standing Orders and All Hands hold only what the crew can act on next
 from where they are; add a few Weather Eye nudges chosen fresh,
-never threads or predictions (`docs/PAGE-GUIDE.md` § 8, Heading). Older
+never threads or predictions (`prime/docs/PAGE-GUIDE.md` § 8, Heading). Older
 voyage pages are otherwise left as they are; `scripts/bearing.js` extends
 their strips.
 
@@ -457,7 +457,7 @@ per-player messages (a handout for one cadet) to go out with it.
 | `prime/crew/` | only if a PC's mechanics changed |
 
 When a page moves under the approved DM structure (`CLAUDE.md` § Folder map),
-this table follows it. DM pages follow `docs/PAGE-GUIDE.md`. The Tracker and the
+this table follows it. DM pages follow `prime/docs/PAGE-GUIDE.md`. The Tracker and the
 Voyages board read the record and need no edit.
 
 ## 6 · Check

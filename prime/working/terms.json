@@ -929,6 +929,18 @@
       "old": "inventory/entries/saerthes-miniature-ship.html",
       "new": "registry/dossiers/saerthe-abizjn.html#saerthes-miniature-ship",
       "link": true
+    },
+    {
+      "old": "docs/SESSION-RUN.md",
+      "new": "prime/docs/SESSION-RUN.md (process docs live in prime/docs/, pruned from deploy)",
+      "docs": true,
+      "whole": true
+    },
+    {
+      "old": "docs/PAGE-GUIDE.md",
+      "new": "prime/docs/PAGE-GUIDE.md (process docs live in prime/docs/, pruned from deploy)",
+      "docs": true,
+      "whole": true
     }
   ],
   "allow": [
@@ -960,7 +972,7 @@
   ],
   "docs": [
     "CLAUDE.md",
-    "docs",
+    "prime/docs",
     ".github/workflows",
     "prime/working/README.md"
   ]

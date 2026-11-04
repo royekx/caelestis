@@ -7,7 +7,7 @@
  *   node tools/data.js guard     the deploy's test: is data/ fit to publish
  *
  * The record is data/*.json. It is written by hand during a session run (see
- * docs/SESSION-RUN.md) and it is the only place a fact is entered.
+ * prime/docs/SESSION-RUN.md) and it is the only place a fact is entered.
  * Pages are its rendering. This script generates no page: `derive` fills in
  * the fields that follow mechanically from the authored ones, and `check`
  * proves that the record is consistent with itself, with the DM layer under
