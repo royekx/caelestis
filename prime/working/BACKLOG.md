@@ -44,7 +44,8 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline and tracker alternatives | 0 | 11 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 3 | 0 | 1 |
-| **Total** |  | **126** | **157** | **46** | **2** | **54** |
+| Memory cleanup | open items left in Claude's memory notes, 2026-11-04 | 9 | 13 | 2 | 0 | 0 |
+| **Total** |  | **135** | **170** | **48** | **2** | **54** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2302,3 +2303,41 @@ Fixes to player-facing pages, including the Fleet Intelligence Archive (`restric
 - **[decide]** Spectators on H'Catha: what they are bound to, and the vanish rule
   The published spectator is summoned to guard one thing for 101 years and vanishes if that thing is stolen or destroyed before its term ends. Greelob and Orlob guard the meteor by their own choice (SJA), and the diggings plan has them arguing over who guards them. Rule what the two are bound to, and whether the vanish rule is table knowledge. Perils of the Drift leaves the rule off until then.
   src: Nexus cold review (2026-10-29); prime/locations/hcatha.html; prime/working/nexus-field-guide.md
+
+## Memory cleanup
+
+Open items left in Claude's memory notes on 2026-11-04, once the settled
+rulings went to STAGING. Each lists the pages it touches.
+
+### Conflicts and memory-only facts
+
+- **decide** Miken's beacon. STAGING (Voyage 007 rulings) says Miken has not placed Qitru's beacon; dossiers/miken.html, dossiers/qitru.html and campaign/index.html say he planted it.
+- **decide** Arc 2. STAGING makes Arc 2 the H'Catha arc inside Act 1; campaign/index.html titles "Arc 2: Driftwardens in the Field", and the Answered list still holds "'Arc', never 'Act'".
+- **decide** Casey's Stellar Reading. Once he spends the star, must he name a sign (no declining)? registry/crew-manifest/casey-geim.html says he "may attempt to name the constellation". crew/casey.html.
+- **decide** Tumak's Runechild sorcery. Is the subclass on his sheet now, at his first Sorcerer level, or from Sorcerer 3 like the rest of the table? crew/tumak.html, rules/index.html § Standing mechanics.
+- **decide** The loose Rod pieces and beholders. Do the pieces stay clear of beholders, Xanathar's piece the one exception? artifacts/rod-of-seven-parts.html lists it under "Still to decide".
+- **decide** Three Fonains facts backed only by memory: the Green Lady's dragon form is a wild shape of the dragon she faced in Korvalatel's Clutch, and she is the Bacon Bunch's Green Lady (the page has her trapped in that form after Aerisi split Eldath's tree); Giorge is a branded member of the Verdant Vigilance; every member of Lola's Boys is tied to the Princes of Elemental Evil, which is why the Accordance chose them. locations/fonains.html, factions/deities.html, timeline.
+- **decide** Fragment counts and the Reach. Does the number of pieces a fragment broke into still mark its distance from the Reach under the five Axioms? If so, Dissolution (2) lay closest and Determination (11) farthest. cosmology/index.html § Residue.
+- **decide** Reach debris and worlds. Draft divine-rules.md says worlds and their hearts formed from the Reach's debris; cosmology/index.html § Origins says worlds formed by Consolidation and the debris became residue. Reconcile before divine-rules § Polarity is promoted.
+- **decide** Did Lola's Boys breaking the Fonains Monolith force Vecna to change his plan? Draft tharizdun.md says only that it hurt both of them. opposition/vecna.html.
+
+### Later
+
+- **later** The scale of the galaxies and the cosmos. chart/, cosmology/index.html.
+- **later** How the Rod of Seven Parts could be used against Vecna. artifacts/rod-of-seven-parts.html.
+- **later** Why Caelestis holds records on Fonains. restricted/, locations/fonains.html.
+- **later** Does the Spindle's shadow grow in some seasons to cover about two domains, and do two eyes then shut at once under the Pact? locations/hcatha.html (with the decide "Measures").
+- **later** The Sovereign Eye's attention as a mechanic: what it notices first. locations/hcatha.html, rules/.
+- **later** How often partial sleep leaks a sleepborn on H'Catha: a variant rule for frequency. locations/hcatha.html, rules/.
+- **later** What brought Saerthe from Nimbral to Caelestis. dossiers/saerthe-abizjn.html.
+- **later** The Fleet's institutional history of named enemies and defeats. factions/fleet.html.
+- **later** Does a Seekers chapter plant a notice on the graduation board, and what does it say? NEW: Contract board.
+- **later** How Vocath's crew knew the Bellwether Crow carried the second Distinction piece. vessels/bellwether-crow.html.
+- **later** Did Mirt and Caelestis learn the piece was the target, and is that why security tightened and A.T.L.A.S. went into the Brig? artifacts/atlas.html, dossiers/mirt.html.
+- **later** The Fonains dragons' departure as a prequel one-shot. locations/fonains.html.
+- **later** Companion tabs for Boogie, Gregory and Sol, like the other three crew pages. registry/crew-manifest/.
+
+### Fixes
+
+- **fix** The later item "How the Flow works" still anchors realms to spheres; cosmology/index.html anchors them to galaxies.
+- **fix** voyages/voyage-template.html still has the old folding account layout; every voyage page uses tabs. Update it to match voyage-006.html or retire it (docs/SESSION-RUN.md now copies the previous voyage page).

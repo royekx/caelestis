@@ -104,3 +104,23 @@ when a ruling changes; delete it once the page carries it. See
 
 ### Paracausality and the Weave: the well (rules/index.html § Paracausality & the Weave)
 - Play (DM voice): to explain the anti-magic ruling at the table, use the well. Energy is groundwater: it is always there, under everything. The Weave is the well that mortals draw from to cast. An anti-magic field caps the well, and the water stays where it was. A spell slot is water already drawn, so it persists in the field and cannot be poured into a spell. The Faelight spore is a root: it pulls on the water through its own channel, apart from the well, and it holds no water of its own, so it needs a caster's slot to run.
+
+## Opposition and Fonains
+
+### N'ghathrod's elder brain (dossiers/nghathrod.html, locations/fonains.html)
+- N'ghathrod's elder brain lay beneath the Barrier Peaks for about five hundred years, close to the wreck that carried Tharizdun's temple. Tharizdun's influence spread through Fonains from that temple, but it never reached the brain. The brain is N'ghathrod's alone, and Tharizdun has no part in it.
+
+### The taken and their old ties (factions/vthorama.html)
+- A taken person keeps their old relationships and still cares about the people in them. Those ties shape how they act: what they say to a friend, whom they protect, how gently they lie. When an old tie and the colony pull in opposite directions, the colony wins every time.
+
+### Boarding Vth'oramu (vessels/vthoramu.html, dossiers/nghathrod.html)
+- Play (DM voice): if the crew boards Vth'oramu, run the colony as a civilization. Families, children born aboard, trades and streets fill the interior, and most of the people there never chose N'ghathrod's war. Any plan to destroy the ship or end him has to weigh that cost. Touchstone: the Red Moon dilemma in Critical Role's third campaign.
+
+### The Cre'Tez at the table (factions/cretez.html, dossiers/vanifer.html)
+- Asmodeus has no hand in Vanifer's work. The pact's terms keep him from seeing what the line does, but he knows someone inside it is betraying it.
+- Play (DM voice): the players know the Cre'Tez are tiefling through Asmodeus's pact. They do not know the line began as fire genasi.
+- Play (DM voice): Asmodus began as a player's creation at the Lola's Boys table. In the world his name honours Asmodeus, whose pact binds the family.
+
+### Fonains people (locations/fonains.html)
+- Lola Lolita Bacon worships Eldath. Her pilgrimage to the Misty Vale was to Eldath's tree.
+- Play (DM voice): Zaishori, met in Plague of the UnVanished, was a player's character from another table and appeared for rule of cool. Zaishori stays out of future play.
