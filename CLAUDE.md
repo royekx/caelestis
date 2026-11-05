@@ -161,7 +161,7 @@ proper noun. Settled:
 - H'Catha (never Hakatha). Pffred (never Fred). Sor'Kur, Veena, Krik'Lit,
   Ostekk-6, Vocath, Saerthe Abizjn, Winston Ryeback, Rindle Gearloft.
 - Jeffrey and Joffrey are two different people.
-- Saerthe Abizjn is he/him. Older chats called him they or she; those are wrong.
+- Pronouns come from the character's dossier, never from an older chat summary.
 - Lunarfoot is Tumak's clan; the Wayfinders' homeworld is unnamed.
 - The artifact is A.T.L.A.S.; "World Surveyor" is a retired term.
 - Player-facing labels say voyage, never session. Files are `voyage-NNN`,
