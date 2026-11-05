@@ -1,7 +1,7 @@
 # Evaluating the tyrant ship dungeon
 Source: https://claude.ai/chat/5a56487b-696a-4998-b91c-5f30e58ba056 · updated 2026-09-16
 
-Coverage: **PARTIAL.** Turns 0–264 of 344 read in full. Turns 265–343 sampled only, by three keyword searches (the Lantern item card, plant origins, Reach residue). Resume at turn 265 (page token `t265`).
+Coverage: **PARTIAL.** Turns 0–264 of 344 read in full. Turns 265–343 sampled only, by three keyword searches (the Lantern item card, plant origins, Reach residue). Resume at turn 265 (page token `t265`). On 2026-11-04 the chat could not be opened: read_conversation answered "not found or not accessible" for this id, and conversation search no longer returns it. It may have been deleted or archived; if Korey still has it, the resume point stands.
 
 > The chat ran before Voyage 4 and through it. It built the dungeon (v2 HTML), the manifest handout, a session runsheet and a narrative, none of them pushed. The repo is later: Voyages 5 and 6 were played, the abduction was scrapped, the Lantern was taken from Vaelorix's body, and Ostekk-10 was ejected. Where the repo is newer, the item sits under Superseded.
 
@@ -135,7 +135,7 @@ Coverage: **PARTIAL.** Turns 0–264 of 344 read in full. Turns 265–343 sample
 - Who held the third piece and who holds the sixth.
 - Tumak's two active runes are still undefined.
 - Whether Sol's self-targeted Misfortune was intended in the Oath write-up.
-- Turns 265–343 are unread. The sample shows the Lantern item card (legendary, then "Lantern of Quickening", then uncommon Lantern of Flourishing), a reach-residue-notes file, and a Miken-push idea. Read them before archiving.
+- Turns 265–343 are unread, and on 2026-11-04 the chat could not be opened. The sample shows the Lantern item card (legendary, then "Lantern of Quickening", then uncommon Lantern of Flourishing), a reach-residue-notes file, and a Miken-push idea. All three have newer repo forms (artifacts/containment-engine.html; STAGING § Residue: housings; campaign/index.html, Qitru's dial). Read the turns if the chat comes back; if it is gone, the risk is limited to small rulings from the V004 run-up.
 
 ## Documents produced
 - tyrant-ship-dungeon.html (v2 GM reference), tyrant-ship-manifest.html, tyrant-ship-session-runsheet.html, tyrant-ship-narrative.html, lantern-of-flourishing-item.html, reach-residue-notes.html. Written to the chat workspace. The manifest reached the repo as inventory/items/collection-manifest.html; the others are **not in repo**.
@@ -145,9 +145,9 @@ Coverage: **PARTIAL.** Turns 0–264 of 344 read in full. Turns 265–343 sample
 # Tyrant ship mechanics reference
 Source: https://claude.ai/chat/95a2dad9-7988-4396-b6ca-a434875b179c · updated 2026-09-21
 
-Coverage: **PARTIAL.** Turns 0–12 of 96 read in full. Turns 13–95 sampled only, by five keyword searches (hollowed wisps, the drain rules, the behir and V005 retro, the Lantern's location and the ship's drive, the behir's wounds and the parley). Resume at turn 13 (page token `t13`).
+Coverage: **Full.** Turns 0–95 of 96 read in full (turns 13–95 on 2026-11-04).
 
-> A live lookup chat for running Voyage 4, which then took in the V004 and V005 retros. The repo has absorbed most of it; the standing combat rulings are queued in BACKLOG under statblocks/index.html.
+> A live lookup chat for running Voyage 4, which then took in the V004 retro, the V005 plan, and a first design pass on H'Catha and the tyrant ship as a vessel. The repo has absorbed most of it, usually in a later and different form: H'Catha has ten domains under the Sovereign Eye, the ship has four answering eyes, and the crew kept the Lantern. The standing combat rulings are queued in BACKLOG under statblocks/index.html.
 
 ## Settled
 
@@ -158,7 +158,10 @@ Coverage: **PARTIAL.** Turns 0–12 of 96 read in full. Turns 13–95 sampled on
 - Flower base AC Small 16, Medium 14, Large 12. Spawning scales inversely with cover, with a burst when a flower drops to 0 cones. — **not in repo**
 - Shelled wisps keep the printed block, lose invisibility, stay stationary and screech to call others. — **not in repo**
 - Hollowed wisps: AC 11, 1 HP. Drain is an action: DC 12 Con save, 1d4 necrotic, and the wisp latches on a fail. A latched wisp takes straight rolls and deals 1d4 at the start of its turn. Converge pulls up to 3 more within 30 feet, latching without a save. Breaking free means killing it. A dropped cone re-shells the wisps and frees the target. — **not in repo** (AC 11, DC 12 Con, 1d4 and latch queued in BACKLOG § statblocks/index.html)
-- The Faelight spore is a persistent faerie fire: things entering the cloud are coated, and it can be reused. Korey: the slot level should change the duration. — **conflicts** (artifacts/faelight-spore.html: radius set by slot, flat 1 minute; BACKLOG § artifacts/faelight-spore.html asks to confirm or restore duration scaling)
+- The Faelight spore is a persistent faerie fire. A caster spends a slot as a bonus action, with no concentration and no save. Anything that enters the cloud or starts its turn there is coated, allies included, and attacks against it have advantage. The cloud stays where it is released. — **in repo** (artifacts/faelight-spore.html)
+- The slot sets the radius (10/20/30 ft for a 1st/2nd/3rd-level slot), and the cloud lasts 1 minute whatever the slot. Korey (turn 40) reversed his own turn-38 call that the slot sets the duration. — **in repo** (artifacts/faelight-spore.html). This answers the BACKLOG decide under artifacts/faelight-spore.html: confirm the page; the duration scaling is not to be restored.
+- A coated creature stays coated until the cloud ends, even after it leaves the cloud (turn 43, "This is good"). — **not in repo** (artifacts/faelight-spore.html lists it as not set)
+- The spore is reusable: the carrier picks it up and spends another slot (Korey, turn 38, "something they can use, keep using later too"). — **not in repo** (artifacts/faelight-spore.html says whether it can be carried is not set)
 - Faelight location: first Cargo intake by the manifest; then the Hollow Deck, carried there inside a metal crate a horror took for scrap; then the Garden, moved by a unit after the slate was written, which OSTEKK-6 knows once repaired. — **not in repo** (artifacts/faelight-spore.html names the Garden as unconfirmed; this chat is where the move was made)
 - The helm weighs 200–300 lb, and the Cargo-to-Hollow opening is about 50 feet down the shaft. The Academy's kit carries 100-foot ropes. — **not in repo**
 
@@ -167,7 +170,6 @@ Coverage: **PARTIAL.** Turns 0–12 of 96 read in full. Turns 13–95 sampled on
 - A helm that works anywhere aboard makes the mission moot; it must go on the Command Deck. — **in repo** (STAGING, same section)
 - The Engine was in Vaelorix's body, grown into the knots; he never let it leave his side. — **in repo** (artifacts/containment-engine.html, between two eyestalks)
 - Frozen horrors stand stopped mid-stride on the Command Deck. — **in repo** (campaign/voyages/index.html V005 corrections)
-- A horror reactivates when its flower's cone drops. — **not in repo**
 - OSTEKK-6 is an automaton; Gregory is an autognome. His line: "I am not an autognome. I am a unit. An automaton." — **in repo** (dossiers/ostekk-6.html)
 - The Lantern is paracausal; Gregory senses paracausal things as a tug; the field had been suppressing the Lantern, which is why his pull was faint. — **in repo** (campaign/voyages/index.html V005 corrections; artifacts/containment-engine.html, "Dampened")
 - The pull is not two-way for now. — **not in repo** (Korey: "Hold off on the two-way")
@@ -178,6 +180,37 @@ Coverage: **PARTIAL.** Turns 0–12 of 96 read in full. Turns 13–95 sampled on
 - Casey's soft light under the behir. — **in repo** (vessels/tyrant-ship.html, "left undefined")
 - Fixes: a three-line threshold card per room before tokens drop, strip borrowed map props, note height on tokens. — **in repo** (campaign/voyages/index.html V005)
 - Miken saw the dead beholder and may believe Tumak's "we defeated it" joke. — **in repo** (campaign/voyages/index.html V006, "Tumak … told him they killed the beholder")
+- Sol's vignette: three clockwork horrors hit the Cargo group and break off at the behir's screech, with Ryeback's gun, Pffred and Krik'Lit shown as capable; Miken peels off to check on the others. — **in repo** (campaign/voyages/index.html V005, "Sol's vignette ran as planned")
+- Ryeback, the ranking Petty Officer, asks at the Cargo debrief whether the crew can do this or should call Tarto and Saerthe. — **in repo** (campaign/voyages/index.html V005)
+- Post-session corrections went out as cleanup notes, not table time: frozen horrors on the Command Deck, OSTEKK-6 stuttering, automaton against autognome. — **in repo** (campaign/voyages/index.html V004 delta)
+
+### The ship as a vessel (Korey's rulings)
+- Beholders follow 5e: solitary, paranoid, hostile to other beholders. The 2e hive lore (Arcane-built ships, hive mothers, orbi) is rejected. Tyrant ships are carved with the disintegration ray. — **in repo** (STAGING § Tyrant ship: how it was cut; BACKLOG § realms fix, "the 2e hive lore is rejected")
+- The dais is a helm only a beholder can work; Vaelorix never installed a spelljamming helm. The module's "a helm works anywhere aboard" is not used, since it makes the mission moot. — **in repo** (vessels/tyrant-ship.html; STAGING)
+- No thralls or earlier crew are found aboard; whatever served Vaelorix before is gone, and the nine OSTEKK units were his crew (Korey, turn 80: no retroactive bodies). — **in repo** (dossiers/vaelorix.html, "kept few thralls worth the name"; the units as his hands)
+- Pffred and Krik'Lit were sent to fit the chair-helm into the dais and leave after the commissioning. — **in repo** (STAGING; vessels/tyrant-ship.html)
+- Level 4 comes when the helm is seated, before the crossing. — **in repo** (campaign/index.html, "level 4 applied" in V006.5)
+- The ship's stats follow the Astral Adventurer's Guide: AC 17, 300. — **in repo** (vessels/tyrant-ship.html, AC 17, Hull 300)
+- The ship goes into Caelestis's keeping after the mission; the crew does not keep it. — **in repo** (vessels/tyrant-ship.html; the quest reward)
+- Stone reads native: a few carved-stone ships in orbit are ordinary traffic, and a wooden hull would draw an immediate response. The crew approaches in the tyrant ship and goes down in a scuttle ship docked in the Cargo intake. — **in repo** (locations/hcatha.html § Ports and arrival; vessels/tyrant-ship.html)
+- Helm attunement passes with an action, so an unnamed crew member able to cast can hold the helm while the crew goes ashore: hold position, drift, answer a hail. Sharper flying needs a real pilot (Korey, turn 88; Claude's limits accepted with "looks good"). — **not in repo** (vessels/tyrant-ship.html names only Saerthe or Miken as who stays; rules/index.html § Ship & crew has no attunement handoff)
+- Travel is flavour and passing time: roll for a few days and see what shows up, with a traveling merchant among the entries. — **in repo** (campaign/index.html, d6 a day and the crossing d8; the mercane trader on V007)
+
+### H'Catha (Korey's rulings)
+- Vaelorix is from H'Catha and held no land. — **in repo** (locations/hcatha.html; dossiers/vaelorix.html)
+- Beholders never fight the crew in person; they keep to their territory and act through agents. Eye rays play as terrain hazards, not attack rolls. — **in repo** (locations/hcatha.html § The rulers, § Terrain at the table)
+- The threat guardrail at this party's hit points (13–30): creatures the crew fights stay around CR 3 or lower, single hits average about 10, and danger comes from numbers and position. — **not in repo** (campaign/index.html § H'Catha arc carries no scaling guardrail)
+- The meteor's importance is local; the Watcher's worry is escalation from several forces moving in quick succession, possibly toward a Zenith, which she keeps close. — **in repo** (locations/hcatha.html, Nereth Vaul)
+- The Watcher is a she. Watchers are posted to a region, and a large world may hold several. — **in repo** (locations/hcatha.html; factions/watchers.html)
+- Miken plants a beacon instead of any dangerous sabotage; Qitru wants the mission to fail to embarrass Mirt, and how the crew treats Miken sets how good her information is. — **in repo** (dossiers/qitru.html; campaign/index.html, Qitru's dial; STAGING, the beacon not yet placed)
+- About three weeks pass between the impact and the crew's arrival. — **in repo** (locations/hcatha.html § Its arc)
+- Ostekk wants the adamantine and sends automatons after it (Korey, turn 54). — **not in repo** (dossiers/ostekk.html and campaign/index.html give his searchers no adamantine motive; they search Ondessa's sea-caves)
+- Rod pieces beyond the fourth and fifth are kept clear of beholders, so the campaign does not read beholder-heavy. — **in repo** (BACKLOG § artifacts/rod-of-seven-parts.html, which also logs the tension with Ostekk now ruling on H'Catha)
+
+### Gregory and the Lantern
+- The Lantern-wisp flowers are paracausal, as are the OSTEKK units built to depend on the Lantern; Gregory felt the units for that reason. — **in repo** (dossiers/vaelorix.html; dossiers/ostekk.html)
+- When a suppressed paracausal source unmasks near Gregory, it hits him as a large sensation, close to a feedback loop, because it goes from muted to full at once. A.T.L.A.S. follows the same logic: muted while sealed in the Brig, and a surge for Gregory if it is ever unsealed (Korey, turn 94). — **not in repo** (artifacts/atlas.html and crew/gregory.html carry neither; the V006 record has no surge when the field fell)
+- Calibration covers the pointer as it stands; the surge is involuntary and sits beside it. — **not in repo** (crew/gregory.html § Calibration)
 
 ## Superseded
 - Faelight spore on the Cargo Deck → the Hollow Deck → the Garden; repo leaves the Garden unconfirmed.
@@ -190,9 +223,31 @@ Coverage: **PARTIAL.** Turns 0–12 of 96 read in full. Turns 13–95 sampled on
 - The behir takes the Lantern and Gregory follows it by his pull → repo: the crew took the Lantern, lied, and ejected the behir.
 - The abduction kept as Miken's lever → repo: scrapped.
 - Faelight rework options (early warning, spawn choke, cone reveal) → Korey kept faerie fire.
+- Faelight duration set by slot (1 min / 10 min / 1 hour), Korey turn 38 → Korey turn 40: the slot sets the radius, the duration stays 1 minute.
+- Escaping a latch by an ally's action or a DC 12 Str or Dex check → escape by killing the wisp.
+- Shaft segments of 40 ft, helm about 400 lb, 50-ft rope coils (Claude) → the table's ~50 ft and 200–300 lb, and the module's five 100-ft lengths.
+- The soft light under the behir was the repair bay's pod (Claude, accepted) → repo leaves Casey's glimpse undefined (vessels/tyrant-ship.html).
+- Perception DCs for the Command Deck and an uptick for a full-crew assault → moot: the Command Deck was cleared in V006.
+- Frozen horrors waking as their cone drops → moot after V006; the field is gone.
+- The behir takes the Lantern; Gregory gets a navigational pointer to follow it; OSTEKK-6's repair stays gated on recovering it → repo: the crew kept the Lantern, lied, ejected the behir, and a charge set OSTEKK-6 rebuilding.
+- Pffred leaves and Krik'Lit stays for the crossing (Claude's first trim) → both leave after the commissioning; Ezra and an instructor join.
+- H'Catha with eight wedge domains, six ports at the Spindle's base, two contested wedges, a fixed ray per map position → repo: ten domains, the bands, the Sovereign Eye and the Pact, ports spread across the world, the ray table kept as a working table.
+- The meteorite as one 500-lb stone dragged into a seam cave, and the three-week timeline by week → repo: a vein mined in the Pupil on the Kurrzot seam, the 500-lb chunk one prize in the ogre's cave; the timeline rewritten around the diggings and Ondessa's sea-caves.
+- Shoreline patrols and orbital checkpoints → Korey rejected them; repo keeps the watch at domain borders on the surface.
+- The Watcher allied with an enlightened beholder exile hiding at the rim, who wants off-world on the tyrant ship → repo: Nereth Vaul allied with Ondessa, a ruler struck down at the last eclipse; all ten rulers are enlightened.
+- Ostekk on Lumbe, with a metal ship (Claude) → repo: Ostekk rules a domain on H'Catha, and Lumbe is Sarelk's laboratory.
+- Kurrzot sends an emissary to Vaelorix's ship (Claude) → repo keeps only "something between him and Vaelorix was left unsettled".
+- The Sixth piece in a drifting dead god and the Third with a non-beholder power (Claude, not taken up) → repo: the seventh piece was Thessalar's, used on N'ghathrod; the others are open.
+- Ten stalks as ship systems (Lure, Grapple beam, Dread wake, Hauler and the rest), three wired as cannons fired from the Meditation pods, two active at level 4, a hull starting at 240 → repo: four eyes answer (disintegration, telekinesis, fear, slowing) at stations rigged around the helm, Hull 300.
+- An unpowered carved skiff with a tow line, or a skiff from Caelestis → repo: a six-seat scuttle ship from the Flighty Foundling.
+- Krik'Lit noticing Miken's beacon while tuning the cradle → repo: Miken has not placed the beacon yet (STAGING).
+- The two-way commune (Claude) → Korey: hold off.
+- A Con or Int save for the surge, with a free Calibration clue on success and the pointer imprinted when the loop snaps (Claude) → no reply, and the Lantern stayed with the crew.
 
 ## Open
 - Lightning Breath: the 12d10 line, or the 20-foot cone for about 10 that ran at the table. Still open in BACKLOG § statblocks/index.html.
-- Perception DCs on the Command Deck (Claude: mound free, eye tentacles 10, wall flowers 12, ceiling flower 14, wisp distortions 15, dais 15). No reply in the sample.
-- An uptick for a full-crew assault on the lattice.
-- Turns 13–95 are unread. Read them before archiving.
+- How the surge plays mechanically, now that Korey has ruled that it happens.
+- Whether each Axiom's residue reads to Gregory with its own signal flavour (Existence familiar, the others foreign). Claude's suggestion, no reply.
+- Helm taxonomy: chair-helms against other Astral drives, and why a helm cannot go on any hull. Korey: "that's for later".
+- Whether the module's Spin Cycle trap returns as a ship feature. Korey floated making the ship more interesting; nothing ruled.
+- Whether Ostekk's own ship is built of metal rather than carved. Claude's suggestion, no reply.
