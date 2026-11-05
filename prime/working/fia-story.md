@@ -1,267 +1,213 @@
 # The Fleet Intelligence Archive: the story it tells
 
-What the FIA tells a reader, thread by thread, the DM truth behind each
-thread, and every file change that follows from it. Settle the story here
+What the FIA tells a reader, the DM truth behind it, the threads the crew can
+pull from it, and every file change that follows. Settle the story here
 first, then edit the files once.
 
 ## What the FIA is for
 
 The FIA is a supplement: a mystery running in the background that the crew
-can investigate, and a store of backstory. It does three jobs.
+can investigate, and a store of backstory.
 
-- **It reinforces threads the crew will meet in the world.** Whichever comes
-  first, the file or the encounter, the second one lands as *wait, we've seen
-  this before.* A mark, a name or a bearing in the FIA should turn up at the
-  table, and the reverse.
-- **It holds one snippet of each cadet's origin.** Each is a single line in a
-  file about something else. A player other than that cadet's may find it
-  first and do what they like with it: bring it to the table, ask about it,
-  keep it.
-- **It runs true.** Once the crew reads it, a thread laid down here has to
-  hold for the rest of the campaign. It is the least malleable part of the
-  player side.
+- **It reinforces threads the crew meets in the world.** Whichever comes
+  first, the file or the encounter, the second lands as *wait, we've seen
+  this before.*
+- **It shows as well as tells.** Each image in it is ambiguous without
+  context, and becomes clear once the crew meets its subject.
+- **It holds one line of each cadet's origin**, in a file about something
+  else. Any player may find any cadet's line first.
+- **It runs true.** Once the crew reads it, a thread laid down here holds for
+  the rest of the campaign.
 
-The files are in `restricted/`; the DM truth is cited by page.
+## The spine, worked backwards
+
+1. **At the table:** the crew looks into Joffrey (Mirt pointed them at him in
+   Voyage 003) and finds something wrong with him. He is changing; he is tied
+   to things gone missing; the missing things lead to Vocath. The move is
+   *go find Vocath, because something bigger is going on.*
+2. **In the FIA:** Joffrey was aboard the *Bellwether Crow*, a relief run to
+   Cairn Station carrying a consigned item it should not have carried. Cairn
+   sent strange readings before it went silent. The readings were a ship:
+   Vth'oramu.
+
+The illithids live in Joffrey. No FIA file says *illithid*; the crew gets
+there from Joffrey, from the readings, and from Cairn.
 
 ## What the table has already fixed
 
-These happened at the table and are in the record. The FIA has to fit them.
-
 - **The rod (Voyage 003).** Boogie glimpsed the word *Vocath* on the spent
-  rod, and Saerthe named the marking (`data/sessions.json`, `data/items.json`:
-  "It bears the marking 'Vocath'"). The record never says what the mark
-  looks like.
+  rod, and Saerthe named the marking (`data/sessions.json`, `data/items.json`).
 - **The Sky Dock crate (Voyage 001).** "Marked with the same symbol as the
   Vocath rod" (`data/items.json`, `data/quests.json`).
-- **Joffrey** is a decorated Caelestis Corps officer the crew was told to
-  look into (Voyage 003).
+- **Joffrey** is a decorated Caelestis Corps officer the crew was pointed at
+  (Voyage 003).
 - **Mirt** went still at the name and called Vocath an old enemy with a
   grudge (Voyage 003).
 
-## Two marks, two hands
+The record never says what the mark looks like.
 
-### Vocath's mark: blatant, signed on purpose (ruled, Korey 2026-11-03)
+## Vocath's two marks (ruled, Korey 2026-11-04)
 
-Vocath has one mark, his house mark: a balance scale, coins on one pan and a
-small crate of cargo on the other. It is on his goods wherever they move.
-The Fleet knows it as the mark of a registered trading house.
+- **His house mark** is the public trade mark of the family business. The
+  Fleet knows it, and has never seen it on anything wrong.
+- **His personal seal** goes on his darker dealings: the rod in the academy,
+  the Sky Dock crate, and the crate of Fonains shards Boogie looked into. It
+  is registered nowhere, so the Fleet has no match for it. Mirt's trusted
+  circle knows it on sight: Saerthe, Tarto, Mr. Blip, and Clint Dashforest
+  before he went overboard. That is why Saerthe could name it.
 
-He signs his work. The rod in the simulation chamber was a message to Mirt:
-*I can get to you, and to the cadets in your care.* Vocath owns his grudge
-openly (`factions/vocath-operation.html`). A name on a spent device proves
-nothing in a Fleet filing, because anyone can scratch a name, and that is
-why Mirt cannot act on it. The crate's mark is his shipping mark: ordinary
-commerce.
+He signed the rod on purpose. It was a message to Mirt: *I can get to you.*
 
-Vocath's mark lives in the world, on his rod and his crates. The FIA does
-not carry it.
+## The *Bellwether Crow*: two attacks, one partnership (proposed)
 
-### N'ghathrod's mark: the eye in a wheel, the hidden hand (ruled, Korey 2026-11-04)
+By the time of the relief run, Vocath and the colony were working together.
 
-The colony's mark is an eye inside a wheel. The top half of the wheel has
-ordinary spokes; the bottom half turns into illithid tentacles
-(`factions/vthorama.html`). It is the first small piece of N'ghathrod the
-crew can find, and it is the mark the FIA carries.
+1. **At Cairn.** The *Crow* reached Cairn and found it silent. Vocath's crew
+   had taken the station and waited, because a silent post always brings a
+   relief run. They struck from the station for the consigned item, showing
+   no seal: this was a raid, not a message. Clint took the item into one of
+   the boarders' craft and drew part of them off through a color pool. He is
+   carried as overboard.
+2. **On the run home.** The crippled *Crow* turned back toward Strake. The
+   colony came for the item, found it gone, and took Joffrey instead, and he
+   came home holding the survivors together and was decorated for it.
 
-Nobody in the Fleet knows it. The registry returns no match because there is
-nothing to match: the colony is a Seekers chapter that hides inside a
-dreadnought the Fleet charts as wildlife.
+The Fleet files one hostile party that struck at Cairn and pursued a wounded
+ship: a raider finishing what it started is not odd enough to flag. Only
+someone who knows there were two parties sees the partnership.
 
-Where it shows:
+**Mirt is not negligent.** He has a hunch and a feud and no evidence: no seal
+turned up on the *Crow*, and the debrief sketches disagreed. A headmaster
+acting on a hunch against his old enemy would look like using Fleet
+intelligence to settle a grudge. So he works off the books, through the
+cadets.
 
-- **FR-016:** the wax disc on the unlogged crate is the eye in a wheel. The
-  crate rode in a salvage shipment through the Cairn line, the same line
-  that brought Fonains shards through Vocath's hands. Vocath's line carries
-  the colony's freight; the colony's seal is on the colony's cargo. Boogie
-  inspected that shipment.
-- **WM-002:** the second boarding of the *Bellwether Crow* was the colony.
-  One survivor's statement describes a device worn by one of the second
-  boarders; WM-002 cross-references it to FR-016.
-- **Joffrey:** the colony took him in the second boarding. If the crew ever
-  finds him out, the mark is on him somewhere: under a collar, inside a
-  ring, in the chitin under his skin.
-- **At the table:** an illithid ambush, a colony courier, the Dunmarrow well
-  chamber on the Voyage 007 crossing table. Whichever the crew meets first,
-  FR-016 or the mark in the flesh, the other answers it.
+## The two images
 
-### Why the composite failed
+### FR-016: Vocath's personal seal
 
-The *Crow*'s survivors saw two boardings by two parties, and the Fleet
-filed them as one attacker. Some statements drew a balance scale on the
-first craft; others drew a wheel on a boarder in the second action. The
-composite never resolved because it was trying to make one mark out of two,
-and it was withdrawn (WM-002).
+FR-016's drawing stays: the balance scale, coins on one pan, a crate on the
+other. It becomes Vocath's personal seal, pressed in wax on the unlogged crate
+of Fonains shards. The registry finds no match because the seal was never
+registered. The inspector who flagged the crate was moved to cadet intake:
+Boogie's line.
 
-Joffrey's statement put the scale on both boardings. The colony took him in
-the second action, and his statement steers every eye onto Vocath, whose
-public grudge with Mirt makes him easy to blame.
+- **Backwards:** the crew met the seal only as a word and a name. FR-016 is
+  where they first see it drawn.
+- **Forwards:** describe it at the table when Vocath's darker side surfaces:
+  a seal on cargo at H'Catha, a ring on one of his crew, Tarto drawing it when
+  asked. Either order lands.
 
-**Why Mirt knows Vocath and nothing more.** He holds Above Bridge clearance
-and read the individual statements, which WM-002 says are kept in personnel
-records. He knew Vocath's scale on sight from their years on the Astral Sea,
-and Joffrey's statement told him what he already believed. He reads the
-wheel as a survivor's confusion. Naming Vocath in a filing would read as a
-headmaster using Fleet intelligence to prosecute his own feud, so he backed
-the closure and handles Vocath by means that need no proof
-(`dossiers/mirt.html`).
+### LG-003: Cairn's last sweeps
+
+A plate in LG-003 with Cairn's final transmission: four sweeps of the long
+scope on the same bearing, the range closing a little each time, and the
+return a different shape on every pass.
+
+| Sweep | The return |
+|---|---|
+| S-1 | A long smooth oval, like a hull |
+| S-2 | The oval with a deep notch in its leading edge |
+| S-3 | Split into two lobes, one far larger than the other |
+| S-4 | One mass again, with long filaments trailing from its lower edge |
+
+Tarroway's margin note: *Not a vessel profile. Does not hold a shape.*
+
+Without context it is a sensor fault or a cloud of debris. Once the crew has
+seen Vth'oramu, or an astral dreadnought turning, the four shapes are a body
+seen from different angles, and the filaments are what hangs beneath it.
 
 ## The threads
 
-### 1. Something on the Tetherbreak bearing (FR-005, LG-003, SA-005)
+What a crew that reads the whole FIA can go and do.
 
-**A reader takes away:** instruments drift, small ships go overdue, a
-merchant crew feels space compress, and a mass on the Cairn bearing reads
-differently on every sweep. Cairn Station goes silent, its relief is
-mauled, and Bridge closes the run past Strake. Something sits at Strake on
-indefinite hold.
+| Thread | What draws them | What waits |
+|---|---|---|
+| **Vocath** | FR-016's seal, the rod, the crates, Joffrey | Vocath himself, his line, the partnership |
+| **Joffrey** | Mirt's pointer; WM-002 puts him on the *Crow* | What he is becoming; who he answers to |
+| **Cairn Station** | LG-003, the sweeps, SA-005's closure | See below; going there breaks a standing order |
+| **Strake Station** | LG-003's sealed item on indefinite hold; Verrow and Tarroway | The sealed item (open) |
+| **Clint Dashforest** | WM-002: overboard with the consigned item, through a color pool | Fonains, and the item |
+| **The readings** | LG-003's sweeps | Vth'oramu |
+| **Ortholiths** | WM-003, FR-022, WM-006 | The Order of All; Fonains; Aethris |
+| **Each cadet's origin** | One line each | Their own threads |
 
-**Truth:** Vth'oramu sat on the bearing for days; the mass is the
-dreadnought (`locations/cairn-station.html`, `locations/strake-station.html`).
-When Cairn went dark, Vocath's crew took it and waited for the relief run
-that a silent post always brings. The Fleet charts treat Vth'oramu as
-wildlife.
+### Cairn Station: what happened there (to settle)
 
-**Changes:**
-- FR-005: the drift line credits the *Osprey Vane*; "Strake Station …
-  Reported instrument calibration drift (see above)" points at the wrong
-  vessel. Strake reports drift of its own, in its own words.
-- `locations/cairn-station.html`: "FR-005 … puts Cairn beyond the standing
-  order" is wrong (FR-005 predates the order), and "the Fleet's records name
-  an astral dreadnought's territory as the hazard" conflicts with every FIA
-  file. The charts mark the region as dreadnought range in general; the FIA
-  holds the loss of Cairn as undetermined.
+Cairn is where the threads cross, so it needs a settled answer before the crew
+can go.
 
-### 2. The relief ship (WM-002, SA-005)
+- Vth'oramu sat on the bearing for days; that is the mass on the scope.
+- Cairn went silent. *To settle:* what happened to its complement. The colony
+  took them is the answer that puts illithid evidence where the crew can find
+  it: empty bunks, brine casks, a log that stops mid-entry, the station's
+  people gone without a fight.
+- Vocath's crew occupied the empty station and waited for the relief run.
+  *To settle:* what they left behind.
 
-**A reader takes away:** the *Bellwether Crow* is boarded on the Cairn leg
-by a small fast craft with a mark nobody can read clean. Crewmate Clint
-Dashforest takes a consigned item into one of the boarders' craft and draws
-part of them off through a color pool. A second party boards and kills the
-senior officers; one survivor saw a device on a boarder. Joffrey holds the
-survivors together and comes home decorated. Dashforest is carried as
-overboard.
-
-**Truth:** the first boarding was Vocath's crew, after the second
-Distinction piece the *Crow* carried. The second was the colony, and it took
-Joffrey (`vessels/bellwether-crow.html`, `opposition/vthorama.html`). Clint
-came out on Fonains.
-
-**Changes:**
-- "By the same craft or one like it" becomes a second craft that the
-  survivors describe differently. The Fleet still files one attacker.
-- Add the statement that saw a device on a second-action boarder, with
-  "see Case #FR-016".
-- The composite's withdrawal names the cause: the statements disagree on
-  the marking, and no single rendering holds.
-- "Overboard" stays (ruled): the Fleet's word for a crewmate who did not
-  come back, whatever the cause.
-
-### 3. Ortholiths (WM-003, FR-022, WM-006)
-
-**A reader takes away:** someone keeps a registry of worlds and the
-structures that rise on them, with words the Fleet borrowed at Above Bridge.
-One world is destroyed and its structure shattered black; a fragment came
-to the Fleet from another sector and is held elsewhere. Aethris's ritual
-failed, an Ortholith stands over its temple, and one person fled into
-Academy intake.
-
-**Truth:** the registry is the Order of All's, kept by the Discerners; the
-Fleet holds a leaf of it, passed through the same channel that routed the
-Fonains fragment (`factions/discerners.html`). The Order does not sign what
-it passes on, so the Fleet calls its keeper "an unidentified party". The
-destroyed world is Fonains, CSC 50743 c; its Monolith broke a few months ago,
-and the black fragment is one of its 333 black shards
-(`locations/fonains.html`, `artifacts/fonains-shard.html`). Aethris is Sol's
-world (`locations/aethris.html`, `crew/sol.html`).
-
-**Changes:**
-- WM-003: "its pages bear the marking catalogued in Case #FR-016" goes. The
-  registry carries no mark.
-- FR-022 and WM-003: "the Order's" becomes **the Order of All's** (ruled).
-- FR-022: "Caelestis Nexus does not hold this material" becomes "Caelestis
-  does not hold this material".
-- WM-006: the Ortholith rises in the run-up to the Zenith, as the cosmology
-  has it (`cosmology/index.html`, `crew/sol.html`), not after the ritual
-  failed. Reorder the account: the structure rose as the ritual built, the
-  ritual did not close, and the structure stayed.
-- WM-006: "Their current location is withheld at Bridge clearance" reads
-  backwards in an Above Bridge file; it becomes "Their placement is
-  recorded under protective intake and withheld from this file."
-- WM-003 keeps "Still recording" for Aethris: it is the registry's word.
-  `locations/aethris.html` says the structure does nothing anyone can see.
-
-### 4. The cadets, one line each
-
-Each hint is a single line in a file about something else. None names a
-cadet; each is plain enough that the right reader recognises it.
+## The cadets, one line each
 
 | Cadet | File | The line |
 |---|---|---|
 | Sol | WM-006 | One person left the ritual site before it closed; field referral; protective intake |
 | Wan and Tu (Tumak) | SA-002 1491 | Two arrivals from an uncatalogued system after an auroral discharge; both entered intake |
 | Boogie | FR-016 | The inspecting party was reassigned to cadet intake |
-| Casey | SA-002 1486 | A star fell on an uncharted world; an account by a minor was referred to intake (matches `crew/casey.html`) |
-| Gregory | SA-002 1489 | Cogfast constructs woke; one entered intake (matches `crew/gregory.html`: woken by the strain on an Axiom) |
-| Bartholomew | SA-002, new entry | **Proposed:** a two-point stellar transient, catalogued CON-312, held for under a minute over a world in Realmspace; it matches no charted pattern. Local report the same night: a child fell from a height and walked away. Status Open. |
+| Casey | SA-002 1486 | A star fell on an uncharted world; an account by a minor was referred to intake |
+| Gregory | SA-002 1489 | Cogfast constructs woke; one entered intake |
+| Bartholomew | SA-002, new entry | **Proposed:** a two-point stellar transient, catalogued CON-312, held for under a minute; the same night, a local report of a child who fell from a height and walked away. Status Open. |
 
-Bartholomew's line uses what his page already holds: the fall in childhood,
-the two-starred constellation he saw, and its catalogue designation
-(`crew/bartholomew.html`). The year is the year of his fall.
+## File changes
 
-### 5. The recovered disc (FR-016)
-
-**A reader takes away:** a wax disc with a sigil came out of an unlogged
-crate in a salvage shipment. The registry has no match. The inspector who
-flagged it was moved to cadet intake.
-
-**Truth, with the rulings above:** the disc is the colony's seal, the eye in
-a wheel, on a crate of the colony's freight riding Vocath's line through
-Cairn, in the same shipment that carried Fonains shards. Boogie looked into
-that shipment before his first voyage, and one shard went into him
-(`crew/boogie.html`).
-
-**Changes:**
-- The sigil drawing becomes the eye in a wheel, spokes above and tentacles
-  below. The balance scale leaves the FIA.
-- Date: "approximately [n] years prior to filing" becomes **earlier this
-  cycle**. The Monolith broke two to three months before the present, so the
-  crate is recent.
-- "No match returned" stays.
-- "No further occurrences of this marking have been documented in Fleet
-  records at this clearance" stays: WM-002's cross-reference is an Above
-  Bridge file.
+- **FR-016:** the drawing stays and is Vocath's personal seal. The date
+  becomes "earlier this cycle" (the Monolith broke two to three months before
+  the present). "No match returned" stays.
+- **LG-003:** add the four-sweep plate and Tarroway's note.
+- **WM-002:**
+  - The first attack is at Cairn, from the station; the second is on the run
+    home. "By the same craft or one like it" stays as the Fleet's reading.
+  - Clint "went overboard" stays (ruled): the Fleet's word for anyone who
+    did not come back.
+  - The composite's withdrawal stays: the statements disagree.
+- **WM-003:** "its pages bear the marking catalogued in Case #FR-016" goes.
+  The registry carries no mark: it is a leaf of the Order of All's registry,
+  passed on unsigned through the Discerners.
+- **FR-022 and WM-003:** "the Order's" becomes **the Order of All's** (ruled).
+- **FR-022:** "Caelestis Nexus does not hold this material" becomes
+  "Caelestis does not hold this material".
+- **FR-005:** the drift line points at the *Osprey Vane*, not Strake.
+- **WM-006:** the Ortholith rises in the run-up to the Zenith, not after the
+  ritual failed. "Withheld at Bridge clearance" becomes "recorded under
+  protective intake and withheld from this file".
+- **SA-002:** add Bartholomew's entry.
 
 ## Promotes to
 
-- `restricted/fr-005.html`, `fr-016.html`, `fr-022.html`, `sa-002.html`,
-  `wm-002.html`, `wm-003.html`, `wm-006.html`, and `files.html` where a
-  summary line changes.
-- `prime/dossiers/mirt.html`: how he knows Vocath (the statements; Joffrey's).
-- `prime/dossiers/joffrey.html`: his statement put the scale on both
-  boardings; the mark is on him.
-- `prime/factions/vocath-operation.html`, `prime/dossiers/vocath.html`: the
-  signed rod as a message; the Fleet knows the scale as a trader's; his line
-  carries the colony's freight.
-- `prime/factions/vthorama.html`: where the eye in a wheel shows (FR-016,
-  WM-002, Joffrey).
-- `prime/locations/cairn-station.html`: the FR-005 line and the hazard line.
-- `prime/locations/aethris.html`: "does nothing anyone can see".
-- `prime/factions/discerners.html`: the Fleet's leaf of the registry and how
-  it arrived.
-- `prime/crew/bartholomew.html`: his FIA line.
-- BACKLOG: close "Whose registry WM-003 is" and the per-cadet hint items;
-  carry Ezra's sketch as its own item.
+- The FIA files above, and `files.html` where a summary changes.
+- `prime/dossiers/vocath.html`, `prime/factions/vocath-operation.html`: the
+  two marks; who knows the seal; the signed rod; the partnership.
+- `prime/dossiers/mirt.html`: the hunch without evidence; working through
+  the cadets.
+- `prime/dossiers/joffrey.html`: taken on the run home.
+- `prime/vessels/bellwether-crow.html`: the two attacks, at Cairn and on the
+  run home.
+- `prime/locations/cairn-station.html`: what happened there, once settled;
+  the FR-005 and hazard lines.
+- `prime/dossiers/saerthe.html`, `tarto.html`, `mr-blip.html`: they know the
+  seal.
+- `prime/crew/bartholomew.html`: his line.
+- `data/` and the player pages: none. The record's "same symbol" on the rod
+  and the crate already holds (both carry the personal seal).
+- BACKLOG: close "Whose registry WM-003 is" and the eye-in-a-wheel tie to
+  the FIA.
 
 ## Open
 
-- **Gold clearance and Above Bridge.** The archive says "Gold clearance
-  verified" and opens seven Above Bridge files. A misconfigured terminal (who
-  left it open, and does the Bridge know the cadets read it?) or a second
-  gate.
-- **Ezra's sketch.** With the eye in a wheel now in the FIA, a cadet who
-  carries it needs a reason: through the Order's Watchers, through a place he
-  has been, or dropped in favour of the sealed letter.
-- **Bartholomew's line:** the year of his fall and the world, if it is not
-  Toril.
-- **The sealed item at Strake** (LG-003) and what Vocath's people left at
-  Cairn.
+- **The *Crow*'s route:** two attacks, at Cairn and on the run home
+  (proposed above), or one ambush at Cairn in two waves.
+- **Cairn:** what became of its complement, and what Vocath's crew left there.
+- **The sealed item at Strake** (LG-003).
+- **Bartholomew's line:** the year of his fall, and whether the world is Toril.
+- **Gold clearance and Above Bridge:** the archive opens seven Above Bridge
+  files at Gold. A misconfigured terminal, or a second gate.
+- **Ezra's sketch:** the eye in a wheel is no longer in the FIA; keep the
+  sketch as his hook elsewhere, or use the sealed letter.
