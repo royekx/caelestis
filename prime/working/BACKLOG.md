@@ -36,16 +36,16 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 2 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 19 | 3 | 3 | 0 | 2 |
-| Dossiers | dossiers/ | 20 | 16 | 0 | 0 | 1 |
+| Dossiers | dossiers/ | 19 | 16 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 9 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 4 | 18 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 24 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 14 | 3 | 0 | 1 |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 14 | 4 | 0 | 1 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 13 | 13 | 2 | 0 | 8 |
-| **Total** |  | **139** | **167** | **48** | **2** | **63** |
+| **Total** |  | **138** | **167** | **49** | **2** | **63** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1098,15 +1098,8 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ### dossiers/ezra.html
 
 - **[decide]** Ezra's own hook *(prep)*
-  Ezra must arrive with a hook others can latch onto. Options:
-  (a) The eye-in-a-wheel sketch. The eye in a wheel is now the Vth'orama's mark (Korey, 2026-10-28). Crossing-table entries 4 and 8 now carry Vocath's house mark, the balance scale, so the old tie to them no longer holds.
-  (b) The sealed letter: "Watch one thing until it changes."
-  src: chat-voyage-6-7-planning § Open; memory-canon open-decisions (Voyage 007 intent)
-
-- **[decide]** Ezra's sketch of the Vth'orama's mark *(before V007)*
-  Ezra's hook on dossiers/ezra.html is the eye-in-a-wheel sketch, and the eye in a wheel is now the Vth'orama's mark. Korey wants it worked out before Voyage 007. Set what the sketch is (drawn by Ezra, copied from something, or handed to him), where he saw the mark, and what the Order of the All-Father knows of it. The Watchers flag some Seekers chapters' work without knowing who stands behind it (factions/order.html), so the Order may hold the mark without knowing it is the colony's.
-  Touches: dossiers/ezra.html, factions/order.html, campaign/voyages/index.html (V007).
-  src: Korey, 2026-10-28 (Ezra's hook ruling)
+  Ezra must arrive with a hook others can latch onto. The eye-in-a-wheel sketch is not his hook: Ezra has nothing to do with the Vth'orama's mark for now (Korey, 2026-11-06). The sealed letter ("Watch one thing until it changes") stays an option. Come back to it later. Touches: dossiers/ezra.html (its hook line still names the sketch).
+  src: chat-voyage-6-7-planning § Open; Korey, 2026-11-06
 
 - **[later]** Emporia and Tharizdun
   Does Emporia read as a Zenith with Tharizdun behind it? Options: yes (a Tharizdun-touched Zenith); no (local trouble only); leave it to the other table.
@@ -2174,6 +2167,10 @@ archived in Drive, not deleted. What stays open here is below.
   answered: inbox/chat-automation.md § Voyage 5 runbook, Method (Settled: "Earlier voyages keep 'autognome' as history"). PR #61 asked "Say if you want them swept" and PR #62 repeated the default; Korey merged both without asking for a sweep.
 
 # Repo and process
+
+- **[fix]** Ripple audit
+  Rulings were edited into one page in place, and the pages that leaned on the old version were left behind. Examples found 2026-11-06: Miken's DM dossier says the beacon is "the whole of the sabotage" after he was ruled to have placed the rod; the Ezra items still tied his hook to the Vth'orama's mark after it was dropped; the chart's perimeter-watch text still has Cairn silent for a year and the *Crow* turned back. Walk the DM pages for claims that contradict later rulings in STAGING, the inbox and the drafts, and list each with the page it lands on.
+  src: Korey, 2026-11-06
 
 - **[later]** Redefine the inbox
   Chat sweeps are temporary working material, used in chat to clear chats for archiving; they need not persist in the repo. Decide what `prime/working/inbox/` is for (raw dumps only, or nothing kept once ruled), and whether finished sweeps are deleted or kept as history.

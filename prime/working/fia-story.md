@@ -109,13 +109,25 @@ reports and keeps the log, and **the signals officer**, who sends them. Every
 word that leaves Cairn passes through those two, and nobody can read their
 minds.
 
-The rest of the crew are held by Zhauveth's Hold of the Voice. She touches
-down at Cairn from time to time, and one or two of her people live there out
-of sight, skilled at charm and suggestion, renewing it. The crew work their
-watches as normal. What they see on the lane, they set aside as nothing worth
-remarking. The station master defers their rotation, because a crew sent
-home would carry the charm back to Caelestis, where it would be found. The
-same few people serve there year on year, and the lane reads all clear.
+The rest of the crew are held by **an unthinned illithid kept at Cairn**.
+Like every illithid of the colony it is strange, and its strangeness runs one
+way: it is very good at holding minds and poor at nearly everything else. Its
+hold works by nearness and grows with time. A newcomer feels something wrong
+and can resist it; a crew that has lived beside it for a year accepts it as
+part of the station and stops seeing it. They work their watches as normal,
+and what they see on the lane, they set aside as nothing worth remarking.
+The colony has few unthinned and fewer with this gift, so it keeps one where
+a hold matters most and spends it nowhere else.
+
+The station master defers the crew's rotation: each of them signs a waiver
+and stays. Nobody in the Fleet finds that odd. Many who serve have few ties
+to any world below, and a quiet post is easy to stay at. The same few people
+serve there year on year, and the lane reads all clear.
+
+**Zhauveth touches down at Cairn** now and then, not often. The captives
+change hands every few weeks, out on the lane near Cairn, and she makes the
+colony's deals with Vocath's people. Whether Cairn itself serves as the
+waystation for the handovers or only watches over them need not be fixed.
 
 **Strake Station** sits further off. At the very limit of its range, its scope
 picks up faint, odd returns in Cairn's area. Nobody thought Strake could see
@@ -143,9 +155,11 @@ alone.
 3. **The warning.** Vocath's people pull back and warn Zhauveth that the
    *Crow* is coming to Cairn.
 4. **Cairn plays host.** The station takes the crippled *Crow* in. Repairs
-   take days. The *Crow*'s crew are going home, where a charm would be
-   noticed, so nobody charms them; Zhauveth's people keep out of sight, and
-   Cairn's own crew work as normal around the visitors. The signals officer tells Caelestis that the *Crow* is safe and
+   take days. A few days is too short for the hold to take the *Crow*'s
+   crew, and they are going home, where it would be noticed. The illithid
+   keeps out of sight, and Cairn's own crew work as normal around the
+   visitors. The survivors feel something off about the place and put it
+   down to shock and grief. The signals officer tells Caelestis that the *Crow* is safe and
    under repair, and relays the raid as the *Crow*'s crew tell it. Cairn's own
    scope log for that watch shows no contact. Sending the ship home is less
    trouble than the questions a missing ship would raise.
@@ -160,6 +174,9 @@ alone.
 6. **The report.** The *Crow* goes home and reports what it believes: raided
    on the approach, Clint lost, Joffrey held the ship, Cairn helped them home.
    The Fleet orders escorts against raiders on the lane, and Cairn is thanked.
+   The *Crow* went to look at Cairn and found it in order, so its report
+   closes Tarroway's question. The colony never learns that Tarroway asked
+   it; as far as it knows, the Fleet looked and got its answer.
    The network tells Vocath where the escorts run, and the line runs around
    them.
 
@@ -184,22 +201,27 @@ he saw on the lane. With no way to send word, he stays lost to Caelestis.
 - Zhauveth tells Vocath that he has an informant inside Caelestis. Vocath
   uses it for his grudge against Mirt. In name, Joffrey answers to Qitru,
   Vocath's intermediary; in fact N'ghathrod runs him, through Zhauveth.
-- **Miken placed the rod.** Qitru recruited him and paid his fiancé's debts.
-  He expected the rod to spoil the training. He did not expect it to hurt
-  anyone, and his own crewmates took the worst of it. He regrets it. He also
+- **Miken placed the rod.** He was already a cadet when Qitru recruited him,
+  with money enough to set up him and his fiancé. Vocath meant the rod to
+  hurt, as a message to Mirt. Qitru told Miken it would only spoil the
+  drill, and he believed her. His own crewmates took the worst of it, and he
+  regrets it. He also
   planted the beacon Qitru follows, and he reports to her by sending stone.
   What gives him away is a hushed conversation in the middle of the night.
-- Joffrey knows of Miken. Miken does not know of Joffrey.
+- Qitru told Joffrey about Miken. Miken does not know of Joffrey.
 - Mirt lost his friend to a raid he believes was Vocath's and cannot prove.
   When the cadets bring him Joffrey, he backs them: if they think something
   is there, they should look for him.
 
 ### If the crew goes to Cairn
 
-Cairn is held, not empty. Who is there depends on when the crew arrives;
-Zhauveth herself could end a crew of their level with a word. Whenever they
-come, the station should feel wrong in small ways that do not add up, never
-in one reveal. **Proposed** touches:
+Cairn is held, not empty. The illithid is always there; Zhauveth only
+sometimes, and if she is, she could end a crew of their level with a word.
+The crew are newcomers, so the hold reaches for them and they can resist it.
+The station should feel wrong in small ways that do not add up, never in one
+reveal. A fight there is a choice between the crew around them, who are not
+acting of their own will, and the thing holding them: knock the crew down or
+go for the source. **Proposed** touches:
 
 - The crew all pause at once, mid-sentence, and pick up again.
 - A sighting in the watch log, struck through in the station master's
@@ -208,6 +230,8 @@ in one reveal. **Proposed** touches:
 - Nobody asks the visitors for news from home.
 - A crewman answers a question a beat before it is asked.
 - A cold room nobody goes into, and nobody mentions.
+- Something moves at the edge of a corridor, and the crewman beside them
+  does not look up.
 
 ### Vocath's two marks (ruled 2026-11-04)
 
@@ -309,7 +333,8 @@ The Cairn and *Crow* files are rebuilt; the rest change by a line or two.
 
 ## Promotes to
 
-- `prime/locations/cairn-station.html`: rewritten around the story.
+- `prime/locations/cairn-station.html`: rewritten around the story: the two
+  taken, the illithid's hold, the waivers, Zhauveth's visits.
 - `prime/locations/strake-station.html`, `prime/dossiers/tarroway.html`:
   Strake further off; the discrepancy.
 - `prime/vessels/bellwether-crow.html`: one raid; the days at Cairn; Joffrey
@@ -328,7 +353,9 @@ The Cairn and *Crow* files are rebuilt; the rest change by a line or two.
 - `prime/dossiers/miken.html`: placed the rod as well as the beacon (the
   page now says the beacon is the whole of the sabotage); meant sabotage,
   not harm; his regret; does not know of Joffrey.
-- `prime/dossiers/qitru.html`: Joffrey answers to her in name.
+- `prime/dossiers/qitru.html`: Joffrey answers to her in name; she told him
+  about Miken; she told Miken the rod would only spoil the drill.
+- `prime/opposition/vthorama.html`: the unthinned illithid at Cairn.
 - `prime/chart/` and its Realmspace page: the perimeter-watch text (Cairn
   silent for a year, Vocath's crew holding it, the *Crow* turned back) is
   replaced. Realmspace moves inward, midway between the edge and the
