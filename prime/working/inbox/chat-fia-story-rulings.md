@@ -12,13 +12,16 @@ the draft is current.
 
 ## The colony
 
-- **The colony is unthinned.** It has no elder brain, so nothing culls its tadpoles or tends their change, and every illithid it makes comes out malformed in its own way. Only N'ghathrod, Khaleth and Osskhal were properly raised. The first unthinned were the three enna made aboard Thessalar's craft, whom Glyth exiled.
-- **The experiment gave each enna a Hold of its own.** Long life comes from the tithe of the taken, which passes up to N'ghathrod; all five enna share in it.
-- **An enna's tadpoles carry its Hold.** An illithid grown from Zhauveth's tadpole is very good at holding minds and poor at most else.
+- **No elder brain.** An elder brain culls the brood in its pool so only the strongest tadpoles reach a host. Without one, far more weak and flawed tadpoles are used, and most of the colony's illithids come out malformed.
+- **Unthinned** is Glyth's word for a malformed illithid: visibly wrong, very good at one thing and poor at the rest. The colony holds ordinary illithids too: the few who came with N'ghathrod and those born whole.
+- **The first unthinned** were three made aboard Thessalar's craft, now three of the enna. Glyth saw them and exiled them, and N'ghathrod went with them.
+- **The experiment gave each enna a power of its own**, and each enna's spawn inherits some of it, as N'ghathrod's do.
+- **The enna joined N'ghathrod willingly**, each carrying a Hold. Some of the old illithids did the same, so they would all be one.
+- **Long life comes from the taking**: the tithe passes upward through the rungs to N'ghathrod and sustains those near him.
 
 ## Cairn and the *Bellwether Crow*
 
-- **Cairn Station** is a small Fleet watch post on a lane in an outer zone of the Caelestis Sector. The colony holds it with a pair: the station master, taken by one of N'ghathrod's tadpoles that came on a routine supply call, and an illithid of Zhauveth's that holds the rest of the crew. The hold works by nearness and strengthens with time; newcomers feel it and can resist. The crew sign rotation waivers and stay. Zhauveth touches down rarely; captives change hands every few weeks near Cairn.
+- **Cairn Station** is a small Fleet watch post on a lane running outward along the arm from Realmspace, in the sector's outer zone; Strake sits on its own lane nearer home. The colony holds it with a pair: the station master, taken by one of N'ghathrod's tadpoles that came on a routine supply call, and an illithid of Zhauveth's that holds the rest of the crew. The hold works by nearness and strengthens with time; newcomers feel it and can resist. The crew sign rotation waivers and stay. Zhauveth touches down rarely; captives change hands every few weeks near Cairn.
 - **The *Bellwether Crow*** was sent on Tarroway's filing, raided once on the approach to Cairn, and repaired there for days. Joffrey, its junior spelljammer, took the helm and held the survivors. Its report answered Tarroway's filing. The crew were told only to look in on Cairn, so the colony does not know of Tarroway.
 - **Joffrey was taken at Cairn.** The chance came while the *Crow* was docked, and Zhauveth took it. His tadpole carried a directive to look for an artifact N'ghathrod sensed in Caelestis; he found A.T.L.A.S. in the Brig. A survivor of the *Crow* sees that he has changed.
 - **Clint** boarded a raider skiff on purpose to draw the fight off his crew. A color pool took the skiff to Fonains by chance. He lost his communication piece and was held for a time. His gear is the device, and the raiders took it for an ordinary tool. The raiders found the gems, and Vocath's trade on Fonains began; they also hunted Clint so he could not report.
@@ -27,7 +30,9 @@ the draft is current.
 
 ## Elsewhere
 
-- **Realmspace moves inward**, midway between the galaxy's edge and its heart.
+- **Realmspace moves inward**, to midway along the Caelestis Sector's arm.
+- **The FIA's clearance has no loophole.** The archive's gate verifies Above Bridge, and every file it shows is at or below that.
+- **Bartholomew's SA-002 entry** is cycle 1482 (proposed).
 - **Ezra's hook has nothing to do with the Vth'orama's mark** for now.
 - **The DM uses the same tools as the players** (see BACKLOG, principles.html).
 - **Overboard** is a Fleet colloquialism for lost in space.

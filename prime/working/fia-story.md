@@ -56,32 +56,28 @@ arrangement with Vocath.
 
 ### The elder brain, and what the colony lacks
 
-In an ordinary colony the elder brain does two things for every illithid it
-makes. **Proposed** reading of each:
+An elder brain is a colony's shared mind, and it lives in a brine pool at the
+colony's heart. Tadpoles grow in that pool for years and eat one another, and
+the elder brain eats most of the rest. What reaches a host is the strongest
+and best formed of the brood. The elder brain also links every illithid of
+the colony and keeps the knowledge of its dead.
 
-- **It thins the brood.** Tadpoles grow in its brine pool for years and eat
-  one another, and the elder brain eats most of the rest. Only the strongest
-  and best formed reach a host. That culling is the thinning.
-- **It tends the change.** Through ceremorphosis the elder brain's mind is
-  present in the new one, pressing it into the one true shape of an illithid,
-  in body and in mind, and binding it to the colony.
+The Vth'orama have no elder brain. Far more of their tadpoles reach a host,
+the weak and the flawed among them, so an illithid the colony makes is much
+more likely to come out of ceremorphosis malformed. Most of them do.
 
-The Vth'orama have no elder brain. Every tadpole that reaches a host is used,
-weak or flawed, and every change runs untended. So every illithid the colony
-makes is **unthinned**: it comes out of ceremorphosis malformed in its own way,
-lopsided in body and in power.
+**Unthinned** is Glyth's word for a malformed illithid: one the brood should
+have thinned out. An unthinned illithid is visibly wrong in body, and
+lopsided in mind. Where an ordinary illithid has a broad spread of psychic
+powers, an unthinned one is very good at one thing and poor at the rest.
+The colony holds both kinds: the few illithids who came with N'ghathrod, a
+minority born in the colony who came out whole, and the unthinned, who are
+most of it.
 
-The first unthinned were the three of the enna made aboard Thessalar's craft,
-from bodies he supplied and N'ghathrod's own tadpoles, far from any elder
-brain. To Glyth, an illithid raised without an elder brain is unfit, and
-Glyth exiled them for it. Every illithid the colony has made since is
-unthinned the same way.
-
-Ordinary illithids live about a century and a quarter. The colony began some
-five hundred years ago, so any properly raised illithid who came with
-N'ghathrod and was not changed with him is long dead. Of the colony's
-illithids, only N'ghathrod and two of the enna, Khaleth and Osskhal, were
-properly raised. Every other illithid aboard Vth'oramu is unthinned.
+The first unthinned were three made aboard Thessalar's craft, from bodies he
+supplied and N'ghathrod's own tadpoles, far from any elder brain. They are
+three of the enna. When N'ghathrod brought them to Glyth, Glyth saw what they
+were and refused them, and exiled them. N'ghathrod went with them.
 
 ### What the experiment did
 
@@ -90,19 +86,25 @@ changed N'ghathrod's reproduction: his tadpoles stopped being offspring and
 became copies of him. That is the taking.
 
 It changed the five who became the enna with him. Each came out with a power
-of its own, carried as a Hold. Zhauveth's is the Voice: domination and
-suggestion.
+of its own. Zhauveth's is the Voice: domination and suggestion.
 
-**A lieutenant's tadpoles carry its Hold.** An enna spawns rarely, a few
-clutches over its long life. A tadpole from one of those clutches becomes an
-unthinned illithid like any other, except that its malformation runs toward
-its parent's Hold. An illithid grown from Zhauveth's tadpole is poor at most
-things and very good at holding minds.
+**Each enna's spawn inherits some of its power**, as N'ghathrod's do. An enna
+spawns rarely, a few clutches over its long life. An illithid grown from one
+of those tadpoles leans toward its parent's power. One of Zhauveth's is
+unthinned and very good at holding minds.
 
-**Long life comes from the taken.** A portion of every taken person passes
-upward through the rungs of the taken and ends with N'ghathrod, a tithe that
-extends his life. All five enna stand nearest him, and all five share in it. The more he takes, the
-longer they all last.
+### One with N'ghathrod, and long life
+
+**The enna joined him willingly.** Each took a Hold: a portion of N'ghathrod,
+carried permanently. Some of the properly raised illithids who came with him
+did the same, with lesser portions, so that they would all be one.
+
+**Long life comes from the taking.** A portion of every taken person passes
+upward through the rungs and ends with N'ghathrod, a tithe that extends his
+life. Everyone on the rungs near him is sustained by what passes through
+them: the enna, and the old illithids who joined him. They have outlived
+every illithid of their age by centuries. **Proposed:** the eldest of the old
+illithids keeps the colony's history.
 
 ### Taken and ceremorphosis
 
@@ -110,7 +112,7 @@ longer they all last.
 |---|---|---|
 | Tadpole | Any tadpole of the colony's | One of N'ghathrod's own, a copy of him |
 | The host | Consumed; becomes a new illithid | Persists; the copy sits alongside them |
-| Looks like | An unthinned illithid, malformed in its own way | Themselves. Chitin grows hidden along the spine and skull over years |
+| Looks like | An illithid; most come out unthinned | Themselves. Chitin grows hidden along the spine and skull over years |
 | Purpose | Grows the colony | Places N'ghathrod in a key post; can carry a directive; reports to him |
 | Cost | One captive | One of N'ghathrod's tadpoles, grown on a slow cycle |
 | Tell | Obvious | Their minds cannot be read. Dying, they say "Oramu" |
@@ -162,8 +164,8 @@ Zhauveth's illithids.**
   N'ghathrod's tadpoles. The station master writes the reports and keeps the
   log, so every word that leaves Cairn is his before the signals officer
   sends it, and nobody can read his mind.
-- **Everyone else is held.** An unthinned illithid grown from Zhauveth's
-  tadpole lives at Cairn out of sight and holds the rest of the crew, the
+- **Everyone else is held.** One of Zhauveth's spawn, an unthinned illithid
+  whose one strength is holding minds, lives at Cairn out of sight and holds the rest of the crew, the
   signals officer among them. Its hold works by nearness and grows with time.
   A newcomer feels something wrong and can resist it; a crew that has lived
   beside it for years accepts it as part of the station and stops seeing it.
@@ -182,9 +184,16 @@ change hands every few weeks, out on the lane near Cairn, and she makes the
 colony's deals with Vocath's people. Whether Cairn itself serves as the
 waystation for the handovers or only watches over them need not be fixed.
 
-**Strake Station** sits further off. At the very limit of its range, its
-scope picks up faint, odd returns in Cairn's area. Nobody in the colony knows
-Strake can see that far.
+**Where it sits.** Realmspace lies midway along the Caelestis Sector's arm.
+Cairn's lane runs outward from it along the arm, into the sector's outer
+zone, some weeks out by ordinary helm. Strake Station sits on its own lane
+nearer home, off to the side of Cairn's. Krynnspace and Fonains lie inward
+along the arm, nowhere near Cairn; the color pool that took Clint opened by
+chance, and where it opened says nothing about where it led.
+
+Cairn's stretch of lane lies at the very limit of Strake's scope, which picks
+up faint, odd returns there. Nobody in the colony knows Strake can see that
+far.
 
 ### The *Bellwether Crow*
 
@@ -361,7 +370,7 @@ perfectly, week after week. Tarroway's first filing sent the *Crow*; the
 | Boogie | FR-016 | The inspecting party was reassigned to cadet intake |
 | Casey | SA-002 1486 | A star fell on an uncharted world; an account by a minor was referred to intake |
 | Gregory | SA-002 1489 | Cogfast constructs woke; one entered intake |
-| Bartholomew | SA-002, new entry | **Proposed:** a two-point stellar transient, catalogued CON-312, held for under a minute; the same night, a local report of a child who fell from a height and walked away. Status Open. |
+| Bartholomew | SA-002 1482 | **Proposed:** cycle 1482, the earliest entry, on a settled world of the Caelestis Sector left unnamed in the entry: a two-point stellar transient, catalogued CON-312, held for under a minute; the same night, a local report of a child who fell from a height and walked away. Status Open. |
 
 ## File changes
 
@@ -391,6 +400,10 @@ Tetherbreak bearing, the perimeter watch) and read each hit in context.
   further off. Its drift line points at the *Osprey Vane*, the ship it already names.
 - **files.html:** every summary and case line read against the rebuilt
   files.
+- **index.html, files.html:** the clearance. The archive admits at Gold
+  (Bridge) and then lists seven Above Bridge files. The gate reads Above
+  Bridge instead, so every file it shows is at or below the clearance it
+  verifies. Gold files stay marked Gold.
 
 **Changed in place** (the rest of each file already fits; read it whole
 anyway):
@@ -432,12 +445,14 @@ given an added paragraph beside the old one.
   offspring there; long life from the tithe.
 - `prime/dossiers/nghathrod.html`, `prime/dossiers/thessalar.html`, and the
   other enna (`khaleth`, `osskhal`, `ulhrek`, `ithvarn`): the experiment gave
-  each enna a Hold of its own; long life comes from the tithe of the taken,
-  not the experiment; an enna's tadpoles carry its Hold.
+  each enna a power of its own; the enna joined him willingly through their
+  Holds; long life comes from the taking, not the experiment; an enna's
+  spawn inherit some of its power. The unthinned lieutenants' pages define
+  unthinned as raised without an elder brain; that becomes malformed.
 - `prime/opposition/vthorama.html`: what the elder brain does and what its
-  absence makes; the colony unthinned but for N'ghathrod, Khaleth and
-  Osskhal; the unthinned template as the base for its illithids; the pair at
-  Cairn.
+  absence makes; unthinned as Glyth's word for the malformed, who are most of
+  the colony; the old illithids who joined N'ghathrod; the unthinned
+  template for the malformed; the pair at Cairn.
 - `prime/dossiers/mirt.html`: the hunch without proof; backing the cadets.
 - `prime/dossiers/saerthe-abizjn.html`, `prime/dossiers/boatswain-tarto.html`,
   and Mr. Blip wherever his DM entry sits: they know Vocath's seal on sight.
@@ -454,8 +469,12 @@ given an added paragraph beside the old one.
   about Miken; she told Miken the rod would only spoil the drill.
 - `prime/chart/` and its Realmspace page: the perimeter-watch text (Cairn
   silent for a year, Vocath's crew holding it, the *Crow* turned back) goes.
-  Realmspace moves inward, midway between the edge and the heart of the
-  galaxy; Cairn sits on a lane in an outer zone of the Caelestis Sector.
+  Realmspace moves to midway along arm 0 (about t = 1.65 of the arm's 3.3;
+  now 2.1). Cairn goes on a lane outward along the arm, about where
+  Realmspace sat; Strake off to the side, nearer home. Virenspace and
+  Aethris are placed from Realmspace and move with it. Then rerun
+  `tools/eye-fit.js` and check the eye: if a mark no longer lands, swap it
+  for a system nearer on the arm.
 - `prime/crew/bartholomew.html`: his line.
 - BACKLOG: close "Whose registry WM-003 is" and the second-boarding items.
 
@@ -468,11 +487,7 @@ how stations talk to Caelestis, which posts the network holds elsewhere.
 
 - **What change means for a taken person:** what the *Crow* survivor sees
   in Joffrey, given that a taken keeps part of themselves.
-- **Where Cairn's lane sits:** inside the Caelestis Sector, in an outer zone
-  of the same arm, so Cairn stays the Fleet's. Check the distances once
-  Realmspace moves inward.
-- **Bartholomew's line:** which world, and which cycle stamps his SA-002
-  entry (the others carry 1486, 1489 and 1491).
-- **Gold clearance and Above Bridge:** leaning no.
+- **The unthinned template:** check it fits as the build for every
+  malformed illithid, not only the enna.
 - **The other enna's offspring:** only Zhauveth's is set. What the other
   four's tadpoles become waits until one is needed.

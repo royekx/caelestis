@@ -43,9 +43,9 @@ staging once Korey has read and accepted them.
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 24 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 14 | 4 | 0 | 1 |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 14 | 5 | 0 | 1 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 13 | 13 | 2 | 0 | 8 |
-| **Total** |  | **138** | **167** | **49** | **2** | **63** |
+| **Total** |  | **138** | **167** | **50** | **2** | **63** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2167,6 +2167,10 @@ archived in Drive, not deleted. What stays open here is below.
   answered: inbox/chat-automation.md § Voyage 5 runbook, Method (Settled: "Earlier voyages keep 'autognome' as history"). PR #61 asked "Say if you want them swept" and PR #62 repeated the default; Korey merged both without asking for a sweep.
 
 # Repo and process
+
+- **[fix]** Move Realmspace on the chart *(build)*
+  Realmspace moves to midway along arm 0 (about t = 1.65; now 2.1) in `prime/chart/galaxy.js` and `prime/chart/index.html`. Cairn Station goes on a lane outward along the arm; Strake on its own lane nearer home, off to the side. Virenspace and Aethris move with Realmspace. Rerun `tools/eye-fit.js`, check the eye, and swap any mark that no longer lands for a nearer system on the arm. Rewrite the perimeter-watch text on the chart and the Realmspace page. Full placement: `fia-story.md` § Cairn Station.
+  src: Korey, 2026-11-06
 
 - **[fix]** Ripple audit
   Rulings were edited into one page in place, and the pages that leaned on the old version were left behind. Examples found 2026-11-06: Miken's DM dossier says the beacon is "the whole of the sabotage" after he was ruled to have placed the rod; the Ezra items still tied his hook to the Vth'orama's mark after it was dropped; the chart's perimeter-watch text still has Cairn silent for a year and the *Crow* turned back. Walk the DM pages for claims that contradict later rulings in STAGING, the inbox and the drafts, and list each with the page it lands on.
