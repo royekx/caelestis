@@ -66,21 +66,33 @@ The Vth'orama have no elder brain, and N'ghathrod will not let a tadpole die.
 After all the colony has been through, and the exile above all, every tadpole
 is found a host. The weak and the flawed reach a host with the rest, so an
 illithid the colony makes is far more likely to come out of ceremorphosis
-malformed. Most of them do, and the whole are a minority. That imbalance is a
-strain inside the colony of its own.
+malformed. Most of them do, and the whole are a minority. A tadpole that must
+not die needs a body, so the refusal is also why the colony always needs more
+captives than it has.
 
 **N'ghathrod has become the colony's elder brain.** Its illithids believe
 they answer to an elder brain through him, and in every way that matters
-they do: he decides which tadpole goes where, the taken report up to him,
+they do. He is fused into Vth'oramu and the tadpole pools bloom out of the
+hull, so the pools are in his body as an elder brain's are in its brine. He
+decides which tadpole goes to which captive, the taken report up to him,
 and what they know ends with him.
 
 **Unthinned** is Glyth's word for a malformed illithid: one the brood should
 have thinned out. An unthinned illithid is visibly wrong in body, and
 lopsided in mind. Where an ordinary illithid has a broad spread of psychic
 powers, an unthinned one is very good at one thing and poor at the rest.
-The colony holds both kinds: the few illithids who came with N'ghathrod, a
-minority born in the colony who came out whole, and the unthinned, who are
-most of it.
+
+**Bearers** are the whole illithids who can breed the colony: the old
+illithids who came with N'ghathrod, and the minority born in the colony who
+came out whole. Bearers lay into the pools and oversee ordinary
+ceremorphosis. Every captive is an allocation: a bearer's tadpole, which
+makes an illithid, or one of N'ghathrod's, which makes a taken person. The
+bearers' grievance is that allocation.
+
+The colony still holds Glyth's belief that the unthinned are an obscenity,
+alongside the fact that most of its illithids are unthinned, three of the
+enna among them. It has never resolved that, and the bearers are where it is
+loudest.
 
 The first unthinned were three made aboard Thessalar's craft, from bodies he
 supplied and N'ghathrod's own tadpoles, far from any elder brain. They are
@@ -96,8 +108,10 @@ became copies of him. That is the taking.
 It changed the five who became the enna with him. Each came out with a power
 of its own. Zhauveth's is the Voice: domination and suggestion.
 
-**Each enna's spawn inherits some of its power**, as N'ghathrod's do. An enna
-spawns rarely, a few clutches over its long life. An illithid grown from one
+**Each enna's spawn inherits some of its power**, as N'ghathrod's do. The
+Hold lets every enna breed, the three unthinned among them, though
+**proposed:** an ordinary unthinned illithid cannot. An enna spawns rarely, a
+few clutches over its long life. An illithid grown from one
 of those tadpoles leans toward its parent's power. One of Zhauveth's is
 unthinned and very good at holding minds.
 
@@ -118,7 +132,7 @@ illithids keeps the colony's history.
 
 | | Ceremorphosis | Taken |
 |---|---|---|
-| Tadpole | Any tadpole of the colony's | One of N'ghathrod's own, a copy of him |
+| Tadpole | A bearer's, from the pools | One of N'ghathrod's own, a copy of him |
 | The host | Consumed; becomes a new illithid | Persists; the copy sits alongside them |
 | Looks like | An illithid; most come out unthinned | Themselves. Chitin grows hidden along the spine and skull over years |
 | Purpose | Grows the colony | Places N'ghathrod in a key post; can carry a directive; reports to him |
@@ -247,6 +261,8 @@ far.
 6. **The report.** The *Crow* goes home and reports what it believes: raided
    on the approach, Clint lost, Joffrey held the ship, Cairn helped them home.
    The Fleet orders escorts against raiders on the lane, and Cairn is thanked.
+   Escorts that call at Cairn stay a day or two, as the *Crow* did, too short
+   for the hold.
    The *Crow* went to look at Cairn and found it in order, so its report
    answers Tarroway's filing. The colony never learns Tarroway raised the
    question; as far as it knows, the Fleet looked and got its answer. The
@@ -487,6 +503,28 @@ old one. When they are done, this draft is deleted: the pages hold the story.
   `tools/eye-fit.js` and check the eye: if a mark no longer lands, swap it
   for a system nearer on the arm.
 - `prime/crew/bartholomew.html`: his line.
+- **Also touched, found by searching for the story's names and terms**
+  (the change audit reads each in context):
+  - The colony: `prime/factions/vthorama.html` (a second Vth'orama page
+    beside `opposition/vthorama.html`; settle which one holds what),
+    `prime/vessels/thessalars-craft.html` (lifespan from the experiment),
+    `prime/locations/glyth.html`, `prime/dossiers/vthoramu.html`,
+    `prime/vessels/vthoramu.html`, `prime/dossiers/vecna.html`,
+    `prime/glossary/`.
+  - Cairn, Strake and the *Crow*: `prime/locations/realmspace.html`,
+    `prime/locations/index.html`, `prime/locations/ondrel-anchorage.html`,
+    `prime/locations/astral-sea.html`, `prime/dossiers/verrow.html`,
+    `prime/factions/fleet.html`, `prime/factions/index.html`,
+    `prime/vessels/index.html`, `prime/vessels/flighty-foundling.html`,
+    `prime/vessels/moonraider.html`, `prime/artifacts/index.html`,
+    `prime/artifacts/distinction-fragment.html`, `prime/cosmology/index.html`,
+    `prime/crew/boogie.html`, `prime/dossiers/index.html`,
+    `prime/campaign/voyages/index.html`, `prime/campaign/plot-hooks.html`,
+    `prime/chart/holo.html`.
+  - Data: `prime/timeline/timeline.json`, `prime/data/connections.json`,
+    `prime/data/survey.json`.
+  - Working layer: `STAGING.md`, `nexus-field-guide.md`,
+    `common-knowledge.md`, `campaign-middle.md`, `terms.json`.
 - BACKLOG: close "Whose registry WM-003 is" and the second-boarding items.
 
 ## Left at the level of shape
@@ -500,5 +538,8 @@ how stations talk to Caelestis, which posts the network holds elsewhere.
   in Joffrey, given that a taken keeps part of themselves.
 - **The unthinned template:** check it fits as the build for every
   malformed illithid, not only the enna.
+- **Who can breed:** the draft proposes that the Hold lets every enna breed
+  and an ordinary unthinned illithid cannot, which keeps "bearers breed the
+  colony" true. The alternative is that the unthinned breed too, rarely.
 - **The other enna's offspring:** only Zhauveth's is set. What the other
   four's tadpoles become waits until one is needed.

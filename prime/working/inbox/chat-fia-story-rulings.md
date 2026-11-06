@@ -13,8 +13,9 @@ the draft is current.
 ## The colony
 
 - **No elder brain, and no tadpole left to die.** In ordinary colonies most tadpoles are eaten in the elder brain's pool. N'ghathrod, after the exile, will not let a tadpole die, so every one is found a host. The weak and flawed are used with the rest, most of the colony's illithids come out malformed, and the whole are a minority; the imbalance strains the colony.
-- **N'ghathrod has become the colony's elder brain.** He decides where every tadpole goes, the taken report up to him, and what they know ends with him.
-- **Unthinned** is Glyth's word for a malformed illithid: visibly wrong, very good at one thing and poor at the rest. The colony holds ordinary illithids too: the few who came with N'ghathrod and those born whole.
+- **N'ghathrod has become the colony's elder brain.** The pools bloom out of the hull he is fused into. He decides where every tadpole goes, the taken report up to him, and what they know ends with him.
+- **Unthinned** is Glyth's word for a malformed illithid: visibly wrong, very good at one thing and poor at the rest.
+- **Bearers** are the whole illithids who breed the colony: the old ones who came with N'ghathrod and the minority born whole.
 - **The first unthinned** were three made aboard Thessalar's craft, now three of the enna. Glyth saw them and exiled them, and N'ghathrod went with them.
 - **The experiment gave each enna a power of its own**, and each enna's spawn inherits some of it, as N'ghathrod's do.
 - **The enna joined N'ghathrod willingly**, each carrying a Hold. Some of the old illithids did the same, so they would all be one.
