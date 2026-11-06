@@ -8,8 +8,14 @@ Ruled in chat. The full story is in `../fia-story.md`.
 - **The *Bellwether Crow*** was sent on Tarroway's flag, raided once on the approach to Cairn, and repaired there for days. Joffrey, its junior spelljammer, took the helm and held the survivors.
 - **Joffrey was taken at Cairn**, by chance, while the *Crow* was docked. His tadpole carried a directive to look for an artifact N'ghathrod sensed in Caelestis; he found A.T.L.A.S. in the Brig.
 - **Clint** boarded a raider skiff on purpose to draw the fight off his crew. A random color pool took the skiff to Fonains. He lost his communication piece and was held for a time. His gear is the device, and the raiders took it for an ordinary tool. The raiders found the gems, and Vocath's trade on Fonains began; they also hunted Clint so he could not report.
+- **Cairn's crew are held by charm.** Zhauveth's Hold of the Voice keeps them; she touches down at Cairn, and one or two of her people live there out of sight to renew it. The station master defers their rotation.
+- **A survivor of the *Crow*** sees that Joffrey has changed.
+- **Qitru handles both insiders in name.** Miken answers to Qitru. Joffrey answers to her too, as Vocath's informant, but N'ghathrod runs him through Zhauveth. Joffrey knows of Miken; Miken does not know of Joffrey.
 - **Miken placed the rod.** He meant to spoil the training, not to hurt anyone, and regrets it. What gives him away is a hushed conversation at night, not the stone itself.
 - **Mirt backed the cadets** when they raised Joffrey. He did not point them at him.
+- **Cairn's lane is inside the Caelestis Sector**, in an outer zone of the same arm.
+- **The sealed item at Strake goes.**
+- **The DM uses the same tools as the players** (see BACKLOG, principles.html).
 - **Realmspace moves inward**, midway between the galaxy's edge and its heart.
 - **Overboard** is a Fleet colloquialism for lost in space.
 - **The Order** is the Order of All.

@@ -35,7 +35,7 @@ staging once Korey has read and accepted them.
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 2 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 19 | 3 | 3 | 0 | 1 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 19 | 3 | 3 | 0 | 2 |
 | Dossiers | dossiers/ | 20 | 16 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 9 | 7 | 3 | 0 | 1 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 14 | 3 | 0 | 1 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 13 | 13 | 2 | 0 | 8 |
-| **Total** |  | **139** | **167** | **48** | **2** | **62** |
+| **Total** |  | **139** | **167** | **48** | **2** | **63** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -138,6 +138,7 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - `data/npcs.json` (Saerthe Abizjn) and the V006 page say "a Watcher cadet"; the settled term for a Watcher trainee is a Glimpse. The crew has not been told the word, so the record keeps Saerthe's phrasing, and `terms.json` allows it on voyage-006. Change the record if Korey wants Saerthe to say "Glimpse".
 - `data/locations.json` overviews open "The Flighty Foundling is…" and "The Moonraider was…", and the quest is named "The Tyrant Ship and the H'Catha Meteor"; ship names carry no article. `terms.json` allows these record strings on the player pages. Rewrite them in a record edit if Korey agrees, then drop the allow entries.
 - `data/npcs.json` (Winston Ryeback, Voyage 6) says he "was told the beholder had been taken care of, and took it to mean the crew had killed it"; the ruling is that Tumak told him outright that the crew killed it (dossiers/winston-ryeback.html).
+- The sending stone reads too loud on the player side: the V006 summaries and narrative, Miken's record (a Notable Item, "Miken's Sending Stone", with its own anchor), the bearings, the timeline, and the V006 Next Session Pressure ("Decide what to do about Miken's sending stone"). Sending stones are ordinary. What caught Bartholomew's Perception was a hushed conversation in the middle of the night. Recast the lines around the conversation, and keep the stone as the object he was holding, if Korey agrees.
 
 ## Still coming in
 
@@ -2044,6 +2045,10 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   src: chat-cosmic § Cosmos texture; memory-canon
 
 ### principles.html
+
+- **[add]** The DM has the same tools as the players
+  This is still Dungeons & Dragons in a sci-fi skin. Anything a player can do, the world can do: spells, charms, mass suggestion, mind blank, a familiar on watch. When a plan in the world needs people silent, loyal or unaware, reach for the spell that would do it before inventing a reason they just did not notice. The taken carry the effect of mind blank; Cairn Station's crew are held by charm and suggestion. Using these is not cheating. Let the spectacle show, too: a held station should feel uncanny, not merely quiet.
+  src: Korey, 2026-11-06
 
 - **[add]** Asking for a roll means something is there
   When the players are interested in something and the DM calls for a roll, there is something to find, whatever the result. The roll sets how much they get and how fast, not whether they get anything. A low roll shows that something is there: two people talking in hushed tones, words out of earshot. A high roll gives more at once: twenty gold changing hands, and a look around to check no one saw. From there, getting more is the players' choice, and it becomes a run of hurdles (sneak closer, talk to them, a Persuasion check), each with its own consequences. Joffrey is the example: an improvised character the players suspected, who became a piece they are invested in.

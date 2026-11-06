@@ -103,13 +103,19 @@ its way somewhere.
 the Fleet contract for stores on that lane, under the clean house mark. Its
 ships call at Cairn as a matter of course.
 
-**The colony holds Cairn with two people.** One routine supply call carried
-two of N'ghathrod's tadpoles. They took **the station master**, who writes
-the reports and keeps the log, and **the signals officer**, who sends them.
-The rest of the crew see what they see and write it up, and every word
-passes through those two before it leaves. A sighting that goes nowhere is
-filed and forgotten. The station master defers the crew's rotation, so the
-same few people serve there year on year. The lane reads all clear.
+**The colony holds Cairn two ways.** One routine supply call carried two of
+N'ghathrod's tadpoles. They took **the station master**, who writes the
+reports and keeps the log, and **the signals officer**, who sends them. Every
+word that leaves Cairn passes through those two, and nobody can read their
+minds.
+
+The rest of the crew are held by Zhauveth's Hold of the Voice. She touches
+down at Cairn from time to time, and one or two of her people live there out
+of sight, skilled at charm and suggestion, renewing it. The crew work their
+watches as normal. What they see on the lane, they set aside as nothing worth
+remarking. The station master defers their rotation, because a crew sent
+home would carry the charm back to Caelestis, where it would be found. The
+same few people serve there year on year, and the lane reads all clear.
 
 **Strake Station** sits further off. At the very limit of its range, its scope
 picks up faint, odd returns in Cairn's area. Nobody thought Strake could see
@@ -137,7 +143,9 @@ alone.
 3. **The warning.** Vocath's people pull back and warn Zhauveth that the
    *Crow* is coming to Cairn.
 4. **Cairn plays host.** The station takes the crippled *Crow* in. Repairs
-   take days. The signals officer tells Caelestis that the *Crow* is safe and
+   take days. The *Crow*'s crew are going home, where a charm would be
+   noticed, so nobody charms them; Zhauveth's people keep out of sight, and
+   Cairn's own crew work as normal around the visitors. The signals officer tells Caelestis that the *Crow* is safe and
    under repair, and relays the raid as the *Crow*'s crew tell it. Cairn's own
    scope log for that watch shows no contact. Sending the ship home is less
    trouble than the questions a missing ship would raise.
@@ -168,19 +176,38 @@ he saw on the lane. With no way to send word, he stays lost to Caelestis.
 ### After
 
 - Joffrey turns slowly, over about a year, and makes his name on the
-  strength of what he did on the *Crow*.
+  strength of what he did on the *Crow*. He keeps part of himself, and one
+  survivor of the *Crow* sees that he has changed.
 - Following the directive, he snoops through Caelestis and finds A.T.L.A.S.
   in the Brig, catalogued as an antique navigational instrument: a Reach
   housing. N'ghathrod wants residue, and the thefts begin.
 - Zhauveth tells Vocath that he has an informant inside Caelestis. Vocath
-  uses it for his grudge against Mirt.
-- **Miken placed the rod.** He expected it to spoil the training. He did not
-  expect it to hurt anyone, and his own crewmates took the worst of it. He
-  regrets it. What gives him away is a hushed conversation in the middle of
-  the night.
+  uses it for his grudge against Mirt. In name, Joffrey answers to Qitru,
+  Vocath's intermediary; in fact N'ghathrod runs him, through Zhauveth.
+- **Miken placed the rod.** Qitru recruited him and paid his fiancé's debts.
+  He expected the rod to spoil the training. He did not expect it to hurt
+  anyone, and his own crewmates took the worst of it. He regrets it. He also
+  planted the beacon Qitru follows, and he reports to her by sending stone.
+  What gives him away is a hushed conversation in the middle of the night.
+- Joffrey knows of Miken. Miken does not know of Joffrey.
 - Mirt lost his friend to a raid he believes was Vocath's and cannot prove.
   When the cadets bring him Joffrey, he backs them: if they think something
   is there, they should look for him.
+
+### If the crew goes to Cairn
+
+Cairn is held, not empty. Who is there depends on when the crew arrives;
+Zhauveth herself could end a crew of their level with a word. Whenever they
+come, the station should feel wrong in small ways that do not add up, never
+in one reveal. **Proposed** touches:
+
+- The crew all pause at once, mid-sentence, and pick up again.
+- A sighting in the watch log, struck through in the station master's
+  steady hand.
+- The duty roster names the same people as the roster a year ago.
+- Nobody asks the visitors for news from home.
+- A crewman answers a question a beat before it is asked.
+- A cold room nobody goes into, and nobody mentions.
 
 ### Vocath's two marks (ruled 2026-11-04)
 
@@ -259,7 +286,8 @@ nobody followed it up.
 The Cairn and *Crow* files are rebuilt; the rest change by a line or two.
 
 - **LG-003:** becomes Strake's filing on the discrepancy: Strake's contacts
-  against Cairn's silence, the sweeps plate, Tarroway's notes.
+  against Cairn's silence, the sweeps plate, Tarroway's notes. The sealed
+  item at Strake goes.
 - **WM-002:** the *Crow*'s report: raided on the Cairn approach, heavy
   losses, Clint lost to a color pool, Joffrey commended for taking the helm, days of repair at
   Cairn, the return. One boarding.
@@ -297,9 +325,13 @@ The Cairn and *Crow* files are rebuilt; the rest change by a line or two.
 - `prime/dossiers/zhauveth.html`, `prime/opposition/vthorama.html`: the
   arrangement; the network; the opening at Cairn.
 - `prime/dossiers/mirt.html`: the hunch without proof; backing the cadets.
-- `prime/dossiers/miken.html`: placed the rod; meant sabotage, not harm;
-  his regret.
-- `prime/chart/`: Realmspace moves inward, midway between the edge and the
+- `prime/dossiers/miken.html`: placed the rod as well as the beacon (the
+  page now says the beacon is the whole of the sabotage); meant sabotage,
+  not harm; his regret; does not know of Joffrey.
+- `prime/dossiers/qitru.html`: Joffrey answers to her in name.
+- `prime/chart/` and its Realmspace page: the perimeter-watch text (Cairn
+  silent for a year, Vocath's crew holding it, the *Crow* turned back) is
+  replaced. Realmspace moves inward, midway between the edge and the
   heart of the galaxy; Cairn sits on a lane, not at the edge.
 - `prime/crew/bartholomew.html`: his line.
 - BACKLOG: close "Whose registry WM-003 is" and the second-boarding items.
@@ -311,15 +343,11 @@ which posts the network holds elsewhere.
 
 ## Open
 
-- **The *Crow*'s survivors:** does one of them notice Joffrey changed, as
-  the crew's lead?
-- **Who Miken answers to:** whose voice is on the other end of his stone,
-  and how the rod reached him from Vocath.
-- **The neighbouring sector** on Cairn's lane, and where Realmspace sits once
-  moved.
-- **Bartholomew's line:** the year of his fall, and the world.
-- **Gold clearance and Above Bridge:** the archive opens seven Above Bridge
-  files at Gold. A misconfigured terminal, or a second gate.
-- **The sealed item at Strake** (LG-003): keep it, or let it go.
-- **Ezra's sketch:** the eye in a wheel is not in the FIA; keep the sketch
-  as his hook elsewhere, or use the sealed letter.
+- **What change means for a taken person:** what the *Crow* survivor sees
+  in Joffrey, given that a taken keeps part of themselves.
+- **Where Cairn's lane sits:** inside the Caelestis Sector, in an outer zone
+  of the same arm, so Cairn stays the Fleet's. Check the distances once
+  Realmspace moves inward.
+- **Bartholomew's line:** which world, and which cycle stamps his SA-002
+  entry (the others carry 1486, 1489 and 1491).
+- **Gold clearance and Above Bridge:** leaning no.
