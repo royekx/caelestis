@@ -4,7 +4,8 @@ Ruled in chat. The full story is in `../fia-story.md`.
 
 - **Vocath has two marks.** His house mark is the public trade mark of the family business, and the Fleet knows it from the lane's supply contract. His personal seal goes on his darker dealings: the rod, the Sky Dock crate, the crate of Fonains shards. Mirt's trusted circle knows the seal on sight.
 - **The arrangement.** Vocath's line supplies the Vth'oramu colony with captives; Zhauveth passes Vocath what N'ghathrod's network knows. Vocath deals with Zhauveth, never with N'ghathrod, and is not taken.
-- **Cairn Station** is a small Fleet watch post on its lane. The colony holds it through two taken: the station master and the signals officer. Their tadpoles came on one of Vocath's routine supply calls.
+- **Cairn Station** is a small Fleet watch post on its lane. The colony holds it with one taken, the station master, whose tadpole came on one of Vocath's routine supply calls, and one unthinned illithid that holds the rest of the crew.
+- **The colony is unthinned.** With no elder brain there is no thinning, so every illithid it makes is unthinned and malformed in its own way. Only N'ghathrod and the two properly raised lieutenants are not.
 - **The *Bellwether Crow*** was sent on Tarroway's flag, raided once on the approach to Cairn, and repaired there for days. Joffrey, its junior spelljammer, took the helm and held the survivors.
 - **Joffrey was taken at Cairn**, by chance, while the *Crow* was docked. His tadpole carried a directive to look for an artifact N'ghathrod sensed in Caelestis; he found A.T.L.A.S. in the Brig.
 - **Clint** boarded a raider skiff on purpose to draw the fight off his crew. A random color pool took the skiff to Fonains. He lost his communication piece and was held for a time. His gear is the device, and the raiders took it for an ordinary tool. The raiders found the gems, and Vocath's trade on Fonains began; they also hunted Clint so he could not report.

@@ -58,10 +58,18 @@ These are different, and the difference drives the story
 |---|---|---|
 | Tadpole | An ordinary tadpole from the colony's pools | One of N'ghathrod's own, a copy of him |
 | The host | Consumed; becomes a new illithid | Persists; the copy sits alongside them |
-| Looks like | A mind flayer | Themselves. Chitin grows hidden along the spine and skull over years |
+| Looks like | An unthinned mind flayer, malformed in its own way | Themselves. Chitin grows hidden along the spine and skull over years |
 | Purpose | Grows the colony | Places N'ghathrod in a key post; can carry a directive; reports to him |
 | Cost | One captive | One of N'ghathrod's tadpoles, grown on a slow cycle |
 | Tell | Obvious | Their minds cannot be read. Dying, they say "Oramu" |
+
+The colony has no elder brain. In a colony that has one, tadpoles grow in
+its pool and most are culled before any is implanted; that culling is the
+thinning. Without it, every tadpole that reaches a host is used, and every
+illithid the colony makes is unthinned: each comes out of ceremorphosis
+malformed in its own way. Of the colony's illithids, only the two properly
+raised lieutenants, Khaleth and Osskhal, are not unthinned; any other
+properly raised illithid who came with N'ghathrod has long since died.
 
 Captives become illithids. Only key people are taken, never crowds. The taken
 are mortal: they are found out, killed, or die, and N'ghathrod keeps placing
@@ -103,21 +111,21 @@ its way somewhere.
 the Fleet contract for stores on that lane, under the clean house mark. Its
 ships call at Cairn as a matter of course.
 
-**The colony holds Cairn two ways.** One routine supply call carried two of
-N'ghathrod's tadpoles. They took **the station master**, who writes the
-reports and keeps the log, and **the signals officer**, who sends them. Every
-word that leaves Cairn passes through those two, and nobody can read their
-minds.
+**The colony holds Cairn with one taken and one illithid.** One routine
+supply call carried one of N'ghathrod's tadpoles, and it took **the station
+master**, who writes the reports and keeps the log. Nobody can read his
+mind, and every word that leaves Cairn is his before the signals officer
+sends it.
 
-The rest of the crew are held by **an unthinned illithid kept at Cairn**.
-Like every illithid of the colony it is strange, and its strangeness runs one
-way: it is very good at holding minds and poor at nearly everything else. Its
+The rest of the crew, the signals officer among them, are held by **an
+unthinned illithid kept at Cairn**. Like every illithid the colony makes, it
+came out of ceremorphosis malformed, and its malformation runs one way: it is very good at holding minds and poor at nearly everything else. Its
 hold works by nearness and grows with time. A newcomer feels something wrong
 and can resist it; a crew that has lived beside it for a year accepts it as
 part of the station and stops seeing it. They work their watches as normal,
 and what they see on the lane, they set aside as nothing worth remarking.
-The colony has few unthinned and fewer with this gift, so it keeps one where
-a hold matters most and spends it nowhere else. It feeds from the captives
+Few of the colony's illithids come out with this gift,
+so it keeps this one where a hold matters most. It feeds from the captives
 that pass near Cairn.
 
 The station master defers the crew's rotation: each of them signs a waiver
@@ -160,7 +168,7 @@ alone.
    crew, and they are going home, where it would be noticed. The illithid
    keeps out of sight, and Cairn's own crew work as normal around the
    visitors. The survivors feel something off about the place and put it
-   down to shock and grief. The signals officer tells Caelestis that the *Crow* is safe and
+   down to shock and grief. The station master has Caelestis told that the *Crow* is safe and
    under repair, and relays the raid as the *Crow*'s crew tell it. Cairn's own
    scope log for that watch shows no contact. Sending the ship home is less
    trouble than the questions a missing ship would raise.
@@ -288,7 +296,7 @@ nobody followed it up.
 |---|---|---|
 | **Vocath** | FR-016's seal, the rod, the crates | Vocath, his line, the arrangement |
 | **Joffrey** | The Sky Dock exchange; the FIA puts him at the *Crow*'s helm | What he is becoming |
-| **Cairn Station** | The discrepancy; reports that never change | Two taken, and a crew who never knew their logs went nowhere |
+| **Cairn Station** | The discrepancy; reports that never change | One taken, one illithid, and a crew held so long they no longer see it |
 | **Strake and Tarroway** | The filings that disagree with Cairn | A witness who noticed |
 | **Clint Dashforest** | Lost in a color pool in the raid | Fonains |
 | **The sweeps** | LG-003's plate | Vth'oramu |
@@ -356,7 +364,9 @@ The Cairn and *Crow* files are rebuilt; the rest change by a line or two.
   not harm; his regret; does not know of Joffrey.
 - `prime/dossiers/qitru.html`: Joffrey answers to her in name; she told him
   about Miken; she told Miken the rod would only spoil the drill.
-- `prime/opposition/vthorama.html`: the unthinned illithid at Cairn.
+- `prime/opposition/vthorama.html`: no elder brain, so no thinning, and the
+  colony is unthinned but for N'ghathrod and two lieutenants; the unthinned
+  template as the base for its illithids; the illithid at Cairn.
 - `prime/chart/` and its Realmspace page: the perimeter-watch text (Cairn
   silent for a year, Vocath's crew holding it, the *Crow* turned back) is
   replaced. Realmspace moves inward, midway between the edge and the
