@@ -12,15 +12,15 @@ the draft is current.
 
 ## The colony
 
-- **The colony is unthinned.** It has no elder brain, so nothing culls its tadpoles or tends their change, and every illithid it makes comes out malformed in its own way. Only N'ghathrod, Khaleth and Osskhal were properly raised.
-- **The experiment gave each enna a Hold of its own.** Long life comes from the tithe of the taken, which passes up to N'ghathrod and the enna nearest him.
+- **The colony is unthinned.** It has no elder brain, so nothing culls its tadpoles or tends their change, and every illithid it makes comes out malformed in its own way. Only N'ghathrod, Khaleth and Osskhal were properly raised. The first unthinned were the three enna made aboard Thessalar's craft, whom Glyth exiled.
+- **The experiment gave each enna a Hold of its own.** Long life comes from the tithe of the taken, which passes up to N'ghathrod; all five enna share in it.
 - **An enna's tadpoles carry its Hold.** An illithid grown from Zhauveth's tadpole is very good at holding minds and poor at most else.
 
 ## Cairn and the *Bellwether Crow*
 
 - **Cairn Station** is a small Fleet watch post on a lane in an outer zone of the Caelestis Sector. The colony holds it with a pair: the station master, taken by one of N'ghathrod's tadpoles that came on a routine supply call, and an illithid of Zhauveth's that holds the rest of the crew. The hold works by nearness and strengthens with time; newcomers feel it and can resist. The crew sign rotation waivers and stay. Zhauveth touches down rarely; captives change hands every few weeks near Cairn.
-- **The *Bellwether Crow*** was sent on Tarroway's filing, raided once on the approach to Cairn, and repaired there for days. Joffrey, its junior spelljammer, took the helm and held the survivors. Its report answered Tarroway's filing; the colony does not know of Tarroway.
-- **Joffrey was taken at Cairn**, by chance, while the *Crow* was docked. His tadpole carried a directive to look for an artifact N'ghathrod sensed in Caelestis; he found A.T.L.A.S. in the Brig. A survivor of the *Crow* sees that he has changed.
+- **The *Bellwether Crow*** was sent on Tarroway's filing, raided once on the approach to Cairn, and repaired there for days. Joffrey, its junior spelljammer, took the helm and held the survivors. Its report answered Tarroway's filing. The crew were told only to look in on Cairn, so the colony does not know of Tarroway.
+- **Joffrey was taken at Cairn.** The chance came while the *Crow* was docked, and Zhauveth took it. His tadpole carried a directive to look for an artifact N'ghathrod sensed in Caelestis; he found A.T.L.A.S. in the Brig. A survivor of the *Crow* sees that he has changed.
 - **Clint** boarded a raider skiff on purpose to draw the fight off his crew. A color pool took the skiff to Fonains by chance. He lost his communication piece and was held for a time. His gear is the device, and the raiders took it for an ordinary tool. The raiders found the gems, and Vocath's trade on Fonains began; they also hunted Clint so he could not report.
 - **Mirt backed the cadets** when they raised Joffrey. He did not point them at him.
 - **The sealed item at Strake goes.**

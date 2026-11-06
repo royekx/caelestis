@@ -69,8 +69,13 @@ makes. **Proposed** reading of each:
 The Vth'orama have no elder brain. Every tadpole that reaches a host is used,
 weak or flawed, and every change runs untended. So every illithid the colony
 makes is **unthinned**: it comes out of ceremorphosis malformed in its own way,
-lopsided in body and in power. To Glyth, an illithid raised without an elder
-brain is unfit, and that judgement is what the unthinned were exiled for.
+lopsided in body and in power.
+
+The first unthinned were the three of the enna made aboard Thessalar's craft,
+from bodies he supplied and N'ghathrod's own tadpoles, far from any elder
+brain. To Glyth, an illithid raised without an elder brain is unfit, and
+Glyth exiled them for it. Every illithid the colony has made since is
+unthinned the same way.
 
 Ordinary illithids live about a century and a quarter. The colony began some
 five hundred years ago, so any properly raised illithid who came with
@@ -96,7 +101,7 @@ things and very good at holding minds.
 
 **Long life comes from the taken.** A portion of every taken person passes
 upward through the rungs of the taken and ends with N'ghathrod, a tithe that
-extends his life; the enna, nearest him, share in it. The more he takes, the
+extends his life. All five enna stand nearest him, and all five share in it. The more he takes, the
 longer they all last.
 
 ### Taken and ceremorphosis
@@ -188,11 +193,13 @@ Strake can see that far.
    filing, the Caelestis Fleet sends the *Bellwether Crow* to look in, with
    Clint Dashforest leading its crew and Joffrey aboard as its junior
    spelljammer. The network has nobody in the office that sends it, so
-   nobody warns Vocath.
+   nobody warns Vocath. The *Crow*'s crew are told to look in on Cairn; the
+   filing behind the order stays with the office.
 2. **The raid.** The *Crow*'s course to Cairn runs up the lane and comes on
    Vocath's people mid-handover, captives half moved from their ship to a
-   colony courier, out in Cairn's blind spot. With the cargo strung between
-   two hulls they cannot scatter, so they strike to turn the *Crow* back, and
+   colony courier, out on the stretch only Cairn's scope covers. With the
+   cargo strung between two hulls they cannot scatter, so they strike to
+   drive the *Crow* off, and
    bite off more than they can chew. To draw the fight off his crew, Clint
    boards one of their skiffs and wrecks it from inside. A color pool opens
    by chance and takes the skiff, with Clint and his gear aboard. Many of the
@@ -218,7 +225,8 @@ Strake can see that far.
    a sense, perhaps a whisper from Vecna, that Caelestis holds something like
    A.T.L.A.S., and the tadpole carries a directive to look for it. Joffrey is
    also insurance: a man inside Caelestis who can warn the colony if anyone
-   looks at Cairn again.
+   looks at Cairn again. He knows the *Crow* was sent to look in on Cairn,
+   and nothing of who asked.
 6. **The report.** The *Crow* goes home and reports what it believes: raided
    on the approach, Clint lost, Joffrey held the ship, Cairn helped them home.
    The Fleet orders escorts against raiders on the lane, and Cairn is thanked.
@@ -259,7 +267,8 @@ on the lane. With no way to send word, he stays lost to Caelestis.
 - Qitru told Joffrey about Miken. Miken does not know of Joffrey.
 - Mirt lost his friend Clint to a raid he believes was Vocath's and cannot
   prove. When the cadets bring him Joffrey, he backs them: if they think
-  something is there, they should look for him.
+  something is there, they should look into it for him, carefully, given
+  Joffrey's standing.
 
 ### Vocath's two marks
 
@@ -300,8 +309,9 @@ go for the source. **Proposed** touches:
 **FR-016: Vocath's personal seal.** The drawing stays: the balance scale,
 coins on one pan, a crate on the other, pressed in wax on the unlogged crate
 of Fonains shards. The registry finds no match. The inspector who flagged it
-was moved to cadet intake (Boogie's line). The crew has met the seal only as
-a word and a name; FR-016 is where they first see it drawn. Describe it at
+was moved to cadet intake (Boogie's line). The crew has glimpsed the seal on the
+rod and on the Sky Dock crate, and heard it named; FR-016 is where they see
+it drawn plainly. Describe it at
 the table when Vocath's darker side surfaces, and either order lands.
 
 **LG-003: the sweeps.** A plate of four sweeps from Strake's scope at the
@@ -364,12 +374,13 @@ Tetherbreak bearing, the perimeter watch) and read each hit in context.
 
 **Rebuilt** (the old geography and the old *Crow* story run through them):
 
-- **LG-003:** Strake's filing on the discrepancy: Strake's contacts against
-  Cairn's silence, the sweeps plate, Tarroway's notes. The sealed item at
+- **LG-003:** Strake's filings on the discrepancy: the first, which sent the
+  *Crow*; the later ones, set aside after its report; Strake's contacts
+  against Cairn's silence; the sweeps plate; Tarroway's notes. The sealed item at
   Strake goes.
-- **WM-002:** the *Crow*'s report: sent on Tarroway's filing, raided once on
-  the Cairn approach, heavy losses, Clint lost to a color pool, Joffrey
-  commended for taking the helm, days of repair at Cairn, the return.
+- **WM-002:** the *Crow*'s report: sent to look in on Cairn, Clint
+  Dashforest leading its crew, raided once on the Cairn approach, heavy losses, Clint lost to a color pool, Joffrey,
+  its junior spelljammer, commended for taking the helm, days of repair at Cairn, the return.
 - **SA-005:** an escort order against raiders on Cairn's lane, replacing the
   closure of the run past Strake. Its memorial roll carries the *Crow*'s
   dead.
@@ -377,7 +388,7 @@ Tetherbreak bearing, the perimeter watch) and read each hit in context.
   Cairn as the far satellite at the end of the edge run, filing through
   Strake, with the gravitational variance strongest at Cairn. Rebuild it on
   the new geography: Cairn on its lane, reporting to Caelestis; Strake
-  further off. Its drift line points at the *Osprey Vane*.
+  further off. Its drift line points at the *Osprey Vane*, the ship it already names.
 - **files.html:** every summary and case line read against the rebuilt
   files.
 
@@ -428,6 +439,15 @@ given an added paragraph beside the old one.
   Osskhal; the unthinned template as the base for its illithids; the pair at
   Cairn.
 - `prime/dossiers/mirt.html`: the hunch without proof; backing the cadets.
+- `prime/dossiers/saerthe-abizjn.html`, `prime/dossiers/boatswain-tarto.html`,
+  and Mr. Blip wherever his DM entry sits: they know Vocath's seal on sight.
+- `prime/artifacts/atlas.html`: Joffrey's directive; how he found it in the
+  Brig.
+- `prime/locations/fonains.html`: Clint held by the raiders and hunted after
+  he got away; Vocath's ships the long way.
+- `prime/timeline/` and `prime/data/overlay.json`: the raid, Clint lost,
+  Joffrey taken, the slow year; the handovers near Cairn and Zhauveth's
+  visits as the colony's and Vocath's lanes.
 - `prime/dossiers/miken.html`: placed the rod as well as the beacon; told it
   would only spoil the drill; his regret; does not know of Joffrey.
 - `prime/dossiers/qitru.html`: Joffrey answers to her in name; she told him
@@ -454,6 +474,5 @@ how stations talk to Caelestis, which posts the network holds elsewhere.
 - **Bartholomew's line:** which world, and which cycle stamps his SA-002
   entry (the others carry 1486, 1489 and 1491).
 - **Gold clearance and Above Bridge:** leaning no.
-- **The enna's own powers:** each Hold now comes from the experiment. Only
-  Zhauveth's offspring is set; what the other four's tadpoles become waits
-  until one is needed.
+- **The other enna's offspring:** only Zhauveth's is set. What the other
+  four's tadpoles become waits until one is needed.
