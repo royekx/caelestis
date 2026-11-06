@@ -30,16 +30,20 @@ can investigate, and a store of backstory.
   named the marking.
 - The Sky Dock crate (Voyage 001): "marked with the same symbol as the
   Vocath rod".
-- Joffrey: a well-praised Caelestis sailor the crew was pointed at
-  (Voyage 003).
+- Joffrey: Mr. Blip named him the present-day great spelljammer of Caelestis
+  (Voyage 001). The cadets saw him make a suspicious exchange at the Sky Dock
+  and told Mirt; Mirt told them to look into him carefully, given his
+  standing (Voyage 003).
 - Mirt went still at Vocath's name and called him an old enemy with a grudge.
-- Miken and his sending stone; the Academy thefts; *fleet intelligence
-  archive* on Mirt's notepad.
+- Miken sat unhurt beside his injured crewmates after the rod went off and
+  hid a wince (Voyage 003). Bartholomew caught him on the first watch,
+  talking low into a sending stone in the hallway by the garden shaft
+  (Voyage 006).
+- The Academy thefts; *fleet intelligence archive* on Mirt's notepad.
 
 **Fixed by the Fonains campaign:** Clint Dashforest reached Fonains about a
 year ago through a color pool, with his device, before its Monolith appeared.
-Vocath's people went to Fonains after him and now trade in its gems. Boogie's
-shard came through Vocath's line.
+Vocath's people trade in its gems. Boogie's shard came through Vocath's line.
 
 **Fixed on the DM side:** the colony on Vth'oramu; Joffrey is N'ghathrod's,
 the informant Vocath believes is his own; Zhauveth, the Voice, made the
@@ -48,7 +52,7 @@ colony's arrangement with Vocath.
 ## Taken and ceremorphosis
 
 These are different, and the difference drives the story
-(`factions/vthorama.html`).
+(`opposition/vthorama.html`).
 
 | | Ceremorphosis | Taken |
 |---|---|---|
@@ -61,7 +65,8 @@ These are different, and the difference drives the story
 
 Captives become illithids. Only key people are taken, never crowds. The taken
 are mortal: they are found out, killed, or die, and N'ghathrod keeps placing
-new ones.
+new ones. N'ghathrod knows only what his taken report, and what Vecna lets
+him sense.
 
 ## The story
 
@@ -76,8 +81,8 @@ at volume and asks no questions.
 **Vocath needs what the network knows.** Over years N'ghathrod has placed his
 taken in useful posts: dockmasters, customs clerks, guild accountants. Every
 one of them reports up to him. Zhauveth passes Vocath what serves him: which
-cargo moves when, which inspection is coming, which patrol is elsewhere.
-That knowledge is why his house prospers.
+cargo moves when, which inspection is coming, where the patrols and escorts
+are. That knowledge is why his house prospers.
 
 **The arrangement.** Vocath's line supplies captives; Zhauveth supplies what
 the network knows. Vocath deals with Zhauveth, never with N'ghathrod.
@@ -91,15 +96,20 @@ with, keeps him content.
 Cairn is a small Caelestis Fleet watch post with a handful of crew, and the
 Fleet's authority on its lane. Its long scope watches the lane, and its
 reports feed the Fleet's charts for it. Vocath's captive line runs along the
-lane; the colony's couriers use it; Vth'oramu crosses it now and then on its
-way somewhere.
+lane, the colony's couriers run it, and Vth'oramu crosses it now and then on
+its way somewhere.
 
-**The colony holds Cairn with two people.** One of Vocath's ships, under his
-clean house mark, made a routine supply call and carried two of N'ghathrod's
-tadpoles. They took **the station master**, who writes the reports, and **the
-signals officer**, who sends them. The rest of the crew see what they see and
-log it, and every word that leaves Cairn passes through those two. The lane
-reads all clear.
+**Vocath's house supplies the lane's stations.** The family business holds
+the Fleet contract for stores on that lane, under the clean house mark. Its
+ships call at Cairn as a matter of course.
+
+**The colony holds Cairn with two people.** One routine supply call carried
+two of N'ghathrod's tadpoles. They took **the station master**, who writes
+the reports and keeps the log, and **the signals officer**, who sends them.
+The rest of the crew see what they see and write it up, and every word
+passes through those two before it leaves. A sighting that goes nowhere is
+filed and forgotten. The station master defers the crew's rotation, so the
+same few people serve there year on year. The lane reads all clear.
 
 **Strake Station** sits further off. At the very limit of its range, its scope
 picks up faint, odd returns in Cairn's area. Nobody thought Strake could see
@@ -111,50 +121,72 @@ alone.
 1. **Tarroway notices.** Strake's cartographer pulls a pattern out of the
    noise: Strake sees things on the lane that Cairn does not report. The
    Caelestis Fleet sends the *Bellwether Crow* to look in, with Clint
-   Dashforest leading its crew and Joffrey aboard as a junior drift warden.
-2. **The raid.** The *Crow*'s course to Cairn crosses the lane where
-   Vocath's people are handing captives to the colony, out in Cairn's blind
-   spot. A Fleet ship would see it, so Vocath's people strike to turn the
-   *Crow* back, and bite off more than they can chew. Clint boards one of
-   their craft and wrecks it from inside, and a random color pool takes the
-   craft, with him and his device aboard. Many of the *Crow*'s crew die.
-   **Joffrey rallies the survivors and holds the ship.** From then on they
-   look to him. He earned it.
+   Dashforest leading its crew and Joffrey aboard as its junior spelljammer.
+   The network has nobody in the office that sends it, so nobody warns
+   Vocath.
+2. **The raid.** The *Crow*'s course to Cairn runs up the lane and comes on
+   Vocath's people mid-handover, captives half moved from their ship to a
+   colony courier, out in Cairn's blind spot. With the cargo strung between
+   two hulls they cannot scatter, so they strike to turn the *Crow* back, and
+   bite off more than they can chew. To draw the fight off his crew, Clint
+   boards one of their skiffs and wrecks it from inside. A random color pool
+   opens and takes the skiff, with Clint and his gear aboard. Many of the
+   *Crow*'s crew die. **Joffrey takes the helm, flies the ship out of the
+   fight and holds the survivors together.** From then on they look to him.
+   He earned it.
 3. **The warning.** Vocath's people pull back and warn Zhauveth that the
    *Crow* is coming to Cairn.
 4. **Cairn plays host.** The station takes the crippled *Crow* in. Repairs
    take days. The signals officer tells Caelestis that the *Crow* is safe and
-   under repair. Sending the ship home is less trouble than the questions a
-   missing ship would raise.
+   under repair, and relays the raid as the *Crow*'s crew tell it. Cairn's own
+   scope log for that watch shows no contact. Sending the ship home is less
+   trouble than the questions a missing ship would raise.
 5. **The opening.** While the *Crow* is docked, Zhauveth sees what they have:
-   a ship going home to Caelestis, and a hero its survivors follow. A courier
-   brings one of N'ghathrod's tadpoles, and the station master takes Joffrey.
-   It is insurance: a man inside Caelestis who can warn the colony if anyone
+   a ship going home to Caelestis, and a spelljammer its survivors follow. A
+   colony courier brings one of N'ghathrod's tadpoles up the lane within
+   days, and the station master takes Joffrey. N'ghathrod has a sense,
+   perhaps a whisper from Vecna, that Caelestis holds something like
+   A.T.L.A.S.; the tadpole carries a directive to look for it. Joffrey is
+   also insurance: a man inside Caelestis who can warn the colony if anyone
    looks at Cairn again.
 6. **The report.** The *Crow* goes home and reports what it believes: raided
    on the approach, Clint lost, Joffrey held the ship, Cairn helped them home.
    The Fleet orders escorts against raiders on the lane, and Cairn is thanked.
-7. **Fonains.** The raiders the pool took with Clint message Vocath by
-   sending stone: where they are, and what Clint carried. Clint gets away from
-   them, stripped of his stone, with no way to send word to Caelestis. Vocath
-   sends a ship the long way to collect what Clint carried.
+   The network tells Vocath where the escorts run, and the line runs around
+   them.
+
+### Clint on Fonains
+
+The pool drops the skiff on Fonains, with Clint and a few of the raiders
+aboard. Clint loses his communication piece in the wreck or to the raiders,
+and for a time they hold him. They take his gear for an ordinary tool; it is
+the device, and nobody knows it. Clint gets away. The raiders find the gems,
+send word to Vocath by sending stone, and Vocath's people start their trade
+on Fonains. For a while they also hunt Clint, so that he cannot report what
+he saw on the lane. With no way to send word, he stays lost to Caelestis.
 
 ### After
 
-- Joffrey turns slowly, over about a year, and rises on the strength of what
-  he did on the *Crow*.
-- Inside Caelestis he finds A.T.L.A.S. in the Brig, catalogued as an antique
-  navigational instrument: a Reach housing. N'ghathrod wants residue, and the
-  thefts begin.
+- Joffrey turns slowly, over about a year, and makes his name on the
+  strength of what he did on the *Crow*.
+- Following the directive, he snoops through Caelestis and finds A.T.L.A.S.
+  in the Brig, catalogued as an antique navigational instrument: a Reach
+  housing. N'ghathrod wants residue, and the thefts begin.
 - Zhauveth tells Vocath that he has an informant inside Caelestis. Vocath
-  uses it for his grudge, and the signed rod comes out of that.
+  uses it for his grudge against Mirt.
+- **Miken placed the rod.** He expected it to spoil the training. He did not
+  expect it to hurt anyone, and his own crewmates took the worst of it. He
+  regrets it. What gives him away is a hushed conversation in the middle of
+  the night.
 - Mirt lost his friend to a raid he believes was Vocath's and cannot prove.
-  He points the cadets at the hero who came home.
+  When the cadets bring him Joffrey, he backs them: if they think something
+  is there, they should look for him.
 
 ### Vocath's two marks (ruled 2026-11-04)
 
 - **His house mark** is the public trade mark of the family business. The
-  Fleet knows it and has never seen it on anything wrong.
+  Fleet knows it from the supply contract and has never seen it on anything
+  wrong.
 - **His personal seal** goes on his darker dealings: the rod, the Sky Dock
   crate, the crate of Fonains shards Boogie looked into. It is registered
   nowhere. Mirt's trusted circle knows it on sight: Saerthe, Tarto, Mr. Blip,
@@ -193,7 +225,9 @@ from different angles.
 
 Strake and Cairn disagree. Strake logs contacts on the lane that Cairn never
 reports, including a contact during the *Crow*'s approach inside Cairn's own
-range. Cairn's reports read perfectly, week after week. Tarroway filed it;
+range. For the watch the *Crow* was raided, Cairn's relay reports the raid as the
+*Crow* told it, while Cairn's own scope log shows nothing. Cairn's reports
+read perfectly, week after week. Tarroway filed it;
 nobody followed it up.
 
 ### The threads
@@ -201,7 +235,7 @@ nobody followed it up.
 | Thread | What draws them | What waits |
 |---|---|---|
 | **Vocath** | FR-016's seal, the rod, the crates | Vocath, his line, the arrangement |
-| **Joffrey** | Mirt's pointer; the FIA puts him on the *Crow* | What he is becoming |
+| **Joffrey** | The Sky Dock exchange; the FIA puts him at the *Crow*'s helm | What he is becoming |
 | **Cairn Station** | The discrepancy; reports that never change | Two taken, and a crew who never knew their logs went nowhere |
 | **Strake and Tarroway** | The filings that disagree with Cairn | A witness who noticed |
 | **Clint Dashforest** | Lost in a color pool in the raid | Fonains |
@@ -227,7 +261,7 @@ The Cairn and *Crow* files are rebuilt; the rest change by a line or two.
 - **LG-003:** becomes Strake's filing on the discrepancy: Strake's contacts
   against Cairn's silence, the sweeps plate, Tarroway's notes.
 - **WM-002:** the *Crow*'s report: raided on the Cairn approach, heavy
-  losses, Clint lost to a color pool, Joffrey commended, days of repair at
+  losses, Clint lost to a color pool, Joffrey commended for taking the helm, days of repair at
   Cairn, the return. One boarding.
 - **SA-005:** the closure of the run past Strake becomes an escort order
   against raiders on the lane. Its memorial roll carries the *Crow*'s dead
@@ -252,16 +286,19 @@ The Cairn and *Crow* files are rebuilt; the rest change by a line or two.
   Strake further off; the discrepancy.
 - `prime/vessels/bellwether-crow.html`: one raid; the days at Cairn; Joffrey
   taken there.
-- `prime/dossiers/joffrey.html`: junior drift warden; his stand; taken at
-  Cairn; the slow year; A.T.L.A.S.
+- `prime/dossiers/joffrey.html`: the *Crow*'s junior spelljammer; his stand;
+  taken at Cairn with the directive; the slow year; A.T.L.A.S.
 - `prime/dossiers/clint.html`, `prime/artifacts/second-distinction-piece.html`:
-  Clint led the *Crow*'s crew; lost by accident; nobody was after the device.
+  Clint led the *Crow*'s crew; boarded the skiff to draw the fight; the pool;
+  his lost communication piece; the raiders hunting him; nobody knows the device.
 - `prime/dossiers/vocath.html`, `prime/factions/vocath-operation.html`: the
-  two marks; what he gives and gets; the handover on the lane.
-- `prime/dossiers/zhauveth.html`, `prime/factions/vthorama.html`: the
+  two marks; the supply contract; what he gives and gets; the handover on
+  the lane; the Fonains trade.
+- `prime/dossiers/zhauveth.html`, `prime/opposition/vthorama.html`: the
   arrangement; the network; the opening at Cairn.
-- `prime/dossiers/mirt.html`: the hunch without proof; working through the
-  cadets.
+- `prime/dossiers/mirt.html`: the hunch without proof; backing the cadets.
+- `prime/dossiers/miken.html`: placed the rod; meant sabotage, not harm;
+  his regret.
 - `prime/chart/`: Realmspace moves inward, midway between the edge and the
   heart of the galaxy; Cairn sits on a lane, not at the edge.
 - `prime/crew/bartholomew.html`: his line.
@@ -276,6 +313,8 @@ which posts the network holds elsewhere.
 
 - **The *Crow*'s survivors:** does one of them notice Joffrey changed, as
   the crew's lead?
+- **Who Miken answers to:** whose voice is on the other end of his stone,
+  and how the rod reached him from Vocath.
 - **The neighbouring sector** on Cairn's lane, and where Realmspace sits once
   moved.
 - **Bartholomew's line:** the year of his fall, and the world.
