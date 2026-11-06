@@ -43,9 +43,9 @@ staging once Korey has read and accepted them.
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 24 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 14 | 5 | 0 | 1 |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 15 | 5 | 0 | 1 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 13 | 13 | 2 | 0 | 8 |
-| **Total** |  | **138** | **167** | **50** | **2** | **63** |
+| **Total** |  | **138** | **168** | **50** | **2** | **63** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2167,6 +2167,10 @@ archived in Drive, not deleted. What stays open here is below.
   answered: inbox/chat-automation.md § Voyage 5 runbook, Method (Settled: "Earlier voyages keep 'autognome' as history"). PR #61 asked "Say if you want them swept" and PR #62 repeated the default; Korey merged both without asking for a sweep.
 
 # Repo and process
+
+- **[later]** Skills by DM practice, not by campaign
+  The caelestis-* skills (story logic, table readiness, prep, mechanic review, change audit) are Korey's DM practice, not Caelestis's. Before a second campaign uses them, split each into the method, named for the practice and shared across campaigns, and the campaign's specifics (paths, anchors such as Fonains-first, voice, check commands), kept in that campaign's CLAUDE.md or one campaign reference the skills read. Repo setup and voice stay per campaign.
+  src: Korey, 2026-11-06
 
 - **[fix]** Move Realmspace on the chart *(build)*
   Realmspace moves to midway along arm 0 (about t = 1.65; now 2.1) in `prime/chart/galaxy.js` and `prime/chart/index.html`. Cairn Station goes on a lane outward along the arm; Strake on its own lane nearer home, off to the side. Virenspace and Aethris move with Realmspace. Rerun `tools/eye-fit.js`, check the eye, and swap any mark that no longer lands for a nearer system on the arm. Rewrite the perimeter-watch text on the chart and the Realmspace page. Full placement: `fia-story.md` § Cairn Station.

@@ -175,7 +175,7 @@ state what is. Rules: `prime/working/README.md`.
 
 - **A ruling is done when every page it touches says it.** A draft, the
   inbox or STAGING is where a ruling waits, not where it lives. When a
-  subject settles, run the ripple: search `prime/`, `restricted/`, `data/`,
+  subject settles, run a change audit (the caelestis-change-audit skill): search `prime/`, `restricted/`, `data/`,
   the player pages and `prime/data/` for every name, id and alias it
   touches; rewrite each page that holds one, whole, against the ruling; then
   search again for the old version's phrasing. One pull request, merged
