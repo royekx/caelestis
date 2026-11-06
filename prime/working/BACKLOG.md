@@ -2040,7 +2040,7 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 ### principles.html
 
 - **[add]** The DM has the same tools as the players
-  This is still Dungeons & Dragons in a sci-fi skin. Anything a player can do, the world can do: spells, charms, mass suggestion, mind blank, a familiar on watch. When a plan in the world needs people silent, loyal or unaware, reach for the spell that would do it before inventing a reason they just did not notice. The taken carry the effect of mind blank; Cairn Station's crew are held by charm and suggestion. Using these is not cheating. Let the spectacle show, too: a held station should feel uncanny, not merely quiet.
+  This is still Dungeons & Dragons in a sci-fi skin. Anything a player can do, the world can do: spells, charms, mass suggestion, mind blank, a familiar on watch. When a plan in the world needs people silent, loyal or unaware, reach for the spell that would do it before inventing a reason they just did not notice. The taken carry the effect of mind blank; Cairn Station's crew are held by an illithid whose hold grows with nearness and time. Using these is not cheating. Let the spectacle show, too: a held station should feel uncanny, not merely quiet.
   src: Korey, 2026-11-06
 
 - **[add]** Asking for a roll means something is there
