@@ -62,9 +62,17 @@ the elder brain eats most of the rest. What reaches a host is the strongest
 and best formed of the brood. The elder brain also links every illithid of
 the colony and keeps the knowledge of its dead.
 
-The Vth'orama have no elder brain. Far more of their tadpoles reach a host,
-the weak and the flawed among them, so an illithid the colony makes is much
-more likely to come out of ceremorphosis malformed. Most of them do.
+The Vth'orama have no elder brain, and N'ghathrod will not let a tadpole die.
+After all the colony has been through, and the exile above all, every tadpole
+is found a host. The weak and the flawed reach a host with the rest, so an
+illithid the colony makes is far more likely to come out of ceremorphosis
+malformed. Most of them do, and the whole are a minority. That imbalance is a
+strain inside the colony of its own.
+
+**N'ghathrod has become the colony's elder brain.** Its illithids believe
+they answer to an elder brain through him, and in every way that matters
+they do: he decides which tadpole goes where, the taken report up to him,
+and what they know ends with him.
 
 **Unthinned** is Glyth's word for a malformed illithid: one the brood should
 have thinned out. An unthinned illithid is visibly wrong in body, and
@@ -421,8 +429,10 @@ anyway):
 
 ## Promotes to
 
-The DM pages take the same care: each is rewritten against this story, not
-given an added paragraph beside the old one.
+Most of this draft is not about the FIA. It settles the Vth'orama, Vocath,
+Cairn and the *Crow*, and every page below carries part of it. Each is
+rewritten whole against this story, not given an added paragraph beside the
+old one. When they are done, this draft is deleted: the pages hold the story.
 
 - `prime/locations/cairn-station.html`: the taken station master,
   Zhauveth's illithid and its hold, the waivers, Zhauveth's visits, the
@@ -450,7 +460,8 @@ given an added paragraph beside the old one.
   spawn inherit some of its power. The unthinned lieutenants' pages define
   unthinned as raised without an elder brain; that becomes malformed.
 - `prime/opposition/vthorama.html`: what the elder brain does and what its
-  absence makes; unthinned as Glyth's word for the malformed, who are most of
+  absence makes; N'ghathrod will not let a tadpole die and has become the
+  colony's elder brain; the whole as a minority, and the strain it causes; unthinned as Glyth's word for the malformed, who are most of
   the colony; the old illithids who joined N'ghathrod; the unthinned
   template for the malformed; the pair at Cairn.
 - `prime/dossiers/mirt.html`: the hunch without proof; backing the cadets.
