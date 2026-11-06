@@ -117,7 +117,8 @@ and can resist it; a crew that has lived beside it for a year accepts it as
 part of the station and stops seeing it. They work their watches as normal,
 and what they see on the lane, they set aside as nothing worth remarking.
 The colony has few unthinned and fewer with this gift, so it keeps one where
-a hold matters most and spends it nowhere else.
+a hold matters most and spends it nowhere else. It feeds from the captives
+that pass near Cairn.
 
 The station master defers the crew's rotation: each of them signs a waiver
 and stays. Nobody in the Fleet finds that odd. Many who serve have few ties
@@ -186,8 +187,8 @@ The pool drops the skiff on Fonains, with Clint and a few of the raiders
 aboard. Clint loses his communication piece in the wreck or to the raiders,
 and for a time they hold him. They take his gear for an ordinary tool; it is
 the device, and nobody knows it. Clint gets away. The raiders find the gems,
-send word to Vocath by sending stone, and Vocath's people start their trade
-on Fonains. For a while they also hunt Clint, so that he cannot report what
+send word to Vocath by sending stone. Vocath sends ships the long way, and
+his people start their trade on Fonains and carry its shards home. For a while they also hunt Clint, so that he cannot report what
 he saw on the lane. With no way to send word, he stays lost to Caelestis.
 
 ### After
