@@ -54,7 +54,7 @@
           "number": 5,
           "beats": [
             "The planned abduction by the behir never happened; Boogie's missed rope delivered the crew to the Command Deck a session early, by their own descent. Scrap the abduction.",
-            "The Command Deck's field unmakes constructs: the crew can cross it, the behir cannot. Both sides need it cleared, for different destinations."
+            "The Command Deck's field freezes constructs: the crew can cross it, the behir cannot. Both sides need it cleared, for different destinations."
           ]
         },
         {
@@ -180,7 +180,7 @@
         {
           "number": 6,
           "beats": [
-            "The Lantern's empty cradle is above the repair-bay pod. Seated, it turns the ship into a safehouse."
+            "The Lantern's empty cradle is above the repair-bay pod. Seated, it makes the pod a one-person rejuvenation pod: one creature, one hour, all three charges."
           ]
         }
       ]

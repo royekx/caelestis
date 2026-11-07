@@ -549,7 +549,7 @@ experiment and its spawn; the mouse.
 | `prime/locations/glyth.html` | the exile of the unthinned |
 | `prime/artifacts/rod-of-seven-parts.html` | the mouse |
 | `prime/data/connections.json`, `prime/data/survey.json`, `prime/timeline/timeline.json` | every colony term |
-| `prime/working/STAGING.md`, `nexus-field-guide.md` | bearers, lifespan, elder brain |
+| `prime/working/STAGING.md`, `prime/docs/PAGE-GUIDE.md` § 8 (Left off the Nexus) | bearers, lifespan, elder brain |
 | `prime/working/BACKLOG.md` | cross-cutting 6 ("which residue piece gave him long life") closes; the mouse's quirk item becomes its power |
 
 "Bearer" also appears in non-colony senses (fragment bearers on

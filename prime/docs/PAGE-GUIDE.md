@@ -728,8 +728,7 @@ without JS they stack, which is also what Pagefind reads.
   fixed key (shrugs off half, unharmed by, takes double) with no AC, HP, CR
   or DC; Korey's stat blocks in `prime/statblocks/` and on dossiers outrank
   the book where they overlap. Published lore that would reveal a DM secret
-  stays off; `prime/working/nexus-field-guide.md` lists what was left out
-  and why. The galaxy is taught by name and basics only, with no
+  stays off; the list below (§ 8, Left off the Nexus) names what. The galaxy is taught by name and basics only, with no
   galaxy map and no other galaxies: the crew learns the cosmos by exploring
   it. The index rows are static HTML inside a `data-pagefind-ignore` list, in
   the same order as the pages' prev/next chain; the FIA row is the only link
@@ -870,6 +869,26 @@ without JS they stack, which is also what Pagefind reads.
   (`voyages/bearings/index.html`): the gate (`index.html`) enters there and
   the sidebar logo points there. The sidebar in `scripts/nav.js` is the one
   list of sections, ordered by how often the crew reaches for each.
+
+### Left off the Nexus
+
+DM-sensitive published lore kept off the Peoples and Perils pages:
+
+- **Mind flayers.** Hosts that survive, chitin under the skin, unreadable or mind-blanked minds, "Oramu", tadpole couriers, brine casks and crates, colonies without a brain (so the MM line that solitary mind flayers are rogues and outcasts is off), the unthinned and bearers, illithids aboard a living ship, illithid sects, the Seekers, the eye in a wheel, the voice of a greater brain, Glyth. Also off: the rare published complication in which a remnant of the host's mind survives ceremorphosis (older lore, the "partial personality"), since it brushes against hosts that survive; the elder brain's five-mile creature sense, Wildjammer's renegade mind flayers and the time-travel origin, and psurlons working with mind flayers.
+- **Astral dreadnought.** Everything in ruling 3. The book's line that its tail trails off into the void is left off with the tail.
+- **Neogi.** Brands, marks and sigils (BAM's "neogi mark themselves and those they capture" is off), Astral scent or foreign origin, supplying captives to illithids, Vocath. The hatchling description is in, per ruling 2. Lifejammer helms are off (helm power).
+- **Beholders and kin.** The Sovereign Eye, the Pact, the eclipse, sleepborn, domains and the ten rulers, partial sleep, rays as terrain, adamantine blocking sight, Vaelorix and the wisp-lotus, Ostekk as a builder, dream-birth (so the MPMM line that a gazer is a beholder's dream made real is off), the dead beholder's eye still cancelling magic. Beholder-propelled ships are off (helm power).
+- **Githyanki.** Qitru, the star lancer link (the star lancer entry names no rider), H'Catha, Vocath, Miken's beacon, Vlaakith, Tu'narath.
+- **Astral elf.** Aethris, Fortuned and Misfortuned, Tymora and Beshaba, the wanted notice, the Watchers and Ezra, the Elven Imperial Navy.
+- **Autognome.** Whether autognomes cast, look-alikes, maker deaths, a pull or resonance in their cores, beholder-built automata, Lantan.
+- **Plasmoid.** Objects formed or kept inside, nucleus shards.
+- **Halfling.** Hidden worlds, runes, Wayfinders, Lunarfoot; also any line about halflings keeping apart, which leans toward a hidden homeworld.
+- **Tiefling and genasi.** Genasi lines turned tiefling by a pact.
+- **Locathah, kuo-toa, ogres, giff, mercane.** Their H'Catha roles, the mercane working for Vocath, the kuo-toa god-by-belief lore; also the mercane's origin as the creation of commerce gods (cosmology of worship) and the giff's gods behind Firearms Mastery. The giff homeworld story stays cut.
+- **Thri-kreen.** Clockwork horrors speaking thri-kreen.
+- **Minotaurs.** Krynn's seafaring minotaurs.
+- **Kindori.** A kindori skeleton fitted with a helm (helm power). The V007 calf and Bartholomew's tracking beat.
+- **Off both pages.** Clockwork horrors, will-o'-wisps and the hollowed wisps, the behir, crystalline constructs, the shadow ship, psychic wind, liches, Vecna, deities, the Seekers, the Order, Monoliths, Zeniths, residue, Starchildren, dragon numbers and migration, Takhisis, Tiamat, Bahamut, Greelob and Orlob, Clint, where pools lead, a colour key, Nowhere, Sardax and who attacked the *Moonraider*.
 
 ## 9. The FIA (`restricted/`)
 

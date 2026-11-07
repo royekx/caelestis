@@ -6,8 +6,8 @@ working layer and process docs. One subject, one row; every path for it sits
 in that row. Paths are under `prime/` unless they start with `data/`,
 `restricted/` or `prime/working/` (written `working/`).
 
-**Counts.** Part 1, Korey decides: 24 · Part 2, decided and waiting: 16 rows ·
-Part 3, working layer cleanup: 68 rows · Part 4, cosmetic: 15.
+**Counts.** Part 1, Korey decides: 24 · Part 2, decided and waiting: 9 rows ·
+Part 3, working layer cleanup: 47 rows · Part 4, cosmetic: 12.
 
 **Summary.**
 - The ten Part 1 questions that touch Voyage 7 (§ A) and the V007 rows of Part 2 are on the pages.
@@ -158,18 +158,11 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 | 2.9 | Vecna's eye is an undercurrent, not the failure state | STAGING, 2026-11-01 | `opposition/vecna.html` intro, § By arc, § Failure state; `dossiers/vecna.html` § His arc; `campaign/index.html` l.16 and § Shape; `chart/index.html` COSMOS.fifths; `timeline/timeline.json` events[11] and threads scene "Failure state"; `hub.html` Vecna card; `principles.html` |
 | 2.10 | The quickening is retired | STAGING, 2026-11-01 | `opposition/vecna.html` § The clock; `factions/discerners.html` § What's hidden and § The Beacon ("arms lighting slightly early"); `factions/fleet.html` (drift paragraph); `data/connections.json`; `chart/gtc.js` toggle; `chart/holo.html` ghost beam; BACKLOG GTC item; add the term to `working/terms.json` |
 | 2.11 | The voice came in the centuries after the exile | STAGING § N'ghathrod, 2026-10-26 | `factions/vthorama.html` § History (answered right after the crash); `timeline/timeline.json` events[56] and scenes[3] "Vecna answers his call" |
-| 2.12 | The taken outlive N'ghathrod, each keeping part of him | STAGING § N'ghathrod, 2026-10-26; cross-cutting 13 | `rules/index.html` § Taken and Still to decide ("what that does to the taken is unwritten") |
-| 2.13 | Seekers chapters do not know each other; the recruiting voice is dropped | BACKLOG cross-cutting 8, ruled | `timeline/timeline.json` events[7] ("chapters … recognise each other"; "across galaxies") |
 | 2.14 | The colony's captives come through Vocath's line | `opposition/vthorama.html`, `dossiers/zhauveth.html`, `dossiers/vocath.html`; fia-story, 2026-11-07 | `factions/vthorama.html` § Operations ("through raiding and the neogi"). The two Vth'orama pages duplicate paragraphs; keep the operation on the opposition page and the people on the faction page |
 | 2.15 | Residue scale and residue housings | STAGING § Cosmology and § Artifacts, 2026-11-04 | `cosmology/index.html` § Residue and the fragments; `artifacts/index.html` § Holdings and § Why they are scattered and hidden |
-| 2.16 | Lantern: Mend takes an action; the seated Lantern is a one-person pod; dampened, not switched off, in anti-magic | STAGING § Lantern, 2026-11-04; BACKLOG § rules fix (answered); BACKLOG § tracker fix | `artifacts/containment-engine.html` stat line (no action); `rules/index.html` § Character subsystems (no entry) and § Paracausality ("Unsuppressed" for residue housings); `data/overlay.json` ITM-Z1eGrfAb V006 "turns the ship into a safehouse" |
-| 2.17 | The Command Deck field froze constructs; it did not unmake them | Vaelorix ruling (`dossiers/vaelorix.html`, V005 table); BACKLOG § tyrant-ship and § tracker fixes | `vessels/tyrant-ship.html` § History "unmade constructs"; `data/overlay.json` QST-Xr4mW8vn V005 beat "unmakes constructs" |
-| 2.18 | Tyrant ship: cut by disintegration; the Engine never drove it; the chair-helm works only in the dais | STAGING § Artifacts, 2026-11-04 | `vessels/tyrant-ship.html` (cause and helm rule missing); `dossiers/vaelorix.html` |
-| 2.19 | V006: the great flower, the root flower and fire; Tumak's lie backed by Enhance Ability and Guidance | STAGING § Voyage 006, 2026-11-04 | `campaign/voyages/index.html` V006 Actual (gives a different account); `crew/bartholomew.html`; `crew/tumak.html` |
-| 2.20 | STAGING play notes and small facts of 2026-11-04 | STAGING § Crew and dossiers, § Rules, § Opposition and Fonains | `crew/bartholomew.html` § Inspirations (Beast Boy, Tony Chopper); `dossiers/crc.html` touchstones; `dossiers/saerthe-abizjn.html` (Kekkaishi, fleet call as rumour); `rules/index.html` § Paracausality (the well); `locations/fonains.html` and `dossiers/nghathrod.html` (Tharizdun never reached the brain); `factions/vthorama.html` (the taken keep old ties); `vessels/vthoramu.html` (a civilization aboard); `factions/cretez.html` and `dossiers/vanifer.html` (Asmodeus has no hand); `locations/fonains.html` (Lola and Eldath, Zaishori out of play); `factions/vocath-operation.html` (thefts took small things); `rules/index.html` inscription (the fragment rebuilding in two halves, STAGING 2026-10-28) |
+| 2.20 | STAGING small facts of 2026-11-04 | STAGING § Opposition and Fonains | `locations/fonains.html` and `dossiers/nghathrod.html` (Tharizdun never reached the brain); `factions/vthorama.html` (the taken keep old ties); `vessels/vthoramu.html` (a civilization aboard); `factions/vocath-operation.html` (thefts took small things): FIA audit. `factions/cretez.html` and `dossiers/vanifer.html` (Asmodeus has no hand); `locations/fonains.html` (Lola and Eldath, Zaishori out of play): cosmos audit |
 | 2.21 | The FIA story is settled | `working/fia-story.md`, 2026-11-07 | Its own touch list, plus pages its Promotes to misses: `dossiers/index.html` summary rows; `locations/caelestis.html`; `dossiers/sor-kur.html`; `opposition/vecna.html`, `dossiers/vecna.html`, `factions/seekers.html`, `glossary/index.html`; `locations/krynnspace.html` ("the watch at Realmspace's edge"); `locations/hcatha.html`; `restricted/disintegration.html` (clearance); `data/connections.json` and `timeline/timeline.json` (PR 2 and PR 3 content); `campaign/voyages/index.html` (the V007 cargo carries the ordinary house mark, never the seal); `dossiers/zhauveth.html`, `dossiers/ithvarn.html`; `crew/bartholomew.html` (FIA hint); `dossiers/jeffrey.html`; `working/terms.json`; `working/glyth-watcher.md`. Waits on Part 1 #1–3, 14–16, 19–24 |
 | 2.23 | Rykoe is the centre; the strain is a byproduct, not a weight on one Axiom; two Zeniths on a world are possible | Naming ruling, Korey 2026-10-28; BACKLOG fix Retrofit the five Axioms, Korey 2026-10-26; BACKLOG § Zeniths, Korey 2026-10-28 | `chart/index.html` COSMOS.fifths "where the Axioms meet"; "the center" on `chart/index.html`, `opposition/vecna.html`, `timeline.json`, `connections.json`; `dossiers/astra-virex.html` "the strain on an Axiom"; `glossary/index.html` Zenith "It happens once" |
-| 2.24 | Saerthe is he; Sor'Kur is she | Korey 2026-11-02 (`working/common-knowledge.md`) | `data/npcs.json` Gender null for both (record edit, Korey's call); `dossiers/sor-kur.html` avoids any pronoun while `factions/fleet.html` says "Her" |
 
 ---
 
@@ -183,11 +176,7 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 | § Two plans: "toward the end of Arc 4" | Renumber after Part 1 #11 |
 | § N'ghathrod l.53 and l.61 (long life) | Rewrite after Part 1 #17 |
 | § N'ghathrod's elder brain ("close to the wreck that carried Tharizdun's temple") | Reword after Part 1 #22 |
-| § Naming: Rykoe and Erevos ("done everywhere") | Clear |
-| § N'ghathrod lore lines | Clear; the only remainder, "rules/ still needs them", applies to the taken-outlive line (Part 2.12) |
-| § Wan, Tu and the fragment | Narrow to the one rules/ line |
-| § Tyrant ship; § Lantern; § N'ghathrod's elder brain; § Cre'Tez | Narrow to what is not yet on the page |
-| Header rule vs "done:" notes | Rule BACKLOG later "'done:' lines in STAGING", then clear the done notes |
+| § N'ghathrod's elder brain; § Cre'Tez | Narrow to what is not yet on the page (FIA and cosmos audits) |
 
 ### 3b. BACKLOG.md: close
 
@@ -243,10 +232,7 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 | `fia-story.md` | Run its change audit (Part 2.21) after Part 1. Before promoting, fix: Strake's reach (l.271 "only Cairn's scope" vs l.255 and l.414); "Strake further off" (l.469, 532) vs "nearer home"; drop "perhaps" (l.294); "the network", "Caelestis Fleet" and "the *Crow*" are retired or mismatched in `terms.json`, so name the web of the taken first; Bartholomew's **Proposed** SA-002 1482 line ("the earliest entry" is false, 1481 exists; CON-312 is a constellation number, so give the transient a registry number); give Mirt's belief a basis now that WM-002 loses the hull marking; Zhauveth "end a crew with a word" vs "incapable of violence" (domination is not violence; say so); get "the true-formed" ruled before the rename; three PRs vs "One pull request" (3g) |
 | `tharizdun.md` | Fully promoted; mixed pronouns. Move Open to BACKLOG, delete. Its Darkest Day "bait" line goes with Part 1 #25 |
 | `divine-rules.md` | Stale: "sphere", "the Flow", Reach-born polarity, "Nothing breaks" vs cosmology's destruction; its two Open questions are answered on cosmology. Promote the worship section, rule "Reach debris and worlds", then delete |
-| `glyth-watcher.md` | Fix "the purebred lieutenant who stayed", "brainless-raised" (retired), "pure-born", "Act 2 handler", "Hall of the Watchers". Make it the one home for the subject |
 | `campaign-middle.md` | Rewrite "Arc 2" after Part 1 #11; point its Open at BACKLOG |
-| `nexus-field-guide.md` | PAGE-GUIDE § 8 depends on it. Move "Left off on purpose" into PAGE-GUIDE or the nexus DM note; add Kindori calves to BACKLOG; delete |
-| `repo-refactor.md` | Missing from README's Drafts table. List it as "Reference: link catalogue"; update phase status (3–8, 10 done; 9 open) and `docs/` paths |
 | `nct-127.md`, `common-knowledge.md` | Keep |
 
 ### 3f. Inbox sweeps
@@ -264,35 +250,18 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 
 | Conflict | Where | Action |
 |---|---|---|
-| Pronoun authority | CLAUDE.md § Naming: the dossier; SESSION-RUN § Authority, caelestis-voice, table-readiness 25: the record | Pick one; point the rest at CLAUDE.md |
-| Dossier tabs | PAGE-GUIDE § 5 About / DM notes / Stat block; SESSION-RUN step 5 "Who they are" | Fix SESSION-RUN |
-| Where open questions may sit | CLAUDE.md includes DM notes tabs; `working/README.md` omits them | Point README at CLAUDE.md |
-| "The" in names | README bans "the Hollow"; repo-refactor allows it | Drop it from one list |
-| Promoted drafts are deleted | README § 2 vs PAGE-GUIDE § 8 (nexus), ship-roles, tharizdun kept | Resolve per 3e |
-| STAGING "done:" notes | README step 5 vs STAGING practice | Rule it (3a) |
-| Short sentences for emphasis | SESSION-RUN § Style vs CLAUDE.md § Writing | Compatible; say so in SESSION-RUN |
-| Writing rules stated three times | CLAUDE.md, README, PAGE-GUIDE § 1 | Keep CLAUDE.md; the others point to it |
-| `terms.json` moved entry | `order.html#cycles` → `factions/keepers.html#beacon` | Retarget to `factions/discerners.html#beacon` |
-| `voyages/voyage-template.html` | Obsolete; SESSION-RUN says do not use | Delete |
+| Promoted drafts are deleted | `tharizdun.md` kept after promotion | Delete it with ruling 25 (story spine) |
 
 ### 3h. Skill lines
 
 | Skill | Line | Action |
 |---|---|---|
-| caelestis-voice | Pronouns "from the repo … and the record"; restated writing rules | Point at CLAUDE.md § Naming and § Writing; keep the off-repo habits and the before/after table |
-| caelestis-table-readiness | 15 "A roll is called only when something is there"; 18 encounter tables | Promote the BACKLOG adds to `principles.html`, then cite |
-| caelestis-table-readiness | 25 "check the record for spellings and pronouns" | Pointer, after 3g pronoun ruling |
-| caelestis-table-readiness, caelestis-prep step 4, caelestis-mechanic-review 11 | Per-player hook line, three copies | Cite `principles.html#players` |
-| caelestis-mechanic-review | 10 "Reskin first"; 12 "D&D Beyond 2024 phrasing" | Promote to `principles.html`, then cite |
 
 ---
 
 ## Part 4: Cosmetic
 
-- **V007** `data/voyages.json` V007 working title "the helm seats → H'Catha" (helm seated in V006.5).
 - **V007** `dossiers/rindle-gearloft.html` decide (own dock or Sea Dock worker) vs `locations/caelestis.html`, `factions/fleet.html`, `crew/gregory.html` stating "works here"; the record says "a dock near the Sea Dock".
-- **V007** H'Catha: "struck the spire" (record) vs the Pupil (`locations/hcatha.html`, `campaign/index.html`, `plot-hooks.html`); add a DM line that the crew was briefed "the spire".
-- **V007** H'Catha: "watched by beholder patrols" (record) vs orbit left open (`locations/hcatha.html`); add a DM line on what the crew has not yet seen.
 - `chart/galaxy.js` comment on Nowhere ("destroyed by its own Zenith") vs cosmology (a god forced its way on).
 - `factions/deities.html` "Asmodeus likely knows" vs `dossiers/vecna.html` "knows": pick one.
 - `factions/watchers.html` "The rise in Monoliths … is the Axiom strain" (the rise causes the strain).
@@ -329,11 +298,9 @@ Every item below closes before V007 prep. Chats are grouped by area: the
 items in one chat share pages, so each page is rewritten once. Each pull
 request merges before any later work reads its pages.
 
-1. **Build: the working layer** (this chat's follow-on). Part 3's
-   independent rows: STAGING notes, BACKLOG closes, merges, misfiles and
-   dead paths, the finished drafts, the inbox README; 3g and 3h; Part 2
-   rows 2.12, 2.13, 2.16, 2.17, 2.18 and 2.24, with the Part 4 lines on
-   those pages. Two pull requests, plus skill cards.
+1. **Build: the working layer.** Done except BACKLOG 3b to 3d (on their own
+   pull request), the Lantern tracker fix closing once that merges, and
+   Rindle's dock (Part 4, waits on Korey).
 2. **Build: the story spine.** Ruling 11 (Acts and arcs, with 2.5's arc
    lines), 2.8, 2.9, 2.10, 2.23, and rulings 13, 25 and 26. Shared pages:
    `campaign/index.html`, `opposition/`, `principles.html`, `timeline.json`,
@@ -343,8 +310,9 @@ request merges before any later work reads its pages.
    § Promotes to in three pull requests, with 2.11, 2.14, 2.20's Vth'orama
    lines, 2.21, rulings 17 and 18, the house mark and personal seal across
    the Vocath pages, and the BACKLOG items moot after it.
-4. **Build: the cosmos.** Rulings 27 to 34, 2.15, the cosmology lines of
-   2.20, and Part 4's cosmology, chart and glossary items.
+4. **Build: the cosmos.** Rulings 27 to 34, 2.15, the cosmology and Fonains
+   lines of 2.20, `divine-rules.md` (promote the worship section, rule "Reach
+   debris and worlds", delete), and Part 4's cosmology, chart and glossary items.
 5. **Mechanic: Tarto, the hold, the unthinned, and Homebound.** Tarto's
    mechanic review (BACKLOG § dossiers/boatswain-tarto.html), the hold, the
    unthinned template, then Homebound and the runes (ruling 12) from the

@@ -311,7 +311,7 @@ Old path → new path, added by each pull request that moves a page.
 | `prime/campaign/colony/index.html#vocath-op` | `prime/opposition/vthorama.html#caelestis-operation` | Campaign (campaign) |
 | `prime/campaign/colony/index.html#academy-op` | `prime/opposition/vthorama.html#caelestis-operation` | Campaign (campaign) |
 | `prime/campaign/colony/index.html#tetherbreak` | `prime/vessels/bellwether-crow.html` | Campaign (campaign) |
-| `prime/campaign/index.html` (the wiki manual) | `prime/principles.html`; wiki conventions to `docs/PAGE-GUIDE.md` | Campaign (campaign). The path now holds the Campaign page, the approved Story landing page; no inbound link targeted the manual's anchors, and its ids (`structure`, `pages`, `principles`, `hooks`, `conventions`, `building`) are not reused |
+| `prime/campaign/index.html` (the wiki manual) | `prime/principles.html`; wiki conventions to `prime/docs/PAGE-GUIDE.md` | Campaign (campaign). The path now holds the Campaign page, the approved Story landing page; no inbound link targeted the manual's anchors, and its ids (`structure`, `pages`, `principles`, `hooks`, `conventions`, `building`) are not reused |
 | `prime/campaign/spine.html` | `prime/campaign/index.html` | Campaign (campaign) |
 | `prime/campaign/spine.html#central-question` | `prime/campaign/index.html#theme` | Campaign (campaign) |
 | `prime/campaign/what-if.html` | `prime/campaign/plot-hooks.html#speculation` (section ids `#hearts`, `#reach-speculation`, `#alternate-readers`, `#crew-disposition`, `#colony-and-pcs`, `#restorers-speculation` kept) | Campaign (campaign) |
@@ -350,7 +350,7 @@ Old path → new path, added by each pull request that moves a page.
 | `stellar-chart/index.html` | `registry/crew-manifest/casey-geim.html#stellar-chart`, the Stellar Chart tab (Keeper's Chart and its password kept); the folder `stellar-chart/` is never reused | Player side condensed (repo-tidy) |
 | `wayfinder-path/index.html` | `registry/crew-manifest/tumak-swan.html#wayfinder-path`, the Wayfinder's Path tab; the folder `wayfinder-path/` is never reused | Player side condensed (repo-tidy) |
 | `scripts/data.js`, `scripts/terms.js`, `scripts/visual.js`, `scripts/survey.js`, `scripts/eye-fit.js`, `scripts/search.js` | `tools/data.js`, `tools/terms.js`, `tools/visual.js`, `tools/survey.js`, `tools/eye-fit.js`, `tools/search.js` (kept for reference; no page loads it); `tools/` is pruned from deploy, and terms.js reads CLAUDE.md, `docs/` and the workflows for the old paths | Player side condensed (repo-tidy) |
-| `docs/SESSION-RUN.md`, `docs/PAGE-GUIDE.md` | `prime/docs/SESSION-RUN.md`, `prime/docs/PAGE-GUIDE.md`; DM process docs sit on the DM side, and `prime/docs/` is pruned from deploy like `prime/working/`; the root folder `docs/` is never reused | Process docs to the DM side (prime-docs) |
+| `prime/docs/SESSION-RUN.md`, `prime/docs/PAGE-GUIDE.md` | `prime/docs/SESSION-RUN.md`, `prime/docs/PAGE-GUIDE.md`; DM process docs sit on the DM side, and `prime/docs/` is pruned from deploy like `prime/working/`; the root folder `docs/` is never reused | Process docs to the DM side (prime-docs) |
 | `assets/fleet-device.svg` | `assets/fleet-emblem.svg`; "device" is retired for a faction's emblem | Emblem rename (repo-tidy) |
 | `hub.html` | retired; the gate and the sidebar logo go to `voyages/bearings/index.html`, the Current Bearing, which is the player home | Navigation (nav-order) |
 | `inventory/entries/mikens-sending-stone.html` | `registry/dossiers/miken.html#mikens-sending-stone`, its Notable Items entry on Miken's dossier; Inventory holds only what the crew owns, and the old path is never reused | Inventory owned (inventory-owned) |
@@ -374,8 +374,8 @@ from deploy.
 | File | Holds |
 |---|---|
 | `CLAUDE.md` | folder map (current and the approved DM structure), the record and the data boundary, commands (`data.js`, `terms.js`), writing rules, naming, working flow, deploy and search, repo rules |
-| `docs/SESSION-RUN.md` | the session run, with CHRONICLE merged in as step 2; sets and statuses named by record file |
-| `docs/PAGE-GUIDE.md` | one page guide for player, DM and FIA pages: page rules, setting voice, DM structure and registers, page anatomy, dossiers, tags, the Voyages page, player pages, FIA voice |
+| `prime/docs/SESSION-RUN.md` | the session run, with CHRONICLE merged in as step 2; sets and statuses named by record file |
+| `prime/docs/PAGE-GUIDE.md` | one page guide for player, DM and FIA pages: page rules, setting voice, DM structure and registers, page anatomy, dossiers, tags, the Voyages page, player pages, FIA voice |
 
 References updated: `CLAUDE.md`, `tools/data.js`, `data/bearing.js`,
 `.github/workflows/check.yml` and `deploy.yml`, `prime/tracker/index.html`,
@@ -441,7 +441,7 @@ writing rules are in BACKLOG.md § Repo and process.
 - Objectives hold what the party knows it must do next (decided, told, or the only reasonable inference). What they fought through is a bullet. Tick done, add new. (SR)
 - `linked` is entered once, on either record; `derive` shows it on both. (SR)
 - Status vocabulary is in-world and fixed per set: crew/factions Active; cast Active · Deceased; places Accessible · Simulated; things Held · Lost; threads Open · Complete. A new value is a question for the DM. (SR)
-- Player render surfaces: new `voyages/voyage-NNN.html` from `voyage-template.html` (At a Glance, Brief Account, Full Account, Recording); previous voyage's next link; `voyages/index.html` row + Overview; `bearings/voyage-NNN.html` from the previous one; `bearings/index.html` = copy of latest; `data/bearing.js`; `data/vocabulary.js` (every new proper noun); each changed record's page (new voyage becomes latest block, old moves to Previous Voyages; stat rows, overview, objectives, Connections); each new record's page from a sibling with `data-entity` set; every register index. (SR) *Bearings rows depend on refactor call 3.*
+- Player render surfaces: new `voyages/voyage-NNN.html` copied from the previous voyage page (At a Glance, Brief Account, Full Account, Recording); previous voyage's next link; `voyages/index.html` row + Overview; `bearings/voyage-NNN.html` from the previous one; `bearings/index.html` = copy of latest; `data/bearing.js`; `data/vocabulary.js` (every new proper noun); each changed record's page (new voyage becomes latest block, old moves to Previous Voyages; stat rows, overview, objectives, Connections); each new record's page from a sibling with `data-entity` set; every register index. (SR) *Bearings rows depend on refactor call 3.*
 - Brief Account and At a Glance are taken from the approved Full Account and add nothing it does not say. (SR)
 - DM render surfaces: `prime/campaign/voyages/index.html` (Actual, Delta, clear its flags, player link, Next session block); `campaign/index.html` if an arc beat closed; `plot-hooks.html` for hooks that moved; `prime/dossiers/*` History, in-world, for anyone who acted; `prime/crew/` only if a PC's mechanics changed. (SR)
 - Check: zero errors before the PR; warnings fixed or named in the PR. Then open the changed pages in a browser once. (SR)
@@ -485,7 +485,7 @@ writing rules are in BACKLOG.md § Repo and process.
 - Voyage entries (planned): What this session can pay · The swap / cast changes · Settled · Open · To run. Played: Briefing, Actual, Delta, using the `voyage-grid` / `voyage-delta` markup. Most recent first; upcoming in a Next session block on top. (PS, WPG)
 - Setting describes what an entity is, currently. No comparative absolutes ("the only known X"); no authorial planning, framing, forward planning or player-facing meta; no option menus (commit to what is true, rewrite if it changes); no "Running the X" sections; no PC roster as illustration of a principle. Current state that implicates PCs and permanent history the campaign created both stay. The one-shot DM test: if a DM running a different campaign in this universe would delete the sentence, it is misplaced. (WPG; this is the new in-world-voice rule with worked examples)
 - Campaign pages reference setting pages, not the reverse (exception: an artifact's custody line). (WPG)
-- Functional headings: declarative, never questions; no enumeration leftovers ("D — The End" → "Failure state"); no stylistic "The" except where it is part of a world-object's name (The Reach, The Hollow, The Bridge). (WPG)
+- Functional headings: declarative, never questions; no enumeration leftovers ("D — The End" → "Failure state"); no stylistic "The" except where it is part of a world-object's name (The Reach, The Bridge). (WPG)
 - Anchors: kebab-case, semantic, brief; part of the public contract; rename only with a reference sweep and `check`. (WPG)
 - Cross-references are relative. External links: `target="_blank" rel="noopener" class="dm-link-external"`. (WPG) Record urls: site-relative, no leading slash (CLAUDE.md).
 - Head template: charset, viewport, `robots noindex,nofollow`, title `[Page] · Caelestis · DM`, `caelestis.css` + `dm.css` (+ `entity.css` on entries), `dm-nav.js` from `prime/scripts/`. (WPG, corrected: WPG's `[base]/scripts/dm-nav.js` paths are wrong; live pages use `../scripts/dm-nav.js`.)

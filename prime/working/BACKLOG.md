@@ -2034,9 +2034,26 @@ Fixes to player-facing pages, including the Fleet Intelligence Archive (`restric
 
 ### spelljammer-nexus/
 
-- **[decide]** Nexus field guide: facts held back from Peoples and Perils of the Drift
-  Peoples and Perils of the Drift are written (2026-10-29), with published 5e Spelljammer and core lore as cadet canon unless a DM page says otherwise (PAGE-GUIDE § 8). A short list of published facts stayed off the pages because the sources disagree or touch a DM thread: the giff's magic resistance (Wildjammer gives it, the official books do not), the sharchinid (follows a ship at spelljamming speed), renegade mind flayers free of an elder brain, and the space clown. Each is in the draft's Open list with the reason. Rule on each: add, keep off, or change.
-  src: prime/working/nexus-field-guide.md
+- **[decide]** Giff magic resistance *(Nexus)*
+  *Wildjammer* gives giff advantage on saves against spells and magic, and says they could not cast until recent decades. The *AAG* giff and the SJA and BAM giff blocks have neither, and Ryeback runs on the SJA block. Left off. Add it to the giff entry, or keep it off?
+  src: nexus-field-guide § Open, 2026-10-29
+
+- **[decide]** Sharchinid *(Nexus)*
+  *Wildjammer*'s ship-hunting shark senses helms through the drift and links to a helm to follow a ship at spelljamming speed. The DM rule is that nothing is met at speed (V007 crossing). Left off.
+  src: nexus-field-guide § Open, 2026-10-29
+
+- **[decide]** Renegade mind flayers *(Nexus)*
+  *Wildjammer* has illithids freed from an elder brain who no longer need brains to live. It sits next to "colonies without a brain" on the § 4 list. Left off.
+  src: nexus-field-guide § Open, 2026-10-29
+
+- **[decide]** Space clown *(Nexus)*
+  A BAM fiend; left off for tone. Add to Boarders if wanted.
+  src: nexus-field-guide § Open, 2026-10-29
+
+- **[decide]** Kindori calves *(Nexus)*
+  No published calf block or calf behaviour. If the crew should learn something about calves before V007, it needs a ruling.
+  src: nexus-field-guide § Open, 2026-10-29
+
 
 - **[decide]** Spectators on H'Catha: what they are bound to, and the vanish rule
   The published spectator is summoned to guard one thing for 101 years and vanishes if that thing is stolen or destroyed before its term ends. Greelob and Orlob guard the meteor by their own choice (SJA), and the diggings plan has them arguing over who guards them. Rule what the two are bound to, and whether the vanish rule is table knowledge. Perils of the Drift leaves the rule off until then.
