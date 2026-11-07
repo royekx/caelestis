@@ -329,21 +329,30 @@ Nothing was dropped outright. These were corrected when the cited file did not m
 This chat has run long; the rest goes to fresh chats, each starting from this
 draft. Rulings 1 to 3 are also written into `working/fia-story.md`.
 
-1. **Prep chat: V007.** caelestis-prep at session scale, from the cleaned
-   pages. Ezra's hook and the sealed letter are built here (ruling 8).
-2. **Part 1 is ruled** except 14b and 25 to 29, which take a line each.
-3. **Build chats: the rest**, one change audit at a time, in this order:
-   Part 3 (the working layer and process docs, so later audits start clean);
-   the FIA story (`fia-story.md` § Promotes to, three pull requests); the
-   remaining Part 2 rows; Part 4.
-4. **Mechanic chat:** the mechanic review of Tarto's stat block (BACKLOG § dossiers/boatswain-tarto.html), the hold, the unthinned
-   template.
-5. **Tumak chat (mechanic):** Homebound and the runes (ruling 12), from the
-   Tumak sweep in the inbox and `crew/tumak.html`.
-6. **Build chat: the DM tools.** BACKLOG § Automation and tracker, "Overhaul
-   the DM tools": the tracker first, then the Voyages board, the hub, the
-   timeline and the overlay. Best after the change audits, so the tools are
-   rebuilt against clean pages.
+Every item below closes before V007 prep. Run them in this order, one
+chat each, each pull request merged before the next starts.
+
+1. **Build chat: Part 3.** The working layer and process docs, so later
+   audits start clean.
+2. **Build chats: the FIA story.** `fia-story.md` § Promotes to, three
+   pull requests. It carries the house mark and personal seal across the
+   Vocath pages (ruling 3).
+3. **Build chat: Act 1 and its arcs** (ruling 11): PAGE-GUIDE § 3, every
+   arc and level line, the By-arc sections, and STAGING § Act 1 and its arcs.
+4. **Build chats: the remaining Part 2 rows**, one change audit each, and
+   the B to D rulings not yet on pages (13, 17 to 34).
+5. **Build chat: Part 4**, the cosmetic list.
+6. **Mechanic chat:** the mechanic review of Tarto's stat block (BACKLOG
+   § dossiers/boatswain-tarto.html), the hold, the unthinned template.
+7. **Tumak chat (mechanic):** Homebound and the runes (ruling 12), from
+   the Tumak sweep in the inbox and `crew/tumak.html`.
+8. **Prep chat: V007.** caelestis-prep at session scale, from the cleaned
+   pages. Ezra's hook, the sealed letter and crossing entry 7 are built here
+   (ruling 8, BACKLOG § campaign/voyages).
+
+Not blocking V007: the thief (14b, open in `fia-story.md`), and the DM
+tools overhaul (BACKLOG § Automation and tracker), best run after the
+change audits so the tools are rebuilt against clean pages.
 
 Delete this draft when every item is closed.
 
