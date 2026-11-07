@@ -2910,6 +2910,10 @@
         {
           "t": "Cairn's reports read perfectly, week after week, and the lane reads all clear.",
           "src": "locations/cairn-station.html"
+        },
+        {
+          "t": "After the raid the handovers stopped for a while, then resumed around the escort routes, which N'ghathrod's taken pass to Vocath through Zhauveth. The escorts watch for transfers between vessels and see none, and on Cairn's clean reports the Fleet let its search for the captives lapse.",
+          "src": "locations/cairn-station.html"
         }
       ]
     },
