@@ -180,6 +180,12 @@ state what is. Rules: `prime/working/README.md`.
   touches; rewrite each page that holds one, whole, against the ruling; then
   search again for the old version's phrasing. One pull request, merged
   before the next job reads those pages. Then delete the draft.
+- **A process rule lives in one place.** CLAUDE.md, `prime/working/README.md`
+  and `prime/docs/` hold the rules for how work is done; the Caelestis skills
+  and the project instructions point to them instead of restating them. When
+  a process rule changes, run the change audit on the process layer: search
+  those files, every caelestis-* skill and the project instructions for the
+  old rule and every restatement of it, and fix each one in the same job.
 - **Before reading the repo on a subject, check the open pull requests.**
   `gh api "repos/royekx/caelestis/pulls?state=open" --jq '.[].head.ref'`,
   then `git diff --stat origin/main...origin/<branch>` for each. If one
