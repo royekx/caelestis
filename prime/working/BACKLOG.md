@@ -41,11 +41,11 @@ staging once Korey has read and accepted them.
 | Artifacts and vessels | artifacts/, vessels/ | 9 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 4 | 18 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 24 |
-| Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
+| Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 3 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 14 | 6 | 0 | 1 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 13 | 13 | 2 | 0 | 8 |
-| **Total** |  | **139** | **168** | **51** | **2** | **63** |
+| **Total** |  | **139** | **168** | **52** | **2** | **63** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2140,6 +2140,10 @@ archived in Drive, not deleted. What stays open here is below.
   src: automation § Open; docs/SESSION-RUN.md step 7
 
 ### DM views
+
+- **[fix]** Overhaul the DM tools *(build)*
+  The DM tools exist to help the DM process: session prep and keeping track. Most are stale. Audit each against the current record, the current process (prep, story logic, table readiness, change audit) and the current campaign shape (Acts and arcs), and decide for each: rebuild, merge or retire. Start with the tracker (`prime/tracker/`), then the Voyages board (`prime/campaign/voyages/`), the hub (`prime/hub.html`), the timeline and its Connections view (`prime/timeline/`, `prime/data/connections.json`), and the overlay's urgency and next-beat fields (`prime/data/overlay.json`). The items below (the Campaign Board and Chronicle view, the prep brief, the weather of reality) are part of this pass.
+  src: Korey, 2026-11-07
 
 - **[later]** The Campaign Board and a Chronicle view
   The Campaign Board is an arc timeline with a "where are we" marker and parallel tracks; a Chronicle view was also planned. `prime/timeline/` exists (timeline.json with lanes and clocks); neither view is built under those names, and the Board exists only as claude.ai artifacts. Korey's latest steer: the timeline view should be a linear event timeline, not a list of bearings (bearings/timeline.html stays an unlinked draft), and for the cosmic timeline he is open to formats beyond the chapter-flow layout. Options: treat `prime/timeline/` as the Campaign Board and extend it with planned-against-actual per voyage; or build the Board and Chronicle as separate pages. See the New pages section, NEW: Campaign board.
