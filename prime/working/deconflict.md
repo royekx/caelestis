@@ -7,7 +7,7 @@ in that row. Paths are under `prime/` unless they start with `data/`,
 `restricted/` or `prime/working/` (written `working/`).
 
 **Counts.** Part 1, Korey decides: 24 · Part 2, decided and waiting: 9 rows ·
-Part 3, working layer cleanup: 47 rows · Part 4, cosmetic: 12.
+Part 3, working layer cleanup: 47 rows · Part 4, cosmetic: 11.
 
 **Summary.**
 - The ten Part 1 questions that touch Voyage 7 (§ A) and the V007 rows of Part 2 are on the pages.
@@ -261,7 +261,6 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 
 ## Part 4: Cosmetic
 
-- **V007** `dossiers/rindle-gearloft.html` decide (own dock or Sea Dock worker) vs `locations/caelestis.html`, `factions/fleet.html`, `crew/gregory.html` stating "works here"; the record says "a dock near the Sea Dock".
 - `chart/galaxy.js` comment on Nowhere ("destroyed by its own Zenith") vs cosmology (a god forced its way on).
 - `factions/deities.html` "Asmodeus likely knows" vs `dossiers/vecna.html` "knows": pick one.
 - `factions/watchers.html` "The rise in Monoliths … is the Axiom strain" (the rise causes the strain).
@@ -298,30 +297,27 @@ Every item below closes before V007 prep. Chats are grouped by area: the
 items in one chat share pages, so each page is rewritten once. Each pull
 request merges before any later work reads its pages.
 
-1. **Build: the working layer.** Done except BACKLOG 3b to 3d (on their own
-   pull request), the Lantern tracker fix closing once that merges, and
-   Rindle's dock (Part 4, waits on Korey).
-2. **Build: the story spine.** Ruling 11 (Acts and arcs, with 2.5's arc
+1. **Build: the story spine.** Ruling 11 (Acts and arcs, with 2.5's arc
    lines), 2.8, 2.9, 2.10, 2.23, and rulings 13, 25 and 26. Shared pages:
    `campaign/index.html`, `opposition/`, `principles.html`, `timeline.json`,
    `chart/`. Part 3 rows that wait on 11 or 25 (`campaign-middle.md`,
    `tharizdun.md`) land here.
-3. **Build: the FIA story.** The pre-fixes in 3e, then `fia-story.md`
+2. **Build: the FIA story.** The pre-fixes in 3e, then `fia-story.md`
    § Promotes to in three pull requests, with 2.11, 2.14, 2.20's Vth'orama
    lines, 2.21, rulings 17 and 18, the house mark and personal seal across
    the Vocath pages, and the BACKLOG items moot after it.
-4. **Build: the cosmos.** Rulings 27 to 34, 2.15, the cosmology and Fonains
+3. **Build: the cosmos.** Rulings 27 to 34, 2.15, the cosmology and Fonains
    lines of 2.20, `divine-rules.md` (promote the worship section, rule "Reach
    debris and worlds", delete), and Part 4's cosmology, chart and glossary items.
-5. **Mechanic: Tarto, the hold, the unthinned, and Homebound.** Tarto's
+4. **Mechanic: Tarto, the hold, the unthinned, and Homebound.** Tarto's
    mechanic review (BACKLOG § dossiers/boatswain-tarto.html), the hold, the
    unthinned template, then Homebound and the runes (ruling 12) from the
    Tumak sweep and `crew/tumak.html`. Split Homebound into its own chat if
    it runs long.
-6. **Build: the DM tools.** BACKLOG § Automation and tracker, "Overhaul
+5. **Build: the DM tools.** BACKLOG § Automation and tracker, "Overhaul
    the DM tools": the tracker first, then the Voyages board, the hub, the
    timeline and the overlay, rebuilt against the cleaned pages.
-7. **Prep: V007.** caelestis-prep at session scale, from the cleaned pages
+6. **Prep: V007.** caelestis-prep at session scale, from the cleaned pages
    and the rebuilt tools. Ezra's hook, the sealed letter and crossing entry
    7 are built here (ruling 8, BACKLOG § campaign/voyages).
 

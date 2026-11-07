@@ -36,16 +36,16 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 0 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 4 | 2 | 0 | 3 |
-| Dossiers | dossiers/ | 14 | 17 | 0 | 0 | 1 |
+| Dossiers | dossiers/ | 13 | 17 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 18 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 2 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 8 | 4 | 11 | 0 | 19 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
-| Player pages | restricted/ and other player pages | 3 | 1 | 0 | 0 | 0 |
+| Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 3 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 10 | 13 | 1 | 0 | 2 |
-| **Total** |  | **127** | **160** | **31** | **1** | **48** |
+| **Total** |  | **130** | **160** | **31** | **1** | **48** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1082,14 +1082,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[later]** N'ghathrod's stat block
   One flat, high-powered block at the ceiling, never scaled down; the crew runs on sight (Otohan Thull style). It needs an exit condition tied to his objective, non-lethal takedowns, and enough action economy for six PCs. The CRC's Withdrawal Threshold and Legendary Resistance are the precedents. The five lieutenants' blocks, the enna (CR 12 to 16, lopsided), are unbuilt too.
   src: dossiers/nghathrod.html; section 5 (2026-10-28); memory-canon § Deferred; chat-cosmic § Open
-
----
-
-### dossiers/rindle-gearloft.html
-
-- **[decide]** Dock master or dock worker *(prep)*
-  The player record calls Rindle a dock master who runs a dock near the Sea Dock; the dossier's role line says "Sea Dock worker". Align the dossier to the record, or confirm the difference is deliberate (what the crew believes vs what he is).
-  src: data/npcs.json (Rindle Gearloft); dossiers/rindle-gearloft.html
 
 ---
 
