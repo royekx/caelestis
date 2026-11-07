@@ -31,7 +31,7 @@ staging once Korey has read and accepted them.
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 13 | 14 | 4 | 0 | 2 |
-| Locations | locations/ (Fonains stays in its own section) | 18 | 23 | 0 | 0 | 1 |
+| Locations | locations/ (Fonains stays in its own section) | 18 | 24 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 13 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 11 | 1 | 0 | 0 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **126** | **161** | **25** | **1** | **47** |
+| **Total** |  | **126** | **162** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -462,6 +462,10 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
 - **[decide]** Who tends bar on the cantina *(prep)*
   "Odds" is retired. Options: Glim the plasmoid, of a cantina called the Long Pour (unreviewed Crossing Companion proposal); or leave the bartender unnamed.
   src: astral § Open; memory-canon (campaign-canon, Ryeback absorbs Odds); chat-crew-boogie-casey-sol
+
+- **[later]** Boogie's cantina
+  Boogie worked aboard a travelling cantina, a bar on a circuit of the lanes that trades as it goes, when Vocath's crates came through its hold (Korey, 2026-11-07). Whether it is the cantina in the prep ring or another of its kind is not set; if the same, the crew walks into Boogie's old workplace. Touches crew/boogie.html, locations/cantina.html, artifacts/fonains-shard.html, factions/vocath-operation.html.
+  src: Korey, 2026-11-07
 
 - **[later]** The cantina: a place or a ship
   It is a Locations entry for now (Korey 2026-10-28). If it is a ship, it moves to Vessels. Its name, owner and circuit are under the names decide on the register.
