@@ -282,9 +282,9 @@ request merges before any later work reads its pages.
    and #169 (people and threads); `fia-story.md` deleted. Rulings of that
    chat: "bearers" and "unthinned" retired (the malformed; the true-formed
    are the whole illithids' own name, which N'ghathrod rejects); the raid's pirates
-   sail two ships under crossbones, the main one known by her hull, and
-   Vocath's overseer wore his seal for the handover (FR-016 draws it from
-   the survivors); Boogie's
+   sail two ships under crossbones, the one that stayed captained by
+   Saltjaw, and Vocath's overseer wore his seal as a coin for the handover
+   (FR-016 renders it); Boogie's
    FIA line is a plain intake note in LG-003; Hollis Post stays; Verrow is Strake's quartermaster;
    the Temple of Moloch broke off with Thessalar's laboratory.
 3. **Mechanic: Tarto, the hold, the malformed, and Homebound.** Tarto's

@@ -2548,7 +2548,7 @@
           "src": "dossiers/vocath.html"
         },
         {
-          "t": "His personal seal is a balance scale, coins against a crate; his house mark is public.",
+          "t": "His house mark, on his honest trade, is a balance scale, coins against a crate. His personal seal, registered nowhere, is a coin showing two hands, the upper letting three coins fall into the lower.",
           "src": "dossiers/vocath.html"
         },
         {
@@ -2614,15 +2614,15 @@
       "summary": "Vocath's public house mark and his unregistered personal seal.",
       "facts": [
         {
-          "t": "His house mark is the public trade mark of the family business, on the Fleet's stores contract for Cairn's lane.",
+          "t": "His house mark is a balance scale with coins on one pan and a crate on the other: the public trade mark of the family business, on the Fleet's stores contract for Cairn's lane and on his honest trade. It never appears on his darker dealings.",
           "src": "dossiers/vocath.html"
         },
         {
-          "t": "His personal seal is a balance scale with coins on one pan and a crate on the other; it is registered nowhere.",
+          "t": "His personal seal is a coin. On its face two slender, long-fingered hands, one above the other: the upper lets three coins fall into the open palm of the lower. It is registered nowhere.",
           "src": "dossiers/vocath.html"
         },
         {
-          "t": "The seal is on the sabotage rod, the Sky Dock crate, the small crate Boogie opened and the crates aboard his hired pirates' ships. His overseer wears it struck on a brass medallion on a chain at a handover, to show the pirates whom he speaks for; Crow's survivors saw it on him in the raid (FR-016). It is on the neogi crate too, unchecked.",
+          "t": "The seal is on the sabotage rod, the Sky Dock crate, the small crates his Fonains shards travel in, among them the one Boogie opened, and the crates aboard his hired pirates' ships. His overseer wears it as a large coin on a chain at a handover, so the pirates know whom he speaks for, and takes it off after; Crow's survivors saw it on him in the raid (FR-016). It is on the neogi crate too, unchecked.",
           "src": "dossiers/vocath.html"
         },
         {
@@ -2767,7 +2767,7 @@
       "summary": "About a year before now, near Cairn Station: Crow broke up a handover of captives, recovered them, and lost Clint and his boarding party to a color pool.",
       "facts": [
         {
-          "t": "About a year before now, on its way to look in on Cairn Station, Bellwether Crow came on a transfer of people under guard from two pirate ships in Vocath's hire to a colony courier. Crow chose to intervene, and the pirates ran up their crossbones colors and fought. The two pirate ships were of comparable size: Saltjaw, known by the name painted on her hull, and the overseer's ship, whose name is not recorded. Vocath's overseer had put on a brass medallion struck with his personal seal for the handover.",
+          "t": "About a year before now, on its way to look in on Cairn Station, Bellwether Crow came on a transfer of people under guard from two pirate ships in Vocath's hire to a colony courier. Crow chose to intervene, and the pirates ran up their crossbones colors and fought. The two pirate ships were of comparable size: the ship of Saltjaw, a pirate captain, which carries no name on her hull, and the overseer's ship; neither ship's name is recorded. Vocath's overseer had put on his personal seal, a large coin on a chain, for the handover.",
           "src": "vessels/bellwether-crow.html"
         },
         {
@@ -2775,15 +2775,15 @@
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "With the senior officers killed, injured or gone with Clint, Joffrey took charge on Crow's side, led the recovery of the captives and got the rest of the crew out. With the overseer gone and half the pirates with him, Saltjaw had little left to fight for, and Crow drove her off. She is still free. The Fleet recorded her name from the survivors in WM-002 and hunts her with escorts under SA-005.",
+          "t": "With the senior officers killed, injured or gone with Clint, Joffrey took charge on Crow's side, led the recovery of the captives and got the rest of the crew out. With the overseer gone and half the pirates with him, Saltjaw had little left to fight for, and Crow drove her ship off. Saltjaw is alive and free. The Fleet recorded her name from the captives in WM-002 and hunts her ship, from the captives' and survivors' descriptions, with escorts under SA-005.",
           "src": "restricted/wm-002.html"
         },
         {
-          "t": "Crow recovered most or all of the captives and took them home. They had been held below and hooded, and can describe only the pirates, Saltjaw and the overseer's medallion. The courier pulled away with few or none of them and carried word to Zhauveth, and the colony lost that shipment.",
+          "t": "Crow recovered most or all of the captives and took them home. They had been held below and hooded, and can describe only the pirates and the overseer's coin; they heard the pirates use the name Saltjaw. The courier pulled away with few or none of them and carried word to Zhauveth, and the colony lost that shipment.",
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "FR-016 draws the overseer's seal from the survivors' accounts. It is Vocath's personal seal, registered nowhere, so the Fleet's registry returns no match, and the Fleet hunts Saltjaw rather than the seal.",
+          "t": "FR-016 renders the overseer's seal exactly, from a survivor's memory drawn out by divination at debrief. It is Vocath's personal seal, registered nowhere, so the Fleet's registry returns no match, and the Fleet hunts Saltjaw's ship rather than the seal.",
           "src": "restricted/fr-016.html"
         },
         {
@@ -2936,7 +2936,7 @@
           "src": "locations/cairn-station.html"
         },
         {
-          "t": "Vocath's house holds the Fleet contract for stores on Cairn's lane, under its house mark.",
+          "t": "Vocath's house holds the Fleet contract for stores on Cairn's lane, under its house mark, the balance scale.",
           "src": "locations/cairn-station.html"
         },
         {

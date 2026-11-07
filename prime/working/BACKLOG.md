@@ -34,8 +34,8 @@ staging once Korey has read and accepted them.
 | Locations | locations/ (Fonains stays in its own section) | 18 | 23 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 13 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
-| Factions | factions/ | 12 | 10 | 1 | 0 | 0 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 7 | 1 | 0 | 3 |
+| Factions | factions/ | 12 | 11 | 1 | 0 | 0 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 6 | 1 | 0 | 3 |
 | Dossiers | dossiers/ | 12 | 18 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 18 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
@@ -590,6 +590,10 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### Every faction page
 
+- **[later]** Every mark and seal through one image process
+  Review every mark, seal and emblem in the repo (the colony's eye in a wheel, the Fleet and Watchers emblems, Vocath's house mark, the Seekers' chapters, crests on vessels and the rest) and take each through the process Vocath's personal seal went through: settle what it is and who uses it, then generate it in one shared engraved style so they read as one world. Vocath's personal seal (assets/fia-fr016-seal.webp) is the reference. Its own chat.
+  src: Korey, 2026-11-07
+
 - **[decide]** Tymora and the Fortuned's ritual
   factions/aethris.html (What's hidden) says Tymora likely would not want the Fortuned's Zenith ritual finished. The line comes from older notes, not from the 2026-10-27 rulings. Keep or cut.
   src: Factions review, 2026-10-28
@@ -825,10 +829,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 ---
 
 ### campaign/voyages/index.html
-
-- **[later]** The look of Vocath's house mark *(prep)*
-  The balance scale is his personal seal. His house mark, the public trade mark on the Fleet's stores contract, has no look yet, and the V007 cargo carries it. Set it in V007 prep.
-  src: FIA audit, 2026-11-07
 
 - **[fix]** A board table spills past its panel
   On the Voyages board one of the tracker tables overflows its container at the side. Contain it (wrap or scroll inside the panel) at desktop and phone widths.

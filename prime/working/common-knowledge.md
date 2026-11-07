@@ -235,7 +235,7 @@ No common knowledge. A landless beholder of H'Catha, met dead.
 | Fact | Source | Confidence |
 |---|---|---|
 | A mercane merchant of long standing in the trade around Realmspace, head of a trading house. | dossier/vocath | Hold: known in the trade, and the crew has only his name. |
-| His personal seal is a balance scale, coins on one pan and a crate on the other. His house mark, on the Fleet's stores contract, is public. | dossier/vocath | Hold the seal: the record calls it a word on the rod; this is a reveal. |
+| His personal seal is a coin: two slender, long-fingered hands, the upper letting three coins fall into the open palm of the lower. His house mark, a balance scale with coins on one pan and a crate on the other, is public, on the Fleet's stores contract and his honest trade. | dossier/vocath | Hold the seal: the record calls it a word on the rod; this is a reveal. |
 
 ### Winston Ryeback
 Gender: Male (already set).
