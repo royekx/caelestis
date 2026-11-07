@@ -173,6 +173,18 @@ proper noun. Settled:
 `prime/working/`. Deliberation lives in drafts and BACKLOG; STAGING and pages
 state what is. Rules: `prime/working/README.md`.
 
+- **A ruling is done when every page it touches says it.** A draft, the
+  inbox or STAGING is where a ruling waits, not where it lives. When a
+  subject settles, run a change audit (the caelestis-change-audit skill): search `prime/`, `restricted/`, `data/`,
+  the player pages and `prime/data/` for every name, id and alias it
+  touches; rewrite each page that holds one, whole, against the ruling; then
+  search again for the old version's phrasing. One pull request, merged
+  before the next job reads those pages. Then delete the draft.
+- **Before reading the repo on a subject, check the open pull requests.**
+  `gh api "repos/royekx/caelestis/pulls?state=open" --jq '.[].head.ref'`,
+  then `git diff --stat origin/main...origin/<branch>` for each. If one
+  changes that subject, read its branch, not `main`, and say so.
+
 ## Deploy and search
 
 - Deploy (`.github/workflows/deploy.yml`) runs on push to `main`: builds three

@@ -35,17 +35,17 @@ staging once Korey has read and accepted them.
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 2 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 19 | 3 | 3 | 0 | 1 |
-| Dossiers | dossiers/ | 20 | 16 | 0 | 0 | 1 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 19 | 4 | 3 | 0 | 2 |
+| Dossiers | dossiers/ | 19 | 16 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 9 | 7 | 3 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 4 | 18 | 0 | 20 |
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 24 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 14 | 3 | 0 | 1 |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 15 | 5 | 0 | 1 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 13 | 13 | 2 | 0 | 8 |
-| **Total** |  | **139** | **167** | **48** | **2** | **62** |
+| **Total** |  | **138** | **169** | **50** | **2** | **63** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -138,6 +138,7 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - `data/npcs.json` (Saerthe Abizjn) and the V006 page say "a Watcher cadet"; the settled term for a Watcher trainee is a Glimpse. The crew has not been told the word, so the record keeps Saerthe's phrasing, and `terms.json` allows it on voyage-006. Change the record if Korey wants Saerthe to say "Glimpse".
 - `data/locations.json` overviews open "The Flighty Foundling is…" and "The Moonraider was…", and the quest is named "The Tyrant Ship and the H'Catha Meteor"; ship names carry no article. `terms.json` allows these record strings on the player pages. Rewrite them in a record edit if Korey agrees, then drop the allow entries.
 - `data/npcs.json` (Winston Ryeback, Voyage 6) says he "was told the beholder had been taken care of, and took it to mean the crew had killed it"; the ruling is that Tumak told him outright that the crew killed it (dossiers/winston-ryeback.html).
+- The sending stone reads too loud on the player side: the V006 summaries and narrative, Miken's record (a Notable Item, "Miken's Sending Stone", with its own anchor), the bearings, the timeline, and the V006 Next Session Pressure ("Decide what to do about Miken's sending stone"). Sending stones are ordinary. What caught Bartholomew's Perception was a hushed conversation in the middle of the night. Recast the lines around the conversation, and keep the stone as the object he was holding, if Korey agrees.
 
 ## Still coming in
 
@@ -1097,15 +1098,8 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ### dossiers/ezra.html
 
 - **[decide]** Ezra's own hook *(prep)*
-  Ezra must arrive with a hook others can latch onto. Options:
-  (a) The eye-in-a-wheel sketch. The eye in a wheel is now the Vth'orama's mark (Korey, 2026-10-28). Crossing-table entries 4 and 8 now carry Vocath's house mark, the balance scale, so the old tie to them no longer holds.
-  (b) The sealed letter: "Watch one thing until it changes."
-  src: chat-voyage-6-7-planning § Open; memory-canon open-decisions (Voyage 007 intent)
-
-- **[decide]** Ezra's sketch of the Vth'orama's mark *(before V007)*
-  Ezra's hook on dossiers/ezra.html is the eye-in-a-wheel sketch, and the eye in a wheel is now the Vth'orama's mark. Korey wants it worked out before Voyage 007. Set what the sketch is (drawn by Ezra, copied from something, or handed to him), where he saw the mark, and what the Order of the All-Father knows of it. The Watchers flag some Seekers chapters' work without knowing who stands behind it (factions/order.html), so the Order may hold the mark without knowing it is the colony's.
-  Touches: dossiers/ezra.html, factions/order.html, campaign/voyages/index.html (V007).
-  src: Korey, 2026-10-28 (Ezra's hook ruling)
+  Ezra must arrive with a hook others can latch onto. The eye-in-a-wheel sketch is not his hook: Ezra has nothing to do with the Vth'orama's mark for now (Korey, 2026-11-06). The sealed letter ("Watch one thing until it changes") stays an option. Come back to it later. Touches: dossiers/ezra.html (its hook line still names the sketch).
+  src: chat-voyage-6-7-planning § Open; Korey, 2026-11-06
 
 - **[later]** Emporia and Tharizdun
   Does Emporia read as a Zenith with Tharizdun behind it? Options: yes (a Tharizdun-touched Zenith); no (local trouble only); leave it to the other table.
@@ -2043,7 +2037,17 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   - A delving culture of ruin exploration exists, like post-Aeor in Critical Role.
   src: chat-cosmic § Cosmos texture; memory-canon
 
+### opposition/vthorama.html: if Vocath falls
+
+- **[later]** How the colony pivots without Vocath
+  Vocath's line is the colony's supply of captives, and Zhauveth's deal with him is its reach into Caelestis. If the crew takes Vocath down, the colony loses both. Decide its backups: another supplier, raiding with its own couriers, more takings, a move of Vth'oramu. Taking Vocath down is hard; this waits until the crew goes down that path. Touches: opposition/vthorama.html, dossiers/vocath.html, dossiers/zhauveth.html, factions/vocath-operation.html.
+  src: Korey, 2026-11-06
+
 ### principles.html
+
+- **[add]** The DM has the same tools as the players
+  This is still Dungeons & Dragons in a sci-fi skin. Anything a player can do, the world can do: spells, charms, mass suggestion, mind blank, a familiar on watch. When a plan in the world needs people silent, loyal or unaware, reach for the spell that would do it before inventing a reason they just did not notice. The taken carry the effect of mind blank; Cairn Station's crew are held by an illithid whose hold grows with nearness and time. Using these is not cheating. Let the spectacle show, too: a held station should feel uncanny, not merely quiet.
+  src: Korey, 2026-11-06
 
 - **[add]** Asking for a roll means something is there
   When the players are interested in something and the DM calls for a roll, there is something to find, whatever the result. The roll sets how much they get and how fast, not whether they get anything. A low roll shows that something is there: two people talking in hushed tones, words out of earshot. A high roll gives more at once: twenty gold changing hands, and a look around to check no one saw. From there, getting more is the players' choice, and it becomes a run of hurdles (sneak closer, talk to them, a Persuasion check), each with its own consequences. Joffrey is the example: an improvised character the players suspected, who became a piece they are invested in.
@@ -2169,6 +2173,18 @@ archived in Drive, not deleted. What stays open here is below.
   answered: inbox/chat-automation.md § Voyage 5 runbook, Method (Settled: "Earlier voyages keep 'autognome' as history"). PR #61 asked "Say if you want them swept" and PR #62 repeated the default; Korey merged both without asking for a sweep.
 
 # Repo and process
+
+- **[later]** Skills by DM practice, not by campaign
+  The caelestis-* skills (story logic, table readiness, prep, mechanic review, change audit) are Korey's DM practice, not Caelestis's. Before a second campaign uses them, split each into the method, named for the practice and shared across campaigns, and the campaign's specifics (paths, anchors such as Fonains-first, voice, check commands), kept in that campaign's CLAUDE.md or one campaign reference the skills read. Repo setup and voice stay per campaign.
+  src: Korey, 2026-11-06
+
+- **[fix]** Move Realmspace on the chart *(build)*
+  Realmspace moves to midway along arm 0 (about t = 1.65; now 2.1) in `prime/chart/galaxy.js` and `prime/chart/index.html`. Cairn Station goes on a lane outward along the arm; Strake on its own lane nearer home, off to the side. Virenspace and Aethris move with Realmspace. Rerun `tools/eye-fit.js`, check the eye, and swap any mark that no longer lands for a nearer system on the arm. Rewrite the perimeter-watch text on the chart and the Realmspace page. Full placement: `fia-story.md` § Cairn Station.
+  src: Korey, 2026-11-06
+
+- **[fix]** Ripple audit
+  Rulings were edited into one page in place, and the pages that leaned on the old version were left behind. Examples found 2026-11-06: Miken's DM dossier says the beacon is "the whole of the sabotage" after he was ruled to have placed the rod; the Ezra items still tied his hook to the Vth'orama's mark after it was dropped; the chart's perimeter-watch text still has Cairn silent for a year and the *Crow* turned back. Walk the DM pages for claims that contradict later rulings in STAGING, the inbox and the drafts, and list each with the page it lands on.
+  src: Korey, 2026-11-06
 
 - **[later]** Redefine the inbox
   Chat sweeps are temporary working material, used in chat to clear chats for archiving; they need not persist in the repo. Decide what `prime/working/inbox/` is for (raw dumps only, or nothing kept once ruled), and whether finished sweeps are deleted or kept as history.
