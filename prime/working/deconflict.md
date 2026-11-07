@@ -66,46 +66,119 @@ change audit.
 10. **Tumak's runes.** The Fleet knows nothing of Tumak's runes. The line goes
     from the Fleet roster.
 
-### B. Campaign structure
+### B to D: ruled 2026-11-07
 
-| # | Question | Options and sources | Lean, and why |
-|---|---|---|---|
-| 11 | Act or Arc, and how arcs are numbered | (a) `working/STAGING.md` (2026-11-02): "Act 1 holds several arcs: Arc 1 is Orientation, Arc 2 is H'Catha, Arc 3 is Graduation"; Act 2 levels 6 to 10 or 11; numbering across Acts "still open". (b) BACKLOG fix "'Arc', never 'Act'" (answered, l.876, and l.87); `working/terms.json` retires `\bAct (1|2|3|4|I|II|III|IV)\b`; PAGE-GUIDE § 3 `#arc-1`–`#arc-4`; `campaign/index.html` § Levels (Arc 1 1–4 … Arc 4 15 on), "Arc 2: Driftwardens in the Field"; `opposition/vecna.html` and `opposition/vthorama.html` § By arc; `factions/vthorama.html` § Their arc; `factions/runekeepers.html` "about level 12, early in Arc 3"; `factions/fleet.html` and `dossiers/haymond-rolt.html` "Arc 2"; STAGING's own "toward the end of Arc 4"; `working/campaign-middle.md`. BACKLOG decide "Arc 2" (l.2310) | Korey's newest wording is (a), so the retired-term rule changes: retire the old "Arc 2–4 = campaign quarters" sense and keep Acts. Then update `terms.json`, PAGE-GUIDE § 3, the answered fix, and every page above in one change audit. Promoting STAGING as written fails `terms.js` today |
-| 12 | Homebound: does the Heart take Tumak home? | (a) `rules/index.html` "Homebound is a Wayfind to the Heart", "Homebound is the Becoming"; `crew/tumak.html` "The arc resolves at Homebound … he Wayfinds home"; `dossiers/the-runekeeper.html`. (b) `working/inbox/chat-crew-tumak-gregory-bartholomew.md` turn 336: "The Heart taking Tumak home is a disservice to the player"; Tumak weaves the Anchors to protect home. BACKLOG decide "Homebound" (l.2342); Runes 17–19 adds and the early-home door decide depend on it | (b) is Korey's latest word; the shape of the Anchors is still open. Rule (b), then park the dependent rune adds until the Anchors are set |
-| 13 | How much of the station is the Academy? | (a) `dossiers/mirt.html`: "roughly a fifth of it". (b) BACKLOG decide "The station's proportions": memory gives a fifth, the Corps three-quarters, a secret sliver; "Confirm before the page carries the numbers"; `locations/caelestis.html` Still to decide | Confirm the memory numbers, or cut "roughly a fifth" from Mirt |
+**Campaign structure**
 
-### C. N'ghathrod, Vocath and the FIA story
+11. **Acts and arcs.** The campaign runs in Acts. An Act holds several arcs.
+    Act 1's arcs are Orientation, H'Catha and Graduation; Act 2 runs at
+    levels 6 to 10 or 11. Arcs are names for organizing the timeline and the
+    bearings, and they can form in retrospect: when the crew dives into
+    something, the arc is named afterward. The retired "Act" term in
+    `working/terms.json` goes; the old sense of "Arc 2 to 4" as quarters of
+    the campaign is what retires. PAGE-GUIDE § 3 and every arc and level line
+    change in one change audit.
+12. **Homebound.** Homebound opens when Tumak holds every rune. On the way,
+    his work with the Wayfinding marks and the sanctuaries changes: he updates
+    the marks actively. He completes it near the end of his levels. How
+    Homebound then works is not set, and gets its own chat. At the table now:
+    one full rune, which gives the immediate Wayfind. The pages saying
+    "Homebound is a Wayfind to the Heart" wait for that chat.
+13. **The station.** Caelestis holds the Academy and the Caelestis HQ, which
+    oversees the sector; the sector is the whole galactic arm, with other HQs
+    and waystations along it. The old split (the Academy a fifth, the Corps
+    three-quarters, a secret sliver) goes, and so does "roughly a fifth" on
+    Mirt's page.
 
-| # | Question | Options and sources | Lean, and why |
-|---|---|---|---|
-| 14 | Who are the Academy thefts for? | (a) Vocath: `factions/vocath-operation.html` "The thefts at Caelestis, the sabotage plates, the leverage on Miken … are Vocath's work"; `opposition/vthorama.html`; STAGING § The Academy thefts (small things only). (b) A.T.L.A.S.: `artifacts/atlas.html` "is what the Academy thefts are really after"; `locations/caelestis.html` "noise over that one objective". (c) `working/fia-story.md` l.326-327: Joffrey finds A.T.L.A.S., "N'ghathrod wants residue, and the thefts begin" | Vocath's crew does the stealing for his grudge; Joffrey uses the noise to map the Brig. Say both, and drop "the thefts begin" from fia-story |
-| 15 | Joffrey's timeline | `dossiers/sor-kur.html` "building a route … for a year"; `dossiers/joffrey.html`, `locations/caelestis.html` "finished converting only recently"; fia-story l.322-327: turns "over about a year", then searches; record: burglaries already spreading at V001 (`data/sessions.json`) | Let the directive's search run while he turns, and fix Sor'Kur to match. As written, a year of turning followed by a search leaves no time before the thefts |
-| 16 | The Sky Dock exchange | fia-story l.34-36: "The cadets saw him make a suspicious exchange at the Sky Dock and told Mirt". Record: `data/quests.json` (Orientation) "saw a dock officer take a bribe" in V001; `data/npcs.json` Joffrey V003 (Tumak told Mirt). `dossiers/jeffrey.html`: Jeffrey is the "bribed Sky Dock hand" | Decide who took the bribe and who paid. If Jeffrey took it, fia-story's line becomes "the cadets told Mirt about the bribe, and Mirt pointed them at Joffrey" |
-| 17 | N'ghathrod's long life: the experiment or the tithe? | `working/STAGING.md` § N'ghathrod l.53 (2026-10-27): the experiments, "using a residue piece", meant "All six gained a greatly extended lifespan"; l.61 (2026-10-26): "N'ghathrod's long life comes from his taken … it extends his life". `artifacts/rod-of-seven-parts.html`: "long life comes from the tithe of his taken, not from the piece" | The experiment extended all six; the tithe extends N'ghathrod further. Then the rod page's "not from the piece" becomes "not only from the piece" |
-| 18 | Can a tadpole be removed? | (a) `factions/vthorama.html` § The taking: "Removing the tadpole frees only someone who knows what was done and objects to it". (b) `rules/index.html`: "There is no release but N'ghathrod's death" | Korey's call: (a) gives the crew a rescue path at the table; (b) keeps the taking absolute. Cross-cutting 13 covers his death only |
-| 19 | How many directives has Vecna given N'ghathrod? | `opposition/vecna.html`: "Only one instruction has ever reached him" (the Monolith line) and "N'ghathrod goes where he is told"; STAGING § two plans: "he stops following the list"; `dossiers/nghathrod.html`, `dossiers/vecna.html`: "a whisper … told him a dreadnought was the best way"; fia-story l.293-295: "perhaps a whisper from Vecna" about A.T.L.A.S. | Whispers are suggestions; the list of worlds is the standing direction; the Monolith line is the one explicit instruction. Spell it out once on `opposition/vecna.html` and drop "perhaps" from fia-story |
-| 20 | What does N'ghathrod believe the voice is? | `opposition/vthorama.html` "He believes he answers to an elder brain"; `dossiers/nghathrod.html` "he stopped asking whether the voice he follows is his elder brain"; fia-story l.68: he believes his brain "dead, or beyond reach", l.85: the colony believes it answers to an elder brain "through him"; `factions/seekers.html`, `glossary/index.html` | The dossier: he took the voice for his brain grown greater and stopped asking. The colony believes what he tells them. fia-story says which, since this is Vecna's hold on him |
-| 21 | The first unthinned, and N'ghathrod's tadpoles | fia-story l.107-109: made "from bodies he supplied and N'ghathrod's own tadpoles"; l.115-118: the experiment made his tadpoles "copies of him" | State the order: the three were made before the experiment changed his spawn |
-| 22 | Where N'ghathrod's elder brain lay | `working/STAGING.md` (2026-11-04): "close to the wreck that carried Tharizdun's temple". `locations/fonains.html` and `vessels/thessalars-craft.html`: the temple piece "came down somewhere other than the Barrier Peaks" | Fonains (Fonains canon wins on Fonains): near the main wreck, apart from the temple piece. Reword STAGING |
-| 23 | How did Fonains shards reach Boogie in time? | fia-story l.311-317: the raiders send word, "Vocath sends ships the long way", trade starts, shards come home. `locations/fonains.html`: the Monolith rose and broke "a few months ago". BACKLOG decide "How the Monolith fragments reached Boogie in time"; `dossiers/clint.html`, `crew/boogie.html` Still to decide | Shorten "the long way" or give Vocath a faster route. fia-story should list this under Open |
-| 24 | Clint on Fonains, and the second Distinction piece | fia-story l.311-314: the skiff lands with "Clint and a few of the raiders aboard"; the raiders take his gear "for an ordinary tool; it is the device". `dossiers/clint.html`: set down "away from the boarders"; `timeline.json` events[54]: they "never found him"; `artifacts/second-distinction-piece.html` "Whether Clint still has it … is not set" | Check Fonains one-shots 3 and 4 first. If they are silent, fia-story stands, and the raiders hold the piece (or say where it went) |
+**N'ghathrod, Vocath and the FIA story** (also written into
+`working/fia-story.md`)
 
-### D. Cosmology
+14. **The thefts: three insiders, one hub.** Joffrey tracks shipments that
+    carry Vocath's seal and handles what comes in; he leaves the rod where
+    Miken picks it up. Miken sabotages. A third insider, the thief, steals,
+    and Joffrey uses the thief to learn where things are kept and the Brig's
+    protocols. Miken knows one other accomplice exists and that thefts happen,
+    and not who; the thief knows of one other too. They point at each other,
+    and nothing between them points at Joffrey. Who the thief is, and who
+    recruited them, is open.
+15. **Joffrey's timeline.** He turned over some months, not a year, and
+    gathered what he could. The thefts ran small before he was placed and
+    have grown since. A.T.L.A.S. came into the Brig, or he learned it was
+    there, in those months, and the plan for it started then. The colony
+    placed him to have a man inside Caelestis; it knew nothing of A.T.L.A.S.
+    and his tadpole carried no directive about it. Check
+    `dossiers/sor-kur.html`'s "building a route for a year" against this.
+16. **The Sky Dock bribe.** Joffrey paid Jeffrey, the hobgoblin dock hand
+    (ruling 2). Check the record's wording ("a dock officer", "a merchant")
+    when the pages change.
+17. **Long life** comes from the taking, not the experiment.
+18. **A tadpole can be removed**, and removal frees the host. How, from D&D
+    lore or our own; avoid Baldur's Gate 3 spoilers.
+19. **Vecna's direction.** Whispers are suggestions; the list of worlds is his
+    standing direction; the Monolith line is his one explicit instruction.
+20. **The voice.** Vecna reaches N'ghathrod as a voice, and as dreams and
+    visions. N'ghathrod took it for an elder brain for some decades, learned
+    it was not, and stopped caring: Glyth cast him out, and the voice
+    provides. It gives what Vecna's plan needs him to know; the rest he learns
+    from his taken. Vecna is not omniscient.
+21. **The first unthinned.** Their tadpoles were N'ghathrod's, brought aboard
+    Thessalar's craft before the experiment and cut off from the elder brain;
+    Thessalar experimented on them too, and they grew malformed.
+22. **The elder brain.** The main craft came down in the Barrier Peaks on
+    Fonains, and the elder brain was in the caverns beneath them. After
+    Lola's Boys reached it, it escaped to a place nobody knows. Tharizdun's
+    temple and the temple of Moloch are pieces of the craft that broke off and
+    scattered across Fonains. STAGING's "close to the wreck that carried
+    Tharizdun's temple" is reworded. Whether an elder brain lives five hundred
+    years is open and not pertinent.
+23. **The shards reaching Boogie.** Vocath is a merchant and moves fast. Add
+    time to the chain if the dates need it.
+24. **Clint on Fonains.** He seized the raiders' ship, and the pool took it
+    with them aboard. He landed before the Monolith rose, about a year ago,
+    got away, and lost his means of reaching Caelestis. His one unusual item
+    is a laser pistol, the first on that world; what it is, is open. The
+    raiders never knew he had it. They hunted him for a while, and when the
+    Monolith rose and broke they called home and started their trade. He
+    carries no device: `artifacts/second-distinction-piece.html` and BACKLOG
+    cross-cutting 18 change.
 
-| # | Question | Options and sources | Lean, and why |
-|---|---|---|---|
-| 25 | The Darkest Day: one ritual or two? | (a) One: `locations/fonains.html` "a cult of Vecna worked a ritual on Giorge at the eclipse … The ritual drove Fonains to its Zenith". (b) Two: `working/tharizdun.md` "Vecna's own cult ritual on Giorge … That ritual was bait"; `timeline/timeline.json` events[15] and [24] as separate events; `cosmology/index.html` § Corrupted Monoliths (five cultists, "Vecna nudged it") | (a), Fonains first. Then align the timeline and cosmology, and the draft goes (Part 3) |
-| 26 | When did Vecna ascend? | (a) `timeline/timeline.json` events[6] "Vecna rules Oerth and ascends", t −900. (b) "At least a few centuries ago": `dossiers/vecna.html`, `locations/oerth.html`, `factions/deities.html` | Pick a figure. "A few centuries" reads very differently from 900 years at the table |
-| 27 | Are the Runekeepers the Lunarfoot clan? | (a) `artifacts/dissolution-fragment.html`: "the Runekeepers of the Lunarfoot clan" (twice). (b) `factions/runekeepers.html`: "the Lunarfoot clan is one of them"; Still to decide whether they are one people or many. `locations/wayfinders-homeworld.html` uses "the Lunarfoot Runekeeper" only as an example of the clan name on its works | (b). The fragment page says "the Runekeepers of the Wayfinders' homeworld"; the homeworld example can stay |
-| 28 | Can a world reach a Zenith naturally? | (a) Open: BACKLOG § Zeniths [later] "Ritual and natural Zeniths" (Korey 2026-11-01); the chart's 28-system fit depends on it. (b) Yes: `cosmology/index.html` "worlds simply reach their moments"; `timeline.json` events[3]; `restricted/wm-003.html` "Zenith type: Natural" | Korey rules. If open, cosmology and the FIA line say too much; if yes, close the item and keep the chart fit |
-| 29 | Is Fonains the only crystal-carrying Monolith? | (a) `cosmology/index.html` "the only Monolith ever to carry Tharizdun's crystal"; `chart/index.html`; glossary. (b) `working/tharizdun.md` Open: "Whether any other Monolith carries Tharizdun's crystal"; BACKLOG fix "The only Monolith" (describe instead) | Rule it. The BACKLOG fix to describe rather than rank applies either way |
-| 30 | What is the Prism Ascendant doing? | (a) `restricted/wm-003.html` (FIA, player-readable): "Still recording". (b) `cosmology/index.html`, `locations/aethris.html`: "It does nothing" | (b). Nobody has read the FIA yet, so fix the FIA line now, or add a DM note that the registry misreads it |
-| 31 | Can anyone come back up an intake? | (a) `factions/restorers.html` "There is no return channel"; "Nothing has ever come back out of a Monolith". (b) `cosmology/index.html` "it runs both ways, though almost no one has ever gone up it"; `locations/rykoe.html` | (b). The Restorers page says what the Restorers believe |
-| 32 | Does the Monolith follow the Zenith or arrive with it? | (a) `locations/wayfinders-homeworld.html`, `dossiers/the-runekeeper.html`: "the result is a Zenith … and a Monolith follows". (b) `cosmology/index.html` § Monoliths and glossary: it appears in the run-up | (b). Reword (a) |
-| 33 | How the Cre'Tez got Tinderstrike | (a) `factions/deities.html` states Asmodeus gave it "about three and a half centuries ago". (b) `locations/fonains.html` Still to decide: "written two ways"; `timeline.json` events[5] and [14] carry both | Fonains: deities stops stating one version, unless Korey rules now |
-| 34 | "Heart" for Erevos | `glossary/index.html` Cycle "Erevos, the heart at the galaxy's core"; `factions/discerners.html`, `factions/fleet.html`, `cosmology/index.html` "The heart turns". Against: glossary Heart "A world's paracausal interior" | Use "core" for Erevos; keep "heart" for worlds |
+**Cosmology**
 
----
+30. **Monoliths archive for a short, variable time after they arrive**, then
+    stop. The Prism Ascendant does nothing now. WM-003's "Still recording"
+    changes.
+31. **Coming back up an intake** is possible and very rare. The Restorers do
+    not know it; their page says what they believe.
+32. **A Monolith arrives in the run-up to a Zenith**, records through it, and
+    the Zenith is a moment, not a state that continues.
+33. **The four keys.** The Accordance forged them. Futsunushi, the god
+    weaponsmith, made each with a partner god: Tinderstrike with Asmodeus, to
+    seal Imix; Windvane with Eldath, to seal Yan-C-Bin; Ironfang with Ryujin,
+    to seal Ogrémoch; Drown with Muriel, to seal Olhydra. (Confirm the name
+    "Muriel".) The Cre'Tez had Tinderstrike from the Accordance.
+34. **Erevos is a heart:** the heart of the first world destroyed in this
+    galaxy, now its black hole. "Heart" stays for Erevos.
+
+**The tyrant-ship adds (9b)**
+
+- Every power after the meteor wants its adamantine, Ostekk among them.
+- Gregory's surge item drops: he felt the source through the suppression at
+  the table.
+- Vaelorix's motive is on his page already: a collector of living things who
+  judged the Engine worth stealing to grow his specimens. The debt to Ostekk
+  stays an unreviewed draft; drop it unless Korey wants it.
+- The Faelight spore: the crew retrieved it from the Garden. Record only.
+
+### Still open in Part 1
+
+| # | Question | Lean |
+|---|---|---|
+| 25 | The Darkest Day: one ritual or two? `locations/fonains.html` has one; `working/tharizdun.md`, `timeline.json` and `cosmology/index.html` split it | One: Fonains canon wins |
+| 26 | When Vecna ascended: `timeline.json` has t −900; the pages say "a few centuries" | Korey gives a figure |
+| 27 | Are the Runekeepers the Lunarfoot clan? `artifacts/dissolution-fragment.html` says so; `factions/runekeepers.html` makes Lunarfoot one clan of several | One clan of several |
+| 28 | Can a world reach a Zenith naturally? BACKLOG has it open; `cosmology/index.html`, `timeline.json` and WM-003 say yes | Yes; close the item |
+| 29 | Is Fonains the only Monolith with Tharizdun's crystal? `cosmology/index.html` says so; `working/tharizdun.md` has it open | Yes; describe it, do not rank it |
+| 14b | Who the thief is, and who recruited them | Open |
 
 ## Part 2: Already decided, waiting to be carried out
 
@@ -330,6 +403,4 @@ the working layer. Delete this draft when every item is closed.
 
 ## Open
 
-Part 1 questions, by number: 9b (the rest of the tyrant-ship adds); 11 to 13;
-14, 15, and 16's remaining half (who the "merchant" was, now Joffrey: check
-against the record's wording); 17 to 24; 25 to 34.
+Part 1: 14b (the thief), 25 to 29. Homebound has its own chat (ruling 12).

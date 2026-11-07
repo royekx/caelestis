@@ -42,7 +42,8 @@ can investigate, and a store of backstory.
 - The Academy thefts; *fleet intelligence archive* on Mirt's notepad.
 
 **Fixed by the Fonains campaign:** Clint Dashforest reached Fonains about a
-year ago through a color pool, with his device, before its Monolith appeared.
+year ago through a color pool, before its Monolith appeared. His one unusual
+item there is a laser pistol, the first on that world.
 Vocath's people trade there and brought fragments of the broken Monolith
 home; Boogie's shard came through Vocath's line.
 
@@ -65,8 +66,9 @@ the colony and keeps the knowledge of its dead.
 
 The Vth'orama have no elder brain. N'ghathrod's own was aboard Thessalar's
 craft with him, kept apart from him, and was left trapped beneath the wreck
-when the craft fell; he believes it dead, or beyond reach. (On Fonains it
-lives: it teleported out when Lola's Boys broke it.)
+when the main craft came down in the Barrier Peaks on Fonains, in the caverns
+beneath them. He believes it dead, or beyond reach. (On Fonains it lived, and
+after Lola's Boys reached it, it escaped to a place nobody knows.)
 
 N'ghathrod will not let a tadpole die.
 After all the colony has been through, and the exile above all, nothing eats
@@ -79,6 +81,12 @@ an illithid the colony makes is far more likely to come out of
 ceremorphosis malformed. Most of them do, and the whole are a minority. The
 pools always hold more waiting tadpoles than the colony has bodies for, and
 that is why it always needs more captives.
+
+**The voice.** Vecna reaches N'ghathrod as a voice, and as dreams and visions.
+For some decades N'ghathrod took it for an elder brain. He learned it was
+not, and stopped caring: his own world had cast him out, and the voice
+provides. It gives him what Vecna's plan needs him to know; everything else
+he learns from his taken.
 
 **N'ghathrod has become the colony's elder brain.** He is not one in the
 ordinary sense; he is a changed thing that has grown into the place. Its
@@ -104,9 +112,10 @@ alongside the fact that most of its illithids are unthinned, three of the
 enna among them. It has never resolved that, and the true-formed are where
 it is loudest.
 
-The first unthinned were three made aboard Thessalar's craft, from bodies he
-supplied and N'ghathrod's own tadpoles, with no elder brain culling the
-brood; N'ghathrod's was a prisoner kept apart. They are
+The first unthinned were three made aboard Thessalar's craft. Their
+tadpoles were N'ghathrod's own, brought aboard before the experiment and cut
+off from the elder brain; Thessalar experimented on them too, and put them
+into bodies he supplied. They are
 three of the enna. When N'ghathrod brought them to Glyth, Glyth saw what they
 were and refused them, and exiled them. N'ghathrod went with them.
 
@@ -131,9 +140,9 @@ pools, or feeds the colony's illithids.
 
 **The one exception is the outcast.** N'ghathrod has a soft spot for the
 neglected, the abandoned and the cast out, because that is what he and his
-people were. When one of his taken, or his network, finds such a person, he
-may spend a copy on them for no gain at all, and the network then protects
-them and raises them up. He is evil, and this is the piece of him a crew can
+people were. When one of his taken finds such a person, he may spend a copy
+on them for no gain at all, and his taken then protect them and raise them
+up. He is evil, and this is the piece of him a crew can
 reach.
 
 **His mouse.** He saved a mouse in the escape from Thessalar's craft, and it
@@ -189,14 +198,14 @@ illithids cannot walk into a port, and its few taken are worth too much to
 spend snatching crowds. It needs someone who already moves cargo and people
 at volume and asks no questions.
 
-**Vocath needs what the network knows.** Over years N'ghathrod has placed his
+**Vocath needs what the taken know.** Over years N'ghathrod has placed his
 taken in useful posts: dockmasters, customs clerks, guild accountants. Every
 one of them reports up to him. Zhauveth passes Vocath what serves him: which
 cargo moves when, which inspection is coming, where the patrols and escorts
 are. That knowledge is why his house prospers.
 
 **The arrangement.** Vocath's line supplies captives; Zhauveth supplies what
-the network knows. Vocath deals with Zhauveth, never with N'ghathrod.
+the taken know. Vocath deals with Zhauveth, never with N'ghathrod.
 
 **Why Vocath is not taken.** A willing partner costs no tadpole. His crews
 follow him, and a copy drifts over time. Zhauveth, whose gift is being agreed
@@ -262,17 +271,18 @@ far.
    noise: Strake sees things on the lane that Cairn does not report. On his
    filing, the Caelestis Fleet sends the *Bellwether Crow* to look in, with
    Clint Dashforest leading its crew and Joffrey aboard as its junior
-   spelljammer. The network has nobody in the office that sends it, so
-   nobody warns Vocath. The *Crow*'s crew are told to look in on Cairn; the
+   spelljammer. N'ghathrod has nobody taken in the office that sends it,
+   so nobody warns Vocath. The *Crow*'s crew are told to look in on Cairn; the
    filing behind the order stays with the office.
 2. **The raid.** The *Crow*'s course to Cairn runs up the lane and comes on
    Vocath's people mid-handover, captives half moved from their ship to a
-   colony courier, out on the stretch only Cairn's scope covers. With the
+   colony courier, on a stretch of lane Cairn watches closely and Strake sees
+   only at the very edge of its range. With the
    cargo strung between two hulls they cannot scatter, so they strike to
    drive the *Crow* off, and
    bite off more than they can chew. To draw the fight off his crew, Clint
-   boards one of their skiffs and wrecks it from inside. A color pool opens
-   by chance and takes the skiff, with Clint and his gear aboard. Many of the
+   boards one of their ships and seizes it. A color pool opens by chance and
+   takes the ship, with Clint and its raiders aboard. Many of the
    *Crow*'s crew die. **Joffrey takes the helm, flies the ship out of the
    fight and holds the survivors together.** From then on they look to him.
    He earned it.
@@ -287,13 +297,12 @@ far.
    Cairn's own scope log for that watch, written up as routine, shows no
    contact. Sending the ship home is less trouble than the questions a
    missing ship would raise.
-5. **The opening.** The station master reports up the network, and Zhauveth
+5. **The opening.** The station master reports up to N'ghathrod, and Zhauveth
    sees what they have: a ship going home to Caelestis, and a spelljammer its
    survivors follow. A colony courier brings one of N'ghathrod's tadpoles up
-   the lane within days, and the station master takes Joffrey. N'ghathrod has
-   a sense, perhaps a whisper from Vecna, that Caelestis holds something like
-   A.T.L.A.S., and the tadpole carries a directive to look for it. A hold
-   cannot go home with him; a taking can. Joffrey is also insurance: a man
+   the lane within days, and the station master takes Joffrey. The colony
+   wants a man inside Caelestis; it knows nothing of A.T.L.A.S. A hold cannot
+   go home with him; a taking can. Joffrey is also insurance: a man
    inside Caelestis who can warn the colony if anyone looks at Cairn again. He knows the *Crow* was sent to look in on Cairn,
    and nothing of who asked.
 6. **The report.** The *Crow* goes home and reports what it believes: raided
@@ -303,28 +312,40 @@ far.
    leave, and the hold leaves them alone.
    The *Crow* went to look at Cairn and found it in order, so its report
    answers Tarroway's filing. The colony never learns Tarroway raised the
-   question; as far as it knows, the Fleet looked and got its answer. The
-   network tells Vocath where the escorts run, and the line runs around them.
+   question; as far as it knows, the Fleet looked and got its answer. N'ghathrod's
+   taken tell Vocath, through Zhauveth, where the escorts run, and the line
+   runs around them.
 
 ### Clint on Fonains
 
-The pool drops the skiff on Fonains, with Clint and a few of the raiders
-aboard. Clint loses his communication piece in the wreck or to the raiders,
-and for a time they hold him. They take his gear for an ordinary tool; it is
-the device, and nobody knows it. Clint gets away. The raiders find the gems
-and send word to Vocath by sending stone. Vocath sends ships the long way,
-and his people start their trade on Fonains and carry its gems and shards
-home. For a while they also hunt Clint, so that he cannot report what he saw
-on the lane. With no way to send word, he stays lost to Caelestis.
+The pool drops the ship on Fonains, with Clint and its raiders aboard, before
+the Monolith rose, about a year ago. Clint gets away. He loses his means of
+reaching Caelestis, his communication piece, and cannot send word. His laser
+pistol stays with him; the raiders never knew he had it. They hunt him for a
+while, for the sake of it and so that he cannot report what he saw on the
+lane. When the Monolith rises and breaks, they see their chance: they still
+have their ship and their sending stone, and they send word to Vocath.
+Vocath is a merchant and gets things moving fast, and his people start their
+trade on Fonains and carry its gems and shards home.
 
 ### After
 
-- Joffrey turns slowly, over about a year, and makes his name on the
+- Joffrey turns over some months, not a year, and makes his name on the
   strength of what he did on the *Crow*. He keeps part of himself, and one
-  survivor of the *Crow* sees that he has changed.
-- Following the directive, he searches Caelestis and finds A.T.L.A.S. in the
-  Brig, catalogued as an antique navigational instrument: a Reach housing.
-  N'ghathrod wants residue, and the thefts begin.
+  survivor of the *Crow* sees that he has changed. Meanwhile he gathers what
+  he can about Caelestis.
+- The Academy thefts were already running, small, before he was placed, and
+  have grown since. In his first months A.T.L.A.S. comes into the Brig, or
+  he learns it is there, catalogued as an antique navigational instrument: a
+  Reach housing. N'ghathrod wants residue, and the plan for it starts there.
+- **Three insiders, one hub.** Joffrey tracks the shipments that carry
+  Vocath's seal and handles what comes in: he leaves the rod where Miken will
+  pick it up. Miken sabotages. A third insider, the thief, steals, and Joffrey
+  uses the thief to learn where things are kept and the Brig's protocols,
+  which he has no access to. Miken knows one other accomplice exists and
+  that thefts are happening, and not who. The thief knows of one other too.
+  Each points at the other; nothing between them points at Joffrey. Only the
+  crew holds what does.
 - Zhauveth tells Vocath that he has an informant inside Caelestis, and Vocath
   uses it for his grudge against Mirt. In name, Joffrey answers to Qitru,
   Vocath's intermediary; in fact N'ghathrod runs him, through Zhauveth.
@@ -556,9 +577,9 @@ Strake further off; the FIA rebuilds and the clearance fix; the chart move.
 
 | Page | Touched by |
 |---|---|
-| `prime/dossiers/joffrey.html` | junior spelljammer, taken at Cairn, the directive, Qitru in name |
-| `prime/dossiers/clint.html`, `prime/artifacts/second-distinction-piece.html`, `distinction-fragment.html`, `artifacts/index.html` | the boarding, the pool by chance, the device unknown |
-| `prime/artifacts/atlas.html` | Joffrey's directive |
+| `prime/dossiers/joffrey.html` | junior spelljammer, taken at Cairn, no directive, the months of turning, A.T.L.A.S., the hub of three insiders, Qitru in name |
+| `prime/dossiers/clint.html`, `prime/artifacts/second-distinction-piece.html`, `distinction-fragment.html`, `artifacts/index.html` | the boarding, the pool by chance, the laser pistol; no device with him, and whether the second Distinction piece is anywhere near him is open |
+| `prime/artifacts/atlas.html` | how it reached the Brig, and the plan that starts there |
 | `prime/dossiers/mirt.html` | his silence on the seal, his code, his aim |
 | `prime/dossiers/miken.html`, `qitru.html`, `veena-derek.html`, `winston-ryeback.html` | the rod, the beacon, Qitru's lie |
 | `prime/dossiers/vocath.html`, `prime/factions/vocath-operation.html`, `factions/index.html` | the two marks, the supply contract, the handovers |
@@ -576,7 +597,7 @@ found nothing there to change.
 ## Left at the level of shape
 
 These need only exist: names, crew counts,
-how stations talk to Caelestis, which posts the network holds elsewhere.
+how stations talk to Caelestis, which other posts the taken hold.
 
 ## Open
 
