@@ -1,7 +1,10 @@
 # Inbox
 
-Raw material waiting to be sorted into drafts or canon. Chat sweeps list each
-settled decision as **in repo**, **not in repo** or **conflicts**.
+Raw material from outside the repo, waiting to be sorted into drafts,
+BACKLOG, STAGING or pages. A file is deleted once every item in it has landed.
+Rulings made in a chat go into the subject's draft or STAGING, never here.
+Chat sweeps list each settled decision as **in repo**, **not in repo** or
+**conflicts**.
 
 ## Chat sweeps
 
