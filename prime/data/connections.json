@@ -1812,8 +1812,8 @@
           "src": "STAGING round 10"
         },
         {
-          "t": "Vocath's crew ambushed the Bellwether Crow to take it.",
-          "src": "STAGING round 4"
+          "t": "Where it is now is open; it may be the device Clint carries without knowing it.",
+          "src": "artifacts/second-distinction-piece.html"
         },
         {
           "t": "Clint carried it through the color pool, and it is somewhere on Fonains.",
@@ -2581,14 +2581,6 @@
           "src": "factions/vocath-operation.html"
         },
         {
-          "t": "Vocath's crew took Cairn Station after it went dark and waited for the relief run.",
-          "src": "locations/cairn-station.html"
-        },
-        {
-          "t": "Vocath's crew ambushed the Bellwether Crow for the second Distinction piece.",
-          "src": "STAGING round 4"
-        },
-        {
           "t": "Vocath's people chased Clint to Fonains, never found him, and came back with fragments of the broken Monolith.",
           "src": "timeline/timeline.json"
         },
@@ -2727,52 +2719,44 @@
       "label": "Bellwether Crow",
       "type": "vessel",
       "scope": "caelestis",
-      "summary": "A Caelestis light corvette, the relief vessel ambushed on the Cairn approach a year ago.",
+      "summary": "A Fleet light corvette, raided on the approach to Cairn Station about a year ago.",
       "facts": [
         {
-          "t": "Bellwether Crow was sent to learn why Cairn Station had stopped answering.",
+          "t": "On Tarroway's filing the Fleet sent Bellwether Crow to look in on Cairn Station, with Clint Dashforest leading its crew and Joffrey as its junior spelljammer.",
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "It was carrying the second Distinction piece when Vocath's crew ambushed it.",
-          "src": "STAGING round 4"
-        },
-        {
-          "t": "A second boarding, by a different party, killed the senior deck officers and most of the complement.",
+          "t": "It came on Vocath's people mid-handover near Cairn and was raided once; many of its crew died.",
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "Its survivors still argue about whether Clint meant to go through the color pool.",
-          "src": "STAGING round 4"
+          "t": "Joffrey took the helm, flew it out of the fight and held the survivors together, and was commended for it.",
+          "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "The Crow made Strake under damage.",
-          "src": "locations/cairn-station.html"
+          "t": "Cairn took the crippled ship in, and repairs ran for days before it went home.",
+          "src": "vessels/bellwether-crow.html"
         }
       ]
     },
     {
       "id": "crow-ambush",
-      "label": "Bellwether Crow ambush",
+      "label": "The raid on Bellwether Crow",
       "type": "event",
       "scope": "caelestis",
-      "summary": "About a year before now, near Cairn Station: Joffrey taken, Clint gone overboard.",
+      "summary": "About a year before now, near Cairn Station: one raid, Clint lost to a color pool.",
       "facts": [
         {
-          "t": "About a year before now Vocath's crew ambushed the Bellwether Crow near Cairn Station.",
-          "src": "timeline/timeline.json"
-        },
-        {
-          "t": "Clint took the second Distinction piece and left the ship in one of the boarders' craft to draw them off.",
+          "t": "About a year before now Bellwether Crow came on Vocath's people mid-handover near Cairn Station, and they struck to drive it off.",
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "Some of the boarders went after him and some stayed, and enough went that the crew fended off the rest.",
+          "t": "To draw the fight off his crew, Clint boarded one of their ships and seized it; a color pool opened by chance and took that ship, with Clint and its raiders aboard.",
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "The second action was N'ghathrod's colony, shadowing Vocath's ambush as a backup; with the device gone, it took Joffrey instead.",
-          "src": "opposition/vthorama.html"
+          "t": "After the raid a wax disc dropped by one of the raiders was found on Crow's deck; its seal matches no registry.",
+          "src": "restricted/fr-016.html"
         },
         {
           "t": "In the Fleet, a crew member who leaves the ship, willingly or not, and does not come back has gone overboard.",
@@ -2880,44 +2864,27 @@
       ]
     },
     {
-      "id": "tetherbreak",
-      "label": "The perimeter watch",
-      "type": "place",
-      "scope": "caelestis",
-      "summary": "Strake Station and its sister satellites, Hollis Post and Cairn Station, watching the edge of Realmspace for the Caelestis Sector.",
-      "facts": [
-        {
-          "t": "The Caelestis Sector watches the edge of Realmspace from Strake Station and its two sister satellites, Hollis Post and Cairn Station.",
-          "src": "locations/realmspace.html#perimeter-watch"
-        },
-        {
-          "t": "Strake stands on the bearing called the Tetherbreak; everything past it is closed without Bridge authorization.",
-          "src": "locations/realmspace.html#perimeter-watch"
-        }
-      ]
-    },
-    {
       "id": "strake-station",
       "label": "Strake Station",
       "type": "place",
       "scope": "caelestis",
-      "summary": "The Caelestis Sector's waystation at the edge of Realmspace, with a small Fleet presence watching the edge; the last open deck before the closed run to Cairn.",
+      "summary": "A Fleet station on its own lane nearer home, off to the side of Cairn's; its scope reaches Cairn's stretch only at its limit.",
       "facts": [
         {
-          "t": "Strake Station and its sister satellites are Caelestis's to keep.",
+          "t": "Strake Station is Caelestis's to keep.",
           "src": "STAGING round 11"
         },
         {
-          "t": "Strake Station reported an unidentified mass, and it was Vth'oramu.",
-          "src": "STAGING round 5"
+          "t": "Its scope picked up faint, odd returns at the limit of its range on Cairn's stretch of lane: Vth'oramu, seen from different angles.",
+          "src": "locations/strake-station.html"
         },
         {
-          "t": "Readings from the edge stations pass between the institutions.",
+          "t": "Readings from the Fleet's stations pass between the institutions.",
           "src": "STAGING round 11"
         },
         {
-          "t": "An item is held in its secure storage under Quartermaster Verrow's seal.",
-          "src": "dossiers/verrow.html"
+          "t": "Strake logs contacts on Cairn's lane that Cairn never reports.",
+          "src": "locations/strake-station.html"
         }
       ]
     },
@@ -2926,18 +2893,22 @@
       "label": "Cairn Station",
       "type": "place",
       "scope": "caelestis",
-      "summary": "The far satellite of the watch at Realmspace's edge, silent for a year.",
+      "summary": "A small Fleet watch post on its own lane, weeks out along the arm; the colony holds it.",
       "facts": [
         {
-          "t": "A year ago Vth'oramu sat on the Cairn bearing.",
-          "src": "STAGING round 5"
-        },
-        {
-          "t": "Cairn went silent after reporting a mass that matched no vessel profile.",
+          "t": "Cairn's station master is taken, and one of Zhauveth's malformed spawn holds the rest of the crew by nearness.",
           "src": "locations/cairn-station.html"
         },
         {
-          "t": "Vocath's people withdrew after the ambush and left something behind at Cairn.",
+          "t": "Vocath's captives change hands on the lane near Cairn every few weeks, and Zhauveth touches down there now and then.",
+          "src": "locations/cairn-station.html"
+        },
+        {
+          "t": "Vocath's house holds the Fleet contract for stores on Cairn's lane, under its house mark.",
+          "src": "locations/cairn-station.html"
+        },
+        {
+          "t": "Cairn's reports read perfectly, week after week, and the lane reads all clear.",
           "src": "locations/cairn-station.html"
         }
       ]
@@ -2947,11 +2918,11 @@
       "label": "Hollis Post",
       "type": "place",
       "scope": "caelestis",
-      "summary": "The western satellite of the watch at Realmspace's edge, filing normally.",
+      "summary": "An ordinary Fleet post on a lane of its own.",
       "facts": [
         {
-          "t": "Hollis Post does the same job as Strake and Cairn, and nothing has happened to it.",
-          "src": "locations/realmspace.html#perimeter-watch"
+          "t": "Hollis Post is an ordinary Fleet post on a lane of its own.",
+          "src": "locations/realmspace.html"
         }
       ]
     },
@@ -2960,18 +2931,22 @@
       "label": "M. Tarroway",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A cartographer on Strake Station whose readings first hinted at something at the edge.",
+      "summary": "Strake's cartographer, who pulled the discrepancy with Cairn out of the noise.",
       "facts": [
         {
-          "t": "Tarroway's readings were the first hint that an unknown vessel or structure was disturbing the satellites at the edge of the system.",
-          "src": "STAGING round 4"
+          "t": "Tarroway saw that Strake logs contacts on Cairn's lane that Cairn does not report; his first filing sent Bellwether Crow to look in.",
+          "src": "dossiers/tarroway.html"
+        },
+        {
+          "t": "After Crow's report his later filings were set aside.",
+          "src": "dossiers/tarroway.html"
+        },
+        {
+          "t": "His plate of four sweeps shows a return that changes shape on every pass.",
+          "src": "restricted/lg-003.html"
         },
         {
           "t": "His name turns up here and there, mainly in the Fleet Intelligence Archive.",
-          "src": "STAGING round 4"
-        },
-        {
-          "t": "Nothing about him is public.",
           "src": "STAGING round 4"
         }
       ]
@@ -2981,10 +2956,10 @@
       "label": "Quartermaster Halix Verrow",
       "type": "person",
       "scope": "caelestis",
-      "summary": "Strake's quartermaster, who counter-signs everything that moves on the edge run to Cairn.",
+      "summary": "Strake's quartermaster, who files Tarroway's reports up the chain.",
       "facts": [
         {
-          "t": "Verrow enforces the standing order closing the run past Strake.",
+          "t": "Verrow is Strake's quartermaster and files Tarroway's reports up the chain.",
           "src": "dossiers/verrow.html"
         },
         {
@@ -3005,8 +2980,8 @@
       "summary": "Caelestis's restricted intelligence record.",
       "facts": [
         {
-          "t": "The archive records the Cairn silence and the Crow's ambush and connects neither.",
-          "src": "locations/cairn-station.html"
+          "t": "The archive records Strake's filings, Crow's report and Cairn's clean log, and connects none of them.",
+          "src": "restricted/lg-003.html"
         }
       ]
     },
@@ -6960,20 +6935,14 @@
     {
       "s": "vthoramu",
       "t": "cairn-station",
-      "rel": "sat on the bearing of",
-      "src": "STAGING round 5"
+      "rel": "crosses the lane of",
+      "src": "locations/cairn-station.html"
     },
     {
       "s": "vthoramu",
       "t": "strake-station",
-      "rel": "was reported by",
-      "src": "STAGING round 5"
-    },
-    {
-      "s": "vthoramu",
-      "t": "tetherbreak",
-      "rel": "passed through",
-      "src": "locations/realmspace.html#perimeter-watch"
+      "rel": "was seen at the limit of range by",
+      "src": "locations/strake-station.html"
     },
     {
       "s": "exile-from-glyth",
@@ -7103,12 +7072,6 @@
     },
     {
       "s": "NPC-Wc9fT2nJ",
-      "t": "tetherbreak",
-      "rel": "backed the closure of",
-      "src": "dossiers/mirt.html"
-    },
-    {
-      "s": "NPC-Wc9fT2nJ",
       "t": "ITM-4kD8vRt2",
       "rel": "keeps",
       "src": "dossiers/mirt.html"
@@ -7151,15 +7114,9 @@
     },
     {
       "s": "vocath-operation",
-      "t": "cairn-station",
-      "rel": "took",
-      "src": "STAGING round 4"
-    },
-    {
-      "s": "vocath-operation",
       "t": "crow-ambush",
       "rel": "carried out",
-      "src": "STAGING round 4"
+      "src": "vessels/bellwether-crow.html"
     },
     {
       "s": "vocath-operation",
@@ -7229,21 +7186,15 @@
     },
     {
       "s": "bellwether-crow",
-      "t": "second-distinction-piece",
-      "rel": "carried",
-      "src": "STAGING round 4"
-    },
-    {
-      "s": "bellwether-crow",
-      "t": "strake-station",
-      "rel": "called at",
+      "t": "cairn-station",
+      "rel": "was repaired at",
       "src": "vessels/bellwether-crow.html"
     },
     {
       "s": "tarroway",
       "t": "strake-station",
       "rel": "charts for",
-      "src": "STAGING round 4"
+      "src": "dossiers/tarroway.html"
     },
     {
       "s": "tarroway",
@@ -7262,30 +7213,6 @@
       "t": "tarroway",
       "rel": "shares a station with",
       "src": "dossiers/verrow.html"
-    },
-    {
-      "s": "strake-station",
-      "t": "tetherbreak",
-      "rel": "located in",
-      "src": "locations/realmspace.html#perimeter-watch"
-    },
-    {
-      "s": "cairn-station",
-      "t": "tetherbreak",
-      "rel": "located in",
-      "src": "locations/realmspace.html#perimeter-watch"
-    },
-    {
-      "s": "hollis-post",
-      "t": "tetherbreak",
-      "rel": "located in",
-      "src": "locations/realmspace.html#perimeter-watch"
-    },
-    {
-      "s": "tetherbreak",
-      "t": "LOC-Sp4hR9nk",
-      "rel": "watches the edge of",
-      "src": "locations/realmspace.html#perimeter-watch"
     },
     {
       "s": "fia",
@@ -8372,6 +8299,36 @@
       "t": "discerners",
       "rel": "sanctions interventions on the counsel of",
       "src": "factions/order.html#together"
+    },
+    {
+      "s": "NPC-Hs6cW9pM",
+      "t": "cairn-station",
+      "rel": "was taken at",
+      "src": "locations/cairn-station.html"
+    },
+    {
+      "s": "tarroway",
+      "t": "bellwether-crow",
+      "rel": "his filing sent",
+      "src": "dossiers/tarroway.html"
+    },
+    {
+      "s": "hollis-post",
+      "t": "LOC-Sp4hR9nk",
+      "rel": "located in",
+      "src": "locations/realmspace.html"
+    },
+    {
+      "s": "strake-station",
+      "t": "LOC-Sp4hR9nk",
+      "rel": "located in",
+      "src": "locations/realmspace.html"
+    },
+    {
+      "s": "cairn-station",
+      "t": "LOC-Sp4hR9nk",
+      "rel": "on a lane out from",
+      "src": "locations/realmspace.html"
     }
   ]
 }
