@@ -134,6 +134,20 @@
       "i": true
     },
     {
+      "pattern": "\\bthe (<em>)?(<a [^>]*>)?(<em>)?(Bellwether )?Crow\\b",
+      "use": "Bellwether Crow or Crow: ship names carry no article",
+      "i": true
+    },
+    {
+      "pattern": "perimeter watch|edge run|\\bTetherbreak\\b|relief (run|vessel|operation)|approach packet|second boarding",
+      "use": "the old Cairn story is retired: Cairn and Strake each sit on their own lane, Bellwether Crow was raided once on its way to look in on Cairn (locations/cairn-station.html, vessels/bellwether-crow.html)",
+      "i": true
+    },
+    {
+      "pattern": "Caelestis Fleet",
+      "use": "the Fleet (the United Intergalactic Fleet; factions/fleet.html)"
+    },
+    {
       "pattern": "downward tithe",
       "use": "the tithe runs upward, to N'ghathrod",
       "i": true

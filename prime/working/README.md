@@ -63,4 +63,3 @@ also hold for the working layer and the pages it feeds:
 | [common-knowledge.md](common-knowledge.md) | What a cadet would know about each NPC in the player record, sourced and graded, and how it fits the record | Draft; awaits Korey entity by entity |
 | [deconflict.md](deconflict.md) | The 2026-11-07 audit of the whole repo: conflicts to rule on, rulings waiting for their pages, working-layer cleanup | Draft; Part 1 awaits Korey |
 | [repo-refactor.md](repo-refactor.md) | The approved DM structure, the per-page procedure and the link catalogue of moved paths | Reference: link catalogue |
-| [fia-story.md](fia-story.md) | The Vth'orama, Vocath, Cairn and the *Bellwether Crow*, and the FIA they show through | Settled; its Promotes to is the change audit's touch list; deleted when the audit is done |
