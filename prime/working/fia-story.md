@@ -285,7 +285,7 @@ far.
    drive *Crow* off, and
    bite off more than they can chew. To draw the fight off his crew, Clint
    boards one of their ships and seizes it. A color pool opens by chance and
-   takes the ship, with Clint and its raiders aboard. Many of the
+   takes the ship, with Clint and its raiders aboard. Many of
    *Crow*'s crew die. **Joffrey takes the helm, flies the ship out of the
    fight and holds the survivors together.** From then on they look to him.
    He earned it.
