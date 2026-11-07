@@ -70,29 +70,31 @@ malformed. Most of them do, and the whole are a minority. A tadpole that must
 not die needs a body, so the refusal is also why the colony always needs more
 captives than it has.
 
-**N'ghathrod has become the colony's elder brain.** Its illithids believe
-they answer to an elder brain through him, and in every way that matters
-they do. He is fused into Vth'oramu and the tadpole pools bloom out of the
-hull, so the pools are in his body as an elder brain's are in its brine. He
-decides which tadpole goes to which captive, the taken report up to him,
-and what they know ends with him.
+**N'ghathrod has become the colony's elder brain.** He is not one in the
+ordinary sense; he is a changed thing that has grown into the place. Its
+illithids believe they answer to an elder brain through him, and in every
+way that matters they do. He is fused into Vth'oramu and the tadpole pools
+bloom out of the hull, so the pools are in his body as an elder brain's are
+in its brine. He decides which tadpole goes to which captive, the taken
+report up to him, and what they know ends with him.
 
 **Unthinned** is Glyth's word for a malformed illithid: one the brood should
 have thinned out. An unthinned illithid is visibly wrong in body, and
 lopsided in mind. Where an ordinary illithid has a broad spread of psychic
 powers, an unthinned one is very good at one thing and poor at the rest.
 
-**Bearers** are the whole illithids who can breed the colony: the old
-illithids who came with N'ghathrod, and the minority born in the colony who
-came out whole. Bearers lay into the pools and oversee ordinary
-ceremorphosis. Every captive is an allocation: a bearer's tadpole, which
-makes an illithid, or one of N'ghathrod's, which makes a taken person. The
-bearers' grievance is that allocation.
+Every illithid spawns, whole or unthinned, a few clutches over its life, and
+every clutch goes into the pools. **The true-formed** (proposed name) are the
+colony's whole illithids: the old ones who came with N'ghathrod, and the
+minority born in the colony who came out whole. They keep the pools and
+oversee ordinary ceremorphosis. Every captive is an allocation: an
+illithid's tadpole, which makes an illithid, or one of N'ghathrod's, which
+makes a taken person. The true-formed resent that allocation.
 
 The colony still holds Glyth's belief that the unthinned are an obscenity,
 alongside the fact that most of its illithids are unthinned, three of the
-enna among them. It has never resolved that, and the bearers are where it is
-loudest.
+enna among them. It has never resolved that, and the true-formed are where
+it is loudest.
 
 The first unthinned were three made aboard Thessalar's craft, from bodies he
 supplied and N'ghathrod's own tadpoles, far from any elder brain. They are
@@ -108,12 +110,9 @@ became copies of him. That is the taking.
 It changed the five who became the enna with him. Each came out with a power
 of its own. Zhauveth's is the Voice: domination and suggestion.
 
-**Each enna's spawn inherits some of its power**, as N'ghathrod's do. The
-Hold lets every enna breed, the three unthinned among them, though
-**proposed:** an ordinary unthinned illithid cannot. An enna spawns rarely, a
-few clutches over its long life. An illithid grown from one
-of those tadpoles leans toward its parent's power. One of Zhauveth's is
-unthinned and very good at holding minds.
+**Each enna's spawn inherits some of its power**, as N'ghathrod's do. An
+illithid grown from an enna's tadpole leans toward its parent's power. One
+of Zhauveth's is unthinned and very good at holding minds.
 
 ### One with N'ghathrod, and long life
 
@@ -121,18 +120,18 @@ unthinned and very good at holding minds.
 carried permanently. Some of the properly raised illithids who came with him
 did the same, with lesser portions, so that they would all be one.
 
-**Long life comes from the taking.** A portion of every taken person passes
-upward through the rungs and ends with N'ghathrod, a tithe that extends his
-life. Everyone on the rungs near him is sustained by what passes through
-them: the enna, and the old illithids who joined him. They have outlived
-every illithid of their age by centuries. **Proposed:** the eldest of the old
+**Long life comes from the taking**, not from the experiment. A portion of
+every taken person passes upward through the rungs and ends with N'ghathrod,
+a tithe that extends his life. He shares it with a chosen few: the enna, and
+some of the old illithids who joined him. They have outlived every illithid
+of their age by centuries. **Proposed:** the eldest of the old
 illithids keeps the colony's history.
 
 ### Taken and ceremorphosis
 
 | | Ceremorphosis | Taken |
 |---|---|---|
-| Tadpole | A bearer's, from the pools | One of N'ghathrod's own, a copy of him |
+| Tadpole | An illithid's, from the pools | One of N'ghathrod's own, a copy of him |
 | The host | Consumed; becomes a new illithid | Persists; the copy sits alongside them |
 | Looks like | An illithid; most come out unthinned | Themselves. Chitin grows hidden along the spine and skull over years |
 | Purpose | Grows the colony | Places N'ghathrod in a key post; can carry a directive; reports to him |
@@ -188,9 +187,13 @@ Zhauveth's illithids.**
   sends it, and nobody can read his mind.
 - **Everyone else is held.** One of Zhauveth's spawn, an unthinned illithid
   whose one strength is holding minds, lives at Cairn out of sight and holds the rest of the crew, the
-  signals officer among them. Its hold works by nearness and grows with time.
-  A newcomer feels something wrong and can resist it; a crew that has lived
-  beside it for years accepts it as part of the station and stops seeing it.
+  signals officer among them. Its hold works only by nearness, and it grows
+  with every day spent near it; a crew that has lived beside it for years
+  accepts it as part of the station and stops seeing it. Out of range, the
+  hold fades. So it makes no attempt on anyone who will leave: a visitor
+  would carry nothing away but a feeling. Visitors feel the place is a little
+  off, and anyone psychically aware feels it more; the feeling fades once
+  they are gone.
   They work their watches as normal, and what they see on the lane, they set
   aside as nothing worth remarking. It feeds from the captives that pass near
   Cairn. Zhauveth has few such offspring, and this one is spent where a hold
@@ -240,11 +243,10 @@ far.
 3. **The warning.** Vocath's people pull back and warn Zhauveth that the
    *Crow* is coming to Cairn.
 4. **Cairn plays host.** The station takes the crippled *Crow* in, and
-   repairs take days. That is too short for the hold to take the *Crow*'s
-   crew, and they are going home, where a hold would be noticed. The illithid
-   keeps out of sight, and Cairn's crew work as normal around the visitors.
-   The survivors feel something off about the place and put it down to shock
-   and grief. The station master has Caelestis told that the *Crow* is safe
+   repairs take days. The *Crow*'s crew will leave, so the illithid makes no
+   attempt on them. It keeps out of sight, and Cairn's crew work as normal
+   around the visitors. The survivors feel the place is a little off and put
+   it down to shock and grief, and the feeling fades on the way home. The station master has Caelestis told that the *Crow* is safe
    and under repair, and relays the raid as the *Crow*'s crew tell it.
    Cairn's own scope log for that watch, written up as routine, shows no
    contact. Sending the ship home is less trouble than the questions a
@@ -254,15 +256,15 @@ far.
    survivors follow. A colony courier brings one of N'ghathrod's tadpoles up
    the lane within days, and the station master takes Joffrey. N'ghathrod has
    a sense, perhaps a whisper from Vecna, that Caelestis holds something like
-   A.T.L.A.S., and the tadpole carries a directive to look for it. Joffrey is
-   also insurance: a man inside Caelestis who can warn the colony if anyone
-   looks at Cairn again. He knows the *Crow* was sent to look in on Cairn,
+   A.T.L.A.S., and the tadpole carries a directive to look for it. A hold
+   cannot go home with him; a taking can. Joffrey is also insurance: a man
+   inside Caelestis who can warn the colony if anyone looks at Cairn again. He knows the *Crow* was sent to look in on Cairn,
    and nothing of who asked.
 6. **The report.** The *Crow* goes home and reports what it believes: raided
    on the approach, Clint lost, Joffrey held the ship, Cairn helped them home.
    The Fleet orders escorts against raiders on the lane, and Cairn is thanked.
-   Escorts that call at Cairn stay a day or two, as the *Crow* did, too short
-   for the hold.
+   Escort crews that call at Cairn are visitors like the *Crow*'s: they
+   leave, and the hold leaves them alone.
    The *Crow* went to look at Cairn and found it in order, so its report
    answers Tarroway's filing. The colony never learns Tarroway raised the
    question; as far as it knows, the Fleet looked and got its answer. The
@@ -319,7 +321,8 @@ He signed the rod on purpose: a message to Mirt that he can reach him.
 
 Cairn is held, not empty. The illithid is always there; Zhauveth only
 sometimes, and if she is, she could end a crew of their level with a word.
-The crew are newcomers, so the hold reaches for them and they can resist it.
+The crew feel the place is off from the moment they arrive. If they stay,
+the hold reaches for them, a little more each day, and they can resist it.
 The station should feel wrong in small ways that do not add up, never in one
 reveal. A fight there is a choice between the crew around them, who are not
 acting of their own will, and the thing holding them: knock the crew down or
@@ -476,7 +479,8 @@ old one. When they are done, this draft is deleted: the pages hold the story.
   spawn inherit some of its power. The unthinned lieutenants' pages define
   unthinned as raised without an elder brain; that becomes malformed.
 - `prime/opposition/vthorama.html`: what the elder brain does and what its
-  absence makes; N'ghathrod will not let a tadpole die and has become the
+  absence makes; "bearers" renamed the true-formed everywhere, and any
+  illithid can spawn; N'ghathrod will not let a tadpole die and has become the
   colony's elder brain; the whole as a minority, and the strain it causes; unthinned as Glyth's word for the malformed, who are most of
   the colony; the old illithids who joined N'ghathrod; the unthinned
   template for the malformed; the pair at Cairn.
@@ -529,7 +533,7 @@ old one. When they are done, this draft is deleted: the pages hold the story.
 
 ## Left at the level of shape
 
-These need only exist: names, crew counts, how often the hold is renewed,
+These need only exist: names, crew counts,
 how stations talk to Caelestis, which posts the network holds elsewhere.
 
 ## Open
@@ -538,8 +542,12 @@ how stations talk to Caelestis, which posts the network holds elsewhere.
   in Joffrey, given that a taken keeps part of themselves.
 - **The unthinned template:** check it fits as the build for every
   malformed illithid, not only the enna.
-- **Who can breed:** the draft proposes that the Hold lets every enna breed
-  and an ordinary unthinned illithid cannot, which keeps "bearers breed the
-  colony" true. The alternative is that the unthinned breed too, rarely.
+- **The true-formed's name.** The repo calls them bearers; that name goes.
+  Proposed: the true-formed. The change audit renames every page.
+- **N'ghathrod's body.** He fills the elder brain's place. Whether he becomes
+  one in body as well, a brain within the ship, is for later.
+- **The hold as a mechanic:** an ability that works only by nearness,
+  deepens each day spent near it, and fades out of range. Build it in a
+  mechanic chat.
 - **The other enna's offspring:** only Zhauveth's is set. What the other
   four's tadpoles become waits until one is needed.

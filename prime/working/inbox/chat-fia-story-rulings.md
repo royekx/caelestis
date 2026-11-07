@@ -13,17 +13,17 @@ the draft is current.
 ## The colony
 
 - **No elder brain, and no tadpole left to die.** In ordinary colonies most tadpoles are eaten in the elder brain's pool. N'ghathrod, after the exile, will not let a tadpole die, so every one is found a host. The weak and flawed are used with the rest, most of the colony's illithids come out malformed, and the whole are a minority; the imbalance strains the colony.
-- **N'ghathrod has become the colony's elder brain.** The pools bloom out of the hull he is fused into. He decides where every tadpole goes, the taken report up to him, and what they know ends with him.
+- **N'ghathrod has become the colony's elder brain**: not one in the ordinary sense, but in the place of one. The pools bloom out of the hull he is fused into. He decides where every tadpole goes, the taken report up to him, and what they know ends with him.
 - **Unthinned** is Glyth's word for a malformed illithid: visibly wrong, very good at one thing and poor at the rest.
-- **Bearers** are the whole illithids who breed the colony: the old ones who came with N'ghathrod and the minority born whole.
+- **Any illithid can spawn.** The colony's whole illithids (proposed name: the true-formed, replacing "bearers") are the old ones who came with N'ghathrod and the minority born whole; they keep the pools.
 - **The first unthinned** were three made aboard Thessalar's craft, now three of the enna. Glyth saw them and exiled them, and N'ghathrod went with them.
 - **The experiment gave each enna a power of its own**, and each enna's spawn inherits some of it, as N'ghathrod's do.
 - **The enna joined N'ghathrod willingly**, each carrying a Hold. Some of the old illithids did the same, so they would all be one.
-- **Long life comes from the taking**: the tithe passes upward through the rungs to N'ghathrod and sustains those near him.
+- **Long life comes from the taking**, not the experiment: the tithe passes upward to N'ghathrod, and he shares it with a chosen few, the enna and some of the old illithids.
 
 ## Cairn and the *Bellwether Crow*
 
-- **Cairn Station** is a small Fleet watch post on a lane running outward along the arm from Realmspace, in the sector's outer zone; Strake sits on its own lane nearer home. The colony holds it with a pair: the station master, taken by one of N'ghathrod's tadpoles that came on a routine supply call, and an illithid of Zhauveth's that holds the rest of the crew. The hold works by nearness and strengthens with time; newcomers feel it and can resist. The crew sign rotation waivers and stay. Zhauveth touches down rarely; captives change hands every few weeks near Cairn.
+- **Cairn Station** is a small Fleet watch post on a lane running outward along the arm from Realmspace, in the sector's outer zone; Strake sits on its own lane nearer home. The colony holds it with a pair: the station master, taken by one of N'ghathrod's tadpoles that came on a routine supply call, and an illithid of Zhauveth's that holds the rest of the crew. The hold works only by nearness, deepens each day, and fades out of range, so it is never tried on anyone who will leave; visitors feel the place is off, and the feeling fades when they go. That is why Joffrey was taken, not held. The crew sign rotation waivers and stay. Zhauveth touches down rarely; captives change hands every few weeks near Cairn.
 - **The *Bellwether Crow*** was sent on Tarroway's filing, raided once on the approach to Cairn, and repaired there for days. Joffrey, its junior spelljammer, took the helm and held the survivors. Its report answered Tarroway's filing. The crew were told only to look in on Cairn, so the colony does not know of Tarroway.
 - **Joffrey was taken at Cairn.** The chance came while the *Crow* was docked, and Zhauveth took it. His tadpole carried a directive to look for an artifact N'ghathrod sensed in Caelestis; he found A.T.L.A.S. in the Brig. A survivor of the *Crow* sees that he has changed.
 - **Clint** boarded a raider skiff on purpose to draw the fight off his crew. A color pool took the skiff to Fonains by chance. He lost his communication piece and was held for a time. His gear is the device, and the raiders took it for an ordinary tool. The raiders found the gems, and Vocath's trade on Fonains began; they also hunted Clint so he could not report.
