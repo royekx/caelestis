@@ -37,7 +37,7 @@ staging once Korey has read and accepted them.
 | Factions | factions/ | 12 | 11 | 1 | 0 | 0 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 6 | 1 | 0 | 3 |
 | Dossiers | dossiers/ | 12 | 17 | 0 | 0 | 1 |
-| Crew | crew/ | 11 | 19 | 0 | 0 | 0 |
+| Crew | crew/ | 11 | 20 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 5 | 11 | 0 | 18 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **127** | **163** | **25** | **1** | **47** |
+| **Total** |  | **127** | **164** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1248,6 +1248,10 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
   src: section 7 (2026-10-28)
 
 ### crew/boogie.html
+
+- **[later]** When Boogie places the seal *(prep)*
+  Boogie knows Vocath's personal seal from the crate he pried open aboard the cantina, and has not placed it: Sol saw it on the rod (History 4, never seen it; only the name Vocath), and Boogie was with Sol at the marked Sky Dock crate. It is open for him to remember later: FR-016, or a prompt from an instructor in an upcoming session (Korey, 2026-11-07). Set in that voyage's prep.
+  src: Korey, 2026-11-07; V003 transcript
 
 - **[decide]** Which deckhand item goes missing on the tyrant ship voyage *(prep)*
   Korey names the item (see the "Next beat" add).
