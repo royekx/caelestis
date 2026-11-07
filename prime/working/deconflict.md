@@ -346,13 +346,14 @@ chat each, each pull request merged before the next starts.
    § dossiers/boatswain-tarto.html), the hold, the unthinned template.
 7. **Tumak chat (mechanic):** Homebound and the runes (ruling 12), from
    the Tumak sweep in the inbox and `crew/tumak.html`.
-8. **Prep chat: V007.** caelestis-prep at session scale, from the cleaned
-   pages. Ezra's hook, the sealed letter and crossing entry 7 are built here
+8. **Build chat: the DM tools.** BACKLOG § Automation and tracker,
+   "Overhaul the DM tools": the tracker first, then the Voyages board, the
+   hub, the timeline and the overlay, rebuilt against the cleaned pages.
+9. **Prep chat: V007.** caelestis-prep at session scale, from the cleaned
+   pages and the rebuilt tools. Ezra's hook, the sealed letter and crossing entry 7 are built here
    (ruling 8, BACKLOG § campaign/voyages).
 
-Not blocking V007: the thief (14b, open in `fia-story.md`), and the DM
-tools overhaul (BACKLOG § Automation and tracker), best run after the
-change audits so the tools are rebuilt against clean pages.
+Not blocking V007: the thief (14b, open in `fia-story.md`).
 
 Delete this draft when every item is closed.
 
