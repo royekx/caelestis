@@ -9,7 +9,9 @@ Rungs, fronts and contracts: a framework for the post-graduation middle, from re
 - Give each rung three clues, in different forms. Spread them across contracts. Clues can move: a clue goes wherever the crew goes.
 - The opposition pushes on its own. Each faction gets a front: what it wants, and the steps it takes if nobody stops it. Each new contract board reflects where those fronts stand.
 - The crew picks the contract. Inside it, rails are fine ("scenes have walls"). Between contracts, they choose.
-- Every contract hands the crew a lead to something else. Few contracts carry a cosmic trace. This settles a conflict in your notes. Campaign § Arc 2 says a contract has at most one trace, and most have none. Your brief says every contract needs a lead to the next rung. Both hold: the lead lives in the local layer (a name, a buyer, a drawing). The trace stays rare.
+- **A contract is a vehicle, not a formula** (Korey, 2026-11-07). Contracts are the main way an adventure starts, and not every one ties to a thread. Some are plain: carry a dignitary to a planet. The job is dull, and it puts the crew somewhere something interesting is happening that has nothing to do with the job. What they stumble on there is the adventure.
+- So a lead can come from the job or from the place it takes them. Few contracts carry a cosmic trace: Campaign § Arc 2 says a contract has at most one trace, and most have none. Where a lead exists, it lives in the local layer (a name, a buyer, a drawing).
+- **Threads interconnect.** A contract can tie to Vocath, to the colony, to Vecna's Seekers, or to none of them. Pull on one and it tugs another somewhere else. The board should show that spread, so the crew sees the overlaps for itself.
 - The "next rung" feeling comes from two things. First, the crew carries something out of each job that doesn't fit. Second, someone remarks on the pattern. Your rule "Twice, or say it" already covers this. Captain Haymond Rolt is the natural person to say it.
 
 ## 2. The framework
@@ -75,11 +77,17 @@ A front is a threat's goal, its doom if nobody stops it, three to five steps (po
 - Portents: Mirt's standing after the Fork. Vocath's gains. The illithid sect the Corps cannot name. Below-rank contracts going unfilled. [Proposal: Ondrel's "neutral" status gets tested.]
 - Stakes: Does the Fleet listen when the crew names the operation? This front decides how Arc 2 ends.
 
-**Vocath's crew and Astra Virex** sit as dangers inside the Fleet front and the personal threads. They are not fronts of their own.
+**Vocath (a front of his own; Korey, 2026-11-07)**
+- Wants: his house's profit, and Mirt disgraced and pried loose from Caelestis's protection.
+- His dealings run past the colony. The captive line is one of them; the Fonains shard trade, what moves under his personal seal, and other trouble he causes are others. [Proposal: set the rest when each is built.]
+- Tied to the colony and to Mirt. A blow to Vocath is a devastating blow to the colony: it loses its captives and its reach into Caelestis (BACKLOG: how the colony pivots without Vocath). Taking him down is hard.
+- Stakes: Does the crew tie the seal to the colony? What does Mirt do when they bring him proof?
+
+**Astra Virex** sits as a danger inside the personal threads, not a front of its own.
 
 ### 2c. Contracts as nodes
 - **Fill in the existing three layers for each contract.** Surface (the job), undertow (the local contest of wants), lead (at least one, toward a rung or another node) and trace (optional, rare). Then add: its front, and what happens if the crew declines.
-- **Categories.** Your decide is still open. Proposal: Loose (local trouble), Tied (a front: a Seekers chapter, the colony, the Order or the Fleet), Personal (one PC's thread).
+- **Categories.** Your decide is still open. Proposal: Loose (local trouble, or a plain job that only gets the crew somewhere), Tied (a front: Vocath, the colony, a Seekers chapter, the Order or the Fleet), Personal (one PC's thread).
 - **Board mix (proposal).** Of the 2 or 3 contracts at rank plus 1 reach, use one of each category. At least one carries a lead to the current rung.
 - **Declined contracts** resolve without the crew. They come back as gossip or a posting, and the clue moves on with them. This is already your rule.
 
