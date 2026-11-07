@@ -39,13 +39,13 @@ staging once Korey has read and accepted them.
 | Dossiers | dossiers/ | 13 | 17 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 18 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 2 | 0 | 1 |
-| Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 8 | 4 | 11 | 0 | 19 |
+| Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 4 | 11 | 0 | 19 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 9 | 13 | 1 | 0 | 2 |
-| **Total** |  | **128** | **162** | **28** | **1** | **48** |
+| **Total** |  | **129** | **162** | **28** | **1** | **48** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1390,6 +1390,10 @@ under each page run decide, fix, drop, add. The Tumak items are checked
 against the complete Tumak sweep (all 336 turns).
 
 ### rules/index.html
+
+- **[decide]** Travel times between systems *(shape)*
+  Inside a system a helm covers 100 million miles a day, and Toril is about 30 days from Realmspace's edge (Spelljammer Academy, Appendix A); Toril to H'Catha is the 14-day crossing. Nothing sets travel between systems: *Wildjammer* leaves it to the DM, and the Astral Sea page only grades lanes. The chart is no single scale (Caelestis's cluster is an inset: Strake sits 600 units out yet at Realmspace's edge). A proposal to rule on: drift days from the system's edge by lane tier, about 25 chart units a day on a charted lane, 20 on a long haul, 10 uncharted with uncertain arrival, plus 1 to 2 weeks to reach the destination world. That gives from Caelestis: Strake about a month; Virenspace and Aethris about 2½ to 3 months; Krynnspace and Fonains about 4 months. Knock-ons: the 30-day exit is half of every trip; Cairn, "some weeks out", comes to about 2½ months; the shards reaching Boogie from Fonains take at least 4 months (ruling 23 allows adding time). Touches: rules/index.html § Ship & crew, locations/astral-sea.html, fia-story § Cairn Station.
+  src: Korey, 2026-11-07
 
 #### Cosmology rules
 
