@@ -78,10 +78,11 @@ PRs #166 to #169)
 23. **The shards reaching Boogie.** Vocath is a merchant and moves fast. Add
     time to the chain if the dates need it.
 24. **Clint on Fonains.** He seized the raiders' ship, and the pool took it
-    with them aboard. He landed before the Monolith rose, about a year ago,
-    got away, and lost his means of reaching Caelestis. They hunted him for a
-    while, so he could not report, and when the Monolith rose and broke they
-    called home and started their trade.
+    with them aboard about a year ago. It set them down on Fonains while the
+    Monolith stood, months later outside (Korey, 2026-11-07). He got away and
+    lost his means of reaching Caelestis. They hunted him for a while, so he
+    could not report; the overseer called Vocath at once, and the trade began
+    when the Monolith broke.
     - His laser pistol is unusual on Fonains, the first there. In wildspace
       laser pistols are not unusual. **Proposed:** Ryeback's pistol, not yet
       seen at the table, is one too. Standardizing firearms in wildspace goes

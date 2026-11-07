@@ -282,7 +282,7 @@
       "cert": "canon",
       "title": "A star falls on Casey's world",
       "desc": "Polly goes to it, is changed, and leaves to find where it came from: Astra Virex.",
-      "t": -5,
+      "t": -6.4,
       "tier": 2
     },
     {
@@ -668,12 +668,12 @@
       "cert": "canon",
       "title": "Lola's Boys",
       "desc": "From the hunt for Kwalish's lost laboratory to the air Prince's rising. The campaign everything on Fonains builds from.",
-      "end": 0,
+      "end": -0.4,
       "kind": "campaign"
     },
     {
       "lane": "crew",
-      "t": -0.185,
+      "t": -0.05,
       "tier": 1,
       "status": "now",
       "cert": "canon",
@@ -690,7 +690,7 @@
       "cert": "canon",
       "title": "The hunt for Kwalish's lost laboratory",
       "desc": "Across the Jaded Forest and the Barrier Peaks to the Monastery of the Distressed Body, then down into Daoine Gloine, where Kwalish is found and the Accordance chooses its champions.",
-      "end": -0.32,
+      "end": -0.72,
       "kind": "arc",
       "session": "S1–S10"
     },
@@ -702,7 +702,7 @@
       "cert": "canon",
       "title": "Back to the Temple of Moloch",
       "desc": "Sent 500 years back to take the craft's lost gems from Thessalar's temple. Lusion joins.",
-      "end": -0.3,
+      "end": -0.7,
       "kind": "arc",
       "session": "S11–S12"
     },
@@ -714,7 +714,7 @@
       "cert": "canon",
       "title": "Breaking the Monolith",
       "desc": "The craft rises on the stolen gems, and its cannon splits the Monolith into four elemental shards.",
-      "end": -0.21,
+      "end": -0.61,
       "kind": "arc",
       "session": "S13–S15"
     },
@@ -726,7 +726,7 @@
       "cert": "canon",
       "title": "Downtime and the fire cult",
       "desc": "A month at Lola's Place, then the road to Baratol to free Dharra and Rihiri from Elizar Dryflagon's fire cult.",
-      "end": -0.06,
+      "end": -0.46,
       "kind": "arc",
       "session": "S16–S19"
     },
@@ -738,7 +738,7 @@
       "cert": "canon",
       "title": "The Tournament of Masters",
       "desc": "Jorgi questions Cobra Kai's creed; the Sacred Stone seizes the dojos and the party must win them back at Zonlilimer.",
-      "end": -0.03,
+      "end": -0.43,
       "kind": "arc",
       "session": "S20–S23"
     },
@@ -750,7 +750,7 @@
       "cert": "canon",
       "title": "Sibling Rivalries",
       "desc": "Xero answers a phoenix's summons to Gransby and faces Bastian's devastation orb.",
-      "end": -0.02,
+      "end": -0.42,
       "kind": "arc",
       "session": "S24–S25"
     },
@@ -762,7 +762,7 @@
       "cert": "canon",
       "title": "One's strange message",
       "desc": "Pulled back to the planar craft and on to the elder brain's lair under the Barrier Peaks.",
-      "end": -0.01,
+      "end": -0.41,
       "kind": "arc",
       "session": "S26–S27"
     },
@@ -774,7 +774,7 @@
       "cert": "canon",
       "title": "Weathering the storm",
       "desc": "Eight days of storm, heaviest at the Monolith ruins. The air shard opens.",
-      "end": 0,
+      "end": -0.4,
       "kind": "arc",
       "session": "S28"
     },
@@ -1088,7 +1088,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.18,
+      "t": -0.047,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1099,7 +1099,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.148,
+      "t": -0.046,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1110,7 +1110,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.116,
+      "t": -0.044,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1121,7 +1121,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.084,
+      "t": -0.019,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1132,7 +1132,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.052,
+      "t": -0.016,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1143,7 +1143,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.02,
+      "t": -0.014,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1184,10 +1184,10 @@
     }
   ],
   "decisions": [
-    "Caelestis's present sits about eight months after the Fonains Monolith broke and about five months after Fonains's Session 28 (Korey, 2026-11-07): the gap gives Vocath's ships the months an uncharted route takes before Boogie's crate reaches a dock. The color pool took the overseer's ship about a year before Caelestis's present and set her down on Fonains while the Monolith stood, about three months before it broke: a short crossing inside the pool, months outside (Korey, 2026-11-07; the one-shot transcripts say nothing of when Clint arrived). Boogie's shard came from the broken Monolith through Vocath's line, before V001.",
+    "Caelestis's present sits about seven months after the Fonains Monolith broke and about five months after Fonains's Session 28 (Korey, 2026-11-07): the gap gives Vocath's ships the months an uncharted route takes before Boogie's crate reaches a dock. The color pool took the overseer's ship about a year before Caelestis's present and set her down on Fonains while the Monolith stood, about three months before it broke: a short crossing inside the pool, months outside (Korey, 2026-11-07; the one-shot transcripts say nothing of when Clint arrived). Boogie's shard came from the broken Monolith through Vocath's line, before V001.",
     "Benedetta fell ill at Rihiri's birth, about twelve years ago, and died about ten years ago. The illness was Vanifer siphoning her soul into the illegitimate Bloodstone, which took about two years.",
     "Thessalar's planar craft fell about 500 years ago. N'ghathrod had already lost a clash with it and was a prisoner aboard, being experimented on. Lola's Boys, sent back by the Accordance, took the craft's control and defense gems; without them it fell, and the crash let N'ghathrod escape. The party unknowingly made their own villain in another campaign. \"Some millennia ago\" in Lola's Boys is rumour.",
-    "Session and voyage dates inside a campaign are spaced by feel; their order is canon. The Monolith stood six months before Lola's Boys assembled, their road to the break took about two months, and Session 28 is two to three months after the break (Korey, 2026-11-07).",
+    "Session dates inside the Fonains campaign are spaced by feel; their order is canon. Caelestis's voyages sit at their Fleet dates in data/sessions.json (V001 1491.6.25 to now, 1491.7.12). The Monolith stood six months before Lola's Boys assembled, their road to the break took about two months, and Session 28 is two to three months after the break (Korey, 2026-11-07).",
     "Krynn is the third campaign world. Its present is level with Caelestis now. The dragons that left Fonains have not yet reached it."
   ],
   "threads": {
@@ -1438,6 +1438,17 @@
         ]
       },
       {
+        "t": -1.29,
+        "status": "past",
+        "title": "The Darkest Day: two rituals; the corrupted Monolith rises",
+        "who": [
+          "Vecna",
+          "Tharizdun and the Princes",
+          "Giorge",
+          "The Accordance"
+        ]
+      },
+      {
         "t": -1.1,
         "status": "past",
         "title": "Bellwether Crow breaks up a handover near Cairn: captives recovered, Clint through a color pool",
@@ -1458,7 +1469,7 @@
         ]
       },
       {
-        "t": -1.05,
+        "t": -0.85,
         "status": "past",
         "title": "Clint lands on Fonains",
         "who": [
@@ -1466,18 +1477,7 @@
         ]
       },
       {
-        "t": -0.47,
-        "status": "past",
-        "title": "The Darkest Day: two rituals; the corrupted Monolith rises",
-        "who": [
-          "Vecna",
-          "Tharizdun and the Princes",
-          "Giorge",
-          "The Accordance"
-        ]
-      },
-      {
-        "t": -0.27,
+        "t": -0.72,
         "status": "past",
         "title": "Kwalish's island raised on the stolen gems; the Accordance names its champions",
         "who": [
@@ -1487,7 +1487,7 @@
         ]
       },
       {
-        "t": -0.21,
+        "t": -0.61,
         "status": "past",
         "title": "The Monolith breaks; Ziko's blade turns black; the shards scatter",
         "who": [
@@ -1498,12 +1498,82 @@
         ]
       },
       {
-        "t": -0.2,
+        "t": -0.6,
+        "status": "past",
+        "title": "Ziko leaves his sword under the bed at Lola's Place",
+        "who": [
+          "Lola's Boys",
+          "Ziko's sword"
+        ]
+      },
+      {
+        "t": -0.55,
         "status": "past",
         "title": "Vocath's people leave Fonains with fragments",
         "who": [
           "Vocath",
           "The Fonains shard"
+        ]
+      },
+      {
+        "t": -0.52,
+        "status": "past",
+        "title": "The Blooming Glass: Clint's crew hands the Pedra Ardente to Vanifer",
+        "who": [
+          "Clint",
+          "Vanifer",
+          "The Pedra Ardente"
+        ]
+      },
+      {
+        "t": -0.49,
+        "status": "past",
+        "title": "Giorge attacks Lola's Place for the sword",
+        "who": [
+          "Giorge",
+          "Ziko's sword",
+          "Lola's Boys"
+        ]
+      },
+      {
+        "t": -0.47,
+        "status": "past",
+        "title": "Aerisi takes Windvane from the Misty Vale",
+        "who": [
+          "Windvane",
+          "Tharizdun and the Princes",
+          "Aerisi"
+        ]
+      },
+      {
+        "t": -0.43,
+        "status": "past",
+        "title": "The Sacred Stone takes Ironfang from under the Martyr Dome",
+        "who": [
+          "Lola's Boys",
+          "Ironfang",
+          "Tharizdun and the Princes"
+        ]
+      },
+      {
+        "t": -0.42,
+        "status": "past",
+        "title": "Bastian falls; Kevulan bound to Xero; \"the fire witch will avenge\"",
+        "who": [
+          "Lola's Boys",
+          "Vanifer",
+          "Asmodus"
+        ]
+      },
+      {
+        "t": -0.4,
+        "status": "now",
+        "title": "Fonains now: Windvane summons Yan-C-Bin",
+        "who": [
+          "Lola's Boys",
+          "Tharizdun and the Princes",
+          "Windvane",
+          "Aerisi"
         ]
       },
       {
@@ -1517,17 +1587,7 @@
         ]
       },
       {
-        "t": -0.12,
-        "status": "past",
-        "title": "The Blooming Glass: Clint's crew hands the Pedra Ardente to Vanifer",
-        "who": [
-          "Clint",
-          "Vanifer",
-          "The Pedra Ardente"
-        ]
-      },
-      {
-        "t": -0.1,
+        "t": -0.03,
         "status": "past",
         "title": "V001–V006: thefts, the neogi, the tyrant ship",
         "who": [
@@ -1535,66 +1595,6 @@
           "Vocath",
           "Joffrey",
           "The Fonains shard"
-        ]
-      },
-      {
-        "t": -0.09,
-        "status": "past",
-        "title": "Ziko leaves his sword under the bed at Lola's Place",
-        "who": [
-          "Lola's Boys",
-          "Ziko's sword"
-        ]
-      },
-      {
-        "t": -0.07,
-        "status": "past",
-        "title": "Aerisi takes Windvane from the Misty Vale",
-        "who": [
-          "Windvane",
-          "Tharizdun and the Princes",
-          "Aerisi"
-        ]
-      },
-      {
-        "t": -0.05,
-        "status": "past",
-        "title": "Giorge attacks Lola's Place for the sword",
-        "who": [
-          "Giorge",
-          "Ziko's sword",
-          "Lola's Boys"
-        ]
-      },
-      {
-        "t": -0.03,
-        "status": "past",
-        "title": "The Sacred Stone takes Ironfang from under the Martyr Dome",
-        "who": [
-          "Lola's Boys",
-          "Ironfang",
-          "Tharizdun and the Princes"
-        ]
-      },
-      {
-        "t": -0.02,
-        "status": "past",
-        "title": "Bastian falls; Kevulan bound to Xero; \"the fire witch will avenge\"",
-        "who": [
-          "Lola's Boys",
-          "Vanifer",
-          "Asmodus"
-        ]
-      },
-      {
-        "t": 0,
-        "status": "now",
-        "title": "Fonains now: Windvane summons Yan-C-Bin",
-        "who": [
-          "Lola's Boys",
-          "Tharizdun and the Princes",
-          "Windvane",
-          "Aerisi"
         ]
       },
       {
@@ -1663,7 +1663,7 @@
       "lanes": [
         "fonains"
       ],
-      "from": -0.92,
+      "from": -1.35,
       "to": -0.4
     },
     {

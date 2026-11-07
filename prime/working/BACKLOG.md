@@ -43,9 +43,9 @@ staging once Korey has read and accepted them.
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 3 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **127** | **163** | **25** | **1** | **47** |
+| **Total** |  | **128** | **163** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -64,7 +64,7 @@ Each settles items on several pages at once. Rule these first.
 10. ~~**The real elder brain.**~~ *Ruled: the Session 27 brain is his; it teleported out.* Where it went is no longer a question.
 11. ~~**Where Oerth lies.**~~ *Ruled: GAL-01, in Greyspace; Oerth is the eye's retina (STAGING).*
 13. ~~**Can a taken person be released?**~~ *Ruled: a tadpole can be removed, and removal frees the host; the taken outlive N'ghathrod, each keeping part of him.* How removal is done stays open (D&D lore or our own; avoid Baldur's Gate 3 spoilers).
-14. ~~**Fonains–Caelestis offset.**~~ *Ruled: Caelestis's present is about five months after Fonains Session 28 and about eight months after the Monolith broke; the Monolith stood six months before Lola's Boys assembled (Korey, 2026-11-07; timeline.json decisions; locations/fonains.html DM notes).*
+14. ~~**Fonains–Caelestis offset.**~~ *Ruled: Caelestis's present is about five months after Fonains Session 28 and about seven months after the Monolith broke; the Monolith stood six months before Lola's Boys assembled (Korey, 2026-11-07; timeline.json decisions; locations/fonains.html DM notes).*
 15. ~~**Ostekk-6 as sole survivor.**~~ *Ruled: the only active survivor; Ostekk-2 is inert and can be healed.*
 16. ~~**The tracker and session ingest.**~~ *Ruled: the repo record is the tracker and sessions run in chat per prime/docs/SESSION-RUN.md; n8n and the Google Sheet trackers are retired (archived in Drive).*
 18. ~~**How Clint left the Bellwether Crow.**~~ *Ruled (fia-story § The Bellwether Crow): to draw the raiders off his crew, Clint boarded one of their ships and seized it. A color pool opened by chance and took that ship to Fonains, with Clint and its raiders aboard. He may carry an artifact device he knows only as a magic item; whether it is the second Distinction piece is open (dossiers/clint.html).*
@@ -558,7 +558,7 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
 
 ### Timeline (Fonains lane)
 
-done (section 8): the shift (Session 28 at 0, the break at -0.21, the shard at -0.19, V001-V006 between -0.18 and -0.02), the shards, the five-person ritual, the Pedra Ardente and Finerva, Dharra and Rihiri, and Clint's color pool.
+done (section 8): the shift (current values in timeline.json), the shards, the five-person ritual, the Pedra Ardente and Finerva, Dharra and Rihiri, and Clint's color pool.
 
 - **[decide]** Nelson or Nalsa
   The timeline has "Nelson" show the Accordance's champions their gods and name them (S10, "The Accordance chooses Lola's Boys"); factions/deities.html names the Accordance's emissary Nalsa, an androsphinx. Same figure under a table spelling, or two? If the same, the timeline takes Nalsa.
@@ -1194,7 +1194,7 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
 ### crew/gregory.html
 
 - **[later]** Gregory's awakening and why he came
-  Korey (2026-11-07, leaning, not ruled): his awakening was at the Cogfast aurora SA-002 records in Cycle 1489, less than a year before the present, "a little timey-wimey"; he then followed his maker's dream of being a navigator, which is why he came to Caelestis. Not for the FIA. Touches crew/gregory.html.
+  Korey (2026-11-07): his awakening was at the Cogfast aurora SA-002 records in Cycle 1489, two to three years before the present, "a little timey-wimey"; he then followed his maker's dream of being a navigator, which is why he came to Caelestis. Not for the FIA. Touches crew/gregory.html.
   src: Korey, 2026-11-07
 
 - **[decide]** The Sailor gate at the Sea Dock *(prep)*
@@ -1904,6 +1904,10 @@ archived in Drive, not deleted. What stays open here is below.
   src: automation § Open
 
 # Repo and process
+
+- **[decide]** The cycle's length in Toril years
+  `factions/fleet.html` gives a cycle as sixteen Toril months (480 embers, about 1.315 Toril years) and as one and a third Toril years (1.333). `prime/chart/gtc.js` counts 480 embers. The Order's founding (about 1,990 years ago) uses 1.333; at 1.315 it is about 1,961. Pick one and restate the founding. Logged from the dates audit, 2026-11-07.
+  src: dates audit, 2026-11-07
 
 - **[decide]** FIA and DM proper nouns and the spelling list
   `data/vocabulary.js` is the one spelling list, and CLAUDE.md says every new proper noun goes in it. The FIA's names (Dashforest, Tarroway, Verrow, Saltjaw, Cairn, Strake, Hollis, Aethris, Kaldris, Ortholith, the escort ships) are not in it, and adding them there would let the player search suggest gated names. Ruled (Korey, 2026-11-07): no name list goes in CLAUDE.md, and no second list. Options: one list with a gated flag per name that `scripts/spelling.js` skips on the player site and the FIA and DM search pages use; or the FIA and DM searches get no spelling repair and the rule in CLAUDE.md is narrowed to player names. Touches data/vocabulary.js, scripts/spelling.js, restricted/search.html, prime/search.html, CLAUDE.md § Deploy and search.
