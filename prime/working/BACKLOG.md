@@ -37,7 +37,7 @@ staging once Korey has read and accepted them.
 | Factions | factions/ | 12 | 11 | 1 | 0 | 0 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 6 | 1 | 0 | 3 |
 | Dossiers | dossiers/ | 12 | 17 | 0 | 0 | 1 |
-| Crew | crew/ | 10 | 18 | 0 | 0 | 0 |
+| Crew | crew/ | 11 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 5 | 11 | 0 | 18 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **126** | **162** | **25** | **1** | **47** |
+| **Total** |  | **127** | **163** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1118,7 +1118,7 @@ Items whose source sweep is still partial keep their `(sampled)` or
   src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Gregory); realms/index.html § unplaced (old page)
 
 - **[later]** How cadets from worlds without spelljamming reach Caelestis
-  The one route Korey has stated is Sol's: the Watcher order broke protocol to recommend he be taken to Caelestis. The FIA already hints at a route for each PC, with no dedicated intake file (Korey chose scattered hints over one file): WM-006 field referral and protective placement (Sol); SA-002 1486 meteor account by a minor referred to intake (Casey); LG-003 manifest notation, a plasmoid recruited in transit (Boogie); SA-002 1491 two arrivals from an uncatalogued system (Wan and Tu). Gregory arrived on a cargo ship. Bartholomew has no hint.
+  The one route Korey has stated is Sol's: the Watcher order broke protocol to recommend he be taken to Caelestis. The FIA carries one event per cadet that only that cadet would recognise, and says nothing of how any of them reached Caelestis except Sol (Korey, 2026-11-07): WM-006 field referral and protective placement (Sol, by the Order); SA-002 1486 meteor shower (Casey); SA-002 1491 two arrivals from an uncatalogued system who gave no name for home (Wan and Tu); SA-002 1482 two of CON-312's six stars flaring (Bartholomew); SA-002 1489 the Cogfast aurora, one surviving construct later entered intake (Gregory). Boogie has no line; the seal in FR-016 is his link. Gregory arrived on a cargo ship.
   Left: whether there is a general rule. Options: Watcher referral as the general route; several routes (Watcher referral, Fleet recruiters, walk-ins at stations); or a per-cadet answer with no general rule, as the FIA hints already read. Touches crew/index.html, crew/sol.html, and a new Cadet intake page (see the New pages section).
   src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Watcher recruitment for Sol); BCS § Sol/C.R.C. and the scry beats; framework § FIA records (intake hints), § Superseded (no PF-004 intake file); memory-canon campaign-canon § Gregory (cargo ship)
 
@@ -1144,6 +1144,10 @@ Items whose source sweep is still partial keep their `(sampled)` or
   src: section 7 (2026-10-28)
 
 ### crew/casey.html
+
+- **[decide]** Casey's star: one fall or a shower *(lore)*
+  crew/casey.html and dossiers/polly.html say "a star fell on their world"; Korey (2026-11-07, FIA audit) called it a meteor shower that looked like shooting stars, and SA-002's 1486 entry now reads that way with "at least one fall to the surface reported". Settle the crew and dossier wording against it. Outside the FIA area; logged.
+  src: Korey, 2026-11-07
 
 - **[later]** What the first tether at Viren is
   Options: a dying stellar entity; a Zerathis-connected place or person; stellar-touched inhabitants; a rift onto a missing constellation.
@@ -1188,6 +1192,10 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
   src: section 7 (2026-10-28)
 
 ### crew/gregory.html
+
+- **[later]** Gregory's awakening and why he came
+  Korey (2026-11-07, leaning, not ruled): his awakening was at the Cogfast aurora SA-002 records in Cycle 1489, less than a year before the present, "a little timey-wimey"; he then followed his maker's dream of being a navigator, which is why he came to Caelestis. Not for the FIA. Touches crew/gregory.html.
+  src: Korey, 2026-11-07
 
 - **[decide]** The Sailor gate at the Sea Dock *(prep)*
   (A) He truly needs Sailor clearance, and gets in with an escort via Kip or Pik or a sanctioned reason. (B) He only thinks he does, and a service route exists. (C) Hybrid: Rindle has moved the Latchling and Gregory must recalibrate.
