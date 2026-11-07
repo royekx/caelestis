@@ -301,7 +301,7 @@ Old path → new path, added by each pull request that moves a page.
 | `prime/realms/sys04.html` | `prime/locations/krynnspace.html` | Locations (locations) |
 | `prime/realms/first-world.html` | `prime/locations/rykoe.html` | Locations (locations) |
 | `prime/realms/ascension-world.html` | `prime/locations/oerth.html` | Locations (locations) |
-| `prime/realms/tetherbreak.html` | `prime/locations/realmspace.html#perimeter-watch` | Locations (locations) |
+| `prime/realms/tetherbreak.html` | `prime/locations/realmspace.html` | Locations (locations) |
 | `prime/artifacts/runekeepers-fragment.html` | `prime/artifacts/dissolution-fragment.html` | Artifacts and vessels (artifacts) |
 | `prime/artifacts/transformation-fragment.html` | `prime/artifacts/expansion-fragment.html` | Artifacts and vessels (artifacts) |
 | `prime/artifacts/atlas.html#surveyor-depths` | `prime/artifacts/atlas.html#reading-depths` | Artifacts and vessels (artifacts) |

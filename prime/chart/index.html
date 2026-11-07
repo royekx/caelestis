@@ -267,15 +267,15 @@ const CLUSTER = { x:RS[0], y:RS[1], rx:880, ry:600, rot:Math.atan2(TAN[1],TAN[0]
 /* Chart-only facts about each saved system: position, tone, page, routes. */
 const SYS_CHART = {
   "Realmspace": { pos:RS, tone:"#9cc0e0", page:"realmspace.html",
-    travel:`Charted lane to the Astral waystation and on to Virenspace. Charted lanes to Strake Station and Hollis Post, the watch at the system's edge; closed beyond Strake. Long haul to CSC 56973. Uncharted route to Krynnspace.` },
+    travel:`Charted lane to the Astral waystation and on to Virenspace. Charted lanes to Strake Station and Hollis Post, each on a lane of its own. Long haul along the arm to Cairn Station. Long haul to CSC 56973. Uncharted route to Krynnspace.` },
   "CSC 69387": { pos:window.EREVOS.POS.virenspace.map(Math.round), tone:"#c9b3ea", page:"virenspace.html", haze:true,
     travel:`Long haul onward from the Astral waystation. Long haul to CSC 56973.` },
   "CSC 56973": { pos:window.EREVOS.POS.aethris.map(Math.round), tone:"#e2ae7e", page:"aethris.html",
     travel:`Long haul from Realmspace, passing the carved-meteor hub. Long haul to Virenspace.` },
   "CSC 16423": { pos:window.EREVOS.POS.krynnspace.map(Math.round), tone:"#9fe1cb", page:"krynnspace.html",
-    travel:`Uncharted route from Realmspace, far beyond the watch at Realmspace's edge.` },
+    travel:`Uncharted route from Realmspace, inward along the arm.` },
   "CSC 50743": { pos:window.EREVOS.POS.fonains.map(Math.round), tone:"#9fe1cb", page:"fonains.html",
-    travel:`Neighbours Krynnspace, at the far end of the uncharted route from Realmspace. Clint Dashforest reached Fonains through a color pool.` },
+    travel:`Neighbours Krynnspace, at the far end of the uncharted route from Realmspace. Clint Dashforest reached Fonains through a color pool that opened by chance on Cairn's lane.` },
   "Greyspace": { pos:window.EREVOS.POS.greyspace.map(Math.round), tone:"#e2ae7e", page:"oerth.html#greyspace",
     lift: Math.round(window.EREVOS.SYS_Y.greyspace * STEM_K),   /* above the plane: drawn up a stem, as the hearts are */
     travel:`Far across the galaxy and above its plane, over the opposite arm from Realmspace. No lane on Caelestis's charts reaches it.` },
@@ -308,28 +308,23 @@ const SITES = [
     summary:`A cantina that works a circuit of charted lanes.`, dm:[`Drop it wherever the crew is travelling.`] },
   { id:"meteorhub", name:"Carved-meteor hub", icon:"meteor", onLane:["Realmspace","CSC 56973"], t:.5, kind:"Stop on a lane, social hub", page:"meteor-hub.html",
     summary:`A hollowed meteor turned into a gathering place, on the long haul between Realmspace and CSC 56973.` },
-  { id:"tetherbreak", name:"The perimeter watch", icon:"region", r:380, kind:"Fleet watch at Realmspace's edge, on the Tetherbreak bearing", page:"realmspace.html#perimeter-watch",
-    summary:`Strake Station and its sister satellites, Hollis Post and Cairn Station, watch the edge of Realmspace for the Caelestis Sector. The edge run past Strake is closed by standing order SA-005.`,
-    travel:`A charted lane runs from Toril's part of the system out along the Tetherbreak bearing to Strake Station, and is open. Everything beyond Strake is closed without Bridge authorization.`,
-    there:[`Strake Station: a waystation with a small Fleet presence watching the edge, and the last open deck on the run to Cairn. It keeps the staged Cairn approach packet.`,`Cairn Station: silent for a year, after reporting a mass signature that read differently on every sweep. Nobody has been back.`,`<em>Bellwether Crow</em>: relief vessel, ambushed on the edge run past Strake and turned back short of Cairn.`,`M. Tarroway: Strake's cartographer, whose readings were the first hint of something disturbing the satellites.`],
-    dm:[`Vth'oramu was at Cairn. That is the signature in Cairn's final transmission, and the readings made no sense because the thing on the scope was not a vessel. It has since moved, and keeps to the dark between systems.`,`Vocath's crew took Cairn after it went dark and waited there, because a silent Fleet station guarantees a relief run on a single predictable bearing.`] },
-  { id:"strake", name:"Strake Station", icon:"waystation", kind:"Fleet waystation, the perimeter watch", page:"strake-station.html",
-    summary:`The Caelestis Sector's waystation at the edge of Realmspace, directly out on the Tetherbreak bearing, with two sister satellites and a small Fleet presence watching the edge. The last open deck on the run to Cairn. Crewed and operating normally.`,
-    travel:`A charted lane runs from Toril's part of the system to Strake and is open. The edge run continues from Strake to Cairn Station and is closed by standing order SA-005.`,
-    there:[`The staged Cairn approach packet: charts and survey material.`,`Quartermaster Halix Verrow, who counter-signs everything that moves on this bearing.`,`M. Tarroway, station cartographer, whose readings first hinted at something disturbing the satellites.`,`A secure-storage item held indefinitely, its contents classified above the filing's clearance.`],
-    dm:[`Strake is the crew's natural staging point and the last friendly deck before anything happens. Everyone who went out went through here.`,`The unidentified mass Strake reported was Vth'oramu.`,`Tarroway is a thread for the players to piece together rather than a figure they meet; his name surfaces mainly in the Fleet Intelligence Archive.`] },
-  { id:"hollis", name:"Hollis Post", icon:"waystation", kind:"Fleet satellite, the perimeter watch", page:"realmspace.html#hollis-post",
-    summary:`The western satellite of the watch at Realmspace's edge. Crewed, filing normally, and untouched.`,
-    travel:`Charted lane from Toril's part of the system.`, there:[`Files instrument and transit readings on the perimeter rotation, as recorded in FR-005.`] },
-  { id:"cairn", name:"Cairn Station", icon:"waystation", kind:"Fleet satellite, beyond the standing order", page:"cairn-station.html",
-    summary:`The far satellite of the watch at Realmspace's edge, on its own lane running outward from Realmspace along the arm. Small standing complement, filing through Strake. Silent for a year, after reporting something on the long scope whose readings made no sense.`,
-    travel:`Reached along its own lane from Realmspace. Closed by SA-005. Nobody has reached it since the Crow turned back.`,
-    there:[`The station's complement, carried as lost on the evidence of its silence alone.`,`Whatever the Crow was sent to find and never reached.`],
-    dm:[`The sequence: Vth'oramu sat on the bearing for days, which is the signature Cairn reported. Cairn went dark. Vocath's crew came in afterward and took the station.`,`They held it and waited for the relief run, and ambushed the <em>Crow</em> short of arrival for the second Distinction piece. Clint carried the device off through a color pool; a few survivors were let go home.`,`Vocath's crew withdrew after the ambush and left something behind. Build what it is when the crew gets there; the station is not empty.`,`SA-005 still reads as a sensible order about an unexplained hazard, because no one who came back has confirmed anything about the colony.`] },
-  { id:"crow", name:"Bellwether Crow engagement", icon:"incident", onLane:["Realmspace","cairn"], t:.72, kind:"Incident site, the edge run",
-    summary:`The relief vessel <em>Bellwether Crow</em> was engaged here, on the lane out to Cairn, by a small, fast craft bearing Vocath's house mark. Crewmate Clint Dashforest took what the boarders came for and left the ship in one of their craft to draw them off.`,
-    there:[`Clint steered for a color pool he could see opening and went through it. Some of the boarders went after him and some stayed, and enough of them went that the crew fended off the rest. The pool carried him through a small pocket of another dimension and out onto Fonains, in Krynnspace, apart from the boarders who followed him in.`,`A second boarding action followed, by a different party. The senior deck officers and most of the complement were lost. The <em>Crow</em> broke off under damage, made Strake Station and reached Fleet anchorage days behind schedule.`,`Crewmate Joffrey held the survivors together through the withdrawal and brought them off the deck alive. He was decorated on their unanimous account and posted to Caelestis.`,`The survivors still argue about whether Clint meant to go through. In the Fleet, he went overboard.`],
-    dm:[`Vocath's crew wanted the second Distinction piece, which the <em>Crow</em> was carrying. Clint has it, somewhere on Fonains.`,`Clint went through the pool on purpose.`,`The second action was N'ghathrod's colony, shadowing Vocath's ambush as a backup under their arrangement; with the device gone, it took Joffrey instead. The survivors believe every word of his decoration: they were allowed to live so that there would be a story, and he was made its hero.`] }
+  { id:"strake", name:"Strake Station", icon:"waystation", kind:"Fleet station, on a lane of its own", page:"strake-station.html",
+    summary:`A Caelestis Sector station with a small Fleet presence, on its own lane nearer home than Cairn's and off to the side of it. Its long scope reaches Cairn's stretch of lane only at its limit, where it picks up faint, odd returns.`,
+    travel:`A charted lane of its own from Realmspace. Open.`,
+    there:[`M. Tarroway, station cartographer, who found that Strake sees things on Cairn's lane that Cairn does not report. His first filing sent <em>Bellwether Crow</em> to look in on Cairn; his later filings were set aside after its report.`,`Quartermaster Halix Verrow, who files Tarroway's reports up the chain.`],
+    dm:[`Among the returns at the limit of Strake's scope is Vth'oramu, which crosses Cairn's lane now and then. Tarroway's sweeps plate catches it from four angles.`,`Nobody in the colony knows Strake can see that far.`,`Tarroway is a thread for the players to piece together, mainly through the Fleet Intelligence Archive; at its end is a witness who noticed.`] },
+  { id:"hollis", name:"Hollis Post", icon:"waystation", kind:"Fleet post, on a lane of its own", page:"realmspace.html#hollis-post",
+    summary:`An ordinary Fleet post of the Caelestis Sector, on a lane of its own. Crewed and filing normally.`,
+    travel:`A charted lane of its own from Realmspace. Open.`, there:[`Files instrument and transit readings, as recorded in FR-005.`] },
+  { id:"cairn", name:"Cairn Station", icon:"waystation", kind:"Fleet watch post, the Fleet's authority on its lane", page:"cairn-station.html",
+    summary:`A small Fleet watch post with a handful of crew, and the Fleet's authority on its lane, which runs outward from Realmspace along the arm into the sector's outer zone. Its long scope watches the lane, and its reports go to Caelestis and feed the Fleet's charts. Vocath's house holds the Fleet contract for stores on the lane, under its house mark, and its ships call at Cairn.`,
+    travel:`A long haul from Realmspace along its own lane, some weeks out by ordinary helm. Open, with Fleet escorts running it against raiders under SA-005.`,
+    there:[`The same few people serve there year on year, and the lane reads all clear.`,`Cairn took the crippled <em>Bellwether Crow</em> in after the raid and repaired it over some days, and was thanked for it.`,`Visitors feel the place is a little off.`],
+    dm:[`The colony holds Cairn with a pair. The station master is one of N'ghathrod's taken: he writes the reports and keeps the log, and nobody can read his mind. One of Zhauveth's malformed spawn, out of sight, holds the rest of the crew by nearness, deepening over years and fading out of range. It makes no attempt on visitors who will leave.`,`The station master defers the crew's rotation; each signs a waiver and stays.`,`Captives change hands every few weeks on the lane near Cairn, and Zhauveth touches down there now and then. N'ghathrod's taken tell Vocath, through Zhauveth, where the escorts run, and the captive line runs around them.`,`While <em>Crow</em> lay under repair, the station master took Joffrey.`] },
+  { id:"crow", name:"Bellwether Crow raid", icon:"incident", onLane:["Realmspace","cairn"], t:.72, kind:"Incident site, Cairn's lane",
+    summary:`About a year ago the Fleet sent <em>Bellwether Crow</em> to look in on Cairn Station, with Clint Dashforest leading its crew and Joffrey as its junior spelljammer. Here, short of Cairn, it came on raiders mid-handover, captives half moved between two hulls, and the raiders struck.`,
+    there:[`To draw the fight off his crew, Clint boarded one of the raiders' ships and seized it. A color pool opened by chance and took that ship, with Clint and its raiders aboard, to Fonains, in CSC 50743, the system neighbouring Krynnspace.`,`Many of <em>Crow</em>'s crew died. Joffrey took the helm, flew the ship out of the fight and held the survivors together, and was commended. <em>Crow</em> lay days under repair at Cairn and then went home.`,`The crew glimpsed a marking on the raiders' hull. At debrief each survivor drew it differently, and none matched the registry; the drawings stand in WM-002.`,`In the Fleet, Clint went overboard, lost to a color pool.`],
+    dm:[`This was the one raid. The raiders were Vocath's people, handing captives to a colony courier, and the marking is Vocath's personal seal.`,`Strake logged a contact during <em>Crow</em>'s approach, inside Cairn's range; Cairn's own scope log for that watch shows none.`,`The pool opened by chance. Clint got away on Fonains and lost his communication piece; the raiders kept their ship and sending stone, and called Vocath when the Monolith rose and broke.`] }
 ];
 (function placeSites(){
   const s = id => SITES.find(x=>x.id===id);
@@ -337,7 +332,6 @@ const SITES = [
   [s("strake").x, s("strake").y] = at(RS, CLUSTER.ry, 0);
   [s("hollis").x, s("hollis").y] = at(RS, -CLUSTER.ry, 0);
   s("cairn").x = Math.round(RS[0] + mid[0]*1150); s("cairn").y = Math.round(RS[1] + mid[1]*1150);
-  s("tetherbreak").x = Math.round((s("strake").x + s("cairn").x)/2 + mid[0]*80); s("tetherbreak").y = Math.round((s("strake").y + s("cairn").y)/2 + mid[1]*80);
 })();
 const LANES = [
   { a:"Realmspace", b:"CSC 69387", tier:"charted", split:"waystation", bend:[0,0] },
@@ -346,13 +340,12 @@ const LANES = [
   { a:"Realmspace", b:"CSC 16423", tier:"uncharted", bendOut:-160 },
   { a:"Realmspace", b:"strake", tier:"charted", bendOut:0, bendTan:-90 },
   { a:"Realmspace", b:"hollis", tier:"charted", bendOut:0, bendTan:90 },
-  { a:"Realmspace", b:"cairn", tier:"closed", bendOut:260 }
+  { a:"Realmspace", b:"cairn", tier:"long", bendOut:260 }
 ];
 const LANE = {
   charted:{stroke:"#8fe8df", w:6, dash:"", op:.8, label:"Charted lane"},
   long:{stroke:"#8fe8df", w:5, dash:"30 18", op:.65, label:"Long haul"},
-  uncharted:{stroke:"#8fe8df", w:5, dash:"5 18", op:.75, label:"Uncharted route"},
-  closed:{stroke:"#d07070", w:6, dash:"", op:.7, label:"Closed by order"}
+  uncharted:{stroke:"#8fe8df", w:5, dash:"5 18", op:.75, label:"Uncharted route"}
 };
 /* Constellations: regions of Caelestis's sky, numbered by bearing. Drawn as
    bearings out from Realmspace, clockwise from the charting axis (chart up). */
