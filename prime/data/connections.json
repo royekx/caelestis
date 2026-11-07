@@ -2581,11 +2581,11 @@
           "src": "factions/vocath-operation.html"
         },
         {
-          "t": "Vocath's people chased Clint to Fonains, never found him, and came back with fragments of the broken Monolith.",
+          "t": "The color pool took the mercenaries' ship Clint had seized to Fonains, with mercenaries and at least one of Vocath's overseers aboard. They hunted Clint there, and when the Monolith rose and broke they called Vocath by sending stone.",
           "src": "timeline/timeline.json"
         },
         {
-          "t": "Someone from Vocath's crew followed Clint to Fonains, learned about the gems there, and Vocath now trades in them.",
+          "t": "Vocath's trade on Fonains began with that call, and fragments of the broken Monolith come home through his line.",
           "src": "factions/vocath-operation.html"
         },
         {
@@ -2656,7 +2656,7 @@
       "summary": "A decorated Fleet officer, taken by the colony; its only operative on Caelestis.",
       "facts": [
         {
-          "t": "Joffrey was taken in the second boarding of the Bellwether Crow, the colony's backup to Vocath's ambush, by one of N'ghathrod's tadpoles.",
+          "t": "Joffrey was taken at Cairn Station while the Bellwether Crow lay there under repair, by one of N'ghathrod's tadpoles brought up the lane by a colony courier.",
           "src": "dossiers/joffrey.html"
         },
         {
@@ -2726,7 +2726,7 @@
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "It came on Vocath's people mid-handover near Cairn and was raided once; many of its crew died.",
+          "t": "It came on a raider band mid-handover near Cairn, mercenaries in Vocath's hire flying their own colors, and was raided once; many of its crew died.",
           "src": "vessels/bellwether-crow.html"
         },
         {
@@ -2747,15 +2747,19 @@
       "summary": "About a year before now, near Cairn Station: one raid, Clint lost to a color pool.",
       "facts": [
         {
-          "t": "About a year before now Bellwether Crow came on Vocath's people mid-handover near Cairn Station, and they struck to drive it off.",
+          "t": "About a year before now Bellwether Crow came on raiders mid-handover near Cairn Station, and they struck to drive it off. They were mercenaries in Vocath's hire, flying their own colors, with a few of his own crew aboard as overseers.",
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "To draw the fight off his crew, Clint boarded one of their ships and seized it; a color pool opened by chance and took that ship, with Clint and its raiders aboard.",
+          "t": "To draw the fight off his crew, Clint boarded one of their ships and seized it; a color pool opened by chance and took that ship, with Clint and its crew of mercenaries and overseers aboard.",
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "After the raid a wax disc dropped by one of the raiders was found on Crow's deck; its seal matches no registry.",
+          "t": "Crow's survivors saw the band's colors; the Fleet recorded them in WM-002 and runs escorts against that band under SA-005.",
+          "src": "restricted/wm-002.html"
+        },
+        {
+          "t": "After the raid a wax disc was found on Crow's deck, off sealed cargo the raiders carried. It bears Vocath's personal seal, which matches nothing in the Fleet's registry; the seal never flies.",
           "src": "restricted/fr-016.html"
         },
         {
@@ -7115,7 +7119,7 @@
     {
       "s": "vocath-operation",
       "t": "crow-ambush",
-      "rel": "carried out",
+      "rel": "hired the raiders of",
       "src": "vessels/bellwether-crow.html"
     },
     {
