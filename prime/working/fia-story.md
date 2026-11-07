@@ -57,15 +57,17 @@ arrangement with Vocath.
 ### The elder brain, and what the colony lacks
 
 An elder brain is a colony's shared mind, and it lives in a brine pool at the
-colony's heart. Tadpoles grow in that pool for years and eat one another, and
-the elder brain eats most of the rest. What reaches a host is the strongest
-and best formed of the brood. The elder brain also links every illithid of
+colony's heart. Tadpoles grow in that pool for years. Between them, the
+tadpoles eating one another and the elder brain eating them, all but about
+one in a hundred die there. What reaches a host is the strongest and best
+formed of the brood. The elder brain also links every illithid of
 the colony and keeps the knowledge of its dead.
 
 The Vth'orama have no elder brain, and N'ghathrod will not let a tadpole die.
 After all the colony has been through, and the exile above all, nothing eats
 the brood. The tadpoles in the pools still eat one another, as tadpoles do,
-and that alone leaves far more survivors than an elder brain would. Every
+but without the elder brain's share far more of each mass survives than the
+one in a hundred an ordinary colony keeps. Every
 survivor is kept alive in the pools and waits there, for years if it must,
 until it is found a host. The weak and the flawed survive with the rest, so
 an illithid the colony makes is far more likely to come out of
