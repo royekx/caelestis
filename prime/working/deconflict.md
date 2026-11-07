@@ -340,7 +340,7 @@ chat each, each pull request merged before the next starts.
 3. **Build chat: Act 1 and its arcs** (ruling 11): PAGE-GUIDE § 3, every
    arc and level line, the By-arc sections, and STAGING § Act 1 and its arcs.
 4. **Build chats: the remaining Part 2 rows**, one change audit each, and
-   the B to D rulings not yet on pages (13, 17 to 34).
+   the B to D rulings outside the FIA story (13, 17, 18 and 25 to 34).
 5. **Build chat: Part 4**, the cosmetic list.
 6. **Mechanic chat:** the mechanic review of Tarto's stat block (BACKLOG
    § dossiers/boatswain-tarto.html), the hold, the unthinned template.
