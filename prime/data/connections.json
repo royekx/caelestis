@@ -2578,7 +2578,7 @@
           "src": "STAGING round 8"
         },
         {
-          "t": "The same sigil marks the sabotage plates in the Simulation Deck and the brand beneath the neogi's chitin.",
+          "t": "The same seal is on the sabotage rod and on the sealed crate at the Sky Dock. Nobody has checked the neogi crate for it.",
           "src": "campaign/plot-hooks.html"
         },
         {
@@ -2669,7 +2669,7 @@
       "summary": "A Sky Dock hand bribed to let manifests go unchecked.",
       "facts": [
         {
-          "t": "Jeffrey is a Sky Dock hand and Joffrey's friend, paid to let certain manifests go unchecked and crates move at odd hours.",
+          "t": "Jeffrey is a hobgoblin Sky Dock hand and Joffrey's friend. Joffrey pays him to let certain manifests go unchecked and crates move at odd hours; he passed the crate carrying Vocath's seal past Mr. Blip.",
           "src": "dossiers/jeffrey.html"
         },
         {
@@ -3140,7 +3140,7 @@
           "src": "dossiers/boatswain-tarto.html"
         },
         {
-          "t": "She has four superiority dice, regained on a short rest.",
+          "t": "She has five superiority dice, regained on a short rest.",
           "src": "dossiers/boatswain-tarto.html"
         },
         {
@@ -3211,7 +3211,7 @@
           "src": "dossiers/winston-ryeback.html"
         },
         {
-          "t": "The Academy thefts took his custom pistol; the hand cannon is his own gun.",
+          "t": "The Academy thefts took his custom musket; the hand cannon is his pistol, the gun he kept.",
           "src": "dossiers/winston-ryeback.html"
         },
         {

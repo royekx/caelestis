@@ -6,11 +6,11 @@ working layer and process docs. One subject, one row; every path for it sits
 in that row. Paths are under `prime/` unless they start with `data/`,
 `restricted/` or `prime/working/` (written `working/`).
 
-**Counts.** Part 1, Korey decides: 34 · Part 2, decided and waiting: 24 rows ·
-Part 3, working layer cleanup: 80 rows · Part 4, cosmetic: 15.
+**Counts.** Part 1, Korey decides: 24 · Part 2, decided and waiting: 16 rows ·
+Part 3, working layer cleanup: 72 rows · Part 4, cosmetic: 15.
 
 **Summary.**
-- The ten Part 1 questions that touch Voyage 7 are ruled (§ A).
+- The ten Part 1 questions that touch Voyage 7 (§ A) and the V007 rows of Part 2 are on the pages.
 - The biggest Part 2 sweeps are STAGING's two-plans, Vecna's-place and quickening rulings (2026-11-01), still absent from the Vecna and campaign pages.
 - STAGING (2026-11-02) and `working/fia-story.md` (2026-11-07) disagree on the beacon, and STAGING's "Act" wording breaks the retired-term rule.
 - BACKLOG carries about 25 items already done or ruled and about 15 duplicates; two section-table rows miscount.
@@ -22,49 +22,6 @@ Part 3, working layer cleanup: 80 rows · Part 4, cosmetic: 15.
 
 Each item: the question, the options with their sources, and the lean.
 Every quote here was opened and confirmed in the file named.
-
-### A. Voyage 7 at the table: ruled 2026-11-07
-
-Each ruling is what IS. The pages named in the old row for it change in the
-change audit.
-
-1. **Miken's beacon.** Miken planted Qitru's beacon on the tyrant ship during
-   the V006 interlude, a few days after the voyage, when he found the chance.
-   Qitru follows it from then. STAGING's "has not placed" and every page that
-   has him plant it during V006 change to this.
-2. **Mr. Blip and the sealed crate.** Mr. Blip is not implicated. He oversees
-   the dock and knows Vocath's seal on sight, but he does not inspect every
-   cargo, and he never knew that crate carried the seal. The crate came in
-   past him through Joffrey's payment to Jeffrey, the hobgoblin dock hand:
-   that is the Sky Dock exchange the cadets saw (item 16). The crew found the
-   sealed crate at the dock and never looked inside it. The crate they took to
-   Mirt, which held the neogi, is a different crate.
-3. **Where the seal is.** The rod and the dock crate carry the same personal
-   seal, as stated at the table. Nobody checked the neogi crate for a mark;
-   the pages that put Vocath's house mark on the neogi are wrong. If the crew
-   looks harder, the seal is there to find. Other cargo the crew turns up may
-   carry the ordinary house mark, never the seal. Joffrey watches for the seal
-   to know which shipments are Vocath's; the small things Miken needed, the
-   rod and the beacon, came in that way.
-4. **The instructor.** The crew picks by a Discord vote before V007. The vote
-   has not happened yet.
-5. **Tarto's stat block.** The newest version stands: five superiority dice,
-   Clear the Deck cut. A mechanic review checks it, in a mechanic chat.
-6. **Ryeback's stolen weapon** is his musket. He keeps the pistol.
-7. **Tumak and Ryeback.** Tumak said the beholder was taken care of, and
-   Ryeback took it to mean the crew killed it. He does not believe it: he is a
-   seasoned petty officer, and cadets do not kill beholders. Tarto doubts it
-   too. Both let it ride, because there is no harm in it.
-8. **Ezra's hook** is built in session prep. The sealed letter came from
-   somewhere; where is open.
-9. **The tyrant-ship adds.** Helm attunement passes to a willing creature as
-   an action: that is the spelljamming helm's own rule. On H'Catha the danger
-   the cadets face is effectively CR 3 or lower, kept threatening through the
-   instructor, Ezra and Ondessa. The other adds in the old row (Ostekk and the
-   adamantine, Gregory's surge and one-way pull, Vaelorix's motive, the
-   Faelight spore) were not ruled on; they stay open under 9b.
-10. **Tumak's runes.** The Fleet knows nothing of Tumak's runes. The line goes
-    from the Fleet roster.
 
 ### B to D: ruled 2026-11-07
 
@@ -166,16 +123,6 @@ change audit.
 34. **Erevos is a heart:** the heart of the first world destroyed in this
     galaxy, now its black hole. "Heart" stays for Erevos.
 
-**The tyrant-ship adds (9b)**
-
-- Every power after the meteor wants its adamantine, Ostekk among them.
-- Gregory's surge item drops: he felt the source through the suppression at
-  the table.
-- Vaelorix's motive is on his page already: a collector of living things who
-  judged the Engine worth stealing to grow his specimens. The debt to Ostekk
-  stays an unreviewed draft; drop it unless Korey wants it.
-- The Faelight spore: the crew retrieved it from the Garden. Record only.
-
 25. **The Darkest Day held two rituals** doing two different things. One
     bound Giorge to Tharizdun; Vecna was part of it, in league with
     Tharizdun, and it drew attention from the other, the elemental ritual for
@@ -207,13 +154,6 @@ One row per ruling. Each row becomes one change audit.
 
 | # | Ruling | Source and date | Pages that still say the old thing |
 |---|---|---|---|
-| 2.1 **V007** | A Wayfinding mark needs no heart | STAGING § Voyage 007, 2026-11-02 | `cosmology/index.html` § Links and Wayfinding ("attunement requires a heart"); `glossary/index.html` Wayfinding; `factions/runekeepers.html`; `rules/index.html` § Forbiddance, sigils & Wayfind (and the Forbiddance hole paragraph); `dossiers/the-runekeeper.html`; `crew/tumak.html` (his mark on the ship is V007's beat) |
-| 2.2 **V007** | The Fear eye wakes in Make Ready; crossing entry 7 is free | STAGING § Voyage 007, 2026-11-02 | `campaign/voyages/index.html` V007 d8 "7 The Fear eye waking" and Still to decide ("all four eyes work from the start"); `working/README.md` ship-roles row. What replaces entry 7 is a new BACKLOG decide |
-| 2.3 **V007** | The Lantern: Gregory feels it out of the bag; Ostekk needs a device; in the bag nothing feels it | STAGING § Voyage 007, 2026-11-02 | `artifacts/containment-engine.html` (and its Still to decide on the behir); `crew/gregory.html`; `crew/tumak.html`; `dossiers/ostekk.html`; BACKLOG decide "Why the behir could not sense the Lantern" |
-| 2.4 **V007** | Bartholomew's Wilder certification with the Order of All | STAGING § Campaign, 2026-11-02 | `factions/order.html` (nothing on Wilders); `crew/bartholomew.html` (no Order of All). The name surfaces in V007; the record waits until then |
-| 2.5 **V007** | Levels: H'Catha at 4, level 5 at its end and through Graduation, Act 2 at 6 to 10 or 11 | STAGING § Voyage 007, 2026-11-02 (waits on Part 1 #11 for naming) | `campaign/index.html` § Levels and § The close ("party at level 4"); `opposition/vecna.html`, `opposition/vthorama.html` § By arc; `factions/vthorama.html` § Their arc; `factions/runekeepers.html`; `working/campaign-middle.md` § 2d; BACKLOG decide "Arc 1's close and the length of H'Catha" (only session range left), cross-cutting 5 |
-| 2.6 **V007** | The eye-in-a-wheel sketch is not Ezra's hook | BACKLOG § dossiers/ezra.html, Korey 2026-11-06 | `dossiers/ezra.html` Still to decide (names the sketch); `campaign/voyages/index.html` V007 Beats owed and Still to decide ("If Ezra's hook is the sketch") |
-| 2.7 **V007** | The record holds what the crew saw (CLAUDE.md § The record) | CLAUDE.md, standing | `dossiers/zerathis.html` ("Mirt has said nothing about where it came from"; V001 he named Zerathis); `locations/caelestis.html` V002 "Casey worked cargo for Rindle at the Sea Dock" (wrong dock); `campaign/voyages/index.html` V001 Delta withdrawals (V004 and V005, not V003); `crew/bartholomew.html` "in Voyage 3" (say before Voyage 4); `dossiers/boatswain-tarto.html` and `dossiers/saerthe-abizjn.html` Met 1–3, missing V006; `dossiers/boatswain-tarto.html` V003 (Saerthe named the marking; Tarto was not aboard *Foundling*); `dossiers/krik-lit.html` status (relieved at the rendezvous); `dossiers/miken.html` missing V004; `factions/fleet.html` and `working/common-knowledge.md` "belongs to no operational crew" (Ryeback joined in V003); `data/overlay.json` QST-Ok5mB8tz next (objective is done) |
 | 2.8 | The invasion and the eye are two plans; the eye runs on a hidden clock | STAGING, 2026-11-01 | `opposition/vecna.html` Arc 4 "how N'ghathrod's fall stops the casting", § The clock "the clock stands still"; `principles.html` § The clock; `opposition/vthorama.html` Arc 4 "Stopping him is how the casting of Vecna's eye is stopped"; `campaign/index.html` § Shape and § Arc 4; `timeline/timeline.json` events[35] (not on STAGING's list); `dossiers/nghathrod.html` |
 | 2.9 | Vecna's eye is an undercurrent, not the failure state | STAGING, 2026-11-01 | `opposition/vecna.html` intro, § By arc, § Failure state; `dossiers/vecna.html` § His arc; `campaign/index.html` l.16 and § Shape; `chart/index.html` COSMOS.fifths; `timeline/timeline.json` events[11] and threads scene "Failure state"; `hub.html` Vecna card; `principles.html` |
 | 2.10 | The quickening is retired | STAGING, 2026-11-01 | `opposition/vecna.html` § The clock; `factions/discerners.html` § What's hidden and § The Beacon ("arms lighting slightly early"); `factions/fleet.html` (drift paragraph); `data/connections.json`; `chart/gtc.js` toggle; `chart/holo.html` ghost beam; BACKLOG GTC item; add the term to `working/terms.json` |
@@ -227,8 +167,7 @@ One row per ruling. Each row becomes one change audit.
 | 2.18 | Tyrant ship: cut by disintegration; the Engine never drove it; the chair-helm works only in the dais | STAGING § Artifacts, 2026-11-04 | `vessels/tyrant-ship.html` (cause and helm rule missing); `dossiers/vaelorix.html` |
 | 2.19 | V006: the great flower, the root flower and fire; Tumak's lie backed by Enhance Ability and Guidance | STAGING § Voyage 006, 2026-11-04 | `campaign/voyages/index.html` V006 Actual (gives a different account); `crew/bartholomew.html`; `crew/tumak.html` |
 | 2.20 | STAGING play notes and small facts of 2026-11-04 | STAGING § Crew and dossiers, § Rules, § Opposition and Fonains | `crew/bartholomew.html` § Inspirations (Beast Boy, Tony Chopper); `dossiers/crc.html` touchstones; `dossiers/saerthe-abizjn.html` (Kekkaishi, fleet call as rumour); `rules/index.html` § Paracausality (the well); `locations/fonains.html` and `dossiers/nghathrod.html` (Tharizdun never reached the brain); `factions/vthorama.html` (the taken keep old ties); `vessels/vthoramu.html` (a civilization aboard); `factions/cretez.html` and `dossiers/vanifer.html` (Asmodeus has no hand); `locations/fonains.html` (Lola and Eldath, Zaishori out of play); `factions/vocath-operation.html` (thefts took small things); `rules/index.html` inscription (the fragment rebuilding in two halves, STAGING 2026-10-28) |
-| 2.21 | The FIA story is settled | `working/fia-story.md`, 2026-11-07 | Its own touch list, plus pages its Promotes to misses: `dossiers/index.html` summary rows; `locations/caelestis.html`; `dossiers/sor-kur.html`; `opposition/vecna.html`, `dossiers/vecna.html`, `factions/seekers.html`, `glossary/index.html`; `locations/krynnspace.html` ("the watch at Realmspace's edge"); `locations/hcatha.html`; `restricted/disintegration.html` (clearance); `data/connections.json` and `timeline/timeline.json` (PR 2 and PR 3 content); `data/overlay.json` (Miken beacon); `campaign/voyages/index.html` (house mark on V007 cargo; Miken blast "not set"); `dossiers/zhauveth.html`, `dossiers/ithvarn.html`; `crew/bartholomew.html` (FIA hint); `dossiers/jeffrey.html`; `working/terms.json`; `working/glyth-watcher.md`. Waits on Part 1 #1–3, 14–16, 19–24 |
-| 2.22 | Miken placed the rod and caused the blast | fia-story, 2026-11-07; BACKLOG ripple audit, 2026-11-06 | BACKLOG decide l.968; `campaign/voyages/index.html` "Whether Miken caused the simulation blast … is not set"; `dossiers/miken.html` "the beacon is the whole of the sabotage" |
+| 2.21 | The FIA story is settled | `working/fia-story.md`, 2026-11-07 | Its own touch list, plus pages its Promotes to misses: `dossiers/index.html` summary rows; `locations/caelestis.html`; `dossiers/sor-kur.html`; `opposition/vecna.html`, `dossiers/vecna.html`, `factions/seekers.html`, `glossary/index.html`; `locations/krynnspace.html` ("the watch at Realmspace's edge"); `locations/hcatha.html`; `restricted/disintegration.html` (clearance); `data/connections.json` and `timeline/timeline.json` (PR 2 and PR 3 content); `campaign/voyages/index.html` (the V007 cargo carries the ordinary house mark, never the seal); `dossiers/zhauveth.html`, `dossiers/ithvarn.html`; `crew/bartholomew.html` (FIA hint); `dossiers/jeffrey.html`; `working/terms.json`; `working/glyth-watcher.md`. Waits on Part 1 #1–3, 14–16, 19–24 |
 | 2.23 | Rykoe is the centre; the strain is a byproduct, not a weight on one Axiom; two Zeniths on a world are possible | Naming ruling, Korey 2026-10-28; BACKLOG fix Retrofit the five Axioms, Korey 2026-10-26; BACKLOG § Zeniths, Korey 2026-10-28 | `chart/index.html` COSMOS.fifths "where the Axioms meet"; "the center" on `chart/index.html`, `opposition/vecna.html`, `timeline.json`, `connections.json`; `dossiers/astra-virex.html` "the strain on an Axiom"; `glossary/index.html` Zenith "It happens once" |
 | 2.24 | Saerthe is he; Sor'Kur is she | Korey 2026-11-02 (`working/common-knowledge.md`) | `data/npcs.json` Gender null for both (record edit, Korey's call); `dossiers/sor-kur.html` avoids any pronoun while `factions/fleet.html` says "Her" |
 
@@ -240,9 +179,7 @@ One row per ruling. Each row becomes one change audit.
 
 | Entry | Action |
 |---|---|
-| **V007** § Voyage 007: Miken's beacon line | Rewrite or delete after Part 1 #1 |
-| **V007** § Voyage 007: Ezra line | Rewrite after Part 1 #8 |
-| § Voyage 007: "Act 1 holds several arcs" | Rewrite after Part 1 #11 |
+| § Act 1 and its arcs | Lands with the ruling 11 audit |
 | § Two plans: "toward the end of Arc 4" | Renumber after Part 1 #11 |
 | § N'ghathrod l.53 and l.61 (long life) | Rewrite after Part 1 #17 |
 | § N'ghathrod's elder brain ("close to the wreck that carried Tharizdun's temple") | Reword after Part 1 #22 |
@@ -256,16 +193,11 @@ One row per ruling. Each row becomes one change audit.
 
 | Item | Why |
 |---|---|
-| **V007** decide "Miken's beacon" (l.2309) | Closes with Part 1 #1 |
-| **V007** decide "Why the behir could not sense the Lantern" | STAGING 2026-11-02 (the bag) |
-| **V007** decides "What Clear the Deck does"; "His stat block lines" (Ryeback) | Close with Part 1 #5 and #6 |
-| decide Miken caused the blast (l.968) | Ruled (Part 2.22) |
 | Cross-cutting 5 (level bands), 6 (which piece gave long life), 8 (colony as chapter) | Settled by STAGING, the rod page and the Seekers page |
 | Cross-cutting 17 "Open" subsections; "Dossier tab names" (twice) | PAGE-GUIDE § 5 settles both; the tab item states a superseded rule |
 | Retrofit the five Axioms; Residue counts by Axiom; Spheres become galaxies (after one check of survey-core.js and holo.html) | Done |
 | Why Caelestis's sphere holds three fragments; Tymora's misread tenet; chart "Vecna knew"; Sol's oath; Wan and Tu two hosts; Autognome rule in SESSION-RUN; no triple short sentences | Done |
 | Wayfind cost, Wayfind odds, Mishap two sanctuaries (l.1651, 1656, 1661) | Superseded by the redo; delete |
-| decide "Why Vaelorix stole"; Faelight "Also open" | Close with Part 1 #9 |
 | Player record flag 6.3 "autognome" | Answered: stays as history |
 | One purebred stayed (l.482) | Pages and STAGING: all five went with him. Close as "cut the line" |
 | Is the colony a Seekers chapter | Ruled; close |
@@ -308,7 +240,6 @@ One row per ruling. Each row becomes one change audit.
 
 | Draft | Action |
 |---|---|
-| **V007** `ship-roles.md` | Promoted; Open "None". Delete; move the entry-7 question to BACKLOG § campaign/voyages; fix its README row |
 | `fia-story.md` | Run its change audit (Part 2.21) after Part 1. Before promoting, fix: Strake's reach (l.271 "only Cairn's scope" vs l.255 and l.414); "Strake further off" (l.469, 532) vs "nearer home"; drop "perhaps" (l.294); "the network", "Caelestis Fleet" and "the *Crow*" are retired or mismatched in `terms.json`, so name the web of the taken first; Bartholomew's **Proposed** SA-002 1482 line ("the earliest entry" is false, 1481 exists; CON-312 is a constellation number, so give the transient a registry number); give Mirt's belief a basis now that WM-002 loses the hull marking; Zhauveth "end a crew with a word" vs "incapable of violence" (domination is not violence; say so); get "the true-formed" ruled before the rename; three PRs vs "One pull request" (3g) |
 | `tharizdun.md` | Fully promoted; mixed pronouns. Move Open to BACKLOG, delete. Its Darkest Day "bait" line goes with Part 1 #25 |
 | `divine-rules.md` | Stale: "sphere", "the Flow", Reach-born polarity, "Nothing breaks" vs cosmology's destruction; its two Open questions are answered on cosmology. Promote the worship section, rule "Reach debris and worlds", then delete |
@@ -398,22 +329,18 @@ Nothing was dropped outright. These were corrected when the cited file did not m
 This chat has run long; the rest goes to fresh chats, each starting from this
 draft. Rulings 1 to 3 are also written into `working/fia-story.md`.
 
-1. **Build chat, before V007: the V007 rows.** Run caelestis-change-audit on
-   Part 1 § A (rulings 1 to 10) and on the Part 2 rows that touch V007 (marks
-   need no heart; the Fear eye and d8 entry 7; the instructor vote). One pull
-   request, merged before session prep.
-2. **Prep chat: V007.** caelestis-prep at session scale, from the cleaned
+1. **Prep chat: V007.** caelestis-prep at session scale, from the cleaned
    pages. Ezra's hook and the sealed letter are built here (ruling 8).
-3. **Part 1 is ruled** except 14b and 25 to 29, which take a line each.
-4. **Build chats: the rest**, one change audit at a time, in this order:
+2. **Part 1 is ruled** except 14b and 25 to 29, which take a line each.
+3. **Build chats: the rest**, one change audit at a time, in this order:
    Part 3 (the working layer and process docs, so later audits start clean);
    the FIA story (`fia-story.md` § Promotes to, three pull requests); the
    remaining Part 2 rows; Part 4.
-5. **Mechanic chat:** Tarto's stat block (ruling 5), the hold, the unthinned
+4. **Mechanic chat:** the mechanic review of Tarto's stat block (BACKLOG § dossiers/boatswain-tarto.html), the hold, the unthinned
    template.
-6. **Tumak chat (mechanic):** Homebound and the runes (ruling 12), from the
+5. **Tumak chat (mechanic):** Homebound and the runes (ruling 12), from the
    Tumak sweep in the inbox and `crew/tumak.html`.
-7. **Build chat: the DM tools.** BACKLOG § Automation and tracker, "Overhaul
+6. **Build chat: the DM tools.** BACKLOG § Automation and tracker, "Overhaul
    the DM tools": the tracker first, then the Voyages board, the hub, the
    timeline and the overlay. Best after the change audits, so the tools are
    rebuilt against clean pages.

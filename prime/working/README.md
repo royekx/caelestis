@@ -74,7 +74,6 @@ staging is distributed page by page.
 | [glyth-watcher.md](glyth-watcher.md) | The Watcher who came back from Glyth | Sketch |
 | [nct-127.md](nct-127.md) | Neo Constellation Troupe 127, a travelling band; a seed kept off the player side | Sketch |
 | [nexus-field-guide.md](nexus-field-guide.md) | Sources, omissions and stat cross-checks for Peoples and Perils of the Drift | Draft |
-| [ship-roles.md](ship-roles.md) | Review of the ship mechanics run so far, and revised ship roles for the tyrant ship and typical ships | Promoted 2026-11-02 to rules/index.html § Ship & crew, the handouts, and the vessel entries; the V007 crossing table's entry 7 waits on a ruling |
 | [campaign-middle.md](campaign-middle.md) | Building the post-graduation middle: the invasion ladder, fronts, contracts as nodes, cadence | Draft |
 | [common-knowledge.md](common-knowledge.md) | What a cadet would know about each NPC in the player record, sourced and graded, and how it fits the record | Draft; awaits Korey entity by entity |
 | [deconflict.md](deconflict.md) | The 2026-11-07 audit of the whole repo: conflicts to rule on, rulings waiting for their pages, working-layer cleanup | Draft; Part 1 awaits Korey |

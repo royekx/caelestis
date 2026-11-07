@@ -17,22 +17,8 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Campaign
 
-### Bartholomew's Wilder certification (factions/order.html, crew/bartholomew.html)
-- The Order of All certified Bartholomew as a Wilder before he reached Caelestis. It held him for most of a month and taught him to read the first signs of danger in a place: a grove gone silent, a herd moving the wrong way, wildspace that prickles on the skin. A Wilder speaks before others step where they should not.
-- The Wilder certification is joint training between the Order and the Academy. The Order values druids for their natural connection to the world and trains them to read it as an early warning.
-- Bartholomew knows the Order of All by name: his intro names it, and his personnel file carries that intro. He knows what it taught him and that it trains Wilders with the Academy. Its three orders, the All-Father, the Zenith work and the count stay off player pages.
-- The Order of All has no record yet. Bartholomew's intro is his private background, behind his personnel-file veil and out of the player search, so the name has not reached the crew. It gains a record the first time it is named at the table.
-- Play (DM voice): the likely moment is Voyage 007, when Ezra joins the crew. Let the name come out there, at the table, and enter the record after that voyage.
-
-### Voyage 007 and the H'Catha arc: rulings of 2026-11-02 (campaign/voyages/index.html, campaign/index.html, crew/tumak.html, rules/, locations/hcatha.html, vessels/tyrant-ship.html, dossiers/miken.html)
+### Act 1 and its arcs (campaign/index.html, PAGE-GUIDE § 3; waits for the Act 1 audit, deconflict ruling 11)
 - Act 1 holds several arcs: Arc 1 is Orientation, Arc 2 is H'Catha, Arc 3 is Graduation. How arcs inside an Act are numbered or named across the campaign is still open (BACKLOG).
-- Levels: the H'Catha arc runs at level 4 and its ending brings the crew to level 5. Graduation and the rest of Act 1 stay at level 5. Act 2 starts at level 6 and runs to level 10 or 11.
-- The mission is to retrieve a worthwhile load of the meteor's ore, as much as the crew can get, and bring it back. The meteor is large; it cannot be lifted whole or bagged.
-- The Fear eye wakes during the Make Ready downtime before Voyage 007, while the crew tinker with the eyes; by the crossing all four eyes answer. Crossing entry 7 is free for a new entry. Tumak's first Wayfind is no longer tied to the Fear eye.
-- Wayfinding: Tumak can place his mark on a ship, or anywhere he chooses, and Wayfind back to it; a mark needs no heart. He holds a matched rune (Tu's left sole), so he can open a Wayfind now, though it has not yet been revealed to him.
-- The Lantern of Flourishing can be felt by Gregory when it is out of the bag of holding. Ostekk cannot feel it without a device built to track it. While it stays in the bag of holding, nothing feels it.
-- Miken has not placed Qitru's beacon on the tyrant ship. He may plant it so Qitru can track the crew.
-- Ezra needs no hook of his own on the crossing; at most he mentions something in passing.
 
 ### The invasion and the eye are two plans (opposition/vecna.html, opposition/vthorama.html, campaign/index.html, dossiers/nghathrod.html)
 - N'ghathrod's invasion and Vecna's eye are separate plans. Vecna strings them together: the worlds he steers the colony toward are worlds the eye needs, so each conquest opens and links hearts for the figure. N'ghathrod wants worlds for his people and a home; Vecna wants the figure.
