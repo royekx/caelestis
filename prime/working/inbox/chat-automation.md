@@ -102,8 +102,8 @@ Coverage note: all 13 turns read. Tool-call bodies (file writes, edits) were ski
 ### Voyage 005 canon (from Korey's corrections)
 - Title is "Retreat Is Always an Option". The draft "Running Can Be an Option" was rejected. — **in repo**
 - Ryeback is a hippogriff. — **conflicts**. `voyages/voyage-005.html` says "Ryeback, the hippogriff", but `data/npcs.json` says "Petty Officer Winston Ryeback, a giff". "Hippogriff" may be a voice-to-text garble of "a giff". Korey should confirm.
-- Ostekk-6 simply states he is an automaton ("I am a unit… An automaton."). The overheard-autognome framing was cut. — **in repo**
-- Boogie cast sacred flame to open the flowers during his fall. — **in repo** (V005: "Boogie called on his faith, and holy fire flared down")
+- Ostekk-6 simply states he is an automaton ("I am a unit… An automaton."). The overheard-autognome framing was cut. — **retired** (2026-11-07 transcript audit: the line was never said at the table; removed from the repo)
+- Boogie cast sacred flame to open the flowers during his fall. — **retired** (2026-11-07 transcript audit: the fire was Miken's; the repo says so)
 - Vaelorix: Ostekk-6's beholder master. He floated between decks, and his central eye still cancels magic on the Command Deck. — **in repo**
 - Vaelorix's status is Deceased. This was Claude's default and Korey did not confirm it. — **in repo** (`data/npcs.json` Status Deceased)
 - There were nine Ostekk units, and the clockwork horrors destroyed nearly all of them. Ostekk-8 and Ostekk-4 were found in pieces. — **in repo**

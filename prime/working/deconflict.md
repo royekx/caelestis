@@ -258,7 +258,7 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 Nothing was dropped outright. These were corrected when the cited file did not match:
 
 - STAGING's long-life line reads "comes from his taken … tithed upward"; the words "not from the piece" are on `artifacts/rod-of-seven-parts.html`, not STAGING (#17).
-- `locations/fonains.html` says the Monolith broke "a few months ago", not "2–3 months" (#23).
+- `locations/fonains.html` said the Monolith broke "a few months ago", not "2–3 months" (#23); since 2026-11-07 it rose "a little over a year ago" and broke about seven months ago.
 - `locations/wayfinders-homeworld.html` uses "the Lunarfoot Runekeeper" as an example of the clan name, not as a claim about the order (#27).
 - BACKLOG fix l.974 says `crew/tumak.html` carries "outright"; the page follows the record (#7).
 - The working audit lists the "seated Lantern is a pod" tracker fix as done; "safehouse" is still in `data/overlay.json` (3c, 2.16).

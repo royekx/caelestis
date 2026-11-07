@@ -28,12 +28,6 @@
           "Boogie set it on the table for the crew; Tumak remarked that things had been going missing all over the academy",
           "Revealed to be the same model as the miniature spelljamming ship stolen from Saerthe"
         ]
-      },
-      {
-        "number": 3,
-        "bullets": [
-          "Still in Boogie's chest beside the derelict logbook when he woke from his dream"
-        ]
       }
     ],
     "seen": [
@@ -86,7 +80,7 @@
       "Type": "Garment",
       "Held By": "Tumak Swan",
       "Origin": "Taken from Mirt's wardrobe",
-      "Overview (Player)": "A shirt Casey stole from Mirt's wardrobe and etched with the unfamiliar constellations he glimpsed inside it. It now sits hidden in Tumak's curtained bunk corner.",
+      "Overview (Player)": "A shirt Casey stole from Mirt's wardrobe and etched with the unfamiliar constellations he glimpsed inside it. It now sits in Tumak's bag of holding.",
       "Status": "Held",
       "Class": "Mundane",
       "Item Type": "Wondrous Item",
@@ -97,7 +91,7 @@
         "number": 1,
         "bullets": [
           "Casey stole a shirt from Mirt's wardrobe and etched into it the constellation pattern he saw beyond",
-          "Passed to Tumak's hidden bunk corner without explanation, and hidden without question"
+          "Passed to Tumak, who learned it came from Mirt's closet and stowed it in his bag of holding"
         ]
       }
     ],
@@ -378,7 +372,7 @@
           "Gregory pried it from the wall of the wrecked simulation chamber, a length of sigil-engraved metal that arced energy as it came loose",
           "Built to feed on ambient magical energy and hold the charge until it could no longer contain it — arcane dynamite",
           "Assessed as spent and unlikely to detonate again, save near another strong source of magic",
-          "Bears Vocath's seal, two hands passing coins; Saerthe took it and drew it back before Boogie could examine it",
+          "Bears Vocath's seal, two hands passing coins; Saerthe took it and drew it back before Sol could examine it",
           "Saerthe produced an illusion of it for Mirt at the bridge"
         ]
       }
@@ -428,7 +422,7 @@
       {
         "number": 3,
         "bullets": [
-          "A crate Boogie found tucked behind others at the Sky Dock, marked with the same seal as the Vocath rod",
+          "A crate Sol found, with Boogie's help, tucked behind others at the Sky Dock, marked with the same seal as the Vocath rod",
           "Knocking on it revealed nothing living inside, but it was not hollow",
           "Its contents would route through Mr. Blip, with Toril and H’Catha as destinations; no one came for it while the crew watched"
         ]
@@ -550,7 +544,7 @@
       {
         "number": 3,
         "bullets": [
-          "Boogie confirmed it still rests in his chest beside the half-ship"
+          "Boogie drew it from his chest after his dream and found half of it missing, as if eaten"
         ]
       }
     ],
