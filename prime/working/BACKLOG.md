@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 13 | 14 | 6 | 0 | 2 |
+| Cosmology | cosmology/, glossary/, chart/ | 13 | 15 | 6 | 0 | 2 |
 | Locations | locations/ (Fonains stays in its own section) | 18 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 13 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
@@ -43,9 +43,9 @@ staging once Korey has read and accepted them.
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 3 | 0 | 0 |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 9 | 13 | 1 | 0 | 2 |
-| **Total** |  | **128** | **161** | **29** | **1** | **48** |
+| **Total** |  | **128** | **162** | **28** | **1** | **48** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -231,6 +231,10 @@ Order under each page: decide, fix, drop, add.
   src: timeline.json (before section 8); section 8 (C9)
 
 ### chart/index.html
+
+- **[later]** Make the chart's constellations real, from Casey's Stellar Chart
+  The chart's constellations are bearings from Realmspace with drawn glyphs. Casey's Stellar Chart (his crew page's companion tab) is used mostly for role-play, and it is the source: the map follows Casey's chart, never the other way round. Rebuild the chart's constellations from it, and keep CON numbers, bearings and the stars Casey reads in step.
+  src: Korey, 2026-11-07
 
 - **[fix]** H'Catha note
   Note says "Beholder toroid ruled by rival hives. The Spire took an adamantine meteor strike." Change to: "Beholder toroid ruled by ten solitary beholder rulers under the Sovereign Eye. An adamantine meteor struck the Spindle. Fourteen days out." Beholders follow 5e (solitary, paranoid); the 2e hive lore is rejected.
@@ -1919,10 +1923,6 @@ archived in Drive, not deleted. What stays open here is below.
 
 - **[later]** Skills by DM practice, not by campaign
   The caelestis-* skills (story logic, table readiness, prep, mechanic review, change audit) are Korey's DM practice, not Caelestis's. Before a second campaign uses them, split each into the method, named for the practice and shared across campaigns, and the campaign's specifics (paths, anchors such as Fonains-first, voice, check commands), kept in that campaign's CLAUDE.md or one campaign reference the skills read. Repo setup and voice stay per campaign.
-  src: Korey, 2026-11-06
-
-- **[fix]** Move Realmspace on the chart *(build)*
-  Realmspace moves to midway along arm 0 (about t = 1.65; now 2.1) in `prime/chart/galaxy.js` and `prime/chart/index.html`. Cairn Station goes on a lane outward along the arm; Strake on its own lane nearer home, off to the side. Virenspace and Aethris move with Realmspace. Rerun `tools/eye-fit.js`, check the eye, and swap any mark that no longer lands for a nearer system on the arm. Rewrite the perimeter-watch text on the chart and the Realmspace page. Full placement: `fia-story.md` § Cairn Station.
   src: Korey, 2026-11-06
 
 - **[fix]** Ripple audit
