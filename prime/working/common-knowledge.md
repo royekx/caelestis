@@ -79,7 +79,7 @@ Gender: Female (record has none; she is "she" in every account).
 | Draws on bulkheads with a charcoal-stained ring: charts, boarding plans, gone by the next watch. | dossier/boatswain-tarto | High |
 | Known for the line "Listen to what I tell you; it might just save your life." | dossier/boatswain-tarto, fleet | High |
 | Wears a leather band on her wrist that matches Saerthe's. | dossier/boatswain-tarto | High |
-| The bands date from the loss of Clint Dashforest, who went overboard from the *Bellwether Crow*. | dossier/boatswain-tarto, fleet | Medium |
+| The bands date from the loss of Clint Dashforest, who went overboard from *Bellwether Crow*. | dossier/boatswain-tarto, fleet | Medium |
 | She once had the helm of a ship and gave it up. | dossier/boatswain-tarto (Personality) | Medium |
 
 ### Captain Sardax
@@ -114,9 +114,9 @@ Gender: Male (record has none).
 |---|---|---|
 | An officer of the Caelestis Corps, the Fleet's branch for the sector, and not Academy staff. | dossier/joffrey, fleet | High |
 | Was top of his class. | dossier/joffrey | High |
-| Decorated for bringing the survivors of the *Bellwether Crow* home after the ship was ambushed, about a year ago, on their unanimous account. | dossier/joffrey, fleet | High |
-| Posted to Caelestis after the *Crow*, and risen on merit since; cadets know him and instructors trust him. | dossier/joffrey, fleet | High |
-| The *Crow* had gone out to learn why Cairn Station stopped answering. | dossier/joffrey (Background), fleet | Hold: Cairn is a live thread. |
+| Decorated for taking the helm of *Bellwether Crow* when it was raided, about a year ago, and bringing the survivors home, on their unanimous account. | dossier/joffrey, fleet | High |
+| Posted to Caelestis after *Crow*, and risen on merit since; cadets know him and instructors trust him. | dossier/joffrey, fleet | High |
+| *Crow* had gone out to look in on Cairn Station. | dossier/joffrey (Background), fleet | Hold: Cairn is a live thread. |
 
 The record's `Affiliation(s)` stays "Caelestis Academy", the place he is posted (Korey, 2026-11-02); the first row carries the Corps.
 
@@ -235,7 +235,7 @@ No common knowledge. A landless beholder of H'Catha, met dead.
 | Fact | Source | Confidence |
 |---|---|---|
 | A mercane merchant of long standing in the trade around Realmspace, head of a trading house. | dossier/vocath | Hold: known in the trade, and the crew has only his name. |
-| His house mark is a balance scale, coins on one pan and cargo on the other. | dossier/vocath | Hold: the record calls it a word on the rod; this is a reveal. |
+| His personal seal is a balance scale, coins on one pan and a crate on the other. His house mark, on the Fleet's stores contract, is public. | dossier/vocath | Hold the seal: the record calls it a word on the rod; this is a reveal. |
 
 ### Winston Ryeback
 Gender: Male (already set).

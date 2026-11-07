@@ -24,7 +24,7 @@ Vecna already has a ladder: "What the crew can learn, in order" on the Vecna opp
 - **Rung 1, one hand behind unrelated jobs.** Odd local incidents share a buyer or a cause.
   - Clues: the beacon-cut crystal buyer at Lane Marker 14. The surveyors on Anadia, whose eyes are wrong in a child's drawing. The clockwork horrors' resonance-cores come from the same crystal line. Gregory hums near all of it.
 - **Rung 2, people are being replaced and stay themselves.**
-  - Clues: a missing person who comes back fine but wrong. Someone who never takes off their gloves. Three officials who all arrived the same year. Joffrey's body and his one word, "Oramu" (if captured or killed at the Fork). The Bellwether Crow survivor.
+  - Clues: a harbourmaster who goes missing for a week and comes back fine but wrong. Someone who never takes off their gloves. Three officials who all arrived the same year. Joffrey's body and his one word, "Oramu" (if captured or killed at the Fork). The Bellwether Crow survivor.
 - **Rung 3, they are searching worlds for one specific place.**
   - Clues: the Anadia well chamber (a failed survey for the Atrium). Digs at a world's deepest points. Scholars and archivists who go missing. A.T.L.A.S. readings (State B2). Sites already worked by the time the crew arrives (State A).
 - **Rung 4, it is an illithid operation with ships and a supply line.**
@@ -135,7 +135,7 @@ Board one is the graduation board already in BACKLOG ("NEW: Contract board"). Ev
 - Surface: recover the skiff at Toril's orbital market.
 - Undertow: the moneylender also holds Miken's fiancé's debts.
 - Lead: the log "ties to the Fork".
-- [Proposal: in State A, the log records the ship Joffrey escaped on. In State B, it shows a ship shadowing the Bellwether Crow a year earlier.] This becomes a Rung 2 or Rung 4 clue.
+- [Proposal: in State A, the log records the ship Joffrey escaped on. In State B, it shows a colony courier on Cairn's lane in the days Bellwether Crow lay there under repair, a year earlier.] This becomes a Rung 2 or Rung 4 clue.
 
 **Watcher Transport (Tied: the Order)**
 - Surface: take Ezra to the Hall of the Watchers.

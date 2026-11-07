@@ -34,8 +34,8 @@ Every quote here was opened and confirmed in the file named.
     one full rune, which gives the immediate Wayfind. The pages saying
     "Homebound is a Wayfind to the Heart" wait for that chat.
 
-**N'ghathrod, Vocath and the FIA story** (also written into
-`working/fia-story.md`)
+**N'ghathrod, Vocath and the FIA story** (on the pages through the FIA audit,
+PRs #166 to #169)
 
 14. **The thefts: three insiders, one hub.** Joffrey tracks shipments that
     carry Vocath's seal and handles what comes in; he leaves the rod where
@@ -132,8 +132,8 @@ Every quote here was opened and confirmed in the file named.
 
 ### Still open in Part 1
 
-- **14b.** Who the thief is, and who recruited them: carried to
-  `working/fia-story.md` § Open. Not for this draft.
+- **14b.** Who the thief is, and who recruited them: in BACKLOG
+  § opposition/vthorama.html. Not for this draft.
 
 ## Part 2: Already decided, waiting to be carried out
 
@@ -141,11 +141,11 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 
 | # | Ruling | Source and date | Pages that still say the old thing |
 |---|---|---|---|
-| 2.11 | The voice came in the centuries after the exile | STAGING § N'ghathrod, 2026-10-26 | `factions/vthorama.html` § History (answered right after the crash); `timeline/timeline.json` events[56] and scenes[3] "Vecna answers his call" |
-| 2.14 | The colony's captives come through Vocath's line | `opposition/vthorama.html`, `dossiers/zhauveth.html`, `dossiers/vocath.html`; fia-story, 2026-11-07 | `factions/vthorama.html` § Operations ("through raiding and the neogi"). The two Vth'orama pages duplicate paragraphs; keep the operation on the opposition page and the people on the faction page |
+| 2.11 | ~~The voice came in the centuries after the exile~~ | Done | FIA audit, PRs #166 to #169 |
+| 2.14 | ~~The colony's captives come through Vocath's line~~ | Done | FIA audit, PRs #166 to #169 |
 | 2.15 | Residue scale and residue housings | STAGING § Cosmology and § Artifacts, 2026-11-04 | `cosmology/index.html` § Residue and the fragments; `artifacts/index.html` § Holdings and § Why they are scattered and hidden |
-| 2.20 | STAGING small facts of 2026-11-04 | STAGING § Opposition and Fonains | `locations/fonains.html` and `dossiers/nghathrod.html` (Tharizdun never reached the brain); `factions/vthorama.html` (the taken keep old ties); `vessels/vthoramu.html` (a civilization aboard); `factions/vocath-operation.html` (thefts took small things): FIA audit. `factions/cretez.html` and `dossiers/vanifer.html` (Asmodeus has no hand); `locations/fonains.html` (Lola and Eldath, Zaishori out of play): cosmos audit |
-| 2.21 | The FIA story is settled | `working/fia-story.md`, 2026-11-07 | Its own touch list, plus pages its Promotes to misses: `dossiers/index.html` summary rows; `locations/caelestis.html`; `dossiers/sor-kur.html`; `opposition/vecna.html`, `dossiers/vecna.html`, `factions/seekers.html`, `glossary/index.html`; `locations/krynnspace.html` ("the watch at Realmspace's edge"); `locations/hcatha.html`; `restricted/disintegration.html` (clearance); `data/connections.json` and `timeline/timeline.json` (PR 2 and PR 3 content); `campaign/voyages/index.html` (the V007 cargo carries the ordinary house mark, never the seal); `dossiers/zhauveth.html`, `dossiers/ithvarn.html`; `crew/bartholomew.html` (FIA hint); `dossiers/jeffrey.html`; `working/terms.json`; `working/glyth-watcher.md`. Waits on Part 1 #1–3, 14–16, 19–24 |
+| 2.20 | ~~STAGING small facts of 2026-11-04~~ | Done | FIA audit, PRs #166 to #169 |
+| 2.21 | ~~The FIA story is settled~~ | Done | FIA audit, PRs #166 to #169 |
 
 ---
 
@@ -155,8 +155,8 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 
 | Entry | Action |
 |---|---|
-| § N'ghathrod l.53 and l.61 (long life) | Rewrite after Part 1 #17 |
-| § N'ghathrod's elder brain ("close to the wreck that carried Tharizdun's temple") | Reword after Part 1 #22 |
+| § N'ghathrod l.53 and l.61 (long life) | Done (FIA audit) |
+| § N'ghathrod's elder brain ("close to the wreck that carried Tharizdun's temple") | Done (FIA audit) |
 | § N'ghathrod's elder brain; § Cre'Tez | Narrow to what is not yet on the page (FIA and cosmos audits) |
 
 ### 3b. BACKLOG.md: close
@@ -209,7 +209,7 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 
 | Draft | Action |
 |---|---|
-| `fia-story.md` | Pre-fixes done (2026-11-07): "bearers" and "unthinned" dropped, the true-formed are the whole illithids' own name and N'ghathrod calls every illithid Vth'orama; Mirt reads the hull marking in WM-002 himself; SA-002 keeps CON-312 and needs no transient number. Then run its change audit (Part 2.21). The fixes were: Strake's reach (l.271 "only Cairn's scope" vs l.255 and l.414); "Strake further off" (l.469, 532) vs "nearer home"; drop "perhaps" (l.294); "the network", "Caelestis Fleet" and "the *Crow*" are retired or mismatched in `terms.json`, so name the web of the taken first; Bartholomew's **Proposed** SA-002 1482 line ("the earliest entry" is false, 1481 exists; CON-312 is a constellation number, so give the transient a registry number); give Mirt's belief a basis now that WM-002 loses the hull marking; Zhauveth "end a crew with a word" vs "incapable of violence" (domination is not violence; say so); get "the true-formed" ruled before the rename; three PRs vs "One pull request" (3g) |
+| `fia-story.md` | Done: pre-fixes in PR #165, change audit in PRs #166 to #169, draft deleted |
 | `divine-rules.md` | Stale: "sphere", "the Flow", Reach-born polarity, "Nothing breaks" vs cosmology's destruction; its two Open questions are answered on cosmology. Promote the worship section, rule "Reach debris and worlds", then delete |
 | `nct-127.md`, `common-knowledge.md` | Keep |
 
@@ -268,7 +268,7 @@ Nothing was dropped outright. These were corrected when the cited file did not m
 ## Handoff
 
 This chat has run long; the rest goes to fresh chats, each starting from this
-draft. Rulings 1 to 3 are also written into `working/fia-story.md`.
+draft.
 
 Every item below closes before V007 prep. Chats are grouped by area: the
 items in one chat share pages, so each page is rewritten once. Each pull
@@ -277,12 +277,16 @@ request merges before any later work reads its pages.
 
 1. ~~**Build: the cosmos.**~~ Done: on the pages through PRs #163 and #164,
    `divine-rules.md` deleted.
-2. **Build: the FIA story.** The pre-fixes in 3e, then `fia-story.md`
-   § Promotes to in three pull requests, with 2.11, 2.14, 2.20's Vth'orama
-   lines, 2.21, rulings 17 and 18, the house mark and personal seal across
-   the Vocath pages, and the BACKLOG items moot after it. Also seen in the
-   cosmos audit: Clint "on purpose" through the color pool (`cosmology/index.html`,
-   `chart/index.html`), and Fonains "in Krynnspace" in the chart's Crow entry.
+2. ~~**Build: the FIA story.**~~ Done: pre-fixes in PR #165, the change
+   audit in PRs #166 (the colony), #167 (Cairn, Strake, *Crow* and the FIA)
+   and #169 (people and threads); `fia-story.md` deleted. Rulings of that
+   chat: "bearers" and "unthinned" retired (the malformed; the true-formed
+   are the whole illithids' own name, which N'ghathrod rejects); the raid's pirates
+   sail two ships under crossbones, the main one known by her hull, and
+   Vocath's overseer wore his seal for the handover (FR-016 draws it from
+   the survivors); Boogie's
+   FIA line is a plain intake note in LG-003; Hollis Post stays; Verrow is Strake's quartermaster;
+   the Temple of Moloch broke off with Thessalar's laboratory.
 3. **Mechanic: Tarto, the hold, the malformed, and Homebound.** Tarto's
    mechanic review (BACKLOG § dossiers/boatswain-tarto.html), the hold, the
    malformed template, then Homebound and the runes (ruling 12) from the
@@ -295,7 +299,7 @@ request merges before any later work reads its pages.
    and the rebuilt tools. Ezra's hook, the sealed letter and crossing entry
    7 are built here (ruling 8, BACKLOG § campaign/voyages).
 
-Not blocking V007: the thief (14b, open in `fia-story.md`).
+Not blocking V007: the thief (14b, in BACKLOG § opposition/vthorama.html).
 
 Delete this draft when every item is closed.
 
@@ -307,4 +311,4 @@ the working layer. Delete this draft when every item is closed.
 
 ## Open
 
-Part 1 is closed. The thief (14b) is open in `fia-story.md`; Homebound has its own chat (ruling 12).
+Part 1 is closed. The thief (14b) is open in BACKLOG; Homebound has its own chat (ruling 12).

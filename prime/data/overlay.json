@@ -204,5 +204,36 @@
       "dossier": "crew/tumak.html"
     }
   },
-  "lanes": []
+  "lanes": [
+    {
+      "id": "DM-cairn-handovers",
+      "name": "Captive handovers on Cairn's lane",
+      "kind": "operation",
+      "state": "running",
+      "dossier": "locations/cairn-station.html",
+      "voyages": [
+        {
+          "number": 6,
+          "beats": [
+            "Every few weeks Vocath's people hand captives to a colony courier on the lane near Cairn. Escort routes, passed on by N'ghathrod's taken through Zhauveth, keep the line clear of the Fleet."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DM-zhauveth-cairn",
+      "name": "Zhauveth's visits to Cairn",
+      "kind": "operation",
+      "state": "running",
+      "dossier": "dossiers/zhauveth.html",
+      "voyages": [
+        {
+          "number": 6,
+          "beats": [
+            "Zhauveth touches down at Cairn now and then to make the colony's deals with Vocath's people. Her malformed spawn holds the station's crew between visits."
+          ]
+        }
+      ]
+    }
+  ]
 }

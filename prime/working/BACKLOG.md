@@ -35,8 +35,8 @@ staging once Korey has read and accepted them.
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 13 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 0 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 4 | 1 | 0 | 3 |
-| Dossiers | dossiers/ | 13 | 17 | 0 | 0 | 1 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 7 | 1 | 0 | 3 |
+| Dossiers | dossiers/ | 12 | 18 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 18 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 8 | 1 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 4 | 11 | 0 | 18 |
@@ -44,8 +44,8 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 2 | 0 | 0 |
-| Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 13 | 1 | 0 | 2 |
-| **Total** |  | **126** | **160** | **25** | **1** | **47** |
+| Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
+| **Total** |  | **125** | **162** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -67,7 +67,7 @@ Each settles items on several pages at once. Rule these first.
 14. ~~**Fonains–Caelestis offset.**~~ *Ruled: Caelestis's present is level with Fonains Session 28, two to three months after the Monolith broke (STAGING § Timing; locations/fonains.html DM notes).*
 15. ~~**Ostekk-6 as sole survivor.**~~ *Ruled: the only active survivor; Ostekk-2 is inert and can be healed.*
 16. ~~**The tracker and session ingest.**~~ *Ruled: the repo record is the tracker and sessions run in chat per prime/docs/SESSION-RUN.md; n8n and the Google Sheet trackers are retired (archived in Drive).*
-18. ~~**How Clint left the Bellwether Crow.**~~ *Ruled (fia-story § The Bellwether Crow): to draw the raiders off his crew, Clint boarded one of their ships and seized it. A color pool opened by chance and took that ship to Fonains, with Clint and its raiders aboard. He may carry an artifact device he knows only as a magic item; whether it is the second Distinction piece is open (fia-story § Clint on Fonains).*
+18. ~~**How Clint left the Bellwether Crow.**~~ *Ruled (fia-story § The Bellwether Crow): to draw the raiders off his crew, Clint boarded one of their ships and seized it. A color pool opened by chance and took that ship to Fonains, with Clint and its raiders aboard. He may carry an artifact device he knows only as a magic item; whether it is the second Distinction piece is open (dossiers/clint.html).*
 19. ~~**Keep or cut Tarroway.**~~ *Ruled: keep him as a thread, mainly in the archive; cut the timing tables.*
 
 ## Answered from the sources (review)
@@ -112,6 +112,7 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - `data/locations.json` (H'Catha) says the world is "watched by beholder patrols"; `locations/hcatha.html` keeps the watch at the domain borders and leaves orbit to ordinary traffic. Add a DM line on what the crew has not yet seen, or correct the record if Korey agrees.
 - `data/npcs.json` has Gender null for Saerthe Abizjn and Sor'Kur. Saerthe is he and Sor'Kur is she (their dossiers). Fill both if Korey agrees.
 - `data/sessions.json` V006 has no line for the V006.5 interlude, which `voyages/voyage-006.html` carries. Add one in the V007 run if Korey agrees.
+- The Sky Dock bribe: `data/locations.json` (Sky Dock, V001) and `data/quests.json` (two quests, V001 and one Overview) say "a dock officer" took a bribe, two of them "from a merchant". At the table the cadets saw a Sky Dock hand take a bribe; Tumak later named Joffrey as the payer, and Mirt named the hand, Jeffrey, a hobgoblin dock hand (fia-story; dossiers/jeffrey.html). `data/npcs.json` says the party "has not yet encountered" Jeffrey, but they saw him in V001 without his name. Fix in the V007 run if Korey agrees.
 
 ## Still coming in
 
@@ -799,6 +800,14 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ### opposition/vthorama.html
 
+- **[later]** The thief
+  The third insider steals, and Joffrey uses the thief to learn where things are kept at Caelestis and the Brig's protocols. Neither the thief nor Miken knows the other exists, and nothing either knows points at Joffrey. Who the thief is, and who recruited them, is open; it matters when the crew is back at Caelestis.
+  src: fia-story § Open (deconflict 14b)
+
+- **[later]** Who keeps the colony's history
+  Proposed in the FIA story: the eldest of the old illithids who joined N'ghathrod keeps the colony's history. Rule it when the colony's people are built out.
+  src: fia-story § One with N'ghathrod (proposed)
+
 - **[decide]** The network's defences
   Once the crew learns of the links, Vecna and N'ghathrod guard the hearts that carry several links, and Oerth's heart above all. What the safeguards are.
   src: Korey, 2026-10-29
@@ -815,6 +824,10 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 ---
 
 ### campaign/voyages/index.html
+
+- **[later]** The look of Vocath's house mark *(prep)*
+  The balance scale is his personal seal. His house mark, the public trade mark on the Fleet's stores contract, has no look yet, and the V007 cargo carries it. Set it in V007 prep.
+  src: FIA audit, 2026-11-07
 
 - **[fix]** A board table spills past its panel
   On the Voyages board one of the tracker tables overflows its container at the side. Contain it (wrap or scroll inside the panel) at desktop and phone widths.
@@ -953,13 +966,13 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   The one-shot gives only Clint's own answer: he wants "money… for some information that you need to get." Nothing names the information. Set it, or leave it as Fonains business (Clint's present stays on Fonains).
   src: chat-cosmic-campaign-structure § Open; scratchpad fonains_notes/12.md § Oneshot 03 (NPCs)
 
-- **[decide]** How the Monolith fragments reached Boogie in time
-  Vocath's people chased Clint to Fonains, never found him, and came back with fragments of the broken Monolith through Vocath's line; one ended up in Boogie before his first voyage with the crew (artifacts/fonains-shard.html). Clint landed about a year before the present, before the Monolith appeared; the Monolith broke two to three months before the present (STAGING § Timing). Rule how long Vocath's people stayed on Fonains and how they came back, or move a date. Touches: dossiers/clint.html, artifacts/fonains-shard.html, factions/vocath-operation.html, crew/boogie.html, the timeline.
-  src: section 5 (2026-10-28); STAGING § Timing; artifacts/fonains-shard.html
-
 - **[later]** Clint's species, his finger, and whether he is trying to get back
   His species is not set; neither is how he lost his ring finger or whether he is trying to return to Caelestis. These wait until a meeting is wanted; his present stays Fonains business.
   src: dossiers/clint.html; section 5 (2026-10-28)
+
+- **[later]** Did Clint land before or after the Fonains Monolith rose?
+  Confirm against what, if anything, the Fonains one-shot said. It determines only how and when Vocath answered the overseer's call.
+  src: Korey, 2026-11-07
 
 ---
 
@@ -1268,7 +1281,7 @@ left here is open.
 ### artifacts/second-distinction-piece.html
 
 - **[later]** The second Distinction piece's catalogue name
-  Named the second Distinction piece (Korey, 2026-10-28; the page moved from artifacts/atlas-sister.html). Say whether the Fleet catalogued it under a name of its own as it did A.T.L.A.S. (Astral Topographic Lithic Augury System). Its look, its maker, how it shows what it finds, why the Bellwether Crow was carrying it, and whether Clint still has it are on the page as Still to decide.
+  Named the second Distinction piece (Korey, 2026-10-28; the page moved from artifacts/atlas-sister.html). Say whether the Fleet catalogued it under a name of its own as it did A.T.L.A.S. (Astral Topographic Lithic Augury System). Its look, its maker, how it shows what it finds, where it is now, and whether it is the device Clint carries are on the page as Still to decide.
   src: section 4 plan
 
 ### artifacts/expansion-fragment.html, artifacts/determination-fragment.html
@@ -2022,10 +2035,6 @@ rulings went to STAGING. Each lists the pages it touches.
 - **later** What brought Saerthe from Nimbral to Caelestis. dossiers/saerthe-abizjn.html.
 - **later** The Fleet's institutional history of named enemies and defeats. factions/fleet.html.
 - **later** Does a Seekers chapter plant a notice on the graduation board, and what does it say? NEW: Contract board.
-- **later** How Vocath's crew knew the Bellwether Crow carried the second Distinction piece. vessels/bellwether-crow.html.
-  Waits on: the FIA story audit
-- **later** Did Mirt and Caelestis learn the piece was the target, and is that why security tightened and A.T.L.A.S. went into the Brig? artifacts/atlas.html, dossiers/mirt.html.
-  Waits on: the FIA story audit
 - **later** The Fonains dragons' departure as a prequel one-shot. locations/fonains.html.
 - **later** Companion tabs for Boogie, Gregory and Sol, like the other three crew pages. registry/crew-manifest/.
 

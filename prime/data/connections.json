@@ -1804,8 +1804,8 @@
       "summary": "A second Distinction housing; it seems to find magic items and truly finds Reach artifacts.",
       "facts": [
         {
-          "t": "The second Distinction piece is housed in a device, which Caelestis held.",
-          "src": "STAGING round 10"
+          "t": "The second Distinction piece is housed in a device.",
+          "src": "artifacts/second-distinction-piece.html"
         },
         {
           "t": "On the surface it finds magic items; its true use is finding Reach artifacts.",
@@ -1814,10 +1814,6 @@
         {
           "t": "Where it is now is open; it may be the device Clint carries without knowing it.",
           "src": "artifacts/second-distinction-piece.html"
-        },
-        {
-          "t": "Clint carried it through the color pool, and it is somewhere on Fonains.",
-          "src": "STAGING round 10"
         }
       ]
     },
@@ -2544,7 +2540,7 @@
           "src": "dossiers/vocath.html"
         },
         {
-          "t": "His trade line has been moving colony material for years.",
+          "t": "His line has supplied the colony's captives for years, in exchange for what the taken know.",
           "src": "dossiers/vocath.html"
         },
         {
@@ -2552,8 +2548,8 @@
           "src": "dossiers/vocath.html"
         },
         {
-          "t": "His mark is a private house mark: a balance scale, coins against cargo.",
-          "src": "STAGING round 8"
+          "t": "His personal seal is a balance scale, coins against a crate; his house mark is public.",
+          "src": "dossiers/vocath.html"
         },
         {
           "t": "He used the Fleet's thinning to put stress on the Academy.",
@@ -2561,6 +2557,14 @@
         },
         {
           "t": "He sees the Fleet stretched thin and uses it to press the Academy.",
+          "src": "dossiers/vocath.html"
+        },
+        {
+          "t": "He signs grudges, never crimes against the Fleet: Fleet ships, cargo and contracts. He counts the Academy as Mirt's, which is why the rod carries his seal.",
+          "src": "dossiers/vocath.html"
+        },
+        {
+          "t": "His overseer called him by sending stone as soon as the pool set the taken ship down on Fonains, and told him Clint died in the hunt. He believes his witness is dead.",
           "src": "dossiers/vocath.html"
         }
       ]
@@ -2573,7 +2577,7 @@
       "summary": "A mercane trading house running a private grudge against Mirt, with a second principal it knows nothing of.",
       "facts": [
         {
-          "t": "The thefts, the sabotage plates, the leverage on Miken and the marked crates at the Sky Dock are Vocath's work.",
+          "t": "The sabotage, the leverage on Miken and the sealed crates at the Sky Dock are Vocath's work, through Qitru.",
           "src": "factions/vocath-operation.html"
         },
         {
@@ -2585,6 +2589,14 @@
           "src": "factions/vocath-operation.html"
         },
         {
+          "t": "The Academy thefts took small things: station property, personal effects and Saerthe's miniature ship.",
+          "src": "factions/vocath-operation.html"
+        },
+        {
+          "t": "Vocath's line supplies the colony's captives, handed over on the lane near Cairn.",
+          "src": "factions/vocath-operation.html"
+        },
+        {
           "t": "Qitru serves Vocath and does not care who stands above him.",
           "src": "factions/vocath-operation.html"
         }
@@ -2592,26 +2604,26 @@
     },
     {
       "id": "vocath-house-mark",
-      "label": "Vocath's house mark",
+      "label": "Vocath's marks",
       "type": "concept",
       "scope": "caelestis",
-      "summary": "Vocath's private house mark.",
+      "summary": "Vocath's public house mark and his unregistered personal seal.",
       "facts": [
         {
-          "t": "Vocath's house mark is a balance scale with coins on one pan and cargo on the other; it is his own merchant mark, so the Fleet registry has no entry for it.",
-          "src": "factions/vocath-operation.html"
+          "t": "His house mark is the public trade mark of the family business, on the Fleet's stores contract for Cairn's lane.",
+          "src": "dossiers/vocath.html"
         },
         {
-          "t": "The crates at the Sky Dock carry it.",
-          "src": "STAGING round 8"
+          "t": "His personal seal is a balance scale with coins on one pan and a crate on the other; it is registered nowhere.",
+          "src": "dossiers/vocath.html"
         },
         {
-          "t": "The same seal is on the sabotage rod and on the sealed crate at the Sky Dock. Nobody has checked the neogi crate for it.",
-          "src": "campaign/plot-hooks.html"
+          "t": "The seal is on the sabotage rod, the Sky Dock crate, the small crate Boogie opened and the crates aboard his hired pirates' ships. His overseer puts it on at a handover to show the pirates whom he speaks for; Crow's survivors saw it on him in the raid (FR-016). It is on the neogi crate too, unchecked.",
+          "src": "dossiers/vocath.html"
         },
         {
-          "t": "Anyone who trades in the right circles reads it on sight.",
-          "src": "factions/vocath-operation.html"
+          "t": "Mirt's trusted circle knows the seal on sight: Saerthe, Tarto, Mr. Blip, and Clint.",
+          "src": "dossiers/vocath.html"
         }
       ]
     },
@@ -2641,6 +2653,10 @@
         {
           "t": "She pursues Vocath's aim, to make the cadet mission fail; Miken is her channel.",
           "src": "dossiers/qitru.html"
+        },
+        {
+          "t": "Joffrey answers to her in name; she told him about Miken.",
+          "src": "dossiers/qitru.html"
         }
       ]
     },
@@ -2649,27 +2665,31 @@
       "label": "Joffrey",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A decorated Fleet officer, taken by the colony; its only operative on Caelestis.",
+      "summary": "A commended Fleet officer, taken by the colony at Cairn Station; its only operative on Caelestis.",
       "facts": [
         {
-          "t": "Joffrey was taken at Cairn Station while the Bellwether Crow lay there under repair, by one of N'ghathrod's tadpoles brought up the lane by a colony courier.",
+          "t": "Joffrey, junior spelljammer of Bellwether Crow, took the helm in the raid and held the survivors together.",
           "src": "dossiers/joffrey.html"
         },
         {
-          "t": "The few survivors were let go so that he would come home a hero, and they believe every word of their account.",
-          "src": "locations/cairn-station.html"
+          "t": "During Crow's days of repair at Cairn, the station master took him with one of N'ghathrod's copies; it carried no directive about A.T.L.A.S.",
+          "src": "dossiers/joffrey.html"
         },
         {
           "t": "He is the colony's only operative on the station, and his allegiance runs to N'ghathrod.",
           "src": "dossiers/joffrey.html"
         },
         {
-          "t": "His reports to Vocath have never contained a lie; he withholds only that A.T.L.A.S. is the point.",
+          "t": "In name he answers to Qitru, Vocath's intermediary; in fact N'ghathrod runs him through Zhauveth.",
+          "src": "dossiers/joffrey.html"
+        },
+        {
+          "t": "His reports to Qitru have never contained a lie; he keeps from her that A.T.L.A.S. is the point.",
           "src": "opposition/vthorama.html"
         },
         {
-          "t": "He found the Brig and told Vocath it was there.",
-          "src": "opposition/vthorama.html"
+          "t": "He is the hub of three insiders: he handles Vocath's sealed shipments, leaves the rod for Miken, and learns the Brig through the thief.",
+          "src": "dossiers/joffrey.html"
         },
         {
           "t": "He means to take A.T.L.A.S. from the Brig under cover of the graduation chaos.",
@@ -2680,11 +2700,11 @@
           "src": "dossiers/joffrey.html"
         },
         {
-          "t": "He was taken slowly: for months he was himself, and he finished converting only recently.",
+          "t": "He turned over some months, not a year, and keeps part of himself.",
           "src": "dossiers/joffrey.html"
         },
         {
-          "t": "One survivor of the Crow noticed he had changed and never reported it.",
+          "t": "One survivor of Crow noticed he had changed and never reported it.",
           "src": "dossiers/joffrey.html"
         }
       ]
@@ -2697,7 +2717,7 @@
       "summary": "A Sky Dock hand bribed to let manifests go unchecked.",
       "facts": [
         {
-          "t": "Jeffrey is a hobgoblin Sky Dock hand and Joffrey's friend. Joffrey pays him to let certain manifests go unchecked and crates move at odd hours; he passed the crate carrying Vocath's seal past Mr. Blip.",
+          "t": "Jeffrey is a hobgoblin Sky Dock hand and Joffrey's friend. Joffrey paid him to pass the crate carrying Vocath's seal; it came in under Mr. Blip's oversight without his knowing.",
           "src": "dossiers/jeffrey.html"
         },
         {
@@ -2769,30 +2789,30 @@
       "label": "Clint Dashforest",
       "type": "person",
       "scope": "fonains",
-      "summary": "A Caelestis crewmate of the Bellwether Crow who went through a color pool and landed on Fonains.",
+      "summary": "A Fleet crewmate who led Bellwether Crow's crew; a color pool took the pirate ship whose helm he had taken, and he landed on Fonains.",
       "facts": [
         {
-          "t": "Clint took the second Distinction piece and left the Crow in one of the boarders' craft to draw them off.",
+          "t": "The raiders were two pirate ships in Vocath's hire, with Vocath's overseer, the one paying them, aboard the smaller. To draw the fight off his crew, Clint went aboard the smaller ship and took its helm.",
           "src": "dossiers/clint.html"
         },
         {
-          "t": "He steered for a color pool he saw opening and went through it on purpose.",
+          "t": "A color pool opened by chance and took that ship, with Clint, the overseer and its pirates aboard.",
           "src": "dossiers/clint.html"
         },
         {
-          "t": "The pool carried him through a pocket of another dimension and spat him out on Fonains, apart from the boarders who followed.",
+          "t": "On Fonains the overseer and the pirates with him hunted him for a while; he got away and lost his means of reaching Caelestis.",
           "src": "dossiers/clint.html"
         },
         {
-          "t": "He reached Fonains before its Monolith appeared.",
-          "src": "timeline/timeline.json"
+          "t": "He knows Vocath's seal on sight and went aboard the smaller ship with the overseer who wore it: what he saw is the proof Mirt lacks.",
+          "src": "dossiers/clint.html"
         },
         {
           "t": "He works as a bounty hunter out of Orerius, with a crew called the Six Shooters.",
           "src": "dossiers/clint.html"
         },
         {
-          "t": "His laser pistol is the only piece of Caelestis on Fonains.",
+          "t": "His laser pistol is the first on Fonains; in wildspace they are common enough.",
           "src": "dossiers/clint.html"
         },
         {
@@ -2800,11 +2820,15 @@
           "src": "dossiers/clint.html"
         },
         {
-          "t": "He landed about a year before the present and was on Fonains when its Monolith appeared.",
+          "t": "He landed about a year before the present. The overseer told Vocath that Clint died in the hunt.",
           "src": "dossiers/clint.html"
         },
         {
           "t": "On the Blooming Glass job his crew freed Chloe Chespetes and handed the Pedra Ardente to Finerva.",
+          "src": "dossiers/clint.html"
+        },
+        {
+          "t": "He may carry an artifact device he knows only as a magic item; whether it is the second Distinction piece is open.",
           "src": "dossiers/clint.html"
         }
       ]
@@ -2817,8 +2841,8 @@
       "summary": "A cadet friend of the crew, leveraged by Vocath's crew; he does not flip.",
       "facts": [
         {
-          "t": "A mercane recruited Miken by paying his fiancé's debts.",
-          "src": "dossiers/miken.html"
+          "t": "Qitru recruited Miken with money enough to set up him and his fiancé, and told him the rod would only spoil the drill.",
+          "src": "dossiers/qitru.html"
         },
         {
           "t": "He planted a beacon aboard the crew's ship so Qitru could follow them.",
@@ -3097,7 +3121,7 @@
           "src": "cosmology/index.html"
         },
         {
-          "t": "The thefts, the sabotage and Vocath's grudge are noise over one objective: A.T.L.A.S. in the Brig.",
+          "t": "Three insiders work against Caelestis with Joffrey at the hub; his one objective is A.T.L.A.S. in the Brig.",
           "src": "locations/caelestis.html"
         }
       ]
@@ -3110,15 +3134,15 @@
       "summary": "Headmaster of Caelestis Academy, in a long feud with Vocath.",
       "facts": [
         {
-          "t": "Mirt knows the house mark is Vocath's and cannot prove it in a filing.",
+          "t": "Mirt read WM-002 and FR-016, the seal Crow's survivors described, and knows Vocath's seal on sight. He knows Vocath is connected to the raid but not how far; the seal is registered nowhere, so he cannot prove it.",
           "src": "dossiers/mirt.html"
         },
         {
-          "t": "He backed the closure of the run past Strake so nobody else would die there while he handles Vocath his own way.",
+          "t": "Clint was his friend.",
           "src": "dossiers/mirt.html"
         },
         {
-          "t": "The closure is how Joffrey walked onto his station unexamined.",
+          "t": "He keeps quiet because a grudge seen to cost the Fleet would end his place at Caelestis.",
           "src": "dossiers/mirt.html"
         },
         {
@@ -3165,6 +3189,10 @@
         {
           "t": "When the CRC comes for Sol, she stands up for him.",
           "src": "dossiers/boatswain-tarto.html"
+        },
+        {
+          "t": "She knows Vocath's personal seal on sight.",
+          "src": "dossiers/boatswain-tarto.html"
         }
       ]
     },
@@ -3192,7 +3220,11 @@
           "src": "dossiers/saerthe-abizjn.html"
         },
         {
-          "t": "He was not aboard the Bellwether Crow when Clint went overboard, and carries the guilt of it.",
+          "t": "He was not aboard Bellwether Crow when Clint went overboard in the raid, and carries the guilt of it.",
+          "src": "dossiers/saerthe-abizjn.html"
+        },
+        {
+          "t": "He knows Vocath's personal seal on sight.",
           "src": "dossiers/saerthe-abizjn.html"
         }
       ]
@@ -3205,7 +3237,7 @@
       "summary": "The telepathic thri-kreen administrator.",
       "facts": [
         {
-          "t": "The access record that shows Joffrey's route to the Brig runs through Sor'Kur's desk.",
+          "t": "Sor'Kur's access record shows the thief working closer to the Brig over months; nothing in it ties the route to Joffrey.",
           "src": "dossiers/sor-kur.html"
         },
         {
@@ -3411,10 +3443,6 @@
         {
           "t": "The creatures in the crate were neogi hatchlings, bound by an outside hand.",
           "src": "campaign/voyages/index.html"
-        },
-        {
-          "t": "Sigils etched beneath the neogi's chitin match the sabotage plates.",
-          "src": "campaign/plot-hooks.html"
         }
       ]
     },
@@ -3426,7 +3454,7 @@
       "summary": "A crate bearing Vocath's mark.",
       "facts": [
         {
-          "t": "The crates at the Sky Dock carry Vocath's house mark.",
+          "t": "The crates at the Sky Dock carry Vocath's personal seal.",
           "src": "STAGING round 8"
         }
       ]
@@ -3439,7 +3467,7 @@
       "summary": "The spent rod from the simulation chamber.",
       "facts": [
         {
-          "t": "The rod carries Vocath's house mark.",
+          "t": "The rod carries Vocath's personal seal.",
           "src": "factions/vocath-operation.html"
         }
       ]
@@ -4456,8 +4484,8 @@
           "src": "artifacts/fonains-shard.html"
         },
         {
-          "t": "It came from Fonains through Vocath's Cairn Station line, and Boogie took it from a shipment.",
-          "src": "timeline/timeline.json"
+          "t": "Shortly before Voyage 1, before Boogie came to the Academy as a late intake, he pried open one of the small crates Vocath ships the shards in, one shard to a crate under his personal seal, and this shard collapsed into him.",
+          "src": "artifacts/fonains-shard.html"
         }
       ]
     },
