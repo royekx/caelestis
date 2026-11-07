@@ -173,6 +173,11 @@ proper noun. Settled:
 `prime/working/`. Deliberation lives in drafts and BACKLOG; STAGING and pages
 state what is. Rules: `prime/working/README.md`.
 
+- **An alternative replaces.** When Korey offers an alternative to a ruling
+  or a proposal, list what it replaces before writing anything: each old
+  fact, and every page, draft or record line that holds it. Wait for his yes.
+  Then remove the old version everywhere, and logic-check what depends on it
+  (the caelestis-story-logic skill).
 - **A ruling is done when every page it touches says it.** A draft, the
   inbox or STAGING is where a ruling waits, not where it lives. When a
   subject settles, run a change audit (the caelestis-change-audit skill): search `prime/`, `restricted/`, `data/`,
