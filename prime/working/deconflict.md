@@ -191,13 +191,15 @@ change audit.
     Tharizdun corrupted it, and the party on Fonains destroyed it. Large
     pieces remain there; smaller ones were picked up, and those are what
     Vocath's people trade.
+26. **Vecna ascended about a thousand years ago**, some five hundred years
+    before N'ghathrod's capture. The figure can move if the story needs it.
+    `timeline.json` (t −900) and the "a few centuries" pages change.
 33. Muriel is confirmed; the Accordance's six are on `factions/deities.html`.
 
 ### Still open in Part 1
 
-- **26.** When Vecna ascended: `timeline.json` has t −900; the pages say "a
-  few centuries". Korey gives a figure.
-- **14b.** Who the thief is, and who recruited them. Not for this draft.
+- **14b.** Who the thief is, and who recruited them: carried to
+  `working/fia-story.md` § Open. Not for this draft.
 
 ## Part 2: Already decided, waiting to be carried out
 
@@ -422,4 +424,4 @@ the working layer. Delete this draft when every item is closed.
 
 ## Open
 
-Part 1: 26 (Vecna's ascension date) and 14b (the thief, elsewhere). Homebound has its own chat (ruling 12).
+Part 1 is closed. The thief (14b) is open in `fia-story.md`; Homebound has its own chat (ruling 12).

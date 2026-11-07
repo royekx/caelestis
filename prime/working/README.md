@@ -18,8 +18,10 @@ inbox/  →  drafts  →  BACKLOG.md  →  STAGING.md  →  pages under prime/
 2. **Drafts** (`*.md` in this folder) are where a subject is argued out. Each
    ends with **Promotes to** and **Open**. One subject, one draft: its
    rulings, its touch list (Promotes to) and its open questions live in it,
-   never in a companion file. When the change audit has carried it to the
-   pages, the draft is deleted.
+   never in a companion file. A draft whose work runs across several chats
+   ends with a **Handoff** section: the next chats in order, each with the
+   line that opens it. When the change audit has carried it to the pages,
+   the draft is deleted.
 3. **BACKLOG.md** lists everything still to rule on or fix, grouped by the page
    it lands on: facts missing from a page, page lines that are wrong or stale,
    open calls, and retired material to drop.

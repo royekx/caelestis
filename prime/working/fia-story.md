@@ -471,7 +471,7 @@ perfectly, week after week. Tarroway's first filing sent the *Crow*; the
 | Boogie | FR-016 | The inspecting party was reassigned to cadet intake |
 | Casey | SA-002 1486 | A star fell on an uncharted world; an account by a minor was referred to intake |
 | Gregory | SA-002 1489 | Cogfast constructs woke; one entered intake |
-| Bartholomew | SA-002 1482 | **Proposed:** cycle 1482, the earliest entry, on a settled world of the Caelestis Sector left unnamed in the entry: a two-point stellar transient, catalogued CON-312, held for under a minute; the same night, a local report of a child who fell from a height and walked away. Status Open. |
+| Bartholomew | SA-002 1482 | **Proposed:** cycle 1482, on a settled world of the Caelestis Sector left unnamed in the entry: two stars that flared together in the shape of constellation CON-312, held for under a minute; the same night, a local report of a child who fell from a height and walked away. Status Open. |
 
 ## File changes
 
@@ -567,7 +567,7 @@ Strake further off; the FIA rebuilds and the clearance fix; the chart move.
 |---|---|
 | `restricted/lg-003.html`, `wm-002.html`, `sa-005.html`, `fr-005.html` | rebuilt |
 | `restricted/fr-016.html`, `wm-003.html`, `fr-022.html`, `wm-006.html`, `sa-002.html` | changed in place |
-| `restricted/index.html`, `restricted/files.html` | clearance; summaries |
+| `restricted/index.html`, `restricted/files.html`, `restricted/disintegration.html` | clearance ("Bridge clearance" on the last); summaries |
 | `prime/locations/cairn-station.html`, `strake-station.html`, `realmspace.html`, `astral-sea.html`, `ondrel-anchorage.html`, `index.html` | Cairn, Strake, Hollis, the old perimeter watch |
 | `prime/vessels/bellwether-crow.html`, `index.html`, `flighty-foundling.html`, `moonraider.html` | the *Crow* |
 | `prime/dossiers/tarroway.html`, `verrow.html`, `krik-lit.html` | Strake, Tarroway |
@@ -616,5 +616,7 @@ how stations talk to Caelestis, which other posts the taken hold.
   deepens each day spent near it, and fades out of range. Build it in a
   mechanic chat.
 - **The mouse's power:** what the experiment gave it.
+- **The thief:** the third insider, and who recruited them. Matters when the
+  crew is back at Caelestis.
 - **The other enna's offspring:** only Zhauveth's is set. What the other
   four's tadpoles become waits until one is needed.
