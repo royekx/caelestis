@@ -24,12 +24,3 @@ when a ruling changes; delete it once the page carries it. See
 
 ### Boarding Vth'oramu (vessels/vthoramu.html, dossiers/nghathrod.html)
 - Play (DM voice): if the crew boards Vth'oramu, run the colony as a civilization. Families, children born aboard, trades and streets fill the interior, and most of the people there never chose N'ghathrod's war. Any plan to destroy the ship or end him has to weigh that cost. Touchstone: the Red Moon dilemma in Critical Role's third campaign.
-
-### The Cre'Tez at the table (factions/cretez.html, dossiers/vanifer.html)
-- Asmodeus has no hand in Vanifer's work. The pact's terms keep him from seeing what the line does, but he knows someone inside it is betraying it.
-- Play (DM voice): the players know the Cre'Tez are tiefling through Asmodeus's pact. They do not know the line began as fire genasi.
-- Play (DM voice): Asmodus began as a player's creation at the Lola's Boys table. In the world his name honours Asmodeus, whose pact binds the family.
-
-### Fonains people (locations/fonains.html)
-- Lola Lolita Bacon worships Eldath. Her pilgrimage to the Misty Vale was to Eldath's tree.
-- Play (DM voice): Zaishori, met in Plague of the UnVanished, was a player's character from another table and appeared for rule of cool. Zaishori stays out of future play.

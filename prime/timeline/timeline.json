@@ -87,7 +87,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The Accordance seals the Princes",
-      "desc": "Six gods, Asmodeus, Eldath, Muriel and Ryujin among them, help forge four weapons and seal the four Princes of Elemental Evil on Fonains, with the weapons as their keys. The fire genasi who become the Cre'Tez guard the fire key from then on.",
+      "desc": "Six gods seal the four Princes of Elemental Evil on Fonains with four weapons as their keys. Futsunushi makes each key with a partner god: Tinderstrike with Asmodeus, Windvane with Eldath, Ironfang with Ryujin, Drown with Muriel. The fire genasi who become the Cre'Tez guard the fire key from then on.",
       "t": -12000,
       "tier": 1
     },
@@ -171,7 +171,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The fire genasi war over Imix",
-      "desc": "A sect tries to summon Imix. The few who resist call for help; Asmodeus gives them Tinderstrike to seal him. Imix must be forgotten, and over generations the line turns tiefling: the Cre'Tez. Chloe Chespetes is trapped in the lab she flooded with lava.",
+      "desc": "A sect tries to summon Imix. The few who resist call for help; Asmodeus binds Tinderstrike, kept since the sealing, to their blood, and they seal him. Imix must be forgotten, and over generations the line turns tiefling: the Cre'Tez. Chloe Chespetes is trapped in the lab she flooded with lava.",
       "t": -350,
       "tier": 1
     },
@@ -1359,7 +1359,7 @@
       {
         "t": -350,
         "status": "past",
-        "title": "Asmodeus gives the fire genasi Tinderstrike to seal Imix; the Cre'Tez line begins",
+        "title": "Asmodeus binds Tinderstrike to the fire genasi to seal Imix; the Cre'Tez line begins",
         "who": [
           "The Accordance",
           "Tharizdun and the Princes",

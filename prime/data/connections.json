@@ -929,7 +929,7 @@
           "src": "STAGING round 5"
         },
         {
-          "t": "He likely knows something is wrong in the cosmos.",
+          "t": "He knows something is wrong in the cosmos.",
           "src": "STAGING round 5"
         }
       ]
@@ -4595,7 +4595,7 @@
       "summary": "The fire key, bound to the Cre'Tez blood.",
       "facts": [
         {
-          "t": "Asmodeus gave Tinderstrike to the few fire genasi who resisted Imix, and bound the key to their blood.",
+          "t": "Futsunushi made Tinderstrike with Asmodeus for the Accordance; Asmodeus later bound it to the blood of the few fire genasi who resisted Imix.",
           "src": "locations/fonains.html#keys"
         },
         {
@@ -5346,7 +5346,7 @@
       "summary": "About twelve thousand years ago the Accordance sealed the Princes.",
       "facts": [
         {
-          "t": "The six gods of the Accordance helped forge four weapons and sealed the Princes with them as keys.",
+          "t": "The six gods of the Accordance sealed the Princes with four weapons as keys; Futsunushi made each key with a partner god.",
           "src": "locations/fonains.html#princes"
         }
       ]
@@ -5359,7 +5359,7 @@
       "summary": "About three and a half centuries ago Imix was sealed again.",
       "facts": [
         {
-          "t": "A fire genasi sect tried to summon Imix, and Asmodeus gave the few who resisted Tinderstrike.",
+          "t": "A fire genasi sect tried to summon Imix, and Asmodeus bound Tinderstrike to the blood of the few who resisted.",
           "src": "factions/cretez.html"
         }
       ]

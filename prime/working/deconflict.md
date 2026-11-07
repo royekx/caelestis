@@ -275,13 +275,14 @@ items in one chat share pages, so each page is rewritten once. Each pull
 request merges before any later work reads its pages.
 
 
-1. **Build: the cosmos.** Rulings 27 to 34, 2.15, the cosmology and Fonains
-   lines of 2.20, `divine-rules.md` (promote the worship section, rule "Reach
-   debris and worlds", delete), and Part 4's cosmology, chart and glossary items.
+1. ~~**Build: the cosmos.**~~ Done: on the pages through PRs #163 and the
+   Fonains follow-up, `divine-rules.md` deleted.
 2. **Build: the FIA story.** The pre-fixes in 3e, then `fia-story.md`
    § Promotes to in three pull requests, with 2.11, 2.14, 2.20's Vth'orama
    lines, 2.21, rulings 17 and 18, the house mark and personal seal across
-   the Vocath pages, and the BACKLOG items moot after it.
+   the Vocath pages, and the BACKLOG items moot after it. Also seen in the
+   cosmos audit: Clint "on purpose" through the color pool (`cosmology/index.html`,
+   `chart/index.html`), and Fonains "in Krynnspace" in the chart's Crow entry.
 3. **Mechanic: Tarto, the hold, the unthinned, and Homebound.** Tarto's
    mechanic review (BACKLOG § dossiers/boatswain-tarto.html), the hold, the
    unthinned template, then Homebound and the runes (ruling 12) from the
@@ -303,55 +304,6 @@ Delete this draft when every item is closed.
 Part 2 rows run as change audits (caelestis-change-audit), grouped by area
 in the Handoff. Part 1 answers become rulings in this draft, then change audits. Part 3 is done in place on
 the working layer. Delete this draft when every item is closed.
-
-### Handoff 1: the cosmos
-
-**Change list.** What each ruling replaces, so the old phrasing can be searched for.
-
-| # | What IS | Replaces |
-|---|---|---|
-| 27 | The Runekeepers are several clans of the homeworld, not all halflings; Lunarfoot is one. Carrying the fragment passes from clan to clan in a cycle, and the order knew it would fall to Lunarfoot this time | "a small, hidden order"; "a halfling world"; "Halfling clans"; "Whether the Runekeepers are one people … is not set" |
-| 28 | A Zenith can come naturally, and every Zenith anyone has recorded was a magical exaltation | "Many Zeniths come with nobody's hand behind them; worlds simply reach their moments"; "some is simply worlds reaching their moments" |
-| 29 | Tharizdun corrupted Fonains's Monolith, the only one ever to carry her crystal. Large pieces remain on Fonains; the smaller ones were picked up, and those are what Vocath's people trade | "scattered across the cosmos" |
-| 30 | A Monolith archives for a short, variable time after it arrives, then stops | "Still recording" (WM-003, Aethris) |
-| 31 | Coming back up an intake is possible and very rare. The Restorers do not know it | "There is no return channel"; "Nothing has ever come back out of a Monolith" |
-| 32 | A Monolith arrives in the run-up, records through the Zenith, and the Zenith is a moment | (pages already agree) |
-| 33 | Futsunushi made each key with a partner god for the Accordance: Tinderstrike with Asmodeus (Imix), Windvane with Eldath (Yan-C-Bin), Ironfang with Ryujin (Ogrémoch), Drown with Muriel (Olhydra). The Cre'Tez have had Tinderstrike from the Accordance | "Asmodeus gave them Tinderstrike"; "written two ways … not set" |
-| 34 | Rykoe is the black hole the Reach world left, and it is the First Heart, beneath the Core Monolith. Erevos is the core of GAL-01; what a galaxy's core is stays undefined | "the First Heart, beneath Rykoe"; "Erevos, the heart at the galaxy's core"; "Erevos's heart"; "every galaxy's core is to its galaxy what Rykoe is to the cosmos" |
-| 2.15 | Residue scale and housings (STAGING § Residue: scale, § Residue: housings) | artifacts § Why they are scattered |
-| 2.20 | Asmodeus has no hand in Vanifer's work; Lola worships Eldath; Zaishori stays out of play (STAGING § Cre'Tez, § Fonains people) | — |
-| DR | divine-rules: the worship lines not yet on cosmology (preaching far off; pantheons stay put) | divine-rules.md, deleted after |
-| 35 | Every world formed from the Reach world's debris, and each world's heart is a piece of it; the five fragments that never settled into a world are residue (Korey, 2026-11-07) | "Consolidation drew … stars, worlds and galaxies"; "its fragments spread across the cosmos as residue" |
-| 36 | W-34 in WM-003 is a ritual Zenith (Korey, 2026-11-07) | "Zenith type: Natural"; "Unnamed natural Zenith" |
-| 37 | The genasi have kept Tinderstrike since the sealing. About 350 years ago Asmodeus answered the few who resisted Imix and bound the key to their blood; the price was that Imix be forgotten, and the line turned tiefling (Korey, 2026-11-07) | "Asmodeus gave them Tinderstrike" |
-| 38 | The Fonains shard keeps archiving on its small scale; ruling 30 covers Monoliths (Korey, 2026-11-07) | (pages already agree) |
-
-**Touch list.** DM pages and data:
-
-| Page | Says now | Must say |
-|---|---|---|
-| `cosmology/index.html` | First Heart beneath Rykoe; core-to-Rykoe line; "The heart turns"; natural Zeniths common; archiving with no window; "scattered" shards; "prime or good god"; Residue lacks scale and housings; Gods lacks two worship lines | 28, 29, 30, 34, 2.15, DR; "prime" dropped |
-| `glossary/index.html` | rykoe, first-heart, core (galaxy), erevos, cycle, monolith, corrupted-monolith, intake rows | 30, 31, 34; thirteen new rows (Part 4) |
-| `locations/rykoe.html` | First Heart beneath Rykoe; core-to-Rykoe line; "Those who went have sent no word back" | 31, 34 |
-| `chart/index.html` | Rykoe summary and "Black hole" line; W-34 "natural Zenith" | 34; W-34 per Korey |
-| `chart/galaxy.js` | Nowhere "destroyed by its own Zenith" | a god forced its way on (Part 4) |
-| `dossiers/vecna-lich.html` | "First Heart, beneath Rykoe" | 34 |
-| `factions/fleet.html`, `factions/discerners.html`, `data/survey.json` | "Erevos, the heart at the core"; "Erevos's heart" | 34 |
-| `factions/runekeepers.html`, `dossiers/the-runekeeper.html`, `locations/wayfinders-homeworld.html` | one small order; halfling world; "sealing" | 27; "closing" (Part 4) |
-| `factions/restorers.html` | no return channel; nothing has come back | 31, as their belief |
-| `factions/watchers.html`, `factions/index.html` | rise "is" the strain; card "step in where they must" | Part 4 |
-| `factions/deities.html` | Asmodeus "gave" Tinderstrike; Futsunushi's part; "likely knows" | 33; "knows" (Part 4) |
-| `locations/fonains.html`, `factions/cretez.html`, `dossiers/vanifer.html` | Tinderstrike given by Asmodeus, written two ways; Lola's pilgrimage unnamed | 29, 33, 2.20 |
-| `artifacts/index.html` | housing paragraph | 2.15 |
-| `artifacts/fonains-shard.html` | shards "scattered across the cosmos"; accumulation milestone | 29; milestone dropped (Part 4) |
-| `timeline/timeline.json`, `data/connections.json` | First Heart beneath Rykoe; Asmodeus gives Tinderstrike | 33, 34 |
-| `restricted/wm-003.html` | Aethris "Still recording" | 30; W-34 per Korey |
-
-Working layer: STAGING § Residue (both), § Cre'Tez at the table, § Fonains people cleared. BACKLOG closed: Ritual and natural Zeniths; Tinderstrike two ways; Reach debris and worlds; "The only Monolith" on Fonains (superseded by 29); Center: why the approach harms gods (done); fonains-shard milestone; divine-rules pointers; GTC wording. Section table recounted. `divine-rules.md` deleted and its README row removed.
-
-**Pull requests.** Two, in sequence. PR 1 (`claude/audit-cosmos`): every row above except the Fonains rows (`locations/fonains.html`, `factions/cretez.html`, `dossiers/vanifer.html`, `factions/deities.html`, `artifacts/fonains-shard.html`, and the Tinderstrike entries in `timeline.json` and `connections.json`), plus `rules/index.html` § The approach to the Core (the polarity reason, closing its BACKLOG add). PR 2 carries the Fonains rows, rulings 29 (pieces traded), 33, 37 and 2.20, after PR 1 merges.
-
-Left for Handoff 2 (FIA story), seen on these pages: Clint "on purpose" through the color pool (`cosmology/index.html`, `chart/index.html`), Fonains "in Krynnspace" in the chart's Crow entry.
 
 ## Open
 
