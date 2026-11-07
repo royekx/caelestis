@@ -87,7 +87,9 @@ Infer the source type from the text. The recap never says which it was.
 | Who did what | **unreliable**, speakers misattributed | generally correct |
 | Also contains | table talk, rules talk, crosstalk | asides to the chronicler, first person, shifting tense |
 
-- From a transcript: correct every proper noun against the record. Leave
+- From a transcript: correct every proper noun against the record. Settle
+  who said and did what with the caelestis-attribution skill: a speaker map
+  with anchors, then every beat tested against who each cadet is. Leave
   attribution unassigned where the source does not settle it.
 - From a dictation: treat it as authoritative for events, names and
   attribution. Rebuild loose chronology. Fold asides and uncertainty into your

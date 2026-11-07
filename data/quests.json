@@ -9,8 +9,8 @@
     "fields": {
       "Type": "Mystery",
       "Related Character(s)": "Boogie, Gregory, Sol Fortuna",
-      "Current State": "An arcane device marked 'Vocath' nearly killed a chamber of cadets; Mirt has named Vocath an old enemy, and a matching crate sits at the Sky Dock.",
-      "Overview (Player)": "A wave of thefts and now an arcane attack have struck Caelestis. The device that nearly killed a chamber of cadets bore the marking 'Vocath' — an old enemy of Mirt who bears him a grudge, putting anyone connected to Mirt at risk. A crate at the Sky Dock carries the same symbol and routes through the quartermaster Mr. Blip. Mirt has asked the cadets to check the teaching rooms and look into Joffrey and a man named Jeffrey.",
+      "Current State": "An arcane device bearing Vocath's seal nearly killed a chamber of cadets; Mirt has named Vocath an old enemy, and a matching crate sits at the Sky Dock.",
+      "Overview (Player)": "A wave of thefts and now an arcane attack have struck Caelestis. The device that nearly killed a chamber of cadets bore the seal of Vocath, an old enemy of Mirt who bears him a grudge, putting anyone connected to Mirt at risk. A crate at the Sky Dock carries the same seal and routes through the quartermaster Mr. Blip. Mirt has asked the cadets to check the teaching rooms and look into Joffrey and a man named Jeffrey.",
       "Status": "Open"
     },
     "objectives": [
@@ -46,7 +46,7 @@
       {
         "number": 3,
         "bullets": [
-          "An arcane device marked 'Vocath' detonated in the simulation chamber, nearly killing everyone inside",
+          "An arcane device bearing Vocath's seal detonated in the simulation chamber, nearly killing everyone inside",
           "Mirt named Vocath as an old enemy bearing him a grudge, making anyone connected to him a target",
           "A crate at the Sky Dock bore the same symbol as the rod; its contents route through Mr. Blip toward Toril and H’Catha",
           "Mirt asked the cadets to check the teaching rooms for similar devices and to look cautiously into Joffrey and a man named Jeffrey"
@@ -818,7 +818,7 @@
       "Type": "World / Mystery",
       "Related Character(s)": "Mirt",
       "Current State": "Mirt has named Vocath an old enemy who has borne him a grudge for a long time, which makes anyone connected to Mirt a target.",
-      "Overview (Player)": "The arcane device that nearly killed a chamber of cadets carried a single marking: Vocath. Mirt knew the name at once. He has said only that Vocath has held a grudge against him for a long time, and that anyone connected to him is a potential target.",
+      "Overview (Player)": "The arcane device that nearly killed a chamber of cadets carried a single mark, a seal of two hands, one letting three coins fall into the other, and Saerthe named it as Vocath's. Mirt knew the name at once. He has said only that Vocath has held a grudge against him for a long time, and that anyone connected to him is a potential target.",
       "Status": "Open"
     },
     "objectives": [],
@@ -826,7 +826,7 @@
       {
         "number": 3,
         "bullets": [
-          "The rod recovered from the simulation chamber bore the marking Vocath",
+          "The rod recovered from the simulation chamber bore Vocath's seal",
           "Saerthe raised an illusion of the rod before Mirt and named the marking",
           "Mirt’s face went still — not confusion. He said Vocath had harboured a grudge against him for a long time",
           "He told the cadets to keep it to themselves, and warned that anyone connected to him could be a target"

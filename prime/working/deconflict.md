@@ -176,7 +176,7 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 
 | Item | Action |
 |---|---|
-| **V007** Player record flags | Add: Ezra needs a record in the V007 run (seen unnamed at the V006.5 rendezvous); the rod's "word Vocath" (Part 1 #3); "struck the spire" vs the Pupil; "watched by beholder patrols"; Saerthe and Sor'Kur Gender null; `data/sessions.json` V006 has no interlude line; Mirt "head of Caelestis" also in `data/locations.json` |
+| **V007** Player record flags | Add: Ezra needs a record in the V007 run (seen unnamed at the V006.5 rendezvous); "struck the spire" vs the Pupil; "watched by beholder patrols"; Saerthe and Sor'Kur Gender null; `data/sessions.json` V006 has no interlude line; Mirt "head of Caelestis" also in `data/locations.json` |
 | **V007** tracker fix "seated Lantern is a one-person pod" | Keep open: "safehouse" is still in `data/overlay.json` |
 | Tharizdun is she | Narrow to `working/tharizdun.md` and the outside Fonains doc; update the done list; drop `factions/academy-fleet.html` |
 | Dharra, not Darra | Merge into "Refresh or retire the Fonains doc" |
@@ -282,9 +282,9 @@ request merges before any later work reads its pages.
    and #169 (people and threads); `fia-story.md` deleted. Rulings of that
    chat: "bearers" and "unthinned" retired (the malformed; the true-formed
    are the whole illithids' own name, which N'ghathrod rejects); the raid's pirates
-   sail two ships under crossbones, the main one known by her hull, and
-   Vocath's overseer wore his seal for the handover (FR-016 draws it from
-   the survivors); Boogie's
+   sail two ships under crossbones, the one that stayed captained by
+   Saltjaw, and Vocath's overseer wore his seal as a coin for the handover
+   (FR-016 renders it); Boogie's
    FIA line is a plain intake note in LG-003; Hollis Post stays; Verrow is Strake's quartermaster;
    the Temple of Moloch broke off with Thessalar's laboratory.
 3. **Mechanic: Tarto, the hold, the malformed, and Homebound.** Tarto's

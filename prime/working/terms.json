@@ -407,7 +407,7 @@
     },
     {
       "pattern": "\\bPassage marks?\\b",
-      "use": "Vocath's house mark (the crates); the colony's mark is the eye in a wheel"
+      "use": "Vocath's personal seal (the crates); the colony's mark is the eye in a wheel"
     },
     {
       "pattern": "(?<=[a-z,;:] )Mercane\\b",

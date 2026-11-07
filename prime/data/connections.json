@@ -2548,7 +2548,7 @@
           "src": "dossiers/vocath.html"
         },
         {
-          "t": "His personal seal is a balance scale, coins against a crate; his house mark is public.",
+          "t": "His house mark, on his honest trade, is a balance scale, coins against a crate. His personal seal, registered nowhere, is a coin showing two hands, the upper letting three coins fall into the lower.",
           "src": "dossiers/vocath.html"
         },
         {
@@ -2581,11 +2581,11 @@
           "src": "factions/vocath-operation.html"
         },
         {
-          "t": "The color pool took the smaller pirate ship, whose helm Clint had taken, to Fonains, with Vocath's overseer, its pirate crew and Vocath's sealed cargo aboard. Because the cargo had gone through with the ship, the overseer called Vocath by sending stone as soon as they landed, and told him that Clint died in the hunt; Vocath believes his witness is dead.",
+          "t": "The color pool took the overseer's ship, whose helm Clint and his party had taken, to Fonains, with Vocath's overseer, its pirate crew and Vocath's sealed cargo aboard. Because the cargo had gone through with the ship, the overseer called Vocath by sending stone as soon as they landed, and told him that Clint died in the hunt; Vocath believes his witness is dead.",
           "src": "timeline/timeline.json"
         },
         {
-          "t": "How and when Vocath answered depends on whether Clint landed before or after the Fonains Monolith rose, which is not set. Vocath's trade on Fonains began after the Monolith broke, and fragments of the broken Monolith come home through his line.",
+          "t": "The overseer's ship came out of the pool while the Fonains Monolith stood, about three months before it broke, months having passed outside during a short crossing, and he called Vocath at once. Vocath's trade on Fonains began after the Monolith broke, and fragments of the broken Monolith come home through his line.",
           "src": "factions/vocath-operation.html"
         },
         {
@@ -2594,6 +2594,10 @@
         },
         {
           "t": "Vocath's line supplies the colony's captives, handed over on the lane near Cairn.",
+          "src": "factions/vocath-operation.html"
+        },
+        {
+          "t": "After the raid on Bellwether Crow the handovers stopped for a while, and resumed around the escort routes, which N'ghathrod's taken pass to Vocath through Zhauveth.",
           "src": "factions/vocath-operation.html"
         },
         {
@@ -2610,15 +2614,15 @@
       "summary": "Vocath's public house mark and his unregistered personal seal.",
       "facts": [
         {
-          "t": "His house mark is the public trade mark of the family business, on the Fleet's stores contract for Cairn's lane.",
+          "t": "His house mark is a balance scale with coins on one pan and a crate on the other: the public trade mark of the family business, on the Fleet's stores contract for Cairn's lane and on his honest trade. It never appears on his darker dealings.",
           "src": "dossiers/vocath.html"
         },
         {
-          "t": "His personal seal is a balance scale with coins on one pan and a crate on the other; it is registered nowhere.",
+          "t": "His personal seal is a coin. On its face two slender, long-fingered hands, one above the other: the upper lets three coins fall into the open palm of the lower. It is registered nowhere.",
           "src": "dossiers/vocath.html"
         },
         {
-          "t": "The seal is on the sabotage rod, the Sky Dock crate, the small crate Boogie opened and the crates aboard his hired pirates' ships. His overseer puts it on at a handover to show the pirates whom he speaks for; Crow's survivors saw it on him in the raid (FR-016). It is on the neogi crate too, unchecked.",
+          "t": "The seal is on the sabotage rod, the Sky Dock crate, the small crates his Fonains shards travel in, among them the one Boogie opened, and the crates aboard his hired pirates' ships. His overseer wears it as a large coin on a chain at a handover, so the pirates know whom he speaks for, and takes it off after; Crow's survivors saw it on him in the raid (FR-016). It is on the neogi crate too, unchecked.",
           "src": "dossiers/vocath.html"
         },
         {
@@ -2668,11 +2672,11 @@
       "summary": "A commended Fleet officer, taken by the colony at Cairn Station; its only operative on Caelestis.",
       "facts": [
         {
-          "t": "Joffrey, junior spelljammer of Bellwether Crow, took the helm in the raid and held the survivors together.",
+          "t": "Joffrey, junior spelljammer of Bellwether Crow, took charge in the raid with the senior officers killed or injured, led the recovery of the captives and got the rest of the crew out. He was commended as the hero of it.",
           "src": "dossiers/joffrey.html"
         },
         {
-          "t": "During Crow's days of repair at Cairn, the station master took him with one of N'ghathrod's copies; it carried no directive about A.T.L.A.S.",
+          "t": "During Crow's days of repair at Cairn, the station master took him with one of N'ghathrod's copies; it carried no directive about A.T.L.A.S. The raid had cost the colony a shipment, and it wanted a man inside Caelestis.",
           "src": "dossiers/joffrey.html"
         },
         {
@@ -2735,18 +2739,18 @@
       "label": "Bellwether Crow",
       "type": "vessel",
       "scope": "caelestis",
-      "summary": "A Fleet light corvette, raided on the approach to Cairn Station about a year ago.",
+      "summary": "A Fleet light corvette that broke up a pirate handover of captives on the approach to Cairn Station about a year ago.",
       "facts": [
         {
           "t": "On Tarroway's filing the Fleet sent Bellwether Crow to look in on Cairn Station, with Clint Dashforest leading its crew and Joffrey as its junior spelljammer.",
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "It came on two pirate ships in Vocath's hire mid-handover near Cairn, handing captives to a colony courier, and was raided once; many of its crew died.",
+          "t": "It came on two pirate ships in Vocath's hire near Cairn, handing captives to a colony courier, and chose to intervene; many of its crew died.",
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "Joffrey took the helm, flew it out of the fight and held the survivors together, and was commended for it.",
+          "t": "Joffrey took charge, led the recovery of the captives and got the rest of the crew out, and was commended for it. Clint, lost with his boarding party, is honored as a hero: his diversion made the rescue possible.",
           "src": "vessels/bellwether-crow.html"
         },
         {
@@ -2760,22 +2764,26 @@
       "label": "The raid on Bellwether Crow",
       "type": "event",
       "scope": "caelestis",
-      "summary": "About a year before now, near Cairn Station: one raid, Clint lost to a color pool.",
+      "summary": "About a year before now, near Cairn Station: Crow broke up a handover of captives, recovered them, and lost Clint and his boarding party to a color pool.",
       "facts": [
         {
-          "t": "About a year before now Bellwether Crow came on pirates in Vocath's hire mid-handover near Cairn Station, moving captives to a colony courier. They ran up common pirate colors and struck. They sailed two ships: a main ship known by the name and mark on her hull, and a smaller ship carrying Vocath's overseer, who had put on his personal seal for the handover.",
+          "t": "About a year before now, on its way to look in on Cairn Station, Bellwether Crow came on a transfer of people under guard from two pirate ships in Vocath's hire to a colony courier. Crow chose to intervene, and the pirates ran up their crossbones colors and fought. The two pirate ships were of comparable size: the ship of Saltjaw, a pirate captain, which carries no name on her hull, and the overseer's ship; neither ship's name is recorded. Vocath's overseer had put on his personal seal, a large coin on a chain, for the handover.",
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "To draw the fight off his crew, Clint went aboard the smaller ship and took its helm, and the crew saw him there with the overseer and the seal. A color pool opened by chance and took that ship, with Clint, the overseer and its pirate crew aboard.",
+          "t": "Clint led a few of Crow's crew hands aboard the overseer's ship, and together they took her helm and steered her away, pulling half the threat off Crow. A color pool opened by chance and took that ship, with Clint, his party, the overseer and its pirate crew aboard. Clint's diversion made the rescue possible.",
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "With the overseer, her paymaster, and Vocath's sealed cargo gone through the pool, the fight was not worth it to the main ship, and Crow's crew drove her off. She is still free. The Fleet recorded her name and hull mark from the survivors in WM-002 and hunts her with escorts under SA-005.",
+          "t": "With the senior officers killed or injured, Joffrey took charge on Crow's side, led the recovery of the captives and got the rest of the crew out. With the overseer gone and half the pirates with him, Saltjaw had little left to fight for, and Crow drove her ship off. Saltjaw is alive and free. The Fleet recorded her name from the captives in WM-002 and hunts her ship, from the captives' and survivors' descriptions, with escorts under SA-005.",
           "src": "restricted/wm-002.html"
         },
         {
-          "t": "FR-016 draws the overseer's seal from the survivors' accounts. It is Vocath's personal seal, registered nowhere, so the Fleet's registry returns no match, and the Fleet hunts the ship rather than the seal.",
+          "t": "Crow recovered most or all of the captives and took them home. They had been held below and hooded, and can describe only the pirates and the overseer's coin; they heard the pirates use the name Saltjaw. The courier pulled away with few or none of them and carried word to Zhauveth, and the colony lost that shipment.",
+          "src": "vessels/bellwether-crow.html"
+        },
+        {
+          "t": "FR-016 renders the overseer's seal exactly, from a survivor's memory drawn out by divination at debrief. It is Vocath's personal seal, registered nowhere, so the Fleet's registry returns no match, and the Fleet hunts Saltjaw's ship rather than the seal.",
           "src": "restricted/fr-016.html"
         },
         {
@@ -2789,14 +2797,14 @@
       "label": "Clint Dashforest",
       "type": "person",
       "scope": "fonains",
-      "summary": "A Fleet crewmate who led Bellwether Crow's crew; a color pool took the pirate ship whose helm he had taken, and he landed on Fonains.",
+      "summary": "A Fleet crewmate who led Bellwether Crow's crew; he led a boarding party onto a pirate ship and took her helm, a color pool took her, and he alone of his party landed alive on Fonains.",
       "facts": [
         {
-          "t": "The raiders were two pirate ships in Vocath's hire, with Vocath's overseer, the one paying them, aboard the smaller. To draw the fight off his crew, Clint went aboard the smaller ship and took its helm.",
+          "t": "The raiders were two pirate ships in Vocath's hire, with Vocath's overseer, the one paying them, aboard one of them. Clint led a few of Crow's crew hands aboard the overseer's ship, and together they took her helm and drew half the threat off Crow.",
           "src": "dossiers/clint.html"
         },
         {
-          "t": "A color pool opened by chance and took that ship, with Clint, the overseer and its pirates aboard.",
+          "t": "A color pool opened by chance and took that ship, with Clint, his party, the overseer and its pirates aboard. Every one of the hands who went with him died; he is the only one of Crow's people who reached Fonains alive.",
           "src": "dossiers/clint.html"
         },
         {
@@ -2804,7 +2812,7 @@
           "src": "dossiers/clint.html"
         },
         {
-          "t": "He knows Vocath's seal on sight and went aboard the smaller ship with the overseer who wore it: what he saw is the proof Mirt lacks.",
+          "t": "He knows Vocath's seal on sight and was aboard the overseer's ship with the overseer who wore it: what he saw is the proof Mirt lacks.",
           "src": "dossiers/clint.html"
         },
         {
@@ -2928,7 +2936,7 @@
           "src": "locations/cairn-station.html"
         },
         {
-          "t": "Vocath's house holds the Fleet contract for stores on Cairn's lane, under its house mark.",
+          "t": "Vocath's house holds the Fleet contract for stores on Cairn's lane, under its house mark, the balance scale.",
           "src": "locations/cairn-station.html"
         },
         {
@@ -2936,7 +2944,7 @@
           "src": "locations/cairn-station.html"
         },
         {
-          "t": "After the raid the handovers stopped for a while, then resumed around the escort routes, which N'ghathrod's taken pass to Vocath through Zhauveth. The escorts watch for transfers between vessels and see none, and on Cairn's clean reports the Fleet let its search for the captives lapse.",
+          "t": "After the raid the handovers stopped for a while, then resumed around the escort routes, which N'ghathrod's taken pass to Vocath through Zhauveth. The escorts watch for transfers between vessels and see none.",
           "src": "locations/cairn-station.html"
         }
       ]
@@ -4426,7 +4434,7 @@
           "src": "cosmology/index.html"
         },
         {
-          "t": "Caelestis's present sits level with Fonains Session 28, two to three months after its Monolith broke.",
+          "t": "Caelestis's present sits about five months after Fonains Session 28 and about eight months after its Monolith broke.",
           "src": "locations/fonains.html"
         },
         {
@@ -5459,6 +5467,27 @@
         {
           "t": "Krynnspace, CSC 16423, holds Krynn (CSC 16423 b). Fonains (CSC 50743 c) lies in the neighbouring system, CSC 50743.",
           "src": "locations/krynnspace.html"
+        }
+      ]
+    },
+    {
+      "id": "coven",
+      "label": "The Coven",
+      "type": "faction",
+      "scope": "caelestis",
+      "summary": "The colony's memory: its eldest illithids, taken by N'ghathrod.",
+      "facts": [
+        {
+          "t": "A small circle of the colony's eldest illithids, none of them among the enna, who came out of Thessalar's craft with N'ghathrod; some were elders of their Glyth colony's branch.",
+          "src": "factions/vthorama.html#coven"
+        },
+        {
+          "t": "N'ghathrod took them, each with one of his copies, and the taking has prolonged their lives as it prolongs his.",
+          "src": "factions/vthorama.html#coven"
+        },
+        {
+          "t": "They remember for the colony and keep the old ways of Glyth, mostly.",
+          "src": "factions/vthorama.html#coven"
         }
       ]
     }
@@ -7165,7 +7194,7 @@
     {
       "s": "crow-ambush",
       "t": "bellwether-crow",
-      "rel": "struck",
+      "rel": "was broken up by",
       "src": "vessels/bellwether-crow.html"
     },
     {
@@ -8361,6 +8390,18 @@
       "t": "LOC-Sp4hR9nk",
       "rel": "on a lane out from",
       "src": "locations/realmspace.html"
+    },
+    {
+      "s": "coven",
+      "t": "vthorama",
+      "rel": "remembers for",
+      "src": "factions/vthorama.html#coven"
+    },
+    {
+      "s": "nghathrod",
+      "t": "coven",
+      "rel": "took",
+      "src": "factions/vthorama.html#coven"
     }
   ]
 }

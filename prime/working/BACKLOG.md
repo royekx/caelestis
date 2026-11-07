@@ -31,21 +31,21 @@ staging once Korey has read and accepted them.
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 13 | 14 | 4 | 0 | 2 |
-| Locations | locations/ (Fonains stays in its own section) | 18 | 23 | 0 | 0 | 1 |
+| Locations | locations/ (Fonains stays in its own section) | 18 | 24 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 13 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
-| Factions | factions/ | 12 | 10 | 1 | 0 | 0 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 7 | 1 | 0 | 3 |
-| Dossiers | dossiers/ | 12 | 18 | 0 | 0 | 1 |
-| Crew | crew/ | 10 | 18 | 0 | 0 | 0 |
-| Artifacts and vessels | artifacts/, vessels/ | 8 | 8 | 1 | 0 | 1 |
-| Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 4 | 11 | 0 | 18 |
+| Factions | factions/ | 12 | 11 | 1 | 0 | 0 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 6 | 1 | 0 | 3 |
+| Dossiers | dossiers/ | 12 | 17 | 0 | 0 | 1 |
+| Crew | crew/ | 11 | 19 | 0 | 0 | 0 |
+| Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
+| Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 5 | 11 | 0 | 18 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 2 | 0 | 0 |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **125** | **162** | **25** | **1** | **47** |
+| **Total** |  | **127** | **163** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -64,7 +64,7 @@ Each settles items on several pages at once. Rule these first.
 10. ~~**The real elder brain.**~~ *Ruled: the Session 27 brain is his; it teleported out.* Where it went is no longer a question.
 11. ~~**Where Oerth lies.**~~ *Ruled: GAL-01, in Greyspace; Oerth is the eye's retina (STAGING).*
 13. ~~**Can a taken person be released?**~~ *Ruled: a tadpole can be removed, and removal frees the host; the taken outlive N'ghathrod, each keeping part of him.* How removal is done stays open (D&D lore or our own; avoid Baldur's Gate 3 spoilers).
-14. ~~**Fonains–Caelestis offset.**~~ *Ruled: Caelestis's present is level with Fonains Session 28, two to three months after the Monolith broke (STAGING § Timing; locations/fonains.html DM notes).*
+14. ~~**Fonains–Caelestis offset.**~~ *Ruled: Caelestis's present is about five months after Fonains Session 28 and about eight months after the Monolith broke; the Monolith stood six months before Lola's Boys assembled (Korey, 2026-11-07; timeline.json decisions; locations/fonains.html DM notes).*
 15. ~~**Ostekk-6 as sole survivor.**~~ *Ruled: the only active survivor; Ostekk-2 is inert and can be healed.*
 16. ~~**The tracker and session ingest.**~~ *Ruled: the repo record is the tracker and sessions run in chat per prime/docs/SESSION-RUN.md; n8n and the Google Sheet trackers are retired (archived in Drive).*
 18. ~~**How Clint left the Bellwether Crow.**~~ *Ruled (fia-story § The Bellwether Crow): to draw the raiders off his crew, Clint boarded one of their ships and seized it. A color pool opened by chance and took that ship to Fonains, with Clint and its raiders aboard. He may carry an artifact device he knows only as a magic item; whether it is the second Distinction piece is open (dossiers/clint.html).*
@@ -107,7 +107,6 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - The crew retrieved the Faelight spore from the Garden in Voyage 6; the record does not say so yet (deconflict 9b). Record only; enter it in the V007 run if Korey agrees.
 - The sending stone reads too loud on the player side: the V006 summaries and narrative, Miken's record (a Notable Item, "Miken's Sending Stone", with its own anchor), the bearings, the timeline, and the V006 Next Session Pressure ("Decide what to do about Miken's sending stone"). Sending stones are ordinary. What caught Bartholomew's Perception was a hushed conversation in the middle of the night. Recast the lines around the conversation, and keep the stone as the object he was holding, if Korey agrees.
 - Ezra Ahl-Sier needs a record in the V007 run. The crew saw him, unnamed, at the V006.5 rendezvous.
-- `data/sessions.json` (V003 summary and narrative) has Boogie glimpse "the word Vocath" on the rod. At the table the rod carries a personal seal, the same seal as the dock crate (deconflict ruling 3). Recast the line around the seal if Korey agrees.
 - `data/sessions.json` (V003), `data/quests.json` and `data/locations.json` say the meteor "struck the spire" on H'Catha. `locations/hcatha.html`, `campaign/index.html` and `campaign/plot-hooks.html` place the strike on the Pupil, beside the Spindle. The record keeps what the crew was briefed; add a DM line on `locations/hcatha.html` that the briefing said "the spire".
 - `data/locations.json` (H'Catha) says the world is "watched by beholder patrols"; `locations/hcatha.html` keeps the watch at the domain borders and leaves orbit to ordinary traffic. Add a DM line on what the crew has not yet seen, or correct the record if Korey agrees.
 - `data/npcs.json` has Gender null for Saerthe Abizjn and Sor'Kur. Saerthe is he and Sor'Kur is she (their dossiers). Fill both if Korey agrees.
@@ -461,8 +460,12 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
 ### locations/cantina.html
 
 - **[decide]** Who tends bar on the cantina *(prep)*
-  "Odds" is retired. Options: Glim the plasmoid, of a cantina called the Long Pour (unreviewed Crossing Companion proposal); or leave the bartender unnamed.
+  "Odds" is retired. Options: Glim the plasmoid, of a cantina called the Long Pour (unreviewed Crossing Companion proposal); or leave the bartender unnamed. Or Boom-chik, Boogie's friend, who is aboard (Korey, 2026-11-07).
   src: astral § Open; memory-canon (campaign-canon, Ryeback absorbs Odds); chat-crew-boogie-casey-sol
+
+- **[later]** Boogie's cantina
+  Boogie worked aboard a travelling cantina, a bar on a circuit of the lanes that trades as it goes, when Vocath's crates came through its hold, and his friend Boom-chik, who gave him the Shield of Expression, is aboard the cantina in the prep ring (Korey, 2026-11-07): the first of the cadets' own people the crew can meet, and RP Boogie's player will take. Left: whether the prep-ring cantina is the one Boogie worked on; Boom-chik's part aboard; his species (Korey recalls a thri-kreen; the sheet's backstory is blank; confirm with the player). Touches crew/boogie.html, locations/cantina.html, artifacts/fonains-shard.html, factions/vocath-operation.html.
+  src: Korey, 2026-11-07
 
 - **[later]** The cantina: a place or a ship
   It is a Locations entry for now (Korey 2026-10-28). If it is a ship, it moves to Vessels. Its name, owner and circuit are under the names decide on the register.
@@ -589,6 +592,10 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ---
 
 ### Every faction page
+
+- **[later]** Every mark and seal through one image process
+  Review every mark, seal and emblem in the repo (the colony's eye in a wheel, the Fleet and Watchers emblems, Vocath's house mark, the Seekers' chapters, crests on vessels and the rest) and take each through the process Vocath's personal seal went through: settle what it is and who uses it, then generate it in a style of its own that fits its owner. The process, not the look, follows Vocath's personal seal (assets/fia-fr016-seal.png). Its own chat.
+  src: Korey, 2026-11-07
 
 - **[decide]** Tymora and the Fortuned's ritual
   factions/aethris.html (What's hidden) says Tymora likely would not want the Fortuned's Zenith ritual finished. The line comes from older notes, not from the 2026-10-27 rulings. Keep or cut.
@@ -804,9 +811,9 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   The third insider steals, and Joffrey uses the thief to learn where things are kept at Caelestis and the Brig's protocols. Neither the thief nor Miken knows the other exists, and nothing either knows points at Joffrey. Who the thief is, and who recruited them, is open; it matters when the crew is back at Caelestis.
   src: fia-story § Open (deconflict 14b)
 
-- **[later]** Who keeps the colony's history
-  Proposed in the FIA story: the eldest of the old illithids who joined N'ghathrod keeps the colony's history. Rule it when the colony's people are built out.
-  src: fia-story § One with N'ghathrod (proposed)
+- **[later]** The Coven's name
+  The Coven (factions/vthorama.html#coven) is a working name for the colony's eldest illithids, taken by N'ghathrod, who remember for it. Its proper name, perhaps a word in the colony's tongue, is not set.
+  src: Korey, 2026-11-07
 
 - **[decide]** The network's defences
   Once the crew learns of the links, Vecna and N'ghathrod guard the hearts that carry several links, and Oerth's heart above all. What the safeguards are.
@@ -814,6 +821,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 - **[decide]** What the surface attack at graduation is made of *(prep)*
   The page has "security diverted by the surface operation" while Joffrey runs the Brig, and names nothing in that operation. The early plan collapsed the module's two finale events into one: the attack hits during the ceremony, a battle across the school. It ported these module pieces: Mustaf Shultz and his giff mercenaries, a decapitation threat, Miken at 2 HP, Wizpop's return (now Ostekk-6), and the transmutation sigil as Vocath's house mark. Qitru and her githyanki have since moved to H'Catha. Vocath is a merchant, no fighter, and stays out of the siege himself (settled: chat-cosmic-campaign-structure § Act 1 retrofit), so whoever leads the surface operation is hired or his crew. Pick which pieces stay, and write the surface operation into the Brig run section.
+  Part of it: who Vocath's raiders on the Brig are. Options: the pirates from the raid on Bellwether Crow, whose ship SA-005 names (Crow's survivors and Joffrey would know her at Caelestis, and the Fleet's hunt for her sharpens in Act 2; keep Vocath's overseers off the strike, or a capture exposes him in Act 1), or a different hired hand.
   Touches: opposition/vthorama.html (the run, the Fork; the page names "the surface attack" and nothing more), campaign/index.html (Act 1 close), factions/vocath-operation.html, dossiers/miken.html.
   src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300); dossiers/qitru.html
 
@@ -824,10 +832,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 ---
 
 ### campaign/voyages/index.html
-
-- **[later]** The look of Vocath's house mark *(prep)*
-  The balance scale is his personal seal. His house mark, the public trade mark on the Fleet's stores contract, has no look yet, and the V007 cargo carries it. Set it in V007 prep.
-  src: FIA audit, 2026-11-07
 
 - **[fix]** A board table spills past its panel
   On the Voyages board one of the tracker tables overflows its container at the side. Contain it (wrap or scroll inside the panel) at desktop and phone widths.
@@ -969,10 +973,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[later]** Clint's species, his finger, and whether he is trying to get back
   His species is not set; neither is how he lost his ring finger or whether he is trying to return to Caelestis. These wait until a meeting is wanted; his present stays Fonains business.
   src: dossiers/clint.html; section 5 (2026-10-28)
-
-- **[later]** Did Clint land before or after the Fonains Monolith rose?
-  Confirm against what, if anything, the Fonains one-shot said. It determines only how and when Vocath answered the overseer's call.
-  src: Korey, 2026-11-07
 
 ---
 
@@ -1118,7 +1118,7 @@ Items whose source sweep is still partial keep their `(sampled)` or
   src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Gregory); realms/index.html § unplaced (old page)
 
 - **[later]** How cadets from worlds without spelljamming reach Caelestis
-  The one route Korey has stated is Sol's: the Watcher order broke protocol to recommend he be taken to Caelestis. The FIA already hints at a route for each PC, with no dedicated intake file (Korey chose scattered hints over one file): WM-006 field referral and protective placement (Sol); SA-002 1486 meteor account by a minor referred to intake (Casey); FR-016 inspecting party reassigned to cadet intake (Boogie); SA-002 1491 two arrivals from an uncatalogued system (Wan and Tu). Gregory arrived on a cargo ship. Bartholomew has no hint.
+  The one route Korey has stated is Sol's: the Watcher order broke protocol to recommend he be taken to Caelestis. The FIA carries one event per cadet that only that cadet would recognise, and says nothing of how any of them reached Caelestis except Sol (Korey, 2026-11-07): WM-006 field referral and protective placement (Sol, by the Order); SA-002 1486 meteor shower (Casey); SA-002 1491 two arrivals from an uncatalogued system who gave no name for home (Wan and Tu); SA-002 1482 two of CON-312's six stars flaring (Bartholomew); SA-002 1489 the Cogfast aurora, one surviving construct later entered intake (Gregory). SA-002 1491 people on the lanes moving to a rhythm no one could hear (Boogie, the Pulse; the seal in FR-016 is his only tie to Cairn). Gregory arrived on a cargo ship.
   Left: whether there is a general rule. Options: Watcher referral as the general route; several routes (Watcher referral, Fleet recruiters, walk-ins at stations); or a per-cadet answer with no general rule, as the FIA hints already read. Touches crew/index.html, crew/sol.html, and a new Cadet intake page (see the New pages section).
   src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Watcher recruitment for Sol); BCS § Sol/C.R.C. and the scry beats; framework § FIA records (intake hints), § Superseded (no PF-004 intake file); memory-canon campaign-canon § Gregory (cargo ship)
 
@@ -1144,6 +1144,10 @@ Items whose source sweep is still partial keep their `(sampled)` or
   src: section 7 (2026-10-28)
 
 ### crew/casey.html
+
+- **[decide]** Casey's star: one fall or a shower *(lore)*
+  crew/casey.html and dossiers/polly.html say "a star fell on their world"; Korey (2026-11-07, FIA audit) called it a meteor shower that looked like shooting stars, and SA-002's 1486 entry now reads that way with "at least one fall to the surface reported". Settle the crew and dossier wording against it. Outside the FIA area; logged.
+  src: Korey, 2026-11-07
 
 - **[later]** What the first tether at Viren is
   Options: a dying stellar entity; a Zerathis-connected place or person; stellar-touched inhabitants; a rift onto a missing constellation.
@@ -1188,6 +1192,10 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
   src: section 7 (2026-10-28)
 
 ### crew/gregory.html
+
+- **[later]** Gregory's awakening and why he came
+  Korey (2026-11-07, leaning, not ruled): his awakening was at the Cogfast aurora SA-002 records in Cycle 1489, less than a year before the present, "a little timey-wimey"; he then followed his maker's dream of being a navigator, which is why he came to Caelestis. Not for the FIA. Touches crew/gregory.html.
+  src: Korey, 2026-11-07
 
 - **[decide]** The Sailor gate at the Sea Dock *(prep)*
   (A) He truly needs Sailor clearance, and gets in with an escort via Kip or Pik or a sanctioned reason. (B) He only thinks he does, and a service route exists. (C) Hybrid: Rindle has moved the Latchling and Gregory must recalibrate.
@@ -1342,10 +1350,6 @@ left here is open.
   Crow was repaired at Cairn and went home (vessels/bellwether-crow.html). Its class is set: a light corvette. Whether it went back into service, its captain, and the name of the survivor who saw Joffrey change wait until the crew pulls the roster.
   src: section 4; fia-story § After
 
-- **[later]** The pirate ship's name and hull mark
-  The main pirate ship in the raid on Crow is known by her name, her own mark on the hull, or both (vessels/bellwether-crow.html, restricted/wm-002.html); in a fight she flies the common crossbones. Her name and mark are not set. The form of the overseer's seal, pendant, signet or similar, is also not set.
-  src: raid on Bellwether Crow, final version (2026-11-07)
-
 ### vessels/moonraider.html
 
 - **[decide]** What the Moonraider simulation is drawn from
@@ -1369,6 +1373,10 @@ against the complete Tumak sweep (all 336 turns).
 
 - **[decide]** Travel times between systems *(shape)*
   Inside a system a helm covers 100 million miles a day, and Toril is about 30 days from Realmspace's edge (Spelljammer Academy, Appendix A); Toril to H'Catha is the 14-day crossing. Nothing sets travel between systems: *Wildjammer* leaves it to the DM, and the Astral Sea page only grades lanes. The chart is no single scale (Caelestis's cluster is an inset: Strake sits 600 units out yet at Realmspace's edge). A proposal to rule on: drift days from the system's edge by lane tier, about 25 chart units a day on a charted lane, 20 on a long haul, 10 uncharted with uncertain arrival, plus 1 to 2 weeks to reach the destination world. That gives from Caelestis: Strake about a month; Virenspace and Aethris about 2½ to 3 months; Krynnspace and Fonains about 4 months. Knock-ons: the 30-day exit is half of every trip; Cairn, "some weeks out", comes to about 2½ months; the shards reaching Boogie from Fonains take at least 4 months (ruling 23 allows adding time). Touches: rules/index.html § Ship & crew, locations/astral-sea.html, fia-story § Cairn Station.
+  src: Korey, 2026-11-07
+
+- **[later]** Taking a helm, and the kinds of helm
+  How a helm changes hands (a spelljammer knocked out or killed at the helm, and another takes control) and what kinds of helm exist are not defined. Clint took the helm of the overseer's ship in the raid on Bellwether Crow (dossiers/clint.html).
   src: Korey, 2026-11-07
 
 #### Cosmology rules
@@ -1897,6 +1905,10 @@ archived in Drive, not deleted. What stays open here is below.
 
 # Repo and process
 
+- **[decide]** FIA and DM proper nouns and the spelling list
+  `data/vocabulary.js` is the one spelling list, and CLAUDE.md says every new proper noun goes in it. The FIA's names (Dashforest, Tarroway, Verrow, Saltjaw, Cairn, Strake, Hollis, Aethris, Kaldris, Ortholith, the escort ships) are not in it, and adding them there would let the player search suggest gated names. Ruled (Korey, 2026-11-07): no name list goes in CLAUDE.md, and no second list. Options: one list with a gated flag per name that `scripts/spelling.js` skips on the player site and the FIA and DM search pages use; or the FIA and DM searches get no spelling repair and the rule in CLAUDE.md is narrowed to player names. Touches data/vocabulary.js, scripts/spelling.js, restricted/search.html, prime/search.html, CLAUDE.md § Deploy and search.
+  src: FIA cold audit, 2026-11-07
+
 - **[later]** Skills by DM practice, not by campaign
   The caelestis-* skills (story logic, table readiness, prep, mechanic review, change audit) are Korey's DM practice, not Caelestis's. Before a second campaign uses them, split each into the method, named for the practice and shared across campaigns, and the campaign's specifics (paths, anchors such as Fonains-first, voice, check commands), kept in that campaign's CLAUDE.md or one campaign reference the skills read. Repo setup and voice stay per campaign.
   src: Korey, 2026-11-06
@@ -1939,6 +1951,7 @@ archived in Drive, not deleted. What stays open here is below.
 
 - **[decide]** The voyages' Fleet dates *(prep)*
   `data/sessions.json` carries a rough Fleet date per voyage (`date`), counted back from 1491.7.12, where the crew stands after V006. Settled 2026-11-02: Bartholomew joined on the crew's first day, at the Weeping Goddess lunch the Mirt errand was leading to, so V001 is 1491.6.25 and V002 runs 1491.6.25–1491.6.26 (that lunch, a night, the salvage simulation next morning); and V006 ends at 1491.7.12. V003 1491.6.26–1491.7.5 (the blast on the salvage morning, then "some days passed"; about ten embers, rough). V004 1491.7.5–1491.7.6 and V005 1491.7.6–1491.7.7 (a day or so aboard each; guess). V006 1491.7.7–1491.7.12 ("the next few days learning the ship"). Still to confirm: how many days V003's "some days passed" covers. The V002 account reads against the ruling: Boogie sets the half-ship on the lunch table, and the account twice says it came out of his chest "the night before", but the V001 account has it emerge that night, after the errand. Two more V002 cues point the same way: Ryeback says Barret was "at the counter the night before" talking about Casey's birthday readings, and Casey goes looking for Joffrey, "the sailor he had spoken with the day before". If the lunch is instead the morning after V001, still with no gap (V002 1491.6.26–1491.6.27, V003 from 1491.6.27), both accounts stand as written. Separately, the second cue is itself an error in the V002 account: in V001 it was Sol, not Casey, who spoke with Joffrey. The V003 account's "attacked twice in three days" also counts the Mirt crate and the blast, now a day apart. The crossing to H'Catha is fourteen embers, so V007 would run from about 1491.7.13 to 1491.7.26 or later. prime/chart/gtc.js still says the current kindling and ember are not set; align it with the record when the chart is next touched.
+  Left (FIA audit, 2026-11-07): timeline.json's "The crew at the Academy" marker (t −0.185, about 67 days before now) does not match V001 at 1491.6.25 once the cycle calendar is fixed; move the marker when the calendar rule lands.
   src: Korey, 2026-10-29 (Fleet time ruling); Korey, 2026-11-02 (record-cleanup notes § 3); voyages/voyage-001.html to voyage-006.html
 
 - **[later]** Ships in the record
