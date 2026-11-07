@@ -591,7 +591,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ### Every faction page
 
 - **[later]** Every mark and seal through one image process
-  Review every mark, seal and emblem in the repo (the colony's eye in a wheel, the Fleet and Watchers emblems, Vocath's house mark, the Seekers' chapters, crests on vessels and the rest) and take each through the process Vocath's personal seal went through: settle what it is and who uses it, then generate it in one shared engraved style so they read as one world. Vocath's personal seal (assets/fia-fr016-seal.webp) is the reference. Its own chat.
+  Review every mark, seal and emblem in the repo (the colony's eye in a wheel, the Fleet and Watchers emblems, Vocath's house mark, the Seekers' chapters, crests on vessels and the rest) and take each through the process Vocath's personal seal went through: settle what it is and who uses it, then generate it in a style of its own that fits its owner. The process, not the look, follows Vocath's personal seal (assets/fia-fr016-seal.webp). Its own chat.
   src: Korey, 2026-11-07
 
 - **[decide]** Tymora and the Fortuned's ritual
