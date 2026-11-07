@@ -36,6 +36,7 @@ out and was never the same.
 ## Open
 
 - Name.
+- Her tell.
 - How she got out, and what it cost.
 - What she wants now: revenge, a cure, or to go back.
 - Whether the Order trusts her.
