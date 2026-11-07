@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 13 | 15 | 6 | 0 | 2 |
+| Cosmology | cosmology/, glossary/, chart/ | 13 | 14 | 4 | 0 | 2 |
 | Locations | locations/ (Fonains stays in its own section) | 18 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 13 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
@@ -39,13 +39,13 @@ staging once Korey has read and accepted them.
 | Dossiers | dossiers/ | 13 | 17 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 18 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 2 | 0 | 1 |
-| Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 4 | 11 | 0 | 19 |
+| Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 4 | 11 | 0 | 18 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 2 | 0 | 0 |
-| Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 9 | 13 | 1 | 0 | 2 |
-| **Total** |  | **129** | **162** | **28** | **1** | **48** |
+| Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 13 | 1 | 0 | 2 |
+| **Total** |  | **128** | **161** | **26** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -145,7 +145,7 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-26
 
 - **[decide]** Galactic time cycles (GTC): first arm, counts and the Toril ratio
-  Settled (Korey, 2026-10-28): the Order of All made the count so its Watchers had one clock, and its Discerners keep it; Cycle 0 is the Order's founding, and the current cycle is 1491. The Fleet, founded by Caelestis about 250 cycles ago (about Cycle 1240), adopted it; most call it cycles or Fleet time, and ordinary people keep their own world's calendar. The arms are the clock and the cycle is a full turn: Erevos, the heart at the core, turns once a cycle and throws an unseen beam; when it reaches an arm's root, that arm lights from root to tip over a quarter cycle, and the Erevos Galaxy has four arms. The Order's vocabulary is settled (Korey, 2026-10-28, replacing the hearth): the Beacon is the galactic clock, the one god's signal fire kept burning to give direction, named for no aspect (Korey, 2026-10-28), and the Discerners keep it. A beacon is one full turn (most say cycle); a spark is the moment the light strikes an arm's root and that arm's quarter, four to a beacon; a kindling is one marker cluster passed, numbered 1 to 16 through the beacon; an ember is one day-length count on an armillary. Dates read "the 1491st beacon, seventh kindling, twelfth ember", 1491.7.12 in Fleet logs; durations read "fourteen embers to H'Catha". The Fleet and travellers borrow kindling and ember. Each arm's spark has its own character; what each is is not set. FIA records keep writing "Cycle". The clock principle is on opposition/vecna.html#clock and principles.html#clock.
+  Settled (Korey, 2026-10-28): the Order of All made the count so its Watchers had one clock, and its Discerners keep it; Cycle 0 is the Order's founding, and the current cycle is 1491. The Fleet, founded by Caelestis about 250 cycles ago (about Cycle 1240), adopted it; most call it cycles or Fleet time, and ordinary people keep their own world's calendar. The arms are the clock and the cycle is a full turn: Erevos, the black hole at the core, turns once a cycle and throws an unseen beam; when it reaches an arm's root, that arm lights from root to tip over a quarter cycle, and the Erevos Galaxy has four arms. The Order's vocabulary is settled (Korey, 2026-10-28, replacing the hearth): the Beacon is the galactic clock, the one god's signal fire kept burning to give direction, named for no aspect (Korey, 2026-10-28), and the Discerners keep it. A beacon is one full turn (most say cycle); a spark is the moment the light strikes an arm's root and that arm's quarter, four to a beacon; a kindling is one marker cluster passed, numbered 1 to 16 through the beacon; an ember is one day-length count on an armillary. Dates read "the 1491st beacon, seventh kindling, twelfth ember", 1491.7.12 in Fleet logs; durations read "fourteen embers to H'Catha". The Fleet and travellers borrow kindling and ember. Each arm's spark has its own character; what each is is not set. FIA records keep writing "Cycle". The clock principle is on opposition/vecna.html#clock and principles.html#clock.
   Still open: which arm's spark is first (the one the Order saw at its founding); kindlings per spark (working default four, sixteen a beacon, each about a Toril month); embers per kindling (working default about thirty, each roughly a Toril day); the character of each arm's spark; and the Toril ratio (working default one beacon to about sixteen Toril months, so each spark is about four, the Order was founded about 1,990 Toril years ago and the Fleet about 330; the timeline places both by it). Do not use "reckoning" for the count's name.
   src: Korey, 2026-10-28 (GTC rulings); replaces "The calendar the Cycle counts" (Korey, 2026-10-26; restricted/ orders)
 
@@ -178,7 +178,7 @@ Order under each page: decide, fix, drop, add.
   src: framework § Open
 
 - **[later]** Echo planes per sphere
-  Whether every sphere has a full set of echo planes or only some. (The second half of this open line, where the Reach-born gods' realms anchor, is answered by divine-rules; see the fix below.)
+  Whether every sphere has a full set of echo planes or only some.
   src: framework § Open
 
 - **[later]** Whether a world's heart has a counterpart in its echoes
@@ -222,10 +222,6 @@ Order under each page: decide, fix, drop, add.
   Settled (Korey, 2026-10-28): the Order of All has a main headquarters elsewhere, and houses in the Fleet's sectors, each commanded by a Vanguard who oversees all three orders posted there. The Caelestis Sector house has a wing for each order; the Hall of Sight and Sound is in the Watchers' wing and mainly theirs (STAGING rounds 5–6). Captain-Commander Dejexic, a Watcher, is the Watcher Vanguard and commands it. The other two Vanguards are a Discerner and an Averter, commanding houses in other sectors. A house's parts are wings. Still open: the main headquarters' name and place; the Caelestis Sector house's name and place (when the crew is headed there); who the Discerner and Averter Vanguards are and which sectors they hold; whether the fourth sector has a house; whether one figure leads each order across every sector. DM touchstone: Destiny's Vanguard (Dejexic is the Order's Zavala; the orders echo the Guardian classes).
   src: Korey, 2026-10-25 (round 6)
 
-- **[fix]** "The only Monolith" on Fonains
-  cosmology/#corrupted-monoliths says Fonains's is "the only Monolith ever to carry Tharizdun's crystal and the only one recorded as destroyed", and the chart's Fonains note says "the only one ever to carry Tharizdun's crystal". PAGE-GUIDE bars comparative absolutes on setting pages. Describe the Monolith instead: it formed corrupted, with her crystal replicated into it, and Lola's Boys broke it. locations/fonains.html already does.
-  src: section 8, 2026-10-28
-
 - **[decide]** A stabilization for a failing Axiom
   The timeline carried "Convergence stabilizes" (cert canon, t +5): "The Continuum answers a failing Axiom with a stabilization. When it comes, the seat closes permanently. Vecna gets one attempt before it." Its opening event called Convergence "the most stressed Axiom". No finished page has a stabilization, a seat that closes, or a most-stressed Axiom, and section 8 dropped the event and rewrote the other as the Axiom strain. Options: add a stabilization to cosmology/ (#axiom-strain) and restore the event; or leave it retired. Touches cosmology/index.html, opposition/vecna.html, timeline.json.
   src: timeline.json (before section 8); section 8 (C9)
@@ -244,11 +240,6 @@ Order under each page: decide, fix, drop, add.
   Kind says "Derelict, Toril orbit"; note says it "Holds the Containment Engine". Update: the crew holds the tyrant ship. The Containment Engine, Fourth Series (Vaelorix's Lantern of Flourishing), is out of Vaelorix's body and seated in the repair bay, and the ship is making the fourteen-day crossing to H'Catha.
   src: memory-canon (campaign-canon, Voyage 006 outcome; Lantern seated)
 
-- **[fix]** Center: why the approach harms gods
-  The center's open list has "Why the approach harms Reach-born gods." Answer it in the note: polarity; a god and a heart carry the same charge, and the First Heart pushes hardest. Remove that open line.
-  src: session-rulings; divine-rules § Polarity
-
-
 - **[later]** CSC 31758, the 1491 entry in SA-002
   SA-002 carries the Cycle 1491 auroral discharge at CSC 31758, outer fringe (the old SYS-05). The number is new: it is not in the survey or on the chart, and it collides with nothing in either. The entry stays as filed: two arrivals from an uncatalogued system entered Academy intake. Place the star in the survey, or leave it as a catalogue number only. It is not tied to Greyspace.
   src: Korey, 2026-10-28 (FIA rulings, 10)
@@ -258,10 +249,6 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-29
 
 ### cosmology/index.html: Zeniths and Monoliths
-
-- **[later]** Ritual and natural Zeniths
-  Every Zenith played so far was ritual: a people did something that pushed their world. Whether a world can reach a Zenith naturally, and what that would look like, is open. The chart counts any life on every planet as enough for a mark (28 catalogue systems); if Zeniths need people, the bar rises to "every planet living and at least one inhabited" (12 systems) and the marks are refit.
-  src: Korey, 2026-11-01
 
 - **[decide]** How Vecna's ascension changed Oerth's Monolith
   Ruled: it became the anchor between Oerth's heart and Cavitius, and it never faded (cosmology § Monoliths, locations/oerth.html). Open: how it works, and what destroying it would do to Vecna, his realm and the links into Oerth.
@@ -293,7 +280,7 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
   src: realms/index.html § Constellations (old page)
 
 - **[later]** The unplaced registry worlds: W-34, Vetharra and Kaldris
-  The old register carried three FIA registry entries without a position: W-34 (an Ortholith established and recording over a natural Zenith, high priority, drafted into Virenspace), W-47 Vetharra (sole standing structure, surface population zero) and W-52 Kaldris (sole standing structure, a Zenith collapse variant labelled "control case"). The FIA (restricted/wm-003.html) now carries all three as not cross-referenced, with the registry's own reference numbers redacted. Re-designate them in the survey and place them, or drop them. The chart still lists all three.
+  The old register carried three FIA registry entries without a position: W-34 (an Ortholith established and recording over a ritual Zenith, high priority, drafted into Virenspace), W-47 Vetharra (sole standing structure, surface population zero) and W-52 Kaldris (sole standing structure, a Zenith collapse variant labelled "control case"). The FIA (restricted/wm-003.html) now carries all three as not cross-referenced, with the registry's own reference numbers redacted. Re-designate them in the survey and place them, or drop them. The chart still lists all three.
   src: framework § Open; realms/index.html, realms/virenspace.html (old pages)
 
 - **[later]** The register's Standing filter
@@ -697,7 +684,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ### factions/runekeepers.html
 
 - **[later]** Parked Runekeeper questions
-  Parked, not locked: sealing as the inverse of opening; whether sealed worlds are invisible to A.T.L.A.S.; other worlds' own hiding methods; runes as the "finding" half of the art.
+  Parked, not locked: closing as the inverse of opening; whether closed worlds are invisible to A.T.L.A.S.; other worlds' own hiding methods; runes as the "finding" half of the art.
   src: memory-canon open-decisions (Runekeepers line)
 
 ---
@@ -1530,10 +1517,6 @@ against the complete Tumak sweep (all 336 turns).
   § Open says Sol's oath carries "implied mechanics that live nowhere". The Oath of Misfortune is finalized (Unified Jinx with Jinx charges; Misfortune's Wake and Misfortune's Edge) and lives on crew/sol.html. Point there (Jinx is at `crew/sol.html#jinx`, Misfortuned at `#misfortuned`) and remove Sol from that line.
   src: memory-canon § Sol Fortuna
 
-- **[add]** Why gods cannot make the crossing (§ The approach to the Core)
-  Page says only "Gods cannot make the crossing at all". Add the reason: polarity. A god and a heart carry the same charge, so as a god pushes toward a world or the centre the resistance grows until it is unbearable. The centre has ill effects on a god without destroying it. There is no "divine gate".
-  src: session-rulings (polarity); working/divine-rules.md § Polarity
-
 - **[add]** Two layers, one inscription
   In the fiction the Runechild essence runes and the Wayfinder runes are one inscription on Tumak's body. Mechanically they are two layers that share the fiction and never share resources. Tumak tracks three resources on three timescales: sorcery points, Runechild charged runes, and Wayfinder progression. There is no separate Wayfinder spend pool.
   src: TGB § Tumak/Arc framing (turns 211–220)
@@ -2057,7 +2040,6 @@ rulings went to STAGING. Each lists the pages it touches.
 - **decide** The loose Rod pieces and beholders. Do the pieces stay clear of beholders, Xanathar's piece the one exception? artifacts/rod-of-seven-parts.html lists it under "Still to decide".
 - **decide** Three Fonains facts backed only by memory: the Green Lady's dragon form is a wild shape of the dragon she faced in Korvalatel's Clutch, and she is the Bacon Bunch's Green Lady (the page has her trapped in that form after Aerisi split Eldath's tree); Giorge is a branded member of the Verdant Vigilance; every member of Lola's Boys is tied to the Princes of Elemental Evil, which is why the Accordance chose them. locations/fonains.html, factions/deities.html, timeline.
 - **decide** Fragment counts and the Reach. Does the number of pieces a fragment broke into still mark its distance from the Reach under the five Axioms? If so, Dissolution (2) lay closest and Determination (11) farthest. cosmology/index.html § Residue.
-- **decide** Reach debris and worlds. Draft divine-rules.md says worlds and their hearts formed from the Reach's debris; cosmology/index.html § Origins says worlds formed by Consolidation and the debris became residue. Reconcile before divine-rules § Polarity is promoted.
 - **decide** Did Lola's Boys breaking the Fonains Monolith force Vecna to change his plan? factions/deities.html says only that it hurt both of them. opposition/vecna.html.
 
 ### Later
