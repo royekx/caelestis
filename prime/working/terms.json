@@ -125,6 +125,15 @@
       "use": "Distinction / Determination / Consolidation / Dissolution"
     },
     {
+      "pattern": "\\b[Uu]nthinned\\b|Vth(&rsquo;|'|’)(ulhan|merru)",
+      "use": "malformed; the colony's whole illithids call themselves the true-formed, and N'ghathrod calls every illithid Vth'orama"
+    },
+    {
+      "pattern": "greatly extended lifespan|lay into the pools",
+      "use": "long life comes from the taking (the tithe), shared with the enna and some old illithids; every illithid spawns",
+      "i": true
+    },
+    {
       "pattern": "downward tithe",
       "use": "the tithe runs upward, to N'ghathrod",
       "i": true
@@ -174,7 +183,7 @@
     },
     {
       "pattern": "\\b[Uu]nculled\\b",
-      "use": "the unthinned (Vth'ulhan)",
+      "use": "malformed (the colony's whole illithids call themselves the true-formed)",
       "i": true
     },
     {
@@ -440,7 +449,7 @@
     },
     {
       "pattern": "brainless-raised",
-      "use": "the unthinned (Vth'ulhan)",
+      "use": "malformed (the colony's whole illithids call themselves the true-formed)",
       "i": true
     },
     {

@@ -20,8 +20,8 @@ out and was never the same.
 ## What she knows
 
 - Glyth from the inside: the colonies, the elder brain, the properly raised illithids.
-- N'ghathrod's exile, and the unthinned leaving with him, all five of his
-  lieutenants among them.
+- N'ghathrod's exile: Glyth refused the three malformed illithids he brought
+  home, and he went with them.
 - Why the Fleet bans approach.
 
 ## Where she fits

@@ -539,81 +539,60 @@ anyway):
 
 ## Promotes to
 
-The touch list for the change audit, built by searching `prime/` and
-`restricted/` for every name and term this story changes. Each page is
-rewritten whole against this draft, not given a paragraph beside the old one.
-
-Run in three pull requests, in this order, each merged before the next
-starts. When the third merges, delete this draft.
+The touch list for the change audit, built from a fresh search of `prime/`,
+`restricted/`, `prime/data/` and `prime/working/` on 2026-11-07 and approved
+by Korey. Each page is rewritten whole, once, against all of this draft, in
+the earliest pull request that touches it. Three pull requests, each merged
+before the next starts. When the third merges, delete this draft. The record
+(`data/`) and the player pages carry none of this. Paths are under `prime/`
+unless they start with `restricted/`.
 
 ### 1. The colony
 
-The elder brain and its absence; N'ghathrod in its place; most of the colony
-malformed; "bearers" and "unthinned" dropped, the true-formed as the whole
-illithids' own name; any illithid
-spawns; the spawning numbers; copies only to people in power or outcasts;
-long life from the taking for a chosen few; each enna's power from the
-experiment and its spawn; the mouse.
-
-| Page | Touched by |
-|---|---|
-| `prime/dossiers/nghathrod.html` | elder brain, lifespan, mouse, copies, soft spot |
-| `prime/dossiers/zhauveth.html`, `ulhrek.html`, `ithvarn.html` | unthinned, lifespan from the experiment |
-| `prime/dossiers/khaleth.html`, `osskhal.html` | "bearer", properly raised, lifespan |
-| `prime/dossiers/thessalar.html`, `prime/vessels/thessalars-craft.html` | the experiment, lifespan, the mouse |
-| `prime/opposition/vthorama.html` | elder brain, bearers' allocation grievance, the pair at Cairn |
-| `prime/factions/vthorama.html` | a second Vth'orama page: settle which page holds what |
-| `prime/dossiers/vthoramu.html`, `prime/vessels/vthoramu.html` | the pools in the hull, bearers, Cairn |
-| `prime/locations/glyth.html` | the exile of the unthinned |
-| `prime/artifacts/rod-of-seven-parts.html` | the mouse |
-| `prime/data/connections.json`, `prime/data/survey.json`, `prime/timeline/timeline.json` | every colony term |
-| `prime/working/STAGING.md`, `prime/docs/PAGE-GUIDE.md` § 8 (Left off the Nexus) | bearers, lifespan, elder brain |
-| `prime/working/BACKLOG.md` | the long-life item ("which residue piece gave him long life") closes; the mouse's quirk item becomes its power |
-
-"Bearer" also appears in non-colony senses (fragment bearers on
-`artifacts/dissolution-fragment.html`, `fonains-shard.html`,
-`dossiers/the-runekeeper.html`, `factions/runekeepers.html`,
-`locations/wayfinders-homeworld.html`, `rules/`). Read each; rename only the
-colony's sense.
+| Page | Says now | Must say |
+|---|---|---|
+| `dossiers/nghathrod.html` | the unthinned; lifespan from the experiment; elder brain "separated in the crash"; the voice as his elder brain; the mouse open | the malformed; long life from the tithe; how he spawns, his copies, his soft spot; elder brain beneath the Barrier Peaks; the voice (ruling 20); the mouse; the civilization's cost |
+| `dossiers/zhauveth.html`, `ulhrek.html`, `ithvarn.html` | unthinned, Vth'ulhan; lifespan from the experiments; "carries N'ghathrod's" power | malformed; long life from the tithe; each power its own, from the experiment, and their spawn inherit it; Zhauveth's word and the spawn at Cairn |
+| `dossiers/khaleth.html`, `osskhal.html` | bearer, Vth'merru; "can still lay into the pools"; lifespan from the experiments | whole, of those who call themselves the true-formed; every illithid spawns; long life from the tithe |
+| `dossiers/thessalar.html`, `vessels/thessalars-craft.html` | "three unthinned"; lifespan from the experiment; the Temple of Moloch a tier | the three malformed; the temple broke off with the laboratory beneath it; the mouse changed |
+| `factions/vthorama.html`, `opposition/vthorama.html` | duplicate paragraphs; bearers and unthinned; the voice at the crash; "raiding and the neogi"; removal frees "only someone who objects"; the second boarding | people on the faction page, operation on the opposition page; whole and malformed, the true-formed; the voice after the exile; captives through Vocath's line; removal frees the host; old ties; the Cairn pair; Joffrey taken at Cairn |
+| `dossiers/vthoramu.html`, `vessels/vthoramu.html` | bearers; "every taken person grown from his flesh"; Cairn's scope saw it | the pools in his body; a civilization; Strake caught it at the limit of its range |
+| `artifacts/rod-of-seven-parts.html` | the mouse only as a road | the piece changed the mouse and gave each enna a power |
+| `locations/glyth.html`, `locations/index.html`, `locations/realmspace.html` (colony line) | "cast out the unthinned" | refused and exiled the three malformed |
+| `opposition/vecna.html` | the voice N'ghathrod "takes for his elder brain" | ruling 20 |
+| `glossary/index.html`, `dossiers/index.html` | Unthinned entry; bearer and unthinned rows | the true-formed; malformed |
+| `timeline/timeline.json` | "Vecna answers" at the crash; "casts out the unthinned" | the voice after the exile; the broken-off temples; the malformed |
+| `data/connections.json`, `data/survey.json` | bearers and unthinned nodes; lifespan from the experiment | true-formed and malformed; long life from the tithe; the mouse |
+| `docs/PAGE-GUIDE.md` § Left off the Nexus, `working/terms.json`, `working/glyth-watcher.md` | the unthinned and bearers | malformed, the true-formed; unthinned retired |
+| `working/STAGING.md`, `working/BACKLOG.md` | long life, elder brain, old ties, boarding; cross-cutting 13; the mouse; Languages | cleared; ruling 18; the mouse's power; Vth'ulhan and Vth'merru retired |
 
 ### 2. Cairn, Strake, *Bellwether Crow* and the FIA
 
-The new geography; Cairn held by the pair; the hold by nearness; one raid;
-Strake on its own lane nearer home; the FIA rebuilds and the clearance fix; the chart move.
-
-| Page | Touched by |
-|---|---|
-| `restricted/lg-003.html`, `wm-002.html`, `sa-005.html`, `fr-005.html` | rebuilt |
-| `restricted/fr-016.html`, `wm-003.html`, `fr-022.html`, `wm-006.html`, `sa-002.html` | changed in place |
-| `restricted/index.html`, `restricted/files.html`, `restricted/disintegration.html` | clearance ("Bridge clearance" on the last); summaries |
-| `prime/locations/cairn-station.html`, `strake-station.html`, `realmspace.html`, `astral-sea.html`, `ondrel-anchorage.html`, `index.html` | Cairn, Strake, Hollis, the old perimeter watch |
-| `prime/vessels/bellwether-crow.html`, `index.html`, `flighty-foundling.html`, `moonraider.html` | *Crow* |
-| `prime/dossiers/tarroway.html`, `verrow.html`, `krik-lit.html` | Strake, Tarroway |
-| `prime/factions/fleet.html` | Cairn, *Crow*, the escort order |
-| `prime/chart/index.html`, `prime/chart/holo.html` | the perimeter-watch text and Strake's, Cairn's and *Crow*'s entries against this story (the move, the lanes and the eye refit are on the chart) |
-| `prime/hub.html` | the old geography |
-| `prime/working/terms.json` | retire the perimeter-watch terms once gone |
+| Page | Says now | Must say |
+|---|---|---|
+| `restricted/lg-003.html`, `wm-002.html`, `sa-005.html`, `fr-005.html` | Cairn silent; the relief vessel; two boardings; the edge run closed; the perimeter watch | rebuilt per § File changes; WM-002 keeps the renderings of the hull marking |
+| `restricted/fr-016.html`, `wm-003.html`, `fr-022.html`, `wm-006.html`, `sa-002.html` | per § File changes | changed in place; SA-002 adds the 1482 entry |
+| `restricted/index.html`, `files.html`, `disintegration.html` | Gold — Bridge; old summaries | Above Bridge; summaries match the rebuilt files |
+| `locations/cairn-station.html`, `strake-station.html`, `realmspace.html`, `astral-sea.html`, `krynnspace.html`, `index.html` | the watch, the edge run, Cairn silent, Clint "on purpose" | the lanes; Cairn held by the pair; Strake nearer home; Hollis an ordinary post |
+| `vessels/bellwether-crow.html`, `vessels/index.html` | relief run, the piece aboard, two boardings | sent to look in on Cairn; one raid; the pool by chance; days at Cairn |
+| `dossiers/tarroway.html`, `verrow.html`, `dossiers/index.html` (their rows) | the satellites; the secure storage | Tarroway's discrepancy and the sweeps; Verrow, Strake's quartermaster, files them up the chain |
+| `factions/fleet.html` | Strake and its satellites; "ambushed"; Mirt "backed the closure" | the lanes; the escort order; Joffrey's and Clint's cards |
+| `chart/index.html`, `chart/holo.html`, `hub.html` | the watch region; Clint "on purpose"; Fonains "in Krynnspace"; the closed lane | the lanes; the pool by chance; Fonains in CSC 50743 |
+| `cosmology/index.html` | Clint "on purpose" | the pool opened by chance |
+| `crew/bartholomew.html` | no FIA hint | SA-002 1482 records his fall |
+| `data/connections.json`, `timeline/timeline.json`, `working/repo-refactor.md` | the watch, the ambush, the perimeter-watch anchor | the raid; Joffrey taken at Cairn; new link target |
 
 ### 3. People and threads
 
-| Page | Touched by |
-|---|---|
-| `prime/dossiers/joffrey.html` | junior spelljammer, taken at Cairn, no directive, the months of turning, A.T.L.A.S., the hub of three insiders, Qitru in name |
-| `prime/dossiers/clint.html`, `prime/artifacts/second-distinction-piece.html`, `distinction-fragment.html`, `artifacts/index.html` | the boarding, the pool by chance, the laser pistol; a possible artifact device nobody else knows of, possibly the second Distinction piece (open) |
-| `prime/artifacts/atlas.html` | how it reached the Brig, and the plan that starts there |
-| `prime/dossiers/mirt.html` | his silence on the seal, his code, his aim |
-| `prime/dossiers/miken.html`, `qitru.html`, `veena-derek.html`, `winston-ryeback.html` | the rod, the beacon, Qitru's lie |
-| `prime/dossiers/vocath.html`, `prime/factions/vocath-operation.html`, `factions/index.html` | the two marks, the supply contract, the handovers |
-| `prime/dossiers/boatswain-tarto.html`, `saerthe-abizjn.html` | know the seal |
-| `prime/crew/boogie.html`, `crew/tumak.html` | Cairn and Clint lines; Joffrey |
-| `prime/campaign/index.html`, `voyages/index.html`, `plot-hooks.html` | Joffrey, Miken, the rod, Cairn |
-| `prime/cosmology/index.html`, `prime/locations/fonains.html` | Clint, *Crow* |
-| `prime/data/overlay.json` | the lanes: handovers, Zhauveth's visits |
-| `prime/working/BACKLOG.md` | cross-cutting 18 ("a deliberate dive through a color pool") is replaced: Clint boarded the skiff on purpose, and the pool opened by chance |
-| `prime/working/common-knowledge.md`, `campaign-middle.md`, `repo-refactor.md` | every thread above |
-
-The player side (`data/`, the player pages) carries none of this; the search
-found nothing there to change.
+| Page | Says now | Must say |
+|---|---|---|
+| `dossiers/joffrey.html`, `jeffrey.html`, `qitru.html`, `sor-kur.html` | taken in a second boarding with a directive; "a year" | taken at Cairn, no directive; some months; the hub of three insiders; Qitru in name; Jeffrey's evidence is the sealed shipments |
+| `dossiers/mirt.html`, `vocath.html`, `factions/vocath-operation.html`, `factions/index.html` | the house mark on the rod and in the *Crow*'s transmission | the house mark and the personal seal; Mirt reads WM-002's renderings; the supply contract and the handovers |
+| `dossiers/clint.html`, `artifacts/second-distinction-piece.html`, `distinction-fragment.html`, `artifacts/index.html`, `atlas.html`, `fonains-shard.html` | "on purpose" with the second piece; the ambush for it; the thefts after A.T.L.A.S. | the pool by chance; the possible device; the thefts small; A.T.L.A.S. found in Joffrey's first months |
+| `dossiers/saerthe-abizjn.html`, `boatswain-tarto.html`, `dossiers/index.html` (their rows) | the *Crow* ambush; nothing on the seal | the raid; they know the seal |
+| `crew/boogie.html`, `campaign/index.html`, `plot-hooks.html`, `locations/caelestis.html`, `locations/fonains.html` | chased Clint; "the thief is Joffrey"; two thieves | the raiders' call home; three insiders; Clint's card |
+| `data/connections.json`, `timeline/timeline.json`, `data/overlay.json` | the ambush; the house mark node; no lanes | the raid; seal and house mark apart; `DM-` lanes for the handovers and Zhauveth's visits |
+| `working/common-knowledge.md`, `campaign-middle.md`, `terms.json`, `STAGING.md`, `BACKLOG.md` | the ambush; a ship shadowing the *Crow*; the thefts entry | the raid; the old-geography terms retired; the moot items closed; the thief kept |
 
 ## Left at the level of shape
 
