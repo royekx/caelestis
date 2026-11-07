@@ -19,18 +19,19 @@ out and was never the same.
 
 ## What she knows
 
-- Glyth from the inside: the colonies, the elder brain, the pure-born.
-- N'ghathrod's exile, the brainless-raised leaving with him, and the purebred
-  lieutenant who stayed.
+- Glyth from the inside: the colonies, the elder brain, the properly raised illithids.
+- N'ghathrod's exile, and the unthinned leaving with him, all five of his
+  lieutenants among them.
 - Why the Fleet bans approach.
 
 ## Where she fits
 
-- The open **Act 2 handler** slot.
+- The open handler slot for Act 2.
 - One of the **named-but-unseen** figures, mentioned in contradictory accounts
   before the crew meets her.
-- She lives at the Hall of the Watchers, or in Caelestis's undecided secret
-  sliver.
+- Where she lives is open: the Order's Caelestis Sector house, whose
+  Watchers' wing holds the Hall of Sight and Sound, or elsewhere aboard
+  Caelestis.
 
 ## Open
 

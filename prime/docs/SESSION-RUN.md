@@ -111,8 +111,8 @@ When sources disagree, the higher one wins.
 1. **DM corrections** on the voyage's entry in `prime/campaign/voyages/`. They
    are canon as though they happened at the table: write them as events, in
    their place in the sequence.
-2. **The record**, `data/*.json`: spellings, names, pronouns, roles, current
-   state.
+2. **The record**, `data/*.json`: spellings, names, roles, current state.
+   Pronouns come from the character's dossier (`CLAUDE.md` § Naming).
 3. **Earlier voyages**: canon for any name, fact or relationship the record
    does not address.
 4. **The source**: what happened, unreliable on the points in the table above.
@@ -169,7 +169,8 @@ transitions; no bullet points, scene rules or timestamps.
 - Paragraphs tend to open on a place or a transition ("The sky dock opened the
   scale of Caelestis all at once"), then move through what each character did.
 - Short declarative sentences stand alone on purpose for emphasis ("It had
-  never been meant to be won.").
+  never been meant to be won."). One at a time: this fits `CLAUDE.md`'s rule
+  against three short sentences in a row.
 - The em-dash belongs to this voice, for an appositive, a reflective turn or a
   closing qualification. Never stack several in one sentence.
 - A sentence much longer than its neighbours usually reads better as two.
@@ -231,7 +232,8 @@ rewrite the wording.
 ### Before it goes to the DM
 
 1. **Names**: every proper noun matches the record.
-2. **Continuity**: every pronoun, role and status matches the record.
+2. **Continuity**: every role and status matches the record, and every
+   pronoun matches the character's dossier.
 3. **Corrections**: every DM correction for this voyage is in the account.
 4. **Attribution**: every vision, action and line belongs to the right cadet,
    or is left unattributed on purpose.
@@ -356,7 +358,7 @@ node tools/data.js derive
 
 | Surface | What changes |
 |---|---|
-| `voyages/voyage-NNN.html` | new, copied from `voyages/voyage-(NNN-1).html` (`voyage-template.html` still has the old folding layout; do not use it): the Fleet date line under the nav bar, At a Glance, and the account tabs Brief Account, Full Account (the approved account) and Recording (the YouTube embed and link, once posted). Drop any Interlude tab the copy carries |
+| `voyages/voyage-NNN.html` | new, copied from `voyages/voyage-(NNN-1).html`: the Fleet date line under the nav bar, At a Glance, and the account tabs Brief Account, Full Account (the approved account) and Recording (the YouTube embed and link, once posted). Drop any Interlude tab the copy carries |
 | `voyages/voyage-(NNN-1).html` | its "next voyage" link |
 | `voyages/index.html` | a row and its Overview |
 | `voyages/bearings/voyage-(NNN-1).html` | its Heading list, resolved (below) |
@@ -453,7 +455,7 @@ per-player messages (a handout for one cadet) to go out with it.
 | `prime/campaign/voyages/index.html` | this voyage's Actual and Delta; its flags cleared; the link to the player page; the Next session block for the voyage after |
 | `prime/campaign/index.html` | where the crew stands, if an arc beat closed |
 | `prime/campaign/plot-hooks.html` | status of any hook that moved |
-| `prime/dossiers/*.html` | Who they are, in-world, for anyone who acted |
+| `prime/dossiers/*.html` | the About tab (in-world) and the DM notes tab, for anyone who acted (tabs per `prime/docs/PAGE-GUIDE.md` § 5) |
 | `prime/crew/` | only if a PC's mechanics changed |
 
 When a page moves under the approved DM structure (`CLAUDE.md` § Folder map),
