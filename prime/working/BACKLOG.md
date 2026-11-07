@@ -43,9 +43,9 @@ staging once Korey has read and accepted them.
 | New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 24 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 15 | 5 | 0 | 1 |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 14 | 6 | 0 | 1 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 13 | 13 | 2 | 0 | 8 |
-| **Total** |  | **138** | **169** | **50** | **2** | **63** |
+| **Total** |  | **138** | **168** | **51** | **2** | **63** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2186,9 +2186,9 @@ archived in Drive, not deleted. What stays open here is below.
   Rulings were edited into one page in place, and the pages that leaned on the old version were left behind. Examples found 2026-11-06: Miken's DM dossier says the beacon is "the whole of the sabotage" after he was ruled to have placed the rod; the Ezra items still tied his hook to the Vth'orama's mark after it was dropped; the chart's perimeter-watch text still has Cairn silent for a year and the *Crow* turned back. Walk the DM pages for claims that contradict later rulings in STAGING, the inbox and the drafts, and list each with the page it lands on.
   src: Korey, 2026-11-06
 
-- **[later]** Redefine the inbox
-  Chat sweeps are temporary working material, used in chat to clear chats for archiving; they need not persist in the repo. Decide what `prime/working/inbox/` is for (raw dumps only, or nothing kept once ruled), and whether finished sweeps are deleted or kept as history.
-  src: Korey, 2026-11-04
+- **[fix]** Empty the inbox
+  Ruled (Korey, 2026-11-07): the inbox holds raw material from outside the repo until every item in it has landed in a draft, BACKLOG, STAGING or a page, then the file is deleted; chat rulings never go there. Check each sweep's "not in repo" and "conflicts" items against BACKLOG and STAGING, add what is missing, and delete the sweep. Finish the two PARTIAL sweeps first or log their unread ranges here. About 470 KB today.
+  src: Korey, 2026-11-04 and 2026-11-07
 
 - **[later]** terms.js warnings that can misfire
   The raw-line "Open" pattern and the word "undecided" are voice warnings that can flag legitimate table cells and prose (Cosmology's Determination text has an allow entry). Tune them if they start producing noise.
