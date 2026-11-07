@@ -2718,10 +2718,10 @@
       "label": "Jeffrey",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A Sky Dock hand bribed to let manifests go unchecked.",
+      "summary": "A human merchant bribed to carry certain crates in on his ship.",
       "facts": [
         {
-          "t": "Jeffrey is a hobgoblin Sky Dock hand and Joffrey's friend. Joffrey paid him to pass the crate carrying Vocath's seal; it came in under Mr. Blip's oversight without his knowing.",
+          "t": "Jeffrey is a human merchant whose ship trades into the Sky Dock, and Joffrey's friend. Joffrey paid him to carry in the crate with Vocath's seal; it came in under Mr. Blip's signature unseen.",
           "src": "dossiers/jeffrey.html"
         },
         {

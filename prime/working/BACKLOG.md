@@ -111,7 +111,6 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - `data/locations.json` (H'Catha) says the world is "watched by beholder patrols"; `locations/hcatha.html` keeps the watch at the domain borders and leaves orbit to ordinary traffic. Add a DM line on what the crew has not yet seen, or correct the record if Korey agrees.
 - `data/npcs.json` has Gender null for Saerthe Abizjn and Sor'Kur. Saerthe is he and Sor'Kur is she (their dossiers). Fill both if Korey agrees.
 - `data/sessions.json` V006 has no line for the V006.5 interlude, which `voyages/voyage-006.html` carries. Add one in the V007 run if Korey agrees.
-- The Sky Dock bribe: `data/locations.json` (Sky Dock, V001) and `data/quests.json` (two quests, V001 and one Overview) say "a dock officer" took a bribe, two of them "from a merchant". At the table the cadets saw a Sky Dock hand take a bribe; Tumak later named Joffrey as the payer, and Mirt named the hand, Jeffrey, a hobgoblin dock hand (fia-story; dossiers/jeffrey.html). `data/npcs.json` says the party "has not yet encountered" Jeffrey, but they saw him in V001 without his name. Fix in the V007 run if Korey agrees.
 
 ## Still coming in
 

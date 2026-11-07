@@ -52,9 +52,9 @@ PRs #166 to #169)
     placed him to have a man inside Caelestis; it knew nothing of A.T.L.A.S.
     and his tadpole carried no directive about it. Check
     `dossiers/sor-kur.html`'s "building a route for a year" against this.
-16. **The Sky Dock bribe.** Joffrey paid Jeffrey, the hobgoblin dock hand
-    (ruling 2). Check the record's wording ("a dock officer", "a merchant")
-    when the pages change.
+16. **The Sky Dock bribe.** Joffrey, a hobgoblin officer, paid Jeffrey, a
+    human merchant and ship's owner, and pocketed a bottle from him (Korey,
+    2026-11-07, from the V001 transcript). Done on every page.
 17. **Long life** comes from the taking, not the experiment.
 18. **A tadpole can be removed**, and removal frees the host. How, from D&D
     lore or our own; avoid Baldur's Gate 3 spoilers.
