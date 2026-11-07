@@ -32,20 +32,20 @@ staging once Korey has read and accepted them.
 |---|---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 13 | 14 | 4 | 0 | 2 |
 | Locations | locations/ (Fonains stays in its own section) | 18 | 25 | 0 | 0 | 1 |
-| Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 13 | 0 | 0 | 0 |
+| Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 13 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 0 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 4 | 1 | 0 | 3 |
 | Dossiers | dossiers/ | 13 | 17 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 18 | 0 | 0 | 0 |
-| Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 2 | 0 | 1 |
+| Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 4 | 11 | 0 | 18 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 13 | 1 | 0 | 2 |
-| **Total** |  | **128** | **161** | **26** | **1** | **47** |
+| **Total** |  | **127** | **161** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -500,10 +500,6 @@ Order under each heading: decide, fix, drop, add.
 - **[decide]** A name for Fonains's system
   Fonains moved out of Krynnspace into a system of its own, neighbouring it (Korey, 2026-10-29). survey.js rolled it as CSC 50743 (seed 16534), and Fonains was charted there as CSC 50743 c. The system has no name and goes by its designation on the chart and the pages ("Fonains's system, CSC 50743"). Name it, or keep the designation. Touches locations/fonains.html, locations/krynnspace.html, locations/index.html, cosmology/index.html, connections.json, the survey and the chart; the FIA (FR-022, WM-003) keeps the designation either way.
   src: Korey, 2026-10-29
-
-- **[decide]** Tinderstrike: kept since the sealing, or given 350 years ago
-  STAGING § The Princes says the fire genasi have guarded the fire key since the sealing, about twelve thousand years ago, and also that Asmodeus gave Tinderstrike to the few who resisted Imix about three and a half centuries ago (so do the foundry notes and factions/deities.html). The page writes both. Options: the genasi lost the key and Asmodeus returned it; the genasi kept a different charge until Asmodeus gave them the weapon; one of the two is wrong. Touches locations/fonains.html, factions/cretez.html, factions/deities.html#asmodeus, the timeline.
-  src: section 8 (C16), 2026-10-28
 
 - **[decide]** Zonlilimer or Zonlilemer; Baratol or Baratal
   Korey's map spells the dojo town Zonlilemer and the isthmus town Baratal; the timeline and the page spell them Zonlilimer and Baratol. Pick one spelling each and apply it to the page, the timeline and connections.json.
@@ -1322,12 +1318,6 @@ left here is open.
   Restoring a limb takes a compatible cradle and every charge, daily, for seven days.
   src: chat-voyage-6-7-planning § Lantern of Flourishing
   held (section 4): the source chat marks this an inference, not in the repo. The page leaves it out and says in Still to decide that limb restoration is not set; confirm before it goes on the item card.
-
-### artifacts/fonains-shard.html
-
-- **[fix]** Drop the accumulation milestone
-  Still to decide carries "the milestone where the accumulation starts costing Boogie". Boogie's arc method has no fixed reveal and no milestone (crew/boogie.html, Arc); the milestone question is retired. Keep the first half of the sentence (what a corrupted archive fragment does over years at this scale) if it is still wanted.
-  src: section 7 (2026-10-28), conflict C6
 
 ### artifacts/faelight-spore.html
 
