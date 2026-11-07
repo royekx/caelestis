@@ -181,7 +181,7 @@
       "cert": "canon",
       "title": "The five-person ritual",
       "desc": "Four cultists channel the Princes; the fifth holds pieces of Tharizdun's black crystal. It is the Zenith, nudged by Vecna, who knows it will be ridden. Tharizdun's black crystal replicates into the Monolith as it forms.",
-      "t": -0.49,
+      "t": -1.31,
       "tier": 1
     },
     {
@@ -264,7 +264,7 @@
       "cert": "canon",
       "title": "The Darkest Day",
       "desc": "Two rituals are worked at the eclipse. A cult of Vecna binds Giorge to Tharizdun, with Vecna part of it, in league with her, and the binding draws attention from the other: the elemental ritual for the four Princes, which drives Fonains to its Zenith. The Monolith erupts over the cemetery. The first Accordance champions die fighting it.",
-      "t": -0.47,
+      "t": -1.29,
       "tier": 1
     },
     {
@@ -563,11 +563,11 @@
     },
     {
       "lane": "crew",
-      "t": -0.45,
+      "t": -0.85,
       "status": "past",
       "cert": "canon",
       "title": "Clint lands on Fonains",
-      "desc": "The color pool carries the overseer's ship through a small pocket of another dimension, a short crossing for those aboard while months passed outside, and out onto Fonains some weeks after the Monolith rose, with its crew and Vocath's sealed cargo still aboard: pirates in Vocath's hire and his overseer. Of Crow's party that took her helm, Clint alone arrives alive; every one of the hands who went with him died. Because the cargo came through with them, the overseer calls Vocath by sending stone at once. The overseer and the pirates with him hunt Clint there, and the overseer tells Vocath that Clint died in the hunt. Clint gets away and loses his means of reaching Caelestis.",
+      "desc": "The color pool carries the overseer's ship through a small pocket of another dimension, a short crossing for those aboard while months passed outside, and out onto Fonains while the Monolith stood, about three months before it broke, with its crew and Vocath's sealed cargo still aboard: pirates in Vocath's hire and his overseer. Of Crow's party that took her helm, Clint alone arrives alive; every one of the hands who went with him died. Because the cargo came through with them, the overseer calls Vocath by sending stone at once. The overseer and the pirates with him hunt Clint there, and the overseer tells Vocath that Clint died in the hunt. Clint gets away and loses his means of reaching Caelestis.",
       "tier": 2
     },
     {
@@ -599,7 +599,7 @@
     },
     {
       "lane": "vecna",
-      "t": -0.32,
+      "t": -0.72,
       "tier": 1,
       "status": "past",
       "cert": "canon",
@@ -608,7 +608,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.21,
+      "t": -0.61,
       "tier": 1,
       "status": "past",
       "cert": "canon",
@@ -617,7 +617,7 @@
     },
     {
       "lane": "princes",
-      "t": -0.07,
+      "t": -0.47,
       "tier": 1,
       "status": "past",
       "cert": "canon",
@@ -626,7 +626,7 @@
     },
     {
       "lane": "princes",
-      "t": -0.12,
+      "t": -0.52,
       "tier": 1,
       "status": "past",
       "cert": "canon",
@@ -635,7 +635,7 @@
     },
     {
       "lane": "princes",
-      "t": -0.03,
+      "t": -0.43,
       "tier": 1,
       "status": "past",
       "cert": "canon",
@@ -644,7 +644,7 @@
     },
     {
       "lane": "princes",
-      "t": 0,
+      "t": -0.4,
       "tier": 1,
       "status": "now",
       "cert": "canon",
@@ -662,7 +662,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.39,
+      "t": -0.79,
       "tier": 1,
       "status": "now",
       "cert": "canon",
@@ -684,7 +684,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.39,
+      "t": -0.79,
       "tier": 2,
       "status": "past",
       "cert": "canon",
@@ -696,7 +696,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.31,
+      "t": -0.71,
       "tier": 2,
       "status": "past",
       "cert": "canon",
@@ -708,7 +708,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.27,
+      "t": -0.67,
       "tier": 2,
       "status": "past",
       "cert": "canon",
@@ -720,7 +720,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.21,
+      "t": -0.61,
       "tier": 2,
       "status": "past",
       "cert": "canon",
@@ -732,7 +732,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.055,
+      "t": -0.455,
       "tier": 2,
       "status": "past",
       "cert": "canon",
@@ -744,7 +744,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.025,
+      "t": -0.425,
       "tier": 2,
       "status": "past",
       "cert": "canon",
@@ -756,7 +756,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.015,
+      "t": -0.415,
       "tier": 2,
       "status": "past",
       "cert": "canon",
@@ -768,7 +768,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.005,
+      "t": -0.405,
       "tier": 2,
       "status": "now",
       "cert": "canon",
@@ -780,7 +780,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.39,
+      "t": -0.79,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -791,7 +791,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.38,
+      "t": -0.78,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -802,7 +802,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.37,
+      "t": -0.77,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -813,7 +813,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.36,
+      "t": -0.76,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -824,7 +824,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.355,
+      "t": -0.755,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -835,7 +835,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.35,
+      "t": -0.75,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -846,7 +846,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.345,
+      "t": -0.745,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -857,7 +857,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.34,
+      "t": -0.74,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -868,7 +868,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.33,
+      "t": -0.73,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -879,7 +879,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.32,
+      "t": -0.72,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -890,7 +890,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.31,
+      "t": -0.71,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -901,7 +901,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.3,
+      "t": -0.7,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -912,7 +912,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.27,
+      "t": -0.67,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -923,7 +923,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.22,
+      "t": -0.62,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -934,7 +934,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.21,
+      "t": -0.61,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -945,7 +945,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.17,
+      "t": -0.57,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -956,7 +956,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.12,
+      "t": -0.52,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -967,7 +967,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.09,
+      "t": -0.49,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -978,7 +978,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.075,
+      "t": -0.475,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -989,7 +989,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.055,
+      "t": -0.455,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1000,7 +1000,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.05,
+      "t": -0.45,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1011,7 +1011,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.04,
+      "t": -0.44,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1022,7 +1022,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.03,
+      "t": -0.43,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1033,7 +1033,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.025,
+      "t": -0.425,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1044,7 +1044,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.02,
+      "t": -0.42,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1055,7 +1055,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.015,
+      "t": -0.415,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1066,7 +1066,7 @@
     },
     {
       "lane": "fonains",
-      "t": -0.01,
+      "t": -0.41,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1077,7 +1077,7 @@
     },
     {
       "lane": "fonains",
-      "t": 0,
+      "t": -0.4,
       "tier": 3,
       "status": "now",
       "cert": "canon",
@@ -1178,16 +1178,16 @@
       "kind": "primary"
     },
     {
-      "t": 0,
+      "t": -0.4,
       "label": "Fonains now (S28)",
       "kind": "secondary"
     }
   ],
   "decisions": [
-    "Caelestis's present sits a few months after the Fonains Monolith broke, about level with Fonains's Session 28. The color pool took the overseer's ship about a year before Caelestis's present and set her down on Fonains some weeks after the Monolith rose: a short crossing inside the pool, months outside (Korey, 2026-11-07; the one-shot transcripts say nothing of when Clint arrived). Boogie's shard came from the broken Monolith through Vocath's line, before V001.",
+    "Caelestis's present sits about eight months after the Fonains Monolith broke and about five months after Fonains's Session 28 (Korey, 2026-11-07): the gap gives Vocath's ships the months an uncharted route takes before Boogie's crate reaches a dock. The color pool took the overseer's ship about a year before Caelestis's present and set her down on Fonains while the Monolith stood, about three months before it broke: a short crossing inside the pool, months outside (Korey, 2026-11-07; the one-shot transcripts say nothing of when Clint arrived). Boogie's shard came from the broken Monolith through Vocath's line, before V001.",
     "Benedetta fell ill at Rihiri's birth, about twelve years ago, and died about ten years ago. The illness was Vanifer siphoning her soul into the illegitimate Bloodstone, which took about two years.",
     "Thessalar's planar craft fell about 500 years ago. N'ghathrod had already lost a clash with it and was a prisoner aboard, being experimented on. Lola's Boys, sent back by the Accordance, took the craft's control and defense gems; without them it fell, and the crash let N'ghathrod escape. The party unknowingly made their own villain in another campaign. \"Some millennia ago\" in Lola's Boys is rumour.",
-    "Session and voyage dates inside a campaign are spaced by feel; their order is canon. Lola's Boys runs from about a month after the Darkest Day to Session 28, two to three months after the Monolith broke.",
+    "Session and voyage dates inside a campaign are spaced by feel; their order is canon. The Monolith stood six months before Lola's Boys assembled, their road to the break took about two months, and Session 28 is two to three months after the break (Korey, 2026-11-07).",
     "Krynn is the third campaign world. Its present is level with Caelestis now. The dragons that left Fonains have not yet reached it."
   ],
   "threads": {
@@ -1663,8 +1663,8 @@
       "lanes": [
         "fonains"
       ],
-      "from": -0.52,
-      "to": 0
+      "from": -0.92,
+      "to": -0.4
     },
     {
       "id": "krynn",

@@ -64,7 +64,7 @@ Each settles items on several pages at once. Rule these first.
 10. ~~**The real elder brain.**~~ *Ruled: the Session 27 brain is his; it teleported out.* Where it went is no longer a question.
 11. ~~**Where Oerth lies.**~~ *Ruled: GAL-01, in Greyspace; Oerth is the eye's retina (STAGING).*
 13. ~~**Can a taken person be released?**~~ *Ruled: a tadpole can be removed, and removal frees the host; the taken outlive N'ghathrod, each keeping part of him.* How removal is done stays open (D&D lore or our own; avoid Baldur's Gate 3 spoilers).
-14. ~~**Fonains–Caelestis offset.**~~ *Ruled: Caelestis's present is level with Fonains Session 28, two to three months after the Monolith broke (STAGING § Timing; locations/fonains.html DM notes).*
+14. ~~**Fonains–Caelestis offset.**~~ *Ruled: Caelestis's present is about five months after Fonains Session 28 and about eight months after the Monolith broke; the Monolith stood six months before Lola's Boys assembled (Korey, 2026-11-07; timeline.json decisions; locations/fonains.html DM notes).*
 15. ~~**Ostekk-6 as sole survivor.**~~ *Ruled: the only active survivor; Ostekk-2 is inert and can be healed.*
 16. ~~**The tracker and session ingest.**~~ *Ruled: the repo record is the tracker and sessions run in chat per prime/docs/SESSION-RUN.md; n8n and the Google Sheet trackers are retired (archived in Drive).*
 18. ~~**How Clint left the Bellwether Crow.**~~ *Ruled (fia-story § The Bellwether Crow): to draw the raiders off his crew, Clint boarded one of their ships and seized it. A color pool opened by chance and took that ship to Fonains, with Clint and its raiders aboard. He may carry an artifact device he knows only as a magic item; whether it is the second Distinction piece is open (dossiers/clint.html).*
