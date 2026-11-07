@@ -107,8 +107,15 @@ Every quote here was opened and confirmed in the file named.
     weaponsmith, made each with a partner god: Tinderstrike with Asmodeus, to
     seal Imix; Windvane with Eldath, to seal Yan-C-Bin; Ironfang with Ryujin,
     to seal Ogrémoch; Drown with Muriel, to seal Olhydra. The Cre'Tez had Tinderstrike from the Accordance. Muriel is confirmed; the Accordance's six are on `factions/deities.html`.
-34. **Erevos is a heart:** the heart of the first world destroyed in this
-    galaxy, now its black hole. "Heart" stays for Erevos.
+34. **Rykoe is the heart of the first world**, the Reach world, at the centre
+    of the cosmos. Erevos is the core at the centre of GAL-01. What a galaxy's
+    core is, Erevos and the other four included, is not defined (Korey,
+    2026-11-07, correcting an earlier "Erevos is a heart"). Pages that call
+    Erevos "the heart at the galaxy's core" change in the cosmos audit:
+    `glossary/index.html` (cycle), `factions/fleet.html`,
+    `factions/discerners.html`, `prime/data/survey.json`, and BACKLOG's
+    Galactic time item. Open: how this squares with the pages' "the First
+    Heart lies beneath Rykoe".
 
 27. **The Runekeepers are several clans**, and not all of them halflings.
     Lunarfoot is one. The duty passes from clan to clan in a cycle, and the
