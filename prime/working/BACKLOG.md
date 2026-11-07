@@ -30,9 +30,9 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 13 | 14 | 7 | 0 | 2 |
-| Locations | locations/ (Fonains stays in its own section) | 19 | 25 | 0 | 0 | 1 |
-| Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
+| Cosmology | cosmology/, glossary/, chart/ | 13 | 14 | 6 | 0 | 2 |
+| Locations | locations/ (Fonains stays in its own section) | 18 | 25 | 0 | 0 | 1 |
+| Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 13 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 0 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 4 | 1 | 0 | 3 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 3 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 9 | 13 | 1 | 0 | 2 |
-| **Total** |  | **129** | **160** | **30** | **1** | **48** |
+| **Total** |  | **128** | **161** | **29** | **1** | **48** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -125,7 +125,7 @@ Order under each page: decide, fix, drop, add.
 ### cosmology/index.html
 
 - **[fix]** Tharizdun is she
-  Tharizdun is female. The pages, STAGING and the Connections layer say she. Two sources still say he/his/him: working/tharizdun.md (the opening lines, § The prison, § Corrupted Monoliths, § Vecna and Tharizdun) and the Fonains Canon Reference doc outside the repo (see "Refresh or retire the Fonains doc").
+  Tharizdun is female. The pages, STAGING and the Connections layer say she. One source still says he/his/him: the Fonains Canon Reference doc outside the repo (see "Refresh or retire the Fonains doc").
   src: Korey, 2026-10-27
 
 - **[later]** What Gregory and Sol want, in the theme
@@ -165,10 +165,6 @@ Order under each page: decide, fix, drop, add.
   Korey's idea (2026-10-25): sub-genres already differ world to world; game systems go one step further and differ sphere to sphere. The cosmology carries it: what a sphere holds (prime gods, good gods, the Weave) shapes how magic and reality work there, so the rules change when the crew crosses. SPH-02 runs as Call of Cthulhu. It is not godless: its gods are eldritch, not good, and they gathered there, each drifting toward its greatest worship. No prime or good gods hold it, and there is no Weave; the Axioms and Continuity still hold. (Fix: "the godless sphere" in STAGING round 2, the chart and the organizing-framework sweep; SPH-02 needs a proper name.) Caelestis's sphere runs as D&D 5e.
   To shape: what physically or metaphysically changes at a sphere's edge, and what the crew feels crossing it; which presences set a sphere's system (prime gods, good gods, the Weave, an Axiom's lean); what happens to a character's abilities across the line (divine magic fades, arcane magic falters, a sanity track appears); which systems SPH-03 to SPH-05 lean toward, decided only when a campaign goes there; whether worlds inside a sphere keep their own genre on top of it.
   src: Korey, 2026-10-25 (chat); inbox/chat-organizing-framework.md (SPH-02, cosmic horror); memory-canon (a different vibe on each world)
-
-- **[fix]** The center is Rykoe
-  Four files still use "the center" as a name: chart/index.html, opposition/vecna.html, timeline/timeline.json and prime/data/connections.json (deconflict 2.23). Replace it with Rykoe in each. The Core Monolith keeps its name; those who dwell in it call it Aurath. Plain phrases like "toward the center" stay where they are directions, not names.
-  src: Korey, 2026-10-25 (round 9)
 
 - **[later]** Names for the spheres and designated systems
   SPH-01 included. Listed in the page's § Open.
@@ -328,10 +324,6 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
 - **[decide]** Who renews the Forbiddance while Saerthe is away *(prep)*
   Saerthe renews the Forbiddance nightly on a 30-day cycle, and he also holds the tyrant ship's helm at H'Catha and casts for the Flighty Foundling (inference: he cannot do both). Options: a deputy renews the ward while he is away; or another caster holds the Forbiddance.
   src: memory-canon (campaign-canon, approach to H'Catha; Flighty Foundling); realms/caelestis.html
-
-- **[decide]** The station's proportions
-  Memory gives them: the Academy about a fifth of Caelestis, the Fleet Corps about three-quarters (a part the crew has not seen yet), the remaining sliver secret. Neither STAGING nor an answered item states them, so the page says only that a part is kept secret. Confirm before the page carries the numbers.
-  src: memory-canon (campaign-canon, Mirt); astral § Caelestis structure
 
 ### locations/toril.html
 
@@ -541,6 +533,12 @@ Order under each heading: decide, fix, drop, add.
 - **[later]** The Trintar refugees
   The timeline's S16 has Granny take in "the Trintar refugees". Whether Trintar is Trentara (refugees from the Monolith's ruins) or another place is not set; the page keeps the table's word.
   src: timeline.json S16; section 8 (C11)
+
+### Fonains: the Darkest Day
+
+- **[later]** Who the five cultists were
+  Five cultists held the elemental ritual on the Darkest Day. The robed woman with the black crystal died in Session 15; the other four are not named.
+  src: tharizdun draft § Open, 2026-11-07
 
 ### Fonains doc
 
@@ -2056,7 +2054,7 @@ rulings went to STAGING. Each lists the pages it touches.
 - **decide** Three Fonains facts backed only by memory: the Green Lady's dragon form is a wild shape of the dragon she faced in Korvalatel's Clutch, and she is the Bacon Bunch's Green Lady (the page has her trapped in that form after Aerisi split Eldath's tree); Giorge is a branded member of the Verdant Vigilance; every member of Lola's Boys is tied to the Princes of Elemental Evil, which is why the Accordance chose them. locations/fonains.html, factions/deities.html, timeline.
 - **decide** Fragment counts and the Reach. Does the number of pieces a fragment broke into still mark its distance from the Reach under the five Axioms? If so, Dissolution (2) lay closest and Determination (11) farthest. cosmology/index.html § Residue.
 - **decide** Reach debris and worlds. Draft divine-rules.md says worlds and their hearts formed from the Reach's debris; cosmology/index.html § Origins says worlds formed by Consolidation and the debris became residue. Reconcile before divine-rules § Polarity is promoted.
-- **decide** Did Lola's Boys breaking the Fonains Monolith force Vecna to change his plan? Draft tharizdun.md says only that it hurt both of them. opposition/vecna.html.
+- **decide** Did Lola's Boys breaking the Fonains Monolith force Vecna to change his plan? factions/deities.html says only that it hurt both of them. opposition/vecna.html.
 
 ### Later
 

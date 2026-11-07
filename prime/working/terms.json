@@ -330,6 +330,11 @@
       "use": "cut"
     },
     {
+      "pattern": "\\bquickening\\b",
+      "use": "Monoliths appearing more often across the galaxy over the past century (the quickening is retired)",
+      "i": true
+    },
+    {
       "pattern": "\\bhearers?\\b",
       "use": "Starchild (Astra Virex's warlocks are Starchildren)"
     },

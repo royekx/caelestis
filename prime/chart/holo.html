@@ -80,7 +80,6 @@ footer i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-righ
 .lbl.gold{color:var(--gold);text-shadow:0 0 6px rgba(212,162,86,.6)}
 .lbl.below{transform:translateY(14px)}
 .lbl.sector{font-size:10px;letter-spacing:.32em;text-transform:uppercase;opacity:.5;text-shadow:none;transform:none}
-.lbl.ghost{color:#b6a6dc;text-shadow:none}
 #gtc{position:fixed;left:1rem;right:1rem;bottom:2.6rem;z-index:5;padding:.5rem .7rem;background:rgba(9,12,20,.82);border:1px solid var(--holo-f);border-radius:6px;backdrop-filter:blur(6px)}
 @media (max-width:640px){#gtc{left:.5rem;right:.5rem;bottom:2.3rem;padding:.4rem .5rem}}
 body:not(.embed) #caption{bottom:8.5rem}
@@ -637,8 +636,7 @@ function drawPlane(){
 // ── The Beacon (gtc.js) ────────────────────────────────────────────
 // Erevos turns once a cycle; a faint sweep marks where its unseen beam
 // points. The kindled arm glows behind a wave of light running root to tip,
-// and the arm's four marker clusters light as the wave passes. With the
-// quickening on (DM), a ghost shows where the old tables put the beam.
+// and the arm's four marker clusters light as the wave passes.
 const G = window.GTC;
 const beacon = new THREE.Group(); galaxy.add(beacon);
 const dirOf = a => new THREE.Vector3(Math.cos(a), 0, Math.sin(a)*.9).normalize();
@@ -651,11 +649,6 @@ const sweep = (() => {                       // a thin wedge along +x, turned to
     new THREE.LineBasicMaterial({ color:C.holoHi, transparent:true, opacity:.35 })));
   beacon.add(m); return m;
 })();
-const ghost = new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(2.4,0,0), new THREE.Vector3(112,0,0)]),
-  new THREE.LineDashedMaterial({ color:C.cone, dashSize:2, gapSize:1.6, transparent:true, opacity:.8 }));
-ghost.computeLineDistances(); beacon.add(ghost);
-const ghostFront = glowSprite(C.cone, 3.2, .9); beacon.add(ghostFront);
-const ghostLbl = new THREE.Object3D(); ghostFront.add(ghostLbl); label('old tables', ghostLbl, 'lbl sm ghost');
 // The side of the heart that throws the beam.
 const lip = glowSprite(C.holoHi, 3.2, .8); core.add(lip);
 // The wave: a glow along the arm from its root to the front, and the crest.
@@ -678,9 +671,9 @@ const clusters = E.MARKERS.map(mk => {
   return { mk, dots, halo };
 });
 const _accent = new THREE.Color(C.holoHi);
-let gtcT = null, gtcQuick = false;
-function applyGTC(T, quick){
-  gtcT = T; gtcQuick = quick;
+let gtcT = null;
+function applyGTC(T){
+  gtcT = T;
   const q = G.parts(T), a = G.beamAngle(T), d = dirOf(a);
   sweep.rotation.y = Math.atan2(-d.z, d.x);
   lip.position.copy(d).multiplyScalar(2.1);
@@ -705,21 +698,15 @@ function applyGTC(T, quick){
     m.dots.material.opacity = lit ? 1 : .35; m.dots.material.color.setHex(lit ? C.star : C.holo);
     m.halo.material.opacity = now ? .7 : lit ? .3 : 0;
   });
-  ghost.visible = ghostFront.visible = quick;
-  if (quick) {
-    const gq = G.parts(T - G.QUICK), gd = dirOf(G.beamAngle(T - G.QUICK));
-    ghost.rotation.y = Math.atan2(-gd.z, gd.x);
-    ghostFront.position.copy(toV(armPt(gq.arm, Math.min(gq.front, E.TIP + .2)), .3));
-  }
 }
 const tBeacon = document.getElementById('tBeacon');
 tBeacon.addEventListener('click', () => { const on = tBeacon.getAttribute('aria-pressed') !== 'true'; setPressed('tBeacon', on); beacon.visible = lip.visible = on;
-  if (!on) { col0(); } else if (gtcT != null) applyGTC(gtcT, gtcQuick); });
+  if (!on) { col0(); } else if (gtcT != null) applyGTC(gtcT); });
 function col0(){ starGeo.attributes.color.array.set(baseCol); starGeo.attributes.color.needsUpdate = true; }
 // Standing alone, the page carries its own clock; inside the Chart page the
 // page's clock drives it by message.
 if (!document.body.classList.contains('embed')) {
-  G.mount(document.getElementById('gtc'), { onTime: st => { if (beacon.visible) applyGTC(st.T, st.quick); } });
+  G.mount(document.getElementById('gtc'), { onTime: st => { if (beacon.visible) applyGTC(st.T); } });
 } else {
   document.getElementById('gtc').remove();
   applyGTC(G.NOW, false);
@@ -958,7 +945,7 @@ addEventListener('message', e => {
   if (d.cmd === 'oerth') revealFromOerth();
   if (d.cmd === 'plane') showPlane(true);
   if (d.cmd === 'free') standAt('free');
-  if (d.gtc && beacon.visible) applyGTC(d.gtc.T, !!d.gtc.quick);
+  if (d.gtc && beacon.visible) applyGTC(d.gtc.T);
 });
 </script>
 </body>
