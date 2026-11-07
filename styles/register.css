@@ -922,3 +922,8 @@ img { max-width: 100%; }
 .q-details .glance-synopsis:has(+ .overview-foot) { border-bottom: 0; padding-bottom: 0; }
 @media (max-width: 640px) { .q-details .glance-row { grid-template-columns: 1fr; } }
 
+
+/* An insignia the crew has seen, shown beside its entry */
+.seal-figure { margin: 0.6rem 0 0.4rem; width: fit-content; text-align: center; }
+.seal-figure img { display: block; max-width: 100%; height: auto; }
+.seal-figure figcaption { font-size: 0.8rem; color: var(--text-dim, var(--text)); margin-top: 0.25rem; }
