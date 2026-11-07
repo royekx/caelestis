@@ -63,12 +63,15 @@ and best formed of the brood. The elder brain also links every illithid of
 the colony and keeps the knowledge of its dead.
 
 The Vth'orama have no elder brain, and N'ghathrod will not let a tadpole die.
-After all the colony has been through, and the exile above all, every tadpole
-is found a host. The weak and the flawed reach a host with the rest, so an
-illithid the colony makes is far more likely to come out of ceremorphosis
-malformed. Most of them do, and the whole are a minority. A tadpole that must
-not die needs a body, so the refusal is also why the colony always needs more
-captives than it has.
+After all the colony has been through, and the exile above all, nothing eats
+the brood. The tadpoles in the pools still eat one another, as tadpoles do,
+and that alone leaves far more survivors than an elder brain would. Every
+survivor is kept alive in the pools and waits there, for years if it must,
+until it is found a host. The weak and the flawed survive with the rest, so
+an illithid the colony makes is far more likely to come out of
+ceremorphosis malformed. Most of them do, and the whole are a minority. The
+pools always hold more waiting tadpoles than the colony has bodies for, and
+that is why it always needs more captives.
 
 **N'ghathrod has become the colony's elder brain.** He is not one in the
 ordinary sense; he is a changed thing that has grown into the place. Its
@@ -83,8 +86,8 @@ have thinned out. An unthinned illithid is visibly wrong in body, and
 lopsided in mind. Where an ordinary illithid has a broad spread of psychic
 powers, an unthinned one is very good at one thing and poor at the rest.
 
-Every illithid spawns, whole or unthinned, a few clutches over its life, and
-every clutch goes into the pools. **The true-formed** (proposed name) are the
+Every illithid spawns, whole or unthinned: a mass of tadpoles, two or three
+times in its life, and every mass goes into the pools. **The true-formed** (proposed name) are the
 colony's whole illithids: the old ones who came with N'ghathrod, and the
 minority born in the colony who came out whole. They keep the pools and
 oversee ordinary ceremorphosis. Every captive is an allocation: an
@@ -106,6 +109,13 @@ were and refused them, and exiled them. N'ghathrod went with them.
 Thessalar's experiment with the seventh Rod piece, keyed to simulacrum,
 changed N'ghathrod's reproduction: his tadpoles stopped being offspring and
 became copies of him. That is the taking.
+
+It also changed how he spawns. An ordinary illithid spawns a mass two or
+three times in its life; N'ghathrod spawns on a slow, steady cycle, a few
+copies at a time, again and again. Over a year he makes more tadpoles than
+any illithid aboard, and far fewer than the colony's illithids make
+together. His copies place the taken. The ordinary masses, from every
+illithid in the colony, are what grow it.
 
 It changed the five who became the enna with him. Each came out with a power
 of its own. Zhauveth's is the Voice: domination and suggestion.
@@ -135,7 +145,7 @@ illithids keeps the colony's history.
 | The host | Consumed; becomes a new illithid | Persists; the copy sits alongside them |
 | Looks like | An illithid; most come out unthinned | Themselves. Chitin grows hidden along the spine and skull over years |
 | Purpose | Grows the colony | Places N'ghathrod in a key post; can carry a directive; reports to him |
-| Cost | One captive | One of N'ghathrod's tadpoles, grown on a slow cycle |
+| Cost | One captive | One captive, and one of N'ghathrod's few copies |
 | Tell | Obvious | Their minds cannot be read. Dying, they say "Oramu" |
 
 Captives become illithids. Only key people are taken, never crowds. The taken
