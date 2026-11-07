@@ -276,7 +276,7 @@
      in it carries life. Asteroid belts and titanic remains are not
      planets. A destroyed world keeps its heart but raises no Monolith, so
      a charted wreck rules its system out, unless the world was destroyed
-     by its own Zenith and a Monolith answered: Nowhere, on its stroke. */
+     when a god forced its way onto it and a Monolith answered: Nowhere, on its stroke. */
   const PLANET_KINDS = ['planet', 'giant of air'], WRECK = 'wreck large enough to chart';
   const LIVED = ['outpost', 'settlement', 'civilization'];
   const alive = b => b.life !== 'none' || LIVED.includes(b.inhabitants);

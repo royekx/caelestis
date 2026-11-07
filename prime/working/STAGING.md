@@ -6,11 +6,6 @@ facts are written in-world; rules and play notes in DM voice. Rewrite an entry
 when a ruling changes; delete it once the page carries it. See
 [README.md](README.md) for the flow and the writing rules.
 
-## Cosmology
-
-### Residue: scale (cosmology/index.html § Residue, artifacts/index.html § Holdings)
-- Residue is aligned to an Axiom. It is never an Axiom. An Axiom is a law that all energy in the cosmos follows, and a piece of residue is a speck beside it. A fragment gathered whole, or all five gathered together, would still come nowhere near an Axiom.
-
 ## Campaign
 
 ### N'ghathrod's long life (dossiers/nghathrod.html, artifacts/rod-of-seven-parts.html; waits for deconflict ruling 17, the FIA story audit)
@@ -18,11 +13,6 @@ when a ruling changes; delete it once the page carries it. See
 
 ### The Academy thefts (factions/vocath-operation.html, campaign/plot-hooks.html)
 - The thefts at Caelestis took small things: station property, personal effects and Saerthe's miniature spelljamming ship. They never reached a working vessel.
-
-## Artifacts and vessels
-
-### Residue: housings (artifacts/index.html § Why they are scattered and hidden)
-- The pieces belong together by where they came from, never by design. Each housing is its finder's own work, built with the skills and materials of one place and age. Housings of the same fragment look nothing alike, and nothing about a housing marks it as residue.
 
 ## Opposition and Fonains
 
