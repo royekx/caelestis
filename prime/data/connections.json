@@ -2560,10 +2560,6 @@
           "src": "timeline/timeline.json"
         },
         {
-          "t": "His price to N'ghathrod's side was captives from a Caelestis crew, read as ordinary thrall work.",
-          "src": "dossiers/vocath.html"
-        },
-        {
           "t": "He sees the Fleet stretched thin and uses it to press the Academy.",
           "src": "dossiers/vocath.html"
         }
@@ -2581,7 +2577,7 @@
           "src": "factions/vocath-operation.html"
         },
         {
-          "t": "The color pool took the mercenaries' ship Clint had seized to Fonains, with mercenaries and at least one of Vocath's overseers aboard. They hunted Clint there, and when the Monolith rose and broke they called Vocath by sending stone.",
+          "t": "The color pool took the smaller pirate ship, whose helm Clint had taken, to Fonains, with Vocath's overseer and its pirate crew aboard. They hunted Clint there for a while, and when the Monolith rose and broke the overseer called Vocath by sending stone.",
           "src": "timeline/timeline.json"
         },
         {
@@ -2726,7 +2722,7 @@
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "It came on a raider band mid-handover near Cairn, mercenaries in Vocath's hire flying their own colors, and was raided once; many of its crew died.",
+          "t": "It came on two pirate ships in Vocath's hire mid-handover near Cairn, handing captives to a colony courier, and was raided once; many of its crew died.",
           "src": "vessels/bellwether-crow.html"
         },
         {
@@ -2747,19 +2743,19 @@
       "summary": "About a year before now, near Cairn Station: one raid, Clint lost to a color pool.",
       "facts": [
         {
-          "t": "About a year before now Bellwether Crow came on raiders mid-handover near Cairn Station, and they struck to drive it off. They were mercenaries in Vocath's hire, flying their own colors, with a few of his own crew aboard as overseers.",
+          "t": "About a year before now Bellwether Crow came on pirates in Vocath's hire mid-handover near Cairn Station, moving captives to a colony courier. They ran up common pirate colors and struck. They sailed two ships: a main ship known by the name and mark on her hull, and a smaller ship carrying Vocath's overseer, who had put on his personal seal for the handover.",
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "To draw the fight off his crew, Clint boarded one of their ships and seized it; a color pool opened by chance and took that ship, with Clint and its crew of mercenaries and overseers aboard.",
+          "t": "To draw the fight off his crew, Clint went aboard the smaller ship and took its helm, and the crew saw him there with the overseer and the seal. A color pool opened by chance and took that ship, with Clint, the overseer and its pirate crew aboard.",
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "Crow's survivors saw the band's colors; the Fleet recorded them in WM-002 and runs escorts against that band under SA-005.",
+          "t": "With their paymaster gone, the main ship backed off or was overpowered by Crow's crew. The Fleet recorded her name and hull mark from the survivors in WM-002 and runs escorts against her under SA-005.",
           "src": "restricted/wm-002.html"
         },
         {
-          "t": "After the raid a wax disc was found on Crow's deck, off sealed cargo the raiders carried. It bears Vocath's personal seal, which matches nothing in the Fleet's registry; the seal never flies.",
+          "t": "FR-016 draws the overseer's seal from the survivors' accounts. It is Vocath's personal seal, registered nowhere, so the Fleet's registry returns no match, and the Fleet hunts the ship rather than the seal.",
           "src": "restricted/fr-016.html"
         },
         {

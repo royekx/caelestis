@@ -38,14 +38,14 @@ staging once Korey has read and accepted them.
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 4 | 1 | 0 | 3 |
 | Dossiers | dossiers/ | 13 | 17 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 18 | 0 | 0 | 0 |
-| Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
+| Artifacts and vessels | artifacts/, vessels/ | 8 | 8 | 1 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 4 | 11 | 0 | 18 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 13 | 1 | 0 | 2 |
-| **Total** |  | **126** | **159** | **25** | **1** | **47** |
+| **Total** |  | **126** | **160** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1328,6 +1328,10 @@ left here is open.
 - **[later]** Bellwether Crow after the raid
   Crow was repaired at Cairn and went home (vessels/bellwether-crow.html). Its class is set: a light corvette. Whether it went back into service, its captain, and the name of the survivor who saw Joffrey change wait until the crew pulls the roster.
   src: section 4; fia-story § After
+
+- **[later]** The pirate ship's name and hull mark
+  The main pirate ship in the raid on Crow is known by her name, her own mark on the hull, or both (vessels/bellwether-crow.html, restricted/wm-002.html); in a fight she flies the common crossbones. Her name and mark are not set. The form of the overseer's seal, pendant, signet or similar, is also not set.
+  src: raid on Bellwether Crow, final version (2026-11-07)
 
 ### vessels/moonraider.html
 
