@@ -808,9 +808,9 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   The third insider steals, and Joffrey uses the thief to learn where things are kept at Caelestis and the Brig's protocols. Neither the thief nor Miken knows the other exists, and nothing either knows points at Joffrey. Who the thief is, and who recruited them, is open; it matters when the crew is back at Caelestis.
   src: fia-story § Open (deconflict 14b)
 
-- **[later]** Who keeps the colony's history
-  Proposed in the FIA story: the eldest of the old illithids who joined N'ghathrod keeps the colony's history. Rule it when the colony's people are built out.
-  src: fia-story § One with N'ghathrod (proposed)
+- **[later]** The Coven's name
+  The Coven (factions/vthorama.html#coven) is a working name for the colony's eldest illithids, taken by N'ghathrod, who remember for it. Its proper name, perhaps a word in the colony's tongue, is not set.
+  src: Korey, 2026-11-07
 
 - **[decide]** The network's defences
   Once the crew learns of the links, Vecna and N'ghathrod guard the hearts that carry several links, and Oerth's heart above all. What the safeguards are.

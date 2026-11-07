@@ -5469,6 +5469,27 @@
           "src": "locations/krynnspace.html"
         }
       ]
+    },
+    {
+      "id": "coven",
+      "label": "The Coven",
+      "type": "faction",
+      "scope": "caelestis",
+      "summary": "The colony's memory: its eldest illithids, taken by N'ghathrod.",
+      "facts": [
+        {
+          "t": "A small circle of the colony's eldest illithids, none of them among the enna, who came out of Thessalar's craft with N'ghathrod; some were elders of their Glyth colony's branch.",
+          "src": "factions/vthorama.html#coven"
+        },
+        {
+          "t": "N'ghathrod took them, each with one of his copies, and the taking has prolonged their lives as it prolongs his.",
+          "src": "factions/vthorama.html#coven"
+        },
+        {
+          "t": "They remember for the colony and keep the old ways of Glyth, mostly.",
+          "src": "factions/vthorama.html#coven"
+        }
+      ]
     }
   ],
   "edges": [
@@ -8369,6 +8390,18 @@
       "t": "LOC-Sp4hR9nk",
       "rel": "on a lane out from",
       "src": "locations/realmspace.html"
+    },
+    {
+      "s": "coven",
+      "t": "vthorama",
+      "rel": "remembers for",
+      "src": "factions/vthorama.html#coven"
+    },
+    {
+      "s": "nghathrod",
+      "t": "coven",
+      "rel": "took",
+      "src": "factions/vthorama.html#coven"
     }
   ]
 }
