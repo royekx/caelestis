@@ -16,16 +16,12 @@
    1491.7.12. Which arm kindles first, and the current kindling and ember,
    are not set; the control says so in a DM note.
 
-   The quickening (DM only): the arms kindle slightly early against the
-   Discerners' old tables. The ghost shows the old tables a few embers
-   behind; the size of the gap is illustrative.
    ════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
   const E = window.EREVOS;
   const KINDLINGS = 16, EMBERS = 30, CYCLE = KINDLINGS * EMBERS, SPARK = CYCLE / 4;
   const FIRST_ARM = 0;
-  const QUICK = 6;
   const toT = (c, k, e) => c * CYCLE + (k - 1) * EMBERS + (e - 1);
   const NOW = toT(1491, 7, 12) + 0.5;
 
@@ -66,8 +62,6 @@
 .gtc .gtc-play{min-width:34px}
 .gtc select{max-width:10.5rem}
 .gtc-scrub{flex:1 1 90px;min-width:70px;accent-color:#6E95D4}
-.gtc-quick{display:inline-flex;align-items:center;gap:.3rem;font-size:13px;color:#b6a6dc;white-space:nowrap;cursor:pointer}
-.gtc-quick input{accent-color:#9683c4}
 .gtc-note{flex:1 1 100%;margin:0;font-size:12.5px;line-height:1.35;color:#8c9cb2;font-style:italic}
 .gtc-note b{font-style:normal;font-weight:600;color:#b6a6dc;letter-spacing:.06em;font-size:11px}
 @media (max-width:640px){.gtc-ctl{flex-wrap:wrap}.gtc select{max-width:9.5rem}.gtc-scrub{flex-basis:100%;order:5}.gtc-order{font-size:12px}}`;
@@ -81,12 +75,11 @@
         <select class="gtc-speed" aria-label="Speed">${SPEEDS.map(([v, l], i) => `<option value="${v}"${i === 2 ? ' selected' : ''}>${l}</option>`).join('')}</select>
         <input type="range" class="gtc-scrub" min="0" max="${CYCLE - 0.01}" step="0.25" aria-label="Through the cycle">
         <button type="button" class="gtc-now">Now</button>
-        <label class="gtc-quick" title="DM: the arms kindle slightly early against the old tables"><input type="checkbox" class="gtc-q"> Quickening</label>
       </div>
       <p class="gtc-note"><b>DM</b> Now (1491.7.12, Realmspace's arm kindling first) is the chart's default. Which arm kindles first, and the current kindling and ember, are not set.</p>
     </div>`;
     const $ = c => host.querySelector(c);
-    const st = { T: NOW, playing: false, speed: 1, quick: false };
+    const st = { T: NOW, playing: false, speed: 1 };
     let last = 0, raf = 0;
     function render() {
       const f = fmt(st.T);
@@ -108,10 +101,9 @@
     $('.gtc-speed').addEventListener('change', e => { st.speed = +e.target.value; });
     $('.gtc-scrub').addEventListener('input', e => { st.T = parts(st.T).cycle * CYCLE + (+e.target.value); render(); });
     $('.gtc-now').addEventListener('click', () => { st.T = NOW; render(); });
-    $('.gtc-q').addEventListener('change', e => { st.quick = e.target.checked; render(); });
     render();
     return { state: st, render, set(T) { st.T = T; render(); }, play: setPlaying };
   }
 
-  window.GTC = { KINDLINGS, EMBERS, CYCLE, SPARK, FIRST_ARM, QUICK, NOW, toT, parts, beamAngle, fmt, armName, mount };
+  window.GTC = { KINDLINGS, EMBERS, CYCLE, SPARK, FIRST_ARM, NOW, toT, parts, beamAngle, fmt, armName, mount };
 })();

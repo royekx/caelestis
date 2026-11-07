@@ -97,7 +97,7 @@
       "cert": "canon",
       "title": "Vecna rules Oerth and ascends",
       "desc": "An archmage of Oerth, then a lich who rules it and is never stopped. He ascends through a Zenith; the Monolith archives his mortal form, Vecna (Lich), to the Radiant Citadel. Becoming a god gives him the same charge as Oerth's heart, and the world pushes him off.",
-      "t": -900,
+      "t": -1000,
       "end": -700,
       "tier": 1
     },
@@ -143,8 +143,8 @@
       "lane": "vecna",
       "status": "projected",
       "cert": "canon",
-      "title": "Failure state: GAL-01's core wakes for Vecna",
-      "desc": "If GAL-01 falls, GAL-03, GAL-04 and GAL-05 fall with it, and with GAL-02's core already awake, Rykoe can open. Every linked heart becomes a door to the center, and Vecna's vessels go through toward Continuity.",
+      "title": "If the eye completes: GAL-01's core wakes for Vecna",
+      "desc": "If GAL-01 falls, GAL-03, GAL-04 and GAL-05 fall with it, and with GAL-02's core already awake, Rykoe can open. Every linked heart becomes a door to Rykoe, and Vecna's vessels go through toward Continuity. The eye is the campaign's undercurrent, not its failure state: this may come in the campaign or after it.",
       "t": 5,
       "tier": 1
     },
@@ -263,7 +263,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The Darkest Day",
-      "desc": "Vecna's cult works a ritual on Giorge at the eclipse, as bait. The Monolith erupts over the cemetery. The first Accordance champions die fighting it.",
+      "desc": "Two rituals are worked at the eclipse. A cult of Vecna binds Giorge to Tharizdun, with Vecna part of it, in league with her, and the binding draws attention from the other: the elemental ritual for the four Princes, which drives Fonains to its Zenith. The Monolith erupts over the cemetery. The first Accordance champions die fighting it.",
       "t": -0.47,
       "tier": 1
     },
@@ -365,7 +365,7 @@
       "status": "planned",
       "cert": "working",
       "title": "Act 4: Stopping N'ghathrod",
-      "desc": "N'ghathrod's fall, and with it the casting of Vecna's eye. It can carry the crew beyond the Erevos Galaxy.",
+      "desc": "N'ghathrod's fall ends the illithid invasion. Vecna's eye, a separate plan, may surface as a late reveal or carry on past the campaign. It can carry the crew beyond the Erevos Galaxy.",
       "t": 3,
       "end": 5,
       "tier": 1
@@ -1424,7 +1424,7 @@
       {
         "t": -0.47,
         "status": "past",
-        "title": "The Darkest Day: Vecna's bait ritual on Giorge; the corrupted Monolith rises",
+        "title": "The Darkest Day: two rituals; the corrupted Monolith rises",
         "who": [
           "Vecna",
           "Tharizdun and the Princes",
@@ -1594,7 +1594,7 @@
       {
         "t": 5,
         "status": "projected",
-        "title": "Failure state: GAL-01's core wakes for Vecna",
+        "title": "If the eye completes: GAL-01's core wakes for Vecna",
         "who": [
           "Vecna",
           "N'ghathrod",

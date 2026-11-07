@@ -58,7 +58,6 @@ also hold for the working layer and the pages it feeds:
 | Draft | Subject | State |
 |---|---|---|
 | [divine-rules.md](divine-rules.md) | Worship, galaxies, polarity, realms, one god many names | Draft |
-| [tharizdun.md](tharizdun.md) | The prison, the Day of Chaos, how Vecna uses him | Draft |
 | [glyth-watcher.md](glyth-watcher.md) | The Watcher who came back from Glyth | Sketch |
 | [nct-127.md](nct-127.md) | Neo Constellation Troupe 127, a travelling band; a seed kept off the player side | Sketch |
 | [campaign-middle.md](campaign-middle.md) | Building the post-graduation middle: the invasion ladder, fronts, contracts as nodes, cadence | Draft |

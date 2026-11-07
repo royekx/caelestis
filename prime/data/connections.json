@@ -207,14 +207,14 @@
       "label": "Polarity",
       "type": "concept",
       "scope": "cosmos",
-      "summary": "Why gods cannot walk on worlds or reach the center.",
+      "summary": "Why gods cannot walk on worlds or reach Rykoe.",
       "facts": [
         {
           "t": "Gods are of the same make as worlds and their hearts, so like charges push them apart, harder the closer they come.",
           "src": "STAGING round 5"
         },
         {
-          "t": "The greater a god, the harder the push, which is why the greatest gods are kept farthest from worlds and the center.",
+          "t": "The greater a god, the harder the push, which is why the greatest gods are kept farthest from worlds and from Rykoe.",
           "src": "STAGING round 5"
         },
         {
@@ -722,7 +722,7 @@
       "summary": "God of secrets, knowledge, manipulation and trickery, working to wake the Erevos Galaxy's core and reach Continuity.",
       "facts": [
         {
-          "t": "Vecna is a later god who ascended on Oerth, his homeworld, at least a few centuries ago.",
+          "t": "Vecna is a later god who ascended on Oerth, his homeworld, about a thousand years ago.",
           "src": "STAGING round 2"
         },
         {
@@ -771,7 +771,7 @@
           "src": "STAGING round 5"
         },
         {
-          "t": "A few centuries ago the gods of the Accordance felt a new entity like them appear where there had been none.",
+          "t": "About a thousand years ago the gods of the Accordance felt a new entity like them appear where there had been none.",
           "src": "STAGING round 5"
         }
       ]
@@ -946,7 +946,7 @@
           "src": "STAGING round 5"
         },
         {
-          "t": "Lord Primus may sense the new god that appeared a few centuries ago.",
+          "t": "Lord Primus may sense the new god that appeared about a thousand years ago.",
           "src": "STAGING round 5"
         }
       ]
@@ -4467,7 +4467,7 @@
       "summary": "The eclipse when the Monolith erupted over the cemetery.",
       "facts": [
         {
-          "t": "Vecna's cult worked a ritual on Giorge at the eclipse, as bait.",
+          "t": "Two rituals ran at the eclipse: one bound Giorge to Tharizdun, with Vecna part of it, and drew attention from the elemental ritual for the four Princes.",
           "src": "timeline/timeline.json"
         },
         {
@@ -4915,7 +4915,7 @@
       "label": "Giorge",
       "type": "person",
       "scope": "fonains",
-      "summary": "The bait of Vecna's ritual on the Darkest Day.",
+      "summary": "Bound to Tharizdun on the Darkest Day, in a ritual Vecna was part of.",
       "facts": [
         {
           "t": "Giorge may be trying to reach Shothragot's true vestige.",
@@ -8122,7 +8122,7 @@
     {
       "s": "giorge",
       "t": "darkest-day",
-      "rel": "was the bait in",
+      "rel": "was bound to Tharizdun in",
       "src": "timeline/timeline.json"
     },
     {

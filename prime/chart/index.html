@@ -222,11 +222,11 @@ const COSMOS = {
       `Vecna (Lich), the mortal form archived when Vecna ascended, sits in the Radiant Citadel.`,
       `The Radiant Citadel and the Core Monolith are late Act 3 or Act 4 destinations, reached by a long voyage or through a linked heart.`] },
   fifths: { id:"fifths", name:"Circle of Fifths", kind:"Vecna's working, across the cosmos",
-    summary:`Five galaxies, each a fifth of what Vecna needs, around the center where the Axioms meet. The name is his alone, taken from the circle of fifths in music.`,
+    summary:`Five galaxies, each a fifth of what Vecna needs, around Rykoe, the centre of the cosmos. The name is his alone, taken from the circle of fifths in music.`,
     there:[`<strong>Spokes</strong>: each galaxy's core joined to Rykoe.`,`<strong>Rim</strong>: each core joined to its two neighbours.`],
     dm:[`Vecna works GAL-01's core with spellwork, an inscription drawn in linked heart worlds. In each other galaxy another being works its core by its own method.`,
       `No one else knows what he is building: the Seekers, the Order and most gods have no name for it. A few on the fringes sense something wrong in the cosmos, and no one believes them.`,
-      `The failure state is GAL-01's core waking for Vecna. If GAL-01 falls, GAL-03, GAL-04 and GAL-05 fall with it, and Rykoe can open. Success in GAL-01 holds them, though work remains.`] }
+      `The eye is an undercurrent beneath the invasion, not the campaign's failure state. If it completes, GAL-01's core wakes for Vecna; GAL-03, GAL-04 and GAL-05 fall with it, and Rykoe can open. Success in GAL-01 holds them, though work remains.`] }
 };
 /* Pentagon around Rykoe, GAL-01 at the top, clockwise. */
 const GAL_DRAW = {
@@ -716,11 +716,6 @@ function drawBeacon(){
              : `<circle cx="${x}" cy="${y}" r="20" fill="none" stroke="#6E95D4" stroke-opacity=".45" stroke-width="3" stroke-dasharray="5 6"/>`;
     if(now) o += `<text class="lbl-sub" x="${x}" y="${+y-84}" text-anchor="middle" font-size="40" fill="#a8c2ec">kindling ${q.kindling}</text>`;
   });
-  if(st.quick){
-    const g = GTC.parts(st.T - GTC.QUICK), ga = GTC.beamAngle(st.T - GTC.QUICK), gt = ray(ga, 1800), gp = armPt(g.arm, Math.min(g.front, window.EREVOS.TIP+.2));
-    o += `<line x1="${GX.cx}" y1="${GX.cy}" x2="${f2(gt[0])}" y2="${f2(gt[1])}" stroke="#9683c4" stroke-opacity=".7" stroke-width="3" stroke-dasharray="14 12"/>`;
-    o += `<circle cx="${f2(gp[0])}" cy="${f2(gp[1])}" r="30" fill="none" stroke="#9683c4" stroke-width="4" stroke-dasharray="6 6"/><text class="lbl-sub" x="${f2(gp[0])}" y="${f2(gp[1]+76)}" text-anchor="middle" font-size="38" fill="#b6a6dc">old tables</text>`;
-  }
   host.innerHTML = o;
 }
 
@@ -882,7 +877,7 @@ function corePanel(n){
   const t = { asleep:`A black hole at the galaxy's center, where Consolidation and Dissolution win outright. It sleeps.`,
     awake:`A black hole at the galaxy's center, where Consolidation and Dissolution win outright. It is awake, and it presses on its neighbours.`,
     partway:`A black hole at the galaxy's center, where Consolidation and Dissolution win outright. Something is working it awake, and it is partway there.` }[n.core];
-  const dm = home ? [`The inscription's pupil, at the centre of the inscription plane. When lids and iris are whole, the eye opens and the core wakes, and what lands on Oerth is sight: a view into Continuity itself.`,`Its waking for Vecna is the failure state. It sets the fate of GAL-03, GAL-04 and GAL-05.`,`Once Rykoe opens, every linked heart becomes a door: through its Atrium to this core, and through the core to the center.`]
+  const dm = home ? [`The inscription's pupil, at the centre of the inscription plane. When lids and iris are whole, the eye opens and the core wakes, and what lands on Oerth is sight: a view into Continuity itself.`,`Its waking for Vecna sets the fate of GAL-03, GAL-04 and GAL-05.`,`Once Rykoe opens, every linked heart becomes a door: through its Atrium to this core, and through the core to Rykoe.`]
     : n.galaxy==="GAL-02" ? [`Its pressure on GAL-01's core is how the crew can be pulled into this galaxy late in the campaign.`] : [`Its fate turns on GAL-01.`];
   panel.innerHTML = `<h2>${esc(n.name)}</h2><p class="kind">${esc(n.kind)}</p><span class="badge" style="color:${CORE_TONE[n.core]};border-color:${CORE_TONE[n.core]}">${CORE_WORD[n.core]}</span><p>${t}</p>${dmlist(dm)}`;
 }
@@ -996,7 +991,7 @@ function holoSend(msg){ if(holoReady && holo.contentWindow) holo.contentWindow.p
    the time to the holochart in its frame. */
 window.chartTime = (() => {
   let ctl = null;
-  const push = () => { if(ctl) holoSend({ gtc:{ T:ctl.state.T, quick:ctl.state.quick } }); };
+  const push = () => { if(ctl) holoSend({ gtc:{ T:ctl.state.T } }); };
   const api = { get state(){ return ctl.state; }, push, view(){ push(); } };
   window.chartTime = api;
   ctl = GTC.mount(document.getElementById("gtc"), { onTime(){ if(current==="2d") drawBeacon(); else push(); } });
