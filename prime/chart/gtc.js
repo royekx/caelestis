@@ -23,7 +23,7 @@
   const KINDLINGS = 16, EMBERS = 30, CYCLE = KINDLINGS * EMBERS, SPARK = CYCLE / 4;
   const FIRST_ARM = 0;
   const toT = (c, k, e) => c * CYCLE + (k - 1) * EMBERS + (e - 1);
-  const NOW = toT(1491, 7, 12) + 0.5;
+  const NOW = toT(1491, 7, 24) + 0.5;
 
   function parts(T) {
     const cycle = Math.floor(T / CYCLE), inC = T - cycle * CYCLE;
