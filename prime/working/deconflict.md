@@ -413,6 +413,10 @@ draft. Rulings 1 to 3 are also written into `working/fia-story.md`.
    template.
 6. **Tumak chat (mechanic):** Homebound and the runes (ruling 12), from the
    Tumak sweep in the inbox and `crew/tumak.html`.
+7. **Build chat: the DM tools.** BACKLOG § Automation and tracker, "Overhaul
+   the DM tools": the tracker first, then the Voyages board, the hub, the
+   timeline and the overlay. Best after the change audits, so the tools are
+   rebuilt against clean pages.
 
 Delete this draft when every item is closed.
 
