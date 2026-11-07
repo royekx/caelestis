@@ -42,8 +42,9 @@ can investigate, and a store of backstory.
 - The Academy thefts; *fleet intelligence archive* on Mirt's notepad.
 
 **Fixed by the Fonains campaign:** Clint Dashforest reached Fonains about a
-year ago through a color pool, before its Monolith appeared. His one unusual
-item there is a laser pistol, the first on that world.
+year ago through a color pool, before its Monolith appeared. His laser pistol
+is the first on that world, though laser pistols are common enough in
+wildspace.
 Vocath's people trade there and brought fragments of the broken Monolith
 home; Boogie's shard came through Vocath's line.
 
@@ -320,8 +321,10 @@ far.
 
 The pool drops the ship on Fonains, with Clint and its raiders aboard, before
 the Monolith rose, about a year ago. Clint gets away. He loses his means of
-reaching Caelestis, his communication piece, and cannot send word. His laser
-pistol stays with him; the raiders never knew he had it. They hunt him for a
+reaching Caelestis, his communication piece, and cannot send word. He may also
+carry an artifact device, not yet worked out, which he knows only as a magic
+item. The raiders and Vocath know nothing of it, and it played no part in the
+chase. Whether it is the second Distinction piece is open. They hunt him for a
 while, for the sake of it and so that he cannot report what he saw on the
 lane. When the Monolith rises and breaks, they see their chance: they still
 have their ship and their sending stone, and they send word to Vocath.
@@ -342,10 +345,10 @@ trade on Fonains and carry its gems and shards home.
   Vocath's seal and handles what comes in: he leaves the rod where Miken will
   pick it up. Miken sabotages. A third insider, the thief, steals, and Joffrey
   uses the thief to learn where things are kept and the Brig's protocols,
-  which he has no access to. Miken knows one other accomplice exists and
-  that thefts are happening, and not who. The thief knows of one other too.
-  Each points at the other; nothing between them points at Joffrey. Only the
-  crew holds what does.
+  which he has no access to. Neither Miken nor the thief knows the other exists, and
+  neither knows there are three: each knows only that someone else is
+  involved. Nothing either of them knows points at Joffrey. Only the crew
+  holds what does.
 - Zhauveth tells Vocath that he has an informant inside Caelestis, and Vocath
   uses it for his grudge against Mirt. In name, Joffrey answers to Qitru,
   Vocath's intermediary; in fact N'ghathrod runs him, through Zhauveth.
@@ -578,7 +581,7 @@ Strake further off; the FIA rebuilds and the clearance fix; the chart move.
 | Page | Touched by |
 |---|---|
 | `prime/dossiers/joffrey.html` | junior spelljammer, taken at Cairn, no directive, the months of turning, A.T.L.A.S., the hub of three insiders, Qitru in name |
-| `prime/dossiers/clint.html`, `prime/artifacts/second-distinction-piece.html`, `distinction-fragment.html`, `artifacts/index.html` | the boarding, the pool by chance, the laser pistol; no device with him, and whether the second Distinction piece is anywhere near him is open |
+| `prime/dossiers/clint.html`, `prime/artifacts/second-distinction-piece.html`, `distinction-fragment.html`, `artifacts/index.html` | the boarding, the pool by chance, the laser pistol; a possible artifact device nobody else knows of, possibly the second Distinction piece (open) |
 | `prime/artifacts/atlas.html` | how it reached the Brig, and the plan that starts there |
 | `prime/dossiers/mirt.html` | his silence on the seal, his code, his aim |
 | `prime/dossiers/miken.html`, `qitru.html`, `veena-derek.html`, `winston-ryeback.html` | the rod, the beacon, Qitru's lie |

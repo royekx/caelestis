@@ -35,7 +35,7 @@ staging once Korey has read and accepted them.
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 2 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 19 | 4 | 3 | 0 | 2 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 20 | 4 | 3 | 0 | 2 |
 | Dossiers | dossiers/ | 19 | 16 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 9 | 7 | 3 | 0 | 1 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 14 | 6 | 0 | 1 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 13 | 13 | 2 | 0 | 8 |
-| **Total** |  | **138** | **168** | **51** | **2** | **63** |
+| **Total** |  | **139** | **168** | **51** | **2** | **63** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2044,6 +2044,10 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   src: Korey, 2026-11-06
 
 ### principles.html
+
+- **[decide]** Firearms in wildspace *(shape)*
+  Laser pistols are common enough in wildspace and the first on Fonains is Clint's. Standardize which firearms exist where (powder, laser, other), what the Fleet issues, and how they read at the table. Proposed: Ryeback's pistol, not yet seen at the table, is a laser pistol.
+  src: Korey, 2026-11-07
 
 - **[add]** The DM has the same tools as the players
   This is still Dungeons & Dragons in a sci-fi skin. Anything a player can do, the world can do: spells, charms, mass suggestion, mind blank, a familiar on watch. When a plan in the world needs people silent, loyal or unaware, reach for the spell that would do it before inventing a reason they just did not notice. The taken carry the effect of mind blank; Cairn Station's crew are held by an illithid whose hold grows with nearness and time. Using these is not cheating. Let the spectacle show, too: a held station should feel uncanny, not merely quiet.

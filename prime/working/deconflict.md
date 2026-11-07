@@ -97,9 +97,9 @@ change audit.
     carry Vocath's seal and handles what comes in; he leaves the rod where
     Miken picks it up. Miken sabotages. A third insider, the thief, steals,
     and Joffrey uses the thief to learn where things are kept and the Brig's
-    protocols. Miken knows one other accomplice exists and that thefts happen,
-    and not who; the thief knows of one other too. They point at each other,
-    and nothing between them points at Joffrey. Who the thief is, and who
+    protocols. Neither Miken nor the thief knows the other exists, and
+    neither knows there are three. Each knows only that someone else is
+    involved. Nothing either of them knows points at Joffrey. Who the thief is, and who
     recruited them, is open.
 15. **Joffrey's timeline.** He turned over some months, not a year, and
     gathered what he could. The thefts ran small before he was placed and
@@ -135,12 +135,20 @@ change audit.
     time to the chain if the dates need it.
 24. **Clint on Fonains.** He seized the raiders' ship, and the pool took it
     with them aboard. He landed before the Monolith rose, about a year ago,
-    got away, and lost his means of reaching Caelestis. His one unusual item
-    is a laser pistol, the first on that world; what it is, is open. The
-    raiders never knew he had it. They hunted him for a while, and when the
-    Monolith rose and broke they called home and started their trade. He
-    carries no device: `artifacts/second-distinction-piece.html` and BACKLOG
-    cross-cutting 18 change.
+    got away, and lost his means of reaching Caelestis. They hunted him for a
+    while, so he could not report, and when the Monolith rose and broke they
+    called home and started their trade.
+    - His laser pistol is unusual on Fonains, the first there. In wildspace
+      laser pistols are not unusual. **Proposed:** Ryeback's pistol, not yet
+      seen at the table, is one too. Standardizing firearms in wildspace goes
+      to BACKLOG.
+    - **He may carry an artifact device**, not yet worked out, which he knows
+      only as a magic item. The raiders and Vocath know nothing of it, and it
+      played no part in why they chased him. What Caelestis has lost is an
+      item of value and a crew member. Whether that device is the second
+      Distinction piece stays open, because Caelestis holding two artifacts
+      would be a large coincidence; keep it as a possibility and settle it
+      where it is useful. BACKLOG cross-cutting 18 changes to match.
 
 **Cosmology**
 
@@ -154,8 +162,7 @@ change audit.
 33. **The four keys.** The Accordance forged them. Futsunushi, the god
     weaponsmith, made each with a partner god: Tinderstrike with Asmodeus, to
     seal Imix; Windvane with Eldath, to seal Yan-C-Bin; Ironfang with Ryujin,
-    to seal Ogrémoch; Drown with Muriel, to seal Olhydra. (Confirm the name
-    "Muriel".) The Cre'Tez had Tinderstrike from the Accordance.
+    to seal Ogrémoch; Drown with Muriel, to seal Olhydra. The Cre'Tez had Tinderstrike from the Accordance.
 34. **Erevos is a heart:** the heart of the first world destroyed in this
     galaxy, now its black hole. "Heart" stays for Erevos.
 
@@ -169,16 +176,28 @@ change audit.
   stays an unreviewed draft; drop it unless Korey wants it.
 - The Faelight spore: the crew retrieved it from the Garden. Record only.
 
+25. **The Darkest Day held two rituals** doing two different things. One
+    bound Giorge to Tharizdun; Vecna was part of it, in league with
+    Tharizdun, and it drew attention from the other, the elemental ritual for
+    the four Princes. The Fonains detail stays on Fonains pages; elsewhere,
+    note only that Vecna was involved and is in league with Tharizdun.
+    `locations/fonains.html`'s single ritual changes to match.
+27. **The Runekeepers are several clans**, and not all of them halflings.
+    Lunarfoot is one. The duty passes from clan to clan in a cycle, and the
+    Runekeepers knew it would fall to Lunarfoot this time.
+28. **Natural Zeniths** are possible and unused: keep the door open, and use
+    one if the chance comes. Zeniths so far have all been magical exaltations.
+29. **Fonains's Monolith is the only one ever to carry Tharizdun's crystal.**
+    Tharizdun corrupted it, and the party on Fonains destroyed it. Large
+    pieces remain there; smaller ones were picked up, and those are what
+    Vocath's people trade.
+33. Muriel is confirmed; the Accordance's six are on `factions/deities.html`.
+
 ### Still open in Part 1
 
-| # | Question | Lean |
-|---|---|---|
-| 25 | The Darkest Day: one ritual or two? `locations/fonains.html` has one; `working/tharizdun.md`, `timeline.json` and `cosmology/index.html` split it | One: Fonains canon wins |
-| 26 | When Vecna ascended: `timeline.json` has t −900; the pages say "a few centuries" | Korey gives a figure |
-| 27 | Are the Runekeepers the Lunarfoot clan? `artifacts/dissolution-fragment.html` says so; `factions/runekeepers.html` makes Lunarfoot one clan of several | One clan of several |
-| 28 | Can a world reach a Zenith naturally? BACKLOG has it open; `cosmology/index.html`, `timeline.json` and WM-003 say yes | Yes; close the item |
-| 29 | Is Fonains the only Monolith with Tharizdun's crystal? `cosmology/index.html` says so; `working/tharizdun.md` has it open | Yes; describe it, do not rank it |
-| 14b | Who the thief is, and who recruited them | Open |
+- **26.** When Vecna ascended: `timeline.json` has t −900; the pages say "a
+  few centuries". Korey gives a figure.
+- **14b.** Who the thief is, and who recruited them. Not for this draft.
 
 ## Part 2: Already decided, waiting to be carried out
 
@@ -403,4 +422,4 @@ the working layer. Delete this draft when every item is closed.
 
 ## Open
 
-Part 1: 14b (the thief), 25 to 29. Homebound has its own chat (ruling 12).
+Part 1: 26 (Vecna's ascension date) and 14b (the thief, elsewhere). Homebound has its own chat (ruling 12).
