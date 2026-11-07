@@ -498,8 +498,9 @@ Tetherbreak bearing, the perimeter watch) and read each hit in context.
 - **WM-002:** *Crow*'s report: sent to look in on Cairn, Clint
   Dashforest leading its crew, raided once on the Cairn approach, heavy losses, Clint lost to a color pool, Joffrey,
   its junior spelljammer, commended for taking the helm, days of repair at Cairn, the return.
-  The raiders' hull marking stays: glimpsed in the fight, rendered differently
-  by each survivor at debrief, no registry match, withdrawn as unreliable.
+  The raiders' hull marking stays: glimpsed in the fight and rendered by
+  each survivor at debrief. The renderings stay in the file, each different
+  and none matching the registry; only the composite is withdrawn.
 - **SA-005:** an escort order against raiders on Cairn's lane, replacing the
   closure of the run past Strake. Its memorial roll carries *Crow*'s
   dead.
@@ -561,7 +562,7 @@ experiment and its spawn; the mouse.
 | `prime/artifacts/rod-of-seven-parts.html` | the mouse |
 | `prime/data/connections.json`, `prime/data/survey.json`, `prime/timeline/timeline.json` | every colony term |
 | `prime/working/STAGING.md`, `prime/docs/PAGE-GUIDE.md` § 8 (Left off the Nexus) | bearers, lifespan, elder brain |
-| `prime/working/BACKLOG.md` | cross-cutting 6 ("which residue piece gave him long life") closes; the mouse's quirk item becomes its power |
+| `prime/working/BACKLOG.md` | the long-life item ("which residue piece gave him long life") closes; the mouse's quirk item becomes its power |
 
 "Bearer" also appears in non-colony senses (fragment bearers on
 `artifacts/dissolution-fragment.html`, `fonains-shard.html`,
