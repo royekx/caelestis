@@ -460,11 +460,11 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
 ### locations/cantina.html
 
 - **[decide]** Who tends bar on the cantina *(prep)*
-  "Odds" is retired. Options: Glim the plasmoid, of a cantina called the Long Pour (unreviewed Crossing Companion proposal); or leave the bartender unnamed.
+  "Odds" is retired. Options: Glim the plasmoid, of a cantina called the Long Pour (unreviewed Crossing Companion proposal); or leave the bartender unnamed. Or Boom-chik, Boogie's friend, who is aboard (Korey, 2026-11-07).
   src: astral § Open; memory-canon (campaign-canon, Ryeback absorbs Odds); chat-crew-boogie-casey-sol
 
 - **[later]** Boogie's cantina
-  Boogie worked aboard a travelling cantina, a bar on a circuit of the lanes that trades as it goes, when Vocath's crates came through its hold (Korey, 2026-11-07). Whether it is the cantina in the prep ring or another of its kind is not set; if the same, the crew walks into Boogie's old workplace. Touches crew/boogie.html, locations/cantina.html, artifacts/fonains-shard.html, factions/vocath-operation.html.
+  Boogie worked aboard a travelling cantina, a bar on a circuit of the lanes that trades as it goes, when Vocath's crates came through its hold, and his friend Boom-chik, who gave him the Shield of Expression, is aboard the cantina in the prep ring (Korey, 2026-11-07): the first of the cadets' own people the crew can meet, and RP Boogie's player will take. Left: whether the prep-ring cantina is the one Boogie worked on; Boom-chik's part aboard; his species (Korey recalls a thri-kreen; the sheet's backstory is blank; confirm with the player). Touches crew/boogie.html, locations/cantina.html, artifacts/fonains-shard.html, factions/vocath-operation.html.
   src: Korey, 2026-11-07
 
 - **[later]** The cantina: a place or a ship
