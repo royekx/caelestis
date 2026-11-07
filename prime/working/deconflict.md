@@ -107,15 +107,18 @@ Every quote here was opened and confirmed in the file named.
     weaponsmith, made each with a partner god: Tinderstrike with Asmodeus, to
     seal Imix; Windvane with Eldath, to seal Yan-C-Bin; Ironfang with Ryujin,
     to seal Ogrémoch; Drown with Muriel, to seal Olhydra. The Cre'Tez had Tinderstrike from the Accordance. Muriel is confirmed; the Accordance's six are on `factions/deities.html`.
-34. **Rykoe is the heart of the first world**, the Reach world, at the centre
-    of the cosmos. Erevos is the core at the centre of GAL-01. What a galaxy's
-    core is, Erevos and the other four included, is not defined (Korey,
-    2026-11-07). Pages that call
-    Erevos "the heart at the galaxy's core" change in the cosmos audit:
-    `glossary/index.html` (cycle), `factions/fleet.html`,
-    `factions/discerners.html`, `prime/data/survey.json`, and BACKLOG's
-    Galactic time item. Open: how this squares with the pages' "the First
-    Heart lies beneath Rykoe".
+34. **Rykoe is the First Heart.** Rykoe is the black hole the Reach world
+    left, and it is the First Heart, the heart of the first world. It lies
+    beneath the Core Monolith, at the centre of the cosmos. Erevos is the core
+    at the centre of GAL-01. What a galaxy's core is, Erevos and the other
+    four included, is not defined (Korey, 2026-11-07). The cosmos audit
+    changes the pages that call Erevos "the heart at the galaxy's core"
+    (`glossary/index.html` cycle, `factions/fleet.html`,
+    `factions/discerners.html`, `prime/data/survey.json`, BACKLOG's Galactic
+    time item) and the pages that put the First Heart beneath Rykoe as a
+    separate thing (`cosmology/index.html`, `locations/rykoe.html`,
+    `glossary/index.html`, `dossiers/vecna-lich.html`, `timeline.json`,
+    `connections.json`).
 
 27. **The Runekeepers are several clans**, and not all of them halflings.
     Lunarfoot is one. The duty passes from clan to clan in a cycle, and the
