@@ -13,14 +13,11 @@ when a ruling changes; delete it once the page carries it. See
 
 ## Campaign
 
-### Act 1 and its arcs (campaign/index.html, PAGE-GUIDE § 3; waits for the Act 1 audit, deconflict ruling 11)
-- Act 1 holds several arcs: Arc 1 is Orientation, Arc 2 is H'Catha, Arc 3 is Graduation. How arcs inside an Act are numbered or named across the campaign is still open (BACKLOG).
-
 ### The invasion and the eye are two plans (opposition/vecna.html, opposition/vthorama.html, campaign/index.html, dossiers/nghathrod.html)
 - N'ghathrod's invasion and Vecna's eye are separate plans. Vecna strings them together: the worlds he steers the colony toward are worlds the eye needs, so each conquest opens and links hearts for the figure. N'ghathrod wants worlds for his people and a home; Vecna wants the figure.
 - When the crew puts pressure on N'ghathrod, he stops following the list. He takes the worlds he can get, whether the eye needs them or not, and from there the invasion and the eye diverge.
 - Stopping N'ghathrod stops the illithid invasion, the campaign's central threat. It does not stop Vecna, who keeps backup plans. Replaces "N'ghathrod's fall stops the casting".
-- Play (DM voice): the eye's progress is the DM's hidden narrative clock. It runs with the invasion and escalates toward the end of Arc 4. Dial it up or back as the story needs, as long as each step has a cause in the world: a conquest, a Zenith, a heart linked. The crew may never learn of the inscription in this campaign. If they do, it can be a late reveal or the seed of a later, high-level story. Replaces "The eye's moment has no date until the crew takes up the inscription … the clock stands still".
+- Play (DM voice): the eye's progress is the DM's hidden narrative clock. It runs with the invasion and escalates toward the end of Act 4. Dial it up or back as the story needs, as long as each step has a cause in the world: a conquest, a Zenith, a heart linked. The crew may never learn of the inscription in this campaign. If they do, it can be a late reveal or the seed of a later, high-level story. Replaces "The eye's moment has no date until the crew takes up the inscription … the clock stands still".
 
 ### Vecna's place in the campaign (opposition/vecna.html, campaign/index.html, principles.html)
 - N'ghathrod and his invasion are the campaign-level threat. Vecna's eye is an undercurrent: something unnerving the crew may learn of, never a rival main plot. Reframe the Vecna pages from that perspective; the facts stand, the emphasis moves.

@@ -330,10 +330,6 @@
       "use": "cut"
     },
     {
-      "pattern": "\\bAct (1|2|3|4|I|II|III|IV)\\b",
-      "use": "Arc"
-    },
-    {
       "pattern": "\\bhearers?\\b",
       "use": "Starchild (Astra Virex's warlocks are Starchildren)"
     },

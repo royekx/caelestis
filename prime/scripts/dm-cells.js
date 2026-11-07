@@ -1,12 +1,12 @@
 /* ════════════════════════════════════════════════════════════════
    dm-cells.js — embed an Opposition cell in the Campaign page
    ----------------------------------------------------------------
-   The Campaign page reads across the arcs; each Opposition page reads
+   The Campaign page reads across the Acts; each Opposition page reads
    down one column (prime/docs/PAGE-GUIDE.md § 3, Campaign and Opposition). Where the
    Campaign page wants a whole Opposition passage in line, it carries a
    plain link to that passage:
 
-     <a class="dm-cell" href="../opposition/vecna.html#arc-1">Opposition: Vecna · Arc 1</a>
+     <a class="dm-cell" href="../opposition/vecna.html#arc-1">Opposition: Vecna · Act 1</a>
 
    This script fetches the linked page, lifts the body of the section
    with that id (its .dm-collapse-section-body), and puts it in place of

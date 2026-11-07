@@ -1,6 +1,6 @@
 # Draft: building the middle of the campaign
 
-"The church" in this draft means the first Seekers chapter the crew meets: a benign-seeming congregation that shows Vecna's hand and eye openly, with its temple on its own world (Campaign § Arc 2). It never means the Seekers as a whole.
+"The church" in this draft means the first Seekers chapter the crew meets: a benign-seeming congregation that shows Vecna's hand and eye openly, with its temple on its own world (Campaign § Act 2). It never means the Seekers as a whole.
 
 Rungs, fronts and contracts: a framework for the post-graduation middle, from research into campaign design and fitted to current canon. Proposals are marked. Builds on the STAGING rulings "The invasion and the eye are two plans" and "Vecna's place in the campaign" (PR #115).
 
@@ -11,14 +11,14 @@ Rungs, fronts and contracts: a framework for the post-graduation middle, from re
 - The crew picks the contract. Inside it, rails are fine ("scenes have walls"). Between contracts, they choose.
 - **A contract is a vehicle, not a formula** (Korey, 2026-11-07). Contracts are the main way an adventure starts, and not every one ties to a thread. Some are plain: carry a dignitary to a planet. The job is dull, and it puts the crew somewhere something interesting is happening that has nothing to do with the job. What they stumble on there is the adventure.
 - **The promise to the table:** however dull a contract sounds, something happens there. Every contract leads to an adventure and pays off with a story, something learned or a reward. None is ever a boring job and home again. The job itself may have nothing to do with what they find, and what they find may not touch the main story, at least not on the surface.
-- So a lead can come from the job or from the place it takes them. Few contracts carry a cosmic trace: Campaign § Arc 2 says a contract has at most one trace, and most have none. Where a lead exists, it lives in the local layer (a name, a buyer, a drawing).
+- So a lead can come from the job or from the place it takes them. Few contracts carry a cosmic trace: Campaign § Act 2 says a contract has at most one trace, and most have none. Where a lead exists, it lives in the local layer (a name, a buyer, a drawing).
 - **Threads interconnect.** A contract can tie to Vocath, to the colony, to Vecna's Seekers, or to none of them. Pull on one and it tugs another somewhere else. The board should show that spread, so the crew sees the overlaps for itself.
 - The "next rung" feeling comes from two things. First, the crew carries something out of each job that doesn't fit. Second, someone remarks on the pattern. Your rule "Twice, or say it" already covers this. Captain Haymond Rolt is the natural person to say it.
 
 ## 2. The framework
 
-### 2a. The invasion ladder (Arc 2, proposal)
-Vecna already has a ladder: "What the crew can learn, in order" on the Vecna opposition page. The campaign threat has none. This one is built only from lines already on the colony's opposition page (`opposition/vthorama.html`) and the BACKLOG. Rung 5 is the goal Arc 2 already states.
+### 2a. The invasion ladder (Act 2, proposal)
+Vecna already has a ladder: "What the crew can learn, in order" on the Vecna opposition page. The campaign threat has none. This one is built only from lines already on the colony's opposition page (`opposition/vthorama.html`) and the BACKLOG. Rung 5 is the goal Act 2 already states.
 
 - **Rung 0, the weather.** Zeniths and Monoliths are coming more often. This is atmosphere and needs no clues.
 - **Rung 1, one hand behind unrelated jobs.** Odd local incidents share a buyer or a cause.
@@ -29,9 +29,9 @@ Vecna already has a ladder: "What the crew can learn, in order" on the Vecna opp
   - Clues: the Anadia well chamber (a failed survey for the Atrium). Digs at a world's deepest points. Scholars and archivists who go missing. A.T.L.A.S. readings (State B2). Sites already worked by the time the crew arrives (State A).
 - **Rung 4, it is an illithid operation with ships and a supply line.**
   - Clues: a tadpole crate or a brine cask. A skiff-crew clash. Captives moving along Vocath's routes.
-- **Rung 5, name the operation.** This ends Arc 2: the crew names the operation and takes it to the Fleet.
+- **Rung 5, name the operation.** This ends Act 2: the crew names the operation and takes it to the Fleet.
   - Clues: a taken prisoner. "Vth'orama" translated. The instruction "a world with a Monolith is a marked world" found in a log.
-- **Rung 6, late Arc 2 or Arc 3: Vth'oramu exists.**
+- **Rung 6, late Act 2 or Act 3: Vth'oramu exists.**
   - Clues: a skiff's log, a taken prisoner, a chart that calls the dreadnought wildlife.
 
 How to use the ladder:
@@ -44,7 +44,7 @@ Keep a separate, slower Seekers ladder as the undercurrent:
 - S1: the church of the hand and eye (through Hessa Dun's uncle).
 - S2: a second chapter that reads the same eye differently.
 - S3: every chapter name carries the word for "seekers".
-- S4, Arc 3: the colony is a chapter too. This is where the two ladders join.
+- S4, Act 3: the colony is a chapter too. This is where the two ladders join.
 
 ### 2b. Fronts
 A front is a threat's goal, its doom if nobody stops it, three to five steps (portents), and the questions play will answer (stakes). Your "villain planning at three resolutions" is already this.
@@ -52,7 +52,7 @@ A front is a threat's goal, its doom if nobody stops it, three to five steps (po
 **N'ghathrod (the campaign front)**
 - Wants: a home for his people.
 - Doom: a lattice of linked worlds, held from inside.
-- Portents at Arc 2 scale:
+- Portents at Act 2 scale:
   1. The taken sit in small posts on sector worlds.
   2. A survey finds an Atrium.
   3. The residue piece arrives and a heart opens.
@@ -76,7 +76,7 @@ A front is a threat's goal, its doom if nobody stops it, three to five steps (po
 **The Fleet**
 - Wants: to hold the sector with too few crews.
 - Portents: Mirt's standing after the Fork. Vocath's gains. The illithid sect the Corps cannot name. Below-rank contracts going unfilled. [Proposal: Ondrel's "neutral" status gets tested.]
-- Stakes: Does the Fleet listen when the crew names the operation? This front decides how Arc 2 ends.
+- Stakes: Does the Fleet listen when the crew names the operation? This front decides how Act 2 ends.
 
 **Vocath (a front of his own; Korey, 2026-11-07)**
 - Wants: his house's profit, and Mirt disgraced and pried loose from Caelestis's protection.
@@ -93,7 +93,7 @@ A front is a threat's goal, its doom if nobody stops it, three to five steps (po
 - **Declined contracts** resolve without the crew. They come back as gossip or a posting, and the clue moves on with them. This is already your rule.
 
 ### 2d. Cadence (proposal)
-- Arc 2 covers levels 5 to 10. Roughly one rung per level, so six rungs. Allow 2 or 3 contracts per rung, about 15 to 20 sessions.
+- Act 2 covers levels 5 to 10. Roughly one rung per level, so six rungs. Allow 2 or 3 contracts per rung, about 15 to 20 sessions.
 - For comparison: Paizo's hardcover adventure paths cover 9 to 10 levels each. Savage Worlds plot-point campaigns use 8 to 12 plot points.
 - Gate the fixed set pieces by triggers, not session numbers. Fill the gaps between them with contracts, the way Savage Worlds fills them with "Savage Tales".
 - Fixed set pieces (plot points): the Fork aftermath, the church, the first skiff clash, the linked-worlds bleed, and naming the operation to the Fleet.
@@ -199,7 +199,7 @@ Board one is the graduation board already in BACKLOG ("NEW: Contract board"). Ev
 - opposition/vthorama.html: the invasion ladder and N'ghathrod's front.
 - opposition/vecna.html: the Seekers ladder.
 - factions/fleet.html, factions/order.html: front blocks in DM notes.
-- campaign/index.html § Arc 2, principles.html: cadence, board mix, the after-session loop.
+- campaign/index.html § Act 2, principles.html: cadence, board mix, the after-session loop.
 - NEW campaign/contracts.html and the campaign status page (BACKLOG: Contract board, Campaign board).
 
 ## Open

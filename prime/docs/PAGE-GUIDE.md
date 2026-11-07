@@ -34,7 +34,7 @@ in `CLAUDE.md` § Folder map.
   Forbiddance work?"
 - Headings say what the section holds. Rename enumeration leftovers ("D — The
   End" becomes "Failure state"). Campaign-page headings are functional:
-  "Theme", "Pressures", "Arcs".
+  "Theme", "Pressures", "Acts and arcs".
 - Drop a stylistic leading "The" unless it is part of a world-object's name
   (The Reach, The Bridge, The Prime Continuum, The Axioms).
 
@@ -111,7 +111,7 @@ and link to the subject tabs for the rest.
   "Arc III lever", "held for late game".
 - **Authorial framing**: "arc centers on", "thematic question", "we author
   toward".
-- **Forward planning**: "the crew will approach via", "the Arc 1 finale will
+- **Forward planning**: "the crew will approach via", "the Act 1 finale will
   take them".
 - **Player-facing meta**: "if players wonder X", "plants the question in the
   player's head".
@@ -148,7 +148,7 @@ and link to the subject tabs for the rest.
 | a player character | Crew |
 | a definition | Glossary, as a line |
 | adjudication | Rules, as a section; a stat block goes on Stat Blocks |
-| story shape and per-arc planning | Campaign |
+| story shape and per-Act planning | Campaign |
 | the antagonists' workings | Opposition |
 | a grounded thread the DM can pull | Plot Hooks, Active or Inactive |
 | untethered speculation | Plot Hooks, Speculation section |
@@ -157,19 +157,24 @@ and link to the subject tabs for the rest.
 
 ### Campaign and Opposition
 
+The campaign runs in four Acts, and each Act holds several arcs. Arcs are
+names for organising the timeline and the bearings; when one ends the next
+begins, numbered within its Act as a placeholder until it is named, often in
+retrospect. Act 1's arcs are Orientation, H'Catha and Graduation.
+
 The Campaign page and the Opposition pages are two cuts through one matrix:
-arcs down the side, forces across the top. Campaign (`campaign/index.html`)
-reads across the rows, one arc at a time with every force in it. Each
+Acts down the side, forces across the top. Campaign (`campaign/index.html`)
+reads across the rows, one Act at a time with every force in it. Each
 Opposition page (`opposition/vecna.html`, `opposition/vthorama.html`) reads
-down one column, everything that force does from Arc 1 to Arc 4. Neither
+down one column, everything that force does from Act 1 to Act 4. Neither
 retells who a subject is; that is the dossier's job.
 
-Each Opposition page carries its column as `#arc-1` to `#arc-4`. Those ids are
-the embed contract and do not change. Campaign ends each arc with the cells
+Each Opposition page carries its column as `#arc-1` to `#arc-4`, one per Act.
+Those ids are the embed contract and do not change. Campaign ends each Act with the cells
 for it, as plain links:
 
 ```html
-<a class="dm-cell" href="../opposition/vecna.html#arc-1">Opposition: Vecna · Arc 1</a>
+<a class="dm-cell" href="../opposition/vecna.html#arc-1">Opposition: Vecna · Act 1</a>
 ```
 
 `prime/scripts/dm-cells.js` replaces each link with that section's body under
@@ -312,7 +317,7 @@ Add only the scripts the page uses:
 | `dm-tabs.js` | a dossier (its tab set) |
 | `dm-sections.js` and `dm-toc.js` | every long page (sections in `<details>`); `<main class="dm-content has-toc">` |
 | `dm-register.js` | a register page |
-| `dm-cells.js` | Campaign (arc cells); see § 3, Campaign and Opposition |
+| `dm-cells.js` | Campaign (Act cells); see § 3, Campaign and Opposition |
 
 `dm-nav.js` renders only under `/prime/`. DM scripts never load on a player
 page; the player site uses `scripts/nav.js`.
@@ -358,7 +363,7 @@ Sections are closed by default. Open only these:
 
 | Page | Open |
 |---|---|
-| Campaign | Theme; Arcs, with Arc 1 open inside |
+| Campaign | Theme; Acts and arcs, with Act 1 open inside |
 | Voyages | Next session; Record; the most recent recorded voyage |
 | Plot Hooks | Active |
 
