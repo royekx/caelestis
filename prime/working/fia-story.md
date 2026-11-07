@@ -63,7 +63,12 @@ one in a hundred die there. What reaches a host is the strongest and best
 formed of the brood. The elder brain also links every illithid of
 the colony and keeps the knowledge of its dead.
 
-The Vth'orama have no elder brain, and N'ghathrod will not let a tadpole die.
+The Vth'orama have no elder brain. N'ghathrod's own was aboard Thessalar's
+craft with him, kept apart from him, and was left trapped beneath the wreck
+when the craft fell; he believes it dead, or beyond reach. (On Fonains it
+lives: it teleported out when Lola's Boys broke it.)
+
+N'ghathrod will not let a tadpole die.
 After all the colony has been through, and the exile above all, nothing eats
 the brood. The tadpoles in the pools still eat one another, as tadpoles do,
 but without the elder brain's share far more of each mass survives than the
@@ -100,7 +105,8 @@ enna among them. It has never resolved that, and the true-formed are where
 it is loudest.
 
 The first unthinned were three made aboard Thessalar's craft, from bodies he
-supplied and N'ghathrod's own tadpoles, far from any elder brain. They are
+supplied and N'ghathrod's own tadpoles, with no elder brain culling the
+brood; N'ghathrod's was a prisoner kept apart. They are
 three of the enna. When N'ghathrod brought them to Glyth, Glyth saw what they
 were and refused them, and exiled them. N'ghathrod went with them.
 
@@ -121,7 +127,21 @@ illithid in the colony, are what grow it.
 ordinary body. It goes to someone in a place of power, reached where they
 are, so that the colony gains a post: a station master, a dockmaster, a
 spelljammer the Fleet trusts. Every captive Vocath's line brings goes to the
-pools.
+pools, or feeds the colony's illithids.
+
+**The one exception is the outcast.** N'ghathrod has a soft spot for the
+neglected, the abandoned and the cast out, because that is what he and his
+people were. When one of his taken, or his network, finds such a person, he
+may spend a copy on them for no gain at all, and the network then protects
+them and raises them up. He is evil, and this is the piece of him a crew can
+reach.
+
+**His mouse.** He saved a mouse in the escape from Thessalar's craft, and it
+has travelled with him since. It was aboard with the seventh Rod piece as
+long as he was, and the experiment changed it too: it has a power of its
+own. He took it with one of his copies, so the tithe keeps it alive. It is
+the first outcast he saved, and his secret sixth lieutenant: nobody aboard
+counts a mouse.
 
 It changed the five who became the enna with him. Each came out with a power
 of its own. Zhauveth's is the Voice: domination and suggestion.
@@ -495,6 +515,9 @@ old one. When they are done, this draft is deleted: the pages hold the story.
   the lane; the Fonains trade.
 - `prime/dossiers/zhauveth.html`: the arrangement; her visits to Cairn; her
   offspring there; long life from the tithe.
+- `prime/dossiers/nghathrod.html`: his soft spot for outcasts; his copies
+  go only to people in power, or to an outcast; the mouse, taken, his
+  secret lieutenant.
 - `prime/dossiers/nghathrod.html`, `prime/dossiers/thessalar.html`, and the
   other enna (`khaleth`, `osskhal`, `ulhrek`, `ithvarn`): the experiment gave
   each enna a power of its own; the enna joined him willingly through their
@@ -576,5 +599,6 @@ how stations talk to Caelestis, which posts the network holds elsewhere.
 - **The hold as a mechanic:** an ability that works only by nearness,
   deepens each day spent near it, and fades out of range. Build it in a
   mechanic chat.
+- **The mouse's power:** what the experiment gave it.
 - **The other enna's offspring:** only Zhauveth's is set. What the other
   four's tadpoles become waits until one is needed.

@@ -69,4 +69,5 @@ staging is distributed page by page.
 | [ship-roles.md](ship-roles.md) | Review of the ship mechanics run so far, and revised ship roles for the tyrant ship and typical ships | Promoted 2026-11-02 to rules/index.html § Ship & crew, the handouts, and the vessel entries; the V007 crossing table's entry 7 waits on a ruling |
 | [campaign-middle.md](campaign-middle.md) | Building the post-graduation middle: the invasion ladder, fronts, contracts as nodes, cadence | Draft |
 | [common-knowledge.md](common-knowledge.md) | What a cadet would know about each NPC in the player record, sourced and graded, and how it fits the record | Draft; awaits Korey entity by entity |
-| [fia-story.md](fia-story.md) | The story the Fleet Intelligence Archive tells, thread by thread, the marks, and every file change that follows | Draft; story audited and answered, awaiting approval before file edits |
+| [fia-story.md](fia-story.md) | The Vth'orama, Vocath, Cairn and the *Bellwether Crow*, and the FIA they show through | Settled; awaiting its change audit |
+| [change-audit-fia-story.md](change-audit-fia-story.md) | Every page `fia-story.md` touches, in three pull requests | Touch list; delete with the draft |

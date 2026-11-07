@@ -20,6 +20,8 @@ the draft is current.
 - **The first unthinned** were three made aboard Thessalar's craft, now three of the enna. Glyth saw them and exiled them, and N'ghathrod went with them.
 - **The experiment gave each enna a power of its own**, and each enna's spawn inherits some of it, as N'ghathrod's do.
 - **The enna joined N'ghathrod willingly**, each carrying a Hold. Some of the old illithids did the same, so they would all be one.
+- **N'ghathrod's soft spot.** He may spend a copy on someone neglected, abandoned or cast out, for no gain, and his network protects and raises them. It is the human side of him.
+- **His mouse** was changed by the experiment and has a power of its own; he took it, so the tithe keeps it alive; it is his secret sixth lieutenant.
 - **Long life comes from the taking**, not the experiment: the tithe passes upward to N'ghathrod, and he shares it with a chosen few, the enna and some of the old illithids.
 
 ## Cairn and the *Bellwether Crow*
