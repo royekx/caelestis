@@ -114,7 +114,7 @@ Gender: Male (record has none).
 |---|---|---|
 | An officer of the Caelestis Corps, the Fleet's branch for the sector, and not Academy staff. | dossier/joffrey, fleet | High |
 | Was top of his class. | dossier/joffrey | High |
-| Decorated for taking the helm of *Bellwether Crow* when it was raided, about a year ago, and bringing the survivors home, on their unanimous account. | dossier/joffrey, fleet | High |
+| Decorated for taking charge of *Bellwether Crow* when it broke up a pirate handover of captives, about a year ago: he led the recovery of the captives and got the crew out, on the survivors' unanimous account. | dossier/joffrey, fleet | High |
 | Posted to Caelestis after *Crow*, and risen on merit since; cadets know him and instructors trust him. | dossier/joffrey, fleet | High |
 | *Crow* had gone out to look in on Cairn Station. | dossier/joffrey (Background), fleet | Hold: Cairn is a live thread. |
 
