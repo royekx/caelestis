@@ -35,7 +35,7 @@ staging once Korey has read and accepted them.
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 2 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 19 | 3 | 3 | 0 | 2 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 19 | 4 | 3 | 0 | 2 |
 | Dossiers | dossiers/ | 19 | 16 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 9 | 7 | 3 | 0 | 1 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 15 | 5 | 0 | 1 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 13 | 13 | 2 | 0 | 8 |
-| **Total** |  | **138** | **168** | **50** | **2** | **63** |
+| **Total** |  | **138** | **169** | **50** | **2** | **63** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -2036,6 +2036,12 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   - Names circulate before they are met (the Osiris pattern), told by sources that disagree. Zerathis is the first.
   - A delving culture of ruin exploration exists, like post-Aeor in Critical Role.
   src: chat-cosmic § Cosmos texture; memory-canon
+
+### opposition/vthorama.html: if Vocath falls
+
+- **[later]** How the colony pivots without Vocath
+  Vocath's line is the colony's supply of captives, and Zhauveth's deal with him is its reach into Caelestis. If the crew takes Vocath down, the colony loses both. Decide its backups: another supplier, raiding with its own couriers, more takings, a move of Vth'oramu. Taking Vocath down is hard; this waits until the crew goes down that path. Touches: opposition/vthorama.html, dossiers/vocath.html, dossiers/zhauveth.html, factions/vocath-operation.html.
+  src: Korey, 2026-11-06
 
 ### principles.html
 

@@ -92,9 +92,7 @@ Every illithid spawns, whole or unthinned: a mass of tadpoles, two or three
 times in its life, and every mass goes into the pools. **The true-formed** (proposed name) are the
 colony's whole illithids: the old ones who came with N'ghathrod, and the
 minority born in the colony who came out whole. They keep the pools and
-oversee ordinary ceremorphosis. Every captive is an allocation: an
-illithid's tadpole, which makes an illithid, or one of N'ghathrod's, which
-makes a taken person. The true-formed resent that allocation.
+oversee ordinary ceremorphosis.
 
 The colony still holds Glyth's belief that the unthinned are an obscenity,
 alongside the fact that most of its illithids are unthinned, three of the
@@ -118,6 +116,12 @@ copies at a time, again and again. Over a year he makes more tadpoles than
 any illithid aboard, and far fewer than the colony's illithids make
 together. His copies place the taken. The ordinary masses, from every
 illithid in the colony, are what grow it.
+
+**His copies never go to captives.** A copy is too scarce to spend on an
+ordinary body. It goes to someone in a place of power, reached where they
+are, so that the colony gains a post: a station master, a dockmaster, a
+spelljammer the Fleet trusts. Every captive Vocath's line brings goes to the
+pools.
 
 It changed the five who became the enna with him. Each came out with a power
 of its own. Zhauveth's is the Voice: domination and suggestion.
@@ -147,7 +151,7 @@ illithids keeps the colony's history.
 | The host | Consumed; becomes a new illithid | Persists; the copy sits alongside them |
 | Looks like | An illithid; most come out unthinned | Themselves. Chitin grows hidden along the spine and skull over years |
 | Purpose | Grows the colony | Places N'ghathrod in a key post; can carry a directive; reports to him |
-| Cost | One captive | One captive, and one of N'ghathrod's few copies |
+| Cost | One captive from Vocath's line | One of N'ghathrod's few copies, spent on someone in a place of power, never a captive |
 | Tell | Obvious | Their minds cannot be read. Dying, they say "Oramu" |
 
 Captives become illithids. Only key people are taken, never crowds. The taken
@@ -312,10 +316,17 @@ on the lane. With no way to send word, he stays lost to Caelestis.
   sending stone. What gives him away is a hushed conversation in the middle
   of the night.
 - Qitru told Joffrey about Miken. Miken does not know of Joffrey.
-- Mirt lost his friend Clint to a raid he believes was Vocath's and cannot
-  prove. When the cadets bring him Joffrey, he backs them: if they think
-  something is there, they should look into it for him, carefully, given
-  Joffrey's standing.
+- **Mirt.** He is the Academy's headmaster, and he is no fool. He keeps a
+  code, and the bumbling is mostly a manner. He lost his friend Clint to a
+  raid he believes was Vocath's and cannot prove. He holds Above Bridge
+  clearance and has read FR-016; he knows the seal on sight, and he says
+  nothing of it. Vocath is his personal grudge. If that grudge were seen to
+  cost the Fleet, Caelestis would turn him out, and he has too many enemies
+  to live long without its protection. So he keeps quiet and works to learn
+  what Vocath is actually doing. If he knew how to reach Vocath without
+  risking his place or his students, he would act. When the cadets bring him
+  Joffrey, he backs them: if they think something is there, they should look
+  into it for him, carefully, given Joffrey's standing.
 
 ### Vocath's two marks
 
@@ -357,9 +368,9 @@ go for the source. **Proposed** touches:
 **FR-016: Vocath's personal seal.** The drawing stays: the balance scale,
 coins on one pan, a crate on the other, pressed in wax on the unlogged crate
 of Fonains shards. The registry finds no match. The inspector who flagged it
-was moved to cadet intake (Boogie's line). The crew has glimpsed the seal on the
-rod and on the Sky Dock crate, and heard it named; FR-016 is where they see
-it drawn plainly. Describe it at
+was moved to cadet intake (Boogie's line). The crew has seen the seal twice, on the rod
+and on the Sky Dock crate, and heard it named; FR-016 is where they see it
+drawn plainly and recognise it. Describe it at
 the table when Vocath's darker side surfaces, and either order lands.
 
 **LG-003: the sweeps.** A plate of four sweeps from Strake's scope at the
@@ -492,11 +503,15 @@ old one. When they are done, this draft is deleted: the pages hold the story.
   unthinned as raised without an elder brain; that becomes malformed.
 - `prime/opposition/vthorama.html`: what the elder brain does and what its
   absence makes; "bearers" renamed the true-formed everywhere, and any
-  illithid can spawn; N'ghathrod will not let a tadpole die and has become the
+  illithid can spawn; N'ghathrod's copies never go to captives, so the
+  bearers' allocation grievance on that page goes; N'ghathrod will not let a tadpole die and has become the
   colony's elder brain; the whole as a minority, and the strain it causes; unthinned as Glyth's word for the malformed, who are most of
   the colony; the old illithids who joined N'ghathrod; the unthinned
   template for the malformed; the pair at Cairn.
-- `prime/dossiers/mirt.html`: the hunch without proof; backing the cadets.
+- `prime/dossiers/mirt.html`: his silence on the seal and why (the grudge,
+  expulsion, his enemies); his code; working out Vocath's plan; he would act
+  if he could do it without risking his place or his students; backing the
+  cadets.
 - `prime/dossiers/saerthe-abizjn.html`, `prime/dossiers/boatswain-tarto.html`,
   and Mr. Blip wherever his DM entry sits: they know Vocath's seal on sight.
 - `prime/artifacts/atlas.html`: Joffrey's directive; how he found it in the
