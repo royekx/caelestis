@@ -68,7 +68,9 @@ the colony and keeps the knowledge of its dead.
 The Vth'orama have no elder brain. N'ghathrod's own was aboard Thessalar's
 craft with him, kept apart from him, and was left trapped beneath the wreck
 when the main craft came down in the Barrier Peaks on Fonains, in the caverns
-beneath them. He believes it dead, or beyond reach. (On Fonains it lived, and
+beneath them. Other pieces of the craft broke off in the fall and scattered
+across Fonains: Tharizdun's temple, and the Temple of Moloch with Thessalar's
+laboratory beneath it. N'ghathrod believes the brain dead, or beyond reach. (On Fonains it lived, and
 after Lola's Boys reached it, it escaped to a place nobody knows.)
 
 N'ghathrod will not let a tadpole die.
@@ -266,7 +268,11 @@ chance, and where it opened says nothing about where it led.
 
 Cairn's stretch of lane lies at the very limit of Strake's scope, which picks
 up faint, odd returns there. Nobody in the colony knows Strake can see that
-far.
+far. Halix Verrow, Strake's quartermaster, files Tarroway's reports up the
+chain.
+
+Hollis Post is an ordinary Fleet post on a lane of its own. The perimeter
+watch it once belonged to is gone; what Hollis is for comes later.
 
 ### *Bellwether Crow*
 
