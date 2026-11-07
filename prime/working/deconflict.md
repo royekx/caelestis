@@ -10,7 +10,7 @@ in that row. Paths are under `prime/` unless they start with `data/`,
 Part 3, working layer cleanup: 80 rows · Part 4, cosmetic: 15.
 
 **Summary.**
-- Ten Part 1 questions touch Voyage 7; the beacon, the two marks, Mr. Blip and the instructor vote come first.
+- The ten Part 1 questions that touch Voyage 7 are ruled (§ A).
 - The biggest Part 2 sweeps are STAGING's two-plans, Vecna's-place and quickening rulings (2026-11-01), still absent from the Vecna and campaign pages.
 - STAGING (2026-11-02) and `working/fia-story.md` (2026-11-07) disagree on the beacon, and STAGING's "Act" wording breaks the retired-term rule.
 - BACKLOG carries about 25 items already done or ruled and about 15 duplicates; two section-table rows miscount.
@@ -23,20 +23,48 @@ Part 3, working layer cleanup: 80 rows · Part 4, cosmetic: 15.
 Each item: the question, the options with their sources, and the lean.
 Every quote here was opened and confirmed in the file named.
 
-### A. Voyage 7 at the table
+### A. Voyage 7 at the table: ruled 2026-11-07
 
-| # | Question | Options and sources | Lean, and why |
-|---|---|---|---|
-| 1 **V007** | Has Miken planted Qitru's beacon? | (a) Not yet; he may plant it: `working/STAGING.md` § Voyage 007 (2026-11-02) "Miken has not placed Qitru's beacon on the tyrant ship." (b) Planted: `working/fia-story.md` l.335 (committed 2026-11-07) "He also planted the beacon Qitru follows"; `dossiers/miken.html`, `dossiers/qitru.html`, `campaign/index.html`, `campaign/voyages/index.html` (V006 Settled and Delta), `campaign/plot-hooks.html`, `data/overlay.json` NPC Miken V006 "the beacon and the report both reached Qitru", `dossiers/winston-ryeback.html`. BACKLOG § Memory cleanup decide "Miken's beacon" is open | (a). STAGING is a dated table-prep ruling for this voyage; fia-story's line reads as a back-story summary and its own header says the FIA can still change. Choosing (a) means nine places change and Qitru needs a way to find the crew until he plants it. Choosing (b) means STAGING's line goes |
-| 2 **V007** | Why does Mr. Blip route a crate bearing a seal he knows on sight? | `working/fia-story.md` l.358: the personal seal is known on sight to "Saerthe, Tarto, Mr. Blip". Record: `data/sessions.json` V003, `data/items.json` (Marked Crate), `data/quests.json` (Caelestis Burglaries, objective "Trace the marked crate's route through Mr. Blip"); `data/overlay.json` next "the marked crate's route through Mr. Blip"; `opposition/vthorama.html` "Blip is uninvolved". Options: he never saw the crate; he saw it and is watching it for Mirt; drop him from the list | Drop Blip from the "knows on sight" list, or make him Mirt's watcher on it. The record points the crew at this route now, so the answer has to be playable at the table. Tarto is on the same list and passed the rod on (`dossiers/boatswain-tarto.html`); check her line with it |
-| 3 **V007** | Which of Vocath's two marks is on the neogi, the rod, and the V007 crossing cargo? | fia-story l.354-358: the house mark is public and "never seen on anything wrong"; the personal seal is on "the rod, the Sky Dock crate, the crate of Fonains shards"; l.391 "the crew has seen the seal twice". Against it: `opposition/vthorama.html` V001 log "The brand beneath their chitin is Vocath's house mark"; `locations/caelestis.html` "the same hand as the brand on the astrally collared neogi"; `campaign/plot-hooks.html` "Vocath's private house mark, a balance scale … on the sabotage rod … and beneath the chitin of the neogi"; `campaign/voyages/index.html` V007 d8 entry 4 "ledger stamped with Vocath's house mark" and the mercane trader's manifest. Record: the rod "bears the marking 'Vocath'" and Boogie "glimpsed the word 'Vocath' inscribed on it" (`data/items.json`, `data/sessions.json`, `data/player-characters.json`, `data/quests.json`); `dossiers/mirt.html` FR-016 "returned no match". Sol holds a live neogi from Mirt's crate (`data/items.json` ITM-5nB7wK9x) | The neogi carry the personal seal: then the crew has seen it three times and holds one, so fix "twice". The rod carries the seal with the name written beside it, which squares the record with "no registry match". The V007 house-mark cargo stays as honest trade, a deliberate false lead. Then `working/terms.json`'s retired "Passage marks?" entry points at the seal |
-| 4 **V007** | How is the instructor picked? | (a) Discord reaction vote before V007: BACKLOG § statblocks fix "How the crew picks the instructor" (src: chat-voyage-6-7-planning, memory); `campaign/index.html` "Before V007 the crew picks …". (b) At the rendezvous: `statblocks/index.html` "The players choose the teacher at the V007 rendezvous"; `data/overlay.json` QST-Xr4mW8vn next "Choose the instructor at the Flighty Foundling"; `campaign/voyages/index.html` V007 run "one instructor picked". Player V006.5: Saerthe says "Which one is up to you" (fits both) | (a), if the vote already ran or is planned: it lets the instructor scenes be prepped. Then statblocks, overlay and the V007 run line change |
-| 5 **V007** | Tarto's stat block | (a) `dossiers/boatswain-tarto.html`: four superiority dice (d10) and a bonus action "Clear the Deck." with no text. (b) `working/inbox/chat-staff-npcs.md` (turn 79, the chat's final block): five d10 dice, Clear the Deck cut. BACKLOG decides "Tarto's stat block" and "What Clear the Deck does" | (b): newest, and the page's empty line is unplayable as it stands |
-| 6 **V007** | Which of Ryeback's weapons was stolen? | (a) The custom pistol: `dossiers/winston-ryeback.html`, `factions/fleet.html` "His personal pistol was stolen", `campaign/voyages/index.html` V002 briefing, `working/common-knowledge.md`. (b) The custom musket; he keeps the pistol (hand cannon) and the Musket line drops: `working/inbox/chat-staff-npcs.md` (turn 102). BACKLOG decides "Ryeback's stolen weapon" and "His stat block lines" | (b): the chat's turn 102 is the latest ruling. He is aboard for V007, so his block matters now |
-| 7 **V007** | What did Tumak tell Ryeback about the beholder? | (a) Outright that the crew killed it: `dossiers/winston-ryeback.html` (twice); BACKLOG fix "V006: Tumak told Ryeback outright"; Player record flag. (b) "Taken care of", which Ryeback took to mean killed: `data/npcs.json` Ryeback V006, `data/player-characters.json` Tumak V006, `crew/tumak.html`, `campaign/voyages/index.html` V006 Actual | (b), unless Korey remembers the table differently: the record states what the table saw. Ryeback's report reaches *Foundling* at the rendezvous, so it plays either way. BACKLOG's fix claims `crew/tumak.html` carries "outright"; it does not |
-| 8 **V007** | Ezra's hook: none on the crossing, or a hook on arrival? | (a) `working/STAGING.md` (2026-11-02): "Ezra needs no hook of his own on the crossing; at most he mentions something in passing." (b) BACKLOG § dossiers/ezra.html (Korey 2026-11-06): "Ezra must arrive with a hook others can latch onto … The sealed letter … stays an option. Come back to it later." Both agree the eye-in-a-wheel sketch is not his hook (Part 2, row 2.6) | Both hold if (b) means a hook later in Act 1: he says something in passing on the crossing, and the sealed letter is held back. Rewrite STAGING's line to say so, and close the gap before V007 |
-| 9 **V007** | Accept the tyrant-ship chat adds? | BACKLOG § Memory cleanup adds from `working/inbox/chat-tyrant-ship.md`: helm attunement passes with an action, so anyone who casts can hold the helm while the cadets are ashore; H'Catha guardrail (CR 3 or lower, hits about 10); Ostekk wants the meteor's adamantine; Gregory's surge when a suppressed source unmasks; Gregory's pull stays one-way; why Vaelorix took the Engine; the Faelight spore coats until the cloud ends and moved to the Garden. Targets: `vessels/tyrant-ship.html`, `campaign/index.html` § H'Catha, `dossiers/ostekk.html`, `dossiers/vaelorix.html`, `crew/gregory.html`, `artifacts/faelight-spore.html` | Accept. They are Korey's own chat turns, none conflicts with a page, and the helm and guardrail lines bear on V007. Accepting closes the decides on Vaelorix's motive and the spore |
-| 10 **V007** | Does the Fleet roster say Tumak's runes surface at cosmic threats? | (a) `factions/fleet.html` Tumak row: "Runes surface on their skin in the presence of cosmological threat". (b) `crew/tumak.html`: runes come with level-ups, character moments and story beats; a rune near something cosmic "can be an occasional story trigger, never a rule"; `rules/index.html` | (b): the finished subject page. The Fleet row could stay as what the Fleet believes, if flagged as that |
+Each ruling is what IS. The pages named in the old row for it change in the
+change audit.
+
+1. **Miken's beacon.** Miken planted Qitru's beacon on the tyrant ship during
+   the V006 interlude, a few days after the voyage, when he found the chance.
+   Qitru follows it from then. STAGING's "has not placed" and every page that
+   has him plant it during V006 change to this.
+2. **Mr. Blip and the sealed crate.** Mr. Blip is not implicated. He oversees
+   the dock and knows Vocath's seal on sight, but he does not inspect every
+   cargo, and he never knew that crate carried the seal. The crate came in
+   past him through Joffrey's payment to Jeffrey, the hobgoblin dock hand:
+   that is the Sky Dock exchange the cadets saw (item 16). The crew found the
+   sealed crate at the dock and never looked inside it. The crate they took to
+   Mirt, which held the neogi, is a different crate.
+3. **Where the seal is.** The rod and the dock crate carry the same personal
+   seal, as stated at the table. Nobody checked the neogi crate for a mark;
+   the pages that put Vocath's house mark on the neogi are wrong. If the crew
+   looks harder, the seal is there to find. Other cargo the crew turns up may
+   carry the ordinary house mark, never the seal. Joffrey watches for the seal
+   to know which shipments are Vocath's; the small things Miken needed, the
+   rod and the beacon, came in that way.
+4. **The instructor.** The crew picks by a Discord vote before V007. The vote
+   has not happened yet.
+5. **Tarto's stat block.** The newest version stands: five superiority dice,
+   Clear the Deck cut. A mechanic review checks it, in a mechanic chat.
+6. **Ryeback's stolen weapon** is his musket. He keeps the pistol.
+7. **Tumak and Ryeback.** Tumak said the beholder was taken care of, and
+   Ryeback took it to mean the crew killed it. He does not believe it: he is a
+   seasoned petty officer, and cadets do not kill beholders. Tarto doubts it
+   too. Both let it ride, because there is no harm in it.
+8. **Ezra's hook** is built in session prep. The sealed letter came from
+   somewhere; where is open.
+9. **The tyrant-ship adds.** Helm attunement passes to a willing creature as
+   an action: that is the spelljamming helm's own rule. On H'Catha the danger
+   the cadets face is effectively CR 3 or lower, kept threatening through the
+   instructor, Ezra and Ondessa. The other adds in the old row (Ostekk and the
+   adamantine, Gregory's surge and one-way pull, Vaelorix's motive, the
+   Faelight spore) were not ruled on; they stay open under 9b.
+10. **Tumak's runes.** The Fleet knows nothing of Tumak's runes. The line goes
+    from the Fleet roster.
 
 ### B. Campaign structure
 
@@ -271,6 +299,29 @@ Nothing was dropped outright. These were corrected when the cited file did not m
 - fia-story carries no date in its text; the audits gave 11-06 and 11-07. Git dates its last commits 2026-11-07.
 - fia-story's Bartholomew SA-002 line is marked **Proposed**, so it sits in 3e, not Part 1.
 
+## Handoff
+
+This chat has run long; the rest goes to fresh chats, each starting from this
+draft. Rulings 1 to 3 are also written into `working/fia-story.md`.
+
+1. **Build chat, before V007: the V007 rows.** Run caelestis-change-audit on
+   Part 1 § A (rulings 1 to 10) and on the Part 2 rows that touch V007 (marks
+   need no heart; the Fear eye and d8 entry 7; the instructor vote). One pull
+   request, merged before session prep.
+2. **Prep chat: V007.** caelestis-prep at session scale, from the cleaned
+   pages. Ezra's hook and the sealed letter are built here (ruling 8).
+3. **Lore chat: Part 1 § B to D**, items 11 to 34 and 9b. Item 11 (Act or
+   Arc) first: every arc and level fix waits on it. Answers are written into
+   this draft.
+4. **Build chats: the rest**, one change audit at a time, in this order:
+   Part 3 (the working layer and process docs, so later audits start clean);
+   the FIA story (`fia-story.md` § Promotes to, three pull requests); the
+   remaining Part 2 rows; Part 4.
+5. **Mechanic chat:** Tarto's stat block (ruling 5), the hold, the unthinned
+   template.
+
+Delete this draft when every item is closed.
+
 ## Promotes to
 
 Each Part 2 row is one change audit (caelestis-change-audit). Part 1 answers
@@ -279,5 +330,6 @@ the working layer. Delete this draft when every item is closed.
 
 ## Open
 
-Part 1 questions, by number: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 (V007); 11, 12,
-13; 14 to 24; 25 to 34.
+Part 1 questions, by number: 9b (the rest of the tyrant-ship adds); 11 to 13;
+14, 15, and 16's remaining half (who the "merchant" was, now Joffrey: check
+against the record's wording); 17 to 24; 25 to 34.

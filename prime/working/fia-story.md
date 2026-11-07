@@ -31,8 +31,8 @@ can investigate, and a store of backstory.
 - The Sky Dock crate (Voyage 001): "marked with the same symbol as the
   Vocath rod".
 - Joffrey: Mr. Blip named him the present-day great spelljammer of Caelestis
-  (Voyage 001). The cadets saw him make a suspicious exchange at the Sky Dock
-  and told Mirt; Mirt told them to look into him carefully, given his
+  (Voyage 001). The cadets saw a Sky Dock hand take a bribe (Voyage 001), and
+  Tumak later named Joffrey as the one who paid it and told Mirt; Mirt told them to look into him carefully, given his
   standing (Voyage 003).
 - Mirt went still at Vocath's name and called him an old enemy with a grudge.
 - Miken sat unhurt beside his injured crewmates after the rod went off and
@@ -332,10 +332,17 @@ on the lane. With no way to send word, he stays lost to Caelestis.
   with money enough to set up him and his fiancé. Vocath meant the rod to
   hurt, as a message to Mirt. Qitru told Miken it would only spoil the drill,
   and he believed her. His own crewmates took the worst of it, and he regrets
-  it. He also planted the beacon Qitru follows, and he reports to her by
-  sending stone. What gives him away is a hushed conversation in the middle
+  it. In the interlude after Voyage 006 he planted the beacon Qitru follows,
+  and he reports to her by sending stone. What gives him away is a hushed conversation in the middle
   of the night.
 - Qitru told Joffrey about Miken. Miken does not know of Joffrey.
+- **The seal at the dock.** Joffrey watches for Vocath's personal seal to know
+  which shipments are Vocath's. He paid Jeffrey, the hobgoblin dock hand, to
+  pass the sealed crate the cadets later found; it came in under Mr. Blip's
+  oversight without his knowing, because he does not inspect every cargo. The
+  small things Miken needed, the rod and the beacon, came in the same way.
+  The crate the crew took to Mirt, with the neogi, is a different crate;
+  nobody has checked it for a mark, and the seal is there to find.
 - **Mirt.** He is the Academy's headmaster, and he is no fool. He keeps a
   code, and the bumbling is mostly a manner. He lost his friend Clint to a
   raid he believes was Vocath's and cannot prove. He holds Above Bridge
