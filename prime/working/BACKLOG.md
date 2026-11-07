@@ -36,7 +36,7 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 11 | 1 | 0 | 0 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 6 | 1 | 0 | 3 |
-| Dossiers | dossiers/ | 12 | 18 | 0 | 0 | 1 |
+| Dossiers | dossiers/ | 12 | 17 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 18 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 5 | 11 | 0 | 18 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **126** | **162** | **25** | **1** | **47** |
+| **Total** |  | **126** | **161** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -969,10 +969,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[later]** Clint's species, his finger, and whether he is trying to get back
   His species is not set; neither is how he lost his ring finger or whether he is trying to return to Caelestis. These wait until a meeting is wanted; his present stays Fonains business.
   src: dossiers/clint.html; section 5 (2026-10-28)
-
-- **[later]** Did Clint land before or after the Fonains Monolith rose?
-  Confirm against the one-shot transcripts (Search for the Blooming Glass; the Six Shooters), which are not in Drive: the Fonains/Transcripts folder is empty. If the table said after, or said nothing, he lands after, the pool having held the ship for months (Korey, 2026-11-07; the player liked a time slip), and Boogie's shard timing follows. It determines how and when Vocath answered the overseer's call.
-  src: Korey, 2026-11-07; FIA audit
 
 ---
 
