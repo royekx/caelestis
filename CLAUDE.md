@@ -178,8 +178,9 @@ state what is. Rules: `prime/working/README.md`.
   subject settles, run a change audit (the caelestis-change-audit skill): search `prime/`, `restricted/`, `data/`,
   the player pages and `prime/data/` for every name, id and alias it
   touches; rewrite each page that holds one, whole, against the ruling; then
-  search again for the old version's phrasing. One pull request, merged
-  before the next job reads those pages. Then delete the draft.
+  search again for the old version's phrasing. One pull request, or a few
+  in sequence split by area past about twenty pages, each merged before
+  any later work reads those pages. Then delete the draft.
 - **Before reading the repo on a subject, check the open pull requests.**
   `gh api "repos/royekx/caelestis/pulls?state=open" --jq '.[].head.ref'`,
   then `git diff --stat origin/main...origin/<branch>` for each. If one
@@ -218,7 +219,8 @@ Each of these has gone wrong at least once.
 
 - **Branch.** Name it `claude/<topic>`, cut fresh from `origin/main`:
   `git fetch origin main && git checkout -b claude/<topic> origin/main`.
-  One job, one branch, one pull request.
+  One pull request per branch, each branch cut fresh; a chat can open
+  several in sequence.
 - **Before every push, confirm the pull request is still open.**
   Gate the push on it, so a merged pull request stops the command:
   `[ "$(gh api "repos/royekx/caelestis/pulls?head=royekx:<branch>&state=all" --jq '.[0].state')" = open ] && git push`.

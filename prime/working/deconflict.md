@@ -7,14 +7,14 @@ in that row. Paths are under `prime/` unless they start with `data/`,
 `restricted/` or `prime/working/` (written `working/`).
 
 **Counts.** Part 1, Korey decides: 24 · Part 2, decided and waiting: 16 rows ·
-Part 3, working layer cleanup: 72 rows · Part 4, cosmetic: 15.
+Part 3, working layer cleanup: 68 rows · Part 4, cosmetic: 15.
 
 **Summary.**
 - The ten Part 1 questions that touch Voyage 7 (§ A) and the V007 rows of Part 2 are on the pages.
 - The biggest Part 2 sweeps are STAGING's two-plans, Vecna's-place and quickening rulings (2026-11-01), still absent from the Vecna and campaign pages.
 - STAGING (2026-11-02) and `working/fia-story.md` (2026-11-07) disagree on the beacon, and STAGING's "Act" wording breaks the retired-term rule.
 - BACKLOG carries about 25 items already done or ruled and about 15 duplicates; two section-table rows miscount.
-- Process docs give three answers to "where does a chat ruling go" and two to "who owns pronouns".
+- Process docs give two answers to "who owns pronouns".
 
 ---
 
@@ -150,7 +150,7 @@ Every quote here was opened and confirmed in the file named.
 
 ## Part 2: Already decided, waiting to be carried out
 
-One row per ruling. Each row becomes one change audit.
+One row per ruling. Rows that share pages run as one change audit (Handoff).
 
 | # | Ruling | Source and date | Pages that still say the old thing |
 |---|---|---|---|
@@ -264,13 +264,11 @@ One row per ruling. Each row becomes one change audit.
 
 | Conflict | Where | Action |
 |---|---|---|
-| Where a chat ruling goes | Project instructions say the inbox; `working/README.md`, `inbox/README`, BACKLOG fix "Empty the inbox" (2026-11-07), caelestis-prep and table-readiness say draft or STAGING | Give Korey replacement text for the project instructions |
 | Pronoun authority | CLAUDE.md § Naming: the dossier; SESSION-RUN § Authority, caelestis-voice, table-readiness 25: the record | Pick one; point the rest at CLAUDE.md |
 | Dossier tabs | PAGE-GUIDE § 5 About / DM notes / Stat block; SESSION-RUN step 5 "Who they are" | Fix SESSION-RUN |
 | Where open questions may sit | CLAUDE.md includes DM notes tabs; `working/README.md` omits them | Point README at CLAUDE.md |
 | "The" in names | README bans "the Hollow"; repo-refactor allows it | Drop it from one list |
 | Promoted drafts are deleted | README § 2 vs PAGE-GUIDE § 8 (nexus), ship-roles, tharizdun kept | Resolve per 3e |
-| One pull request per audit | CLAUDE.md § Working flow vs caelestis-change-audit § Scale and fia-story's three PRs | Add the split rule to CLAUDE.md |
 | STAGING "done:" notes | README step 5 vs STAGING practice | Rule it (3a) |
 | Short sentences for emphasis | SESSION-RUN § Style vs CLAUDE.md § Writing | Compatible; say so in SESSION-RUN |
 | Writing rules stated three times | CLAUDE.md, README, PAGE-GUIDE § 1 | Keep CLAUDE.md; the others point to it |
@@ -286,8 +284,6 @@ One row per ruling. Each row becomes one change audit.
 | caelestis-table-readiness | 25 "check the record for spellings and pronouns" | Pointer, after 3g pronoun ruling |
 | caelestis-table-readiness, caelestis-prep step 4, caelestis-mechanic-review 11 | Per-player hook line, three copies | Cite `principles.html#players` |
 | caelestis-mechanic-review | 10 "Reskin first"; 12 "D&D Beyond 2024 phrasing" | Promote to `principles.html`, then cite |
-| caelestis-change-audit | § Scale vs "One pull request"; "A process rule lives in one place" | Align with 3g; reword to "one place each" |
-| caelestis-prep | step 5.3 rulings to draft or STAGING | Keep; fix the project instructions instead |
 
 ---
 
@@ -329,29 +325,37 @@ Nothing was dropped outright. These were corrected when the cited file did not m
 This chat has run long; the rest goes to fresh chats, each starting from this
 draft. Rulings 1 to 3 are also written into `working/fia-story.md`.
 
-Every item below closes before V007 prep. Run them in this order, one
-chat each, each pull request merged before the next starts.
+Every item below closes before V007 prep. Chats are grouped by area: the
+items in one chat share pages, so each page is rewritten once. Each pull
+request merges before any later work reads its pages.
 
-1. **Build chat: Part 3.** The working layer and process docs, so later
-   audits start clean.
-2. **Build chats: the FIA story.** `fia-story.md` § Promotes to, three
-   pull requests. It carries the house mark and personal seal across the
-   Vocath pages (ruling 3).
-3. **Build chat: Act 1 and its arcs** (ruling 11): PAGE-GUIDE § 3, every
-   arc and level line, the By-arc sections, and STAGING § Act 1 and its arcs.
-4. **Build chats: the remaining Part 2 rows**, one change audit each, and
-   the B to D rulings outside the FIA story (13, 17, 18 and 25 to 34).
-5. **Build chat: Part 4**, the cosmetic list.
-6. **Mechanic chat:** the mechanic review of Tarto's stat block (BACKLOG
-   § dossiers/boatswain-tarto.html), the hold, the unthinned template.
-7. **Tumak chat (mechanic):** Homebound and the runes (ruling 12), from
-   the Tumak sweep in the inbox and `crew/tumak.html`.
-8. **Build chat: the DM tools.** BACKLOG § Automation and tracker,
-   "Overhaul the DM tools": the tracker first, then the Voyages board, the
-   hub, the timeline and the overlay, rebuilt against the cleaned pages.
-9. **Prep chat: V007.** caelestis-prep at session scale, from the cleaned
-   pages and the rebuilt tools. Ezra's hook, the sealed letter and crossing entry 7 are built here
-   (ruling 8, BACKLOG § campaign/voyages).
+1. **Build: the working layer** (this chat's follow-on). Part 3's
+   independent rows: STAGING notes, BACKLOG closes, merges, misfiles and
+   dead paths, the finished drafts, the inbox README; 3g and 3h; Part 2
+   rows 2.12, 2.13, 2.16, 2.17, 2.18 and 2.24, with the Part 4 lines on
+   those pages. Two pull requests, plus skill cards.
+2. **Build: the story spine.** Ruling 11 (Acts and arcs, with 2.5's arc
+   lines), 2.8, 2.9, 2.10, 2.23, and rulings 13, 25 and 26. Shared pages:
+   `campaign/index.html`, `opposition/`, `principles.html`, `timeline.json`,
+   `chart/`. Part 3 rows that wait on 11 or 25 (`campaign-middle.md`,
+   `tharizdun.md`) land here.
+3. **Build: the FIA story.** The pre-fixes in 3e, then `fia-story.md`
+   § Promotes to in three pull requests, with 2.11, 2.14, 2.20's Vth'orama
+   lines, 2.21, rulings 17 and 18, the house mark and personal seal across
+   the Vocath pages, and the BACKLOG items moot after it.
+4. **Build: the cosmos.** Rulings 27 to 34, 2.15, the cosmology lines of
+   2.20, and Part 4's cosmology, chart and glossary items.
+5. **Mechanic: Tarto, the hold, the unthinned, and Homebound.** Tarto's
+   mechanic review (BACKLOG § dossiers/boatswain-tarto.html), the hold, the
+   unthinned template, then Homebound and the runes (ruling 12) from the
+   Tumak sweep and `crew/tumak.html`. Split Homebound into its own chat if
+   it runs long.
+6. **Build: the DM tools.** BACKLOG § Automation and tracker, "Overhaul
+   the DM tools": the tracker first, then the Voyages board, the hub, the
+   timeline and the overlay, rebuilt against the cleaned pages.
+7. **Prep: V007.** caelestis-prep at session scale, from the cleaned pages
+   and the rebuilt tools. Ezra's hook, the sealed letter and crossing entry
+   7 are built here (ruling 8, BACKLOG § campaign/voyages).
 
 Not blocking V007: the thief (14b, open in `fia-story.md`).
 
@@ -359,8 +363,8 @@ Delete this draft when every item is closed.
 
 ## Promotes to
 
-Each Part 2 row is one change audit (caelestis-change-audit). Part 1 answers
-become rulings in this draft, then change audits. Part 3 is done in place on
+Part 2 rows run as change audits (caelestis-change-audit), grouped by area
+in the Handoff. Part 1 answers become rulings in this draft, then change audits. Part 3 is done in place on
 the working layer. Delete this draft when every item is closed.
 
 ## Open
