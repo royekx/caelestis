@@ -36,16 +36,16 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 11 | 1 | 0 | 0 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 6 | 1 | 0 | 3 |
-| Dossiers | dossiers/ | 12 | 18 | 0 | 0 | 1 |
+| Dossiers | dossiers/ | 12 | 17 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 18 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 5 | 11 | 0 | 18 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 2 | 0 | 0 |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **125** | **162** | **25** | **1** | **47** |
+| **Total** |  | **126** | **161** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -970,10 +970,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   His species is not set; neither is how he lost his ring finger or whether he is trying to return to Caelestis. These wait until a meeting is wanted; his present stays Fonains business.
   src: dossiers/clint.html; section 5 (2026-10-28)
 
-- **[later]** Did Clint land before or after the Fonains Monolith rose?
-  Confirm against what, if anything, the Fonains one-shot said. It determines only how and when Vocath answered the overseer's call.
-  src: Korey, 2026-11-07
-
 ---
 
 ### dossiers/crc.html
@@ -1118,7 +1114,7 @@ Items whose source sweep is still partial keep their `(sampled)` or
   src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Gregory); realms/index.html § unplaced (old page)
 
 - **[later]** How cadets from worlds without spelljamming reach Caelestis
-  The one route Korey has stated is Sol's: the Watcher order broke protocol to recommend he be taken to Caelestis. The FIA already hints at a route for each PC, with no dedicated intake file (Korey chose scattered hints over one file): WM-006 field referral and protective placement (Sol); SA-002 1486 meteor account by a minor referred to intake (Casey); FR-016 inspecting party reassigned to cadet intake (Boogie); SA-002 1491 two arrivals from an uncatalogued system (Wan and Tu). Gregory arrived on a cargo ship. Bartholomew has no hint.
+  The one route Korey has stated is Sol's: the Watcher order broke protocol to recommend he be taken to Caelestis. The FIA already hints at a route for each PC, with no dedicated intake file (Korey chose scattered hints over one file): WM-006 field referral and protective placement (Sol); SA-002 1486 meteor account by a minor referred to intake (Casey); LG-003 manifest notation, a plasmoid recruited in transit (Boogie); SA-002 1491 two arrivals from an uncatalogued system (Wan and Tu). Gregory arrived on a cargo ship. Bartholomew has no hint.
   Left: whether there is a general rule. Options: Watcher referral as the general route; several routes (Watcher referral, Fleet recruiters, walk-ins at stations); or a per-cadet answer with no general rule, as the FIA hints already read. Touches crew/index.html, crew/sol.html, and a new Cadet intake page (see the New pages section).
   src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Watcher recruitment for Sol); BCS § Sol/C.R.C. and the scry beats; framework § FIA records (intake hints), § Superseded (no PF-004 intake file); memory-canon campaign-canon § Gregory (cargo ship)
 
@@ -1897,6 +1893,10 @@ archived in Drive, not deleted. What stays open here is below.
 
 # Repo and process
 
+- **[decide]** FIA and DM proper nouns and the spelling list
+  `data/vocabulary.js` is the one spelling list, and CLAUDE.md says every new proper noun goes in it. The FIA's names (Dashforest, Tarroway, Verrow, Saltjaw, Cairn, Strake, Hollis, Aethris, Kaldris, Ortholith, the escort ships) are not in it, and adding them there would let the player search suggest gated names. Ruled (Korey, 2026-11-07): no name list goes in CLAUDE.md, and no second list. Options: one list with a gated flag per name that `scripts/spelling.js` skips on the player site and the FIA and DM search pages use; or the FIA and DM searches get no spelling repair and the rule in CLAUDE.md is narrowed to player names. Touches data/vocabulary.js, scripts/spelling.js, restricted/search.html, prime/search.html, CLAUDE.md § Deploy and search.
+  src: FIA cold audit, 2026-11-07
+
 - **[later]** Skills by DM practice, not by campaign
   The caelestis-* skills (story logic, table readiness, prep, mechanic review, change audit) are Korey's DM practice, not Caelestis's. Before a second campaign uses them, split each into the method, named for the practice and shared across campaigns, and the campaign's specifics (paths, anchors such as Fonains-first, voice, check commands), kept in that campaign's CLAUDE.md or one campaign reference the skills read. Repo setup and voice stay per campaign.
   src: Korey, 2026-11-06
@@ -1939,6 +1939,7 @@ archived in Drive, not deleted. What stays open here is below.
 
 - **[decide]** The voyages' Fleet dates *(prep)*
   `data/sessions.json` carries a rough Fleet date per voyage (`date`), counted back from 1491.7.12, where the crew stands after V006. Settled 2026-11-02: Bartholomew joined on the crew's first day, at the Weeping Goddess lunch the Mirt errand was leading to, so V001 is 1491.6.25 and V002 runs 1491.6.25–1491.6.26 (that lunch, a night, the salvage simulation next morning); and V006 ends at 1491.7.12. V003 1491.6.26–1491.7.5 (the blast on the salvage morning, then "some days passed"; about ten embers, rough). V004 1491.7.5–1491.7.6 and V005 1491.7.6–1491.7.7 (a day or so aboard each; guess). V006 1491.7.7–1491.7.12 ("the next few days learning the ship"). Still to confirm: how many days V003's "some days passed" covers. The V002 account reads against the ruling: Boogie sets the half-ship on the lunch table, and the account twice says it came out of his chest "the night before", but the V001 account has it emerge that night, after the errand. Two more V002 cues point the same way: Ryeback says Barret was "at the counter the night before" talking about Casey's birthday readings, and Casey goes looking for Joffrey, "the sailor he had spoken with the day before". If the lunch is instead the morning after V001, still with no gap (V002 1491.6.26–1491.6.27, V003 from 1491.6.27), both accounts stand as written. Separately, the second cue is itself an error in the V002 account: in V001 it was Sol, not Casey, who spoke with Joffrey. The V003 account's "attacked twice in three days" also counts the Mirt crate and the blast, now a day apart. The crossing to H'Catha is fourteen embers, so V007 would run from about 1491.7.13 to 1491.7.26 or later. prime/chart/gtc.js still says the current kindling and ember are not set; align it with the record when the chart is next touched.
+  Left (FIA audit, 2026-11-07): timeline.json's "The crew at the Academy" marker (t −0.185, about 67 days before now) does not match V001 at 1491.6.25 once the cycle calendar is fixed; move the marker when the calendar rule lands.
   src: Korey, 2026-10-29 (Fleet time ruling); Korey, 2026-11-02 (record-cleanup notes § 3); voyages/voyage-001.html to voyage-006.html
 
 - **[later]** Ships in the record
