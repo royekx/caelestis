@@ -385,7 +385,7 @@
       "status": "past",
       "cert": "canon",
       "title": "Captured aboard Thessalar's craft",
-      "desc": "N'ghathrod's ship clashes with Thessalar's planar craft and loses. Thessalar and the Thessalkraken capture him and some of his illithids, and he is held and experimented on aboard; the Rod's seventh piece makes his ceremorphosis paracausal, so his tadpoles become copies of him. He is still a prisoner when Lola's Boys arrive from the future.",
+      "desc": "N'ghathrod's ship clashes with Thessalar's planar craft and loses. Thessalar and the Thessalkraken capture him and some of his illithids, and he is held and experimented on aboard; the Rod's seventh piece makes his ceremorphosis paracausal, so his tadpoles become copies of him. It also gives each of the five who become his enna a power of its own, and changes the mouse he keeps. He is still a prisoner when Lola's Boys arrive from the future.",
       "t": -506,
       "end": -500,
       "tier": 1
@@ -404,8 +404,17 @@
       "status": "past",
       "cert": "canon",
       "title": "Exile from Glyth",
-      "desc": "After decades of travel back to Glyth, a system away, Glyth casts out the unthinned, and N'ghathrod leaves with them because they are his blood.",
+      "desc": "After decades of travel back to Glyth, a system away, Glyth refuses the three malformed illithids made aboard Thessalar's craft and exiles them. N'ghathrod leaves with them because they are his blood.",
       "t": -420,
+      "tier": 2
+    },
+    {
+      "lane": "colony",
+      "status": "past",
+      "cert": "canon",
+      "title": "The voice",
+      "desc": "In the centuries after Glyth cast his people out, a voice reaches N'ghathrod, with dreams and visions. For some decades he takes it for an elder brain. He learns it is not, and stops caring: his own world had no place for him, and the voice provides. It is Vecna.",
+      "t": -380,
       "tier": 2
     },
     {
@@ -567,7 +576,7 @@
       "status": "past",
       "cert": "canon",
       "title": "The craft falls; N'ghathrod escapes",
-      "desc": "Stripped of its gems, the craft comes down. N'ghathrod escapes in the crash with his lieutenants and the tadpoles he can carry, and never reaches Fonains. The craft is a megadungeon whose unexplored levels become the Mad Mage dungeon, and it breaks up as it falls: the main body raises the Barrier Peaks, broken-off pieces become Daoine Gloine and Kwalish's island, and the Thessalkraken lands separately in the sea, where it later guards the trident's reef. The elder brain is separated from him and lies trapped beneath the Barrier Peaks; when N'ghathrod reaches for it, Vecna answers.",
+      "desc": "Stripped of its gems, the craft comes down. N'ghathrod escapes in the crash with his lieutenants and the tadpoles he can carry, and never reaches Fonains. The craft is a megadungeon whose unexplored levels become the Mad Mage dungeon, and it breaks up as it falls: the main body raises the Barrier Peaks, broken-off pieces become Daoine Gloine and Kwalish's island, and the Thessalkraken lands separately in the sea, where it later guards the trident's reef. Other broken-off pieces scatter across Fonains: Tharizdun's temple, and the Temple of Moloch with Thessalar's laboratory beneath it. N'ghathrod's elder brain, kept apart from him aboard, is left trapped in the caverns beneath the Barrier Peaks.",
       "tier": 1
     },
     {
@@ -1349,11 +1358,19 @@
       {
         "t": -500,
         "status": "past",
-        "title": "The craft falls; N'ghathrod escapes; Vecna answers his call",
+        "title": "The craft falls; N'ghathrod escapes",
         "who": [
           "N'ghathrod",
-          "Vecna",
           "Thessalar"
+        ]
+      },
+      {
+        "t": -380,
+        "status": "past",
+        "title": "A voice reaches N'ghathrod in exile",
+        "who": [
+          "N'ghathrod",
+          "Vecna"
         ]
       },
       {

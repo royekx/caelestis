@@ -63,7 +63,7 @@ Each settles items on several pages at once. Rule these first.
 9. ~~**Astra's name and wound.**~~ *Ruled: any of the three names; the Axiom strain's ripple woke and broke it.*
 10. ~~**The real elder brain.**~~ *Ruled: the Session 27 brain is his; it teleported out.* Where it went is no longer a question.
 11. ~~**Where Oerth lies.**~~ *Ruled: GAL-01, in Greyspace; Oerth is the eye's retina (STAGING).*
-13. ~~**Can a taken person be released?**~~ *Ruled: the taken outlive N'ghathrod, each keeping part of him.*
+13. ~~**Can a taken person be released?**~~ *Ruled: a tadpole can be removed, and removal frees the host; the taken outlive N'ghathrod, each keeping part of him.* How removal is done stays open (D&D lore or our own; avoid Baldur's Gate 3 spoilers).
 14. ~~**Fonains–Caelestis offset.**~~ *Ruled: Caelestis's present is level with Fonains Session 28, two to three months after the Monolith broke (STAGING § Timing; locations/fonains.html DM notes).*
 15. ~~**Ostekk-6 as sole survivor.**~~ *Ruled: the only active survivor; Ostekk-2 is inert and can be healed.*
 16. ~~**The tracker and session ingest.**~~ *Ruled: the repo record is the tracker and sessions run in chat per prime/docs/SESSION-RUN.md; n8n and the Google Sheet trackers are retired (archived in Drive).*
@@ -1048,8 +1048,8 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/nghathrod.html
 
-- **[later]** N'ghathrod's mouse
-  He saved a mouse during the escape and it travels with him. Its quirk and what it means to him are open.
+- **[later]** The power of N'ghathrod's mouse
+  The seventh Rod piece changed the mouse he saved, and he took it with one of his copies; it is his secret sixth lieutenant (dossiers/nghathrod.html). What power the experiment gave it is open.
   src: Korey, 2026-10-25 (round 2)
 
 - **[decide]** How long N'ghathrod has been fused into Vth'oramu
@@ -1617,7 +1617,7 @@ against the complete Tumak sweep (all 336 turns).
 ### NEW: Languages (reference)
 
 - **[add]** A home for invented languages
-  Purpose: one DM reference for every made-up language in the cosmos, so names stay consistent. Voice: DM. First entry: the Vth'orama tongue, with its roots (vth- the whole of; ghath to hold and keep hold; n'- one who, one that is; -rod unbroken, that does not release; ulh the cull; -an negation; mer- to bear; enna near, inner; or- toward; amu home; -a a people), and the glossed words (Vth'orama, Vth'oramu, Vth'ghathu, Vth'ulhan, Vth'merru, n'ghathu, Enna Vth'ghathu, N'ghathrod). Add a section per language as others appear (Githyanki, chapter names for the Seekers).
+  Purpose: one DM reference for every made-up language in the cosmos, so names stay consistent. Voice: DM. First entry: the Vth'orama tongue, with its roots (vth- the whole of; ghath to hold and keep hold; n'- one who, one that is; -rod unbroken, that does not release; ulh the cull; -an negation; mer- to bear; enna near, inner; or- toward; amu home; -a a people), and the glossed words (Vth'orama, Vth'oramu, Vth'ghathu, n'ghathu, Enna Vth'ghathu, N'ghathrod). Vth'ulhan and Vth'merru are retired with "unthinned" and "bearers"; whether the true-formed have a Qualith name is open. Add a section per language as others appear (Githyanki, chapter names for the Seekers).
   src: Korey, 2026-10-25 (round 4); factions/vthorama.html § Roots
 
 ### NEW: Fringe watcher of the cosmos (dossier, later)

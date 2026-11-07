@@ -1966,6 +1966,10 @@
         {
           "t": "Thessalar holds it.",
           "src": "STAGING round 10"
+        },
+        {
+          "t": "It changed the five who became the enna, giving each a power, and changed N'ghathrod's mouse.",
+          "src": "artifacts/rod-of-seven-parts.html"
         }
       ]
     },
@@ -2027,8 +2031,8 @@
           "src": "STAGING round 2"
         },
         {
-          "t": "He believes the voice that guides him is an elder brain; it is Vecna.",
-          "src": "STAGING round 3"
+          "t": "For some decades he took the voice that guides him for an elder brain; he learned it was not, and stopped caring. It is Vecna.",
+          "src": "dossiers/nghathrod.html"
         },
         {
           "t": "He was a spacefaring elf before ceremorphosis.",
@@ -2049,6 +2053,22 @@
         {
           "t": "He knows the Order's Watchers exist, through the Watchers posted to Glyth.",
           "src": "dossiers/nghathrod.html"
+        },
+        {
+          "t": "He has become the colony's elder brain in function: the tadpole pools bloom out of the hull, in his body.",
+          "src": "dossiers/nghathrod.html"
+        },
+        {
+          "t": "His copies go only to people in places of power, or to outcasts he takes pity on; never to captives.",
+          "src": "dossiers/nghathrod.html"
+        },
+        {
+          "t": "He shares his long life with the enna and some of the old illithids who joined him.",
+          "src": "dossiers/nghathrod.html"
+        },
+        {
+          "t": "A tadpole can be removed, and removal frees the host.",
+          "src": "dossiers/nghathrod.html"
         }
       ]
     },
@@ -2057,7 +2077,7 @@
       "label": "N'ghathrod's mouse",
       "type": "person",
       "scope": "caelestis",
-      "summary": "A mouse N'ghathrod saved in his escape, with him ever since.",
+      "summary": "The mouse N'ghathrod saved in his escape, changed by the seventh piece; his secret sixth lieutenant.",
       "facts": [
         {
           "t": "In the escape from the planar craft N'ghathrod saved a mouse, which has travelled with him since.",
@@ -2066,6 +2086,14 @@
         {
           "t": "The mouse was in the same room as the Rod's seventh piece for as long as he was.",
           "src": "dossiers/nghathrod.html"
+        },
+        {
+          "t": "The experiment changed the mouse and gave it a power of its own.",
+          "src": "factions/vthorama.html"
+        },
+        {
+          "t": "He took it with one of his copies, so the tithe keeps it alive; nobody aboard counts a mouse.",
+          "src": "factions/vthorama.html"
         }
       ]
     },
@@ -2091,18 +2119,18 @@
       "label": "N'ghathrod's elder brain",
       "type": "entity",
       "scope": "fonains",
-      "summary": "The elder brain separated from N'ghathrod in the crash, buried for five centuries under the Barrier Peaks.",
+      "summary": "N'ghathrod's elder brain, left trapped beneath the Barrier Peaks when Thessalar's craft fell; it escaped after Session 27.",
       "facts": [
         {
-          "t": "N'ghathrod's elder brain was separated from him in the crash, and he believed it dead or could not reach it.",
+          "t": "It was aboard Thessalar's craft, kept apart from N'ghathrod, and was left trapped in the caverns beneath the Barrier Peaks when the craft came down. He believes it dead or beyond reach.",
           "src": "dossiers/nghathrod.html"
         },
         {
-          "t": "It lay trapped beneath the Barrier Peaks for about five hundred years, possibly growing a colony of its own.",
-          "src": "dossiers/nghathrod.html"
+          "t": "Tharizdun's influence never reached it.",
+          "src": "vessels/thessalars-craft.html#elder-brain"
         },
         {
-          "t": "Lola's Boys broke it in Session 27; it was buried in the collapse but teleported out and escaped.",
+          "t": "Lola's Boys reached it in Session 27; it teleported out and escaped to a place nobody knows.",
           "src": "dossiers/nghathrod.html"
         }
       ]
@@ -2119,8 +2147,8 @@
           "src": "factions/vthorama.html"
         },
         {
-          "t": "The colony is a chapter of the Seekers, the Seekers of a New Home, believing it answers to an elder brain.",
-          "src": "STAGING round 3"
+          "t": "The colony is a chapter of the Seekers, the Seekers of a New Home. It has no elder brain; its illithids believe they answer to one through N'ghathrod.",
+          "src": "factions/vthorama.html"
         },
         {
           "t": "Vth'orama means all who go toward home: vth- the whole of, or- toward, amu home, -a a people.",
@@ -2156,6 +2184,18 @@
         },
         {
           "t": "The colony takes key people who can rise into control, never crowds.",
+          "src": "factions/vthorama.html"
+        },
+        {
+          "t": "Most of its illithids are malformed; its whole illithids call themselves the true-formed, and N'ghathrod calls every illithid Vth'orama.",
+          "src": "factions/vthorama.html"
+        },
+        {
+          "t": "Its captives come through Vocath's line and go to the pools or feed its illithids.",
+          "src": "opposition/vthorama.html"
+        },
+        {
+          "t": "A taken person keeps their old ties and still cares; when a tie and the colony pull apart, the colony wins.",
           "src": "factions/vthorama.html"
         }
       ]
@@ -2197,20 +2237,20 @@
       "summary": "N'ghathrod's five lieutenants, the near-held, each carrying a Hold of him.",
       "facts": [
         {
-          "t": "The five lieutenants were changed with N'ghathrod by Thessalar's experiments and gained greatly extended lifespans.",
-          "src": "STAGING round 2"
+          "t": "Thessalar's experiment gave each of the five a power of its own. Their long life comes from the tithe, which N'ghathrod shares with them.",
+          "src": "factions/vthorama.html"
         },
         {
-          "t": "Two are properly raised illithids captured with N'ghathrod; three are unthinned, made aboard the craft from bodies Thessalar supplied and N'ghathrod's tadpoles.",
-          "src": "STAGING round 8"
+          "t": "Two are whole illithids captured with N'ghathrod; three are malformed, made aboard the craft from N'ghathrod's own tadpoles in bodies Thessalar supplied.",
+          "src": "factions/vthorama.html"
         },
         {
           "t": "Each carries a Hold, a portion of N'ghathrod, and he speaks through them at will.",
           "src": "factions/vthorama.html"
         },
         {
-          "t": "Killing one ends that Hold, and the colony loses its function.",
-          "src": "factions/vthorama.html"
+          "t": "Killing one ends that Hold, and the colony loses that power for good; their spawn carry only some of it.",
+          "src": "dossiers/zhauveth.html"
         },
         {
           "t": "They are closest to N'ghathrod of all the taken.",
@@ -2219,43 +2259,43 @@
       ]
     },
     {
-      "id": "bearers",
-      "label": "The Vth'merru",
+      "id": "true-formed",
+      "label": "The true-formed",
       "type": "faction",
       "scope": "caelestis",
-      "summary": "The bearers: properly raised illithids who can still breed the colony.",
+      "summary": "What the colony's whole illithids call themselves; N'ghathrod does not accept the name.",
       "facts": [
         {
-          "t": "The bearers lay into the pools and oversee ordinary ceremorphosis.",
+          "t": "The colony's whole illithids are the old ones who came with N'ghathrod and the minority born aboard who came out whole; they keep the pools and oversee ordinary ceremorphosis.",
           "src": "factions/vthorama.html"
         },
         {
-          "t": "They watch bodies that should have become illithids receive N'ghathrod's tadpoles instead, and resent it as waste.",
+          "t": "They keep Glyth's ideal and call themselves the true-formed; N'ghathrod calls every illithid Vth'orama.",
           "src": "factions/vthorama.html"
         },
         {
-          "t": "Osskhal and Khaleth, two of the enna, are bearers captured with N'ghathrod aboard Thessalar's craft.",
+          "t": "Osskhal and Khaleth, two of the enna, are among them.",
           "src": "factions/vthorama.html"
         }
       ]
     },
     {
-      "id": "unthinned",
-      "label": "The Vth'ulhan",
+      "id": "malformed",
+      "label": "The malformed",
       "type": "faction",
       "scope": "caelestis",
-      "summary": "The unthinned: illithids raised without an elder brain to cull them.",
+      "summary": "Most of the colony's illithids: visibly wrong in body and lopsided in mind.",
       "facts": [
         {
-          "t": "Glyth exiled the unthinned, and N'ghathrod went with them because they are his blood.",
-          "src": "STAGING round 2"
+          "t": "Glyth refused the three malformed made aboard Thessalar's craft and exiled them, and N'ghathrod went with them because they are his blood.",
+          "src": "locations/glyth.html"
         },
         {
-          "t": "The unthinned took Glyth's insult for themselves.",
+          "t": "A malformed illithid is very good at one thing and poor at the rest.",
           "src": "factions/vthorama.html"
         },
         {
-          "t": "They are the bulk of the colony's illithids and loyal for what N'ghathrod did for them.",
+          "t": "The colony never thins its broods, so most of the illithids it makes come out malformed.",
           "src": "factions/vthorama.html"
         }
       ]
@@ -2268,7 +2308,7 @@
       "summary": "The Flesh: the enna who carries the body N'ghathrod fights with.",
       "facts": [
         {
-          "t": "Osskhal is properly raised and carries the Hold of the Flesh.",
+          "t": "Osskhal is whole and carries the Hold of the Flesh.",
           "src": "dossiers/osskhal.html"
         },
         {
@@ -2280,7 +2320,7 @@
           "src": "dossiers/osskhal.html"
         },
         {
-          "t": "Properly raised and captured with N'ghathrod aboard Thessalar's craft; Thessalar's experiments gave him a greatly extended lifespan.",
+          "t": "Whole, and captured with N'ghathrod aboard Thessalar's craft; his long life comes from the tithe N'ghathrod shares.",
           "src": "dossiers/osskhal.html"
         }
       ]
@@ -2293,7 +2333,7 @@
       "summary": "The Arcane: the enna who carries the spellcasting and keeps the Qualith library.",
       "facts": [
         {
-          "t": "Ulh'rek is unthinned, nine feet tall and malformed, and carries the Hold of the Arcane.",
+          "t": "Ulh'rek is malformed and nine feet tall, and carries the Hold of the Arcane.",
           "src": "dossiers/ulhrek.html"
         },
         {
@@ -2305,7 +2345,7 @@
           "src": "dossiers/ulhrek.html"
         },
         {
-          "t": "Unthinned and made aboard Thessalar's craft; Thessalar's experiments gave him a greatly extended lifespan.",
+          "t": "One of the three malformed made aboard Thessalar's craft; his long life comes from the tithe N'ghathrod shares.",
           "src": "dossiers/ulhrek.html"
         }
       ]
@@ -2315,18 +2355,18 @@
       "label": "Zhauveth",
       "type": "person",
       "scope": "caelestis",
-      "summary": "The Voice: the enna who carries domination and suggestion and makes the colony's arrangements.",
+      "summary": "The Voice: the malformed enna whose power is domination and suggestion, and who makes the colony's arrangements.",
       "facts": [
         {
-          "t": "Zhauveth is unthinned, barely four feet tall, and incapable of violence.",
+          "t": "Zhauveth is malformed, barely four feet tall, and incapable of violence; domination is not violence.",
           "src": "dossiers/zhauveth.html"
         },
         {
-          "t": "She made the arrangement with Vocath about a year before the crew's first voyage.",
+          "t": "She made the arrangement with Vocath years before Voyage 001: captives for what the taken know.",
           "src": "opposition/vthorama.html"
         },
         {
-          "t": "Joffrey is her instrument on Caelestis.",
+          "t": "N'ghathrod runs Joffrey through her.",
           "src": "dossiers/zhauveth.html"
         },
         {
@@ -2334,7 +2374,7 @@
           "src": "dossiers/zhauveth.html"
         },
         {
-          "t": "Unthinned and made aboard Thessalar's craft; Thessalar's experiments gave her a greatly extended lifespan.",
+          "t": "One of the three malformed made aboard Thessalar's craft; her long life comes from the tithe N'ghathrod shares.",
           "src": "dossiers/zhauveth.html"
         }
       ]
@@ -2344,14 +2384,14 @@
       "label": "Ith'varn",
       "type": "person",
       "scope": "caelestis",
-      "summary": "The Sight: the blind enna through whom every taken's report passes.",
+      "summary": "The Sight: the blind enna who sees each taken report as it reaches N'ghathrod.",
       "facts": [
         {
-          "t": "Ith'varn is unthinned and blind, and reads the world through the colony bond.",
+          "t": "Ith'varn is malformed and blind, and reads the world through the colony bond.",
           "src": "dossiers/ithvarn.html"
         },
         {
-          "t": "Every taken person's reporting passes through him before it reaches N'ghathrod.",
+          "t": "The taken report up to N'ghathrod, and Ith'varn sees each report as it arrives.",
           "src": "dossiers/ithvarn.html"
         },
         {
@@ -2359,7 +2399,7 @@
           "src": "dossiers/ithvarn.html"
         },
         {
-          "t": "Unthinned and made aboard Thessalar's craft; Thessalar's experiments gave him a greatly extended lifespan.",
+          "t": "One of the three malformed made aboard Thessalar's craft; his long life comes from the tithe N'ghathrod shares.",
           "src": "dossiers/ithvarn.html"
         }
       ]
@@ -2372,7 +2412,7 @@
       "summary": "The Surveyor: the enna who runs the hunt for Atria and leads the descents.",
       "facts": [
         {
-          "t": "Khaleth is properly raised and carries the Hold of the Surveyor.",
+          "t": "Khaleth is whole and carries the Hold of the Surveyor.",
           "src": "dossiers/khaleth.html"
         },
         {
@@ -2384,7 +2424,7 @@
           "src": "dossiers/khaleth.html"
         },
         {
-          "t": "Properly raised and captured with N'ghathrod aboard Thessalar's craft; Thessalar's experiments gave him a greatly extended lifespan.",
+          "t": "Whole, and captured with N'ghathrod aboard Thessalar's craft; his long life comes from the tithe N'ghathrod shares.",
           "src": "dossiers/khaleth.html"
         }
       ]
@@ -2447,14 +2487,14 @@
       "label": "Glyth",
       "type": "place",
       "scope": "caelestis",
-      "summary": "The illithid world in Realmspace that exiled the unthinned.",
+      "summary": "The illithid world in Realmspace that refused and exiled N'ghathrod's three malformed.",
       "facts": [
         {
           "t": "The journey back to Glyth from the planar craft took decades.",
           "src": "STAGING round 2"
         },
         {
-          "t": "Glyth exiled the unthinned roughly four to four and a half centuries ago.",
+          "t": "Glyth exiled the three malformed roughly four to four and a half centuries ago.",
           "src": "STAGING round 2"
         },
         {
@@ -2472,10 +2512,10 @@
       "label": "The exile from Glyth",
       "type": "event",
       "scope": "caelestis",
-      "summary": "Glyth casts out the unthinned, and N'ghathrod leaves with them.",
+      "summary": "Glyth refuses the three malformed, and N'ghathrod leaves with them.",
       "facts": [
         {
-          "t": "Roughly four centuries ago Glyth rejected the unthinned and N'ghathrod chose to go with them.",
+          "t": "Roughly four centuries ago Glyth refused the three malformed and N'ghathrod chose to go with them.",
           "src": "STAGING round 2"
         },
         {
@@ -5017,8 +5057,8 @@
       "summary": "Halaster Blackcloak, the Mad Mage, still in his planar craft.",
       "facts": [
         {
-          "t": "Thessalar is Halaster Blackcloak, and he is still in the planar craft.",
-          "src": "STAGING round 5"
+          "t": "Thessalar is Halaster Blackcloak, and he is still in the wreck of his planar craft.",
+          "src": "dossiers/thessalar.html"
         },
         {
           "t": "His records of the work on N'ghathrod are in the craft.",
@@ -5078,7 +5118,7 @@
           "src": "vessels/thessalars-craft.html"
         },
         {
-          "t": "Thessalar is still inside, with his records and the seventh piece.",
+          "t": "Thessalar is still in the wreck, with his records and the seventh piece.",
           "src": "vessels/thessalars-craft.html"
         },
         {
@@ -5092,6 +5132,10 @@
         {
           "t": "Kwalish's island, the Monastery of the Distressed Body, is a broken-off piece of the craft.",
           "src": "vessels/thessalars-craft.html#kwalish"
+        },
+        {
+          "t": "The Temple of Moloch, with Thessalar's laboratory beneath it, is a broken-off piece of the craft.",
+          "src": "vessels/thessalars-craft.html"
         }
       ]
     },
@@ -6807,31 +6851,31 @@
     },
     {
       "s": "osskhal",
-      "t": "bearers",
+      "t": "true-formed",
       "rel": "is one of",
       "src": "STAGING round 8"
     },
     {
       "s": "khaleth",
-      "t": "bearers",
+      "t": "true-formed",
       "rel": "is one of",
       "src": "STAGING round 8"
     },
     {
       "s": "ulhrek",
-      "t": "unthinned",
+      "t": "malformed",
       "rel": "is one of",
       "src": "STAGING round 8"
     },
     {
       "s": "zhauveth",
-      "t": "unthinned",
+      "t": "malformed",
       "rel": "is one of",
       "src": "STAGING round 8"
     },
     {
       "s": "ithvarn",
-      "t": "unthinned",
+      "t": "malformed",
       "rel": "is one of",
       "src": "STAGING round 8"
     },
@@ -6878,19 +6922,19 @@
       "src": "dossiers/ithvarn.html"
     },
     {
-      "s": "bearers",
+      "s": "true-formed",
       "t": "vthorama",
-      "rel": "breed",
+      "rel": "keep the pools of",
       "src": "factions/vthorama.html"
     },
     {
-      "s": "unthinned",
+      "s": "malformed",
       "t": "vthorama",
-      "rel": "form the bulk of",
+      "rel": "form most of",
       "src": "factions/vthorama.html"
     },
     {
-      "s": "unthinned",
+      "s": "malformed",
       "t": "glyth",
       "rel": "were exiled by",
       "src": "STAGING round 2"
