@@ -207,7 +207,7 @@ import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer
 
 // ── Shared with the flat chart (galaxy.js) ─────────────────────────
 const E = window.EREVOS;
-const { GX, rng, gauss, armPt, RS, OUT, TAN, at, POS, S } = E;
+const { GX, rng, gauss, armPt, RS, OUT, TAN, at, CAIRN_DIR, POS, S } = E;
 const toV = (p, y=0) => new THREE.Vector3((p[0]-GX.cx)*S, y, (p[1]-GX.cy)*S);
 const LOC = '../locations/';
 
@@ -250,9 +250,7 @@ const surveyReady = fetch('../data/survey.json').then(r => r.ok ? r.json() : nul
 });
 
 const SITES = (() => {
-  const toK = (() => { const k = sysPos('krynnspace'), dx = k[0]-RS[0], dy = k[1]-RS[1], l = Math.hypot(dx,dy); return [dx/l, dy/l]; })();
-  const mid = (() => { const x = OUT[0]+toK[0], y = OUT[1]+toK[1], l = Math.hypot(x,y); return [x/l, y/l]; })();
-  const strake = at(RS, 600, 0), hollis = at(RS, -600, 0), cairn = [RS[0]+mid[0]*1150, RS[1]+mid[1]*1150];
+  const strake = at(RS, 600, 0), hollis = at(RS, -600, 0), cairn = [RS[0]+CAIRN_DIR[0]*1150, RS[1]+CAIRN_DIR[1]*1150];
   const lerp = (a,b,t) => [a[0]+(b[0]-a[0])*t, a[1]+(b[1]-a[1])*t];
   return [
     { id:'waystation', name:'Astral waystation', pos:lerp(RS, sysPos('virenspace'), .55), page:'waystation.html', kind:'Stop on a lane', summary:'The last reliable resupply before the long haul to Virenspace.' },
@@ -271,7 +269,7 @@ const LANES = [
   { a:'realmspace', b:'krynnspace', tier:'uncharted' },
   { a:'realmspace', b:'strake', tier:'charted' },
   { a:'realmspace', b:'hollis', tier:'charted' },
-  { a:'strake', b:'cairn', tier:'closed' }
+  { a:'realmspace', b:'cairn', tier:'closed' }
 ];
 const LANE_STYLE = {
   charted:{ c:0x8fe8df, dash:0, op:.8 }, long:{ c:0x8fe8df, dash:3, gap:1.8, op:.55 },

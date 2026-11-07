@@ -258,9 +258,9 @@ const CORE_TONE = { asleep:"#e2ae7e", awake:"#e0605a", partway:"#b9a5d8" };
 const CORE_WORD = { asleep:"Core asleep", awake:"Core awake", partway:"Core partway" };
 
 /* ---------- GAL-01: where the saved systems sit ---------- */
-const RS = armPt(0, 2.1);
-const OUT = (() => { const dx = RS[0]-GX.cx, dy = RS[1]-GX.cy, l = Math.hypot(dx,dy); return [dx/l, dy/l]; })();
-const TAN = [-OUT[1], OUT[0]];
+const RS = window.EREVOS.RS.map(Math.round);
+const OUT = window.EREVOS.OUT;
+const TAN = window.EREVOS.TAN;
 const at = (base, o, t) => [Math.round(base[0] + OUT[0]*o + TAN[0]*t), Math.round(base[1] + OUT[1]*o + TAN[1]*t)];
 const CLUSTER = { x:RS[0], y:RS[1], rx:880, ry:600, rot:Math.atan2(TAN[1],TAN[0])*180/Math.PI };
 
@@ -268,18 +268,18 @@ const CLUSTER = { x:RS[0], y:RS[1], rx:880, ry:600, rot:Math.atan2(TAN[1],TAN[0]
 const SYS_CHART = {
   "Realmspace": { pos:RS, tone:"#9cc0e0", page:"realmspace.html",
     travel:`Charted lane to the Astral waystation and on to Virenspace. Charted lanes to Strake Station and Hollis Post, the watch at the system's edge; closed beyond Strake. Long haul to CSC 56973. Uncharted route to Krynnspace.` },
-  "CSC 69387": { pos:at(RS, -40, 760), tone:"#c9b3ea", page:"virenspace.html", haze:true,
+  "CSC 69387": { pos:window.EREVOS.POS.virenspace.map(Math.round), tone:"#c9b3ea", page:"virenspace.html", haze:true,
     travel:`Long haul onward from the Astral waystation. Long haul to CSC 56973.` },
-  "CSC 56973": { pos:at(RS, -120, -720), tone:"#e2ae7e", page:"aethris.html",
+  "CSC 56973": { pos:window.EREVOS.POS.aethris.map(Math.round), tone:"#e2ae7e", page:"aethris.html",
     travel:`Long haul from Realmspace, passing the carved-meteor hub. Long haul to Virenspace.` },
-  "CSC 16423": { pos:armPt(0, 1.2, 30), tone:"#9fe1cb", page:"krynnspace.html",
+  "CSC 16423": { pos:window.EREVOS.POS.krynnspace.map(Math.round), tone:"#9fe1cb", page:"krynnspace.html",
     travel:`Uncharted route from Realmspace, far beyond the watch at Realmspace's edge.` },
   "CSC 50743": { pos:window.EREVOS.POS.fonains.map(Math.round), tone:"#9fe1cb", page:"fonains.html",
     travel:`Neighbours Krynnspace, at the far end of the uncharted route from Realmspace. Clint Dashforest reached Fonains through a color pool.` },
-  "Greyspace": { pos:armPt(2, 2.7, -20), tone:"#e2ae7e", page:"oerth.html#greyspace",
+  "Greyspace": { pos:window.EREVOS.POS.greyspace.map(Math.round), tone:"#e2ae7e", page:"oerth.html#greyspace",
     lift: Math.round(window.EREVOS.SYS_Y.greyspace * STEM_K),   /* above the plane: drawn up a stem, as the hearts are */
     travel:`Far across the galaxy and above its plane, over the opposite arm from Realmspace. No lane on Caelestis's charts reaches it.` },
-  "GAL-01-hidden": { pos:[3250, 950], tone:"#c9b3ea", page:"wayfinders-homeworld.html", hidden:true, veiled:true,
+  "GAL-01-hidden": { pos:window.EREVOS.POS.wayfinders, tone:"#c9b3ea", page:"wayfinders-homeworld.html", hidden:true, veiled:true,
     travel:`No route. Wayfinders leave with no map and no name, and must re-recognize home.`,
     dm:[`Its position on this chart is symbolic.`,`The Runekeepers' fragment is rebuilding in two halves, in Wan and Tu.`] }
 };
@@ -322,19 +322,18 @@ const SITES = [
     summary:`The western satellite of the watch at Realmspace's edge. Crewed, filing normally, and untouched.`,
     travel:`Charted lane from Toril's part of the system.`, there:[`Files instrument and transit readings on the perimeter rotation, as recorded in FR-005.`] },
   { id:"cairn", name:"Cairn Station", icon:"waystation", kind:"Fleet satellite, beyond the standing order", page:"cairn-station.html",
-    summary:`The far satellite of the watch at Realmspace's edge, between the Realmspace and Krynnspace bearings. Small standing complement, filing through Strake. Silent for a year, after reporting something on the long scope whose readings made no sense.`,
-    travel:`Reached along the edge run from Strake Station. Closed by SA-005. Nobody has reached it since the Crow turned back.`,
+    summary:`The far satellite of the watch at Realmspace's edge, on its own lane running outward from Realmspace along the arm. Small standing complement, filing through Strake. Silent for a year, after reporting something on the long scope whose readings made no sense.`,
+    travel:`Reached along its own lane from Realmspace. Closed by SA-005. Nobody has reached it since the Crow turned back.`,
     there:[`The station's complement, carried as lost on the evidence of its silence alone.`,`Whatever the Crow was sent to find and never reached.`],
     dm:[`The sequence: Vth'oramu sat on the bearing for days, which is the signature Cairn reported. Cairn went dark. Vocath's crew came in afterward and took the station.`,`They held it and waited for the relief run, and ambushed the <em>Crow</em> short of arrival for the second Distinction piece. Clint carried the device off through a color pool; a few survivors were let go home.`,`Vocath's crew withdrew after the ambush and left something behind. Build what it is when the crew gets there; the station is not empty.`,`SA-005 still reads as a sensible order about an unexplained hazard, because no one who came back has confirmed anything about the colony.`] },
-  { id:"crow", name:"Bellwether Crow engagement", icon:"incident", onLane:["strake","cairn"], t:.72, kind:"Incident site, the edge run",
-    summary:`The relief vessel <em>Bellwether Crow</em> was engaged here, on the edge run from Strake Station toward Cairn, by a small, fast craft bearing Vocath's house mark. Crewmate Clint Dashforest took what the boarders came for and left the ship in one of their craft to draw them off.`,
+  { id:"crow", name:"Bellwether Crow engagement", icon:"incident", onLane:["Realmspace","cairn"], t:.72, kind:"Incident site, the edge run",
+    summary:`The relief vessel <em>Bellwether Crow</em> was engaged here, on the lane out to Cairn, by a small, fast craft bearing Vocath's house mark. Crewmate Clint Dashforest took what the boarders came for and left the ship in one of their craft to draw them off.`,
     there:[`Clint steered for a color pool he could see opening and went through it. Some of the boarders went after him and some stayed, and enough of them went that the crew fended off the rest. The pool carried him through a small pocket of another dimension and out onto Fonains, in Krynnspace, apart from the boarders who followed him in.`,`A second boarding action followed, by a different party. The senior deck officers and most of the complement were lost. The <em>Crow</em> broke off under damage, made Strake Station and reached Fleet anchorage days behind schedule.`,`Crewmate Joffrey held the survivors together through the withdrawal and brought them off the deck alive. He was decorated on their unanimous account and posted to Caelestis.`,`The survivors still argue about whether Clint meant to go through. In the Fleet, he went overboard.`],
     dm:[`Vocath's crew wanted the second Distinction piece, which the <em>Crow</em> was carrying. Clint has it, somewhere on Fonains.`,`Clint went through the pool on purpose.`,`The second action was N'ghathrod's colony, shadowing Vocath's ambush as a backup under their arrangement; with the device gone, it took Joffrey instead. The survivors believe every word of his decoration: they were allowed to live so that there would be a story, and he was made its hero.`] }
 ];
 (function placeSites(){
   const s = id => SITES.find(x=>x.id===id);
-  const toK = (() => { const k = SYS_CHART["CSC 16423"].pos, dx = k[0]-RS[0], dy = k[1]-RS[1], l = Math.hypot(dx,dy); return [dx/l, dy/l]; })();
-  const mid = (() => { const x = OUT[0]+toK[0], y = OUT[1]+toK[1], l = Math.hypot(x,y); return [x/l, y/l]; })();
+  const mid = window.EREVOS.CAIRN_DIR;
   [s("strake").x, s("strake").y] = at(RS, CLUSTER.ry, 0);
   [s("hollis").x, s("hollis").y] = at(RS, -CLUSTER.ry, 0);
   s("cairn").x = Math.round(RS[0] + mid[0]*1150); s("cairn").y = Math.round(RS[1] + mid[1]*1150);
@@ -347,7 +346,7 @@ const LANES = [
   { a:"Realmspace", b:"CSC 16423", tier:"uncharted", bendOut:-160 },
   { a:"Realmspace", b:"strake", tier:"charted", bendOut:0, bendTan:-90 },
   { a:"Realmspace", b:"hollis", tier:"charted", bendOut:0, bendTan:90 },
-  { a:"strake", b:"cairn", tier:"closed", bendOut:260 }
+  { a:"Realmspace", b:"cairn", tier:"closed", bendOut:260 }
 ];
 const LANE = {
   charted:{stroke:"#8fe8df", w:6, dash:"", op:.8, label:"Charted lane"},

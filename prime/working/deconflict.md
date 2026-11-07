@@ -275,13 +275,13 @@ items in one chat share pages, so each page is rewritten once. Each pull
 request merges before any later work reads its pages.
 
 
-1. **Build: the FIA story.** The pre-fixes in 3e, then `fia-story.md`
+1. **Build: the cosmos.** Rulings 27 to 34, 2.15, the cosmology and Fonains
+   lines of 2.20, `divine-rules.md` (promote the worship section, rule "Reach
+   debris and worlds", delete), and Part 4's cosmology, chart and glossary items.
+2. **Build: the FIA story.** The pre-fixes in 3e, then `fia-story.md`
    § Promotes to in three pull requests, with 2.11, 2.14, 2.20's Vth'orama
    lines, 2.21, rulings 17 and 18, the house mark and personal seal across
    the Vocath pages, and the BACKLOG items moot after it.
-2. **Build: the cosmos.** Rulings 27 to 34, 2.15, the cosmology and Fonains
-   lines of 2.20, `divine-rules.md` (promote the worship section, rule "Reach
-   debris and worlds", delete), and Part 4's cosmology, chart and glossary items.
 3. **Mechanic: Tarto, the hold, the unthinned, and Homebound.** Tarto's
    mechanic review (BACKLOG § dossiers/boatswain-tarto.html), the hold, the
    unthinned template, then Homebound and the runes (ruling 12) from the

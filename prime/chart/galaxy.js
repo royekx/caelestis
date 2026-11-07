@@ -35,17 +35,23 @@
     return [GX.cx + r * Math.cos(ang), GX.cy + r * Math.sin(ang) * 0.9];
   }
 
-  /* The named systems. Realmspace and Krynnspace lie on arm 0, Greyspace on
-     arm 2, across the core; Fonains's system, CSC 50743, sits beside
-     Krynnspace; the rest are set from Realmspace. */
-  const RS = armPt(0, 2.1);
+  /* The named systems. Realmspace lies midway along arm 0, the Caelestis
+     Sector's arm, and Krynnspace further in along it; Greyspace is on arm 2,
+     across the core; Fonains's system, CSC 50743, sits beside Krynnspace;
+     the rest are set from Realmspace. */
+  const RS = armPt(0, 1.8);
   const OUT = (() => { const dx = RS[0] - GX.cx, dy = RS[1] - GX.cy, l = Math.hypot(dx, dy); return [dx / l, dy / l]; })();
   const TAN = [-OUT[1], OUT[0]];
   const at = (base, o, t) => [base[0] + OUT[0] * o + TAN[0] * t, base[1] + OUT[1] * o + TAN[1] * t];
+  /* Cairn Station's lane runs outward from Realmspace along the arm, into
+     the sector's outer zone; Strake Station sits on its own lane nearer
+     home, off to the side (fia-story § Cairn Station). */
+  const CAIRN_DIR = (() => { const f = armPt(0, 2.1), ax = f[0] - RS[0], ay = f[1] - RS[1], al = Math.hypot(ax, ay);
+    const x = ax / al + 0.5 * OUT[0], y = ay / al + 0.5 * OUT[1], l = Math.hypot(x, y); return [x / l, y / l]; })();
   const POS = {
     realmspace: RS,
     virenspace: at(RS, -40, 760),
-    aethris: at(RS, -120, -720),
+    aethris: at(RS, 500, -520),
     krynnspace: armPt(0, 1.2, 30),
     fonains: [armPt(0, 1.2, 30)[0] - 260, armPt(0, 1.2, 30)[1] + 260],   // CSC 50743, Fonains's system, beside Krynnspace
     greyspace: armPt(2, 2.7, -20),
@@ -226,20 +232,20 @@
   /* MARK_FIT: written by tools/eye-fit.js */
   const MARK_FIT = [
     [135, 66],
-    ['new', 160, 400034],
-    [281, 126],
-    [290, 171],
-    [101, 87],
-    [1, 57],
-    [305, 12],
-    ['new', 44, 400082],
-    ['new', 6, 400090],
-    [324, 6],
-    [110, 153],
-    [165, 99],
-    [256, 12],
-    ['new', 22, 400248],
-    [168, 138]
+    [147, 121.86],
+    [21, 126],
+    [134, 171],
+    [198, 138],
+    [1, 69],
+    [278, 6],
+    ['new', 44, 400034],
+    [165, 6],
+    [308, 51],
+    [324, 153],
+    [129, 108],
+    [181, 12],
+    ['new', 22, 400082],
+    [281, 60]
   ];
   /* /MARK_FIT */
   const MARKS = MARK_FIT.map(([ref, s, seed], i) => {
@@ -301,7 +307,7 @@
   }
 
   window.EREVOS = {
-    GX, ARMS, TIP, rng, gauss, armAngle, armPt, RS, OUT, TAN, at, POS,
+    GX, ARMS, TIP, rng, gauss, armAngle, armPt, RS, OUT, TAN, at, CAIRN_DIR, POS,
     SECTORS, MARKER_T, MARKERS, frontAt,
     S, toScene, toChart, discSigma, HALO_SIGMA, sysScene, SYS_Y, AXIS_TILT,
     v3, OERTH, AXIS, RT, UP, D, EYE_HALF, STROKE_TOL, EYE_PROGRESS, eyeOffset, strokeAt, toPlane,

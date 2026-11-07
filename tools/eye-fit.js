@@ -93,11 +93,10 @@ function fit(h, quiet) {
   // ── where a mark may stand ──────────────────────────────────────
   const Y_CAP = 18, MIN_S = 6;
   const named = Object.keys(POS).filter(k => k !== 'greyspace').map(E.sysScene);
-  const rsScene = E.toScene(RS, 0), CLUSTER = 560 * S;
   function valid(v, s) {
     const r = Math.hypot(v[0], v[2]);
     if (s < MIN_S || r < 12 || r > 100 || Math.abs(v[1]) > Y_CAP) return false;
-    if (named.some(q => flatD(v, q) < 9) || flatD(v, OERTH) < 12 || flatD(v, rsScene) < CLUSTER) return false;
+    if (named.some(q => flatD(v, q) < 9) || flatD(v, OERTH) < 12) return false;
     return true;
   }
   const clearOf = (v, self) => FILLERS.every(f => f === self || flatD(v, f.v) >= 4);

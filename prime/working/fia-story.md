@@ -572,7 +572,7 @@ Strake further off; the FIA rebuilds and the clearance fix; the chart move.
 | `prime/vessels/bellwether-crow.html`, `index.html`, `flighty-foundling.html`, `moonraider.html` | the *Crow* |
 | `prime/dossiers/tarroway.html`, `verrow.html`, `krik-lit.html` | Strake, Tarroway |
 | `prime/factions/fleet.html` | Cairn, the *Crow*, the escort order |
-| `prime/chart/index.html`, `prime/chart/holo.html`, `prime/chart/galaxy.js` | the Realmspace move, Cairn's lane, the eye check |
+| `prime/chart/index.html`, `prime/chart/holo.html` | the perimeter-watch text and Strake's, Cairn's and the *Crow*'s entries against this story (the move, the lanes and the eye refit are on the chart) |
 | `prime/hub.html` | the old geography |
 | `prime/working/terms.json` | retire the perimeter-watch terms once gone |
 
