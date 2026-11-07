@@ -140,7 +140,7 @@
     },
     {
       "pattern": "psychic wind",
-      "use": "Clint went through a color pool on purpose",
+      "use": "Clint seized a raider ship, and a color pool opened by chance and took it",
       "i": true
     },
     {
@@ -193,7 +193,7 @@
     },
     {
       "pattern": "\\bTetherbreak sector\\b",
-      "use": "the perimeter watch at Realmspace's edge (locations/realmspace.html#perimeter-watch); the Tetherbreak is the bearing, and a sector is a Fleet branch"
+      "use": "Cairn's lane and Strake's lane (locations/cairn-station.html, locations/strake-station.html); a sector is a Fleet branch"
     },
     {
       "pattern": "\\bUntethered\\b",
@@ -379,7 +379,7 @@
     },
     {
       "pattern": "Tetherbreak engagement",
-      "use": "the Bellwether Crow ambush (vessels/bellwether-crow.html)",
+      "use": "the raid on Bellwether Crow (vessels/bellwether-crow.html)",
       "i": true
     },
     {
@@ -656,7 +656,7 @@
     },
     {
       "old": "realms/tetherbreak.html",
-      "new": "locations/realmspace.html#perimeter-watch"
+      "new": "locations/realmspace.html"
     },
     {
       "old": "realms/hcatha.html",

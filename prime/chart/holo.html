@@ -233,9 +233,9 @@ const SYSTEMS = [
   { id:'aethris', name:'CSC 56973', pos:POS.aethris, page:'aethris.html', kind:'Star system',
     summary:'Aethris\'s system, where the Prism Ascendant stands. A long haul from Realmspace past the carved-meteor hub.' },
   { id:'krynnspace', name:'Krynnspace', des:'CSC 16423', pos:POS.krynnspace, page:'krynnspace.html', kind:'Star system',
-    summary:'Krynn\'s system. An uncharted route from Realmspace, far beyond the watch at Realmspace\'s edge. Fonains lies in the neighbouring system.' },
+    summary:'Krynn\'s system, inward along the arm from Realmspace by an uncharted route. Fonains lies in the neighbouring system, CSC 50743.' },
   { id:'fonains', name:'CSC 50743', pos:POS.fonains, page:'fonains.html', kind:'Star system',
-    summary:'Fonains\'s system, which goes by its designation. It neighbours Krynnspace; Clint Dashforest reached Fonains through a color pool.' },
+    summary:'Fonains\'s system, which goes by its designation. It neighbours Krynnspace; Clint Dashforest reached Fonains through a color pool that opened by chance in the raid on Bellwether Crow, on Cairn\'s lane.' },
   { id:'greyspace', name:'Greyspace', pos:POS.greyspace, page:'oerth.html#greyspace', kind:'Star system',
     summary:'Far across the galaxy and above its plane, over the opposite arm from Realmspace. No lane on Caelestis\'s charts reaches it. Oerth is here.' },
   { id:'wayfinders', name:'The Wayfinders\' homeworld', pos:POS.wayfinders, page:'wayfinders-homeworld.html', kind:'Hidden system',
@@ -255,9 +255,9 @@ const SITES = (() => {
   return [
     { id:'waystation', name:'Astral waystation', pos:lerp(RS, sysPos('virenspace'), .55), page:'waystation.html', kind:'Stop on a lane', summary:'The last reliable resupply before the long haul to Virenspace.' },
     { id:'meteorhub', name:'Carved-meteor hub', pos:lerp(RS, sysPos('aethris'), .5), page:'meteor-hub.html', kind:'Stop on a lane', summary:'A hollowed meteor turned into a gathering place.' },
-    { id:'strake', name:'Strake Station', pos:strake, page:'strake-station.html', kind:'Fleet waystation', summary:'The last open deck on the run to Cairn.' },
-    { id:'hollis', name:'Hollis Post', pos:hollis, page:'realmspace.html#hollis-post', kind:'Fleet satellite', summary:'The western satellite of the watch at Realmspace\'s edge.' },
-    { id:'cairn', name:'Cairn Station', pos:cairn, page:'cairn-station.html', kind:'Fleet satellite', summary:'Silent for a year. Closed by standing order SA-005.', dm:'Vth\'oramu sat on the bearing; Vocath\'s crew took the station afterward.' }
+    { id:'strake', name:'Strake Station', pos:strake, page:'strake-station.html', kind:'Fleet station', summary:'On its own lane, nearer home than Cairn\'s and off to the side of it. Its scope reaches Cairn\'s stretch only at its limit; its cartographer, M. Tarroway, found that Strake sees things there that Cairn does not report.', dm:'Every return Strake logs at the limit of its scope is Vth\'oramu, crossing Cairn\'s lane. Strake never saw the handovers or the raid.' },
+    { id:'hollis', name:'Hollis Post', pos:hollis, page:'realmspace.html#hollis-post', kind:'Fleet post', summary:'An ordinary Fleet post on a lane of its own.' },
+    { id:'cairn', name:'Cairn Station', pos:cairn, page:'cairn-station.html', kind:'Fleet watch post', summary:'A small Fleet watch post, the Fleet\'s authority on its lane, a long haul outward along the arm. Its reports go to Caelestis. Fleet escorts run the lane under SA-005 against the pirate ship Bellwether Crow\'s survivors named from her hull when it was raided there.', dm:'The colony holds it: a taken station master, and one of Zhauveth\'s malformed spawn holding the crew by nearness. The station master took Joffrey while Crow lay under repair.' }
   ];
 })();
 const placePos = id => (SYSTEMS.find(s => s.id === id) || SITES.find(s => s.id === id)).pos;
@@ -269,7 +269,7 @@ const LANES = [
   { a:'realmspace', b:'krynnspace', tier:'uncharted' },
   { a:'realmspace', b:'strake', tier:'charted' },
   { a:'realmspace', b:'hollis', tier:'charted' },
-  { a:'realmspace', b:'cairn', tier:'closed' }
+  { a:'realmspace', b:'cairn', tier:'long' }
 ];
 const LANE_STYLE = {
   charted:{ c:0x8fe8df, dash:0, op:.8 }, long:{ c:0x8fe8df, dash:3, gap:1.8, op:.55 },

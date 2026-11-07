@@ -31,21 +31,21 @@ staging once Korey has read and accepted them.
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 13 | 14 | 4 | 0 | 2 |
-| Locations | locations/ (Fonains stays in its own section) | 18 | 25 | 0 | 0 | 1 |
+| Locations | locations/ (Fonains stays in its own section) | 18 | 23 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 13 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 0 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 4 | 1 | 0 | 3 |
 | Dossiers | dossiers/ | 13 | 17 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 18 | 0 | 0 | 0 |
-| Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
+| Artifacts and vessels | artifacts/, vessels/ | 8 | 8 | 1 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 4 | 11 | 0 | 18 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
-| Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
+| Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 13 | 1 | 0 | 2 |
-| **Total** |  | **127** | **161** | **25** | **1** | **47** |
+| **Total** |  | **126** | **160** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -298,9 +298,8 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
 ### locations/realmspace.html
 
 - **[later]** Hollis Post
-  Its complement and commander, and whether its readings on the Cairn bearing a year ago caught the mass, are not set. Strake's commander has no name either.
-  src: realms/tetherbreak.html (old page)
-  Waits on: the FIA story audit
+  Hollis Post is an ordinary Fleet post on a lane of its own (Korey, 2026-11-07). What it is for, its complement and its commander are not set. Strake's commander has no name either.
+  src: realms/tetherbreak.html (old page); fia-story § Cairn Station
 
 - **[later]** Two Gardens
   Realmspace's Garden (the asteroid chain bound by one plant) and the tyrant ship's Garden (the greenhouse deck) share a name. Rename one, or let the context carry it.
@@ -388,22 +387,6 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
   Whether Glyth knows the colony still exists, and what it would do if told what it is building, are not set. The Watcher who came out of Glyth has no name yet, and where she is now is not set; she is sketched in working/glyth-watcher.md.
   src: realms/glyth.html (old page); glyth-watcher § Sketch
 
-### locations/strake-station.html
-
-- **[later]** What is in Strake's secure storage, and whether Verrow can be moved
-  Whether Verrow can be moved by authorization, persuasion or something worse rides with it.
-  src: chat § Open; framework § Open; realms/strake-station.html (old page)
-  Waits on: the FIA story audit
-
-### locations/cairn-station.html
-
-- **[later]** What is at Cairn Station
-  Settled: Cairn went silent about a year ago after reporting readings of Vth'oramu. Vocath's people took the station after it went dark and waited there for the relief run, which is how the Bellwether Crow ambush was set, and they left something behind when they withdrew.
-  Still open: what was left (a taken creature, a construct, a brine cache with something growing in it, or a person); what remains of the station, what became of its complement, who built onto it, and whether any of Cairn's own instrument record survives. The payoff should open onto something larger. The page holds this in its Still to decide, and factions/vocath-operation.html points there.
-  src: framework § Open; memory-canon (campaign-canon, Cairn)
-  settled part: inbox/chat-cosmic-campaign-structure.md § Tetherbreak (final canon, turns 238–241)
-  Waits on: the FIA story audit
-
 ### locations/ondrel-anchorage.html
 
 - **[later]** Ostrel and the port
@@ -431,7 +414,7 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
 ### locations/krynnspace.html
 
 - **[later]** Krynnspace's position and route
-  Its position in the galaxy and the uncharted route from Realmspace are not set. Whether it lies on a stroke of Vecna's eye is in opposition/vecna.html § Still to decide.
+  It lies inward along the arm from Realmspace, nowhere near Cairn's lane (fia-story). Its exact position and the uncharted route from Realmspace are not set. Whether it lies on a stroke of Vecna's eye is in opposition/vecna.html § Still to decide.
   src: realms/sys04.html (old page)
 
 ### locations/krynn.html
@@ -1118,7 +1101,7 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 - **[later]** Where each PC's homeworld sits
   Placed and written on crew/index.html § The crew together (section 7): Gregory, Toril in Realmspace; Sol, Aethris (CSC 56973 b), mid-Zenith; Tumak, the Wayfinders' unnamed homeworld in a hidden system of the Erevos Galaxy, concealed by the Dissolution cycle (Lunarfoot is the clan, never the world).
-  Left: Casey's is the world the 1486 "deliberate" meteor fell on (SA-002); a star fell on it and Polly left afterward; its system is withheld until surveyed. Bartholomew's comes from a celestial druid tradition, Rashemi, pointed outward, and the FIA has no hint of it yet. Boogie's is unplaced. For each: place it now, or leave it unplaced until play needs it. Touches crew/index.html, each crew page, locations/index.html.
+  Left: Casey's is the world the 1486 "deliberate" meteor fell on (SA-002); a star fell on it and Polly left afterward; its system is withheld until surveyed. Bartholomew's comes from a celestial druid tradition, Rashemi, pointed outward, and SA-002 records his fall in its 1482 entry. Boogie's is unplaced. For each: place it now, or leave it unplaced until play needs it. Touches crew/index.html, each crew page, locations/index.html.
   src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Gregory); realms/index.html § unplaced (old page)
 
 - **[later]** How cadets from worlds without spelljamming reach Caelestis
@@ -1342,10 +1325,13 @@ left here is open.
 
 ### vessels/bellwether-crow.html
 
-- **[later]** The Crow after the ambush
-  The Crow made Strake under damage (locations/cairn-station.html). Its class is set: a light corvette (restricted/wm-002.html, vessels/bellwether-crow.html). Whether it went back into service, its captain, and the clean survivor's name wait until the crew pulls the roster.
-  src: section 4
-  Waits on: the FIA story audit
+- **[later]** Bellwether Crow after the raid
+  Crow was repaired at Cairn and went home (vessels/bellwether-crow.html). Its class is set: a light corvette. Whether it went back into service, its captain, and the name of the survivor who saw Joffrey change wait until the crew pulls the roster.
+  src: section 4; fia-story § After
+
+- **[later]** The pirate ship's name and hull mark
+  The main pirate ship in the raid on Crow is known by her name, her own mark on the hull, or both (vessels/bellwether-crow.html, restricted/wm-002.html); in a fight she flies the common crossbones. Her name and mark are not set. The form of the overseer's seal, pendant, signet or similar, is also not set.
+  src: raid on Bellwether Crow, final version (2026-11-07)
 
 ### vessels/moonraider.html
 
@@ -1983,13 +1969,6 @@ Fixes to player-facing pages, including the Fleet Intelligence Archive (`restric
 - **[later]** A player-side in-world timeline of key events
   voyages/bearings/timeline.html is the seed: an unlinked page of key events by era. Not now.
   src: Korey, 2026-11-02 (Current Bearing redesign)
-
-### restricted/wm-003.html
-
-- **[decide]** Whose registry WM-003 is
-  The recovered monitoring registry in restricted/wm-003.html bears the marking catalogued in FR-016, which is Vocath's house mark, and uses the Order's registry terms, Zenith and Ortholith. Decide whose registry it is, and why it carries his mark. No finished DM page lists the mark on a registry.
-  src: Korey, 2026-10-28 (FIA rulings, 8)
-  Waits on: the FIA story audit
 
 ### spelljammer-nexus/
 

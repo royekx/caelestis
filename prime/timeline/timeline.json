@@ -298,10 +298,28 @@
       "lane": "crew",
       "status": "past",
       "cert": "canon",
-      "title": "Bellwether Crow ambushed",
-      "desc": "About a year before now, near Cairn Station. Vocath's crew boards for the second Distinction piece. Clint Dashforest takes the device and leaves in one of the boarders' craft, drawing some of them off, and goes through a color pool on purpose; the crew fends off the rest. N'ghathrod's colony, shadowing the ambush as Vocath's backup under the arrangement Zhauveth had already made, boards second and takes Joffrey in the device's place, then lets him go with the few survivors; most of the crew doesn't return. The Crow makes Strake under damage.",
+      "title": "Bellwether Crow raided",
+      "desc": "About a year before now. On Tarroway's filing, Bellwether Crow is sent to look in on Cairn Station and comes on raiders mid-handover near it: pirates in Vocath's hire, moving captives to a colony courier. They sail two ships, a main ship known by the name and mark on her hull and a smaller ship carrying Vocath's overseer, who puts on his personal seal for the handover; the same seal is on the crates aboard. The pirates run up common pirate colors and strike. To draw the fight off his crew, Clint Dashforest goes aboard the smaller ship and takes its helm, and the crew sees him there with the overseer and the seal. A color pool opens by chance and takes that ship, with Clint, the overseer and its pirate crew aboard. With the overseer, her paymaster, and Vocath's sealed cargo gone through the pool, the fight is not worth it to the main ship, and Crow's crew drives her off; she stays free. Many of the crew die, the senior helm and deck officers among them. Joffrey takes the helm and brings the survivors to Cairn, where the ship is repaired for days.",
       "t": -1.1,
       "tier": 1
+    },
+    {
+      "lane": "colony",
+      "status": "past",
+      "cert": "canon",
+      "title": "Joffrey taken at Cairn",
+      "desc": "During Bellwether Crow's days of repair at Cairn Station, the station master takes Joffrey with one of N'ghathrod's copies, brought up the lane by a colony courier. The colony wants a man inside Caelestis; it knows nothing of A.T.L.A.S.",
+      "t": -1.09,
+      "tier": 1
+    },
+    {
+      "lane": "crew",
+      "status": "past",
+      "cert": "canon",
+      "title": "Escorts on Cairn's lane",
+      "desc": "Bellwether Crow reports the raid and Cairn's help, and its report answers Tarroway's filing. The survivors give the main ship's name and hull mark at debrief, and describe the seal worn by a figure on the smaller ship. The Fleet records the ship in WM-002, orders escorts on Cairn's lane to hunt her in SA-005, and thanks Cairn. FR-016 draws the seal from the survivors' accounts; the registry returns no match. Tarroway's later filings are set aside. The persons the survivors saw moved under guard go unidentified, and the escorts are also told to watch for transfers between vessels. The handovers stop for a while; when they resume they run around the escort routes, which N'ghathrod's taken pass to Vocath through Zhauveth. Cairn's station master reports a clean lane every week, and the Fleet's watch for transfers lapses on Cairn's word. Joffrey is commended, and Clint is honored as lost to a color pool.",
+      "t": -1.07,
+      "tier": 2
     },
     {
       "lane": "crew",
@@ -549,7 +567,7 @@
       "status": "past",
       "cert": "canon",
       "title": "Clint lands on Fonains",
-      "desc": "The color pool carries him through a small pocket of another dimension and out onto Fonains, apart from the boarders who followed him in. He arrives before the Monolith and is on Fonains when it appears.",
+      "desc": "The color pool carries the seized ship through a small pocket of another dimension and out onto Fonains, with its raiders still aboard. Clint gets away and loses his means of reaching Caelestis. He arrives before the Monolith and is on Fonains when it appears.",
       "tier": 2
     },
     {
@@ -558,7 +576,7 @@
       "status": "past",
       "cert": "canon",
       "title": "Boogie takes the shard",
-      "desc": "Vocath's people chased Clint to Fonains, never found him, and came back with fragments of the broken Monolith through Vocath's Cairn Station line. Boogie looks into a shipment he shouldn't and the shard ends up in him, before V001.",
+      "desc": "When the Fonains Monolith rises and breaks, the raiders who came through the pool with Clint call Vocath by sending stone. Vocath moves fast, his people start trading on Fonains, and fragments of the broken Monolith come home through his line. Boogie looks into a shipment he shouldn't and the shard ends up in him, before V001.",
       "tier": 1
     },
     {
@@ -1166,7 +1184,7 @@
     }
   ],
   "decisions": [
-    "Caelestis's present sits a few months after the Fonains Monolith broke, about level with Fonains's Session 28. Clint reaches Fonains about a year before Caelestis's present, before the Monolith appears. Boogie's shard came from the broken Monolith through Vocath's line, before V001.",
+    "Caelestis's present sits a few months after the Fonains Monolith broke, about level with Fonains's Session 28. Clint reaches Fonains about a year before Caelestis's present; whether before or after the Monolith rose is not set. Boogie's shard came from the broken Monolith through Vocath's line, before V001.",
     "Benedetta fell ill at Rihiri's birth, about twelve years ago, and died about ten years ago. The illness was Vanifer siphoning her soul into the illegitimate Bloodstone, which took about two years.",
     "Thessalar's planar craft fell about 500 years ago. N'ghathrod had already lost a clash with it and was a prisoner aboard, being experimented on. Lola's Boys, sent back by the Accordance, took the craft's control and defense gems; without them it fell, and the crash let N'ghathrod escape. The party unknowingly made their own villain in another campaign. \"Some millennia ago\" in Lola's Boys is rumour.",
     "Session and voyage dates inside a campaign are spaced by feel; their order is canon. Lola's Boys runs from about a month after the Darkest Day to Session 28, two to three months after the Monolith broke.",
@@ -1422,12 +1440,21 @@
       {
         "t": -1.1,
         "status": "past",
-        "title": "Bellwether Crow ambushed: Joffrey taken, Clint through a color pool",
+        "title": "Bellwether Crow raided near Cairn: Clint through a color pool",
+        "who": [
+          "Clint",
+          "Joffrey",
+          "Vocath"
+        ]
+      },
+      {
+        "t": -1.09,
+        "status": "past",
+        "title": "Joffrey taken at Cairn Station",
         "who": [
           "N'ghathrod",
           "Joffrey",
-          "Clint",
-          "Vocath"
+          "Zhauveth"
         ]
       },
       {
