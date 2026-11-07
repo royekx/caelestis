@@ -284,7 +284,7 @@ give it to the DM.
   its register row exist.
 - **The voyage** gets a record in `sessions.json` with its six summary fields.
   Its `date` is the voyage's rough Fleet date, cycle.kindling.ember, or a
-  span joined by an en dash (`1491.7.7–1491.7.12`), counted on from the
+  span joined by an en dash (`1491.7.17–1491.7.24`), counted on from the
   previous voyage's end by the embers the account gives. Its end is the
   current date: the voyage page's header, `data/bearing.js` `date`, the
   Current Bearing's banner and the Fleet Time page all show it, and the new

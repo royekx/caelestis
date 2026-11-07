@@ -17,7 +17,7 @@
 window.CAELESTIS_BEARING = {
   voyage:   6,
   title:    'What Is Here Has Not Left',
-  date:     '1491.7.12',
+  date:     '1491.7.24',
   goal:     'Retrieve the adamantine from H\u2019Catha',   // the arc's goal, the banner headline
   goalQuest: 'quests/the-tyrant-ship-and-the-hcatha-meteor.html',
   level:    4,

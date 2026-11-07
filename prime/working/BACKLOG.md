@@ -37,7 +37,7 @@ staging once Korey has read and accepted them.
 | Factions | factions/ | 12 | 11 | 1 | 0 | 0 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 6 | 1 | 0 | 3 |
 | Dossiers | dossiers/ | 12 | 17 | 0 | 0 | 1 |
-| Crew | crew/ | 11 | 19 | 0 | 0 | 0 |
+| Crew | crew/ | 11 | 20 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 5 | 11 | 0 | 18 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **127** | **163** | **25** | **1** | **47** |
+| **Total** |  | **127** | **164** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -64,7 +64,7 @@ Each settles items on several pages at once. Rule these first.
 10. ~~**The real elder brain.**~~ *Ruled: the Session 27 brain is his; it teleported out.* Where it went is no longer a question.
 11. ~~**Where Oerth lies.**~~ *Ruled: GAL-01, in Greyspace; Oerth is the eye's retina (STAGING).*
 13. ~~**Can a taken person be released?**~~ *Ruled: a tadpole can be removed, and removal frees the host; the taken outlive N'ghathrod, each keeping part of him.* How removal is done stays open (D&D lore or our own; avoid Baldur's Gate 3 spoilers).
-14. ~~**Fonains–Caelestis offset.**~~ *Ruled: Caelestis's present is about five months after Fonains Session 28 and about eight months after the Monolith broke; the Monolith stood six months before Lola's Boys assembled (Korey, 2026-11-07; timeline.json decisions; locations/fonains.html DM notes).*
+14. ~~**Fonains–Caelestis offset.**~~ *Ruled: Caelestis's present is about five months after Fonains Session 28 and about seven months after the Monolith broke; the Monolith stood six months before Lola's Boys assembled (Korey, 2026-11-07; timeline.json decisions; locations/fonains.html DM notes).*
 15. ~~**Ostekk-6 as sole survivor.**~~ *Ruled: the only active survivor; Ostekk-2 is inert and can be healed.*
 16. ~~**The tracker and session ingest.**~~ *Ruled: the repo record is the tracker and sessions run in chat per prime/docs/SESSION-RUN.md; n8n and the Google Sheet trackers are retired (archived in Drive).*
 18. ~~**How Clint left the Bellwether Crow.**~~ *Ruled (fia-story § The Bellwether Crow): to draw the raiders off his crew, Clint boarded one of their ships and seized it. A color pool opened by chance and took that ship to Fonains, with Clint and its raiders aboard. He may carry an artifact device he knows only as a magic item; whether it is the second Distinction piece is open (dossiers/clint.html).*
@@ -99,8 +99,8 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - DM dossiers with no record, though the crew may have met or been told of them: Polly Geim (Casey's brother), Clint Dashforest, Qitru, Quartermaster Halix Verrow, the Crystalline Retrieval Construct. Each gets a record at first contact; check whether any contact has already happened (section 5).
 - `data/npcs.json` names Miken "Miken"; the DM dossier and the Fleet row use his full name, Miken Haverstance. Add the surname to the record if Korey agrees.
 - `data/player-characters.json` (Sol Fortuna, Voyage 4) says he "used Misfortune's Favor to draw ill luck onto his own shoulders". Misfortune's Favored is the oath's level-20 capstone and was earlier the working name of his Misfortuned feature; the Voyage 4 use reads as a self-Jinx or a Misfortuned use. crew/sol.html leaves the feature unnamed. Confirm the name and correct the line if Korey agrees.
-- `data/player-characters.json` (Casey Geim) lists the star-etched constellation shirt under Notable Items, but `data/items.json` and Tumak's record have Tumak holding it (Casey passed it to Tumak's bunk in Voyage 1). crew/casey.html and crew/tumak.html follow items.json. Drop it from Casey's Notable Items if Korey agrees.
-- `data/player-characters.json` gives all six cadets "Clearance: Sailor", and Tumak's Voyage 3 bullet has Mirt granting the crew sailor-level clearance; the BACKLOG decide "The Sailor gate at the Sea Dock" (crew/gregory.html) holds that a cadet inherits only Visitor and that part of the Sea Dock needs Sailor. Gregory's Voyage 3 bullet (locked out of a fleet-clearance category by his cadet star) sits between them. Reconcile once the decide is ruled.
+- `data/player-characters.json` (Casey Geim) lists the star-etched constellation shirt under Notable Items, but `data/items.json` and Tumak's record have Tumak holding it (Casey passed it to Tumak in Voyage 1, and it is in his bag of holding). crew/casey.html and crew/tumak.html follow items.json. Drop it from Casey's Notable Items if Korey agrees.
+- `data/player-characters.json` gives all six cadets "Clearance: Sailor", and Tumak's Voyage 3 bullet has Mirt granting the crew sailor-level clearance; the BACKLOG decide "The Sailor gate at the Sea Dock" (crew/gregory.html) holds that a cadet inherits only Visitor and that part of the Sea Dock needs Sailor. Tumak's Voyage 3 bullet (locked out of a fleet-clearance category by his cadet star) sits between them. Reconcile once the decide is ruled.
 - `data/player-characters.json` (Boogie) lists "shield"; the DM page names it the Shield of Expression, a gift from Boom-chik, and it has no item record in `data/items.json`. Add the name or an item record if Korey agrees.
 - `data/npcs.json` (Saerthe Abizjn) and the V006 page say "a Watcher cadet"; the settled term for a Watcher trainee is a Glimpse. The crew has not been told the word, so the record keeps Saerthe's phrasing, and `terms.json` allows it on voyage-006. Change the record if Korey wants Saerthe to say "Glimpse".
 - `data/locations.json` overviews open "The Flighty Foundling is…" and "The Moonraider was…", and the quest is named "The Tyrant Ship and the H'Catha Meteor"; ship names carry no article. `terms.json` allows these record strings on the player pages. Rewrite them in a record edit if Korey agrees, then drop the allow entries.
@@ -111,7 +111,6 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - `data/locations.json` (H'Catha) says the world is "watched by beholder patrols"; `locations/hcatha.html` keeps the watch at the domain borders and leaves orbit to ordinary traffic. Add a DM line on what the crew has not yet seen, or correct the record if Korey agrees.
 - `data/npcs.json` has Gender null for Saerthe Abizjn and Sor'Kur. Saerthe is he and Sor'Kur is she (their dossiers). Fill both if Korey agrees.
 - `data/sessions.json` V006 has no line for the V006.5 interlude, which `voyages/voyage-006.html` carries. Add one in the V007 run if Korey agrees.
-- The Sky Dock bribe: `data/locations.json` (Sky Dock, V001) and `data/quests.json` (two quests, V001 and one Overview) say "a dock officer" took a bribe, two of them "from a merchant". At the table the cadets saw a Sky Dock hand take a bribe; Tumak later named Joffrey as the payer, and Mirt named the hand, Jeffrey, a hobgoblin dock hand (fia-story; dossiers/jeffrey.html). `data/npcs.json` says the party "has not yet encountered" Jeffrey, but they saw him in V001 without his name. Fix in the V007 run if Korey agrees.
 
 ## Still coming in
 
@@ -145,7 +144,7 @@ Order under each page: decide, fix, drop, add.
   src: Korey, 2026-10-26
 
 - **[decide]** Galactic time cycles (GTC): first arm, counts and the Toril ratio
-  Settled (Korey, 2026-10-28): the Order of All made the count so its Watchers had one clock, and its Discerners keep it; Cycle 0 is the Order's founding, and the current cycle is 1491. The Fleet, founded by Caelestis about 250 cycles ago (about Cycle 1240), adopted it; most call it cycles or Fleet time, and ordinary people keep their own world's calendar. The arms are the clock and the cycle is a full turn: Erevos, the black hole at the core, turns once a cycle and throws an unseen beam; when it reaches an arm's root, that arm lights from root to tip over a quarter cycle, and the Erevos Galaxy has four arms. The Order's vocabulary is settled (Korey, 2026-10-28, replacing the hearth): the Beacon is the galactic clock, the one god's signal fire kept burning to give direction, named for no aspect (Korey, 2026-10-28), and the Discerners keep it. A beacon is one full turn (most say cycle); a spark is the moment the light strikes an arm's root and that arm's quarter, four to a beacon; a kindling is one marker cluster passed, numbered 1 to 16 through the beacon; an ember is one day-length count on an armillary. Dates read "the 1491st beacon, seventh kindling, twelfth ember", 1491.7.12 in Fleet logs; durations read "fourteen embers to H'Catha". The Fleet and travellers borrow kindling and ember. Each arm's spark has its own character; what each is is not set. FIA records keep writing "Cycle". The clock principle is on opposition/vecna.html#clock and principles.html#clock.
+  Settled (Korey, 2026-10-28): the Order of All made the count so its Watchers had one clock, and its Discerners keep it; Cycle 0 is the Order's founding, and the current cycle is 1491. The Fleet, founded by Caelestis about 250 cycles ago (about Cycle 1240), adopted it; most call it cycles or Fleet time, and ordinary people keep their own world's calendar. The arms are the clock and the cycle is a full turn: Erevos, the black hole at the core, turns once a cycle and throws an unseen beam; when it reaches an arm's root, that arm lights from root to tip over a quarter cycle, and the Erevos Galaxy has four arms. The Order's vocabulary is settled (Korey, 2026-10-28, replacing the hearth): the Beacon is the galactic clock, the one god's signal fire kept burning to give direction, named for no aspect (Korey, 2026-10-28), and the Discerners keep it. A beacon is one full turn (most say cycle); a spark is the moment the light strikes an arm's root and that arm's quarter, four to a beacon; a kindling is one marker cluster passed, numbered 1 to 16 through the beacon; an ember is one day-length count on an armillary. Dates read "the 1491st beacon, seventh kindling, twenty-fourth ember", 1491.7.24 in Fleet logs; durations read "fourteen embers to H'Catha". The Fleet and travellers borrow kindling and ember. Each arm's spark has its own character; what each is is not set. FIA records keep writing "Cycle". The clock principle is on opposition/vecna.html#clock and principles.html#clock.
   Still open: which arm's spark is first (the one the Order saw at its founding); kindlings per spark (working default four, sixteen a beacon, each about a Toril month); embers per kindling (working default about thirty, each roughly a Toril day); the character of each arm's spark; and the Toril ratio (working default one beacon to about sixteen Toril months, so each spark is about four, the Order was founded about 1,990 Toril years ago and the Fleet about 330; the timeline places both by it). Do not use "reckoning" for the count's name.
   src: Korey, 2026-10-28 (GTC rulings); replaces "The calendar the Cycle counts" (Korey, 2026-10-26; restricted/ orders)
 
@@ -464,7 +463,7 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
   src: astral § Open; memory-canon (campaign-canon, Ryeback absorbs Odds); chat-crew-boogie-casey-sol
 
 - **[later]** Boogie's cantina
-  Boogie worked aboard a travelling cantina, a bar on a circuit of the lanes that trades as it goes, when Vocath's crates came through its hold, and his friend Boom-chik, who gave him the Shield of Expression, is aboard the cantina in the prep ring (Korey, 2026-11-07): the first of the cadets' own people the crew can meet, and RP Boogie's player will take. At the table (V001) Boogie said he is 250 of a plasmoid's ~500 years and was a performer on his last planet; his V003 dream names Boom-chik and "the big drop". Left: whether he performed aboard the cantina; whether the prep-ring cantina is the one Boogie worked on; Boom-chik's part aboard; his species (Korey recalls a thri-kreen; the sheet's backstory is blank; confirm with the player). Touches crew/boogie.html, locations/cantina.html, artifacts/fonains-shard.html, factions/vocath-operation.html.
+  Boogie performed aboard a travelling cantina, a bar on a circuit of the lanes that trades as it goes, when Vocath's crates came through its hold, and his friend Boom-chik, who gave him the Shield of Expression, is aboard the cantina in the prep ring (Korey, 2026-11-07): the first of the cadets' own people the crew can meet, and RP Boogie's player will take. Boogie is 250 of a plasmoid's ~500 years and a performer (V001); he performed aboard the cantina (Korey, 2026-11-07). His V003 dream names Boom-chik and "the big drop". Left: whether the prep-ring cantina is the one Boogie performed on; Boom-chik's part aboard; his species (Korey recalls a thri-kreen; the sheet's backstory is blank; confirm with the player). Touches crew/boogie.html, locations/cantina.html, artifacts/fonains-shard.html, factions/vocath-operation.html.
   src: Korey, 2026-11-07
 
 - **[later]** The cantina: a place or a ship
@@ -558,7 +557,7 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
 
 ### Timeline (Fonains lane)
 
-done (section 8): the shift (Session 28 at 0, the break at -0.21, the shard at -0.19, V001-V006 between -0.18 and -0.02), the shards, the five-person ritual, the Pedra Ardente and Finerva, Dharra and Rihiri, and Clint's color pool.
+done (section 8): the shift (current values in timeline.json), the shards, the five-person ritual, the Pedra Ardente and Finerva, Dharra and Rihiri, and Clint's color pool.
 
 - **[decide]** Nelson or Nalsa
   The timeline has "Nelson" show the Accordance's champions their gods and name them (S10, "The Accordance chooses Lola's Boys"); factions/deities.html names the Accordance's emissary Nalsa, an androsphinx. Same figure under a table spelling, or two? If the same, the timeline takes Nalsa.
@@ -1114,7 +1113,7 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 - **[later]** Where each PC's homeworld sits
   Placed and written on crew/index.html § The crew together (section 7): Gregory, Toril in Realmspace; Sol, Aethris (CSC 56973 b), mid-Zenith; Tumak, the Wayfinders' unnamed homeworld in a hidden system of the Erevos Galaxy, concealed by the Dissolution cycle (Lunarfoot is the clan, never the world).
-  Left: Casey's is the world the 1486 "deliberate" meteor fell on (SA-002); a star fell on it and Polly left afterward; its system is withheld until surveyed. Bartholomew's comes from a celestial druid tradition, Rashemi, pointed outward, and SA-002 records his fall in its 1482 entry. Boogie's is unplaced. For each: place it now, or leave it unplaced until play needs it. Touches crew/index.html, each crew page, locations/index.html.
+  Left: Casey's is the world of SA-002's 1486 meteor shower; a star fell on it and Polly left afterward; its system is withheld until surveyed. Bartholomew's comes from a celestial druid tradition, Rashemi, pointed outward, and SA-002 records his fall in its 1482 entry. Boogie's is unplaced. For each: place it now, or leave it unplaced until play needs it. Touches crew/index.html, each crew page, locations/index.html.
   src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Gregory); realms/index.html § unplaced (old page)
 
 - **[later]** How cadets from worlds without spelljamming reach Caelestis
@@ -1194,12 +1193,12 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
 ### crew/gregory.html
 
 - **[later]** Gregory's awakening and why he came
-  Korey (2026-11-07, leaning, not ruled): his awakening was at the Cogfast aurora SA-002 records in Cycle 1489, less than a year before the present, "a little timey-wimey"; he then followed his maker's dream of being a navigator, which is why he came to Caelestis. Not for the FIA. Touches crew/gregory.html.
+  Korey (2026-11-07): his awakening was at the Cogfast aurora SA-002 records in Cycle 1489, two to three years before the present, "a little timey-wimey"; he then followed his maker's dream of being a navigator, which is why he came to Caelestis. Not for the FIA. Touches crew/gregory.html.
   src: Korey, 2026-11-07
 
 - **[decide]** The Sailor gate at the Sea Dock *(prep)*
   (A) He truly needs Sailor clearance, and gets in with an escort via Kip or Pik or a sanctioned reason. (B) He only thinks he does, and a service route exists. (C) Hybrid: Rindle has moved the Latchling and Gregory must recalibrate.
-  Folded in from the add "Sailor clearance": part of the Sea Dock needs Sailor clearance, and a cadet inherits only Visitor, so Gregory needs, or thinks he needs, Sailor access. When ruled, write it into crew/gregory.html § The Latchling (Obstacles) and drop the Still to decide sentence. Conflict: the record gives all six cadets "Clearance: Sailor" and Tumak's Voyage 3 bullet has Mirt granting the crew sailor-level clearance, while Gregory's Voyage 3 bullet has him locked out of a fleet-clearance category by his cadet star (see Player record flags).
+  Folded in from the add "Sailor clearance": part of the Sea Dock needs Sailor clearance, and a cadet inherits only Visitor, so Gregory needs, or thinks he needs, Sailor access. When ruled, write it into crew/gregory.html § The Latchling (Obstacles) and drop the Still to decide sentence. Conflict: the record gives all six cadets "Clearance: Sailor" and Tumak's Voyage 3 bullet has Mirt granting the crew sailor-level clearance, while Tumak's Voyage 3 bullet has him locked out of a fleet-clearance category by his cadet star (see Player record flags).
   src: TGB § Revising voyage briefings/Open
 
 - **[decide]** What Gregory learns once the Latchling anomaly resolves *(prep)*
@@ -1249,6 +1248,10 @@ Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; 
   src: section 7 (2026-10-28)
 
 ### crew/boogie.html
+
+- **[later]** When Boogie places the seal *(prep)*
+  Boogie knows Vocath's personal seal from the crate he pried open aboard the cantina, and has not placed it: Sol saw it on the rod (History 4, never seen it; only the name Vocath), and Boogie was with Sol at the marked Sky Dock crate. It is open for him to remember later: FR-016, or a prompt from an instructor in an upcoming session (Korey, 2026-11-07). Set in that voyage's prep.
+  src: Korey, 2026-11-07; V003 transcript
 
 - **[decide]** Which deckhand item goes missing on the tyrant ship voyage *(prep)*
   Korey names the item (see the "Next beat" add).
@@ -1905,6 +1908,10 @@ archived in Drive, not deleted. What stays open here is below.
 
 # Repo and process
 
+- **[decide]** The cycle's length in Toril years
+  `factions/fleet.html` gives a cycle as sixteen Toril months (480 embers, about 1.315 Toril years) and as one and a third Toril years (1.333). `prime/chart/gtc.js` counts 480 embers. The Order's founding (about 1,990 years ago) uses 1.333; at 1.315 it is about 1,961. Pick one and restate the founding. Logged from the dates audit, 2026-11-07.
+  src: dates audit, 2026-11-07
+
 - **[decide]** FIA and DM proper nouns and the spelling list
   `data/vocabulary.js` is the one spelling list, and CLAUDE.md says every new proper noun goes in it. The FIA's names (Dashforest, Tarroway, Verrow, Saltjaw, Cairn, Strake, Hollis, Aethris, Kaldris, Ortholith, the escort ships) are not in it, and adding them there would let the player search suggest gated names. Ruled (Korey, 2026-11-07): no name list goes in CLAUDE.md, and no second list. Options: one list with a gated flag per name that `scripts/spelling.js` skips on the player site and the FIA and DM search pages use; or the FIA and DM searches get no spelling repair and the rule in CLAUDE.md is narrowed to player names. Touches data/vocabulary.js, scripts/spelling.js, restricted/search.html, prime/search.html, CLAUDE.md § Deploy and search.
   src: FIA cold audit, 2026-11-07
@@ -1948,11 +1955,6 @@ archived in Drive, not deleted. What stays open here is below.
   src: section 8, 2026-10-28
 
 ## Record and schema
-
-- **[decide]** The voyages' Fleet dates *(prep)*
-  `data/sessions.json` carries a rough Fleet date per voyage (`date`), counted back from 1491.7.12, where the crew stands after V006. Settled 2026-11-02: Bartholomew joined on the crew's first day, at the Weeping Goddess lunch the Mirt errand was leading to, so V001 is 1491.6.25 and V002 runs 1491.6.25–1491.6.26 (that lunch, a night, the salvage simulation next morning); and V006 ends at 1491.7.12. V003 1491.6.26–1491.7.5 (the blast on the salvage morning, then "some days passed"; about ten embers, rough). V004 1491.7.5–1491.7.6 and V005 1491.7.6–1491.7.7 (a day or so aboard each; guess). V006 1491.7.7–1491.7.12 ("the next few days learning the ship"). Still to confirm: how many days V003's "some days passed" covers. The V002 account reads against the ruling: Boogie sets the half-ship on the lunch table, and the account twice says it came out of his chest "the night before", but the V001 account has it emerge that night, after the errand. Two more V002 cues point the same way: Ryeback says Barret was "at the counter the night before" talking about Casey's birthday readings, and Casey goes looking for Joffrey, "the sailor he had spoken with the day before". If the lunch is instead the morning after V001, still with no gap (V002 1491.6.26–1491.6.27, V003 from 1491.6.27), both accounts stand as written. Separately, the second cue is itself an error in the V002 account: in V001 it was Sol, not Casey, who spoke with Joffrey. The V003 account's "attacked twice in three days" also counts the Mirt crate and the blast, now a day apart. The crossing to H'Catha is fourteen embers, so V007 would run from about 1491.7.13 to 1491.7.26 or later. prime/chart/gtc.js still says the current kindling and ember are not set; align it with the record when the chart is next touched.
-  Left (FIA audit, 2026-11-07): timeline.json's "The crew at the Academy" marker (t −0.185, about 67 days before now) does not match V001 at 1491.6.25 once the cycle calendar is fixed; move the marker when the calendar rule lands.
-  src: Korey, 2026-10-29 (Fleet time ruling); Korey, 2026-11-02 (record-cleanup notes § 3); voyages/voyage-001.html to voyage-006.html
 
 - **[later]** Ships in the record
   prime/docs/SESSION-RUN.md files a ship as a place with Type `Vessel`, parented to where it was last seen, and parks simulated ships under the Simulation Deck with Status `Simulated`. That rule is the latest one Korey accepted for the record (Voyage 7 chat, 2026-10-25, Settled: "Every ship the crew encounters gets a record"). "Vessels are vessels" was ruled earlier, in the cosmic chat, for the DM wiki: vessels are their own register with entry pages, not realms and not artifacts. So the two do not yet conflict; the question is whether the refactor should carry the register split down into the record. Options: (a) keep ships as Vessel-type places in `data/locations.json` and split only the pages (`navigation-records/` ships move to `vessels/`); (b) give the record a vessel set or a `kind` field, a status vocabulary without "Simulated" on places, and a choice of whether a ship's whereabouts is a field or a parent link.

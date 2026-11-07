@@ -52,9 +52,9 @@ PRs #166 to #169)
     placed him to have a man inside Caelestis; it knew nothing of A.T.L.A.S.
     and his tadpole carried no directive about it. Check
     `dossiers/sor-kur.html`'s "building a route for a year" against this.
-16. **The Sky Dock bribe.** Joffrey paid Jeffrey, the hobgoblin dock hand
-    (ruling 2). Check the record's wording ("a dock officer", "a merchant")
-    when the pages change.
+16. **The Sky Dock bribe.** Joffrey, a hobgoblin officer, paid Jeffrey, a
+    human merchant and ship's owner, and pocketed a bottle from him (Korey,
+    2026-11-07, from the V001 transcript). Done on every page.
 17. **Long life** comes from the taking, not the experiment.
 18. **A tadpole can be removed**, and removal frees the host. How, from D&D
     lore or our own; avoid Baldur's Gate 3 spoilers.
@@ -78,10 +78,11 @@ PRs #166 to #169)
 23. **The shards reaching Boogie.** Vocath is a merchant and moves fast. Add
     time to the chain if the dates need it.
 24. **Clint on Fonains.** He seized the raiders' ship, and the pool took it
-    with them aboard. He landed before the Monolith rose, about a year ago,
-    got away, and lost his means of reaching Caelestis. They hunted him for a
-    while, so he could not report, and when the Monolith rose and broke they
-    called home and started their trade.
+    with them aboard about a year ago. It set them down on Fonains while the
+    Monolith stood, months later outside (Korey, 2026-11-07). He got away and
+    lost his means of reaching Caelestis. They hunted him for a while, so he
+    could not report; the overseer called Vocath at once, and the trade began
+    when the Monolith broke.
     - His laser pistol is unusual on Fonains, the first there. In wildspace
       laser pistols are not unusual. **Proposed:** Ryeback's pistol, not yet
       seen at the table, is one too. Standardizing firearms in wildspace goes
@@ -257,7 +258,7 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 Nothing was dropped outright. These were corrected when the cited file did not match:
 
 - STAGING's long-life line reads "comes from his taken … tithed upward"; the words "not from the piece" are on `artifacts/rod-of-seven-parts.html`, not STAGING (#17).
-- `locations/fonains.html` says the Monolith broke "a few months ago", not "2–3 months" (#23).
+- `locations/fonains.html` said the Monolith broke "a few months ago", not "2–3 months" (#23); since 2026-11-07 it rose "a little over a year ago" and broke about seven months ago.
 - `locations/wayfinders-homeworld.html` uses "the Lunarfoot Runekeeper" as an example of the clan name, not as a claim about the order (#27).
 - BACKLOG fix l.974 says `crew/tumak.html` carries "outright"; the page follows the record (#7).
 - The working audit lists the "seated Lantern is a pod" tracker fix as done; "safehouse" is still in `data/overlay.json` (3c, 2.16).

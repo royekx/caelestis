@@ -104,7 +104,7 @@ Gender: Male (record has none).
 
 | Fact | Source | Confidence |
 |---|---|---|
-| A hand at the Sky Dock. | dossier/jeffrey, caelestis | Hold: true and public on the dock, but it hands the crew the thread Mirt asked them to pull. |
+| A merchant whose ship trades into the Sky Dock. | dossier/jeffrey, caelestis | Hold: true and public on the dock, but it hands the crew the thread Mirt asked them to pull. |
 | A friend of Joffrey; the two names get cadets sent after the wrong man. | dossier/jeffrey, dossier/joffrey | Hold, for the same reason |
 
 ### Joffrey
