@@ -341,7 +341,7 @@
           "Helped usher the injured from the wrecked simulation chamber alongside Tarto",
           "Took the recovered rod, drew it back before Boogie could examine it, and said he simply did not yet know what it was",
           "Conferred with Tarto in low voices over the rod",
-          "At the bridge, produced an illusion of the rod for Mirt and named the marking Vocath"
+          "At the bridge, produced an illusion of the rod for Mirt and named the rod's seal as Vocath's"
         ]
       },
       {
@@ -494,7 +494,7 @@
         "number": 3,
         "bullets": [
           "Summoned the six cadets to the bridge, thanked them again, and asked what they had noticed collecting the crate",
-          "Went still when Saerthe named the rod's marking, and revealed that Vocath had long borne him a grudge, making anyone connected to him a target",
+          "Went still when Saerthe named the rod's seal, and revealed that Vocath had long borne him a grudge, making anyone connected to him a target",
           "Told the cadets to keep it to themselves, check the teaching rooms for similar devices, and look cautiously into Joffrey and a man named Jeffrey",
           "Rewarded the cadets for the simulation win and paid extra for their discretion, then granted them sailor-level clearance",
           "Had the phrase 'fleet intelligence archive' on his notepad beside the fishbowl, where Tumak read it"
@@ -1124,7 +1124,7 @@
       "Party Relationship": "An old enemy of Mirt, threat to those connected to him",
       "Role (as known)": "Old enemy of Mirt behind the arcane device",
       "Current State": "A named enemy of Mirt, tied to the arcane device that struck the academy.",
-      "Overview (Player)": "Vocath is a name marked on the arcane device that nearly killed the cadets in the simulation chamber. Mirt named Vocath as an old enemy who has long borne him a grudge, warning that anyone connected to him could be a target.",
+      "Overview (Player)": "Vocath's seal, two hands passing coins, was on the arcane device that nearly killed the cadets in the simulation chamber; Saerthe named the seal as his. Mirt named Vocath as an old enemy who has long borne him a grudge, warning that anyone connected to him could be a target.",
       "Category": "Beyond the Academy",
       "Status": "Active"
     },
@@ -1132,7 +1132,7 @@
       {
         "number": 3,
         "bullets": [
-          "A word Boogie glimpsed inscribed on the arcane rod from the wrecked simulation chamber, before Saerthe drew it back",
+          "His seal, two hands passing coins, was on the arcane rod from the wrecked simulation chamber; Boogie glimpsed it before Saerthe drew it back, and Saerthe named it as his",
           "Named by Mirt as one who had long borne him a grudge, making anyone connected to Mirt a potential target"
         ]
       }

@@ -176,7 +176,7 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 
 | Item | Action |
 |---|---|
-| **V007** Player record flags | Add: Ezra needs a record in the V007 run (seen unnamed at the V006.5 rendezvous); the rod's "word Vocath" (Part 1 #3); "struck the spire" vs the Pupil; "watched by beholder patrols"; Saerthe and Sor'Kur Gender null; `data/sessions.json` V006 has no interlude line; Mirt "head of Caelestis" also in `data/locations.json` |
+| **V007** Player record flags | Add: Ezra needs a record in the V007 run (seen unnamed at the V006.5 rendezvous); "struck the spire" vs the Pupil; "watched by beholder patrols"; Saerthe and Sor'Kur Gender null; `data/sessions.json` V006 has no interlude line; Mirt "head of Caelestis" also in `data/locations.json` |
 | **V007** tracker fix "seated Lantern is a one-person pod" | Keep open: "safehouse" is still in `data/overlay.json` |
 | Tharizdun is she | Narrow to `working/tharizdun.md` and the outside Fonains doc; update the done list; drop `factions/academy-fleet.html` |
 | Dharra, not Darra | Merge into "Refresh or retire the Fonains doc" |

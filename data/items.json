@@ -365,7 +365,7 @@
       "Type": "Arcane device",
       "Held By": "Saerthe Abizjn",
       "Origin": "Jammed into the wall of the simulation chamber during the salvage exercise",
-      "Overview (Player)": "A sigil-engraved metal rod Gregory pulled from the wall of the wrecked simulation chamber — a device built to feed on ambient magic and detonate, now spent. It bears the marking 'Vocath,' and Saerthe has taken it to study.",
+      "Overview (Player)": "A sigil-engraved metal rod Gregory pulled from the wall of the wrecked simulation chamber — a device built to feed on ambient magic and detonate, now spent. It bears a seal, two hands, one letting three coins fall into the other. Saerthe named the seal as Vocath's and has taken the rod to study.",
       "Status": "Held",
       "Class": "Magic Item",
       "Item Type": "Rod",
@@ -378,7 +378,7 @@
           "Gregory pried it from the wall of the wrecked simulation chamber, a length of sigil-engraved metal that arced energy as it came loose",
           "Built to feed on ambient magical energy and hold the charge until it could no longer contain it — arcane dynamite",
           "Assessed as spent and unlikely to detonate again, save near another strong source of magic",
-          "Bears the marking 'Vocath'; Saerthe took it and drew it back before Boogie could examine it",
+          "Bears Vocath's seal, two hands passing coins; Saerthe took it and drew it back before Boogie could examine it",
           "Saerthe produced an illusion of it for Mirt at the bridge"
         ]
       }
@@ -418,7 +418,7 @@
       "Type": "Suspicious cargo",
       "Held By": "Sky Dock",
       "Origin": "Placed at the Sky Dock by an unknown party",
-      "Overview (Player)": "A crate the crew found at the Sky Dock, tucked behind others and marked with the same symbol as the Vocath rod. Something fills it, though nothing living, and it sat unclaimed while the crew watched.",
+      "Overview (Player)": "A crate the crew found at the Sky Dock, tucked behind others and marked with the same seal as the Vocath rod. Something fills it, though nothing living, and it sat unclaimed while the crew watched.",
       "Status": "Held",
       "Class": "Evidence",
       "Item Type": "Container",
@@ -428,7 +428,7 @@
       {
         "number": 3,
         "bullets": [
-          "A crate Boogie found tucked behind others at the Sky Dock, marked with the same symbol as the Vocath rod",
+          "A crate Boogie found tucked behind others at the Sky Dock, marked with the same seal as the Vocath rod",
           "Knocking on it revealed nothing living inside, but it was not hollow",
           "Its contents would route through Mr. Blip, with Toril and H’Catha as destinations; no one came for it while the crew watched"
         ]
