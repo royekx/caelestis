@@ -673,7 +673,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.05,
+      "t": -0.085,
       "tier": 1,
       "status": "now",
       "cert": "canon",
@@ -1088,7 +1088,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.047,
+      "t": -0.079,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1099,7 +1099,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.046,
+      "t": -0.078,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1110,7 +1110,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.044,
+      "t": -0.077,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1121,7 +1121,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.019,
+      "t": -0.025,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1132,7 +1132,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.016,
+      "t": -0.022,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1143,7 +1143,7 @@
     },
     {
       "lane": "crew",
-      "t": -0.014,
+      "t": -0.019,
       "tier": 3,
       "status": "past",
       "cert": "canon",
@@ -1187,7 +1187,7 @@
     "Caelestis's present sits about seven months after the Fonains Monolith broke and about five months after Fonains's Session 28 (Korey, 2026-11-07): the gap gives Vocath's ships the months an uncharted route takes before Boogie's crate reaches a dock. The color pool took the overseer's ship about a year before Caelestis's present and set her down on Fonains while the Monolith stood, about three months before it broke: a short crossing inside the pool, months outside (Korey, 2026-11-07; the one-shot transcripts say nothing of when Clint arrived). Boogie's shard came from the broken Monolith through Vocath's line, before V001.",
     "Benedetta fell ill at Rihiri's birth, about twelve years ago, and died about ten years ago. The illness was Vanifer siphoning her soul into the illegitimate Bloodstone, which took about two years.",
     "Thessalar's planar craft fell about 500 years ago. N'ghathrod had already lost a clash with it and was a prisoner aboard, being experimented on. Lola's Boys, sent back by the Accordance, took the craft's control and defense gems; without them it fell, and the crash let N'ghathrod escape. The party unknowingly made their own villain in another campaign. \"Some millennia ago\" in Lola's Boys is rumour.",
-    "Session dates inside the Fonains campaign are spaced by feel; their order is canon. Caelestis's voyages sit at their Fleet dates in data/sessions.json (V001 1491.6.25 to now, 1491.7.12). The Monolith stood six months before Lola's Boys assembled, their road to the break took about two months, and Session 28 is two to three months after the break (Korey, 2026-11-07).",
+    "Session dates inside the Fonains campaign are spaced by feel; their order is canon. Caelestis's voyages sit at their Fleet dates in data/sessions.json (V001 1491.6.25 is day 1; Voyage 7 opens on day 30, 1491.7.24, which is now; Korey, 2026-11-07). The Monolith stood six months before Lola's Boys assembled, their road to the break took about two months, and Session 28 is two to three months after the break (Korey, 2026-11-07).",
     "Krynn is the third campaign world. Its present is level with Caelestis now. The dragons that left Fonains have not yet reached it."
   ],
   "threads": {
@@ -1587,7 +1587,7 @@
         ]
       },
       {
-        "t": -0.03,
+        "t": -0.05,
         "status": "past",
         "title": "V001–V006: thefts, the neogi, the tyrant ship",
         "who": [

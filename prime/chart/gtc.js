@@ -9,11 +9,11 @@
      a spark          = one arm's quarter = 4 kindlings
      a kindling       = one marker step = about 30 embers
      an ember         = about a day
-   Fleet logs write cycle.kindling.ember: 1491.7.12.
+   Fleet logs write cycle.kindling.ember: 1491.7.24.
 
    Time T is counted in embers from Cycle 0. The chart's defaults: thirty
    embers to a kindling, Realmspace's arm (arm 0) kindling first, and now at
-   1491.7.12, set from data/sessions.json. Which arm kindles first is not
+   1491.7.24, set from data/sessions.json. Which arm kindles first is not
    set; the control says so in a DM note.
 
    ════════════════════════════════════════════════════════════════ */
@@ -76,7 +76,7 @@
         <input type="range" class="gtc-scrub" min="0" max="${CYCLE - 0.01}" step="0.25" aria-label="Through the cycle">
         <button type="button" class="gtc-now">Now</button>
       </div>
-      <p class="gtc-note"><b>DM</b> Now (1491.7.12, Realmspace's arm kindling first) is the chart's default. Which arm kindles first is not set; the current date comes from data/sessions.json.</p>
+      <p class="gtc-note"><b>DM</b> Now (1491.7.24, Realmspace's arm kindling first) is the chart's default. Which arm kindles first is not set; the current date comes from data/sessions.json.</p>
     </div>`;
     const $ = c => host.querySelector(c);
     const st = { T: NOW, playing: false, speed: 1 };

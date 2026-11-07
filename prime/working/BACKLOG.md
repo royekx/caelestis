@@ -43,9 +43,9 @@ staging once Korey has read and accepted them.
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 3 | 13 | 2 | 0 | 0 |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **128** | **163** | **25** | **1** | **47** |
+| **Total** |  | **127** | **163** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1952,11 +1952,6 @@ archived in Drive, not deleted. What stays open here is below.
   src: section 8, 2026-10-28
 
 ## Record and schema
-
-- **[decide]** The voyages' Fleet dates *(prep)*
-  `data/sessions.json` carries a rough Fleet date per voyage (`date`), counted back from 1491.7.12, where the crew stands after V006. Settled 2026-11-02: Bartholomew joined on the crew's first day, at the Weeping Goddess lunch the Mirt errand was leading to, so V001 is 1491.6.25 and V002 runs 1491.6.25–1491.6.26 (that lunch, a night, the salvage simulation next morning); and V006 ends at 1491.7.12. V003 1491.6.26–1491.7.5 (the blast on the salvage morning, then "some days passed"; about ten embers, rough). V004 1491.7.5–1491.7.6 and V005 1491.7.6–1491.7.7 (a day or so aboard each; guess). V006 1491.7.7–1491.7.12 ("the next few days learning the ship"). Still to confirm: how many days V003's "some days passed" covers. The V002 account reads against the ruling: Boogie sets the half-ship on the lunch table, and the account twice says it came out of his chest "the night before", but the V001 account has it emerge that night, after the errand. Two more V002 cues point the same way: Ryeback says Barret was "at the counter the night before" talking about Casey's birthday readings, and Casey goes looking for Joffrey, "the sailor he had spoken with the day before". If the lunch is instead the morning after V001, still with no gap (V002 1491.6.26–1491.6.27, V003 from 1491.6.27), both accounts stand as written. Separately, the second cue is itself an error in the V002 account: in V001 it was Sol, not Casey, who spoke with Joffrey. The V003 account's "attacked twice in three days" also counts the Mirt crate and the blast, now a day apart. The crossing to H'Catha is fourteen embers, so V007 would run from about 1491.7.13 to 1491.7.26 or later. prime/chart/gtc.js still says the current kindling and ember are not set; align it with the record when the chart is next touched.
-  Left (FIA audit, 2026-11-07): timeline.json's "The crew at the Academy" marker (t −0.185, about 67 days before now) does not match V001 at 1491.6.25 once the cycle calendar is fixed; move the marker when the calendar rule lands.
-  src: Korey, 2026-10-29 (Fleet time ruling); Korey, 2026-11-02 (record-cleanup notes § 3); voyages/voyage-001.html to voyage-006.html
 
 - **[later]** Ships in the record
   prime/docs/SESSION-RUN.md files a ship as a place with Type `Vessel`, parented to where it was last seen, and parks simulated ships under the Simulation Deck with Status `Simulated`. That rule is the latest one Korey accepted for the record (Voyage 7 chat, 2026-10-25, Settled: "Every ship the crew encounters gets a record"). "Vessels are vessels" was ruled earlier, in the cosmic chat, for the DM wiki: vessels are their own register with entry pages, not realms and not artifacts. So the two do not yet conflict; the question is whether the refactor should carry the register split down into the record. Options: (a) keep ships as Vessel-type places in `data/locations.json` and split only the pages (`navigation-records/` ships move to `vessels/`); (b) give the record a vessel set or a `kind` field, a status vocabulary without "Simulated" on places, and a choice of whether a ship's whereabouts is a field or a parent link.
