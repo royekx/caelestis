@@ -2577,11 +2577,11 @@
           "src": "factions/vocath-operation.html"
         },
         {
-          "t": "The color pool took the smaller pirate ship, whose helm Clint had taken, to Fonains, with Vocath's overseer and its pirate crew aboard. They hunted Clint there for a while, and when the Monolith rose and broke the overseer called Vocath by sending stone.",
+          "t": "The color pool took the smaller pirate ship, whose helm Clint had taken, to Fonains, with Vocath's overseer, its pirate crew and Vocath's sealed cargo aboard. Because the cargo had gone through with the ship, the overseer called Vocath by sending stone as soon as they landed, and told him that Clint died in the hunt; Vocath believes his witness is dead.",
           "src": "timeline/timeline.json"
         },
         {
-          "t": "Vocath's trade on Fonains began with that call, and fragments of the broken Monolith come home through his line.",
+          "t": "How and when Vocath answered depends on whether Clint landed before or after the Fonains Monolith rose, which is not set. Vocath's trade on Fonains began after the Monolith broke, and fragments of the broken Monolith come home through his line.",
           "src": "factions/vocath-operation.html"
         },
         {
@@ -2751,7 +2751,7 @@
           "src": "vessels/bellwether-crow.html"
         },
         {
-          "t": "With their paymaster gone, the main ship backed off or was overpowered by Crow's crew. The Fleet recorded her name and hull mark from the survivors in WM-002 and runs escorts against her under SA-005.",
+          "t": "With the overseer, her paymaster, and Vocath's sealed cargo gone through the pool, the fight was not worth it to the main ship, and Crow's crew drove her off. She is still free. The Fleet recorded her name and hull mark from the survivors in WM-002 and hunts her with escorts under SA-005.",
           "src": "restricted/wm-002.html"
         },
         {
@@ -2896,7 +2896,7 @@
       "summary": "A small Fleet watch post on its own lane, weeks out along the arm; the colony holds it.",
       "facts": [
         {
-          "t": "Cairn's station master is taken, and one of Zhauveth's malformed spawn holds the rest of the crew by nearness.",
+          "t": "A colony courier carried one of N'ghathrod's copies to Cairn, and the station master was taken with it; one of Zhauveth's malformed spawn holds the rest of the crew by nearness.",
           "src": "locations/cairn-station.html"
         },
         {
