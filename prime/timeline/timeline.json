@@ -563,11 +563,11 @@
     },
     {
       "lane": "crew",
-      "t": -0.45,
+      "t": -1.05,
       "status": "past",
       "cert": "canon",
       "title": "Clint lands on Fonains",
-      "desc": "The color pool carries the overseer's ship through a small pocket of another dimension, where months pass, and out onto Fonains some weeks after the Monolith rose, with its crew and Vocath's sealed cargo still aboard: pirates in Vocath's hire and his overseer. Of Crow's party that took her helm, Clint alone arrives alive; every one of the hands who went with him died. Because the cargo came through with them, the overseer calls Vocath by sending stone at once. The overseer and the pirates with him hunt Clint there, and the overseer tells Vocath that Clint died in the hunt. Clint gets away and loses his means of reaching Caelestis.",
+      "desc": "The color pool carries the overseer's ship through a small pocket of another dimension and out onto Fonains, with its crew and Vocath's sealed cargo still aboard: pirates in Vocath's hire and his overseer. Of Crow's party that took her helm, Clint alone arrives alive; every one of the hands who went with him died. Because the cargo came through with them, the overseer calls Vocath by sending stone at once. The overseer and the pirates with him hunt Clint there, and the overseer tells Vocath that Clint died in the hunt. Clint gets away and loses his means of reaching Caelestis.",
       "tier": 2
     },
     {
@@ -1184,7 +1184,7 @@
     }
   ],
   "decisions": [
-    "Caelestis's present sits a few months after the Fonains Monolith broke, about level with Fonains's Session 28. The color pool took the overseer's ship about a year before Caelestis's present and set her down on Fonains some weeks after the Monolith rose; the months between passed inside the pool. Boogie's shard came from the broken Monolith through Vocath's line, before V001.",
+    "Caelestis's present sits a few months after the Fonains Monolith broke, about level with Fonains's Session 28. Clint reaches Fonains about a year before Caelestis's present; whether before or after the Monolith rose is not set. Boogie's shard came from the broken Monolith through Vocath's line, before V001.",
     "Benedetta fell ill at Rihiri's birth, about twelve years ago, and died about ten years ago. The illness was Vanifer siphoning her soul into the illegitimate Bloodstone, which took about two years.",
     "Thessalar's planar craft fell about 500 years ago. N'ghathrod had already lost a clash with it and was a prisoner aboard, being experimented on. Lola's Boys, sent back by the Accordance, took the craft's control and defense gems; without them it fell, and the crash let N'ghathrod escape. The party unknowingly made their own villain in another campaign. \"Some millennia ago\" in Lola's Boys is rumour.",
     "Session and voyage dates inside a campaign are spaced by feel; their order is canon. Lola's Boys runs from about a month after the Darkest Day to Session 28, two to three months after the Monolith broke.",
