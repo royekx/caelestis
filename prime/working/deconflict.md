@@ -383,15 +383,15 @@ draft. Rulings 1 to 3 are also written into `working/fia-story.md`.
    request, merged before session prep.
 2. **Prep chat: V007.** caelestis-prep at session scale, from the cleaned
    pages. Ezra's hook and the sealed letter are built here (ruling 8).
-3. **Lore chat: Part 1 § B to D**, items 11 to 34 and 9b. Item 11 (Act or
-   Arc) first: every arc and level fix waits on it. Answers are written into
-   this draft.
+3. **Part 1 is ruled** except 14b and 25 to 29, which take a line each.
 4. **Build chats: the rest**, one change audit at a time, in this order:
    Part 3 (the working layer and process docs, so later audits start clean);
    the FIA story (`fia-story.md` § Promotes to, three pull requests); the
    remaining Part 2 rows; Part 4.
 5. **Mechanic chat:** Tarto's stat block (ruling 5), the hold, the unthinned
    template.
+6. **Tumak chat (mechanic):** Homebound and the runes (ruling 12), from the
+   Tumak sweep in the inbox and `crew/tumak.html`.
 
 Delete this draft when every item is closed.
 
