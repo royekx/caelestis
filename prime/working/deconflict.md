@@ -110,7 +110,7 @@ Every quote here was opened and confirmed in the file named.
 34. **Rykoe is the heart of the first world**, the Reach world, at the centre
     of the cosmos. Erevos is the core at the centre of GAL-01. What a galaxy's
     core is, Erevos and the other four included, is not defined (Korey,
-    2026-11-07, correcting an earlier "Erevos is a heart"). Pages that call
+    2026-11-07). Pages that call
     Erevos "the heart at the galaxy's core" change in the cosmos audit:
     `glossary/index.html` (cycle), `factions/fleet.html`,
     `factions/discerners.html`, `prime/data/survey.json`, and BACKLOG's
