@@ -65,7 +65,7 @@ Every quote here was opened and confirmed in the file named.
     it was not, and stopped caring: Glyth cast him out, and the voice
     provides. It gives what Vecna's plan needs him to know; the rest he learns
     from his taken. Vecna is not omniscient.
-21. **The first unthinned.** Their tadpoles were N'ghathrod's, brought aboard
+21. **The first malformed illithids.** Their tadpoles were N'ghathrod's, brought aboard
     Thessalar's craft before the experiment and cut off from the elder brain;
     Thessalar experimented on them too, and they grew malformed.
 22. **The elder brain.** The main craft came down in the Barrier Peaks on
@@ -209,7 +209,7 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 
 | Draft | Action |
 |---|---|
-| `fia-story.md` | Run its change audit (Part 2.21) after Part 1. Before promoting, fix: Strake's reach (l.271 "only Cairn's scope" vs l.255 and l.414); "Strake further off" (l.469, 532) vs "nearer home"; drop "perhaps" (l.294); "the network", "Caelestis Fleet" and "the *Crow*" are retired or mismatched in `terms.json`, so name the web of the taken first; Bartholomew's **Proposed** SA-002 1482 line ("the earliest entry" is false, 1481 exists; CON-312 is a constellation number, so give the transient a registry number); give Mirt's belief a basis now that WM-002 loses the hull marking; Zhauveth "end a crew with a word" vs "incapable of violence" (domination is not violence; say so); get "the true-formed" ruled before the rename; three PRs vs "One pull request" (3g) |
+| `fia-story.md` | Pre-fixes done (2026-11-07): "bearers" and "unthinned" dropped, the true-formed are the whole illithids' own name and N'ghathrod calls every illithid Vth'orama; Mirt reads the hull marking in WM-002 himself; SA-002 keeps CON-312 and needs no transient number. Then run its change audit (Part 2.21). The fixes were: Strake's reach (l.271 "only Cairn's scope" vs l.255 and l.414); "Strake further off" (l.469, 532) vs "nearer home"; drop "perhaps" (l.294); "the network", "Caelestis Fleet" and "the *Crow*" are retired or mismatched in `terms.json`, so name the web of the taken first; Bartholomew's **Proposed** SA-002 1482 line ("the earliest entry" is false, 1481 exists; CON-312 is a constellation number, so give the transient a registry number); give Mirt's belief a basis now that WM-002 loses the hull marking; Zhauveth "end a crew with a word" vs "incapable of violence" (domination is not violence; say so); get "the true-formed" ruled before the rename; three PRs vs "One pull request" (3g) |
 | `divine-rules.md` | Stale: "sphere", "the Flow", Reach-born polarity, "Nothing breaks" vs cosmology's destruction; its two Open questions are answered on cosmology. Promote the worship section, rule "Reach debris and worlds", then delete |
 | `nct-127.md`, `common-knowledge.md` | Keep |
 
@@ -247,7 +247,7 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 - `data/connections.json` Khaleth "the only one of the five who goes down" vs his dossier "the one who regularly goes down".
 - `cosmology/index.html` "prime god": define or replace.
 - "Closing" vs "sealing" a heart (`factions/runekeepers.html`): use "closing".
-- Glossary rows to add: color pool (a pool can open onto another plane or pass through one to another Material place), unthinned, Cavitius, resonance, Prism Ascendant, Elder Elemental Eye, the Vanished, Misfortuned, Fracture Cult, the Archivists, the Ledger, the Becoming, darkest-timeline world.
+- Glossary rows to add: color pool (a pool can open onto another plane or pass through one to another Material place), the true-formed, Cavitius, resonance, Prism Ascendant, Elder Elemental Eye, the Vanished, Misfortuned, Fracture Cult, the Archivists, the Ledger, the Becoming, darkest-timeline world.
 - BACKLOG Hub items still open: "Wildspace Lore Bible" tile; Vessels and Timeline cards on `hub.html`.
 
 ---
@@ -283,9 +283,9 @@ request merges before any later work reads its pages.
    the Vocath pages, and the BACKLOG items moot after it. Also seen in the
    cosmos audit: Clint "on purpose" through the color pool (`cosmology/index.html`,
    `chart/index.html`), and Fonains "in Krynnspace" in the chart's Crow entry.
-3. **Mechanic: Tarto, the hold, the unthinned, and Homebound.** Tarto's
+3. **Mechanic: Tarto, the hold, the malformed, and Homebound.** Tarto's
    mechanic review (BACKLOG § dossiers/boatswain-tarto.html), the hold, the
-   unthinned template, then Homebound and the runes (ruling 12) from the
+   malformed template, then Homebound and the runes (ruling 12) from the
    Tumak sweep and `crew/tumak.html`. Split Homebound into its own chat if
    it runs long.
 4. **Build: the DM tools.** BACKLOG § Automation and tracker, "Overhaul
