@@ -70,7 +70,7 @@
     },
     "QST-Ok5mB8tz": {
       "urgency": "Medium",
-      "next": "Seat the Lantern in the repair bay so Ostekk-6 finishes rebuilding.",
+      "next": "Ostekk-6 keeps rebuilding below the waist; on the crossing he asks Gregory what a plan is.",
       "voyages": [
         {
           "number": 5,
@@ -170,7 +170,7 @@
         {
           "number": 6,
           "beats": [
-            "Reported through the sending stone on the first watch, as planned, and was overheard by Bartholomew. Suspected, not exposed: the beacon and the report both reached Qitru."
+            "Reported through the sending stone on the first watch, as planned, and was overheard by Bartholomew. Suspected, not exposed: the report reached Qitru. A few days after the voyage, in the interlude, he found the chance and planted her beacon aboard the ship."
           ]
         }
       ]

@@ -35,17 +35,17 @@ staging once Korey has read and accepted them.
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 1 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 2 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 20 | 4 | 3 | 0 | 2 |
-| Dossiers | dossiers/ | 19 | 16 | 0 | 0 | 1 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 19 | 3 | 2 | 0 | 1 |
+| Dossiers | dossiers/ | 16 | 17 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 19 | 0 | 0 | 0 |
-| Artifacts and vessels | artifacts/, vessels/ | 9 | 7 | 3 | 0 | 1 |
-| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 4 | 18 | 0 | 20 |
-| New pages | 12 proposed pages, the hub, notes/ | 3 | 19 | 3 | 2 | 24 |
+| Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 3 | 0 | 1 |
+| Rules | rules/, statblocks/, tracker/, wayfinder-path/ | 9 | 4 | 16 | 0 | 20 |
+| New pages | 12 proposed pages, the hub, notes/ | 4 | 20 | 3 | 2 | 25 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 3 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 2 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 14 | 6 | 0 | 1 |
-| Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 13 | 13 | 2 | 0 | 8 |
-| **Total** |  | **139** | **168** | **52** | **2** | **63** |
+| Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 10 | 13 | 2 | 0 | 2 |
+| **Total** |  | **132** | **169** | **49** | **2** | **57** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -137,7 +137,7 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - `data/player-characters.json` (Boogie) lists "shield"; the DM page names it the Shield of Expression, a gift from Boom-chik, and it has no item record in `data/items.json`. Add the name or an item record if Korey agrees.
 - `data/npcs.json` (Saerthe Abizjn) and the V006 page say "a Watcher cadet"; the settled term for a Watcher trainee is a Glimpse. The crew has not been told the word, so the record keeps Saerthe's phrasing, and `terms.json` allows it on voyage-006. Change the record if Korey wants Saerthe to say "Glimpse".
 - `data/locations.json` overviews open "The Flighty Foundling is…" and "The Moonraider was…", and the quest is named "The Tyrant Ship and the H'Catha Meteor"; ship names carry no article. `terms.json` allows these record strings on the player pages. Rewrite them in a record edit if Korey agrees, then drop the allow entries.
-- `data/npcs.json` (Winston Ryeback, Voyage 6) says he "was told the beholder had been taken care of, and took it to mean the crew had killed it"; the ruling is that Tumak told him outright that the crew killed it (dossiers/winston-ryeback.html).
+- The crew retrieved the Faelight spore from the Garden in Voyage 6; the record does not say so yet (deconflict 9b). Record only; enter it in the V007 run if Korey agrees.
 - The sending stone reads too loud on the player side: the V006 summaries and narrative, Miken's record (a Notable Item, "Miken's Sending Stone", with its own anchor), the bearings, the timeline, and the V006 Next Session Pressure ("Decide what to do about Miken's sending stone"). Sending stones are ordinary. What caught Bartholomew's Perception was a hushed conversation in the middle of the night. Recast the lines around the conversation, and keep the stone as the object he was holding, if Korey agrees.
 
 ## Still coming in
@@ -961,18 +961,13 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   A per-day roll table of backstory beats across the whole crew was floated for the two-week crossing; Korey liked it as an option. Build it, or keep beats hand-placed.
   src: BCS § Sol/H'Catha transit, § Sol/Open
 
+- **[decide]** Crossing entry 7 *(prep)*
+  The Fear eye woke in the Make Ready downtime, so entry 7 on the V007 crossing d8 is free. Choose what it holds. Touches: campaign/voyages/index.html.
+  src: STAGING § Voyage 007, 2026-11-02; deconflict 2.2
+
 - **[decide]** Treasury contents in Vaelorix's Quarters *(prep)*
   The Quarters hold a treasury of coin (see add). Contents and amounts are open.
   src: chat-voyage-6-7-planning § Open
-
-- **[decide]** Did Miken cause the simulation blast? *(prep)*
-  Options: yes; or no, and the suspicion stays as misdirection from Joffrey.
-  Touches: campaign/voyages/index.html, dossiers/miken.html.
-  src: chat-voyage-6-7-planning § Open
-
-- **[fix]** V006: Tumak told Ryeback outright
-  V006 Actual says Ryeback "took 'the beholder was taken care of' to mean they killed it". The ruling on dossiers/winston-ryeback.html, now carried on crew/tumak.html, is that Tumak told him outright that the crew had killed it. Reword the V006 line to match. (The record's matching line is already a Player record flag.)
-  src: section 7 (2026-10-28); dossiers/winston-ryeback.html
 
 ---
 
@@ -1051,9 +1046,9 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ### dossiers/boatswain-tarto.html
 
-- **[decide]** What Clear the Deck does *(prep)*
-  Tarto's revised block (four superiority dice on a short rest) adds Clear the Deck as a bonus action, but no source gives its effect. The dossier and statblocks/index.html list it by name only. Write the effect. Touches: dossiers/boatswain-tarto.html, statblocks/index.html.
-  src: chat-cosmic-campaign-structure § Rules and crew (turn 314); section 5 (2026-10-28)
+- **[later]** Mechanic review of Tarto's stat block
+  The block stands as five d10 superiority dice, seven maneuvers and Know Your Enemy, with Clear the Deck cut (deconflict ruling 5). Run caelestis-mechanic-review on it in a mechanic chat. Touches: dossiers/boatswain-tarto.html, statblocks/index.html.
+  src: deconflict ruling 5, 2026-11-07
 
 ---
 
@@ -1098,7 +1093,7 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 ### dossiers/ezra.html
 
 - **[decide]** Ezra's own hook *(prep)*
-  Ezra must arrive with a hook others can latch onto. The eye-in-a-wheel sketch is not his hook: Ezra has nothing to do with the Vth'orama's mark for now (Korey, 2026-11-06). The sealed letter ("Watch one thing until it changes") stays an option. Come back to it later. Touches: dossiers/ezra.html (its hook line still names the sketch).
+  Ezra must arrive with a hook others can latch onto. It is built in V007 session prep. He carries a sealed letter reading "Watch one thing until it changes"; where it came from is open. The eye-in-a-wheel sketch is not his hook (Korey, 2026-11-06).
   src: chat-voyage-6-7-planning § Open; Korey, 2026-11-06
 
 - **[later]** Emporia and Tharizdun
@@ -1163,14 +1158,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 ---
 
-### dossiers/ostekk.html
-
-- **[decide]** Why Vaelorix stole from Ostekk *(prep)*
-  The theft of the Lantern and the nine OSTEKK units is canon. Was it to escape a debt to Ostekk? The debt is an unreviewed draft, along with a Fallmouth porter mentioning "Ostekk's machines" and Ostekk-6 freezing at the words.
-  src: chat-astral-sea-worldbuilding § Open; memory-canon campaign-canon § Naming (OSTEKK units)
-
----
-
 ### dossiers/rindle-gearloft.html
 
 - **[decide]** Dock master or dock worker *(prep)*
@@ -1216,14 +1203,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[decide]** Does the ship die with N'ghathrod?
   A draft line: "N'ghathrod and the ship are joined: if his true body dies, the ship dies, and the colony loses its home." It is held back from the page. STAGING rules that the taken outlive him, each keeping part of him; it says nothing of the ship. Rule whether the dreadnought dies with his true body. Touches: dossiers/vthoramu.html, dossiers/nghathrod.html, vessels/vthoramu.html, opposition/vthorama.html.
   src: chat-cosmic-campaign-structure § N'ghathrod and the colony; section 5 (2026-10-28)
-
----
-
-### dossiers/winston-ryeback.html
-
-- **[decide]** His stat block lines *(prep)*
-  The Hand Cannon line uses the giff's Pistol numbers (dossiers/winston-ryeback.html). With his custom pistol the stolen weapon, the open part is whether his block also keeps the giff's Musket line.
-  src: memory-canon campaign-canon § Key NPCs (Ryeback); dossiers/winston-ryeback.html
 
 ---
 
@@ -1446,10 +1425,6 @@ left here is open.
 - **[decide]** What Ostekk calls the Rod piece *(prep)*
   Options: the Constant, the Inclusion, the Mender, the Kernel.
   src: chat-voyage-6-7-planning § Open
-
-- **[decide]** Why the behir could not sense the Lantern *(prep)*
-  Options: the bag of holding blocked it, since its interior is an extradimensional space (lock this before players ask); or the anti-magic field around the Command Deck had already been muting the Lantern's pull, as it muted Gregory's tug, and the behir lost the trail inside it.
-  src: chat-voyage-6-7-planning § Open; memory-canon § Antagonists (field suppressing the Lantern)
 
 - **[decide]** Whether a pod charge plus an INT DC 15 parts check wakes Ostekk-2 for good *(prep)*
   The page and prime/data/overlay.json offer this ("The seated Lantern and the pod can wake it for good in Voyage 007"); no settled source backs it. Options: keep it as the V007 offer, or drop it.
@@ -1739,10 +1714,6 @@ against the complete Tumak sweep (all 336 turns).
   Build the stat block. For Lightning Breath, options: the 12d10 line; or the 20-ft. cone the table saw (suggested 4d10, DC 16 Dex).
   src: chat-voyage-6-7-planning § Open
 
-- **[fix]** How the crew picks the instructor
-  Page says "The players choose the teacher at the V007 rendezvous". Change to: the crew picks Saerthe or Tarto by a Discord reaction vote before V007, so the instructor scenes can be prepped.
-  src: chat-voyage-6-7-planning § Interlude and downtime; memory-canon (open-decisions § Voyage 007 intent)
-
 - **[add]** What the choice decides
   Add to § What the choice actually decides: Saerthe leans toward exploring ("go look"). Tarto leans toward the mission ("keep going, your mission, your failure"). Each handles talk of the missing things differently.
   src: chat-voyage-6-7-planning § The swap and NPCs; memory-canon (open-decisions § Voyage 007 intent)
@@ -1766,10 +1737,6 @@ against the complete Tumak sweep (all 336 turns).
 - **[fix]** The seated Lantern is a one-person pod
   overlay.json says "Seated, it turns the ship into a safehouse." Change to: seated in the bay, the Lantern is a one-person rejuvenation pod (one creature, one hour, all three charges, a long rest even if it already had one that day).
   src: chat-voyage-6-7-planning § Superseded
-
-- **[fix]** Ostekk-6's repair objective is closed
-  overlay.json "next" says "Seat the Lantern in the repair bay so Ostekk-6 finishes rebuilding." A Lantern charge repaired him instead of the bay. Close the objective, or replace it with his current next step.
-  src: chat-voyage-6-7-planning § The Lantern and the ship
 
 - **[fix]** What the Command Deck field does to constructs
   overlay.json says "The Command Deck's field unmakes constructs". Change to: the field froze the clockwork horrors, slowed the OSTEKK units and kept the behir out.
@@ -2314,7 +2281,6 @@ rulings went to STAGING. Each lists the pages it touches.
 
 ### Conflicts and memory-only facts
 
-- **decide** Miken's beacon. STAGING (Voyage 007 rulings) says Miken has not placed Qitru's beacon; dossiers/miken.html, dossiers/qitru.html and campaign/index.html say he planted it.
 - **decide** Arc 2. STAGING makes Arc 2 the H'Catha arc inside Act 1; campaign/index.html titles "Arc 2: Driftwardens in the Field", and the Answered list still holds "'Arc', never 'Act'".
 - **decide** Casey's Stellar Reading. Once he spends the star, must he name a sign (no declining)? registry/crew-manifest/casey-geim.html says he "may attempt to name the constellation". crew/casey.html.
 - **decide** Tumak's Runechild sorcery. Is the subclass on his sheet now, at his first Sorcerer level, or from Sorcerer 3 like the rest of the table? crew/tumak.html, rules/index.html § Standing mechanics.
@@ -2348,14 +2314,6 @@ rulings went to STAGING. Each lists the pages it touches.
 ### From the chat sweeps of 2026-11-04
 
 - **decide** Homebound. In the Tumak Swan chat (turn 336, the latest source) Korey ruled that the Heart taking Tumak home is "a disservice to the player": Tumak weaves the Anchors to protect his home, the Anchors being set places or the previous Runekeepers' havens (open which), on the model of Noctis seeking his ancestors' tombs. rules/index.html ("Homebound is a Wayfind to the Heart", "Homebound is the Becoming"), the Wayfind-cost item ("Homebound is always free"), and the homeworld, Runekeeper and Dissolution fragment pages ("Completing the inscription takes Tumak home") still say otherwise. Story first: what the world hides from, and why hiding. inbox/chat-crew-tumak-gregory-bartholomew.md § Tumak Swan, turns after 2026-10-25.
-- **decide** Tarto's stat block. The staff-NPC chat's final block (after Korey said Clear the Deck repeated Multiattack) has five d10 superiority dice and no Clear the Deck; dossiers/boatswain-tarto.html has four dice and Clear the Deck as a bonus action. Settles the item "What Clear the Deck does". inbox/chat-staff-npcs.md.
-- **decide** Ryeback's stolen weapon. The staff-NPC chat ruled the custom musket was stolen and his pistol is the hand cannon; dossiers/winston-ryeback.html says the custom pistol was stolen. Settles the Musket line question. inbox/chat-staff-npcs.md.
 - **decide** Saerthe's Barrier: a full action (Korey's words in the chat) or one attack of his Multiattack (the block in the repo)? dossiers/saerthe-abizjn.html. inbox/chat-staff-npcs.md.
-- **add** Why Vaelorix took the Engine from Ostekk. He heard of a tinkerer whose machines needed no charming and came for them as gardeners. He took the Engine because it kept them running, without knowing a Rod piece was inside, face to face, and left Ostekk alive. Answers the decide on dossiers/vaelorix.html and dossiers/ostekk.html. inbox/chat-tyrant-ship.md.
 - **add** A creature the Faelight spore coats stays coated until the cloud ends, even after it leaves the cloud. The spore can be fed another slot and reused. artifacts/faelight-spore.html. inbox/chat-tyrant-ship.md.
-- **add** The spore was moved to the Garden. artifacts/faelight-spore.html, vessels/tyrant-ship.html. inbox/chat-tyrant-ship.md.
-- **add** Helm attunement passes with an action, so any crew member who can cast can hold position, drift and answer hails while the cadets are ashore. vessels/tyrant-ship.html (How to run), rules/index.html § Ship & crew. inbox/chat-tyrant-ship.md.
-- **add** Threat guardrail for H'Catha (DM voice): creatures the crew fights stay around CR 3 or lower, single hits average about 10, and danger comes from numbers and position. campaign/index.html § H'Catha arc. inbox/chat-tyrant-ship.md.
-- **add** Ostekk wants the meteor's adamantine and sends automatons after it. dossiers/ostekk.html. inbox/chat-tyrant-ship.md.
-- **add** When a suppressed paracausal source is released, Gregory takes a sudden surge, close to a feedback loop. A.T.L.A.S. is the same: muted while sealed in the Brig, it would surge if unsealed. crew/gregory.html, artifacts/atlas.html. inbox/chat-tyrant-ship.md.
 - **add** Gregory's pull stays one-way for now ("hold off on the two-way"). crew/gregory.html. inbox/chat-tyrant-ship.md.

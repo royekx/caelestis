@@ -243,9 +243,9 @@ Gender: Male (already set).
 | Fact | Source | Confidence |
 |---|---|---|
 | Has run the Weeping Goddess kitchen for years. | dossier/winston-ryeback | High |
-| Belongs to no operational crew, and hears everything that passes through the galley. | fleet | High |
+| Hears everything that passes through the galley; since Voyage 3 he sails with the crew aboard the tyrant ship. | fleet | High |
 | Wears a breastplate over his apron when there is trouble, with a hand cannon and a longsword on his hip. | dossier/winston-ryeback | High |
-| His custom pistol was stolen from his quarters in the thefts, and he talks about it often. | dossier/winston-ryeback, fleet | High |
+| His custom musket was stolen from his quarters in the thefts, and he talks about it often; the hand cannon is his pistol. | dossier/winston-ryeback, fleet | High |
 | Born under the Feast of the Moon, Sagittarius. | dossier/winston-ryeback | Hold: Casey asked and was not told; a Stellar Reading beat. |
 
 ### Zerathis
