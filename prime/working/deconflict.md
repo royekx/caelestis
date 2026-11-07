@@ -275,8 +275,8 @@ items in one chat share pages, so each page is rewritten once. Each pull
 request merges before any later work reads its pages.
 
 
-1. ~~**Build: the cosmos.**~~ Done: on the pages through PRs #163 and the
-   Fonains follow-up, `divine-rules.md` deleted.
+1. ~~**Build: the cosmos.**~~ Done: on the pages through PRs #163 and #164,
+   `divine-rules.md` deleted.
 2. **Build: the FIA story.** The pre-fixes in 3e, then `fia-story.md`
    § Promotes to in three pull requests, with 2.11, 2.14, 2.20's Vth'orama
    lines, 2.21, rulings 17 and 18, the house mark and personal seal across
