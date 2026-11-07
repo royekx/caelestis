@@ -35,7 +35,7 @@ staging once Korey has read and accepted them.
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 6 | 12 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 10 | 1 | 0 | 0 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 4 | 2 | 0 | 3 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 4 | 1 | 0 | 3 |
 | Dossiers | dossiers/ | 13 | 17 | 0 | 0 | 1 |
 | Crew | crew/ | 10 | 18 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 2 | 0 | 1 |
@@ -44,8 +44,8 @@ staging once Korey has read and accepted them.
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 1 | 13 | 3 | 0 | 0 |
-| Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 10 | 13 | 1 | 0 | 2 |
-| **Total** |  | **130** | **160** | **31** | **1** | **48** |
+| Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 9 | 13 | 1 | 0 | 2 |
+| **Total** |  | **129** | **160** | **30** | **1** | **48** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -57,7 +57,7 @@ Each settles items on several pages at once. Rule these first.
 2. ~~**Aperture or Atrium.**~~ *Answered: Atrium.*
 3. ~~**Does opening a heart need a Monolith?**~~ *Ruled: no; linking does (STAGING round 2).*
 4. ~~**A name for Vecna's working.**~~ *Ruled: the Circle of Fifths, his name for it; GAL-01's part is the eye inscription (STAGING, Campaign).*
-5. ~~**Act structure and the Citadel.**~~ *Ruled: Citadel and Core are late Arc 3 or Arc 4.*
+5. ~~**Act structure and the Citadel.**~~ *Ruled: Citadel and Core are late Act 3 or Act 4.*
 6. ~~**N'ghathrod's five centuries.**~~ *Ruled: exile from Glyth about four centuries ago; centuries of searching; the push for hearts only in recent decades.*
 8. ~~**How the Seekers divide.**~~ *Ruled: the Seekers are the faith; each chapter is named for what it seeks (the Seekers of Secrets are one); every chapter worships Vecna, often under another name, unaware of the others.*
 9. ~~**Astra's name and wound.**~~ *Ruled: any of the three names; the Axiom strain's ripple woke and broke it.*
@@ -438,7 +438,7 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
   src: Korey, 2026-10-29
 
 - **[later]** How the crew could reach Oerth, and how late
-  Known: Oerth lies in Greyspace, far across the Erevos Galaxy on the opposite arm from Realmspace, and no lane on Caelestis's charts reaches it. The Radiant Citadel and the Core Monolith are late Arc 3 or Arc 4 destinations, reached by a long voyage or through a linked heart. What Oerth looks like and how a visit plays (it should be horrible) are not set either.
+  Known: Oerth lies in Greyspace, far across the Erevos Galaxy on the opposite arm from Realmspace, and no lane on Caelestis's charts reaches it. The Radiant Citadel and the Core Monolith are late Act 3 or Act 4 destinations, reached by a long voyage or through a linked heart. What Oerth looks like and how a visit plays (it should be horrible) are not set either.
   src: working/vecna.md § Open; Korey (Oerth is reachable, and a visit should be horrible)
 
 - **[later]** Greyspace's CSC number and Oerth's designation
@@ -765,29 +765,21 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 ### campaign/index.html
 
-- **[decide]** Arc 1's close and the length of H'Catha *(prep)*
-  Campaign § Arc 1 says Arc 1 closes around sessions 8 to 10 with the attack on Caelestis and graduation, at level 4. The H'Catha mission begins at V007 and may run several voyages, and the crew is already level 4. Options: (a) H'Catha runs V007–V008 and graduation lands at V009–V010 as written; (b) Arc 1 runs longer and the session range moves; (c) the attack and graduation compress into one voyage. Touches: campaign/index.html (Arc 1, the close), campaign/voyages/index.html.
+- **[decide]** Act 1's close and the length of H'Catha *(prep)*
+  Campaign § Act 1 says Act 1 closes around sessions 8 to 10 with the attack on Caelestis and graduation, at level 4. The H'Catha mission begins at V007 and may run several voyages, and the crew is already level 4. Options: (a) H'Catha runs V007–V008 and graduation lands at V009–V010 as written; (b) Act 1 runs longer and the session range moves; (c) the attack and graduation compress into one voyage. Touches: campaign/index.html (Act 1, the close), campaign/voyages/index.html.
   src: memory-canon open-decisions (Planned line); campaign section, conflict C17
 
 - **[decide]** Who goes ashore at H'Catha and who holds the helm *(prep)*
   Two sources disagree. The spine's add had Saerthe at the helm with Ryeback commanding the deck; V006's "How a table of ten gets run" puts Ryeback and Miken with the ship and the chosen teacher ashore with Ezra. Campaign § the H'Catha mission states both as conditional on the instructor pick (Saerthe can take the helm; otherwise the teacher goes ashore). Rule which holds, or keep it conditional. Touches: campaign/index.html (#hcatha-arc), campaign/voyages/index.html (V006 swap, V007).
   src: memory-canon open-decisions (Voyage 007 intent); voyages V006; campaign section, conflict C13
 
-- **[decide]** Arc 2's second system
-  Arc 2 stays in Realmspace plus at most one other system (Campaign § Arc 2). Which second system, and why the Fleet works there, is not chosen. Touches: campaign/index.html (#arc-2), locations/.
+- **[decide]** Act 2's second system
+  Act 2 stays in Realmspace plus at most one other system (Campaign § Act 2). Which second system, and why the Fleet works there, is not chosen. Touches: campaign/index.html (#arc-2), locations/.
   src: carried from the spine's "Arc 2's range" item (chat-early-planning § Cosmology and setting)
-  Waits on: deconflict ruling 11
 
 - **[decide]** What Gregory and Sol are missing
   STAGING § The theme named what Vecna, N'ghathrod, Astra Virex, Casey, Tumak, Bartholomew and Boogie each want, and said only that "Gregory and Sol carry it too". Campaign § Theme and § Crew say so and stop. Name each one's want in the theme's terms. Touches: campaign/index.html (#theme, #crew), crew/gregory.html, crew/sol.html.
   src: STAGING § The theme (round 2)
-
-- **[fix]** "Arc", never "Act" *(answered)*
-  The wiki says "Arc". The timeline events say "Act 2: ranked missions", "Act 3: N'ghathrod", "Act 4: the center" and "Act 3: Vth'oramu"; change each to "Arc". Sweep colony and ascension for any "Act 1–4" left. Memory canon's "Act" wording is Korey's spoken shorthand and does not need to match.
-  src: chat-cosmic-campaign-structure § Superseded; timeline; memory-canon open-decisions
-  answered: inbox/chat-early-planning.md § Wiki structure (Settled: "Acts became Arcs"); inbox/chat-cosmic-campaign-structure.md § V006 and the arc (Settled: "The wiki says 'Arc', never 'Act'"; Korey: "the spine governs")
-  done: the campaign and opposition pages (campaign section); timeline.json still needs it (section 8).
-  Waits on: deconflict ruling 11
 
 - **[decide]** What the meteor is and why Caelestis wants it *(prep)*
   Fixed points: the meteor is adamantine, large, mined in an occupied area, and matters locally, to Caelestis and to the Order; working to obtain it is a form of treason on H'Catha; memory canon says "adamantine's value still needs something more". Options:
@@ -809,22 +801,22 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   src: chat-astral-sea-worldbuilding § Superseded; chat § Open
 
 - **[decide]** Who signs the order that keeps the crew together *(prep)*
-  At graduation the crew becomes Driftwardens and stays one unit. Who signs that order sets Arc 2's tone. Options:
+  At graduation the crew becomes Driftwardens and stays one unit. Who signs that order sets Act 2's tone. Options:
   (a) Mirt: patronage, warm and compromising.
   (b) A Watcher or the Order: fated, cosmic.
   (c) Saerthe: personal, a mentor's call.
   (d) The Fleet, as routine paperwork with the real reason hidden, so "who signed this order?" becomes a thread the crew can investigate.
-  Touches: campaign/index.html (Arc 1 close, Arc 2 shape), dossiers/mirt.html or dossiers/saerthe-abizjn.html if either signs.
+  Touches: campaign/index.html (Act 1 close, Act 2 shape), dossiers/mirt.html or dossiers/saerthe-abizjn.html if either signs.
   src: chat-early-planning § Campaign Planning, Open (turn 300)
 
 - **[decide]** Mirt's standing after the graduation attack *(prep)*
   The attack aims at Mirt's public disgrace: a restricted vault breached on his watch, during his own crew's graduation. Options:
   (a) The crew saves his standing; they are why it is not a massacre.
-  (b) His standing suffers: an inquiry that clouds Arc 2.
+  (b) His standing suffers: an inquiry that clouds Act 2.
   (c) Ambiguous: limited damage, Mirt shaken, his future uncertain.
   The Fork state (A.T.L.A.S. gone or returned) may feed the answer.
   Narrowed (campaign section): the Fork states on opposition/vthorama.html keep their per-state lines as direction (State A: his standing takes a real hit; B1: it rises). What stays open is what the attack itself does to him, apart from the heist.
-  Touches: campaign/index.html (Arc 1 close), opposition/vthorama.html (the Fork), dossiers/mirt.html, factions/vocath-operation.html (whether Vocath's grudge is served).
+  Touches: campaign/index.html (Act 1 close), opposition/vthorama.html (the Fork), dossiers/mirt.html, factions/vocath-operation.html (whether Vocath's grudge is served).
   src: chat-early-planning § Campaign Planning, Open (turn 300)
 
 ---
@@ -834,7 +826,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   src: crew/index.html (retired § Open); section 7 (2026-10-28)
 
 - **[decide]** Contract categories *(prep)*
-  Contracts are built on Campaign § Arc 2, and this decide names their categories there. Ruled: three or four categories by how a contract ties to the world (loose, Seekers-tied, personal, more as needed), and contracts surface from a world already in motion (STAGING round 4). Name the categories and set how many of each the board offers at a time.
+  Contracts are built on Campaign § Act 2, and this decide names their categories there. Ruled: three or four categories by how a contract ties to the world (loose, Seekers-tied, personal, more as needed), and contracts surface from a world already in motion (STAGING round 4). Name the categories and set how many of each the board offers at a time.
   src: Korey, 2026-10-25 (round 4)
 
 ### opposition/vthorama.html
@@ -845,7 +837,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 - **[decide]** What the surface attack at graduation is made of *(prep)*
   The page has "security diverted by the surface operation" while Joffrey runs the Brig, and names nothing in that operation. The early plan collapsed the module's two finale events into one: the attack hits during the ceremony, a battle across the school. It ported these module pieces: Mustaf Shultz and his giff mercenaries, a decapitation threat, Miken at 2 HP, Wizpop's return (now Ostekk-6), and the transmutation sigil as Vocath's house mark. Qitru and her githyanki have since moved to H'Catha. Vocath is a merchant, no fighter, and stays out of the siege himself (settled: chat-cosmic-campaign-structure § Act 1 retrofit), so whoever leads the surface operation is hired or his crew. Pick which pieces stay, and write the surface operation into the Brig run section.
-  Touches: opposition/vthorama.html (the run, the Fork; the page names "the surface attack" and nothing more), campaign/index.html (Arc 1 close), factions/vocath-operation.html, dossiers/miken.html.
+  Touches: opposition/vthorama.html (the run, the Fork; the page names "the surface attack" and nothing more), campaign/index.html (Act 1 close), factions/vocath-operation.html, dossiers/miken.html.
   src: chat-early-planning § Campaign Planning, Arc 1 close and planning method (turn 300); dossiers/qitru.html
 
 - **[later]** How the colony pivots without Vocath
@@ -892,7 +884,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 ### opposition/vecna.html (early planning)
 
 - **[decide]** How the eye's clock advances *(prep)*
-  Ruled: a hidden narrative clock tied to the invasion, escalating toward the end of Arc 4 (STAGING). Open: whether a roll or milestones drive it, any level ceiling, and the starting value (the chart has 67%; 10 of 15 marks, about 9 planets left).
+  Ruled: a hidden narrative clock tied to the invasion, escalating toward the end of Act 4 (STAGING). Open: whether a roll or milestones drive it, any level ceiling, and the starting value (the chart has 67%; 10 of 15 marks, about 9 planets left).
   src: Korey, 2026-11-01
 
 - **[later]** Does Erevos turn faster?
@@ -1286,7 +1278,7 @@ left here is open.
 ### Every fragment
 
 - **[decide]** What a fragment made whole does
-  A whole fragment does not open the First Heart (Korey 2026-10-27: "Assembling the pieces should do something but probably not open the first heart. Our structure has changed since then."). What assembling one does is not set. The old "second key" (Vecna holding the whole Rod as his fallback) is retired with it. Every fragment page and the Artifacts register carry this as a Still to decide sentence, and nothing else. Two knock-ons wait on it: the twins carry both Dissolution pieces, so the Dissolution fragment is the first that could be whole in play; and the old gate on the twins ("not a key to the First Heart before about level 12, early in Arc 3") has lost its object, so what that level-12 gate now gates is part of this decide. Pages that carried the First Heart key (artifacts/, factions/runekeepers.html, locations/wayfinders-homeworld.html, rules/index.html, crew/tumak.html, connections.json) no longer say it.
+  A whole fragment does not open the First Heart (Korey 2026-10-27: "Assembling the pieces should do something but probably not open the first heart. Our structure has changed since then."). What assembling one does is not set. The old "second key" (Vecna holding the whole Rod as his fallback) is retired with it. Every fragment page and the Artifacts register carry this as a Still to decide sentence, and nothing else. Two knock-ons wait on it: the twins carry both Dissolution pieces, so the Dissolution fragment is the first that could be whole in play; and the old gate on the twins ("not a key to the First Heart before about level 12, early in Act 3") has lost its object, so what that level-12 gate now gates is part of this decide. Pages that carried the First Heart key (artifacts/, factions/runekeepers.html, locations/wayfinders-homeworld.html, rules/index.html, crew/tumak.html, connections.json) no longer say it.
   src: chat 2026-10-27; section 4 (2026-10-28)
 
 ### artifacts/index.html
@@ -1795,7 +1787,7 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
 
 ### NEW: Campaign board
 
-**Purpose.** The DM's at-a-glance view of the run: planned against actual per voyage, each crew member's contribution, the arcs, the off-screen powers, and the ripples into Arc 2. It exists today only as claude.ai artifacts. Whether it becomes `prime/timeline/` or a separate page is an automation decide (see the Automation and tracker section).
+**Purpose.** The DM's at-a-glance view of the run: planned against actual per voyage, each crew member's contribution, the arcs, the off-screen powers, and the ripples into Act 2. It exists today only as claude.ai artifacts. Whether it becomes `prime/timeline/` or a separate page is an automation decide (see the Automation and tracker section).
 
 **Voice.** DM.
 
@@ -1803,7 +1795,7 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   src: chat-cosmic § Open
 
 - **[add]** What the board shows
-  Planned against actual per voyage; each crew member's contribution; the arcs; the off-screen powers; ripples into Arc 2.
+  Planned against actual per voyage; each crew member's contribution; the arcs; the off-screen powers; ripples into Act 2.
   src: chat-cosmic § Wiki structure rules (turn 439); memory-canon (DM views at a glance)
 
 ### NEW: Campaign shape
@@ -2058,8 +2050,6 @@ rulings went to STAGING. Each lists the pages it touches.
 
 ### Conflicts and memory-only facts
 
-- **decide** Arc 2. STAGING makes Arc 2 the H'Catha arc inside Act 1; campaign/index.html titles "Arc 2: Driftwardens in the Field", and the Answered list still holds "'Arc', never 'Act'".
-  Waits on: deconflict ruling 11
 - **decide** Casey's Stellar Reading. Once he spends the star, must he name a sign (no declining)? registry/crew-manifest/casey-geim.html says he "may attempt to name the constellation". crew/casey.html.
 - **decide** Tumak's Runechild sorcery. Is the subclass on his sheet now, at his first Sorcerer level, or from Sorcerer 3 like the rest of the table? crew/tumak.html, rules/index.html § Standing mechanics.
 - **decide** The loose Rod pieces and beholders. Do the pieces stay clear of beholders, Xanathar's piece the one exception? artifacts/rod-of-seven-parts.html lists it under "Still to decide".

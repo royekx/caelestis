@@ -1276,7 +1276,7 @@
       "summary": "A third-intake cadet who posts a notice-board job, and whose uncle collects things and likes visitors.",
       "facts": [
         {
-          "t": "Hessa Dun is a third-intake cadet at the Academy, planted in Arc 1.",
+          "t": "Hessa Dun is a third-intake cadet at the Academy, planted in Act 1.",
           "src": "dossiers/hessa-dun.html"
         },
         {
@@ -3046,7 +3046,7 @@
       "label": "Captain Haymond Rolt",
       "type": "person",
       "scope": "caelestis",
-      "summary": "The crew's handler in Arc 2, overseeing several Driftwarden crews from Ondrel Anchorage.",
+      "summary": "The crew's handler in Act 2, overseeing several Driftwarden crews from Ondrel Anchorage.",
       "facts": [
         {
           "t": "Captain Haymond Rolt oversees several Driftwarden crews at once, out of Ondrel Anchorage.",

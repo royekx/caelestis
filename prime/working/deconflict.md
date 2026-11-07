@@ -6,8 +6,8 @@ working layer and process docs. One subject, one row; every path for it sits
 in that row. Paths are under `prime/` unless they start with `data/`,
 `restricted/` or `prime/working/` (written `working/`).
 
-**Counts.** Part 1, Korey decides: 24 · Part 2, decided and waiting: 9 rows ·
-Part 3, working layer cleanup: 47 rows · Part 4, cosmetic: 11.
+**Counts.** Part 1, Korey decides: 23 · Part 2, decided and waiting: 9 rows ·
+Part 3, working layer cleanup: 43 rows · Part 4, cosmetic: 11.
 
 **Summary.**
 - The ten Part 1 questions that touch Voyage 7 (§ A) and the V007 rows of Part 2 are on the pages.
@@ -27,14 +27,6 @@ Every quote here was opened and confirmed in the file named.
 
 **Campaign structure**
 
-11. **Acts and arcs.** The campaign runs in Acts. An Act holds several arcs.
-    Act 1's arcs are Orientation, H'Catha and Graduation; Act 2 runs at
-    levels 6 to 10 or 11. Arcs are names for organizing the timeline and the
-    bearings, and they can form in retrospect: when the crew dives into
-    something, the arc is named afterward. The retired "Act" term in
-    `working/terms.json` goes; the old sense of "Arc 2 to 4" as quarters of
-    the campaign is what retires. PAGE-GUIDE § 3 and every arc and level line
-    change in one change audit.
 12. **Homebound.** Homebound opens when Tumak holds every rune. On the way,
     his work with the Wayfinding marks and the sanctuaries changes: he updates
     the marks actively. He completes it near the end of his levels. How
@@ -172,8 +164,6 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 
 | Entry | Action |
 |---|---|
-| § Act 1 and its arcs | Lands with the ruling 11 audit |
-| § Two plans: "toward the end of Arc 4" | Renumber after Part 1 #11 |
 | § N'ghathrod l.53 and l.61 (long life) | Rewrite after Part 1 #17 |
 | § N'ghathrod's elder brain ("close to the wreck that carried Tharizdun's temple") | Reword after Part 1 #22 |
 | § N'ghathrod's elder brain; § Cre'Tez | Narrow to what is not yet on the page (FIA and cosmos audits) |
@@ -204,7 +194,6 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 | How the Flow works (l.233) | Rewrite as "does divine magic weaken across galaxies?"; merge the Memory fix |
 | Chart fix "Center": "Why Reach-born gods suffer more stays a decide" | Dangling; drop the pointer or open a real decide |
 | A second Zenith on Aethris (filed under meteor-hub) | Move to locations/aethris; keep only "can the ritual bring one" |
-| "Arc", never "Act" (answered); decide "Arc 2"; Arc 2's second system | Fold into Part 1 #11 |
 | Cross-cutting 18 Clint "deliberate dive" | Rewrite: fia-story says the pool opened by chance |
 | Hall of the Watchers decide and add | Rewrite against the 2026-10-28 Order-house ruling; drop "SPH-01" |
 | Runes 17–19 adds; early-home door; "Homebound is always free" | Mark dependent on Part 1 #12 |
@@ -232,7 +221,6 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 | `fia-story.md` | Run its change audit (Part 2.21) after Part 1. Before promoting, fix: Strake's reach (l.271 "only Cairn's scope" vs l.255 and l.414); "Strake further off" (l.469, 532) vs "nearer home"; drop "perhaps" (l.294); "the network", "Caelestis Fleet" and "the *Crow*" are retired or mismatched in `terms.json`, so name the web of the taken first; Bartholomew's **Proposed** SA-002 1482 line ("the earliest entry" is false, 1481 exists; CON-312 is a constellation number, so give the transient a registry number); give Mirt's belief a basis now that WM-002 loses the hull marking; Zhauveth "end a crew with a word" vs "incapable of violence" (domination is not violence; say so); get "the true-formed" ruled before the rename; three PRs vs "One pull request" (3g) |
 | `tharizdun.md` | Fully promoted; mixed pronouns. Move Open to BACKLOG, delete. Its Darkest Day "bait" line goes with Part 1 #25 |
 | `divine-rules.md` | Stale: "sphere", "the Flow", Reach-born polarity, "Nothing breaks" vs cosmology's destruction; its two Open questions are answered on cosmology. Promote the worship section, rule "Reach debris and worlds", then delete |
-| `campaign-middle.md` | Rewrite "Arc 2" after Part 1 #11; point its Open at BACKLOG |
 | `nct-127.md`, `common-knowledge.md` | Keep |
 
 ### 3f. Inbox sweeps
@@ -297,11 +285,10 @@ Every item below closes before V007 prep. Chats are grouped by area: the
 items in one chat share pages, so each page is rewritten once. Each pull
 request merges before any later work reads its pages.
 
-1. **Build: the story spine.** Ruling 11 (Acts and arcs, with 2.5's arc
-   lines), 2.8, 2.9, 2.10, 2.23, and rulings 13, 25 and 26. Shared pages:
+1. **Build: the story spine.** Acts and arcs (ruling 11) are on the pages.
+   Left: 2.8, 2.9, 2.10, 2.23, and rulings 13, 25 and 26. Shared pages:
    `campaign/index.html`, `opposition/`, `principles.html`, `timeline.json`,
-   `chart/`. Part 3 rows that wait on 11 or 25 (`campaign-middle.md`,
-   `tharizdun.md`) land here.
+   `chart/`. `tharizdun.md` is deleted with ruling 25.
 2. **Build: the FIA story.** The pre-fixes in 3e, then `fia-story.md`
    § Promotes to in three pull requests, with 2.11, 2.14, 2.20's Vth'orama
    lines, 2.21, rulings 17 and 18, the house mark and personal seal across
