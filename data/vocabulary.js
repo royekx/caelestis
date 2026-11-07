@@ -136,6 +136,7 @@ var CAELESTIS_VOCAB = [
   "Ryeback",
   "Saerthe",
   "Sahuagin",
+  "Saltjaw",
   "Sardax",
   "Satyr",
   "Scavver",
