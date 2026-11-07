@@ -18,8 +18,10 @@ inbox/  →  drafts  →  BACKLOG.md  →  STAGING.md  →  pages under prime/
 2. **Drafts** (`*.md` in this folder) are where a subject is argued out. Each
    ends with **Promotes to** and **Open**. One subject, one draft: its
    rulings, its touch list (Promotes to) and its open questions live in it,
-   never in a companion file. When the change audit has carried it to the
-   pages, the draft is deleted.
+   never in a companion file. A draft whose work runs across several chats
+   ends with a **Handoff** section: the next chats in order, each with the
+   line that opens it. When the change audit has carried it to the pages,
+   the draft is deleted.
 3. **BACKLOG.md** lists everything still to rule on or fix, grouped by the page
    it lands on: facts missing from a page, page lines that are wrong or stale,
    open calls, and retired material to drop.
@@ -75,4 +77,5 @@ staging is distributed page by page.
 | [ship-roles.md](ship-roles.md) | Review of the ship mechanics run so far, and revised ship roles for the tyrant ship and typical ships | Promoted 2026-11-02 to rules/index.html § Ship & crew, the handouts, and the vessel entries; the V007 crossing table's entry 7 waits on a ruling |
 | [campaign-middle.md](campaign-middle.md) | Building the post-graduation middle: the invasion ladder, fronts, contracts as nodes, cadence | Draft |
 | [common-knowledge.md](common-knowledge.md) | What a cadet would know about each NPC in the player record, sourced and graded, and how it fits the record | Draft; awaits Korey entity by entity |
+| [deconflict.md](deconflict.md) | The 2026-11-07 audit of the whole repo: conflicts to rule on, rulings waiting for their pages, working-layer cleanup | Draft; Part 1 awaits Korey |
 | [fia-story.md](fia-story.md) | The Vth'orama, Vocath, Cairn and the *Bellwether Crow*, and the FIA they show through | Settled; its Promotes to is the change audit's touch list; deleted when the audit is done |
