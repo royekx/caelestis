@@ -548,6 +548,10 @@
     {
       "pattern": "stat-key\">Device<|\\b(?:Fleet|Watchers|order|Order|faction)(?:'s|'|&rsquo;s|&rsquo;) device\\b|\\b[Tt]heir device\\b|\\b[Ii]ts device\\b",
       "use": "emblem (a faction's coat of arms or insignia)"
+    },
+    {
+      "pattern": "\\b[Aa]bove[ -][Bb]ridge\\b",
+      "use": "Gold; every FIA file is Gold — Bridge, and Above Bridge is retired (Korey, 2026-11-07)"
     }
   ],
   "voice": [
