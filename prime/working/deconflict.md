@@ -288,11 +288,26 @@ request merges before any later work reads its pages.
    (FR-016 renders it); Boogie's
    FIA line is a plain intake note in LG-003; Hollis Post stays; Verrow is Strake's quartermaster;
    the Temple of Moloch broke off with Thessalar's laboratory.
-3. **Mechanic: Tarto, the hold, the malformed, and Homebound.** Tarto's
-   mechanic review (BACKLOG § dossiers/boatswain-tarto.html), the hold, the
-   malformed template, then Homebound and the runes (ruling 12) from the
-   Tumak sweep and `crew/tumak.html`. Split Homebound into its own chat if
-   it runs long.
+3. ~~**Mechanic: Tarto, the hold, the malformed.**~~ Done: the ally blocks
+   for Tarto and Saerthe, after table simulations, and the run-at-a-glance
+   principle in PR #176; the hold at Cairn as an outline in #177; the
+   Colony illithid archetypes in place of the malformed template in #178.
+   Homebound split off (3a).
+3a. **Lore: Homebound, story first.** Korey's method: a story plus a
+   problem makes an adventure, so the story comes before the mechanic.
+   Answer first, without fine detail: what the Wayfinders' world hides from,
+   why hiding became its answer and how, and how long it has hidden (how
+   many Runekeeper generations). Then the mechanic, from ruling 12 and the
+   Tumak sweep in `inbox/chat-crew-tumak-gregory-bartholomew.md` (turns
+   336–339). Offered in the mechanic chat and not yet accepted: the Anchors
+   (runes 17–19) as earlier Runekeepers' havens, reached by travel and woven
+   into the runes; Homebound as home always in reach once every rune is
+   held, free, at a moment the player chooses; the early-home door dropped.
+   Pages: rules/index.html, rules/wayfinder-path-dm.html, crew/tumak.html,
+   campaign/plot-hooks.html, locations/wayfinders-homeworld.html,
+   artifacts/dissolution-fragment.html, the Wayfinder's Path tab on
+   registry/crew-manifest/tumak-swan.html. Closes the BACKLOG items that
+   wait on ruling 12.
 4. **Build: the DM tools.** BACKLOG § Automation and tracker, "Overhaul
    the DM tools": the tracker first, then the Voyages board, the hub, the
    timeline and the overlay, rebuilt against the cleaned pages.
@@ -300,7 +315,7 @@ request merges before any later work reads its pages.
    and the rebuilt tools. Ezra's hook, the sealed letter and crossing entry
    7 are built here (ruling 8, BACKLOG § campaign/voyages).
 
-Not blocking V007: the thief (14b, in BACKLOG § opposition/vthorama.html).
+Not blocking V007: the thief (14b, in BACKLOG § opposition/vthorama.html), and Homebound (3a), since the table runs on one full rune and the immediate Wayfind for now.
 
 Delete this draft when every item is closed.
 
@@ -312,4 +327,4 @@ the working layer. Delete this draft when every item is closed.
 
 ## Open
 
-Part 1 is closed. The thief (14b) is open in BACKLOG; Homebound has its own chat (ruling 12).
+Part 1 is closed. The thief (14b) is open in BACKLOG; Homebound has its own lore chat (Handoff 3a).
