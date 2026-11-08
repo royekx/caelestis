@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 13 | 15 | 4 | 0 | 2 |
+| Cosmology | cosmology/, glossary/, chart/ | 14 | 15 | 4 | 0 | 2 |
 | Locations | locations/ (Fonains stays in its own section) | 18 | 26 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 13 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **127** | **168** | **25** | **1** | **47** |
+| **Total** |  | **128** | **168** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -246,6 +246,10 @@ Order under each page: decide, fix, drop, add.
 - **[later]** CSC 40218, the 1485 entry in SA-002
   SA-002's 1485 entry: a recurrent harmonic emission on an eight-watch period at CSC 40218, logged by instrument, source unidentified, status Monitoring. The system need not lie in the Caelestis Sector and is placed nowhere yet. It was outer Virenspace (CSC 69387), moved off Viren so it no longer claims Casey ahead of his 1486 line (Korey, 2026-11-07). Give it a place and a cause when play needs one.
   src: Korey, 2026-11-07 (FIA cold read)
+
+- **[decide]** When and why Vth'oramu came in toward Cairn's lane
+  Strake logged Vth'oramu twice: once coming in toward Cairn's lane (Tarroway's four-sweep plate) and once going back out (one sweep, a later filing). The faint returns on that stretch are the colony's couriers. What drew it in, how long it stayed, and where both passings fall against the raid on *Bellwether Crow* are not set.
+  src: Korey, 2026-11-08 (Tarroway plate)
 
 - **[later]** The eye's alignment turns with the galaxy
   For the eye to hold, the fifteen marks must stay on their strokes while Greyspace and the marks circle Erevos at different speeds, which turns the axis. A flavour detail, and a possible clock for later: the alignment drifting, or coming due. Ties to the decide on how the inscription is worked. Planning only; it does not go on pages.
