@@ -36,7 +36,7 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 12 | 1 | 0 | 0 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 7 | 1 | 0 | 3 |
-| Dossiers | dossiers/ | 12 | 17 | 0 | 0 | 1 |
+| Dossiers | dossiers/ | 12 | 16 | 0 | 0 | 1 |
 | Crew | crew/ | 11 | 20 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 5 | 11 | 0 | 18 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **127** | **168** | **25** | **1** | **47** |
+| **Total** |  | **127** | **167** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -968,14 +968,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[decide]** Beshaba's want *(prep)*
   Beshaba's reward for the oath is power, and to give it shape she lays a want of her own on Sol as a quest (STAGING § Sol). What she wants, and so the quest, is not set. Touches: dossiers/beshaba.html, crew/sol.html.
   src: STAGING § Sol; factions/deities.html later "How far to develop Tymora"
-
----
-
-### dossiers/boatswain-tarto.html
-
-- **[later]** Mechanic review of Tarto's stat block
-  The block stands as five d10 superiority dice, seven maneuvers and Know Your Enemy, with Clear the Deck cut (deconflict ruling 5). Run caelestis-mechanic-review on it in a mechanic chat. Touches: dossiers/boatswain-tarto.html, statblocks/index.html.
-  src: deconflict ruling 5, 2026-11-07
 
 ---
 
