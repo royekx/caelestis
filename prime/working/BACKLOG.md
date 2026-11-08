@@ -31,7 +31,7 @@ staging once Korey has read and accepted them.
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 13 | 15 | 4 | 0 | 2 |
-| Locations | locations/ (Fonains stays in its own section) | 18 | 25 | 0 | 0 | 1 |
+| Locations | locations/ (Fonains stays in its own section) | 18 | 26 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 13 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 12 | 1 | 0 | 0 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **127** | **167** | **25** | **1** | **47** |
+| **Total** |  | **127** | **168** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -325,6 +325,10 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
   src: memory-canon (open-decisions, Voyage 007 intent)
 
 ### locations/hcatha.html
+
+- **[later]** Cairn's lane and H'Catha
+  Whether Cairn's lane leaves Realmspace past H'Catha, and whether H'Catha's port has seen its traffic: Vocath's supply ships and the colony's couriers. If it does, Ondessa's port or Nereth Vaul could have heard something, a way into the Cairn thread from H'Catha without going near the station. The chart (prime/chart/galaxy.js CAIRN_DIR) sets only that the lane runs outward along the arm. Touches locations/hcatha.html, locations/cairn-station.html, chart/. Waits until the crew is at H'Catha.
+  src: Korey, 2026-11-08
 
 - **[decide]** What the rulers can see *(prep)*
   (a) The Sovereign Eye lets every ruler see all, so none can act openly against another (memory, "H'Catha sovereign", which supersedes earlier options).
