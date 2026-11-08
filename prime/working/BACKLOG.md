@@ -34,8 +34,8 @@ staging once Korey has read and accepted them.
 | Locations | locations/ (Fonains stays in its own section) | 18 | 24 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 13 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
-| Factions | factions/ | 12 | 11 | 1 | 0 | 0 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 6 | 1 | 0 | 3 |
+| Factions | factions/ | 12 | 12 | 1 | 0 | 0 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 7 | 1 | 0 | 3 |
 | Dossiers | dossiers/ | 12 | 17 | 0 | 0 | 1 |
 | Crew | crew/ | 11 | 20 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **127** | **164** | **25** | **1** | **47** |
+| **Total** |  | **127** | **166** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -628,6 +628,10 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 ### factions/fleet.html (was academy-fleet.html)
 
+- **[later]** The FIA's ambient files as hooks
+  The archive is mostly ordinary files so the Cairn thread shows only when read across it (Korey, 2026-11-07). The ambient entries can each become an adventure: LG-001 (Strake depot stores audit, crossed crates, a careless carrier), SA-003 (a nameless fever on the Hollis rotation, quarantine under review), WM-004 (*Copper Wren*'s stretch of lane that "pressed in"), and in FR-005 the overdue *Mendren* and *Quivering Lark*, the Hollis beacon reading late, and the gravitational variance. None carries a hidden truth yet.
+  src: Korey, 2026-11-07
+
 - **[later]** Driftwarden ranks
   Ruled: one service, many ranks, the way every police officer is a cop. Set the ladder from the newest graduate up to the organization's head, and where the crew starts.
   src: Korey, 2026-10-26
@@ -866,6 +870,10 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 ---
 
 ### opposition/vecna.html (early planning)
+
+- **[later]** A rhythm no one can hear, as a Seeker chapter's experience
+  People on the lanes moving in time to a beat none of them can hear, as if dancing: cut from the FIA (too strange for the Fleet to file), kept as a possible experience of one of Vecna's Seeker chapters (Korey, 2026-11-07). It rhymes with Boogie's Pulse.
+  src: Korey, 2026-11-07
 
 - **[decide]** How the eye's clock advances *(prep)*
   Ruled: a hidden narrative clock tied to the invasion, escalating toward the end of Act 4 (STAGING). Open: whether a roll or milestones drive it, any level ceiling, and the starting value (the chart has 67%; 10 of 15 marks, about 9 planets left).
