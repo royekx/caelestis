@@ -240,7 +240,7 @@ Order under each page: decide, fix, drop, add.
   src: memory-canon (campaign-canon, Voyage 006 outcome; Lantern seated)
 
 - **[later]** CSC 31758, the 1491 entry in SA-002
-  SA-002's 1491 entry at CSC 31758, outer fringe (the old SYS-05): a faint star beyond the fringe charted at a different position on each survey pass, and two travellers from an uncatalogued system logged there the same cycle, who were given a referral to Caelestis Academy and enrolled later, after travelling on their own (Korey, 2026-11-07; the aurora is gone, so it no longer echoes Gregory's Cogfast entry). It is near where the twins came into Fleet space, not the homeworld; going there shows nothing. The number is in neither the survey nor the chart. Place the star in the survey, or leave it a catalogue number only. Not tied to Greyspace.
+  SA-002's 1491 entry at CSC 31758, outer fringe (the old SYS-05): a faint star beyond the fringe charted at a different position on each survey pass, and two travellers questioned as witnesses at a fringe settlement, who could name neither origin nor destination and were offered passage on Fleet transit and told of Caelestis Academy; the disposition of the offer is not recorded, and how they came to Caelestis is the player's to tell (Korey, 2026-11-07; the aurora is gone, so it no longer echoes Gregory's Cogfast entry). It is near where the twins came into Fleet space, not the homeworld; going there shows nothing. The number is in neither the survey nor the chart. Place the star in the survey, or leave it a catalogue number only. Not tied to Greyspace.
   src: Korey, 2026-10-28 (FIA rulings, 10); Korey, 2026-11-07
 
 - **[later]** The eye's alignment turns with the galaxy
