@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 13 | 14 | 4 | 0 | 2 |
+| Cosmology | cosmology/, glossary/, chart/ | 13 | 15 | 4 | 0 | 2 |
 | Locations | locations/ (Fonains stays in its own section) | 18 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 13 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **127** | **167** | **25** | **1** | **47** |
+| **Total** |  | **127** | **168** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -242,6 +242,10 @@ Order under each page: decide, fix, drop, add.
 - **[later]** CSC 31758, the 1491 entry in SA-002
   SA-002's 1491 entry at CSC 31758, outer fringe (the old SYS-05): a faint star beyond the fringe charted at a different position on each survey pass, and two travellers questioned as witnesses at a fringe settlement, who could name neither origin nor destination and were offered passage on Fleet transit; how they came to Caelestis is the player's to tell (Korey, 2026-11-07; the aurora is gone, so it no longer echoes Gregory's Cogfast entry). It is near where the twins came into Fleet space, not the homeworld; going there shows nothing. The number is in neither the survey nor the chart. Place the star in the survey, or leave it a catalogue number only. Not tied to Greyspace.
   src: Korey, 2026-10-28 (FIA rulings, 10); Korey, 2026-11-07
+
+- **[later]** CSC 40218, the 1485 entry in SA-002
+  SA-002's 1485 entry: a recurrent harmonic emission on an eight-watch period at CSC 40218, logged by instrument, source unidentified, status Monitoring. The system need not lie in the Caelestis Sector and is placed nowhere yet. It was outer Virenspace (CSC 69387), moved off Viren so it no longer claims Casey ahead of his 1486 line (Korey, 2026-11-07). Give it a place and a cause when play needs one.
+  src: Korey, 2026-11-07 (FIA cold read)
 
 - **[later]** The eye's alignment turns with the galaxy
   For the eye to hold, the fifteen marks must stay on their strokes while Greyspace and the marks circle Erevos at different speeds, which turns the axis. A flavour detail, and a possible clock for later: the alignment drifting, or coming due. Ties to the decide on how the inscription is worked. Planning only; it does not go on pages.
@@ -633,7 +637,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ### factions/fleet.html (was academy-fleet.html)
 
 - **[later]** The FIA's ambient files as hooks
-  The archive is mostly ordinary files so the Cairn thread shows only when read across it (Korey, 2026-11-07). The ambient entries can each become an adventure: LG-001 (Strake depot stores audit, crossed crates, a careless carrier), SA-003 (a nameless fever on the Hollis rotation, quarantine under review), WM-004 (*Copper Wren*'s stretch of lane that "pressed in"), and in FR-005 the overdue *Mendren* and *Quivering Lark*, the Hollis beacon reading late, and the gravitational variance. None carries a hidden truth yet. A cold player read built a Hollis thread out of them on its own: the Hollis beacon reading late, the fever on the Hollis rotation, lamp oil ending up at Hollis Post (LG-001), and the Saltjaw escorts drawn from the Hollis rotation (SA-005). It stands as a red herring; build on it if a Hollis adventure is wanted (Korey, 2026-11-07).
+  The archive is mostly ordinary files so the Cairn thread shows only when read across it (Korey, 2026-11-07). The ambient entries can each become an adventure: LG-001 (Strake depot stores audit, crossed crates, a careless carrier), SA-003 (a nameless fever on the Hollis rotation, quarantine under review), WM-004 (*Copper Wren*'s stretch of lane that "pressed in"), and in FR-005 the overdue *Mendren* and *Quivering Lark*, the Hollis beacon reading late, and the gravitational variance. None carries a hidden truth yet. A cold player read built a Hollis thread out of them on its own: the Hollis beacon reading late, the fever on the Hollis rotation and lamp oil ending up at Hollis Post (LG-001). It stands as a red herring; build on it if a Hollis adventure is wanted (Korey, 2026-11-07).
   src: Korey, 2026-11-07
 
 - **[later]** Driftwarden ranks
