@@ -2907,7 +2907,7 @@
           "src": "STAGING round 11"
         },
         {
-          "t": "Its scope picked up faint, odd returns at the limit of its range on Cairn's stretch of lane: Vth'oramu, seen from different angles.",
+          "t": "Its scope picked up faint returns at the limit of its range on Cairn's stretch of lane, the colony's couriers, and caught Vth'oramu coming in and going back out.",
           "src": "locations/strake-station.html"
         },
         {
@@ -2978,7 +2978,7 @@
           "src": "dossiers/tarroway.html"
         },
         {
-          "t": "His plate of four sweeps shows a return that changes shape on every pass.",
+          "t": "His plate of four sweeps shows a single return larger than any hull on the lane, crossing the bearing.",
           "src": "restricted/lg-003.html"
         },
         {
@@ -6996,7 +6996,7 @@
     {
       "s": "vthoramu",
       "t": "cairn-station",
-      "rel": "crosses the lane of",
+      "rel": "came in toward and went back out from the lane of",
       "src": "locations/cairn-station.html"
     },
     {
