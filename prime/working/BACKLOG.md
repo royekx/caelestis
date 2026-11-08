@@ -31,7 +31,7 @@ staging once Korey has read and accepted them.
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
 | Cosmology | cosmology/, glossary/, chart/ | 13 | 14 | 4 | 0 | 2 |
-| Locations | locations/ (Fonains stays in its own section) | 18 | 24 | 0 | 0 | 1 |
+| Locations | locations/ (Fonains stays in its own section) | 18 | 25 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 13 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 12 | 1 | 0 | 0 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **127** | **166** | **25** | **1** | **47** |
+| **Total** |  | **127** | **167** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -240,8 +240,8 @@ Order under each page: decide, fix, drop, add.
   src: memory-canon (campaign-canon, Voyage 006 outcome; Lantern seated)
 
 - **[later]** CSC 31758, the 1491 entry in SA-002
-  SA-002 carries the Cycle 1491 auroral discharge at CSC 31758, outer fringe (the old SYS-05). The number is new: it is not in the survey or on the chart, and it collides with nothing in either. The entry stays as filed: two arrivals from an uncatalogued system entered Academy intake. Place the star in the survey, or leave it as a catalogue number only. It is not tied to Greyspace.
-  src: Korey, 2026-10-28 (FIA rulings, 10)
+  SA-002's 1491 entry at CSC 31758, outer fringe (the old SYS-05): a faint star beyond the fringe charted at a different position on each survey pass, and two travellers questioned as witnesses at a fringe settlement, who could name neither origin nor destination and were offered passage on Fleet transit; how they came to Caelestis is the player's to tell (Korey, 2026-11-07; the aurora is gone, so it no longer echoes Gregory's Cogfast entry). It is near where the twins came into Fleet space, not the homeworld; going there shows nothing. The number is in neither the survey nor the chart. Place the star in the survey, or leave it a catalogue number only. Not tied to Greyspace.
+  src: Korey, 2026-10-28 (FIA rulings, 10); Korey, 2026-11-07
 
 - **[later]** The eye's alignment turns with the galaxy
   For the eye to hold, the fifteen marks must stay on their strokes while Greyspace and the marks circle Erevos at different speeds, which turns the axis. A flavour detail, and a possible clock for later: the alignment drifting, or coming due. Ties to the decide on how the inscription is worked. Planning only; it does not go on pages.
@@ -439,6 +439,10 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
   src: Korey, 2026-10-28 (FIA rulings, 4); deconflict 2.23
 
 ### locations/wayfinders-homeworld.html
+
+- **[later]** The homeworld hides inside its own heart *(lore)*
+  Korey's idea (2026-11-07): the Wayfinders' world conceals itself within its world heart, having found a way to use Reach residue to make the heart hold a whole world. It cuts against the ruling that a heart is not world-sized, so it needs a reason that holds before it lands. Touches locations/wayfinders-homeworld.html, factions/runekeepers.html, cosmology (world hearts).
+  src: Korey, 2026-11-07
 
 - **[later]** The homeworld's full look
   The sensory anchors are on the page. The planet's full look is still to be worked out.
@@ -1121,11 +1125,11 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 - **[later]** Where each PC's homeworld sits
   Placed and written on crew/index.html § The crew together (section 7): Gregory, Toril in Realmspace; Sol, Aethris (CSC 56973 b), mid-Zenith; Tumak, the Wayfinders' unnamed homeworld in a hidden system of the Erevos Galaxy, concealed by the Dissolution cycle (Lunarfoot is the clan, never the world).
-  Left: Casey's is the world of SA-002's 1486 meteor shower; a star fell on it and Polly left afterward; its system is withheld until surveyed. Bartholomew's comes from a celestial druid tradition, Rashemi, pointed outward, and SA-002 records his fall in its 1482 entry. Boogie's is unplaced. For each: place it now, or leave it unplaced until play needs it. Touches crew/index.html, each crew page, locations/index.html.
+  Left: Casey's is the world of SA-002's 1486 meteor shower; a star fell on it and Polly left afterward; its system is withheld until surveyed. Bartholomew's comes from a celestial druid tradition, Rashemi, pointed outward, and SA-002's 1482 entry records two of CON-312's stars flaring; his fall is not in it. Boogie's is unplaced. For each: place it now, or leave it unplaced until play needs it. Touches crew/index.html, each crew page, locations/index.html.
   src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Gregory); realms/index.html § unplaced (old page)
 
 - **[later]** How cadets from worlds without spelljamming reach Caelestis
-  The one route Korey has stated is Sol's: the Watcher order broke protocol to recommend he be taken to Caelestis. The FIA carries one event per cadet that only that cadet would recognise, and says nothing of how any of them reached Caelestis except Sol (Korey, 2026-11-07): WM-006 field referral and protective placement (Sol, by the Order); SA-002 1486 meteor shower (Casey); SA-002 1491 two arrivals from an uncatalogued system who gave no name for home (Wan and Tu); SA-002 1482 two of CON-312's six stars flaring (Bartholomew); SA-002 1489 the Cogfast aurora, one surviving construct later entered intake (Gregory). FR-022 the black, shattered fragment from CSC 50743 (Boogie; the seal in FR-016 is his only tie to Cairn). Gregory arrived on a cargo ship.
+  The one route Korey has stated is Sol's: the Watcher order broke protocol to recommend he be taken to Caelestis. The FIA carries one event per cadet that only that cadet would recognise, and says nothing of how any of them reached Caelestis except Sol (Korey, 2026-11-07): WM-006 field referral and protective placement (Sol, by the Order); SA-002 1486 meteor shower (Casey); SA-002 1491 two travellers questioned at a settlement who could name neither origin nor destination, offered passage on Fleet transit (Wan and Tu); SA-002 1482 two of CON-312's six stars flaring (Bartholomew); SA-002 1489 the enclave aurora, two constructs remaining functional (Gregory). FR-022 the black, shattered fragment from CSC 50743 (Boogie; the seal in FR-016 is his only tie to Cairn). Gregory arrived on a cargo ship.
   Left: whether there is a general rule. Options: Watcher referral as the general route; several routes (Watcher referral, Fleet recruiters, walk-ins at stations); or a per-cadet answer with no general rule, as the FIA hints already read. Touches crew/index.html, crew/sol.html, and a new Cadet intake page (see the New pages section).
   src: chat-cosmic § Open; framework § Open; memory-canon (open-decisions, unresolved gaps; Watcher recruitment for Sol); BCS § Sol/C.R.C. and the scry beats; framework § FIA records (intake hints), § Superseded (no PF-004 intake file); memory-canon campaign-canon § Gregory (cargo ship)
 
