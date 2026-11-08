@@ -629,7 +629,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ### factions/fleet.html (was academy-fleet.html)
 
 - **[later]** The FIA's ambient files as hooks
-  The archive is mostly ordinary files so the Cairn thread shows only when read across it (Korey, 2026-11-07). The ambient entries can each become an adventure: LG-001 (Strake depot stores audit, crossed crates, a careless carrier), SA-003 (a nameless fever on the Hollis rotation, quarantine under review), WM-004 (*Copper Wren*'s stretch of lane that "pressed in"), and in FR-005 the overdue *Mendren* and *Quivering Lark*, the Hollis beacon reading late, and the gravitational variance. None carries a hidden truth yet.
+  The archive is mostly ordinary files so the Cairn thread shows only when read across it (Korey, 2026-11-07). The ambient entries can each become an adventure: LG-001 (Strake depot stores audit, crossed crates, a careless carrier), SA-003 (a nameless fever on the Hollis rotation, quarantine under review), WM-004 (*Copper Wren*'s stretch of lane that "pressed in"), and in FR-005 the overdue *Mendren* and *Quivering Lark*, the Hollis beacon reading late, and the gravitational variance. None carries a hidden truth yet. A cold player read built a Hollis thread out of them on its own: the Hollis beacon reading late, the fever on the Hollis rotation, lamp oil ending up at Hollis Post (LG-001), and the Saltjaw escorts drawn from the Hollis rotation (SA-005). It stands as a red herring; build on it if a Hollis adventure is wanted (Korey, 2026-11-07).
   src: Korey, 2026-11-07
 
 - **[later]** Driftwarden ranks
