@@ -191,7 +191,9 @@ serves all three.
 - **Essence runes are the runes on his skin.** A rune is the pair of halves
   one level brings, one on each twin, matched or not. He has 4 at level 4,
   and gains 1 a level until the sixteen rolled positions fill at level 16.
-  The three clan runes and the Heart bring the full inscription to 20. They
+  The three clan runes and the Heart bring the full inscription to 20. Clan
+  runes come at havens, not levels, so they arrive early; levels past 16 add
+  no runes. The inscription never passes 20. They
   are his Psionic Energy Dice and his Runechild essence runes, and they power
   Wayfind.
 - As Psionic Energy Dice they keep the Soulknife's die size, set by his Rogue
