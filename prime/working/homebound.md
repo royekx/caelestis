@@ -183,21 +183,25 @@ which lands with it.
 - **Havens are where he goes.** Reached by travel, found by the sensory
   anchors. Getting home takes adventuring, not levelling.
 
-### Runes as the resource (with the Runechild)
+### Runes as the resource (Soulknife, Runechild, Wayfind)
 
-- Each level Tumak gains a whole rune's worth, one half on each twin. The
-  halves may not match.
-- **Essence runes** are every rune on his body, half or matched: the
-  Runechild's essence runes, jumpstarted at Sorcerer 1. He has 3 now (Wan's
-  half at 08, Tu's halves at 08 and 16) and gains 1 each level. Sorcery
-  points charge them as the Runechild says.
-- **Matched runes** are his waypoints and his reach: he holds one mark per
-  matched rune, and the reach gate counts them.
-- **A Wayfind expends one essence rune**, which goes dark until he finishes a
-  long rest. A charged rune spent this way loses its charge. Wayfinds and the
-  Runechild draw on the same pool.
+Tumak is Rogue 3 (Soulknife) and Sorcerer 1 (Runechild), level 4. One pool
+serves all three.
+
+- **Essence runes** equal his character level: 4 now, 1 more each level. They
+  are his Psionic Energy Dice and his Runechild essence runes, and they power
+  Wayfind. The count follows his level, not the halves on his body.
+- As Psionic Energy Dice they keep the Soulknife's die size, set by his Rogue
+  level (d6 now).
+- Sorcery points charge them as the Runechild says.
+- **A Wayfind expends one essence rune.** A rune spent on Wayfind returns
+  only on a long rest; the others recover as Psionic Energy Dice do.
+- **Matched runes** are his waypoints and his reach: one mark per matched
+  rune, and the reach gate counts them.
 - Jumps beyond Touch also cost exhaustion by band, as the redo sets.
-- At level 4: 3 essence runes, 1 matched, so 1 mark and 3 jumps per long rest.
+- The pool runs one behind the Soulknife's own dice at level 5 (5 against 6)
+  and ahead from level 7. Sharing one pool across three uses keeps it in
+  line. This is homebrew for Tumak alone.
 
 ### Walking a haven
 
@@ -286,8 +290,11 @@ which lands with it.
   "Touch jumps are always free" are replaced by § Runes as the resource; the
   settled "runes are no longer spent and recharged" (turns 215, 221) is
   replaced for Wayfind: an essence rune is spent per jump.
-- `crew/tumak.html` § Build and the Wayfinder's Path tab: the Runechild
-  jumpstarted at Sorcerer 1; essence runes counted by his runes.
+- `crew/tumak.html` § Build, the Wayfinder's Path tab and his D&D Beyond
+  sheet: one essence-rune pool for Psionic Energy Dice, the Runechild and
+  Wayfind, equal to his level.
+- The record of his runes: Wan's level-4 half is unrecorded (both twins gain
+  a half each level); the rules page shows only the level-3 halves.
 - `deconflict.md` ruling 12: "Homebound opens when Tumak holds every rune" is
   replaced by § The mechanic → Homebound; runes no longer gate it.
 - `inbox/chat-crew-tumak-gregory-bartholomew.md` § Tumak Swan, turns after
