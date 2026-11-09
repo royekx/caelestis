@@ -34,8 +34,12 @@ Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
 
 ## The order and the cycle
 
-- The first Runekeeper was of the founder's clan. Lunarfoot branched from that
-  clan, which is why the Becoming is a Lunarfoot tale.
+- The leaders of four clans fought the seeker together, and Dissolution struck
+  all four. The one who seized the fragment became the first Runekeeper; the
+  other three lines were primed. The fragment forms only in someone of a
+  primed line, so the office passes through those four clans and no others.
+- The first Runekeeper was of the founder's clan. Lunarfoot descends from the
+  founder's kin, which is why the Becoming is a Lunarfoot tale.
 - The order is four clans in a fixed order, and the office passes from clan to
   clan; Lunarfoot comes fourth. Each clan's Runekeepers can be its own
   species.
@@ -85,11 +89,17 @@ Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
 - There are seven havens. Six hold the essences of faded Runekeepers. The
   seventh is the current Runekeeper's, built during the twins' childhood and
   waiting for him.
-- At each haven Tumak gains three things, as Noctis does at the royal tombs in
-  Final Fantasy XV: a waypoint to Wayfind to; a treasure for him or the crew;
+- Each haven holds a trial its Runekeeper set, teaching that Runekeeper's
+  lesson. Both twins must be present to take it.
+- A walked haven gives three things, as the royal tombs do for Noctis in
+  Final Fantasy XV: a waypoint to Wayfind to; a reward the haven makes for
+  this heir from the host heart it draws on, an item, a boon or knowledge;
   and that Runekeeper's chapter of the order's history, taught by their
   essence, as the past Avatars teach in Avatar. Walking the havens is how the
   order's legacy is handed on.
+- The seven havens by clan: the founder's clan holds the first and fifth;
+  the second clan the second and sixth; the third clan the third and the
+  seventh, the current Runekeeper's; Lunarfoot the fourth.
 - Tumak builds his own haven long after the campaign, when his own heir is
   born.
 
@@ -140,6 +150,71 @@ Leave the outcome to the table. Before homecoming, plot the potentialities
 from where play stands: what the crew has learned, which factions they have
 met, what the twins want. Let the session decide which one falls.
 
+## The mechanic
+
+DM voice. Shape ruled 2026-11-09; numbers are tuned at the table. It sits on
+the Wayfind redo in BACKLOG § Tumak (reach gate, cost by band, mishap tiers),
+which lands with it.
+
+### Two tracks
+
+- **Runes are what he can do.** Rolled per level as now. Matched runes give
+  marks, Rune Set spells and Wayfind reach. They fill near the end of his
+  levels and do not gate Homebound.
+- **Havens are where he goes.** Reached by travel, found by the sensory
+  anchors. Getting home takes adventuring, not levelling.
+
+### Walking a haven
+
+- Both twins present, the trial passed: the haven is walked.
+- It becomes a permanent waypoint. It costs none of his rune marks and cannot
+  be reclaimed.
+- A Wayfind *to* a walked haven cannot mishap; the reach gate still applies.
+  A Wayfind *from* a haven carries the normal reach and the normal risk.
+- A mishap can land a twin at a haven: one not yet walked, or a different one
+  than intended. The twins arrive split; one twin can find a haven but cannot
+  take its trial.
+
+### Homebound
+
+- Five havens are required: one of each of the four clans, Lunarfoot's
+  included, and the previous Runekeeper's, which is always of another clan.
+  With today's seven: one of the first and fifth, one of the second and
+  sixth, the third, the fourth, and the seventh last. The other two are
+  optional.
+- The three other clans' havens give runes 17, 18 and 19, one per clan,
+  bestowed whole. Four clans means every heir receives the same three,
+  however many havens later generations build.
+- Order is free until the last. The previous Runekeeper's haven comes last.
+  Arriving there early, the trial is not yet open: he is told to return once
+  the others are walked, which gives him a direct task.
+- At the previous Runekeeper's haven the twins meet him in person; he is
+  alive and Wayfinds there at will. The Heart (20) wakes, and Homebound opens.
+- Homebound is a Wayfind into the folded world's heart: free, cannot mishap,
+  ignores the reach gate, carries passengers by the usual rule, at a moment
+  the player chooses. The early-home door is dropped.
+
+### Slip and Strain
+
+- **Slip** is the count of unmatched halves: fragment that has left the
+  Runekeeper and holds nothing yet. A single heir's runes arrive whole, so
+  only a split heir has Slip. It is 1 today (Tu's half at 16).
+- **Strain** is Slip minus havens walked. Read the clock from it:
+
+  | Strain | At the table |
+  |---|---|
+  | 0–2 | Steady. The voice is clear. |
+  | 3–5 | The Runekeeper feels the fragment leaving too fast; the sensory anchors flicker at havens. |
+  | 6–8 | The binding slips. Traces of the homeworld leak into wildspace where someone could notice. |
+  | 9+ | Crisis: the world is glimpsed or found. Run the beat where something goes wrong. |
+
+- Simulated from today's runes, Slip runs about 3 at level 5, peaks near 7
+  across levels 9 to 13 (9 on bad luck), and falls to 0 by level 19. The
+  pressure arcs through the middle of the campaign. Homecoming before every
+  rune is in leaves Slip above 0, which feeds the Zenith.
+- Strain is a story clock with no fail state. It tells the DM which beat to
+  play.
+
 ## Promotes to
 
 - `locations/wayfinders-homeworld.html`: the first fold; the world inside its
@@ -168,8 +243,10 @@ met, what the twins want. Let the session decide which one falls.
 - BACKLOG closes: § locations/wayfinders-homeworld.html "The homeworld hides
   inside its own heart"; "The sanctuaries, and a stock of them" (the havens
   replace the sanctuaries); "decide Homebound" (From the chat sweeps of
-  2026-11-04); "Runes 17–19 as Anchors" once the mechanic rules; "A
+  2026-11-04); "Runes 17–19 as Anchors"; "The early-home door" (dropped); "A
   Runekeeper's leaving and the Becoming" in part.
+- `deconflict.md` ruling 12: "Homebound opens when Tumak holds every rune" is
+  replaced by § The mechanic → Homebound; runes no longer gate it.
 - `inbox/chat-crew-tumak-gregory-bartholomew.md` § Tumak Swan, turns after
   2026-10-25: every item lands here or in the mechanic.
 
@@ -185,13 +262,16 @@ met, what the twins want. Let the session decide which one falls.
 - How many years run from the heir's birth to their coming of age and leaving.
 - Clan names; each Runekeeper's name, species and era; each haven's place,
   treasure and lesson. Prep, haven by haven.
-- The mechanic: what Homebound is now, what the havens grant, and what
-  becomes of runes 17 to 19.
+- Whether leaving from a haven adds anything. Candidate: it counts as
+  standing at one of his marks, so the network bonus applies.
+- What Lunarfoot's own haven gives in place of a clan rune.
+- What each clan rune does and which Rune Set it counts toward.
+- Strain thresholds, tuned at the table; the pace tension above.
 
 ## Handoff
 
 1. **Lore, later:** what turns the pressure up; the seeker and the linked
    world. Neither blocks the mechanic.
-2. **Mechanic chat:** Homebound, the havens' grants, runes 17 to 19, from
-   deconflict ruling 12 and the Wayfind redo in BACKLOG § Tumak.
+2. **Mechanic:** shape in § The mechanic. Next: mechanic review, then the
+   open items above as play needs them.
 3. **Change audit** across Promotes to. Then delete this draft.
