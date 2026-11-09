@@ -234,7 +234,9 @@ serves all three.
   Arriving there early, the trial is not yet open: he is told to return once
   the others are walked, which gives him a direct task.
 - At the previous Runekeeper's haven the twins meet him in person and take
-  the exchange: the Becoming. The Heart (20) wakes, and Homebound opens.
+  the exchange: the Becoming. The Heart (20) wakes, and Homebound opens. The
+  Heart is 20 by its place on the chart, not by order: it comes only at this
+  haven, after the other clans' runes are held and its trial is passed.
 - Homebound is a Wayfind into the folded world's heart: free, cannot mishap,
   ignores the reach gate, carries passengers by the usual rule, at a moment
   the player chooses. The early-home door is dropped.
@@ -333,6 +335,8 @@ serves all three.
 - Whether leaving from a haven adds anything. Candidate: it counts as
   standing at one of his marks, so the network bonus applies.
 - What Lunarfoot's own haven gives in place of a clan rune.
+- What an optional haven adds to the pool: an extra essence rune, a new rune
+  beyond the twenty, or something else.
 - What walking all seven havens gives, for Tumak or for the world.
   Candidates: the whole history, the seeker and the accident behind the
   Becoming, and with it the way a link was broken; every anchor renewed at
