@@ -183,6 +183,22 @@ which lands with it.
 - **Havens are where he goes.** Reached by travel, found by the sensory
   anchors. Getting home takes adventuring, not levelling.
 
+### Runes as the resource (with the Runechild)
+
+- Each level Tumak gains a whole rune's worth, one half on each twin. The
+  halves may not match.
+- **Essence runes** are every rune on his body, half or matched: the
+  Runechild's essence runes, jumpstarted at Sorcerer 1. He has 3 now (Wan's
+  half at 08, Tu's halves at 08 and 16) and gains 1 each level. Sorcery
+  points charge them as the Runechild says.
+- **Matched runes** are his waypoints and his reach: he holds one mark per
+  matched rune, and the reach gate counts them.
+- **A Wayfind expends one essence rune**, which goes dark until he finishes a
+  long rest. A charged rune spent this way loses its charge. Wayfinds and the
+  Runechild draw on the same pool.
+- Jumps beyond Touch also cost exhaustion by band, as the redo sets.
+- At level 4: 3 essence runes, 1 matched, so 1 mark and 3 jumps per long rest.
+
 ### Walking a haven
 
 - Both twins present, the trial passed: the haven is walked.
@@ -266,6 +282,12 @@ which lands with it.
   replace the sanctuaries); "decide Homebound" (From the chat sweeps of
   2026-11-04); "Runes 17–19 as Anchors"; "The early-home door" (dropped); "A
   Runekeeper's leaving and the Becoming" in part.
+- BACKLOG § Tumak: the redo's "first Wayfind per long rest is free" and
+  "Touch jumps are always free" are replaced by § Runes as the resource; the
+  settled "runes are no longer spent and recharged" (turns 215, 221) is
+  replaced for Wayfind: an essence rune is spent per jump.
+- `crew/tumak.html` § Build and the Wayfinder's Path tab: the Runechild
+  jumpstarted at Sorcerer 1; essence runes counted by his runes.
 - `deconflict.md` ruling 12: "Homebound opens when Tumak holds every rune" is
   replaced by § The mechanic → Homebound; runes no longer gate it.
 - `inbox/chat-crew-tumak-gregory-bartholomew.md` § Tumak Swan, turns after
@@ -289,6 +311,10 @@ which lands with it.
   points are "marks", and Vecna's eye is also an inscription of marks. Keep
   them distinct on the pages; one side may need new words.
 - Whether Vecna's eye, once open, can see the folded world.
+- "Essence" now names both his runes and a haven's Runekeeper. One needs
+  another word.
+- Whether exhaustion by band stays on top of the rune spent, once play shows
+  how far he jumps.
 - Whether leaving from a haven adds anything. Candidate: it counts as
   standing at one of his marks, so the network bonus applies.
 - What Lunarfoot's own haven gives in place of a clan rune.
