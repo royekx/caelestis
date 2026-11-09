@@ -59,14 +59,20 @@ Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
 - When the heir comes of age they go out as a Wayfinder and walk the havens.
   The fragment builds in them as they go, and it shows as runes; it leaves
   the Runekeeper at the same pace. The transfer is the clock of the journey.
-  By the time the heir has walked every haven and comes home, the fragment
-  has mostly left the Runekeeper and is mostly built in the heir.
+  By the time the heir reaches the Runekeeper's haven, the fragment has
+  mostly left the Runekeeper and is mostly built in the heir.
 - The order builds a council around the heir, so a new Runekeeper takes office
   with guidance and knowledge.
-- When the heir comes home, the Runekeeper goes to their haven for their final
-  days. The fragment completes in the heir, the Runekeeper fades into the
-  haven, and the cycle completes for that generation. It is a death the order
-  sings for: "We do not mourn this. We sing."
+- The concealment is one spell, cast across a generation. Each Wayfinder's
+  journey sets its sigils across the cosmos; the sealing of the spell is the
+  Wayfinder becoming the Runekeeper. That moment is the Becoming, and the
+  Lunarfoot tale takes its name from it.
+- The Runekeeper knows when the heir reaches their haven: the haven is part
+  of their essence. They meet there, and the exchange is the Becoming. The
+  heir goes home as the Runekeeper. The old Runekeeper stays at the haven and
+  spends the few days left becoming part of the network, which completes the
+  binding. It is a death the order sings for: "We do not mourn this. We
+  sing."
 
 ## The havens
 
@@ -109,15 +115,15 @@ Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
   when he comes home and the rite completes. The current Runekeeper was the
   Wayfinder of the generation before; that is the cycle.
 - The current Runekeeper is old, alive and in office on the homeworld, holding
-  the last of his share of the fragment. He leaves for his haven only when the
-  twins come home. He built that haven while the twins were children.
-- The concealment has one binding and many anchors. The living Runekeeper is
-  the binding; the havens are where it is pinned, and they draw on their host
-  hearts to hold; the fragment's cycle is how the binding passes from one
-  generation to the next.
-- The living Runekeeper is himself a binding that keeps the world hidden. As he
-  fades, the binding has to pass to the next Runekeeper, and Tumak has to
-  finish the journey for it to hold.
+  the last of his share of the fragment. He goes to his haven when the twins
+  reach it, and stays. He built that haven while the twins were children.
+- The concealment has one binding and many anchors. The living Runekeeper
+  holds the binding, and it is in him wherever he stands. The havens are its
+  sigils, drawing on their host hearts to hold. As he fades, the binding has
+  to pass to the next Runekeeper, and Tumak has to finish the journey for it
+  to hold.
+- Each clan's line carries a trace of the fragment from the priming at the
+  fight. A clan's haven passes that trace on to the heir as the clan's rune.
 - Something is going wrong. The fragment's volume holds: it leaves one
   Runekeeper and settles in two heirs, half in each. A few runes into the
   journey, the Runekeeper begins to feel it leaving him faster than any
@@ -132,12 +138,12 @@ is the voice Tumak
 
 ## Homecoming and the Zenith
 
-- When the twins have walked the havens, the inscription is nearly complete.
-  It opens the way into the folded world's heart, and the twins can go home.
-- When the twins come home, three poles meet: the share still leaving the
-  Runekeeper, and the two halves forming in Wan and Tu. The rite was never
-  built for a fragment split between two heirs, and nobody planned it. That
-  change is the world's second Zenith, a natural one. A Zenith is a
+- At the Becoming the way into the folded world's heart opens, and the twins
+  go home as the Runekeeper.
+- The fragment has always come home whole, in one Runekeeper. This time it
+  comes home as two halves, in Wan and Tu. The rite was never built for that,
+  and nobody planned it. That change is the world's second Zenith, a natural
+  one. A Zenith is a
   significant change, never a doom: the homeworld splits into a blessing
   faction and an omen faction, a Monolith follows, and the world on the far
   side is settled by events and by the people in it. It may be rebound as
@@ -189,8 +195,8 @@ which lands with it.
 - Order is free until the last. The previous Runekeeper's haven comes last.
   Arriving there early, the trial is not yet open: he is told to return once
   the others are walked, which gives him a direct task.
-- At the previous Runekeeper's haven the twins meet him in person; he is
-  alive and Wayfinds there at will. The Heart (20) wakes, and Homebound opens.
+- At the previous Runekeeper's haven the twins meet him in person and take
+  the exchange: the Becoming. The Heart (20) wakes, and Homebound opens.
 - Homebound is a Wayfind into the folded world's heart: free, cannot mishap,
   ignores the reach gate, carries passengers by the usual rule, at a moment
   the player chooses. The early-home door is dropped.
@@ -263,6 +269,8 @@ which lands with it.
 - How many years run from the heir's birth to their coming of age and leaving.
 - Clan names; each Runekeeper's name, species and era; each haven's place,
   treasure and lesson. Prep, haven by haven.
+- The old Runekeeper is alive, in his last days at his haven, while the new one
+  comes home into the Zenith. How the two overlap is for later.
 - Whether leaving from a haven adds anything. Candidate: it counts as
   standing at one of his marks, so the network bonus applies.
 - What Lunarfoot's own haven gives in place of a clan rune.
