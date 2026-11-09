@@ -248,8 +248,8 @@ serves all three.
   | 6–8 | The binding slips. Traces of the homeworld leak into wildspace where someone could notice. |
   | 9+ | Crisis: the world is glimpsed or found. Run the beat where something goes wrong. |
 
-- Simulated from today's runes, Slip runs about 3 at level 5, peaks near 7
-  across levels 9 to 13 (9 on bad luck), and falls to 0 by level 19. The
+- Simulated from today's runes, Slip runs about 4 at level 5, holds near 6
+  across levels 7 to 13 (10 on bad luck), and falls to 0 by level 18. The
   pressure arcs through the middle of the campaign. Homecoming before every
   rune is in leaves Slip above 0, which feeds the Zenith.
 - Strain is a story clock with no fail state. It tells the DM which beat to
