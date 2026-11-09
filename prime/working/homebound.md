@@ -21,6 +21,8 @@ Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
   caught a cycle already running. The fold happened by accident: Dissolution
   cut the link, closed the heart and folded the world inside it. The bleeding
   stopped. The Monolith faded afterward, as Monoliths do.
+- Dissolution disjoined the world from everything around it and drew it into
+  its heart. The heart itself can still bind: that is what the havens do.
 - The clans understood none of it at the time and learned to work it over the
   generations that followed. The Becoming is the cleaned-up memory: something
   came looking, and the world folded itself around its people.
@@ -50,11 +52,17 @@ Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
   world is safe, plan a pilgrimage and leave the homeworld. They choose the
   place where they will fade, build their haven there and bind to it. Once
   bound, they can Wayfind to it as often as they need.
+- When the heir comes of age they go out as a Wayfinder and walk the havens.
+  The fragment builds in them as they go, and it shows as runes; it leaves
+  the Runekeeper at the same pace. The transfer is the clock of the journey.
+  By the time the heir has walked every haven and comes home, the fragment
+  has mostly left the Runekeeper and is mostly built in the heir.
 - The order builds a council around the heir, so a new Runekeeper takes office
   with guidance and knowledge.
-- At the end the Runekeeper goes to their haven for their final days. The
-  fragment leaves them and completes in the heir, and they fade into the
-  haven. It is a death the order sings for: "We do not mourn this. We sing."
+- When the heir comes home, the Runekeeper goes to their haven for their final
+  days. The fragment completes in the heir, the Runekeeper fades into the
+  haven, and the cycle completes for that generation. It is a death the order
+  sings for: "We do not mourn this. We sing."
 
 ## The havens
 
@@ -125,15 +133,11 @@ Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
 
 ## Open
 
-- Why the twins were sent out now, when the heir builds no haven yet.
-  Candidate: every heir goes out as a Wayfinder to walk the havens and learn
-  the history before coming home.
-- Tumak "met the previous Runekeeper once, briefly". The seventh Runekeeper's
-  predecessor faded before the twins were born. Candidates: the meeting was
-  with his essence; or the line means the current Runekeeper, whom Tumak will
-  call the previous one.
-- Dissolution unmakes joins, and a haven binds to a heart. One line needs to
-  square them.
+- Tumak "met the previous Runekeeper once, briefly" (crew/tumak.html and
+  three other pages). Lean: it happened when the twins were very young, and
+  they do not remember it. The previous Runekeeper faded before the twins were
+  born, so the meeting was with his essence, or the line is reworded. Whether
+  the order keeps heirs and Runekeepers apart is open with it.
 - Whether a haven's host world feels the draw. Candidate: a haven's site
   carries traces of the homeworld's sensory anchors, which is how a Wayfinder
   recognises one.
@@ -147,8 +151,8 @@ Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
 
 ## Handoff
 
-1. **Lore, this chat:** close the Open items the mechanic depends on (why the
-   twins were sent out, the previous Runekeeper, joins and binding).
+1. **Lore:** the previous Runekeeper, when Korey has integrated it; the
+   seeker and the linked world can wait for prep.
 2. **Mechanic chat:** Homebound, the havens' grants, runes 17 to 19, from
    deconflict ruling 12 and the Wayfind redo in BACKLOG § Tumak.
 3. **Change audit** across Promotes to. Then delete this draft.
