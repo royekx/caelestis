@@ -86,13 +86,26 @@ Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
 - Tumak builds his own haven long after the campaign, when his own heir is
   born.
 
-## The current Runekeeper
+## Wayfinder and Runekeeper
 
-- He is alive, on the homeworld, and dimming as the fragment leaves him. He
-  built his haven while the twins were children.
-- He watches over the twins on their journey. His is the voice Tumak heard in
-  Voyage 4, which the player record names only as the Runekeeper, the presence
-  behind the marks.
+- Tumak is a Wayfinder, finding his way home. He becomes the Runekeeper only
+  when he comes home and the rite completes. The current Runekeeper was the
+  Wayfinder of the generation before; that is the cycle.
+- The current Runekeeper is old, alive and in office on the homeworld, holding
+  the last of his share of the fragment. He leaves for his haven only when the
+  twins come home. He built that haven while the twins were children.
+- The living Runekeeper is himself a binding that keeps the world hidden. As he
+  fades, the binding has to pass to the next Runekeeper, and Tumak has to
+  finish the journey for it to hold.
+- Something has gone wrong: because the fragment is split between two heirs,
+  the Runekeeper is fading faster than the order expected. The time a
+  generation usually has is running short, and the binding on the world is
+  slipping. This is the pressure of Tumak's arc, and it rises.
+- The twins have met the Runekeeper: he sent them out himself, and they may
+  have met him once before as small children, at a formality they do not
+  remember. He watches over them on their journey, and his is the voice Tumak
+  heard in Voyage 4, which the player record names only as the Runekeeper,
+  the presence behind the marks.
 
 ## Homecoming and the Zenith
 
@@ -111,15 +124,20 @@ Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
 - `factions/runekeepers.html`: the four clans and the cycle; the founder's
   clan and Lunarfoot; the council; the havens; the Becoming as the cleaned-up
   memory; parked "whether closing is the inverse of opening" answered in part.
-- `dossiers/the-runekeeper.html`: his haven, his pilgrimage, the voice;
+- `dossiers/the-runekeeper.html`: his haven, his pilgrimage, the voice, the
+  binding he is and the faster fade;
   replaces "the world sits where it has always sat".
 - `artifacts/dissolution-fragment.html`: arrived with the seeker; whole in a
   Runekeeper for their tenure; moves at the heir's birth; binds havens to
   hearts.
 - `cosmology/index.html` § Hearts and Atria: the one exception to "a heart
   holds no civilization"; a world that broke a link.
-- `crew/tumak.html`: the havens as his road; Homebound per the mechanic; the
-  previous-Runekeeper line per Open.
+- `crew/tumak.html`: the havens as his road; Wayfinder until he comes home;
+  the faster fade as his pressure; Homebound per the mechanic.
+- Retire "Tumak knows of the previous Runekeeper and met him once, briefly; he
+  does not understand what that meeting was" on `crew/tumak.html`,
+  `dossiers/the-runekeeper.html`, `factions/runekeepers.html` and
+  `prime/data/connections.json`, in favour of § Wayfinder and Runekeeper.
 - `rules/index.html`, `rules/wayfinder-path-dm.html`, the Wayfinder's Path tab
   on `registry/crew-manifest/tumak-swan.html`, `campaign/plot-hooks.html`:
   per the mechanic chat.
@@ -133,13 +151,8 @@ Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
 
 ## Open
 
-- The previous Runekeeper is the current one: Tumak's predecessor, alive on
-  the homeworld until the twins come home. The pages' line "Tumak knows of the
-  previous Runekeeper and met him once, briefly" (crew/tumak.html,
-  dossiers/the-runekeeper.html, factions/runekeepers.html) is reworded to mean
-  him. Lean: the meeting was when the twins were very young, and they do not
-  remember it. Open with it: how that sits with "he sent them out himself",
-  and whether the order keeps heirs and the Runekeeper apart.
+- What turns the pressure up, and when. The faster fade is ruled; whether the
+  world is also found, or the Zenith comes early, is open.
 - Whether a haven's host world feels the draw. Candidate: a haven's site
   carries traces of the homeworld's sensory anchors, which is how a Wayfinder
   recognises one.
@@ -153,8 +166,8 @@ Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
 
 ## Handoff
 
-1. **Lore:** the previous Runekeeper, when Korey has integrated it; the
-   seeker and the linked world can wait for prep.
+1. **Lore, later:** what turns the pressure up; the seeker and the linked
+   world. Neither blocks the mechanic.
 2. **Mechanic chat:** Homebound, the havens' grants, runes 17 to 19, from
    deconflict ruling 12 and the Wayfind redo in BACKLOG § Tumak.
 3. **Change audit** across Promotes to. Then delete this draft.
