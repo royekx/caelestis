@@ -235,7 +235,8 @@ which lands with it.
   replaces "the world sits where it has always sat".
 - `artifacts/dissolution-fragment.html`: arrived with the seeker; whole in a
   Runekeeper for their tenure; moves at the heir's birth; binds havens to
-  hearts.
+  hearts; the Zenith comes from the fragment arriving home as two halves,
+  which replaces "three poles stall the cycle".
 - `cosmology/index.html` § Hearts and Atria: the one exception to "a heart
   holds no civilization"; a world that broke a link.
 - `crew/tumak.html`: the havens as his road; Wayfinder until he comes home;
