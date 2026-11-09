@@ -68,11 +68,18 @@ Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
 
 - Every Runekeeper builds their own haven and chooses its place, knowing it is
   where they will fade.
-- A haven binds, through the fragment, to the heart of the world it stands on,
-  and draws some of that heart's energy. The draw is what holds the homeworld
+- A haven is a small pocket, folded the way the homeworld is folded, made with
+  the Runekeeper's share of the fragment and set on a host world. It binds to
+  that world's heart and draws some of its energy. The draw is what holds the homeworld
   folded inside its own heart. The havens together are the anchors of the
   concealment.
-- A haven keeps its Runekeeper's essence. Anchors loosen over time, at the
+- A haven's site carries traces of the homeworld's sensory anchors: light like
+  light beneath water, the smell of warm earth after rain. A Wayfinder finds a
+  haven the way the doctrine says to find home, by recognising those
+  fragments, and the runes stir when one is near.
+- A haven keeps its Runekeeper's essence. A Wayfinder in the haven can invoke
+  it, and it appears as a projection that speaks, teaches and answers, as the
+  past Avatars do. Anchors loosen over time, at the
   metaphysical level and not the physical one, and each new binding renews
   the whole network.
 - There are seven havens. Six hold the essences of faded Runekeepers. The
@@ -94,27 +101,44 @@ Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
 - The current Runekeeper is old, alive and in office on the homeworld, holding
   the last of his share of the fragment. He leaves for his haven only when the
   twins come home. He built that haven while the twins were children.
+- The concealment has one binding and many anchors. The living Runekeeper is
+  the binding; the havens are where it is pinned, and they draw on their host
+  hearts to hold; the fragment's cycle is how the binding passes from one
+  generation to the next.
 - The living Runekeeper is himself a binding that keeps the world hidden. As he
   fades, the binding has to pass to the next Runekeeper, and Tumak has to
   finish the journey for it to hold.
-- Something has gone wrong: because the fragment is split between two heirs,
-  the Runekeeper is fading faster than the order expected. The time a
-  generation usually has is running short, and the binding on the world is
-  slipping. This is the pressure of Tumak's arc, and it rises.
+- Something is going wrong. The fragment's volume holds: it leaves one
+  Runekeeper and settles in two heirs, half in each. A few runes into the
+  journey, the Runekeeper begins to feel it leaving him faster than any
+  generation before, and the order sees the binding on the world slipping.
+  This is the pressure of Tumak's arc, and it rises.
 - The twins have met the Runekeeper: he sent them out himself, and they may
   have met him once before as small children, at a formality they do not
-  remember. He watches over them on their journey, and his is the voice Tumak
+  remember. He watches over them on their journey and nudges rarely, at key moments: his
+is the voice Tumak
   heard in Voyage 4, which the player record names only as the Runekeeper,
   the presence behind the marks.
 
 ## Homecoming and the Zenith
 
+- When the twins have walked the havens, the inscription is nearly complete.
+  It opens the way into the folded world's heart, and the twins can go home.
 - When the twins come home, three poles meet: the share still leaving the
   Runekeeper, and the two halves forming in Wan and Tu. The rite was never
-  built for a fragment split between two heirs, and nobody planned it. The
-  cycle stalls and the result is a natural Zenith, the world's second: the
-  homeworld splits into a blessing faction and an omen faction, and a
-  Monolith follows.
+  built for a fragment split between two heirs, and nobody planned it. That
+  change is the world's second Zenith, a natural one. A Zenith is a
+  significant change, never a doom: the homeworld splits into a blessing
+  faction and an omen faction, a Monolith follows, and the world on the far
+  side is settled by events and by the people in it. It may be rebound as
+  before, hidden in a new way, or no longer hidden; the Monolith may stand
+  inside the fold.
+
+### Running the Zenith (DM)
+
+Leave the outcome to the table. Before homecoming, plot the potentialities
+from where play stands: what the crew has learned, which factions they have
+met, what the twins want. Let the session decide which one falls.
 
 ## Promotes to
 
@@ -153,12 +177,12 @@ Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
 
 - What turns the pressure up, and when. The faster fade is ruled; whether the
   world is also found, or the Zenith comes early, is open.
-- Whether a haven's host world feels the draw. Candidate: a haven's site
-  carries traces of the homeworld's sensory anchors, which is how a Wayfinder
-  recognises one.
+- The pace. If the twins keep to the journey, homecoming should land as the
+  fragment moves; yet the Runekeeper feels it moving faster. The numbers that
+  hold both are for the mechanic.
+- Whether a host world feels a haven's draw.
 - Who the seeker was, what sent them, and the world the link reached.
 - How many years run from the heir's birth to their coming of age and leaving.
-- Whether a Wayfind mishap still lands a twin at a haven.
 - Clan names; each Runekeeper's name, species and era; each haven's place,
   treasure and lesson. Prep, haven by haven.
 - The mechanic: what Homebound is now, what the havens grant, and what
