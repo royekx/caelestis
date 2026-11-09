@@ -133,11 +133,13 @@ Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
 
 ## Open
 
-- Tumak "met the previous Runekeeper once, briefly" (crew/tumak.html and
-  three other pages). Lean: it happened when the twins were very young, and
-  they do not remember it. The previous Runekeeper faded before the twins were
-  born, so the meeting was with his essence, or the line is reworded. Whether
-  the order keeps heirs and Runekeepers apart is open with it.
+- The previous Runekeeper is the current one: Tumak's predecessor, alive on
+  the homeworld until the twins come home. The pages' line "Tumak knows of the
+  previous Runekeeper and met him once, briefly" (crew/tumak.html,
+  dossiers/the-runekeeper.html, factions/runekeepers.html) is reworded to mean
+  him. Lean: the meeting was when the twins were very young, and they do not
+  remember it. Open with it: how that sits with "he sent them out himself",
+  and whether the order keeps heirs and the Runekeeper apart.
 - Whether a haven's host world feels the draw. Candidate: a haven's site
   carries traces of the homeworld's sensory anchors, which is how a Wayfinder
   recognises one.
