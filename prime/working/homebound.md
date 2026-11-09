@@ -188,9 +188,12 @@ which lands with it.
 Tumak is Rogue 3 (Soulknife) and Sorcerer 1 (Runechild), level 4. One pool
 serves all three.
 
-- **Essence runes** equal his character level: 4 now, 1 more each level. They
+- **Essence runes are the runes on his skin.** A rune is the pair of halves
+  one level brings, one on each twin, matched or not. He has 4 at level 4,
+  and gains 1 a level until the sixteen rolled positions fill at level 16.
+  The three clan runes and the Heart bring the full inscription to 20. They
   are his Psionic Energy Dice and his Runechild essence runes, and they power
-  Wayfind. The count follows his level, not the halves on his body.
+  Wayfind.
 - As Psionic Energy Dice they keep the Soulknife's die size, set by his Rogue
   level (d6 now).
 - Sorcery points charge them as the Runechild says.
@@ -200,7 +203,7 @@ serves all three.
   rune, and the reach gate counts them.
 - Jumps beyond Touch also cost exhaustion by band, as the redo sets.
 - The pool runs one behind the Soulknife's own dice at level 5 (5 against 6)
-  and ahead from level 7. Sharing one pool across three uses keeps it in
+  and ahead from level 7; a clan rune adds one when it is bestowed. Sharing one pool across three uses keeps it in
   line. This is homebrew for Tumak alone.
 
 ### Walking a haven
@@ -238,20 +241,20 @@ serves all three.
 
 - **Slip** is the count of unmatched halves: fragment that has left the
   Runekeeper and holds nothing yet. A single heir's runes arrive whole, so
-  only a split heir has Slip. It is 2 today (Wan's half at 02, Tu's at 16).
+  only a split heir has Slip. It is 6 today.
 - **Strain** is Slip minus havens walked. Read the clock from it:
 
   | Strain | At the table |
   |---|---|
-  | 0–2 | Steady. The voice is clear. |
-  | 3–5 | The Runekeeper feels the fragment leaving too fast; the sensory anchors flicker at havens. |
-  | 6–8 | The binding slips. Traces of the homeworld leak into wildspace where someone could notice. |
-  | 9+ | Crisis: the world is glimpsed or found. Run the beat where something goes wrong. |
+  | 0–4 | Steady. The voice is clear. |
+  | 5–7 | The Runekeeper feels the fragment leaving too fast; the sensory anchors flicker at havens. |
+  | 8–9 | The binding slips. Traces of the homeworld leak into wildspace where someone could notice. |
+  | 10+ | Crisis: the world is glimpsed or found. Run the beat where something goes wrong. |
 
-- Simulated from today's runes, Slip runs about 4 at level 5, holds near 6
-  across levels 7 to 13 (10 on bad luck), and falls to 0 by level 18. The
-  pressure arcs through the middle of the campaign. Homecoming before every
-  rune is in leaves Slip above 0, which feeds the Zenith.
+- Simulated from today's runes, Slip holds about 7 to 8 across levels 5 to 9
+  (10 on bad luck), then falls to 0 by level 16. Walking havens keeps Strain
+  under the crisis line. Homecoming before every rune is in leaves Slip
+  above 0, which feeds the Zenith.
 - Strain is a story clock with no fail state. It tells the DM which beat to
   play.
 
@@ -294,8 +297,9 @@ serves all three.
   sheet: one essence-rune pool for Psionic Energy Dice, the Runechild and
   Wayfind, equal to his level.
 - The record of his runes, corrected: level 3, Wan 02 and Tu 08; level 4,
-  Wan 08 and Tu 16. Wan holds 02 and 08, Tu holds 08 and 16; 08 (left sole)
-  is matched. The rules page and the player tracker show Wan 08 and Tu 16 at
+  Wan 08 and Tu 16; 08 (left sole) is matched. Two more runes came off the
+  table, rolled with no match: Wan 01 and 11, Tu 09 and 07. Wan holds 01,
+  02, 08, 11; Tu holds 07, 08, 09, 16. The rules page and the player tracker show Wan 08 and Tu 16 at
   level 3 and Tu 08 at level 4, which is wrong.
 - `deconflict.md` ruling 12: "Homebound opens when Tumak holds every rune" is
   replaced by § The mechanic → Homebound; runes no longer gate it.
