@@ -177,14 +177,15 @@ which lands with it.
 
 ### Homebound
 
-- Five havens are required: one of each of the four clans, Lunarfoot's
-  included, and the previous Runekeeper's, which is always of another clan.
-  With today's seven: one of the first and fifth, one of the second and
-  sixth, the third, the fourth, and the seventh last. The other two are
+- Homebound needs one haven of each of the four clans, Lunarfoot's included,
+  with the previous Runekeeper's haven last. His haven counts for his own
+  clan, which is always another clan. With today's seven the shortest path is
+  four: one of the first and fifth, one of the second and sixth, the fourth,
+  and the seventh last. Walking the third as well makes five; the rest are
   optional.
-- The three other clans' havens give runes 17, 18 and 19, one per clan,
-  bestowed whole. Four clans means every heir receives the same three,
-  however many havens later generations build.
+- A clan's rune comes from the first haven of that clan he walks: runes 17,
+  18 and 19, one per other clan, bestowed whole. Four clans means every heir
+  receives the same three, however many havens later generations build.
 - Order is free until the last. The previous Runekeeper's haven comes last.
   Arriving there early, the trial is not yet open: he is told to return once
   the others are walked, which gives him a direct task.
