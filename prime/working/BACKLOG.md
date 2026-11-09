@@ -36,7 +36,7 @@ staging once Korey has read and accepted them.
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 12 | 1 | 0 | 0 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 7 | 1 | 0 | 3 |
-| Dossiers | dossiers/ | 12 | 16 | 0 | 0 | 1 |
+| Dossiers | dossiers/ | 13 | 16 | 0 | 0 | 1 |
 | Crew | crew/ | 11 | 20 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 5 | 11 | 0 | 18 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **128** | **168** | **25** | **1** | **47** |
+| **Total** |  | **129** | **168** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1118,6 +1118,12 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 - **[later]** The accounts of Zerathis
   Zerathis is a name the crew hears long before they meet what remains of him, and the accounts disagree (the Osiris pattern). The accounts themselves are not written; each is set when it is used. His species and look in life are not set either.
   src: section 5 (2026-10-28)
+
+### dossiers/joffrey.html
+
+- **[decide]** What the bottle Joffrey pocketed holds
+  At the Sky Dock in Voyage 1 the cadets saw Joffrey pay Jeffrey and pocket a bottle from him. Joffrey's and Jeffrey's pages leave the contents open; a piece of the sabotage is one option. Set it before the crew questions either man.
+  src: Korey, 2026-11-06 (FIA audit, the Jeffrey replacement)
 
 # Crew
 

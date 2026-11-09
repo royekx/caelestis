@@ -142,11 +142,11 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 
 | # | Ruling | Source and date | Pages that still say the old thing |
 |---|---|---|---|
-| 2.11 | ~~The voice came in the centuries after the exile~~ | Done | FIA audit, PRs #166 to #169 |
-| 2.14 | ~~The colony's captives come through Vocath's line~~ | Done | FIA audit, PRs #166 to #169 |
+| 2.11 | ~~The voice came in the centuries after the exile~~ | Done | FIA audit, PRs #166 to #169; closed by #170 to #181 |
+| 2.14 | ~~The colony's captives come through Vocath's line~~ | Done | FIA audit, PRs #166 to #169; closed by #170 to #181 |
 | 2.15 | Residue scale and residue housings | STAGING § Cosmology and § Artifacts, 2026-11-04 | `cosmology/index.html` § Residue and the fragments; `artifacts/index.html` § Holdings and § Why they are scattered and hidden |
-| 2.20 | ~~STAGING small facts of 2026-11-04~~ | Done | FIA audit, PRs #166 to #169 |
-| 2.21 | ~~The FIA story is settled~~ | Done | FIA audit, PRs #166 to #169 |
+| 2.20 | ~~STAGING small facts of 2026-11-04~~ | Done | FIA audit, PRs #166 to #169; closed by #170 to #181 |
+| 2.21 | ~~The FIA story is settled~~ | Done | FIA audit, PRs #166 to #169; closed by #170 to #181 |
 
 ---
 
