@@ -238,7 +238,7 @@ serves all three.
 
 - **Slip** is the count of unmatched halves: fragment that has left the
   Runekeeper and holds nothing yet. A single heir's runes arrive whole, so
-  only a split heir has Slip. It is 1 today (Tu's half at 16).
+  only a split heir has Slip. It is 2 today (Wan's half at 02, Tu's at 16).
 - **Strain** is Slip minus havens walked. Read the clock from it:
 
   | Strain | At the table |
@@ -293,8 +293,10 @@ serves all three.
 - `crew/tumak.html` § Build, the Wayfinder's Path tab and his D&D Beyond
   sheet: one essence-rune pool for Psionic Energy Dice, the Runechild and
   Wayfind, equal to his level.
-- The record of his runes: Wan's level-4 half is unrecorded (both twins gain
-  a half each level); the rules page shows only the level-3 halves.
+- The record of his runes, corrected: level 3, Wan 02 and Tu 08; level 4,
+  Wan 08 and Tu 16. Wan holds 02 and 08, Tu holds 08 and 16; 08 (left sole)
+  is matched. The rules page and the player tracker show Wan 08 and Tu 16 at
+  level 3 and Tu 08 at level 4, which is wrong.
 - `deconflict.md` ruling 12: "Homebound opens when Tumak holds every rune" is
   replaced by § The mechanic → Homebound; runes no longer gate it.
 - `inbox/chat-crew-tumak-gregory-bartholomew.md` § Tumak Swan, turns after
