@@ -156,6 +156,19 @@ Leave the outcome to the table. Before homecoming, plot the potentialities
 from where play stands: what the crew has learned, which factions they have
 met, what the twins want. Let the session decide which one falls.
 
+## The mirror of Vecna (DM)
+
+Keep this in view; it can cut either way.
+
+- Both are spells drawn across the galaxy on worlds' hearts. Vecna's
+  inscription opens and links hearts into an eye, to see everything. The
+  Runekeepers' binding sets sigils that draw on hearts without opening or
+  linking them, to stay unseen. One joins in order to see; the other
+  disjoins in order to hide.
+- Where they could meet: a haven's host world on one of the eye's strokes;
+  a host heart opened by Vecna's work; the eye opening on a galaxy that holds
+  a world it cannot see.
+
 ## The mechanic
 
 DM voice. Shape ruled 2026-11-09; numbers are tuned at the table. It sits on
@@ -272,6 +285,10 @@ which lands with it.
   treasure and lesson. Prep, haven by haven.
 - The old Runekeeper is alive, in his last days at his haven, while the new one
   comes home into the Zenith. How the two overlap is for later.
+- The words overlap: Tumak's runes are "the inscription" and his Wayfinding
+  points are "marks", and Vecna's eye is also an inscription of marks. Keep
+  them distinct on the pages; one side may need new words.
+- Whether Vecna's eye, once open, can see the folded world.
 - Whether leaving from a haven adds anything. Candidate: it counts as
   standing at one of his marks, so the network bonus applies.
 - What Lunarfoot's own haven gives in place of a clan rune.
