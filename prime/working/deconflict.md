@@ -293,7 +293,7 @@ request merges before any later work reads its pages.
    principle in PR #176; the hold at Cairn as an outline in #177; the
    Colony illithid archetypes in place of the malformed template in #178.
    Homebound split off (3a).
-3a. **Lore: Homebound, story first.** Korey's method: a story plus a
+3a. **Lore: Homebound, story first.** In progress: `homebound.md` holds the story ruled 2026-11-09 and carries this item from here. Korey's method: a story plus a
    problem makes an adventure, so the story comes before the mechanic.
    Answer first, without fine detail: what the Wayfinders' world hides from,
    why hiding became its answer and how, and how long it has hidden (how
