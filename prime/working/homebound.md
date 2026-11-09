@@ -266,6 +266,11 @@ which lands with it.
 - Whether leaving from a haven adds anything. Candidate: it counts as
   standing at one of his marks, so the network bonus applies.
 - What Lunarfoot's own haven gives in place of a clan rune.
+- What walking all seven havens gives, for Tumak or for the world.
+  Candidates: the whole history, the seeker and the accident behind the
+  Becoming, and with it the way a link was broken; every anchor renewed at
+  once, so the fold is strongest when the Zenith comes; the seven essences
+  answering together, as the past Avatars do in the Avatar State.
 - What each clan rune does and which Rune Set it counts toward.
 - Strain thresholds, tuned at the table; the pace tension above.
 
