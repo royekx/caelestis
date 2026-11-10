@@ -188,8 +188,9 @@ Each subclass runs as published. The homebrew:
 
 - He holds one mark per matched rune: 1 now. A walked haven is a further
   waypoint, held for good, that takes none of these.
-- Placing a mark, in person, takes a 10-minute ritual, or a Magic action and
-  two charged runes: time, or resources in the heat of it. Ending a mark
+- Placing a mark, in person, takes a 1-hour ritual, or a Magic action and
+  two charged runes: an hour, as attunement takes, or resources in the heat
+  of it. Ending a mark
   takes no action.
 - Each mark belongs to the Rune Set of the rune that placed it.
 - **Perceiving is free**, as with a familiar. As a bonus action he sees, but
@@ -225,9 +226,13 @@ from wherever he stands, with his passengers. It always lands on a mark.
 6. **Homebound** is a Wayfind into the folded world's heart: free, cannot
    mishap, any distance, at a moment the player chooses.
 
-Exhaustion is 2024's: −2 to every d20 test and −5 ft speed per level. Each
-band taxes more, and Deep Astral is the panic button: open, and the likeliest
-to go wrong.
+Exhaustion is 2024's: −2 to every d20 test and −5 ft speed per level, death
+at 6. Each band taxes more, and Deep Astral is the panic button: open, and the
+likeliest to go wrong. There is no cap: the player knows the table and does
+the sum. A jump always resolves first, by its roll (arrival, fizzle or
+mishap), and the exhaustion lands as it does. If that brings him to 6, he
+dies there, and whoever he carried is where the jump put them. From fresh, a
+Deep Astral jump leaves him at 5.
 
 **When he jumps how** (level 10, World reach, about nine marks):
 
