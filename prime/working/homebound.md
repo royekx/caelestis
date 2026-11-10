@@ -189,7 +189,8 @@ Each subclass runs as published. The homebrew:
 - He holds one mark per matched rune: 1 now. A walked haven is a further
   waypoint, held for good, that takes none of these.
 - Placing a mark, in person, takes a 10-minute ritual, or a Magic action and
-  one charged rune. Ending a mark takes no action.
+  two charged runes: time, or resources in the heat of it. Ending a mark
+  takes no action.
 - Each mark belongs to the Rune Set of the rune that placed it.
 - **Perceiving is free**, as with a familiar. As a bonus action he sees, but
   does not hear, through one of his marks until the start of his next turn,
