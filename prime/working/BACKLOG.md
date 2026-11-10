@@ -37,15 +37,15 @@ staging once Korey has read and accepted them.
 | Factions | factions/ | 12 | 13 | 1 | 0 | 0 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 7 | 1 | 0 | 3 |
 | Dossiers | dossiers/ | 13 | 16 | 0 | 0 | 1 |
-| Crew | crew/ | 11 | 20 | 0 | 0 | 0 |
+| Crew | crew/ | 12 | 21 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
-| Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 7 | 7 | 7 | 0 | 12 |
+| Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 7 | 8 | 7 | 0 | 12 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
-| Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
+| Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 7 | 11 | 1 | 0 | 2 |
-| **Total** |  | **128** | **173** | **21** | **1** | **41** |
+| **Total** |  | **130** | **175** | **21** | **1** | **41** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1154,6 +1154,10 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 ### crew/index.html
 
+- **[decide]** Make each cadet's arc tangible *(shape)*
+  Korey (2026-11-10): many arcs are nebulous. Each should give the player action and agency: not step 1, step 2, but something they know they are moving toward. Work through every crew page and campaign/plot-hooks.html, one cadet at a time, as its own prep chat. Tumak's seed is under crew/tumak.html.
+  src: the Homebound chat, 2026-11-10
+
 - **[later]** Where each PC's homeworld sits
   Placed and written on crew/index.html § The crew together (section 7): Gregory, Toril in Realmspace; Sol, Aethris (CSC 56973 b), mid-Zenith; Tumak, the Wayfinders' unnamed homeworld in a hidden system of the Erevos Galaxy, concealed by the Dissolution cycle (Lunarfoot is the clan, never the world).
   Left: Casey's is the world of SA-002's 1486 meteor shower; a star fell on it and Polly left afterward; its system is withheld until surveyed. Bartholomew's comes from a celestial druid tradition, Rashemi, pointed outward, and SA-002's 1482 entry records two of CON-312's stars flaring; his fall is not in it. Boogie's is unplaced. For each: place it now, or leave it unplaced until play needs it. Touches crew/index.html, each crew page, locations/index.html.
@@ -1222,6 +1226,10 @@ Items whose source sweep is still partial keep their `(sampled)` or
   src: section 7 (2026-10-28)
 
 ### crew/tumak.html
+
+- **[later]** The inscription as a map of the havens
+  Korey's idea (2026-11-10): Tumak unlocks a map within himself, or becomes the map, showing where the seven havens are; the journey is working out how to reach them. It keeps the work with Gregory, whose arc is to become a navigator. Settle within "Make each cadet's arc tangible".
+  src: the Homebound chat, 2026-11-10
 
 Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; see the Rules section.
 
@@ -1564,6 +1572,10 @@ against the complete Tumak sweep (all 336 turns).
 - *(The Ostekk-2 "wake it for good" line in overlay.json is a decide (prep) under artifacts/containment-engine.html in the Artifacts and vessels section.)*
 
 ### registry/crew-manifest/tumak-swan.html#wayfinder-path (player site, outside prime)
+
+- **[later]** Restyle the Wayfinder's Path tab
+  Bring the tab's styling in line with the newer pages, keeping its look; it should not repeat Your story on the Personnel file. Build with "The Personnel file: Academy file and Your story".
+  src: the Homebound chat, 2026-11-10
 
 - **[add]** Who gets the tracker link (DM note, kept in prime)
   Korey sends the tracker link only to Tumak's player, or puts it on the character sheet marked player-only (turn 162). Record this with the rules page's tracker links.
@@ -1962,7 +1974,15 @@ archived in Drive, not deleted. What stays open here is below.
 
 Fixes to player-facing pages, including the Fleet Intelligence Archive (`restricted/`). These pages hold only what the crew could know; corrections must keep that boundary.
 
+### registry/crew-manifest/ (every crew page)
+
+- **[decide]** The Personnel file: Academy file and Your story *(shape)*
+  Proposal, mocked up for Tumak (artifact "Tumak's personnel file: Fleet record and own account"): the tab holds the Academy's file (only what Caelestis has on record: name, species as declared, origin, next of kin, assignment, staff notes), then Your story, short prose in the second person showing the cadet's arc, with a thin Sent out, On the road, Home line, and the arrival orders folded shut. No voyage-by-voyage log, no question lists, few boxes. Private memories move out of the Academy's rows into Your story. Every crew page. Pair with restyling the Wayfinder's Path tab to the newer pages while keeping its look (see the item under registry/crew-manifest/tumak-swan.html#wayfinder-path).
+  src: the Homebound chat, 2026-11-10
+
 ### voyages/bearings/
+
+
 
 - **[later]** A player-side in-world timeline of key events
   voyages/bearings/timeline.html is the seed: an unlinked page of key events by era. Not now.
