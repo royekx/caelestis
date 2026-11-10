@@ -186,30 +186,25 @@ which lands with it.
 - **Havens are where he goes.** Reached by travel, found by the sensory
   anchors. Getting home takes adventuring, not levelling.
 
-### Runes as the resource (Soulknife, Runechild, Wayfind)
+### Wayfind and his classes (Soulknife, Runechild)
 
-Tumak is Rogue 3 (Soulknife) and Sorcerer 1 (Runechild), level 4. One pool
-serves all three.
+Tumak is Rogue 3 (Soulknife) and Sorcerer 1 (Runechild), level 4. Each
+subclass runs as published, with three changes for him.
 
-- **Essence runes are the runes on his skin.** A rune is the pair of halves
-  one level brings, one on each twin, matched or not. He has 4 at level 4,
-  and gains 1 a level until the sixteen rolled positions fill at level 16.
-  The three clan runes and the Heart bring the full inscription to 20. Clan
-  runes come at havens, not levels, so they arrive early; levels past 16 add
-  no runes. The inscription never passes 20. They
-  are his Psionic Energy Dice and his Runechild essence runes, and they power
-  Wayfind.
-- As Psionic Energy Dice they keep the Soulknife's die size, set by his Rogue
-  level (d6 now).
-- Sorcery points charge them as the Runechild says.
-- **A Wayfind expends one essence rune.** A rune spent on Wayfind returns
-  only on a long rest; the others recover as Psionic Energy Dice do.
+- **Sorcery points from Sorcerer 1.** He has 1 now; from Sorcerer 2 he follows
+  the Sorcerer's own count.
+- **Wayfind costs 1 sorcery point.** The choice is in the spend: a jump, a
+  charge, Metamagic or a slot. At level 4 that is one jump per long rest.
+  Spending the point charges a rune, as the Runechild says for any spent
+  point.
+- **Essence runes are the runes on his skin**, one per rune, matched or not:
+  4 now. They are the Runechild's container count; charging and charged
+  runes work as published.
 - **Matched runes** are his waypoints and his reach: one mark per matched
   rune, and the reach gate counts them.
+- Psionic Energy Dice stay the Soulknife's own.
 - Jumps beyond Touch also cost exhaustion by band, as the redo sets.
-- The pool runs one behind the Soulknife's own dice at level 5 (5 against 6)
-  and ahead from level 7; a clan rune adds one when it is bestowed. Sharing one pool across three uses keeps it in
-  line. This is homebrew for Tumak alone.
+- An optional haven can raise his sorcery point maximum by 1.
 
 ### Rolling runes
 
@@ -330,12 +325,11 @@ serves all three.
   2026-11-04); "Runes 17–19 as Anchors"; "The early-home door" (dropped); "A
   Runekeeper's leaving and the Becoming" in part.
 - BACKLOG § Tumak: the redo's "first Wayfind per long rest is free" and
-  "Touch jumps are always free" are replaced by § Runes as the resource; the
-  settled "runes are no longer spent and recharged" (turns 215, 221) is
-  replaced for Wayfind: an essence rune is spent per jump.
+  "Touch jumps are always free" are replaced by § Wayfind and his classes:
+  each jump costs 1 sorcery point.
 - `crew/tumak.html` § Build, the Wayfinder's Path tab and his D&D Beyond
-  sheet: one essence-rune pool for Psionic Energy Dice, the Runechild and
-  Wayfind, equal to his level.
+  sheet: sorcery points from Sorcerer 1; Wayfind for 1 sorcery point;
+  essence runes counted by the runes on his skin.
 - The record of his runes, corrected: level 3, Wan 02 and Tu 08; level 4,
   Wan 08 and Tu 16; 08 (left sole) is matched. Two more runes came off the
   table, rolled with no match: Wan 01 and 11, Tu 09 and 07. Wan holds 01,
@@ -372,15 +366,14 @@ serves all three.
   level-up; a roll against Strain each level.
 - What the binding does after the unhiding: whether walking havens can fold
   the world again before the Becoming.
-- Rune recovery: likely a long rest; check the Soulknife's and the
-  Runechild's own text.
+- If he levels Rogue instead of Sorcerer, his sorcery points, and so his
+  jumps, stop growing. Havens are the other source.
 - Whether exhaustion by band stays on top of the rune spent, once play shows
   how far he jumps.
 - Whether leaving from a haven adds anything. Candidate: it counts as
   standing at one of his marks, so the network bonus applies.
 - What Lunarfoot's own haven gives in place of a clan rune.
-- What an optional haven adds to the pool: an extra essence rune, a new rune
-  beyond the twenty, or something else.
+- What else an optional haven gives beyond a sorcery point.
 - What walking all seven havens gives, for Tumak or for the world.
   Candidates: the whole history, the seeker and the accident behind the
   Becoming, and with it the way a link was broken; every anchor renewed at
