@@ -211,11 +211,16 @@ serves all three.
 ### Rolling runes
 
 - Each level, Wan and Tu each roll a d20 against their own pool of 01–16.
-  1–16 gives that position; 17, 18 and 19 reroll; a position the twin
-  already holds rerolls. A 20 lets the player choose any position that twin
+  1–16 gives that position; 17, 18 and 19 reroll. A position the twin
+  already holds slides up to the next position that twin lacks, wrapping
+  from 16 to 01. The face always names a real position, and as the pools
+  shrink, matches come more often, on the roll or on the slide. A 20 lets the player choose any position that twin
   lacks, and the point is to match.
-- The pacing rule stands: a Vessel result (11–16) while that twin still lacks
-  a Soul, Maker or Walker position rerolls once; keep the second.
+- The pacing rule stands, on the position he lands on: a Vessel position
+  (11–16) while that twin still lacks a Soul, Maker or Walker position
+  rerolls once; keep the second.
+- Simulated from today's runes: about 1.5 rolls per twin per level, 8 at
+  worst (rerolling repeats averaged 4, and once ran to 109).
 - The safety valve is retired. The havens and Strain carry the pacing.
 - The player sees sixteen positions and a d20, and may guess that something
   sits above 16. That is fine.
