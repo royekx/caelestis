@@ -174,11 +174,13 @@ DM voice. Shape ruled 2026-11-09; numbers are tuned at the table.
 
 Each subclass runs as published. The homebrew:
 
-- **Essence runes are the runes on his skin**, one per rune: 4 now. This
+- **Essence runes are the runes on his skin**, one per rune, clan runes
+  included: 4 now. This
   replaces the Runechild's count (1, plus one per sorcerer level).
 - **Psionic Energy Dice can charge runes.** As a bonus action he expends one
   die to charge one essence rune. Sorcery points charge runes as the
-  Runechild says, and from Sorcerer 1 he has the Runechild's action to charge
+  Runechild says (including the published end-of-turn charge for points spent
+  on anything), and from Sorcerer 1 he has the Runechild's action to charge
   one rune when he has no points and no charges.
 - Out of combat, charging takes no action: he spends dice or points and the
   runes light. With sorcery points the Runechild rate holds, 1 point for 2
@@ -190,14 +192,15 @@ Each subclass runs as published. The homebrew:
 
 ### Marks
 
-- He holds one mark per matched rune: 1 now. A walked haven is a further
+- He holds one mark per matched rune, clan runes included: 1 now. A walked haven is a further
   waypoint, held for good, that takes none of these.
 - Placing a mark, in person, takes a 1-hour ritual, or a Magic action and
   two charged runes: an hour, as attunement takes, or resources in the heat
   of it. Ending a mark takes no action.
-- A mark sits on a place or on a ship, never on a creature or a carried
-  object.
-- **Perceiving is free**, as with a familiar. As a bonus action he sees, but
+- A mark sits where he stands: on a place, or on a ship he could crew, never
+  on a creature or anything that can be carried.
+- **Perceiving costs no resource**, as with a familiar. As a bonus action he
+  sees, but
   does not hear, through one of his marks within his Wayfind reach, until the
   start of his next turn or until he stops (no action). He is blind where he
   stands while he looks.
@@ -206,7 +209,7 @@ Each subclass runs as published. The homebrew:
 
 A Magic action: he expends one charged rune and teleports to one of his marks,
 from wherever he stands, with his passengers. It always lands on a mark. His
-level sets how far; his matched runes set where (how many marks) and how many
+character level sets how far; his matched runes set where (how many marks) and how many
 he carries. At each level-up the player adds the new band and moves on.
 
 | Level | Band | Reach | Exhaustion | Mishap | On a mishap |
@@ -219,12 +222,16 @@ he carries. At each level-up the player adds the new band and moves on.
 | 15 | Astral | Another system, across the Astral Sea | 4 | 60% | One twin and the party at a haven, the other at the origin; days |
 | 17 | Deep Astral | Any mark | 5 | 75% | The twins at different havens; sessions |
 
-Off-target landings go in a random direction. One that would put him in rock,
+Wayfind is magical teleportation, so antimagic and wards against
+teleportation stop it. Off-target landings go in a random horizontal
+direction. One that would put him in rock,
 water or open sky lands him on the nearest safe ground. Every jump spends its
 rune, mishap or not.
 
 1. **The toll and the tax.** One charged rune for any jump; distance sets the
-   exhaustion and the mishap. A mark beyond his reach fails with no cost.
+   exhaustion and the mishap. A mark beyond his reach fails before anything
+   is spent, action included. Aboard a ship within a world's air, he is on
+   that world; in wildspace between worlds, World does not apply.
 2. **The network.** Standing on one of his marks as he jumps: −25% mishap. The
    network buys safety, never energy. Rune Sets give their spells and play no
    part in Wayfind.
@@ -233,8 +240,9 @@ rune, mishap or not.
    + 1) ÷ 2, rounded down, at most 8; the +1 is the hidden Heart. They bring
    what they wear and carry. The twins are Tumak, not passengers. The
    player's page states the number (1 now), never the formula.
-5. **While the twins are apart,** Wayfind is locked. They reunite by travel,
-   through the crew, or by the Twin Bond Compass.
+5. **While the twins are apart,** Wayfind is locked. The twin with the crew is
+   the one played. They reunite by travel, through the crew, or by the Twin
+   Bond Compass.
 6. **Homebound** is a Wayfind into the folded world's heart: free, cannot
    mishap, any distance, at a moment the player chooses.
 
