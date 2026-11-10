@@ -200,6 +200,10 @@ subclass runs as published, with three changes for him.
 - **Essence runes are the runes on his skin**, one per rune, matched or not:
   4 now. They are the Runechild's container count; charging and charged
   runes work as published.
+- A rune is the pair of halves one level brings. Rolled runes fill the
+  sixteen positions by level 16; the three clan runes come at havens, early,
+  and the Heart last. The inscription never passes 20, and levels past 16
+  add no runes.
 - **Matched runes** are his waypoints and his reach: one mark per matched
   rune, and the reach gate counts them.
 - Psionic Energy Dice stay the Soulknife's own.
