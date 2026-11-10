@@ -408,7 +408,8 @@ until you stop. While you look, you are Blinded to your own surroundings.
 ## Handoff
 
 1. **Rule the unhiding trigger** and the names; the rest waits for play.
-2. **The player meets it at the table first.** His D&D Beyond sheet carries
-   only what he has now (§ Sheet text); each band and rule is added as play
-   reveals it.
+2. **The player meets it at the table first.** Korey reveals it in play, then
+   adds § Sheet text to D&D Beyond and the Wayfinder's Path tab. The change
+   audit leaves the player pages for that moment; each later band and rule is
+   added as play reveals it.
 3. **Change audit** across Promotes to. Then delete this draft.
