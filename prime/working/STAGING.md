@@ -19,7 +19,9 @@ DM side is on `prime/rules/index.html` § Tumak, the inscription.
 His runes: Wan holds 01, 02, 08, 11; Tu holds 07, 08, 09, 16. Level 3: Wan
 08, Tu 16. Level 4: Wan 02, Tu 08; the left sole (08) is matched. Two more
 came off the table, with no match: Wan 01 and 11, Tu 09 and 07. The Heart
-stays hidden.
+stays hidden. The tab already shows the table-known halves (08 and 16 at
+level 3; Wan's 02 and Tu's 08 at level 4); the off-table four wait for the
+reveal.
 
 Sheet text, level 4, as D&D Beyond custom features:
 
