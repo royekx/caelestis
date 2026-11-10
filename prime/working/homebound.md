@@ -192,10 +192,13 @@ Each subclass runs as published. The homebrew:
   two charged runes: an hour, as attunement takes, or resources in the heat
   of it. Ending a mark
   takes no action.
-- Each mark belongs to the Rune Set of the rune that placed it.
+- A mark sits on a place or on a ship, never on a creature or a carried
+  object. Each matched rune holds one mark, and the mark takes that rune's
+  set.
 - **Perceiving is free**, as with a familiar. As a bonus action he sees, but
-  does not hear, through one of his marks until the start of his next turn,
-  and is blind where he stands while he looks.
+  does not hear, through one of his marks within his Wayfind reach, until the
+  start of his next turn or until he stops (no action). He is blind where he
+  stands while he looks.
 
 ### Wayfind
 
@@ -205,8 +208,11 @@ from wherever he stands, with his passengers. It always lands on a mark.
 | Band | Matched | Reach | Exhaustion | Mishap | On a mishap |
 |---|---|---|---|---|---|
 | Step | 1+ | 100 ft | 0 | 0% | none |
-| Local | 4+ | 10 miles | 1 | 20% | Fizzle: no jump; the exhaustion is still taken |
+| Local | 4+ | 10 miles | 1 | 20% | Near miss: 1d4 × 100 ft off, random direction |
 | World | 7+ | Anywhere on the same world | 2 | 30% | Overshoot: 1d10 miles off, random direction |
+
+A mishap that would land him in rock, water or open sky lands him on the
+nearest safe ground instead. Every jump spends its rune, mishap or not.
 | System | 10+ | Anywhere in the same system | 3 | 45% | The twins land apart on the world; reunite in hours |
 | Astral | 13+ | A neighbouring system, across the Astral Sea | 4 | 60% | One twin and the party at a haven, the other at the origin; days |
 | Deep Astral | 16+ | Any mark | 5 | 75% | The twins at different havens; sessions |
@@ -218,9 +224,10 @@ from wherever he stands, with his passengers. It always lands on a mark.
    the target mark is of the same set, −10% if of another. The network buys
    safety, never energy.
 3. **A walked haven as the target** cannot mishap.
-4. **Passengers:** willing creatures within 5 feet, half his matched runes
-   with the Heart counted, rounded down, at most 8. The player's page states
-   the number (1 now), never the formula, so the Heart stays hidden.
+4. **Passengers:** willing creatures within 5 feet, numbering (matched runes
+   + 1) ÷ 2, rounded down, at most 8; the +1 is the hidden Heart. They bring
+   what they wear and carry. The twins are Tumak, not passengers. The
+   player's page states the number (1 now), never the formula.
 5. **While the twins are apart,** Wayfind is locked. They reunite by travel,
    through the crew, or by the Twin Bond Compass.
 6. **Homebound** is a Wayfind into the folded world's heart: free, cannot
@@ -244,7 +251,7 @@ Deep Astral jump leaves him at 5.
   Local hops cost 1 exhaustion each at 0%.
 - **Onto the network first.** A dungeon or an ambush goes wrong. He jumps to
   the mark at the entrance, then on from it. From open ground a Local jump is
-  a 20% fizzle; from the entrance mark it is 0% or 10%.
+  a 20% near miss; from the entrance mark it is 0% or 10%.
 - **A look before he lands.** He perceives through the target first. If it is
   compromised he picks another, and takes the colder, costlier jump.
 - **The ship when neither.** A world-to-world jump is System: 3 exhaustion and
