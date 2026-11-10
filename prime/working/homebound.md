@@ -1,219 +1,204 @@
 # Homebound: the Wayfinders' world and its Runekeepers
 
-The story behind Tumak's arc, settled before the mechanic. A story plus a
-problem makes an adventure: the problem is that Tumak needs and wants to go
-home, and the story starts centuries before him. Opened from deconflict.md
-Handoff 3a. Rulings of 2026-11-08 and 2026-11-09.
+The story behind Tumak's arc and the mechanic built from it. The problem is
+that Tumak needs and wants to go home; the story starts five centuries before
+him. Opened from deconflict.md Handoff 3a. Rulings of 2026-11-08 and
+2026-11-09.
 
 ## The first fold
 
-- About five centuries ago a seeker came to the Wayfinders' world, carrying
-  the Dissolution fragment. Who the seeker was and what sent them is open; it
-  may have been an early stroke of Vecna's work, and that stays ambiguous.
-  The seeker was not necessarily one of the Seekers chapters.
-- The world came to its Zenith, and a Monolith rose. The seeker carried the
-  fragment into the world's Atrium and opened its heart, then linked it to one
-  other world that also stood under a Monolith. That world was a bad one. The
-  two worlds began to bleed into each other, and terrible creatures came
-  through onto the Wayfinders' world.
-- The clans fought back and took the fragment from the seeker. In the
-  struggle the one who seized it etched one pole of it into themselves and
-  caught a cycle already running. The fold happened by accident: Dissolution
-  cut the link, closed the heart and folded the world inside it. The bleeding
-  stopped. The Monolith faded afterward, as Monoliths do.
-- Dissolution disjoined the world from everything around it and drew it into
-  its heart. The heart itself can still bind: that is what the havens do.
+- About five centuries ago a seeker came to the Wayfinders' world carrying the
+  Dissolution fragment. Who the seeker was and what sent them is open; it may
+  have been an early stroke of Vecna's work, and that stays ambiguous. The
+  seeker was not necessarily one of the Seekers chapters.
+- The world came to its Zenith and a Monolith rose. The seeker carried the
+  fragment into the world's Atrium, opened its heart and linked it to one
+  other world under a Monolith. That world was a bad one. The two began to
+  bleed into each other, and terrible creatures came through.
+- The leaders of four clans fought the seeker together and took the fragment.
+  Dissolution struck all four. The one who seized it etched one pole into
+  themselves and caught a cycle already running, and became the first
+  Runekeeper; the other three lines were primed.
+- The fold happened by accident in that struggle. Dissolution disjoined the
+  world from everything around it, cut the link, closed the heart and drew
+  the world inside it. The bleeding stopped. The Monolith faded afterward, as
+  Monoliths do.
+- The world sits inside its own heart: the one exception to the rule that a
+  heart holds no civilization, made possible by Reach residue. The heart can
+  still bind outward, and that is what the havens do.
 - The clans understood none of it at the time and learned to work it over the
-  generations that followed. The Becoming is the cleaned-up memory: something
-  came looking, and the world folded itself around its people.
-- The world sits inside its own heart. It is the one exception to the rule
-  that a heart holds no civilization, and Reach residue is what makes it
-  possible.
+  generations after. The Becoming is the cleaned-up memory: something came
+  looking, and the world folded itself around its people.
 - The order holds the way a link was broken once. If the crew learns it, it
   counters N'ghathrod's lattice.
 
 ## The order and the cycle
 
-- The leaders of four clans fought the seeker together, and Dissolution struck
-  all four. The one who seized the fragment became the first Runekeeper; the
-  other three lines were primed. The fragment forms only in someone of a
-  primed line, so the office passes through those four clans and no others.
+- The fragment forms only in someone of a primed line, so the office passes
+  through those four clans in a fixed order and no others. Each clan's
+  Runekeepers can be its own species.
 - The first Runekeeper was of the founder's clan. Lunarfoot descends from the
-  founder's kin, which is why the Becoming is a Lunarfoot tale.
-- The order is four clans in a fixed order, and the office passes from clan to
-  clan; Lunarfoot comes fourth. Each clan's Runekeepers can be its own
-  species.
-- Seven Runekeepers have held the office, over about five centuries. Wan and
+  founder's kin, which is why the Becoming is a Lunarfoot tale. Lunarfoot
+  comes fourth in the order.
+- Each primed line carries a trace of the fragment from the fight. A clan's
+  haven passes that trace to the heir as the clan's rune.
+- Seven Runekeepers have held the office over about five centuries. Wan and
   Tu are the eighth, the last of the cycle's second turn. The cycle goes on
   after them, and the order plans for it.
 
-## A Runekeeper's generation
+## A generation
 
-- The fragment is whole in a Runekeeper for their tenure. It moves only when
-  a next host exists. When the heir is born, the Runekeeper feels the fragment
-  begin to move and knows the time has come.
-- The Runekeeper has years before the heir comes of age. They make sure the
-  world is safe, plan a pilgrimage and leave the homeworld. They choose the
-  place where they will fade, build their haven there and bind to it. Once
-  bound, they can Wayfind to it as often as they need.
-- When the heir comes of age they go out as a Wayfinder and walk the havens.
-  The fragment builds in them as they go, and it shows as runes; it leaves
-  the Runekeeper at the same pace. The transfer is the clock of the journey.
-  By the time the heir reaches the Runekeeper's haven, the fragment has
-  mostly left the Runekeeper and is mostly built in the heir.
+- The fragment is whole in a Runekeeper for their tenure, and moves only when
+  a next host exists. When the heir is born, the Runekeeper feels it begin to
+  move.
+- In the years before the heir comes of age, the Runekeeper makes sure the
+  world is safe and goes on pilgrimage. They choose the place where they will
+  fade, build their haven there and bind to it; from then on they can Wayfind
+  to it at will.
 - The order builds a council around the heir, so a new Runekeeper takes office
   with guidance and knowledge.
-- The concealment is one spell, cast across a generation. Each Wayfinder's
-  journey sets its sigils across the cosmos; the sealing of the spell is the
-  Wayfinder becoming the Runekeeper. That moment is the Becoming, and the
-  Lunarfoot tale takes its name from it.
-- The Runekeeper knows when the heir reaches their haven: the haven is part
-  of their essence. They meet there, and the exchange is the Becoming. The
-  heir goes home as the Runekeeper. The old Runekeeper stays at the haven and
-  spends the few days left becoming part of the network, which completes the
-  binding. It is a death the order sings for: "We do not mourn this. We
-  sing."
+- When the heir comes of age they go out as a Wayfinder and walk the havens.
+  The fragment builds in them as runes and leaves the Runekeeper at the same
+  pace; the transfer is the clock of the journey.
+- The concealment is one spell cast across a generation. The living
+  Runekeeper holds the binding, wherever he stands. The havens are its sigils,
+  each drawing on a host world's heart. The Wayfinder's journey renews them,
+  and the sealing of the spell is the Wayfinder becoming the Runekeeper: the
+  Becoming, from which the Lunarfoot tale takes its name.
+- The Becoming happens at the Runekeeper's haven. The haven is part of the
+  Runekeeper's essence, so he knows when the heir arrives, and meets them
+  there. The heir goes home as the Runekeeper. The old Runekeeper stays and
+  spends his last few days becoming part of the network, which completes the
+  binding. "We do not mourn this. We sing."
 
 ## The havens
 
-- Every Runekeeper builds their own haven and chooses its place, knowing it is
-  where they will fade.
-- A haven is a small pocket, folded the way the homeworld is folded, made with
-  the Runekeeper's share of the fragment and set on a host world. It binds to
-  that world's heart and draws some of its energy. The draw is what holds the homeworld
-  folded inside its own heart. The havens together are the anchors of the
-  concealment.
+- Every Runekeeper builds their own haven and chooses its place. A haven is a
+  small pocket, folded the way the homeworld is folded, made with the
+  Runekeeper's share of the fragment and set on a host world. It binds to that
+  world's heart and draws some of its energy.
 - A haven's site carries traces of the homeworld's sensory anchors: light like
-  light beneath water, the smell of warm earth after rain. A Wayfinder finds a
-  haven the way the doctrine says to find home, by recognising those
-  fragments, and the runes stir when one is near.
-- A haven keeps its Runekeeper's essence. A Wayfinder in the haven can invoke
-  it, and it appears as a projection that speaks, teaches and answers, as the
-  past Avatars do. Anchors loosen over time, at the
-  metaphysical level and not the physical one, and each new binding renews
-  the whole network.
-- There are seven havens. Six hold the essences of faded Runekeepers. The
-  seventh is the current Runekeeper's, built during the twins' childhood and
-  waiting for him.
+  light beneath water, the smell of warm earth after rain. A Wayfinder finds
+  one by recognising those fragments, and the runes stir when one is near.
+- A haven keeps its Runekeeper's essence. A Wayfinder there can invoke it, and
+  it appears as a projection that speaks and teaches, as the past Avatars do.
+  Anchors loosen over time, at the metaphysical level, and each new binding
+  renews the whole network.
 - Each haven holds a trial its Runekeeper set, teaching that Runekeeper's
-  lesson. Both twins must be present to take it.
-- A walked haven gives three things, as the royal tombs do for Noctis in
-  Final Fantasy XV: a waypoint to Wayfind to; a reward the haven makes for
-  this heir from the host heart it draws on, an item, a boon or knowledge;
-  and that Runekeeper's chapter of the order's history, taught by their
-  essence, as the past Avatars teach in Avatar. Walking the havens is how the
-  order's legacy is handed on.
-- The seven havens by clan: the founder's clan holds the first and fifth;
-  the second clan the second and sixth; the third clan the third and the
-  seventh, the current Runekeeper's; Lunarfoot the fourth.
+  lesson. Passing it gives a waypoint, a reward the haven makes for this heir
+  from the heart it draws on, and that Runekeeper's chapter of the order's
+  history, as the royal tombs do for Noctis in Final Fantasy XV.
+- There are seven. Six hold faded Runekeepers. The seventh is the current
+  Runekeeper's, built during the twins' childhood. By clan: the founder's
+  clan holds the first and fifth, the second clan the second and sixth, the
+  third clan the third and seventh, Lunarfoot the fourth.
 - Tumak builds his own haven long after the campaign, when his own heir is
   born.
 
-## Wayfinder and Runekeeper
+## Tumak and the Runekeeper
 
-- Tumak is a Wayfinder, finding his way home. He becomes the Runekeeper only
-  when he comes home and the rite completes. The current Runekeeper was the
-  Wayfinder of the generation before; that is the cycle.
+- Tumak is a Wayfinder until the Becoming. The current Runekeeper was the
+  Wayfinder of the generation before.
 - The current Runekeeper is old, alive and in office on the homeworld, holding
-  the last of his share of the fragment. He goes to his haven when the twins
-  reach it, and stays. He built that haven while the twins were children.
-- The concealment has one binding and many anchors. The living Runekeeper
-  holds the binding, and it is in him wherever he stands. The havens are its
-  sigils, drawing on their host hearts to hold. As he fades, the binding has
-  to pass to the next Runekeeper, and Tumak has to finish the journey for it
-  to hold.
-- Each clan's line carries a trace of the fragment from the priming at the
-  fight. A clan's haven passes that trace on to the heir as the clan's rune.
-- Something is going wrong. The fragment's volume holds: it leaves one
-  Runekeeper and settles in two heirs, half in each. A few runes into the
-  journey, the Runekeeper begins to feel it leaving him faster than any
-  generation before, and the order sees the binding on the world slipping.
-  This is the pressure of Tumak's arc, and it rises.
-- The twins have met the Runekeeper: he sent them out himself, and they may
-  have met him once before as small children, at a formality they do not
-  remember. He watches over them on their journey and nudges rarely, at key moments: his
-is the voice Tumak
+  the last of his share. He sent the twins out himself; they may have met him
+  once before as small children, at a formality they do not remember. He
+  watches over them and nudges rarely, at key moments. His is the voice Tumak
   heard in Voyage 4, which the player record names only as the Runekeeper,
   the presence behind the marks.
+- Something is going wrong. The fragment's volume holds, but it leaves one
+  Runekeeper and settles in two heirs, half in each. A few runes into the
+  journey, he feels it leaving faster than any generation before, and the
+  binding on the world begins to slip. Left too long, the world unhides.
 
 ## Homecoming and the Zenith
 
 - At the Becoming the way into the folded world's heart opens, and the twins
   go home as the Runekeeper.
 - The fragment has always come home whole, in one Runekeeper. This time it
-  comes home as two halves, in Wan and Tu. The rite was never built for that,
-  and nobody planned it. That change is the world's second Zenith, a natural
-  one. The people there, and the crew, who will have seen Monoliths and
-  Zeniths beside bad things, may take it as the omen they feared. A Zenith is
-  a significant change, never a doom; the Monolith archives people, and that
-  costs, but for the world it is change, and Runekeeping and Wayfinding work
-  differently afterward: the homeworld splits into a blessing
-  faction and an omen faction, a Monolith follows, and the world on the far
-  side is settled by events and by the people in it. It may be rebound as
-  before, hidden in a new way, or no longer hidden; the Monolith may stand
-  inside the fold.
-
-### Running the Zenith (DM)
-
-Leave the outcome to the table. Before homecoming, plot the potentialities
-from where play stands: what the crew has learned, which factions they have
-met, what the twins want. Let the session decide which one falls.
+  comes home as two halves, in Wan and Tu. Nobody planned it, and the change
+  is the world's second Zenith, a natural one.
+- A Zenith is a significant change, never a doom. The people there, and a
+  crew who will have seen Monoliths beside bad things, may take it as the omen
+  they feared. The homeworld splits into a blessing faction and an omen
+  faction. A Monolith follows and archives people, and that costs. The world
+  on the far side may be rebound as before, hidden in a new way or no longer
+  hidden, and the Monolith may stand inside the fold. Runekeeping and
+  Wayfinding work differently afterward.
+- **Running it (DM):** leave the outcome to the table. Before homecoming, plot
+  the potentialities from where play stands: what the crew has learned, which
+  factions they have met, what the twins want.
 
 ## The mirror of Vecna (DM)
 
-Keep this in view; it can cut either way.
-
 - Both are spells drawn across the galaxy on worlds' hearts. Vecna's
   inscription opens and links hearts into an eye, to see everything. The
-  Runekeepers' binding sets sigils that draw on hearts without opening or
-  linking them, to stay unseen. One joins in order to see; the other
-  disjoins in order to hide.
-- Where they could meet: a haven's host world on one of the eye's strokes;
-  a host heart opened by Vecna's work; the eye opening on a galaxy that holds
-  a world it cannot see.
+  Runekeepers' binding draws on hearts without opening or linking them, to
+  stay unseen. One joins in order to see; the other disjoins in order to hide.
+- Where they could meet: a haven's host world on one of the eye's strokes; a
+  host heart opened by Vecna's work; the eye opening on a galaxy that holds a
+  world it cannot see.
 
 ## The mechanic
 
-DM voice. Shape ruled 2026-11-09; numbers are tuned at the table. It sits on
-the Wayfind redo in BACKLOG § Tumak (reach gate, cost by band, mishap tiers),
-which lands with it.
+DM voice. Shape ruled 2026-11-09; numbers are tuned at the table.
 
 ### Two tracks
 
-- **Runes are what he can do.** Rolled per level as now. Matched runes give
-  marks, Rune Set spells and Wayfind reach. They fill near the end of his
-  levels and do not gate Homebound.
-- **Havens are where he goes.** Reached by travel, found by the sensory
+- **Runes are what he can do:** charges, marks, reach. Rolled per level.
+- **Havens are where he goes:** reached by travel, found by the sensory
   anchors. Getting home takes adventuring, not levelling.
 
-### Wayfind and his classes (Soulknife, Runechild)
+### Runes
 
-Tumak is Rogue 3 (Soulknife) and Sorcerer 1 (Runechild), level 4. Each
-subclass runs as published. The homebrew is one bridge between them, and
-Wayfind.
+- Each level Wan and Tu each roll a d20 against their own pool of 01–16.
+  1–16 gives that position; 17, 18 and 19 reroll. A position the twin already
+  holds slides up to the next position that twin lacks, wrapping from 16 to
+  01. A 20 lets the player choose any position that twin lacks, and the point
+  is to match.
+- The pacing rule applies to the position he lands on: a Vessel position
+  (11–16) while that twin still lacks a Soul, Maker or Walker position
+  rerolls once; keep the second.
+- A rune is the pair of halves one level brings, matched or not. A matched
+  rune has both halves at one position.
+- Rolled runes fill the sixteen positions by level 16. The three clan runes
+  (17, 18, 19) come whole at havens, so they arrive early; the Heart (20)
+  comes last, at the Becoming. Levels past 16 add no runes, and the
+  inscription never passes 20.
+- Today: Wan holds 01, 02, 08, 11; Tu holds 07, 08, 09, 16. Four runes; one
+  matched, 08 (left sole). Two of the four came off the table.
+- The player sees sixteen positions and a d20, and may guess that something
+  sits above 16.
 
+### His classes (Rogue 3 Soulknife, Sorcerer 1 Runechild)
+
+Each subclass runs as published. The homebrew:
+
+- **Essence runes are the runes on his skin**, one per rune: 4 now. This
+  replaces the Runechild's count (1, plus one per sorcerer level).
 - **Psionic Energy Dice can charge runes.** As a bonus action he expends one
-  Psionic Energy Die to charge one essence rune. Sorcery points charge runes
-  as the Runechild says. Whichever he levels, Rogue or Sorcerer, he has a way
-  to charge.
-- **Wayfind expends one charged rune**, however it was charged.
-- Charged runes revert to inert after a long rest, as published.
-- **Essence runes are the runes on his skin**, one per rune, matched or not:
-  4 now. They are the Runechild's container count; charging and charged
-  runes work as published.
-- A rune is the pair of halves one level brings. Rolled runes fill the
-  sixteen positions by level 16; the three clan runes come at havens, early,
-  and the Heart last. The inscription never passes 20, and levels past 16
-  add no runes.
-- **Matched runes** are his waypoints and his reach: one mark per matched
-  rune, and the reach gate counts them.
-- An optional haven can add to what charges his runes: a sorcery point or a
-  Psionic Energy Die to his maximum.
+  die to charge one essence rune. Sorcery points charge runes as the
+  Runechild says, and from Sorcerer 1 he has the Runechild's action to charge
+  one rune when he has no points and no charges.
+- **Charged runes** power the Runechild's features, Wayfind and quick marks.
+  They last until spent or until a long rest.
+- An optional haven can add a sorcery point or a Psionic Energy Die to his
+  maximum.
+
+### Marks
+
+- He holds one mark per matched rune: 1 now. A walked haven is a further
+  waypoint, held for good, that takes none of these.
+- Placing a mark, in person, takes a 10-minute ritual, or a Magic action and
+  one charged rune. Ending a mark takes no action.
+- Each mark belongs to the Rune Set of the rune that placed it.
+- **Perceiving is free**, as with a familiar. As a bonus action he sees, but
+  does not hear, through one of his marks until the start of his next turn,
+  and is blind where he stands while he looks.
 
 ### Wayfind
 
-Wayfind always lands on one of his marks, never on an open point. It is a
-Magic action from wherever he stands, to a mark within reach.
+A Magic action: he expends one charged rune and teleports to one of his marks,
+from wherever he stands, with his passengers. It always lands on a mark.
 
 | Band | Matched | Reach | Exhaustion | Mishap | On a mishap |
 |---|---|---|---|---|---|
@@ -222,240 +207,155 @@ Magic action from wherever he stands, to a mark within reach.
 | World | 7+ | Anywhere on the same world | 2 | 30% | Overshoot: 1d10 miles off, random direction |
 | System | 10+ | Anywhere in the same system | 3 | 45% | The twins land apart on the world; reunite in hours |
 | Astral | 13+ | A neighbouring system, across the Astral Sea | 4 | 60% | One twin and the party at a haven, the other at the origin; days |
-| Deep Astral | 16 | Any mark | 5 | 75% | The twins at different havens; sessions |
+| Deep Astral | 16+ | Any mark | 5 | 75% | The twins at different havens; sessions |
 
-1. **Cost:** one charged rune for any jump, near or far. Distance sets the
-   rest: the band's exhaustion and the band's mishap. The exhaustion is
-   meant to tax: a deep jump is a last resort.
-2. **The network.** Each mark belongs to the set of the rune that placed it.
-   Standing on one of his marks as he jumps: −25% mishap if the target is of
-   the same set, −10% if of another set. The network buys safety, never
-   energy: exhaustion is the same either way.
-3. **A walked haven as the target:** no mishap.
-4. **Homebound:** free, no mishap, any distance.
+1. **One charged rune per jump, at any distance.** Distance sets the
+   exhaustion and the mishap. Matched runes, clan runes included, set the
+   reach; a mark beyond reach fails with no cost.
+2. **The network.** Standing on one of his marks as he jumps: −25% mishap if
+   the target mark is of the same set, −10% if of another. The network buys
+   safety, never energy.
+3. **A walked haven as the target** cannot mishap.
+4. **Passengers:** willing creatures within 5 feet, half his matched runes
+   with the Heart counted, rounded down, at most 8. The player's page states
+   the number (1 now), never the formula, so the Heart stays hidden.
+5. **While the twins are apart,** Wayfind is locked. They reunite by travel,
+   through the crew, or by the Twin Bond Compass.
+6. **Homebound** is a Wayfind into the folded world's heart: free, cannot
+   mishap, any distance, at a moment the player chooses.
 
-Cut from the redo: "the first Wayfind per long rest is free", "Touch jumps
-are always free", and the 5% floor. The bands are renamed (Touch, Planetary,
-Near and Deep wildspace become Step, World, Astral and Deep Astral) and the
-mishap curve softened at the top (40/60/75/90 to 30/45/60/75). Deep Astral is
-the panic button: open, and the likeliest to go wrong.
+Exhaustion is 2024's: −2 to every d20 test and −5 ft speed per level. Each
+band taxes more, and Deep Astral is the panic button: open, and the likeliest
+to go wrong.
 
-**When he jumps how (DM examples, level 10, World reach, about nine
-marks):**
+**When he jumps how** (level 10, World reach, about nine marks):
 
-- **Long jump when it is urgent and a miss is survivable.** The crew is in
+- **A long jump when it is urgent and a miss is survivable.** The crew is in
   trouble at the ship, 200 miles off: World, 2 exhaustion, 30% cold, 5% from a
-  same-set mark. A mishap overshoots 1d10 miles.
-- **Chain when he has prepared.** A heist in a scouted city with Walker marks
-  at the safehouse, a rooftop and the vault: Step hops cost nothing; Local
-  hops cost 1 exhaustion each at 0%.
-- **Step onto the network first.** A dungeon goes wrong, or an ambush in
-  enemy ground. He jumps to the mark at the entrance, then on from it to
-  anywhere his reach and marks allow. From open ground a Local jump is a 20%
-  fizzle; from the entrance mark it is 0% or 10%.
-- **Check before he lands.** He perceives through the target mark first. If
-  it is compromised, he picks another and takes the colder, costlier jump.
-- **Fly when neither.** A world-to-world jump is System: 3 exhaustion and
-  20–45%. Ordinary travel stays the default, and Gregory's navigation with
-  it.
+  same-set mark.
+- **A chain when he has prepared.** A heist in a scouted city with Walker
+  marks at the safehouse, a rooftop and the vault: Step hops cost nothing;
+  Local hops cost 1 exhaustion each at 0%.
+- **Onto the network first.** A dungeon or an ambush goes wrong. He jumps to
+  the mark at the entrance, then on from it. From open ground a Local jump is
+  a 20% fizzle; from the entrance mark it is 0% or 10%.
+- **A look before he lands.** He perceives through the target first. If it is
+  compromised he picks another, and takes the colder, costlier jump.
+- **The ship when neither.** A world-to-world jump is System: 3 exhaustion and
+  20–45%. Ordinary travel stays the default, and Gregory's navigation with it.
 - **Why a cold long jump at all:** a chain spends a rune per hop. With one
-  charged rune left, or no time, or no marks between, the single long jump is
-  the only way; it is fast and costs one rune, and pays in exhaustion and
-  risk. Runes buy safety through the network; exhaustion and risk buy
+  rune left, no time, or no marks between, the single long jump is the only
+  way. Runes buy safety through the network; exhaustion and risk buy
   distance.
-- The player says which mark, and whether he stands on one. The DM holds the
-  table and rolls.
+- The player names the mark and says whether he stands on one. The DM holds
+  the table and rolls.
 
+### Havens
 
-### Marks
-
-- Placing a mark, in person, takes either a 10-minute ritual or a Magic
-  action and one charged rune: free when he has the time, a rune when he
-  needs it quick. He holds one mark per matched rune. Ending a mark takes no
-  action.
-- **Perceiving through a mark is free**, as with a familiar. As a bonus
-  action he sees, but does not hear, through one of his marks until the
-  start of his next turn. While he looks, he is blind to his own
-  surroundings.
-
-### Rolling runes
-
-- Each level, Wan and Tu each roll a d20 against their own pool of 01–16.
-  1–16 gives that position; 17, 18 and 19 reroll. A position the twin
-  already holds slides up to the next position that twin lacks, wrapping
-  from 16 to 01. The face always names a real position, and as the pools
-  shrink, matches come more often, on the roll or on the slide. A 20 lets the player choose any position that twin
-  lacks, and the point is to match.
-- The pacing rule stands, on the position he lands on: a Vessel position
-  (11–16) while that twin still lacks a Soul, Maker or Walker position
-  rerolls once; keep the second.
-- Simulated from today's runes: about 1.5 rolls per twin per level, 8 at
-  worst (rerolling repeats averaged 4, and once ran to 109).
-- The safety valve is retired. The havens and Strain carry the pacing.
-- The player sees sixteen positions and a d20, and may guess that something
-  sits above 16. That is fine.
-
-### Walking a haven
-
-- Both twins present, the trial passed: the haven is walked.
-- It becomes a permanent waypoint. It costs none of his rune marks and cannot
-  be reclaimed.
-- A Wayfind *to* a walked haven cannot mishap; the reach gate still applies.
-  A Wayfind *from* a haven carries the normal reach and the normal risk.
-- A mishap can land a twin at a haven: one not yet walked, or a different one
-  than intended. The twins arrive split; one twin can find a haven but cannot
-  take its trial.
-
-### Homebound
-
+- Both twins present and the trial passed: the haven is walked. One twin alone
+  can find a haven but cannot take its trial.
+- A Wayfind from a haven carries the normal reach and risk.
 - Homebound needs one haven of each of the four clans, Lunarfoot's included,
-  with the previous Runekeeper's haven last. His haven counts for his own
-  clan, which is always another clan. With today's seven the shortest path is
-  four: one of the first and fifth, one of the second and sixth, the fourth,
-  and the seventh last. Walking the third as well makes five; the rest are
-  optional.
-- A clan's rune comes from the first haven of that clan he walks: runes 17,
-  18 and 19, one per other clan, bestowed whole. Four clans means every heir
+  with the previous Runekeeper's haven last; his counts for his own clan.
+  With today's seven the shortest path is four: one of the first and fifth,
+  one of the second and sixth, the fourth, and the seventh last. Walking the
+  third as well makes five.
+- A clan's rune comes from the first haven of that clan he walks. Every heir
   receives the same three, however many havens later generations build.
-- Order is free until the last. The previous Runekeeper's haven comes last.
-  Arriving there early, the trial is not yet open: he is told to return once
-  the others are walked, which gives him a direct task.
-- At the previous Runekeeper's haven the twins meet him in person and take
-  the exchange: the Becoming. The Heart (20) wakes, and Homebound opens. The
-  Heart is 20 by its place on the chart, not by order: it comes only at this
-  haven, after the other clans' runes are held and its trial is passed.
-- Homebound is a Wayfind into the folded world's heart: free, cannot mishap,
-  ignores the reach gate, carries passengers by the usual rule, at a moment
-  the player chooses. The early-home door is dropped.
+- Order is free until the last. Arriving early at the previous Runekeeper's
+  haven, the trial is not yet open: he is told to return once the others are
+  walked.
+- At that haven the twins meet the Runekeeper in person and take the
+  exchange. The Heart wakes and Homebound opens.
 
-### Slip and Strain
+### The clock
 
-- **Slip** is the count of unmatched halves: fragment that has left the
-  Runekeeper and holds nothing yet. A single heir's runes arrive whole, so
-  only a split heir has Slip. It is 6 today.
-- **Strain** is Slip minus havens walked. Read the clock from it:
+- **Slip** (name to change) is the count of unmatched halves: fragment that
+  has left the Runekeeper and holds nothing yet. A single heir's runes arrive
+  whole, so only a split heir has it. It is 6 today.
+- **Strain** (name to change) is Slip minus havens walked:
 
   | Strain | At the table |
   |---|---|
   | 0–4 | Steady. The voice is clear. |
   | 5–7 | The Runekeeper feels the fragment leaving too fast; the sensory anchors flicker at havens. |
   | 8–9 | The binding slips. Traces of the homeworld leak into wildspace where someone could notice. |
-  | 10+ | The world unhides. See § The unhiding. |
+  | 10+ | The world unhides. |
 
-- Simulated from today's runes, Slip holds about 7 to 8 across levels 5 to 9
-  (10 on bad luck), then falls to 0 by level 16. Walking havens keeps Strain
-  under the crisis line. Homecoming before every rune is in leaves Slip
-  above 0, which feeds the Zenith.
-- Strain has a consequence, and it is likely to land in the middle of the
-  campaign, where Slip runs highest: **the world unhides.** Levelling up does
-  not answer it.
-
-### The unhiding
-
-- The binding gives way and the homeworld comes out of its fold. Tumak learns
-  it through the Runekeeper: short, broken pulses of contact that say the
-  world is no longer hidden.
-- He has to choose. An unhidden world can be reached by ordinary travel, so
-  he can go home early, without the Becoming; the fragment then arrives as
-  two halves and brings the Zenith early, and it may be a harder one. Or he
-  races the remaining havens to finish the binding and come home as the
-  Runekeeper.
-- The unhiding is the rising action's peak. Homecoming is still the climax,
-  and it is not what anyone expects.
-- An unhidden world can be noticed: by Vecna's work, by seekers, by whatever
-  the old link reached.
+- Simulated from today's runes, Slip holds about 7 across levels 5 to 9 and
+  falls to 0 by level 16. The pressure peaks mid-campaign; levelling alone
+  does not answer it.
+- **The unhiding.** The binding gives way and the homeworld comes out of its
+  fold. Tumak learns it through the Runekeeper in short, broken pulses. He
+  chooses: go home early by ordinary travel, without the Becoming, which
+  brings the Zenith early and perhaps harder; or race the remaining havens to
+  come home as the Runekeeper. The unhiding is the rising action's peak;
+  homecoming is still the climax. An unhidden world can be noticed: by
+  Vecna's work, by seekers, by whatever the old link reached.
 
 ## Promotes to
 
 - `locations/wayfinders-homeworld.html`: the first fold; the world inside its
-  heart; the havens as anchors; replaces "sits where it has always sat,
-  reachable by anyone who knows the way back".
-- `factions/runekeepers.html`: the four clans and the cycle; the founder's
-  clan and Lunarfoot; the council; the havens; the Becoming as the cleaned-up
-  memory; parked "whether closing is the inverse of opening" answered in part.
-- `dossiers/the-runekeeper.html`: his haven, his pilgrimage, the voice, the
-  binding he is and the faster fade;
-  replaces "the world sits where it has always sat".
+  heart; the havens. Replaces "sits where it has always sat, reachable by
+  anyone who knows the way back".
+- `factions/runekeepers.html`: the four primed clans and the cycle; the
+  council; the havens; the Becoming. Answers in part the parked "whether
+  closing is the inverse of opening".
+- `dossiers/the-runekeeper.html`: his haven, the binding, the faster fade, the
+  voice. Replaces "the world sits where it has always sat".
 - `artifacts/dissolution-fragment.html`: arrived with the seeker; whole in a
-  Runekeeper for their tenure; moves at the heir's birth; binds havens to
-  hearts; the Zenith comes from the fragment arriving home as two halves,
-  which replaces "three poles stall the cycle".
+  Runekeeper for a tenure; moves at the heir's birth; binds havens to hearts.
+  The Zenith comes from the fragment arriving home as two halves, replacing
+  "three poles stall the cycle".
 - `cosmology/index.html` § Hearts and Atria: the one exception to "a heart
   holds no civilization"; a world that broke a link.
-- `crew/tumak.html`: the havens as his road; Wayfinder until he comes home;
-  the faster fade as his pressure; Homebound per the mechanic.
-- Retire "Tumak knows of the previous Runekeeper and met him once, briefly; he
-  does not understand what that meeting was" on `crew/tumak.html`,
-  `dossiers/the-runekeeper.html`, `factions/runekeepers.html` and
-  `prime/data/connections.json`, in favour of § Wayfinder and Runekeeper.
-- `rules/index.html`, `rules/wayfinder-path-dm.html`, the Wayfinder's Path tab
-  on `registry/crew-manifest/tumak-swan.html`, `campaign/plot-hooks.html`:
-  per the mechanic chat.
-- BACKLOG closes: § locations/wayfinders-homeworld.html "The homeworld hides
-  inside its own heart"; "The sanctuaries, and a stock of them" (the havens
-  replace the sanctuaries); "decide Homebound" (From the chat sweeps of
-  2026-11-04); "Runes 17–19 as Anchors"; "The early-home door" (dropped); "A
-  Runekeeper's leaving and the Becoming" in part.
-- BACKLOG § Tumak: the redo's "first Wayfind per long rest is free" and
-  "Touch jumps are always free" are replaced by § Wayfind and his classes:
-  each jump expends a charged rune.
-- `crew/tumak.html` § Build, the Wayfinder's Path tab and his D&D Beyond
-  sheet: Psionic Energy Dice charge runes; Wayfind expends a charged rune;
-  essence runes counted by the runes on his skin.
-- The record of his runes, corrected: level 3, Wan 02 and Tu 08; level 4,
-  Wan 08 and Tu 16; 08 (left sole) is matched. Two more runes came off the
-  table, rolled with no match: Wan 01 and 11, Tu 09 and 07. Wan holds 01,
-  02, 08, 11; Tu holds 07, 08, 09, 16. The rules page and the player tracker show Wan 08 and Tu 16 at
-  level 3 and Tu 08 at level 4, which is wrong.
+- `crew/tumak.html`: the havens as his road; Wayfinder until the Becoming; the
+  pressure; § Build with the homebrew.
+- Retire "Tumak knows of the previous Runekeeper and met him once, briefly"
+  on `crew/tumak.html`, `dossiers/the-runekeeper.html`,
+  `factions/runekeepers.html` and `prime/data/connections.json`.
+- `rules/index.html` § The Runekeeper, `rules/wayfinder-path-dm.html`, the
+  Wayfinder's Path tab on `registry/crew-manifest/tumak-swan.html` and his
+  D&D Beyond sheet: § The mechanic whole, and his corrected runes (the pages
+  show Wan 08 and Tu 16 at level 3 and Tu 08 at level 4).
+- `campaign/plot-hooks.html`: the havens, the unhiding, the Zenith.
 - `deconflict.md` ruling 12: "Homebound opens when Tumak holds every rune" is
-  replaced by § The mechanic → Homebound; runes no longer gate it.
+  replaced by § Havens.
+- BACKLOG closes, each replaced by § The mechanic: § Tumak's Wayfind redo
+  (reach gate, distance bands, tiered mishaps, cost by band, reunion, network
+  standing rule, 17–19 reroll); "Tu's half landed on 08"; "Runes 17–19 as
+  Anchors"; "The sanctuaries, and a stock of them"; "The early-home door"
+  (dropped); "decide Homebound"; "The homeworld hides inside its own heart";
+  "A Runekeeper's leaving and the Becoming" in part.
 - `inbox/chat-crew-tumak-gregory-bartholomew.md` § Tumak Swan, turns after
-  2026-10-25: every item lands here or in the mechanic.
+  2026-10-25: every item lands here.
 
 ## Open
 
-- What turns the pressure up, and when. The faster fade is ruled; whether the
-  world is also found, or the Zenith comes early, is open.
-- The pace. If the twins keep to the journey, homecoming should land as the
-  fragment moves; yet the Runekeeper feels it moving faster. The numbers that
-  hold both are for the mechanic.
-- Whether a host world feels a haven's draw.
-- Who the seeker was, what sent them, and the world the link reached.
-- How many years run from the heir's birth to their coming of age and leaving.
-- Clan names; each Runekeeper's name, species and era; each haven's place,
-  treasure and lesson. Prep, haven by haven.
-- The old Runekeeper is alive, in his last days at his haven, while the new one
-  comes home into the Zenith. How the two overlap is for later.
-- The words overlap: Tumak's runes are "the inscription" and his Wayfinding
-  points are "marks", and Vecna's eye is also an inscription of marks. Keep
-  them distinct on the pages; one side may need new words.
+- What sets off the unhiding. Lean: certain, with Strain setting when: at a
+  level-up with Strain 8 or more, or by about level 10 regardless. Walking
+  havens delays it.
+- After the unhiding, whether walking havens can fold the world again before
+  the Becoming.
+- Names for Slip and Strain. Lean: one word, Fray.
+- Words that clash: "essence" names both his runes and a haven's Runekeeper;
+  "inscription" and "marks" name both his runes and Vecna's eye.
+- Whether leaving from a haven counts as standing on a mark.
+- What Lunarfoot's haven gives in place of a clan rune; what each clan rune
+  does and which set it counts toward; what an optional haven gives beyond a
+  point or a die; what walking all seven gives (the whole history and the way
+  a link was broken; every anchor renewed at once; the seven essences
+  answering together, as in the Avatar State).
+- The old Runekeeper alive in his last days while the new one comes home into
+  the Zenith.
 - Whether Vecna's eye, once open, can see the folded world.
-- "Essence" now names both his runes and a haven's Runekeeper. One needs
-  another word.
-- Slip and Strain need other names.
-- What sets off the unhiding. Candidates: certain, with Strain setting when
-  (havens delay it, they do not prevent it); Strain crossing a line at a
-  level-up; a roll against Strain each level.
-- What the binding does after the unhiding: whether walking havens can fold
-  the world again before the Becoming.
-- Whether exhaustion by band stays on top of the rune spent, once play shows
-  how far he jumps.
-- Whether leaving from a haven adds anything. Candidate: it counts as
-  standing at one of his marks, so the network bonus applies.
-- What Lunarfoot's own haven gives in place of a clan rune.
-- What else an optional haven gives beyond a point or a die.
-- What walking all seven havens gives, for Tumak or for the world.
-  Candidates: the whole history, the seeker and the accident behind the
-  Becoming, and with it the way a link was broken; every anchor renewed at
-  once, so the fold is strongest when the Zenith comes; the seven essences
-  answering together, as the past Avatars do in the Avatar State.
-- What each clan rune does and which Rune Set it counts toward.
-- Strain thresholds, tuned at the table; the pace tension above.
+- Who the seeker was, what sent them, and the world the link reached.
+- Prep, haven by haven: clan names; each Runekeeper's name, species and era;
+  each haven's place, trial and reward; the years from an heir's birth to
+  their leaving.
 
 ## Handoff
 
-1. **Lore, later:** what turns the pressure up; the seeker and the linked
-   world. Neither blocks the mechanic.
-2. **Mechanic:** shape in § The mechanic. Next: mechanic review, then the
-   open items above as play needs them.
+1. **Mechanic review** on § The mechanic; fold the result in.
+2. **Rule the unhiding trigger** and the names; the rest waits for play.
 3. **Change audit** across Promotes to. Then delete this draft.
