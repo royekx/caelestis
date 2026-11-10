@@ -1092,9 +1092,9 @@ const RUNE_FULL_URLS = {
   14: 'https://lh3.googleusercontent.com/d/1rMk5X0faRW1yFquSYGaiVo9Uiq7z6e2I',  // rune_14.png — Left thigh
   15: 'https://lh3.googleusercontent.com/d/1xAaBpdO_B0AMFsVg7d__U3NCqVRow2uv',  // rune_15.png — Right thigh
   16: 'https://lh3.googleusercontent.com/d/1TeljN7VdbyTP4enCIFgo9D42wnRvyvjV',  // rune_16.png — Right shoulder
-  17: 'https://lh3.googleusercontent.com/d/1jTXU9Q5jer8X8aFwGX3QJ29RG9wegEiJ',  // rune_17.png — Floating (DM-bestowed)
-  18: 'https://lh3.googleusercontent.com/d/1yY1b16PPriHZH3j4HmhpRya3S7k5E-Lv',  // rune_18.png — Floating (DM-bestowed)
-  19: 'https://lh3.googleusercontent.com/d/1bpHSWSTeBaot5xhxg_eGBsScRufYQXji',  // rune_19.png — Floating (DM-bestowed)
+  17: 'https://lh3.googleusercontent.com/d/1jTXU9Q5jer8X8aFwGX3QJ29RG9wegEiJ',  // rune_17.png — clan rune (bestowed at a haven)
+  18: 'https://lh3.googleusercontent.com/d/1yY1b16PPriHZH3j4HmhpRya3S7k5E-Lv',  // rune_18.png — clan rune (bestowed at a haven)
+  19: 'https://lh3.googleusercontent.com/d/1bpHSWSTeBaot5xhxg_eGBsScRufYQXji',  // rune_19.png — clan rune (bestowed at a haven)
   20: 'https://lh3.googleusercontent.com/d/1AJBYcWCZKUOMGY2o3RHkaBKL61yZsr70',  // rune_20.png — Heart (hidden)
 };
 
@@ -1164,10 +1164,10 @@ const WAYSCRIBES = {
    17 positions total: 16 rollable (1-16) + Heart (#20, hidden from table,
    pre-matched, shown as a chest glow on the figure).
 
-   Floating runes (17, 18, 19) are bestowed by the DM at story moments
+   Clan runes (17, 18, 19) are bestowed whole at a clan's haven
    and will be added to this array when assigned a body position.
 
-   Anchors: #8 (Left sole) and #16 (Right shoulder) are V003 canon. */
+   Fixed by V003: #8 (Left sole) and #16 (Right shoulder). */
 const INSCRIPTION = [
   { num: 1,  locus: "Top of left hand",  ws: "hand",  side: "front", x: 228, y: 365, hint: "top" },
   { num: 2,  locus: "Top of right hand", ws: "hand",  side: "front", x: 52,  y: 365, hint: "top" },
@@ -1582,18 +1582,14 @@ function renderSummary(container) {
       </div>`;
   }).join('');
 
-  // Wayfind: available immediately upon first match; transforms at 16
+  // Wayfind: available from the first match. Homebound opens at the
+  // Becoming, after the havens, not at a rune count; the DM copy names it.
   let wayfindLabel, wayfindLine, homeboundLabel, homeboundLine;
-  if (matched >= totalVisible) {
-    wayfindLabel  = 'Wayfind';
-    wayfindLine   = `<span class="state subsumed">the world parts safely</span>`;
-    homeboundLabel = 'Homebound';
-    homeboundLine  = `<span class="state open">Heart awakens — home returns</span>`;
-  } else if (matched >= 1) {
+  if (matched >= 1) {
     wayfindLabel  = 'Wayfind';
     wayfindLine   = `<span class="state open">open</span> <span class="detail">— carries ${creatureCapacity}</span>`;
-    homeboundLabel = `<span class="state sleeping">the path is uncharted</span>`;
-    homeboundLine  = `<span class="progress">${matched} of ${totalVisible}</span>`;
+    homeboundLabel = 'Homebound';
+    homeboundLine  = `<span class="state sleeping">the havens, then the Becoming</span>`;
   } else {
     // No full matches yet — both paths are unknown to the player
     wayfindLabel  = `<span class="state sleeping">the path is uncharted</span>`;
