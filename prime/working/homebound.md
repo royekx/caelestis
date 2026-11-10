@@ -196,8 +196,7 @@ Wayfind.
   Psionic Energy Die to charge one essence rune. Sorcery points charge runes
   as the Runechild says. Whichever he levels, Rogue or Sorcerer, he has a way
   to charge.
-- **Wayfind expends one charged rune.** A rune charged by the Runechild's
-  fallback action (no points, no charges) cannot power a Wayfind.
+- **Wayfind expends one charged rune**, however it was charged.
 - Charged runes revert to inert after a long rest, as published.
 - **Essence runes are the runes on his skin**, one per rune, matched or not:
   4 now. They are the Runechild's container count; charging and charged
@@ -208,9 +207,31 @@ Wayfind.
   add no runes.
 - **Matched runes** are his waypoints and his reach: one mark per matched
   rune, and the reach gate counts them.
-- Jumps beyond Touch also cost exhaustion by band, as the redo sets.
 - An optional haven can add to what charges his runes: a sorcery point or a
   Psionic Energy Die to his maximum.
+
+### Wayfind
+
+Wayfind always lands on one of his marks, never on an open point. It is a
+Magic action from wherever he stands, to a mark within reach.
+
+| Band | Matched | Reach | Exhaustion | Mishap | On a mishap |
+|---|---|---|---|---|---|
+| Touch | 1+ | 100 ft | 0 | 0% | none |
+| Local | 4+ | 10 miles | 1 | 20% | Fizzle: no jump; the exhaustion is still taken |
+| Planetary | 7+ | Same world | 2 | 40% | Overshoot: 1d10 miles off, random direction |
+| System | 10+ | Same system | 3 | 60% | The twins land apart on the world; reunite in hours |
+| Near wildspace | 13+ | Adjacent system | 4 | 75% | One twin and the party at a haven, the other at the origin; days |
+| Deep wildspace | 16 | Any mark | 5 | 90% | The twins at different havens; sessions |
+
+1. **Cost:** a charged rune, plus the band's exhaustion. The exhaustion is
+   meant to tax: a deep jump is a last resort.
+2. **Standing at one of his marks:** −25% mishap.
+3. **A walked haven as the target:** no mishap.
+4. **Homebound:** free, no mishap, any distance.
+
+Cut from the redo: "the first Wayfind per long rest is free", "Touch jumps
+are always free", the −10/−25 split by set, and the 5% floor.
 
 ### Rolling runes
 
