@@ -224,7 +224,8 @@ Magic action from wherever he stands, to a mark within reach.
 | Near wildspace | 13+ | Adjacent system | 4 | 75% | One twin and the party at a haven, the other at the origin; days |
 | Deep wildspace | 16 | Any mark | 5 | 90% | The twins at different havens; sessions |
 
-1. **Cost:** a charged rune, plus the band's exhaustion. The exhaustion is
+1. **Cost:** one charged rune for any jump, near or far. Distance sets the
+   rest: the band's exhaustion and the band's mishap. The exhaustion is
    meant to tax: a deep jump is a last resort.
 2. **The network.** Each mark belongs to the set of the rune that placed it.
    Standing on one of his marks as he jumps: −25% mishap if the target is of
@@ -254,9 +255,23 @@ marks):**
 - **Fly when neither.** A world-to-world jump is System: 3 exhaustion and
   35–60%. Ordinary travel stays the default, and Gregory's navigation with
   it.
+- **Why a cold long jump at all:** a chain spends a rune per hop. With one
+  charged rune left, or no time, or no marks between, the single long jump is
+  the only way; it is fast and costs one rune, and pays in exhaustion and
+  risk. Runes buy safety through the network; exhaustion and risk buy
+  distance.
 - The player says which mark, and whether he stands on one. The DM holds the
   table and rolls.
 
+
+### Marks
+
+- Placing a mark is a 10-minute ritual, in person, and costs nothing else. He
+  holds one mark per matched rune. Ending a mark takes no action.
+- **Perceiving through a mark is free**, as with a familiar. As a bonus
+  action he sees, but does not hear, through one of his marks until the
+  start of his next turn. While he looks, he is blind to his own
+  surroundings.
 
 ### Rolling runes
 
@@ -418,8 +433,6 @@ marks):**
   level-up; a roll against Strain each level.
 - What the binding does after the unhiding: whether walking havens can fold
   the world again before the Becoming.
-- Perceiving through a mark is once per long rest, which makes checking
-  before a jump rare. Candidate: perceiving costs a charged rune instead.
 - Whether exhaustion by band stays on top of the rune spent, once play shows
   how far he jumps.
 - Whether leaving from a haven adds anything. Candidate: it counts as
