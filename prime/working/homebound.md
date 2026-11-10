@@ -143,8 +143,11 @@ is the voice Tumak
 - The fragment has always come home whole, in one Runekeeper. This time it
   comes home as two halves, in Wan and Tu. The rite was never built for that,
   and nobody planned it. That change is the world's second Zenith, a natural
-  one. A Zenith is a
-  significant change, never a doom: the homeworld splits into a blessing
+  one. The people there, and the crew, who will have seen Monoliths and
+  Zeniths beside bad things, may take it as the omen they feared. A Zenith is
+  a significant change, never a doom; the Monolith archives people, and that
+  costs, but for the world it is change, and Runekeeping and Wayfinding work
+  differently afterward: the homeworld splits into a blessing
   faction and an omen faction, a Monolith follows, and the world on the far
   side is settled by events and by the people in it. It may be rebound as
   before, hidden in a new way, or no longer hidden; the Monolith may stand
@@ -270,14 +273,30 @@ serves all three.
   | 0–4 | Steady. The voice is clear. |
   | 5–7 | The Runekeeper feels the fragment leaving too fast; the sensory anchors flicker at havens. |
   | 8–9 | The binding slips. Traces of the homeworld leak into wildspace where someone could notice. |
-  | 10+ | Crisis: the world is glimpsed or found. Run the beat where something goes wrong. |
+  | 10+ | The world unhides. See § The unhiding. |
 
 - Simulated from today's runes, Slip holds about 7 to 8 across levels 5 to 9
   (10 on bad luck), then falls to 0 by level 16. Walking havens keeps Strain
   under the crisis line. Homecoming before every rune is in leaves Slip
   above 0, which feeds the Zenith.
-- Strain is a story clock with no fail state. It tells the DM which beat to
-  play.
+- Strain has a consequence, and it is likely to land in the middle of the
+  campaign, where Slip runs highest: **the world unhides.** Levelling up does
+  not answer it.
+
+### The unhiding
+
+- The binding gives way and the homeworld comes out of its fold. Tumak learns
+  it through the Runekeeper: short, broken pulses of contact that say the
+  world is no longer hidden.
+- He has to choose. An unhidden world can be reached by ordinary travel, so
+  he can go home early, without the Becoming; the fragment then arrives as
+  two halves and brings the Zenith early, and it may be a harder one. Or he
+  races the remaining havens to finish the binding and come home as the
+  Runekeeper.
+- The unhiding is the rising action's peak. Homecoming is still the climax,
+  and it is not what anyone expects.
+- An unhidden world can be noticed: by Vecna's work, by seekers, by whatever
+  the old link reached.
 
 ## Promotes to
 
@@ -347,6 +366,14 @@ serves all three.
 - Whether Vecna's eye, once open, can see the folded world.
 - "Essence" now names both his runes and a haven's Runekeeper. One needs
   another word.
+- Slip and Strain need other names.
+- What sets off the unhiding. Candidates: certain, with Strain setting when
+  (havens delay it, they do not prevent it); Strain crossing a line at a
+  level-up; a roll against Strain each level.
+- What the binding does after the unhiding: whether walking havens can fold
+  the world again before the Becoming.
+- Rune recovery: likely a long rest; check the Soulknife's and the
+  Runechild's own text.
 - Whether exhaustion by band stays on top of the rune spent, once play shows
   how far he jumps.
 - Whether leaving from a haven adds anything. Candidate: it counts as
