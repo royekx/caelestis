@@ -179,6 +179,9 @@ Each subclass runs as published. The homebrew:
   die to charge one essence rune. Sorcery points charge runes as the
   Runechild says, and from Sorcerer 1 he has the Runechild's action to charge
   one rune when he has no points and no charges.
+- Out of combat, charging takes no action: he spends dice or points and the
+  runes light. With sorcery points the Runechild rate holds, 1 point for 2
+  runes, so a full set costs about half his essence runes in points.
 - **Charged runes** power the Runechild's features, Wayfind and quick marks.
   They last until spent or until a long rest.
 - An optional haven can add a sorcery point or a Psionic Energy Die to his
@@ -193,8 +196,7 @@ Each subclass runs as published. The homebrew:
   of it. Ending a mark
   takes no action.
 - A mark sits on a place or on a ship, never on a creature or a carried
-  object. Each matched rune holds one mark, and the mark takes that rune's
-  set.
+  object.
 - **Perceiving is free**, as with a familiar. As a bonus action he sees, but
   does not hear, through one of his marks within his Wayfind reach, until the
   start of his next turn or until he stops (no action). He is blind where he
@@ -220,9 +222,9 @@ nearest safe ground instead. Every jump spends its rune, mishap or not.
 1. **One charged rune per jump, at any distance.** Distance sets the
    exhaustion and the mishap. Matched runes, clan runes included, set the
    reach; a mark beyond reach fails with no cost.
-2. **The network.** Standing on one of his marks as he jumps: −25% mishap if
-   the target mark is of the same set, −10% if of another. The network buys
-   safety, never energy.
+2. **The network.** Standing on one of his marks as he jumps: −25% mishap.
+   The network buys safety, never energy. Rune Sets give their spells and
+   play no part in Wayfind.
 3. **A walked haven as the target** cannot mishap.
 4. **Passengers:** willing creatures within 5 feet, numbering (matched runes
    + 1) ÷ 2, rounded down, at most 8; the +1 is the hidden Heart. They bring
@@ -245,9 +247,9 @@ Deep Astral jump leaves him at 5.
 
 - **A long jump when it is urgent and a miss is survivable.** The crew is in
   trouble at the ship, 200 miles off: World, 2 exhaustion, 30% cold, 5% from a
-  same-set mark.
-- **A chain when he has prepared.** A heist in a scouted city with Walker
-  marks at the safehouse, a rooftop and the vault: Step hops cost nothing;
+  mark.
+- **A chain when he has prepared.** A heist in a scouted city with marks at
+  the safehouse, a rooftop and the vault: Step hops cost nothing;
   Local hops cost 1 exhaustion each at 0%.
 - **Onto the network first.** A dungeon or an ambush goes wrong. He jumps to
   the mark at the entrance, then on from it. From open ground a Local jump is
