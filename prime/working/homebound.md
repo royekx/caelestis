@@ -200,10 +200,11 @@ Each subclass runs as published. The homebrew:
 - A mark sits where he stands: on a place, or on a ship he could crew, never
   on a creature or anything that can be carried.
 - **Perceiving costs no resource**, as with a familiar. As a bonus action he
-  sees, but
-  does not hear, through one of his marks within his Wayfind reach, until the
-  start of his next turn or until he stops (no action). He is blind where he
-  stands while he looks.
+  sees, but does not hear, the area within 30 feet of one of his marks within
+  his Wayfind reach, until the start of his next turn or until he stops (no
+  action). He is blind where he stands while he looks. It is for checking
+  that a landing is clear, and for a glimpse of who is near a mark; it is
+  never a view of a whole place.
 
 ### Wayfind
 
@@ -285,7 +286,9 @@ day's travel is the ship or the road.
 
 - Both twins present and the trial passed: the haven is walked. One twin alone
   can find a haven but cannot take its trial.
-- A Wayfind from a haven carries the normal reach and risk.
+- A walked haven counts as one of his marks: he can perceive there (a
+  secluded place, so little to see), and leaving from it takes the −25%. A
+  Wayfind from a haven carries the normal reach and exhaustion.
 - Homebound needs one haven of each of the four clans, Lunarfoot's included,
   with the previous Runekeeper's haven last; his counts for his own clan.
   With today's seven the shortest path is four: one of the first and fifth,
@@ -323,6 +326,24 @@ day's travel is the ship or the road.
   come home as the Runekeeper. The unhiding is the rising action's peak;
   homecoming is still the climax. An unhidden world can be noticed: by
   Vecna's work, by seekers, by whatever the old link reached.
+
+### Sheet text (level 4, D&D Beyond custom features)
+
+**Wayfinder's Inscription.** Runes cover your skin, one for each level you have
+reached; they are your Essence Runes (4). A rune glows when charged. As a Bonus
+Action, you can expend a Psionic Energy Die to charge one Essence Rune;
+Sorcery Points charge them as Runechild describes. Outside combat, charging
+takes no action. Charged runes stay lit until you spend them or finish a Long
+Rest.
+
+**Wayfind.** You hold one mark for each matched rune (1). Placing a mark where
+you stand takes 1 hour, or a Magic action and 2 charged runes. A mark sits on a
+place or on a ship you could crew. Ending a mark requires no action.
+As a Magic action, you expend 1 charged rune and teleport to one of your marks
+within 60 feet, along with 1 willing creature within 5 feet of you.
+As a Bonus Action, you can look through one of your marks, seeing (but not
+hearing) everything within 30 feet of it until the start of your next turn or
+until you stop. While you look, you are Blinded to your own surroundings.
 
 ## Promotes to
 
@@ -371,7 +392,6 @@ day's travel is the ship or the road.
 - Names for Slip and Strain. Lean: one word, Fray.
 - Words that clash: "essence" names both his runes and a haven's Runekeeper;
   "inscription" and "marks" name both his runes and Vecna's eye.
-- Whether leaving from a haven counts as standing on a mark.
 - What Lunarfoot's haven gives in place of a clan rune; what each clan rune
   does and which set it counts toward; what an optional haven gives beyond a
   point or a die; what walking all seven gives (the whole history and the way
@@ -387,6 +407,8 @@ day's travel is the ship or the road.
 
 ## Handoff
 
-1. **Mechanic review** on § The mechanic; fold the result in.
-2. **Rule the unhiding trigger** and the names; the rest waits for play.
+1. **Rule the unhiding trigger** and the names; the rest waits for play.
+2. **The player meets it at the table first.** His D&D Beyond sheet carries
+   only what he has now (§ Sheet text); each band and rule is added as play
+   reveals it.
 3. **Change audit** across Promotes to. Then delete this draft.
