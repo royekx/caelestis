@@ -236,7 +236,7 @@ nearest safe ground instead. Every jump spends its rune, mishap or not.
 Exhaustion is 2024's: −2 to every d20 test and −5 ft speed per level, death
 at 6. Each band taxes more, and Deep Astral is the panic button: open, and the
 likeliest to go wrong. There is no cap: the player knows the table and does
-the sum. A jump always resolves first, by its roll (arrival, fizzle or
+the sum. A jump always resolves first, by its roll (arrival, near miss or
 mishap), and the exhaustion lands as it does. If that brings him to 6, he
 dies there, and whoever he carried is where the jump put them. From fresh, a
 Deep Astral jump leaves him at 5.
