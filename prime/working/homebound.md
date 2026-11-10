@@ -189,14 +189,16 @@ which lands with it.
 ### Wayfind and his classes (Soulknife, Runechild)
 
 Tumak is Rogue 3 (Soulknife) and Sorcerer 1 (Runechild), level 4. Each
-subclass runs as published, with three changes for him.
+subclass runs as published. The homebrew is one bridge between them, and
+Wayfind.
 
-- **Sorcery points from Sorcerer 1.** He has 1 now; from Sorcerer 2 he follows
-  the Sorcerer's own count.
-- **Wayfind costs 1 sorcery point.** The choice is in the spend: a jump, a
-  charge, Metamagic or a slot. At level 4 that is one jump per long rest.
-  Spending the point charges a rune, as the Runechild says for any spent
-  point.
+- **Psionic Energy Dice can charge runes.** As a bonus action he expends one
+  Psionic Energy Die to charge one essence rune. Sorcery points charge runes
+  as the Runechild says. Whichever he levels, Rogue or Sorcerer, he has a way
+  to charge.
+- **Wayfind expends one charged rune.** A rune charged by the Runechild's
+  fallback action (no points, no charges) cannot power a Wayfind.
+- Charged runes revert to inert after a long rest, as published.
 - **Essence runes are the runes on his skin**, one per rune, matched or not:
   4 now. They are the Runechild's container count; charging and charged
   runes work as published.
@@ -206,9 +208,9 @@ subclass runs as published, with three changes for him.
   add no runes.
 - **Matched runes** are his waypoints and his reach: one mark per matched
   rune, and the reach gate counts them.
-- Psionic Energy Dice stay the Soulknife's own.
 - Jumps beyond Touch also cost exhaustion by band, as the redo sets.
-- An optional haven can raise his sorcery point maximum by 1.
+- An optional haven can add to what charges his runes: a sorcery point or a
+  Psionic Energy Die to his maximum.
 
 ### Rolling runes
 
@@ -330,9 +332,9 @@ subclass runs as published, with three changes for him.
   Runekeeper's leaving and the Becoming" in part.
 - BACKLOG § Tumak: the redo's "first Wayfind per long rest is free" and
   "Touch jumps are always free" are replaced by § Wayfind and his classes:
-  each jump costs 1 sorcery point.
+  each jump expends a charged rune.
 - `crew/tumak.html` § Build, the Wayfinder's Path tab and his D&D Beyond
-  sheet: sorcery points from Sorcerer 1; Wayfind for 1 sorcery point;
+  sheet: Psionic Energy Dice charge runes; Wayfind expends a charged rune;
   essence runes counted by the runes on his skin.
 - The record of his runes, corrected: level 3, Wan 02 and Tu 08; level 4,
   Wan 08 and Tu 16; 08 (left sole) is matched. Two more runes came off the
@@ -370,14 +372,12 @@ subclass runs as published, with three changes for him.
   level-up; a roll against Strain each level.
 - What the binding does after the unhiding: whether walking havens can fold
   the world again before the Becoming.
-- If he levels Rogue instead of Sorcerer, his sorcery points, and so his
-  jumps, stop growing. Havens are the other source.
 - Whether exhaustion by band stays on top of the rune spent, once play shows
   how far he jumps.
 - Whether leaving from a haven adds anything. Candidate: it counts as
   standing at one of his marks, so the network bonus applies.
 - What Lunarfoot's own haven gives in place of a clan rune.
-- What else an optional haven gives beyond a sorcery point.
+- What else an optional haven gives beyond a point or a die.
 - What walking all seven havens gives, for Tumak or for the world.
   Candidates: the whole history, the seeker and the accident behind the
   Becoming, and with it the way a link was broken; every anchor renewed at
