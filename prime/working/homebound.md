@@ -217,12 +217,12 @@ Magic action from wherever he stands, to a mark within reach.
 
 | Band | Matched | Reach | Exhaustion | Mishap | On a mishap |
 |---|---|---|---|---|---|
-| Touch | 1+ | 100 ft | 0 | 0% | none |
+| Step | 1+ | 100 ft | 0 | 0% | none |
 | Local | 4+ | 10 miles | 1 | 20% | Fizzle: no jump; the exhaustion is still taken |
-| Planetary | 7+ | Same world | 2 | 40% | Overshoot: 1d10 miles off, random direction |
-| System | 10+ | Same system | 3 | 60% | The twins land apart on the world; reunite in hours |
-| Near wildspace | 13+ | Adjacent system | 4 | 75% | One twin and the party at a haven, the other at the origin; days |
-| Deep wildspace | 16 | Any mark | 5 | 90% | The twins at different havens; sessions |
+| World | 7+ | Anywhere on the same world | 2 | 30% | Overshoot: 1d10 miles off, random direction |
+| System | 10+ | Anywhere in the same system | 3 | 45% | The twins land apart on the world; reunite in hours |
+| Astral | 13+ | A neighbouring system, across the Astral Sea | 4 | 60% | One twin and the party at a haven, the other at the origin; days |
+| Deep Astral | 16 | Any mark | 5 | 75% | The twins at different havens; sessions |
 
 1. **Cost:** one charged rune for any jump, near or far. Distance sets the
    rest: the band's exhaustion and the band's mishap. The exhaustion is
@@ -235,16 +235,19 @@ Magic action from wherever he stands, to a mark within reach.
 4. **Homebound:** free, no mishap, any distance.
 
 Cut from the redo: "the first Wayfind per long rest is free", "Touch jumps
-are always free", and the 5% floor.
+are always free", and the 5% floor. The bands are renamed (Touch, Planetary,
+Near and Deep wildspace become Step, World, Astral and Deep Astral) and the
+mishap curve softened at the top (40/60/75/90 to 30/45/60/75). Deep Astral is
+the panic button: open, and the likeliest to go wrong.
 
-**When he jumps how (DM examples, level 10, Planetary reach, about nine
+**When he jumps how (DM examples, level 10, World reach, about nine
 marks):**
 
 - **Long jump when it is urgent and a miss is survivable.** The crew is in
-  trouble at the ship, 200 miles off: Planetary, 2 exhaustion, 40% cold, 15%
-  from a same-set mark. A mishap overshoots 1d10 miles.
+  trouble at the ship, 200 miles off: World, 2 exhaustion, 30% cold, 5% from a
+  same-set mark. A mishap overshoots 1d10 miles.
 - **Chain when he has prepared.** A heist in a scouted city with Walker marks
-  at the safehouse, a rooftop and the vault: Touch hops cost nothing; Local
+  at the safehouse, a rooftop and the vault: Step hops cost nothing; Local
   hops cost 1 exhaustion each at 0%.
 - **Step onto the network first.** A dungeon goes wrong, or an ambush in
   enemy ground. He jumps to the mark at the entrance, then on from it to
@@ -253,7 +256,7 @@ marks):**
 - **Check before he lands.** He perceives through the target mark first. If
   it is compromised, he picks another and takes the colder, costlier jump.
 - **Fly when neither.** A world-to-world jump is System: 3 exhaustion and
-  35–60%. Ordinary travel stays the default, and Gregory's navigation with
+  20–45%. Ordinary travel stays the default, and Gregory's navigation with
   it.
 - **Why a cold long jump at all:** a chain spends a rune per hop. With one
   charged rune left, or no time, or no marks between, the single long jump is
@@ -266,8 +269,10 @@ marks):**
 
 ### Marks
 
-- Placing a mark is a 10-minute ritual, in person, and costs nothing else. He
-  holds one mark per matched rune. Ending a mark takes no action.
+- Placing a mark, in person, takes either a 10-minute ritual or a Magic
+  action and one charged rune: free when he has the time, a rune when he
+  needs it quick. He holds one mark per matched rune. Ending a mark takes no
+  action.
 - **Perceiving through a mark is free**, as with a familiar. As a bonus
   action he sees, but does not hear, through one of his marks until the
   start of his next turn. While he looks, he is blind to his own
