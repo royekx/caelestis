@@ -226,12 +226,37 @@ Magic action from wherever he stands, to a mark within reach.
 
 1. **Cost:** a charged rune, plus the band's exhaustion. The exhaustion is
    meant to tax: a deep jump is a last resort.
-2. **Standing at one of his marks:** −25% mishap.
+2. **The network.** Each mark belongs to the set of the rune that placed it.
+   Standing on one of his marks as he jumps: −25% mishap if the target is of
+   the same set, −10% if of another set. The network buys safety, never
+   energy: exhaustion is the same either way.
 3. **A walked haven as the target:** no mishap.
 4. **Homebound:** free, no mishap, any distance.
 
 Cut from the redo: "the first Wayfind per long rest is free", "Touch jumps
-are always free", the −10/−25 split by set, and the 5% floor.
+are always free", and the 5% floor.
+
+**When he jumps how (DM examples, level 10, Planetary reach, about nine
+marks):**
+
+- **Long jump when it is urgent and a miss is survivable.** The crew is in
+  trouble at the ship, 200 miles off: Planetary, 2 exhaustion, 40% cold, 15%
+  from a same-set mark. A mishap overshoots 1d10 miles.
+- **Chain when he has prepared.** A heist in a scouted city with Walker marks
+  at the safehouse, a rooftop and the vault: Touch hops cost nothing; Local
+  hops cost 1 exhaustion each at 0%.
+- **Step onto the network first.** A dungeon goes wrong, or an ambush in
+  enemy ground. He jumps to the mark at the entrance, then on from it to
+  anywhere his reach and marks allow. From open ground a Local jump is a 20%
+  fizzle; from the entrance mark it is 0% or 10%.
+- **Check before he lands.** He perceives through the target mark first. If
+  it is compromised, he picks another and takes the colder, costlier jump.
+- **Fly when neither.** A world-to-world jump is System: 3 exhaustion and
+  35–60%. Ordinary travel stays the default, and Gregory's navigation with
+  it.
+- The player says which mark, and whether he stands on one. The DM holds the
+  table and rolls.
+
 
 ### Rolling runes
 
@@ -393,6 +418,8 @@ are always free", the −10/−25 split by set, and the 5% floor.
   level-up; a roll against Strain each level.
 - What the binding does after the unhiding: whether walking havens can fold
   the world again before the Becoming.
+- Perceiving through a mark is once per long rest, which makes checking
+  before a jump rare. Candidate: perceiving costs a charged rune instead.
 - Whether exhaustion by band stays on top of the rune spent, once play shows
   how far he jumps.
 - Whether leaving from a haven adds anything. Candidate: it counts as
