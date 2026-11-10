@@ -208,6 +208,18 @@ serves all three.
   and ahead from level 7; a clan rune adds one when it is bestowed. Sharing one pool across three uses keeps it in
   line. This is homebrew for Tumak alone.
 
+### Rolling runes
+
+- Each level, Wan and Tu each roll a d20 against their own pool of 01–16.
+  1–16 gives that position; 17, 18 and 19 reroll; a position the twin
+  already holds rerolls. A 20 lets the player choose any position that twin
+  lacks, and the point is to match.
+- The pacing rule stands: a Vessel result (11–16) while that twin still lacks
+  a Soul, Maker or Walker position rerolls once; keep the second.
+- The safety valve is retired. The havens and Strain carry the pacing.
+- The player sees sixteen positions and a d20, and may guess that something
+  sits above 16. That is fine.
+
 ### Walking a haven
 
 - Both twins present, the trial passed: the haven is walked.
