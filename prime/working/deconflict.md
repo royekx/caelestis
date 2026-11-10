@@ -27,12 +27,10 @@ Every quote here was opened and confirmed in the file named.
 
 **Campaign structure**
 
-12. **Homebound.** Homebound opens when Tumak holds every rune. On the way,
-    his work with the Wayfinding marks and the sanctuaries changes: he updates
-    the marks actively. He completes it near the end of his levels. How
-    Homebound then works is not set, and gets its own chat. At the table now:
-    one full rune, which gives the immediate Wayfind. The pages saying
-    "Homebound is a Wayfind to the Heart" wait for that chat.
+12. ~~**Homebound.**~~ Done: ruled in the Homebound chats (2026-11-08 to
+    2026-11-10) and now on the pages: rules/index.html § Tumak, the
+    inscription; crew/tumak.html; locations/wayfinders-homeworld.html.
+    Homebound opens at the Becoming, after the havens, not at a rune count.
 
 **N'ghathrod, Vocath and the FIA story** (on the pages through the FIA audit,
 PRs #166 to #169)
@@ -188,7 +186,7 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 | A second Zenith on Aethris (filed under meteor-hub) | Move to locations/aethris; keep only "can the ritual bring one" |
 | Cross-cutting 18 Clint "deliberate dive" | Rewrite: fia-story says the pool opened by chance |
 | Hall of the Watchers decide and add | Rewrite against the 2026-10-28 Order-house ruling; drop "SPH-01" |
-| Runes 17–19 adds; early-home door; "Homebound is always free" | Mark dependent on Part 1 #12 |
+| ~~Runes 17–19 adds; early-home door; "Homebound is always free"~~ | Done: closed by the Homebound audit |
 | Moot after fia-story: WM-003 registry (l.1237, also misfiled under zerathis); Cairn Station; Strake secure storage; *Crow* after the ambush; Hollis Post; how Vocath knew the *Crow* carried the piece; did Mirt learn the piece was the target | Close or rewrite in the PR that lands each subject |
 | Still coming in: "Every chat sweep is complete" | Wrong: two sweeps are partial |
 | "Answered from the sources" list | Prune; drop duplicate Atrium and dossier-tab lines |
@@ -293,21 +291,10 @@ request merges before any later work reads its pages.
    principle in PR #176; the hold at Cairn as an outline in #177; the
    Colony illithid archetypes in place of the malformed template in #178.
    Homebound split off (3a).
-3a. **Lore: Homebound, story first.** In progress: `homebound.md` holds the story ruled 2026-11-09 and carries this item from here. Korey's method: a story plus a
-   problem makes an adventure, so the story comes before the mechanic.
-   Answer first, without fine detail: what the Wayfinders' world hides from,
-   why hiding became its answer and how, and how long it has hidden (how
-   many Runekeeper generations). Then the mechanic, from ruling 12 and the
-   Tumak sweep in `inbox/chat-crew-tumak-gregory-bartholomew.md` (turns
-   336–339). Offered in the mechanic chat and not yet accepted: the Anchors
-   (runes 17–19) as earlier Runekeepers' havens, reached by travel and woven
-   into the runes; Homebound as home always in reach once every rune is
-   held, free, at a moment the player chooses; the early-home door dropped.
-   Pages: rules/index.html, rules/wayfinder-path-dm.html, crew/tumak.html,
-   campaign/plot-hooks.html, locations/wayfinders-homeworld.html,
-   artifacts/dissolution-fragment.html, the Wayfinder's Path tab on
-   registry/crew-manifest/tumak-swan.html. Closes the BACKLOG items that
-   wait on ruling 12.
+3a. ~~**Lore and mechanic: Homebound.**~~ Done: the story, the havens and
+   the mechanic, ruled 2026-11-08 to 2026-11-10 and carried to the pages by
+   the change audit. Its open items are in BACKLOG; the player's side waits
+   for the reveal at the table (STAGING).
 4. **Build: the DM tools.** BACKLOG § Automation and tracker, "Overhaul
    the DM tools": the tracker first, then the Voyages board, the hub, the
    timeline and the overlay, rebuilt against the cleaned pages.
@@ -315,7 +302,7 @@ request merges before any later work reads its pages.
    and the rebuilt tools. Ezra's hook, the sealed letter and crossing entry
    7 are built here (ruling 8, BACKLOG § campaign/voyages).
 
-Not blocking V007: the thief (14b, in BACKLOG § opposition/vthorama.html), and Homebound (3a), since the table runs on one full rune and the immediate Wayfind for now.
+Not blocking V007: the thief (14b, in BACKLOG § opposition/vthorama.html).
 
 Delete this draft when every item is closed.
 
@@ -327,4 +314,4 @@ the working layer. Delete this draft when every item is closed.
 
 ## Open
 
-Part 1 is closed. The thief (14b) is open in BACKLOG; Homebound has its own lore chat (Handoff 3a).
+Part 1 is closed. The thief (14b) is open in BACKLOG.

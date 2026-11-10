@@ -1859,12 +1859,12 @@
           "src": "STAGING round 11"
         },
         {
-          "t": "It cycles between whole and broken across Runekeepers, and its oscillation powers the concealment of the Wayfinders' homeworld.",
-          "src": "STAGING round 2"
+          "t": "It passes whole from Runekeeper to heir; it folded the Wayfinders' homeworld inside its heart, and through it the havens bind to their host hearts.",
+          "src": "artifacts/dissolution-fragment.html"
         },
         {
-          "t": "In Tumak it is rebuilding in two halves at once, a three-part state.",
-          "src": "STAGING round 2"
+          "t": "In Tumak it is settling in two halves at once, and it comes home as two halves.",
+          "src": "artifacts/dissolution-fragment.html"
         },
         {
           "t": "The twins carry the Dissolution fragment.",
@@ -3945,7 +3945,7 @@
           "src": "artifacts/dissolution-fragment.html"
         },
         {
-          "t": "When both twins arrive home, the stalled cycle brings a Zenith and ends the concealment.",
+          "t": "At the Becoming the twins go home as the Runekeeper; the fragment arriving as two halves brings the world's second Zenith.",
           "src": "locations/wayfinders-homeworld.html"
         },
         {
@@ -3953,12 +3953,12 @@
           "src": "STAGING round 8"
         },
         {
-          "t": "He met the previous Runekeeper once, briefly, and does not understand what that meeting was.",
-          "src": "STAGING round 8"
-        },
-        {
           "t": "He wants his home.",
           "src": "STAGING round 2"
+        },
+        {
+          "t": "Homebound needs one haven of each of the four clans, the current Runekeeper's last.",
+          "src": "rules/index.html"
         }
       ]
     },
@@ -4213,7 +4213,7 @@
       "label": "The Runekeepers",
       "type": "faction",
       "scope": "caelestis",
-      "summary": "A hidden order of Wayfinders on an unfindable world.",
+      "summary": "A hidden order of four clans on a world folded inside its own heart.",
       "facts": [
         {
           "t": "The Runekeepers practise Wayfinding, attuning to places and through them to their hearts; the Lunarfoot clan is among them.",
@@ -4224,11 +4224,15 @@
           "src": "factions/runekeepers.html"
         },
         {
-          "t": "A Wayfinder can attune only to bodies that have a heart.",
+          "t": "Exiled Wayfinders are given no map and no name, and must recognize home through remembered fragments.",
           "src": "factions/runekeepers.html"
         },
         {
-          "t": "Exiled Wayfinders are given no map and no name, and must recognize home through remembered fragments.",
+          "t": "A mark needs no heart: a place, a station or a ship a Wayfinder could crew.",
+          "src": "factions/runekeepers.html"
+        },
+        {
+          "t": "Each Runekeeper builds a haven on another world and fades into it; the havens pin the concealment.",
           "src": "factions/runekeepers.html"
         }
       ]
@@ -4241,7 +4245,7 @@
       "summary": "The living practitioner whose body holds the homeworld's concealment.",
       "facts": [
         {
-          "t": "The Runekeeper bears the inscription that withdraws the Wayfinders' homeworld from cosmological visibility.",
+          "t": "The Runekeeper holds the binding that keeps the Wayfinders' homeworld folded and hidden.",
           "src": "dossiers/the-runekeeper.html"
         },
         {
@@ -4271,10 +4275,10 @@
       "label": "The Wayfinders' homeworld",
       "type": "place",
       "scope": "caelestis",
-      "summary": "A world of many clans in GAL-01, halflings among them, hidden by a living ritual and nameless by doctrine.",
+      "summary": "A world of many clans in GAL-01, halflings among them, folded inside its own heart and nameless by doctrine.",
       "facts": [
         {
-          "t": "The world sits where it has always sat, and finding it means knowing the way back rather than the coordinates.",
+          "t": "About five centuries ago it folded itself inside its own heart, and finding it means knowing the way back rather than the coordinates.",
           "src": "locations/wayfinders-homeworld.html"
         },
         {
