@@ -144,7 +144,8 @@ DM voice. Shape ruled 2026-11-09; numbers are tuned at the table.
 
 ### Two tracks
 
-- **Runes are what he can do:** charges, marks, reach. Rolled per level.
+- **Runes are what he can do:** his level sets his essence runes and his
+  reach; his matched runes, rolled per level, set his marks and passengers.
 - **Havens are where he goes:** reached by travel, found by the sensory
   anchors. Getting home takes adventuring, not levelling.
 
@@ -207,21 +208,23 @@ Each subclass runs as published. The homebrew:
 A Magic action: he expends one charged rune and teleports to one of his marks,
 from wherever he stands, with his passengers. It always lands on a mark.
 
-| Band | Matched | Reach | Exhaustion | Mishap | On a mishap |
+| Band | Level | Reach | Exhaustion | Mishap | On a mishap |
 |---|---|---|---|---|---|
-| Step | 1+ | 100 ft | 0 | 0% | none |
-| Local | 4+ | 10 miles | 1 | 20% | Near miss: 1d4 × 100 ft off, random direction |
-| World | 7+ | Anywhere on the same world | 2 | 30% | Overshoot: 1d10 miles off, random direction |
+| Step | 3+ | 60 ft | 0 | 0% | none |
+| Local | 5+ | 10 miles | 1 | 20% | Near miss: 1d4 × 100 ft off, random direction |
+| World | 9+ | Anywhere on the same world | 2 | 30% | Overshoot: 1d10 miles off, random direction |
 
 A mishap that would land him in rock, water or open sky lands him on the
 nearest safe ground instead. Every jump spends its rune, mishap or not.
-| System | 10+ | Anywhere in the same system | 3 | 45% | The twins land apart on the world; reunite in hours |
+| System | 11+ | Anywhere in the same system | 3 | 45% | The twins land apart on the world; reunite in hours |
 | Astral | 13+ | A neighbouring system, across the Astral Sea | 4 | 60% | One twin and the party at a haven, the other at the origin; days |
 | Deep Astral | 16+ | Any mark | 5 | 75% | The twins at different havens; sessions |
 
 1. **One charged rune per jump, at any distance.** Distance sets the
-   exhaustion and the mishap. Matched runes, clan runes included, set the
-   reach; a mark beyond reach fails with no cost.
+   exhaustion and the mishap. His level sets the reach, on a fixed
+   schedule; a mark beyond reach fails with no cost. Matched runes set how
+   many marks he holds and how many he carries. Level is how far; runes are
+   where.
 2. **The network.** Standing on one of his marks as he jumps: −25% mishap.
    The network buys safety, never energy. Rune Sets give their spells and
    play no part in Wayfind.
@@ -249,7 +252,7 @@ Deep Astral jump leaves him at 5.
   trouble at the ship, 200 miles off: World, 2 exhaustion, 30% cold, 5% from a
   mark.
 - **A chain when he has prepared.** A heist in a scouted city with marks at
-  the safehouse, a rooftop and the vault: Step hops cost nothing;
+  the safehouse, a rooftop and the vault: Step hops cost no exhaustion;
   Local hops cost 1 exhaustion each at 0%.
 - **Onto the network first.** A dungeon or an ambush goes wrong. He jumps to
   the mark at the entrance, then on from it. From open ground a Local jump is
