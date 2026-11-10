@@ -253,7 +253,7 @@ Deep Astral jump leaves him at 5.
   Local hops cost 1 exhaustion each at 0%.
 - **Onto the network first.** A dungeon or an ambush goes wrong. He jumps to
   the mark at the entrance, then on from it. From open ground a Local jump is
-  a 20% near miss; from the entrance mark it is 0% or 10%.
+  a 20% near miss; from the entrance mark it is 0%.
 - **A look before he lands.** He perceives through the target first. If it is
   compromised he picks another, and takes the colder, costlier jump.
 - **The ship when neither.** A world-to-world jump is System: 3 exhaustion and
