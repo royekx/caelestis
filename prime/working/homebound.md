@@ -194,8 +194,7 @@ Each subclass runs as published. The homebrew:
   waypoint, held for good, that takes none of these.
 - Placing a mark, in person, takes a 1-hour ritual, or a Magic action and
   two charged runes: an hour, as attunement takes, or resources in the heat
-  of it. Ending a mark
-  takes no action.
+  of it. Ending a mark takes no action.
 - A mark sits on a place or on a ship, never on a creature or a carried
   object.
 - **Perceiving is free**, as with a familiar. As a bonus action he sees, but
@@ -220,9 +219,9 @@ he carries. At each level-up the player adds the new band and moves on.
 | 15 | Astral | Another system, across the Astral Sea | 4 | 60% | One twin and the party at a haven, the other at the origin; days |
 | 17 | Deep Astral | Any mark | 5 | 75% | The twins at different havens; sessions |
 
-A mishap that would land him in rock, water or open sky lands him on the
-nearest safe ground instead, in a random direction otherwise. Every jump spends
-its rune, mishap or not.
+Off-target landings go in a random direction. One that would put him in rock,
+water or open sky lands him on the nearest safe ground. Every jump spends its
+rune, mishap or not.
 
 1. **The toll and the tax.** One charged rune for any jump; distance sets the
    exhaustion and the mishap. A mark beyond his reach fails with no cost.
@@ -304,12 +303,12 @@ day's travel is the ship or the road.
   | 0–4 | Steady. The voice is clear. |
   | 5–7 | The Runekeeper feels the fragment leaving too fast; the sensory anchors flicker at havens. |
   | 8–9 | The binding slips. Traces of the homeworld leak into wildspace where someone could notice. |
-  | 10+ | The world unhides. |
+  | 10+ | Crisis: the unhiding is near or here. |
 
 - Simulated from today's runes, Slip holds about 7 across levels 5 to 9 and
   falls to 0 by level 16. The pressure peaks mid-campaign; levelling alone
   does not answer it.
-- **The unhiding.** The binding gives way and the homeworld comes out of its
+- **The unhiding.** What sets it off is open (see Open). The binding gives way and the homeworld comes out of its
   fold. Tumak learns it through the Runekeeper in short, broken pulses. He
   chooses: go home early by ordinary travel, without the Becoming, which
   brings the Zenith early and perhaps harder; or race the remaining havens to
