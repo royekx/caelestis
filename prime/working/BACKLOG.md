@@ -30,7 +30,7 @@ staging once Korey has read and accepted them.
 
 | Section | Covers | decide | later | fix | drop | add |
 |---|---|---|---|---|---|---|
-| Cosmology | cosmology/, glossary/, chart/ | 14 | 15 | 4 | 0 | 2 |
+| Cosmology | cosmology/, glossary/, chart/ | 15 | 15 | 4 | 0 | 2 |
 | Locations | locations/ (Fonains stays in its own section) | 18 | 26 | 0 | 0 | 1 |
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 13 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 6 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 8 | 11 | 1 | 0 | 2 |
-| **Total** |  | **129** | **168** | **25** | **1** | **47** |
+| **Total** |  | **130** | **168** | **25** | **1** | **47** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -122,6 +122,10 @@ Items for `cosmology/index.html`, `glossary/index.html` and `chart/index.html`.
 Order under each page: decide, fix, drop, add.
 
 ### cosmology/index.html
+
+- **[decide]** How far spell teleportation reaches in Spelljammer *(shape)*
+  RAW, *teleportation circle* and *teleport* reach anywhere "on the same plane", which is unclear across wildspace systems. Proposal: spell teleportation reaches within one wildspace system; crossing the Astral Sea takes a ship, *plane shift* or Tumak's Wayfind (its Astral bands). Touches cosmology/index.html and rules/index.html.
+  src: the Homebound mechanic chat, 2026-11-09 (homebound.md § Wayfind)
 
 - **[fix]** Tharizdun is she
   Tharizdun is female. The pages, STAGING and the Connections layer say she. One source still says he/his/him: the Fonains Canon Reference doc outside the repo (see "Refresh or retire the Fonains doc").

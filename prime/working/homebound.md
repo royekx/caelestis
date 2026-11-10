@@ -206,28 +206,29 @@ Each subclass runs as published. The homebrew:
 ### Wayfind
 
 A Magic action: he expends one charged rune and teleports to one of his marks,
-from wherever he stands, with his passengers. It always lands on a mark.
+from wherever he stands, with his passengers. It always lands on a mark. His
+level sets how far; his matched runes set where (how many marks) and how many
+he carries. At each level-up the player adds the new band and moves on.
 
-| Band | Level | Reach | Exhaustion | Mishap | On a mishap |
+| Level | Band | Reach | Exhaustion | Mishap | On a mishap |
 |---|---|---|---|---|---|
-| Step | 3+ | 60 ft | 0 | 0% | none |
-| Local | 5+ | 10 miles | 1 | 20% | Near miss: 1d4 × 100 ft off, random direction |
-| World | 9+ | Anywhere on the same world | 2 | 30% | Overshoot: 1d10 miles off, random direction |
+| 3 | Step | 60 ft | 0 | 0% | none |
+| 5 | Near | 1 mile | 0 | 10% | Near miss: 1d4 × 100 ft off |
+| 7 | Far | A day's travel (24 miles) | 1 | 20% | Near miss: 1d4 miles off |
+| 11 | World | Anywhere on this world | 2 | 30% | Overshoot: 1d10 miles off |
+| 13 | System | Another world in this system | 3 | 45% | The twins land apart on the world; reunite in hours |
+| 15 | Astral | Another system, across the Astral Sea | 4 | 60% | One twin and the party at a haven, the other at the origin; days |
+| 17 | Deep Astral | Any mark | 5 | 75% | The twins at different havens; sessions |
 
 A mishap that would land him in rock, water or open sky lands him on the
-nearest safe ground instead. Every jump spends its rune, mishap or not.
-| System | 11+ | Anywhere in the same system | 3 | 45% | The twins land apart on the world; reunite in hours |
-| Astral | 13+ | A neighbouring system, across the Astral Sea | 4 | 60% | One twin and the party at a haven, the other at the origin; days |
-| Deep Astral | 16+ | Any mark | 5 | 75% | The twins at different havens; sessions |
+nearest safe ground instead, in a random direction otherwise. Every jump spends
+its rune, mishap or not.
 
-1. **One charged rune per jump, at any distance.** Distance sets the
-   exhaustion and the mishap. His level sets the reach, on a fixed
-   schedule; a mark beyond reach fails with no cost. Matched runes set how
-   many marks he holds and how many he carries. Level is how far; runes are
-   where.
-2. **The network.** Standing on one of his marks as he jumps: −25% mishap.
-   The network buys safety, never energy. Rune Sets give their spells and
-   play no part in Wayfind.
+1. **The toll and the tax.** One charged rune for any jump; distance sets the
+   exhaustion and the mishap. A mark beyond his reach fails with no cost.
+2. **The network.** Standing on one of his marks as he jumps: −25% mishap. The
+   network buys safety, never energy. Rune Sets give their spells and play no
+   part in Wayfind.
 3. **A walked haven as the target** cannot mishap.
 4. **Passengers:** willing creatures within 5 feet, numbering (matched runes
    + 1) ÷ 2, rounded down, at most 8; the +1 is the hidden Heart. They bring
@@ -238,33 +239,38 @@ nearest safe ground instead. Every jump spends its rune, mishap or not.
 6. **Homebound** is a Wayfind into the folded world's heart: free, cannot
    mishap, any distance, at a moment the player chooses.
 
-Exhaustion is 2024's: −2 to every d20 test and −5 ft speed per level, death
-at 6. Each band taxes more, and Deep Astral is the panic button: open, and the
-likeliest to go wrong. There is no cap: the player knows the table and does
-the sum. A jump always resolves first, by its roll (arrival, near miss or
-mishap), and the exhaustion lands as it does. If that brings him to 6, he
-dies there, and whoever he carried is where the jump put them. From fresh, a
-Deep Astral jump leaves him at 5.
+Exhaustion is 2024's: −2 to every d20 test and −5 ft speed per level, death at
+6, one level removed per long rest. There is no cap: the player knows the
+table and does the sum. A jump always resolves first, by its roll, and the
+exhaustion lands as it does. If that brings him to 6, he dies there, and
+whoever he carried is where the jump put them. From fresh, a Deep Astral jump
+leaves him at 5.
 
-**When he jumps how** (level 10, World reach, about nine marks):
+**Against the published spells.** Short range runs a little ahead of them
+(Near at 5 against *thunder step*'s 90 ft), to marks only and for a rune. Long
+range lags them by about two levels (World at 11 after *teleportation circle*
+at 9; System at 13 with *teleport*). From levels 7 to 10, anything beyond a
+day's travel is the ship or the road.
+
+**When he jumps how** (level 11, World reach, about nine marks):
 
 - **A long jump when it is urgent and a miss is survivable.** The crew is in
   trouble at the ship, 200 miles off: World, 2 exhaustion, 30% cold, 5% from a
   mark.
 - **A chain when he has prepared.** A heist in a scouted city with marks at
-  the safehouse, a rooftop and the vault: Step hops cost no exhaustion;
-  Local hops cost 1 exhaustion each at 0%.
+  the safehouse, a rooftop and the vault: Step and Near hops cost no
+  exhaustion.
 - **Onto the network first.** A dungeon or an ambush goes wrong. He jumps to
-  the mark at the entrance, then on from it. From open ground a Local jump is
-  a 20% near miss; from the entrance mark it is 0%.
+  the mark at the entrance, then on from it. From open ground a Far jump is a
+  20% near miss; from the entrance mark it is 0%.
 - **A look before he lands.** He perceives through the target first. If it is
   compromised he picks another, and takes the colder, costlier jump.
-- **The ship when neither.** A world-to-world jump is System: 3 exhaustion and
-  20–45%. Ordinary travel stays the default, and Gregory's navigation with it.
+- **The ship when neither.** A world-to-world jump is System (from level 13):
+  3 exhaustion and 20–45%. Ordinary travel stays the default, and Gregory's
+  navigation with it.
 - **Why a cold long jump at all:** a chain spends a rune per hop. With one
   rune left, no time, or no marks between, the single long jump is the only
-  way. Runes buy safety through the network; exhaustion and risk buy
-  distance.
+  way. Runes pay the toll; exhaustion and risk pay for distance.
 - The player names the mark and says whether he stands on one. The DM holds
   the table and rolls.
 
