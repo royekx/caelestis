@@ -100,6 +100,8 @@ The link's far side is left open until a haven brings it close.
   more of its neighbours than one. The bleed was what made things wrong;
   the seeker tried to fix it and made it worse, and the world hid.
 - The world on the far side may be Oerth.
+- A world disappearing is not a quiet event either. Someone may have
+  recorded the homeworld vanishing five centuries ago.
 - The first Runekeeper's haven is half-lost: nobody has walked it for two
   or three generations, and the order has forgotten part of why it does
   this. The road allows it: the sixth and seventh heirs could take haven 5
@@ -345,8 +347,24 @@ learns there what it is.
    feels like somewhere, not quite home, and that can stay ambiguous.
    **[proposed]** The first Wayfind is what wakes it.
 
-**[open]** Where Lunarfoot's haven is, and its four hints (Korey to place
-and write before V007).
+**[ruled] Lunarfoot's haven** lies at Selûne and the Tears of Selûne, the
+stones that trail Toril's moon; the exact site is Korey's. It is his own
+clan's, and he has been moving toward it without knowing since he left
+home: the fragment pulls toward the nearest of its sigils, and this one is
+Lunarfoot's.
+
+**[proposed] Its four hints**, the fourth Runekeeper's memories, for Korey
+to rewrite:
+
+1. Sight (V007): a sky of slow-tumbling silver stones lit by a great moon,
+   a blue-and-white world beyond, and one crescent-shaped rock turning
+   among the rest.
+2. Hearing: a low ringing like a struck bell as stone touches stone, and
+   wind where no wind should be.
+3. Touch: cold, glassy rock under bare feet, worn into a trail of
+   footprints, and the light pull of almost no weight.
+4. Smell and taste: iron and ozone, and under them sap touched by
+   lightning, the homeworld's own smell.
 
 ## 9. The conflict
 
@@ -388,6 +406,10 @@ Slip.
 unhidden world can be reached by ordinary travel, and noticed: by Vecna's
 work, by seekers, by whatever the old link reached.
 
+**[ruled]** Going home early after the unhiding is ordinary navigation
+with the crew's own resources: a world appearing is not a quiet event, and
+it can be found.
+
 **[ruled]** Unhidden, the world is back among what it hid from: the
 ordinary danger of its first problem, and the link, which may bind again
 and bleed (see Origin). **[alt]** With the seeker sealed in the heart, the
@@ -419,7 +441,7 @@ From the logic and mechanic check of 2026-11-11, for play from V007 to the
 first haven. Everything else in Open can wait until it matters.
 
 **Before V007**
-- Place Lunarfoot's haven (the fourth) and write its four hints.
+- Korey's pass on the four hints and the haven's exact site.
 - The player check on the sending (3).
 
 **Before level 5**
@@ -458,9 +480,8 @@ a fix in the change audit.
 5. **One mark per haven.** Ruled: the clan rune is the haven's mark.
 6. **The order's emblem.** Ruled: the Heart with its four chambers.
 
-7. **Going home early.** The rules page's unhiding lets Tumak go home early
-   by ordinary travel, but the sending took the way. **[proposed]** In
-   crisis the Runekeeper's broken pulses give it, against the doctrine.
+7. **Going home early.** Ruled: by ordinary navigation and the crew's own
+   resources. A world appearing is not a quiet event. See 10.
 
 **Stale lines for the change audit**
 
@@ -524,7 +545,10 @@ a fix in the change audit.
 - `prime/campaign/plot-hooks.html` § Tumak and the Becoming.
 - `prime/dossiers/vecna.html`, `prime/opposition/vecna.html`: the early
   attempt on the homeworld, and the fragment his side lost.
-- `prime/campaign/voyages/index.html`: V007 beats owed.
+- `prime/campaign/voyages/index.html`: V007 beats owed (Tumak's three
+  beats).
+- `prime/locations/realmspace.html`: Lunarfoot's haven at Selûne and the
+  Tears (DM side).
 - `registry/crew-manifest/tumak-swan.html`: the Wayfinder's Path tab script
   (the four sets and menus, 20 positions).
 - `prime/working/STAGING.md` § Tumak: the reveal at the table.
@@ -532,10 +556,9 @@ a fix in the change audit.
 
 ## Handoff
 
-1. Near-term readiness: place Lunarfoot's haven and write its hints, the
-   player check on the sending, then how Slip is felt (before level 5).
-2. Conflict 7 (going home early). The conflict thread: the seeker's place
-   and fate, how the twins learn the
+1. Near-term readiness: Korey's pass on the hints, the player check on
+   the sending, then how Slip is felt (before level 5).
+2. The conflict thread: the seeker's place and fate, how the twins learn the
    danger, how Slip is felt.
 3. The rest of Open: Homebound's moment, the homeworld haven, the seals.
 4. Complexity check, then the mechanic review of the haven spells.
