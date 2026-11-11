@@ -39,7 +39,7 @@ no clan.
 
 | Order | Clan | Heavens | Body |
 |---|---|---|---|
-| 1st, the founder's | Dawn-, its body part open (was Sunbrow) | the Sun | head |
+| 1st, the founder's | Dawnbrow | the Sun | brow |
 | 2nd | Skyshoulder | the Sky | shoulder |
 | 3rd | Starfist | the Stars | fist |
 | 4th | Lunarfoot | the Moon | foot |
@@ -62,7 +62,7 @@ movements seen and the movements felt, until the memory is whole.
 - **Clan runes (17 to 20)**, one for each clan, his own included. Each comes
   from the first haven of that clan he walks; the current Runekeeper's
   clan's rune comes in the exchange at the Becoming. A clan rune takes its
-  clan's shape: Lunarfoot's a crescent moon, the first clan's a sun. They count as
+  clan's shape: Lunarfoot's a crescent moon, Dawnbrow's a sun. They count as
   runes for every number (essence runes, marks, passengers). Whether they
   also count as wildcards is held.
 - **The Heart (21)** is already matched, and it holds the clan runes: it has
@@ -136,7 +136,7 @@ again with their own clan.
 | 2nd | Skyshoulder | 1 |
 | 3rd | Starfist | 1, 2 |
 | 4th | Lunarfoot | 1, 2, 3 |
-| 5th | the first clan (Dawn-) | 1, 2, 3, 4 |
+| 5th | Dawnbrow | 1, 2, 3, 4 |
 | 6th | Skyshoulder | 2, 3, 4, 5 |
 | 7th, the current Runekeeper | Starfist | 3, 4, 1 or 5, 6 |
 | 8th, Wan and Tu | Lunarfoot | 4, 1 or 5, 2 or 6, 7 |
@@ -159,7 +159,7 @@ help.
 Both twins present and the trial passed, the haven gives:
 
 - **A spell** from the clan's menu, named for the clan (the Lunarfoot menu,
-  and so on). The old set menus pass to the clans: the first clan the old Soul
+  and so on). The old set menus pass to the clans: Dawnbrow the old Soul
   spells, Skyshoulder the old Vessel spells, Starfist the old Maker spells,
   Lunarfoot the old Walker spells. One free cast a day, then with spell
   slots. Up to seven over the campaign. Needs a mechanic review.
@@ -208,8 +208,8 @@ owed in V007.
   (lean), or a Runekeeper's, as the hints are.
 - **The Sky and Star rune shapes.**
 - **The story of the names**, from before the hiding. Later.
-- **The first clan's name**: Dawn plus a part of the head (Dawn names the
-  Sun as Lunar names the Moon), and its seal.
+- **Dawnbrow's seal**: a half-sun rising over a brow. One brow as the
+  horizon, or two brows as hills with the sun rising between them.
 - **The order's emblem** *(proposed)*: the Heart with its four clan shapes.
 
 Lunarfoot's seal is a crescent moon cradling a footprint. The two four-point
