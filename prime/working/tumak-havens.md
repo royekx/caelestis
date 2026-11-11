@@ -45,14 +45,17 @@ the pages becomes "loses the name and the way".
 - **The four sets are retired**: Soul, Maker, Walker and Vessel, their spell
   menus, the Pacing Rule and the exhaustion cost for extra Wayscribe casts.
   Positions keep their places on the body and carry no set.
-- **Clan runes (17, 18, 19)** belong to the three clans that are not the
-  heir's own, and come from the first haven of that clan he walks. Whether
-  they count as wildcards toward anything is held.
-- **The Heart (20)** is the fifth sense. See On the haven's world.
+- **Clan runes (17 to 20)**, one for each of the four clans, his own
+  included. Each comes from the first haven of that clan he walks; the
+  current Runekeeper's clan rune comes in the exchange at the Becoming.
+  Whether a clan rune is a rune on the skin or fills in between the runes
+  is open. Whether they count as wildcards toward anything is held.
+- **The Heart (21)** is the fifth sense, already matched. See On the haven's
+  world.
 - **The inscription grows with the order.** An heir's inscription is 16
-  rolled runes, one clan rune for each other clan that has built a haven,
-  and the Heart. The second heir carried 18, the third 19, and every heir
-  from the fourth on carries 20. The early Runekeepers held a thinner
+  rolled runes, one clan rune for each clan that has built a haven, and the
+  Heart. The second heir carried 18, the third 19, the fourth 20, and every
+  heir from the fifth on carries 21. The early Runekeepers held a thinner
   binding, which is how the clans "learned to work it over the generations".
 
 ## Hints
@@ -94,8 +97,8 @@ the veil and press on it, like a hand on a window screen. When they leave
 the haven's world the Heart goes inert and fades until the next one. It
 wakes fully only at the Becoming, which opens Homebound.
 
-The player may guess a twentieth rune from the die. It stays unshown until
-the first haven: there it appears, he knows it is tied to the havens, and
+The player may guess a further rune. It stays unshown until the first
+haven: there it appears, he knows it is tied to the havens, and
 it stays inert. The rules page's "hidden from the figure and the table
 until you reveal it" changes to "hidden until the first haven".
 
@@ -125,8 +128,18 @@ second clan); then the seventh, the current Runekeeper's.
 | 8th, Wan and Tu | Lunarfoot | 4, 1 or 5, 2 or 6, 7 |
 
 Reaching a haven out of order, its trial is not open, as at the current
-Runekeeper's haven today. The rules page's "order is free until the last"
+Runekeeper's haven today.
+
+At the current Runekeeper's haven the exchange gives the last clan rune and
+sends him home. Arriving home with the havens walked completes Homebound. The rules page's "order is free until the last"
 changes to this.
+
+## Mishaps
+
+An Astral or Deep Astral mishap that lands a twin at a haven lands at the
+current target. The crew now knows where it is and still has to get there:
+one twin alone cannot take the trial, so the twin already there does not
+help.
 
 ## A walked haven
 
@@ -146,8 +159,7 @@ Both twins present and the trial passed, the haven gives:
   away.
 - A permanent mark.
 - The essence's knowledge of every older haven.
-- The clan's rune, if it is the first haven of that clan and the clan is not
-  his own.
+- The clan's rune, if it is the first haven of that clan he walks.
 
 ## V007
 
@@ -158,7 +170,9 @@ It sits beside the first Wayfind already owed in V007.
 
 ## Promotes to
 
-- `prime/rules/index.html` § Tumak, the inscription: Wayfind mishaps, the core loop, the
+- `prime/rules/index.html` § Tumak, the inscription: the twenty positions
+  (now 21: clan runes 17 to 20, the Heart 21; "never passes 20"), Wayfind
+  mishaps, the core loop, the
   Pacing Rule (removed), the four Wayscribes (removed), the twenty positions
   table (set column removed), Havens and Homebound, Hidden, Running it,
   Still to decide.
@@ -189,16 +203,15 @@ It sits beside the first Wayfind already owed in V007.
   whether the body part sets the menu as proposed under A walked haven.
 - **The haven spells**: the lists, their levels, and the balance with up to
   seven of them (mechanic review).
-- **Clan C's rune on Wan and Tu's road.** The road never walks a clan C haven
-  before the seventh, and Lunarfoot's own haven gives no clan rune, so he
-  arrives holding two. (a) The current Runekeeper's haven gives his clan's
-  rune at the Becoming; (b) the dossier's "with the clan runes held" becomes
-  "with the other havens walked". Lean (a).
-- **Mishaps.** The Astral and Deep Astral bands land a twin at a haven, which
-  can now be out of order. Options: (a) a mishap lands only at walked
-  havens; (b) it lands at the current target, which locates it, and one twin
-  alone cannot take the trial; (c) any haven, its trial closed until its
-  turn. Lean (b).
+- **The clan runes' form**: a rune on the skin at a new position, or
+  something that fills in between the runes already there.
+- **A haven on the homeworld** *(proposed)*: a last haven where every
+  Runekeeper takes office, which arriving home reaches. Touches the
+  homeworld page (the Runekeeper as the only way in and out; the hidden
+  Atrium).
+- **Homebound's moment**: whether the exchange sends him home at once, or
+  opens a way home he takes at a moment the player chooses, as the rules
+  page has it now.
 - **Slip and Strain**: revisit against the fixed order and the four-hint
   pace; whether a half-rune memory is how Slip shows at the table; names.
 - **Complexity check** of the whole system once the rest is ruled.
@@ -208,8 +221,9 @@ It sits beside the first Wayfind already owed in V007.
 Korey keeps this work in the cadets'-arcs chat; Gregory's prep is its own
 chat. Order:
 
-1. Rule the Open list: clan C's rune, mishaps, Slip and Strain, then a
-   complexity check of the whole.
+1. Rule the Open list: the clan runes' form, the homeworld haven,
+   Homebound's moment, Slip and Strain, then a complexity check of the
+   whole.
 2. Mechanic review of the haven spells and the retirement of the sets.
 3. Back to Tumak's prep and overview.
 4. Change audit across the Promotes to list, then delete this draft.
