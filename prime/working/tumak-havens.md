@@ -89,6 +89,38 @@ luminous haze, like light beneath water, is their sky now.
 - **Thrown to the far side** with the link, waiting at the cut.
 - **Helped close it**, and was lost in the closing.
 
+**[ruled] Hidden from the link.** Canon's "cut" stands in the record, and
+the rules need not be the same everywhere: the fold hid the world from the
+link and stopped the bleed, whether or not it truly severed it. Unhidden,
+the world may bind to it again and the bleed return, perhaps not as it was.
+The link's far side is left open until a haven brings it close.
+
+**[idea]**
+- The homeworld was one of Vecna's first experiments, and he may have linked
+  more of its neighbours than one. The bleed was what made things wrong;
+  the seeker tried to fix it and made it worse, and the world hid.
+- The world on the far side may be Oerth.
+
+**[open]**
+- What the problem was, and what the seeker went after. Left open; it may
+  matter at the first haven.
+- The seeker's place: a member of Dawnbrow itself, or of an older clan
+  close to it that was lost afterward. **[proposed]** The lost clan: the
+  real rhyme says knees where the homeworld's says hands, so the lost clan
+  is the one cut from the song, and the player can notice.
+
+**[proposed] Life in the fold.** The world still has light and warmth, or
+its people could not live. Inside its heart, the heart lights it: the
+luminous haze, like light beneath water, is their sky now.
+
+**[alt] Where the seeker went.**
+
+- **Sealed in the heart.** The seeker was in the Atrium when the fold came,
+  and the fold sealed them in. The order hid the Atrium; the danger is at
+  home, where Tumak's road ends. "Defeated, or so they thought."
+- **Thrown to the far side** with the link, waiting at the cut.
+- **Helped close it**, and was lost in the closing.
+
 **[proposed] The frozen link.** The fold pulled the link's two ends apart
 and held them still rather than breaking them. If the binding fails, the
 heart opens where it closed, onto the same link, and the bleed resumes. No
@@ -140,8 +172,8 @@ shoulder, the wind on a shoulder, or a mantle of sky) and Starfist's.
 without these names. After the fold, with no sun, sky, stars or moon over
 them, they named themselves for the heavens so as to remember what they no
 longer had.
-**[proposed]** The order's emblem as the Heart with the four clan shapes
-(see Conflicts 6).
+**[proposed]** The order's emblem as the Heart with its four chambers (see
+Conflicts 6).
 
 ## 3. A generation and the sending
 
@@ -236,6 +268,18 @@ level-ups, rolled on a d20 by the rules page's procedure.
   high-level spell is acceptable when the trial matches its weight; the
   menus are revisited in play if one runs hot. **[open]** The menus and
   levels (mechanic review).
+
+**[ruled] The Heart's chambers.** The Heart has four chambers, one for each
+clan, and a clan rune fills its chamber. With all four filled the Heart is
+whole, he goes home and becomes the Runekeeper. The Becoming passes the
+greater part of the fragment, not necessarily all of it. The old Runekeeper
+spends the rest of their days in their haven and becomes its essence.
+**[open]** The name for a Runekeeper after the exchange.
+
+**[ruled] The two pieces.** About level 12, early in Act 3, the fragment's
+two pieces first draw together in the twins: canon's "what the rebuilt
+fragment does" is this beat, apart from the Heart. Worked out further in
+play.
 
 **[ruled] The Heart.** On a haven's world the Heart stirs as a sense and
 leads him to the site. It gives no power. The first time it is a scene: a
@@ -352,10 +396,10 @@ Slip.
 unhidden world can be reached by ordinary travel, and noticed: by Vecna's
 work, by seekers, by whatever the old link reached.
 
-**[open]** As written that is a slow threat; it needs an immediate one.
-**[proposed]** The frozen link (see Origin): the heart reopens onto the old
-link and the bleed resumes at once. **[alt]** With the seeker sealed in the
-heart, the prisoner wakes inside the world.
+**[ruled]** Unhidden, the world is back among what it hid from: the
+ordinary danger of its first problem, and the link, which may bind again
+and bleed (see Origin). **[alt]** With the seeker sealed in the heart, the
+prisoner wakes inside the world.
 
 ## 11. The Becoming and after
 
@@ -386,25 +430,17 @@ a fix in the change audit.
 
 1. **Other Wayfinders and the sending.** Ruled: only the Wayfinder (the
    heir) and the Runekeeper leave. See 3, Who leaves.
-2. **The fragment whole at about level 12.** Canon (Runekeepers, Still to
-   decide) places what the twins' rebuilt fragment does "at about level 12,
-   early in Act 3". This draft has the Heart waking whole only at the
-   Becoming, about levels 15 to 16. Either level 12 is a different beat (the
-   two pieces drawing together, not the Heart), or one of the two moves.
-3. **The frozen link replaces "cut".** Canon says the fold cut the link. The
-   frozen link has it pulled apart and held. It also changes the counter to
-   N'ghathrod ("the order holds the way a link was broken once"): a link
-   held apart stays apart only while the binding holds.
-4. **The second Zenith gives Vecna a Monolith.** Canon: the twins'
-   homecoming brings a second Zenith, and a Monolith follows. A Monolith is
-   the licence to link a heart. With the seeker Vecna's, the homecoming
-   itself hands his side what it needs, with or without the unhiding. That
-   may be the point; it should be chosen, not stumbled on.
+2. **The fragment whole at about level 12.** Ruled: the two pieces draw
+   together then; see 5, The two pieces.
+3. **"Cut".** Ruled: canon's word stands; the world hid from the link. See
+   Origin.
+4. **The second Zenith gives Vecna a Monolith.** Ruled: an opportunity the
+   DM plans for and Vecna does not expect.
 5. **One mark per haven.** A walked haven gives a permanent mark, and its
    clan rune counts as a mark too: two now.
-6. **The order's emblem.** Canon: the fragment half-formed in a chest. The
-   proposal: the Heart with the four clan shapes. One or the other, or the
-   Heart is how the fragment looks half-formed.
+6. **The order's emblem.** Canon: the fragment half-formed in a chest.
+   **[proposed]** It is drawn as the Heart with its four chambers, so canon
+   and the clan shapes both hold.
 
 **Stale lines for the change audit**
 
@@ -467,8 +503,8 @@ a fix in the change audit.
 
 ## Handoff
 
-1. Rule Conflicts 2 to 6.
-2. The conflict thread: the seeker's place and fate, the unhiding, how the twins learn the
+1. Rule Conflicts 5 and 6.
+2. The conflict thread: the seeker's place and fate, how the twins learn the
    danger, how Slip is felt.
 3. The rest of Open: Homebound's moment, the homeworld haven, the seals.
 4. Complexity check, then the mechanic review of the haven spells.
