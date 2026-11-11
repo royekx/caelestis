@@ -37,7 +37,7 @@ staging once Korey has read and accepted them.
 | Factions | factions/ | 12 | 13 | 1 | 0 | 0 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 7 | 1 | 0 | 3 |
 | Dossiers | dossiers/ | 13 | 16 | 0 | 0 | 1 |
-| Crew | crew/ | 12 | 21 | 0 | 0 | 0 |
+| Crew | crew/ | 12 | 20 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 7 | 8 | 7 | 0 | 12 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 7 | 11 | 1 | 0 | 2 |
-| **Total** |  | **130** | **175** | **21** | **1** | **41** |
+| **Total** |  | **130** | **174** | **21** | **1** | **41** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1155,7 +1155,7 @@ Items whose source sweep is still partial keep their `(sampled)` or
 ### crew/index.html
 
 - **[decide]** Make each cadet's arc tangible *(shape)*
-  Korey (2026-11-10): many arcs are nebulous. Each should give the player action and agency: not step 1, step 2, but something they know they are moving toward. Work through every crew page and campaign/plot-hooks.html, one cadet at a time, as its own prep chat. Tumak's seed is under crew/tumak.html.
+  Korey (2026-11-10): many arcs are nebulous. Each should give the player action and agency: not step 1, step 2, but something they know they are moving toward. Work through every crew page and campaign/plot-hooks.html, one cadet at a time, as its own prep chat. Tumak's part is argued in [tumak-havens.md](tumak-havens.md).
   src: the Homebound chat, 2026-11-10
 
 - **[later]** Where each PC's homeworld sits
@@ -1226,10 +1226,6 @@ Items whose source sweep is still partial keep their `(sampled)` or
   src: section 7 (2026-10-28)
 
 ### crew/tumak.html
-
-- **[later]** The inscription as a map of the havens
-  Korey's idea (2026-11-10): Tumak unlocks a map within himself, or becomes the map, showing where the seven havens are; the journey is working out how to reach them. It keeps the work with Gregory, whose arc is to become a navigator. Settle within "Make each cadet's arc tangible".
-  src: the Homebound chat, 2026-11-10
 
 Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; see the Rules section.
 
