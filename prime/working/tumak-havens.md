@@ -15,6 +15,7 @@ Every line carries a tag:
 | **[proposed]** | Offered, not yet ruled |
 | **[open]** | Undecided |
 | **[alt]** | An alternative under consideration |
+| **[idea]** | A brainstorm, kept so it is not lost; not weighed yet |
 
 Rules are in DM voice, world facts in-world.
 
@@ -59,10 +60,27 @@ and the order's broken link was one of his. Several things happened around
 the five-century mark (Thessalar's craft fell then too) because Vecna was
 moving; the dates can shift.
 
+**[ruled] The problem before the seeker.** The world already had a problem
+the seeker set out to solve: something ordinary rather than cosmological,
+such as attack, or dangerous neighbours close by. The seeker went after a
+means to answer it, and the means made things worse. The founder and the
+others, perhaps with the seeker, found a way to close it off or break it,
+and that closed the world off. Hidden, the world was better off: hiding
+answered the first problem too. The Becoming tale's "something came looking
+for their world" remembers it.
+
 **[open]**
+- What the problem was, and what the seeker went after. Left open; it may
+  matter at the first haven.
 - The seeker's place: a member of Dawnbrow itself, or of an older clan
-  close to it that was lost afterward.
-- The good the seeker meant to do.
+  close to it that was lost afterward. **[proposed]** The lost clan: the
+  real rhyme says knees where the homeworld's says hands, so the lost clan
+  is the one cut from the song, and the player can notice.
+
+**[proposed] Life in the fold.** The world still has light and warmth, or
+its people could not live. Inside its heart, the heart lights it: the
+luminous haze, like light beneath water, is their sky now. The clans of the
+Sun, the Sky, the Stars and the Moon have not seen them in five centuries.
 
 **[alt] Where the seeker went.**
 
@@ -70,11 +88,20 @@ moving; the dates can shift.
   and the fold sealed them in. The order hid the Atrium; the danger is at
   home, where Tumak's road ends. "Defeated, or so they thought."
 - **Thrown to the far side** with the link, waiting at the cut.
+- **Helped close it**, and was lost in the closing.
 
 **[proposed] The frozen link.** The fold pulled the link's two ends apart
 and held them still rather than breaking them. If the binding fails, the
 heart opens where it closed, onto the same link, and the bleed resumes. No
 one has to find the world, and no new Monolith is needed.
+
+**[idea]**
+- The first Runekeeper's haven is half-lost: nobody has walked it for two
+  or three generations, and the order has forgotten part of why it does
+  this. The road allows it: the sixth and seventh heirs could take haven 5
+  for Dawnbrow, so haven 1 was last walked by the fifth.
+- The first Runekeeper, with no havens to walk, had to place four anchors
+  when they first went out. Sits uneasily with the idea above.
 
 ## 2. The order and the four clans
 
