@@ -48,20 +48,21 @@ The bleeding stopped and the Monolith faded.
 **[canon]** Who the seeker was, what sent them, the world the link reached,
 and where the seeker found the fragment are not set.
 
-**[alt] Who the seeker was.** Not ruled; the options on the table:
+**[ruled] Who the seeker was.** One of the homeworld's own, close to the
+founder: of Dawnbrow or near it, and not the founder's twin. Vecna, a god
+for about five centuries by then, was already moving, though the Seekers
+were not yet the chapters they are now. His whisper reached the seeker and
+steered them to the residue, as he steers the Seekers through residue
+today, and the seeker opened the heart meaning to do good. It backfired:
+the link reached a bad world. The fragment became residue his side lost,
+and the order's broken link was one of his. Several things happened around
+the five-century mark (Thessalar's craft fell then too) because Vecna was
+moving; the dates can shift.
 
-- **A Seeker of Vecna's faith.** Vecna had been a god for about five
-  centuries by then; he cannot stand on a world, works through vessels and
-  the Seekers, and links hearts under Monoliths, which is how canon already
-  describes the seeker's act. This would be an early attempt, before the
-  rise the Watchers see over the past century. The fragment becomes residue
-  his side lost, and the order's broken link is one of his. Cost: it pulls
-  Tumak's arc onto Vecna's spine, and stacks a second Vecna-adjacent event
-  at the five-century mark (Thessalar's craft fell then too).
-- **One of their own.** A native of the homeworld, perhaps the founder's own
-  sibling, turned by whispers (Vecna's or another's): a dark counterpart who
-  was already there. Can sit on top of the first option.
-- **An agent of the linked world**, sent by whatever rules it.
+**[open]**
+- The seeker's place: a member of Dawnbrow itself, or of an older clan
+  close to it that was lost afterward.
+- The good the seeker meant to do.
 
 **[alt] Where the seeker went.**
 
@@ -362,7 +363,7 @@ a fix in the change audit.
    held apart stays apart only while the binding holds.
 4. **The second Zenith gives Vecna a Monolith.** Canon: the twins'
    homecoming brings a second Zenith, and a Monolith follows. A Monolith is
-   the licence to link a heart. If the seeker was Vecna's, the homecoming
+   the licence to link a heart. With the seeker Vecna's, the homecoming
    itself hands his side what it needs, with or without the unhiding. That
    may be the point; it should be chosen, not stumbled on.
 5. **One mark per haven.** A walked haven gives a permanent mark, and its
@@ -421,18 +422,18 @@ a fix in the change audit.
 - `prime/data/survey.json`, `prime/data/connections.json`,
   `prime/chart/index.html`: the "no map and no name" lines.
 - `prime/campaign/plot-hooks.html` § Tumak and the Becoming.
+- `prime/dossiers/vecna.html`, `prime/opposition/vecna.html`: the early
+  attempt on the homeworld, and the fragment his side lost.
 - `prime/campaign/voyages/index.html`: V007 beats owed.
 - `registry/crew-manifest/tumak-swan.html`: the Wayfinder's Path tab script
   (the four sets and menus, 20 positions).
 - `prime/working/STAGING.md` § Tumak: the reveal at the table.
 - `data/vocabulary.js`: Dawnbrow, Skyshoulder, Starfist.
-- If the seeker becomes Vecna's: `prime/dossiers/vecna.html`,
-  `prime/opposition/vecna.html`.
 
 ## Handoff
 
 1. Rule Conflicts 1 to 6.
-2. The conflict thread: the seeker, the unhiding, how the twins learn the
+2. The conflict thread: the seeker's place and fate, the unhiding, how the twins learn the
    danger, how Slip is felt.
 3. The rest of Open: Homebound's moment, the homeworld haven, the seals.
 4. Complexity check, then the mechanic review of the haven spells.
