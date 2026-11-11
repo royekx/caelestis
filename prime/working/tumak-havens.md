@@ -49,6 +49,11 @@ the pages becomes "loses the name and the way".
   heir's own, and come from the first haven of that clan he walks. Whether
   they count as wildcards toward anything is held.
 - **The Heart (20)** is the fifth sense. See On the haven's world.
+- **The inscription grows with the order.** An heir's inscription is 16
+  rolled runes, one clan rune for each other clan that has built a haven,
+  and the Heart. The second heir carried 18, the third 19, and every heir
+  from the fourth on carries 20. The early Runekeepers held a thinner
+  binding, which is how the clans "learned to work it over the generations".
 
 ## Hints
 
@@ -90,6 +95,14 @@ the first haven: there it appears, he knows it is tied to the havens, and
 it stays inert. The rules page's "hidden from the figure and the table
 until you reveal it" changes to "hidden until the first haven".
 
+## Homebound
+
+An heir walks one haven of each clan that has built one, the current
+Runekeeper's last; his haven covers his own clan. The second heir walked
+one, the third two, the fourth three, and every heir from the fifth on
+walks four. For Wan and Tu: one of the first and fifth, one of the second
+and sixth, the fourth, and the seventh last.
+
 ## A walked haven
 
 Both twins present and the trial passed, the haven gives:
@@ -97,8 +110,9 @@ Both twins present and the trial passed, the haven gives:
 - **A spell** from the haven's clan, chosen from a short menu in the way
   the old Wayscribe menus worked: one free cast a day, then with spell
   slots. Up to seven over the campaign. Needs a mechanic review.
-  *(proposed)* The clans take their identity from the body, as Lunarfoot
-  does, and the four old menus pass to them: Lunarfoot the Walker menu
+  Every clan is named as Lunarfoot is, a celestial body and a body part.
+  *(proposed)* The body part sets the clan's menu, and the four old menus
+  pass to them: Lunarfoot the Walker menu
   (feet, walking), and the other three clans the Maker (hands), Soul
   (head and heart) and Vessel (core) menus, rethemed.
 - That Runekeeper's chapter of the order's history.
@@ -140,15 +154,8 @@ It sits beside the first Wayfind already owed in V007.
   sits with how the player plays the twins' memories.
 - **Whose memory a half-rune gives**: his own memory of home coming back
   (lean), or a Runekeeper's, as the hints are.
-- **Early cycles.** The second heir had one haven to walk and the third two,
-  so they could not gain all three clan runes. Lean: the inscription is 16
-  rolled runes, one clan rune per other clan with a haven, and the Heart (18
-  for the second heir, 19 for the third, 20 from the fourth on).
-- **Homebound in every cycle.** Lean: one haven of each clan that has built
-  one, the current Runekeeper's last. Today that is still four.
-- **Clans**: names for the three that are not Lunarfoot, and whether they
-  take the body-part identities and old menus proposed under A walked
-  haven. Lunarfoot stays.
+- **Clans**: the three names (a celestial body and a body part each), and
+  whether the body part sets the menu as proposed under A walked haven.
 - **The haven spells**: the lists, their levels, and the balance with up to
   seven of them (mechanic review).
 - **Slip and Strain** keep their numbers; whether a half-rune memory is how
@@ -156,9 +163,10 @@ It sits beside the first Wayfind already owed in V007.
 
 ## Handoff
 
-Korey keeps this work in the cadets'-arcs chat. Order:
+Korey keeps this work in the cadets'-arcs chat; Gregory's prep is its own
+chat. Order:
 
 1. Rule the Open list.
 2. Mechanic review of the haven spells and the retirement of the sets.
-3. Back to prep: Gregory's arc, standing on its own.
+3. Back to Tumak's prep and overview.
 4. Change audit across the Promotes to list, then delete this draft.
