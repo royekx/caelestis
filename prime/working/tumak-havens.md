@@ -1,8 +1,9 @@
 # Draft: Tumak's road to the havens
 
 How Tumak finds the havens, what the runes give him on the way, and what the
-sending takes from a Wayfinder. Built in the prep chat of 2026-11-10 on
-BACKLOG's "Make each cadet's arc tangible" (Crew, crew/index.html). Rules
+sending takes from a Wayfinder. Built in the cadets'-arcs chat of 2026-11-10 on
+BACKLOG's "Make each cadet's arc tangible" (Crew, crew/index.html); Korey
+keeps the lore and mechanic work for it in that chat. Rules
 below are in DM voice; world facts in-world. Items marked *(proposed)* wait
 for Korey's yes.
 
@@ -26,7 +27,8 @@ The Wayfinder keeps that they came from somewhere, and loose fragments: a
 grandmother, a smell, the way the trees look. It is a protection for the
 world, because a captured Wayfinder cannot give it away, and it is the rite
 of passage: the journey home is remembering. Each haven gives some of it
-back, and the Becoming gives back the rest.
+back, and the Becoming gives back the rest. "Given no map and no name" on
+the pages becomes "loses the name and the way".
 
 ## The runes
 
@@ -35,6 +37,11 @@ back, and the Becoming gives back the rest.
   Tu's, two sides of one moment; a single heir gets it whole.
 - **A matched rune** gives a mark, as now, and one hint toward the current
   target haven.
+- **A hint is a Runekeeper's memory.** He lives one sense of what that
+  haven's Runekeeper saw, heard, touched, or smelled and tasted, as The
+  Giver passes memories on. It is how the Runekeepers guide him, in place of
+  a voice explaining the way, and it sets his arc apart from the other
+  cadets'.
 - **The four sets are retired**: Soul, Maker, Walker and Vessel, their spell
   menus, the Pacing Rule and the exhaustion cost for extra Wayscribe casts.
   Positions keep their places on the body and carry no set.
@@ -47,8 +54,9 @@ back, and the Becoming gives back the rest.
 
 - **Four senses, one hint each**: sight, hearing, touch, and smell and taste
   together. A haven's four hints are always its four senses.
-- **The same order for every haven.** *(proposed)* Far to near: sight,
-  hearing, smell and taste, touch.
+- **The same order for every haven**, broad to specific: sight, hearing,
+  touch, then smell and taste. Set for the first haven; revisit if play
+  says so.
 - **Targeting.** The first match picks the target: the nearest unwalked haven,
   from where the crew stands when the rune matches, of a clan he has not yet
   covered. Matches 1 to 4 are its hints; match 5 picks the next target, and
@@ -59,12 +67,13 @@ back, and the Becoming gives back the rest.
   a haven is four havens: the shortest Homebound path. The twins match late
   and in bunches, so on matches alone their havens lock at about levels 8,
   11, 13 to 14 and 16. That is the backstop, not the pace.
-- **Hints are clues, not gates.** *(proposed)* A crew that works a haven out
+- **Hints are clues, not gates.** A crew that works a haven out
   from two or three hints goes early; a navigator helps.
 - **A walked haven names older havens outright.** Each Runekeeper walked every
   older haven as a Wayfinder, so a haven's essence knows the host worlds of
   all before it: haven 6 knows 1 to 5, and haven 1 knows none. One walk can
-  skip a whole set of hints.
+  skip a whole set of hints. The essence teaches the same way the hints
+  come: by memory, lived through its Runekeeper's senses.
 
 ## On the haven's world
 
@@ -76,17 +85,22 @@ goes inert. He knows it is there and cannot reach it. At the site the twins
 can feel the veil and press on it, like a hand on a window screen. The
 Heart wakes fully only at the Becoming, which opens Homebound.
 
-At the table this shows the player that a further rune exists, without
-saying what it is. The rules page's "hidden from the figure and the table
-until you reveal it" changes to match.
+The player may guess a twentieth rune from the die. It stays unshown until
+the first haven: there it appears, he knows it is tied to the havens, and
+it stays inert. The rules page's "hidden from the figure and the table
+until you reveal it" changes to "hidden until the first haven".
 
 ## A walked haven
 
 Both twins present and the trial passed, the haven gives:
 
-- **A spell**, taken from the haven's clan, or a choice from a short list:
-  one free cast a day, then with spell slots. Up to seven over the campaign.
-  Needs a mechanic review.
+- **A spell** from the haven's clan, chosen from a short menu in the way
+  the old Wayscribe menus worked: one free cast a day, then with spell
+  slots. Up to seven over the campaign. Needs a mechanic review.
+  *(proposed)* The clans take their identity from the body, as Lunarfoot
+  does, and the four old menus pass to them: Lunarfoot the Walker menu
+  (feet, walking), and the other three clans the Maker (hands), Soul
+  (head and heart) and Vessel (core) menus, rethemed.
 - That Runekeeper's chapter of the order's history.
 - A permanent mark.
 - The essence's knowledge of every older haven.
@@ -122,34 +136,29 @@ It sits beside the first Wayfind already owed in V007.
 
 ## Open
 
-- **The sending's replace list.** "Given no map and no name" becomes "loses
-  the name and the way" on the pages above. Korey's yes, and a check that it
+- **The player and the sending**: a check that losing the name and the way
   sits with how the player plays the twins' memories.
-- **Hint order**: confirm sight, hearing, smell and taste, touch.
-- **Leftover hints**: when he reaches a haven before its fourth hint, do the
-  remaining hints roll over to the next target? Lean: yes, so no match is
-  wasted and the four-haven guarantee holds.
+- **Whose memory a half-rune gives**: his own memory of home coming back
+  (lean), or a Runekeeper's, as the hints are.
 - **Early cycles.** The second heir had one haven to walk and the third two,
   so they could not gain all three clan runes. Lean: the inscription is 16
   rolled runes, one clan rune per other clan with a haven, and the Heart (18
   for the second heir, 19 for the third, 20 from the fourth on).
 - **Homebound in every cycle.** Lean: one haven of each clan that has built
   one, the current Runekeeper's last. Today that is still four.
-- **Clans**: their number and meaning are free now that senses no longer
-  map onto them. Lunarfoot stays.
+- **Clans**: names for the three that are not Lunarfoot, and whether they
+  take the body-part identities and old menus proposed under A walked
+  haven. Lunarfoot stays.
 - **The haven spells**: the lists, their levels, and the balance with up to
   seven of them (mechanic review).
-- **What replaces the Wayscribe spells' place in his growth** between havens,
-  if anything.
 - **Slip and Strain** keep their numbers; whether a half-rune memory is how
   Slip shows at the table.
 
 ## Handoff
 
-1. Lore chat, area Tumak's havens: rule the Open items above.
-   Opening line: "lore chat, area: Tumak's havens. Rule the Open list in
-   prime/working/tumak-havens.md."
-2. Mechanic chat, area the haven spells: lists, levels, free cast and slots,
-   and the retirement of the sets. Opening line: "mechanic chat, area: the
-   haven spells. Work from prime/working/tumak-havens.md § A walked haven."
-3. Change audit across the Promotes to list, then delete this draft.
+Korey keeps this work in the cadets'-arcs chat. Order:
+
+1. Rule the Open list.
+2. Mechanic review of the haven spells and the retirement of the sets.
+3. Back to prep: Gregory's arc, standing on its own.
+4. Change audit across the Promotes to list, then delete this draft.

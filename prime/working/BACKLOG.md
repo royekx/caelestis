@@ -37,7 +37,7 @@ staging once Korey has read and accepted them.
 | Factions | factions/ | 12 | 13 | 1 | 0 | 0 |
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 7 | 1 | 0 | 3 |
 | Dossiers | dossiers/ | 13 | 16 | 0 | 0 | 1 |
-| Crew | crew/ | 12 | 20 | 0 | 0 | 0 |
+| Crew | crew/ | 12 | 21 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
 | Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 7 | 8 | 7 | 0 | 12 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 7 | 11 | 1 | 0 | 2 |
-| **Total** |  | **130** | **174** | **21** | **1** | **41** |
+| **Total** |  | **130** | **175** | **21** | **1** | **41** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1226,6 +1226,10 @@ Items whose source sweep is still partial keep their `(sampled)` or
   src: section 7 (2026-10-28)
 
 ### crew/tumak.html
+
+- **[later]** Leftover hints when a haven is reached early
+  Tumak's havens take four hints each (prime/working/tumak-havens.md). When he reaches one before its fourth hint, the remaining hints may roll over to the next target or stay spent. See how it plays at the table.
+  src: Korey, 2026-11-10
 
 Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; see the Rules section.
 
