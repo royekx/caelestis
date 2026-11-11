@@ -160,6 +160,20 @@ becomes this. At the current Runekeeper's haven the exchange gives the last
 clan rune, the Heart wakes whole, and he is sent home. Arriving home with
 the havens walked completes Homebound.
 
+## Slip and Strain
+
+The bands are raised: Strain 0 to 6 steady, 7 to 9 flicker, 10 to 11 the
+binding slips, 12 and over crisis. With them the unhiding fires in about
+6% of runs at the slow pace and 2% at the fast (simulation, 20,000 runs),
+against 31% and 16% as the rules page has it.
+
+The player feels Slip. It is the arc's conflict: the twins are a
+manifestation the order has never seen, and being two is wearing the
+binding down. The pieces of the fragment strain against each other, the
+Runekeeper fades, and the spell fails faster than it ever has. The twins do
+not know this, and they learn it as they go. The end of that road is the
+binding breaking.
+
 ## Mishaps
 
 An Astral or Deep Astral mishap that lands a twin at a haven lands at the
@@ -249,9 +263,15 @@ Starfist.
   of its own (two now).
 - **Mishap fallback**: when the current target is not yet placed, and after
   the Becoming.
-- **Slip and Strain**: urgent before level 5. The simulation (20,000 runs)
-  puts Slip at 8 or more in 80% of runs and 10 or more in 38%; it moves by
-  2 and a haven takes off 1, so the unhiding can fire at levels 6 to 9.
+- **Havens worth 2 against Strain** (simulation's pick, with the higher
+  bands): shortens the flicker and makes a walk felt at once.
+- **Whether the crisis band fires the unhiding on its own**, or the DM starts
+  it at 12+ when the story can carry it (simulation's lean).
+- **What the unhiding does.** The world appearing on a chart is not yet a
+  threat; what it lets in, and what it costs, is undecided.
+- **How the twins learn the danger**: the steps by which they find out that
+  being two is wearing the binding down.
+- **How Slip is felt** at the table.
 - **Complexity check** of the whole system once the rest is ruled. Korey
   can track much on his side, planned ahead; the player should track few
   kinds of thing.
