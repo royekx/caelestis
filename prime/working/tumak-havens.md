@@ -154,9 +154,13 @@ again with their own clan.
 | 7th, the current Runekeeper | Starfist | 3, 4, 1 or 5, 6 |
 | 8th, Wan and Tu | Lunarfoot | 4, 1 or 5, 2 or 6, 7 |
 
-At a haven out of order, the trial is not open, as at the current
-Runekeeper's haven today; the rules page's "order is free until the last"
-becomes this. At the current Runekeeper's haven the exchange gives the last
+A haven reached out of order opens its trial all the same, so no trip is
+wasted. Its era records, memory and mark come at once. Its clan rune is
+taken but lies dormant, and the spell with it cannot be cast, until the
+clan before it in the order fills its place in the Heart; then both runes
+wake together. The current Runekeeper's haven is the exception: its trial
+waits for the last, because the exchange happens there. The rules page's
+"order is free until the last" becomes this. At the current Runekeeper's haven the exchange gives the last
 clan rune, the Heart wakes whole, and he is sent home. Arriving home with
 the havens walked completes Homebound.
 
@@ -177,9 +181,10 @@ binding breaking.
 ## Mishaps
 
 An Astral or Deep Astral mishap that lands a twin at a haven lands at the
-current target. The crew now knows where it is and still has to get there:
-one twin alone cannot take the trial, so the twin already there does not
-help.
+nearest haven of any kind, placed on the spot if it is not yet placed. It
+is a safety in the binding, the same for a single heir: a Wayfinder who
+falls out of the way lands somewhere the order has made. One twin alone
+cannot take the trial, so the crew still has to get there.
 
 ## A walked haven
 
@@ -257,12 +262,8 @@ Starfist.
   page has it now.
 - **The haven spells**: the menus, their levels, and the balance with up to
   seven (mechanic review).
-- **A chance haven further down the road**: whether its trial opens before
-  its turn, or only a chance haven of a clan already walked opens.
 - **One mark per haven**: the clan rune is the mark, or the haven gives one
   of its own (two now).
-- **Mishap fallback**: when the current target is not yet placed, and after
-  the Becoming.
 - **Havens worth 2 against Strain** (simulation's pick, with the higher
   bands): shortens the flicker and makes a walk felt at once.
 - **Whether the crisis band fires the unhiding on its own**, or the DM starts
