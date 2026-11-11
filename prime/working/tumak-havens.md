@@ -145,8 +145,8 @@ shoulder, the wind on a shoulder, or a mantle of sky) and Starfist's.
 without these names. After the fold, with no sun, sky, stars or moon over
 them, they named themselves for the heavens so as to remember what they no
 longer had.
-**[proposed]** The order's emblem as the Heart with its four chambers (see
-Conflicts 6).
+**[ruled]** The order's emblem is the Heart drawn with its four chambers:
+the fragment half-formed, as canon has it.
 
 ## 3. A generation and the sending
 
@@ -203,8 +203,9 @@ passed:
   Seven Runekeepers span five centuries, so each haven shows the homeworld
   and the order as they were in one era.
 - A full memory of home, its senses and its people.
-- A permanent mark. **[open]** Whether this is one mark with the clan rune
-  or a second (see Conflicts 5).
+- One permanent mark on the haven: the clan rune is that mark, and nothing
+  extra. A haven of a clan already held (a chance haven) still gives its
+  permanent mark.
 
 A walked haven does not name other havens.
 
@@ -394,6 +395,36 @@ Homebound.
 - **[proposed]** A last haven on the homeworld where every Runekeeper takes
   office, which arriving home reaches.
 
+## Near-term readiness
+
+From the logic and mechanic check of 2026-11-11, for play from V007 to the
+first haven. Everything else in Open can wait until it matters.
+
+**Before V007**
+- What the player is told about hints. Lean: after the first hint, the
+  mechanic in full in one line ("each new match gives you a memory of the
+  place you are bound for, one sense at a time"), with the meaning held back.
+- The player check on the sending (3).
+- Place Lunarfoot's haven (the fourth) and write its four hints.
+
+**Before level 5**
+- How Slip is felt. In about half of runs Slip reaches 8 at level 5, which
+  is Strain 8, flicker under the raised bands: the first time it shows.
+
+**Before the first haven** (about levels 7 to 8, sooner on two or three
+hints)
+- What a failed trial costs, and whether it can be tried again.
+- The fourth haven's trial; the fourth Runekeeper's era records; the full
+  memory it returns (the rhyme is proposed); the Lunarfoot menu spell.
+- Cap a haven spell's level by his level (benchmark: Fey Touched, one free
+  2nd-level cast a day, for a feat).
+
+**Deferred, noted**
+- A deliberate Astral jump to find havens by mishap. Only reachable from
+  about level 15, and costly in exhaustion; watch it then.
+- The four sets' Wayscribe spells are retired; at level 4 no set is
+  complete, so nothing is lost now.
+
 ## Conflicts and stale lines
 
 From the top-to-bottom logic check of 2026-11-11. Each needs a ruling, or
@@ -409,11 +440,8 @@ a fix in the change audit.
    Origin.
 4. **The second Zenith gives Vecna a Monolith.** Ruled: an opportunity the
    DM plans for and Vecna does not expect.
-5. **One mark per haven.** A walked haven gives a permanent mark, and its
-   clan rune counts as a mark too: two now.
-6. **The order's emblem.** Canon: the fragment half-formed in a chest.
-   **[proposed]** It is drawn as the Heart with its four chambers, so canon
-   and the clan shapes both hold.
+5. **One mark per haven.** Ruled: the clan rune is the haven's mark.
+6. **The order's emblem.** Ruled: the Heart with its four chambers.
 
 **Stale lines for the change audit**
 
@@ -476,7 +504,7 @@ a fix in the change audit.
 
 ## Handoff
 
-1. Rule Conflicts 5 and 6.
+1. Near-term readiness: the three before-V007 items, then how Slip is felt.
 2. The conflict thread: the seeker's place and fate, how the twins learn the
    danger, how Slip is felt.
 3. The rest of Open: Homebound's moment, the homeworld haven, the seals.
