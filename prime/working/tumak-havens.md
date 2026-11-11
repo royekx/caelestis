@@ -208,10 +208,9 @@ owed in V007.
   (lean), or a Runekeeper's, as the hints are.
 - **The Sky and Star rune shapes.**
 - **The story of the names**, from before the hiding. Later.
-- **Dawnbrow's seal**: a half-sun rising over a brow. One brow as the
-  horizon, or two brows as hills with the sun rising between them.
 - **The order's emblem** *(proposed)*: the Heart with its four clan shapes.
 
+Dawnbrow's seal is a half-sun rising over one brow, the brow its horizon.
 Lunarfoot's seal is a crescent moon cradling a footprint. The two four-point
 stars beside it, on the Becoming handout and the Wayfinder's Path tab, were
 added for Wan and Tu: the family's own version of the seal, and no sign of
