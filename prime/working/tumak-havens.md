@@ -99,8 +99,15 @@ with a memory its Runekeeper left in it.
   bunches, so on matches alone their havens lock at about levels 8, 11, 13
   to 14 and 16. That is the backstop, not the pace.
 - **Hints are clues, not gates.** A crew that works a haven out from two or
-  three hints goes early; a navigator helps. What happens to the hints left
-  over is a BACKLOG item, to see in play.
+  three hints goes early; a navigator helps.
+- **Hints retarget.** A hint aims at the next unwalked haven on the road, so
+  a haven walked early sends the rest on to the next. Hints with no haven
+  left become memories of home.
+- **Clan runes give no hint.** They come off the level cycle; only a match
+  made at a level-up gives a hint. Open to change for pacing.
+- **The current Runekeeper's haven** gets its hints last, about levels 15 to
+  16 on matches alone, which is when he should go home. If pacing needs it,
+  the living Runekeeper's voice can give an extra hint at a key moment.
 - **Hints are the only way a haven on his road is found.** A walked haven
   does not name other havens.
 
@@ -109,8 +116,9 @@ with a memory its Runekeeper left in it.
 The crew roams wider over the campaign, first a system, then the galaxy, so
 they may land on or near a world with a haven his runes are not pointing
 at: one further down his road, or another haven of a clan he has already
-walked. The DM places one where it suits the pacing. What a chance haven
-gives is open.
+walked. The DM places one where it suits the pacing. A chance haven gives what any
+haven gives, its trial, spell, era records, memory and mark, except a clan
+rune already held. Every haven is equal.
 
 ## On the haven's world
 
@@ -168,7 +176,9 @@ Both twins present and the trial passed, the haven's essence gives:
   and so on). The old set menus pass to the clans: Dawnbrow the old Soul
   spells, Skyshoulder the old Vessel spells, Starfist the old Maker spells,
   Lunarfoot the old Walker spells. One free cast a day, then with spell
-  slots. Up to seven over the campaign. Needs a mechanic review.
+  slots. Four on the road, more from chance havens. A free daily
+  high-level spell is acceptable when the trial matches its weight; the
+  menus are revisited in play if one runs hot.
 
 The haven also keeps what its Runekeeper left: notes, belongings and
 records of their own era. Seven Runekeepers span about five centuries, so
@@ -233,20 +243,10 @@ Starfist.
   page has it now.
 - **The haven spells**: the menus, their levels, and the balance with up to
   seven (mechanic review).
-- **Hint retargeting** (simulation, 2026-11-11): a hint aims at the next
-  unwalked haven on the road, so a haven walked early sends the rest on;
-  hints with no haven left become memories of home. Replaces the BACKLOG
-  item on leftover hints if ruled.
-- **Haven 7's hints** arrive last (levels 15 to 16 on matches alone). A
-  further source, such as the living Runekeeper's voice at key moments.
-- **What a chance haven gives**: the era records only, or also a memory and
-  a spell; whether its trial opens out of order.
+- **A chance haven further down the road**: whether its trial opens before
+  its turn, or only a chance haven of a clan already walked opens.
 - **One mark per haven**: the clan rune is the mark, or the haven gives one
   of its own (two now).
-- **Haven spells**: four on the road, more from chance havens; a free daily
-  5th-level spell at level 12 came up in the simulation.
-- **Clan runes and matches**: whether a clan rune counts as a match (and so
-  a hint). Lean: it counts for reach and passengers, not for hints.
 - **Mishap fallback**: when the current target is not yet placed, and after
   the Becoming.
 - **Slip and Strain**: urgent before level 5. The simulation (20,000 runs)
