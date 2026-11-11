@@ -48,8 +48,15 @@ the pages becomes "loses the name and the way".
 - **Clan runes (17 to 20)**, one for each of the four clans, his own
   included. Each comes from the first haven of that clan he walks; the
   current Runekeeper's clan rune comes in the exchange at the Becoming.
-  Whether a clan rune is a rune on the skin or fills in between the runes
-  is open. Whether they count as wildcards toward anything is held.
+  They count as runes for every number (essence runes, marks, passengers).
+  Whether they count as wildcards toward anything is held.
+- **The clans are bound to the heavens**: the Moon (Lunarfoot), the Sun,
+  the Stars, and a fourth. A clan rune takes its clan's shape: Lunarfoot's
+  is a crescent moon, the Sun clan's a sun.
+- **The clan runes sit inside the Heart.** The Heart-rune holds a place for
+  each clan, and a walked haven fills its clan's place. That is why the
+  Heart flares at a haven. The last place fills in the exchange, and the
+  Heart, whole, wakes at the Becoming.
 - **The Heart (21)** is the fifth sense, already matched. See On the haven's
   world.
 - **The inscription grows with the order.** An heir's inscription is 16
@@ -203,8 +210,15 @@ It sits beside the first Wayfind already owed in V007.
   whether the body part sets the menu as proposed under A walked haven.
 - **The haven spells**: the lists, their levels, and the balance with up to
   seven of them (mechanic review).
-- **The clan runes' form**: a rune on the skin at a new position, or
-  something that fills in between the runes already there.
+- **The fourth heavenly body**, and which clan holds which place in the
+  order the office passes (the founder's clan first, Lunarfoot fourth).
+  The four together may be a story of the world.
+- **Clan names**: a celestial body and a body part, as Lunarfoot is. Avoid
+  "heart" as the body part, since the Heart now holds the clan runes.
+- **The order's emblem** *(proposed)*: the Heart with its four clan shapes.
+  Lunarfoot's seal (a crescent moon cradling a footprint, with two
+  four-point stars) is then one clan's sign within it. Touches
+  factions/runekeepers.html Still to decide.
 - **A haven on the homeworld** *(proposed)*: a last haven where every
   Runekeeper takes office, which arriving home reaches. Touches the
   homeworld page (the Runekeeper as the only way in and out; the hidden
@@ -221,7 +235,8 @@ It sits beside the first Wayfind already owed in V007.
 Korey keeps this work in the cadets'-arcs chat; Gregory's prep is its own
 chat. Order:
 
-1. Rule the Open list: the clan runes' form, the homeworld haven,
+1. Rule the Open list: the fourth heavenly body and the clan names, the
+   homeworld haven,
    Homebound's moment, Slip and Strain, then a complexity check of the
    whole.
 2. Mechanic review of the haven spells and the retirement of the sets.
