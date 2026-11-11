@@ -39,7 +39,7 @@ no clan.
 
 | Order | Clan | Heavens | Body |
 |---|---|---|---|
-| 1st, the founder's | Sunbrow | the Sun | brow |
+| 1st, the founder's | Dawn-, its body part open (was Sunbrow) | the Sun | head |
 | 2nd | Skyshoulder | the Sky | shoulder |
 | 3rd | Starfist | the Stars | fist |
 | 4th | Lunarfoot | the Moon | foot |
@@ -62,7 +62,7 @@ movements seen and the movements felt, until the memory is whole.
 - **Clan runes (17 to 20)**, one for each clan, his own included. Each comes
   from the first haven of that clan he walks; the current Runekeeper's
   clan's rune comes in the exchange at the Becoming. A clan rune takes its
-  clan's shape: Lunarfoot's a crescent moon, Sunbrow's a sun. They count as
+  clan's shape: Lunarfoot's a crescent moon, the first clan's a sun. They count as
   runes for every number (essence runes, marks, passengers). Whether they
   also count as wildcards is held.
 - **The Heart (21)** is already matched, and it holds the clan runes: it has
@@ -136,7 +136,7 @@ again with their own clan.
 | 2nd | Skyshoulder | 1 |
 | 3rd | Starfist | 1, 2 |
 | 4th | Lunarfoot | 1, 2, 3 |
-| 5th | Sunbrow | 1, 2, 3, 4 |
+| 5th | the first clan (Dawn-) | 1, 2, 3, 4 |
 | 6th | Skyshoulder | 2, 3, 4, 5 |
 | 7th, the current Runekeeper | Starfist | 3, 4, 1 or 5, 6 |
 | 8th, Wan and Tu | Lunarfoot | 4, 1 or 5, 2 or 6, 7 |
@@ -158,8 +158,8 @@ help.
 
 Both twins present and the trial passed, the haven gives:
 
-- **A spell** from the clan's menu, named for the clan (the Sunbrow menu,
-  and so on). The old set menus pass to the clans: Sunbrow the old Soul
+- **A spell** from the clan's menu, named for the clan (the Lunarfoot menu,
+  and so on). The old set menus pass to the clans: the first clan the old Soul
   spells, Skyshoulder the old Vessel spells, Starfist the old Maker spells,
   Lunarfoot the old Walker spells. One free cast a day, then with spell
   slots. Up to seven over the campaign. Needs a mechanic review.
@@ -198,7 +198,7 @@ owed in V007.
 - `registry/crew-manifest/tumak-swan.html`: the Wayfinder's Path tab script
   (the four sets and menus, 20 positions).
 - `prime/working/STAGING.md` § Tumak: the reveal at the table.
-- `data/vocabulary.js`: Sunbrow, Skyshoulder, Starfist.
+- `data/vocabulary.js`: the clan names.
 
 ## Open
 
@@ -208,9 +208,14 @@ owed in V007.
   (lean), or a Runekeeper's, as the hints are.
 - **The Sky and Star rune shapes.**
 - **The story of the names**, from before the hiding. Later.
-- **The order's emblem** *(proposed)*: the Heart with its four clan shapes,
-  Lunarfoot's seal (a crescent moon cradling a footprint, with two
-  four-point stars) one clan's sign within it.
+- **The first clan's name**: Dawn plus a part of the head (Dawn names the
+  Sun as Lunar names the Moon), and its seal.
+- **The order's emblem** *(proposed)*: the Heart with its four clan shapes.
+
+Lunarfoot's seal is a crescent moon cradling a footprint. The two four-point
+stars beside it, on the Becoming handout and the Wayfinder's Path tab, were
+added for Wan and Tu: the family's own version of the seal, and no sign of
+Starfist.
 - **A haven on the homeworld** *(proposed)*: a last haven where every
   Runekeeper takes office, which arriving home reaches. Touches the homeworld
   page (the Runekeeper as the only way in and out; the hidden Atrium).
