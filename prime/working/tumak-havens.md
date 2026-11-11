@@ -50,9 +50,18 @@ the pages becomes "loses the name and the way".
   current Runekeeper's clan rune comes in the exchange at the Becoming.
   They count as runes for every number (essence runes, marks, passengers).
   Whether they count as wildcards toward anything is held.
-- **The clans are bound to the heavens**: the Moon (Lunarfoot), the Sun,
-  the Stars, and a fourth. A clan rune takes its clan's shape: Lunarfoot's
-  is a crescent moon, the Sun clan's a sun.
+- **The clans are bound to the heavens and to the body**, top to bottom, in
+  the order the office passes:
+
+  | Order | Clan | Heavens | Body | Old menu |
+  |---|---|---|---|---|
+  | 1st, the founder's | Sun crown (or brow) | the Sun | head | Soul |
+  | 2nd | Skyspine | the Sky | spine | Vessel |
+  | 3rd | Starfist | the Stars | fist | Maker |
+  | 4th | Lunarfoot | the Moon | foot | Walker |
+
+  A clan rune takes its clan's shape: Lunarfoot's is a crescent moon, the
+  Sun clan's a sun.
 - **The clan runes sit inside the Heart.** The Heart-rune holds a place for
   each clan, and a walked haven fills its clan's place. That is why the
   Heart flares at a haven. The last place fills in the exchange, and the
@@ -210,11 +219,9 @@ It sits beside the first Wayfind already owed in V007.
   whether the body part sets the menu as proposed under A walked haven.
 - **The haven spells**: the lists, their levels, and the balance with up to
   seven of them (mechanic review).
-- **The fourth heavenly body**, and which clan holds which place in the
-  order the office passes (the founder's clan first, Lunarfoot fourth).
-  The four together may be a story of the world.
-- **Clan names**: a celestial body and a body part, as Lunarfoot is. Avoid
-  "heart" as the body part, since the Heart now holds the clan runes.
+- **Crown or brow** for the Sun clan.
+- **The story of the names**, which comes from before the hiding. Later.
+- **The Sky and Star rune shapes.**
 - **The order's emblem** *(proposed)*: the Heart with its four clan shapes.
   Lunarfoot's seal (a crescent moon cradling a footprint, with two
   four-point stars) is then one clan's sign within it. Touches
@@ -235,8 +242,7 @@ It sits beside the first Wayfind already owed in V007.
 Korey keeps this work in the cadets'-arcs chat; Gregory's prep is its own
 chat. Order:
 
-1. Rule the Open list: the fourth heavenly body and the clan names, the
-   homeworld haven,
+1. Rule the Open list: crown or brow, the rune shapes, the homeworld haven,
    Homebound's moment, Slip and Strain, then a complexity check of the
    whole.
 2. Mechanic review of the haven spells and the retirement of the sets.
