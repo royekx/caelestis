@@ -115,6 +115,15 @@
       "lane": "vecna",
       "status": "past",
       "cert": "canon",
+      "title": "The homeworld folds",
+      "desc": "Vecna's whisper steers a seeker of the Wayfinders' homeworld to the Dissolution fragment, before the Seekers are the chapters they become. The seeker opens the world's heart and links it to a bad world, meaning to answer a threat, and the bleed makes it worse. Four clan leaders take the fragment; the world folds inside its own heart, and the first Runekeeper takes office.",
+      "t": -495,
+      "tier": 2
+    },
+    {
+      "lane": "vecna",
+      "status": "past",
+      "cert": "canon",
       "title": "A Seeker chapter reaches Vanifer",
       "desc": "It trades her the lost meaning of the Alpha and the secret in the Cre'Tez blood.",
       "t": -12,

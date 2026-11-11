@@ -3937,7 +3937,7 @@
           "src": "crew/tumak.html"
         },
         {
-          "t": "Both twins are partial Wayfinders of the Runekeepers, Lunarfoot clan.",
+          "t": "Together the twins are the Runekeepers' Wayfinder and heir, Lunarfoot clan.",
           "src": "crew/tumak.html"
         },
         {
@@ -4213,7 +4213,7 @@
       "label": "The Runekeepers",
       "type": "faction",
       "scope": "caelestis",
-      "summary": "A hidden order of four clans on a world folded inside its own heart.",
+      "summary": "A hidden order of four clans, Dawnbrow, Skyshoulder, Starfist and Lunarfoot, on a world folded inside its own heart.",
       "facts": [
         {
           "t": "The Runekeepers practise Wayfinding, attuning to places and through them to their hearts; the Lunarfoot clan is among them.",
@@ -4224,7 +4224,7 @@
           "src": "factions/runekeepers.html"
         },
         {
-          "t": "Exiled Wayfinders are given no map and no name, and must recognize home through remembered fragments.",
+          "t": "The Wayfinder, the heir on the journey, loses the name of home and the way at the sending, and remembers them a haven at a time; only the Wayfinder and the Runekeeper ever leave.",
           "src": "factions/runekeepers.html"
         },
         {
@@ -4232,7 +4232,7 @@
           "src": "factions/runekeepers.html"
         },
         {
-          "t": "Each Runekeeper builds a haven on another world and fades into it; the havens pin the concealment.",
+          "t": "Each Runekeeper builds a haven on another world and, after the exchange, lives out their days there as its essence; the havens pin the concealment.",
           "src": "factions/runekeepers.html"
         }
       ]
@@ -4282,7 +4282,7 @@
           "src": "locations/wayfinders-homeworld.html"
         },
         {
-          "t": "It shares a galaxy with the threats its Wayfinders map.",
+          "t": "It shares a galaxy with the threats its Wayfinder crosses.",
           "src": "cosmology/index.html"
         },
         {
