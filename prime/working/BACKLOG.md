@@ -1570,7 +1570,7 @@ against the complete Tumak sweep (all 336 turns).
 ### registry/crew-manifest/tumak-swan.html#wayfinder-path (player site, outside prime)
 
 - **[later]** Restyle the Wayfinder's Path tab
-  Bring the tab's styling in line with the newer pages, keeping its look; it should not repeat Your story on the Personnel file. Build with "The Personnel file: Academy file and Your story".
+  Bring the tab's styling in line with the newer pages, keeping its look; it should not repeat the story on the Personnel file. Build with "The Personnel file: Academy file and the cadet's story".
   src: the Homebound chat, 2026-11-10
 
 - **[add]** Who gets the tracker link (DM note, kept in prime)
@@ -1972,8 +1972,8 @@ Fixes to player-facing pages, including the Fleet Intelligence Archive (`restric
 
 ### registry/crew-manifest/ (every crew page)
 
-- **[decide]** The Personnel file: Academy file and Your story *(shape)*
-  Proposal, mocked up for Tumak (artifact "Tumak's personnel file: Fleet record and own account"): the tab holds the Academy's file (only what Caelestis has on record: name, species as declared, origin, next of kin, assignment, staff notes), then Your story, short prose in the second person showing the cadet's arc (no progress bar), and the arrival orders folded shut. No voyage-by-voyage log, no question lists, few boxes. Private memories move out of the Academy's rows into Your story. Every crew page. Pair with restyling the Wayfinder's Path tab to the newer pages while keeping its look (see the item under registry/crew-manifest/tumak-swan.html#wayfinder-path).
+- **[decide]** The Personnel file: Academy file and the cadet's story *(shape)*
+  Proposal, mocked up for Tumak (artifact "Tumak's personnel file: Fleet record and own account"): the tab holds the Academy's file (only what Caelestis has on record: name, species as declared, origin, next of kin, assignment, staff notes), then the cadet's story in the first person ("My story"; Tumak's is "Our story", in "we"), short prose showing the arc, written only from what happened at the table plus the prelude of arriving at Caelestis (no progress bar), and the arrival orders folded shut. No voyage-by-voyage log, no question lists, few boxes. Private memories move out of the Academy's rows into the story. Every crew page. Pair with restyling the Wayfinder's Path tab to the newer pages while keeping its look (see the item under registry/crew-manifest/tumak-swan.html#wayfinder-path).
   src: the Homebound chat, 2026-11-10
 
 ### voyages/bearings/
