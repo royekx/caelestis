@@ -57,17 +57,20 @@ the pages becomes "loses the name and the way".
 
 ## Hints
 
+The havens are sigils of the one spell, and the fragment is its engine. A
+rune matched whole hears the sigil it is bound for, and the sigil answers
+with a memory its Runekeeper left in it.
+
 - **Four senses, one hint each**: sight, hearing, touch, and smell and taste
   together. A haven's four hints are always its four senses.
 - **The same order for every haven**, broad to specific: sight, hearing,
   touch, then smell and taste. Set for the first haven; revisit if play
   says so.
-- **Targeting.** The first match picks the target: the nearest unwalked haven,
-  from where the crew stands when the rune matches, of a clan he has not yet
-  covered. Matches 1 to 4 are its hints; match 5 picks the next target, and
-  so on. The current Runekeeper's haven is always one of the four and covers
-  its own clan. A haven is placed when its first hint lands, and stays where
-  it is placed.
+- **Targeting follows the haven order** (see Homebound). Matches 1 to 4 are
+  hints toward the first haven on his road, 5 to 8 the second, 9 to 12 the
+  third, and 13 to 16 the current Runekeeper's. Where a clan has two havens,
+  the target is the one nearest the crew when its first hint lands. A haven
+  is placed when its first hint lands, and stays where it is placed.
 - **The math.** Every heir makes 16 matches by level 16, and 16 hints at four
   a haven is four havens: the shortest Homebound path. The twins match late
   and in bunches, so on matches alone their havens lock at about levels 8,
@@ -84,24 +87,46 @@ the pages becomes "loses the name and the way".
 
 Each haven sits close to its host world's heart, behind a thin veil between
 the heart and the world: the haven draws on the heart without opening it.
-On the haven's world the Heart-rune stirs and leads him to the site. The
-first time, it is a scene: a rune he has never seen flares, then dulls and
-goes inert. He knows it is there and cannot reach it. At the site the twins
-can feel the veil and press on it, like a hand on a window screen. The
-Heart wakes fully only at the Becoming, which opens Homebound.
+On the haven's world the Heart-rune stirs as a sense and leads him to the
+site. It gives no power and no Homebound. The first time, it is a scene: a
+rune he has never seen flares, then dulls. At the site the twins can feel
+the veil and press on it, like a hand on a window screen. When they leave
+the haven's world the Heart goes inert and fades until the next one. It
+wakes fully only at the Becoming, which opens Homebound.
 
 The player may guess a twentieth rune from the die. It stays unshown until
 the first haven: there it appears, he knows it is tied to the havens, and
 it stays inert. The rules page's "hidden from the figure and the table
 until you reveal it" changes to "hidden until the first haven".
 
-## Homebound
+## Homebound and the haven order
 
-An heir walks one haven of each clan that has built one, the current
-Runekeeper's last; his haven covers his own clan. The second heir walked
-one, the third two, the fourth three, and every heir from the fifth on
-walks four. For Wan and Tu: one of the first and fifth, one of the second
-and sixth, the fourth, and the seventh last.
+An heir walks one haven of each clan that has built one, in a fixed order.
+He starts with his own clan's nearest haven, then follows the clans in the
+order the office passes, so the current Runekeeper's clan always comes
+last, at the current Runekeeper's haven. The order renews the binding from
+weakest to strongest. A clan with no haven yet is skipped, so the second
+heir walked one haven, the third two, the fourth three, and every heir
+from the fifth on walks four. The next Wayfinder starts again with their
+own clan.
+
+For Wan and Tu (Lunarfoot): the fourth haven, Lunarfoot's; then one of the
+first and fifth (the founder's clan); then one of the second and sixth (the
+second clan); then the seventh, the current Runekeeper's.
+
+| Heir | Clan | Road |
+|---|---|---|
+| 2nd | B | 1 |
+| 3rd | C | 1, 2 |
+| 4th | Lunarfoot | 1, 2, 3 |
+| 5th | A | 1, 2, 3, 4 |
+| 6th | B | 2, 3, 4, 5 |
+| 7th | C | 3, 4, 1 or 5, 6 |
+| 8th, Wan and Tu | Lunarfoot | 4, 1 or 5, 2 or 6, 7 |
+
+Reaching a haven out of order, its trial is not open, as at the current
+Runekeeper's haven today. The rules page's "order is free until the last"
+changes to this.
 
 ## A walked haven
 
@@ -115,7 +140,10 @@ Both twins present and the trial passed, the haven gives:
   pass to them: Lunarfoot the Walker menu
   (feet, walking), and the other three clans the Maker (hands), Soul
   (head and heart) and Vessel (core) menus, rethemed.
-- That Runekeeper's chapter of the order's history.
+- That Runekeeper's chapter of the order's history, and memories of home:
+  its senses, its people. The name of home and the way back return only at
+  the Becoming, so a Wayfinder taken mid-journey still cannot give the world
+  away.
 - A permanent mark.
 - The essence's knowledge of every older haven.
 - The clan's rune, if it is the first haven of that clan and the clan is not
@@ -124,12 +152,13 @@ Both twins present and the trial passed, the haven gives:
 ## V007
 
 The left sole (08) is his first match, so it gives the first hint (sight)
-of the nearest haven to H'Catha. Korey picks the haven and writes the hint.
+of Lunarfoot's haven, the fourth: a Lunarfoot Runekeeper's memory. Korey
+places the haven and writes the hint.
 It sits beside the first Wayfind already owed in V007.
 
 ## Promotes to
 
-- `prime/rules/index.html` § Tumak, the inscription: the core loop, the
+- `prime/rules/index.html` § Tumak, the inscription: Wayfind mishaps, the core loop, the
   Pacing Rule (removed), the four Wayscribes (removed), the twenty positions
   table (set column removed), Havens and Homebound, Hidden, Running it,
   Still to decide.
@@ -139,7 +168,9 @@ It sits beside the first Wayfind already owed in V007.
 - `prime/factions/runekeepers.html`: subtitle, Beliefs, Wayfinders, The
   havens.
 - `prime/locations/wayfinders-homeworld.html`: The havens.
-- `prime/dossiers/the-runekeeper.html`: the sending.
+- `prime/dossiers/the-runekeeper.html`: the sending; "keep the Heart-rune
+  from the table until the Becoming" becomes "until the first haven"; "with
+  the clan runes held".
 - `prime/data/survey.json`, `prime/data/connections.json`,
   `prime/chart/index.html`: the "no map and no name" lines.
 - `prime/campaign/plot-hooks.html` § Tumak and the Becoming.
@@ -158,15 +189,27 @@ It sits beside the first Wayfind already owed in V007.
   whether the body part sets the menu as proposed under A walked haven.
 - **The haven spells**: the lists, their levels, and the balance with up to
   seven of them (mechanic review).
-- **Slip and Strain** keep their numbers; whether a half-rune memory is how
-  Slip shows at the table.
+- **Clan C's rune on Wan and Tu's road.** The road never walks a clan C haven
+  before the seventh, and Lunarfoot's own haven gives no clan rune, so he
+  arrives holding two. (a) The current Runekeeper's haven gives his clan's
+  rune at the Becoming; (b) the dossier's "with the clan runes held" becomes
+  "with the other havens walked". Lean (a).
+- **Mishaps.** The Astral and Deep Astral bands land a twin at a haven, which
+  can now be out of order. Options: (a) a mishap lands only at walked
+  havens; (b) it lands at the current target, which locates it, and one twin
+  alone cannot take the trial; (c) any haven, its trial closed until its
+  turn. Lean (b).
+- **Slip and Strain**: revisit against the fixed order and the four-hint
+  pace; whether a half-rune memory is how Slip shows at the table; names.
+- **Complexity check** of the whole system once the rest is ruled.
 
 ## Handoff
 
 Korey keeps this work in the cadets'-arcs chat; Gregory's prep is its own
 chat. Order:
 
-1. Rule the Open list.
+1. Rule the Open list: clan C's rune, mishaps, Slip and Strain, then a
+   complexity check of the whole.
 2. Mechanic review of the haven spells and the retirement of the sets.
 3. Back to Tumak's prep and overview.
 4. Change audit across the Promotes to list, then delete this draft.
