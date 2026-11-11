@@ -100,33 +100,6 @@ The link's far side is left open until a haven brings it close.
   more of its neighbours than one. The bleed was what made things wrong;
   the seeker tried to fix it and made it worse, and the world hid.
 - The world on the far side may be Oerth.
-
-**[open]**
-- What the problem was, and what the seeker went after. Left open; it may
-  matter at the first haven.
-- The seeker's place: a member of Dawnbrow itself, or of an older clan
-  close to it that was lost afterward. **[proposed]** The lost clan: the
-  real rhyme says knees where the homeworld's says hands, so the lost clan
-  is the one cut from the song, and the player can notice.
-
-**[proposed] Life in the fold.** The world still has light and warmth, or
-its people could not live. Inside its heart, the heart lights it: the
-luminous haze, like light beneath water, is their sky now.
-
-**[alt] Where the seeker went.**
-
-- **Sealed in the heart.** The seeker was in the Atrium when the fold came,
-  and the fold sealed them in. The order hid the Atrium; the danger is at
-  home, where Tumak's road ends. "Defeated, or so they thought."
-- **Thrown to the far side** with the link, waiting at the cut.
-- **Helped close it**, and was lost in the closing.
-
-**[proposed] The frozen link.** The fold pulled the link's two ends apart
-and held them still rather than breaking them. If the binding fails, the
-heart opens where it closed, onto the same link, and the bleed resumes. No
-one has to find the world, and no new Monolith is needed.
-
-**[idea]**
 - The first Runekeeper's haven is half-lost: nobody has walked it for two
   or three generations, and the order has forgotten part of why it does
   this. The road allows it: the sixth and seventh heirs could take haven 5
