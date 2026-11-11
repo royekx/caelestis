@@ -1112,8 +1112,8 @@ const WF = document.querySelector('.companion-host[data-companion="wayfinder-pat
    ──────────────────────────────────────────────────────────── */
 
 const ACTIVE_HALVES = [
-  { num: 20, bearer: 1 },  // Wan's Heart half
-  { num: 20, bearer: 2 },  // Tu's Heart half
+  { num: 21, bearer: 1 },  // Wan's Heart half
+  { num: 21, bearer: 2 },  // Tu's Heart half
 
   { num: 8,  bearer: 1 },  // Wan's Left sole
   { num: 8,  bearer: 2 },  // Tu's Left sole
@@ -1147,67 +1147,12 @@ const RUNE_FULL_URLS = {
   17: 'https://lh3.googleusercontent.com/d/1jTXU9Q5jer8X8aFwGX3QJ29RG9wegEiJ',  // rune_17.png — Floating (DM-bestowed)
   18: 'https://lh3.googleusercontent.com/d/1yY1b16PPriHZH3j4HmhpRya3S7k5E-Lv',  // rune_18.png — Floating (DM-bestowed)
   19: 'https://lh3.googleusercontent.com/d/1bpHSWSTeBaot5xhxg_eGBsScRufYQXji',  // rune_19.png — Floating (DM-bestowed)
-  20: 'https://lh3.googleusercontent.com/d/1AJBYcWCZKUOMGY2o3RHkaBKL61yZsr70',
+  21: 'https://lh3.googleusercontent.com/d/1AJBYcWCZKUOMGY2o3RHkaBKL61yZsr70',
 };
 
 /* ============================================================
    STATE
    ============================================================ */
-
-const WAYSCRIBES = {
-  heart: {
-    name: "Soul Runes",
-    level: "2nd level",
-    flavor: "The world perceives through you.",
-    menu: [
-      { spell: "Detect Thoughts", lvl: "2" },
-      { spell: "See Invisibility", lvl: "2" },
-      { spell: "Mind Spike", lvl: "2" },
-      { spell: "Locate Object", lvl: "2" },
-      { spell: "Borrowed Knowledge", lvl: "2" }
-    ],
-    chosen: null
-  },
-  hand: {
-    name: "Maker Runes",
-    level: "3rd level",
-    flavor: "The world grasps through you.",
-    menu: [
-      { spell: "Maximilian's Earthen Grasp", lvl: "2 → 3" },
-      { spell: "Pulse Wave", lvl: "3" },
-      { spell: "Catapult", lvl: "1 → 3" },
-      { spell: "Hold Person", lvl: "2 → 3" },
-      { spell: "Erupting Earth", lvl: "3" }
-    ],
-    chosen: null
-  },
-  foot: {
-    name: "Walker Runes",
-    level: "3rd level",
-    flavor: "The world steps through you.",
-    menu: [
-      { spell: "Thunder Step", lvl: "3" },
-      { spell: "Fly", lvl: "3" },
-      { spell: "Water Walk", lvl: "3" },
-      { spell: "Blink", lvl: "3" },
-      { spell: "Misty Step", lvl: "2 → 3" }
-    ],
-    chosen: null
-  },
-  core: {
-    name: "Vessel Runes",
-    level: "5th level",
-    flavor: "The world acts wholly through you.",
-    menu: [
-      { spell: "Telekinesis", lvl: "5" },
-      { spell: "Wall of Stone", lvl: "5" },
-      { spell: "Animate Objects", lvl: "5" },
-      { spell: "Tree Stride", lvl: "5" },
-      { spell: "Transmute Rock", lvl: "5" }
-    ],
-    chosen: null
-  }
-};
 
 /* Body parts. Coordinates positioned on 280x720 figure viewBox.
    Each rune-mark on the figure is a 44x44 box (containing two
@@ -1215,28 +1160,28 @@ const WAYSCRIBES = {
 
    16 rollable positions (1-16).
 
-   Floating runes (17, 18, 19) are bestowed by the DM at story moments
-   and will be added to this array when assigned a body position.
+   The clan runes (17 to 20) sit inside the Heart (21), one in each of
+   its four chambers, and are added when a haven gives them.
 
    Anchors: #8 (Left sole) and #16 (Right shoulder) are V003 canon. */
 const INSCRIPTION = [
-  { num: 1,  locus: "Top of left hand",  ws: "hand",  side: "front", x: 228, y: 365, hint: "top" },
-  { num: 2,  locus: "Top of right hand", ws: "hand",  side: "front", x: 52,  y: 365, hint: "top" },
-  { num: 3,  locus: "Left palm",         ws: "hand",  side: "back",  x: 52,  y: 405, hint: "palm" },
-  { num: 4,  locus: "Right palm",        ws: "hand",  side: "back",  x: 228, y: 405, hint: "palm" },
-  { num: 5,  locus: "Top of left foot",  ws: "foot",  side: "front", x: 172, y: 675, hint: "top" },
-  { num: 6,  locus: "Top of right foot", ws: "foot",  side: "front", x: 108, y: 675, hint: "top" },
-  { num: 7,  locus: "Right sole",        ws: "foot",  side: "back",  x: 172, y: 675, hint: "sole" },
-  { num: 8,  locus: "Left sole",         ws: "foot",  side: "back",  x: 108, y: 675, hint: "sole" },
-  { num: 9,  locus: "Forehead",          ws: "heart", side: "front", x: 140, y: 35  },
-  { num: 10, locus: "Tongue",            ws: "heart", side: "front", x: 140, y: 82  },
-  { num: 11, locus: "Left shoulder",     ws: "core",  side: "front", x: 220, y: 130 },
-  { num: 12, locus: "Lower back",        ws: "core",  side: "back",  x: 140, y: 290 },
-  { num: 13, locus: "Stomach",           ws: "core",  side: "front", x: 140, y: 250 },
-  { num: 14, locus: "Left thigh",        ws: "core",  side: "front", x: 172, y: 470 },
-  { num: 15, locus: "Right thigh",       ws: "core",  side: "front", x: 108, y: 470 },
-  { num: 16, locus: "Right shoulder",    ws: "core",  side: "front", x: 60,  y: 130 },
-  { num: 20, locus: "Heart",             ws: "heart", side: "front", x: 140, y: 200, hidden: true }
+  { num: 1,  locus: "Top of left hand",  side: "front", x: 228, y: 365, hint: "top" },
+  { num: 2,  locus: "Top of right hand", side: "front", x: 52,  y: 365, hint: "top" },
+  { num: 3,  locus: "Left palm",         side: "back",  x: 52,  y: 405, hint: "palm" },
+  { num: 4,  locus: "Right palm",        side: "back",  x: 228, y: 405, hint: "palm" },
+  { num: 5,  locus: "Top of left foot",  side: "front", x: 172, y: 675, hint: "top" },
+  { num: 6,  locus: "Top of right foot", side: "front", x: 108, y: 675, hint: "top" },
+  { num: 7,  locus: "Right sole",        side: "back",  x: 172, y: 675, hint: "sole" },
+  { num: 8,  locus: "Left sole",         side: "back",  x: 108, y: 675, hint: "sole" },
+  { num: 9,  locus: "Forehead",          side: "front", x: 140, y: 35  },
+  { num: 10, locus: "Tongue",            side: "front", x: 140, y: 82  },
+  { num: 11, locus: "Left shoulder",     side: "front", x: 220, y: 130 },
+  { num: 12, locus: "Lower back",        side: "back",  x: 140, y: 290 },
+  { num: 13, locus: "Stomach",           side: "front", x: 140, y: 250 },
+  { num: 14, locus: "Left thigh",        side: "front", x: 172, y: 470 },
+  { num: 15, locus: "Right thigh",       side: "front", x: 108, y: 470 },
+  { num: 16, locus: "Right shoulder",    side: "front", x: 60,  y: 130 },
+  { num: 21, locus: "Heart",              side: "front", x: 140, y: 200, hidden: true }
 ];
 
 INSCRIPTION.forEach(r => { r.bearer1 = false; r.bearer2 = false; });
@@ -1601,47 +1546,14 @@ function renderSummary(container) {
   const awakenedTotal = matched + (heartMatched ? 1 : 0);
   const creatureCapacity = Math.min(8, Math.floor(awakenedTotal / 2));
 
-  // Per-set counts (visible only — Heart belongs to Soul but doesn't count here)
-  const setKeys = ['heart', 'hand', 'foot', 'core'];
-  const setNames = {
-    heart: 'Soul Runes',
-    hand:  'Maker Runes',
-    foot:  'Walker Runes',
-    core:  'Vessel Runes'
-  };
-  const setRows = setKeys.map(key => {
-    const setRunes = visibleRunes.filter(r => r.ws === key);
-    const setMatched = setRunes.filter(isMatched).length;
-    const setTotal = setRunes.length;
-    const complete = setMatched === setTotal && setTotal > 0;
-    const hasAny = setMatched > 0;
-    const label = hasAny
-      ? setNames[key]
-      : `<span class="state sleeping">the path is uncharted</span>`;
-    const value = !hasAny
-      ? `<span class="unknown">?</span>`
-      : (complete
-        ? `<span class="state open">network full</span>`
-        : `<span class="progress">${setMatched} of ${setTotal}</span>`);
-    return `
-      <div class="summary-row">
-        <span class="summary-label">${label}</span>
-        <span class="summary-value">${value}</span>
-      </div>`;
-  }).join('');
-
-  // Wayfind: available immediately upon first match; transforms at 16
+  // Wayfind opens with the first match. Homebound comes from the havens,
+  // not from the rune count, so it stays uncharted until the DM reveals it.
   let wayfindLabel, wayfindLine, homeboundLabel, homeboundLine;
-  if (matched >= totalVisible) {
-    wayfindLabel  = 'Wayfind';
-    wayfindLine   = `<span class="state subsumed">the world parts safely</span>`;
-    homeboundLabel = 'Homebound';
-    homeboundLine  = `<span class="state open">Heart awakens — home returns</span>`;
-  } else if (matched >= 1) {
+  if (matched >= 1) {
     wayfindLabel  = 'Wayfind';
     wayfindLine   = `<span class="state open">open</span> <span class="detail">— carries ${creatureCapacity}</span>`;
     homeboundLabel = `<span class="state sleeping">the path is uncharted</span>`;
-    homeboundLine  = `<span class="progress">${matched} of ${totalVisible}</span>`;
+    homeboundLine  = `<span class="unknown">?</span>`;
   } else {
     // No full matches yet — both paths are unknown to the player
     wayfindLabel  = `<span class="state sleeping">the path is uncharted</span>`;
@@ -1663,7 +1575,6 @@ function renderSummary(container) {
       <span class="summary-label">Awakened Runes</span>
       <span class="summary-value">${awakenedLine}</span>
     </div>
-    ${setRows}
     <div class="summary-row">
       <span class="summary-label">${wayfindLabel}</span>
       <span class="summary-value">${wayfindLine}</span>

@@ -39,13 +39,13 @@ staging once Korey has read and accepted them.
 | Dossiers | dossiers/ | 13 | 16 | 0 | 0 | 1 |
 | Crew | crew/ | 12 | 20 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
-| Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 7 | 8 | 7 | 0 | 11 |
+| Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 7 | 7 | 4 | 0 | 11 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 7 | 11 | 1 | 0 | 2 |
-| **Total** |  | **130** | **174** | **21** | **1** | **40** |
+| **Total** |  | **130** | **173** | **18** | **1** | **40** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -457,7 +457,7 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
 ### locations/wayfinders-homeworld.html
 
 - **[decide]** What sets off the unhiding *(prep)*
-  The binding slips as Strain rises (rules/index.html § The clock); the trigger is open. Lean: certain, with Strain setting when: at a level-up with Strain 8 or more, or by about level 10 regardless; walking havens delays it. Touches rules/index.html, locations/wayfinders-homeworld.html, crew/tumak.html.
+  The binding slips as Strain rises (rules/index.html § The clock; bands raised 2026-11-11: crisis at 12 or more). The trigger is open: the crisis band by itself, or the DM starts it at 12 or more when the story can carry it (the simulation's lean, prime/working/tumak-havens.md). Also whether a walked haven is worth 2 against Strain, and how Slip is felt at the table. Touches rules/index.html, locations/wayfinders-homeworld.html, crew/tumak.html.
   src: the Homebound chats, 2026-11-08 to 2026-11-10
 
 - **[later]** After the unhiding
@@ -465,7 +465,7 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
   src: the Homebound chats, 2026-11-08 to 2026-11-10
 
 - **[later]** The seeker and the linked world
-  Who the seeker was (an early stroke of Vecna's work is possible and stays ambiguous), what sent them, and the bad world the link reached.
+  Ruled (2026-11-11): the seeker was the homeworld's own, close to Dawnbrow, steered by Vecna, and meant to answer an ordinary threat. Still open, in prime/working/tumak-havens.md: what that threat was and what the seeker went after; whether the seeker was of Dawnbrow or of a clan lost afterward; where the seeker went; the bad world the link reached.
   src: the Homebound chats, 2026-11-08 to 2026-11-10
 
 - **[later]** Can Vecna's eye see the folded world?
@@ -707,7 +707,7 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 ### factions/runekeepers.html
 
 - **[later]** The havens, one by one *(prep)*
-  Clan names; each Runekeeper's name, species and era; each haven's place, trial and reward; the years from an heir's birth to their leaving. Prep each haven as play nears it.
+  Each Runekeeper's name, species and era; each haven's place, trial, four hints, era records and memory; Skyshoulder's and Starfist's seals; the years from an heir's birth to their leaving. Lunarfoot's is at Selûne and the Tears of Selûne. Prep each haven as play nears it; the open items are in prime/working/tumak-havens.md.
   src: the Homebound chats, 2026-11-08 to 2026-11-10
 
 
@@ -1155,7 +1155,7 @@ Items whose source sweep is still partial keep their `(sampled)` or
 ### crew/index.html
 
 - **[decide]** Make each cadet's arc tangible *(shape)*
-  Korey (2026-11-10): many arcs are nebulous. Each should give the player action and agency: not step 1, step 2, but something they know they are moving toward. Work through every crew page and campaign/plot-hooks.html, one cadet at a time, as its own prep chat. Tumak's part is argued in [tumak-havens.md](tumak-havens.md).
+  Korey (2026-11-10): many arcs are nebulous. Each should give the player action and agency: not step 1, step 2, but something they know they are moving toward. Work through every crew page and campaign/plot-hooks.html, one cadet at a time, as its own prep chat. Tumak's is on the pages (2026-11-11); what stays open for him is in [tumak-havens.md](tumak-havens.md).
   src: the Homebound chat, 2026-11-10
 
 - **[later]** Where each PC's homeworld sits
@@ -1227,7 +1227,7 @@ Items whose source sweep is still partial keep their `(sampled)` or
 
 ### crew/tumak.html
 
-Rules for the runes, marks, Wayfind and the Rune Sets live on rules/index.html; see the Rules section.
+Rules for the runes, marks, hints, Wayfind and the havens live on rules/index.html; see the Rules section.
 
 - **[later]** How a separated twin plays out at the table
   Settled so far (Korey, turn 227): at the table only the twin with the crew is played, a lower-level one-shot with the separated twin is possible, and the twins reunite through the campaign, through the crew or by other means. Still open for a long separation: off-screen montage, a solo one-shot, or shared visions (turn 143). The reunion mechanics are a separate decide on rules/index.html.
@@ -1425,10 +1425,6 @@ against the complete Tumak sweep (all 336 turns).
   rules/index.html § The clock uses working names. Lean: one tracked word, Fray, for Strain.
   src: the Homebound chats, 2026-11-08 to 2026-11-10
 
-- **[later]** The clan runes and the havens' gifts
-  What each clan rune (17, 18, 19) does and which Rune Set it counts toward; what Lunarfoot's haven gives in place of a clan rune; what an optional haven gives beyond a sorcery point or a Psionic Energy Die; what walking all seven gives (candidates: the whole history and the way a link was broken; every anchor renewed at once; the seven essences answering together).
-  src: the Homebound chats, 2026-11-08 to 2026-11-10
-
 - **[later]** Words that clash
   "Essence" names both Tumak's runes and a haven's Runekeeper; "inscription" and "marks" name both his runes and Vecna's eye. Keep them distinct on the pages; one side may need new words.
   src: the Homebound chats, 2026-11-08 to 2026-11-10
@@ -1449,14 +1445,14 @@ against the complete Tumak sweep (all 336 turns).
   src: memory-canon § Antagonists ("The anti-magic field has been suppressing the Lantern"), § Key NPCs (Ostekk-6), § Cosmology (Weave ruling)
   answered: memory-canon § Antagonists ("The anti-magic field has been suppressing the Lantern, muting Gregory's tug … When the field lifts, Gregory can commune with it"), § Key NPCs ("in the anti-magic field they stutter but keep running"); inbox/chat-voyage-6-7-planning.md § The field and constructs (Settled). Memory outranks the page.
 
-#### Tumak: runes, Rune Sets, Wayfind
+#### Tumak: runes, haven spells, Wayfind
 
 - **[decide]** Which two runes are active now *(shape)*
   Still undefined, and the redo does not touch it. Set them. The left sole (08) is matched (rules/index.html § Current state).
   src: chat-voyage-6-7-planning § Open; framework § Open
 
-- **[later]** Rune Set spellcasting ability
-  Proposed at turns 329 and 331, no reply: Rune Set spells use Charisma, with save DC 8 + proficiency bonus + CHA modifier, cast at the set's tier with no upcasting. Accept or reject, then add to § The four Wayscribes.
+- **[later]** Haven spells: ability, levels and menus
+  Proposed (turns 329 and 331, for the old Rune Sets): the spells use Charisma, save DC 8 + proficiency bonus + CHA modifier, cast at the menu's level with no upcasting. With the menus now the clans': a cap on a haven spell's level by his level, and the menus themselves (mechanic review). Add to rules/index.html § Haven spells.
   src: TGB § Tumak/Open
 
 - **[later]** Does Sending work between separated twins?
@@ -1472,24 +1468,12 @@ against the complete Tumak sweep (all 336 turns).
   src: TGB § Tumak/Open
 
 - **[decide]** 2014 or 2024 exhaustion rules *(shape)*
-  Pick one; Rune Set spells and Wayfind both cost exhaustion. Missing from the sources: Korey never picked. The redo's worked examples read the 2014 table (level 1 disadvantage on ability checks, level 2 speed halved), but that is Claude's framing, not a ruling.
+  Pick one; Wayfind costs exhaustion, and rules/index.html § Wayfind now reads 2024's table. Missing from the sources: Korey never picked. The redo's worked examples read the 2014 table (level 1 disadvantage on ability checks, level 2 speed halved), but that is Claude's framing, not a ruling.
   src: TGB § Tumak/Open (turn 145)
 
 - **[later]** An optional spell-inscription track
   A spell-inscription track separate from the runes. Keep or drop.
   src: TGB § Tumak/Open (turn 137)
-
-- **[fix]** Matched runes carry marks; the per-rune boons are gone
-  Page says "Matched runes carry the per-rune boons, power the four Wayscribes, and at the top end carry Wayfind and Homebound." Change to: "Matched runes carry marks. A completed set grants its spell. At the top end the runes carry Wayfind and Homebound." The per-rune +1 boons are removed (Korey, turns 215, 221), and runes are no longer spent and recharged.
-  src: TGB § Tumak/Rune sets and per-rune boons, Superseded; framework § Tumak, § Superseded
-
-- **[fix]** One spell per Rune Set; the recharge dice are gone
-  The Standing mechanics rows say "Wayscribe cost: First casting per Wayscribe is free; each further casting adds a level of exhaustion" and "Wayscribe recharge: At dawn: d2 (Soul), d4 (Maker), d4 (Walker), d10 (Vessel)." Settled (Korey, turns 330–331): when a set completes, Tumak picks one spell from its menu. The first cast of it per long rest is free; each further cast costs 1 level of exhaustion. Rewrite the cost row with "per long rest" and delete the recharge row.
-  src: TGB § Tumak/Rune sets and per-rune boons, Superseded (set rewards)
-
-- **[fix]** "Rune Sets", not "Wayscribes"
-  Korey dropped both "Waypost" and "Wayscribe" for the player page (turns 164–180). The groups are Soul Runes, Maker Runes, Walker Runes and Vessel Runes, with no leading "The", and the player tally counts them as "Rune Sets". Page heads its section "The four Wayscribes", labels table columns "Wayscribe", and says "Wayscribe" in the Pacing Rule and § Current state. Change to "Rune Sets" / "Set" so the DM page uses the player's terms. The player tracker's code still names its constant WAYSCRIBES; that is internal and can stay.
-  src: TGB § Tumak/Rune sets and per-rune boons, Superseded (group names, tally labels)
 
 - **[fix]** Perceive through a mark needs concentration
   The Marks row says "perceive through any of your marks (1 per long rest, one minute at one mark)". Add concentration (Korey, turn 259).
@@ -1499,16 +1483,16 @@ against the complete Tumak sweep (all 336 turns).
   § Open says Sol's oath carries "implied mechanics that live nowhere". The Oath of Misfortune is finalized (Unified Jinx with Jinx charges; Misfortune's Wake and Misfortune's Edge) and lives on crew/sol.html. Point there (Jinx is at `crew/sol.html#jinx`, Misfortuned at `#misfortuned`) and remove Sol from that line.
   src: memory-canon § Sol Fortuna
 
-- **[add]** Rune Set menus: what qualifies
-  Add to the menus section: a lower-level spell qualifies for a menu only if upcasting it to that set's tier gives a real benefit.
+- **[add]** Haven spell menus: what qualifies
+  Add to rules/index.html § Haven spells: a lower-level spell qualifies for a clan's menu only if upcasting it to that menu's level gives a real benefit.
   src: TGB § Tumak/Wayscribe design (turn 132)
 
 - **[add]** Why Mind Spike and Misty Step
-  Augury and Longstrider overlap the Runechild's Runic Spells, so the Soul menu takes Mind Spike and the Walker menu takes Misty Step in their places.
+  Augury and Longstrider overlap the Runechild's Runic Spells, so the Dawnbrow menu takes Mind Spike and the Lunarfoot menu takes Misty Step in their places.
   src: TGB § Tumak/Rune sets and per-rune boons (turn 212)
 
-- **[add]** How the Rune Sets are offered
-  When a set completes, offer its spell menu out of game; the menus are not on the player tracker (Korey, turns 187, 207). Design note: the sets are built around what a Runekeeper needs, not what a Wayfinder needs (Korey, turn 231).
+- **[add]** How the haven spells are offered
+  When a haven is walked, offer its clan's menu out of game; the menus are not on the player tracker (Korey, turns 187, 207). Design note: the menus are built around what a Runekeeper needs, not what a Wayfinder needs (Korey, turn 231).
   src: TGB § Tumak/Player tracker, Rune sets and per-rune boons
 
 - **[add]** Many marks on one world
