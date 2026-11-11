@@ -39,13 +39,13 @@ staging once Korey has read and accepted them.
 | Dossiers | dossiers/ | 13 | 16 | 0 | 0 | 1 |
 | Crew | crew/ | 12 | 20 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
-| Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 7 | 8 | 7 | 0 | 12 |
+| Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 7 | 8 | 7 | 0 | 11 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 7 | 11 | 1 | 0 | 2 |
-| **Total** |  | **130** | **174** | **21** | **1** | **41** |
+| **Total** |  | **130** | **174** | **21** | **1** | **40** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1499,10 +1499,6 @@ against the complete Tumak sweep (all 336 turns).
   § Open says Sol's oath carries "implied mechanics that live nowhere". The Oath of Misfortune is finalized (Unified Jinx with Jinx charges; Misfortune's Wake and Misfortune's Edge) and lives on crew/sol.html. Point there (Jinx is at `crew/sol.html#jinx`, Misfortuned at `#misfortuned`) and remove Sol from that line.
   src: memory-canon § Sol Fortuna
 
-- **[add]** Two layers, one inscription
-  In the fiction the Runechild essence runes and the Wayfinder runes are one inscription on Tumak's body. Mechanically they are two layers that share the fiction and never share resources. Tumak tracks three resources on three timescales: sorcery points, Runechild charged runes, and Wayfinder progression. There is no separate Wayfinder spend pool.
-  src: TGB § Tumak/Arc framing (turns 211–220)
-
 - **[add]** Rune Set menus: what qualifies
   Add to the menus section: a lower-level spell qualifies for a menu only if upcasting it to that set's tier gives a real benefit.
   src: TGB § Tumak/Wayscribe design (turn 132)
@@ -1570,7 +1566,7 @@ against the complete Tumak sweep (all 336 turns).
 ### registry/crew-manifest/tumak-swan.html#wayfinder-path (player site, outside prime)
 
 - **[later]** Restyle the Wayfinder's Path tab
-  Bring the tab's styling in line with the newer pages, keeping its look; it should not repeat Your story on the Personnel file. Build with "The Personnel file: Academy file and Your story".
+  Bring the tab's styling in line with the newer pages, keeping its look; it should not repeat the story on the Personnel file. Build with "The Personnel file: Academy file and the cadet's story".
   src: the Homebound chat, 2026-11-10
 
 - **[add]** Who gets the tracker link (DM note, kept in prime)
@@ -1972,8 +1968,8 @@ Fixes to player-facing pages, including the Fleet Intelligence Archive (`restric
 
 ### registry/crew-manifest/ (every crew page)
 
-- **[decide]** The Personnel file: Academy file and Your story *(shape)*
-  Proposal, mocked up for Tumak (artifact "Tumak's personnel file: Fleet record and own account"): the tab holds the Academy's file (only what Caelestis has on record: name, species as declared, origin, next of kin, assignment, staff notes), then Your story, short prose in the second person showing the cadet's arc, with a thin Sent out, On the road, Home line, and the arrival orders folded shut. No voyage-by-voyage log, no question lists, few boxes. Private memories move out of the Academy's rows into Your story. Every crew page. Pair with restyling the Wayfinder's Path tab to the newer pages while keeping its look (see the item under registry/crew-manifest/tumak-swan.html#wayfinder-path).
+- **[decide]** The Personnel file: Academy file and the cadet's story *(shape)*
+  Proposal, mocked up for Tumak (artifact "Tumak's personnel file: Fleet record and own account"): the tab holds the Academy's file (only what Caelestis has on record: name, species as declared, origin, next of kin, assignment, staff notes), then the cadet's story in the first person ("My story"; Tumak's is "Our story", in "we"), short prose showing the arc, written only from what happened at the table plus the prelude of arriving at Caelestis (no progress bar), and the arrival orders folded shut. No voyage-by-voyage log, no question lists, few boxes. Private memories move out of the Academy's rows into the story. Every crew page. Pair with restyling the Wayfinder's Path tab to the newer pages while keeping its look (see the item under registry/crew-manifest/tumak-swan.html#wayfinder-path).
   src: the Homebound chat, 2026-11-10
 
 ### voyages/bearings/
