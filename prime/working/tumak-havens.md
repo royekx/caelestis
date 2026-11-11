@@ -48,15 +48,14 @@ Children on the homeworld learn the clans by a rhyme. They sing head,
 shoulders, hands and toes, and the movements carry the clans: a finger to
 the brow for the head, fists wiggled for the hands. A second verse names the
 heavens: the sun, the sky, the stars, the moon, stars and moon. It echoes a
-real-world nursery rhyme as a wink for the player. It comes back to the
-twins in pieces through the half-rune memories, the song heard, the
-movements seen and the movements felt, until the memory is whole.
+real-world nursery rhyme as a wink for the player. *(proposed)* It comes
+back whole at Lunarfoot's haven, his first: the song heard, the movements
+seen and felt.
 
 ## The runes
 
-- **A half-rune rolled** gives a memory of home. Korey pre-writes one memory
-  per position (16). For the twins each comes in two halves, Wan's and Tu's,
-  two sides of one moment; a single heir gets it whole.
+- **A half-rune rolled** gives nothing new: it waits for its match, and
+  counts toward Slip as now.
 - **A matched rune** gives a mark, as now, and one hint toward the current
   target haven (see Hints).
 - **Clan runes (17 to 20)**, one for each clan, his own included. Each comes
@@ -163,8 +162,8 @@ Both twins present and the trial passed, the haven gives:
   spells, Skyshoulder the old Vessel spells, Starfist the old Maker spells,
   Lunarfoot the old Walker spells. One free cast a day, then with spell
   slots. Up to seven over the campaign. Needs a mechanic review.
-- That Runekeeper's chapter of the order's history, and memories of home:
-  its senses, its people.
+- That Runekeeper's chapter of the order's history, and a full memory of
+  home: its senses, its people.
 - A permanent mark.
 - The essence's knowledge of the older havens.
 - The clan's rune, if it is the first haven of that clan he walks.
@@ -204,9 +203,10 @@ owed in V007.
 
 - **The player and the sending**: a check that losing the name and the way
   sits with how the player plays the twins' memories.
-- **Whose memory a half-rune gives**: his own memory of home coming back
-  (lean), or a Runekeeper's, as the hints are.
-- **The Sky and Star rune shapes.**
+- **Skyshoulder's seal and rune shape**: pinned. Options: a bird alighting
+  on a shoulder (rune: a wing), the wind on a shoulder (a spiral), a mantle
+  of sky (an open ring).
+- **Starfist's seal and rune shape.**
 - **The story of the names**, from before the hiding. Later.
 - **The order's emblem** *(proposed)*: the Heart with its four clan shapes.
 
@@ -225,15 +225,17 @@ Starfist.
   seven (mechanic review).
 - **Slip and Strain**: set aside until the runes are done. Known gap: Slip
   peaks near 7, so Strain never reaches the 8 to 9 and 10+ bands.
-- **Complexity check** of the whole system once the rest is ruled.
+- **Complexity check** of the whole system once the rest is ruled. Korey
+  can track much on his side, planned ahead; the player should track few
+  kinds of thing.
 
 ## Handoff
 
 Korey keeps this work in the cadets'-arcs chat; Gregory's prep is its own
 chat. Order:
 
-1. Finish the runes: rune shapes, the homeworld haven, Homebound's moment.
-2. Slip and Strain, then a complexity check of the whole.
-3. Mechanic review of the haven spells.
-4. Back to Tumak's prep and overview.
+1. Plan the next few sessions from this foundation (prep).
+2. Finish the runes: seals, the homeworld haven, Homebound's moment.
+3. Slip and Strain, then a complexity check of the whole.
+4. Mechanic review of the haven spells.
 5. Change audit across Promotes to, then delete this draft.
