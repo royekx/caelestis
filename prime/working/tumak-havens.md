@@ -56,14 +56,18 @@ the pages becomes "loses the name and the way".
   | Order | Clan | Heavens | Body | Old menu |
   |---|---|---|---|---|
   | 1st, the founder's | Sunbrow | the Sun | brow | Mind |
-  | 2nd | Skyshoulder *(proposed; was Skyspine)* | the Sky | shoulders | Vessel, renamed *(proposed: Bearer)* |
+  | 2nd | Skyshoulder | the Sky | shoulders | Vessel, renamed *(proposed: Bearer)* |
   | 3rd | Starfist | the Stars | fist | Maker |
   | 4th | Lunarfoot | the Moon | foot | Walker |
 
-  The old Soul menu is renamed Mind. *(proposed)* Brow, shoulders, fist and
-  foot is a children's rhyme on the homeworld, the clans in the order the
-  office passes; the real-world rhyme it echoes is a wink for the player,
-  and the rhyme is one of the half-rune memories.
+  The old Soul menu is renamed Mind. A clan's body part is its name only:
+  the sixteen rolled positions belong to no clan.
+
+  On the homeworld, children learn the clans in the order the office passes
+  by a rhyme, in two verses, one for the body and one for the heavens: brow,
+  shoulders, fist and foot, fist and foot; the sun, the sky, the stars, the
+  moon, stars and moon. It echoes a real-world nursery rhyme as a wink for
+  the player, and it is one of the half-rune memories.
 
   A clan rune takes its clan's shape: Lunarfoot's is a crescent moon, the
   Sun clan's a sun.
@@ -224,7 +228,8 @@ It sits beside the first Wayfind already owed in V007.
   whether the body part sets the menu as proposed under A walked haven.
 - **The haven spells**: the lists, their levels, and the balance with up to
   seven of them (mechanic review).
-- **Skyshoulder and the Bearer menu**: confirm.
+- **The Bearer menu** *(proposed)*: the old Vessel menu renamed for the
+  shoulders, or left as Vessel.
 - **The story of the names**, which comes from before the hiding. Later.
 - **The Sky and Star rune shapes.**
 - **The order's emblem** *(proposed)*: the Heart with its four clan shapes.
@@ -247,7 +252,7 @@ It sits beside the first Wayfind already owed in V007.
 Korey keeps this work in the cadets'-arcs chat; Gregory's prep is its own
 chat. Order:
 
-1. Rule the Open list: Skyshoulder, the rune shapes, the homeworld haven,
+1. Rule the Open list: the Bearer menu, the rune shapes, the homeworld haven,
    Homebound's moment, Slip and Strain, then a complexity check of the
    whole.
 2. Mechanic review of the haven spells and the retirement of the sets.
