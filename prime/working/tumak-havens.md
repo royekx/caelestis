@@ -326,9 +326,27 @@ Ship. Wan holds 01, 02, 08, 11; Tu holds 07, 08, 09, 16. One match, the left
 sole (08). No haven walked. The Runekeeper's voice reached him in V004 ("all
 things find their way home"). His first Wayfind is owed in V007.
 
-**[ruled] V007.** The left sole is his first match, so it gives the first
-hint, sight, of Lunarfoot's haven, the fourth: a Lunarfoot Runekeeper's
-memory. Korey places the haven and writes the hint.
+**[ruled] How the player meets it.** The table experiences each piece
+first; then Korey puts the words and numbers on the Wayfinder's Path tab,
+where the player can look them up. The meaning stays held back: a hint can
+read as home or as somewhere else, because all Tumak knows is that he is
+trying to get home. He follows the hints, finds the place is a haven, and
+learns there what it is.
+
+**[ruled] V007, Tumak's beats.**
+
+1. **The first mark settles.** His first mark settles on the Tyrant Ship by
+   accident, as his magic tends to arrive: he stumbles on it.
+2. **The first Wayfind.** Something happens and he jumps back to the mark
+   without meaning to, within Step reach (60 feet, no exhaustion, no
+   mishap). He learns what he did.
+3. **The first hint.** The left sole's match gives the sight hint of
+   Lunarfoot's haven, the fourth: a Lunarfoot Runekeeper's memory, lived. It
+   feels like somewhere, not quite home, and that can stay ambiguous.
+   **[proposed]** The first Wayfind is what wakes it.
+
+**[open]** Where Lunarfoot's haven is, and its four hints (Korey to place
+and write before V007).
 
 ## 9. The conflict
 
@@ -401,18 +419,15 @@ From the logic and mechanic check of 2026-11-11, for play from V007 to the
 first haven. Everything else in Open can wait until it matters.
 
 **Before V007**
-- What the player is told about hints. Lean: after the first hint, the
-  mechanic in full in one line ("each new match gives you a memory of the
-  place you are bound for, one sense at a time"), with the meaning held back.
-- The player check on the sending (3).
 - Place Lunarfoot's haven (the fourth) and write its four hints.
+- The player check on the sending (3).
 
 **Before level 5**
 - How Slip is felt. In about half of runs Slip reaches 8 at level 5, which
   is Strain 8, flicker under the raised bands: the first time it shows.
 
-**Before the first haven** (about levels 7 to 8, sooner on two or three
-hints)
+**Deferred to the first haven** (about levels 7 to 8, sooner on two or
+three hints)
 - What a failed trial costs, and whether it can be tried again.
 - The fourth haven's trial; the fourth Runekeeper's era records; the full
   memory it returns (the rhyme is proposed); the Lunarfoot menu spell.
@@ -443,22 +458,35 @@ a fix in the change audit.
 5. **One mark per haven.** Ruled: the clan rune is the haven's mark.
 6. **The order's emblem.** Ruled: the Heart with its four chambers.
 
+7. **Going home early.** The rules page's unhiding lets Tumak go home early
+   by ordinary travel, but the sending took the way. **[proposed]** In
+   crisis the Runekeeper's broken pulses give it, against the doctrine.
+
 **Stale lines for the change audit**
 
-7. Rules page: "Slip holds about 7 across levels 5 to 9" (the simulation
+8. Rules page, from the Wayfind review: "Twenty positions"; "matched runes
+   power the four Wayscribes"; the Pacing Rule; "an optional haven can add
+   a sorcery point or a Psionic Energy Die" (havens give a spell now);
+   Marks ("a walked haven is a further mark": the clan rune is that mark);
+   the 15 and 17 mishap lines ("at a haven": the nearest of any kind);
+   "Rune Sets give their Wayscribe spells"; "found by the homeworld's
+   sensory anchors" (by hints); Hidden (rune 20); Still to decide (clan
+   runes and Wayscribes, Lunarfoot's haven, all seven). The Wayfind table,
+   costs, Looking, passengers, essence runes and the roll procedure hold.
+   Also: "Slip holds about 7 across levels 5 to 9" (the simulation
    puts the peak at 8 to 10); the Strain bands; "never passes 20"; "a
    clan's rune (17, 18, 19)"; "order is free until the last"; "one haven of
    each of the four clans"; "hidden from the figure and the table until you
    reveal it".
-8. The Runekeeper's dossier: "with no map"; "keep Tumak's Heart-rune from
+9. The Runekeeper's dossier: "with no map"; "keep Tumak's Heart-rune from
    the table until the Becoming"; "reaches his haven with the clan runes
    held" (three are held; the fourth comes in the exchange).
-9. Runekeepers and homeworld pages: other Wayfinders and their ranks; the
+10. Runekeepers and homeworld pages: other Wayfinders and their ranks; the
    essence "speaks and teaches" (it
    gives the rune and the spell; the haven keeps its Runekeeper's records);
    "no map and no name"; Lunarfoot's seal "with two four-point stars" as the
    clan's seal; "the clans other than Lunarfoot are unnamed".
-10. Strain today is 6: under the raised bands that is steady, not flicker.
+11. Strain today is 6: under the raised bands that is steady, not flicker.
     Any page or plan reading Strain 6 as "anchors flicker at havens" moves.
 
 **Checked and holding**
@@ -504,8 +532,10 @@ a fix in the change audit.
 
 ## Handoff
 
-1. Near-term readiness: the three before-V007 items, then how Slip is felt.
-2. The conflict thread: the seeker's place and fate, how the twins learn the
+1. Near-term readiness: place Lunarfoot's haven and write its hints, the
+   player check on the sending, then how Slip is felt (before level 5).
+2. Conflict 7 (going home early). The conflict thread: the seeker's place
+   and fate, how the twins learn the
    danger, how Slip is felt.
 3. The rest of Open: Homebound's moment, the homeworld haven, the seals.
 4. Complexity check, then the mechanic review of the haven spells.
