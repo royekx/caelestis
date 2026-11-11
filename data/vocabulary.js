@@ -100,6 +100,7 @@ var CAELESTIS_VOCAB = [
   "Lizardfolk",
   "Locathah",
   "Logs",
+  "Lunarfoot",
   "Manifest",
   "Mercane",
   "Miken",
