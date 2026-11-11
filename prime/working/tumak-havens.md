@@ -524,35 +524,43 @@ a fix in the change audit.
   not open; he tells them to return".
 - The hidden Atrium fits the sealed-seeker option.
 
-## Promotes to
+## Promotes to: the touch list
 
-- `prime/rules/index.html` § Tumak, the inscription: the core loop; the
-  Pacing Rule and the four Wayscribes (removed); the positions table (21
-  positions, set column removed); Slip and Strain; Wayfind mishaps; Havens
-  and Homebound; Running it; Still to decide.
-- `prime/rules/wayfinder-path-dm.html`: the set grouping, the 21 positions.
-- `prime/crew/tumak.html`: Background (the sending), Abilities, Gates and
-  escalation, Systems, What's hidden, Still to decide.
-- `prime/factions/runekeepers.html`: Ranks, Beliefs, Origin, Structure and
-  ranks (the clans), Wayfinders, The havens, How they look (emblem), Still to decide.
-- `prime/locations/wayfinders-homeworld.html`: History, Peoples and culture,
-  The havens, What's hidden (the unhiding), Still to decide.
-- The Dissolution fragment page in `prime/artifacts/`: History, Still to
-  decide.
-- `prime/dossiers/the-runekeeper.html`: see Conflicts 8.
-- `prime/data/survey.json`, `prime/data/connections.json`,
-  `prime/chart/index.html`: the "no map and no name" lines.
-- `prime/campaign/plot-hooks.html` § Tumak and the Becoming.
-- `prime/dossiers/vecna.html`, `prime/opposition/vecna.html`: the early
-  attempt on the homeworld, and the fragment his side lost.
-- `prime/campaign/voyages/index.html`: V007 beats owed (Tumak's three
-  beats).
-- `prime/locations/realmspace.html`: Lunarfoot's haven at Selûne and the
-  Tears (DM side).
-- `registry/crew-manifest/tumak-swan.html`: the Wayfinder's Path tab script
-  (the four sets and menus, 20 positions).
-- `prime/working/STAGING.md` § Tumak: the reveal at the table.
-- `data/vocabulary.js`: Dawnbrow, Skyshoulder, Starfist.
+Built by search (2026-11-11) for every [ruled] line. Two pull requests in
+sequence, each merged before the next. [open], [proposed], [alt] and [idea]
+lines stay in this draft, which then keeps only them.
+
+**Pull request A: the mechanic and Tumak**
+
+| Page | Says now | Must say |
+|---|---|---|
+| `prime/rules/index.html` § Tumak | 20 positions; 17–19 clan runes, 20 Heart; Pacing Rule; four Wayscribes; marks plus a further haven mark; optional sorcery point or die; havens found by sensory anchors; order free; four-clan Homebound; Heart hidden until revealed; Strain 0–4/5–7/8–9/10+; "Slip holds about 7"; unhiding by ordinary travel after pulses; Still to decide on clan runes | 21 positions; clan runes 17–20 in the Heart's chambers, Heart 21; no sets, no Pacing Rule; haven spells by clan menu; one mark per haven (the clan rune); hints; the road and its order; out-of-order, chance havens, mishaps to the nearest haven; Heart shown at the first haven; raised bands, Slip felt; going home early by navigation; how the player meets it |
+| `prime/rules/wayfinder-path-dm.html` | Set rows (Soul, Maker, Walker, Vessel), clan runes 17–19 | No set rows; clan runes 17–20 in the Heart; Heart 21 |
+| `registry/crew-manifest/tumak-swan.html` (player tab script) | Set rows and names in the Tally; clan runes 17–19 comment | No set rows; positions as the DM copy. No new lore |
+| `prime/crew/tumak.html` | "Partial Wayfinders"; "no map and no name"; sets and Pacing Rule; Strain band reading | Wayfinders; the sending; the road, hints, Heart, havens' gifts; Lunarfoot's haven; V007 beats; the conflict |
+| `prime/crew/index.html` | "two partial Wayfinders" | "two Wayfinders" |
+| `prime/campaign/plot-hooks.html` § Tumak | Havens give "a trial, a reward and a chapter"; "home now by ship" | Haven gifts as ruled; the road's order; hints |
+| `prime/campaign/voyages/index.html` | V007: "Tumak's first Wayfind (Beats owed)" | Tumak's three V007 beats |
+| `prime/glossary/index.html` | Haven; Homebound | Haven (veil, gifts); Homebound (the exchange sends him home); Hint; the clans |
+| `prime/working/BACKLOG.md` | crew/tumak.html note on Rune Sets; "The clan runes and the havens' gifts"; "Tumak: runes, Rune Sets, Wayfind" items; havens one by one (clan names); the cadets' arcs item | Closed or rewritten; section table recounted |
+
+**Pull request B: the world**
+
+| Page | Says now | Must say |
+|---|---|---|
+| `prime/factions/runekeepers.html` | Ranks of partial and complete marks; Wayfinders sent for purposes; "no map and no name"; essence "teaches"; unnamed clans; Lunarfoot seal with stars; emblem not drawn | Only the Wayfinder and the Runekeeper leave; the sending; the four clans, their names and rhyme; seals; emblem the Heart's four chambers; havens' gifts and era records; the seeker |
+| `prime/locations/wayfinders-homeworld.html` | Seeker not set; "given no map and no name"; essence "speak and teach"; unhiding "noticed by" | The seeker and the problem before; the clans' naming; the sending; havens; the unhiding |
+| `prime/artifacts/dissolution-fragment.html` | Seeker found it, not set; level 12 open | Steered by Vecna; the two pieces draw together about level 12; the Becoming passes most of it |
+| `prime/dossiers/the-runekeeper.html` | "no map"; Heart kept from the table until the Becoming; "with the clan runes held" | The sending; Heart shown at the first haven; the other havens walked |
+| `prime/dossiers/vecna.html`, `prime/opposition/vecna.html` | No homeworld attempt | The early attempt five centuries ago; the fragment his side lost; the homecoming's Monolith as an opening he does not expect (DM side) |
+| `prime/factions/fleet.html` | "partial Wayfinders" | "Wayfinders" |
+| `prime/locations/realmspace.html` | No haven | Lunarfoot's haven at Selûne and the Tears (DM side) |
+| `prime/locations/astral-sea.html`, `prime/chart/index.html`, `prime/chart/holo.html`, `prime/data/survey.json`, `prime/data/connections.json` | "no map and no name"; "exiled Wayfinders" | The sending; the Wayfinder |
+| `prime/timeline/timeline.json` | No homeworld fold | About five centuries ago: the seeker, the bleed, the fold |
+| `data/vocabulary.js` | No clan names | Dawnbrow, Skyshoulder, Starfist |
+
+Checked and unchanged: STAGING § Tumak (still true), cosmology (the closed
+heart broke a link; "cut" stands), the record in `data/`.
 
 ## Handoff
 
