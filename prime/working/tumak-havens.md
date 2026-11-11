@@ -79,8 +79,7 @@ for their world" remembers it.
 
 **[proposed] Life in the fold.** The world still has light and warmth, or
 its people could not live. Inside its heart, the heart lights it: the
-luminous haze, like light beneath water, is their sky now. The clans of the
-Sun, the Sky, the Stars and the Moon have not seen them in five centuries.
+luminous haze, like light beneath water, is their sky now.
 
 **[alt] Where the seeker went.**
 
@@ -137,7 +136,10 @@ Path tab, were added for Wan and Tu: the family's own version, not a sign of
 Starfist. **[open]** Skyshoulder's seal (pinned: a bird alighting on a
 shoulder, the wind on a shoulder, or a mantle of sky) and Starfist's.
 
-**[open]** The story of the names, which comes from before the hiding.
+**[ruled] When the names came.** Before the hiding the clans were groups
+without these names. After the fold, with no sun, sky, stars or moon over
+them, they named themselves for the heavens so as to remember what they no
+longer had.
 **[proposed]** The order's emblem as the Heart with the four clan shapes
 (see Conflicts 6).
 
@@ -163,8 +165,16 @@ home and its people; the name and the way return only at the Becoming.
 Canon's "given no map and no name" becomes "loses the name and the way". It
 explains why the twins do not remember meeting the Runekeeper as children.
 
-**[open]** Whether the sending applies to every Wayfinder or only the heir
-(see Conflicts 1). A check that losing the name and the way sits with how
+**[ruled] Who leaves.** Only two ever leave the homeworld: the Wayfinder,
+who is the heir on the journey, and the Runekeeper, when he must: to build
+his haven and prepare for the next Wayfinder, or to meet a threat he senses
+through the havens. One giver and one receiver. There are no other
+Wayfinders; the sending is the heir's. Canon's other Wayfinders, sent out
+"to learn, to recover, to witness, or to bring something back", with ranks
+of partial and complete marks, go (factions/runekeepers.html: Ranks,
+Structure and ranks, Wayfinders).
+
+**[open]** A check that losing the name and the way sits with how
 the player plays the twins.
 
 ## 4. The havens
@@ -374,11 +384,8 @@ a fix in the change audit.
 
 **Need a ruling**
 
-1. **Other Wayfinders and the sending.** Canon has the order sending
-   Wayfinders out for many purposes (to learn, recover, witness), not only
-   heirs. If every Wayfinder loses the name and the way, how do the others
-   come home? Options: the sending is the heir's alone; or every Wayfinder
-   loses it and returns through the Runekeeper, the only way in and out.
+1. **Other Wayfinders and the sending.** Ruled: only the Wayfinder (the
+   heir) and the Runekeeper leave. See 3, Who leaves.
 2. **The fragment whole at about level 12.** Canon (Runekeepers, Still to
    decide) places what the twins' rebuilt fragment does "at about level 12,
    early in Act 3". This draft has the Heart waking whole only at the
@@ -409,7 +416,8 @@ a fix in the change audit.
 8. The Runekeeper's dossier: "with no map"; "keep Tumak's Heart-rune from
    the table until the Becoming"; "reaches his haven with the clan runes
    held" (three are held; the fourth comes in the exchange).
-9. Runekeepers and homeworld pages: the essence "speaks and teaches" (it
+9. Runekeepers and homeworld pages: other Wayfinders and their ranks; the
+   essence "speaks and teaches" (it
    gives the rune and the spell; the haven keeps its Runekeeper's records);
    "no map and no name"; Lunarfoot's seal "with two four-point stars" as the
    clan's seal; "the clans other than Lunarfoot are unnamed".
@@ -439,8 +447,8 @@ a fix in the change audit.
 - `prime/rules/wayfinder-path-dm.html`: the set grouping, the 21 positions.
 - `prime/crew/tumak.html`: Background (the sending), Abilities, Gates and
   escalation, Systems, What's hidden, Still to decide.
-- `prime/factions/runekeepers.html`: Beliefs, Origin, Structure and ranks
-  (the clans), The havens, How they look (emblem), Still to decide.
+- `prime/factions/runekeepers.html`: Ranks, Beliefs, Origin, Structure and
+  ranks (the clans), Wayfinders, The havens, How they look (emblem), Still to decide.
 - `prime/locations/wayfinders-homeworld.html`: History, Peoples and culture,
   The havens, What's hidden (the unhiding), Still to decide.
 - The Dissolution fragment page in `prime/artifacts/`: History, Still to
@@ -459,7 +467,7 @@ a fix in the change audit.
 
 ## Handoff
 
-1. Rule Conflicts 1 to 6.
+1. Rule Conflicts 2 to 6.
 2. The conflict thread: the seeker's place and fate, the unhiding, how the twins learn the
    danger, how Slip is felt.
 3. The rest of Open: Homebound's moment, the homeworld haven, the seals.
