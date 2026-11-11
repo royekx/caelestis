@@ -101,10 +101,16 @@ with a memory its Runekeeper left in it.
 - **Hints are clues, not gates.** A crew that works a haven out from two or
   three hints goes early; a navigator helps. What happens to the hints left
   over is a BACKLOG item, to see in play.
-- **A walked haven names older havens.** Each Runekeeper walked the older
-  havens as a Wayfinder, so a haven's essence knows the host worlds of those
-  before it: haven 6 knows 1 to 5, and haven 1 knows none. The essence
-  teaches the way the hints come, by memory through its Runekeeper's senses.
+- **Hints are the only way a haven on his road is found.** A walked haven
+  does not name other havens.
+
+## Chance havens
+
+The crew roams wider over the campaign, first a system, then the galaxy, so
+they may land on or near a world with a haven his runes are not pointing
+at: one further down his road, or another haven of a clan he has already
+walked. The DM places one where it suits the pacing. What a chance haven
+gives is open.
 
 ## On the haven's world
 
@@ -155,18 +161,22 @@ help.
 
 ## A walked haven
 
-Both twins present and the trial passed, the haven gives:
+Both twins present and the trial passed, the haven's essence gives:
 
-- **A spell** from the clan's menu, named for the clan (the Lunarfoot menu,
+- **The clan's rune**, if it is the first haven of that clan he walks.
+- **A spell** chosen from the clan's menu, named for the clan (the Lunarfoot menu,
   and so on). The old set menus pass to the clans: Dawnbrow the old Soul
   spells, Skyshoulder the old Vessel spells, Starfist the old Maker spells,
   Lunarfoot the old Walker spells. One free cast a day, then with spell
   slots. Up to seven over the campaign. Needs a mechanic review.
-- That Runekeeper's chapter of the order's history, and a full memory of
-  home: its senses, its people.
-- A permanent mark.
-- The essence's knowledge of the older havens.
-- The clan's rune, if it is the first haven of that clan he walks.
+
+The haven also keeps what its Runekeeper left: notes, belongings and
+records of their own era. Seven Runekeepers span about five centuries, so
+each haven shows the homeworld and the order as they were in one era.
+Going through them, he learns something of his world in that time.
+
+Walking it also returns a full memory of home, its senses and its people,
+and leaves a permanent mark.
 
 ## V007
 
@@ -223,8 +233,25 @@ Starfist.
   page has it now.
 - **The haven spells**: the menus, their levels, and the balance with up to
   seven (mechanic review).
-- **Slip and Strain**: set aside until the runes are done. Known gap: Slip
-  peaks near 7, so Strain never reaches the 8 to 9 and 10+ bands.
+- **Hint retargeting** (simulation, 2026-11-11): a hint aims at the next
+  unwalked haven on the road, so a haven walked early sends the rest on;
+  hints with no haven left become memories of home. Replaces the BACKLOG
+  item on leftover hints if ruled.
+- **Haven 7's hints** arrive last (levels 15 to 16 on matches alone). A
+  further source, such as the living Runekeeper's voice at key moments.
+- **What a chance haven gives**: the era records only, or also a memory and
+  a spell; whether its trial opens out of order.
+- **One mark per haven**: the clan rune is the mark, or the haven gives one
+  of its own (two now).
+- **Haven spells**: four on the road, more from chance havens; a free daily
+  5th-level spell at level 12 came up in the simulation.
+- **Clan runes and matches**: whether a clan rune counts as a match (and so
+  a hint). Lean: it counts for reach and passengers, not for hints.
+- **Mishap fallback**: when the current target is not yet placed, and after
+  the Becoming.
+- **Slip and Strain**: urgent before level 5. The simulation (20,000 runs)
+  puts Slip at 8 or more in 80% of runs and 10 or more in 38%; it moves by
+  2 and a haven takes off 1, so the unhiding can fire at levels 6 to 9.
 - **Complexity check** of the whole system once the rest is ruled. Korey
   can track much on his side, planned ahead; the player should track few
   kinds of thing.
