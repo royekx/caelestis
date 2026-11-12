@@ -36,6 +36,7 @@ inbox/  →  drafts  →  BACKLOG.md  →  STAGING.md  →  pages under prime/
    STAGING, the inbox, audits), an item that is done is deleted in the same
    pull request that finishes it. Nothing is marked done, struck through or
    kept as history. A file whose items are all done is deleted.
+   `node tools/data.js check` enforces it (CLAUDE.md § Working flow).
 
 A chat session works the backlog: Korey rules, the result goes to staging, and
 staging is distributed page by page.
@@ -65,8 +66,6 @@ also hold for the working layer and the pages it feeds:
 | [nct-127.md](nct-127.md) | Neo Constellation Troupe 127, a travelling band; a seed kept off the player side | Sketch |
 | [campaign-middle.md](campaign-middle.md) | Building the post-graduation middle: the invasion ladder, fronts, contracts as nodes, cadence | Draft |
 | [common-knowledge.md](common-knowledge.md) | What a cadet would know about each NPC in the player record, sourced and graded, and how it fits the record | Draft; awaits Korey entity by entity |
-
 | [sol-arc.md](sol-arc.md) | Sol's arc: scattered luck, taking it on, Beshaba and Tymora, the road home to Aethris | Draft; open list awaits Korey |
 | [tumak-havens.md](tumak-havens.md) | Tumak's road home: only what stays open after the change audit (near-term items for V007, level 5 and the first haven; the conflict; origin) | Open list awaits Korey |
 | [campaign-simulation.md](campaign-simulation.md) | A simulated run of the whole campaign from V007, kept as a baseline to check pressure points against; not canon | Reference |
-| [repo-refactor.md](repo-refactor.md) | The approved DM structure, the per-page procedure and the link catalogue of moved paths | Reference: link catalogue |
