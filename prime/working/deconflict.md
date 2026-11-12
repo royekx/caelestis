@@ -6,8 +6,8 @@ working layer and process docs. One subject, one row; every path for it sits
 in that row. Paths are under `prime/` unless they start with `data/`,
 `restricted/` or `prime/working/` (written `working/`).
 
-**Counts.** Part 1, Korey decides: 20 · Part 2, decided and waiting: 5 rows ·
-Part 3, working layer cleanup: 41 rows · Part 4, cosmetic: 11.
+**Counts.** Part 2, decided and waiting: 1 row · Part 3, working layer
+cleanup: 34 rows · Part 4, cosmetic: 11. Finished rows are deleted, not marked.
 
 **Summary.**
 - The ten Part 1 questions that touch Voyage 7 (§ A) and the V007 rows of Part 2 are on the pages.
@@ -27,10 +27,6 @@ Every quote here was opened and confirmed in the file named.
 
 **Campaign structure**
 
-12. ~~**Homebound.**~~ Done: ruled in the Homebound chats (2026-11-08 to
-    2026-11-10) and now on the pages: rules/index.html § Tumak, the
-    inscription; crew/tumak.html; locations/wayfinders-homeworld.html.
-    Homebound opens at the Becoming, after the havens, not at a rune count.
 
 **N'ghathrod, Vocath and the FIA story** (on the pages through the FIA audit,
 PRs #166 to #169)
@@ -140,11 +136,7 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 
 | # | Ruling | Source and date | Pages that still say the old thing |
 |---|---|---|---|
-| 2.11 | ~~The voice came in the centuries after the exile~~ | Done | FIA audit, PRs #166 to #169; closed by #170 to #181 |
-| 2.14 | ~~The colony's captives come through Vocath's line~~ | Done | FIA audit, PRs #166 to #169; closed by #170 to #181 |
 | 2.15 | Residue scale and residue housings | STAGING § Cosmology and § Artifacts, 2026-11-04 | `cosmology/index.html` § Residue and the fragments; `artifacts/index.html` § Holdings and § Why they are scattered and hidden |
-| 2.20 | ~~STAGING small facts of 2026-11-04~~ | Done | FIA audit, PRs #166 to #169; closed by #170 to #181 |
-| 2.21 | ~~The FIA story is settled~~ | Done | FIA audit, PRs #166 to #169; closed by #170 to #181 |
 
 ---
 
@@ -154,8 +146,6 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 
 | Entry | Action |
 |---|---|
-| § N'ghathrod l.53 and l.61 (long life) | Done (FIA audit) |
-| § N'ghathrod's elder brain ("close to the wreck that carried Tharizdun's temple") | Done (FIA audit) |
 | § N'ghathrod's elder brain; § Cre'Tez | Narrow to what is not yet on the page (FIA and cosmos audits) |
 
 ### 3b. BACKLOG.md: close
@@ -164,12 +154,7 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 |---|---|
 | Cross-cutting 5 (level bands), 6 (which piece gave long life), 8 (colony as chapter) | Settled by STAGING, the rod page and the Seekers page |
 | Cross-cutting 17 "Open" subsections; "Dossier tab names" (twice) | PAGE-GUIDE § 5 settles both; the tab item states a superseded rule |
-| Retrofit the five Axioms; Residue counts by Axiom; Spheres become galaxies (after one check of survey-core.js and holo.html) | Done |
-| Why Caelestis's sphere holds three fragments; Tymora's misread tenet; chart "Vecna knew"; Sol's oath; Wan and Tu two hosts; Autognome rule in SESSION-RUN; no triple short sentences | Done |
-| Wayfind cost, Wayfind odds, Mishap two sanctuaries (l.1651, 1656, 1661) | Superseded by the redo; delete |
-| Player record flag 6.3 "autognome" | Answered: stays as history |
 | One purebred stayed (l.482) | Pages and STAGING: all five went with him. Close as "cut the line" |
-| Is the colony a Seekers chapter | Ruled; close |
 
 ### 3c. BACKLOG.md: narrow, rewrite or merge
 
@@ -186,7 +171,6 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 | A second Zenith on Aethris (filed under meteor-hub) | Move to locations/aethris; keep only "can the ritual bring one" |
 | Cross-cutting 18 Clint "deliberate dive" | Rewrite: fia-story says the pool opened by chance |
 | Hall of the Watchers decide and add | Rewrite against the 2026-10-28 Order-house ruling; drop "SPH-01" |
-| ~~Runes 17–19 adds; early-home door; "Homebound is always free"~~ | Done: closed by the Homebound audit |
 | Moot after fia-story: WM-003 registry (l.1237, also misfiled under zerathis); Cairn Station; Strake secure storage; *Crow* after the ambush; Hollis Post; how Vocath knew the *Crow* carried the piece; did Mirt learn the piece was the target | Close or rewrite in the PR that lands each subject |
 | Still coming in: "Every chat sweep is complete" | Wrong: two sweeps are partial |
 | "Answered from the sources" list | Prune; drop duplicate Atrium and dossier-tab lines |
@@ -208,7 +192,6 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 
 | Draft | Action |
 |---|---|
-| `fia-story.md` | Done: pre-fixes in PR #165, change audit in PRs #166 to #169, draft deleted |
 | `divine-rules.md` | Stale: "sphere", "the Flow", Reach-born polarity, "Nothing breaks" vs cosmology's destruction; its two Open questions are answered on cosmology. Promote the worship section, rule "Reach debris and worlds", then delete |
 | `nct-127.md`, `common-knowledge.md` | Keep |
 
@@ -251,19 +234,6 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 
 ---
 
-## Dropped on check
-
-Nothing was dropped outright. These were corrected when the cited file did not match:
-
-- STAGING's long-life line reads "comes from his taken … tithed upward"; the words "not from the piece" are on `artifacts/rod-of-seven-parts.html`, not STAGING (#17).
-- `locations/fonains.html` said the Monolith broke "a few months ago", not "2–3 months" (#23); since 2026-11-07 it rose "a little over a year ago" and broke about seven months ago.
-- `locations/wayfinders-homeworld.html` uses "the Lunarfoot Runekeeper" as an example of the clan name, not as a claim about the order (#27).
-- BACKLOG fix l.974 says `crew/tumak.html` carries "outright"; the page follows the record (#7).
-- The working audit lists the "seated Lantern is a pod" tracker fix as done; "safehouse" is still in `data/overlay.json` (3c, 2.16).
-- The Ezra rows were read as compatible by one audit; STAGING (11-02) and BACKLOG (11-06) do pull apart, so Ezra moved to Part 1 (#8).
-- fia-story carries no date in its text; the audits gave 11-06 and 11-07. Git dates its last commits 2026-11-07.
-- fia-story's Bartholomew SA-002 line is marked **Proposed**, so it sits in 3e, not Part 1.
-
 ## Handoff
 
 This chat has run long; the rest goes to fresh chats, each starting from this
@@ -274,27 +244,6 @@ items in one chat share pages, so each page is rewritten once. Each pull
 request merges before any later work reads its pages.
 
 
-1. ~~**Build: the cosmos.**~~ Done: on the pages through PRs #163 and #164,
-   `divine-rules.md` deleted.
-2. ~~**Build: the FIA story.**~~ Done: pre-fixes in PR #165, the change
-   audit in PRs #166 (the colony), #167 (Cairn, Strake, *Crow* and the FIA)
-   and #169 (people and threads); `fia-story.md` deleted. Rulings of that
-   chat: "bearers" and "unthinned" retired (the malformed; the true-formed
-   are the whole illithids' own name, which N'ghathrod rejects); the raid's pirates
-   sail two ships under crossbones, the one that stayed captained by
-   Saltjaw, and Vocath's overseer wore his seal as a coin for the handover
-   (FR-016 renders it); Boogie's
-   FIA line is a plain intake note in LG-003; Hollis Post stays; Verrow is Strake's quartermaster;
-   the Temple of Moloch broke off with Thessalar's laboratory.
-3. ~~**Mechanic: Tarto, the hold, the malformed.**~~ Done: the ally blocks
-   for Tarto and Saerthe, after table simulations, and the run-at-a-glance
-   principle in PR #176; the hold at Cairn as an outline in #177; the
-   Colony illithid archetypes in place of the malformed template in #178.
-   Homebound split off (3a).
-3a. ~~**Lore and mechanic: Homebound.**~~ Done: the story, the havens and
-   the mechanic, ruled 2026-11-08 to 2026-11-10 and carried to the pages by
-   the change audit. Its open items are in BACKLOG; the player's side waits
-   for the reveal at the table (STAGING).
 4. **Build: the DM tools.** BACKLOG § Automation and tracker, "Overhaul
    the DM tools": the tracker first, then the Voyages board, the hub, the
    timeline and the overlay, rebuilt against the cleaned pages.

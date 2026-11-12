@@ -32,6 +32,10 @@ inbox/  →  drafts  →  BACKLOG.md  →  STAGING.md  →  pages under prime/
    from STAGING.md and the matching backlog items. STAGING carries no "done"
    notes: an entry that has partly landed is narrowed to what is still
    waiting.
+6. **Finished means deleted.** In every working file (drafts, BACKLOG,
+   STAGING, the inbox, audits), an item that is done is deleted in the same
+   pull request that finishes it. Nothing is marked done, struck through or
+   kept as history. A file whose items are all done is deleted.
 
 A chat session works the backlog: Korey rules, the result goes to staging, and
 staging is distributed page by page.

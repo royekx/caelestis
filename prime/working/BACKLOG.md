@@ -43,9 +43,9 @@ staging once Korey has read and accepted them.
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 2 | 0 | 0 |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 3 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 7 | 11 | 1 | 0 | 2 |
-| **Total** |  | **130** | **173** | **18** | **1** | **40** |
+| **Total** |  | **130** | **173** | **19** | **1** | **40** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -1865,6 +1865,10 @@ archived in Drive, not deleted. What stays open here is below.
   src: automation § Open
 
 # Repo and process
+
+- **[fix]** Retire deconflict.md
+  `working/deconflict.md` (the 2026-11-07 audit) is a worklist that outlived its chat. Its finished rows were deleted 2026-11-12; what is left is Part 1's rulings B to D (check each is on its pages), one Part 2 row (2.15, residue scale), Part 3's working-layer cleanup, and Part 4's cosmetic fixes. Land each remaining item on its page or as its own BACKLOG item, then delete the file and its row in `working/README.md`. Korey (2026-11-12): working files are cleaned as work lands; a finished item is deleted, never marked done.
+  src: Korey, 2026-11-12
 
 - **[decide]** The cycle's length in Toril years
   `factions/fleet.html` gives a cycle as sixteen Toril months (480 embers, about 1.315 Toril years) and as one and a third Toril years (1.333). `prime/chart/gtc.js` counts 480 embers. The Order's founding (about 1,990 years ago) uses 1.333; at 1.315 it is about 1,961. Pick one and restate the founding. Logged from the dates audit, 2026-11-07.
