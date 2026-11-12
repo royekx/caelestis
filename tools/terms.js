@@ -113,6 +113,7 @@ const docFiles = (conf.docs || []).reduce((acc, d) => {
 }, []).filter(f => !only.length || only.some(o => path.join(ROOT, f).startsWith(o)));
 for (const f of docFiles) {
   fs.readFileSync(path.join(ROOT, f), 'utf8').split('\n').forEach((line, i) => {
+    if (ALLOW.some(a => f.startsWith(a.file) && a.re.test(line))) return;
     for (const t of DOCMOVED) for (const m of line.matchAll(t.re)) hits.push({ f, n: i + 1, kind: 'moved', term: m[0], note: t.new, finished: true });
   });
 }

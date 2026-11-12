@@ -1555,8 +1555,82 @@ function check() {
     beatsOf(id, o);
   });
 
+  working(err, warn);
+
   report(errors, warnings, SETS.map(s => `${sets[s.key].length} ${s.key}`).join(' · ') +
     `\nlatest voyage on record: ${latest ? 'V' + pad(latest) : 'none'}`);
+}
+
+// ── the working layer ──────────────────────────────────────────────────────
+// prime/working/README.md rule 6: finished means deleted. A done item leaves
+// its working file in the pull request that finishes it; nothing is marked
+// done, struck through or kept as history.
+function working(err, warn) {
+  const W = 'prime/working';
+  const read = rel => fs.readFileSync(path.join(ROOT, rel), 'utf8');
+  const md = dir => fs.readdirSync(path.join(ROOT, dir)).filter(f => f.endsWith('.md'));
+
+  // Markers of finished work left in place.
+  const DONE = [
+    [/~~[^~\n]+~~/, 'struck-through text'],
+    [/\(answered\)|\banswered \(part\)/i, 'an "answered" note'],
+    [/\bdone \(|^\s*done:|\|\s*Done\b/im, 'a "done" note'],
+    [/\bSettled since\b/, 'a "Settled since" note'],
+  ];
+  const scan = rel => read(rel).split('\n').forEach((line, i) => {
+    DONE.forEach(([re, what]) => { if (re.test(line)) err(`${rel}:${i + 1}: ${what}; delete what is finished, move what is ruled to its draft or STAGING`); });
+  });
+  ['BACKLOG.md', 'STAGING.md'].concat(md(W).filter(f => !['README.md', 'BACKLOG.md', 'STAGING.md'].includes(f)))
+    .forEach(f => scan(`${W}/${f}`));
+
+  // A ruling inside an open BACKLOG item waits there; it belongs in STAGING or a draft.
+  read(`${W}/BACKLOG.md`).split('\n').forEach((line, i) => {
+    if (/^\s+(Settled|Ruled)\b[^\n]*(Korey|\d{4}-\d{2}-\d{2}|turn)/.test(line))
+      warn(`${W}/BACKLOG.md:${i + 1}: a ruling sits in BACKLOG; move it to STAGING or the subject's draft and keep only what is open`);
+  });
+
+  // Every working file is listed in the README's drafts table, and every row's file exists.
+  const readme = read(`${W}/README.md`);
+  const listed = [...readme.matchAll(/^\| \[([^\]]+\.md)\]\(/gm)].map(m => m[1]);
+  md(W).filter(f => !['README.md', 'BACKLOG.md', 'STAGING.md'].includes(f) && !listed.includes(f))
+    .forEach(f => err(`${W}/${f}: not in README.md's drafts table; list it with its state, or delete it if it is finished`));
+  listed.filter(f => !exists(`${W}/${f}`)).forEach(f => err(`${W}/README.md: lists ${f}, which does not exist`));
+
+  // Every inbox file is listed in the inbox README, and every listed file exists.
+  const inbox = `${W}/inbox`;
+  if (exists(inbox)) {
+    const ireadme = exists(`${inbox}/README.md`) ? read(`${inbox}/README.md`) : '';
+    md(inbox).filter(f => f !== 'README.md' && !ireadme.includes(f))
+      .forEach(f => err(`${inbox}/${f}: not listed in inbox/README.md`));
+    [...new Set([...ireadme.matchAll(/\b([a-z0-9-]+\.md)\b/g)].map(m => m[1]))]
+      .filter(f => f !== 'README.md' && !exists(`${inbox}/${f}`))
+      .forEach(f => err(`${inbox}/README.md: lists ${f}, which does not exist; remove its row`));
+  }
+
+  // The BACKLOG section table matches the items under each section.
+  const backlog = read(`${W}/BACKLOG.md`);
+  const TAGS = ['decide', 'later', 'fix', 'drop', 'add'];
+  const sections = {};
+  backlog.split(/^# /m).slice(1).forEach(s => {
+    const name = s.split('\n')[0].trim();
+    sections[name] = TAGS.map(t => (s.match(new RegExp(`^- \\*\\*\\[${t}\\]\\*\\*`, 'gm')) || []).length);
+  });
+  const total = [0, 0, 0, 0, 0];
+  let totalRow = null;
+  backlog.split('\n').forEach(line => {
+    const cells = line.split('|').slice(1, -1).map(c => c.trim().replace(/\*\*/g, ''));
+    if (cells.length < 3 || cells[0] === 'Section' || /^-+$/.test(cells[0])) return;
+    if (cells[0] === 'Total') { totalRow = cells.slice(2).map(Number); return; }
+    if (!/^\d+$/.test(cells[2] || '')) return;
+    const have = cells.slice(2).map(Number);
+    have.forEach((n, k) => { total[k] += n || 0; });
+    const want = sections[cells[0]];
+    if (!want) return err(`${W}/BACKLOG.md: section table row "${cells[0]}" has no heading of that name`);
+    if (have.length !== 5 || have.join() !== want.join())
+      err(`${W}/BACKLOG.md: section table row "${cells[0]}" reads ${have.join(' · ')}; the items count ${want.join(' · ')}`);
+  });
+  if (totalRow && totalRow.join() !== total.join())
+    err(`${W}/BACKLOG.md: Total row reads ${totalRow.join(' · ')}; the rows sum to ${total.join(' · ')}`);
 }
 
 // ── main ───────────────────────────────────────────────────────────────────

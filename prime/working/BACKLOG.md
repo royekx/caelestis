@@ -47,7 +47,6 @@ staging once Korey has read and accepted them.
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 7 | 11 | 1 | 0 | 2 |
 | **Total** |  | **134** | **172** | **17** | **1** | **40** |
 
-The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
 ## Cross-cutting decisions
 
@@ -656,11 +655,8 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 
 - **[later]** How far to develop Tymora
   Korey wants to develop Tymora and the Beshaba/Tymora interplay.
-  Settled (Korey, turns 860–862): the misread tenet and "fortune needs misfortune" (both adds below); the sisters' conflict stays indirect, because gods give direction that never shows the whole of what they want; Aethris is a whole planet where not everyone follows Tymora, with a lesser Beshaba following and other fortune gods, major and minor. Add that last point to the Tymora entry and locations/aethris.html: "Not all of Aethris follows Tymora. Beshaba keeps a smaller following there, and other gods of fortune, major and minor, are worshipped too."
   Still open: whether Tymora notices herself thinning on Aethris as the ritual removes the risk her luck needs, and whether she acts on it. Beshaba's want is its own decide under dossiers/beshaba.html (added in section 5).
-  answered (part): inbox/chat-crew-boogie-casey-sol.md § Sol / Aethris and the gods (Settled)
   src: BCS § Sol/Aethris and the gods (turn 860), § Sol/Open
-  done (settled part): factions/deities.html (section 2) carries the misread tenet, fortune needs misfortune, and Aethris's other faiths; the open question is in its Still to decide. locations/aethris.html carries the Aethris line (section 3).
 
 ---
 
@@ -768,9 +764,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   (c) The spine's three depths as written: adamantine, an Ortholith fragment, the strike as bait.
   (d) A combination, e.g. (a) for Caelestis and (b) for H'Catha.
   Also open: whether the Academy wanted this meteor or any adamantine, and what made it urgent (one lead points at the Brig).
-  Settled since, which is option (d): for Caelestis, containment. Adamantine survives disintegration, so the Fleet wants it for a vault, cradle or plating, and a cadet salvage crew is the cover; Tarto says only that it is rare, theirs by claim, and wanted first. For H'Catha, sight: the Sovereign Eye cannot see through adamantine, which replaced the dropped Spindle foothold war. The ore matters to both Caelestis and the Order.
   Still open: (1) whether the spine's deeper layers stay under that — an Ortholith fragment, shed or aimed, and the strike as bait (the glossary already calls the meteor a Monolith fragment, but the cosmic-structure sweep lists it as open); (2) whether the Academy wanted this meteor or any adamantine, and what made it urgent now.
-  answered (part): inbox/chat-organizing-framework.md § Tyrant ship and Voyage 004 prep (Settled: containment, cadet cover); inbox/chat-astral-sea-worldbuilding.md § Superseded ("Adamantine now matters because the Eye cannot see through it"), § H'Catha: the meteorite and mission ("valuable to both Caelestis and the Order")
   Touches: campaign/index.html (H'Catha arc), campaign/plot-hooks.html (meteorite hook), locations/hcatha.html, glossary/index.html ("a Monolith fragment, shed or aimed").
   src: memory-canon campaign-canon § Antagonists (H'Catha direction, H'Catha decisions); chat § Open; glossary; chat-organizing-framework § Settled, § Open; chat-astral-sea-worldbuilding § Superseded; chat-cosmic-campaign-structure § Open
 
@@ -852,8 +846,6 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 - **[decide]** The watcher at the notice board *(prep)*
   Someone at the lane marker saw Sol's wanted notice, then saw him walk in. How the watcher engages: mercenary, opportunist, informant or sympathiser.
-  Settled since: the issuer. The Voyage 7 chat has the notice posted by the Fortuned of Aethris, reward paid on return to Aethris; "Threadbare Consortium" was a placeholder and is dropped. The Beats owed add below already reads that way.
-  answered (part): inbox/chat-voyage-6-7-planning.md § Voyage 7 / V007 player beats (Settled: "a wanted notice… posted by the Fortuned")
   src: BCS § Sol/H'Catha transit, § Sol/Open
 
 - **[decide]** A crew backstory table for the crossing *(prep)*
@@ -870,8 +862,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 - **[decide]** V007's load *(prep)*
   A whole-table simulation of V007 (cadet-arcs chat, 2026-11-11) ran out of time before the landing: about ten run items, seven owed beats and Ezra's hook in one session, at a table that runs investigation and loot scenes at about double their budget.
-  Settled (Korey, 2026-11-11): V007 pays its promises. Every cadet gets a beat; the beats vary in size, and some are setups for small things later. Tumak's is the biggest: his first Wayfind, his rune, how marks work, and the first hint toward a haven. After it his arc is in his court and stays quiet on the DM's side. He may read the hint as home; that is fine, and learning it is not quite home is a reveal that still gives him information, an ability and a step forward. Casey's thread has had nothing for a while and gets a beat (the decide "Casey's V007 beat" above). Bartholomew can stay quiet: a creature on the crossing he can try to learn an aspect from is enough.
-  Still open: what moves to the interlude or the session's opening, where V007 ends, and whether H'Catha then runs V008 to V010. Rule with the decide "Act 1's close and the length of H'Catha" under campaign/index.html. Touches: campaign/voyages/index.html (V007).
+  Every cadet gets a beat (STAGING § V007). Open: what moves to the interlude or the session's opening, where V007 ends, and whether H'Catha then runs V008 to V010. Rule with the decide "Act 1's close and the length of H'Catha" under campaign/index.html. Touches: campaign/voyages/index.html (V007).
   src: cadet-arcs simulation, 2026-11-11
 
 - **[decide]** One arc per room on the crossing *(prep)*
@@ -880,15 +871,15 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 - **[decide]** The meteor and Ondessa as one road *(prep)*
   If Sol's first burden is Ondessa, three arcs converge on her and she becomes the table's real goal, with the meteor second and two domains away. Option: Ondessa needs the adamantine, so the meteor and the eclipse become one road, with Gregory's pull and Boogie's shard humming toward the diggings.
-  Settled since (Korey, 2026-11-11): Sol carries two burdens at H'Catha, a locathah's and Ondessa's; Ezra, a paladin, joins the crew there. Still open: whether the meteor and Ondessa become one road. Touches: campaign/index.html (#hcatha-arc), locations/hcatha.html, campaign/voyages/index.html.
+  Sol's two H'Catha burdens are in working/sol-arc.md. Open: whether the meteor and Ondessa become one road. Touches: campaign/index.html (#hcatha-arc), locations/hcatha.html, campaign/voyages/index.html.
   src: cadet-arcs simulation, 2026-11-11
 
 - **[decide]** Bartholomew at H'Catha *(prep)*
-  H'Catha plays as a spy thriller where daylight forbids wounding, and the simulation left Bartholomew with nothing to do in two of three sessions. Settled (Korey, 2026-11-11): H'Catha has creatures he can learn aspects from, and one may be his first. Still open: where they sit (the seam route to the meteor is an option), a night fight, and whether beholders and sleepborn can give aspects, since his player will ask. Touches: campaign/voyages/index.html, crew/bartholomew.html.
+  H'Catha plays as a spy thriller where daylight forbids wounding, and the simulation left Bartholomew with nothing to do in two of three sessions. H'Catha has creatures he can learn aspects from (STAGING § V007). Open: where they sit (the seam route to the meteor is an option), a night fight, and whether beholders and sleepborn can give aspects, since his player will ask. Touches: campaign/voyages/index.html, crew/bartholomew.html.
   src: cadet-arcs simulation, 2026-11-11
 
 - **[decide]** Tumak's and Gregory's V007 beats *(prep)*
-  Tumak: his first Wayfind needs an escape within 60 feet of his quarters, which the crossing tables may never produce (option: the shadow ship's boarders reach the quarters deck); his first sight hint, ruled in the Tumak draft, is missing from Beats owed and should not read as H'Catha, since the table will ask (reading it as home is fine, per V007's load above). Gregory: the Toril beat has him choose whether to speak, which stalls a hesitant player and breaks his table note that the DM always initiates; option: Ostekk-6's crew night asks what pulls at him, and the crew answers with a promise for after H'Catha. Settled (Korey, 2026-11-11): V007 gives more on the Lantern of Flourishing and reinforces the question the table asked at the end of V006, why two beholders fought over a thing that heals 3d8. Touches: campaign/voyages/index.html (V007 Beats owed), artifacts/ (the Lantern).
+  Tumak: his first Wayfind needs an escape within 60 feet of his quarters, which the crossing tables may never produce (option: the shadow ship's boarders reach the quarters deck); his first sight hint, ruled in the Tumak draft, is missing from Beats owed and should not read as H'Catha, since the table will ask (reading it as home is fine, per V007's load above). Gregory: the Toril beat has him choose whether to speak, which stalls a hesitant player and breaks his table note that the DM always initiates; option: Ostekk-6's crew night asks what pulls at him, and the crew answers with a promise for after H'Catha. The Lantern beat is in STAGING § V007. Touches: campaign/voyages/index.html (V007 Beats owed), artifacts/ (the Lantern).
   src: cadet-arcs simulation, 2026-11-11
 
 ---
@@ -1009,8 +1000,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
 
 - **[later]** Who on Aethris commissioned it
   The page says the Fortuned commissioned it. Which of them, and why they care, is open.
-  Settled since (why they care): "The Fortuned want Sol back alive because he is a component of their unfinished ritual. They do not care about him as a person." Still open: which of the Fortuned commissioned it.
-  answered (part): STAGING § Aethris
   src: BCS § Sol/Open
 
 - **[decide]** Beshaba's warning before it arrives *(prep)*
@@ -1287,7 +1276,7 @@ Rules for the runes, marks, hints, Wayfind and the havens live on rules/index.ht
 
 - **[decide]** Which deckhand item goes missing on the tyrant ship voyage *(prep)*
   Korey names the item (see the "Next beat" add).
-  Settled since (Korey, 2026-11-11): Saerthe Abizjn and Winston Ryeback both have something missing, and something goes missing aboard during the crossing. It starts aiming at Boogie without pulling him into the limelight, and he works out what to do with it. Still open: the item, and whose.
+  The shape is in STAGING § V007. Open: the item, and whose.
   src: BCS § Boogie/Open; cadet-arcs chat, 2026-11-11
 
 - **[later]** Boogie's sheet check
@@ -1954,40 +1943,40 @@ Fixes to player-facing pages, including the Fleet Intelligence Archive (`restric
   The published spectator is summoned to guard one thing for 101 years and vanishes if that thing is stolen or destroyed before its term ends. Greelob and Orlob guard the meteor by their own choice (SJA), and the diggings plan has them arguing over who guards them. Rule what the two are bound to, and whether the vanish rule is table knowledge. Perils of the Drift leaves the rule off until then.
   src: Nexus cold review (2026-10-29); prime/locations/hcatha.html; prime/working/nexus-field-guide.md
 
-## Memory cleanup
+# Memory cleanup
 
 Open items left in Claude's memory notes on 2026-11-04, once the settled
 rulings went to STAGING. Each lists the pages it touches.
 
 ### Conflicts and memory-only facts
 
-- **decide** Casey's Stellar Reading. Once he spends the star, must he name a sign (no declining)? registry/crew-manifest/casey-geim.html says he "may attempt to name the constellation". crew/casey.html.
-- **decide** Tumak's Runechild sorcery. Is the subclass on his sheet now, at his first Sorcerer level, or from Sorcerer 3 like the rest of the table? crew/tumak.html, rules/index.html § Standing mechanics.
-- **decide** The loose Rod pieces and beholders. Do the pieces stay clear of beholders, Xanathar's piece the one exception? artifacts/rod-of-seven-parts.html lists it under "Still to decide".
-- **decide** Three Fonains facts backed only by memory: the Green Lady's dragon form is a wild shape of the dragon she faced in Korvalatel's Clutch, and she is the Bacon Bunch's Green Lady (the page has her trapped in that form after Aerisi split Eldath's tree); Giorge is a branded member of the Verdant Vigilance; every member of Lola's Boys is tied to the Princes of Elemental Evil, which is why the Accordance chose them. locations/fonains.html, factions/deities.html, timeline.
-- **decide** Fragment counts and the Reach. Does the number of pieces a fragment broke into still mark its distance from the Reach under the five Axioms? If so, Dissolution (2) lay closest and Determination (11) farthest. cosmology/index.html § Residue.
-- **decide** Did Lola's Boys breaking the Fonains Monolith force Vecna to change his plan? factions/deities.html says only that it hurt both of them. opposition/vecna.html.
+- **[decide]** Casey's Stellar Reading. Once he spends the star, must he name a sign (no declining)? registry/crew-manifest/casey-geim.html says he "may attempt to name the constellation". crew/casey.html.
+- **[decide]** Tumak's Runechild sorcery. Is the subclass on his sheet now, at his first Sorcerer level, or from Sorcerer 3 like the rest of the table? crew/tumak.html, rules/index.html § Standing mechanics.
+- **[decide]** The loose Rod pieces and beholders. Do the pieces stay clear of beholders, Xanathar's piece the one exception? artifacts/rod-of-seven-parts.html lists it under "Still to decide".
+- **[decide]** Three Fonains facts backed only by memory: the Green Lady's dragon form is a wild shape of the dragon she faced in Korvalatel's Clutch, and she is the Bacon Bunch's Green Lady (the page has her trapped in that form after Aerisi split Eldath's tree); Giorge is a branded member of the Verdant Vigilance; every member of Lola's Boys is tied to the Princes of Elemental Evil, which is why the Accordance chose them. locations/fonains.html, factions/deities.html, timeline.
+- **[decide]** Fragment counts and the Reach. Does the number of pieces a fragment broke into still mark its distance from the Reach under the five Axioms? If so, Dissolution (2) lay closest and Determination (11) farthest. cosmology/index.html § Residue.
+- **[decide]** Did Lola's Boys breaking the Fonains Monolith force Vecna to change his plan? factions/deities.html says only that it hurt both of them. opposition/vecna.html.
 
 ### Later
 
-- **later** The scale of the galaxies and the cosmos. chart/, cosmology/index.html.
-- **later** How the Rod of Seven Parts could be used against Vecna. artifacts/rod-of-seven-parts.html.
-- **later** Why Caelestis holds records on Fonains. restricted/, locations/fonains.html.
-- **later** Does the Spindle's shadow grow in some seasons to cover about two domains, and do two eyes then shut at once under the Pact? locations/hcatha.html (with the decide "Measures").
-- **later** The Sovereign Eye's attention as a mechanic: what it notices first. locations/hcatha.html, rules/.
-- **later** How often partial sleep leaks a sleepborn on H'Catha: a variant rule for frequency. locations/hcatha.html, rules/.
-- **later** What brought Saerthe from Nimbral to Caelestis. dossiers/saerthe-abizjn.html.
-- **later** The Fleet's institutional history of named enemies and defeats. factions/fleet.html.
-- **later** Does a Seekers chapter plant a notice on the graduation board, and what does it say? NEW: Contract board.
-- **later** The Fonains dragons' departure as a prequel one-shot. locations/fonains.html.
-- **later** Companion tabs for Boogie, Gregory and Sol, like the other three crew pages. registry/crew-manifest/.
+- **[later]** The scale of the galaxies and the cosmos. chart/, cosmology/index.html.
+- **[later]** How the Rod of Seven Parts could be used against Vecna. artifacts/rod-of-seven-parts.html.
+- **[later]** Why Caelestis holds records on Fonains. restricted/, locations/fonains.html.
+- **[later]** Does the Spindle's shadow grow in some seasons to cover about two domains, and do two eyes then shut at once under the Pact? locations/hcatha.html (with the decide "Measures").
+- **[later]** The Sovereign Eye's attention as a mechanic: what it notices first. locations/hcatha.html, rules/.
+- **[later]** How often partial sleep leaks a sleepborn on H'Catha: a variant rule for frequency. locations/hcatha.html, rules/.
+- **[later]** What brought Saerthe from Nimbral to Caelestis. dossiers/saerthe-abizjn.html.
+- **[later]** The Fleet's institutional history of named enemies and defeats. factions/fleet.html.
+- **[later]** Does a Seekers chapter plant a notice on the graduation board, and what does it say? NEW: Contract board.
+- **[later]** The Fonains dragons' departure as a prequel one-shot. locations/fonains.html.
+- **[later]** Companion tabs for Boogie, Gregory and Sol, like the other three crew pages. registry/crew-manifest/.
 
 ### Fixes
 
-- **fix** voyages/voyage-template.html still has the old folding account layout; every voyage page uses tabs. Update it to match voyage-006.html or retire it (prime/docs/SESSION-RUN.md now copies the previous voyage page).
+- **[fix]** voyages/voyage-template.html still has the old folding account layout; every voyage page uses tabs. Update it to match voyage-006.html or retire it (prime/docs/SESSION-RUN.md now copies the previous voyage page).
 
 ### From the chat sweeps of 2026-11-04
 
-- **decide** Saerthe's Barrier: a full action (Korey's words in the chat) or one attack of his Multiattack (the block in the repo)? dossiers/saerthe-abizjn.html. inbox/chat-staff-npcs.md.
-- **add** A creature the Faelight spore coats stays coated until the cloud ends, even after it leaves the cloud. The spore can be fed another slot and reused. artifacts/faelight-spore.html. inbox/chat-tyrant-ship.md.
-- **add** Gregory's pull stays one-way for now ("hold off on the two-way"). crew/gregory.html. inbox/chat-tyrant-ship.md.
+- **[decide]** Saerthe's Barrier: a full action (Korey's words in the chat) or one attack of his Multiattack (the block in the repo)? dossiers/saerthe-abizjn.html. inbox/chat-staff-npcs.md.
+- **[add]** A creature the Faelight spore coats stays coated until the cloud ends, even after it leaves the cloud. The spore can be fed another slot and reused. artifacts/faelight-spore.html. inbox/chat-tyrant-ship.md.
+- **[add]** Gregory's pull stays one-way for now ("hold off on the two-way"). crew/gregory.html. inbox/chat-tyrant-ship.md.

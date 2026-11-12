@@ -26,19 +26,16 @@ Do not write to the repo before the first or to the record before the second.
 | DM | `prime/`: the DM wiki, gated |
 | Record | `data/` (player-safe), `prime/data/` (DM layer) |
 | Shared | `assets/`, `styles/`, `scripts/` (what player pages load), `prime/scripts/` (DM scripts) |
-| Process, not deployed | `tools/` (build and check scripts: `data.js`, `terms.js`, `link-names.js`, `visual.js`, `survey.js`, `eye-fit.js`; `search.js`, a per-section search box no page loads), `prime/docs/` (the session run and the page guide), `prime/working/`, `CLAUDE.md` |
+| Process, not deployed | `tools/` (build and check scripts: `data.js`, `terms.js`, `link-names.js`, `visual.js`, `survey.js`, `eye-fit.js`; `search.js`, a per-section search box no page loads), `prime/docs/` (the session run, the page guide and the link catalogue of moved paths), `prime/working/`, `CLAUDE.md` |
 
-**DM side today**: `campaign/` (index, `voyages/`, `plot-hooks.html`), `opposition/` (`vecna.html`, `vthorama.html`), `tracker/`, `timeline/`, `crew/`, `dossiers/`, `factions/`, `statblocks/`, `cosmology/`, `locations/`, `vessels/`, `artifacts/`, `chart/`, `rules/`, `glossary/`, `principles.html`, `hub.html`, `search.html`.
-
-**DM side target** (approved 2026-10-27; moves land page by page, see
-`prime/working/repo-refactor.md` § 3 and its link catalogue):
+**DM side**, by nav group:
 
 | Nav group | Pages |
 |---|---|
 | Play | Voyages · Tracker · Plot Hooks · Stat Blocks · Rules |
 | Story | Campaign (`campaign/index.html`) · Opposition (`opposition/vecna.html`, `opposition/vthorama.html`) · Timeline |
 | People | Crew · Dossiers · Factions (`factions/fleet.html` for the Fleet) |
-| World | Cosmology · Locations (`locations/`, was `realms/`) · Vessels · Artifacts · Chart |
+| World | Cosmology · Locations (`locations/`) · Vessels · Artifacts · Chart |
 | Reference | Glossary · Principles (`principles.html`) |
 
 DM folders and pages use plain, functional names. Player folders use in-world
@@ -186,6 +183,15 @@ state what is. Rules: `prime/working/README.md`.
   search again for the old version's phrasing. One pull request, or a few
   in sequence split by area past about twenty pages, each merged before
   any later work reads those pages. Then delete the draft.
+- **A ruling leaves BACKLOG in the same commit.** When Korey rules an item,
+  delete it from BACKLOG, or narrow it to what is still open, and write the
+  ruling into the subject's draft or STAGING. When a page carries a staged
+  entry, delete the entry. When a draft's subject has settled and been
+  audited, delete the draft. Nothing is marked done, struck through or kept as
+  history. `node tools/data.js check` fails on done notes, "answered" and
+  "Settled since" lines, working files missing from the README, inbox files
+  missing from the inbox README, and a BACKLOG section table that does not
+  match its items; it warns on a ruling left inside a BACKLOG item.
 - **Before reading the repo on a subject, check the open pull requests.**
   `gh api "repos/royekx/caelestis/pulls?state=open" --jq '.[].head.ref'`,
   then `git diff --stat origin/main...origin/<branch>` for each. If one
@@ -271,6 +277,6 @@ Each of these has gone wrong at least once.
 - Record urls are site-relative with no leading slash. An absolute path
   resolves above `/caelestis/` on Pages.
 - A moved page updates every link to it in the same commit, joins the link
-  catalogue in `prime/working/repo-refactor.md`, and goes on the moved list in
+  catalogue in `prime/docs/LINK-CATALOGUE.md`, and goes on the moved list in
   `terms.json`. Old paths get no redirect. A retired path is never reused for
   different content.

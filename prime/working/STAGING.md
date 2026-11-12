@@ -6,6 +6,30 @@ facts are written in-world; rules and play notes in DM voice. Rewrite an entry
 when a ruling changes; delete it once the page carries it. See
 [README.md](README.md) for the flow and the writing rules.
 
+## Campaign
+
+### V007: what each cadet gets
+
+Targets: `campaign/voyages/index.html` (V007 runsheet and Beats owed);
+`crew/boogie.html`, `crew/bartholomew.html`, `crew/gregory.html` (Next beat).
+Play notes, DM voice.
+
+- V007 pays its promises. Every cadet gets a beat; the beats vary in size, and
+  some are setups for small things later.
+- Tumak's is the biggest: his first Wayfind, his rune, how marks work, and the
+  first hint toward a haven. After it his arc is in his court. He may read the
+  hint as home; learning it is not quite home is a later reveal that still
+  gives him information, an ability and a step forward.
+- Casey's thread has had nothing for several voyages and gets a beat.
+- Boogie: Saerthe Abizjn and Winston Ryeback both have something missing, and
+  something goes missing aboard during the crossing. It starts aiming at Boogie
+  without pulling him into the limelight, and he works out what to do with it.
+- Gregory: more on the Lantern of Flourishing, and the crew's own question
+  from V006 comes back: why two beholders fought over a thing that heals 3d8.
+- Bartholomew stays quiet: a creature on the crossing he can try to learn an
+  aspect from. H'Catha has more creatures he can learn from.
+- Sol: the plate and the vision of the locathah (working/sol-arc.md).
+
 ## Player pages
 
 ### Tumak: the reveal at the table
