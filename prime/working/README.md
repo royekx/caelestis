@@ -65,6 +65,6 @@ also hold for the working layer and the pages it feeds:
 | [nct-127.md](nct-127.md) | Neo Constellation Troupe 127, a travelling band; a seed kept off the player side | Sketch |
 | [campaign-middle.md](campaign-middle.md) | Building the post-graduation middle: the invasion ladder, fronts, contracts as nodes, cadence | Draft |
 | [common-knowledge.md](common-knowledge.md) | What a cadet would know about each NPC in the player record, sourced and graded, and how it fits the record | Draft; awaits Korey entity by entity |
-| [sol-arc.md](sol-arc.md) | Sol's arc: the scattered misfortune, burdens, Beshaba's charge, the road home to Aethris | Draft; the Prism Ascendant proposal awaits Korey |
+| [sol-arc.md](sol-arc.md) | Sol's arc: scattered luck, taking it on, Beshaba and Tymora, the road home to Aethris | Draft; open list awaits Korey |
 | [tumak-havens.md](tumak-havens.md) | Tumak's road home: only what stays open after the change audit (near-term items for V007, level 5 and the first haven; the conflict; origin) | Open list awaits Korey |
 | [repo-refactor.md](repo-refactor.md) | The approved DM structure, the per-page procedure and the link catalogue of moved paths | Reference: link catalogue |
