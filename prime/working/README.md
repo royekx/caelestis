@@ -63,4 +63,5 @@ also hold for the working layer and the pages it feeds:
 | [common-knowledge.md](common-knowledge.md) | What a cadet would know about each NPC in the player record, sourced and graded, and how it fits the record | Draft; awaits Korey entity by entity |
 | [deconflict.md](deconflict.md) | The 2026-11-07 audit of the whole repo: conflicts to rule on, rulings waiting for their pages, working-layer cleanup | Draft; Part 1 awaits Korey |
 | [tumak-havens.md](tumak-havens.md) | Tumak's road home: only what stays open after the change audit (near-term items for V007, level 5 and the first haven; the conflict; origin) | Open list awaits Korey |
+| [campaign-simulation.md](campaign-simulation.md) | A simulated run of the whole campaign from V007, kept as a baseline to check pressure points against; not canon | Reference |
 | [repo-refactor.md](repo-refactor.md) | The approved DM structure, the per-page procedure and the link catalogue of moved paths | Reference: link catalogue |
