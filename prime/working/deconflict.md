@@ -167,7 +167,7 @@ One row per ruling. Rows that share pages run as one change audit (Handoff).
 | Retrofit the five Axioms; Residue counts by Axiom; Spheres become galaxies (after one check of survey-core.js and holo.html) | Done |
 | Why Caelestis's sphere holds three fragments; Tymora's misread tenet; chart "Vecna knew"; Sol's oath; Wan and Tu two hosts; Autognome rule in SESSION-RUN; no triple short sentences | Done |
 | Wayfind cost, Wayfind odds, Mishap two sanctuaries (l.1651, 1656, 1661) | Superseded by the redo; delete |
-| Player record flag 6.3 "autognome" | Answered: Ostekk-6 is an automaton everywhere, records included (Korey, 2026-11-12) |
+| Player record flag 6.3 "autognome" | Answered: stays as history |
 | One purebred stayed (l.482) | Pages and STAGING: all five went with him. Close as "cut the line" |
 | Is the colony a Seekers chapter | Ruled; close |
 
