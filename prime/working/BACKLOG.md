@@ -38,14 +38,14 @@ staging once Korey has read and accepted them.
 | Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 26 | 7 | 2 | 0 | 3 |
 | Dossiers | dossiers/ | 13 | 16 | 0 | 0 | 1 |
 | Crew | crew/ | 12 | 20 | 0 | 0 | 0 |
-| Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
-| Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 7 | 7 | 4 | 0 | 11 |
-| New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
+| Artifacts and vessels | artifacts/, vessels/ | 7 | 7 | 1 | 0 | 1 |
+| Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 7 | 7 | 3 | 0 | 11 |
+| New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 0 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 12 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 7 | 11 | 1 | 0 | 2 |
-| **Total** |  | **135** | **172** | **19** | **1** | **40** |
+| **Total** |  | **134** | **172** | **17** | **1** | **40** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -54,22 +54,6 @@ The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 Each settles items on several pages at once. Rule these first.
 
 - **How a tadpole is removed.** A tadpole can be removed, and removal frees the host. How it is done is open: D&D lore or our own; avoid Baldur's Gate 3 spoilers.
-
-## Answered from the sources (review)
-
-The resolve pass settled these decide items from later sweeps, saved decisions or the repo's history. Each is tagged *(answered)* in its section with the source that answered it. Confirm them as a batch, or overturn any.
-
-- "Arc", never "Act" *(fix)*
-- Residue housings are dampened in anti-magic, not switched off *(fix)*
-- Network modifiers apply only when Tumak stands at a mark *(fix)*
-- The hub's Drive Root is right; memory's folder id is the rune images folder *(fix)*
-- Wayfind reach gated by matched runes *(add)*
-- Distance bands *(fix)*
-- Tiered mishap consequences *(add)*
-- Wayfind cost by band *(add)*
-- How separated twins reunite *(add)*
-
-One of these rests on Korey making a pick rather than a direct ruling: the Drive root.
 
 ## Player record flags
 
@@ -454,7 +438,6 @@ Order under each page: decide, fix, drop, add.
   The eye opens on a galaxy that holds a world it cannot see. Touches opposition/vecna.html.
   src: the Homebound chats, 2026-11-08 to 2026-11-10
 
-
 - **[later]** The homeworld's full look
   The sensory anchors are on the page. The planet's full look is still to be worked out.
   src: chat-crew-tumak-gregory-bartholomew § Tumak/Runekeeper lore and pressure
@@ -576,7 +559,6 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
   The timeline has "Nelson" show the Accordance's champions their gods and name them (S10, "The Accordance chooses Lola's Boys"); factions/deities.html names the Accordance's emissary Nalsa, an androsphinx. Same figure under a table spelling, or two? If the same, the timeline takes Nalsa.
   src: timeline.json; factions/deities.html#nalsa; section 8
 
-
 - **[decide]** Was a team of three sent to Fonains?
   Idea (Korey, 2026-10-28): while Lola's Boys were drawn into Vecna's part of the Darkest Day, an Order team of three went for the true elemental ritual, and perhaps failed. Decide whether a team was sent, what it went for, and what became of it.
   Touches: locations/fonains.html, factions/order.html, the Fonains lane of timeline.json.
@@ -687,7 +669,6 @@ The Remaking is now only the Ascension's fail state. Links that say "the Remakin
 - **[later]** The havens, one by one *(prep)*
   Each Runekeeper's name, species and era; each haven's place, trial, four hints, era records and memory; Skyshoulder's and Starfist's seals; the years from an heir's birth to their leaving. Lunarfoot's is at Selûne and the Tears of Selûne. Prep each haven as play nears it; the open items are in prime/working/tumak-havens.md.
   src: the Homebound chats, 2026-11-08 to 2026-11-10
-
 
 - **[later]** Parked Runekeeper questions
   Parked, not locked: whether closed worlds are invisible to A.T.L.A.S.; other worlds' own hiding methods; runes as the "finding" half of the art. The order closed its own heart (homebound, 2026-11-09), which answers in part whether closing is the inverse of opening.
@@ -1106,7 +1087,6 @@ DM dossiers under `prime/dossiers/`. Items are grouped by page and ordered decid
   The old Runekeeper is alive at his haven in his last days while the new Runekeeper comes home into the Zenith. How the two overlap is not set.
   src: the Homebound chats, 2026-11-08 to 2026-11-10
 
-
 - **[later]** The Runekeeper's name
   The page has "Name open". Name him.
   src: chat-cosmic-campaign-structure § Open; chat-crew-tumak-gregory-bartholomew § Tumak/Open
@@ -1381,11 +1361,6 @@ left here is open.
 
 ### artifacts/faelight-spore.html
 
-- **[decide]** The Faelight spore's slot rules *(prep)* *(answered)*
-  The page reconciles the old rules/index.html#counter-spore section (removed in section 4) with the BACKLOG radius steps: the slot sets the radius only (10/20/30 ft for a 1st/2nd/3rd-level slot), the cloud lasts 1 minute whatever the slot, and there is no level cap. The Rules page had capped a 3rd-level caster at a 2nd-level slot and said slot level scaled area and duration; both were dropped as Rules-page additions with no ruling behind them. Confirm, or restore the cap or the duration scaling. Also open: where the spore is now. The player Collection Manifest (entry 051) lists it as "Intake · unprocessed"; the voyage 6–7 planning chat moved it from the Cargo Deck to the Garden (§ Superseded). The page follows the manifest and names the Garden as unconfirmed. Also open on the page: whether a slot above 3rd widens the cloud, whether a coated creature stays coated after leaving the cloud, and whether the spore can be carried off the ship.
-  src: section 4 (2026-10-28); rules/index.html#counter-spore as it stood
-  answered: Tyrant ship mechanics reference, turn 40 (reversing turn 38): the slot sets the radius and the cloud always lasts 1 minute. Confirm the page as it stands. inbox/chat-tyrant-ship.md.
-
 ### vessels/tyrant-ship.html
 
 - **[decide]** Which shaft letter Research gets *(prep)*
@@ -1435,7 +1410,6 @@ against the complete Tumak sweep (all 336 turns).
   "Essence" names both Tumak's runes and a haven's Runekeeper; "inscription" and "marks" name both his runes and Vecna's eye. Keep them distinct on the pages; one side may need new words.
   src: the Homebound chats, 2026-11-08 to 2026-11-10
 
-
 - **[decide]** Travel times between systems *(shape)*
   Inside a system a helm covers 100 million miles a day, and Toril is about 30 days from Realmspace's edge (Spelljammer Academy, Appendix A); Toril to H'Catha is the 14-day crossing. Nothing sets travel between systems: *Wildjammer* leaves it to the DM, and the Astral Sea page only grades lanes. The chart is no single scale (Caelestis's cluster is an inset: Strake sits 600 units out yet at Realmspace's edge). A proposal to rule on: drift days from the system's edge by lane tier, about 25 chart units a day on a charted lane, 20 on a long haul, 10 uncharted with uncertain arrival, plus 1 to 2 weeks to reach the destination world. That gives from Caelestis: Strake about a month; Virenspace and Aethris about 2½ to 3 months; Krynnspace and Fonains about 4 months. Knock-ons: the 30-day exit is half of every trip; Cairn, "some weeks out", comes to about 2½ months; the shards reaching Boogie from Fonains take at least 4 months (ruling 23 allows adding time). Touches: rules/index.html § Ship & crew, locations/astral-sea.html, fia-story § Cairn Station.
   src: Korey, 2026-11-07
@@ -1445,11 +1419,6 @@ against the complete Tumak sweep (all 336 turns).
   src: Korey, 2026-11-07
 
 #### Cosmology rules
-
-- **[fix]** Residue housings are dampened in anti-magic, not switched off *(answered)*
-  Page says paracausal objects are "Unsuppressed … an instrument built around a piece works inside an anti-magic field". Change to: inside an anti-magic field an instrument built around a residue piece is suppressed in part. Its pull is muted and its working stutters, but it is not switched off. On the tyrant ship the Command Deck field suppressed the Lantern of Flourishing and muted Gregory's tug toward it; the OSTEKK units, built with the Lantern's fragment, stuttered and slowed and kept running, while the clockwork horrors froze and the behir could not enter. Gregory's own sluggishness there was narrative only. When the field lifts, the pull returns in full. The same wording goes on artifacts/containment-engine.html (§ Where it is, the anti-magic add) and the OSTEKK dossiers.
-  src: memory-canon § Antagonists ("The anti-magic field has been suppressing the Lantern"), § Key NPCs (Ostekk-6), § Cosmology (Weave ruling)
-  answered: memory-canon § Antagonists ("The anti-magic field has been suppressing the Lantern, muting Gregory's tug … When the field lifts, Gregory can commune with it"), § Key NPCs ("in the anti-magic field they stutter but keep running"); inbox/chat-voyage-6-7-planning.md § The field and constructs (Settled). Memory outranks the page.
 
 #### Tumak: runes, haven spells, Wayfind
 
@@ -1786,11 +1755,6 @@ Voice key: **in-world** reads like a fan wiki about things that exist;
   The hub's "Wildspace Lore Bible" tile opens "Caelestis Wildspaces Lore Bible" (doc `1XjOAGPAWvDivwI2ThihwCG84ACk2eF_HKtzbxgbVTMQ`, about 3 KB). The project's synced Lore Bible is "Caelestis Campaign Lore Bible" (doc `1SLoMt7h9DboUQQlXZA61HukmnQBkjHKUNtLH2Qt4IMQ`, about 13 KB). Drive shows both created and last edited on 2026-04-12, untouched since. The Campaign Planning chat folded the Lore Bible into the DM wiki (turn 56), so neither is the live source now. Options: point the tile at the Campaign Lore Bible and relabel it; or retire the tile, since prime/ replaced both.
   src: hub.html; project synced sources; Drive metadata (checked 2026-10-25); chat-early-planning § DM wiki and naming (turn 56)
 
-- **[fix]** The hub's Drive Root is right; memory's folder id is the rune images folder *(answered)*
-  No page change. The hub's Drive Root tile opens `1suJFIN_LYDmRrkzjk3PkVv2pOmbJxE8r`, which Drive names "Caelestis". Memory's `1KuFCCLYKM2LuW6Hd4NEDq9GIsHL2L3Y5` is a folder named "runes" (created 2026-06-18), where Tumak's rune images live. Update memory's site-and-automation line: the Caelestis folder is `1suJFIN_LYDmRrkzjk3PkVv2pOmbJxE8r`, and `1KuFCC…` is the runes folder.
-  src: hub.html; memory-canon § Tools and gotchas
-  answered: Drive metadata for both ids (checked 2026-10-25); inbox/chat-crew-tumak-gregory-bartholomew.md § Tumak/Documents produced (rune images in folder 1KuFCC…)
-
 - **[add]** A Vessels card under Setting
   The DM nav has Setting → Vessels, but the hub has no Vessels card. PR #71 added Factions and Vessels cards on the player side.
   src: prime/scripts/dm-nav.js; chat-voyage-6-7-planning § Documents produced
@@ -1960,8 +1924,6 @@ Fixes to player-facing pages, including the Fleet Intelligence Archive (`restric
 
 ### voyages/bearings/
 
-
-
 - **[later]** A player-side in-world timeline of key events
   voyages/bearings/timeline.html is the seed: an unlinked page of key events by era. Not now.
   src: Korey, 2026-11-02 (Current Bearing redesign)
@@ -1987,7 +1949,6 @@ Fixes to player-facing pages, including the Fleet Intelligence Archive (`restric
 - **[decide]** Kindori calves *(Nexus)*
   No published calf block or calf behaviour. If the crew should learn something about calves before V007, it needs a ruling.
   src: nexus-field-guide § Open, 2026-10-29
-
 
 - **[decide]** Spectators on H'Catha: what they are bound to, and the vanish rule
   The published spectator is summoned to guard one thing for 101 years and vanishes if that thing is stolen or destroyed before its term ends. Greelob and Orlob guard the meteor by their own choice (SJA), and the diggings plan has them arguing over who guards them. Rule what the two are bound to, and whether the vanish rule is table knowledge. Perils of the Drift leaves the rule off until then.
