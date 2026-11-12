@@ -43,9 +43,9 @@ staging once Korey has read and accepted them.
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 1 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
-| Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 13 | 3 | 0 | 0 |
+| Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 12 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 7 | 11 | 1 | 0 | 2 |
-| **Total** |  | **130** | **173** | **19** | **1** | **40** |
+| **Total** |  | **130** | **172** | **18** | **1** | **40** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -53,22 +53,7 @@ The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
 Each settles items on several pages at once. Rule these first.
 
-1. ~~**Residue piece counts by Axiom.**~~ *Ruled: Dissolution 2, Distinction 3, Expansion 5, Consolidation 7, Determination 11 (STAGING, Cosmology).*
-2. ~~**Aperture or Atrium.**~~ *Answered: Atrium.*
-3. ~~**Does opening a heart need a Monolith?**~~ *Ruled: no; linking does (STAGING round 2).*
-4. ~~**A name for Vecna's working.**~~ *Ruled: the Circle of Fifths, his name for it; GAL-01's part is the eye inscription (STAGING, Campaign).*
-5. ~~**Act structure and the Citadel.**~~ *Ruled: Citadel and Core are late Act 3 or Act 4.*
-6. ~~**N'ghathrod's five centuries.**~~ *Ruled: exile from Glyth about four centuries ago; centuries of searching; the push for hearts only in recent decades.*
-8. ~~**How the Seekers divide.**~~ *Ruled: the Seekers are the faith; each chapter is named for what it seeks (the Seekers of Secrets are one); every chapter worships Vecna, often under another name, unaware of the others.*
-9. ~~**Astra's name and wound.**~~ *Ruled: any of the three names; the Axiom strain's ripple woke and broke it.*
-10. ~~**The real elder brain.**~~ *Ruled: the Session 27 brain is his; it teleported out.* Where it went is no longer a question.
-11. ~~**Where Oerth lies.**~~ *Ruled: GAL-01, in Greyspace; Oerth is the eye's retina (STAGING).*
-13. ~~**Can a taken person be released?**~~ *Ruled: a tadpole can be removed, and removal frees the host; the taken outlive N'ghathrod, each keeping part of him.* How removal is done stays open (D&D lore or our own; avoid Baldur's Gate 3 spoilers).
-14. ~~**Fonains–Caelestis offset.**~~ *Ruled: Caelestis's present is about five months after Fonains Session 28 and about seven months after the Monolith broke; the Monolith stood six months before Lola's Boys assembled (Korey, 2026-11-07; timeline.json decisions; locations/fonains.html DM notes).*
-15. ~~**Ostekk-6 as sole survivor.**~~ *Ruled: the only active survivor; Ostekk-2 is inert and can be healed.*
-16. ~~**The tracker and session ingest.**~~ *Ruled: the repo record is the tracker and sessions run in chat per prime/docs/SESSION-RUN.md; n8n and the Google Sheet trackers are retired (archived in Drive).*
-18. ~~**How Clint left the Bellwether Crow.**~~ *Ruled (fia-story § The Bellwether Crow): to draw the raiders off his crew, Clint boarded one of their ships and seized it. A color pool opened by chance and took that ship to Fonains, with Clint and its raiders aboard. He may carry an artifact device he knows only as a magic item; whether it is the second Distinction piece is open (dossiers/clint.html).*
-19. ~~**Keep or cut Tarroway.**~~ *Ruled: keep him as a thread, mainly in the archive; cut the timing tables.*
+- **How a tadpole is removed.** A tadpole can be removed, and removal frees the host. How it is done is open: D&D lore or our own; avoid Baldur's Gate 3 spoilers.
 
 ## Answered from the sources (review)
 
@@ -86,16 +71,12 @@ The resolve pass settled these decide items from later sweeps, saved decisions o
 
 One of these rests on Korey making a pick rather than a direct ruling: the Drive root.
 
-## Second looks
-
-All five were ruled on 2026-10-25 (round 2): Tarroway is a keep-or-cut decide; constellation numbers follow the bearing scheme; Vth'oramu is "the passage to a new home"; Clint was seen going overboard (how is a decide); opening needs no Monolith, linking does.
-
 ## Player record flags
 
 Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 
 - `data/items.json` has Boogie holding the whole derelict logbook and says Casey and Gregory bound duplicates, "so three identical copies exist". The settled account is two halves, one held by Boogie (STAGING § Boogie). Correct the record in a session run or a record edit, run derive, and match the player inventory entry.
-- `data/npcs.json` and the Caelestis entry in `data/locations.json` call Mirt "the head of Caelestis", and `data/npcs.json` also says "Leading Caelestis". Mirt is the Academy's headmaster; Caelestis also holds the Caelestis HQ, which oversees the sector (deconflict ruling 13). Correct both by hand, or leave them as the crew's belief, as Korey prefers.
+- `data/npcs.json` and the Caelestis entry in `data/locations.json` call Mirt "the head of Caelestis", and `data/npcs.json` also says "Leading Caelestis". Mirt is the Academy's headmaster; Caelestis also holds the Caelestis HQ, which oversees the sector. Correct both by hand, or leave them as the crew's belief, as Korey prefers.
 - DM dossiers with no record, though the crew may have met or been told of them: Polly Geim (Casey's brother), Clint Dashforest, Qitru, Quartermaster Halix Verrow, the Crystalline Retrieval Construct. Each gets a record at first contact; check whether any contact has already happened (section 5).
 - `data/npcs.json` names Miken "Miken"; the DM dossier and the Fleet row use his full name, Miken Haverstance. Add the surname to the record if Korey agrees.
 - `data/player-characters.json` (Sol Fortuna, Voyage 4) says he "used Misfortune's Favor to draw ill luck onto his own shoulders". Misfortune's Favored is the oath's level-20 capstone and was earlier the working name of his Misfortuned feature; the Voyage 4 use reads as a self-Jinx or a Misfortuned use. crew/sol.html leaves the feature unnamed. Confirm the name and correct the line if Korey agrees.
@@ -104,7 +85,7 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 - `data/player-characters.json` (Boogie) lists "shield"; the DM page names it the Shield of Expression, a gift from Boom-chik, and it has no item record in `data/items.json`. Add the name or an item record if Korey agrees.
 - `data/npcs.json` (Saerthe Abizjn) and the V006 page say "a Watcher cadet"; the settled term for a Watcher trainee is a Glimpse. The crew has not been told the word, so the record keeps Saerthe's phrasing, and `terms.json` allows it on voyage-006. Change the record if Korey wants Saerthe to say "Glimpse".
 - `data/locations.json` overviews open "The Flighty Foundling is…" and "The Moonraider was…", and the quest is named "The Tyrant Ship and the H'Catha Meteor"; ship names carry no article. `terms.json` allows these record strings on the player pages. Rewrite them in a record edit if Korey agrees, then drop the allow entries.
-- The crew retrieved the Faelight spore from the Garden in Voyage 6; the record does not say so yet (deconflict 9b). Record only; enter it in the V007 run if Korey agrees.
+- The crew retrieved the Faelight spore from the Garden in Voyage 6; the record does not say so yet. Record only; enter it in the V007 run if Korey agrees.
 - The sending stone reads too loud on the player side: the V006 summaries and narrative, Miken's record (a Notable Item, "Miken's Sending Stone", with its own anchor), the bearings, the timeline, and the V006 Next Session Pressure ("Decide what to do about Miken's sending stone"). Sending stones are ordinary. What caught Bartholomew's Perception was a hushed conversation in the middle of the night. Recast the lines around the conversation, and keep the stone as the object he was holding, if Korey agrees.
 - Ezra Ahl-Sier needs a record in the V007 run. The crew saw him, unnamed, at the V006.5 rendezvous.
 - `data/sessions.json` (V003), `data/quests.json` and `data/locations.json` say the meteor "struck the spire" on H'Catha. `locations/hcatha.html`, `campaign/index.html` and `campaign/plot-hooks.html` place the strike on the Pupil, beside the Spindle. The record keeps what the crew was briefed; add a DM line on `locations/hcatha.html` that the briefing said "the spire".
@@ -114,7 +95,9 @@ Nothing from prime goes into `data/`. These need a hand edit, if Korey agrees:
 
 ## Still coming in
 
-Two chat sweeps in `inbox/` are partial (inbox/README.md). `chat-tyrant-ship.md` covers turns 0 to 264 of 344, and the chat can no longer be reached. `chat-vecna-godhood.md` covers turns 0 to 233 of 964, and resumes at turn 234. Every other sweep is complete; Campaign Planning was read to its end (turn 416) and merged on 2026-10-25.
+- **[fix]** Empty the inbox
+  `inbox/` still holds fourteen files, about half a megabyte, swept from chats between 2026-10-05 and 2026-11-04. The 2026-11-07 audit sampled them and found most "not in repo" items had landed since: cretez-foundry-notes, module-sweep-fonains, chat-automation and chat-astral-sea-worldbuilding fully; seven chat sweeps 65 to 90 percent; drive-virenspace none (its route to Viren conflicts with `locations/virenspace.html`). Two are partial: `chat-tyrant-ship.md` stops at turn 264 of 344 and the chat can no longer be reached; `chat-vecna-godhood.md` stops at turn 233 of 964. For each file: check its remaining "not in repo" and "conflicts" lines against the pages, put what is still missing into this BACKLOG under its page, then delete the file. Log the vecna-godhood unread range here if it is not swept. Delete `inbox/README.md`'s table rows as files go.
+  src: deconflict audit, 2026-11-07 (Part 3f); Korey, 2026-11-12
 
 # Cosmology
 
@@ -278,7 +261,6 @@ Order under each page: decide, fix, drop, add.
 
 Items for `locations/` pages. Fonains's items are in the Fonains section.
 Order under each page: decide, fix, drop, add.
-done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what was written is gone from this section, and each page's Still to decide carries the open items below.
 
 ### locations/index.html
 
@@ -451,7 +433,7 @@ done (section 3, 2026-10-28): the pages were rewritten under `locations/`; what 
 ### locations/aethris.html
 
 - **[later]** Can the Fortuned's ritual bring Aethris a second Zenith?
-  A world can have two Zeniths (deconflict 2.23). Aethris's first came in Cycle 1490 and the Prism Ascendant answered it; the Fortuned's ritual stands incomplete. Rule whether completing the ritual could bring a second one. The pages say nothing on it until then.
+  A world can have two Zeniths. Aethris's first came in Cycle 1490 and the Prism Ascendant answered it; the Fortuned's ritual stands incomplete. Rule whether completing the ritual could bring a second one. The pages say nothing on it until then.
   src: Korey, 2026-10-28 (FIA rulings, 4); deconflict 2.23
 
 ### locations/wayfinders-homeworld.html
@@ -548,7 +530,7 @@ Order under each heading: decide, fix, drop, add.
 
 ### Fonains doc
 
-The doc is current on names, the four keys, the cults, the party table, Krynn and the dragons, and Takhisis being Tiamat. Items below cover what is stale or missing. done (section 8): the world-level items (timing, the divine gate as polarity, Vecna as a god, the keys and cults, the Haunted Keeps, Bastian, the neothelid hook, the time device, the table spellings) are on locations/fonains.html; the doc itself still needs a refresh (the later under # New pages). Kwalish's laboratory, Daoine Gloine and the teleportation fields are on vessels/thessalars-craft.html, and the Cre'Tez fixes and adds (Cenvinzo, Rihiri and Dharra as sisters, Kevulan's birthright, Benedetta, the siblings, the crest, the Bloodstones and inheritances, Vanifer's secrets and plan, the voice) are on factions/cretez.html and dossiers/vanifer.html (section 8). The spelling is Dharra, as in the foundry notes, STAGING and terms.json; round 8's "Darra" was a slip.
+The doc is current on names, the four keys, the cults, the party table, Krynn and the dragons, and Takhisis being Tiamat. Items below cover what is stale or missing.
 
 - **[later]** Seldra's gem-thief boss
   Options: keep Makedon; or Mack Francache, a wererat sent by Moghadam (the module).
@@ -590,8 +572,6 @@ The doc is current on names, the four keys, the cults, the party table, Krynn an
 
 ### Timeline (Fonains lane)
 
-done (section 8): the shift (current values in timeline.json), the shards, the five-person ritual, the Pedra Ardente and Finerva, Dharra and Rihiri, and Clint's color pool.
-
 - **[decide]** Nelson or Nalsa
   The timeline has "Nelson" show the Accordance's champions their gods and name them (S10, "The Accordance chooses Lola's Boys"); factions/deities.html names the Accordance's emissary Nalsa, an androsphinx. Same figure under a table spelling, or two? If the same, the timeline takes Nalsa.
   src: timeline.json; factions/deities.html#nalsa; section 8
@@ -608,8 +588,6 @@ Items for `prime/timeline/timeline.json` outside the Fonains lane (see the Fonai
 Order: decide, fix, drop, add.
 
 ### Timeline
-
-done (section 8): the fixes are in timeline.json. The three "dangling" connections.json edges were not dangling: NPC-Gp8mT4kw, LOC-Rp7kW4vn, NPC-Qp8jL2vR, LOC-Bf3xN6qT and QST-9dK3wR7n are record ids, and the Connections view loads the record before the DM layer, so the edges resolve.
 
 - **[fix]** The Timeline page is wider than a phone
   At 390px the page renders 445px wide (it did before section 8 too): the Overview plot or the tab strip sets a minimum width. Give the plot its own horizontal scroll inside a min-width:0 container, so the page itself has no horizontal scroll.
@@ -850,7 +828,7 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 
 - **[later]** The thief
   The third insider steals, and Joffrey uses the thief to learn where things are kept at Caelestis and the Brig's protocols. Neither the thief nor Miken knows the other exists, and nothing either knows points at Joffrey. Who the thief is, and who recruited them, is open; it matters when the crew is back at Caelestis.
-  src: fia-story § Open (deconflict 14b)
+  src: fia-story § Open
 
 - **[later]** The Coven's name
   The Coven (factions/vthorama.html#coven) is a working name for the colony's eldest illithids, taken by N'ghathrod, who remember for it. Its proper name, perhaps a word in the colony's tongue, is not set.
@@ -1866,10 +1844,6 @@ archived in Drive, not deleted. What stays open here is below.
 
 # Repo and process
 
-- **[fix]** Retire deconflict.md
-  `working/deconflict.md` (the 2026-11-07 audit) is a worklist that outlived its chat. Its finished rows were deleted 2026-11-12; what is left is Part 1's rulings B to D (check each is on its pages), one Part 2 row (2.15, residue scale), Part 3's working-layer cleanup, and Part 4's cosmetic fixes. Land each remaining item on its page or as its own BACKLOG item, then delete the file and its row in `working/README.md`. Korey (2026-11-12): working files are cleaned as work lands; a finished item is deleted, never marked done.
-  src: Korey, 2026-11-12
-
 - **[decide]** The cycle's length in Toril years
   `factions/fleet.html` gives a cycle as sixteen Toril months (480 embers, about 1.315 Toril years) and as one and a third Toril years (1.333). `prime/chart/gtc.js` counts 480 embers. The Order's founding (about 1,990 years ago) uses 1.333; at 1.315 it is about 1,961. Pick one and restate the founding. Logged from the dates audit, 2026-11-07.
   src: dates audit, 2026-11-07
@@ -1892,10 +1866,6 @@ archived in Drive, not deleted. What stays open here is below.
 
 - **[later]** terms.js warnings that can misfire
   The raw-line "Open" pattern and the word "undecided" are voice warnings that can flag legitimate table cells and prose (Cosmology's Determination text has an allow entry). Tune them if they start producing noise.
-  src: Factions review, 2026-10-28
-
-- **[later]** "done:" lines in STAGING
-  STAGING entries with several homes keep a "done:" note listing the pages that already carry them, though the README says an entry is deleted once its page carries it. Settle the rule: delete per home, or keep the note until the last home is written.
   src: Factions review, 2026-10-28
 
 - **[later]** Bold labels inside What's hidden items
