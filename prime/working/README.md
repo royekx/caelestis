@@ -62,6 +62,6 @@ also hold for the working layer and the pages it feeds:
 | [campaign-middle.md](campaign-middle.md) | Building the post-graduation middle: the invasion ladder, fronts, contracts as nodes, cadence | Draft |
 | [common-knowledge.md](common-knowledge.md) | What a cadet would know about each NPC in the player record, sourced and graded, and how it fits the record | Draft; awaits Korey entity by entity |
 | [deconflict.md](deconflict.md) | The 2026-11-07 audit of the whole repo: conflicts to rule on, rulings waiting for their pages, working-layer cleanup | Draft; Part 1 awaits Korey |
-| [sol-arc.md](sol-arc.md) | Sol's arc: the scattered misfortune, burdens, Beshaba's charge, the road home to Aethris | Draft; the Prism Ascendant proposal awaits Korey |
+| [sol-arc.md](sol-arc.md) | Sol's arc: scattered luck, taking it on, Beshaba and Tymora, the road home to Aethris | Draft; open list awaits Korey |
 | [tumak-havens.md](tumak-havens.md) | Tumak's road home: only what stays open after the change audit (near-term items for V007, level 5 and the first haven; the conflict; origin) | Open list awaits Korey |
 | [repo-refactor.md](repo-refactor.md) | The approved DM structure, the per-page procedure and the link catalogue of moved paths | Reference: link catalogue |
