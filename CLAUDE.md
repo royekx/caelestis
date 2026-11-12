@@ -222,10 +222,14 @@ state what is. Rules: `prime/working/README.md`.
 
 Each of these has gone wrong at least once.
 
-- **Branch.** Name it `claude/<topic>`, cut fresh from `origin/main`:
+- **One pull request per chat.** Every change a chat makes, whatever its
+  subject, goes on one branch and one pull request. Before cutting a branch,
+  check for this chat's open pull request and add to it. Open a second only
+  when the first has merged or closed, or when a change audit needs its
+  pages merged before later work reads them.
+- **Branch.** Name it `claude/<topic>` after the chat's area, cut fresh from
+  `origin/main`:
   `git fetch origin main && git checkout -b claude/<topic> origin/main`.
-  One pull request per branch, each branch cut fresh; a chat can open
-  several in sequence.
 - **Before every push, confirm the pull request is still open.**
   Gate the push on it, so a merged pull request stops the command:
   `[ "$(gh api "repos/royekx/caelestis/pulls?head=royekx:<branch>&state=all" --jq '.[0].state')" = open ] && git push`.
@@ -252,9 +256,10 @@ Each of these has gone wrong at least once.
   Use REST: `gh api repos/royekx/caelestis/pulls -f title=… -f head=<b> -f base=main -F body=@pr.md`,
   and `-X PATCH …/pulls/<n>` to edit. Write the body to a file; heredoc bodies
   break on quotes.
-- **Several open pull requests** that touch `STAGING.md` or `BACKLOG.md` will
-  conflict in turn. Say so in each pull request body. When one merges, catch
-  the others up with `main` before Korey reaches them.
+- **When another chat's pull request is open** and touches `STAGING.md` or
+  `BACKLOG.md`, the two will conflict in turn. Say so in the pull request
+  body. When one merges, catch the other up with `main` before Korey reaches
+  it.
 - **Deleting remote branches** is refused from a session. Write the
   `git push origin --delete …` list as a script and hand it to Korey.
 - **One clone.** Clone `--depth 1` once, with a long timeout; a second clone or
