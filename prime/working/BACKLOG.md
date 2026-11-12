@@ -35,7 +35,7 @@ staging once Korey has read and accepted them.
 | Fonains | locations/fonains.html, factions/cretez.html, dossiers/vanifer.html, the Fonains Canon Reference doc, the timeline's Fonains lane | 5 | 13 | 0 | 0 | 0 |
 | Timeline | the rest of timeline.json | 0 | 0 | 1 | 0 | 0 |
 | Factions | factions/ | 12 | 13 | 1 | 0 | 0 |
-| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 21 | 7 | 1 | 0 | 3 |
+| Campaign | campaign/: index, voyages, plot hooks; opposition/; principles.html | 26 | 7 | 2 | 0 | 3 |
 | Dossiers | dossiers/ | 13 | 16 | 0 | 0 | 1 |
 | Crew | crew/ | 12 | 20 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 8 | 7 | 1 | 0 | 1 |
@@ -45,7 +45,7 @@ staging once Korey has read and accepted them.
 | Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 12 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 7 | 11 | 1 | 0 | 2 |
-| **Total** |  | **130** | **172** | **18** | **1** | **40** |
+| **Total** |  | **135** | **172** | **19** | **1** | **40** |
 
 The repo refactor has its own draft: [repo-refactor.md](repo-refactor.md).
 
@@ -776,6 +776,10 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
   STAGING § The theme named what Vecna, N'ghathrod, Astra Virex, Casey, Tumak, Bartholomew and Boogie each want, and said only that "Gregory and Sol carry it too". Campaign § Theme and § Crew say so and stop. Name each one's want in the theme's terms. Touches: campaign/index.html (#theme, #crew), crew/gregory.html, crew/sol.html.
   src: STAGING § The theme (round 2)
 
+- **[fix]** When Sol first meets the CRC
+  Campaign § the H'Catha mission says Sol's first encounter with the CRC "lands in this window". crew/sol.html and dossiers/crc.html put it at the Caelestis main entrance when the crew returns from H'Catha, and the CRC holds near Caelestis during the crossing. Rewrite the Campaign line to the main entrance on the return. Touches: campaign/index.html (#hcatha-arc).
+  src: cadet-arcs simulation, 2026-11-11
+
 - **[decide]** What the meteor is and why Caelestis wants it *(prep)*
   Fixed points: the meteor is adamantine, large, mined in an occupied area, and matters locally, to Caelestis and to the Order; working to obtain it is a form of treason on H'Catha; memory canon says "adamantine's value still needs something more". Options:
   (a) Containment. Adamantine survives disintegration, so the Fleet wants it for a vault, cradle or plating, and the cadet crew is cover.
@@ -882,6 +886,29 @@ The Remaking is now only the Ascension's fail state. Every page link that says "
 - **[decide]** Treasury contents in Vaelorix's Quarters *(prep)*
   The Quarters hold a treasury of coin (see add). Contents and amounts are open.
   src: chat-voyage-6-7-planning § Open
+
+- **[decide]** V007's load *(prep)*
+  A whole-table simulation of V007 (cadet-arcs chat, 2026-11-11) ran out of time before the landing: about ten run items, seven owed beats and Ezra's hook in one session, at a table that runs investigation and loot scenes at about double their budget.
+  Settled (Korey, 2026-11-11): V007 pays its promises. Every cadet gets a beat; the beats vary in size, and some are setups for small things later. Tumak's is the biggest: his first Wayfind, his rune, how marks work, and the first hint toward a haven. After it his arc is in his court and stays quiet on the DM's side. He may read the hint as home; that is fine, and learning it is not quite home is a reveal that still gives him information, an ability and a step forward. Casey's thread has had nothing for a while and gets a beat (the decide "Casey's V007 beat" above). Bartholomew can stay quiet: a creature on the crossing he can try to learn an aspect from is enough.
+  Still open: what moves to the interlude or the session's opening, where V007 ends, and whether H'Catha then runs V008 to V010. Rule with the decide "Act 1's close and the length of H'Catha" under campaign/index.html. Touches: campaign/voyages/index.html (V007).
+  src: cadet-arcs simulation, 2026-11-11
+
+- **[decide]** One arc per room on the crossing *(prep)*
+  The simulation put two arcs in one room twice, and one starved (the V002 lesson). The lane marker holds Sol's wanted notice and the mercane's Vocath-stamped manifest; the notice wins. Research holds Casey's Vaelorix chart and, per crew/bartholomew.html, Vaelorix's bloom notes; Casey takes the room. Options: move the manifest to the cargo pod (crossing d8 entry 4); send Bartholomew the bloom notes as a handout. Touches: campaign/voyages/index.html (V007).
+  src: cadet-arcs simulation, 2026-11-11
+
+- **[decide]** The meteor and Ondessa as one road *(prep)*
+  If Sol's first burden is Ondessa, three arcs converge on her and she becomes the table's real goal, with the meteor second and two domains away. Option: Ondessa needs the adamantine, so the meteor and the eclipse become one road, with Gregory's pull and Boogie's shard humming toward the diggings.
+  Settled since (Korey, 2026-11-11): Sol carries two burdens at H'Catha, a locathah's and Ondessa's; Ezra, a paladin, joins the crew there. Still open: whether the meteor and Ondessa become one road. Touches: campaign/index.html (#hcatha-arc), locations/hcatha.html, campaign/voyages/index.html.
+  src: cadet-arcs simulation, 2026-11-11
+
+- **[decide]** Bartholomew at H'Catha *(prep)*
+  H'Catha plays as a spy thriller where daylight forbids wounding, and the simulation left Bartholomew with nothing to do in two of three sessions. Settled (Korey, 2026-11-11): H'Catha has creatures he can learn aspects from, and one may be his first. Still open: where they sit (the seam route to the meteor is an option), a night fight, and whether beholders and sleepborn can give aspects, since his player will ask. Touches: campaign/voyages/index.html, crew/bartholomew.html.
+  src: cadet-arcs simulation, 2026-11-11
+
+- **[decide]** Tumak's and Gregory's V007 beats *(prep)*
+  Tumak: his first Wayfind needs an escape within 60 feet of his quarters, which the crossing tables may never produce (option: the shadow ship's boarders reach the quarters deck); his first sight hint, ruled in the Tumak draft, is missing from Beats owed and should not read as H'Catha, since the table will ask (reading it as home is fine, per V007's load above). Gregory: the Toril beat has him choose whether to speak, which stalls a hesitant player and breaks his table note that the DM always initiates; option: Ostekk-6's crew night asks what pulls at him, and the crew answers with a promise for after H'Catha. Settled (Korey, 2026-11-11): V007 gives more on the Lantern of Flourishing and reinforces the question the table asked at the end of V006, why two beholders fought over a thing that heals 3d8. Touches: campaign/voyages/index.html (V007 Beats owed), artifacts/ (the Lantern).
+  src: cadet-arcs simulation, 2026-11-11
 
 ---
 
@@ -1280,7 +1307,8 @@ Rules for the runes, marks, hints, Wayfind and the havens live on rules/index.ht
 
 - **[decide]** Which deckhand item goes missing on the tyrant ship voyage *(prep)*
   Korey names the item (see the "Next beat" add).
-  src: BCS § Boogie/Open
+  Settled since (Korey, 2026-11-11): Saerthe Abizjn and Winston Ryeback both have something missing, and something goes missing aboard during the crossing. It starts aiming at Boogie without pulling him into the limelight, and he works out what to do with it. Still open: the item, and whose.
+  src: BCS § Boogie/Open; cadet-arcs chat, 2026-11-11
 
 - **[later]** Boogie's sheet check
   His current level and D&D Beyond URL, and whether the Shield of Expression is on the sheet (the record lists "shield").
