@@ -574,7 +574,7 @@
       "Type": "Cargo manifest",
       "Held By": "Tyrant Ship",
       "Origin": "Found aboard the tyrant ship",
-      "Overview (Player)": "The tyrant ship’s own cargo record. It is what gave the broken autognome in the hold a name — Ostekk-6 — and it lists what else the vessel was carrying.",
+      "Overview (Player)": "The tyrant ship’s own cargo record. It is what gave the broken automaton in the hold a name — Ostekk-6 — and it lists what else the vessel was carrying.",
       "Status": "Held",
       "Class": "Document",
       "Item Type": "Curiosity",
@@ -584,7 +584,7 @@
       {
         "number": 4,
         "bullets": [
-          "Gave the broken autognome in the cargo hold its name: Ostekk-6"
+          "Gave the broken automaton in the cargo hold its name: Ostekk-6"
         ]
       }
     ],
