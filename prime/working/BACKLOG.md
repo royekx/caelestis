@@ -39,13 +39,13 @@ staging once Korey has read and accepted them.
 | Dossiers | dossiers/ | 13 | 16 | 0 | 0 | 1 |
 | Crew | crew/ | 12 | 20 | 0 | 0 | 0 |
 | Artifacts and vessels | artifacts/, vessels/ | 7 | 7 | 1 | 0 | 1 |
-| Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 7 | 7 | 3 | 0 | 11 |
+| Rules | rules/, statblocks/, tracker/, the Wayfinder's Path tab | 9 | 7 | 3 | 0 | 11 |
 | New pages | proposed pages, the hub, prime/docs/PAGE-GUIDE.md | 2 | 14 | 0 | 1 | 19 |
 | Automation and tracker | the session pipeline, the record and DM views | 0 | 8 | 2 | 0 | 0 |
 | Player pages | restricted/ and other player pages | 7 | 1 | 0 | 0 | 0 |
 | Repo and process | page conventions, the record's schema, process docs, deploy | 2 | 12 | 2 | 0 | 0 |
 | Memory cleanup | open items left in Claude's memory notes and the 2026-11-04 chat sweeps | 7 | 11 | 1 | 0 | 2 |
-| **Total** |  | **134** | **172** | **17** | **1** | **40** |
+| **Total** |  | **136** | **172** | **17** | **1** | **40** |
 
 
 ## Cross-cutting decisions
@@ -1388,6 +1388,16 @@ Pages under `prime/rules/`, `prime/statblocks/` and `prime/tracker/` (whose DM
 layer is `prime/data/overlay.json`), plus one player-site rules page. Items
 under each page run decide, fix, drop, add. The Tumak items are checked
 against the complete Tumak sweep (all 336 turns).
+
+### protocols/ship-mechanics.html and protocols/crew-roles.html
+
+- **[decide]** Navigation as a world rule *(mechanic)*
+  Navigation belongs to everyone (STAGING § Rules). Proposal from the cadet-arcs chat: **Set a course.** The crew picks a pace: fast (fewer days; the daily d6 triggers an encounter on 1 or 2), medium (on 1), slow (more days; on 1, and the crew is never surprised). The navigator makes a DC 10 check with navigator's tools or Wisdom (Survival), the check Ship Mechanics § Hazards already lists; a failure adds a day and the ship still arrives. **Finding a place.** Each marker that describes a place (a sky, a star's colour, a kind of world, a people, a direction) gets one check against the charts, and the result rules out candidate systems the DM holds (0, 1, 2 or half the list at under 10, 10, 15 and 20); the true system is never ruled out, and a wrong guess still returns a lead. An uncharted target narrows only to the nearest charted system, so this waits on the Cosmology items "Which places Caelestis has charted" and "A charted flag in the survey". **Charts.** The chart room at Caelestis until graduation; after it, the Fleet's chart archive, which shows where systems are and their basic facts and leaves the specifics to be found on site. Touches: protocols/ship-mechanics.html, rules/index.html, campaign/voyages/index.html (the crossing roll).
+  src: cadet-arcs chat, 2026-11-12 to 2026-11-13
+
+- **[decide]** The bridge roles after navigation moves out *(mechanic)*
+  With navigation a world rule, each role is about ship combat and hazards (STAGING § Rules). Review the six roles on Bridge Crew Roles with that in mind, and check each still reads right for any cadet who takes it. Touches: protocols/crew-roles.html, rules/index.html § ship combat.
+  src: Korey, 2026-11-13
 
 ### rules/index.html
 
