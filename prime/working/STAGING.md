@@ -30,6 +30,21 @@ Play notes, DM voice.
   aspect from. H'Catha has more creatures he can learn from.
 - Sol: the plate and the vision of the locathah (working/sol-arc.md).
 
+## Rules
+
+### Navigation belongs to everyone
+
+Targets: `protocols/ship-mechanics.html`, `protocols/crew-roles.html`
+(Navigator), `rules/index.html`. Play notes, DM voice.
+
+- Navigation is a world rule. Any cadet can plot a course, or work out how to
+  get somewhere, whenever the crew wants to.
+- At the table the cadet in the Navigator role sets the course for the crew;
+  that is role-play, not a gate.
+- The bridge roles are for ship combat and hazards. Any cadet may change
+  roles.
+- The mechanic itself is open: BACKLOG § Rules › "Navigation as a world rule".
+
 ## Player pages
 
 ### Tumak: the reveal at the table
